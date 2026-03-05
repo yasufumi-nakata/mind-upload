@@ -40,6 +40,7 @@
 - `scripts/export_github_wiki.rb` は、`SIDEBAR_GROUPS` に未分類の wiki ページがあっても、`その他` セクションへ自動掲載します。
 - GitHub Wiki の git リポジトリは、GitHub の Web UI で最初の Wiki ページを 1 つ作成した後でないと clone / push できません。その初期化後に `scripts/publish_github_wiki.sh` を実行してください。
 - `.github/workflows/sync-github-wiki.yml` も追加してあり、初期化後は `main` への push で `export -> validate -> publish` を自動実行できます。
+- `.github/workflows/validate-github-wiki-export.yml` も追加してあり、Pull Request 段階で `export -> validate -> jekyll build` を先に確認できます。
 - GitHub Actions の既定トークンで不足する場合は、`GH_WIKI_TOKEN` シークレットに `repo` 権限のトークンを設定してください。
 
 ## LLM向けプロンプトの利用

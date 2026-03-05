@@ -6057,3 +6057,72 @@
 
 - 共同研究先タイプ別の保留解除後完了通知後再開条件テンプレは `MindUpload-EEGDATA-FundMap-collab-hold-release-restart-conditions.csv` を使う
 - 列は `counterpart_type`, `restart_focus`, `opening_line`, `share_asset`, `restart_line`, `decision_gate`, `note_line`, `avoid_point`
+
+## 212. 25トピック別の再挑戦後最終案内文
+
+### 212.1 使い方
+
+- `guide_focus` は topic ごとに最後に何を案内文として残すかの観点として使う
+- `guide_line` は 外部に残す最小の案内文として使う
+- `keep_guide_trigger` は その案内文を残してよい条件として使う
+- `rewrite_trigger` は より短い案内文へ書き換える条件として使う
+- `do_not_guide` は 案内文として残さない方がよい条件として使う
+- `note_line` は README や handoff 向けの一文として使う
+
+### 212.2 再挑戦後最終案内文で守ること
+
+- 最終案内文は `全部の説明文` ではなく `次の誤解を防ぐ最小の一文` にする
+- guide line は 1文で切る
+- rewrite trigger が立ったら 古い言い回しを残し続けない
+- 高い理論主張へ飛びやすい topic は do_not_guide を先に選ぶ
+
+### 212.3 詳細版を引く場所
+
+- 25トピック別の再挑戦後最終案内文は `MindUpload-EEGDATA-FundMap-topic-retry-final-guide-line.csv` を使う
+- 列は `phase`, `topic`, `guide_focus`, `guide_line`, `keep_guide_trigger`, `rewrite_trigger`, `do_not_guide`, `note_line`, `avoid_point`
+
+## 213. 制度タイプ別の残置導線閉鎖条件
+
+### 213.1 使い方
+
+- `channel_close_focus` は 残置導線をいつ閉じてよいかの観点として使う
+- `close_trigger` は 残置導線を閉鎖してよい条件として使う
+- `keep_trigger` は まだ導線を残す条件として使う
+- `do_not_close` は その時点で閉鎖しない方がよい条件として使う
+- `last_channel_asset` は 最後に残す最小の導線として使う
+- `note_line` は README や内部メモの一文として使う
+
+### 213.2 残置導線閉鎖条件で守ること
+
+- 導線閉鎖は `面倒だから閉じる` ではなく `着地役を終えた` で切る
+- last channel asset は URL 1 本か mailbox 1 本まで削る
+- keep trigger が立つ間は 何のために残すかを明記する
+- do_not_close 条件がある時は 見かけだけ整えて閉じない
+
+### 213.3 詳細版を引く場所
+
+- 制度タイプ別の残置導線閉鎖条件は `MindUpload-EEGDATA-FundMap-publication-final-residual-close.csv` を使う
+- 列は `support_type`, `channel_close_focus`, `close_trigger`, `keep_trigger`, `do_not_close`, `last_channel_asset`, `note_line`, `avoid_point`
+
+## 214. 共同研究先タイプ別の再開条件成立後初回通知テンプレ
+
+### 214.1 使い方
+
+- `resume_notice_focus` は 再開条件が揃った後に最初に何を通知するかの論点として使う
+- `opening_line` は 初回通知の最初の一文として使う
+- `share_asset` は 初回通知で添える最小成果物として使う
+- `resume_notice_line` は 再開の起点を伝える一文として使う
+- `decision_gate` は この通知の後に reopen / hold / close を決める条件として使う
+- `note_line` は 送信前チェックや内部メモの一文として使う
+
+### 214.2 再開条件成立後初回通知テンプレで守ること
+
+- 初回通知は `再開しました` の一言ではなく `何が揃ってどこから始めるかを切る文` にする
+- share asset は 1枚か1件から増やさない
+- resume notice line は 次の1動作が見える形にする
+- decision gate が曖昧なら 初回通知を送らない
+
+### 214.3 詳細版を引く場所
+
+- 共同研究先タイプ別の再開条件成立後初回通知テンプレは `MindUpload-EEGDATA-FundMap-collab-hold-release-resume-notice.csv` を使う
+- 列は `counterpart_type`, `resume_notice_focus`, `opening_line`, `share_asset`, `resume_notice_line`, `decision_gate`, `note_line`, `avoid_point`
