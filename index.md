@@ -44,6 +44,62 @@ Mind-Uploadは、「心をコンピュータで再現できるのか？」とい
 </ul>
 </div>
 
+<table class="data-table">
+<thead>
+<tr>
+<th>こんな人に向く入口</th>
+<th>最初の1ページ</th>
+<th>次に進むページ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>全体像だけ先に知りたい</strong></td>
+<td><a href="verification.html">Verification</a></td>
+<td><a href="tech_roadmap.html">Roadmap</a> で、何を解けば前進かを見ます。</td>
+</tr>
+<tr>
+<td><strong>まず短く入門したい</strong></td>
+<td><a href="wbe_101.html">WBE 101</a></td>
+<td><a href="eeg_101.html">EEG 101</a> で、現実に何が測れるかを押さえます。</td>
+</tr>
+<tr>
+<td><strong>用語や理論名で止まりやすい</strong></td>
+<td><a href="glossary.html">Glossary</a></td>
+<td><a href="faq.html">FAQ</a> で、よくある誤解を先に潰します。</td>
+</tr>
+<tr>
+<td><strong>公開データで手を動かしたい</strong></td>
+<td><a href="datasets.html">Datasets</a></td>
+<td><a href="hands_on.html">Hands-on</a> で、L0 の最小ループへ進みます。</td>
+</tr>
+<tr>
+<td><strong>Issue対応や参加方法を見たい</strong></td>
+<td><a href="issue.html">Issue Guide</a></td>
+<td><a href="content_hub.html">Content Hub</a> で、どこへ追記するかを確認します。</td>
+</tr>
+</tbody>
+</table>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>このサイトが今やること</th>
+<th>この入口ページではまだ主張しないこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L0〜L2 を中心に、再現可能な解析、比較可能な評価、介入を含む検証条件を整えることです。</td>
+<td>L4〜L5 に当たる本人性の最終判定や社会実装の成立を、入口だけで断言することはしません。</td>
+</tr>
+<tr>
+<td>データ、コード、ログ、評価ルールをそろえ、他の人が追える形にすることです。</td>
+<td>「雰囲気として人っぽい」「会話が自然」といった印象だけで、WBE成立とみなすことはしません。</td>
+</tr>
+</tbody>
+</table>
+
 <section class="section" id="start">
 <h2 class="section-title">読む順番（迷ったらこれ）</h2>
 <div class="stage-list">

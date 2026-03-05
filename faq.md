@@ -69,6 +69,16 @@ FAQは「まず方向を間違えないための短い答え」です。ここ�
 </tbody>
 </table>
 
+<div class="note-box">
+<strong>強い主張を見たときの4点チェック</strong>
+<ol>
+<li><strong>何を達成した話か：</strong>L0〜L5 のどのレベルかを先に確認します。</li>
+<li><strong>何を測ったのか：</strong>出力の一致だけか、介入や反事実まで見ているかを分けます。</li>
+<li><strong>何が出たら間違いなのか：</strong>反証条件が明示されているかを見ます。</li>
+<li><strong>他の人が追えるか：</strong>データ、コード、ログ、手順が公開されているかを確認します。</li>
+</ol>
+</div>
+
 <section class="section" id="q0">
 <h2 class="section-title">Q. Mind-Uploadは結局、何をするサイト？</h2>
 <p>
@@ -99,6 +109,16 @@ A. decodeは“観測を翻訳する”ことで、emulateは“内部状態が�
 WBEに近づくには、後者を評価できるベンチマーク（介入・反事実・閉ループ）へ寄せる必要があります。
 </p>
 <p><a href="wbe_101.html">入門（WBE 101）</a>と<a href="glossary.html">用語集</a>が近道です。</p>
+</section>
+
+<section class="section" id="q2b">
+<h2 class="section-title">Q. LLMやデジタルツインが人っぽく話せたら、それはMind-Upload？</h2>
+<p>
+A. それだけでは言えません。会話が自然でも、それが<strong>外から見える振る舞いの模倣</strong>なのか、<strong>内部状態や因果構造まで連続している</strong>のかは別問題です。
+</p>
+<p>
+Mind-Uploadで重視するのは、「人っぽく見えるか」だけでなく、条件を変えたときの応答、記憶や学習の連続性、反証条件への耐性が公開されているかです。見た目の自然さは参考にはなりますが、それだけで L4 の本人性主張には進めません。
+</p>
 </section>
 
 <section class="section" id="q3">
