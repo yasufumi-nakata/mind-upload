@@ -152,6 +152,7 @@ Mind-Uploadでは、これを“サイトとして運用できる形”に落と
 <li><strong>出力：</strong>指標（スコア） + ベースライン差分 + 反証条件の結果</li>
 </ul>
 </div>
+<p>この 3 点がどうつながるかを 1 本の EEG 例で見たい場合は、<a href="wiki/verification-example-walkthrough.html">Wiki: Verification の具体例ウォークスルー</a> が最短です。</p>
 </section>
 
 <section class="section" id="q4">

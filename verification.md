@@ -300,6 +300,13 @@ L1 の精度や L2 の予測一致を見る前に、<strong>何単位で train/t
 </tbody>
 </table>
 <p>これが揃うと「誰がやっても同じ条件で比較できる」ようになり、はじめて進捗が積み上がります。</p>
+
+<div class="note-box">
+<strong>抽象的に見えたら補講へ</strong>
+<p>
+この 4 要素が実際にどう噛み合うかを、EEG の小さな例で順番に見たい場合は <a href="wiki/verification-example-walkthrough.html">Wiki: Verification の具体例ウォークスルー</a> を参照してください。公開ページでは設計図を保ち、補講は wiki 側へ逃がしています。
+</p>
+</div>
 </section>
 
 <section class="section" id="casework">

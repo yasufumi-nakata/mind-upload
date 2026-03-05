@@ -132,6 +132,11 @@ recommended_pages:
 <td><a href="dataset-splits-and-leakage.html">データ分割とデータリーク</a></td>
 <td><a href="../datasets.html">データ&ベンチ</a> / <a href="../hands_on.html">ハンズオン</a></td>
 </tr>
+<tr>
+<td><strong>Verification の4部品を具体例で見たい</strong></td>
+<td><a href="verification-example-walkthrough.html">Verification の具体例ウォークスルー</a></td>
+<td><a href="../verification.html">検証基盤</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -249,6 +254,10 @@ recommended_pages:
 <td>被験者分割、時間分割、リーク対策</td>
 <td><a href="dataset-splits-and-leakage.html">データ分割とデータリーク</a></td>
 </tr>
+<tr>
+<td>Verification の4要素がどう噛み合うか</td>
+<td><a href="verification-example-walkthrough.html">Verification の具体例ウォークスルー</a></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -272,6 +281,7 @@ recommended_pages:
 <li><a href="consciousness-theory-map.html">意識理論マップ →</a></li>
 <li><a href="decode-vs-emulate.html">Decode と Emulate →</a></li>
 <li><a href="dataset-splits-and-leakage.html">データ分割とデータリーク →</a></li>
+<li><a href="verification-example-walkthrough.html">Verification の具体例ウォークスルー →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
