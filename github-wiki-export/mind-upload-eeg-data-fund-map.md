@@ -5988,3 +5988,72 @@
 
 - 共同研究先タイプ別の保留解除後最終完了通知テンプレは `MindUpload-EEGDATA-FundMap-collab-hold-release-final-completion.csv` を使う
 - 列は `counterpart_type`, `completion_focus`, `opening_line`, `share_asset`, `completion_line`, `decision_gate`, `note_line`, `avoid_point`
+
+## 209. 25トピック別の再挑戦後最終参照リンク
+
+### 209.1 使い方
+
+- `reference_link_focus` は topic ごとに最後にどのリンクだけ残すかの観点として使う
+- `reference_link` は 外部に残す最小の参照リンクとして使う
+- `keep_link_trigger` は そのリンクを残してよい条件として使う
+- `replace_trigger` は 別のより短いリンクや導線へ差し替える条件として使う
+- `do_not_link` は 参照リンクとして残さない方がよい条件として使う
+- `note_line` は README や handoff 向けの一文として使う
+
+### 209.2 再挑戦後最終参照リンクで守ること
+
+- 最終参照リンクは `全部への入口` ではなく `誤読を増やさない最小導線` にする
+- reference link は URL 1 本に削る
+- replace trigger が立ったら 古いリンクを惰性で残さない
+- 高い理論主張へ飛びやすい topic は do_not_link を先に選ぶ
+
+### 209.3 詳細版を引く場所
+
+- 25トピック別の再挑戦後最終参照リンクは `MindUpload-EEGDATA-FundMap-topic-retry-final-reference-link.csv` を使う
+- 列は `phase`, `topic`, `reference_link_focus`, `reference_link`, `keep_link_trigger`, `replace_trigger`, `do_not_link`, `note_line`, `avoid_point`
+
+## 210. 制度タイプ別の自動応答停止後残置導線
+
+### 210.1 使い方
+
+- `residual_channel_focus` は 自動応答を止めた後に何だけ残すかの観点として使う
+- `residual_channel` は 残す最小の導線として使う
+- `keep_residual_trigger` は その導線を残してよい条件として使う
+- `close_trigger` は その導線も閉じてよい条件として使う
+- `do_not_leave` は 導線を残さない方がよい条件として使う
+- `note_line` は README や内部メモの一文として使う
+
+### 210.2 自動応答停止後残置導線で守ること
+
+- 残置導線は `応答停止の穴埋め` ではなく `最低限の着地点` にする
+- residual channel は URL 1 本か mailbox 1 本まで削る
+- close trigger が立ったら 放置された導線を残さない
+- do_not_leave 条件がある時は 止めた後に余計な入口を足さない
+
+### 210.3 詳細版を引く場所
+
+- 制度タイプ別の自動応答停止後残置導線は `MindUpload-EEGDATA-FundMap-publication-final-residual-channel.csv` を使う
+- 列は `support_type`, `residual_channel_focus`, `residual_channel`, `keep_residual_trigger`, `close_trigger`, `do_not_leave`, `note_line`, `avoid_point`
+
+## 211. 共同研究先タイプ別の保留解除後完了通知後再開条件テンプレ
+
+### 211.1 使い方
+
+- `restart_focus` は 完了通知の後に何が揃えば再開してよいかの論点として使う
+- `opening_line` は 再開条件確認の最初の一文として使う
+- `share_asset` は 再開条件確認で添える最小成果物として使う
+- `restart_line` は 再開に必要な条件を伝える一文として使う
+- `decision_gate` は この確認の後に reopen / hold / close を決める条件として使う
+- `note_line` は 送信前チェックや内部メモの一文として使う
+
+### 211.2 保留解除後完了通知後再開条件テンプレで守ること
+
+- 再開条件テンプレは `またいつかやりましょう` ではなく `何が揃えば再開かを固定する文` にする
+- share asset は 1枚か1件から増やさない
+- restart line は 再開条件を yes/no で返せる形にする
+- decision gate が曖昧なら 再開条件確認を送らない
+
+### 211.3 詳細版を引く場所
+
+- 共同研究先タイプ別の保留解除後完了通知後再開条件テンプレは `MindUpload-EEGDATA-FundMap-collab-hold-release-restart-conditions.csv` を使う
+- 列は `counterpart_type`, `restart_focus`, `opening_line`, `share_asset`, `restart_line`, `decision_gate`, `note_line`, `avoid_point`
