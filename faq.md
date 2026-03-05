@@ -97,6 +97,12 @@ FAQ のあとに理論系ページだけへ進みたい場合は <a href="wiki/t
 FAQ から Verification へ進んだあとに、L0 実装へ戻るのか、L2・L3・L4 のどれを先に見るのかで迷う場合は <a href="wiki/verification-next-routes.html">Wiki: Verificationのあとに進む4つの道</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>疑問をそのまま Issue に変えたいとき</strong>
+<p>
+FAQ を読んで「ここが分かりにくい」「この条件が足りない」と感じた箇所を、そのまま価値ある Issue に変えたい場合は <a href="wiki/issue-writing-basics.html">Wiki: はじめての Issue の書き方</a> をご覧ください。
+</p>
+</div>
 
 <table class="data-table">
 <thead>

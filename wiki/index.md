@@ -158,6 +158,11 @@ recommended_pages:
 <td><a href="../issue.html">貢献ガイド</a> / <a href="../collaborations.html">協業候補</a> / <a href="../content_hub.html">公開コンテンツ統合ハブ</a> / <a href="../hands_on.html">ハンズオン</a></td>
 </tr>
 <tr>
+<td><strong>初めて Issue を書くので、何を書けばよいか知りたい</strong></td>
+<td><a href="issue-writing-basics.html">はじめての Issue の書き方</a></td>
+<td><a href="../issue.html">貢献ガイド</a> / <a href="../verification.html">検証基盤</a> / <a href="../content_hub.html">公開コンテンツ統合ハブ</a></td>
+</tr>
+<tr>
 <td><strong>Scopus、arXiv、Review、source_logged の違いで止まる</strong></td>
 <td><a href="paper-source-types-and-evidence-status.html">文献のソース種別と状態ラベルの読み方</a></td>
 <td><a href="../mind_uploading_papers.html">論文集</a> / <a href="../research_harvest_50.html">文献地図</a></td>

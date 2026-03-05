@@ -140,6 +140,10 @@ Issue や Collaborations は入口として重要ですが、そのままでは�
 <td><a href="internal-prework-and-external-dependencies.html">内製で先にやることと外部依存</a></td>
 </tr>
 <tr>
+<td>Issue に何を書けばよいかで止まる</td>
+<td><a href="issue-writing-basics.html">はじめての Issue の書き方</a></td>
+</tr>
+<tr>
 <td>論文をどこへ戻すかで止まる</td>
 <td><a href="literature-to-action-route.html">文献から実装・参加へ戻る一本道</a></td>
 </tr>
