@@ -2,11 +2,14 @@
 # frozen_string_literal: true
 
 require "pathname"
+require "find"
 
 ROOT = File.expand_path("..", __dir__)
 SRC_DIR = File.join(ROOT, "wiki")
 DEST_DIR = File.join(ROOT, "github-wiki-export")
 GITHUB_WIKI = "https://github.com/yasufumi-nakata/mind-upload/wiki"
+IGNORED_NOISE_FILES = [".DS_Store"].freeze
+IGNORED_NOISE_PREFIXES = ["._"].freeze
 
 def changed_export_paths
   changed = `git -C "#{ROOT}" diff --name-status -- "#{DEST_DIR}"`.lines.map(&:strip).reject(&:empty?)
@@ -32,10 +35,30 @@ end
 def relative_files(root)
   return [] unless Dir.exist?(root)
 
-  Dir.glob(File.join(root, "**", "*"), File::FNM_DOTMATCH)
-     .reject { |path| File.directory?(path) }
-     .map { |path| Pathname.new(path).relative_path_from(Pathname.new(root)).to_s }
-     .sort
+  files = []
+  Find.find(root) do |path|
+    next if File.directory?(path)
+
+    files << Pathname.new(path).relative_path_from(Pathname.new(root)).to_s
+  end
+  files.sort
+end
+
+def noise_entry?(name)
+  IGNORED_NOISE_FILES.include?(name) || IGNORED_NOISE_PREFIXES.any? { |prefix| name.start_with?(prefix) }
+end
+
+def noise_files(root)
+  return [] unless Dir.exist?(root)
+
+  files = []
+  Find.find(root) do |path|
+    next if File.directory?(path)
+    next unless noise_entry?(File.basename(path))
+
+    files << Pathname.new(path).relative_path_from(Pathname.new(root)).to_s
+  end
+  files.sort
 end
 
 def extract_targets(text)
@@ -88,6 +111,14 @@ export_generated = relative_files(File.join(DEST_DIR, "generated"))
 
 (source_generated - export_generated).each do |path|
   errors << "Missing generated asset in export: generated/#{path}"
+end
+
+noise_files(SRC_DIR).each do |path|
+  errors << "Noise file in wiki source: #{path}"
+end
+
+noise_files(DEST_DIR).each do |path|
+  errors << "Noise file in wiki export: #{path}"
 end
 
 eeg_funding_source = File.join(SRC_DIR, "mind-upload-eeg-data-fund-map.md")

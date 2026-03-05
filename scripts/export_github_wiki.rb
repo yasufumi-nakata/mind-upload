@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 
 require "fileutils"
+require "find"
 require "yaml"
 
 ROOT = File.expand_path("..", __dir__)
@@ -9,6 +10,8 @@ SRC_DIR = File.join(ROOT, "wiki")
 DEST_DIR = File.join(ROOT, "github-wiki-export")
 PUBLIC_SITE = "https://mind-upload.com"
 GITHUB_WIKI = "https://github.com/yasufumi-nakata/mind-upload/wiki"
+IGNORED_NOISE_FILES = [".DS_Store"].freeze
+IGNORED_NOISE_PREFIXES = ["._"].freeze
 
 SIDEBAR_GROUPS = {
   "入口と読み方" => %w[
@@ -50,6 +53,21 @@ SIDEBAR_GROUPS = {
 
 def grouped_sidebar_slugs
   SIDEBAR_GROUPS.values.flatten.uniq
+end
+
+def noise_entry?(name)
+  IGNORED_NOISE_FILES.include?(name) || IGNORED_NOISE_PREFIXES.any? { |prefix| name.start_with?(prefix) }
+end
+
+def each_file(root)
+  return enum_for(:each_file, root) unless block_given?
+  return unless Dir.exist?(root)
+
+  Find.find(root) do |path|
+    next if File.directory?(path)
+
+    yield path
+  end
 end
 
 def load_page(path)
@@ -278,7 +296,14 @@ end
 generated_src = File.join(SRC_DIR, "generated")
 if Dir.exist?(generated_src)
   FileUtils.mkdir_p(File.join(DEST_DIR, "generated"))
-  FileUtils.cp_r(Dir.children(generated_src).map { |child| File.join(generated_src, child) }, File.join(DEST_DIR, "generated"))
+  generated_children = Dir.children(generated_src).reject { |child| noise_entry?(child) }
+  FileUtils.cp_r(generated_children.map { |child| File.join(generated_src, child) }, File.join(DEST_DIR, "generated")) unless generated_children.empty?
+end
+
+each_file(DEST_DIR).each do |path|
+  next unless noise_entry?(File.basename(path))
+
+  FileUtils.rm_f(path)
 end
 
 File.write(File.join(DEST_DIR, "_Sidebar.md"), build_sidebar(front_matters))
