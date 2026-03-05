@@ -22,6 +22,9 @@ defaults:
 exclude:
   - automation
   - ignore
+  - vendor
+  - .bundle
+  - _site
   - node_modules
   - Gemfile
   - Gemfile.lock

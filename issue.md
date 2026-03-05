@@ -5,7 +5,23 @@ description: "Mind-Uploadプロジェクトへの参加方法と、Issue対応�
 article_type: Guide
 subtitle: "Join the Research Community + Issue Tracker"
 author: Mind Uploading Research Project
-last_updated: "2026-02-23"
+last_updated: "2026-03-06"
+note: "Contribution + Issue tracker"
+audience: "初めて参加する人、Issueの状態を確認したい人、実行可能な貢献から入りたい人"
+reading_time: "10〜20分"
+page_intro: "このページは、Mind-Uploadにどう参加できるかを、Issue運用と対応状況ごとに整理した入口です。専門家だけの場所ではなく、『どの作業なら今すぐ役に立つか』が見えるようにしています。"
+accuracy_note: "ここにある項目は、すべてが実装済みという意味ではありません。提案中・設計完了・外部依存を分けて読めるようにしています。"
+page_highlights:
+  - "文章改善や用語整理のような、小さくても価値の高い参加方法を明示しています。"
+  - "Issueの状態と、どこまで実装済みかを切り分けて追えます。"
+  - "強い主張より、達成条件と反証条件が明確なIssueを重視する方針です。"
+recommended_pages:
+  - label: "スタートページ"
+    url: "/index.html"
+  - label: "検証基盤"
+    url: "/verification.html"
+  - label: "用語集"
+    url: "/glossary.html"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
 
@@ -27,6 +43,13 @@ Mind-Uploadは、マインドアップロードを検証可能な研究へ進め
 <li><strong>用語で詰まったら：</strong><a href="glossary.html">Glossary</a> と <a href="faq.html">FAQ</a></li>
 <li><strong>最初に価値が出やすい貢献：</strong>「達成条件」と「反証条件」が書けるIssue</li>
 </ul>
+</div>
+
+<div class="note-box">
+<strong>参加の考え方</strong>
+<p>
+最初から大きな実装を担う必要はありません。曖昧な言い回しの修正、用語の定義確認、リンク切れや根拠不足の指摘も、このサイトでは重要な貢献です。むしろ、再現性を上げる小さな修正の積み上げを重視しています。
+</p>
 </div>
 
 <!-- Contribution Methods -->

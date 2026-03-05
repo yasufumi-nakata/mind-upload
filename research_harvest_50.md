@@ -5,8 +5,23 @@ description: "50分解クエスチョンで収集した先行研究を、解決�
 article_type: "Evidence Bank"
 subtitle: "U0-U15 の分解、現状評価、先行研究（大量引用）"
 author: Mind Uploading Research Project
-last_updated: "2026-03-01"
+last_updated: "2026-03-06"
 note: "Compiled from 50 worker tasks (curated for relevance)"
+audience: "大量の文献を『何が未解決か』ごとに見たい人、論点別に引用を探したい人"
+reading_time: "20〜35分（統計とU別マップだけなら7分）"
+page_intro: "このページは、ばらばらに集めた文献を『未解決問題ごと』に並べ直したエビデンスバンクです。論文数の多さで圧倒するのではなく、『どこまで解けていて、どこから先が未解決か』を先に見えるようにしています。"
+accuracy_note: "引用数の多さは、そのまま結論の強さを意味しません。関連度・質・未解決性を分けて読む必要があります。"
+page_highlights:
+  - "U0〜U15ごとに、解決済みの部分と未解決の部分を分けて示しています。"
+  - "入力受理ログと学術統合済みの部分を分け、混入防止の手順も明示しています。"
+  - "大量引用ページですが、統計と現状マップだけでも全体像を先に把握できます。"
+recommended_pages:
+  - label: "技術ロードマップ"
+    url: "/tech_roadmap.html"
+  - label: "検証基盤"
+    url: "/verification.html"
+  - label: "論文集"
+    url: "/mind_uploading_papers.html"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
 
@@ -16,6 +31,22 @@ note: "Compiled from 50 worker tasks (curated for relevance)"
 <div class="abstract-box">
 <h2>要旨</h2>
 <p>本ページは、1つの大きな問いを50個の調査タスクへ分解して集めた先行研究を、未解決問題（U0-U15）に再配置したエビデンスバンクです。単なる提案ではなく、URL付き引用をベースに『今どこまで解けているか』と『何が未解決か』を分離して示します。</p>
+</div>
+
+<div class="key-points">
+<h4>先に見れば十分な場所</h4>
+<ul>
+<li><strong>まず全体像だけ知りたい：</strong>「収集と選別の統計」と「U別の現状マップ」を見てください。</li>
+<li><strong>個別論点を追いたい：</strong>自分が気になるU番号から入り、そこで引用されている文献へ進んでください。</li>
+<li><strong>このページでしないこと：</strong>引用を並べただけで、各理論の正しさを自動的に保証することはしません。</li>
+</ul>
+</div>
+
+<div class="note-box">
+<strong>迷ったときの読み順</strong>
+<p>
+最初に統計と品質ゲートで「どうやって混入を防いだか」を確認し、その次に U 別の現状マップで未解決の中心を掴んでください。個別引用を精読するのは、そのあとで十分です。
+</p>
 </div>
 
 <section class="section" id="stats">

@@ -5,8 +5,23 @@ description: "Issue #46/#47/#48/#56/#58/#61/#62/#64–#70/#257–#260 に対応�
 article_type: Index
 subtitle: "Issue対応・実装方針・根拠リンクを1ページで追跡"
 author: Mind Uploading Research Project
-last_updated: "2026-02-23"
+last_updated: "2026-03-06"
 note: "Integrated Compendium"
+audience: "Issue対応の根拠を追いたい人、提案の状態と実装影響をまとめて確認したい人"
+reading_time: "15〜25分"
+page_intro: "このページは、Technical Proposal をバラバラのIssueのままではなく、1本の本文として追えるようにまとめたページです。『何が提案で、何が反映済みで、何がまだ根拠確認中か』を見失わないようにするための索引兼本文として使います。"
+accuracy_note: "ここは統合サマリーです。採否や妥当性は、必ず原文節と Issue 履歴へ戻って確認してください。"
+page_highlights:
+  - "提案ごとの状態、主眼、根拠節を同じ表で追えます。"
+  - "一覧だけでなく本文もまとめているため、背景を切り落とさず確認できます。"
+  - "『提案済み』『実装方針反映』『外部依存』を混ぜない読み方を前提にしています。"
+recommended_pages:
+  - label: "貢献ガイド"
+    url: "/issue.html"
+  - label: "検証基盤"
+    url: "/verification.html"
+  - label: "技術ロードマップ"
+    url: "/tech_roadmap.html"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
 
@@ -18,6 +33,13 @@ note: "Integrated Compendium"
 <p>
 このページは、Technical Proposal 群（Issue #46/#47/#48/#56/#58/#61/#62/#257–#260）を「一覧」ではなく<strong>本文として統合</strong>したページです。
 各提案の主張、対応状況、実装影響、根拠節へのリンクを1か所にまとめ、検証と更新を容易にします。
+</p>
+</div>
+
+<div class="note-box">
+<strong>このページで言えること／言えないこと</strong>
+<p>
+ここで言えるのは「どの提案が何を目指し、どの根拠に支えられているか」です。一方で、ここだけ読んで提案の妥当性が最終確定したとは言えません。判断が必要な場合は、必ず原文節と Issue のやり取りまで戻ってください。
 </p>
 </div>
 

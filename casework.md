@@ -5,8 +5,23 @@ description: "標準化・検証・比較可能性（何を満たせば前進と
 article_type: Casework
 subtitle: "PDB / INSDC / BIDS+OpenNeuro / ImageNet / MLPerf / OSF から学ぶ"
 author: Mind Uploading Research Project
-last_updated: "2026-02-10"
+last_updated: "2026-03-06"
 note: "Reference Collection"
+audience: "他分野の成功例から設計の型を学びたい人、標準化の意味を実例で理解したい人"
+reading_time: "12〜20分"
+page_intro: "このページは、WBEそのものを説明するというより、『研究分野がどうやって比較可能な前進を作ってきたか』を実例で学ぶためのページです。PDBやBIDS、MLPerfなどを手本にして、Mind-Uploadで何を先に整えるべきかを読み取ります。"
+accuracy_note: "他分野の成功例は参考モデルであり、そのままWBEの成功を保証するものではありません。借りるべき設計原理を切り出して読んでください。"
+page_highlights:
+  - "標準化・置き場・ベンチマーク・事前登録が、どう役割分担しているかを見ます。"
+  - "『なぜその仕組みが効いたのか』を整理し、Mind-Uploadに転用できる形にします。"
+  - "歴史の紹介だけで終わらず、現在の設計判断に結び付けて読めるようにしています。"
+recommended_pages:
+  - label: "検証基盤"
+    url: "/verification.html"
+  - label: "データ&ベンチ"
+    url: "/datasets.html"
+  - label: "公開コンテンツ統合ハブ"
+    url: "/content_hub.html"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
 
@@ -17,6 +32,13 @@ note: "Reference Collection"
 <h2>Why This Page</h2>
 <p>
 「前進を測れない」「結果を再現できない」「研究同士を比較できない」という問題は、昔から多くの分野で起きてきました。ここでは、<strong>Web上の公開基盤</strong>がどうやってその問題を減らしたかを、実例で分かりやすく整理します。Mind-Uploadは、その成功パターンをWBEにも適用します。
+</p>
+</div>
+
+<div class="note-box">
+<strong>読み方のコツ</strong>
+<p>
+各事例を「昔話」として読むのではなく、(1)何がバラバラだったのか、(2)どんな共通ルールを作ったのか、(3)その結果どんな比較が可能になったのか、の順で追うと、Mind-Uploadへの転用点が見えやすくなります。
 </p>
 </div>
 

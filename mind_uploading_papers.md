@@ -2,6 +2,22 @@
 layout: default
 title: "Mind Uploading Paper Collection"
 description: "過去10年間の主要な「Mind Uploading」関連論文を、アブストラクトの有無で整理したアーカイブです。"
+last_updated: "2026-03-06"
+audience: "関連論文を広く見たい人、年別の傾向をざっと掴みたい人、元論文へ戻る入口が欲しい人"
+reading_time: "目次確認なら5分、精読は必要な論文だけ"
+page_intro: "このページは、Mind Uploading に関連する論文を年別に広く見渡すためのアーカイブです。ここで大事なのは、論文を全部同じ重みで信じることではなく、どの論点にどの種別の文献があるかを素早く掴むことです。"
+accuracy_note: "収録されていることは『関連文献として拾われた』ことを意味し、各論文が同じ強さの証拠であることは意味しません。"
+page_highlights:
+  - "年別に並んでいるので、関心の集まり方の変化を追えます。"
+  - "和訳要約と原文要約を併記し、必要なら元論文へ戻れるようにしています。"
+  - "まず一覧で位置をつかみ、重要そうな論文だけを個別に掘る使い方を想定しています。"
+recommended_pages:
+  - label: "文献地図"
+    url: "/research_harvest_50.html"
+  - label: "用語集"
+    url: "/glossary.html"
+  - label: "検証基盤"
+    url: "/verification.html"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
 
@@ -29,7 +45,7 @@ description: "過去10年間の主要な「Mind Uploading」関連論文を、�
 <main>
 <header>
 <h1>Mind Uploading Paper Collection</h1>
-<p>過去10年間の主要な「Mind Uploading」関連論文を、アブストラクトの有無で整理したアーカイブです。</p>
+<p>過去10年間の主要な「Mind Uploading」関連論文を、アブストラクトの有無で整理したアーカイブです。まずは年別の流れと要約を見て、必要な論文だけ元文献へ戻る使い方を想定しています。</p>
 <div class="stats-grid">
 <div class="stat-card"><span>Total</span>
 <div>100</div>
@@ -40,6 +56,20 @@ description: "過去10年間の主要な「Mind Uploading」関連論文を、�
 <div class="stat-card"><span>No Abstract</span>
 <div>53</div>
 </div>
+</div>
+<div class="key-points">
+<h4>読む前に</h4>
+<ul>
+<li><strong>このページの役割：</strong>関連文献の入口を作ることです。各論文の最終評価をここだけで完結させるページではありません。</li>
+<li><strong>先に見る場所：</strong>まず統計と年別の並びを確認し、その後に自分の関心に近い論文だけを精読してください。</li>
+<li><strong>気を付ける点：</strong>関連性が広めの論文も含まれるため、収録＝中心的証拠とは限りません。</li>
+</ul>
+</div>
+<div class="note-box">
+<strong>迷ったときの読み順</strong>
+<p>
+まず上の統計で全体量を確認し、次に最新年から数本だけ要約を読んで論点の傾向を掴んでください。個別論文の位置づけを強く知りたい場合は、<a href="research_harvest_50.html">文献地図</a>に戻ると未解決問題との対応を確認できます。
+</p>
 </div>
 </header>
 <h2 id="with-abstracts" class="category-title">1. アブストラクトあり</h2>

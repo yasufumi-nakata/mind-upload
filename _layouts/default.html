@@ -25,12 +25,12 @@
     <header class="journal-header" role="banner">
         <a class="site-title" href="{{ '/' | relative_url }}">Mind-Upload Commons</a>
         <nav aria-label="Primary">
-            <a href="{{ '/' | relative_url }}">Main Page</a>
-            <a href="{{ '/verification.html' | relative_url }}">Verification</a>
-            <a href="{{ '/tech_roadmap.html' | relative_url }}">Roadmap</a>
-            <a href="{{ '/content_hub.html' | relative_url }}">Contents</a>
-            <a href="{{ '/mind_uploading_papers.html' | relative_url }}">Papers</a>
-            <a href="{{ '/issue.html' | relative_url }}">Contribute</a>
+            <a href="{{ '/' | relative_url }}">スタート</a>
+            <a href="{{ '/verification.html' | relative_url }}">検証基盤</a>
+            <a href="{{ '/tech_roadmap.html' | relative_url }}">ロードマップ</a>
+            <a href="{{ '/content_hub.html' | relative_url }}">公開コンテンツ</a>
+            <a href="{{ '/mind_uploading_papers.html' | relative_url }}">論文集</a>
+            <a href="{{ '/issue.html' | relative_url }}">参加方法</a>
             <a href="https://github.com/yasufumi-nakata/mind-upload" target="_blank">GitHub</a>
         </nav>
     </header>
@@ -49,15 +49,67 @@
         </p>
         {% endif %}
         <div class="article-meta">
-            <span>Open Access</span>
+            <span>公開ページ</span>
             {% if page.last_updated %}
-            <span>Last Updated: {{ page.last_updated }}</span>
+            <span>更新日: {{ page.last_updated }}</span>
             {% endif %}
             {% if page.note %}
             <span>{{ page.note }}</span>
             {% endif %}
         </div>
     </header>
+    {% endif %}
+
+    {% if page.page_intro or page.page_highlights or page.recommended_pages or page.audience or page.reading_time or page.accuracy_note %}
+    <section class="page-guide" aria-label="このページの読み方">
+        <div class="page-guide-inner">
+            <div class="page-guide-main">
+                <p class="page-guide-kicker">このページの読み方</p>
+                <h2>先にここだけ読むと迷いにくくなります</h2>
+                {% if page.page_intro %}
+                <p class="page-guide-lead">{{ page.page_intro }}</p>
+                {% endif %}
+                {% if page.page_highlights %}
+                <ul class="page-guide-points">
+                    {% for item in page.page_highlights %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% if page.recommended_pages %}
+                <div class="page-guide-links">
+                    <span>次に読むとわかりやすいページ</span>
+                    <div class="page-guide-link-list">
+                        {% for link in page.recommended_pages %}
+                        <a href="{{ link.url | relative_url }}">{{ link.label }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+
+            <dl class="page-guide-facts">
+                {% if page.audience %}
+                <div>
+                    <dt>向いている人</dt>
+                    <dd>{{ page.audience }}</dd>
+                </div>
+                {% endif %}
+                {% if page.reading_time %}
+                <div>
+                    <dt>読む目安</dt>
+                    <dd>{{ page.reading_time }}</dd>
+                </div>
+                {% endif %}
+                {% if page.accuracy_note %}
+                <div>
+                    <dt>正確さの前提</dt>
+                    <dd>{{ page.accuracy_note }}</dd>
+                </div>
+                {% endif %}
+            </dl>
+        </div>
+    </section>
     {% endif %}
 
     <section id="easy-guide" class="easy-guide" hidden aria-label="高校生向けの用語説明">
@@ -69,12 +121,23 @@
         </div>
     </section>
 
+    <section id="section-map" class="section-map" hidden aria-label="ページ内の見取り図">
+        <div class="section-map-inner">
+            <div class="section-map-header">
+                <p class="section-map-kicker">ページ内の見取り図</p>
+                <h2>長いページでも、どこに何があるか先に分かります</h2>
+                <p id="section-map-status"></p>
+            </div>
+            <ol id="section-map-list" class="section-map-list"></ol>
+        </div>
+    </section>
+
     <!-- Main Content -->
     {{ content }}
 
     <!-- Footer -->
     <footer>
-        <p class="site-policy">本サイトは、再現可能性と透明性を重視した研究ノートです。誤りの指摘や改善提案は GitHub Issues へ。</p>
+        <p class="site-policy">本サイトは、再現可能性と透明性を重視した研究ノートです。わかりやすさを優先しつつ、定義・根拠・限界を省かない方針で更新しています。誤りの指摘や改善提案は GitHub Issues へお願いいたします。</p>
         <p>&copy; 2024-2026 Mind Uploading Research Project. <a href="https://github.com/yasufumi-nakata/mind-upload">GitHub</a></p>
     </footer>
 
@@ -106,8 +169,65 @@
             var guide = document.getElementById("easy-guide");
             var list = document.getElementById("easy-term-list");
             var status = document.getElementById("easy-guide-status");
+            var sectionMap = document.getElementById("section-map");
+            var sectionMapList = document.getElementById("section-map-list");
+            var sectionMapStatus = document.getElementById("section-map-status");
 
-            if (!contentRoot || !guide || !list || !status) {
+            if (!contentRoot) {
+                return;
+            }
+
+            if (sectionMap && sectionMapList && sectionMapStatus) {
+                var headings = contentRoot.querySelectorAll("h2.section-title, h2.category-title, h3.year-title, h3.year-heading");
+                var sectionCount = 0;
+                var seenIds = {};
+
+                for (var k = 0; k < headings.length; k++) {
+                    var heading = headings[k];
+                    var targetId = heading.id;
+                    var parentSection = heading.closest("section");
+
+                    if (!targetId && parentSection && parentSection.id) {
+                        targetId = parentSection.id;
+                    }
+
+                    if (!targetId) {
+                        targetId = "section-map-" + (k + 1);
+                        heading.id = targetId;
+                    }
+
+                    if (seenIds[targetId]) {
+                        continue;
+                    }
+
+                    seenIds[targetId] = true;
+                    sectionCount += 1;
+
+                    var mapItem = document.createElement("li");
+                    var mapLink = document.createElement("a");
+                    mapLink.href = "#" + targetId;
+
+                    var index = document.createElement("span");
+                    index.className = "section-map-index";
+                    index.textContent = String(sectionCount).padStart(2, "0");
+
+                    var label = document.createElement("span");
+                    label.className = "section-map-label";
+                    label.textContent = heading.textContent.trim();
+
+                    mapLink.appendChild(index);
+                    mapLink.appendChild(label);
+                    mapItem.appendChild(mapLink);
+                    sectionMapList.appendChild(mapItem);
+                }
+
+                if (sectionCount >= 3) {
+                    sectionMapStatus.textContent = "全" + sectionCount + "項目です。気になる節から読んでも大丈夫ですが、迷ったら上から順に追うと全体像を崩しにくくなります。";
+                    sectionMap.hidden = false;
+                }
+            }
+
+            if (!guide || !list || !status) {
                 return;
             }
 

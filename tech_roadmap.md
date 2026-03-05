@@ -4,8 +4,23 @@ title: "技術ロードマップ：計測→再構成→実装でWBEを理解す
 description: "マインドアップロード（WBE）を技術面から俯瞰する学習ロードマップ。計測→再構成→実装→検証の問いの木で整理。"
 article_type: "Roadmap (Definition #1)"
 subtitle: "「何を解けたら前進か」を問いの木に分解し、読む順番と最低限の到達点を示す"
-last_updated: "2026-02-14"
+last_updated: "2026-03-06"
 note: "暫定版（随時更新）"
+audience: "全体像を知りたい人、学習順序を決めたい人、主張の強さを段階で整理したい人"
+reading_time: "20〜30分（索引だけなら5分）"
+page_intro: "このページは、WBEの論点を『計測』『再構成』『実装』『検証』『社会実装』に分けて並べた地図です。どの問題が土台で、どの問題がまだ未解決なのかを見失わないために使います。"
+accuracy_note: "ここに書くのは研究全体の整理であり、各項目がすでに解決済みだという意味ではありません。"
+page_highlights:
+  - "まずP0〜P2で『何を成功と呼ぶか』を固定し、その後に計測や実装へ進みます。"
+  - "索引を使えば、気になる論点だけ先に読むこともできます。"
+  - "強い主張ほど後ろのレベルに置き、前のレベルを飛ばして語らない構造にしています。"
+recommended_pages:
+  - label: "WBE入門"
+    url: "/wbe_101.html"
+  - label: "EEG入門"
+    url: "/eeg_101.html"
+  - label: "検証基盤"
+    url: "/verification.html"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
 
@@ -22,6 +37,15 @@ note: "暫定版（随時更新）"
 <p>
 このページは情報量が多いので、先に <a href="wbe_101.html">WBE入門</a> と <a href="eeg_101.html">EEG入門</a>（必要なら <a href="glossary.html">用語集</a>）を読むと理解が早いです。
 </p>
+</div>
+
+<div class="key-points">
+<h4>先に押さえる3点</h4>
+<ul>
+<li><strong>このページの役割：</strong>結論を断言することではなく、「どの論点がどこにあるか」を固定することです。</li>
+<li><strong>このページで言えること：</strong>今の研究課題を、順序と依存関係つきで整理できます。</li>
+<li><strong>このページだけでは言えないこと：</strong>本人性や意識の最終結論が、すでに証明されたとは言えません。</li>
+</ul>
 </div>
 
 <section class="section" id="howto">

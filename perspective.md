@@ -5,8 +5,23 @@ description: "マインドアップロード実現のための中核となるコ
 article_type: Perspective
 subtitle: "脳の情報処理を別の基盤で再現し、心的機能を移植・複製するという研究仮説の現状と展望"
 author: Mind Uploading Research Project
-last_updated: "2026-01-15"
+last_updated: "2026-03-06"
 note: "研究ノート (2026年1月改訂)"
+audience: "理論と実装のつながりまで追いたい人、限界や反論も含めて全体を知りたい人"
+reading_time: "30〜45分"
+page_intro: "このページは、マインドアップロードをめぐる理論・計測・実装の論点を、一次文献と限界を並べながら追う長い研究ノートです。楽観論だけでも悲観論だけでもなく、『どこまでは言えて、どこから先は未解決か』をはっきり分けて読めるようにしています。"
+accuracy_note: "特定の意識理論がすでに正しいと確定した前提では書いていません。支持点と未解決点を分けて扱います。"
+page_highlights:
+  - "理論の紹介だけで終わらず、実装へ落としたときの制約まで一緒に追います。"
+  - "強い主張ほど、反証条件や代替説明を並べて確認します。"
+  - "長文ですが、導入と注意書きだけでも全体の立場が分かる構成にしています。"
+recommended_pages:
+  - label: "検証基盤"
+    url: "/verification.html"
+  - label: "技術ロードマップ"
+    url: "/tech_roadmap.html"
+  - label: "理論フレーム"
+    url: "/idea.html"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
 
@@ -29,6 +44,22 @@ note: "研究ノート (2026年1月改訂)"
 <strong>新しく来た人へ</strong>
 <p>
 このページは長い研究ノートです。まずは <a href="wbe_101.html">WBE入門</a> と <a href="eeg_101.html">EEG入門</a>、必要なら <a href="glossary.html">用語集</a> を先に読むと迷子になりにくいです。
+</p>
+</div>
+
+<div class="key-points">
+<h4>読む前に確認したいこと</h4>
+<ul>
+<li><strong>このページの役割：</strong>賛成意見だけを並べることではなく、根拠と限界を同時に追うことです。</li>
+<li><strong>このページで言えること：</strong>主要理論が何を説明し、どこでつまずいているかを整理できます。</li>
+<li><strong>このページだけでは言えないこと：</strong>「これで意識を完全に説明できた」という最終結論までは出していません。</li>
+</ul>
+</div>
+
+<div class="note-box">
+<strong>迷ったときの読み順</strong>
+<p>
+まず導入部で立場を把握し、次に計測・モデル化・実装の節へ進んでください。哲学寄りの論点で詰まった場合は、先に <a href="idea.html">理論フレーム</a> と <a href="faq.html">FAQ</a> を見ると、戻ってきたときに読みやすくなります。
 </p>
 </div>
 

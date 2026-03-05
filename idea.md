@@ -5,8 +5,23 @@ description: "マインドアップロードを動的プロセスとして再定
 article_type: Framework
 subtitle: "静的構造から動的プロセスへ：意識の計算論的再構築"
 author: Mind Uploading Research Project
-last_updated: "2026-02-10"
+last_updated: "2026-03-06"
 note: "Theoretical Framework"
+audience: "『コピー』ではなく『連続的な移行』という考え方を理解したい人、理論的な立場を先に知りたい人"
+reading_time: "15〜25分"
+page_intro: "このページは、Mind-Uploadがなぜ『静的な複製』より『動的プロセスの引き継ぎ』を重視するのかを説明する理論フレームです。哲学の言葉も出てきますが、狙いは抽象論ではなく、設計要件に落とせる形で考え方を固定することです。"
+accuracy_note: "ここには仮説的な設計原理も含まれます。確立した事実と、採用している理論的立場を混同しないためのページです。"
+page_highlights:
+  - "本人性の議論を『コピー問題』で止めず、工学的な設計条件へつなげます。"
+  - "IITやFEPなど複数理論を、実装に必要な要件として読み替えます。"
+  - "用語が抽象的でも、最終的には移行手順や検証条件に戻す方針です。"
+recommended_pages:
+  - label: "研究ノート"
+    url: "/perspective.html"
+  - label: "WBE入門"
+    url: "/wbe_101.html"
+  - label: "検証基盤"
+    url: "/verification.html"
 ---
 
 <main class="main-container">
@@ -18,6 +33,15 @@ note: "Theoretical Framework"
 <p>
 従来のマインドアップロード（WBE）は、脳の構造的コネクトームを静的に複製する「スキャン＆コピー」に依存し、そのため多重性の異議や計算論的批判に脆弱なままでございます。本プロジェクトは、意識を静的な情報パターンではなく、環境との相互作用を通じて自己を維持する<strong>「動的プロセス（Dynamic Process）」</strong>として再定義する。これはWhiteheadのプロセス哲学やParfitの心理的連続性説を、Fristonの自由エネルギー原理（FEP）を通じて工学的に実装する試みである。
 </p>
+</div>
+
+<div class="key-points">
+<h4>このページで先に分かること</h4>
+<ul>
+<li><strong>主張したいこと：</strong>Mind-Uploadを「データの複製」ではなく「過程の移行」として定義し直します。</li>
+<li><strong>主張しないこと：</strong>この理論フレームだけで、実験的検証が完了したとは扱いません。</li>
+<li><strong>読み方：</strong>まず第1節で立場をつかみ、その後に理論整合性と実装条件を追うと理解しやすいです。</li>
+</ul>
 </div>
 
 <!-- Section 1 -->

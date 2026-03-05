@@ -5,8 +5,23 @@ description: "mind-upload.comの検証基盤（Verification Commons）に接続�
 article_type: Action Plan
 subtitle: "L0達成を最短で実現するための外部連携先と具体的なアクション"
 author: Mind Uploading Research Project
-last_updated: "2026-02-15"
+last_updated: "2026-03-06"
 note: "随時更新"
+audience: "外部連携の全体像を知りたい人、何が内製できて何が外部依存かを切り分けたい人"
+reading_time: "12〜20分"
+page_intro: "このページは、Mind-Uploadが単独では進めにくい課題を、どの連携先なら前に進められるかという観点で整理した実務ページです。単なる候補一覧ではなく、L0達成に近い順に『誰と何をすると何が増えるか』を読み取れるようにしています。"
+accuracy_note: "ここに載る連携先は候補であり、合意済み・実施確約済みを意味しません。外部依存タスクとして読む必要があります。"
+page_highlights:
+  - "L0に近いものから順に、連携の優先順位を置いています。"
+  - "各候補に対して、目標・最小成果物・最初の一歩を分けて書いています。"
+  - "『今サイト内でできること』と『相手先の合意が必要なこと』を混同しないためのページです。"
+recommended_pages:
+  - label: "検証基盤"
+    url: "/verification.html"
+  - label: "貢献ガイド"
+    url: "/issue.html"
+  - label: "データ&ベンチ"
+    url: "/datasets.html"
 ---
 
 <main class="main-container">
@@ -27,6 +42,13 @@ note: "随時更新"
 <li><strong>相互利益：</strong>一方的な利用ではなく、双方に価値をもたらす協力関係を構築する</li>
 <li><strong>透明性：</strong>協力内容、成果物、制約事項を公開し、コミュニティ全体の利益とする</li>
 </ul>
+</div>
+
+<div class="note-box">
+<strong>読み方の前提</strong>
+<p>
+このページは「今すぐこちらだけで完了できる作業」と「相手先との合意が必要な作業」を分けるための整理表でもあります。したがって、ここで重要なのは候補名だけでなく、<strong>最初のステップが外部依存かどうか</strong>を確認することです。
+</p>
 </div>
 
 <section class="section" id="top-10">
