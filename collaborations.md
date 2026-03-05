@@ -51,6 +51,45 @@ recommended_pages:
 </p>
 </div>
 
+<div class="key-points">
+<h4>この表の使い方</h4>
+<ul>
+<li><strong>優先度：</strong>相手の有名さではなく、L0 にどれだけ近いかで見ています。</li>
+<li><strong>成果物：</strong>その連携で最低限どこまで形にしたいかを示します。</li>
+<li><strong>最初のステップ：</strong>こちらだけで準備できるのか、相手の返答が必要なのかを見分ける欄です。</li>
+</ul>
+</div>
+
+<section class="section" id="inside-outside">
+<h2 class="section-title">内製できること / 外部依存になること</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>種類</th>
+<th>このリポジトリ内で進められること</th>
+<th>外部依存になること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>標準化準備</strong></td>
+<td>仕様下書き、要求整理、比較表、ログ形式の定義</td>
+<td>コミュニティ採択、公式仕様への反映</td>
+</tr>
+<tr>
+<td><strong>データ公開準備</strong></td>
+<td>BIDS変換、QC、説明文、再現手順の整備</td>
+<td>実データの権利確認、外部リポジトリへの受理</td>
+</tr>
+<tr>
+<td><strong>共同研究準備</strong></td>
+<td>再解析計画、評価設計、成果物テンプレートの作成</td>
+<td>実験実施、共同著者合意、機材利用、IRB</td>
+</tr>
+</tbody>
+</table>
+</section>
+
 <section class="section" id="top-10">
 <h2 class="section-title">優先協業パートナー Top 10</h2>
 <p>
