@@ -83,6 +83,12 @@ recommended_pages:
 共同研究や標準化提案では、外部依存の前に 1 ページ要約、最小成果物、判定条件、公開可能な下準備を作る方が前に進みます。整理を 1 枚で見たい場合は <a href="wiki/internal-prework-and-external-dependencies.html">Wiki: 内製で先にやることと外部依存の切り分け</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>このページのあとに次の1ページを決めたいとき</strong>
+<p>
+協業候補を見たあとに、次は Issue に戻るべきか、Verification で条件を固めるべきか、Hands-on で最小成果物を作るべきか迷う場合は <a href="wiki/participation-next-routes.html">Wiki: 参加・協業ページのあとに進む5つの道</a> をご覧ください。
+</p>
+</div>
 
 <div class="key-points">
 <h4>この表の使い方</h4>

@@ -90,6 +90,12 @@ IRB、実験、機材、法務が絡むときでも、要求仕様、判定条�
 論文や文献地図を見たあとに、どの未解決問題へ戻し、どの条件で Issue に落とすかを一本道で見たい場合は <a href="wiki/literature-to-action-route.html">Wiki: 文献から実装・参加へ戻る一本道</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>このページのあとに次の1ページを決めたいとき</strong>
+<p>
+参加したい気持ちはあるが、次に小さな修正を切るのか、条件設計へ進むのか、外部依存を分解するのかで迷う場合は <a href="wiki/participation-next-routes.html">Wiki: 参加・協業ページのあとに進む5つの道</a> をご覧ください。
+</p>
+</div>
 
 <section class="section" id="first-contribution-guide">
 <h2 class="section-title">最初の一歩を決める早見表</h2>

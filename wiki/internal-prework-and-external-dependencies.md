@@ -51,6 +51,13 @@ recommended_pages:
 </p>
 </div>
 
+<div class="note-box">
+<strong>参加ページのあとに次の1ページを決めたいとき</strong>
+<p>
+Issue や Collaborations を読んだあとに、次は小さな修正、条件設計、文献からの作業化、L0 実装準備のどれへ進むべきかを 1 枚で見たい場合は <a href="participation-next-routes.html">参加・協業ページのあとに進む5つの道</a> をご覧ください。
+</p>
+</div>
+
 <section class="section" id="two-columns">
 <h2 class="section-title">内製と外部依存を 2 列で読む</h2>
 <table class="data-table">

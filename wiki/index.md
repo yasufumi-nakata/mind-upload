@@ -153,6 +153,11 @@ recommended_pages:
 <td><a href="../research_harvest_50.html">文献地図</a> / <a href="../proposals.html">技術提案</a> / <a href="../issue.html">貢献ガイド</a> / <a href="../collaborations.html">協業候補</a></td>
 </tr>
 <tr>
+<td><strong>Issue や Collaborations のあとに次の1ページを決めたい</strong></td>
+<td><a href="participation-next-routes.html">参加・協業ページのあとに進む5つの道</a></td>
+<td><a href="../issue.html">貢献ガイド</a> / <a href="../collaborations.html">協業候補</a> / <a href="../content_hub.html">公開コンテンツ統合ハブ</a> / <a href="../hands_on.html">ハンズオン</a></td>
+</tr>
+<tr>
 <td><strong>Scopus、arXiv、Review、source_logged の違いで止まる</strong></td>
 <td><a href="paper-source-types-and-evidence-status.html">文献のソース種別と状態ラベルの読み方</a></td>
 <td><a href="../mind_uploading_papers.html">論文集</a> / <a href="../research_harvest_50.html">文献地図</a></td>
