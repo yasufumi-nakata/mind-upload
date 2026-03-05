@@ -90,6 +90,12 @@ Perspective は理論、計測、反論、限界をまとめて追う長文ノ�
 </p>
 </div>
 <div class="note-box">
+<strong>WBE入門からここへ来るまでの理論ルートを見たいとき</strong>
+<p>
+WBE 101 のあとに、なぜこの長文ノートへ進むのか、誤解整理や設計原理との違いも含めて一本道で見たい場合は <a href="wiki/wbe-to-theory-route.html">Wiki: WBE入門から理論を深掘る4ルート</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
 <strong>『不足』『未確定』『未解決』の重さを分けたいとき</strong>
 <p>
 このページは限界や反論を多く扱うため、何が<strong>部分解決</strong>で、何が<strong>探索段階</strong>で、何が<strong>未整備</strong>なのかを分けて読む必要があります。進み具合の言葉を 1 枚で整理したい場合は <a href="wiki/progress-labels-and-open-problem-status.html">Wiki: 部分解決・探索段階・未整備の読み方</a> を先にご覧ください。

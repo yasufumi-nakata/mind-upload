@@ -80,6 +80,12 @@ recommended_pages:
 このページは、採用する設計原理を絞って見るための理論フレームです。主張レベルの入口は <a href="wbe_101.html">WBE 101</a>、支持点と限界を長文で追うページは <a href="perspective.html">研究ノート</a>、依存関係の地図は <a href="tech_roadmap.html">技術ロードマップ</a> です。理論系だけの役割差を 1 枚で見たい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>WBE入門からここへ来るまでの理論ルートを見たいとき</strong>
+<p>
+WBE 101 のあとに、誤解整理ではなく設計原理を先に固めたい場合のルートを一本道で見たいときは <a href="wiki/wbe-to-theory-route.html">Wiki: WBE入門から理論を深掘る4ルート</a> をご覧ください。
+</p>
+</div>
 
 <table class="data-table">
 <thead>

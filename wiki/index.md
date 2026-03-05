@@ -118,6 +118,11 @@ recommended_pages:
 <td><a href="../wbe_101.html">WBE入門</a> / <a href="../perspective.html">研究ノート</a> / <a href="../idea.html">理論フレーム</a> / <a href="../tech_roadmap.html">技術ロードマップ</a></td>
 </tr>
 <tr>
+<td><strong>WBE入門のあとに理論のどこを深掘るか迷う</strong></td>
+<td><a href="wbe-to-theory-route.html">WBE入門から理論を深掘る4ルート</a></td>
+<td><a href="../wbe_101.html">WBE入門</a> / <a href="../faq.html">FAQ</a> / <a href="../idea.html">理論フレーム</a> / <a href="../perspective.html">研究ノート</a></td>
+</tr>
+<tr>
 <td><strong>実務系ページどうしの違いで迷う</strong></td>
 <td><a href="practical-pages-reading-guide.html">実務系ページの読み分けガイド</a></td>
 <td><a href="../verification.html">検証基盤</a> / <a href="../datasets.html">データ&ベンチ</a> / <a href="../hands_on.html">ハンズオン</a> / <a href="../casework.html">ケースワーク</a></td>

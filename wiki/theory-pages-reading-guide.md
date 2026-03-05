@@ -54,6 +54,13 @@ recommended_pages:
 </p>
 </div>
 
+<div class="note-box">
+<strong>WBE入門のあとに次の1ページを決めたいとき</strong>
+<p>
+理論系ページ全体の役割差だけでなく、WBE 101 のあとに誤解整理、設計原理、長文ノート、依存関係の地図のどこへ進むかを 1 枚で見たい場合は <a href="wbe-to-theory-route.html">WBE入門から理論を深掘る4ルート</a> をご覧ください。
+</p>
+</div>
+
 <section class="section" id="role-diff">
 <h2 class="section-title">理論系ページの役割差</h2>
 <table class="data-table">
