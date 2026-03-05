@@ -26,6 +26,9 @@ wiki_links:
   - label: "Wiki: 検証基盤の基本"
     url: "/wiki/verification-basics.html"
     description: "なぜ標準や成果物の準備が先に要るのかを理解できます。"
+  - label: "Wiki: 内製で先にやることと外部依存"
+    url: "/wiki/internal-prework-and-external-dependencies.html"
+    description: "こちらだけで進められる準備と、相手先依存の部分を切り分けます。"
   - label: "Wiki: ロードマップの読み方"
     url: "/wiki/roadmap-reading-guide.html"
     description: "どの外部連携が、どの工程を埋めるのかを見失いにくくします。"
@@ -72,6 +75,12 @@ recommended_pages:
 <strong>先に内製の意味を知りたいとき</strong>
 <p>
 連携の話だけ見ると動き方が見えにくい場合は、先に <a href="wiki/verification-basics.html">Wiki: 検証基盤の基本</a> を見てください。何をこちらで先に作るべきかが分かると、候補表の意味が読みやすくなります。
+</p>
+</div>
+<div class="note-box">
+<strong>相手待ちになる前に何を作るか迷ったとき</strong>
+<p>
+共同研究や標準化提案では、外部依存の前に 1 ページ要約、最小成果物、判定条件、公開可能な下準備を作る方が前に進みます。整理を 1 枚で見たい場合は <a href="wiki/internal-prework-and-external-dependencies.html">Wiki: 内製で先にやることと外部依存の切り分け</a> をご覧ください。
 </p>
 </div>
 

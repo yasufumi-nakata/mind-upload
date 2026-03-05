@@ -118,6 +118,11 @@ recommended_pages:
 <td><a href="../proposals.html">技術提案</a> / <a href="../issue.html">貢献ガイド</a></td>
 </tr>
 <tr>
+<td><strong>外部依存でも今できる準備が分からない</strong></td>
+<td><a href="internal-prework-and-external-dependencies.html">内製で先にやることと外部依存の切り分け</a></td>
+<td><a href="../issue.html">貢献ガイド</a> / <a href="../collaborations.html">協業候補</a></td>
+</tr>
+<tr>
 <td><strong>U番号が何を指すのか分からない</strong></td>
 <td><a href="u-number-guide.html">U番号ガイド</a></td>
 <td><a href="../research_harvest_50.html">文献地図</a></td>
@@ -296,6 +301,10 @@ recommended_pages:
 <tr>
 <td>提案受理と実装完了の違い</td>
 <td><a href="proposal-status-reading.html">提案と状態ラベルの読み方</a></td>
+</tr>
+<tr>
+<td>今できる準備と、相手待ちになる作業の切り分け</td>
+<td><a href="internal-prework-and-external-dependencies.html">内製で先にやることと外部依存の切り分け</a></td>
 </tr>
 <tr>
 <td>U0-U15 を日常語で読み替えたい</td>

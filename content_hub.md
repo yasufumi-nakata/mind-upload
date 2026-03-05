@@ -253,6 +253,7 @@ recommended_pages:
 <li><a href="wiki/literature-and-evidence-reading.html">wiki/literature-and-evidence-reading.html</a></li>
 <li><a href="wiki/paper-source-types-and-evidence-status.html">wiki/paper-source-types-and-evidence-status.html</a></li>
 <li><a href="wiki/proposal-status-reading.html">wiki/proposal-status-reading.html</a></li>
+<li><a href="wiki/internal-prework-and-external-dependencies.html">wiki/internal-prework-and-external-dependencies.html</a></li>
 <li><a href="wiki/progress-labels-and-open-problem-status.html">wiki/progress-labels-and-open-problem-status.html</a></li>
 <li><a href="wiki/u-number-guide.html">wiki/u-number-guide.html</a></li>
 <li><a href="wiki/consciousness-theory-map.html">wiki/consciousness-theory-map.html</a></li>
@@ -296,6 +297,7 @@ recommended_pages:
 <li><a href="wiki/literature-and-evidence-reading.html">文献ページの読み方 →</a></li>
 <li><a href="wiki/paper-source-types-and-evidence-status.html">文献ラベルの読み方 →</a></li>
 <li><a href="wiki/proposal-status-reading.html">提案ラベルの読み方 →</a></li>
+<li><a href="wiki/internal-prework-and-external-dependencies.html">内製と外部依存の切り分け →</a></li>
 <li><a href="wiki/progress-labels-and-open-problem-status.html">進捗ラベルの読み方 →</a></li>
 <li><a href="wiki/u-number-guide.html">U番号ガイド →</a></li>
 <li><a href="wiki/consciousness-theory-map.html">意識理論マップ →</a></li>

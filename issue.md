@@ -26,6 +26,9 @@ wiki_links:
   - label: "Wiki Home"
     url: "/wiki/"
     description: "分野の前提知識を先に補いたい人向けの入口です。"
+  - label: "Wiki: 内製で先にやることと外部依存"
+    url: "/wiki/internal-prework-and-external-dependencies.html"
+    description: "今このリポジトリで進められることと、外部依存になることを分けます。"
   - label: "Wiki: WBEの基本"
     url: "/wiki/mind-upload-basics.html"
     description: "何の話を改善しているのかを先に把握できます。"
@@ -73,6 +76,12 @@ Mind-Uploadは、マインドアップロードを検証可能な研究へ進め
 <strong>前提知識が足りないと感じたとき</strong>
 <p>
 無理に Issue を書き始めるより、先に <a href="wiki/">wiki</a> で WBE や検証基盤の基礎を押さえる方が安全です。用語の前提がそろうと、どこで止まったかをより正確に報告できます。
+</p>
+</div>
+<div class="note-box">
+<strong>外部依存の切り分けで止まったとき</strong>
+<p>
+IRB、実験、機材、法務が絡むときでも、要求仕様、判定条件、公開ログ形式などは先に内製できます。<a href="wiki/internal-prework-and-external-dependencies.html">Wiki: 内製で先にやることと外部依存の切り分け</a> に、今このリポジトリで進められることを整理しています。
 </p>
 </div>
 

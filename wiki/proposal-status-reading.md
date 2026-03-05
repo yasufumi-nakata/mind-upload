@@ -26,6 +26,9 @@ wiki_links:
   - label: "Wiki: 文献と証拠ページの読み方"
     url: "/wiki/literature-and-evidence-reading.html"
     description: "提案ページが、文献系ページとどう違うかを補います。"
+  - label: "Wiki: 内製で先にやることと外部依存"
+    url: "/wiki/internal-prework-and-external-dependencies.html"
+    description: "外部依存を、今できる準備作業まで分解して読みたい人向けです。"
   - label: "Wiki: 検証基盤の基本"
     url: "/wiki/verification-basics.html"
     description: "なぜ達成条件と反証条件を先に置くのかを確認できます。"
@@ -128,6 +131,13 @@ recommended_pages:
 </tbody>
 </table>
 </section>
+
+<div class="note-box">
+<strong>外部依存を『待ち箱』にしないために</strong>
+<p>
+このページは段階差の説明です。外部依存になったあとに、こちらで何を先に作れるかまで整理したい場合は <a href="internal-prework-and-external-dependencies.html">Wiki: 内製で先にやることと外部依存の切り分け</a> をご覧ください。
+</p>
+</div>
 
 </article>
 
