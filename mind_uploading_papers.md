@@ -2,6 +2,9 @@
 layout: default
 title: "Mind Uploading Paper Collection"
 description: "過去10年間の主要な「Mind Uploading」関連論文を、アブストラクトの有無で整理したアーカイブです。"
+article_type: "Paper Archive"
+subtitle: "年別の流れを見ながら、必要な論文だけ原文へ戻るための入口"
+author: Mind Uploading Research Project
 known_points:
   - "このページは関連論文を広く拾うアーカイブであり、各論文の最終評価を確定するページではありません。"
   - "年別に追うと、どの論点に関心が集まってきたかの流れを見やすくなります。"
@@ -20,6 +23,7 @@ wiki_links:
     url: "/wiki/verification-basics.html"
     description: "論文を読むとき、何を証拠として重く見るかの前提を補います。"
 last_updated: "2026-03-06"
+note: "Curated archive"
 audience: "関連論文を広く見たい人、年別の傾向をざっと掴みたい人、元論文へ戻る入口が欲しい人"
 reading_time: "目次確認なら5分、精読は必要な論文だけ"
 page_intro: "このページは、Mind Uploading に関連する論文を年別に広く見渡すためのアーカイブです。ここで大事なのは、論文を全部同じ重みで信じることではなく、どの論点にどの種別の文献があるかを素早く掴むことです。"
