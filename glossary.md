@@ -98,6 +98,36 @@ recommended_pages:
 </table>
 </section>
 
+<section class="section" id="easy-confusions">
+<h2 class="section-title">よく混同する言葉</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>混同しやすい組</th>
+<th>違いを一言で言うと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>マインドアップロード / WBE</strong></td>
+<td>マインドアップロードは広い一般呼称、WBE は脳機能を別基盤で再現する技術寄りの言い方です。</td>
+</tr>
+<tr>
+<td><strong>デコーディング / エミュレーション</strong></td>
+<td>デコーディングは「観測の翻訳」、エミュレーションは「中の仕組みごと動かすこと」です。</td>
+</tr>
+<tr>
+<td><strong>相関 / 因果</strong></td>
+<td>相関は一緒に変わる関係、因果は片方を変えるともう片方も変わる関係です。</td>
+</tr>
+<tr>
+<td><strong>ベンチマーク / リーダーボード</strong></td>
+<td>ベンチマークは比べるための課題と指標、リーダーボードはその結果を並べる運用画面です。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
 <section class="section" id="consciousness-theories">
 <h2 class="section-title">意識理論（Theories of Consciousness）</h2>
 <table class="data-table">

@@ -71,6 +71,32 @@ recommended_pages:
 まず上の統計で全体量を確認し、次に最新年から数本だけ要約を読んで論点の傾向を掴んでください。個別論文の位置づけを強く知りたい場合は、<a href="research_harvest_50.html">文献地図</a>に戻ると未解決問題との対応を確認できます。
 </p>
 </div>
+<table class="data-table">
+<thead>
+<tr>
+<th>見る場所</th>
+<th>何が分かるか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Badge と掲載元</strong></td>
+<td>論文がどの種別の入口から拾われたかが分かります。ただし掲載元だけで内容の強さが自動的に決まるわけではありません。</td>
+</tr>
+<tr>
+<td><strong>和訳要約</strong></td>
+<td>その論文が何を言っているかを最短で掴めます。興味が薄ければここで止めて構いません。</td>
+</tr>
+<tr>
+<td><strong>5ポイント整理</strong></td>
+<td>「どんな論文か」「どこが新しいか」「どう確かめたか」を短く比較できます。</td>
+</tr>
+<tr>
+<td><strong>Original Abstract と DOI</strong></td>
+<td>本当にその理解で合っているかを元文献へ戻って確認できます。重要論文は必ずここまで戻る前提です。</td>
+</tr>
+</tbody>
+</table>
 </header>
 <h2 id="with-abstracts" class="category-title">1. アブストラクトあり</h2>
 <h3 id="year-w-2025" class="year-title">2025年</h3>

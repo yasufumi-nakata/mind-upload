@@ -56,6 +56,13 @@ recommended_pages:
 </div>
 
 <div class="note-box">
+<strong>もっと日常語で言うと</strong>
+<p>
+学校のテストにたとえると、<strong>規格</strong>は「同じ答案用紙」、<strong>置き場</strong>は「みんなが見られる提出箱」、<strong>ベンチマーク</strong>は「同じ採点基準」、<strong>事前登録</strong>は「先に配るルール説明」、<strong>相互運用標準</strong>は「別のクラスでも同じ意味で読める共通書式」です。仕組みは違っても、役割はかなり似ています。
+</p>
+</div>
+
+<div class="note-box">
 <strong>このページを歴史読みで終わらせないために</strong>
 <p>
 ここで大事なのは「昔こういう事例がありました」と知ることではありません。各事例を見て、<strong>何がバラバラで困っていたのか</strong>、<strong>どんな共通ルールを作ったのか</strong>、<strong>その結果どんな比較ができるようになったのか</strong>、の3点を拾うことです。
