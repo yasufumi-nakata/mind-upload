@@ -247,6 +247,12 @@ recommended_pages:
 <li><a href="wiki/claims-and-evidence.html">wiki/claims-and-evidence.html</a></li>
 <li><a href="wiki/eeg-basics.html">wiki/eeg-basics.html</a></li>
 <li><a href="wiki/verification-basics.html">wiki/verification-basics.html</a></li>
+<li><a href="wiki/roadmap-reading-guide.html">wiki/roadmap-reading-guide.html</a></li>
+<li><a href="wiki/personhood-and-copy-problem.html">wiki/personhood-and-copy-problem.html</a></li>
+<li><a href="wiki/eeg-preprocessing-and-qc.html">wiki/eeg-preprocessing-and-qc.html</a></li>
+<li><a href="wiki/literature-and-evidence-reading.html">wiki/literature-and-evidence-reading.html</a></li>
+<li><a href="wiki/proposal-status-reading.html">wiki/proposal-status-reading.html</a></li>
+<li><a href="wiki/u-number-guide.html">wiki/u-number-guide.html</a></li>
 </ul>
 </div>
 </section>
@@ -268,6 +274,9 @@ recommended_pages:
 <li><a href="wiki/">Wiki Home →</a></li>
 <li><a href="wiki/mind-upload-basics.html">WBEの基本 →</a></li>
 <li><a href="wiki/claims-and-evidence.html">主張の読み方 →</a></li>
+<li><a href="wiki/literature-and-evidence-reading.html">文献ページの読み方 →</a></li>
+<li><a href="wiki/proposal-status-reading.html">提案ラベルの読み方 →</a></li>
+<li><a href="wiki/u-number-guide.html">U番号ガイド →</a></li>
 </ul>
 </div>
 </aside>

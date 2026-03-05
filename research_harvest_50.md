@@ -15,6 +15,24 @@ page_highlights:
   - "U0〜U15ごとに、解決済みの部分と未解決の部分を分けて示しています。"
   - "入力受理ログと学術統合済みの部分を分け、混入防止の手順も明示しています。"
   - "大量引用ページですが、統計と現状マップだけでも全体像を先に把握できます。"
+known_points:
+  - "U0〜U15 ごとに論点を分けると、文献の量と結論の強さを混同しにくくなります。"
+  - "source_logged / curated / noise_excluded を分けることで、入力受理と学術統合を混ぜない運用ができます。"
+  - "引用数の多さは、結論の確定ではなく関心や関連度の厚みとして読む必要があります。"
+unknown_points:
+  - "各 U に十分な証拠が揃っているわけではなく、探索段階の領域も残っています。"
+  - "source_logged の項目は、今後の精査で統合先や除外判断が変わる可能性があります。"
+  - "U マップそのものも、今後の文献追加で更新され得ます。"
+wiki_links:
+  - label: "Wiki: U番号ガイド"
+    url: "/wiki/u-number-guide.html"
+    description: "U番号を日常語で読み替え、どの塊から見ればよいかを整理します。"
+  - label: "Wiki: 文献と証拠ページの読み方"
+    url: "/wiki/literature-and-evidence-reading.html"
+    description: "論文アーカイブ、文献地図、提案ページの違いを初歩から整理します。"
+  - label: "Wiki: 検証基盤の基本"
+    url: "/wiki/verification-basics.html"
+    description: "なぜ文献の数だけでなく、評価軸と未解決問題が重要かを補います。"
 recommended_pages:
   - label: "技術ロードマップ"
     url: "/tech_roadmap.html"
@@ -46,6 +64,20 @@ recommended_pages:
 <strong>迷ったときの読み順</strong>
 <p>
 最初に統計と品質ゲートで「どうやって混入を防いだか」を確認し、その次に U 別の現状マップで未解決の中心を掴んでください。個別引用を精読するのは、そのあとで十分です。
+</p>
+</div>
+
+<div class="note-box">
+<strong>文献ページに慣れていないとき</strong>
+<p>
+このページは「論文の山」ではなく「未解決問題ごとの地図」です。論文アーカイブとの違いや、どこまでを確定扱いしないかを先に知りたい場合は、<a href="wiki/literature-and-evidence-reading.html">Wiki: 文献と証拠ページの読み方</a> から入ると迷いにくくなります。
+</p>
+</div>
+
+<div class="note-box">
+<strong>U番号で身構えたとき</strong>
+<p>
+U番号は難しい理論名ではなく、「未解決問題の名前札」です。どの U がどんな塊かを日常語で掴みたい場合は、<a href="wiki/u-number-guide.html">Wiki: U番号ガイド</a> を先に見てください。
 </p>
 </div>
 

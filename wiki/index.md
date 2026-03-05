@@ -102,6 +102,21 @@ recommended_pages:
 <td><a href="eeg-preprocessing-and-qc.html">EEG前処理とQC</a></td>
 <td><a href="../hands_on.html">ハンズオン</a></td>
 </tr>
+<tr>
+<td><strong>文献ページの違いと読み方を知りたい</strong></td>
+<td><a href="literature-and-evidence-reading.html">文献と証拠ページの読み方</a></td>
+<td><a href="../research_harvest_50.html">文献地図</a> / <a href="../mind_uploading_papers.html">論文集</a></td>
+</tr>
+<tr>
+<td><strong>提案ページの状態ラベルで迷う</strong></td>
+<td><a href="proposal-status-reading.html">提案と状態ラベルの読み方</a></td>
+<td><a href="../proposals.html">技術提案</a> / <a href="../issue.html">貢献ガイド</a></td>
+</tr>
+<tr>
+<td><strong>U番号が何を指すのか分からない</strong></td>
+<td><a href="u-number-guide.html">U番号ガイド</a></td>
+<td><a href="../research_harvest_50.html">文献地図</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -195,6 +210,18 @@ recommended_pages:
 <td>EEG の前処理、QC、ログ</td>
 <td><a href="eeg-preprocessing-and-qc.html">EEG前処理とQC</a></td>
 </tr>
+<tr>
+<td>論文アーカイブ、文献地図、提案ページの違い</td>
+<td><a href="literature-and-evidence-reading.html">文献と証拠ページの読み方</a></td>
+</tr>
+<tr>
+<td>提案受理と実装完了の違い</td>
+<td><a href="proposal-status-reading.html">提案と状態ラベルの読み方</a></td>
+</tr>
+<tr>
+<td>U0-U15 を日常語で読み替えたい</td>
+<td><a href="u-number-guide.html">U番号ガイド</a></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -212,6 +239,9 @@ recommended_pages:
 <li><a href="roadmap-reading-guide.html">ロードマップの読み方 →</a></li>
 <li><a href="personhood-and-copy-problem.html">本人性とコピー問題 →</a></li>
 <li><a href="eeg-preprocessing-and-qc.html">EEG前処理とQC →</a></li>
+<li><a href="literature-and-evidence-reading.html">文献と証拠ページの読み方 →</a></li>
+<li><a href="proposal-status-reading.html">提案と状態ラベルの読み方 →</a></li>
+<li><a href="u-number-guide.html">U番号ガイド →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">

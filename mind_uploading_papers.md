@@ -2,6 +2,23 @@
 layout: default
 title: "Mind Uploading Paper Collection"
 description: "過去10年間の主要な「Mind Uploading」関連論文を、アブストラクトの有無で整理したアーカイブです。"
+known_points:
+  - "このページは関連論文を広く拾うアーカイブであり、各論文の最終評価を確定するページではありません。"
+  - "年別に追うと、どの論点に関心が集まってきたかの流れを見やすくなります。"
+  - "重要論文は、要約を入口にして DOI や原文へ戻る前提で読む必要があります。"
+unknown_points:
+  - "収録されているだけで、その論文が中心的証拠だとまでは言えません。"
+  - "すべての論文が同じ深さで精査済みというわけではありません。"
+wiki_links:
+  - label: "Wiki: 文献と証拠ページの読み方"
+    url: "/wiki/literature-and-evidence-reading.html"
+    description: "論文アーカイブ、文献地図、提案ページの役割差を整理します。"
+  - label: "Wiki: WBEの基本"
+    url: "/wiki/mind-upload-basics.html"
+    description: "論文の論点が、分野全体のどこにあるかを先に押さえたい人向けです。"
+  - label: "Wiki: 検証基盤の基本"
+    url: "/wiki/verification-basics.html"
+    description: "論文を読むとき、何を証拠として重く見るかの前提を補います。"
 last_updated: "2026-03-06"
 audience: "関連論文を広く見たい人、年別の傾向をざっと掴みたい人、元論文へ戻る入口が欲しい人"
 reading_time: "目次確認なら5分、精読は必要な論文だけ"
@@ -69,6 +86,12 @@ recommended_pages:
 <strong>迷ったときの読み順</strong>
 <p>
 まず上の統計で全体量を確認し、次に最新年から数本だけ要約を読んで論点の傾向を掴んでください。個別論文の位置づけを強く知りたい場合は、<a href="research_harvest_50.html">文献地図</a>に戻ると未解決問題との対応を確認できます。
+</p>
+</div>
+<div class="note-box">
+<strong>このページの位置づけを先に知りたいとき</strong>
+<p>
+この論文集は「広く拾う入口」であり、<a href="research_harvest_50.html">文献地図</a> は「未解決問題ごとに整理する場所」です。違いが曖昧な場合は、<a href="wiki/literature-and-evidence-reading.html">Wiki: 文献と証拠ページの読み方</a> を先に見ると、どこまで深読みすべきか判断しやすくなります。
 </p>
 </div>
 <table class="data-table">
