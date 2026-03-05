@@ -30,6 +30,9 @@ wiki_links:
   - label: "Wiki: 文献と証拠ページの読み方"
     url: "/wiki/literature-and-evidence-reading.html"
     description: "論文アーカイブ、文献地図、提案ページの違いを初歩から整理します。"
+  - label: "Wiki: 文献のソース種別と状態ラベル"
+    url: "/wiki/paper-source-types-and-evidence-status.html"
+    description: "Scopus、arXiv、Review、Media、source_logged などの意味を整理します。"
   - label: "Wiki: 検証基盤の基本"
     url: "/wiki/verification-basics.html"
     description: "なぜ文献の数だけでなく、評価軸と未解決問題が重要かを補います。"
@@ -74,6 +77,12 @@ recommended_pages:
 <strong>文献ページに慣れていないとき</strong>
 <p>
 このページは「論文の山」ではなく「未解決問題ごとの地図」です。論文アーカイブとの違いや、どこまでを確定扱いしないかを先に知りたい場合は、<a href="wiki/literature-and-evidence-reading.html">Wiki: 文献と証拠ページの読み方</a> から入ると迷いにくくなります。
+</p>
+</div>
+<div class="note-box">
+<strong>Scopus / Review / source_logged の意味で止まったとき</strong>
+<p>
+このページでは、掲載元、文献種別、サイト内状態が混ざって見えやすいです。それぞれが何を示し、何をまだ保証しないかを先に整理したい場合は、<a href="wiki/paper-source-types-and-evidence-status.html">Wiki: 文献のソース種別と状態ラベルの読み方</a> をご覧ください。
 </p>
 </div>
 
@@ -173,6 +182,12 @@ U番号は難しい理論名ではなく、「未解決問題の名前札」で�
 </tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>状態ラベルを強さと混同しないために</strong>
+<p>
+<code>source_logged</code> は入力受理、<code>curated</code> は整理済み、<code>noise_excluded</code> は除外判断を意味します。Scopus や arXiv のような掲載元表示や、Review / Media のような文献種別とは別軸です。混ざって見える場合は <a href="wiki/paper-source-types-and-evidence-status.html">Wiki: 文献のソース種別と状態ラベルの読み方</a> に戻ってください。
+</p>
+</div>
 </section>
 
 <section class="section" id="recent-intake-2026-02">

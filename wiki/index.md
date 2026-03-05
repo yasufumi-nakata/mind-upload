@@ -108,6 +108,11 @@ recommended_pages:
 <td><a href="../research_harvest_50.html">文献地図</a> / <a href="../mind_uploading_papers.html">論文集</a></td>
 </tr>
 <tr>
+<td><strong>Scopus、arXiv、Review、source_logged の違いで止まる</strong></td>
+<td><a href="paper-source-types-and-evidence-status.html">文献のソース種別と状態ラベルの読み方</a></td>
+<td><a href="../mind_uploading_papers.html">論文集</a> / <a href="../research_harvest_50.html">文献地図</a></td>
+</tr>
+<tr>
 <td><strong>提案ページの状態ラベルで迷う</strong></td>
 <td><a href="proposal-status-reading.html">提案と状態ラベルの読み方</a></td>
 <td><a href="../proposals.html">技術提案</a> / <a href="../issue.html">貢献ガイド</a></td>
@@ -278,6 +283,10 @@ recommended_pages:
 <tr>
 <td>論文アーカイブ、文献地図、提案ページの違い</td>
 <td><a href="literature-and-evidence-reading.html">文献と証拠ページの読み方</a></td>
+</tr>
+<tr>
+<td>Scopus、arXiv、Review、Media、source_logged の役割差</td>
+<td><a href="paper-source-types-and-evidence-status.html">文献のソース種別と状態ラベルの読み方</a></td>
 </tr>
 <tr>
 <td>提案受理と実装完了の違い</td>

@@ -23,6 +23,9 @@ unknown_points:
   - "どの論文が最終的に中心的根拠として残るかは、今後の整理で変わる可能性があります。"
   - "source_logged などの状態は、後続の精査で更新されることがあります。"
 wiki_links:
+  - label: "Wiki: 文献のソース種別と状態ラベル"
+    url: "/wiki/paper-source-types-and-evidence-status.html"
+    description: "Scopus、arXiv、Review、Media、source_logged などの意味を整理します。"
   - label: "Wiki: 検証基盤の基本"
     url: "/wiki/verification-basics.html"
     description: "証拠の強さを、何で見るべきかの前提を補います。"
@@ -127,6 +130,13 @@ recommended_pages:
 </div>
 </section>
 
+<div class="note-box">
+<strong>Scopus / arXiv / source_logged の意味だけ先に確認したいとき</strong>
+<p>
+このページは役割差を説明する補助ページです。掲載元、文献種別、サイト内状態の違いを 1 枚で整理したい場合は、<a href="paper-source-types-and-evidence-status.html">Wiki: 文献のソース種別と状態ラベルの読み方</a> を先に見ると、論文集や文献地図の見え方が安定します。
+</p>
+</div>
+
 <section class="section" id="next-step">
 <h2 class="section-title">次にどこへ戻るか</h2>
 <p>
@@ -140,6 +150,7 @@ recommended_pages:
 <div class="sidebar-box">
 <h4>Related Wiki</h4>
 <ul>
+<li><a href="paper-source-types-and-evidence-status.html">文献のソース種別と状態ラベル →</a></li>
 <li><a href="proposal-status-reading.html">提案と状態ラベルの読み方 →</a></li>
 <li><a href="verification-basics.html">検証基盤の基本 →</a></li>
 <li><a href="mind-upload-basics.html">WBEの基本 →</a></li>

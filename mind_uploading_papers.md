@@ -16,6 +16,9 @@ wiki_links:
   - label: "Wiki: 文献と証拠ページの読み方"
     url: "/wiki/literature-and-evidence-reading.html"
     description: "論文アーカイブ、文献地図、提案ページの役割差を整理します。"
+  - label: "Wiki: 文献のソース種別と状態ラベル"
+    url: "/wiki/paper-source-types-and-evidence-status.html"
+    description: "Scopus、arXiv、Review、Media、source_logged などの意味を整理します。"
   - label: "Wiki: WBEの基本"
     url: "/wiki/mind-upload-basics.html"
     description: "論文の論点が、分野全体のどこにあるかを先に押さえたい人向けです。"
@@ -96,6 +99,12 @@ recommended_pages:
 <strong>このページの位置づけを先に知りたいとき</strong>
 <p>
 この論文集は「広く拾う入口」であり、<a href="research_harvest_50.html">文献地図</a> は「未解決問題ごとに整理する場所」です。違いが曖昧な場合は、<a href="wiki/literature-and-evidence-reading.html">Wiki: 文献と証拠ページの読み方</a> を先に見ると、どこまで深読みすべきか判断しやすくなります。
+</p>
+</div>
+<div class="note-box">
+<strong>Scopus や arXiv の表示で止まったとき</strong>
+<p>
+Badge は「どこから辿れる文献か」の手掛かりであり、それだけで証拠の強さは決まりません。Scopus、arXiv、Review、Media、source_logged などの違いを 1 枚で確認したい場合は、<a href="wiki/paper-source-types-and-evidence-status.html">Wiki: 文献のソース種別と状態ラベルの読み方</a> を先に見ると安全です。
 </p>
 </div>
 <table class="data-table">
