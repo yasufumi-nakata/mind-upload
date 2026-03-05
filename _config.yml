@@ -21,6 +21,7 @@ defaults:
 # Exclude from processing
 exclude:
   - automation
+  - github-wiki-export
   - ignore
   - vendor
   - .bundle

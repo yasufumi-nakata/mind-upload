@@ -1,0 +1,233 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "fileutils"
+require "yaml"
+
+ROOT = File.expand_path("..", __dir__)
+SRC_DIR = File.join(ROOT, "wiki")
+DEST_DIR = File.join(ROOT, "github-wiki-export")
+PUBLIC_SITE = "https://mind-upload.com"
+GITHUB_WIKI = "https://github.com/yasufumi-nakata/mind-upload/wiki"
+
+SIDEBAR_GROUPS = {
+  "入口と読み方" => %w[
+    Home
+    public-page-reading-guide
+    page-header-reading-guide
+    site-usage-modes
+    first-30-minutes-by-goal
+    claim-level-reading-routes
+  ],
+  "基礎" => %w[
+    mind-upload-basics
+    claims-and-evidence
+    eeg-basics
+    verification-basics
+    known-unknown-and-status-reading
+    facts-hypotheses-proposals-and-tasks
+  ],
+  "理論・検証" => %w[
+    roadmap-reading-guide
+    theory-pages-reading-guide
+    practical-pages-reading-guide
+    observation-to-estimation
+    counterfactual-and-perturbation-verification
+    identity-and-continuity-tests
+  ],
+  "文献・参加" => %w[
+    literature-and-evidence-reading
+    paper-source-types-and-evidence-status
+    proposal-status-reading
+    issue-writing-basics
+    content-placement-basics
+    reading-to-change-workflow
+  ]
+}.freeze
+
+def load_page(path)
+  raw = File.read(path)
+  return [{}, raw] unless raw.start_with?("---\n")
+
+  match = raw.match(/\A---\s*\n(.*?)\n---\s*\n/m)
+  return [{}, raw] unless match
+
+  front_matter = YAML.safe_load(match[1], aliases: true) || {}
+  body = raw[match[0].length..] || ""
+  [front_matter, body]
+end
+
+def split_suffix(url)
+  if (match = url.match(/\A([^?#]*)([?#].*)?\z/))
+    [match[1], match[2] || ""]
+  else
+    [url, ""]
+  end
+end
+
+def github_wiki_url(slug)
+  slug == "Home" ? GITHUB_WIKI : "#{GITHUB_WIKI}/#{slug}"
+end
+
+def public_site_url(path)
+  normalized = path.sub(%r{\A\.\./}, "").sub(%r{\A\./}, "").sub(%r{\A/}, "")
+  return PUBLIC_SITE if normalized.empty? || normalized == "index.html"
+
+  "#{PUBLIC_SITE}/#{normalized}"
+end
+
+def rewrite_url(url)
+  return url if url.nil? || url.empty?
+  return url if url.start_with?("http://", "https://", "mailto:", "#")
+
+  path, suffix = split_suffix(url)
+  normalized = path.sub(%r{\A\./}, "")
+
+  case normalized
+  when "", ".", "./", "../", "/", "/wiki", "/wiki/", "../wiki", "../wiki/", "wiki", "wiki/"
+    "#{GITHUB_WIKI}#{suffix}"
+  else
+    if normalized.match?(%r{\A/?wiki/}) || path.match?(%r{\A\.\./wiki/})
+      slug = normalized.sub(%r{\A/?wiki/}, "").sub(%r{\.html\z}, "")
+      slug = "Home" if slug.empty? || slug == "index"
+      "#{github_wiki_url(slug)}#{suffix}"
+    elsif path.match?(%r{\A(?:\./)?[^/]+\.html\z})
+      slug = File.basename(path, ".html")
+      slug = "Home" if slug == "index"
+      "#{github_wiki_url(slug)}#{suffix}"
+    elsif normalized.end_with?(".html")
+      "#{public_site_url(normalized)}#{suffix}"
+    else
+      "#{public_site_url(normalized)}#{suffix}"
+    end
+  end
+end
+
+def rewrite_links(text)
+  rewritten = text.dup
+  rewritten.gsub!(%r{href="([^"]+)"}) { %(href="#{rewrite_url(Regexp.last_match(1))}") }
+  rewritten.gsub!(%r{href='([^']+)'}) { %(href='#{rewrite_url(Regexp.last_match(1))}') }
+  rewritten.gsub!(%r{(?<!!)\]\(([^)]+)\)}) { "](#{rewrite_url(Regexp.last_match(1))})" }
+  rewritten
+end
+
+def strip_site_wrappers(body)
+  stripped = body.dup
+  stripped.sub!(%r{\A\s*<main class="main-container">\s*<article class="content-column">\s*}m, "")
+  stripped.sub!(%r{\s*</article>\s*(<aside class="sidebar-column">.*?</aside>\s*)?</main>\s*\z}m, "")
+  stripped.gsub!(%r{<aside class="sidebar-column">.*?</aside>}m, "")
+  stripped.strip
+end
+
+def render_link_list(entries)
+  Array(entries).map do |entry|
+    next unless entry.is_a?(Hash)
+    label = entry["label"]
+    url = rewrite_url(entry["url"].to_s)
+    description = entry["description"]
+    line = "- [#{label}](#{url})"
+    line += " - #{description}" if description && !description.empty?
+    line
+  end.compact
+end
+
+def render_page(front_matter, body, slug)
+  lines = []
+  lines << "# #{front_matter["title"] || slug}"
+  lines << ""
+  lines << "> #{front_matter["subtitle"]}" if front_matter["subtitle"]
+  lines << ">"
+  lines << "> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](#{PUBLIC_SITE}) 側で管理しています。"
+  lines << ""
+
+  meta = []
+  meta << "更新日: #{front_matter["last_updated"]}" if front_matter["last_updated"]
+  meta << "位置づけ: #{front_matter["note"]}" if front_matter["note"]
+  lines << "- #{meta.join(" / ")}" unless meta.empty?
+  lines << ""
+
+  if front_matter["page_intro"]
+    lines << "## このページの役割"
+    lines << front_matter["page_intro"].to_s
+    lines << ""
+  end
+
+  if front_matter["accuracy_note"]
+    lines << "## 正確さの前提"
+    lines << front_matter["accuracy_note"].to_s
+    lines << ""
+  end
+
+  if front_matter["recommended_pages"]
+    lines << "## 公開ページへ戻る"
+    lines.concat(render_link_list(front_matter["recommended_pages"]))
+    lines << ""
+  end
+
+  if front_matter["wiki_links"]
+    lines << "## 関連 Wiki"
+    lines.concat(render_link_list(front_matter["wiki_links"]))
+    lines << ""
+  end
+
+  if front_matter["known_points"]
+    lines << "## いま分かっていること"
+    Array(front_matter["known_points"]).each { |item| lines << "- #{item}" }
+    lines << ""
+  end
+
+  if front_matter["unknown_points"]
+    lines << "## まだ分かっていないこと"
+    Array(front_matter["unknown_points"]).each { |item| lines << "- #{item}" }
+    lines << ""
+  end
+
+  lines << "---"
+  lines << ""
+  lines << rewrite_links(strip_site_wrappers(body))
+  lines.join("\n").strip + "\n"
+end
+
+def build_sidebar(front_matters)
+  lines = ["# Sidebar", ""]
+
+  SIDEBAR_GROUPS.each do |heading, slugs|
+    lines << "## #{heading}"
+    slugs.each do |slug|
+      title = front_matters.fetch(slug, {})["title"] || slug
+      url = slug == "Home" ? GITHUB_WIKI : github_wiki_url(slug)
+      lines << "- [#{title}](#{url})"
+    end
+    lines << ""
+  end
+
+  lines << "## 公開サイト"
+  lines << "- [スタートページ](#{PUBLIC_SITE}/index.html)"
+  lines << "- [検証基盤](#{PUBLIC_SITE}/verification.html)"
+  lines << "- [公開コンテンツ統合ハブ](#{PUBLIC_SITE}/content_hub.html)"
+  lines.join("\n").strip + "\n"
+end
+
+pages = {}
+front_matters = {}
+tracked_paths = `git -C "#{ROOT}" ls-files "wiki/*.md"`.lines.map(&:strip).reject(&:empty?).sort
+
+tracked_paths.each do |relative_path|
+  path = File.join(ROOT, relative_path)
+  slug = File.basename(path, ".md")
+  output_slug = slug == "index" ? "Home" : slug
+  front_matter, body = load_page(path)
+  pages[output_slug] = render_page(front_matter, body, output_slug)
+  front_matters[output_slug] = front_matter
+end
+
+FileUtils.rm_rf(DEST_DIR)
+FileUtils.mkdir_p(DEST_DIR)
+
+pages.each do |slug, content|
+  File.write(File.join(DEST_DIR, "#{slug}.md"), content)
+end
+
+File.write(File.join(DEST_DIR, "_Sidebar.md"), build_sidebar(front_matters))
+
+puts "Exported #{pages.length} wiki pages to #{DEST_DIR}"

@@ -123,6 +123,11 @@ recommended_pages:
 <td><a href="../index.html">スタートページ</a> / <a href="../verification.html">検証基盤</a> / <a href="../content_hub.html">公開コンテンツ統合ハブ</a></td>
 </tr>
 <tr>
+<td><strong>公開ページの上部にある案内ブロックの順番で迷う</strong></td>
+<td><a href="page-header-reading-guide.html">公開ページ冒頭ブロックの読み方</a></td>
+<td><a href="../index.html">スタートページ</a> / <a href="../verification.html">検証基盤</a> / <a href="../content_hub.html">公開コンテンツ統合ハブ</a></td>
+</tr>
+<tr>
 <td><strong>観察、仮説、提案、Issue の違いを知りたい</strong></td>
 <td><a href="facts-hypotheses-proposals-and-tasks.html">事実・仮説・提案・実行タスクの違い</a></td>
 <td><a href="../perspective.html">研究ノート</a> / <a href="../idea.html">理論フレーム</a> / <a href="../proposals.html">技術提案</a> / <a href="../issue.html">貢献ガイド</a></td>
@@ -166,6 +171,11 @@ recommended_pages:
 <td><strong>EEGからL0までどう進むかを一本道で見たい</strong></td>
 <td><a href="eeg-to-l0-route.html">EEGからL0までの一本道</a></td>
 <td><a href="../eeg_101.html">EEG入門</a> / <a href="../datasets.html">データ&ベンチ</a> / <a href="../hands_on.html">ハンズオン</a> / <a href="../verification.html">検証基盤</a></td>
+</tr>
+<tr>
+<td><strong>25トピックを EEG 公開データと助成テーマへ落としたい</strong></td>
+<td><a href="mind-upload-eeg-data-fund-map.html">EEG-DATA × 助成マップ</a></td>
+<td><a href="../tech_roadmap.html">技術ロードマップ</a> / <a href="../datasets.html">データ&ベンチ</a> / <a href="../collaborations.html">協業候補</a></td>
 </tr>
 <tr>
 <td><strong>Verificationのあとに次の1ページを決めたい</strong></td>
@@ -399,6 +409,10 @@ recommended_pages:
 <td><a href="public-page-reading-guide.html">公開ページの読み分けガイド</a></td>
 </tr>
 <tr>
+<td>公開ページ上部の案内ブロックの意味と順番</td>
+<td><a href="page-header-reading-guide.html">公開ページ冒頭ブロックの読み方</a></td>
+</tr>
+<tr>
 <td>Scopus、arXiv、Review、Media、source_logged の役割差</td>
 <td><a href="paper-source-types-and-evidence-status.html">文献のソース種別と状態ラベルの読み方</a></td>
 </tr>
@@ -508,9 +522,11 @@ recommended_pages:
 <li><a href="claims-and-evidence.html">主張と証拠の読み方 →</a></li>
 <li><a href="eeg-basics.html">EEGの基本 →</a></li>
 <li><a href="verification-basics.html">検証基盤の基本 →</a></li>
+<li><a href="page-header-reading-guide.html">公開ページ冒頭ブロックの読み方 →</a></li>
 <li><a href="roadmap-reading-guide.html">ロードマップの読み方 →</a></li>
 <li><a href="personhood-and-copy-problem.html">本人性とコピー問題 →</a></li>
 <li><a href="eeg-preprocessing-and-qc.html">EEG前処理とQC →</a></li>
+<li><a href="mind-upload-eeg-data-fund-map.html">EEG-DATA × 助成マップ →</a></li>
 <li><a href="literature-and-evidence-reading.html">文献と証拠ページの読み方 →</a></li>
 <li><a href="proposal-status-reading.html">提案と状態ラベルの読み方 →</a></li>
 <li><a href="u-number-guide.html">U番号ガイド →</a></li>

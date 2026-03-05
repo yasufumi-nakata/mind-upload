@@ -27,6 +27,9 @@ wiki_links:
   - label: "Wiki: 検証基盤の基本"
     url: "/wiki/verification-basics.html"
     description: "標準、ベンチ、登録、監査がなぜ必要かを初歩から説明します。"
+  - label: "Wiki: 公開ページ冒頭ブロックの読み方"
+    url: "/wiki/page-header-reading-guide.html"
+    description: "このページ上部の案内、既知/未知、wiki導線をどう使うかを整理します。"
   - label: "Wiki: L0〜L5ごとの読み進め方"
     url: "/wiki/claim-level-reading-routes.html"
     description: "L0〜L5 のどの主張を追うかで、次にどのページへ行くかを整理します。"
@@ -148,6 +151,12 @@ recommended_pages:
 <strong>『分かっていること / 分かっていないこと』の意味で止まったとき</strong>
 <p>
 このページの冒頭にある既知/未知や正確さの前提は、断言の境界を示しています。その意味を公開ページ全体に共通する読み方として整理したい場合は <a href="wiki/known-unknown-and-status-reading.html">Wiki: 『分かっていること / 分かっていないこと』の読み方</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
+<strong>このページ上部の案内をどう使うかで止まったとき</strong>
+<p>
+Verification は長い設計図なので、本文へ入る前に上部の「このページの読み方」「向いている人」「正確さの前提」「wiki で基礎から確認する」を使って読む範囲を決めるのが有効です。その共通ルールを見たい場合は <a href="wiki/page-header-reading-guide.html">Wiki: 公開ページ冒頭ブロックの読み方</a> をご覧ください。
 </p>
 </div>
 <div class="note-box">

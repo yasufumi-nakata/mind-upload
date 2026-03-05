@@ -26,6 +26,9 @@ wiki_links:
   - label: "Wiki Home"
     url: "/wiki/"
     description: "学習用ページ全体の入口です。"
+  - label: "Wiki: 公開ページ冒頭ブロックの読み方"
+    url: "/wiki/page-header-reading-guide.html"
+    description: "各公開ページの冒頭にある役割説明、既知/未知、wiki導線の読み方を整理します。"
   - label: "Wiki: 検証基盤の基本"
     url: "/wiki/verification-basics.html"
     description: "標準・ベンチ・登録・監査の意味を初歩から説明します。"
@@ -92,6 +95,12 @@ Issue や Collaborations を読んだあとに、今すぐ切る修正、条件�
 <strong>各公開ページの『分かっている / 分かっていない』の意味をそろえたいとき</strong>
 <p>
 情報ポータルとしての公開ページで、既知/未知、正確さの前提、外部依存をどう読むかを 1 枚で整理したい場合は <a href="wiki/known-unknown-and-status-reading.html">Wiki: 『分かっていること / 分かっていないこと』の読み方</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
+<strong>公開ページの冒頭ブロック自体の使い方をそろえたいとき</strong>
+<p>
+各ページの上部にある「このページの読み方」「向いている人」「正確さの前提」「いま分かっていること」「wiki で基礎から確認する」をどう使えばよいかを整理したい場合は <a href="wiki/page-header-reading-guide.html">Wiki: 公開ページ冒頭ブロックの読み方</a> をご覧ください。
 </p>
 </div>
 <div class="note-box">
@@ -304,6 +313,7 @@ Research、Perspective、Idea、Proposals、Issue、Collaborations が全部同�
 <ul>
 <li><a href="wiki/public-page-reading-guide.html">wiki/public-page-reading-guide.html</a></li>
 <li><a href="wiki/site-usage-modes.html">wiki/site-usage-modes.html</a></li>
+<li><a href="wiki/page-header-reading-guide.html">wiki/page-header-reading-guide.html</a></li>
 <li><a href="wiki/theory-pages-reading-guide.html">wiki/theory-pages-reading-guide.html</a></li>
 <li><a href="wiki/practical-pages-reading-guide.html">wiki/practical-pages-reading-guide.html</a></li>
 <li><a href="wiki/first-30-minutes-by-goal.html">wiki/first-30-minutes-by-goal.html</a></li>
@@ -322,6 +332,7 @@ Research、Perspective、Idea、Proposals、Issue、Collaborations が全部同�
 <li><a href="wiki/mind-upload-basics.html">wiki/mind-upload-basics.html</a></li>
 <li><a href="wiki/claims-and-evidence.html">wiki/claims-and-evidence.html</a></li>
 <li><a href="wiki/known-unknown-and-status-reading.html">wiki/known-unknown-and-status-reading.html</a></li>
+<li><a href="wiki/page-header-reading-guide.html">wiki/page-header-reading-guide.html</a></li>
 <li><a href="wiki/facts-hypotheses-proposals-and-tasks.html">wiki/facts-hypotheses-proposals-and-tasks.html</a></li>
 <li><a href="wiki/summary-vs-source-reading.html">wiki/summary-vs-source-reading.html</a></li>
 <li><a href="wiki/eeg-basics.html">wiki/eeg-basics.html</a></li>
@@ -388,6 +399,7 @@ Research、Perspective、Idea、Proposals、Issue、Collaborations が全部同�
 <li><a href="wiki/">Wiki Home →</a></li>
 <li><a href="wiki/public-page-reading-guide.html">公開ページの読み分け →</a></li>
 <li><a href="wiki/site-usage-modes.html">このサイトの3つの使い方 →</a></li>
+<li><a href="wiki/page-header-reading-guide.html">公開ページ冒頭ブロックの読み方 →</a></li>
 <li><a href="wiki/first-30-minutes-by-goal.html">目的別の最初の30分 →</a></li>
 <li><a href="wiki/known-unknown-and-status-reading.html">既知/未知の読み方 →</a></li>
 <li><a href="wiki/facts-hypotheses-proposals-and-tasks.html">事実・仮説・提案・タスク →</a></li>

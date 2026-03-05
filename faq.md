@@ -26,6 +26,9 @@ wiki_links:
   - label: "Wiki: 主張と証拠の読み方"
     url: "/wiki/claims-and-evidence.html"
     description: "FAQ の短い答えを、もう一段ていねいに学びたい人向けです。"
+  - label: "Wiki: 公開ページ冒頭ブロックの読み方"
+    url: "/wiki/page-header-reading-guide.html"
+    description: "FAQ の上部にある案内、既知/未知、wiki導線をどう使うかを整理します。"
   - label: "Wiki: L0〜L5ごとの読み進め方"
     url: "/wiki/claim-level-reading-routes.html"
     description: "FAQ で見た主張が、次にどのページへ進む話かを整理します。"
@@ -83,6 +86,12 @@ FAQ は入口なので、次に Verification、WBE 101、Datasets、Glossary の
 <strong>このサイト全体をどう使うかで迷ったとき</strong>
 <p>
 FAQ を入口にして、そのあと全体像をつかむのか、wiki で学ぶのか、Issue に落とすのかを 3 モードで見たい場合は <a href="wiki/site-usage-modes.html">Wiki: このサイトの3つの使い方</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
+<strong>FAQ の上部にある案内や既知/未知の使い方で迷ったとき</strong>
+<p>
+このページの冒頭にある「このページの読み方」「正確さの前提」「いま分かっていること」「wiki で基礎から確認する」は、短いQ&Aを誤読しないための入口です。共通ルールを 1 枚で見たい場合は <a href="wiki/page-header-reading-guide.html">Wiki: 公開ページ冒頭ブロックの読み方</a> をご覧ください。
 </p>
 </div>
 <div class="note-box">

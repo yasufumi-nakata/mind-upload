@@ -24,6 +24,14 @@
 - 新規ファイルを作成する前に、既存ページ（`verification.md` / `tech_roadmap.md` / `perspective.md` / `research_harvest_50.md` / `issue.md`）へ統合可能かを確認します。
 - 中間成果・作業ログ・自動生成物は原則 `automation/` または `ignore/` で管理し、公開導線は `index.md` と `content_hub.md` に集約します。
 
+## GitHub Wiki 運用
+
+- 学習用の wiki 本体は GitHub Wiki を前提にします。
+- リポジトリ内の `wiki/` は GitHub Wiki 用ソースとして扱い、サイト内の学習ページ編集もここで行います。
+- GitHub Wiki 用の出力は `github-wiki-export/` に生成します。
+- 生成は `scripts/export_github_wiki.rb`、反映は `scripts/publish_github_wiki.sh` を使います。
+- GitHub Wiki の git リポジトリは、GitHub の Web UI で最初の Wiki ページを 1 つ作成した後でないと clone / push できません。その初期化後に `scripts/publish_github_wiki.sh` を実行してください。
+
 ## LLM向けプロンプトの利用
 
 - LLMに調査や分析を依頼する際の科学者スタイルのプロンプト例は [.agent/agent.md](.agent/agent.md) にまとめています。

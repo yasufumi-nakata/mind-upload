@@ -26,6 +26,9 @@ wiki_links:
   - label: "Wiki Home"
     url: "/wiki/"
     description: "学習用 wiki 全体の入口へ戻れます。"
+  - label: "Wiki: 公開ページ冒頭ブロックの読み方"
+    url: "/wiki/page-header-reading-guide.html"
+    description: "各公開ページの上部に出る案内ブロックの読み方を整理します。"
   - label: "Wiki: 文献と証拠ページの読み方"
     url: "/wiki/literature-and-evidence-reading.html"
     description: "文献ページどうしの違いは別ページで詳しく扱います。"
@@ -67,6 +70,12 @@ recommended_pages:
 <strong>各公開ページの『分かっていること / 分かっていないこと』をどう読むか知りたいとき</strong>
 <p>
 ページ上部の既知/未知、正確さの前提、外部依存の意味をそろえて読みたい場合は <a href="known-unknown-and-status-reading.html">『分かっていること / 分かっていないこと』の読み方</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
+<strong>公開ページの上部にある案内ブロックの順番で迷ったとき</strong>
+<p>
+公開ページには共通して「このページの読み方」「向いている人」「正確さの前提」「いま分かっていること」「wiki で基礎から確認する」があります。本文に入る前に何をどう見ればよいかを整理したい場合は <a href="page-header-reading-guide.html">公開ページ冒頭ブロックの読み方</a> をご覧ください。
 </p>
 </div>
 <div class="note-box">
@@ -242,6 +251,7 @@ recommended_pages:
 <ul>
 <li><a href="theory-pages-reading-guide.html">理論系ページの読み分けガイド →</a></li>
 <li><a href="practical-pages-reading-guide.html">実務系ページの読み分けガイド →</a></li>
+<li><a href="page-header-reading-guide.html">公開ページ冒頭ブロックの読み方 →</a></li>
 <li><a href="literature-and-evidence-reading.html">文献と証拠ページの読み方 →</a></li>
 <li><a href="proposal-status-reading.html">提案と状態ラベルの読み方 →</a></li>
 <li><a href="internal-prework-and-external-dependencies.html">内製と外部依存の切り分け →</a></li>

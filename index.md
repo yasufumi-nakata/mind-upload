@@ -27,6 +27,9 @@ wiki_links:
   - label: "Wiki Home"
     url: "/wiki/"
     description: "初歩から学ぶための全体マップです。"
+  - label: "Wiki: 公開ページ冒頭ブロックの読み方"
+    url: "/wiki/page-header-reading-guide.html"
+    description: "各ページ上部の案内、既知/未知、wiki導線をどう読むかを整理します。"
   - label: "Wiki: 公開ページの読み分けガイド"
     url: "/wiki/public-page-reading-guide.html"
     description: "Verification、Roadmap、WBE 101、Datasets などの役割差を整理します。"
@@ -87,6 +90,12 @@ Verification、Roadmap、Perspective、WBE 101、Datasets などは、似た説�
 <strong>『分かっていること / 分かっていないこと』の意味で迷ったとき</strong>
 <p>
 このサイトの公開ページは、断言できる範囲と保留すべき範囲を先に分けています。既知/未知、正確さの前提、外部依存をどう読むかを 1 枚で見たい場合は <a href="wiki/known-unknown-and-status-reading.html">Wiki: 『分かっていること / 分かっていないこと』の読み方</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
+<strong>ページ上部の案内ブロック自体の使い方で迷ったとき</strong>
+<p>
+公開ページの冒頭には「このページの読み方」「向いている人」「正確さの前提」「いま分かっていること」「wiki で基礎から確認する」が並びます。この順番でどう読むと迷いにくいかを 1 枚で見たい場合は <a href="wiki/page-header-reading-guide.html">Wiki: 公開ページ冒頭ブロックの読み方</a> をご覧ください。
 </p>
 </div>
 <div class="note-box">
