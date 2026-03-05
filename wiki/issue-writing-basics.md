@@ -115,7 +115,7 @@ Issue は、完成した提案書である必要はありません。むしろ�
 <tr>
 <td><strong>どこへ追記すべきか分からない</strong></td>
 <td>追加したい情報の種類、候補ページ、なぜそこだと思うか。</td>
-<td><a href="../content_hub.html">Content Hub</a></td>
+<td><a href="content-placement-basics.html">新しい情報の置き場所を決める基本</a> / <a href="../content_hub.html">Content Hub</a></td>
 </tr>
 </tbody>
 </table>

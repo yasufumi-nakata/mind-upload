@@ -76,6 +76,12 @@ Verification、Datasets、Hands-on、Casework、Proposals の違いだけを実�
 Issue や Collaborations を読んだあとに、今すぐ切る修正、条件設計、外部依存の分解、L0 実装準備のどこへ進むかを 1 枚で見たい場合は <a href="wiki/participation-next-routes.html">Wiki: 参加・協業ページのあとに進む5つの道</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>新しい情報をどこへ置くかを初歩から見たいとき</strong>
+<p>
+公開ページ、wiki、Issue、Collaborations、運用領域のどこへ置くべきかを学習用に整理したい場合は <a href="wiki/content-placement-basics.html">Wiki: 新しい情報の置き場所を決める基本</a> をご覧ください。
+</p>
+</div>
 
 <section class="section" id="quick-routing">
 <h2 class="section-title">追加したい内容から統合先を決める</h2>

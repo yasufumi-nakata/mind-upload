@@ -149,7 +149,7 @@ Issue や Collaborations は入口として重要ですが、そのままでは�
 </tr>
 <tr>
 <td>公開ページと wiki の置き場で止まる</td>
-<td><a href="public-page-reading-guide.html">公開ページの読み分けガイド</a> / <a href="../content_hub.html">Content Hub</a></td>
+<td><a href="content-placement-basics.html">新しい情報の置き場所を決める基本</a> / <a href="../content_hub.html">Content Hub</a></td>
 </tr>
 <tr>
 <td>L0 の最小成果物で止まる</td>
