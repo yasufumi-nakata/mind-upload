@@ -4,6 +4,8 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 EXPORT_DIR="$ROOT/github-wiki-export"
 REMOTE_BASE="https://github.com/yasufumi-nakata/mind-upload.wiki.git"
+WORK_ROOT="${GITHUB_WIKI_WORKDIR:-$ROOT/ignore/github-wiki-publish}"
+WORK_DIR="$WORK_ROOT/repo"
 ALLOW_SKIP="${WIKI_PUBLISH_ALLOW_SKIP:-0}"
 
 if [[ ! -d "$EXPORT_DIR" ]]; then
@@ -25,13 +27,19 @@ if ! git ls-remote "$REMOTE_URL" >/dev/null 2>&1; then
   exit 1
 fi
 
-TMP_DIR="$(mktemp -d)"
-trap 'rm -rf "$TMP_DIR"' EXIT
+mkdir -p "$WORK_ROOT"
+cleanup() {
+  rm -rf "$WORK_DIR"
+  rmdir "$WORK_ROOT" 2>/dev/null || true
+}
+trap cleanup EXIT
 
-git clone "$REMOTE_URL" "$TMP_DIR/wiki"
-rsync -a --delete --exclude ".git/" "$EXPORT_DIR"/ "$TMP_DIR/wiki"/
+rm -rf "$WORK_DIR"
 
-cd "$TMP_DIR/wiki"
+git clone "$REMOTE_URL" "$WORK_DIR"
+rsync -a --delete --exclude ".git/" "$EXPORT_DIR"/ "$WORK_DIR"/
+
+cd "$WORK_DIR"
 
 if git diff --quiet && git diff --cached --quiet; then
   echo "GitHub Wiki に反映すべき差分はありません。"

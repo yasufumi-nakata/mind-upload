@@ -36,6 +36,7 @@
   - EEG-DATA × 助成マップ source: [wiki/mind-upload-eeg-data-fund-map.md](wiki/mind-upload-eeg-data-fund-map.md)
 - GitHub Wiki 用の出力は `github-wiki-export/` に生成します。
 - 生成は `scripts/export_github_wiki.rb`、反映は `scripts/publish_github_wiki.sh` を使います。
+- `scripts/publish_github_wiki.sh` は、GitHub Wiki の clone 先をリポジトリ内の `ignore/github-wiki-publish/` に固定しており、リポジトリ外に `wiki/` フォルダを作りません。必要なら `GITHUB_WIKI_WORKDIR` で作業先を上書きできます。
 - export 検査は `scripts/check_github_wiki_export.rb` を使います。`wiki/**/*.md` の export 漏れ、`wiki/generated/` のコピー漏れ、GitHub Wiki 上で解決できない相対リンク、`_Sidebar.md` への掲載漏れ、`EEG-DATA × 助成マップ` 本文で参照している CSV 名と実ファイルの不一致、`github-wiki-export/` の未反映更新を検出します。
 - `scripts/export_github_wiki.rb` は、`SIDEBAR_GROUPS` に未分類の wiki ページがあっても、`その他` セクションへ自動掲載します。
 - GitHub Wiki の git リポジトリは、GitHub の Web UI で最初の Wiki ページを 1 つ作成した後でないと clone / push できません。その初期化後に `scripts/publish_github_wiki.sh` を実行してください。
