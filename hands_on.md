@@ -26,6 +26,9 @@ wiki_links:
   - label: "Wiki: 検証基盤の基本"
     url: "/wiki/verification-basics.html"
     description: "なぜこの手順が必要かを、実務の前に理解したい人向けです。"
+  - label: "Wiki: L0で最低限そろえる成果物パック"
+    url: "/wiki/l0-minimum-artifact-pack.html"
+    description: "最終的に何を一式として残すかを、提出物の形で整理します。"
   - label: "Wiki: EEGの基本"
     url: "/wiki/eeg-basics.html"
     description: "前処理や QC の意味を、信号の性質から確認できます。"
@@ -68,6 +71,12 @@ recommended_pages:
 <strong>このページの約束</strong>
 <p>
 ここでは、実験や大規模設備を前提にせず、今ある公開データと一般的なツールで始められる範囲に絞っています。つまり、「今この場で動かせる最小構成」を作るためのページです。
+</p>
+</div>
+<div class="note-box">
+<strong>手順ではなく提出物で確認したいとき</strong>
+<p>
+このページは作業順を追うためのものです。L0 の最後に何を一式として残せばよいかを 1 枚で見たい場合は <a href="wiki/l0-minimum-artifact-pack.html">Wiki: L0で最低限そろえる成果物パック</a> をご覧ください。
 </p>
 </div>
 

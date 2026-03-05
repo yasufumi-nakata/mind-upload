@@ -26,6 +26,9 @@ wiki_links:
   - label: "Wiki: EEGの基本"
     url: "/wiki/eeg-basics.html"
     description: "データセットを見る前に、EEG の信号そのものを理解したい人向けです。"
+  - label: "Wiki: L0で最低限そろえる成果物パック"
+    url: "/wiki/l0-minimum-artifact-pack.html"
+    description: "BIDS、QC、分割、ベースライン、実行手順など、L0 の提出物を整理します。"
   - label: "Wiki: 検証基盤の基本"
     url: "/wiki/verification-basics.html"
     description: "なぜデータだけでなくベンチや登録が必要かを学べます。"
@@ -106,6 +109,12 @@ recommended_pages:
 <strong>精度より先に見ること</strong>
 <p>
 データセット紹介を見ると、つい「何% 出たか」に目が向きます。しかし最初に確認すべきなのは、<strong>train/test を何単位で分けたか</strong>、<strong>リーク検査をしたか</strong>、<strong>単純なベースラインと比べたか</strong>です。ここで迷う場合は <a href="wiki/dataset-splits-and-leakage.html">Wiki: データ分割とデータリーク</a> を先に読むと判断しやすくなります。
+</p>
+</div>
+<div class="note-box">
+<strong>L0 で何を一式そろえるか迷ったとき</strong>
+<p>
+データ名だけ決めても、提出物の形が曖昧だと止まりやすいです。BIDS、Validator、QC ログ、分割規則、ベースライン、実行手順、失敗例を 1 枚で見たい場合は <a href="wiki/l0-minimum-artifact-pack.html">Wiki: L0で最低限そろえる成果物パック</a> をご覧ください。
 </p>
 </div>
 

@@ -27,6 +27,9 @@ wiki_links:
   - label: "Wiki: 検証基盤の基本"
     url: "/wiki/verification-basics.html"
     description: "標準、ベンチ、登録、監査がなぜ必要かを初歩から説明します。"
+  - label: "Wiki: L0で最低限そろえる成果物パック"
+    url: "/wiki/l0-minimum-artifact-pack.html"
+    description: "BIDS、QC、分割、ベースライン、実行手順、失敗例の最小セットを整理します。"
   - label: "Wiki: 部分解決・探索段階・未整備の読み方"
     url: "/wiki/progress-labels-and-open-problem-status.html"
     description: "設計済み、未実装、不足、未整備の違いを整理します。"
@@ -373,6 +376,12 @@ Registry を作っても、更新をどこまで許すか、branch をどう記�
 <strong>抽象的に見えたら補講へ</strong>
 <p>
 この 4 要素が実際にどう噛み合うかを、EEG の小さな例で順番に見たい場合は <a href="wiki/verification-example-walkthrough.html">Wiki: Verification の具体例ウォークスルー</a> を参照してください。公開ページでは設計図を保ち、補講は wiki 側へ逃がしています。
+</p>
+</div>
+<div class="note-box">
+<strong>L0 の最低提出物だけ先に見たいとき</strong>
+<p>
+このページは公共財全体の設計図です。BIDS、Validator、QC、分割、ベースライン、実行手順、失敗例を 1 パックとして見たい場合は <a href="wiki/l0-minimum-artifact-pack.html">Wiki: L0で最低限そろえる成果物パック</a> が近道です。
 </p>
 </div>
 <div class="note-box">
