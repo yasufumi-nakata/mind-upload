@@ -35,6 +35,9 @@ wiki_links:
   - label: "Wiki: 本人性評価と連続性テスト"
     url: "/wiki/identity-and-continuity-tests.html"
     description: "V5 の本人性を、記憶・価値観・学習・分岐・縦断の入口から整理します。"
+  - label: "Wiki: state・trait・ドリフト"
+    url: "/wiki/state-trait-and-drift.html"
+    description: "M7 / V4 で重要な縦断評価を、state・trait・drift の違いから整理します。"
 recommended_pages:
   - label: "WBE入門"
     url: "/wbe_101.html"
@@ -71,6 +74,13 @@ P/M/R/I/V/D の記号や依存関係を初歩から追いたい場合は、先�
 <strong>V5 本人性の入口だけ先に見たいとき</strong>
 <p>
 本人性の論点は、このロードマップでは V5、V7、M7、R5 などにまたがります。記憶、価値観、学習、分岐、縦断のどこをどう見たいかを先に整理したい場合は <a href="wiki/identity-and-continuity-tests.html">Wiki: 本人性評価と連続性テスト</a> を先に読むと追いやすくなります。
+</p>
+</div>
+
+<div class="note-box">
+<strong>M7 / V4 の縦断評価で止まったとき</strong>
+<p>
+その日の state、比較的安定した trait、学習や更新による drift は別物です。短期変動と長期連続性をどう切り分けるかを先に整理したい場合は <a href="wiki/state-trait-and-drift.html">Wiki: state・trait・ドリフト</a> を先にご覧ください。
 </p>
 </div>
 

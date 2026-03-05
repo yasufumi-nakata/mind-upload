@@ -265,6 +265,7 @@ recommended_pages:
 <li><a href="wiki/multimodal-integration-basics.html">wiki/multimodal-integration-basics.html</a></li>
 <li><a href="wiki/identity-and-continuity-tests.html">wiki/identity-and-continuity-tests.html</a></li>
 <li><a href="wiki/baselines-prereg-and-model-cards.html">wiki/baselines-prereg-and-model-cards.html</a></li>
+<li><a href="wiki/state-trait-and-drift.html">wiki/state-trait-and-drift.html</a></li>
 </ul>
 </div>
 </section>
@@ -301,6 +302,7 @@ recommended_pages:
 <li><a href="wiki/multimodal-integration-basics.html">マルチモーダル統合の基本 →</a></li>
 <li><a href="wiki/identity-and-continuity-tests.html">本人性評価と連続性テスト →</a></li>
 <li><a href="wiki/baselines-prereg-and-model-cards.html">ベースライン・事前登録・モデルカード →</a></li>
+<li><a href="wiki/state-trait-and-drift.html">state・trait・ドリフト →</a></li>
 </ul>
 </div>
 </aside>

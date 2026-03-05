@@ -177,6 +177,11 @@ recommended_pages:
 <td><a href="baselines-prereg-and-model-cards.html">ベースライン・事前登録・モデルカード</a></td>
 <td><a href="../verification.html">検証基盤</a> / <a href="../hands_on.html">ハンズオン</a></td>
 </tr>
+<tr>
+<td><strong>縦断で state と trait をどう分けるか知りたい</strong></td>
+<td><a href="state-trait-and-drift.html">state・trait・ドリフト</a></td>
+<td><a href="../tech_roadmap.html">技術ロードマップ</a> / <a href="../wbe_101.html">WBE入門</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -330,6 +335,10 @@ recommended_pages:
 <td>ベースライン、ベンチマーク、事前登録、モデルカード、失敗例</td>
 <td><a href="baselines-prereg-and-model-cards.html">ベースライン・事前登録・モデルカード</a></td>
 </tr>
+<tr>
+<td>日内状態、長期特徴、学習ドリフトの違い</td>
+<td><a href="state-trait-and-drift.html">state・trait・ドリフト</a></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -362,6 +371,7 @@ recommended_pages:
 <li><a href="multimodal-integration-basics.html">マルチモーダル統合の基本 →</a></li>
 <li><a href="identity-and-continuity-tests.html">本人性評価と連続性テスト →</a></li>
 <li><a href="baselines-prereg-and-model-cards.html">ベースライン・事前登録・モデルカード →</a></li>
+<li><a href="state-trait-and-drift.html">state・trait・ドリフト →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">

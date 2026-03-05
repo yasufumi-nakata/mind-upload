@@ -32,6 +32,9 @@ wiki_links:
   - label: "Wiki: 反事実・介入・摂動"
     url: "/wiki/counterfactual-and-perturbation-verification.html"
     description: "条件変更への反応まで見たい理由を補います。"
+  - label: "Wiki: state・trait・ドリフト"
+    url: "/wiki/state-trait-and-drift.html"
+    description: "縦断評価で短期状態と長期特徴をどう分けるかを補います。"
 recommended_pages:
   - label: "WBE入門"
     url: "/wbe_101.html"
@@ -110,6 +113,7 @@ L1 や L2 では、精度や予測一致のように比較的はっきりした�
 <li><strong>長期ドリフト監視：</strong>数日から数週間で、変わる特徴と変わらない特徴を分けて追います。</li>
 </ul>
 </div>
+<p>特に縦断評価の入口だけ先に整理したい場合は、<a href="state-trait-and-drift.html">Wiki: state・trait・ドリフト</a> が補講になります。</p>
 </section>
 
 <section class="section" id="prereg">
