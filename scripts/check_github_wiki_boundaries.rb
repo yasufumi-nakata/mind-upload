@@ -5,6 +5,7 @@ ROOT = File.expand_path("..", __dir__)
 PUBLISH_SCRIPT = File.join(ROOT, "scripts", "publish_github_wiki.sh")
 VERIFY_SCRIPT = File.join(ROOT, "scripts", "verify_github_wiki_toolchain.sh")
 SYNC_SCRIPT = File.join(ROOT, "scripts", "sync_github_wiki_toolchain.sh")
+OPS_REFERENCE_SCRIPT = File.join(ROOT, "scripts", "check_github_wiki_ops_references.rb")
 VERIFY_WORKFLOW = File.join(ROOT, ".github", "workflows", "validate-github-wiki-export.yml")
 SYNC_WORKFLOW = File.join(ROOT, ".github", "workflows", "sync-github-wiki.yml")
 README = File.join(ROOT, "README.md")
@@ -13,6 +14,7 @@ README = File.join(ROOT, "README.md")
   PUBLISH_SCRIPT,
   VERIFY_SCRIPT,
   SYNC_SCRIPT,
+  OPS_REFERENCE_SCRIPT,
   VERIFY_WORKFLOW,
   SYNC_WORKFLOW,
   README
@@ -53,11 +55,13 @@ end
 verify_script_text = File.read(VERIFY_SCRIPT)
 required_verify_script_snippets = [
   'run_step "syntax-boundary" ruby -c scripts/check_github_wiki_boundaries.rb',
+  'run_step "syntax-ops-refs" ruby -c scripts/check_github_wiki_ops_references.rb',
   'run_step "syntax-noise-cleanup" ruby -c scripts/clean_github_wiki_noise.rb',
   'run_step "syntax-export" ruby -c scripts/export_github_wiki.rb',
   'run_step "syntax-export-validate" ruby -c scripts/check_github_wiki_export.rb',
   'run_step "syntax-publish" bash -n scripts/publish_github_wiki.sh',
   'run_step "boundary-check" scripts/check_github_wiki_boundaries.rb',
+  'run_step "ops-reference-check" scripts/check_github_wiki_ops_references.rb',
   'run_step "noise-cleanup" scripts/clean_github_wiki_noise.rb',
   'run_step "export" scripts/export_github_wiki.rb',
   'run_step "export-validate" scripts/check_github_wiki_export.rb',
@@ -103,6 +107,7 @@ required_readme_snippets = [
   '`scripts/verify_github_wiki_toolchain.sh`',
   '`scripts/sync_github_wiki_toolchain.sh`',
   '`scripts/check_github_wiki_boundaries.rb`',
+  '`scripts/check_github_wiki_ops_references.rb`',
   '`ignore/github-wiki-publish/`',
   'BUNDLE_PATH=vendor/bundle bundle exec jekyll build'
 ]

@@ -39,7 +39,8 @@
 - `scripts/publish_github_wiki.sh` は、GitHub Wiki の clone 先をリポジトリ内の `ignore/github-wiki-publish/` に固定しており、リポジトリ外に `wiki/` フォルダを作りません。
 - `scripts/clean_github_wiki_noise.rb` は、`wiki/` と `github-wiki-export/` に混入した `.DS_Store` や `._*` を除去します。
 - `scripts/check_github_wiki_boundaries.rb` は、`publish` が repo 内 `ignore/github-wiki-publish/` 固定のままで、`mktemp` や外部作業先 override が戻っていないことを検査します。
-- `scripts/verify_github_wiki_toolchain.sh` は、syntax check、boundary check、noise cleanup、export、export validate をまとめて実行します。`VERIFY_GITHUB_WIKI_BUILD=1` を付けると `BUNDLE_PATH=vendor/bundle bundle exec jekyll build` まで含めて確認できます。
+- `scripts/check_github_wiki_ops_references.rb` は、運用ファイル群に親ディレクトリの `wiki` 参照や古い外部 wiki remote 参照が戻っていないことを検査します。
+- `scripts/verify_github_wiki_toolchain.sh` は、syntax check、boundary check、ops reference check、noise cleanup、export、export validate をまとめて実行します。`VERIFY_GITHUB_WIKI_BUILD=1` を付けると `BUNDLE_PATH=vendor/bundle bundle exec jekyll build` まで含めて確認できます。
 - `scripts/sync_github_wiki_toolchain.sh` は、`scripts/verify_github_wiki_toolchain.sh` の成功後に `scripts/publish_github_wiki.sh` を実行する統合 sync 入口です。
 - export 検査は `scripts/check_github_wiki_export.rb` を使います。`wiki/**/*.md` の export 漏れ、`wiki/generated/` のコピー漏れ、GitHub Wiki 上で解決できない相対リンク、`_Sidebar.md` への掲載漏れ、`EEG-DATA × 助成マップ` 本文で参照している CSV 名と実ファイルの不一致、`.DS_Store` などの混入、`github-wiki-export/` の未反映更新を検出します。
 - `scripts/export_github_wiki.rb` は、`SIDEBAR_GROUPS` に未分類の wiki ページがあっても、`その他` セクションへ自動掲載します。
