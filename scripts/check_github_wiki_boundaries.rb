@@ -3,16 +3,27 @@
 
 ROOT = File.expand_path("..", __dir__)
 PUBLISH_SCRIPT = File.join(ROOT, "scripts", "publish_github_wiki.sh")
+VERIFY_WORKFLOW = File.join(ROOT, ".github", "workflows", "validate-github-wiki-export.yml")
+SYNC_WORKFLOW = File.join(ROOT, ".github", "workflows", "sync-github-wiki.yml")
+README = File.join(ROOT, "README.md")
 
-unless File.exist?(PUBLISH_SCRIPT)
-  warn "Missing publish script: #{PUBLISH_SCRIPT}"
+[
+  PUBLISH_SCRIPT,
+  VERIFY_WORKFLOW,
+  SYNC_WORKFLOW,
+  README
+].each do |path|
+  next if File.exist?(path)
+
+  warn "Missing boundary target: #{path}"
   exit 1
 end
 
-text = File.read(PUBLISH_SCRIPT)
 errors = []
 
-required_snippets = [
+publish_text = File.read(PUBLISH_SCRIPT)
+
+required_publish_snippets = [
   'WORK_ROOT="$ROOT/ignore/github-wiki-publish"',
   'WORK_DIR="$WORK_ROOT/repo"',
   'git clone "$REMOTE_URL" "$WORK_DIR"',
@@ -21,18 +32,49 @@ required_snippets = [
   'GitHub Wiki の作業先はリポジトリ内に固定しています'
 ]
 
-required_snippets.each do |snippet|
-  errors << "Missing publish guard snippet: #{snippet}" unless text.include?(snippet)
+required_publish_snippets.each do |snippet|
+  errors << "Missing publish guard snippet: #{snippet}" unless publish_text.include?(snippet)
 end
 
-forbidden_patterns = {
+forbidden_publish_patterns = {
   /GITHUB_WIKI_WORKDIR/ => "Forbidden override remains: GITHUB_WIKI_WORKDIR",
   /\bmktemp\b/ => "Forbidden temp directory helper remains: mktemp",
   %r{\$TMP_DIR/wiki} => "Forbidden temp wiki checkout path remains: $TMP_DIR/wiki"
 }
 
-forbidden_patterns.each do |pattern, message|
-  errors << message if text.match?(pattern)
+forbidden_publish_patterns.each do |pattern, message|
+  errors << message if publish_text.match?(pattern)
+end
+
+verify_workflow_text = File.read(VERIFY_WORKFLOW)
+required_verify_workflow_snippets = [
+  'run: scripts/verify_github_wiki_toolchain.sh',
+  'VERIFY_GITHUB_WIKI_BUILD: "1"'
+]
+
+required_verify_workflow_snippets.each do |snippet|
+  errors << "Missing verify workflow guard snippet: #{snippet}" unless verify_workflow_text.include?(snippet)
+end
+
+sync_workflow_text = File.read(SYNC_WORKFLOW)
+required_sync_workflow_snippets = [
+  'run: scripts/verify_github_wiki_toolchain.sh',
+  'scripts/publish_github_wiki.sh'
+]
+
+required_sync_workflow_snippets.each do |snippet|
+  errors << "Missing sync workflow guard snippet: #{snippet}" unless sync_workflow_text.include?(snippet)
+end
+
+readme_text = File.read(README)
+required_readme_snippets = [
+  '`scripts/verify_github_wiki_toolchain.sh`',
+  '`scripts/check_github_wiki_boundaries.rb`',
+  '`ignore/github-wiki-publish/`'
+]
+
+required_readme_snippets.each do |snippet|
+  errors << "Missing README boundary note: #{snippet}" unless readme_text.include?(snippet)
 end
 
 if errors.empty?
