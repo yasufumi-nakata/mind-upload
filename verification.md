@@ -82,6 +82,12 @@ recommended_pages:
 
 <section class="section" id="deliverables">
 <h2 class="section-title">Mind-Upload Commons の成果物（公共財）</h2>
+<div class="note-box">
+<strong>学校のテストでたとえると</strong>
+<p>
+この4要素は、学校のテストにたとえると役割が見えやすくなります。<strong>Data Standard</strong> は「同じ答案用紙」、<strong>Benchmark Suite</strong> は「同じ採点基準」、<strong>Registry &amp; Prereg</strong> は「試験前に配られる実施ルール」、<strong>Leaderboard &amp; Model Cards</strong> は「点数だけでなく、どう解いたかやミスも含めた成績表」に当たります。
+</p>
+</div>
 <div class="stage-list">
 <div class="stage-item">
 <div class="stage-number">01</div>
@@ -124,6 +130,32 @@ recommended_pages:
 </div>
 </div>
 </div>
+<table class="data-table">
+<thead>
+<tr>
+<th>欠ける要素</th>
+<th>何が困るか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data Standard がない</strong></td>
+<td>入力の形式や条件がばらばらになり、同じ課題を解いているのかさえ比べにくくなります。</td>
+</tr>
+<tr>
+<td><strong>Benchmark Suite がない</strong></td>
+<td>評価の物差しが人ごとに変わり、「勝った」と言っても本当に前進したか判断できません。</td>
+</tr>
+<tr>
+<td><strong>Registry &amp; Prereg がない</strong></td>
+<td>あとから都合のよい指標や条件だけを選べてしまい、失敗と成功の区別が曖昧になります。</td>
+</tr>
+<tr>
+<td><strong>Leaderboard &amp; Model Cards がない</strong></td>
+<td>点数だけが独り歩きし、データリーク、弱点、再現手順の不足を見落としやすくなります。</td>
+</tr>
+</tbody>
+</table>
 </section>
 
 <section class="section" id="example">
@@ -273,6 +305,12 @@ Issues #64–#70 で指摘された技術的批判を受け、Verification Commo
 <p>
 Issues #251・#254 を踏まえ、標準的な行動テストを超えてWBE同一性を検証するベンチマークとして「因果的摂動スイート（Causal Perturbation Suite）」を定義します。単なる出力の一致ではなく、<strong>摂動に対する応答構造の等価性</strong>を検証するテスト群です。
 </p>
+<div class="note-box">
+<strong>普通の精度評価と何が違うのか</strong>
+<p>
+普通の精度評価は、「同じ問題に同じ答えを返せたか」を見るテストです。因果的摂動スイートは、その一歩先で<strong>条件をわざと変えたときに、どう崩れ、どう持ち直すか</strong>まで比べます。つまり「答えが合うか」ではなく、「中の仕組みが同じように反応しているか」を見るテストです。
+</p>
+</div>
 <div class="key-points">
 <h4>三つのテストカテゴリ</h4>
 <ul>

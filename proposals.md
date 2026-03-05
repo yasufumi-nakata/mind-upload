@@ -53,6 +53,71 @@ recommended_pages:
 <li><strong>更新点を追う：</strong> `last_updated` が新しい順に、変更理由を `issue.html` でも確認できます。</li>
 </ul>
 </div>
+
+<div class="note-box">
+<strong>迷ったときの最短手順</strong>
+<p>
+まず下のマトリクスで <strong>Issue番号</strong> と <strong>状態</strong> を確認し、次に自分に関係する技術ストリームだけを読み、最後に必要なときだけ原本へ戻ってください。最初から全文を追うより、「どの話か」を先に固定した方が読みやすくなります。
+</p>
+</div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>読みたいこと</th>
+<th>先に見る場所</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>どの Issue が何を扱うか知りたい</strong></td>
+<td>「Issue対応マトリクス（統合版）」を先に見ます。</td>
+</tr>
+<tr>
+<td><strong>中身の要点だけ知りたい</strong></td>
+<td>「統合本文（技術ストリーム別）」から該当ストリームへ進みます。</td>
+</tr>
+<tr>
+<td><strong>本当にそう書いてあるか確認したい</strong></td>
+<td>「原本（全文）インデックス」から各 technical proposal の原文節へ戻ります。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="status-meaning">
+<h2 class="section-title">状態ラベルの意味</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>ラベル</th>
+<th>意味</th>
+<th>まだ残る確認</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>提案公開</strong></td>
+<td>本文として公開され、議論にかけられる状態です。</td>
+<td>妥当性や優先順位の精査が残ります。</td>
+</tr>
+<tr>
+<td><strong>提案受理</strong></td>
+<td>方針として取り込む価値が高いと判断した状態です。</td>
+<td>実装方法や検証条件の具体化が必要です。</td>
+</tr>
+<tr>
+<td><strong>実装方針反映</strong></td>
+<td>サイト本文や設計へ考え方が反映された状態です。</td>
+<td>コードや運用の実装が完了したとは限りません。</td>
+</tr>
+<tr>
+<td><strong>外部依存</strong></td>
+<td>実験・機材・審査など、リポジトリ外の条件が必要な状態です。</td>
+<td>ここでは要求仕様やログ形式までを先に整えます。</td>
+</tr>
+</tbody>
+</table>
 </section>
 
 <section class="section" id="issue-matrix">

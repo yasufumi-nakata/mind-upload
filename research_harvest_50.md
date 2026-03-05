@@ -91,6 +91,20 @@ recommended_pages:
 
 <section class="section" id="u-overview">
 <h2 class="section-title">U別の現状マップ</h2>
+<div class="note-box">
+<strong>この表の読み方</strong>
+<p>
+ここでの <strong>ID</strong> は問題の名前札、<strong>現状</strong> はどこまで解けているか、<strong>引用数</strong> は関連証拠の量です。引用数が多いことは、そのまま結論が確定していることを意味しません。
+</p>
+</div>
+<table class="data-table">
+<thead><tr><th>大きな問題群</th><th>含まれるU</th><th>ざっくり何を見る群か</th></tr></thead><tbody>
+<tr><td><strong>定義と評価</strong></td><td>U0 / U11 / U13 / U14</td><td>何を「同じ」と呼ぶか、模倣と検証をどう分けるか、追試をどう成立させるか。</td></tr>
+<tr><td><strong>計測と推定</strong></td><td>U1 / U7</td><td>観測データからどこまで分かるか、複数モダリティをどう揃えるか。</td></tr>
+<tr><td><strong>因果と実装安定性</strong></td><td>U4 / U8 / U10</td><td>介入で同じと言えるか、閉ループで壊れないか、物理的コストが破綻しないか。</td></tr>
+<tr><td><strong>境界と本人性</strong></td><td>U3 / U12</td><td>どこまで含めれば主体と言えるか、分岐後の本人性をどう扱うか。</td></tr>
+<tr><td><strong>制度と公開運用</strong></td><td>U15</td><td>技術だけでなく、停止基準・公開基準・責任の置き方まで含めて運用できるか。</td></tr>
+</tbody></table>
 <table class="data-table">
 <thead><tr><th>ID</th><th>問題名</th><th>現状</th><th>引用数</th><th>未解決の中心</th></tr></thead><tbody>
 <tr><td>U0</td><td>操作的同一性</td><td>部分解決</td><td>23</td><td>介入実験を含む同一性評価ベンチは未標準化。</td></tr>
@@ -106,6 +120,12 @@ recommended_pages:
 <tr><td>U14</td><td>追試可能性</td><td>部分解決</td><td>26</td><td>神経科学×機械学習を跨ぐ共通監査規約が不十分。</td></tr>
 <tr><td>U15</td><td>制度統合</td><td>探索段階</td><td>26</td><td>技術指標と法的停止基準を結びつけた実装規格が不足。</td></tr>
 </tbody></table>
+<div class="note-box">
+<strong>番号で身構えなくてよい理由</strong>
+<p>
+U番号は内部管理用のコードであり、暗記するためのものではありません。まずは上の「大きな問題群」で自分に近い塊を見つけ、その後に個別の U へ降りていけば十分です。
+</p>
+</div>
 </section>
 
 <section class="section" id="definitions">

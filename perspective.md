@@ -68,7 +68,44 @@ recommended_pages:
 <h2 class="section-title">Introduction: Theoretical Foundations Revisited</h2>
 
 <h3>1.1. 意識の科学：理論的基盤の再検討と「Adversarial Collaboration」の衝撃</h3>
+<div class="note-box">
+<strong>この節で決めたいこと</strong>
+<p>
+ここで決めたいのは、「どの理論が勝ちか」を宣言することではありません。むしろ、主要理論を並べて見たときに、<strong>どの理論にも共通して必要な検証条件は何か</strong>を先に取り出すことが目的です。
+</p>
+</div>
 <p>マインドアップロード（WBE）が再現すべき「意識」とは何か。この問いに対し、本プロジェクトは従来、統合情報理論（IIT）とグローバル神経ワークスペース理論（GNWT）の相補的統合を模索してきた。しかし、2025年に発表された大規模な**敵対的共同研究（Adversarial Collaboration）**の結果（Cogitate Consortium et al., Nature 2025<sup><a href="#ref-54">[54]</a></sup>）を受け、我々は方針を転換する。すなわち、両理論の統合ではなく、実験結果に基づく**「理論的限界の明記」**と、**「予測符号化（Predictive Coding）および自由エネルギー原理（Friston, 2010）への拡張」**へと舵を切る。この結果は、楽観的な統合論に修正を迫るものである。</p>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>理論</th>
+<th>主に説明したいこと</th>
+<th>弱点・つまずきやすい点</th>
+<th>Mind-Uploadでの使い方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IIT</strong></td>
+<td>意識の「統合された質」や因果構造を説明したい。</td>
+<td>計算量が重く、機能的に同じでも意識なしと判定しうる Unfolding Argument が問題になる。</td>
+<td>意識の質や統合性を測る<strong>ものさし候補</strong>として参照し、実装上は PCI 系など近似可能な指標へ落とします。</td>
+</tr>
+<tr>
+<td><strong>GNWT</strong></td>
+<td>情報が広域共有されるとき、なぜ意識的アクセスが起こるのかを説明したい。</td>
+<td>前頭前野イグニッションが報告動作と切り分けにくく、意識そのものとの対応が揺れやすい。</td>
+<td>「広域共有」「報告可能性」がどの条件で成立するかを見る<strong>作業仮説</strong>として使います。</td>
+</tr>
+<tr>
+<td><strong>FEP / 予測符号化</strong></td>
+<td>システムが環境とやり取りしながら、どう安定して推論し続けるかを説明したい。</td>
+<td>それ自体で現象的意識まで説明しきれるわけではなく、抽象度が高いため何でも説明したように見えやすい。</td>
+<td>エミュレータを<strong>動き続ける実装原理</strong>として設計する際の土台に使い、閉ループや反事実の検証へ接続します。</td>
+</tr>
+</tbody>
+</table>
 
 <div class="question-box">
 <h4>中心的課題: 理論の予測と実験結果の乖離</h4>

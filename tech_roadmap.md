@@ -243,6 +243,14 @@ recommended_pages:
 <section class="section" id="tree">
 <h2 class="section-title">問いの木（詳細版：1ページに集約）</h2>
 <p>以下に、技術面の問いを「計測→再構成→実装→検証→社会実装」に分解して、<strong>1ページに全部</strong>まとめます。各項目は折りたたみ（クリックで展開）です。</p>
+<div class="key-points">
+<h4>迷った人向けの最短コース</h4>
+<ul>
+<li><strong>全体像だけ先に知りたい人：</strong><a href="#qa-p0">P0</a> → <a href="#qa-m0">M0</a> → <a href="#qa-r1">R1</a> → <a href="#qa-v1">V1</a> の順で読むと、「何を測り、何を復元し、何で検証するか」が一周で分かります。</li>
+<li><strong>EEG から入りたい人：</strong><a href="#qa-m0">M0</a> → <a href="#qa-m2">M2</a> → <a href="#qa-m9">M9</a> → <a href="#qa-v1">V1</a> の順で読むと、計測条件から評価までを追いやすいです。</li>
+<li><strong>本人性の話から入りたい人：</strong><a href="#qa-p1">P1</a> → <a href="#qa-v5">V5</a> → <a href="#qa-v7">V7</a> → <a href="#qa-d1">D1</a> の順で読むと、強い主張に必要な条件と制度面の壁が見えます。</li>
+</ul>
+</div>
 
 <div class="node" id="measurement" data-qa-group>
 <div class="node-kicker">1. Measurement</div>

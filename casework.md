@@ -54,6 +54,13 @@ recommended_pages:
 <li><strong>相互運用標準：</strong>繋がる仕様があると、エコシステムが“割れない”（W3C / IETF / Unicode）</li>
 </ul>
 </div>
+
+<div class="note-box">
+<strong>このページを歴史読みで終わらせないために</strong>
+<p>
+ここで大事なのは「昔こういう事例がありました」と知ることではありません。各事例を見て、<strong>何がバラバラで困っていたのか</strong>、<strong>どんな共通ルールを作ったのか</strong>、<strong>その結果どんな比較ができるようになったのか</strong>、の3点を拾うことです。
+</p>
+</div>
 </section>
 
 <section class="section" id="failure-modes">
@@ -82,6 +89,29 @@ recommended_pages:
 </div>
 </div>
 <p>Mind-Uploadが作ろうとしているのは、これらを構造的に起こしにくくするための基盤です（<a href="verification.html">検証基盤</a>）。</p>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>読む観点</th>
+<th>ここで確認すること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>困りごと</strong></td>
+<td>その分野では、何が揃っていないせいで比較や追試ができなかったのか。</td>
+</tr>
+<tr>
+<td><strong>解決策</strong></td>
+<td>規格、置き場、ベンチマーク、登録、標準のうち、どれを導入して状況が変わったのか。</td>
+</tr>
+<tr>
+<td><strong>Mind-Uploadへの転用</strong></td>
+<td>同じ発想を WBE に持ち込むと、入力・評価・更新運用のどこが改善されるのか。</td>
+</tr>
+</tbody>
+</table>
 </section>
 
 <section class="section" id="data-standardization">
