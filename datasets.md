@@ -5,8 +5,23 @@ description: "公開データ（EEG中心）と共有基盤を、Mind-Uploadの�
 article_type: Resource
 subtitle: "「データがある」だけでは足りない。規格・メタデータ・評価がセット。"
 author: Mind Uploading Research Project
-last_updated: "2026-02-10"
+last_updated: "2026-03-06"
 note: "Curated List (v0)"
+audience: "どの公開データから始めるべきか迷っている人、L0の練習台を探している人"
+reading_time: "8〜15分"
+page_intro: "このページは、『最初にどの公開データで検証を始めるか』を決めるための実務ガイドです。データ名の一覧ではなく、L0の再現解析からL1/L2の比較へ進みやすい順で見ることを意図しています。"
+accuracy_note: "ここに載せるデータセットは入口候補です。使いやすさや再現性の観点で挙げており、これだけでWBEの全課題を覆えるわけではありません。"
+page_highlights:
+  - "まずは共有基盤を押さえ、その後にスターターデータセットを見る順にしています。"
+  - "『データがある』だけで終わらせないためのチェックリストを入れています。"
+  - "最終目標は、第三者が同じ条件で走らせられる形へ寄せることです。"
+recommended_pages:
+  - label: "EEG入門"
+    url: "/eeg_101.html"
+  - label: "ハンズオン"
+    url: "/hands_on.html"
+  - label: "検証基盤"
+    url: "/verification.html"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
 
@@ -17,6 +32,13 @@ note: "Curated List (v0)"
 <h2>How To Use</h2>
 <p>
 このページは、「最初にどのデータで練習すればよいか」を決めるための実用リストです。まずは公開データで、<strong>同じ結果を再現できる状態（L0）</strong>を作り、その次に<strong>予測できるか・条件変更に耐えるか（L1〜L2）</strong>を確かめます。
+</p>
+</div>
+
+<div class="note-box">
+<strong>選び方の基準</strong>
+<p>
+最初のデータ選びで大事なのは、「すごく難しいデータ」よりも「手順と結果を他の人が追いやすいデータ」です。最初から全部を狙わず、まずは再現しやすい公開データで最小ループを作るのが近道です。
 </p>
 </div>
 

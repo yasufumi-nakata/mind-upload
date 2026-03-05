@@ -5,8 +5,23 @@ description: "マインドアップロード/WBEを「進歩を測れる科学�
 article_type: Platform
 subtitle: "PDB×BIDS×PhysioNet×OSFの発想で、WBEの“勝利条件”と“再現可能な前進”を作る"
 author: Mind Uploading Research Project
-last_updated: "2026-02-23"
+last_updated: "2026-03-06"
 note: "Operational Specification"
+audience: "このサイトの中心方針を知りたい人、何を揃えれば『前進』になるかを確認したい人"
+reading_time: "15〜25分"
+page_intro: "このページは、Mind-Upload の中心となる設計図です。データ、評価、失敗判定、再現手順を先にそろえることで、『何を達成したら前進か』を後付けではなく事前に決める考え方を説明します。"
+accuracy_note: "このページは『WBEが可能だ』と断言するページではありません。可能かどうかを確かめられる土台を作るページです。"
+page_highlights:
+  - "標準、置き場、ベンチマーク、監査をセットでそろえる必要があります。"
+  - "デコーディングとエミュレーションを混同しないために、主張レベルと失敗条件を先に固定します。"
+  - "ここを読むと、なぜデータだけ集めても前進にならないのかが分かります。"
+recommended_pages:
+  - label: "技術ロードマップ"
+    url: "/tech_roadmap.html"
+  - label: "データ&ベンチ"
+    url: "/datasets.html"
+  - label: "ケースワーク"
+    url: "/casework.html"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
 
@@ -17,6 +32,13 @@ note: "Operational Specification"
 <h2>One Problem</h2>
 <p>
 マインドアップロード（WBE）を「夢の話」で終わらせないために、まず必要なのは<strong>共通のルール</strong>です。Mind-Uploadでは、データの置き方、評価のしかた、失敗の判定、再現手順を先にそろえて、誰でも同じ基準で確かめられる土台を作ります。
+</p>
+</div>
+
+<div class="note-box">
+<strong>このページで先に押さえるべきこと</strong>
+<p>
+ここで揃えたいのは、<strong>標準（どう置くか）</strong>、<strong>共有基盤（どこに置くか）</strong>、<strong>評価（何で比べるか）</strong>、<strong>監査（失敗や更新をどう残すか）</strong>の4点です。どれか1つだけでは、比較可能な前進になりません。
 </p>
 </div>
 

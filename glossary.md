@@ -5,8 +5,23 @@ description: "Mind-Uploadで頻出する用語を、人間が迷子にならな�
 article_type: Reference
 subtitle: "まずは“言葉のすり替え”を止める"
 author: Mind Uploading Research Project
-last_updated: "2026-02-10"
+last_updated: "2026-03-06"
 note: "Living document"
+audience: "用語で止まりたくない人、言葉のすり替えを防ぎたい人"
+reading_time: "必要な項目だけなら3〜10分"
+page_intro: "このページは、Mind-Upload でよく出る言葉を『まず日常語で理解し、そのあと必要なら厳密に戻る』ための用語集です。議論で迷子にならないように、難しい単語を測定や検証の話に結び付けて説明します。"
+accuracy_note: "ここに書く説明は入口用の短い定義です。厳密な使い方は、リンク先の本文や元論文で確認してください。"
+page_highlights:
+  - "用語を短く説明しつつ、どこで使う概念かも一緒に示します。"
+  - "『似ているが違う』語を分けることで、話のすり替えを防ぎます。"
+  - "分からない言葉が出たら、このページに戻れば最低限の足場を作れます。"
+recommended_pages:
+  - label: "WBE入門"
+    url: "/wbe_101.html"
+  - label: "EEG入門"
+    url: "/eeg_101.html"
+  - label: "FAQ"
+    url: "/faq.html"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
 
@@ -17,6 +32,13 @@ note: "Living document"
 <h2>How To Use</h2>
 <p>
 この用語集は、用語の意味をすぐ確認するためのリファレンスです。まず日常語の説明で把握し、必要なときだけ厳密な定義に進む構成とし、議論を測定と扱い方に結び付けます。WBEの議論は言葉のズレで混乱しやすいため、ここでは<strong>実際にどう測って扱うか</strong>を重視します。
+</p>
+</div>
+
+<div class="note-box">
+<strong>このページの見方</strong>
+<p>
+一語一句を暗記する必要はありません。本文で止まった単語をここで確認し、「ざっくり意味が分かったら元のページに戻る」という使い方で十分です。
 </p>
 </div>
 

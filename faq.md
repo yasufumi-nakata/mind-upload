@@ -5,8 +5,23 @@ description: "Mind-Uploadを読んでいて出やすい疑問に、短く正確�
 article_type: FAQ
 subtitle: "派手な結論より、検証できる前進を"
 author: Mind Uploading Research Project
-last_updated: "2026-02-10"
+last_updated: "2026-03-06"
 note: "Human-first"
+audience: "まず疑問や誤解を整理したい人、短いQ&Aで全体像をつかみたい人"
+reading_time: "8〜15分"
+page_intro: "このページは、Mind-Upload を読んでいて多くの人が最初にぶつかる疑問へ、短くても誤解の少ない答えを返すための Q&A です。入口として短く書いていますが、強い主張は必ず根拠ページへ戻れるようにしています。"
+accuracy_note: "ここは短い答えを返すページです。結論だけ切り取らず、必要に応じてリンク先の本文と参考文献へ戻ってください。"
+page_highlights:
+  - "『このサイトは何をするのか』『EEGで何が言えるのか』など、最初の疑問をまとめて潰せます。"
+  - "派手な言い切りを避け、何が未解決かも同時に書いています。"
+  - "FAQだけで十分な場合と、本文ページへ進むべき場合を分けて読める構成です。"
+recommended_pages:
+  - label: "検証基盤"
+    url: "/verification.html"
+  - label: "WBE入門"
+    url: "/wbe_101.html"
+  - label: "用語集"
+    url: "/glossary.html"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
 
@@ -17,6 +32,13 @@ note: "Human-first"
 <h2>How To Read</h2>
 <p>
 ここは「よくある勘違い」を先に避けるためのページです。主張が大きいほど、(1)言葉の定義、(2)評価の物差し、(3)間違いと判定する条件、(4)再現手順の順で確認します。
+</p>
+</div>
+
+<div class="note-box">
+<strong>FAQの限界</strong>
+<p>
+FAQは「まず方向を間違えないための短い答え」です。ここで雰囲気だけ掴み、根拠や細部が必要になったらリンク先へ進む使い方を前提にしています。
 </p>
 </div>
 

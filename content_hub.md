@@ -5,8 +5,23 @@ description: "公開ページの役割・統合先・更新先を1ページに�
 article_type: "Navigation"
 subtitle: "散逸防止のための単一導線"
 author: Mind Uploading Research Project
-last_updated: "2026-02-24"
+last_updated: "2026-03-06"
 note: "Single source of truth for public pages"
+audience: "公開ページの置き場所を確認したい人、新規追記の統合先を迷いたくない人"
+reading_time: "5〜10分"
+page_intro: "このページは、公開コンテンツが散らばらないように『どの話題をどのページへ足すべきか』を固定するための運用ハブです。新しい情報を書く前に、まず既存ページの統合先を確認する場所として使います。"
+accuracy_note: "ここは運用ハブであり、新しい主張を増やす本文ページではありません。どこへ統合すべきかを判断するためのページです。"
+page_highlights:
+  - "領域ごとに主ページと補助ページを分け、追記先を固定しています。"
+  - "新規ページを増やす前に、既存ページへ統合できるかを確認する前提です。"
+  - "公開導線と運用資料を一箇所で見渡せるようにしています。"
+recommended_pages:
+  - label: "スタートページ"
+    url: "/index.html"
+  - label: "検証基盤"
+    url: "/verification.html"
+  - label: "貢献ガイド"
+    url: "/issue.html"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
 
@@ -17,6 +32,13 @@ note: "Single source of truth for public pages"
 <h2>このページの役割</h2>
 <p>
 このページは、公開コンテンツの<strong>統合先</strong>と<strong>更新先</strong>を固定するハブです。新しい情報を追加するときは、まず本ページの対応表で既存ページを確認し、既存ページへ統合する運用を優先します。
+</p>
+</div>
+
+<div class="note-box">
+<strong>このページで決めること</strong>
+<p>
+ここで決めたいのは「何を書くか」よりも「どこへ書くか」でございます。内容の重複や導線の散逸を防ぐため、公開ページの入口と統合先をこのページで先に固定します。
 </p>
 </div>
 

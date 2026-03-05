@@ -5,8 +5,23 @@ description: "マインドアップロード/WBEを「進歩を測れる科学�
 article_type: Start Here
 subtitle: "勝利条件・標準・ベンチマーク・事前登録を先に作る"
 author: Mind Uploading Research Project
-last_updated: "2026-02-24"
+last_updated: "2026-03-06"
 note: "Human-friendly landing page"
+audience: "はじめて来た人、全体像だけ先に知りたい人、読む順番で迷いたくない人"
+reading_time: "5〜10分"
+page_intro: "このページは、Mind-Upload 全体の入口です。『このサイトは何を目指しているか』『どこから読むと迷いにくいか』『今すぐ見に行くべきページはどれか』を最短で把握できるようにしています。"
+accuracy_note: "ここでは入口に必要なことだけを先に示します。細かい根拠や技術的な条件は、各リンク先で確認してください。"
+page_highlights:
+  - "Mind-Uploadの中心は、派手な結論を出すことではなく、前進を測れる検証基盤を作ることです。"
+  - "迷ったら Verification → Roadmap → WBE/EEG入門 の順で読むと、話の軸を保ちやすいです。"
+  - "用語や前提で止まったときに戻れる入口として、FAQ と用語集も近くに置いています。"
+recommended_pages:
+  - label: "検証基盤"
+    url: "/verification.html"
+  - label: "WBE入門"
+    url: "/wbe_101.html"
+  - label: "FAQ"
+    url: "/faq.html"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
 
@@ -18,6 +33,15 @@ note: "Human-friendly landing page"
 <p>
 Mind-Uploadは、「心をコンピュータで再現できるのか？」という大きな問いを、<strong>検証できる小さな課題</strong>に分けて進めるサイトです。大きな結論を急がず、まずは<strong>何を達成したら前進か</strong>と、<strong>他の人が同じ結果を確認できるか</strong>を先に決めます。
 </p>
+</div>
+
+<div class="key-points">
+<h4>このページで先に分かること</h4>
+<ul>
+<li><strong>このサイトの中心：</strong>「本当にできるのか」をすぐ断言するのではなく、まず確かめ方を揃えることです。</li>
+<li><strong>最短の読み方：</strong>全体像だけ知りたい場合は、下の「読む順番」から 1〜3 を見れば十分です。</li>
+<li><strong>このページでしないこと：</strong>本人性や意識の最終結論を、入口ページだけで決めることはしません。</li>
+</ul>
 </div>
 
 <section class="section" id="start">
