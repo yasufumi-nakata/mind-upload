@@ -54,6 +54,13 @@ recommended_pages:
 </p>
 </div>
 
+<div class="note-box">
+<strong>文献を読んだあとに次の1ページを決めたいとき</strong>
+<p>
+役割差だけでなく、論文や文献地図を読んだあとに未解決問題、提案、Issue、協業候補のどこへ戻るかを一本道で見たい場合は <a href="literature-to-action-route.html">文献から実装・参加へ戻る一本道</a> をご覧ください。
+</p>
+</div>
+
 <section class="section" id="which-page">
 <h2 class="section-title">3つのページの違い</h2>
 <table class="data-table">

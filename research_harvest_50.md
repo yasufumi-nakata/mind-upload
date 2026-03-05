@@ -83,6 +83,12 @@ recommended_pages:
 </p>
 </div>
 <div class="note-box">
+<strong>文献を読んだあとにどこへ戻すか迷ったとき</strong>
+<p>
+この文献地図で論文を見つけたあとに、提案へつなぐのか、Issue に落とすのか、協業候補の準備物へ変えるのかを一本道で見たい場合は <a href="wiki/literature-to-action-route.html">Wiki: 文献から実装・参加へ戻る一本道</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
 <strong>Scopus / Review / source_logged の意味で止まったとき</strong>
 <p>
 このページでは、掲載元、文献種別、サイト内状態が混ざって見えやすいです。それぞれが何を示し、何をまだ保証しないかを先に整理したい場合は、<a href="wiki/paper-source-types-and-evidence-status.html">Wiki: 文献のソース種別と状態ラベルの読み方</a> をご覧ください。

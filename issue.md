@@ -84,6 +84,12 @@ Mind-Uploadは、マインドアップロードを検証可能な研究へ進め
 IRB、実験、機材、法務が絡むときでも、要求仕様、判定条件、公開ログ形式などは先に内製できます。<a href="wiki/internal-prework-and-external-dependencies.html">Wiki: 内製で先にやることと外部依存の切り分け</a> に、今このリポジトリで進められることを整理しています。
 </p>
 </div>
+<div class="note-box">
+<strong>文献を読んだあとに Issue へ落とす流れを見たいとき</strong>
+<p>
+論文や文献地図を見たあとに、どの未解決問題へ戻し、どの条件で Issue に落とすかを一本道で見たい場合は <a href="wiki/literature-to-action-route.html">Wiki: 文献から実装・参加へ戻る一本道</a> をご覧ください。
+</p>
+</div>
 
 <section class="section" id="first-contribution-guide">
 <h2 class="section-title">最初の一歩を決める早見表</h2>

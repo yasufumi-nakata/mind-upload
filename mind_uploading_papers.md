@@ -102,6 +102,12 @@ recommended_pages:
 </p>
 </div>
 <div class="note-box">
+<strong>論文を読んだあとに次の1ページを決めたいとき</strong>
+<p>
+この論文集で論文を見つけたあとに、未解決問題へ戻すのか、提案や Issue へつなぐのかを一本道で見たい場合は <a href="wiki/literature-to-action-route.html">Wiki: 文献から実装・参加へ戻る一本道</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
 <strong>Scopus や arXiv の表示で止まったとき</strong>
 <p>
 Badge は「どこから辿れる文献か」の手掛かりであり、それだけで証拠の強さは決まりません。Scopus、arXiv、Review、Media、source_logged などの違いを 1 枚で確認したい場合は、<a href="wiki/paper-source-types-and-evidence-status.html">Wiki: 文献のソース種別と状態ラベルの読み方</a> を先に見ると安全です。

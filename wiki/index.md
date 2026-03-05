@@ -143,6 +143,11 @@ recommended_pages:
 <td><a href="../verification.html">検証基盤</a> / <a href="../hands_on.html">ハンズオン</a> / <a href="../tech_roadmap.html">技術ロードマップ</a> / <a href="../wbe_101.html">WBE入門</a></td>
 </tr>
 <tr>
+<td><strong>文献を読んだあとにどこへ戻すか迷う</strong></td>
+<td><a href="literature-to-action-route.html">文献から実装・参加へ戻る一本道</a></td>
+<td><a href="../research_harvest_50.html">文献地図</a> / <a href="../proposals.html">技術提案</a> / <a href="../issue.html">貢献ガイド</a> / <a href="../collaborations.html">協業候補</a></td>
+</tr>
+<tr>
 <td><strong>Scopus、arXiv、Review、source_logged の違いで止まる</strong></td>
 <td><a href="paper-source-types-and-evidence-status.html">文献のソース種別と状態ラベルの読み方</a></td>
 <td><a href="../mind_uploading_papers.html">論文集</a> / <a href="../research_harvest_50.html">文献地図</a></td>
