@@ -85,6 +85,12 @@ recommended_pages:
 このページは作業順を追うためのものです。L0 の最後に何を一式として残せばよいかを 1 枚で見たい場合は <a href="wiki/l0-minimum-artifact-pack.html">Wiki: L0で最低限そろえる成果物パック</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>EEGからここへ来るまでの流れを一本道で見たいとき</strong>
+<p>
+EEG 入門、データ選定、分割規則、観測ログの確認を経て、この Hands-on で L0 を作るまでの流れを一本道で見たい場合は <a href="wiki/eeg-to-l0-route.html">Wiki: EEGからL0までの一本道</a> をご覧ください。
+</p>
+</div>
 
 <section class="section" id="overview">
 <h2 class="section-title">最小ループ（L0）の形</h2>

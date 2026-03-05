@@ -156,6 +156,12 @@ recommended_pages:
 Verification は勝利条件と反証条件の設計図です。入口データは <a href="datasets.html">データ&ベンチ</a>、L0 の最小ループは <a href="hands_on.html">ハンズオン</a>、参照事例は <a href="casework.html">ケースワーク</a>、提案整理は <a href="proposals.html">技術提案</a> が担当します。実務系だけの読み分けを 1 枚で見たい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>EEGからL0までの実務ルートを一本道で見たいとき</strong>
+<p>
+EEG 入門から公開データ選定、Hands-on での L0 作成を経て、このページで何が満たせたかを確認するまでの流れを一本道で見たい場合は <a href="wiki/eeg-to-l0-route.html">Wiki: EEGからL0までの一本道</a> をご覧ください。
+</p>
+</div>
 
 <section class="section" id="tldr">
 <h2 class="section-title">TL;DR（人間向け）</h2>

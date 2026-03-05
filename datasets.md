@@ -123,6 +123,12 @@ recommended_pages:
 データ名だけ決めても、提出物の形が曖昧だと止まりやすいです。BIDS、Validator、QC ログ、分割規則、ベースライン、実行手順、失敗例を 1 枚で見たい場合は <a href="wiki/l0-minimum-artifact-pack.html">Wiki: L0で最低限そろえる成果物パック</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>EEGからL0までの全体順を一本道で見たいとき</strong>
+<p>
+EEG 入門のあとに、このページでデータを選び、Hands-on で一周し、Verification で L0 として確認するまでの流れを一本道で見たい場合は <a href="wiki/eeg-to-l0-route.html">Wiki: EEGからL0までの一本道</a> をご覧ください。
+</p>
+</div>
 
 <div class="note-box">
 <strong>raw EEG があるだけでは足りない</strong>

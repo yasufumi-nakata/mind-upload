@@ -54,6 +54,13 @@ recommended_pages:
 </p>
 </div>
 
+<div class="note-box">
+<strong>EEGからL0までの順番だけを一本道で見たいとき</strong>
+<p>
+実務ページの役割差よりも、EEG 入門から Datasets、Hands-on、Verification までの順番をそのまま辿りたい場合は <a href="eeg-to-l0-route.html">EEGからL0までの一本道</a> をご覧ください。
+</p>
+</div>
+
 <section class="section" id="role-diff">
 <h2 class="section-title">実務系ページの役割差</h2>
 <table class="data-table">

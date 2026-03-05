@@ -128,6 +128,11 @@ recommended_pages:
 <td><a href="../index.html">スタートページ</a> / <a href="../verification.html">検証基盤</a> / <a href="../hands_on.html">ハンズオン</a></td>
 </tr>
 <tr>
+<td><strong>EEGからL0までどう進むかを一本道で見たい</strong></td>
+<td><a href="eeg-to-l0-route.html">EEGからL0までの一本道</a></td>
+<td><a href="../eeg_101.html">EEG入門</a> / <a href="../datasets.html">データ&ベンチ</a> / <a href="../hands_on.html">ハンズオン</a> / <a href="../verification.html">検証基盤</a></td>
+</tr>
+<tr>
 <td><strong>Scopus、arXiv、Review、source_logged の違いで止まる</strong></td>
 <td><a href="paper-source-types-and-evidence-status.html">文献のソース種別と状態ラベルの読み方</a></td>
 <td><a href="../mind_uploading_papers.html">論文集</a> / <a href="../research_harvest_50.html">文献地図</a></td>
