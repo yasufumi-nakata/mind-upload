@@ -8,6 +8,8 @@ on:
       - "scripts/export_github_wiki.rb"
       - "scripts/check_github_wiki_export.rb"
       - "scripts/check_github_wiki_boundaries.rb"
+      - "scripts/clean_github_wiki_noise.rb"
+      - "scripts/verify_github_wiki_toolchain.sh"
       - "scripts/publish_github_wiki.sh"
       - ".github/workflows/sync-github-wiki.yml"
   workflow_dispatch:
@@ -27,14 +29,8 @@ jobs:
         with:
           ruby-version: "3.2"
 
-      - name: Export GitHub Wiki content
-        run: scripts/export_github_wiki.rb
-
-      - name: Validate GitHub Wiki boundaries
-        run: scripts/check_github_wiki_boundaries.rb
-
-      - name: Validate GitHub Wiki export
-        run: scripts/check_github_wiki_export.rb
+      - name: Verify GitHub Wiki toolchain
+        run: scripts/verify_github_wiki_toolchain.sh
 
       - name: Publish GitHub Wiki export
         env:
