@@ -26,6 +26,9 @@ wiki_links:
   - label: "Wiki: WBEの基本"
     url: "/wiki/mind-upload-basics.html"
     description: "用語が使われる全体像を先に見たいときの入口です。"
+  - label: "Wiki: 公開ページの読み分けガイド"
+    url: "/wiki/public-page-reading-guide.html"
+    description: "用語確認のあとに、どの公開ページへ戻るかを整理します。"
   - label: "Wiki: 意識理論マップ"
     url: "/wiki/consciousness-theory-map.html"
     description: "IIT、GNWT、FEP、PCI の違いを表で整理した補助ページです。"
@@ -74,6 +77,12 @@ recommended_pages:
 <strong>このページの見方</strong>
 <p>
 一語一句を暗記する必要はありません。本文で止まった単語をここで確認し、「ざっくり意味が分かったら元のページに戻る」という使い方で十分です。
+</p>
+</div>
+<div class="note-box">
+<strong>どの本文へ戻るか迷ったとき</strong>
+<p>
+用語だけ分かっても、次に Verification、Roadmap、WBE 101、EEG 101 のどこへ戻るかで迷うことがあります。公開ページどうしの役割差を先に整理したい場合は <a href="wiki/public-page-reading-guide.html">Wiki: 公開ページの読み分けガイド</a> をご覧ください。
 </p>
 </div>
 

@@ -26,6 +26,9 @@ wiki_links:
   - label: "Wiki: 主張と証拠の読み方"
     url: "/wiki/claims-and-evidence.html"
     description: "FAQ の短い答えを、もう一段ていねいに学びたい人向けです。"
+  - label: "Wiki: 公開ページの読み分けガイド"
+    url: "/wiki/public-page-reading-guide.html"
+    description: "FAQ のあとに本文のどこへ戻るかを整理します。"
   - label: "Wiki: Decode と Emulate"
     url: "/wiki/decode-vs-emulate.html"
     description: "Q2 で出る違いを、日常例でもう一段噛み砕きます。"
@@ -65,6 +68,12 @@ recommended_pages:
 <strong>FAQの限界</strong>
 <p>
 FAQは「まず方向を間違えないための短い答え」です。ここで雰囲気だけ掴み、根拠や細部が必要になったらリンク先へ進む使い方を前提にしています。
+</p>
+</div>
+<div class="note-box">
+<strong>短い答えのあとに戻る本文で迷ったとき</strong>
+<p>
+FAQ は入口なので、次に Verification、WBE 101、Datasets、Glossary のどこへ戻るかを決める必要があります。公開ページどうしの役割差を先に整理したい場合は <a href="wiki/public-page-reading-guide.html">Wiki: 公開ページの読み分けガイド</a> をご覧ください。
 </p>
 </div>
 

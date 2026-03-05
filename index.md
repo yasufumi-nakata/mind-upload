@@ -27,6 +27,9 @@ wiki_links:
   - label: "Wiki Home"
     url: "/wiki/"
     description: "初歩から学ぶための全体マップです。"
+  - label: "Wiki: 公開ページの読み分けガイド"
+    url: "/wiki/public-page-reading-guide.html"
+    description: "Verification、Roadmap、WBE 101、Datasets などの役割差を整理します。"
   - label: "Wiki: WBEの基本"
     url: "/wiki/mind-upload-basics.html"
     description: "マインドアップロードと WBE の最初の一歩を丁寧に説明します。"
@@ -66,6 +69,12 @@ Mind-Uploadは、「心をコンピュータで再現できるのか？」とい
 <strong>公開ページと wiki の役割分担</strong>
 <p>
 このトップページを含む公開ページは、まず「いま何が分かっていて、何がまだ未解決か」を早く把握するための<strong>情報ポータル</strong>です。背景から順に学びたい場合は、各ページ上部の <strong>wiki</strong> 導線から学習用ページへ進んでください。
+</p>
+</div>
+<div class="note-box">
+<strong>公開ページどうしの違いで迷ったとき</strong>
+<p>
+Verification、Roadmap、Perspective、WBE 101、Datasets などは、似た説明をしているようで役割が違います。まずどの公開ページから入るべきかを整理したい場合は <a href="wiki/public-page-reading-guide.html">Wiki: 公開ページの読み分けガイド</a> をご覧ください。
 </p>
 </div>
 

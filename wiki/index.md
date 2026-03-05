@@ -108,6 +108,11 @@ recommended_pages:
 <td><a href="../research_harvest_50.html">文献地図</a> / <a href="../mind_uploading_papers.html">論文集</a></td>
 </tr>
 <tr>
+<td><strong>公開ページどうしの違いで迷う</strong></td>
+<td><a href="public-page-reading-guide.html">公開ページの読み分けガイド</a></td>
+<td><a href="../index.html">スタートページ</a> / <a href="../verification.html">検証基盤</a></td>
+</tr>
+<tr>
 <td><strong>Scopus、arXiv、Review、source_logged の違いで止まる</strong></td>
 <td><a href="paper-source-types-and-evidence-status.html">文献のソース種別と状態ラベルの読み方</a></td>
 <td><a href="../mind_uploading_papers.html">論文集</a> / <a href="../research_harvest_50.html">文献地図</a></td>
@@ -298,6 +303,10 @@ recommended_pages:
 <tr>
 <td>論文アーカイブ、文献地図、提案ページの違い</td>
 <td><a href="literature-and-evidence-reading.html">文献と証拠ページの読み方</a></td>
+</tr>
+<tr>
+<td>公開ページどうしの役割差と読む順番</td>
+<td><a href="public-page-reading-guide.html">公開ページの読み分けガイド</a></td>
 </tr>
 <tr>
 <td>Scopus、arXiv、Review、Media、source_logged の役割差</td>
