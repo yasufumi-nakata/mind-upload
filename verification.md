@@ -174,6 +174,12 @@ EEG 入門から公開データ選定、Hands-on での L0 作成を経て、こ
 Verification を読んだあとに、L0 実装へ戻るのか、L2 の介入検証へ進むのか、L3 の閉ループを見るのか、L4 の本人性を見るのかを 1 枚で整理したい場合は <a href="wiki/verification-next-routes.html">Wiki: Verificationのあとに進む4つの道</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>意味は分かったが、次に行動へ進めるか迷ったとき</strong>
+<p>
+要約を読んだだけなのか、条件や修正位置まで確認できたのかを段階で整理したい場合は <a href="wiki/understanding-vs-action-readiness.html">Wiki: 『分かった』と『次に進める』の違い</a> をご覧ください。
+</p>
+</div>
 
 <section class="section" id="tldr">
 <h2 class="section-title">TL;DR（人間向け）</h2>

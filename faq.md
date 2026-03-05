@@ -109,6 +109,12 @@ FAQ から Verification へ進んだあとに、L0 実装へ戻るのか、L2・
 FAQ を読んで「ここが分かりにくい」「この条件が足りない」と感じた箇所を、そのまま価値ある Issue に変えたい場合は <a href="wiki/issue-writing-basics.html">Wiki: はじめての Issue の書き方</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>『分かった』と『次に進める』の違いで迷ったとき</strong>
+<p>
+FAQ を読んで意味は分かったが、次に何を確認すれば修正や判断に進めるか分からない場合は <a href="wiki/understanding-vs-action-readiness.html">Wiki: 『分かった』と『次に進める』の違い</a> をご覧ください。
+</p>
+</div>
 
 <table class="data-table">
 <thead>

@@ -91,6 +91,12 @@ Mind-Uploadは、マインドアップロードを検証可能な研究へ進め
 </p>
 </div>
 <div class="note-box">
+<strong>理解はしたが、もう作業に入れるか迷ったとき</strong>
+<p>
+要約を読んだだけなのか、元ソースや条件まで確認できたのか、修正位置まで特定できたのかを段階で見たい場合は <a href="wiki/understanding-vs-action-readiness.html">Wiki: 『分かった』と『次に進める』の違い</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
 <strong>研究ノート、提案、Issue の役割差で迷ったとき</strong>
 <p>
 このページは今この場で切れる作業を扱う入口であり、理論ノートや提案整理表とは役割が違います。事実・仮説・提案・実行タスクの違いを 1 枚で見たい場合は <a href="wiki/facts-hypotheses-proposals-and-tasks.html">Wiki: 事実・仮説・提案・実行タスクの違い</a> をご覧ください。

@@ -170,6 +170,13 @@ recommended_pages:
 </div>
 </section>
 
+<div class="note-box">
+<strong>要約を読んだあとに、本当に次へ進めるか確認したいとき</strong>
+<p>
+元ソース確認まではしたが、まだ条件や修正位置が足りないのかを段階で見たい場合は <a href="understanding-vs-action-readiness.html">『分かった』と『次に進める』の違い</a> をご覧ください。
+</p>
+</div>
+
 <section class="section" id="next-step">
 <h2 class="section-title">次に戻る場所</h2>
 <p>
