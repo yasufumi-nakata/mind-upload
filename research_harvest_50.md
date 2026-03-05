@@ -70,6 +70,46 @@ recommended_pages:
 </ol>
 </section>
 
+<section class="section" id="intake-minimum">
+<h2 class="section-title">文献を足すときの最低メモ</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>最低限残すこと</th>
+<th>例</th>
+<th>なぜ必要か</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>どの U に関係するか</td>
+<td>U4: 因果同値 / U11: 意識指標近似</td>
+<td>関連先が決まらないまま文献を積むと、あとで未解決問題ごとの地図に戻せなくなるためです。</td>
+</tr>
+<tr>
+<td>一次研究か、レビューか、ニュースか</td>
+<td>Primary / Review / Media</td>
+<td>同じ「参考文献」でも、結論の重みと追跡の仕方が違うためです。</td>
+</tr>
+<tr>
+<td>一文での関係説明</td>
+<td>「逆問題の不確実性定量を扱うため、U1 の根拠候補」</td>
+<td>タイトルだけでは、なぜこのページに入るのか後から分からなくなるためです。</td>
+</tr>
+<tr>
+<td>いまの状態</td>
+<td>source_logged / curated / noise_excluded</td>
+<td>受理済みログと、学術統合済みの根拠を混同しないためです。</td>
+</tr>
+<tr>
+<td>元URLか DOI</td>
+<td>DOI: 10.xxxx / arXiv: xxxx.xxxxx</td>
+<td>第三者が同じソースへ戻れないと、引用の監査ができないためです。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
 <section class="section" id="recent-intake-2026-02">
 <h2 class="section-title">最新追加入力（Issue #261–#263）</h2>
 <p>

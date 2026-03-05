@@ -60,6 +60,46 @@ recommended_pages:
 </ul>
 </div>
 
+<section class="section" id="routing-by-goal">
+<h2 class="section-title">目的別の入口</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>いまの目的</th>
+<th>先に見る候補</th>
+<th>このページで確認したいこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>公開データを BIDS で出せる形に近づけたい</td>
+<td>BIDS / EEG-BIDS Community、OpenNeuro、MNE-Python</td>
+<td>標準、置き場、実装チュートリアルのどこから先に埋めるべきかを確認します。</td>
+</tr>
+<tr>
+<td>L0/L1 の比較可能なベンチマークを作りたい</td>
+<td>MOABB / NeuroTechX、MNE-Python</td>
+<td>既存の BCI ベンチ基盤へ、どの形で接続すると早いかを確認します。</td>
+</tr>
+<tr>
+<td>同期ログや監査証跡を標準化したい</td>
+<td>LSL Community、INCF</td>
+<td>仕様の下書きで済む部分と、外部合意が必要な部分を分けて読みます。</td>
+</tr>
+<tr>
+<td>公開データの再解析から共同研究へ広げたい</td>
+<td>COGITATE、AMED Brain/MINDS 2.0</td>
+<td>まず公開資源で動けるか、それとも共同研究の合意が先かを見ます。</td>
+</tr>
+<tr>
+<td>制度や資金も含めて長期接続先を探したい</td>
+<td>Moonshot Goal 1 Projects、助成制度の節</td>
+<td>短期の技術実装と、長期の制度整備を別物として読む必要があります。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
 <section class="section" id="inside-outside">
 <h2 class="section-title">内製できること / 外部依存になること</h2>
 <table class="data-table">
