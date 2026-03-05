@@ -6,6 +6,7 @@ PUBLISH_SCRIPT = File.join(ROOT, "scripts", "publish_github_wiki.sh")
 VERIFY_SCRIPT = File.join(ROOT, "scripts", "verify_github_wiki_toolchain.sh")
 SYNC_SCRIPT = File.join(ROOT, "scripts", "sync_github_wiki_toolchain.sh")
 OPS_REFERENCE_SCRIPT = File.join(ROOT, "scripts", "check_github_wiki_ops_references.rb")
+LOCK_SCRIPT = File.join(ROOT, "scripts", "with_github_wiki_lock.sh")
 VERIFY_WORKFLOW = File.join(ROOT, ".github", "workflows", "validate-github-wiki-export.yml")
 SYNC_WORKFLOW = File.join(ROOT, ".github", "workflows", "sync-github-wiki.yml")
 README = File.join(ROOT, "README.md")
@@ -15,6 +16,7 @@ README = File.join(ROOT, "README.md")
   VERIFY_SCRIPT,
   SYNC_SCRIPT,
   OPS_REFERENCE_SCRIPT,
+  LOCK_SCRIPT,
   VERIFY_WORKFLOW,
   SYNC_WORKFLOW,
   README
@@ -54,6 +56,7 @@ end
 
 verify_script_text = File.read(VERIFY_SCRIPT)
 required_verify_script_snippets = [
+  'exec env GITHUB_WIKI_LOCK_HELD=1 "$ROOT/scripts/with_github_wiki_lock.sh" "$SCRIPT_PATH" "$@"',
   'run_step "syntax-boundary" ruby -c scripts/check_github_wiki_boundaries.rb',
   'run_step "syntax-ops-refs" ruby -c scripts/check_github_wiki_ops_references.rb',
   'run_step "syntax-noise-cleanup" ruby -c scripts/clean_github_wiki_noise.rb',
@@ -74,6 +77,7 @@ end
 
 sync_script_text = File.read(SYNC_SCRIPT)
 required_sync_script_snippets = [
+  'exec env GITHUB_WIKI_LOCK_HELD=1 "$ROOT/scripts/with_github_wiki_lock.sh" "$SCRIPT_PATH" "$@"',
   'run_step "verify" scripts/verify_github_wiki_toolchain.sh',
   'run_step "publish" scripts/publish_github_wiki.sh'
 ]
@@ -92,6 +96,22 @@ required_verify_workflow_snippets.each do |snippet|
   errors << "Missing verify workflow guard snippet: #{snippet}" unless verify_workflow_text.include?(snippet)
 end
 
+required_verify_workflow_paths = [
+  '"scripts/export_github_wiki.rb"',
+  '"scripts/check_github_wiki_export.rb"',
+  '"scripts/check_github_wiki_boundaries.rb"',
+  '"scripts/check_github_wiki_ops_references.rb"',
+  '"scripts/clean_github_wiki_noise.rb"',
+  '"scripts/with_github_wiki_lock.sh"',
+  '"scripts/verify_github_wiki_toolchain.sh"',
+  '"scripts/sync_github_wiki_toolchain.sh"',
+  '"scripts/publish_github_wiki.sh"'
+]
+
+required_verify_workflow_paths.each do |snippet|
+  errors << "Missing verify workflow path trigger: #{snippet}" unless verify_workflow_text.include?(snippet)
+end
+
 sync_workflow_text = File.read(SYNC_WORKFLOW)
 required_sync_workflow_snippets = [
   'run: |',
@@ -102,12 +122,29 @@ required_sync_workflow_snippets.each do |snippet|
   errors << "Missing sync workflow guard snippet: #{snippet}" unless sync_workflow_text.include?(snippet)
 end
 
+required_sync_workflow_paths = [
+  '"scripts/export_github_wiki.rb"',
+  '"scripts/check_github_wiki_export.rb"',
+  '"scripts/check_github_wiki_boundaries.rb"',
+  '"scripts/check_github_wiki_ops_references.rb"',
+  '"scripts/clean_github_wiki_noise.rb"',
+  '"scripts/with_github_wiki_lock.sh"',
+  '"scripts/verify_github_wiki_toolchain.sh"',
+  '"scripts/sync_github_wiki_toolchain.sh"',
+  '"scripts/publish_github_wiki.sh"'
+]
+
+required_sync_workflow_paths.each do |snippet|
+  errors << "Missing sync workflow path trigger: #{snippet}" unless sync_workflow_text.include?(snippet)
+end
+
 readme_text = File.read(README)
 required_readme_snippets = [
   '`scripts/verify_github_wiki_toolchain.sh`',
   '`scripts/sync_github_wiki_toolchain.sh`',
   '`scripts/check_github_wiki_boundaries.rb`',
   '`scripts/check_github_wiki_ops_references.rb`',
+  '`scripts/with_github_wiki_lock.sh`',
   '`ignore/github-wiki-publish/`',
   'BUNDLE_PATH=vendor/bundle bundle exec jekyll build'
 ]
