@@ -85,6 +85,12 @@ recommended_pages:
 用語だけ分かっても、次に Verification、Roadmap、WBE 101、EEG 101 のどこへ戻るかで迷うことがあります。公開ページどうしの役割差を先に整理したい場合は <a href="wiki/public-page-reading-guide.html">Wiki: 公開ページの読み分けガイド</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>理論系か実務系かで戻り先を絞りたいとき</strong>
+<p>
+WBE 101、Perspective、Idea、Roadmap のような理論系ページへ戻りたい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a>、Verification、Datasets、Hands-on のような実務系ページへ戻りたい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
+</p>
+</div>
 
 <section class="section" id="where-to-look">
 <h2 class="section-title">迷った言葉の種類ごとの引き方</h2>

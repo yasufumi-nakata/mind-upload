@@ -51,6 +51,13 @@ recommended_pages:
 </p>
 </div>
 
+<div class="note-box">
+<strong>さらに理論系だけ、実務系だけで絞りたいとき</strong>
+<p>
+設計図や入門の中でも <a href="theory-pages-reading-guide.html">理論系ページの読み分けガイド</a> で WBE 101 / Perspective / Idea / Roadmap の違いを、<a href="practical-pages-reading-guide.html">実務系ページの読み分けガイド</a> で Verification / Datasets / Hands-on / Casework / Proposals の違いをそれぞれ詳しく追えます。
+</p>
+</div>
+
 <section class="section" id="five-kinds">
 <h2 class="section-title">公開ページの役割差</h2>
 <table class="data-table">
@@ -126,6 +133,16 @@ recommended_pages:
 <td>公開データで手を動かしたい</td>
 <td><a href="../datasets.html">Datasets</a></td>
 <td><a href="../hands_on.html">Hands-on</a> で L0 を作ります。</td>
+</tr>
+<tr>
+<td>理論系ページの中だけで最初の1枚を決めたい</td>
+<td><a href="theory-pages-reading-guide.html">理論系ページの読み分けガイド</a></td>
+<td><a href="../wbe_101.html">WBE 101</a> / <a href="../perspective.html">Perspective</a> / <a href="../idea.html">Idea</a> へ戻ります。</td>
+</tr>
+<tr>
+<td>実務系ページの中だけで最初の1枚を決めたい</td>
+<td><a href="practical-pages-reading-guide.html">実務系ページの読み分けガイド</a></td>
+<td><a href="../verification.html">Verification</a> / <a href="../datasets.html">Datasets</a> / <a href="../hands_on.html">Hands-on</a> へ戻ります。</td>
 </tr>
 <tr>
 <td>文献の山をどう読むか知りたい</td>
@@ -205,6 +222,8 @@ recommended_pages:
 <div class="sidebar-box">
 <h4>Related Wiki</h4>
 <ul>
+<li><a href="theory-pages-reading-guide.html">理論系ページの読み分けガイド →</a></li>
+<li><a href="practical-pages-reading-guide.html">実務系ページの読み分けガイド →</a></li>
 <li><a href="literature-and-evidence-reading.html">文献と証拠ページの読み方 →</a></li>
 <li><a href="proposal-status-reading.html">提案と状態ラベルの読み方 →</a></li>
 <li><a href="internal-prework-and-external-dependencies.html">内製と外部依存の切り分け →</a></li>

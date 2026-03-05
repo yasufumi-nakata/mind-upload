@@ -85,6 +85,12 @@ FAQ は入口なので、次に Verification、WBE 101、Datasets、Glossary の
 FAQ の質問は、L0 の実務から L5 の社会実装まで混ざっています。主張レベルごとに次のページを整理したい場合は <a href="wiki/claim-level-reading-routes.html">Wiki: L0〜L5ごとの読み進め方</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>理論だけ追いたいか、実務だけ追いたいかで迷ったとき</strong>
+<p>
+FAQ のあとに理論系ページだけへ進みたい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a>、Verification や Datasets など実務系ページへ進みたい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
+</p>
+</div>
 
 <table class="data-table">
 <thead>
