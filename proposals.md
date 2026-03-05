@@ -205,6 +205,43 @@ recommended_pages:
 <section class="section" id="integrated-streams">
 <h2 class="section-title">統合本文（技術ストリーム別）</h2>
 
+<table class="data-table">
+<thead>
+<tr>
+<th>ストリーム</th>
+<th>ひとことで言うと</th>
+<th>こんなときに読む</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>まず計測をきれいにそろえる話です。</td>
+<td>ノイズ、同期ずれ、BIDS など「入力の土台」が気になるときに読みます。</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>前処理と接続性解析を、比較可能な形にそろえる話です。</td>
+<td>ASR、ZapLine、wPLI など、解析パイプラインの妥当性を見たいときに読みます。</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>観測が似ているだけでなく、介入への反応まで比べる話です。</td>
+<td>WBE の同一性や因果検証が、どこまで言えるかを確認したいときに読みます。</td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td>計算量と熱力学の制約を、都合よく省略しないための話です。</td>
+<td>「理論上できそう」だけでなく、実装コストや散逸まで含めて見たいときに読みます。</td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td>見落としやすい厳密化ポイントを、上位ルールとして締め直す話です。</td>
+<td>逆問題不確実性、因果同値類、BIDS セマンティクス不足などの抜け漏れを確認したいときに読みます。</td>
+</tr>
+</tbody>
+</table>
+
 <div class="stage-list">
 <div class="stage-item">
 <div class="stage-number">A</div>

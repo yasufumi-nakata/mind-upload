@@ -87,6 +87,13 @@ recommended_pages:
 </table>
 </section>
 
+<div class="note-box">
+<strong>読み方のコツ</strong>
+<p>
+似た言葉が並んだときは、まず「何を観測している言葉か」「その言葉だけで強い主張をしていないか」「条件を変えたときの反応まで含むか」を見ると混同しにくくなります。特に、相関の説明をそのまま因果や本人性の説明へ広げないことが重要です。
+</p>
+</div>
+
 <section class="section" id="core">
 <h2 class="section-title">コア概念</h2>
 <table class="data-table">

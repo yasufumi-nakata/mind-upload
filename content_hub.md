@@ -97,6 +97,13 @@ recommended_pages:
 </table>
 </section>
 
+<div class="note-box">
+<strong>新規ページを作る前の確認</strong>
+<p>
+新しいページを増やす前に、その内容が既存ページの1節として自然に入らないかを確認してください。ページが増えるほど、読む順番と責任範囲が分散し、初学者ほど迷いやすくなります。内容が既存ページの目的に収まるなら、分割より統合を優先します。
+</p>
+</div>
+
 <section class="section" id="integration-map">
 <h2 class="section-title">統合マップ（公開ページ）</h2>
 <table class="data-table">

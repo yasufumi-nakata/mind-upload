@@ -92,6 +92,51 @@ Mind-Uploadは、マインドアップロードを検証可能な研究へ進め
 </table>
 </section>
 
+<section class="section" id="status-label-guide">
+<h2 class="section-title">状態ラベルの読み方</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>ラベル</th>
+<th>日常語で言うと</th>
+<th>まだ確認すべきこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>反映済み（文書）</td>
+<td>サイト本文には書かれている状態です。</td>
+<td>コード、公開データ、評価ログまで揃っているとは限りません。</td>
+</tr>
+<tr>
+<td>提案化済み</td>
+<td>どう直すかの設計は文章になっています。</td>
+<td>実装や第三者検証がまだ無い場合があります。</td>
+</tr>
+<tr>
+<td>提案受理（文書）</td>
+<td>提案は採用され、本文に取り込まれています。</td>
+<td>採用済みでも、再現可能性の基準を満たす公開物は別途必要です。</td>
+</tr>
+<tr>
+<td>審査中提案</td>
+<td>有力な案として置かれているが、まだ確定ではありません。</td>
+<td>反論、代替案、実装可能性の確認で内容が変わる余地があります。</td>
+</tr>
+<tr>
+<td>実装方針反映（文書） / 実装計画化（文書）</td>
+<td>実装の方向や段取りは文章で整理されています。</td>
+<td>実際に動くコードと検証結果の公開は別作業です。</td>
+</tr>
+<tr>
+<td>設計完了（実装コード未公開）</td>
+<td>考え方は固まっているが、外から追試できる形ではまだ不足があります。</td>
+<td>L0再現可能性を満たすには、コード・データ・手順の公開が必要です。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
 <!-- Contribution Methods -->
 <section class="section">
 <h2 class="section-title">How to Contribute</h2>

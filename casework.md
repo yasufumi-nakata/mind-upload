@@ -68,6 +68,43 @@ recommended_pages:
 ここで大事なのは「昔こういう事例がありました」と知ることではありません。各事例を見て、<strong>何がバラバラで困っていたのか</strong>、<strong>どんな共通ルールを作ったのか</strong>、<strong>その結果どんな比較ができるようになったのか</strong>、の3点を拾うことです。
 </p>
 </div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>知りたいこと</th>
+<th>先に読む節</th>
+<th>そこで分かること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>データ形式や置き場がなぜ重要かを知りたい</td>
+<td><a href="#data-standardization">1) データ共有×標準化</a></td>
+<td>形式と公開先がそろうと、なぜ追試がしやすくなるかを実例で確認できます。</td>
+</tr>
+<tr>
+<td>ベンチマークが前進の測り方をどう変えるか知りたい</td>
+<td><a href="#benchmarks">2) ベンチマーク運用</a></td>
+<td>同じ課題と同じ指標を固定すると、比較がどう安定するかを見られます。</td>
+</tr>
+<tr>
+<td>事前登録がなぜ必要かを知りたい</td>
+<td><a href="#registry">3) 登録・事前固定</a></td>
+<td>探索と検証を分けることで、どんなバイアスを減らせるかを確認できます。</td>
+</tr>
+<tr>
+<td>標準や語彙が分野全体をどうつなぐか知りたい</td>
+<td><a href="#interoperability">4) 相互運用</a></td>
+<td>ファイル形式だけでなく、意味や通信規約までそろえる価値が分かります。</td>
+</tr>
+<tr>
+<td>最終的に Mind-Upload へ何を移植するのかだけ知りたい</td>
+<td><a href="#transfer-to-mind-upload">Mind-Uploadへの移植</a></td>
+<td>各事例のパターンが、このサイトのどの機能に対応するかをまとめて読めます。</td>
+</tr>
+</tbody>
+</table>
 </section>
 
 <section class="section" id="failure-modes">
