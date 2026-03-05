@@ -28,6 +28,12 @@
 
 - 学習用の wiki 本体は GitHub Wiki を前提にします。
 - リポジトリ内の `wiki/` は GitHub Wiki 用ソースとして扱い、サイト内の学習ページ編集もここで行います。
+- 閲覧入口:
+  - GitHub Wiki Home: https://github.com/yasufumi-nakata/mind-upload/wiki
+  - EEG-DATA × 助成マップ: https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-data-fund-map
+- 編集入口:
+  - Wiki Home source: [wiki/index.md](wiki/index.md)
+  - EEG-DATA × 助成マップ source: [wiki/mind-upload-eeg-data-fund-map.md](wiki/mind-upload-eeg-data-fund-map.md)
 - GitHub Wiki 用の出力は `github-wiki-export/` に生成します。
 - 生成は `scripts/export_github_wiki.rb`、反映は `scripts/publish_github_wiki.sh` を使います。
 - GitHub Wiki の git リポジトリは、GitHub の Web UI で最初の Wiki ページを 1 つ作成した後でないと clone / push できません。その初期化後に `scripts/publish_github_wiki.sh` を実行してください。
@@ -42,6 +48,7 @@
 ## リンク
 
 - **GitHub**: https://github.com/yasufumi-nakata/mind-upload
+- **GitHub Wiki**: https://github.com/yasufumi-nakata/mind-upload/wiki
 
 ## システム構成 (System Architecture)
 
