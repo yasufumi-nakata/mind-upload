@@ -44,6 +44,43 @@ recommended_pages:
 </ul>
 </div>
 
+<table class="data-table">
+<thead>
+<tr>
+<th>知りたいこと</th>
+<th>先に見る節</th>
+<th>ここで押さえること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>なぜ「コピー」ではなく「移行」と言うのか</td>
+<td>1. 認識論的転回</td>
+<td>多重性の異議に対して、なぜ動的プロセスとして捉え直すのかが分かります。</td>
+</tr>
+<tr>
+<td>理論同士をどう使い分けるのか</td>
+<td>2. 理論的整合性</td>
+<td>IIT、GNWT、FEP を、どの役割で採用するのかを確認できます。</td>
+</tr>
+<tr>
+<td>熱力学の話がなぜ出てくるのか</td>
+<td>熱力学的散逸構造としての意識基盤</td>
+<td>動的プロセスを保つなら、物理的な回り方も無視できない理由が分かります。</td>
+</tr>
+<tr>
+<td>計測・解読・実装がどうつながるのか</td>
+<td>3. 計測 / 4. 解読 / 5. 実装</td>
+<td>理論フレームが、どの工程の設計条件へ降りてくるかを追えます。</td>
+</tr>
+<tr>
+<td>この考え方の限界を先に知りたい</td>
+<td><a href="#limitations">Limitations and Open Questions</a></td>
+<td>何が未解決で、どこから先はまだ仮説段階かを確認できます。</td>
+</tr>
+</tbody>
+</table>
+
 <!-- Section 1 -->
 <section class="section">
 <h2 class="section-title">Epistemological Turn</h2>

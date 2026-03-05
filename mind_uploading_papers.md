@@ -119,6 +119,37 @@ recommended_pages:
 </tr>
 </tbody>
 </table>
+<table class="data-table">
+<thead>
+<tr>
+<th>カードを見たときの判断</th>
+<th>その場で深読みする</th>
+<th>後回しにしてよい</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>自分の論点に直結しているか</strong></td>
+<td>要約や5ポイント整理の中に、いま追っている論点が明示されているときです。</td>
+<td>タイトルは近そうでも、要約を読むと周辺論点に留まる場合は後回しで構いません。</td>
+</tr>
+<tr>
+<td><strong>元論文へ戻る価値が高いか</strong></td>
+<td>方法、評価、限界が具体的で、他ページの根拠として使えそうなときです。</td>
+<td>総論や意見表明に近く、検証条件へ直接つながらない場合は一覧把握だけでも十分です。</td>
+</tr>
+<tr>
+<td><strong>Badgeだけで判断していないか</strong></td>
+<td>Badge を入口にしつつ、必ず要約と DOI まで見てから重要度を決めます。</td>
+<td>掲載元が強そうでも、論点との関係説明が薄いときはその場で深入りしない方が安全です。</td>
+</tr>
+<tr>
+<td><strong>このページ内での役割があるか</strong></td>
+<td><a href="research_harvest_50.html">文献地図</a> や <a href="perspective.html">研究ノート</a> に戻して使える見込みがあるときです。</td>
+<td>個別には面白くても、サイト全体の論点へ接続しにくいものは保留で問題ありません。</td>
+</tr>
+</tbody>
+</table>
 </header>
 <h2 id="with-abstracts" class="category-title">1. アブストラクトあり</h2>
 <h3 id="year-w-2025" class="year-title">2025年</h3>

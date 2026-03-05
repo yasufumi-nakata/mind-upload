@@ -63,6 +63,43 @@ recommended_pages:
 </p>
 </div>
 
+<table class="data-table">
+<thead>
+<tr>
+<th>いま気になる論点</th>
+<th>先に読む節</th>
+<th>そこで分かること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主要理論がどこでつまずいているか知りたい</td>
+<td><a href="#introduction">Introduction</a></td>
+<td>IIT、GNWT、FEP をどう位置づけ直しているかを最初に確認できます。</td>
+</tr>
+<tr>
+<td>計測から実装までの全体設計を見たい</td>
+<td><a href="#technical-framework">Technical Framework</a></td>
+<td>計測、解読、実装の3段階が、どの前提でつながるかを追えます。</td>
+</tr>
+<tr>
+<td>decode と emulate の間に何が足りないか知りたい</td>
+<td><a href="#decoding-to-emulation-gap">Decoding to Emulation Gap</a></td>
+<td>相関ベースの読み出しから、因果的検証へ進むための不足分が分かります。</td>
+</tr>
+<tr>
+<td>どんな研究計画に落ちるのか知りたい</td>
+<td><a href="#research-program">Research Program</a> / <a href="#eeg-consciousness-roadmap">EEG Consciousness Roadmap</a></td>
+<td>実際に何を積み上げるのかを、研究計画として確認できます。</td>
+</tr>
+<tr>
+<td>このページの限界を先に知りたい</td>
+<td><a href="#limitations">Limitations</a></td>
+<td>理論的限界、工学的限界、運営上の限界を切り分けて読めます。</td>
+</tr>
+</tbody>
+</table>
+
 <!-- Introduction -->
 <section class="section" id="introduction">
 <h2 class="section-title">Introduction: Theoretical Foundations Revisited</h2>
