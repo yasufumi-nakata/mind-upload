@@ -273,25 +273,49 @@ Issue や Collaborations を読んだあとに、今すぐ切る修正、条件�
 <h4>Wiki</h4>
 <ul>
 <li><a href="wiki/">wiki/</a></li>
+</ul>
+</div>
+<div class="key-points">
+<h4>Wiki: 入口とルート</h4>
+<ul>
+<li><a href="wiki/public-page-reading-guide.html">wiki/public-page-reading-guide.html</a></li>
+<li><a href="wiki/theory-pages-reading-guide.html">wiki/theory-pages-reading-guide.html</a></li>
+<li><a href="wiki/practical-pages-reading-guide.html">wiki/practical-pages-reading-guide.html</a></li>
+<li><a href="wiki/first-30-minutes-by-goal.html">wiki/first-30-minutes-by-goal.html</a></li>
+<li><a href="wiki/claim-level-reading-routes.html">wiki/claim-level-reading-routes.html</a></li>
+<li><a href="wiki/wbe-to-theory-route.html">wiki/wbe-to-theory-route.html</a></li>
+<li><a href="wiki/eeg-to-l0-route.html">wiki/eeg-to-l0-route.html</a></li>
+<li><a href="wiki/verification-next-routes.html">wiki/verification-next-routes.html</a></li>
+<li><a href="wiki/roadmap-next-routes.html">wiki/roadmap-next-routes.html</a></li>
+<li><a href="wiki/literature-to-action-route.html">wiki/literature-to-action-route.html</a></li>
+<li><a href="wiki/participation-next-routes.html">wiki/participation-next-routes.html</a></li>
+</ul>
+</div>
+<div class="key-points">
+<h4>Wiki: 基礎学習と読み方</h4>
+<ul>
 <li><a href="wiki/mind-upload-basics.html">wiki/mind-upload-basics.html</a></li>
 <li><a href="wiki/claims-and-evidence.html">wiki/claims-and-evidence.html</a></li>
+<li><a href="wiki/known-unknown-and-status-reading.html">wiki/known-unknown-and-status-reading.html</a></li>
 <li><a href="wiki/eeg-basics.html">wiki/eeg-basics.html</a></li>
 <li><a href="wiki/verification-basics.html">wiki/verification-basics.html</a></li>
 <li><a href="wiki/roadmap-reading-guide.html">wiki/roadmap-reading-guide.html</a></li>
 <li><a href="wiki/personhood-and-copy-problem.html">wiki/personhood-and-copy-problem.html</a></li>
-<li><a href="wiki/eeg-preprocessing-and-qc.html">wiki/eeg-preprocessing-and-qc.html</a></li>
-<li><a href="wiki/literature-and-evidence-reading.html">wiki/literature-and-evidence-reading.html</a></li>
-<li><a href="wiki/public-page-reading-guide.html">wiki/public-page-reading-guide.html</a></li>
-<li><a href="wiki/paper-source-types-and-evidence-status.html">wiki/paper-source-types-and-evidence-status.html</a></li>
-<li><a href="wiki/proposal-status-reading.html">wiki/proposal-status-reading.html</a></li>
-<li><a href="wiki/internal-prework-and-external-dependencies.html">wiki/internal-prework-and-external-dependencies.html</a></li>
-<li><a href="wiki/progress-labels-and-open-problem-status.html">wiki/progress-labels-and-open-problem-status.html</a></li>
-<li><a href="wiki/l0-minimum-artifact-pack.html">wiki/l0-minimum-artifact-pack.html</a></li>
-<li><a href="wiki/claim-level-reading-routes.html">wiki/claim-level-reading-routes.html</a></li>
-<li><a href="wiki/u-number-guide.html">wiki/u-number-guide.html</a></li>
 <li><a href="wiki/consciousness-theory-map.html">wiki/consciousness-theory-map.html</a></li>
 <li><a href="wiki/decode-vs-emulate.html">wiki/decode-vs-emulate.html</a></li>
+<li><a href="wiki/paper-source-types-and-evidence-status.html">wiki/paper-source-types-and-evidence-status.html</a></li>
+<li><a href="wiki/proposal-status-reading.html">wiki/proposal-status-reading.html</a></li>
+<li><a href="wiki/progress-labels-and-open-problem-status.html">wiki/progress-labels-and-open-problem-status.html</a></li>
+<li><a href="wiki/u-number-guide.html">wiki/u-number-guide.html</a></li>
+<li><a href="wiki/literature-and-evidence-reading.html">wiki/literature-and-evidence-reading.html</a></li>
+</ul>
+</div>
+<div class="key-points">
+<h4>Wiki: 実務・検証・データ</h4>
+<ul>
+<li><a href="wiki/eeg-preprocessing-and-qc.html">wiki/eeg-preprocessing-and-qc.html</a></li>
 <li><a href="wiki/dataset-splits-and-leakage.html">wiki/dataset-splits-and-leakage.html</a></li>
+<li><a href="wiki/l0-minimum-artifact-pack.html">wiki/l0-minimum-artifact-pack.html</a></li>
 <li><a href="wiki/verification-example-walkthrough.html">wiki/verification-example-walkthrough.html</a></li>
 <li><a href="wiki/measurement-and-modeling-terms.html">wiki/measurement-and-modeling-terms.html</a></li>
 <li><a href="wiki/event-sync-and-measurement-logs.html">wiki/event-sync-and-measurement-logs.html</a></li>
@@ -306,6 +330,14 @@ Issue や Collaborations を読んだあとに、今すぐ切る修正、条件�
 <li><a href="wiki/standards-repositories-validators-and-benchmarks.html">wiki/standards-repositories-validators-and-benchmarks.html</a></li>
 <li><a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">wiki/closed-loop-latency-jitter-and-safety-stops.html</a></li>
 <li><a href="wiki/thermodynamic-grounding-basics.html">wiki/thermodynamic-grounding-basics.html</a></li>
+</ul>
+</div>
+<div class="key-points">
+<h4>Wiki: 運用・参加・配置</h4>
+<ul>
+<li><a href="wiki/internal-prework-and-external-dependencies.html">wiki/internal-prework-and-external-dependencies.html</a></li>
+<li><a href="wiki/issue-writing-basics.html">wiki/issue-writing-basics.html</a></li>
+<li><a href="wiki/content-placement-basics.html">wiki/content-placement-basics.html</a></li>
 </ul>
 </div>
 </section>
@@ -325,34 +357,17 @@ Issue や Collaborations を読んだあとに、今すぐ切る修正、条件�
 <h4>学習用 Wiki</h4>
 <ul>
 <li><a href="wiki/">Wiki Home →</a></li>
-<li><a href="wiki/mind-upload-basics.html">WBEの基本 →</a></li>
-<li><a href="wiki/claims-and-evidence.html">主張の読み方 →</a></li>
-<li><a href="wiki/literature-and-evidence-reading.html">文献ページの読み方 →</a></li>
 <li><a href="wiki/public-page-reading-guide.html">公開ページの読み分け →</a></li>
-<li><a href="wiki/paper-source-types-and-evidence-status.html">文献ラベルの読み方 →</a></li>
-<li><a href="wiki/proposal-status-reading.html">提案ラベルの読み方 →</a></li>
-<li><a href="wiki/internal-prework-and-external-dependencies.html">内製と外部依存の切り分け →</a></li>
-<li><a href="wiki/progress-labels-and-open-problem-status.html">進捗ラベルの読み方 →</a></li>
-<li><a href="wiki/l0-minimum-artifact-pack.html">L0成果物パック →</a></li>
-<li><a href="wiki/claim-level-reading-routes.html">L0〜L5ごとの読み方 →</a></li>
-<li><a href="wiki/u-number-guide.html">U番号ガイド →</a></li>
-<li><a href="wiki/consciousness-theory-map.html">意識理論マップ →</a></li>
-<li><a href="wiki/decode-vs-emulate.html">Decode と Emulate →</a></li>
-<li><a href="wiki/dataset-splits-and-leakage.html">データ分割とデータリーク →</a></li>
-<li><a href="wiki/verification-example-walkthrough.html">Verification 具体例 →</a></li>
-<li><a href="wiki/measurement-and-modeling-terms.html">計測からモデル化まで →</a></li>
-<li><a href="wiki/event-sync-and-measurement-logs.html">イベント同期と観測ログ →</a></li>
-<li><a href="wiki/observation-to-estimation.html">観測から推定へ →</a></li>
-<li><a href="wiki/counterfactual-and-perturbation-verification.html">反事実・介入・摂動 →</a></li>
-<li><a href="wiki/uncertainty-confidence-and-abstention.html">不確実性・信頼区間・棄権 →</a></li>
-<li><a href="wiki/multimodal-integration-basics.html">マルチモーダル統合の基本 →</a></li>
-<li><a href="wiki/identity-and-continuity-tests.html">本人性評価と連続性テスト →</a></li>
-<li><a href="wiki/baselines-prereg-and-model-cards.html">ベースライン・事前登録・モデルカード →</a></li>
-<li><a href="wiki/state-trait-and-drift.html">state・trait・ドリフト →</a></li>
-<li><a href="wiki/update-branching-and-stop-rules.html">更新・分岐・停止規則 →</a></li>
-<li><a href="wiki/standards-repositories-validators-and-benchmarks.html">規格・置き場・Validator・ベンチマーク →</a></li>
-<li><a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">閉ループ・遅延・ジッタ・安全停止 →</a></li>
-<li><a href="wiki/thermodynamic-grounding-basics.html">熱力学的接地の基本 →</a></li>
+<li><a href="wiki/first-30-minutes-by-goal.html">目的別の最初の30分 →</a></li>
+<li><a href="wiki/known-unknown-and-status-reading.html">既知/未知の読み方 →</a></li>
+<li><a href="wiki/wbe-to-theory-route.html">WBE入門の次ルート →</a></li>
+<li><a href="wiki/eeg-to-l0-route.html">EEGからL0まで →</a></li>
+<li><a href="wiki/verification-next-routes.html">Verification後の4ルート →</a></li>
+<li><a href="wiki/roadmap-next-routes.html">Roadmap後の5ルート →</a></li>
+<li><a href="wiki/literature-to-action-route.html">文献から実装・参加へ →</a></li>
+<li><a href="wiki/participation-next-routes.html">参加・協業の次ルート →</a></li>
+<li><a href="wiki/issue-writing-basics.html">Issueの書き方 →</a></li>
+<li><a href="wiki/content-placement-basics.html">置き場所を決める基本 →</a></li>
 </ul>
 </div>
 </aside>
