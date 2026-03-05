@@ -113,6 +113,11 @@ recommended_pages:
 <td><a href="../index.html">スタートページ</a> / <a href="../verification.html">検証基盤</a></td>
 </tr>
 <tr>
+<td><strong>公開ページの『分かっている / 分かっていない』をどう読むか知りたい</strong></td>
+<td><a href="known-unknown-and-status-reading.html">『分かっていること / 分かっていないこと』の読み方</a></td>
+<td><a href="../index.html">スタートページ</a> / <a href="../verification.html">検証基盤</a> / <a href="../content_hub.html">公開コンテンツ統合ハブ</a></td>
+</tr>
+<tr>
 <td><strong>理論系ページどうしの違いで迷う</strong></td>
 <td><a href="theory-pages-reading-guide.html">理論系ページの読み分けガイド</a></td>
 <td><a href="../wbe_101.html">WBE入門</a> / <a href="../perspective.html">研究ノート</a> / <a href="../idea.html">理論フレーム</a> / <a href="../tech_roadmap.html">技術ロードマップ</a></td>

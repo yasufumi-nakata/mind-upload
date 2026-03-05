@@ -78,6 +78,12 @@ Verification、Roadmap、Perspective、WBE 101、Datasets などは、似た説�
 </p>
 </div>
 <div class="note-box">
+<strong>『分かっていること / 分かっていないこと』の意味で迷ったとき</strong>
+<p>
+このサイトの公開ページは、断言できる範囲と保留すべき範囲を先に分けています。既知/未知、正確さの前提、外部依存をどう読むかを 1 枚で見たい場合は <a href="wiki/known-unknown-and-status-reading.html">Wiki: 『分かっていること / 分かっていないこと』の読み方</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
 <strong>理論から入りたいとき</strong>
 <p>
 WBE 101、Perspective、Framework、Roadmap の違いだけを理論系に絞って整理したい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a> をご覧ください。

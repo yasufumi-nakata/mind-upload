@@ -82,6 +82,12 @@ Issue や Collaborations を読んだあとに、今すぐ切る修正、条件�
 公開ページ、wiki、Issue、Collaborations、運用領域のどこへ置くべきかを学習用に整理したい場合は <a href="wiki/content-placement-basics.html">Wiki: 新しい情報の置き場所を決める基本</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>各公開ページの『分かっている / 分かっていない』の意味をそろえたいとき</strong>
+<p>
+情報ポータルとしての公開ページで、既知/未知、正確さの前提、外部依存をどう読むかを 1 枚で整理したい場合は <a href="wiki/known-unknown-and-status-reading.html">Wiki: 『分かっていること / 分かっていないこと』の読み方</a> をご覧ください。
+</p>
+</div>
 
 <section class="section" id="quick-routing">
 <h2 class="section-title">追加したい内容から統合先を決める</h2>

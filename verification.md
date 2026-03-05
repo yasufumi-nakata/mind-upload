@@ -145,6 +145,12 @@ recommended_pages:
 </p>
 </div>
 <div class="note-box">
+<strong>『分かっていること / 分かっていないこと』の意味で止まったとき</strong>
+<p>
+このページの冒頭にある既知/未知や正確さの前提は、断言の境界を示しています。その意味を公開ページ全体に共通する読み方として整理したい場合は <a href="wiki/known-unknown-and-status-reading.html">Wiki: 『分かっていること / 分かっていないこと』の読み方</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
 <strong>いま見たい主張レベルで次ページを決めたいとき</strong>
 <p>
 このページは全レベルの設計図なので、L0 実務へ行くのか、L3 閉ループへ行くのか、L4 本人性へ行くのかで次ページが変わります。レベルごとの導線を 1 枚で見たい場合は <a href="wiki/claim-level-reading-routes.html">Wiki: L0〜L5ごとの読み進め方</a> をご覧ください。

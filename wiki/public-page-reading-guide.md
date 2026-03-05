@@ -64,6 +64,12 @@ recommended_pages:
 </p>
 </div>
 <div class="note-box">
+<strong>各公開ページの『分かっていること / 分かっていないこと』をどう読むか知りたいとき</strong>
+<p>
+ページ上部の既知/未知、正確さの前提、外部依存の意味をそろえて読みたい場合は <a href="known-unknown-and-status-reading.html">『分かっていること / 分かっていないこと』の読み方</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
 <strong>Verificationを読んだあとにどこへ進むか迷ったとき</strong>
 <p>
 公開ページ全体の役割差は分かったが、Verification のあとに L0 実装、L2 検証、L3 閉ループ、L4 本人性のどこへ進むかを 1 枚で見たい場合は <a href="verification-next-routes.html">Verificationのあとに進む4つの道</a> をご覧ください。
