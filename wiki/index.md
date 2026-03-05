@@ -128,6 +128,11 @@ recommended_pages:
 <td><a href="../perspective.html">研究ノート</a> / <a href="../idea.html">理論フレーム</a> / <a href="../proposals.html">技術提案</a> / <a href="../issue.html">貢献ガイド</a></td>
 </tr>
 <tr>
+<td><strong>要約で止めてよい場面と、原文へ戻る場面を知りたい</strong></td>
+<td><a href="summary-vs-source-reading.html">要約・原文・Issue履歴の使い分け</a></td>
+<td><a href="../research_harvest_50.html">文献地図</a> / <a href="../mind_uploading_papers.html">論文集</a> / <a href="../proposals.html">技術提案</a></td>
+</tr>
+<tr>
 <td><strong>理論系ページどうしの違いで迷う</strong></td>
 <td><a href="theory-pages-reading-guide.html">理論系ページの読み分けガイド</a></td>
 <td><a href="../wbe_101.html">WBE入門</a> / <a href="../perspective.html">研究ノート</a> / <a href="../idea.html">理論フレーム</a> / <a href="../tech_roadmap.html">技術ロードマップ</a></td>

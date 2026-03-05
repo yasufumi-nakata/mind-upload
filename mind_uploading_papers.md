@@ -102,6 +102,12 @@ recommended_pages:
 </p>
 </div>
 <div class="note-box">
+<strong>要約で止めてよい場面と、原文へ戻る場面を分けたいとき</strong>
+<p>
+このページは論文を広く見る入口なので、全部を最初から原文精読する必要はありません。一方で、重要論文を根拠に使うときは DOI や Original Abstract へ戻る必要があります。使い分けを 1 枚で見たい場合は <a href="wiki/summary-vs-source-reading.html">Wiki: 要約・原文・Issue履歴の使い分け</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
 <strong>論文を読んだあとに次の1ページを決めたいとき</strong>
 <p>
 この論文集で論文を見つけたあとに、未解決問題へ戻すのか、提案や Issue へつなぐのかを一本道で見たい場合は <a href="wiki/literature-to-action-route.html">Wiki: 文献から実装・参加へ戻る一本道</a> をご覧ください。

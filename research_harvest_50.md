@@ -89,6 +89,12 @@ recommended_pages:
 </p>
 </div>
 <div class="note-box">
+<strong>要約で止めてよい場面と、原文へ戻る場面を分けたいとき</strong>
+<p>
+このページの U 別整理や根拠例は入口として有効ですが、実際に根拠として使うときは DOI や元論文へ戻る必要があります。要約・原文・Issue 履歴の使い分けを 1 枚で見たい場合は <a href="wiki/summary-vs-source-reading.html">Wiki: 要約・原文・Issue履歴の使い分け</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
 <strong>Scopus / Review / source_logged の意味で止まったとき</strong>
 <p>
 このページでは、掲載元、文献種別、サイト内状態が混ざって見えやすいです。それぞれが何を示し、何をまだ保証しないかを先に整理したい場合は、<a href="wiki/paper-source-types-and-evidence-status.html">Wiki: 文献のソース種別と状態ラベルの読み方</a> をご覧ください。

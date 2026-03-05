@@ -100,6 +100,12 @@ Issue や Collaborations を読んだあとに、今すぐ切る修正、条件�
 Research、Perspective、Idea、Proposals、Issue、Collaborations が全部同じ種類の文章に見える場合は <a href="wiki/facts-hypotheses-proposals-and-tasks.html">Wiki: 事実・仮説・提案・実行タスクの違い</a> をご覧ください。どのページが何を記録しているかを先に分けると、統合先の判断もしやすくなります。
 </p>
 </div>
+<div class="note-box">
+<strong>要約ページと元ソースの使い分けで迷ったとき</strong>
+<p>
+公開ページや wiki をどこまで入口として使い、どの場面で DOI、原文節、Issue 履歴へ戻るべきかを整理したい場合は <a href="wiki/summary-vs-source-reading.html">Wiki: 要約・原文・Issue履歴の使い分け</a> をご覧ください。
+</p>
+</div>
 
 <section class="section" id="quick-routing">
 <h2 class="section-title">追加したい内容から統合先を決める</h2>

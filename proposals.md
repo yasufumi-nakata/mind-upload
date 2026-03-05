@@ -62,6 +62,12 @@ recommended_pages:
 ここで言えるのは「どの提案が何を目指し、どの根拠に支えられているか」です。一方で、ここだけ読んで提案の妥当性が最終確定したとは言えません。判断が必要な場合は、必ず原文節と Issue のやり取りまで戻ってください。
 </p>
 </div>
+<div class="note-box">
+<strong>要約・原文・Issue 履歴のどこまで見ればよいか迷ったとき</strong>
+<p>
+このページは統合サマリーなので、全体像をつかむ入口としては有効ですが、採否判断や修正提案には原文節と Issue 履歴まで戻る必要があります。使い分けを 1 枚で見たい場合は <a href="wiki/summary-vs-source-reading.html">Wiki: 要約・原文・Issue履歴の使い分け</a> をご覧ください。
+</p>
+</div>
 
 <div class="note-box">
 <strong>状態ラベルで迷ったとき</strong>
