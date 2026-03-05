@@ -2,6 +2,8 @@ title: Mind-Upload
 description: マインドアップロード実現のための中核となるコアサイト
 url: https://mind-upload.com
 baseurl: ""
+wiki_mode: github
+github_wiki_url: https://github.com/yasufumi-nakata/mind-upload/wiki
 
 # Build settings
 markdown: kramdown
