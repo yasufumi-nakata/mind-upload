@@ -152,6 +152,11 @@ recommended_pages:
 <td><a href="observation-to-estimation.html">観測から推定へ</a></td>
 <td><a href="../eeg_101.html">EEG入門</a> / <a href="../verification.html">検証基盤</a></td>
 </tr>
+<tr>
+<td><strong>held-out 精度と因果検証の違いで止まる</strong></td>
+<td><a href="counterfactual-and-perturbation-verification.html">反事実・介入・摂動の検証</a></td>
+<td><a href="../wbe_101.html">WBE入門</a> / <a href="../verification.html">検証基盤</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -285,6 +290,10 @@ recommended_pages:
 <td>順問題、逆問題、ESI、DCM、SCM、因果同値類</td>
 <td><a href="observation-to-estimation.html">観測から推定へ</a></td>
 </tr>
+<tr>
+<td>held-out 精度、介入、反事実、摂動ベース検証</td>
+<td><a href="counterfactual-and-perturbation-verification.html">反事実・介入・摂動の検証</a></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -312,6 +321,7 @@ recommended_pages:
 <li><a href="measurement-and-modeling-terms.html">計測からモデル化までの用語ガイド →</a></li>
 <li><a href="event-sync-and-measurement-logs.html">イベント同期と観測ログの基本 →</a></li>
 <li><a href="observation-to-estimation.html">観測から推定へ →</a></li>
+<li><a href="counterfactual-and-perturbation-verification.html">反事実・介入・摂動の検証 →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">

@@ -260,6 +260,7 @@ recommended_pages:
 <li><a href="wiki/measurement-and-modeling-terms.html">wiki/measurement-and-modeling-terms.html</a></li>
 <li><a href="wiki/event-sync-and-measurement-logs.html">wiki/event-sync-and-measurement-logs.html</a></li>
 <li><a href="wiki/observation-to-estimation.html">wiki/observation-to-estimation.html</a></li>
+<li><a href="wiki/counterfactual-and-perturbation-verification.html">wiki/counterfactual-and-perturbation-verification.html</a></li>
 </ul>
 </div>
 </section>
@@ -291,6 +292,7 @@ recommended_pages:
 <li><a href="wiki/measurement-and-modeling-terms.html">計測からモデル化まで →</a></li>
 <li><a href="wiki/event-sync-and-measurement-logs.html">イベント同期と観測ログ →</a></li>
 <li><a href="wiki/observation-to-estimation.html">観測から推定へ →</a></li>
+<li><a href="wiki/counterfactual-and-perturbation-verification.html">反事実・介入・摂動 →</a></li>
 </ul>
 </div>
 </aside>

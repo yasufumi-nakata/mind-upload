@@ -32,6 +32,9 @@ wiki_links:
   - label: "Wiki: 意識理論マップ"
     url: "/wiki/consciousness-theory-map.html"
     description: "Q8 の IIT と GNWT の位置づけを、表で整理します。"
+  - label: "Wiki: 反事実・介入・摂動"
+    url: "/wiki/counterfactual-and-perturbation-verification.html"
+    description: "Q1〜Q3 で出る因果検証の入口を、初歩から整理します。"
 recommended_pages:
   - label: "検証基盤"
     url: "/verification.html"
@@ -136,6 +139,7 @@ A. それだけでは言えません。会話が自然でも、それが<strong>
 <p>
 Mind-Uploadで重視するのは、「人っぽく見えるか」だけでなく、条件を変えたときの応答、記憶や学習の連続性、反証条件への耐性が公開されているかです。見た目の自然さは参考にはなりますが、それだけで L4 の本人性主張には進めません。
 </p>
+<p><a href="wiki/counterfactual-and-perturbation-verification.html">Wiki: 反事実・介入・摂動の検証</a> に、なぜ「自然に話せる」だけでは足りないかを段階で整理しています。</p>
 </section>
 
 <section class="section" id="q3">

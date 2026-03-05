@@ -36,6 +36,9 @@ wiki_links:
   - label: "Wiki: 観測から推定へ"
     url: "/wiki/observation-to-estimation.html"
     description: "ESI、DCM、SCM、因果同値類を、観測と推定の違いから整理します。"
+  - label: "Wiki: 反事実・介入・摂動"
+    url: "/wiki/counterfactual-and-perturbation-verification.html"
+    description: "held-out 精度と因果的摂動検証の差を、初歩から整理します。"
 recommended_pages:
   - label: "技術ロードマップ"
     url: "/tech_roadmap.html"
@@ -445,6 +448,12 @@ Issues #251・#254 を踏まえ、標準的な行動テストを超えてWBE同�
 <strong>普通の精度評価と何が違うのか</strong>
 <p>
 普通の精度評価は、「同じ問題に同じ答えを返せたか」を見るテストです。因果的摂動スイートは、その一歩先で<strong>条件をわざと変えたときに、どう崩れ、どう持ち直すか</strong>まで比べます。つまり「答えが合うか」ではなく、「中の仕組みが同じように反応しているか」を見るテストです。
+</p>
+</div>
+<div class="note-box">
+<strong>入り口だけ先に整理したいとき</strong>
+<p>
+held-out 精度、介入、反事実、摂動ベース検証の違いを日常語で先に整理したい場合は <a href="wiki/counterfactual-and-perturbation-verification.html">Wiki: 反事実・介入・摂動の検証</a> を先に読むと、この節へ戻りやすくなります。
 </p>
 </div>
 <div class="key-points">
