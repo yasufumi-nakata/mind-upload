@@ -347,6 +347,10 @@ recommended_pages:
 <td>BIDS、OpenNeuro、Validator、Benchmark の役割差</td>
 <td><a href="standards-repositories-validators-and-benchmarks.html">規格・置き場・Validator・ベンチマーク</a></td>
 </tr>
+<tr>
+<td>オフライン精度、遅延、ジッタ、安全停止の違い</td>
+<td><a href="closed-loop-latency-jitter-and-safety-stops.html">閉ループ・遅延・ジッタ・安全停止</a></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -382,6 +386,7 @@ recommended_pages:
 <li><a href="state-trait-and-drift.html">state・trait・ドリフト →</a></li>
 <li><a href="update-branching-and-stop-rules.html">更新・分岐・停止規則 →</a></li>
 <li><a href="standards-repositories-validators-and-benchmarks.html">規格・置き場・Validator・ベンチマーク →</a></li>
+<li><a href="closed-loop-latency-jitter-and-safety-stops.html">閉ループ・遅延・ジッタ・安全停止 →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">

@@ -32,6 +32,9 @@ wiki_links:
   - label: "Wiki: ベースライン・事前登録・モデルカード"
     url: "/wiki/baselines-prereg-and-model-cards.html"
     description: "事前登録と結果記録の役割差を補います。"
+  - label: "Wiki: 閉ループ・遅延・ジッタ・安全停止"
+    url: "/wiki/closed-loop-latency-jitter-and-safety-stops.html"
+    description: "安全停止をリアルタイム系でどう考えるかを補います。"
   - label: "Wiki Home"
     url: "/wiki/"
     description: "他の補助ページへ戻れます。"
@@ -212,6 +215,9 @@ WBE や本人性の話では、システムが固定物ではありません。�
 「結果が悪かったので止めた」は停止規則の話で、「危険なので即停止した」は安全の話です。同じ『止める』でも、証拠の扱いと安全対策では意味が違います。
 </p>
 </div>
+<p>
+特に閉ループ実装では、遅延や異常挙動に対する安全停止が追加で重要になります。リアルタイム系の入口だけ先に整理したい場合は <a href="closed-loop-latency-jitter-and-safety-stops.html">Wiki: 閉ループ・遅延・ジッタ・安全停止</a> をご覧ください。
+</p>
 </section>
 
 <section class="section" id="logs">

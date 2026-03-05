@@ -41,6 +41,9 @@ wiki_links:
   - label: "Wiki: 更新・分岐・停止規則"
     url: "/wiki/update-branching-and-stop-rules.html"
     description: "I5 / I8 / V7 で必要になる更新運用、分岐管理、停止条件を補います。"
+  - label: "Wiki: 閉ループ・遅延・ジッタ・安全停止"
+    url: "/wiki/closed-loop-latency-jitter-and-safety-stops.html"
+    description: "I1 / I8 で必要になる遅延、ジッタ、リアルタイム安定性を補います。"
 recommended_pages:
   - label: "WBE入門"
     url: "/wbe_101.html"
@@ -91,6 +94,13 @@ P/M/R/I/V/D の記号や依存関係を初歩から追いたい場合は、先�
 <strong>I5 / I8 / V7 の運用で止まったとき</strong>
 <p>
 安全な更新、branch の扱い、停止規則、キルスイッチの違いが曖昧な場合は、先に <a href="wiki/update-branching-and-stop-rules.html">Wiki: 更新・分岐・停止規則</a> をご覧ください。Roadmap 本文では何が論点かを示し、運用語の初歩は wiki 側で補います。
+</p>
+</div>
+
+<div class="note-box">
+<strong>I1 / L3 の閉ループで止まったとき</strong>
+<p>
+リアルタイムに動くと言っても、遅延、ジッタ、end-to-end の戻り、安全停止をどう測るかで難しさが変わります。この入口を初歩から整理したい場合は <a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: 閉ループ・遅延・ジッタ・安全停止</a> を先にご覧ください。
 </p>
 </div>
 

@@ -54,6 +54,9 @@ wiki_links:
   - label: "Wiki: 規格・置き場・Validator・ベンチマーク"
     url: "/wiki/standards-repositories-validators-and-benchmarks.html"
     description: "標準、共有基盤、形式点検、比較ルールの役割差を整理します。"
+  - label: "Wiki: 閉ループ・遅延・ジッタ・安全停止"
+    url: "/wiki/closed-loop-latency-jitter-and-safety-stops.html"
+    description: "L3 で必要な遅延、ジッタ、安全停止、棄権の違いを整理します。"
 recommended_pages:
   - label: "技術ロードマップ"
     url: "/tech_roadmap.html"
@@ -198,6 +201,12 @@ recommended_pages:
 <strong>L4 はテスト設計そのものが難所です</strong>
 <p>
 本人性では、単に高スコアを出すより、何を連続していると見なすかを事前登録する方が重要です。記憶、価値観、学習、分岐、縦断の入口を初歩から整理したい場合は <a href="wiki/identity-and-continuity-tests.html">Wiki: 本人性評価と連続性テスト</a> が補講になります。
+</p>
+</div>
+<div class="note-box">
+<strong>L3 の入口で止まったとき</strong>
+<p>
+閉ループでは、オフライン精度だけでなく、end-to-end 遅延、ジッタ、ドリフト、安全停止の設計が必要です。この切り分けを初歩から整理したい場合は <a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: 閉ループ・遅延・ジッタ・安全停止</a> を先にご覧ください。
 </p>
 </div>
 </section>

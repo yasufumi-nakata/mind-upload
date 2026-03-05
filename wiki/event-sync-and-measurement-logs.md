@@ -29,6 +29,9 @@ wiki_links:
   - label: "Wiki: 検証基盤の基本"
     url: "/wiki/verification-basics.html"
     description: "なぜログが公共財になるかを補います。"
+  - label: "Wiki: 閉ループ・遅延・ジッタ・安全停止"
+    url: "/wiki/closed-loop-latency-jitter-and-safety-stops.html"
+    description: "遅延やジッタを、L3 の閉ループ評価でどう読むかを補います。"
   - label: "Wiki Home"
     url: "/wiki/"
     description: "学習用ページ全体へ戻れます。"
@@ -115,6 +118,9 @@ raw EEG は「電気信号の並び」です。しかし研究で知りたいの
 </tr>
 </tbody>
 </table>
+<p>
+ここでは観測ログとしての意味を説明しています。L3 の閉ループ評価で、これらが end-to-end 安定性や安全停止にどう効くかを見たい場合は <a href="closed-loop-latency-jitter-and-safety-stops.html">Wiki: 閉ループ・遅延・ジッタ・安全停止</a> が補講になります。
+</p>
 </section>
 
 <section class="section" id="bad-records">

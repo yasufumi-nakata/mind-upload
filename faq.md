@@ -38,6 +38,9 @@ wiki_links:
   - label: "Wiki: 規格・置き場・Validator・ベンチマーク"
     url: "/wiki/standards-repositories-validators-and-benchmarks.html"
     description: "Q4 で出る標準化の話を、役割ごとに整理します。"
+  - label: "Wiki: 閉ループ・遅延・ジッタ・安全停止"
+    url: "/wiki/closed-loop-latency-jitter-and-safety-stops.html"
+    description: "オフライン精度と L3 の違いを、リアルタイム系の観点から整理します。"
 recommended_pages:
   - label: "検証基盤"
     url: "/verification.html"
@@ -84,6 +87,10 @@ FAQは「まず方向を間違えないための短い答え」です。ここ�
 <tr>
 <td><strong>何を作れば前進かだけ知りたい</strong></td>
 <td>Q3「じゃあ、何を作れば“前進”になる？」を見ると、L0〜L2 の最小成果物が分かります。</td>
+</tr>
+<tr>
+<td><strong>リアルタイムや閉ループの条件が知りたい</strong></td>
+<td>Q5b「オフライン精度が高ければ、閉ループでも十分？」から入ると、L3 で何が追加されるかをつかみやすいです。</td>
 </tr>
 <tr>
 <td><strong>哲学や倫理の立場を知りたい</strong></td>
@@ -179,6 +186,16 @@ A. 指標に勝つことが、現実の目的達成とズレる現象です（Go
 Mind-Uploadでは、失敗例・リーク検査・モデルカードを含めて運用設計します。
 </p>
 <p><a href="wiki/dataset-splits-and-leakage.html">Wiki: データ分割とデータリーク</a> に、train/test の分け方で数字が壊れる典型例をまとめています。</p>
+</section>
+
+<section class="section" id="q5b">
+<h2 class="section-title">Q. オフライン精度が高ければ、閉ループでも十分？</h2>
+<p>
+A. それだけでは言えません。閉ループでは、出力が次の入力や環境を変えるため、end-to-end 遅延、ジッタ、ドリフト、安全停止の設計が必要です。あとから記録済みデータを読むのが得意でも、リアルタイムで安定とは限りません。
+</p>
+<p>
+Mind-Upload では、オフライン精度と L3 閉ループ安定性を分けて読みます。ここを初歩から整理したい場合は <a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: 閉ループ・遅延・ジッタ・安全停止</a> が近道です。
+</p>
 </section>
 
 <section class="section" id="q6">
