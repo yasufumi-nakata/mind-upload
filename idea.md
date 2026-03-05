@@ -81,6 +81,12 @@ recommended_pages:
 </p>
 </div>
 <div class="note-box">
+<strong>理論フレームと提案・Issue の違いで迷ったとき</strong>
+<p>
+このページは設計原理を置く理論フレームであり、提案一覧や今すぐ実行するタスクそのものではありません。事実・仮説・提案・実行タスクの違いを整理したい場合は <a href="wiki/facts-hypotheses-proposals-and-tasks.html">Wiki: 事実・仮説・提案・実行タスクの違い</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
 <strong>WBE入門からここへ来るまでの理論ルートを見たいとき</strong>
 <p>
 WBE 101 のあとに、誤解整理ではなく設計原理を先に固めたい場合のルートを一本道で見たいときは <a href="wiki/wbe-to-theory-route.html">Wiki: WBE入門から理論を深掘る4ルート</a> をご覧ください。

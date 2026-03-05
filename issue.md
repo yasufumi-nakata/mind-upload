@@ -85,6 +85,12 @@ Mind-Uploadは、マインドアップロードを検証可能な研究へ進め
 </p>
 </div>
 <div class="note-box">
+<strong>研究ノート、提案、Issue の役割差で迷ったとき</strong>
+<p>
+このページは今この場で切れる作業を扱う入口であり、理論ノートや提案整理表とは役割が違います。事実・仮説・提案・実行タスクの違いを 1 枚で見たい場合は <a href="wiki/facts-hypotheses-proposals-and-tasks.html">Wiki: 事実・仮説・提案・実行タスクの違い</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
 <strong>外部依存の切り分けで止まったとき</strong>
 <p>
 IRB、実験、機材、法務が絡むときでも、要求仕様、判定条件、公開ログ形式などは先に内製できます。<a href="wiki/internal-prework-and-external-dependencies.html">Wiki: 内製で先にやることと外部依存の切り分け</a> に、今このリポジトリで進められることを整理しています。

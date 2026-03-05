@@ -90,6 +90,12 @@ Perspective は理論、計測、反論、限界をまとめて追う長文ノ�
 </p>
 </div>
 <div class="note-box">
+<strong>研究ノート、理論フレーム、提案、Issue の違いで迷ったとき</strong>
+<p>
+このページは観察と限界を並べる長文ノートであり、提案一覧や実行タスクそのものではありません。事実・仮説・提案・実行タスクの違いを 1 枚で見たい場合は <a href="wiki/facts-hypotheses-proposals-and-tasks.html">Wiki: 事実・仮説・提案・実行タスクの違い</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
 <strong>WBE入門からここへ来るまでの理論ルートを見たいとき</strong>
 <p>
 WBE 101 のあとに、なぜこの長文ノートへ進むのか、誤解整理や設計原理との違いも含めて一本道で見たい場合は <a href="wiki/wbe-to-theory-route.html">Wiki: WBE入門から理論を深掘る4ルート</a> をご覧ください。

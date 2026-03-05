@@ -88,6 +88,12 @@ Issue や Collaborations を読んだあとに、今すぐ切る修正、条件�
 情報ポータルとしての公開ページで、既知/未知、正確さの前提、外部依存をどう読むかを 1 枚で整理したい場合は <a href="wiki/known-unknown-and-status-reading.html">Wiki: 『分かっていること / 分かっていないこと』の読み方</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>観察、仮説、提案、Issue の違いをそろえたいとき</strong>
+<p>
+Research、Perspective、Idea、Proposals、Issue、Collaborations が全部同じ種類の文章に見える場合は <a href="wiki/facts-hypotheses-proposals-and-tasks.html">Wiki: 事実・仮説・提案・実行タスクの違い</a> をご覧ください。どのページが何を記録しているかを先に分けると、統合先の判断もしやすくなります。
+</p>
+</div>
 
 <section class="section" id="quick-routing">
 <h2 class="section-title">追加したい内容から統合先を決める</h2>

@@ -76,6 +76,12 @@ recommended_pages:
 </p>
 </div>
 <div class="note-box">
+<strong>研究ノート、理論フレーム、提案、Issue の違いで迷ったとき</strong>
+<p>
+このページは提案と状態の整理表であり、観察ノートや今すぐ実行するタスクとは役割が違います。事実・仮説・提案・実行タスクの違いをまとめて見たい場合は <a href="wiki/facts-hypotheses-proposals-and-tasks.html">Wiki: 事実・仮説・提案・実行タスクの違い</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
 <strong>Stream D の熱力学語で止まったとき</strong>
 <p>
 Landauer、散逸、NESS、EPR は、このページでは提案の論点として短く出てきます。まず入口だけ初歩から整理したい場合は <a href="wiki/thermodynamic-grounding-basics.html">Wiki: 熱力学的接地の基本</a> を先にご覧ください。
