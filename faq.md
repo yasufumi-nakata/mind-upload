@@ -42,6 +42,33 @@ FAQは「まず方向を間違えないための短い答え」です。ここ�
 </p>
 </div>
 
+<table class="data-table">
+<thead>
+<tr>
+<th>こんなとき</th>
+<th>先に読む質問</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>このサイトの目的だけ知りたい</strong></td>
+<td>Q0「Mind-Uploadは結局、何をするサイト？」から入ると全体像が早いです。</td>
+</tr>
+<tr>
+<td><strong>ニュースの派手な主張を読み違えたくない</strong></td>
+<td>Q1「EEGで“思考”は読める？」と Q2「decode と emulate の違いは？」を先に見てください。</td>
+</tr>
+<tr>
+<td><strong>何を作れば前進かだけ知りたい</strong></td>
+<td>Q3「じゃあ、何を作れば“前進”になる？」を見ると、L0〜L2 の最小成果物が分かります。</td>
+</tr>
+<tr>
+<td><strong>哲学や倫理の立場を知りたい</strong></td>
+<td>Q6「ハードプロブレム」と Q9「倫理的課題」を読むと、どこまで扱っているかが分かります。</td>
+</tr>
+</tbody>
+</table>
+
 <section class="section" id="q0">
 <h2 class="section-title">Q. Mind-Uploadは結局、何をするサイト？</h2>
 <p>

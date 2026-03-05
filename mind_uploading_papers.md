@@ -97,6 +97,28 @@ recommended_pages:
 </tr>
 </tbody>
 </table>
+<table class="data-table">
+<thead>
+<tr>
+<th>先に読みたいテーマ</th>
+<th>おすすめの見方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>理論や本人性の議論から入りたい</strong></td>
+<td>最新年から、哲学・意識・本人性を扱う論文を数本だけ拾ってください。数を追うより論点の型を掴む方が先です。</td>
+</tr>
+<tr>
+<td><strong>技術や計測に近い論文を見たい</strong></td>
+<td>Badge、要約、5ポイント整理を見て、EEG・AI・実装寄りの論文だけ先に選ぶと読みやすいです。</td>
+</tr>
+<tr>
+<td><strong>倫理や社会的含意を見たい</strong></td>
+<td>宗教・法・倫理・文化批評寄りのタイトルを先に追い、必要なら文献地図へ戻って技術論点との接点を確認してください。</td>
+</tr>
+</tbody>
+</table>
 </header>
 <h2 id="with-abstracts" class="category-title">1. アブストラクトあり</h2>
 <h3 id="year-w-2025" class="year-title">2025年</h3>

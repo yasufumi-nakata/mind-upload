@@ -42,6 +42,33 @@ recommended_pages:
 </p>
 </div>
 
+<table class="data-table">
+<thead>
+<tr>
+<th>やりたいこと</th>
+<th>最初に向くデータ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>前処理と分類の基本を練習したい</strong></td>
+<td><strong>EEG Motor Movement/Imagery</strong> が入りやすいです。問題設定が比較的分かりやすく、L0〜L1の練習台に向きます。</td>
+</tr>
+<tr>
+<td><strong>長時間データやイベント検出を触りたい</strong></td>
+<td><strong>CHB-MIT</strong> が向きます。ノイズや長時間記録の扱いまで含めて練習できます。</td>
+</tr>
+<tr>
+<td><strong>状態遷移を扱いたい</strong></td>
+<td><strong>Sleep-EDF</strong> が向きます。状態が時間でどう移るかを見る練習になります。</td>
+</tr>
+<tr>
+<td><strong>大規模データの難しさまで見たい</strong></td>
+<td><strong>TUH EEG</strong> が候補です。ただし最初の一本としては重いので、前の3つで慣れてからが安全です。</td>
+</tr>
+</tbody>
+</table>
+
 <section class="section" id="platforms">
 <h2 class="section-title">1) まず押さえる共有基盤（置き場）</h2>
 <div class="stage-list">

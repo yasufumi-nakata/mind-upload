@@ -56,6 +56,36 @@ recommended_pages:
 </div>
 </section>
 
+<section class="section" id="common-blockers">
+<h2 class="section-title">最初に詰まりやすい点</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>詰まりやすい点</th>
+<th>先に切り分けること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>BIDSの形で止まる</strong></td>
+<td>まずは実データの有無より、ディレクトリ骨格とメタデータ雛形を先に作ってください。形がないと、後の修正点が見えません。</td>
+</tr>
+<tr>
+<td><strong>QCをどこまで残すか迷う</strong></td>
+<td>完璧を狙わず、欠損・ノイズ・アーティファクト・除外理由の4つを最低ラインにしてください。</td>
+</tr>
+<tr>
+<td><strong>ベースラインが決められない</strong></td>
+<td>難しいモデルより、単純でも再現しやすい1本を先に置く方が前に進みます。</td>
+</tr>
+<tr>
+<td><strong>共有前に不安になる</strong></td>
+<td>BIDS Validator が通るか、実行手順が他人に渡せるか、失敗例を残しているかの3点でまず判定してください。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
 <section class="section" id="bids-skeleton">
 <h2 class="section-title">Step 1：BIDSの“骨格”を作る</h2>
 <p>EEGのBIDSは「置き方が決まっている」のが強みです。まずは最小構成で形だけ作ります。</p>
