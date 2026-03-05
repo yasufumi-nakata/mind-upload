@@ -100,6 +100,29 @@ recommended_pages:
 </tbody>
 </table>
 
+<table class="data-table">
+<thead>
+<tr>
+<th>このページで比較的強く言えること</th>
+<th>このページでまだ仮説として扱うこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主要理論のどれも、現時点では単独で決定打になっていないことです。</td>
+<td>どの理論の組み合わせが最終的に WBE の十分条件になるかは未確定です。</td>
+</tr>
+<tr>
+<td>EEG 単体では逆問題や空間分解能に根本的な限界があることです。</td>
+<td>どこまで他モダリティ統合でその限界を埋められるかは、まだ研究課題です。</td>
+</tr>
+<tr>
+<td>因果的摂動、追試可能性、熱力学制約を抜いた強い主張は危ういことです。</td>
+<td>それらをどの閾値で「十分」と判定するかは、今後のベンチ設計に依存します。</td>
+</tr>
+</tbody>
+</table>
+
 <!-- Introduction -->
 <section class="section" id="introduction">
 <h2 class="section-title">Introduction: Theoretical Foundations Revisited</h2>

@@ -81,6 +81,29 @@ recommended_pages:
 </tbody>
 </table>
 
+<table class="data-table">
+<thead>
+<tr>
+<th>このページで採用している設計原理</th>
+<th>まだ証明済みとは言わないこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mind-Upload を「静的コピー」ではなく「動的プロセスの移行」として考えることです。</td>
+<td>その考え方が唯一正しい哲学的立場だとは主張しません。</td>
+</tr>
+<tr>
+<td>IIT、FEP、予測符号化を、実装条件へ落とすための作業仮説として使うことです。</td>
+<td>これらの理論だけで、現象的意識の同一性まで確定できるとは言いません。</td>
+</tr>
+<tr>
+<td>熱力学的制約も、動的プロセスの要件として無視しないことです。</td>
+<td>どの熱力学指標が本人性や意識の質に直結するかは未解決です。</td>
+</tr>
+</tbody>
+</table>
+
 <!-- Section 1 -->
 <section class="section">
 <h2 class="section-title">Epistemological Turn</h2>
