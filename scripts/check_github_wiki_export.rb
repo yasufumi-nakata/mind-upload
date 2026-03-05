@@ -89,6 +89,7 @@ def export_safe_target?(target)
 end
 
 errors = []
+noise_errors = []
 
 unless Dir.exist?(DEST_DIR)
   warn "Missing export directory: #{DEST_DIR}"
@@ -114,11 +115,15 @@ export_generated = relative_files(File.join(DEST_DIR, "generated"))
 end
 
 noise_files(SRC_DIR).each do |path|
-  errors << "Noise file in wiki source: #{path}"
+  message = "Noise file in wiki source: #{path}"
+  errors << message
+  noise_errors << message
 end
 
 noise_files(DEST_DIR).each do |path|
-  errors << "Noise file in wiki export: #{path}"
+  message = "Noise file in wiki export: #{path}"
+  errors << message
+  noise_errors << message
 end
 
 eeg_funding_source = File.join(SRC_DIR, "mind-upload-eeg-data-fund-map.md")
@@ -172,4 +177,5 @@ end
 
 warn "GitHub Wiki export validation failed:"
 errors.each { |error| warn "- #{error}" }
+warn "Run scripts/clean_github_wiki_noise.rb to remove wiki noise files." unless noise_errors.empty?
 exit 1
