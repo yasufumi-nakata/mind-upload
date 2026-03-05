@@ -1,0 +1,182 @@
+---
+layout: default
+title: "Wiki：基礎から学ぶための学習ポータル"
+description: "Mind-Upload を本当に初歩から学ぶための wiki。公開ページの要点を読む前提知識を順番に用意します。"
+article_type: Wiki
+subtitle: "公開ページは入口、Wiki は学習用の土台です"
+author: Mind Uploading Research Project
+last_updated: "2026-03-06"
+note: "Learning-first"
+audience: "本当に初歩から学びたい人、公開ページに入る前の足場がほしい人"
+reading_time: "10〜20分"
+page_intro: "このページは、Mind-Upload の公開ページを読みやすくするための学習ポータルです。公開ページが『いま分かっていること / まだ分からないこと / 次の導線』を示すのに対し、wiki はその前提になる基礎説明を順番に学ぶために使います。"
+accuracy_note: "wiki は噛み砕いて説明しますが、分かりやすさのために未解決問題を解決済みのようには書きません。難しい論点は、難しいまま残すと明記します。"
+page_highlights:
+  - "最初に知りたいこと別の読み順を置き、迷いにくくしています。"
+  - "公開ページで要点を読み、wiki で背景を補う役割分担です。"
+  - "中学生でも追える説明を目指しつつ、証拠の強さと限界は削りません。"
+known_points:
+  - "脳信号の一部を測って再現可能に解析することは、現在の研究でも十分に可能です。"
+  - "何が前進で何が未解決かを分けて読むだけで、Mind-Upload の話はかなり整理できます。"
+  - "公開ページと wiki の役割を分けると、入口の分かりやすさと学習の厚みを両立できます。"
+unknown_points:
+  - "WBE が最終的にどの条件で成立したと言えるかは、まだ研究途中です。"
+  - "本人性や現象的意識の最終判定は、初歩ページだけでは決まりません。"
+wiki_links:
+  - label: "Wiki: WBEの基本"
+    url: "/wiki/mind-upload-basics.html"
+    description: "まず『何の話をしているのか』をつかむための最初の1ページです。"
+  - label: "Wiki: 主張と証拠の読み方"
+    url: "/wiki/claims-and-evidence.html"
+    description: "ニュースや研究発表の強さを読み分ける練習をします。"
+  - label: "Wiki: EEGの基本"
+    url: "/wiki/eeg-basics.html"
+    description: "EEG が何を測る装置かを初歩から説明します。"
+recommended_pages:
+  - label: "スタートページ"
+    url: "/index.html"
+  - label: "WBE入門"
+    url: "/wbe_101.html"
+  - label: "EEG入門"
+    url: "/eeg_101.html"
+---
+
+<main class="main-container">
+<article class="content-column">
+
+<div class="abstract-box">
+<h2>この wiki の役割</h2>
+<p>
+この wiki は、公開ページを読む前後に戻ってこれる<strong>学習用の土台</strong>です。公開ページでは、いま分かっていること、まだ分かっていないこと、次に読むべき場所を素早く示します。wiki では、その背景にある言葉、考え方、読み方を順番に説明します。
+</p>
+</div>
+
+<div class="note-box">
+<strong>使い方</strong>
+<p>
+「まず全体像だけ知りたい」ときは公開ページへ進んで構いません。ただし、途中で用語や前提で止まったら、この wiki に戻ってください。入口で迷子にならないための補助輪として使うのが基本です。
+</p>
+</div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>いま知りたいこと</th>
+<th>まず読む wiki</th>
+<th>次に戻る公開ページ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mind-Upload / WBE が何の話か</strong></td>
+<td><a href="mind-upload-basics.html">WBEの基本</a></td>
+<td><a href="../wbe_101.html">WBE 101</a></td>
+</tr>
+<tr>
+<td><strong>派手な主張を読み違えたくない</strong></td>
+<td><a href="claims-and-evidence.html">主張と証拠の読み方</a></td>
+<td><a href="../verification.html">Verification</a></td>
+</tr>
+<tr>
+<td><strong>EEG の基礎から知りたい</strong></td>
+<td><a href="eeg-basics.html">EEGの基本</a></td>
+<td><a href="../eeg_101.html">EEG 101</a></td>
+</tr>
+<tr>
+<td><strong>なぜ標準やベンチが必要か知りたい</strong></td>
+<td><a href="verification-basics.html">検証基盤の基本</a></td>
+<td><a href="../verification.html">Verification</a></td>
+</tr>
+</tbody>
+</table>
+
+<section class="section" id="portal-vs-wiki">
+<h2 class="section-title">公開ページと wiki の役割分担</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>場所</th>
+<th>主目的</th>
+<th>読むと分かること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>公開ページ</strong></td>
+<td>情報ポータル</td>
+<td>いま分かっていること、まだ未解決なこと、次にどこへ進むか。</td>
+</tr>
+<tr>
+<td><strong>wiki</strong></td>
+<td>学習用の土台</td>
+<td>用語、背景、たとえ、読み方、公開ページの前提知識。</td>
+</tr>
+<tr>
+<td><strong>automation/ 等</strong></td>
+<td>運用と下書き</td>
+<td>未整理メモ、CSV、ログなど、読者向け本文ではないもの。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="routes">
+<h2 class="section-title">最初の 30 分コース</h2>
+<div class="stage-list">
+<div class="stage-item">
+<div class="stage-number">01</div>
+<div class="stage-body">
+<h4>WBEの基本</h4>
+<p>まず、Mind-Upload と WBE が何を指し、なぜすぐ「できた」と言わないのかを整理します。</p>
+<a href="mind-upload-basics.html" class="btn-action">Open WBE Basics</a>
+</div>
+</div>
+<div class="stage-item">
+<div class="stage-number">02</div>
+<div class="stage-body">
+<h4>主張と証拠の読み方</h4>
+<p>ニュースや研究発表の文言を、L0〜L5 のどの話かで見分ける練習をします。</p>
+<a href="claims-and-evidence.html" class="btn-action">Open Claims Guide</a>
+</div>
+</div>
+<div class="stage-item">
+<div class="stage-number">03</div>
+<div class="stage-body">
+<h4>EEGの基本</h4>
+<p>EEG が何を測り、何が得意で、なぜ単体では限界があるのかを押さえます。</p>
+<a href="eeg-basics.html" class="btn-action">Open EEG Basics</a>
+</div>
+</div>
+<div class="stage-item">
+<div class="stage-number">04</div>
+<div class="stage-body">
+<h4>検証基盤の基本</h4>
+<p>標準、ベンチ、事前登録、監査がなぜ WBE の議論で重要かを学びます。</p>
+<a href="verification-basics.html" class="btn-action">Open Verification Basics</a>
+</div>
+</div>
+</div>
+</section>
+
+</article>
+
+<aside class="sidebar-column">
+<div class="sidebar-box">
+<h4>Wiki Pages</h4>
+<ul>
+<li><a href="mind-upload-basics.html">WBEの基本 →</a></li>
+<li><a href="claims-and-evidence.html">主張と証拠の読み方 →</a></li>
+<li><a href="eeg-basics.html">EEGの基本 →</a></li>
+<li><a href="verification-basics.html">検証基盤の基本 →</a></li>
+</ul>
+</div>
+<div class="sidebar-box">
+<h4>公開ページへ戻る</h4>
+<ul>
+<li><a href="../index.html">スタート →</a></li>
+<li><a href="../verification.html">検証基盤 →</a></li>
+<li><a href="../content_hub.html">公開コンテンツ →</a></li>
+</ul>
+</div>
+</aside>
+</main>

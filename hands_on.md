@@ -15,6 +15,23 @@ page_highlights:
   - "最初に目指すのはSOTAではなく、L0の再現可能解析です。"
   - "BIDS、QCログ、前処理条件、ベースライン指標を最小セットとして扱います。"
   - "失敗例や除外基準も残すことを、成功条件の一部として含めています。"
+known_points:
+  - "公開データと一般的なツールだけでも、L0 の再現可能解析は作れます。"
+  - "最初の勝ち筋は高精度ではなく、入力・QC・処理・出力・監査を一周つなぐことです。"
+  - "失敗例と除外基準を残すことも、再現性の一部です。"
+unknown_points:
+  - "L0 ができても、それだけで因果モデルや本人性の主張には進めません。"
+  - "どのベースラインが将来の L2 へ最もつながるかは、課題ごとにまだ開拓中です。"
+wiki_links:
+  - label: "Wiki: 検証基盤の基本"
+    url: "/wiki/verification-basics.html"
+    description: "なぜこの手順が必要かを、実務の前に理解したい人向けです。"
+  - label: "Wiki: EEGの基本"
+    url: "/wiki/eeg-basics.html"
+    description: "前処理や QC の意味を、信号の性質から確認できます。"
+  - label: "Wiki Home"
+    url: "/wiki/"
+    description: "学び方の全体マップに戻れます。"
 recommended_pages:
   - label: "データ&ベンチ"
     url: "/datasets.html"

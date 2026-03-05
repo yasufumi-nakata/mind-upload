@@ -15,6 +15,23 @@ page_highlights:
   - "まずは共有基盤を押さえ、その後にスターターデータセットを見る順にしています。"
   - "『データがある』だけで終わらせないためのチェックリストを入れています。"
   - "最終目標は、第三者が同じ条件で走らせられる形へ寄せることです。"
+known_points:
+  - "公開 EEG データは、L0 の再現解析や L1 のベースライン練習に十分役立ちます。"
+  - "最初のデータ選びでは、難しさよりも追試しやすさを優先した方が前に進みます。"
+  - "データだけでなく、メタデータ、QC、評価ルールがそろって初めて比較可能になります。"
+unknown_points:
+  - "スターターデータセットだけで WBE の全論点を解くことはできません。"
+  - "どのデータが将来の因果・閉ループ検証へ最も効くかは、まだ固定していません。"
+wiki_links:
+  - label: "Wiki: EEGの基本"
+    url: "/wiki/eeg-basics.html"
+    description: "データセットを見る前に、EEG の信号そのものを理解したい人向けです。"
+  - label: "Wiki: 検証基盤の基本"
+    url: "/wiki/verification-basics.html"
+    description: "なぜデータだけでなくベンチや登録が必要かを学べます。"
+  - label: "Wiki Home"
+    url: "/wiki/"
+    description: "初学者向けの読み順をまとめています。"
 recommended_pages:
   - label: "EEG入門"
     url: "/eeg_101.html"

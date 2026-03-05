@@ -1,0 +1,159 @@
+---
+layout: default
+title: "Wiki：マインドアップロード / WBE の基本"
+description: "Mind-Upload と WBE が何の話で、何が分かっていて何が未解決かを初歩から説明します。"
+article_type: Wiki
+subtitle: "大きな夢を、小さく確かめられる問いに分ける"
+author: Mind Uploading Research Project
+last_updated: "2026-03-06"
+note: "Beginner guide"
+audience: "マインドアップロードという言葉だけ聞いたことがある人、最初の全体像を知りたい人"
+reading_time: "10〜15分"
+page_intro: "このページは、マインドアップロードや WBE が何を目指す話なのかを、初歩から整理するためのページです。最初に『何ができたら強い主張になるのか』を曖昧にしないことを重視しています。"
+accuracy_note: "分かりやすくするために言い切りを増やしません。まだ決まっていない論点は、未解決のまま書きます。"
+page_highlights:
+  - "マインドアップロードと WBE の違いを、広い呼び方と技術寄りの呼び方として分けます。"
+  - "いま分かっていることと、まだ主張できないことを最初に分けます。"
+  - "このサイトが『検証基盤』を先に作る理由を説明します。"
+known_points:
+  - "脳信号の一部を測り、特定の課題で予測する研究はすでに進んでいます。"
+  - "標準化と再現性の仕組みがないと、進歩の比較ができません。"
+  - "WBE の話では、出力が似ていることと内部の仕組みが同じことは別です。"
+unknown_points:
+  - "機能的な再現が、本人性や現象的意識まで保証するかは未解決です。"
+  - "どの計測セットで WBE に十分な内部情報が取れるかは決まっていません。"
+  - "社会実装に必要な権利・責任・停止基準は、技術だけで解けません。"
+wiki_links:
+  - label: "Wiki: 主張と証拠の読み方"
+    url: "/wiki/claims-and-evidence.html"
+    description: "この全体像を、ニュースや研究発表の読み方に落とします。"
+  - label: "Wiki: 検証基盤の基本"
+    url: "/wiki/verification-basics.html"
+    description: "なぜ先に物差しを作るのかを学べます。"
+  - label: "Wiki Home"
+    url: "/wiki/"
+    description: "他の基礎ページへの入口です。"
+recommended_pages:
+  - label: "WBE入門"
+    url: "/wbe_101.html"
+  - label: "検証基盤"
+    url: "/verification.html"
+  - label: "FAQ"
+    url: "/faq.html"
+---
+
+<main class="main-container">
+<article class="content-column">
+
+<div class="abstract-box">
+<h2>まず一言でいうと</h2>
+<p>
+マインドアップロードは、「心や記憶を別の基盤で保てるか」という大きな問いです。WBE（Whole Brain Emulation）は、その中でも<strong>脳の機能を別の計算基盤で再現する</strong>ことに寄った言い方です。ただし、何を再現できたら「成功」と呼ぶかは、まだ自動的には決まりません。
+</p>
+</div>
+
+<div class="note-box">
+<strong>このサイトが最初にやること</strong>
+<p>
+このサイトは、いきなり「できる」「できない」を決めるよりも先に、<strong>何を達成したら前進か</strong>と<strong>何が出たらまだ不足か</strong>をそろえることを重視します。大きな夢を守るには、先に物差しを作る必要があるからです。
+</p>
+</div>
+
+<section class="section" id="terms">
+<h2 class="section-title">まず分けたい3つの言葉</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>言葉</th>
+<th>ここでの意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>マインドアップロード</strong></td>
+<td>心や記憶をデジタルに移す話全体を指す広い呼び方です。</td>
+</tr>
+<tr>
+<td><strong>WBE</strong></td>
+<td>脳の機能を別の基盤で再現することに寄った、技術寄りの呼び方です。</td>
+</tr>
+<tr>
+<td><strong>検証基盤</strong></td>
+<td>データ、評価、ルール、監査をそろえて、他の人も同じ結論へ辿れるようにする土台です。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="known-unknown">
+<h2 class="section-title">いま比較的はっきりしていること / まだ未解決のこと</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>比較的はっきりしていること</th>
+<th>まだ未解決のこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>脳信号の一部を測って、条件付きで状態を予測する研究はできています。</td>
+<td>その予測がそのまま本人性や意識の保存を意味するわけではありません。</td>
+</tr>
+<tr>
+<td>公開データ、標準、ベンチがそろうと、進歩を比較しやすくなります。</td>
+<td>どの条件なら「同じ本人」と見なせるかは、まだ合意がありません。</td>
+</tr>
+<tr>
+<td>出力の一致だけでは不十分で、介入や条件変更への応答も大事です。</td>
+<td>機能的な等価性が現象的意識まで保証するかは分かっていません。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="why-not-say-done">
+<h2 class="section-title">なぜ、すぐ「できた」と言わないのか</h2>
+<p>
+WBE の話では、似ているものを混同しやすいからです。たとえば、脳信号から文章を当てられることと、脳の内部状態を別基盤で生成できることは同じではありません。前者は<strong>観測の翻訳</strong>かもしれませんが、後者は<strong>内部の仕組みが時間とともに動き、条件変更にも反応する</strong>ことを要求します。
+</p>
+<div class="note-box">
+<strong>ここで大事なこと</strong>
+<p>
+この差を曖昧にすると、L1 の研究を L4 のように語ってしまいます。だからこのサイトでは、強い主張ほど、必要な証拠も強くする方針を取ります。
+</p>
+</div>
+</section>
+
+<section class="section" id="site-role">
+<h2 class="section-title">このサイトの立ち位置</h2>
+<p>
+このサイトは、WBE を最終的に証明した場所ではありません。むしろ、<strong>証明や反証ができるようにするための公共財</strong>を整える場所です。言い換えると、競技そのものよりも先に、ルール、採点表、試合記録の置き場を整える作業をしています。
+</p>
+<div class="cta-box">
+<h4>Next</h4>
+<p>この話を「主張の強さ」と「必要な証拠」に分けて読みたい場合はこちらです。</p>
+<a href="claims-and-evidence.html">主張と証拠の読み方へ →</a>
+</div>
+</section>
+
+</article>
+
+<aside class="sidebar-column">
+<div class="sidebar-box">
+<h4>Related Wiki</h4>
+<ul>
+<li><a href="claims-and-evidence.html">主張と証拠の読み方 →</a></li>
+<li><a href="verification-basics.html">検証基盤の基本 →</a></li>
+<li><a href="eeg-basics.html">EEGの基本 →</a></li>
+</ul>
+</div>
+<div class="sidebar-box">
+<h4>公開ページ</h4>
+<ul>
+<li><a href="../wbe_101.html">WBE 101 →</a></li>
+<li><a href="../verification.html">Verification →</a></li>
+<li><a href="../faq.html">FAQ →</a></li>
+</ul>
+</div>
+</aside>
+</main>

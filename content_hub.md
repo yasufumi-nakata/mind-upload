@@ -15,6 +15,23 @@ page_highlights:
   - "領域ごとに主ページと補助ページを分け、追記先を固定しています。"
   - "新規ページを増やす前に、既存ページへ統合できるかを確認する前提です。"
   - "公開導線と運用資料を一箇所で見渡せるようにしています。"
+known_points:
+  - "公開ページは、要点・現状・既知/未知・次の導線を示すポータルとして使う方針です。"
+  - "初歩から学ぶための詳しい背景説明は、wiki 側へ集約した方が入口ページの役割を保ちやすいです。"
+  - "新しい情報は、まず既存ページか wiki のどちらへ足すべきかを決める必要があります。"
+unknown_points:
+  - "どの話題を将来独立ページへ昇格させるかは、論点の蓄積と読者需要を見ながら判断します。"
+  - "本文と wiki の分担がまだ粗い箇所は、今後の移管で整理を続けます。"
+wiki_links:
+  - label: "Wiki Home"
+    url: "/wiki/"
+    description: "学習用ページ全体の入口です。"
+  - label: "Wiki: 検証基盤の基本"
+    url: "/wiki/verification-basics.html"
+    description: "標準・ベンチ・登録・監査の意味を初歩から説明します。"
+  - label: "Wiki: EEGの基本"
+    url: "/wiki/eeg-basics.html"
+    description: "EEG を魔法扱いせずに理解するための基礎ページです。"
 recommended_pages:
   - label: "スタートページ"
     url: "/index.html"
@@ -79,6 +96,11 @@ recommended_pages:
 <td>最初の導線を一本化し、同じ案内を複数ページに重複させないためです。</td>
 </tr>
 <tr>
+<td>本当に初歩から学ぶための説明、背景知識、噛み砕いた解説</td>
+<td><a href="wiki/">wiki/</a></td>
+<td>公開ページを長い教科書化せず、情報ポータルとしての役割を保ちながら、学習用の詳説を集約できるためです。</td>
+</tr>
+<tr>
 <td>用語の意味や、似た言葉の違い</td>
 <td><a href="glossary.html">glossary.html</a></td>
 <td>本文ページを重くしすぎず、言葉の足場を共通化できるからです。</td>
@@ -92,6 +114,40 @@ recommended_pages:
 <td>実務手順、最小ループ、手を動かす順番</td>
 <td><a href="hands_on.html">hands_on.html</a></td>
 <td>読むだけでなく、実際に再現可能な作業へ落とすためのページだからです。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="portal-vs-wiki">
+<h2 class="section-title">公開ページと wiki の分担</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>置き場所</th>
+<th>主目的</th>
+<th>ここに置く内容</th>
+<th>避けたいこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>公開ページ</strong></td>
+<td>情報ポータルとして、いま分かっていること・未解決なこと・次に読む場所を示すこと。</td>
+<td>要点、既知/未知の整理、判断表、比較表、主要リンク。</td>
+<td>背景説明を無制限に増やして、入口としての役割を失うこと。</td>
+</tr>
+<tr>
+<td><strong>wiki</strong></td>
+<td>初学者が順番に学べるように、基礎説明と読み方を蓄積すること。</td>
+<td>用語の丁寧な説明、ニュースの読み方、EEGや検証基盤の初歩、公開ページの予備知識。</td>
+<td>最新の実装状況や運用判断の一次置き場にすること。</td>
+</tr>
+<tr>
+<td><strong>automation/ 等の運用領域</strong></td>
+<td>下書き、機械処理結果、中間成果を保管すること。</td>
+<td>未整理メモ、CSV、生成物、監査ログ。</td>
+<td>そのまま読者向け本文として公開すること。</td>
 </tr>
 </tbody>
 </table>
@@ -115,6 +171,10 @@ recommended_pages:
 <tr>
 <td>同じ説明を少し言い換えただけの重複ページ</td>
 <td>既存ページの該当節へ追記し、入口ページからの導線だけ整えます。</td>
+</tr>
+<tr>
+<td>背景知識を全部本文へ押し込み、入口ページを学習教材の長文にしてしまうこと</td>
+<td>要点は公開ページへ残し、初歩からの解説は <a href="wiki/">wiki</a> 側へ寄せます。</td>
 </tr>
 <tr>
 <td>根拠や位置づけが未確定の断片メモを、そのまま公開本文に置くこと</td>
@@ -141,6 +201,7 @@ recommended_pages:
 <tr><td>未解決問題×文献</td><td><a href="research_harvest_50.html">research_harvest_50.html</a></td><td>U別のリサーチクエスチョン、文献監査、重複整理</td><td><a href="datasets.html">datasets.html</a></td></tr>
 <tr><td>参加導線</td><td><a href="issue.html">issue.html</a></td><td>Issue運用、対応状況、外部依存タスクの分離</td><td><a href="collaborations.html">collaborations.html</a></td></tr>
 <tr><td>入門導線</td><td><a href="index.html">index.html</a></td><td>読む順番、主要ページへの入口</td><td><a href="wbe_101.html">wbe_101.html</a> / <a href="eeg_101.html">eeg_101.html</a></td></tr>
+<tr><td>基礎学習</td><td><a href="wiki/">wiki/</a></td><td>初歩の説明、背景知識、読み方の補助教材</td><td><a href="glossary.html">glossary.html</a> / <a href="faq.html">faq.html</a></td></tr>
 </tbody></table>
 </section>
 
@@ -178,6 +239,16 @@ recommended_pages:
 <li><a href="casework.html">casework.html</a></li>
 </ul>
 </div>
+<div class="key-points">
+<h4>Wiki</h4>
+<ul>
+<li><a href="wiki/">wiki/</a></li>
+<li><a href="wiki/mind-upload-basics.html">wiki/mind-upload-basics.html</a></li>
+<li><a href="wiki/claims-and-evidence.html">wiki/claims-and-evidence.html</a></li>
+<li><a href="wiki/eeg-basics.html">wiki/eeg-basics.html</a></li>
+<li><a href="wiki/verification-basics.html">wiki/verification-basics.html</a></li>
+</ul>
+</div>
 </section>
 
 </article>
@@ -189,6 +260,14 @@ recommended_pages:
 <li><a href="https://github.com/yasufumi-nakata/mind-upload/blob/main/AGENTS.md" target="_blank">AGENTS.md ↗</a></li>
 <li><a href="https://github.com/yasufumi-nakata/mind-upload/tree/main/.agent" target="_blank">.agent/ ↗</a></li>
 <li><a href="https://github.com/yasufumi-nakata/mind-upload/tree/main/automation" target="_blank">automation/ ↗</a></li>
+</ul>
+</div>
+<div class="sidebar-box">
+<h4>学習用 Wiki</h4>
+<ul>
+<li><a href="wiki/">Wiki Home →</a></li>
+<li><a href="wiki/mind-upload-basics.html">WBEの基本 →</a></li>
+<li><a href="wiki/claims-and-evidence.html">主張の読み方 →</a></li>
 </ul>
 </div>
 </aside>

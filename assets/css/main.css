@@ -368,6 +368,110 @@ pre {
     line-height: 1.7;
 }
 
+.topic-status {
+    max-width: var(--max-width);
+    margin: 16px auto 0;
+    padding: 0 24px;
+}
+
+.topic-status-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.topic-card {
+    padding: 18px 20px;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-soft);
+}
+
+.topic-card-known {
+    border-color: var(--color-success-border);
+    background: linear-gradient(180deg, #f7fff9 0%, #eff9f2 100%);
+}
+
+.topic-card-unknown {
+    border-color: var(--color-warning-border);
+    background: linear-gradient(180deg, #fffdf4 0%, #fff6dc 100%);
+}
+
+.topic-card-wiki {
+    border-color: #9fb8e8;
+    background: linear-gradient(180deg, #f7fbff 0%, #edf4ff 100%);
+}
+
+.topic-card-kicker {
+    margin: 0 0 8px;
+    color: var(--color-text-muted);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.topic-card h2 {
+    margin: 0 0 12px;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.topic-point-list,
+.topic-link-list {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.topic-point-list li,
+.topic-link-list li {
+    margin-bottom: 10px;
+    color: var(--color-text-secondary);
+}
+
+.topic-link-list a {
+    display: inline-block;
+    margin-bottom: 4px;
+    color: var(--color-accent-strong);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.topic-link-list a:hover {
+    text-decoration: underline;
+}
+
+.topic-link-list span {
+    display: block;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+}
+
+.wiki-role-note {
+    max-width: var(--max-width);
+    margin: 16px auto 0;
+    padding: 0 24px;
+}
+
+.wiki-role-note-inner {
+    padding: 14px 18px;
+    border: 1px solid #c6d4ee;
+    border-left: 5px solid var(--color-accent);
+    background: #f8fbff;
+    box-shadow: var(--shadow-soft);
+}
+
+.wiki-role-note-inner strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.wiki-role-note-inner p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
 .section-map-inner {
     padding: 18px 20px;
     border: 1px solid var(--color-border);
@@ -1436,6 +1540,8 @@ footer p {
     .papers-page,
     .easy-guide,
     .page-guide,
+    .topic-status,
+    .wiki-role-note,
     .section-map {
         padding-left: 14px;
         padding-right: 14px;
@@ -1449,6 +1555,10 @@ footer p {
     .page-guide-inner {
         grid-template-columns: 1fr;
         padding: 18px;
+    }
+
+    .topic-status-inner {
+        grid-template-columns: 1fr;
     }
 
     .section-map-inner {

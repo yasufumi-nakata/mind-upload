@@ -15,6 +15,23 @@ page_highlights:
   - "『このサイトは何をするのか』『EEGで何が言えるのか』など、最初の疑問をまとめて潰せます。"
   - "派手な言い切りを避け、何が未解決かも同時に書いています。"
   - "FAQだけで十分な場合と、本文ページへ進むべき場合を分けて読める構成です。"
+known_points:
+  - "短い Q&A でも、強い主張を弱い主張へ分解して読むだけで誤解は減らせます。"
+  - "EEG や LLM の派手な見た目と、WBE の強い主張は分けて扱う必要があります。"
+  - "FAQ は方向を間違えないための入口として有効です。"
+unknown_points:
+  - "短い答えだけでは、理論選択や本人性の議論までは決まりません。"
+  - "個々の研究発表がどこまで一般化できるかは、元論文と検証条件に依存します。"
+wiki_links:
+  - label: "Wiki: 主張と証拠の読み方"
+    url: "/wiki/claims-and-evidence.html"
+    description: "FAQ の短い答えを、もう一段ていねいに学びたい人向けです。"
+  - label: "Wiki: WBEの基本"
+    url: "/wiki/mind-upload-basics.html"
+    description: "最初の疑問を、分野全体の地図から理解したいときに向きます。"
+  - label: "Wiki Home"
+    url: "/wiki/"
+    description: "疑問の種類ごとの読み順をまとめています。"
 recommended_pages:
   - label: "検証基盤"
     url: "/verification.html"

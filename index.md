@@ -15,6 +15,24 @@ page_highlights:
   - "Mind-Uploadの中心は、派手な結論を出すことではなく、前進を測れる検証基盤を作ることです。"
   - "迷ったら Verification → Roadmap → WBE/EEG入門 の順で読むと、話の軸を保ちやすいです。"
   - "用語や前提で止まったときに戻れる入口として、FAQ と用語集も近くに置いています。"
+known_points:
+  - "公開データ、標準、ベンチマーク、監査をそろえると、L0〜L2 の前進は比較可能な形で積み上げられます。"
+  - "EEGやデコーディング研究は、条件を限定すれば測定可能な前進を作れます。"
+  - "本人性や意識の強い主張は、入口ページではなく後段の検証設計として扱う必要があります。"
+unknown_points:
+  - "どの条件を満たせば L4 の本人性を認めるかについて、分野横断の合意はまだありません。"
+  - "非侵襲計測だけで WBE に十分な内部情報が取れるかは未解決です。"
+  - "L5 の社会実装に必要な制度設計は、技術問題だけでは決まりません。"
+wiki_links:
+  - label: "Wiki Home"
+    url: "/wiki/"
+    description: "初歩から学ぶための全体マップです。"
+  - label: "Wiki: WBEの基本"
+    url: "/wiki/mind-upload-basics.html"
+    description: "マインドアップロードと WBE の最初の一歩を丁寧に説明します。"
+  - label: "Wiki: 主張の読み方"
+    url: "/wiki/claims-and-evidence.html"
+    description: "ニュースや研究発表を、証拠の強さで読み分ける練習用ページです。"
 recommended_pages:
   - label: "検証基盤"
     url: "/verification.html"
@@ -44,6 +62,13 @@ Mind-Uploadは、「心をコンピュータで再現できるのか？」とい
 </ul>
 </div>
 
+<div class="note-box">
+<strong>公開ページと wiki の役割分担</strong>
+<p>
+このトップページを含む公開ページは、まず「いま何が分かっていて、何がまだ未解決か」を早く把握するための<strong>情報ポータル</strong>です。背景から順に学びたい場合は、各ページ上部の <strong>wiki</strong> 導線から学習用ページへ進んでください。
+</p>
+</div>
+
 <table class="data-table">
 <thead>
 <tr>
@@ -67,6 +92,11 @@ Mind-Uploadは、「心をコンピュータで再現できるのか？」とい
 <td><strong>用語や理論名で止まりやすい</strong></td>
 <td><a href="glossary.html">Glossary</a></td>
 <td><a href="faq.html">FAQ</a> で、よくある誤解を先に潰します。</td>
+</tr>
+<tr>
+<td><strong>本当に初歩から順番に学びたい</strong></td>
+<td><a href="wiki/">Wiki</a></td>
+<td><a href="wbe_101.html">WBE 101</a> や <a href="eeg_101.html">EEG 101</a> へ戻ると、公開ページの要点が読みやすくなります。</td>
 </tr>
 <tr>
 <td><strong>公開データで手を動かしたい</strong></td>
@@ -196,6 +226,14 @@ Mind-Uploadは、「心をコンピュータで再現できるのか？」とい
 <h4>データ&ベンチ</h4>
 <p>まず何で検証するか（公開データ、置き場、チェックリスト）を実務として整理。</p>
 <a href="datasets.html" class="btn-action">Open Datasets</a>
+</div>
+</div>
+<div class="stage-item">
+<div class="stage-number">E</div>
+<div class="stage-body">
+<h4>Wiki（基礎学習）</h4>
+<p>本当にゼロから学ぶ人向けに、用語、主張の読み方、EEGの基礎、検証基盤の考え方を順番に説明します。</p>
+<a href="wiki/" class="btn-action">Open Wiki</a>
 </div>
 </div>
 </div>

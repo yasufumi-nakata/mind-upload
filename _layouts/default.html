@@ -29,6 +29,7 @@
             <a href="{{ '/verification.html' | relative_url }}">検証基盤</a>
             <a href="{{ '/tech_roadmap.html' | relative_url }}">ロードマップ</a>
             <a href="{{ '/content_hub.html' | relative_url }}">公開コンテンツ</a>
+            <a href="{{ '/wiki/' | relative_url }}">Wiki</a>
             <a href="{{ '/mind_uploading_papers.html' | relative_url }}">論文集</a>
             <a href="{{ '/issue.html' | relative_url }}">参加方法</a>
             <a href="https://github.com/yasufumi-nakata/mind-upload" target="_blank">GitHub</a>
@@ -112,6 +113,62 @@
     </section>
     {% endif %}
 
+    {% if page.known_points or page.unknown_points or page.wiki_links %}
+    <section class="topic-status" aria-label="この話で分かっていることと学習導線">
+        <div class="topic-status-inner">
+            {% if page.known_points %}
+            <div class="topic-card topic-card-known">
+                <p class="topic-card-kicker">この話で比較的はっきりしていること</p>
+                <h2>いま分かっていること</h2>
+                <ul class="topic-point-list">
+                    {% for item in page.known_points %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            {% if page.unknown_points %}
+            <div class="topic-card topic-card-unknown">
+                <p class="topic-card-kicker">ここから先は未解決です</p>
+                <h2>まだ分かっていないこと</h2>
+                <ul class="topic-point-list">
+                    {% for item in page.unknown_points %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            {% if page.wiki_links %}
+            <div class="topic-card topic-card-wiki">
+                <p class="topic-card-kicker">初歩から学ぶ</p>
+                <h2>wiki で基礎から確認する</h2>
+                <ul class="topic-link-list">
+                    {% for link in page.wiki_links %}
+                    <li>
+                        <a href="{{ link.url | relative_url }}">{{ link.label }}</a>
+                        {% if link.description %}
+                        <span>{{ link.description }}</span>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+    {% endif %}
+
+    {% if page.article_type == "Wiki" %}
+    <section class="wiki-role-note" aria-label="Wikiの位置づけ">
+        <div class="wiki-role-note-inner">
+            <strong>Wikiの位置づけ</strong>
+            <p>Wiki は学習用の補助ページです。公式の現状整理、勝利条件、運用方針は、必ず公開ページへ戻って確認してください。</p>
+        </div>
+    </section>
+    {% endif %}
+
     <section id="easy-guide" class="easy-guide" hidden aria-label="高校生向けの用語説明">
         <div class="easy-guide-inner">
             <h2>高校生向け：このページで出る言葉</h2>
@@ -137,7 +194,7 @@
 
     <!-- Footer -->
     <footer>
-        <p class="site-policy">本サイトは、再現可能性と透明性を重視した研究ノートです。わかりやすさを優先しつつ、定義・根拠・限界を省かない方針で更新しています。誤りの指摘や改善提案は GitHub Issues へお願いいたします。</p>
+        <p class="site-policy">本サイトは、再現可能性と透明性を重視した研究ノートです。公開ページでは要点と現状整理を示し、初歩からの学習用の詳しい説明は <a href="{{ '/wiki/' | relative_url }}">Wiki</a> に集約しています。わかりやすさを優先しつつ、定義・根拠・限界を省かない方針で更新しています。誤りの指摘や改善提案は GitHub Issues へお願いいたします。</p>
         <p>&copy; 2024-2026 Mind Uploading Research Project. <a href="https://github.com/yasufumi-nakata/mind-upload">GitHub</a></p>
     </footer>
 

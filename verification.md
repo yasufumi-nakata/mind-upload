@@ -15,6 +15,24 @@ page_highlights:
   - "標準、置き場、ベンチマーク、監査をセットでそろえる必要があります。"
   - "デコーディングとエミュレーションを混同しないために、主張レベルと失敗条件を先に固定します。"
   - "ここを読むと、なぜデータだけ集めても前進にならないのかが分かります。"
+known_points:
+  - "標準、共有基盤、評価、監査をセットでそろえないと、比較可能な前進は作れません。"
+  - "L0〜L2 では、再現性と反証条件を事前に設計することができます。"
+  - "decode と emulate は別の主張であり、必要な証拠も別です。"
+unknown_points:
+  - "どの因果構造近似で L4 の本人性に十分と言えるかは、まだ決着していません。"
+  - "熱力学、閉ループ、本人性をまとめた最終勝利条件は未完成です。"
+  - "L5 の制度設計は、技術要件だけでは決まりません。"
+wiki_links:
+  - label: "Wiki: 検証基盤の基本"
+    url: "/wiki/verification-basics.html"
+    description: "標準、ベンチ、登録、監査がなぜ必要かを初歩から説明します。"
+  - label: "Wiki: 主張と証拠の読み方"
+    url: "/wiki/claims-and-evidence.html"
+    description: "L0〜L5 を証拠の強さで読み分ける練習用ページです。"
+  - label: "Wiki: WBEの基本"
+    url: "/wiki/mind-upload-basics.html"
+    description: "このページの前提になる WBE 全体像を整理します。"
 recommended_pages:
   - label: "技術ロードマップ"
     url: "/tech_roadmap.html"

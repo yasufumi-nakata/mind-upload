@@ -15,6 +15,23 @@ page_highlights:
   - "用語を短く説明しつつ、どこで使う概念かも一緒に示します。"
   - "『似ているが違う』語を分けることで、話のすり替えを防ぎます。"
   - "分からない言葉が出たら、このページに戻れば最低限の足場を作れます。"
+known_points:
+  - "用語の混同を減らすだけで、議論の多くのすれ違いは防げます。"
+  - "特に decode / emulate、相関 / 因果、ベンチ / リーダーボードの区別は重要です。"
+  - "このページは短い定義の入口であり、本文への戻り先を作る役割を持ちます。"
+unknown_points:
+  - "意識理論まわりの用語は、論文や立場で意味の置き方が少しずつ異なります。"
+  - "短い定義だけで、研究上の争点まで完全に片づくわけではありません。"
+wiki_links:
+  - label: "Wiki: WBEの基本"
+    url: "/wiki/mind-upload-basics.html"
+    description: "用語が使われる全体像を先に見たいときの入口です。"
+  - label: "Wiki: EEGの基本"
+    url: "/wiki/eeg-basics.html"
+    description: "EEG 関連語を、測定の流れに沿って理解したい人向けです。"
+  - label: "Wiki Home"
+    url: "/wiki/"
+    description: "初歩から順に読むための学習マップです。"
 recommended_pages:
   - label: "WBE入門"
     url: "/wbe_101.html"
