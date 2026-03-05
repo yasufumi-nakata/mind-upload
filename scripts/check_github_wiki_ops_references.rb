@@ -11,6 +11,7 @@ OPS_FILES = [
   "scripts/verify_github_wiki_toolchain.sh",
   "scripts/sync_github_wiki_toolchain.sh",
   "scripts/with_github_wiki_lock.sh",
+  "scripts/selftest_github_wiki_lock.sh",
   "scripts/clean_github_wiki_noise.rb"
 ].freeze
 

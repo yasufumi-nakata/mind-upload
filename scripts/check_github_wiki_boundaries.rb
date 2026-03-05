@@ -7,6 +7,7 @@ VERIFY_SCRIPT = File.join(ROOT, "scripts", "verify_github_wiki_toolchain.sh")
 SYNC_SCRIPT = File.join(ROOT, "scripts", "sync_github_wiki_toolchain.sh")
 OPS_REFERENCE_SCRIPT = File.join(ROOT, "scripts", "check_github_wiki_ops_references.rb")
 LOCK_SCRIPT = File.join(ROOT, "scripts", "with_github_wiki_lock.sh")
+LOCK_SELFTEST_SCRIPT = File.join(ROOT, "scripts", "selftest_github_wiki_lock.sh")
 VERIFY_WORKFLOW = File.join(ROOT, ".github", "workflows", "validate-github-wiki-export.yml")
 SYNC_WORKFLOW = File.join(ROOT, ".github", "workflows", "sync-github-wiki.yml")
 README = File.join(ROOT, "README.md")
@@ -17,6 +18,7 @@ README = File.join(ROOT, "README.md")
   SYNC_SCRIPT,
   OPS_REFERENCE_SCRIPT,
   LOCK_SCRIPT,
+  LOCK_SELFTEST_SCRIPT,
   VERIFY_WORKFLOW,
   SYNC_WORKFLOW,
   README
@@ -56,12 +58,15 @@ end
 
 verify_script_text = File.read(VERIFY_SCRIPT)
 required_verify_script_snippets = [
+  'if [[ "${VERIFY_GITHUB_WIKI_LOCK_SELFTEST:-0}" == "1" ]]; then',
+  'run_step "lock-selftest" scripts/selftest_github_wiki_lock.sh',
   'exec env GITHUB_WIKI_LOCK_HELD=1 "$ROOT/scripts/with_github_wiki_lock.sh" "$SCRIPT_PATH" "$@"',
   'run_step "syntax-boundary" ruby -c scripts/check_github_wiki_boundaries.rb',
   'run_step "syntax-ops-refs" ruby -c scripts/check_github_wiki_ops_references.rb',
   'run_step "syntax-noise-cleanup" ruby -c scripts/clean_github_wiki_noise.rb',
   'run_step "syntax-export" ruby -c scripts/export_github_wiki.rb',
   'run_step "syntax-export-validate" ruby -c scripts/check_github_wiki_export.rb',
+  'run_step "syntax-lock-selftest" bash -n scripts/selftest_github_wiki_lock.sh',
   'run_step "syntax-publish" bash -n scripts/publish_github_wiki.sh',
   'run_step "boundary-check" scripts/check_github_wiki_boundaries.rb',
   'run_step "ops-reference-check" scripts/check_github_wiki_ops_references.rb',
@@ -77,6 +82,8 @@ end
 
 sync_script_text = File.read(SYNC_SCRIPT)
 required_sync_script_snippets = [
+  'if [[ "${VERIFY_GITHUB_WIKI_LOCK_SELFTEST:-0}" == "1" ]]; then',
+  'run_step "lock-selftest" scripts/selftest_github_wiki_lock.sh',
   'exec env GITHUB_WIKI_LOCK_HELD=1 "$ROOT/scripts/with_github_wiki_lock.sh" "$SCRIPT_PATH" "$@"',
   'run_step "verify" scripts/verify_github_wiki_toolchain.sh',
   'run_step "publish" scripts/publish_github_wiki.sh'
@@ -89,7 +96,8 @@ end
 verify_workflow_text = File.read(VERIFY_WORKFLOW)
 required_verify_workflow_snippets = [
   'run: scripts/verify_github_wiki_toolchain.sh',
-  'VERIFY_GITHUB_WIKI_BUILD: "1"'
+  'VERIFY_GITHUB_WIKI_BUILD: "1"',
+  'VERIFY_GITHUB_WIKI_LOCK_SELFTEST: "1"'
 ]
 
 required_verify_workflow_snippets.each do |snippet|
@@ -103,6 +111,7 @@ required_verify_workflow_paths = [
   '"scripts/check_github_wiki_ops_references.rb"',
   '"scripts/clean_github_wiki_noise.rb"',
   '"scripts/with_github_wiki_lock.sh"',
+  '"scripts/selftest_github_wiki_lock.sh"',
   '"scripts/verify_github_wiki_toolchain.sh"',
   '"scripts/sync_github_wiki_toolchain.sh"',
   '"scripts/publish_github_wiki.sh"'
@@ -115,7 +124,8 @@ end
 sync_workflow_text = File.read(SYNC_WORKFLOW)
 required_sync_workflow_snippets = [
   'run: |',
-  'scripts/sync_github_wiki_toolchain.sh'
+  'scripts/sync_github_wiki_toolchain.sh',
+  'VERIFY_GITHUB_WIKI_LOCK_SELFTEST: "1"'
 ]
 
 required_sync_workflow_snippets.each do |snippet|
@@ -129,6 +139,7 @@ required_sync_workflow_paths = [
   '"scripts/check_github_wiki_ops_references.rb"',
   '"scripts/clean_github_wiki_noise.rb"',
   '"scripts/with_github_wiki_lock.sh"',
+  '"scripts/selftest_github_wiki_lock.sh"',
   '"scripts/verify_github_wiki_toolchain.sh"',
   '"scripts/sync_github_wiki_toolchain.sh"',
   '"scripts/publish_github_wiki.sh"'
@@ -145,7 +156,9 @@ required_readme_snippets = [
   '`scripts/check_github_wiki_boundaries.rb`',
   '`scripts/check_github_wiki_ops_references.rb`',
   '`scripts/with_github_wiki_lock.sh`',
+  '`scripts/selftest_github_wiki_lock.sh`',
   '`GITHUB_WIKI_LOCK_WAIT_SECONDS`',
+  '`VERIFY_GITHUB_WIKI_LOCK_SELFTEST=1`',
   '`ignore/github-wiki-publish/`',
   'BUNDLE_PATH=vendor/bundle bundle exec jekyll build'
 ]
@@ -165,6 +178,27 @@ required_lock_snippets = [
 
 required_lock_snippets.each do |snippet|
   errors << "Missing lock guard snippet: #{snippet}" unless lock_text.include?(snippet)
+end
+
+selftest_text = File.read(LOCK_SELFTEST_SCRIPT)
+required_selftest_snippets = [
+  'SELFTEST_LOCK_DIR="$ROOT/ignore/github-wiki-lock-selftest.lock"',
+  'WAIT_SECONDS="${GITHUB_WIKI_LOCK_WAIT_SECONDS:-180}"',
+  'TEST_ROOT="$ROOT/ignore/github-wiki-lock-selftest-$PPID-$$"',
+  'SELFTEST_LOCK_HELD=0',
+  'if [[ "$SELFTEST_LOCK_HELD" == "1" ]]; then',
+  'while ! mkdir "$SELFTEST_LOCK_DIR" 2>/dev/null; do',
+  'SELFTEST_LOCK_HELD=1',
+  'Timed out waiting for lock self-test guard',
+  'while [[ -d "$LOCK_DIR" ]]; do',
+  'Timed out waiting for the GitHub Wiki toolchain lock to become idle.',
+  'run_stale_lock_recovery',
+  'run_serialization',
+  'run_timeout'
+]
+
+required_selftest_snippets.each do |snippet|
+  errors << "Missing lock selftest guard snippet: #{snippet}" unless selftest_text.include?(snippet)
 end
 
 if errors.empty?

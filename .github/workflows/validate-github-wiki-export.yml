@@ -16,6 +16,7 @@ on:
       - "scripts/check_github_wiki_ops_references.rb"
       - "scripts/clean_github_wiki_noise.rb"
       - "scripts/with_github_wiki_lock.sh"
+      - "scripts/selftest_github_wiki_lock.sh"
       - "scripts/verify_github_wiki_toolchain.sh"
       - "scripts/sync_github_wiki_toolchain.sh"
       - "scripts/publish_github_wiki.sh"
@@ -42,4 +43,5 @@ jobs:
       - name: Verify GitHub Wiki toolchain
         env:
           VERIFY_GITHUB_WIKI_BUILD: "1"
+          VERIFY_GITHUB_WIKI_LOCK_SELFTEST: "1"
         run: scripts/verify_github_wiki_toolchain.sh
