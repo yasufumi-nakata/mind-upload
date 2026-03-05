@@ -269,6 +269,7 @@ recommended_pages:
 <li><a href="wiki/update-branching-and-stop-rules.html">wiki/update-branching-and-stop-rules.html</a></li>
 <li><a href="wiki/standards-repositories-validators-and-benchmarks.html">wiki/standards-repositories-validators-and-benchmarks.html</a></li>
 <li><a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">wiki/closed-loop-latency-jitter-and-safety-stops.html</a></li>
+<li><a href="wiki/thermodynamic-grounding-basics.html">wiki/thermodynamic-grounding-basics.html</a></li>
 </ul>
 </div>
 </section>
@@ -309,6 +310,7 @@ recommended_pages:
 <li><a href="wiki/update-branching-and-stop-rules.html">更新・分岐・停止規則 →</a></li>
 <li><a href="wiki/standards-repositories-validators-and-benchmarks.html">規格・置き場・Validator・ベンチマーク →</a></li>
 <li><a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">閉ループ・遅延・ジッタ・安全停止 →</a></li>
+<li><a href="wiki/thermodynamic-grounding-basics.html">熱力学的接地の基本 →</a></li>
 </ul>
 </div>
 </aside>

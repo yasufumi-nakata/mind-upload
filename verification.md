@@ -57,6 +57,9 @@ wiki_links:
   - label: "Wiki: 閉ループ・遅延・ジッタ・安全停止"
     url: "/wiki/closed-loop-latency-jitter-and-safety-stops.html"
     description: "L3 で必要な遅延、ジッタ、安全停止、棄権の違いを整理します。"
+  - label: "Wiki: 熱力学的接地の基本"
+    url: "/wiki/thermodynamic-grounding-basics.html"
+    description: "Landauer、散逸、NESS、EPR の入口を初歩から整理します。"
 recommended_pages:
   - label: "技術ロードマップ"
     url: "/tech_roadmap.html"

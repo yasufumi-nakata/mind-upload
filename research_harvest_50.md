@@ -33,6 +33,9 @@ wiki_links:
   - label: "Wiki: 検証基盤の基本"
     url: "/wiki/verification-basics.html"
     description: "なぜ文献の数だけでなく、評価軸と未解決問題が重要かを補います。"
+  - label: "Wiki: 熱力学的接地の基本"
+    url: "/wiki/thermodynamic-grounding-basics.html"
+    description: "U10 で出る Landauer、散逸、NESS、EPR の入口を初歩から整理します。"
 recommended_pages:
   - label: "技術ロードマップ"
     url: "/tech_roadmap.html"
@@ -1435,6 +1438,12 @@ Round 114 のフォローアップ再接続フォローアップ再接続フォ�
 <section class="section" id="u10">
 <h2 class="section-title">U10: 熱力学的一貫性</h2>
 <p><strong>厳密定義:</strong> 情報処理の不可逆性・散逸・エネルギー下限を神経計算モデルへ写像し、測定可能な反証条件を置けるか。</p>
+<div class="note-box">
+<strong>U10 の入口で止まったとき</strong>
+<p>
+この節は文献地図なので、Landauer、NESS、EPR の説明は圧縮しています。まず意味の入口だけ整理したい場合は <a href="wiki/thermodynamic-grounding-basics.html">Wiki: 熱力学的接地の基本</a> を先に見ると追いやすくなります。
+</p>
+</div>
 <h3>リサーチクエスチョン分解</h3>
 <ol>
 <li>Landauer下限を神経計算でどう適用/解釈するか。</li>

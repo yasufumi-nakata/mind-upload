@@ -351,6 +351,10 @@ recommended_pages:
 <td>オフライン精度、遅延、ジッタ、安全停止の違い</td>
 <td><a href="closed-loop-latency-jitter-and-safety-stops.html">閉ループ・遅延・ジッタ・安全停止</a></td>
 </tr>
+<tr>
+<td>Landauer、散逸、NESS、EPR がなぜ出てくるか</td>
+<td><a href="thermodynamic-grounding-basics.html">熱力学的接地の基本</a></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -387,6 +391,7 @@ recommended_pages:
 <li><a href="update-branching-and-stop-rules.html">更新・分岐・停止規則 →</a></li>
 <li><a href="standards-repositories-validators-and-benchmarks.html">規格・置き場・Validator・ベンチマーク →</a></li>
 <li><a href="closed-loop-latency-jitter-and-safety-stops.html">閉ループ・遅延・ジッタ・安全停止 →</a></li>
+<li><a href="thermodynamic-grounding-basics.html">熱力学的接地の基本 →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">

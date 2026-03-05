@@ -47,6 +47,9 @@ wiki_links:
   - label: "Wiki: ベースライン・事前登録・モデルカード"
     url: "/wiki/baselines-prereg-and-model-cards.html"
     description: "研究運用の言葉の役割差を、初歩から整理します。"
+  - label: "Wiki: 熱力学的接地の基本"
+    url: "/wiki/thermodynamic-grounding-basics.html"
+    description: "Landauer、散逸、NESS、EPR の入口を初歩から整理します。"
 recommended_pages:
   - label: "WBE入門"
     url: "/wbe_101.html"

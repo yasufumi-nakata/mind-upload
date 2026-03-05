@@ -36,6 +36,9 @@ wiki_links:
   - label: "Wiki: 観測から推定へ"
     url: "/wiki/observation-to-estimation.html"
     description: "計測から ESI / DCM / SCM へ進む部分を、初歩から切り分けます。"
+  - label: "Wiki: 熱力学的接地の基本"
+    url: "/wiki/thermodynamic-grounding-basics.html"
+    description: "Landauer、散逸、NESS、EPR の入口を初歩から整理します。"
 recommended_pages:
   - label: "研究ノート"
     url: "/perspective.html"
@@ -68,7 +71,7 @@ recommended_pages:
 <div class="note-box">
 <strong>コピー問題で止まったとき</strong>
 <p>
-このページは理論フレームなので、前提をかなり圧縮しています。理論名の違いで止まった場合は <a href="wiki/consciousness-theory-map.html">Wiki: 意識理論マップ</a>、コピー問題で止まった場合は <a href="wiki/personhood-and-copy-problem.html">Wiki: 本人性とコピー問題</a>、計測から ESI / DCM / SCM へ降りる部分で止まった場合は <a href="wiki/observation-to-estimation.html">Wiki: 観測から推定へ</a> を先に読むと、この本文の狙いが追いやすくなります。
+このページは理論フレームなので、前提をかなり圧縮しています。理論名の違いで止まった場合は <a href="wiki/consciousness-theory-map.html">Wiki: 意識理論マップ</a>、コピー問題で止まった場合は <a href="wiki/personhood-and-copy-problem.html">Wiki: 本人性とコピー問題</a>、計測から ESI / DCM / SCM へ降りる部分で止まった場合は <a href="wiki/observation-to-estimation.html">Wiki: 観測から推定へ</a>、熱力学の語で止まった場合は <a href="wiki/thermodynamic-grounding-basics.html">Wiki: 熱力学的接地の基本</a> を先に読むと、この本文の狙いが追いやすくなります。
 </p>
 </div>
 

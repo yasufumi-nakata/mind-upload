@@ -32,6 +32,9 @@ wiki_links:
   - label: "Wiki: 検証基盤の基本"
     url: "/wiki/verification-basics.html"
     description: "達成条件や反証条件を先に置く理由を補います。"
+  - label: "Wiki: 熱力学的接地の基本"
+    url: "/wiki/thermodynamic-grounding-basics.html"
+    description: "Stream D で出る Landauer、散逸、NESS、EPR の入口を補います。"
 recommended_pages:
   - label: "貢献ガイド"
     url: "/issue.html"
@@ -64,6 +67,12 @@ recommended_pages:
 <strong>状態ラベルで迷ったとき</strong>
 <p>
 このページは「提案の整理表」なので、状態ラベルの意味を読み違えると全体を誤読しやすくなります。まずラベルの意味を噛み砕いて押さえたい場合は、<a href="wiki/proposal-status-reading.html">Wiki: 提案と状態ラベルの読み方</a> を先に見ると安全です。
+</p>
+</div>
+<div class="note-box">
+<strong>Stream D の熱力学語で止まったとき</strong>
+<p>
+Landauer、散逸、NESS、EPR は、このページでは提案の論点として短く出てきます。まず入口だけ初歩から整理したい場合は <a href="wiki/thermodynamic-grounding-basics.html">Wiki: 熱力学的接地の基本</a> を先にご覧ください。
 </p>
 </div>
 
