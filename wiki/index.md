@@ -113,6 +113,11 @@ recommended_pages:
 <td><a href="../index.html">スタートページ</a> / <a href="../verification.html">検証基盤</a></td>
 </tr>
 <tr>
+<td><strong>このサイトをどう使うかを 3 モードで知りたい</strong></td>
+<td><a href="site-usage-modes.html">このサイトの3つの使い方</a></td>
+<td><a href="../index.html">スタートページ</a> / <a href="../issue.html">貢献ガイド</a> / <a href="../content_hub.html">公開コンテンツ統合ハブ</a></td>
+</tr>
+<tr>
 <td><strong>公開ページの『分かっている / 分かっていない』をどう読むか知りたい</strong></td>
 <td><a href="known-unknown-and-status-reading.html">『分かっていること / 分かっていないこと』の読み方</a></td>
 <td><a href="../index.html">スタートページ</a> / <a href="../verification.html">検証基盤</a> / <a href="../content_hub.html">公開コンテンツ統合ハブ</a></td>

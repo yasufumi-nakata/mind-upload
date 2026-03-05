@@ -65,6 +65,12 @@ WBE 101、Perspective、Idea、Roadmap の違いだけを理論系に絞って�
 </p>
 </div>
 <div class="note-box">
+<strong>このサイト全体の使い方を目的別に整理したいとき</strong>
+<p>
+全体像をつかむ、初歩から学ぶ、実際に直す・参加する、の 3 モードでサイト全体を見たい場合は <a href="wiki/site-usage-modes.html">Wiki: このサイトの3つの使い方</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
 <strong>実務系ページの読み順で迷ったとき</strong>
 <p>
 Verification、Datasets、Hands-on、Casework、Proposals の違いだけを実務系に絞って整理したい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。公開ページ全体の役割差はここで、実務系だけの詳しい読み分けは wiki 側で補います。

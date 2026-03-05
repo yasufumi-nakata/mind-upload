@@ -80,6 +80,12 @@ FAQ は入口なので、次に Verification、WBE 101、Datasets、Glossary の
 </p>
 </div>
 <div class="note-box">
+<strong>このサイト全体をどう使うかで迷ったとき</strong>
+<p>
+FAQ を入口にして、そのあと全体像をつかむのか、wiki で学ぶのか、Issue に落とすのかを 3 モードで見たい場合は <a href="wiki/site-usage-modes.html">Wiki: このサイトの3つの使い方</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
 <strong>いまの疑問が L0〜L5 のどこかで迷ったとき</strong>
 <p>
 FAQ の質問は、L0 の実務から L5 の社会実装まで混ざっています。主張レベルごとに次のページを整理したい場合は <a href="wiki/claim-level-reading-routes.html">Wiki: L0〜L5ごとの読み進め方</a> をご覧ください。
