@@ -26,6 +26,9 @@ wiki_links:
   - label: "Wiki: ロードマップの読み方"
     url: "/wiki/roadmap-reading-guide.html"
     description: "P/M/R/I/V/D を初歩から追うための補助ページです。"
+  - label: "Wiki: 部分解決・探索段階・未整備の読み方"
+    url: "/wiki/progress-labels-and-open-problem-status.html"
+    description: "現状欄のラベルが、何の不足を指すかを整理します。"
   - label: "Wiki: 主張と証拠の読み方"
     url: "/wiki/claims-and-evidence.html"
     description: "なぜ前の層を飛ばして強い主張に行けないかを日常語で説明します。"
@@ -101,6 +104,12 @@ P/M/R/I/V/D の記号や依存関係を初歩から追いたい場合は、先�
 <strong>I1 / L3 の閉ループで止まったとき</strong>
 <p>
 リアルタイムに動くと言っても、遅延、ジッタ、end-to-end の戻り、安全停止をどう測るかで難しさが変わります。この入口を初歩から整理したい場合は <a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: 閉ループ・遅延・ジッタ・安全停止</a> を先にご覧ください。
+</p>
+</div>
+<div class="note-box">
+<strong>不足・未整備・部分解決の言葉で止まったとき</strong>
+<p>
+このページの本文では、各ノードの不足点を短い言葉で書いています。<strong>部分解決</strong>、<strong>探索段階</strong>、<strong>未標準化</strong>、<strong>未整備</strong> が何の不足を指すかを先に整理したい場合は <a href="wiki/progress-labels-and-open-problem-status.html">Wiki: 部分解決・探索段階・未整備の読み方</a> を先にご覧ください。
 </p>
 </div>
 

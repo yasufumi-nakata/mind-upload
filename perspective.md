@@ -27,6 +27,9 @@ wiki_links:
   - label: "Wiki: 意識理論マップ"
     url: "/wiki/consciousness-theory-map.html"
     description: "IIT、GNWT、FEP、PCI の違いと役割分担を初歩から整理します。"
+  - label: "Wiki: 部分解決・探索段階・未整備の読み方"
+    url: "/wiki/progress-labels-and-open-problem-status.html"
+    description: "このページで出る『不足』『未確定』『未解決』の読み方を整理します。"
   - label: "Wiki: 本人性とコピー問題"
     url: "/wiki/personhood-and-copy-problem.html"
     description: "このページで出る哲学寄りの論点を、初歩から整理します。"
@@ -78,6 +81,12 @@ recommended_pages:
 <strong>背景説明がほしいとき</strong>
 <p>
 理論名の違いで止まった場合は <a href="wiki/consciousness-theory-map.html">Wiki: 意識理論マップ</a>、コピー問題や本人性の話で止まった場合は <a href="wiki/personhood-and-copy-problem.html">Wiki: 本人性とコピー問題</a>、EEG の限界が気になる場合は <a href="wiki/eeg-preprocessing-and-qc.html">Wiki: EEG前処理とQC</a>、計測語とモデル語のつながりで止まった場合は <a href="wiki/measurement-and-modeling-terms.html">Wiki: 計測からモデル化までの用語ガイド</a>、不確実性や棄権の設計で止まった場合は <a href="wiki/uncertainty-confidence-and-abstention.html">Wiki: 不確実性・信頼区間・棄権</a>、マルチモーダル統合の意味で止まった場合は <a href="wiki/multimodal-integration-basics.html">Wiki: マルチモーダル統合の基本</a>、縦断評価やドリフトで止まった場合は <a href="wiki/state-trait-and-drift.html">Wiki: state・trait・ドリフト</a>、閉ループ実装の遅延や安全停止で止まった場合は <a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: 閉ループ・遅延・ジッタ・安全停止</a>、熱力学や散逸の話で止まった場合は <a href="wiki/thermodynamic-grounding-basics.html">Wiki: 熱力学的接地の基本</a> を先に見ると、本文へ戻りやすくなります。
+</p>
+</div>
+<div class="note-box">
+<strong>『不足』『未確定』『未解決』の重さを分けたいとき</strong>
+<p>
+このページは限界や反論を多く扱うため、何が<strong>部分解決</strong>で、何が<strong>探索段階</strong>で、何が<strong>未整備</strong>なのかを分けて読む必要があります。進み具合の言葉を 1 枚で整理したい場合は <a href="wiki/progress-labels-and-open-problem-status.html">Wiki: 部分解決・探索段階・未整備の読み方</a> を先にご覧ください。
 </p>
 </div>
 

@@ -27,6 +27,9 @@ wiki_links:
   - label: "Wiki: 検証基盤の基本"
     url: "/wiki/verification-basics.html"
     description: "標準、ベンチ、登録、監査がなぜ必要かを初歩から説明します。"
+  - label: "Wiki: 部分解決・探索段階・未整備の読み方"
+    url: "/wiki/progress-labels-and-open-problem-status.html"
+    description: "設計済み、未実装、不足、未整備の違いを整理します。"
   - label: "Wiki: 主張と証拠の読み方"
     url: "/wiki/claims-and-evidence.html"
     description: "L0〜L5 を証拠の強さで読み分ける練習用ページです。"
@@ -128,6 +131,13 @@ recommended_pages:
 </tr>
 </tbody>
 </table>
+
+<div class="note-box">
+<strong>『不足』『未実装』『未完成』の違いで止まったとき</strong>
+<p>
+このページでは、設計済みのもの、公開運用が未整備のもの、ベンチや監査が不足しているものを分けて書いています。進み具合の言葉を 1 枚で確認したい場合は <a href="wiki/progress-labels-and-open-problem-status.html">Wiki: 部分解決・探索段階・未整備の読み方</a> を先に見ると誤読しにくくなります。
+</p>
+</div>
 
 <section class="section" id="tldr">
 <h2 class="section-title">TL;DR（人間向け）</h2>

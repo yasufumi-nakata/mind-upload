@@ -123,6 +123,11 @@ recommended_pages:
 <td><a href="../research_harvest_50.html">文献地図</a></td>
 </tr>
 <tr>
+<td><strong>部分解決、探索段階、未整備の違いで止まる</strong></td>
+<td><a href="progress-labels-and-open-problem-status.html">部分解決・探索段階・未整備の読み方</a></td>
+<td><a href="../research_harvest_50.html">文献地図</a> / <a href="../tech_roadmap.html">技術ロードマップ</a></td>
+</tr>
+<tr>
 <td><strong>IIT / GNWT / FEP / PCI の違いで止まる</strong></td>
 <td><a href="consciousness-theory-map.html">意識理論マップ</a></td>
 <td><a href="../perspective.html">研究ノート</a> / <a href="../idea.html">理論フレーム</a></td>
@@ -295,6 +300,10 @@ recommended_pages:
 <tr>
 <td>U0-U15 を日常語で読み替えたい</td>
 <td><a href="u-number-guide.html">U番号ガイド</a></td>
+</tr>
+<tr>
+<td>部分解決、探索段階、未標準化、不足の違い</td>
+<td><a href="progress-labels-and-open-problem-status.html">部分解決・探索段階・未整備の読み方</a></td>
 </tr>
 <tr>
 <td>意識理論どうしの役割差</td>

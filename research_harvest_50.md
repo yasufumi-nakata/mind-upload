@@ -27,6 +27,9 @@ wiki_links:
   - label: "Wiki: U番号ガイド"
     url: "/wiki/u-number-guide.html"
     description: "U番号を日常語で読み替え、どの塊から見ればよいかを整理します。"
+  - label: "Wiki: 部分解決・探索段階・未整備の読み方"
+    url: "/wiki/progress-labels-and-open-problem-status.html"
+    description: "部分解決、探索段階、未標準化、不足などの意味を整理します。"
   - label: "Wiki: 文献と証拠ページの読み方"
     url: "/wiki/literature-and-evidence-reading.html"
     description: "論文アーカイブ、文献地図、提案ページの違いを初歩から整理します。"
@@ -90,6 +93,12 @@ recommended_pages:
 <strong>U番号で身構えたとき</strong>
 <p>
 U番号は難しい理論名ではなく、「未解決問題の名前札」です。どの U がどんな塊かを日常語で掴みたい場合は、<a href="wiki/u-number-guide.html">Wiki: U番号ガイド</a> を先に見てください。
+</p>
+</div>
+<div class="note-box">
+<strong>部分解決や探索段階の意味で止まったとき</strong>
+<p>
+このページの「現状」は、合否ではなく不足箇所の種類を短く示すラベルです。<a href="wiki/progress-labels-and-open-problem-status.html">Wiki: 部分解決・探索段階・未整備の読み方</a> を先に見ると、「何がまだ足りないのか」を落ち着いて読めます。
 </p>
 </div>
 
@@ -280,6 +289,12 @@ U番号は難しい理論名ではなく、「未解決問題の名前札」で�
 <strong>番号で身構えなくてよい理由</strong>
 <p>
 U番号は内部管理用のコードであり、暗記するためのものではありません。まずは上の「大きな問題群」で自分に近い塊を見つけ、その後に個別の U へ降りていけば十分です。
+</p>
+</div>
+<div class="note-box">
+<strong>現状ラベルを強弱ランキングとして読まないために</strong>
+<p>
+<strong>部分解決</strong> は一部の土台があること、<strong>探索段階</strong> は比較基盤がまだ弱いことを示します。<strong>未標準化</strong>、<strong>不足</strong>、<strong>未整備</strong> は、何が欠けているかの種類が違います。違いを 1 枚で見たい場合は <a href="wiki/progress-labels-and-open-problem-status.html">Wiki: 部分解決・探索段階・未整備の読み方</a> を参照してください。
 </p>
 </div>
 </section>
