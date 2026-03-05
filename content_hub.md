@@ -42,6 +42,61 @@ recommended_pages:
 </p>
 </div>
 
+<section class="section" id="quick-routing">
+<h2 class="section-title">追加したい内容から統合先を決める</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>追加したい内容</th>
+<th>まず足す先</th>
+<th>そのページに置く理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>「何を満たせば前進か」「何が出たら失敗か」の説明</td>
+<td><a href="verification.html">verification.html</a></td>
+<td>このサイトの合格条件と反証条件を一番厳密に置く主ページだからです。</td>
+</tr>
+<tr>
+<td>技術的な順番、どこから解くべきか、未解決問題の整理</td>
+<td><a href="tech_roadmap.html">tech_roadmap.html</a></td>
+<td>問題分解と到達条件を固定する場所であり、順序の話を散らさないためです。</td>
+</tr>
+<tr>
+<td>理論比較、批判点、哲学的前提の整理</td>
+<td><a href="perspective.html">perspective.html</a></td>
+<td>理論ごとの立場の違いを、検証可能性と結び付けて読むためです。</td>
+</tr>
+<tr>
+<td>論文の要約、未解決問題ごとの文献整理</td>
+<td><a href="research_harvest_50.html">research_harvest_50.html</a></td>
+<td>論点別の受け皿があり、既存の問題番号と結び付けて蓄積できるからです。</td>
+</tr>
+<tr>
+<td>「まず何を読むか」という入口の説明</td>
+<td><a href="index.html">index.html</a></td>
+<td>最初の導線を一本化し、同じ案内を複数ページに重複させないためです。</td>
+</tr>
+<tr>
+<td>用語の意味や、似た言葉の違い</td>
+<td><a href="glossary.html">glossary.html</a></td>
+<td>本文ページを重くしすぎず、言葉の足場を共通化できるからです。</td>
+</tr>
+<tr>
+<td>参加方法、Issueの状態、外部依存タスクの切り分け</td>
+<td><a href="issue.html">issue.html</a></td>
+<td>実行可能な変更と保留事項を分けて記録する専用ページだからです。</td>
+</tr>
+<tr>
+<td>実務手順、最小ループ、手を動かす順番</td>
+<td><a href="hands_on.html">hands_on.html</a></td>
+<td>読むだけでなく、実際に再現可能な作業へ落とすためのページだからです。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
 <section class="section" id="integration-map">
 <h2 class="section-title">統合マップ（公開ページ）</h2>
 <table class="data-table">

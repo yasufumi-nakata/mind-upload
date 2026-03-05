@@ -52,6 +52,46 @@ Mind-Uploadは、マインドアップロードを検証可能な研究へ進め
 </p>
 </div>
 
+<section class="section" id="first-contribution-guide">
+<h2 class="section-title">最初の一歩を決める早見表</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>こんなとき</th>
+<th>まずやること</th>
+<th>次に見るページ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文章が難しく、どこで止まったかは分かる</td>
+<td>「どの段落の、どの言葉で止まったか」を1つに絞って Issue に書く</td>
+<td><a href="glossary.html">Glossary</a> / <a href="faq.html">FAQ</a></td>
+</tr>
+<tr>
+<td>主張はあるが、合格条件や反証条件が見えない</td>
+<td>「何を満たせば前進と言えるか」「何が出たら否定されるか」を分けて指摘する</td>
+<td><a href="verification.html">Verification</a> / <a href="tech_roadmap.html">Roadmap</a></td>
+</tr>
+<tr>
+<td>新しい論文・記事・データを見つけた</td>
+<td>内容を要約する前に、既存ページのどこへ統合する話かを決める</td>
+<td><a href="research_harvest_50.html">Research Harvest</a> / <a href="datasets.html">Datasets</a></td>
+</tr>
+<tr>
+<td>小さくても今すぐ直せる誤字・リンク切れ・表記ゆれがある</td>
+<td>そのまま修正案を Pull Request にし、必要なら対象ページの意味も一文で補足する</td>
+<td><a href="content_hub.html">Content Hub</a></td>
+</tr>
+<tr>
+<td>実験、IRB、機材、法務が必要な話を進めたい</td>
+<td>このページでは「今すぐ実行できる準備作業」と「外部依存」を分けて整理する</td>
+<td><a href="collaborations.html">Collaborations</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+
 <!-- Contribution Methods -->
 <section class="section">
 <h2 class="section-title">How to Contribute</h2>

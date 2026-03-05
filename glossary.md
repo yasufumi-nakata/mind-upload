@@ -42,6 +42,51 @@ recommended_pages:
 </p>
 </div>
 
+<section class="section" id="where-to-look">
+<h2 class="section-title">迷った言葉の種類ごとの引き方</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>こういう言葉で止まったら</th>
+<th>まず見る節</th>
+<th>ここで分かること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mind-Upload、WBE、クレーム階段のような「このサイトの土台の言葉」</td>
+<td><a href="#core">コア概念</a></td>
+<td>このサイトが何を目標にし、どの強さの主張を区別しているかが分かります。</td>
+</tr>
+<tr>
+<td>decode、emulate、counterfactual のような「できることの違い」を示す言葉</td>
+<td><a href="#decode-emulate">Decode と Emulate</a></td>
+<td>観測の翻訳と、内部の仕組みを動かすことが別だと分かります。</td>
+</tr>
+<tr>
+<td>IIT、GNWT、FEP、PCI のような「意識理論や意識指標」の言葉</td>
+<td><a href="#consciousness-theories">意識理論</a></td>
+<td>どの理論や指標が、何を説明しようとしているかを短くつかめます。</td>
+</tr>
+<tr>
+<td>EEG、MEG、fMRI、ECoG、QC のような「計測方法」の言葉</td>
+<td><a href="#measurement">計測</a></td>
+<td>何を測る手法か、どこが得意でどこが弱いかを確認できます。</td>
+</tr>
+<tr>
+<td>逆問題、ESI、因果、同定可能性のような「推定やモデル化」の言葉</td>
+<td><a href="#modeling">モデル化</a></td>
+<td>観測から中身を推定するときに、なぜ一意に決まらないことがあるのかを追えます。</td>
+</tr>
+<tr>
+<td>BIDS、ベンチマーク、再現性、事前登録のような「研究運用」の言葉</td>
+<td><a href="#open-science">標準化・再現性</a></td>
+<td>比較可能な前進を作るために、なぜ運用ルールが必要かが分かります。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
 <section class="section" id="core">
 <h2 class="section-title">コア概念</h2>
 <table class="data-table">
