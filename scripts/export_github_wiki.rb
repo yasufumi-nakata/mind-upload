@@ -48,6 +48,10 @@ SIDEBAR_GROUPS = {
   ]
 }.freeze
 
+def grouped_sidebar_slugs
+  SIDEBAR_GROUPS.values.flatten.uniq
+end
+
 def load_page(path)
   raw = File.read(path)
   return [{}, raw] unless raw.start_with?("---\n")
@@ -206,10 +210,26 @@ end
 
 def build_sidebar(front_matters)
   lines = ["# Sidebar", ""]
+  rendered = []
 
   SIDEBAR_GROUPS.each do |heading, slugs|
     lines << "## #{heading}"
     slugs.each do |slug|
+      title = front_matters.fetch(slug, {})["title"] || slug
+      url = slug == "Home" ? GITHUB_WIKI : github_wiki_url(slug)
+      lines << "- [#{title}](#{url})"
+      rendered << slug
+    end
+    lines << ""
+  end
+
+  remaining = front_matters.keys.reject { |slug| rendered.include?(slug) }.sort_by do |slug|
+    [(slug == "Home" ? 0 : 1), (front_matters.fetch(slug, {})["title"] || slug).downcase]
+  end
+
+  unless remaining.empty?
+    lines << "## その他"
+    remaining.each do |slug|
       title = front_matters.fetch(slug, {})["title"] || slug
       url = slug == "Home" ? GITHUB_WIKI : github_wiki_url(slug)
       lines << "- [#{title}](#{url})"

@@ -5858,3 +5858,72 @@ recommended_pages:
 
 - 共同研究先タイプ別の保留解除後最終引き継ぎテンプレは `MindUpload-EEGDATA-FundMap-collab-hold-release-final-handoff.csv` を使う
 - 列は `counterpart_type`, `handoff_focus`, `opening_line`, `share_asset`, `handoff_line`, `decision_gate`, `note_line`, `avoid_point`
+
+## 203. 25トピック別の再挑戦後最終問い合わせ導線
+
+### 203.1 使い方
+
+- `inquiry_focus` は topic ごとに最後にどの問い合わせだけ受けるかの観点として使う
+- `inquiry_unit` は 外部に残す最小問い合わせ導線として使う
+- `keep_open_trigger` は その導線を残してよい条件として使う
+- `close_trigger` は その導線を閉じてよい条件として使う
+- `do_not_open` は 問い合わせ導線として開かない方がよい条件として使う
+- `note_line` は README や handoff 向けの一文として使う
+
+### 203.2 再挑戦後最終問い合わせ導線で守ること
+
+- 最終問い合わせ導線は `何でも聞いてよい窓口` ではなく `残る論点1つに返す導線` にする
+- inquiry unit は mailbox 1本か FAQ 1枚に削る
+- close trigger が立ったら 返せない問い合わせ導線を残さない
+- 高い理論主張へ飛びやすい topic は do_not_open を先に選ぶ
+
+### 203.3 詳細版を引く場所
+
+- 25トピック別の再挑戦後最終問い合わせ導線は `MindUpload-EEGDATA-FundMap-topic-retry-final-inquiry-window.csv` を使う
+- 列は `phase`, `topic`, `inquiry_focus`, `inquiry_unit`, `keep_open_trigger`, `close_trigger`, `do_not_open`, `note_line`, `avoid_point`
+
+## 204. 制度タイプ別の最終報告後窓口終了条件
+
+### 204.1 使い方
+
+- `window_stop_focus` は 最終報告後に問い合わせ窓口をいつ閉じてよいかの観点として使う
+- `stop_trigger` は 窓口終了へ進めてよい条件として使う
+- `keep_window_trigger` は まだ窓口を残す条件として使う
+- `do_not_stop` は その時点で窓口を閉じない方がよい条件として使う
+- `last_window_asset` は 最後に残す最小窓口導線として使う
+- `note_line` は README や内部メモの一文として使う
+
+### 204.2 最終報告後窓口終了条件で守ること
+
+- 窓口終了は `面倒だから閉じる` ではなく `返すべき問い合わせが止まった` で切る
+- last window asset は mailbox 1本か説明ページ 1 本まで削る
+- keep window が立つ間は 何に返す窓口かを明記する
+- do_not_stop 条件がある時は 見かけの整理だけで閉じない
+
+### 204.3 詳細版を引く場所
+
+- 制度タイプ別の最終報告後窓口終了条件は `MindUpload-EEGDATA-FundMap-publication-final-contact-stop.csv` を使う
+- 列は `support_type`, `window_stop_focus`, `stop_trigger`, `keep_window_trigger`, `do_not_stop`, `last_window_asset`, `note_line`, `avoid_point`
+
+## 205. 共同研究先タイプ別の保留解除後最終責務確認テンプレ
+
+### 205.1 使い方
+
+- `responsibility_focus` は 保留解除後に最後に何の責務分界を確認するかの論点として使う
+- `opening_line` は 確認文の最初の一文として使う
+- `share_asset` は 責務確認で添える最小成果物として使う
+- `responsibility_line` は 相手と自分の責務を切り分ける一文として使う
+- `decision_gate` は この確認の後に継続 / hold / close を決める条件として使う
+- `note_line` は 送信前チェックや内部メモの一文として使う
+
+### 205.2 保留解除後最終責務確認テンプレで守ること
+
+- 最終責務確認は `関係整理の挨拶` ではなく `誰が何を持つかを固定する文` にする
+- share asset は 1枚か1件から増やさない
+- responsibility line は 相手担当と自分担当が1文で切れる形にする
+- decision gate が曖昧なら 最終責務確認を送らない
+
+### 205.3 詳細版を引く場所
+
+- 共同研究先タイプ別の保留解除後最終責務確認テンプレは `MindUpload-EEGDATA-FundMap-collab-hold-release-final-responsibility.csv` を使う
+- 列は `counterpart_type`, `responsibility_focus`, `opening_line`, `share_asset`, `responsibility_line`, `decision_gate`, `note_line`, `avoid_point`

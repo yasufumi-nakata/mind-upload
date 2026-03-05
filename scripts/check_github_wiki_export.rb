@@ -6,6 +6,7 @@ require "pathname"
 ROOT = File.expand_path("..", __dir__)
 SRC_DIR = File.join(ROOT, "wiki")
 DEST_DIR = File.join(ROOT, "github-wiki-export")
+GITHUB_WIKI = "https://github.com/yasufumi-nakata/mind-upload/wiki"
 
 def source_pages
   Dir.glob(File.join(SRC_DIR, "**", "*.md")).sort
@@ -37,6 +38,11 @@ def extract_targets(text)
   text.scan(/href="([^"]+)"/) { |match| targets << match.first }
   text.scan(/href='([^']+)'/) { |match| targets << match.first }
   targets.uniq
+end
+
+def sidebar_target_for(page)
+  slug = File.basename(page, ".md")
+  slug == "Home" ? GITHUB_WIKI : "#{GITHUB_WIKI}/#{slug}"
 end
 
 def export_safe_target?(target)
@@ -81,6 +87,22 @@ exported_pages.each do |page|
 
     errors << "#{page}: non-export-safe relative link #{target}"
   end
+end
+
+sidebar_path = File.join(DEST_DIR, "_Sidebar.md")
+if File.exist?(sidebar_path)
+  sidebar_text = File.read(sidebar_path)
+  exported_pages.each do |page|
+    next unless page.end_with?(".md")
+    next if %w[_Sidebar.md _Footer.md].include?(page)
+
+    target = sidebar_target_for(page)
+    unless sidebar_text.include?("(#{target})")
+      errors << "Sidebar missing link for #{page}"
+    end
+  end
+else
+  errors << "Missing export sidebar: _Sidebar.md"
 end
 
 if errors.empty?
