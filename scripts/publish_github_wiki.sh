@@ -4,7 +4,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 EXPORT_DIR="$ROOT/github-wiki-export"
 REMOTE_BASE="https://github.com/yasufumi-nakata/mind-upload.wiki.git"
-WORK_ROOT="${GITHUB_WIKI_WORKDIR:-$ROOT/ignore/github-wiki-publish}"
+WORK_ROOT="$ROOT/ignore/github-wiki-publish"
 WORK_DIR="$WORK_ROOT/repo"
 ALLOW_SKIP="${WIKI_PUBLISH_ALLOW_SKIP:-0}"
 
@@ -28,6 +28,17 @@ if ! git ls-remote "$REMOTE_URL" >/dev/null 2>&1; then
 fi
 
 mkdir -p "$WORK_ROOT"
+ROOT_REAL="$(cd "$ROOT" && pwd -P)"
+WORK_ROOT_REAL="$(cd "$WORK_ROOT" && pwd -P)"
+
+case "$WORK_ROOT_REAL/" in
+  "$ROOT_REAL"/*) ;;
+  *)
+    echo "GitHub Wiki の作業先はリポジトリ内に固定しています: $WORK_ROOT_REAL"
+    exit 1
+    ;;
+esac
+
 cleanup() {
   rm -rf "$WORK_DIR"
   rmdir "$WORK_ROOT" 2>/dev/null || true
@@ -37,7 +48,8 @@ trap cleanup EXIT
 rm -rf "$WORK_DIR"
 
 git clone "$REMOTE_URL" "$WORK_DIR"
-rsync -a --delete --exclude ".git/" "$EXPORT_DIR"/ "$WORK_DIR"/
+rsync -a --delete --exclude ".git/" --exclude ".DS_Store" "$EXPORT_DIR"/ "$WORK_DIR"/
+find "$WORK_DIR" -name ".DS_Store" -delete
 
 cd "$WORK_DIR"
 
