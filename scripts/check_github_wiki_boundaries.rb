@@ -4,6 +4,7 @@
 ROOT = File.expand_path("..", __dir__)
 PUBLISH_SCRIPT = File.join(ROOT, "scripts", "publish_github_wiki.sh")
 VERIFY_SCRIPT = File.join(ROOT, "scripts", "verify_github_wiki_toolchain.sh")
+SYNC_SCRIPT = File.join(ROOT, "scripts", "sync_github_wiki_toolchain.sh")
 VERIFY_WORKFLOW = File.join(ROOT, ".github", "workflows", "validate-github-wiki-export.yml")
 SYNC_WORKFLOW = File.join(ROOT, ".github", "workflows", "sync-github-wiki.yml")
 README = File.join(ROOT, "README.md")
@@ -11,6 +12,7 @@ README = File.join(ROOT, "README.md")
 [
   PUBLISH_SCRIPT,
   VERIFY_SCRIPT,
+  SYNC_SCRIPT,
   VERIFY_WORKFLOW,
   SYNC_WORKFLOW,
   README
@@ -66,6 +68,16 @@ required_verify_script_snippets.each do |snippet|
   errors << "Missing verify script guard snippet: #{snippet}" unless verify_script_text.include?(snippet)
 end
 
+sync_script_text = File.read(SYNC_SCRIPT)
+required_sync_script_snippets = [
+  'run_step "verify" scripts/verify_github_wiki_toolchain.sh',
+  'run_step "publish" scripts/publish_github_wiki.sh'
+]
+
+required_sync_script_snippets.each do |snippet|
+  errors << "Missing sync script guard snippet: #{snippet}" unless sync_script_text.include?(snippet)
+end
+
 verify_workflow_text = File.read(VERIFY_WORKFLOW)
 required_verify_workflow_snippets = [
   'run: scripts/verify_github_wiki_toolchain.sh',
@@ -78,8 +90,8 @@ end
 
 sync_workflow_text = File.read(SYNC_WORKFLOW)
 required_sync_workflow_snippets = [
-  'run: scripts/verify_github_wiki_toolchain.sh',
-  'scripts/publish_github_wiki.sh'
+  'run: |',
+  'scripts/sync_github_wiki_toolchain.sh'
 ]
 
 required_sync_workflow_snippets.each do |snippet|
@@ -89,6 +101,7 @@ end
 readme_text = File.read(README)
 required_readme_snippets = [
   '`scripts/verify_github_wiki_toolchain.sh`',
+  '`scripts/sync_github_wiki_toolchain.sh`',
   '`scripts/check_github_wiki_boundaries.rb`',
   '`ignore/github-wiki-publish/`',
   'BUNDLE_PATH=vendor/bundle bundle exec jekyll build'

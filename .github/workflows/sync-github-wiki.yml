@@ -10,6 +10,7 @@ on:
       - "scripts/check_github_wiki_boundaries.rb"
       - "scripts/clean_github_wiki_noise.rb"
       - "scripts/verify_github_wiki_toolchain.sh"
+      - "scripts/sync_github_wiki_toolchain.sh"
       - "scripts/publish_github_wiki.sh"
       - ".github/workflows/sync-github-wiki.yml"
   workflow_dispatch:
@@ -29,10 +30,7 @@ jobs:
         with:
           ruby-version: "3.2"
 
-      - name: Verify GitHub Wiki toolchain
-        run: scripts/verify_github_wiki_toolchain.sh
-
-      - name: Publish GitHub Wiki export
+      - name: Sync GitHub Wiki toolchain
         env:
           ACTIONS_TOKEN: ${{ github.token }}
           GH_WIKI_TOKEN: ${{ secrets.GH_WIKI_TOKEN }}
@@ -43,4 +41,4 @@ jobs:
           else
             export GITHUB_TOKEN="${ACTIONS_TOKEN}"
           fi
-          scripts/publish_github_wiki.sh
+          scripts/sync_github_wiki_toolchain.sh
