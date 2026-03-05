@@ -255,6 +255,7 @@ recommended_pages:
 <li><a href="wiki/u-number-guide.html">wiki/u-number-guide.html</a></li>
 <li><a href="wiki/consciousness-theory-map.html">wiki/consciousness-theory-map.html</a></li>
 <li><a href="wiki/decode-vs-emulate.html">wiki/decode-vs-emulate.html</a></li>
+<li><a href="wiki/dataset-splits-and-leakage.html">wiki/dataset-splits-and-leakage.html</a></li>
 </ul>
 </div>
 </section>
@@ -281,6 +282,7 @@ recommended_pages:
 <li><a href="wiki/u-number-guide.html">U番号ガイド →</a></li>
 <li><a href="wiki/consciousness-theory-map.html">意識理論マップ →</a></li>
 <li><a href="wiki/decode-vs-emulate.html">Decode と Emulate →</a></li>
+<li><a href="wiki/dataset-splits-and-leakage.html">データ分割とデータリーク →</a></li>
 </ul>
 </div>
 </aside>

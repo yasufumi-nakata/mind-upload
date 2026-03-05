@@ -127,6 +127,11 @@ recommended_pages:
 <td><a href="decode-vs-emulate.html">Decode と Emulate</a></td>
 <td><a href="../wbe_101.html">WBE 101</a> / <a href="../faq.html">FAQ</a></td>
 </tr>
+<tr>
+<td><strong>train/test の分け方やリークで迷う</strong></td>
+<td><a href="dataset-splits-and-leakage.html">データ分割とデータリーク</a></td>
+<td><a href="../datasets.html">データ&ベンチ</a> / <a href="../hands_on.html">ハンズオン</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -240,6 +245,10 @@ recommended_pages:
 <td>観測の翻訳と生成モデルの違い</td>
 <td><a href="decode-vs-emulate.html">Decode と Emulate</a></td>
 </tr>
+<tr>
+<td>被験者分割、時間分割、リーク対策</td>
+<td><a href="dataset-splits-and-leakage.html">データ分割とデータリーク</a></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -262,6 +271,7 @@ recommended_pages:
 <li><a href="u-number-guide.html">U番号ガイド →</a></li>
 <li><a href="consciousness-theory-map.html">意識理論マップ →</a></li>
 <li><a href="decode-vs-emulate.html">Decode と Emulate →</a></li>
+<li><a href="dataset-splits-and-leakage.html">データ分割とデータリーク →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">

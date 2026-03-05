@@ -29,9 +29,9 @@ wiki_links:
   - label: "Wiki: EEGの基本"
     url: "/wiki/eeg-basics.html"
     description: "前処理や QC の意味を、信号の性質から確認できます。"
-  - label: "Wiki Home"
-    url: "/wiki/"
-    description: "学び方の全体マップに戻れます。"
+  - label: "Wiki: データ分割とリーク"
+    url: "/wiki/dataset-splits-and-leakage.html"
+    description: "train/test の分け方や、最初に避けるべきリークを整理できます。"
 recommended_pages:
   - label: "データ&ベンチ"
     url: "/datasets.html"
@@ -94,6 +94,10 @@ recommended_pages:
 <tr>
 <td><strong>ベースラインが決められない</strong></td>
 <td>難しいモデルより、単純でも再現しやすい1本を先に置く方が前に進みます。</td>
+</tr>
+<tr>
+<td><strong>分割ルールで迷う</strong></td>
+<td>まずは被験者単位で train/test を分け、test を最後まで触らない形を安全策にしてください。</td>
 </tr>
 <tr>
 <td><strong>共有前に不安になる</strong></td>
@@ -174,6 +178,13 @@ Validatorが通る＝研究として十分、ではありません。でも、�
 <strong>重要</strong>
 <p>
 「ベースラインがある」と「改善を主張できる」ようになります。ベースラインなしのSOTA議論は、ほぼノイズになります。
+</p>
+</div>
+
+<div class="note-box">
+<strong>ベースラインの前に、分割を固定する</strong>
+<p>
+ベースラインを置く前に、train/test の境界が曖昧だと数字全体が崩れます。特に公開 EEG データでは、同じ被験者や近い時間窓が両側に入るだけで結果が上振れしやすいため、<a href="wiki/dataset-splits-and-leakage.html">Wiki: データ分割とデータリーク</a> の最低ルールを先に確認してから評価を固定してください。
 </p>
 </div>
 </section>

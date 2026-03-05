@@ -170,6 +170,7 @@ A. 指標に勝つことが、現実の目的達成とズレる現象です（Go
 例えば、データリークや過学習でスコアだけ上がる、実装コストが高すぎて実運用されない、などがあります。
 Mind-Uploadでは、失敗例・リーク検査・モデルカードを含めて運用設計します。
 </p>
+<p><a href="wiki/dataset-splits-and-leakage.html">Wiki: データ分割とデータリーク</a> に、train/test の分け方で数字が壊れる典型例をまとめています。</p>
 </section>
 
 <section class="section" id="q6">

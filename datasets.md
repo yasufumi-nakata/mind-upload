@@ -29,9 +29,9 @@ wiki_links:
   - label: "Wiki: 検証基盤の基本"
     url: "/wiki/verification-basics.html"
     description: "なぜデータだけでなくベンチや登録が必要かを学べます。"
-  - label: "Wiki Home"
-    url: "/wiki/"
-    description: "初学者向けの読み順をまとめています。"
+  - label: "Wiki: データ分割とリーク"
+    url: "/wiki/dataset-splits-and-leakage.html"
+    description: "train/test の分け方と、よくあるリーク事故を初歩から説明します。"
 recommended_pages:
   - label: "EEG入門"
     url: "/eeg_101.html"
@@ -90,6 +90,13 @@ recommended_pages:
 <strong>最初のデータ選びで期待しすぎないために</strong>
 <p>
 スターターデータセットは、WBE の全課題を一気に解くためのものではありません。ここでまず得たいのは、<strong>再現可能な入力整理</strong>、<strong>QC の習慣</strong>、<strong>ベースライン比較</strong>です。本人性や因果同一性のような強い論点まで、この段階のデータだけで片付くわけではありません。
+</p>
+</div>
+
+<div class="note-box">
+<strong>精度より先に見ること</strong>
+<p>
+データセット紹介を見ると、つい「何% 出たか」に目が向きます。しかし最初に確認すべきなのは、<strong>train/test を何単位で分けたか</strong>、<strong>リーク検査をしたか</strong>、<strong>単純なベースラインと比べたか</strong>です。ここで迷う場合は <a href="wiki/dataset-splits-and-leakage.html">Wiki: データ分割とデータリーク</a> を先に読むと判断しやすくなります。
 </p>
 </div>
 

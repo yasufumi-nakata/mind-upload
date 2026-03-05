@@ -30,9 +30,9 @@ wiki_links:
   - label: "Wiki: 主張と証拠の読み方"
     url: "/wiki/claims-and-evidence.html"
     description: "L0〜L5 を証拠の強さで読み分ける練習用ページです。"
-  - label: "Wiki: WBEの基本"
-    url: "/wiki/mind-upload-basics.html"
-    description: "このページの前提になる WBE 全体像を整理します。"
+  - label: "Wiki: データ分割とリーク"
+    url: "/wiki/dataset-splits-and-leakage.html"
+    description: "精度を見る前に確認すべき、分割単位とリーク事故を整理します。"
 recommended_pages:
   - label: "技術ロードマップ"
     url: "/tech_roadmap.html"
@@ -174,6 +174,13 @@ recommended_pages:
 </tbody>
 </table>
 </section>
+
+<div class="note-box">
+<strong>スコアを見る前に 3 点だけ確認する</strong>
+<p>
+L1 の精度や L2 の予測一致を見る前に、<strong>何単位で train/test を分けたか</strong>、<strong>前処理や正規化が test を見ていないか</strong>、<strong>test をモデル選択に使っていないか</strong>を確認してください。ここが曖昧だと、主張レベル以前に評価の土台が崩れます。初歩から確認したい場合は <a href="wiki/dataset-splits-and-leakage.html">Wiki: データ分割とデータリーク</a> が最短です。
+</p>
+</div>
 
 <section class="section" id="non-goals">
 <h2 class="section-title">これは何ではないか（誤解防止）</h2>
