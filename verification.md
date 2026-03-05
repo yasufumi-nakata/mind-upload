@@ -162,6 +162,12 @@ Verification は勝利条件と反証条件の設計図です。入口データ�
 EEG 入門から公開データ選定、Hands-on での L0 作成を経て、このページで何が満たせたかを確認するまでの流れを一本道で見たい場合は <a href="wiki/eeg-to-l0-route.html">Wiki: EEGからL0までの一本道</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>このページのあとに次の1ページを決めたいとき</strong>
+<p>
+Verification を読んだあとに、L0 実装へ戻るのか、L2 の介入検証へ進むのか、L3 の閉ループを見るのか、L4 の本人性を見るのかを 1 枚で整理したい場合は <a href="wiki/verification-next-routes.html">Wiki: Verificationのあとに進む4つの道</a> をご覧ください。
+</p>
+</div>
 
 <section class="section" id="tldr">
 <h2 class="section-title">TL;DR（人間向け）</h2>

@@ -91,6 +91,12 @@ FAQ の質問は、L0 の実務から L5 の社会実装まで混ざっていま
 FAQ のあとに理論系ページだけへ進みたい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a>、Verification や Datasets など実務系ページへ進みたい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>Verificationを読んだあとに次の1ページで迷ったとき</strong>
+<p>
+FAQ から Verification へ進んだあとに、L0 実装へ戻るのか、L2・L3・L4 のどれを先に見るのかで迷う場合は <a href="wiki/verification-next-routes.html">Wiki: Verificationのあとに進む4つの道</a> をご覧ください。
+</p>
+</div>
 
 <table class="data-table">
 <thead>

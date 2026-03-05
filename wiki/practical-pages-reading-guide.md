@@ -60,6 +60,12 @@ recommended_pages:
 実務ページの役割差よりも、EEG 入門から Datasets、Hands-on、Verification までの順番をそのまま辿りたい場合は <a href="eeg-to-l0-route.html">EEGからL0までの一本道</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>Verificationのあとに何を見るかだけ決めたいとき</strong>
+<p>
+実務ページの役割差を理解したあとで、Verification から次にどの路線へ進むかだけを 1 枚で見たい場合は <a href="verification-next-routes.html">Verificationのあとに進む4つの道</a> をご覧ください。
+</p>
+</div>
 
 <section class="section" id="role-diff">
 <h2 class="section-title">実務系ページの役割差</h2>

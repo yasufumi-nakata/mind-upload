@@ -63,6 +63,12 @@ recommended_pages:
 全体像、理論、実務、文献、参加のどこから入るかで最初の 3〜4 ページだけ先に固定したい場合は <a href="first-30-minutes-by-goal.html">目的別の最初の30分ルート</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>Verificationを読んだあとにどこへ進むか迷ったとき</strong>
+<p>
+公開ページ全体の役割差は分かったが、Verification のあとに L0 実装、L2 検証、L3 閉ループ、L4 本人性のどこへ進むかを 1 枚で見たい場合は <a href="verification-next-routes.html">Verificationのあとに進む4つの道</a> をご覧ください。
+</p>
+</div>
 
 <section class="section" id="five-kinds">
 <h2 class="section-title">公開ページの役割差</h2>

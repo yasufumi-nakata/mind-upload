@@ -133,6 +133,11 @@ recommended_pages:
 <td><a href="../eeg_101.html">EEG入門</a> / <a href="../datasets.html">データ&ベンチ</a> / <a href="../hands_on.html">ハンズオン</a> / <a href="../verification.html">検証基盤</a></td>
 </tr>
 <tr>
+<td><strong>Verificationのあとに次の1ページを決めたい</strong></td>
+<td><a href="verification-next-routes.html">Verificationのあとに進む4つの道</a></td>
+<td><a href="../verification.html">検証基盤</a> / <a href="../hands_on.html">ハンズオン</a> / <a href="../tech_roadmap.html">技術ロードマップ</a> / <a href="../wbe_101.html">WBE入門</a></td>
+</tr>
+<tr>
 <td><strong>Scopus、arXiv、Review、source_logged の違いで止まる</strong></td>
 <td><a href="paper-source-types-and-evidence-status.html">文献のソース種別と状態ラベルの読み方</a></td>
 <td><a href="../mind_uploading_papers.html">論文集</a> / <a href="../research_harvest_50.html">文献地図</a></td>
