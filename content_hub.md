@@ -259,6 +259,7 @@ recommended_pages:
 <li><a href="wiki/verification-example-walkthrough.html">wiki/verification-example-walkthrough.html</a></li>
 <li><a href="wiki/measurement-and-modeling-terms.html">wiki/measurement-and-modeling-terms.html</a></li>
 <li><a href="wiki/event-sync-and-measurement-logs.html">wiki/event-sync-and-measurement-logs.html</a></li>
+<li><a href="wiki/observation-to-estimation.html">wiki/observation-to-estimation.html</a></li>
 </ul>
 </div>
 </section>
@@ -289,6 +290,7 @@ recommended_pages:
 <li><a href="wiki/verification-example-walkthrough.html">Verification 具体例 →</a></li>
 <li><a href="wiki/measurement-and-modeling-terms.html">計測からモデル化まで →</a></li>
 <li><a href="wiki/event-sync-and-measurement-logs.html">イベント同期と観測ログ →</a></li>
+<li><a href="wiki/observation-to-estimation.html">観測から推定へ →</a></li>
 </ul>
 </div>
 </aside>

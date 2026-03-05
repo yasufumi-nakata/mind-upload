@@ -33,6 +33,9 @@ wiki_links:
   - label: "Wiki: データ分割とリーク"
     url: "/wiki/dataset-splits-and-leakage.html"
     description: "精度を見る前に確認すべき、分割単位とリーク事故を整理します。"
+  - label: "Wiki: 観測から推定へ"
+    url: "/wiki/observation-to-estimation.html"
+    description: "ESI、DCM、SCM、因果同値類を、観測と推定の違いから整理します。"
 recommended_pages:
   - label: "技術ロードマップ"
     url: "/tech_roadmap.html"
@@ -315,6 +318,13 @@ L1 の精度や L2 の予測一致を見る前に、<strong>何単位で train/t
 </p>
 </div>
 </section>
+
+<div class="note-box">
+<strong>不確実性や因果同値類で止まったとき</strong>
+<p>
+Verification では、観測信号からの推定結果をそのまま唯一の真実として扱いません。逆問題、ESI、DCM、SCM、因果同値類の関係を先に整理したい場合は <a href="wiki/observation-to-estimation.html">Wiki: 観測から推定へ</a> が補講になります。
+</p>
+</div>
 
 <section class="section" id="casework">
 <h2 class="section-title">歴史のケースワークから借りる設計</h2>

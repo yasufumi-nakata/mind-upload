@@ -147,6 +147,11 @@ recommended_pages:
 <td><a href="event-sync-and-measurement-logs.html">イベント同期と観測ログの基本</a></td>
 <td><a href="../datasets.html">データ&ベンチ</a> / <a href="../hands_on.html">ハンズオン</a></td>
 </tr>
+<tr>
+<td><strong>逆問題、ESI、DCM、SCM の違いで止まる</strong></td>
+<td><a href="observation-to-estimation.html">観測から推定へ</a></td>
+<td><a href="../eeg_101.html">EEG入門</a> / <a href="../verification.html">検証基盤</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -276,6 +281,10 @@ recommended_pages:
 <td>events.tsv、刺激ログ、同期、bad segment の基本</td>
 <td><a href="event-sync-and-measurement-logs.html">イベント同期と観測ログの基本</a></td>
 </tr>
+<tr>
+<td>順問題、逆問題、ESI、DCM、SCM、因果同値類</td>
+<td><a href="observation-to-estimation.html">観測から推定へ</a></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -302,6 +311,7 @@ recommended_pages:
 <li><a href="verification-example-walkthrough.html">Verification の具体例ウォークスルー →</a></li>
 <li><a href="measurement-and-modeling-terms.html">計測からモデル化までの用語ガイド →</a></li>
 <li><a href="event-sync-and-measurement-logs.html">イベント同期と観測ログの基本 →</a></li>
+<li><a href="observation-to-estimation.html">観測から推定へ →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
