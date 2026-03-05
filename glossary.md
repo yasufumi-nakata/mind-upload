@@ -26,12 +26,12 @@ wiki_links:
   - label: "Wiki: WBEの基本"
     url: "/wiki/mind-upload-basics.html"
     description: "用語が使われる全体像を先に見たいときの入口です。"
+  - label: "Wiki: 意識理論マップ"
+    url: "/wiki/consciousness-theory-map.html"
+    description: "IIT、GNWT、FEP、PCI の違いを表で整理した補助ページです。"
   - label: "Wiki: EEGの基本"
     url: "/wiki/eeg-basics.html"
     description: "EEG 関連語を、測定の流れに沿って理解したい人向けです。"
-  - label: "Wiki Home"
-    url: "/wiki/"
-    description: "初歩から順に読むための学習マップです。"
 recommended_pages:
   - label: "WBE入門"
     url: "/wbe_101.html"
@@ -108,6 +108,13 @@ recommended_pages:
 <strong>読み方のコツ</strong>
 <p>
 似た言葉が並んだときは、まず「何を観測している言葉か」「その言葉だけで強い主張をしていないか」「条件を変えたときの反応まで含むか」を見ると混同しにくくなります。特に、相関の説明をそのまま因果や本人性の説明へ広げないことが重要です。
+</p>
+</div>
+
+<div class="note-box">
+<strong>理論名が並んで苦しくなったとき</strong>
+<p>
+IIT、GNWT、FEP、PCI の違いは、短い定義だけでは頭に入りにくいことがあります。その場合は <a href="wiki/consciousness-theory-map.html">Wiki: 意識理論マップ</a> を先に見て、何を説明したい理論なのかを表で掴んでから戻ると読みやすくなります。
 </p>
 </div>
 

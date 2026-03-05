@@ -24,6 +24,9 @@ unknown_points:
   - "どこまで多モダリティ統合で EEG の限界を埋められるかは研究途中です。"
   - "本人性や現象的意識の最終判定を、理論と工学でどう接続するかは未解決です。"
 wiki_links:
+  - label: "Wiki: 意識理論マップ"
+    url: "/wiki/consciousness-theory-map.html"
+    description: "IIT、GNWT、FEP、PCI の違いと役割分担を初歩から整理します。"
   - label: "Wiki: 本人性とコピー問題"
     url: "/wiki/personhood-and-copy-problem.html"
     description: "このページで出る哲学寄りの論点を、初歩から整理します。"
@@ -68,7 +71,7 @@ recommended_pages:
 <div class="note-box">
 <strong>背景説明がほしいとき</strong>
 <p>
-コピー問題や本人性の話で止まった場合は <a href="wiki/personhood-and-copy-problem.html">Wiki: 本人性とコピー問題</a>、EEG の限界が気になる場合は <a href="wiki/eeg-preprocessing-and-qc.html">Wiki: EEG前処理とQC</a> を先に見ると、本文へ戻りやすくなります。
+理論名の違いで止まった場合は <a href="wiki/consciousness-theory-map.html">Wiki: 意識理論マップ</a>、コピー問題や本人性の話で止まった場合は <a href="wiki/personhood-and-copy-problem.html">Wiki: 本人性とコピー問題</a>、EEG の限界が気になる場合は <a href="wiki/eeg-preprocessing-and-qc.html">Wiki: EEG前処理とQC</a> を先に見ると、本文へ戻りやすくなります。
 </p>
 </div>
 

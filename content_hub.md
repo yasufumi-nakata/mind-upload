@@ -253,6 +253,8 @@ recommended_pages:
 <li><a href="wiki/literature-and-evidence-reading.html">wiki/literature-and-evidence-reading.html</a></li>
 <li><a href="wiki/proposal-status-reading.html">wiki/proposal-status-reading.html</a></li>
 <li><a href="wiki/u-number-guide.html">wiki/u-number-guide.html</a></li>
+<li><a href="wiki/consciousness-theory-map.html">wiki/consciousness-theory-map.html</a></li>
+<li><a href="wiki/decode-vs-emulate.html">wiki/decode-vs-emulate.html</a></li>
 </ul>
 </div>
 </section>
@@ -277,6 +279,8 @@ recommended_pages:
 <li><a href="wiki/literature-and-evidence-reading.html">文献ページの読み方 →</a></li>
 <li><a href="wiki/proposal-status-reading.html">提案ラベルの読み方 →</a></li>
 <li><a href="wiki/u-number-guide.html">U番号ガイド →</a></li>
+<li><a href="wiki/consciousness-theory-map.html">意識理論マップ →</a></li>
+<li><a href="wiki/decode-vs-emulate.html">Decode と Emulate →</a></li>
 </ul>
 </div>
 </aside>

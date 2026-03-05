@@ -117,6 +117,16 @@ recommended_pages:
 <td><a href="u-number-guide.html">U番号ガイド</a></td>
 <td><a href="../research_harvest_50.html">文献地図</a></td>
 </tr>
+<tr>
+<td><strong>IIT / GNWT / FEP / PCI の違いで止まる</strong></td>
+<td><a href="consciousness-theory-map.html">意識理論マップ</a></td>
+<td><a href="../perspective.html">研究ノート</a> / <a href="../idea.html">理論フレーム</a></td>
+</tr>
+<tr>
+<td><strong>decode と emulate の違いが曖昧</strong></td>
+<td><a href="decode-vs-emulate.html">Decode と Emulate</a></td>
+<td><a href="../wbe_101.html">WBE 101</a> / <a href="../faq.html">FAQ</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -222,6 +232,14 @@ recommended_pages:
 <td>U0-U15 を日常語で読み替えたい</td>
 <td><a href="u-number-guide.html">U番号ガイド</a></td>
 </tr>
+<tr>
+<td>意識理論どうしの役割差</td>
+<td><a href="consciousness-theory-map.html">意識理論マップ</a></td>
+</tr>
+<tr>
+<td>観測の翻訳と生成モデルの違い</td>
+<td><a href="decode-vs-emulate.html">Decode と Emulate</a></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -242,6 +260,8 @@ recommended_pages:
 <li><a href="literature-and-evidence-reading.html">文献と証拠ページの読み方 →</a></li>
 <li><a href="proposal-status-reading.html">提案と状態ラベルの読み方 →</a></li>
 <li><a href="u-number-guide.html">U番号ガイド →</a></li>
+<li><a href="consciousness-theory-map.html">意識理論マップ →</a></li>
+<li><a href="decode-vs-emulate.html">Decode と Emulate →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">

@@ -24,12 +24,12 @@ unknown_points:
   - "どの熱力学指標や因果指標が本人性の十分条件になるかは未解決です。"
   - "動的プロセスの移行を、どこまで実験的に検証できるかは今後の課題です。"
 wiki_links:
+  - label: "Wiki: 意識理論マップ"
+    url: "/wiki/consciousness-theory-map.html"
+    description: "IIT、GNWT、FEP、PCI をどう使い分けるかを初歩から整理します。"
   - label: "Wiki: 本人性とコピー問題"
     url: "/wiki/personhood-and-copy-problem.html"
     description: "『コピー』と『移行』の違いを日常語から整理します。"
-  - label: "Wiki: WBEの基本"
-    url: "/wiki/mind-upload-basics.html"
-    description: "理論ページに入る前の全体像を確認できます。"
   - label: "Wiki: ロードマップの読み方"
     url: "/wiki/roadmap-reading-guide.html"
     description: "この理論が、どの工程の設計条件に落ちるのかを見失いにくくします。"
@@ -65,7 +65,7 @@ recommended_pages:
 <div class="note-box">
 <strong>コピー問題で止まったとき</strong>
 <p>
-このページは理論フレームなので、前提をかなり圧縮しています。まず疑問をほどきたい場合は <a href="wiki/personhood-and-copy-problem.html">Wiki: 本人性とコピー問題</a> を先に読むと、この本文の狙いが追いやすくなります。
+このページは理論フレームなので、前提をかなり圧縮しています。理論名の違いで止まった場合は <a href="wiki/consciousness-theory-map.html">Wiki: 意識理論マップ</a>、コピー問題で止まった場合は <a href="wiki/personhood-and-copy-problem.html">Wiki: 本人性とコピー問題</a> を先に読むと、この本文の狙いが追いやすくなります。
 </p>
 </div>
 

@@ -26,12 +26,12 @@ wiki_links:
   - label: "Wiki: 主張と証拠の読み方"
     url: "/wiki/claims-and-evidence.html"
     description: "FAQ の短い答えを、もう一段ていねいに学びたい人向けです。"
-  - label: "Wiki: WBEの基本"
-    url: "/wiki/mind-upload-basics.html"
-    description: "最初の疑問を、分野全体の地図から理解したいときに向きます。"
-  - label: "Wiki Home"
-    url: "/wiki/"
-    description: "疑問の種類ごとの読み順をまとめています。"
+  - label: "Wiki: Decode と Emulate"
+    url: "/wiki/decode-vs-emulate.html"
+    description: "Q2 で出る違いを、日常例でもう一段噛み砕きます。"
+  - label: "Wiki: 意識理論マップ"
+    url: "/wiki/consciousness-theory-map.html"
+    description: "Q8 の IIT と GNWT の位置づけを、表で整理します。"
 recommended_pages:
   - label: "検証基盤"
     url: "/verification.html"
@@ -125,7 +125,7 @@ Mind-Uploadの立場は、「派手な読み出し」を否定するのではな
 A. decodeは“観測を翻訳する”ことで、emulateは“内部状態が時間発展し、介入に反応し、出力を生成する”ことです。
 WBEに近づくには、後者を評価できるベンチマーク（介入・反事実・閉ループ）へ寄せる必要があります。
 </p>
-<p><a href="wbe_101.html">入門（WBE 101）</a>と<a href="glossary.html">用語集</a>が近道です。</p>
+<p><a href="wbe_101.html">入門（WBE 101）</a>と<a href="glossary.html">用語集</a>に加え、<a href="wiki/decode-vs-emulate.html">Wiki: Decode と Emulate</a> も近道です。</p>
 </section>
 
 <section class="section" id="q2b">
@@ -209,6 +209,7 @@ A. 2025年のCogitate Consortium（敵対的共同研究）が、IITとGNWTの�
 GNWTの前頭前野イグニッションは報告動作と分離困難でした。
 Mind-Uploadではこの結果を受け、特定理論への固執を避け、PCI等の理論非依存な経験的指標を中心に据えています。
 </p>
+<p>理論の違い自体を先に整理したい場合は、<a href="wiki/consciousness-theory-map.html">Wiki: 意識理論マップ</a> を見ると読みやすくなります。</p>
 </section>
 
 <section class="section" id="q9">
