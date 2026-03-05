@@ -15,6 +15,23 @@ page_highlights:
   - "L0に近いものから順に、連携の優先順位を置いています。"
   - "各候補に対して、目標・最小成果物・最初の一歩を分けて書いています。"
   - "『今サイト内でできること』と『相手先の合意が必要なこと』を混同しないためのページです。"
+known_points:
+  - "L0 に近い連携から優先する、という順序はかなり明確です。"
+  - "外部候補の有名さより、標準・公開データ・再現性へどれだけ近いかを重視します。"
+  - "連携前に、こちら側で内製できる準備物をそろえる方が成功しやすいです。"
+unknown_points:
+  - "各候補先が実際に合意するか、どの条件で動けるかは未確定です。"
+  - "資金、共同研究、制度連携の成立時期は、このページだけでは保証できません。"
+wiki_links:
+  - label: "Wiki: 検証基盤の基本"
+    url: "/wiki/verification-basics.html"
+    description: "なぜ標準や成果物の準備が先に要るのかを理解できます。"
+  - label: "Wiki: ロードマップの読み方"
+    url: "/wiki/roadmap-reading-guide.html"
+    description: "どの外部連携が、どの工程を埋めるのかを見失いにくくします。"
+  - label: "Wiki Home"
+    url: "/wiki/"
+    description: "学習用の基礎ページ全体へ戻れます。"
 recommended_pages:
   - label: "検証基盤"
     url: "/verification.html"
@@ -48,6 +65,13 @@ recommended_pages:
 <strong>読み方の前提</strong>
 <p>
 このページは「今すぐこちらだけで完了できる作業」と「相手先との合意が必要な作業」を分けるための整理表でもあります。したがって、ここで重要なのは候補名だけでなく、<strong>最初のステップが外部依存かどうか</strong>を確認することです。
+</p>
+</div>
+
+<div class="note-box">
+<strong>先に内製の意味を知りたいとき</strong>
+<p>
+連携の話だけ見ると動き方が見えにくい場合は、先に <a href="wiki/verification-basics.html">Wiki: 検証基盤の基本</a> を見てください。何をこちらで先に作るべきかが分かると、候補表の意味が読みやすくなります。
 </p>
 </div>
 

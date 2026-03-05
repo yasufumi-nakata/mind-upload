@@ -15,6 +15,24 @@ page_highlights:
   - "理論の紹介だけで終わらず、実装へ落としたときの制約まで一緒に追います。"
   - "強い主張ほど、反証条件や代替説明を並べて確認します。"
   - "長文ですが、導入と注意書きだけでも全体の立場が分かる構成にしています。"
+known_points:
+  - "主要理論のどれも、現時点では単独で決定打になっていません。"
+  - "EEG 単体には逆問題や空間分解能の限界があり、強い主張の土台としては不足があります。"
+  - "因果的摂動、追試可能性、代替説明の排除を抜いた強い主張は危うい、という点はかなりはっきりしています。"
+unknown_points:
+  - "どの理論の組み合わせが最終的に十分条件になるかは未確定です。"
+  - "どこまで多モダリティ統合で EEG の限界を埋められるかは研究途中です。"
+  - "本人性や現象的意識の最終判定を、理論と工学でどう接続するかは未解決です。"
+wiki_links:
+  - label: "Wiki: 本人性とコピー問題"
+    url: "/wiki/personhood-and-copy-problem.html"
+    description: "このページで出る哲学寄りの論点を、初歩から整理します。"
+  - label: "Wiki: EEG前処理とQC"
+    url: "/wiki/eeg-preprocessing-and-qc.html"
+    description: "EEG の限界がどこから来るのかを、処理の流れから説明します。"
+  - label: "Wiki: 主張と証拠の読み方"
+    url: "/wiki/claims-and-evidence.html"
+    description: "理論の話を、どの強さの主張かで整理しながら読む補助ページです。"
 recommended_pages:
   - label: "検証基盤"
     url: "/verification.html"
@@ -44,6 +62,13 @@ recommended_pages:
 <strong>新しく来た人へ</strong>
 <p>
 このページは長い研究ノートです。まずは <a href="wbe_101.html">WBE入門</a> と <a href="eeg_101.html">EEG入門</a>、必要なら <a href="glossary.html">用語集</a> を先に読むと迷子になりにくいです。
+</p>
+</div>
+
+<div class="note-box">
+<strong>背景説明がほしいとき</strong>
+<p>
+コピー問題や本人性の話で止まった場合は <a href="wiki/personhood-and-copy-problem.html">Wiki: 本人性とコピー問題</a>、EEG の限界が気になる場合は <a href="wiki/eeg-preprocessing-and-qc.html">Wiki: EEG前処理とQC</a> を先に見ると、本文へ戻りやすくなります。
 </p>
 </div>
 

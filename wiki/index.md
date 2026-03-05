@@ -87,6 +87,21 @@ recommended_pages:
 <td><a href="verification-basics.html">検証基盤の基本</a></td>
 <td><a href="../verification.html">Verification</a></td>
 </tr>
+<tr>
+<td><strong>ロードマップの記号が多くて迷う</strong></td>
+<td><a href="roadmap-reading-guide.html">ロードマップの読み方</a></td>
+<td><a href="../tech_roadmap.html">技術ロードマップ</a></td>
+</tr>
+<tr>
+<td><strong>本人性やコピー問題を整理したい</strong></td>
+<td><a href="personhood-and-copy-problem.html">本人性とコピー問題</a></td>
+<td><a href="../idea.html">理論フレーム</a></td>
+</tr>
+<tr>
+<td><strong>EEGの前処理やQCを実務目線で知りたい</strong></td>
+<td><a href="eeg-preprocessing-and-qc.html">EEG前処理とQC</a></td>
+<td><a href="../hands_on.html">ハンズオン</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -158,6 +173,32 @@ recommended_pages:
 </div>
 </section>
 
+<section class="section" id="deep-dives">
+<h2 class="section-title">その次の詳説</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>詳しく知りたいこと</th>
+<th>読む wiki</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ロードマップの記号と依存関係</td>
+<td><a href="roadmap-reading-guide.html">ロードマップの読み方</a></td>
+</tr>
+<tr>
+<td>本人性、コピー、連続的移行</td>
+<td><a href="personhood-and-copy-problem.html">本人性とコピー問題</a></td>
+</tr>
+<tr>
+<td>EEG の前処理、QC、ログ</td>
+<td><a href="eeg-preprocessing-and-qc.html">EEG前処理とQC</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+
 </article>
 
 <aside class="sidebar-column">
@@ -168,6 +209,9 @@ recommended_pages:
 <li><a href="claims-and-evidence.html">主張と証拠の読み方 →</a></li>
 <li><a href="eeg-basics.html">EEGの基本 →</a></li>
 <li><a href="verification-basics.html">検証基盤の基本 →</a></li>
+<li><a href="roadmap-reading-guide.html">ロードマップの読み方 →</a></li>
+<li><a href="personhood-and-copy-problem.html">本人性とコピー問題 →</a></li>
+<li><a href="eeg-preprocessing-and-qc.html">EEG前処理とQC →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">

@@ -26,12 +26,12 @@ wiki_links:
   - label: "Wiki: WBEの基本"
     url: "/wiki/mind-upload-basics.html"
     description: "EEG が WBE 全体のどこに入るかを先に見たい場合はこちらです。"
+  - label: "Wiki: EEG前処理とQC"
+    url: "/wiki/eeg-preprocessing-and-qc.html"
+    description: "前処理やログの取り方を、実務に寄せて整理します。"
   - label: "Wiki: 検証基盤の基本"
     url: "/wiki/verification-basics.html"
     description: "なぜ EEG でも標準や QC が必要かを理解できます。"
-  - label: "Wiki Home"
-    url: "/wiki/"
-    description: "他の基礎ページへ戻れます。"
 recommended_pages:
   - label: "EEG入門"
     url: "/eeg_101.html"
@@ -129,6 +129,12 @@ EEG は WBE をいきなり完成させる装置ではありません。しか�
 <p>EEG を含む研究を、主張の強さと証拠で読み分けるにはこちらです。</p>
 <a href="claims-and-evidence.html">主張と証拠の読み方へ →</a>
 </div>
+
+<div class="cta-box">
+<h4>Practical Next</h4>
+<p>参照法、フィルタ、アーティファクト処理で何が変わるかを実務寄りに見たい場合はこちらです。</p>
+<a href="eeg-preprocessing-and-qc.html">EEG前処理とQCへ →</a>
+</div>
 </section>
 
 </article>
@@ -138,6 +144,7 @@ EEG は WBE をいきなり完成させる装置ではありません。しか�
 <h4>Related Wiki</h4>
 <ul>
 <li><a href="mind-upload-basics.html">WBEの基本 →</a></li>
+<li><a href="eeg-preprocessing-and-qc.html">EEG前処理とQC →</a></li>
 <li><a href="verification-basics.html">検証基盤の基本 →</a></li>
 <li><a href="claims-and-evidence.html">主張と証拠の読み方 →</a></li>
 </ul>

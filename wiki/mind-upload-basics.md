@@ -27,12 +27,12 @@ wiki_links:
   - label: "Wiki: 主張と証拠の読み方"
     url: "/wiki/claims-and-evidence.html"
     description: "この全体像を、ニュースや研究発表の読み方に落とします。"
+  - label: "Wiki: 本人性とコピー問題"
+    url: "/wiki/personhood-and-copy-problem.html"
+    description: "『コピー』と『移行』の違いをもう一段ていねいに整理します。"
   - label: "Wiki: 検証基盤の基本"
     url: "/wiki/verification-basics.html"
     description: "なぜ先に物差しを作るのかを学べます。"
-  - label: "Wiki Home"
-    url: "/wiki/"
-    description: "他の基礎ページへの入口です。"
 recommended_pages:
   - label: "WBE入門"
     url: "/wbe_101.html"
@@ -143,6 +143,7 @@ WBE の話では、似ているものを混同しやすいからです。たと�
 <h4>Related Wiki</h4>
 <ul>
 <li><a href="claims-and-evidence.html">主張と証拠の読み方 →</a></li>
+<li><a href="personhood-and-copy-problem.html">本人性とコピー問題 →</a></li>
 <li><a href="verification-basics.html">検証基盤の基本 →</a></li>
 <li><a href="eeg-basics.html">EEGの基本 →</a></li>
 </ul>

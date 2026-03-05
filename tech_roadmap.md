@@ -14,6 +14,24 @@ page_highlights:
   - "まずP0〜P2で『何を成功と呼ぶか』を固定し、その後に計測や実装へ進みます。"
   - "索引を使えば、気になる論点だけ先に読むこともできます。"
   - "強い主張ほど後ろのレベルに置き、前のレベルを飛ばして語らない構造にしています。"
+known_points:
+  - "P/M/R/I/V/D に分けると、どの問題が土台でどの問題が上位論点かを整理できます。"
+  - "前の層を飛ばして強い主張へ進めない、という依存関係はかなりはっきりしています。"
+  - "このページは解決済み一覧ではなく、依存関係の地図として使うのが正しい読み方です。"
+unknown_points:
+  - "どの計測粒度が最終的に WBE に十分かは、まだ決まっていません。"
+  - "V5 の本人性や D 系列の社会実装条件は、依然として未解決です。"
+  - "どのルートが最短かは、今後のデータとベンチの整備状況で変わり得ます。"
+wiki_links:
+  - label: "Wiki: ロードマップの読み方"
+    url: "/wiki/roadmap-reading-guide.html"
+    description: "P/M/R/I/V/D を初歩から追うための補助ページです。"
+  - label: "Wiki: 主張と証拠の読み方"
+    url: "/wiki/claims-and-evidence.html"
+    description: "なぜ前の層を飛ばして強い主張に行けないかを日常語で説明します。"
+  - label: "Wiki: EEG前処理とQC"
+    url: "/wiki/eeg-preprocessing-and-qc.html"
+    description: "M 系列で出てくる前処理や品質管理の基礎を補います。"
 recommended_pages:
   - label: "WBE入門"
     url: "/wbe_101.html"
@@ -36,6 +54,13 @@ recommended_pages:
 <strong>新しく来た人へ</strong>
 <p>
 このページは情報量が多いので、先に <a href="wbe_101.html">WBE入門</a> と <a href="eeg_101.html">EEG入門</a>（必要なら <a href="glossary.html">用語集</a>）を読むと理解が早いです。
+</p>
+</div>
+
+<div class="note-box">
+<strong>索引の見方が分からないとき</strong>
+<p>
+P/M/R/I/V/D の記号や依存関係を初歩から追いたい場合は、先に <a href="wiki/roadmap-reading-guide.html">Wiki: ロードマップの読み方</a> を見てください。この本文は「辞書」より「地図」に近いので、補助説明を先に入れた方が読みやすいです。
 </p>
 </div>
 

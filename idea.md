@@ -15,6 +15,24 @@ page_highlights:
   - "本人性の議論を『コピー問題』で止めず、工学的な設計条件へつなげます。"
   - "IITやFEPなど複数理論を、実装に必要な要件として読み替えます。"
   - "用語が抽象的でも、最終的には移行手順や検証条件に戻す方針です。"
+known_points:
+  - "このページは Mind-Upload を『静的コピー』ではなく『動的プロセスの移行』として考える立場を取ります。"
+  - "IIT、FEP、予測符号化は、事実の一覧ではなく設計条件へ落とすための作業仮説として使っています。"
+  - "本人性の議論を工学に接続するには、連続性テストや検証条件へ戻す必要があります。"
+unknown_points:
+  - "この理論フレームが唯一正しい哲学的立場だとは言えません。"
+  - "どの熱力学指標や因果指標が本人性の十分条件になるかは未解決です。"
+  - "動的プロセスの移行を、どこまで実験的に検証できるかは今後の課題です。"
+wiki_links:
+  - label: "Wiki: 本人性とコピー問題"
+    url: "/wiki/personhood-and-copy-problem.html"
+    description: "『コピー』と『移行』の違いを日常語から整理します。"
+  - label: "Wiki: WBEの基本"
+    url: "/wiki/mind-upload-basics.html"
+    description: "理論ページに入る前の全体像を確認できます。"
+  - label: "Wiki: ロードマップの読み方"
+    url: "/wiki/roadmap-reading-guide.html"
+    description: "この理論が、どの工程の設計条件に落ちるのかを見失いにくくします。"
 recommended_pages:
   - label: "研究ノート"
     url: "/perspective.html"
@@ -42,6 +60,13 @@ recommended_pages:
 <li><strong>主張しないこと：</strong>この理論フレームだけで、実験的検証が完了したとは扱いません。</li>
 <li><strong>読み方：</strong>まず第1節で立場をつかみ、その後に理論整合性と実装条件を追うと理解しやすいです。</li>
 </ul>
+</div>
+
+<div class="note-box">
+<strong>コピー問題で止まったとき</strong>
+<p>
+このページは理論フレームなので、前提をかなり圧縮しています。まず疑問をほどきたい場合は <a href="wiki/personhood-and-copy-problem.html">Wiki: 本人性とコピー問題</a> を先に読むと、この本文の狙いが追いやすくなります。
+</p>
 </div>
 
 <table class="data-table">

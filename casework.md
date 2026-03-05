@@ -15,6 +15,23 @@ page_highlights:
   - "標準化・置き場・ベンチマーク・事前登録が、どう役割分担しているかを見ます。"
   - "『なぜその仕組みが効いたのか』を整理し、Mind-Uploadに転用できる形にします。"
   - "歴史の紹介だけで終わらず、現在の設計判断に結び付けて読めるようにしています。"
+known_points:
+  - "標準化、置き場、ベンチマーク、事前登録は、他分野でも比較可能な前進を支えてきました。"
+  - "単一参照先や相互運用標準があると、追試や比較が崩れにくくなります。"
+  - "Web 上の公開基盤そのものが、研究の進み方を変えてきた例は多くあります。"
+unknown_points:
+  - "どの成功パターンをどの順番で WBE へ移植するのが最適かは、まだ試行中です。"
+  - "WBE 向けの最初のベンチマークが、どの粒度であるべきかは未確定です。"
+wiki_links:
+  - label: "Wiki: 検証基盤の基本"
+    url: "/wiki/verification-basics.html"
+    description: "標準やベンチの意味自体を初歩から確認できます。"
+  - label: "Wiki: ロードマップの読み方"
+    url: "/wiki/roadmap-reading-guide.html"
+    description: "歴史事例が、今のロードマップのどこに効くかをつなげて読めます。"
+  - label: "Wiki Home"
+    url: "/wiki/"
+    description: "他の基礎ページへ戻れます。"
 recommended_pages:
   - label: "検証基盤"
     url: "/verification.html"
@@ -39,6 +56,13 @@ recommended_pages:
 <strong>読み方のコツ</strong>
 <p>
 各事例を「昔話」として読むのではなく、(1)何がバラバラだったのか、(2)どんな共通ルールを作ったのか、(3)その結果どんな比較が可能になったのか、の順で追うと、Mind-Uploadへの転用点が見えやすくなります。
+</p>
+</div>
+
+<div class="note-box">
+<strong>標準やベンチがまだ曖昧なとき</strong>
+<p>
+このページは実例集なので、仕組みそのものの基礎説明は圧縮しています。先に <a href="wiki/verification-basics.html">Wiki: 検証基盤の基本</a> を見ておくと、各事例で何が効いたのかを追いやすくなります。
 </p>
 </div>
 
