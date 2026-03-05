@@ -32,6 +32,9 @@ wiki_links:
   - label: "Wiki: EEGの基本"
     url: "/wiki/eeg-basics.html"
     description: "EEG 関連語を、測定の流れに沿って理解したい人向けです。"
+  - label: "Wiki: 計測からモデル化まで"
+    url: "/wiki/measurement-and-modeling-terms.html"
+    description: "EEG、QC、BIDS、ESI、DCM、SCM を 1 本の流れで整理します。"
 recommended_pages:
   - label: "WBE入門"
     url: "/wbe_101.html"
@@ -115,6 +118,13 @@ recommended_pages:
 <strong>理論名が並んで苦しくなったとき</strong>
 <p>
 IIT、GNWT、FEP、PCI の違いは、短い定義だけでは頭に入りにくいことがあります。その場合は <a href="wiki/consciousness-theory-map.html">Wiki: 意識理論マップ</a> を先に見て、何を説明したい理論なのかを表で掴んでから戻ると読みやすくなります。
+</p>
+</div>
+
+<div class="note-box">
+<strong>計測語とモデル語が混ざって苦しくなったとき</strong>
+<p>
+EEG、QC、BIDS、逆問題、ESI、DCM、SCM は、全部同じ種類の言葉ではありません。観測、整理、推定、検証のどの段階で使う語かを流れで見たい場合は <a href="wiki/measurement-and-modeling-terms.html">Wiki: 計測からモデル化までの用語ガイド</a> を先に見ると戻りやすくなります。
 </p>
 </div>
 

@@ -137,6 +137,11 @@ recommended_pages:
 <td><a href="verification-example-walkthrough.html">Verification の具体例ウォークスルー</a></td>
 <td><a href="../verification.html">検証基盤</a></td>
 </tr>
+<tr>
+<td><strong>EEG、BIDS、ESI、DCM のつながりを流れで見たい</strong></td>
+<td><a href="measurement-and-modeling-terms.html">計測からモデル化までの用語ガイド</a></td>
+<td><a href="../glossary.html">用語集</a> / <a href="../eeg_101.html">EEG入門</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -258,6 +263,10 @@ recommended_pages:
 <td>Verification の4要素がどう噛み合うか</td>
 <td><a href="verification-example-walkthrough.html">Verification の具体例ウォークスルー</a></td>
 </tr>
+<tr>
+<td>観測、前処理、推定、検証の用語の役割差</td>
+<td><a href="measurement-and-modeling-terms.html">計測からモデル化までの用語ガイド</a></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -282,6 +291,7 @@ recommended_pages:
 <li><a href="decode-vs-emulate.html">Decode と Emulate →</a></li>
 <li><a href="dataset-splits-and-leakage.html">データ分割とデータリーク →</a></li>
 <li><a href="verification-example-walkthrough.html">Verification の具体例ウォークスルー →</a></li>
+<li><a href="measurement-and-modeling-terms.html">計測からモデル化までの用語ガイド →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
