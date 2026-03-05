@@ -167,6 +167,11 @@ recommended_pages:
 <td><a href="multimodal-integration-basics.html">マルチモーダル統合の基本</a></td>
 <td><a href="../eeg_101.html">EEG入門</a> / <a href="../perspective.html">研究ノート</a></td>
 </tr>
+<tr>
+<td><strong>L4 本人性で何をどうテストしたいか知りたい</strong></td>
+<td><a href="identity-and-continuity-tests.html">本人性評価と連続性テスト</a></td>
+<td><a href="../wbe_101.html">WBE入門</a> / <a href="../tech_roadmap.html">技術ロードマップ</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -312,6 +317,10 @@ recommended_pages:
 <td>EEG、MEG、fMRI、ECoG、MRI の補完関係</td>
 <td><a href="multimodal-integration-basics.html">マルチモーダル統合の基本</a></td>
 </tr>
+<tr>
+<td>記憶、価値観、学習、分岐、縦断で見る L4 の入口</td>
+<td><a href="identity-and-continuity-tests.html">本人性評価と連続性テスト</a></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -342,6 +351,7 @@ recommended_pages:
 <li><a href="counterfactual-and-perturbation-verification.html">反事実・介入・摂動の検証 →</a></li>
 <li><a href="uncertainty-confidence-and-abstention.html">不確実性・信頼区間・棄権 →</a></li>
 <li><a href="multimodal-integration-basics.html">マルチモーダル統合の基本 →</a></li>
+<li><a href="identity-and-continuity-tests.html">本人性評価と連続性テスト →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">

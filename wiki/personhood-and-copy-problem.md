@@ -30,6 +30,9 @@ wiki_links:
   - label: "Wiki: 主張と証拠の読み方"
     url: "/wiki/claims-and-evidence.html"
     description: "L4 の本人性主張がどれだけ強いかを補います。"
+  - label: "Wiki: 本人性評価と連続性テスト"
+    url: "/wiki/identity-and-continuity-tests.html"
+    description: "哲学の論点を、事前登録されたテスト設計へ戻して整理します。"
   - label: "Wiki Home"
     url: "/wiki/"
     description: "他の基礎ページへ戻れます。"
@@ -108,6 +111,7 @@ recommended_pages:
 <p>
 この論点を工学に戻すと、ただ「よく似ているか」を見るだけでは足りません。記憶、価値観、学習履歴、条件変更への反応が、どこまで連続しているかを事前登録したテストで見る必要があります。つまり、哲学の話をそのまま放置するのではなく、<strong>どんな失敗なら本人性主張を保留にするか</strong>を定義する方向へ進みます。
 </p>
+<p>テスト設計の入口だけ先に見たい場合は、<a href="identity-and-continuity-tests.html">Wiki: 本人性評価と連続性テスト</a> が補講になります。</p>
 <div class="cta-box">
 <h4>Next</h4>
 <p>この論点を理論フレームとしてどう扱うかは、こちらで確認できます。</p>

@@ -263,6 +263,7 @@ recommended_pages:
 <li><a href="wiki/counterfactual-and-perturbation-verification.html">wiki/counterfactual-and-perturbation-verification.html</a></li>
 <li><a href="wiki/uncertainty-confidence-and-abstention.html">wiki/uncertainty-confidence-and-abstention.html</a></li>
 <li><a href="wiki/multimodal-integration-basics.html">wiki/multimodal-integration-basics.html</a></li>
+<li><a href="wiki/identity-and-continuity-tests.html">wiki/identity-and-continuity-tests.html</a></li>
 </ul>
 </div>
 </section>
@@ -297,6 +298,7 @@ recommended_pages:
 <li><a href="wiki/counterfactual-and-perturbation-verification.html">反事実・介入・摂動 →</a></li>
 <li><a href="wiki/uncertainty-confidence-and-abstention.html">不確実性・信頼区間・棄権 →</a></li>
 <li><a href="wiki/multimodal-integration-basics.html">マルチモーダル統合の基本 →</a></li>
+<li><a href="wiki/identity-and-continuity-tests.html">本人性評価と連続性テスト →</a></li>
 </ul>
 </div>
 </aside>

@@ -42,6 +42,9 @@ wiki_links:
   - label: "Wiki: 不確実性・信頼区間・棄権"
     url: "/wiki/uncertainty-confidence-and-abstention.html"
     description: "点推定、区間、伝播、低信頼時の棄権を初歩から整理します。"
+  - label: "Wiki: 本人性評価と連続性テスト"
+    url: "/wiki/identity-and-continuity-tests.html"
+    description: "L4 で何をどこまでテストしたいのかを、連続性の観点から整理します。"
 recommended_pages:
   - label: "技術ロードマップ"
     url: "/tech_roadmap.html"
@@ -182,6 +185,12 @@ recommended_pages:
 </tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>L4 はテスト設計そのものが難所です</strong>
+<p>
+本人性では、単に高スコアを出すより、何を連続していると見なすかを事前登録する方が重要です。記憶、価値観、学習、分岐、縦断の入口を初歩から整理したい場合は <a href="wiki/identity-and-continuity-tests.html">Wiki: 本人性評価と連続性テスト</a> が補講になります。
+</p>
+</div>
 </section>
 
 <div class="note-box">

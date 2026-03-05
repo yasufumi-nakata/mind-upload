@@ -32,6 +32,9 @@ wiki_links:
   - label: "Wiki: EEG前処理とQC"
     url: "/wiki/eeg-preprocessing-and-qc.html"
     description: "M 系列で出てくる前処理や品質管理の基礎を補います。"
+  - label: "Wiki: 本人性評価と連続性テスト"
+    url: "/wiki/identity-and-continuity-tests.html"
+    description: "V5 の本人性を、記憶・価値観・学習・分岐・縦断の入口から整理します。"
 recommended_pages:
   - label: "WBE入門"
     url: "/wbe_101.html"
@@ -61,6 +64,13 @@ recommended_pages:
 <strong>索引の見方が分からないとき</strong>
 <p>
 P/M/R/I/V/D の記号や依存関係を初歩から追いたい場合は、先に <a href="wiki/roadmap-reading-guide.html">Wiki: ロードマップの読み方</a> を見てください。この本文は「辞書」より「地図」に近いので、補助説明を先に入れた方が読みやすいです。
+</p>
+</div>
+
+<div class="note-box">
+<strong>V5 本人性の入口だけ先に見たいとき</strong>
+<p>
+本人性の論点は、このロードマップでは V5、V7、M7、R5 などにまたがります。記憶、価値観、学習、分岐、縦断のどこをどう見たいかを先に整理したい場合は <a href="wiki/identity-and-continuity-tests.html">Wiki: 本人性評価と連続性テスト</a> を先に読むと追いやすくなります。
 </p>
 </div>
 
