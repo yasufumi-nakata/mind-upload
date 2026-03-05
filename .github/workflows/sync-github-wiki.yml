@@ -7,6 +7,7 @@ on:
       - "wiki/**"
       - "scripts/export_github_wiki.rb"
       - "scripts/check_github_wiki_export.rb"
+      - "scripts/check_github_wiki_boundaries.rb"
       - "scripts/publish_github_wiki.sh"
       - ".github/workflows/sync-github-wiki.yml"
   workflow_dispatch:
@@ -28,6 +29,9 @@ jobs:
 
       - name: Export GitHub Wiki content
         run: scripts/export_github_wiki.rb
+
+      - name: Validate GitHub Wiki boundaries
+        run: scripts/check_github_wiki_boundaries.rb
 
       - name: Validate GitHub Wiki export
         run: scripts/check_github_wiki_export.rb
