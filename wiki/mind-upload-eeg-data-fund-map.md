@@ -5789,3 +5789,72 @@ recommended_pages:
 
 - 共同研究先タイプ別の保留解除後最終確認テンプレは `MindUpload-EEGDATA-FundMap-collab-hold-release-final-check.csv` を使う
 - 列は `counterpart_type`, `confirmation_focus`, `opening_line`, `share_asset`, `confirmation_line`, `decision_gate`, `note_line`, `avoid_point`
+
+## 200. 25トピック別の再挑戦後最終参照ユニット
+
+### 200.1 使い方
+
+- `reference_focus` は topic ごとに何を最終的な参照単位として残すかの観点として使う
+- `reference_unit` は 後から参照しても誤読が広がりにくい最小単位として使う
+- `keep_reference_trigger` は その単位の参照を残してよい条件として使う
+- `replace_trigger` は より小さい単位か新しい単位へ差し替える条件として使う
+- `do_not_reference` は 参照単位として残さない方がよい条件として使う
+- `note_line` は README や handoff 向けの一文として使う
+
+### 200.2 再挑戦後最終参照ユニットで守ること
+
+- 最終参照ユニットは `全部への入口` ではなく `誤読されにくい最小参照点` にする
+- reference unit は 1枚か1表か1ページに削る
+- replace trigger が立ったら 古い参照単位を残し続けない
+- 高い理論主張へ飛びやすい topic は do_not_reference を先に選ぶ
+
+### 200.3 詳細版を引く場所
+
+- 25トピック別の再挑戦後最終参照ユニットは `MindUpload-EEGDATA-FundMap-topic-retry-final-reference-unit.csv` を使う
+- 列は `phase`, `topic`, `reference_focus`, `reference_unit`, `keep_reference_trigger`, `replace_trigger`, `do_not_reference`, `note_line`, `avoid_point`
+
+## 201. 制度タイプ別の最終報告後問い合わせ窓口条件
+
+### 201.1 使い方
+
+- `contact_focus` は 最終報告後に何の問い合わせ窓口を残すかの観点として使う
+- `open_trigger` は 窓口を開けておくべき条件として使う
+- `close_trigger` は 窓口を閉じてよい条件として使う
+- `do_not_open` は そもそも窓口を広く開けない方がよい条件として使う
+- `min_contact_asset` は 窓口として残す最小導線として使う
+- `note_line` は README や内部メモの一文として使う
+
+### 201.2 最終報告後問い合わせ窓口条件で守ること
+
+- 窓口は `何でも相談` ではなく `残課題に対応する最小導線` にする
+- min contact asset は mailbox 1本か案内 1ページまでに削る
+- close trigger が立ったら 返せない窓口を惰性で残さない
+- do_not_open 条件がある時は 善意だけで問い合わせ先を増やさない
+
+### 201.3 詳細版を引く場所
+
+- 制度タイプ別の最終報告後問い合わせ窓口条件は `MindUpload-EEGDATA-FundMap-publication-final-contact-window.csv` を使う
+- 列は `support_type`, `contact_focus`, `open_trigger`, `close_trigger`, `do_not_open`, `min_contact_asset`, `note_line`, `avoid_point`
+
+## 202. 共同研究先タイプ別の保留解除後最終引き継ぎテンプレ
+
+### 202.1 使い方
+
+- `handoff_focus` は 保留解除後に最後に何を引き継ぐかの論点として使う
+- `opening_line` は 引き継ぎ文の最初の一文として使う
+- `share_asset` は 引き継ぎで添える最小成果物として使う
+- `handoff_line` は 相手に渡す最終行動指示として使う
+- `decision_gate` は この引き継ぎの後に継続 / hold / close を決める条件として使う
+- `note_line` は 送信前チェックや内部メモの一文として使う
+
+### 202.2 保留解除後最終引き継ぎテンプレで守ること
+
+- 最終引き継ぎは `説明の蒸し返し` ではなく `次の担当動作を確定する文` にする
+- share asset は 1枚か1件から増やさない
+- handoff line は 相手の次の1動作が見える形にする
+- decision gate が曖昧なら 最終引き継ぎを送らない
+
+### 202.3 詳細版を引く場所
+
+- 共同研究先タイプ別の保留解除後最終引き継ぎテンプレは `MindUpload-EEGDATA-FundMap-collab-hold-release-final-handoff.csv` を使う
+- 列は `counterpart_type`, `handoff_focus`, `opening_line`, `share_asset`, `handoff_line`, `decision_gate`, `note_line`, `avoid_point`
