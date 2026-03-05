@@ -51,6 +51,9 @@ wiki_links:
   - label: "Wiki: 更新・分岐・停止規則"
     url: "/wiki/update-branching-and-stop-rules.html"
     description: "更新時の差分ログ、分岐 ID、停止条件の違いを初歩から整理します。"
+  - label: "Wiki: 規格・置き場・Validator・ベンチマーク"
+    url: "/wiki/standards-repositories-validators-and-benchmarks.html"
+    description: "標準、共有基盤、形式点検、比較ルールの役割差を整理します。"
 recommended_pages:
   - label: "技術ロードマップ"
     url: "/tech_roadmap.html"
@@ -222,6 +225,12 @@ L1 の精度や L2 の予測一致を見る前に、<strong>何単位で train/t
 <strong>学校のテストでたとえると</strong>
 <p>
 この4要素は、学校のテストにたとえると役割が見えやすくなります。<strong>Data Standard</strong> は「同じ答案用紙」、<strong>Benchmark Suite</strong> は「同じ採点基準」、<strong>Registry &amp; Prereg</strong> は「試験前に配られる実施ルール」、<strong>Leaderboard &amp; Model Cards</strong> は「点数だけでなく、どう解いたかやミスも含めた成績表」に当たります。
+</p>
+</div>
+<div class="note-box">
+<strong>規格と置き場と Validator の違いで止まったとき</strong>
+<p>
+BIDS、OpenNeuro、PhysioNet、BIDS Validator、benchmark は全部「研究基盤」ですが、やっている仕事は別です。この役割差を初歩から整理したい場合は <a href="wiki/standards-repositories-validators-and-benchmarks.html">Wiki: 規格・置き場・Validator・ベンチマーク</a> を先にご覧ください。
 </p>
 </div>
 <div class="stage-list">

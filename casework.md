@@ -29,6 +29,9 @@ wiki_links:
   - label: "Wiki: ロードマップの読み方"
     url: "/wiki/roadmap-reading-guide.html"
     description: "歴史事例が、今のロードマップのどこに効くかをつなげて読めます。"
+  - label: "Wiki: 規格・置き場・Validator・ベンチマーク"
+    url: "/wiki/standards-repositories-validators-and-benchmarks.html"
+    description: "BIDS、OpenNeuro、Validator、Benchmark の役割差を日常語で確認できます。"
   - label: "Wiki Home"
     url: "/wiki/"
     description: "他の基礎ページへ戻れます。"
@@ -63,6 +66,12 @@ recommended_pages:
 <strong>標準やベンチがまだ曖昧なとき</strong>
 <p>
 このページは実例集なので、仕組みそのものの基礎説明は圧縮しています。先に <a href="wiki/verification-basics.html">Wiki: 検証基盤の基本</a> を見ておくと、各事例で何が効いたのかを追いやすくなります。
+</p>
+</div>
+<div class="note-box">
+<strong>BIDS と OpenNeuro と benchmark を 1 回分けたいとき</strong>
+<p>
+規格、置き場、Validator、比較ルールの違いを先に分けておくと、このページの実例が読みやすくなります。必要なら <a href="wiki/standards-repositories-validators-and-benchmarks.html">Wiki: 規格・置き場・Validator・ベンチマーク</a> を先にご覧ください。
 </p>
 </div>
 

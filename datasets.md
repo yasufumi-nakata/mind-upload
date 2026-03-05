@@ -38,6 +38,9 @@ wiki_links:
   - label: "Wiki: マルチモーダル統合の基本"
     url: "/wiki/multimodal-integration-basics.html"
     description: "EEG に何を足すと何が補えるかを、初歩から整理します。"
+  - label: "Wiki: 規格・置き場・Validator・ベンチマーク"
+    url: "/wiki/standards-repositories-validators-and-benchmarks.html"
+    description: "BIDS、OpenNeuro、Validator、Benchmark の役割差を整理します。"
 recommended_pages:
   - label: "EEG入門"
     url: "/eeg_101.html"
@@ -110,6 +113,13 @@ recommended_pages:
 <strong>raw EEG があるだけでは足りない</strong>
 <p>
 波形ファイルが公開されていても、<strong>イベント定義</strong>、<strong>刺激ログ</strong>、<strong>時刻同期</strong>、<strong>bad channel / bad segment の記録</strong>が弱いと、あとから比較し直しにくくなります。この点を初歩から整理したい場合は <a href="wiki/event-sync-and-measurement-logs.html">Wiki: イベント同期と観測ログの基本</a> を先にご覧ください。
+</p>
+</div>
+
+<div class="note-box">
+<strong>BIDS と OpenNeuro と Benchmark は同じではありません</strong>
+<p>
+BIDS は規格、OpenNeuro や PhysioNet は置き場、Validator は形式点検、Benchmark は比較ルールです。この役割差を初歩から整理したい場合は <a href="wiki/standards-repositories-validators-and-benchmarks.html">Wiki: 規格・置き場・Validator・ベンチマーク</a> をご利用ください。
 </p>
 </div>
 

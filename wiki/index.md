@@ -343,6 +343,10 @@ recommended_pages:
 <td>モデル更新、版管理、分岐、停止条件の違い</td>
 <td><a href="update-branching-and-stop-rules.html">更新・分岐・停止規則</a></td>
 </tr>
+<tr>
+<td>BIDS、OpenNeuro、Validator、Benchmark の役割差</td>
+<td><a href="standards-repositories-validators-and-benchmarks.html">規格・置き場・Validator・ベンチマーク</a></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -377,6 +381,7 @@ recommended_pages:
 <li><a href="baselines-prereg-and-model-cards.html">ベースライン・事前登録・モデルカード →</a></li>
 <li><a href="state-trait-and-drift.html">state・trait・ドリフト →</a></li>
 <li><a href="update-branching-and-stop-rules.html">更新・分岐・停止規則 →</a></li>
+<li><a href="standards-repositories-validators-and-benchmarks.html">規格・置き場・Validator・ベンチマーク →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">

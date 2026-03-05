@@ -41,6 +41,9 @@ wiki_links:
   - label: "Wiki: 更新・分岐・停止規則"
     url: "/wiki/update-branching-and-stop-rules.html"
     description: "前版を上書きしない更新運用や停止条件の基本を補います。"
+  - label: "Wiki: 規格・置き場・Validator・ベンチマーク"
+    url: "/wiki/standards-repositories-validators-and-benchmarks.html"
+    description: "BIDS、Validator、共有基盤、比較ルールの違いを補います。"
 recommended_pages:
   - label: "データ&ベンチ"
     url: "/datasets.html"
@@ -157,6 +160,12 @@ npx bids-validator my_bids_eeg
 <strong>ポイント</strong>
 <p>
 Validatorが通る＝研究として十分、ではありません。でも、通らない状態で“共有”はほぼ成立しません。
+</p>
+</div>
+<div class="note-box">
+<strong>BIDS・Validator・公開先・benchmark を混同しない</strong>
+<p>
+ここでやっているのは主に「規格」と「形式点検」です。公開先や比較ルールは別の層なので、役割差を先に整理したい場合は <a href="wiki/standards-repositories-validators-and-benchmarks.html">Wiki: 規格・置き場・Validator・ベンチマーク</a> をご覧ください。
 </p>
 </div>
 </section>

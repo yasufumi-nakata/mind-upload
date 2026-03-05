@@ -267,6 +267,7 @@ recommended_pages:
 <li><a href="wiki/baselines-prereg-and-model-cards.html">wiki/baselines-prereg-and-model-cards.html</a></li>
 <li><a href="wiki/state-trait-and-drift.html">wiki/state-trait-and-drift.html</a></li>
 <li><a href="wiki/update-branching-and-stop-rules.html">wiki/update-branching-and-stop-rules.html</a></li>
+<li><a href="wiki/standards-repositories-validators-and-benchmarks.html">wiki/standards-repositories-validators-and-benchmarks.html</a></li>
 </ul>
 </div>
 </section>
@@ -305,6 +306,7 @@ recommended_pages:
 <li><a href="wiki/baselines-prereg-and-model-cards.html">ベースライン・事前登録・モデルカード →</a></li>
 <li><a href="wiki/state-trait-and-drift.html">state・trait・ドリフト →</a></li>
 <li><a href="wiki/update-branching-and-stop-rules.html">更新・分岐・停止規則 →</a></li>
+<li><a href="wiki/standards-repositories-validators-and-benchmarks.html">規格・置き場・Validator・ベンチマーク →</a></li>
 </ul>
 </div>
 </aside>

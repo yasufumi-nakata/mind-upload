@@ -35,6 +35,9 @@ wiki_links:
   - label: "Wiki: 反事実・介入・摂動"
     url: "/wiki/counterfactual-and-perturbation-verification.html"
     description: "Q1〜Q3 で出る因果検証の入口を、初歩から整理します。"
+  - label: "Wiki: 規格・置き場・Validator・ベンチマーク"
+    url: "/wiki/standards-repositories-validators-and-benchmarks.html"
+    description: "Q4 で出る標準化の話を、役割ごとに整理します。"
 recommended_pages:
   - label: "検証基盤"
     url: "/verification.html"
@@ -165,7 +168,7 @@ Mind-Uploadでは、これを“サイトとして運用できる形”に落と
 A. 標準がないと、同じことを言っているようで違う入力・違う手順・違う指標を比較してしまい、進捗が見えなくなります。
 PDBやBIDS+OpenNeuroなどの事例は、分野が違っても「前進を測れる」状態を作った点が共通しています。
 </p>
-<p><a href="casework.html">ケースワーク集</a>に、設計の型をまとめています。</p>
+<p><a href="casework.html">ケースワーク集</a>に設計の型をまとめており、BIDS、OpenNeuro、Validator、benchmark の役割差を先に整理したい場合は <a href="wiki/standards-repositories-validators-and-benchmarks.html">Wiki: 規格・置き場・Validator・ベンチマーク</a> が近道です。</p>
 </section>
 
 <section class="section" id="q5">
