@@ -5919,3 +5919,72 @@
 
 - 共同研究先タイプ別の保留解除後最終責務確認テンプレは `MindUpload-EEGDATA-FundMap-collab-hold-release-final-responsibility.csv` を使う
 - 列は `counterpart_type`, `responsibility_focus`, `opening_line`, `share_asset`, `responsibility_line`, `decision_gate`, `note_line`, `avoid_point`
+
+## 206. 25トピック別の再挑戦後最終FAQユニット
+
+### 206.1 使い方
+
+- `faq_focus` は topic ごとに最後にどの質問だけ FAQ 化するかの観点として使う
+- `faq_unit` は 外部に残す最小 FAQ 単位として使う
+- `keep_faq_trigger` は その FAQ を残してよい条件として使う
+- `close_trigger` は その FAQ を閉じてよい条件として使う
+- `do_not_faq` は FAQ 化しない方がよい条件として使う
+- `note_line` は README や handoff 向けの一文として使う
+
+### 206.2 再挑戦後最終FAQユニットで守ること
+
+- 最終 FAQ は `全部の質問集` ではなく `繰り返し来る1論点への最小回答` にする
+- faq unit は Q&A 1件か短いメモ 1 枚まで削る
+- close trigger が立ったら 古い FAQ を惰性で残さない
+- 高い理論主張へ飛びやすい topic は do_not_faq を先に選ぶ
+
+### 206.3 詳細版を引く場所
+
+- 25トピック別の再挑戦後最終FAQユニットは `MindUpload-EEGDATA-FundMap-topic-retry-final-faq-unit.csv` を使う
+- 列は `phase`, `topic`, `faq_focus`, `faq_unit`, `keep_faq_trigger`, `close_trigger`, `do_not_faq`, `note_line`, `avoid_point`
+
+## 207. 制度タイプ別の最終報告後自動応答条件
+
+### 207.1 使い方
+
+- `auto_reply_focus` は 最終報告後に何にだけ自動応答を返すかの観点として使う
+- `enable_trigger` は 自動応答を有効にしてよい条件として使う
+- `disable_trigger` は 自動応答を止めてよい条件として使う
+- `do_not_enable` は 自動応答を使わない方がよい条件として使う
+- `min_reply_asset` は 自動応答で残す最小導線として使う
+- `note_line` は README や内部メモの一文として使う
+
+### 207.2 最終報告後自動応答条件で守ること
+
+- 自動応答は `対応した気になる装置` ではなく `返せる範囲を切る装置` にする
+- min reply asset は URL 1 本か mailbox 1 本まで削る
+- disable trigger が立ったら 古い自動応答を残さない
+- do_not_enable 条件がある時は 不正確な案内を自動化しない
+
+### 207.3 詳細版を引く場所
+
+- 制度タイプ別の最終報告後自動応答条件は `MindUpload-EEGDATA-FundMap-publication-final-auto-reply.csv` を使う
+- 列は `support_type`, `auto_reply_focus`, `enable_trigger`, `disable_trigger`, `do_not_enable`, `min_reply_asset`, `note_line`, `avoid_point`
+
+## 208. 共同研究先タイプ別の保留解除後最終完了通知テンプレ
+
+### 208.1 使い方
+
+- `completion_focus` は 保留解除後に最後に何を完了として通知するかの論点として使う
+- `opening_line` は 完了通知の最初の一文として使う
+- `share_asset` は 完了通知で添える最小成果物として使う
+- `completion_line` は 何が完了し何を残すかを伝える一文として使う
+- `decision_gate` は この通知の後に継続 / hold / close を決める条件として使う
+- `note_line` は 送信前チェックや内部メモの一文として使う
+
+### 208.2 保留解除後最終完了通知テンプレで守ること
+
+- 最終完了通知は `長い振り返り` ではなく `今回どこまで完了したかを固定する文` にする
+- share asset は 1枚か1件から増やさない
+- completion line は 完了点と残タスクが1文で切れる形にする
+- decision gate が曖昧なら 最終完了通知を送らない
+
+### 208.3 詳細版を引く場所
+
+- 共同研究先タイプ別の保留解除後最終完了通知テンプレは `MindUpload-EEGDATA-FundMap-collab-hold-release-final-completion.csv` を使う
+- 列は `counterpart_type`, `completion_focus`, `opening_line`, `share_asset`, `completion_line`, `decision_gate`, `note_line`, `avoid_point`
