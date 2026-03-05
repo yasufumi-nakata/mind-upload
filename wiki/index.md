@@ -339,6 +339,10 @@ recommended_pages:
 <td>日内状態、長期特徴、学習ドリフトの違い</td>
 <td><a href="state-trait-and-drift.html">state・trait・ドリフト</a></td>
 </tr>
+<tr>
+<td>モデル更新、版管理、分岐、停止条件の違い</td>
+<td><a href="update-branching-and-stop-rules.html">更新・分岐・停止規則</a></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -372,6 +376,7 @@ recommended_pages:
 <li><a href="identity-and-continuity-tests.html">本人性評価と連続性テスト →</a></li>
 <li><a href="baselines-prereg-and-model-cards.html">ベースライン・事前登録・モデルカード →</a></li>
 <li><a href="state-trait-and-drift.html">state・trait・ドリフト →</a></li>
+<li><a href="update-branching-and-stop-rules.html">更新・分岐・停止規則 →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">

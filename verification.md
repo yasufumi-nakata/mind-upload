@@ -48,6 +48,9 @@ wiki_links:
   - label: "Wiki: ベースライン・事前登録・モデルカード"
     url: "/wiki/baselines-prereg-and-model-cards.html"
     description: "出発点、事前ルール、結果記録、失敗例の役割差を整理します。"
+  - label: "Wiki: 更新・分岐・停止規則"
+    url: "/wiki/update-branching-and-stop-rules.html"
+    description: "更新時の差分ログ、分岐 ID、停止条件の違いを初歩から整理します。"
 recommended_pages:
   - label: "技術ロードマップ"
     url: "/tech_roadmap.html"
@@ -262,6 +265,12 @@ L1 の精度や L2 の予測一致を見る前に、<strong>何単位で train/t
 </div>
 </div>
 </div>
+</div>
+<div class="note-box">
+<strong>更新・分岐・停止で止まったとき</strong>
+<p>
+Registry を作っても、更新をどこまで許すか、branch をどう記録するか、停止規則とキルスイッチをどう分けるかで迷いやすいです。ここを初歩から整理したい場合は <a href="wiki/update-branching-and-stop-rules.html">Wiki: 更新・分岐・停止規則</a> を先にご覧ください。
+</p>
 </div>
 <table class="data-table">
 <thead>

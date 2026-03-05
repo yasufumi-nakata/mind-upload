@@ -35,6 +35,9 @@ wiki_links:
   - label: "Wiki: state・trait・ドリフト"
     url: "/wiki/state-trait-and-drift.html"
     description: "縦断評価で短期状態と長期特徴をどう分けるかを補います。"
+  - label: "Wiki: 更新・分岐・停止規則"
+    url: "/wiki/update-branching-and-stop-rules.html"
+    description: "分岐ログ、版管理、停止条件の初歩を補います。"
 recommended_pages:
   - label: "WBE入門"
     url: "/wbe_101.html"
@@ -136,6 +139,9 @@ L1 や L2 では、精度や予測一致のように比較的はっきりした�
 </p>
 <p>
 したがって、L4 の評価では、単に似ているかだけでなく、<strong>分岐ログ</strong>と<strong>バージョン管理</strong>が重要になります。
+</p>
+<p>
+分岐時点、branch ID、停止条件、キルスイッチの違いを先に整理したい場合は、<a href="update-branching-and-stop-rules.html">Wiki: 更新・分岐・停止規則</a> が補講になります。
 </p>
 </section>
 

@@ -38,6 +38,9 @@ wiki_links:
   - label: "Wiki: ベースライン・事前登録・モデルカード"
     url: "/wiki/baselines-prereg-and-model-cards.html"
     description: "ベースライン、事前登録、失敗例の役割差を整理できます。"
+  - label: "Wiki: 更新・分岐・停止規則"
+    url: "/wiki/update-branching-and-stop-rules.html"
+    description: "前版を上書きしない更新運用や停止条件の基本を補います。"
 recommended_pages:
   - label: "データ&ベンチ"
     url: "/datasets.html"
@@ -203,6 +206,12 @@ Validatorが通る＝研究として十分、ではありません。でも、�
 <strong>ベースラインを置いたあとの運用</strong>
 <p>
 ベースラインを置くだけでは足りず、どの指標を事前に固定したか、どんな失敗例が出たか、最終的に何をモデルカードとして残すかまで考える必要があります。ここを初歩から整理したい場合は <a href="wiki/baselines-prereg-and-model-cards.html">Wiki: ベースライン・事前登録・モデルカード</a> をご利用ください。
+</p>
+</div>
+<div class="note-box">
+<strong>前処理やモデルを更新し始めたら</strong>
+<p>
+L0 でも、前版を上書きした瞬間に比較可能性が崩れます。更新、version、branch、停止条件の違いを最初に整理したい場合は <a href="wiki/update-branching-and-stop-rules.html">Wiki: 更新・分岐・停止規則</a> をご利用ください。
 </p>
 </div>
 </section>
