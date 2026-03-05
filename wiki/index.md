@@ -157,6 +157,11 @@ recommended_pages:
 <td><a href="counterfactual-and-perturbation-verification.html">反事実・介入・摂動の検証</a></td>
 <td><a href="../wbe_101.html">WBE入門</a> / <a href="../verification.html">検証基盤</a></td>
 </tr>
+<tr>
+<td><strong>信頼区間や不確実性の読み方で止まる</strong></td>
+<td><a href="uncertainty-confidence-and-abstention.html">不確実性・信頼区間・棄権</a></td>
+<td><a href="../eeg_101.html">EEG入門</a> / <a href="../verification.html">検証基盤</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -294,6 +299,10 @@ recommended_pages:
 <td>held-out 精度、介入、反事実、摂動ベース検証</td>
 <td><a href="counterfactual-and-perturbation-verification.html">反事実・介入・摂動の検証</a></td>
 </tr>
+<tr>
+<td>点推定、区間、不確実性伝播、棄権</td>
+<td><a href="uncertainty-confidence-and-abstention.html">不確実性・信頼区間・棄権</a></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -322,6 +331,7 @@ recommended_pages:
 <li><a href="event-sync-and-measurement-logs.html">イベント同期と観測ログの基本 →</a></li>
 <li><a href="observation-to-estimation.html">観測から推定へ →</a></li>
 <li><a href="counterfactual-and-perturbation-verification.html">反事実・介入・摂動の検証 →</a></li>
+<li><a href="uncertainty-confidence-and-abstention.html">不確実性・信頼区間・棄権 →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">

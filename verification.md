@@ -39,6 +39,9 @@ wiki_links:
   - label: "Wiki: 反事実・介入・摂動"
     url: "/wiki/counterfactual-and-perturbation-verification.html"
     description: "held-out 精度と因果的摂動検証の差を、初歩から整理します。"
+  - label: "Wiki: 不確実性・信頼区間・棄権"
+    url: "/wiki/uncertainty-confidence-and-abstention.html"
+    description: "点推定、区間、伝播、低信頼時の棄権を初歩から整理します。"
 recommended_pages:
   - label: "技術ロードマップ"
     url: "/tech_roadmap.html"
@@ -325,7 +328,7 @@ L1 の精度や L2 の予測一致を見る前に、<strong>何単位で train/t
 <div class="note-box">
 <strong>不確実性や因果同値類で止まったとき</strong>
 <p>
-Verification では、観測信号からの推定結果をそのまま唯一の真実として扱いません。逆問題、ESI、DCM、SCM、因果同値類の関係を先に整理したい場合は <a href="wiki/observation-to-estimation.html">Wiki: 観測から推定へ</a> が補講になります。
+Verification では、観測信号からの推定結果をそのまま唯一の真実として扱いません。逆問題、ESI、DCM、SCM、因果同値類の関係を先に整理したい場合は <a href="wiki/observation-to-estimation.html">Wiki: 観測から推定へ</a>、点推定と区間、低信頼時の棄権まで含めて読みたい場合は <a href="wiki/uncertainty-confidence-and-abstention.html">Wiki: 不確実性・信頼区間・棄権</a> が補講になります。
 </p>
 </div>
 

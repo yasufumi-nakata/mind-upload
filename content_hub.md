@@ -261,6 +261,7 @@ recommended_pages:
 <li><a href="wiki/event-sync-and-measurement-logs.html">wiki/event-sync-and-measurement-logs.html</a></li>
 <li><a href="wiki/observation-to-estimation.html">wiki/observation-to-estimation.html</a></li>
 <li><a href="wiki/counterfactual-and-perturbation-verification.html">wiki/counterfactual-and-perturbation-verification.html</a></li>
+<li><a href="wiki/uncertainty-confidence-and-abstention.html">wiki/uncertainty-confidence-and-abstention.html</a></li>
 </ul>
 </div>
 </section>
@@ -293,6 +294,7 @@ recommended_pages:
 <li><a href="wiki/event-sync-and-measurement-logs.html">イベント同期と観測ログ →</a></li>
 <li><a href="wiki/observation-to-estimation.html">観測から推定へ →</a></li>
 <li><a href="wiki/counterfactual-and-perturbation-verification.html">反事実・介入・摂動 →</a></li>
+<li><a href="wiki/uncertainty-confidence-and-abstention.html">不確実性・信頼区間・棄権 →</a></li>
 </ul>
 </div>
 </aside>

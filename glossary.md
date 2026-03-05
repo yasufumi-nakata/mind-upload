@@ -38,6 +38,9 @@ wiki_links:
   - label: "Wiki: 観測から推定へ"
     url: "/wiki/observation-to-estimation.html"
     description: "逆問題、ESI、DCM、SCM、因果同値類をもう一段ていねいに整理します。"
+  - label: "Wiki: 不確実性・信頼区間・棄権"
+    url: "/wiki/uncertainty-confidence-and-abstention.html"
+    description: "点推定と区間の違い、不確実性伝播、低信頼時の棄権を整理します。"
 recommended_pages:
   - label: "WBE入門"
     url: "/wbe_101.html"
@@ -135,6 +138,13 @@ EEG、QC、BIDS、逆問題、ESI、DCM、SCM は、全部同じ種類の言葉�
 <strong>逆問題や因果モデルで止まったとき</strong>
 <p>
 「頭皮で見えた信号」と「脳内で本当に起きていたこと」と「因果が分かったこと」は別です。この差を順問題、逆問題、ESI、DCM、SCM の順に整理したい場合は <a href="wiki/observation-to-estimation.html">Wiki: 観測から推定へ</a> を先にご覧ください。
+</p>
+</div>
+
+<div class="note-box">
+<strong>数字の幅や低信頼時の扱いで止まったとき</strong>
+<p>
+信用区間、信頼区間、不確実性の伝播、棄権は、全部「1つの数字だけで断言しない」ための仕組みです。ここを初歩から整理したい場合は <a href="wiki/uncertainty-confidence-and-abstention.html">Wiki: 不確実性・信頼区間・棄権</a> を先にご覧ください。
 </p>
 </div>
 
