@@ -145,12 +145,26 @@ required_readme_snippets = [
   '`scripts/check_github_wiki_boundaries.rb`',
   '`scripts/check_github_wiki_ops_references.rb`',
   '`scripts/with_github_wiki_lock.sh`',
+  '`GITHUB_WIKI_LOCK_WAIT_SECONDS`',
   '`ignore/github-wiki-publish/`',
   'BUNDLE_PATH=vendor/bundle bundle exec jekyll build'
 ]
 
 required_readme_snippets.each do |snippet|
   errors << "Missing README boundary note: #{snippet}" unless readme_text.include?(snippet)
+end
+
+lock_text = File.read(LOCK_SCRIPT)
+required_lock_snippets = [
+  'LOCK_DIR="$ROOT/ignore/github-wiki-toolchain.lock"',
+  'WAIT_SECONDS="${GITHUB_WIKI_LOCK_WAIT_SECONDS:-180}"',
+  'if [[ -f "$LOCK_DIR/pid" ]]; then',
+  '! kill -0 "$LOCK_PID" 2>/dev/null',
+  'rm -rf "$LOCK_DIR"'
+]
+
+required_lock_snippets.each do |snippet|
+  errors << "Missing lock guard snippet: #{snippet}" unless lock_text.include?(snippet)
 end
 
 if errors.empty?
