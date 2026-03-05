@@ -27,6 +27,9 @@ wiki_links:
   - label: "Wiki: 検証基盤の基本"
     url: "/wiki/verification-basics.html"
     description: "標準、ベンチ、登録、監査がなぜ必要かを初歩から説明します。"
+  - label: "Wiki: L0〜L5ごとの読み進め方"
+    url: "/wiki/claim-level-reading-routes.html"
+    description: "L0〜L5 のどの主張を追うかで、次にどのページへ行くかを整理します。"
   - label: "Wiki: L0で最低限そろえる成果物パック"
     url: "/wiki/l0-minimum-artifact-pack.html"
     description: "BIDS、QC、分割、ベースライン、実行手順、失敗例の最小セットを整理します。"
@@ -139,6 +142,12 @@ recommended_pages:
 <strong>『不足』『未実装』『未完成』の違いで止まったとき</strong>
 <p>
 このページでは、設計済みのもの、公開運用が未整備のもの、ベンチや監査が不足しているものを分けて書いています。進み具合の言葉を 1 枚で確認したい場合は <a href="wiki/progress-labels-and-open-problem-status.html">Wiki: 部分解決・探索段階・未整備の読み方</a> を先に見ると誤読しにくくなります。
+</p>
+</div>
+<div class="note-box">
+<strong>いま見たい主張レベルで次ページを決めたいとき</strong>
+<p>
+このページは全レベルの設計図なので、L0 実務へ行くのか、L3 閉ループへ行くのか、L4 本人性へ行くのかで次ページが変わります。レベルごとの導線を 1 枚で見たい場合は <a href="wiki/claim-level-reading-routes.html">Wiki: L0〜L5ごとの読み進め方</a> をご覧ください。
 </p>
 </div>
 

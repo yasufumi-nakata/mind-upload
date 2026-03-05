@@ -257,6 +257,7 @@ recommended_pages:
 <li><a href="wiki/internal-prework-and-external-dependencies.html">wiki/internal-prework-and-external-dependencies.html</a></li>
 <li><a href="wiki/progress-labels-and-open-problem-status.html">wiki/progress-labels-and-open-problem-status.html</a></li>
 <li><a href="wiki/l0-minimum-artifact-pack.html">wiki/l0-minimum-artifact-pack.html</a></li>
+<li><a href="wiki/claim-level-reading-routes.html">wiki/claim-level-reading-routes.html</a></li>
 <li><a href="wiki/u-number-guide.html">wiki/u-number-guide.html</a></li>
 <li><a href="wiki/consciousness-theory-map.html">wiki/consciousness-theory-map.html</a></li>
 <li><a href="wiki/decode-vs-emulate.html">wiki/decode-vs-emulate.html</a></li>
@@ -303,6 +304,7 @@ recommended_pages:
 <li><a href="wiki/internal-prework-and-external-dependencies.html">内製と外部依存の切り分け →</a></li>
 <li><a href="wiki/progress-labels-and-open-problem-status.html">進捗ラベルの読み方 →</a></li>
 <li><a href="wiki/l0-minimum-artifact-pack.html">L0成果物パック →</a></li>
+<li><a href="wiki/claim-level-reading-routes.html">L0〜L5ごとの読み方 →</a></li>
 <li><a href="wiki/u-number-guide.html">U番号ガイド →</a></li>
 <li><a href="wiki/consciousness-theory-map.html">意識理論マップ →</a></li>
 <li><a href="wiki/decode-vs-emulate.html">Decode と Emulate →</a></li>

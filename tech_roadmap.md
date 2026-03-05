@@ -26,6 +26,9 @@ wiki_links:
   - label: "Wiki: ロードマップの読み方"
     url: "/wiki/roadmap-reading-guide.html"
     description: "P/M/R/I/V/D を初歩から追うための補助ページです。"
+  - label: "Wiki: L0〜L5ごとの読み進め方"
+    url: "/wiki/claim-level-reading-routes.html"
+    description: "クレーム階段の各レベルから、次にどのページへ進むかを整理します。"
   - label: "Wiki: 部分解決・探索段階・未整備の読み方"
     url: "/wiki/progress-labels-and-open-problem-status.html"
     description: "現状欄のラベルが、何の不足を指すかを整理します。"
@@ -110,6 +113,12 @@ P/M/R/I/V/D の記号や依存関係を初歩から追いたい場合は、先�
 <strong>不足・未整備・部分解決の言葉で止まったとき</strong>
 <p>
 このページの本文では、各ノードの不足点を短い言葉で書いています。<strong>部分解決</strong>、<strong>探索段階</strong>、<strong>未標準化</strong>、<strong>未整備</strong> が何の不足を指すかを先に整理したい場合は <a href="wiki/progress-labels-and-open-problem-status.html">Wiki: 部分解決・探索段階・未整備の読み方</a> を先にご覧ください。
+</p>
+</div>
+<div class="note-box">
+<strong>クレーム階段ごとに戻るページを整理したいとき</strong>
+<p>
+Roadmap では L0〜L5 の全部を扱うため、いま見たいレベルによって次に行く公開ページが変わります。主張レベルごとの導線を 1 枚で見たい場合は <a href="wiki/claim-level-reading-routes.html">Wiki: L0〜L5ごとの読み進め方</a> をご覧ください。
 </p>
 </div>
 

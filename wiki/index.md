@@ -138,6 +138,11 @@ recommended_pages:
 <td><a href="../research_harvest_50.html">文献地図</a> / <a href="../tech_roadmap.html">技術ロードマップ</a></td>
 </tr>
 <tr>
+<td><strong>L0〜L5 のどのページへ進むべきか迷う</strong></td>
+<td><a href="claim-level-reading-routes.html">L0〜L5ごとの読み進め方</a></td>
+<td><a href="../wbe_101.html">WBE入門</a> / <a href="../verification.html">検証基盤</a></td>
+</tr>
+<tr>
 <td><strong>IIT / GNWT / FEP / PCI の違いで止まる</strong></td>
 <td><a href="consciousness-theory-map.html">意識理論マップ</a></td>
 <td><a href="../perspective.html">研究ノート</a> / <a href="../idea.html">理論フレーム</a></td>
@@ -327,6 +332,10 @@ recommended_pages:
 <tr>
 <td>部分解決、探索段階、未標準化、不足の違い</td>
 <td><a href="progress-labels-and-open-problem-status.html">部分解決・探索段階・未整備の読み方</a></td>
+</tr>
+<tr>
+<td>L0〜L5 のどのレベルからどのページへ行くか</td>
+<td><a href="claim-level-reading-routes.html">L0〜L5ごとの読み進め方</a></td>
 </tr>
 <tr>
 <td>意識理論どうしの役割差</td>

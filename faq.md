@@ -26,6 +26,9 @@ wiki_links:
   - label: "Wiki: 主張と証拠の読み方"
     url: "/wiki/claims-and-evidence.html"
     description: "FAQ の短い答えを、もう一段ていねいに学びたい人向けです。"
+  - label: "Wiki: L0〜L5ごとの読み進め方"
+    url: "/wiki/claim-level-reading-routes.html"
+    description: "FAQ で見た主張が、次にどのページへ進む話かを整理します。"
   - label: "Wiki: 公開ページの読み分けガイド"
     url: "/wiki/public-page-reading-guide.html"
     description: "FAQ のあとに本文のどこへ戻るかを整理します。"
@@ -74,6 +77,12 @@ FAQは「まず方向を間違えないための短い答え」です。ここ�
 <strong>短い答えのあとに戻る本文で迷ったとき</strong>
 <p>
 FAQ は入口なので、次に Verification、WBE 101、Datasets、Glossary のどこへ戻るかを決める必要があります。公開ページどうしの役割差を先に整理したい場合は <a href="wiki/public-page-reading-guide.html">Wiki: 公開ページの読み分けガイド</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
+<strong>いまの疑問が L0〜L5 のどこかで迷ったとき</strong>
+<p>
+FAQ の質問は、L0 の実務から L5 の社会実装まで混ざっています。主張レベルごとに次のページを整理したい場合は <a href="wiki/claim-level-reading-routes.html">Wiki: L0〜L5ごとの読み進め方</a> をご覧ください。
 </p>
 </div>
 
