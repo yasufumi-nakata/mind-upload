@@ -29,7 +29,7 @@ TMP_DIR="$(mktemp -d)"
 trap 'rm -rf "$TMP_DIR"' EXIT
 
 git clone "$REMOTE_URL" "$TMP_DIR/wiki"
-rsync -a --delete "$EXPORT_DIR"/ "$TMP_DIR/wiki"/
+rsync -a --delete --exclude ".git/" "$EXPORT_DIR"/ "$TMP_DIR/wiki"/
 
 cd "$TMP_DIR/wiki"
 

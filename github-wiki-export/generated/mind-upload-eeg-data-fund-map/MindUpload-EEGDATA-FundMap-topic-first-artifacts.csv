@@ -1,0 +1,26 @@
+phase,topic,artifact_name,artifact_format,artifact_opening,section_1,section_2,next_action,avoid_point
+1,EEG信号品質の限界検証,qc_benchmark_v1,one-pager,公開EEG横断で品質指標とアーチファクト耐性の比較条件を整理する,候補データセットと品質指標,前処理前後の保存率と SNR,主要2条件で表を埋め始める,portable EEG 全体の将来像から入らない
+1,高密度EEG空間分解能評価,source_limit_note,one-pager,HD-EEG の空間限界を ground truth 条件に寄せて比較する,電極密度と localization error,ground truth のある候補と制約,主要候補を2条件に絞る,全脳を解明する話にしない
+1,マルチモーダル統合の基礎,multimodal_alignment_note,one-pager,EEG と他モダリティの同期条件を再現可能な範囲で整理する,同期誤差と前処理条件,使うモダリティの最小組合せ,同期条件メモを1ページ化する,全モダリティ統合構想に広げない
+1,ノイズ除去・信号分離手法の比較,preprocessing_comparison_table,table+memo,ASR ICA ZapLine 系の比較軸を固定して前処理差を見える化する,比較対象と固定条件,保存率と artifact 除去後指標,比較表の骨格を先に埋める,全部の前処理法を一度に入れない
+1,長時間記録の安定性評価,longitudinal_stability_note,one-pager,長時間EEGでの drift と欠損を主要条件に絞って整理する,session drift 指標,欠損率と transition stability,長時間比較の主要指標を確定する,長期追跡全般の大きい話にしない
+2,デコーディング精度ベンチマーク,decoding_benchmark_v1,table+memo,公開EEG benchmark で decoding 精度の基準線を揃える,主要タスクと評価指標,subject holdout 条件,主要ベースラインを固定する,最高性能競争を前に出さない
+2,クロスデータセット汎化,cross_dataset_gap_report,one-pager,cross-dataset gap を主要2条件で整理する,ラベル空間の揃え方,train/test データ条件,使う条件を先に削る,全部のデータ統合から始めない
+2,リアルタイムデコーディング,replay_latency_note,one-pager,replay ベースでリアルタイム近似の遅延条件を確認する,latency 指標,offline と replay の差分,最小検証単位を決める,完全オンライン運用構想を先に出さない
+2,Foundation Modelの適用,ssl_pretrain_baseline,one-pager,自己教師あり表現の比較基盤を小さく作る,pretrain 条件と linear probe,OOD gap と計算条件,比較対象を2本に絞る,大規模基盤モデル構想にしない
+2,運動意図デコーディング,mi_generalization_note,one-pager,運動意図 decoding の subject holdout 条件を固定して比べる,主要データセットと holdout 条件,balanced accuracy と macro-F1,主要条件の表を先に作る,BCI 全面実装を前に出さない
+2,感覚知覚デコーディング,perception_benchmark_note,one-pager,ERP と SSVEP の主要条件を小さく揃えて比較する,課題条件と評価指標,P300 latency と frequency classification,主要課題を2つに絞る,知覚一般の話に広げない
+2,言語/意味デコーディング,semantic_decoding_feasibility_note,one-pager,言語/意味 decoding の成立条件をラベル定義から整理する,ラベル条件と除外条件,主要指標と課題差,使うラベル条件を固定する,意味理解全般を扱う話にしない
+3,感情状態の推定・分類,emotion_robustness_note,one-pager,emotion/stress EEG の被験者間頑健性を主要指標で整理する,subject shift と label noise,macro-F1 と calibration error,主要指標の報告様式を固定する,感情理解全般を語らない
+3,記憶のエンコーディング/検索,wm_retrieval_note,one-pager,working memory / retrieval 指標の再現条件を小さく整理する,課題設計と retrieval label,主要比較軸と drift,主要比較軸を固定する,記憶の本質の話にしない
+3,注意・ワーキングメモリ,workload_generalization_note,one-pager,attention/workload 条件の一般化可能性を主要課題で比べる,task scale と subject shift,macro-F1 と session drift,解析条件を固定する,教育イベント中心の話に寄せない
+3,意思決定過程,decision_proxy_note,one-pager,意思決定の proxy として何を測るかを最小構成で整理する,proxy 候補と除外条件,reward/risk condition 差,construct を広げすぎない条件を決める,意思決定全体理論にしない
+3,社会的認知,hyperscanning_pilot_note,one-pager,hyperscanning と stress 課題の最小 pilot 条件を整理する,共同課題と指標,活動化できる範囲,教材化と最小 pilot の境界を決める,大規模社会実装を前に出さない
+3,創造性・問題解決,creative_proxy_note,one-pager,創造性課題の proxy 指標を教材化可能な範囲で整理する,課題設計と ERP 候補,再現しやすい成果物,1回分の教材化範囲を決める,創造性の本質解明を言わない
+3,主観的経験の定量化,subjective_proxy_note,one-pager,subjective rating と EEG proxy の対応を小さく比較する,rating 条件と指標,annotation variability と除外条件,主要指標を1枚にまとめる,主観経験全体の一般論にしない
+4,意識の神経相関（NCC）定量化,ncc_proxy_note,one-pager,状態境界の proxy 指標として何を残すかを整理する,complexity proxy と state 条件,過大主張を避ける境界,主要 proxy を2つまでに絞る,意識の本質解明から入らない
+4,意識状態の分類（覚醒/睡眠/麻酔/DoC）,boundary_classifier_v1,table+memo,覚醒/睡眠/麻酔境界の主要状態分類条件を benchmark 化する,主要状態と confusion,domain shift と holdout 条件,boundary classifier 表を先に作る,臨床全般へ広げない
+4,統合情報理論(IIT)の実証的検証,complexity_proxy_note,one-pager,IIT proxy を complexity 指標として再計算する範囲を整理する,proxy 指標と state 条件,理論過剰主張の回避線,proxy 定義を固定する,IIT の全面実証を言わない
+4,Global Workspace Theory の検証,gwt_proxy_note,one-pager,P300/ignition proxy の比較条件を整理する,proxy 定義と主要課題,latency amplitude と除外条件,P300 proxy 条件を先に固定する,GWT の決着をつける話にしない
+4,意識の連続性と同一性,stability_proxy_note,one-pager,縦断安定性と within-person 距離の proxy を整理する,cross-session 指標,identity overclaim を避ける条件,proxy としての表現に直す,自己同一性の哲学議論から入らない
+4,mind-upload可能性の理論的枠組み,claim_ladder_memo,one-pager,EEGで言ってよい claim ladder を benchmark commons として整理する,claim level と扱う範囲,共有可能な成果物と次段接続,claim 階段を1ページで見せる,mind-upload 可能性そのものを断定しない

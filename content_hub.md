@@ -121,6 +121,12 @@ Research、Perspective、Idea、Proposals、Issue、Collaborations が全部同�
 文献整理、理論整理、提案、Issue、外部依存のどこへ戻すかを一本道で整理したい場合は <a href="wiki/reading-to-change-workflow.html">Wiki: 読んだ内容を変更へつなぐ流れ</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>EEG 公開データから助成テーマまで一気に見たいとき</strong>
+<p>
+25トピックを EEG 公開データでどこまで検証できるか、さらに助成制度タイプごとの題目や成果物へどう落とすかをまとめて見たい場合は <a href="wiki/mind-upload-eeg-data-fund-map.html">Wiki: EEG-DATA × 助成マップ</a> をご覧ください。ロードマップ、データ、協業候補の間を実務的につなぐ長文 wiki です。
+</p>
+</div>
 
 <section class="section" id="quick-routing">
 <h2 class="section-title">追加したい内容から統合先を決める</h2>
@@ -368,6 +374,7 @@ Research、Perspective、Idea、Proposals、Issue、Collaborations が全部同�
 <li><a href="wiki/standards-repositories-validators-and-benchmarks.html">wiki/standards-repositories-validators-and-benchmarks.html</a></li>
 <li><a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">wiki/closed-loop-latency-jitter-and-safety-stops.html</a></li>
 <li><a href="wiki/thermodynamic-grounding-basics.html">wiki/thermodynamic-grounding-basics.html</a></li>
+<li><a href="wiki/mind-upload-eeg-data-fund-map.html">wiki/mind-upload-eeg-data-fund-map.html</a></li>
 </ul>
 </div>
 <div class="key-points">
@@ -408,6 +415,7 @@ Research、Perspective、Idea、Proposals、Issue、Collaborations が全部同�
 <li><a href="wiki/understanding-vs-action-readiness.html">理解と行動準備の違い →</a></li>
 <li><a href="wiki/wbe-to-theory-route.html">WBE入門の次ルート →</a></li>
 <li><a href="wiki/eeg-to-l0-route.html">EEGからL0まで →</a></li>
+<li><a href="wiki/mind-upload-eeg-data-fund-map.html">EEG-DATA × 助成マップ →</a></li>
 <li><a href="wiki/verification-next-routes.html">Verification後の4ルート →</a></li>
 <li><a href="wiki/roadmap-next-routes.html">Roadmap後の5ルート →</a></li>
 <li><a href="wiki/literature-to-action-route.html">文献から実装・参加へ →</a></li>

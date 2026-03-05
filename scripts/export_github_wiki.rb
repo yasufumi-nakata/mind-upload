@@ -42,6 +42,9 @@ SIDEBAR_GROUPS = {
     issue-writing-basics
     content-placement-basics
     reading-to-change-workflow
+  ],
+  "助成・連携" => %w[
+    mind-upload-eeg-data-fund-map
   ]
 }.freeze
 
@@ -235,10 +238,9 @@ end
 
 pages = {}
 front_matters = {}
-tracked_paths = `git -C "#{ROOT}" ls-files "wiki/*.md"`.lines.map(&:strip).reject(&:empty?).sort
+page_paths = Dir.glob(File.join(SRC_DIR, "**", "*.md")).sort
 
-tracked_paths.each do |relative_path|
-  path = File.join(ROOT, relative_path)
+page_paths.each do |path|
   slug = File.basename(path, ".md")
   output_slug = slug == "index" ? "Home" : slug
   front_matter, body = load_page(path)
@@ -251,6 +253,12 @@ FileUtils.mkdir_p(DEST_DIR)
 
 pages.each do |slug, content|
   File.write(File.join(DEST_DIR, "#{slug}.md"), content)
+end
+
+generated_src = File.join(SRC_DIR, "generated")
+if Dir.exist?(generated_src)
+  FileUtils.mkdir_p(File.join(DEST_DIR, "generated"))
+  FileUtils.cp_r(Dir.children(generated_src).map { |child| File.join(generated_src, child) }, File.join(DEST_DIR, "generated"))
 end
 
 File.write(File.join(DEST_DIR, "_Sidebar.md"), build_sidebar(front_matters))

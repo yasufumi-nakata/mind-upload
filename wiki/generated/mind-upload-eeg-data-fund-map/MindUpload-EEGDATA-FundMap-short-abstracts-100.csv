@@ -1,0 +1,26 @@
+phase,topic,short_abstract_100,core_claim,safe_ending
+1,EEG信号品質の限界検証,公開EEGを横断してSNRやアーチファクト耐性を比較し、計測条件差の下限を品質 benchmark として整理する,品質条件の比較基盤を作る,品質下限と失敗条件の整理に留める
+1,高密度EEG空間分解能評価,ground truth を含む公開HD-EEGで局在誤差と電極密度依存性を比べ、空間分解能の実用限界を整理する,空間限界の比較条件を示す,局在誤差の比較に留める
+1,マルチモーダル統合の基礎,EEG-fNIRSや視線の公開データで同期誤差と融合有無の差を比べ、再現可能な統合条件を整理する,同期条件の標準化を進める,最小の同期条件整理に留める
+1,ノイズ除去・信号分離手法の比較,ASR ICA ZapLine 系を公開EEGで横断比較し、信号保存率と下流性能への影響を前処理 benchmark として示す,前処理比較表を作る,前処理差の整理に留める
+1,長時間記録の安定性評価,睡眠や疲労を含む長時間EEGで drift 欠損 状態遷移の安定性を比べ、縦断利用の前提条件を整理する,長時間記録の安定性条件を示す,安定性指標の比較に留める
+2,デコーディング精度ベンチマーク,MI ERP SSVEP の公開EEGに統一 split と指標を与え、decoding 精度の基準線を再現可能な形で整備する,統一 benchmark を作る,最高性能競争には寄せない
+2,クロスデータセット汎化,同種課題を持つ複数公開EEGで cross-dataset gap を測り、dataset shift と subject shift の影響を切り分ける,汎化限界を測る,主要条件の gap 測定に留める
+2,リアルタイムデコーディング,replay ベースで遅延条件を見積もり、公開EEGからリアルタイム近似 decoding の最小成立条件を整理する,遅延評価の最小単位を示す,完全オンライン実装は主張しない
+2,Foundation Modelの適用,自己教師あり表現を公開EEGで比較し、linear probe と OOD gap から基盤表現学習の実用条件を整理する,自己教師あり比較基盤を作る,大規模モデル実装までは主張しない
+2,運動意図デコーディング,運動想像EEGで subject holdout 条件を固定し、cross-subject decoding の汎化限界を benchmark として示す,subject holdout 条件を揃える,汎化限界の比較に留める
+2,感覚知覚デコーディング,ERP P300 SSVEP の公開課題を横断し、知覚 decoding の再現条件と主要 confusion を比較整理する,主要知覚課題の比較条件を示す,知覚一般の理論化はしない
+2,言語/意味デコーディング,imagined speech や semantic ERP の公開EEGでラベル条件を揃え、言語/意味 decoding の成立条件を探る,ラベル定義を固定する,意味理解全体の主張は避ける
+3,感情状態の推定・分類,emotion stress EEG を横断し、被験者間頑健性と label noise の影響を比較して感情分類の安全域を整理する,被験者間頑健性を測る,主観ラベルの限界整理に留める
+3,記憶のエンコーディング/検索,working memory と retrieval 課題の公開EEGで主要比較軸を揃え、再現しやすい記憶指標を整理する,主要比較軸を固定する,記憶の本質解明は主張しない
+3,注意・ワーキングメモリ,attention workload 課題を横断し、task scale と session drift を比べて一般化しやすい注意指標を整理する,一般化しやすい指標を探る,教育イベント中心には寄せない
+3,意思決定過程,リスク選択や報酬予測の公開EEGから proxy 指標を比較し、意思決定過程を小さな measurable 条件に落とす,proxy と除外条件を決める,意思決定全体理論にはしない
+3,社会的認知,hyperscanning や social stress EEG を使い、共同課題で再現しやすい社会的認知 proxy を pilot 条件として整理する,最小 pilot 条件を示す,大規模社会実装は語らない
+3,創造性・問題解決,creative insight 課題の公開EEGで再現しやすい ERP proxy を比較し、教材化できる最小条件を整理する,教材化可能な proxy を探る,創造性の本質解明は避ける
+3,主観的経験の定量化,pain や awareness の主観 rating と EEG 指標を比べ、self-report と proxy の対応が安定する条件を整理する,主観 rating と proxy の対応を見る,主観の客観化は主張しない
+4,意識の神経相関（NCC）定量化,覚醒 睡眠 夢 眠気境界の公開EEGで complexity proxy や遷移指標を比べ、状態境界に敏感な指標を整理する,状態境界 proxy を比較する,意識の正体解明は避ける
+4,意識状態の分類（覚醒/睡眠/麻酔/DoC）,睡眠 眠気 麻酔関連EEGに統一分類条件を与え、consciousness boundary classification の benchmark を作る,主要状態分類条件を揃える,状態分類 benchmark に留める
+4,統合情報理論(IIT)の実証的検証,睡眠や催眠EEGから complexity proxy を再計算し、IIT に近い指標の状態差と安定性を比較する,IIT proxy の挙動を比べる,理論の証明は主張しない
+4,Global Workspace Theory の検証,P300 や ignition proxy を含む公開ERP課題で条件差を比べ、GWT に近い更新指標の再現性を整理する,P300 proxy 条件を固定する,GWT の決着をつける話にはしない
+4,意識の連続性と同一性,cross-session EEG biometrics を使い、個人内安定性と状態変動の proxy を比べて連続性の安全域を整理する,縦断安定性 proxy を測る,本人性の証明には踏み込まない
+4,mind-upload可能性の理論的枠組み,EEG-DATA の公開課題を整理し、どの主張がどの測定と汎化条件に依存するかを claim ladder として示す,claim ladder と benchmark commons を作る,mind-upload の断定は避ける

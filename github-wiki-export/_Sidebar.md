@@ -32,6 +32,9 @@
 - [Wiki：新しい情報の置き場所を決める基本](https://github.com/yasufumi-nakata/mind-upload/wiki/content-placement-basics)
 - [Wiki：読んだ内容を変更へつなぐ流れ](https://github.com/yasufumi-nakata/mind-upload/wiki/reading-to-change-workflow)
 
+## 助成・連携
+- [Wiki：EEG-DATA × 助成マップ](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-data-fund-map)
+
 ## 公開サイト
 - [スタートページ](https://mind-upload.com/index.html)
 - [検証基盤](https://mind-upload.com/verification.html)
