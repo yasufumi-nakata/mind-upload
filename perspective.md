@@ -84,6 +84,12 @@ recommended_pages:
 </p>
 </div>
 <div class="note-box">
+<strong>理論系ページの役割差で迷ったとき</strong>
+<p>
+Perspective は理論、計測、反論、限界をまとめて追う長文ノートです。主張レベルを先にそろえる入口は <a href="wbe_101.html">WBE 101</a>、設計原理を絞って見るページは <a href="idea.html">理論フレーム</a>、依存関係の地図は <a href="tech_roadmap.html">技術ロードマップ</a> です。理論系だけの読み分けを 1 枚で見たい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
 <strong>『不足』『未確定』『未解決』の重さを分けたいとき</strong>
 <p>
 このページは限界や反論を多く扱うため、何が<strong>部分解決</strong>で、何が<strong>探索段階</strong>で、何が<strong>未整備</strong>なのかを分けて読む必要があります。進み具合の言葉を 1 枚で整理したい場合は <a href="wiki/progress-labels-and-open-problem-status.html">Wiki: 部分解決・探索段階・未整備の読み方</a> を先にご覧ください。

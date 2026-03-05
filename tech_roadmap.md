@@ -81,6 +81,12 @@ recommended_pages:
 P/M/R/I/V/D の記号や依存関係を初歩から追いたい場合は、先に <a href="wiki/roadmap-reading-guide.html">Wiki: ロードマップの読み方</a> を見てください。この本文は「辞書」より「地図」に近いので、補助説明を先に入れた方が読みやすいです。
 </p>
 </div>
+<div class="note-box">
+<strong>理論系ページの中でこのページの役割を知りたいとき</strong>
+<p>
+このページは理論本文そのものより、論点どうしの依存関係を並べる地図です。主張レベルの入口は <a href="wbe_101.html">WBE入門</a>、理論と限界の長文は <a href="perspective.html">研究ノート</a>、設計原理は <a href="idea.html">理論フレーム</a> が担当します。理論系ページ全体の読み分けを 1 枚で見たい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a> をご覧ください。
+</p>
+</div>
 
 <div class="note-box">
 <strong>V5 本人性の入口だけ先に見たいとき</strong>

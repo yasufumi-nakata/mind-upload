@@ -74,6 +74,12 @@ recommended_pages:
 このページは理論フレームなので、前提をかなり圧縮しています。理論名の違いで止まった場合は <a href="wiki/consciousness-theory-map.html">Wiki: 意識理論マップ</a>、コピー問題で止まった場合は <a href="wiki/personhood-and-copy-problem.html">Wiki: 本人性とコピー問題</a>、計測から ESI / DCM / SCM へ降りる部分で止まった場合は <a href="wiki/observation-to-estimation.html">Wiki: 観測から推定へ</a>、熱力学の語で止まった場合は <a href="wiki/thermodynamic-grounding-basics.html">Wiki: 熱力学的接地の基本</a> を先に読むと、この本文の狙いが追いやすくなります。
 </p>
 </div>
+<div class="note-box">
+<strong>理論系ページの中での位置づけを知りたいとき</strong>
+<p>
+このページは、採用する設計原理を絞って見るための理論フレームです。主張レベルの入口は <a href="wbe_101.html">WBE 101</a>、支持点と限界を長文で追うページは <a href="perspective.html">研究ノート</a>、依存関係の地図は <a href="tech_roadmap.html">技術ロードマップ</a> です。理論系だけの役割差を 1 枚で見たい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a> をご覧ください。
+</p>
+</div>
 
 <table class="data-table">
 <thead>

@@ -77,6 +77,12 @@ Mind-Uploadは、「心をコンピュータで再現できるのか？」とい
 Verification、Roadmap、Perspective、WBE 101、Datasets などは、似た説明をしているようで役割が違います。まずどの公開ページから入るべきかを整理したい場合は <a href="wiki/public-page-reading-guide.html">Wiki: 公開ページの読み分けガイド</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>理論から入りたいとき</strong>
+<p>
+WBE 101、Perspective、Framework、Roadmap の違いだけを理論系に絞って整理したい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a> をご覧ください。
+</p>
+</div>
 
 <table class="data-table">
 <thead>

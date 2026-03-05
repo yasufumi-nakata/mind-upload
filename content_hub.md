@@ -58,6 +58,12 @@ recommended_pages:
 ここで決めたいのは「何を書くか」よりも「どこへ書くか」でございます。内容の重複や導線の散逸を防ぐため、公開ページの入口と統合先をこのページで先に固定します。
 </p>
 </div>
+<div class="note-box">
+<strong>理論系ページの読み順で迷ったとき</strong>
+<p>
+WBE 101、Perspective、Idea、Roadmap の違いだけを理論系に絞って整理したい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a> をご覧ください。公開ページ全体の役割差はここで、理論系だけの詳しい読み分けは wiki 側で補います。
+</p>
+</div>
 
 <section class="section" id="quick-routing">
 <h2 class="section-title">追加したい内容から統合先を決める</h2>
