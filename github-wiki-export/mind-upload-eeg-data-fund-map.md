@@ -6195,3 +6195,72 @@
 
 - 共同研究先タイプ別の再開条件成立後初回確認テンプレは `MindUpload-EEGDATA-FundMap-collab-hold-release-resume-check.csv` を使う
 - 列は `counterpart_type`, `check_focus`, `opening_line`, `share_asset`, `check_line`, `decision_gate`, `note_line`, `avoid_point`
+
+## 218. 25トピック別の再挑戦後最終誤解防止メモ
+
+### 218.1 使い方
+
+- `misread_focus` は topic ごとに最後に何の誤解を防ぐかの観点として使う
+- `guard_note` は 外部に残す最小の誤解防止メモとして使う
+- `keep_note_trigger` は そのメモを残してよい条件として使う
+- `rewrite_trigger` は より短い防止メモへ書き換える条件として使う
+- `do_not_leave_note` は 防止メモを残さない方がよい条件として使う
+- `note_line` は README や handoff 向けの一文として使う
+
+### 218.2 再挑戦後最終誤解防止メモで守ること
+
+- 誤解防止メモは `全部の注意事項` ではなく `最も起きやすい誤読を止める一文` にする
+- guard note は 1文で切る
+- rewrite trigger が立ったら 古い防止文を残し続けない
+- do_not_leave_note 条件がある時は かえって誤読を増やす補足を足さない
+
+### 218.3 詳細版を引く場所
+
+- 25トピック別の再挑戦後最終誤解防止メモは `MindUpload-EEGDATA-FundMap-topic-retry-final-misread-guard.csv` を使う
+- 列は `phase`, `topic`, `misread_focus`, `guard_note`, `keep_note_trigger`, `rewrite_trigger`, `do_not_leave_note`, `note_line`, `avoid_point`
+
+## 219. 制度タイプ別の最終参照先削除条件
+
+### 219.1 使い方
+
+- `reference_delete_focus` は 最終参照先をいつ削除してよいかの観点として使う
+- `delete_trigger` は 参照先を削除してよい条件として使う
+- `keep_trigger` は まだ参照先を残す条件として使う
+- `do_not_delete` は その時点で削除しない方がよい条件として使う
+- `last_record_asset` は 削除前に残す最小の記録として使う
+- `note_line` は README や内部メモの一文として使う
+
+### 219.2 最終参照先削除条件で守ること
+
+- 参照先削除は `見えなくしたい` ではなく `役割を終えた` で切る
+- last record asset は URL 1 本か短い記録 1 本まで削る
+- keep trigger が立つ間は 何のために残すかを明記する
+- do_not_delete 条件がある時は 履歴確認の足場まで消さない
+
+### 219.3 詳細版を引く場所
+
+- 制度タイプ別の最終参照先削除条件は `MindUpload-EEGDATA-FundMap-publication-final-reference-delete.csv` を使う
+- 列は `support_type`, `reference_delete_focus`, `delete_trigger`, `keep_trigger`, `do_not_delete`, `last_record_asset`, `note_line`, `avoid_point`
+
+## 220. 共同研究先タイプ別の初回確認後次アクション通知テンプレ
+
+### 220.1 使い方
+
+- `next_action_focus` は 初回確認の後に何を次アクションとして通知するかの論点として使う
+- `opening_line` は 通知の最初の一文として使う
+- `share_asset` は 次アクション通知で添える最小成果物として使う
+- `next_action_line` は 次の1動作を伝える一文として使う
+- `decision_gate` は この通知の後に reopen / hold / close を決める条件として使う
+- `note_line` は 送信前チェックや内部メモの一文として使う
+
+### 220.2 初回確認後次アクション通知テンプレで守ること
+
+- 次アクション通知は `では進めます` ではなく `次に何を誰がやるかを切る文` にする
+- share asset は 1枚か1件から増やさない
+- next action line は 期限か担当のどちらかが見える形にする
+- decision gate が曖昧なら 次アクション通知を送らない
+
+### 220.3 詳細版を引く場所
+
+- 共同研究先タイプ別の初回確認後次アクション通知テンプレは `MindUpload-EEGDATA-FundMap-collab-hold-release-next-action-notice.csv` を使う
+- 列は `counterpart_type`, `next_action_focus`, `opening_line`, `share_asset`, `next_action_line`, `decision_gate`, `note_line`, `avoid_point`
