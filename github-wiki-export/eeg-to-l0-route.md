@@ -35,16 +35,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>一本道で進める</h2>
 <p>
 EEG を学んだあとに迷いやすいのは、<strong>次にデータを選ぶのか</strong>、<strong>いきなり手を動かすのか</strong>、<strong>先に勝利条件を確認するのか</strong>が分からなくなることです。このルートでは、その順番を一本道に固定します。
 </p>
-</div>
 
-<section class="section" id="route">
-<h2 class="section-title">EEGからL0までの6ステップ</h2>
-<table class="data-table">
+<h2>EEGからL0までの6ステップ</h2>
+<table>
 <thead>
 <tr>
 <th>順番</th>
@@ -92,11 +89,9 @@ EEG を学んだあとに迷いやすいのは、<strong>次にデータを選�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="what-to-output">
-<h2 class="section-title">この一本道で最後に残したいもの</h2>
-<div class="key-points">
+<h2>この一本道で最後に残したいもの</h2>
+
 <h4>Artifact Pack</h4>
 <ul>
 <li><strong>入力：</strong>BIDS 形式のデータ、メタデータ、events、同期情報。</li>
@@ -105,15 +100,13 @@ EEG を学んだあとに迷いやすいのは、<strong>次にデータを選�
 <li><strong>出力：</strong>最低 1 本のベースライン指標と、その再現ログ。</li>
 <li><strong>監査：</strong>失敗例、うまくいかなかった条件、既知の弱点。</li>
 </ul>
-</div>
+
 <p>
 提出物の形だけを 1 枚で確認したい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack">L0で最低限そろえる成果物パック</a> が対応する補助ページです。
 </p>
-</section>
 
-<section class="section" id="where-to-bounce">
-<h2 class="section-title">途中で戻る先</h2>
-<table class="data-table">
+<h2>途中で戻る先</h2>
+<table>
 <thead>
 <tr>
 <th>止まる場所</th>
@@ -143,11 +136,9 @@ EEG を学んだあとに迷いやすいのは、<strong>次にデータを選�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="common-mistakes">
-<h2 class="section-title">このルートで起きやすい事故</h2>
-<div class="key-points">
+<h2>このルートで起きやすい事故</h2>
+
 <h4>Mistake</h4>
 <ul>
 <li><strong>EEG 101 の次にすぐモデルを作る：</strong> 先にデータ選定と分割規則を固定しないと、あとで数字が崩れます。</li>
@@ -155,12 +146,8 @@ EEG を学んだあとに迷いやすいのは、<strong>次にデータを選�
 <li><strong>Hands-on 完了をそのまま L1 や L2 の成功と読む：</strong> まずは L0 の再現可能解析までです。</li>
 <li><strong>Verification を最後に読まずに終える：</strong> 何が満たせていて何がまだ満たせていないかを明示しないと、主張レベルがずれます。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 EEG の入口へ戻るなら <a href="https://mind-upload.com/eeg_101.html">EEG入門</a>、実務ページの役割差へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/practical-pages-reading-guide">実務系ページの読み分けガイド</a>、L0 の後の進み方を見るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claim-level-reading-routes">L0〜L5ごとの読み進め方</a> をご利用ください。
 </p>
-</section>

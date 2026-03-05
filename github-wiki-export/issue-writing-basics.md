@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>Issue は「完全な答え」ではなく「動ける問い」です</h2>
 <p>
 Issue は、完成した提案書である必要はありません。むしろ大事なのは、<strong>どこで止まったか</strong>、<strong>何が不足しているか</strong>、<strong>何が足されれば前進か</strong>を、他の人が追える形で残すことです。
 </p>
-</div>
 
-<section class="section" id="minimum-mindset">
-<h2 class="section-title">まず知っておきたい考え方</h2>
-<table class="data-table">
+<h2>まず知っておきたい考え方</h2>
+<table>
 <thead>
 <tr>
 <th>誤解しやすい考え</th>
@@ -68,11 +65,9 @@ Issue は、完成した提案書である必要はありません。むしろ�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="from-confusion-to-issue">
-<h2 class="section-title">よくある止まり方を Issue に変える</h2>
-<table class="data-table">
+<h2>よくある止まり方を Issue に変える</h2>
+<table>
 <thead>
 <tr>
 <th>止まり方</th>
@@ -108,11 +103,9 @@ Issue は、完成した提案書である必要はありません。むしろ�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="minimum-template">
-<h2 class="section-title">最低限のテンプレ</h2>
-<table class="data-table">
+<h2>最低限のテンプレ</h2>
+<table>
 <thead>
 <tr>
 <th>項目</th>
@@ -146,11 +139,9 @@ Issue は、完成した提案書である必要はありません。むしろ�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="weak-vs-strong">
-<h2 class="section-title">弱い Issue と強い Issue の違い</h2>
-<table class="data-table">
+<h2>弱い Issue と強い Issue の違い</h2>
+<table>
 <thead>
 <tr>
 <th>弱い書き方</th>
@@ -172,11 +163,9 @@ Issue は、完成した提案書である必要はありません。むしろ�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="mistakes">
-<h2 class="section-title">よくある失敗</h2>
-<div class="key-points">
+<h2>よくある失敗</h2>
+
 <h4>Mistake</h4>
 <ul>
 <li><strong>問題を大きくしすぎる：</strong> まず 1 ページ、1 用語、1 導線のように最小単位へ切る方が動きます。</li>
@@ -184,12 +173,8 @@ Issue は、完成した提案書である必要はありません。むしろ�
 <li><strong>前進条件だけで反証条件がない：</strong> 何が出たらその修正方針を採らないかも必要です。</li>
 <li><strong>置き場が未定のまま提案する：</strong> Content Hub で統合先を確認すると、重複が減ります。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 Issue の入口へ戻るなら <a href="https://mind-upload.com/issue.html">貢献ガイド</a>、参加ページ読後の分岐へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes">参加・協業ページのあとに進む5つの道</a>、条件設計の前提へ戻るなら <a href="https://mind-upload.com/verification.html">Verification</a> をご利用ください。
 </p>
-</section>

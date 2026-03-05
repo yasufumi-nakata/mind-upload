@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>理解には段階があります</h2>
 <p>
 「意味はなんとなく分かった」と、「次にどのページを直すか分かる」は同じではありません。このサイトでは、読む、原文へ戻る、条件を確認する、修正位置を特定する、外部依存を分ける、という段階を分けて考えます。
 </p>
-</div>
 
-<section class="section" id="four-levels">
-<h2 class="section-title">4つの段階</h2>
-<table class="data-table">
+<h2>4つの段階</h2>
+<table>
 <thead>
 <tr>
 <th>段階</th>
@@ -73,11 +70,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="by-page-type">
-<h2 class="section-title">ページごとに足りないものが違います</h2>
-<table class="data-table">
+<h2>ページごとに足りないものが違います</h2>
+<table>
 <thead>
 <tr>
 <th>ページ</th>
@@ -107,11 +102,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="self-check">
-<h2 class="section-title">自己診断</h2>
-<table class="data-table">
+<h2>自己診断</h2>
+<table>
 <thead>
 <tr>
 <th>自分に聞くこと</th>
@@ -142,11 +135,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="common-mistakes">
-<h2 class="section-title">よくある止まり方</h2>
-<div class="key-points">
+<h2>よくある止まり方</h2>
+
 <h4>Mistake</h4>
 <ul>
 <li><strong>要約を読んで、そのまま引用する：</strong> 根拠に使うなら元ソース確認が必要です。</li>
@@ -154,12 +145,8 @@
 <li><strong>修正位置が決まらないまま大きな提案にする：</strong> Content Hub や対象ページ本文へ戻る方が安全です。</li>
 <li><strong>理解は進んだが外部依存を見落とす：</strong> 実行可能な変更と相手待ちを分ける必要があります。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 元ソース確認へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/summary-vs-source-reading">要約・原文・Issue履歴の使い分け</a>、実行へ落とすなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/issue-writing-basics">はじめての Issue の書き方</a>、サイト全体の使い方へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/site-usage-modes">このサイトの3つの使い方</a> をご利用ください。
 </p>
-</section>

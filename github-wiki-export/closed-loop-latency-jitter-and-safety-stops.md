@@ -34,29 +34,23 @@
 
 ---
 
-<div class="abstract-box">
 <h2>いちばん短い区別</h2>
 <p>
 <strong>閉ループ</strong>は「出力が次の入力を変える系」です。ここでは、<strong>遅延</strong>は毎回のずれ、<strong>ジッタ</strong>はそのずれの揺れ、<strong>ドリフト</strong>は長時間での時計ずれです。さらに、<strong>棄権</strong>は低信頼時に何もしないこと、<strong>安全停止</strong>は危険時に止めることです。
 </p>
-</div>
 
-<section class="section" id="why-offline-is-not-enough">
-<h2 class="section-title">なぜオフライン精度だけでは足りないのか</h2>
+<h2>なぜオフライン精度だけでは足りないのか</h2>
 <p>
 オフライン評価では、すでに記録されたデータをあとから処理します。これに対して閉ループでは、モデルの出力が環境や次の入力を変えます。したがって、同じモデルでも、遅延やジッタが入るだけで挙動が崩れることがあります。
 </p>
-<div class="note-box">
+
 <strong>安全な読み方</strong>
 <p>
 「オフラインで 95% 出た」ことと、「リアルタイムで安定に動く」ことは別の主張です。前者が L1/L2 の入口でも、後者は L3 の追加課題です。
 </p>
-</div>
-</section>
 
-<section class="section" id="terms">
-<h2 class="section-title">まず 4 つを分ける</h2>
-<table class="data-table">
+<h2>まず 4 つを分ける</h2>
+<table>
 <thead>
 <tr>
 <th>用語</th>
@@ -87,11 +81,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="end-to-end">
-<h2 class="section-title">何を end-to-end で測るのか</h2>
-<table class="data-table">
+<h2>何を end-to-end で測るのか</h2>
+<table>
 <thead>
 <tr>
 <th>区間</th>
@@ -120,11 +112,9 @@
 <p>
 閉ループでは、途中の平均時間だけでなく、<strong>全経路の end-to-end 遅延</strong>を見る必要があります。処理が速くても、表示遅延や通信遅延で全体が遅ければ、系としては遅いままです。
 </p>
-</section>
 
-<section class="section" id="stops">
-<h2 class="section-title">棄権と freeze と安全停止は別物</h2>
-<table class="data-table">
+<h2>棄権と freeze と安全停止は別物</h2>
+<table>
 <thead>
 <tr>
 <th>仕組み</th>
@@ -150,17 +140,14 @@
 </tr>
 </tbody>
 </table>
-<div class="note-box">
+
 <strong>ここが重要です</strong>
 <p>
 低信頼なので出さない、壊れたかもしれないので保留する、危険なので止める、は全部違います。全部まとめて「止めた」で済ませると、性能問題と安全問題が混ざります。
 </p>
-</div>
-</section>
 
-<section class="section" id="logs">
-<h2 class="section-title">最低限残したいログ</h2>
-<div class="key-points">
+<h2>最低限残したいログ</h2>
+
 <h4>Checklist</h4>
 <ul>
 <li><strong>end-to-end 遅延：</strong>平均だけでなく分布も残します。</li>
@@ -170,21 +157,15 @@
 <li><strong>棄権率：</strong>低信頼でどれだけ何もしなかったか。</li>
 <li><strong>停止トリガー：</strong>どの条件で freeze や安全停止が発動したか。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="how-to-read">
-<h2 class="section-title">L3 の主張を読むときの 3 問</h2>
+<h2>L3 の主張を読むときの 3 問</h2>
 <ol>
 <li><strong>オフライン精度と閉ループ安定性を分けて報告しているか：</strong>片方だけで両方を言っていないかを見ます。</li>
 <li><strong>遅延、ジッタ、ドリフトを end-to-end で測っているか：</strong>途中の一部だけで安心していないかを確認します。</li>
 <li><strong>棄権、freeze、安全停止の条件が書かれているか：</strong>危険時の扱いが曖昧でないかを見ます。</li>
 </ol>
-</section>
 
-<section class="section" id="return">
-<h2 class="section-title">次にどこへ戻るか</h2>
+<h2>次にどこへ戻るか</h2>
 <p>
 L3 の全体設計へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a>、EEG と同期の実務へ戻るなら <a href="https://mind-upload.com/eeg_101.html">EEG入門</a>、Roadmap の I1 / I8 へ戻るなら <a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a> をご利用ください。
 </p>
-</section>

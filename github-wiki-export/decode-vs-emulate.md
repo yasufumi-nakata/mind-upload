@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>まず一言でいうと</h2>
 <p>
 decode は「観測された信号から何かを当てること」、emulate は「中の仕組みが動き、条件変更にも反応すること」です。見た目の出力が似ていても、その中身が同じように動いているとは限りません。
 </p>
-</div>
 
-<section class="section" id="simple-table">
-<h2 class="section-title">いちばん短い違い</h2>
-<table class="data-table">
+<h2>いちばん短い違い</h2>
+<table>
 <thead>
 <tr>
 <th>項目</th>
@@ -68,18 +65,14 @@ decode は「観測された信号から何かを当てること」、emulate �
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="daily-example">
-<h2 class="section-title">日常例で考える</h2>
+<h2>日常例で考える</h2>
 <p>
 たとえば、ある人の答案を見て「この人は次にこう答えそうだ」と当てるのは decode に近いです。一方、その人の考え方や迷い方まで再現し、質問の条件を変えても同じように反応する仕組みを作るのは emulate に近いです。
 </p>
-</section>
 
-<section class="section" id="evidence">
-<h2 class="section-title">必要な証拠も違う</h2>
-<table class="data-table">
+<h2>必要な証拠も違う</h2>
+<table>
 <thead>
 <tr>
 <th>見たいこと</th>
@@ -97,16 +90,12 @@ decode は「観測された信号から何かを当てること」、emulate �
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="why-matters">
-<h2 class="section-title">なぜこの区別が重要か</h2>
+<h2>なぜこの区別が重要か</h2>
 <p>
 この区別がないと、「脳信号から文章を出せた」だけで、WBE に必要な内部の生成や因果構造まで達成したように読んでしまいます。Mind-Upload では、ここを飛ばさないためにクレーム階段と検証基盤を先に置いています。
 </p>
-<div class="cta-box">
+
 <h4>Next</h4>
 <p>主張レベルと必要な証拠の強さを合わせて見たい場合はこちらです。</p>
 <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence">主張と証拠の読み方へ →</a>
-</div>
-</section>

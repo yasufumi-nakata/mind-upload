@@ -35,23 +35,18 @@
 
 ---
 
-<div class="abstract-box">
 <h2>いちばん短い区別</h2>
 <p>
 <strong>更新</strong>は同じ履歴を引き継いだ変更、<strong>分岐</strong>は同じ起点から複数の履歴が走ること、<strong>停止規則</strong>はどんな結果で中止や保留にするかの事前ルール、<strong>キルスイッチ</strong>は危険時の緊急停止手段です。似ていますが、役割は別です。
 </p>
-</div>
 
-<section class="section" id="why-this-matters">
-<h2 class="section-title">なぜこの区別が必要なのか</h2>
+<h2>なぜこの区別が必要なのか</h2>
 <p>
 WBE や本人性の話では、システムが固定物ではありません。学習すれば変わり、複製すれば分かれ、運用すれば停止判断が要ります。ここを曖昧にすると、「前版より点が良いから同じ系の健全な進歩だ」「分岐後も全部まとめて同じ本人だ」といった、強すぎる読み方が起きやすくなります。
 </p>
-</section>
 
-<section class="section" id="terms">
-<h2 class="section-title">まず用語を分ける</h2>
-<table class="data-table">
+<h2>まず用語を分ける</h2>
+<table>
 <thead>
 <tr>
 <th>用語</th>
@@ -87,11 +82,9 @@ WBE や本人性の話では、システムが固定物ではありません。�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="safe-update">
-<h2 class="section-title">更新してよいかを見る最低チェック</h2>
-<table class="data-table">
+<h2>更新してよいかを見る最低チェック</h2>
+<table>
 <thead>
 <tr>
 <th>確認項目</th>
@@ -121,17 +114,14 @@ WBE や本人性の話では、システムが固定物ではありません。�
 </tr>
 </tbody>
 </table>
-<div class="note-box">
+
 <strong>重要</strong>
 <p>
 スコアが上がっただけでは、安全な更新とは言えません。リーク、評価変更、都合のよいサブセット選択でも数字は上がり得るため、<strong>差分</strong>と<strong>比較条件</strong>をセットで残す必要があります。
 </p>
-</div>
-</section>
 
-<section class="section" id="branching">
-<h2 class="section-title">分岐が起きたら何を固定するか</h2>
-<table class="data-table">
+<h2>分岐が起きたら何を固定するか</h2>
+<table>
 <thead>
 <tr>
 <th>固定したいもの</th>
@@ -164,11 +154,9 @@ WBE や本人性の話では、システムが固定物ではありません。�
 <p>
 特に本人性の議論では、分岐後の結果を全部まとめて「本人」と呼ぶのは危険です。少なくとも、<strong>どの時点まで同じ評価単位として扱うか</strong>を記録する必要があります。
 </p>
-</section>
 
-<section class="section" id="stop-vs-kill">
-<h2 class="section-title">停止規則とキルスイッチは別物</h2>
-<table class="data-table">
+<h2>停止規則とキルスイッチは別物</h2>
+<table>
 <thead>
 <tr>
 <th>仕組み</th>
@@ -194,20 +182,18 @@ WBE や本人性の話では、システムが固定物ではありません。�
 </tr>
 </tbody>
 </table>
-<div class="note-box">
+
 <strong>ありがちな混同</strong>
 <p>
 「結果が悪かったので止めた」は停止規則の話で、「危険なので即停止した」は安全の話です。同じ『止める』でも、証拠の扱いと安全対策では意味が違います。
 </p>
-</div>
+
 <p>
 特に閉ループ実装では、遅延や異常挙動に対する安全停止が追加で重要になります。リアルタイム系の入口だけ先に整理したい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops">Wiki: 閉ループ・遅延・ジッタ・安全停止</a> をご覧ください。
 </p>
-</section>
 
-<section class="section" id="logs">
-<h2 class="section-title">最低限残したいログ</h2>
-<div class="key-points">
+<h2>最低限残したいログ</h2>
+
 <h4>Checklist</h4>
 <ul>
 <li><strong>version ID：</strong>今どの版を評価したか。</li>
@@ -217,21 +203,15 @@ WBE や本人性の話では、システムが固定物ではありません。�
 <li><strong>停止判断：</strong>どのルールに触れたか、触れなかったか。</li>
 <li><strong>失敗例：</strong>うまくいかなかった条件や崩れた条件。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="how-to-read">
-<h2 class="section-title">強い主張を読むときの 3 問</h2>
+<h2>強い主張を読むときの 3 問</h2>
 <ol>
 <li><strong>更新前後の差分が残っているか：</strong>何を変えたのかが曖昧なら、改善の意味を読みすぎない方が安全です。</li>
 <li><strong>分岐 ID と観測期間があるか：</strong>複数履歴を 1 つにまとめていないかを確認します。</li>
 <li><strong>停止規則が先に決まっているか：</strong>悪い結果が出たときの扱いを、あとから書き換えていないかを見ます。</li>
 </ol>
-</section>
 
-<section class="section" id="return">
-<h2 class="section-title">次にどこへ戻るか</h2>
+<h2>次にどこへ戻るか</h2>
 <p>
 Roadmap の I5 / I8 / V7 へ戻るなら <a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a>、検証基盤の Registry / Audit へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a>、L0 実務へ戻るなら <a href="https://mind-upload.com/hands_on.html">ハンズオン</a> をご利用ください。
 </p>
-</section>

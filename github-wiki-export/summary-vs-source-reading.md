@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>要約は入口であって、最終判定ではありません</h2>
 <p>
 このサイトの要約ページは便利ですが、それだけで最終判断を済ませるためのものではありません。<strong>全体像をつかむ</strong>段階では要約で十分なこともありますが、<strong>根拠として使う</strong>、<strong>修正する</strong>、<strong>反論する</strong> ときは、原文や履歴へ戻る必要があります。
 </p>
-</div>
 
-<section class="section" id="when-summary-is-enough">
-<h2 class="section-title">要約で止めてよい場面</h2>
-<table class="data-table">
+<h2>要約で止めてよい場面</h2>
+<table>
 <thead>
 <tr>
 <th>やりたいこと</th>
@@ -64,11 +61,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="when-to-go-back">
-<h2 class="section-title">必ず元ソースへ戻る場面</h2>
-<table class="data-table">
+<h2>必ず元ソースへ戻る場面</h2>
+<table>
 <thead>
 <tr>
 <th>やりたいこと</th>
@@ -99,11 +94,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="by-page-type">
-<h2 class="section-title">ページごとに戻る先が違います</h2>
-<table class="data-table">
+<h2>ページごとに戻る先が違います</h2>
+<table>
 <thead>
 <tr>
 <th>ページ</th>
@@ -134,21 +127,17 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="reading-order">
-<h2 class="section-title">迷ったときの読み順</h2>
+<h2>迷ったときの読み順</h2>
 <ol>
 <li>要約で「何の話か」を特定します。</li>
 <li>その話を根拠として使うかどうかを決めます。</li>
 <li>根拠として使うなら、必ず原文、DOI、Issue 履歴へ戻ります。</li>
 <li>修正や提案に使うなら、対象ページ本文まで戻って位置を特定します。</li>
 </ol>
-</section>
 
-<section class="section" id="common-mistakes">
-<h2 class="section-title">よくある誤読</h2>
-<div class="key-points">
+<h2>よくある誤読</h2>
+
 <h4>Mistake</h4>
 <ul>
 <li><strong>要約の掲載を採択済みと読む：</strong> 要約掲載と最終評価は別です。</li>
@@ -156,19 +145,13 @@
 <li><strong>Issue の根拠リンクだけで修正場所を確定する：</strong> 対象ページ本文まで戻る方が安全です。</li>
 <li><strong>Technical Proposal の統合本文だけで変更可否を決める：</strong> 元 Issue の議論や原文節も確認する必要があります。</li>
 </ul>
-</div>
-</section>
 
-<div class="note-box">
 <strong>要約を読んだあとに、本当に次へ進めるか確認したいとき</strong>
 <p>
 元ソース確認まではしたが、まだ条件や修正位置が足りないのかを段階で見たい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/understanding-vs-action-readiness">『分かった』と『次に進める』の違い</a> をご覧ください。
 </p>
-</div>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 文献系ページの役割差へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading">文献と証拠ページの読み方</a>、提案ページの状態へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/proposal-status-reading">提案と状態ラベルの読み方</a>、論文から参加へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/literature-to-action-route">文献から実装・参加へ戻る一本道</a> をご利用ください。
 </p>
-</section>

@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>地図の次に路線を決める</h2>
 <p>
 技術ロードマップは「全体像」をつかむには有効ですが、そのままだと次にどこへ進むかが広すぎます。ここでは、<strong>いま何を深掘りしたいか</strong>で 5 本の道に分けて、次の1ページを固定します。
 </p>
-</div>
 
-<section class="section" id="five-routes">
-<h2 class="section-title">ロードマップのあとに進む5つの道</h2>
-<table class="data-table">
+<h2>ロードマップのあとに進む5つの道</h2>
+<table>
 <thead>
 <tr>
 <th>次に知りたいこと</th>
@@ -78,11 +75,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="why">
-<h2 class="section-title">なぜこの分け方なのか</h2>
-<table class="data-table">
+<h2>なぜこの分け方なのか</h2>
+<table>
 <thead>
 <tr>
 <th>道</th>
@@ -112,11 +107,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="helper-wiki">
-<h2 class="section-title">途中で止まったときの補助 wiki</h2>
-<table class="data-table">
+<h2>途中で止まったときの補助 wiki</h2>
+<table>
 <thead>
 <tr>
 <th>止まる場所</th>
@@ -146,11 +139,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="common-mistakes">
-<h2 class="section-title">よくある迷い方</h2>
-<div class="key-points">
+<h2>よくある迷い方</h2>
+
 <h4>Mistake</h4>
 <ul>
 <li><strong>Roadmap を読んだだけで次の作業が決まった気になる：</strong> 実際には路線を 1 本に絞る必要があります。</li>
@@ -158,12 +149,8 @@
 <li><strong>D 系列を抽象論のままにする：</strong> Issue や Collaborations へ戻して準備物を切る方が実務的です。</li>
 <li><strong>Verification へ行けば全部分かると思う：</strong> V 系列のあとも、L0、L3、L4 で次の分岐があります。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 Roadmap 本文へ戻るなら <a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a>、検証側へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a>、理論側の分岐へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/wbe-to-theory-route">WBE入門から理論を深掘る4ルート</a> をご利用ください。
 </p>
-</section>

@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>同じ「主張」に見えても、役割は同じではありません</h2>
 <p>
 文献整理、理論ノート、設計原理、技術提案、Issue、協業候補は、全部が同じ種類の文章ではありません。まず <strong>何を記録しているページか</strong> を分けると、断言の強さと次の行動を読み違えにくくなります。
 </p>
-</div>
 
-<section class="section" id="five-types">
-<h2 class="section-title">まず 5 種類に分ける</h2>
-<table class="data-table">
+<h2>まず 5 種類に分ける</h2>
+<table>
 <thead>
 <tr>
 <th>種類</th>
@@ -78,11 +75,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="page-differences">
-<h2 class="section-title">似て見えるページの違い</h2>
-<table class="data-table">
+<h2>似て見えるページの違い</h2>
+<table>
 <thead>
 <tr>
 <th>ページ</th>
@@ -118,11 +113,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="how-to-move">
-<h2 class="section-title">どう移ると自然か</h2>
-<table class="data-table">
+<h2>どう移ると自然か</h2>
+<table>
 <thead>
 <tr>
 <th>いまいる場所</th>
@@ -158,11 +151,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="common-mistakes">
-<h2 class="section-title">よくある混同</h2>
-<div class="key-points">
+<h2>よくある混同</h2>
+
 <h4>Mistake</h4>
 <ul>
 <li><strong>理論フレームを事実一覧として読む：</strong> Idea は作業仮説を含みます。</li>
@@ -170,12 +161,8 @@
 <li><strong>Issue を大きな構想メモにする：</strong> 今このリポジトリで切れる変更へ落とす方が安全です。</li>
 <li><strong>Collaborations を TODO 一覧と読む：</strong> 外部依存の候補と準備物の整理であり、即実行リストではありません。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 公開ページ全体の役割差へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide">公開ページの読み分けガイド</a>、提案ページの状態へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/proposal-status-reading">提案と状態ラベルの読み方</a>、実行タスクへ落とし込むなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/issue-writing-basics">はじめての Issue の書き方</a> をご利用ください。
 </p>
-</section>

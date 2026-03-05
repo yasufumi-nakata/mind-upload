@@ -119,6 +119,19 @@ def strip_site_wrappers(body)
   stripped.strip
 end
 
+def normalize_html_for_github(text)
+  normalized = text.dup
+  normalized.gsub!(%r{<!--.*?-->}m, "")
+  normalized.gsub!(%r{\sclass="[^"]*"}, "")
+  normalized.gsub!(%r{\sid="[^"]*"}, "")
+  normalized.gsub!(%r{\saria-label="[^"]*"}, "")
+  normalized.gsub!(%r{\shidden(="hidden")?}, "")
+  normalized.gsub!(%r{</?div[^>]*>}, "")
+  normalized.gsub!(%r{</?section[^>]*>}, "")
+  normalized.gsub!(/\n{3,}/, "\n\n")
+  normalized.strip
+end
+
 def render_link_list(entries)
   Array(entries).map do |entry|
     next unless entry.is_a?(Hash)
@@ -184,7 +197,7 @@ def render_page(front_matter, body, slug)
 
   lines << "---"
   lines << ""
-  lines << rewrite_links(strip_site_wrappers(body))
+  lines << normalize_html_for_github(rewrite_links(strip_site_wrappers(body)))
   lines.join("\n").strip + "\n"
 end
 
@@ -208,6 +221,18 @@ def build_sidebar(front_matters)
   lines.join("\n").strip + "\n"
 end
 
+def build_footer
+  <<~FOOTER
+  ---
+
+  学習用 Wiki の元ソースはリポジトリの `wiki/` 配下で管理しています。
+
+  - 公開ポータル: [mind-upload.com](#{PUBLIC_SITE})
+  - 統合先の判断: [公開コンテンツ統合ハブ](#{PUBLIC_SITE}/content_hub.html)
+  - 誤り報告・改善提案: [GitHub Issues](https://github.com/yasufumi-nakata/mind-upload/issues)
+  FOOTER
+end
+
 pages = {}
 front_matters = {}
 tracked_paths = `git -C "#{ROOT}" ls-files "wiki/*.md"`.lines.map(&:strip).reject(&:empty?).sort
@@ -229,5 +254,6 @@ pages.each do |slug, content|
 end
 
 File.write(File.join(DEST_DIR, "_Sidebar.md"), build_sidebar(front_matters))
+File.write(File.join(DEST_DIR, "_Footer.md"), build_footer)
 
 puts "Exported #{pages.length} wiki pages to #{DEST_DIR}"

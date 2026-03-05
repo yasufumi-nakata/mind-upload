@@ -33,23 +33,18 @@
 
 ---
 
-<div class="abstract-box">
 <h2>まず分けたいこと</h2>
 <p>
 外部依存タスクとは、<strong>こちらだけでは完了できない</strong>作業です。ただし、それは<strong>こちらで何もできない</strong>という意味ではありません。依頼前の下準備、判定条件、公開ログ形式、比較表などは先に作れます。
 </p>
-</div>
 
-<div class="note-box">
 <strong>参加ページのあとに次の1ページを決めたいとき</strong>
 <p>
 Issue や Collaborations を読んだあとに、次は小さな修正、条件設計、文献からの作業化、L0 実装準備のどれへ進むべきかを 1 枚で見たい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes">参加・協業ページのあとに進む5つの道</a> をご覧ください。
 </p>
-</div>
 
-<section class="section" id="two-columns">
-<h2 class="section-title">内製と外部依存を 2 列で読む</h2>
-<table class="data-table">
+<h2>内製と外部依存を 2 列で読む</h2>
+<table>
 <thead>
 <tr>
 <th>種類</th>
@@ -80,11 +75,9 @@ Issue や Collaborations を読んだあとに、次は小さな修正、条件�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="prework-pack">
-<h2 class="section-title">外部依存でも先に作りたい最小準備物</h2>
-<table class="data-table">
+<h2>外部依存でも先に作りたい最小準備物</h2>
+<table>
 <thead>
 <tr>
 <th>準備物</th>
@@ -120,11 +113,9 @@ Issue や Collaborations を読んだあとに、次は小さな修正、条件�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="issue-vs-collab">
-<h2 class="section-title">Issue と共同研究で少し違う点</h2>
-<table class="data-table">
+<h2>Issue と共同研究で少し違う点</h2>
+<table>
 <thead>
 <tr>
 <th>場面</th>
@@ -150,11 +141,9 @@ Issue や Collaborations を読んだあとに、次は小さな修正、条件�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="common-mistakes">
-<h2 class="section-title">よくある混同</h2>
-<div class="key-points">
+<h2>よくある混同</h2>
+
 <h4>Misread</h4>
 <ul>
 <li><strong>「外部依存だから今は何もしない」：</strong> 仕様、比較表、ログ形式、最小成果物は先に作れます。</li>
@@ -162,12 +151,8 @@ Issue や Collaborations を読んだあとに、次は小さな修正、条件�
 <li><strong>「大きい計画ほどよい」：</strong> 最初は最小スコープを切らないと、依頼も Issue も動きません。</li>
 <li><strong>「外部依存を本文で完了扱いする」：</strong> ここは特に避けるべきで、証跡のある内製変更と分けて書きます。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 Issue の書き方へ戻る場合は <a href="https://mind-upload.com/issue.html">貢献ガイド</a>、共同研究候補を整理する場合は <a href="https://mind-upload.com/collaborations.html">協業候補</a>、要求仕様や判定条件の前提を固める場合は <a href="https://mind-upload.com/verification.html">検証基盤</a> に戻ってください。
 </p>
-</section>

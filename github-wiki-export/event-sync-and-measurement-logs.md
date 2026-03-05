@@ -34,23 +34,18 @@
 
 ---
 
-<div class="abstract-box">
 <h2>いちばん短い答え</h2>
 <p>
 raw EEG は「電気信号の並び」です。しかし研究で知りたいのは、多くの場合「<strong>いつ、何が起きたときの信号か</strong>」です。その対応表がないと、あとから見ても意味があいまいになります。
 </p>
-</div>
 
-<section class="section" id="why-raw-is-not-enough">
-<h2 class="section-title">なぜ raw EEG だけでは足りないのか</h2>
+<h2>なぜ raw EEG だけでは足りないのか</h2>
 <p>
 たとえば、課題中に刺激が何回出たか、どのタイミングでボタンを押したか、どの区間がノイズで除外されたかが分からないと、同じ波形を見ても人ごとに解釈が変わります。つまり、波形だけでは「何を比べているのか」が崩れることがあります。
 </p>
-</section>
 
-<section class="section" id="event-markers">
-<h2 class="section-title">イベントマーカーと刺激ログ</h2>
-<table class="data-table">
+<h2>イベントマーカーと刺激ログ</h2>
+<table>
 <thead>
 <tr>
 <th>記録</th>
@@ -75,11 +70,9 @@ raw EEG は「電気信号の並び」です。しかし研究で知りたいの
 <p>
 イベントマーカーだけがあっても、刺激の中身や条件名が曖昧だと解析し直しにくくなります。逆に刺激ログだけあっても、EEG の時刻と結び付いていなければ十分ではありません。
 </p>
-</section>
 
-<section class="section" id="timing">
-<h2 class="section-title">時刻同期で見るべき 3 つ</h2>
-<table class="data-table">
+<h2>時刻同期で見るべき 3 つ</h2>
+<table>
 <thead>
 <tr>
 <th>用語</th>
@@ -108,14 +101,12 @@ raw EEG は「電気信号の並び」です。しかし研究で知りたいの
 <p>
 ここでは観測ログとしての意味を説明しています。L3 の閉ループ評価で、これらが end-to-end 安定性や安全停止にどう効くかを見たい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops">Wiki: 閉ループ・遅延・ジッタ・安全停止</a> が補講になります。
 </p>
-</section>
 
-<section class="section" id="bad-records">
-<h2 class="section-title">bad channel / bad segment を残す理由</h2>
+<h2>bad channel / bad segment を残す理由</h2>
 <p>
 ノイズが大きいチャンネルや、体動で壊れた区間を除外すること自体は普通です。ただし、その記録がないと、後から別の人が同じ除外を再現できません。
 </p>
-<div class="key-points">
+
 <h4>最低限残したいこと</h4>
 <ul>
 <li><strong>bad channel：</strong>どのチャンネルを、どんな理由で bad としたか。</li>
@@ -123,12 +114,9 @@ raw EEG は「電気信号の並び」です。しかし研究で知りたいの
 <li><strong>閾値：</strong>どの基準で除外したか。</li>
 <li><strong>修正方法：</strong>補間したのか、捨てたのか。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="bids">
-<h2 class="section-title">EEG-BIDS で最低限ほしい情報</h2>
-<table class="data-table">
+<h2>EEG-BIDS で最低限ほしい情報</h2>
+<table>
 <thead>
 <tr>
 <th>項目</th>
@@ -154,10 +142,8 @@ raw EEG は「電気信号の並び」です。しかし研究で知りたいの
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="cannot-recover">
-<h2 class="section-title">後から復元しにくい情報</h2>
+<h2>後から復元しにくい情報</h2>
 <p>
 次の情報は、記録していなければ後から推測で埋めるしかなくなります。
 </p>
@@ -167,11 +153,8 @@ raw EEG は「電気信号の並び」です。しかし研究で知りたいの
 <li><strong>除外した理由：</strong>後から見ても、なぜ捨てたか分からなくなります。</li>
 <li><strong>その場の運用メモ：</strong>電極トラブルや同期ミスは、波形だけでは読み取れません。</li>
 </ul>
-</section>
 
-<section class="section" id="return">
-<h2 class="section-title">次にどこへ戻るか</h2>
+<h2>次にどこへ戻るか</h2>
 <p>
 EEG 全体の役割へ戻るなら <a href="https://mind-upload.com/eeg_101.html">EEG入門</a>、スターターデータ選びへ戻るなら <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a>、最小ループの手順へ戻るなら <a href="https://mind-upload.com/hands_on.html">ハンズオン</a> をご利用ください。
 </p>
-</section>

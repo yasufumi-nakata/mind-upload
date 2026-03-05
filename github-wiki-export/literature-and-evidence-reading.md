@@ -34,23 +34,18 @@
 
 ---
 
-<div class="abstract-box">
 <h2>まず役割を分ける</h2>
 <p>
 文献系ページは、全部が同じ役割ではありません。広く拾うページ、未解決問題ごとに整理するページ、提案として統合するページを分けることで、読者が「いま何を見ているのか」を見失いにくくしています。
 </p>
-</div>
 
-<div class="note-box">
 <strong>文献を読んだあとに次の1ページを決めたいとき</strong>
 <p>
 役割差だけでなく、論文や文献地図を読んだあとに未解決問題、提案、Issue、協業候補のどこへ戻るかを一本道で見たい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/literature-to-action-route">文献から実装・参加へ戻る一本道</a> をご覧ください。
 </p>
-</div>
 
-<section class="section" id="which-page">
-<h2 class="section-title">3つのページの違い</h2>
-<table class="data-table">
+<h2>3つのページの違い</h2>
+<table>
 <thead>
 <tr>
 <th>ページ</th>
@@ -80,11 +75,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="how-deep">
-<h2 class="section-title">どこまで深読みするか</h2>
-<table class="data-table">
+<h2>どこまで深読みするか</h2>
+<table>
 <thead>
 <tr>
 <th>見ているもの</th>
@@ -110,30 +103,22 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="three-rules">
-<h2 class="section-title">読み違えを防ぐ3つのルール</h2>
-<div class="key-points">
+<h2>読み違えを防ぐ3つのルール</h2>
+
 <h4>Rule</h4>
 <ul>
 <li><strong>量と強さを混同しない：</strong> 論文数や引用数は、結論の確定とは別です。</li>
 <li><strong>要約で止めすぎない：</strong> 根拠として使うときは、必ず DOI や原文へ戻ります。</li>
 <li><strong>状態ラベルを読み違えない：</strong> source_logged、提案受理、文書反映は、それぞれ意味が違います。</li>
 </ul>
-</div>
-</section>
 
-<div class="note-box">
 <strong>Scopus / arXiv / source_logged の意味だけ先に確認したいとき</strong>
 <p>
 このページは役割差を説明する補助ページです。掲載元、文献種別、サイト内状態の違いを 1 枚で整理したい場合は、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status">Wiki: 文献のソース種別と状態ラベルの読み方</a> を先に見ると、論文集や文献地図の見え方が安定します。
 </p>
-</div>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次にどこへ戻るか</h2>
+<h2>次にどこへ戻るか</h2>
 <p>
 広く論文を眺めたい場合は <a href="https://mind-upload.com/mind_uploading_papers.html">論文集</a>、未解決問題から入りたい場合は <a href="https://mind-upload.com/research_harvest_50.html">文献地図</a>、提案と実装方針を追いたい場合は <a href="https://mind-upload.com/proposals.html">技術提案</a> へ戻ってください。
 </p>
-</section>

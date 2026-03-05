@@ -33,23 +33,18 @@
 
 ---
 
-<div class="abstract-box">
 <h2>いちばん短い説明</h2>
 <p>
 データ分割は「答え合わせの前に、どこまで見てよいかを先に決める」作業です。データリークは、その境界をうっかり越えてしまい、<strong>本番では使えない情報を学習や調整に混ぜてしまうこと</strong>です。
 </p>
-</div>
 
-<section class="section" id="why-split-matters">
-<h2 class="section-title">なぜ分割がそんなに大事なのか</h2>
+<h2>なぜ分割がそんなに大事なのか</h2>
 <p>
 学校のテストで、答えを見ながら練習した問題をそのまま本番に出せば、点数は高くなります。ですが、その点数は「本当に新しい問題を解ける力」とは言えません。機械学習でも同じで、<strong>学習時に見た情報が test 側へにじむ</strong>と、数字だけ良く見えてしまいます。
 </p>
-</section>
 
-<section class="section" id="split-units">
-<h2 class="section-title">まず分ける単位を意識する</h2>
-<table class="data-table">
+<h2>まず分ける単位を意識する</h2>
+<table>
 <thead>
 <tr>
 <th>分ける単位</th>
@@ -75,11 +70,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="common-leaks">
-<h2 class="section-title">ありがちなリーク 5 パターン</h2>
-<table class="data-table">
+<h2>ありがちなリーク 5 パターン</h2>
+<table>
 <thead>
 <tr>
 <th>ありがちな事故</th>
@@ -109,11 +102,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="what-to-report">
-<h2 class="section-title">最低限これだけは報告したい</h2>
-<div class="key-points">
+<h2>最低限これだけは報告したい</h2>
+
 <h4>Report Items</h4>
 <ul>
 <li><strong>分割単位：</strong>被験者、セッション、時間のどれで分けたか。</li>
@@ -122,19 +113,13 @@
 <li><strong>ベースライン：</strong>単純な手法と比べてどこが改善したか。</li>
 <li><strong>失敗例：</strong>どの条件で崩れたか、除外理由は何か。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="beginner-rule">
-<h2 class="section-title">最初の 1 本で迷ったときの安全策</h2>
+<h2>最初の 1 本で迷ったときの安全策</h2>
 <p>
 迷ったら、<strong>被験者単位で train/test を分ける</strong>、<strong>test は最後まで触らない</strong>、<strong>正規化や特徴選択は train だけで fit する</strong>、この 3 点を守るのが安全です。厳しすぎるように見えても、信用できる精度の方が、派手な数字より価値があります。
 </p>
-</section>
 
-<section class="section" id="return">
-<h2 class="section-title">次にどこへ戻るか</h2>
+<h2>次にどこへ戻るか</h2>
 <p>
 実際のスターターデータを見直したい場合は <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a>、最小ループを作る作業へ戻りたい場合は <a href="https://mind-upload.com/hands_on.html">ハンズオン</a>、なぜこれが検証基盤の一部なのかを確認したい場合は <a href="https://mind-upload.com/verification.html">検証基盤</a> へ戻ってください。
 </p>
-</section>

@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>まず考え方を固定する</h2>
 <p>
 進み具合ラベルは、研究テーマを「合格 / 不合格」で裁く言葉ではありません。役割は、<strong>何がもう揃っていて</strong>、<strong>何がまだ足りないか</strong>を短く示すことです。
 </p>
-</div>
 
-<section class="section" id="core-labels">
-<h2 class="section-title">よく出るラベルの意味</h2>
-<table class="data-table">
+<h2>よく出るラベルの意味</h2>
+<table>
 <thead>
 <tr>
 <th>ラベル</th>
@@ -96,11 +93,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="lack-types">
-<h2 class="section-title">『足りない』にも種類があります</h2>
-<table class="data-table">
+<h2>『足りない』にも種類があります</h2>
+<table>
 <thead>
 <tr>
 <th>表現</th>
@@ -142,11 +137,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="examples">
-<h2 class="section-title">実例で読む</h2>
-<table class="data-table">
+<h2>実例で読む</h2>
+<table>
 <thead>
 <tr>
 <th>例</th>
@@ -172,18 +165,14 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<div class="note-box">
 <strong>ラベルは上下関係だけではありません</strong>
 <p>
 「部分解決」が必ず「探索段階」より上等、という単純な話ではありません。部分解決は一部の土台があることを示し、探索段階は問い全体の比較基盤がまだ弱いことを示します。何が足りないかの種類まで読む必要があります。
 </p>
-</div>
 
-<section class="section" id="common-misreads">
-<h2 class="section-title">よくある誤読</h2>
-<div class="key-points">
+<h2>よくある誤読</h2>
+
 <h4>Misread</h4>
 <ul>
 <li><strong>「部分解決だから、もうほぼ終わり」：</strong> 残っている条件次第では、むしろ重い仕事が後ろに残っています。</li>
@@ -192,12 +181,8 @@
 <li><strong>「未標準化だから研究が無い」：</strong> 研究はあっても、共通書式や共通ベンチが無い場合があります。</li>
 <li><strong>「未整備は技術不足だけを意味する」：</strong> 制度、監査、公開運用の不足であることも多いです。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 Uごとの現状を読みたい場合は <a href="https://mind-upload.com/research_harvest_50.html">文献地図</a>、依存関係つきで進み具合を見たい場合は <a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a>、設計済みと未実装を区別したい場合は <a href="https://mind-upload.com/verification.html">検証基盤</a> に戻ってください。
 </p>
-</section>

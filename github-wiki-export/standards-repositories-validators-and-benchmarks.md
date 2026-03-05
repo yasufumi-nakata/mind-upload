@@ -34,23 +34,18 @@
 
 ---
 
-<div class="abstract-box">
 <h2>いちばん短い区別</h2>
 <p>
 <strong>規格</strong>は「どういう形でそろえるか」、<strong>置き場</strong>は「どこへ公開するか」、<strong>Validator</strong>は「規格どおりかを機械で確かめる道具」、<strong>ベンチマーク</strong>は「何で比べるか」のルールです。同じ『研究基盤』でも役割は別です。
 </p>
-</div>
 
-<section class="section" id="why-separate">
-<h2 class="section-title">なぜ分けて考えるのか</h2>
+<h2>なぜ分けて考えるのか</h2>
 <p>
 この 4 つを混同すると、「OpenNeuro に上げたから benchmark がある」「BIDS だから比較まで済んでいる」といった読み違いが起きます。実際には、データの形をそろえる仕事と、比較のルールを作る仕事は別です。
 </p>
-</section>
 
-<section class="section" id="terms">
-<h2 class="section-title">まず用語を分ける</h2>
-<table class="data-table">
+<h2>まず用語を分ける</h2>
+<table>
 <thead>
 <tr>
 <th>用語</th>
@@ -81,11 +76,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="eeg-example">
-<h2 class="section-title">EEG の例で見ると</h2>
-<table class="data-table">
+<h2>EEG の例で見ると</h2>
+<table>
 <thead>
 <tr>
 <th>段階</th>
@@ -111,17 +104,14 @@
 </tr>
 </tbody>
 </table>
-<div class="note-box">
+
 <strong>ここが重要です</strong>
 <p>
 規格にそろえただけでは、まだ「比べるルール」はありません。逆に benchmark だけあっても、入力の形がバラバラなら比較が崩れます。両方必要です。
 </p>
-</div>
-</section>
 
-<section class="section" id="missing-piece">
-<h2 class="section-title">何が欠けると何が困るか</h2>
-<table class="data-table">
+<h2>何が欠けると何が困るか</h2>
+<table>
 <thead>
 <tr>
 <th>欠けるもの</th>
@@ -147,24 +137,19 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="raw-is-not-enough">
-<h2 class="section-title">raw ファイルだけでは足りない理由</h2>
+<h2>raw ファイルだけでは足りない理由</h2>
 <p>
 波形ファイルを置いただけでは、規格も benchmark も十分ではありません。少なくとも、イベント定義、刺激ログ、同期情報、QC ログ、除外理由がないと、同じ課題として追試しにくくなります。
 </p>
-<div class="note-box">
+
 <strong>安全な読み方</strong>
 <p>
 「公開されている」ことと「比較可能である」ことは別です。公開は入口、比較可能性はその次の設計です。
 </p>
-</div>
-</section>
 
-<section class="section" id="common-confusions">
-<h2 class="section-title">ありがちな混同</h2>
-<table class="data-table">
+<h2>ありがちな混同</h2>
+<table>
 <thead>
 <tr>
 <th>言いがちなこと</th>
@@ -190,20 +175,15 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="how-to-read">
-<h2 class="section-title">強い主張を読むときの 3 問</h2>
+<h2>強い主張を読むときの 3 問</h2>
 <ol>
 <li><strong>入力の規格は何か：</strong>BIDS などで形がそろっているかを確認します。</li>
 <li><strong>どこに置かれているか：</strong>第三者が取得し直せる repository があるかを見ます。</li>
 <li><strong>何で比べているか：</strong>benchmark、分割、指標、禁止事項が固定されているかを見ます。</li>
 </ol>
-</section>
 
-<section class="section" id="return">
-<h2 class="section-title">次にどこへ戻るか</h2>
+<h2>次にどこへ戻るか</h2>
 <p>
 実務の入口へ戻るなら <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a>、全体設計へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a>、他分野の実例へ戻るなら <a href="https://mind-upload.com/casework.html">ケースワーク</a> をご利用ください。
 </p>
-</section>

@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>まず「いま何をしたいか」を決めます</h2>
 <p>
 このサイトは、最初から全部を読むためのものではありません。まず <strong>全体像をつかみたいのか</strong>、<strong>初歩から学びたいのか</strong>、<strong>実際に直したいのか</strong> を決めると、使うべきページがかなりはっきりします。
 </p>
-</div>
 
-<section class="section" id="three-modes">
-<h2 class="section-title">3つの使い方</h2>
-<table class="data-table">
+<h2>3つの使い方</h2>
+<table>
 <thead>
 <tr>
 <th>モード</th>
@@ -68,11 +65,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="overview-mode">
-<h2 class="section-title">1. 全体像をつかむモード</h2>
-<table class="data-table">
+<h2>1. 全体像をつかむモード</h2>
+<table>
 <thead>
 <tr>
 <th>こんなとき</th>
@@ -98,11 +93,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="study-mode">
-<h2 class="section-title">2. 初歩から学ぶモード</h2>
-<table class="data-table">
+<h2>2. 初歩から学ぶモード</h2>
+<table>
 <thead>
 <tr>
 <th>こんなとき</th>
@@ -128,11 +121,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="action-mode">
-<h2 class="section-title">3. 実際に直す・参加するモード</h2>
-<table class="data-table">
+<h2>3. 実際に直す・参加するモード</h2>
+<table>
 <thead>
 <tr>
 <th>こんなとき</th>
@@ -158,18 +149,14 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<div class="note-box">
 <strong>読んだ内容をどの成果物へ戻すか迷ったとき</strong>
 <p>
 文献整理、理論整理、提案、Issue、外部依存のどこへ戻すかを一本道で見たい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/reading-to-change-workflow">読んだ内容を変更へつなぐ流れ</a> をご覧ください。
 </p>
-</div>
 
-<section class="section" id="switching">
-<h2 class="section-title">モードを切り替える目安</h2>
-<table class="data-table">
+<h2>モードを切り替える目安</h2>
+<table>
 <thead>
 <tr>
 <th>いまの状態</th>
@@ -195,11 +182,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="common-mistakes">
-<h2 class="section-title">よくある迷い方</h2>
-<div class="key-points">
+<h2>よくある迷い方</h2>
+
 <h4>Mistake</h4>
 <ul>
 <li><strong>最初から全部読む：</strong> まずモードを 1 つに絞る方が迷いにくいです。</li>
@@ -207,12 +192,8 @@
 <li><strong>参加モードでいきなり大きな提案を書く：</strong> 小さな修正や最小成果物から切る方が安全です。</li>
 <li><strong>公開ページを教科書として読む：</strong> 公開ページは要点と導線をつかむ場所です。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 全体像へ戻るなら <a href="https://mind-upload.com">スタートページ</a>、学習へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki">Wiki Home</a>、実際に作業へ進むなら <a href="https://mind-upload.com/issue.html">貢献ガイド</a> と <a href="https://mind-upload.com/content_hub.html">公開コンテンツ統合ハブ</a> をご利用ください。
 </p>
-</section>

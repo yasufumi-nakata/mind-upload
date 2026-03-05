@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>次の1ページを決める</h2>
 <p>
 Verification は設計図として重要ですが、読むだけでは次の作業が広すぎます。ここでは、<strong>何を次に知りたいか</strong>で 4 本の道に分けて、次の1ページを固定します。
 </p>
-</div>
 
-<section class="section" id="four-routes">
-<h2 class="section-title">Verificationのあとに進む4つの道</h2>
-<table class="data-table">
+<h2>Verificationのあとに進む4つの道</h2>
+<table>
 <thead>
 <tr>
 <th>知りたいこと</th>
@@ -73,11 +70,9 @@ Verification は設計図として重要ですが、読むだけでは次の作�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="why">
-<h2 class="section-title">なぜこの分け方なのか</h2>
-<table class="data-table">
+<h2>なぜこの分け方なのか</h2>
+<table>
 <thead>
 <tr>
 <th>道</th>
@@ -103,11 +98,9 @@ Verification は設計図として重要ですが、読むだけでは次の作�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="helper-wiki">
-<h2 class="section-title">道ごとの補助 wiki</h2>
-<table class="data-table">
+<h2>道ごとの補助 wiki</h2>
+<table>
 <thead>
 <tr>
 <th>道</th>
@@ -133,11 +126,9 @@ Verification は設計図として重要ですが、読むだけでは次の作�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="common-mistakes">
-<h2 class="section-title">よくある迷い方</h2>
-<div class="key-points">
+<h2>よくある迷い方</h2>
+
 <h4>Mistake</h4>
 <ul>
 <li><strong>Verification を読んだだけで次の作業が決まった気になる：</strong> 実際には路線を 1 本に絞る必要があります。</li>
@@ -145,12 +136,8 @@ Verification は設計図として重要ですが、読むだけでは次の作�
 <li><strong>L3 を精度だけで考える：</strong> 閉ループでは遅延や安全停止が別に必要です。</li>
 <li><strong>L4 をスコアの延長で考える：</strong> 本人性は、何を連続しているとみなすかの事前設計が別に必要です。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 Verification の本文へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a>、レベル全体の導線へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claim-level-reading-routes">L0〜L5ごとの読み進め方</a>、実務ページ全体の役割差へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/practical-pages-reading-guide">実務系ページの読み分けガイド</a> をご利用ください。
 </p>
-</section>

@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>次の1ページを決める</h2>
 <p>
 WBE 101 は入口として重要ですが、その次に読む理論ページは広く見えます。ここでは、<strong>何を次に知りたいか</strong>で 4 本の道に分けて、次の1ページを固定します。
 </p>
-</div>
 
-<section class="section" id="four-routes">
-<h2 class="section-title">WBE入門のあとに進む4つの道</h2>
-<table class="data-table">
+<h2>WBE入門のあとに進む4つの道</h2>
+<table>
 <thead>
 <tr>
 <th>知りたいこと</th>
@@ -73,11 +70,9 @@ WBE 101 は入口として重要ですが、その次に読む理論ページは
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="why">
-<h2 class="section-title">なぜこの分け方なのか</h2>
-<table class="data-table">
+<h2>なぜこの分け方なのか</h2>
+<table>
 <thead>
 <tr>
 <th>道</th>
@@ -103,11 +98,9 @@ WBE 101 は入口として重要ですが、その次に読む理論ページは
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="helper-wiki">
-<h2 class="section-title">途中で止まったときの補助 wiki</h2>
-<table class="data-table">
+<h2>途中で止まったときの補助 wiki</h2>
+<table>
 <thead>
 <tr>
 <th>止まる場所</th>
@@ -137,11 +130,9 @@ WBE 101 は入口として重要ですが、その次に読む理論ページは
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="common-mistakes">
-<h2 class="section-title">よくある迷い方</h2>
-<div class="key-points">
+<h2>よくある迷い方</h2>
+
 <h4>Mistake</h4>
 <ul>
 <li><strong>WBE 101 の次にいきなり Perspective 全文へ入る：</strong> まず FAQ や Idea を挟んだ方が迷いにくい場合があります。</li>
@@ -149,12 +140,8 @@ WBE 101 は入口として重要ですが、その次に読む理論ページは
 <li><strong>Roadmap を理論本文の代わりに読む：</strong> ここは依存関係の地図であり、理論の背景説明は圧縮されています。</li>
 <li><strong>FAQ だけで理論判断を終える：</strong> 強い主張ほど、Perspective や Roadmap へ戻る必要があります。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 WBE入門へ戻るなら <a href="https://mind-upload.com/wbe_101.html">WBE入門</a>、理論系ページ全体の役割差へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/theory-pages-reading-guide">理論系ページの読み分けガイド</a>、公開ページ全体の役割差へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide">公開ページの読み分けガイド</a> をご利用ください。
 </p>
-</section>

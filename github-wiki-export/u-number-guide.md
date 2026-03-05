@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>まず覚えなくてよいこと</h2>
 <p>
 U番号は試験の暗記項目ではありません。役割は「この文献は、どの未解決問題に関係するか」を揃えるための名前札です。まずは番号そのものより、どの塊の問題かを見る方が大事です。
 </p>
-</div>
 
-<section class="section" id="clusters">
-<h2 class="section-title">大きな問題群で見る</h2>
-<table class="data-table">
+<h2>大きな問題群で見る</h2>
+<table>
 <thead>
 <tr>
 <th>大きな問題群</th>
@@ -78,11 +75,9 @@ U番号は試験の暗記項目ではありません。役割は「この文献�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="entry-points">
-<h2 class="section-title">関心別の入口</h2>
-<table class="data-table">
+<h2>関心別の入口</h2>
+<table>
 <thead>
 <tr>
 <th>いま気になること</th>
@@ -108,23 +103,17 @@ U番号は試験の暗記項目ではありません。役割は「この文献�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="what-not">
-<h2 class="section-title">U番号で読み違えないために</h2>
-<div class="key-points">
+<h2>U番号で読み違えないために</h2>
+
 <h4>Checklist</h4>
 <ul>
 <li><strong>番号を暗記しない：</strong> まず問題群から入ります。</li>
 <li><strong>引用数で判断しない：</strong> 多いことと、解決済みであることは別です。</li>
 <li><strong>厳密定義へ戻る：</strong> 本当に使うときは文献地図本文の定義表へ戻ります。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 番号の意味がつかめたら <a href="https://mind-upload.com/research_harvest_50.html">文献地図</a> に戻ってください。もし文献ページ全体の役割差がまだ曖昧なら、先に <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading">文献と証拠ページの読み方</a> を見るとさらに読みやすくなります。
 </p>
-</section>

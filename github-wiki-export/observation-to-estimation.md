@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>いちばん短い地図</h2>
 <p>
 EEG で外から見えるのは、脳内活動の<strong>混ざった結果</strong>です。そこから中身を推定するには、まず「もし脳内にこの活動があったら、頭皮ではどう見えるか」という<strong>順問題</strong>を考え、その逆向きに「この頭皮信号を説明しうる脳内活動は何か」という<strong>逆問題</strong>を解きます。
 </p>
-</div>
 
-<section class="section" id="three-levels">
-<h2 class="section-title">まず 3 段階を分ける</h2>
-<table class="data-table">
+<h2>まず 3 段階を分ける</h2>
+<table>
 <thead>
 <tr>
 <th>段階</th>
@@ -68,11 +65,9 @@ EEG で外から見えるのは、脳内活動の<strong>混ざった結果</str
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="forward-inverse">
-<h2 class="section-title">順問題と逆問題</h2>
-<table class="data-table">
+<h2>順問題と逆問題</h2>
+<table>
 <thead>
 <tr>
 <th>用語</th>
@@ -93,29 +88,24 @@ EEG で外から見えるのは、脳内活動の<strong>混ざった結果</str
 <p>
 順問題は、条件が分かっていれば比較的定めやすい一方、逆問題は<strong>複数の答えが同じ観測を作れてしまう</strong>のが難しさです。これが「逆問題は不良設定になりやすい」と言われる理由です。
 </p>
-</section>
 
-<section class="section" id="esi">
-<h2 class="section-title">ESI は何をしているのか</h2>
+<h2>ESI は何をしているのか</h2>
 <p>
 ESI は、逆問題を解いて「この頭皮信号なら、脳内ではこのあたりが活動していた可能性が高い」と推定する枠組みです。ここで重要なのは、ESI は魔法の位置特定ではなく、<strong>仮定付きの推定</strong>だという点です。
 </p>
-<div class="key-points">
+
 <h4>ESI を読むときの 3 点</h4>
 <ul>
 <li><strong>何を仮定したか：</strong>頭部モデル、導電率、スパース性、MRI の有無など。</li>
 <li><strong>不確実性を出しているか：</strong>点推定だけでなく、信用区間や事後分布があるか。</li>
 <li><strong>代替説明を閉じていないか：</strong>別のソース配置でも同じ観測が作れないか。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="dcm">
-<h2 class="section-title">DCM は何を足しているのか</h2>
+<h2>DCM は何を足しているのか</h2>
 <p>
 ESI が「どこが活動していそうか」を主に見るのに対し、DCM は「どの回路が、どうつながって動いていそうか」を見るための生成モデルです。つまり、単なる位置推定より一歩進んで、<strong>回路の動き方そのものを仮定して説明しようとする</strong>枠組みです。
 </p>
-<table class="data-table">
+<table>
 <thead>
 <tr>
 <th>ESI と DCM の違い</th>
@@ -136,34 +126,27 @@ ESI が「どこが活動していそうか」を主に見るのに対し、DCM 
 <p>
 ただし DCM でも、候補モデルの置き方や比較の範囲に依存します。モデル比較で勝ったことは「候補の中では良い」という意味であり、世界で唯一正しいとまでは言えません。
 </p>
-</section>
 
-<section class="section" id="scm">
-<h2 class="section-title">SCM は何が違うのか</h2>
+<h2>SCM は何が違うのか</h2>
 <p>
 SCM は、因果関係を明示して「もしここを変えたら、他はどう変わるか」を扱いやすくする枠組みです。観測だけでなく、<strong>介入</strong>や<strong>反事実</strong>を定義しやすいのが特徴です。
 </p>
-<div class="note-box">
+
 <strong>DCM と SCM の関係</strong>
 <p>
 DCM は神経回路の生成モデルとして有用で、SCM は介入や反事実を明示しやすい枠組みです。役割は重なる部分もありますが、同じものではありません。Mind-Upload では、相関ベースの予測から、介入ベースの検証へ進む橋として SCM 的な発想を重視します。
 </p>
-</div>
-</section>
 
-<section class="section" id="equivalence">
-<h2 class="section-title">因果同値類とは何か</h2>
+<h2>因果同値類とは何か</h2>
 <p>
 観測データだけでは、複数の因果モデルが同じ統計を作ることがあります。この「観測では区別できないモデルの集まり」を、ざっくり言えば<strong>因果同値類</strong>と考えると分かりやすいです。
 </p>
 <p>
 ここで大事なのは、「このモデルが観測に合った」ことと「このモデルしかありえない」ことを分けることです。後者を主張するには、追加の介入、別データ、事前知識が必要になります。
 </p>
-</section>
 
-<section class="section" id="how-to-read">
-<h2 class="section-title">推定結果を読むときの最低チェック</h2>
-<div class="key-points">
+<h2>推定結果を読むときの最低チェック</h2>
+
 <h4>Checklist</h4>
 <ul>
 <li><strong>観測と推定を分けて書いているか：</strong>頭皮信号と脳内活動を同じ言葉で混ぜていないか。</li>
@@ -171,12 +154,8 @@ DCM は神経回路の生成モデルとして有用で、SCM は介入や反事
 <li><strong>代替モデルを意識しているか：</strong>別説明の余地を認めているか。</li>
 <li><strong>介入や反事実へ進めるか：</strong>相関で止まっていないか。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="return">
-<h2 class="section-title">次にどこへ戻るか</h2>
+<h2>次にどこへ戻るか</h2>
 <p>
 短い定義に戻るなら <a href="https://mind-upload.com/glossary.html">用語集</a>、EEG の全体像へ戻るなら <a href="https://mind-upload.com/eeg_101.html">EEG入門</a>、比較可能な検証へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a> をご利用ください。
 </p>
-</section>

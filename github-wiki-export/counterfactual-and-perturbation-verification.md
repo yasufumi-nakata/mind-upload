@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>いちばん短い違い</h2>
 <p>
 held-out 精度は「見たことのない問題でも当たるか」を見るテストです。介入や反事実の検証は、「条件を変えたとき、どの方向へどう崩れ、どう持ち直すかまで再現できるか」を見るテストです。
 </p>
-</div>
 
-<section class="section" id="ladder">
-<h2 class="section-title">まず検証の強さを 4 段階で分ける</h2>
-<table class="data-table">
+<h2>まず検証の強さを 4 段階で分ける</h2>
+<table>
 <thead>
 <tr>
 <th>段階</th>
@@ -73,24 +70,19 @@ held-out 精度は「見たことのない問題でも当たるか」を見る�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="why-accuracy-not-enough">
-<h2 class="section-title">なぜ精度だけでは足りないのか</h2>
+<h2>なぜ精度だけでは足りないのか</h2>
 <p>
 テスト問題で高得点でも、問題の癖を覚えただけかもしれません。同じように、モデルが高精度でも、それが<strong>本当に中の仕組みを捉えたのか</strong>、それとも表面のパターンを拾っただけかは、精度だけでは分かりません。
 </p>
-<div class="note-box">
+
 <strong>よくある事故</strong>
 <p>
 データリーク、分布の偏り、言語モデルの事前分布、評価条件の甘さがあると、見かけのスコアだけが上がります。だから Mind-Upload では、スコアの前に失敗条件と検証条件を固定します。
 </p>
-</div>
-</section>
 
-<section class="section" id="intervention-counterfactual">
-<h2 class="section-title">介入と反事実はどう違うのか</h2>
-<table class="data-table">
+<h2>介入と反事実はどう違うのか</h2>
+<table>
 <thead>
 <tr>
 <th>用語</th>
@@ -115,11 +107,9 @@ held-out 精度は「見たことのない問題でも当たるか」を見る�
 <p>
 介入は実験で行いやすい入口で、反事実はより強い問いです。摂動は、その入口として「条件をわざと揺らして、応答構造を見る」具体的なやり方だと考えると分かりやすいです。
 </p>
-</section>
 
-<section class="section" id="simple-example">
-<h2 class="section-title">小さな例で考える</h2>
-<table class="data-table">
+<h2>小さな例で考える</h2>
+<table>
 <thead>
 <tr>
 <th>テスト</th>
@@ -145,26 +135,22 @@ held-out 精度は「見たことのない問題でも当たるか」を見る�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="commons-role">
-<h2 class="section-title">なぜ Benchmark / Registry / Model Card が要るのか</h2>
-<div class="key-points">
+<h2>なぜ Benchmark / Registry / Model Card が要るのか</h2>
+
 <h4>役割分担</h4>
 <ul>
 <li><strong>Benchmark：</strong>どの介入や摂動を行い、何で採点するかを固定します。</li>
 <li><strong>Registry：</strong>どの条件で失敗とみなすか、どこまでを事前に決めるかを固定します。</li>
 <li><strong>Model Card：</strong>どの摂動で崩れたか、どの OOD 条件に弱いかを残します。</li>
 </ul>
-</div>
+
 <p>
 ここが曖昧だと、後から都合のよい摂動だけを選んで「中身も同じ」と言えてしまいます。
 </p>
-</section>
 
-<section class="section" id="how-to-read">
-<h2 class="section-title">因果検証の話を読むときの最低チェック</h2>
-<div class="key-points">
+<h2>因果検証の話を読むときの最低チェック</h2>
+
 <h4>Checklist</h4>
 <ul>
 <li><strong>ただの held-out 精度ではないか：</strong>条件変更が本当に入っているか。</li>
@@ -172,12 +158,8 @@ held-out 精度は「見たことのない問題でも当たるか」を見る�
 <li><strong>失敗条件があるか：</strong>どんな結果なら不一致とみなすかが先に決まっているか。</li>
 <li><strong>失敗例が残っているか：</strong>うまくいかなかった摂動も公開されているか。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="return">
-<h2 class="section-title">次にどこへ戻るか</h2>
+<h2>次にどこへ戻るか</h2>
 <p>
 翻訳と生成の違いへ戻るなら <a href="https://mind-upload.com/wbe_101.html">WBE入門</a>、検証設計へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a>、短い Q&A へ戻るなら <a href="https://mind-upload.com/faq.html">FAQ</a> をご利用ください。
 </p>
-</section>

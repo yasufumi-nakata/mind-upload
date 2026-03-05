@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>いちばん短い地図</h2>
 <p>
 このサイトで出る言葉は、大きく分けると 4 段階です。<strong>観測する</strong>、<strong>整える</strong>、<strong>推定する</strong>、<strong>確かめる</strong>、でございます。単語が難しく見えても、「今どの段階の話か」を先に分けると混乱が減ります。
 </p>
-</div>
 
-<section class="section" id="four-steps">
-<h2 class="section-title">4段階で見る</h2>
-<table class="data-table">
+<h2>4段階で見る</h2>
+<table>
 <thead>
 <tr>
 <th>段階</th>
@@ -73,14 +70,12 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="observation">
-<h2 class="section-title">1. 観測: まず信号を取る</h2>
+<h2>1. 観測: まず信号を取る</h2>
 <p>
 EEG や MEG は、脳の中を直接見ているのではなく、外から観測できる信号を測っています。ここで大事なのは、<strong>観測したものと、脳内で本当に起きていることは同じではない</strong>という点です。
 </p>
-<table class="data-table">
+<table>
 <thead>
 <tr>
 <th>用語</th>
@@ -106,32 +101,28 @@ EEG や MEG は、脳の中を直接見ているのではなく、外から観�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="cleanup">
-<h2 class="section-title">2. 整理: 信号をそのまま信じない</h2>
+<h2>2. 整理: 信号をそのまま信じない</h2>
 <p>
 観測した信号には、まばたき、筋電、体動、機器ノイズなどが混ざります。そのため、次に必要なのが QC と前処理です。ここは見栄えを整える作業ではなく、<strong>どの情報を残し、何を除いたかを記録する作業</strong>です。
 </p>
-<div class="key-points">
+
 <h4>ここで出る言葉</h4>
 <ul>
 <li><strong>QC：</strong>欠損、ノイズ、アーティファクト、除外理由を数値で残します。</li>
 <li><strong>前処理：</strong>参照法、フィルタ、アーティファクト除去などを設定します。</li>
 <li><strong>BIDS：</strong>データとメタデータを他人が追える形でそろえる規格です。</li>
 </ul>
-</div>
+
 <p>
 この段階を飛ばすと、あとで高性能なモデルが出てきても、比較可能な証拠にはなりません。
 </p>
-</section>
 
-<section class="section" id="estimation">
-<h2 class="section-title">3. 推定: 観測から中身をどこまで言えるか</h2>
+<h2>3. 推定: 観測から中身をどこまで言えるか</h2>
 <p>
 整理した信号をもとに、脳内の活動や因果構造を推定したくなります。ここで出てくるのが、逆問題、ESI、DCM、SCM です。ただし、この段階では<strong>推定は推定であり、不確実性が残る</strong>ことを忘れてはいけません。
 </p>
-<table class="data-table">
+<table>
 <thead>
 <tr>
 <th>用語</th>
@@ -157,20 +148,17 @@ EEG や MEG は、脳の中を直接見ているのではなく、外から観�
 </tr>
 </tbody>
 </table>
-<div class="note-box">
+
 <strong>ここで起きやすいすり替え</strong>
 <p>
 EEG を観測したことと、脳内状態を一意に再構成したことは同じではありません。さらに、相関的な予測が当たることと、因果構造まで分かったことも同じではありません。
 </p>
-</div>
-</section>
 
-<section class="section" id="verification">
-<h2 class="section-title">4. 検証: 推定をどう信用するか</h2>
+<h2>4. 検証: 推定をどう信用するか</h2>
 <p>
 最後に必要なのは、「この推定やモデルを、他の人が同じ条件で確かめられるか」です。ここで Benchmark、Baseline、Preregistration、Model Card のような言葉が出てきます。
 </p>
-<table class="data-table">
+<table>
 <thead>
 <tr>
 <th>用語</th>
@@ -196,11 +184,9 @@ EEG を観測したことと、脳内状態を一意に再構成したことは�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="boundary">
-<h2 class="section-title">この流れで何が分かり、何がまだ分からないか</h2>
-<table class="data-table">
+<h2>この流れで何が分かり、何がまだ分からないか</h2>
+<table>
 <thead>
 <tr>
 <th>分かること</th>
@@ -222,11 +208,8 @@ EEG を観測したことと、脳内状態を一意に再構成したことは�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="return">
-<h2 class="section-title">次にどこへ戻るか</h2>
+<h2>次にどこへ戻るか</h2>
 <p>
 短い定義へ戻るなら <a href="https://mind-upload.com/glossary.html">用語集</a>、EEG の役割をもう一度読むなら <a href="https://mind-upload.com/eeg_101.html">EEG入門</a>、比較可能な検証へ進むなら <a href="https://mind-upload.com/verification.html">検証基盤</a> をご利用ください。
 </p>
-</section>

@@ -33,29 +33,23 @@
 
 ---
 
-<div class="abstract-box">
 <h2>いちばん短い答え</h2>
 <p>
 Mind-Upload で熱力学の話が出るのは、「情報が似ているか」だけでなく、<strong>その情報処理がどういう物理的コストで維持されるか</strong>も見たいからです。静止したデータの保存ではなく、動き続けるプロセスを問題にするなら、散逸や非平衡性を無視しにくくなります。
 </p>
-</div>
 
-<section class="section" id="why-thermodynamics">
-<h2 class="section-title">なぜここで熱力学が出てくるのか</h2>
+<h2>なぜここで熱力学が出てくるのか</h2>
 <p>
 このサイトでは、WBE を「静的なコピー」より「動き続ける過程の引き継ぎ」として扱います。そうすると、「何を計算したか」だけでなく、「その計算がどのような物理的流れの上で維持されるか」も論点に入ります。
 </p>
-<div class="note-box">
+
 <strong>安全な読み方</strong>
 <p>
 これは「熱力学が分かれば意識が分かる」という意味ではありません。むしろ、「情報指標だけでは見落とす物理的制約があるかもしれない」という未解決問題として扱っています。
 </p>
-</div>
-</section>
 
-<section class="section" id="terms">
-<h2 class="section-title">まず 4 つの言葉を分ける</h2>
-<table class="data-table">
+<h2>まず 4 つの言葉を分ける</h2>
+<table>
 <thead>
 <tr>
 <th>用語</th>
@@ -86,11 +80,9 @@ Mind-Upload で熱力学の話が出るのは、「情報が似ているか」�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="what-is-not-being-claimed">
-<h2 class="section-title">ここで言っていないこと</h2>
-<table class="data-table">
+<h2>ここで言っていないこと</h2>
+<table>
 <thead>
 <tr>
 <th>言いすぎやすい表現</th>
@@ -112,18 +104,14 @@ Mind-Upload で熱力学の話が出るのは、「情報が似ているか」�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="why-logical-vs-physical">
-<h2 class="section-title">論理コストと物理コストを分ける</h2>
+<h2>論理コストと物理コストを分ける</h2>
 <p>
 FLOPs のような論理的計算量は、「どれくらい計算したか」を見る指標です。一方で熱力学的散逸は、「その計算をどんな物理的コストで回したか」を見ます。どちらか一方だけでは、動き続ける実装の難しさを十分に表せません。
 </p>
-</section>
 
-<section class="section" id="what-can-be-said-now">
-<h2 class="section-title">いま比較的強く言えること / まだ弱いこと</h2>
-<table class="data-table">
+<h2>いま比較的強く言えること / まだ弱いこと</h2>
+<table>
 <thead>
 <tr>
 <th>比較的強く言えること</th>
@@ -145,20 +133,15 @@ FLOPs のような論理的計算量は、「どれくらい計算したか」�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="how-to-read">
-<h2 class="section-title">熱力学の主張を読むときの 3 問</h2>
+<h2>熱力学の主張を読むときの 3 問</h2>
 <ol>
 <li><strong>これは下限の話か、実測の話か：</strong>Landauer のような理論下限と、実際の消費や散逸を混同しないことが重要です。</li>
 <li><strong>論理コストと物理コストを分けているか：</strong>FLOPs と散逸を 1 つの数字にまとめていないかを見ます。</li>
 <li><strong>この指標だけで何を言おうとしているか：</strong>EPR や NESS を、単独で本人性や意識の証明に使っていないかを確認します。</li>
 </ol>
-</section>
 
-<section class="section" id="return">
-<h2 class="section-title">次にどこへ戻るか</h2>
+<h2>次にどこへ戻るか</h2>
 <p>
 理論フレームへ戻るなら <a href="https://mind-upload.com/idea.html">理論フレーム</a>、長文の研究ノートへ戻るなら <a href="https://mind-upload.com/perspective.html">研究ノート</a>、検証要件へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a> をご利用ください。
 </p>
-</section>

@@ -34,16 +34,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>文献を読んだら戻り先を決める</h2>
 <p>
 論文を読んだあとに重要なのは、「面白かった」で止めないことです。ここでは、<strong>その文献をどこへ戻して使うか</strong>で 4 本の道に分けて、次の1ページを固定します。
 </p>
-</div>
 
-<section class="section" id="four-routes">
-<h2 class="section-title">文献のあとに進む4つの道</h2>
-<table class="data-table">
+<h2>文献のあとに進む4つの道</h2>
+<table>
 <thead>
 <tr>
 <th>文献を見て次にしたいこと</th>
@@ -74,11 +71,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="why">
-<h2 class="section-title">なぜこの分け方なのか</h2>
-<table class="data-table">
+<h2>なぜこの分け方なのか</h2>
+<table>
 <thead>
 <tr>
 <th>道</th>
@@ -104,11 +99,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="helper-wiki">
-<h2 class="section-title">途中で止まったときの補助 wiki</h2>
-<table class="data-table">
+<h2>途中で止まったときの補助 wiki</h2>
+<table>
 <thead>
 <tr>
 <th>止まる場所</th>
@@ -138,11 +131,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="common-mistakes">
-<h2 class="section-title">よくある迷い方</h2>
-<div class="key-points">
+<h2>よくある迷い方</h2>
+
 <h4>Mistake</h4>
 <ul>
 <li><strong>面白い論文を見つけて、そのままメモで止める：</strong> どの公開ページへ戻すかまで決めた方が散らばりません。</li>
@@ -150,12 +141,8 @@
 <li><strong>提案ページへ戻しただけで実装済みとみなす：</strong> Proposals は整理であり、Issue や成果物は別です。</li>
 <li><strong>協業候補へ飛んで、内製準備を飛ばす：</strong> 先に要求仕様や最小成果物を固めた方が進みやすいです。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 文献系ページ全体の役割差へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading">文献と証拠ページの読み方</a>、未解決問題の地図へ戻るなら <a href="https://mind-upload.com/research_harvest_50.html">文献地図</a>、今この場で切れる作業へ戻るなら <a href="https://mind-upload.com/issue.html">貢献ガイド</a> をご利用ください。
 </p>
-</section>

@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>まず 1 パックで考える</h2>
 <p>
 L0 の成果物は、1 つのファイルや 1 つのスコアではありません。<strong>入力の形</strong>、<strong>品質の証跡</strong>、<strong>評価のルール</strong>、<strong>再実行手順</strong>がそろって、初めて第三者が追える状態になります。
 </p>
-</div>
 
-<section class="section" id="artifact-pack">
-<h2 class="section-title">L0 で最低限そろえたい 7 点</h2>
-<table class="data-table">
+<h2>L0 で最低限そろえたい 7 点</h2>
+<table>
 <thead>
 <tr>
 <th>成果物</th>
@@ -88,11 +85,9 @@ L0 の成果物は、1 つのファイルや 1 つのスコアではありませ
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="minimum-shape">
-<h2 class="section-title">もっと短く言うと</h2>
-<div class="key-points">
+<h2>もっと短く言うと</h2>
+
 <h4>Pack</h4>
 <ul>
 <li><strong>Input:</strong> BIDS の形</li>
@@ -100,12 +95,9 @@ L0 の成果物は、1 つのファイルや 1 つのスコアではありませ
 <li><strong>Evaluation:</strong> 分割ルールとベースライン</li>
 <li><strong>Replay:</strong> 実行手順と失敗例</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="common-gaps">
-<h2 class="section-title">よくある抜け</h2>
-<table class="data-table">
+<h2>よくある抜け</h2>
+<table>
 <thead>
 <tr>
 <th>ありがちな状態</th>
@@ -131,11 +123,9 @@ L0 の成果物は、1 つのファイルや 1 つのスコアではありませ
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="exit-criteria">
-<h2 class="section-title">L0 完了の簡易判定</h2>
-<table class="data-table">
+<h2>L0 完了の簡易判定</h2>
+<table>
 <thead>
 <tr>
 <th>質問</th>
@@ -166,18 +156,13 @@ L0 の成果物は、1 つのファイルや 1 つのスコアではありませ
 </tr>
 </tbody>
 </table>
-</section>
 
-<div class="note-box">
 <strong>このページがしないこと</strong>
 <p>
 ここでは、どのモデルが最強か、どの指標が最終的に正しいかは決めません。L0 では、まず比較可能な出発点を作ることが目的です。
 </p>
-</div>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 実際の手順を追いたい場合は <a href="https://mind-upload.com/hands_on.html">ハンズオン</a>、入口データを選び直したい場合は <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a>、この成果物が公共財としてどう積み上がるかを見たい場合は <a href="https://mind-upload.com/verification.html">検証基盤</a> に戻ってください。
 </p>
-</section>

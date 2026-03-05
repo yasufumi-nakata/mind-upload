@@ -34,23 +34,18 @@
 
 ---
 
-<div class="abstract-box">
 <h2>まず4つに分ける</h2>
 <p>
 理論系ページは、全部が「理論の話」ではありますが、<strong>何を決めるページか</strong>が違います。先に <strong>入門</strong>、<strong>長文整理</strong>、<strong>設計原理</strong>、<strong>依存関係の地図</strong> に分けると、読む順番がかなり安定します。
 </p>
-</div>
 
-<div class="note-box">
 <strong>WBE入門のあとに次の1ページを決めたいとき</strong>
 <p>
 理論系ページ全体の役割差だけでなく、WBE 101 のあとに誤解整理、設計原理、長文ノート、依存関係の地図のどこへ進むかを 1 枚で見たい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/wbe-to-theory-route">WBE入門から理論を深掘る4ルート</a> をご覧ください。
 </p>
-</div>
 
-<section class="section" id="role-diff">
-<h2 class="section-title">理論系ページの役割差</h2>
-<table class="data-table">
+<h2>理論系ページの役割差</h2>
+<table>
 <thead>
 <tr>
 <th>ページ</th>
@@ -98,11 +93,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="which-question">
-<h2 class="section-title">この疑問なら、まずこのページ</h2>
-<table class="data-table">
+<h2>この疑問なら、まずこのページ</h2>
+<table>
 <thead>
 <tr>
 <th>いま知りたいこと</th>
@@ -143,11 +136,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="similar-pages">
-<h2 class="section-title">似て見えるページの違い</h2>
-<table class="data-table">
+<h2>似て見えるページの違い</h2>
+<table>
 <thead>
 <tr>
 <th>似て見える組</th>
@@ -173,11 +164,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="common-mistakes">
-<h2 class="section-title">よくある迷い方</h2>
-<div class="key-points">
+<h2>よくある迷い方</h2>
+
 <h4>Mistake</h4>
 <ul>
 <li><strong>いきなり Perspective から入る：</strong> 情報量が多いため、先に WBE 101 で主張レベルをそろえる方が安全です。</li>
@@ -185,12 +174,8 @@
 <li><strong>Roadmap を理論本文として読む：</strong> ここは依存関係の地図であり、理論の背景説明は圧縮されています。</li>
 <li><strong>FAQ の短答だけで理論判断を終える：</strong> 強い主張ほど、Perspective や Verification へ戻る必要があります。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 入口へ戻るなら <a href="https://mind-upload.com">スタートページ</a>、公開ページ全体の役割差へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide">公開ページの読み分けガイド</a>、理論名の基礎へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/consciousness-theory-map">意識理論マップ</a> をご利用ください。
 </p>
-</section>

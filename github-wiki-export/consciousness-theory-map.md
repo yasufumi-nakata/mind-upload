@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>まず大ざっぱに分ける</h2>
 <p>
 IIT、GNWT、FEP、PCI は、全部が同じ種類のものではありません。理論、実装原理、測定指標が混ざっているので、まず役割を分けるだけでかなり読みやすくなります。
 </p>
-</div>
 
-<section class="section" id="roles">
-<h2 class="section-title">まずは役割で分ける</h2>
-<table class="data-table">
+<h2>まずは役割で分ける</h2>
+<table>
 <thead>
 <tr>
 <th>名前</th>
@@ -78,11 +75,9 @@ IIT、GNWT、FEP、PCI は、全部が同じ種類のものではありません
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="limits">
-<h2 class="section-title">それぞれの強みと弱み</h2>
-<table class="data-table">
+<h2>それぞれの強みと弱み</h2>
+<table>
 <thead>
 <tr>
 <th>名前</th>
@@ -113,24 +108,18 @@ IIT、GNWT、FEP、PCI は、全部が同じ種類のものではありません
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="how-site-uses">
-<h2 class="section-title">Mind-Upload ではどう使い分けるか</h2>
+<h2>Mind-Upload ではどう使い分けるか</h2>
 <p>
 このサイトは、どれか1つを「唯一の正解」として採る立場ではありません。むしろ、IIT や GNWT を理論的なものさしとして見つつ、FEP を実装原理の候補として参照し、PCI のような経験的指標で検証を進める、という役割分担を取ります。
 </p>
-<div class="note-box">
+
 <strong>大事なこと</strong>
 <p>
 理論を採ることと、理論がすでに証明されたとみなすことは別です。Mind-Upload では、理論を検証設計へ落とすために使います。
 </p>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次にどこへ戻るか</h2>
+<h2>次にどこへ戻るか</h2>
 <p>
 理論全体を長文で追いたい場合は <a href="https://mind-upload.com/perspective.html">研究ノート</a>、設計原理として見たい場合は <a href="https://mind-upload.com/idea.html">理論フレーム</a>、単語を短く確認したい場合は <a href="https://mind-upload.com/glossary.html">用語集</a> に戻ってください。
 </p>
-</section>

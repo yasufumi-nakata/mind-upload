@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>前処理で何が起きるのか</h2>
 <p>
 EEG は、脳の信号だけでなく、まばたき、筋電、体動、電源ノイズ、電極接触の問題なども一緒に入ってきます。だから、前処理は「見栄えを整える作業」ではなく、<strong>何を信号として扱うかを決める作業</strong>です。
 </p>
-</div>
 
-<section class="section" id="four-points">
-<h2 class="section-title">まず意識したい4点</h2>
-<table class="data-table">
+<h2>まず意識したい4点</h2>
+<table>
 <thead>
 <tr>
 <th>論点</th>
@@ -68,14 +65,12 @@ EEG は、脳の信号だけでなく、まばたき、筋電、体動、電源�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="why-log">
-<h2 class="section-title">なぜログを残すのか</h2>
+<h2>なぜログを残すのか</h2>
 <p>
 同じデータでも、前処理が違えば結果が変わることがあります。そのため、「この条件で、この結果になった」という再現可能な記録が必要です。最低限、参照法、フィルタ設定、アーティファクト処理、除外基準、失敗例は残すべきです。
 </p>
-<div class="key-points">
+
 <h4>最低限残したい項目</h4>
 <ul>
 <li><strong>参照法：</strong>平均参照か、特定電極参照か。</li>
@@ -83,12 +78,9 @@ EEG は、脳の信号だけでなく、まばたき、筋電、体動、電源�
 <li><strong>アーティファクト処理：</strong>ICA などを使ったか、どの成分を除いたか。</li>
 <li><strong>除外基準：</strong>どの閾値で、どのチャンネルや区間を外したか。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="what-not-do">
-<h2 class="section-title">やりがちな誤解</h2>
-<table class="data-table">
+<h2>やりがちな誤解</h2>
+<table>
 <thead>
 <tr>
 <th>誤解</th>
@@ -110,11 +102,8 @@ EEG は、脳の信号だけでなく、まばたき、筋電、体動、電源�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次にどこへ戻るか</h2>
+<h2>次にどこへ戻るか</h2>
 <p>
 EEG の信号そのものをもう一度確認したい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-basics">EEGの基本</a>、実際の作業手順へ戻りたい場合は <a href="https://mind-upload.com/hands_on.html">Hands-on</a>、公開データ選びへ戻りたい場合は <a href="https://mind-upload.com/datasets.html">Datasets</a> が自然です。
 </p>
-</section>

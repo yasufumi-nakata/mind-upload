@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>読むだけで終わらせないために、次の成果物を決めます</h2>
 <p>
 このサイトでは、読んで分かったことをそのまま放置しません。まず <strong>それが文献整理なのか</strong>、<strong>理論上の弱点なのか</strong>、<strong>提案へ上げる話なのか</strong>、<strong>今すぐ切れる修正なのか</strong>、<strong>外部依存なのか</strong> を決めて、戻る先を固定します。
 </p>
-</div>
 
-<section class="section" id="workflow-map">
-<h2 class="section-title">基本の流れ</h2>
-<table class="data-table">
+<h2>基本の流れ</h2>
+<table>
 <thead>
 <tr>
 <th>読んで気づいたこと</th>
@@ -78,11 +75,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="how-to-choose">
-<h2 class="section-title">どこへ戻すかの見分け方</h2>
-<table class="data-table">
+<h2>どこへ戻すかの見分け方</h2>
+<table>
 <thead>
 <tr>
 <th>見分けたいこと</th>
@@ -108,11 +103,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="concrete-cases">
-<h2 class="section-title">よくある具体例</h2>
-<table class="data-table">
+<h2>よくある具体例</h2>
+<table>
 <thead>
 <tr>
 <th>場面</th>
@@ -143,11 +136,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="common-mistakes">
-<h2 class="section-title">よくある迷い方</h2>
-<div class="key-points">
+<h2>よくある迷い方</h2>
+
 <h4>Mistake</h4>
 <ul>
 <li><strong>面白い文献をそのまま提案にする：</strong> 先に未解決問題や論点整理へ戻した方が安全です。</li>
@@ -155,12 +146,8 @@
 <li><strong>外部依存を Issue に混ぜる：</strong> 内製変更と相手待ちを分けないと止まりやすいです。</li>
 <li><strong>公開ページに背景説明を全部足す：</strong> 初歩からの詳説は wiki に寄せた方が入口が保てます。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 ページの役割差へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/facts-hypotheses-proposals-and-tasks">事実・仮説・提案・実行タスクの違い</a>、置き場所の判断へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/content-placement-basics">新しい情報の置き場所を決める基本</a>、参加の次ページ導線へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes">参加・協業ページのあとに進む5つの道</a> をご利用ください。
 </p>
-</section>

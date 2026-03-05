@@ -34,16 +34,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>なぜ「物差し」が先なのか</h2>
 <p>
 もし学校のテストで、答案用紙も採点基準も違うまま「こっちの方が賢い」と比べたら、結果は信用しにくくなります。WBE でも同じで、データ、評価、失敗条件、記録の置き場がそろわないと、「前進した」と言っても比べられません。
 </p>
-</div>
 
-<section class="section" id="four-parts">
-<h2 class="section-title">4つの部品を学校のテストでたとえる</h2>
-<table class="data-table">
+<h2>4つの部品を学校のテストでたとえる</h2>
+<table>
 <thead>
 <tr>
 <th>部品</th>
@@ -74,11 +71,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="missing">
-<h2 class="section-title">どれか1つ欠けると何が起こるか</h2>
-<table class="data-table">
+<h2>どれか1つ欠けると何が起こるか</h2>
+<table>
 <thead>
 <tr>
 <th>欠けるもの</th>
@@ -104,24 +99,18 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="why-wbe-needs-this">
-<h2 class="section-title">なぜ WBE では特に重要なのか</h2>
+<h2>なぜ WBE では特に重要なのか</h2>
 <p>
 WBE は、話が大きい分だけ、レベルのすり替えが起きやすい分野です。L1 の結果を L4 のように語る、相関を因果のように見せる、部分的な成功を全体の成立のように扱う、といった事故が起きやすくなります。だからこそ、結果だけでなく<strong>どう評価したか</strong>を固定する必要があります。
 </p>
-</section>
 
-<section class="section" id="site-link">
-<h2 class="section-title">このサイトでの使われ方</h2>
+<h2>このサイトでの使われ方</h2>
 <p>
 Mind-Upload では、Verification ページが設計図、Hands-on が最小実装、Datasets が入口データ、Casework が他分野の先例です。wiki は、その前提知識を補うためにあります。
 </p>
 <p>ベースライン、事前登録、モデルカード、失敗例の役割差をもう一段ていねいに整理したい場合は、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards">Wiki: ベースライン・事前登録・モデルカード</a> が補講になります。</p>
-<div class="cta-box">
+
 <h4>Next</h4>
 <p>この基礎を読んだあとで、実際の設計図を見たい場合はこちらです。</p>
 <a href="https://mind-upload.com/verification.html">検証基盤ページへ →</a>
-</div>
-</section>

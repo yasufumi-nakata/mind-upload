@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>まず段階で分ける</h2>
 <p>
 L0〜L5 は「研究のえらさ」ではなく、<strong>主張の強さ</strong>です。したがって、読みたい主張の強さが変われば、先に見るべきページも変わります。
 </p>
-</div>
 
-<section class="section" id="routes">
-<h2 class="section-title">L0〜L5 ごとの入口</h2>
-<table class="data-table">
+<h2>L0〜L5 ごとの入口</h2>
+<table>
 <thead>
 <tr>
 <th>レベル</th>
@@ -90,11 +87,9 @@ L0〜L5 は「研究のえらさ」ではなく、<strong>主張の強さ</stron
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="why-route">
-<h2 class="section-title">なぜこの順なのか</h2>
-<table class="data-table">
+<h2>なぜこの順なのか</h2>
+<table>
 <thead>
 <tr>
 <th>レベル</th>
@@ -128,11 +123,9 @@ L0〜L5 は「研究のえらさ」ではなく、<strong>主張の強さ</stron
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="common-misreads">
-<h2 class="section-title">よくある読み違い</h2>
-<div class="key-points">
+<h2>よくある読み違い</h2>
+
 <h4>Misread</h4>
 <ul>
 <li><strong>L0 の話を軽く見る：</strong> 実は比較可能性の土台なので、最初に最も重要です。</li>
@@ -140,12 +133,9 @@ L0〜L5 は「研究のえらさ」ではなく、<strong>主張の強さ</stron
 <li><strong>L3 を精度だけで語る：</strong> 遅延、ジッタ、安全停止が無いと閉ループの主張になりません。</li>
 <li><strong>L5 を技術だけで決める：</strong> 制度、権利、責任の層が別にあります。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="wiki-helpers">
-<h2 class="section-title">各レベルで一緒に見るとよい wiki</h2>
-<table class="data-table">
+<h2>各レベルで一緒に見るとよい wiki</h2>
+<table>
 <thead>
 <tr>
 <th>レベル</th>
@@ -179,11 +169,8 @@ L0〜L5 は「研究のえらさ」ではなく、<strong>主張の強さ</stron
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 L0〜L5 の定義そのものへ戻るなら <a href="https://mind-upload.com/wbe_101.html">WBE入門</a>、勝利条件の設計へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a>、依存関係の地図へ戻るなら <a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a> をご利用ください。
 </p>
-</section>

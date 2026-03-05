@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>参加導線の次に路線を決める</h2>
 <p>
 Issue や Collaborations は入口として重要ですが、そのままでは次に何を切るべきかが広すぎます。ここでは、<strong>いま何をしたいか</strong>で 5 本の道に分けて、次の1ページを固定します。
 </p>
-</div>
 
-<section class="section" id="five-routes">
-<h2 class="section-title">参加・協業ページのあとに進む5つの道</h2>
-<table class="data-table">
+<h2>参加・協業ページのあとに進む5つの道</h2>
+<table>
 <thead>
 <tr>
 <th>次にしたいこと</th>
@@ -78,11 +75,9 @@ Issue や Collaborations は入口として重要ですが、そのままでは�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="why">
-<h2 class="section-title">なぜこの分け方なのか</h2>
-<table class="data-table">
+<h2>なぜこの分け方なのか</h2>
+<table>
 <thead>
 <tr>
 <th>道</th>
@@ -112,11 +107,9 @@ Issue や Collaborations は入口として重要ですが、そのままでは�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="helper-wiki">
-<h2 class="section-title">途中で止まったときの補助 wiki</h2>
-<table class="data-table">
+<h2>途中で止まったときの補助 wiki</h2>
+<table>
 <thead>
 <tr>
 <th>止まる場所</th>
@@ -150,11 +143,9 @@ Issue や Collaborations は入口として重要ですが、そのままでは�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="common-mistakes">
-<h2 class="section-title">よくある迷い方</h2>
-<div class="key-points">
+<h2>よくある迷い方</h2>
+
 <h4>Mistake</h4>
 <ul>
 <li><strong>Issue を開いただけで次の作業が決まった気になる：</strong> 実際には、修正、条件設計、外部依存の分解などに絞る必要があります。</li>
@@ -162,12 +153,8 @@ Issue や Collaborations は入口として重要ですが、そのままでは�
 <li><strong>文献を読んで、そのまま参加済みだと思う：</strong> どの公開ページや Issue へ戻すかを決める必要があります。</li>
 <li><strong>文章修正と主張レベルの修正を同じ重さで扱う：</strong> 用語修正なのか、合格条件の修正なのかを先に分ける方が安全です。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 参加の入口へ戻るなら <a href="https://mind-upload.com/issue.html">貢献ガイド</a>、外部連携の候補へ戻るなら <a href="https://mind-upload.com/collaborations.html">協業候補</a>、公開先の整理へ戻るなら <a href="https://mind-upload.com/content_hub.html">公開コンテンツ統合ハブ</a> をご利用ください。
 </p>
-</section>

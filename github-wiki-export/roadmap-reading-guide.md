@@ -33,23 +33,18 @@
 
 ---
 
-<div class="abstract-box">
 <h2>まず一言でいうと</h2>
 <p>
 技術ロードマップは「何を先に解かないと、その先の話が崩れるか」を並べた地図です。長い一覧に見えても、実際には「前提 → 計測 → 推定 → 実装 → 検証 → 社会実装」という依存関係を表しています。
 </p>
-</div>
 
-<div class="note-box">
 <strong>読み方の次に、次ページも決めたいとき</strong>
 <p>
 ロードマップの記号の意味だけでなく、読んだあとに計測、再構成、実装、検証、社会実装のどこへ進むかを 1 枚で見たい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/roadmap-next-routes">ロードマップのあとに進む5つの道</a> をご覧ください。
 </p>
-</div>
 
-<section class="section" id="letters">
-<h2 class="section-title">P/M/R/I/V/D を日常語にする</h2>
-<table class="data-table">
+<h2>P/M/R/I/V/D を日常語にする</h2>
+<table>
 <thead>
 <tr>
 <th>記号</th>
@@ -90,11 +85,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="routes">
-<h2 class="section-title">興味別の読み順</h2>
-<table class="data-table">
+<h2>興味別の読み順</h2>
+<table>
 <thead>
 <tr>
 <th>いま気になること</th>
@@ -125,16 +118,12 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="not-timeline">
-<h2 class="section-title">これは年表ではなく依存関係です</h2>
+<h2>これは年表ではなく依存関係です</h2>
 <p>
 P → M → R → I → V → D と並んでいても、「必ずこの年にここまで行く」という意味ではありません。大事なのは、後ろの主張ほど前の層の失敗に弱いということです。たとえば、M と R が曖昧なまま V で強い本人性主張へ進むと、入力の限界や推定の不確実性がそのまま残ります。
 </p>
-<div class="cta-box">
+
 <h4>Next</h4>
 <p>正式な論点一覧と索引は、技術ロードマップ本文で確認してください。</p>
 <a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップへ →</a>
-</div>
-</section>

@@ -35,16 +35,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>まず最初の区別</h2>
 <p>
 誰かとまったく同じように話し、同じ記憶を語り、同じ反応をしたとしても、それだけで「同じ本人」とは限りません。Mind-Upload では、この差を曖昧にしないために、<strong>性能の一致</strong>と<strong>本人性の主張</strong>を別のレベルとして扱います。
 </p>
-</div>
 
-<section class="section" id="why-hard">
-<h2 class="section-title">なぜ難しいのか</h2>
-<table class="data-table">
+<h2>なぜ難しいのか</h2>
+<table>
 <thead>
 <tr>
 <th>問い</th>
@@ -66,11 +63,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="copy-vs-transfer">
-<h2 class="section-title">静的コピーと連続的移行の違い</h2>
-<table class="data-table">
+<h2>静的コピーと連続的移行の違い</h2>
+<table>
 <thead>
 <tr>
 <th>考え方</th>
@@ -91,17 +86,13 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="what-can-test">
-<h2 class="section-title">工学に戻すと、何をテストしたいのか</h2>
+<h2>工学に戻すと、何をテストしたいのか</h2>
 <p>
 この論点を工学に戻すと、ただ「よく似ているか」を見るだけでは足りません。記憶、価値観、学習履歴、条件変更への反応が、どこまで連続しているかを事前登録したテストで見る必要があります。つまり、哲学の話をそのまま放置するのではなく、<strong>どんな失敗なら本人性主張を保留にするか</strong>を定義する方向へ進みます。
 </p>
 <p>テスト設計の入口だけ先に見たい場合は、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/identity-and-continuity-tests">Wiki: 本人性評価と連続性テスト</a> が補講になります。</p>
-<div class="cta-box">
+
 <h4>Next</h4>
 <p>この論点を理論フレームとしてどう扱うかは、こちらで確認できます。</p>
 <a href="https://mind-upload.com/idea.html">理論フレームへ →</a>
-</div>
-</section>

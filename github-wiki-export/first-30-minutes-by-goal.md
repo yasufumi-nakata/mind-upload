@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>最初に目的を決める</h2>
 <p>
 最初の30分で全部を理解する必要はありません。必要なのは、<strong>自分が何を知りたいか</strong>を固定し、その目的に合った 3〜4 ページだけを先に見ることです。
 </p>
-</div>
 
-<section class="section" id="routes">
-<h2 class="section-title">目的別の最初の30分ルート</h2>
-<table class="data-table">
+<h2>目的別の最初の30分ルート</h2>
+<table>
 <thead>
 <tr>
 <th>目的</th>
@@ -78,11 +75,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="when-stuck">
-<h2 class="section-title">途中で止まったときの差し替え先</h2>
-<table class="data-table">
+<h2>途中で止まったときの差し替え先</h2>
+<table>
 <thead>
 <tr>
 <th>止まる場所</th>
@@ -112,11 +107,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="common-mistakes">
-<h2 class="section-title">最初の30分で避けたい読み方</h2>
-<div class="key-points">
+<h2>最初の30分で避けたい読み方</h2>
+
 <h4>Mistake</h4>
 <ul>
 <li><strong>最初から長文を全部読もうとする：</strong> 最初は 1 本の軸を決める方が理解が安定します。</li>
@@ -124,12 +117,8 @@
 <li><strong>FAQ だけで結論まで出す：</strong> FAQ は入口なので、強い主張は本文へ戻る必要があります。</li>
 <li><strong>Hands-on だけ見て勝利条件まで分かった気になる：</strong> 条件の設計は Verification で確認する必要があります。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 公開ページ全体の役割差へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide">公開ページの読み分けガイド</a>、理論系だけへ絞るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/theory-pages-reading-guide">理論系ページの読み分けガイド</a>、実務系だけへ絞るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/practical-pages-reading-guide">実務系ページの読み分けガイド</a> をご利用ください。
 </p>
-</section>

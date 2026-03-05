@@ -34,16 +34,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>まず区別したいこと</h2>
 <p>
 提案ページでは、「良い案として採った」「本文へ書いた」「コードまで動いた」「外部合意まで終わった」が別の段階です。この差を曖昧にすると、進んでいる作業とまだ保留の作業を混同してしまいます。
 </p>
-</div>
 
-<section class="section" id="labels">
-<h2 class="section-title">状態ラベルを日常語にする</h2>
-<table class="data-table">
+<h2>状態ラベルを日常語にする</h2>
+<table>
 <thead>
 <tr>
 <th>ラベルの種類</th>
@@ -79,23 +76,18 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="what-not-mean">
-<h2 class="section-title">ラベルが意味しないこと</h2>
-<div class="key-points">
+<h2>ラベルが意味しないこと</h2>
+
 <h4>Not Mean</h4>
 <ul>
 <li><strong>提案受理：</strong> 科学的に完全に正しいと確定した、という意味ではありません。</li>
 <li><strong>文書反映：</strong> 実装や共同研究まで終わった、という意味ではありません。</li>
 <li><strong>実装済み：</strong> 社会実装や制度整備まで済んだ、という意味ではありません。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="where-to-return">
-<h2 class="section-title">どこへ戻るべきか</h2>
-<table class="data-table">
+<h2>どこへ戻るべきか</h2>
+<table>
 <thead>
 <tr>
 <th>知りたいこと</th>
@@ -117,11 +109,8 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<div class="note-box">
 <strong>外部依存を『待ち箱』にしないために</strong>
 <p>
 このページは段階差の説明です。外部依存になったあとに、こちらで何を先に作れるかまで整理したい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies">Wiki: 内製で先にやることと外部依存の切り分け</a> をご覧ください。
 </p>
-</div>

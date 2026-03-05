@@ -34,29 +34,23 @@
 
 ---
 
-<div class="abstract-box">
 <h2>まず5つに分ける</h2>
 <p>
 実務系ページは、全部が「作業に役立つページ」ではありますが、<strong>何を決めるページか</strong>が違います。先に <strong>勝利条件</strong>、<strong>入口データ</strong>、<strong>作業手順</strong>、<strong>参照事例</strong>、<strong>提案整理</strong> に分けると、実務導線がかなり安定します。
 </p>
-</div>
 
-<div class="note-box">
 <strong>EEGからL0までの順番だけを一本道で見たいとき</strong>
 <p>
 実務ページの役割差よりも、EEG 入門から Datasets、Hands-on、Verification までの順番をそのまま辿りたい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-to-l0-route">EEGからL0までの一本道</a> をご覧ください。
 </p>
-</div>
-<div class="note-box">
+
 <strong>Verificationのあとに何を見るかだけ決めたいとき</strong>
 <p>
 実務ページの役割差を理解したあとで、Verification から次にどの路線へ進むかだけを 1 枚で見たい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/verification-next-routes">Verificationのあとに進む4つの道</a> をご覧ください。
 </p>
-</div>
 
-<section class="section" id="role-diff">
-<h2 class="section-title">実務系ページの役割差</h2>
-<table class="data-table">
+<h2>実務系ページの役割差</h2>
+<table>
 <thead>
 <tr>
 <th>ページ</th>
@@ -98,11 +92,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="which-question">
-<h2 class="section-title">この疑問なら、まずこのページ</h2>
-<table class="data-table">
+<h2>この疑問なら、まずこのページ</h2>
+<table>
 <thead>
 <tr>
 <th>いま知りたいこと</th>
@@ -143,11 +135,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="similar-pages">
-<h2 class="section-title">似て見えるページの違い</h2>
-<table class="data-table">
+<h2>似て見えるページの違い</h2>
+<table>
 <thead>
 <tr>
 <th>似て見える組</th>
@@ -173,11 +163,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="common-mistakes">
-<h2 class="section-title">よくある迷い方</h2>
-<div class="key-points">
+<h2>よくある迷い方</h2>
+
 <h4>Mistake</h4>
 <ul>
 <li><strong>Datasets だけ見て進めた気になる：</strong> 何を成果物として残すかは Hands-on と Verification で固定する必要があります。</li>
@@ -185,12 +173,8 @@
 <li><strong>Casework を直接の証拠と読む：</strong> ここは設計参照であり、WBE が成立した証明ではありません。</li>
 <li><strong>Proposals を実装完了一覧として読む：</strong> 提案受理や文書反映と、実装完了や外部合意は別です。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 実務の入口へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a>、L0 の実作業へ戻るなら <a href="https://mind-upload.com/hands_on.html">ハンズオン</a>、更新先を決めたい場合は <a href="https://mind-upload.com/content_hub.html">公開コンテンツ統合ハブ</a> をご利用ください。
 </p>
-</section>

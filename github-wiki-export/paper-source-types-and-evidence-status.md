@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>まず3つに分ける</h2>
 <p>
 文献ページで混乱しやすいのは、<strong>どこに載っているか</strong>、<strong>どんな種別の文献か</strong>、<strong>このサイト内で今どの状態か</strong>を同じものとして読んでしまうことです。まずこの3つを分けるだけで、かなり誤読が減ります。
 </p>
-</div>
 
-<section class="section" id="three-axes">
-<h2 class="section-title">ラベルには3つの軸があります</h2>
-<table class="data-table">
+<h2>ラベルには3つの軸があります</h2>
+<table>
 <thead>
 <tr>
 <th>軸</th>
@@ -72,18 +69,14 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<div class="note-box">
 <strong>同じ文献に複数の属性が重なります</strong>
 <p>
 たとえば、ある文献が <strong>Scopus に載っているレビュー論文</strong> であることもあれば、<strong>arXiv にある一次研究のプレプリント</strong> であることもあります。ひとつのラベルだけで全体を決めないでください。
 </p>
-</div>
 
-<section class="section" id="source-kinds">
-<h2 class="section-title">掲載元や種別の読み方</h2>
-<table class="data-table">
+<h2>掲載元や種別の読み方</h2>
+<table>
 <thead>
 <tr>
 <th>表示</th>
@@ -125,11 +118,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="status-labels">
-<h2 class="section-title">サイト内状態ラベルの読み方</h2>
-<table class="data-table">
+<h2>サイト内状態ラベルの読み方</h2>
+<table>
 <thead>
 <tr>
 <th>ラベル</th>
@@ -159,11 +150,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="when-to-return">
-<h2 class="section-title">どこで止まり、どこで原文へ戻るか</h2>
-<table class="data-table">
+<h2>どこで止まり、どこで原文へ戻るか</h2>
+<table>
 <thead>
 <tr>
 <th>いまの目的</th>
@@ -194,11 +183,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="common-mistakes">
-<h2 class="section-title">よくある誤読</h2>
-<div class="key-points">
+<h2>よくある誤読</h2>
+
 <h4>Misread</h4>
 <ul>
 <li><strong>「Scopus だから強い」：</strong> Scopus は索引です。論点への効き方は、本文と方法で確認します。</li>
@@ -207,12 +194,8 @@
 <li><strong>「source_logged だから採用済み」：</strong> まだ受理ログであり、統合や除外の判断は後続作業です。</li>
 <li><strong>「curated だから真である」：</strong> 整理済みであることと、最終的に正しいことは別です。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 論文を広く眺めたい場合は <a href="https://mind-upload.com/mind_uploading_papers.html">論文集</a>、未解決問題との対応を見たい場合は <a href="https://mind-upload.com/research_harvest_50.html">文献地図</a>、そもそもの役割差から整理したい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading">文献と証拠ページの読み方</a> に戻ってください。
 </p>
-</section>

@@ -33,23 +33,18 @@
 
 ---
 
-<div class="abstract-box">
 <h2>いちばん短い説明</h2>
 <p>
 マルチモーダル統合とは、「1つの装置で全部分かる」と考える代わりに、<strong>別々の弱点を持つ測定を組み合わせる</strong>設計です。時間に強い EEG、位置に強い fMRI、高 SNR の侵襲計測などを、目的に応じて補完させます。
 </p>
-</div>
 
-<section class="section" id="why-not-eeg-alone">
-<h2 class="section-title">なぜ EEG 単体では足りないのか</h2>
+<h2>なぜ EEG 単体では足りないのか</h2>
 <p>
 EEG は時間変化を見るには強い一方、どこで起きたかを強く言うのは苦手です。特に深部構造や微細な局所回路まで直接読むことはできません。そのため、空間情報や構造情報を補うために、別モダリティが必要になります。
 </p>
-</section>
 
-<section class="section" id="roles">
-<h2 class="section-title">各モダリティの役割差</h2>
-<table class="data-table">
+<h2>各モダリティの役割差</h2>
+<table>
 <thead>
 <tr>
 <th>モダリティ</th>
@@ -85,11 +80,9 @@ EEG は時間変化を見るには強い一方、どこで起きたかを強く�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="good-combos">
-<h2 class="section-title">よくある組み合わせの意味</h2>
-<table class="data-table">
+<h2>よくある組み合わせの意味</h2>
+<table>
 <thead>
 <tr>
 <th>組み合わせ</th>
@@ -115,23 +108,18 @@ EEG は時間変化を見るには強い一方、どこで起きたかを強く�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="what-still-doesnt-happen">
-<h2 class="section-title">統合しても自動では起きないこと</h2>
-<div class="key-points">
+<h2>統合しても自動では起きないこと</h2>
+
 <h4>ここは誤解しやすい点です</h4>
 <ul>
 <li><strong>足し算だけで真実になるわけではありません：</strong>複数データでも仮定と不確実性は残ります。</li>
 <li><strong>本人性が自動で証明されるわけではありません：</strong>測定が増えても、L4 の課題は別です。</li>
 <li><strong>因果検証が不要になるわけではありません：</strong>統合したうえで、介入や摂動のテストが要ります。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="integration-costs">
-<h2 class="section-title">統合で増える実務負荷</h2>
-<table class="data-table">
+<h2>統合で増える実務負荷</h2>
+<table>
 <thead>
 <tr>
 <th>実務項目</th>
@@ -157,11 +145,9 @@ EEG は時間変化を見るには強い一方、どこで起きたかを強く�
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="how-to-read">
-<h2 class="section-title">マルチモーダルの主張を読むときの最低チェック</h2>
-<div class="key-points">
+<h2>マルチモーダルの主張を読むときの最低チェック</h2>
+
 <h4>Checklist</h4>
 <ul>
 <li><strong>何を補うための統合か：</strong>時間、空間、局所性、構造のどれを補っているか。</li>
@@ -169,12 +155,8 @@ EEG は時間変化を見るには強い一方、どこで起きたかを強く�
 <li><strong>不確実性を引き継いでいるか：</strong>統合後だけきれいな数字になっていないか。</li>
 <li><strong>強い主張へ飛んでいないか：</strong>測定統合を、本人性や意識の証明と混同していないか。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="return">
-<h2 class="section-title">次にどこへ戻るか</h2>
+<h2>次にどこへ戻るか</h2>
 <p>
 EEG の基本へ戻るなら <a href="https://mind-upload.com/eeg_101.html">EEG入門</a>、長文の設計へ戻るなら <a href="https://mind-upload.com/perspective.html">研究ノート</a>、入口データへ戻るなら <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a> をご利用ください。
 </p>
-</section>

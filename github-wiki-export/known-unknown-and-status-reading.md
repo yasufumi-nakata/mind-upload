@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>公開ページは「断言する場所」と「保留する場所」を分けています</h2>
 <p>
 このサイトの公開ページは、何でも断言するための場所ではありません。むしろ、<strong>いま比較的強く言えること</strong>、<strong>まだ言い切れないこと</strong>、<strong>このページの役割ではないこと</strong>を分けて、読む人が誤って強い結論に飛ばないようにしています。
 </p>
-</div>
 
-<section class="section" id="four-boxes">
-<h2 class="section-title">まず 4 つを分けて読む</h2>
-<table class="data-table">
+<h2>まず 4 つを分けて読む</h2>
+<table>
 <thead>
 <tr>
 <th>表示</th>
@@ -73,11 +70,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="known-does-not-mean-solved">
-<h2 class="section-title">「分かっている」は「全部解けた」ではありません</h2>
-<table class="data-table">
+<h2>「分かっている」は「全部解けた」ではありません</h2>
+<table>
 <thead>
 <tr>
 <th>公開ページの言い方</th>
@@ -99,11 +94,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="unknown-does-not-mean-impossible">
-<h2 class="section-title">「分かっていない」は「不可能」ではありません</h2>
-<table class="data-table">
+<h2>「分かっていない」は「不可能」ではありません</h2>
+<table>
 <thead>
 <tr>
 <th>未知の種類</th>
@@ -134,11 +127,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="how-to-read-page-top">
-<h2 class="section-title">ページ冒頭をどう使うか</h2>
-<table class="data-table">
+<h2>ページ冒頭をどう使うか</h2>
+<table>
 <thead>
 <tr>
 <th>冒頭の要素</th>
@@ -168,11 +159,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="common-mistakes">
-<h2 class="section-title">よくある誤読</h2>
-<div class="key-points">
+<h2>よくある誤読</h2>
+
 <h4>Mistake</h4>
 <ul>
 <li><strong>「分かっている」を完了報告として読む：</strong> 多くは必要条件や比較的安定した前提の整理です。</li>
@@ -180,12 +169,8 @@
 <li><strong>accuracy note を飾りとして読む：</strong> 実際には断言の境界を決める重要な情報です。</li>
 <li><strong>外部依存を保留箱として放置する：</strong> 先に内製できる準備物を切り出す必要があります。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 公開ページの役割差へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide">公開ページの読み分けガイド</a>、進捗ラベルの細かい意味へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/progress-labels-and-open-problem-status">部分解決・探索段階・未整備の読み方</a>、外部依存の切り分けへ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies">内製で先にやることと外部依存</a> をご利用ください。
 </p>
-</section>

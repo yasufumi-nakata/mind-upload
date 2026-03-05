@@ -34,23 +34,18 @@
 
 ---
 
-<div class="abstract-box">
 <h2>まず一言でいうと</h2>
 <p>
 マインドアップロードは、「心や記憶を別の基盤で保てるか」という大きな問いです。WBE（Whole Brain Emulation）は、その中でも<strong>脳の機能を別の計算基盤で再現する</strong>ことに寄った言い方です。ただし、何を再現できたら「成功」と呼ぶかは、まだ自動的には決まりません。
 </p>
-</div>
 
-<div class="note-box">
 <strong>このサイトが最初にやること</strong>
 <p>
 このサイトは、いきなり「できる」「できない」を決めるよりも先に、<strong>何を達成したら前進か</strong>と<strong>何が出たらまだ不足か</strong>をそろえることを重視します。大きな夢を守るには、先に物差しを作る必要があるからです。
 </p>
-</div>
 
-<section class="section" id="terms">
-<h2 class="section-title">まず分けたい3つの言葉</h2>
-<table class="data-table">
+<h2>まず分けたい3つの言葉</h2>
+<table>
 <thead>
 <tr>
 <th>言葉</th>
@@ -72,11 +67,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="known-unknown">
-<h2 class="section-title">いま比較的はっきりしていること / まだ未解決のこと</h2>
-<table class="data-table">
+<h2>いま比較的はっきりしていること / まだ未解決のこと</h2>
+<table>
 <thead>
 <tr>
 <th>比較的はっきりしていること</th>
@@ -98,29 +91,22 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="why-not-say-done">
-<h2 class="section-title">なぜ、すぐ「できた」と言わないのか</h2>
+<h2>なぜ、すぐ「できた」と言わないのか</h2>
 <p>
 WBE の話では、似ているものを混同しやすいからです。たとえば、脳信号から文章を当てられることと、脳の内部状態を別基盤で生成できることは同じではありません。前者は<strong>観測の翻訳</strong>かもしれませんが、後者は<strong>内部の仕組みが時間とともに動き、条件変更にも反応する</strong>ことを要求します。
 </p>
-<div class="note-box">
+
 <strong>ここで大事なこと</strong>
 <p>
 この差を曖昧にすると、L1 の研究を L4 のように語ってしまいます。だからこのサイトでは、強い主張ほど、必要な証拠も強くする方針を取ります。
 </p>
-</div>
-</section>
 
-<section class="section" id="site-role">
-<h2 class="section-title">このサイトの立ち位置</h2>
+<h2>このサイトの立ち位置</h2>
 <p>
 このサイトは、WBE を最終的に証明した場所ではありません。むしろ、<strong>証明や反証ができるようにするための公共財</strong>を整える場所です。言い換えると、競技そのものよりも先に、ルール、採点表、試合記録の置き場を整える作業をしています。
 </p>
-<div class="cta-box">
+
 <h4>Next</h4>
 <p>この話を「主張の強さ」と「必要な証拠」に分けて読みたい場合はこちらです。</p>
 <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence">主張と証拠の読み方へ →</a>
-</div>
-</section>

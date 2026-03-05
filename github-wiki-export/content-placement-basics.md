@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>最初に決めるのは「内容」より「置き場所」です</h2>
 <p>
 新しい情報を見つけたとき、すぐ本文を書き始めると重複や迷子が増えます。先に<strong>その情報の役割</strong>を決めると、公開ページをポータルとして保ちつつ、必要な詳説を wiki へ増やしやすくなります。
 </p>
-</div>
 
-<section class="section" id="five-places">
-<h2 class="section-title">まずは 5 つの置き場所を分ける</h2>
-<table class="data-table">
+<h2>まずは 5 つの置き場所を分ける</h2>
+<table>
 <thead>
 <tr>
 <th>置き場所</th>
@@ -78,11 +75,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="by-question">
-<h2 class="section-title">その情報が何に答えるかで置き場所を決める</h2>
-<table class="data-table">
+<h2>その情報が何に答えるかで置き場所を決める</h2>
+<table>
 <thead>
 <tr>
 <th>その情報が答える問い</th>
@@ -118,11 +113,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="common-cases">
-<h2 class="section-title">よくあるケースの置き方</h2>
-<table class="data-table">
+<h2>よくあるケースの置き方</h2>
+<table>
 <thead>
 <tr>
 <th>見つけたもの</th>
@@ -158,11 +151,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="mistakes">
-<h2 class="section-title">よくある失敗</h2>
-<div class="key-points">
+<h2>よくある失敗</h2>
+
 <h4>Mistake</h4>
 <ul>
 <li><strong>とりあえず新規ページを作る：</strong> まず既存ページに統合できるかを確認してください。</li>
@@ -170,12 +161,8 @@
 <li><strong>Issue と Collaborations を混ぜる：</strong> 今できる変更と外部依存を分けてください。</li>
 <li><strong>未整理メモをそのまま公開する：</strong> まず運用領域で整理してから統合先を決める方が安全です。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2>次に戻る場所</h2>
 <p>
 統合先の一覧へ戻るなら <a href="https://mind-upload.com/content_hub.html">公開コンテンツ統合ハブ</a>、参加導線へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes">参加・協業ページのあとに進む5つの道</a>、Issue に落とし込む書き方へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/issue-writing-basics">はじめての Issue の書き方</a> をご利用ください。
 </p>
-</section>

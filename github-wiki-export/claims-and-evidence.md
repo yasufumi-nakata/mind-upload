@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>基本ルール</h2>
 <p>
 研究発表の文言は、しばしば実際の証拠より強く見えます。そこで、まずは「この成果は何をしたのか」を L0〜L5 のどこに置くかを考えます。レベルが上がるほど、必要な証拠も増えます。
 </p>
-</div>
 
-<section class="section" id="ladder">
-<h2 class="section-title">L0〜L5 を日常語で言い換える</h2>
-<table class="data-table">
+<h2>L0〜L5 を日常語で言い換える</h2>
+<table>
 <thead>
 <tr>
 <th>レベル</th>
@@ -83,11 +80,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="phrases">
-<h2 class="section-title">よくある文言を翻訳する</h2>
-<table class="data-table">
+<h2>よくある文言を翻訳する</h2>
+<table>
 <thead>
 <tr>
 <th>見出しの言い方</th>
@@ -118,28 +113,21 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="checklist">
-<h2 class="section-title">読むときの3点チェック</h2>
-<div class="key-points">
+<h2>読むときの3点チェック</h2>
+
 <h4>Checklist</h4>
 <ul>
 <li><strong>これは L0〜L5 のどこか：</strong>まず主張の強さを置きます。</li>
 <li><strong>何を測ったのか：</strong>出力一致だけか、条件変更や介入まで含むかを見ます。</li>
 <li><strong>何が出たら失敗なのか：</strong>反証条件と再現手順があるかを確認します。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="next-step">
-<h2 class="section-title">一段上の主張へ進むには何が足りないか</h2>
+<h2>一段上の主張へ進むには何が足りないか</h2>
 <p>
 L1 の結果があっても、すぐ L4 の話へは飛べません。普通は、まず L0 の再現性を固め、次に L2 の条件変更テストを入れ、それでもなお残る論点を分けて進めます。つまり、<strong>上のレベルは下のレベルを飛び越えて成立しません</strong>。
 </p>
-<div class="cta-box">
+
 <h4>Next</h4>
 <p>この読み方を支える「標準・ベンチ・登録・監査」の考え方はこちらです。</p>
 <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics">検証基盤の基本へ →</a>
-</div>
-</section>

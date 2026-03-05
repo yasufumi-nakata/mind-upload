@@ -33,21 +33,17 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 
 ---
 
-<div class="abstract-box">
 <h2>この wiki の役割</h2>
 <p>
 この wiki は、公開ページを読む前後に戻ってこれる<strong>学習用の土台</strong>です。公開ページでは、いま分かっていること、まだ分かっていないこと、次に読むべき場所を素早く示します。wiki では、その背景にある言葉、考え方、読み方を順番に説明します。
 </p>
-</div>
 
-<div class="note-box">
 <strong>使い方</strong>
 <p>
 「まず全体像だけ知りたい」ときは公開ページへ進んで構いません。ただし、途中で用語や前提で止まったら、この wiki に戻ってください。入口で迷子にならないための補助輪として使うのが基本です。
 </p>
-</div>
 
-<table class="data-table">
+<table>
 <thead>
 <tr>
 <th>いま知りたいこと</th>
@@ -299,9 +295,8 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 </tbody>
 </table>
 
-<section class="section" id="portal-vs-wiki">
-<h2 class="section-title">公開ページと wiki の役割分担</h2>
-<table class="data-table">
+<h2>公開ページと wiki の役割分担</h2>
+<table>
 <thead>
 <tr>
 <th>場所</th>
@@ -327,49 +322,35 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="routes">
-<h2 class="section-title">最初の 30 分コース</h2>
-<div class="stage-list">
-<div class="stage-item">
-<div class="stage-number">01</div>
-<div class="stage-body">
+<h2>最初の 30 分コース</h2>
+
+01
+
 <h4>WBEの基本</h4>
 <p>まず、Mind-Upload と WBE が何を指し、なぜすぐ「できた」と言わないのかを整理します。</p>
-<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics" class="btn-action">Open WBE Basics</a>
-</div>
-</div>
-<div class="stage-item">
-<div class="stage-number">02</div>
-<div class="stage-body">
+<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics">Open WBE Basics</a>
+
+02
+
 <h4>主張と証拠の読み方</h4>
 <p>ニュースや研究発表の文言を、L0〜L5 のどの話かで見分ける練習をします。</p>
-<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence" class="btn-action">Open Claims Guide</a>
-</div>
-</div>
-<div class="stage-item">
-<div class="stage-number">03</div>
-<div class="stage-body">
+<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence">Open Claims Guide</a>
+
+03
+
 <h4>EEGの基本</h4>
 <p>EEG が何を測り、何が得意で、なぜ単体では限界があるのかを押さえます。</p>
-<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-basics" class="btn-action">Open EEG Basics</a>
-</div>
-</div>
-<div class="stage-item">
-<div class="stage-number">04</div>
-<div class="stage-body">
+<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-basics">Open EEG Basics</a>
+
+04
+
 <h4>検証基盤の基本</h4>
 <p>標準、ベンチ、事前登録、監査がなぜ WBE の議論で重要かを学びます。</p>
-<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics" class="btn-action">Open Verification Basics</a>
-</div>
-</div>
-</div>
-</section>
+<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics">Open Verification Basics</a>
 
-<section class="section" id="deep-dives">
-<h2 class="section-title">その次の詳説</h2>
-<table class="data-table">
+<h2>その次の詳説</h2>
+<table>
 <thead>
 <tr>
 <th>詳しく知りたいこと</th>
@@ -499,4 +480,3 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 </tr>
 </tbody>
 </table>
-</section>

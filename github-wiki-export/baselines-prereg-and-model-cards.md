@@ -33,16 +33,13 @@
 
 ---
 
-<div class="abstract-box">
 <h2>いちばん短い地図</h2>
 <p>
 ベースラインは「出発点」、ベンチマークは「採点基準」、事前登録は「やる前の約束」、モデルカードは「結果の成績表」、失敗例は「どこで崩れたかの記録」です。どれか 1 つだけでは、比較可能な前進になりません。
 </p>
-</div>
 
-<section class="section" id="roles">
-<h2 class="section-title">まず役割を分ける</h2>
-<table class="data-table">
+<h2>まず役割を分ける</h2>
+<table>
 <thead>
 <tr>
 <th>用語</th>
@@ -72,11 +69,9 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="why-all-needed">
-<h2 class="section-title">なぜ全部必要なのか</h2>
-<table class="data-table">
+<h2>なぜ全部必要なのか</h2>
+<table>
 <thead>
 <tr>
 <th>欠けるもの</th>
@@ -106,58 +101,41 @@
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="simple-flow">
-<h2 class="section-title">最小の流れで見る</h2>
-<div class="stage-list">
-<div class="stage-item">
-<div class="stage-number">01</div>
-<div class="stage-body">
+<h2>最小の流れで見る</h2>
+
+01
+
 <h4>ベースラインを置く</h4>
 <p>まず単純でもよいので、比較の出発点を 1 本置きます。</p>
-</div>
-</div>
-<div class="stage-item">
-<div class="stage-number">02</div>
-<div class="stage-body">
+
+02
+
 <h4>ベンチマークを固定する</h4>
 <p>データ、分割、指標、禁止事項をそろえます。</p>
-</div>
-</div>
-<div class="stage-item">
-<div class="stage-number">03</div>
-<div class="stage-body">
+
+03
+
 <h4>事前登録する</h4>
 <p>どの条件で成功・失敗とみなすかを先に決めます。</p>
-</div>
-</div>
-<div class="stage-item">
-<div class="stage-number">04</div>
-<div class="stage-body">
+
+04
+
 <h4>モデルカードと失敗例を残す</h4>
 <p>点数だけでなく、弱点と崩れ方まで公開します。</p>
-</div>
-</div>
-</div>
-</section>
 
-<section class="section" id="negative-results">
-<h2 class="section-title">失敗例はなぜ大事か</h2>
+<h2>失敗例はなぜ大事か</h2>
 <p>
 成功例だけ集めると、たまたま勝った条件だけが残ります。Mind-Upload のように主張が大きい分野では、<strong>どの条件で崩れたか</strong>を残すことが、成功例を残すのと同じくらい重要です。
 </p>
-<div class="note-box">
+
 <strong>失敗例に最低限ほしいもの</strong>
 <p>
 どの条件で、どの指標が、どれだけ崩れたか。リークや分割の問題だったのか、OOD で崩れたのか、計算資源が足りなかったのか、を切り分けて残す必要があります。
 </p>
-</div>
-</section>
 
-<section class="section" id="how-to-read">
-<h2 class="section-title">公開ページを読むときの最低チェック</h2>
-<div class="key-points">
+<h2>公開ページを読むときの最低チェック</h2>
+
 <h4>Checklist</h4>
 <ul>
 <li><strong>ベースラインがあるか：</strong>何と比べたのかが明示されているか。</li>
@@ -165,12 +143,8 @@
 <li><strong>事前登録があるか：</strong>あとから条件を変えていないか。</li>
 <li><strong>モデルカードや失敗例があるか：</strong>弱点や崩れ方が見えるか。</li>
 </ul>
-</div>
-</section>
 
-<section class="section" id="return">
-<h2 class="section-title">次にどこへ戻るか</h2>
+<h2>次にどこへ戻るか</h2>
 <p>
 設計図へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a>、実務へ戻るなら <a href="https://mind-upload.com/hands_on.html">ハンズオン</a>、他分野の先例へ戻るなら <a href="https://mind-upload.com/casework.html">ケースワーク</a> をご利用ください。
 </p>
-</section>
