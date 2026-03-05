@@ -323,6 +323,7 @@ Research、Perspective、Idea、Proposals、Issue、Collaborations が全部同�
 <li><a href="wiki/claims-and-evidence.html">wiki/claims-and-evidence.html</a></li>
 <li><a href="wiki/known-unknown-and-status-reading.html">wiki/known-unknown-and-status-reading.html</a></li>
 <li><a href="wiki/facts-hypotheses-proposals-and-tasks.html">wiki/facts-hypotheses-proposals-and-tasks.html</a></li>
+<li><a href="wiki/summary-vs-source-reading.html">wiki/summary-vs-source-reading.html</a></li>
 <li><a href="wiki/eeg-basics.html">wiki/eeg-basics.html</a></li>
 <li><a href="wiki/verification-basics.html">wiki/verification-basics.html</a></li>
 <li><a href="wiki/roadmap-reading-guide.html">wiki/roadmap-reading-guide.html</a></li>
@@ -364,6 +365,8 @@ Research、Perspective、Idea、Proposals、Issue、Collaborations が全部同�
 <li><a href="wiki/internal-prework-and-external-dependencies.html">wiki/internal-prework-and-external-dependencies.html</a></li>
 <li><a href="wiki/issue-writing-basics.html">wiki/issue-writing-basics.html</a></li>
 <li><a href="wiki/content-placement-basics.html">wiki/content-placement-basics.html</a></li>
+<li><a href="wiki/reading-to-change-workflow.html">wiki/reading-to-change-workflow.html</a></li>
+<li><a href="wiki/understanding-vs-action-readiness.html">wiki/understanding-vs-action-readiness.html</a></li>
 </ul>
 </div>
 </section>
@@ -388,6 +391,9 @@ Research、Perspective、Idea、Proposals、Issue、Collaborations が全部同�
 <li><a href="wiki/first-30-minutes-by-goal.html">目的別の最初の30分 →</a></li>
 <li><a href="wiki/known-unknown-and-status-reading.html">既知/未知の読み方 →</a></li>
 <li><a href="wiki/facts-hypotheses-proposals-and-tasks.html">事実・仮説・提案・タスク →</a></li>
+<li><a href="wiki/summary-vs-source-reading.html">要約と原文の使い分け →</a></li>
+<li><a href="wiki/reading-to-change-workflow.html">読んだ内容を変更へ →</a></li>
+<li><a href="wiki/understanding-vs-action-readiness.html">理解と行動準備の違い →</a></li>
 <li><a href="wiki/wbe-to-theory-route.html">WBE入門の次ルート →</a></li>
 <li><a href="wiki/eeg-to-l0-route.html">EEGからL0まで →</a></li>
 <li><a href="wiki/verification-next-routes.html">Verification後の4ルート →</a></li>
