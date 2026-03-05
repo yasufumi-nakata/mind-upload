@@ -172,6 +172,11 @@ recommended_pages:
 <td><a href="identity-and-continuity-tests.html">本人性評価と連続性テスト</a></td>
 <td><a href="../wbe_101.html">WBE入門</a> / <a href="../tech_roadmap.html">技術ロードマップ</a></td>
 </tr>
+<tr>
+<td><strong>ベースラインや事前登録の役割差で止まる</strong></td>
+<td><a href="baselines-prereg-and-model-cards.html">ベースライン・事前登録・モデルカード</a></td>
+<td><a href="../verification.html">検証基盤</a> / <a href="../hands_on.html">ハンズオン</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -321,6 +326,10 @@ recommended_pages:
 <td>記憶、価値観、学習、分岐、縦断で見る L4 の入口</td>
 <td><a href="identity-and-continuity-tests.html">本人性評価と連続性テスト</a></td>
 </tr>
+<tr>
+<td>ベースライン、ベンチマーク、事前登録、モデルカード、失敗例</td>
+<td><a href="baselines-prereg-and-model-cards.html">ベースライン・事前登録・モデルカード</a></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -352,6 +361,7 @@ recommended_pages:
 <li><a href="uncertainty-confidence-and-abstention.html">不確実性・信頼区間・棄権 →</a></li>
 <li><a href="multimodal-integration-basics.html">マルチモーダル統合の基本 →</a></li>
 <li><a href="identity-and-continuity-tests.html">本人性評価と連続性テスト →</a></li>
+<li><a href="baselines-prereg-and-model-cards.html">ベースライン・事前登録・モデルカード →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">

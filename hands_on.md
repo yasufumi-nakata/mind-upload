@@ -35,6 +35,9 @@ wiki_links:
   - label: "Wiki: イベント同期と観測ログ"
     url: "/wiki/event-sync-and-measurement-logs.html"
     description: "events.tsv、同期、bad segment をどう考えるかを補います。"
+  - label: "Wiki: ベースライン・事前登録・モデルカード"
+    url: "/wiki/baselines-prereg-and-model-cards.html"
+    description: "ベースライン、事前登録、失敗例の役割差を整理できます。"
 recommended_pages:
   - label: "データ&ベンチ"
     url: "/datasets.html"
@@ -194,6 +197,12 @@ Validatorが通る＝研究として十分、ではありません。でも、�
 <strong>ベースラインの前に、分割を固定する</strong>
 <p>
 ベースラインを置く前に、train/test の境界が曖昧だと数字全体が崩れます。特に公開 EEG データでは、同じ被験者や近い時間窓が両側に入るだけで結果が上振れしやすいため、<a href="wiki/dataset-splits-and-leakage.html">Wiki: データ分割とデータリーク</a> の最低ルールを先に確認してから評価を固定してください。
+</p>
+</div>
+<div class="note-box">
+<strong>ベースラインを置いたあとの運用</strong>
+<p>
+ベースラインを置くだけでは足りず、どの指標を事前に固定したか、どんな失敗例が出たか、最終的に何をモデルカードとして残すかまで考える必要があります。ここを初歩から整理したい場合は <a href="wiki/baselines-prereg-and-model-cards.html">Wiki: ベースライン・事前登録・モデルカード</a> をご利用ください。
 </p>
 </div>
 </section>

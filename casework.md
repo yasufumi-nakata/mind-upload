@@ -325,6 +325,12 @@ recommended_pages:
 ベンチマークは「データを配る」だけではなく、<strong>ルール（禁止事項・提出形式・評価条件）</strong>と<strong>監査（リーク検査・失敗例）</strong>がセットで効きます。
 </p>
 </div>
+<div class="note-box">
+<strong>運用語の違いを先に整理したいとき</strong>
+<p>
+ベースライン、ベンチマーク、事前登録、モデルカード、失敗例の役割差を先に掴みたい場合は <a href="wiki/baselines-prereg-and-model-cards.html">Wiki: ベースライン・事前登録・モデルカード</a> を見ると、この節を横断しやすくなります。
+</p>
+</div>
 </section>
 
 <section class="section" id="registry">

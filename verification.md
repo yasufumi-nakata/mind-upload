@@ -45,6 +45,9 @@ wiki_links:
   - label: "Wiki: 本人性評価と連続性テスト"
     url: "/wiki/identity-and-continuity-tests.html"
     description: "L4 で何をどこまでテストしたいのかを、連続性の観点から整理します。"
+  - label: "Wiki: ベースライン・事前登録・モデルカード"
+    url: "/wiki/baselines-prereg-and-model-cards.html"
+    description: "出発点、事前ルール、結果記録、失敗例の役割差を整理します。"
 recommended_pages:
   - label: "技術ロードマップ"
     url: "/tech_roadmap.html"
@@ -330,6 +333,12 @@ L1 の精度や L2 の予測一致を見る前に、<strong>何単位で train/t
 <strong>抽象的に見えたら補講へ</strong>
 <p>
 この 4 要素が実際にどう噛み合うかを、EEG の小さな例で順番に見たい場合は <a href="wiki/verification-example-walkthrough.html">Wiki: Verification の具体例ウォークスルー</a> を参照してください。公開ページでは設計図を保ち、補講は wiki 側へ逃がしています。
+</p>
+</div>
+<div class="note-box">
+<strong>運用語の違いで止まったとき</strong>
+<p>
+ベースライン、ベンチマーク、事前登録、モデルカード、失敗例は全部重要ですが、役割は同じではありません。この差を初歩から整理したい場合は <a href="wiki/baselines-prereg-and-model-cards.html">Wiki: ベースライン・事前登録・モデルカード</a> を先にご覧ください。
 </p>
 </div>
 </section>

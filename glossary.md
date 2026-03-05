@@ -44,6 +44,9 @@ wiki_links:
   - label: "Wiki: マルチモーダル統合の基本"
     url: "/wiki/multimodal-integration-basics.html"
     description: "EEG、MEG、fMRI、ECoG、MRI の役割差を初歩から整理します。"
+  - label: "Wiki: ベースライン・事前登録・モデルカード"
+    url: "/wiki/baselines-prereg-and-model-cards.html"
+    description: "研究運用の言葉の役割差を、初歩から整理します。"
 recommended_pages:
   - label: "WBE入門"
     url: "/wbe_101.html"
@@ -155,6 +158,13 @@ EEG、QC、BIDS、逆問題、ESI、DCM、SCM は、全部同じ種類の言葉�
 <strong>計測装置の役割差で止まったとき</strong>
 <p>
 EEG、MEG、fMRI、ECoG、MRI は全部「脳を測るもの」ですが、得意不得意が違います。どれを何のために組み合わせるのかを初歩から整理したい場合は <a href="wiki/multimodal-integration-basics.html">Wiki: マルチモーダル統合の基本</a> を先にご覧ください。
+</p>
+</div>
+
+<div class="note-box">
+<strong>研究運用の言葉で止まったとき</strong>
+<p>
+ベースライン、ベンチマーク、事前登録、モデルカード、失敗例は、全部「再現性に大事なもの」ですが役割が違います。その差を初歩から整理したい場合は <a href="wiki/baselines-prereg-and-model-cards.html">Wiki: ベースライン・事前登録・モデルカード</a> を先にご覧ください。
 </p>
 </div>
 

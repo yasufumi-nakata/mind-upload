@@ -29,6 +29,9 @@ wiki_links:
   - label: "Wiki: WBEの基本"
     url: "/wiki/mind-upload-basics.html"
     description: "全体像から戻って読みたい人向けです。"
+  - label: "Wiki: ベースライン・事前登録・モデルカード"
+    url: "/wiki/baselines-prereg-and-model-cards.html"
+    description: "運用語の役割差を、初歩から整理します。"
   - label: "Wiki Home"
     url: "/wiki/"
     description: "他の基礎ページへ戻れます。"
@@ -128,6 +131,7 @@ WBE は、話が大きい分だけ、レベルのすり替えが起きやすい�
 <p>
 Mind-Upload では、Verification ページが設計図、Hands-on が最小実装、Datasets が入口データ、Casework が他分野の先例です。wiki は、その前提知識を補うためにあります。
 </p>
+<p>ベースライン、事前登録、モデルカード、失敗例の役割差をもう一段ていねいに整理したい場合は、<a href="baselines-prereg-and-model-cards.html">Wiki: ベースライン・事前登録・モデルカード</a> が補講になります。</p>
 <div class="cta-box">
 <h4>Next</h4>
 <p>この基礎を読んだあとで、実際の設計図を見たい場合はこちらです。</p>
