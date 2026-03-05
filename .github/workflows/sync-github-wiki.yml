@@ -1,0 +1,42 @@
+name: Sync GitHub Wiki
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "wiki/**"
+      - "scripts/export_github_wiki.rb"
+      - "scripts/publish_github_wiki.sh"
+      - ".github/workflows/sync-github-wiki.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-wiki:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+
+      - name: Export GitHub Wiki content
+        run: scripts/export_github_wiki.rb
+
+      - name: Publish GitHub Wiki export
+        env:
+          ACTIONS_TOKEN: ${{ github.token }}
+          GH_WIKI_TOKEN: ${{ secrets.GH_WIKI_TOKEN }}
+          WIKI_PUBLISH_ALLOW_SKIP: "1"
+        run: |
+          if [ -n "${GH_WIKI_TOKEN}" ]; then
+            export GITHUB_TOKEN="${GH_WIKI_TOKEN}"
+          else
+            export GITHUB_TOKEN="${ACTIONS_TOKEN}"
+          fi
+          scripts/publish_github_wiki.sh

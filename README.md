@@ -31,6 +31,8 @@
 - GitHub Wiki 用の出力は `github-wiki-export/` に生成します。
 - 生成は `scripts/export_github_wiki.rb`、反映は `scripts/publish_github_wiki.sh` を使います。
 - GitHub Wiki の git リポジトリは、GitHub の Web UI で最初の Wiki ページを 1 つ作成した後でないと clone / push できません。その初期化後に `scripts/publish_github_wiki.sh` を実行してください。
+- `.github/workflows/sync-github-wiki.yml` も追加してあり、初期化後は `main` への push で GitHub Wiki への同期を自動実行できます。
+- GitHub Actions の既定トークンで不足する場合は、`GH_WIKI_TOKEN` シークレットに `repo` 権限のトークンを設定してください。
 
 ## LLM向けプロンプトの利用
 

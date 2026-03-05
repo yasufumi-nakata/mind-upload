@@ -4,6 +4,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 EXPORT_DIR="$ROOT/github-wiki-export"
 REMOTE_BASE="https://github.com/yasufumi-nakata/mind-upload.wiki.git"
+ALLOW_SKIP="${WIKI_PUBLISH_ALLOW_SKIP:-0}"
 
 if [[ ! -d "$EXPORT_DIR" ]]; then
   echo "github-wiki-export/ がありません。先に scripts/export_github_wiki.rb を実行してください。"
@@ -17,6 +18,10 @@ if ! git ls-remote "$REMOTE_URL" >/dev/null 2>&1; then
   echo "GitHub Wiki の git リポジトリがまだ初期化されていません。"
   echo "GitHub の Web UI で最初の Wiki ページを 1 つ作成した後に、再度このスクリプトを実行してください。"
   echo "想定 remote: $REMOTE_BASE"
+  if [[ "$ALLOW_SKIP" == "1" ]]; then
+    echo "WIKI_PUBLISH_ALLOW_SKIP=1 のため、失敗扱いにはしません。"
+    exit 0
+  fi
   exit 1
 fi
 
