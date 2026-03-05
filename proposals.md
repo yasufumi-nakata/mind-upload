@@ -88,6 +88,12 @@ recommended_pages:
 </p>
 </div>
 <div class="note-box">
+<strong>提案から Issue や外部依存へどう流すか見たいとき</strong>
+<p>
+読んだ内容や提案を、どの段階で Issue、Hands-on、Collaborations へ戻すかを一本道で見たい場合は <a href="wiki/reading-to-change-workflow.html">Wiki: 読んだ内容を変更へつなぐ流れ</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
 <strong>Stream D の熱力学語で止まったとき</strong>
 <p>
 Landauer、散逸、NESS、EPR は、このページでは提案の論点として短く出てきます。まず入口だけ初歩から整理したい場合は <a href="wiki/thermodynamic-grounding-basics.html">Wiki: 熱力学的接地の基本</a> を先にご覧ください。

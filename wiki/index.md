@@ -128,6 +128,11 @@ recommended_pages:
 <td><a href="../perspective.html">研究ノート</a> / <a href="../idea.html">理論フレーム</a> / <a href="../proposals.html">技術提案</a> / <a href="../issue.html">貢献ガイド</a></td>
 </tr>
 <tr>
+<td><strong>読んだ内容をどの変更へつなぐか知りたい</strong></td>
+<td><a href="reading-to-change-workflow.html">読んだ内容を変更へつなぐ流れ</a></td>
+<td><a href="../research_harvest_50.html">文献地図</a> / <a href="../proposals.html">技術提案</a> / <a href="../issue.html">貢献ガイド</a> / <a href="../collaborations.html">協業候補</a></td>
+</tr>
+<tr>
 <td><strong>要約で止めてよい場面と、原文へ戻る場面を知りたい</strong></td>
 <td><a href="summary-vs-source-reading.html">要約・原文・Issue履歴の使い分け</a></td>
 <td><a href="../research_harvest_50.html">文献地図</a> / <a href="../mind_uploading_papers.html">論文集</a> / <a href="../proposals.html">技術提案</a></td>

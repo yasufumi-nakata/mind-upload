@@ -114,6 +114,12 @@ IRB、実験、機材、法務が絡むときでも、要求仕様、判定条�
 参加したい気持ちはあるが、次に小さな修正を切るのか、条件設計へ進むのか、外部依存を分解するのかで迷う場合は <a href="wiki/participation-next-routes.html">Wiki: 参加・協業ページのあとに進む5つの道</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>読んだ内容をどの成果物へ戻すか迷ったとき</strong>
+<p>
+文献整理、理論整理、提案、Issue、外部依存のどこへ戻すかを全体フローで見たい場合は <a href="wiki/reading-to-change-workflow.html">Wiki: 読んだ内容を変更へつなぐ流れ</a> をご覧ください。
+</p>
+</div>
 
 <section class="section" id="first-contribution-guide">
 <h2 class="section-title">最初の一歩を決める早見表</h2>

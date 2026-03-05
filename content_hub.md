@@ -106,6 +106,12 @@ Research、Perspective、Idea、Proposals、Issue、Collaborations が全部同�
 公開ページや wiki をどこまで入口として使い、どの場面で DOI、原文節、Issue 履歴へ戻るべきかを整理したい場合は <a href="wiki/summary-vs-source-reading.html">Wiki: 要約・原文・Issue履歴の使い分け</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>読んだ内容をどのページや作業へ変えるか迷ったとき</strong>
+<p>
+文献整理、理論整理、提案、Issue、外部依存のどこへ戻すかを一本道で整理したい場合は <a href="wiki/reading-to-change-workflow.html">Wiki: 読んだ内容を変更へつなぐ流れ</a> をご覧ください。
+</p>
+</div>
 
 <section class="section" id="quick-routing">
 <h2 class="section-title">追加したい内容から統合先を決める</h2>

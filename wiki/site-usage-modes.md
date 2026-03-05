@@ -171,6 +171,13 @@ recommended_pages:
 </table>
 </section>
 
+<div class="note-box">
+<strong>読んだ内容をどの成果物へ戻すか迷ったとき</strong>
+<p>
+文献整理、理論整理、提案、Issue、外部依存のどこへ戻すかを一本道で見たい場合は <a href="reading-to-change-workflow.html">読んだ内容を変更へつなぐ流れ</a> をご覧ください。
+</p>
+</div>
+
 <section class="section" id="switching">
 <h2 class="section-title">モードを切り替える目安</h2>
 <table class="data-table">

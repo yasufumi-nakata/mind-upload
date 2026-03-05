@@ -89,6 +89,12 @@ recommended_pages:
 </p>
 </div>
 <div class="note-box">
+<strong>文献から提案・Issue・協業候補までの全体フローを見たいとき</strong>
+<p>
+文献整理、理論整理、提案、実行タスク、外部依存の流れを 1 枚で見たい場合は <a href="wiki/reading-to-change-workflow.html">Wiki: 読んだ内容を変更へつなぐ流れ</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
 <strong>要約で止めてよい場面と、原文へ戻る場面を分けたいとき</strong>
 <p>
 このページの U 別整理や根拠例は入口として有効ですが、実際に根拠として使うときは DOI や元論文へ戻る必要があります。要約・原文・Issue 履歴の使い分けを 1 枚で見たい場合は <a href="wiki/summary-vs-source-reading.html">Wiki: 要約・原文・Issue履歴の使い分け</a> をご覧ください。
