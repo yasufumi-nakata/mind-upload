@@ -268,6 +268,13 @@ L1 の精度や L2 の予測一致を見る前に、<strong>何単位で train/t
 </tr>
 </tbody>
 </table>
+
+<div class="note-box">
+<strong>raw EEG を置くだけでは Data Standard になりません</strong>
+<p>
+比較可能な入力にするには、波形ファイルだけでなく、<strong>イベントマーカー</strong>、<strong>刺激ログ</strong>、<strong>時刻同期</strong>、<strong>bad channel / bad segment の記録</strong>まで必要です。ここが曖昧だと、後から同じ課題として追試できません。初歩から整理したい場合は <a href="wiki/event-sync-and-measurement-logs.html">Wiki: イベント同期と観測ログの基本</a> をご利用ください。
+</p>
+</div>
 </section>
 
 <section class="section" id="example">

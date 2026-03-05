@@ -32,6 +32,9 @@ wiki_links:
   - label: "Wiki: データ分割とリーク"
     url: "/wiki/dataset-splits-and-leakage.html"
     description: "train/test の分け方や、最初に避けるべきリークを整理できます。"
+  - label: "Wiki: イベント同期と観測ログ"
+    url: "/wiki/event-sync-and-measurement-logs.html"
+    description: "events.tsv、同期、bad segment をどう考えるかを補います。"
 recommended_pages:
   - label: "データ&ベンチ"
     url: "/datasets.html"
@@ -165,6 +168,12 @@ Validatorが通る＝研究として十分、ではありません。でも、�
 <li><strong>アーティファクト：</strong>眼球/筋電/動きの混入指標</li>
 <li><strong>除外基準：</strong>どの閾値で除外したか（理由つき）</li>
 </ul>
+</div>
+<div class="note-box">
+<strong>波形だけ保存して終わりにしない</strong>
+<p>
+`events.tsv` や刺激ログがないと、「どの瞬間に何が起きたか」を後から再構成しにくくなります。同期、bad segment、反応ログまで含めた最小の観測ログを整理したい場合は <a href="wiki/event-sync-and-measurement-logs.html">Wiki: イベント同期と観測ログの基本</a> をご確認ください。
+</p>
 </div>
 </section>
 

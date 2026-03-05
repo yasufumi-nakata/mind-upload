@@ -142,6 +142,11 @@ recommended_pages:
 <td><a href="measurement-and-modeling-terms.html">計測からモデル化までの用語ガイド</a></td>
 <td><a href="../glossary.html">用語集</a> / <a href="../eeg_101.html">EEG入門</a></td>
 </tr>
+<tr>
+<td><strong>イベントマーカーや同期ログの意味で止まる</strong></td>
+<td><a href="event-sync-and-measurement-logs.html">イベント同期と観測ログの基本</a></td>
+<td><a href="../datasets.html">データ&ベンチ</a> / <a href="../hands_on.html">ハンズオン</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -267,6 +272,10 @@ recommended_pages:
 <td>観測、前処理、推定、検証の用語の役割差</td>
 <td><a href="measurement-and-modeling-terms.html">計測からモデル化までの用語ガイド</a></td>
 </tr>
+<tr>
+<td>events.tsv、刺激ログ、同期、bad segment の基本</td>
+<td><a href="event-sync-and-measurement-logs.html">イベント同期と観測ログの基本</a></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -292,6 +301,7 @@ recommended_pages:
 <li><a href="dataset-splits-and-leakage.html">データ分割とデータリーク →</a></li>
 <li><a href="verification-example-walkthrough.html">Verification の具体例ウォークスルー →</a></li>
 <li><a href="measurement-and-modeling-terms.html">計測からモデル化までの用語ガイド →</a></li>
+<li><a href="event-sync-and-measurement-logs.html">イベント同期と観測ログの基本 →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">

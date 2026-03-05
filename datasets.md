@@ -32,6 +32,9 @@ wiki_links:
   - label: "Wiki: データ分割とリーク"
     url: "/wiki/dataset-splits-and-leakage.html"
     description: "train/test の分け方と、よくあるリーク事故を初歩から説明します。"
+  - label: "Wiki: イベント同期と観測ログ"
+    url: "/wiki/event-sync-and-measurement-logs.html"
+    description: "raw EEG だけでは足りない理由を、イベントと同期の観点から説明します。"
 recommended_pages:
   - label: "EEG入門"
     url: "/eeg_101.html"
@@ -97,6 +100,13 @@ recommended_pages:
 <strong>精度より先に見ること</strong>
 <p>
 データセット紹介を見ると、つい「何% 出たか」に目が向きます。しかし最初に確認すべきなのは、<strong>train/test を何単位で分けたか</strong>、<strong>リーク検査をしたか</strong>、<strong>単純なベースラインと比べたか</strong>です。ここで迷う場合は <a href="wiki/dataset-splits-and-leakage.html">Wiki: データ分割とデータリーク</a> を先に読むと判断しやすくなります。
+</p>
+</div>
+
+<div class="note-box">
+<strong>raw EEG があるだけでは足りない</strong>
+<p>
+波形ファイルが公開されていても、<strong>イベント定義</strong>、<strong>刺激ログ</strong>、<strong>時刻同期</strong>、<strong>bad channel / bad segment の記録</strong>が弱いと、あとから比較し直しにくくなります。この点を初歩から整理したい場合は <a href="wiki/event-sync-and-measurement-logs.html">Wiki: イベント同期と観測ログの基本</a> を先にご覧ください。
 </p>
 </div>
 
