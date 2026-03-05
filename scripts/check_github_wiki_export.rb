@@ -8,6 +8,12 @@ SRC_DIR = File.join(ROOT, "wiki")
 DEST_DIR = File.join(ROOT, "github-wiki-export")
 GITHUB_WIKI = "https://github.com/yasufumi-nakata/mind-upload/wiki"
 
+def changed_export_paths
+  changed = `git -C "#{ROOT}" diff --name-status -- "#{DEST_DIR}"`.lines.map(&:strip).reject(&:empty?)
+  untracked = `git -C "#{ROOT}" ls-files --others --exclude-standard -- "#{DEST_DIR}"`.lines.map(&:strip).reject(&:empty?).map { |path| "?? #{path}" }
+  (changed + untracked).uniq.sort
+end
+
 def source_pages
   Dir.glob(File.join(SRC_DIR, "**", "*.md")).sort
 end
@@ -122,6 +128,10 @@ if File.exist?(sidebar_path)
   end
 else
   errors << "Missing export sidebar: _Sidebar.md"
+end
+
+changed_export_paths.each do |line|
+  errors << "Uncommitted export drift: #{line}"
 end
 
 if errors.empty?

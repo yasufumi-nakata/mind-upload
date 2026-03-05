@@ -6126,3 +6126,72 @@
 
 - 共同研究先タイプ別の再開条件成立後初回通知テンプレは `MindUpload-EEGDATA-FundMap-collab-hold-release-resume-notice.csv` を使う
 - 列は `counterpart_type`, `resume_notice_focus`, `opening_line`, `share_asset`, `resume_notice_line`, `decision_gate`, `note_line`, `avoid_point`
+
+## 215. 25トピック別の再挑戦後最終禁止表現
+
+### 215.1 使い方
+
+- `ban_focus` は topic ごとに最後まで避けるべき表現の観点として使う
+- `avoid_phrase` は 実際に使わない表現として使う
+- `replace_with` は 代わりに使う最小の言い換えとして使う
+- `ban_trigger` は その表現を禁止してよい条件として使う
+- `do_not_ban` は 一律禁止しない方がよい条件として使う
+- `note_line` は README や handoff 向けの一文として使う
+
+### 215.2 再挑戦後最終禁止表現で守ること
+
+- 禁止表現は `厳しそうだから全部禁止` ではなく `誤読を増やす語だけ切る` で選ぶ
+- replace with は 1文で代替できる形にする
+- ban trigger が立ったら 古い強い言い回しを残さない
+- do_not_ban 条件がある時は 文脈依存の必要語まで消さない
+
+### 215.3 詳細版を引く場所
+
+- 25トピック別の再挑戦後最終禁止表現は `MindUpload-EEGDATA-FundMap-topic-retry-final-ban-phrases.csv` を使う
+- 列は `phase`, `topic`, `ban_focus`, `avoid_phrase`, `replace_with`, `ban_trigger`, `do_not_ban`, `note_line`, `avoid_point`
+
+## 216. 制度タイプ別の残置導線閉鎖後最終参照先
+
+### 216.1 使い方
+
+- `post_close_focus` は 残置導線を閉じた後に何だけ参照先として残すかの観点として使う
+- `final_reference` は 最後に残す最小の参照先として使う
+- `keep_reference_trigger` は その参照先を残してよい条件として使う
+- `remove_reference_trigger` は その参照先も外してよい条件として使う
+- `do_not_leave_reference` は 参照先を残さない方がよい条件として使う
+- `note_line` は README や内部メモの一文として使う
+
+### 216.2 残置導線閉鎖後最終参照先で守ること
+
+- 最終参照先は `閉じた後の代替窓口` ではなく `履歴確認の最小足場` にする
+- final reference は URL 1 本まで削る
+- remove reference trigger が立ったら 死んだ参照先を残さない
+- do_not_leave_reference 条件がある時は 閉鎖後に無責任な参照先を足さない
+
+### 216.3 詳細版を引く場所
+
+- 制度タイプ別の残置導線閉鎖後最終参照先は `MindUpload-EEGDATA-FundMap-publication-final-post-close-reference.csv` を使う
+- 列は `support_type`, `post_close_focus`, `final_reference`, `keep_reference_trigger`, `remove_reference_trigger`, `do_not_leave_reference`, `note_line`, `avoid_point`
+
+## 217. 共同研究先タイプ別の再開条件成立後初回確認テンプレ
+
+### 217.1 使い方
+
+- `check_focus` は 再開条件が揃った後に最初に何を確認するかの論点として使う
+- `opening_line` は 初回確認の最初の一文として使う
+- `share_asset` は 初回確認で添える最小成果物として使う
+- `check_line` は 再開後の最初の確認点を伝える一文として使う
+- `decision_gate` は この確認の後に reopen / hold / close を決める条件として使う
+- `note_line` は 送信前チェックや内部メモの一文として使う
+
+### 217.2 再開条件成立後初回確認テンプレで守ること
+
+- 初回確認は `再開できそうですか` ではなく `最初に確認すべき一点を切る文` にする
+- share asset は 1枚か1件から増やさない
+- check line は yes/no か短文で返せる形にする
+- decision gate が曖昧なら 初回確認を送らない
+
+### 217.3 詳細版を引く場所
+
+- 共同研究先タイプ別の再開条件成立後初回確認テンプレは `MindUpload-EEGDATA-FundMap-collab-hold-release-resume-check.csv` を使う
+- 列は `counterpart_type`, `check_focus`, `opening_line`, `share_asset`, `check_line`, `decision_gate`, `note_line`, `avoid_point`
