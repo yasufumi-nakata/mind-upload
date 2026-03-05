@@ -42,6 +42,48 @@ recommended_pages:
 </p>
 </div>
 
+<table class="data-table">
+<thead>
+<tr>
+<th>いま知りたいこと</th>
+<th>先に読む節</th>
+<th>そこで分かること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>このサイトが「前進」と呼ぶ条件を知りたい</td>
+<td><a href="#definition">このサイトで解く「1問」</a></td>
+<td>何を満たせば前進と言えるかを、主張レベルと再現条件で確認できます。</td>
+</tr>
+<tr>
+<td>最低限そろえる公共財を知りたい</td>
+<td><a href="#deliverables">Mind-Upload Commons の成果物</a></td>
+<td>Data Standard、Benchmark、Registry、Leaderboard の役割分担が分かります。</td>
+</tr>
+<tr>
+<td>現状どこまで実装済みか知りたい</td>
+<td><a href="#current-status">実装ステータス</a></td>
+<td>設計済みの部分と、まだ未公開・未実装の部分を分けて読めます。</td>
+</tr>
+<tr>
+<td>厳しめの検証条件だけ知りたい</td>
+<td><a href="#verification-rigor">検証の厳密性要件</a> / <a href="#verification-rigor-2026-02">追加更新</a></td>
+<td>不確実性、因果同値類、前処理忠実度など、見落としやすい必須条件を確認できます。</td>
+</tr>
+<tr>
+<td>普通の精度評価と何が違うか知りたい</td>
+<td><a href="#causal-perturbation-suite">因果的摂動スイート</a></td>
+<td>出力一致ではなく、条件変更への反応まで比べる理由を追えます。</td>
+</tr>
+<tr>
+<td>熱力学の話がなぜ必要か知りたい</td>
+<td><a href="#thermodynamic-verification">熱力学的検証要件</a></td>
+<td>情報処理だけでなく、散逸やエネルギー制約も検証対象に入れる理由が分かります。</td>
+</tr>
+</tbody>
+</table>
+
 <section class="section" id="tldr">
 <h2 class="section-title">TL;DR（人間向け）</h2>
 <div class="key-points">

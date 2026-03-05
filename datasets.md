@@ -136,6 +136,38 @@ recommended_pages:
 </tr>
 </tbody>
 </table>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>データセット</th>
+<th>最初の1本として出したいもの</th>
+<th>なぜその出力が向くか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EEG Motor Movement/Imagery</strong></td>
+<td>2クラス分類のベースライン精度と前処理ログ</td>
+<td>問題設定が単純で、前処理から評価までの最小ループを作りやすいためです。</td>
+</tr>
+<tr>
+<td><strong>CHB-MIT</strong></td>
+<td>発作イベント検出の再現ベースラインと除外理由ログ</td>
+<td>長時間データとイベント検出の難しさを、失敗例も含めて学びやすいためです。</td>
+</tr>
+<tr>
+<td><strong>Sleep-EDF</strong></td>
+<td>睡眠段階分類の基本ベースラインと状態遷移の混同行列</td>
+<td>単なる精度だけでなく、状態の移り変わりをどう間違えるかまで見やすいためです。</td>
+</tr>
+<tr>
+<td><strong>TUH EEG Corpus</strong></td>
+<td>小さなサブセットでの再現実験とデータ分割ルールの明示</td>
+<td>最初から全量を回すより、リーク対策と分割規則を先に固定する方が重要だからです。</td>
+</tr>
+</tbody>
+</table>
 </section>
 
 <section class="section" id="benchmark-mindset">
