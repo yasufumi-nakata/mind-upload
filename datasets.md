@@ -70,6 +70,12 @@ recommended_pages:
 最初のデータ選びで大事なのは、「すごく難しいデータ」よりも「手順と結果を他の人が追いやすいデータ」です。最初から全部を狙わず、まずは再現しやすい公開データで最小ループを作るのが近道です。
 </p>
 </div>
+<div class="note-box">
+<strong>実務系ページの中での位置づけを知りたいとき</strong>
+<p>
+このページは、何で始めるかを決める入口です。何を前進と呼ぶかは <a href="verification.html">検証基盤</a>、実際の最小ループ手順は <a href="hands_on.html">ハンズオン</a>、事例から設計原理を学ぶページは <a href="casework.html">ケースワーク</a> です。実務系ページだけの役割差を 1 枚で見たい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
+</p>
+</div>
 
 <table class="data-table">
 <thead>

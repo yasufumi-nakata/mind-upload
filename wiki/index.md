@@ -118,6 +118,11 @@ recommended_pages:
 <td><a href="../wbe_101.html">WBE入門</a> / <a href="../perspective.html">研究ノート</a> / <a href="../idea.html">理論フレーム</a> / <a href="../tech_roadmap.html">技術ロードマップ</a></td>
 </tr>
 <tr>
+<td><strong>実務系ページどうしの違いで迷う</strong></td>
+<td><a href="practical-pages-reading-guide.html">実務系ページの読み分けガイド</a></td>
+<td><a href="../verification.html">検証基盤</a> / <a href="../datasets.html">データ&ベンチ</a> / <a href="../hands_on.html">ハンズオン</a> / <a href="../casework.html">ケースワーク</a></td>
+</tr>
+<tr>
 <td><strong>Scopus、arXiv、Review、source_logged の違いで止まる</strong></td>
 <td><a href="paper-source-types-and-evidence-status.html">文献のソース種別と状態ラベルの読み方</a></td>
 <td><a href="../mind_uploading_papers.html">論文集</a> / <a href="../research_harvest_50.html">文献地図</a></td>

@@ -70,6 +70,12 @@ recommended_pages:
 </p>
 </div>
 <div class="note-box">
+<strong>実務系ページの中での位置づけを知りたいとき</strong>
+<p>
+このページは、提案群の状態と根拠を整理する本文です。勝利条件の設計は <a href="verification.html">検証基盤</a>、入口データは <a href="datasets.html">データ&ベンチ</a>、実作業の手順は <a href="hands_on.html">ハンズオン</a>、他分野から借りる型は <a href="casework.html">ケースワーク</a> が担当します。実務系ページだけの読み分けを 1 枚で見たい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
 <strong>Stream D の熱力学語で止まったとき</strong>
 <p>
 Landauer、散逸、NESS、EPR は、このページでは提案の論点として短く出てきます。まず入口だけ初歩から整理したい場合は <a href="wiki/thermodynamic-grounding-basics.html">Wiki: 熱力学的接地の基本</a> を先にご覧ください。

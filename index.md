@@ -83,6 +83,12 @@ Verification、Roadmap、Perspective、WBE 101、Datasets などは、似た説�
 WBE 101、Perspective、Framework、Roadmap の違いだけを理論系に絞って整理したい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>手を動かす側から入りたいとき</strong>
+<p>
+Verification、Datasets、Hands-on、Casework、Proposals の違いだけを実務系に絞って整理したい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
+</p>
+</div>
 
 <table class="data-table">
 <thead>

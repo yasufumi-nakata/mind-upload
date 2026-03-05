@@ -74,6 +74,12 @@ recommended_pages:
 規格、置き場、Validator、比較ルールの違いを先に分けておくと、このページの実例が読みやすくなります。必要なら <a href="wiki/standards-repositories-validators-and-benchmarks.html">Wiki: 規格・置き場・Validator・ベンチマーク</a> を先にご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>実務系ページの中での位置づけを知りたいとき</strong>
+<p>
+このページは、他分野の成功例から設計の型を借りるための参照集です。現在の勝利条件は <a href="verification.html">検証基盤</a>、入口データは <a href="datasets.html">データ&ベンチ</a>、実作業の最小ループは <a href="hands_on.html">ハンズオン</a>、提案整理は <a href="proposals.html">技術提案</a> が担当します。実務系ページだけの読み分けを 1 枚で見たい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
+</p>
+</div>
 
 <section class="section" id="tldr">
 <h2 class="section-title">TL;DR（人間向けの要点）</h2>

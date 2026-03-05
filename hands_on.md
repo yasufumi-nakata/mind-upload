@@ -74,6 +74,12 @@ recommended_pages:
 </p>
 </div>
 <div class="note-box">
+<strong>実務系ページの中での位置づけを知りたいとき</strong>
+<p>
+このページは、L0 の最小ループを実際に一周させる手順書です。合格条件の設計は <a href="verification.html">検証基盤</a>、入口データの選定は <a href="datasets.html">データ&ベンチ</a>、他分野から借りる型は <a href="casework.html">ケースワーク</a> が担当します。実務系ページだけの読み分けを 1 枚で見たい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
 <strong>手順ではなく提出物で確認したいとき</strong>
 <p>
 このページは作業順を追うためのものです。L0 の最後に何を一式として残せばよいかを 1 枚で見たい場合は <a href="wiki/l0-minimum-artifact-pack.html">Wiki: L0で最低限そろえる成果物パック</a> をご覧ください。

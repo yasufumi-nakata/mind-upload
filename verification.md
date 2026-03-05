@@ -150,6 +150,12 @@ recommended_pages:
 このページは全レベルの設計図なので、L0 実務へ行くのか、L3 閉ループへ行くのか、L4 本人性へ行くのかで次ページが変わります。レベルごとの導線を 1 枚で見たい場合は <a href="wiki/claim-level-reading-routes.html">Wiki: L0〜L5ごとの読み進め方</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>実務系ページの役割差で迷ったとき</strong>
+<p>
+Verification は勝利条件と反証条件の設計図です。入口データは <a href="datasets.html">データ&ベンチ</a>、L0 の最小ループは <a href="hands_on.html">ハンズオン</a>、参照事例は <a href="casework.html">ケースワーク</a>、提案整理は <a href="proposals.html">技術提案</a> が担当します。実務系だけの読み分けを 1 枚で見たい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
+</p>
+</div>
 
 <section class="section" id="tldr">
 <h2 class="section-title">TL;DR（人間向け）</h2>

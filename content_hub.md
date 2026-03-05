@@ -64,6 +64,12 @@ recommended_pages:
 WBE 101、Perspective、Idea、Roadmap の違いだけを理論系に絞って整理したい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a> をご覧ください。公開ページ全体の役割差はここで、理論系だけの詳しい読み分けは wiki 側で補います。
 </p>
 </div>
+<div class="note-box">
+<strong>実務系ページの読み順で迷ったとき</strong>
+<p>
+Verification、Datasets、Hands-on、Casework、Proposals の違いだけを実務系に絞って整理したい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。公開ページ全体の役割差はここで、実務系だけの詳しい読み分けは wiki 側で補います。
+</p>
+</div>
 
 <section class="section" id="quick-routing">
 <h2 class="section-title">追加したい内容から統合先を決める</h2>
