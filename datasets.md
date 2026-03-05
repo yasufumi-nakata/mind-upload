@@ -69,6 +69,13 @@ recommended_pages:
 </tbody>
 </table>
 
+<div class="note-box">
+<strong>最初のデータ選びで期待しすぎないために</strong>
+<p>
+スターターデータセットは、WBE の全課題を一気に解くためのものではありません。ここでまず得たいのは、<strong>再現可能な入力整理</strong>、<strong>QC の習慣</strong>、<strong>ベースライン比較</strong>です。本人性や因果同一性のような強い論点まで、この段階のデータだけで片付くわけではありません。
+</p>
+</div>
+
 <section class="section" id="platforms">
 <h2 class="section-title">1) まず押さえる共有基盤（置き場）</h2>
 <div class="stage-list">

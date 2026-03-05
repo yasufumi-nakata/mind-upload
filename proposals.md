@@ -83,6 +83,38 @@ recommended_pages:
 </tr>
 </tbody>
 </table>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>自分の立場</th>
+<th>先に見る場所</th>
+<th>そこで見たいこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>実装したい人</strong></td>
+<td>「統合本文（技術ストリーム別）」</td>
+<td>どのストリームが入力、前処理、因果検証、熱力学に対応するかを見ます。</td>
+</tr>
+<tr>
+<td><strong>レビューしたい人</strong></td>
+<td>「Issue対応マトリクス（統合版）」と「状態ラベルの意味」</td>
+<td>提案段階なのか、方針反映済みなのかを切り分けて確認します。</td>
+</tr>
+<tr>
+<td><strong>根拠の真偽を確かめたい人</strong></td>
+<td>「原本（全文）インデックス」</td>
+<td>要約を経由せず、元の proposal 節へ戻って文脈を確認します。</td>
+</tr>
+<tr>
+<td><strong>いま何が未実装か知りたい人</strong></td>
+<td><a href="issue.html">issue.html</a> と合わせて読む</td>
+<td>文書反映と、コード・実験・外部依存の差を見分けます。</td>
+</tr>
+</tbody>
+</table>
 </section>
 
 <section class="section" id="status-meaning">

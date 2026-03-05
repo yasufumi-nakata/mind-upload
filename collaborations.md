@@ -130,6 +130,41 @@ recommended_pages:
 </table>
 </section>
 
+<section class="section" id="before-contact">
+<h2 class="section-title">連携先へ声をかける前に内製しておきたいもの</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>準備物</th>
+<th>最低限の中身</th>
+<th>あると何が変わるか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1ページ要約</strong></td>
+<td>目的、相手にお願いしたいこと、こちらがすでに持っているもの。</td>
+<td>相手に「何の話か」が短時間で伝わりやすくなります。</td>
+</tr>
+<tr>
+<td><strong>最小成果物の定義</strong></td>
+<td>データ1件、ベンチ1本、仕様1本など、今回の最小スコープ。</td>
+<td>大きすぎる依頼を避け、最初の合意を作りやすくなります。</td>
+</tr>
+<tr>
+<td><strong>公開可能な下準備</strong></td>
+<td>BIDS 雛形、QC ログ例、比較表、仕様ドラフトなど。</td>
+<td>「まずこちらでできることは済ませている」と示せるため、協力依頼の解像度が上がります。</td>
+</tr>
+<tr>
+<td><strong>外部依存の切り分け</strong></td>
+<td>IRB、機材、契約、共同著者合意など、相手の判断が要る項目。</td>
+<td>今すぐ進む話と、合意待ちの話を混同しにくくなります。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
 <section class="section" id="top-10">
 <h2 class="section-title">優先協業パートナー Top 10</h2>
 <p>

@@ -112,6 +112,51 @@ recommended_pages:
 </div>
 </section>
 
+<section class="section" id="claim-level-evidence">
+<h2 class="section-title">主張レベルごとに最低限ほしい証拠</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>主張レベル</th>
+<th>最低限ほしいもの</th>
+<th>それだけではまだ足りないもの</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L0</strong> 再現可能な解析</td>
+<td>データ、コード、環境、実行ログが揃い、第三者が同じ結果を再現できること。</td>
+<td>これだけで本人性や意識について強い主張はできません。</td>
+</tr>
+<tr>
+<td><strong>L1</strong> デコーディング</td>
+<td>ベースライン比較、リーク検査、OOD でない条件下の再現精度。</td>
+<td>内部の因果構造や未学習条件での生成能力はまだ示せません。</td>
+</tr>
+<tr>
+<td><strong>L2</strong> 生成・介入予測</td>
+<td>未学習条件、反事実、条件変更に対する予測一致。</td>
+<td>閉ループ安定性や長期運用まで成立したとは言えません。</td>
+</tr>
+<tr>
+<td><strong>L3</strong> 閉ループ</td>
+<td>リアルタイム運用での安定性、遅延管理、安全停止条件。</td>
+<td>それでも本人性や権利問題は別に検証が必要です。</td>
+</tr>
+<tr>
+<td><strong>L4</strong> 本人性</td>
+<td>事前登録した連続性テスト、記憶・価値観・学習の分岐検証。</td>
+<td>社会制度や長期ガバナンスまで含めた成立は別段階です。</td>
+</tr>
+<tr>
+<td><strong>L5</strong> 社会実装</td>
+<td>権利、同意、停止基準、監査体制を含む運用設計。</td>
+<td>技術デモだけではこの段階には達しません。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
 <section class="section" id="non-goals">
 <h2 class="section-title">これは何ではないか（誤解防止）</h2>
 <div class="note-box">
