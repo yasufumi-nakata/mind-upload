@@ -89,6 +89,12 @@ WBE 101、Perspective、Framework、Roadmap の違いだけを理論系に絞っ
 Verification、Datasets、Hands-on、Casework、Proposals の違いだけを実務系に絞って整理したい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>最初の30分で何を見るかだけ決めたいとき</strong>
+<p>
+全体像、理論、実務、文献、参加のどこから入るかで、最初の 3〜4 ページを固定したい場合は <a href="wiki/first-30-minutes-by-goal.html">Wiki: 目的別の最初の30分ルート</a> をご覧ください。
+</p>
+</div>
 
 <table class="data-table">
 <thead>

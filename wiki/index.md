@@ -123,6 +123,11 @@ recommended_pages:
 <td><a href="../verification.html">検証基盤</a> / <a href="../datasets.html">データ&ベンチ</a> / <a href="../hands_on.html">ハンズオン</a> / <a href="../casework.html">ケースワーク</a></td>
 </tr>
 <tr>
+<td><strong>最初の30分で何を見ればよいか迷う</strong></td>
+<td><a href="first-30-minutes-by-goal.html">目的別の最初の30分ルート</a></td>
+<td><a href="../index.html">スタートページ</a> / <a href="../verification.html">検証基盤</a> / <a href="../hands_on.html">ハンズオン</a></td>
+</tr>
+<tr>
 <td><strong>Scopus、arXiv、Review、source_logged の違いで止まる</strong></td>
 <td><a href="paper-source-types-and-evidence-status.html">文献のソース種別と状態ラベルの読み方</a></td>
 <td><a href="../mind_uploading_papers.html">論文集</a> / <a href="../research_harvest_50.html">文献地図</a></td>

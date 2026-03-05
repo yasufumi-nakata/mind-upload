@@ -57,6 +57,12 @@ recommended_pages:
 設計図や入門の中でも <a href="theory-pages-reading-guide.html">理論系ページの読み分けガイド</a> で WBE 101 / Perspective / Idea / Roadmap の違いを、<a href="practical-pages-reading-guide.html">実務系ページの読み分けガイド</a> で Verification / Datasets / Hands-on / Casework / Proposals の違いをそれぞれ詳しく追えます。
 </p>
 </div>
+<div class="note-box">
+<strong>まず最初の30分の回り方だけ決めたいとき</strong>
+<p>
+全体像、理論、実務、文献、参加のどこから入るかで最初の 3〜4 ページだけ先に固定したい場合は <a href="first-30-minutes-by-goal.html">目的別の最初の30分ルート</a> をご覧ください。
+</p>
+</div>
 
 <section class="section" id="five-kinds">
 <h2 class="section-title">公開ページの役割差</h2>
