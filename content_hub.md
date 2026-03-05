@@ -104,6 +104,33 @@ recommended_pages:
 </p>
 </div>
 
+<table class="data-table">
+<thead>
+<tr>
+<th>こういう内容は入れない方がよい</th>
+<th>代わりにどうするか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>同じ説明を少し言い換えただけの重複ページ</td>
+<td>既存ページの該当節へ追記し、入口ページからの導線だけ整えます。</td>
+</tr>
+<tr>
+<td>根拠や位置づけが未確定の断片メモを、そのまま公開本文に置くこと</td>
+<td>`automation/` などの運用領域で下書きを管理し、統合先が決まってから公開ページへ移します。</td>
+</tr>
+<tr>
+<td>外部依存タスクを、今この場で完了できる変更のように見せる書き方</td>
+<td><a href="issue.html">issue.html</a> や <a href="collaborations.html">collaborations.html</a> で、外部依存として分離して記録します。</td>
+</tr>
+<tr>
+<td>単に面白いが、このサイトの未解決問題や検証基盤へ接続しない話題</td>
+<td>まず既存の U 番号や検証論点に結び付くかを確認し、結び付かないなら公開統合を急ぎません。</td>
+</tr>
+</tbody>
+</table>
+
 <section class="section" id="integration-map">
 <h2 class="section-title">統合マップ（公開ページ）</h2>
 <table class="data-table">

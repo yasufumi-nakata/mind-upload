@@ -137,6 +137,46 @@ Mind-Uploadは、マインドアップロードを検証可能な研究へ進め
 </table>
 </section>
 
+<section class="section" id="good-issue-minimum">
+<h2 class="section-title">価値が高い Issue に最低限ほしい項目</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>項目</th>
+<th>短くても入れてほしい内容</th>
+<th>なぜ重要か</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>どこで止まったか</strong></td>
+<td>対象ページ、節、段落、用語など、読む人が実際に止まった位置。</td>
+<td>抽象的な「分かりにくい」より、直す位置がすぐ特定できるためです。</td>
+</tr>
+<tr>
+<td><strong>何が不足しているか</strong></td>
+<td>定義不足、根拠不足、導線不足、状態ラベル不明などの種類。</td>
+<td>修正の種類が分かると、文章追加か構造修正かを切り分けやすいためです。</td>
+</tr>
+<tr>
+<td><strong>前進条件</strong></td>
+<td>何が足されれば「改善した」と言えるかを一文で書く。</td>
+<td>終わりが定まらない Issue を減らし、修正完了の判断をしやすくするためです。</td>
+</tr>
+<tr>
+<td><strong>反証条件</strong></td>
+<td>何が確認されたら、その主張や提案は採らないかを書く。</td>
+<td>このサイトでは、強い提案ほど「間違いと判定する条件」を先に持つことが重要だからです。</td>
+</tr>
+<tr>
+<td><strong>外部依存かどうか</strong></td>
+<td>この場で修正できるのか、IRB・実験・機材・合意が要るのかを分ける。</td>
+<td>今すぐ動ける変更と、別トラック管理すべき課題を混同しないためです。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
 <!-- Contribution Methods -->
 <section class="section">
 <h2 class="section-title">How to Contribute</h2>
