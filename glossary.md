@@ -41,6 +41,9 @@ wiki_links:
   - label: "Wiki: 不確実性・信頼区間・棄権"
     url: "/wiki/uncertainty-confidence-and-abstention.html"
     description: "点推定と区間の違い、不確実性伝播、低信頼時の棄権を整理します。"
+  - label: "Wiki: マルチモーダル統合の基本"
+    url: "/wiki/multimodal-integration-basics.html"
+    description: "EEG、MEG、fMRI、ECoG、MRI の役割差を初歩から整理します。"
 recommended_pages:
   - label: "WBE入門"
     url: "/wbe_101.html"
@@ -145,6 +148,13 @@ EEG、QC、BIDS、逆問題、ESI、DCM、SCM は、全部同じ種類の言葉�
 <strong>数字の幅や低信頼時の扱いで止まったとき</strong>
 <p>
 信用区間、信頼区間、不確実性の伝播、棄権は、全部「1つの数字だけで断言しない」ための仕組みです。ここを初歩から整理したい場合は <a href="wiki/uncertainty-confidence-and-abstention.html">Wiki: 不確実性・信頼区間・棄権</a> を先にご覧ください。
+</p>
+</div>
+
+<div class="note-box">
+<strong>計測装置の役割差で止まったとき</strong>
+<p>
+EEG、MEG、fMRI、ECoG、MRI は全部「脳を測るもの」ですが、得意不得意が違います。どれを何のために組み合わせるのかを初歩から整理したい場合は <a href="wiki/multimodal-integration-basics.html">Wiki: マルチモーダル統合の基本</a> を先にご覧ください。
 </p>
 </div>
 

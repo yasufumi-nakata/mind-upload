@@ -71,7 +71,7 @@ recommended_pages:
 <div class="note-box">
 <strong>背景説明がほしいとき</strong>
 <p>
-理論名の違いで止まった場合は <a href="wiki/consciousness-theory-map.html">Wiki: 意識理論マップ</a>、コピー問題や本人性の話で止まった場合は <a href="wiki/personhood-and-copy-problem.html">Wiki: 本人性とコピー問題</a>、EEG の限界が気になる場合は <a href="wiki/eeg-preprocessing-and-qc.html">Wiki: EEG前処理とQC</a>、計測語とモデル語のつながりで止まった場合は <a href="wiki/measurement-and-modeling-terms.html">Wiki: 計測からモデル化までの用語ガイド</a>、不確実性や棄権の設計で止まった場合は <a href="wiki/uncertainty-confidence-and-abstention.html">Wiki: 不確実性・信頼区間・棄権</a> を先に見ると、本文へ戻りやすくなります。
+理論名の違いで止まった場合は <a href="wiki/consciousness-theory-map.html">Wiki: 意識理論マップ</a>、コピー問題や本人性の話で止まった場合は <a href="wiki/personhood-and-copy-problem.html">Wiki: 本人性とコピー問題</a>、EEG の限界が気になる場合は <a href="wiki/eeg-preprocessing-and-qc.html">Wiki: EEG前処理とQC</a>、計測語とモデル語のつながりで止まった場合は <a href="wiki/measurement-and-modeling-terms.html">Wiki: 計測からモデル化までの用語ガイド</a>、不確実性や棄権の設計で止まった場合は <a href="wiki/uncertainty-confidence-and-abstention.html">Wiki: 不確実性・信頼区間・棄権</a>、マルチモーダル統合の意味で止まった場合は <a href="wiki/multimodal-integration-basics.html">Wiki: マルチモーダル統合の基本</a> を先に見ると、本文へ戻りやすくなります。
 </p>
 </div>
 

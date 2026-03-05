@@ -35,6 +35,9 @@ wiki_links:
   - label: "Wiki: イベント同期と観測ログ"
     url: "/wiki/event-sync-and-measurement-logs.html"
     description: "raw EEG だけでは足りない理由を、イベントと同期の観点から説明します。"
+  - label: "Wiki: マルチモーダル統合の基本"
+    url: "/wiki/multimodal-integration-basics.html"
+    description: "EEG に何を足すと何が補えるかを、初歩から整理します。"
 recommended_pages:
   - label: "EEG入門"
     url: "/eeg_101.html"
@@ -107,6 +110,13 @@ recommended_pages:
 <strong>raw EEG があるだけでは足りない</strong>
 <p>
 波形ファイルが公開されていても、<strong>イベント定義</strong>、<strong>刺激ログ</strong>、<strong>時刻同期</strong>、<strong>bad channel / bad segment の記録</strong>が弱いと、あとから比較し直しにくくなります。この点を初歩から整理したい場合は <a href="wiki/event-sync-and-measurement-logs.html">Wiki: イベント同期と観測ログの基本</a> を先にご覧ください。
+</p>
+</div>
+
+<div class="note-box">
+<strong>将来の拡張先も意識する</strong>
+<p>
+スターターデータは EEG 中心で十分ですが、将来的に空間情報や構造情報を補いたくなる場面があります。EEG に何を足すと何が補えるかを先に整理したい場合は <a href="wiki/multimodal-integration-basics.html">Wiki: マルチモーダル統合の基本</a> をご利用ください。
 </p>
 </div>
 

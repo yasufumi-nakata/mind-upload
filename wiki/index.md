@@ -162,6 +162,11 @@ recommended_pages:
 <td><a href="uncertainty-confidence-and-abstention.html">不確実性・信頼区間・棄権</a></td>
 <td><a href="../eeg_101.html">EEG入門</a> / <a href="../verification.html">検証基盤</a></td>
 </tr>
+<tr>
+<td><strong>EEG に何を足すと何が補えるか知りたい</strong></td>
+<td><a href="multimodal-integration-basics.html">マルチモーダル統合の基本</a></td>
+<td><a href="../eeg_101.html">EEG入門</a> / <a href="../perspective.html">研究ノート</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -303,6 +308,10 @@ recommended_pages:
 <td>点推定、区間、不確実性伝播、棄権</td>
 <td><a href="uncertainty-confidence-and-abstention.html">不確実性・信頼区間・棄権</a></td>
 </tr>
+<tr>
+<td>EEG、MEG、fMRI、ECoG、MRI の補完関係</td>
+<td><a href="multimodal-integration-basics.html">マルチモーダル統合の基本</a></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -332,6 +341,7 @@ recommended_pages:
 <li><a href="observation-to-estimation.html">観測から推定へ →</a></li>
 <li><a href="counterfactual-and-perturbation-verification.html">反事実・介入・摂動の検証 →</a></li>
 <li><a href="uncertainty-confidence-and-abstention.html">不確実性・信頼区間・棄権 →</a></li>
+<li><a href="multimodal-integration-basics.html">マルチモーダル統合の基本 →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
