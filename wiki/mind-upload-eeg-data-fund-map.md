@@ -5720,3 +5720,72 @@ recommended_pages:
 
 - 共同研究先タイプ別の保留解除後3通目返信テンプレは `MindUpload-EEGDATA-FundMap-collab-hold-release-third-contact.csv` を使う
 - 列は `counterpart_type`, `reply_focus`, `opening_line`, `share_asset`, `confirm_line`, `decision_gate`, `note_line`, `avoid_point`
+
+## 197. 25トピック別の再挑戦後最終共有ユニット
+
+### 197.1 使い方
+
+- `final_share_focus` は topic ごとに最終的に何を共有単位として残すかの観点として使う
+- `final_unit` は 外部に残す最小共有物として使う
+- `share_trigger` は その単位で共有してよい条件として使う
+- `hold_trigger` は まだ共有を待つ条件として使う
+- `do_not_share` は 共有しない方がよい条件として使う
+- `note_line` は README や handoff 向けの一文として使う
+
+### 197.2 再挑戦後最終共有ユニットで守ること
+
+- 最終共有ユニットは `全部盛り` ではなく `あとで誤読されにくい最小単位` にする
+- final unit は 1枚か1表か1ページに削る
+- hold がある間は 派生共有を足さない
+- 高い理論主張へ誤読されやすい topic は do_not_share を早めに選ぶ
+
+### 197.3 詳細版を引く場所
+
+- 25トピック別の再挑戦後最終共有ユニットは `MindUpload-EEGDATA-FundMap-topic-retry-final-share-unit.csv` を使う
+- 列は `phase`, `topic`, `final_share_focus`, `final_unit`, `share_trigger`, `hold_trigger`, `do_not_share`, `note_line`, `avoid_point`
+
+## 198. 制度タイプ別の最終報告後参照終了条件
+
+### 198.1 使い方
+
+- `reference_stop_focus` は 何をもって参照導線を閉じてよいかを見る観点として使う
+- `stop_trigger` は 参照終了へ進めてよい条件として使う
+- `keep_reference_trigger` は まだ参照を残す条件として使う
+- `do_not_stop` は 参照終了しない方がよい条件として使う
+- `last_reference` は 最後に残す最小参照物として使う
+- `note_line` は README や内部メモの一文として使う
+
+### 198.2 最終報告後参照終了条件で守ること
+
+- 参照終了は `古くなった気がする` ではなく `再利用が止まった` で切る
+- last reference は URL1本か図1枚まで削る
+- keep reference がある間は 何のために残すかを明記する
+- do_not_stop 条件がある時は 見かけだけ整えて閉じない
+
+### 198.3 詳細版を引く場所
+
+- 制度タイプ別の最終報告後参照終了条件は `MindUpload-EEGDATA-FundMap-publication-final-reference-stop.csv` を使う
+- 列は `support_type`, `reference_stop_focus`, `stop_trigger`, `keep_reference_trigger`, `do_not_stop`, `last_reference`, `note_line`, `avoid_point`
+
+## 199. 共同研究先タイプ別の保留解除後最終確認テンプレ
+
+### 199.1 使い方
+
+- `confirmation_focus` は 最終確認で何を確定するかの論点として使う
+- `opening_line` は 確認文の最初の一文として使う
+- `share_asset` は 最後に添える最小成果物として使う
+- `confirmation_line` は 相手に確認する最終事項として使う
+- `decision_gate` は この確認の後に継続 / hold / close を決める条件として使う
+- `note_line` は 送信前チェックや内部メモの一文として使う
+
+### 199.2 保留解除後最終確認テンプレで守ること
+
+- 最終確認は `関係維持の挨拶` ではなく `進退を切る確認` にする
+- share asset は 1枚か1点から増やさない
+- confirmation line は yes/no か短文で返せる形にする
+- decision gate が曖昧なら 最終確認を送らない
+
+### 199.3 詳細版を引く場所
+
+- 共同研究先タイプ別の保留解除後最終確認テンプレは `MindUpload-EEGDATA-FundMap-collab-hold-release-final-check.csv` を使う
+- 列は `counterpart_type`, `confirmation_focus`, `opening_line`, `share_asset`, `confirmation_line`, `decision_gate`, `note_line`, `avoid_point`
