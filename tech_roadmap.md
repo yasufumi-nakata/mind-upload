@@ -127,6 +127,12 @@ P/M/R/I/V/D の記号や依存関係を初歩から追いたい場合は、先�
 Roadmap では L0〜L5 の全部を扱うため、いま見たいレベルによって次に行く公開ページが変わります。主張レベルごとの導線を 1 枚で見たい場合は <a href="wiki/claim-level-reading-routes.html">Wiki: L0〜L5ごとの読み進め方</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>このページのあとに次の1ページを決めたいとき</strong>
+<p>
+Roadmap を読んだあとに、計測、再構成、実装、検証、社会実装のどこを次に深掘りするかを 1 枚で見たい場合は <a href="wiki/roadmap-next-routes.html">Wiki: ロードマップのあとに進む5つの道</a> をご覧ください。
+</p>
+</div>
 
 <div class="key-points">
 <h4>先に押さえる3点</h4>

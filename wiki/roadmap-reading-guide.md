@@ -51,6 +51,13 @@ recommended_pages:
 </p>
 </div>
 
+<div class="note-box">
+<strong>読み方の次に、次ページも決めたいとき</strong>
+<p>
+ロードマップの記号の意味だけでなく、読んだあとに計測、再構成、実装、検証、社会実装のどこへ進むかを 1 枚で見たい場合は <a href="roadmap-next-routes.html">ロードマップのあとに進む5つの道</a> をご覧ください。
+</p>
+</div>
+
 <section class="section" id="letters">
 <h2 class="section-title">P/M/R/I/V/D を日常語にする</h2>
 <table class="data-table">

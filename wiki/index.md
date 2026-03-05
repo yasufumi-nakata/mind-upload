@@ -143,6 +143,11 @@ recommended_pages:
 <td><a href="../verification.html">検証基盤</a> / <a href="../hands_on.html">ハンズオン</a> / <a href="../tech_roadmap.html">技術ロードマップ</a> / <a href="../wbe_101.html">WBE入門</a></td>
 </tr>
 <tr>
+<td><strong>ロードマップのあとにどこを深掘るか迷う</strong></td>
+<td><a href="roadmap-next-routes.html">ロードマップのあとに進む5つの道</a></td>
+<td><a href="../tech_roadmap.html">技術ロードマップ</a> / <a href="../eeg_101.html">EEG入門</a> / <a href="../verification.html">検証基盤</a> / <a href="../collaborations.html">協業候補</a></td>
+</tr>
+<tr>
 <td><strong>文献を読んだあとにどこへ戻すか迷う</strong></td>
 <td><a href="literature-to-action-route.html">文献から実装・参加へ戻る一本道</a></td>
 <td><a href="../research_harvest_50.html">文献地図</a> / <a href="../proposals.html">技術提案</a> / <a href="../issue.html">貢献ガイド</a> / <a href="../collaborations.html">協業候補</a></td>
