@@ -110,6 +110,36 @@ recommended_pages:
 </table>
 </section>
 
+<section class="section" id="status-meaning">
+<h2 class="section-title">状態ラベルの意味</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>ラベル</th>
+<th>日常語で言うと</th>
+<th>まだ残っている作業</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>source_logged</strong></td>
+<td>入口として URL や DOI を受け付けた状態です。</td>
+<td>関連性確認、一次研究追跡、U への割り当てがまだ残っています。</td>
+</tr>
+<tr>
+<td><strong>curated</strong></td>
+<td>このエビデンスバンクの論点に沿って整理済みの状態です。</td>
+<td>他の U との重複や、より強い根拠との入れ替え余地は残ります。</td>
+</tr>
+<tr>
+<td><strong>noise_excluded</strong></td>
+<td>関連性が薄い、または混入と判断して除外した状態です。</td>
+<td>除外理由を保持し、同じ種の混入を再発させないことが重要です。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
 <section class="section" id="recent-intake-2026-02">
 <h2 class="section-title">最新追加入力（Issue #261–#263）</h2>
 <p>
@@ -137,6 +167,42 @@ recommended_pages:
 ここでの <strong>ID</strong> は問題の名前札、<strong>現状</strong> はどこまで解けているか、<strong>引用数</strong> は関連証拠の量です。引用数が多いことは、そのまま結論が確定していることを意味しません。
 </p>
 </div>
+<table class="data-table">
+<thead>
+<tr>
+<th>自分の関心</th>
+<th>先に見る U</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EEG推定や逆問題の限界を知りたい</td>
+<td><strong>U1 / U7</strong></td>
+<td>観測からどこまで推定できるかと、マルチモーダル整合性の問題が集まるためです。</td>
+</tr>
+<tr>
+<td>意識指標や理論比較を知りたい</td>
+<td><strong>U11</strong></td>
+<td>IIT、PCI、理論間比較の妥当性がここに集まるためです。</td>
+</tr>
+<tr>
+<td>本人性や分岐問題を知りたい</td>
+<td><strong>U0 / U12</strong></td>
+<td>操作的同一性と分岐後の本人性という、強い主張側の論点がまとまるためです。</td>
+</tr>
+<tr>
+<td>模倣と本物の違いを知りたい</td>
+<td><strong>U4 / U13</strong></td>
+<td>因果同値と模倣分離の両方を見ないと、外見だけの一致と中身の一致を分けにくいためです。</td>
+</tr>
+<tr>
+<td>公開運用や追試可能性を知りたい</td>
+<td><strong>U14 / U15</strong></td>
+<td>第三者追試と制度統合の問題が、実務上の出口になるためです。</td>
+</tr>
+</tbody>
+</table>
 <table class="data-table">
 <thead><tr><th>大きな問題群</th><th>含まれるU</th><th>ざっくり何を見る群か</th></tr></thead><tbody>
 <tr><td><strong>定義と評価</strong></td><td>U0 / U11 / U13 / U14</td><td>何を「同じ」と呼ぶか、模倣と検証をどう分けるか、追試をどう成立させるか。</td></tr>

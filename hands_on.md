@@ -161,6 +161,46 @@ Validatorが通る＝研究として十分、ではありません。でも、�
 </div>
 </section>
 
+<section class="section" id="l0-done">
+<h2 class="section-title">ここまでできたら L0 完了とみなせる目安</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>確認項目</th>
+<th>最低ライン</th>
+<th>まだ不足なら次にやること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>入力の形</strong></td>
+<td>BIDS の骨格があり、最低限のメタデータが置かれていること。</td>
+<td>ディレクトリ構造と `dataset_description.json`、`channels.tsv` などの雛形を先に埋めます。</td>
+</tr>
+<tr>
+<td><strong>規格確認</strong></td>
+<td>BIDS Validator を通し、共有不能な規格違反が残っていないこと。</td>
+<td>Validator のエラーを一つずつ潰し、警告は理由つきで残します。</td>
+</tr>
+<tr>
+<td><strong>QCの証跡</strong></td>
+<td>欠損、ノイズ、アーティファクト、除外理由の数値ログが残っていること。</td>
+<td>人の記憶ではなく、再実行できるログ形式へ落とします。</td>
+</tr>
+<tr>
+<td><strong>ベースライン</strong></td>
+<td>単純でもよいので、1本の再現可能な指標が計算できること。</td>
+<td>複雑なモデルを増やす前に、単純な分類や要約指標を固定します。</td>
+</tr>
+<tr>
+<td><strong>再実行性</strong></td>
+<td>他の人に渡せる手順として、コマンド、前処理条件、失敗例が残っていること。</td>
+<td>README 相当の短い実行手順と、既知のつまずきどころを追記します。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
 <section class="section" id="tie-to-verification">
 <h2 class="section-title">このハンズオンがVerificationに繋がる点</h2>
 <p>

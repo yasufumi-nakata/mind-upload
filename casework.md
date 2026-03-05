@@ -72,6 +72,41 @@ recommended_pages:
 <table class="data-table">
 <thead>
 <tr>
+<th>名前</th>
+<th>一言で言うと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PDB</strong></td>
+<td>分子構造データの世界共通アーカイブです。</td>
+</tr>
+<tr>
+<td><strong>INSDC</strong></td>
+<td>塩基配列データを複数機関で同期する国際連携です。</td>
+</tr>
+<tr>
+<td><strong>BIDS + OpenNeuro</strong></td>
+<td>脳計測データの共通形式と、その公開先の組み合わせです。</td>
+</tr>
+<tr>
+<td><strong>ImageNet / MLPerf</strong></td>
+<td>同じ課題と同じ指標で前進を測る、代表的なベンチマーク運用です。</td>
+</tr>
+<tr>
+<td><strong>OSF / PROSPERO</strong></td>
+<td>研究前に計画を固定し、報告バイアスを減らす登録基盤です。</td>
+</tr>
+<tr>
+<td><strong>W3C / IETF / Unicode</strong></td>
+<td>別のシステム同士がつながるための相互運用標準です。</td>
+</tr>
+</tbody>
+</table>
+
+<table class="data-table">
+<thead>
+<tr>
 <th>知りたいこと</th>
 <th>先に読む節</th>
 <th>そこで分かること</th>

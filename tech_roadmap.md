@@ -48,6 +48,48 @@ recommended_pages:
 </ul>
 </div>
 
+<table class="data-table">
+<thead>
+<tr>
+<th>記号</th>
+<th>何のまとまりか</th>
+<th>こんなときに先に読む</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P</strong></td>
+<td>前進の定義です。何を成功と呼ぶかを決めます。</td>
+<td>いきなり技術論に入る前に、何を目標にしているかをそろえたいときです。</td>
+</tr>
+<tr>
+<td><strong>M</strong></td>
+<td>計測です。何をどの精度で観測できるかを扱います。</td>
+<td>EEG、fMRI、侵襲計測などの違いから入りたいときです。</td>
+</tr>
+<tr>
+<td><strong>R</strong></td>
+<td>再構成です。観測から何を推定できるかを扱います。</td>
+<td>逆問題、潜在状態、因果モデル、不確実性が気になるときです。</td>
+</tr>
+<tr>
+<td><strong>I</strong></td>
+<td>実装です。モデルをどう動かすか、どこで壊れるかを扱います。</td>
+<td>閉ループ、遅延、計算量、安全設計を見たいときです。</td>
+</tr>
+<tr>
+<td><strong>V</strong></td>
+<td>検証です。何を測れば前進か、何が出たら失敗かを扱います。</td>
+<td>ベンチマーク、因果テスト、本人性、追試可能性を確認したいときです。</td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td>社会実装です。権利、同意、公正、安全保障を扱います。</td>
+<td>技術だけでなく、運用や制度まで含めて読みたいときです。</td>
+</tr>
+</tbody>
+</table>
+
 <section class="section" id="howto">
 <h2 class="section-title">How to Use</h2>
 <p>このページは“本”ではなく、研究全体像の<strong>地図</strong>です。まず「問いの木」を通読し、次に「学習の順序」に沿って各ノードを深掘りしてください。重要な運用ルールは2つだけです：<strong>(1) 出典リンクを残す</strong>、<strong>(2) 暫定（不確実性）を明示する</strong>。</p>
