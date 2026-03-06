@@ -17,6 +17,9 @@ if [[ "${GITHUB_WIKI_LOCK_HELD:-0}" != "1" ]]; then
   if [[ "${VERIFY_GITHUB_WIKI_LOCK_SELFTEST:-0}" == "1" ]]; then
     run_step "lock-selftest" scripts/selftest_github_wiki_lock.sh
   fi
+  if [[ "${VERIFY_GITHUB_WIKI_EXPORTER_SELFTEST:-0}" == "1" ]]; then
+    run_step "exporter-selftest" scripts/selftest_github_wiki_exporter.sh
+  fi
   if [[ "${VERIFY_GITHUB_WIKI_EXPORT_SELFTEST:-0}" == "1" ]]; then
     run_step "export-selftest" scripts/selftest_github_wiki_export.sh
   fi

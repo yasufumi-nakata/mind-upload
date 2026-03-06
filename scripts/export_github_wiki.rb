@@ -6,8 +6,8 @@ require "find"
 require "yaml"
 
 ROOT = File.expand_path("..", __dir__)
-SRC_DIR = File.join(ROOT, "wiki")
-DEST_DIR = File.join(ROOT, "github-wiki-export")
+SRC_DIR = File.expand_path(ENV.fetch("GITHUB_WIKI_EXPORT_SRC_DIR", File.join(ROOT, "wiki")))
+DEST_DIR = File.expand_path(ENV.fetch("GITHUB_WIKI_EXPORT_DEST_DIR", File.join(ROOT, "github-wiki-export")))
 PUBLIC_SITE = "https://mind-upload.com"
 GITHUB_WIKI = "https://github.com/yasufumi-nakata/mind-upload/wiki"
 IGNORED_NOISE_FILES = [".DS_Store"].freeze
@@ -231,8 +231,11 @@ def build_sidebar(front_matters)
   rendered = []
 
   SIDEBAR_GROUPS.each do |heading, slugs|
+    available_slugs = slugs.select { |slug| front_matters.key?(slug) }
+    next if available_slugs.empty?
+
     lines << "## #{heading}"
-    slugs.each do |slug|
+    available_slugs.each do |slug|
       title = front_matters.fetch(slug, {})["title"] || slug
       url = slug == "Home" ? GITHUB_WIKI : github_wiki_url(slug)
       lines << "- [#{title}](#{url})"

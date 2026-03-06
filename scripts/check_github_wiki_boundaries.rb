@@ -8,6 +8,7 @@ SYNC_SCRIPT = File.join(ROOT, "scripts", "sync_github_wiki_toolchain.sh")
 OPS_REFERENCE_SCRIPT = File.join(ROOT, "scripts", "check_github_wiki_ops_references.rb")
 LOCK_SCRIPT = File.join(ROOT, "scripts", "with_github_wiki_lock.sh")
 LOCK_SELFTEST_SCRIPT = File.join(ROOT, "scripts", "selftest_github_wiki_lock.sh")
+EXPORTER_SELFTEST_SCRIPT = File.join(ROOT, "scripts", "selftest_github_wiki_exporter.sh")
 EXPORT_SELFTEST_SCRIPT = File.join(ROOT, "scripts", "selftest_github_wiki_export.sh")
 PUBLISH_SELFTEST_SCRIPT = File.join(ROOT, "scripts", "selftest_github_wiki_publish.sh")
 VERIFY_WORKFLOW = File.join(ROOT, ".github", "workflows", "validate-github-wiki-export.yml")
@@ -21,6 +22,7 @@ README = File.join(ROOT, "README.md")
   OPS_REFERENCE_SCRIPT,
   LOCK_SCRIPT,
   LOCK_SELFTEST_SCRIPT,
+  EXPORTER_SELFTEST_SCRIPT,
   EXPORT_SELFTEST_SCRIPT,
   PUBLISH_SELFTEST_SCRIPT,
   VERIFY_WORKFLOW,
@@ -71,6 +73,8 @@ verify_script_text = File.read(VERIFY_SCRIPT)
 required_verify_script_snippets = [
   'if [[ "${VERIFY_GITHUB_WIKI_LOCK_SELFTEST:-0}" == "1" ]]; then',
   'run_step "lock-selftest" scripts/selftest_github_wiki_lock.sh',
+  'if [[ "${VERIFY_GITHUB_WIKI_EXPORTER_SELFTEST:-0}" == "1" ]]; then',
+  'run_step "exporter-selftest" scripts/selftest_github_wiki_exporter.sh',
   'if [[ "${VERIFY_GITHUB_WIKI_EXPORT_SELFTEST:-0}" == "1" ]]; then',
   'run_step "export-selftest" scripts/selftest_github_wiki_export.sh',
   'if [[ "${VERIFY_GITHUB_WIKI_PUBLISH_SELFTEST:-0}" == "1" ]]; then',
@@ -82,6 +86,7 @@ required_verify_script_snippets = [
   'run_step "syntax-export" ruby -c scripts/export_github_wiki.rb',
   'run_step "syntax-export-validate" ruby -c scripts/check_github_wiki_export.rb',
   'run_step "syntax-lock-selftest" bash -n scripts/selftest_github_wiki_lock.sh',
+  'run_step "syntax-exporter-selftest" bash -n scripts/selftest_github_wiki_exporter.sh',
   'run_step "syntax-export-selftest" bash -n scripts/selftest_github_wiki_export.sh',
   'run_step "syntax-publish-selftest" bash -n scripts/selftest_github_wiki_publish.sh',
   'run_step "syntax-publish" bash -n scripts/publish_github_wiki.sh',
@@ -101,6 +106,8 @@ sync_script_text = File.read(SYNC_SCRIPT)
 required_sync_script_snippets = [
   'if [[ "${VERIFY_GITHUB_WIKI_LOCK_SELFTEST:-0}" == "1" ]]; then',
   'run_step "lock-selftest" scripts/selftest_github_wiki_lock.sh',
+  'if [[ "${VERIFY_GITHUB_WIKI_EXPORTER_SELFTEST:-0}" == "1" ]]; then',
+  'run_step "exporter-selftest" scripts/selftest_github_wiki_exporter.sh',
   'if [[ "${VERIFY_GITHUB_WIKI_EXPORT_SELFTEST:-0}" == "1" ]]; then',
   'run_step "export-selftest" scripts/selftest_github_wiki_export.sh',
   'if [[ "${VERIFY_GITHUB_WIKI_PUBLISH_SELFTEST:-0}" == "1" ]]; then',
@@ -119,6 +126,7 @@ required_verify_workflow_snippets = [
   'run: scripts/verify_github_wiki_toolchain.sh',
   'VERIFY_GITHUB_WIKI_BUILD: "1"',
   'VERIFY_GITHUB_WIKI_LOCK_SELFTEST: "1"',
+  'VERIFY_GITHUB_WIKI_EXPORTER_SELFTEST: "1"',
   'VERIFY_GITHUB_WIKI_EXPORT_SELFTEST: "1"',
   'VERIFY_GITHUB_WIKI_PUBLISH_SELFTEST: "1"'
 ]
@@ -135,6 +143,7 @@ required_verify_workflow_paths = [
   '"scripts/clean_github_wiki_noise.rb"',
   '"scripts/with_github_wiki_lock.sh"',
   '"scripts/selftest_github_wiki_lock.sh"',
+  '"scripts/selftest_github_wiki_exporter.sh"',
   '"scripts/selftest_github_wiki_export.sh"',
   '"scripts/selftest_github_wiki_publish.sh"',
   '"scripts/verify_github_wiki_toolchain.sh"',
@@ -151,6 +160,7 @@ required_sync_workflow_snippets = [
   'run: |',
   'scripts/sync_github_wiki_toolchain.sh',
   'VERIFY_GITHUB_WIKI_LOCK_SELFTEST: "1"',
+  'VERIFY_GITHUB_WIKI_EXPORTER_SELFTEST: "1"',
   'VERIFY_GITHUB_WIKI_EXPORT_SELFTEST: "1"',
   'VERIFY_GITHUB_WIKI_PUBLISH_SELFTEST: "1"'
 ]
@@ -167,6 +177,7 @@ required_sync_workflow_paths = [
   '"scripts/clean_github_wiki_noise.rb"',
   '"scripts/with_github_wiki_lock.sh"',
   '"scripts/selftest_github_wiki_lock.sh"',
+  '"scripts/selftest_github_wiki_exporter.sh"',
   '"scripts/selftest_github_wiki_export.sh"',
   '"scripts/selftest_github_wiki_publish.sh"',
   '"scripts/verify_github_wiki_toolchain.sh"',
@@ -186,10 +197,12 @@ required_readme_snippets = [
   '`scripts/check_github_wiki_ops_references.rb`',
   '`scripts/with_github_wiki_lock.sh`',
   '`scripts/selftest_github_wiki_lock.sh`',
+  '`scripts/selftest_github_wiki_exporter.sh`',
   '`scripts/selftest_github_wiki_export.sh`',
   '`scripts/selftest_github_wiki_publish.sh`',
   '`GITHUB_WIKI_LOCK_WAIT_SECONDS`',
   '`VERIFY_GITHUB_WIKI_LOCK_SELFTEST=1`',
+  '`VERIFY_GITHUB_WIKI_EXPORTER_SELFTEST=1`',
   '`VERIFY_GITHUB_WIKI_EXPORT_SELFTEST=1`',
   '`VERIFY_GITHUB_WIKI_PUBLISH_SELFTEST=1`',
   '`ignore/github-wiki-publish/`',
@@ -229,6 +242,22 @@ required_export_selftest_snippets = [
 
 required_export_selftest_snippets.each do |snippet|
   errors << "Missing export selftest guard snippet: #{snippet}" unless selftest_export_text.include?(snippet)
+end
+
+exporter_selftest_text = File.read(EXPORTER_SELFTEST_SCRIPT)
+required_exporter_selftest_snippets = [
+  'EXPORTER="$ROOT/scripts/export_github_wiki.rb"',
+  'TEST_ROOT="$ROOT/ignore/github-wiki-exporter-selftest-$PPID-$$"',
+  'GITHUB_WIKI_EXPORT_SRC_DIR="$SRC_DIR"',
+  'GITHUB_WIKI_EXPORT_DEST_DIR="$DEST_DIR"',
+  'assert_contains "$DEST_DIR/Home.md" "[Guide](${GITHUB_WIKI}/guide)"',
+  'assert_contains "$DEST_DIR/_Sidebar.md" "## その他"',
+  'assert_not_contains "$DEST_DIR/_Sidebar.md" "mind-upload-basics"',
+  '[[ ! -e "$DEST_DIR/generated/demo/.DS_Store" ]] || fail "Noise file copied into export: .DS_Store"'
+]
+
+required_exporter_selftest_snippets.each do |snippet|
+  errors << "Missing exporter selftest guard snippet: #{snippet}" unless exporter_selftest_text.include?(snippet)
 end
 
 selftest_text = File.read(LOCK_SELFTEST_SCRIPT)
@@ -282,6 +311,19 @@ required_publish_selftest_snippets = [
 
 required_publish_selftest_snippets.each do |snippet|
   errors << "Missing publish selftest guard snippet: #{snippet}" unless publish_selftest_text.include?(snippet)
+end
+
+export_script_text = File.read(File.join(ROOT, "scripts", "export_github_wiki.rb"))
+required_export_script_snippets = [
+  'SRC_DIR = File.expand_path(ENV.fetch("GITHUB_WIKI_EXPORT_SRC_DIR", File.join(ROOT, "wiki")))',
+  'DEST_DIR = File.expand_path(ENV.fetch("GITHUB_WIKI_EXPORT_DEST_DIR", File.join(ROOT, "github-wiki-export")))',
+  'available_slugs = slugs.select { |slug| front_matters.key?(slug) }',
+  'next if available_slugs.empty?',
+  'lines << "## その他"'
+]
+
+required_export_script_snippets.each do |snippet|
+  errors << "Missing export script guard snippet: #{snippet}" unless export_script_text.include?(snippet)
 end
 
 export_validation_text = File.read(File.join(ROOT, "scripts", "check_github_wiki_export.rb"))
