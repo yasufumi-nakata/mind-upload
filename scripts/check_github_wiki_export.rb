@@ -5,13 +5,17 @@ require "pathname"
 require "find"
 
 ROOT = File.expand_path("..", __dir__)
-SRC_DIR = File.join(ROOT, "wiki")
-DEST_DIR = File.join(ROOT, "github-wiki-export")
+SRC_DIR = File.expand_path(ENV.fetch("GITHUB_WIKI_EXPORT_SRC_DIR", File.join(ROOT, "wiki")))
+DEST_DIR = File.expand_path(ENV.fetch("GITHUB_WIKI_EXPORT_DEST_DIR", File.join(ROOT, "github-wiki-export")))
 GITHUB_WIKI = "https://github.com/yasufumi-nakata/mind-upload/wiki"
 IGNORED_NOISE_FILES = [".DS_Store"].freeze
 IGNORED_NOISE_PREFIXES = ["._"].freeze
+SKIP_GIT_DRIFT = ENV["GITHUB_WIKI_EXPORT_SKIP_GIT_DRIFT"] == "1"
 
 def changed_export_paths
+  return [] if SKIP_GIT_DRIFT
+  return [] unless system("git", "-C", ROOT, "rev-parse", "--is-inside-work-tree", out: File::NULL, err: File::NULL)
+
   changed = `git -C "#{ROOT}" diff --name-status -- "#{DEST_DIR}"`.lines.map(&:strip).reject(&:empty?)
   untracked = `git -C "#{ROOT}" ls-files --others --exclude-standard -- "#{DEST_DIR}"`.lines.map(&:strip).reject(&:empty?).map { |path| "?? #{path}" }
   (changed + untracked).uniq.sort
