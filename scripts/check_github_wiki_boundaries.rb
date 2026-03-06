@@ -305,10 +305,16 @@ required_export_selftest_snippets = [
   'run_expect_failure "sidebar-missing" "Sidebar missing link for page.md"',
   'run_expect_failure "missing-generated-asset" "Missing generated asset in export: generated/demo/demo.csv"',
   'DRIFT_ROOT="$TEST_ROOT/drift-repo"',
+  'NO_GIT_ROOT="$TEST_ROOT/no-git-root"',
   'git -C "$DRIFT_ROOT" init --initial-branch=main >/dev/null',
+  'log "staged-drift-ignored"',
+  'git -C "$DRIFT_ROOT" add github-wiki-export/Home.md',
+  'git -C "$DRIFT_ROOT" add github-wiki-export/staged-only.txt',
   'run_expect_drift_failure',
   'Uncommitted export drift: M github-wiki-export/Home.md',
-  'Uncommitted export drift: ?? github-wiki-export/drift-untracked.txt'
+  'Uncommitted export drift: ?? github-wiki-export/drift-untracked.txt',
+  'log "non-git-root-skips-drift"',
+  'run_no_git_validator >/dev/null'
 ]
 
 required_export_selftest_snippets.each do |snippet|

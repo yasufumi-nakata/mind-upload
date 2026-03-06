@@ -10,6 +10,10 @@ DRIFT_ROOT="$TEST_ROOT/drift-repo"
 DRIFT_SRC_DIR="$DRIFT_ROOT/wiki"
 DRIFT_DEST_DIR="$DRIFT_ROOT/github-wiki-export"
 DRIFT_VALIDATOR="$DRIFT_ROOT/scripts/check_github_wiki_export.rb"
+NO_GIT_ROOT="$TEST_ROOT/no-git-root"
+NO_GIT_SRC_DIR="$NO_GIT_ROOT/wiki"
+NO_GIT_DEST_DIR="$NO_GIT_ROOT/github-wiki-export"
+NO_GIT_VALIDATOR="$NO_GIT_ROOT/scripts/check_github_wiki_export.rb"
 GITHUB_WIKI="https://github.com/yasufumi-nakata/mind-upload/wiki"
 
 log() {
@@ -39,6 +43,13 @@ run_drift_validator() {
     GITHUB_WIKI_EXPORT_SRC_DIR="$DRIFT_SRC_DIR" \
     GITHUB_WIKI_EXPORT_DEST_DIR="$DRIFT_DEST_DIR" \
     "$DRIFT_VALIDATOR"
+}
+
+run_no_git_validator() {
+  env \
+    GITHUB_WIKI_EXPORT_SRC_DIR="$NO_GIT_SRC_DIR" \
+    GITHUB_WIKI_EXPORT_DEST_DIR="$NO_GIT_DEST_DIR" \
+    "$NO_GIT_VALIDATOR"
 }
 
 run_expect_failure() {
@@ -142,6 +153,15 @@ reset_drift_fixture() {
   git -C "$DRIFT_ROOT" commit -m "baseline" >/dev/null
 }
 
+reset_no_git_fixture() {
+  rm -rf "$NO_GIT_ROOT"
+  mkdir -p "$NO_GIT_ROOT/scripts"
+  cp "$VALIDATOR" "$NO_GIT_VALIDATOR"
+  chmod +x "$NO_GIT_VALIDATOR"
+  write_source_fixture "$NO_GIT_SRC_DIR"
+  write_export_fixture "$NO_GIT_DEST_DIR"
+}
+
 mkdir -p "$TEST_ROOT"
 
 log "baseline-pass"
@@ -180,6 +200,14 @@ log "baseline-drift-pass"
 reset_drift_fixture
 run_drift_validator >/dev/null
 
+log "staged-drift-ignored"
+reset_drift_fixture
+printf '\nstaged\n' >> "$DRIFT_DEST_DIR/Home.md"
+git -C "$DRIFT_ROOT" add github-wiki-export/Home.md
+printf 'staged\n' > "$DRIFT_DEST_DIR/staged-only.txt"
+git -C "$DRIFT_ROOT" add github-wiki-export/staged-only.txt
+run_drift_validator >/dev/null
+
 reset_drift_fixture
 printf '\nchanged\n' >> "$DRIFT_DEST_DIR/Home.md"
 printf 'draft\n' > "$DRIFT_DEST_DIR/drift-untracked.txt"
@@ -194,5 +222,11 @@ env \
   GITHUB_WIKI_EXPORT_DEST_DIR="$DRIFT_DEST_DIR" \
   GITHUB_WIKI_EXPORT_SKIP_GIT_DRIFT=1 \
   "$DRIFT_VALIDATOR" >/dev/null
+
+log "non-git-root-skips-drift"
+reset_no_git_fixture
+printf '\nchanged\n' >> "$NO_GIT_DEST_DIR/Home.md"
+printf 'draft\n' > "$NO_GIT_DEST_DIR/no-git-untracked.txt"
+run_no_git_validator >/dev/null
 
 log "ok"
