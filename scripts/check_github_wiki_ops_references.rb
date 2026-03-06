@@ -13,6 +13,7 @@ DEFAULT_OPS_FILES = [
   "scripts/sync_github_wiki_toolchain.sh",
   "scripts/with_github_wiki_lock.sh",
   "scripts/selftest_github_wiki_lock.sh",
+  "scripts/selftest_github_wiki_noise.sh",
   "scripts/selftest_github_wiki_ops_references.sh",
   "scripts/selftest_github_wiki_exporter.sh",
   "scripts/selftest_github_wiki_export.sh",

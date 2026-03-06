@@ -5,8 +5,9 @@ require "find"
 require "pathname"
 require "fileutils"
 
-ROOT = File.expand_path("..", __dir__)
-TARGET_DIRS = [
+SCRIPT_ROOT = File.expand_path("..", __dir__)
+ROOT = File.expand_path(ENV.fetch("GITHUB_WIKI_NOISE_ROOT", SCRIPT_ROOT))
+DEFAULT_TARGET_DIRS = [
   File.join(ROOT, "wiki"),
   File.join(ROOT, "github-wiki-export")
 ].freeze
@@ -19,7 +20,14 @@ end
 
 removed = []
 
-TARGET_DIRS.each do |root|
+target_dirs =
+  if ENV["GITHUB_WIKI_NOISE_TARGET_DIRS"]
+    ENV.fetch("GITHUB_WIKI_NOISE_TARGET_DIRS").split(File::PATH_SEPARATOR).reject(&:empty?).map { |path| File.expand_path(path, ROOT) }
+  else
+    DEFAULT_TARGET_DIRS
+  end
+
+target_dirs.each do |root|
   next unless Dir.exist?(root)
 
   Find.find(root) do |path|

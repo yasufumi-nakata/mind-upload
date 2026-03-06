@@ -8,6 +8,7 @@ SYNC_SCRIPT = File.join(ROOT, "scripts", "sync_github_wiki_toolchain.sh")
 OPS_REFERENCE_SCRIPT = File.join(ROOT, "scripts", "check_github_wiki_ops_references.rb")
 LOCK_SCRIPT = File.join(ROOT, "scripts", "with_github_wiki_lock.sh")
 LOCK_SELFTEST_SCRIPT = File.join(ROOT, "scripts", "selftest_github_wiki_lock.sh")
+NOISE_SELFTEST_SCRIPT = File.join(ROOT, "scripts", "selftest_github_wiki_noise.sh")
 OPS_SELFTEST_SCRIPT = File.join(ROOT, "scripts", "selftest_github_wiki_ops_references.sh")
 EXPORTER_SELFTEST_SCRIPT = File.join(ROOT, "scripts", "selftest_github_wiki_exporter.sh")
 EXPORT_SELFTEST_SCRIPT = File.join(ROOT, "scripts", "selftest_github_wiki_export.sh")
@@ -23,6 +24,7 @@ README = File.join(ROOT, "README.md")
   OPS_REFERENCE_SCRIPT,
   LOCK_SCRIPT,
   LOCK_SELFTEST_SCRIPT,
+  NOISE_SELFTEST_SCRIPT,
   OPS_SELFTEST_SCRIPT,
   EXPORTER_SELFTEST_SCRIPT,
   EXPORT_SELFTEST_SCRIPT,
@@ -75,6 +77,8 @@ verify_script_text = File.read(VERIFY_SCRIPT)
 required_verify_script_snippets = [
   'if [[ "${VERIFY_GITHUB_WIKI_LOCK_SELFTEST:-0}" == "1" ]]; then',
   'run_step "lock-selftest" scripts/selftest_github_wiki_lock.sh',
+  'if [[ "${VERIFY_GITHUB_WIKI_NOISE_SELFTEST:-0}" == "1" ]]; then',
+  'run_step "noise-selftest" scripts/selftest_github_wiki_noise.sh',
   'if [[ "${VERIFY_GITHUB_WIKI_OPS_SELFTEST:-0}" == "1" ]]; then',
   'run_step "ops-selftest" scripts/selftest_github_wiki_ops_references.sh',
   'if [[ "${VERIFY_GITHUB_WIKI_EXPORTER_SELFTEST:-0}" == "1" ]]; then',
@@ -90,6 +94,7 @@ required_verify_script_snippets = [
   'run_step "syntax-export" ruby -c scripts/export_github_wiki.rb',
   'run_step "syntax-export-validate" ruby -c scripts/check_github_wiki_export.rb',
   'run_step "syntax-lock-selftest" bash -n scripts/selftest_github_wiki_lock.sh',
+  'run_step "syntax-noise-selftest" bash -n scripts/selftest_github_wiki_noise.sh',
   'run_step "syntax-ops-selftest" bash -n scripts/selftest_github_wiki_ops_references.sh',
   'run_step "syntax-exporter-selftest" bash -n scripts/selftest_github_wiki_exporter.sh',
   'run_step "syntax-export-selftest" bash -n scripts/selftest_github_wiki_export.sh',
@@ -111,6 +116,8 @@ sync_script_text = File.read(SYNC_SCRIPT)
 required_sync_script_snippets = [
   'if [[ "${VERIFY_GITHUB_WIKI_LOCK_SELFTEST:-0}" == "1" ]]; then',
   'run_step "lock-selftest" scripts/selftest_github_wiki_lock.sh',
+  'if [[ "${VERIFY_GITHUB_WIKI_NOISE_SELFTEST:-0}" == "1" ]]; then',
+  'run_step "noise-selftest" scripts/selftest_github_wiki_noise.sh',
   'if [[ "${VERIFY_GITHUB_WIKI_OPS_SELFTEST:-0}" == "1" ]]; then',
   'run_step "ops-selftest" scripts/selftest_github_wiki_ops_references.sh',
   'if [[ "${VERIFY_GITHUB_WIKI_EXPORTER_SELFTEST:-0}" == "1" ]]; then',
@@ -133,6 +140,7 @@ required_verify_workflow_snippets = [
   'run: scripts/verify_github_wiki_toolchain.sh',
   'VERIFY_GITHUB_WIKI_BUILD: "1"',
   'VERIFY_GITHUB_WIKI_LOCK_SELFTEST: "1"',
+  'VERIFY_GITHUB_WIKI_NOISE_SELFTEST: "1"',
   'VERIFY_GITHUB_WIKI_OPS_SELFTEST: "1"',
   'VERIFY_GITHUB_WIKI_EXPORTER_SELFTEST: "1"',
   'VERIFY_GITHUB_WIKI_EXPORT_SELFTEST: "1"',
@@ -151,6 +159,7 @@ required_verify_workflow_paths = [
   '"scripts/clean_github_wiki_noise.rb"',
   '"scripts/with_github_wiki_lock.sh"',
   '"scripts/selftest_github_wiki_lock.sh"',
+  '"scripts/selftest_github_wiki_noise.sh"',
   '"scripts/selftest_github_wiki_ops_references.sh"',
   '"scripts/selftest_github_wiki_exporter.sh"',
   '"scripts/selftest_github_wiki_export.sh"',
@@ -169,6 +178,7 @@ required_sync_workflow_snippets = [
   'run: |',
   'scripts/sync_github_wiki_toolchain.sh',
   'VERIFY_GITHUB_WIKI_LOCK_SELFTEST: "1"',
+  'VERIFY_GITHUB_WIKI_NOISE_SELFTEST: "1"',
   'VERIFY_GITHUB_WIKI_OPS_SELFTEST: "1"',
   'VERIFY_GITHUB_WIKI_EXPORTER_SELFTEST: "1"',
   'VERIFY_GITHUB_WIKI_EXPORT_SELFTEST: "1"',
@@ -187,6 +197,7 @@ required_sync_workflow_paths = [
   '"scripts/clean_github_wiki_noise.rb"',
   '"scripts/with_github_wiki_lock.sh"',
   '"scripts/selftest_github_wiki_lock.sh"',
+  '"scripts/selftest_github_wiki_noise.sh"',
   '"scripts/selftest_github_wiki_ops_references.sh"',
   '"scripts/selftest_github_wiki_exporter.sh"',
   '"scripts/selftest_github_wiki_export.sh"',
@@ -208,12 +219,14 @@ required_readme_snippets = [
   '`scripts/check_github_wiki_ops_references.rb`',
   '`scripts/with_github_wiki_lock.sh`',
   '`scripts/selftest_github_wiki_lock.sh`',
+  '`scripts/selftest_github_wiki_noise.sh`',
   '`scripts/selftest_github_wiki_ops_references.sh`',
   '`scripts/selftest_github_wiki_exporter.sh`',
   '`scripts/selftest_github_wiki_export.sh`',
   '`scripts/selftest_github_wiki_publish.sh`',
   '`GITHUB_WIKI_LOCK_WAIT_SECONDS`',
   '`VERIFY_GITHUB_WIKI_LOCK_SELFTEST=1`',
+  '`VERIFY_GITHUB_WIKI_NOISE_SELFTEST=1`',
   '`VERIFY_GITHUB_WIKI_OPS_SELFTEST=1`',
   '`VERIFY_GITHUB_WIKI_EXPORTER_SELFTEST=1`',
   '`VERIFY_GITHUB_WIKI_EXPORT_SELFTEST=1`',
@@ -255,6 +268,20 @@ required_export_selftest_snippets = [
 
 required_export_selftest_snippets.each do |snippet|
   errors << "Missing export selftest guard snippet: #{snippet}" unless selftest_export_text.include?(snippet)
+end
+
+noise_selftest_text = File.read(NOISE_SELFTEST_SCRIPT)
+required_noise_selftest_snippets = [
+  'CLEANER="$ROOT/scripts/clean_github_wiki_noise.rb"',
+  'TEST_ROOT="$ROOT/ignore/github-wiki-noise-selftest-$PPID-$$"',
+  'GITHUB_WIKI_NOISE_ROOT="$TEST_ROOT"',
+  'GITHUB_WIKI_NOISE_TARGET_DIRS="$TARGETS"',
+  'assert_contains_text "$output" "- wiki/.DS_Store"',
+  'assert_contains_text "$output" "No GitHub Wiki noise files found."'
+]
+
+required_noise_selftest_snippets.each do |snippet|
+  errors << "Missing noise selftest guard snippet: #{snippet}" unless noise_selftest_text.include?(snippet)
 end
 
 ops_selftest_text = File.read(OPS_SELFTEST_SCRIPT)
@@ -378,6 +405,19 @@ required_ops_reference_snippets = [
 
 required_ops_reference_snippets.each do |snippet|
   errors << "Missing ops reference guard snippet: #{snippet}" unless ops_reference_text.include?(snippet)
+end
+
+noise_cleanup_text = File.read(File.join(ROOT, "scripts", "clean_github_wiki_noise.rb"))
+required_noise_cleanup_snippets = [
+  'SCRIPT_ROOT = File.expand_path("..", __dir__)',
+  'ROOT = File.expand_path(ENV.fetch("GITHUB_WIKI_NOISE_ROOT", SCRIPT_ROOT))',
+  'DEFAULT_TARGET_DIRS = [',
+  'if ENV["GITHUB_WIKI_NOISE_TARGET_DIRS"]',
+  'ENV.fetch("GITHUB_WIKI_NOISE_TARGET_DIRS").split(File::PATH_SEPARATOR).reject(&:empty?)'
+]
+
+required_noise_cleanup_snippets.each do |snippet|
+  errors << "Missing noise cleanup guard snippet: #{snippet}" unless noise_cleanup_text.include?(snippet)
 end
 
 if errors.empty?

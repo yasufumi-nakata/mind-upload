@@ -17,6 +17,9 @@ if [[ "${GITHUB_WIKI_LOCK_HELD:-0}" != "1" ]]; then
   if [[ "${VERIFY_GITHUB_WIKI_LOCK_SELFTEST:-0}" == "1" ]]; then
     run_step "lock-selftest" scripts/selftest_github_wiki_lock.sh
   fi
+  if [[ "${VERIFY_GITHUB_WIKI_NOISE_SELFTEST:-0}" == "1" ]]; then
+    run_step "noise-selftest" scripts/selftest_github_wiki_noise.sh
+  fi
   if [[ "${VERIFY_GITHUB_WIKI_OPS_SELFTEST:-0}" == "1" ]]; then
     run_step "ops-selftest" scripts/selftest_github_wiki_ops_references.sh
   fi

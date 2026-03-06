@@ -12,6 +12,7 @@ on:
       - "scripts/clean_github_wiki_noise.rb"
       - "scripts/with_github_wiki_lock.sh"
       - "scripts/selftest_github_wiki_lock.sh"
+      - "scripts/selftest_github_wiki_noise.sh"
       - "scripts/selftest_github_wiki_ops_references.sh"
       - "scripts/selftest_github_wiki_exporter.sh"
       - "scripts/selftest_github_wiki_export.sh"
@@ -43,6 +44,7 @@ jobs:
           GH_WIKI_TOKEN: ${{ secrets.GH_WIKI_TOKEN }}
           WIKI_PUBLISH_ALLOW_SKIP: "1"
           VERIFY_GITHUB_WIKI_LOCK_SELFTEST: "1"
+          VERIFY_GITHUB_WIKI_NOISE_SELFTEST: "1"
           VERIFY_GITHUB_WIKI_OPS_SELFTEST: "1"
           VERIFY_GITHUB_WIKI_EXPORTER_SELFTEST: "1"
           VERIFY_GITHUB_WIKI_EXPORT_SELFTEST: "1"
