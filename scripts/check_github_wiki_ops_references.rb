@@ -1,9 +1,10 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-ROOT = File.expand_path("..", __dir__)
+SCRIPT_ROOT = File.expand_path("..", __dir__)
+ROOT = File.expand_path(ENV.fetch("GITHUB_WIKI_OPS_REFERENCE_ROOT", SCRIPT_ROOT))
 
-OPS_FILES = [
+DEFAULT_OPS_FILES = [
   "README.md",
   ".github/workflows/validate-github-wiki-export.yml",
   ".github/workflows/sync-github-wiki.yml",
@@ -12,6 +13,7 @@ OPS_FILES = [
   "scripts/sync_github_wiki_toolchain.sh",
   "scripts/with_github_wiki_lock.sh",
   "scripts/selftest_github_wiki_lock.sh",
+  "scripts/selftest_github_wiki_ops_references.sh",
   "scripts/selftest_github_wiki_exporter.sh",
   "scripts/selftest_github_wiki_export.sh",
   "scripts/selftest_github_wiki_publish.sh",
@@ -25,7 +27,14 @@ FORBIDDEN_PATTERNS = {
 
 errors = []
 
-OPS_FILES.each do |relative_path|
+ops_files =
+  if ENV["GITHUB_WIKI_OPS_REFERENCE_FILES"]
+    ENV.fetch("GITHUB_WIKI_OPS_REFERENCE_FILES").split(File::PATH_SEPARATOR).reject(&:empty?)
+  else
+    DEFAULT_OPS_FILES
+  end
+
+ops_files.each do |relative_path|
   path = File.join(ROOT, relative_path)
   unless File.exist?(path)
     errors << "Missing ops reference target: #{relative_path}"
