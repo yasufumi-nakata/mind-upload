@@ -441,7 +441,10 @@ required_selftest_snippets = [
   'Timed out waiting for the GitHub Wiki toolchain lock to become idle.',
   'run_stale_lock_recovery',
   'run_serialization',
-  'run_timeout'
+  'run_timeout',
+  'run_failure_cleanup',
+  'Wrapped failure exit code was not preserved',
+  'Lock directory remained after wrapped command failure.'
 ]
 
 required_selftest_snippets.each do |snippet|

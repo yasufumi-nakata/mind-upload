@@ -178,10 +178,28 @@ run_timeout() {
   wait "$holder_pid"
 }
 
+run_failure_cleanup() {
+  local failure_log="$TEST_ROOT/failure.log"
+  local status=0
+
+  log "failure-cleanup"
+  reset_state
+
+  if "$LOCK_SCRIPT" bash -lc 'exit 23' >"$failure_log" 2>&1; then
+    fail "Wrapped failing command unexpectedly succeeded."
+  else
+    status=$?
+  fi
+
+  [[ "$status" -eq 23 ]] || fail "Wrapped failure exit code was not preserved: $status"
+  [[ ! -d "$LOCK_DIR" ]] || fail "Lock directory remained after wrapped command failure."
+}
+
 acquire_selftest_lock
 wait_for_toolchain_lock_idle
 run_stale_lock_recovery
 run_serialization
 run_timeout
+run_failure_cleanup
 
 log "ok"

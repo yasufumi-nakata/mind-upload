@@ -42,7 +42,7 @@
 - `scripts/check_github_wiki_boundaries.rb` は、`publish` が repo 内 `ignore/github-wiki-publish/` 固定のままで、`mktemp` や外部作業先 override が戻っていないことを検査します。isolated self-test 用に `GITHUB_WIKI_BOUNDARY_ROOT` も受けられます。
 - `scripts/check_github_wiki_ops_references.rb` は、運用ファイル群に親ディレクトリの `wiki` 参照や古い外部 wiki remote 参照が戻っていないことを検査します。isolated self-test 用に `GITHUB_WIKI_OPS_REFERENCE_ROOT` / `GITHUB_WIKI_OPS_REFERENCE_FILES` も受けられます。
 - `scripts/with_github_wiki_lock.sh` は、GitHub Wiki の export/publish 系処理を repo 内 lock で直列化します。既定待機は 180 秒で、`GITHUB_WIKI_LOCK_WAIT_SECONDS` で変更できます。孤立した `pid` を見つけた場合は stale lock を自動回収します。
-- `scripts/selftest_github_wiki_lock.sh` は、stale lock 回収、lock 直列化、timeout を repo 内 `ignore/` 配下で再現確認します。self-test 自体も repo 内 guard で直列化し、実行前に live な toolchain lock が空くまで待ちます。
+- `scripts/selftest_github_wiki_lock.sh` は、stale lock 回収、lock 直列化、timeout、ラップした失敗コマンド実行後の lock 解放を repo 内 `ignore/` 配下で再現確認します。self-test 自体も repo 内 guard で直列化し、実行前に live な toolchain lock が空くまで待ちます。
 - `scripts/selftest_github_wiki_sync.sh` は、isolated な sync fixture を `ignore/` 配下に作り、`sync_github_wiki_toolchain.sh` が self-test 群の前置実行、`verify -> publish` の順序、verify 失敗時の publish 停止、lock 解放を守ることを確認します。
 - `scripts/selftest_github_wiki_verify.sh` は、isolated な verify fixture を `ignore/` 配下に作り、`verify_github_wiki_toolchain.sh` が self-test 群の前置実行、syntax/runtime の実行順序、build 条件分岐、失敗時停止、lock 解放を守ることを確認します。
 - `scripts/selftest_github_wiki_boundaries.sh` は、現行の運用ファイル群を `ignore/` 配下に複製し、`check_github_wiki_boundaries.rb` が対象ファイル欠落、workflow guard 欠落、README 注記欠落を検出できることを確認します。
