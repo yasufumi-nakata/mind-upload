@@ -374,8 +374,12 @@ required_boundary_selftest_snippets = [
   'run_expect_failure "missing-verify-guard"',
   'run_expect_failure "missing-sync-guard"',
   'run_expect_failure "publish-mktemp-regression"',
+  'run_expect_failure "publish-workdir-override-regression"',
+  'run_expect_failure "missing-sync-path-trigger"',
   'VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST: "1"',
   'Forbidden temp directory helper remains: mktemp',
+  'Forbidden override remains: GITHUB_WIKI_WORKDIR',
+  'Missing sync workflow path trigger: "scripts/publish_github_wiki.sh"',
   'run_expect_failure "missing-readme-note"',
   'Missing README boundary note: `VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST=1`'
 ]

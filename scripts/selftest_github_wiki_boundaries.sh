@@ -69,6 +69,16 @@ EOF
 run_expect_failure "publish-mktemp-regression" 'Forbidden temp directory helper remains: mktemp'
 
 copy_fixture
+cat <<'EOF' >> "$TEST_ROOT/scripts/publish_github_wiki.sh"
+GITHUB_WIKI_WORKDIR="/tmp/wiki"
+EOF
+run_expect_failure "publish-workdir-override-regression" 'Forbidden override remains: GITHUB_WIKI_WORKDIR'
+
+copy_fixture
+perl -0pi -e 's/\n\s*-\s*"scripts\/publish_github_wiki\.sh"//' "$TEST_ROOT/.github/workflows/sync-github-wiki.yml"
+run_expect_failure "missing-sync-path-trigger" 'Missing sync workflow path trigger: "scripts/publish_github_wiki.sh"'
+
+copy_fixture
 perl -0pi -e 's/`VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST=1`//g' "$TEST_ROOT/README.md"
 run_expect_failure "missing-readme-note" 'Missing README boundary note: `VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST=1`'
 
