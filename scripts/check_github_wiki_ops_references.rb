@@ -14,6 +14,7 @@ DEFAULT_OPS_FILES = [
   "scripts/with_github_wiki_lock.sh",
   "scripts/selftest_github_wiki_lock.sh",
   "scripts/selftest_github_wiki_sync.sh",
+  "scripts/selftest_github_wiki_verify.sh",
   "scripts/selftest_github_wiki_boundaries.sh",
   "scripts/selftest_github_wiki_noise.sh",
   "scripts/selftest_github_wiki_ops_references.sh",

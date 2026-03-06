@@ -10,6 +10,7 @@ OPS_REFERENCE_SCRIPT = File.join(ROOT, "scripts", "check_github_wiki_ops_referen
 LOCK_SCRIPT = File.join(ROOT, "scripts", "with_github_wiki_lock.sh")
 LOCK_SELFTEST_SCRIPT = File.join(ROOT, "scripts", "selftest_github_wiki_lock.sh")
 SYNC_SELFTEST_SCRIPT = File.join(ROOT, "scripts", "selftest_github_wiki_sync.sh")
+VERIFY_SELFTEST_SCRIPT = File.join(ROOT, "scripts", "selftest_github_wiki_verify.sh")
 BOUNDARY_SELFTEST_SCRIPT = File.join(ROOT, "scripts", "selftest_github_wiki_boundaries.sh")
 NOISE_SELFTEST_SCRIPT = File.join(ROOT, "scripts", "selftest_github_wiki_noise.sh")
 OPS_SELFTEST_SCRIPT = File.join(ROOT, "scripts", "selftest_github_wiki_ops_references.sh")
@@ -28,6 +29,7 @@ README = File.join(ROOT, "README.md")
   LOCK_SCRIPT,
   LOCK_SELFTEST_SCRIPT,
   SYNC_SELFTEST_SCRIPT,
+  VERIFY_SELFTEST_SCRIPT,
   BOUNDARY_SELFTEST_SCRIPT,
   NOISE_SELFTEST_SCRIPT,
   OPS_SELFTEST_SCRIPT,
@@ -84,6 +86,8 @@ required_verify_script_snippets = [
   'run_step "lock-selftest" scripts/selftest_github_wiki_lock.sh',
   'if [[ "${VERIFY_GITHUB_WIKI_SYNC_SELFTEST:-0}" == "1" ]]; then',
   'run_step "sync-selftest" scripts/selftest_github_wiki_sync.sh',
+  'if [[ "${VERIFY_GITHUB_WIKI_VERIFY_SELFTEST:-0}" == "1" ]]; then',
+  'run_step "verify-selftest" scripts/selftest_github_wiki_verify.sh',
   'if [[ "${VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST:-0}" == "1" ]]; then',
   'run_step "boundary-selftest" scripts/selftest_github_wiki_boundaries.sh',
   'if [[ "${VERIFY_GITHUB_WIKI_NOISE_SELFTEST:-0}" == "1" ]]; then',
@@ -104,6 +108,7 @@ required_verify_script_snippets = [
   'run_step "syntax-export-validate" ruby -c scripts/check_github_wiki_export.rb',
   'run_step "syntax-lock-selftest" bash -n scripts/selftest_github_wiki_lock.sh',
   'run_step "syntax-sync-selftest" bash -n scripts/selftest_github_wiki_sync.sh',
+  'run_step "syntax-verify-selftest" bash -n scripts/selftest_github_wiki_verify.sh',
   'run_step "syntax-boundary-selftest" bash -n scripts/selftest_github_wiki_boundaries.sh',
   'run_step "syntax-noise-selftest" bash -n scripts/selftest_github_wiki_noise.sh',
   'run_step "syntax-ops-selftest" bash -n scripts/selftest_github_wiki_ops_references.sh',
@@ -129,6 +134,8 @@ required_sync_script_snippets = [
   'run_step "lock-selftest" scripts/selftest_github_wiki_lock.sh',
   'if [[ "${VERIFY_GITHUB_WIKI_SYNC_SELFTEST:-0}" == "1" ]]; then',
   'run_step "sync-selftest" scripts/selftest_github_wiki_sync.sh',
+  'if [[ "${VERIFY_GITHUB_WIKI_VERIFY_SELFTEST:-0}" == "1" ]]; then',
+  'run_step "verify-selftest" scripts/selftest_github_wiki_verify.sh',
   'if [[ "${VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST:-0}" == "1" ]]; then',
   'run_step "boundary-selftest" scripts/selftest_github_wiki_boundaries.sh',
   'if [[ "${VERIFY_GITHUB_WIKI_NOISE_SELFTEST:-0}" == "1" ]]; then',
@@ -156,6 +163,7 @@ required_verify_workflow_snippets = [
   'VERIFY_GITHUB_WIKI_BUILD: "1"',
   'VERIFY_GITHUB_WIKI_LOCK_SELFTEST: "1"',
   'VERIFY_GITHUB_WIKI_SYNC_SELFTEST: "1"',
+  'VERIFY_GITHUB_WIKI_VERIFY_SELFTEST: "1"',
   'VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST: "1"',
   'VERIFY_GITHUB_WIKI_NOISE_SELFTEST: "1"',
   'VERIFY_GITHUB_WIKI_OPS_SELFTEST: "1"',
@@ -177,6 +185,7 @@ required_verify_workflow_paths = [
   '"scripts/with_github_wiki_lock.sh"',
   '"scripts/selftest_github_wiki_lock.sh"',
   '"scripts/selftest_github_wiki_sync.sh"',
+  '"scripts/selftest_github_wiki_verify.sh"',
   '"scripts/selftest_github_wiki_boundaries.sh"',
   '"scripts/selftest_github_wiki_noise.sh"',
   '"scripts/selftest_github_wiki_ops_references.sh"',
@@ -198,6 +207,7 @@ required_sync_workflow_snippets = [
   'scripts/sync_github_wiki_toolchain.sh',
   'VERIFY_GITHUB_WIKI_LOCK_SELFTEST: "1"',
   'VERIFY_GITHUB_WIKI_SYNC_SELFTEST: "1"',
+  'VERIFY_GITHUB_WIKI_VERIFY_SELFTEST: "1"',
   'VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST: "1"',
   'VERIFY_GITHUB_WIKI_NOISE_SELFTEST: "1"',
   'VERIFY_GITHUB_WIKI_OPS_SELFTEST: "1"',
@@ -219,6 +229,7 @@ required_sync_workflow_paths = [
   '"scripts/with_github_wiki_lock.sh"',
   '"scripts/selftest_github_wiki_lock.sh"',
   '"scripts/selftest_github_wiki_sync.sh"',
+  '"scripts/selftest_github_wiki_verify.sh"',
   '"scripts/selftest_github_wiki_boundaries.sh"',
   '"scripts/selftest_github_wiki_noise.sh"',
   '"scripts/selftest_github_wiki_ops_references.sh"',
@@ -243,6 +254,7 @@ required_readme_snippets = [
   '`scripts/with_github_wiki_lock.sh`',
   '`scripts/selftest_github_wiki_lock.sh`',
   '`scripts/selftest_github_wiki_sync.sh`',
+  '`scripts/selftest_github_wiki_verify.sh`',
   '`scripts/selftest_github_wiki_boundaries.sh`',
   '`scripts/selftest_github_wiki_noise.sh`',
   '`scripts/selftest_github_wiki_ops_references.sh`',
@@ -252,6 +264,7 @@ required_readme_snippets = [
   '`GITHUB_WIKI_LOCK_WAIT_SECONDS`',
   '`VERIFY_GITHUB_WIKI_LOCK_SELFTEST=1`',
   '`VERIFY_GITHUB_WIKI_SYNC_SELFTEST=1`',
+  '`VERIFY_GITHUB_WIKI_VERIFY_SELFTEST=1`',
   '`VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST=1`',
   '`VERIFY_GITHUB_WIKI_NOISE_SELFTEST=1`',
   '`VERIFY_GITHUB_WIKI_OPS_SELFTEST=1`',
@@ -302,7 +315,9 @@ required_sync_selftest_snippets = [
   'FIXTURE_SYNC="$FIXTURE_SCRIPTS/sync_github_wiki_toolchain.sh"',
   'LOCK_DIR="$TEST_ROOT/ignore/github-wiki-toolchain.lock"',
   'VERIFY_GITHUB_WIKI_SYNC_SELFTEST=0',
+  'VERIFY_GITHUB_WIKI_VERIFY_SELFTEST=1',
   'SELFTEST_VERIFY_FAIL=1',
+  "verify-selftest",
   'assert_log_contains_line "verify"',
   'assert_log_not_contains_line "publish"',
   'Lock directory still exists after successful sync.',
@@ -311,6 +326,25 @@ required_sync_selftest_snippets = [
 
 required_sync_selftest_snippets.each do |snippet|
   errors << "Missing sync selftest guard snippet: #{snippet}" unless sync_selftest_text.include?(snippet)
+end
+
+verify_selftest_text = File.read(VERIFY_SELFTEST_SCRIPT)
+required_verify_selftest_snippets = [
+  'FIXTURE_VERIFY="$FIXTURE_SCRIPTS/verify_github_wiki_toolchain.sh"',
+  'FIXTURE_BIN="$TEST_ROOT/bin"',
+  'LOCK_DIR="$TEST_ROOT/ignore/github-wiki-toolchain.lock"',
+  'VERIFY_GITHUB_WIKI_VERIFY_SELFTEST=1',
+  'VERIFY_GITHUB_WIKI_BUILD=1',
+  'SELFTEST_BOUNDARY_FAIL=1',
+  'assert_output_not_contains "[github-wiki] jekyll-build"',
+  'assert_log_not_contains_line "build"',
+  'Lock directory still exists after successful verify without build.',
+  'Lock directory still exists after successful verify with build.',
+  'Lock directory still exists after failed verify.'
+]
+
+required_verify_selftest_snippets.each do |snippet|
+  errors << "Missing verify selftest guard snippet: #{snippet}" unless verify_selftest_text.include?(snippet)
 end
 
 boundary_selftest_text = File.read(BOUNDARY_SELFTEST_SCRIPT)
@@ -483,6 +517,7 @@ boundary_script_text = File.read(File.join(ROOT, "scripts", "check_github_wiki_b
 required_boundary_script_snippets = [
   'SCRIPT_ROOT = File.expand_path("..", __dir__)',
   'ROOT = File.expand_path(ENV.fetch("GITHUB_WIKI_BOUNDARY_ROOT", SCRIPT_ROOT))',
+  'VERIFY_SELFTEST_SCRIPT = File.join(ROOT, "scripts", "selftest_github_wiki_verify.sh")',
   'BOUNDARY_SELFTEST_SCRIPT = File.join(ROOT, "scripts", "selftest_github_wiki_boundaries.sh")'
 ]
 

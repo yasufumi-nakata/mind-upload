@@ -61,39 +61,45 @@ set -euo pipefail
 printf '%s\n' 'lock-selftest' >> '$LOG_FILE'
 "
 
-  write_stub "$FIXTURE_SCRIPTS/selftest_github_wiki_boundaries.sh" "#!/usr/bin/env bash
+  write_stub "$FIXTURE_SCRIPTS/selftest_github_wiki_verify.sh" "#!/usr/bin/env bash
 set -euo pipefail
 [[ \"\${GITHUB_WIKI_LOCK_HELD:-0}\" != \"1\" ]] || exit 42
+printf '%s\n' 'verify-selftest' >> '$LOG_FILE'
+"
+
+  write_stub "$FIXTURE_SCRIPTS/selftest_github_wiki_boundaries.sh" "#!/usr/bin/env bash
+set -euo pipefail
+[[ \"\${GITHUB_WIKI_LOCK_HELD:-0}\" != \"1\" ]] || exit 43
 printf '%s\n' 'boundary-selftest' >> '$LOG_FILE'
 "
 
   write_stub "$FIXTURE_SCRIPTS/selftest_github_wiki_noise.sh" "#!/usr/bin/env bash
 set -euo pipefail
-[[ \"\${GITHUB_WIKI_LOCK_HELD:-0}\" != \"1\" ]] || exit 43
+[[ \"\${GITHUB_WIKI_LOCK_HELD:-0}\" != \"1\" ]] || exit 44
 printf '%s\n' 'noise-selftest' >> '$LOG_FILE'
 "
 
   write_stub "$FIXTURE_SCRIPTS/selftest_github_wiki_ops_references.sh" "#!/usr/bin/env bash
 set -euo pipefail
-[[ \"\${GITHUB_WIKI_LOCK_HELD:-0}\" != \"1\" ]] || exit 44
+[[ \"\${GITHUB_WIKI_LOCK_HELD:-0}\" != \"1\" ]] || exit 45
 printf '%s\n' 'ops-selftest' >> '$LOG_FILE'
 "
 
   write_stub "$FIXTURE_SCRIPTS/selftest_github_wiki_exporter.sh" "#!/usr/bin/env bash
 set -euo pipefail
-[[ \"\${GITHUB_WIKI_LOCK_HELD:-0}\" != \"1\" ]] || exit 45
+[[ \"\${GITHUB_WIKI_LOCK_HELD:-0}\" != \"1\" ]] || exit 46
 printf '%s\n' 'exporter-selftest' >> '$LOG_FILE'
 "
 
   write_stub "$FIXTURE_SCRIPTS/selftest_github_wiki_export.sh" "#!/usr/bin/env bash
 set -euo pipefail
-[[ \"\${GITHUB_WIKI_LOCK_HELD:-0}\" != \"1\" ]] || exit 46
+[[ \"\${GITHUB_WIKI_LOCK_HELD:-0}\" != \"1\" ]] || exit 47
 printf '%s\n' 'export-selftest' >> '$LOG_FILE'
 "
 
   write_stub "$FIXTURE_SCRIPTS/selftest_github_wiki_publish.sh" "#!/usr/bin/env bash
 set -euo pipefail
-[[ \"\${GITHUB_WIKI_LOCK_HELD:-0}\" != \"1\" ]] || exit 47
+[[ \"\${GITHUB_WIKI_LOCK_HELD:-0}\" != \"1\" ]] || exit 48
 printf '%s\n' 'publish-selftest' >> '$LOG_FILE'
 "
 
@@ -119,6 +125,7 @@ run_sync_success() {
   env \
     VERIFY_GITHUB_WIKI_SYNC_SELFTEST=0 \
     VERIFY_GITHUB_WIKI_LOCK_SELFTEST=1 \
+    VERIFY_GITHUB_WIKI_VERIFY_SELFTEST=1 \
     VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST=1 \
     VERIFY_GITHUB_WIKI_NOISE_SELFTEST=1 \
     VERIFY_GITHUB_WIKI_OPS_SELFTEST=1 \
@@ -129,6 +136,7 @@ run_sync_success() {
 
   assert_log_equals "$(cat <<'EOF'
 lock-selftest
+verify-selftest
 boundary-selftest
 noise-selftest
 ops-selftest
@@ -147,6 +155,7 @@ run_sync_verify_failure() {
   prepare_fixture
   if env \
     VERIFY_GITHUB_WIKI_SYNC_SELFTEST=0 \
+    VERIFY_GITHUB_WIKI_VERIFY_SELFTEST=1 \
     SELFTEST_VERIFY_FAIL=1 \
     "$FIXTURE_SYNC" >/dev/null 2>&1; then
     fail "Sync unexpectedly succeeded when verify failed."
