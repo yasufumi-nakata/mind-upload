@@ -8,6 +8,7 @@ SYNC_SCRIPT = File.join(ROOT, "scripts", "sync_github_wiki_toolchain.sh")
 OPS_REFERENCE_SCRIPT = File.join(ROOT, "scripts", "check_github_wiki_ops_references.rb")
 LOCK_SCRIPT = File.join(ROOT, "scripts", "with_github_wiki_lock.sh")
 LOCK_SELFTEST_SCRIPT = File.join(ROOT, "scripts", "selftest_github_wiki_lock.sh")
+PUBLISH_SELFTEST_SCRIPT = File.join(ROOT, "scripts", "selftest_github_wiki_publish.sh")
 VERIFY_WORKFLOW = File.join(ROOT, ".github", "workflows", "validate-github-wiki-export.yml")
 SYNC_WORKFLOW = File.join(ROOT, ".github", "workflows", "sync-github-wiki.yml")
 README = File.join(ROOT, "README.md")
@@ -19,6 +20,7 @@ README = File.join(ROOT, "README.md")
   OPS_REFERENCE_SCRIPT,
   LOCK_SCRIPT,
   LOCK_SELFTEST_SCRIPT,
+  PUBLISH_SELFTEST_SCRIPT,
   VERIFY_WORKFLOW,
   SYNC_WORKFLOW,
   README
@@ -34,8 +36,12 @@ errors = []
 publish_text = File.read(PUBLISH_SCRIPT)
 
 required_publish_snippets = [
+  'DEFAULT_REMOTE_BASE="https://github.com/yasufumi-nakata/mind-upload.wiki.git"',
+  'REMOTE_BASE="${GITHUB_WIKI_REMOTE_BASE:-$DEFAULT_REMOTE_BASE}"',
   'WORK_ROOT="$ROOT/ignore/github-wiki-publish"',
   'WORK_DIR="$WORK_ROOT/repo"',
+  'if [[ -n "${GITHUB_WIKI_REMOTE_URL:-}" ]]; then',
+  'REMOTE_URL="${GITHUB_WIKI_REMOTE_URL}"',
   'git clone "$REMOTE_URL" "$WORK_DIR"',
   'rsync -a --delete --exclude ".git/" --exclude ".DS_Store" "$EXPORT_DIR"/ "$WORK_DIR"/',
   'find "$WORK_DIR" -name ".DS_Store" -delete',
@@ -60,6 +66,8 @@ verify_script_text = File.read(VERIFY_SCRIPT)
 required_verify_script_snippets = [
   'if [[ "${VERIFY_GITHUB_WIKI_LOCK_SELFTEST:-0}" == "1" ]]; then',
   'run_step "lock-selftest" scripts/selftest_github_wiki_lock.sh',
+  'if [[ "${VERIFY_GITHUB_WIKI_PUBLISH_SELFTEST:-0}" == "1" ]]; then',
+  'run_step "publish-selftest" scripts/selftest_github_wiki_publish.sh',
   'exec env GITHUB_WIKI_LOCK_HELD=1 "$ROOT/scripts/with_github_wiki_lock.sh" "$SCRIPT_PATH" "$@"',
   'run_step "syntax-boundary" ruby -c scripts/check_github_wiki_boundaries.rb',
   'run_step "syntax-ops-refs" ruby -c scripts/check_github_wiki_ops_references.rb',
@@ -67,6 +75,7 @@ required_verify_script_snippets = [
   'run_step "syntax-export" ruby -c scripts/export_github_wiki.rb',
   'run_step "syntax-export-validate" ruby -c scripts/check_github_wiki_export.rb',
   'run_step "syntax-lock-selftest" bash -n scripts/selftest_github_wiki_lock.sh',
+  'run_step "syntax-publish-selftest" bash -n scripts/selftest_github_wiki_publish.sh',
   'run_step "syntax-publish" bash -n scripts/publish_github_wiki.sh',
   'run_step "boundary-check" scripts/check_github_wiki_boundaries.rb',
   'run_step "ops-reference-check" scripts/check_github_wiki_ops_references.rb',
@@ -84,6 +93,8 @@ sync_script_text = File.read(SYNC_SCRIPT)
 required_sync_script_snippets = [
   'if [[ "${VERIFY_GITHUB_WIKI_LOCK_SELFTEST:-0}" == "1" ]]; then',
   'run_step "lock-selftest" scripts/selftest_github_wiki_lock.sh',
+  'if [[ "${VERIFY_GITHUB_WIKI_PUBLISH_SELFTEST:-0}" == "1" ]]; then',
+  'run_step "publish-selftest" scripts/selftest_github_wiki_publish.sh',
   'exec env GITHUB_WIKI_LOCK_HELD=1 "$ROOT/scripts/with_github_wiki_lock.sh" "$SCRIPT_PATH" "$@"',
   'run_step "verify" scripts/verify_github_wiki_toolchain.sh',
   'run_step "publish" scripts/publish_github_wiki.sh'
@@ -97,7 +108,8 @@ verify_workflow_text = File.read(VERIFY_WORKFLOW)
 required_verify_workflow_snippets = [
   'run: scripts/verify_github_wiki_toolchain.sh',
   'VERIFY_GITHUB_WIKI_BUILD: "1"',
-  'VERIFY_GITHUB_WIKI_LOCK_SELFTEST: "1"'
+  'VERIFY_GITHUB_WIKI_LOCK_SELFTEST: "1"',
+  'VERIFY_GITHUB_WIKI_PUBLISH_SELFTEST: "1"'
 ]
 
 required_verify_workflow_snippets.each do |snippet|
@@ -112,6 +124,7 @@ required_verify_workflow_paths = [
   '"scripts/clean_github_wiki_noise.rb"',
   '"scripts/with_github_wiki_lock.sh"',
   '"scripts/selftest_github_wiki_lock.sh"',
+  '"scripts/selftest_github_wiki_publish.sh"',
   '"scripts/verify_github_wiki_toolchain.sh"',
   '"scripts/sync_github_wiki_toolchain.sh"',
   '"scripts/publish_github_wiki.sh"'
@@ -125,7 +138,8 @@ sync_workflow_text = File.read(SYNC_WORKFLOW)
 required_sync_workflow_snippets = [
   'run: |',
   'scripts/sync_github_wiki_toolchain.sh',
-  'VERIFY_GITHUB_WIKI_LOCK_SELFTEST: "1"'
+  'VERIFY_GITHUB_WIKI_LOCK_SELFTEST: "1"',
+  'VERIFY_GITHUB_WIKI_PUBLISH_SELFTEST: "1"'
 ]
 
 required_sync_workflow_snippets.each do |snippet|
@@ -140,6 +154,7 @@ required_sync_workflow_paths = [
   '"scripts/clean_github_wiki_noise.rb"',
   '"scripts/with_github_wiki_lock.sh"',
   '"scripts/selftest_github_wiki_lock.sh"',
+  '"scripts/selftest_github_wiki_publish.sh"',
   '"scripts/verify_github_wiki_toolchain.sh"',
   '"scripts/sync_github_wiki_toolchain.sh"',
   '"scripts/publish_github_wiki.sh"'
@@ -157,8 +172,10 @@ required_readme_snippets = [
   '`scripts/check_github_wiki_ops_references.rb`',
   '`scripts/with_github_wiki_lock.sh`',
   '`scripts/selftest_github_wiki_lock.sh`',
+  '`scripts/selftest_github_wiki_publish.sh`',
   '`GITHUB_WIKI_LOCK_WAIT_SECONDS`',
   '`VERIFY_GITHUB_WIKI_LOCK_SELFTEST=1`',
+  '`VERIFY_GITHUB_WIKI_PUBLISH_SELFTEST=1`',
   '`ignore/github-wiki-publish/`',
   'BUNDLE_PATH=vendor/bundle bundle exec jekyll build'
 ]
@@ -199,6 +216,26 @@ required_selftest_snippets = [
 
 required_selftest_snippets.each do |snippet|
   errors << "Missing lock selftest guard snippet: #{snippet}" unless selftest_text.include?(snippet)
+end
+
+publish_selftest_text = File.read(PUBLISH_SELFTEST_SCRIPT)
+required_publish_selftest_snippets = [
+  'PUBLISH_SCRIPT="$ROOT/scripts/publish_github_wiki.sh"',
+  'LOCK_SCRIPT="$ROOT/scripts/with_github_wiki_lock.sh"',
+  'WORK_ROOT="$ROOT/ignore/github-wiki-publish"',
+  'TEST_ROOT="$ROOT/ignore/github-wiki-publish-selftest-$PPID-$$"',
+  'git init --bare --initial-branch=master "$REMOTE_BARE" >/dev/null',
+  'git init --initial-branch=master "$SEED_REPO" >/dev/null',
+  'GITHUB_WIKI_REMOTE_BASE="$REMOTE_BARE" \\',
+  'GITHUB_WIKI_REMOTE_URL="$REMOTE_BARE" \\',
+  '"$LOCK_SCRIPT" "$PUBLISH_SCRIPT"',
+  'cmp "$EXPORT_DIR/Home.md" "$VERIFY_REPO/Home.md" >/dev/null',
+  'cmp "$EXPORT_DIR/_Sidebar.md" "$VERIFY_REPO/_Sidebar.md" >/dev/null',
+  'GitHub Wiki に反映すべき差分はありません。'
+]
+
+required_publish_selftest_snippets.each do |snippet|
+  errors << "Missing publish selftest guard snippet: #{snippet}" unless publish_selftest_text.include?(snippet)
 end
 
 if errors.empty?

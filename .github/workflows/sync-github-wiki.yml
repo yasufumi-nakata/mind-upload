@@ -12,6 +12,7 @@ on:
       - "scripts/clean_github_wiki_noise.rb"
       - "scripts/with_github_wiki_lock.sh"
       - "scripts/selftest_github_wiki_lock.sh"
+      - "scripts/selftest_github_wiki_publish.sh"
       - "scripts/verify_github_wiki_toolchain.sh"
       - "scripts/sync_github_wiki_toolchain.sh"
       - "scripts/publish_github_wiki.sh"
@@ -39,6 +40,7 @@ jobs:
           GH_WIKI_TOKEN: ${{ secrets.GH_WIKI_TOKEN }}
           WIKI_PUBLISH_ALLOW_SKIP: "1"
           VERIFY_GITHUB_WIKI_LOCK_SELFTEST: "1"
+          VERIFY_GITHUB_WIKI_PUBLISH_SELFTEST: "1"
         run: |
           if [ -n "${GH_WIKI_TOKEN}" ]; then
             export GITHUB_TOKEN="${GH_WIKI_TOKEN}"

@@ -17,6 +17,9 @@ if [[ "${GITHUB_WIKI_LOCK_HELD:-0}" != "1" ]]; then
   if [[ "${VERIFY_GITHUB_WIKI_LOCK_SELFTEST:-0}" == "1" ]]; then
     run_step "lock-selftest" scripts/selftest_github_wiki_lock.sh
   fi
+  if [[ "${VERIFY_GITHUB_WIKI_PUBLISH_SELFTEST:-0}" == "1" ]]; then
+    run_step "publish-selftest" scripts/selftest_github_wiki_publish.sh
+  fi
   exec env GITHUB_WIKI_LOCK_HELD=1 "$ROOT/scripts/with_github_wiki_lock.sh" "$SCRIPT_PATH" "$@"
 fi
 
@@ -26,6 +29,7 @@ run_step "syntax-noise-cleanup" ruby -c scripts/clean_github_wiki_noise.rb
 run_step "syntax-export" ruby -c scripts/export_github_wiki.rb
 run_step "syntax-export-validate" ruby -c scripts/check_github_wiki_export.rb
 run_step "syntax-lock-selftest" bash -n scripts/selftest_github_wiki_lock.sh
+run_step "syntax-publish-selftest" bash -n scripts/selftest_github_wiki_publish.sh
 run_step "syntax-publish" bash -n scripts/publish_github_wiki.sh
 run_step "boundary-check" scripts/check_github_wiki_boundaries.rb
 run_step "ops-reference-check" scripts/check_github_wiki_ops_references.rb

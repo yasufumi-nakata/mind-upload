@@ -3,7 +3,8 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 EXPORT_DIR="$ROOT/github-wiki-export"
-REMOTE_BASE="https://github.com/yasufumi-nakata/mind-upload.wiki.git"
+DEFAULT_REMOTE_BASE="https://github.com/yasufumi-nakata/mind-upload.wiki.git"
+REMOTE_BASE="${GITHUB_WIKI_REMOTE_BASE:-$DEFAULT_REMOTE_BASE}"
 WORK_ROOT="$ROOT/ignore/github-wiki-publish"
 WORK_DIR="$WORK_ROOT/repo"
 ALLOW_SKIP="${WIKI_PUBLISH_ALLOW_SKIP:-0}"
@@ -13,8 +14,12 @@ if [[ ! -d "$EXPORT_DIR" ]]; then
   exit 1
 fi
 
-TOKEN="${GITHUB_TOKEN:-$(gh auth token)}"
-REMOTE_URL="https://x-access-token:${TOKEN}@github.com/yasufumi-nakata/mind-upload.wiki.git"
+if [[ -n "${GITHUB_WIKI_REMOTE_URL:-}" ]]; then
+  REMOTE_URL="${GITHUB_WIKI_REMOTE_URL}"
+else
+  TOKEN="${GITHUB_TOKEN:-$(gh auth token)}"
+  REMOTE_URL="https://x-access-token:${TOKEN}@github.com/yasufumi-nakata/mind-upload.wiki.git"
+fi
 
 if ! git ls-remote "$REMOTE_URL" >/dev/null 2>&1; then
   echo "GitHub Wiki の git リポジトリがまだ初期化されていません。"
