@@ -29,11 +29,19 @@ trap cleanup EXIT
 wait_for_file() {
   local path="$1"
   local label="$2"
-  local i
+  local start_time
+  local now
 
-  for i in $(seq 1 50); do
+  start_time="$(date +%s)"
+
+  while true; do
     if [[ -f "$path" ]]; then
       return 0
+    fi
+
+    now="$(date +%s)"
+    if (( now - start_time >= WAIT_SECONDS )); then
+      break
     fi
     sleep 0.1
   done
@@ -45,11 +53,19 @@ wait_for_pattern() {
   local path="$1"
   local pattern="$2"
   local label="$3"
-  local i
+  local start_time
+  local now
 
-  for i in $(seq 1 50); do
+  start_time="$(date +%s)"
+
+  while true; do
     if [[ -f "$path" ]] && grep -Eq "$pattern" "$path"; then
       return 0
+    fi
+
+    now="$(date +%s)"
+    if (( now - start_time >= WAIT_SECONDS )); then
+      break
     fi
     sleep 0.1
   done

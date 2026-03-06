@@ -14,11 +14,13 @@ if [[ ! -d "$EXPORT_DIR" ]]; then
   exit 1
 fi
 
+REMOTE_URL="$REMOTE_BASE"
+
 if [[ -n "${GITHUB_WIKI_REMOTE_URL:-}" ]]; then
   REMOTE_URL="${GITHUB_WIKI_REMOTE_URL}"
-else
+elif [[ "$REMOTE_BASE" == https://github.com/* ]]; then
   TOKEN="${GITHUB_TOKEN:-$(gh auth token)}"
-  REMOTE_URL="https://x-access-token:${TOKEN}@github.com/yasufumi-nakata/mind-upload.wiki.git"
+  REMOTE_URL="https://x-access-token:${TOKEN}@${REMOTE_BASE#https://}"
 fi
 
 if ! git ls-remote "$REMOTE_URL" >/dev/null 2>&1; then

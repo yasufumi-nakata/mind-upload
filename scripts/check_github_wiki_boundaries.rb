@@ -38,6 +38,9 @@ publish_text = File.read(PUBLISH_SCRIPT)
 required_publish_snippets = [
   'DEFAULT_REMOTE_BASE="https://github.com/yasufumi-nakata/mind-upload.wiki.git"',
   'REMOTE_BASE="${GITHUB_WIKI_REMOTE_BASE:-$DEFAULT_REMOTE_BASE}"',
+  'REMOTE_URL="$REMOTE_BASE"',
+  'elif [[ "$REMOTE_BASE" == https://github.com/* ]]; then',
+  'REMOTE_URL="https://x-access-token:${TOKEN}@${REMOTE_BASE#https://}"',
   'WORK_ROOT="$ROOT/ignore/github-wiki-publish"',
   'WORK_DIR="$WORK_ROOT/repo"',
   'if [[ -n "${GITHUB_WIKI_REMOTE_URL:-}" ]]; then',
@@ -204,6 +207,7 @@ required_selftest_snippets = [
   'TEST_ROOT="$ROOT/ignore/github-wiki-lock-selftest-$PPID-$$"',
   'SELFTEST_LOCK_HELD=0',
   'if [[ "$SELFTEST_LOCK_HELD" == "1" ]]; then',
+  'if (( now - start_time >= WAIT_SECONDS )); then',
   'while ! mkdir "$SELFTEST_LOCK_DIR" 2>/dev/null; do',
   'SELFTEST_LOCK_HELD=1',
   'Timed out waiting for lock self-test guard',
@@ -224,14 +228,25 @@ required_publish_selftest_snippets = [
   'LOCK_SCRIPT="$ROOT/scripts/with_github_wiki_lock.sh"',
   'WORK_ROOT="$ROOT/ignore/github-wiki-publish"',
   'TEST_ROOT="$ROOT/ignore/github-wiki-publish-selftest-$PPID-$$"',
+  'MISSING_REMOTE="$TEST_ROOT/missing-remote.git"',
+  'run_publish_with_env() {',
+  'run_missing_remote_failure() {',
+  'run_missing_remote_skip() {',
+  'GITHUB_WIKI_REMOTE_BASE="$MISSING_REMOTE"',
+  'WIKI_PUBLISH_ALLOW_SKIP=1',
+  'GitHub Wiki の git リポジトリがまだ初期化されていません。',
+  '想定 remote: $MISSING_REMOTE',
+  'WIKI_PUBLISH_ALLOW_SKIP=1 のため、失敗扱いにはしません。',
   'git init --bare --initial-branch=master "$REMOTE_BARE" >/dev/null',
   'git init --initial-branch=master "$SEED_REPO" >/dev/null',
-  'GITHUB_WIKI_REMOTE_BASE="$REMOTE_BARE" \\',
-  'GITHUB_WIKI_REMOTE_URL="$REMOTE_BARE" \\',
-  '"$LOCK_SCRIPT" "$PUBLISH_SCRIPT"',
+  'run_publish_success() {',
+  'GITHUB_WIKI_REMOTE_BASE="$REMOTE_BARE"',
+  'env "$@" "$LOCK_SCRIPT" "$PUBLISH_SCRIPT"',
   'cmp "$EXPORT_DIR/Home.md" "$VERIFY_REPO/Home.md" >/dev/null',
   'cmp "$EXPORT_DIR/_Sidebar.md" "$VERIFY_REPO/_Sidebar.md" >/dev/null',
-  'GitHub Wiki に反映すべき差分はありません。'
+  'GitHub Wiki に反映すべき差分はありません。',
+  'run_missing_remote_failure',
+  'run_missing_remote_skip'
 ]
 
 required_publish_selftest_snippets.each do |snippet|
