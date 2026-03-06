@@ -17,6 +17,7 @@ on:
       - "scripts/clean_github_wiki_noise.rb"
       - "scripts/with_github_wiki_lock.sh"
       - "scripts/selftest_github_wiki_lock.sh"
+      - "scripts/selftest_github_wiki_sync.sh"
       - "scripts/selftest_github_wiki_boundaries.sh"
       - "scripts/selftest_github_wiki_noise.sh"
       - "scripts/selftest_github_wiki_ops_references.sh"
@@ -50,6 +51,7 @@ jobs:
         env:
           VERIFY_GITHUB_WIKI_BUILD: "1"
           VERIFY_GITHUB_WIKI_LOCK_SELFTEST: "1"
+          VERIFY_GITHUB_WIKI_SYNC_SELFTEST: "1"
           VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST: "1"
           VERIFY_GITHUB_WIKI_NOISE_SELFTEST: "1"
           VERIFY_GITHUB_WIKI_OPS_SELFTEST: "1"
