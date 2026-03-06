@@ -372,7 +372,10 @@ required_boundary_selftest_snippets = [
   'GITHUB_WIKI_BOUNDARY_ROOT="$TEST_ROOT"',
   'run_expect_failure "missing-target" "scripts/publish_github_wiki.sh"',
   'run_expect_failure "missing-verify-guard"',
+  'run_expect_failure "missing-sync-guard"',
+  'run_expect_failure "publish-mktemp-regression"',
   'VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST: "1"',
+  'Forbidden temp directory helper remains: mktemp',
   'run_expect_failure "missing-readme-note"',
   'Missing README boundary note: `VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST=1`'
 ]

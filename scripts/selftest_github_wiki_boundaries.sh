@@ -59,6 +59,16 @@ perl -0pi -e 's/\n\s*VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST: "1"//' "$TEST_ROOT/.g
 run_expect_failure "missing-verify-guard" 'Missing verify workflow guard snippet: VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST: "1"'
 
 copy_fixture
+perl -0pi -e 's/\n\s*VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST: "1"//' "$TEST_ROOT/.github/workflows/sync-github-wiki.yml"
+run_expect_failure "missing-sync-guard" 'Missing sync workflow guard snippet: VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST: "1"'
+
+copy_fixture
+cat <<'EOF' >> "$TEST_ROOT/scripts/publish_github_wiki.sh"
+TMP_DIR="$(mktemp -d)"
+EOF
+run_expect_failure "publish-mktemp-regression" 'Forbidden temp directory helper remains: mktemp'
+
+copy_fixture
 perl -0pi -e 's/`VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST=1`//g' "$TEST_ROOT/README.md"
 run_expect_failure "missing-readme-note" 'Missing README boundary note: `VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST=1`'
 

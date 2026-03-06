@@ -45,7 +45,7 @@
 - `scripts/selftest_github_wiki_lock.sh` は、stale lock 回収、lock 直列化、timeout、ラップした失敗コマンド実行後の lock 解放を repo 内 `ignore/` 配下で再現確認します。self-test 自体も repo 内 guard で直列化し、実行前に live な toolchain lock が空くまで待ちます。
 - `scripts/selftest_github_wiki_sync.sh` は、isolated な sync fixture を `ignore/` 配下に作り、`sync_github_wiki_toolchain.sh` が self-test 群の前置実行、`verify -> publish` の順序、verify 失敗時の publish 停止、lock 解放を守ることを確認します。
 - `scripts/selftest_github_wiki_verify.sh` は、isolated な verify fixture を `ignore/` 配下に作り、`verify_github_wiki_toolchain.sh` が self-test 群の前置実行、syntax/runtime の実行順序、build 条件分岐、失敗時停止、lock 解放を守ることを確認します。
-- `scripts/selftest_github_wiki_boundaries.sh` は、現行の運用ファイル群を `ignore/` 配下に複製し、`check_github_wiki_boundaries.rb` が対象ファイル欠落、workflow guard 欠落、README 注記欠落を検出できることを確認します。
+- `scripts/selftest_github_wiki_boundaries.sh` は、現行の運用ファイル群を `ignore/` 配下に複製し、`check_github_wiki_boundaries.rb` が対象ファイル欠落、verify/sync workflow guard 欠落、`publish` の `mktemp` 回帰、README 注記欠落を検出できることを確認します。
 - `scripts/selftest_github_wiki_noise.sh` は、isolated な `wiki/` と `github-wiki-export/` を `ignore/` 配下に作り、`clean_github_wiki_noise.rb` が `.DS_Store` と `._*` を除去しつつ通常ファイルを残すこと、および 2 回目に no-op になることを確認します。
 - `scripts/selftest_github_wiki_ops_references.sh` は、isolated な運用ファイル群を `ignore/` 配下に作り、`check_github_wiki_ops_references.rb` が親ディレクトリ経由の wiki 参照、古い remote 参照、対象ファイル欠落を検出できることを確認します。
 - `scripts/selftest_github_wiki_exporter.sh` は、isolated な `wiki/` と `github-wiki-export/` を `ignore/` 配下に作り、`scripts/export_github_wiki.rb` が `Home.md`、`_Sidebar.md`、`_Footer.md`、generated assets、wrapper 除去、link rewrite、ノイズ除去を正しく出力できることを確認します。
