@@ -16,7 +16,11 @@ def changed_export_paths
   return [] if SKIP_GIT_DRIFT
   return [] unless system("git", "-C", ROOT, "rev-parse", "--is-inside-work-tree", out: File::NULL, err: File::NULL)
 
-  changed = `git -C "#{ROOT}" diff --name-status -- "#{DEST_DIR}"`.lines.map(&:strip).reject(&:empty?)
+  changed =
+    `git -C "#{ROOT}" diff --name-status -- "#{DEST_DIR}"`.lines
+      .map(&:strip)
+      .reject(&:empty?)
+      .map { |line| line.sub(/\t+/, " ") }
   untracked = `git -C "#{ROOT}" ls-files --others --exclude-standard -- "#{DEST_DIR}"`.lines.map(&:strip).reject(&:empty?).map { |path| "?? #{path}" }
   (changed + untracked).uniq.sort
 end

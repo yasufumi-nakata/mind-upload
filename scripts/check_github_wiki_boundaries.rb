@@ -303,7 +303,12 @@ required_export_selftest_snippets = [
   'run_expect_failure "noise-file" "Noise file in wiki export: .DS_Store"',
   'run_expect_failure "unsafe-link" "Home.md: non-export-safe relative link relative/path.md"',
   'run_expect_failure "sidebar-missing" "Sidebar missing link for page.md"',
-  'run_expect_failure "missing-generated-asset" "Missing generated asset in export: generated/demo/demo.csv"'
+  'run_expect_failure "missing-generated-asset" "Missing generated asset in export: generated/demo/demo.csv"',
+  'DRIFT_ROOT="$TEST_ROOT/drift-repo"',
+  'git -C "$DRIFT_ROOT" init --initial-branch=main >/dev/null',
+  'run_expect_drift_failure',
+  'Uncommitted export drift: M github-wiki-export/Home.md',
+  'Uncommitted export drift: ?? github-wiki-export/drift-untracked.txt'
 ]
 
 required_export_selftest_snippets.each do |snippet|
