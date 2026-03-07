@@ -29,8 +29,12 @@ exclude:
   - .bundle
   - _site
   - node_modules
+  - scripts
+  - .agent
   - Gemfile
   - Gemfile.lock
   - .gitignore
   - README.md
+  - AGENTS.md
+  - requirements.txt
   - "*.json"
