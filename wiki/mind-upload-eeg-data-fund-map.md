@@ -47,6 +47,9 @@ recommended_pages:
 
 > Companion CSV は `generated/mind-upload-eeg-data-fund-map/` に集約しています。  
 > すべて `MindUpload-EEGDATA-FundMap-*.csv` の接頭辞で揃えています。
+>
+> `tech_roadmap.md` の 51QA を問い単位で深掘りした版は  
+> [`/wiki/mind-upload-eeg-data-fund-map-roadmap-qa-deepdive.html`](/wiki/mind-upload-eeg-data-fund-map-roadmap-qa-deepdive.html) を参照してください。
 
 ## 0. 結論
 

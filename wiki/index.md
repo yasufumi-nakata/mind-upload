@@ -178,6 +178,11 @@ recommended_pages:
 <td><a href="../tech_roadmap.html">技術ロードマップ</a> / <a href="../datasets.html">データ&ベンチ</a> / <a href="../collaborations.html">協業候補</a></td>
 </tr>
 <tr>
+<td><strong>Roadmapの51QAを1件ずつEEG可否と助成テーマへ落としたい</strong></td>
+<td><a href="mind-upload-eeg-data-fund-map-roadmap-qa-deepdive.html">Roadmap 51QA × EEG-DATA × 助成テーマ深掘り</a></td>
+<td><a href="../tech_roadmap.html">技術ロードマップ</a> / <a href="mind-upload-eeg-data-fund-map.html">EEG-DATA × 助成マップ</a> / <a href="../verification.html">検証基盤</a></td>
+</tr>
+<tr>
 <td><strong>Verificationのあとに次の1ページを決めたい</strong></td>
 <td><a href="verification-next-routes.html">Verificationのあとに進む4つの道</a></td>
 <td><a href="../verification.html">検証基盤</a> / <a href="../hands_on.html">ハンズオン</a> / <a href="../tech_roadmap.html">技術ロードマップ</a> / <a href="../wbe_101.html">WBE入門</a></td>
