@@ -208,6 +208,11 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 <td><a href="https://mind-upload.com/research_harvest_50.html">文献地図</a></td>
 </tr>
 <tr>
+<td><strong>RQごとにEEGで解けるか・助成テーマまで一気に見たい</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds">RQ60×EEG-DATA検証可否と助成テーマ</a></td>
+<td><a href="https://mind-upload.com/research_harvest_50.html">文献地図</a> / <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a> / <a href="https://mind-upload.com/issue.html">貢献ガイド</a></td>
+</tr>
+<tr>
 <td><strong>部分解決、探索段階、未整備の違いで止まる</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/progress-labels-and-open-problem-status">部分解決・探索段階・未整備の読み方</a></td>
 <td><a href="https://mind-upload.com/research_harvest_50.html">文献地図</a> / <a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a></td>

@@ -223,6 +223,11 @@ recommended_pages:
 <td><a href="../research_harvest_50.html">文献地図</a></td>
 </tr>
 <tr>
+<td><strong>RQごとにEEGで解けるか・助成テーマまで一気に見たい</strong></td>
+<td><a href="mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60×EEG-DATA検証可否と助成テーマ</a></td>
+<td><a href="../research_harvest_50.html">文献地図</a> / <a href="../datasets.html">データ&ベンチ</a> / <a href="../issue.html">貢献ガイド</a></td>
+</tr>
+<tr>
 <td><strong>部分解決、探索段階、未整備の違いで止まる</strong></td>
 <td><a href="progress-labels-and-open-problem-status.html">部分解決・探索段階・未整備の読み方</a></td>
 <td><a href="../research_harvest_50.html">文献地図</a> / <a href="../tech_roadmap.html">技術ロードマップ</a></td>

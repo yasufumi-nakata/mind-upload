@@ -33,6 +33,7 @@
 - [Wiki：読んだ内容を変更へつなぐ流れ](https://github.com/yasufumi-nakata/mind-upload/wiki/reading-to-change-workflow)
 
 ## その他
+- [Mind-upload RQ60 × EEG-DATA 検証可否と助成テーマ（深掘り版）](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds)
 - [Wiki：Decode と Emulate](https://github.com/yasufumi-nakata/mind-upload/wiki/decode-vs-emulate)
 - [Wiki：EEGからL0までの一本道](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-to-l0-route)
 - [Wiki：EEG前処理とQC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc)
