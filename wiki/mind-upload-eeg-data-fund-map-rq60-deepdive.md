@@ -5,7 +5,7 @@ description: "research_harvest_50.md の60リサーチクエスチョンを1件�
 article_type: Wiki
 subtitle: "U0/U1/U3/U4/U7/U8/U10/U11/U12/U13/U14/U15 の60問を問い単位で判定"
 author: Mind Uploading Research Project
-last_updated: "2026-03-13"
+last_updated: "2026-03-14"
 note: "RQ60 deep dive"
 audience: "mind-upload のリサーチクエスチョンを1問ずつ助成テーマへ変換したい人"
 reading_time: "45〜90分"
@@ -31,7 +31,7 @@ recommended_pages:
     url: "/wiki/mind-upload-eeg-data-fund-map.html"
 ---
 
-# mind-upload RQ × EEG-DATA × auto-research-funds 検証（2026-03-13 JST）
+# mind-upload RQ × EEG-DATA × auto-research-funds 検証（2026-03-14 JST）
 
 ## 0. 依頼に対する実行方針
 - 対象は `research_harvest_50.md` の60RQ（U0/U1/U3/U4/U7/U8/U10/U11/U12/U13/U14/U15）。
@@ -72,24 +72,6 @@ recommended_pages:
 - このページの `D1-D16` は「本ページ内の固定エイリアス」として扱う。`EEG-DATA/eeg_dataset_summary_ja.csv` の `ID` はランキング起点のため将来変動しうる。
 - したがって、再利用時は `Dキー` だけでなく `DOI` と `データセット名` を必ず併記する。
 
-## 1.2 2026-03-13時点の実IDスナップショット（EEG-DATA先頭16行）
-- D1: 3M-CPSEED（`10.18112/openneuro.ds006465.v2.0.0`）
-- D2: 40tar_data（`10.6084/m9.figshare.28844471.v1`）
-- D3: 5 Mins 64-Channel RestingState EEG Eyes Closed（DOI未設定）
-- D4: A common neural mechanism underlies experiences of passage of time（`10.18112/openneuro.ds007454.v1.0.1`）
-- D5: large MI EEG + demographics（`10.5281/zenodo.7516451`）
-- D6: large MI EEG + profile（`10.5281/zenodo.7554429`）
-- D7: longitudinal MI-BCI + spinal stimulation（`10.5281/zenodo.15454354`）
-- D8: longitudinal MI-BCI + spinal stimulation（`10.5281/zenodo.15454355`）
-- D9: resting-state EEG for sleep deprivation（`10.18112/openneuro.ds004902.v1.0.8`）
-- D10: simultaneous EEG-fNIRS visual cognitive motivation（`10.17632/z92nw4n73t`）
-- D11: simultaneous EEG-fNIRS visual cognitive motivation（`10.17632/z92nw4n73t.1`）
-- D12: simultaneous EEG-fNIRS visual cognitive motivation（`10.17632/z92nw4n73t.2`）
-- D13: simultaneous EEG-fNIRS visual cognitive motivation（`10.17632/z92nw4n73t.3`）
-- D14: adjusted power resting-state EEG in adults who stutter（`10.17632/v6346g59xh`）
-- D15: adjusted power resting-state EEG in adults who stutter（`10.17632/v6346g59xh.1`）
-- D16: ArEEG_Words（`10.17632/7m472ykkx7`）
-- 補足: `D5/D6`, `D7/D8`, `D10-D13`, `D14/D15` は系列重複があるため、申請時は同系列の重複採用を避ける。
 
 ## 2. EEGデータキー（このページ内の固定キー）
 - `D1`: 16ch cEEGrid Auditory Attention (`10.21227/7qpk-9j22`)
@@ -586,13 +568,13 @@ companion CSV: `generated/mind-upload-eeg-data-fund-map/MindUpload-EEGDATA-FundM
 2. 各RQで `主要指標2つ` が計測できなければ、テーマ名を変えずにスコープだけ縮小する。
 3. 4週間成果物が出ない場合は、同じRQを `監査・設計提案` へ切り替えて提出可能化する。
 
-## 9. 2026-03-13 14:02 JST 反映ログ（本run）
+## 9. 2026-03-14 00:14 JST 反映ログ（本run）
 
 - 既存の 60RQ 深掘り本文（`4. U別・RQ別 深掘り固定表` と `7. 1問ずつ深掘り実行メモ`）を再監査し、RQ件数・データキー・助成キーの整合が崩れていないことを確認。
 - `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` 側にも同じ「1問ずつ深掘り運用」の導線を反映し、申請実務での往復参照を可能化。
 - このページは「技術可否と実験導線」を主担当、`auto-research-funds` 側ページは「申請実務導線」を主担当として使い分ける。
 
-## 10. 2026-03-13 19:01 JST 再監査追記（本run）
+## 10. 2026-03-14 00:14 JST 再監査追記（本run）
 
 - 依頼方針どおり、全体俯瞰ではなく `1RQ=1検証命題=1申請テーマ` の深掘り運用を継続。
 - 機械再監査結果: `RQ_COUNT=60`（`MindUpload-EEGDATA-FundMap-rq60-deepdive.csv`）、`DOI_MISS=0`（`EEG-DATA/eeg_dataset_summary_ja.csv`）、`ID_MISS=0`（`grant_eeg_dataset_match.csv` / `grant_queue` / `wiki/cards`）。
@@ -600,3 +582,9 @@ companion CSV: `generated/mind-upload-eeg-data-fund-map/MindUpload-EEGDATA-FundM
 - 実運用では、本ページの `7. 1問ずつ深掘り実行メモ` から1件だけ選び、完了後に次のRQへ進む手順を維持する。
 - `research_harvest_50.md` を正本とした `60RQ` の行順正規化（U0/U1/U3/U4/U7/U8/U10/U11/U12/U13/U14/U15）を再確認し、欠落・余剰なし。
 - `EEG-DATA/eeg_dataset_summary_ja.csv` の `ID` はランキング由来で将来変動しうるため、このページ内の `D1-D16` は固定エイリアスとして維持し、申請文では `DOI` 併記を必須とする。
+
+
+## 11. 2026-03-14 00:14 JST 追記（本run）
+- 依頼方針（全体俯瞰より `1RQ=1検証命題=1申請テーマ`）を維持したまま、60RQ個票の運用導線を再確認。
+- `D1-D16` を固定エイリアスとして使う方針に合わせ、先頭16行スナップショット節（可変ID混入）を削除し、ページ内のデータキー定義を単一化。
+- `mind-upload` 側Wikiと `auto-research-funds` 側Wikiの同内容反映を再確認。
