@@ -54,7 +54,31 @@ recommended_pages:
 - `B`: EEGで主要部は解けるが補助要件が必要
 - `C`: EEGは補助証拠（制度/理論側が主）
 
-## 2. EEGデータキー（EEG-DATAから抽出）
+## 1.1 正本とID規約（2026-03-13 20:12 JST 再確認）
+- RQ本文の正本は `mind-upload/research_harvest_50.md`（`<h3>リサーチクエスチョン分解</h3>` 直下 `<ol><li>` の順序）で、60件を再確認した。
+- このページの `D1-D16` は「本ページ内の固定エイリアス」として扱う。`EEG-DATA/eeg_dataset_summary_ja.csv` の `ID` はランキング起点のため将来変動しうる。
+- したがって、再利用時は `Dキー` だけでなく `DOI` と `データセット名` を必ず併記する。
+
+## 1.2 2026-03-13時点の実IDスナップショット（EEG-DATA先頭16行）
+- D1: 3M-CPSEED（`10.18112/openneuro.ds006465.v2.0.0`）
+- D2: 40tar_data（`10.6084/m9.figshare.28844471.v1`）
+- D3: 5 Mins 64-Channel RestingState EEG Eyes Closed（DOI未設定）
+- D4: A common neural mechanism underlies experiences of passage of time（`10.18112/openneuro.ds007454.v1.0.1`）
+- D5: large MI EEG + demographics（`10.5281/zenodo.7516451`）
+- D6: large MI EEG + profile（`10.5281/zenodo.7554429`）
+- D7: longitudinal MI-BCI + spinal stimulation（`10.5281/zenodo.15454354`）
+- D8: longitudinal MI-BCI + spinal stimulation（`10.5281/zenodo.15454355`）
+- D9: resting-state EEG for sleep deprivation（`10.18112/openneuro.ds004902.v1.0.8`）
+- D10: simultaneous EEG-fNIRS visual cognitive motivation（`10.17632/z92nw4n73t`）
+- D11: simultaneous EEG-fNIRS visual cognitive motivation（`10.17632/z92nw4n73t.1`）
+- D12: simultaneous EEG-fNIRS visual cognitive motivation（`10.17632/z92nw4n73t.2`）
+- D13: simultaneous EEG-fNIRS visual cognitive motivation（`10.17632/z92nw4n73t.3`）
+- D14: adjusted power resting-state EEG in adults who stutter（`10.17632/v6346g59xh`）
+- D15: adjusted power resting-state EEG in adults who stutter（`10.17632/v6346g59xh.1`）
+- D16: ArEEG_Words（`10.17632/7m472ykkx7`）
+- 補足: `D5/D6`, `D7/D8`, `D10-D13`, `D14/D15` は系列重複があるため、申請時は同系列の重複採用を避ける。
+
+## 2. EEGデータキー（このページ内の固定キー）
 - `D1`: 16ch cEEGrid Auditory Attention (`10.21227/7qpk-9j22`)
 - `D2`: Multi-Class Imagined Speech EEG (`10.21227/2ybw-rt36`)
 - `D3`: Multisensory Emotion EEG (`10.21227/kwee-4819`)
@@ -561,3 +585,5 @@ companion CSV: `generated/mind-upload-eeg-data-fund-map/MindUpload-EEGDATA-FundM
 - 機械再監査結果: `RQ_COUNT=60`（`MindUpload-EEGDATA-FundMap-rq60-deepdive.csv`）、`DOI_MISS=0`（`EEG-DATA/eeg_dataset_summary_ja.csv`）、`ID_MISS=0`（`grant_eeg_dataset_match.csv` / `grant_queue` / `wiki/cards`）。
 - `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` 側の助成キー表記は `G1-G6` に統一済みで、本ページとの参照整合を再確認。
 - 実運用では、本ページの `7. 1問ずつ深掘り実行メモ` から1件だけ選び、完了後に次のRQへ進む手順を維持する。
+- `research_harvest_50.md` を正本とした `60RQ` の行順正規化（U0/U1/U3/U4/U7/U8/U10/U11/U12/U13/U14/U15）を再確認し、欠落・余剰なし。
+- `EEG-DATA/eeg_dataset_summary_ja.csv` の `ID` はランキング由来で将来変動しうるため、このページ内の `D1-D16` は固定エイリアスとして維持し、申請文では `DOI` 併記を必須とする。
