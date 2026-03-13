@@ -49,7 +49,9 @@ recommended_pages:
 > すべて `MindUpload-EEGDATA-FundMap-*.csv` の接頭辞で揃えています。
 >
 > `tech_roadmap.md` の 51QA を問い単位で深掘りした版は  
-> [`/wiki/mind-upload-eeg-data-fund-map-roadmap-qa-deepdive.html`](/wiki/mind-upload-eeg-data-fund-map-roadmap-qa-deepdive.html) を参照してください。
+> [`/wiki/mind-upload-eeg-data-fund-map-roadmap-qa-deepdive.html`](/wiki/mind-upload-eeg-data-fund-map-roadmap-qa-deepdive.html) を参照してください。  
+> `research_harvest_50.md` の 60RQ を問い単位で深掘りした版は  
+> [`/wiki/mind-upload-eeg-data-fund-map-rq60-deepdive.html`](/wiki/mind-upload-eeg-data-fund-map-rq60-deepdive.html) を参照してください。
 
 ## 0. 結論
 

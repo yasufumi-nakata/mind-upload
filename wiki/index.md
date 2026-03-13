@@ -183,6 +183,11 @@ recommended_pages:
 <td><a href="../tech_roadmap.html">技術ロードマップ</a> / <a href="mind-upload-eeg-data-fund-map.html">EEG-DATA × 助成マップ</a> / <a href="../verification.html">検証基盤</a></td>
 </tr>
 <tr>
+<td><strong>research_harvestの60RQを1件ずつEEG可否と助成テーマへ落としたい</strong></td>
+<td><a href="mind-upload-eeg-data-fund-map-rq60-deepdive.html">Research Question 60問 × EEG-DATA × 助成テーマ深掘り</a></td>
+<td><a href="../research_harvest_50.html">文献地図</a> / <a href="mind-upload-eeg-data-fund-map.html">EEG-DATA × 助成マップ</a> / <a href="../verification.html">検証基盤</a></td>
+</tr>
+<tr>
 <td><strong>Verificationのあとに次の1ページを決めたい</strong></td>
 <td><a href="verification-next-routes.html">Verificationのあとに進む4つの道</a></td>
 <td><a href="../verification.html">検証基盤</a> / <a href="../hands_on.html">ハンズオン</a> / <a href="../tech_roadmap.html">技術ロードマップ</a> / <a href="../wbe_101.html">WBE入門</a></td>
@@ -532,6 +537,7 @@ recommended_pages:
 <li><a href="personhood-and-copy-problem.html">本人性とコピー問題 →</a></li>
 <li><a href="eeg-preprocessing-and-qc.html">EEG前処理とQC →</a></li>
 <li><a href="mind-upload-eeg-data-fund-map.html">EEG-DATA × 助成マップ →</a></li>
+<li><a href="mind-upload-eeg-data-fund-map-rq60-deepdive.html">Research Question 60問 × EEG-DATA × 助成テーマ深掘り →</a></li>
 <li><a href="literature-and-evidence-reading.html">文献と証拠ページの読み方 →</a></li>
 <li><a href="proposal-status-reading.html">提案と状態ラベルの読み方 →</a></li>
 <li><a href="u-number-guide.html">U番号ガイド →</a></li>
