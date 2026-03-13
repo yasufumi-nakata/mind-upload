@@ -1877,15 +1877,7 @@ footer p {
     }
 
     .summary-booklet-page .article-header {
-        margin: 0 0 8mm;
-        padding: 0;
-        background: transparent;
-        border: none;
-        box-shadow: none;
-    }
-
-    .summary-booklet-page .article-header .article-type {
-        margin-top: 0;
+        display: none !important;
     }
 
     .summary-booklet-page .main-container {
