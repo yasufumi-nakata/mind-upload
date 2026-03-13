@@ -5,7 +5,7 @@ description: "Mind-Upload と WBE が何の話で、何が分かっていて何�
 article_type: Wiki
 subtitle: "大きな夢を、小さく確かめられる問いに分ける"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Beginner guide"
 audience: "マインドアップロードという言葉だけ聞いたことがある人、最初の全体像を知りたい人"
 reading_time: "10〜15分"
@@ -27,6 +27,9 @@ wiki_links:
   - label: "Wiki: 主張と証拠の読み方"
     url: "/wiki/claims-and-evidence.html"
     description: "この全体像を、ニュースや研究発表の読み方に落とします。"
+  - label: "Wiki: 配線図だけでは足りない理由"
+    url: "/wiki/connectome-is-not-enough.html"
+    description: "配線だけで何が欠けるかを、技術と自然科学の側面から整理します。"
   - label: "Wiki: 本人性とコピー問題"
     url: "/wiki/personhood-and-copy-problem.html"
     description: "『コピー』と『移行』の違いをもう一段ていねいに整理します。"
@@ -122,6 +125,12 @@ WBE の話では、似ているものを混同しやすいからです。たと�
 この差を曖昧にすると、L1 の研究を L4 のように語ってしまいます。だからこのサイトでは、強い主張ほど、必要な証拠も強くする方針を取ります。
 </p>
 </div>
+<div class="note-box">
+<strong>「配線図があれば WBE に近いのか？」で止まったとき</strong>
+<p>
+配線図は重要ですが、シナプス状態、遅延と髄鞘、神経修飾、グリア、細胞型ラベルが欠けると強い主張はできません。技術と自然科学の側面だけでこの差を整理したい場合は <a href="connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> をご覧ください。
+</p>
+</div>
 </section>
 
 <section class="section" id="site-role">
@@ -143,6 +152,7 @@ WBE の話では、似ているものを混同しやすいからです。たと�
 <h4>Related Wiki</h4>
 <ul>
 <li><a href="claims-and-evidence.html">主張と証拠の読み方 →</a></li>
+<li><a href="connectome-is-not-enough.html">配線図だけでは足りない理由 →</a></li>
 <li><a href="personhood-and-copy-problem.html">本人性とコピー問題 →</a></li>
 <li><a href="verification-basics.html">検証基盤の基本 →</a></li>
 <li><a href="eeg-basics.html">EEGの基本 →</a></li>

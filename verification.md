@@ -48,6 +48,9 @@ wiki_links:
   - label: "Wiki: 観測から推定へ"
     url: "/wiki/observation-to-estimation.html"
     description: "ESI、DCM、SCM、因果同値類を、観測と推定の違いから整理します。"
+  - label: "Wiki: 配線図だけでは足りない理由"
+    url: "/wiki/connectome-is-not-enough.html"
+    description: "connectome だけで落ちる状態変数を、シナプス・遅延・神経修飾・グリアから整理します。"
   - label: "Wiki: 反事実・介入・摂動"
     url: "/wiki/counterfactual-and-perturbation-verification.html"
     description: "held-out 精度と因果的摂動検証の差を、初歩から整理します。"
@@ -564,6 +567,55 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 <li><strong>既存ベンチマークとの接続：</strong>BCI Competition、MOABB等の既存ベンチマークとの互換性・差分を明確にし、車輪の再発明を避ける。</li>
 <li><strong>失敗事例の体系化：</strong>Commonsの設計にはネガティブリザルトの収集と公開が含まれるが、収集のインセンティブ設計が未着手。</li>
 </ul>
+</div>
+</section>
+
+<section class="section" id="state-completeness-gate">
+<h2 class="section-title">状態変数の完全性ゲート</h2>
+<p>
+2026年3月の一次文献監査では、<strong>「配線図がある」こと</strong>と<strong>「生成的に振る舞える」こと</strong>の間に、少なくとも 5 種類の抜けやすい状態変数があることを再確認しました。Dorkenwald et al. (2024)、Holler et al. (2021)、Matsuzaki et al. (2004)、Reimer et al. (2016)、Adamsky et al. (2018)、Micheva et al. (2021)、Gamlin et al. (2025) などを踏まえ、本サイトでは <strong>edge list だけの提出物を L2 以上の合格条件に使いません</strong>。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>状態クラス</th>
+<th>なぜ配線図だけでは不足か</th>
+<th>欠けている場合に言える範囲</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>細胞型ラベル</strong></td>
+<td>同じ隣接関係でも、転写型ごとに結合モチーフ、シナプス特性、髄鞘化の傾向が変わります。</td>
+<td>構造アトラスや候補 scaffold としては有用ですが、機能再現の十分条件とは言えません。</td>
+</tr>
+<tr>
+<td><strong>シナプス効率・短期状態</strong></td>
+<td>辺の有無だけでは重み、放出確率、可塑的変化を決められません。</td>
+<td>静的配線の記述までは可能ですが、L2 の介入予測や L3 の安定制御は主張できません。</td>
+</tr>
+<tr>
+<td><strong>遅延・髄鞘</strong></td>
+<td>同じグラフでも伝導速度が違えば同期と位相が変わります。</td>
+<td>閉ループや時間整合性の主張を止め、遅延不確実性を明示します。</td>
+</tr>
+<tr>
+<td><strong>神経修飾場</strong></td>
+<td>覚醒度や学習率の状態は静的配線から復元できず、瞳孔径や HRV は coarse proxy にとどまります。</td>
+<td>トランスミッタ特異的な内部状態は主張せず、共変量や層別化因子として扱います。</td>
+</tr>
+<tr>
+<td><strong>グリア・代謝結合状態</strong></td>
+<td>アストロサイト等は可塑性と記憶想起に因果的に関与し、単なる支持組織ではありません。</td>
+<td>可塑性や長期安定性は部分モデルとして扱い、適用範囲を限定します。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>ここでの実務ルール</strong>
+<p>
+connectome-complete は <strong>emulation-complete を意味しません</strong>。詳細な一次文献と、どの状態変数を最低提出物に入れるべきかの技術的根拠は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> に集約します。
+</p>
 </div>
 </section>
 

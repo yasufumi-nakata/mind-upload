@@ -35,6 +35,9 @@ wiki_links:
   - label: "Wiki: 主張と証拠の読み方"
     url: "/wiki/claims-and-evidence.html"
     description: "なぜ前の層を飛ばして強い主張に行けないかを日常語で説明します。"
+  - label: "Wiki: 配線図だけでは足りない理由"
+    url: "/wiki/connectome-is-not-enough.html"
+    description: "R 系列で抜けやすい状態変数を、シナプス・遅延・神経修飾・グリアから整理します。"
   - label: "Wiki: EEG前処理とQC"
     url: "/wiki/eeg-preprocessing-and-qc.html"
     description: "M 系列で出てくる前処理や品質管理の基礎を補います。"
@@ -113,6 +116,12 @@ P/M/R/I/V/D の記号や依存関係を初歩から追いたい場合は、先�
 <strong>I1 / L3 の閉ループで止まったとき</strong>
 <p>
 リアルタイムに動くと言っても、遅延、ジッタ、end-to-end の戻り、安全停止をどう測るかで難しさが変わります。この入口を初歩から整理したい場合は <a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: 閉ループ・遅延・ジッタ・安全停止</a> を先にご覧ください。
+</p>
+</div>
+<div class="note-box">
+<strong>『コネクトームが取れたら十分では？』で止まったとき</strong>
+<p>
+R 系列では、配線図だけでなく、細胞型、シナプス効率、遅延と髄鞘、神経修飾、グリアをどう扱うかが分岐点になります。どの状態変数が抜けると何が主張できなくなるかを一次文献から整理したい場合は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> をご覧ください。
 </p>
 </div>
 <div class="note-box">
@@ -687,9 +696,9 @@ WBEにおける「プロセスの同期」要件は、単純な遅延閾値（�
 <span class="qa-tags"><span class="tag">NEUROMODULATION</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>問い：</strong>シナプス結合（Wiring Transmission）だけでは、ドーパミンやセロトニンによる全脳的な「ムード」「学習率」の変化を再現できない。</p>
-<p><strong>解決策：</strong>アーキテクチャに<strong>「Neuromodulation-aware Layers（神経修飾層）」</strong>を追加する。これは、入力応答ゲイン（活性化関数の傾き）や可塑性（学習率）を動的に制御するメタパラメータとして機能する。</p>
-<p><strong>次に必要：</strong>瞳孔径や心拍変動などの生理指標を、脳幹アミン系活動のプロキシとしてモデルに入力する（M1/M8）</p>
+<p><strong>問い：</strong>シナプス結合（Wiring Transmission）だけでは、ドーパミンやセロトニンなどの状態依存的な調節を再現できない。さらに、瞳孔径や HRV は粗い proxy であり、トランスミッタ特異的・領域特異的な内部状態の ground truth にはならない。</p>
+<p><strong>暫定方針：</strong>神経修飾は「1つの気分スカラー」ではなく、<strong>空間分布・時間スケール・受容体依存性を持つ潜在状態</strong>として扱う。人データでは瞳孔径や HRV を共変量や層別化に使えても、それだけで脳幹アミン系を同定したとは言わない。</p>
+<p><strong>次に必要：</strong>動物や侵襲系の transmitter sensor / pharmacology / perturbation で proxy を較正し、ヒト側では不確実性つきの状態推定と棄権条件を公開する。背景は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> を参照。</p>
 </div>
 </details>
 </div>
