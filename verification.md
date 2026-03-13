@@ -568,44 +568,47 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 </section>
 
 <section class="section" id="verification-rigor">
-<h2 class="section-title">検証の厳密性要件（Technical Critique対応）</h2>
+<h2 class="section-title">検証の厳密性要件（2026-03 科学監査で再整理）</h2>
 <p>
-Issues #64–#70 で指摘された技術的批判を受け、Verification Commonsの検証基準を以下のとおり強化します。
+2026年3月の一次文献監査に基づき、この節は「現時点で標準に近い要件」と「有望だが探索段階の要件」を分けて書き直しました。主な修正点は、<strong>特定ツール名を一律に義務化しない</strong>、<strong>source imaging の主張には外部妥当化を必須にする</strong>、<strong>TMS-EEG と熱力学指標は適用条件つきに下げる</strong>、の3点です。
 </p>
+<div class="note-box">
+<strong>監査で見えた弱点</strong>
+<p>
+従来の本文では、ASR、ZapLine-plus、PCI-ST、Effective Information、EPR など、性質の違う手法が同じ「必須要件」として並んでいました。しかし、COBIDAS-MEEG や EEG-BIDS が強調するのは、まず<strong>透明な報告</strong>、<strong>共有可能なメタデータ</strong>、<strong>比較可能なベースライン</strong>です。したがって本ページでは、<strong>再現性の土台</strong>を必須、<strong>方法論の選択</strong>を推奨、<strong>理論駆動の追加指標</strong>を探索へ再配置します。
+</p>
+</div>
 <div class="key-points">
-<h4>強化要件</h4>
+<h4>必須要件（現時点で標準に近いもの）</h4>
 <ul>
-<li><strong>不確実性定量化の義務化：</strong>Benchmark Suiteに提出されるすべてのESI（EEG Source Imaging）結果には、信用区間（credible intervals）または事後分布の集中度指標を必ず含めること。点推定のみではWBEグレードの検証として不十分である。</li>
-<li><strong>外部基準つき妥当化の義務化：</strong>ESI の改善主張は、シミュレーション、ファントム、同時侵襲記録、頭蓋内刺激など外部基準のいずれで検証したかを併記すること。高密度EEGや個体別MRIの採用だけで深部精度を主張してはならない。</li>
-<li><strong>摂動ベース検証の標準化：</strong>同一性検証には、学習済みタスクを超えた摂動ベーステストを必須とする。
-<ul>
-<li>シミュレーションTMS応答が生体脳とエミュレーション間で一致すること</li>
-<li>PCI-STの空間分布比較を複数の摂動部位で実施すること</li>
-<li>未学習（新規）刺激に対する応答が統計的に区別不能であること</li>
+<li><strong>共有可能な入力：</strong>BIDS / EEG-BIDS に準拠し、<code>events.tsv</code> と JSON sidecar、電極座標、座標系、課題説明、指示文、主要アーティファクト要因を残します。イベント意味づけは HED や CogAtlasID など機械可読な語彙で補うことを強く推奨します。</li>
+<li><strong>透明な報告：</strong>COBIDAS-MEEG に沿って、取得条件、参照法、フィルタ、bad channel 処理、除外試行、ICA/回帰/補間の順序とパラメータを公開します。再現できない「自動前処理」は採用しません。</li>
+<li><strong>ESI主張の外部妥当化：</strong>EEG source imaging の改善を主張する場合は、個体別 MRI・座標・forward model を可能な限り明示し、さらにシミュレーション、ファントム、同時侵襲記録、頭蓋内刺激のいずれかで誤差を検証します。高密度 EEG や MRI の導入だけで深部精度を主張してはなりません。</li>
+<li><strong>比較の設計：</strong>評価は単一データセットの精度で完結させず、被験者単位またはセッション単位で分割し、既存ベースラインと比較し、失敗例・棄権条件・不確実性を公開します。単独データセットでの改善は外部一般化を保証しません。</li>
 </ul>
-</li>
-<li><strong>適応的前処理の要件：</strong>
+</div>
+<div class="key-points">
+<h4>推奨要件（課題依存だが再現性を上げるもの）</h4>
 <ul>
-<li>ASRカットオフ閾値は静的ではなく適応的とし、リーマン幾何ベースの外れ値検出を用いること</li>
-<li>周波数追従型ノイズ除去にはZapLine-plusを使用すること</li>
-<li>除去されたコンポーネントの空間トポグラフィをBIDS監査証跡としてログに記録すること</li>
+<li><strong>前処理の感度分析：</strong>ASR、Autoreject、ICA、ZapLine-plus、リーマン幾何系などは候補であり、万能な正解ではありません。少なくとも 1 つの代替設定または感度分析を残し、どの処理が結果を動かしたかを確認します。</li>
+<li><strong>信号保存の監査：</strong>前後スペクトル、除外率、補間率、主要指標の変化量を記録し、「ノイズが減った」だけでなく「目的信号を壊していないか」を確認します。</li>
+<li><strong>TMS-EEG/PCI の条件明示：</strong>摂動複雑性を使う場合は、刺激部位、強度、コイル角度、聴覚マスキング、筋電・刺激アーチファクト窓、再現性評価を報告し、TMS-EEG の推奨事項に従います。</li>
 </ul>
-</li>
-<li><strong>因果指標の検証スイートへの統合：</strong>
+</div>
+<div class="key-points">
+<h4>探索要件（有望だが現時点ではゲート条件にしないもの）</h4>
 <ul>
-<li>Effective Information（EI）およびCausal Densityをコア検証指標とすること</li>
-<li>有向非線形情報フローにはSymbolic Transfer Entropy（STE）を用いること</li>
-<li>Pearlの因果階梯（観察→介入→反事実）を評価フレームワークとすること</li>
+<li><strong>PCI-ST空間分布、Effective Information、Causal Density、Transfer Entropy：</strong>これらは研究上有用であり得ますが、課題依存性と実装依存性が大きく、現時点では共通ベンチの必須コア指標には置きません。</li>
+<li><strong>パーシステンス図、Bottleneck distance、Fisher情報量距離：</strong>構造比較の補助指標としては有望ですが、解釈と安定性の標準化が不足しています。補助解析として提出し、一次判定はより単純で監査しやすい指標に置きます。</li>
+<li><strong>熱力学的不可逆性・EPR：</strong>脳ダイナミクスの非平衡性を捉える研究は進んでいますが、現状の主証拠は fMRI や ECoG、理論モデルに強く依存します。WBE 検証の pass/fail を決める必須KPIとしてはまだ早いです。</li>
 </ul>
-</li>
-  </ul>
-  </div>
+</div>
 </section>
 
 <section class="section" id="causal-perturbation-suite">
-<h2 class="section-title">因果的摂動スイート（Causal Perturbation Suite）</h2>
+<h2 class="section-title">因果的摂動スイート（段階導入版）</h2>
 <p>
-Issues #251・#254 を踏まえ、標準的な行動テストを超えてWBE同一性を検証するベンチマークとして「因果的摂動スイート（Causal Perturbation Suite）」を定義します。単なる出力の一致ではなく、<strong>摂動に対する応答構造の等価性</strong>を検証するテスト群です。
+Issues #251・#254 を踏まえ、この節では「標準的な行動テストを超える」方向性を維持しつつ、<strong>いま実行できる検証</strong>と<strong>外部依存の強い検証</strong>を分離します。単なる出力一致ではなく、条件を変えたときの応答構造まで比較する発想は重要ですが、現時点では段階導入が妥当です。
 </p>
 <div class="note-box">
 <strong>普通の精度評価と何が違うのか</strong>
@@ -620,35 +623,35 @@ held-out 精度、介入、反事実、摂動ベース検証の違いを日常�
 </p>
 </div>
 <div class="key-points">
-<h4>三つのテストカテゴリ</h4>
+<h4>三段階の導入</h4>
 <ul>
-<li><strong>1. シミュレーションTMS応答の一致：</strong>仮想摂動（virtual perturbation）を印加し、生物学的脳とエミュレーション間のEEG応答パターンを比較する。複数摂動部位での応答伝播の統計的一致を検証する。</li>
-<li><strong>2. 薬理学的介入シミュレーション：</strong>麻酔・薬物効果の伝播をモデル化し、生体脳における実測データと比較する。状態遷移（覚醒↔鎮静など）のパターン再現性を検証する。</li>
-<li><strong>3. 新規・極端刺激応答：</strong>学習中に一度も見せていない新規・極端刺激に対する応答を比較し、KLダイバージェンスを用いた分岐パターンの違いを評価する。</li>
+<li><strong>Stage A / いま実行できる検証：</strong>公開 EEG データで、被験者外一般化、未学習条件、条件シフト、棄権、キャリブレーションを事前登録して比較します。まずは再現可能な L0〜L1 ループを固めます。</li>
+<li><strong>Stage B / 外部基準つき中間検証：</strong>シミュレーション、ファントム、頭蓋内刺激など ground truth のあるデータで、応答誤差と不確実性を測ります。source imaging や摂動応答の改善主張は、この段階を通さない限り強く言いません。</li>
+<li><strong>Stage C / 実介入：</strong>TMS-EEG、tDCS、薬理学的介入は強い検証力を持つ一方、IRB、機材、被験者運用が前提です。本リポジトリでは要求仕様と公開ログ形式を先行整備し、実験実施自体は外部依存タスクとして分離します。</li>
 </ul>
 </div>
 <div class="note-box">
 <strong>評価指標</strong>
 <p>
-PCI-ST空間分布比較、パーシステンス図のBottleneck distance、生成モデル間距離のFisher Information Metric (FIM) を採用する。反事実等価性については Laukkonen et al. (2025) を参照する。
+一次判定では、事前登録した effect size、OOD 条件での頑健性、校正誤差、棄権率、不確実性の幅を優先します。PCI-ST 空間分布、パーシステンス図の Bottleneck distance、生成モデル間距離の Fisher Information Metric (FIM) は補助解析として残し、主要な合否判定を一手法へ依存させません。
 </p>
 </div>
 </section>
 
 <section class="section" id="verification-rigor-2026-02">
-<h2 class="section-title">検証要件の追加更新（Issue #257–#260）</h2>
+<h2 class="section-title">追加監査ログ（適用条件つき）</h2>
 <p>
-2026年2月後半に提出された技術批判（Issue #257–#260）に対応し、既存要件に不足していた判定ログを追加します。目的は「主張の強化」ではなく、第三者が反証可能な形で再現監査できることです。
+2026年2月後半に提出された技術批判（Issue #257–#260）に対応し、追加ログの位置づけを整理します。目的は「全部を必須にする」ことではなく、<strong>その解析を行ったなら何を一緒に出すべきか</strong>を明確にすることです。
 </p>
 <div class="key-points">
-<h4>追加必須ログ</h4>
+<h4>適用条件つきログ</h4>
 <ul>
-<li><strong>HBM不確実性マップ：</strong>EEG逆問題では、頭蓋導電率を含む順問題パラメータとソース活動を同時推定し、モンテカルロ感度分析の空間マップを提出すること。</li>
-<li><strong>因果同値類の明示：</strong>推定モデルが唯一解であるとは主張せず、同一観測統計量を説明しうる代替モデル群（causal equivalence class）の存在を報告すること。</li>
-<li><strong>摂動一致の追加判定：</strong>PCI-STの値比較だけでなく、局所介入（TMS/tDCS相当）での応答分岐一致を必須とすること。</li>
-<li><strong>前処理忠実度監査：</strong>ASR適用前後の相互情報量（MI）および位相同期（PLV/wPLI）の保存率を記録し、高周波成分の過抑制を検査すること。</li>
-<li><strong>セマンティックメタデータ：</strong>BIDSメタデータにCogPO/NIF準拠タグと主観報告（ESM等）を追加し、認知文脈の欠落を防ぐこと。</li>
-<li><strong>熱力学KPI：</strong>FLOPs系の論理コストとEPR系の散逸コストを分離し、通信対計算エネルギー比を併記すること。</li>
+<li><strong>ESI / HBM ログ：</strong>解剖学的な source claim を行う場合に限り、頭蓋導電率や forward model の感度分析、あるいは階層ベイズ推定による不確実性マップを添付します。</li>
+<li><strong>代替モデルログ：</strong>推定モデルが唯一解であるとは主張せず、同一観測統計量を説明しうる代替モデル群や同値類の存在を報告します。</li>
+<li><strong>前処理忠実度ログ：</strong>ASR の有無に限らず、前後スペクトル、除外/補間率、主要指標の変化量、少なくとも 1 つの課題整合的な信号保存指標を記録します。</li>
+<li><strong>イベント意味論ログ：</strong>BIDS メタデータに HED を付与し、必要に応じて CogAtlas / CogPO / NIF / SCORE 等へ写像します。特定オントロジーへの固定を共通必須にはしません。</li>
+<li><strong>摂動ログ：</strong>局所介入や刺激を使った場合は、刺激部位、強度、アーチファクト窓、マスキング、安全停止条件、再試行条件を公開します。使っていない場合は「摂動証拠なし」と明記します。</li>
+<li><strong>補助的熱力学ログ：</strong>不可逆性や EPR を報告する場合は、粗視化、モダリティ、サンプリング、推定器、下界なのか本体推定なのか、ハードウェア電力と計算コストの切り分けを明記します。</li>
 </ul>
 </div>
 <div class="note-box">
@@ -660,33 +663,30 @@ PCI-ST空間分布比較、パーシステンス図のBottleneck distance、生�
 </section>
 
 <section class="section" id="thermodynamic-verification">
-<h2 class="section-title">熱力学的検証要件（Thermodynamic Verification Requirements）</h2>
+<h2 class="section-title">熱力学指標（探索トラック）</h2>
 <p>
-Issues #251・#254 に基づき、NESS（非平衡定常状態）およびEPR（エントロピー生成速度）の観点から熱力学指標を検証スイートに組み込みます。
+NESS（非平衡定常状態）や time irreversibility を使って脳ダイナミクスを調べる研究は重要ですが、本サイトでは 2026-03 時点で<strong>補助的な研究トラック</strong>と位置づけます。不可逆性指標の有用性は示されつつある一方、WBE 検証の共通受け入れ基準としては、まだモダリティ依存性と推定仮定の影響が大きいためです。
 </p>
 <div class="key-points">
-<h4>必須要件</h4>
+<h4>現時点で言えること</h4>
 <ul>
-<li><strong>熱力学指標の報告義務：</strong>ベンチマークへのエミュレーション提出物は、必ず熱力学関連指標を報告すること。既存の情報論的指標を補完する。</li>
+<li><strong>詳細釣り合いの破れは観測されうる：</strong>脳活動から entropy production の下界を推定する研究はあり、不可逆性が神経ダイナミクスの情報を持つこと自体は支持されています。</li>
+<li><strong>ただし解釈はモダリティ依存です：</strong>意識状態と不可逆性の関連は fMRI や ECoG などでも報告されていますが、粗視化、時間分解能、前処理で見え方が変わります。</li>
+<li><strong>したがってゲート条件にはしません：</strong>現段階では、熱力学指標だけで WBE 的同一性や妥当性の合否を決めません。</li>
 </ul>
 </div>
 <div class="key-points">
-<h4>実証的EPR測定</h4>
+<h4>採用する場合の最低条件</h4>
 <ul>
-<li><strong>下界エントロピー生成速度：</strong>EEG時系列を用い、時間反転対称性の破れ（time-reversal asymmetry）に基づいてエントロピー生成速度の下界を推定する（Lynn et al., 2021, PNAS; Ishihara &amp; Shimazaki, 2025, Nature Communications）。</li>
-</ul>
-</div>
-<div class="key-points">
-<h4>エネルギー効率の比較</h4>
-<ul>
-<li><strong>仮想エネルギー流の比率：</strong>エミュレーションの仮想エネルギー流と、生物学的脳の約20Wとの比を算出し、効率性を比較する。</li>
-<li><strong>通信 vs 計算のエネルギー比：</strong>Niven &amp; Laughlin (2008) に従い、大脳皮質において通信コストが計算コストの約35倍となる点を考慮し、エミュレーション設計の評価に反映する。</li>
+<li><strong>推定条件の開示：</strong>粗視化、サンプリング周期、状態空間再構成、Markov 仮定、下界推定かどうかを必ず書きます。</li>
+<li><strong>コストの切り分け：</strong>ハードウェア電力、wall-clock energy、FLOPs、通信コストを分離して報告し、生物学的脳の約20Wは比較の背景値としてのみ扱います。</li>
+<li><strong>補助指標として提出：</strong>既存の再現性指標、source 妥当化、摂動応答、ベースライン比較と並べて読み、単独で結論を出しません。</li>
 </ul>
 </div>
 <div class="note-box">
-<strong>位置づけ</strong>
+<strong>本リポジトリで今やること</strong>
 <p>
-これらの熱力学指標は、既存の情報論的指標（Effective Information、Causal Density 等）を補完する。同一性検証において、非平衡熱力学の観点を欠いた主張は不十分とみなす。
+本リポジトリでは、熱力学指標を「必須提出物」にするのではなく、ログ形式と文献監視を整える段階に留めます。実データでの安定運用と推定誤差の監査が固まるまでは、探索的補助解析として扱います。
 </p>
 </div>
 </section>
@@ -694,12 +694,25 @@ Issues #251・#254 に基づき、NESS（非平衡定常状態）およびEPR（
 <section class="section" id="references">
 <h2 class="section-title">参考文献（主要）</h2>
 <ol>
-<li>Gorgolewski, K. J., et al. (2016). BIDS. <a href="https://doi.org/10.1038/sdata.2016.44" target="_blank">doi:10.1038/sdata.2016.44</a></li>
+<li>Gorgolewski, K. J., et al. (2016). The brain imaging data structure. <a href="https://doi.org/10.1038/sdata.2016.44" target="_blank">doi:10.1038/sdata.2016.44</a></li>
+<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS EEG Specification</a>（official documentation）</li>
 <li>Pernet, C. R., et al. (2019). EEG-BIDS. <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">doi:10.1038/s41597-019-0104-8</a></li>
+<li>Bigdely-Shamlo, N., et al. (2016). Hierarchical Event Descriptors (HED). <a href="https://doi.org/10.3389/fninf.2016.00042" target="_blank">doi:10.3389/fninf.2016.00042</a></li>
+<li>Hermes, D., et al. (2025). HED library schema for EEG data annotation. <a href="https://doi.org/10.1038/s41597-025-05791-2" target="_blank">doi:10.1038/s41597-025-05791-2</a></li>
+<li>Pernet, C., et al. (2020). COBIDAS-MEEG recommendations. <a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">doi:10.1038/s41593-020-00709-0</a></li>
 <li>Markiewicz, C. J., et al. (2021). OpenNeuro resource paper. <a href="https://doi.org/10.7554/eLife.71774" target="_blank">doi:10.7554/eLife.71774</a></li>
-<li>Goldberger, A. L., et al. (2000). PhysioBank/PhysioNet. <a href="https://doi.org/10.1161/01.CIR.101.23.e215" target="_blank">doi:10.1161/01.CIR.101.23.e215</a></li>
+<li>Goldberger, A. L., et al. (2000). PhysioBank / PhysioNet. <a href="https://doi.org/10.1161/01.CIR.101.23.e215" target="_blank">doi:10.1161/01.CIR.101.23.e215</a></li>
+<li>Jayaram, V., &amp; Barachant, A. (2018). MOABB: trustworthy algorithm benchmarking for BCIs. <a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">doi:10.1088/1741-2552/aadea0</a></li>
+<li>Michel, C. M., &amp; Brunet, D. (2019). EEG source imaging: a practical review. <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">doi:10.3389/fneur.2019.00325</a></li>
+<li>Unnwongse, K., et al. (2022). Validating EEG source imaging using intracranial electrical stimulation. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
+<li>Delorme, A. (2023). EEG is better left alone. <a href="https://doi.org/10.1038/s41598-023-27528-0" target="_blank">doi:10.1038/s41598-023-27528-0</a></li>
+<li>Klug, M., &amp; Kloosterman, N. A. (2022). Zapline-plus. <a href="https://doi.org/10.1002/hbm.25832" target="_blank">doi:10.1002/hbm.25832</a></li>
+<li>Hernandez-Pavon, J. C., et al. (2023). TMS combined with EEG: recommendations and open issues. <a href="https://doi.org/10.1016/j.brs.2023.02.009" target="_blank">doi:10.1016/j.brs.2023.02.009</a></li>
+<li>Casali, A. G., et al. (2013). A theoretically based index of consciousness independent of sensory processing and behavior. <a href="https://doi.org/10.1126/scitranslmed.3006294" target="_blank">doi:10.1126/scitranslmed.3006294</a></li>
+<li>Comolatti, R., et al. (2019). A fast and general method to empirically estimate the complexity of brain responses to transcranial and intracranial stimulations. <a href="https://doi.org/10.1016/j.brs.2019.05.013" target="_blank">doi:10.1016/j.brs.2019.05.013</a></li>
+<li>Lynn, C. W., et al. (2021). Broken detailed balance and entropy production in the human brain. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>
+<li>de la Fuente, L. A., et al. (2022). Temporal irreversibility of neural dynamics as a signature of consciousness. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
 <li>Nosek, B. A., et al. (2015). Promoting an open research culture. <a href="https://doi.org/10.1126/science.aab2374" target="_blank">doi:10.1126/science.aab2374</a></li>
-<li>Jayaram, V., &amp; Barachant, A. (2018). MOABB: BCI benchmark framework. <a href="https://doi.org/10.1088/1741-2552/aaddc8" target="_blank">doi:10.1088/1741-2552/aaddc8</a></li>
 <li>Wilkinson, M. D., et al. (2016). The FAIR Guiding Principles. <a href="https://doi.org/10.1038/sdata.2016.18" target="_blank">doi:10.1038/sdata.2016.18</a></li>
 </ol>
 </section>
