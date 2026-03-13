@@ -288,10 +288,10 @@ href="#ref-16">[16]</a></sup>の知見を踏まえた整理である。</p>
 <ul
 style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; line-height: 1.6;">
 <li style="margin-bottom: 8px;">
-<strong>超高密度EEGとBlock-Champagneの統合：</strong>Block-Champagne Framework<sup><a href="#ref-78">[78]</a></sup>はスパースな活動推定に優れるが、深部脳活動や全脳ダイナミクスの再現には不十分である。したがって、<strong>超高密度EEG（High-density EEG, 256ch以上）</strong>と<strong>個体別MRIに基づく有限要素法（FEM）フォワードモデル</strong>の導入を必須条件とする。さらに、Feng et al. (2025)<sup><a href="#ref-78">[78]</a></sup>が指摘するノイズ特性の動的変化に対応するため、適応的ベイズ更新を実装に組み込む。
+<strong>高密度EEGとベイズ推定の位置づけ：</strong>Block-Champagne Framework<sup><a href="#ref-78">[78]</a></sup>、高密度EEG、個体別MRIに基づく有限要素法（FEM）フォワードモデルは、推定の条件を改善する重要な要素です。しかし、これらを入れても逆問題の非一意性は消えず、深部脳活動の精密な復元が保証されるわけではありません。したがって本プロジェクトでは、これらを<strong>保証の根拠</strong>ではなく、<strong>誤差を狭めるための前提条件</strong>として扱います。
 </li>
 <li style="margin-bottom: 8px;">
-<strong>不確実性の可視化と信頼区間：</strong>推定された脳活動マップには、振幅だけでなくその<strong>「信頼区間（Credible Intervals）」</strong>を常に併記し、不確実性が高い領域を明示するプロトコルを必須化します。これは`mind-upload/02_source_imaging.py`に実装されるべき中心機能です。
+<strong>不確実性の可視化と外部妥当化：</strong>推定された脳活動マップには、振幅だけでなく<strong>「信頼区間（Credible Intervals）」</strong>または事後分布の集中度を併記し、不確実性が高い領域を明示します。さらに、シミュレーション、ファントム、同時侵襲記録、頭蓋内刺激などの外部基準に対して、どの条件でどこまで誤差が減ったかを報告しない限り、「改善した」とは呼びません。
 </li>
 <li style="margin-bottom: 8px;">
 <strong>順問題の不確実性と誤差伝播：</strong>頭部組織（特に頭蓋骨）の導電率や形状の誤差を確率変数として扱う<strong>順問題の不確実性モデリング</strong><sup><a href="#ref-79">[79]</a></sup>を導入し、最終的なソース活動の事後分布に誤差を伝播させることで、結果のロバスト性を真に評価可能にします。

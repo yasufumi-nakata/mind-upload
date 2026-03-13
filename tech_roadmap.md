@@ -4,7 +4,7 @@ title: "技術ロードマップ：計測→再構成→実装でWBEを理解す
 description: "マインドアップロード（WBE）を技術面から俯瞰する学習ロードマップ。計測→再構成→実装→検証の問いの木で整理。"
 article_type: "Roadmap (Definition #1)"
 subtitle: "「何を解けたら前進か」を問いの木に分解し、読む順番と最低限の到達点を示す"
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "暫定版（随時更新）"
 audience: "全体像を知りたい人、学習順序を決めたい人、主張の強さを段階で整理したい人"
 reading_time: "20〜30分（索引だけなら5分）"
@@ -585,8 +585,8 @@ WBEにおける「プロセスの同期」要件は、単純な遅延閾値（�
 <div class="qa-body">
 <p><strong>問い：</strong>EEGソース推定は「領域×時間」の表現を得やすいが、ニューロン/シナプスは直接は見えない。復元対象（R0）に合わせて表現を選ぶ。</p>
 <p><strong>課題：</strong>従来は「高密度EEG(128ch)化」が推奨されてきたが、近年の研究はチャンネル数だけでは不良設定性（ill-posedness）を解決できないことを示している。特に、dSPMのような点推定法は不確実性を無視してしまう。</p>
-<p><strong>階層的ベイズモデルと高解像度計測の統合：</strong>Block-Champagne系の手法（Cai et al., 2021; Sechet et al., 2025）を採用し、<strong>超高密度EEG（High-density EEG, 256ch以上）</strong>と<strong>個体別MRIに基づく有限要素法（FEM）フォワードモデル</strong>の導入を必須化する。これにより深部脳活動の推定精度を担保する。さらに、ノイズ推定の頑健化研究（<a href="https://doi.org/10.1016/j.neuroimage.2020.117411" target="_blank">doi:10.1016/j.neuroimage.2020.117411</a>, <a href="https://doi.org/10.1109/SAMPTA64769.2025.11133512" target="_blank">doi:10.1109/SAMPTA64769.2025.11133512</a>）で示される条件変動への対応として、<strong>適応的ベイズ更新（Adaptive Bayesian Updating）</strong>を実装し、推定された脳活動マップには必ず<strong>信頼区間（Credible Intervals）</strong>を付随させる。</p>
-<p><strong>次に必要：</strong>`mind-upload/02_source_imaging.py` に変分ベイズ（Variational Bayesian）アプローチを実装し、不確実性を考慮したソース再構成を行う <strong>(✅ Implemented in Issue #43)</strong></p>
+<p><strong>厳密化した方針：</strong>Block-Champagne系のような不確実性付き推定、<strong>高密度EEG</strong>、<strong>個体別MRIに基づくFEM/BEMフォワードモデル</strong>は、推定の条件を改善する有力な手段です。ただし、これらは<strong>深部脳活動の精度を保証するものではありません</strong>。採用条件は「深部まで見えると言えること」ではなく、<strong>どの誤差源がどこまで減ったかを監査できること</strong>です。したがって、提出物には、(1) 事後分布または信用区間、(2) 導電率・電極座標・頭部モデルの感度分析、(3) シミュレーション/ファントム/同時侵襲記録/頭蓋内刺激など外部基準に対する妥当化、(4) 深部源に関する主張の保留条件、を必須で添付します。</p>
+<p><strong>次に必要：</strong>公開実装の有無を曖昧にせず、まず <strong>source imaging の検証仕様書</strong> と <strong>外部基準付きベンチマーク</strong> を先に固定する。実装はその後に、事後分布・感度分析・失敗例まで再現できる形で公開します。</p>
 </div>
 </details>
 
@@ -1094,7 +1094,7 @@ WBEにおける「プロセスの同期」要件は、単純な遅延閾値（�
 <tr>
 <td>U1</td>
 <td><strong>逆問題の同定可能性</strong>: 観測yから潜在源xを推定する際、事後分布の集中度で「唯一解に近い」を定量化できるか。</td>
-<td>R2で不確実性付き推定（Issue #43）。</td>
+<td>R2で不確実性付き推定の方針を明文化済み。ただし公開実装と外部妥当化は未完。</td>
 <td>前向きモデル誤差（導電率・形状）込みの全体同定可能性が未検証。</td>
 </tr>
 <tr>
