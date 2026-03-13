@@ -13,15 +13,16 @@ page_intro: "このページは、『最初にどの公開データで検証を�
 accuracy_note: "ここに載せるデータセットは入口候補です。使いやすさや再現性の観点で挙げており、これだけでWBEの全課題を覆えるわけではありません。"
 page_highlights:
   - "まずは共有基盤を押さえ、その後にスターターデータセットを見る順にしています。"
-  - "『データがある』だけで終わらせないためのチェックリストを入れています。"
+  - "スターターデータは L0〜L1 の練習台であり、EEG source imaging の ground truth ではありません。"
   - "最終目標は、第三者が同じ条件で走らせられる形へ寄せることです。"
 known_points:
   - "公開 EEG データは、L0 の再現解析や L1 のベースライン練習に十分役立ちます。"
   - "最初のデータ選びでは、難しさよりも追試しやすさを優先した方が前に進みます。"
-  - "データだけでなく、メタデータ、QC、評価ルールがそろって初めて比較可能になります。"
+  - "個体別 MRI や侵襲 ground truth がないスターターデータだけで、ESI 精度改善を強く主張することはできません。"
 unknown_points:
   - "スターターデータセットだけで WBE の全論点を解くことはできません。"
   - "どのデータが将来の因果・閉ループ検証へ最も効くかは、まだ固定していません。"
+  - "どの公開データが source imaging の direct validation 用 benchmark として最も運用しやすいかは、まだ固定していません。"
 wiki_links:
   - label: "Wiki: EEGの基本"
     url: "/wiki/eeg-basics.html"
@@ -258,8 +259,72 @@ BIDS は規格、OpenNeuro や PhysioNet は置き場、Validator は形式点�
 </table>
 </section>
 
+<section class="section" id="dataset-audit">
+<h2 class="section-title">3) スターターデータを過大評価しないための監査</h2>
+<p>
+上の 4 件は L0〜L1 の練習台としては非常に有用ですが、EEG source imaging や WBE 寄りの強い主張を直接検証するための ground truth ではありません。ここで必要なのは、「使える / 使えない」の二分法ではなく、<strong>どの主張までなら支えられるか</strong>を固定することでございます。
+</p>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>データセット</th>
+<th>今すぐ検証しやすいこと</th>
+<th>まだ検証しにくいこと</th>
+<th>最低限の注意点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EEG Motor Movement/Imagery</strong></td>
+<td>64ch・160 Hz・109 名の cue-locked 課題なので、前処理、被験者単位 split、単純ベースライン比較の練習に向きます。</td>
+<td>個体別 MRI、電極座標、侵襲 ground truth がないため、ESI の精度改善や深部再構成の主張は監査できません。</td>
+<td>左/右/上下 cue を画面提示する課題なので、視線、筋電、cue-locked artifact の混入を点検し、被験者単位 split を固定します。</td>
+</tr>
+<tr>
+<td><strong>CHB-MIT</strong></td>
+<td>長時間 EEG、発作イベント検出、欠損と除外理由のログ化を学ぶには適しています。</td>
+<td>小児・難治性てんかん・薬剤離脱という臨床条件に強く依存するため、一般認知や source imaging の汎用 benchmark にはなりません。</td>
+<td>case 単位で split し、記録間の gap と montage summary を保持したまま扱います。発作あり/なしの不均衡も先に明示します。</td>
+</tr>
+<tr>
+<td><strong>Sleep-EDF</strong></td>
+<td>whole-night PSG による状態遷移、睡眠段階分類、縦断変動の扱いを学ぶには向いています。</td>
+<td>主要 EEG は Fpz-Cz / Pz-Oz の 2 誘導、100 Hz なので、空間分解能や source imaging の benchmark にはなりません。</td>
+<td>ラベルは Rechtschaffen &amp; Kales 基準の manual scoring なので、新しい睡眠段階研究と比べる場合はラベル対応を明示します。</td>
+</tr>
+<tr>
+<td><strong>TUH EEG Corpus</strong></td>
+<td>大規模・臨床ノイズ・反復セッション・医師レポート付きという現実分布の難しさを学ぶのに適しています。</td>
+<td>チャネル数や臨床条件のばらつきが大きく、制御された biophysical benchmark ではないため、source imaging 改善の直接検証には向きません。</td>
+<td>patient/session 単位 split、固定チャネル subset、montage 正規化、レポート利用時の text leakage 防止を先に固定します。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>BIDS は必要条件ですが、ground truth ではありません</strong>
+<p>
+BIDS / EEG-BIDS へ寄せることは重要ですが、それだけで source imaging の妥当性は証明できません。BIDS 仕様自体も <code>EEGReference</code>、<code>SamplingFrequency</code>、<code>SoftwareFilters</code> を必須とし、<code>*_electrodes.tsv</code> を出すなら <code>*_coordsystem.json</code> も必須にしています。しかし、これは「第三者が追える形」にする条件であり、「真の発生源が分かる」条件ではありません。
+</p>
+</div>
+
+<div class="note-box">
+<strong>ESI 改善を主張するなら、別系統の証拠鎖が要ります</strong>
+<p>
+少なくとも次の 4 点を出してください。
+</p>
+<ul>
+<li><strong>個体別 anatomy：</strong>個体別 MRI/CT、または digitized electrode positions と <code>*_electrodes.tsv</code> / <code>*_coordsystem.json</code> を含む EEG-BIDS 記録</li>
+<li><strong>順モデルの監査：</strong>採用した head model と skull conductivity 感度分析</li>
+<li><strong>外部基準：</strong>phantom、同時侵襲記録、頭蓋内刺激、TMS-EEG などの ground truth</li>
+<li><strong>不確実性：</strong>点推定だけでなく localization error と区間推定の報告</li>
+</ul>
+</div>
+</section>
+
 <section class="section" id="benchmark-mindset">
-<h2 class="section-title">3) “データがある”だけで終わらせないチェックリスト</h2>
+<h2 class="section-title">4) “データがある”だけで終わらせないチェックリスト</h2>
 <div class="key-points">
 <h4>Checklist</h4>
 <ul>
@@ -273,7 +338,7 @@ BIDS は規格、OpenNeuro や PhysioNet は置き場、Validator は形式点�
 </section>
 
 <section class="section" id="l0-practice">
-<h2 class="section-title">4) L0 の最小ループをここで一周させる</h2>
+<h2 class="section-title">5) L0 の最小ループをここで一周させる</h2>
 <p>
 ここでの目標は、高精度を競うことではなく、<strong>第三者が同じ手順で追える最小ループ</strong>を作ることです。最初に必要なのは、BIDS 形式、QC ログ、分割規則、前処理条件、ベースラインの5点でございます。
 </p>
@@ -378,7 +443,7 @@ SOTA ではなく、再現しやすい比較軸を先に置きます。最初の
 </section>
 
 <section class="section" id="bids">
-<h2 class="section-title">5) Mind-Uploadで「共有できるデータ」にする最短ルート</h2>
+<h2 class="section-title">6) Mind-Uploadで「共有できるデータ」にする最短ルート</h2>
 <p>
 Mind-Uploadが目指すのは、単にデータを集めることではなく、<strong>第三者が検証できる形</strong>で残すことです。
 そのための最短ルートは BIDS/EEG-BIDS に寄せることです。
@@ -388,6 +453,21 @@ Mind-Uploadが目指すのは、単にデータを集めることではなく、
 <p>「規格＋置き場＋評価」の設計図はこちら。</p>
 <a href="verification.html">検証基盤を見る →</a>
 </div>
+</section>
+
+<section class="section" id="references">
+<h2 class="section-title">7) 参考文献と公式ページ</h2>
+<ul>
+<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS 1.11.1: Electroencephalography</a></li>
+<li><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019), EEG-BIDS</a></li>
+<li><a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">PhysioNet: EEG Motor Movement/Imagery Dataset</a></li>
+<li><a href="https://physionet.org/content/chbmit/1.0.0/" target="_blank">PhysioNet: CHB-MIT Scalp EEG Database</a></li>
+<li><a href="https://physionet.org/content/sleep-edfx/1.0.0/" target="_blank">PhysioNet: Sleep-EDF Database Expanded</a></li>
+<li><a href="https://doi.org/10.3389/fnins.2016.00196" target="_blank">Obeid &amp; Picone (2016), TUH EEG Corpus</a></li>
+<li><a href="https://doi.org/10.3389/fninf.2018.00083" target="_blank">Shah et al. (2018), TUH Seizure Detection Corpus</a></li>
+<li><a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023), Validating EEG source imaging using intracranial electrical stimulation</a></li>
+<li><a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">Seeber et al. (2019), Subcortical electrophysiological activity is detectable with high-density EEG source imaging</a></li>
+</ul>
 </section>
 
 </article>
