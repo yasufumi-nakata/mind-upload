@@ -554,3 +554,10 @@ companion CSV: `generated/mind-upload-eeg-data-fund-map/MindUpload-EEGDATA-FundM
 - 既存の 60RQ 深掘り本文（`4. U別・RQ別 深掘り固定表` と `7. 1問ずつ深掘り実行メモ`）を再監査し、RQ件数・データキー・助成キーの整合が崩れていないことを確認。
 - `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` 側にも同じ「1問ずつ深掘り運用」の導線を反映し、申請実務での往復参照を可能化。
 - このページは「技術可否と実験導線」を主担当、`auto-research-funds` 側ページは「申請実務導線」を主担当として使い分ける。
+
+## 10. 2026-03-13 19:01 JST 再監査追記（本run）
+
+- 依頼方針どおり、全体俯瞰ではなく `1RQ=1検証命題=1申請テーマ` の深掘り運用を継続。
+- 機械再監査結果: `RQ_COUNT=60`（`MindUpload-EEGDATA-FundMap-rq60-deepdive.csv`）、`DOI_MISS=0`（`EEG-DATA/eeg_dataset_summary_ja.csv`）、`ID_MISS=0`（`grant_eeg_dataset_match.csv` / `grant_queue` / `wiki/cards`）。
+- `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` 側の助成キー表記は `G1-G6` に統一済みで、本ページとの参照整合を再確認。
+- 実運用では、本ページの `7. 1問ずつ深掘り実行メモ` から1件だけ選び、完了後に次のRQへ進む手順を維持する。
