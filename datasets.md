@@ -323,8 +323,67 @@ BIDS / EEG-BIDS へ寄せることは重要ですが、それだけで source im
 </div>
 </section>
 
+<section class="section" id="validation-ladder">
+<h2 class="section-title">4) source imaging を深掘りするなら、データを3段階に分ける</h2>
+<p>
+このページの弱点になりやすかったのは、「スターターデータは source imaging の direct benchmark ではない」と止めるだけで、では<strong>何を次に選ぶべきか</strong>が弱かった点でございます。ここでは、主張の強さに応じてデータを 3 段階へ分けます。
+</p>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>段階</th>
+<th>代表データ</th>
+<th>支えられる主張</th>
+<th>まだ言えないこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A: 練習台</strong></td>
+<td>EEG Motor Movement/Imagery、CHB-MIT、Sleep-EDF、TUH EEG</td>
+<td>L0〜L1 の再現解析、QC、split 設計、ベースライン比較</td>
+<td>ESI の localization error 改善、深部 source claim、WBE 寄りの強い再構成主張</td>
+</tr>
+<tr>
+<td><strong>B: 解剖制約つき再構成</strong></td>
+<td>個体別 MRI、digitized electrodes、EEG-BIDS の <code>*_electrodes.tsv</code> / <code>*_coordsystem.json</code> を含む記録</td>
+<td>forward model の監査、皮質表面近傍での reconstruction 比較、電極配置や conductivity 仮定の感度分析</td>
+<td>direct ground truth なしの深部 source 精度保証、一般化した一意復元の主張</td>
+</tr>
+<tr>
+<td><strong>C: 直接妥当化</strong></td>
+<td>Localize-MI（Mikulan et al., 2020）、頭蓋内刺激つき scalp EEG、同時 HD-EEG/SEEG、術後転帰つき presurgical cohort</td>
+<td>localization error、source depth 依存、conductivity 依存、臨床 concordance の直接評価</td>
+<td>その task / cohort / montage を超えた普遍的性能保証</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>いま最も重要なのは C 段階の公開 benchmark です</strong>
+<p>
+Mikulan et al. (2020) の Localize-MI は、256ch scalp EEG と stereo-EEG による intracerebral stimulation を公開した希少なデータ資源で、source imaging を「既知の刺激位置」に対して直接監査できます。さらに Hao et al. (2025) は同時 HD-EEG/SEEG を用いた 29 例で、ictal ESI の平均局在誤差 14.07 mm、interictal 17.38 mm を報告しており、source power と source depth が精度を大きく左右することを示しました。したがって、source imaging の改善を主張するなら、A 段階のスターターデータではなく、少なくとも C 段階の benchmark と接続する必要があります。
+</p>
+</div>
+
+<div class="note-box">
+<strong>術後転帰は使えるが、ground truth と同一視してはいけません</strong>
+<p>
+Mouthaan et al. (2019) の systematic review では、presurgical epilepsy における electric source imaging の summary sensitivity は 82%、specificity は 53% でした。つまり、術後転帰や SOZ concordance は有用な外部基準ですが、source imaging 自体を真値として固定できるわけではありません。C 段階でも、いま言えるのは「この benchmark では誤差がどこまで減ったか」であって、「脳内 source を一意に読めた」ではございません。
+</p>
+</div>
+
+<div class="note-box">
+<strong>実務上の読み方</strong>
+<p>
+データ選定の最初の質問は、「何が面白いか」ではなく、<strong>今回どのレベルの主張を支えたいか</strong>でございます。L0〜L1 の練習なら A 段階で十分です。source imaging の改善主張へ進むなら B 段階で head model を監査し、C 段階で direct validation を取らない限り、主張は保留にしてください。
+</p>
+</div>
+</section>
+
 <section class="section" id="benchmark-mindset">
-<h2 class="section-title">4) “データがある”だけで終わらせないチェックリスト</h2>
+<h2 class="section-title">5) “データがある”だけで終わらせないチェックリスト</h2>
 <div class="key-points">
 <h4>Checklist</h4>
 <ul>
@@ -338,7 +397,7 @@ BIDS / EEG-BIDS へ寄せることは重要ですが、それだけで source im
 </section>
 
 <section class="section" id="l0-practice">
-<h2 class="section-title">5) L0 の最小ループをここで一周させる</h2>
+<h2 class="section-title">6) L0 の最小ループをここで一周させる</h2>
 <p>
 ここでの目標は、高精度を競うことではなく、<strong>第三者が同じ手順で追える最小ループ</strong>を作ることです。最初に必要なのは、BIDS 形式、QC ログ、分割規則、前処理条件、ベースラインの5点でございます。
 </p>
@@ -443,7 +502,7 @@ SOTA ではなく、再現しやすい比較軸を先に置きます。最初の
 </section>
 
 <section class="section" id="bids">
-<h2 class="section-title">6) Mind-Uploadで「共有できるデータ」にする最短ルート</h2>
+<h2 class="section-title">7) Mind-Uploadで「共有できるデータ」にする最短ルート</h2>
 <p>
 Mind-Uploadが目指すのは、単にデータを集めることではなく、<strong>第三者が検証できる形</strong>で残すことです。
 そのための最短ルートは BIDS/EEG-BIDS に寄せることです。
@@ -456,7 +515,7 @@ Mind-Uploadが目指すのは、単にデータを集めることではなく、
 </section>
 
 <section class="section" id="references">
-<h2 class="section-title">7) 参考文献と公式ページ</h2>
+<h2 class="section-title">8) 参考文献と公式ページ</h2>
 <ul>
 <li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS 1.11.1: Electroencephalography</a></li>
 <li><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019), EEG-BIDS</a></li>
@@ -465,6 +524,9 @@ Mind-Uploadが目指すのは、単にデータを集めることではなく、
 <li><a href="https://physionet.org/content/sleep-edfx/1.0.0/" target="_blank">PhysioNet: Sleep-EDF Database Expanded</a></li>
 <li><a href="https://doi.org/10.3389/fnins.2016.00196" target="_blank">Obeid &amp; Picone (2016), TUH EEG Corpus</a></li>
 <li><a href="https://doi.org/10.3389/fninf.2018.00083" target="_blank">Shah et al. (2018), TUH Seizure Detection Corpus</a></li>
+<li><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020), Localize-MI</a></li>
+<li><a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025), HD-EEG source imaging with simultaneous SEEG</a></li>
+<li><a href="https://doi.org/10.1016/j.clinph.2018.12.016" target="_blank">Mouthaan et al. (2019), E-PILEPSY systematic review</a></li>
 <li><a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023), Validating EEG source imaging using intracranial electrical stimulation</a></li>
 <li><a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">Seeber et al. (2019), Subcortical electrophysiological activity is detectable with high-density EEG source imaging</a></li>
 </ul>
