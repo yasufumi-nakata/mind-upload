@@ -45,9 +45,6 @@ SIDEBAR_GROUPS = {
     issue-writing-basics
     content-placement-basics
     reading-to-change-workflow
-  ],
-  "助成・連携" => %w[
-    mind-upload-eeg-data-fund-map
   ]
 }.freeze
 

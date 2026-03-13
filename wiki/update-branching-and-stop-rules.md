@@ -5,7 +5,7 @@ description: "モデル更新、バージョン管理、分岐、停止条件、
 article_type: Wiki
 subtitle: "変わるシステムを、変わるまま監査するための基本"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Learning guide"
 audience: "学習更新や branch、stop rule の違いが曖昧な人"
 reading_time: "10〜15分"
@@ -44,7 +44,7 @@ recommended_pages:
   - label: "検証基盤"
     url: "/verification.html"
   - label: "ハンズオン"
-    url: "/hands_on.html"
+    url: "/datasets.html#l0-practice"
 ---
 
 <main class="main-container">
@@ -247,7 +247,7 @@ WBE や本人性の話では、システムが固定物ではありません。�
 <section class="section" id="return">
 <h2 class="section-title">次にどこへ戻るか</h2>
 <p>
-Roadmap の I5 / I8 / V7 へ戻るなら <a href="../tech_roadmap.html">技術ロードマップ</a>、検証基盤の Registry / Audit へ戻るなら <a href="../verification.html">検証基盤</a>、L0 実務へ戻るなら <a href="../hands_on.html">ハンズオン</a> をご利用ください。
+Roadmap の I5 / I8 / V7 へ戻るなら <a href="../tech_roadmap.html">技術ロードマップ</a>、検証基盤の Registry / Audit へ戻るなら <a href="../verification.html">検証基盤</a>、L0 実務へ戻るなら <a href="../datasets.html#l0-practice">ハンズオン</a> をご利用ください。
 </p>
 </section>
 
@@ -267,7 +267,7 @@ Roadmap の I5 / I8 / V7 へ戻るなら <a href="../tech_roadmap.html">技術�
 <ul>
 <li><a href="../tech_roadmap.html">技術ロードマップ →</a></li>
 <li><a href="../verification.html">検証基盤 →</a></li>
-<li><a href="../hands_on.html">ハンズオン →</a></li>
+<li><a href="../datasets.html#l0-practice">ハンズオン →</a></li>
 </ul>
 </div>
 </aside>

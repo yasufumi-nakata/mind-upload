@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Worked example
+- 更新日: 2026-03-14 / 位置づけ: Worked example
 
 ## このページの役割
 このページは、Verification Commons の設計図を『EEG で状態分類を行う小さな例』に落として順番に読むための wiki です。抽象語を増やすのではなく、入力、手順、評価、反証がどうつながるかを見える形にします。
@@ -14,7 +14,7 @@
 
 ## 公開ページへ戻る
 - [検証基盤](https://mind-upload.com/verification.html)
-- [ハンズオン](https://mind-upload.com/hands_on.html)
+- [ハンズオン](https://mind-upload.com/datasets.html#l0-practice)
 - [データ&ベンチ](https://mind-upload.com/datasets.html)
 
 ## 関連 Wiki
@@ -158,5 +158,5 @@ Registry は「後から条件を変えて勝ったことにしない」ため�
 
 <h2>次にどこへ戻るか</h2>
 <p>
-設計図そのものへ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a>、実際に最小ループを動かすなら <a href="https://mind-upload.com/hands_on.html">ハンズオン</a>、入口データを見直すなら <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a> を読んでください。
+設計図そのものへ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a>、実際に最小ループを動かすなら <a href="https://mind-upload.com/datasets.html#l0-practice">ハンズオン</a>、入口データを見直すなら <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a> を読んでください。
 </p>

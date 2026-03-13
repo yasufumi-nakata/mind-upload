@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Learning guide
+- 更新日: 2026-03-14 / 位置づけ: Learning guide
 
 ## このページの役割
 このページは、Mind-Upload で何度も出てくる『規格』『置き場』『Validator』『ベンチマーク』の役割差を、初歩から整理する wiki です。名前だけ覚えるのではなく、『何をそろえる道具なのか』を分けて理解することを目標にします。
@@ -15,7 +15,7 @@
 ## 公開ページへ戻る
 - [データ&ベンチ](https://mind-upload.com/datasets.html)
 - [検証基盤](https://mind-upload.com/verification.html)
-- [ケースワーク](https://mind-upload.com/casework.html)
+- [ケースワーク](https://mind-upload.com/verification.html#casework)
 
 ## 関連 Wiki
 - [Wiki: 検証基盤の基本](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - 標準、ベンチ、登録、監査の大きな地図へ戻れます。
@@ -185,5 +185,5 @@
 
 <h2>次にどこへ戻るか</h2>
 <p>
-実務の入口へ戻るなら <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a>、全体設計へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a>、他分野の実例へ戻るなら <a href="https://mind-upload.com/casework.html">ケースワーク</a> をご利用ください。
+実務の入口へ戻るなら <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a>、全体設計へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a>、他分野の実例へ戻るなら <a href="https://mind-upload.com/verification.html#casework">ケースワーク</a> をご利用ください。
 </p>

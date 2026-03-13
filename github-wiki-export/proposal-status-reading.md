@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Reading guide
+- 更新日: 2026-03-14 / 位置づけ: Reading guide
 
 ## このページの役割
 このページは、Mind-Upload の提案ページや Issue ページに出てくる状態ラベルを読み違えないための補助ページです。提案が受理されたことと、実装や外部合意まで終わったことは別なので、その差を日常語で整理します。
@@ -13,7 +13,7 @@
 ここでの説明は読み方の補助です。個別提案の最新状態は、必ず提案ページと Issue 履歴へ戻って確認してください。
 
 ## 公開ページへ戻る
-- [技術提案](https://mind-upload.com/proposals.html)
+- [技術提案](https://mind-upload.com/issue.html#proposal-integration)
 - [貢献ガイド](https://mind-upload.com/issue.html)
 - [検証基盤](https://mind-upload.com/verification.html)
 
@@ -97,7 +97,7 @@
 <tbody>
 <tr>
 <td>提案の中身と根拠</td>
-<td><a href="https://mind-upload.com/proposals.html">技術提案</a></td>
+<td><a href="https://mind-upload.com/issue.html#proposal-integration">技術提案</a></td>
 </tr>
 <tr>
 <td>いま誰が何を手伝えるか</td>

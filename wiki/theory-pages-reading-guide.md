@@ -1,23 +1,23 @@
 ---
 layout: default
 title: "Wiki：理論系ページの読み分けガイド"
-description: "WBE 101、Perspective、Idea、Roadmap など、理論寄りの公開ページどうしの役割差と読む順番を整理します。"
+description: "WBE 101、Perspective、Perspective内の理論フレーム節、Roadmap など、理論寄りの公開ページどうしの役割差と読む順番を整理します。"
 article_type: Wiki
 subtitle: "主張の強さ、設計原理、依存関係を混ぜないための地図"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Reading guide"
 audience: "理論系ページから読み始めたい人、長文ページの役割差を整理したい人"
 reading_time: "8〜12分"
-page_intro: "このページは、Mind-Upload の理論寄り公開ページを読み分けるための補助ガイドです。WBE 101 は入門、Perspective は長文研究ノート、Idea は設計原理、Roadmap は依存関係の地図であり、同じ役目ではありません。"
+page_intro: "このページは、Mind-Upload の理論寄り公開ページを読み分けるための補助ガイドです。WBE 101 は入門、Perspective は長文研究ノート、Perspective内の理論フレーム節は設計原理、Roadmap は依存関係の地図であり、同じ役目ではありません。"
 accuracy_note: "ここで扱うのはページの役割差です。理論の妥当性や検証条件そのものは、各本文ページで確認してください。"
 page_highlights:
   - "理論系ページを、入門、長文整理、設計原理、依存関係の地図に分けて整理します。"
   - "『理論の話が読みたい』という同じ目的でも、最初に開くべきページが違うことを明確にします。"
   - "強い主張を、入口ページと長文ページで混ぜて読まないための補助線を置きます。"
 known_points:
-  - "WBE 101、Perspective、Idea、Roadmap は、どれも理論系ですが役割が違います。"
-  - "WBE 101 は主張の強さをそろえる入口、Perspective は根拠と限界を並べる長文、Idea は設計原理、Roadmap は依存関係の地図です。"
+  - "WBE 101、Perspective、Perspective内の理論フレーム節、Roadmap は、どれも理論系ですが役割が違います。"
+  - "WBE 101 は主張の強さをそろえる入口、Perspective は根拠と限界を並べる長文、Perspective内の理論フレーム節は設計原理、Roadmap は依存関係の地図です。"
   - "ページの役割差を先に分けると、理論を読み違えにくくなります。"
 unknown_points:
   - "どの理論の組み合わせが最終的に十分条件になるかは、まだ未確定です。"
@@ -40,8 +40,8 @@ recommended_pages:
     url: "/wbe_101.html"
   - label: "研究ノート"
     url: "/perspective.html"
-  - label: "理論フレーム"
-    url: "/idea.html"
+  - label: "理論フレーム節"
+    url: "/perspective.html#design-principles"
 ---
 
 <main class="main-container">
@@ -86,7 +86,7 @@ recommended_pages:
 <td>読み順の最短化や、設計原理だけの抽出には向きません。</td>
 </tr>
 <tr>
-<td><strong><a href="../idea.html">Idea</a></strong></td>
+<td><strong><a href="../perspective.html#design-principles">理論フレーム節</a></strong></td>
 <td>設計原理です。静的コピーではなく動的移行として整理します。</td>
 <td>このサイトがなぜその立場を取るのか、哲学と工学の接続だけ先に知りたいときです。</td>
 <td>その立場がどこまで実証済みかは、Verification や Perspective で補う必要があります。</td>
@@ -132,11 +132,11 @@ recommended_pages:
 <tr>
 <td>主要理論の支持点と弱点を長文で追いたい</td>
 <td><a href="../perspective.html">Perspective</a></td>
-<td><a href="../idea.html">Idea</a> で設計原理へ戻します。</td>
+<td><a href="../perspective.html#design-principles">理論フレーム節</a> で設計原理へ戻します。</td>
 </tr>
 <tr>
 <td>コピー問題と動的移行の立場を先に知りたい</td>
-<td><a href="../idea.html">Idea</a></td>
+<td><a href="../perspective.html#design-principles">理論フレーム節</a></td>
 <td><a href="../perspective.html">Perspective</a> で根拠と限界を補います。</td>
 </tr>
 <tr>
@@ -152,7 +152,7 @@ recommended_pages:
 <tr>
 <td>理論名や用語の意味が曖昧</td>
 <td><a href="../glossary.html">Glossary</a></td>
-<td><a href="../idea.html">Idea</a> や <a href="../perspective.html">Perspective</a> へ戻ります。</td>
+<td><a href="../perspective.html#design-principles">理論フレーム節</a> や <a href="../perspective.html">Perspective</a> へ戻ります。</td>
 </tr>
 </tbody>
 </table>
@@ -173,12 +173,12 @@ recommended_pages:
 <td>WBE 101 はまとまった入門、FAQ は短い疑問の処理です。</td>
 </tr>
 <tr>
-<td><strong>Perspective / Idea</strong></td>
-<td>Perspective は根拠と限界を並べる長文、Idea は採用する設計原理を絞るページです。</td>
+<td><strong>Perspective / 理論フレーム節</strong></td>
+<td>Perspective は根拠と限界を並べる長文、Perspective内の理論フレーム節は採用する設計原理を絞る節です。</td>
 </tr>
 <tr>
-<td><strong>Idea / Roadmap</strong></td>
-<td>Idea は立場の固定、Roadmap はその立場がどの課題に落ちるかの地図です。</td>
+<td><strong>理論フレーム節 / Roadmap</strong></td>
+<td>理論フレーム節は立場の固定、Roadmap はその立場がどの課題に落ちるかの地図です。</td>
 </tr>
 <tr>
 <td><strong>Perspective / Roadmap</strong></td>
@@ -194,7 +194,7 @@ recommended_pages:
 <h4>Mistake</h4>
 <ul>
 <li><strong>いきなり Perspective から入る：</strong> 情報量が多いため、先に WBE 101 で主張レベルをそろえる方が安全です。</li>
-<li><strong>Idea を証明済みの結論として読む：</strong> ここは設計原理の整理であり、実証完了の宣言ではありません。</li>
+<li><strong>理論フレーム節 を証明済みの結論として読む：</strong> ここは設計原理の整理であり、実証完了の宣言ではありません。</li>
 <li><strong>Roadmap を理論本文として読む：</strong> ここは依存関係の地図であり、理論の背景説明は圧縮されています。</li>
 <li><strong>FAQ の短答だけで理論判断を終える：</strong> 強い主張ほど、Perspective や Verification へ戻る必要があります。</li>
 </ul>
@@ -224,7 +224,7 @@ recommended_pages:
 <ul>
 <li><a href="../wbe_101.html">WBE入門 →</a></li>
 <li><a href="../perspective.html">研究ノート →</a></li>
-<li><a href="../idea.html">理論フレーム →</a></li>
+<li><a href="../perspective.html#design-principles">理論フレーム節 →</a></li>
 </ul>
 </div>
 </aside>

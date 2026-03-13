@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Learning guide
+- 更新日: 2026-03-14 / 位置づけ: Learning guide
 
 ## このページの役割
 このページは、Mind-Upload で頻繁に出てくる『更新』『バージョン』『分岐』『停止規則』『キルスイッチ』を、初歩から切り分ける wiki です。スコアが上がったから同じ系の自然な進歩だ、と短絡せず、変化を履歴つきで監査するための土台として使います。
@@ -15,7 +15,7 @@
 ## 公開ページへ戻る
 - [技術ロードマップ](https://mind-upload.com/tech_roadmap.html)
 - [検証基盤](https://mind-upload.com/verification.html)
-- [ハンズオン](https://mind-upload.com/hands_on.html)
+- [ハンズオン](https://mind-upload.com/datasets.html#l0-practice)
 
 ## 関連 Wiki
 - [Wiki: 本人性評価と連続性テスト](https://github.com/yasufumi-nakata/mind-upload/wiki/identity-and-continuity-tests) - L4 の連続性テスト全体へ戻れます。
@@ -213,5 +213,5 @@ WBE や本人性の話では、システムが固定物ではありません。�
 
 <h2>次にどこへ戻るか</h2>
 <p>
-Roadmap の I5 / I8 / V7 へ戻るなら <a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a>、検証基盤の Registry / Audit へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a>、L0 実務へ戻るなら <a href="https://mind-upload.com/hands_on.html">ハンズオン</a> をご利用ください。
+Roadmap の I5 / I8 / V7 へ戻るなら <a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a>、検証基盤の Registry / Audit へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a>、L0 実務へ戻るなら <a href="https://mind-upload.com/datasets.html#l0-practice">ハンズオン</a> をご利用ください。
 </p>

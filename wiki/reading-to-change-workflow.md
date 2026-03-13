@@ -5,7 +5,7 @@ description: "文献、理論ノート、提案、Issue、協業候補を、読�
 article_type: Wiki
 subtitle: "観察から、提案、実行、外部依存の切り分けまでを一本道で見る"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Reading to change workflow"
 audience: "読んだ内容をどのページや作業へ戻すべきか迷う人"
 reading_time: "8〜12分"
@@ -36,7 +36,7 @@ recommended_pages:
   - label: "文献地図"
     url: "/research_harvest_50.html"
   - label: "技術提案"
-    url: "/proposals.html"
+    url: "/issue.html#proposal-integration"
   - label: "貢献ガイド"
     url: "/issue.html"
 ---
@@ -69,12 +69,12 @@ recommended_pages:
 </tr>
 <tr>
 <td><strong>理論の弱点や前提差が見えた</strong></td>
-<td><a href="../perspective.html">Perspective</a> / <a href="../idea.html">Idea</a></td>
+<td><a href="../perspective.html">Perspective</a> / <a href="../perspective.html#design-principles">Idea</a></td>
 <td>限界整理、理論フレーム、設計原理の見直し。</td>
 </tr>
 <tr>
 <td><strong>進む方向や方針が見えた</strong></td>
-<td><a href="../proposals.html">Proposals</a></td>
+<td><a href="../issue.html#proposal-integration">Proposals</a></td>
 <td>提案、ストリーム整理、根拠リンク。</td>
 </tr>
 <tr>
@@ -84,7 +84,7 @@ recommended_pages:
 </tr>
 <tr>
 <td><strong>外部連携や制度が必要だと分かった</strong></td>
-<td><a href="../collaborations.html">Collaborations</a></td>
+<td><a href="../issue.html#external-collaboration">Collaborations</a></td>
 <td>外部依存タスク、内製準備物、最小成果物。</td>
 </tr>
 </tbody>
@@ -139,7 +139,7 @@ recommended_pages:
 </tr>
 <tr>
 <td><strong>Perspective を読んで、理論の弱点が気になった</strong></td>
-<td><a href="../perspective.html">Perspective</a> / <a href="../idea.html">Idea</a></td>
+<td><a href="../perspective.html">Perspective</a> / <a href="../perspective.html#design-principles">Idea</a></td>
 <td>先に理論整理として残した方が、提案や実装の前提がぶれにくいためです。</td>
 </tr>
 <tr>
@@ -149,7 +149,7 @@ recommended_pages:
 </tr>
 <tr>
 <td><strong>Issue を書こうとしたら外部依存が大きかった</strong></td>
-<td><a href="../collaborations.html">Collaborations</a></td>
+<td><a href="../issue.html#external-collaboration">Collaborations</a></td>
 <td>内製変更と外部依存を分ける必要があるためです。</td>
 </tr>
 </tbody>
@@ -191,7 +191,7 @@ recommended_pages:
 <h4>公開ページ</h4>
 <ul>
 <li><a href="../research_harvest_50.html">文献地図 →</a></li>
-<li><a href="../proposals.html">技術提案 →</a></li>
+<li><a href="../issue.html#proposal-integration">技術提案 →</a></li>
 <li><a href="../issue.html">貢献ガイド →</a></li>
 </ul>
 </div>

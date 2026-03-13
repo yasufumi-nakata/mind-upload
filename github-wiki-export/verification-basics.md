@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Beginner guide
+- 更新日: 2026-03-14 / 位置づけ: Beginner guide
 
 ## このページの役割
 このページは、Mind-Upload がなぜ『標準・ベンチ・登録・監査』を中心に据えているのかを初歩から説明する wiki です。技術の中身だけでなく、比較可能な前進を作るための運用面を学ぶことが目的です。
@@ -14,7 +14,7 @@
 
 ## 公開ページへ戻る
 - [検証基盤](https://mind-upload.com/verification.html)
-- [ケースワーク](https://mind-upload.com/casework.html)
+- [ケースワーク](https://mind-upload.com/verification.html#casework)
 - [データ&ベンチ](https://mind-upload.com/datasets.html)
 
 ## 関連 Wiki

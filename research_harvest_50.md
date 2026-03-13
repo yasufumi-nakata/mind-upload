@@ -5,7 +5,7 @@ description: "50分解クエスチョンで収集した先行研究を、解決�
 article_type: "Evidence Bank"
 subtitle: "U0-U15 の分解、現状評価、先行研究（大量引用）"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Compiled from 50 worker tasks (curated for relevance)"
 audience: "大量の文献を『何が未解決か』ごとに見たい人、論点別に引用を探したい人"
 reading_time: "20〜35分（統計とU別マップだけなら7分）"
@@ -85,11 +85,11 @@ recommended_pages:
 <div class="note-box">
 <strong>文献を読んだあとにどこへ戻すか迷ったとき</strong>
 <p>
-この文献地図で論文を見つけたあとに、提案へつなぐのか、Issue に落とすのか、協業候補の準備物へ変えるのかを一本道で見たい場合は <a href="wiki/literature-to-action-route.html">Wiki: 文献から実装・参加へ戻る一本道</a> をご覧ください。
+この文献地図で論文を見つけたあとに、提案へつなぐのか、Issue に落とすのか、外部依存・協業節の準備物へ変えるのかを一本道で見たい場合は <a href="wiki/literature-to-action-route.html">Wiki: 文献から実装・参加へ戻る一本道</a> をご覧ください。
 </p>
 </div>
 <div class="note-box">
-<strong>文献から提案・Issue・協業候補までの全体フローを見たいとき</strong>
+<strong>文献から提案・Issue・外部依存整理までの全体フローを見たいとき</strong>
 <p>
 文献整理、理論整理、提案、実行タスク、外部依存の流れを 1 枚で見たい場合は <a href="wiki/reading-to-change-workflow.html">Wiki: 読んだ内容を変更へつなぐ流れ</a> をご覧ください。
 </p>
@@ -396,827 +396,86 @@ U番号は内部管理用のコードであり、暗記するためのもので�
 <section class="section" id="deepening-integration-20260301">
 <h2 class="section-title">深掘り統合反映（2026-03-01）</h2>
 <p>
-Round 1〜114 で実施した深掘り結果を本体運用へ統合しました。ここでは「どのUがどこまで深掘り済みか」を一覧化し、詳細は各Round文書へリンクします。
+旧 <code>research_deepening_*.md</code> 群は、この節へ統合しました。公開ページとしては分割せず、<strong>本文に何を吸収したか</strong>と<strong>raw artifact がどこに残っているか</strong>をここでまとめて追えるようにしております。
 </p>
+<div class="note-box">
+<strong>今回の整理方針</strong>
+<p>
+Round 1〜114 の情報は消しておらず、公開本文と <code>automation/</code> の役割を分け直しました。読む人には要約と判断材料を本文で示し、機械処理結果や運用ログは CSV / audit memo 側へ残します。
+</p>
+</div>
 <table class="data-table">
-<thead><tr><th>U</th><th>RQ総数</th><th>深掘り完了</th><th>主要反映ラウンド</th></tr></thead><tbody>
-<tr><td>U0</td><td>4</td><td>4</td><td>Round 2, 9, 12, 13, 16, 17, 18</td></tr>
-<tr><td>U1</td><td>4</td><td>4</td><td>Round 2, 9, 12, 13, 16, 17, 18</td></tr>
-<tr><td>U3</td><td>6</td><td>6</td><td>Round 2, 9, 11, 13, 16, 17, 18</td></tr>
-<tr><td>U4</td><td>4</td><td>4</td><td>Round 3, 9, 12, 13, 16, 17, 18</td></tr>
-<tr><td>U7</td><td>6</td><td>6</td><td>Round 3, 9, 11, 13, 14, 16, 17, 18</td></tr>
-<tr><td>U8</td><td>6</td><td>6</td><td>Round 4, 8, 12, 13, 16, 17, 18</td></tr>
-<tr><td>U10</td><td>4</td><td>4</td><td>Round 5, 9, 12, 13, 14, 16, 17, 18</td></tr>
-<tr><td>U11</td><td>4</td><td>4</td><td>Round 5, 9, 11, 13, 16, 17, 18</td></tr>
-<tr><td>U12</td><td>6</td><td>6</td><td>Round 5, 9, 11, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114</td></tr>
-<tr><td>U13</td><td>6</td><td>6</td><td>Round 6, 8, 12, 13, 16, 17, 18</td></tr>
-<tr><td>U14</td><td>6</td><td>6</td><td>Round 6, 8, 12, 13, 14, 16, 17, 18</td></tr>
-<tr><td>U15</td><td>4</td><td>4</td><td>Round 6, 8, 12, 13, 15, 16, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114</td></tr>
-<tr><td><strong>合計</strong></td><td><strong>60</strong></td><td><strong>60</strong></td><td><strong>Round 1-114</strong></td></tr>
+<thead><tr><th>U</th><th>RQ総数</th><th>深掘り完了</th><th>今回本文に残した要点</th></tr></thead><tbody>
+<tr><td>U0</td><td>4</td><td>4</td><td>操作的同一性は理論整理が進む一方、介入応答を含むベンチ仕様が未整備であることを固定しました。</td></tr>
+<tr><td>U1</td><td>4</td><td>4</td><td>逆問題では点推定だけでなく、不確実性伝播と区間公開を要件化すべき段階に来ています。</td></tr>
+<tr><td>U3</td><td>6</td><td>6</td><td>グリア、リンパ系、免疫監視を「含めるべき最小構成」の候補として明示しました。</td></tr>
+<tr><td>U4 / U7 / U8</td><td>16</td><td>16</td><td>因果同値、BIDS/同期、閉ループ遅延の条件を、観測・再現・安全停止の観点で具体化しました。</td></tr>
+<tr><td>U10 / U11</td><td>8</td><td>8</td><td>熱力学的一貫性と意識指標近似は、理論主張より先に KPI と失敗条件を固定する必要があると整理しました。</td></tr>
+<tr><td>U12 / U15</td><td>10</td><td>10</td><td>規制トラックでは、本文更新前の証跡ゲート、再監視、再開台帳を標準化しました。</td></tr>
+<tr><td>U13 / U14</td><td>12</td><td>12</td><td>模倣分離と追試可能性について、最小コア文献と補助文献の読み分けを強化しました。</td></tr>
+<tr><td><strong>合計</strong></td><td><strong>60</strong></td><td><strong>60</strong></td><td><strong>旧 Round 1–114 の公開追補は本節へ集約済みです。</strong></td></tr>
 </tbody></table>
 
-<h3>詳細ドキュメント</h3>
-<ul>
-<li><a href="research_deepening_2026-03-01.html">Round 1: 全Uの平易化追補</a></li>
-<li><a href="research_deepening_round2_2026-03-01.html">Round 2: U0/U1/U3</a></li>
-<li><a href="research_deepening_round3_2026-03-01.html">Round 3: U4/U7</a></li>
-<li><a href="research_deepening_round4_2026-03-01.html">Round 4: U8</a></li>
-<li><a href="research_deepening_round5_2026-03-01.html">Round 5: U10/U11/U12</a></li>
-<li><a href="research_deepening_round6_2026-03-01.html">Round 6: U13/U14/U15</a></li>
-<li><a href="research_deepening_round7_2026-03-01.html">Round 7: U8/U13/U14/U15 参照精査</a></li>
-<li><a href="research_deepening_round8_2026-03-01.html">Round 8: U8/U13/U14/U15 参照置換の本体反映</a></li>
-<li><a href="research_deepening_round9_2026-03-01.html">Round 9: U0/U1/U3/U4/U7/U10/U11/U12 参照置換の本体反映</a></li>
-<li><a href="research_deepening_round10_2026-03-01.html">Round 10: 全60問いの必須2本＋補助1本（最小コアセット）</a></li>
-<li><a href="research_deepening_round11_2026-03-01.html">Round 11: U3/U7/U11/U12 の問い別エビデンス追補</a></li>
-<li><a href="research_deepening_round12_2026-03-01.html">Round 12: U0/U1/U4/U8/U10/U13/U14/U15 の問い別エビデンス追補</a></li>
-<li><a href="research_deepening_round13_2026-03-01.html">Round 13: 補助文献品質点検と法制度リンク監査</a></li>
-<li><a href="research_deepening_round14_2026-03-01.html">Round 14: 補助文献 preprint 置換（16件）</a></li>
-<li><a href="research_deepening_round15_2026-03-01.html">Round 15: 法制度リンク差分監査（Round 13 比較）</a></li>
-<li><a href="research_deepening_round16_2026-03-01.html">Round 16: 補助文献の実験/規制/運用タグ再分類</a></li>
-<li><a href="research_deepening_round17_2026-03-01.html">Round 17: 参照二層化と3ステップ読了順</a></li>
-<li><a href="research_deepening_round18_2026-03-01.html">Round 18: 読了時間目安と更新監査フラグ</a></li>
-<li><a href="research_deepening_round19_2026-03-01.html">Round 19: U12 規制トラック整合</a></li>
-<li><a href="research_deepening_round20_2026-03-01.html">Round 20: Regulation 法域ラベルと監査優先キュー</a></li>
-<li><a href="research_deepening_round21_2026-03-01.html">Round 21: Highキュー法制度リンク差分監査</a></li>
-<li><a href="research_deepening_round22_2026-03-01.html">Round 22: 本文更新テンプレ固定と改訂履歴リンク補完</a></li>
-<li><a href="research_deepening_round23_2026-03-01.html">Round 23: U12/U15 本文への正規化差分実反映</a></li>
-<li><a href="research_deepening_round24_2026-03-01.html">Round 24: 正規化後基準の差分監査（実体更新分離）</a></li>
-<li><a href="research_deepening_round25_2026-03-01.html">Round 25: 問い別監査メモと次回監視スケジュール</a></li>
-<li><a href="research_deepening_round26_2026-03-01.html">Round 26: access_path_change の再確認と問い別判定</a></li>
-<li><a href="research_deepening_round27_2026-03-01.html">Round 27: 問い別本文更新テンプレと監査キーワード辞書</a></li>
-<li><a href="research_deepening_round28_2026-03-01.html">Round 28: 外部依存タスク分離と適用準備度の固定</a></li>
-<li><a href="research_deepening_round29_2026-03-01.html">Round 29: 再監視Runbookと差分トリガー行列の固定</a></li>
-<li><a href="research_deepening_round30_2026-03-01.html">Round 30: 判定ログ様式と証跡パケット仕様の固定</a></li>
-<li><a href="research_deepening_round31_2026-03-01.html">Round 31: 実行チェックリストと例外ハンドリング規則の固定</a></li>
-<li><a href="research_deepening_round32_2026-03-01.html">Round 32: 監査品質スコアとフォローアップ行動行列の固定</a></li>
-<li><a href="research_deepening_round33_2026-03-01.html">Round 33: 再監視バッチ計画と再検証受入基準の固定</a></li>
-<li><a href="research_deepening_round34_2026-03-01.html">Round 34: 平易要約テンプレートと差分レジャー仕様の固定</a></li>
-<li><a href="research_deepening_round35_2026-03-01.html">Round 35: 判定理由一貫性チェック表と最終報告テンプレートの固定</a></li>
-<li><a href="research_deepening_round36_2026-03-01.html">Round 36: 複数ソース照合マップとエスカレーション規則の固定</a></li>
-<li><a href="research_deepening_round37_2026-03-01.html">Round 37: 判定衝突解消行列と外部依存ハンドオフSLAの固定</a></li>
-<li><a href="research_deepening_round38_2026-03-01.html">Round 38: 残余リスク登録表と検証証跡インデックスの固定</a></li>
-<li><a href="research_deepening_round39_2026-03-01.html">Round 39: 証跡鮮度スコアと判定クローズ条件の固定</a></li>
-<li><a href="research_deepening_round40_2026-03-01.html">Round 40: 監査バンドルマニフェストとreopenウォッチリストの固定</a></li>
-<li><a href="research_deepening_round41_2026-03-01.html">Round 41: ハンドオフ完了証跡と未解決キュー管理の固定</a></li>
-<li><a href="research_deepening_round42_2026-03-01.html">Round 42: 未解決キュー解消経路と追加証跡依頼ボードの固定</a></li>
-<li><a href="research_deepening_round43_2026-03-01.html">Round 43: 受入条件ゲート判定ログと状態遷移台帳の固定</a></li>
-<li><a href="research_deepening_round44_2026-03-01.html">Round 44: highレーン2回目判定とクローズ候補登録の固定</a></li>
-<li><a href="research_deepening_round45_2026-03-01.html">Round 45: 最終報告転記ログとクローズ確定登録の固定</a></li>
-<li><a href="research_deepening_round46_2026-03-01.html">Round 46: reopen優先監視ログと再開判定登録の固定</a></li>
-<li><a href="research_deepening_round47_2026-03-01.html">Round 47: trigger変動ドリフト行列と再開エスカレーションキューの固定</a></li>
-<li><a href="research_deepening_round48_2026-03-01.html">Round 48: 閾値再評価ログと再開判定監査の固定</a></li>
-<li><a href="research_deepening_round49_2026-03-01.html">Round 49: 監視窓実行ログとraise判定ゲートの固定</a></li>
-<li><a href="research_deepening_round50_2026-03-01.html">Round 50: 再開準備度スコアと監視ハンドオフチェックポイントの固定</a></li>
-<li><a href="research_deepening_round51_2026-03-01.html">Round 51: 再開候補スクリーニングと監視継続コミットメントの固定</a></li>
-<li><a href="research_deepening_round52_2026-03-01.html">Round 52: raise候補レビューと監視サイクル確約の固定</a></li>
-<li><a href="research_deepening_round53_2026-03-01.html">Round 53: high先行実行順とraise移行証跡の固定</a></li>
-<li><a href="research_deepening_round54_2026-03-01.html">Round 54: preflight固定とraise反映チェックポイント整備</a></li>
-<li><a href="research_deepening_round55_2026-03-01.html">Round 55: 実行ログ雛形とkeep_watch繰越台帳の固定</a></li>
-<li><a href="research_deepening_round56_2026-03-01.html">Round 56: raise判定トレース台帳と次サイクル引継ぎ固定</a></li>
-<li><a href="research_deepening_round57_2026-03-01.html">Round 57: 証跡完全性チェックと公開反映ゲート固定</a></li>
-<li><a href="research_deepening_round58_2026-03-01.html">Round 58: 公開適用キューとpending解消確認表の固定</a></li>
-<li><a href="research_deepening_round59_2026-03-01.html">Round 59: 公開コミット台帳と保留繰越バックログ固定</a></li>
-<li><a href="research_deepening_round60_2026-03-01.html">Round 60: 公開結果マトリクスと未解消エスカレーション登録固定</a></li>
-<li><a href="research_deepening_round61_2026-03-01.html">Round 61: 公開実行チェックとエスカレーション解消計画固定</a></li>
-<li><a href="research_deepening_round62_2026-03-01.html">Round 62: クローズ証明と再開ガード固定</a></li>
-<li><a href="research_deepening_round63_2026-03-01.html">Round 63: クローズ維持スケジュールと再開候補トリアージ固定</a></li>
-<li><a href="research_deepening_round64_2026-03-01.html">Round 64: クローズ一貫性監査と再開兆候監視固定</a></li>
-<li><a href="research_deepening_round65_2026-03-01.html">Round 65: クローズドリフト対応と再開ハンドオフ固定</a></li>
-<li><a href="research_deepening_round66_2026-03-01.html">Round 66: 再開再検証パケットと再クローズ判定ゲート固定</a></li>
-<li><a href="research_deepening_round67_2026-03-01.html">Round 67: 再クローズ認証台帳と再開クールダウン監視固定</a></li>
-<li><a href="research_deepening_round68_2026-03-01.html">Round 68: 安定状態チェックポイントと再開再入ゲート固定</a></li>
-<li><a href="research_deepening_round69_2026-03-01.html">Round 69: 再入候補トリアージと再検証再接続ブリッジ固定</a></li>
-<li><a href="research_deepening_round70_2026-03-01.html">Round 70: 再入実行パケットと再安定化復帰ゲート固定</a></li>
-<li><a href="research_deepening_round71_2026-03-01.html">Round 71: 再安定化確認台帳と再クローズ復帰監視固定</a></li>
-<li><a href="research_deepening_round72_2026-03-01.html">Round 72: 再入再接続チェックポイントと再開再入ゲート更新固定</a></li>
-<li><a href="research_deepening_round73_2026-03-01.html">Round 73: 再入更新伝播台帳と再入実行再接続ゲート固定</a></li>
-<li><a href="research_deepening_round74_2026-03-01.html">Round 74: 再接続実行チェックと再入候補再同期ゲート固定</a></li>
-<li><a href="research_deepening_round75_2026-03-01.html">Round 75: 再同期実行台帳と再同期監視ゲート固定</a></li>
-<li><a href="research_deepening_round76_2026-03-01.html">Round 76: 再同期更新台帳と再入監視再起動ゲート固定</a></li>
-<li><a href="research_deepening_round77_2026-03-01.html">Round 77: 監視再起動台帳と再接続再開ゲート固定</a></li>
-<li><a href="research_deepening_round78_2026-03-01.html">Round 78: 再開反映台帳と監視再連結ゲート固定</a></li>
-<li><a href="research_deepening_round79_2026-03-01.html">Round 79: 再連結更新台帳と監視再同期再開ゲート固定</a></li>
-<li><a href="research_deepening_round80_2026-03-01.html">Round 80: 再接続フィードバック台帳と監視再同期再点検ゲート固定</a></li>
-<li><a href="research_deepening_round81_2026-03-01.html">Round 81: 再点検結果台帳と監視再同期維持ゲート固定</a></li>
-<li><a href="research_deepening_round82_2026-03-01.html">Round 82: 再同期維持確認台帳と再接続再監視ゲート固定</a></li>
-<li><a href="research_deepening_round83_2026-03-01.html">Round 83: 再監視実行台帳と再接続再評価ゲート固定</a></li>
-<li><a href="research_deepening_round84_2026-03-01.html">Round 84: 再評価結果台帳と監視再同期再接続ゲート固定</a></li>
-<li><a href="research_deepening_round85_2026-03-01.html">Round 85: 再評価フォローアップ台帳と監視再同期フォローアップゲート固定</a></li>
-<li><a href="research_deepening_round86_2026-03-01.html">Round 86: 再評価フォローアップ結果台帳と監視再同期フォローアップ再接続ゲート固定</a></li>
-<li><a href="research_deepening_round87_2026-03-01.html">Round 87: 再評価フォローアップ再接続結果台帳と監視再同期フォローアップ維持ゲート固定</a></li>
-<li><a href="research_deepening_round88_2026-03-01.html">Round 88: 再評価フォローアップ安定化確認台帳と再接続フォローアップ再監視ゲート固定</a></li>
-<li><a href="research_deepening_round89_2026-03-01.html">Round 89: フォローアップ再監視実行台帳とフォローアップ再接続再評価ゲート固定</a></li>
-<li><a href="research_deepening_round90_2026-03-01.html">Round 90: フォローアップ再評価結果台帳とフォローアップ監視再同期再接続ゲート固定</a></li>
-<li><a href="research_deepening_round91_2026-03-01.html">Round 91: フォローアップ再評価フォローアップ台帳とフォローアップ監視再同期フォローアップゲート固定</a></li>
-<li><a href="research_deepening_round92_2026-03-01.html">Round 92: フォローアップ再評価フォローアップ結果台帳とフォローアップ監視再同期フォローアップ再接続ゲート固定</a></li>
-<li><a href="research_deepening_round93_2026-03-01.html">Round 93: フォローアップ再評価フォローアップ再接続結果台帳とフォローアップ監視再同期フォローアップ維持ゲート固定</a></li>
-<li><a href="research_deepening_round94_2026-03-01.html">Round 94: フォローアップ再評価フォローアップ安定化確認台帳とフォローアップ再接続フォローアップ再監視ゲート固定</a></li>
-<li><a href="research_deepening_round95_2026-03-01.html">Round 95: フォローアップ再接続フォローアップ再監視実行台帳とフォローアップ再接続フォローアップ再評価ゲート固定</a></li>
-<li><a href="research_deepening_round96_2026-03-01.html">Round 96: フォローアップ再接続フォローアップ再評価結果台帳とフォローアップ再接続フォローアップ監視再同期再接続ゲート固定</a></li>
-<li><a href="research_deepening_round97_2026-03-01.html">Round 97: フォローアップ再接続フォローアップ再評価フォローアップ台帳とフォローアップ再接続フォローアップ監視再同期フォローアップゲート固定</a></li>
-<li><a href="research_deepening_round98_2026-03-01.html">Round 98: フォローアップ再接続フォローアップ再評価フォローアップ結果台帳とフォローアップ再接続フォローアップ監視再同期フォローアップ再接続ゲート固定</a></li>
-<li><a href="research_deepening_round99_2026-03-01.html">Round 99: フォローアップ再接続フォローアップ再評価フォローアップ再接続結果台帳とフォローアップ再接続フォローアップ監視再同期フォローアップ維持ゲート固定</a></li>
-<li><a href="research_deepening_round100_2026-03-01.html">Round 100: フォローアップ再接続フォローアップ再評価フォローアップ安定化確認台帳とフォローアップ再接続フォローアップ再接続フォローアップ再監視ゲート固定</a></li>
-<li><a href="research_deepening_round101_2026-03-01.html">Round 101: フォローアップ再接続フォローアップ再接続フォローアップ再監視実行台帳とフォローアップ再接続フォローアップ再接続フォローアップ再評価ゲート固定</a></li>
-<li><a href="research_deepening_round102_2026-03-01.html">Round 102: フォローアップ再接続フォローアップ再接続フォローアップ再評価結果台帳とフォローアップ再接続フォローアップ再接続フォローアップ監視再同期再接続ゲート固定</a></li>
-<li><a href="research_deepening_round103_2026-03-01.html">Round 103: フォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ台帳とフォローアップ再接続フォローアップ再接続フォローアップ監視再同期フォローアップゲート固定</a></li>
-<li><a href="research_deepening_round104_2026-03-01.html">Round 104: フォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ結果台帳とフォローアップ再接続フォローアップ再接続フォローアップ監視再同期フォローアップ再接続ゲート固定</a></li>
-<li><a href="research_deepening_round105_2026-03-01.html">Round 105: フォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ再接続結果台帳とフォローアップ再接続フォローアップ再接続フォローアップ監視再同期フォローアップ維持ゲート固定</a></li>
-<li><a href="research_deepening_round106_2026-03-01.html">Round 106: フォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ安定化確認台帳とフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再監視ゲート固定</a></li>
-<li><a href="research_deepening_round107_2026-03-01.html">Round 107: フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再監視実行台帳とフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価ゲート固定</a></li>
-<li><a href="research_deepening_round108_2026-03-01.html">Round 108: フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価結果台帳とフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ監視再同期再接続ゲート固定</a></li>
-<li><a href="research_deepening_round109_2026-03-01.html">Round 109: フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ台帳とフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ監視再同期フォローアップゲート固定</a></li>
-<li><a href="research_deepening_round110_2026-03-01.html">Round 110: フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ結果台帳とフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ監視再同期フォローアップ再接続ゲート固定</a></li>
-<li><a href="research_deepening_round111_2026-03-01.html">Round 111: フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ再接続結果台帳とフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ監視再同期フォローアップ維持ゲート固定</a></li>
-<li><a href="research_deepening_round112_2026-03-01.html">Round 112: フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ安定化確認台帳とフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再監視ゲート固定</a></li>
-<li><a href="research_deepening_round113_2026-03-01.html">Round 113: フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再監視実行台帳とフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価ゲート固定</a></li>
-<li><a href="research_deepening_round114_2026-03-01.html">Round 114: フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価結果台帳とフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ監視再同期再接続ゲート固定</a></li>
-</ul>
+<h3>今回本文へ吸収した内容</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th>ラウンド群</th>
+<th>本文へ残したこと</th>
+<th>代表的な証跡</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Round 1–12</strong></td>
+<td>U別の平易化追補、追加根拠、必須2本＋補助1本の最小コア文献セットを反映しました。</td>
+<td><a href="automation/rq_core_reference_minset_round10_2026-03-01.csv" target="_blank">Round 10 core set</a></td>
+</tr>
+<tr>
+<td><strong>Round 13–18</strong></td>
+<td>補助文献の品質点検、タグ再分類、必須/補助の二層化、3ステップ読了順と時間目安を整えました。</td>
+<td><a href="automation/rq_reference_layering_round17_2026-03-01.csv" target="_blank">Round 17 layering</a> / <a href="automation/rq_reading_path_timed_round18_2026-03-01.csv" target="_blank">Round 18 timed path</a></td>
+</tr>
+<tr>
+<td><strong>Round 19–39</strong></td>
+<td>U12/U15 の規制トラックを整合させ、法域ラベル、監査優先キュー、本文更新テンプレを固定しました。</td>
+<td><a href="automation/rq_u12_regulation_alignment_round19_2026-03-01.csv" target="_blank">Round 19 alignment</a> / <a href="automation/rq_regulation_external_dependency_tasks_round28_2026-03-01.csv" target="_blank">Round 28 external dependency split</a></td>
+</tr>
+<tr>
+<td><strong>Round 40–61</strong></td>
+<td>公開反映前の証跡完全性、publish gate、未解消エスカレーション、クローズ条件を標準化しました。</td>
+<td><a href="automation/rq_regulation_publish_gate_round57_2026-03-01.csv" target="_blank">Round 57 publish gate</a></td>
+</tr>
+<tr>
+<td><strong>Round 62–114</strong></td>
+<td>reopen / reentry / follow-up の再監視と安定化確認を、問い別台帳として運用できる形にしました。</td>
+<td><a href="automation/rq_regulation_reentry_execution_packet_round70_2026-03-01.csv" target="_blank">Round 70 reentry packet</a> / <a href="automation/rq_regulation_reentry_followup_reconnect_followup_reevaluation_followup_stability_confirmation_ledger_round100_2026-03-01.csv" target="_blank">Round 100 stability ledger</a></td>
+</tr>
+</tbody>
+</table>
 
-<h3>整合性監査（証跡）</h3>
-<p class="small">
-全60問いのカバレッジ監査は
-<a href="automation/rq_deepening_consistency_audit_2026-03-01.md" target="_blank">rq_deepening_consistency_audit_2026-03-01.md</a>
-に記録しています（missing=0）。
-</p>
-<p class="small">
-U別カバレッジ集計は
-<a href="automation/rq_deepening_coverage_summary_2026-03-01.csv" target="_blank">rq_deepening_coverage_summary_2026-03-01.csv</a>、
-引用関連性の機械点検（要目視確認）は
-<a href="automation/rq_reference_relevance_audit_2026-03-01.md" target="_blank">rq_reference_relevance_audit_2026-03-01.md</a>
-に記録しています。
-</p>
-<p class="small">
-U8/U13/U14/U15 の手動トリアージ（維持・要置換・要確認）は
-<a href="automation/rq_reference_manual_triage_round7_2026-03-01.csv" target="_blank">rq_reference_manual_triage_round7_2026-03-01.csv</a>
-に記録しています。
-</p>
-<p class="small">
-Round 8 の実置換ログ（置換前後件数と反映先）は
-<a href="automation/rq_reference_replacement_applied_round8_2026-03-01.csv" target="_blank">rq_reference_replacement_applied_round8_2026-03-01.csv</a>
-に記録しています。
-</p>
-<p class="small">
-Round 9 の実置換ログ（置換前後件数と反映先）は
-<a href="automation/rq_reference_replacement_applied_round9_2026-03-01.csv" target="_blank">rq_reference_replacement_applied_round9_2026-03-01.csv</a>
-に記録しています。
-</p>
-<p class="small">
-Round 10 のRQ別最小コア文献セット（全60問い）は
-<a href="automation/rq_core_reference_minset_round10_2026-03-01.csv" target="_blank">rq_core_reference_minset_round10_2026-03-01.csv</a>
-に記録しています。
-</p>
-<p class="small">
-Round 11 の問い別エビデンス追補（U3/U7/U11/U12, 22問い）は
-<a href="automation/rq_question_specific_enrichment_round11_2026-03-01.csv" target="_blank">rq_question_specific_enrichment_round11_2026-03-01.csv</a>
-に記録しています。
-</p>
-<p class="small">
-Round 12 の問い別エビデンス追補（U0/U1/U4/U8/U10/U13/U14/U15, 38問い）は
-<a href="automation/rq_question_specific_enrichment_round12_2026-03-01.csv" target="_blank">rq_question_specific_enrichment_round12_2026-03-01.csv</a>
-に記録しています。
-</p>
-<p class="small">
-Round 13 の補助文献品質点検（全60問い）は
-<a href="automation/rq_supplementary_quality_audit_round13_2026-03-01.csv" target="_blank">rq_supplementary_quality_audit_round13_2026-03-01.csv</a>
-に記録しています。
-</p>
-<p class="small">
-Round 13 の法制度リンク更新日監査（5件）は
-<a href="automation/rq_legal_link_freshness_round13_2026-03-01.csv" target="_blank">rq_legal_link_freshness_round13_2026-03-01.csv</a>
-に記録しています。
-</p>
-<p class="small">
-Round 14 の補助文献置換ログ（16件）は
-<a href="automation/rq_supplementary_replacement_round14_2026-03-01.csv" target="_blank">rq_supplementary_replacement_round14_2026-03-01.csv</a>
-に記録しています。
-</p>
-<p class="small">
-Round 14 の置換後品質点検（全60問い）は
-<a href="automation/rq_supplementary_quality_audit_round14_2026-03-01.csv" target="_blank">rq_supplementary_quality_audit_round14_2026-03-01.csv</a>
-に記録しています。
-</p>
-<p class="small">
-Round 15 の法制度リンク差分監査（Round 13 比較）は
-<a href="automation/rq_legal_link_freshness_round15_2026-03-01.csv" target="_blank">rq_legal_link_freshness_round15_2026-03-01.csv</a>
-に記録しています。
-</p>
-<p class="small">
-Round 16 の補助文献タグ再分類（60問い）は
-<a href="automation/rq_supplementary_thematic_tags_round16_2026-03-01.csv" target="_blank">rq_supplementary_thematic_tags_round16_2026-03-01.csv</a>
-に記録しています。
-</p>
-<p class="small">
-Round 16 のタグ集計は
-<a href="automation/rq_supplementary_thematic_tag_summary_round16_2026-03-01.csv" target="_blank">rq_supplementary_thematic_tag_summary_round16_2026-03-01.csv</a>
-に記録しています。
-</p>
-<p class="small">
-Round 17 の参照二層化（必須/補助, 60問い）は
-<a href="automation/rq_reference_layering_round17_2026-03-01.csv" target="_blank">rq_reference_layering_round17_2026-03-01.csv</a>
-に記録しています。
-</p>
-<p class="small">
-Round 17 のRQ別3ステップ読了順（60問い）は
-<a href="automation/rq_minimal_reading_path_round17_2026-03-01.csv" target="_blank">rq_minimal_reading_path_round17_2026-03-01.csv</a>
-に記録しています（集計:
-<a href="automation/rq_reading_path_summary_round17_2026-03-01.csv" target="_blank">rq_reading_path_summary_round17_2026-03-01.csv</a>）。
-</p>
-<p class="small">
-Round 18 の時間目安付き読了順（60問い）は
-<a href="automation/rq_reading_path_timed_round18_2026-03-01.csv" target="_blank">rq_reading_path_timed_round18_2026-03-01.csv</a>
-に記録しています（集計:
-<a href="automation/rq_reading_path_timed_summary_round18_2026-03-01.csv" target="_blank">rq_reading_path_timed_summary_round18_2026-03-01.csv</a>）。
-</p>
-<p class="small">
-Round 19 の U12 補助文献再配列ログ（6件）は
-<a href="automation/rq_u12_regulation_alignment_round19_2026-03-01.csv" target="_blank">rq_u12_regulation_alignment_round19_2026-03-01.csv</a>
-に記録しています。
-</p>
-<p class="small">
-Round 19 の再計算結果（タグ/二層化/読了順/時間目安）は
-<a href="automation/rq_supplementary_thematic_tags_round19_2026-03-01.csv" target="_blank">rq_supplementary_thematic_tags_round19_2026-03-01.csv</a>、
-<a href="automation/rq_reference_layering_round19_2026-03-01.csv" target="_blank">rq_reference_layering_round19_2026-03-01.csv</a>、
-<a href="automation/rq_minimal_reading_path_round19_2026-03-01.csv" target="_blank">rq_minimal_reading_path_round19_2026-03-01.csv</a>、
-<a href="automation/rq_reading_path_timed_round19_2026-03-01.csv" target="_blank">rq_reading_path_timed_round19_2026-03-01.csv</a>
-に記録しています。
-</p>
-<p class="small">
-Round 20 の法域ラベル（U12/U15, 10問い）は
-<a href="automation/rq_regulation_jurisdiction_labels_round20_2026-03-01.csv" target="_blank">rq_regulation_jurisdiction_labels_round20_2026-03-01.csv</a>
-に記録しています。
-</p>
-<p class="small">
-Round 20 の更新監査優先キュー（U12/U15, 10問い）は
-<a href="automation/rq_regulation_update_priority_queue_round20_2026-03-01.csv" target="_blank">rq_regulation_update_priority_queue_round20_2026-03-01.csv</a>
-に記録しています。
-</p>
-<p class="small">
-Round 21 の highキュー法制度リンク差分監査（U12/U15, 10問い）は
-<a href="automation/rq_regulation_link_diff_round21_2026-03-01.csv" target="_blank">rq_regulation_link_diff_round21_2026-03-01.csv</a>（URL単位）と
-<a href="automation/rq_regulation_priority_queue_status_round21_2026-03-01.csv" target="_blank">rq_regulation_priority_queue_status_round21_2026-03-01.csv</a>（RQ単位）
-に記録しています（URL差分2件、共有URL伝播でRQ判定10件）。
-</p>
-<p class="small">
-Round 22 の本文更新テンプレ固定と改訂履歴リンク補完は
-<a href="automation/rq_regulation_content_update_template_round22_2026-03-01.csv" target="_blank">rq_regulation_content_update_template_round22_2026-03-01.csv</a>（RQ本文更新テンプレ）と
-<a href="automation/rq_regulation_revision_history_links_round22_2026-03-01.csv" target="_blank">rq_regulation_revision_history_links_round22_2026-03-01.csv</a>（制度文書の改訂履歴リンク）
-に記録しています。
-</p>
-<p class="small">
-Round 23 の U12/U15 本文への正規化差分実反映は
-<a href="automation/rq_regulation_link_normalization_applied_round23_2026-03-01.csv" target="_blank">rq_regulation_link_normalization_applied_round23_2026-03-01.csv</a>（適用ログ）と
-<a href="automation/rq_regulation_audit_trail_insertion_round23_2026-03-01.csv" target="_blank">rq_regulation_audit_trail_insertion_round23_2026-03-01.csv</a>（監査導線追加ログ）
-に記録しています。
-</p>
-<p class="small">
-Round 24 の正規化後基準差分監査（実体更新分離）は
-<a href="automation/rq_regulation_link_diff_round24_2026-03-01.csv" target="_blank">rq_regulation_link_diff_round24_2026-03-01.csv</a>（URL単位）と
-<a href="automation/rq_regulation_priority_queue_status_round24_2026-03-01.csv" target="_blank">rq_regulation_priority_queue_status_round24_2026-03-01.csv</a>（RQ単位）
-に記録しています（実体更新0件、アクセス経路変動1件）。
-</p>
-<p class="small">
-Round 25 の問い別監査メモと次回監視スケジュールは
-<a href="automation/rq_regulation_rq_specific_audit_memo_round25_2026-03-01.csv" target="_blank">rq_regulation_rq_specific_audit_memo_round25_2026-03-01.csv</a>（RQ別メモ）と
-<a href="automation/rq_regulation_monitor_schedule_round25_2026-03-01.csv" target="_blank">rq_regulation_monitor_schedule_round25_2026-03-01.csv</a>（次回監視予定日付き）
-に記録しています。
-</p>
-<p class="small">
-Round 26 の access_path_change 再確認と問い別判定は
-<a href="automation/rq_regulation_access_recheck_round26_2026-03-01.csv" target="_blank">rq_regulation_access_recheck_round26_2026-03-01.csv</a>（URL再確認）、
-<a href="automation/rq_regulation_question_decision_round26_2026-03-01.csv" target="_blank">rq_regulation_question_decision_round26_2026-03-01.csv</a>（問い別判定）、
-<a href="automation/rq_regulation_monitor_schedule_round26_2026-03-01.csv" target="_blank">rq_regulation_monitor_schedule_round26_2026-03-01.csv</a>（更新後スケジュール）
-に記録しています。
-</p>
-<p class="small">
-Round 27 の問い別本文更新テンプレと監査キーワード辞書は
-<a href="automation/rq_regulation_update_text_template_round27_2026-03-01.csv" target="_blank">rq_regulation_update_text_template_round27_2026-03-01.csv</a>（更新文テンプレ）と
-<a href="automation/rq_regulation_source_checkpoint_phrase_bank_round27_2026-03-01.csv" target="_blank">rq_regulation_source_checkpoint_phrase_bank_round27_2026-03-01.csv</a>（監査キーワード辞書）
-に記録しています。
-</p>
-<p class="small">
-Round 28 の外部依存タスク分離と本文適用準備度の固定は
-<a href="automation/rq_regulation_external_dependency_tasks_round28_2026-03-01.csv" target="_blank">rq_regulation_external_dependency_tasks_round28_2026-03-01.csv</a>（外部依存タスク分離）と
-<a href="automation/rq_regulation_apply_readiness_round28_2026-03-01.csv" target="_blank">rq_regulation_apply_readiness_round28_2026-03-01.csv</a>（本文適用準備度）
-に記録しています。
-</p>
-<p class="small">
-Round 29 の再監視Runbookと差分トリガー行列の固定は
-<a href="automation/rq_regulation_monitor_execution_runbook_round29_2026-03-01.csv" target="_blank">rq_regulation_monitor_execution_runbook_round29_2026-03-01.csv</a>（問い別再監視Runbook）と
-<a href="automation/rq_regulation_diff_trigger_matrix_round29_2026-03-01.csv" target="_blank">rq_regulation_diff_trigger_matrix_round29_2026-03-01.csv</a>（問い別差分トリガー行列）
-に記録しています。
-</p>
-<p class="small">
-Round 30 の判定ログ様式と証跡パケット仕様の固定は
-<a href="automation/rq_regulation_decision_log_template_round30_2026-03-01.csv" target="_blank">rq_regulation_decision_log_template_round30_2026-03-01.csv</a>（問い別判定ログ様式）と
-<a href="automation/rq_regulation_evidence_packet_spec_round30_2026-03-01.csv" target="_blank">rq_regulation_evidence_packet_spec_round30_2026-03-01.csv</a>（問い別証跡パケット仕様）
-に記録しています。
-</p>
-<p class="small">
-Round 31 の実行チェックリストと例外ハンドリング規則の固定は
-<a href="automation/rq_regulation_monitor_checklist_round31_2026-03-01.csv" target="_blank">rq_regulation_monitor_checklist_round31_2026-03-01.csv</a>（問い別実行チェックリスト）と
-<a href="automation/rq_regulation_exception_handling_playbook_round31_2026-03-01.csv" target="_blank">rq_regulation_exception_handling_playbook_round31_2026-03-01.csv</a>（問い別例外ハンドリング規則）
-に記録しています。
-</p>
-<p class="small">
-Round 32 の監査品質スコアとフォローアップ行動行列の固定は
-<a href="automation/rq_regulation_audit_quality_scoring_round32_2026-03-01.csv" target="_blank">rq_regulation_audit_quality_scoring_round32_2026-03-01.csv</a>（問い別監査品質スコア）と
-<a href="automation/rq_regulation_followup_action_matrix_round32_2026-03-01.csv" target="_blank">rq_regulation_followup_action_matrix_round32_2026-03-01.csv</a>（問い別フォローアップ行動行列）
-に記録しています。
-</p>
-<p class="small">
-Round 33 の再監視バッチ計画と再検証受入基準の固定は
-<a href="automation/rq_regulation_monitor_batch_plan_round33_2026-03-01.csv" target="_blank">rq_regulation_monitor_batch_plan_round33_2026-03-01.csv</a>（問い別再監視バッチ計画）と
-<a href="automation/rq_regulation_revalidation_acceptance_round33_2026-03-01.csv" target="_blank">rq_regulation_revalidation_acceptance_round33_2026-03-01.csv</a>（問い別再検証受入基準）
-に記録しています。
-</p>
-<p class="small">
-Round 34 の平易要約テンプレートと差分レジャー仕様の固定は
-<a href="automation/rq_regulation_monitor_plain_summary_template_round34_2026-03-01.csv" target="_blank">rq_regulation_monitor_plain_summary_template_round34_2026-03-01.csv</a>（問い別平易要約テンプレート）と
-<a href="automation/rq_regulation_text_diff_ledger_spec_round34_2026-03-01.csv" target="_blank">rq_regulation_text_diff_ledger_spec_round34_2026-03-01.csv</a>（問い別差分レジャー仕様）
-に記録しています。
-</p>
-<p class="small">
-Round 35 の判定理由一貫性チェック表と最終報告テンプレートの固定は
-<a href="automation/rq_regulation_reason_consistency_check_round35_2026-03-01.csv" target="_blank">rq_regulation_reason_consistency_check_round35_2026-03-01.csv</a>（問い別判定理由一貫性チェック表）と
-<a href="automation/rq_regulation_final_report_template_round35_2026-03-01.csv" target="_blank">rq_regulation_final_report_template_round35_2026-03-01.csv</a>（問い別最終報告テンプレート）
-に記録しています。
-</p>
-<p class="small">
-Round 36 の複数ソース照合マップとエスカレーション規則の固定は
-<a href="automation/rq_regulation_cross_source_evidence_map_round36_2026-03-01.csv" target="_blank">rq_regulation_cross_source_evidence_map_round36_2026-03-01.csv</a>（問い別複数ソース照合マップ）と
-<a href="automation/rq_regulation_escalation_trigger_rules_round36_2026-03-01.csv" target="_blank">rq_regulation_escalation_trigger_rules_round36_2026-03-01.csv</a>（問い別エスカレーション規則）
-に記録しています。
-</p>
-<p class="small">
-Round 37 の判定衝突解消行列と外部依存ハンドオフSLAの固定は
-<a href="automation/rq_regulation_conflict_resolution_matrix_round37_2026-03-01.csv" target="_blank">rq_regulation_conflict_resolution_matrix_round37_2026-03-01.csv</a>（問い別判定衝突解消行列）と
-<a href="automation/rq_regulation_external_handoff_sla_round37_2026-03-01.csv" target="_blank">rq_regulation_external_handoff_sla_round37_2026-03-01.csv</a>（問い別外部依存ハンドオフSLA）
-に記録しています。
-</p>
-<p class="small">
-Round 38 の残余リスク登録表と検証証跡インデックスの固定は
-<a href="automation/rq_regulation_residual_risk_register_round38_2026-03-01.csv" target="_blank">rq_regulation_residual_risk_register_round38_2026-03-01.csv</a>（問い別残余リスク登録表）と
-<a href="automation/rq_regulation_verification_artifact_index_round38_2026-03-01.csv" target="_blank">rq_regulation_verification_artifact_index_round38_2026-03-01.csv</a>（問い別検証証跡インデックス）
-に記録しています。
-</p>
-<p class="small">
-Round 39 の証跡鮮度スコアと判定クローズ条件の固定は
-<a href="automation/rq_regulation_evidence_freshness_score_round39_2026-03-01.csv" target="_blank">rq_regulation_evidence_freshness_score_round39_2026-03-01.csv</a>（問い別証跡鮮度スコア）と
-<a href="automation/rq_regulation_decision_closure_checklist_round39_2026-03-01.csv" target="_blank">rq_regulation_decision_closure_checklist_round39_2026-03-01.csv</a>（問い別判定クローズ条件）
-に記録しています。
-</p>
-<p class="small">
-Round 40 の監査バンドルマニフェストとreopenウォッチリストの固定は
-<a href="automation/rq_regulation_audit_bundle_manifest_round40_2026-03-01.csv" target="_blank">rq_regulation_audit_bundle_manifest_round40_2026-03-01.csv</a>（問い別監査バンドルマニフェスト）と
-<a href="automation/rq_regulation_reopen_watchlist_round40_2026-03-01.csv" target="_blank">rq_regulation_reopen_watchlist_round40_2026-03-01.csv</a>（問い別reopenウォッチリスト）
-に記録しています。
-</p>
-<p class="small">
-Round 41 のハンドオフ完了証跡と未解決キュー管理の固定は
-<a href="automation/rq_regulation_handoff_completion_certificate_round41_2026-03-01.csv" target="_blank">rq_regulation_handoff_completion_certificate_round41_2026-03-01.csv</a>（問い別ハンドオフ完了証跡）と
-<a href="automation/rq_regulation_unresolved_issue_queue_round41_2026-03-01.csv" target="_blank">rq_regulation_unresolved_issue_queue_round41_2026-03-01.csv</a>（問い別未解決キュー）
-に記録しています。
-</p>
-<p class="small">
-Round 42 の未解決キュー解消経路と追加証跡依頼ボードの固定は
-<a href="automation/rq_regulation_resolution_path_round42_2026-03-01.csv" target="_blank">rq_regulation_resolution_path_round42_2026-03-01.csv</a>（問い別解消経路）と
-<a href="automation/rq_regulation_evidence_request_board_round42_2026-03-01.csv" target="_blank">rq_regulation_evidence_request_board_round42_2026-03-01.csv</a>（問い別追加証跡依頼ボード）
-に記録しています。
-</p>
-<p class="small">
-Round 43 の受入条件ゲート判定ログと状態遷移台帳の固定は
-<a href="automation/rq_regulation_acceptance_gate_check_round43_2026-03-01.csv" target="_blank">rq_regulation_acceptance_gate_check_round43_2026-03-01.csv</a>（問い別受入条件ゲート判定）と
-<a href="automation/rq_regulation_state_transition_ledger_round43_2026-03-01.csv" target="_blank">rq_regulation_state_transition_ledger_round43_2026-03-01.csv</a>（問い別状態遷移台帳）
-に記録しています。
-</p>
-<p class="small">
-Round 44 のhighレーン2回目判定とクローズ候補登録の固定は
-<a href="automation/rq_regulation_high_lane_second_pass_round44_2026-03-01.csv" target="_blank">rq_regulation_high_lane_second_pass_round44_2026-03-01.csv</a>（問い別2回目判定ログ）と
-<a href="automation/rq_regulation_close_candidate_register_round44_2026-03-01.csv" target="_blank">rq_regulation_close_candidate_register_round44_2026-03-01.csv</a>（問い別クローズ候補登録）
-に記録しています。
-</p>
-<p class="small">
-Round 45 の最終報告転記ログとクローズ確定登録の固定は
-<a href="automation/rq_regulation_final_report_reflection_log_round45_2026-03-01.csv" target="_blank">rq_regulation_final_report_reflection_log_round45_2026-03-01.csv</a>（問い別最終報告転記ログ）と
-<a href="automation/rq_regulation_closure_confirmation_register_round45_2026-03-01.csv" target="_blank">rq_regulation_closure_confirmation_register_round45_2026-03-01.csv</a>（問い別クローズ確定登録）
-に記録しています。
-</p>
-<p class="small">
-Round 46 のreopen優先監視ログと再開判定登録の固定は
-<a href="automation/rq_regulation_reopen_priority_monitor_round46_2026-03-01.csv" target="_blank">rq_regulation_reopen_priority_monitor_round46_2026-03-01.csv</a>（問い別reopen優先監視ログ）と
-<a href="automation/rq_regulation_reopen_decision_register_round46_2026-03-01.csv" target="_blank">rq_regulation_reopen_decision_register_round46_2026-03-01.csv</a>（問い別再開判定登録）
-に記録しています。
-</p>
-<p class="small">
-Round 47 のtrigger変動ドリフト行列と再開エスカレーションキューの固定は
-<a href="automation/rq_regulation_trigger_drift_matrix_round47_2026-03-01.csv" target="_blank">rq_regulation_trigger_drift_matrix_round47_2026-03-01.csv</a>（問い別trigger変動ドリフト行列）と
-<a href="automation/rq_regulation_reopen_escalation_queue_round47_2026-03-01.csv" target="_blank">rq_regulation_reopen_escalation_queue_round47_2026-03-01.csv</a>（問い別再開エスカレーションキュー）
-に記録しています。
-</p>
-<p class="small">
-Round 48 の閾値再評価ログと再開判定監査の固定は
-<a href="automation/rq_regulation_threshold_recheck_round48_2026-03-01.csv" target="_blank">rq_regulation_threshold_recheck_round48_2026-03-01.csv</a>（問い別閾値再評価ログ）と
-<a href="automation/rq_regulation_reopen_decision_audit_round48_2026-03-01.csv" target="_blank">rq_regulation_reopen_decision_audit_round48_2026-03-01.csv</a>（問い別再開判定監査）
-に記録しています。
-</p>
-<p class="small">
-Round 49 の監視窓実行ログとraise判定ゲートの固定は
-<a href="automation/rq_regulation_watch_window_execution_round49_2026-03-01.csv" target="_blank">rq_regulation_watch_window_execution_round49_2026-03-01.csv</a>（問い別監視窓実行ログ）と
-<a href="automation/rq_regulation_raise_gate_criteria_round49_2026-03-01.csv" target="_blank">rq_regulation_raise_gate_criteria_round49_2026-03-01.csv</a>（問い別raise判定ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 50 の再開準備度スコアと監視ハンドオフチェックポイントの固定は
-<a href="automation/rq_regulation_reopen_readiness_score_round50_2026-03-01.csv" target="_blank">rq_regulation_reopen_readiness_score_round50_2026-03-01.csv</a>（問い別再開準備度スコア）と
-<a href="automation/rq_regulation_watch_handoff_checkpoint_round50_2026-03-01.csv" target="_blank">rq_regulation_watch_handoff_checkpoint_round50_2026-03-01.csv</a>（問い別監視ハンドオフチェックポイント）
-に記録しています。
-</p>
-<p class="small">
-Round 51 の再開候補スクリーニングと監視継続コミットメントの固定は
-<a href="automation/rq_regulation_reopen_candidate_screening_round51_2026-03-01.csv" target="_blank">rq_regulation_reopen_candidate_screening_round51_2026-03-01.csv</a>（問い別再開候補スクリーニング）と
-<a href="automation/rq_regulation_monitor_continuity_commitment_round51_2026-03-01.csv" target="_blank">rq_regulation_monitor_continuity_commitment_round51_2026-03-01.csv</a>（問い別監視継続コミットメント）
-に記録しています。
-</p>
-<p class="small">
-Round 52 のraise候補レビューと監視サイクル確約の固定は
-<a href="automation/rq_regulation_raise_candidate_review_round52_2026-03-01.csv" target="_blank">rq_regulation_raise_candidate_review_round52_2026-03-01.csv</a>（問い別raise候補レビュー）と
-<a href="automation/rq_regulation_watch_cycle_commitment_round52_2026-03-01.csv" target="_blank">rq_regulation_watch_cycle_commitment_round52_2026-03-01.csv</a>（問い別監視サイクル確約）
-に記録しています。
-</p>
-<p class="small">
-Round 53 のhigh先行実行順とraise移行証跡の固定は
-<a href="automation/rq_regulation_high_lane_execution_round53_2026-03-01.csv" target="_blank">rq_regulation_high_lane_execution_round53_2026-03-01.csv</a>（問い別high先行実行順）と
-<a href="automation/rq_regulation_raise_transition_packet_round53_2026-03-01.csv" target="_blank">rq_regulation_raise_transition_packet_round53_2026-03-01.csv</a>（問い別raise移行証跡パケット）
-に記録しています。
-</p>
-<p class="small">
-Round 54 のpreflight固定とraise反映チェックポイント整備は
-<a href="automation/rq_regulation_high_lane_preflight_round54_2026-03-01.csv" target="_blank">rq_regulation_high_lane_preflight_round54_2026-03-01.csv</a>（問い別preflight固定）と
-<a href="automation/rq_regulation_raise_apply_checkpoint_round54_2026-03-01.csv" target="_blank">rq_regulation_raise_apply_checkpoint_round54_2026-03-01.csv</a>（問い別raise反映チェックポイント）
-に記録しています。
-</p>
-<p class="small">
-Round 55 の実行ログ雛形とkeep_watch繰越台帳の固定は
-<a href="automation/rq_regulation_window_execution_log_round55_2026-03-01.csv" target="_blank">rq_regulation_window_execution_log_round55_2026-03-01.csv</a>（問い別実行ログ雛形）と
-<a href="automation/rq_regulation_keep_watch_rollover_round55_2026-03-01.csv" target="_blank">rq_regulation_keep_watch_rollover_round55_2026-03-01.csv</a>（問い別keep_watch繰越台帳）
-に記録しています。
-</p>
-<p class="small">
-Round 56 のraise判定トレース台帳と次サイクル引継ぎ固定は
-<a href="automation/rq_regulation_raise_decision_trace_round56_2026-03-01.csv" target="_blank">rq_regulation_raise_decision_trace_round56_2026-03-01.csv</a>（問い別raise判定トレース台帳）と
-<a href="automation/rq_regulation_cycle_handoff_manifest_round56_2026-03-01.csv" target="_blank">rq_regulation_cycle_handoff_manifest_round56_2026-03-01.csv</a>（問い別次サイクル引継ぎマニフェスト）
-に記録しています。
-</p>
-<p class="small">
-Round 57 の証跡完全性チェックと公開反映ゲート固定は
-<a href="automation/rq_regulation_evidence_completeness_round57_2026-03-01.csv" target="_blank">rq_regulation_evidence_completeness_round57_2026-03-01.csv</a>（問い別証跡完全性チェック）と
-<a href="automation/rq_regulation_publish_gate_round57_2026-03-01.csv" target="_blank">rq_regulation_publish_gate_round57_2026-03-01.csv</a>（問い別公開反映ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 58 の公開適用キューとpending解消確認表の固定は
-<a href="automation/rq_regulation_publish_apply_queue_round58_2026-03-01.csv" target="_blank">rq_regulation_publish_apply_queue_round58_2026-03-01.csv</a>（問い別公開適用キュー）と
-<a href="automation/rq_regulation_pending_review_resolution_round58_2026-03-01.csv" target="_blank">rq_regulation_pending_review_resolution_round58_2026-03-01.csv</a>（問い別pending解消確認表）
-に記録しています。
-</p>
-<p class="small">
-Round 59 の公開コミット台帳と保留繰越バックログ固定は
-<a href="automation/rq_regulation_publish_commit_ledger_round59_2026-03-01.csv" target="_blank">rq_regulation_publish_commit_ledger_round59_2026-03-01.csv</a>（問い別公開コミット台帳）と
-<a href="automation/rq_regulation_pending_carryover_backlog_round59_2026-03-01.csv" target="_blank">rq_regulation_pending_carryover_backlog_round59_2026-03-01.csv</a>（問い別保留繰越バックログ）
-に記録しています。
-</p>
-<p class="small">
-Round 60 の公開結果マトリクスと未解消エスカレーション登録固定は
-<a href="automation/rq_regulation_publish_outcome_matrix_round60_2026-03-01.csv" target="_blank">rq_regulation_publish_outcome_matrix_round60_2026-03-01.csv</a>（問い別公開結果マトリクス）と
-<a href="automation/rq_regulation_unresolved_escalation_register_round60_2026-03-01.csv" target="_blank">rq_regulation_unresolved_escalation_register_round60_2026-03-01.csv</a>（問い別未解消エスカレーション登録）
-に記録しています。
-</p>
-<p class="small">
-Round 61 の公開実行チェックとエスカレーション解消計画固定は
-<a href="automation/rq_regulation_outcome_execution_check_round61_2026-03-01.csv" target="_blank">rq_regulation_outcome_execution_check_round61_2026-03-01.csv</a>（問い別公開実行チェック表）と
-<a href="automation/rq_regulation_escalation_closure_plan_round61_2026-03-01.csv" target="_blank">rq_regulation_escalation_closure_plan_round61_2026-03-01.csv</a>（問い別エスカレーション解消計画）
-に記録しています。
-</p>
-<p class="small">
-Round 62 のクローズ証明と再開ガード固定は
-<a href="automation/rq_regulation_closure_certification_round62_2026-03-01.csv" target="_blank">rq_regulation_closure_certification_round62_2026-03-01.csv</a>（問い別クローズ証明チェック）と
-<a href="automation/rq_regulation_reopen_guard_round62_2026-03-01.csv" target="_blank">rq_regulation_reopen_guard_round62_2026-03-01.csv</a>（問い別再開ガード条件）
-に記録しています。
-</p>
-<p class="small">
-Round 63 のクローズ維持スケジュールと再開候補トリアージ固定は
-<a href="automation/rq_regulation_closure_maintenance_schedule_round63_2026-03-01.csv" target="_blank">rq_regulation_closure_maintenance_schedule_round63_2026-03-01.csv</a>（問い別クローズ維持スケジュール）と
-<a href="automation/rq_regulation_reopen_candidate_triage_round63_2026-03-01.csv" target="_blank">rq_regulation_reopen_candidate_triage_round63_2026-03-01.csv</a>（問い別再開候補トリアージ）
-に記録しています。
-</p>
-<p class="small">
-Round 64 のクローズ一貫性監査と再開兆候監視固定は
-<a href="automation/rq_regulation_closure_consistency_audit_round64_2026-03-01.csv" target="_blank">rq_regulation_closure_consistency_audit_round64_2026-03-01.csv</a>（問い別クローズ一貫性監査）と
-<a href="automation/rq_regulation_reopen_watch_signal_round64_2026-03-01.csv" target="_blank">rq_regulation_reopen_watch_signal_round64_2026-03-01.csv</a>（問い別再開兆候監視）
-に記録しています。
-</p>
-<p class="small">
-Round 65 のクローズドリフト対応と再開ハンドオフ固定は
-<a href="automation/rq_regulation_closure_drift_response_round65_2026-03-01.csv" target="_blank">rq_regulation_closure_drift_response_round65_2026-03-01.csv</a>（問い別クローズドリフト対応行列）と
-<a href="automation/rq_regulation_reopen_escalation_handoff_round65_2026-03-01.csv" target="_blank">rq_regulation_reopen_escalation_handoff_round65_2026-03-01.csv</a>（問い別再開エスカレーション引継ぎ）
-に記録しています。
-</p>
-<p class="small">
-Round 66 の再開再検証パケットと再クローズ判定ゲート固定は
-<a href="automation/rq_regulation_reopen_revalidation_packet_round66_2026-03-01.csv" target="_blank">rq_regulation_reopen_revalidation_packet_round66_2026-03-01.csv</a>（問い別再開再検証パケット）と
-<a href="automation/rq_regulation_reclose_decision_gate_round66_2026-03-01.csv" target="_blank">rq_regulation_reclose_decision_gate_round66_2026-03-01.csv</a>（問い別再クローズ判定ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 67 の再クローズ認証台帳と再開クールダウン監視固定は
-<a href="automation/rq_regulation_reclose_certification_ledger_round67_2026-03-01.csv" target="_blank">rq_regulation_reclose_certification_ledger_round67_2026-03-01.csv</a>（問い別再クローズ認証台帳）と
-<a href="automation/rq_regulation_reopen_cooldown_watch_round67_2026-03-01.csv" target="_blank">rq_regulation_reopen_cooldown_watch_round67_2026-03-01.csv</a>（問い別再開クールダウン監視）
-に記録しています。
-</p>
-<p class="small">
-Round 68 の安定状態チェックポイントと再開再入ゲート固定は
-<a href="automation/rq_regulation_stable_state_checkpoint_round68_2026-03-01.csv" target="_blank">rq_regulation_stable_state_checkpoint_round68_2026-03-01.csv</a>（問い別安定状態チェックポイント）と
-<a href="automation/rq_regulation_reopen_reentry_gate_round68_2026-03-01.csv" target="_blank">rq_regulation_reopen_reentry_gate_round68_2026-03-01.csv</a>（問い別再開再入ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 69 の再入候補トリアージと再検証再接続ブリッジ固定は
-<a href="automation/rq_regulation_reentry_candidate_triage_round69_2026-03-01.csv" target="_blank">rq_regulation_reentry_candidate_triage_round69_2026-03-01.csv</a>（問い別再入候補トリアージ）と
-<a href="automation/rq_regulation_revalidation_reconnect_bridge_round69_2026-03-01.csv" target="_blank">rq_regulation_revalidation_reconnect_bridge_round69_2026-03-01.csv</a>（問い別再検証再接続ブリッジ）
-に記録しています。
-</p>
-<p class="small">
-Round 70 の再入実行パケットと再安定化復帰ゲート固定は
-<a href="automation/rq_regulation_reentry_execution_packet_round70_2026-03-01.csv" target="_blank">rq_regulation_reentry_execution_packet_round70_2026-03-01.csv</a>（問い別再入実行パケット）と
-<a href="automation/rq_regulation_restabilization_return_gate_round70_2026-03-01.csv" target="_blank">rq_regulation_restabilization_return_gate_round70_2026-03-01.csv</a>（問い別再安定化復帰ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 71 の再安定化確認台帳と再クローズ復帰監視固定は
-<a href="automation/rq_regulation_restabilization_confirmation_ledger_round71_2026-03-01.csv" target="_blank">rq_regulation_restabilization_confirmation_ledger_round71_2026-03-01.csv</a>（問い別再安定化確認台帳）と
-<a href="automation/rq_regulation_reclose_return_watch_round71_2026-03-01.csv" target="_blank">rq_regulation_reclose_return_watch_round71_2026-03-01.csv</a>（問い別再クローズ復帰監視）
-に記録しています。
-</p>
-<p class="small">
-Round 72 の再入再接続チェックポイントと再開再入ゲート更新固定は
-<a href="automation/rq_regulation_reentry_reconnect_checkpoint_round72_2026-03-01.csv" target="_blank">rq_regulation_reentry_reconnect_checkpoint_round72_2026-03-01.csv</a>（問い別再入再接続チェックポイント）と
-<a href="automation/rq_regulation_reopen_reentry_gate_refresh_round72_2026-03-01.csv" target="_blank">rq_regulation_reopen_reentry_gate_refresh_round72_2026-03-01.csv</a>（問い別再開再入ゲート更新）
-に記録しています。
-</p>
-<p class="small">
-Round 73 の再入更新伝播台帳と再入実行再接続ゲート固定は
-<a href="automation/rq_regulation_reentry_update_propagation_ledger_round73_2026-03-01.csv" target="_blank">rq_regulation_reentry_update_propagation_ledger_round73_2026-03-01.csv</a>（問い別再入更新伝播台帳）と
-<a href="automation/rq_regulation_reentry_execution_relink_gate_round73_2026-03-01.csv" target="_blank">rq_regulation_reentry_execution_relink_gate_round73_2026-03-01.csv</a>（問い別再入実行再接続ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 74 の再接続実行チェックと再入候補再同期ゲート固定は
-<a href="automation/rq_regulation_reentry_relink_execution_check_round74_2026-03-01.csv" target="_blank">rq_regulation_reentry_relink_execution_check_round74_2026-03-01.csv</a>（問い別再接続実行チェック）と
-<a href="automation/rq_regulation_reentry_candidate_resync_gate_round74_2026-03-01.csv" target="_blank">rq_regulation_reentry_candidate_resync_gate_round74_2026-03-01.csv</a>（問い別再入候補再同期ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 75 の再同期実行台帳と再同期監視ゲート固定は
-<a href="automation/rq_regulation_reentry_resync_execution_ledger_round75_2026-03-01.csv" target="_blank">rq_regulation_reentry_resync_execution_ledger_round75_2026-03-01.csv</a>（問い別再同期実行台帳）と
-<a href="automation/rq_regulation_reentry_watch_resync_gate_round75_2026-03-01.csv" target="_blank">rq_regulation_reentry_watch_resync_gate_round75_2026-03-01.csv</a>（問い別再同期監視ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 76 の再同期更新台帳と再入監視再起動ゲート固定は
-<a href="automation/rq_regulation_reentry_resync_update_ledger_round76_2026-03-01.csv" target="_blank">rq_regulation_reentry_resync_update_ledger_round76_2026-03-01.csv</a>（問い別再同期更新台帳）と
-<a href="automation/rq_regulation_reentry_watch_restart_gate_round76_2026-03-01.csv" target="_blank">rq_regulation_reentry_watch_restart_gate_round76_2026-03-01.csv</a>（問い別再入監視再起動ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 77 の監視再起動台帳と再接続再開ゲート固定は
-<a href="automation/rq_regulation_reentry_watch_restart_ledger_round77_2026-03-01.csv" target="_blank">rq_regulation_reentry_watch_restart_ledger_round77_2026-03-01.csv</a>（問い別監視再起動台帳）と
-<a href="automation/rq_regulation_reentry_reconnect_resume_gate_round77_2026-03-01.csv" target="_blank">rq_regulation_reentry_reconnect_resume_gate_round77_2026-03-01.csv</a>（問い別再接続再開ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 78 の再開反映台帳と監視再連結ゲート固定は
-<a href="automation/rq_regulation_reconnect_resume_update_ledger_round78_2026-03-01.csv" target="_blank">rq_regulation_reconnect_resume_update_ledger_round78_2026-03-01.csv</a>（問い別再開反映台帳）と
-<a href="automation/rq_regulation_reentry_watch_relink_gate_round78_2026-03-01.csv" target="_blank">rq_regulation_reentry_watch_relink_gate_round78_2026-03-01.csv</a>（問い別監視再連結ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 79 の再連結更新台帳と監視再同期再開ゲート固定は
-<a href="automation/rq_regulation_reentry_relink_update_ledger_round79_2026-03-01.csv" target="_blank">rq_regulation_reentry_relink_update_ledger_round79_2026-03-01.csv</a>（問い別再連結更新台帳）と
-<a href="automation/rq_regulation_reentry_watch_resync_resume_gate_round79_2026-03-01.csv" target="_blank">rq_regulation_reentry_watch_resync_resume_gate_round79_2026-03-01.csv</a>（問い別監視再同期再開ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 80 の再接続フィードバック台帳と監視再同期再点検ゲート固定は
-<a href="automation/rq_regulation_reentry_reconnect_feedback_ledger_round80_2026-03-01.csv" target="_blank">rq_regulation_reentry_reconnect_feedback_ledger_round80_2026-03-01.csv</a>（問い別再接続フィードバック台帳）と
-<a href="automation/rq_regulation_reentry_watch_resync_recheck_gate_round80_2026-03-01.csv" target="_blank">rq_regulation_reentry_watch_resync_recheck_gate_round80_2026-03-01.csv</a>（問い別監視再同期再点検ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 81 の再点検結果台帳と監視再同期維持ゲート固定は
-<a href="automation/rq_regulation_reentry_recheck_outcome_ledger_round81_2026-03-01.csv" target="_blank">rq_regulation_reentry_recheck_outcome_ledger_round81_2026-03-01.csv</a>（問い別再点検結果台帳）と
-<a href="automation/rq_regulation_reentry_watch_resync_stability_gate_round81_2026-03-01.csv" target="_blank">rq_regulation_reentry_watch_resync_stability_gate_round81_2026-03-01.csv</a>（問い別監視再同期維持ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 82 の再同期維持確認台帳と再接続再監視ゲート固定は
-<a href="automation/rq_regulation_reentry_resync_stability_confirmation_ledger_round82_2026-03-01.csv" target="_blank">rq_regulation_reentry_resync_stability_confirmation_ledger_round82_2026-03-01.csv</a>（問い別再同期維持確認台帳）と
-<a href="automation/rq_regulation_reentry_reconnect_remonitor_gate_round82_2026-03-01.csv" target="_blank">rq_regulation_reentry_reconnect_remonitor_gate_round82_2026-03-01.csv</a>（問い別再接続再監視ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 83 の再監視実行台帳と再接続再評価ゲート固定は
-<a href="automation/rq_regulation_reentry_remonitor_execution_ledger_round83_2026-03-01.csv" target="_blank">rq_regulation_reentry_remonitor_execution_ledger_round83_2026-03-01.csv</a>（問い別再監視実行台帳）と
-<a href="automation/rq_regulation_reentry_reconnect_reevaluation_gate_round83_2026-03-01.csv" target="_blank">rq_regulation_reentry_reconnect_reevaluation_gate_round83_2026-03-01.csv</a>（問い別再接続再評価ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 84 の再評価結果台帳と監視再同期再接続ゲート固定は
-<a href="automation/rq_regulation_reentry_reevaluation_outcome_ledger_round84_2026-03-01.csv" target="_blank">rq_regulation_reentry_reevaluation_outcome_ledger_round84_2026-03-01.csv</a>（問い別再評価結果台帳）と
-<a href="automation/rq_regulation_reentry_watch_resync_reconnect_gate_round84_2026-03-01.csv" target="_blank">rq_regulation_reentry_watch_resync_reconnect_gate_round84_2026-03-01.csv</a>（問い別監視再同期再接続ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 85 の再評価フォローアップ台帳と監視再同期フォローアップゲート固定は
-<a href="automation/rq_regulation_reentry_reevaluation_followup_ledger_round85_2026-03-01.csv" target="_blank">rq_regulation_reentry_reevaluation_followup_ledger_round85_2026-03-01.csv</a>（問い別再評価フォローアップ台帳）と
-<a href="automation/rq_regulation_reentry_watch_resync_followup_gate_round85_2026-03-01.csv" target="_blank">rq_regulation_reentry_watch_resync_followup_gate_round85_2026-03-01.csv</a>（問い別監視再同期フォローアップゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 86 の再評価フォローアップ結果台帳と監視再同期フォローアップ再接続ゲート固定は
-<a href="automation/rq_regulation_reentry_reevaluation_followup_outcome_ledger_round86_2026-03-01.csv" target="_blank">rq_regulation_reentry_reevaluation_followup_outcome_ledger_round86_2026-03-01.csv</a>（問い別再評価フォローアップ結果台帳）と
-<a href="automation/rq_regulation_reentry_watch_resync_followup_reconnect_gate_round86_2026-03-01.csv" target="_blank">rq_regulation_reentry_watch_resync_followup_reconnect_gate_round86_2026-03-01.csv</a>（問い別監視再同期フォローアップ再接続ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 87 の再評価フォローアップ再接続結果台帳と監視再同期フォローアップ維持ゲート固定は
-<a href="automation/rq_regulation_reentry_reevaluation_followup_reconnect_outcome_ledger_round87_2026-03-01.csv" target="_blank">rq_regulation_reentry_reevaluation_followup_reconnect_outcome_ledger_round87_2026-03-01.csv</a>（問い別再評価フォローアップ再接続結果台帳）と
-<a href="automation/rq_regulation_reentry_watch_resync_followup_stability_gate_round87_2026-03-01.csv" target="_blank">rq_regulation_reentry_watch_resync_followup_stability_gate_round87_2026-03-01.csv</a>（問い別監視再同期フォローアップ維持ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 88 の再評価フォローアップ安定化確認台帳と再接続フォローアップ再監視ゲート固定は
-<a href="automation/rq_regulation_reentry_reevaluation_followup_stability_confirmation_ledger_round88_2026-03-01.csv" target="_blank">rq_regulation_reentry_reevaluation_followup_stability_confirmation_ledger_round88_2026-03-01.csv</a>（問い別再評価フォローアップ安定化確認台帳）と
-<a href="automation/rq_regulation_reentry_reconnect_followup_remonitor_gate_round88_2026-03-01.csv" target="_blank">rq_regulation_reentry_reconnect_followup_remonitor_gate_round88_2026-03-01.csv</a>（問い別再接続フォローアップ再監視ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 89 のフォローアップ再監視実行台帳とフォローアップ再接続再評価ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_remonitor_execution_ledger_round89_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_remonitor_execution_ledger_round89_2026-03-01.csv</a>（問い別フォローアップ再監視実行台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_reevaluation_gate_round89_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_reevaluation_gate_round89_2026-03-01.csv</a>（問い別フォローアップ再接続再評価ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 90 のフォローアップ再評価結果台帳とフォローアップ監視再同期再接続ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reevaluation_outcome_ledger_round90_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reevaluation_outcome_ledger_round90_2026-03-01.csv</a>（問い別フォローアップ再評価結果台帳）と
-<a href="automation/rq_regulation_reentry_followup_watch_resync_reconnect_gate_round90_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_watch_resync_reconnect_gate_round90_2026-03-01.csv</a>（問い別フォローアップ監視再同期再接続ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 91 のフォローアップ再評価フォローアップ台帳とフォローアップ監視再同期フォローアップゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reevaluation_followup_ledger_round91_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reevaluation_followup_ledger_round91_2026-03-01.csv</a>（問い別フォローアップ再評価フォローアップ台帳）と
-<a href="automation/rq_regulation_reentry_followup_watch_resync_followup_gate_round91_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_watch_resync_followup_gate_round91_2026-03-01.csv</a>（問い別フォローアップ監視再同期フォローアップゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 92 のフォローアップ再評価フォローアップ結果台帳とフォローアップ監視再同期フォローアップ再接続ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reevaluation_followup_outcome_ledger_round92_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reevaluation_followup_outcome_ledger_round92_2026-03-01.csv</a>（問い別フォローアップ再評価フォローアップ結果台帳）と
-<a href="automation/rq_regulation_reentry_followup_watch_resync_followup_reconnect_gate_round92_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_watch_resync_followup_reconnect_gate_round92_2026-03-01.csv</a>（問い別フォローアップ監視再同期フォローアップ再接続ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 93 のフォローアップ再評価フォローアップ再接続結果台帳とフォローアップ監視再同期フォローアップ維持ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reevaluation_followup_reconnect_outcome_ledger_round93_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reevaluation_followup_reconnect_outcome_ledger_round93_2026-03-01.csv</a>（問い別フォローアップ再評価フォローアップ再接続結果台帳）と
-<a href="automation/rq_regulation_reentry_followup_watch_resync_followup_stability_gate_round93_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_watch_resync_followup_stability_gate_round93_2026-03-01.csv</a>（問い別フォローアップ監視再同期フォローアップ維持ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 94 のフォローアップ再評価フォローアップ安定化確認台帳とフォローアップ再接続フォローアップ再監視ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reevaluation_followup_stability_confirmation_ledger_round94_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reevaluation_followup_stability_confirmation_ledger_round94_2026-03-01.csv</a>（問い別フォローアップ再評価フォローアップ安定化確認台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_remonitor_gate_round94_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_remonitor_gate_round94_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再監視ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 95 のフォローアップ再接続フォローアップ再監視実行台帳とフォローアップ再接続フォローアップ再評価ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_remonitor_execution_ledger_round95_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_remonitor_execution_ledger_round95_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再監視実行台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reevaluation_gate_round95_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reevaluation_gate_round95_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再評価ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 96 のフォローアップ再接続フォローアップ再評価結果台帳とフォローアップ再接続フォローアップ監視再同期再接続ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reevaluation_outcome_ledger_round96_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reevaluation_outcome_ledger_round96_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再評価結果台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_watch_resync_reconnect_gate_round96_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_watch_resync_reconnect_gate_round96_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ監視再同期再接続ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 97 のフォローアップ再接続フォローアップ再評価フォローアップ台帳とフォローアップ再接続フォローアップ監視再同期フォローアップゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reevaluation_followup_ledger_round97_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reevaluation_followup_ledger_round97_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再評価フォローアップ台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_watch_resync_followup_gate_round97_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_watch_resync_followup_gate_round97_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ監視再同期フォローアップゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 98 のフォローアップ再接続フォローアップ再評価フォローアップ結果台帳とフォローアップ再接続フォローアップ監視再同期フォローアップ再接続ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reevaluation_followup_outcome_ledger_round98_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reevaluation_followup_outcome_ledger_round98_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再評価フォローアップ結果台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_watch_resync_followup_reconnect_gate_round98_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_watch_resync_followup_reconnect_gate_round98_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ監視再同期フォローアップ再接続ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 99 のフォローアップ再接続フォローアップ再評価フォローアップ再接続結果台帳とフォローアップ再接続フォローアップ監視再同期フォローアップ維持ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reevaluation_followup_reconnect_outcome_ledger_round99_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reevaluation_followup_reconnect_outcome_ledger_round99_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再評価フォローアップ再接続結果台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_watch_resync_followup_stability_gate_round99_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_watch_resync_followup_stability_gate_round99_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ監視再同期フォローアップ維持ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 100 のフォローアップ再接続フォローアップ再評価フォローアップ安定化確認台帳とフォローアップ再接続フォローアップ再接続フォローアップ再監視ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reevaluation_followup_stability_confirmation_ledger_round100_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reevaluation_followup_stability_confirmation_ledger_round100_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再評価フォローアップ安定化確認台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_remonitor_gate_round100_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_remonitor_gate_round100_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再監視ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 101 のフォローアップ再接続フォローアップ再接続フォローアップ再監視実行台帳とフォローアップ再接続フォローアップ再接続フォローアップ再評価ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_remonitor_execution_ledger_round101_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_remonitor_execution_ledger_round101_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再監視実行台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reevaluation_gate_round101_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reevaluation_gate_round101_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再評価ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 102 のフォローアップ再接続フォローアップ再接続フォローアップ再評価結果台帳とフォローアップ再接続フォローアップ再接続フォローアップ監視再同期再接続ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reevaluation_outcome_ledger_round102_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reevaluation_outcome_ledger_round102_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再評価結果台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_watch_resync_reconnect_gate_round102_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_watch_resync_reconnect_gate_round102_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ監視再同期再接続ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 103 のフォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ台帳とフォローアップ再接続フォローアップ再接続フォローアップ監視再同期フォローアップゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reevaluation_followup_ledger_round103_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reevaluation_followup_ledger_round103_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_watch_resync_followup_gate_round103_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_watch_resync_followup_gate_round103_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ監視再同期フォローアップゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 104 のフォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ結果台帳とフォローアップ再接続フォローアップ再接続フォローアップ監視再同期フォローアップ再接続ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reevaluation_followup_outcome_ledger_round104_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reevaluation_followup_outcome_ledger_round104_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ結果台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_watch_resync_followup_reconnect_gate_round104_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_watch_resync_followup_reconnect_gate_round104_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ監視再同期フォローアップ再接続ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 105 のフォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ再接続結果台帳とフォローアップ再接続フォローアップ再接続フォローアップ監視再同期フォローアップ維持ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reevaluation_followup_reconnect_outcome_ledger_round105_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reevaluation_followup_reconnect_outcome_ledger_round105_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ再接続結果台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_watch_resync_followup_stability_gate_round105_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_watch_resync_followup_stability_gate_round105_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ監視再同期フォローアップ維持ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 106 のフォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ安定化確認台帳とフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再監視ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reevaluation_followup_stability_confirmation_ledger_round106_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reevaluation_followup_stability_confirmation_ledger_round106_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ安定化確認台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_remonitor_gate_round106_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_remonitor_gate_round106_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再監視ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 107 のフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再監視実行台帳とフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_remonitor_execution_ledger_round107_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_remonitor_execution_ledger_round107_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再監視実行台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reevaluation_gate_round107_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reevaluation_gate_round107_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 108 のフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価結果台帳とフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ監視再同期再接続ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reevaluation_outcome_ledger_round108_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reevaluation_outcome_ledger_round108_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価結果台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_watch_resync_reconnect_gate_round108_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_watch_resync_reconnect_gate_round108_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ監視再同期再接続ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 109 のフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ台帳とフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ監視再同期フォローアップゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reevaluation_followup_ledger_round109_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reevaluation_followup_ledger_round109_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_watch_resync_followup_gate_round109_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_watch_resync_followup_gate_round109_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ監視再同期フォローアップゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 110 のフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ結果台帳とフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ監視再同期フォローアップ再接続ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reevaluation_followup_outcome_ledger_round110_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reevaluation_followup_outcome_ledger_round110_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ結果台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_watch_resync_followup_reconnect_gate_round110_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_watch_resync_followup_reconnect_gate_round110_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ監視再同期フォローアップ再接続ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 111 のフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ再接続結果台帳とフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ監視再同期フォローアップ維持ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reevaluation_followup_reconnect_outcome_ledger_round111_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reevaluation_followup_reconnect_outcome_ledger_round111_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ再接続結果台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_watch_resync_followup_stability_gate_round111_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_watch_resync_followup_stability_gate_round111_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ監視再同期フォローアップ維持ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 112 のフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ安定化確認台帳とフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再監視ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reevaluation_followup_stability_confirmation_ledger_round112_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reevaluation_followup_stability_confirmation_ledger_round112_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価フォローアップ安定化確認台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reconnect_followup_remonitor_gate_round112_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reconnect_followup_remonitor_gate_round112_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再監視ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 113 のフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再監視実行台帳とフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reconnect_followup_remonitor_execution_ledger_round113_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reconnect_followup_remonitor_execution_ledger_round113_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再監視実行台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reconnect_followup_reevaluation_gate_round113_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reconnect_followup_reevaluation_gate_round113_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価ゲート）
-に記録しています。
-</p>
-<p class="small">
-Round 114 のフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価結果台帳とフォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ監視再同期再接続ゲート固定は
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reconnect_followup_reevaluation_outcome_ledger_round114_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reconnect_followup_reevaluation_outcome_ledger_round114_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再評価結果台帳）と
-<a href="automation/rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reconnect_followup_watch_resync_reconnect_gate_round114_2026-03-01.csv" target="_blank">rq_regulation_reentry_followup_reconnect_followup_reconnect_followup_reconnect_followup_reconnect_followup_watch_resync_reconnect_gate_round114_2026-03-01.csv</a>（問い別フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ再接続フォローアップ監視再同期再接続ゲート）
-に記録しています。
+<h3>深掘りから本文へ残した要点</h3>
+<div class="key-points">
+<h4>Representative Findings</h4>
+<ul>
+<li><strong>U0:</strong> 操作的同一性は理論蓄積がある一方で、介入応答を含むベンチ仕様が依然不足しております。</li>
+<li><strong>U1:</strong> 逆問題では、点推定だけでなく不確実性伝播と信頼区間公開を最低要件として扱うべきです。</li>
+<li><strong>U3:</strong> グリア、リンパ系、免疫監視は「含めるべき最小構成」を見直す補助指標として浮上しました。</li>
+<li><strong>U7 / U8:</strong> BIDS、同期誤差、閉ループ遅延の許容域は、再現可能性と安全停止の双方に直結します。</li>
+<li><strong>U10 / U11:</strong> 熱力学的一貫性と意識指標近似は、理論対立より先に KPI と失敗条件を固定すべき論点です。</li>
+<li><strong>U12 / U15:</strong> 制度・規制系は外部依存が大きいため、本文更新前の証跡ゲートと再監視運用が不可欠です。</li>
+</ul>
+</div>
+
+<h3>raw artifact と監査の置き場</h3>
+<p class="small">
+全60問いのカバレッジ監査は <a href="automation/rq_deepening_consistency_audit_2026-03-01.md" target="_blank">rq_deepening_consistency_audit_2026-03-01.md</a>、U別集計は <a href="automation/rq_deepening_coverage_summary_2026-03-01.csv" target="_blank">rq_deepening_coverage_summary_2026-03-01.csv</a>、引用関連性の点検は <a href="automation/rq_reference_relevance_audit_2026-03-01.md" target="_blank">rq_reference_relevance_audit_2026-03-01.md</a> に残しています。
+</p>
+<p class="small">
+運用ガイドとしての役割が強かった旧 <code>research_deepening_continue_guide_2026-03-01.md</code> は公開ページから外し、公開導線では本節の要約と <code>automation/</code> の raw artifact を対応付ける方針へ変更しました。
 </p>
 </section>
+
 
 <section class="section" id="u0">
 <h2 class="section-title">U0: 操作的同一性</h2>
@@ -1779,7 +1038,7 @@ Round 114 のフォローアップ再接続フォローアップ再接続フォ�
 <li><a href="verification.html">Verification Commons →</a></li>
 <li><a href="tech_roadmap.html#unsolved">Roadmap: Unsolved Questions →</a></li>
 <li><a href="mind_uploading_papers.html">Paper Archive →</a></li>
-<li><a href="proposals.html">Technical Proposals →</a></li>
+<li><a href="issue.html#proposal-integration">Technical Proposals →</a></li>
 </ul>
 </div>
 <div class="note-box">

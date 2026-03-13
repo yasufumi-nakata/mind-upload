@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Beginner guide
+- 更新日: 2026-03-14 / 位置づけ: Beginner guide
 
 ## このページの役割
 このページは、EEG が何を測っているのかを初歩から説明する wiki です。難しい式より先に、『どんな信号がどこで混ざって見えているのか』『なぜ前処理や QC が重要なのか』を理解することを目標にします。
@@ -15,7 +15,7 @@ EEG を過大評価しないために限界も強調しますが、だからと�
 ## 公開ページへ戻る
 - [EEG入門](https://mind-upload.com/eeg_101.html)
 - [データ&ベンチ](https://mind-upload.com/datasets.html)
-- [ハンズオン](https://mind-upload.com/hands_on.html)
+- [ハンズオン](https://mind-upload.com/datasets.html#l0-practice)
 
 ## 関連 Wiki
 - [Wiki: WBEの基本](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - EEG が WBE 全体のどこに入るかを先に見たい場合はこちらです。

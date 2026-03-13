@@ -5,7 +5,7 @@ description: "論文集や文献地図を読んだあとに、未解決問題、
 article_type: Wiki
 subtitle: "『文献を読んだあと、何に使うか』を固定するための次ページ案内"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Literature route"
 audience: "論文を読んだあとに、次にどこへ戻るかで迷う人"
 reading_time: "6〜10分"
@@ -39,7 +39,7 @@ recommended_pages:
   - label: "文献地図"
     url: "/research_harvest_50.html"
   - label: "技術提案"
-    url: "/proposals.html"
+    url: "/issue.html#proposal-integration"
   - label: "貢献ガイド"
     url: "/issue.html"
 ---
@@ -72,7 +72,7 @@ recommended_pages:
 </tr>
 <tr>
 <td><strong>提案や実装方針へつなぎたい</strong></td>
-<td><a href="../proposals.html">Proposals</a></td>
+<td><a href="../issue.html#proposal-integration">Proposals</a></td>
 <td>その文献がどのストリームや提案の根拠になるかを確認します。</td>
 </tr>
 <tr>
@@ -82,7 +82,7 @@ recommended_pages:
 </tr>
 <tr>
 <td><strong>外部連携や共同研究の準備物へ変えたい</strong></td>
-<td><a href="../collaborations.html">Collaborations</a></td>
+<td><a href="../issue.html#external-collaboration">Collaborations</a></td>
 <td>その文献が、どの連携候補や準備物に効くかを確認します。</td>
 </tr>
 </tbody>
@@ -188,7 +188,7 @@ recommended_pages:
 <h4>公開ページ</h4>
 <ul>
 <li><a href="../research_harvest_50.html">文献地図 →</a></li>
-<li><a href="../proposals.html">技術提案 →</a></li>
+<li><a href="../issue.html#proposal-integration">技術提案 →</a></li>
 <li><a href="../issue.html">貢献ガイド →</a></li>
 </ul>
 </div>

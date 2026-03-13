@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Operational guide
+- 更新日: 2026-03-14 / 位置づけ: Operational guide
 
 ## このページの役割
 このページは、Mind-Upload の運用で何度も出てくる『外部依存』を、止まる理由ではなく分解対象として読むための補助ページです。ここでの焦点は、今このリポジトリで先に作れるものと、相手先や制度が必要なものを分けることです。
@@ -14,7 +14,7 @@
 
 ## 公開ページへ戻る
 - [貢献ガイド](https://mind-upload.com/issue.html)
-- [協業候補](https://mind-upload.com/collaborations.html)
+- [協業候補](https://mind-upload.com/issue.html#external-collaboration)
 - [検証基盤](https://mind-upload.com/verification.html)
 
 ## 関連 Wiki
@@ -154,5 +154,5 @@ Issue や Collaborations を読んだあとに、次は小さな修正、条件�
 
 <h2>次に戻る場所</h2>
 <p>
-Issue の書き方へ戻る場合は <a href="https://mind-upload.com/issue.html">貢献ガイド</a>、共同研究候補を整理する場合は <a href="https://mind-upload.com/collaborations.html">協業候補</a>、要求仕様や判定条件の前提を固める場合は <a href="https://mind-upload.com/verification.html">検証基盤</a> に戻ってください。
+Issue の書き方へ戻る場合は <a href="https://mind-upload.com/issue.html">貢献ガイド</a>、共同研究候補を整理する場合は <a href="https://mind-upload.com/issue.html#external-collaboration">協業候補</a>、要求仕様や判定条件の前提を固める場合は <a href="https://mind-upload.com/verification.html">検証基盤</a> に戻ってください。
 </p>

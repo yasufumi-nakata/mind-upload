@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Practical guide
+- 更新日: 2026-03-14 / 位置づけ: Practical guide
 
 ## このページの役割
 このページは、データセットをどう分けるか、なぜデータリークが危険かを初歩から説明する wiki です。『精度が高いのに信用できない』という事故を減らすために、最小限どこを見ればよいかを整理します。
@@ -14,7 +14,7 @@
 
 ## 公開ページへ戻る
 - [データ&ベンチ](https://mind-upload.com/datasets.html)
-- [ハンズオン](https://mind-upload.com/hands_on.html)
+- [ハンズオン](https://mind-upload.com/datasets.html#l0-practice)
 - [検証基盤](https://mind-upload.com/verification.html)
 
 ## 関連 Wiki
@@ -121,5 +121,5 @@
 
 <h2>次にどこへ戻るか</h2>
 <p>
-実際のスターターデータを見直したい場合は <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a>、最小ループを作る作業へ戻りたい場合は <a href="https://mind-upload.com/hands_on.html">ハンズオン</a>、なぜこれが検証基盤の一部なのかを確認したい場合は <a href="https://mind-upload.com/verification.html">検証基盤</a> へ戻ってください。
+実際のスターターデータを見直したい場合は <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a>、最小ループを作る作業へ戻りたい場合は <a href="https://mind-upload.com/datasets.html#l0-practice">ハンズオン</a>、なぜこれが検証基盤の一部なのかを確認したい場合は <a href="https://mind-upload.com/verification.html">検証基盤</a> へ戻ってください。
 </p>

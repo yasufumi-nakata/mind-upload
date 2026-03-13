@@ -5,7 +5,7 @@ description: "Mind-Upload を『全体像をつかむ』『初歩から学ぶ』
 article_type: Wiki
 subtitle: "情報ポータル、学習用 wiki、実行導線を目的別に使い分ける"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Site usage modes"
 audience: "このサイトをどう使えばよいか、入口・学習・参加の切り替えで迷う人"
 reading_time: "8〜12分"
@@ -75,7 +75,7 @@ recommended_pages:
 <tr>
 <td><strong>実際に直す・参加する</strong></td>
 <td>Issue、統合先、外部依存の切り分け、最小成果物を決めます。</td>
-<td><a href="../issue.html">Issue</a> / <a href="../content_hub.html">Content Hub</a> / <a href="../collaborations.html">Collaborations</a></td>
+<td><a href="../issue.html">Issue</a> / <a href="../content_hub.html">Content Hub</a> / <a href="../issue.html#external-collaboration">Collaborations</a></td>
 </tr>
 </tbody>
 </table>
@@ -164,7 +164,7 @@ recommended_pages:
 </tr>
 <tr>
 <td><strong>外部依存を含む話を整理したい</strong></td>
-<td><a href="../collaborations.html">Collaborations</a></td>
+<td><a href="../issue.html#external-collaboration">Collaborations</a></td>
 <td><a href="internal-prework-and-external-dependencies.html">内製で先にやることと外部依存</a></td>
 </tr>
 </tbody>

@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Reading status and scope
+- 更新日: 2026-03-14 / 位置づけ: Reading status and scope
 
 ## このページの役割
 このページは、Mind-Upload の公開ページにある『いま分かっていること』『まだ分かっていないこと』『このページで言えること / 言えないこと』を、誤読しないための補助ガイドです。公開ページは情報ポータルとして、断言できる範囲と保留すべき範囲を先に示します。その意味をそろえて読むために使います。
@@ -118,7 +118,7 @@
 <tr>
 <td><strong>合意不足</strong></td>
 <td>本人性や制度設計のように、分野横断の合意がまだありません。</td>
-<td><a href="https://mind-upload.com/wbe_101.html">WBE 101</a> / <a href="https://mind-upload.com/collaborations.html">Collaborations</a></td>
+<td><a href="https://mind-upload.com/wbe_101.html">WBE 101</a> / <a href="https://mind-upload.com/issue.html#external-collaboration">Collaborations</a></td>
 </tr>
 <tr>
 <td><strong>外部依存</strong></td>

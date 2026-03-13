@@ -32,16 +32,11 @@
 - [Wiki：新しい情報の置き場所を決める基本](https://github.com/yasufumi-nakata/mind-upload/wiki/content-placement-basics)
 - [Wiki：読んだ内容を変更へつなぐ流れ](https://github.com/yasufumi-nakata/mind-upload/wiki/reading-to-change-workflow)
 
-## 助成・連携
-- [Wiki：EEG-DATA × 助成マップ](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-data-fund-map)
-
 ## その他
 - [Wiki：Decode と Emulate](https://github.com/yasufumi-nakata/mind-upload/wiki/decode-vs-emulate)
 - [Wiki：EEGからL0までの一本道](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-to-l0-route)
 - [Wiki：EEG前処理とQC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc)
 - [Wiki：L0で最低限そろえる成果物パック](https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack)
-- [Wiki：Research Question 60問 × EEG-DATA × 助成テーマ深掘り](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-data-fund-map-rq60-deepdive)
-- [Wiki：Roadmap 51QA × EEG-DATA × 助成テーマ深掘り](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-data-fund-map-roadmap-qa-deepdive)
 - [Wiki：state・trait・ドリフト](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift)
 - [Wiki：U番号ガイド](https://github.com/yasufumi-nakata/mind-upload/wiki/u-number-guide)
 - [Wiki：Verification の具体例ウォークスルー](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-example-walkthrough)

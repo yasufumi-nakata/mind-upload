@@ -5,7 +5,7 @@ description: "Mind-Uploadを読んでいて出やすい疑問に、短く正確�
 article_type: FAQ
 subtitle: "派手な結論より、検証できる前進を"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Human-first"
 audience: "まず疑問や誤解を整理したい人、短いQ&Aで全体像をつかみたい人"
 reading_time: "8〜15分"
@@ -232,7 +232,7 @@ Mind-Uploadでは、これを“サイトとして運用できる形”に落と
 A. 標準がないと、同じことを言っているようで違う入力・違う手順・違う指標を比較してしまい、進捗が見えなくなります。
 PDBやBIDS+OpenNeuroなどの事例は、分野が違っても「前進を測れる」状態を作った点が共通しています。
 </p>
-<p><a href="casework.html">ケースワーク集</a>に設計の型をまとめており、BIDS、OpenNeuro、Validator、benchmark の役割差を先に整理したい場合は <a href="wiki/standards-repositories-validators-and-benchmarks.html">Wiki: 規格・置き場・Validator・ベンチマーク</a> が近道です。</p>
+<p><a href="verification.html#casework">ケースワーク集</a>に設計の型をまとめており、BIDS、OpenNeuro、Validator、benchmark の役割差を先に整理したい場合は <a href="wiki/standards-repositories-validators-and-benchmarks.html">Wiki: 規格・置き場・Validator・ベンチマーク</a> が近道です。</p>
 </section>
 
 <section class="section" id="q5">

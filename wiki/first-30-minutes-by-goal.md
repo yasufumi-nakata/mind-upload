@@ -5,7 +5,7 @@ description: "全体像、理論、実務、文献、参加のどこから入り
 article_type: Wiki
 subtitle: "『まず何から見るか』を目的ごとに固定するための最短ガイド"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Reading route"
 audience: "入口が多くて迷う人、最初の30分で外したくない人"
 reading_time: "6〜10分"
@@ -69,12 +69,12 @@ recommended_pages:
 </tr>
 <tr>
 <td><strong>理論から入りたい</strong></td>
-<td><a href="../wbe_101.html">WBE 101</a> → <a href="theory-pages-reading-guide.html">理論系ページの読み分けガイド</a> → <a href="../perspective.html">Perspective</a> または <a href="../idea.html">Idea</a></td>
+<td><a href="../wbe_101.html">WBE 101</a> → <a href="theory-pages-reading-guide.html">理論系ページの読み分けガイド</a> → <a href="../perspective.html">Perspective</a> または <a href="../perspective.html#design-principles">Idea</a></td>
 <td>主張レベル、長文研究ノート、設計原理の役割差が分かることです。</td>
 </tr>
 <tr>
 <td><strong>手を動かしたい</strong></td>
-<td><a href="../eeg_101.html">EEG 101</a> → <a href="practical-pages-reading-guide.html">実務系ページの読み分けガイド</a> → <a href="../datasets.html">Datasets</a> → <a href="../hands_on.html">Hands-on</a></td>
+<td><a href="../eeg_101.html">EEG 101</a> → <a href="practical-pages-reading-guide.html">実務系ページの読み分けガイド</a> → <a href="../datasets.html">Datasets</a> → <a href="../datasets.html#l0-practice">Hands-on</a></td>
 <td>どの公開データで始め、L0 の最小ループをどこで作るかが分かることです。</td>
 </tr>
 <tr>
@@ -161,7 +161,7 @@ recommended_pages:
 <ul>
 <li><a href="../index.html">スタートページ →</a></li>
 <li><a href="../verification.html">検証基盤 →</a></li>
-<li><a href="../hands_on.html">ハンズオン →</a></li>
+<li><a href="../datasets.html#l0-practice">ハンズオン →</a></li>
 </ul>
 </div>
 </aside>

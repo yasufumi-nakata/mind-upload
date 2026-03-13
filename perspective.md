@@ -5,7 +5,7 @@ description: "マインドアップロード実現のための中核となるコ
 article_type: Perspective
 subtitle: "脳の情報処理を別の基盤で再現し、心的機能を移植・複製するという研究仮説の現状と展望"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "研究ノート (2026年1月改訂)"
 audience: "理論と実装のつながりまで追いたい人、限界や反論も含めて全体を知りたい人"
 reading_time: "30〜45分"
@@ -50,8 +50,8 @@ recommended_pages:
     url: "/verification.html"
   - label: "技術ロードマップ"
     url: "/tech_roadmap.html"
-  - label: "理論フレーム"
-    url: "/idea.html"
+  - label: "WBE入門"
+    url: "/wbe_101.html"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
 
@@ -86,7 +86,7 @@ recommended_pages:
 <div class="note-box">
 <strong>理論系ページの役割差で迷ったとき</strong>
 <p>
-Perspective は理論、計測、反論、限界をまとめて追う長文ノートです。主張レベルを先にそろえる入口は <a href="wbe_101.html">WBE 101</a>、設計原理を絞って見るページは <a href="idea.html">理論フレーム</a>、依存関係の地図は <a href="tech_roadmap.html">技術ロードマップ</a> です。理論系だけの読み分けを 1 枚で見たい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a> をご覧ください。
+Perspective は理論、計測、反論、限界に加え、採用する設計原理までまとめて追う長文ノートです。主張レベルを先にそろえる入口は <a href="wbe_101.html">WBE 101</a>、依存関係の地図は <a href="tech_roadmap.html">技術ロードマップ</a> です。理論系だけの読み分けを 1 枚で見たい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a> をご覧ください。
 </p>
 </div>
 <div class="note-box">
@@ -120,7 +120,7 @@ WBE 101 のあとに、なぜこの長文ノートへ進むのか、誤解整理
 <div class="note-box">
 <strong>迷ったときの読み順</strong>
 <p>
-まず導入部で立場を把握し、次に計測・モデル化・実装の節へ進んでください。哲学寄りの論点で詰まった場合は、先に <a href="idea.html">理論フレーム</a> と <a href="faq.html">FAQ</a> を見ると、戻ってきたときに読みやすくなります。
+まず導入部で立場を把握し、次に <a href="#design-principles">設計原理</a> で「コピーではなく移行としてどう考えるか」を確認し、その後に計測・モデル化・実装の節へ進んでください。哲学寄りの論点で詰まった場合は <a href="faq.html">FAQ</a> を挟むと戻りやすくなります。
 </p>
 </div>
 
@@ -183,6 +183,63 @@ WBE 101 のあとに、なぜこの長文ノートへ進むのか、誤解整理
 </tr>
 </tbody>
 </table>
+
+<section class="section" id="design-principles">
+<h2 class="section-title">Design Principles: コピーではなく移行として設計する</h2>
+<p>
+ここでは、旧 <code>idea.md</code> で独立していた理論フレームを、本研究ノートの設計原理として統合しております。狙いは、哲学的立場を増やすことではなく、<strong>どの前提を設計条件へ落とすのか</strong>を本文の中で切り離さずに読めるようにすることです。
+</p>
+
+<div class="key-points">
+<h4>採用する設計原理</h4>
+<ul>
+<li><strong>静的コピーではなく動的移行：</strong> 脳の情報を保存するだけでなく、更新し続ける過程をどう引き継ぐかを問います。</li>
+<li><strong>理論は作業仮説として使う：</strong> IIT、FEP、予測符号化は真理宣言ではなく、要件定義へ落とすための補助線として扱います。</li>
+<li><strong>本人性は設計条件へ戻す：</strong> コピー問題は抽象論で止めず、連続性テスト、介入応答、因果保存、熱力学制約へ分解します。</li>
+</ul>
+</div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>設計で先に固定したいこと</th>
+<th>このページの立場</th>
+<th>まだ未解決なこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>本人性</strong></td>
+<td>「同じデータがあるか」ではなく、「更新し続ける過程が連続しているか」を重く見ます。</td>
+<td>どの連続性指標を十分条件とみなすかは未確定です。</td>
+</tr>
+<tr>
+<td><strong>意識理論の使い方</strong></td>
+<td>IIT、GNWT、FEP を競わせるより、測定・摂動・統合指標へ変換して使います。</td>
+<td>理論横断で安定して使える共通仕様はまだ不足しています。</td>
+</tr>
+<tr>
+<td><strong>熱力学</strong></td>
+<td>動的過程を保つなら、論理コストだけでなく散逸や非平衡性も監査対象に入れます。</td>
+<td>どの熱力学 KPI が本人性や意識の質に直結するかは未解決です。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>日常語で言うと</strong>
+<p>
+写真1枚を保存するのと、動画を同じ動きのまま引き継ぐのは別問題でございます。Mind-Upload を前者ではなく後者に近いものとして扱うなら、必要なのは「構造の複製」だけでなく、「遷移の連続」「介入への応答」「維持コスト」の3点でございます。
+</p>
+</div>
+
+<div class="note-box">
+<strong>この立場が実装へ落ちる場所</strong>
+<p>
+計測では BIDS、同期、QC、摂動ログが必要になり、モデル化では ESI / DCM / SCM の不確実性管理が必要になり、実装では閉ループ安定性と熱力学的制約が必要になります。したがって、この節は抽象的な宣言ではなく、後続節の要件を束ねる入口として読むのが正しい使い方です。
+</p>
+</div>
+</section>
 
 <!-- Introduction -->
 <section class="section" id="introduction">
@@ -279,7 +336,7 @@ href="#ref-7">[7]</a></sup>や大規模シミュレーション計画（Blue Bra
 href="#ref-16">[16]</a></sup>の知見を踏まえた整理である。</p>
 
 <div class="stage-list">
-<div class="stage-item">
+<div class="stage-item" id="proposal-46">
 <div class="stage-number"></div>
 <div class="stage-body">
 <h4>1. 計測（Sensing）：脳活動の精密な読み取りと不確実性の定量化</h4>
@@ -805,11 +862,11 @@ href="#ref-54">[54]</a></sup>。</p>
 <li>BIDS-EEGの構造・必須メタデータをQAログと連携し、再現可能な「計測の証跡」を残す<sup><a href="#ref-83">[83]</a></sup></li>
 <li>マルチモーダル同期はLSLのサンプルタイムスタンプとジッタ補正を標準に据える<sup><a href="#ref-84">[84]</a></sup></li>
 </ul>
-<p><a href="technical_proposal_46.html">→ Technical Proposal #46</a></p>
+<p><a href="issue.html#proposal-integration">→ 提案状態と外部依存の整理は貢献ガイドへ</a></p>
 </div>
 </div>
 
-<div class="stage-item">
+<div class="stage-item" id="proposal-47">
 <div class="stage-number">47</div>
 <div class="stage-body">
 <h4>前処理の再現性強化とネットワーク指標</h4>
@@ -819,11 +876,11 @@ href="#ref-54">[54]</a></sup>。</p>
 <li>ZapLineは線雑音除去のための実証済み手法で、EEG/MEGに適用可能<sup><a href="#ref-86">[86]</a></sup></li>
 <li>wPLIは体積伝導とノイズの影響を抑えた位相同期指標<sup><a href="#ref-87">[87]</a></sup>、STEは方向性情報流の推定に有効<sup><a href="#ref-88">[88]</a></sup></li>
 </ul>
-<p><a href="technical_proposal_47.html">→ Technical Proposal #47</a></p>
+<p><a href="issue.html#proposal-integration">→ 提案状態と外部依存の整理は貢献ガイドへ</a></p>
 </div>
 </div>
 
-<div class="stage-item">
+<div class="stage-item" id="proposal-48">
 <div class="stage-number">48</div>
 <div class="stage-body">
 <h4>神経工学的拡張（OPM-MEG / Hyper-scanning）</h4>
@@ -831,11 +888,11 @@ href="#ref-54">[54]</a></sup>。</p>
 <ul>
 <li>ウェアラブルMEGの実証により、自然な動きを伴う計測が可能になった<sup><a href="#ref-89">[89]</a></sup></li>
 </ul>
-<p><a href="technical_proposal_48.html">→ Technical Proposal #48</a></p>
+<p><a href="issue.html#proposal-integration">→ 提案状態と外部依存の整理は貢献ガイドへ</a></p>
 </div>
 </div>
 
-<div class="stage-item">
+<div class="stage-item" id="proposal-56">
 <div class="stage-number">56</div>
 <div class="stage-body">
 <h4>識別可能性と因果介入（PCI / do-calculus）</h4>
@@ -844,11 +901,11 @@ href="#ref-54">[54]</a></sup>。</p>
 <li>因果階層は「観測・介入・反実仮想」の3層で構成される<sup><a href="#ref-91">[91]</a></sup></li>
 <li>PCIはTMS-EEG応答の複雑性を用いた意識指標として提案されている<sup><a href="#ref-90">[90]</a></sup></li>
 </ul>
-<p><a href="technical_proposal_56.html">→ Technical Proposal #56</a></p>
+<p><a href="issue.html#proposal-integration">→ 提案状態と外部依存の整理は貢献ガイドへ</a></p>
 </div>
 </div>
 
-<div class="stage-item">
+<div class="stage-item" id="proposal-58">
 <div class="stage-number">58</div>
 <div class="stage-body">
 <h4>熱力学・因果・IIT計算量のギャップ対応</h4>
@@ -857,25 +914,25 @@ href="#ref-54">[54]</a></sup>。</p>
 <li>非平衡系のエントロピー生成は不可逆性の定量指標として確立されている<sup><a href="#ref-92">[92]</a></sup></li>
 <li>IITのMIP探索は系のサイズに対して指数的コストがかかるため、近似や計算戦略が必須<sup><a href="#ref-93">[93]</a></sup></li>
 </ul>
-<p><a href="technical_proposal_58.html">→ Technical Proposal #58</a></p>
+<p><a href="issue.html#proposal-integration">→ 提案状態と外部依存の整理は貢献ガイドへ</a></p>
 </div>
 </div>
 
-<div class="stage-item">
+<div class="stage-item" id="proposal-61">
 <div class="stage-number">61</div>
 <div class="stage-body">
 <h4>因果・熱力学の論理ギャップ補強</h4>
 <p>因果構造保存とEPR<sup><a href="#ref-92">[92]</a></sup>の同時検証を「同一性要件」に組み込み、計算機上のエミュレーションが物理的制約を満たすかを可視化する。</p>
-<p><a href="technical_proposal_61.html">→ Technical Proposal #61</a></p>
+<p><a href="issue.html#proposal-integration">→ 提案状態と外部依存の整理は貢献ガイドへ</a></p>
 </div>
 </div>
 
-<div class="stage-item">
+<div class="stage-item" id="proposal-62">
 <div class="stage-number">62</div>
 <div class="stage-body">
 <h4>熱力学的・因果的妥当性の強化</h4>
 <p>PCI<sup><a href="#ref-90">[90]</a></sup>・EPR<sup><a href="#ref-92">[92]</a></sup>・SCM<sup><a href="#ref-91">[91]</a></sup>の3点セットを検証パイプラインに組み込み、反実仮想と散逸の両側面から妥当性を判定する。</p>
-<p><a href="technical_proposal_62.html">→ Technical Proposal #62</a></p>
+<p><a href="issue.html#proposal-integration">→ 提案状態と外部依存の整理は貢献ガイドへ</a></p>
 </div>
 </div>
 </div>
@@ -1157,9 +1214,9 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <h4>Start Here</h4>
 <ul>
 <li><a href="verification.html">検証基盤（Verification Commons）→</a></li>
-<li><a href="casework.html">ケースワーク（歴史の型）→</a></li>
+<li><a href="verification.html#casework">ケースワーク（歴史の型）→</a></li>
 <li><a href="tech_roadmap.html#definition">前進の定義（Roadmap）→</a></li>
-<li><a href="idea.html">理論フレーム（Framework）→</a></li>
+<li><a href="perspective.html#design-principles">理論フレーム節（Framework）→</a></li>
 </ul>
 </div>
 
@@ -1208,13 +1265,13 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <div class="sidebar-box">
 <h4>Technical Proposals</h4>
 <ul>
-<li><a href="technical_proposal_46.html">Issue #46: Measurement QA & BIDS</a></li>
-<li><a href="technical_proposal_47.html">Issue #47: Strategic Extension</a></li>
-<li><a href="technical_proposal_48.html">Issue #48: Neuroengineering & IIT</a></li>
-<li><a href="technical_proposal_56.html">Issue #56: Identifiability & Intervention</a></li>
-<li><a href="technical_proposal_58.html">Issue #58: Irreversibility & IIT Scaling</a></li>
-<li><a href="technical_proposal_61.html">Issue #61: Causal & Thermodynamic Critique</a></li>
-<li><a href="technical_proposal_62.html">Issue #62: Thermodynamic/Causal Validity</a></li>
+<li><a href="#proposal-46">Issue #46: Measurement QA & BIDS</a></li>
+<li><a href="#proposal-47">Issue #47: Strategic Extension</a></li>
+<li><a href="#proposal-48">Issue #48: Neuroengineering & IIT</a></li>
+<li><a href="#proposal-56">Issue #56: Identifiability & Intervention</a></li>
+<li><a href="#proposal-58">Issue #58: Irreversibility & IIT Scaling</a></li>
+<li><a href="#proposal-61">Issue #61: Causal & Thermodynamic Critique</a></li>
+<li><a href="#proposal-62">Issue #62: Thermodynamic/Causal Validity</a></li>
 </ul>
 </div>
 
@@ -1252,8 +1309,8 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <div class="sidebar-box">
 <h4>Research Notes</h4>
 <ul>
-<li><a href="idea.html">理論的枠組み（Idea）</a></li>
-<li><a href="collaborations.html">協業候補（Collaborations）</a></li>
+<li><a href="perspective.html#design-principles">理論フレーム節</a></li>
+<li><a href="issue.html#external-collaboration">外部依存・協業節</a></li>
 <li><a href="issue.html">貢献ガイド（Research Community）</a></li>
 </ul>
 </div>

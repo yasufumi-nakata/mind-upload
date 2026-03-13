@@ -5,7 +5,7 @@ description: "Scopus、arXiv、Review、Media、source_logged、curated など�
 article_type: Wiki
 subtitle: "Badge・掲載元・状態を混同しないための補助ページ"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Reading guide"
 audience: "論文集や文献地図のラベルを読み違えたくない人、どこで原文へ戻るべきかを知りたい人"
 reading_time: "8〜12分"
@@ -38,7 +38,7 @@ recommended_pages:
   - label: "文献地図"
     url: "/research_harvest_50.html"
   - label: "ケースワーク"
-    url: "/casework.html"
+    url: "/verification.html#casework"
 ---
 
 <main class="main-container">
@@ -244,7 +244,7 @@ recommended_pages:
 <ul>
 <li><a href="../mind_uploading_papers.html">論文集 →</a></li>
 <li><a href="../research_harvest_50.html">文献地図 →</a></li>
-<li><a href="../casework.html">ケースワーク →</a></li>
+<li><a href="../verification.html#casework">ケースワーク →</a></li>
 </ul>
 </div>
 </aside>

@@ -5,7 +5,7 @@ description: "Mind-Uploadで頻出する用語を、人間が迷子にならな�
 article_type: Reference
 subtitle: "まずは“言葉のすり替え”を止める"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Living document"
 audience: "用語で止まりたくない人、言葉のすり替えを防ぎたい人"
 reading_time: "必要な項目だけなら3〜10分"
@@ -88,7 +88,7 @@ recommended_pages:
 <div class="note-box">
 <strong>理論系か実務系かで戻り先を絞りたいとき</strong>
 <p>
-WBE 101、Perspective、Idea、Roadmap のような理論系ページへ戻りたい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a>、Verification、Datasets、Hands-on のような実務系ページへ戻りたい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
+WBE 101、Perspective、Perspective内の理論フレーム節、Roadmap のような理論系ページへ戻りたい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a>、Verification、Datasets、Datasets内のL0実践節のような実務系ページへ戻りたい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
 </p>
 </div>
 

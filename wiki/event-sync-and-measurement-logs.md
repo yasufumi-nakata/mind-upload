@@ -5,7 +5,7 @@ description: "raw EEG だけでは足りない理由、イベントマーカー�
 article_type: Wiki
 subtitle: "信号だけ残っていても、出来事の記録がなければ比較は崩れます"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Practical guide"
 audience: "EEG データを扱い始めた人、BIDS や QC の最低限を実感したい人"
 reading_time: "10〜15分"
@@ -41,7 +41,7 @@ recommended_pages:
   - label: "データ&ベンチ"
     url: "/datasets.html"
   - label: "ハンズオン"
-    url: "/hands_on.html"
+    url: "/datasets.html#l0-practice"
 ---
 
 <main class="main-container">
@@ -185,7 +185,7 @@ raw EEG は「電気信号の並び」です。しかし研究で知りたいの
 <section class="section" id="return">
 <h2 class="section-title">次にどこへ戻るか</h2>
 <p>
-EEG 全体の役割へ戻るなら <a href="../eeg_101.html">EEG入門</a>、スターターデータ選びへ戻るなら <a href="../datasets.html">データ&ベンチ</a>、最小ループの手順へ戻るなら <a href="../hands_on.html">ハンズオン</a> をご利用ください。
+EEG 全体の役割へ戻るなら <a href="../eeg_101.html">EEG入門</a>、スターターデータ選びへ戻るなら <a href="../datasets.html">データ&ベンチ</a>、最小ループの手順へ戻るなら <a href="../datasets.html#l0-practice">ハンズオン</a> をご利用ください。
 </p>
 </section>
 
@@ -205,7 +205,7 @@ EEG 全体の役割へ戻るなら <a href="../eeg_101.html">EEG入門</a>、ス
 <ul>
 <li><a href="../eeg_101.html">EEG入門 →</a></li>
 <li><a href="../datasets.html">データ&ベンチ →</a></li>
-<li><a href="../hands_on.html">ハンズオン →</a></li>
+<li><a href="../datasets.html#l0-practice">ハンズオン →</a></li>
 </ul>
 </div>
 </aside>

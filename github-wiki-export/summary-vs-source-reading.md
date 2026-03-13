@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Summary vs source
+- 更新日: 2026-03-14 / 位置づけ: Summary vs source
 
 ## このページの役割
 このページは、Mind-Upload の公開ページや wiki を『要約の入口』としてどう使うかを整理する補助ガイドです。全体像をつかむだけなら要約で十分な場面もありますが、根拠として使う、判断する、修正する、反論する場面では、原文、DOI、Issue 履歴、一次研究へ戻る必要があります。その境界をそろえて読むためのページです。
@@ -15,7 +15,7 @@
 ## 公開ページへ戻る
 - [文献地図](https://mind-upload.com/research_harvest_50.html)
 - [論文集](https://mind-upload.com/mind_uploading_papers.html)
-- [技術提案](https://mind-upload.com/proposals.html)
+- [技術提案](https://mind-upload.com/issue.html#proposal-integration)
 
 ## 関連 Wiki
 - [Wiki: 文献と証拠ページの読み方](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading) - 文献系ページどうしの役割差を先に見たい人向けです。

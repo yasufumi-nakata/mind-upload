@@ -5,7 +5,7 @@ description: "BIDS のような規格、OpenNeuro のような置き場、Valida
 article_type: Wiki
 subtitle: "似て見える4つの役割は、やっている仕事が違います"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Learning guide"
 audience: "BIDS、OpenNeuro、PhysioNet、Validator、Benchmark が同じ種類のものに見える人"
 reading_time: "10〜15分"
@@ -41,7 +41,7 @@ recommended_pages:
   - label: "検証基盤"
     url: "/verification.html"
   - label: "ケースワーク"
-    url: "/casework.html"
+    url: "/verification.html#casework"
 ---
 
 <main class="main-container">
@@ -217,7 +217,7 @@ recommended_pages:
 <section class="section" id="return">
 <h2 class="section-title">次にどこへ戻るか</h2>
 <p>
-実務の入口へ戻るなら <a href="../datasets.html">データ&ベンチ</a>、全体設計へ戻るなら <a href="../verification.html">検証基盤</a>、他分野の実例へ戻るなら <a href="../casework.html">ケースワーク</a> をご利用ください。
+実務の入口へ戻るなら <a href="../datasets.html">データ&ベンチ</a>、全体設計へ戻るなら <a href="../verification.html">検証基盤</a>、他分野の実例へ戻るなら <a href="../verification.html#casework">ケースワーク</a> をご利用ください。
 </p>
 </section>
 
@@ -237,7 +237,7 @@ recommended_pages:
 <ul>
 <li><a href="../datasets.html">データ&ベンチ →</a></li>
 <li><a href="../verification.html">検証基盤 →</a></li>
-<li><a href="../casework.html">ケースワーク →</a></li>
+<li><a href="../verification.html#casework">ケースワーク →</a></li>
 </ul>
 </div>
 </aside>

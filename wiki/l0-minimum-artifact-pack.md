@@ -5,7 +5,7 @@ description: "BIDS、Validator、QCログ、分割ルール、ベースライン
 article_type: Wiki
 subtitle: "『最小ループ』を、提出物の形で確認するための補助ページ"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Operational guide"
 audience: "L0 を作り始めた人、どこまでそろえば再現可能解析と呼べるかを確認したい人"
 reading_time: "8〜12分"
@@ -34,7 +34,7 @@ wiki_links:
     description: "ベースラインや失敗例の役割差を補います。"
 recommended_pages:
   - label: "ハンズオン"
-    url: "/hands_on.html"
+    url: "/datasets.html#l0-practice"
   - label: "データ&ベンチ"
     url: "/datasets.html"
   - label: "検証基盤"
@@ -189,7 +189,7 @@ L0 の成果物は、1 つのファイルや 1 つのスコアではありませ
 <section class="section" id="next-step">
 <h2 class="section-title">次に戻る場所</h2>
 <p>
-実際の手順を追いたい場合は <a href="../hands_on.html">ハンズオン</a>、入口データを選び直したい場合は <a href="../datasets.html">データ&ベンチ</a>、この成果物が公共財としてどう積み上がるかを見たい場合は <a href="../verification.html">検証基盤</a> に戻ってください。
+実際の手順を追いたい場合は <a href="../datasets.html#l0-practice">ハンズオン</a>、入口データを選び直したい場合は <a href="../datasets.html">データ&ベンチ</a>、この成果物が公共財としてどう積み上がるかを見たい場合は <a href="../verification.html">検証基盤</a> に戻ってください。
 </p>
 </section>
 
@@ -207,7 +207,7 @@ L0 の成果物は、1 つのファイルや 1 つのスコアではありませ
 <div class="sidebar-box">
 <h4>公開ページ</h4>
 <ul>
-<li><a href="../hands_on.html">ハンズオン →</a></li>
+<li><a href="../datasets.html#l0-practice">ハンズオン →</a></li>
 <li><a href="../datasets.html">データ&ベンチ →</a></li>
 <li><a href="../verification.html">検証基盤 →</a></li>
 </ul>

@@ -134,29 +134,6 @@ EOF
   printf 'demo,data\n' > "$dir/generated/demo/demo.csv"
 }
 
-add_eeg_reference_fixture() {
-  local source_dir="$1"
-  local export_dir="$2"
-
-  mkdir -p "$source_dir/generated/mind-upload-eeg-data-fund-map" "$export_dir/generated/mind-upload-eeg-data-fund-map"
-
-  cat <<'EOF' > "$source_dir/mind-upload-eeg-data-fund-map.md"
-# EEG Data Fund Map
-
-MindUpload-EEGDATA-FundMap-demo.csv
-EOF
-
-  cat <<'EOF' > "$export_dir/mind-upload-eeg-data-fund-map.md"
-# EEG Data Fund Map
-
-ok
-EOF
-
-  cat <<EOF >> "$export_dir/_Sidebar.md"
-- [EEG Data Fund Map](${GITHUB_WIKI}/mind-upload-eeg-data-fund-map)
-EOF
-}
-
 reset_fixture() {
   write_source_fixture "$SRC_DIR"
   write_export_fixture "$DEST_DIR"
@@ -237,16 +214,6 @@ run_expect_failure "missing-sidebar-file" "Missing export sidebar: _Sidebar.md"
 reset_fixture
 rm -f "$DEST_DIR/generated/demo/demo.csv"
 run_expect_failure "missing-generated-asset" "Missing generated asset in export: generated/demo/demo.csv"
-
-reset_fixture
-add_eeg_reference_fixture "$SRC_DIR" "$DEST_DIR"
-printf 'demo,data\n' > "$DEST_DIR/generated/mind-upload-eeg-data-fund-map/MindUpload-EEGDATA-FundMap-demo.csv"
-run_expect_failure "missing-referenced-source-csv" "Referenced CSV missing in source: MindUpload-EEGDATA-FundMap-demo.csv"
-
-reset_fixture
-add_eeg_reference_fixture "$SRC_DIR" "$DEST_DIR"
-printf 'demo,data\n' > "$SRC_DIR/generated/mind-upload-eeg-data-fund-map/MindUpload-EEGDATA-FundMap-demo.csv"
-run_expect_failure "missing-referenced-export-csv" "Referenced CSV missing in export: MindUpload-EEGDATA-FundMap-demo.csv"
 
 log "baseline-drift-pass"
 reset_drift_fixture

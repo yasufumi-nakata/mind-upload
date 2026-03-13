@@ -5,7 +5,7 @@ description: "Verification を読んだあとに、L0 実装、L2 検証、L3 �
 article_type: Wiki
 subtitle: "検証基盤を読んだあと、次の1ページを迷わず決めるためのガイド"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Reading route"
 audience: "Verification を読んだあと、次にどこへ進むべきかで迷う人"
 reading_time: "6〜10分"
@@ -36,7 +36,7 @@ recommended_pages:
   - label: "検証基盤"
     url: "/verification.html"
   - label: "ハンズオン"
-    url: "/hands_on.html"
+    url: "/datasets.html#l0-practice"
   - label: "技術ロードマップ"
     url: "/tech_roadmap.html"
 ---
@@ -64,7 +64,7 @@ Verification は設計図として重要ですが、読むだけでは次の作�
 <tbody>
 <tr>
 <td><strong>L0 の実装を作りたい</strong></td>
-<td><a href="../hands_on.html">Hands-on</a></td>
+<td><a href="../datasets.html#l0-practice">Hands-on</a></td>
 <td>入力、QC、前処理、ベースライン、失敗例を一周つなぐ手順を固定します。</td>
 </tr>
 <tr>
@@ -181,7 +181,7 @@ Verification の本文へ戻るなら <a href="../verification.html">検証基�
 <h4>公開ページ</h4>
 <ul>
 <li><a href="../verification.html">検証基盤 →</a></li>
-<li><a href="../hands_on.html">ハンズオン →</a></li>
+<li><a href="../datasets.html#l0-practice">ハンズオン →</a></li>
 <li><a href="../tech_roadmap.html">技術ロードマップ →</a></li>
 </ul>
 </div>

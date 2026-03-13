@@ -5,7 +5,7 @@ description: "ベースライン、ベンチマーク、事前登録、モデル
 article_type: Wiki
 subtitle: "『何を比べ、どう固定し、何を残すか』を分けて考える"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Learning guide"
 audience: "研究運用の言葉が似て見える人、比較可能性の作り方を初歩から理解したい人"
 reading_time: "10〜15分"
@@ -36,9 +36,9 @@ recommended_pages:
   - label: "検証基盤"
     url: "/verification.html"
   - label: "ハンズオン"
-    url: "/hands_on.html"
+    url: "/datasets.html#l0-practice"
   - label: "ケースワーク"
-    url: "/casework.html"
+    url: "/verification.html#casework"
 ---
 
 <main class="main-container">
@@ -182,7 +182,7 @@ recommended_pages:
 <section class="section" id="return">
 <h2 class="section-title">次にどこへ戻るか</h2>
 <p>
-設計図へ戻るなら <a href="../verification.html">検証基盤</a>、実務へ戻るなら <a href="../hands_on.html">ハンズオン</a>、他分野の先例へ戻るなら <a href="../casework.html">ケースワーク</a> をご利用ください。
+設計図へ戻るなら <a href="../verification.html">検証基盤</a>、実務へ戻るなら <a href="../datasets.html#l0-practice">ハンズオン</a>、他分野の先例へ戻るなら <a href="../verification.html#casework">ケースワーク</a> をご利用ください。
 </p>
 </section>
 
@@ -201,8 +201,8 @@ recommended_pages:
 <h4>公開ページ</h4>
 <ul>
 <li><a href="../verification.html">検証基盤 →</a></li>
-<li><a href="../hands_on.html">ハンズオン →</a></li>
-<li><a href="../casework.html">ケースワーク →</a></li>
+<li><a href="../datasets.html#l0-practice">ハンズオン →</a></li>
+<li><a href="../verification.html#casework">ケースワーク →</a></li>
 </ul>
 </div>
 </aside>

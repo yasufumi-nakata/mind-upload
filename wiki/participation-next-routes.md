@@ -5,7 +5,7 @@ description: "Issue や Collaborations を読んだあとに、小さな修正�
 article_type: Wiki
 subtitle: "参加導線を見たあと、次の1ページを迷わず決めるためのガイド"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Participation route"
 audience: "Issue や Collaborations を読んだあと、次にどこへ進むべきかで迷う人"
 reading_time: "6〜10分"
@@ -36,7 +36,7 @@ recommended_pages:
   - label: "貢献ガイド"
     url: "/issue.html"
   - label: "協業候補"
-    url: "/collaborations.html"
+    url: "/issue.html#external-collaboration"
   - label: "公開コンテンツ統合ハブ"
     url: "/content_hub.html"
 ---
@@ -79,12 +79,12 @@ Issue や Collaborations は入口として重要ですが、そのままでは�
 </tr>
 <tr>
 <td><strong>外部依存を準備物へ分解したい</strong></td>
-<td><a href="internal-prework-and-external-dependencies.html">内製で先にやることと外部依存</a> / <a href="../collaborations.html">Collaborations</a></td>
+<td><a href="internal-prework-and-external-dependencies.html">内製で先にやることと外部依存</a> / <a href="../issue.html#external-collaboration">Collaborations</a></td>
 <td>いま内製できるものと、相手先や制度が必要なものを分けます。</td>
 </tr>
 <tr>
 <td><strong>L0 実装の最小ループまで降りたい</strong></td>
-<td><a href="../hands_on.html">Hands-on</a> / <a href="l0-minimum-artifact-pack.html">L0で最低限そろえる成果物パック</a></td>
+<td><a href="../datasets.html#l0-practice">Hands-on</a> / <a href="l0-minimum-artifact-pack.html">L0で最低限そろえる成果物パック</a></td>
 <td>再現可能な解析として何を一式で残すか、最小成果物を固定します。</td>
 </tr>
 </tbody>
@@ -179,7 +179,7 @@ Issue や Collaborations は入口として重要ですが、そのままでは�
 <section class="section" id="next-step">
 <h2 class="section-title">次に戻る場所</h2>
 <p>
-参加の入口へ戻るなら <a href="../issue.html">貢献ガイド</a>、外部連携の候補へ戻るなら <a href="../collaborations.html">協業候補</a>、公開先の整理へ戻るなら <a href="../content_hub.html">公開コンテンツ統合ハブ</a> をご利用ください。
+参加の入口へ戻るなら <a href="../issue.html">貢献ガイド</a>、外部連携の候補へ戻るなら <a href="../issue.html#external-collaboration">協業候補</a>、公開先の整理へ戻るなら <a href="../content_hub.html">公開コンテンツ統合ハブ</a> をご利用ください。
 </p>
 </section>
 
@@ -198,7 +198,7 @@ Issue や Collaborations は入口として重要ですが、そのままでは�
 <h4>公開ページ</h4>
 <ul>
 <li><a href="../issue.html">貢献ガイド →</a></li>
-<li><a href="../collaborations.html">協業候補 →</a></li>
+<li><a href="../issue.html#external-collaboration">協業候補 →</a></li>
 <li><a href="../content_hub.html">公開コンテンツ統合ハブ →</a></li>
 </ul>
 </div>

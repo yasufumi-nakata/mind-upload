@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Roadmap route
+- 更新日: 2026-03-14 / 位置づけ: Roadmap route
 
 ## このページの役割
 このページは、技術ロードマップを読んだあとに、どの論点を次に深掘りするかを整理する補助ガイドです。計測へ戻るのか、再構成や因果推定へ進むのか、実装へ降りるのか、検証条件へ戻るのか、制度や協業まで見るのかで、次の1ページは変わります。
@@ -60,7 +60,7 @@
 </tr>
 <tr>
 <td><strong>実装やL0の作業へ降りたい</strong></td>
-<td><a href="https://mind-upload.com/hands_on.html">Hands-on</a> / <a href="https://mind-upload.com/datasets.html">Datasets</a></td>
+<td><a href="https://mind-upload.com/datasets.html#l0-practice">Hands-on</a> / <a href="https://mind-upload.com/datasets.html">Datasets</a></td>
 <td>I 系列へ進む前の最小ループと、入口データの選定を具体化できます。</td>
 </tr>
 <tr>
@@ -70,7 +70,7 @@
 </tr>
 <tr>
 <td><strong>制度や外部連携まで含めて見たい</strong></td>
-<td><a href="https://mind-upload.com/collaborations.html">Collaborations</a> / <a href="https://mind-upload.com/issue.html">Issue</a></td>
+<td><a href="https://mind-upload.com/issue.html#external-collaboration">Collaborations</a> / <a href="https://mind-upload.com/issue.html">Issue</a></td>
 <td>D 系列や外部依存の話を、今できる準備と切り分けながら確認できます。</td>
 </tr>
 </tbody>

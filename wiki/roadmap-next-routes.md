@@ -5,7 +5,7 @@ description: "技術ロードマップを読んだあとに、計測、再構成
 article_type: Wiki
 subtitle: "依存関係の地図を見たあと、次の1ページを迷わず決めるためのガイド"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Roadmap route"
 audience: "技術ロードマップを読んだあと、次にどこへ進むべきかで迷う人"
 reading_time: "6〜10分"
@@ -74,7 +74,7 @@ recommended_pages:
 </tr>
 <tr>
 <td><strong>実装やL0の作業へ降りたい</strong></td>
-<td><a href="../hands_on.html">Hands-on</a> / <a href="../datasets.html">Datasets</a></td>
+<td><a href="../datasets.html#l0-practice">Hands-on</a> / <a href="../datasets.html">Datasets</a></td>
 <td>I 系列へ進む前の最小ループと、入口データの選定を具体化できます。</td>
 </tr>
 <tr>
@@ -84,7 +84,7 @@ recommended_pages:
 </tr>
 <tr>
 <td><strong>制度や外部連携まで含めて見たい</strong></td>
-<td><a href="../collaborations.html">Collaborations</a> / <a href="../issue.html">Issue</a></td>
+<td><a href="../issue.html#external-collaboration">Collaborations</a> / <a href="../issue.html">Issue</a></td>
 <td>D 系列や外部依存の話を、今できる準備と切り分けながら確認できます。</td>
 </tr>
 </tbody>
@@ -195,7 +195,7 @@ Roadmap 本文へ戻るなら <a href="../tech_roadmap.html">技術ロードマ�
 <ul>
 <li><a href="../tech_roadmap.html">技術ロードマップ →</a></li>
 <li><a href="../verification.html">検証基盤 →</a></li>
-<li><a href="../hands_on.html">ハンズオン →</a></li>
+<li><a href="../datasets.html#l0-practice">ハンズオン →</a></li>
 </ul>
 </div>
 </aside>

@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Learning-first
+- 更新日: 2026-03-14 / 位置づけ: Learning-first
 
 ## このページの役割
 このページは、Mind-Upload の公開ページを読みやすくするための学習ポータルです。公開ページが『いま分かっていること / まだ分からないこと / 次の導線』を示すのに対し、wiki はその前提になる基礎説明を順番に学ぶために使います。
@@ -80,12 +80,12 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 <tr>
 <td><strong>本人性やコピー問題を整理したい</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/personhood-and-copy-problem">本人性とコピー問題</a></td>
-<td><a href="https://mind-upload.com/idea.html">理論フレーム</a></td>
+<td><a href="https://mind-upload.com/perspective.html#design-principles">理論フレーム節</a></td>
 </tr>
 <tr>
 <td><strong>EEGの前処理やQCを実務目線で知りたい</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc">EEG前処理とQC</a></td>
-<td><a href="https://mind-upload.com/hands_on.html">ハンズオン</a></td>
+<td><a href="https://mind-upload.com/datasets.html#l0-practice">L0実践</a></td>
 </tr>
 <tr>
 <td><strong>文献ページの違いと読み方を知りたい</strong></td>
@@ -115,17 +115,17 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 <tr>
 <td><strong>観察、仮説、提案、Issue の違いを知りたい</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/facts-hypotheses-proposals-and-tasks">事実・仮説・提案・実行タスクの違い</a></td>
-<td><a href="https://mind-upload.com/perspective.html">研究ノート</a> / <a href="https://mind-upload.com/idea.html">理論フレーム</a> / <a href="https://mind-upload.com/proposals.html">技術提案</a> / <a href="https://mind-upload.com/issue.html">貢献ガイド</a></td>
+<td><a href="https://mind-upload.com/perspective.html">研究ノート</a> / <a href="https://mind-upload.com/perspective.html#design-principles">理論フレーム節</a> / <a href="https://mind-upload.com/issue.html#proposal-integration">提案統合節</a> / <a href="https://mind-upload.com/issue.html">貢献ガイド</a></td>
 </tr>
 <tr>
 <td><strong>読んだ内容をどの変更へつなぐか知りたい</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/reading-to-change-workflow">読んだ内容を変更へつなぐ流れ</a></td>
-<td><a href="https://mind-upload.com/research_harvest_50.html">文献地図</a> / <a href="https://mind-upload.com/proposals.html">技術提案</a> / <a href="https://mind-upload.com/issue.html">貢献ガイド</a> / <a href="https://mind-upload.com/collaborations.html">協業候補</a></td>
+<td><a href="https://mind-upload.com/research_harvest_50.html">文献地図</a> / <a href="https://mind-upload.com/issue.html#proposal-integration">提案統合節</a> / <a href="https://mind-upload.com/issue.html">貢献ガイド</a> / <a href="https://mind-upload.com/issue.html#external-collaboration">外部依存・協業節</a></td>
 </tr>
 <tr>
 <td><strong>要約で止めてよい場面と、原文へ戻る場面を知りたい</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/summary-vs-source-reading">要約・原文・Issue履歴の使い分け</a></td>
-<td><a href="https://mind-upload.com/research_harvest_50.html">文献地図</a> / <a href="https://mind-upload.com/mind_uploading_papers.html">論文集</a> / <a href="https://mind-upload.com/proposals.html">技術提案</a></td>
+<td><a href="https://mind-upload.com/research_harvest_50.html">文献地図</a> / <a href="https://mind-upload.com/mind_uploading_papers.html">論文集</a> / <a href="https://mind-upload.com/issue.html#proposal-integration">提案統合節</a></td>
 </tr>
 <tr>
 <td><strong>『分かった』と『次に進める』の違いを知りたい</strong></td>
@@ -135,62 +135,47 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 <tr>
 <td><strong>理論系ページどうしの違いで迷う</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/theory-pages-reading-guide">理論系ページの読み分けガイド</a></td>
-<td><a href="https://mind-upload.com/wbe_101.html">WBE入門</a> / <a href="https://mind-upload.com/perspective.html">研究ノート</a> / <a href="https://mind-upload.com/idea.html">理論フレーム</a> / <a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a></td>
+<td><a href="https://mind-upload.com/wbe_101.html">WBE入門</a> / <a href="https://mind-upload.com/perspective.html">研究ノート</a> / <a href="https://mind-upload.com/perspective.html#design-principles">理論フレーム節</a> / <a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a></td>
 </tr>
 <tr>
 <td><strong>WBE入門のあとに理論のどこを深掘るか迷う</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/wbe-to-theory-route">WBE入門から理論を深掘る4ルート</a></td>
-<td><a href="https://mind-upload.com/wbe_101.html">WBE入門</a> / <a href="https://mind-upload.com/faq.html">FAQ</a> / <a href="https://mind-upload.com/idea.html">理論フレーム</a> / <a href="https://mind-upload.com/perspective.html">研究ノート</a></td>
+<td><a href="https://mind-upload.com/wbe_101.html">WBE入門</a> / <a href="https://mind-upload.com/faq.html">FAQ</a> / <a href="https://mind-upload.com/perspective.html#design-principles">理論フレーム節</a> / <a href="https://mind-upload.com/perspective.html">研究ノート</a></td>
 </tr>
 <tr>
 <td><strong>実務系ページどうしの違いで迷う</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/practical-pages-reading-guide">実務系ページの読み分けガイド</a></td>
-<td><a href="https://mind-upload.com/verification.html">検証基盤</a> / <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a> / <a href="https://mind-upload.com/hands_on.html">ハンズオン</a> / <a href="https://mind-upload.com/casework.html">ケースワーク</a></td>
+<td><a href="https://mind-upload.com/verification.html">検証基盤</a> / <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a> / <a href="https://mind-upload.com/datasets.html#l0-practice">L0実践</a> / <a href="https://mind-upload.com/verification.html#casework">ケースワーク節</a></td>
 </tr>
 <tr>
 <td><strong>最初の30分で何を見ればよいか迷う</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/first-30-minutes-by-goal">目的別の最初の30分ルート</a></td>
-<td><a href="https://mind-upload.com">スタートページ</a> / <a href="https://mind-upload.com/verification.html">検証基盤</a> / <a href="https://mind-upload.com/hands_on.html">ハンズオン</a></td>
+<td><a href="https://mind-upload.com">スタートページ</a> / <a href="https://mind-upload.com/verification.html">検証基盤</a> / <a href="https://mind-upload.com/datasets.html#l0-practice">L0実践</a></td>
 </tr>
 <tr>
 <td><strong>EEGからL0までどう進むかを一本道で見たい</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-to-l0-route">EEGからL0までの一本道</a></td>
-<td><a href="https://mind-upload.com/eeg_101.html">EEG入門</a> / <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a> / <a href="https://mind-upload.com/hands_on.html">ハンズオン</a> / <a href="https://mind-upload.com/verification.html">検証基盤</a></td>
-</tr>
-<tr>
-<td><strong>25トピックを EEG 公開データと助成テーマへ落としたい</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-data-fund-map">EEG-DATA × 助成マップ</a></td>
-<td><a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a> / <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a> / <a href="https://mind-upload.com/collaborations.html">協業候補</a></td>
-</tr>
-<tr>
-<td><strong>Roadmapの51QAを1件ずつEEG可否と助成テーマへ落としたい</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-data-fund-map-roadmap-qa-deepdive">Roadmap 51QA × EEG-DATA × 助成テーマ深掘り</a></td>
-<td><a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-data-fund-map">EEG-DATA × 助成マップ</a> / <a href="https://mind-upload.com/verification.html">検証基盤</a></td>
-</tr>
-<tr>
-<td><strong>research_harvestの60RQを1件ずつEEG可否と助成テーマへ落としたい</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-data-fund-map-rq60-deepdive">Research Question 60問 × EEG-DATA × 助成テーマ深掘り</a></td>
-<td><a href="https://mind-upload.com/research_harvest_50.html">文献地図</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-data-fund-map">EEG-DATA × 助成マップ</a> / <a href="https://mind-upload.com/verification.html">検証基盤</a></td>
+<td><a href="https://mind-upload.com/eeg_101.html">EEG入門</a> / <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a> / <a href="https://mind-upload.com/datasets.html#l0-practice">L0実践</a> / <a href="https://mind-upload.com/verification.html">検証基盤</a></td>
 </tr>
 <tr>
 <td><strong>Verificationのあとに次の1ページを決めたい</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/verification-next-routes">Verificationのあとに進む4つの道</a></td>
-<td><a href="https://mind-upload.com/verification.html">検証基盤</a> / <a href="https://mind-upload.com/hands_on.html">ハンズオン</a> / <a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a> / <a href="https://mind-upload.com/wbe_101.html">WBE入門</a></td>
+<td><a href="https://mind-upload.com/verification.html">検証基盤</a> / <a href="https://mind-upload.com/datasets.html#l0-practice">L0実践</a> / <a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a> / <a href="https://mind-upload.com/wbe_101.html">WBE入門</a></td>
 </tr>
 <tr>
 <td><strong>ロードマップのあとにどこを深掘るか迷う</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/roadmap-next-routes">ロードマップのあとに進む5つの道</a></td>
-<td><a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a> / <a href="https://mind-upload.com/eeg_101.html">EEG入門</a> / <a href="https://mind-upload.com/verification.html">検証基盤</a> / <a href="https://mind-upload.com/collaborations.html">協業候補</a></td>
+<td><a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a> / <a href="https://mind-upload.com/eeg_101.html">EEG入門</a> / <a href="https://mind-upload.com/verification.html">検証基盤</a> / <a href="https://mind-upload.com/issue.html#external-collaboration">外部依存・協業節</a></td>
 </tr>
 <tr>
 <td><strong>文献を読んだあとにどこへ戻すか迷う</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/literature-to-action-route">文献から実装・参加へ戻る一本道</a></td>
-<td><a href="https://mind-upload.com/research_harvest_50.html">文献地図</a> / <a href="https://mind-upload.com/proposals.html">技術提案</a> / <a href="https://mind-upload.com/issue.html">貢献ガイド</a> / <a href="https://mind-upload.com/collaborations.html">協業候補</a></td>
+<td><a href="https://mind-upload.com/research_harvest_50.html">文献地図</a> / <a href="https://mind-upload.com/issue.html#proposal-integration">提案統合節</a> / <a href="https://mind-upload.com/issue.html">貢献ガイド</a> / <a href="https://mind-upload.com/issue.html#external-collaboration">外部依存・協業節</a></td>
 </tr>
 <tr>
-<td><strong>Issue や Collaborations のあとに次の1ページを決めたい</strong></td>
+<td><strong>Issue や 外部依存・協業節 のあとに次の1ページを決めたい</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes">参加・協業ページのあとに進む5つの道</a></td>
-<td><a href="https://mind-upload.com/issue.html">貢献ガイド</a> / <a href="https://mind-upload.com/collaborations.html">協業候補</a> / <a href="https://mind-upload.com/content_hub.html">公開コンテンツ統合ハブ</a> / <a href="https://mind-upload.com/hands_on.html">ハンズオン</a></td>
+<td><a href="https://mind-upload.com/issue.html">貢献ガイド</a> / <a href="https://mind-upload.com/issue.html#external-collaboration">外部依存・協業節</a> / <a href="https://mind-upload.com/content_hub.html">公開コンテンツ統合ハブ</a> / <a href="https://mind-upload.com/datasets.html#l0-practice">L0実践</a></td>
 </tr>
 <tr>
 <td><strong>初めて Issue を書くので、何を書けばよいか知りたい</strong></td>
@@ -200,7 +185,7 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 <tr>
 <td><strong>新しい情報を公開ページと wiki のどちらへ置くか迷う</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/content-placement-basics">新しい情報の置き場所を決める基本</a></td>
-<td><a href="https://mind-upload.com/content_hub.html">公開コンテンツ統合ハブ</a> / <a href="https://mind-upload.com/issue.html">貢献ガイド</a> / <a href="https://mind-upload.com/collaborations.html">協業候補</a></td>
+<td><a href="https://mind-upload.com/content_hub.html">公開コンテンツ統合ハブ</a> / <a href="https://mind-upload.com/issue.html">貢献ガイド</a> / <a href="https://mind-upload.com/issue.html#external-collaboration">外部依存・協業節</a></td>
 </tr>
 <tr>
 <td><strong>Scopus、arXiv、Review、source_logged の違いで止まる</strong></td>
@@ -210,12 +195,12 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 <tr>
 <td><strong>提案ページの状態ラベルで迷う</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/proposal-status-reading">提案と状態ラベルの読み方</a></td>
-<td><a href="https://mind-upload.com/proposals.html">技術提案</a> / <a href="https://mind-upload.com/issue.html">貢献ガイド</a></td>
+<td><a href="https://mind-upload.com/issue.html#proposal-integration">提案統合節</a> / <a href="https://mind-upload.com/issue.html">貢献ガイド</a></td>
 </tr>
 <tr>
 <td><strong>外部依存でも今できる準備が分からない</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies">内製で先にやることと外部依存の切り分け</a></td>
-<td><a href="https://mind-upload.com/issue.html">貢献ガイド</a> / <a href="https://mind-upload.com/collaborations.html">協業候補</a></td>
+<td><a href="https://mind-upload.com/issue.html">貢献ガイド</a> / <a href="https://mind-upload.com/issue.html#external-collaboration">外部依存・協業節</a></td>
 </tr>
 <tr>
 <td><strong>U番号が何を指すのか分からない</strong></td>
@@ -235,7 +220,7 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 <tr>
 <td><strong>IIT / GNWT / FEP / PCI の違いで止まる</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/consciousness-theory-map">意識理論マップ</a></td>
-<td><a href="https://mind-upload.com/perspective.html">研究ノート</a> / <a href="https://mind-upload.com/idea.html">理論フレーム</a></td>
+<td><a href="https://mind-upload.com/perspective.html">研究ノート</a> / <a href="https://mind-upload.com/perspective.html#design-principles">理論フレーム節</a></td>
 </tr>
 <tr>
 <td><strong>decode と emulate の違いが曖昧</strong></td>
@@ -245,12 +230,12 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 <tr>
 <td><strong>train/test の分け方やリークで迷う</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/dataset-splits-and-leakage">データ分割とデータリーク</a></td>
-<td><a href="https://mind-upload.com/datasets.html">データ&ベンチ</a> / <a href="https://mind-upload.com/hands_on.html">ハンズオン</a></td>
+<td><a href="https://mind-upload.com/datasets.html">データ&ベンチ</a> / <a href="https://mind-upload.com/datasets.html#l0-practice">L0実践</a></td>
 </tr>
 <tr>
 <td><strong>L0 で何を一式そろえればよいか分からない</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack">L0で最低限そろえる成果物パック</a></td>
-<td><a href="https://mind-upload.com/hands_on.html">ハンズオン</a> / <a href="https://mind-upload.com/verification.html">検証基盤</a></td>
+<td><a href="https://mind-upload.com/datasets.html#l0-practice">L0実践</a> / <a href="https://mind-upload.com/verification.html">検証基盤</a></td>
 </tr>
 <tr>
 <td><strong>Verification の4部品を具体例で見たい</strong></td>
@@ -265,7 +250,7 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 <tr>
 <td><strong>イベントマーカーや同期ログの意味で止まる</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/event-sync-and-measurement-logs">イベント同期と観測ログの基本</a></td>
-<td><a href="https://mind-upload.com/datasets.html">データ&ベンチ</a> / <a href="https://mind-upload.com/hands_on.html">ハンズオン</a></td>
+<td><a href="https://mind-upload.com/datasets.html">データ&ベンチ</a> / <a href="https://mind-upload.com/datasets.html#l0-practice">L0実践</a></td>
 </tr>
 <tr>
 <td><strong>逆問題、ESI、DCM、SCM の違いで止まる</strong></td>
@@ -295,7 +280,7 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 <tr>
 <td><strong>ベースラインや事前登録の役割差で止まる</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards">ベースライン・事前登録・モデルカード</a></td>
-<td><a href="https://mind-upload.com/verification.html">検証基盤</a> / <a href="https://mind-upload.com/hands_on.html">ハンズオン</a></td>
+<td><a href="https://mind-upload.com/verification.html">検証基盤</a> / <a href="https://mind-upload.com/datasets.html#l0-practice">L0実践</a></td>
 </tr>
 <tr>
 <td><strong>縦断で state と trait をどう分けるか知りたい</strong></td>

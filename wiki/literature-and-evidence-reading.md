@@ -5,7 +5,7 @@ description: "論文集、文献地図、提案ページの違いと、どこま
 article_type: Wiki
 subtitle: "『論文が多い』と『結論が強い』を混同しないために"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Reading guide"
 audience: "論文集と文献地図の違いが分かりにくい人、どのページから入るか迷う人"
 reading_time: "8〜12分"
@@ -41,7 +41,7 @@ recommended_pages:
   - label: "論文集"
     url: "/mind_uploading_papers.html"
   - label: "技術提案"
-    url: "/proposals.html"
+    url: "/issue.html#proposal-integration"
 ---
 
 <main class="main-container">
@@ -147,7 +147,7 @@ recommended_pages:
 <section class="section" id="next-step">
 <h2 class="section-title">次にどこへ戻るか</h2>
 <p>
-広く論文を眺めたい場合は <a href="../mind_uploading_papers.html">論文集</a>、未解決問題から入りたい場合は <a href="../research_harvest_50.html">文献地図</a>、提案と実装方針を追いたい場合は <a href="../proposals.html">技術提案</a> へ戻ってください。
+広く論文を眺めたい場合は <a href="../mind_uploading_papers.html">論文集</a>、未解決問題から入りたい場合は <a href="../research_harvest_50.html">文献地図</a>、提案と実装方針を追いたい場合は <a href="../issue.html#proposal-integration">技術提案</a> へ戻ってください。
 </p>
 </section>
 
@@ -168,7 +168,7 @@ recommended_pages:
 <ul>
 <li><a href="../research_harvest_50.html">文献地図 →</a></li>
 <li><a href="../mind_uploading_papers.html">論文集 →</a></li>
-<li><a href="../proposals.html">技術提案 →</a></li>
+<li><a href="../issue.html#proposal-integration">技術提案 →</a></li>
 </ul>
 </div>
 </aside>

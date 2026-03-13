@@ -5,7 +5,7 @@ description: "『分からない』『直したい』を、実行可能な Issue
 article_type: Wiki
 subtitle: "止まった場所を、そのまま価値ある作業に変えるための基本"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Issue writing basics"
 audience: "初めて Issue を書く人、分からなさをどう報告すればよいか迷う人"
 reading_time: "8〜12分"
@@ -179,7 +179,7 @@ Issue は、完成した提案書である必要はありません。むしろ�
 </tr>
 <tr>
 <td>「共同研究したいです」</td>
-<td>「`collaborations.html` で、OpenNeuro 連携前に必要な 1 ページ要約と最小成果物を明示すると、外部依存の前段が具体化します。」</td>
+<td>「`issue.html#external-collaboration` で、OpenNeuro 連携前に必要な 1 ページ要約と最小成果物を明示すると、外部依存の前段が具体化します。」</td>
 </tr>
 </tbody>
 </table>

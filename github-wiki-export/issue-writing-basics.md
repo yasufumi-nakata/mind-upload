@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Issue writing basics
+- 更新日: 2026-03-14 / 位置づけ: Issue writing basics
 
 ## このページの役割
 このページは、Mind-Upload で初めて Issue を書く人向けの補助教材です。完全な解決策を持っていなくても、どこで止まったか、何が不足か、何が足されれば前進かを分けて書ければ、価値の高い Issue になります。
@@ -159,7 +159,7 @@ Issue は、完成した提案書である必要はありません。むしろ�
 </tr>
 <tr>
 <td>「共同研究したいです」</td>
-<td>「`collaborations.html` で、OpenNeuro 連携前に必要な 1 ページ要約と最小成果物を明示すると、外部依存の前段が具体化します。」</td>
+<td>「`issue.html#external-collaboration` で、OpenNeuro 連携前に必要な 1 ページ要約と最小成果物を明示すると、外部依存の前段が具体化します。」</td>
 </tr>
 </tbody>
 </table>

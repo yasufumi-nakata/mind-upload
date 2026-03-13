@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Theory guide
+- 更新日: 2026-03-14 / 位置づけ: Theory guide
 
 ## このページの役割
 このページは、Mind-Upload でよく出る意識理論や意識指標を、初学者向けに役割ごとへ整理する補助ページです。どれが正しいと決めるためではなく、『何を説明したい理論か』『何をまだ説明しきれていないか』を先に分けることを目標にします。
@@ -14,7 +14,7 @@
 
 ## 公開ページへ戻る
 - [研究ノート](https://mind-upload.com/perspective.html)
-- [理論フレーム](https://mind-upload.com/idea.html)
+- [理論フレーム](https://mind-upload.com/perspective.html#design-principles)
 - [用語集](https://mind-upload.com/glossary.html)
 
 ## 関連 Wiki
@@ -121,5 +121,5 @@ IIT、GNWT、FEP、PCI は、全部が同じ種類のものではありません
 
 <h2>次にどこへ戻るか</h2>
 <p>
-理論全体を長文で追いたい場合は <a href="https://mind-upload.com/perspective.html">研究ノート</a>、設計原理として見たい場合は <a href="https://mind-upload.com/idea.html">理論フレーム</a>、単語を短く確認したい場合は <a href="https://mind-upload.com/glossary.html">用語集</a> に戻ってください。
+理論全体を長文で追いたい場合は <a href="https://mind-upload.com/perspective.html">研究ノート</a>、設計原理として見たい場合は <a href="https://mind-upload.com/perspective.html#design-principles">理論フレーム</a>、単語を短く確認したい場合は <a href="https://mind-upload.com/glossary.html">用語集</a> に戻ってください。
 </p>

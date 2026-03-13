@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Reading guide
+- 更新日: 2026-03-14 / 位置づけ: Reading guide
 
 ## このページの役割
 このページは、Mind-Upload のクレーム階段 L0〜L5 を、単なる定義ではなく『どのレベルの話を追いたいとき、どのページへ行くべきか』で整理する補助ページです。主張の強さが上がるほど、必要なページと証拠も変わります。
@@ -52,7 +52,7 @@ L0〜L5 は「研究のえらさ」ではなく、<strong>主張の強さ</stron
 <tr>
 <td><strong>L0</strong> 再現可能な解析</td>
 <td>他の人が同じ結果を再実行できるかを知りたい。</td>
-<td><a href="https://mind-upload.com/hands_on.html">Hands-on</a></td>
+<td><a href="https://mind-upload.com/datasets.html#l0-practice">Hands-on</a></td>
 <td><a href="https://mind-upload.com/datasets.html">Datasets</a> / <a href="https://mind-upload.com/verification.html">Verification</a></td>
 </tr>
 <tr>
@@ -77,13 +77,13 @@ L0〜L5 は「研究のえらさ」ではなく、<strong>主張の強さ</stron
 <td><strong>L4</strong> 本人性</td>
 <td>記憶、価値観、学習の連続性をどう読むか知りたい。</td>
 <td><a href="https://mind-upload.com/wbe_101.html">WBE 101</a></td>
-<td><a href="https://mind-upload.com/idea.html">Idea</a> / <a href="https://mind-upload.com/perspective.html">Perspective</a></td>
+<td><a href="https://mind-upload.com/perspective.html#design-principles">Idea</a> / <a href="https://mind-upload.com/perspective.html">Perspective</a></td>
 </tr>
 <tr>
 <td><strong>L5</strong> 社会実装</td>
 <td>権利、安全、停止基準、制度まで含めて見たい。</td>
 <td><a href="https://mind-upload.com/tech_roadmap.html">Roadmap</a></td>
-<td><a href="https://mind-upload.com/collaborations.html">Collaborations</a> / <a href="https://mind-upload.com/issue.html">Issue</a></td>
+<td><a href="https://mind-upload.com/issue.html#external-collaboration">Collaborations</a> / <a href="https://mind-upload.com/issue.html">Issue</a></td>
 </tr>
 </tbody>
 </table>

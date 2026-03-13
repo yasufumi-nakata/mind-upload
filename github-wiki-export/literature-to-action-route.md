@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Literature route
+- 更新日: 2026-03-14 / 位置づけ: Literature route
 
 ## このページの役割
 このページは、論文集や文献地図を読んだあとに、その文献をどこへ戻して使うかを整理する補助ガイドです。未解決問題の地図へ戻るのか、提案へつなぐのか、Issue に落とすのか、協業候補の準備物に変えるのかで、次の1ページは変わります。
@@ -14,7 +14,7 @@
 
 ## 公開ページへ戻る
 - [文献地図](https://mind-upload.com/research_harvest_50.html)
-- [技術提案](https://mind-upload.com/proposals.html)
+- [技術提案](https://mind-upload.com/issue.html#proposal-integration)
 - [貢献ガイド](https://mind-upload.com/issue.html)
 
 ## 関連 Wiki
@@ -56,7 +56,7 @@
 </tr>
 <tr>
 <td><strong>提案や実装方針へつなぎたい</strong></td>
-<td><a href="https://mind-upload.com/proposals.html">Proposals</a></td>
+<td><a href="https://mind-upload.com/issue.html#proposal-integration">Proposals</a></td>
 <td>その文献がどのストリームや提案の根拠になるかを確認します。</td>
 </tr>
 <tr>
@@ -66,7 +66,7 @@
 </tr>
 <tr>
 <td><strong>外部連携や共同研究の準備物へ変えたい</strong></td>
-<td><a href="https://mind-upload.com/collaborations.html">Collaborations</a></td>
+<td><a href="https://mind-upload.com/issue.html#external-collaboration">Collaborations</a></td>
 <td>その文献が、どの連携候補や準備物に効くかを確認します。</td>
 </tr>
 </tbody>

@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Reading guide
+- 更新日: 2026-03-14 / 位置づけ: Reading guide
 
 ## このページの役割
 このページは、Mind-Upload にある文献系ページの役割分担を整理する補助ページです。論文が多いページほど、役割を取り違えると読み方が崩れるため、『何をするページか』『どこまで確定扱いしないか』を先に説明します。
@@ -15,7 +15,7 @@
 ## 公開ページへ戻る
 - [文献地図](https://mind-upload.com/research_harvest_50.html)
 - [論文集](https://mind-upload.com/mind_uploading_papers.html)
-- [技術提案](https://mind-upload.com/proposals.html)
+- [技術提案](https://mind-upload.com/issue.html#proposal-integration)
 
 ## 関連 Wiki
 - [Wiki: 文献のソース種別と状態ラベル](https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status) - Scopus、arXiv、Review、Media、source_logged などの意味を整理します。
@@ -120,5 +120,5 @@
 
 <h2>次にどこへ戻るか</h2>
 <p>
-広く論文を眺めたい場合は <a href="https://mind-upload.com/mind_uploading_papers.html">論文集</a>、未解決問題から入りたい場合は <a href="https://mind-upload.com/research_harvest_50.html">文献地図</a>、提案と実装方針を追いたい場合は <a href="https://mind-upload.com/proposals.html">技術提案</a> へ戻ってください。
+広く論文を眺めたい場合は <a href="https://mind-upload.com/mind_uploading_papers.html">論文集</a>、未解決問題から入りたい場合は <a href="https://mind-upload.com/research_harvest_50.html">文献地図</a>、提案と実装方針を追いたい場合は <a href="https://mind-upload.com/issue.html#proposal-integration">技術提案</a> へ戻ってください。
 </p>

@@ -84,7 +84,7 @@ P/M/R/I/V/D の記号や依存関係を初歩から追いたい場合は、先�
 <div class="note-box">
 <strong>理論系ページの中でこのページの役割を知りたいとき</strong>
 <p>
-このページは理論本文そのものより、論点どうしの依存関係を並べる地図です。主張レベルの入口は <a href="wbe_101.html">WBE入門</a>、理論と限界の長文は <a href="perspective.html">研究ノート</a>、設計原理は <a href="idea.html">理論フレーム</a> が担当します。理論系ページ全体の読み分けを 1 枚で見たい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a> をご覧ください。
+このページは理論本文そのものより、論点どうしの依存関係を並べる地図です。主張レベルの入口は <a href="wbe_101.html">WBE入門</a>、理論と限界の長文は <a href="perspective.html">研究ノート</a>、設計原理は <a href="perspective.html#design-principles">Perspective内の理論フレーム節</a> が担当します。理論系ページ全体の読み分けを 1 枚で見たい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a> をご覧ください。
 </p>
 </div>
 
@@ -1741,7 +1741,7 @@ WBEにおける「プロセスの同期」要件は、単純な遅延閾値（�
 <h4>Links</h4>
 <ul>
 <li><a href="index.html">Start</a></li>
-<li><a href="technical_proposal_47.html">Technical Proposal #47</a></li>
+<li><a href="issue.html#proposal-integration">Issue内の提案統合節</a></li>
 <li><a href="mind_uploading_papers.html">Paper Collection</a></li>
 <li><a href="brain_science_dictionary.html">Brain Science Dictionary</a></li>
 <li><a href="https://github.com/yasufumi-nakata/mind-upload" target="_blank">GitHub Repository</a></li>

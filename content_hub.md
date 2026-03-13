@@ -5,7 +5,7 @@ description: "公開ページの役割・統合先・更新先を1ページに�
 article_type: "Navigation"
 subtitle: "散逸防止のための単一導線"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Single source of truth for public pages"
 audience: "公開ページの置き場所を確認したい人、新規追記の統合先を迷いたくない人"
 reading_time: "5〜10分"
@@ -64,7 +64,7 @@ recommended_pages:
 <div class="note-box">
 <strong>理論系ページの読み順で迷ったとき</strong>
 <p>
-WBE 101、Perspective、Idea、Roadmap の違いだけを理論系に絞って整理したい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a> をご覧ください。公開ページ全体の役割差はここで、理論系だけの詳しい読み分けは wiki 側で補います。
+WBE 101、Perspective、Perspective内の理論フレーム節、Roadmap の違いだけを理論系に絞って整理したい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a> をご覧ください。公開ページ全体の役割差はここで、理論系だけの詳しい読み分けは wiki 側で補います。
 </p>
 </div>
 <div class="note-box">
@@ -76,19 +76,19 @@ WBE 101、Perspective、Idea、Roadmap の違いだけを理論系に絞って�
 <div class="note-box">
 <strong>実務系ページの読み順で迷ったとき</strong>
 <p>
-Verification、Datasets、Hands-on、Casework、Proposals の違いだけを実務系に絞って整理したい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。公開ページ全体の役割差はここで、実務系だけの詳しい読み分けは wiki 側で補います。
+Verification、Datasets、Datasets内のL0実践節、Verification内のケースワーク節、Issue内の提案統合節の違いだけを実務系に絞って整理したい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。公開ページ全体の役割差はここで、実務系だけの詳しい読み分けは wiki 側で補います。
 </p>
 </div>
 <div class="note-box">
 <strong>参加・協業の話から次の1ページを決めたいとき</strong>
 <p>
-Issue や Collaborations を読んだあとに、今すぐ切る修正、条件設計、外部依存の分解、L0 実装準備のどこへ進むかを 1 枚で見たい場合は <a href="wiki/participation-next-routes.html">Wiki: 参加・協業ページのあとに進む5つの道</a> をご覧ください。
+Issue 本文やその外部依存・協業節を読んだあとに、今すぐ切る修正、条件設計、外部依存の分解、L0 実装準備のどこへ進むかを 1 枚で見たい場合は <a href="wiki/participation-next-routes.html">Wiki: 参加・協業ページのあとに進む5つの道</a> をご覧ください。
 </p>
 </div>
 <div class="note-box">
 <strong>新しい情報をどこへ置くかを初歩から見たいとき</strong>
 <p>
-公開ページ、wiki、Issue、Collaborations、運用領域のどこへ置くべきかを学習用に整理したい場合は <a href="wiki/content-placement-basics.html">Wiki: 新しい情報の置き場所を決める基本</a> をご覧ください。
+公開ページ、wiki、Issue本文、Issue内の外部依存・協業節、運用領域のどこへ置くべきかを学習用に整理したい場合は <a href="wiki/content-placement-basics.html">Wiki: 新しい情報の置き場所を決める基本</a> をご覧ください。
 </p>
 </div>
 <div class="note-box">
@@ -106,7 +106,7 @@ Issue や Collaborations を読んだあとに、今すぐ切る修正、条件�
 <div class="note-box">
 <strong>観察、仮説、提案、Issue の違いをそろえたいとき</strong>
 <p>
-Research、Perspective、Idea、Proposals、Issue、Collaborations が全部同じ種類の文章に見える場合は <a href="wiki/facts-hypotheses-proposals-and-tasks.html">Wiki: 事実・仮説・提案・実行タスクの違い</a> をご覧ください。どのページが何を記録しているかを先に分けると、統合先の判断もしやすくなります。
+Research、Perspective、理論フレーム節、提案統合節、Issue本文、外部依存・協業節が全部同じ種類の文章に見える場合は <a href="wiki/facts-hypotheses-proposals-and-tasks.html">Wiki: 事実・仮説・提案・実行タスクの違い</a> をご覧ください。どのページが何を記録しているかを先に分けると、統合先の判断もしやすくなります。
 </p>
 </div>
 <div class="note-box">
@@ -119,12 +119,6 @@ Research、Perspective、Idea、Proposals、Issue、Collaborations が全部同�
 <strong>読んだ内容をどのページや作業へ変えるか迷ったとき</strong>
 <p>
 文献整理、理論整理、提案、Issue、外部依存のどこへ戻すかを一本道で整理したい場合は <a href="wiki/reading-to-change-workflow.html">Wiki: 読んだ内容を変更へつなぐ流れ</a> をご覧ください。
-</p>
-</div>
-<div class="note-box">
-<strong>EEG 公開データから助成テーマまで一気に見たいとき</strong>
-<p>
-25トピックを EEG 公開データでどこまで検証できるか、さらに助成制度タイプごとの題目や成果物へどう落とすかをまとめて見たい場合は <a href="wiki/mind-upload-eeg-data-fund-map.html">Wiki: EEG-DATA × 助成マップ</a> をご覧ください。ロードマップ、データ、協業候補の間を実務的につなぐ長文 wiki です。
 </p>
 </div>
 
@@ -181,7 +175,7 @@ Research、Perspective、Idea、Proposals、Issue、Collaborations が全部同�
 </tr>
 <tr>
 <td>実務手順、最小ループ、手を動かす順番</td>
-<td><a href="hands_on.html">hands_on.html</a></td>
+<td><a href="datasets.html#l0-practice">datasets.html#l0-practice</a></td>
 <td>読むだけでなく、実際に再現可能な作業へ落とすためのページだからです。</td>
 </tr>
 </tbody>
@@ -251,7 +245,7 @@ Research、Perspective、Idea、Proposals、Issue、Collaborations が全部同�
 </tr>
 <tr>
 <td>外部依存タスクを、今この場で完了できる変更のように見せる書き方</td>
-<td><a href="issue.html">issue.html</a> や <a href="collaborations.html">collaborations.html</a> で、外部依存として分離して記録します。</td>
+<td><a href="issue.html">issue.html</a> や <a href="issue.html#external-collaboration">issue.html#external-collaboration</a> で、外部依存として分離して記録します。</td>
 </tr>
 <tr>
 <td>単に面白いが、このサイトの未解決問題や検証基盤へ接続しない話題</td>
@@ -264,11 +258,11 @@ Research、Perspective、Idea、Proposals、Issue、Collaborations が全部同�
 <h2 class="section-title">統合マップ（公開ページ）</h2>
 <table class="data-table">
 <thead><tr><th>領域</th><th>統合先（主ページ）</th><th>含める内容</th><th>補助ページ</th></tr></thead><tbody>
-<tr><td>検証基盤</td><td><a href="verification.html">verification.html</a></td><td>勝利条件、反証条件、監査契約、再現性基準</td><td><a href="hands_on.html">hands_on.html</a></td></tr>
-<tr><td>技術ロードマップ</td><td><a href="tech_roadmap.html">tech_roadmap.html</a></td><td>問題分解、到達条件、実装順序</td><td><a href="proposals.html">proposals.html</a></td></tr>
-<tr><td>研究論点</td><td><a href="perspective.html">perspective.html</a></td><td>理論整理、批判点、文献根拠</td><td><a href="idea.html">idea.html</a></td></tr>
+<tr><td>検証基盤</td><td><a href="verification.html">verification.html</a></td><td>勝利条件、反証条件、監査契約、再現性基準</td><td><a href="datasets.html#l0-practice">datasets.html#l0-practice</a></td></tr>
+<tr><td>技術ロードマップ</td><td><a href="tech_roadmap.html">tech_roadmap.html</a></td><td>問題分解、到達条件、実装順序</td><td><a href="issue.html#proposal-integration">issue.html#proposal-integration</a></td></tr>
+<tr><td>研究論点</td><td><a href="perspective.html">perspective.html</a></td><td>理論整理、批判点、文献根拠</td><td><a href="perspective.html#design-principles">perspective.html#design-principles</a></td></tr>
 <tr><td>未解決問題×文献</td><td><a href="research_harvest_50.html">research_harvest_50.html</a></td><td>U別のリサーチクエスチョン、文献監査、重複整理</td><td><a href="datasets.html">datasets.html</a></td></tr>
-<tr><td>参加導線</td><td><a href="issue.html">issue.html</a></td><td>Issue運用、対応状況、外部依存タスクの分離</td><td><a href="collaborations.html">collaborations.html</a></td></tr>
+<tr><td>参加導線</td><td><a href="issue.html">issue.html</a></td><td>Issue運用、対応状況、外部依存タスクの分離</td><td><a href="issue.html#external-collaboration">issue.html#external-collaboration</a></td></tr>
 <tr><td>入門導線</td><td><a href="index.html">index.html</a></td><td>読む順番、主要ページへの入口</td><td><a href="wbe_101.html">wbe_101.html</a> / <a href="eeg_101.html">eeg_101.html</a></td></tr>
 <tr><td>基礎学習</td><td><a href="wiki/">wiki/</a></td><td>初歩の説明、背景知識、読み方の補助教材</td><td><a href="glossary.html">glossary.html</a> / <a href="faq.html">faq.html</a></td></tr>
 </tbody></table>
@@ -293,7 +287,7 @@ Research、Perspective、Idea、Proposals、Issue、Collaborations が全部同�
 <li><a href="verification.html">verification.html</a></li>
 <li><a href="tech_roadmap.html">tech_roadmap.html</a></li>
 <li><a href="perspective.html">perspective.html</a></li>
-<li><a href="proposals.html">proposals.html</a></li>
+<li><a href="issue.html#proposal-integration">issue.html#proposal-integration</a></li>
 <li><a href="issue.html">issue.html</a></li>
 </ul>
 </div>
@@ -305,7 +299,7 @@ Research、Perspective、Idea、Proposals、Issue、Collaborations が全部同�
 <li><a href="datasets.html">datasets.html</a></li>
 <li><a href="glossary.html">glossary.html</a></li>
 <li><a href="faq.html">faq.html</a></li>
-<li><a href="casework.html">casework.html</a></li>
+<li><a href="verification.html#casework">verification.html#casework</a></li>
 </ul>
 </div>
 <div class="key-points">
@@ -374,7 +368,6 @@ Research、Perspective、Idea、Proposals、Issue、Collaborations が全部同�
 <li><a href="wiki/standards-repositories-validators-and-benchmarks.html">wiki/standards-repositories-validators-and-benchmarks.html</a></li>
 <li><a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">wiki/closed-loop-latency-jitter-and-safety-stops.html</a></li>
 <li><a href="wiki/thermodynamic-grounding-basics.html">wiki/thermodynamic-grounding-basics.html</a></li>
-<li><a href="wiki/mind-upload-eeg-data-fund-map.html">wiki/mind-upload-eeg-data-fund-map.html</a></li>
 </ul>
 </div>
 <div class="key-points">
@@ -415,7 +408,6 @@ Research、Perspective、Idea、Proposals、Issue、Collaborations が全部同�
 <li><a href="wiki/understanding-vs-action-readiness.html">理解と行動準備の違い →</a></li>
 <li><a href="wiki/wbe-to-theory-route.html">WBE入門の次ルート →</a></li>
 <li><a href="wiki/eeg-to-l0-route.html">EEGからL0まで →</a></li>
-<li><a href="wiki/mind-upload-eeg-data-fund-map.html">EEG-DATA × 助成マップ →</a></li>
 <li><a href="wiki/verification-next-routes.html">Verification後の4ルート →</a></li>
 <li><a href="wiki/roadmap-next-routes.html">Roadmap後の5ルート →</a></li>
 <li><a href="wiki/literature-to-action-route.html">文献から実装・参加へ →</a></li>

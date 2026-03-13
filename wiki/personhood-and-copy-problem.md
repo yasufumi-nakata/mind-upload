@@ -5,7 +5,7 @@ description: "『コピー』と『移行』の違い、本人性がなぜ難し
 article_type: Wiki
 subtitle: "見た目が同じでも、『同じ本人』かは別問題です"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Beginner guide"
 audience: "本人性、コピー問題、連続的移行の話で止まりやすい人"
 reading_time: "10〜15分"
@@ -38,7 +38,7 @@ wiki_links:
     description: "他の基礎ページへ戻れます。"
 recommended_pages:
   - label: "理論フレーム"
-    url: "/idea.html"
+    url: "/perspective.html#design-principles"
   - label: "WBE入門"
     url: "/wbe_101.html"
   - label: "検証基盤"
@@ -115,7 +115,7 @@ recommended_pages:
 <div class="cta-box">
 <h4>Next</h4>
 <p>この論点を理論フレームとしてどう扱うかは、こちらで確認できます。</p>
-<a href="../idea.html">理論フレームへ →</a>
+<a href="../perspective.html#design-principles">理論フレームへ →</a>
 </div>
 </section>
 
@@ -133,7 +133,7 @@ recommended_pages:
 <div class="sidebar-box">
 <h4>公開ページ</h4>
 <ul>
-<li><a href="../idea.html">理論フレーム →</a></li>
+<li><a href="../perspective.html#design-principles">理論フレーム →</a></li>
 <li><a href="../wbe_101.html">WBE 101 →</a></li>
 <li><a href="../verification.html">検証基盤 →</a></li>
 </ul>

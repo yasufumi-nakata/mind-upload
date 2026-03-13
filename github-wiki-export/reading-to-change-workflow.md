@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Reading to change workflow
+- 更新日: 2026-03-14 / 位置づけ: Reading to change workflow
 
 ## このページの役割
 このページは、Mind-Upload のページを読んで得た気づきを、実際の変更や整理へつなぐための workflow ガイドです。新しい論文を見つけた、理論上の弱点に気づいた、提案の形が見えた、今すぐ直せる修正が分かった、外部依存が必要だと分かった、といった場面で、どのページへ戻して何を作るかを一本道で整理します。
@@ -14,7 +14,7 @@
 
 ## 公開ページへ戻る
 - [文献地図](https://mind-upload.com/research_harvest_50.html)
-- [技術提案](https://mind-upload.com/proposals.html)
+- [技術提案](https://mind-upload.com/issue.html#proposal-integration)
 - [貢献ガイド](https://mind-upload.com/issue.html)
 
 ## 関連 Wiki
@@ -55,12 +55,12 @@
 </tr>
 <tr>
 <td><strong>理論の弱点や前提差が見えた</strong></td>
-<td><a href="https://mind-upload.com/perspective.html">Perspective</a> / <a href="https://mind-upload.com/idea.html">Idea</a></td>
+<td><a href="https://mind-upload.com/perspective.html">Perspective</a> / <a href="https://mind-upload.com/perspective.html#design-principles">Idea</a></td>
 <td>限界整理、理論フレーム、設計原理の見直し。</td>
 </tr>
 <tr>
 <td><strong>進む方向や方針が見えた</strong></td>
-<td><a href="https://mind-upload.com/proposals.html">Proposals</a></td>
+<td><a href="https://mind-upload.com/issue.html#proposal-integration">Proposals</a></td>
 <td>提案、ストリーム整理、根拠リンク。</td>
 </tr>
 <tr>
@@ -70,7 +70,7 @@
 </tr>
 <tr>
 <td><strong>外部連携や制度が必要だと分かった</strong></td>
-<td><a href="https://mind-upload.com/collaborations.html">Collaborations</a></td>
+<td><a href="https://mind-upload.com/issue.html#external-collaboration">Collaborations</a></td>
 <td>外部依存タスク、内製準備物、最小成果物。</td>
 </tr>
 </tbody>
@@ -121,7 +121,7 @@
 </tr>
 <tr>
 <td><strong>Perspective を読んで、理論の弱点が気になった</strong></td>
-<td><a href="https://mind-upload.com/perspective.html">Perspective</a> / <a href="https://mind-upload.com/idea.html">Idea</a></td>
+<td><a href="https://mind-upload.com/perspective.html">Perspective</a> / <a href="https://mind-upload.com/perspective.html#design-principles">Idea</a></td>
 <td>先に理論整理として残した方が、提案や実装の前提がぶれにくいためです。</td>
 </tr>
 <tr>
@@ -131,7 +131,7 @@
 </tr>
 <tr>
 <td><strong>Issue を書こうとしたら外部依存が大きかった</strong></td>
-<td><a href="https://mind-upload.com/collaborations.html">Collaborations</a></td>
+<td><a href="https://mind-upload.com/issue.html#external-collaboration">Collaborations</a></td>
 <td>内製変更と外部依存を分ける必要があるためです。</td>
 </tr>
 </tbody>

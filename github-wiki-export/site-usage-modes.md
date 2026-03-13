@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Site usage modes
+- 更新日: 2026-03-14 / 位置づけ: Site usage modes
 
 ## このページの役割
 このページは、Mind-Upload 全体をどう使うかを『全体像をつかむ』『初歩から学ぶ』『実際に直す・参加する』の 3 モードで整理する補助ガイドです。公開ページは情報ポータル、wiki は学習用の土台、Issue や Collaborations は行動の入口という役割差を、目的別に分けて確認できます。
@@ -61,7 +61,7 @@
 <tr>
 <td><strong>実際に直す・参加する</strong></td>
 <td>Issue、統合先、外部依存の切り分け、最小成果物を決めます。</td>
-<td><a href="https://mind-upload.com/issue.html">Issue</a> / <a href="https://mind-upload.com/content_hub.html">Content Hub</a> / <a href="https://mind-upload.com/collaborations.html">Collaborations</a></td>
+<td><a href="https://mind-upload.com/issue.html">Issue</a> / <a href="https://mind-upload.com/content_hub.html">Content Hub</a> / <a href="https://mind-upload.com/issue.html#external-collaboration">Collaborations</a></td>
 </tr>
 </tbody>
 </table>
@@ -144,7 +144,7 @@
 </tr>
 <tr>
 <td><strong>外部依存を含む話を整理したい</strong></td>
-<td><a href="https://mind-upload.com/collaborations.html">Collaborations</a></td>
+<td><a href="https://mind-upload.com/issue.html#external-collaboration">Collaborations</a></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies">内製で先にやることと外部依存</a></td>
 </tr>
 </tbody>

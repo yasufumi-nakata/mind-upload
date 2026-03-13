@@ -5,7 +5,7 @@ description: "Mind-Uploadプロジェクトへの参加方法と、Issue対応�
 article_type: Guide
 subtitle: "Join the Research Community + Issue Tracker"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Contribution + Issue tracker"
 audience: "初めて参加する人、Issueの状態を確認したい人、実行可能な貢献から入りたい人"
 reading_time: "10〜20分"
@@ -161,7 +161,7 @@ IRB、実験、機材、法務が絡むときでも、要求仕様、判定条�
 <tr>
 <td>実験、IRB、機材、法務が必要な話を進めたい</td>
 <td>このページでは「今すぐ実行できる準備作業」と「外部依存」を分けて整理する</td>
-<td><a href="collaborations.html">Collaborations</a></td>
+<td><a href="issue.html#external-collaboration">外部依存・協業節</a></td>
 </tr>
 </tbody>
 </table>
@@ -311,7 +311,7 @@ IRB、実験、機材、法務が絡むときでも、要求仕様、判定条�
 <section class="section" id="technical-issue-tracker">
 <h2 class="section-title">Technical Issue Tracker（本文統合済み）</h2>
 <p>
-以下は、Technical Proposal 系 Issue の対応状況です。判断根拠は、各 Proposal の該当節へ直接リンクしています。
+以下は、Technical Proposal 系 Issue の対応状況です。判断根拠は、研究ノート内の統合提案要約節へ直接リンクしています。
 </p>
 
 <table class="data-table">
@@ -328,43 +328,43 @@ IRB、実験、機材、法務が絡むときでも、要求仕様、判定条�
 <td><strong>#46</strong></td>
 <td>計測QA、同期補正、アーティファクト除去、BIDS/Motion-BIDSの統合方針を整理</td>
 <td>提案化済み</td>
-<td><a href="technical_proposal_46.html#qa">#qa</a> / <a href="technical_proposal_46.html#sync">#sync</a> / <a href="technical_proposal_46.html#bids">#bids</a></td>
+<td><a href="perspective.html#proposal-46">Perspective内の #46 要約</a></td>
 </tr>
 <tr>
 <td><strong>#47</strong></td>
 <td>BIDS標準化、ASR/ZapLine、wPLI/STE、LSL同期の実装方針を拡張</td>
 <td>提案受理（文書）</td>
-<td><a href="technical_proposal_47.html#bids">#bids</a> / <a href="technical_proposal_47.html#preprocessing">#preprocessing</a> / <a href="technical_proposal_47.html#connectivity">#connectivity</a></td>
+<td><a href="perspective.html#proposal-47">Perspective内の #47 要約</a></td>
 </tr>
 <tr>
 <td><strong>#48</strong></td>
 <td>OPM-MEG、転移学習、Team Flow因果、IIT実装の拡張案を提出</td>
 <td>審査中提案</td>
-<td><a href="technical_proposal_48.html#measurement">#measurement</a> / <a href="technical_proposal_48.html#teamflow">#teamflow</a> / <a href="technical_proposal_48.html#iit-implementation">#iit-implementation</a></td>
+<td><a href="perspective.html#proposal-48">Perspective内の #48 要約</a></td>
 </tr>
 <tr>
 <td><strong>#56</strong></td>
 <td>反実仮想の識別不能性に対して PCI と do-calculus を導入する検証設計へ変更</td>
 <td>提案化済み</td>
-<td><a href="technical_proposal_56.html#problem-statement">#problem-statement</a> / <a href="technical_proposal_56.html#proposal">#proposal</a></td>
+<td><a href="perspective.html#proposal-56">Perspective内の #56 要約</a></td>
 </tr>
 <tr>
 <td><strong>#58</strong></td>
 <td>NESS散逸・因果識別可能性・IIT近似計算の3課題に対する設計方針を明文化</td>
 <td>提案化済み</td>
-<td><a href="technical_proposal_58.html#thermo">#thermo</a> / <a href="technical_proposal_58.html#counterfactual">#counterfactual</a> / <a href="technical_proposal_58.html#iit">#iit</a></td>
+<td><a href="perspective.html#proposal-58">Perspective内の #58 要約</a></td>
 </tr>
 <tr>
 <td><strong>#61</strong></td>
 <td>Unfolding論点・熱力学コスト2層化・SCM厳密化・多モデル推論への修正を提示</td>
 <td>実装方針反映（文書）</td>
-<td><a href="technical_proposal_61.html#causal-structure">#causal-structure</a> / <a href="technical_proposal_61.html#thermodynamics">#thermodynamics</a> / <a href="technical_proposal_61.html#multi-model-inference">#multi-model-inference</a></td>
+<td><a href="perspective.html#proposal-61">Perspective内の #61 要約</a></td>
 </tr>
 <tr>
 <td><strong>#62</strong></td>
 <td>#58批判に対し、同値類警告とIIT近似の実装計画を追加補強</td>
 <td>実装計画化（文書）</td>
-<td><a href="technical_proposal_62.html#thermodynamics">#thermodynamics</a> / <a href="technical_proposal_62.html#identifiability">#identifiability</a> / <a href="technical_proposal_62.html#complexity">#complexity</a></td>
+<td><a href="perspective.html#proposal-62">Perspective内の #62 要約</a></td>
 </tr>
 </tbody>
 </table>
@@ -375,12 +375,84 @@ IRB、実験、機材、法務が絡むときでも、要求仕様、判定条�
 このトラッカーは「サイト内で確認可能な証跡」を基準に更新します。外部実装（実験・法務・機材調達等）は外部依存として分離し、本ページでは主張しません。
 </p>
 </div>
+</section>
 
-<div class="cta-box">
-<h4>統合本文</h4>
-<p>Technical Proposal 全体の統合本文は `proposals.html` に集約しています。</p>
-<a href="proposals.html">統合本文を見る →</a>
+<section class="section" id="proposal-integration">
+<h2 class="section-title">技術提案の統合本文</h2>
+<p>
+旧 <code>proposals.md</code> の要点は本節へ統合しました。ここでは、提案の状態、根拠、実装への影響を Issue 導線と切り離さずに追えるようにしております。
+</p>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>状態</th>
+<th>意味</th>
+<th>まだ残る確認</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>提案公開</strong></td>
+<td>本文として公開され、レビュー可能な状態です。</td>
+<td>妥当性や優先順位の精査が残ります。</td>
+</tr>
+<tr>
+<td><strong>提案受理</strong></td>
+<td>方針として取り込む価値が高いと判断した状態です。</td>
+<td>実装方法、評価条件、公開物の形を詰める必要があります。</td>
+</tr>
+<tr>
+<td><strong>実装方針反映</strong></td>
+<td>考え方は本文や設計へ反映されています。</td>
+<td>コード、データ、追試可能な評価結果は別途必要です。</td>
+</tr>
+<tr>
+<td><strong>外部依存</strong></td>
+<td>実験、機材、法務、共同研究先の合意など、リポジトリ外の条件が要る状態です。</td>
+<td>このリポジトリでは要求仕様、判定条件、ログ形式までを先に整えます。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box" id="stream-e-rigor">
+<strong>Stream E: 厳密化提案の位置づけ</strong>
+<p>
+Issue #257〜#260 は、逆問題の不確実性、因果同値類、熱力学的一貫性、BIDS セマンティクス不足をまとめて厳密化する流れでございます。本文側では <a href="verification.html#verification-rigor-2026-02">検証要件の追加更新</a>、<a href="verification.html#thermodynamic-verification">熱力学的検証要件</a>、<a href="verification.html#causal-perturbation-suite">因果的摂動スイート</a> に反映し、Issue 側では変更理由と外部依存の切り分けを追えるようにしています。
+</p>
 </div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>技術ストリーム</th>
+<th>主眼</th>
+<th>本文で見に行く場所</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>計測・同期・BIDS</strong></td>
+<td>QA、同期補正、メタデータ標準化を「計測の証跡」として固定します。</td>
+<td><a href="perspective.html#proposal-46">Perspective内 #46</a> / <a href="perspective.html#proposal-47">#47</a></td>
+</tr>
+<tr>
+<td><strong>前処理・接続性</strong></td>
+<td>ASR、ZapLine、wPLI、STE などを比較可能な前処理・指標系として揃えます。</td>
+<td><a href="perspective.html#proposal-47">Perspective内 #47</a></td>
+</tr>
+<tr>
+<td><strong>介入・因果</strong></td>
+<td>観測だけでは足りないため、PCI と介入設計を Ground Truth 側へ寄せます。</td>
+<td><a href="perspective.html#proposal-56">Perspective内 #56</a></td>
+</tr>
+<tr>
+<td><strong>熱力学・識別可能性</strong></td>
+<td>論理コストと散逸コストを分け、因果識別可能性と同時に監査します。</td>
+<td><a href="perspective.html#proposal-58">Perspective内 #58</a> / <a href="perspective.html#proposal-61">#61</a> / <a href="perspective.html#proposal-62">#62</a></td>
+</tr>
+</tbody>
+</table>
 </section>
 
 <section class="section" id="recent-issue-responses">
@@ -405,28 +477,28 @@ IRB、実験、機材、法務が絡むときでも、要求仕様、判定条�
 <td>逆問題不確実性・因果同値性・熱力学整合性の厳密化</td>
 <td>HBM不確実性マップ、因果同値類の明示、NESS/EPR要件を本文基準へ追記</td>
 <td>反映済み（文書）</td>
-<td><a href="proposals.html#stream-e-rigor">proposals#stream-e-rigor</a> / <a href="verification.html#verification-rigor-2026-02">verification#verification-rigor-2026-02</a></td>
+<td><a href="issue.html#stream-e-rigor">proposals#stream-e-rigor</a> / <a href="verification.html#verification-rigor-2026-02">verification#verification-rigor-2026-02</a></td>
 </tr>
 <tr>
 <td><strong>#258</strong></td>
 <td>IIT計算量制約と熱力学的検証要件の明確化</td>
 <td>PCI-ST中心運用と熱力学KPI（論理コスト/散逸コスト分離）を追加</td>
 <td>反映済み（文書）</td>
-<td><a href="proposals.html#stream-e-rigor">proposals#stream-e-rigor</a> / <a href="verification.html#thermodynamic-verification">verification#thermodynamic-verification</a></td>
+<td><a href="issue.html#stream-e-rigor">proposals#stream-e-rigor</a> / <a href="verification.html#thermodynamic-verification">verification#thermodynamic-verification</a></td>
 </tr>
 <tr>
 <td><strong>#259</strong></td>
 <td>ASR副作用・BIDSセマンティック不足への対応</td>
 <td>ASR前後のMI/PLV監査とCogPO/NIF/主観報告メタデータ要件を追加</td>
 <td>反映済み（文書）</td>
-<td><a href="proposals.html#stream-e-rigor">proposals#stream-e-rigor</a> / <a href="verification.html#verification-rigor-2026-02">verification#verification-rigor-2026-02</a></td>
+<td><a href="issue.html#stream-e-rigor">proposals#stream-e-rigor</a> / <a href="verification.html#verification-rigor-2026-02">verification#verification-rigor-2026-02</a></td>
 </tr>
 <tr>
 <td><strong>#260</strong></td>
 <td>逆問題・反実仮想・熱力学の統合強化</td>
 <td>#257〜#259の追記を統合要件として束ね、検証条件を再定義</td>
 <td>反映済み（文書）</td>
-<td><a href="proposals.html#stream-e-rigor">proposals#stream-e-rigor</a> / <a href="verification.html#causal-perturbation-suite">verification#causal-perturbation-suite</a></td>
+<td><a href="issue.html#stream-e-rigor">proposals#stream-e-rigor</a> / <a href="verification.html#causal-perturbation-suite">verification#causal-perturbation-suite</a></td>
 </tr>
 <tr>
 <td><strong>#261</strong></td>
@@ -457,6 +529,84 @@ IRB、実験、機材、法務が絡むときでも、要求仕様、判定条�
 <ul>
 <li><strong>タスク:</strong> 実被験者を対象としたTMS/tDCS介入実験 <strong>担当:</strong> 実験担当PI <strong>前提条件:</strong> IRB承認・機材確保・被験者募集 <strong>完了条件:</strong> 事前登録済みプロトコルで取得した公開可能データと監査ログが揃うこと</li>
 </ul>
+</div>
+</section>
+
+<section class="section" id="external-collaboration">
+<h2 class="section-title">外部依存・協業候補</h2>
+<p>
+旧 <code>collaborations.md</code> の要点は本節へ統合しました。ここで重要なのは、候補先の名前そのものより、<strong>こちら側で先に内製できるもの</strong>と<strong>相手先の合意が必要なもの</strong>を混ぜないことでございます。
+</p>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>種類</th>
+<th>このリポジトリ内で先に進められること</th>
+<th>外部依存になること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>標準化準備</strong></td>
+<td>仕様ドラフト、比較表、ログ形式、監査要件の定義</td>
+<td>コミュニティ採択、公式仕様への反映</td>
+</tr>
+<tr>
+<td><strong>データ公開準備</strong></td>
+<td>BIDS 変換、QC ログ、説明文、再現手順の整備</td>
+<td>権利確認、外部リポジトリでの受理</td>
+</tr>
+<tr>
+<td><strong>共同研究準備</strong></td>
+<td>1ページ要約、最小成果物、評価設計、公開可能な下準備</td>
+<td>IRB、機材、共同著者合意、実験実施</td>
+</tr>
+</tbody>
+</table>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>優先候補</th>
+<th>最小スコープ</th>
+<th>最初に内製したいもの</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>BIDS / EEG-BIDS Community</strong></td>
+<td>EEG QC ログ、同期ログ、Derivatives 拡張の議論</td>
+<td>拡張仕様ドラフト、例示メタデータ、差分表</td>
+</tr>
+<tr>
+<td><strong>OpenNeuro</strong></td>
+<td>DOI 付き BIDS データセット 1 件の公開準備</td>
+<td>BIDS 変換済みサンプル、Validator 結果、README</td>
+</tr>
+<tr>
+<td><strong>MOABB / NeuroTechX</strong></td>
+<td>L0/L1 ベンチの比較可能化</td>
+<td>タスク定義、ベースライン、提出物の最小仕様</td>
+</tr>
+<tr>
+<td><strong>MNE-Python</strong></td>
+<td>BIDS→前処理→メトリクスの再現パイプライン</td>
+<td>チュートリアル化できる最小 notebook / script</td>
+</tr>
+<tr>
+<td><strong>LSL Community</strong></td>
+<td>同期監査ログの標準化</td>
+<td>テンプレート、許容誤差、失敗時ログの定義</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>この節の読み方</strong>
+<p>
+ここに並ぶ候補は、合意済み・実施確約済みを意味しません。今この場で進めるべきことは、相手先へ投げる前に要求仕様、最小成果物、判定条件を公開可能な形へ揃えることでございます。
+</p>
 </div>
 </section>
 
@@ -576,7 +726,7 @@ IRB、実験、機材、法務が絡むときでも、要求仕様、判定条�
 <td><strong>DCM/ベイズ法の限界</strong></td>
 <td>#64, #65, #67, #70</td>
 <td>BMR・Causal Fingerprinting・適応的前処理（Riemannian Potato）の導入</td>
-<td><a href="proposals.html#integrated-streams">proposals</a></td>
+<td><a href="issue.html#proposal-integration">proposals</a></td>
 </tr>
 <tr>
 <td><strong>ESI不確実性定量化</strong></td>
@@ -596,7 +746,7 @@ IRB、実験、機材、法務が絡むときでも、要求仕様、判定条�
 <h4>Resources</h4>
 <ul>
 <li><a href="https://github.com/yasufumi-nakata/mind-upload" target="_blank">GitHub Repository →</a></li>
-<li><a href="idea.html">Theoretical Framework →</a></li>
+<li><a href="perspective.html#design-principles">Theoretical Framework →</a></li>
 <li><a href="tech_roadmap.html">Technical Roadmap →</a></li>
 </ul>
 </div>

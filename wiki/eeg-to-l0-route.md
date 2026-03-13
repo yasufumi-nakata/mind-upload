@@ -5,7 +5,7 @@ description: "EEG の基礎を理解したあと、公開データの選定、L0
 article_type: Wiki
 subtitle: "EEG入門から再現可能解析まで、戻り先を迷わないための実務ルート"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Practical route"
 audience: "EEGから手を動かし始めたい人、L0の最小ループまでの順番を固定したい人"
 reading_time: "8〜12分"
@@ -44,7 +44,7 @@ recommended_pages:
   - label: "データ&ベンチ"
     url: "/datasets.html"
   - label: "ハンズオン"
-    url: "/hands_on.html"
+    url: "/datasets.html#l0-practice"
 ---
 
 <main class="main-container">
@@ -95,7 +95,7 @@ EEG を学んだあとに迷いやすいのは、<strong>次にデータを選�
 </tr>
 <tr>
 <td><strong>5</strong></td>
-<td><a href="../hands_on.html">Hands-on</a></td>
+<td><a href="../datasets.html#l0-practice">Hands-on</a></td>
 <td>BIDS、QC、前処理、ベースライン、失敗例を一周つなぐ手順を実行します。</td>
 <td>L0 の成果物一式が揃ったら次へ進みます。</td>
 </tr>
@@ -196,7 +196,7 @@ EEG の入口へ戻るなら <a href="../eeg_101.html">EEG入門</a>、実務ペ
 <ul>
 <li><a href="../eeg_101.html">EEG入門 →</a></li>
 <li><a href="../datasets.html">データ&ベンチ →</a></li>
-<li><a href="../hands_on.html">ハンズオン →</a></li>
+<li><a href="../datasets.html#l0-practice">ハンズオン →</a></li>
 </ul>
 </div>
 </aside>

@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Practical guide
+- 更新日: 2026-03-14 / 位置づけ: Practical guide
 
 ## このページの役割
 このページは、EEG の前処理と QC がなぜ結果に大きく効くのかを初歩から説明する wiki です。難しいアルゴリズム一覧より先に、『どこで結果が変わりやすいか』『何をログに残すべきか』を理解することを目標にします。
@@ -14,7 +14,7 @@
 
 ## 公開ページへ戻る
 - [EEG入門](https://mind-upload.com/eeg_101.html)
-- [ハンズオン](https://mind-upload.com/hands_on.html)
+- [ハンズオン](https://mind-upload.com/datasets.html#l0-practice)
 - [データ&ベンチ](https://mind-upload.com/datasets.html)
 
 ## 関連 Wiki
@@ -105,5 +105,5 @@ EEG は、脳の信号だけでなく、まばたき、筋電、体動、電源�
 
 <h2>次にどこへ戻るか</h2>
 <p>
-EEG の信号そのものをもう一度確認したい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-basics">EEGの基本</a>、実際の作業手順へ戻りたい場合は <a href="https://mind-upload.com/hands_on.html">Hands-on</a>、公開データ選びへ戻りたい場合は <a href="https://mind-upload.com/datasets.html">Datasets</a> が自然です。
+EEG の信号そのものをもう一度確認したい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-basics">EEGの基本</a>、実際の作業手順へ戻りたい場合は <a href="https://mind-upload.com/datasets.html#l0-practice">Hands-on</a>、公開データ選びへ戻りたい場合は <a href="https://mind-upload.com/datasets.html">Datasets</a> が自然です。
 </p>

@@ -5,7 +5,7 @@ description: "新しく見つけた説明、文献、修正案、外部依存タ
 article_type: Wiki
 subtitle: "『何を書くか』の前に、『どこへ置くか』を決めるための基本"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Content placement basics"
 audience: "新しい情報の統合先で迷う人、公開ページと wiki の役割差を初歩から知りたい人"
 reading_time: "8〜12分"
@@ -38,7 +38,7 @@ recommended_pages:
   - label: "貢献ガイド"
     url: "/issue.html"
   - label: "協業候補"
-    url: "/collaborations.html"
+    url: "/issue.html#external-collaboration"
 ---
 
 <main class="main-container">
@@ -119,7 +119,7 @@ recommended_pages:
 </tr>
 <tr>
 <td><strong>共同研究や標準化の候補を整理したい</strong></td>
-<td><a href="../collaborations.html">Collaborations</a></td>
+<td><a href="../issue.html#external-collaboration">Collaborations</a></td>
 <td>外部依存の話を、内製変更と混ぜないためです。</td>
 </tr>
 <tr>
@@ -159,7 +159,7 @@ recommended_pages:
 </tr>
 <tr>
 <td><strong>共同研究先へ渡す 1 ページ要約</strong></td>
-<td><a href="../collaborations.html">Collaborations</a> に接続する準備物</td>
+<td><a href="../issue.html#external-collaboration">Collaborations</a> に接続する準備物</td>
 <td><a href="internal-prework-and-external-dependencies.html">内製で先にやることと外部依存</a></td>
 </tr>
 <tr>
@@ -207,7 +207,7 @@ recommended_pages:
 <ul>
 <li><a href="../content_hub.html">公開コンテンツ統合ハブ →</a></li>
 <li><a href="../issue.html">貢献ガイド →</a></li>
-<li><a href="../collaborations.html">協業候補 →</a></li>
+<li><a href="../issue.html#external-collaboration">協業候補 →</a></li>
 </ul>
 </div>
 </aside>

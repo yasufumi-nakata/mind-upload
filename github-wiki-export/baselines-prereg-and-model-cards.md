@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Learning guide
+- 更新日: 2026-03-14 / 位置づけ: Learning guide
 
 ## このページの役割
 このページは、Mind-Upload で繰り返し出てくる『ベースライン』『ベンチマーク』『事前登録』『モデルカード』『失敗例』の役割差を、初歩から整理する wiki です。高いスコアを出すことと、比較可能な前進を作ることの違いを理解する足場として使います。
@@ -14,8 +14,8 @@
 
 ## 公開ページへ戻る
 - [検証基盤](https://mind-upload.com/verification.html)
-- [ハンズオン](https://mind-upload.com/hands_on.html)
-- [ケースワーク](https://mind-upload.com/casework.html)
+- [ハンズオン](https://mind-upload.com/datasets.html#l0-practice)
+- [ケースワーク](https://mind-upload.com/verification.html#casework)
 
 ## 関連 Wiki
 - [Wiki: 検証基盤の基本](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - まず Verification Commons の全体像へ戻れます。
@@ -146,5 +146,5 @@
 
 <h2>次にどこへ戻るか</h2>
 <p>
-設計図へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a>、実務へ戻るなら <a href="https://mind-upload.com/hands_on.html">ハンズオン</a>、他分野の先例へ戻るなら <a href="https://mind-upload.com/casework.html">ケースワーク</a> をご利用ください。
+設計図へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a>、実務へ戻るなら <a href="https://mind-upload.com/datasets.html#l0-practice">ハンズオン</a>、他分野の先例へ戻るなら <a href="https://mind-upload.com/verification.html#casework">ケースワーク</a> をご利用ください。
 </p>

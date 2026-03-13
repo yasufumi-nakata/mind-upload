@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Theory route
+- 更新日: 2026-03-14 / 位置づけ: Theory route
 
 ## このページの役割
 このページは、WBE 101 を読んだあとに、理論をどの方向へ深掘りするかを整理する補助ガイドです。ニュース誤読を避けたいのか、設計原理を知りたいのか、主要理論の支持点と限界を長文で追いたいのか、理論がどの技術課題へ落ちるかを知りたいのかで、次の1ページは変わります。
@@ -15,7 +15,7 @@
 ## 公開ページへ戻る
 - [WBE入門](https://mind-upload.com/wbe_101.html)
 - [研究ノート](https://mind-upload.com/perspective.html)
-- [理論フレーム](https://mind-upload.com/idea.html)
+- [理論フレーム](https://mind-upload.com/perspective.html#design-principles)
 
 ## 関連 Wiki
 - [Wiki: 理論系ページの読み分けガイド](https://github.com/yasufumi-nakata/mind-upload/wiki/theory-pages-reading-guide) - 理論系ページ全体の役割差に戻りたい人向けです。
@@ -55,7 +55,7 @@ WBE 101 は入口として重要ですが、その次に読む理論ページは
 </tr>
 <tr>
 <td><strong>なぜ「静的コピー」ではなく「動的移行」なのか知りたい</strong></td>
-<td><a href="https://mind-upload.com/idea.html">Idea</a></td>
+<td><a href="https://mind-upload.com/perspective.html#design-principles">Idea</a></td>
 <td>このサイトが採用する設計原理と、コピー問題とのつながりを確認できます。</td>
 </tr>
 <tr>

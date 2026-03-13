@@ -5,7 +5,7 @@ description: "Mind-Upload を本当に初歩から学ぶための wiki。公開�
 article_type: Wiki
 subtitle: "公開ページは入口、Wiki は学習用の土台です"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Learning-first"
 audience: "本当に初歩から学びたい人、公開ページに入る前の足場がほしい人"
 reading_time: "10〜20分"
@@ -95,12 +95,12 @@ recommended_pages:
 <tr>
 <td><strong>本人性やコピー問題を整理したい</strong></td>
 <td><a href="personhood-and-copy-problem.html">本人性とコピー問題</a></td>
-<td><a href="../idea.html">理論フレーム</a></td>
+<td><a href="../perspective.html#design-principles">理論フレーム節</a></td>
 </tr>
 <tr>
 <td><strong>EEGの前処理やQCを実務目線で知りたい</strong></td>
 <td><a href="eeg-preprocessing-and-qc.html">EEG前処理とQC</a></td>
-<td><a href="../hands_on.html">ハンズオン</a></td>
+<td><a href="../datasets.html#l0-practice">L0実践</a></td>
 </tr>
 <tr>
 <td><strong>文献ページの違いと読み方を知りたい</strong></td>
@@ -130,17 +130,17 @@ recommended_pages:
 <tr>
 <td><strong>観察、仮説、提案、Issue の違いを知りたい</strong></td>
 <td><a href="facts-hypotheses-proposals-and-tasks.html">事実・仮説・提案・実行タスクの違い</a></td>
-<td><a href="../perspective.html">研究ノート</a> / <a href="../idea.html">理論フレーム</a> / <a href="../proposals.html">技術提案</a> / <a href="../issue.html">貢献ガイド</a></td>
+<td><a href="../perspective.html">研究ノート</a> / <a href="../perspective.html#design-principles">理論フレーム節</a> / <a href="../issue.html#proposal-integration">提案統合節</a> / <a href="../issue.html">貢献ガイド</a></td>
 </tr>
 <tr>
 <td><strong>読んだ内容をどの変更へつなぐか知りたい</strong></td>
 <td><a href="reading-to-change-workflow.html">読んだ内容を変更へつなぐ流れ</a></td>
-<td><a href="../research_harvest_50.html">文献地図</a> / <a href="../proposals.html">技術提案</a> / <a href="../issue.html">貢献ガイド</a> / <a href="../collaborations.html">協業候補</a></td>
+<td><a href="../research_harvest_50.html">文献地図</a> / <a href="../issue.html#proposal-integration">提案統合節</a> / <a href="../issue.html">貢献ガイド</a> / <a href="../issue.html#external-collaboration">外部依存・協業節</a></td>
 </tr>
 <tr>
 <td><strong>要約で止めてよい場面と、原文へ戻る場面を知りたい</strong></td>
 <td><a href="summary-vs-source-reading.html">要約・原文・Issue履歴の使い分け</a></td>
-<td><a href="../research_harvest_50.html">文献地図</a> / <a href="../mind_uploading_papers.html">論文集</a> / <a href="../proposals.html">技術提案</a></td>
+<td><a href="../research_harvest_50.html">文献地図</a> / <a href="../mind_uploading_papers.html">論文集</a> / <a href="../issue.html#proposal-integration">提案統合節</a></td>
 </tr>
 <tr>
 <td><strong>『分かった』と『次に進める』の違いを知りたい</strong></td>
@@ -150,62 +150,47 @@ recommended_pages:
 <tr>
 <td><strong>理論系ページどうしの違いで迷う</strong></td>
 <td><a href="theory-pages-reading-guide.html">理論系ページの読み分けガイド</a></td>
-<td><a href="../wbe_101.html">WBE入門</a> / <a href="../perspective.html">研究ノート</a> / <a href="../idea.html">理論フレーム</a> / <a href="../tech_roadmap.html">技術ロードマップ</a></td>
+<td><a href="../wbe_101.html">WBE入門</a> / <a href="../perspective.html">研究ノート</a> / <a href="../perspective.html#design-principles">理論フレーム節</a> / <a href="../tech_roadmap.html">技術ロードマップ</a></td>
 </tr>
 <tr>
 <td><strong>WBE入門のあとに理論のどこを深掘るか迷う</strong></td>
 <td><a href="wbe-to-theory-route.html">WBE入門から理論を深掘る4ルート</a></td>
-<td><a href="../wbe_101.html">WBE入門</a> / <a href="../faq.html">FAQ</a> / <a href="../idea.html">理論フレーム</a> / <a href="../perspective.html">研究ノート</a></td>
+<td><a href="../wbe_101.html">WBE入門</a> / <a href="../faq.html">FAQ</a> / <a href="../perspective.html#design-principles">理論フレーム節</a> / <a href="../perspective.html">研究ノート</a></td>
 </tr>
 <tr>
 <td><strong>実務系ページどうしの違いで迷う</strong></td>
 <td><a href="practical-pages-reading-guide.html">実務系ページの読み分けガイド</a></td>
-<td><a href="../verification.html">検証基盤</a> / <a href="../datasets.html">データ&ベンチ</a> / <a href="../hands_on.html">ハンズオン</a> / <a href="../casework.html">ケースワーク</a></td>
+<td><a href="../verification.html">検証基盤</a> / <a href="../datasets.html">データ&ベンチ</a> / <a href="../datasets.html#l0-practice">L0実践</a> / <a href="../verification.html#casework">ケースワーク節</a></td>
 </tr>
 <tr>
 <td><strong>最初の30分で何を見ればよいか迷う</strong></td>
 <td><a href="first-30-minutes-by-goal.html">目的別の最初の30分ルート</a></td>
-<td><a href="../index.html">スタートページ</a> / <a href="../verification.html">検証基盤</a> / <a href="../hands_on.html">ハンズオン</a></td>
+<td><a href="../index.html">スタートページ</a> / <a href="../verification.html">検証基盤</a> / <a href="../datasets.html#l0-practice">L0実践</a></td>
 </tr>
 <tr>
 <td><strong>EEGからL0までどう進むかを一本道で見たい</strong></td>
 <td><a href="eeg-to-l0-route.html">EEGからL0までの一本道</a></td>
-<td><a href="../eeg_101.html">EEG入門</a> / <a href="../datasets.html">データ&ベンチ</a> / <a href="../hands_on.html">ハンズオン</a> / <a href="../verification.html">検証基盤</a></td>
-</tr>
-<tr>
-<td><strong>25トピックを EEG 公開データと助成テーマへ落としたい</strong></td>
-<td><a href="mind-upload-eeg-data-fund-map.html">EEG-DATA × 助成マップ</a></td>
-<td><a href="../tech_roadmap.html">技術ロードマップ</a> / <a href="../datasets.html">データ&ベンチ</a> / <a href="../collaborations.html">協業候補</a></td>
-</tr>
-<tr>
-<td><strong>Roadmapの51QAを1件ずつEEG可否と助成テーマへ落としたい</strong></td>
-<td><a href="mind-upload-eeg-data-fund-map-roadmap-qa-deepdive.html">Roadmap 51QA × EEG-DATA × 助成テーマ深掘り</a></td>
-<td><a href="../tech_roadmap.html">技術ロードマップ</a> / <a href="mind-upload-eeg-data-fund-map.html">EEG-DATA × 助成マップ</a> / <a href="../verification.html">検証基盤</a></td>
-</tr>
-<tr>
-<td><strong>research_harvestの60RQを1件ずつEEG可否と助成テーマへ落としたい</strong></td>
-<td><a href="mind-upload-eeg-data-fund-map-rq60-deepdive.html">Research Question 60問 × EEG-DATA × 助成テーマ深掘り</a></td>
-<td><a href="../research_harvest_50.html">文献地図</a> / <a href="mind-upload-eeg-data-fund-map.html">EEG-DATA × 助成マップ</a> / <a href="../verification.html">検証基盤</a></td>
+<td><a href="../eeg_101.html">EEG入門</a> / <a href="../datasets.html">データ&ベンチ</a> / <a href="../datasets.html#l0-practice">L0実践</a> / <a href="../verification.html">検証基盤</a></td>
 </tr>
 <tr>
 <td><strong>Verificationのあとに次の1ページを決めたい</strong></td>
 <td><a href="verification-next-routes.html">Verificationのあとに進む4つの道</a></td>
-<td><a href="../verification.html">検証基盤</a> / <a href="../hands_on.html">ハンズオン</a> / <a href="../tech_roadmap.html">技術ロードマップ</a> / <a href="../wbe_101.html">WBE入門</a></td>
+<td><a href="../verification.html">検証基盤</a> / <a href="../datasets.html#l0-practice">L0実践</a> / <a href="../tech_roadmap.html">技術ロードマップ</a> / <a href="../wbe_101.html">WBE入門</a></td>
 </tr>
 <tr>
 <td><strong>ロードマップのあとにどこを深掘るか迷う</strong></td>
 <td><a href="roadmap-next-routes.html">ロードマップのあとに進む5つの道</a></td>
-<td><a href="../tech_roadmap.html">技術ロードマップ</a> / <a href="../eeg_101.html">EEG入門</a> / <a href="../verification.html">検証基盤</a> / <a href="../collaborations.html">協業候補</a></td>
+<td><a href="../tech_roadmap.html">技術ロードマップ</a> / <a href="../eeg_101.html">EEG入門</a> / <a href="../verification.html">検証基盤</a> / <a href="../issue.html#external-collaboration">外部依存・協業節</a></td>
 </tr>
 <tr>
 <td><strong>文献を読んだあとにどこへ戻すか迷う</strong></td>
 <td><a href="literature-to-action-route.html">文献から実装・参加へ戻る一本道</a></td>
-<td><a href="../research_harvest_50.html">文献地図</a> / <a href="../proposals.html">技術提案</a> / <a href="../issue.html">貢献ガイド</a> / <a href="../collaborations.html">協業候補</a></td>
+<td><a href="../research_harvest_50.html">文献地図</a> / <a href="../issue.html#proposal-integration">提案統合節</a> / <a href="../issue.html">貢献ガイド</a> / <a href="../issue.html#external-collaboration">外部依存・協業節</a></td>
 </tr>
 <tr>
-<td><strong>Issue や Collaborations のあとに次の1ページを決めたい</strong></td>
+<td><strong>Issue や 外部依存・協業節 のあとに次の1ページを決めたい</strong></td>
 <td><a href="participation-next-routes.html">参加・協業ページのあとに進む5つの道</a></td>
-<td><a href="../issue.html">貢献ガイド</a> / <a href="../collaborations.html">協業候補</a> / <a href="../content_hub.html">公開コンテンツ統合ハブ</a> / <a href="../hands_on.html">ハンズオン</a></td>
+<td><a href="../issue.html">貢献ガイド</a> / <a href="../issue.html#external-collaboration">外部依存・協業節</a> / <a href="../content_hub.html">公開コンテンツ統合ハブ</a> / <a href="../datasets.html#l0-practice">L0実践</a></td>
 </tr>
 <tr>
 <td><strong>初めて Issue を書くので、何を書けばよいか知りたい</strong></td>
@@ -215,7 +200,7 @@ recommended_pages:
 <tr>
 <td><strong>新しい情報を公開ページと wiki のどちらへ置くか迷う</strong></td>
 <td><a href="content-placement-basics.html">新しい情報の置き場所を決める基本</a></td>
-<td><a href="../content_hub.html">公開コンテンツ統合ハブ</a> / <a href="../issue.html">貢献ガイド</a> / <a href="../collaborations.html">協業候補</a></td>
+<td><a href="../content_hub.html">公開コンテンツ統合ハブ</a> / <a href="../issue.html">貢献ガイド</a> / <a href="../issue.html#external-collaboration">外部依存・協業節</a></td>
 </tr>
 <tr>
 <td><strong>Scopus、arXiv、Review、source_logged の違いで止まる</strong></td>
@@ -225,12 +210,12 @@ recommended_pages:
 <tr>
 <td><strong>提案ページの状態ラベルで迷う</strong></td>
 <td><a href="proposal-status-reading.html">提案と状態ラベルの読み方</a></td>
-<td><a href="../proposals.html">技術提案</a> / <a href="../issue.html">貢献ガイド</a></td>
+<td><a href="../issue.html#proposal-integration">提案統合節</a> / <a href="../issue.html">貢献ガイド</a></td>
 </tr>
 <tr>
 <td><strong>外部依存でも今できる準備が分からない</strong></td>
 <td><a href="internal-prework-and-external-dependencies.html">内製で先にやることと外部依存の切り分け</a></td>
-<td><a href="../issue.html">貢献ガイド</a> / <a href="../collaborations.html">協業候補</a></td>
+<td><a href="../issue.html">貢献ガイド</a> / <a href="../issue.html#external-collaboration">外部依存・協業節</a></td>
 </tr>
 <tr>
 <td><strong>U番号が何を指すのか分からない</strong></td>
@@ -250,7 +235,7 @@ recommended_pages:
 <tr>
 <td><strong>IIT / GNWT / FEP / PCI の違いで止まる</strong></td>
 <td><a href="consciousness-theory-map.html">意識理論マップ</a></td>
-<td><a href="../perspective.html">研究ノート</a> / <a href="../idea.html">理論フレーム</a></td>
+<td><a href="../perspective.html">研究ノート</a> / <a href="../perspective.html#design-principles">理論フレーム節</a></td>
 </tr>
 <tr>
 <td><strong>decode と emulate の違いが曖昧</strong></td>
@@ -260,12 +245,12 @@ recommended_pages:
 <tr>
 <td><strong>train/test の分け方やリークで迷う</strong></td>
 <td><a href="dataset-splits-and-leakage.html">データ分割とデータリーク</a></td>
-<td><a href="../datasets.html">データ&ベンチ</a> / <a href="../hands_on.html">ハンズオン</a></td>
+<td><a href="../datasets.html">データ&ベンチ</a> / <a href="../datasets.html#l0-practice">L0実践</a></td>
 </tr>
 <tr>
 <td><strong>L0 で何を一式そろえればよいか分からない</strong></td>
 <td><a href="l0-minimum-artifact-pack.html">L0で最低限そろえる成果物パック</a></td>
-<td><a href="../hands_on.html">ハンズオン</a> / <a href="../verification.html">検証基盤</a></td>
+<td><a href="../datasets.html#l0-practice">L0実践</a> / <a href="../verification.html">検証基盤</a></td>
 </tr>
 <tr>
 <td><strong>Verification の4部品を具体例で見たい</strong></td>
@@ -280,7 +265,7 @@ recommended_pages:
 <tr>
 <td><strong>イベントマーカーや同期ログの意味で止まる</strong></td>
 <td><a href="event-sync-and-measurement-logs.html">イベント同期と観測ログの基本</a></td>
-<td><a href="../datasets.html">データ&ベンチ</a> / <a href="../hands_on.html">ハンズオン</a></td>
+<td><a href="../datasets.html">データ&ベンチ</a> / <a href="../datasets.html#l0-practice">L0実践</a></td>
 </tr>
 <tr>
 <td><strong>逆問題、ESI、DCM、SCM の違いで止まる</strong></td>
@@ -310,7 +295,7 @@ recommended_pages:
 <tr>
 <td><strong>ベースラインや事前登録の役割差で止まる</strong></td>
 <td><a href="baselines-prereg-and-model-cards.html">ベースライン・事前登録・モデルカード</a></td>
-<td><a href="../verification.html">検証基盤</a> / <a href="../hands_on.html">ハンズオン</a></td>
+<td><a href="../verification.html">検証基盤</a> / <a href="../datasets.html#l0-practice">L0実践</a></td>
 </tr>
 <tr>
 <td><strong>縦断で state と trait をどう分けるか知りたい</strong></td>
@@ -536,8 +521,6 @@ recommended_pages:
 <li><a href="roadmap-reading-guide.html">ロードマップの読み方 →</a></li>
 <li><a href="personhood-and-copy-problem.html">本人性とコピー問題 →</a></li>
 <li><a href="eeg-preprocessing-and-qc.html">EEG前処理とQC →</a></li>
-<li><a href="mind-upload-eeg-data-fund-map.html">EEG-DATA × 助成マップ →</a></li>
-<li><a href="mind-upload-eeg-data-fund-map-rq60-deepdive.html">Research Question 60問 × EEG-DATA × 助成テーマ深掘り →</a></li>
 <li><a href="literature-and-evidence-reading.html">文献と証拠ページの読み方 →</a></li>
 <li><a href="proposal-status-reading.html">提案と状態ラベルの読み方 →</a></li>
 <li><a href="u-number-guide.html">U番号ガイド →</a></li>

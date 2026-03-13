@@ -5,7 +5,7 @@ description: "提案、受理、文書反映、実装、外部依存の違いを
 article_type: Wiki
 subtitle: "『採用された』と『終わった』は別です"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Reading guide"
 audience: "提案ページや Issue の状態ラベルが分かりにくい人"
 reading_time: "8〜12分"
@@ -37,7 +37,7 @@ wiki_links:
     description: "他の基礎ページへ戻れます。"
 recommended_pages:
   - label: "技術提案"
-    url: "/proposals.html"
+    url: "/issue.html#proposal-integration"
   - label: "貢献ガイド"
     url: "/issue.html"
   - label: "検証基盤"
@@ -118,7 +118,7 @@ recommended_pages:
 <tbody>
 <tr>
 <td>提案の中身と根拠</td>
-<td><a href="../proposals.html">技術提案</a></td>
+<td><a href="../issue.html#proposal-integration">技術提案</a></td>
 </tr>
 <tr>
 <td>いま誰が何を手伝えるか</td>
@@ -153,7 +153,7 @@ recommended_pages:
 <div class="sidebar-box">
 <h4>公開ページ</h4>
 <ul>
-<li><a href="../proposals.html">技術提案 →</a></li>
+<li><a href="../issue.html#proposal-integration">技術提案 →</a></li>
 <li><a href="../issue.html">貢献ガイド →</a></li>
 <li><a href="../verification.html">検証基盤 →</a></li>
 </ul>

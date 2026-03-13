@@ -5,7 +5,7 @@ description: "train/test の分け方、被験者分割、時間分割、あり�
 article_type: Wiki
 subtitle: "高い精度でも、分け方が甘いと評価は壊れます"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Practical guide"
 audience: "公開データで最初の評価を作る人、リークや分割で混乱しやすい人"
 reading_time: "10〜15分"
@@ -36,7 +36,7 @@ recommended_pages:
   - label: "データ&ベンチ"
     url: "/datasets.html"
   - label: "ハンズオン"
-    url: "/hands_on.html"
+    url: "/datasets.html#l0-practice"
   - label: "検証基盤"
     url: "/verification.html"
 ---
@@ -146,7 +146,7 @@ recommended_pages:
 <section class="section" id="return">
 <h2 class="section-title">次にどこへ戻るか</h2>
 <p>
-実際のスターターデータを見直したい場合は <a href="../datasets.html">データ&ベンチ</a>、最小ループを作る作業へ戻りたい場合は <a href="../hands_on.html">ハンズオン</a>、なぜこれが検証基盤の一部なのかを確認したい場合は <a href="../verification.html">検証基盤</a> へ戻ってください。
+実際のスターターデータを見直したい場合は <a href="../datasets.html">データ&ベンチ</a>、最小ループを作る作業へ戻りたい場合は <a href="../datasets.html#l0-practice">ハンズオン</a>、なぜこれが検証基盤の一部なのかを確認したい場合は <a href="../verification.html">検証基盤</a> へ戻ってください。
 </p>
 </section>
 
@@ -165,7 +165,7 @@ recommended_pages:
 <h4>公開ページ</h4>
 <ul>
 <li><a href="../datasets.html">データ&ベンチ →</a></li>
-<li><a href="../hands_on.html">ハンズオン →</a></li>
+<li><a href="../datasets.html#l0-practice">ハンズオン →</a></li>
 <li><a href="../verification.html">検証基盤 →</a></li>
 </ul>
 </div>

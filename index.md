@@ -5,7 +5,7 @@ description: "マインドアップロード/WBEを「進歩を測れる科学�
 article_type: Start Here
 subtitle: "勝利条件・標準・ベンチマーク・事前登録を先に作る"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Human-friendly landing page"
 audience: "はじめて来た人、全体像だけ先に知りたい人、読む順番で迷いたくない人"
 reading_time: "5〜10分"
@@ -107,7 +107,7 @@ WBE 101、Perspective、Framework、Roadmap の違いだけを理論系に絞っ
 <div class="note-box">
 <strong>手を動かす側から入りたいとき</strong>
 <p>
-Verification、Datasets、Hands-on、Casework、Proposals の違いだけを実務系に絞って整理したい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
+Verification、Datasets、Datasets内のL0実践節、Verification内のケースワーク節、Issue内の提案統合節の違いだけを実務系に絞って整理したい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
 </p>
 </div>
 <div class="note-box">
@@ -149,7 +149,7 @@ Verification、Datasets、Hands-on、Casework、Proposals の違いだけを実�
 <tr>
 <td><strong>公開データで手を動かしたい</strong></td>
 <td><a href="datasets.html">Datasets</a></td>
-<td><a href="hands_on.html">Hands-on</a> で、L0 の最小ループへ進みます。</td>
+<td><a href="datasets.html#l0-practice">Datasets内のL0実践節</a> で、最小ループへそのまま進みます。</td>
 </tr>
 <tr>
 <td><strong>Issue対応や参加方法を見たい</strong></td>
@@ -210,7 +210,7 @@ Verification、Datasets、Hands-on、Casework、Proposals の違いだけを実�
 <div class="stage-body">
 <h4>理論フレーム（Framework）</h4>
 <p>「静的コピーではなく動的プロセスとしての意識」という立場から、設計要件へ落とすためのノートです。</p>
-<a href="idea.html" class="btn-action">Open Framework</a>
+<a href="perspective.html#design-principles" class="btn-action">Open Framework In Perspective</a>
 </div>
 </div>
 <div class="stage-item">
@@ -226,15 +226,15 @@ Verification、Datasets、Hands-on、Casework、Proposals の違いだけを実�
 <div class="stage-body">
 <h4>技術提案統合（All Issues）</h4>
 <p>Issue #46/#47/#48/#56/#58/#61/#62 の提案・対応状況・根拠節を1ページ本文に統合しています。</p>
-<a href="proposals.html" class="btn-action">Open Integrated Proposals</a>
+<a href="issue.html#proposal-integration" class="btn-action">Open Integrated Proposals</a>
 </div>
 </div>
 <div class="stage-item">
 <div class="stage-number">07</div>
 <div class="stage-body">
-<h4>協業候補（Collaborations）</h4>
+<h4>外部依存・協業候補</h4>
 <p>検証基盤に接続可能な研究機関・プロジェクト・企業・助成制度を優先度付きで整理。</p>
-<a href="collaborations.html" class="btn-action">Open Collaborations</a>
+<a href="issue.html#external-collaboration" class="btn-action">Open External Collaboration Plan</a>
 </div>
 </div>
 </div>
@@ -288,20 +288,20 @@ Verification、Datasets、Hands-on、Casework、Proposals の違いだけを実�
 </section>
 
 <div class="cta-box">
-<h4>Hands-on（実務）</h4>
+<h4>L0実践（Datasets内）</h4>
 <p>「再現可能な解析（L0）」を最短で作る手順。</p>
-<a href="hands_on.html">ハンズオンを見る →</a>
+<a href="datasets.html#l0-practice">L0実践を見る →</a>
 </div>
 
 <section class="section" id="cases">
-<h2 class="section-title">歴史のケースワーク（なぜWebが効くのか）</h2>
+<h2 class="section-title">歴史のケースワーク（Verification内）</h2>
 <p>
 PDB、BIDS+OpenNeuro、PhysioNet、ImageNet、MLPerf、OSFで築かれた検証手法を整理し、Mind-Uploadに転用するための参照ページです。過去の成功例を型として提示し、必要な要素を即座に確認できます。
 </p>
 <div class="cta-box">
-<h4>Casework</h4>
+<h4>Verification内ケースワーク</h4>
 <p>標準化・ベンチマーク・事前登録が、どう“前進を測れる状態”を作ったか。</p>
-<a href="casework.html">ケースワーク集を見る →</a>
+<a href="verification.html#casework">ケースワーク集を見る →</a>
 </div>
 </section>
 
@@ -341,9 +341,9 @@ PDB、BIDS+OpenNeuro、PhysioNet、ImageNet、MLPerf、OSFで築かれた検証�
 <li><a href="datasets.html">データ&ベンチ →</a></li>
 <li><a href="glossary.html">用語集 →</a></li>
 <li><a href="faq.html">FAQ →</a></li>
-<li><a href="hands_on.html">ハンズオン →</a></li>
-<li><a href="casework.html">ケースワーク（歴史の型）→</a></li>
-<li><a href="proposals.html">技術提案（統合本文）→</a></li>
+<li><a href="datasets.html#l0-practice">L0実践（Datasets内）→</a></li>
+<li><a href="verification.html#casework">Verification内ケースワーク →</a></li>
+<li><a href="issue.html#proposal-integration">Issue内の提案統合 →</a></li>
 <li><a href="mind_uploading_papers.html">論文集（Papers）→</a></li>
 <li><a href="issue.html#technical-issue-tracker">Issue対応トラッカー →</a></li>
 <li><a href="content_hub.html">公開コンテンツ統合ハブ →</a></li>

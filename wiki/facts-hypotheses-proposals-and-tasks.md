@@ -5,7 +5,7 @@ description: "Research、Perspective、Idea、Proposals、Issue、Collaborations
 article_type: Wiki
 subtitle: "ページの役割差を、事実・仮説・提案・タスクで整理する"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Reading roles of claims"
 audience: "理論ページ、提案ページ、Issue ページの違いを整理したい人"
 reading_time: "8〜12分"
@@ -36,9 +36,9 @@ recommended_pages:
   - label: "研究ノート"
     url: "/perspective.html"
   - label: "理論フレーム"
-    url: "/idea.html"
+    url: "/perspective.html#design-principles"
   - label: "技術提案"
-    url: "/proposals.html"
+    url: "/issue.html#proposal-integration"
 ---
 
 <main class="main-container">
@@ -65,27 +65,27 @@ recommended_pages:
 <tr>
 <td><strong>観察 / 整理</strong></td>
 <td>何が知られていて、どこが未解決かを記録します。</td>
-<td><a href="../research_harvest_50.html">Research Harvest</a> / <a href="../mind_uploading_papers.html">Papers</a> / <a href="../casework.html">Casework</a></td>
+<td><a href="../research_harvest_50.html">Research Harvest</a> / <a href="../mind_uploading_papers.html">Papers</a> / <a href="../verification.html#casework">Casework</a></td>
 </tr>
 <tr>
 <td><strong>仮説 / 理論フレーム</strong></td>
 <td>どう考えると設計条件へ落としやすいかを示します。</td>
-<td><a href="../perspective.html">Perspective</a> / <a href="../idea.html">Idea</a></td>
+<td><a href="../perspective.html">Perspective</a> / <a href="../perspective.html#design-principles">Idea</a></td>
 </tr>
 <tr>
 <td><strong>提案 / 方針</strong></td>
 <td>どの方向で進めるか、どのストリームで整理するかを示します。</td>
-<td><a href="../proposals.html">Proposals</a></td>
+<td><a href="../issue.html#proposal-integration">Proposals</a></td>
 </tr>
 <tr>
 <td><strong>実行タスク</strong></td>
 <td>今このリポジトリで直す変更、完了条件、反証条件を切ります。</td>
-<td><a href="../issue.html">Issue</a> / <a href="../hands_on.html">Hands-on</a></td>
+<td><a href="../issue.html">Issue</a> / <a href="../datasets.html#l0-practice">Hands-on</a></td>
 </tr>
 <tr>
 <td><strong>外部依存タスク</strong></td>
 <td>共同研究、標準化、IRB、機材、法務など、外部条件が必要な作業を整理します。</td>
-<td><a href="../collaborations.html">Collaborations</a></td>
+<td><a href="../issue.html#external-collaboration">Collaborations</a></td>
 </tr>
 </tbody>
 </table>
@@ -144,7 +144,7 @@ recommended_pages:
 <tbody>
 <tr>
 <td><strong>観察 / 整理</strong></td>
-<td><a href="../perspective.html">Perspective</a> / <a href="../proposals.html">Proposals</a></td>
+<td><a href="../perspective.html">Perspective</a> / <a href="../issue.html#proposal-integration">Proposals</a></td>
 <td>文献整理の次に、どう読むか、どの方針へ使うかを決めるためです。</td>
 </tr>
 <tr>
@@ -154,7 +154,7 @@ recommended_pages:
 </tr>
 <tr>
 <td><strong>提案 / 方針</strong></td>
-<td><a href="../issue.html">Issue</a> / <a href="../hands_on.html">Hands-on</a></td>
+<td><a href="../issue.html">Issue</a> / <a href="../datasets.html#l0-practice">Hands-on</a></td>
 <td>提案を実際の変更や最小ループへ落とし込むためです。</td>
 </tr>
 <tr>
@@ -206,8 +206,8 @@ recommended_pages:
 <h4>公開ページ</h4>
 <ul>
 <li><a href="../perspective.html">研究ノート →</a></li>
-<li><a href="../idea.html">理論フレーム →</a></li>
-<li><a href="../proposals.html">技術提案 →</a></li>
+<li><a href="../perspective.html#design-principles">理論フレーム →</a></li>
+<li><a href="../issue.html#proposal-integration">技術提案 →</a></li>
 </ul>
 </div>
 </aside>

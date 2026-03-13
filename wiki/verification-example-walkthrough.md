@@ -5,7 +5,7 @@ description: "EEG の小さな例で、Data Standard、Benchmark、Registry、Mo
 article_type: Wiki
 subtitle: "設計図を、1本の小さな実例に落として読む"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Worked example"
 audience: "Verification ページが抽象的に感じる人、要素同士の関係を具体例で理解したい人"
 reading_time: "10〜15分"
@@ -36,7 +36,7 @@ recommended_pages:
   - label: "検証基盤"
     url: "/verification.html"
   - label: "ハンズオン"
-    url: "/hands_on.html"
+    url: "/datasets.html#l0-practice"
   - label: "データ&ベンチ"
     url: "/datasets.html"
 ---
@@ -187,7 +187,7 @@ Registry は「後から条件を変えて勝ったことにしない」ため�
 <section class="section" id="return">
 <h2 class="section-title">次にどこへ戻るか</h2>
 <p>
-設計図そのものへ戻るなら <a href="../verification.html">検証基盤</a>、実際に最小ループを動かすなら <a href="../hands_on.html">ハンズオン</a>、入口データを見直すなら <a href="../datasets.html">データ&ベンチ</a> を読んでください。
+設計図そのものへ戻るなら <a href="../verification.html">検証基盤</a>、実際に最小ループを動かすなら <a href="../datasets.html#l0-practice">ハンズオン</a>、入口データを見直すなら <a href="../datasets.html">データ&ベンチ</a> を読んでください。
 </p>
 </section>
 
@@ -206,7 +206,7 @@ Registry は「後から条件を変えて勝ったことにしない」ため�
 <h4>公開ページ</h4>
 <ul>
 <li><a href="../verification.html">検証基盤 →</a></li>
-<li><a href="../hands_on.html">ハンズオン →</a></li>
+<li><a href="../datasets.html#l0-practice">ハンズオン →</a></li>
 <li><a href="../datasets.html">データ&ベンチ →</a></li>
 </ul>
 </div>

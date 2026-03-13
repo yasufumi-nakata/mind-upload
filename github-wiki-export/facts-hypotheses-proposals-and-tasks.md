@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Reading roles of claims
+- 更新日: 2026-03-14 / 位置づけ: Reading roles of claims
 
 ## このページの役割
 このページは、Mind-Upload の各ページが『同じ種類の主張』ではないことを整理する補助ガイドです。観察や文献整理、理論的な作業仮説、提案、今このリポジトリで実行するタスク、外部依存の調整は、役割も証拠の重さも違います。その違いをそろえて読むために使います。
@@ -14,8 +14,8 @@
 
 ## 公開ページへ戻る
 - [研究ノート](https://mind-upload.com/perspective.html)
-- [理論フレーム](https://mind-upload.com/idea.html)
-- [技術提案](https://mind-upload.com/proposals.html)
+- [理論フレーム](https://mind-upload.com/perspective.html#design-principles)
+- [技術提案](https://mind-upload.com/issue.html#proposal-integration)
 
 ## 関連 Wiki
 - [Wiki: 公開ページの読み分けガイド](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - ページ全体の役割差を先に見たい人向けです。
@@ -51,27 +51,27 @@
 <tr>
 <td><strong>観察 / 整理</strong></td>
 <td>何が知られていて、どこが未解決かを記録します。</td>
-<td><a href="https://mind-upload.com/research_harvest_50.html">Research Harvest</a> / <a href="https://mind-upload.com/mind_uploading_papers.html">Papers</a> / <a href="https://mind-upload.com/casework.html">Casework</a></td>
+<td><a href="https://mind-upload.com/research_harvest_50.html">Research Harvest</a> / <a href="https://mind-upload.com/mind_uploading_papers.html">Papers</a> / <a href="https://mind-upload.com/verification.html#casework">Casework</a></td>
 </tr>
 <tr>
 <td><strong>仮説 / 理論フレーム</strong></td>
 <td>どう考えると設計条件へ落としやすいかを示します。</td>
-<td><a href="https://mind-upload.com/perspective.html">Perspective</a> / <a href="https://mind-upload.com/idea.html">Idea</a></td>
+<td><a href="https://mind-upload.com/perspective.html">Perspective</a> / <a href="https://mind-upload.com/perspective.html#design-principles">Idea</a></td>
 </tr>
 <tr>
 <td><strong>提案 / 方針</strong></td>
 <td>どの方向で進めるか、どのストリームで整理するかを示します。</td>
-<td><a href="https://mind-upload.com/proposals.html">Proposals</a></td>
+<td><a href="https://mind-upload.com/issue.html#proposal-integration">Proposals</a></td>
 </tr>
 <tr>
 <td><strong>実行タスク</strong></td>
 <td>今このリポジトリで直す変更、完了条件、反証条件を切ります。</td>
-<td><a href="https://mind-upload.com/issue.html">Issue</a> / <a href="https://mind-upload.com/hands_on.html">Hands-on</a></td>
+<td><a href="https://mind-upload.com/issue.html">Issue</a> / <a href="https://mind-upload.com/datasets.html#l0-practice">Hands-on</a></td>
 </tr>
 <tr>
 <td><strong>外部依存タスク</strong></td>
 <td>共同研究、標準化、IRB、機材、法務など、外部条件が必要な作業を整理します。</td>
-<td><a href="https://mind-upload.com/collaborations.html">Collaborations</a></td>
+<td><a href="https://mind-upload.com/issue.html#external-collaboration">Collaborations</a></td>
 </tr>
 </tbody>
 </table>
@@ -126,7 +126,7 @@
 <tbody>
 <tr>
 <td><strong>観察 / 整理</strong></td>
-<td><a href="https://mind-upload.com/perspective.html">Perspective</a> / <a href="https://mind-upload.com/proposals.html">Proposals</a></td>
+<td><a href="https://mind-upload.com/perspective.html">Perspective</a> / <a href="https://mind-upload.com/issue.html#proposal-integration">Proposals</a></td>
 <td>文献整理の次に、どう読むか、どの方針へ使うかを決めるためです。</td>
 </tr>
 <tr>
@@ -136,7 +136,7 @@
 </tr>
 <tr>
 <td><strong>提案 / 方針</strong></td>
-<td><a href="https://mind-upload.com/issue.html">Issue</a> / <a href="https://mind-upload.com/hands_on.html">Hands-on</a></td>
+<td><a href="https://mind-upload.com/issue.html">Issue</a> / <a href="https://mind-upload.com/datasets.html#l0-practice">Hands-on</a></td>
 <td>提案を実際の変更や最小ループへ落とし込むためです。</td>
 </tr>
 <tr>

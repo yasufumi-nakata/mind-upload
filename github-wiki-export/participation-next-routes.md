@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Participation route
+- 更新日: 2026-03-14 / 位置づけ: Participation route
 
 ## このページの役割
 このページは、貢献ガイドや協業候補を読んだあとに、次にどの公開ページや wiki を開くべきかを整理する補助ガイドです。小さな修正を切りたいのか、合格条件と反証条件を詰めたいのか、文献を今できる作業へ変えたいのか、外部依存を準備物へ分解したいのか、L0 の成果物まで降りたいのかで、次の1ページは変わります。
@@ -14,7 +14,7 @@
 
 ## 公開ページへ戻る
 - [貢献ガイド](https://mind-upload.com/issue.html)
-- [協業候補](https://mind-upload.com/collaborations.html)
+- [協業候補](https://mind-upload.com/issue.html#external-collaboration)
 - [公開コンテンツ統合ハブ](https://mind-upload.com/content_hub.html)
 
 ## 関連 Wiki
@@ -65,12 +65,12 @@ Issue や Collaborations は入口として重要ですが、そのままでは�
 </tr>
 <tr>
 <td><strong>外部依存を準備物へ分解したい</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies">内製で先にやることと外部依存</a> / <a href="https://mind-upload.com/collaborations.html">Collaborations</a></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies">内製で先にやることと外部依存</a> / <a href="https://mind-upload.com/issue.html#external-collaboration">Collaborations</a></td>
 <td>いま内製できるものと、相手先や制度が必要なものを分けます。</td>
 </tr>
 <tr>
 <td><strong>L0 実装の最小ループまで降りたい</strong></td>
-<td><a href="https://mind-upload.com/hands_on.html">Hands-on</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack">L0で最低限そろえる成果物パック</a></td>
+<td><a href="https://mind-upload.com/datasets.html#l0-practice">Hands-on</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack">L0で最低限そろえる成果物パック</a></td>
 <td>再現可能な解析として何を一式で残すか、最小成果物を固定します。</td>
 </tr>
 </tbody>
@@ -156,5 +156,5 @@ Issue や Collaborations は入口として重要ですが、そのままでは�
 
 <h2>次に戻る場所</h2>
 <p>
-参加の入口へ戻るなら <a href="https://mind-upload.com/issue.html">貢献ガイド</a>、外部連携の候補へ戻るなら <a href="https://mind-upload.com/collaborations.html">協業候補</a>、公開先の整理へ戻るなら <a href="https://mind-upload.com/content_hub.html">公開コンテンツ統合ハブ</a> をご利用ください。
+参加の入口へ戻るなら <a href="https://mind-upload.com/issue.html">貢献ガイド</a>、外部連携の候補へ戻るなら <a href="https://mind-upload.com/issue.html#external-collaboration">協業候補</a>、公開先の整理へ戻るなら <a href="https://mind-upload.com/content_hub.html">公開コンテンツ統合ハブ</a> をご利用ください。
 </p>

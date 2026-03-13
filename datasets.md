@@ -1,15 +1,15 @@
 ---
 layout: default
-title: "データ & ベンチ：まず何を使って検証するか"
-description: "公開データ（EEG中心）と共有基盤を、Mind-Uploadの目的（比較可能な検証）に沿って整理します。"
+title: "データ & ハンズオン：何で始めて、どうL0まで持っていくか"
+description: "公開データ（EEG中心）の選定から、BIDS→QC→前処理→評価の最小ループまでを1ページで整理します。"
 article_type: Resource
-subtitle: "「データがある」だけでは足りない。規格・メタデータ・評価がセット。"
+subtitle: "「何を使うか」と「どう再現するか」を分けずに最短ルートでつなぐ"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
-note: "Curated List (v0)"
+last_updated: "2026-03-14"
+note: "Curated List + L0 Practice"
 audience: "どの公開データから始めるべきか迷っている人、L0の練習台を探している人"
-reading_time: "8〜15分"
-page_intro: "このページは、『最初にどの公開データで検証を始めるか』を決めるための実務ガイドです。データ名の一覧ではなく、L0の再現解析からL1/L2の比較へ進みやすい順で見ることを意図しています。"
+reading_time: "12〜20分"
+page_intro: "このページは、『最初にどの公開データで検証を始めるか』と『その後どうL0の再現可能解析まで持っていくか』を1本で追うための実務ガイドです。データ名の一覧で終わらせず、BIDS、QC、分割、ベースラインまで一本道でつなぎます。"
 accuracy_note: "ここに載せるデータセットは入口候補です。使いやすさや再現性の観点で挙げており、これだけでWBEの全課題を覆えるわけではありません。"
 page_highlights:
   - "まずは共有基盤を押さえ、その後にスターターデータセットを見る順にしています。"
@@ -47,10 +47,10 @@ wiki_links:
 recommended_pages:
   - label: "EEG入門"
     url: "/eeg_101.html"
-  - label: "ハンズオン"
-    url: "/hands_on.html"
   - label: "検証基盤"
     url: "/verification.html"
+  - label: "技術ロードマップ"
+    url: "/tech_roadmap.html"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
 
@@ -73,7 +73,13 @@ recommended_pages:
 <div class="note-box">
 <strong>実務系ページの中での位置づけを知りたいとき</strong>
 <p>
-このページは、何で始めるかを決める入口です。何を前進と呼ぶかは <a href="verification.html">検証基盤</a>、実際の最小ループ手順は <a href="hands_on.html">ハンズオン</a>、事例から設計原理を学ぶページは <a href="casework.html">ケースワーク</a> です。実務系ページだけの役割差を 1 枚で見たい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
+このページは、何で始めるかを決める入口と、L0 の最小ループを一周させる手順をまとめた実務ページでございます。何を前進と呼ぶかは <a href="verification.html">検証基盤</a>、他分野の成功例は <a href="verification.html#casework">検証基盤内のケースワーク節</a> が担当します。実務系ページだけの役割差を 1 枚で見たい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
+</p>
+</div>
+<div class="note-box">
+<strong>このページだけで完了させたいとき</strong>
+<p>
+旧 <code>hands_on.md</code> の最小ループ手順は本ページへ統合しました。したがって、データ選定のあとに別ページへ移らなくても、L0 の骨格、QC、ベースライン、完了条件までそのまま読み進められます。
 </p>
 </div>
 
@@ -126,7 +132,7 @@ recommended_pages:
 <div class="note-box">
 <strong>EEGからL0までの全体順を一本道で見たいとき</strong>
 <p>
-EEG 入門のあとに、このページでデータを選び、Hands-on で一周し、Verification で L0 として確認するまでの流れを一本道で見たい場合は <a href="wiki/eeg-to-l0-route.html">Wiki: EEGからL0までの一本道</a> をご覧ください。
+EEG 入門のあとに、このページでデータを選び、L0実践節で一周し、Verification で L0 として確認するまでの流れを一本道で見たい場合は <a href="wiki/eeg-to-l0-route.html">Wiki: EEGからL0までの一本道</a> をご覧ください。
 </p>
 </div>
 
@@ -266,8 +272,113 @@ BIDS は規格、OpenNeuro や PhysioNet は置き場、Validator は形式点�
 </div>
 </section>
 
+<section class="section" id="l0-practice">
+<h2 class="section-title">4) L0 の最小ループをここで一周させる</h2>
+<p>
+ここでの目標は、高精度を競うことではなく、<strong>第三者が同じ手順で追える最小ループ</strong>を作ることです。最初に必要なのは、BIDS 形式、QC ログ、分割規則、前処理条件、ベースラインの5点でございます。
+</p>
+
+<div class="key-points">
+<h4>L0 Loop</h4>
+<ul>
+<li><strong>入力：</strong>BIDS（データ + メタデータ）で置ける形にする</li>
+<li><strong>品質：</strong>欠損、ノイズ、アーティファクト、除外理由を数値で残す</li>
+<li><strong>処理：</strong>前処理条件、乱数、バージョン、分割規則を固定する</li>
+<li><strong>出力：</strong>単純でもよいので、比較できるベースライン指標を1本置く</li>
+<li><strong>監査：</strong>失敗例、リーク検査、保留条件も結果と一緒に残す</li>
+</ul>
+</div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>詰まりやすい点</th>
+<th>先に切り分けること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>BIDSの形で止まる</strong></td>
+<td>実データ投入の前に、ディレクトリ骨格、<code>dataset_description.json</code>、<code>participants.tsv</code>、<code>events.tsv</code> の雛形を先に作ります。</td>
+</tr>
+<tr>
+<td><strong>QCをどこまで残すか迷う</strong></td>
+<td>欠損、ノイズ、アーティファクト、除外理由の4項目だけでも固定し、あとから増やす方が安全です。</td>
+</tr>
+<tr>
+<td><strong>ベースラインが決められない</strong></td>
+<td>複雑なモデルより、運動想起2クラスやスペクトル要約など、単純で再現しやすい1本を先に置きます。</td>
+</tr>
+<tr>
+<td><strong>train/test で迷う</strong></td>
+<td>まずは被験者単位で分け、test 側を最後まで触らない運用を固定します。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>Step 1: BIDSの骨格を先に作る</strong>
+<p>
+最初は中身が揃っていなくても、置き方を固定するだけで手戻りが減ります。Validator を通す前提でファイル名とメタデータ雛形を作ると、後続の QC や比較が一気に楽になります。
+</p>
+</div>
+
+<div class="note-box">
+<strong>Step 2: Validatorで規格違反を先に潰す</strong>
+<p>
+機械で見つかる問題は早い段階で潰してください。BIDS Validator が通ることは研究として十分条件ではありませんが、共有可能な最低条件には近いです。
+</p>
+</div>
+
+<div class="note-box">
+<strong>Step 3: QCログは波形ではなく数値で残す</strong>
+<p>
+生の波形だけでは、何が悪くて何を除外したかを第三者が再構成しづらくなります。bad channel、bad segment、イベント同期、刺激ログ、反応ログを数値と閾値で残すことが L0 の本体でございます。
+</p>
+</div>
+
+<div class="note-box">
+<strong>Step 4: ベースラインを1本だけ固定する</strong>
+<p>
+SOTA ではなく、再現しやすい比較軸を先に置きます。最初のベースラインがあると、前処理更新やモデル更新をしても「何が良くなったか」を比較可能なまま追えます。
+</p>
+</div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>確認項目</th>
+<th>L0 の最低ライン</th>
+<th>不足しているときに戻る場所</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>データ構造</strong></td>
+<td>BIDS 形式で置けている</td>
+<td><a href="#bids">共有できるデータにする最短ルート</a></td>
+</tr>
+<tr>
+<td><strong>品質管理</strong></td>
+<td>QC ログと除外基準が残っている</td>
+<td><a href="wiki/event-sync-and-measurement-logs.html">Wiki: イベント同期と観測ログ</a></td>
+</tr>
+<tr>
+<td><strong>比較可能性</strong></td>
+<td>ベースライン1本と train/test ルールが固定されている</td>
+<td><a href="wiki/dataset-splits-and-leakage.html">Wiki: データ分割とデータリーク</a></td>
+</tr>
+<tr>
+<td><strong>共有準備</strong></td>
+<td>実行手順、環境、失敗例を第三者に渡せる</td>
+<td><a href="verification.html">検証基盤</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+
 <section class="section" id="bids">
-<h2 class="section-title">4) Mind-Uploadで「共有できるデータ」にする最短ルート</h2>
+<h2 class="section-title">5) Mind-Uploadで「共有できるデータ」にする最短ルート</h2>
 <p>
 Mind-Uploadが目指すのは、単にデータを集めることではなく、<strong>第三者が検証できる形</strong>で残すことです。
 そのための最短ルートは BIDS/EEG-BIDS に寄せることです。
@@ -288,7 +399,7 @@ Mind-Uploadが目指すのは、単にデータを集めることではなく、
 <ul>
 <li><a href="eeg_101.html">EEG入門 →</a></li>
 <li><a href="tech_roadmap.html#measurement">Roadmap: 計測 →</a></li>
-<li><a href="casework.html#data-standardization">Casework: 規格＋置き場 →</a></li>
+<li><a href="verification.html#casework">Verification: ケースワーク →</a></li>
 <li><a href="glossary.html">用語集 →</a></li>
 </ul>
 </div>

@@ -5,7 +5,7 @@ description: "マインドアップロード/WBEを「進歩を測れる科学�
 article_type: Platform
 subtitle: "PDB×BIDS×PhysioNet×OSFの発想で、WBEの“勝利条件”と“再現可能な前進”を作る"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Operational Specification"
 audience: "このサイトの中心方針を知りたい人、何を揃えれば『前進』になるかを確認したい人"
 reading_time: "15〜25分"
@@ -77,8 +77,8 @@ recommended_pages:
     url: "/tech_roadmap.html"
   - label: "データ&ベンチ"
     url: "/datasets.html"
-  - label: "ケースワーク"
-    url: "/casework.html"
+  - label: "貢献ガイド"
+    url: "/issue.html"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
 
@@ -168,13 +168,13 @@ Verification は長い設計図なので、本文へ入る前に上部の「こ�
 <div class="note-box">
 <strong>実務系ページの役割差で迷ったとき</strong>
 <p>
-Verification は勝利条件と反証条件の設計図です。入口データは <a href="datasets.html">データ&ベンチ</a>、L0 の最小ループは <a href="hands_on.html">ハンズオン</a>、参照事例は <a href="casework.html">ケースワーク</a>、提案整理は <a href="proposals.html">技術提案</a> が担当します。実務系だけの読み分けを 1 枚で見たい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
+Verification は勝利条件と反証条件の設計図です。入口データと L0 の最小ループは <a href="datasets.html">データ & ハンズオン</a>、参照事例はこのページ内の <a href="#casework">ケースワーク節</a>、提案整理と外部依存の切り分けは <a href="issue.html#proposal-integration">貢献ガイド内の統合提案節</a> が担当します。実務系だけの読み分けを 1 枚で見たい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
 </p>
 </div>
 <div class="note-box">
 <strong>EEGからL0までの実務ルートを一本道で見たいとき</strong>
 <p>
-EEG 入門から公開データ選定、Hands-on での L0 作成を経て、このページで何が満たせたかを確認するまでの流れを一本道で見たい場合は <a href="wiki/eeg-to-l0-route.html">Wiki: EEGからL0までの一本道</a> をご覧ください。
+EEG 入門から公開データ選定、Datasets内のL0実践節での L0 作成を経て、このページで何が満たせたかを確認するまでの流れを一本道で見たい場合は <a href="wiki/eeg-to-l0-route.html">Wiki: EEGからL0までの一本道</a> をご覧ください。
 </p>
 </div>
 <div class="note-box">
@@ -450,12 +450,56 @@ Verification では、観測信号からの推定結果をそのまま唯一の�
 <section class="section" id="casework">
 <h2 class="section-title">歴史のケースワークから借りる設計</h2>
 <p>
-Mind-Uploadの設計は“新規発明”ではなく、他分野が既に解いてきた「検証の型」の移植です。代表例は <a href="casework.html">ケースワーク集</a> に整理しています。
+Mind-Uploadの設計は“新規発明”ではなく、他分野が既に解いてきた「検証の型」の移植です。旧 <code>casework.md</code> の要点は本節へ統合し、ここでそのまま比較できるようにしました。
 </p>
 <div class="note-box">
 <strong>移植のコツ</strong>
 <p>
 PDB（単一アーカイブ）やBIDS+OpenNeuro（規格＋置き場）、PhysioNet（データ＋評価）、OSF/PROSPERO（事前登録）などの型は、分野が違っても「前進を測れる」構造を作ります。WBEは特に、<strong>達成条件</strong>と<strong>反証条件</strong>を先に固定する必要があります。
+</p>
+</div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>先例</th>
+<th>その分野で解いた問題</th>
+<th>Mind-Upload が借りる設計</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PDB / INSDC</strong></td>
+<td>参照先が分散し、同じデータを見ているつもりでも比較が崩れる問題を抑えました。</td>
+<td>単一参照先、安定ID、版管理、提出時の最低バリデーションを先に置きます。</td>
+</tr>
+<tr>
+<td><strong>BIDS + OpenNeuro</strong></td>
+<td>脳計測データの形式差とメタデータ欠落で、追試が難しかった問題を抑えました。</td>
+<td>「どう置くか」と「どこへ置くか」を分けず、BIDS と共有基盤をセットで設計します。</td>
+</tr>
+<tr>
+<td><strong>PhysioNet / ImageNet / MLPerf</strong></td>
+<td>タスクや指標がばらばらで、前進を年単位で比較できない問題を抑えました。</td>
+<td>ベースライン、提出形式、比較指標、リーク監査を固定し、改善を測れるようにします。</td>
+</tr>
+<tr>
+<td><strong>OSF / PROSPERO</strong></td>
+<td>探索と検証が混ざり、都合のよい報告だけが残る問題を抑えました。</td>
+<td>事前登録、停止条件、失敗例、保留理由を成果物の一部として残します。</td>
+</tr>
+<tr>
+<td><strong>W3C / IETF / Unicode</strong></td>
+<td>別システム同士がつながらず、意味の取り違えで壊れる問題を抑えました。</td>
+<td>用語、メタデータ語彙、同期ログ、監査語彙の相互運用を先に揃えます。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>歴史事例をそのまま真似しない理由</strong>
+<p>
+WBE は本人性や因果同値のような強い論点を含むため、データ共有だけで完了にはなりません。ただし、標準、置き場、ベンチマーク、登録、監査を先に揃えるという順番自体は、他分野の成功例からかなり強く借りられます。
 </p>
 </div>
 </section>
@@ -671,20 +715,20 @@ Issues #251・#254 に基づき、NESS（非平衡定常状態）およびEPR（
 <h4>Start Here</h4>
 <ul>
 <li><a href="tech_roadmap.html#definition">前進の定義（Roadmap）→</a></li>
-<li><a href="casework.html">ケースワーク集（歴史の型）→</a></li>
+<li><a href="verification.html#casework">ケースワーク（歴史の型）→</a></li>
 <li><a href="research_harvest_50.html">50ワーカー文献地図（未解決問題分解）→</a></li>
-<li><a href="proposals.html">技術提案の一覧（Issue連動）→</a></li>
+<li><a href="issue.html#proposal-integration">技術提案の一覧（Issue連動）→</a></li>
 <li><a href="glossary.html">用語集（Glossary）→</a></li>
 <li><a href="datasets.html">データ&ベンチ（Datasets）→</a></li>
 <li><a href="faq.html">FAQ →</a></li>
-<li><a href="hands_on.html">ハンズオン（L0）→</a></li>
+<li><a href="datasets.html#l0-practice">L0実践（Datasets内）→</a></li>
 </ul>
 </div>
 
 <div class="sidebar-box">
 <h4>Related Pages</h4>
 <ul>
-<li><a href="idea.html">Framework（理論）→</a></li>
+<li><a href="perspective.html#design-principles">Framework（理論）→</a></li>
 <li><a href="mind_uploading_papers.html">Papers（文献）→</a></li>
 <li><a href="issue.html">Contribute（参加）→</a></li>
 </ul>

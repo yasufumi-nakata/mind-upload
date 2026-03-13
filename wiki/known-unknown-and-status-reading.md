@@ -5,7 +5,7 @@ description: "公開ページにある『いま分かっていること』『ま
 article_type: Wiki
 subtitle: "情報ポータルとして読むために、断言と保留の境界をそろえる"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Reading status and scope"
 audience: "公開ページの『既知 / 未知 / 保留』をどう読めばよいか迷う人"
 reading_time: "8〜12分"
@@ -136,7 +136,7 @@ recommended_pages:
 <tr>
 <td><strong>合意不足</strong></td>
 <td>本人性や制度設計のように、分野横断の合意がまだありません。</td>
-<td><a href="../wbe_101.html">WBE 101</a> / <a href="../collaborations.html">Collaborations</a></td>
+<td><a href="../wbe_101.html">WBE 101</a> / <a href="../issue.html#external-collaboration">Collaborations</a></td>
 </tr>
 <tr>
 <td><strong>外部依存</strong></td>

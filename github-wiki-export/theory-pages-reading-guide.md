@@ -4,10 +4,10 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Reading guide
+- 更新日: 2026-03-14 / 位置づけ: Reading guide
 
 ## このページの役割
-このページは、Mind-Upload の理論寄り公開ページを読み分けるための補助ガイドです。WBE 101 は入門、Perspective は長文研究ノート、Idea は設計原理、Roadmap は依存関係の地図であり、同じ役目ではありません。
+このページは、Mind-Upload の理論寄り公開ページを読み分けるための補助ガイドです。WBE 101 は入門、Perspective は長文研究ノート、Perspective内の理論フレーム節は設計原理、Roadmap は依存関係の地図であり、同じ役目ではありません。
 
 ## 正確さの前提
 ここで扱うのはページの役割差です。理論の妥当性や検証条件そのものは、各本文ページで確認してください。
@@ -15,7 +15,7 @@
 ## 公開ページへ戻る
 - [WBE入門](https://mind-upload.com/wbe_101.html)
 - [研究ノート](https://mind-upload.com/perspective.html)
-- [理論フレーム](https://mind-upload.com/idea.html)
+- [理論フレーム節](https://mind-upload.com/perspective.html#design-principles)
 
 ## 関連 Wiki
 - [Wiki: 公開ページの読み分けガイド](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - 理論系に限らず、公開ページ全体の役割差を見たい人向けです。
@@ -24,8 +24,8 @@
 - [Wiki: ロードマップの読み方](https://github.com/yasufumi-nakata/mind-upload/wiki/roadmap-reading-guide) - Roadmap の記号や読み方だけを先に確認したい人向けです。
 
 ## いま分かっていること
-- WBE 101、Perspective、Idea、Roadmap は、どれも理論系ですが役割が違います。
-- WBE 101 は主張の強さをそろえる入口、Perspective は根拠と限界を並べる長文、Idea は設計原理、Roadmap は依存関係の地図です。
+- WBE 101、Perspective、Perspective内の理論フレーム節、Roadmap は、どれも理論系ですが役割が違います。
+- WBE 101 は主張の強さをそろえる入口、Perspective は根拠と限界を並べる長文、Perspective内の理論フレーム節は設計原理、Roadmap は依存関係の地図です。
 - ページの役割差を先に分けると、理論を読み違えにくくなります。
 
 ## まだ分かっていないこと
@@ -68,7 +68,7 @@
 <td>読み順の最短化や、設計原理だけの抽出には向きません。</td>
 </tr>
 <tr>
-<td><strong><a href="https://mind-upload.com/idea.html">Idea</a></strong></td>
+<td><strong><a href="https://mind-upload.com/perspective.html#design-principles">理論フレーム節</a></strong></td>
 <td>設計原理です。静的コピーではなく動的移行として整理します。</td>
 <td>このサイトがなぜその立場を取るのか、哲学と工学の接続だけ先に知りたいときです。</td>
 <td>その立場がどこまで実証済みかは、Verification や Perspective で補う必要があります。</td>
@@ -112,11 +112,11 @@
 <tr>
 <td>主要理論の支持点と弱点を長文で追いたい</td>
 <td><a href="https://mind-upload.com/perspective.html">Perspective</a></td>
-<td><a href="https://mind-upload.com/idea.html">Idea</a> で設計原理へ戻します。</td>
+<td><a href="https://mind-upload.com/perspective.html#design-principles">理論フレーム節</a> で設計原理へ戻します。</td>
 </tr>
 <tr>
 <td>コピー問題と動的移行の立場を先に知りたい</td>
-<td><a href="https://mind-upload.com/idea.html">Idea</a></td>
+<td><a href="https://mind-upload.com/perspective.html#design-principles">理論フレーム節</a></td>
 <td><a href="https://mind-upload.com/perspective.html">Perspective</a> で根拠と限界を補います。</td>
 </tr>
 <tr>
@@ -132,7 +132,7 @@
 <tr>
 <td>理論名や用語の意味が曖昧</td>
 <td><a href="https://mind-upload.com/glossary.html">Glossary</a></td>
-<td><a href="https://mind-upload.com/idea.html">Idea</a> や <a href="https://mind-upload.com/perspective.html">Perspective</a> へ戻ります。</td>
+<td><a href="https://mind-upload.com/perspective.html#design-principles">理論フレーム節</a> や <a href="https://mind-upload.com/perspective.html">Perspective</a> へ戻ります。</td>
 </tr>
 </tbody>
 </table>
@@ -151,12 +151,12 @@
 <td>WBE 101 はまとまった入門、FAQ は短い疑問の処理です。</td>
 </tr>
 <tr>
-<td><strong>Perspective / Idea</strong></td>
-<td>Perspective は根拠と限界を並べる長文、Idea は採用する設計原理を絞るページです。</td>
+<td><strong>Perspective / 理論フレーム節</strong></td>
+<td>Perspective は根拠と限界を並べる長文、Perspective内の理論フレーム節は採用する設計原理を絞る節です。</td>
 </tr>
 <tr>
-<td><strong>Idea / Roadmap</strong></td>
-<td>Idea は立場の固定、Roadmap はその立場がどの課題に落ちるかの地図です。</td>
+<td><strong>理論フレーム節 / Roadmap</strong></td>
+<td>理論フレーム節は立場の固定、Roadmap はその立場がどの課題に落ちるかの地図です。</td>
 </tr>
 <tr>
 <td><strong>Perspective / Roadmap</strong></td>
@@ -170,7 +170,7 @@
 <h4>Mistake</h4>
 <ul>
 <li><strong>いきなり Perspective から入る：</strong> 情報量が多いため、先に WBE 101 で主張レベルをそろえる方が安全です。</li>
-<li><strong>Idea を証明済みの結論として読む：</strong> ここは設計原理の整理であり、実証完了の宣言ではありません。</li>
+<li><strong>理論フレーム節 を証明済みの結論として読む：</strong> ここは設計原理の整理であり、実証完了の宣言ではありません。</li>
 <li><strong>Roadmap を理論本文として読む：</strong> ここは依存関係の地図であり、理論の背景説明は圧縮されています。</li>
 <li><strong>FAQ の短答だけで理論判断を終える：</strong> 強い主張ほど、Perspective や Verification へ戻る必要があります。</li>
 </ul>

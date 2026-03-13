@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Reading guide
+- 更新日: 2026-03-14 / 位置づけ: Reading guide
 
 ## このページの役割
 このページは、論文集や文献地図に出てくる『Scopus』『arXiv』『Review』『Media』『source_logged』『curated』などのラベルを、初学者向けに整理する補助ページです。ここで大事なのは、ラベルが何の情報なのかを分けて読むことです。
@@ -15,7 +15,7 @@
 ## 公開ページへ戻る
 - [論文集](https://mind-upload.com/mind_uploading_papers.html)
 - [文献地図](https://mind-upload.com/research_harvest_50.html)
-- [ケースワーク](https://mind-upload.com/casework.html)
+- [ケースワーク](https://mind-upload.com/verification.html#casework)
 
 ## 関連 Wiki
 - [Wiki: 文献と証拠ページの読み方](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading) - 論文集、文献地図、提案ページの役割差を先に整理します。

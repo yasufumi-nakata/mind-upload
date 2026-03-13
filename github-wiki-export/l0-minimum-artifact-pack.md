@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Operational guide
+- 更新日: 2026-03-14 / 位置づけ: Operational guide
 
 ## このページの役割
 このページは、L0 の再現可能解析を作るときに、最終的に何を一式としてそろえるべきかを整理する補助ページです。手順書ではなく、提出物の形に注目して『何があれば第三者が追えるか』を確認するために使います。
@@ -13,7 +13,7 @@
 ここで扱うのは L0 の最低限です。これだけで因果主張や本人性の議論に進めるわけではありませんが、比較可能な出発点としては重要です。
 
 ## 公開ページへ戻る
-- [ハンズオン](https://mind-upload.com/hands_on.html)
+- [ハンズオン](https://mind-upload.com/datasets.html#l0-practice)
 - [データ&ベンチ](https://mind-upload.com/datasets.html)
 - [検証基盤](https://mind-upload.com/verification.html)
 
@@ -164,5 +164,5 @@ L0 の成果物は、1 つのファイルや 1 つのスコアではありませ
 
 <h2>次に戻る場所</h2>
 <p>
-実際の手順を追いたい場合は <a href="https://mind-upload.com/hands_on.html">ハンズオン</a>、入口データを選び直したい場合は <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a>、この成果物が公共財としてどう積み上がるかを見たい場合は <a href="https://mind-upload.com/verification.html">検証基盤</a> に戻ってください。
+実際の手順を追いたい場合は <a href="https://mind-upload.com/datasets.html#l0-practice">ハンズオン</a>、入口データを選び直したい場合は <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a>、この成果物が公共財としてどう積み上がるかを見たい場合は <a href="https://mind-upload.com/verification.html">検証基盤</a> に戻ってください。
 </p>

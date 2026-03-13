@@ -5,7 +5,7 @@ description: "Issue、共同研究、実験、標準化提案で、今このリ�
 article_type: Wiki
 subtitle: "『相手待ち』に見える作業を、準備作業まで分解する"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Operational guide"
 audience: "Issue を書く人、共同研究候補を見る人、何が今できる変更かを整理したい人"
 reading_time: "8〜12分"
@@ -36,7 +36,7 @@ recommended_pages:
   - label: "貢献ガイド"
     url: "/issue.html"
   - label: "協業候補"
-    url: "/collaborations.html"
+    url: "/issue.html#external-collaboration"
   - label: "検証基盤"
     url: "/verification.html"
 ---
@@ -179,7 +179,7 @@ Issue や Collaborations を読んだあとに、次は小さな修正、条件�
 <section class="section" id="next-step">
 <h2 class="section-title">次に戻る場所</h2>
 <p>
-Issue の書き方へ戻る場合は <a href="../issue.html">貢献ガイド</a>、共同研究候補を整理する場合は <a href="../collaborations.html">協業候補</a>、要求仕様や判定条件の前提を固める場合は <a href="../verification.html">検証基盤</a> に戻ってください。
+Issue の書き方へ戻る場合は <a href="../issue.html">貢献ガイド</a>、共同研究候補を整理する場合は <a href="../issue.html#external-collaboration">協業候補</a>、要求仕様や判定条件の前提を固める場合は <a href="../verification.html">検証基盤</a> に戻ってください。
 </p>
 </section>
 
@@ -198,7 +198,7 @@ Issue の書き方へ戻る場合は <a href="../issue.html">貢献ガイド</a>
 <h4>公開ページ</h4>
 <ul>
 <li><a href="../issue.html">貢献ガイド →</a></li>
-<li><a href="../collaborations.html">協業候補 →</a></li>
+<li><a href="../issue.html#external-collaboration">協業候補 →</a></li>
 <li><a href="../verification.html">検証基盤 →</a></li>
 </ul>
 </div>

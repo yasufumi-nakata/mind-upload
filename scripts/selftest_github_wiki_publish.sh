@@ -39,7 +39,7 @@ run_missing_remote_failure() {
   local output
 
   log "missing-remote-failure"
-  if output="$(run_publish_with_env GITHUB_WIKI_REMOTE_BASE="$MISSING_REMOTE" 2>&1)"; then
+  if output="$(run_publish_with_env GITHUB_WIKI_REMOTE_BASE="$MISSING_REMOTE" WIKI_PUBLISH_ALLOW_SKIP=0 2>&1)"; then
     fail "Missing remote unexpectedly succeeded without WIKI_PUBLISH_ALLOW_SKIP=1."
   fi
 

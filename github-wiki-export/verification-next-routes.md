@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Reading route
+- 更新日: 2026-03-14 / 位置づけ: Reading route
 
 ## このページの役割
 このページは、Verification を読んだあとに、何を知りたいかに応じて次の公開ページを決める補助ガイドです。L0 の実装へ戻るのか、L2 の介入検証へ進むのか、L3 の閉ループへ進むのか、L4 の本人性へ進むのかで、次の1ページは変わります。
@@ -14,7 +14,7 @@
 
 ## 公開ページへ戻る
 - [検証基盤](https://mind-upload.com/verification.html)
-- [ハンズオン](https://mind-upload.com/hands_on.html)
+- [ハンズオン](https://mind-upload.com/datasets.html#l0-practice)
 - [技術ロードマップ](https://mind-upload.com/tech_roadmap.html)
 
 ## 関連 Wiki
@@ -50,7 +50,7 @@ Verification は設計図として重要ですが、読むだけでは次の作�
 <tbody>
 <tr>
 <td><strong>L0 の実装を作りたい</strong></td>
-<td><a href="https://mind-upload.com/hands_on.html">Hands-on</a></td>
+<td><a href="https://mind-upload.com/datasets.html#l0-practice">Hands-on</a></td>
 <td>入力、QC、前処理、ベースライン、失敗例を一周つなぐ手順を固定します。</td>
 </tr>
 <tr>

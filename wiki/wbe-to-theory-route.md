@@ -5,7 +5,7 @@ description: "WBE 101 を読んだあとに、理論のどこを深掘りした�
 article_type: Wiki
 subtitle: "主張の強さ、設計原理、長文ノート、依存関係の地図を混ぜないための次ページ案内"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Theory route"
 audience: "WBE 101 のあとに理論系ページのどこへ進むかで迷う人"
 reading_time: "6〜10分"
@@ -38,7 +38,7 @@ recommended_pages:
   - label: "研究ノート"
     url: "/perspective.html"
   - label: "理論フレーム"
-    url: "/idea.html"
+    url: "/perspective.html#design-principles"
 ---
 
 <main class="main-container">
@@ -69,7 +69,7 @@ WBE 101 は入口として重要ですが、その次に読む理論ページは
 </tr>
 <tr>
 <td><strong>なぜ「静的コピー」ではなく「動的移行」なのか知りたい</strong></td>
-<td><a href="../idea.html">Idea</a></td>
+<td><a href="../perspective.html#design-principles">Idea</a></td>
 <td>このサイトが採用する設計原理と、コピー問題とのつながりを確認できます。</td>
 </tr>
 <tr>
@@ -186,7 +186,7 @@ WBE入門へ戻るなら <a href="../wbe_101.html">WBE入門</a>、理論系ペ�
 <ul>
 <li><a href="../wbe_101.html">WBE入門 →</a></li>
 <li><a href="../perspective.html">研究ノート →</a></li>
-<li><a href="../idea.html">理論フレーム →</a></li>
+<li><a href="../perspective.html#design-principles">理論フレーム →</a></li>
 </ul>
 </div>
 </aside>

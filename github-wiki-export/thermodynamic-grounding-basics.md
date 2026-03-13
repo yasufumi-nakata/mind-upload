@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Learning guide
+- 更新日: 2026-03-14 / 位置づけ: Learning guide
 
 ## このページの役割
 このページは、Mind-Upload で熱力学の話がなぜ出てくるのかを、Landauer、散逸、非平衡定常状態（NESS）、エントロピー生成速度（EPR）の観点から初歩から整理する wiki です。理論ページで急に物理の話に見えて止まる人のための入口として使います。
@@ -13,7 +13,7 @@
 ここで示すのは熱力学的接地の入口です。熱力学指標が意識や本人性の十分条件になると確定したわけではなく、サイト内でも未解決問題として扱っています。
 
 ## 公開ページへ戻る
-- [理論フレーム](https://mind-upload.com/idea.html)
+- [理論フレーム](https://mind-upload.com/perspective.html#design-principles)
 - [研究ノート](https://mind-upload.com/perspective.html)
 - [検証基盤](https://mind-upload.com/verification.html)
 
@@ -143,5 +143,5 @@ FLOPs のような論理的計算量は、「どれくらい計算したか」�
 
 <h2>次にどこへ戻るか</h2>
 <p>
-理論フレームへ戻るなら <a href="https://mind-upload.com/idea.html">理論フレーム</a>、長文の研究ノートへ戻るなら <a href="https://mind-upload.com/perspective.html">研究ノート</a>、検証要件へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a> をご利用ください。
+理論フレームへ戻るなら <a href="https://mind-upload.com/perspective.html#design-principles">理論フレーム</a>、長文の研究ノートへ戻るなら <a href="https://mind-upload.com/perspective.html">研究ノート</a>、検証要件へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a> をご利用ください。
 </p>

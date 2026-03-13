@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Practical guide
+- 更新日: 2026-03-14 / 位置づけ: Practical guide
 
 ## このページの役割
 このページは、なぜ raw EEG の波形だけでは再現可能な研究にならないのかを、イベントマーカー、刺激ログ、時刻同期、bad channel / bad segment 記録の観点から説明する wiki です。『波形ファイルはあるのに比較できない』という事故を防ぐことが目的です。
@@ -15,7 +15,7 @@
 ## 公開ページへ戻る
 - [EEG入門](https://mind-upload.com/eeg_101.html)
 - [データ&ベンチ](https://mind-upload.com/datasets.html)
-- [ハンズオン](https://mind-upload.com/hands_on.html)
+- [ハンズオン](https://mind-upload.com/datasets.html#l0-practice)
 
 ## 関連 Wiki
 - [Wiki: EEG前処理とQC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - 観測後にどこで結果が変わるかを補います。
@@ -156,5 +156,5 @@ raw EEG は「電気信号の並び」です。しかし研究で知りたいの
 
 <h2>次にどこへ戻るか</h2>
 <p>
-EEG 全体の役割へ戻るなら <a href="https://mind-upload.com/eeg_101.html">EEG入門</a>、スターターデータ選びへ戻るなら <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a>、最小ループの手順へ戻るなら <a href="https://mind-upload.com/hands_on.html">ハンズオン</a> をご利用ください。
+EEG 全体の役割へ戻るなら <a href="https://mind-upload.com/eeg_101.html">EEG入門</a>、スターターデータ選びへ戻るなら <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a>、最小ループの手順へ戻るなら <a href="https://mind-upload.com/datasets.html#l0-practice">ハンズオン</a> をご利用ください。
 </p>

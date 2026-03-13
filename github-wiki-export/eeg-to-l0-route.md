@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Practical route
+- 更新日: 2026-03-14 / 位置づけ: Practical route
 
 ## このページの役割
 このページは、EEG の基礎を読んだあとに、どの公開データで始め、何を一式として残し、どこで勝利条件を確認するかを一本道で整理する実務ガイドです。EEG 101、Datasets、Hands-on、Verification を往復しやすくするための補助線として使います。
@@ -15,7 +15,7 @@
 ## 公開ページへ戻る
 - [EEG入門](https://mind-upload.com/eeg_101.html)
 - [データ&ベンチ](https://mind-upload.com/datasets.html)
-- [ハンズオン](https://mind-upload.com/hands_on.html)
+- [ハンズオン](https://mind-upload.com/datasets.html#l0-practice)
 
 ## 関連 Wiki
 - [Wiki: EEGの基本](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-basics) - EEG の信号やノイズの初歩に戻りたい人向けです。
@@ -77,7 +77,7 @@ EEG を学んだあとに迷いやすいのは、<strong>次にデータを選�
 </tr>
 <tr>
 <td><strong>5</strong></td>
-<td><a href="https://mind-upload.com/hands_on.html">Hands-on</a></td>
+<td><a href="https://mind-upload.com/datasets.html#l0-practice">Hands-on</a></td>
 <td>BIDS、QC、前処理、ベースライン、失敗例を一周つなぐ手順を実行します。</td>
 <td>L0 の成果物一式が揃ったら次へ進みます。</td>
 </tr>

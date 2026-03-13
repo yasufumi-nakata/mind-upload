@@ -5,7 +5,7 @@ description: "Landauer、散逸、NESS、EPR がなぜ Mind-Upload で出てく�
 article_type: Wiki
 subtitle: "情報が回るだけでなく、どういう物理的コストで回るかを見る入口です"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Learning guide"
 audience: "Landauer、NESS、EPR、散逸構造の意味で止まりやすい人"
 reading_time: "10〜15分"
@@ -34,7 +34,7 @@ wiki_links:
     description: "他の補助ページへ戻れます。"
 recommended_pages:
   - label: "理論フレーム"
-    url: "/idea.html"
+    url: "/perspective.html#design-principles"
   - label: "研究ノート"
     url: "/perspective.html"
   - label: "検証基盤"
@@ -170,7 +170,7 @@ FLOPs のような論理的計算量は、「どれくらい計算したか」�
 <section class="section" id="return">
 <h2 class="section-title">次にどこへ戻るか</h2>
 <p>
-理論フレームへ戻るなら <a href="../idea.html">理論フレーム</a>、長文の研究ノートへ戻るなら <a href="../perspective.html">研究ノート</a>、検証要件へ戻るなら <a href="../verification.html">検証基盤</a> をご利用ください。
+理論フレームへ戻るなら <a href="../perspective.html#design-principles">理論フレーム</a>、長文の研究ノートへ戻るなら <a href="../perspective.html">研究ノート</a>、検証要件へ戻るなら <a href="../verification.html">検証基盤</a> をご利用ください。
 </p>
 </section>
 
@@ -188,7 +188,7 @@ FLOPs のような論理的計算量は、「どれくらい計算したか」�
 <div class="sidebar-box">
 <h4>公開ページ</h4>
 <ul>
-<li><a href="../idea.html">理論フレーム →</a></li>
+<li><a href="../perspective.html#design-principles">理論フレーム →</a></li>
 <li><a href="../perspective.html">研究ノート →</a></li>
 <li><a href="../verification.html">検証基盤 →</a></li>
 </ul>

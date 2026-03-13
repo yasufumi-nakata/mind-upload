@@ -5,7 +5,7 @@ description: "EEG が何を測り、なぜ得意なことと苦手なことが�
 article_type: Wiki
 subtitle: "EEG を魔法の読心術にしないための基礎知識"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Beginner guide"
 audience: "EEG を初めて学ぶ人、公開データや入門ページの前提を作りたい人"
 reading_time: "10〜15分"
@@ -38,7 +38,7 @@ recommended_pages:
   - label: "データ&ベンチ"
     url: "/datasets.html"
   - label: "ハンズオン"
-    url: "/hands_on.html"
+    url: "/datasets.html#l0-practice"
 ---
 
 <main class="main-container">
@@ -154,7 +154,7 @@ EEG は WBE をいきなり完成させる装置ではありません。しか�
 <ul>
 <li><a href="../eeg_101.html">EEG 101 →</a></li>
 <li><a href="../datasets.html">データ&ベンチ →</a></li>
-<li><a href="../hands_on.html">ハンズオン →</a></li>
+<li><a href="../datasets.html#l0-practice">ハンズオン →</a></li>
 </ul>
 </div>
 </aside>

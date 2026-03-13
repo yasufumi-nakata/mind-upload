@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Content placement basics
+- 更新日: 2026-03-14 / 位置づけ: Content placement basics
 
 ## このページの役割
 このページは、Mind-Upload に新しい情報を足すときに、どこへ置くべきかを初歩から整理する補助教材です。公開ページは情報ポータル、wiki は学習用の詳説、Issue は実行する変更、Collaborations は外部依存の整理、運用領域は中間成果という役割差を、例と一緒に確認できます。
@@ -15,7 +15,7 @@
 ## 公開ページへ戻る
 - [公開コンテンツ統合ハブ](https://mind-upload.com/content_hub.html)
 - [貢献ガイド](https://mind-upload.com/issue.html)
-- [協業候補](https://mind-upload.com/collaborations.html)
+- [協業候補](https://mind-upload.com/issue.html#external-collaboration)
 
 ## 関連 Wiki
 - [Wiki: 公開ページの読み分けガイド](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - 公開ページどうしの役割差を先に見たい人向けです。
@@ -103,7 +103,7 @@
 </tr>
 <tr>
 <td><strong>共同研究や標準化の候補を整理したい</strong></td>
-<td><a href="https://mind-upload.com/collaborations.html">Collaborations</a></td>
+<td><a href="https://mind-upload.com/issue.html#external-collaboration">Collaborations</a></td>
 <td>外部依存の話を、内製変更と混ぜないためです。</td>
 </tr>
 <tr>
@@ -141,7 +141,7 @@
 </tr>
 <tr>
 <td><strong>共同研究先へ渡す 1 ページ要約</strong></td>
-<td><a href="https://mind-upload.com/collaborations.html">Collaborations</a> に接続する準備物</td>
+<td><a href="https://mind-upload.com/issue.html#external-collaboration">Collaborations</a> に接続する準備物</td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies">内製で先にやることと外部依存</a></td>
 </tr>
 <tr>

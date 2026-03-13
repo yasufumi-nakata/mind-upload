@@ -5,7 +5,7 @@ description: "参照法、フィルタ、アーティファクト処理、除外
 article_type: Wiki
 subtitle: "結果が変わるのは、信号が繊細だからです"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Practical guide"
 audience: "EEG の前処理や QC がなぜ重要か知りたい人、Hands-on 前後でつまずいた人"
 reading_time: "10〜15分"
@@ -36,7 +36,7 @@ recommended_pages:
   - label: "EEG入門"
     url: "/eeg_101.html"
   - label: "ハンズオン"
-    url: "/hands_on.html"
+    url: "/datasets.html#l0-practice"
   - label: "データ&ベンチ"
     url: "/datasets.html"
 ---
@@ -126,7 +126,7 @@ EEG は、脳の信号だけでなく、まばたき、筋電、体動、電源�
 <section class="section" id="next-step">
 <h2 class="section-title">次にどこへ戻るか</h2>
 <p>
-EEG の信号そのものをもう一度確認したい場合は <a href="eeg-basics.html">EEGの基本</a>、実際の作業手順へ戻りたい場合は <a href="../hands_on.html">Hands-on</a>、公開データ選びへ戻りたい場合は <a href="../datasets.html">Datasets</a> が自然です。
+EEG の信号そのものをもう一度確認したい場合は <a href="eeg-basics.html">EEGの基本</a>、実際の作業手順へ戻りたい場合は <a href="../datasets.html#l0-practice">Hands-on</a>、公開データ選びへ戻りたい場合は <a href="../datasets.html">Datasets</a> が自然です。
 </p>
 </section>
 
@@ -145,7 +145,7 @@ EEG の信号そのものをもう一度確認したい場合は <a href="eeg-ba
 <h4>公開ページ</h4>
 <ul>
 <li><a href="../eeg_101.html">EEG 101 →</a></li>
-<li><a href="../hands_on.html">ハンズオン →</a></li>
+<li><a href="../datasets.html#l0-practice">ハンズオン →</a></li>
 <li><a href="../datasets.html">データ&ベンチ →</a></li>
 </ul>
 </div>

@@ -5,7 +5,7 @@ description: "再現解析、デコーディング、生成モデル、閉ルー
 article_type: Wiki
 subtitle: "主張の強さごとに、どの公開ページへ行くかを決めるガイド"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Reading guide"
 audience: "L0〜L5 の話が出てきたとき、次にどのページへ行けばよいかを整理したい人"
 reading_time: "8〜12分"
@@ -66,7 +66,7 @@ L0〜L5 は「研究のえらさ」ではなく、<strong>主張の強さ</stron
 <tr>
 <td><strong>L0</strong> 再現可能な解析</td>
 <td>他の人が同じ結果を再実行できるかを知りたい。</td>
-<td><a href="../hands_on.html">Hands-on</a></td>
+<td><a href="../datasets.html#l0-practice">Hands-on</a></td>
 <td><a href="../datasets.html">Datasets</a> / <a href="../verification.html">Verification</a></td>
 </tr>
 <tr>
@@ -91,13 +91,13 @@ L0〜L5 は「研究のえらさ」ではなく、<strong>主張の強さ</stron
 <td><strong>L4</strong> 本人性</td>
 <td>記憶、価値観、学習の連続性をどう読むか知りたい。</td>
 <td><a href="../wbe_101.html">WBE 101</a></td>
-<td><a href="../idea.html">Idea</a> / <a href="../perspective.html">Perspective</a></td>
+<td><a href="../perspective.html#design-principles">Idea</a> / <a href="../perspective.html">Perspective</a></td>
 </tr>
 <tr>
 <td><strong>L5</strong> 社会実装</td>
 <td>権利、安全、停止基準、制度まで含めて見たい。</td>
 <td><a href="../tech_roadmap.html">Roadmap</a></td>
-<td><a href="../collaborations.html">Collaborations</a> / <a href="../issue.html">Issue</a></td>
+<td><a href="../issue.html#external-collaboration">Collaborations</a> / <a href="../issue.html">Issue</a></td>
 </tr>
 </tbody>
 </table>

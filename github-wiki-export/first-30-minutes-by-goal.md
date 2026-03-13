@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Reading route
+- 更新日: 2026-03-14 / 位置づけ: Reading route
 
 ## このページの役割
 このページは、Mind-Upload を最初の30分でどう読むかを、目的別に整理する補助ガイドです。全体像をつかみたい人、理論から入りたい人、手を動かしたい人、文献を追いたい人では、最初に見るべきページが違います。
@@ -55,12 +55,12 @@
 </tr>
 <tr>
 <td><strong>理論から入りたい</strong></td>
-<td><a href="https://mind-upload.com/wbe_101.html">WBE 101</a> → <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/theory-pages-reading-guide">理論系ページの読み分けガイド</a> → <a href="https://mind-upload.com/perspective.html">Perspective</a> または <a href="https://mind-upload.com/idea.html">Idea</a></td>
+<td><a href="https://mind-upload.com/wbe_101.html">WBE 101</a> → <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/theory-pages-reading-guide">理論系ページの読み分けガイド</a> → <a href="https://mind-upload.com/perspective.html">Perspective</a> または <a href="https://mind-upload.com/perspective.html#design-principles">Idea</a></td>
 <td>主張レベル、長文研究ノート、設計原理の役割差が分かることです。</td>
 </tr>
 <tr>
 <td><strong>手を動かしたい</strong></td>
-<td><a href="https://mind-upload.com/eeg_101.html">EEG 101</a> → <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/practical-pages-reading-guide">実務系ページの読み分けガイド</a> → <a href="https://mind-upload.com/datasets.html">Datasets</a> → <a href="https://mind-upload.com/hands_on.html">Hands-on</a></td>
+<td><a href="https://mind-upload.com/eeg_101.html">EEG 101</a> → <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/practical-pages-reading-guide">実務系ページの読み分けガイド</a> → <a href="https://mind-upload.com/datasets.html">Datasets</a> → <a href="https://mind-upload.com/datasets.html#l0-practice">Hands-on</a></td>
 <td>どの公開データで始め、L0 の最小ループをどこで作るかが分かることです。</td>
 </tr>
 <tr>

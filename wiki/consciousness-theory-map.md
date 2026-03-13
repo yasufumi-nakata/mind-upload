@@ -5,7 +5,7 @@ description: "IIT、GNWT、FEP、PCI がそれぞれ何を説明したいのか�
 article_type: Wiki
 subtitle: "理論名を覚えるより、役割の違いを先に分ける"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Theory guide"
 audience: "IIT、GNWT、FEP、PCI の違いで止まりやすい人"
 reading_time: "10〜15分"
@@ -36,7 +36,7 @@ recommended_pages:
   - label: "研究ノート"
     url: "/perspective.html"
   - label: "理論フレーム"
-    url: "/idea.html"
+    url: "/perspective.html#design-principles"
   - label: "用語集"
     url: "/glossary.html"
 ---
@@ -142,7 +142,7 @@ IIT、GNWT、FEP、PCI は、全部が同じ種類のものではありません
 <section class="section" id="next-step">
 <h2 class="section-title">次にどこへ戻るか</h2>
 <p>
-理論全体を長文で追いたい場合は <a href="../perspective.html">研究ノート</a>、設計原理として見たい場合は <a href="../idea.html">理論フレーム</a>、単語を短く確認したい場合は <a href="../glossary.html">用語集</a> に戻ってください。
+理論全体を長文で追いたい場合は <a href="../perspective.html">研究ノート</a>、設計原理として見たい場合は <a href="../perspective.html#design-principles">理論フレーム</a>、単語を短く確認したい場合は <a href="../glossary.html">用語集</a> に戻ってください。
 </p>
 </section>
 
@@ -161,7 +161,7 @@ IIT、GNWT、FEP、PCI は、全部が同じ種類のものではありません
 <h4>公開ページ</h4>
 <ul>
 <li><a href="../perspective.html">研究ノート →</a></li>
-<li><a href="../idea.html">理論フレーム →</a></li>
+<li><a href="../perspective.html#design-principles">理論フレーム →</a></li>
 <li><a href="../glossary.html">用語集 →</a></li>
 </ul>
 </div>

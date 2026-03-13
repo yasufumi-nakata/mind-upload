@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Beginner guide
+- 更新日: 2026-03-14 / 位置づけ: Beginner guide
 
 ## このページの役割
 このページは、Mind-Upload の議論でよく出てくる『コピー問題』と『本人性』を初歩から整理する wiki です。哲学の固有名詞を覚えるより先に、なぜこの論点が技術の外に逃げないのかを理解することを目指します。
@@ -13,7 +13,7 @@
 このページは分かりやすく説明しますが、本人性の最終結論を出すページではありません。未解決のまま残る部分を明示します。
 
 ## 公開ページへ戻る
-- [理論フレーム](https://mind-upload.com/idea.html)
+- [理論フレーム](https://mind-upload.com/perspective.html#design-principles)
 - [WBE入門](https://mind-upload.com/wbe_101.html)
 - [検証基盤](https://mind-upload.com/verification.html)
 
@@ -95,4 +95,4 @@
 
 <h4>Next</h4>
 <p>この論点を理論フレームとしてどう扱うかは、こちらで確認できます。</p>
-<a href="https://mind-upload.com/idea.html">理論フレームへ →</a>
+<a href="https://mind-upload.com/perspective.html#design-principles">理論フレームへ →</a>

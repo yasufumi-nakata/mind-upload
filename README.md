@@ -30,10 +30,8 @@
 - リポジトリ内の `wiki/` は GitHub Wiki 用ソースとして扱い、サイト内の学習ページ編集もここで行います。
 - 閲覧入口:
   - GitHub Wiki Home: https://github.com/yasufumi-nakata/mind-upload/wiki
-  - EEG-DATA × 助成マップ: https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-data-fund-map
 - 編集入口:
   - Wiki Home source: [wiki/index.md](wiki/index.md)
-  - EEG-DATA × 助成マップ source: [wiki/mind-upload-eeg-data-fund-map.md](wiki/mind-upload-eeg-data-fund-map.md)
 - GitHub Wiki 用の出力は `github-wiki-export/` に生成します。
 - 生成は `scripts/export_github_wiki.rb`、反映は `scripts/publish_github_wiki.sh` を使います。
 - `scripts/publish_github_wiki.sh` は、GitHub Wiki の clone 先をリポジトリ内の `ignore/github-wiki-publish/` に固定しており、リポジトリ外に `wiki/` フォルダを作りません。
@@ -49,11 +47,11 @@
 - `scripts/selftest_github_wiki_noise.sh` は、isolated な `wiki/` と `github-wiki-export/` を `ignore/` 配下に作り、`clean_github_wiki_noise.rb` が `.DS_Store` と `._*` を除去しつつ通常ファイルを残すこと、および 2 回目に no-op になることを確認します。
 - `scripts/selftest_github_wiki_ops_references.sh` は、isolated な運用ファイル群を `ignore/` 配下に作り、`check_github_wiki_ops_references.rb` が親ディレクトリ経由の wiki 参照、古い remote 参照、対象ファイル欠落を検出できることを確認します。
 - `scripts/selftest_github_wiki_exporter.sh` は、isolated な `wiki/` と `github-wiki-export/` を `ignore/` 配下に作り、`scripts/export_github_wiki.rb` が `Home.md`、`_Sidebar.md`、`_Footer.md`、generated assets、wrapper 除去、link rewrite、ノイズ除去を正しく出力できることを確認します。
-- `scripts/selftest_github_wiki_export.sh` は、isolated な source/export を `ignore/` 配下に作り、export validator が missing export dir、missing/unexpected page、source/export の noise、unsafe link、sidebar 欠落、generated asset 欠落、`EEG-DATA × 助成マップ` の参照 CSV の source/export 欠落、`github-wiki-export/` の unstaged drift を検出できること、staged 済み drift は意図どおり無視されること、`GITHUB_WIKI_EXPORT_SKIP_GIT_DRIFT=1` で drift 検査を明示的に外せること、git 管理外 root では drift 検査をスキップすることを確認します。
+- `scripts/selftest_github_wiki_export.sh` は、isolated な source/export を `ignore/` 配下に作り、export validator が missing export dir、missing/unexpected page、source/export の noise、unsafe link、sidebar 欠落、generated asset 欠落、`github-wiki-export/` の unstaged drift を検出できること、staged 済み drift は意図どおり無視されること、`GITHUB_WIKI_EXPORT_SKIP_GIT_DRIFT=1` で drift 検査を明示的に外せること、git 管理外 root では drift 検査をスキップすることを確認します。
 - `scripts/selftest_github_wiki_publish.sh` は、missing remote の失敗、`WIKI_PUBLISH_ALLOW_SKIP=1` の skip 成功、local bare repo を remote に見立てた publish 2 回実行を通し、repo 内作業先 cleanup と no-diff 再実行を確認します。
 - `scripts/verify_github_wiki_toolchain.sh` は、syntax check、boundary check、ops reference check、noise cleanup、export、export validate をまとめて実行します。`VERIFY_GITHUB_WIKI_LOCK_SELFTEST=1` を付けると lock self-test を先頭で実行し、`VERIFY_GITHUB_WIKI_SYNC_SELFTEST=1` を付けると sync wrapper self-test を先頭で実行し、`VERIFY_GITHUB_WIKI_VERIFY_SELFTEST=1` を付けると verify wrapper self-test を先頭で実行し、`VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST=1` を付けると boundary self-test を先頭で実行し、`VERIFY_GITHUB_WIKI_NOISE_SELFTEST=1` を付けると noise cleanup self-test を先頭で実行し、`VERIFY_GITHUB_WIKI_OPS_SELFTEST=1` を付けると ops reference self-test を先頭で実行し、`VERIFY_GITHUB_WIKI_EXPORTER_SELFTEST=1` を付けると exporter self-test を先頭で実行し、`VERIFY_GITHUB_WIKI_EXPORT_SELFTEST=1` を付けると export validator self-test を先頭で実行し、`VERIFY_GITHUB_WIKI_PUBLISH_SELFTEST=1` を付けると publish self-test を先頭で実行し、`VERIFY_GITHUB_WIKI_BUILD=1` を付けると `BUNDLE_PATH=vendor/bundle bundle exec jekyll build` まで含めて確認できます。
 - `scripts/sync_github_wiki_toolchain.sh` は、`scripts/verify_github_wiki_toolchain.sh` の成功後に `scripts/publish_github_wiki.sh` を実行する統合 sync 入口です。
-- export 検査は `scripts/check_github_wiki_export.rb` を使います。`wiki/**/*.md` の export 漏れ、`wiki/generated/` のコピー漏れ、GitHub Wiki 上で解決できない相対リンク、`_Sidebar.md` への掲載漏れ、`EEG-DATA × 助成マップ` 本文で参照している CSV 名と実ファイルの不一致、`.DS_Store` などの混入、`github-wiki-export/` の未反映更新を検出します。isolated self-test 用に `GITHUB_WIKI_EXPORT_SRC_DIR` / `GITHUB_WIKI_EXPORT_DEST_DIR` / `GITHUB_WIKI_EXPORT_SKIP_GIT_DRIFT=1` も受けられます。
+- export 検査は `scripts/check_github_wiki_export.rb` を使います。`wiki/**/*.md` の export 漏れ、`wiki/generated/` のコピー漏れ、GitHub Wiki 上で解決できない相対リンク、`_Sidebar.md` への掲載漏れ、`.DS_Store` などの混入、`github-wiki-export/` の未反映更新を検出します。isolated self-test 用に `GITHUB_WIKI_EXPORT_SRC_DIR` / `GITHUB_WIKI_EXPORT_DEST_DIR` / `GITHUB_WIKI_EXPORT_SKIP_GIT_DRIFT=1` も受けられます。
 - `scripts/export_github_wiki.rb` は、`GITHUB_WIKI_EXPORT_SRC_DIR` / `GITHUB_WIKI_EXPORT_DEST_DIR` で source/export 先を差し替えられます。`SIDEBAR_GROUPS` に未分類の wiki ページがあっても、存在ページだけを既定グループへ出し、残りは `その他` セクションへ自動掲載します。
 - GitHub Wiki の git リポジトリは、GitHub の Web UI で最初の Wiki ページを 1 つ作成した後でないと clone / push できません。その初期化後に `scripts/publish_github_wiki.sh` を実行してください。
 - `.github/workflows/sync-github-wiki.yml` も追加してあり、初期化後は `main` への push で `export -> validate -> publish` を自動実行できます。

@@ -5,7 +5,7 @@ description: "なぜ WBE の話で標準、ベンチ、事前登録、監査が�
 article_type: Wiki
 subtitle: "派手な主張より先に、物差しと記録の置き場を作る"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Beginner guide"
 audience: "Verification Commons の考え方を初歩から理解したい人"
 reading_time: "10〜15分"
@@ -39,7 +39,7 @@ recommended_pages:
   - label: "検証基盤"
     url: "/verification.html"
   - label: "ケースワーク"
-    url: "/casework.html"
+    url: "/verification.html#casework"
   - label: "データ&ベンチ"
     url: "/datasets.html"
 ---
@@ -155,7 +155,7 @@ Mind-Upload では、Verification ページが設計図、Hands-on が最小実�
 <ul>
 <li><a href="../verification.html">Verification →</a></li>
 <li><a href="../datasets.html">データ&ベンチ →</a></li>
-<li><a href="../casework.html">ケースワーク →</a></li>
+<li><a href="../verification.html#casework">ケースワーク →</a></li>
 </ul>
 </div>
 </aside>
