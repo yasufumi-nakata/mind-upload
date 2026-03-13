@@ -43,6 +43,8 @@ _site/
 Gemfile.lock
 .bundle/
 vendor/
+node_modules/
+output/
 
 # Backup files
 backup/

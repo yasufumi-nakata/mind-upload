@@ -26,7 +26,7 @@
     {% assign wiki_home_label = 'GitHub Wiki' %}
 {% endif %}
 
-<body class="wiki-light" data-article-type="{{ page.article_type | default: '' | escape }}" data-page-url="{{ page.url | escape }}" data-wiki-mode="{{ site.wiki_mode | default: 'local' }}" data-github-wiki-url="{{ site.github_wiki_url | default: '' | escape }}">
+<body class="wiki-light{% if page.body_class %} {{ page.body_class | escape }}{% endif %}" data-article-type="{{ page.article_type | default: '' | escape }}" data-page-url="{{ page.url | escape }}" data-wiki-mode="{{ site.wiki_mode | default: 'local' }}" data-github-wiki-url="{{ site.github_wiki_url | default: '' | escape }}">
 
     <!-- Global Header -->
     <header class="journal-header" role="banner">

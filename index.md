@@ -81,6 +81,12 @@ Mind-Uploadは、「心をコンピュータで再現できるのか？」とい
 </p>
 </div>
 <div class="note-box">
+<strong>A4 要約冊子で先に全体像だけ見たいとき</strong>
+<p>
+公開ページの要点を短く束ねた版として <a href="summary_booklet.html">Summary Booklet</a> を追加しています。GitHub Actions ではこのページから A4 PDF も生成いたします。
+</p>
+</div>
+<div class="note-box">
 <strong>公開ページどうしの違いで迷ったとき</strong>
 <p>
 Verification、Roadmap、Perspective、WBE 101、Datasets などは、似た説明をしているようで役割が違います。まずどの公開ページから入るべきかを整理したい場合は <a href="wiki/public-page-reading-guide.html">Wiki: 公開ページの読み分けガイド</a> をご覧ください。
