@@ -58,6 +58,11 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 <td><a href="https://mind-upload.com/wbe_101.html">WBE 101</a></td>
 </tr>
 <tr>
+<td><strong>配線図があれば十分かを知りたい</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough">配線図だけでは足りない理由</a></td>
+<td><a href="https://mind-upload.com/verification.html#state-completeness-gate">状態変数の完全性ゲート</a> / <a href="https://mind-upload.com/tech_roadmap.html#qa-r10">R10 神経修飾</a></td>
+</tr>
+<tr>
 <td><strong>派手な主張を読み違えたくない</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence">主張と証拠の読み方</a></td>
 <td><a href="https://mind-upload.com/verification.html">Verification</a></td>

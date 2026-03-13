@@ -61,6 +61,7 @@
 - [Wiki：規格・置き場・Validator・ベンチマーク](https://github.com/yasufumi-nakata/mind-upload/wiki/standards-repositories-validators-and-benchmarks)
 - [Wiki：計測からモデル化までの用語ガイド](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-and-modeling-terms)
 - [Wiki：部分解決・探索段階・未整備の読み方](https://github.com/yasufumi-nakata/mind-upload/wiki/progress-labels-and-open-problem-status)
+- [Wiki：配線図だけでは足りない理由](https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough)
 - [Wiki：閉ループ・遅延・ジッタ・安全停止](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops)
 
 ## 公開サイト

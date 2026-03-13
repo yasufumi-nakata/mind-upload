@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Beginner guide
+- 更新日: 2026-03-14 / 位置づけ: Beginner guide
 
 ## このページの役割
 このページは、マインドアップロードや WBE が何を目指す話なのかを、初歩から整理するためのページです。最初に『何ができたら強い主張になるのか』を曖昧にしないことを重視しています。
@@ -19,6 +19,7 @@
 
 ## 関連 Wiki
 - [Wiki: 主張と証拠の読み方](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - この全体像を、ニュースや研究発表の読み方に落とします。
+- [Wiki: 配線図だけでは足りない理由](https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough) - 配線だけで何が欠けるかを、技術と自然科学の側面から整理します。
 - [Wiki: 本人性とコピー問題](https://github.com/yasufumi-nakata/mind-upload/wiki/personhood-and-copy-problem) - 『コピー』と『移行』の違いをもう一段ていねいに整理します。
 - [Wiki: 検証基盤の基本](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - なぜ先に物差しを作るのかを学べます。
 
@@ -100,6 +101,11 @@ WBE の話では、似ているものを混同しやすいからです。たと�
 <strong>ここで大事なこと</strong>
 <p>
 この差を曖昧にすると、L1 の研究を L4 のように語ってしまいます。だからこのサイトでは、強い主張ほど、必要な証拠も強くする方針を取ります。
+</p>
+
+<strong>「配線図があれば WBE に近いのか？」で止まったとき</strong>
+<p>
+配線図は重要ですが、シナプス状態、遅延と髄鞘、神経修飾、グリア、細胞型ラベルが欠けると強い主張はできません。技術と自然科学の側面だけでこの差を整理したい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough">Wiki: 配線図だけでは足りない理由</a> をご覧ください。
 </p>
 
 <h2>このサイトの立ち位置</h2>
