@@ -163,6 +163,16 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 <td><a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a> / <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a> / <a href="https://mind-upload.com/collaborations.html">協業候補</a></td>
 </tr>
 <tr>
+<td><strong>Roadmapの51QAを1件ずつEEG可否と助成テーマへ落としたい</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-data-fund-map-roadmap-qa-deepdive">Roadmap 51QA × EEG-DATA × 助成テーマ深掘り</a></td>
+<td><a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-data-fund-map">EEG-DATA × 助成マップ</a> / <a href="https://mind-upload.com/verification.html">検証基盤</a></td>
+</tr>
+<tr>
+<td><strong>research_harvestの60RQを1件ずつEEG可否と助成テーマへ落としたい</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-data-fund-map-rq60-deepdive">Research Question 60問 × EEG-DATA × 助成テーマ深掘り</a></td>
+<td><a href="https://mind-upload.com/research_harvest_50.html">文献地図</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-data-fund-map">EEG-DATA × 助成マップ</a> / <a href="https://mind-upload.com/verification.html">検証基盤</a></td>
+</tr>
+<tr>
 <td><strong>Verificationのあとに次の1ページを決めたい</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/verification-next-routes">Verificationのあとに進む4つの道</a></td>
 <td><a href="https://mind-upload.com/verification.html">検証基盤</a> / <a href="https://mind-upload.com/hands_on.html">ハンズオン</a> / <a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a> / <a href="https://mind-upload.com/wbe_101.html">WBE入門</a></td>
