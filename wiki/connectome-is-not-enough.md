@@ -102,12 +102,12 @@ recommended_pages:
 <section class="section" id="connectome-progress">
 <h2 class="section-title">配線図研究は大きく進んだが、それ自体は終点ではない</h2>
 <p>
-Dorkenwald らは成体ショウジョウバエ全脳の wiring diagram を示し、約 13 万ニューロン規模で全脳 connectome を提示しました。一方で MICrONS Consortium は、マウス視覚皮質の立方ミリメートル規模で、同一個体の機能計測と connectomics を結びつけるデータセットを公開しました。これは非常に大きな前進ですが、逆に言えば、<strong>現在ようやく「配線＋局所機能」を結び始めた段階</strong>であり、全脳・全状態の動的再現とはまだ別問題であることも示しています。
+Dorkenwald らは成体ショウジョウバエ全脳の wiring diagram を示し、約 13 万ニューロン規模で全脳 connectome を提示しました。一方で MICrONS Consortium は、マウス視覚皮質の立方ミリメートル規模で、同一個体の機能計測と connectomics を結びつけるデータセットと局所 functional digital twin を公開しました。これは非常に大きな前進ですが、逆に言えば、<strong>現在ようやく「配線＋局所機能」を結び始めた段階</strong>であり、全脳・全状態の動的再現とはまだ別問題であることも示しています。
 </p>
 <div class="note-box">
 <strong>ここでの読み替え</strong>
 <p>
-connectome-complete は「何がつながっているか」がかなり分かったという意味では重要です。しかし、それだけでは「どの強さで」「どの遅延で」「どの neuromodulatory context で」「どの glial coupling の下で」動くかまでは固定されません。
+connectome-complete は「何がつながっているか」がかなり分かったという意味では重要です。しかし、それだけでは「どの強さで」「どの遅延で」「どの neuromodulatory context で」「どの glial coupling の下で」動くかまでは固定されません。したがって、本サイトでは connectome-complete を <strong>structural atlas / scaffold</strong> の達成として扱い、L2/L3 の emulation claim へは自動的に昇格させません。
 </p>
 </div>
 </section>
@@ -137,7 +137,7 @@ Reimer らは、瞳孔変動が皮質内の adrenergic と cholinergic activity 
 
 <h3>5. グリアは後付けの補助変数ではありません</h3>
 <p>
-Adamsky らは astrocytic activation が de novo neuronal potentiation と memory enhancement を生みうることを示しました。Cahill らは、局所的で瞬間的な neurotransmitter input が、分単位にわたる広い astrocyte network の応答へ符号化されることを報告しています。したがって、<strong>グリアを無視したモデルは、可塑性や slow network state を部分的に欠いたモデル</strong>として扱うべきです。
+Adamsky らは astrocytic activation が de novo neuronal potentiation と memory enhancement を生みうることを示しました。Cahill らは、局所的で瞬間的な neurotransmitter input が、分単位にわたる広い astrocyte network の応答へ符号化されることを報告しています。したがって、<strong>グリアを無視したモデルは、可塑性や slow network state を部分的に欠いたモデル</strong>として扱うべきです。ここで重要なのは、「グリアも関わるらしい」という一般論ではなく、<strong>どの時定数のどの状態変数を捨てたか</strong>をモデル仕様として明示することでございます。
 </p>
 </section>
 

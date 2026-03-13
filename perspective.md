@@ -477,30 +477,24 @@ href="#ref-47">[47]</a></sup><sup><a href="#ref-51">[51]</a></sup>。</li>
 href="#ref-28">[28]</a></sup>。</li>
 </ol>
 
-<h3>因果構造の定量的検証指標（Issues #64–#70への回答）</h3>
-<p>上記の実証プランを具体的に展開するにあたり、GitHub Issues #64–#70で指摘された技術的課題に対し、以下の5点で回答する。</p>
+<h3>因果構造・状態完全性・物理制約の検証境界（2026-03 監査で更新）</h3>
+<p>上記の実証プランを具体化するにあたり、GitHub Issues #64–#70 で出た論点は、「何を共通必須にし、何を探索トラックに残すか」を分けて整理するのが妥当でございます。強い主張ほど、推定器依存性と coarse-graining の影響を先に明示いたします。</p>
 
 <ol style="margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.6;">
 <li style="margin-bottom: 12px;">
-<strong>DCMの適用限界と対策：</strong>EEG-based Dynamic Causal Modelling（DCM）はモデル同定可能性（model identifiability）の問題を内在する。特に、EEGの空間分解能制約下では、類似した観測データを生成する複数のモデルが存在し得る。この問題に対し、Bayesian Model Reduction（BMR; Friston &amp; Penny, 2011）によるモデル空間の効率的探索が不可欠である。さらに、推定された有効結合（effective connectivity）が安定した個人特性（individual trait）を表現しているかを検証するため、Causal Fingerprinting（Frässle et al., 2021）<sup><a href="#ref-96">[96]</a></sup>を適用し、test-retest信頼性を定量化する。Regression DCMは従来のDCMに比べ、計算コストを大幅に削減しつつモデル比較の精度を維持できるため、大規模データへのスケーラビリティも確保される。
+<strong>DCMの適用限界と対策：</strong>EEG-based Dynamic Causal Modelling（DCM）はモデル同定可能性（model identifiability）の問題を内在します。特に、EEG の空間分解能制約下では、類似した観測データを生成する複数のモデルが存在し得ます。この問題に対し、Bayesian Model Reduction（BMR; Friston &amp; Penny, 2011）によるモデル空間の効率的探索と、Causal Fingerprinting（Frässle et al., 2021）<sup><a href="#ref-96">[96]</a></sup>による test-retest 信頼性の定量化を優先します。Regression DCM は従来の DCM に比べ、計算コストを抑えつつモデル比較の精度を維持できるため、大規模データへのスケーラビリティ確保に有用です。
 </li>
 <li style="margin-bottom: 12px;">
-<strong>因果構造保存の定量指標：</strong>反事実等価性（counterfactual equivalence）のみではエミュレーションの因果的忠実度を十分に評価できない。以下の3指標を追加的に要求する：
-<ul style="margin-top: 6px; padding-left: 20px; list-style-type: disc;">
-<li style="margin-bottom: 4px;"><strong>Effective Information（EI）：</strong>システム遷移の因果的パワーを定量化する指標（Albantakis et al., 2023）。状態遷移確率行列の決定論性と縮退性のバランスを捉え、マクロレベルでの因果的粗視化が適切かを判定する。</li>
-<li style="margin-bottom: 4px;"><strong>Causal Density：</strong>単なるコネクティビティの強度を超え、因果的相互作用の「豊かさ」を測定する。疎結合系と密結合系の質的差異を捉えるために必要となる。</li>
-<li style="margin-bottom: 4px;"><strong>Symbolic Transfer Entropy（STE; Staniek &amp; Lehnertz, 2008）<sup><a href="#ref-99">[99]</a></sup>：</strong>非線形な有向情報フロー（nonlinear directed information flow）を定量化する。シンボル化により高次元時系列データへのスケーラビリティを確保しつつ、Transfer Entropyの本質的な因果方向性検出能力を維持する。</li>
-</ul>
+<strong>因果指標は補助指標として扱います：</strong>反事実等価性（counterfactual equivalence）だけでは、エミュレーションの因果的忠実度を十分に評価できません。一方で、Effective Information、Causal Density、Symbolic Transfer Entropy（STE）<sup><a href="#ref-99">[99]</a></sup>は、課題依存性と実装依存性が大きく、単独で universal pass/fail を担えるほど標準化されていません。したがって本プロジェクトでは、これらを<strong>追加解析</strong>として用い、主要判定は事前登録した OOD 条件、摂動応答、不確実性、棄権条件、再テスト信頼性の束で行います。
 </li>
 <li style="margin-bottom: 12px;">
-<strong>IIT計算量問題への工学的対応：</strong>Integrated Information Theory（IIT）のΦ計算は系のサイズに対して指数的コストを要するため<sup><a href="#ref-93">[93]</a></sup>、実用的な脳規模のシステムへの直接適用は現実的ではない。Hierarchical coarse-grainingにより、Φが最大化される空間スケールを同定するアプローチが有効である<sup><a href="#ref-97">[97]</a></sup>。Hoel et al.（2016）が示したように、マクロレベルの記述がミクロレベルよりも高いEIを持ちうるという知見は、理論を大規模系に適用する際の「空洞化（hollowing out）」を回避する鍵となる。本プロジェクトでは、EEGの空間分解能に適合したメソスケールでの粗視化戦略を採用し、Φの近似計算を実行可能な範囲に収める。
+<strong>connectome は scaffold であって state-complete ではありません：</strong><a href="https://doi.org/10.1038/s41586-024-07558-y">Dorkenwald et al. (2024)</a> による成体ショウジョウバエ全脳 connectome、<a href="https://doi.org/10.1038/s41586-025-08790-w">MICrONS Consortium et al. (2025)</a> による機能計測つき皮質 connectomics、<a href="https://doi.org/10.1038/s41586-025-08805-6">Gamlin et al. (2025)</a> による transcriptomic type ごとの接続差、<a href="https://doi.org/10.1038/s41586-024-07311-5">Cahill et al. (2024)</a> による astrocyte network encoding は、配線図が強い scaffold になることを示しました。しかし同時に、細胞型、シナプス状態、遅延・髄鞘、神経修飾、グリア結合状態が落ちると、配線図だけでは動的再現の十分条件にならないことも示しております。したがって、L2 以上の主張には <strong>state-completeness gate</strong> を設け、欠測時は推定誤差または abstention を明示いたします。
 </li>
 <li style="margin-bottom: 12px;">
-<strong>「哲学的ゾンビ」リスクの明示的扱い：</strong>フォン・ノイマン型アーキテクチャ上の標準的デジタルエミュレーションは、すべての機能テスト（behavioral test）を通過しながらもΦ≈0となる可能性がある。これはIITの観点からは「意識を欠く機能的等価物」、すなわち哲学的ゾンビに相当する<sup><a href="#ref-95">[95]</a></sup>。本プロジェクトは、L4/L5レベルの同一性主張（identity claim）には以下のいずれかが必要であることを明示的に認める：(a) 因果構造の同型性（causal structure isomorphism）が証明されたニューロモルフィックハードウェア、または (b) 生物学的−デジタルのハイブリッドシステム。<strong>機能的等価性は同一性主張の必要条件であるが、十分条件ではない。</strong>
+<strong>熱力学指標は探索トラックに下げます：</strong><a href="https://doi.org/10.1073/pnas.2109889118">Lynn et al. (2021)</a> と <a href="https://doi.org/10.1093/cercor/bhac177">de la Fuente et al. (2022)</a> は、粗視化した neural dynamics に不可逆性シグネチャが現れることを示しましたが、Lynn ら自身が扱っている量は microscopic physical dissipation そのものではなく、coarse-grained neural data から得る <strong>information entropy production の lower bound</strong> です。さらに <a href="https://doi.org/10.1038/s41467-025-66669-w">Ishihara &amp; Shimazaki (2025)</a> は、neuronal spiking から time asymmetry を直接安定に評価すること自体がなお難しいと述べています。したがって、EPR / time irreversibility は有望な補助ログではありますが、<strong>同一性要件</strong>や<strong>単独の検証KPI</strong>には昇格させません。
 </li>
 <li style="margin-bottom: 12px;">
-<strong>NESS熱力学的接地：</strong>Landauerの限界（1ビット消去あたりkT ln 2）を超えて、生物学的な脳は非平衡定常状態（Non-Equilibrium Steady State; NESS）を維持しており、構造維持コストとして脳エネルギーの50%以上を消費する。Entropy Production Rate（EPR）は、神経状態空間のFisher Informationと結びつけられなければならない<sup><a href="#ref-98">[98]</a></sup>。意識は単なる情報処理ではなく、能動的な散逸（active dissipation）を要求する。したがって、エミュレーションが物理的制約を満たすかの検証には、EPRの再現が不可欠な指標となる<sup><a href="#ref-92">[92]</a></sup>。
-<br><strong>実証的EPR測定の導入：</strong>EEG時系列データから非平衡性（詳細釣り合いの破れ）を定量化するため、時間反転対称性の破れに基づく<strong>Entropy Production Rate下界推定</strong>を検証指標に追加する。意識状態の変化（睡眠、麻酔、覚醒）がEPRの変化と密接に関連することが近年の研究で示されており（Lynn et al., 2021, PNAS; Ishihara &amp; Shimazaki, 2025, Nature Communications）、エミュレーションの物理的整合性評価にCrossing-time statisticsやThermodynamic Uncertainty Relationsを活用する。
+<strong>最低限の証拠鎖を固定します：</strong>L2 以上の主張では、(a) 事前登録した hold-out / OOD 条件、(b) 摂動または外部基準つき妥当化、(c) 不確実性と棄権条件、(d) 代替モデルまたは同値類の報告、(e) 計算コストとハードウェア電力の切り分け、を最低ラインとします。熱力学ログはこの束に<strong>追加で添える補助解析</strong>であり、これだけで強い結論は出しません。
 </li>
 </ol>
 
@@ -531,13 +525,9 @@ Captioningに類するTransformerベースのモデルアーキテクチャ定�
 <h2 class="section-title">主要な技術的課題 (Key Technical Challenges)</h2>
 
 <h3>コネクトームとダイナミクスのギャップ</h3>
-<p>図1が示す構造的コネクトーム（神経配線図）の研究は大きく進展しているが、それだけでは脳の動的な活動を説明するには不十分である。脳機能は、主に2つの理由から、静的な配線図以上のものを要求する。第一に、脳の機能状態は、シナプス結合だけでなく、ドーパミンやセロトニンといった神経修飾物質が、拡散性の調節として広域に作用する<strong>ボリュームトランスミッション（volume transmission）</strong>（注意：EEGでいう体積伝導／volume conductionとは別概念）によっても大きく左右される<sup><a
-href="#ref-19">[19]</a></sup>。こうした神経修飾は、安静時の動的な機能結合（動的コネクトーム）の再構成と関連し、遺伝的変動がその個体差に影響し得ることも報告されている<sup><a
-href="#ref-39">[39]</a></sup>。第二に、これまで補助細胞と見なされてきた<strong>非神経細胞（特にアストロサイト）の役割が過小評価されている</strong>。近年の研究は、アストロサイトが神経伝達物質を感知・放出し、シナプス可塑性や情報処理の時定数を能動的に制御する「三者系シナプス（Tripartite
-Synapse）」の不可欠な構成要素であることを示している<sup><a href="#ref-41">[41]</a></sup>。</p>
-<p>このことは、脳のエミュレーションが、単なるニューロンの接続性（コネクトーム）の再現に留まらず、神経修飾状態やグリア細胞による変調ダイナミクスといった、より複雑な動的要素を第一級のパラメータとして組み込む必要があることを意味する。この静的な構造と動的な状態の間のギャップを埋めるため、将来的には遺伝子発現情報から神経接続の特性を推定する「トランスクリプトーム・コネクトミクス」<sup><a
-href="#ref-33">[33]</a></sup>や、神経修飾状態をマッピングする動的な状態遷移モデルをフレームワークに統合する必要がある。
-</p>
+<p>図1が示す構造的コネクトーム（神経配線図）の研究は、2024–2025 年に大きく前進しました。<a href="https://doi.org/10.1038/s41586-024-07558-y">Dorkenwald et al. (2024)</a> は成体ショウジョウバエ全脳の wiring diagram を示し、<a href="https://doi.org/10.1038/s41586-025-08790-w">MICrONS Consortium et al. (2025)</a> は同一個体の機能計測と connectomics を結びつけた局所 functional digital twin を提示しました。しかし、ここから直接言えるのは「配線図が強い scaffold になる」という点までであり、「配線図だけで全状態が決まる」という点ではございません。</p>
+<p>少なくとも 5 つの状態クラスが残ります。第一に、<a href="https://doi.org/10.1038/s41586-025-08805-6">Gamlin et al. (2025)</a> が示すように、transcriptomic type によって接続モチーフやシナプス特性は系統的に異なります。第二に、シナプスは binary edge ではなく、ultrastructure・放出確率・可塑性履歴を伴います。第三に、遅延と髄鞘は timing state を規定し、同じグラフでも同期や位相を変えます。第四に、神経修飾は <strong>volume transmission</strong><sup><a href="#ref-19">[19]</a></sup> と動的機能結合の再編成<sup><a href="#ref-39">[39]</a></sup>を通じて働き、静的 wiring から一意に読めません。第五に、アストロサイトは広域の neurotransmitter input を network-level state に変換しうることが示されており<sup><a href="#ref-41">[41]</a></sup>、非神経細胞を後付け補正で済ませることはできません。</p>
+<p>したがって、脳のエミュレーションは、単なるニューロン接続性（connectome）の再現に留まらず、細胞型、シナプス状態、遅延・髄鞘、神経修飾、グリア結合状態をどこまで取得・推定・棄権するかを第一級の設計変数として扱う必要があります。この静的構造と動的状態のギャップを埋めるには、トランスクリプトーム・コネクトミクス<sup><a href="#ref-33">[33]</a></sup>と、state-completeness gate を通した段階的検証が不可欠でございます。</p>
 
 <!-- Figure: Connectome Progress -->
 <div class="figure-box">
@@ -909,7 +899,7 @@ href="#ref-54">[54]</a></sup>。</p>
 <div class="stage-number">58</div>
 <div class="stage-body">
 <h4>熱力学・因果・IIT計算量のギャップ対応</h4>
-<p>「論理的コスト」だけでは不十分で、非平衡定常状態を支える散逸の指標（EPR）を明示する必要がある。またIITの厳密計算は指数的に重く、近似・境界条件の設計が必須。</p>
+<p>「論理的コスト」だけでは不十分で、計算コストと物理コストを分けて監査する必要があります。ただし、不可逆性や EPR は現時点では探索的補助ログに留め、IIT や EPR を共通必須 KPI にしません。主判定は、摂動、OOD、妥当化、棄権条件の束で行います。</p>
 <ul>
 <li>非平衡系のエントロピー生成は不可逆性の定量指標として確立されている<sup><a href="#ref-92">[92]</a></sup></li>
 <li>IITのMIP探索は系のサイズに対して指数的コストがかかるため、近似や計算戦略が必須<sup><a href="#ref-93">[93]</a></sup></li>
@@ -922,7 +912,7 @@ href="#ref-54">[54]</a></sup>。</p>
 <div class="stage-number">61</div>
 <div class="stage-body">
 <h4>因果・熱力学の論理ギャップ補強</h4>
-<p>因果構造保存とEPR<sup><a href="#ref-92">[92]</a></sup>の同時検証を「同一性要件」に組み込み、計算機上のエミュレーションが物理的制約を満たすかを可視化する。</p>
+<p>因果構造保存の監査を主軸に置き、必要な場合のみ不可逆性ログを補助的に添えます。EPR<sup><a href="#ref-92">[92]</a></sup> は coarse-grained neural dynamics の探索的シグナルとして扱い、同一性要件には昇格させません。</p>
 <p><a href="issue.html#proposal-integration">→ 提案状態と外部依存の整理は貢献ガイドへ</a></p>
 </div>
 </div>
@@ -931,7 +921,7 @@ href="#ref-54">[54]</a></sup>。</p>
 <div class="stage-number">62</div>
 <div class="stage-body">
 <h4>熱力学的・因果的妥当性の強化</h4>
-<p>PCI<sup><a href="#ref-90">[90]</a></sup>・EPR<sup><a href="#ref-92">[92]</a></sup>・SCM<sup><a href="#ref-91">[91]</a></sup>の3点セットを検証パイプラインに組み込み、反実仮想と散逸の両側面から妥当性を判定する。</p>
+<p>PCI<sup><a href="#ref-90">[90]</a></sup> と SCM<sup><a href="#ref-91">[91]</a></sup> を主軸に、必要なら不可逆性ログと電力・通信ログを補助的に添えます。反実仮想と散逸の両方を見る発想は維持しますが、EPR<sup><a href="#ref-92">[92]</a></sup> を単独の合否指標には使いません。</p>
 <p><a href="issue.html#proposal-integration">→ 提案状態と外部依存の整理は貢献ガイドへ</a></p>
 </div>
 </div>

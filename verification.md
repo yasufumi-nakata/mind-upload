@@ -717,13 +717,13 @@ held-out 精度、介入、反事実、摂動ベース検証の違いを日常�
 <section class="section" id="thermodynamic-verification">
 <h2 class="section-title">熱力学指標（探索トラック）</h2>
 <p>
-NESS（非平衡定常状態）や time irreversibility を使って脳ダイナミクスを調べる研究は重要ですが、本サイトでは 2026-03 時点で<strong>補助的な研究トラック</strong>と位置づけます。不可逆性指標の有用性は示されつつある一方、WBE 検証の共通受け入れ基準としては、まだモダリティ依存性と推定仮定の影響が大きいためです。
+NESS（非平衡定常状態）や time irreversibility を使って脳ダイナミクスを調べる研究は重要ですが、本サイトでは 2026-03 時点で<strong>補助的な研究トラック</strong>と位置づけます。不可逆性指標の有用性は示されつつある一方、WBE 検証の共通受け入れ基準としては、まだモダリティ依存性と推定仮定の影響が大きいためです。特に、粗視化した neural data から推定される entropy production は、しばしば <strong>information-theoretic lower bound</strong> であり、微視的な物理散逸そのものとは切り分けて読む必要があります。
 </p>
 <div class="key-points">
 <h4>現時点で言えること</h4>
 <ul>
 <li><strong>詳細釣り合いの破れは観測されうる：</strong>脳活動から entropy production の下界を推定する研究はあり、不可逆性が神経ダイナミクスの情報を持つこと自体は支持されています。</li>
-<li><strong>ただし解釈はモダリティ依存です：</strong>意識状態と不可逆性の関連は fMRI や ECoG などでも報告されていますが、粗視化、時間分解能、前処理で見え方が変わります。</li>
+<li><strong>ただし解釈はモダリティ依存です：</strong>意識状態と不可逆性の関連は fMRI や ECoG などでも報告されていますが、粗視化、時間分解能、前処理、推定器で見え方が変わります。EEG/ECoG/fMRI の不可逆性を、代謝散逸や hardware power と同一視してはなりません。</li>
 <li><strong>したがってゲート条件にはしません：</strong>現段階では、熱力学指標だけで WBE 的同一性や妥当性の合否を決めません。</li>
 </ul>
 </div>
@@ -764,6 +764,7 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Comolatti, R., et al. (2019). A fast and general method to empirically estimate the complexity of brain responses to transcranial and intracranial stimulations. <a href="https://doi.org/10.1016/j.brs.2019.05.013" target="_blank">doi:10.1016/j.brs.2019.05.013</a></li>
 <li>Lynn, C. W., et al. (2021). Broken detailed balance and entropy production in the human brain. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>
 <li>de la Fuente, L. A., et al. (2022). Temporal irreversibility of neural dynamics as a signature of consciousness. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
+<li>Ishihara, K., &amp; Shimazaki, H. (2025). State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics. <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
 <li>Nosek, B. A., et al. (2015). Promoting an open research culture. <a href="https://doi.org/10.1126/science.aab2374" target="_blank">doi:10.1126/science.aab2374</a></li>
 <li>Wilkinson, M. D., et al. (2016). The FAIR Guiding Principles. <a href="https://doi.org/10.1038/sdata.2016.18" target="_blank">doi:10.1038/sdata.2016.18</a></li>
 </ol>
