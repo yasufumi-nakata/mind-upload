@@ -52,6 +52,38 @@ recommended_pages:
 - 根拠ファイル: `auto-research-funds/data/docs/research_funding_keio_grad_underfilled_2026-02-17.md`
 - 根拠ファイル: `auto-research-funds/data/docs/research_funding_daily_codex_2026-03-07.md`
 
+### 実務で使う助成キー（IDつき）
+
+- `G1`: `GR-2026-013`（技術実証・再現性中心）
+- `G2`: `GR-2026-014`（統合検証・社会実装中心）
+- `G3`: `9Lx4dPK6a4k2gOb7`（若手寄り研究助成）
+- `G4`: `Drbm6vBRDJkn0NGJ`（一般研究助成）
+- `G5`: `871pw3rLjNPKgqA0`（研究奨励金）
+- `G6`: `46z9VPE4wnkrvEJR`（学術・研究助成）
+
+### U別の第一応募先/予備応募先（運用固定）
+
+| U | 第一応募先 | 予備応募先 |
+|---|---|---|
+| U0 | G2 | G3 |
+| U1 | G1 | G4 |
+| U3 | G2 | G6 |
+| U4 | G1 | G4 |
+| U7 | G1 | G3 |
+| U8 | G2 | G5 |
+| U10 | G2 | G6 |
+| U11 | G2 | G4 |
+| U12 | G2 | G6 |
+| U13 | G1 | G4 |
+| U14 | G1 | G3 |
+| U15 | G2 | G6 |
+
+### A/B/C判定別の提出戦略
+
+- `A`: EEG-DATAだけで主解析まで完結。`G1/G3` 優先で「再現性・実装速度」を前面化する。
+- `B`: EEG主解析 + 外部要件が必要。`G2/G4/G5` を使い「統合検証計画」を明記する。
+- `C`: EEGは監査ログ/補助証拠として利用。`G2/G6` で制度・理論連携トラックとして出す。
+
 ## EEG-DATA 参照データセット（本ページで使用）
 
 | ID | データセット |
