@@ -5,7 +5,7 @@ description: "Mind-Upload を本当に初歩から学ぶための wiki。公開�
 article_type: Wiki
 subtitle: "公開ページは入口、Wiki は学習用の土台です"
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
+last_updated: "2026-03-15"
 note: "Learning-first"
 audience: "本当に初歩から学びたい人、公開ページに入る前の足場がほしい人"
 reading_time: "10〜20分"
@@ -78,7 +78,7 @@ recommended_pages:
 <td><a href="../verification.html#state-completeness-gate">状態変数の完全性ゲート</a> / <a href="../tech_roadmap.html#qa-r10">R10 神経修飾</a></td>
 </tr>
 <tr>
-<td><strong>connectome の次に、内在興奮性や恒常性を深掘りしたい</strong></td>
+<td><strong>connectome の次に、内在興奮性・睡眠依存 homeostasis・維持状態を深掘りしたい</strong></td>
 <td><a href="homeostatic-plasticity-and-maintenance-state.html">恒常性可塑性と維持状態</a></td>
 <td><a href="../verification.html#state-completeness-gate">状態変数の完全性ゲート</a> / <a href="../tech_roadmap.html#qa-m3">M3 空間粒度</a></td>
 </tr>

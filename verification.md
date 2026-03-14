@@ -5,7 +5,7 @@ description: "マインドアップロード/WBEを「進歩を測れる科学�
 article_type: Platform
 subtitle: "PDB×BIDS×PhysioNet×OSFの発想で、WBEの“勝利条件”と“再現可能な前進”を作る"
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
+last_updated: "2026-03-15"
 note: "Operational Specification"
 audience: "このサイトの中心方針を知りたい人、何を揃えれば『前進』になるかを確認したい人"
 reading_time: "15〜25分"
@@ -590,9 +590,9 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 <td>構造アトラスや候補 scaffold としては有用ですが、機能再現の十分条件とは言えません。</td>
 </tr>
 <tr>
-<td><strong>内在興奮性・恒常性 set point</strong></td>
-<td>同じ graph と cell type でも、threshold、gain、firing-rate の戻り先、compensation の仕方が違えば、同じ入力への応答と長期回復は変わります。</td>
-<td>短期の活動一致があっても、長期安定性や記憶配分は latent state 付きに留めます。</td>
+<td><strong>内在興奮性・恒常性 / 維持状態</strong></td>
+<td>同じ graph と cell type でも、threshold、gain、firing-rate の戻り先、sleep / wake に依存した renormalization、compensation の仕方が違えば、同じ入力への応答と長期回復は変わります。</td>
+<td>短期の活動一致があっても、cross-day stability、長期安定性、記憶配分は latent state 付きに留めます。</td>
 </tr>
 <tr>
 <td><strong>シナプス効率・短期状態</strong></td>
@@ -619,7 +619,7 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 <div class="note-box">
 <strong>ここでの実務ルール</strong>
 <p>
-connectome-complete は <strong>emulation-complete を意味しません</strong>。詳細な一次文献と、どの状態変数を最低提出物に入れるべきかの技術的根拠は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> に集約します。今回追加した <strong>内在興奮性 / 恒常性 set point</strong> の論点は、<a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に切り出してあります。
+connectome-complete は <strong>emulation-complete を意味しません</strong>。詳細な一次文献と、どの状態変数を最低提出物に入れるべきかの技術的根拠は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> に集約します。今回追加した <strong>内在興奮性 / 恒常性 / 維持状態</strong> の論点は、<a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に切り出してあります。
 </p>
 </div>
 <div class="note-box">

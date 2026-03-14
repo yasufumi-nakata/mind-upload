@@ -5,7 +5,7 @@ description: "WBE で connectome だけを保存しても足りない理由を�
 article_type: Wiki
 subtitle: "connectome-complete は emulation-complete ではありません"
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
+last_updated: "2026-03-15"
 note: "Technical / natural science only"
 audience: "配線図が取れたら WBE に近いのかを、技術と自然科学だけで判断したい人"
 reading_time: "15〜20分"
@@ -34,7 +34,7 @@ wiki_links:
     description: "この論点の前提になる全体像を初歩から整理します。"
   - label: "Wiki: 恒常性可塑性と維持状態"
     url: "/wiki/homeostatic-plasticity-and-maintenance-state.html"
-    description: "内在興奮性や発火 set point がなぜ別変数かを深掘りします。"
+    description: "内在興奮性、sleep-homeostasis、髄鞘/代謝維持がなぜ別変数かを深掘りします。"
   - label: "Wiki: Decode と Emulate"
     url: "/wiki/decode-vs-emulate.html"
     description: "出力の翻訳と内部生成の違いを整理します。"
