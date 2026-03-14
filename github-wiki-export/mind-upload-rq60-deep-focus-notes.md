@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-14 / 位置づけ: RQ-by-RQ Deep Focus
+- 更新日: 2026-03-15 / 位置づけ: RQ-by-RQ Deep Focus
 
 ## このページの役割
 このページは、mind-uploadの60RQを1件ずつ対象に、EEG-DATAで直接確認する核、auto-research-funds向け応募テーマ、EEG外で必要な要件を固定した実務ノートです。
@@ -159,3 +159,11 @@ A/B/C判定は mind-upload-eeg-rq60-feasibility-and-funds と同一。Cは『重
 - `60RQ` すべてに `EEGで直接検証する核` と `EEG外で必須` を分離して記載。
 - `応募テーマ` は `G1-G6` の既存助成キーに統一。
 - 運用規則は `1RQ=1検証命題=1応募テーマ=1主データ`。
+
+## 2026-03-15 13:18 JST 再検証ログ（本run）
+
+- `mind-upload/research_harvest_50.md` を正本として再照合し、`Ux-RQy` の行数 `60`、重複 `0`、欠落 `0` を確認。
+- 判定内訳 `A/B/C=17/25/18` を再計算し、本ページの各行と整合することを確認。
+- 参照している EEG データID（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）は `EEG-DATA/eeg_dataset_summary_ja.csv` 上で全件実在（欠落 `0`）。
+- 助成キー `G1-G6` の実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `auto-research-funds` 側で全件参照可能。
+- 方針は継続: 汎用的な俯瞰ではなく、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持。
