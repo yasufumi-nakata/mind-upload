@@ -86,6 +86,25 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `B`: EEG主解析 + 外部要件が必要。`G2/G4/G5` を使い「統合検証計画」を明記する。
 - `C`: EEGは監査ログ/補助証拠として利用。`G2/G6` で制度・理論連携トラックとして出す。
 
+### RQタイプ別のEEG-DATA選定テンプレ（1問ずつ深掘りするための固定入口）
+
+| RQタイプ（該当U） | 優先するEEG資源軸 | 入口レポート（EEG-DATA） | まず使うデータ例 |
+|---|---|---|---|
+| 思考/運動意図の安定デコード（`U0/U8/U13`） | `motor imagery` `cross-session` `cross-subject` | `TARGET_TASK_REPORT.md` `BENCHMARK_SETUP_REPORT.md` | ID `6, 11, 696, 719` |
+| 言語/意味復元と模倣分離（`U13`） | `reading-RSVP` `naturalistic stimulus` `reconstruction/decoding` | `LANGUAGE_PARADIGM_REPORT.md` `TASK_FORMULATION_REPORT.md` | ID `509, 13, 65` |
+| 意識状態・睡眠・失敗条件（`U11/U15`） | `resting-state` `sleep` `EEG-fMRI` | `PARADIGM_FAMILY_REPORT.md` `MULTIMODAL_SETUP_REPORT.md` | ID `735, 842, 859` |
+| 高解像度・逆問題・因果介入（`U1/U4`） | `high-density channel` `stimulation` `ground-truth` | `RECORDING_MODALITY_REPORT.md` `EXPERIMENT_REUSE_READINESS.md` | ID `56, 676, 1839` |
+| 多モーダル整合と再現性運用（`U7/U14`） | `multimodal alignment` `access` `benchmark` | `MULTIMODAL_SETUP_REPORT.md` `EXPERIMENT_SHORTLISTS.md` | ID `6, 56, 783, 4878` |
+
+### auto-research-funds向けテーマレーン拡張（G1-G6に加える候補）
+
+| レーン | 追加候補ID（auto-research-funds） | このページでの使い方 |
+|---|---|---|
+| 神経・認知・臨床EEG | `1geD73ZENwB8yaor`, `lEYmRP97ng3perjO` | `U11/U15` で「臨床評価補助バイオマーカー化」を前面に出す。 |
+| 医工学・AI・信号処理 | `1geD73Z9K2B8yaor` | `U1/U7/U13/U14` で「EEG分類・異常検知・再現性基盤」を強調。 |
+| 高齢社会・リハビリ | `QKYgNPxZxN38bO1Z` | `U8/U11/U15` の睡眠・覚醒・注意維持介入の実装テーマに接続。 |
+| 社会実装・防災・地域ヘルス | `46z9VPE6E0BrvEJR`, `1geD73ZE54B8yaor`, `1geD73Z6yq38yaor` | `U15` の制度統合・現場運用監査トラックとして提出。 |
+
 ### RQを1問ずつ深掘りするときの提出フォーマット（本ページ運用ルール）
 
 各RQで下記4点を必ず埋めてから応募文章へ転記します（汎用要約ではなくRQ単位運用）。
@@ -291,3 +310,10 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 本ページの `EEG-DATA 参照データセット` に列挙した `24 ID`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は、`EEG-DATA/eeg_dataset_summary_ja.csv` 上で欠落 `0` を確認。
 - 助成キー `G1-G6` の実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は、`auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再確認。
 - 監査証跡は `mind-upload/automation/rq60_eeg_funds_revalidation_2026-03-14_1203JST.md` に保存。
+
+## 2026-03-14 13:06 JST 再検証ログ（本run）
+
+- `RQ=60`、U別内訳（`4/4/6/4/6/6/4/4/6/6/6/4`）、`A/B/C=17/25/18` を再確認。
+- 本ページで参照する EEG-DATA `24 ID` は `EEG-DATA/eeg_dataset_summary_ja.csv` 上で欠落 `0`。
+- EEG資源選定の入口として、`TARGET_TASK_REPORT.md`、`LANGUAGE_PARADIGM_REPORT.md`、`PARADIGM_FAMILY_REPORT.md`、`RECORDING_MODALITY_REPORT.md`、`MULTIMODAL_SETUP_REPORT.md` を追記。
+- 助成レーンは既存 `G1-G6` に加え、`1geD73ZENwB8yaor`, `lEYmRP97ng3perjO`, `1geD73Z9K2B8yaor`, `QKYgNPxZxN38bO1Z`, `46z9VPE6E0BrvEJR`, `1geD73ZE54B8yaor`, `1geD73Z6yq38yaor` を候補IDとして明示。

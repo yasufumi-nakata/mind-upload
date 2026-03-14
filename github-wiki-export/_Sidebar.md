@@ -49,7 +49,7 @@
 - [Wiki：ベースライン・事前登録・モデルカード](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards)
 - [Wiki：マルチモーダル統合の基本](https://github.com/yasufumi-nakata/mind-upload/wiki/multimodal-integration-basics)
 - [Wiki：ロードマップのあとに進む5つの道](https://github.com/yasufumi-nakata/mind-upload/wiki/roadmap-next-routes)
-- [Wiki：不確実性・信頼区間・棄権](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention)
+- [Wiki：不確実性・校正・棄権](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention)
 - [Wiki：内製で先にやることと外部依存の切り分け](https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies)
 - [Wiki：参加・協業ページのあとに進む5つの道](https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes)
 - [Wiki：意識理論マップ](https://github.com/yasufumi-nakata/mind-upload/wiki/consciousness-theory-map)
