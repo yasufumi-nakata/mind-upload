@@ -325,3 +325,10 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - EEG参照 `24 ID` は `EEG-DATA/eeg_dataset_summary_ja.csv` 上で全件存在し、欠落 `0` を再確認。
 - 助成IDは `G1-G6` と追加候補ID（`1geD73ZENwB8yaor`, `lEYmRP97ng3perjO`, `1geD73Z9K2B8yaor`, `QKYgNPxZxN38bO1Z`, `46z9VPE6E0BrvEJR`, `1geD73ZE54B8yaor`, `1geD73Z6yq38yaor`）の実在を `auto-research-funds` データで再確認。
 - 運用方針は据え置き。`1RQ=1検証命題=1応募テーマ` で、汎用要約ではなくRQ単位で申請文を起こす。
+
+## 2026-03-14 15:02 JST 再検証ログ（本run）
+
+- `60RQ` を `U` ごとではなく `RQ` ごとに1件ずつ再確認し、各行の `深掘り検証設計` が「最初の実験手順」に落とせる粒度であることを確認。
+- `A/B/C=17/25/18`、`EEG参照24 ID`、`助成キーG1-G6`（実ID含む）は前ログから変化なし。整合崩れなし。
+- 実運用は `A/B` を先行して申請文へ直結、`C` は制度・監査設計トラックで提出する方針を維持。
+- 本ページを `mind-upload/wiki` と `mind-upload/github-wiki-export` で同期し、Wiki反映時に同一内容を参照できる状態にした。
