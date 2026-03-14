@@ -640,7 +640,7 @@ href="#ref-57">[57]</a></sup>。
 <tr>
 <td>1</td>
 <td>HD-EEG/fMRI同時計測セットアップ、再現性データ収集。IHM採用とBIDSメタデータ拡充。</td>
-<td>Transformerベースのデコーディングに加え、LLM由来ノイズを定量化する「因果的整合性チェック」プロトコルの導入。</td>
+<td>brain-to-text 系で、<strong>brainなし / LMなし / shuffle / OOD / drift / latency</strong> を同時に監査する評価パックを固定し、言語事前分布と神経寄与を分離する。</td>
 </tr>
 <tr>
 <td>2</td>
@@ -656,38 +656,78 @@ href="#ref-57">[57]</a></sup>。
 </table>
 </section>
 
-<!-- LLM Research Update -->
+<!-- Brain-to-Text Update -->
 <section class="section" id="llm-research-update">
-<h2 class="section-title">LLM研究アップデート：脳解読における「言語事前分布」との付き合い方</h2>
-<p>Mind Captioning<sup><a href="#ref-11">[11]</a></sup><sup><a href="#ref-12">[12]</a></sup>や、fMRIから連続言語を復元する近年のbrain-to-text系<sup><a
-href="#ref-30">[30]</a></sup>では、Transformer/LLM<sup><a href="#ref-60">[60]</a></sup>が「自然な文章」を強力に補完する一方、入力側の証拠が弱いときに<strong>もっともらしいが根拠のない内容</strong>（hallucination）を生成し得ることが知られている<sup><a
-href="#ref-28">[28]</a></sup>。また、自然音声を用いたfMRI研究では、語彙意味が大脳皮質に広く分布して表現され、一定程度デコード可能であることが示されている<sup><a
-href="#ref-29">[29]</a></sup>。本プロジェクトで表現している「LLM由来ノイズ」は、この<strong>言語事前分布が勝ってしまう成分</strong>として捉え、実験・解析・評価の三点セットで切り分ける必要がある。</p>
+<h2 class="section-title">Brain-to-Textアップデート：言語事前分布、streaming、evidence gate</h2>
+<p>2026-03 時点の一次文献が強く示しているのは、「汎用LLM運用論」がそのまま脳解読の核心だ、ということではございません。むしろ重要なのは、<strong>どのモダリティで</strong>、<strong>どの課題で</strong>、<strong>どの一般化条件まで</strong>、<strong>言語事前分布を上回る神経寄与が確認できたか</strong>を切り分けることです。Tang らの non-invasive semantic reconstruction は被験者の協力が学習時にも適用時にも必要でした<sup><a href="#ref-30">[30]</a></sup>。Horikawa らの Mind Captioning は視覚内容の記述生成を前進させましたが<sup><a href="#ref-11">[11]</a></sup>、やはり「通信サブシステムでどこまで意味を復元できるか」の系です。さらに Défossez らの non-invasive speech perception decoding<sup><a href="#ref-106">[106]</a></sup>、d'Ascoli らの単語デコード<sup><a href="#ref-107">[107]</a></sup>、Willett ら / Littlejohn ら / Wairagkar らの invasive speech neuroprosthesis<sup><a href="#ref-108">[108]</a></sup><sup><a href="#ref-109">[109]</a></sup><sup><a href="#ref-110">[110]</a></sup>は、decode の到達点を押し上げました。しかし、ここから直ちに言えるのは <strong>language / communication route の局所的前進</strong>であって、WBE や self-model の再現ではありません。</p>
 
-<h3>近年のLLM研究（実装に効く要点）</h3>
+<div class="note-box">
+<strong>2026-03 の site rule</strong>
+<p>
+この節では、RLHF、RAG、agent 化の一般論を主証拠にしません。主証拠は <strong>brain-to-text / speech neuroprosthesis / neural encoding</strong> の一次文献であり、汎用LLM論文は実装メモに留めます。
+</p>
+</div>
+
+<h3>証拠階層を 4 つに分ける</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th>トラック</th>
+<th>一次文献が今支持すること</th>
+<th>まだ言えないこと</th>
+<th>このサイトでの扱い</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>非侵襲 semantic / caption decoding</strong></td>
+<td>Tang らは fMRI から連続言語の意味再構成を示し、Horikawa らは脳活動から視覚内容の記述生成を示しました<sup><a href="#ref-30">[30]</a></sup><sup><a href="#ref-11">[11]</a></sup>。</td>
+<td>subject-independent decode、日常対話の streaming、因果的内部状態の再現は示していません。Tang ら自身が、decoder の学習と適用に参加者の協力が必要だと報告しています<sup><a href="#ref-30">[30]</a></sup>。</td>
+<td><strong>L1 相当の意味復元</strong></td>
+</tr>
+<tr>
+<td><strong>非侵襲 word / speech decoding</strong></td>
+<td>Défossez らは non-invasive 記録から 3 秒音声区間の識別を示し、d'Ascoli らは 723 人規模の単語デコードで、MEG・読字課題・データ量が性能を大きく左右すると示しました<sup><a href="#ref-106">[106]</a></sup><sup><a href="#ref-107">[107]</a></sup>。</td>
+<td>open-vocabulary の安定通信、単発試行での高信頼 decode、長期 drift 耐性は示していません。</td>
+<td><strong>L1 の強化候補</strong></td>
+</tr>
+<tr>
+<td><strong>侵襲 streaming speech neuroprosthesis</strong></td>
+<td>Willett らは 125,000 語語彙で高性能 speech BCI を示し、Littlejohn らは 48 words/min の streaming brain-to-voice、Wairagkar らは約 10 ms の instantaneous voice synthesis を示しました<sup><a href="#ref-108">[108]</a></sup><sup><a href="#ref-109">[109]</a></sup><sup><a href="#ref-110">[110]</a></sup>。</td>
+<td>全脳WBE、branch-equivalence、再較正不要の長期安定運用は示していません。ここで実証されたのは communication subsystem の closed loop です。</td>
+<td><strong>L2〜L3 の局所 benchmark</strong></td>
+</tr>
+<tr>
+<td><strong>LLM 埋め込みによる neural encoding</strong></td>
+<td>Zada らや Goldstein らは、文脈埋め込みや意味関係の表現が自然言語課題中の脳活動を予測しうることを示しました<sup><a href="#ref-111">[111]</a></sup><sup><a href="#ref-112">[112]</a></sup>。</td>
+<td>これは thought reading でも decoder でもありません。LLM 埋め込みが脳反応をよく説明しても、それだけで「脳の中身を読んだ」ことにはなりません。</td>
+<td><strong>measurement model / encoding benchmark</strong></td>
+</tr>
+</tbody>
+</table>
+
+<h3>最低限必要な評価パック</h3>
 <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; line-height: 1.6;">
-<li style="margin-bottom: 8px;"><strong>嗜好整合（指示追従）学習：</strong>RLHF/Instruction tuningで出力方針が変わるため、被験者間比較や縦断研究では「モデル/方針の固定」と「変更の記録」が重要になる<sup><a
-href="#ref-61">[61]</a></sup>。学習を必要最小限にする場合はDPO系の選択肢もある<sup><a href="#ref-62">[62]</a></sup>。</li>
-<li style="margin-bottom: 8px;"><strong>軽量な個人適応：</strong>被験者固有の語彙・記憶・文体に合わせる際、PEFT/量子化微調整（QLoRA等）で計算コストを抑えつつ適応できる<sup><a href="#ref-63">[63]</a></sup>。</li>
-<li style="margin-bottom: 8px;"><strong>根拠付き生成（Grounding）：</strong>RAGにより、生成を外部コーパスに“接地”させ、根拠（参照元）をログとして残せる<sup><a href="#ref-64">[64]</a></sup>。</li>
-<li style="margin-bottom: 8px;"><strong>ツール利用とエージェント化：</strong>推論と行為（検索・計算・操作）を分離し、どの外部情報が出力に影響したかを追跡可能にする枠組みが整ってきた<sup><a
-href="#ref-65">[65]</a></sup><sup><a href="#ref-66">[66]</a></sup>。</li>
-<li style="margin-bottom: 8px;"><strong>幻覚の検出：</strong>ブラックボックスでも自己一致性から幻覚を検出する系（SelfCheckGPT等）が提案されている<sup><a href="#ref-67">[67]</a></sup>。</li>
+<li style="margin-bottom: 8px;"><strong>神経寄与の切り分け：</strong><code>brainなし</code>、<code>time-shuffle</code>、<code>trial-shuffle</code>、<code>LM-only</code>、<code>no-LM</code> を並べ、候補集合からの検索なら candidate set size も明示します。</li>
+<li style="margin-bottom: 8px;"><strong>一般化の境界：</strong>held-out 文・held-out story・held-out vocabulary・cross-day・cross-task・cross-subject を分けて報告し、被験者協力や個人適応が必要なら隠さず書きます<sup><a href="#ref-30">[30]</a></sup><sup><a href="#ref-107">[107]</a></sup>。</li>
+<li style="margin-bottom: 8px;"><strong>real-time 指標：</strong>streaming を主張するなら、words/min だけでなく <strong>P50/P95/P99 latency</strong>、silence / abstention rate、dropout、recalibration burden、recovery time を出します<sup><a href="#ref-109">[109]</a></sup><sup><a href="#ref-110">[110]</a></sup>。</li>
+<li style="margin-bottom: 8px;"><strong>再現ログ：</strong>brain encoder、language model、vocoder、context window、beam width、外部コーパス、prompt、キャリブレーション手順を固定し、モデル更新が評価を跨いだ場合は別 run として扱います。</li>
 </ul>
 
-<h3>Mind-Upload側での「因果的整合性チェック」への落とし込み</h3>
-<ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; line-height: 1.6;">
-<li style="margin-bottom: 8px;"><strong>LLM由来ノイズの基準線：</strong>脳信号シャッフル／試行入れ替え等の反事実入力で出力分布を推定し、「言語事前分布だけで出る文章」をベースライン化する。</li>
-<li style="margin-bottom: 8px;"><strong>不確実性と棄権（abstention）：</strong>根拠が弱いときに無理に“それっぽい文”を出さない設計（低信頼時は要再計測/要追試として扱う）を先に決める。</li>
-<li style="margin-bottom: 8px;"><strong>再現性ログ：</strong>モデル名/重み版、デコード温度、プロンプト、RAGコーパス、ツール呼び出しログを固定・保存して「同じ入力で同じ結論になる」状態を担保する。</li>
-</ul>
+<h3>Mind-Upload 側での運用ルール</h3>
+<ol style="margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.6;">
+<li style="margin-bottom: 8px;"><strong>L1 を主張する条件：</strong>LM-only / shuffle baseline を上回る神経寄与を示し、candidate set や評価条件を隠さないこと。</li>
+<li style="margin-bottom: 8px;"><strong>L2 を主張する条件：</strong>held-out 条件、cross-day ないし cross-task の一般化、低信頼時の abstention を含むこと。</li>
+<li style="margin-bottom: 8px;"><strong>L3 を主張する条件：</strong>streaming log、tail latency、silence / freeze、recalibration burden を提出し、closed-loop の failure mode を公開すること。</li>
+<li style="margin-bottom: 8px;"><strong>上位主張への禁止事項：</strong>decode 成功、embedding 類似、会話の自然さを、そのまま emulate / WBE / 本人性保存へ読み替えません。</li>
+</ol>
 
 <div class="tag-list" style="margin-top: 12px;">
-<span class="tag">LLM</span>
-<span class="tag">RAG</span>
-<span class="tag">DPO</span>
-<span class="tag">QLoRA</span>
-<span class="tag">Hallucination</span>
+<span class="tag">Brain-to-Text</span>
+<span class="tag">Language Prior</span>
+<span class="tag">Streaming BCI</span>
+<span class="tag">Abstention</span>
+<span class="tag">Drift</span>
 </div>
 </section>
 
@@ -1232,6 +1272,13 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <li id="ref-103" value="103">Dellert, T., et al. (2025). Neural correlates of auditory awareness under no-report conditions. <em>Current Biology</em>, 35(12), 2790–2804.e5. <a href="https://doi.org/10.1016/j.cub.2025.03.031">doi:10.1016/j.cub.2025.03.031</a></li>
 <li id="ref-104" value="104">Adam, E., et al. (2025). A dissociation between spontaneous and evoked EEG markers of consciousness in the minimally conscious state. <em>Brain</em>, 148(11), 3490–3505. <a href="https://doi.org/10.1093/brain/awaf332">doi:10.1093/brain/awaf332</a></li>
 <li id="ref-105" value="105">Ferreiro, D., et al. (2025). Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness. <em>Brain</em>. <a href="https://doi.org/10.1093/brain/awaf287">doi:10.1093/brain/awaf287</a></li>
+<li id="ref-106" value="106">Défossez, A., Caucheteux, C., Rapin, J., Kabeli, O., & King, J.-R. (2023). Decoding speech perception from non-invasive brain recordings. <em>Nature Machine Intelligence</em>, 5, 1097–1107. <a href="https://doi.org/10.1038/s42256-023-00714-5">doi:10.1038/s42256-023-00714-5</a></li>
+<li id="ref-107" value="107">d'Ascoli, S., Ferrante, O., et al. (2025). Towards decoding individual words from non-invasive brain recordings. <em>Nature Communications</em>, 16, 1117. <a href="https://doi.org/10.1038/s41467-025-56165-8">doi:10.1038/s41467-025-56165-8</a></li>
+<li id="ref-108" value="108">Willett, F. R., Kunz, E. M., Fan, C., et al. (2023). A high-performance speech neuroprosthesis. <em>Nature</em>, 620, 1031–1036. <a href="https://doi.org/10.1038/s41586-023-06377-x">doi:10.1038/s41586-023-06377-x</a></li>
+<li id="ref-109" value="109">Littlejohn, K. T., Dabagia, M., Ladwig, A., et al. (2025). A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <em>Nature Neuroscience</em>, 28, 1711–1719. <a href="https://doi.org/10.1038/s41593-025-01905-6">doi:10.1038/s41593-025-01905-6</a></li>
+<li id="ref-110" value="110">Wairagkar, M., Card, N. S., Singer-Clark, T., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <em>Nature</em>, 644, 145–152. <a href="https://doi.org/10.1038/s41586-025-09127-3">doi:10.1038/s41586-025-09127-3</a></li>
+<li id="ref-111" value="111">Zada, Z., Goldstein, A., et al. (2024). Contextual embeddings from deep language models predict fMRI responses to naturalistic language. <em>Neuron</em>, 112(22), 3725–3740.e9. <a href="https://doi.org/10.1016/j.neuron.2024.09.018">doi:10.1016/j.neuron.2024.09.018</a></li>
+<li id="ref-112" value="112">Goldstein, A., Bar, A., et al. (2025). Connecting concepts in the brain by mapping cortical representations of semantic relations. <em>Nature Neuroscience</em>, 28, 1841–1848. <a href="https://doi.org/10.1038/s41593-025-01903-8">doi:10.1038/s41593-025-01903-8</a></li>
 </ol>
 </section>
 
@@ -1259,7 +1306,7 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <li><a href="#reproducibility">Reproducibility</a></li>
 <li><a href="#key-technical-challenges">Key Technical Challenges</a></li>
 <li><a href="#research-program">Research Program</a></li>
-<li><a href="#llm-research-update">LLM Research Update</a></li>
+<li><a href="#llm-research-update">Brain-to-Text Update</a></li>
 <li><a href="#eeg-consciousness-roadmap">EEG Consciousness Roadmap</a></li>
 <li><a href="#technical-proposals">Technical Proposals</a></li>
 <li><a href="#about">About</a></li>
