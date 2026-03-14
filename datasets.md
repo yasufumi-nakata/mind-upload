@@ -186,6 +186,13 @@ BIDS は規格、OpenNeuro や PhysioNet は置き場、Validator は形式点�
 </div>
 </div>
 </div>
+
+<div class="note-box">
+<strong>置き場の次に固定する実行鎖</strong>
+<p>
+OpenNeuro や PhysioNet は入口ですが、それだけでは再現性は固定されません。まず <strong>snapshot / version</strong> を固定し、次に <strong>BIDS / EEG-BIDS</strong> で形をそろえ、<strong>MNE-BIDS</strong> のような読込・変換経路を固定し、最後に <strong>MOABB</strong> のような benchmark harness で <strong>within-session / cross-session / cross-subject</strong> のどれで比べたかを固定してください。repository と loader と benchmark を混ぜると、同じ dataset 名でも比較不能になります。
+</p>
+</div>
 </section>
 
 <section class="section" id="starter">
@@ -387,10 +394,11 @@ Mouthaan et al. (2019) の systematic review では、presurgical epilepsy に�
 <div class="key-points">
 <h4>Checklist</h4>
 <ul>
+<li><strong>版固定：</strong>OpenNeuro snapshot、PhysioNet version、DOI、取得日が残っているか</li>
 <li><strong>再現：</strong>取得手順、ライセンス、前処理条件、乱数、環境が書けるか</li>
 <li><strong>メタデータ：</strong>サンプリング、参照、電極配置、イベント定義、同期情報が揃うか</li>
 <li><strong>QC：</strong>ノイズ・欠損・アーティファクトが定量化されているか</li>
-<li><strong>比較：</strong>ベースラインがあり、同じ指標で比較できるか</li>
+<li><strong>比較：</strong>ベースラインがあり、evaluation family と同じ指標で比較できるか</li>
 <li><strong>反証：</strong>データリーク検査、反事実テスト、失敗例の記録があるか</li>
 </ul>
 </div>
@@ -399,15 +407,17 @@ Mouthaan et al. (2019) の systematic review では、presurgical epilepsy に�
 <section class="section" id="l0-practice">
 <h2 class="section-title">6) L0 の最小ループをここで一周させる</h2>
 <p>
-ここでの目標は、高精度を競うことではなく、<strong>第三者が同じ手順で追える最小ループ</strong>を作ることです。最初に必要なのは、BIDS 形式、QC ログ、分割規則、前処理条件、ベースラインの5点でございます。
+ここでの目標は、高精度を競うことではなく、<strong>第三者が同じ手順で追える最小ループ</strong>を作ることです。最初に必要なのは、dataset version の固定、BIDS 形式、QC ログ、evaluation family を含む分割規則、前処理条件、ベースラインでございます。
 </p>
 
 <div class="key-points">
 <h4>L0 Loop</h4>
 <ul>
+<li><strong>版：</strong>OpenNeuro snapshot / PhysioNet version / DOI / 取得日を残す</li>
 <li><strong>入力：</strong>BIDS（データ + メタデータ）で置ける形にする</li>
 <li><strong>品質：</strong>欠損、ノイズ、アーティファクト、除外理由を数値で残す</li>
-<li><strong>処理：</strong>前処理条件、乱数、バージョン、分割規則を固定する</li>
+<li><strong>処理：</strong>前処理条件、乱数、ソフトウェア version、分割規則を固定する</li>
+<li><strong>評価：</strong>within-session / cross-session / cross-subject のどれかを先に固定する</li>
 <li><strong>出力：</strong>単純でもよいので、比較できるベースライン指標を1本置く</li>
 <li><strong>監査：</strong>失敗例、リーク検査、保留条件も結果と一緒に残す</li>
 </ul>
@@ -422,6 +432,10 @@ Mouthaan et al. (2019) の systematic review では、presurgical epilepsy に�
 </thead>
 <tbody>
 <tr>
+<td><strong>同じ dataset 名で再現できると思ってしまう</strong></td>
+<td>OpenNeuro snapshot tag や PhysioNet version を先に固定し、取得日と DOI まで runbook に残します。</td>
+</tr>
+<tr>
 <td><strong>BIDSの形で止まる</strong></td>
 <td>実データ投入の前に、ディレクトリ骨格、<code>dataset_description.json</code>、<code>participants.tsv</code>、<code>events.tsv</code> の雛形を先に作ります。</td>
 </tr>
@@ -435,10 +449,17 @@ Mouthaan et al. (2019) の systematic review では、presurgical epilepsy に�
 </tr>
 <tr>
 <td><strong>train/test で迷う</strong></td>
-<td>まずは被験者単位で分け、test 側を最後まで触らない運用を固定します。</td>
+<td>まずは within-session / cross-session / cross-subject のどれで比べるかを決め、その後に被験者単位や session 単位の split を固定します。</td>
 </tr>
 </tbody>
 </table>
+
+<div class="note-box">
+<strong>Step 0: 版を凍結する</strong>
+<p>
+dataset 名だけでは足りません。OpenNeuro は snapshot を semantic version の git tag で管理し、PhysioNet も project ごとに version を表示して引用させます。したがって、最初の runbook には <strong>dataset 名</strong>ではなく <strong>snapshot / version / DOI / 取得日</strong> を残してください。
+</p>
+</div>
 
 <div class="note-box">
 <strong>Step 1: BIDSの骨格を先に作る</strong>
@@ -451,6 +472,13 @@ Mouthaan et al. (2019) の systematic review では、presurgical epilepsy に�
 <strong>Step 2: Validatorで規格違反を先に潰す</strong>
 <p>
 機械で見つかる問題は早い段階で潰してください。BIDS Validator が通ることは研究として十分条件ではありませんが、共有可能な最低条件には近いです。
+</p>
+</div>
+
+<div class="note-box">
+<strong>Step 2.5: loader と benchmark を分けて固定する</strong>
+<p>
+MNE-BIDS は BIDSPath、読込、metadata 抽出の経路を助ける道具であり、MOABB は paradigm と evaluation family を固定する道具でございます。<strong>読めた</strong>ことと<strong>公平比較できる</strong>ことは別です。特に MNE-BIDS は、modified/preloaded data の書き戻しを例外扱いにしており、前処理済みデータは lineage を明示して derivatives として扱う方が安全です。
 </p>
 </div>
 
@@ -478,6 +506,11 @@ SOTA ではなく、再現しやすい比較軸を先に置きます。最初の
 </thead>
 <tbody>
 <tr>
+<td><strong>データ版</strong></td>
+<td>snapshot / version / DOI / 取得日が固定されている</td>
+<td><a href="wiki/standards-repositories-validators-and-benchmarks.html">Wiki: 規格・置き場・Validator・ベンチマーク</a></td>
+</tr>
+<tr>
 <td><strong>データ構造</strong></td>
 <td>BIDS 形式で置けている</td>
 <td><a href="#bids">共有できるデータにする最短ルート</a></td>
@@ -489,7 +522,7 @@ SOTA ではなく、再現しやすい比較軸を先に置きます。最初の
 </tr>
 <tr>
 <td><strong>比較可能性</strong></td>
-<td>ベースライン1本と train/test ルールが固定されている</td>
+<td>ベースライン1本と evaluation family / train/test ルールが固定されている</td>
 <td><a href="wiki/dataset-splits-and-leakage.html">Wiki: データ分割とデータリーク</a></td>
 </tr>
 <tr>
@@ -519,6 +552,14 @@ Mind-Uploadが目指すのは、単にデータを集めることではなく、
 <ul>
 <li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS 1.11.1: Electroencephalography</a></li>
 <li><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019), EEG-BIDS</a></li>
+<li><a href="https://docs.openneuro.org/git.html" target="_blank">OpenNeuro Docs: Git access and snapshots</a></li>
+<li><a href="https://docs.openneuro.org/user_guide.html" target="_blank">OpenNeuro Docs: Dataset landing page and snapshot metadata</a></li>
+<li><a href="https://physionet.org/about/" target="_blank">PhysioNet: About and citation policy</a></li>
+<li><a href="https://physionet.org/about/content/" target="_blank">PhysioNet: Resources and citation guidance</a></li>
+<li><a href="https://doi.org/10.21105/joss.01896" target="_blank">Appelhoff et al. (2019), MNE-BIDS</a></li>
+<li><a href="https://mne.tools/mne-bids/stable/generated/mne_bids.write_raw_bids.html" target="_blank">MNE-BIDS Docs: write_raw_bids</a></li>
+<li><a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant (2018), MOABB</a></li>
+<li><a href="https://moabb.neurotechx.com/docs/index.html" target="_blank">MOABB Docs</a></li>
 <li><a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">PhysioNet: EEG Motor Movement/Imagery Dataset</a></li>
 <li><a href="https://physionet.org/content/chbmit/1.0.0/" target="_blank">PhysioNet: CHB-MIT Scalp EEG Database</a></li>
 <li><a href="https://physionet.org/content/sleep-edfx/1.0.0/" target="_blank">PhysioNet: Sleep-EDF Database Expanded</a></li>
