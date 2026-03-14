@@ -252,7 +252,7 @@ WBE 101 のあとに、なぜこの長文ノートへ進むのか、誤解整理
 ここで決めたいのは、「どの理論が勝ちか」を宣言することではありません。むしろ、主要理論を並べて見たときに、<strong>どの理論にも共通して必要な検証条件は何か</strong>を先に取り出すことが目的です。
 </p>
 </div>
-<p>マインドアップロード（WBE）が再現すべき「意識」とは何か。この問いに対し、本プロジェクトは従来、統合情報理論（IIT）とグローバル神経ワークスペース理論（GNWT）の相補的統合を模索してきた。しかし、2025年に発表された大規模な**敵対的共同研究（Adversarial Collaboration）**の結果（Cogitate Consortium et al., Nature 2025<sup><a href="#ref-54">[54]</a></sup>）を受け、我々は方針を転換する。すなわち、両理論の統合ではなく、実験結果に基づく**「理論的限界の明記」**と、**「予測符号化（Predictive Coding）および自由エネルギー原理（Friston, 2010）への拡張」**へと舵を切る。この結果は、楽観的な統合論に修正を迫るものである。</p>
+<p>マインドアップロード（WBE）が再現すべき「意識」とは何か。この問いに対し、本プロジェクトは従来、統合情報理論（IIT）とグローバル神経ワークスペース理論（GNWT）の統合可能性を強めに見積もっていました。しかし、2025年に公開された事前登録型の敵対的共同研究は、IIT / GNWT / RPT の主要予測を部分的には支持しつつ、鍵予測のいくつかを反証し、単一理論を勝者にしませんでした<sup><a href="#ref-54">[54]</a></sup>。さらに、意識内容の候補マーカーと thought-to-report / task relevance のマーカーが分離され、理論選択より先に confound control を固定すべきことが明確になりました<sup><a href="#ref-54">[54]</a></sup>。したがって本サイトでは、理論を採択するのではなく、理論を<strong>事前登録された予測集合</strong>として競わせ、no-report 条件、摂動 benchmark、外部一般化へ翻訳する立場を取ります。FEP / 予測符号化はその候補の一つですが、既定路線とはしません。</p>
 
 <table class="data-table">
 <thead>
@@ -280,27 +280,23 @@ WBE 101 のあとに、なぜこの長文ノートへ進むのか、誤解整理
 <td><strong>FEP / 予測符号化</strong></td>
 <td>システムが環境とやり取りしながら、どう安定して推論し続けるかを説明したい。</td>
 <td>それ自体で現象的意識まで説明しきれるわけではなく、抽象度が高いため何でも説明したように見えやすい。</td>
-<td>エミュレータを<strong>動き続ける実装原理</strong>として設計する際の土台に使い、閉ループや反事実の検証へ接続します。</td>
+<td>閉ループ・予測誤差・適応を記述する<strong>候補モデル族</strong>として使い、DCM / SCM / 状態空間モデルと競わせます。</td>
 </tr>
 </tbody>
 </table>
 
 <div class="question-box">
-<h4>中心的課題: 理論の予測と実験結果の乖離</h4>
-<p>この歴史的な検証実験において、IITが予測した「後方皮質における持続的な同期活動」は完全には支持されず、一方でGNWTが予測した「前頭前野のイグニッション」も課題依存性が高い（意識経験そのものよりは報告動作に関連する）ことが示された<sup><a href="#ref-54">[54]</a></sup>。これは、現行の主要理論がいずれも意識の神経相関（NCC）を完全には説明しきれていないことを意味する。</p>
+<h4>中心的課題: 理論選好ではなく prediction competition をどう設計するか</h4>
+<p>Nature 2025 の adversarial test は、意識内容に関わる信号が occipital / temporal / frontal の複数領域に分布し、同時に一部マーカーが task relevance や report requirements を追うことを示しました<sup><a href="#ref-54">[54]</a></sup>。したがって、どの理論名を掲げるかよりも、どの予測をどの条件で落とすかを先に固定する方が科学的でございます。</p>
 <div class="resolution-box">
-<h5>解決の方向性: Phenomenal vs Functional Theories の相補的統合</h5>
-<p>この結果を受け、本サイトでは特定の理論を教条的に支持する立場を取り下げる。ここで重要なのは、IITが<strong>「現象的意識（Phenomenal Consciousness）」</strong>の構造を説明しようとするのに対し、FEPや予測符号化はシステムが外界に適応するための<strong>「機能的プロセス（Functional Process）」</strong>を記述する理論であるというカテゴリーの違いを認識することである。</p>
-<p>我々は、両者を対立するものとしてではなく、以下の役割分担で統合する。</p>
+<h5>解決の方向性: 理論を「勝者」ではなく「予測源」に戻す</h5>
+<p>本サイトでは、IIT / GNWT / RPT / FEP を、互いに競争する<strong>予測生成器</strong>として扱います。採否は、no-report 条件、摂動条件、task-relevance 統制、cross-dataset / cross-center 一般化を通ったかで決めます。</p>
 <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; line-height: 1.6;">
-<li style="margin-bottom: 6px;"><strong>Phenomenal Layer (IIT 4.0):</strong> 意識の「質（Qualia）」や「統合性」を評価するための理論的「ものさし」として参照する。ただし、PCI-ST 等は計算可能な proxy であり、IIT の直接代用ではありません。</li>
-<li style="margin-bottom: 6px;"><strong>Functional Layer (FEP/Active Inference):</strong> その意識を生み出す基盤システムを考える候補理論の一つとして参照する。ただし、実装原理は Active Inference に固定せず、複数モデルで競わせます。</li>
+<li style="margin-bottom: 6px;"><strong>理論層：</strong>各理論は、どの時空間パターン・どの条件差・どの失敗条件を予測するかを事前登録します。</li>
+<li style="margin-bottom: 6px;"><strong>指標層：</strong>PCI/PCI-ST、複雑性、臨界性は理論そのものではなく、予測を落とすための benchmark 候補として扱います。</li>
+<li style="margin-bottom: 6px;"><strong>設計層：</strong>no-report、アーチファクト管理、遅延/ジッタ監査、外部妥当化を満たさない限り、理論の当否は繰り上げません。</li>
 </ul>
-
-<p>また、IIT批判である「Unfolding Argument」（Doerig et al., 2019<sup><a href="#ref-40">[40]</a></sup>）—機能的に等価なフィードフォワード網がΦ=0となり意識を持たないとされる問題—に対し、本プロジェクトは単なる「機能の模倣」を超えた要件を課す。具体的には、「因果構造の保存（Causal Structure Preservation）」を、<strong>マルコフブランケット（Markov Blanket）</strong><sup><a href="#ref-77">[77]</a></sup>の境界条件として厳密に定義する。</p>
-<p>
-ここで重要となるのは、デジタルエミュレーションと生物学的基盤の間の情報交換における<strong>帯域幅・遅延・ジッタ</strong>を、課題ごとに実測し監査することでございます。閉ループ系に単一の普遍閾値を先に固定することはできず、「10-100ms」はあくまで神経ダイナミクスを考える際のヒューリスティックに留まります。したがって本プロジェクトでは、end-to-end の latency budget と failure mode を先に公開し、そのうえで Laukkonen らの<strong>反実仮想的等価性</strong><sup><a href="#ref-76">[76]</a></sup>を、必要条件の断言ではなく<strong>検証課題を設計するための仮説</strong>として使います。
-</p>
+<p>また、閉ループ系の時間要件や反実仮想的等価性は、単一閾値や単一理論で決めるのではなく、課題別 latency budget と failure mode を先に公開し、その上で検証課題として扱います<sup><a href="#ref-76">[76]</a></sup>。</p>
 </div>
 </div>
 
@@ -697,72 +693,89 @@ href="#ref-65">[65]</a></sup><sup><a href="#ref-66">[66]</a></sup>。</li>
 
 <!-- EEG Consciousness Roadmap -->
 <section class="section" id="eeg-consciousness-roadmap">
-<h2 class="section-title">EEGで意識を測る：複雑性×摂動応答×臨界性ロードマップ</h2>
+<h2 class="section-title">EEGで意識を測る：摂動指標を主軸に、安静時指標を補助で読む</h2>
 
-<p>マインドアップロードの「計測」段階は、単に神経信号を高密度に取得するだけでは完結しない。意識レベルや意識内容に関わる情報処理を、<strong>行動報告に依存せず</strong>に定量化し、条件差・個体差・装置差を越えて再現できる「ものさし」へ落とす必要がある。これはWBEの評価（アップロード後に意識が保たれているか）にも直結する。
-</p>
+<p>WBE の「計測」段階で意識関連情報を扱う場合、EEG は有力ですが、単独で「意識がある / ない」を裁定する装置ではありません。現時点の一次文献が強く支持するのは、(a) 摂動応答の複雑性は state-level の benchmark 候補であること、(b) no-report paradigms は report confound を減らす設計条件であること、(c) 安静時複雑性・臨界性は有望だが補助 readout に留まること、(d) 臨床運用では multimodal・multicentre 検証が必要であることです<sup><a href="#ref-47">[47]</a></sup><sup><a href="#ref-51">[51]</a></sup><sup><a href="#ref-52">[52]</a></sup><sup><a href="#ref-100">[100]</a></sup><sup><a href="#ref-102">[102]</a></sup><sup><a href="#ref-103">[103]</a></sup><sup><a href="#ref-104">[104]</a></sup><sup><a href="#ref-105">[105]</a></sup>。したがって本節では、EEG を「単独の意識メータ」ではなく、証拠強度の異なる指標束として扱います。</p>
 
 <div class="note-box">
-<strong>Design Goal</strong><br>
-行動（報告）に依存しない指標、report confoundの分離、摂動による因果、一般化可能性──この4点を満たす評価系を、EEG中心に構築する。
+<strong>この節の site rule</strong><br>
+no-report は <strong>confound control</strong>、PCI/PCI-ST は <strong>主 benchmark 候補</strong>、安静時複雑性・臨界性は <strong>補助 / 探索トラック</strong>、臨床主張は <strong>multimodal external validation</strong> が揃うまで繰り上げません。
 </div>
 
-<h3>強い結論に近づくための4要件</h3>
+<h3>この節で先に固定する4条件</h3>
 <ol style="margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.6;">
-<li style="margin-bottom: 8px;">
-<strong>行動（報告）に依存しない意識指標</strong>：感覚入力や応答が制限されても推定できる指標（例：摂動複雑性）<sup><a
-href="#ref-47">[47]</a></sup>
-</li>
-<li style="margin-bottom: 8px;"><strong>report
-confoundの切り分け</strong>：no-reportパラダイム等で、知覚そのものと「報告に必要な後段処理」を分離する<sup><a
-href="#ref-48">[48]</a></sup></li>
-<li style="margin-bottom: 8px;">
-<strong>相関ではなく因果</strong>：摂動（TMS等）に対する応答伝播の崩れ／維持を介して、結合性の因果的読み出しを行う<sup><a
-href="#ref-49">[49]</a></sup>
-</li>
-<li style="margin-bottom: 8px;"><strong>一般化（頑健性）</strong>：被験者・条件・装置をまたいでも成立するパイプラインと検証設計（再現性・外部データ）
-</li>
+<li style="margin-bottom: 8px;"><strong>report confound を先に潰す</strong>：no-report paradigms は意識 readout そのものではなく、知覚と報告後処理を切り分けるための設計条件です<sup><a href="#ref-48">[48]</a></sup><sup><a href="#ref-102">[102]</a></sup><sup><a href="#ref-103">[103]</a></sup>。</li>
+<li style="margin-bottom: 8px;"><strong>摂動 benchmark を主軸に置く</strong>：PCI/PCI-ST は altered states や disorders of consciousness をまたぐ有力 benchmark ですが、TMS-EEG の刺激条件とアーチファクト管理が前提です<sup><a href="#ref-47">[47]</a></sup><sup><a href="#ref-51">[51]</a></sup><sup><a href="#ref-100">[100]</a></sup>。</li>
+<li style="margin-bottom: 8px;"><strong>安静時指標は外部較正つきで使う</strong>：LZ 複雑性や臨界性は有望ですが、摂動指標や臨床アウトカムと較正しない限り、単独での主判定には使いません<sup><a href="#ref-50">[50]</a></sup><sup><a href="#ref-52">[52]</a></sup><sup><a href="#ref-104">[104]</a></sup>。</li>
+<li style="margin-bottom: 8px;"><strong>臨床主張は multimodal で外部妥当化する</strong>：単一指標の見栄えより、行動評価・画像・電気生理を束ねた incremental validity を重視します<sup><a href="#ref-55">[55]</a></sup><sup><a href="#ref-105">[105]</a></sup>。</li>
 </ol>
 
-<h3>主要 readout 候補：I/O「揺らぎ」をどう計測するか</h3>
-<p>本サイトでは、意識を情報処理の「揺らぎ」と捉える直観を、査読耐性の高い定量指標へ接続するために、次の三系統を <strong>候補 readout</strong> として追跡します。ただし、これらを単独の pass/fail 指標には置かず、OOD 一般化、摂動応答、棄権、不確実性と束で読みます。</p>
-<ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; line-height: 1.6;">
-<li style="margin-bottom: 8px;"><strong>複雑性（complexity）</strong>：安静時EEGのLZ複雑性など、状態依存で変化する指標<sup><a
-href="#ref-50">[50]</a></sup>。状態差を拾いやすい一方で、単独では因果構造や同一性を保証しません。</li>
-<li style="margin-bottom: 8px;"><strong>摂動応答の複雑性（perturbational
-complexity）</strong>：刺激に対する状態遷移・次元圧縮に基づく指標（PCI/PCI-ST）<sup><a
-href="#ref-47">[47]</a></sup><sup><a href="#ref-51">[51]</a></sup>。強い benchmark 候補ですが、TMS-EEG や刺激設計の条件管理を外すと解釈が不安定になります<sup><a href="#ref-100">[100]</a></sup>。</li>
-<li style="margin-bottom: 8px;">
-<strong>臨界性（criticality）</strong>：脳活動が秩序と無秩序の境界、いわゆる「カオスの縁（edge-of-chaos）」に位置することで、複雑性と摂動感受性が最大化される力学状態。安静時EEGの臨界性指標が、意識レベルや意識能力を予測する有望候補となっている<sup><a
-href="#ref-52">[52]</a>, <a href="#ref-56">[56]</a></sup>一方で、病態・装置・課題をまたいだ一般化と因果的解釈はまだ十分固定されていません。
-</li>
-</ul>
-<p>この枠組みでは、I/Oは次のように読み替えられる：<strong>I（Input）＝摂動（刺激・介入）</strong>、<strong>O（Output）＝脳の複雑性応答</strong>、そしてその背景として<strong>臨界性</strong>を扱う。
-</p>
-
-<h3>研究の芯：2つの路線（A→Bの順で積む）</h3>
+<h3>証拠強度の違う4トラック</h3>
 <table class="data-table">
 <thead>
 <tr>
-<th>Route</th>
+<th>トラック</th>
+<th>一次文献が今支持すること</th>
+<th>まだ言えないこと</th>
+<th>このサイトでの位置づけ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PCI / PCI-ST</strong></td>
+<td>摂動に対する複雑な応答は、麻酔・睡眠・DoC をまたぐ state-level benchmark 候補になります<sup><a href="#ref-47">[47]</a></sup><sup><a href="#ref-51">[51]</a></sup><sup><a href="#ref-55">[55]</a></sup>。</td>
+<td>意識内容、本人性、理論の当否を単独で裁定するものではありません。TMS-EEG の厳密なアーチファクト管理を外すと比較不能になります<sup><a href="#ref-100">[100]</a></sup>。</td>
+<td><strong>主 benchmark 候補</strong></td>
+</tr>
+<tr>
+<td><strong>No-report paradigms</strong></td>
+<td>visual / auditory の両方で、post-perceptual processing と conscious content の分離に効く設計条件であることが強まりました<sup><a href="#ref-48">[48]</a></sup><sup><a href="#ref-102">[102]</a></sup><sup><a href="#ref-103">[103]</a></sup>。</td>
+<td>それ自体が bedside meter になるわけではなく、意識レベルの普遍 readout も自動的には与えません。</td>
+<td><strong>confound control</strong></td>
+</tr>
+<tr>
+<td><strong>安静時複雑性 / 臨界性</strong></td>
+<td>麻酔に伴う変化や、特定 cohort における PCI との関連は報告されています<sup><a href="#ref-50">[50]</a></sup><sup><a href="#ref-52">[52]</a></sup><sup><a href="#ref-56">[56]</a></sup>。</td>
+<td>摂動指標の置換ではありません。MCS では spontaneous marker と evoked marker が解離しうるため、同一視は危険です<sup><a href="#ref-104">[104]</a></sup>。</td>
+<td><strong>補助 / 探索トラック</strong></td>
+</tr>
+<tr>
+<td><strong>Multimodal clinical panel</strong></td>
+<td>単一指標より、行動評価・EEG・画像・臨床変数を束ねた multicentre モデルの方が診断 / 予後に強い可能性があります<sup><a href="#ref-105">[105]</a></sup>。</td>
+<td>まだ「世界標準の単独指標」はなく、施設間差・欠測・測定負荷を含む運用問題が残ります。</td>
+<td><strong>deployability gate</strong></td>
+</tr>
+</tbody>
+</table>
+
+<h3>研究の優先順位（A→C）</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th>Track</th>
 <th>狙い</th>
-<th>強み</th>
-<th>主な課題</th>
+<th>いま優先する理由</th>
+<th>先へ進む条件</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>A</td>
-<td>ベッドサイド意識メータ（行動不能でも推定）</td>
-<td>臨床価値が高く、評価指標（PCI/PCI-ST）の議論が組みやすい<sup><a href="#ref-47">[47]</a></sup><sup><a
-href="#ref-55">[55]</a></sup></td>
-<td>摂動系（TMS等）の導入・安全性・運用コスト</td>
+<td>摂動 benchmark を確立する</td>
+<td>現時点で最も検証強度が高く、状態差をまたいだ比較がしやすいからです<sup><a href="#ref-47">[47]</a></sup><sup><a href="#ref-51">[51]</a></sup>。</td>
+<td>TMS-EEG / 刺激系のログ、アーチファクト窓、再テスト信頼性を公開すること<sup><a href="#ref-100">[100]</a></sup>。</td>
 </tr>
 <tr>
 <td>B</td>
-<td>臨界性からの統一説明（複雑性・摂動応答・伝播）</td>
-<td>安静時EEGからの予測など、装置制約が小さい方向へ拡張できる<sup><a href="#ref-52">[52]</a></sup></td>
-<td>交絡の統制と因果の取り方（介入設計）が難しい</td>
+<td>安静時 proxy を benchmark に較正する</td>
+<td>装置負荷を下げられる一方、摂動指標との置換可能性はまだ示されていないからです<sup><a href="#ref-52">[52]</a></sup><sup><a href="#ref-104">[104]</a></sup>。</td>
+<td>同一 cohort で PCI / 行動 / 臨床アウトカムとの外部較正を通すこと。</td>
+</tr>
+<tr>
+<td>C</td>
+<td>multimodal・multicentre で外部妥当化する</td>
+<td>臨床価値は単一 lab の成功ではなく、増分予測力と施設外再現性で決まるからです<sup><a href="#ref-105">[105]</a></sup>。</td>
+<td>behaviour-only baseline を上回ること、欠測に頑健であること、校正誤差を公開すること。</td>
 </tr>
 </tbody>
 </table>
@@ -773,22 +786,19 @@ href="#ref-55">[55]</a></sup></td>
 <div class="stage-number"></div>
 <div class="stage-body">
 <h4>フェーズ0：基盤整備（〜1年）—「測れる」「再現できる」を固める</h4>
-<p>EEG解析パイプラインを固定し、複雑性・臨界性・report confound分離を同一データ上で回せる状態にする。</p>
+<p>EEG解析パイプラインを固定し、安静時指標と report confound 制御を同一データ上で再現できる状態にします。</p>
 <ul
 style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; line-height: 1.6;">
 <li style="margin-bottom: 8px;">前処理・アーチファクト除去・ログまで含む再現可能な解析（BIDS等）</li>
-<li style="margin-bottom: 8px;">公開データで、麻酔/鎮静に伴う<strong>複雑性・スペクトル・結合性</strong>の変化を再現する<sup><a
-href="#ref-23">[23]</a></sup><sup><a
-href="#ref-50">[50]</a></sup><sup><a href="#ref-53">[53]</a></sup></li>
-<li style="margin-bottom: 8px;">no-report設計（瞳孔/EOG/OKN等）を最初から組み込み<sup><a
-href="#ref-48">[48]</a></sup></li>
-<li style="margin-bottom: 8px;">多モーダルI/O（EEG＋EOG/瞳孔＋ECG/PPG）までを現実的に統合</li>
+<li style="margin-bottom: 8px;">公開データで、麻酔/鎮静に伴う<strong>複雑性・スペクトル・結合性</strong>の変化を再現する<sup><a href="#ref-23">[23]</a></sup><sup><a href="#ref-50">[50]</a></sup><sup><a href="#ref-53">[53]</a></sup></li>
+<li style="margin-bottom: 8px;">report あり / なし条件を併走できる課題設計にし、visual / auditory の no-report 文献と整合させる<sup><a href="#ref-102">[102]</a></sup><sup><a href="#ref-103">[103]</a></sup></li>
+<li style="margin-bottom: 8px;">同一データで LZ 複雑性・臨界性・スペクトル指標の再テスト信頼性を先に点検する</li>
 </ul>
 <div class="tag-list" style="margin-top: 12px;">
 <span class="tag">Reproducible Pipeline</span>
 <span class="tag">No-Report</span>
-<span class="tag">LZ Complexity</span>
-<span class="tag">Criticality</span>
+<span class="tag">Spontaneous Metrics</span>
+<span class="tag">Reliability</span>
 </div>
 </div>
 </div>
@@ -796,19 +806,17 @@ href="#ref-48">[48]</a></sup></li>
 <div class="stage-item">
 <div class="stage-number"></div>
 <div class="stage-body">
-<h4>フェーズ1：摂動応答（1〜2年目相当）—「PCI/PCI-STライン」を握る</h4>
-<p>摂動（TMSや感覚刺激等）に対する応答複雑性を中核指標として整備し、行動非依存の推定に接続する。</p>
+<h4>フェーズ1：摂動 benchmark（1〜2年目相当）—「PCI/PCI-STライン」を監査可能にする</h4>
+<p>摂動（TMSや感覚刺激等）に対する応答複雑性を主 benchmark として整備し、state-level comparison を可能にします。</p>
 <ul
 style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; line-height: 1.6;">
-<li style="margin-bottom: 8px;">理想：TMS-EEGでPCI系指標を扱う<sup><a
-href="#ref-47">[47]</a></sup></li>
-<li style="margin-bottom: 8px;">現実解：PCI-STの思想（刺激応答の状態遷移・次元圧縮）を他の摂動へ移植<sup><a
-href="#ref-51">[51]</a></sup></li>
+<li style="margin-bottom: 8px;">理想：TMS-EEG で PCI 系指標を扱い、刺激部位・強度・マスキング・アーチファクト窓まで公開する<sup><a href="#ref-47">[47]</a></sup><sup><a href="#ref-100">[100]</a></sup></li>
+<li style="margin-bottom: 8px;">現実解：PCI-ST の思想を他の摂動へ移植する場合も、比較対象と failure mode を先に固定する<sup><a href="#ref-51">[51]</a></sup></li>
 </ul>
 <div class="tag-list" style="margin-top: 12px;">
 <span class="tag">Perturbation</span>
 <span class="tag">PCI / PCI-ST</span>
-<span class="tag">Causal Propagation</span>
+<span class="tag">Artifact Audit</span>
 </div>
 </div>
 </div>
@@ -816,18 +824,13 @@ href="#ref-51">[51]</a></sup></li>
 <div class="stage-item">
 <div class="stage-number"></div>
 <div class="stage-body">
-<h4>フェーズ2：安静時から推定（2〜3年目相当）—「摂動なし」へ拡張</h4>
-<p>安静時EEGの力学指標（臨界性など）から、意識能力や摂動応答指標を予測する方向へ伸ばす。これにより、侵襲的な摂動なしでの意識評価、すなわち臨床での大規模スクリーニングの可能性が拓かれる。
-</p>
-<p style="margin-top: 8px;">
-最新の研究は、この方向性を支持している。安静時EEGの臨界性指標は、麻酔に伴う意識消失と関連し、摂動複雑性（PCI系）を予測し得ることが報告されている<sup><a
-href="#ref-52">[52]</a></sup>。また、臨界性が情報処理に利点をもたらし得るという理論的背景（臨界性仮説）も整理されており<sup><a
-href="#ref-56">[56]</a></sup>、両アプローチを接続する枠組みとして再検討する価値がある。
-</p>
+<h4>フェーズ2：安静時 proxy の較正（2〜3年目相当）—「摂動なし」は代替ではなく補助として詰める</h4>
+<p>安静時 EEG の複雑性や臨界性を、摂動指標・行動・臨床アウトカムに対して外部較正します。目的は PCI の置換ではなく、どこまで proxy として使えるかを定量化することです。</p>
+<p style="margin-top: 8px;">Maschke らは麻酔誘導下で臨界性指標と PCI の関連を示しましたが<sup><a href="#ref-52">[52]</a></sup>、Adam らは MCS で spontaneous marker と evoked marker が解離しうることを報告しています<sup><a href="#ref-104">[104]</a></sup>。したがって、「摂動なしで十分」とは書かず、condition-specific な proxy 性能を監査します。</p>
 <div class="tag-list" style="margin-top: 12px;">
 <span class="tag">Resting-State EEG</span>
 <span class="tag">Critical Dynamics</span>
-<span class="tag">Bedside</span>
+<span class="tag">External Calibration</span>
 </div>
 </div>
 </div>
@@ -835,18 +838,17 @@ href="#ref-56">[56]</a></sup>、両アプローチを接続する枠組みとし
 <div class="stage-item">
 <div class="stage-number"></div>
 <div class="stage-body">
-<h4>フェーズ3：因果（3〜4年目相当）—「条件」であることを示す</h4>
-<p>複雑性／臨界性／摂動応答が、単なる相関ではなく意識の条件であることを、介入または状態操作で押さえる。</p>
+<h4>フェーズ3：外部妥当化（3〜4年目相当）—「単独指標」ではなく multimodal gain を示す</h4>
+<p>最終段階では、EEG 指標を behaviour / imaging / clinical variables と束ね、診断・予後・欠測耐性の観点で incremental validity を評価します。</p>
 <ul
 style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; line-height: 1.6;">
-<li style="margin-bottom: 8px;">介入で指標を動かし、意識関連アウトカムの変化と対応づける</li>
-<li style="margin-bottom: 8px;">薬理・鎮静・麻酔など、状態変化に沿って系列を揃える<sup><a
-href="#ref-50">[50]</a></sup></li>
+<li style="margin-bottom: 8px;">単一指標の AUC ではなく、baseline をどれだけ上回るか、校正が保たれるかを報告する<sup><a href="#ref-105">[105]</a></sup></li>
+<li style="margin-bottom: 8px;">施設差・測定負荷・欠測を含めて、deployability を評価する</li>
 </ul>
 <div class="tag-list" style="margin-top: 12px;">
-<span class="tag">Causality</span>
-<span class="tag">Intervention</span>
-<span class="tag">Anesthesia</span>
+<span class="tag">Multimodal</span>
+<span class="tag">Calibration</span>
+<span class="tag">External Validation</span>
 </div>
 </div>
 </div>
@@ -856,22 +858,17 @@ href="#ref-50">[50]</a></sup></li>
 <h5>直近1〜3か月のToDo（最小で効く順）</h5>
 <ul
 style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 13px; line-height: 1.5; color: #d7e2cf;">
-<li style="margin-bottom: 6px;">解析パイプラインを固定（自動化・ログ・再現性）</li>
-<li style="margin-bottom: 6px;">同一EEGで「複雑性＋臨界性」を計算し、再テスト信頼性を評価</li>
-<li style="margin-bottom: 6px;">reportあり／なし条件を併走できる実験設計にする<sup><a href="#ref-48">[48]</a></sup>
-</li>
-<li style="margin-bottom: 6px;">公開データで、麻酔/鎮静に伴う変化を一度再現する<sup><a href="#ref-50">[50]</a></sup>
-</li>
-<li>摂動導入の可否に応じて、PCI/PCI-ST路線の技術調査と共同先探索<sup><a href="#ref-51">[51]</a></sup></li>
+<li style="margin-bottom: 6px;">解析パイプラインとログ schema を固定し、安静時指標の再テスト信頼性を先に出す</li>
+<li style="margin-bottom: 6px;">report あり / なし条件を visual / auditory の no-report 文献と対応づけて設計する<sup><a href="#ref-102">[102]</a></sup><sup><a href="#ref-103">[103]</a></sup></li>
+<li style="margin-bottom: 6px;">公開データで、麻酔/鎮静に伴う変化を一度再現する<sup><a href="#ref-50">[50]</a></sup><sup><a href="#ref-52">[52]</a></sup></li>
+<li style="margin-bottom: 6px;">摂動導入の可否に応じて、PCI/PCI-ST 路線の刺激ログとアーチファクト窓を事前登録する<sup><a href="#ref-51">[51]</a></sup><sup><a href="#ref-100">[100]</a></sup></li>
+<li>安静時 proxy を bedside meter と誤読しないよう、multimodal validation の公開指標を先に決める<sup><a href="#ref-105">[105]</a></sup></li>
 </ul>
 </div>
 
-<h3>理論的立ち位置と研究のインパクト</h3>
-<p>本ロードマップは、特定の意識理論（IIT,
-GNWT等）の正しさを証明すること自体を目的としない。むしろ、それらの理論に「巻き込まれず、利用する」というプラグマティックな立ち位置をとる。すなわち、複雑性、摂動応答、臨界性といった<strong>測定可能な量</strong>を軸に研究を進め、各理論が提唱する仮説を検証するための「ものさし」を提供することを目指す。このアプローチは、近年の理論対立を共同検証によって解決しようとする学術的潮流とも合致する<sup><a
-href="#ref-54">[54]</a></sup>。</p>
-<p>この研究の先に目指すのは、単一の論文に留まらない「ノーベル級のインパクト」を生み出す構造の設計である。具体的には、(1)臨床現場で利用可能な「世界標準の意識指標」を確立すること、(2)介入によって意識状態を操作し「相関から因果へ」と議論を深めること、そして(3)重症患者の診断支援など「臨床で実際に人を救う」こと、の3点を満たすことで、研究の価値を社会的に実証する。
-</p>
+<h3>技術的立ち位置と到達目標</h3>
+<p>本ロードマップは、特定の意識理論の正しさを証明することではなく、摂動指標・no-report 制御・安静時 proxy・multimodal 臨床評価を、同じ監査スキーマで比較可能にすることを目指します。Ferrante らの adversarial test が示したのは「単一理論への収束」ではなく、理論と課題設計を分けて監査すべきだという点です<sup><a href="#ref-54">[54]</a></sup>。</p>
+<p>したがって本節の到達目標は、「世界標準の単独意識メータ」を宣言することではありません。Ferreiro らの multicentre 研究が示す通り、診断・予後は behaviour 単独より multimodal 統合で改善しうる一方、各指標は互いに代替ではありません<sup><a href="#ref-105">[105]</a></sup>。本サイトが目指す成果は、事前登録・外部妥当化・校正・棄権を含む公開 benchmark を積み上げることです。</p>
 </section>
 
 <!-- Technical Proposals -->
@@ -1231,6 +1228,10 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <li id="ref-99" value="99">Staniek, M. & Lehnertz, K. (2008). Symbolic Transfer Entropy. <em>Physical Review Letters</em>, 100(15), 158101. <a href="https://doi.org/10.1103/PhysRevLett.100.158101">doi:10.1103/PhysRevLett.100.158101</a></li>
 <li id="ref-100" value="100">Hernandez-Pavon, J. C., Metsomaa, J., Mutanen, T. P., et al. (2023). TMS combined with EEG: Recommendations and open issues. <em>Brain Stimulation</em>, 16(2), 350–366. <a href="https://doi.org/10.1016/j.brs.2023.02.009">doi:10.1016/j.brs.2023.02.009</a></li>
 <li id="ref-101" value="101">Srinivasan, R., Nunez, P. L., Tucker, D. M., Silberstein, R. B., & Cadusch, P. J. (1996). Spatial sampling and filtering of EEG with spline Laplacians to estimate cortical potentials. <em>Brain Topography</em>, 8(4), 355–366. <a href="https://doi.org/10.1007/BF01186911">doi:10.1007/BF01186911</a></li>
+<li id="ref-102" value="102">Cohen, M. A., et al. (2024). Neural signatures of visual awareness independent of postperceptual processing. <em>Cerebral Cortex</em>, 34(11), bhae415. <a href="https://doi.org/10.1093/cercor/bhae415">doi:10.1093/cercor/bhae415</a></li>
+<li id="ref-103" value="103">Dellert, T., et al. (2025). Neural correlates of auditory awareness under no-report conditions. <em>Current Biology</em>, 35(12), 2790–2804.e5. <a href="https://doi.org/10.1016/j.cub.2025.03.031">doi:10.1016/j.cub.2025.03.031</a></li>
+<li id="ref-104" value="104">Adam, E., et al. (2025). A dissociation between spontaneous and evoked EEG markers of consciousness in the minimally conscious state. <em>Brain</em>, 148(11), 3490–3505. <a href="https://doi.org/10.1093/brain/awaf332">doi:10.1093/brain/awaf332</a></li>
+<li id="ref-105" value="105">Ferreiro, D., et al. (2025). Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness. <em>Brain</em>. <a href="https://doi.org/10.1093/brain/awaf287">doi:10.1093/brain/awaf287</a></li>
 </ol>
 </section>
 
@@ -1310,10 +1311,10 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <li><a href="tech_roadmap.html">技術ロードマップ（学習）→</a></li>
 <li><a href="#eeg-consciousness-roadmap">Consciousness Metrics (EEG) →</a>
 <ul style="padding-left: 15px; margin-top: 4px; list-style-type: '— ';">
-<li>行動非依存の意識指標（PCI/PCI-ST）<sup><a href="#ref-47">[47]</a></sup></li>
+<li>摂動 benchmark（PCI/PCI-ST）<sup><a href="#ref-47">[47]</a></sup></li>
 <li>no-report設計でreport confoundを分離<sup><a href="#ref-48">[48]</a></sup></li>
-<li>安静時の複雑性・臨界性指標の整備<sup><a href="#ref-50">[50]</a></sup><sup><a href="#ref-52">[52]</a></sup></li>
-<li>臨床（鎮静/麻酔/重症）への一般化を重視<sup><a href="#ref-55">[55]</a></sup></li>
+<li>安静時指標は補助トラックとして較正<sup><a href="#ref-50">[50]</a></sup><sup><a href="#ref-52">[52]</a></sup></li>
+<li>multimodal 一般化を重視<sup><a href="#ref-105">[105]</a></sup></li>
 </ul>
 </li>
 </ul>
