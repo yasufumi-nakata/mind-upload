@@ -286,5 +286,12 @@ recommended_pages:
 - `U12/U15`は制度設計（法務・倫理・監査要件）を先に定義し、EEG側は監査ログ要件の裏取りに使うのが安全です。
 - `U10`は熱力学の直接計測が未整備なので、まずは理論整合とproxy検証に限定する方が過剰主張を避けられます。
 
+## 2026-03-14 10:02 JST 再検証ログ（本run）
+
+- `research_harvest_50.md` 由来の `Ux-RQy` 行は `60件`（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）を再確認。
+- 本ページ内で参照している EEG-DATA は `17 ID`（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）で、`EEG-DATA/eeg_dataset_summary_ja.csv` 上の欠落 `0` を確認。
+- 助成キー `G1-G6` は `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の実在IDと一致（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）。
+- 運用方針は継続して `1RQ=1検証命題=1応募テーマ`。`A/B` は実験計画、`C` は制度・監査設計で出す。
+
 </article>
 </main>
