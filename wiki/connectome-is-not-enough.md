@@ -12,12 +12,12 @@ reading_time: "15〜20分"
 page_intro: "このページは、『コネクトームが取れれば脳の再現に十分ではないか』という直感を、一次文献に基づいて分解するためのページです。哲学や法制度ではなく、どの状態変数が欠けると何が言えなくなるか、さらに connectome-constrained でもどの推定上の壁が残るかに絞って整理します。"
 accuracy_note: "ここで示すのは『最低限これを外すと主張が弱くなる』という整理と、『配線制約を入れてもなお残る縮退』の整理であり、最終的な十分条件が確定したという意味ではありません。"
 page_highlights:
-  - "配線図だけでは落ちる論点を、5つの状態クラスと1つの推定上の壁に分けて整理します。"
+  - "配線図だけでは落ちる論点を、6つの状態クラスと1つの推定上の壁に分けて整理します。"
   - "一次文献だけを使い、state variable の欠落と parameter degeneracy を切り分けます。"
   - "このサイトで connectome-complete と connectome-constrained model をどう読み替えるかの運用ルールも固定します。"
 known_points:
   - "全脳 connectome の作成は大きく前進していますが、それだけで動的再現が完了したとは言えません。"
-  - "シナプス効率、遅延、神経修飾、グリア、細胞型ラベルは、静的な edge list からは落ちやすい情報です。"
+  - "シナプス効率、遅延、神経修飾、グリア、細胞型ラベル、内在興奮性 / 恒常性 set point は、静的な edge list からは落ちやすい情報です。"
   - "粗い生理 proxy を ground truth と混同すると、内部状態の主張を過大化しやすくなります。"
   - "connectome-constrained なモデルでも、未測定の細胞・シナプス・修飾パラメータが残ると dynamics は縮退しえます。"
 unknown_points:
@@ -29,6 +29,9 @@ wiki_links:
   - label: "Wiki: WBEの基本"
     url: "/wiki/mind-upload-basics.html"
     description: "この論点の前提になる全体像を初歩から整理します。"
+  - label: "Wiki: 恒常性可塑性と維持状態"
+    url: "/wiki/homeostatic-plasticity-and-maintenance-state.html"
+    description: "内在興奮性や発火 set point がなぜ別変数かを深掘りします。"
   - label: "Wiki: Decode と Emulate"
     url: "/wiki/decode-vs-emulate.html"
     description: "出力の翻訳と内部生成の違いを整理します。"
@@ -50,7 +53,7 @@ recommended_pages:
 <div class="abstract-box">
 <h2>結論</h2>
 <p>
-配線図は WBE の重要な土台ですが、<strong>それだけでは動的再現の下限要件になりません</strong>。同じ隣接関係でも、細胞型ラベル、シナプス効率、伝導遅延、神経修飾、グリア結合状態が違えば、学習、位相同期、覚醒度依存の応答、長期安定性は大きく変わります。さらに、2024-2025 年の connectome-constrained modelling 研究は、<strong>配線制約を入れても未測定パラメータと省略機構のために dynamics の縮退が残る</strong>ことを示しました。したがって、このサイトでは <strong>connectome-complete を structural atlas / scaffold の達成</strong>として扱い、<strong>emulation-complete と言い換えません</strong>。同様に、<strong>connectome-constrained model が一部の活動を再現した</strong>ことも、そのまま state-complete reconstruction とは読みません。
+配線図は WBE の重要な土台ですが、<strong>それだけでは動的再現の下限要件になりません</strong>。同じ隣接関係でも、細胞型ラベル、内在興奮性、シナプス効率、伝導遅延、神経修飾、グリア結合状態が違えば、学習、位相同期、覚醒度依存の応答、長期安定性は大きく変わります。さらに、2024-2025 年の connectome-constrained modelling 研究は、<strong>配線制約を入れても未測定パラメータと省略機構のために dynamics の縮退が残る</strong>ことを示しました。したがって、このサイトでは <strong>connectome-complete を structural atlas / scaffold の達成</strong>として扱い、<strong>emulation-complete と言い換えません</strong>。同様に、<strong>connectome-constrained model が一部の活動を再現した</strong>ことも、そのまま state-complete reconstruction とは読みません。
 </p>
 </div>
 
@@ -62,7 +65,7 @@ recommended_pages:
 </div>
 
 <section class="section" id="bottom-line">
-<h2 class="section-title">先に固定する 5 つの状態クラスと 1 つの推定上の壁</h2>
+<h2 class="section-title">先に固定する 6 つの状態クラスと 1 つの推定上の壁</h2>
 <table class="data-table">
 <thead>
 <tr>
@@ -78,6 +81,12 @@ recommended_pages:
 <td>同じ隣接関係でも、転写型ごとに結合モチーフ、シナプス特性、髄鞘化の傾向が変わります。</td>
 <td>unlabeled graph でも回路の物理的意味は同じだ、と読むことです。</td>
 <td>same-brain transcriptomics / physiology と結んでいない限り、構造 atlas と候補 scaffold に留めます。</td>
+</tr>
+<tr>
+<td><strong>内在興奮性・恒常性 set point</strong></td>
+<td>同じ cell type と graph でも、ion channel expression、threshold、gain、発火率の目標値が違えば、同じ入力に対する応答と回復の仕方が変わります。</td>
+<td>cell-type ラベルや短い活動一致があれば、長期ダイナミクスもほぼ決まる、と読むことです。</td>
+<td>threshold / gain / recovery / homeostatic controller を測っていない限り、長期安定性や記憶配分の主張は latent state 付きに留めます。</td>
 </tr>
 <tr>
 <td><strong>シナプス効率・短期状態</strong></td>
@@ -111,6 +120,12 @@ recommended_pages:
 </tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>今回追加した不足変数</strong>
+<p>
+従来の 5 クラスに加えて、2026-03 の再監査では <strong>内在興奮性・恒常性 set point</strong> を独立クラスとして切り出しました。理由は、cell-type ラベルや connectome を持っていても、threshold、gain、発火率の戻り先、分子ターンオーバー下の維持機構が違えば、長期予測と摂動回復がまだ定まらないためです。一次文献のまとまった整理は <a href="homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に分けております。
+</p>
+</div>
 </section>
 
 <section class="section" id="connectome-progress">
@@ -140,29 +155,34 @@ connectome-complete は「何がつながっているか」がかなり分かっ
 </section>
 
 <section class="section" id="state-classes">
-<h2 class="section-title">なぜこの 5 クラスが抜けやすいのか</h2>
+<h2 class="section-title">なぜこの 6 クラスが抜けやすいのか</h2>
 
 <h3>1. 細胞型ラベルは node ID の飾りではありません</h3>
 <p>
 Gamlin らは、マウス視覚皮質で予測された Sst transcriptomic types ごとに、接続モチーフ、シナプス特性、髄鞘化が系統的に異なることを示しました。さらに MICrONS Consortium は、哺乳類皮質では cell type の内部にも異なる tuning preference をもつニューロンが含まれうるため、same-brain connectivity と same-brain function を結んで読む必要があることを強調しました。つまり、<strong>同じグラフ構造でも node label と same-brain physiology が違えば回路の物理的意味が変わる</strong>ということです。cell type を落とした unlabeled graph は、圧縮としては便利でも、機能再現の前提情報をかなり失います。
 </p>
 
-<h3>2. シナプスは binary edge ではありません</h3>
+<h3>2. 内在興奮性と恒常性 set point は node label の副産物ではありません</h3>
+<p>
+<a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a> は、同じ transcriptomic type の内部でも morpho-electric phenotype が連続的に広がることを示しました。さらに <a href="https://doi.org/10.1038/nn1639" target="_blank">Schulz et al. (2006)</a> は、同定済みニューロンでも ion channel mRNA と電流量に大きな個体差があることを示し、<a href="https://doi.org/10.1016/j.neuron.2014.04.002" target="_blank">O'Leary et al. (2014)</a> は activity-dependent な channel expression が activity set point を生みうることをモデル化しました。さらに <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a> は in vivo で単一ニューロンごとの firing-rate set point が存在することを示しています。つまり、<strong>cell-type ラベルと graph が分かっていても、threshold、gain、rebound、perturbation 後の戻り先はまだ latent state として残りえます</strong>。
+</p>
+
+<h3>3. シナプスは binary edge ではありません</h3>
 <p>
 Holler らは新皮質シナプスで、超微細構造と release property を結びつけて解析し、単純な「つながっている/いない」では伝達特性を表せないことを示しました。Matsuzaki らは単一 dendritic spine における LTP 誘導で、spine enlargement と AMPA 電流増加が結びつくことを示しています。さらに Vardalaki らは、成体新皮質でもおよそ 25% の filopodia が AMPA 受容体を欠く silent synapse の構造基盤になりうることを示しました。したがって、<strong>edge list だけでは current state の weight も plastic history も、そもそも機能的に active かどうかも落ちます</strong>。
 </p>
 
-<h3>3. 遅延と髄鞘は timing の一部です</h3>
+<h3>4. 遅延と髄鞘は timing の一部です</h3>
 <p>
 Gibson らは神経活動が oligodendrogenesis と adaptive myelination を促進することを示し、McKenzie らは motor skill learning に active central myelination が必要であることを報告しました。さらに Micheva らは、PV interneuron の局所軸索でも髄鞘化の程度が伝導速度と相関することを示しました。つまり、<strong>同じ配線でも timing state が違えば、局所抑制回路や学習のダイナミクスが変わる</strong>ため、delay を graph の外へ追い出すことはできません。
 </p>
 
-<h3>4. 神経修飾は「1つの気分スカラー」ではありません</h3>
+<h3>5. 神経修飾は「1つの気分スカラー」ではありません</h3>
 <p>
 Reimer らは、瞳孔変動が皮質内の adrenergic と cholinergic activity の両方を追うことを示しました。これは逆に、<strong>瞳孔径がどちらか一方の transmitter state を一意に表すわけではない</strong>ことも意味します。さらに Neyhart らは、皮質 ACh が cholinergic axon activity と行動状態からかなり予測できる一方で、<strong>近傍軸索からの距離と clearance kinetics に依存する局所性</strong>も持つことを示しました。したがって、人で瞳孔径や HRV を使うのは有用でも、それをトランスミッタ特異的・領域特異的な内部状態の ground truth と見なすのは過大主張です。必要なのは「良い proxy かどうか」だけではなく、<strong>何の proxy で何の proxy ではないか</strong>を明記することでございます。
 </p>
 
-<h3>5. グリアは後付けの補助変数ではありません</h3>
+<h3>6. グリアは後付けの補助変数ではありません</h3>
 <p>
 Adamsky らは astrocytic activation が de novo neuronal potentiation と memory enhancement を生みうることを示しました。Cahill らは、局所的で瞬間的な neurotransmitter input が、分単位にわたる広い astrocyte network の応答へ符号化されることを報告しています。したがって、<strong>グリアを無視したモデルは、可塑性や slow network state を部分的に欠いたモデル</strong>として扱うべきです。ここで重要なのは、「グリアも関わるらしい」という一般論ではなく、<strong>どの時定数のどの状態変数を捨てたか</strong>をモデル仕様として明示することでございます。
 </p>
@@ -175,6 +195,7 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <ul>
 <li><strong>connectome-complete：</strong>構造アトラス、候補 scaffold、圧縮の出発点として扱います。L2/L3 の emulation 達成とは書きません。</li>
 <li><strong>connectome-constrained model：</strong>まずは hypothesis engine / conditional model として扱います。内部状態の唯一解とは書きません。</li>
+<li><strong>intrinsic excitability / homeostatic set point：</strong>cell-type ラベルや短時間の活動一致から自動推定されたことにはしません。測っていなければ latent state と書きます。</li>
 <li><strong>pupil / HRV：</strong>人データでは有用な state covariate ですが、トランスミッタ特異的 ground truth としては扱いません。</li>
 <li><strong>state variable が無いとき：</strong>推定したなら誤差と棄権条件を、推定していないなら absent と明記します。</li>
 <li><strong>weights / delays が無いとき：</strong>phase、timing、介入応答、閉ループ安定性の主張は降格します。</li>
@@ -196,11 +217,11 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 </tr>
 <tr>
 <td><strong>条件付き dynamical claim</strong></td>
-<td>same-brain function または perturbation、欠測 state variable 一覧、proxy の限界、family / uncertainty を添えます。</td>
+<td>same-brain function または perturbation、欠測 state variable 一覧、proxy の限界、family / uncertainty、さらに intrinsic excitability / homeostatic set point を測っていない場合はその不在を添えます。</td>
 </tr>
 <tr>
 <td><strong>介入・閉ループ claim</strong></td>
-<td>上記に加え、weights / delays / neuromodulation の較正ルート、外部妥当化、abstention / stop 条件まで公開します。</td>
+<td>上記に加え、weights / delays / neuromodulation / excitability-homeostasis の較正ルート、外部妥当化、abstention / stop 条件まで公開します。</td>
 </tr>
 </tbody>
 </table>
@@ -234,6 +255,7 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <h4>Related Wiki</h4>
 <ul>
 <li><a href="mind-upload-basics.html">WBEの基本 →</a></li>
+<li><a href="homeostatic-plasticity-and-maintenance-state.html">恒常性可塑性と維持状態 →</a></li>
 <li><a href="decode-vs-emulate.html">Decode と Emulate →</a></li>
 <li><a href="claims-and-evidence.html">主張と証拠の読み方 →</a></li>
 </ul>

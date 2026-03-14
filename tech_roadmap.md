@@ -121,7 +121,7 @@ P/M/R/I/V/D の記号や依存関係を初歩から追いたい場合は、先�
 <div class="note-box">
 <strong>『コネクトームが取れたら十分では？』で止まったとき</strong>
 <p>
-R 系列では、配線図だけでなく、細胞型、シナプス効率、遅延と髄鞘、神経修飾、グリアをどう扱うかが分岐点になります。どの状態変数が抜けると何が主張できなくなるかを一次文献から整理したい場合は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> をご覧ください。
+R 系列では、配線図だけでなく、細胞型、内在興奮性 / 恒常性 set point、シナプス効率、遅延と髄鞘、神経修飾、グリアをどう扱うかが分岐点になります。どの状態変数が抜けると何が主張できなくなるかを一次文献から整理したい場合は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> と <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> をご覧ください。
 </p>
 </div>
 <div class="note-box">
@@ -497,14 +497,14 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 <td><strong>connectomics + same-brain function</strong></td>
 <td>構造 scaffold と、同一脳での機能応答の対応です。</td>
 <td>局所回路の wiring rule、cell-type 依存の結線、構造と機能の局所対応を強くできます。</td>
-<td>現在のシナプス効率、神経修飾場、グリア/代謝状態、縦断的 plastic history はまだ別変数です。</td>
+<td>現在のシナプス効率、内在興奮性 / homeostatic set point、神経修飾場、グリア/代謝状態、縦断的 plastic history はまだ別変数です。</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
 <strong>2026-03 補足：multimodal は「全部見えた」の同義語ではありません</strong>
 <p>
-Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et al. (2025) は、HD-EEG と intracranial ground truth を組み合わせると何が監査できるかを一段前進させました。一方、Dorkenwald et al. (2024)、MICrONS Consortium et al. (2025)、Gamlin et al. (2025)、Cahill et al. (2024) が示すのは、構造と局所機能を同じ脳で結びつけても、transcriptomic label、neuromodulatory field、glial network state のような状態クラスが追加で残る、という事実です。したがって、このページでは <strong>観測量が増えた</strong>ことと、<strong>WBE に必要な状態変数が十分に同定できた</strong>ことを分けて扱います。
+Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et al. (2025) は、HD-EEG と intracranial ground truth を組み合わせると何が監査できるかを一段前進させました。一方、Dorkenwald et al. (2024)、MICrONS Consortium et al. (2025)、Gamlin et al. (2025)、Cahill et al. (2024) に加え、内在興奮性と firing-rate set point を扱う一次文献が示すのは、構造と局所機能を同じ脳で結びつけても、transcriptomic label、intrinsic excitability / homeostatic set point、neuromodulatory field、glial network state のような状態クラスが追加で残る、という事実です。したがって、このページでは <strong>観測量が増えた</strong>ことと、<strong>WBE に必要な状態変数が十分に同定できた</strong>ことを分けて扱います。
 </p>
 </div>
 <p><strong>次に必要：</strong>同一の課題・同一個体で、マルチモーダル同時計測（可能な範囲）＋位置合わせ（M5）</p>
@@ -554,10 +554,10 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 <ul>
 <li><strong>非侵襲ヒト計測の上限：</strong>領域〜ネットワーク水準の状態遷移、比較的大域な timing 制約、条件差の追跡です。</li>
 <li><strong>connectomics 前線の上限：</strong>構造 scaffold、局所 functional twin、cell-type 依存結線の監査であって、現在のシナプス効率や神経修飾場までの完全観測ではありません。</li>
-<li><strong>残る潜在状態：</strong>シナプス重み、受容体状態、neuromodulatory field、glial / metabolic state、plastic history は別変数として残ります。</li>
+<li><strong>残る潜在状態：</strong>シナプス重み、受容体状態、intrinsic excitability / homeostatic set point、neuromodulatory field、glial / metabolic state、plastic history は別変数として残ります。</li>
 </ul>
 <p><strong>暫定判定規則：</strong>観測経路がマクロ proxy に留まる場合、このロードマップでは主張をまず <strong>L1〜弱い L2</strong> に留めます。局所回路やシナプス粒度の主張へ上げるには、同一脳での構造・機能対応、外部 ground truth、介入応答のいずれかを追加で要求します。</p>
-<p><strong>次に必要：</strong>仮定(A)(B)(C)ごとに、観測可能性（M1）、同定可能性（R7）、計算可能性（I3）を束で評価し、どの粒度で何を棄権するかまで公開します。背景は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> を参照してください。</p>
+<p><strong>次に必要：</strong>仮定(A)(B)(C)ごとに、観測可能性（M1）、同定可能性（R7）、計算可能性（I3）を束で評価し、どの粒度で何を棄権するかまで公開します。背景は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> と <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> を参照してください。</p>
 </div>
 </details>
 

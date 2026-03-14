@@ -78,6 +78,11 @@ recommended_pages:
 <td><a href="../verification.html#state-completeness-gate">状態変数の完全性ゲート</a> / <a href="../tech_roadmap.html#qa-r10">R10 神経修飾</a></td>
 </tr>
 <tr>
+<td><strong>connectome の次に、内在興奮性や恒常性を深掘りしたい</strong></td>
+<td><a href="homeostatic-plasticity-and-maintenance-state.html">恒常性可塑性と維持状態</a></td>
+<td><a href="../verification.html#state-completeness-gate">状態変数の完全性ゲート</a> / <a href="../tech_roadmap.html#qa-m3">M3 空間粒度</a></td>
+</tr>
+<tr>
 <td><strong>派手な主張を読み違えたくない</strong></td>
 <td><a href="claims-and-evidence.html">主張と証拠の読み方</a></td>
 <td><a href="../verification.html">Verification</a></td>

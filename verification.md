@@ -573,7 +573,7 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 <section class="section" id="state-completeness-gate">
 <h2 class="section-title">状態変数の完全性ゲート</h2>
 <p>
-2026年3月の一次文献監査では、<strong>「配線図がある」こと</strong>と<strong>「生成的に振る舞える」こと</strong>の間に、少なくとも 5 種類の抜けやすい状態変数があることを再確認しました。Dorkenwald et al. (2024)、Holler et al. (2021)、Matsuzaki et al. (2004)、Reimer et al. (2016)、Adamsky et al. (2018)、Micheva et al. (2021)、Gamlin et al. (2025) などを踏まえ、本サイトでは <strong>edge list だけの提出物を L2 以上の合格条件に使いません</strong>。
+2026年3月の一次文献監査では、<strong>「配線図がある」こと</strong>と<strong>「生成的に振る舞える」こと</strong>の間に、少なくとも 6 種類の抜けやすい状態変数があることを再確認しました。既存の細胞型・シナプス・遅延・神経修飾・グリアに加えて、今回あらためて <strong>内在興奮性 / 恒常性 set point</strong> を独立クラスとして切り出しました。したがって本サイトでは <strong>edge list だけの提出物を L2 以上の合格条件に使いません</strong>。
 </p>
 <table class="data-table">
 <thead>
@@ -588,6 +588,11 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 <td><strong>細胞型ラベル</strong></td>
 <td>同じ隣接関係でも、転写型ごとに結合モチーフ、シナプス特性、髄鞘化の傾向が変わります。</td>
 <td>構造アトラスや候補 scaffold としては有用ですが、機能再現の十分条件とは言えません。</td>
+</tr>
+<tr>
+<td><strong>内在興奮性・恒常性 set point</strong></td>
+<td>同じ graph と cell type でも、threshold、gain、firing-rate の戻り先、compensation の仕方が違えば、同じ入力への応答と長期回復は変わります。</td>
+<td>短期の活動一致があっても、長期安定性や記憶配分は latent state 付きに留めます。</td>
 </tr>
 <tr>
 <td><strong>シナプス効率・短期状態</strong></td>
@@ -614,7 +619,7 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 <div class="note-box">
 <strong>ここでの実務ルール</strong>
 <p>
-connectome-complete は <strong>emulation-complete を意味しません</strong>。詳細な一次文献と、どの状態変数を最低提出物に入れるべきかの技術的根拠は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> に集約します。
+connectome-complete は <strong>emulation-complete を意味しません</strong>。詳細な一次文献と、どの状態変数を最低提出物に入れるべきかの技術的根拠は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> に集約します。今回追加した <strong>内在興奮性 / 恒常性 set point</strong> の論点は、<a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に切り出してあります。
 </p>
 </div>
 </section>
