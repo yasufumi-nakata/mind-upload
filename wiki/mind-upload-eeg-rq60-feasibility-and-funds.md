@@ -434,5 +434,12 @@ recommended_pages:
 
 運用ルール: まず `A/B` を優先して応募文へ直結し、`C` は制度・監査設計枠で提出する。
 
+## 2026-03-14 22:18 JST 再検証ログ（RQ別深読監査 / 本run）
+
+- `research_harvest_50.md` の `60RQ` を1件ずつ再読し、`RQ文 -> 本ページの深掘り検証設計 -> 応募テーマ -> 推奨EEG-DATA` が全行で1対1対応していることを再確認しました。
+- `mind-upload-eeg-rq60-grant-dataset-playbook.md` の `第一応募先/予備応募先/主EEG-DATA/最小成果物` を全60行で照合し、欠落列 `0`、参照崩れ `0` を確認しました。
+- `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` 上の `G1-G6` 実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）を再照合し、全行で参照可能な状態を維持しています。
+- 本runでも運用方針は `1RQ=1検証命題=1応募テーマ=1主データ` を維持し、汎用要約ではなくRQ単位で申請文へ直接転記できる粒度で固定しました。
+
 </article>
 </main>
