@@ -233,6 +233,11 @@ recommended_pages:
 <td><a href="../research_harvest_50.html">文献地図</a> / <a href="../datasets.html">データ&ベンチ</a> / <a href="../issue.html">貢献ガイド</a></td>
 </tr>
 <tr>
+<td><strong>RQを1件ずつ深く読み、EEGで直接検証する核と外部必須要件を分けたい</strong></td>
+<td><a href="mind-upload-rq60-deep-focus-notes.html">RQ60深掘り焦点ノート（EEG-DATA×助成）</a></td>
+<td><a href="mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60判定正本</a> / <a href="mind-upload-eeg-rq60-grant-dataset-playbook.html">RQ60申請プレイブック</a></td>
+</tr>
+<tr>
 <td><strong>部分解決、探索段階、未整備の違いで止まる</strong></td>
 <td><a href="progress-labels-and-open-problem-status.html">部分解決・探索段階・未整備の読み方</a></td>
 <td><a href="../research_harvest_50.html">文献地図</a> / <a href="../tech_roadmap.html">技術ロードマップ</a></td>
@@ -551,6 +556,7 @@ recommended_pages:
 <li><a href="standards-repositories-validators-and-benchmarks.html">規格・置き場・Validator・ベンチマーク →</a></li>
 <li><a href="closed-loop-latency-jitter-and-safety-stops.html">閉ループ・遅延・ジッタ・安全停止 →</a></li>
 <li><a href="thermodynamic-grounding-basics.html">熱力学的接地の基本 →</a></li>
+<li><a href="mind-upload-rq60-deep-focus-notes.html">RQ60深掘り焦点ノート（EEG-DATA×助成） →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
