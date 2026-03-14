@@ -317,3 +317,11 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 本ページで参照する EEG-DATA `24 ID` は `EEG-DATA/eeg_dataset_summary_ja.csv` 上で欠落 `0`。
 - EEG資源選定の入口として、`TARGET_TASK_REPORT.md`、`LANGUAGE_PARADIGM_REPORT.md`、`PARADIGM_FAMILY_REPORT.md`、`RECORDING_MODALITY_REPORT.md`、`MULTIMODAL_SETUP_REPORT.md` を追記。
 - 助成レーンは既存 `G1-G6` に加え、`1geD73ZENwB8yaor`, `lEYmRP97ng3perjO`, `1geD73Z9K2B8yaor`, `QKYgNPxZxN38bO1Z`, `46z9VPE6E0BrvEJR`, `1geD73ZE54B8yaor`, `1geD73Z6yq38yaor` を候補IDとして明示。
+
+## 2026-03-14 14:03 JST 再検証ログ（本run）
+
+- `research_harvest_50.md` の `Ux-RQy` は引き続き `60件`、本ページのRQ表行数も `60件` で一致。
+- `A/B/C=17/25/18` は維持。`C` 判定は制度・法務依存が主であるため、提出先は `G2/G6` を第一候補に固定。
+- EEG参照 `24 ID` は `EEG-DATA/eeg_dataset_summary_ja.csv` 上で全件存在し、欠落 `0` を再確認。
+- 助成IDは `G1-G6` と追加候補ID（`1geD73ZENwB8yaor`, `lEYmRP97ng3perjO`, `1geD73Z9K2B8yaor`, `QKYgNPxZxN38bO1Z`, `46z9VPE6E0BrvEJR`, `1geD73ZE54B8yaor`, `1geD73Z6yq38yaor`）の実在を `auto-research-funds` データで再確認。
+- 運用方針は据え置き。`1RQ=1検証命題=1応募テーマ` で、汎用要約ではなくRQ単位で申請文を起こす。
