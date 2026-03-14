@@ -444,17 +444,17 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 <li><strong>次に必要：</strong>閉ループ課題（I1）で許容遅延を測り、必要サンプリングを逆算する</li>
 </ul>
 <div class="note-box">
-<strong>位相同期コヒーレンス維持限界（Phase Synchronization Coherence Limit）</strong>
+<strong>閉ループ時間要件は 1 つではありません</strong>
 <p>
-WBEにおける「プロセスの同期」要件は、単純な遅延閾値（例：10ms）では不十分である。特にガンマ帯域（30–80Hz）における高精度な位相同期は、ミリ秒単位のジッタによって容易に破壊される（Vinck et al., 2011）。したがって、WBEにおける因果構造の保存には以下の厳格な要件を設定する：
+2026年3月の再監査では、閉ループの timing 要件は <strong>loop class</strong> ごとに分けて扱うべきだと整理しました。slow neurofeedback、ERP/command BCI、phase-locked stimulation、adaptive DBS では、支配的な時間スケールが異なります。Wilson et al. (2010) は系全体の latency/jitter を hardware で実測する必要を示し、Belinskaia et al. (2020) は alpha neurofeedback で追加 250 / 500 ms 遅延が学習を悪化させると報告しました。一方、Mansouri et al. (2018) と Zrenner et al. (2018) の phase-targeting 系では、遅延は ms 値そのものではなく <strong>対象周波数に対する位相誤差</strong> として評価すべきです。
 </p>
 <ul>
-<li><strong>ジッタ許容：</strong>1ms以下（ガンマ帯域の1周期 ≈ 12–33ms に対し、位相誤差を最小化するため）</li>
-<li><strong>同期精度：</strong>マイクロ秒単位の計測同期（LSLのtime_correctionを超えるハードウェアレベルの同期設計）</li>
-<li><strong>遅延モニタリング：</strong>閉ループ遅延をリアルタイムで監視し、位相コヒーレンスの崩壊をオンラインで検出する仕組み</li>
+<li><strong>共通ゲートを 1 ms に固定しません：</strong>ループ型ごとに end-to-end の中央値、P95/P99、worst-case を実測します。</li>
+<li><strong>phase 系は位相誤差で読みます：</strong>対象周波数と推定位相の信頼度を添えて評価します。</li>
+<li><strong>同期系は path ごとに分けます：</strong>LSL/TTL/photodiode/loopback のどこを実測したかを別々に残します。</li>
 </ul>
 <p>
-これらの要件は、現在のLSL（Lab Streaming Layer）が提供する同期精度を超える場合があり、将来的にはハードウェアレベルでの同期設計が必要になる可能性を示唆する。
+したがって、このロードマップでは「単一閾値で全閉ループを裁く」よりも、「どの loop class を扱い、どの timing failure mode を監査したか」を先に固定します。入口の整理は <a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: 閉ループ・遅延・ジッタ・安全停止</a> を参照してください。
 </p>
 </div>
 </div>
@@ -741,8 +741,9 @@ WBEにおける「プロセスの同期」要件は、単純な遅延閾値（�
 </summary>
 <div class="qa-body">
 <p><strong>問い：</strong>“本人らしさ”を評価するなら、環境との相互作用（遅延・ノイズ）が本質になる。許容遅延は課題依存。</p>
-<p><strong>補足 (Issue #46):</strong> CLETなどのフォトダイオード計測で<strong>End-to-End遅延とジッタ</strong>を実測し、LSLのtime_correctionでドリフト補正を標準化する。</p>
-<p><strong>次に必要：</strong>評価スイート（V1）側で、遅延/ノイズ耐性を測る項目を入れる</p>
+<p><strong>再定義 (2026-03):</strong> 許容遅延は 1 つの数字ではなく、少なくとも <strong>(a) state feedback / neurofeedback</strong>、<strong>(b) ERP / command BCI</strong>、<strong>(c) phase-locked stimulation</strong>、<strong>(d) burst/state-triggered neuromodulation</strong> に分けて監査します。phase-targeting では ms より位相誤差、adaptive DBS では biomarker burst 検出遅延と停止規則が中心です。</p>
+<p><strong>補足 (Issue #46):</strong> CLET やフォトダイオード、loopback、TTL を使って <strong>end-to-end 遅延とジッタ</strong>を実測し、LSL の time_correction は software offset 補正として位置づけます。LSL 単独で actuation onset を保証したとは言いません。</p>
+<p><strong>次に必要：</strong> 評価スイート（V1）側で、loop class の明示、中央値/P95/P99/worst-case latency、位相誤差または burst 検出遅延、棄権/freeze/停止回数、追加遅延に対する性能劣化曲線を残します。入口の整理は <a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: 閉ループ・遅延・ジッタ・安全停止</a> を参照してください。</p>
 </div>
 </details>
 
@@ -1273,7 +1274,7 @@ WBEにおける「プロセスの同期」要件は、単純な遅延閾値（�
 </tr>
 <tr>
 <td>前処理・同期・接続性</td>
-<td>Chang et al. (2018), de Cheveigne (2020), Vinck et al. (2011), Staniek &amp; Lehnertz (2008), Kothe et al. (2025)</td>
+<td>Wilson et al. (2010), Thompson et al. (2013), Mowla et al. (2017), Belinskaia et al. (2020), Mansouri et al. (2018), Zrenner et al. (2018), Appelhoff &amp; Stenner (2021), Kothe et al. (2025)</td>
 <td>U1, U7, U8, U14</td>
 </tr>
 <tr>
@@ -1640,7 +1641,16 @@ WBEにおける「プロセスの同期」要件は、単純な遅延閾値（�
 <li>de Cheveigne, A. (2020). ZapLine.</li>
 <li>Vinck, M., et al. (2011). Weighted Phase Lag Index (wPLI).</li>
 <li>Staniek, M., &amp; Lehnertz, K. (2008). Symbolic Transfer Entropy.</li>
-<li>Kothe, C., et al. (2025). Lab Streaming Layer for synchronized multimodal recording.</li>
+<li>Wilson, J. A., Mellinger, J., Schalk, G., &amp; Williams, J. C. (2010). A procedure for measuring latencies in brain-computer interfaces. <a href="https://doi.org/10.1109/TBME.2010.2047259" target="_blank">doi:10.1109/TBME.2010.2047259</a></li>
+<li>Thompson, D. E., Warschausky, S. A., &amp; Huggins, J. E. (2013). Classifier-based latency estimation: a novel way to estimate and predict BCI accuracy. <a href="https://doi.org/10.1088/1741-2560/10/1/016006" target="_blank">doi:10.1088/1741-2560/10/1/016006</a></li>
+<li>Mowla, M. R., Huggins, J. E., &amp; Thompson, D. E. (2017). Enhancing P300-BCI performance using latency estimation. <a href="https://doi.org/10.1080/2326263X.2017.1338010" target="_blank">doi:10.1080/2326263X.2017.1338010</a></li>
+<li>Belinskaia, A., Smetanin, N., Lebedev, M., &amp; Ossadtchi, A. (2020). Short-delay neurofeedback facilitates training of the parietal alpha rhythm. <a href="https://doi.org/10.1088/1741-2552/abc8d7" target="_blank">doi:10.1088/1741-2552/abc8d7</a></li>
+<li>Mansouri, F., Fettes, P., Schulze, L., et al. (2018). A real-time phase-locking system for non-invasive brain stimulation. <a href="https://doi.org/10.3389/fnins.2018.00877" target="_blank">doi:10.3389/fnins.2018.00877</a></li>
+<li>Zrenner, C., Desideri, D., Belardinelli, P., &amp; Ziemann, U. (2018). Real-time EEG-defined excitability states determine efficacy of TMS-induced plasticity in the human motor cortex. <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">doi:10.1016/j.brs.2017.11.016</a></li>
+<li>Little, S., Pogosyan, A., Neal, S., et al. (2013). Adaptive deep brain stimulation in advanced Parkinson disease. <a href="https://doi.org/10.1002/ana.23951" target="_blank">doi:10.1002/ana.23951</a></li>
+<li>Tinkhauser, G., Pogosyan, A., Little, S., et al. (2017). The modulatory effect of adaptive deep brain stimulation on beta bursts in Parkinson's disease. <a href="https://doi.org/10.1093/brain/awx010" target="_blank">doi:10.1093/brain/awx010</a></li>
+<li>Appelhoff, S., &amp; Stenner, T. (2021). In COM we trust: Feasibility of USB-based event marking. <a href="https://doi.org/10.3758/s13428-021-01571-z" target="_blank">doi:10.3758/s13428-021-01571-z</a></li>
+<li>Kothe, C., Shirazi, S. Y., Stenner, T., et al. (2025). The lab streaming layer for synchronized multimodal recording. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
 </ol>
 
 <h3>E. デコーディング・生成モデル・模倣分離</h3>

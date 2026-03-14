@@ -1,41 +1,41 @@
 ---
 layout: default
 title: "Wiki：閉ループ・遅延・ジッタ・安全停止"
-description: "閉ループ評価で重要になる遅延、ジッタ、再較正、棄権、安全停止を、一次文献ベースで整理します。"
+description: "閉ループ評価で重要になる遅延、ジッタ、ドリフト、安全停止を、ループ種別ごとの一次文献に沿って整理します。"
 article_type: Wiki
-subtitle: "オフライン精度が高くても、リアルタイムで安定とは限りません"
+subtitle: "閉ループの時間要件は 1 つの数値ではなく、ループ種別ごとに変わります"
 author: Mind Uploading Research Project
 last_updated: "2026-03-14"
-note: "Learning guide"
-audience: "L3 の閉ループ評価やリアルタイム運用の意味が曖昧な人"
+note: "Learning guide / evidence refresh"
+audience: "L3 の閉ループ評価やリアルタイム運用を、一般論ではなく文献ベースで読みたい人"
 reading_time: "12〜18分"
-page_intro: "このページは、Mind-Upload の L3『閉ループ』で重要になる遅延、ジッタ、再較正、棄権、安全停止を、一次文献に沿って整理する wiki です。一般論ではなく、どの論文がどこまで online 運用を示したかに基づいて読みます。"
-accuracy_note: "ここで固定するのは『何を測るべきか』であり、許容 ms 値そのものではありません。許容値は課題依存ですが、分布・停止条件・再較正ログを出す必要性は共通です。"
+page_intro: "このページは、Mind-Upload の L3『閉ループ』で重要になる遅延、ジッタ、ドリフト、安全停止の違いを、一次文献に沿って整理する wiki です。オフライン精度が高いモデルでも、ループの帯域とアクチュエータの種類が違えば必要な timing budget も変わることを明確にするのが目的です。"
+accuracy_note: "ここでは『全ループに共通の固定閾値』は置きません。課題、対象周波数、出力機構、安全要求に応じて、実測した end-to-end 指標で判断する前提で書いています。"
 page_highlights:
-  - "offline 精度、online throughput、長期安定性は別々に測る必要があります。"
-  - "latency は平均値だけでなく P95/P99 や dropout を含めて記録する必要があります。"
-  - "recalibration と safety stop を隠したまま L3 を主張してはなりません。"
+  - "閉ループの時間要件は 1 つの ms 値ではなく、ループ種別ごとに変わります。"
+  - "event marker が 1 ms 未満でも、系全体の end-to-end 保証とは別問題です。"
+  - "phase-targeting では ms より位相誤差、adaptive DBS では burst 検出遅延と停止規則が重要です。"
 known_points:
-  - "出力が次の入力を変える系では、latency と jitter が性能そのものを変えます。"
-  - "固定 decoder の性能は時間とともに落ちうるため、再較正頻度自体が重要な指標です。"
-  - "棄権、hold-last-output、freeze、hard stop は別の役割です。"
+  - "オフライン精度と閉ループ安定性は別の主張であり、同じスコアでは監査できません。"
+  - "遅延とジッタの許容範囲は、state feedback、ERP/command BCI、phase-locked stimulation、burst-driven neuromodulation で異なります。"
+  - "入力、処理、出力、戻りを end-to-end で実測しないと、実運用の timing は分かりません。"
 unknown_points:
-  - "どの課題で何 ms まで許容できるかは、対話、運動、刺激制御で異なります。"
-  - "長期安定性に必要な decoder update 則の一般解はまだありません。"
-  - "全脳WBE の L3 をどう operationalize するかは未解決です。"
+  - "WBE に必要な閉ループ帯域が、どのループ種別にどこまで跨るかは未確定です。"
+  - "phase-specific な制御で必要な精度を、非侵襲ヒト実験の全タスクへ一般化できるとはまだ言えません。"
+  - "長期運用での drift と再較正頻度が、どの時点で『不安定』判定になるかは課題依存です。"
 wiki_links:
-  - label: "Wiki: 反事実・介入・摂動の検証"
-    url: "/wiki/counterfactual-and-perturbation-verification.html"
-    description: "なぜ causal evidence が online 指標よりさらに強いのかを補います。"
   - label: "Wiki: イベント同期と観測ログ"
     url: "/wiki/event-sync-and-measurement-logs.html"
-    description: "遅延、ジッタ、ドリフトの記録方法を補います。"
+    description: "遅延、ジッタ、ドリフトを何として残すかを補います。"
   - label: "Wiki: 不確実性・信頼区間・棄権"
     url: "/wiki/uncertainty-confidence-and-abstention.html"
-    description: "低信頼時に何もしない設計の考え方を補います。"
+    description: "低信頼時に『出さない』設計の考え方を補います。"
   - label: "Wiki: 更新・分岐・停止規則"
     url: "/wiki/update-branching-and-stop-rules.html"
-    description: "停止規則やキルスイッチの運用語を補います。"
+    description: "freeze と停止規則を運用としてどう切り分けるかを補います。"
+  - label: "Wiki Home"
+    url: "/wiki/"
+    description: "他の補助ページへ戻れます。"
 recommended_pages:
   - label: "検証基盤"
     url: "/verification.html"
@@ -49,165 +49,188 @@ recommended_pages:
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>最短の区別</h2>
+<h2>いちばん短い結論</h2>
 <p>
-<strong>閉ループ</strong>では、出力が次の入力を変えます。したがって、<strong>平均精度</strong>だけでなく、<strong>遅延分布</strong>、<strong>ジッタ</strong>、<strong>dropout</strong>、<strong>再較正頻度</strong>、<strong>停止条件</strong>まで公開しないと、安定に動いたとは言えません。
+<strong>閉ループ</strong>は「出力が次の入力を変える系」です。ただし、そこで要求される timing は 1 つではありません。<strong>alpha neurofeedback</strong>、<strong>P300/ERP BCI</strong>、<strong>phase-locked stimulation</strong>、<strong>adaptive DBS</strong> では、支配的な時間スケールが違います。したがって、<strong>共通の 1 ms 閾値</strong>や<strong>共通の 10 ms 閾値</strong>をサイト全体の正解として置くのは危険です。
 </p>
 </div>
 
 <div class="note-box">
-<strong>今回の再整理で直した点</strong>
+<strong>今回の整理で先に固定したこと</strong>
 <p>
-旧版は「遅延」「ジッタ」「安全停止」の定義整理としては有用でしたが、一次文献に基づく実務指標が不足していました。本ページでは、speech neuroprosthesis、bidirectional BCI、adaptive DBS、長期 decoder 維持の文献から、<strong>何を記録しなければならないか</strong>を逆算します。
+このページでは、「どれくらい速ければ十分か」を抽象論で語るのではなく、<strong>どのループ型を扱っているのか</strong>、<strong>そのループで何を壊す遅延なのか</strong>、<strong>何を hardware で実測したのか</strong>を先に固定します。event marker の高速化、LSL の同期、phase 追跡、停止規則は、それぞれ別の層の話です。
 </p>
 </div>
 
-<section class="section" id="evidence">
-<h2 class="section-title">一次文献が示す現実</h2>
+<section class="section" id="why-fixed-threshold-is-dangerous">
+<h2 class="section-title">なぜ固定閾値が危険なのか</h2>
+<p>
+Wilson ら (2010) は、mu rhythm 振幅のような比較的ゆっくりした BCI 指標では、<strong>10 ms 程度の小さな遅れ</strong>が直ちに本質を壊すとは限らない一方、系全体の latency/jitter を測らないと出力経路や表示器が律速になることを示しました。逆に、Belinskaia ら (2020) は parietal alpha neurofeedback で、<strong>追加 250 ms / 500 ms 遅延</strong>が学習効果を悪化させることを示しました。さらに、Mansouri ら (2018) と Zrenner ら (2018) のような phase-targeting 系では、遅延は単なる ms 値ではなく、<strong>対象周波数に対する位相誤差</strong>として評価すべきです。
+</p>
+<div class="note-box">
+<strong>読み方の原則</strong>
+<p>
+「低遅延が良い」は一般論として正しいですが、そこから直ちに「全ループで microsecond 級が必須」「全ループで 1 ms 以下が必須」とは言えません。正しい問いは、<strong>どのループ帯域で、どの誤差が、何を壊すのか</strong>です。
+</p>
+</div>
+</section>
+
+<section class="section" id="loop-classes">
+<h2 class="section-title">まず 4 つのループ型に分ける</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>論文</th>
-<th>何を示したか</th>
-<th>閉ループ評価にどう効くか</th>
+<th>ループ型</th>
+<th>典型例</th>
+<th>文献が示すこと</th>
+<th>このサイトで先に残すべきログ</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Littlejohn et al. (2025)</strong></td>
-<td>brain-to-voice neuroprosthesis は 80 ms increment で音声を streaming し、自然な会話で数秒の遅延が破綻要因になると明示しました。</td>
-<td>speech 系では平均 latency ではなく、会話可能性を壊す tail latency を見る必要があります。</td>
+<td><strong>state feedback / neurofeedback</strong></td>
+<td>alpha パワーを見て視覚フィードバックを返す系です。</td>
+<td>Belinskaia ら (2020) は、追加 250 / 500 ms 遅延が alpha neurofeedback 学習を悪化させると示しました。短い遅延ほど学習に有利でした。</td>
+<td>中央値/P95/P99 の feedback latency、表示経路、追加遅延に対する性能劣化曲線です。</td>
 </tr>
 <tr>
-<td><strong>Wairagkar et al. (2025)</strong></td>
-<td>raw neural activity から音声合成まで 10 ms 以内で回し、non-speech では silence を返しました。一方で fixed decoder は約 15 日で性能低下が見えました。</td>
-<td>latency と abstention を実装しても、長期安定性と decoder drift は別途監査が必要だと分かります。</td>
+<td><strong>ERP / command BCI</strong></td>
+<td>P300 speller や event-related control です。</td>
+<td>Wilson ら (2010) は timing を分解して hardware 実測する必要を示し、Mowla ら (2017) は latency jitter が classification を下げるため、補正しても悪影響は完全には消えないと示しました。</td>
+<td>block jitter、刺激 onset 実測、trial-to-trial latency variance、分類性能との対応です。</td>
 </tr>
 <tr>
-<td><strong>Flesher et al. (2021)</strong></td>
-<td>ICMS による tactile feedback を加えると、robotic arm control の trial time と grasp time が大きく改善しました。</td>
-<td>feedback path の遅延や欠落は、単に「使い勝手」ではなく performance 本体を変えます。</td>
+<td><strong>phase-locked stimulation</strong></td>
+<td>EEG 位相に合わせて TMS/tES を打つ系です。</td>
+<td>Mansouri ら (2018) は位相遅れを theta/alpha で評価し、Zrenner ら (2018) は millisecond-resolution EEG-triggered TMS で brain state 依存性を実証しました。ここでは ms より位相誤差が中心です。</td>
+<td>対象周波数、位相誤差分布、推定位相の信頼度、missed trigger、phase ずれ時の fallback 条件です。</td>
 </tr>
 <tr>
-<td><strong>Wilson et al. (2025)</strong></td>
-<td>頻回 recalibration が neural bypass の大きな障害であると示し、hidden Markov model による unsupervised recalibration を one-month closed loop と five-year offline data で評価しました。</td>
-<td>再較正頻度そのものを、性能指標から切り離さず報告すべきだと分かります。</td>
-</tr>
-<tr>
-<td><strong>Oehrn et al. (2024)</strong></td>
-<td>chronic adaptive DBS と conventional DBS を blinded randomized block で比較し、各条件を少なくとも 1 か月、実生活環境で評価しました。</td>
-<td>閉ループ controller を主張するなら、短いラボデモではなく longitudinal block comparison が必要です。</td>
-</tr>
-<tr>
-<td><strong>Cascino et al. (2026)</strong></td>
-<td>2026年2月25日公開の ADAPT-START 報告では、20 連続症例中 9 例が aDBS 候補となり、2025年7月時点で 5 例が chronic aDBS を継続していました。</td>
-<td>deployability と programming burden も閉ループ系の現実であり、候補選定率そのものを隠してはいけません。</td>
+<td><strong>burst/state-triggered neuromodulation</strong></td>
+<td>beta burst を使う adaptive DBS です。</td>
+<td>Little ら (2013) は pathological beta を feedback に使う proof-of-principle を示し、Tinkhauser ら (2017) は adaptive DBS が <strong>100–600 ms</strong> の短い burst と <strong>600 ms 超</strong>の長い burst の分布を変えることを示しました。支配時間は phase-locking より遅いです。</td>
+<td>biomarker 検出遅延、burst false positive/false negative、ramp-up/ramp-down、停止回数です。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
-<section class="section" id="metrics">
-<h2 class="section-title">L3 を主張するなら最低限ほしい指標</h2>
+<section class="section" id="end-to-end">
+<h2 class="section-title">何を end-to-end で測るのか</h2>
+<p>
+Wilson ら (2010) の重要点は、<strong>signal processing latency だけを測っても不十分</strong>だということです。閉ループで効くのは、入力から出力までの全経路です。表示器、OS、ドライバ、音声系、刺激器が別の律速になることがあります。
+</p>
 <table class="data-table">
 <thead>
 <tr>
-<th>指標</th>
-<th>何を残すか</th>
-<th>なぜ必要か</th>
+<th>区間</th>
+<th>最低限知りたいこと</th>
+<th>典型的な実測法</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>end-to-end latency</strong></td>
-<td>P50 / P95 / P99、試行数、どの区間を含めたか。</td>
-<td>平均だけでは会話や制御を壊す tail latency が隠れるためです。</td>
+<td><strong>入力</strong></td>
+<td>センサーが実際にいつ変化を取り込んだかです。</td>
+<td>TTL、既知パルス、DAQ 入力、刺激器の marker 出力です。</td>
 </tr>
 <tr>
-<td><strong>jitter</strong></td>
-<td>latency の分散、外れ値率、条件別の揺れ。</td>
-<td>平均遅延が同じでも、揺れが大きいと制御が崩れます。</td>
+<td><strong>処理</strong></td>
+<td>前処理、推定、意思決定にどれだけ時間がかかったかです。</td>
+<td>software timestamp、block duration、CPU/GPU ログです。</td>
 </tr>
 <tr>
-<td><strong>dropout / missed updates</strong></td>
-<td>フレーム落ち、無効更新、通信断の回数と持続時間。</td>
-<td>online loop は連続性が切れた瞬間に性能が落ちるためです。</td>
+<td><strong>出力</strong></td>
+<td>表示、音、刺激、制御信号がいつ本当に出たかです。</td>
+<td>フォトダイオード、マイク、loopback、刺激アーチファクト onset です。</td>
 </tr>
 <tr>
-<td><strong>recalibration burden</strong></td>
-<td>何分・何試行ごとに再較正したか、手動か自動か。</td>
-<td>「高性能」でも頻回再較正が必要なら、運用可能性は低いままです。</td>
-</tr>
-<tr>
-<td><strong>abstention / hold-last-output</strong></td>
-<td>何もしない率、直前出力保持率、発動条件。</td>
-<td>低信頼時の挙動を隠すと、安全性も性能も正しく読めません。</td>
-</tr>
-<tr>
-<td><strong>recovery time</strong></td>
-<td>摂動後または同期失敗後に、何試行・何秒で戻ったか。</td>
-<td>loop の安定性は平均成績だけでなく回復力で決まるためです。</td>
-</tr>
-<tr>
-<td><strong>stimulation duty cycle</strong></td>
-<td>刺激時間率、総刺激量、停止回数。</td>
-<td>adaptive stimulation 系では efficacy と exposure を両方見る必要があります。</td>
+<td><strong>戻り</strong></td>
+<td>出力の影響がいつ次の入力へ返ってきたかです。</td>
+<td>closed-loop task 内での再検出、環境センサー、身体応答ログです。</td>
 </tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>平均だけでは足りません</strong>
+<p>
+閉ループでは、平均遅延よりも <strong>P95/P99/worst-case</strong> や <strong>trial-to-trial jitter</strong> が壊しやすいことがあります。特に phase-targeting や safety-critical loop では、平均値だけ出しても安心材料になりません。
+</p>
+</div>
+</section>
+
+<section class="section" id="synchronization">
+<h2 class="section-title">LSL と event marker は何を保証し、何を保証しないか</h2>
+<p>
+Kothe ら (2025) の LSL 論文は、LSL が <strong>millisecond-scale で十分な neurobehavioral research</strong> の同期に有用で、offset correction や jitter compensation を提供することを示しています。一方で、これは <strong>LAN 上の software-based synchronization</strong> の話であり、刺激器や表示器の物理出力がいつ起きたかを自動で保証するわけではありません。
+</p>
+<p>
+Appelhoff と Stenner (2021) は、USB microcontroller による event marking が <strong>1 ms 未満の latency</strong> を出せることを示しました。ただし、これも主に <strong>marker path</strong> の精度です。marker が速くても、表示器、音声経路、刺激器、推定器まで含めた end-to-end loop が同じ精度とは限りません。
+</p>
+<div class="key-points">
+<h4>ここで分けるべきこと</h4>
+<ul>
+<li><strong>LSL：</strong>複数 stream の共通時刻系と offset 補正を助けます。</li>
+<li><strong>TTL / MCU marker：</strong>イベントを acquisition 側へ刻む精度を上げます。</li>
+<li><strong>photodiode / microphone / loopback：</strong>実際の output onset を外部から検証します。</li>
+<li><strong>phase 追跡器：</strong>対象周波数に対して、どれだけ位相ずれが残るかを別に監査します。</li>
+</ul>
+</div>
 </section>
 
 <section class="section" id="stops">
-<h2 class="section-title">棄権・保持・停止を混ぜない</h2>
+<h2 class="section-title">棄権と freeze と安全停止は別物です</h2>
 <table class="data-table">
 <thead>
 <tr>
 <th>仕組み</th>
 <th>主目的</th>
-<th>ログに残すもの</th>
+<th>典型トリガー</th>
+<th>最低限残すこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>棄権</strong></td>
-<td>低信頼時に新規出力を出さないためです。</td>
-<td>信頼度閾値、棄権率、そのときの入力条件。</td>
+<td>低信頼時に無理な出力を避けるためです。</td>
+<td>分類確率不足、phase 推定信頼度不足、OOD 検出です。</td>
+<td>棄権率、棄権時の信頼度閾値、棄権後の状態です。</td>
 </tr>
 <tr>
-<td><strong>hold-last-output</strong></td>
-<td>一時的な欠損時に急変を避けるためです。</td>
-<td>保持時間、保持中の性能劣化、解除条件。</td>
+<td><strong>freeze / 一時停止</strong></td>
+<td>再較正や原因確認のためです。</td>
+<td>clock offset 増大、packet loss、drift 逸脱、再同期要求です。</td>
+<td>発動理由、継続時間、再開条件、再較正内容です。</td>
 </tr>
 <tr>
-<td><strong>freeze / 再較正停止</strong></td>
-<td>異常検出後に原因確認や再同期へ入るためです。</td>
-<td>発動理由、所要時間、再開条件、再開後の回復時間。</td>
-</tr>
-<tr>
-<td><strong>hard stop</strong></td>
-<td>危険な挙動や上限超過を直ちに止めるためです。</td>
-<td>停止トリガー、時刻、被害回避の根拠、手動介入の有無。</td>
+<td><strong>安全停止 / containment</strong></td>
+<td>危険な actuation を止めるためです。</td>
+<td>P99 latency budget 超過、異常振幅、刺激禁止位相、出力飽和です。</td>
+<td>停止条件、停止回数、直前の latency/phase/error、手動復帰条件です。</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>重要な実務ルール</strong>
+<strong>性能問題と安全問題を混ぜない</strong>
 <p>
-再較正や停止が多い系を、成功試行だけ切り出して「閉ループで安定」と書いてはなりません。停止そのものが性能指標です。
+「うまく出せなかったので出さない」のか、「系が壊れていそうなので保留する」のか、「危険なので止める」のかは、運用上まったく別です。全部を 1 つの『停止』にまとめると、レビュー時に原因が追えなくなります。
 </p>
 </div>
 </section>
 
-<section class="section" id="minimum-pack">
-<h2 class="section-title">L3 最低提出物パック</h2>
+<section class="section" id="logs">
+<h2 class="section-title">最低限残したいログ</h2>
 <div class="key-points">
 <h4>Checklist</h4>
 <ul>
-<li><strong>online 指標：</strong>end-to-end latency 分布、jitter、dropout、throughput。</li>
-<li><strong>安定性指標：</strong>セッション内劣化、日跨ぎ劣化、再較正頻度、回復時間。</li>
-<li><strong>安全指標：</strong>棄権率、hold-last-output 率、freeze 回数、hard stop 回数。</li>
-<li><strong>比較設計：</strong>offline と online を分離し、conventional controller や no-feedback 条件と比較すること。</li>
-<li><strong>公開ログ：</strong>失敗試行、異常時ログ、停止理由、除外理由を隠さず出すこと。</li>
+<li><strong>loop class：</strong>state feedback、ERP/command、phase-locked、burst-triggered のどれか。</li>
+<li><strong>end-to-end latency：</strong>中央値、P95、P99、worst-case を別々に残します。</li>
+<li><strong>jitter の定義：</strong>SD、IQR、peak-to-peak のどれかを明記します。</li>
+<li><strong>clock offset / drift：</strong>LSL や hardware marker の補正前後を残します。</li>
+<li><strong>marker 検証法：</strong>TTL、MCU、photodiode、microphone、loopback のどれで実測したかを書きます。</li>
+<li><strong>phase/burst 系の追加指標：</strong>位相誤差分布、missed trigger、burst 検出遅延、false positive/negative です。</li>
+<li><strong>棄権 / freeze / 安全停止：</strong>発動回数、直前状態、復帰条件を残します。</li>
+<li><strong>性能劣化曲線：</strong>人工的に遅延を足したとき、どこで崩れるかを残します。</li>
 </ul>
 </div>
 </section>
@@ -215,30 +238,33 @@ recommended_pages:
 <section class="section" id="how-to-read">
 <h2 class="section-title">L3 の主張を読むときの 4 問</h2>
 <ol>
-<li><strong>平均精度ではなく latency の分布が出ているか：</strong>P95/P99 を出していないなら、会話や制御の破綻が隠れます。</li>
-<li><strong>recalibration burden が明示されているか：</strong>毎回人手で直しているなら、安定運用ではありません。</li>
-<li><strong>停止・棄権が性能から除外されていないか：</strong>安全動作も loop の一部です。</li>
-<li><strong>短時間デモを長期安定性へ飛躍させていないか：</strong>ここが最も多いすり替えです。</li>
+<li><strong>どの loop class を扱っているか書いてあるか：</strong> slow feedback と phase-locked を同じ表で語っていないかを見ます。</li>
+<li><strong>end-to-end 実測があるか：</strong> software timestamp だけで済ませていないかを確認します。</li>
+<li><strong>delay を位相誤差や burst 時間へ写像しているか：</strong> ただの ms 値で済ませていないかを見ます。</li>
+<li><strong>棄権・freeze・安全停止が分離されているか：</strong> 危険時の運用が曖昧でないかを確認します。</li>
 </ol>
 </section>
 
-<section class="section" id="sources">
+<section class="section" id="references">
 <h2 class="section-title">参考文献</h2>
 <ol>
-<li>Flesher SN, Downey JE, Weiss JM, et al. A brain-computer interface that evokes tactile sensations improves robotic arm control. Science. 2021. <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
-<li>Littlejohn KT, Dabagia M, Ladwig A, et al. A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. Nat Neurosci. 2025. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
-<li>Wairagkar M, Moses DA, Metzger SL, et al. An instantaneous voice-synthesis neuroprosthesis. Nature. 2025. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
-<li>Wilson GH, Bray N, Franken M, et al. Long-term unsupervised recalibration of intracortical brain-computer interfaces using a hidden Markov model. Nat Biomed Eng. 2025. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
-<li>Oehrn CR, Roediger J, Diehl A, et al. Chronic adaptive deep brain stimulation versus conventional stimulation in Parkinson's disease: a blinded randomized feasibility trial. Nat Med. 2024. <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">doi:10.1038/s41591-024-03196-z</a></li>
-<li>Dixon S, Oehrn C, Remple M, et al. Movement-responsive deep brain stimulation for Parkinson’s disease using a remotely optimized neural decoder. Nat Biomed Eng. 2026. <a href="https://doi.org/10.1038/s41551-025-01592-5" target="_blank">doi:10.1038/s41551-025-01592-5</a></li>
-<li>Cascino S, Roediger J, Oehrn C, et al. Chronic adaptive deep brain stimulation in Parkinson’s disease: ADAPT-START findings and programming principles. npj Parkinsons Dis. 2026. <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">doi:10.1038/s41531-026-01269-z</a></li>
+<li>Wilson JA, Mellinger J, Schalk G, Williams JC. A procedure for measuring latencies in brain-computer interfaces. <em>IEEE Trans Biomed Eng.</em> 2010;57(7):1785-1797. <a href="https://doi.org/10.1109/TBME.2010.2047259" target="_blank">doi:10.1109/TBME.2010.2047259</a></li>
+<li>Thompson DE, Warschausky SA, Huggins JE. Classifier-based latency estimation: a novel way to estimate and predict BCI accuracy. <em>J Neural Eng.</em> 2013;10(1):016006. <a href="https://doi.org/10.1088/1741-2560/10/1/016006" target="_blank">doi:10.1088/1741-2560/10/1/016006</a></li>
+<li>Mowla MR, Huggins JE, Thompson DE. Enhancing P300-BCI performance using latency estimation. <em>Brain Comput Interfaces.</em> 2017;4(3):137-145. <a href="https://doi.org/10.1080/2326263X.2017.1338010" target="_blank">doi:10.1080/2326263X.2017.1338010</a></li>
+<li>Belinskaia A, Smetanin N, Lebedev M, Ossadtchi A. Short-delay neurofeedback facilitates training of the parietal alpha rhythm. <em>J Neural Eng.</em> 2020;17(6):066012. <a href="https://doi.org/10.1088/1741-2552/abc8d7" target="_blank">doi:10.1088/1741-2552/abc8d7</a></li>
+<li>Mansouri F, Fettes P, Schulze L, et al. A Real-Time Phase-Locking System for Non-invasive Brain Stimulation. <em>Front Neurosci.</em> 2018;12:877. <a href="https://doi.org/10.3389/fnins.2018.00877" target="_blank">doi:10.3389/fnins.2018.00877</a></li>
+<li>Zrenner C, Desideri D, Belardinelli P, Ziemann U. Real-time EEG-defined excitability states determine efficacy of TMS-induced plasticity in human motor cortex. <em>Brain Stimul.</em> 2018;11(2):374-389. <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">doi:10.1016/j.brs.2017.11.016</a></li>
+<li>Little S, Pogosyan A, Neal S, et al. Adaptive deep brain stimulation in advanced Parkinson disease. <em>Ann Neurol.</em> 2013;74(3):449-457. <a href="https://doi.org/10.1002/ana.23951" target="_blank">doi:10.1002/ana.23951</a></li>
+<li>Tinkhauser G, Pogosyan A, Little S, et al. The modulatory effect of adaptive deep brain stimulation on beta bursts in Parkinson's disease. <em>Brain.</em> 2017;140(4):1053-1067. <a href="https://doi.org/10.1093/brain/awx010" target="_blank">doi:10.1093/brain/awx010</a></li>
+<li>Appelhoff S, Stenner T. In COM we trust: Feasibility of USB-based event marking. <em>Behav Res Methods.</em> 2021;53(6):2450-2455. <a href="https://doi.org/10.3758/s13428-021-01571-z" target="_blank">doi:10.3758/s13428-021-01571-z</a></li>
+<li>Kothe C, Shirazi SY, Stenner T, et al. The lab streaming layer for synchronized multimodal recording. <em>Imaging Neurosci.</em> 2025;3:IMAG.a.136. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
 </ol>
 </section>
 
 <section class="section" id="return">
 <h2 class="section-title">次にどこへ戻るか</h2>
 <p>
-L3 の全体設計へ戻るなら <a href="../verification.html">検証基盤</a>、因果摂動の意味へ戻るなら <a href="counterfactual-and-perturbation-verification.html">Wiki: 反事実・介入・摂動の検証</a>、Roadmap の I1 / I8 へ戻るなら <a href="../tech_roadmap.html">技術ロードマップ</a> をご利用ください。
+L3 の全体設計へ戻るなら <a href="../verification.html">検証基盤</a>、EEG と同期の実務へ戻るなら <a href="../eeg_101.html">EEG入門</a>、Roadmap の I1 / I8 へ戻るなら <a href="../tech_roadmap.html">技術ロードマップ</a> をご利用ください。
 </p>
 </section>
 
@@ -248,7 +274,6 @@ L3 の全体設計へ戻るなら <a href="../verification.html">検証基盤</a
 <div class="sidebar-box">
 <h4>Related Wiki</h4>
 <ul>
-<li><a href="counterfactual-and-perturbation-verification.html">反事実・介入・摂動の検証 →</a></li>
 <li><a href="event-sync-and-measurement-logs.html">イベント同期と観測ログ →</a></li>
 <li><a href="uncertainty-confidence-and-abstention.html">不確実性・信頼区間・棄権 →</a></li>
 <li><a href="update-branching-and-stop-rules.html">更新・分岐・停止規則 →</a></li>
