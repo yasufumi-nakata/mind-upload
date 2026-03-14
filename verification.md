@@ -131,8 +131,8 @@ recommended_pages:
 </tr>
 <tr>
 <td>厳しめの検証条件だけ知りたい</td>
-<td><a href="#verification-rigor">検証の厳密性要件</a> / <a href="#verification-rigor-2026-02">追加更新</a></td>
-<td>不確実性、因果同値類、前処理忠実度など、見落としやすい必須条件を確認できます。</td>
+<td><a href="#observability-budget">Observability Budget</a> / <a href="#verification-rigor">検証の厳密性要件</a></td>
+<td>どこまで直接観測していて、どこから推定か、さらに不確実性や前処理忠実度まで確認できます。</td>
 </tr>
 <tr>
 <td>普通の精度評価と何が違うか知りたい</td>
@@ -347,7 +347,7 @@ BIDS、OpenNeuro、PhysioNet、BIDS Validator、benchmark は全部「研究基�
 <div class="stage-number">04</div>
 <div class="stage-body">
 <h4>Leaderboard & Model Cards（比較の運用）</h4>
-<p>スコアだけでなく、データリーク対策、失敗例、計算資源、既知の弱点を“カード”として公開し、再現性と安全性を担保する。</p>
+<p>スコアだけでなく、データリーク対策、失敗例、計算資源、既知の弱点、さらに L1 以上では <strong>どこまで直接観測し、どこから先が latent state か</strong> を示す <strong>Observability Budget</strong> を“カード”として公開し、再現性と安全性を担保する。</p>
 <div class="tag-list">
 <span class="tag">Leaderboard</span><span class="tag">Reproducibility</span><span class="tag">Safety</span>
 </div>
@@ -436,6 +436,12 @@ Registry を作っても、更新をどこまで許すか、branch をどう記�
 <strong>L0 の最低提出物だけ先に見たいとき</strong>
 <p>
 このページは公共財全体の設計図です。BIDS、Validator、QC、分割、ベースライン、実行手順、失敗例を 1 パックとして見たい場合は <a href="wiki/l0-minimum-artifact-pack.html">Wiki: L0で最低限そろえる成果物パック</a> が近道です。
+</p>
+</div>
+<div class="note-box">
+<strong>L1 以上では『何を直接見たのか』も成果物に含めます</strong>
+<p>
+今回の再監査で見えた弱点は、hidden state を列挙できても、<strong>どの measurement stack がどの変数を直接観測しているか</strong>が提出物として固定されていなかった点でございます。したがって L1 以上の結果では、通常の model card に加えて <a href="#observability-budget">Observability Budget</a> を添付し、claim ceiling と abstention 条件まで残します。
 </p>
 </div>
 <div class="note-box">
@@ -570,6 +576,60 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 <li><strong>既存ベンチマークとの接続：</strong>BCI Competition、MOABB等の既存ベンチマークとの互換性・差分を明確にし、車輪の再発明を避ける。</li>
 <li><strong>失敗事例の体系化：</strong>Commonsの設計にはネガティブリザルトの収集と公開が含まれるが、収集のインセンティブ設計が未着手。</li>
 </ul>
+</div>
+</section>
+
+<section class="section" id="observability-budget">
+<h2 class="section-title">2026-03 追補：Observability Budget を必須提出物にする</h2>
+<p>
+今回もっとも深く更新すべきだった点は、<strong>「重要な hidden state が残る」</strong>という批判が、まだ<strong>提出物の形式</strong>にまで落ち切っていなかったことでございます。<a href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank">Yao et al. (2023)</a> は whole-brain atlas が cell-type taxonomy と空間配置を強くする一方で current state を直接は与えず、<a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">Dorkenwald et al. (2024)</a> は volume EM が structural scaffold を強くする一方で synaptic efficacy や neuromodulatory context を直接は与えず、<a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> は same-brain structure-function link を大きく前進させつつも local conditional prediction の域に留まります。さらに、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> と <a href="https://doi.org/10.1007/s00415-025-12886-9" target="_blank">Hao et al. (2025)</a> が示すように、HD-EEG / ESI は外部妥当化があっても source depth や頭部モデルに依存し、一般的一意復元を与えるわけではありません。したがって本サイトでは、<strong>L1 以上の提出物に Observability Budget を必須化</strong>し、何を直接見て何をまだ推定しているのかを先に固定します。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Observability Budget の欄</th>
+<th>最低限書くこと</th>
+<th>これが無いと何が起きるか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>measurement stack</strong></td>
+<td>EEG / MEG / fMRI、whole-brain atlas、Patch-seq、volume EM、same-brain function、local transmitter / glia imaging のどれを使ったか。</td>
+<td>「multimodal」「atlas」「same-brain」という言葉だけが独り歩きし、直接観測量の違いが消えます。</td>
+</tr>
+<tr>
+<td><strong>direct observables</strong></td>
+<td>その stack が直接測った変数だけを書きます。BOLD、field potential、cell-type label、EM synapse、local ACh dynamics などです。</td>
+<td>推定した latent state を、最初から観測済みだったかのように誤読しやすくなります。</td>
+</tr>
+<tr>
+<td><strong>remaining latent state</strong></td>
+<td>weights、delay / myelin、intrinsic excitability / homeostatic set point、neuromodulation、glia / metabolic support、sleep-history など、まだ残る変数を列挙します。</td>
+<td>state-complete ではない結果を、emulation-complete や内部状態の唯一解へ繰り上げやすくなります。</td>
+</tr>
+<tr>
+<td><strong>external calibration route</strong></td>
+<td>phantom、intracranial stimulation、同時侵襲記録、same-brain co-registration、Patch-seq bridge など、外部妥当化の経路を書きます。</td>
+<td>精度や可視化の改善を、そのまま ground truth への接近と取り違えやすくなります。</td>
+</tr>
+<tr>
+<td><strong>validity horizon</strong></td>
+<td>within-session、cross-state、cross-day、perturbation、recovery のどこまで検証したかを書きます。</td>
+<td>same-day の fit を長期 stability や memory claim へ不当に延長しやすくなります。</td>
+</tr>
+<tr>
+<td><strong>claim ceiling と abstention</strong></td>
+<td>「macro state tracking」「structural scaffold」「local conditional prediction」など、その結果が到達してよい上限と、超えたら棄権する条件を書きます。</td>
+<td>論文の前進を過大に翻訳し、L1 の結果を L2/L3/L4 へ誤昇格させやすくなります。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>最低運用ルール</strong>
+<p>
+このカードが無い場合、本サイトでは結果を <strong>L0/L1 の再現可能解析または限定つき decode</strong> として扱い、L2 以上へ上げません。たとえば、<strong>EEG / HD-EEG + MRI だけ</strong>なら default ceiling は macro state tracking、<strong>volume EM だけ</strong>なら structural scaffold、<strong>whole-brain atlas だけ</strong>なら molecular / spatial prior、<strong>same-brain calcium + EM</strong> でも local conditional prediction までです。詳細な stack 別 ceiling は <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: 計測スタックごとの observability と claim ceiling</a> に集約しています。
+</p>
 </div>
 </section>
 
@@ -861,6 +921,7 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Jayaram, V., &amp; Barachant, A. (2018). MOABB: trustworthy algorithm benchmarking for BCIs. <a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">doi:10.1088/1741-2552/aadea0</a></li>
 <li>Michel, C. M., &amp; Brunet, D. (2019). EEG source imaging: a practical review. <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">doi:10.3389/fneur.2019.00325</a></li>
 <li>Unnwongse, K., et al. (2023). Validating EEG source imaging using intracranial electrical stimulation. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
+<li>Hao, W., et al. (2025). Localization accuracy of interictal and ictal EEG source imaging in simultaneous HD-EEG and SEEG. <a href="https://doi.org/10.1007/s00415-025-12886-9" target="_blank">doi:10.1007/s00415-025-12886-9</a></li>
 <li>Delorme, A. (2023). EEG is better left alone. <a href="https://doi.org/10.1038/s41598-023-27528-0" target="_blank">doi:10.1038/s41598-023-27528-0</a></li>
 <li>Klug, M., &amp; Kloosterman, N. A. (2022). Zapline-plus. <a href="https://doi.org/10.1002/hbm.25832" target="_blank">doi:10.1002/hbm.25832</a></li>
 <li>Hernandez-Pavon, J. C., et al. (2023). TMS combined with EEG: recommendations and open issues. <a href="https://doi.org/10.1016/j.brs.2023.02.009" target="_blank">doi:10.1016/j.brs.2023.02.009</a></li>
@@ -878,6 +939,8 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Lynn, C. W., et al. (2021). Broken detailed balance and entropy production in the human brain. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>
 <li>de la Fuente, L. A., et al. (2022). Temporal irreversibility of neural dynamics as a signature of consciousness. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
 <li>Ishihara, K., &amp; Shimazaki, H. (2025). State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics. <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
+<li>Yao, Z., et al. (2023). A high-resolution transcriptomic and spatial atlas of cell types in the whole mouse brain. <a href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank">doi:10.1038/s41586-023-06812-z</a></li>
+<li>Dorkenwald, S., et al. (2024). Neuronal wiring diagram of an adult brain. <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">doi:10.1038/s41586-024-07558-y</a></li>
 <li>Lappalainen, J. K., Tschopp, F. D., Prakhya, S., et al. (2024). Connectome-constrained networks predict neural activity across the fly visual system. <a href="https://doi.org/10.1038/s41586-024-07939-3" target="_blank">doi:10.1038/s41586-024-07939-3</a></li>
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>

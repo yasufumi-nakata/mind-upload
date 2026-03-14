@@ -78,6 +78,13 @@ Mind-Uploadは、「心をコンピュータで再現できるのか？」とい
 </div>
 
 <div class="note-box">
+<strong>『どこまで直接見えているか』を先に確認したいとき</strong>
+<p>
+2026年3月の更新では、measurement stack ごとの主張上限を本文運用へ落とすため、<a href="verification.html#observability-budget">Verification の Observability Budget</a> を追加しました。multimodal という言葉だけで state-complete と読まないための整理表は <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: 計測スタックごとの observability と claim ceiling</a> に置いています。
+</p>
+</div>
+
+<div class="note-box">
 <strong>公開ページと wiki の役割分担</strong>
 <p>
 このトップページを含む公開ページは、まず「いま何が分かっていて、何がまだ未解決か」を早く把握するための<strong>情報ポータル</strong>です。背景から順に学びたい場合は、各ページ上部の <strong>wiki</strong> 導線から学習用ページへ進んでください。

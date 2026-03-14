@@ -5,7 +5,7 @@ description: "ベースライン、ベンチマーク、事前登録、モデル
 article_type: Wiki
 subtitle: "『何を比べ、どう固定し、何を残すか』を分けて考える"
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
+last_updated: "2026-03-15"
 note: "Learning guide"
 audience: "研究運用の言葉が似て見える人、比較可能性の作り方を初歩から理解したい人"
 reading_time: "10〜15分"
@@ -51,6 +51,13 @@ recommended_pages:
 </p>
 </div>
 
+<div class="note-box">
+<strong>2026-03 追補</strong>
+<p>
+L1 以上の結果では、通常のモデルカードに加えて <a href="../verification.html#observability-budget">Observability Budget</a> を添付し、measurement stack、直接観測量、残る latent state、claim ceiling、abstention 条件を明示する運用にそろえました。
+</p>
+</div>
+
 <section class="section" id="roles">
 <h2 class="section-title">まず役割を分ける</h2>
 <table class="data-table">
@@ -75,7 +82,7 @@ recommended_pages:
 </tr>
 <tr>
 <td><strong>モデルカード</strong></td>
-<td>点数、弱点、リーク対策、失敗例、計算条件などを残します。</td>
+<td>点数、弱点、リーク対策、失敗例、計算条件、さらに L1 以上では Observability Budget を残します。</td>
 </tr>
 <tr>
 <td><strong>失敗例・ネガティブ結果</strong></td>
@@ -174,7 +181,7 @@ recommended_pages:
 <li><strong>ベースラインがあるか：</strong>何と比べたのかが明示されているか。</li>
 <li><strong>ベンチマークが固定されているか：</strong>データ、分割、指標が書かれているか。</li>
 <li><strong>事前登録があるか：</strong>あとから条件を変えていないか。</li>
-<li><strong>モデルカードや失敗例があるか：</strong>弱点や崩れ方が見えるか。</li>
+<li><strong>モデルカードや失敗例があるか：</strong>弱点や崩れ方に加え、L1 以上では Observability Budget が見えるか。</li>
 </ul>
 </div>
 </section>
