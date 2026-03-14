@@ -5,7 +5,7 @@ description: "マインドアップロード/WBEを「進歩を測れる科学�
 article_type: Start Here
 subtitle: "勝利条件・標準・ベンチマーク・事前登録を先に作る"
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
+last_updated: "2026-03-15"
 note: "Human-friendly landing page"
 audience: "はじめて来た人、全体像だけ先に知りたい人、読む順番で迷いたくない人"
 reading_time: "5〜10分"
@@ -14,10 +14,12 @@ accuracy_note: "ここでは入口に必要なことだけを先に示します�
 page_highlights:
   - "Mind-Uploadの中心は、派手な結論を出すことではなく、前進を測れる検証基盤を作ることです。"
   - "迷ったら Verification → Roadmap → WBE/EEG入門 の順で読むと、話の軸を保ちやすいです。"
+  - "配線図や cell type だけでは長期ダイナミクスは決まらず、sleep/homeostasis・髄鞘・グリア代謝も別変数として残ります。"
   - "用語や前提で止まったときに戻れる入口として、FAQ と用語集も近くに置いています。"
 known_points:
   - "公開データ、標準、ベンチマーク、監査をそろえると、L0〜L2 の前進は比較可能な形で積み上げられます。"
   - "EEGやデコーディング研究は、条件を限定すれば測定可能な前進を作れます。"
+  - "connectome-complete は emulation-complete を意味せず、maintenance-state の不足を別に監査する必要があります。"
   - "本人性や意識の強い主張は、入口ページではなく後段の検証設計として扱う必要があります。"
 unknown_points:
   - "どの条件を満たせば L4 の本人性を認めるかについて、分野横断の合意はまだありません。"
@@ -66,6 +68,13 @@ Mind-Uploadは、「心をコンピュータで再現できるのか？」とい
 <li><strong>最短の読み方：</strong>全体像だけ知りたい場合は、下の「読む順番」から 1〜3 を見れば十分です。</li>
 <li><strong>このページでしないこと：</strong>本人性や意識の最終結論を、入口ページだけで決めることはしません。</li>
 </ul>
+</div>
+
+<div class="note-box">
+<strong>入口で先に防ぐ誤読</strong>
+<p>
+このサイトは 2026年3月の一次文献再監査を受けて、<strong>「配線図と cell type があれば、残りはほぼ埋まる」</strong>という読み方を入口ページでも採りません。sleep / wake に依存した再正規化、髄鞘 / オリゴデンドロサイト support、グリア代謝、分子ターンオーバー下の active maintenance が別変数として残るためです。したがって、本サイトでは <strong>connectome-complete</strong> をそのまま <strong>emulation-complete</strong> と読み替えません。短い説明は <a href="wbe_101.html#state-completeness">WBE入門の hidden state 節</a>、根拠の整理は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> と <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に集約しています。
+</p>
 </div>
 
 <div class="note-box">

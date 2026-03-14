@@ -5,7 +5,7 @@ description: "Mind-Uploadを読んでいて出やすい疑問に、短く正確�
 article_type: FAQ
 subtitle: "派手な結論より、検証できる前進を"
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
+last_updated: "2026-03-15"
 note: "Human-first"
 audience: "まず疑問や誤解を整理したい人、短いQ&Aで全体像をつかみたい人"
 reading_time: "8〜15分"
@@ -13,11 +13,13 @@ page_intro: "このページは、Mind-Upload を読んでいて多くの人が�
 accuracy_note: "ここは短い答えを返すページです。結論だけ切り取らず、必要に応じてリンク先の本文と参考文献へ戻ってください。"
 page_highlights:
   - "『このサイトは何をするのか』『EEG / brain-to-text で何が言えるのか』など、最初の疑問をまとめて潰せます。"
+  - "『コネクトームと cell type で十分か』という誤読にも、短くても科学的に答えます。"
   - "派手な言い切りを避け、何が未解決かも同時に書いています。"
   - "FAQだけで十分な場合と、本文ページへ進むべき場合を分けて読める構成です。"
 known_points:
   - "短い Q&A でも、強い主張を弱い主張へ分解して読むだけで誤解は減らせます。"
   - "EEG や LLM の派手な見た目と、WBE の強い主張は分けて扱う必要があり、language prior と brain-derived information の寄与も分離する必要があります。"
+  - "配線図や cell type だけでは maintenance-state が落ちるため、長期ダイナミクスの主張は別に監査する必要があります。"
   - "FAQ は方向を間違えないための入口として有効です。"
 unknown_points:
   - "短い答えだけでは、理論選択や本人性の議論までは決まりません。"
@@ -146,6 +148,10 @@ FAQ を読んで意味は分かったが、次に何を確認すれば修正や�
 <td>Q3「じゃあ、何を作れば“前進”になる？」を見ると、L0〜L2 の最小成果物が分かります。</td>
 </tr>
 <tr>
+<td><strong>コネクトームだけで足りるか知りたい</strong></td>
+<td>Q2c「コネクトームと cell type が分かれば、残りはほぼ埋まる？」を見ると、sleep / myelin / glia の抜けが分かります。</td>
+</tr>
+<tr>
 <td><strong>リアルタイムや閉ループの条件が知りたい</strong></td>
 <td>Q5b「オフライン精度が高ければ、閉ループでも十分？」から入ると、L3 で何が追加されるかをつかみやすいです。</td>
 </tr>
@@ -234,6 +240,19 @@ A. それだけでは言えません。会話が自然でも、それが<strong>
 Mind-Uploadで重視するのは、「人っぽく見えるか」だけでなく、条件を変えたときの応答、記憶や学習の連続性、反証条件への耐性が公開されているかです。見た目の自然さは参考にはなりますが、それだけで L4 の本人性主張には進めません。
 </p>
 <p><a href="wiki/counterfactual-and-perturbation-verification.html">Wiki: 反事実・介入・摂動の検証</a> に、なぜ「自然に話せる」だけでは足りないかを段階で整理しています。</p>
+</section>
+
+<section class="section" id="q2c">
+<h2 class="section-title">Q. コネクトームと cell type が分かれば、残りはほぼ埋まる？</h2>
+<p>
+A. まだ言えません。<a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a> が示したように、同じ transcriptomic type の内部にも morpho-electric phenotype の幅が残ります。さらに <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">Torrado Pacheco et al. (2021)</a>、<a href="https://doi.org/10.1038/s41467-024-47838-5" target="_blank">Xu et al. (2024)</a> は、sleep / wake cycle をまたぐ homeostasis と network recovery が別に残ることを示しました。
+</p>
+<p>
+また、<a href="https://doi.org/10.1126/science.1252304" target="_blank">Gibson et al. (2014)</a>、<a href="https://doi.org/10.1126/science.1254960" target="_blank">McKenzie et al. (2014)</a>、<a href="https://doi.org/10.1038/s41593-023-01517-y" target="_blank">Looser et al. (2024)</a> は髄鞘と oligodendrocyte support が timing と axonal health に関わることを示し、<a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>、<a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Lee et al. (2022)</a> は glial / metabolic support と turnover 下の active maintenance が記憶固定化や slow state に関わることを示しました。したがって、<strong>same-day の活動一致</strong>と<strong>cross-day の維持機構一致</strong>は別の主張でございます。
+</p>
+<p>
+Mind-Upload では、ここから <strong>connectome-complete を structural scaffold の前進</strong>として扱い、<strong>emulation-complete</strong> とは言い換えません。短い答えの先としては <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> と <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> が最短です。
+</p>
 </section>
 
 <section class="section" id="q3">
@@ -360,6 +379,16 @@ Mind-Uploadの差別化点は、<strong>「検証基盤（Verification Commons�
 <li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
 <li>Metzger, S. L., Littlejohn, K. T., Silva, A. B., et al. (2023). A high-performance neuroprosthesis for speech decoding and avatar control. <a href="https://doi.org/10.1038/s41586-023-06443-4" target="_blank">doi:10.1038/s41586-023-06443-4</a></li>
 <li>Card, N. S., Glasser, M. F., et al. (2024). An accurate and rapidly calibrating speech neuroprosthesis. <a href="https://doi.org/10.1056/NEJMoa2314132" target="_blank">doi:10.1056/NEJMoa2314132</a></li>
+<li>Gouwens, N. W., et al. (2021). Integrated morphoelectric and transcriptomic classification of cortical GABAergic cells. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
+<li>Hengen, K. B., Torrado Pacheco, A., McGregor, J. N., Van Hooser, S. D., &amp; Turrigiano, G. G. (2016). Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
+<li>Torrado Pacheco, A., et al. (2021). Sleep Promotes Downward Firing Rate Homeostasis. <a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">doi:10.1016/j.neuron.2021.04.004</a></li>
+<li>Xu, W., et al. (2024). Sleep restores an optimal computational regime in cortical networks. <a href="https://doi.org/10.1038/s41467-024-47838-5" target="_blank">doi:10.1038/s41467-024-47838-5</a></li>
+<li>Gibson, E. M., et al. (2014). Neuronal activity promotes oligodendrogenesis and adaptive myelination in the mammalian brain. <a href="https://doi.org/10.1126/science.1252304" target="_blank">doi:10.1126/science.1252304</a></li>
+<li>McKenzie, I. A., et al. (2014). Motor skill learning requires active central myelination. <a href="https://doi.org/10.1126/science.1254960" target="_blank">doi:10.1126/science.1254960</a></li>
+<li>Looser, Z. J., et al. (2024). Oligodendrocyte-axon metabolic coupling is mediated by extracellular K<sup>+</sup> and maintains axonal health. <a href="https://doi.org/10.1038/s41593-023-01517-y" target="_blank">doi:10.1038/s41593-023-01517-y</a></li>
+<li>Suzuki, A., et al. (2011). Astrocyte-neuron lactate transport is required for long-term memory formation. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">doi:10.1016/j.cell.2011.02.018</a></li>
+<li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
+<li>Lee, J.-C., Wang, C.-Y., Lin, C.-L., &amp; Lu, H.-C. (2022). Synaptic memory survives molecular turnover. <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">doi:10.1073/pnas.2211572119</a></li>
 <li>Guo, C., Pleiss, G., Sun, Y., &amp; Weinberger, K. Q. (2017). On Calibration of Modern Neural Networks. <a href="https://proceedings.mlr.press/v70/guo17a.html" target="_blank">PMLR 70:1321-1330</a></li>
 <li>Geifman, Y., &amp; El-Yaniv, R. (2017). Selective Classification for Deep Neural Networks. <a href="https://papers.neurips.cc/paper/7073-selective-classification-for-deep-neural-networks" target="_blank">NeurIPS 2017</a></li>
 <li>Ji, Z., et al. (2023). Survey of Hallucination in NLG. <a href="https://doi.org/10.1145/3571730" target="_blank">doi:10.1145/3571730</a></li>
