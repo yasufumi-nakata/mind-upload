@@ -199,6 +199,45 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 <p>このページは“本”ではなく、研究全体像の<strong>地図</strong>です。まず「問いの木」を通読し、次に「学習の順序」に沿って各ノードを深掘りしてください。重要な運用ルールは2つだけです：<strong>(1) 出典リンクを残す</strong>、<strong>(2) 暫定（不確実性）を明示する</strong>。</p>
 </section>
 
+<section class="section" id="measurement-identifiability-audit">
+<h2 class="section-title">2026-03 文献監査：計測・同定・介入の3つの壁</h2>
+<p>
+今回の再監査では、このロードマップの中でも <strong>M3（空間粒度）</strong>、<strong>M6（介入設計）</strong>、<strong>R7（同定可能性）</strong>、<strong>V2（因果テスト）</strong> を重点更新しました。理由は単純で、WBE をめぐる技術議論で最も起きやすい誤読が、<strong>観測量の増加</strong>を<strong>状態完全性</strong>と読み替えること、<strong>予測性能の上昇</strong>を<strong>唯一解の獲得</strong>と読み替えること、そして<strong>介入を1回入れた</strong>ことを<strong>因果検証が済んだ</strong>と読み替えることだからです。以下の3つは、2026年3月時点の一次文献が比較的一貫して支持している下限でございます。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>壁</th>
+<th>一次文献が今支持すること</th>
+<th>このページでの修正方針</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>計測粒度の壁</strong></td>
+<td>EEG/MEG は大域的電流場、fMRI は血行動態 proxy であり、人で非侵襲に得られるのは基本的にマクロ観測です。一方、Dorkenwald et al. (2024) や MICrONS Consortium et al. (2025) が押し上げたのは、モデル生物や局所皮質での構造・機能対応の前線であって、human whole-brain の state-complete 測定ではありません。</td>
+<td>M3 では「何が直接見えて、何が潜在のまま残るか」を粒度ごとに固定し、構造 scaffold と状態完全性を分けて書きます。</td>
+</tr>
+<tr>
+<td><strong>同定可能性の壁</strong></td>
+<td>HD-EEG / ESI の直接妥当化は進んでいますが、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et al. (2025) が示すのは、条件付き detectability や局在誤差の監査可能性であって、内部状態の一般的一意復元ではありません。source depth、導電率仮定、頭部モデル、刺激条件で結論は動きます。</td>
+<td>R7 では predictability、localization、identifiability を別レベルとして定義し、family comparison と棄権条件を必須にします。</td>
+</tr>
+<tr>
+<td><strong>介入検証の壁</strong></td>
+<td>TMS-EEG、phase-locked stimulation、adaptive DBS、BCI 閉ループは強い証拠候補ですが、Hernandez-Pavon et al. (2023)、Zrenner et al. (2018)、Wilson et al. (2010) などが示す通り、刺激部位・強度・マスキング・アーチファクト窓・latency/jitter の計測まで固定しないと比較不能です。介入は binary ではなく、強さの異なる段階証拠です。</td>
+<td>M6 と V2 では、受動観測、held-out perturbation、online loop、局所因果介入、長期閉ループを段階分けし、要求ログを明示します。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>この監査で明確にした批判点</strong>
+<p>
+したがって、このロードマップでは今後、<strong>「多モーダルだから十分」</strong>、<strong>「精度が高いから一意」</strong>、<strong>「刺激を入れたから因果」</strong>という3つの短絡を許しません。WBE に近い強い主張ほど、<strong>計測粒度</strong>、<strong>候補モデル空間</strong>、<strong>介入設計</strong>、<strong>失敗時の棄権</strong>を先に公開する必要があります。
+</p>
+</div>
+</section>
+
 <section class="section" id="roadmap-index">
 <h2 class="section-title">索引（キーワード→QA）</h2>
 <p>用語から該当QAへ直接ジャンプできます。括弧内はQA-IDです。本文側にも同じアンカーを付けています。</p>
@@ -511,7 +550,14 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 <div class="qa-body">
 <p><strong>問い：</strong>“本人の心的機能”に必要な情報が、どの空間粒度に宿ると仮定するか？</p>
 <p><strong>分岐（例）：</strong>(A) 領域間結合＋状態で十分 / (B) 局所回路まで必要 / (C) シナプス結合まで必要</p>
-<p><strong>次に必要：</strong>仮定(A)(B)(C)ごとに、観測可能性（M1）と計算可能性（I3）を評価する</p>
+<p><strong>一次文献が強く支持すること：</strong>人で非侵襲に得られる EEG / MEG / fMRI は、基本的に <strong>マクロな proxy</strong> です。EEG / MEG は大域的に同期した電流場、fMRI は血行動態であり、ニューロン単位やシナプス単位の状態を直接観測しているわけではありません。逆に、Dorkenwald et al. (2024) や MICrONS Consortium et al. (2025) が押し上げたのは、モデル生物や局所皮質における高密度 connectomics と same-brain function の接続であり、そこから直ちに「人の全脳で state-complete に測れた」とは言えません。</p>
+<ul>
+<li><strong>非侵襲ヒト計測の上限：</strong>領域〜ネットワーク水準の状態遷移、比較的大域な timing 制約、条件差の追跡です。</li>
+<li><strong>connectomics 前線の上限：</strong>構造 scaffold、局所 functional twin、cell-type 依存結線の監査であって、現在のシナプス効率や神経修飾場までの完全観測ではありません。</li>
+<li><strong>残る潜在状態：</strong>シナプス重み、受容体状態、neuromodulatory field、glial / metabolic state、plastic history は別変数として残ります。</li>
+</ul>
+<p><strong>暫定判定規則：</strong>観測経路がマクロ proxy に留まる場合、このロードマップでは主張をまず <strong>L1〜弱い L2</strong> に留めます。局所回路やシナプス粒度の主張へ上げるには、同一脳での構造・機能対応、外部 ground truth、介入応答のいずれかを追加で要求します。</p>
+<p><strong>次に必要：</strong>仮定(A)(B)(C)ごとに、観測可能性（M1）、同定可能性（R7）、計算可能性（I3）を束で評価し、どの粒度で何を棄権するかまで公開します。背景は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> を参照してください。</p>
 </div>
 </details>
 
@@ -548,7 +594,15 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 </summary>
 <div class="qa-body">
 <p><strong>問い：</strong>受動観測だけでは同定できない時、どんな介入（刺激/課題/環境変化）を入れると識別可能性が上がるか？</p>
-<p><strong>次に必要：</strong>モデル（R4）側で「この介入があると識別できる」という設計逆算をする</p>
+<p><strong>一次文献が強く支持すること：</strong>介入は「入れれば因果が分かる」魔法ではありません。識別可能性が本当に上がるのは、<strong>どこに、いつ、どれだけ刺激したか</strong>、<strong>アーチファクト窓をどう切ったか</strong>、<strong>latency / jitter をどう実測したか</strong> が揃った設計だけです。</p>
+<ul>
+<li><strong>state-targeted stimulation：</strong>Zrenner et al. (2018) のように、刺激時刻を脳状態へ条件付けると、同じ刺激でも応答差を検出しやすくなります。</li>
+<li><strong>ground-truth 付き介入：</strong>頭蓋内刺激、同時 SEEG / ECoG、ファントム、動物実験は、scalp 側の推定誤差を外部基準で較正できます。</li>
+<li><strong>閉ループ介入：</strong>BCI や adaptive stimulation では、Wilson et al. (2010) が示すように mean latency だけでなく jitter と worst-case path を測らない限り、反応差を因果差と解釈できません。</li>
+</ul>
+<p><strong>介入として数えないもの：</strong>受動課題の条件差、post-hoc な cross-modal 相関、刺激ログのない offline 解析だけでは、このページでは強い因果証拠に数えません。</p>
+<p><strong>外部依存タスク：</strong>TMS / DBS / 実被験者への侵襲介入は IRB、機材、臨床協力が前提です。本リポジトリで先に握るのは、<strong>介入 grammar</strong>、<strong>同期ログ形式</strong>、<strong>失敗時の停止条件</strong>、<strong>比較規則</strong>の整備です。</p>
+<p><strong>次に必要：</strong>モデル（R4）側で「この介入があると family 間の識別が改善する」という設計逆算を行い、TTL / LSL / photodiode / loopback のどこを測ったかまで含む提出物パックを固定します。</p>
 </div>
 </details>
 
@@ -705,9 +759,20 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 <p><strong>反証条件：</strong>小さな前処理差、導電率仮定、候補モデル空間の変更で結論が大きく反転する、あるいは held-out 摂動や外部基準で回収できない場合は、同定できたとはみなしません。</p>
 <p><strong>次に必要：</strong>事前分布/正則化だけでなく、<strong>比較した family と除外した family</strong>、<strong>電極幾何・頭部モデル・導電率の感度分析</strong>、<strong>シミュレーション/ファントム/侵襲較正</strong>、<strong>モデルが重なるときの棄権条件</strong>をまとめて公開し、頑健な結論だけを採用します。</p>
 <div class="note-box">
+<strong>predictability・localization・identifiability を分けます</strong>
+<p>
+このページでは、<strong>held-out 予測が上がった</strong>、<strong>局在誤差が下がった</strong>、<strong>内部状態が唯一解へ近づいた</strong>、を同じ強さで扱いません。前二者は重要な前進ですが、第三者まで含む一意性の主張には追加条件が必要です。
+</p>
+<ul>
+<li><strong>predictability：</strong>条件付きで次の観測を当てられることです。モデル圧縮や proxy 改善としては有用ですが、それだけで内部状態の唯一性は出ません。</li>
+<li><strong>localization：</strong>特定条件下で source の位置誤差が下がることです。直接妥当化として重要ですが、深部・低振幅・未観測領域では別の不確実性が残ります。</li>
+<li><strong>identifiability：</strong>候補 family と感度分析を含めても、結論が安定し、かつ held-out perturbation と外部基準で回収できることです。</li>
+</ul>
+</div>
+<div class="note-box">
 <strong>2026-03 補足：相関・予測・同定を同じ強さで扱いません</strong>
 <p>
-直接妥当化つき EEG 文献は、慎重に読むとむしろ限界を明確にしています。Seeber et al. (2019) は 256ch scalp EEG で subcortical signal が <strong>条件付きで detectable</strong> だと示しましたが、一般的一意復元を主張していません。Unnwongse et al. (2023) は intracranial stimulation を用いた直接検証で localization error が conductivity 仮定と source depth に依存することを示し、Hao et al. (2025) は simultaneous HD-EEG/SEEG の 29 例で source power と source depth が誤差を大きく左右すると報告しました。したがって、cross-modal 相関や held-out 予測が出ても、それはまず <strong>predictability の上昇</strong>であり、<strong>内部状態の唯一解</strong>に直結するとは書きません。
+直接妥当化つき EEG 文献は、慎重に読むとむしろ限界を明確にしています。Seeber et al. (2019) は 256ch scalp EEG で subcortical signal が <strong>条件付きで detectable</strong> だと示しましたが、一般的一意復元を主張していません。Unnwongse et al. (2023) は intracranial stimulation を用いた直接検証で localization error が conductivity 仮定と source depth に依存することを示し、Hao et al. (2025) は simultaneous HD-EEG/SEEG の患者コホートで source power と source depth が誤差を大きく左右すると報告しました。したがって、cross-modal 相関や held-out 予測が出ても、それはまず <strong>predictability / localization の改善</strong>であり、<strong>内部状態の唯一解</strong>に直結するとは書きません。
 </p>
 </div>
 </div>
@@ -943,7 +1008,16 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 </summary>
 <div class="qa-body">
 <p><strong>問い：</strong>相関一致は“似せた”だけでも達成できる。介入に対して一致するかが強い検証になる。</p>
-<p><strong>次に必要：</strong>M6（介入設計）とR4（因果モデル）を繋いだ評価項目を作る</p>
+<p><strong>証拠の強さを4段で扱います：</strong>このロードマップでは、因果テストを 1 種類の pass / fail に潰しません。一次文献が今支えるのは、強さの異なる段階証拠です。</p>
+<ul>
+<li><strong>Gate 1 / held-out perturbation prediction：</strong>課題条件、刺激タイミング、環境変化を変えたときの応答を offline に予測できることです。</li>
+<li><strong>Gate 2 / online human-in-the-loop：</strong>実時間入力と feedback を含む loop で、latency / jitter を監査しながら性能を保てることです。</li>
+<li><strong>Gate 3 / local causal intervention：</strong>TMS-EEG、intracranial stimulation、adaptive DBS など、刺激部位・強度・アーチファクト処理・安全停止条件が公開された介入です。</li>
+<li><strong>Gate 4 / long-run closed loop：</strong>複数セッションや長期運用で、再較正負荷、回復時間、失敗モードまで追跡できることです。</li>
+</ul>
+<p><strong>必須ログ：</strong>刺激部位、強度、マスキング、アーチファクト窓、同期経路、end-to-end latency の中央値 / P95 / P99、jitter、dropout、recovery time を残します。TMS-EEG は Hernandez-Pavon et al. (2023) の推奨事項を外した時点で、比較可能な因果テストとして扱いません。</p>
+<p><strong>判定規則：</strong>Gate 1 の成功だけで L3 や「反事実同値」を主張しません。より強い主張へ進めるには、M6（介入設計）と R4（因果モデル）をつないだ評価項目、外部妥当化、棄権条件を束で提出する必要があります。詳細な運用側の判定は <a href="verification.html#causal-perturbation-suite">Verification の因果的摂動スイート</a> を参照してください。</p>
+<p><strong>次に必要：</strong>M6（介入設計）とR4（因果モデル）を繋いだ評価項目を作り、少なくとも Gate 1 / Gate 2 を第三者が再実行できる仕様へ落とします。</p>
 </div>
 </details>
 
@@ -1721,7 +1795,7 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 <li>Seeber, M., Cantonas, L.-M., Hoevels, M., et al. (2019). Subcortical electrophysiological activity is detectable with high-density EEG source imaging. <a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">doi:10.1038/s41467-019-08725-w</a></li>
 <li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Direct validation of EEG source imaging by intracranial electric stimulation in human patients. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
 <li>Hao, Y., Alhilani, M., Asano, E., et al. (2025). High-density scalp EEG source imaging and directed functional connectivity validated by simultaneous stereo-electroencephalography. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
-<li>Logothetis, N. K. (2008). Limits of fMRI inference.</li>
+<li>Logothetis, N. K. (2008). What we can do and what we cannot do with fMRI. <a href="https://doi.org/10.1038/nature06976" target="_blank">doi:10.1038/nature06976</a></li>
 <li>Purdon, P. L., et al. (2013). EEG signatures of loss/recovery of consciousness.</li>
 <li>Boto, E., et al. (2018). Wearable OPM-MEG.</li>
 </ol>
@@ -1740,6 +1814,7 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 <li>Zrenner, C., Desideri, D., Belardinelli, P., &amp; Ziemann, U. (2018). Real-time EEG-defined excitability states determine efficacy of TMS-induced plasticity in the human motor cortex. <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">doi:10.1016/j.brs.2017.11.016</a></li>
 <li>Little, S., Pogosyan, A., Neal, S., et al. (2013). Adaptive deep brain stimulation in advanced Parkinson disease. <a href="https://doi.org/10.1002/ana.23951" target="_blank">doi:10.1002/ana.23951</a></li>
 <li>Tinkhauser, G., Pogosyan, A., Little, S., et al. (2017). The modulatory effect of adaptive deep brain stimulation on beta bursts in Parkinson's disease. <a href="https://doi.org/10.1093/brain/awx010" target="_blank">doi:10.1093/brain/awx010</a></li>
+<li>Hernandez-Pavon, J. C., Metsomaa, J., Mutanen, T. P., et al. (2023). TMS combined with EEG: Recommendations and open issues. <a href="https://doi.org/10.1016/j.brs.2023.02.009" target="_blank">doi:10.1016/j.brs.2023.02.009</a></li>
 <li>Appelhoff, S., &amp; Stenner, T. (2021). In COM we trust: Feasibility of USB-based event marking. <a href="https://doi.org/10.3758/s13428-021-01571-z" target="_blank">doi:10.3758/s13428-021-01571-z</a></li>
 <li>Kothe, C., Shirazi, S. Y., Stenner, T., et al. (2025). The lab streaming layer for synchronized multimodal recording. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
 </ol>
@@ -1842,6 +1917,7 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 <h4>On this page</h4>
 <ul>
 <li><a href="#howto">How to Use</a></li>
+<li><a href="#measurement-identifiability-audit">2026-03 文献監査</a></li>
 <li><a href="#definition">前進の定義</a></li>
 <li><a href="#roadmap-index">索引</a></li>
 <li><a href="#tree">問いの木</a></li>
