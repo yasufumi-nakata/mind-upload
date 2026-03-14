@@ -89,7 +89,7 @@
 - Défossez A, Caucheteux C, Rapin J, Kabeli O, King J-R. Decoding speech perception from non-invasive brain recordings. Nat Mach Intell. 2023.
   - https://doi.org/10.1038/s42256-023-00714-5
 - d'Ascoli S, Ferrante O, et al. Towards decoding individual words from non-invasive brain recordings. Nat Commun. 2025.
-  - https://doi.org/10.1038/s41467-025-56165-8
+  - https://doi.org/10.1038/s41467-025-65499-0
 - Willett FR, Kunz EM, Fan C, et al. A high-performance speech neuroprosthesis. Nature. 2023.
   - https://doi.org/10.1038/s41586-023-06377-x
 - Littlejohn KT, Dabagia M, Ladwig A, et al. A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. Nat Neurosci. 2025.

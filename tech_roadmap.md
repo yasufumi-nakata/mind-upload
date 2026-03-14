@@ -1025,8 +1025,46 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 <span class="qa-tags"><span class="tag">DISAMBIGUATION</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>問い：</strong>会話や報告は模倣されやすい。区別には、介入応答・閉ループ・内部状態の整合が必要になる。</p>
-<p><strong>次に必要：</strong>V2（介入）＋I1（閉ループ）＋R4（因果）を組み合わせた“逃げ道の少ない”評価</p>
+<p><strong>問い：</strong>会話や報告は模倣されやすく、language model の事前分布が強いほど「それっぽさ」は上がります。したがって、ここで区別したいのは抽象的な「AIらしさ」ではなく、<strong>神経信号が language prior をどこまで上回っているか</strong>、<strong>どのモダリティ・課題・時間スケールで成立しているか</strong>です。</p>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>トラック</th>
+<th>2026-03時点で比較的強く言えること</th>
+<th>まだ言えないこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>非侵襲 semantic / caption decoding</strong></td>
+<td>Tang らや Horikawa は、fMRI を使って連続言語の意味再構成や動画内容の記述生成を前進させました。ここでの到達点は、<strong>意味表現の一部を外部文へ写す</strong>ことです。</td>
+<td>被験者協力、課題条件、caption 候補空間への依存が残るため、これだけで self-model や WBE の再現とは言えません。</td>
+</tr>
+<tr>
+<td><strong>非侵襲 word / speech decoding</strong></td>
+<td>Défossez らと d'Ascoli らは、MEG/EEG からの speech / word decoding を前進させ、<strong>MEG と reading task が有利で、データ量が性能を強く支配する</strong>ことを示しました。</td>
+<td>open-ended thought reading や強い cross-day / cross-task 一般化は、まだ別問題です。candidate set や device 依存を隠したまま強い主張へ上げられません。</td>
+</tr>
+<tr>
+<td><strong>侵襲 streaming speech neuroprosthesis</strong></td>
+<td>Willett、Littlejohn、Wairagkar は、局所的な communication subsystem としての speech BCI を大きく前進させました。大語彙、高速 decode、80 ms 更新、closed-loop own-voice synthesis は重要な達成です。</td>
+<td>ここで示されたのは communication route の局所的前進であって、全脳 emulation や本人性保存ではありません。さらに Wilson らが示したように、長期 drift と recalibration burden は別の壁として残ります。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>最低限ほしい評価パック</strong>
+<ul>
+<li><strong>神経寄与の切り分け：</strong><code>brainなし</code>、<code>time-shuffle</code>、<code>trial-shuffle</code>、<code>LM-only</code>、<code>no-LM</code> を並べ、検索型なら candidate set size も公開します。</li>
+<li><strong>一般化の境界：</strong>held-out story、held-out vocabulary、cross-day、cross-task、cross-subject を分けて報告し、被験者協力や個人適応の必要性を隠しません。</li>
+<li><strong>streaming 指標：</strong>words/min だけでなく <code>P50/P95/P99 latency</code>、silence / abstention、dropout、recalibration burden、recovery time を残します。</li>
+<li><strong>読替え禁止：</strong>decode 成功、embedding 類似、会話の自然さを、そのまま emulate / WBE / 本人性保存へ昇格させません。</li>
+</ul>
+</div>
+
+<p><strong>次に必要：</strong>V2（介入）＋I1（閉ループ）＋R4（因果）に、<code>LM-only / shuffle / OOD / cross-day / latency / abstention / recalibration</code> を束ねた評価パックを接続し、communication route の前進と WBE の主張を分離します。</p>
 </div>
 </details>
 
@@ -1327,8 +1365,8 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 </tr>
 <tr>
 <td>デコーディング</td>
-<td>Huth et al. (2016), Tang et al. (2023), Horikawa et al. (2025), Ji et al. (2023)</td>
-<td>U4, U9, U13</td>
+<td>Huth et al. (2016), Tang et al. (2023), D&eacute;fossez et al. (2023), Horikawa (2025), d'Ascoli et al. (2025), Willett et al. (2023), Littlejohn et al. (2025), Wairagkar et al. (2025), Wilson et al. (2025)</td>
+<td>U4, U8, U9, U13</td>
 </tr>
 <tr>
 <td>因果・能動的推論</td>
@@ -1708,11 +1746,15 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 
 <h3>E. デコーディング・生成モデル・模倣分離</h3>
 <ol>
-<li>Huth, A. G., et al. (2016). Semantic maps from natural speech.</li>
-<li>Tang, J., et al. (2023). Semantic reconstruction from non-invasive brain recordings.</li>
-<li>Horikawa, T., et al. (2025). Mind captioning.</li>
-<li>Ji, Z., et al. (2023). Hallucination survey in NLG.</li>
-<li>Manakul, P., et al. (2023). SelfCheckGPT.</li>
+<li>Huth, A. G., de Heer, W. A., Griffiths, T. L., Theunissen, F. E., &amp; Gallant, J. L. (2016). Natural speech reveals the semantic maps that tile human cerebral cortex. <a href="https://doi.org/10.1038/nature17637" target="_blank">doi:10.1038/nature17637</a></li>
+<li>Tang, J., LeBel, A., Jain, S., et al. (2023). Semantic reconstruction of continuous language from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
+<li>D&eacute;fossez, A., Caucheteux, C., Rapin, J., Kabeli, O., &amp; King, J.-R. (2023). Decoding speech perception from non-invasive brain recordings. <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">doi:10.1038/s42256-023-00714-5</a></li>
+<li>Horikawa, T. (2025). Mind captioning: Evolving descriptive text of mental content from human brain activity. <a href="https://doi.org/10.1126/sciadv.adw1464" target="_blank">doi:10.1126/sciadv.adw1464</a></li>
+<li>d'Ascoli, S., Ferrante, O., et al. (2025). Towards decoding individual words from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">doi:10.1038/s41467-025-65499-0</a></li>
+<li>Willett, F. R., Kunz, E. M., Fan, C., et al. (2023). A high-performance speech neuroprosthesis. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
+<li>Littlejohn, K. T., Dabagia, M., Ladwig, A., et al. (2025). A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
+<li>Wairagkar, M., Card, N. S., Singer-Clark, T., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+<li>Wilson, G. H., Stein, E. A., Kamdar, F., et al. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain&ndash;computer interfaces using a hidden Markov model. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
 </ol>
 
 <h3>F. 因果推論・能動的推論・反実仮想</h3>
