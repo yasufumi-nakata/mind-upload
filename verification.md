@@ -658,9 +658,9 @@ connectome-complete は <strong>emulation-complete を意味しません</strong
 </section>
 
 <section class="section" id="causal-perturbation-suite">
-<h2 class="section-title">因果的摂動スイート（段階導入版）</h2>
+<h2 class="section-title">因果的摂動スイート（4ゲート制へ再編）</h2>
 <p>
-Issues #251・#254 を踏まえ、この節では「標準的な行動テストを超える」方向性を維持しつつ、<strong>いま実行できる検証</strong>と<strong>外部依存の強い検証</strong>を分離します。単なる出力一致ではなく、条件を変えたときの応答構造まで比較する発想は重要ですが、現時点では段階導入が妥当です。
+2026年3月の一次文献監査では、現行の BCI / neuromodulation 文献が示しているのは、一足飛びの「反事実同値」ではなく、<strong>段階ごとに強さの違う因果証拠</strong>であることを再確認しました。そこで本サイトでは、offline 精度、online human-in-the-loop、局所 causal intervention、長期閉ループを分けて扱い、<strong>精度が高いだけの結果</strong>を L2 / L3 に繰り上げません。
 </p>
 <div class="note-box">
 <strong>普通の精度評価と何が違うのか</strong>
@@ -674,18 +674,60 @@ Issues #251・#254 を踏まえ、この節では「標準的な行動テスト�
 held-out 精度、介入、反事実、摂動ベース検証の違いを日常語で先に整理したい場合は <a href="wiki/counterfactual-and-perturbation-verification.html">Wiki: 反事実・介入・摂動の検証</a> を先に読むと、この節へ戻りやすくなります。
 </p>
 </div>
+<table class="data-table">
+<thead>
+<tr>
+<th>ゲート</th>
+<th>最低限ほしい実証</th>
+<th>いまの代表例</th>
+<th>まだ言えないこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gate 1 / online decode</strong></td>
+<td>被験者が出力を見ながら連続操作または会話し、offline ではなく online 指標で比較すること。</td>
+<td>Forenzo et al. (2024), Willett et al. (2023), Littlejohn et al. (2025)</td>
+<td>これだけで因果構造一致や反事実同値までは言えません。</td>
+</tr>
+<tr>
+<td><strong>Gate 2 / bidirectional perturbation</strong></td>
+<td>feedback や刺激が次の入力を変える双方向 loop を持ち、介入で行動が変わること。</td>
+<td>Flesher et al. (2021)</td>
+<td>局所サブシステムの causal gain は示せても、全脳WBEの成立は示しません。</td>
+</tr>
+<tr>
+<td><strong>Gate 3 / state-dependent intervention</strong></td>
+<td>検出した状態に応じて刺激や制御を切り替え、実生活ブロック比較まで含めて改善を示すこと。</td>
+<td>Oehrn et al. (2024), Dixon et al. (2026)</td>
+<td>課題特異的 controller の有効性であり、state completeness は未解決です。</td>
+</tr>
+<tr>
+<td><strong>Gate 4 / longitudinal stability</strong></td>
+<td>固定 decoder の劣化、再較正頻度、棄権率、停止条件を公開すること。</td>
+<td>Wairagkar et al. (2025), Wilson et al. (2025), Cascino et al. (2026)</td>
+<td>長く使えない系を、短いデモだけで L3 完了とは扱えません。</td>
+</tr>
+</tbody>
+</table>
 <div class="key-points">
 <h4>三段階の導入</h4>
 <ul>
-<li><strong>Stage A / いま実行できる検証：</strong>公開 EEG データで、被験者外一般化、未学習条件、条件シフト、棄権、キャリブレーションを事前登録して比較します。まずは再現可能な L0〜L1 ループを固めます。</li>
-<li><strong>Stage B / 外部基準つき中間検証：</strong>シミュレーション、ファントム、頭蓋内刺激など ground truth のあるデータで、応答誤差と不確実性を測ります。source imaging や摂動応答の改善主張は、この段階を通さない限り強く言いません。</li>
-<li><strong>Stage C / 実介入：</strong>TMS-EEG、tDCS、薬理学的介入は強い検証力を持つ一方、IRB、機材、被験者運用が前提です。本リポジトリでは要求仕様と公開ログ形式を先行整備し、実験実施自体は外部依存タスクとして分離します。</li>
+<li><strong>Stage A / いま実行できる検証：</strong>公開 EEG や既存 BCI データで、被験者外一般化、未学習条件、online 指標、棄権、校正誤差を事前登録して比較します。Stage A を通っても、主張は L1〜弱い L2 に留めます。</li>
+<li><strong>Stage B / 外部基準つき中間検証：</strong>シミュレーション、ファントム、頭蓋内刺激、同時侵襲記録など ground truth のある系で、応答誤差、不確実性、回復時間を測ります。source imaging や摂動応答の改善主張は、この段階を通さない限り強く言いません。</li>
+<li><strong>Stage C / 実介入：</strong>TMS-EEG、adaptive stimulation、薬理学的介入は強い検証力を持つ一方、IRB、機材、被験者運用が前提です。本リポジトリでは要求仕様と公開ログ形式を先行整備し、実験実施自体は外部依存タスクとして分離します。</li>
 </ul>
 </div>
 <div class="note-box">
 <strong>評価指標</strong>
 <p>
-一次判定では、事前登録した effect size、OOD 条件での頑健性、校正誤差、棄権率、不確実性の幅を優先します。PCI-ST 空間分布、パーシステンス図の Bottleneck distance、生成モデル間距離の Fisher Information Metric (FIM) は補助解析として残し、主要な合否判定を一手法へ依存させません。
+一次判定では、事前登録した effect size、OOD 条件での頑健性、校正誤差、棄権率、不確実性の幅に加え、<strong>end-to-end latency の P50 / P95 / P99</strong>、<strong>jitter</strong>、<strong>dropout</strong>、<strong>recalibration burden</strong>、<strong>recovery time after perturbation</strong> を優先します。PCI-ST 空間分布、パーシステンス図の Bottleneck distance、生成モデル間距離の Fisher Information Metric (FIM) は補助解析として残し、主要な合否判定を一手法へ依存させません。
+</p>
+</div>
+<div class="note-box">
+<strong>反事実という語を安売りしない</strong>
+<p>
+分岐条件、比較規則、失敗条件、刺激アーチファクト窓が事前固定されていない場合、本サイトではそれを「反事実同値」とは呼ばず、より弱い表現である <strong>介入応答テスト</strong> または <strong>摂動一般化テスト</strong> と表記します。
 </p>
 </div>
 </section>
@@ -756,12 +798,21 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Goldberger, A. L., et al. (2000). PhysioBank / PhysioNet. <a href="https://doi.org/10.1161/01.CIR.101.23.e215" target="_blank">doi:10.1161/01.CIR.101.23.e215</a></li>
 <li>Jayaram, V., &amp; Barachant, A. (2018). MOABB: trustworthy algorithm benchmarking for BCIs. <a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">doi:10.1088/1741-2552/aadea0</a></li>
 <li>Michel, C. M., &amp; Brunet, D. (2019). EEG source imaging: a practical review. <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">doi:10.3389/fneur.2019.00325</a></li>
-<li>Unnwongse, K., et al. (2022). Validating EEG source imaging using intracranial electrical stimulation. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
+<li>Unnwongse, K., et al. (2023). Validating EEG source imaging using intracranial electrical stimulation. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
 <li>Delorme, A. (2023). EEG is better left alone. <a href="https://doi.org/10.1038/s41598-023-27528-0" target="_blank">doi:10.1038/s41598-023-27528-0</a></li>
 <li>Klug, M., &amp; Kloosterman, N. A. (2022). Zapline-plus. <a href="https://doi.org/10.1002/hbm.25832" target="_blank">doi:10.1002/hbm.25832</a></li>
 <li>Hernandez-Pavon, J. C., et al. (2023). TMS combined with EEG: recommendations and open issues. <a href="https://doi.org/10.1016/j.brs.2023.02.009" target="_blank">doi:10.1016/j.brs.2023.02.009</a></li>
 <li>Casali, A. G., et al. (2013). A theoretically based index of consciousness independent of sensory processing and behavior. <a href="https://doi.org/10.1126/scitranslmed.3006294" target="_blank">doi:10.1126/scitranslmed.3006294</a></li>
 <li>Comolatti, R., et al. (2019). A fast and general method to empirically estimate the complexity of brain responses to transcranial and intracranial stimulations. <a href="https://doi.org/10.1016/j.brs.2019.05.013" target="_blank">doi:10.1016/j.brs.2019.05.013</a></li>
+<li>Forenzo, D., et al. (2024). Continuous tracking using deep learning-based decoding for noninvasive brain-computer interface. <a href="https://doi.org/10.1093/pnasnexus/pgae145" target="_blank">doi:10.1093/pnasnexus/pgae145</a></li>
+<li>Willett, F. R., et al. (2023). A high-performance speech neuroprosthesis. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
+<li>Littlejohn, K. T., et al. (2025). A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
+<li>Wairagkar, M., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+<li>Flesher, S. N., et al. (2021). A brain-computer interface that evokes tactile sensations improves robotic arm control. <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
+<li>Wilson, G. H., et al. (2025). Long-term unsupervised recalibration of intracortical brain-computer interfaces using a hidden Markov model. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Oehrn, C. R., et al. (2024). Chronic adaptive deep brain stimulation versus conventional stimulation in Parkinson's disease: a blinded randomized feasibility trial. <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">doi:10.1038/s41591-024-03196-z</a></li>
+<li>Dixon, S., et al. (2026). Movement-responsive deep brain stimulation for Parkinson’s disease using a remotely optimized neural decoder. <a href="https://doi.org/10.1038/s41551-025-01592-5" target="_blank">doi:10.1038/s41551-025-01592-5</a></li>
+<li>Cascino, S., et al. (2026). Chronic adaptive deep brain stimulation in Parkinson’s disease: ADAPT-START findings and programming principles. <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">doi:10.1038/s41531-026-01269-z</a></li>
 <li>Lynn, C. W., et al. (2021). Broken detailed balance and entropy production in the human brain. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>
 <li>de la Fuente, L. A., et al. (2022). Temporal irreversibility of neural dynamics as a signature of consciousness. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
 <li>Ishihara, K., &amp; Shimazaki, H. (2025). State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics. <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>

@@ -1,28 +1,32 @@
 ---
 layout: default
 title: "Wiki：閉ループ・遅延・ジッタ・安全停止"
-description: "閉ループ評価で重要になる遅延、ジッタ、ドリフト、安全停止、棄権の違いを初歩から整理します。"
+description: "閉ループ評価で重要になる遅延、ジッタ、再較正、棄権、安全停止を、一次文献ベースで整理します。"
 article_type: Wiki
 subtitle: "オフライン精度が高くても、リアルタイムで安定とは限りません"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-14"
 note: "Learning guide"
 audience: "L3 の閉ループ評価やリアルタイム運用の意味が曖昧な人"
-reading_time: "10〜15分"
-page_intro: "このページは、Mind-Upload の L3『閉ループ』で重要になる遅延、ジッタ、ドリフト、安全停止、棄権の違いを初歩から整理する wiki です。オフラインで高精度だったモデルが、なぜそのままリアルタイム系では強い主張にならないのかを分けて理解することを目標にします。"
-accuracy_note: "ここで示すのは閉ループ評価の基本整理です。許容遅延や安全停止の閾値は課題依存であり、固定値を与えるページではありません。"
+reading_time: "12〜18分"
+page_intro: "このページは、Mind-Upload の L3『閉ループ』で重要になる遅延、ジッタ、再較正、棄権、安全停止を、一次文献に沿って整理する wiki です。一般論ではなく、どの論文がどこまで online 運用を示したかに基づいて読みます。"
+accuracy_note: "ここで固定するのは『何を測るべきか』であり、許容 ms 値そのものではありません。許容値は課題依存ですが、分布・停止条件・再較正ログを出す必要性は共通です。"
 page_highlights:
-  - "オフライン精度と閉ループ安定性は別の話です。"
-  - "遅延、ジッタ、ドリフトは似ていますが、壊し方が違います。"
-  - "棄権、freeze、緊急停止は、全部『止める』でも役割が違います。"
+  - "offline 精度、online throughput、長期安定性は別々に測る必要があります。"
+  - "latency は平均値だけでなく P95/P99 や dropout を含めて記録する必要があります。"
+  - "recalibration と safety stop を隠したまま L3 を主張してはなりません。"
 known_points:
-  - "閉ループでは、出力が環境を変え、その結果がまた次の入力に戻ってきます。"
-  - "遅延やジッタが大きいと、オフラインでは見えない不安定さが出ます。"
-  - "安全停止は、性能評価とは別に事前設計しておく必要があります。"
+  - "出力が次の入力を変える系では、latency と jitter が性能そのものを変えます。"
+  - "固定 decoder の性能は時間とともに落ちうるため、再較正頻度自体が重要な指標です。"
+  - "棄権、hold-last-output、freeze、hard stop は別の役割です。"
 unknown_points:
-  - "どの課題で何 ms の遅延やどの程度のジッタまで許容できるかは未確定です。"
-  - "閉ループの安定性が、どこまで本人性や意識の主張に必要十分かは未解決です。"
+  - "どの課題で何 ms まで許容できるかは、対話、運動、刺激制御で異なります。"
+  - "長期安定性に必要な decoder update 則の一般解はまだありません。"
+  - "全脳WBE の L3 をどう operationalize するかは未解決です。"
 wiki_links:
+  - label: "Wiki: 反事実・介入・摂動の検証"
+    url: "/wiki/counterfactual-and-perturbation-verification.html"
+    description: "なぜ causal evidence が online 指標よりさらに強いのかを補います。"
   - label: "Wiki: イベント同期と観測ログ"
     url: "/wiki/event-sync-and-measurement-logs.html"
     description: "遅延、ジッタ、ドリフトの記録方法を補います。"
@@ -32,9 +36,6 @@ wiki_links:
   - label: "Wiki: 更新・分岐・停止規則"
     url: "/wiki/update-branching-and-stop-rules.html"
     description: "停止規則やキルスイッチの運用語を補います。"
-  - label: "Wiki Home"
-    url: "/wiki/"
-    description: "他の補助ページへ戻れます。"
 recommended_pages:
   - label: "検証基盤"
     url: "/verification.html"
@@ -48,157 +49,196 @@ recommended_pages:
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>いちばん短い区別</h2>
+<h2>最短の区別</h2>
 <p>
-<strong>閉ループ</strong>は「出力が次の入力を変える系」です。ここでは、<strong>遅延</strong>は毎回のずれ、<strong>ジッタ</strong>はそのずれの揺れ、<strong>ドリフト</strong>は長時間での時計ずれです。さらに、<strong>棄権</strong>は低信頼時に何もしないこと、<strong>安全停止</strong>は危険時に止めることです。
+<strong>閉ループ</strong>では、出力が次の入力を変えます。したがって、<strong>平均精度</strong>だけでなく、<strong>遅延分布</strong>、<strong>ジッタ</strong>、<strong>dropout</strong>、<strong>再較正頻度</strong>、<strong>停止条件</strong>まで公開しないと、安定に動いたとは言えません。
 </p>
 </div>
 
-<section class="section" id="why-offline-is-not-enough">
-<h2 class="section-title">なぜオフライン精度だけでは足りないのか</h2>
-<p>
-オフライン評価では、すでに記録されたデータをあとから処理します。これに対して閉ループでは、モデルの出力が環境や次の入力を変えます。したがって、同じモデルでも、遅延やジッタが入るだけで挙動が崩れることがあります。
-</p>
 <div class="note-box">
-<strong>安全な読み方</strong>
+<strong>今回の再整理で直した点</strong>
 <p>
-「オフラインで 95% 出た」ことと、「リアルタイムで安定に動く」ことは別の主張です。前者が L1/L2 の入口でも、後者は L3 の追加課題です。
+旧版は「遅延」「ジッタ」「安全停止」の定義整理としては有用でしたが、一次文献に基づく実務指標が不足していました。本ページでは、speech neuroprosthesis、bidirectional BCI、adaptive DBS、長期 decoder 維持の文献から、<strong>何を記録しなければならないか</strong>を逆算します。
 </p>
 </div>
-</section>
 
-<section class="section" id="terms">
-<h2 class="section-title">まず 4 つを分ける</h2>
+<section class="section" id="evidence">
+<h2 class="section-title">一次文献が示す現実</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>用語</th>
-<th>意味</th>
-<th>起きやすい問題</th>
+<th>論文</th>
+<th>何を示したか</th>
+<th>閉ループ評価にどう効くか</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>遅延</strong></td>
-<td>入力から出力まで、平均して何 ms かかるかです。</td>
-<td>反応が遅れて、制御や同期がずれます。</td>
+<td><strong>Littlejohn et al. (2025)</strong></td>
+<td>brain-to-voice neuroprosthesis は 80 ms increment で音声を streaming し、自然な会話で数秒の遅延が破綻要因になると明示しました。</td>
+<td>speech 系では平均 latency ではなく、会話可能性を壊す tail latency を見る必要があります。</td>
 </tr>
 <tr>
-<td><strong>ジッタ</strong></td>
-<td>その遅延が毎回どれくらい揺れるかです。</td>
-<td>同じ条件でも応答時刻がぶれ、安定性が落ちます。</td>
+<td><strong>Wairagkar et al. (2025)</strong></td>
+<td>raw neural activity から音声合成まで 10 ms 以内で回し、non-speech では silence を返しました。一方で fixed decoder は約 15 日で性能低下が見えました。</td>
+<td>latency と abstention を実装しても、長期安定性と decoder drift は別途監査が必要だと分かります。</td>
 </tr>
 <tr>
-<td><strong>ドリフト</strong></td>
-<td>長時間で時計やタイミングのずれが積み重なることです。</td>
-<td>前半と後半で同期誤差が変わり、比較が崩れます。</td>
+<td><strong>Flesher et al. (2021)</strong></td>
+<td>ICMS による tactile feedback を加えると、robotic arm control の trial time と grasp time が大きく改善しました。</td>
+<td>feedback path の遅延や欠落は、単に「使い勝手」ではなく performance 本体を変えます。</td>
 </tr>
 <tr>
-<td><strong>再較正（recalibration）</strong></td>
-<td>条件変化や劣化に応じて、設定やモデルを調整することです。</td>
-<td>頻繁に必要なら、その系は安定に動いていない可能性があります。</td>
+<td><strong>Wilson et al. (2025)</strong></td>
+<td>頻回 recalibration が neural bypass の大きな障害であると示し、hidden Markov model による unsupervised recalibration を one-month closed loop と five-year offline data で評価しました。</td>
+<td>再較正頻度そのものを、性能指標から切り離さず報告すべきだと分かります。</td>
+</tr>
+<tr>
+<td><strong>Oehrn et al. (2024)</strong></td>
+<td>chronic adaptive DBS と conventional DBS を blinded randomized block で比較し、各条件を少なくとも 1 か月、実生活環境で評価しました。</td>
+<td>閉ループ controller を主張するなら、短いラボデモではなく longitudinal block comparison が必要です。</td>
+</tr>
+<tr>
+<td><strong>Cascino et al. (2026)</strong></td>
+<td>2026年2月25日公開の ADAPT-START 報告では、20 連続症例中 9 例が aDBS 候補となり、2025年7月時点で 5 例が chronic aDBS を継続していました。</td>
+<td>deployability と programming burden も閉ループ系の現実であり、候補選定率そのものを隠してはいけません。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
-<section class="section" id="end-to-end">
-<h2 class="section-title">何を end-to-end で測るのか</h2>
+<section class="section" id="metrics">
+<h2 class="section-title">L3 を主張するなら最低限ほしい指標</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>区間</th>
-<th>最低限知りたいこと</th>
+<th>指標</th>
+<th>何を残すか</th>
+<th>なぜ必要か</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>観測</strong></td>
-<td>センサーや取得系が、いつ信号を受け取ったか。</td>
+<td><strong>end-to-end latency</strong></td>
+<td>P50 / P95 / P99、試行数、どの区間を含めたか。</td>
+<td>平均だけでは会話や制御を壊す tail latency が隠れるためです。</td>
 </tr>
 <tr>
-<td><strong>処理</strong></td>
-<td>前処理、推定、意思決定にどれだけ時間がかかったか。</td>
+<td><strong>jitter</strong></td>
+<td>latency の分散、外れ値率、条件別の揺れ。</td>
+<td>平均遅延が同じでも、揺れが大きいと制御が崩れます。</td>
 </tr>
 <tr>
-<td><strong>出力</strong></td>
-<td>表示、刺激、制御信号がいつ実際に出たか。</td>
+<td><strong>dropout / missed updates</strong></td>
+<td>フレーム落ち、無効更新、通信断の回数と持続時間。</td>
+<td>online loop は連続性が切れた瞬間に性能が落ちるためです。</td>
 </tr>
 <tr>
-<td><strong>戻り</strong></td>
-<td>その出力の影響が、いつ次の入力へ返ってきたか。</td>
+<td><strong>recalibration burden</strong></td>
+<td>何分・何試行ごとに再較正したか、手動か自動か。</td>
+<td>「高性能」でも頻回再較正が必要なら、運用可能性は低いままです。</td>
+</tr>
+<tr>
+<td><strong>abstention / hold-last-output</strong></td>
+<td>何もしない率、直前出力保持率、発動条件。</td>
+<td>低信頼時の挙動を隠すと、安全性も性能も正しく読めません。</td>
+</tr>
+<tr>
+<td><strong>recovery time</strong></td>
+<td>摂動後または同期失敗後に、何試行・何秒で戻ったか。</td>
+<td>loop の安定性は平均成績だけでなく回復力で決まるためです。</td>
+</tr>
+<tr>
+<td><strong>stimulation duty cycle</strong></td>
+<td>刺激時間率、総刺激量、停止回数。</td>
+<td>adaptive stimulation 系では efficacy と exposure を両方見る必要があります。</td>
 </tr>
 </tbody>
 </table>
-<p>
-閉ループでは、途中の平均時間だけでなく、<strong>全経路の end-to-end 遅延</strong>を見る必要があります。処理が速くても、表示遅延や通信遅延で全体が遅ければ、系としては遅いままです。
-</p>
 </section>
 
 <section class="section" id="stops">
-<h2 class="section-title">棄権と freeze と安全停止は別物</h2>
+<h2 class="section-title">棄権・保持・停止を混ぜない</h2>
 <table class="data-table">
 <thead>
 <tr>
 <th>仕組み</th>
 <th>主目的</th>
-<th>例</th>
+<th>ログに残すもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>棄権</strong></td>
-<td>低信頼のとき、無理に出力しないためです。</td>
-<td>分類確信度が低いときに「不明」と返すことです。</td>
+<td>低信頼時に新規出力を出さないためです。</td>
+<td>信頼度閾値、棄権率、そのときの入力条件。</td>
 </tr>
 <tr>
-<td><strong>freeze / 一時停止</strong></td>
-<td>再較正や原因確認のために、挙動を一時保留するためです。</td>
-<td>同期異常を検出して、更新を止めてログ確認へ入ることです。</td>
+<td><strong>hold-last-output</strong></td>
+<td>一時的な欠損時に急変を避けるためです。</td>
+<td>保持時間、保持中の性能劣化、解除条件。</td>
 </tr>
 <tr>
-<td><strong>安全停止 / containment</strong></td>
-<td>危険な動作や逸脱を防ぐためです。</td>
-<td>上限遅延や異常振幅を超えたときに即停止することです。</td>
+<td><strong>freeze / 再較正停止</strong></td>
+<td>異常検出後に原因確認や再同期へ入るためです。</td>
+<td>発動理由、所要時間、再開条件、再開後の回復時間。</td>
+</tr>
+<tr>
+<td><strong>hard stop</strong></td>
+<td>危険な挙動や上限超過を直ちに止めるためです。</td>
+<td>停止トリガー、時刻、被害回避の根拠、手動介入の有無。</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>ここが重要です</strong>
+<strong>重要な実務ルール</strong>
 <p>
-低信頼なので出さない、壊れたかもしれないので保留する、危険なので止める、は全部違います。全部まとめて「止めた」で済ませると、性能問題と安全問題が混ざります。
+再較正や停止が多い系を、成功試行だけ切り出して「閉ループで安定」と書いてはなりません。停止そのものが性能指標です。
 </p>
 </div>
 </section>
 
-<section class="section" id="logs">
-<h2 class="section-title">最低限残したいログ</h2>
+<section class="section" id="minimum-pack">
+<h2 class="section-title">L3 最低提出物パック</h2>
 <div class="key-points">
 <h4>Checklist</h4>
 <ul>
-<li><strong>end-to-end 遅延：</strong>平均だけでなく分布も残します。</li>
-<li><strong>ジッタ：</strong>毎回のばらつきがどれくらいあるか。</li>
-<li><strong>ドロップや欠損：</strong>フレーム落ち、試行落ち、同期失敗。</li>
-<li><strong>再較正イベント：</strong>いつ調整を入れたか、なぜ入れたか。</li>
-<li><strong>棄権率：</strong>低信頼でどれだけ何もしなかったか。</li>
-<li><strong>停止トリガー：</strong>どの条件で freeze や安全停止が発動したか。</li>
+<li><strong>online 指標：</strong>end-to-end latency 分布、jitter、dropout、throughput。</li>
+<li><strong>安定性指標：</strong>セッション内劣化、日跨ぎ劣化、再較正頻度、回復時間。</li>
+<li><strong>安全指標：</strong>棄権率、hold-last-output 率、freeze 回数、hard stop 回数。</li>
+<li><strong>比較設計：</strong>offline と online を分離し、conventional controller や no-feedback 条件と比較すること。</li>
+<li><strong>公開ログ：</strong>失敗試行、異常時ログ、停止理由、除外理由を隠さず出すこと。</li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="how-to-read">
-<h2 class="section-title">L3 の主張を読むときの 3 問</h2>
+<h2 class="section-title">L3 の主張を読むときの 4 問</h2>
 <ol>
-<li><strong>オフライン精度と閉ループ安定性を分けて報告しているか：</strong>片方だけで両方を言っていないかを見ます。</li>
-<li><strong>遅延、ジッタ、ドリフトを end-to-end で測っているか：</strong>途中の一部だけで安心していないかを確認します。</li>
-<li><strong>棄権、freeze、安全停止の条件が書かれているか：</strong>危険時の扱いが曖昧でないかを見ます。</li>
+<li><strong>平均精度ではなく latency の分布が出ているか：</strong>P95/P99 を出していないなら、会話や制御の破綻が隠れます。</li>
+<li><strong>recalibration burden が明示されているか：</strong>毎回人手で直しているなら、安定運用ではありません。</li>
+<li><strong>停止・棄権が性能から除外されていないか：</strong>安全動作も loop の一部です。</li>
+<li><strong>短時間デモを長期安定性へ飛躍させていないか：</strong>ここが最も多いすり替えです。</li>
+</ol>
+</section>
+
+<section class="section" id="sources">
+<h2 class="section-title">参考文献</h2>
+<ol>
+<li>Flesher SN, Downey JE, Weiss JM, et al. A brain-computer interface that evokes tactile sensations improves robotic arm control. Science. 2021. <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
+<li>Littlejohn KT, Dabagia M, Ladwig A, et al. A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. Nat Neurosci. 2025. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
+<li>Wairagkar M, Moses DA, Metzger SL, et al. An instantaneous voice-synthesis neuroprosthesis. Nature. 2025. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+<li>Wilson GH, Bray N, Franken M, et al. Long-term unsupervised recalibration of intracortical brain-computer interfaces using a hidden Markov model. Nat Biomed Eng. 2025. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Oehrn CR, Roediger J, Diehl A, et al. Chronic adaptive deep brain stimulation versus conventional stimulation in Parkinson's disease: a blinded randomized feasibility trial. Nat Med. 2024. <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">doi:10.1038/s41591-024-03196-z</a></li>
+<li>Dixon S, Oehrn C, Remple M, et al. Movement-responsive deep brain stimulation for Parkinson’s disease using a remotely optimized neural decoder. Nat Biomed Eng. 2026. <a href="https://doi.org/10.1038/s41551-025-01592-5" target="_blank">doi:10.1038/s41551-025-01592-5</a></li>
+<li>Cascino S, Roediger J, Oehrn C, et al. Chronic adaptive deep brain stimulation in Parkinson’s disease: ADAPT-START findings and programming principles. npj Parkinsons Dis. 2026. <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">doi:10.1038/s41531-026-01269-z</a></li>
 </ol>
 </section>
 
 <section class="section" id="return">
 <h2 class="section-title">次にどこへ戻るか</h2>
 <p>
-L3 の全体設計へ戻るなら <a href="../verification.html">検証基盤</a>、EEG と同期の実務へ戻るなら <a href="../eeg_101.html">EEG入門</a>、Roadmap の I1 / I8 へ戻るなら <a href="../tech_roadmap.html">技術ロードマップ</a> をご利用ください。
+L3 の全体設計へ戻るなら <a href="../verification.html">検証基盤</a>、因果摂動の意味へ戻るなら <a href="counterfactual-and-perturbation-verification.html">Wiki: 反事実・介入・摂動の検証</a>、Roadmap の I1 / I8 へ戻るなら <a href="../tech_roadmap.html">技術ロードマップ</a> をご利用ください。
 </p>
 </section>
 
@@ -208,6 +248,7 @@ L3 の全体設計へ戻るなら <a href="../verification.html">検証基盤</a
 <div class="sidebar-box">
 <h4>Related Wiki</h4>
 <ul>
+<li><a href="counterfactual-and-perturbation-verification.html">反事実・介入・摂動の検証 →</a></li>
 <li><a href="event-sync-and-measurement-logs.html">イベント同期と観測ログ →</a></li>
 <li><a href="uncertainty-confidence-and-abstention.html">不確実性・信頼区間・棄権 →</a></li>
 <li><a href="update-branching-and-stop-rules.html">更新・分岐・停止規則 →</a></li>
