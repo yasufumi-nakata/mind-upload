@@ -658,7 +658,7 @@ href="#ref-57">[57]</a></sup>。
 
 <!-- Brain-to-Text Update -->
 <section class="section" id="llm-research-update">
-<h2 class="section-title">Brain-to-Textアップデート：言語事前分布、streaming、evidence gate</h2>
+<h2 class="section-title" id="brain-to-text-update">Brain-to-Textアップデート：言語事前分布、streaming、evidence gate</h2>
 <p>2026-03 時点の一次文献が強く示しているのは、「汎用LLM運用論」がそのまま脳解読の核心だ、ということではございません。むしろ重要なのは、<strong>どのモダリティで</strong>、<strong>どの課題で</strong>、<strong>どの一般化条件まで</strong>、<strong>言語事前分布を上回る神経寄与が確認できたか</strong>を切り分けることです。Tang らの non-invasive semantic reconstruction は被験者の協力が学習時にも適用時にも必要でした<sup><a href="#ref-30">[30]</a></sup>。Horikawa らの Mind Captioning は視覚内容の記述生成を前進させましたが<sup><a href="#ref-11">[11]</a></sup>、やはり「通信サブシステムでどこまで意味を復元できるか」の系です。さらに Défossez らの non-invasive speech perception decoding<sup><a href="#ref-106">[106]</a></sup>、d'Ascoli らの単語デコード<sup><a href="#ref-107">[107]</a></sup>、Willett ら / Littlejohn ら / Wairagkar らの invasive speech neuroprosthesis<sup><a href="#ref-108">[108]</a></sup><sup><a href="#ref-109">[109]</a></sup><sup><a href="#ref-110">[110]</a></sup>は、decode の到達点を押し上げました。しかし、ここから直ちに言えるのは <strong>language / communication route の局所的前進</strong>であって、WBE や self-model の再現ではありません。</p>
 
 <div class="note-box">

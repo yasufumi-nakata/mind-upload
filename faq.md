@@ -206,7 +206,7 @@ Mind-Uploadの立場は、「派手な読み出し」を否定することでは
 </div>
 
 <section class="section" id="q1b">
-<h2 class="section-title">Q. brain-to-text のデモを見るとき、最低限どこを確認する？</h2>
+<h2 class="section-title" id="brain-to-text">Q. brain-to-text のデモを見るとき、最低限どこを確認する？</h2>
 <p>
 A. 少なくとも次の 5 点でございます。
 </p>

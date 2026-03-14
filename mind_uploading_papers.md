@@ -9,6 +9,7 @@ known_points:
   - "このページは関連論文を広く拾うアーカイブであり、各論文の最終評価を確定するページではありません。"
   - "年別に追うと、どの論点に関心が集まってきたかの流れを見やすくなります。"
   - "重要論文は、要約を入口にして DOI や原文へ戻る前提で読む必要があります。"
+  - "法学・哲学・文化論も含む broad archive なので、技術フロンティアを年順の先頭だけで判断してはいけません。"
 unknown_points:
   - "収録されているだけで、その論文が中心的証拠だとまでは言えません。"
   - "すべての論文が同じ深さで精査済みというわけではありません。"
@@ -25,7 +26,7 @@ wiki_links:
   - label: "Wiki: 検証基盤の基本"
     url: "/wiki/verification-basics.html"
     description: "論文を読むとき、何を証拠として重く見るかの前提を補います。"
-last_updated: "2026-03-06"
+last_updated: "2026-03-15"
 note: "Curated archive"
 audience: "関連論文を広く見たい人、年別の傾向をざっと掴みたい人、元論文へ戻る入口が欲しい人"
 reading_time: "目次確認なら5分、精読は必要な論文だけ"
@@ -35,6 +36,7 @@ page_highlights:
   - "年別に並んでいるので、関心の集まり方の変化を追えます。"
   - "和訳要約と原文要約を併記し、必要なら元論文へ戻れるようにしています。"
   - "まず一覧で位置をつかみ、重要そうな論文だけを個別に掘る使い方を想定しています。"
+  - "年順は証拠強度順ではないため、技術・自然科学の一次証拠は本文前半の優先ルートから入る方が安全です。"
 recommended_pages:
   - label: "文献地図"
     url: "/research_harvest_50.html"
@@ -50,6 +52,7 @@ recommended_pages:
 <div class="sidebar-logo">Mind Uploading</div>
 <div class="sidebar-nav-header">ナビゲーション</div>
 <ul class="sidebar-nav">
+<li><a href="#technical-fast-lane">0. 技術・自然科学の優先ルート</a></li>
 <li><a href="#with-abstracts">1. アブストラクトあり</a>
 <ul class="sub-nav">
 <li><a href="#year-w-2025">2025年</a></li>
@@ -119,6 +122,65 @@ recommended_pages:
 Badge は「どこから辿れる文献か」の手掛かりであり、それだけで証拠の強さは決まりません。Scopus、arXiv、Review、Media、source_logged などの違いを 1 枚で確認したい場合は、<a href="wiki/paper-source-types-and-evidence-status.html">Wiki: 文献のソース種別と状態ラベルの読み方</a> を先に見ると安全です。
 </p>
 </div>
+<div class="note-box">
+<strong>技術・自然科学だけで先に読みたいとき</strong>
+<p>
+この論文集は <strong>broad archive</strong> なので、2025 年の先頭がそのまま技術フロンティア順とは限りません。実際、法学・形而上学・VR 作品論も同じ年の列に並びます。したがって、技術・自然科学の一次証拠を追う場合は、年順で上から読まず、まず下の <a href="#technical-fast-lane">技術・自然科学の優先ルート</a> から入ってください。
+</p>
+</div>
+<section class="section" id="technical-fast-lane">
+<h2 class="section-title">2026-03 文献監査：技術・自然科学の優先ルート</h2>
+<p>
+このページの弱点は、<strong>年順のアーカイブ</strong>としては有用でも、<strong>実験的フロンティアへの入口</strong>としては並び順が弱い点でございます。技術・自然科学の観点でまず知りたいのは、(1) 非侵襲 decode がどこまで進んだか、(2) 侵襲 speech neuroprosthesis がどこまで closed loop を押し上げたか、(3) source imaging を direct validation でどこまで監査できるか、(4) connectome の外に maintenance-state がどれだけ残るか、であって、法学・哲学・文化論の先頭表示ではありません。そこでこのページでは、以下を <strong>優先ルート</strong> として明示します。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>まず読む技術ルート</th>
+<th>先に当たる一次文献</th>
+<th>いま言えること</th>
+<th>まだ言えないこと</th>
+<th>次に戻るページ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>非侵襲 language decode</strong></td>
+<td><a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a>、<a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">D&eacute;fossez et al. (2023)</a>、<a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a></td>
+<td>意味復元、音声知覚 decode、単語 decode はかなり前進しています。ただし課題構造、participant cooperation、candidate set、モダリティ差の影響が大きいです。</td>
+<td>open-ended な thought reading、subject-independent な安定 decode、WBE に必要な内部状態再構成までは示していません。</td>
+<td><a href="perspective.html#brain-to-text-update">Perspective の brain-to-text 節</a> / <a href="wiki/decode-vs-emulate.html">Decode と Emulate</a></td>
+</tr>
+<tr>
+<td><strong>侵襲 speech neuroprosthesis</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>、<a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>、<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a></td>
+<td>高語彙 text decode、streaming brain-to-voice、約 10 ms の voice synthesis まで到達し、communication subsystem の L2〜L3 を強く押し上げています。</td>
+<td>全脳 emulation、本人性、長期 drift 耐性、再較正負荷ゼロはまだ示していません。</td>
+<td><a href="faq.html#brain-to-text">FAQ: brain-to-text の見方</a> / <a href="verification.html#causal-perturbation-suite">Verification</a></td>
+</tr>
+<tr>
+<td><strong>直接妥当化つき ESI / source imaging</strong></td>
+<td><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a></td>
+<td>既知刺激位置や同時 SEEG を使った direct validation により、localization error、source depth、conductivity 仮定の影響をかなり監査できます。</td>
+<td>head model を変えても一般的一意復元が得られる、という主張までは支えません。</td>
+<td><a href="datasets.html#validation-ladder">Datasets: validation ladder</a> / <a href="wiki/observation-to-estimation.html">観測から推定へ</a></td>
+</tr>
+<tr>
+<td><strong>maintenance-state / hidden variable</strong></td>
+<td><a href="https://doi.org/10.1038/s41467-024-47838-5" target="_blank">Xu et al. (2024)</a>、<a href="https://doi.org/10.1038/s41593-023-01517-y" target="_blank">Looser et al. (2024)</a>、<a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Lee et al. (2022)</a></td>
+<td>sleep-dependent renormalization、oligodendrocyte-axon metabolic coupling、molecular turnover 下の memory maintenance が、connectome 外の状態変数として残ることを強く示します。</td>
+<td>配線図 + cell type だけで long-term dynamics が十分だ、という読みに替えてはいけません。</td>
+<td><a href="wbe_101.html#state-completeness">WBE 101 の hidden state 節</a> / <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">恒常性可塑性と維持状態</a></td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>この表の使い方</strong>
+<p>
+技術・自然科学の一次証拠を探す場合は、まず上の 4 ルートのどれを見たいかを決めてください。そのうえで年別カードへ降り、要約ではなく DOI と原文要旨へ戻ります。年順の先頭にある論文が、そのまま strongest evidence を意味するわけではありません。
+</p>
+</div>
+</section>
 <table class="data-table">
 <thead>
 <tr>
@@ -154,16 +216,20 @@ Badge は「どこから辿れる文献か」の手掛かりであり、それ�
 </thead>
 <tbody>
 <tr>
-<td><strong>理論や本人性の議論から入りたい</strong></td>
-<td>最新年から、哲学・意識・本人性を扱う論文を数本だけ拾ってください。数を追うより論点の型を掴む方が先です。</td>
+<td><strong>技術・自然科学の一次証拠だけ先に見たい</strong></td>
+<td>まず <a href="#technical-fast-lane">技術・自然科学の優先ルート</a> から入り、年順ではなく decode / neuroprosthesis / ESI / maintenance-state の順に絞ってください。</td>
 </tr>
 <tr>
-<td><strong>技術や計測に近い論文を見たい</strong></td>
-<td>Badge、要約、5ポイント整理を見て、EEG・AI・実装寄りの論文だけ先に選ぶと読みやすいです。</td>
+<td><strong>brain-to-text / language decode を見たい</strong></td>
+<td><a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang 2023</a>、<a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">D&eacute;fossez 2023</a>、<a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli 2025</a> を起点にし、language prior と candidate set の影響を分けて読んでください。</td>
 </tr>
 <tr>
-<td><strong>倫理や社会的含意を見たい</strong></td>
-<td>宗教・法・倫理・文化批評寄りのタイトルを先に追い、必要なら文献地図へ戻って技術論点との接点を確認してください。</td>
+<td><strong>侵襲閉ループ communication を見たい</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett 2023</a>、<a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn 2025</a>、<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar 2025</a> を先に見て、latency・abstention・recalibration burden を確認してください。</td>
+</tr>
+<tr>
+<td><strong>構造推定と hidden state を見たい</strong></td>
+<td><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan 2020</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse 2023</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao 2025</a> と、<a href="https://doi.org/10.1038/s41467-024-47838-5" target="_blank">Xu 2024</a>、<a href="https://doi.org/10.1038/s41593-023-01517-y" target="_blank">Looser 2024</a> を起点にしてください。</td>
 </tr>
 </tbody>
 </table>

@@ -5,7 +5,7 @@ description: "論文集、文献地図、提案ページの違いと、どこま
 article_type: Wiki
 subtitle: "『論文が多い』と『結論が強い』を混同しないために"
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
+last_updated: "2026-03-15"
 note: "Reading guide"
 audience: "論文集と文献地図の違いが分かりにくい人、どのページから入るか迷う人"
 reading_time: "8〜12分"
@@ -15,6 +15,7 @@ page_highlights:
   - "論文集は広く拾う入口、文献地図は未解決問題ごとの整理、提案ページは実装方針の統合です。"
   - "論文数、引用数、状態ラベルを、そのまま結論の強さと読まないための補助です。"
   - "どこで止めてよいか、どこまで原文へ戻るべきかを示します。"
+  - "技術・自然科学の一次証拠を追うときは、年順ではなく論文集内の優先ルートから入る方が安全です。"
 known_points:
   - "役割の違うページを分けると、量の多さと結論の強さを混同しにくくなります。"
   - "論文集、文献地図、提案ページは、それぞれ読む目的が異なります。"
@@ -60,6 +61,12 @@ recommended_pages:
 役割差だけでなく、論文や文献地図を読んだあとに未解決問題、提案、Issue、協業候補のどこへ戻るかを一本道で見たい場合は <a href="literature-to-action-route.html">文献から実装・参加へ戻る一本道</a> をご覧ください。
 </p>
 </div>
+<div class="note-box">
+<strong>技術・自然科学の一次証拠だけ先に追いたいとき</strong>
+<p>
+<a href="../mind_uploading_papers.html">論文集</a> は broad archive なので、年順の先頭がそのまま技術フロンティア順とは限りません。decode、speech neuroprosthesis、ESI direct validation、maintenance-state のような技術ルートを先に見たい場合は、論文集内の <strong>技術・自然科学の優先ルート</strong> から入ってください。
+</p>
+</div>
 
 <section class="section" id="which-page">
 <h2 class="section-title">3つのページの違い</h2>
@@ -76,7 +83,7 @@ recommended_pages:
 <tr>
 <td><strong>論文集</strong></td>
 <td>広く拾う入口</td>
-<td>年別の流れ、関連論文の存在、要約からの当たり付け。</td>
+<td>年別の流れ、関連論文の存在、要約からの当たり付け。技術読者は優先ルートから主要一次文献へ入ります。</td>
 <td>各論文の最終評価をここだけで確定すること。</td>
 </tr>
 <tr>
