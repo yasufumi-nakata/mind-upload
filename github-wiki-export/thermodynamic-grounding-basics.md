@@ -134,6 +134,44 @@ FLOPs のような論理的計算量は、「どれくらい計算したか」�
 </tbody>
 </table>
 
+<h2>観測からどこまで言えるか</h2>
+<table>
+<thead>
+<tr>
+<th>観測・推定</th>
+<th>ここまでは言える</th>
+<th>まだ言いすぎなこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>fMRI / EEG / ECoG の time irreversibility</strong></td>
+<td>脳ダイナミクスに、状態依存の時間非対称性がある可能性を示せます。</td>
+<td>それだけで微視的な物理散逸や「同一性」を直接測れたとは言えません。</td>
+</tr>
+<tr>
+<td><strong>entropy production の下界推定</strong></td>
+<td>粗視化した時系列から、非平衡性の情報論的シグナルを抽出できます。</td>
+<td>ハードウェア電力や代謝コストと 1 対 1 に対応づけることはできません。</td>
+</tr>
+<tr>
+<td><strong>spiking model での entropy flow 推定</strong></td>
+<td>非定常な発火系列に対する nonequilibrium 指標の設計は前進しています。</td>
+<td>この時点で「神経発火から EPR を安定に直接測れる」と一般化するのは早すぎます。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>2026-03 監査で固定した運用ルール</h2>
+
+<h4>Rule</h4>
+<ul>
+<li><strong>Landauer と実装電力を分ける：</strong>下限理論と実測電力を混同しません。</li>
+<li><strong>information entropy production と physical dissipation を分ける：</strong>粗視化 neural data からの下界推定を、物理散逸そのものと書きません。</li>
+<li><strong>熱力学指標は補助ログ：</strong>OOD 一般化、摂動、妥当化、不確実性、棄権条件の代わりには使いません。</li>
+<li><strong>モダリティ依存性を明示する：</strong>fMRI、ECoG、EEG、spiking で同じ意味に読み替えません。</li>
+</ul>
+
 <h2>熱力学の主張を読むときの 3 問</h2>
 <ol>
 <li><strong>これは下限の話か、実測の話か：</strong>Landauer のような理論下限と、実際の消費や散逸を混同しないことが重要です。</li>
@@ -145,3 +183,12 @@ FLOPs のような論理的計算量は、「どれくらい計算したか」�
 <p>
 理論フレームへ戻るなら <a href="https://mind-upload.com/perspective.html#design-principles">理論フレーム</a>、長文の研究ノートへ戻るなら <a href="https://mind-upload.com/perspective.html">研究ノート</a>、検証要件へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a> をご利用ください。
 </p>
+
+<h2>参考文献</h2>
+<ol>
+<li>Seifert, U. (2012). Stochastic thermodynamics, fluctuation theorems and molecular machines. <em>Reports on Progress in Physics</em>, 75(12), 126001. <a href="https://doi.org/10.1088/0034-4885/75/12/126001" target="_blank">doi:10.1088/0034-4885/75/12/126001</a></li>
+<li>Lynn, C. W., et al. (2021). Broken detailed balance and entropy production in the human brain. <em>PNAS</em>, 118(47), e2109889118. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>
+<li>de la Fuente, L. A., et al. (2022). Temporal irreversibility of neural dynamics as a signature of consciousness. <em>Cerebral Cortex</em>, 33(5), 1856–1865. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
+<li>Nartallo-Kaluarachchi, R., et al. (2025). Multilevel irreversibility reveals higher-order organization of nonequilibrium interactions in human brain dynamics. <em>PNAS</em>, 122(10), e2408791122. <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">doi:10.1073/pnas.2408791122</a></li>
+<li>Ishihara, K., &amp; Shimazaki, H. (2025). State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics. <em>Nature Communications</em>, 16, 10852. <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
+</ol>

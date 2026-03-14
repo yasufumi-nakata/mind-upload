@@ -1,16 +1,16 @@
 # Wiki：反事実・介入・摂動の検証
 
-> 当たることと、条件を変えても正しく反応することは別です
+> 高精度と、条件変更への正しい応答は別です
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Learning guide
+- 更新日: 2026-03-14 / 位置づけ: Learning guide
 
 ## このページの役割
-このページは、held-out 精度が高いこと、介入に正しく反応すること、反事実の分岐を再現できること、摂動に対する応答構造が一致することを、初歩から切り分ける wiki です。『精度が高い = 中身も同じ』という誤解を避けることを目的にします。
+このページは、held-out 精度、online human-in-the-loop、外部介入、摂動複雑性の検証を、一次文献に沿って切り分ける wiki です。概念語だけでなく、どの論文が何を実際に変え、何をまだ示していないかを並べます。
 
 ## 正確さの前提
-ここで扱うのは検証の考え方です。個別の摂動プロトコルや数式は省きますが、因果検証が held-out 精度より厳しいという点は崩しません。
+2026年3月時点の一次文献が強く支えているのは、局所サブシステムや課題限定の causal evidence です。全脳WBEの反事実同値が実証されたという意味ではありません。
 
 ## 公開ページへ戻る
 - [WBE入門](https://mind-upload.com/wbe_101.html)
@@ -20,146 +20,189 @@
 ## 関連 Wiki
 - [Wiki: Decode と Emulate](https://github.com/yasufumi-nakata/mind-upload/wiki/decode-vs-emulate) - まず翻訳と生成の違いへ戻りたい人向けです。
 - [Wiki: 観測から推定へ](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - 推定モデルと因果モデルの違いを補います。
+- [Wiki: 閉ループ・遅延・ジッタ・安全停止](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - 因果検証を online 系で読むときの実務指標を補います。
 - [Wiki: 検証基盤の基本](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Benchmark、Registry、Model Card の役割を補います。
 
 ## いま分かっていること
-- 学習していないデータで当たることは重要ですが、それだけで因果構造の一致は言えません。
-- 条件をわざと変えたときの反応を見る検証は、出力一致より強いテストです。
-- 反事実や摂動の検証には、失敗条件とログの固定が必要です。
+- 高い held-out 精度だけでは、因果構造の一致は言えません。
+- 双方向 feedback や state-dependent stimulation は causal evidence を強めますが、適用範囲は局所に限られやすいです。
+- 閉ループ系では latency、recalibration、abstention のログが必須です。
 
 ## まだ分かっていないこと
-- どの摂動セットが WBE の本人性主張へ最も効くかは未解決です。
-- 反事実等価性をどこまで満たせば十分かは、理論と工学の両面で研究途中です。
+- どの摂動セットを満たせば WBE の生成的同値に十分かは未解決です。
+- 反事実分岐のどこまでを benchmark 化できるかは、理論と工学の両面で研究途中です。
+- 全脳スケールで branch-equivalence を直接検証する公開基盤は、まだ存在しません。
 
 ---
 
-<h2>いちばん短い違い</h2>
+<h2>最短の結論</h2>
 <p>
-held-out 精度は「見たことのない問題でも当たるか」を見るテストです。介入や反事実の検証は、「条件を変えたとき、どの方向へどう崩れ、どう持ち直すかまで再現できるか」を見るテストです。
+高い held-out 精度は重要ですが、それだけでは「中の仕組みも同じ」とは言えません。2026年3月時点の一次文献が示しているのは、<strong>offline decode</strong>、<strong>online human-in-the-loop</strong>、<strong>外部介入</strong>、<strong>長期閉ループ</strong>が別々の壁である、ということです。
 </p>
 
-<h2>まず検証の強さを 4 段階で分ける</h2>
+<strong>今回の再整理で直した点</strong>
+<p>
+旧版は、介入・反事実・摂動を概念語として説明する比重が高く、どの論文がどの段階まで実証しているかが見えにくい構成でした。本ページでは、一次文献ごとに<strong>何を実際に変えたのか</strong>、<strong>何が改善したのか</strong>、<strong>まだ言えないことは何か</strong>を並べます。
+</p>
+
+<h2>まず因果証拠の強さを 5 段階で分ける</h2>
 <table>
 <thead>
 <tr>
 <th>段階</th>
-<th>何を見ているか</th>
+<th>実際に変えているもの</th>
+<th>最低限ほしいログ</th>
 <th>まだ言えないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>1. held-out 精度</strong></td>
-<td>見たことのないデータでも当たるか。</td>
-<td>条件変更への反応や因果構造の一致はまだ言えません。</td>
+<td><strong>1. held-out decode</strong></td>
+<td>学習していないデータで当たるかを見ます。</td>
+<td>分割単位、リーク検査、校正誤差、不確実性です。</td>
+<td>条件変更への応答や因果構造の一致はまだ言えません。</td>
 </tr>
 <tr>
-<td><strong>2. OOD / 新規条件</strong></td>
-<td>少し違う条件でも崩れにくいか。</td>
-<td>介入したときに中の仕組みが同じように動くかまでは言えません。</td>
+<td><strong>2. online human-in-the-loop</strong></td>
+<td>被験者が出力を見ながら、連続操作や会話を行います。</td>
+<td>end-to-end latency、jitter、dropout、再較正イベントです。</td>
+<td>online で動いても、まだ外部介入への一致までは言えません。</td>
 </tr>
 <tr>
-<td><strong>3. 介入</strong></td>
-<td>刺激や入力条件をわざと変えたとき、応答が正しく変わるか。</td>
-<td>「もし別の分岐だったら」という反事実全体まではまだ十分でない場合があります。</td>
+<td><strong>3. 双方向 feedback / 局所介入</strong></td>
+<td>触覚 feedback や刺激で、出力が次の入力を変える loop を作ります。</td>
+<td>刺激タイミング、強度、アーチファクト窓、行動変化量です。</td>
+<td>局所 causal gain は示せても、全脳の生成的同値は示しません。</td>
 </tr>
 <tr>
-<td><strong>4. 反事実・摂動構造</strong></td>
-<td>分岐全体や応答伝播の構造が、生体と同じように動くか。</td>
-<td>それでも本人性や社会実装まで即断はできません。</td>
+<td><strong>4. state-dependent intervention</strong></td>
+<td>検出した状態に応じて刺激や制御を切り替えます。</td>
+<td>状態推定誤差、刺激 duty cycle、停止条件、在宅運用ログです。</td>
+<td>課題特異的 controller の有効性であり、state completeness は別問題です。</td>
+</tr>
+<tr>
+<td><strong>5. perturbation-structure test</strong></td>
+<td>複数条件の分岐と摂動応答構造まで比較します。</td>
+<td>分岐条件、比較規則、失敗条件、反復可能な摂動セットです。</td>
+<td>ここでも本人性や社会実装までは自動的には言えません。</td>
 </tr>
 </tbody>
 </table>
 
-<h2>なぜ精度だけでは足りないのか</h2>
-<p>
-テスト問題で高得点でも、問題の癖を覚えただけかもしれません。同じように、モデルが高精度でも、それが<strong>本当に中の仕組みを捉えたのか</strong>、それとも表面のパターンを拾っただけかは、精度だけでは分かりません。
-</p>
-
-<strong>よくある事故</strong>
-<p>
-データリーク、分布の偏り、言語モデルの事前分布、評価条件の甘さがあると、見かけのスコアだけが上がります。だから Mind-Upload では、スコアの前に失敗条件と検証条件を固定します。
-</p>
-
-<h2>介入と反事実はどう違うのか</h2>
+<h2>一次文献で見る境界事例</h2>
 <table>
 <thead>
 <tr>
-<th>用語</th>
-<th>ひとことで言うと</th>
+<th>論文</th>
+<th>実際にできたこと</th>
+<th>このサイトでどう読むか</th>
+<th>まだ言えないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>介入</strong></td>
-<td>実際に条件を変えて、その結果を見ます。</td>
+<td><strong>Forenzo et al. (2024)</strong></td>
+<td>非侵襲 EEG の連続追従課題を online で評価し、deep learning decoder の挙動を人間ループ内で比較しました。</td>
+<td>offline 精度ではなく online 指標を出した点が重要です。non-invasive でも human-in-the-loop の壁は別にあると読めます。</td>
+<td>これは continuous control の実証であり、反事実同値や全脳生成ではありません。</td>
 </tr>
 <tr>
-<td><strong>反事実</strong></td>
-<td>「もし別の条件だったら」と、起きなかった分岐まで含めて考えます。</td>
+<td><strong>Wairagkar et al. (2025)</strong></td>
+<td>raw neural activity から音声合成までを 10 ms 以内で回し、non-speech 区間では silence を返す voice loop を示しました。</td>
+<td>low latency と abstention の実装が、閉ループ評価の必須要素だと分かります。</td>
+<td>固定 decoder は約 15 日で性能低下が見え、長期安定性は別課題です。</td>
 </tr>
 <tr>
-<td><strong>摂動</strong></td>
-<td>システムへ小さな変化や刺激を加えて、応答の広がり方を見ることです。</td>
+<td><strong>Flesher et al. (2021)</strong></td>
+<td>感覚皮質への ICMS 触覚 feedback を加えると、robotic arm control の trial time と grasp time が改善しました。</td>
+<td>双方向 feedback が行動を変える、という causal evidence の典型例です。</td>
+<td>感覚運動サブシステムの局所 loop であり、全脳WBEの十分条件ではありません。</td>
+</tr>
+<tr>
+<td><strong>Oehrn et al. (2024)</strong></td>
+<td>Parkinson 病で chronic adaptive DBS と conventional DBS を blinded randomized block で比較し、在宅環境を含む評価を行いました。</td>
+<td>state-dependent intervention を主張するなら、実生活ブロック比較まで要ることが分かります。</td>
+<td>症状制御の controller 実証であり、内部状態の完全再構成ではありません。</td>
+</tr>
+<tr>
+<td><strong>Casali et al. (2013), Comolatti et al. (2019)</strong></td>
+<td>TMS / intracranial stimulation への応答複雑性を定量化する手法を示しました。</td>
+<td>摂動ベースの検証は実装可能ですが、刺激条件とアーチファクト処理を固定しないと比較できないと読めます。</td>
+<td>単一指標だけで WBE の pass/fail を決める根拠にはまだなりません。</td>
 </tr>
 </tbody>
 </table>
+
+<strong>通信系 BCI の高速化は、そのまま因果同値ではありません</strong>
 <p>
-介入は実験で行いやすい入口で、反事実はより強い問いです。摂動は、その入口として「条件をわざと揺らして、応答構造を見る」具体的なやり方だと考えると分かりやすいです。
+Willett et al. (2023) と Littlejohn et al. (2025) は、speech neuroprosthesis が高速かつ streaming になりうることを示しました。しかし、ここで実証されたのは<strong>コミュニケーション・サブシステムの online decode / control</strong>であり、branch-equivalence や全脳WBEではありません。
 </p>
 
-<h2>小さな例で考える</h2>
+<h2>何を満たしたときに「反事実」と呼ぶか</h2>
+<p>
+このサイトでは、単に「条件を変えた」だけでは <strong>反事実</strong> と呼びません。少なくとも次の 4 条件を満たさない場合は、より弱い表現である <strong>介入応答テスト</strong> または <strong>摂動一般化テスト</strong> と呼びます。
+</p>
 <table>
 <thead>
 <tr>
-<th>テスト</th>
-<th>何を確かめているか</th>
+<th>条件</th>
+<th>必要な理由</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>held-out EEG 分類</strong></td>
-<td>未見データでも状態ラベルを当てられるか。</td>
+<td><strong>分岐変数が明示されている</strong></td>
+<td>何を変えたのかが曖昧だと、別条件を比べたのか単なるノイズ差か区別できません。</td>
 </tr>
 <tr>
-<td><strong>新規刺激条件での予測</strong></td>
-<td>学習していない条件でも、応答傾向が崩れないか。</td>
+<td><strong>比較規則が事前登録されている</strong></td>
+<td>あとから都合のよい分岐だけ選ぶと、反事実らしく見せられてしまいます。</td>
 </tr>
 <tr>
-<td><strong>仮想摂動の応答比較</strong></td>
-<td>条件を変えたときの伝播や回復の仕方が似ているか。</td>
+<td><strong>アーチファクト窓と安全条件が公開されている</strong></td>
+<td>刺激後の信号変化が、神経応答なのか装置由来なのかを切り分ける必要があります。</td>
 </tr>
 <tr>
-<td><strong>反事実分岐の比較</strong></td>
-<td>「もし刺激位置や条件が違ったら」という分岐構造まで追えるか。</td>
+<td><strong>失敗条件が固定されている</strong></td>
+<td>どこまでずれたら「同じ分岐を再現できていない」と判定するかを先に決める必要があります。</td>
 </tr>
 </tbody>
 </table>
 
-<h2>なぜ Benchmark / Registry / Model Card が要るのか</h2>
-
-<h4>役割分担</h4>
-<ul>
-<li><strong>Benchmark：</strong>どの介入や摂動を行い、何で採点するかを固定します。</li>
-<li><strong>Registry：</strong>どの条件で失敗とみなすか、どこまでを事前に決めるかを固定します。</li>
-<li><strong>Model Card：</strong>どの摂動で崩れたか、どの OOD 条件に弱いかを残します。</li>
-</ul>
-
-<p>
-ここが曖昧だと、後から都合のよい摂動だけを選んで「中身も同じ」と言えてしまいます。
-</p>
-
-<h2>因果検証の話を読むときの最低チェック</h2>
+<h2>最低限残したいログ</h2>
 
 <h4>Checklist</h4>
 <ul>
-<li><strong>ただの held-out 精度ではないか：</strong>条件変更が本当に入っているか。</li>
-<li><strong>介入内容が明示されているか：</strong>何をどれだけ変えたかが書かれているか。</li>
-<li><strong>失敗条件があるか：</strong>どんな結果なら不一致とみなすかが先に決まっているか。</li>
-<li><strong>失敗例が残っているか：</strong>うまくいかなかった摂動も公開されているか。</li>
+<li><strong>介入の定義：</strong>刺激部位、強度、タイミング、継続時間、試行条件。</li>
+<li><strong>アーチファクト処理：</strong>刺激直後の除外窓、補間、masking、採用しなかった試行。</li>
+<li><strong>online 指標：</strong>end-to-end latency の分布、dropout、再較正イベント、棄権率。</li>
+<li><strong>効果量：</strong>平均改善だけでなく trial-level のばらつき、失敗例、回復時間。</li>
+<li><strong>比較規則：</strong>どの条件を主比較にし、どの結果なら fail とみなすか。</li>
 </ul>
+
+<h2>因果検証の論文を読むときの 5 問</h2>
+<ol>
+<li><strong>offline 精度ではなく online 指標が出ているか：</strong>human-in-the-loop の課題なら、offline だけでは足りません。</li>
+<li><strong>何を実際に変えたのかが書かれているか：</strong>刺激、feedback、decoder 更新、課題条件を区別します。</li>
+<li><strong>アーチファクト処理が明示されているか：</strong>特に刺激系はここが抜けると因果証拠が崩れます。</li>
+<li><strong>再較正と棄権が隠れていないか：</strong>うまくいった試行だけで loop を語っていないかを見ます。</li>
+<li><strong>局所サブシステムの実証を、全脳同値へ飛躍させていないか：</strong>ここが最重要です。</li>
+</ol>
+
+<h2>参考文献</h2>
+<ol>
+<li>Forenzo D, Zhu H, Shanahan J, Lim J, He B. Continuous tracking using deep learning-based decoding for noninvasive brain-computer interface. PNAS Nexus. 2024. <a href="https://doi.org/10.1093/pnasnexus/pgae145" target="_blank">doi:10.1093/pnasnexus/pgae145</a></li>
+<li>Willett FR, Kunz EM, Fan C, et al. A high-performance speech neuroprosthesis. Nature. 2023. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
+<li>Littlejohn KT, Dabagia M, Ladwig A, et al. A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. Nat Neurosci. 2025. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
+<li>Wairagkar M, Moses DA, Metzger SL, et al. An instantaneous voice-synthesis neuroprosthesis. Nature. 2025. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+<li>Flesher SN, Downey JE, Weiss JM, et al. A brain-computer interface that evokes tactile sensations improves robotic arm control. Science. 2021. <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
+<li>Oehrn CR, Roediger J, Diehl A, et al. Chronic adaptive deep brain stimulation versus conventional stimulation in Parkinson's disease: a blinded randomized feasibility trial. Nat Med. 2024. <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">doi:10.1038/s41591-024-03196-z</a></li>
+<li>Wilson GH, Bray N, Franken M, et al. Long-term unsupervised recalibration of intracortical brain-computer interfaces using a Markov model. Nat Biomed Eng. 2025. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Casali AG, Gosseries O, Rosanova M, et al. A theoretically based index of consciousness independent of sensory processing and behavior. Sci Transl Med. 2013. <a href="https://doi.org/10.1126/scitranslmed.3006294" target="_blank">doi:10.1126/scitranslmed.3006294</a></li>
+<li>Comolatti R, Pigorini A, Casarotto S, et al. A fast and general method to empirically estimate the complexity of brain responses to transcranial and intracranial stimulations. Brain Stimul. 2019. <a href="https://doi.org/10.1016/j.brs.2019.05.013" target="_blank">doi:10.1016/j.brs.2019.05.013</a></li>
+</ol>
 
 <h2>次にどこへ戻るか</h2>
 <p>
-翻訳と生成の違いへ戻るなら <a href="https://mind-upload.com/wbe_101.html">WBE入門</a>、検証設計へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a>、短い Q&A へ戻るなら <a href="https://mind-upload.com/faq.html">FAQ</a> をご利用ください。
+翻訳と生成の違いへ戻るなら <a href="https://mind-upload.com/wbe_101.html">WBE入門</a>、検証設計へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a>、閉ループ実務へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops">Wiki: 閉ループ・遅延・ジッタ・安全停止</a> をご利用ください。
 </p>

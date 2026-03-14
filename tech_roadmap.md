@@ -579,9 +579,9 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 <span class="qa-tags"><span class="tag">INVERSE</span><span class="tag">BAYES</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>問い：</strong>EEGソース推定のような逆問題は、解が一意に定まらない“不良設定問題（ill-posed problem）”である。点推定（ひとつの解を求めること）は科学的に誤解を招く可能性があるため、本プロジェクトでは<strong>ベイズ的アプローチを原則とする</strong>。</p>
-<p><strong>方針：</strong>解を事後確率分布として捉え、その不確実性自体を後段の解析（因果モデリング等）に引き継ぐ。これにより、推定の曖昧さを考慮した、より頑健な結論を目指す。</p>
-<p><strong>次に必要：</strong>推定結果の不確実性（R7）と、仮定（事前分布）を変えた時の感度分析（監査ログ）</p>
+<p><strong>問い：</strong>EEG ソース推定のような逆問題は、解が一意に定まらない“不良設定問題（ill-posed problem）”です。したがって重要なのは、<strong>どの solver を採用したか</strong>より、<strong>幾何・導電率・電極座標・事前仮定を変えたときに結論がどこまで保つか</strong>を監査できることです。</p>
+<p><strong>方針：</strong>本プロジェクトでは、特定 solver を標準解として固定しません。受理条件は、(1) 事後分布・信用区間・bootstrap/ensemble など何らかの<strong>不確実性表現</strong>があること、(2) 個体別 MRI / FEM-BEM / 導電率仮定 / 電極幾何の<strong>感度分析</strong>があること、(3) シミュレーション、ファントム、同時侵襲記録、頭蓋内刺激のいずれかで<strong>外部妥当化</strong>していること、です。Bayesian / empirical Bayes は有力候補ですが、必須なのは名称ではなく監査可能性です。</p>
+<p><strong>次に必要：</strong>R2 と R7 で、source depth・頭蓋導電率・候補モデル空間がどこまで誤差を支配するかを切り分け、重なった解を無理に 1 つへ潰さない棄権条件まで公開します。</p>
 </div>
 </details>
 
@@ -619,11 +619,11 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 <span class="qa-tags"><span class="tag">CAUSAL</span><span class="tag">MULTI-SCALE</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>問い：</strong>相関の当てはめではなく、刺激/操作に対して“どう変わるはずか”を言えるか？ デコーディング（相関）からエミュレーション（因果）への飛躍をどう埋めるか？</p>
-<p><strong>方針：</strong>脳を能動的推論（Active Inference）を行う生成モデルとして定式化する。Laukkonen et al. (2025) の<strong>「反実仮想的等価性（Counterfactual Equivalence）」</strong>を指標とするが、EEG単体では解像度が不足する。</p>
-<p><strong>改善策（Multi-scale）：</strong>EEGから推定されたマクロな因果構造を、ミクロな神経回路シミュレーション（Blue Brain Project等）の制約条件として用いる<strong>「マルチスケール因果モデリング」</strong>を採用する。トップダウン（EEG）とボトムアップ（回路）の統合により、シナプスレベルの可塑性を反映した頑健なモデルを目指す。</p>
-<p><strong>実装の厳密化 (Issue #52):</strong> 逆問題（R1/R2）で得られた事後確率分布の<strong>分散（不確実性）</strong>を、Active Inferenceにおける<strong>精度（Precision, 逆分散）</strong>として明示的に伝播させる。単なる点推定値の入力ではなく、不確実性が予測誤差の重み付け（カルマンゲイン）を制御するメカニズムを実装する。</p>
-<p><strong>次に必要：</strong>介入前提の評価タスク（V2）と、マルチスケール統合パイプラインの設計</p>
+<p><strong>問い：</strong>相関の当てはめではなく、刺激や条件変更に対して“どう変わるはずか”を言えるか。デコーディング（相関）からエミュレーション（因果）への飛躍を、どの証拠鎖で埋めるか。</p>
+<p><strong>方針：</strong>本プロジェクトでは、Active Inference、DCM、状態空間モデル、SCM、機械論的回路モデルを<strong>競争させる候補集合</strong>として扱います。DCM は候補生成モデルの比較、SCM は介入・反事実の記述に有用ですが、どちらも単独では自動的な因果発見器ではありません。観測データだけなら同値類が残るため、<strong>候補モデル空間の明示</strong>、<strong>family-level 比較</strong>、<strong>model recovery</strong>、<strong>held-out perturbation 予測</strong>を必須にします。</p>
+<p><strong>改善策（Multi-scale の位置づけ）：</strong> マルチスケール統合は有力な拡張ルートですが、既定路線とはしません。EEG 由来のマクロ制約を回路モデルへ渡す場合でも、採否は「理論名」ではなく、刺激・病変・課題摂動に対する予測改善、OOD 一般化、棄権条件の透明性で判断します。</p>
+<p><strong>実装の厳密化 (Issue #52):</strong> 逆問題（R1/R2）で得られた不確実性は、後段モデルへ明示的に伝播させます。ただし、ここで固定するのは Active Inference の precision 実装そのものではなく、<strong>上流の不確実性を下流で消さない</strong>ことです。候補理論ごとの実装差は、同一ベンチで比較します。</p>
+<p><strong>次に必要：</strong>介入前提の評価タスク（V2）、モデル空間宣言、family comparison、外部妥当化つき摂動ベンチを 1 つの提出物パックへ統合します。</p>
 </div>
 </details>
 
@@ -659,9 +659,9 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 <span class="qa-tags"><span class="tag">IDENTIFIABILITY</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>問い：</strong>同じ観測を説明する別モデルが無数にある時、どの仮定で絞り込むか？不確実性をどう表現するか？</p>
-<p><strong>反証条件：</strong>小さな前処理差で結果が大きく変わり、再現（P2）できない</p>
-<p><strong>次に必要：</strong>事前分布/正則化を明示し、感度分析で“頑健な結論だけ”採用する</p>
+<p><strong>問い：</strong>同じ観測を説明する別モデルが多数あるとき、どの仮定でどこまで絞り込めるか。不確実性は、センサー幾何、導電率、前処理、候補モデル集合、介入設計のどこから来るのか。</p>
+<p><strong>反証条件：</strong>小さな前処理差、導電率仮定、候補モデル空間の変更で結論が大きく反転する、あるいは held-out 摂動や外部基準で回収できない場合は、同定できたとはみなしません。</p>
+<p><strong>次に必要：</strong>事前分布/正則化だけでなく、<strong>比較した family と除外した family</strong>、<strong>電極幾何・頭部モデル・導電率の感度分析</strong>、<strong>シミュレーション/ファントム/侵襲較正</strong>、<strong>モデルが重なるときの棄権条件</strong>をまとめて公開し、頑健な結論だけを採用します。</p>
 </div>
 </details>
 
@@ -1628,8 +1628,12 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 <li>Wipf, D., &amp; Nagarajan, S. (2009). Unified Bayesian framework for MEG/EEG source imaging.</li>
 <li>Cai, C., et al. (2021). Robust noise estimation with Champagne. <a href="https://doi.org/10.1016/j.neuroimage.2020.117411" target="_blank">doi:10.1016/j.neuroimage.2020.117411</a></li>
 <li>Sechet, D., Kowalski, M., Mokhtari, S., &amp; Torrésani, B. (2025). Revisiting CHAMPAGNE: Sparse Bayesian Learning as Reweighted Sparse Coding. <a href="https://doi.org/10.1109/SAMPTA64769.2025.11133512" target="_blank">doi:10.1109/SAMPTA64769.2025.11133512</a></li>
+<li>Feng, Z., Mishne, G., Hashemi, A., et al. (2025). Block-Champagne: Imaging Extended E/MEG Source Activation with Empirical Bayesian Uncertainty Quantification. <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">doi:10.1109/TMI.2025.3642620</a></li>
 <li>Vorwerk, J., et al. (2014). Head volume conductor modeling guideline.</li>
-<li>Medani, T., et al. (2025). Conductivity uncertainty in forward/inverse solvers.</li>
+<li>Aydin, U., Vorwerk, J., K&uuml;pper, P., et al. (2019). Influence of head tissue conductivity uncertainties on EEG dipole reconstruction. <a href="https://doi.org/10.3389/fnins.2019.00531" target="_blank">doi:10.3389/fnins.2019.00531</a></li>
+<li>Mikulan, E., Russo, S., Bares, M., et al. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
+<li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Direct validation of EEG source imaging by intracranial electric stimulation in human patients. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
+<li>Hao, Y., Alhilani, M., Asano, E., et al. (2025). High-density scalp EEG source imaging and directed functional connectivity validated by simultaneous stereo-electroencephalography. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
 <li>Logothetis, N. K. (2008). Limits of fMRI inference.</li>
 <li>Purdon, P. L., et al. (2013). EEG signatures of loss/recovery of consciousness.</li>
 <li>Boto, E., et al. (2018). Wearable OPM-MEG.</li>
@@ -1665,9 +1669,13 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 <h3>F. 因果推論・能動的推論・反実仮想</h3>
 <ol>
 <li>Friston, K. J., Harrison, L., &amp; Penny, W. (2003). Dynamic causal modelling.</li>
+<li>Penny, W. D., Stephan, K. E., Mechelli, A., &amp; Friston, K. J. (2004). Comparing dynamic causal models. <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">doi:10.1016/j.neuroimage.2004.03.026</a></li>
 <li>Friston, K. (2010). Free-energy principle.</li>
 <li>Friston, K. (2017). Active inference: a process theory.</li>
 <li>Parr, T., &amp; Friston, K. J. (2019). Generalised free energy.</li>
+<li>Lee, H.-L., Zahneisen, B., Hugger, T., et al. (2017). Tracking dynamic effective connectivity from fMRI using changes induced by anesthesia. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.012" target="_blank">doi:10.1016/j.neuroimage.2017.02.012</a></li>
+<li>Hauser, A., &amp; B&uuml;hlmann, P. (2012). Characterization and greedy learning of interventional Markov equivalence classes of directed acyclic graphs. <a href="https://jmlr.org/papers/v13/hauser12a.html" target="_blank">JMLR</a></li>
+<li>Vink, J. J., Ramos-Nu&ntilde;ez, A. I., Bellesi, A., et al. (2020). The brain's functional connectome is a poor predictor of the brain's causal activity flow. <a href="https://doi.org/10.1371/journal.pcbi.1007866" target="_blank">doi:10.1371/journal.pcbi.1007866</a></li>
 <li>Laukkonen, R., Friston, K., &amp; Chandaria, S. (2025). A beautiful loop.</li>
 <li>Correa, J. D., Lee, S., &amp; Bareinboim, E. (2021). Nested counterfactual identification.</li>
 </ol>
