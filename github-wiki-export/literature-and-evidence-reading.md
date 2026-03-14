@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-14 / 位置づけ: Reading guide
+- 更新日: 2026-03-15 / 位置づけ: Reading guide
 
 ## このページの役割
 このページは、Mind-Upload にある文献系ページの役割分担を整理する補助ページです。論文が多いページほど、役割を取り違えると読み方が崩れるため、『何をするページか』『どこまで確定扱いしないか』を先に説明します。
@@ -44,6 +44,11 @@
 役割差だけでなく、論文や文献地図を読んだあとに未解決問題、提案、Issue、協業候補のどこへ戻るかを一本道で見たい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/literature-to-action-route">文献から実装・参加へ戻る一本道</a> をご覧ください。
 </p>
 
+<strong>技術・自然科学の一次証拠だけ先に追いたいとき</strong>
+<p>
+<a href="https://mind-upload.com/mind_uploading_papers.html">論文集</a> は broad archive なので、年順の先頭がそのまま技術フロンティア順とは限りません。decode、speech neuroprosthesis、ESI direct validation、maintenance-state のような技術ルートを先に見たい場合は、論文集内の <strong>技術・自然科学の優先ルート</strong> から入ってください。
+</p>
+
 <h2>3つのページの違い</h2>
 <table>
 <thead>
@@ -58,7 +63,7 @@
 <tr>
 <td><strong>論文集</strong></td>
 <td>広く拾う入口</td>
-<td>年別の流れ、関連論文の存在、要約からの当たり付け。</td>
+<td>年別の流れ、関連論文の存在、要約からの当たり付け。技術読者は優先ルートから主要一次文献へ入ります。</td>
 <td>各論文の最終評価をここだけで確定すること。</td>
 </tr>
 <tr>

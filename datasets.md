@@ -5,7 +5,7 @@ description: "公開データ（EEG中心）の選定から、BIDS→QC→前処
 article_type: Resource
 subtitle: "「何を使うか」と「どう再現するか」を分けずに最短ルートでつなぐ"
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
+last_updated: "2026-03-15"
 note: "Curated List + L0 Practice"
 audience: "どの公開データから始めるべきか迷っている人、L0の練習台を探している人"
 reading_time: "12〜20分"
@@ -14,14 +14,17 @@ accuracy_note: "ここに載せるデータセットは入口候補です。使�
 page_highlights:
   - "まずは共有基盤を押さえ、その後にスターターデータセットを見る順にしています。"
   - "スターターデータは L0〜L1 の練習台であり、EEG source imaging の ground truth ではありません。"
+  - "スターターデータごとに、annotation provenance・時間忠実度・独立な split 単位が違います。"
   - "最終目標は、第三者が同じ条件で走らせられる形へ寄せることです。"
 known_points:
   - "公開 EEG データは、L0 の再現解析や L1 のベースライン練習に十分役立ちます。"
   - "最初のデータ選びでは、難しさよりも追試しやすさを優先した方が前に進みます。"
+  - "同じ『公開 EEG データ』でも、cue-locked event、専門家の区間注釈、sleep hypnogram、医師レポート由来ラベルは意味が違います。"
   - "個体別 MRI や侵襲 ground truth がないスターターデータだけで、ESI 精度改善を強く主張することはできません。"
 unknown_points:
   - "スターターデータセットだけで WBE の全論点を解くことはできません。"
   - "どのデータが将来の因果・閉ループ検証へ最も効くかは、まだ固定していません。"
+  - "どの公開データを annotation fidelity benchmark の既定路線にするかは、まだ固定していません。"
   - "どの公開データが source imaging の direct validation 用 benchmark として最も運用しやすいかは、まだ固定していません。"
 wiki_links:
   - label: "Wiki: EEGの基本"
@@ -122,6 +125,12 @@ recommended_pages:
 <strong>精度より先に見ること</strong>
 <p>
 データセット紹介を見ると、つい「何% 出たか」に目が向きます。しかし最初に確認すべきなのは、<strong>train/test を何単位で分けたか</strong>、<strong>リーク検査をしたか</strong>、<strong>単純なベースラインと比べたか</strong>です。ここで迷う場合は <a href="wiki/dataset-splits-and-leakage.html">Wiki: データ分割とデータリーク</a> を先に読むと判断しやすくなります。
+</p>
+</div>
+<div class="note-box">
+<strong>データ名より先にラベル provenance を見る</strong>
+<p>
+同じ「公開 EEG データ」でも、<strong>cue-locked annotation channel</strong>、<strong>専門家の区間注釈</strong>、<strong>whole-night hypnogram</strong>、<strong>医師レポート由来ラベル</strong>では、比較の意味が違います。したがって本ページでは dataset 名だけでなく、<strong>ラベルがどこから来たか</strong>、<strong>どの時間粒度で付いたか</strong>、<strong>何を split の独立単位とみなすか</strong>を必ず併記します。
 </p>
 </div>
 <div class="note-box">
@@ -272,6 +281,13 @@ OpenNeuro や PhysioNet は入口ですが、それだけでは再現性は固�
 上の 4 件は L0〜L1 の練習台としては非常に有用ですが、EEG source imaging や WBE 寄りの強い主張を直接検証するための ground truth ではありません。ここで必要なのは、「使える / 使えない」の二分法ではなく、<strong>どの主張までなら支えられるか</strong>を固定することでございます。
 </p>
 
+<div class="note-box">
+<strong>この節の最後の 2 列は、本サイトの運用推論です</strong>
+<p>
+下の表で示す <strong>止める主張</strong> と <strong>最低限の運用ルール</strong> は、各データセットの公式説明と一次文献が直接観測・注釈しているものから、本サイトが引く運用上の境界でございます。つまり、データセット提供者がそのまま宣言している結論ではなく、<strong>annotation provenance と時間忠実度から引く site rule</strong> です。
+</p>
+</div>
+
 <table class="data-table">
 <thead>
 <tr>
@@ -308,6 +324,55 @@ OpenNeuro や PhysioNet は入口ですが、それだけでは再現性は固�
 </tr>
 </tbody>
 </table>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>データセット</th>
+<th>ラベル / イベントの出どころ</th>
+<th>時間忠実度</th>
+<th>ここで止める主張</th>
+<th>最低限の運用ルール</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EEG Motor Movement/Imagery</strong></td>
+<td><code>.event</code> と annotation channel の T0/T1/T2 が、real / imagined motion の cue-locked onset を示します。</td>
+<td>160 Hz 記録に対する cue-onset レベルです。</td>
+<td>open-ended thought decoding や subject-independent な semantic readout へは上げません。</td>
+<td>subject + run 単位で split し、視覚 cue と筋電 / 眼球由来の寄与を別に監査します。</td>
+</tr>
+<tr>
+<td><strong>CHB-MIT</strong></td>
+<td>case ごとの summary / <code>.seizure</code> 注釈が、長時間記録中の seizure 区間を示します。しかも <code>chb21</code> は <code>chb01</code> と同一被験者です。</td>
+<td>expert interval annotation であり、file 間 gap も残ります。</td>
+<td>no-gap 連続監視や、case 数をそのまま独立被験者数とみなす主張は止めます。</td>
+<td>file ではなく subject / case chronology で split し、gap と montage summary を runbook に残します。</td>
+</tr>
+<tr>
+<td><strong>Sleep-EDF</strong></td>
+<td>well-trained technician による R&amp;K hypnogram と、1 Hz の event marker が付属します。</td>
+<td>whole-night stage annotation は coarse で、EEG は 100 Hz でも marker は 1 Hz です。</td>
+<td>sub-second event onset や、AASM 相当ラベルが自明だという主張は止めます。</td>
+<td>subject-night 単位で split し、R&amp;K から AASM へ写像した場合は mapping rule を明示します。</td>
+</tr>
+<tr>
+<td><strong>TUH EEG / TUSZ</strong></td>
+<td>TUH は patient / session 階層と clinician report <code>.txt</code> を持ち、TUSZ は report keyword search と自動 triage を含む selection を経ています。</td>
+<td>session / file レベルの clinical label と、一部 subset の expert seizure annotation です。</td>
+<td>report-assisted label を、pure EEG only benchmark の精度として書くことは止めます。</td>
+<td>patient / session 単位 split と <strong>report usage flag</strong> を必須化し、signal-only 評価では report text を入力へ入れません。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>今回追加する最重要 site rule</strong>
+<p>
+スターターデータを紹介するときは、今後は必ず <strong>(1) ラベル provenance</strong>、<strong>(2) 時間粒度</strong>、<strong>(3) 独立な split 単位</strong>、<strong>(4) 止める主張</strong> を併記します。これを書かない dataset card は、L0 の実務導線として不十分とみなします。
+</p>
+</div>
 
 <div class="note-box">
 <strong>BIDS は必要条件ですが、ground truth ではありません</strong>
@@ -397,6 +462,7 @@ Mouthaan et al. (2019) の systematic review では、presurgical epilepsy に�
 <li><strong>版固定：</strong>OpenNeuro snapshot、PhysioNet version、DOI、取得日が残っているか</li>
 <li><strong>再現：</strong>取得手順、ライセンス、前処理条件、乱数、環境が書けるか</li>
 <li><strong>メタデータ：</strong>サンプリング、参照、電極配置、イベント定義、同期情報が揃うか</li>
+<li><strong>注釈 provenance：</strong>annotation channel、manual scoring、report-derived label のどれかを明示したか</li>
 <li><strong>QC：</strong>ノイズ・欠損・アーティファクトが定量化されているか</li>
 <li><strong>比較：</strong>ベースラインがあり、evaluation family と同じ指標で比較できるか</li>
 <li><strong>反証：</strong>データリーク検査、反事実テスト、失敗例の記録があるか</li>
@@ -565,6 +631,7 @@ Mind-Uploadが目指すのは、単にデータを集めることではなく、
 <li><a href="https://physionet.org/content/sleep-edfx/1.0.0/" target="_blank">PhysioNet: Sleep-EDF Database Expanded</a></li>
 <li><a href="https://doi.org/10.3389/fnins.2016.00196" target="_blank">Obeid &amp; Picone (2016), TUH EEG Corpus</a></li>
 <li><a href="https://doi.org/10.3389/fninf.2018.00083" target="_blank">Shah et al. (2018), TUH Seizure Detection Corpus</a></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/19238800/" target="_blank">Moser et al. (2009), AASM と Rechtschaffen &amp; Kales の睡眠分類差</a></li>
 <li><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020), Localize-MI</a></li>
 <li><a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025), HD-EEG source imaging with simultaneous SEEG</a></li>
 <li><a href="https://doi.org/10.1016/j.clinph.2018.12.016" target="_blank">Mouthaan et al. (2019), E-PILEPSY systematic review</a></li>
