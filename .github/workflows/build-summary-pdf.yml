@@ -12,10 +12,15 @@ on:
       - "datasets.md"
       - "issue.md"
       - "content_hub.md"
+      - "wbe_101.md"
+      - "eeg_101.md"
+      - "faq.md"
+      - "glossary.md"
       - "_layouts/**"
       - "assets/css/main.css"
       - ".github/pdf/**"
       - ".github/workflows/build-summary-pdf.yml"
+      - "scripts/build_summary_booklet.rb"
       - "_config.yml"
       - "Gemfile"
       - "Gemfile.lock"
@@ -36,6 +41,9 @@ jobs:
         with:
           ruby-version: "3.2"
           bundler-cache: true
+
+      - name: Generate summary booklet
+        run: ruby scripts/build_summary_booklet.rb
 
       - name: Build site
         run: bundle exec jekyll build

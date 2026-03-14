@@ -1,14 +1,15 @@
 ---
 layout: default
 title: "Mind-Upload Summary Booklet"
-description: "公開ページの要点を A4 冊子向けにまとめた要約ページ。"
+description: "公開ページの要点を A4 冊子向けに自動生成した要約ページ。"
 article_type: "Briefing Booklet"
-subtitle: "公開ページの要点を 1 冊に圧縮した A4 要約版"
+subtitle: "公開ページの front matter と冒頭要約から再生成される A4 要約版"
 author: Mind Uploading Research Project
 last_updated: "2026-03-14"
-note: "A4 PDF source page"
+note: "Auto-generated from public pages"
 body_class: "summary-booklet-page"
 ---
+<!-- AUTO-GENERATED FILE. Run `ruby scripts/build_summary_booklet.rb`. -->
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
 
 <main class="main-container summary-booklet-main">
@@ -18,38 +19,39 @@ body_class: "summary-booklet-page"
   <p class="booklet-kicker">Mind-Upload Commons</p>
   <h2 class="booklet-cover-title">公開ページ要約冊子</h2>
   <p class="booklet-cover-lead">
-    この冊子は、公開ページの役割と現在地を A4 で短く読み切れる形にまとめた要約版でございます。
-    「このサイトは何を目指しているのか」「今どこまで現実的なのか」「どこから読めばよいのか」を先に揃えるための入口としてお使いください。
+    このページは、Mind-Upload 全体の入口です。『このサイトは何を目指しているか』『どこから読むと迷いにくいか』『今すぐ見に行くべきページはどれか』を最短で把握できるようにしています。
   </p>
 
   <div class="booklet-cover-band">
     <div>
-      <span>中心命題</span>
-      <strong>マインドアップロードを、進歩を測れる科学へ寄せる</strong>
-    </div>
-    <div>
-      <span>現在の重点</span>
-      <strong>L0-L2 の検証条件、再現性、比較可能性</strong>
-    </div>
-    <div>
-      <span>想定読者</span>
-      <strong>全体像を短く把握したい読者と協力候補</strong>
-    </div>
+  <span>更新基準日</span>
+  <strong>2026-03-14</strong>
+</div>
+<div>
+  <span>現在の重点</span>
+  <strong>標準、置き場、ベンチマーク、監査をセットでそろえる必要があります。</strong>
+</div>
+<div>
+  <span>最初の入口</span>
+  <strong>Mind-Upload / 検証基盤：Mind Uploading Verification Commons</strong>
+</div>
+
   </div>
 
   <div class="booklet-card-grid booklet-card-grid-3">
     <article class="booklet-card">
-      <h3>このサイトが最初に作るもの</h3>
-      <p>派手な結論ではなく、勝利条件、反証条件、標準、ベンチマーク、監査可能なログでございます。</p>
-    </article>
-    <article class="booklet-card">
-      <h3>すぐ断言しないもの</h3>
-      <p>本人性や意識の最終判定、非侵襲計測だけで十分かどうか、L4-L5 の成立でございます。</p>
-    </article>
-    <article class="booklet-card">
-      <h3>いま読むべき主ページ</h3>
-      <p>Verification、Roadmap、Perspective、Datasets、Issue Guide の 5 本が軸でございます。</p>
-    </article>
+  <h3>このサイトが最初に作るもの</h3>
+  <p>マインドアップロード（WBE）を「夢の話」で終わらせないために、まず必要なのは<strong>共通のルール</strong>です。Mind-Uploadでは、データの置き方、評価のしかた、失敗の判定、再現手順を先にそろえて、誰でも同じ基準で確かめられる土台を作ります。</p>
+</article>
+<article class="booklet-card">
+  <h3>すぐ断言しないもの</h3>
+  <p>どの条件を満たせば L4 の本人性を認めるかについて、分野横断の合意はまだありません。 / 非侵襲計測だけで WBE に十分な内部情報が取れるかは未解決です。 / L5 の社会実装に必要な制度設計は、技術問題だけでは決まりません。</p>
+</article>
+<article class="booklet-card">
+  <h3>いま読むべき主ページ</h3>
+  <p>Mind-Upload / 検証基盤：Mind Uploading Verification Commons / 技術ロードマップ：計測→再構成→実装でWBEを理解する / マインドアップロード実現への道：技術・理論の統合アプローチ / データ &amp; ハンズオン：何で始めて、どうL0まで持っていくか / 貢献ガイド</p>
+</article>
+
   </div>
 </section>
 
@@ -61,40 +63,42 @@ body_class: "summary-booklet-page"
 
   <div class="booklet-card-grid booklet-card-grid-2">
     <article class="booklet-card">
-      <h3>1. 何を目指すサイトか</h3>
-      <p>「心を移す」話を、検証可能な小課題に分解する方針を整理いたします。</p>
-    </article>
-    <article class="booklet-card">
-      <h3>2. 何が既知で何が未解決か</h3>
-      <p>現在の到達点と保留事項を、断言しすぎずに並べます。</p>
-    </article>
-    <article class="booklet-card">
-      <h3>3. どこから前進を積むか</h3>
-      <p>L0-L2、EEG、公開データ、再現可能な解析ループを中心にまとめます。</p>
-    </article>
-    <article class="booklet-card">
-      <h3>4. 主ページの役割分担</h3>
-      <p>Verification、Roadmap、Perspective、Datasets、Issue の責任範囲を固定します。</p>
-    </article>
-    <article class="booklet-card">
-      <h3>5. 次のアクション</h3>
-      <p>読む順番、参加導線、外部依存との切り分けを短く確認します。</p>
-    </article>
-    <article class="booklet-card">
-      <h3>6. 元ページ一覧</h3>
-      <p>詳細確認へ戻るための公開ページ導線を最後に集約します。</p>
-    </article>
+  <h3>1. 何を目指すサイトか</h3>
+  <p>このページは、Mind-Upload 全体の入口です。『このサイトは何を目指しているか』『どこから読むと迷いにくいか』『今すぐ見に行くべきページはどれか』を最短で把握できるようにしています。</p>
+</article>
+<article class="booklet-card">
+  <h3>2. 何が既知で何が未解決か</h3>
+  <p>このページは『WBEが可能だ』と断言するページではありません。可能かどうかを確かめられる土台を作るページです。</p>
+</article>
+<article class="booklet-card">
+  <h3>3. 主ページの役割分担</h3>
+  <p>このページは、WBEの論点を『計測』『再構成』『実装』『検証』『社会実装』に分けて並べた地図です。どの問題が土台で、どの問題がまだ未解決なのかを見失わないために使います。</p>
+</article>
+<article class="booklet-card">
+  <h3>4. 補助ページと導線</h3>
+  <p>このページは、公開コンテンツが散らばらないように『どの話題をどのページへ足すべきか』を固定するための運用ハブです。新しい情報を書く前に、まず既存ページの統合先を確認する場所として使います。</p>
+</article>
+<article class="booklet-card">
+  <h3>5. 次のアクション</h3>
+  <p>このページは、Mind-Uploadにどう参加できるかを、Issue運用と対応状況ごとに整理した入口です。専門家だけの場所ではなく、『どの作業なら今すぐ役に立つか』が見えるようにしています。</p>
+</article>
+<article class="booklet-card">
+  <h3>6. 元ページ一覧</h3>
+  <p>詳細確認へ戻るための公開ページ導線を最後に集約します。</p>
+</article>
+
   </div>
 
   <div class="booklet-status-grid">
     <div class="booklet-status-card booklet-status-card-strong">
-      <span>ひとことで言うと</span>
-      <strong>このサイトは「完成した心のコピー」を売る場所ではなく、「どこまで確かめられたか」を厳密に積み上げる場所でございます。</strong>
-    </div>
-    <div class="booklet-status-card">
-      <span>読了後に持ち帰るもの</span>
-      <strong>全体像、現実的な作業範囲、読む順番、協力の入り口</strong>
-    </div>
+  <span>ひとことで言うと</span>
+  <strong>Mind-Uploadの中心は、派手な結論を出すことではなく、前進を測れる検証基盤を作ることです。</strong>
+</div>
+<div class="booklet-status-card">
+  <span>読了後に持ち帰るもの</span>
+  <strong>全体像、現実的な作業範囲、読む順番、協力の入口</strong>
+</div>
+
   </div>
 </section>
 
@@ -104,63 +108,50 @@ body_class: "summary-booklet-page"
     <h2>何を目指すサイトか</h2>
   </div>
 
-  <p class="booklet-lead">
-    Mind-Upload は、マインドアップロードや WBE を「いきなり成立したと断言する話」ではなく、
-    <strong>測定、再構成、検証、再現可能性</strong>へ分解して扱うための研究ポータルでございます。
-  </p>
+  <div class="booklet-quote">
+    <p>マインドアップロード（WBE）を「夢の話」で終わらせないために、まず必要なのは<strong>共通のルール</strong>です。Mind-Uploadでは、データの置き方、評価のしかた、失敗の判定、再現手順を先にそろえて、誰でも同じ基準で確かめられる土台を作ります。</p>
+  </div>
 
   <div class="booklet-two-column">
     <div>
-      <h3>このサイトが先に固定すること</h3>
+      <h3>先に固定すること</h3>
       <ul class="booklet-list">
-        <li>どの結果を前進と見なすかという勝利条件</li>
-        <li>どの結果が出たら失敗や保留とするかという反証条件</li>
-        <li>データ、コード、評価環境、ログの固定粒度</li>
-        <li>他人が追試できる比較軸とベンチマーク</li>
+        <li>標準、置き場、ベンチマーク、監査をセットでそろえる必要があります。</li><li>デコーディングとエミュレーションを混同しないために、主張レベルと失敗条件を先に固定します。</li><li>ここを読むと、なぜデータだけ集めても前進にならないのかが分かります。</li><li>まず『いま言えること／言えないこと』を分けて、話を盛りすぎないようにします。</li>
       </ul>
     </div>
     <div>
-      <h3>このサイトが入口で断言しないこと</h3>
+      <h3>入口で断言しないこと</h3>
       <ul class="booklet-list">
-        <li>本人性の最終成立</li>
-        <li>主観意識の完全移送</li>
-        <li>非侵襲計測だけで十分な内部状態が取れるという保証</li>
-        <li>社会実装が近いという短絡的な印象評価</li>
+        <li>どの条件を満たせば L4 の本人性を認めるかについて、分野横断の合意はまだありません。</li><li>非侵襲計測だけで WBE に十分な内部情報が取れるかは未解決です。</li><li>L5 の社会実装に必要な制度設計は、技術問題だけでは決まりません。</li><li>どの理論の組み合わせが最終的に十分条件になるかは未確定です。</li>
       </ul>
     </div>
-  </div>
-
-  <div class="booklet-quote">
-    <p>
-      現実的な前進は、L0-L2 のような小さなレベルで積み上がります。
-      つまり「再現可能な解析」「条件付きで比較可能なデコーディング」「介入込みの検証設計」を先に固める、という順序でございます。
-    </p>
   </div>
 
   <table class="data-table booklet-table">
     <thead>
       <tr>
         <th>観点</th>
-        <th>このサイトの姿勢</th>
+        <th>いま読むべき説明</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>研究の単位</td>
-        <td>大きな結論ではなく、検証可能な小課題に分けて扱います。</td>
-      </tr>
-      <tr>
-        <td>強い主張の扱い</td>
-        <td>証拠、再現性、比較可能性がない段階では保留いたします。</td>
-      </tr>
-      <tr>
-        <td>入口ページの役割</td>
-        <td>背景知識を全部載せるのではなく、既知/未知と次の導線を示します。</td>
-      </tr>
-      <tr>
-        <td>wiki の役割</td>
-        <td>初歩から学ぶための詳しい説明を引き受け、公開ページを教科書化しすぎないようにします。</td>
-      </tr>
+  <td>入口</td>
+  <td><strong><a href="/index.html">Mind-Upload</a></strong><br>このページは、Mind-Upload 全体の入口です。『このサイトは何を目指しているか』『どこから読むと迷いにくいか』『今すぐ見に行くべきページはどれか』を最短で把握できるようにしています。</td>
+</tr>
+<tr>
+  <td>検証基盤</td>
+  <td><strong><a href="/verification.html">検証基盤：Mind Uploading Verification Commons</a></strong><br>このページは、Mind-Upload の中心となる設計図です。データ、評価、失敗判定、再現手順を先にそろえることで、『何を達成したら前進か』を後付けではなく事前に決める考え方を説明します。</td>
+</tr>
+<tr>
+  <td>技術地図</td>
+  <td><strong><a href="/tech_roadmap.html">技術ロードマップ：計測→再構成→実装でWBEを理解する</a></strong><br>このページは、WBEの論点を『計測』『再構成』『実装』『検証』『社会実装』に分けて並べた地図です。どの問題が土台で、どの問題がまだ未解決なのかを見失わないために使います。</td>
+</tr>
+<tr>
+  <td>理論整理</td>
+  <td><strong><a href="/perspective.html">マインドアップロード実現への道：技術・理論の統合アプローチ</a></strong><br>このページは、マインドアップロードをめぐる理論・計測・実装の論点を、一次文献と限界を並べながら追う長い研究ノートです。楽観論だけでも悲観論だけでもなく、『どこまでは言えて、どこから先は未解決か』をはっきり分けて読めるようにしています。</td>
+</tr>
+
     </tbody>
   </table>
 </section>
@@ -175,104 +166,45 @@ body_class: "summary-booklet-page"
     <article class="booklet-card booklet-card-positive">
       <h3>比較的はっきりしていること</h3>
       <ul class="booklet-list">
-        <li>標準、ベンチマーク、事前登録、監査可能なログがあると、前進は比較可能になります。</li>
-        <li>EEG や公開データでも、条件を限定すれば再現可能な解析ループは作れます。</li>
-        <li>デコーディング研究は、課題定義と評価ルールを厳密にすれば意味のある基礎段階を作れます。</li>
+        <li>公開データ、標準、ベンチマーク、監査をそろえると、L0〜L2 の前進は比較可能な形で積み上げられます。</li><li>EEGやデコーディング研究は、条件を限定すれば測定可能な前進を作れます。</li><li>本人性や意識の強い主張は、入口ページではなく後段の検証設計として扱う必要があります。</li><li>標準、共有基盤、評価、監査をセットでそろえないと、比較可能な前進は作れません。</li><li>L0〜L2 では、再現性と反証条件を事前に設計することができます。</li>
       </ul>
     </article>
     <article class="booklet-card booklet-card-caution">
       <h3>まだ保留すべきこと</h3>
       <ul class="booklet-list">
-        <li>L4-L5 の本人性や社会実装に必要な合意条件は、まだ定まっておりません。</li>
-        <li>非侵襲計測だけで WBE に十分な内部情報が取れるかは未解決でございます。</li>
-        <li>自然な会話や印象の良さだけでは、アップロード成立の証拠にはなりません。</li>
+        <li>どの条件を満たせば L4 の本人性を認めるかについて、分野横断の合意はまだありません。</li><li>非侵襲計測だけで WBE に十分な内部情報が取れるかは未解決です。</li><li>L5 の社会実装に必要な制度設計は、技術問題だけでは決まりません。</li><li>どの因果構造近似で L4 の本人性に十分と言えるかは、まだ決着していません。</li><li>熱力学、閉ループ、本人性をまとめた最終勝利条件は未完成です。</li>
       </ul>
     </article>
   </div>
 
   <div class="booklet-timeline">
     <div class="booklet-step">
-      <span>Step 1</span>
-      <strong>L0</strong>
-      <p>公開データで前処理、特徴量、評価指標、ログ形式を固定いたします。</p>
-    </div>
-    <div class="booklet-step">
-      <span>Step 2</span>
-      <strong>L1</strong>
-      <p>課題限定のデコーディングや再構成で、比較可能な精度改善を測ります。</p>
-    </div>
-    <div class="booklet-step">
-      <span>Step 3</span>
-      <strong>L2</strong>
-      <p>介入や閉ループを含めて、因果的な検証条件へ拡張いたします。</p>
-    </div>
-    <div class="booklet-step">
-      <span>Later</span>
-      <strong>L3+</strong>
-      <p>強い主張は、L0-L2 の上に厳密な条件を重ねたあとで扱います。</p>
-    </div>
+  <span>Step 1</span>
+  <strong>入口</strong>
+  <p>Mind-Uploadの中心は、派手な結論を出すことではなく、前進を測れる検証基盤を作ることです。</p>
+</div>
+<div class="booklet-step">
+  <span>Step 2</span>
+  <strong>L0</strong>
+  <p>まずは共有基盤を押さえ、その後にスターターデータセットを見る順にしています。</p>
+</div>
+<div class="booklet-step">
+  <span>Step 3</span>
+  <strong>L1-L2</strong>
+  <p>デコーディングとエミュレーションを混同しないために、主張レベルと失敗条件を先に固定します。</p>
+</div>
+<div class="booklet-step">
+  <span>Later</span>
+  <strong>上位主張</strong>
+  <p>どの計測粒度が最終的に WBE に十分かは、まだ決まっていません。</p>
+</div>
+
   </div>
 </section>
 
 <section class="booklet-sheet booklet-page-break">
   <div class="booklet-section-header">
-    <p class="booklet-kicker">Execution Path</p>
-    <h2>どこから前進を積むか</h2>
-  </div>
-
-  <div class="booklet-card-grid booklet-card-grid-3">
-    <article class="booklet-card">
-      <h3>Verification</h3>
-      <p>何を満たせば前進か、何が出たら失敗か、どの標準と監査を置くかを固定する中核ページでございます。</p>
-    </article>
-    <article class="booklet-card">
-      <h3>Roadmap</h3>
-      <p>計測、再構成、実装、検証、制度の順に未解決問題を並べ、解く順番を決めます。</p>
-    </article>
-    <article class="booklet-card">
-      <h3>Datasets / EEG</h3>
-      <p>現実に手を動かせる入口として、公開データと EEG を軸に最小ループへ接続いたします。</p>
-    </article>
-  </div>
-
-  <table class="data-table booklet-table">
-    <thead>
-      <tr>
-        <th>領域</th>
-        <th>いま現実的に積める前進</th>
-        <th>すぐには言えないこと</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>EEG / 非侵襲計測</td>
-        <td>再現可能な前処理、分類、状態推定、課題条件ごとの比較</td>
-        <td>高精細な内部状態を十分に読み切れる保証</td>
-      </tr>
-      <tr>
-        <td>公開データ運用</td>
-        <td>ログ、QC、ベンチ、再実行可能な最小 pipeline</td>
-        <td>それだけで本人性に迫れるという飛躍</td>
-      </tr>
-      <tr>
-        <td>理論整理</td>
-        <td>どの理論がどの観測条件を要求するかの比較</td>
-        <td>理論だけで実装成立を証明すること</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="booklet-quote">
-    <p>
-      実務上は、<strong>公開データで回る解析</strong>、<strong>比較可能な評価指標</strong>、<strong>前提の明示</strong>をそろえることが、
-      現時点で最も堅い前進でございます。
-    </p>
-  </div>
-</section>
-
-<section class="booklet-sheet booklet-page-break">
-  <div class="booklet-section-header">
-    <p class="booklet-kicker">Page Map</p>
+    <p class="booklet-kicker">Core Pages</p>
     <h2>主ページの役割分担</h2>
   </div>
 
@@ -281,52 +213,238 @@ body_class: "summary-booklet-page"
       <tr>
         <th>ページ</th>
         <th>役割</th>
-        <th>読む目的</th>
+        <th>要約</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Index</td>
-        <td>最初の入口</td>
-        <td>全体像と読む順番だけを短く掴みたいときに使います。</td>
-      </tr>
-      <tr>
-        <td>Verification</td>
-        <td>検証基盤</td>
-        <td>勝利条件、標準、監査、事前登録の軸を確認するときに使います。</td>
-      </tr>
-      <tr>
-        <td>Roadmap</td>
-        <td>問題分解</td>
-        <td>どの課題をどの順番で解くべきかを見たいときに使います。</td>
-      </tr>
-      <tr>
-        <td>Perspective</td>
-        <td>理論と批判点</td>
-        <td>立場の違い、限界、設計原理まで含めて考えたいときに使います。</td>
-      </tr>
-      <tr>
-        <td>Datasets</td>
-        <td>手を動かす入口</td>
-        <td>公開データで L0 実践へ入るときに使います。</td>
-      </tr>
-      <tr>
-        <td>Issue</td>
-        <td>参加と外部依存</td>
-        <td>今この場で直せることと、外部依存タスクを分けて確認するときに使います。</td>
-      </tr>
+  <td><a href="/index.html">Mind-Upload</a></td>
+  <td>Start Here - 勝利条件・標準・ベンチマーク・事前登録を先に作る</td>
+  <td>このページは、Mind-Upload 全体の入口です。『このサイトは何を目指しているか』『どこから読むと迷いにくいか』『今すぐ見に行くべきページはどれか』を最短で把握できるようにしています。</td>
+</tr>
+<tr>
+  <td><a href="/verification.html">検証基盤：Mind Uploading Verification Commons</a></td>
+  <td>Platform - PDB×BIDS×PhysioNet×OSFの発想で、WBEの“勝利条件”と“再現可能な前進”を作る</td>
+  <td>このページは、Mind-Upload の中心となる設計図です。データ、評価、失敗判定、再現手順を先にそろえることで、『何を達成したら前進か』を後付けではなく事前に決める考え方を説明します。</td>
+</tr>
+<tr>
+  <td><a href="/tech_roadmap.html">技術ロードマップ：計測→再構成→実装でWBEを理解する</a></td>
+  <td>Roadmap (Definition #1) - 「何を解けたら前進か」を問いの木に分解し、読む順番と最低限の到達点を示す</td>
+  <td>このページは、WBEの論点を『計測』『再構成』『実装』『検証』『社会実装』に分けて並べた地図です。どの問題が土台で、どの問題がまだ未解決なのかを見失わないために使います。</td>
+</tr>
+<tr>
+  <td><a href="/perspective.html">マインドアップロード実現への道：技術・理論の統合アプローチ</a></td>
+  <td>Perspective - 脳の情報処理を別の基盤で再現し、心的機能を移植・複製するという研究仮説の現状と展望</td>
+  <td>このページは、マインドアップロードをめぐる理論・計測・実装の論点を、一次文献と限界を並べながら追う長い研究ノートです。楽観論だけでも悲観論だけでもなく、『どこまでは言えて、どこから先は未解決か』をはっきり分けて読めるようにしています。</td>
+</tr>
+<tr>
+  <td><a href="/datasets.html">データ &amp; ハンズオン：何で始めて、どうL0まで持っていくか</a></td>
+  <td>Resource - 「何を使うか」と「どう再現するか」を分けずに最短ルートでつなぐ</td>
+  <td>このページは、『最初にどの公開データで検証を始めるか』と『その後どうL0の再現可能解析まで持っていくか』を1本で追うための実務ガイドです。データ名の一覧で終わらせず、BIDS、QC、分割、ベースラインまで一本道でつなぎます。</td>
+</tr>
+<tr>
+  <td><a href="/issue.html">貢献ガイド</a></td>
+  <td>Guide - Join the Research Community + Issue Tracker</td>
+  <td>このページは、Mind-Uploadにどう参加できるかを、Issue運用と対応状況ごとに整理した入口です。専門家だけの場所ではなく、『どの作業なら今すぐ役に立つか』が見えるようにしています。</td>
+</tr>
+
     </tbody>
   </table>
 
   <div class="booklet-card-grid booklet-card-grid-2">
-    <article class="booklet-card">
-      <h3>公開ページ</h3>
-      <p>要点、既知/未知、次に読む場所を示す情報ポータルでございます。</p>
-    </article>
-    <article class="booklet-card">
-      <h3>wiki</h3>
-      <p>初学者向けの詳しい説明や読み方ガイドを引き受ける学習層でございます。</p>
-    </article>
+    <article class="booklet-card booklet-page-card">
+  <h3><a href="/index.html">Mind-Upload</a></h3>
+  <p class="booklet-page-meta">Start Here - 勝利条件・標準・ベンチマーク・事前登録を先に作る / 5〜10分</p>
+  <p>Mind-Uploadは、「心をコンピュータで再現できるのか？」という大きな問いを、<strong>検証できる小さな課題</strong>に分けて進めるサイトです。大きな結論を急がず、まずは<strong>何を達成したら前進か</strong>と、<strong>他の人が同じ結果を確認できるか</strong>を先に決めます。</p>
+  <ul class="booklet-list booklet-page-link-list">
+    <li>Mind-Uploadの中心は、派手な結論を出すことではなく、前進を測れる検証基盤を作ることです。</li><li>迷ったら Verification → Roadmap → WBE/EEG入門 の順で読むと、話の軸を保ちやすいです。</li><li>用語や前提で止まったときに戻れる入口として、FAQ と用語集も近くに置いています。</li>
+  </ul>
+  <p class="booklet-page-meta">次に読む</p>
+<ul class="booklet-link-list booklet-page-link-list">
+  <li><a href="/verification.html">検証基盤</a></li><li><a href="/wbe_101.html">WBE入門</a></li><li><a href="/faq.html">FAQ</a></li>
+</ul>
+
+</article>
+<article class="booklet-card booklet-page-card">
+  <h3><a href="/verification.html">検証基盤：Mind Uploading Verification Commons</a></h3>
+  <p class="booklet-page-meta">Platform - PDB×BIDS×PhysioNet×OSFの発想で、WBEの“勝利条件”と“再現可能な前進”を作る / 15〜25分</p>
+  <p>マインドアップロード（WBE）を「夢の話」で終わらせないために、まず必要なのは<strong>共通のルール</strong>です。Mind-Uploadでは、データの置き方、評価のしかた、失敗の判定、再現手順を先にそろえて、誰でも同じ基準で確かめられる土台を作ります。</p>
+  <ul class="booklet-list booklet-page-link-list">
+    <li>標準、置き場、ベンチマーク、監査をセットでそろえる必要があります。</li><li>デコーディングとエミュレーションを混同しないために、主張レベルと失敗条件を先に固定します。</li><li>ここを読むと、なぜデータだけ集めても前進にならないのかが分かります。</li>
+  </ul>
+  <p class="booklet-page-meta">次に読む</p>
+<ul class="booklet-link-list booklet-page-link-list">
+  <li><a href="/tech_roadmap.html">技術ロードマップ</a></li><li><a href="/datasets.html">データ&amp;ベンチ</a></li><li><a href="/issue.html">貢献ガイド</a></li>
+</ul>
+
+</article>
+<article class="booklet-card booklet-page-card">
+  <h3><a href="/tech_roadmap.html">技術ロードマップ：計測→再構成→実装でWBEを理解する</a></h3>
+  <p class="booklet-page-meta">Roadmap (Definition #1) - 「何を解けたら前進か」を問いの木に分解し、読む順番と最低限の到達点を示す / 20〜30分（索引だけなら5分）</p>
+  <p>このページは、マインドアップロード研究の「地図」です。いきなり結論を目指すのではなく、<strong>何を測るか</strong>、<strong>何を再現するか</strong>、<strong>どう動かすか</strong>、<strong>どう確かめるか</strong>を順番に整理します。つまり、<strong>計測 → 再構成 → 実装 → 検証 → 社会実装</strong>の流れで「今どこまで進んだか」を見える化するページです。</p>
+  <ul class="booklet-list booklet-page-link-list">
+    <li>まずP0〜P2で『何を成功と呼ぶか』を固定し、その後に計測や実装へ進みます。</li><li>索引を使えば、気になる論点だけ先に読むこともできます。</li><li>強い主張ほど後ろのレベルに置き、前のレベルを飛ばして語らない構造にしています。</li>
+  </ul>
+  <p class="booklet-page-meta">次に読む</p>
+<ul class="booklet-link-list booklet-page-link-list">
+  <li><a href="/wbe_101.html">WBE入門</a></li><li><a href="/eeg_101.html">EEG入門</a></li><li><a href="/verification.html">検証基盤</a></li>
+</ul>
+
+</article>
+<article class="booklet-card booklet-page-card">
+  <h3><a href="/perspective.html">マインドアップロード実現への道：技術・理論の統合アプローチ</a></h3>
+  <p class="booklet-page-meta">Perspective - 脳の情報処理を別の基盤で再現し、心的機能を移植・複製するという研究仮説の現状と展望 / 30〜45分</p>
+  <p>このページは、マインドアップロード（WBE）を「本当に検証できる研究」にするための長い研究ノートです。内容は、<strong>どう測るか</strong>、<strong>どう読み取るか</strong>、<strong>どう実装するか</strong>の3段階で整理しています。最新研究の成果だけでなく、うまくいっていない点や限界も同じ重みで扱い、「どこまで言えて、どこから言えないか」をはっきり分ける構成にしています。</p>
+  <ul class="booklet-list booklet-page-link-list">
+    <li>理論の紹介だけで終わらず、実装へ落としたときの制約まで一緒に追います。</li><li>強い主張ほど、反証条件や代替説明を並べて確認します。</li><li>長文ですが、導入と注意書きだけでも全体の立場が分かる構成にしています。</li>
+  </ul>
+  <p class="booklet-page-meta">次に読む</p>
+<ul class="booklet-link-list booklet-page-link-list">
+  <li><a href="/verification.html">検証基盤</a></li><li><a href="/tech_roadmap.html">技術ロードマップ</a></li><li><a href="/wbe_101.html">WBE入門</a></li>
+</ul>
+
+</article>
+<article class="booklet-card booklet-page-card">
+  <h3><a href="/datasets.html">データ &amp; ハンズオン：何で始めて、どうL0まで持っていくか</a></h3>
+  <p class="booklet-page-meta">Resource - 「何を使うか」と「どう再現するか」を分けずに最短ルートでつなぐ / 12〜20分</p>
+  <p>このページは、「最初にどのデータで練習すればよいか」を決めるための実用リストです。まずは公開データで、<strong>同じ結果を再現できる状態（L0）</strong>を作り、その次に<strong>予測できるか・条件変更に耐えるか（L1〜L2）</strong>を確かめます。</p>
+  <ul class="booklet-list booklet-page-link-list">
+    <li>まずは共有基盤を押さえ、その後にスターターデータセットを見る順にしています。</li><li>スターターデータは L0〜L1 の練習台であり、EEG source imaging の ground truth ではありません。</li><li>最終目標は、第三者が同じ条件で走らせられる形へ寄せることです。</li>
+  </ul>
+  <p class="booklet-page-meta">次に読む</p>
+<ul class="booklet-link-list booklet-page-link-list">
+  <li><a href="/eeg_101.html">EEG入門</a></li><li><a href="/verification.html">検証基盤</a></li><li><a href="/tech_roadmap.html">技術ロードマップ</a></li>
+</ul>
+
+</article>
+<article class="booklet-card booklet-page-card">
+  <h3><a href="/issue.html">貢献ガイド</a></h3>
+  <p class="booklet-page-meta">Guide - Join the Research Community + Issue Tracker / 10〜20分</p>
+  <p>Mind-Uploadは、マインドアップロードを検証可能な研究へ進めるオープンコミュニティです。分野や経験を問わず、文章改善や用語整理、誤解の指摘など再現性向上に直結する作業からすぐに参加いただけます。</p>
+  <ul class="booklet-list booklet-page-link-list">
+    <li>文章改善や用語整理のような、小さくても価値の高い参加方法を明示しています。</li><li>Issueの状態と、どこまで実装済みかを切り分けて追えます。</li><li>強い主張より、達成条件と反証条件が明確なIssueを重視する方針です。</li>
+  </ul>
+  <p class="booklet-page-meta">次に読む</p>
+<ul class="booklet-link-list booklet-page-link-list">
+  <li><a href="/index.html">スタートページ</a></li><li><a href="/verification.html">検証基盤</a></li><li><a href="/glossary.html">用語集</a></li>
+</ul>
+
+</article>
+
+  </div>
+</section>
+
+<section class="booklet-sheet booklet-page-break">
+  <div class="booklet-section-header">
+    <p class="booklet-kicker">Support Pages</p>
+    <h2>補助ページと実務導線</h2>
+  </div>
+
+  <table class="data-table booklet-table">
+    <thead>
+      <tr>
+        <th>ページ</th>
+        <th>役割</th>
+        <th>要約</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+  <td><a href="/wbe_101.html">入門：マインドアップロード / WBE を「測れる問題」にする</a></td>
+  <td>Primer - 夢を守るために、まず物差しを作る</td>
+  <td>このページは、マインドアップロードや WBE の話を『夢の話』のまま受け取らず、何が言えて何がまだ言えないかを整理するための入門です。難しい哲学に入る前に、まず主張の強さをそろえることを目標にしています。</td>
+</tr>
+<tr>
+  <td><a href="/eeg_101.html">入門：EEGは何を測っていて、何ができて、何ができないか</a></td>
+  <td>Primer - EEGを“魔法の心読み”にしないための現実的ガイド</td>
+  <td>このページは、EEG が何を測っていて、何が得意で、何が苦手かを最初に整理する入門です。『EEGで心がそのまま読めるのか』という誤解を避けつつ、Mind-Upload で EEG をどこに使えるかを説明します。</td>
+</tr>
+<tr>
+  <td><a href="/faq.html">FAQ：よくある質問（と、よくある事故）</a></td>
+  <td>FAQ - 派手な結論より、検証できる前進を</td>
+  <td>このページは、Mind-Upload を読んでいて多くの人が最初にぶつかる疑問へ、短くても誤解の少ない答えを返すための Q&amp;A です。入口として短く書いていますが、強い主張は必ず根拠ページへ戻れるようにしています。</td>
+</tr>
+<tr>
+  <td><a href="/glossary.html">用語集（Glossary）</a></td>
+  <td>Reference - まずは“言葉のすり替え”を止める</td>
+  <td>このページは、Mind-Upload でよく出る言葉を『まず日常語で理解し、そのあと必要なら厳密に戻る』ための用語集です。議論で迷子にならないように、難しい単語を測定や検証の話に結び付けて説明します。</td>
+</tr>
+<tr>
+  <td><a href="/content_hub.html">公開コンテンツ統合ハブ</a></td>
+  <td>Navigation - 散逸防止のための単一導線</td>
+  <td>このページは、公開コンテンツが散らばらないように『どの話題をどのページへ足すべきか』を固定するための運用ハブです。新しい情報を書く前に、まず既存ページの統合先を確認する場所として使います。</td>
+</tr>
+
+    </tbody>
+  </table>
+
+  <div class="booklet-card-grid booklet-card-grid-2">
+    <article class="booklet-card booklet-page-card">
+  <h3><a href="/wbe_101.html">入門：マインドアップロード / WBE を「測れる問題」にする</a></h3>
+  <p class="booklet-page-meta">Primer - 夢を守るために、まず物差しを作る / 10〜15分</p>
+  <p>マインドアップロードを本気で前に進めるには、「できたと言える条件」と「できていないと分かる条件」を先に決めるのが最短です。Mind-Uploadは、そのチェック方法をそろえるための検証基盤を作っています。</p>
+  <ul class="booklet-list booklet-page-link-list">
+    <li>まず『いま言えること／言えないこと』を分けて、話を盛りすぎないようにします。</li><li>クレーム階段で、L0の再現解析とL4の本人性主張を混同しないようにします。</li><li>Decode と Emulate の差を押さえると、ニュースや派手な主張も読み違えにくくなります。</li>
+  </ul>
+  <p class="booklet-page-meta">次に読む</p>
+<ul class="booklet-link-list booklet-page-link-list">
+  <li><a href="/verification.html">検証基盤</a></li><li><a href="/tech_roadmap.html">技術ロードマップ</a></li><li><a href="/faq.html">FAQ</a></li>
+</ul>
+
+</article>
+<article class="booklet-card booklet-page-card">
+  <h3><a href="/eeg_101.html">入門：EEGは何を測っていて、何ができて、何ができないか</a></h3>
+  <p class="booklet-page-meta">Primer - EEGを“魔法の心読み”にしないための現実的ガイド / 12〜18分</p>
+  <p>EEGは、脳の中をそのまま見ているわけではなく、頭皮で測れた電気信号の「混ざった結果」を読んでいます。時間の変化には強い一方で、「脳のどこで起きたか」はぼやけやすいです。だからMind-Uploadでは、データ品質チェック（QC）とデータ整理の共通ルール（BIDS）を最優先にしています。</p>
+  <ul class="booklet-list booklet-page-link-list">
+    <li>EEGは時間変化を見るのが得意ですが、空間的にどこで起きたかを厳密に言うのは苦手です。</li><li>高密度EEGでも、source imaging の改善判定には個体別MRI・電極座標・外部基準が要ります。</li><li>Mind-Uploadでは、EEGを『全部を読む装置』ではなく、マクロな制約を与える計測として位置づけます。</li>
+  </ul>
+  <p class="booklet-page-meta">次に読む</p>
+<ul class="booklet-link-list booklet-page-link-list">
+  <li><a href="/datasets.html">データ&amp;ベンチ</a></li><li><a href="/datasets.html#l0-practice">L0実践</a></li><li><a href="/faq.html">FAQ</a></li>
+</ul>
+
+</article>
+<article class="booklet-card booklet-page-card">
+  <h3><a href="/faq.html">FAQ：よくある質問（と、よくある事故）</a></h3>
+  <p class="booklet-page-meta">FAQ - 派手な結論より、検証できる前進を / 8〜15分</p>
+  <p>ここは「よくある勘違い」を先に避けるためのページです。主張が大きいほど、(1)言葉の定義、(2)評価の物差し、(3)間違いと判定する条件、(4)再現手順の順で確認します。</p>
+  <ul class="booklet-list booklet-page-link-list">
+    <li>『このサイトは何をするのか』『EEGで何が言えるのか』など、最初の疑問をまとめて潰せます。</li><li>派手な言い切りを避け、何が未解決かも同時に書いています。</li><li>FAQだけで十分な場合と、本文ページへ進むべき場合を分けて読める構成です。</li>
+  </ul>
+  <p class="booklet-page-meta">次に読む</p>
+<ul class="booklet-link-list booklet-page-link-list">
+  <li><a href="/verification.html">検証基盤</a></li><li><a href="/wbe_101.html">WBE入門</a></li><li><a href="/glossary.html">用語集</a></li>
+</ul>
+
+</article>
+<article class="booklet-card booklet-page-card">
+  <h3><a href="/glossary.html">用語集（Glossary）</a></h3>
+  <p class="booklet-page-meta">Reference - まずは“言葉のすり替え”を止める / 必要な項目だけなら3〜10分</p>
+  <p>この用語集は、用語の意味をすぐ確認するためのリファレンスです。まず日常語の説明で把握し、必要なときだけ厳密な定義に進む構成とし、議論を測定と扱い方に結び付けます。WBEの議論は言葉のズレで混乱しやすいため、ここでは<strong>実際にどう測って扱うか</strong>を重視します。</p>
+  <ul class="booklet-list booklet-page-link-list">
+    <li>用語を短く説明しつつ、どこで使う概念かも一緒に示します。</li><li>『似ているが違う』語を分けることで、話のすり替えを防ぎます。</li><li>分からない言葉が出たら、このページに戻れば最低限の足場を作れます。</li>
+  </ul>
+  <p class="booklet-page-meta">次に読む</p>
+<ul class="booklet-link-list booklet-page-link-list">
+  <li><a href="/wbe_101.html">WBE入門</a></li><li><a href="/eeg_101.html">EEG入門</a></li><li><a href="/faq.html">FAQ</a></li>
+</ul>
+
+</article>
+<article class="booklet-card booklet-page-card">
+  <h3><a href="/content_hub.html">公開コンテンツ統合ハブ</a></h3>
+  <p class="booklet-page-meta">Navigation - 散逸防止のための単一導線 / 5〜10分</p>
+  <p>このページは、公開コンテンツの<strong>統合先</strong>と<strong>更新先</strong>を固定するハブです。新しい情報を追加するときは、まず本ページの対応表で既存ページを確認し、既存ページへ統合する運用を優先します。</p>
+  <ul class="booklet-list booklet-page-link-list">
+    <li>領域ごとに主ページと補助ページを分け、追記先を固定しています。</li><li>新規ページを増やす前に、既存ページへ統合できるかを確認する前提です。</li><li>公開導線と運用資料を一箇所で見渡せるようにしています。</li>
+  </ul>
+  <p class="booklet-page-meta">次に読む</p>
+<ul class="booklet-link-list booklet-page-link-list">
+  <li><a href="/index.html">スタートページ</a></li><li><a href="/verification.html">検証基盤</a></li><li><a href="/issue.html">貢献ガイド</a></li>
+</ul>
+
+</article>
+
   </div>
 </section>
 
@@ -338,45 +456,49 @@ body_class: "summary-booklet-page"
 
   <div class="booklet-card-grid booklet-card-grid-3">
     <article class="booklet-card">
-      <h3>全体像を 15 分で知る</h3>
-      <p>Index → Verification → Roadmap の順で読めば、軸を保ったまま全体像を掴めます。</p>
-    </article>
-    <article class="booklet-card">
-      <h3>初歩から学ぶ</h3>
-      <p>WBE 101 → EEG 101 → wiki の順で進むと、用語で止まりにくくなります。</p>
-    </article>
-    <article class="booklet-card">
-      <h3>実際に貢献する</h3>
-      <p>Issue Guide と Datasets を見て、実行可能な変更から切り分けるのが最短でございます。</p>
-    </article>
+  <h3>全体像を掴む</h3>
+  <p>Mind-Upload -&gt; 検証基盤：Mind Uploading Verification Commons -&gt; 技術ロードマップ：計測→再構成→実装でWBEを理解する</p>
+  <ul class="booklet-link-list booklet-page-link-list">
+    <li><a href="/verification.html">検証基盤</a></li><li><a href="/wbe_101.html">WBE入門</a></li>
+  </ul>
+</article>
+<article class="booklet-card">
+  <h3>初歩から学ぶ</h3>
+  <p>入門：マインドアップロード / WBE を「測れる問題」にする -&gt; 入門：EEGは何を測っていて、何ができて、何ができないか -&gt; FAQ：よくある質問（と、よくある事故）</p>
+  <ul class="booklet-link-list booklet-page-link-list">
+    <li><a href="/verification.html">検証基盤</a></li><li><a href="/tech_roadmap.html">技術ロードマップ</a></li>
+  </ul>
+</article>
+<article class="booklet-card">
+  <h3>参加と統合</h3>
+  <p>貢献ガイド / 公開コンテンツ統合ハブ</p>
+  <ul class="booklet-link-list booklet-page-link-list">
+    <li><a href="/index.html">スタートページ</a></li><li><a href="/verification.html">検証基盤</a></li>
+  </ul>
+</article>
+
   </div>
 
   <div class="booklet-status-grid">
     <div class="booklet-status-card booklet-status-card-strong">
-      <span>実務上の原則</span>
-      <strong>今回すぐ実行できる変更と、外部依存で保留すべき事項を分けて扱います。</strong>
-    </div>
-    <div class="booklet-status-card">
-      <span>協力の入り口</span>
-      <strong>Issue、公開データ整備、評価設計、wiki 整理が主な参加導線でございます。</strong>
-    </div>
+  <span>実務上の原則</span>
+  <strong>文章改善や用語整理のような、小さくても価値の高い参加方法を明示しています。</strong>
+</div>
+<div class="booklet-status-card">
+  <span>更新ルール</span>
+  <strong>公開ページが変わるたびに deploy / PDF workflow 内で booklet を再生成いたします。</strong>
+</div>
+
   </div>
 
-  <h3>詳細へ戻るための主ページ</h3>
+  <h3>元ページ一覧</h3>
   <ul class="booklet-link-list">
-    <li><a href="/index.html">Index</a></li>
-    <li><a href="/verification.html">Verification</a></li>
-    <li><a href="/tech_roadmap.html">Roadmap</a></li>
-    <li><a href="/perspective.html">Perspective</a></li>
-    <li><a href="/datasets.html">Datasets</a></li>
-    <li><a href="/issue.html">Issue Guide</a></li>
-    <li><a href="/content_hub.html">Content Hub</a></li>
-    <li><a href="/wiki/">Wiki Home</a></li>
+    <li><a href="/index.html">Mind-Upload</a></li><li><a href="/verification.html">検証基盤：Mind Uploading Verification Commons</a></li><li><a href="/tech_roadmap.html">技術ロードマップ：計測→再構成→実装でWBEを理解する</a></li><li><a href="/perspective.html">マインドアップロード実現への道：技術・理論の統合アプローチ</a></li><li><a href="/datasets.html">データ &amp; ハンズオン：何で始めて、どうL0まで持っていくか</a></li><li><a href="/issue.html">貢献ガイド</a></li><li><a href="/content_hub.html">公開コンテンツ統合ハブ</a></li><li><a href="/wbe_101.html">入門：マインドアップロード / WBE を「測れる問題」にする</a></li><li><a href="/eeg_101.html">入門：EEGは何を測っていて、何ができて、何ができないか</a></li><li><a href="/faq.html">FAQ：よくある質問（と、よくある事故）</a></li><li><a href="/glossary.html">用語集（Glossary）</a></li>
   </ul>
 
   <div class="booklet-quote">
     <p>
-      この冊子は入口用の短縮版でございます。細かい根拠、条件、文献整理、未解決問題の枝分かれは、各主ページへ戻ってご確認ください。
+      この冊子は公開ページから自動生成される入口版でございます。各ページの <strong>page_intro</strong>、<strong>page_highlights</strong>、<strong>known / unknown</strong>、冒頭要約の更新が、そのまま冊子と PDF に反映されます。
     </p>
   </div>
 </section>

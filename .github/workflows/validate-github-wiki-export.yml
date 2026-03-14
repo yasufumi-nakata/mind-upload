@@ -28,6 +28,9 @@ on:
       - "scripts/verify_github_wiki_toolchain.sh"
       - "scripts/sync_github_wiki_toolchain.sh"
       - "scripts/publish_github_wiki.sh"
+      - "scripts/build_summary_booklet.rb"
+      - ".github/pdf/**"
+      - ".github/workflows/build-summary-pdf.yml"
       - ".github/workflows/validate-github-wiki-export.yml"
       - ".github/workflows/sync-github-wiki.yml"
   workflow_dispatch:
@@ -47,6 +50,9 @@ jobs:
         with:
           ruby-version: "3.2"
           bundler-cache: true
+
+      - name: Generate summary booklet
+        run: ruby scripts/build_summary_booklet.rb
 
       - name: Verify GitHub Wiki toolchain
         env:

@@ -25,6 +25,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+      - name: Generate summary booklet
+        run: ruby scripts/build_summary_booklet.rb
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
