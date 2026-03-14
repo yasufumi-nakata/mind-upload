@@ -131,6 +131,9 @@ recommended_pages:
 
 ## EEG-DATA 参照データセット（本ページで使用）
 
+> 重要（2026-03-15 08:00 JST 追記）:
+> `EEG-DATA/eeg_dataset_summary_ja.csv` の `ID` は再採番で変動するため、`ID -> データセット名` を固定参照として扱わないでください。応募書類・再現ログでは、`auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `D1-D16（DOI固定）` を正とし、`DOI + データセット名 + access区分` を併記します。
+
 | ID | データセット |
 |---|---|
 | 6 | Acquisition delay of wireless EEG |
@@ -498,6 +501,16 @@ recommended_pages:
 - 参照EEGデータ `24 ID`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を再確認しました。
 - 助成キー `G1-G6` 実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で全件実在を再確認しました。
 - 方針は固定のまま継続: `1RQ=1検証命題=1応募テーマ=1主データ`。汎用俯瞰ではなく、各RQを1件ずつ深掘りして応募文へ転記する運用を維持します。
+
+## 2026-03-15 08:02 JST 再検証ログ（本run / ID再採番の修正方針）
+
+- `mind-upload/research_harvest_50.md` と本ページの `Ux-RQy` を再照合し、`60RQ` の対応は維持（`欠落0/重複0`）。
+- `A/B/C` は再計数で `17/25/18` を確認。判定方針の変更なし。
+- `EEG-DATA/eeg_dataset_summary_ja.csv` の `24 ID` 実在は維持（欠落 `0`）だが、`ID -> データセット名` は現行CSVで再採番されており、旧ラベルとの固定一致を前提にしない運用へ変更。
+- 実務運用の正本を明示:
+  - RQ単位の深掘り: `mind-upload/wiki/mind-upload-rq60-deep-focus-notes.md`
+  - 助成×データセット正本: `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`（`D1-D16 + DOI`）
+- 以後は `数値IDのみ` で提出しない。必ず `DOI + データセット名 + access区分 + 応募テーマ` を1セットで固定する。
 
 </article>
 </main>

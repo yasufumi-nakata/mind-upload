@@ -1,29 +1,39 @@
-# Mind-upload RQ60 × EEG-DATA 検証可否と助成テーマ（深掘り版）
-
-> 1問ずつ深掘りして、検証設計と応募テーマまで接続する
->
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
-
-- 更新日: 2026-03-15 / 位置づけ: RQ-by-RQ Deep Dive
-
-## このページの役割
-このページは research_harvest_50 の60 RQを対象に、EEG-DATAで解ける範囲をA/B/Cで判定し、各RQごとの検証設計・応募テーマ・使うデータセットIDをまとめた実務版です。
-
-## 正確さの前提
-U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定し、必要な外部要件を明記します。
-
-## 公開ページへ戻る
-- [文献地図](https://mind-upload.com/research_harvest_50.html)
-- [データ&ベンチ](https://mind-upload.com/datasets.html)
-- [RQ60 申請プレイブック](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook)
-- [Issue](https://mind-upload.com/issue.html)
-
-## 関連 Wiki
-- [Wiki: 検証基盤の基本](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - 判定を実験仕様に落とすときの基準。
-- [Wiki: 反事実・介入検証](https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification) - U4/U13の因果評価に直結。
-- [Wiki: データ分割とリーク](https://github.com/yasufumi-nakata/mind-upload/wiki/dataset-splits-and-leakage) - U14の再現性監査に必要。
-
 ---
+layout: default
+title: "Mind-upload RQ60 × EEG-DATA 検証可否と助成テーマ（深掘り版）"
+description: "research_harvest_50 の60リサーチクエスチョンを、EEG-DATAでどこまで検証可能かを1問ずつ判定し、auto-research-funds向け応募テーマと使用データIDを整理した実務ページ。"
+article_type: Wiki
+subtitle: "1問ずつ深掘りして、検証設計と応募テーマまで接続する"
+author: Mind Uploading Research Project
+last_updated: "2026-03-15"
+note: "RQ-by-RQ Deep Dive"
+audience: "RQを実験計画に落としたい人、助成応募テーマとデータ根拠を同時に作りたい人"
+reading_time: "25〜40分"
+page_intro: "このページは research_harvest_50 の60 RQを対象に、EEG-DATAで解ける範囲をA/B/Cで判定し、各RQごとの検証設計・応募テーマ・使うデータセットIDをまとめた実務版です。"
+accuracy_note: "U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定し、必要な外部要件を明記します。"
+wiki_links:
+  - label: "Wiki: 検証基盤の基本"
+    url: "/wiki/verification-basics.html"
+    description: "判定を実験仕様に落とすときの基準。"
+  - label: "Wiki: 反事実・介入検証"
+    url: "/wiki/counterfactual-and-perturbation-verification.html"
+    description: "U4/U13の因果評価に直結。"
+  - label: "Wiki: データ分割とリーク"
+    url: "/wiki/dataset-splits-and-leakage.html"
+    description: "U14の再現性監査に必要。"
+recommended_pages:
+  - label: "文献地図"
+    url: "/research_harvest_50.html"
+  - label: "データ&ベンチ"
+    url: "/datasets.html"
+  - label: "RQ60 申請プレイブック"
+    url: "/wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html"
+  - label: "Issue"
+    url: "/issue.html"
+---
+
+<main class="main-container">
+<article class="content-column">
 
 ## 判定ルール
 
@@ -120,6 +130,9 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 応募時点で必ず提出できる実物を固定（`解析スクリプト`、`分割規則`、`失敗条件定義`、`再現ログ`）。
 
 ## EEG-DATA 参照データセット（本ページで使用）
+
+> 重要（2026-03-15 08:00 JST 追記）:
+> `EEG-DATA/eeg_dataset_summary_ja.csv` の `ID` は再採番で変動するため、`ID -> データセット名` を固定参照として扱わないでください。応募書類・再現ログでは、`auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `D1-D16（DOI固定）` を正とし、`DOI + データセット名 + access区分` を併記します。
 
 | ID | データセット |
 |---|---|
@@ -479,6 +492,7 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 助成キー `G1-G6` と拡張候補ID（`1geD73ZENwB8yaor`, `lEYmRP97ng3perjO`, `1geD73Z9K2B8yaor`, `QKYgNPxZxN38bO1Z`, `46z9VPE6E0BrvEJR`, `1geD73ZE54B8yaor`, `1geD73Z6yq38yaor`）は `auto-research-funds/wiki` と `grant_eeg_dataset_match.csv` で実在を再確認しました。
 - このrunでも汎用要約は行わず、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続します。
 
+
 ## 2026-03-15 06:02 JST 再検証ログ（本run / automation追記）
 
 - `git pull origin main` 実行後の最新状態で再検証し、基準コミットを `mind-upload=8e75f7833c`、`EEG-DATA=b3fb0aabe3`、`auto-research-funds=6571303caf` に更新しました。
@@ -487,3 +501,16 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 参照EEGデータ `24 ID`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を再確認しました。
 - 助成キー `G1-G6` 実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で全件実在を再確認しました。
 - 方針は固定のまま継続: `1RQ=1検証命題=1応募テーマ=1主データ`。汎用俯瞰ではなく、各RQを1件ずつ深掘りして応募文へ転記する運用を維持します。
+
+## 2026-03-15 08:02 JST 再検証ログ（本run / ID再採番の修正方針）
+
+- `mind-upload/research_harvest_50.md` と本ページの `Ux-RQy` を再照合し、`60RQ` の対応は維持（`欠落0/重複0`）。
+- `A/B/C` は再計数で `17/25/18` を確認。判定方針の変更なし。
+- `EEG-DATA/eeg_dataset_summary_ja.csv` の `24 ID` 実在は維持（欠落 `0`）だが、`ID -> データセット名` は現行CSVで再採番されており、旧ラベルとの固定一致を前提にしない運用へ変更。
+- 実務運用の正本を明示:
+  - RQ単位の深掘り: `mind-upload/wiki/mind-upload-rq60-deep-focus-notes.md`
+  - 助成×データセット正本: `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`（`D1-D16 + DOI`）
+- 以後は `数値IDのみ` で提出しない。必ず `DOI + データセット名 + access区分 + 応募テーマ` を1セットで固定する。
+
+</article>
+</main>
