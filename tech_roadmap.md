@@ -4,7 +4,7 @@ title: "技術ロードマップ：計測→再構成→実装でWBEを理解す
 description: "マインドアップロード（WBE）を技術面から俯瞰する学習ロードマップ。計測→再構成→実装→検証の問いの木で整理。"
 article_type: "Roadmap (Definition #1)"
 subtitle: "「何を解けたら前進か」を問いの木に分解し、読む順番と最低限の到達点を示す"
-last_updated: "2026-03-14"
+last_updated: "2026-03-15"
 note: "暫定版（随時更新）"
 audience: "全体像を知りたい人、学習順序を決めたい人、主張の強さを段階で整理したい人"
 reading_time: "20〜30分（索引だけなら5分）"
@@ -948,18 +948,22 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 <details open class="qa" data-tags="implementation" id="qa-i9">
 <summary>
 <span class="qa-id">I9</span>
-<span class="qa-title">熱力学：デジタル基盤で“意識の物理的コスト”を払えるか？</span>
-<span class="qa-tags"><span class="tag">THERMODYNAMICS</span><span class="tag">IIT</span></span>
+<span class="qa-title">熱力学：実装コストと不可逆性をどう監査するか？</span>
+<span class="qa-tags"><span class="tag">THERMODYNAMICS</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>問い：</strong>現在のノイマン型コンピュータは物理的因果力を抽象化しているため、IIT 4.0の観点ではΦ=0（Unfolding Argument）となる可能性がある。また、生物学的脳の「非平衡定常状態（NESS）」としての散逸構造をどう模倣するか？</p>
-<p><strong>方針（Issue #58 Update）：</strong>物理的実装（ニューロモルフィック）への完全移行までの過渡期として、<strong>「仮想散逸プロトコル（Virtual Dissipation Protocol）」</strong>を実装する。Landauer限界は論理的不可逆性の下限であり、<strong>物理的不可逆性（NESS）</strong>を別途保証する必要がある。
-1. <strong>Entropy Production Rate (EPR):</strong> 時間反転対称性の破れを定量化し、不可逆なエントロピー生成をシミュレーション内で強制する。
-2. <strong>Metabolic Flux:</strong> 計算の有無に関わらず、構造維持のために消費される仮想エネルギー流（Metabolic Overhead）を定義する。
-これにより、デジタルエミュレーションであっても「存在し続けるためにコストを払う」散逸構造としての性質を保持させる。</p>
-<p><strong>厳密化 (Issue #52):</strong> IITの「内因的実在」の工学的近似として、単なる「計算の連続性」ではなく、<strong>「計算論的不可逆性 (Computational Irreversibility)」</strong>を採用する。非平衡定常状態の統計力学に基づき、単位時間あたりの最小情報処理コストが生物学的基盤の熱力学的効率と一致することを検証条件とする。</p>
-<p><strong>次に必要：</strong>EPR > 0 を維持しつつ、論理的計算を行うアルゴリズムの定式化</p>
-<p><strong>エネルギー効率KPI（Issues #253/#254）：</strong>生体脳のエネルギー消費（約20W）に対するエミュレーションの仮想エネルギー流の比率をKPI化する。Niven &amp; Laughlin (2008) の報告によれば、ヒト大脳皮質では計算よりも通信に35倍多くのエネルギーが消費される。この生物学的特性をデジタルエミュレーションで再現し、「通信：計算」のエネルギー消費比率が生体脳と同等であることを検証条件の一つとする。さらに、DNNのエネルギー使用に関する熱力学的限界の研究（Balaji et al., 2025）との整合性を確認する。</p>
+<p><strong>問い：</strong>WBE の実装比較で、熱力学の話をどこまで評価へ入れるべきか。ここで混ぜてはいけないのは、<strong>Landauer 下限</strong>、<strong>組織レベルのエネルギー予算</strong>、<strong>粗視化 neural dynamics の time irreversibility</strong>、<strong>model-based entropy flow</strong>です。問うべきなのは「これで同一性が証明できるか」ではなく、<strong>物理コストと nonequilibrium 指標を過大主張せず、どう監査するか</strong>でございます。</p>
+<p><strong>2026-03 文献監査：</strong>B&eacute;rut et al. (2012) が実証したのは、論理的に不可逆な bit erasure の最小散逸下限であり、デジタル脳全体の wall-power や NESS 再現条件ではありません。Lynn et al. (2021)、de la Fuente et al. (2023)、Nartallo-Kaluarachchi et al. (2025) が示すのは、fMRI / ECoG / MEG などの粗視化時系列から broken detailed balance や time irreversibility を測る有用性であって、微視的な物理散逸や本人性の受理条件ではありません。Ishihara &amp; Shimazaki (2025) も、entropy flow 推定が state-space kinetic Ising model、pairwise coupling、mean-field approximation などの仮定を要する model-based quantity であることを示しています。</p>
+<div class="key-points">
+<h4>このページで固定する扱い</h4>
+<ul>
+<li><strong>必須ゲートにはしません：</strong>EPR &gt; 0 の維持、<code>Virtual Dissipation Protocol</code>、生体脳 20W 一致、通信:計算比一致を、現時点での受理条件には置きません。</li>
+<li><strong>補助ログとして扱います：</strong>wall-plug power、FLOPs、time irreversibility、model-based entropy flow は分けて記録します。</li>
+<li><strong>モダリティ依存を明示します：</strong>fMRI / MEG / ECoG / spike train で推定量の意味が違うため、相互にそのまま置換しません。</li>
+<li><strong>下界と本体を分けます：</strong>観測時系列から得る irreversibility は、しばしば coarse-grained lower bound であり、微視的な physical dissipation そのものとは書きません。</li>
+</ul>
+</div>
+<p><strong>次に必要：</strong>同一モダリティ・同一前処理内で再現できる irreversibility benchmark と、wall-plug power / FLOPs / simulated metabolic overhead を分離したログ schema を整備することです。最低限、粗視化、サンプリング周期、推定器、Markov/Ising/mean-field 仮定、lower bound か model-based quantity か、比較対象タスク、ハードウェア電力の定義を公開します。詳細は <a href="wiki/thermodynamic-grounding-basics.html">Wiki: 熱力学的接地の基本</a> を参照してください。</p>
 </div>
 </details>
 </div>
@@ -1869,12 +1873,14 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 <li>Schumer, C., et al. (2025). MIND Act discourse.</li>
 </ol>
 
-<h3>I. 熱力学・計算可能性・幾何学的評価</h3>
+<h3>I. 熱力学・不可逆性・エネルギー予算</h3>
 <ol>
-<li>Seifert, U. (2012). Stochastic thermodynamics and fluctuation theorems.</li>
-<li>Kitazono, J., Kanai, R., &amp; Oizumi, M. (2018). Efficient algorithms for MIP in IIT.</li>
-<li>Complexity reduction studies on IIT via low-dimensional embedding (2025).</li>
-<li>Information geometric metrics for model distance (Fisher-based approaches).</li>
+<li>B&eacute;rut, A., Arakelyan, A., Petrosyan, A., et al. (2012). Experimental verification of Landauer&rsquo;s principle linking information and thermodynamics. <a href="https://doi.org/10.1038/nature10872" target="_blank">doi:10.1038/nature10872</a></li>
+<li>Attwell, D., &amp; Laughlin, S. B. (2001). An energy budget for signaling in the grey matter of the brain. <a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">doi:10.1097/00004647-200110000-00001</a></li>
+<li>Lynn, C. W., Cornblath, E. J., Papadopoulos, L., et al. (2021). Broken detailed balance and entropy production in the human brain. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>
+<li>de la Fuente, L. A., Perl, Y. S., Zamberlan, F., et al. (2023). Temporal irreversibility of neural dynamics as a signature of consciousness. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
+<li>Nartallo-Kaluarachchi, R., Bonetti, L., Fern&aacute;ndez-Rubio, G., et al. (2025). Multilevel irreversibility reveals higher-order organization of nonequilibrium interactions in human brain dynamics. <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">doi:10.1073/pnas.2408791122</a></li>
+<li>Ishihara, K., &amp; Shimazaki, H. (2025). State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics. <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
 </ol>
 </section>
 
