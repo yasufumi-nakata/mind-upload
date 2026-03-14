@@ -1095,13 +1095,14 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 <span class="qa-tags"><span class="tag">CONSCIOUSNESS</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>問い：</strong>意識は直接観測できない。理論（IIT/GNWT等）が出す“予測の差”を、計測（M）と介入（M6/V2）で検証できるか？</p>
+<p><strong>問い：</strong>意識は直接観測できない。したがって、理論（IIT / GNWT / FEP など）が出す予測差を、task/report confound を抑えたうえで benchmark 化できるかを問います。</p>
 <ul>
-<li><strong>IIT 4.0の計算量問題と構造保存 (Issue #52):</strong> 厳密なΦ計算は不可能だが、PCI-STのような相関指標だけでは不十分である。プロジェクトは<strong>「因果構造の保存 (Causal Structure Preservation)」</strong>をL3/L4レベルの要件とし、特定のサブシステムにおける因果構造の一致を検証する。補助指標として<strong>部分系Φ・上下界評価・ΦID</strong>などの近似を採用する。</li>
-<li><strong>識別可能性の壁 (The Identifiability Wall):</strong> 反実仮想的等価性（Laukkonen et al., 2025）は、観測データだけでは一意に定まらない。検証には<strong>「最小分岐セット (Minimal Set of Branching Structures)」</strong>を定義し、予測符号化課題における神経ダイナミクスの分岐分布（Kullback-Leibler Divergence）を用いて統計的に評価する。</li>
-<li><strong>マルコフブランケット境界条件の厳密化 (Issue #52):</strong> 境界条件（帯域幅・遅延）は固定値（例：10ms）ではなく、<strong>脳領域間の機能的結合の時定数（例：ガンマ帯域位相結合 ~25-100ms）</strong>や認知課題の反応時間Jitterに基づいて、動的かつ文脈依存的に定義する。</li>
+<li><strong>理論は winner-take-all で採択しません：</strong> Ferrante et al. (2025) が示したのは、単一理論の勝利ではなく preregistered prediction competition の必要性です。したがって本サイトでは、IIT / GNWT / FEP を <strong>prediction family</strong> として競わせ、理論名そのものを pass/fail 指標にはしません。</li>
+<li><strong>PCI / PCI-ST は perturbation benchmark です：</strong> Casali et al. (2013) と Comolatti et al. (2019) は強い benchmark 候補を与えましたが、universal meter を与えたわけではありません。刺激部位、強度、マスキング、artifact window、cohort 較正を公開した場合に限り、L2/L3 の補助指標として扱います。</li>
+<li><strong>spontaneous complexity / criticality は calibration track です：</strong> Maschke et al. (2024) は spontaneous criticality と PCI の関連を示しましたが、Casarotto et al. (2024) は minimally conscious state で spontaneous feature と PCI の解離を示しました。したがって resting-state marker は PCI の置換ではなく、外部較正が必要な proxy として扱います。</li>
+<li><strong>no-report / criterion placement を先に固定します：</strong> Cohen et al. (2024) と Fahrenfort et al. (2025) が示すように、post-perceptual processing や criterion placement を統制しないと、理論差より task/report confound を見ている可能性が残ります。</li>
 </ul>
-<p><strong>注意：</strong>理論はあくまで仮説生成のツールとして扱い、実装（WBE）の成否は「特定の理論に適合するか」ではなく、V2（因果）やV5（本人性）といった実証的指標で判断する。</p>
+<p><strong>注意：</strong>理論はあくまで仮説生成のツールとして扱い、実装（WBE）の成否は「特定理論への適合」ではなく、V2（因果）、V3（OOD）、V4（長期安定性）と束で判断します。geometry や topology を使う場合も、主要な pass/fail は perturbation と generalization に置きます。</p>
 </div>
 </details>
 
@@ -1187,8 +1188,8 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 </summary>
 <div class="qa-body">
 <p><strong>問い：</strong>パラメータ空間での単純なユークリッド距離は、モデルの機能的な振る舞いの違いを反映しないことが多い。より本質的な「振る舞いの近さ」をどう定量化するか？</p>
-<p><strong>方針：</strong>情報幾何学的指標 (Information Geometric Metrics) を採用する。特に<strong>フィッシャー情報量 (Fisher Information)</strong> は、パラメータの変化が確率分布（モデルの出力）に与える影響の大きさを表すため、これを計量（Metric）として用いることで、生物学的脳とエミュレートされた生成モデルの間の機能的な距離を厳密に定義できる。</p>
-<p><strong>次に必要：</strong>Fisher Information Metric (FIM) を用いたモデル間距離の計算モジュールを実装し、V2（因果テスト）の定量評価に組み込む</p>
+<p><strong>方針：</strong>単一の数理距離を標準解として採用しません。現時点で外部基準として強いのは、held-out perturbation 応答、OOD 劣化曲線、校正誤差、回復時間のような<strong>観測可能な振る舞い</strong>です。Fisher-Rao、representation distance、manifold separation などの距離は候補群として比較しますが、どれか 1 つを既定の合否指標にはしません。</p>
+<p><strong>次に必要：</strong>候補距離が V2 / V3 / V4 の外部基準とどの程度整合するかを、同一ベンチ上で比較することです。前処理、標本数、状態差を変えても順位が安定するかを sensitivity analysis で公開します。</p>
 </div>
 </details>
 
@@ -1200,8 +1201,8 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 </summary>
 <div class="qa-body">
 <p><strong>問い：</strong>PCI（複雑性）などのスカラー値だけでは、意識の「質的な構造（Qualitative Structure）」が同じかどうかわからない。</p>
-<p><strong>提案：</strong>検証指標として<strong>位相的データ解析（TDA）</strong>、特に<strong>パーシステント・ホモロジー（Persistent Homology）</strong>を導入する。神経活動多様体（Neural Manifold）の「穴（サイクル）」や連結成分の数（ベッティ数）を比較することで、動的なアトラクタ構造の同一性を幾何学的に保証する。</p>
-<p><strong>次に必要：</strong>パーシステンス図（Persistence Diagrams）を用いて、生体脳とエミュレーションの間のトポロジー距離（Bottleneck distance等）を計測する</p>
+<p><strong>方針：</strong>位相的データ解析（TDA）や manifold geometry は、スカラー指標で落ちる構造差を<strong>補助的に</strong>記述する有望なトラックです。Yoon et al. (2024) は cross-population で topology を比較する数学的基盤を与えましたが、iScience 2024 の mouse V1 circular manifold 研究は truthful topology の回収に sampling 障害があることも示しました。したがって topology distance を、そのまま consciousness structure の保証や WBE 合否へ直結させません。</p>
+<p><strong>次に必要：</strong>sampling、埋め込み次元、距離関数、前処理、session drift、perturbation responsiveness を振った sensitivity analysis を通し、そのうえで安定に残る位相特徴だけを補助指標として報告します。</p>
 </div>
 </details>
 </div>
@@ -1348,9 +1349,9 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 </tr>
 <tr>
 <td>U11</td>
-<td><strong>IIT近似の妥当性</strong>: 厳密計算不能なΦを近似指標で置換したとき、何が保存され何が失われるか。</td>
-<td>V6で部分系Φ/上下界/PCI系の併用方針。</td>
-<td>近似間の序列保存性と誤判定率の比較試験が不足。</td>
+<td><strong>摂動・自発・幾何 proxy の較正</strong>: PCI/PCI-ST、自発複雑性、criticality、manifold / topology 指標が、どの条件で整合しどの条件で解離するか。</td>
+<td>V6 / V11 で benchmark hierarchy と補助解析の役割差を定義。</td>
+<td>multicohort、no-report、perturbation 条件をまたぐ外部較正が不足。</td>
 </tr>
 <tr>
 <td>U12</td>
@@ -1804,6 +1805,12 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 <li>Casali, A. G., et al. (2013). PCI.</li>
 <li>Comolatti, R., et al. (2019). PCI-ST.</li>
 <li>Ferrante, O., et al. (2025). Adversarial testing of GNWT and IIT.</li>
+<li>Cohen, M. A., et al. (2024). Neural signatures of visual awareness independent of postperceptual processing.</li>
+<li>Fahrenfort, J. J., et al. (2025). Criterion placement threatens the construct validity of neural measures of conscious contents.</li>
+<li>Casarotto, S., et al. (2024). Dissociations between spontaneous electroencephalographic features and perturbational complexity index in the minimally conscious state.</li>
+<li>Maschke, C., et al. (2024). Critical dynamics in spontaneous EEG predict anesthetic-induced loss of consciousness and perturbational complexity.</li>
+<li>Yoon, B., et al. (2024). Tracking the topology of neural manifolds across populations.</li>
+<li>The topological structure of population activity in mouse visual cortex encodes visual stimuli. (2024).</li>
 <li>Massimini, M., et al. (2005). Breakdown of effective connectivity during sleep.</li>
 </ol>
 
