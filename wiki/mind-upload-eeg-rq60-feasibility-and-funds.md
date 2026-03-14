@@ -5,7 +5,7 @@ description: "research_harvest_50 の60リサーチクエスチョンを、EEG-D
 article_type: Wiki
 subtitle: "1問ずつ深掘りして、検証設計と応募テーマまで接続する"
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
+last_updated: "2026-03-15"
 note: "RQ-by-RQ Deep Dive"
 audience: "RQを実験計画に落としたい人、助成応募テーマとデータ根拠を同時に作りたい人"
 reading_time: "25〜40分"
@@ -443,3 +443,36 @@ recommended_pages:
 
 </article>
 </main>
+
+## 2026-03-15 02:45 JST 再検証ログ（本run / RQ単位深掘り更新）
+
+- `research_harvest_50.md` を正本として `60RQ` を再照合し、本ページの `Ux-RQy` と `1対1` で一致（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）。
+- 本ページの運用ルールを維持: `1RQ=1検証命題=1応募テーマ=1主データ`。
+- `EEG-DATA` 側は「何でも使う」ではなく、RQタイプ別に優先カテゴリを固定（下表）。
+- `auto-research-funds` 側は `grant_eeg_dataset_match.csv` を一次スクリーニングに限定し、最終応募可否はカード実体（締切・応募資格・公式要項URL）で再確認する運用に固定。
+
+### EEG-DATA 選定カテゴリ（RQ単位実行の固定入口）
+
+| カテゴリ | まず使う場面（対応U） | 優先フィルタ（EEG-DATA） | 使うときの注意 |
+|---|---|---|---|
+| Resting-state / baseline / connectivity | 同定限界・状態境界（`U1/U11`） | `刺激の種類=安静` `実験条件=安静時/開眼閉眼` | 課題ラベルが薄いので「内容復元」主張には使いすぎない。 |
+| ERP / oddball / evoked | 反証しやすいイベント課題（`U4/U14`） | `実験条件=ERP/P300/Oddball` | 事象依存が強いため、外挿主張は抑える。 |
+| Motor imagery / active BCI | デコード・閉ループ評価（`U0/U8/U13`） | `実験条件=運動イメージ` `target-task=BCI` | クロスセッション劣化を必ず別指標で監査。 |
+| Sleep / consciousness-state | 意識状態・失敗条件（`U11/U15`） | `刺激の種類=睡眠` `subject-state=Sleep/Anesthesia` | 睡眠段階ラベル付き集合は少ないため、データ数確認を先に行う。 |
+| Multimodal (EEG-fMRI/fNIRS/PSG) | 整合監査・統合検証（`U7/U14`） | `multimodal-setup=EEG-fMRI/EEG-fNIRS/EEG-PSG` | 同期ログ欠落時は不採択にする（再計測優先）。 |
+| Closed-loop / neurofeedback | 遅延・安全停止・再学習（`U8`） | `paradigm-family=Closed-loop` | 制御器仕様が不明なデータは「探索」扱いに留める。 |
+| Clinical / intracranial | ground-truth補助・病態境界（`U1/U11`） | `recording-modality=iEEG/ECoG/sEEG` | 健常一般化は別検証が必要。 |
+
+### 助成テーマ化ルール（auto-research-funds 運用固定）
+
+1. `哲学語` を直接題目に使わず、`評価/設計/監査/プロトコル` の実装語へ変換する。
+2. `A/B` 判定RQは「技術実証」レーン（`G1/G3/G4/G5`）を優先し、`C` 判定RQは「監査・制度設計」レーン（`G2/G6`）へ出す。
+3. `grant_eeg_dataset_match.csv` は候補抽出専用。最終提出前に `wiki/cards` 側で `応募資格・募集期間・公式URL` を必ず再確認する。
+4. `D1-D16` のようなローカル別名は単独使用しない。`DOI + データセット名 + access区分` を併記して監査可能にする。
+
+### このrunで再確認した制約
+
+- `grant_eeg_dataset_match.csv` の推奨は語彙マッチ中心で、採択可能性そのものを保証しない。
+- `高適合` 判定でも活動助成・表彰・貸与が混在するため、`研究助成` の制度型で再フィルタが必要。
+- 神経特化公募は母数が少ないため、実運用は `工学/情報/医学` の広めレーンで題目を具体化して出す方針を維持する。
+
