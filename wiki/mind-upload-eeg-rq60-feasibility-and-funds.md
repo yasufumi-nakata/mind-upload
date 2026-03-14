@@ -294,5 +294,12 @@ recommended_pages:
 - 運用方針は継続して `1RQ=1検証命題=1応募テーマ`。`A/B` は実験計画、`C` は制度・監査設計で出す。
 - 前版ログにあった EEG参照ID件数の記載ゆれ（`17`）は、表本体に合わせて `24` に補正済み。
 
+## 2026-03-14 12:03 JST 再検証ログ（本run）
+
+- `mind-upload-eeg-rq60-feasibility-and-funds.md` の RQ行数は `60件` を再確認（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）。
+- 本ページの `EEG-DATA 参照データセット` に列挙した `24 ID`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は、`EEG-DATA/eeg_dataset_summary_ja.csv` 上で欠落 `0` を確認。
+- 助成キー `G1-G6` の実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は、`auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再確認。
+- 監査証跡は `mind-upload/automation/rq60_eeg_funds_revalidation_2026-03-14_1203JST.md` に保存。
+
 </article>
 </main>
