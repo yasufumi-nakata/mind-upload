@@ -12,12 +12,12 @@ reading_time: "8〜15分"
 page_intro: "このページは、Mind-Upload を読んでいて多くの人が最初にぶつかる疑問へ、短くても誤解の少ない答えを返すための Q&A です。入口として短く書いていますが、強い主張は必ず根拠ページへ戻れるようにしています。"
 accuracy_note: "ここは短い答えを返すページです。結論だけ切り取らず、必要に応じてリンク先の本文と参考文献へ戻ってください。"
 page_highlights:
-  - "『このサイトは何をするのか』『EEGで何が言えるのか』など、最初の疑問をまとめて潰せます。"
+  - "『このサイトは何をするのか』『EEG / brain-to-text で何が言えるのか』など、最初の疑問をまとめて潰せます。"
   - "派手な言い切りを避け、何が未解決かも同時に書いています。"
   - "FAQだけで十分な場合と、本文ページへ進むべき場合を分けて読める構成です。"
 known_points:
   - "短い Q&A でも、強い主張を弱い主張へ分解して読むだけで誤解は減らせます。"
-  - "EEG や LLM の派手な見た目と、WBE の強い主張は分けて扱う必要があります。"
+  - "EEG や LLM の派手な見た目と、WBE の強い主張は分けて扱う必要があり、language prior と brain-derived information の寄与も分離する必要があります。"
   - "FAQ は方向を間違えないための入口として有効です。"
 unknown_points:
   - "短い答えだけでは、理論選択や本人性の議論までは決まりません。"
@@ -139,7 +139,7 @@ FAQ を読んで意味は分かったが、次に何を確認すれば修正や�
 </tr>
 <tr>
 <td><strong>ニュースの派手な主張を読み違えたくない</strong></td>
-<td>Q1「EEGで“思考”は読める？」と Q2「decode と emulate の違いは？」を先に見てください。</td>
+<td>Q1「EEGで“思考”は読める？」、Q1b「brain-to-text のデモを見るとき…」、Q2「decode と emulate の違いは？」を先に見てください。</td>
 </tr>
 <tr>
 <td><strong>何を作れば前進かだけ知りたい</strong></td>
@@ -182,10 +182,37 @@ A. マインドアップロード/WBEを「検証可能な研究プログラム�
 <section class="section" id="q1">
 <h2 class="section-title">Q. EEGで“思考”は読める？</h2>
 <p>
-A. 「何をどこまで」と定義しない限り答えられません。EEGはノイズと個体差が大きく、言語モデルも尤もらしい文を補完するため、EEG由来情報とモデル補完を反事実テストで分離する手順を先に固定します。
+A. 「限定条件つきで一部を読める」は言えますが、「自由な思考をそのまま読める」とはまだ言えません。Tang et al. (2023) は non-invasive brain recordings を使った連続言語の semantic reconstruction を示しましたが、これは fMRI を用いた被験者別の再構成系です。d'Ascoli et al. (2025) は 723 人・500 万語規模の non-invasive M/EEG から単語 decoding の前進を示しましたが、既知の word onset と課題構造に依存し、MEG と reading が EEG と listening より有利でした。
 </p>
 <p>
-Mind-Uploadの立場は、「派手な読み出し」を否定するのではなく、<strong>検証可能な主張に落とす</strong>ことです（失敗例まで含む）。
+さらに、頭皮信号から内部状態を一意に決められるわけでもありません。Unnwongse et al. (2023) の intracranial stimulation を使った直接妥当化では、ESI の平均 localization error は source depth と skull conductivity に応じて 10.3-26.0 mm でした。Hao et al. (2025) の simultaneous HD-EEG/SEEG でも、ictal ESI は interictal ESI より良かったものの 14.07 ± 4.62 mm 対 17.38 ± 4.16 mm で、精度は source depth と spike power に強く依存しました。
+</p>
+<p>
+Mind-Uploadの立場は、「派手な読み出し」を否定することではなく、まず主張を <strong>課題依存の decoding</strong> と <strong>内部状態の同定</strong> に分け、language prior・校正・棄権条件・直接妥当化の有無を明示することです。ここを省くと、「文字列が出た」ことをそのまま WBE に必要な state reconstruction と誤読します。
+</p>
+</section>
+
+<div class="note-box">
+<strong>Q1の読み替え禁止</strong>
+<p>
+<code>文字列が出た</code>、<code>脳由来情報だけで出た</code>、<code>内部状態が分かった</code> は別です。brain-to-text を読むときは、(1) 計測法、(2) 課題制約、(3) language prior、(4) 直接妥当化、(5) 校正と棄権条件、を分けて確認してください。
+</p>
+</div>
+
+<section class="section" id="q1b">
+<h2 class="section-title">Q. brain-to-text のデモを見るとき、最低限どこを確認する？</h2>
+<p>
+A. 少なくとも次の 5 点でございます。
+</p>
+<ul>
+<li><strong>計測法：</strong>scalp EEG / MEG / fMRI / ECoG / intracortical array のどれか。高性能 speech neuroprosthesis の代表例は侵襲系です。</li>
+<li><strong>課題：</strong>聞いた単語、読んだ単語、発話運動、想起、自由会話のどれか。制約つき知覚課題と自由思考は別です。</li>
+<li><strong>prior：</strong>固定語彙、beam search、外部コーパス、LLM、prompt をどこまで使ったか。出力の流暢さが脳信号だけを反映しているとは限りません。</li>
+<li><strong>検証：</strong>held-out 条件、反事実テスト、adversarial control、失敗例があるか。訓練条件と近すぎる評価は強い証拠になりません。</li>
+<li><strong>信頼度運用：</strong>confidence が校正されているか、低信頼時に棄権できるか。高確率表示だけでは安全な解釈になりません。</li>
+</ul>
+<p>
+特に、Metzger et al. (2023) や Card et al. (2024) の高性能 speech neuroprosthesis は cortical surface electrodes や intracortical arrays を用いた侵襲系で達成された値です。scalp EEG や一般的な non-invasive BCI は、そのまま同じ性能を名乗れません。
 </p>
 </section>
 
@@ -249,6 +276,9 @@ Mind-Uploadでは、失敗例・リーク検査・モデルカードを含めて
 <h2 class="section-title">Q. オフライン精度が高ければ、閉ループでも十分？</h2>
 <p>
 A. それだけでは言えません。閉ループでは、出力が次の入力や環境を変えるため、end-to-end 遅延、ジッタ、ドリフト、安全停止の設計が必要です。あとから記録済みデータを読むのが得意でも、リアルタイムで安定とは限りません。
+</p>
+<p>
+近年の speech neuroprosthesis は real-time text / audio / avatar 出力で大きく前進しましたが、その代表例は高密度 cortical surface electrodes や intracortical arrays を使う侵襲系です。閉ループ性能を読むときは、遅延や語彙サイズだけでなく、装置の侵襲性、再校正時間、日跨ぎ安定性を切り分けてください。
 </p>
 <p>
 Mind-Upload では、オフライン精度と L3 閉ループ安定性を分けて読みます。ここを初歩から整理したい場合は <a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: 閉ループ・遅延・ジッタ・安全停止</a> が近道です。
@@ -325,6 +355,13 @@ Mind-Uploadの差別化点は、<strong>「検証基盤（Verification Commons�
 <h2 class="section-title">参考文献（FAQ）</h2>
 <ol>
 <li>Tang, J., et al. (2023). Semantic reconstruction from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
+<li>d'Ascoli, S., Bel, C., Rapin, J., et al. (2025). Towards decoding individual words from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">doi:10.1038/s41467-025-65499-0</a></li>
+<li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Validating EEG source imaging using intracranial electrical stimulation in focal epilepsy. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
+<li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
+<li>Metzger, S. L., Littlejohn, K. T., Silva, A. B., et al. (2023). A high-performance neuroprosthesis for speech decoding and avatar control. <a href="https://doi.org/10.1038/s41586-023-06443-4" target="_blank">doi:10.1038/s41586-023-06443-4</a></li>
+<li>Card, N. S., Glasser, M. F., et al. (2024). An accurate and rapidly calibrating speech neuroprosthesis. <a href="https://doi.org/10.1056/NEJMoa2314132" target="_blank">doi:10.1056/NEJMoa2314132</a></li>
+<li>Guo, C., Pleiss, G., Sun, Y., &amp; Weinberger, K. Q. (2017). On Calibration of Modern Neural Networks. <a href="https://proceedings.mlr.press/v70/guo17a.html" target="_blank">PMLR 70:1321-1330</a></li>
+<li>Geifman, Y., &amp; El-Yaniv, R. (2017). Selective Classification for Deep Neural Networks. <a href="https://papers.neurips.cc/paper/7073-selective-classification-for-deep-neural-networks" target="_blank">NeurIPS 2017</a></li>
 <li>Ji, Z., et al. (2023). Survey of Hallucination in NLG. <a href="https://doi.org/10.1145/3571730" target="_blank">doi:10.1145/3571730</a></li>
 <li>Correa, J. D., Lee, S., &amp; Bareinboim, E. (2021). Nested Counterfactual Identification. <a href="https://arxiv.org/abs/2107.03190" target="_blank">arXiv:2107.03190</a></li>
 <li>Gorgolewski, K. J., et al. (2016). BIDS. <a href="https://doi.org/10.1038/sdata.2016.44" target="_blank">doi:10.1038/sdata.2016.44</a></li>

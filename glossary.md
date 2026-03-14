@@ -13,11 +13,11 @@ page_intro: "このページは、Mind-Upload でよく出る言葉を『まず�
 accuracy_note: "ここに書く説明は入口用の短い定義です。厳密な使い方は、リンク先の本文や元論文で確認してください。"
 page_highlights:
   - "用語を短く説明しつつ、どこで使う概念かも一緒に示します。"
-  - "『似ているが違う』語を分けることで、話のすり替えを防ぎます。"
+  - "『似ているが違う』語を分けることで、話のすり替えを防ぎます。特に observability / identifiability / direct validation を混ぜないことを重視します。"
   - "分からない言葉が出たら、このページに戻れば最低限の足場を作れます。"
 known_points:
   - "用語の混同を減らすだけで、議論の多くのすれ違いは防げます。"
-  - "特に decode / emulate、相関 / 因果、ベンチ / リーダーボードの区別は重要です。"
+  - "特に decode / emulate、相関 / 因果、observability / identifiability、モデル適合 / direct validation、brain signal / language prior の区別は重要です。"
   - "このページは短い定義の入口であり、本文への戻り先を作る役割を持ちます。"
 unknown_points:
   - "意識理論まわりの用語は、論文や立場で意味の置き方が少しずつ異なります。"
@@ -265,6 +265,18 @@ EEG、MEG、fMRI、ECoG、MRI は全部「脳を測るもの」ですが、得�
 <td>相関は一緒に変わる関係、因果は片方を変えるともう片方も変わる関係です。</td>
 </tr>
 <tr>
+<td><strong>観測可能性 / 同定可能性</strong></td>
+<td>観測可能性は「見分けられるか」、同定可能性は「一意に決まるか」です。前者があっても後者は成立しません。</td>
+</tr>
+<tr>
+<td><strong>モデル適合 / 直接妥当化</strong></td>
+<td>モデル適合は観測データに合うこと、直接妥当化は外部の ground truth と照合することです。後者のほうが強い証拠です。</td>
+</tr>
+<tr>
+<td><strong>脳信号 / language prior</strong></td>
+<td>脳信号は計測由来の情報、language prior は語彙・文脈・LLM が補う統計的手掛かりです。出力の流暢さだけでは寄与を分けられません。</td>
+</tr>
+<tr>
 <td><strong>ベンチマーク / リーダーボード</strong></td>
 <td>ベンチマークは比べるための課題と指標、リーダーボードはその結果を並べる運用画面です。</td>
 </tr>
@@ -401,8 +413,32 @@ EEG、MEG、fMRI、ECoG、MRI は全部「脳を測るもの」ですが、得�
 <td>観測（頭皮EEG）から原因（脳内活動）を推定する問題。一般に解が一意に定まらない。</td>
 </tr>
 <tr>
+<td><strong>観測可能性（Observability）</strong></td>
+<td>選んだ観測だけで latent state の違いを区別できるか。見えていることと、一意に分かることは別です。</td>
+</tr>
+<tr>
+<td><strong>同定可能性（Identifiability）</strong></td>
+<td>異なる内部モデルや状態が、同じ観測を説明してしまわないか。予測精度が高くても唯一解とは限りません。</td>
+</tr>
+<tr>
 <td><strong>ESI（EEG Source Imaging）</strong></td>
 <td>逆問題を解いて、脳内ソースを推定する。推定値だけでなく“不確実性”も一緒に扱うのが重要。</td>
+</tr>
+<tr>
+<td><strong>直接妥当化（Direct Validation）</strong></td>
+<td>推定 source やモデル出力を、intracranial stimulation / SEEG / 外部 ground truth と照合すること。fit が良いだけでは代用できません。</td>
+</tr>
+<tr>
+<td><strong>Language Prior</strong></td>
+<td>decoder が語彙・文脈・LLM から借りる統計的先験情報。文章を滑らかにできる一方、brain-derived information の寄与を見えにくくします。</td>
+</tr>
+<tr>
+<td><strong>校正（Calibration）</strong></td>
+<td>たとえば confidence 80% の予測が、長期的に本当に約 80% 当たる状態。スコアの大きさと正しさを揃える作業です。</td>
+</tr>
+<tr>
+<td><strong>棄権（Abstention / Reject Option）</strong></td>
+<td>低信頼・外挿・外れ値のときに「分からない」と返す運用。coverage と risk を交換して、過大主張を防ぎます。</td>
 </tr>
 <tr>
 <td><strong>DCM</strong></td>
@@ -415,6 +451,13 @@ EEG、MEG、fMRI、ECoG、MRI は全部「脳を測るもの」ですが、得�
 </tbody>
 </table>
 </section>
+
+<div class="note-box">
+<strong>2026-03 の補足</strong>
+<p>
+non-invasive decoding や ESI は着実に前進していますが、成功した decoder がそのまま内部状態の一意復元を意味するわけではありません。Tang et al. (2023)、d'Ascoli et al. (2025)、Unnwongse et al. (2023)、Hao et al. (2025) を読むときは、課題制約、language prior、直接妥当化の有無を分けて見てください。
+</p>
+</div>
 
 <section class="section" id="open-science">
 <h2 class="section-title">標準化・再現性（Open Science）</h2>
@@ -455,11 +498,19 @@ EEG、MEG、fMRI、ECoG、MRI は全部「脳を測るもの」ですが、得�
 <ol>
 <li>Michel, C. M., &amp; Brunet, D. (2019). EEG source imaging review. <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">doi:10.3389/fneur.2019.00325</a></li>
 <li>Wipf, D., &amp; Nagarajan, S. (2009). Unified Bayesian framework for MEG/EEG source imaging. <a href="https://doi.org/10.1016/j.neuroimage.2008.02.059" target="_blank">doi:10.1016/j.neuroimage.2008.02.059</a></li>
+<li>Seeber, M., Cantonas, L.-M., Hoevels, M., et al. (2019). Subcortical electrophysiological activity is detectable with high-density EEG source imaging. <a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">doi:10.1038/s41467-019-08725-w</a></li>
+<li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Validating EEG source imaging using intracranial electrical stimulation in focal epilepsy. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
+<li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
+<li>Tang, J., LeBel, A., Jain, S., &amp; Huth, A. G. (2023). Semantic reconstruction of continuous language from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
+<li>d'Ascoli, S., Bel, C., Rapin, J., et al. (2025). Towards decoding individual words from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">doi:10.1038/s41467-025-65499-0</a></li>
 <li>Friston, K. J., Harrison, L., &amp; Penny, W. (2003). Dynamic causal modelling. <a href="https://doi.org/10.1016/S1053-8119(03)00202-7" target="_blank">doi:10.1016/S1053-8119(03)00202-7</a></li>
 <li>Vinck, M., et al. (2011). Weighted Phase Lag Index (wPLI). <a href="https://doi.org/10.1016/j.neuroimage.2011.01.055" target="_blank">doi:10.1016/j.neuroimage.2011.01.055</a></li>
 <li>Staniek, M., &amp; Lehnertz, K. (2008). Symbolic Transfer Entropy. <a href="https://doi.org/10.1103/PhysRevLett.100.158101" target="_blank">doi:10.1103/PhysRevLett.100.158101</a></li>
 <li>Gorgolewski, K. J., et al. (2016). BIDS. <a href="https://doi.org/10.1038/sdata.2016.44" target="_blank">doi:10.1038/sdata.2016.44</a></li>
 <li>Pernet, C. R., et al. (2019). EEG-BIDS. <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">doi:10.1038/s41597-019-0104-8</a></li>
+<li>Pernet, C. R., et al. (2020). Best practices in data analysis and sharing in neuroimaging using MEEG. <a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">doi:10.1038/s41593-020-00709-0</a></li>
+<li>Guo, C., Pleiss, G., Sun, Y., &amp; Weinberger, K. Q. (2017). On Calibration of Modern Neural Networks. <a href="https://proceedings.mlr.press/v70/guo17a.html" target="_blank">PMLR 70:1321-1330</a></li>
+<li>Geifman, Y., &amp; El-Yaniv, R. (2017). Selective Classification for Deep Neural Networks. <a href="https://papers.neurips.cc/paper/7073-selective-classification-for-deep-neural-networks" target="_blank">NeurIPS 2017</a></li>
 <li>Albantakis, L., et al. (2023). Integrated Information Theory (IIT) 4.0. <a href="https://doi.org/10.1371/journal.pcbi.1011465" target="_blank">doi:10.1371/journal.pcbi.1011465</a></li>
 <li>Friston, K. (2010). The free-energy principle. <a href="https://doi.org/10.1038/nrn2787" target="_blank">doi:10.1038/nrn2787</a></li>
 <li>Casali, A. G., et al. (2013). PCI. <a href="https://doi.org/10.1126/scitranslmed.3006294" target="_blank">doi:10.1126/scitranslmed.3006294</a></li>
