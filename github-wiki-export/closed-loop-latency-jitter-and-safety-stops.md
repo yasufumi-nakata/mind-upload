@@ -19,7 +19,7 @@
 
 ## 関連 Wiki
 - [Wiki: イベント同期と観測ログ](https://github.com/yasufumi-nakata/mind-upload/wiki/event-sync-and-measurement-logs) - 遅延、ジッタ、ドリフトを何として残すかを補います。
-- [Wiki: 不確実性・信頼区間・棄権](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention) - 低信頼時に『出さない』設計の考え方を補います。
+- [Wiki: 不確実性・校正・棄権](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention) - 低信頼時に『出さない』設計の考え方を補います。
 - [Wiki: 更新・分岐・停止規則](https://github.com/yasufumi-nakata/mind-upload/wiki/update-branching-and-stop-rules) - freeze と停止規則を運用としてどう切り分けるかを補います。
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - 他の補助ページへ戻れます。
 

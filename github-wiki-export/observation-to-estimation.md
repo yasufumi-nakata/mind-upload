@@ -20,7 +20,7 @@
 ## 関連 Wiki
 - [Wiki: 計測からモデル化まで](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-and-modeling-terms) - 計測、整理、推定、検証の全体マップへ戻れます。
 - [Wiki: EEG前処理とQC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - 推定の前段で、何が結果を変えるかを補います。
-- [Wiki: 不確実性・信頼区間・棄権](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention) - 点推定ではなく幅と棄権条件をどう残すかを補います。
+- [Wiki: 不確実性・校正・棄権](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention) - 点推定ではなく幅と棄権条件をどう残すかを補います。
 - [Wiki: 反事実・介入・摂動](https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification) - 観測適合から介入検証へ進む条件を補います。
 
 ## いま分かっていること

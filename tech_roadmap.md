@@ -38,6 +38,9 @@ wiki_links:
   - label: "Wiki: 配線図だけでは足りない理由"
     url: "/wiki/connectome-is-not-enough.html"
     description: "R 系列で抜けやすい状態変数を、シナプス・遅延・神経修飾・グリアから整理します。"
+  - label: "Wiki: 計測スタックごとの observability と claim ceiling"
+    url: "/wiki/measurement-stack-and-claim-ceiling.html"
+    description: "どの modality が何を直接見て、どこで主張上限に当たるかを整理します。"
   - label: "Wiki: EEG前処理とQC"
     url: "/wiki/eeg-preprocessing-and-qc.html"
     description: "M 系列で出てくる前処理や品質管理の基礎を補います。"
@@ -488,6 +491,18 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 <td>ms スケールの timing、興奮性/抑制性の分離、速い介入応答は直接は見えません。</td>
 </tr>
 <tr>
+<td><strong>whole-brain spatial transcriptomics / cell atlas</strong></td>
+<td>ex vivo の分子ラベルと空間配置です。</td>
+<td>cell-type taxonomy、領域ごとの分布、構造 atlas 上の分子地図を強くできます。</td>
+<td>現在の発火則、シナプス効率、neuromodulatory / glial state、sleep-history は直接は決まりません。</td>
+</tr>
+<tr>
+<td><strong>Patch-seq / morpho-electric-transcriptomics</strong></td>
+<td>単一細胞の transcriptome・形態・電気生理の対応です。</td>
+<td>cell-type label と morpho-electric phenotype の橋渡し、局所回路の parameter prior を強くできます。</td>
+<td>全脳 coverage、same-brain の回路文脈、現在の network state、縦断的 plastic history は残ります。</td>
+</tr>
+<tr>
 <td><strong>ECoG / SEEG</strong></td>
 <td>留置部位の局所 field potential と介入応答です。</td>
 <td>被覆領域では局所ダイナミクス、刺激応答、比較的強い因果検証へ進めます。</td>
@@ -499,12 +514,18 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 <td>局所回路の wiring rule、cell-type 依存の結線、構造と機能の局所対応を強くできます。</td>
 <td>現在のシナプス効率、内在興奮性 / homeostatic set point、神経修飾場、グリア/代謝状態、縦断的 plastic history はまだ別変数です。</td>
 </tr>
+<tr>
+<td><strong>local transmitter / astrocyte imaging</strong></td>
+<td>局所 transmitter dynamics と astrocyte network response です。</td>
+<td>coarse proxy が何を代表し、何を代表しないかの較正を強くできます。</td>
+<td>全脳 coverage、受容体状態、long-timescale maintenance-state、stack 間の完全統合は残ります。</td>
+</tr>
 </tbody>
 </table>
 <div class="note-box">
 <strong>2026-03 補足：multimodal は「全部見えた」の同義語ではありません</strong>
 <p>
-Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et al. (2025) は、HD-EEG と intracranial ground truth を組み合わせると何が監査できるかを一段前進させました。一方、Dorkenwald et al. (2024)、MICrONS Consortium et al. (2025)、Gamlin et al. (2025)、Cahill et al. (2024) に加え、内在興奮性と firing-rate set point を扱う一次文献が示すのは、構造と局所機能を同じ脳で結びつけても、transcriptomic label、intrinsic excitability / homeostatic set point、neuromodulatory field、glial network state のような状態クラスが追加で残る、という事実です。したがって、このページでは <strong>観測量が増えた</strong>ことと、<strong>WBE に必要な状態変数が十分に同定できた</strong>ことを分けて扱います。
+Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et al. (2025) は、HD-EEG と intracranial ground truth を組み合わせると何が監査できるかを一段前進させました。一方、Yao et al. (2023) の whole-brain spatial atlas、Gouwens et al. (2021) と Gamlin et al. (2025) の Patch-seq bridge、Dorkenwald et al. (2024) と MICrONS Consortium et al. (2025) の connectomics、Neyhart et al. (2024) と Cahill et al. (2024) の local state imaging が示すのは、stack ごとに <strong>強くなる変数</strong> と <strong>依然として残る latent state</strong> が違う、という事実です。したがって、このページでは <strong>観測量が増えた</strong>ことと、<strong>WBE に必要な状態変数が十分に同定できた</strong>ことを分けて扱います。stack ごとの整理表は <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: 計測スタックごとの observability と claim ceiling</a> を参照してください。
 </p>
 </div>
 <p><strong>次に必要：</strong>同一の課題・同一個体で、マルチモーダル同時計測（可能な範囲）＋位置合わせ（M5）</p>

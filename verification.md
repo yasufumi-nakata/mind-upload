@@ -51,6 +51,9 @@ wiki_links:
   - label: "Wiki: 配線図だけでは足りない理由"
     url: "/wiki/connectome-is-not-enough.html"
     description: "connectome だけで落ちる状態変数を、シナプス・遅延・神経修飾・グリアから整理します。"
+  - label: "Wiki: 計測スタックごとの observability と claim ceiling"
+    url: "/wiki/measurement-stack-and-claim-ceiling.html"
+    description: "どの measurement stack が何を直接観測し、どこで主張上限に当たるかを整理します。"
   - label: "Wiki: 反事実・介入・摂動"
     url: "/wiki/counterfactual-and-perturbation-verification.html"
     description: "held-out 精度と因果的摂動検証の差を、初歩から整理します。"
@@ -670,6 +673,12 @@ connectome-complete は <strong>emulation-complete を意味しません</strong
 </tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>2026-03 追補：augmentation claim には measurement stack を添える</strong>
+<p>
+同じ「transcriptomic label を足した」「same-brain function を足した」でも、whole-brain spatial atlas、Patch-seq、volume EM、same-brain calcium+EM、local transmitter sensor では直接観測している変数が違います。したがって本サイトでは、augmentation claim に <strong>どの measurement stack で得た追加情報か</strong> を必ず添え、stack ごとの claim ceiling も別に書きます。整理表は <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: 計測スタックごとの observability と claim ceiling</a> を参照してください。
+</p>
+</div>
 </section>
 
 <section class="section" id="verification-rigor">

@@ -1,32 +1,26 @@
----
-layout: default
-title: "Mind-upload RQ60 深掘り焦点ノート（EEG-DATA × 助成）"
-description: "60RQを1件ずつ、EEGで直接検証する核・外部必須要件・応募テーマまで固定した深掘りノート。"
-article_type: Wiki
-subtitle: "汎用要約ではなく、RQごとの論点を固定する"
-author: Mind Uploading Research Project
-last_updated: "2026-03-14"
-note: "RQ-by-RQ Deep Focus"
-audience: "各RQを申請文と実験手順に直接落としたい人"
-reading_time: "20〜35分"
-page_intro: "このページは、mind-uploadの60RQを1件ずつ対象に、EEG-DATAで直接確認する核、auto-research-funds向け応募テーマ、EEG外で必要な要件を固定した実務ノートです。"
-accuracy_note: "A/B/C判定は mind-upload-eeg-rq60-feasibility-and-funds と同一。Cは『重要でない』ではなく『EEG単独で完結しない』を意味します。"
-wiki_links:
-  - label: "Wiki: RQ60 EEG検証可否と助成テーマ"
-    url: "/wiki/mind-upload-eeg-rq60-feasibility-and-funds.html"
-    description: "判定とデータ候補の正本。"
-  - label: "Wiki: RQ60 申請プレイブック"
-    url: "/wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html"
-    description: "応募先IDと最小成果物の固定表。"
-recommended_pages:
-  - label: "文献地図"
-    url: "/research_harvest_50.html"
-  - label: "データ&ベンチ"
-    url: "/datasets.html"
----
+# Mind-upload RQ60 深掘り焦点ノート（EEG-DATA × 助成）
 
-<main class="main-container">
-<article class="content-column">
+> 汎用要約ではなく、RQごとの論点を固定する
+>
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+
+- 更新日: 2026-03-14 / 位置づけ: RQ-by-RQ Deep Focus
+
+## このページの役割
+このページは、mind-uploadの60RQを1件ずつ対象に、EEG-DATAで直接確認する核、auto-research-funds向け応募テーマ、EEG外で必要な要件を固定した実務ノートです。
+
+## 正確さの前提
+A/B/C判定は mind-upload-eeg-rq60-feasibility-and-funds と同一。Cは『重要でない』ではなく『EEG単独で完結しない』を意味します。
+
+## 公開ページへ戻る
+- [文献地図](https://mind-upload.com/research_harvest_50.html)
+- [データ&ベンチ](https://mind-upload.com/datasets.html)
+
+## 関連 Wiki
+- [Wiki: RQ60 EEG検証可否と助成テーマ](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds) - 判定とデータ候補の正本。
+- [Wiki: RQ60 申請プレイブック](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - 応募先IDと最小成果物の固定表。
+
+---
 
 ## 使い方
 
@@ -165,6 +159,3 @@ recommended_pages:
 - `60RQ` すべてに `EEGで直接検証する核` と `EEG外で必須` を分離して記載。
 - `応募テーマ` は `G1-G6` の既存助成キーに統一。
 - 運用規則は `1RQ=1検証命題=1応募テーマ=1主データ`。
-
-</article>
-</main>

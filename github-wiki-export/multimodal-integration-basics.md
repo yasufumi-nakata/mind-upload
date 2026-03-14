@@ -20,7 +20,7 @@
 ## 関連 Wiki
 - [Wiki: EEGの基本](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-basics) - まず EEG 単体の限界へ戻りたいときはこちらです。
 - [Wiki: イベント同期と観測ログ](https://github.com/yasufumi-nakata/mind-upload/wiki/event-sync-and-measurement-logs) - 共有時計、遅延、ジッタ、ドリフトの基本を補います。
-- [Wiki: 不確実性・信頼区間・棄権](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention) - 統合しても不確実性が消えない理由を補います。
+- [Wiki: 不確実性・校正・棄権](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention) - 統合しても不確実性が消えない理由を補います。
 - [Wiki: 観測から推定へ](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - 観測値と推定値を混同しないための入口です。
 
 ## いま分かっていること

@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-14 / 位置づけ: Learning-first
+- 更新日: 2026-03-15 / 位置づけ: Learning-first
 
 ## このページの役割
 このページは、Mind-Upload の公開ページを読みやすくするための学習ポータルです。公開ページが『いま分かっていること / まだ分からないこと / 次の導線』を示すのに対し、wiki はその前提になる基礎説明を順番に学ぶために使います。
@@ -61,6 +61,16 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 <td><strong>配線図があれば十分かを知りたい</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough">配線図だけでは足りない理由</a></td>
 <td><a href="https://mind-upload.com/verification.html#state-completeness-gate">状態変数の完全性ゲート</a> / <a href="https://mind-upload.com/tech_roadmap.html#qa-r10">R10 神経修飾</a></td>
+</tr>
+<tr>
+<td><strong>connectome の次に、内在興奮性・睡眠依存 homeostasis・維持状態を深掘りしたい</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/homeostatic-plasticity-and-maintenance-state">恒常性可塑性と維持状態</a></td>
+<td><a href="https://mind-upload.com/verification.html#state-completeness-gate">状態変数の完全性ゲート</a> / <a href="https://mind-upload.com/tech_roadmap.html#qa-m3">M3 空間粒度</a></td>
+</tr>
+<tr>
+<td><strong>どの計測スタックで何が直接見えて、どこで主張上限に当たるか知りたい</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling">計測スタックごとの observability と claim ceiling</a></td>
+<td><a href="https://mind-upload.com/verification.html#state-completeness-gate">状態変数の完全性ゲート</a> / <a href="https://mind-upload.com/tech_roadmap.html#qa-m1">M1 観測変数</a></td>
 </tr>
 <tr>
 <td><strong>派手な主張を読み違えたくない</strong></td>
@@ -218,6 +228,11 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 <td><a href="https://mind-upload.com/research_harvest_50.html">文献地図</a> / <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a> / <a href="https://mind-upload.com/issue.html">貢献ガイド</a></td>
 </tr>
 <tr>
+<td><strong>RQを1件ずつ深く読み、EEGで直接検証する核と外部必須要件を分けたい</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes">RQ60深掘り焦点ノート（EEG-DATA×助成）</a></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds">RQ60判定正本</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook">RQ60申請プレイブック</a></td>
+</tr>
+<tr>
 <td><strong>部分解決、探索段階、未整備の違いで止まる</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/progress-labels-and-open-problem-status">部分解決・探索段階・未整備の読み方</a></td>
 <td><a href="https://mind-upload.com/research_harvest_50.html">文献地図</a> / <a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a></td>
@@ -274,7 +289,7 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 </tr>
 <tr>
 <td><strong>信頼区間や不確実性の読み方で止まる</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention">不確実性・信頼区間・棄権</a></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention">不確実性・校正・棄権</a></td>
 <td><a href="https://mind-upload.com/eeg_101.html">EEG入門</a> / <a href="https://mind-upload.com/verification.html">検証基盤</a></td>
 </tr>
 <tr>
@@ -449,7 +464,7 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 </tr>
 <tr>
 <td>点推定、区間、不確実性伝播、棄権</td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention">不確実性・信頼区間・棄権</a></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention">不確実性・校正・棄権</a></td>
 </tr>
 <tr>
 <td>EEG、MEG、fMRI、ECoG、MRI の補完関係</td>

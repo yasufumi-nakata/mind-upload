@@ -34,8 +34,8 @@
 
 ## その他
 - [Mind-upload RQ60 × EEG-DATA 検証可否と助成テーマ（深掘り版）](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds)
+- [Mind-upload RQ60 深掘り焦点ノート（EEG-DATA × 助成）](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes)
 - [Mind-upload RQ60 申請プレイブック（RQ単位固定）](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook)
-- [Mind-upload RQ60 深掘り焦点ノート（EEG-DATA×助成）](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes)
 - [Wiki：Decode と Emulate](https://github.com/yasufumi-nakata/mind-upload/wiki/decode-vs-emulate)
 - [Wiki：EEGからL0までの一本道](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-to-l0-route)
 - [Wiki：EEG前処理とQC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc)
@@ -54,6 +54,7 @@
 - [Wiki：不確実性・校正・棄権](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention)
 - [Wiki：内製で先にやることと外部依存の切り分け](https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies)
 - [Wiki：参加・協業ページのあとに進む5つの道](https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes)
+- [Wiki：恒常性可塑性と維持状態](https://github.com/yasufumi-nakata/mind-upload/wiki/homeostatic-plasticity-and-maintenance-state)
 - [Wiki：意識理論マップ](https://github.com/yasufumi-nakata/mind-upload/wiki/consciousness-theory-map)
 - [Wiki：文献から実装・参加へ戻る一本道](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-to-action-route)
 - [Wiki：更新・分岐・停止規則](https://github.com/yasufumi-nakata/mind-upload/wiki/update-branching-and-stop-rules)
@@ -62,6 +63,7 @@
 - [Wiki：要約・原文・Issue履歴の使い分け](https://github.com/yasufumi-nakata/mind-upload/wiki/summary-vs-source-reading)
 - [Wiki：規格・置き場・Validator・ベンチマーク](https://github.com/yasufumi-nakata/mind-upload/wiki/standards-repositories-validators-and-benchmarks)
 - [Wiki：計測からモデル化までの用語ガイド](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-and-modeling-terms)
+- [Wiki：計測スタックごとの observability と claim ceiling](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling)
 - [Wiki：部分解決・探索段階・未整備の読み方](https://github.com/yasufumi-nakata/mind-upload/wiki/progress-labels-and-open-problem-status)
 - [Wiki：配線図だけでは足りない理由](https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough)
 - [Wiki：閉ループ・遅延・ジッタ・安全停止](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops)

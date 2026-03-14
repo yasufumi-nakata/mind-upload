@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-14 / 位置づけ: Learning guide
+- 更新日: 2026-03-15 / 位置づけ: Learning guide
 
 ## このページの役割
 このページは、Mind-Upload で熱力学の話がなぜ出てくるのかを、Landauer、散逸、非平衡定常状態（NESS）、エントロピー生成速度（EPR）の観点から初歩から整理する wiki です。理論ページで急に物理の話に見えて止まる人のための入口として使います。
@@ -81,6 +81,44 @@ Mind-Upload で熱力学の話が出るのは、「情報が似ているか」�
 </tbody>
 </table>
 
+<h2>さらに 4 つの測定層を混ぜない</h2>
+<table>
+<thead>
+<tr>
+<th>測定層</th>
+<th>代表文献</th>
+<th>ここで分かること</th>
+<th>ここからはまだ言えないこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Landauer 下限</strong></td>
+<td>B&eacute;rut et al. (2012)</td>
+<td>bit erasure のような論理的に不可逆な操作に、最小散逸下限があることです。</td>
+<td>デジタル脳全体の wall-power、NESS、WBE 成否を直接決めることです。</td>
+</tr>
+<tr>
+<td><strong>組織レベルのエネルギー予算</strong></td>
+<td>Attwell &amp; Laughlin (2001)</td>
+<td>rodent gray matter で signaling cost をどう分解するかという、生物組織側の descriptive budget です。</td>
+<td>その比率を、そのまま digital emulation の acceptance KPI にすることです。</td>
+</tr>
+<tr>
+<td><strong>粗視化 neural dynamics の不可逆性</strong></td>
+<td>Lynn et al. (2021), de la Fuente et al. (2023), Nartallo-Kaluarachchi et al. (2025)</td>
+<td>fMRI / ECoG / MEG などの時系列に、状態依存の broken detailed balance や time asymmetry があることです。</td>
+<td>微視的な physical dissipation や本人性を直接測れたと言うことです。</td>
+</tr>
+<tr>
+<td><strong>model-based entropy flow</strong></td>
+<td>Ishihara &amp; Shimazaki (2025)</td>
+<td>state-space kinetic Ising model の下で、spiking population の task-dependent entropy flow を推定できることです。</td>
+<td>モデル仮定なしに全脳で EPR を直接安定測定できたと言うことです。</td>
+</tr>
+</tbody>
+</table>
+
 <h2>ここで言っていないこと</h2>
 <table>
 <thead>
@@ -101,6 +139,10 @@ Mind-Upload で熱力学の話が出るのは、「情報が似ているか」�
 <tr>
 <td>「脳は 20W だから、同じ電力なら十分だ」</td>
 <td>総消費電力だけでなく、通信と計算の比率や散逸の仕方も別問題です。</td>
+</tr>
+<tr>
+<td>「signaling budget の比率が同じなら十分だ」</td>
+<td>組織の energy budget 論文は biological tissue の descriptive budget であり、WBE の合否ゲートではありません。</td>
 </tr>
 </tbody>
 </table>
@@ -167,6 +209,7 @@ FLOPs のような論理的計算量は、「どれくらい計算したか」�
 <h4>Rule</h4>
 <ul>
 <li><strong>Landauer と実装電力を分ける：</strong>下限理論と実測電力を混同しません。</li>
+<li><strong>組織 budget と acceptance gate を分ける：</strong>20W や signaling partition は背景値であり、site-wide KPI にはしません。</li>
 <li><strong>information entropy production と physical dissipation を分ける：</strong>粗視化 neural data からの下界推定を、物理散逸そのものと書きません。</li>
 <li><strong>熱力学指標は補助ログ：</strong>OOD 一般化、摂動、妥当化、不確実性、棄権条件の代わりには使いません。</li>
 <li><strong>モダリティ依存性を明示する：</strong>fMRI、ECoG、EEG、spiking で同じ意味に読み替えません。</li>
@@ -186,9 +229,11 @@ FLOPs のような論理的計算量は、「どれくらい計算したか」�
 
 <h2>参考文献</h2>
 <ol>
+<li>B&eacute;rut, A., Arakelyan, A., Petrosyan, A., et al. (2012). Experimental verification of Landauer&rsquo;s principle linking information and thermodynamics. <em>Nature</em>, 483, 187-189. <a href="https://doi.org/10.1038/nature10872" target="_blank">doi:10.1038/nature10872</a></li>
+<li>Attwell, D., &amp; Laughlin, S. B. (2001). An energy budget for signaling in the grey matter of the brain. <em>Journal of Cerebral Blood Flow &amp; Metabolism</em>, 21(10), 1133-1145. <a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">doi:10.1097/00004647-200110000-00001</a></li>
 <li>Seifert, U. (2012). Stochastic thermodynamics, fluctuation theorems and molecular machines. <em>Reports on Progress in Physics</em>, 75(12), 126001. <a href="https://doi.org/10.1088/0034-4885/75/12/126001" target="_blank">doi:10.1088/0034-4885/75/12/126001</a></li>
 <li>Lynn, C. W., et al. (2021). Broken detailed balance and entropy production in the human brain. <em>PNAS</em>, 118(47), e2109889118. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>
-<li>de la Fuente, L. A., et al. (2022). Temporal irreversibility of neural dynamics as a signature of consciousness. <em>Cerebral Cortex</em>, 33(5), 1856–1865. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
+<li>de la Fuente, L. A., et al. (2023). Temporal irreversibility of neural dynamics as a signature of consciousness. <em>Cerebral Cortex</em>, 33(5), 1856–1865. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
 <li>Nartallo-Kaluarachchi, R., et al. (2025). Multilevel irreversibility reveals higher-order organization of nonequilibrium interactions in human brain dynamics. <em>PNAS</em>, 122(10), e2408791122. <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">doi:10.1073/pnas.2408791122</a></li>
 <li>Ishihara, K., &amp; Shimazaki, H. (2025). State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics. <em>Nature Communications</em>, 16, 10852. <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
 </ol>

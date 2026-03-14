@@ -5,7 +5,7 @@ description: "公開ページの要点を A4 冊子向けに自動生成した�
 article_type: "Briefing Booklet"
 subtitle: "公開ページの front matter と冒頭要約から再生成される A4 要約版"
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
+last_updated: "2026-03-15"
 note: "Auto-generated from public pages"
 body_class: "summary-booklet-page"
 ---
@@ -25,7 +25,7 @@ body_class: "summary-booklet-page"
   <div class="booklet-cover-band">
     <div>
   <span>更新基準日</span>
-  <strong>2026-03-14</strong>
+  <strong>2026-03-15</strong>
 </div>
 <div>
   <span>現在の重点</span>
@@ -166,7 +166,7 @@ body_class: "summary-booklet-page"
     <article class="booklet-card booklet-card-positive">
       <h3>比較的はっきりしていること</h3>
       <ul class="booklet-list">
-        <li>公開データ、標準、ベンチマーク、監査をそろえると、L0〜L2 の前進は比較可能な形で積み上げられます。</li><li>EEGやデコーディング研究は、条件を限定すれば測定可能な前進を作れます。</li><li>本人性や意識の強い主張は、入口ページではなく後段の検証設計として扱う必要があります。</li><li>標準、共有基盤、評価、監査をセットでそろえないと、比較可能な前進は作れません。</li><li>L0〜L2 では、再現性と反証条件を事前に設計することができます。</li>
+        <li>公開データ、標準、ベンチマーク、監査をそろえると、L0〜L2 の前進は比較可能な形で積み上げられます。</li><li>EEGやデコーディング研究は、条件を限定すれば測定可能な前進を作れます。</li><li>connectome-complete は emulation-complete を意味せず、maintenance-state の不足を別に監査する必要があります。</li><li>本人性や意識の強い主張は、入口ページではなく後段の検証設計として扱う必要があります。</li><li>標準、共有基盤、評価、監査をセットでそろえないと、比較可能な前進は作れません。</li>
       </ul>
     </article>
     <article class="booklet-card booklet-card-caution">
@@ -257,7 +257,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Start Here - 勝利条件・標準・ベンチマーク・事前登録を先に作る / 5〜10分</p>
   <p>Mind-Uploadは、「心をコンピュータで再現できるのか？」という大きな問いを、<strong>検証できる小さな課題</strong>に分けて進めるサイトです。大きな結論を急がず、まずは<strong>何を達成したら前進か</strong>と、<strong>他の人が同じ結果を確認できるか</strong>を先に決めます。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>Mind-Uploadの中心は、派手な結論を出すことではなく、前進を測れる検証基盤を作ることです。</li><li>迷ったら Verification → Roadmap → WBE/EEG入門 の順で読むと、話の軸を保ちやすいです。</li><li>用語や前提で止まったときに戻れる入口として、FAQ と用語集も近くに置いています。</li>
+    <li>Mind-Uploadの中心は、派手な結論を出すことではなく、前進を測れる検証基盤を作ることです。</li><li>迷ったら Verification → Roadmap → WBE/EEG入門 の順で読むと、話の軸を保ちやすいです。</li><li>配線図や cell type だけでは長期ダイナミクスは決まらず、sleep/homeostasis・髄鞘・グリア代謝も別変数として残ります。</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -384,7 +384,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Primer - 夢を守るために、まず物差しを作る / 10〜15分</p>
   <p>マインドアップロードを本気で前に進めるには、「できたと言える条件」と「できていないと分かる条件」を先に決めるのが最短です。Mind-Uploadは、そのチェック方法をそろえるための検証基盤を作っています。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>まず『いま言えること／言えないこと』を分けて、話を盛りすぎないようにします。</li><li>クレーム階段で、L0の再現解析とL4の本人性主張を混同しないようにします。</li><li>Decode と Emulate の差を押さえると、ニュースや派手な主張も読み違えにくくなります。</li>
+    <li>まず『いま言えること／言えないこと』を分けて、話を盛りすぎないようにします。</li><li>クレーム階段で、L0の再現解析とL4の本人性主張を混同しないようにします。</li><li>connectome と cell type だけでは長期ダイナミクスは決まらず、hidden state の監査が別に要ります。</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -410,7 +410,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">FAQ - 派手な結論より、検証できる前進を / 8〜15分</p>
   <p>ここは「よくある勘違い」を先に避けるためのページです。主張が大きいほど、(1)言葉の定義、(2)評価の物差し、(3)間違いと判定する条件、(4)再現手順の順で確認します。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>『このサイトは何をするのか』『EEGで何が言えるのか』など、最初の疑問をまとめて潰せます。</li><li>派手な言い切りを避け、何が未解決かも同時に書いています。</li><li>FAQだけで十分な場合と、本文ページへ進むべき場合を分けて読める構成です。</li>
+    <li>『このサイトは何をするのか』『EEG / brain-to-text で何が言えるのか』など、最初の疑問をまとめて潰せます。</li><li>『コネクトームと cell type で十分か』という誤読にも、短くても科学的に答えます。</li><li>派手な言い切りを避け、何が未解決かも同時に書いています。</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -423,7 +423,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Reference - まずは“言葉のすり替え”を止める / 必要な項目だけなら3〜10分</p>
   <p>この用語集は、用語の意味をすぐ確認するためのリファレンスです。まず日常語の説明で把握し、必要なときだけ厳密な定義に進む構成とし、議論を測定と扱い方に結び付けます。WBEの議論は言葉のズレで混乱しやすいため、ここでは<strong>実際にどう測って扱うか</strong>を重視します。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>用語を短く説明しつつ、どこで使う概念かも一緒に示します。</li><li>『似ているが違う』語を分けることで、話のすり替えを防ぎます。</li><li>分からない言葉が出たら、このページに戻れば最低限の足場を作れます。</li>
+    <li>用語を短く説明しつつ、どこで使う概念かも一緒に示します。</li><li>『似ているが違う』語を分けることで、話のすり替えを防ぎます。特に observability / identifiability / direct validation を混ぜないことを重視します。</li><li>分からない言葉が出たら、このページに戻れば最低限の足場を作れます。</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
