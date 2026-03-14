@@ -15,6 +15,7 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 ## 公開ページへ戻る
 - [文献地図](https://mind-upload.com/research_harvest_50.html)
 - [データ&ベンチ](https://mind-upload.com/datasets.html)
+- [RQ60 申請プレイブック](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook)
 - [Issue](https://mind-upload.com/issue.html)
 
 ## 関連 Wiki
@@ -289,6 +290,12 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 1. `U7/U14` を先行（Aが多く、短期間で再現可能成果を作りやすい）
 2. `U0/U1/U4/U8/U13` を第2波（B中心だが実験系としては組める）
 3. `U10/U12/U15` は制度・理論連携枠で別トラック化（EEG単独完結は不可）
+
+## RQ別提出固定表（新規）
+
+- `1RQ=1提出判断` を固定した運用版は `mind-upload-eeg-rq60-grant-dataset-playbook` を参照。
+- 各 `Ux-RQy` について、`第一応募先/予備応募先/主EEG-DATA/最小成果物` を1行で固定済み。
+- 本ページは判定根拠、プレイブック側は提出運用という役割分担で使う。
 
 ## 注意点
 
