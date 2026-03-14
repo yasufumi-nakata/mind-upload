@@ -14,14 +14,17 @@ accuracy_note: "EEG を過大評価しないために限界も強調しますが
 page_highlights:
   - "EEG は頭皮で観測した混ざった電気信号です。"
   - "時間変化には強い一方、空間的な特定や深部推定には限界があります。"
+  - "『頭皮で予測できる』ことと『脳内 source が一意に決まる』ことは別です。"
   - "QC と前処理の記録が、結果の信頼性を大きく左右します。"
 known_points:
   - "EEG はミリ秒単位の時間変化を見るのが得意です。"
   - "観測される信号は多くの活動が混ざった結果であり、解釈には前提が必要です。"
+  - "個体別 MRI と外部基準を入れると source imaging は改善しますが、深部や弱い source の不確実性は残ります。"
   - "公開データでも、前処理とベースライン比較の練習は十分できます。"
 unknown_points:
   - "非侵襲 EEG だけで、脳内部の詳細な因果構造まで十分に再構成できるかは未解決です。"
   - "前処理の選び方が、どの課題でどこまで結論を変えるかは一律ではありません。"
+  - "どの external benchmark が source imaging の標準妥当化セットになるかはまだ固定されていません。"
 wiki_links:
   - label: "Wiki: WBEの基本"
     url: "/wiki/mind-upload-basics.html"
@@ -48,6 +51,13 @@ recommended_pages:
 <h2>EEG は何を見ているのか</h2>
 <p>
 EEG は、頭皮につけた電極で電位差を測る方法です。つまり、脳の中を直接カメラで見ているわけではなく、たくさんの活動が重なって外まで伝わってきた<strong>混ざった信号</strong>を読んでいます。
+</p>
+</div>
+
+<div class="note-box">
+<strong>このページで先に止めるすり替え</strong>
+<p>
+EEG では、<strong>頭皮信号を観測した</strong>こと、<strong>脳内 source を条件付きで推定した</strong>こと、<strong>内部状態が一意に同定できた</strong>ことは別です。この3つを混同すると、初心者ほど「見えた」と「推定した」を同じ意味で読んでしまいます。
 </p>
 </div>
 
@@ -103,6 +113,43 @@ EEG は、頭皮につけた電極で電位差を測る方法です。つまり�
 </table>
 </section>
 
+<section class="section" id="observability">
+<h2 class="section-title">観測・推定・同定は別です</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>段階</th>
+<th>EEG で言えること</th>
+<th>まだ言えないこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>観測</strong></td>
+<td>頭皮上の混合電位を ms スケールで取れます。状態遷移やイベント時刻を追うのは得意です。</td>
+<td>どの深部 source が唯一の原因か、細胞型や神経修飾まで直接見えたとは言えません。</td>
+</tr>
+<tr>
+<td><strong>条件付き推定</strong></td>
+<td>個体別 MRI、電極座標、forward model を入れると、皮質近傍や一部深部活動の推定は改善します。</td>
+<td>条件が厳しいときに detect できることと、一般に一意復元できることは別です。</td>
+</tr>
+<tr>
+<td><strong>同定</strong></td>
+<td>頭蓋内刺激、同時 SEEG/ECoG、ファントム、術後転帰などの外部基準があれば、誤差を監査できます。</td>
+<td>外部基準がないまま「source が分かった」「WBE に十分な状態が取れた」とは書けません。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>2026-03 の実測エビデンス</strong>
+<p>
+Seeber et al. (2019) は 256ch scalp EEG と同時 DBS 記録で subcortical signal の detectability を示しましたが、一般的一意復元を主張していません。Unnwongse et al. (2023) は intracranial stimulation に対する直接妥当化で localization error が頭蓋導電率と source depth に依存すると報告し、Hao et al. (2025) は simultaneous HD-EEG/SEEG の 29 例で source power と source depth が誤差を強く左右すると示しました。したがって、正しい読み方は「条件を厳しく固定すれば一部は監査できる」であって、「EEG 単体で脳内 source が一意に読める」ではありません。
+</p>
+</div>
+</section>
+
 <section class="section" id="pipeline">
 <h2 class="section-title">なぜ QC と前処理が大事か</h2>
 <p>
@@ -135,6 +182,24 @@ EEG は WBE をいきなり完成させる装置ではありません。しか�
 <p>参照法、フィルタ、アーティファクト処理で何が変わるかを実務寄りに見たい場合はこちらです。</p>
 <a href="eeg-preprocessing-and-qc.html">EEG前処理とQCへ →</a>
 </div>
+
+<div class="cta-box">
+<h4>Technical Next</h4>
+<p>観測と推定の境界、ESI、DCM、SCM のつながりを流れで見たい場合はこちらです。</p>
+<a href="measurement-and-modeling-terms.html">計測からモデル化までへ →</a>
+</div>
+</section>
+
+<section class="section" id="references">
+<h2 class="section-title">参考文献</h2>
+<ol>
+<li>Pernet, C. R., Appelhoff, S., Gorgolewski, K. J., et al. (2019). EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. <em>Scientific Data</em>, 6, 103. <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">doi:10.1038/s41597-019-0104-8</a></li>
+<li>Michel, C. M., &amp; Brunet, D. (2019). EEG source imaging: a practical review of the analysis steps. <em>Frontiers in Neurology</em>, 10, 325. <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">doi:10.3389/fneur.2019.00325</a></li>
+<li>Mikulan, E., Russo, S., Bares, M., et al. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <em>Scientific Data</em>, 7, 127. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
+<li>Seeber, M., Cantonas, L.-M., Hoevels, M., et al. (2019). Subcortical electrophysiological activity is detectable with high-density EEG source imaging. <em>Nature Communications</em>, 10, 753. <a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">doi:10.1038/s41467-019-08725-w</a></li>
+<li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Direct validation of EEG source imaging by intracranial electric stimulation in human patients. <em>Brain Communications</em>, 5(2), fcad023. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
+<li>Hao, Y., Alhilani, M., Asano, E., et al. (2025). High-density scalp EEG source imaging and directed functional connectivity validated by simultaneous stereo-electroencephalography. <em>Epilepsia</em>. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
+</ol>
 </section>
 
 </article>
@@ -145,8 +210,19 @@ EEG は WBE をいきなり完成させる装置ではありません。しか�
 <ul>
 <li><a href="mind-upload-basics.html">WBEの基本 →</a></li>
 <li><a href="eeg-preprocessing-and-qc.html">EEG前処理とQC →</a></li>
+<li><a href="measurement-and-modeling-terms.html">計測からモデル化まで →</a></li>
 <li><a href="verification-basics.html">検証基盤の基本 →</a></li>
 <li><a href="claims-and-evidence.html">主張と証拠の読み方 →</a></li>
+</ul>
+</div>
+<div class="sidebar-box">
+<h4>Reference</h4>
+<ul>
+<li><a href="https://doi.org/10.1016/j.clinph.2019.04.600" target="_blank">Michel &amp; Brunet (2019)</a></li>
+<li><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a></li>
+<li><a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">Seeber et al. (2019)</a></li>
+<li><a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a></li>
+<li><a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a></li>
 </ul>
 </div>
 <div class="sidebar-box">

@@ -426,6 +426,48 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 <div class="qa-body">
 <p><strong>問い：</strong>観測が変わると「復元できる対象（構造/状態/学習則）」が変わる。どの観測で何が識別可能か？</p>
 <p><strong>論点：</strong>時系列の速さ・空間分解能・因果介入のしやすさ・全脳カバレッジ・コスト</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>観測路線</th>
+<th>直接観測しているもの</th>
+<th>ここまでなら比較的強く言えること</th>
+<th>そのままでは残る潜在状態</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EEG / MEG</strong></td>
+<td>大域的に同期した電流の混合場です。</td>
+<td>ms スケールの状態遷移、周波数帯ごとの大域ダイナミクス、閉ループの時間制約を追えます。</td>
+<td>深部源の一意性、細胞型、神経修飾、グリア状態、現在のシナプス効率は直接は決まりません。</td>
+</tr>
+<tr>
+<td><strong>fMRI</strong></td>
+<td>血行動態の proxy です。</td>
+<td>領域スケールの recruitment、比較的遅い network state、同一個体内の広域 coverage を見やすいです。</td>
+<td>ms スケールの timing、興奮性/抑制性の分離、速い介入応答は直接は見えません。</td>
+</tr>
+<tr>
+<td><strong>ECoG / SEEG</strong></td>
+<td>留置部位の局所 field potential と介入応答です。</td>
+<td>被覆領域では局所ダイナミクス、刺激応答、比較的強い因果検証へ進めます。</td>
+<td>未留置領域、全脳 coverage、長期の state completeness は残ります。</td>
+</tr>
+<tr>
+<td><strong>connectomics + same-brain function</strong></td>
+<td>構造 scaffold と、同一脳での機能応答の対応です。</td>
+<td>局所回路の wiring rule、cell-type 依存の結線、構造と機能の局所対応を強くできます。</td>
+<td>現在のシナプス効率、神経修飾場、グリア/代謝状態、縦断的 plastic history はまだ別変数です。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>2026-03 補足：multimodal は「全部見えた」の同義語ではありません</strong>
+<p>
+Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et al. (2025) は、HD-EEG と intracranial ground truth を組み合わせると何が監査できるかを一段前進させました。一方、Dorkenwald et al. (2024)、MICrONS Consortium et al. (2025)、Gamlin et al. (2025)、Cahill et al. (2024) が示すのは、構造と局所機能を同じ脳で結びつけても、transcriptomic label、neuromodulatory field、glial network state のような状態クラスが追加で残る、という事実です。したがって、このページでは <strong>観測量が増えた</strong>ことと、<strong>WBE に必要な状態変数が十分に同定できた</strong>ことを分けて扱います。
+</p>
+</div>
 <p><strong>次に必要：</strong>同一の課題・同一個体で、マルチモーダル同時計測（可能な範囲）＋位置合わせ（M5）</p>
 </div>
 </details>
@@ -662,6 +704,12 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 <p><strong>問い：</strong>同じ観測を説明する別モデルが多数あるとき、どの仮定でどこまで絞り込めるか。不確実性は、センサー幾何、導電率、前処理、候補モデル集合、介入設計のどこから来るのか。</p>
 <p><strong>反証条件：</strong>小さな前処理差、導電率仮定、候補モデル空間の変更で結論が大きく反転する、あるいは held-out 摂動や外部基準で回収できない場合は、同定できたとはみなしません。</p>
 <p><strong>次に必要：</strong>事前分布/正則化だけでなく、<strong>比較した family と除外した family</strong>、<strong>電極幾何・頭部モデル・導電率の感度分析</strong>、<strong>シミュレーション/ファントム/侵襲較正</strong>、<strong>モデルが重なるときの棄権条件</strong>をまとめて公開し、頑健な結論だけを採用します。</p>
+<div class="note-box">
+<strong>2026-03 補足：相関・予測・同定を同じ強さで扱いません</strong>
+<p>
+直接妥当化つき EEG 文献は、慎重に読むとむしろ限界を明確にしています。Seeber et al. (2019) は 256ch scalp EEG で subcortical signal が <strong>条件付きで detectable</strong> だと示しましたが、一般的一意復元を主張していません。Unnwongse et al. (2023) は intracranial stimulation を用いた直接検証で localization error が conductivity 仮定と source depth に依存することを示し、Hao et al. (2025) は simultaneous HD-EEG/SEEG の 29 例で source power と source depth が誤差を大きく左右すると報告しました。したがって、cross-modal 相関や held-out 予測が出ても、それはまず <strong>predictability の上昇</strong>であり、<strong>内部状態の唯一解</strong>に直結するとは書きません。
+</p>
+</div>
 </div>
 </details>
 
@@ -1632,6 +1680,7 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 <li>Vorwerk, J., et al. (2014). Head volume conductor modeling guideline.</li>
 <li>Aydin, U., Vorwerk, J., K&uuml;pper, P., et al. (2019). Influence of head tissue conductivity uncertainties on EEG dipole reconstruction. <a href="https://doi.org/10.3389/fnins.2019.00531" target="_blank">doi:10.3389/fnins.2019.00531</a></li>
 <li>Mikulan, E., Russo, S., Bares, M., et al. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
+<li>Seeber, M., Cantonas, L.-M., Hoevels, M., et al. (2019). Subcortical electrophysiological activity is detectable with high-density EEG source imaging. <a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">doi:10.1038/s41467-019-08725-w</a></li>
 <li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Direct validation of EEG source imaging by intracranial electric stimulation in human patients. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
 <li>Hao, Y., Alhilani, M., Asano, E., et al. (2025). High-density scalp EEG source imaging and directed functional connectivity validated by simultaneous stereo-electroencephalography. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
 <li>Logothetis, N. K. (2008). Limits of fMRI inference.</li>
@@ -1687,7 +1736,10 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 <li>Kasthuri, N., et al. (2015). Saturated reconstruction of neocortex volume.</li>
 <li>Santello, M., et al. (2019). Astrocyte-neuron interactions.</li>
 <li>Ozcete, O. D., et al. (2024). Neuromodulatory volume transmission.</li>
-<li>Gamlin, C. R., et al. (2025). Transcriptomic-connectomic linkage.</li>
+<li>Dorkenwald, S., et al. (2024). Neuronal wiring diagram of an adult brain. <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">doi:10.1038/s41586-024-07558-y</a></li>
+<li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
+<li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
+<li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 </ol>
 
 <h3>H. 標準化・再現性・倫理・制度</h3>
