@@ -622,6 +622,54 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 connectome-complete は <strong>emulation-complete を意味しません</strong>。詳細な一次文献と、どの状態変数を最低提出物に入れるべきかの技術的根拠は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> に集約します。今回追加した <strong>内在興奮性 / 恒常性 set point</strong> の論点は、<a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に切り出してあります。
 </p>
 </div>
+<div class="note-box">
+<strong>2026-03 追補：列挙ではなく augmentation / ablation で出す</strong>
+<p>
+今回の再監査で見えた弱点は、状態変数を「抜けています」と列挙するだけでは、何を足したら一段強い claim になるのかが読者に伝わりにくいことでした。そこで本サイトでは、<strong>connectome-only baseline</strong> と <strong>追加変数つきモデル</strong> を同じ held-out 条件で比較し、どの augmentation がどの誤差項を減らしたのかを提出物として要求します。
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>augmentation claim</th>
+<th>最低限ほしい比較</th>
+<th>合格したときに一段強く言えること</th>
+<th>不合格時の読み替え</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>+ same-brain function / behavior</strong></td>
+<td>connectome-only baseline と、same-brain function / behavior を足したモデルを同じ split で比較すること。</td>
+<td>構造 atlas が、同一個体内の state-dependent response prediction にどこまで効くかを限定して言えます。</td>
+<td>構造 scaffold と annotation に留め、dynamical claim へは上げません。</td>
+</tr>
+<tr>
+<td><strong>+ transcriptomic / cell-type label</strong></td>
+<td>node label を外した条件との ablation、target specificity や held-out response の gain を出すこと。</td>
+<td>cell-type 情報が target-specific connectivity や応答予測をどれだけ改善したかを言えます。</td>
+<td>cell-type は記述的なタグに留め、threshold / gain / set point まで自動補完しません。</td>
+</tr>
+<tr>
+<td><strong>+ neuromodulatory proxy</strong></td>
+<td>cross-state 条件での predictive gain、proxy specificity、region / transmitter 限界、abstention を出すこと。</td>
+<td>覚醒度や transmitter-linked state を、限定つき covariate として使えると書けます。</td>
+<td>層別化・共変量としてのみ扱い、ground truth と言い換えません。</td>
+</tr>
+<tr>
+<td><strong>+ glial / slow-state</strong></td>
+<td>分オーダーの recovery、plasticity、perturbation aftermath で gain を示し、種差と cell-type 依存性を併記すること。</td>
+<td>slow network state や可塑性の一部を、glia を含む条件付きモデルとして読めます。</td>
+<td>neuron-only 近似の適用範囲を限定し、長期安定性 claim は降格します。</td>
+</tr>
+<tr>
+<td><strong>+ excitability / homeostatic recovery log</strong></td>
+<td>cross-day / cross-perturbation の held-out 劣化、recovery time、memory allocation proxy を出すこと。</td>
+<td>長期安定性や記憶配分に対して、controller 側の状態が効いたと一段強く言えます。</td>
+<td>短期の activity fit に留め、長期 claim と memory claim は latent state 付きに戻します。</td>
+</tr>
+</tbody>
+</table>
 </section>
 
 <section class="section" id="verification-rigor">
@@ -821,6 +869,14 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Lynn, C. W., et al. (2021). Broken detailed balance and entropy production in the human brain. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>
 <li>de la Fuente, L. A., et al. (2022). Temporal irreversibility of neural dynamics as a signature of consciousness. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
 <li>Ishihara, K., &amp; Shimazaki, H. (2025). State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics. <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
+<li>Lappalainen, J. K., Tschopp, F. D., Prakhya, S., et al. (2024). Connectome-constrained networks predict neural activity across the fly visual system. <a href="https://doi.org/10.1038/s41586-024-07939-3" target="_blank">doi:10.1038/s41586-024-07939-3</a></li>
+<li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
+<li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
+<li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
+<li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
+<li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
+<li>Vadisiute, A., Meijer, E., Therpurakal, R. N., et al. (2024). Glial cells undergo rapid changes following acute chemogenetic manipulation of cortical layer 5 projection neurons. <a href="https://doi.org/10.1038/s42003-024-06994-w" target="_blank">doi:10.1038/s42003-024-06994-w</a></li>
+<li>Hadzibegovic, N., et al. (2026). Early intrinsic excitability plasticity of neocortical engram neurons defines memory formation and precision. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">doi:10.1038/s41467-025-66975-3</a></li>
 <li>Nosek, B. A., et al. (2015). Promoting an open research culture. <a href="https://doi.org/10.1126/science.aab2374" target="_blank">doi:10.1126/science.aab2374</a></li>
 <li>Wilkinson, M. D., et al. (2016). The FAIR Guiding Principles. <a href="https://doi.org/10.1038/sdata.2016.18" target="_blank">doi:10.1038/sdata.2016.18</a></li>
 </ol>

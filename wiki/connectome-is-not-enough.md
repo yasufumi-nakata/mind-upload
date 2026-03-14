@@ -15,16 +15,19 @@ page_highlights:
   - "配線図だけでは落ちる論点を、6つの状態クラスと1つの推定上の壁に分けて整理します。"
   - "一次文献だけを使い、state variable の欠落と parameter degeneracy を切り分けます。"
   - "このサイトで connectome-complete と connectome-constrained model をどう読み替えるかの運用ルールも固定します。"
+  - "列挙で終わらせず、connectome-only から何を足したときに predictive gain が読めるかを augmentation / ablation で固定します。"
 known_points:
   - "全脳 connectome の作成は大きく前進していますが、それだけで動的再現が完了したとは言えません。"
   - "シナプス効率、遅延、神経修飾、グリア、細胞型ラベル、内在興奮性 / 恒常性 set point は、静的な edge list からは落ちやすい情報です。"
   - "粗い生理 proxy を ground truth と混同すると、内部状態の主張を過大化しやすくなります。"
   - "connectome-constrained なモデルでも、未測定の細胞・シナプス・修飾パラメータが残ると dynamics は縮退しえます。"
+  - "same-brain function、transcriptomics、neuromodulatory dynamics、glial slow state を足すと条件付き予測は改善しえますが、その改善は課題・時定数・外部妥当化条件に依存します。"
 unknown_points:
   - "どの状態クラスをどの解像度まで取れば WBE の十分条件に近づくかは未確定です。"
   - "欠落した状態変数をどこまで推定や coarse-graining で補えるかは、今後の検証課題です。"
   - "人で直接取得できない状態を、どの動物・侵襲系で較正すべきかはまだ固定されていません。"
   - "same-brain function を足したとき、どの程度まで縮退が解けるかもまだ系統的には定まっていません。"
+  - "どの augmentation の順序が、どの誤差項をもっとも効率よく減らすかは、まだ dataset ごとに変わります。"
 wiki_links:
   - label: "Wiki: WBEの基本"
     url: "/wiki/mind-upload-basics.html"
@@ -188,6 +191,67 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 </p>
 </section>
 
+<section class="section" id="augmentation-ablation">
+<h2 class="section-title">列挙で終わらせず、augmentation / ablation で比較する</h2>
+<p>
+現行サイトの弱点は、欠ける state variable を列挙できても、<strong>どの追加情報がどの誤差項を減らしたときに一段強い claim へ進めるのか</strong>が前面に出ていなかった点でした。2024-2026 年の一次文献は、connectome-only baseline から same-brain function、transcriptomic label、local transmitter dynamics、glial slow state、recovery log を足すと、改善の出方が別であることを示しています。したがって、このサイトでは <strong>state variable を「ある / ない」で数えるのではなく、augmentation / ablation で held-out predictive gain を比較する</strong>方針へ寄せます。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>比較段階</th>
+<th>追加する情報</th>
+<th>一次文献が示す改善</th>
+<th>それでも残る壁</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>connectome-only baseline</strong></td>
+<td>配線制約つき recurrent model と、学習で埋める未知パラメータです。</td>
+<td>Lappalainen らは fly visual system で広い活動予測を示し、Beiran と Litwin-Kumar は connectome を与えても未測定 biophysical parameter の違いで dynamics が大きく縮退しうることを示しました。</td>
+<td>connectome-only の成功は conditional activity prediction を前進させますが、内部状態の唯一解や state-complete reconstruction は依然として読めません。</td>
+</tr>
+<tr>
+<td><strong>+ same-brain function / behavior</strong></td>
+<td>同一個体で co-registered な機能計測と行動状態です。</td>
+<td>MICrONS は同じマウスで dense neural activity、EM connectome、pupil diameter、locomotion を結び、構造と state-dependent function を同一脳内で比較できる足場を作りました。</td>
+<td>mouse visual cortex の特定課題・特定状態での前進であり、全脳・全状態の一般化や hidden state の十分性までは保証しません。</td>
+</tr>
+<tr>
+<td><strong>+ transcriptomic / cell-type label</strong></td>
+<td>same-brain か近接条件での transcriptomic type と target specificity です。</td>
+<td>Gamlin らは predicted Sst transcriptomic types ごとに接続モチーフ、シナプス特性、髄鞘化が系統的に異なることを示し、node label の増分価値を具体化しました。</td>
+<td>within-type heterogeneity と morpho-electric variability は残るため、cell-type label を足しても threshold / gain / set point はまだ latent のままです。</td>
+</tr>
+<tr>
+<td><strong>+ local transmitter dynamics</strong></td>
+<td>局所 cholinergic axon activity や behavior-linked transmitter proxy です。</td>
+<td>Neyhart らは cortical ACh dynamics が cholinergic axon activity と behavioral state からかなり予測できる一方、近傍軸索からの距離と clearance kinetics で局所性が変わることを示しました。</td>
+<td>pupil / behavior / global arousal はなお coarse proxy であり、transmitter-specific・region-specific ground truth に自動昇格はできません。</td>
+</tr>
+<tr>
+<td><strong>+ glial / slow-state</strong></td>
+<td>astrocyte network state、microglia / synaptic-density 変化、分オーダーの slow response です。</td>
+<td>Cahill らは local transient neurotransmitter inputs が broad cortical astrocyte network に minutes-long に符号化されることを示し、Vadisiute らは acute chemogenetic manipulation 後に astrocyte・microglia・synaptic density が急速に変化することを示しました。</td>
+<td>slow state の寄与は cell type、課題、種差に依存し、ここを足しても即座に全脳 emulation には繋がりません。</td>
+</tr>
+<tr>
+<td><strong>+ perturbation / recovery of excitability-homeostasis</strong></td>
+<td>学習前後または介入後の intrinsic excitability、recovery time、memory allocation 指標です。</td>
+<td>Hadzibegovic らは、neocortical engram neurons の early intrinsic excitability plasticity が memory formation と precision を規定することを示し、recovery log を足す価値を具体化しました。</td>
+<td>engram-specific かつ early-window の証拠であり、全脳の長期 controller をこれだけで置き換えることはできません。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>このサイトでの合格条件</strong>
+<p>
+追加した state variable を「効いた」と書けるのは、少なくとも <strong>(a) connectome-only baseline</strong> と <strong>(b) 追加変数つき model</strong> を <strong>同じ split / 同じ held-out 条件</strong>で比べ、cross-state / cross-day / perturbation / recovery のどれかで predictive gain を示し、同時に <strong>proxy specificity</strong>、<strong>family / uncertainty</strong>、<strong>abstention</strong> を公開したときだけでございます。そこまで出ていなければ、本サイトでは annotation、stratification covariate、post hoc explanation のいずれかとして扱います。
+</p>
+</div>
+</section>
+
 <section class="section" id="site-rules">
 <h2 class="section-title">このサイトで採用する読み替えルールと最低提出物</h2>
 <div class="key-points">
@@ -195,6 +259,7 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <ul>
 <li><strong>connectome-complete：</strong>構造アトラス、候補 scaffold、圧縮の出発点として扱います。L2/L3 の emulation 達成とは書きません。</li>
 <li><strong>connectome-constrained model：</strong>まずは hypothesis engine / conditional model として扱います。内部状態の唯一解とは書きません。</li>
+<li><strong>augmentation / ablation：</strong>connectome-only baseline を置かずに、「追加した state variable が効いた」とは書きません。</li>
 <li><strong>intrinsic excitability / homeostatic set point：</strong>cell-type ラベルや短時間の活動一致から自動推定されたことにはしません。測っていなければ latent state と書きます。</li>
 <li><strong>pupil / HRV：</strong>人データでは有用な state covariate ですが、トランスミッタ特異的 ground truth としては扱いません。</li>
 <li><strong>state variable が無いとき：</strong>推定したなら誤差と棄権条件を、推定していないなら absent と明記します。</li>
@@ -214,6 +279,10 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <tr>
 <td><strong>構造 atlas / scaffold</strong></td>
 <td>coverage、segmentation caveat、synapse count の扱い、cell-type ラベルの有無を明記します。</td>
+</tr>
+<tr>
+<td><strong>state-variable augmentation claim</strong></td>
+<td>connectome-only baseline、同じ split / held-out 条件での predictive gain、ablation 結果、proxy specificity、family / uncertainty、abstention を併記します。</td>
 </tr>
 <tr>
 <td><strong>条件付き dynamical claim</strong></td>
@@ -245,6 +314,8 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <em>Cell Reports</em>, 43(10), 114808. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
 <li>Adamsky, A., et al. (2018). Astrocytic activation generates de novo neuronal potentiation and memory enhancement. <em>Nature Neuroscience</em>, 21, 1725–1733. <a href="https://doi.org/10.1038/s41593-018-0253-6" target="_blank">doi:10.1038/s41593-018-0253-6</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <em>Nature</em>, 629, 146–153. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
+<li>Vadisiute, A., Meijer, E., Therpurakal, R. N., et al. (2024). Glial cells undergo rapid changes following acute chemogenetic manipulation of cortical layer 5 projection neurons. <em>Communications Biology</em>, 7, 1498. <a href="https://doi.org/10.1038/s42003-024-06994-w" target="_blank">doi:10.1038/s42003-024-06994-w</a></li>
+<li>Hadzibegovic, N., et al. (2026). Early intrinsic excitability plasticity of neocortical engram neurons defines memory formation and precision. <em>Nature Communications</em>, 17, 291. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">doi:10.1038/s41467-025-66975-3</a></li>
 </ol>
 </section>
 
