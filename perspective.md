@@ -293,13 +293,13 @@ WBE 101 のあとに、なぜこの長文ノートへ進むのか、誤解整理
 <p>この結果を受け、本サイトでは特定の理論を教条的に支持する立場を取り下げる。ここで重要なのは、IITが<strong>「現象的意識（Phenomenal Consciousness）」</strong>の構造を説明しようとするのに対し、FEPや予測符号化はシステムが外界に適応するための<strong>「機能的プロセス（Functional Process）」</strong>を記述する理論であるというカテゴリーの違いを認識することである。</p>
 <p>我々は、両者を対立するものとしてではなく、以下の役割分担で統合する。</p>
 <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; line-height: 1.6;">
-<li style="margin-bottom: 6px;"><strong>Phenomenal Layer (IIT 4.0):</strong> 意識の「質（Qualia）」や「統合性」を評価するための理論的「ものさし」として参照する（ただし実装上の計算負荷はPCI-ST等で近似する）。</li>
-<li style="margin-bottom: 6px;"><strong>Functional Layer (FEP/Active Inference):</strong> その意識を生み出す基盤システムの「実装原理」として採用する。</li>
+<li style="margin-bottom: 6px;"><strong>Phenomenal Layer (IIT 4.0):</strong> 意識の「質（Qualia）」や「統合性」を評価するための理論的「ものさし」として参照する。ただし、PCI-ST 等は計算可能な proxy であり、IIT の直接代用ではありません。</li>
+<li style="margin-bottom: 6px;"><strong>Functional Layer (FEP/Active Inference):</strong> その意識を生み出す基盤システムを考える候補理論の一つとして参照する。ただし、実装原理は Active Inference に固定せず、複数モデルで競わせます。</li>
 </ul>
 
 <p>また、IIT批判である「Unfolding Argument」（Doerig et al., 2019<sup><a href="#ref-40">[40]</a></sup>）—機能的に等価なフィードフォワード網がΦ=0となり意識を持たないとされる問題—に対し、本プロジェクトは単なる「機能の模倣」を超えた要件を課す。具体的には、「因果構造の保存（Causal Structure Preservation）」を、<strong>マルコフブランケット（Markov Blanket）</strong><sup><a href="#ref-77">[77]</a></sup>の境界条件として厳密に定義する。</p>
 <p>
-ここで重要となるのは、デジタルエミュレーションと生物学的基盤の間の情報交換における<strong>「帯域幅」と「遅延」の閾値</strong>である。我々は、意識の質的変化（Qualitative shift）を引き起こさない条件として、生物学的統合時間窓（Integration Time Window, e.g., 10-100ms）以下の遅延と、神経結合の平均情報伝達容量以上の帯域幅を維持することを、物理的・工学的な制約条件として設定する。さらに、Laukkonen et al. (2025)<sup><a href="#ref-76">[76]</a></sup>が提唱する<strong>「生成モデルの反実仮想的等価性（Counterfactual Equivalence）」</strong>—システムが「もし〜だったら」という分岐構造を正しく再現できるか—を、WBEの本人性（Identity）の必要条件として検証プロセスに組み込む。
+ここで重要となるのは、デジタルエミュレーションと生物学的基盤の間の情報交換における<strong>帯域幅・遅延・ジッタ</strong>を、課題ごとに実測し監査することでございます。閉ループ系に単一の普遍閾値を先に固定することはできず、「10-100ms」はあくまで神経ダイナミクスを考える際のヒューリスティックに留まります。したがって本プロジェクトでは、end-to-end の latency budget と failure mode を先に公開し、そのうえで Laukkonen らの<strong>反実仮想的等価性</strong><sup><a href="#ref-76">[76]</a></sup>を、必要条件の断言ではなく<strong>検証課題を設計するための仮説</strong>として使います。
 </p>
 </div>
 </div>
@@ -335,29 +335,66 @@ href="#ref-8">[8]</a></sup>に加え、近年の全脳アーキテクチャ構�
 href="#ref-7">[7]</a></sup>や大規模シミュレーション計画（Blue Brain等）<sup><a
 href="#ref-16">[16]</a></sup>の知見を踏まえた整理である。</p>
 
+<div class="note-box">
+<strong>2026-03 文献監査で、この節の書き方を改めた理由</strong>
+<p>従来の本文では、Block-Champagne、Active Inference、PCI、TDA、熱力学ログのように性質の異なる要素を、やや近い重みで並べていました。しかし、EEG source imaging の直接妥当化研究、TMS-EEG の推奨事項、理論論文を突き合わせると、現時点で共通コアに置けるのは <strong>透明な報告</strong>、<strong>forward model と電極幾何の開示</strong>、<strong>外部基準つき妥当化</strong>、<strong>OOD/摂動/棄権の設計</strong> でございます。特定 solver、特定理論、熱力学指標は、条件付きまたは探索トラックとして扱うのが妥当です<sup><a href="#ref-78">[78]</a></sup><sup><a href="#ref-79">[79]</a></sup><sup><a href="#ref-90">[90]</a></sup><sup><a href="#ref-100">[100]</a></sup>。</p>
+</div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>論点</th>
+<th>修正前に弱かった点</th>
+<th>2026-03 時点で妥当な整理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EEG source imaging</strong></td>
+<td>アルゴリズム名を前面に出しすぎていました。</td>
+<td>コア要件は外部妥当化・不確実性報告・導電率感度分析であり、Block-Champagne 等は有望候補です<sup><a href="#ref-78">[78]</a></sup><sup><a href="#ref-79">[79]</a></sup><sup><a href="#ref-101">[101]</a></sup>。</td>
+</tr>
+<tr>
+<td><strong>Perturbation / PCI</strong></td>
+<td>PCI を ground truth に近く書いていました。</td>
+<td>PCI/PCI-ST は強い外部 benchmark 候補ですが、TMS-EEG の厳密な刺激・アーチファクト管理が前提で、普遍 KPI ではありません<sup><a href="#ref-90">[90]</a></sup><sup><a href="#ref-100">[100]</a></sup>。</td>
+</tr>
+<tr>
+<td><strong>Active Inference / Counterfactual Equivalence</strong></td>
+<td>検証済み中心指標のように読める書き方でした。</td>
+<td>現時点では理論駆動の仮説源・モデル族として使い、OOD 一般化、介入、モデル競争で絞る段階です<sup><a href="#ref-76">[76]</a></sup><sup><a href="#ref-80">[80]</a></sup>。</td>
+</tr>
+<tr>
+<td><strong>Criticality / TDA / Irreversibility</strong></td>
+<td>コア指標に近い扱いが残っていました。</td>
+<td>複雑性や臨界性は promising ですが、現時点では補助解析として提出し、主要判定はより監査しやすい指標束で行います<sup><a href="#ref-52">[52]</a></sup><sup><a href="#ref-56">[56]</a></sup><sup><a href="#ref-92">[92]</a></sup>。</td>
+</tr>
+</tbody>
+</table>
+
 <div class="stage-list">
 <div class="stage-item" id="proposal-46">
 <div class="stage-number"></div>
 <div class="stage-body">
 <h4>1. 計測（Sensing）：脳活動の精密な読み取りと不確実性の定量化</h4>
 <p>高時間分解能を持つ脳波（EEG）はWBEの有力な入力信号ですが、その空間分解能の低さは根本的な課題です。脳波源推定（ESI）は、この課題を解決する計算論的アプローチですが、これは本質的に解が一意に定まらない<strong>不良設定問題（ill-posed problem）</strong>です<sup><a href="#ref-5">[5]</a></sup>。WBEのような極めて高い信頼性が求められる工学的目標において、従来の最小ノルム法（MNE）やdSPMのような点推定（Point Estimate）に依存することは、推定誤差をシステム全体に伝播させるリスクがあります。</p>
-<p>この問題に対処するため、本プロジェクトでは<strong>経験ベイズ（Empirical Bayes）を用いた完全な事後分布の推定</strong>へと移行し、以下のプロトコルを標準採用します。</p>
+<p>この問題に対して、現時点で固定すべきなのは <strong>solver 名</strong> ではなく <strong>証拠鎖</strong> でございます。経験ベイズ系<sup><a href="#ref-78">[78]</a></sup>や高密度 EEG は有力な改善候補ですが、EEG-BIDS に沿った報告<sup><a href="#ref-26">[26]</a></sup>、電極座標と forward model の開示、導電率不確実性の感度分析<sup><a href="#ref-79">[79]</a></sup>、外部基準つき妥当化が先に満たされなければ、特定手法を「標準」とは呼びません。</p>
 <ul
 style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; line-height: 1.6;">
 <li style="margin-bottom: 8px;">
-<strong>高密度EEGとベイズ推定の位置づけ：</strong>Block-Champagne Framework<sup><a href="#ref-78">[78]</a></sup>、高密度EEG、個体別MRIに基づく有限要素法（FEM）フォワードモデルは、推定の条件を改善する重要な要素です。しかし、これらを入れても逆問題の非一意性は消えず、深部脳活動の精密な復元が保証されるわけではありません。したがって本プロジェクトでは、これらを<strong>保証の根拠</strong>ではなく、<strong>誤差を狭めるための前提条件</strong>として扱います。
+<strong>高密度EEGとベイズ推定の位置づけ：</strong>Block-Champagne Framework<sup><a href="#ref-78">[78]</a></sup>、高密度 EEG、個体別 MRI に基づく FEM/BEM フォワードモデルは、推定条件を改善する重要な要素です。ただし、頭蓋骨による空間平滑化と逆問題の非一意性は残るため、センサー密度を上げても source uniqueness は保証されません<sup><a href="#ref-101">[101]</a></sup>。したがって本プロジェクトでは、これらを<strong>保証の根拠</strong>ではなく、<strong>誤差源を狭めるための前提条件</strong>として扱います。
 </li>
 <li style="margin-bottom: 8px;">
 <strong>不確実性の可視化と外部妥当化：</strong>推定された脳活動マップには、振幅だけでなく<strong>「信頼区間（Credible Intervals）」</strong>または事後分布の集中度を併記し、不確実性が高い領域を明示します。さらに、シミュレーション、ファントム、同時侵襲記録、頭蓋内刺激などの外部基準に対して、どの条件でどこまで誤差が減ったかを報告しない限り、「改善した」とは呼びません。
 </li>
 <li style="margin-bottom: 8px;">
-<strong>順問題の不確実性と誤差伝播：</strong>頭部組織（特に頭蓋骨）の導電率や形状の誤差を確率変数として扱う<strong>順問題の不確実性モデリング</strong><sup><a href="#ref-79">[79]</a></sup>を導入し、最終的なソース活動の事後分布に誤差を伝播させることで、結果のロバスト性を真に評価可能にします。
+<strong>順問題の不確実性と誤差伝播：</strong>頭部組織（特に頭蓋骨）の導電率や形状の誤差は定位誤差へ直接効くため<sup><a href="#ref-79">[79]</a></sup>、少なくとも感度分析または範囲評価を提出物へ含めます。フル確率モデリングは有力ですが、2026-03 時点では共通必須ではなく、まずは誤差範囲を第三者が監査できることを優先します。
 </li>
 </ul>
 <div class="tag-list" style="margin-top: 12px;">
-<span class="tag">Block-Champagne</span>
-<span class="tag">Empirical Bayes</span>
-<span class="tag">Credible Intervals</span>
+<span class="tag">External Validation</span>
+<span class="tag">Forward Model Audit</span>
+<span class="tag">Sensitivity Analysis</span>
 <span class="tag">Uncertainty Quantification</span>
 </div>
 </div>
@@ -366,21 +403,21 @@ style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; li
 <div class="stage-number"></div>
 <div class="stage-body">
 <h4>2. 解読（Decoding）：能動的推論と反実仮想的等価性の導入</h4>
-<p>「解読」のセクションにおいて、従来のデコーディング技術（Mind Captioning等）は「相関」に基づくマッピングに過ぎません。WBEにおける「本人性の保存」には、単なる入出力の模倣（哲学的ゾンビ）を超えた、<strong>因果構造の等価性</strong>の証明が必要です。</p>
-<p>本プロジェクトでは、Laukkonen et al. (2025) が提唱する<strong>「反実仮想的等価性（Counterfactual Equivalence）」</strong><sup><a href="#ref-76">[76]</a></sup>を、同一性検証の中心的指標として採用します。</p>
+<p>「解読」のセクションにおいて、従来のデコーディング技術（Mind Captioning等）は「相関」に基づくマッピングに過ぎません。WBE に近い主張へ進むには、単なる入出力模倣ではなく、未学習条件、介入条件、失敗条件を含む<strong>生成的な予測性能</strong>を示す必要があります。ただし、ここで必要なのは一つの理論を正解として固定することではなく、複数の生成モデルを比較可能な形で並べることでございます。</p>
+<p>Laukkonen らの<strong>「反実仮想的等価性（Counterfactual Equivalence）」</strong><sup><a href="#ref-76">[76]</a></sup>や、active inference 系の議論<sup><a href="#ref-80">[80]</a></sup>は、何を test すべきかを設計するうえで有用です。しかし 2026-03 時点では、これ自体が共通の受け入れ基準になったわけではありません。本ページでは、OOD 一般化、摂動応答、校正、棄権、代替モデル報告を束ねる<strong>設計仮説</strong>として扱います。</p>
 <ul
 style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; line-height: 1.6;">
 <li style="margin-bottom: 8px;">
-<strong>能動的推論（Active Inference）の統合：</strong>脳を受動的なデコーダーではなく、環境に対して働きかける<strong>「能動的推論エージェント」</strong>としてモデル化します<sup><a href="#ref-80">[80]</a></sup>。
+<strong>能動的推論（Active Inference）の位置づけ：</strong>脳を受動的デコーダーではなく、環境に働きかける生成モデルとして捉える枠組みは有力です<sup><a href="#ref-80">[80]</a></sup>。ただし本プロジェクトでは、これを唯一の実装原理とはせず、DCM、状態空間モデル、SCM を含む <strong>model competition</strong> の一候補として扱います。
 </li>
 <li style="margin-bottom: 8px;">
-<strong>チューリング・テストの拡張（因果的摂動プロトコル）：</strong>静的な反実仮想の検証は不可能であるため、**「チューリング・テストを拡張した因果的摂動プロトコル（Causal Perturbation Protocol）」**を具体化する。TMS等による物理的摂動に対する生物学的脳の反応と、エミュレーション上の仮想的摂動に対する反応の統計的同一性を検証する指標（例：Perturbational Complexity Index, PCI）を導入し、動的な因果構造の一致を確認する。
+<strong>チューリング・テストの拡張（因果的摂動プロトコル）：</strong>静的な反実仮想の検証は不可能であるため、「チューリング・テストを拡張した因果的摂動プロトコル（Causal Perturbation Protocol）」を具体化します。TMS 等による物理的摂動に対する生物学的脳の反応と、エミュレーション上の仮想的摂動に対する反応分布を比較しますが、PCI はその際の <strong>外部 benchmark の一つ</strong> であり、ground truth そのものではありません<sup><a href="#ref-90">[90]</a></sup><sup><a href="#ref-100">[100]</a></sup>。
 </li>
 </ul>
 <div class="tag-list" style="margin-top: 12px;">
-<span class="tag">Counterfactual Equivalence</span>
-<span class="tag">Active Inference</span>
-<span class="tag">Generative Model</span>
+<span class="tag">Model Competition</span>
+<span class="tag">OOD Generalization</span>
+<span class="tag">Perturbation</span>
 <span class="tag">Causal Structure</span>
 </div>
 </div>
@@ -389,24 +426,24 @@ style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; li
 <div class="stage-number"></div>
 <div class="stage-body">
 <h4>3. 実装（Implementation）：IIT 4.0 の計算論的限界と代替指標の検討</h4>
-<p>本プロジェクトは従来、統合情報理論（IIT 4.0）を主要な理論基盤としてきましたが、その最大の問題である<strong>計算量の爆発（NP困難）</strong>と、デジタル基盤における「内因的実在」の定義の曖昧さに対処する必要があります。IITを教条的に支持するのではなく、2025年の<strong>「Adversarial Collaboration」の結果</strong><sup><a href="#ref-54">[54]</a></sup>を踏まえた、より現実的な実装指標へと拡張します。</p>
+<p>本プロジェクトは従来、統合情報理論（IIT 4.0）を主要な理論基盤としてきましたが、その最大の問題である<strong>計算量の爆発（NP困難）</strong>と、デジタル基盤における「内因的実在」の定義の曖昧さに対処する必要があります。IIT を教条的に支持するのではなく、2025 年の<strong>「Adversarial Collaboration」の結果</strong><sup><a href="#ref-54">[54]</a></sup>を踏まえ、<strong>主判定</strong> と <strong>補助解析</strong> を分けた実装指標へ整理します。</p>
 <ul
 style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; line-height: 1.6;">
 <li style="margin-bottom: 8px;">
-<strong>計算可能な近似指標の採用：</strong>Φ（統合情報量）の直接計算はシステム規模に対して指数関数的に困難です。そのため、<strong>摂動複雑性指標（PCI-ST）</strong>や、大規模言語モデル（LLM）等でも適用可能な<strong>低次元埋め込みによる近似手法</strong><sup><a href="#ref-81">[81]</a></sup>を工学的目標に据えます。
+<strong>計算可能な近似指標の位置づけ：</strong>Φ（統合情報量）の直接計算はシステム規模に対して指数関数的に困難です。そのため、PCI-ST や低次元埋め込みによる近似手法<sup><a href="#ref-81">[81]</a></sup>は<strong>工学的 proxy</strong>としては有用ですが、意識や同一性の直接代用としては扱いません。
 </li>
 <li style="margin-bottom: 8px;">
-<strong>神経活動多様体の幾何学的比較（Neural Manifold Geometry）：</strong>PCI等のスカラー値指標だけでは、意識の「質的な構造（Qualitative Structure）」の同一性を保証できない。本プロジェクトでは、グラフ理論的指標（Small-worldness等）に加え、<strong>位相的データ解析（TDA）</strong>、特に<strong>パーシステント・ホモロジー（Persistent Homology）</strong>を導入する。神経活動多様体のアトラクタ構造の「穴（サイクル）」やベッティ数を比較し、<strong>Bottleneck distance</strong>で生体脳とエミュレーション間のトポロジー距離を定量化することで、IITの因果構造保存との数学的対応を強化する。
+<strong>神経活動多様体の幾何学的比較（Neural Manifold Geometry）：</strong>PCI 等のスカラー値だけでは見えない構造差を拾うため、グラフ指標や TDA、パーシステント・ホモロジーを<strong>補助解析</strong>として導入します。ただし、解釈の一貫性とノイズ安定性はまだ十分標準化されていないため、主要な合否判定はより単純で監査しやすい指標へ置きます。
 </li>
 <li style="margin-bottom: 8px;">
-<strong>熱力学的制約の導入：</strong>デジタルエミュレーションにおける意識の維持条件として、情報の散逸構造や熱力学的不可逆性を考慮した<strong>「物理的基盤の要件」</strong>を明文化します。意識が非平衡開放系における散逸構造として維持されていることを踏まえ、エミュレーションにおける因果的力の密度やエネルギー効率が生物学的制約を満たすかを検証します。
+<strong>熱力学的制約の導入：</strong>計算コストと物理コストを分けて監査する発想は維持しますが、不可逆性や entropy production は現時点では<strong>探索的補助ログ</strong>でございます。粗視化 neural data から得る量を、そのまま微視的散逸や意識の必要条件と同一視してはなりません<sup><a href="#ref-92">[92]</a></sup>。
 </li>
 </ul>
 <div class="tag-list" style="margin-top: 12px;">
 <span class="tag">IIT 4.0 Limits</span>
-<span class="tag">PCI-ST</span>
-<span class="tag">Thermodynamics</span>
-<span class="tag">Dissipative Structures</span>
+<span class="tag">Evidence Tiers</span>
+<span class="tag">Exploratory Metrics</span>
+<span class="tag">Resource Audits</span>
 </div>
 </div>
 </div>
@@ -687,17 +724,17 @@ href="#ref-49">[49]</a></sup>
 </li>
 </ol>
 
-<h3>コア発想：I/O「揺らぎ」を計測可能な量へ</h3>
-<p>本サイトでは、意識を情報処理の「揺らぎ」と捉える直観を、査読耐性の高い定量指標へ接続するために、次の三つを中核に据える。</p>
+<h3>主要 readout 候補：I/O「揺らぎ」をどう計測するか</h3>
+<p>本サイトでは、意識を情報処理の「揺らぎ」と捉える直観を、査読耐性の高い定量指標へ接続するために、次の三系統を <strong>候補 readout</strong> として追跡します。ただし、これらを単独の pass/fail 指標には置かず、OOD 一般化、摂動応答、棄権、不確実性と束で読みます。</p>
 <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; line-height: 1.6;">
 <li style="margin-bottom: 8px;"><strong>複雑性（complexity）</strong>：安静時EEGのLZ複雑性など、状態依存で変化する指標<sup><a
-href="#ref-50">[50]</a></sup></li>
+href="#ref-50">[50]</a></sup>。状態差を拾いやすい一方で、単独では因果構造や同一性を保証しません。</li>
 <li style="margin-bottom: 8px;"><strong>摂動応答の複雑性（perturbational
 complexity）</strong>：刺激に対する状態遷移・次元圧縮に基づく指標（PCI/PCI-ST）<sup><a
-href="#ref-47">[47]</a></sup><sup><a href="#ref-51">[51]</a></sup></li>
+href="#ref-47">[47]</a></sup><sup><a href="#ref-51">[51]</a></sup>。強い benchmark 候補ですが、TMS-EEG や刺激設計の条件管理を外すと解釈が不安定になります<sup><a href="#ref-100">[100]</a></sup>。</li>
 <li style="margin-bottom: 8px;">
-<strong>臨界性（criticality）</strong>：脳活動が秩序と無秩序の境界、いわゆる「カオスの縁（edge-of-chaos）」に位置することで、複雑性と摂動感受性が最大化される力学状態。安静時EEGの臨界性指標が、意識レベルや意識能力を予測する強力な候補となっている<sup><a
-href="#ref-52">[52]</a>, <a href="#ref-56">[56]</a></sup>。
+<strong>臨界性（criticality）</strong>：脳活動が秩序と無秩序の境界、いわゆる「カオスの縁（edge-of-chaos）」に位置することで、複雑性と摂動感受性が最大化される力学状態。安静時EEGの臨界性指標が、意識レベルや意識能力を予測する有望候補となっている<sup><a
+href="#ref-52">[52]</a>, <a href="#ref-56">[56]</a></sup>一方で、病態・装置・課題をまたいだ一般化と因果的解釈はまだ十分固定されていません。
 </li>
 </ul>
 <p>この枠組みでは、I/Oは次のように読み替えられる：<strong>I（Input）＝摂動（刺激・介入）</strong>、<strong>O（Output）＝脳の複雑性応答</strong>、そしてその背景として<strong>臨界性</strong>を扱う。
@@ -886,10 +923,10 @@ href="#ref-54">[54]</a></sup>。</p>
 <div class="stage-number">56</div>
 <div class="stage-body">
 <h4>識別可能性と因果介入（PCI / do-calculus）</h4>
-<p>反実仮想の検証は観測だけでは不可能であり、介入データが必要。PCI（TMS-EEGに基づく摂動複雑性）をGround Truthの参照点とし、介入に対する応答分布の一致を検証する。</p>
+<p>反実仮想の検証は観測だけでは不可能であり、介入データが必要です。PCI（TMS-EEG に基づく摂動複雑性）は、そのときに使える<strong>外部 benchmark の一つ</strong>ですが、ground truth そのものではありません。刺激部位、強度、聴覚マスキング、筋電・刺激アーチファクト窓などの TMS-EEG 推奨事項を満たした場合に限り、介入に対する応答分布の比較基準として用います<sup><a href="#ref-90">[90]</a></sup><sup><a href="#ref-100">[100]</a></sup>。</p>
 <ul>
 <li>因果階層は「観測・介入・反実仮想」の3層で構成される<sup><a href="#ref-91">[91]</a></sup></li>
-<li>PCIはTMS-EEG応答の複雑性を用いた意識指標として提案されている<sup><a href="#ref-90">[90]</a></sup></li>
+<li>PCIはTMS-EEG応答の複雑性を用いた意識指標として提案されているが、OOD 条件、校正、棄権条件と併用して読む必要があります<sup><a href="#ref-90">[90]</a></sup></li>
 </ul>
 <p><a href="issue.html#proposal-integration">→ 提案状態と外部依存の整理は貢献ガイドへ</a></p>
 </div>
@@ -1168,11 +1205,11 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <li id="ref-71" value="71">Zanichelli, N., et al. (2025). State of Brain Emulation Report 2025. <em>arXiv:2510.15745</em>.</li>
 <li id="ref-73" value="73">Koulouri, A. (2025). Bayesian model parameter learning in linear inverse problems. <em>Machine Learning: Science and Technology</em>.</li>
 <li id="ref-74" value="74">Nzakuna, P. S., et al. (2025). Monte Carlo-based Strategy for Assessing the Impact of EEG Data Uncertainty. <em>IEEE Transactions on Instrumentation and Measurement</em>.</li>
-<li id="ref-76" value="76">Laukkonen, R., Friston, K., & Chandaria, S. (2025). A beautiful loop: An active inference theory of consciousness. <em>Neuroscience & Biobehavioral Reviews</em>.</li>
+<li id="ref-76" value="76">Laukkonen, R. E., Friston, K., & Chandaria, S. (2025). A beautiful loop: An active inference theory of consciousness. <em>Neuroscience & Biobehavioral Reviews</em>, 183, 106296. <a href="https://doi.org/10.1016/j.neubiorev.2025.106296">doi:10.1016/j.neubiorev.2025.106296</a></li>
 <li id="ref-77" value="77">Clark, A. (2013). The Mark of the Mental: In Search of the Markov Blanket. In: <em>The Mark of the Mental</em>. Oxford University Press.</li>
-<li id="ref-78" value="78">Feng, Z., et al. (2025). Block-Champagne: A Novel Bayesian Framework for Accurate EEG Source Imaging with Uncertainty Quantification. <em>NeuroImage</em>.</li>
-<li id="ref-79" value="79">Medani, T., et al. (2025). Forward and inverse solvers in multi-modal neuroimaging: Accounting for tissue conductivity uncertainties. <em>Frontiers in Human Neuroscience</em>.</li>
-<li id="ref-80" value="80">Hohwy, J., et al. (2025). On the Minimal Theory of Consciousness Implicit in Active Inference. <em>Journal of Mathematical Psychology</em>.</li>
+<li id="ref-78" value="78">Feng, Z., et al. (2025). Block-Champagne: Imaging Extended E/MEG Source Activation with Empirical Bayesian Uncertainty Quantification. <em>IEEE Transactions on Medical Imaging</em>. <a href="https://doi.org/10.1109/TMI.2025.3642620">doi:10.1109/TMI.2025.3642620</a></li>
+<li id="ref-79" value="79">Aydin, U., Vorwerk, J., Küpper, P., et al. (2019). Influence of Head Tissue Conductivity Uncertainties on EEG Dipole Reconstruction. <em>Frontiers in Neuroscience</em>, 13, 531. <a href="https://doi.org/10.3389/fnins.2019.00531">doi:10.3389/fnins.2019.00531</a></li>
+<li id="ref-80" value="80">Whyte, C. J., Hohwy, J., Baltieri, M., et al. (2025). On the minimal theory of consciousness implicit in active inference. <em>Physics of Life Reviews</em>. <a href="https://doi.org/10.1016/j.plrev.2025.11.002">doi:10.1016/j.plrev.2025.11.002</a></li>
 <li id="ref-81" value="81">Li, J., et al. (2025). Computational complexity reduction in Integrated Information Theory via low-dimensional embedding. <em>Chaos, Solitons & Fractals</em>.</li>
 <li id="ref-82" value="82">Cai, C., et al. (2021). Robust estimation of noise for electromagnetic brain imaging with the Champagne algorithm. <em>NeuroImage</em>.</li>
 <li id="ref-83" value="83">Pernet, C. R., Appelhoff, S., Gorgolewski, K. J., et al. (2019). EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. <em>Scientific Data</em>, 6, 103. <a href="https://doi.org/10.1038/s41597-019-0104-8">doi:10.1038/s41597-019-0104-8</a></li>
@@ -1192,6 +1229,8 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <li id="ref-97" value="97">Hoel, E., Albantakis, L., & Tononi, G. (2016). Can the macro beat the micro? Integrated information across spatiotemporal scales. <em>Neuroscience</em>, 311, 393–401. <a href="https://doi.org/10.1016/j.neuroscience.2016.09.049">doi:10.1016/j.neuroscience.2016.09.049</a></li>
 <li id="ref-98" value="98">Seifert, U. (2012). Stochastic thermodynamics, fluctuation theorems and molecular machines. <em>Reports on Progress in Physics</em>, 75(12), 126001. <a href="https://doi.org/10.1088/0034-4885/75/12/126001">doi:10.1088/0034-4885/75/12/126001</a></li>
 <li id="ref-99" value="99">Staniek, M. & Lehnertz, K. (2008). Symbolic Transfer Entropy. <em>Physical Review Letters</em>, 100(15), 158101. <a href="https://doi.org/10.1103/PhysRevLett.100.158101">doi:10.1103/PhysRevLett.100.158101</a></li>
+<li id="ref-100" value="100">Hernandez-Pavon, J. C., Metsomaa, J., Mutanen, T. P., et al. (2023). TMS combined with EEG: Recommendations and open issues. <em>Brain Stimulation</em>, 16(2), 350–366. <a href="https://doi.org/10.1016/j.brs.2023.02.009">doi:10.1016/j.brs.2023.02.009</a></li>
+<li id="ref-101" value="101">Srinivasan, R., Nunez, P. L., Tucker, D. M., Silberstein, R. B., & Cadusch, P. J. (1996). Spatial sampling and filtering of EEG with spline Laplacians to estimate cortical potentials. <em>Brain Topography</em>, 8(4), 355–366. <a href="https://doi.org/10.1007/BF01186911">doi:10.1007/BF01186911</a></li>
 </ol>
 </section>
 
