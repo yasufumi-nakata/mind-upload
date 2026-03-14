@@ -289,7 +289,7 @@ recommended_pages:
 </tr>
 <tr>
 <td><strong>信頼区間や不確実性の読み方で止まる</strong></td>
-<td><a href="uncertainty-confidence-and-abstention.html">不確実性・信頼区間・棄権</a></td>
+<td><a href="uncertainty-confidence-and-abstention.html">不確実性・校正・棄権</a></td>
 <td><a href="../eeg_101.html">EEG入門</a> / <a href="../verification.html">検証基盤</a></td>
 </tr>
 <tr>
@@ -479,7 +479,7 @@ recommended_pages:
 </tr>
 <tr>
 <td>点推定、区間、不確実性伝播、棄権</td>
-<td><a href="uncertainty-confidence-and-abstention.html">不確実性・信頼区間・棄権</a></td>
+<td><a href="uncertainty-confidence-and-abstention.html">不確実性・校正・棄権</a></td>
 </tr>
 <tr>
 <td>EEG、MEG、fMRI、ECoG、MRI の補完関係</td>
@@ -542,7 +542,7 @@ recommended_pages:
 <li><a href="event-sync-and-measurement-logs.html">イベント同期と観測ログの基本 →</a></li>
 <li><a href="observation-to-estimation.html">観測から推定へ →</a></li>
 <li><a href="counterfactual-and-perturbation-verification.html">反事実・介入・摂動の検証 →</a></li>
-<li><a href="uncertainty-confidence-and-abstention.html">不確実性・信頼区間・棄権 →</a></li>
+<li><a href="uncertainty-confidence-and-abstention.html">不確実性・校正・棄権 →</a></li>
 <li><a href="multimodal-integration-basics.html">マルチモーダル統合の基本 →</a></li>
 <li><a href="identity-and-continuity-tests.html">本人性評価と連続性テスト →</a></li>
 <li><a href="baselines-prereg-and-model-cards.html">ベースライン・事前登録・モデルカード →</a></li>

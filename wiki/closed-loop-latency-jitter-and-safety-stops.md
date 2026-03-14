@@ -27,7 +27,7 @@ wiki_links:
   - label: "Wiki: イベント同期と観測ログ"
     url: "/wiki/event-sync-and-measurement-logs.html"
     description: "遅延、ジッタ、ドリフトを何として残すかを補います。"
-  - label: "Wiki: 不確実性・信頼区間・棄権"
+  - label: "Wiki: 不確実性・校正・棄権"
     url: "/wiki/uncertainty-confidence-and-abstention.html"
     description: "低信頼時に『出さない』設計の考え方を補います。"
   - label: "Wiki: 更新・分岐・停止規則"
@@ -275,7 +275,7 @@ L3 の全体設計へ戻るなら <a href="../verification.html">検証基盤</a
 <h4>Related Wiki</h4>
 <ul>
 <li><a href="event-sync-and-measurement-logs.html">イベント同期と観測ログ →</a></li>
-<li><a href="uncertainty-confidence-and-abstention.html">不確実性・信頼区間・棄権 →</a></li>
+<li><a href="uncertainty-confidence-and-abstention.html">不確実性・校正・棄権 →</a></li>
 <li><a href="update-branching-and-stop-rules.html">更新・分岐・停止規則 →</a></li>
 </ul>
 </div>

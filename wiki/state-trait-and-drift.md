@@ -1,168 +1,249 @@
 ---
 layout: default
 title: "Wiki：state・trait・ドリフト"
-description: "その場の状態、長く安定する特徴、学習や環境で起きるドリフトを初歩から整理します。"
+description: "状態変動、trait-like な安定性、生体側の表現ドリフト、計測・デコーダ側の非定常性を一次文献ベースで整理します。"
 article_type: Wiki
-subtitle: "『今日の状態』と『その人らしさ』は同じではありません"
+subtitle: "『今日の状態』『比較的安定な骨格』『運用ドリフト』は別々に監査します"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
-note: "Learning guide"
-audience: "縦断評価や本人性の議論で、state / trait / drift の違いが曖昧になりやすい人"
-reading_time: "10〜15分"
-page_intro: "このページは、Mind-Upload の縦断評価で重要になる state（その場の状態）、trait（比較的安定な特徴）、drift（時間とともに起きる変化）を初歩から整理する wiki です。『今日の反応が似ている』ことと『長く同じ本人らしさが続いている』ことを混同しないための足場として使います。"
-accuracy_note: "ここで示す区別は実務上の整理です。何を trait とみなすか、どの drift を許容するかは課題や理論で変わりうるため、最終基準を固定するページではありません。"
+last_updated: "2026-03-14"
+note: "Technical / natural science only"
+audience: "縦断評価、cross-day decode、closed-loop BCI を読むときに、state / trait / drift を感覚ではなく実測で分けたい人"
+reading_time: "12〜18分"
+page_intro: "このページは、Mind-Upload の縦断評価で頻出する state（その場の状態）、trait（比較的安定な骨格）、drift（時間とともに起きる変化）を、EEG・fMRI・慢性記録・BCI の一次文献に沿って整理する wiki です。短期変動と長期変化を言葉だけで分けるのではなく、どの時定数で、どのメカニズム由来で、どの評価系で観測したかまで固定することを目的にしています。"
+accuracy_note: "ここでは哲学や法制度は扱いません。state / trait / drift を、技術と自然科学の監査項目として扱います。trait を『不変』とは呼ばず、drift を 1 種類とも扱いません。"
 page_highlights:
-  - "state、trait、drift を分けるだけで、縦断評価の読み違いが減ります。"
-  - "本人性の議論では、短期変動と長期変化を区別する必要があります。"
-  - "学習による更新は自然ですが、無制限に許容すると本人性評価が崩れます。"
+  - "同じ信号の中に、state 変動、trait-like な骨格、生体側 drift、計測・デコーダ側 drift が同時に混在します。"
+  - "trait は単一ニューロンの不変性ではなく、latent dynamics、representational geometry、connectome fingerprint などの比較的安定な骨格として読む方が安全です。"
+  - "closed-loop や speech BCI では、fixed decoder の劣化と再較正負荷も drift の本体です。"
 known_points:
-  - "同じ人でも、日内・日間で脳状態や反応は揺れます。"
-  - "短期的に揺れる特徴と、比較的安定な特徴を分けて評価する必要があります。"
-  - "学習や更新によるドリフトをログ付きで追わないと、長期評価は崩れます。"
+  - "行動状態、覚醒、無意図運動、自発行動は、trial-to-trial neural variance を大きく動かします。"
+  - "単一ユニットや単一 voxel の変化があっても、population-level の構造や latent dynamics がより安定に残る場合があります。"
+  - "fixed decoder の cross-day 劣化と recalibration burden を出さない限り、長期安定性は評価できません。"
 unknown_points:
-  - "どの特徴を trait とみなし、どこまでの drift を許容するかは未確定です。"
-  - "長期の変化を許容しつつ本人性を保つ境界は、まだ研究途中です。"
+  - "どの task でどの骨格を trait と呼ぶべきかを site-wide に統一する基準は、まだ固定されていません。"
+  - "生体側 drift と interface / decoder drift の会計を、EEG と侵襲 BCI とで横断比較する標準形式は未整備です。"
+  - "WBE 向けの長期 benchmark で、どの timescale までを同一の trait backbone と見なすかは未確定です。"
 wiki_links:
-  - label: "Wiki: 本人性評価と連続性テスト"
-    url: "/wiki/identity-and-continuity-tests.html"
-    description: "L4 の連続性テスト全体へ戻れます。"
-  - label: "Wiki: 不確実性・信頼区間・棄権"
+  - label: "Wiki: 不確実性・校正・棄権"
     url: "/wiki/uncertainty-confidence-and-abstention.html"
-    description: "縦断変動の幅をどう読むかを補います。"
-  - label: "Wiki Home"
-    url: "/wiki/"
-    description: "他の補助ページへ戻れます。"
+    description: "drift を誤差幅、校正、coverage-risk とどう接続するかを補います。"
+  - label: "Wiki: 閉ループ・遅延・ジッタ・安全停止"
+    url: "/wiki/closed-loop-latency-jitter-and-safety-stops.html"
+    description: "online 系で drift と再較正負荷をどう読むかを補います。"
+  - label: "Wiki: 観測から推定へ"
+    url: "/wiki/observation-to-estimation.html"
+    description: "観測変動をどこまで latent state や構造へ持ち上げてよいかを補います。"
 recommended_pages:
+  - label: "検証基盤"
+    url: "/verification.html"
   - label: "技術ロードマップ"
     url: "/tech_roadmap.html"
-  - label: "WBE入門"
-    url: "/wbe_101.html"
-  - label: "研究ノート"
-    url: "/perspective.html"
+  - label: "EEG入門"
+    url: "/eeg_101.html"
 ---
 
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>いちばん短い区別</h2>
+<h2>いちばん短い結論</h2>
 <p>
-state は「今の状態」、trait は「比較的長く安定する特徴」、drift は「時間とともに変わっていくこと」です。本人性や長期評価では、この 3 つを同じ箱に入れないことが重要です。
+<strong>state</strong>、<strong>trait</strong>、<strong>drift</strong> は、3 つの箱にデータを仕分けるだけの話ではございません。実際には、同じ記録の中に <strong>その場の行動・覚醒の揺れ</strong>、<strong>比較的安定な population backbone</strong>、<strong>生体側の representational drift</strong>、<strong>電極・前処理・デコーダ側の nonstationarity</strong> が同時に混ざります。したがって、このサイトでは <strong>timescale</strong>、<strong>由来</strong>、<strong>固定 decoder での held-out 劣化</strong>、<strong>再較正負荷</strong> を分けて監査します。
 </p>
 </div>
 
-<section class="section" id="three-terms">
-<h2 class="section-title">まず 3 つを分ける</h2>
-<table class="data-table">
-<thead>
-<tr>
-<th>用語</th>
-<th>ざっくり意味</th>
-<th>例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>state</strong></td>
-<td>その場その時の状態です。</td>
-<td>眠い、集中している、緊張している、麻酔下にある、などです。</td>
-</tr>
-<tr>
-<td><strong>trait</strong></td>
-<td>比較的長く安定している特徴です。</td>
-<td>選好傾向、反応パターンの一部、長期的な判断傾向などです。</td>
-</tr>
-<tr>
-<td><strong>drift</strong></td>
-<td>時間とともに起きる変化です。</td>
-<td>学習、忘却、モデル更新、環境変化によるズレです。</td>
-</tr>
-</tbody>
-</table>
-</section>
-
-<section class="section" id="why-separate">
-<h2 class="section-title">なぜ分けないと危ないのか</h2>
+<div class="note-box">
+<strong>このページの範囲</strong>
 <p>
-もし今日たまたま似た反応が出ただけでも、それを「長期的に同じ本人らしさがある」と読んでしまうと、評価を盛りすぎます。逆に、学習による自然な変化まで全部 drift として不一致扱いすると、今度は変化を許容できません。
+ここでは本人性や権利の最終判断には進みません。扱うのは、縦断 neuroscience と BCI の技術・自然科学です。state を trait と誤読しないこと、trait を「単一ニューロンが不変」と言い換えないこと、drift を 1 種類に潰さないことを先に固定します。
 </p>
-</section>
+</div>
 
-<section class="section" id="longitudinal">
-<h2 class="section-title">縦断評価で見たいこと</h2>
+<section class="section" id="four-buckets">
+<h2 class="section-title">まず 4 つに分けて読む</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>見たいこと</th>
-<th>何を確認するか</th>
+<th>層</th>
+<th>何を指すか</th>
+<th>典型 timescale</th>
+<th>最低限ほしい評価</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>短期 state の揺れ</strong></td>
-<td>日内やセッション間で、反応がどれくらい変わるか。</td>
+<td><strong>state fluctuation</strong></td>
+<td>覚醒、疲労、無意図運動、自発行動、課題 engagement など、その場の状態です。</td>
+<td>秒〜分、長くても同日内です。</td>
+<td>within-session 条件差、行動・生理指標との同時計測、state 別性能差です。</td>
 </tr>
 <tr>
-<td><strong>trait の安定性</strong></td>
-<td>短期変動の上に乗っても、比較的保たれる特徴があるか。</td>
+<td><strong>trait-like backbone</strong></td>
+<td>latent dynamics、representational geometry、functional fingerprint のような、比較的安定な骨格です。</td>
+<td>日〜月、課題によっては年単位です。</td>
+<td>cross-session 識別、latent manifold の整合、representational similarity の安定性です。</td>
 </tr>
 <tr>
-<td><strong>drift の方向</strong></td>
-<td>学習や更新で、どの方向へ、どの速さで変わるか。</td>
+<td><strong>biological drift</strong></td>
+<td>学習、可塑性、tuning の再配置、responsive neuron の入れ替わりなど、生体側の変化です。</td>
+<td>日〜週〜月です。</td>
+<td>固定 readout の経時劣化、single-unit / voxel tuning の変化、population geometry の保持率です。</td>
 </tr>
 <tr>
-<td><strong>許容範囲</strong></td>
-<td>どれくらいの変化までを「同一性の範囲内」とみなすか。</td>
+<td><strong>interface / decoder drift</strong></td>
+<td>電極再装着、インピーダンス変化、feature 分布ずれ、decoder mismatch、再較正依存です。</td>
+<td>セッション間から長期運用までです。</td>
+<td>fixed decoder 劣化、recalibration 頻度、recovery time、unsupervised adaptation の成否です。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
-<section class="section" id="identity">
-<h2 class="section-title">本人性の話ではどう使うか</h2>
+<section class="section" id="why-old-three-way-split-is-not-enough">
+<h2 class="section-title">旧来の 3 分類だけでは足りない理由</h2>
 <p>
-本人性の評価では、state を trait と誤読しないことが特に重要です。たとえば、疲労や睡眠不足で一時的に変わった反応を見て「別人になった」とは普通は言いません。一方で、長期にわたる価値観や学習方針の変化が大きい場合は、drift の扱いが難しくなります。
+現行の「state は今、trait は長く安定、drift は時間変化」という言い方だけですと、<strong>何が脳由来で、何が装置やデコーダ由来か</strong>が見えません。さらに、trait があたかも単一ニューロンや単一 feature の不変性であるかのようにも読めてしまいます。しかし一次文献が繰り返し示しているのは、<strong>individual unit はかなり動く</strong>一方で、<strong>population-level の関係構造の方が長く保たれることがある</strong>、という点でございます。
 </p>
 <div class="note-box">
-<strong>安全な読み方</strong>
+<strong>このサイトでの安全な読み替え</strong>
 <p>
-まずは「今日の状態の一致」と「長期的な連続性の一致」を分けて報告する方が安全です。短期の一致だけで L4 を強く主張しないことが重要です。
+trait は「1 本の電極・1 個の neuron・1 本の voxel が不変」という意味ではなく、<strong>state 変動や一部の単位入れ替わりをまたいでも比較的安定に残る骨格</strong>として扱います。逆に、fixed decoder の劣化や再較正依存を見ていない主張は、trait stability を十分に示したことにはなりません。
 </p>
 </div>
 </section>
 
-<section class="section" id="learning-drift">
-<h2 class="section-title">学習による drift は悪いことか</h2>
+<section class="section" id="papers">
+<h2 class="section-title">一次文献が実際に示していること</h2>
+
+<h3>1. state fluctuation は「ノイズ」ではなく、しばしば本体です</h3>
 <p>
-必ずしも悪いことではありません。人間も学習すれば変わります。問題は、<strong>どの変化が自然な更新で、どの変化が同一性評価を壊すほど大きいか</strong>を区別しないまま、長期主張をしてしまうことです。
+Musall ら (2019) は、課題遂行中の cortex-wide activity が task variable だけでなく、<strong>uninstructed movements</strong> に強く支配されることを示しました。Benisty ら (2024) も、spontaneous behavior が cortical network activity の大きさだけでなく、<strong>functional connectivity の correlational structure</strong> にも高速に刻まれることを示しています。したがって、同じ被験者・同じ日でも、state を明示せずに得た「一致」「不一致」は、そのまま trait や drift の証拠にはなりません。
 </p>
+
+<h3>2. trait-like backbone は、unit-level の不変性より上位で読む必要があります</h3>
+<p>
+Gallego ら (2020) は、サルの sensorimotor cortex を最大 2 年追跡し、記録される neurons が入れ替わっても、<strong>low-dimensional latent dynamics</strong> は安定に保たれ、aligned latent dynamics に基づく decoding は長期間維持できる一方、recorded activity に直接依存した fixed decoder は大きく劣化することを示しました。Finn ら (2015) も、functional connectivity profile が scan session をまたぎ、task と rest をまたいでも個人識別に使えることを示しています。ここから言えるのは、trait があるとしても、それはしばしば <strong>relation や manifold のレベル</strong>で見えるのであって、単一 feature の静止画ではない、ということでございます。
+</p>
+
+<h3>3. representational drift は、生体が安定環境でも起こしうる変化です</h3>
+<p>
+Roth と Merriam (2023) は human V1 の longitudinal fMRI で、session 間の時間が離れるほど model fit の cvR² が下がることを示し、<strong>representational drift が月単位で累積する</strong>ことを報告しました。一方で representational dissimilarity 自体は比較的安定であり、下流が読める関係構造は残る可能性が示されました。さらに Noda ら (2025) は mouse auditory cortex で、individual neuron の tuning volatility があっても、<strong>population-level representational map は保たれうる</strong>こと、しかも selected neuron loss 後でも数日で回復しうることを示しました。つまり、生体側 drift は存在しても、すべてのレベルが同じ速さで崩れるわけではございません。
+</p>
+
+<h3>4. BCI の運用では、decoder drift と recalibration burden が別の壁になります</h3>
+<p>
+Wilson ら (2025) は、intracortical cursor BCI が accumulating neural nonstationarities により <strong>frequent recalibration</strong> を要し、unsupervised target-inference recalibration がないと長期維持が難しいことを示しました。Wairagkar ら (2025) も、instantaneous voice-synthesis neuroprosthesis で <strong>non-speech 時に silence を返す</strong>ことが重要であり、しかも post-implant day 165 で固定した decoder の性能が <strong>約 15 日後から目立って低下</strong>することを示しています。したがって、online 系では「その日に動いた」だけでは足りず、<strong>fixed decoder が何日持つか</strong>、<strong>再較正にどれだけ依存したか</strong>、<strong>silence / abstention をどう使ったか</strong>まで含めて drift を評価する必要があります。
+</p>
+</section>
+
+<section class="section" id="what-to-measure">
+<h2 class="section-title">縦断評価で最低限分けて残すもの</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>監査項目</th>
+<th>最低限ほしいもの</th>
+<th>足りないと止まる主張</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>state sensitivity</strong></td>
+<td>覚醒、行動量、無意図運動、task engagement、薬理状態などの同時計測と、その条件別性能差。</td>
+<td>「同じ被験者で安定」「短期不一致は誤差」とは言えません。</td>
+</tr>
+<tr>
+<td><strong>fixed-model stability</strong></td>
+<td>再学習なし decoder / readout を何日・何週 hold したか、その interval ごとの劣化曲線。</td>
+<td>「trait backbone がある」「長期運用できる」とは言えません。</td>
+</tr>
+<tr>
+<td><strong>population backbone</strong></td>
+<td>latent dynamics、representational similarity、cross-session identification など、関係構造の安定性。</td>
+<td>単一ユニット変化の中でも何が保たれているかを示せません。</td>
+</tr>
+<tr>
+<td><strong>recalibration burden</strong></td>
+<td>再較正頻度、所要時間、supervised/unsupervised の別、recovery time、失敗時 fallback。</td>
+<td>online 安定性を accuracy や WER だけで語ってしまいます。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="misreadings">
+<h2 class="section-title">よくある誤読と、このサイトでの降格ルール</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>危険な読み方</th>
+<th>なぜ危険か</th>
+<th>このサイトでの扱い</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>同日で反応が似たから trait がある</strong></td>
+<td>state fluctuation を十分に潰していない可能性があります。</td>
+<td>同日一致は state-level evidence に留め、trait claim へ上げません。</td>
+</tr>
+<tr>
+<td><strong>単一 neuron / voxel が変わったから trait はない</strong></td>
+<td>population-level の geometry や latent dynamics が保たれている可能性があります。</td>
+<td>unit-level drift と population backbone を別に報告させます。</td>
+</tr>
+<tr>
+<td><strong>再較正後に性能が戻ったから drift は問題ない</strong></td>
+<td>それは drift が無い証拠ではなく、運用が drift を吸収しただけかもしれません。</td>
+<td>再較正回数・時間・失敗率を性能の一部として別出しします。</td>
+</tr>
+<tr>
+<td><strong>fixed decoder が崩れたので脳表現そのものが崩れた</strong></td>
+<td>interface、feature extraction、channel turnover の問題かもしれません。</td>
+<td>biological drift と interface / decoder drift の切り分けを要求します。</td>
+</tr>
+<tr>
+<td><strong>silence / abstention が多いので性能が低いだけだ</strong></td>
+<td>low-confidence 条件を無理に出力しない方が、実運用では安全な場合があります。</td>
+<td>coverage と risk、silence 率と誤出力率をセットで出させます。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="site-rules">
+<h2 class="section-title">このサイトで採用する運用ルール</h2>
 <div class="key-points">
-<h4>最低限残したいこと</h4>
+<h4>Rule</h4>
 <ul>
-<li><strong>更新ログ：</strong>いつ、何を学習したか。</li>
-<li><strong>比較時点：</strong>どの時点どうしを比べたか。</li>
-<li><strong>指標の分離：</strong>state 指標、trait 指標、drift 指標を混ぜないこと。</li>
+<li><strong>state と trait を同じ指標で報告しない：</strong>短期変動と長期骨格を別列で残します。</li>
+<li><strong>trait は骨格として示す：</strong>latent dynamics、similarity matrix、fingerprint、stable subspace のいずれかを明示します。</li>
+<li><strong>drift は 2 系統に分ける：</strong>生体側 representational drift と interface / decoder drift を別ログにします。</li>
+<li><strong>fixed decoder interval を必ず出す：</strong>再較正なしで何日もったかを hidden にしません。</li>
+<li><strong>recalibration burden も性能です：</strong>再較正頻度、所要時間、fallback の内訳を accuracy と別に出します。</li>
+<li><strong>縦断比較には session 日付を入れる：</strong>日内、日間、週単位、月単位のどれかを明記します。</li>
 </ul>
 </div>
 </section>
 
-<section class="section" id="how-to-read">
-<h2 class="section-title">縦断の話を読むときの最低チェック</h2>
-<div class="key-points">
-<h4>Checklist</h4>
-<ul>
-<li><strong>state と trait を分けているか：</strong>短期変動をそのまま本人性に使っていないか。</li>
-<li><strong>観測期間があるか：</strong>日内だけか、日間か、長期か。</li>
-<li><strong>drift をログ付きで追っているか：</strong>変化の履歴が残っているか。</li>
-<li><strong>許容範囲があるか：</strong>どこまでの変化を認めるかが明示されているか。</li>
-</ul>
-</div>
+<section class="section" id="references">
+<h2 class="section-title">参考文献</h2>
+<ol>
+<li>Musall, S., Kaufman, M. T., Juavinett, A. L., Gluf, S., &amp; Churchland, A. K. (2019). Single-trial neural dynamics are dominated by richly varied movements. <em>Nature Neuroscience</em>, 22, 1677-1686. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">doi:10.1038/s41593-019-0502-4</a></li>
+<li>Benisty, H., Barson, D., Moberly, A. H., Lohani, S., Tang, L., Coifman, R. R., Crair, M. C., Cardin, J. A., &amp; Higley, M. J. (2024). Rapid fluctuations in functional connectivity of cortical networks encode spontaneous behavior. <em>Nature Neuroscience</em>, 27, 148-158. <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">doi:10.1038/s41593-023-01498-y</a></li>
+<li>Gallego, J. A., Perich, M. G., Chowdhury, R. H., Solla, S. A., &amp; Miller, L. E. (2020). Long-term stability of cortical population dynamics underlying consistent behavior. <em>Nature Neuroscience</em>, 23, 260-270. <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">doi:10.1038/s41593-019-0555-4</a></li>
+<li>Finn, E. S., Shen, X., Scheinost, D., Rosenberg, M. D., Huang, J., Chun, M. M., Papademetris, X., &amp; Constable, R. T. (2015). Functional connectome fingerprinting: identifying individuals using patterns of brain connectivity. <em>Nature Neuroscience</em>, 18(11), 1664-1671. <a href="https://doi.org/10.1038/nn.4135" target="_blank">doi:10.1038/nn.4135</a></li>
+<li>Roth, Z. N., &amp; Merriam, E. P. (2023). Representations in human primary visual cortex drift over time. <em>Nature Communications</em>, 14, 4422. <a href="https://doi.org/10.1038/s41467-023-40144-w" target="_blank">doi:10.1038/s41467-023-40144-w</a></li>
+<li>Noda, T., Kienle, E., Eppler, J.-B., Aschauer, D. F., Kaschube, M., Loewenstein, Y., &amp; Rumpel, S. (2025). Homeostasis of a representational map in the neocortex. <em>Nature Neuroscience</em>, 28, 1533-1545. <a href="https://doi.org/10.1038/s41593-025-01982-7" target="_blank">doi:10.1038/s41593-025-01982-7</a></li>
+<li>Wilson, G. H., Stein, E. A., Kamdar, F., Avansino, D. T., Pun, T. K., Gross, R., Hosman, T., Singer-Clark, T., Kapitonava, A., Hochberg, L. R., Simeral, J. D., Shenoy, K. V., Druckmann, S., Henderson, J. M., &amp; Willett, F. R. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <em>Nature Biomedical Engineering</em>. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Wairagkar, M., Card, N. S., Singer-Clark, T., Hou, X., Iacobacci, C., Miller, L. M., Hochberg, L. R., Brandman, D. M., &amp; Stavisky, S. D. (2025). An instantaneous voice-synthesis neuroprosthesis. <em>Nature</em>, 644, 145-152. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+</ol>
 </section>
 
 <section class="section" id="return">
 <h2 class="section-title">次にどこへ戻るか</h2>
 <p>
-L4 の全体像へ戻るなら <a href="identity-and-continuity-tests.html">本人性評価と連続性テスト</a>、長文の地図へ戻るなら <a href="../tech_roadmap.html">技術ロードマップ</a>、研究ノートへ戻るなら <a href="../perspective.html">研究ノート</a> をご利用ください。
+不確実性や coverage-risk へ戻るなら <a href="uncertainty-confidence-and-abstention.html">不確実性・校正・棄権</a>、online 運用のログ設計へ戻るなら <a href="closed-loop-latency-jitter-and-safety-stops.html">閉ループ・遅延・ジッタ・安全停止</a>、全体の合否ルールへ戻るなら <a href="../verification.html">検証基盤</a> をご利用ください。
 </p>
 </section>
 
@@ -172,17 +253,17 @@ L4 の全体像へ戻るなら <a href="identity-and-continuity-tests.html">本�
 <div class="sidebar-box">
 <h4>Related Wiki</h4>
 <ul>
-<li><a href="identity-and-continuity-tests.html">本人性評価と連続性テスト →</a></li>
-<li><a href="uncertainty-confidence-and-abstention.html">不確実性・信頼区間・棄権 →</a></li>
-<li><a href="claims-and-evidence.html">主張と証拠の読み方 →</a></li>
+<li><a href="uncertainty-confidence-and-abstention.html">不確実性・校正・棄権 →</a></li>
+<li><a href="closed-loop-latency-jitter-and-safety-stops.html">閉ループ・遅延・ジッタ・安全停止 →</a></li>
+<li><a href="observation-to-estimation.html">観測から推定へ →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
 <h4>公開ページ</h4>
 <ul>
+<li><a href="../verification.html">検証基盤 →</a></li>
 <li><a href="../tech_roadmap.html">技術ロードマップ →</a></li>
-<li><a href="../wbe_101.html">WBE入門 →</a></li>
-<li><a href="../perspective.html">研究ノート →</a></li>
+<li><a href="../eeg_101.html">EEG入門 →</a></li>
 </ul>
 </div>
 </aside>

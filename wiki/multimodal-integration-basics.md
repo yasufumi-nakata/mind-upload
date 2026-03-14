@@ -30,7 +30,7 @@ wiki_links:
   - label: "Wiki: イベント同期と観測ログ"
     url: "/wiki/event-sync-and-measurement-logs.html"
     description: "共有時計、遅延、ジッタ、ドリフトの基本を補います。"
-  - label: "Wiki: 不確実性・信頼区間・棄権"
+  - label: "Wiki: 不確実性・校正・棄権"
     url: "/wiki/uncertainty-confidence-and-abstention.html"
     description: "統合しても不確実性が消えない理由を補います。"
   - label: "Wiki: 観測から推定へ"

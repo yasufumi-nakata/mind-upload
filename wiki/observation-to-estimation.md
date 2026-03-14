@@ -30,7 +30,7 @@ wiki_links:
   - label: "Wiki: EEG前処理とQC"
     url: "/wiki/eeg-preprocessing-and-qc.html"
     description: "推定の前段で、何が結果を変えるかを補います。"
-  - label: "Wiki: 不確実性・信頼区間・棄権"
+  - label: "Wiki: 不確実性・校正・棄権"
     url: "/wiki/uncertainty-confidence-and-abstention.html"
     description: "点推定ではなく幅と棄権条件をどう残すかを補います。"
   - label: "Wiki: 反事実・介入・摂動"
@@ -295,7 +295,7 @@ DCM は神経回路の候補生成モデル比較、SCM は介入・反事実を
 <h4>Related Wiki</h4>
 <ul>
 <li><a href="measurement-and-modeling-terms.html">計測からモデル化まで →</a></li>
-<li><a href="uncertainty-confidence-and-abstention.html">不確実性・信頼区間・棄権 →</a></li>
+<li><a href="uncertainty-confidence-and-abstention.html">不確実性・校正・棄権 →</a></li>
 <li><a href="counterfactual-and-perturbation-verification.html">反事実・介入・摂動 →</a></li>
 </ul>
 </div>
