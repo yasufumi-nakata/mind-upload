@@ -478,3 +478,12 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `EEG-DATA 参照データセット` の `24 ID`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` 上で全件存在（欠落 `0`）を確認しました。
 - 助成キー `G1-G6` と拡張候補ID（`1geD73ZENwB8yaor`, `lEYmRP97ng3perjO`, `1geD73Z9K2B8yaor`, `QKYgNPxZxN38bO1Z`, `46z9VPE6E0BrvEJR`, `1geD73ZE54B8yaor`, `1geD73Z6yq38yaor`）は `auto-research-funds/wiki` と `grant_eeg_dataset_match.csv` で実在を再確認しました。
 - このrunでも汎用要約は行わず、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続します。
+
+## 2026-03-15 06:02 JST 再検証ログ（本run / automation追記）
+
+- `git pull origin main` 実行後の最新状態で再検証し、基準コミットを `mind-upload=8e75f7833c`、`EEG-DATA=b3fb0aabe3`、`auto-research-funds=6571303caf` に更新しました。
+- `mind-upload/automation/rq_reading_path_timed_round19_2026-03-01.csv` と本ページのRQ表を突合し、`RQ行数=60`、`U別内訳=U0(4)/U1(4)/U3(6)/U4(4)/U7(6)/U8(6)/U10(4)/U11(4)/U12(6)/U13(6)/U14(6)/U15(4)` を再確認しました。
+- 判定内訳は `A/B/C=17/25/18` で据え置き。`A/B` を技術実証系、`C` を制度・監査設計系へ出す割当を継続します。
+- 参照EEGデータ `24 ID`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を再確認しました。
+- 助成キー `G1-G6` 実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で全件実在を再確認しました。
+- 方針は固定のまま継続: `1RQ=1検証命題=1応募テーマ=1主データ`。汎用俯瞰ではなく、各RQを1件ずつ深掘りして応募文へ転記する運用を維持します。
