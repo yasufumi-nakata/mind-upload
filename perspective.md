@@ -1082,12 +1082,12 @@ style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 13px; li
 <div class="stage-item" id="proposal-47">
 <div class="stage-number">47</div>
 <div class="stage-body">
-<h4>前処理の再現性強化とネットワーク指標</h4>
-<p>ノイズ除去と接続性推定の「再現性」を担保することが重点。ASRの自動除去とZapLineの線雑音抑制を組み合わせ、wPLI/STEで体積伝導・方向性の問題に対処する。</p>
+<h4>前処理再現性と connectivity validation gate</h4>
+<p>重点は、使った手法名を増やすことではなく、connectivity の主張をどこまで許すかを監査可能にすることです。ASR や ZapLine は有力候補ですが既定解ではなく、reference、source leakage、metric assumptions、external validation を別ゲートで記録します。</p>
 <ul>
-<li>ASRは自動アーティファクト除去手法として評価が進んでおり、パラメータ範囲の指針が示されている<sup><a href="#ref-85">[85]</a></sup></li>
-<li>ZapLineは線雑音除去のための実証済み手法で、EEG/MEGに適用可能<sup><a href="#ref-86">[86]</a></sup></li>
-<li>wPLIは体積伝導とノイズの影響を抑えた位相同期指標<sup><a href="#ref-87">[87]</a></sup>、STEは方向性情報流の推定に有効<sup><a href="#ref-88">[88]</a></sup></li>
+<li>ASR と ZapLine は artifact / line-noise 処理の候補として有用ですが、signal preservation や leakage control を自動で保証しません。raw-clean 差分、保持率、代替 pipeline 1 本との比較を残します<sup><a href="#ref-85">[85]</a></sup><sup><a href="#ref-86">[86]</a></sup></li>
+<li>wPLI は volume-conduction、noise、sample-size bias を減らす候補ですが、reference 依存性や source-space ghost interaction を消し切る免罪符ではありません。lagged metric 1 本で anatomical coupling を言い切りません<sup><a href="#ref-87">[87]</a></sup><sup><a href="#ref-129">[129]</a></sup><sup><a href="#ref-130">[130]</a></sup></li>
+<li>方向性指標は measure 間で結論が割れうるため、STE / Granger / DTF / model-based effective connectivity を既定解にしません。surrogate や held-out perturbation、同時侵襲記録、family comparison を通ったときだけ exploratory から一段上げます<sup><a href="#ref-99">[99]</a></sup><sup><a href="#ref-131">[131]</a></sup><sup><a href="#ref-132">[132]</a></sup><sup><a href="#ref-133">[133]</a></sup></li>
 </ul>
 <p><a href="issue.html#proposal-integration">→ 提案状態と外部依存の整理は貢献ガイドへ</a></p>
 </div>
@@ -1447,6 +1447,11 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <li id="ref-126" value="126">Breyton, M., Lado, M. J., Laureys, S., et al. (2025). Spatiotemporal brain complexity quantifies consciousness outside of perturbation paradigms. <em>eLife</em>, 13, RP98920. <a href="https://doi.org/10.7554/eLife.98920">doi:10.7554/eLife.98920</a></li>
 <li id="ref-127" value="127">Rohaut, B., Naccache, L., Sitt, J. D., et al. (2024). Multimodal imaging reveals partially preserved semantic cognition in comatose patients after cardiac arrest. <em>Neurology</em>, 103(3), e209439. <a href="https://doi.org/10.1212/WNL.0000000000209439">doi:10.1212/WNL.0000000000209439</a></li>
 <li id="ref-128" value="128">Kawai, R., Migdady, I., Kim, M. H., et al. (2025). Multimodal assessment improves neuroprognosis performance after out-of-hospital cardiac arrest. <em>Nature Medicine</em>, 31, 1065–1073. <a href="https://doi.org/10.1038/s41591-024-03019-1">doi:10.1038/s41591-024-03019-1</a></li>
+<li id="ref-129" value="129">Zhang, L., Wang, P., Zhang, R., et al. (2020). The Influence of Different EEG References on Scalp EEG Functional Network Analysis During Hand Movement Tasks. <em>Frontiers in Human Neuroscience</em>, 14, 367. <a href="https://doi.org/10.3389/fnhum.2020.00367">doi:10.3389/fnhum.2020.00367</a></li>
+<li id="ref-130" value="130">Palva, J. M., Wang, S. H., Palva, S., et al. (2018). Ghost interactions in MEG/EEG source space: A note of caution on inter-areal coupling measures. <em>NeuroImage</em>, 173, 632–643. <a href="https://doi.org/10.1016/j.neuroimage.2018.02.032">doi:10.1016/j.neuroimage.2018.02.032</a></li>
+<li id="ref-131" value="131">Haufe, S., Nikulin, V. V., Müller, K.-R., &amp; Nolte, G. (2013). A critical assessment of connectivity measures for EEG data: A simulation study. <em>NeuroImage</em>, 64, 120–133. <a href="https://doi.org/10.1016/j.neuroimage.2012.09.036">doi:10.1016/j.neuroimage.2012.09.036</a></li>
+<li id="ref-132" value="132">Papadopoulou, M., Friston, K., &amp; Marinazzo, D. (2019). Estimating Directed Connectivity from Cortical Recordings and Reconstructed Sources. <em>Brain Topography</em>, 32(4), 741–752. <a href="https://doi.org/10.1007/s10548-015-0450-6">doi:10.1007/s10548-015-0450-6</a></li>
+<li id="ref-133" value="133">Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <em>Epilepsia</em>, 66(11), 4451–4464. <a href="https://doi.org/10.1111/epi.18552">doi:10.1111/epi.18552</a></li>
 </ol>
 </section>
 

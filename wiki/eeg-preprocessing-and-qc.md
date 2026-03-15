@@ -155,6 +155,12 @@ EEG は電位差計測なので、reference を変えると波形・topography�
 </tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>lagged 指標でも読み替え禁止です</strong>
+<p>
+wPLI のような lagged metric は zero-lag mixing の一部を減らす候補ですが、reference choice で network は動き、source reconstruction 後にも ghost interaction は残りえます。したがって、<strong>wPLI を使ったので anatomical coupling が取れた</strong>、<strong>directed metric を使ったので causality が解けた</strong>とは書きません。connectivity / directionality の gate は <a href="observation-to-estimation.html#connectivity-gates">Wiki: 観測から推定へ</a> で別に監査します。
+</p>
+</div>
 </section>
 
 <section class="section" id="filter-design">
@@ -258,6 +264,10 @@ Muthukumaraswamy が整理した通り、muscle artifact は 20-300 Hz 近辺に
 <td><strong>high-frequency exception note</strong></td>
 <td>beta / gamma を主張する場合は、EMG 監査をどう通したかを別記します。</td>
 </tr>
+<tr>
+<td><strong>connectivity claim card</strong></td>
+<td>reference strategy、sensor/source space、leakage control、null/surrogate、外部妥当化の有無を別記します。</td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -296,6 +306,10 @@ Muthukumaraswamy が整理した通り、muscle artifact は 20-300 Hz 近辺に
 <td>自動 pipeline を使ったので再現可能</td>
 <td>自動化と再現可能性は別であり、入力、しきい値、除去量、保持率の公開が必要です。</td>
 </tr>
+<tr>
+<td>wPLI や directed metric を使ったので volume conduction や因果問題は解決した</td>
+<td>lagged / directed 指標は候補であり、reference、ghost interaction、surrogate、外部妥当化の別監査が要ります。</td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -313,6 +327,10 @@ Muthukumaraswamy が整理した通り、muscle artifact は 20-300 Hz 近辺に
 <li>Jas M, Engemann DA, Bekhti Y, Raimondo F, Gramfort A. Autoreject: automated artifact rejection for MEG and EEG data. <em>NeuroImage</em>. 2017. <a href="https://doi.org/10.1016/j.neuroimage.2017.08.030" target="_blank">doi:10.1016/j.neuroimage.2017.08.030</a></li>
 <li>Pion-Tonachini L, Kreutz-Delgado K, Makeig S. ICLabel: An automated electroencephalographic independent component classifier, dataset, and website. <em>NeuroImage</em>. 2019. <a href="https://doi.org/10.1016/j.neuroimage.2019.05.026" target="_blank">doi:10.1016/j.neuroimage.2019.05.026</a></li>
 <li>Kessler V, et al. How EEG preprocessing shapes decoding performance. <em>Communications Biology</em>. 2025. <a href="https://doi.org/10.1038/s42003-025-08464-3" target="_blank">doi:10.1038/s42003-025-08464-3</a></li>
+<li>Vinck M, Oostenveld R, van Wingerden M, et al. An improved index of phase-synchronization for electrophysiological data in the presence of volume-conduction, noise and sample-size bias. <em>NeuroImage</em>. 2011. <a href="https://doi.org/10.1016/j.neuroimage.2011.01.055" target="_blank">doi:10.1016/j.neuroimage.2011.01.055</a></li>
+<li>Zhang L, Wang P, Zhang R, et al. The Influence of Different EEG References on Scalp EEG Functional Network Analysis During Hand Movement Tasks. <em>Frontiers in Human Neuroscience</em>. 2020. <a href="https://doi.org/10.3389/fnhum.2020.00367" target="_blank">doi:10.3389/fnhum.2020.00367</a></li>
+<li>Palva JM, Wang SH, Palva S, et al. Ghost interactions in MEG/EEG source space: A note of caution on inter-areal coupling measures. <em>NeuroImage</em>. 2018. <a href="https://doi.org/10.1016/j.neuroimage.2018.02.032" target="_blank">doi:10.1016/j.neuroimage.2018.02.032</a></li>
+<li>Haufe S, Nikulin VV, Müller K-R, Nolte G. A critical assessment of connectivity measures for EEG data: A simulation study. <em>NeuroImage</em>. 2013. <a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">doi:10.1016/j.neuroimage.2012.09.036</a></li>
 </ol>
 </section>
 
@@ -348,6 +366,10 @@ Muthukumaraswamy が整理した通り、muscle artifact は 20-300 Hz 近辺に
 <li><a href="https://doi.org/10.1016/j.neuroimage.2017.08.030" target="_blank">Autoreject</a></li>
 <li><a href="https://doi.org/10.1016/j.neuroimage.2019.05.026" target="_blank">ICLabel</a></li>
 <li><a href="https://doi.org/10.1038/s42003-025-08464-3" target="_blank">Kessler et al. (2025)</a></li>
+<li><a href="https://doi.org/10.1016/j.neuroimage.2011.01.055" target="_blank">wPLI</a></li>
+<li><a href="https://doi.org/10.3389/fnhum.2020.00367" target="_blank">Reference Effects on Functional Networks</a></li>
+<li><a href="https://doi.org/10.1016/j.neuroimage.2018.02.032" target="_blank">Ghost Interactions</a></li>
+<li><a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">Connectivity Measure Simulation Study</a></li>
 </ul>
 </div>
 </aside>
