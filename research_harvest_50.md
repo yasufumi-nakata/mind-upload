@@ -5,7 +5,7 @@ description: "50分解クエスチョンで収集した先行研究を、解決�
 article_type: "Evidence Bank"
 subtitle: "U0-U15 の分解、現状評価、先行研究（大量引用）"
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
+last_updated: "2026-03-15"
 note: "Compiled from 50 worker tasks (curated for relevance)"
 audience: "大量の文献を『何が未解決か』ごとに見たい人、論点別に引用を探したい人"
 reading_time: "20〜35分（統計とU別マップだけなら7分）"
@@ -15,14 +15,17 @@ page_highlights:
   - "U0〜U15ごとに、解決済みの部分と未解決の部分を分けて示しています。"
   - "入力受理ログと学術統合済みの部分を分け、混入防止の手順も明示しています。"
   - "大量引用ページですが、統計と現状マップだけでも全体像を先に把握できます。"
+  - "技術・自然科学の既定入口は、U1/U7→U4/U13→U8→U3→U10 の順に固定しました。"
 known_points:
   - "U0〜U15 ごとに論点を分けると、文献の量と結論の強さを混同しにくくなります。"
   - "source_logged / curated / noise_excluded を分けることで、入力受理と学術統合を混ぜない運用ができます。"
   - "引用数の多さは、結論の確定ではなく関心や関連度の厚みとして読む必要があります。"
+  - "技術・自然科学の入口では、受理ログや制度論より先に、計測・直接妥当化・閉ループ安定性・maintenance-state を優先して読む方が安全です。"
 unknown_points:
   - "各 U に十分な証拠が揃っているわけではなく、探索段階の領域も残っています。"
   - "source_logged の項目は、今後の精査で統合先や除外判断が変わる可能性があります。"
   - "U マップそのものも、今後の文献追加で更新され得ます。"
+  - "どの優先ルートが将来の WBE 検証基盤へ最も強く効くかは、direct validation と長期縦断ベンチの整備状況で変わり得ます。"
 wiki_links:
   - label: "Wiki: U番号ガイド"
     url: "/wiki/u-number-guide.html"
@@ -119,6 +122,61 @@ U番号は難しい理論名ではなく、「未解決問題の名前札」で�
 このページの「現状」は、合否ではなく不足箇所の種類を短く示すラベルです。<a href="wiki/progress-labels-and-open-problem-status.html">Wiki: 部分解決・探索段階・未整備の読み方</a> を先に見ると、「何がまだ足りないのか」を落ち着いて読めます。
 </p>
 </div>
+
+<section class="section" id="technical-priority-route-20260315">
+<h2 class="section-title">2026-03 技術・自然科学の優先ルート</h2>
+<p>
+このページの弱点は、<strong>入力受理ログ</strong>と<strong>実験フロンティア</strong>が近い位置に並ぶため、技術・自然科学の読者が「いま最も強い一次証拠はどこか」を入口で取り違えやすいことでした。そこで既定の読む順序を、<strong>計測と同定</strong>、<strong>直接妥当化と模倣分離</strong>、<strong>長期閉ループ安定性</strong>、<strong>connectome 外の maintenance-state</strong>、<strong>物理的接地</strong>の順に固定します。ここでの優先順位は、Tang ら (2023)、d'Ascoli ら (2025)、Willett ら (2023)、Littlejohn ら (2025)、Wairagkar ら (2025)、Unnwongse ら (2023)、Hao ら (2025)、Xu ら (2024)、Looser ら (2024)、Lee ら (2022) が示す現在の一次証拠の厚みに基づくものでございます。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>優先ルート</th>
+<th>先に見る U</th>
+<th>ここでまず確かめること</th>
+<th>まだ言ってはいけないこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. 計測と同定</strong></td>
+<td><strong>U1 / U7</strong></td>
+<td>逆問題の不確実性、時刻同期、BIDS/LSL/直接妥当化の有無です。</td>
+<td>観測量が増えたことを、そのまま state-complete reconstruction と読むことです。</td>
+</tr>
+<tr>
+<td><strong>2. 直接妥当化と模倣分離</strong></td>
+<td><strong>U4 / U13</strong></td>
+<td>decode 成功が、介入での因果保存や whole-brain emulation を意味しないことです。</td>
+<td>brain-to-text や speech neuroprosthesis を、そのまま WBE 実証と呼ぶことです。</td>
+</tr>
+<tr>
+<td><strong>3. 長期閉ループ安定性</strong></td>
+<td><strong>U8</strong></td>
+<td>latency、jitter、dropout、recalibration burden、recovery time を別指標で残せているかです。</td>
+<td>within-session の成功だけで、週〜月スケールの運用可能性を断言することです。</td>
+</tr>
+<tr>
+<td><strong>4. maintenance-state</strong></td>
+<td><strong>U3</strong></td>
+<td>sleep-dependent homeostasis、myelin/metabolic support、active maintenance を落としていないかです。</td>
+<td>connectome と cell type だけで長期ダイナミクスが閉じたとみなすことです。</td>
+</tr>
+<tr>
+<td><strong>5. 物理的接地</strong></td>
+<td><strong>U10</strong></td>
+<td>散逸、エネルギー制約、実効コストを後付けでなく反証条件として置けるかです。</td>
+<td>計算可能性の議論だけで、物理実装の成立を済ませたことにすることです。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>今回の主導線から外す群</strong>
+<p>
+<strong>U0 / U12 / U15</strong> は重要ですが、既定の技術・自然科学ルートには置きません。理由は、ここで先に必要なのが形而上学や法学ではなく、<strong>いま何が測れて、どこまで直接妥当化できて、どこで閉ループが壊れ、どの hidden state が残るか</strong>を固定することだからです。これらの群は、実験 front を読んだあとに戻る方が誤読しにくくなります。
+</p>
+</div>
+</section>
 
 <section class="section" id="stats">
 <h2 class="section-title">収集と選別の統計</h2>
@@ -234,6 +292,12 @@ U番号は難しい理論名ではなく、「未解決問題の名前札」で�
 本節は「入力受理ログ」です。採否判定（Uマップ反映、引用優先度、ノイズ除外）は品質ゲート手順に従い、後続の定期更新で確定します。
 </p>
 </div>
+<div class="note-box">
+<strong>技術・自然科学の既定入口ではありません</strong>
+<p>
+本節は frontier ranking ではなく intake queue です。したがって、技術・自然科学の一次証拠を追う場合は、この節からではなく上の <a href="#technical-priority-route-20260315">技術・自然科学の優先ルート</a>、または本文中の <strong>U1 / U7 / U4 / U13 / U8 / U3 / U10</strong> から入ってください。
+</p>
+</div>
 </section>
 
 <section class="section" id="u-overview">
@@ -254,32 +318,38 @@ U番号は難しい理論名ではなく、「未解決問題の名前札」で�
 </thead>
 <tbody>
 <tr>
-<td>EEG推定や逆問題の限界を知りたい</td>
+<td>EEG推定、source imaging、時刻同期の限界を知りたい</td>
 <td><strong>U1 / U7</strong></td>
-<td>観測からどこまで推定できるかと、マルチモーダル整合性の問題が集まるためです。</td>
+<td>観測からどこまで推定できるか、direct validation と同期規約がどう効くかが集まるためです。</td>
 </tr>
 <tr>
-<td>意識指標や理論比較を知りたい</td>
-<td><strong>U11</strong></td>
-<td>IIT、PCI、理論間比較の妥当性がここに集まるためです。</td>
-</tr>
-<tr>
-<td>本人性や分岐問題を知りたい</td>
-<td><strong>U0 / U12</strong></td>
-<td>操作的同一性と分岐後の本人性という、強い主張側の論点がまとまるためです。</td>
-</tr>
-<tr>
-<td>模倣と本物の違いを知りたい</td>
+<td>decode 成功と WBE 主張を切り分けたい</td>
 <td><strong>U4 / U13</strong></td>
-<td>因果同値と模倣分離の両方を見ないと、外見だけの一致と中身の一致を分けにくいためです。</td>
+<td>観測一致と因果保存、local communication と whole-brain emulation を分けて読めるためです。</td>
 </tr>
 <tr>
-<td>公開運用や追試可能性を知りたい</td>
-<td><strong>U14 / U15</strong></td>
-<td>第三者追試と制度統合の問題が、実務上の出口になるためです。</td>
+<td>長期 closed-loop の壊れ方を知りたい</td>
+<td><strong>U8</strong></td>
+<td>遅延、ジッタ、recalibration burden、長期 drift の論点がここに集まるためです。</td>
+</tr>
+<tr>
+<td>connectome 外の hidden state を知りたい</td>
+<td><strong>U3</strong></td>
+<td>sleep / myelin / glia / metabolic support を含む maintenance-state の不足がここへ集まるためです。</td>
+</tr>
+<tr>
+<td>物理コストや散逸まで含めて見たい</td>
+<td><strong>U10</strong></td>
+<td>計算量だけでなく、実装時の散逸とエネルギー制約を読む入口になるためです。</td>
 </tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>この表の既定読順</strong>
+<p>
+技術・自然科学の読者は、<strong>U1 / U7 → U4 / U13 → U8 → U3 → U10</strong> の順を既定にしてください。U11 は実験比較の二次ルート、U0 / U12 / U15 は主導線のあとに戻る補助ルートとして扱います。
+</p>
+</div>
 <table class="data-table">
 <thead><tr><th>大きな問題群</th><th>含まれるU</th><th>ざっくり何を見る群か</th></tr></thead><tbody>
 <tr><td><strong>定義と評価</strong></td><td>U0 / U11 / U13 / U14</td><td>何を「同じ」と呼ぶか、模倣と検証をどう分けるか、追試をどう成立させるか。</td></tr>

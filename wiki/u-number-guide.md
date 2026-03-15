@@ -5,7 +5,7 @@ description: "文献地図で使う U番号を、日常語で読み替えて迷�
 article_type: Wiki
 subtitle: "U は『未解決問題の名前札』です"
 author: Mind Uploading Research Project
-last_updated: "2026-03-06"
+last_updated: "2026-03-15"
 note: "Reading guide"
 audience: "U0-U15 の番号で身構えやすい人、文献地図の入口を知りたい人"
 reading_time: "8〜12分"
@@ -15,13 +15,16 @@ page_highlights:
   - "U番号はレベルではなく、未解決問題の名前札です。"
   - "似た U を大きな問題群にまとめて、入口を見つけやすくしています。"
   - "番号の暗記ではなく、関心に合う塊を見つける使い方を勧めます。"
+  - "技術・自然科学の既定入口は、U1/U7→U4/U13→U8→U3→U10 の順です。"
 known_points:
   - "U は、文献地図の中で未解決問題を整理するための内部コードです。"
   - "大きな問題群で見れば、どこから読むべきかはかなり分かりやすくなります。"
   - "引用数や番号の大きさは、主張の強さや重要度そのものではありません。"
+  - "技術・自然科学の読者は、U0/U12/U15 を既定入口に置かない方が読み違えを減らせます。"
 unknown_points:
   - "各 U の内容や境界は、今後の文献整理で更新される可能性があります。"
   - "どの U に最も研究資源を集中すべきかは、まだ固定していません。"
+  - "U11 の意識指標比較を主導線へ戻すかどうかは、今後の prediction competition と benchmark 整備で変わり得ます。"
 wiki_links:
   - label: "Wiki: 文献と証拠ページの読み方"
     url: "/wiki/literature-and-evidence-reading.html"
@@ -102,23 +105,73 @@ U番号は試験の暗記項目ではありません。役割は「この文献�
 </thead>
 <tbody>
 <tr>
-<td>EEG や逆問題の限界</td>
+<td>EEG や逆問題、時刻同期の限界</td>
 <td>U1 / U7</td>
 </tr>
 <tr>
-<td>本人性やコピー問題</td>
-<td>U0 / U12</td>
-</tr>
-<tr>
-<td>模倣と本物の違い</td>
+<td>decode 成功と WBE 主張の違い</td>
 <td>U4 / U13</td>
 </tr>
 <tr>
-<td>公開運用や追試可能性</td>
-<td>U14 / U15</td>
+<td>長期 closed-loop の安定性</td>
+<td>U8</td>
+</tr>
+<tr>
+<td>connectome 外の maintenance-state</td>
+<td>U3</td>
+</tr>
+<tr>
+<td>物理コストや散逸まで含めたい</td>
+<td>U10</td>
 </tr>
 </tbody>
 </table>
+</section>
+
+<section class="section" id="technical-first-route">
+<h2 class="section-title">技術・自然科学で先に見る順</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>順番</th>
+<th>U 群</th>
+<th>この順で見る理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>U1 / U7</strong></td>
+<td>まず、何が直接観測され、何がまだ推定かを固定しないと、その後の主張レベルが全部ぶれます。</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>U4 / U13</strong></td>
+<td>decode や模倣の成功を、因果保存や emulation と読み違えないためです。</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td><strong>U8</strong></td>
+<td>within-session の成功が、長期運用の安定とは限らないためです。</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td><strong>U3</strong></td>
+<td>connectome と cell type の外に残る maintenance-state を確認しないと、長期主張を読みすぎるためです。</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td><strong>U10</strong></td>
+<td>最後に、散逸と実効コストを反証条件として戻し、計算可能性だけで話を終えないためです。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>主導線から外す群</strong>
+<p>
+<strong>U0 / U12 / U15</strong> は重要ですが、技術・自然科学の既定入口には置きません。ここで先に必要なのは、本人性や制度論よりも、<strong>何が測れて、どこまで直接妥当化できて、どこで閉ループが壊れ、どの hidden state が残るか</strong>を固定することだからです。
+</p>
+</div>
 </section>
 
 <section class="section" id="what-not">
