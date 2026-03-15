@@ -1,28 +1,31 @@
 ---
 layout: default
 title: "Wiki：マルチモーダル統合の基本"
-description: "EEG、MEG、fMRI、侵襲記録、MRI をどう組み合わせれば何が改善し、何が依然として未解決かを、一次文献ベースで整理します。"
+description: "EEG、MEG、fMRI、侵襲記録、MRI、atlas prior をどう結び付けると何が強くなり、どこで主張を止めるべきかを一次文献ベースで整理します。"
 article_type: Wiki
-subtitle: "足し算で万能になるのではなく、同期・幾何・外部妥当化を増やす設計です"
+subtitle: "multimodal は 1 種類ではなく、取得関係ごとに claim ceiling が違います"
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
+last_updated: "2026-03-16"
 note: "Technical / natural science only"
-audience: "EEG 単体の限界をどう補うかを、技術と自然科学の側面だけから判断したい人"
-reading_time: "12〜18分"
-page_intro: "このページは、EEG、MEG、fMRI、侵襲記録、MRI を組み合わせると何が本当に改善するのかを、一次文献ベースで整理する wiki です。哲学や法制度ではなく、同期、座標合わせ、forward model、外部妥当化、state coverage の観点だけに絞ります。"
-accuracy_note: "ここで示すのは『統合すれば何でも分かる』という話ではありません。どの条件を満たしたときに何が少し強く言えるか、そして何がまだ言えないかの整理です。"
+audience: "EEG 単体の限界を補いたいが、multimodal を過大評価したくない人"
+reading_time: "14〜22分"
+page_intro: "このページは、EEG、MEG、fMRI、侵襲記録、MRI、atlas prior を組み合わせるとき、何が直接観測で何が依然として推定かを整理する wiki です。哲学や法制度ではなく、取得関係、共有時計、幾何、融合モデル、外部妥当化、state coverage だけに絞ります。"
+accuracy_note: "ここで示す claim ceiling は、各論文がそのまま宣言している最終結論ではありません。一次文献が直接与える観測量と、依然として未観測の状態変数から本サイトが引く運用上の推論でございます。"
 page_highlights:
-  - "マルチモーダル統合を 5 つの監査ゲートで読みます。"
-  - "EEG+fMRI、EEG+MEG、EEG+侵襲記録の違いを、一次文献つきで比較します。"
-  - "統合後も inverse problem と state completeness は残ることを固定します。"
+  - "multimodal を、同時取得・同一個体の幾何統合・侵襲校正・atlas prior の 4 系統へ分けます。"
+  - "融合後の地図は『直接見た真値』ではなく、raw と仮定を通した推定であることを固定します。"
+  - "共有時計、登録誤差、融合モデル、不確実性、coverage boundary を 1 枚の Fusion Card で監査します。"
+  - "same-brain local twin や atlas prior を、human whole-brain state-complete と読み替えません。"
 known_points:
-  - "複数モダリティを組み合わせると、時間・空間・局所性の一部は補完できます。"
-  - "ただし改善量は、共有時計、個体別解剖、電極/センサー位置、導電率仮定、外部基準の有無に強く依存します。"
+  - "複数モダリティを組み合わせると、時間・空間・局所性・外部妥当化の一部は補完できます。"
+  - "ただし改善量は、取得関係、共有時計、個体別解剖、co-registration、融合モデル、外部基準の有無に強く依存します。"
   - "侵襲記録は強い calibration route ですが、coverage bias と patient bias を抱えます。"
+  - "atlas や Patch-seq は強い prior を与えますが、current state を直接観測したことにはなりません。"
+  - "same-brain structure-function data は局所 conditional prediction を押し上げますが、all-state / whole-brain completeness とは別問題です。"
 unknown_points:
   - "どの統合セットが WBE のどの段階に最も効くかは、まだ固定できません。"
   - "複数モダリティを統合しても、細胞・シナプス・神経修飾・グリア状態の十分性は未解決です。"
-  - "統合後の不確実性をどう伝播・報告するかは、依然として研究課題です。"
+  - "統合後の不確実性をどう伝播・比較可能な形で報告するかも、まだ整備途上です。"
 wiki_links:
   - label: "Wiki: EEGの基本"
     url: "/wiki/eeg-basics.html"
@@ -30,12 +33,12 @@ wiki_links:
   - label: "Wiki: イベント同期と観測ログ"
     url: "/wiki/event-sync-and-measurement-logs.html"
     description: "共有時計、遅延、ジッタ、ドリフトの基本を補います。"
-  - label: "Wiki: 不確実性・校正・棄権"
-    url: "/wiki/uncertainty-confidence-and-abstention.html"
-    description: "統合しても不確実性が消えない理由を補います。"
   - label: "Wiki: 観測から推定へ"
     url: "/wiki/observation-to-estimation.html"
     description: "観測値と推定値を混同しないための入口です。"
+  - label: "Wiki: 計測スタックごとの observability と claim ceiling"
+    url: "/wiki/measurement-stack-and-claim-ceiling.html"
+    description: "stack ごとの直接観測量と主張上限へ戻れます。"
 recommended_pages:
   - label: "EEG入門"
     url: "/eeg_101.html"
@@ -51,51 +54,112 @@ recommended_pages:
 <div class="abstract-box">
 <h2>結論</h2>
 <p>
-マルチモーダル統合は、EEG の弱点を一部補えます。しかし、<strong>1 つの inverse problem を、同期・幾何・ノイズ・外部妥当化を伴う複数の問題へ置き換える</strong>だけでもあります。したがって、このサイトでは「モダリティを足した」という事実だけでは評価せず、<strong>どの監査ゲートを通したか</strong>で読みます。
+今回もっとも深く修正すべきだった弱点は、<strong>multimodal</strong> という 1 語の中に、<strong>同時取得</strong>、<strong>同一個体の幾何統合</strong>、<strong>coverage-limited な侵襲校正</strong>、<strong>atlas / Patch-seq による prior 付与</strong>が混在していた点でございます。これらは全部「複数モダリティ」ですが、直接追加される証拠が違います。したがって本サイトでは、モダリティ名の足し算ではなく、<strong>取得関係</strong>と<strong>外部妥当化の型</strong>ごとに claim ceiling を固定します。
 </p>
 </div>
 
 <div class="note-box">
 <strong>このページの範囲</strong>
 <p>
-ここでは、技術と自然科学の側面だけを扱います。本人性、意識、法制度の話は含めません。問うのは、「何が観測できたか」ではなく、<strong>何がどこまで監査できたか</strong>です。
+ここでは、技術と自然科学の側面だけを扱います。本人性、意識、法制度は扱いません。問うのは、「何を何に結び付けたか」と「その結果どこまでなら強く言えるか」でございます。
 </p>
 </div>
 
-<section class="section" id="gates">
-<h2 class="section-title">先に固定する 5 つの監査ゲート</h2>
+<section class="section" id="weakness">
+<h2 class="section-title">今回深掘りする弱点</h2>
+<p>
+従来の公開ページは、EEG+fMRI、EEG+MEG、EEG+侵襲記録などの代表例を正しく挙げていました。しかし、<strong>同時取得して共有時計を持つ統合</strong>と、<strong>後から同一個体の geometry を足す統合</strong>と、<strong>別個体 atlas を prior として入れる統合</strong>を、まだ十分に分離できていませんでした。
+</p>
+<p>
+この混同は科学的に不利でございます。<a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019)</a> が示す EEG-BIDS は modality-specific metadata の器を与え、<a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe et al. (2025)</a> は共有時計を支える LSL が device-side delay の真値までは自動で与えないことを示し、<a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Burns et al. (2024)</a> は multimodal motion metadata を BIDS に埋め込む必要を示しました。つまり、<strong>「複数モダリティを使った」</strong>だけでは、共有時計も、登録精度も、融合後の不確実性も固定されません。
+</p>
+</section>
+
+<section class="section" id="relation-ladder">
+<h2 class="section-title">multimodal を 4 種類の取得関係へ分けます</h2>
+<div class="note-box">
+<strong>最後の列は本サイトの運用推論です</strong>
+<p>
+下の <strong>claim ceiling</strong> は、各論文のタイトルそのものではなく、一次文献が直接与える観測量と依然として残る latent state から、本サイトが引く境界でございます。
+</p>
+</div>
 <table class="data-table">
 <thead>
 <tr>
-<th>ゲート</th>
-<th>通ったときに少し強く言えること</th>
-<th>通っていないときに止めるべき主張</th>
+<th>取得関係</th>
+<th>何が直接足されるか</th>
+<th>代表例</th>
+<th>このサイトでの claim ceiling</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>同期ゲート</strong></td>
-<td>共有時計、遅延、ジッタ、ドリフトが管理され、各モダリティの時系列を比較しやすくなります。</td>
-<td>位相関係、因果順序、trial-level 統合を強く言うことです。</td>
+<td><strong>1. 同時取得 + 共有時計</strong></td>
+<td>trial-level の時間整合、cross-modal latency の監査、同一時点の共変動です。</td>
+<td>同時計測 EEG-fMRI、EEG-ECoG、EEG-SEEG、LSL で束ねた multimodal recording です。</td>
+<td><strong>同期つきの macro/local concordance まで</strong>です。clock validation が無ければ trial-level 因果順序は強く書きません。</td>
 </tr>
 <tr>
-<td><strong>幾何ゲート</strong></td>
-<td>個体別 MRI、実測電極/センサー位置、forward model が揃い、source claim の根拠が少し強くなります。</td>
+<td><strong>2. 同一個体だが非同時の幾何統合</strong></td>
+<td>個体別解剖、電極/センサー位置、forward model、conductivity calibration です。</td>
+<td>EEG + MRI、EEG + MEG、EEG + head model 校正です。</td>
+<td><strong>幾何つき localization の改善まで</strong>です。同時性が無ければ trial-level state alignment とは書きません。</td>
+</tr>
+<tr>
+<td><strong>3. coverage-limited な侵襲校正</strong></td>
+<td>implant 近傍や刺激既知部位に対する外部妥当化です。</td>
+<td>intracranial stimulation + HD-EEG、同時 scalp EEG/ECoG、同時 HD-EEG/SEEG、DBS 同時計測です。</td>
+<td><strong>局所 detectability / localization の直接妥当化まで</strong>です。未計測領域を含む whole-brain ground truth には上げません。</td>
+</tr>
+<tr>
+<td><strong>4. atlas / bridge / prior 付与</strong></td>
+<td>cell-type、morphology、same-brain local structure-function link、transcriptomic prior です。</td>
+<td>whole-brain atlas、Patch-seq bridge、MICrONS、predicted transcriptomic type の connectomics です。</td>
+<td><strong>molecular / structural prior と local functional twin まで</strong>です。current state や human whole-brain state-complete とは書きません。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="gates">
+<h2 class="section-title">統合の前に固定する 6 つの監査ゲート</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>ゲート</th>
+<th>最低限ほしいもの</th>
+<th>足りないと止まる主張</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gate 1: 取得関係</strong></td>
+<td>同時取得か、同一個体の非同時計測か、別個体 atlas prior かを明示します。</td>
+<td>multimodal という語だけで、同一時点比較や same-brain claim をすることです。</td>
+</tr>
+<tr>
+<td><strong>Gate 2: 共有時計と遅延監査</strong></td>
+<td>clock domain、offset、delay、jitter、drift、validation method を残します。</td>
+<td>trial-level の phase relation、causal order、closed-loop timing を強く言うことです。</td>
+</tr>
+<tr>
+<td><strong>Gate 3: 幾何と登録</strong></td>
+<td>個体別 MRI、電極/センサー位置、co-registration、forward model、conductivity 仮定を残します。</td>
 <td>「どこで起きたか」を一般化して断言することです。</td>
 </tr>
 <tr>
-<td><strong>ノイズ/場ゲート</strong></td>
-<td>MR artifact、motion artifact、background field、cross-talk を分けて扱えます。</td>
-<td>きれいな fused map を、そのまま neural signal の真値とみなすことです。</td>
+<td><strong>Gate 4: 融合モデルと不確実性</strong></td>
+<td>late fusion か shared latent model か、重み付け、事後分布、感度分析を公開します。</td>
+<td>fused map を直接観測の真値として扱うことです。</td>
 </tr>
 <tr>
-<td><strong>外部妥当化ゲート</strong></td>
-<td>侵襲記録、頭蓋内刺激、術後転帰、ファントムなどに対する誤差を監査できます。</td>
-<td>推定結果だけで「改善した」と言うことです。</td>
+<td><strong>Gate 5: 外部妥当化</strong></td>
+<td>ファントム、同時侵襲記録、頭蓋内刺激、術後転帰、same-brain co-registration などを示します。</td>
+<td>見た目の改善や相関上昇だけで「局在が改善した」と書くことです。</td>
 </tr>
 <tr>
-<td><strong>state coverage ゲート</strong></td>
-<td>今回の統合が、時間・空間・局所性のどれを補い、どの状態変数を依然として欠くかを限定できます。</td>
+<td><strong>Gate 6: state coverage</strong></td>
+<td>今回の統合で何を still latent に残したかを、cell type、synaptic efficacy、neuromodulation、glia、sleep-history 単位で書きます。</td>
 <td>統合しただけで WBE に十分な観測になったと読むことです。</td>
 </tr>
 </tbody>
@@ -114,68 +178,106 @@ recommended_pages:
 </thead>
 <tbody>
 <tr>
-<td><strong>EEG + 個体別 MRI / forward model</strong></td>
-<td>Unnwongse ら (2023) は、頭蓋内電気刺激を ground truth にして、個体別 FEM と skull conductivity 最適化で localization error を直接検証しました。</td>
-<td>誤差は source depth と導電率仮定に依存し、細粒度の局所回路や深部活動を一般に一意復元できるわけではありません。</td>
-</tr>
-<tr>
-<td><strong>EEG + MEG</strong></td>
-<td>Aydin ら (2014) は、較正した realistic head model を使うことで、EEG/MEG 統合が source reconstruction を改善しうることを示しました。</td>
-<td>利点は skull conductivity 校正と co-registration に依存し、単純な modality stacking だけでは得られません。</td>
-</tr>
-<tr>
 <td><strong>同時計測 EEG + fMRI</strong></td>
-<td>Jorge らの 2 本の 2015 年論文と Wirsich ら (2021) は、1.5T〜7T でも同時計測が可能であり、適切な setup 下では再現可能な connectivity 解析へ進めることを示しました。</td>
-<td>artifact と安全管理は磁場強度で悪化しやすく、時間分解能の非対称性や EEG 品質低下が残ります。</td>
+<td><a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021)</a> は、1.5T〜7T にまたがる simultaneous EEG-fMRI で connectome 関係が再現可能であることを示しました。<a href="https://doi.org/10.1016/j.neuroimage.2014.10.055" target="_blank">Jorge et al. (2015)</a> は ultra-high field で artifact prevention と safety assessment が前提条件であることを示しました。</td>
+<td>時間分解能の非対称性、MR artifact、head motion、setup 依存性が残ります。したがって、空間情報を足しただけで fine-grained neural truth になったとは言えません。</td>
 </tr>
 <tr>
-<td><strong>EEG + 侵襲記録（ECoG / SEEG / DBS）</strong></td>
-<td>Zhang ら (2006) は同時 scalp EEG/ECoG で皮質電位再構成を、Seeber ら (2019) は 256ch scalp EEG と同時 DBS 記録で subcortical detectability を示しました。</td>
-<td>coverage は臨床必要部位に偏り、患者群バイアスも避けられません。全脳 ground truth にはなりません。</td>
+<td><strong>EEG + MEG + 現実的 head model</strong></td>
+<td><a href="https://doi.org/10.1371/journal.pone.0093154" target="_blank">Aydin et al. (2014)</a> は、calibrated realistic volume conductor model を使うと combined EEG/MEG が source reconstruction を改善しうることを示しました。</td>
+<td>改善は skull conductivity 校正と co-registration に依存します。したがって、単なる modality stacking と calibrated physics model を同一視しません。</td>
 </tr>
 <tr>
-<td><strong>OPM-MEG 系</strong></td>
-<td>Boto ら (2018) は wearable OPM-MEG により、自然運動を含む条件での MEG 計測可能性を示しました。</td>
-<td>background field nulling と motion-aware correction が前提であり、簡単な携帯代替装置ではありません。</td>
+<td><strong>HD-EEG + intracranial validation</strong></td>
+<td><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a> は intracerebral stimulation + HD-EEG の ground-truth dataset を公開し、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> は intracranial stimulation による direct validation を示しました。</td>
+<td>direct validation は implanted / stimulated site 周辺の妥当化であり、未計測領域を含む general source truth ではありません。coverage bias と patient bias が残ります。</td>
+</tr>
+<tr>
+<td><strong>same-brain structure-function link</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> は、mouse visual cortex の multi-area で dense activity と EM connectome を結び、同一脳での structure-function link を前進させました。</td>
+<td>これは local functional twin の前進であり、human whole-brain、all-state、longitudinal completeness ではありません。</td>
+</tr>
+<tr>
+<td><strong>atlas / Patch-seq / transcriptomic bridge</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank">Yao et al. (2023)</a> は whole-mouse-brain atlas を、<a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">Gamlin et al. (2025)</a> は predicted transcriptomic type と connectomics の橋渡しを示しました。</td>
+<td>ここで強くなるのは identity prior と structural / transcriptomic constraint であり、current synaptic efficacy、neuromodulatory field、glial slow state を直接観測したことにはなりません。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
-<section class="section" id="what-each-route-adds">
-<h2 class="section-title">各ルートが実際に足すもの</h2>
-
-<h3>1. EEG + MRI は「解剖を足す」のであって、真値を足すのではありません</h3>
+<section class="section" id="fusion-models">
+<h2 class="section-title">融合後の地図は、直接観測ではなく推定です</h2>
 <p>
-個体別 MRI、実測電極位置、現実的な forward model は、EEG source imaging の条件を大きく改善します。しかし Unnwongse ら (2023) が示したように、<strong>直接妥当化を行っても誤差は残り、深い source ほど難しくなる</strong>ため、「MRI を足したから局在した」とは読めません。正しい読み方は、「幾何の監査が一段進んだ」です。
+ここが現行サイトでまだ弱かった批判点でございます。複数モダリティを 1 枚の map や latent state に融合したとしても、その出力は <strong>raw signal をそのまま見た真値</strong>ではありません。<a href="https://doi.org/10.1016/j.neuroimage.2019.116595" target="_blank">Wei et al. (2020)</a> が示した Bayesian fusion / multimodal DCM は、まさに <strong>共有 latent model を明示して初めて</strong> EEG と fMRI を結び付ける枠組みです。逆に言えば、融合モデル、事前分布、重み付け、事後不確実性を出さない fused map は、比較不能な黒箱に近づきます。
 </p>
-
-<h3>2. EEG + MEG は感度分布の補完ですが、頭蓋導電率校正が効きます</h3>
+<div class="note-box">
+<strong>このサイトでの読み替え</strong>
 <p>
-EEG と MEG は volume conduction への感度が異なるため、統合には意味があります。ただし Aydin ら (2014) が示す通り、改善の鍵は <strong>calibrated realistic volume conductor model</strong> にあります。したがって、このルートの本質は「2 モダリティだから強い」ではなく、<strong>より良い物理モデルを伴って初めて強い</strong>です。
+したがって本サイトでは、fusion output を見るときに <strong>raw per modality</strong>、<strong>registration error</strong>、<strong>fusion model</strong>、<strong>uncertainty propagation</strong> の 4 点を同時提出物とします。これが無い場合、その融合結果は「解釈補助」または「prior つき推定」として扱い、直接観測の階段へは上げません。
 </p>
+</div>
+</section>
 
-<h3>3. EEG + fMRI は時間と空間の補完ですが、artifact と安全が増えます</h3>
+<section class="section" id="fusion-card">
+<h2 class="section-title">今後の提出物に必須化する Fusion Card</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>項目</th>
+<th>最低限書くこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Acquisition relation</strong></td>
+<td>simultaneous、same-subject non-simultaneous、coverage-limited validation、atlas prior のどれか。</td>
+</tr>
+<tr>
+<td><strong>Clock and timing</strong></td>
+<td>clock domain、offset / delay / jitter / drift、validation method、resync policy。</td>
+</tr>
+<tr>
+<td><strong>Geometry and registration</strong></td>
+<td>individual MRI、sensor/electrode coordinates、co-registration error、head model、conductivity assumptions。</td>
+</tr>
+<tr>
+<td><strong>Fusion model</strong></td>
+<td>late fusion か shared latent model か、loss、weights、priors、uncertainty representation。</td>
+</tr>
+<tr>
+<td><strong>External validator</strong></td>
+<td>phantom、intracranial stimulation、simultaneous invasive recording、post-op outcome、same-brain co-registration のどれで較正したか。</td>
+</tr>
+<tr>
+<td><strong>Coverage boundary</strong></td>
+<td>どの modality が何を still latent に残したか。cell type、synaptic efficacy、neuromodulation、glia、sleep-history を含めます。</td>
+</tr>
+<tr>
+<td><strong>Raw retention</strong></td>
+<td>各 modality の raw、QC、bad segment、artifact correction 前後、BIDS / metadata の所在。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>受理条件</strong>
 <p>
-同時計測 EEG-fMRI は魅力的ですが、Jorge らの 2 本の 2015 年論文が示したように、磁場強度が上がるほど artifact と setup 依存性も増えます。Wirsich ら (2021) は 1.5T〜7T にわたり再現可能な connectome 解析を示しましたが、これは逆に、<strong>適切な hardware・cabling・artifact control を組んで初めて成立する</strong>ことも意味します。したがって、空間分解能を足しただけで済む話ではありません。
+Fusion Card が無い場合、本サイトでは `multimodal result` を強く読まず、原則として <strong>single-modality result に prior を足した推定</strong>または<strong>限定つきの cross-modal concordance</strong>として扱います。
 </p>
-
-<h3>4. EEG + 侵襲記録は calibration route として強いが、coverage は狭いです</h3>
-<p>
-Zhang ら (2006) は simultaneous scalp EEG/ECoG を用いて、現実的な FEM と co-registered MRI/CT があれば皮質電位再構成の主要な空間パターンを保持できることを示しました。Seeber ら (2019) も、256ch scalp EEG と同時 DBS 記録により、深部信号が条件つきで detectable であることを示しました。しかし、これらは<strong>侵襲記録で見えている範囲だけ</strong>を強くするのであって、未計測領域まで保証するわけではありません。
-</p>
+</div>
 </section>
 
 <section class="section" id="site-rules">
-<h2 class="section-title">このサイトで採用する読み替えルール</h2>
+<h2 class="section-title">この批判から生じる site rule</h2>
 <div class="key-points">
 <h4>Rule</h4>
 <ul>
-<li><strong>multimodal：</strong>「複数モダリティを足した」ではなく、「どの監査ゲートを通したか」で読みます。</li>
-<li><strong>EEG + MRI：</strong>個体別解剖が入っても、外部妥当化が無ければ source claim は限定して書きます。</li>
-<li><strong>EEG + fMRI：</strong>空間情報の補完としては有用ですが、artifact・安全・時系列整合の監査を必須にします。</li>
-<li><strong>EEG + 侵襲記録：</strong>gold standard ではなく、coverage-limited な calibration / validation route として扱います。</li>
-<li><strong>state coverage：</strong>シナプス、神経修飾、グリア、細胞型ラベルが未観測なら、未観測のままと明記します。</li>
+<li><strong>multimodal とだけ書かない：</strong>同時取得か、同一個体の geometry 統合か、侵襲校正か、atlas prior かを書き分けます。</li>
+<li><strong>shared clock が無い統合を、trial-level alignment と書かない：</strong>same-subject の非同時計測は geometry を強くしますが、同一時点の state alignment を直接は与えません。</li>
+<li><strong>atlas / Patch-seq / transcriptomics は prior と書く：</strong>cell-type label や molecular atlas を、current state observation と書きません。</li>
+<li><strong>侵襲記録は gold standard ではなく coverage-limited validation と書く：</strong>implant 周辺で強いが、未計測領域を保証しません。</li>
+<li><strong>fusion output を raw truth と書かない：</strong>fusion model、weights、uncertainty、registration error を同時に残します。</li>
+<li><strong>same-brain local twin を whole-brain WBE と読み替えない：</strong>MICrONS や related datasets は local conditional prediction の大きな前進ですが、all-state completeness とは別です。</li>
 </ul>
 </div>
 </section>
@@ -183,16 +285,18 @@ Zhang ら (2006) は simultaneous scalp EEG/ECoG を用いて、現実的な FEM
 <section class="section" id="references">
 <h2 class="section-title">参考文献</h2>
 <ol>
-<li>Pernet, C. R., Appelhoff, S., Gorgolewski, K. J., et al. (2019). EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. <em>Scientific Data</em>, 6, 103. <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">doi:10.1038/s41597-019-0104-8</a></li>
-<li>Pernet, C., Garrido, M. I., Gramfort, A., et al. (2020). Issues and recommendations from the OHBM COBIDAS MEEG committee for reproducible EEG and MEG research. <em>Nature Neuroscience</em>, 23, 1473-1483. <a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">doi:10.1038/s41593-020-00709-0</a></li>
-<li>Jorge, J., Grouiller, F., Ipek, O., et al. (2015). Simultaneous EEG-fMRI at ultra-high field: artifact prevention and safety assessment. <em>NeuroImage</em>, 105, 132-144. <a href="https://doi.org/10.1016/j.neuroimage.2014.10.055" target="_blank">doi:10.1016/j.neuroimage.2014.10.055</a></li>
-<li>Jorge, J., Grouiller, F., Gruetter, R., et al. (2015). Towards high-quality simultaneous EEG-fMRI at 7 T: Detection and reduction of EEG artifacts due to head motion. <em>NeuroImage</em>, 120, 143-153. <a href="https://doi.org/10.1016/j.neuroimage.2015.07.020" target="_blank">doi:10.1016/j.neuroimage.2015.07.020</a></li>
-<li>Wirsich, J., Jorge, J., Iannotti, G. R., et al. (2021). The relationship between EEG and fMRI connectomes is reproducible across simultaneous EEG-fMRI studies from 1.5T to 7T. <em>NeuroImage</em>, 231, 117864. <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">doi:10.1016/j.neuroimage.2021.117864</a></li>
-<li>Aydin, U., Vorwerk, J., Kupper, P., et al. (2014). Combining EEG and MEG for the reconstruction of epileptic activity using a calibrated realistic volume conductor model. <em>PLoS ONE</em>, 9(3), e93154. <a href="https://doi.org/10.1371/journal.pone.0093154" target="_blank">doi:10.1371/journal.pone.0093154</a></li>
-<li>Zhang, Y., Ding, L., van Drongelen, W., et al. (2006). A cortical potential imaging study from simultaneous extra- and intracranial electrical recordings by means of the finite element method. <em>NeuroImage</em>, 31(4), 1517-1528. <a href="https://doi.org/10.1016/j.neuroimage.2006.02.027" target="_blank">doi:10.1016/j.neuroimage.2006.02.027</a></li>
-<li>Seeber, M., Cantonas, L.-M., Hoevels, M., et al. (2019). Subcortical electrophysiological activity is detectable with high-density EEG source imaging. <em>Nature Communications</em>, 10, 753. <a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">doi:10.1038/s41467-019-08725-w</a></li>
-<li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Direct validation of EEG source imaging by intracranial electric stimulation in human patients. <em>Brain Communications</em>, 5(2), fcad023. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
-<li>Boto, E., Holmes, N., Leggett, J., et al. (2018). Moving magnetoencephalography towards real-world applications with a wearable system. <em>Nature</em>, 555, 657-661. <a href="https://doi.org/10.1038/nature26147" target="_blank">doi:10.1038/nature26147</a></li>
+<li>Pernet CR, Appelhoff S, Gorgolewski KJ, et al. EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. <em>Sci Data</em>. 2019;6:103. <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">doi:10.1038/s41597-019-0104-8</a></li>
+<li>Kothe C, Appelhoff S, Bullock T, et al. The lab streaming layer for synchronized multimodal recording. <em>Imaging Neurosci</em>. 2025;3:IMAG.a.136. <a href="https://doi.org/10.1162/imag.a.136" target="_blank">doi:10.1162/imag.a.136</a></li>
+<li>Burns M, Nii L, Williams AN, et al. Motion-BIDS: extending BIDS to support standardized storage of motion data. <em>Sci Data</em>. 2024;11:857. <a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">doi:10.1038/s41597-024-03559-8</a></li>
+<li>Wei H, Jafarian A, Zeidman P, et al. Bayesian fusion and multimodal DCM for EEG and fMRI. <em>NeuroImage</em>. 2020;211:116595. <a href="https://doi.org/10.1016/j.neuroimage.2019.116595" target="_blank">doi:10.1016/j.neuroimage.2019.116595</a></li>
+<li>Jorge J, Grouiller F, Ipek O, et al. Simultaneous EEG-fMRI at ultra-high field: artifact prevention and safety assessment. <em>NeuroImage</em>. 2015;105:132-144. <a href="https://doi.org/10.1016/j.neuroimage.2014.10.055" target="_blank">doi:10.1016/j.neuroimage.2014.10.055</a></li>
+<li>Wirsich J, Jorge J, Iannotti GR, et al. The relationship between EEG and fMRI connectomes is reproducible across simultaneous EEG-fMRI studies from 1.5T to 7T. <em>NeuroImage</em>. 2021;231:117864. <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">doi:10.1016/j.neuroimage.2021.117864</a></li>
+<li>Aydin U, Vorwerk J, Kupper P, et al. Combining EEG and MEG for the reconstruction of epileptic activity using a calibrated realistic volume conductor model. <em>PLoS One</em>. 2014;9(3):e93154. <a href="https://doi.org/10.1371/journal.pone.0093154" target="_blank">doi:10.1371/journal.pone.0093154</a></li>
+<li>Mikulan E, Russo S, Pellon Maison M, et al. Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <em>Sci Data</em>. 2020;7:127. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
+<li>Unnwongse K, Achakulvisut T, Wu JY, et al. Direct validation of EEG source imaging by intracranial electric stimulation in human patients. <em>Brain Commun</em>. 2023;5(2):fcad023. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
+<li>MICrONS Consortium, et al. Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>. 2025;638:425-435. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
+<li>Yao Z, van Velthoven CTJ, Nguyen TN, et al. A high-resolution transcriptomic and spatial atlas of cell types in the whole mouse brain. <em>Nature</em>. 2023;624:317-332. <a href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank">doi:10.1038/s41586-023-06812-z</a></li>
+<li>Gamlin CR, et al. Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <em>Nature</em>. 2025;638:316-324. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
 </ol>
 </section>
 
@@ -202,9 +306,9 @@ Zhang ら (2006) は simultaneous scalp EEG/ECoG を用いて、現実的な FEM
 <div class="sidebar-box">
 <h4>Related Wiki</h4>
 <ul>
-<li><a href="eeg-basics.html">EEGの基本 →</a></li>
 <li><a href="event-sync-and-measurement-logs.html">イベント同期と観測ログ →</a></li>
 <li><a href="observation-to-estimation.html">観測から推定へ →</a></li>
+<li><a href="measurement-stack-and-claim-ceiling.html">計測スタックごとの observability →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
