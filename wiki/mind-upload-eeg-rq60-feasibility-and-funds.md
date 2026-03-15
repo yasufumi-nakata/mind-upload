@@ -590,3 +590,11 @@ recommended_pages:
 - `推奨EEG-DATA` で参照するID（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）。
 - 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再確認しました。
 - 方針は継続します。汎用俯瞰へ戻さず、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用で各課題を1件ずつ扱います。
+
+## 2026-03-16 03:04 JST 再検証ログ（本run / 60RQ判定・助成接続の再固定）
+
+- `research_harvest_50.md` 正本に対して本表（`## U0 リサーチクエスチョン` から `## 実行優先順` 直前）を再カウントし、`RQ_TOTAL=60`（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）を確認しました。
+- 判定内訳を再計数し、`A/B/C=17/25/18` を維持していることを確認しました。
+- RQ行で参照する `推奨EEG-DATA` は `24 ID`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）で、`EEG-DATA/eeg_dataset_summary_ja.csv` 上の欠落 `0` を確認しました。
+- 助成実ID `G1-G6` は分離参照で再確認しました（`G1-G2=grant_queue/*.yaml`、`G3-G6=auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`）。
+- 方針を継続します。汎用俯瞰へ戻さず、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持します。
