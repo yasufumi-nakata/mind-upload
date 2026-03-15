@@ -149,7 +149,14 @@ EEG 入門のあとに、このページでデータを選び、L0実践節で�
 <div class="note-box">
 <strong>raw EEG があるだけでは足りない</strong>
 <p>
-波形ファイルが公開されていても、<strong>イベント定義</strong>、<strong>刺激ログ</strong>、<strong>時刻同期</strong>、<strong>bad channel / bad segment の記録</strong>が弱いと、あとから比較し直しにくくなります。この点を初歩から整理したい場合は <a href="wiki/event-sync-and-measurement-logs.html">Wiki: イベント同期と観測ログの基本</a> を先にご覧ください。
+波形ファイルが公開されていても、<strong>イベント定義</strong>、<strong>刺激ログ</strong>、<strong>時刻同期</strong>、<strong>bad channel / bad segment の記録</strong>が弱いと、あとから比較し直しにくくなります。さらに 2026-03 の再監査で、<strong>`events.tsv` があるだけでは event semantics は固定されず、LSL があるだけでは hardware delay は監査できない</strong>ことを site rule に追加しました。この点を初歩から整理したい場合は <a href="wiki/event-sync-and-measurement-logs.html">Wiki: イベント同期と観測ログの基本</a> を先にご覧ください。
+</p>
+</div>
+
+<div class="note-box">
+<strong>今回固定する Event Fidelity Card</strong>
+<p>
+今後の dataset card では、少なくとも <strong>(1) onset / duration / sample</strong>、<strong>(2) clock domain と delay / jitter の監査</strong>、<strong>(3) <code>trial_type</code> / HED / scoring rule などの event semantics</strong>、<strong>(4) provenance / scorer / report usage flag</strong>、<strong>(5) 独立な split 単位</strong>、<strong>(6) 止める主張</strong> を併記します。これがない card は、再利用可能な L0 導線として不十分とみなします。
 </p>
 </div>
 
@@ -370,7 +377,7 @@ OpenNeuro や PhysioNet は入口ですが、それだけでは再現性は固�
 <div class="note-box">
 <strong>今回追加する最重要 site rule</strong>
 <p>
-スターターデータを紹介するときは、今後は必ず <strong>(1) ラベル provenance</strong>、<strong>(2) 時間粒度</strong>、<strong>(3) 独立な split 単位</strong>、<strong>(4) 止める主張</strong> を併記します。これを書かない dataset card は、L0 の実務導線として不十分とみなします。
+スターターデータを紹介するときは、今後は必ず <strong>(1) ラベル provenance</strong>、<strong>(2) 時間粒度</strong>、<strong>(3) clock domain と sync evidence</strong>、<strong>(4) event semantics</strong>、<strong>(5) 独立な split 単位</strong>、<strong>(6) 止める主張</strong> を併記します。これを書かない dataset card は、L0 の実務導線として不十分とみなします。
 </p>
 </div>
 
@@ -616,8 +623,13 @@ Mind-Uploadが目指すのは、単にデータを集めることではなく、
 <section class="section" id="references">
 <h2 class="section-title">8) 参考文献と公式ページ</h2>
 <ul>
+<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/events.html" target="_blank">BIDS 1.11.1: Task events</a></li>
 <li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS 1.11.1: Electroencephalography</a></li>
 <li><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019), EEG-BIDS</a></li>
+<li><a href="https://doi.org/10.1007/s12021-021-09513-7" target="_blank">Robbins et al. (2021), HED for FAIR event annotation</a></li>
+<li><a href="https://doi.org/10.1038/s41597-025-05791-2" target="_blank">Hermes et al. (2025), HED library schema for EEG data annotation</a></li>
+<li><a href="https://doi.org/10.1162/imag_a_00136" target="_blank">Kothe et al. (2025), Lab Streaming Layer</a></li>
+<li><a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Jeung et al. (2024), Motion-BIDS</a></li>
 <li><a href="https://docs.openneuro.org/git.html" target="_blank">OpenNeuro Docs: Git access and snapshots</a></li>
 <li><a href="https://docs.openneuro.org/user_guide.html" target="_blank">OpenNeuro Docs: Dataset landing page and snapshot metadata</a></li>
 <li><a href="https://physionet.org/about/" target="_blank">PhysioNet: About and citation policy</a></li>
