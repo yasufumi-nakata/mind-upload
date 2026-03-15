@@ -140,3 +140,11 @@ A/B/C 判定は `mind-upload-eeg-rq60-feasibility-and-funds.md` と同一基準�
 - `main` pull後に `RQ=60` 行を再照合し、`第一応募先/予備応募先/主EEG-DATA/最小成果物` の欠落 `0` を確認。
 - 判定内訳 `A/B/C=17/25/18` は `mind-upload-eeg-rq60-feasibility-and-funds.md` と一致したまま維持。
 - 本ページの運用を継続: `1RQ=1提出判断` を固定し、汎用要約ではなくRQ単位で申請文へ転記する。
+
+## 2026-03-15 19:02 JST 再検証ログ（本run / 提出固定表の監査）
+
+- `RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認し、`mind-upload-eeg-rq60-feasibility-and-funds.md` と整合。
+- 全 `RQ` 行で `第一応募先/予備応募先/主EEG-DATA/最小成果物` の欠落 `0`、空欄 `0` を確認。
+- `主EEG-DATA` で参照するIDは `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）。
+- 助成実IDは `G1-G2=grant_queue` と `G3-G6=auto-research-funds` の分離参照を維持。
+- 方針を維持: 汎用テーマ化ではなく `1RQ=1提出判断` で申請文へ直接転記する。

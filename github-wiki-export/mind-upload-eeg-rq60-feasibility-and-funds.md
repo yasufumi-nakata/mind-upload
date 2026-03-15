@@ -537,3 +537,11 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 助成実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue/*.yaml` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再確認しました。
 - 方針は据え置き: 汎用俯瞰へ戻さず、RQごとに検証可否・応募テーマ・使用EEGデータを固定して書く運用を継続します。
 
+
+## 2026-03-15 19:02 JST 再検証ログ（本run / 60RQ深掘り整合チェック）
+
+- `research_harvest_50.md` 正本との再突合で、`RQ_TOTAL=60`、`U別内訳=U0(4)/U1(4)/U3(6)/U4(4)/U7(6)/U8(6)/U10(4)/U11(4)/U12(6)/U13(6)/U14(6)/U15(4)`、`重複=0`、`欠落=0` を確認。
+- 判定列は再計数で `A/B/C=17/25/18` を維持。
+- RQ行で参照するEEGデータIDは `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）で、`EEG-DATA/eeg_dataset_summary_ja.csv` 上の欠落 `0`。
+- 助成実IDは `G1-G2=grant_queue`（`GR-2026-013`, `GR-2026-014`）と `G3-G6=auto-research-funds`（`9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）の分離参照で再確認。
+- 方針を継続: 汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持。
