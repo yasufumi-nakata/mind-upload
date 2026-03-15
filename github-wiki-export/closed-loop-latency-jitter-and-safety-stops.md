@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-14 / 位置づけ: Learning guide / evidence refresh
+- 更新日: 2026-03-15 / 位置づけ: Learning guide / evidence refresh
 
 ## このページの役割
 このページは、Mind-Upload の L3『閉ループ』で重要になる遅延、ジッタ、ドリフト、安全停止の違いを、一次文献に沿って整理する wiki です。オフライン精度が高いモデルでも、ループの帯域とアクチュエータの種類が違えば必要な timing budget も変わることを明確にするのが目的です。
@@ -25,19 +25,20 @@
 
 ## いま分かっていること
 - オフライン精度と閉ループ安定性は別の主張であり、同じスコアでは監査できません。
-- 遅延とジッタの許容範囲は、state feedback、ERP/command BCI、phase-locked stimulation、burst-driven neuromodulation で異なります。
+- 遅延とジッタの許容範囲は、state feedback、ERP/command BCI、streaming communication、phase-locked stimulation、burst-driven neuromodulation で異なります。
 - 入力、処理、出力、戻りを end-to-end で実測しないと、実運用の timing は分かりません。
+- within-session の高速化だけでは不十分で、recalibration burden、clinic/home 転移、programming burden も別に残します。
 
 ## まだ分かっていないこと
 - WBE に必要な閉ループ帯域が、どのループ種別にどこまで跨るかは未確定です。
 - phase-specific な制御で必要な精度を、非侵襲ヒト実験の全タスクへ一般化できるとはまだ言えません。
-- 長期運用での drift と再較正頻度が、どの時点で『不安定』判定になるかは課題依存です。
+- 長期運用での drift、再較正頻度、programming burden のどこからを『不安定』または『非実用』とみなすかは課題依存です。
 
 ---
 
 <h2>いちばん短い結論</h2>
 <p>
-<strong>閉ループ</strong>は「出力が次の入力を変える系」です。ただし、そこで要求される timing は 1 つではありません。<strong>alpha neurofeedback</strong>、<strong>P300/ERP BCI</strong>、<strong>phase-locked stimulation</strong>、<strong>adaptive DBS</strong> では、支配的な時間スケールが違います。したがって、<strong>共通の 1 ms 閾値</strong>や<strong>共通の 10 ms 閾値</strong>をサイト全体の正解として置くのは危険です。
+<strong>閉ループ</strong>は「出力が次の入力を変える系」です。ただし、そこで要求される timing は 1 つではありません。<strong>alpha neurofeedback</strong>、<strong>P300/ERP BCI</strong>、<strong>streaming speech neuroprosthesis</strong>、<strong>phase-locked stimulation</strong>、<strong>adaptive DBS</strong> では、支配的な時間スケールも壊れ方も違います。したがって、<strong>共通の 1 ms 閾値</strong>や<strong>共通の 10 ms 閾値</strong>をサイト全体の正解として置くのは危険です。
 </p>
 
 <strong>今回の整理で先に固定したこと</strong>
@@ -55,7 +56,7 @@ Wilson ら (2010) は、mu rhythm 振幅のような比較的ゆっくりした 
 「低遅延が良い」は一般論として正しいですが、そこから直ちに「全ループで microsecond 級が必須」「全ループで 1 ms 以下が必須」とは言えません。正しい問いは、<strong>どのループ帯域で、どの誤差が、何を壊すのか</strong>です。
 </p>
 
-<h2>まず 4 つのループ型に分ける</h2>
+<h2>まず 5 つのループ型に分ける</h2>
 <table>
 <thead>
 <tr>
@@ -79,6 +80,12 @@ Wilson ら (2010) は、mu rhythm 振幅のような比較的ゆっくりした 
 <td>block jitter、刺激 onset 実測、trial-to-trial latency variance、分類性能との対応です。</td>
 </tr>
 <tr>
+<td><strong>streaming communication / speech neuroprosthesis</strong></td>
+<td>brain-to-text や brain-to-voice を、音声や文字として連続に返す系です。</td>
+<td>Littlejohn ら (2025) は 80 ms 刻みの streaming brain-to-voice を示し、Wairagkar ら (2025) は raw neural input から 10 ms 未満で音声合成を返しつつ、non-speech や overlapping speech では silence を返す loop を示しました。ここでは平均 latency だけでなく、tail latency、audio output path、silence / abstention が中心指標です。</td>
+<td>per-step inference latency、cue-to-output latency 分布、audio driver latency、silence / false-speech rate、dropout、recalibration event です。</td>
+</tr>
+<tr>
 <td><strong>phase-locked stimulation</strong></td>
 <td>EEG 位相に合わせて TMS/tES を打つ系です。</td>
 <td>Mansouri ら (2018) は位相遅れを theta/alpha で評価し、Zrenner ら (2018) は millisecond-resolution EEG-triggered TMS で brain state 依存性を実証しました。ここでは ms より位相誤差が中心です。</td>
@@ -92,6 +99,42 @@ Wilson ら (2010) は、mu rhythm 振幅のような比較的ゆっくりした 
 </tr>
 </tbody>
 </table>
+
+<h2>2026-03 文献監査：長期運用で増える 3 つの壁</h2>
+<p>
+旧版の弱点は、閉ループを <strong>same-session の timing 問題</strong>として整理しすぎていた点でございます。2024-2026 年の一次文献を並べると、speech BCI と chronic aDBS では、通常の latency/jitter に加えて <strong>tail latency と output path</strong>、<strong>recalibration burden</strong>、<strong>naturalistic deployment / programming burden</strong> が別の壁として立ちます。したがって本サイトでは、ループが「動いた」だけでは L3 を上げず、以下の 3 軸を別ログで要求します。
+</p>
+<table>
+<thead>
+<tr>
+<th>壁</th>
+<th>一次文献が今支持すること</th>
+<th>このページでの修正方針</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>tail latency / output path</strong></td>
+<td>Littlejohn ら (2025) は 80 ms 刻みの streaming speech を示しつつ、go cue から実音声までの遅延分布を別に出しました。Wairagkar ら (2025) は 10 ms 未満の neural-to-voice synthesis を示しましたが、closed-loop feedback では audio driver が別律速になることも明示しました。</td>
+<td>推論器の平均 latency だけでは不十分とし、module-wise latency、cue-to-output tail、audio playback path、silence / abstention の挙動を別々に残します。</td>
+</tr>
+<tr>
+<td><strong>recalibration burden / drift</strong></td>
+<td>Wilson ら (2025) は、frequent daily supervised recalibration が日常利用の大きな障害であるとし、multiple timescales の drift を扱う unsupervised recalibration を 1 か月の closed-loop で評価しました。</td>
+<td><code>time since last supervised calibration</code>、unsupervised adaptation の有無、性能劣化曲線、recovery time、人手介入時間を主要ログへ上げます。</td>
+</tr>
+<tr>
+<td><strong>naturalistic deployment / programming burden</strong></td>
+<td>Oehrn ら (2024) は chronic aDBS を in-clinic と at-home の両方で評価し、naturalistic environment まで含めて比較しました。Cascino ら (2026) は chronic cDBS の連続症例 20 例中 9 例が aDBS 適格、2025 年 7 月時点で 5 例継続と報告し、technical / programming constraints が deployability を左右することを示しました。</td>
+<td>lab 内の成功だけでなく、clinic/home 転移、eligibility、continuation、programming changes、stimulation duty cycle を deployment 側の必須ログとして残します。</td>
+</tr>
+</tbody>
+</table>
+
+<strong>ここでの批判点</strong>
+<p>
+したがって、「速い loop が 1 回動いた」「adaptive controller が症状を少し下げた」だけでは、長期運用可能とは読みません。<strong>tail latency</strong>、<strong>人手再較正</strong>、<strong>在宅での成立</strong>が別々に通って初めて、deployable closed loop に近づいたと読めます。
+</p>
 
 <h2>何を end-to-end で測るのか</h2>
 <p>
@@ -168,6 +211,12 @@ Appelhoff と Stenner (2021) は、USB microcontroller による event marking �
 <td>棄権率、棄権時の信頼度閾値、棄権後の状態です。</td>
 </tr>
 <tr>
+<td><strong>hold-last-output / silence fallback</strong></td>
+<td>短い不確実性や非発話区間で、誤出力を増やさず連続性を保つためです。</td>
+<td>non-speech 区間、decoder blank、短い dropout、audio buffer underrun です。</td>
+<td>発動率、最大継続時間、false speech 抑制率、解除遅延です。</td>
+</tr>
+<tr>
 <td><strong>freeze / 一時停止</strong></td>
 <td>再較正や原因確認のためです。</td>
 <td>clock offset 増大、packet loss、drift 逸脱、再同期要求です。</td>
@@ -184,29 +233,35 @@ Appelhoff と Stenner (2021) は、USB microcontroller による event marking �
 
 <strong>性能問題と安全問題を混ぜない</strong>
 <p>
-「うまく出せなかったので出さない」のか、「系が壊れていそうなので保留する」のか、「危険なので止める」のかは、運用上まったく別です。全部を 1 つの『停止』にまとめると、レビュー時に原因が追えなくなります。
+「うまく出せなかったので出さない」のか、「短い空白を silence でつなぐ」のか、「系が壊れていそうなので保留する」のか、「危険なので止める」のかは、運用上まったく別です。全部を 1 つの『停止』にまとめると、レビュー時に原因が追えなくなります。
 </p>
 
 <h2>最低限残したいログ</h2>
 
 <h4>Checklist</h4>
 <ul>
-<li><strong>loop class：</strong>state feedback、ERP/command、phase-locked、burst-triggered のどれか。</li>
+<li><strong>loop class：</strong>state feedback、ERP/command、speech / streaming、phase-locked、burst-triggered のどれか。</li>
 <li><strong>end-to-end latency：</strong>中央値、P95、P99、worst-case を別々に残します。</li>
+<li><strong>module-wise latency：</strong>入力、推論、出力、再帰入力を分け、どこが律速かを残します。</li>
 <li><strong>jitter の定義：</strong>SD、IQR、peak-to-peak のどれかを明記します。</li>
 <li><strong>clock offset / drift：</strong>LSL や hardware marker の補正前後を残します。</li>
 <li><strong>marker 検証法：</strong>TTL、MCU、photodiode、microphone、loopback のどれで実測したかを書きます。</li>
+<li><strong>speech / streaming 系の追加指標：</strong>cue-to-output の tail latency、audio driver latency、silence / hold-last-output 率、false speech rate を残します。</li>
 <li><strong>phase/burst 系の追加指標：</strong>位相誤差分布、missed trigger、burst 検出遅延、false positive/negative です。</li>
 <li><strong>棄権 / freeze / 安全停止：</strong>発動回数、直前状態、復帰条件を残します。</li>
+<li><strong>longitudinal burden：</strong>最後の supervised recalibration からの経過時間、unsupervised adaptation の有無、recalibration に要した人手 / 時間を残します。</li>
+<li><strong>naturalistic deployment：</strong>clinic / home の成績差、eligibility、continuation、programming change、duty cycle を残します。</li>
 <li><strong>性能劣化曲線：</strong>人工的に遅延を足したとき、どこで崩れるかを残します。</li>
 </ul>
 
-<h2>L3 の主張を読むときの 4 問</h2>
+<h2>L3 の主張を読むときの 6 問</h2>
 <ol>
-<li><strong>どの loop class を扱っているか書いてあるか：</strong> slow feedback と phase-locked を同じ表で語っていないかを見ます。</li>
-<li><strong>end-to-end 実測があるか：</strong> software timestamp だけで済ませていないかを確認します。</li>
+<li><strong>どの loop class を扱っているか書いてあるか：</strong> slow feedback、speech streaming、phase-locked、aDBS を同じ表で語っていないかを見ます。</li>
+<li><strong>end-to-end だけでなく module-wise 実測があるか：</strong> software timestamp だけで済ませず、入力・推論・出力 path のどこが律速かを確認します。</li>
+<li><strong>speech / streaming 系なら silence と output path が出ているか：</strong> false speech、audio driver、hold-last-output を隠していないかを見ます。</li>
 <li><strong>delay を位相誤差や burst 時間へ写像しているか：</strong> ただの ms 値で済ませていないかを見ます。</li>
-<li><strong>棄権・freeze・安全停止が分離されているか：</strong> 危険時の運用が曖昧でないかを確認します。</li>
+<li><strong>recalibration burden と clinic/home 転移が出ているか：</strong> within-session 成功だけで deployable と読んでいないかを確認します。</li>
+<li><strong>棄権・silence fallback・freeze・安全停止が分離されているか：</strong> 危険時と低信頼時の運用が曖昧でないかを確認します。</li>
 </ol>
 
 <h2>参考文献</h2>
@@ -221,6 +276,11 @@ Appelhoff と Stenner (2021) は、USB microcontroller による event marking �
 <li>Tinkhauser G, Pogosyan A, Little S, et al. The modulatory effect of adaptive deep brain stimulation on beta bursts in Parkinson's disease. <em>Brain.</em> 2017;140(4):1053-1067. <a href="https://doi.org/10.1093/brain/awx010" target="_blank">doi:10.1093/brain/awx010</a></li>
 <li>Appelhoff S, Stenner T. In COM we trust: Feasibility of USB-based event marking. <em>Behav Res Methods.</em> 2021;53(6):2450-2455. <a href="https://doi.org/10.3758/s13428-021-01571-z" target="_blank">doi:10.3758/s13428-021-01571-z</a></li>
 <li>Kothe C, Shirazi SY, Stenner T, et al. The lab streaming layer for synchronized multimodal recording. <em>Imaging Neurosci.</em> 2025;3:IMAG.a.136. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
+<li>Littlejohn KT, Dabagia M, Ladwig A, et al. A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <em>Nat Neurosci.</em> 2025. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
+<li>Wairagkar M, Card NS, Singer-Clark T, et al. An instantaneous voice-synthesis neuroprosthesis. <em>Nature.</em> 2025. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+<li>Wilson GH, Stein EA, Kamdar F, et al. Long-term unsupervised recalibration of intracortical brain-computer interfaces using a Markov model. <em>Nat Biomed Eng.</em> 2025. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Oehrn CR, Roediger J, Diehl A, et al. Chronic adaptive deep brain stimulation versus conventional stimulation in Parkinson's disease: a blinded randomized feasibility trial. <em>Nat Med.</em> 2024. <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">doi:10.1038/s41591-024-03196-z</a></li>
+<li>Cascino S, Roediger J, Oehrn C, et al. Chronic adaptive deep brain stimulation in Parkinson's disease: ADAPT-START findings and programming principles. <em>npj Parkinsons Dis.</em> 2026. <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">doi:10.1038/s41531-026-01269-z</a></li>
 </ol>
 
 <h2>次にどこへ戻るか</h2>

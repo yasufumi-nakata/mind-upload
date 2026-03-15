@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-14 / 位置づけ: Learning guide
+- 更新日: 2026-03-15 / 位置づけ: Learning guide
 
 ## このページの役割
 このページは、Mind-Upload で繰り返し出てくる『ベースライン』『ベンチマーク』『事前登録』『モデルカード』『失敗例』の役割差を、初歩から整理する wiki です。高いスコアを出すことと、比較可能な前進を作ることの違いを理解する足場として使います。
@@ -38,6 +38,11 @@
 ベースラインは「出発点」、ベンチマークは「採点基準」、事前登録は「やる前の約束」、モデルカードは「結果の成績表」、失敗例は「どこで崩れたかの記録」です。どれか 1 つだけでは、比較可能な前進になりません。
 </p>
 
+<strong>2026-03 追補</strong>
+<p>
+L1 以上の結果では、通常のモデルカードに加えて <a href="https://mind-upload.com/verification.html#observability-budget">Observability Budget</a> を添付し、measurement stack、直接観測量、残る latent state、claim ceiling、abstention 条件を明示する運用にそろえました。
+</p>
+
 <h2>まず役割を分ける</h2>
 <table>
 <thead>
@@ -61,7 +66,7 @@
 </tr>
 <tr>
 <td><strong>モデルカード</strong></td>
-<td>点数、弱点、リーク対策、失敗例、計算条件などを残します。</td>
+<td>点数、弱点、リーク対策、失敗例、計算条件、さらに L1 以上では Observability Budget を残します。</td>
 </tr>
 <tr>
 <td><strong>失敗例・ネガティブ結果</strong></td>
@@ -141,7 +146,7 @@
 <li><strong>ベースラインがあるか：</strong>何と比べたのかが明示されているか。</li>
 <li><strong>ベンチマークが固定されているか：</strong>データ、分割、指標が書かれているか。</li>
 <li><strong>事前登録があるか：</strong>あとから条件を変えていないか。</li>
-<li><strong>モデルカードや失敗例があるか：</strong>弱点や崩れ方が見えるか。</li>
+<li><strong>モデルカードや失敗例があるか：</strong>弱点や崩れ方に加え、L1 以上では Observability Budget が見えるか。</li>
 </ul>
 
 <h2>次にどこへ戻るか</h2>

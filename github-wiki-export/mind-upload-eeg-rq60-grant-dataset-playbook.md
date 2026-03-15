@@ -117,3 +117,20 @@ A/B/C 判定は `mind-upload-eeg-rq60-feasibility-and-funds.md` と同一基準�
 - 各RQ行の `第一応募先/予備応募先/主EEG-DATA/最小成果物` は欠落 `0`、空欄 `0`。
 - 助成実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `auto-research-funds` 側で参照可能。
 - 方針を継続: 汎用要約ではなく `1RQ=1提出判断` を固定し、RQ単位で申請文へ直接転記する。
+
+## 2026-03-15 12:02 JST 再検証ログ（本run / RQ単位提出判断の固定確認）
+
+- `RQ_TOTAL=60` と `A/B/C=17/25/18` を再確認し、`mind-upload-eeg-rq60-feasibility-and-funds.md` と完全一致。
+- 全 `RQ` 行の `第一応募先/予備応募先/主EEG-DATA/最小成果物` は欠落 `0`、空欄 `0`。
+- `主EEG-DATA` の参照IDは `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）。
+- 助成実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `auto-research-funds` / `grant_queue` で全件再参照可能。
+
+</article>
+</main>
+
+## 2026-03-15 13:03 JST 再検証ログ（本run / 申請プレイブック整合確認）
+
+- `main` pull後に本ページを再点検し、全 `60RQ` 行で `第一応募先/予備応募先/主EEG-DATA/最小成果物` の欠落 `0`、空欄 `0` を確認しました。
+- `A/B/C=17/25/18` は `mind-upload-eeg-rq60-feasibility-and-funds.md` と一致したまま維持されています。
+- 助成キー `G1-G6` 実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `auto-research-funds` 内で再参照可能を確認しました。
+- 実務運用は据え置き: 汎用テーマ化ではなく、`1RQ=1提出判断` で応募文へ直接転記できる粒度を維持します。

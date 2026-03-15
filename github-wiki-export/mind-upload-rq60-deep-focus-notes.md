@@ -168,6 +168,43 @@ A/B/C判定は mind-upload-eeg-rq60-feasibility-and-funds と同一。Cは『重
 - 助成キー `G1-G6` の実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `auto-research-funds` 側で全件参照可能。
 - 方針は継続: 汎用的な俯瞰ではなく、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持。
 
+## 2026-03-15 09:03 JST 再検証ログ（本run / pull後）
+
+- `main` 最新化後に再計数し、`RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認（本ページと `mind-upload-eeg-rq60-feasibility-and-funds.md` の両方で一致）。
+- `research_harvest_50.md` の `リサーチクエスチョン分解` セクションを正本として再抽出し、`RQ_COUNT=60`、欠落 `0`。
+- 本ページで参照する EEG データID（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）。
+- 助成ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`、`grant_queue/*.yaml`、`auto-research-funds/grant_eeg_dataset_match.csv` で全件参照可能。
+
+### 1問ずつ深掘りする直近6件（実行順固定）
+
+1. `U8-1` 閉ループ遅延許容域同定: `主データ=6`、応募先 `G2`（予備 `G5`）
+2. `U8-2` オンライン較正とドリフト対策: `主データ=696`、応募先 `G2`（予備 `G5`）
+3. `U14-1` 固定粒度と追試成功率: `主データ=56`、応募先 `G1`（予備 `G3`）
+4. `U14-3` リーク監査運用: `主データ=719`、応募先 `G1`（予備 `G3`）
+5. `U7-2` 時刻同期誤差監査: `主データ=6`、応募先 `G1`（予備 `G3`）
+6. `U13-1` 意味一致と因果一致の分離: `主データ=509`、応募先 `G1`（予備 `G4`）
+
+この順で進める理由:
+- `A/B` 判定で4週間以内に「実測KPI + 失敗条件 + 申請下書き」まで到達しやすい。
+- `C` 判定（制度主導）はこの6件の実測ログを根拠に後段で提出する方が通しやすい。
+
+## 2026-03-15 12:02 JST 再検証ログ（本run / 深掘り対象固定）
+
+- `RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認し、本ページの `RQ` 行数と整合することを確認。
+- `主EEG-DATA` 列で参照しているIDは `EEG-DATA/eeg_dataset_summary_ja.csv` に全件存在（欠落 `0`）。
+- 助成キー `G1-G6` の実IDは `auto-research-funds` 側で全件参照可能。
+- 本ページの運用を継続: 1件ずつ深掘りして `EEGで直接検証する核` と `EEG外で必須` を明示し、汎用要約を避ける。
+
+</article>
+</main>
+
+## 2026-03-15 13:03 JST 再検証ログ（本run / 深掘り運用継続）
+
+- `main` pull後に `RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認し、本ページの `RQ` 行と整合することを確認しました。
+- 本ページで参照する EEG データIDは `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を再確認しました。
+- 助成実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `auto-research-funds` 側で全件参照可能を再確認しました。
+- 方針は継続: 汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` を維持し、RQ単位で深掘り記述を優先します。
+
 ## 2026-03-15 14:03 JST 再検証ログ（本run / 全RQ深掘り固定の再確認）
 
 - `mind-upload/wiki/mind-upload-rq60-deep-focus-notes.md` の `RQ` 行を再カウントし、`60件`（`A/B/C=17/25/18`）を確認しました。

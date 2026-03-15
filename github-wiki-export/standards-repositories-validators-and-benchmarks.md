@@ -4,13 +4,13 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-14 / 位置づけ: Operational guide
+- 更新日: 2026-03-15 / 位置づけ: Operational guide
 
 ## このページの役割
-このページは、Mind-Upload で何度も出てくる『規格』『置き場』『Validator』『ベンチマーク』に加えて、実務で重要な『版固定』『ローダ / 変換器』『benchmark harness』の役割差を整理する wiki です。名前だけ覚えるのではなく、『どこで再現性が壊れやすいか』まで分けて理解することを目標にします。
+このページは、Mind-Upload で何度も出てくる『規格』『置き場』『Validator』『ベンチマーク』に加えて、実務で重要な『版固定』『イベント意味論』『同期ミドルウェア』『ローダ / 変換器』『benchmark harness』の役割差を整理する wiki です。名前だけ覚えるのではなく、『どこで再現性が壊れやすいか』まで分けて理解することを目標にします。
 
 ## 正確さの前提
-ここで説明するのは役割の基本整理です。どの規格やどのベンチマークが最終的に WBE に十分かの結論を与えるページではありません。
+ここで説明するのは役割の基本整理です。BIDS の器、HED の意味論、LSL の同期は相補的であり、どれか 1 つで最終的な妥当性が保証されるわけではありません。
 
 ## 公開ページへ戻る
 - [データ&ベンチ](https://mind-upload.com/datasets.html)
@@ -26,6 +26,8 @@
 ## いま分かっていること
 - 研究を比較可能にするには、データの形、公開先、検査手段、評価ルールを分けて整える必要があります。
 - BIDS と EEG-BIDS は『どう置くか』の規格であり、採点ルールそのものではありません。
+- HED のようなイベント意味論は、BIDS に載る event の意味を機械可読に補う役割があります。
+- LSL は stream 間の clock alignment を助けますが、hardware delay の ground truth にはなりません。
 - OpenNeuro や PhysioNet は公開基盤ですが、入力形式や評価手順を自動で全部保証するわけではありません。
 - 同じ dataset 名でも、snapshot / version と evaluation family が違えば比較不能です。
 
@@ -78,7 +80,7 @@
 </tbody>
 </table>
 
-<h2>実務では 4 つでは足りず、5 層で見ます</h2>
+<h2>実務では 4 つでは足りず、7 層で見ます</h2>
 <table>
 <thead>
 <tr>
@@ -102,29 +104,41 @@
 <td>その版が benchmark split や前処理条件まで固定するとは限りません。</td>
 </tr>
 <tr>
-<td><strong>3. 変換・読込</strong></td>
+<td><strong>3. イベント意味論 / 拡張 schema</strong></td>
+<td>HED、Motion-BIDS</td>
+<td><code>trial_type</code> の意味、event tag、追加センサの metadata、座標 frame です。</td>
+<td>clock alignment や benchmark split までは自動で決まりません。</td>
+</tr>
+<tr>
+<td><strong>4. 同期ミドルウェア</strong></td>
+<td>LSL</td>
+<td>複数ストリームの時刻整列、clock offset 推定、stream metadata です。</td>
+<td>device-side delay や刺激提示遅延の真値までは保証しません。</td>
+</tr>
+<tr>
+<td><strong>5. 変換・読込</strong></td>
 <td>MNE-BIDS</td>
 <td>BIDSPath、metadata 抽出、MNE への読込経路、必要時の format 変換です。</td>
 <td>比較指標や評価族は固定しません。</td>
 </tr>
 <tr>
-<td><strong>4. Benchmark harness</strong></td>
+<td><strong>6. Benchmark harness</strong></td>
 <td>MOABB</td>
 <td>paradigm、evaluation family、統計比較、同一 pipeline の横断評価です。</td>
 <td>source imaging の真値や実運用安全性までは保証しません。</td>
 </tr>
 <tr>
-<td><strong>5. 学習器</strong></td>
+<td><strong>7. 学習器</strong></td>
 <td>線形分類器、Riemannian pipeline、deep model</td>
 <td>どのモデルを、どの前処理・乱数・ハイパーパラメータで回したかです。</td>
-<td>上の 1〜4 が固定されていなければ、公平比較にはなりません。</td>
+<td>上の 1〜6 が固定されていなければ、公平比較にはなりません。</td>
 </tr>
 </tbody>
 </table>
 
 <strong>2026-03 の site rule</strong>
 <p>
-OpenNeuro は snapshot を semantic version の git tag として扱い、PhysioNet も project ごとに version を明示して引用させます。したがって本サイトでは、dataset 名だけではなく <strong>snapshot / version / DOI または永続 URL</strong> まで成果物へ含めます。さらに、MNE-BIDS は入出力経路を助ける道具であり、MOABB は比較ルールを固定する道具です。この 2 つを混ぜて「BIDS にしたので benchmark まで済んだ」と読まないでください。
+OpenNeuro は snapshot を semantic version の git tag として扱い、PhysioNet も project ごとに version を明示して引用させます。したがって本サイトでは、dataset 名だけではなく <strong>snapshot / version / DOI または永続 URL</strong> まで成果物へ含めます。さらに、BIDS は器、HED / Motion-BIDS は意味論と追加 metadata、LSL は同期、MNE-BIDS は入出力経路、MOABB は比較ルールでございます。これらを混ぜて「BIDS にしたので benchmark まで済んだ」「LSL を入れたので hardware 遅延まで解決した」と読まないでください。
 </p>
 
 <h2>EEG の例で見ると</h2>
@@ -141,15 +155,23 @@ OpenNeuro は snapshot を semantic version の git tag として扱い、Physio
 <td>EEG ファイル、events.tsv、channels.tsv、メタデータを BIDS 形へそろえます。</td>
 </tr>
 <tr>
-<td><strong>2. Validator で点検する</strong></td>
+<td><strong>2. event semantics を付ける</strong></td>
+<td><code>trial_type</code>、条件説明、HED tags、manual scoring rule、report usage flag を明示します。</td>
+</tr>
+<tr>
+<td><strong>3. 同期を監査する</strong></td>
+<td>clock domain、LSL / TTL / photodiode、delay / jitter / drift の測り方を残します。</td>
+</tr>
+<tr>
+<td><strong>4. Validator で点検する</strong></td>
 <td>規格違反や不足項目を機械的に洗い出します。</td>
 </tr>
 <tr>
-<td><strong>3. 置き場へ公開する</strong></td>
+<td><strong>5. 置き場へ公開する</strong></td>
 <td>OpenNeuro や PhysioNet のような共有基盤に載せ、第三者が取得できるようにします。</td>
 </tr>
 <tr>
-<td><strong>4. ベンチマークで比べる</strong></td>
+<td><strong>6. ベンチマークで比べる</strong></td>
 <td>同じ train/test 分割、同じ指標、同じベースラインでモデルを比較します。</td>
 </tr>
 </tbody>
@@ -228,6 +250,14 @@ OpenNeuro は snapshot を semantic version の git tag として扱い、Physio
 <td>MNE-BIDS は読込・変換の助けであり、evaluation family や比較統計を固定するのは別作業です。</td>
 </tr>
 <tr>
+<td>「`events.tsv` があるので event semantics まで固定された」</td>
+<td><code>events.tsv</code> は時刻と列の器であり、条件意味や scorer rule は <code>events.json</code>、HED、補助ログで別に固定する必要があります。</td>
+</tr>
+<tr>
+<td>「LSL を使ったので hardware 遅延まで解決した」</td>
+<td>LSL は stream 同期を助けますが、display / audio / amplifier の device-side delay は別測定が必要です。</td>
+</tr>
+<tr>
 <td>「MOABB の score は task をまたいでそのまま比較できる」</td>
 <td>within-session、cross-session、cross-subject は別の評価族であり、同列には扱えません。</td>
 </tr>
@@ -275,10 +305,11 @@ OpenNeuro は snapshot を semantic version の git tag として扱い、Physio
 </tbody>
 </table>
 
-<h2>強い主張を読むときの 5 問</h2>
+<h2>強い主張を読むときの 6 問</h2>
 <ol>
 <li><strong>入力の規格は何か：</strong>BIDS などで形がそろっているかを確認します。</li>
 <li><strong>どの版を使ったか：</strong>snapshot、version、DOI、取得日が固定されているかを見ます。</li>
+<li><strong>event semantics と clock domain は何か：</strong><code>trial_type</code>、HED、scorer rule、LSL / TTL / photodiode、delay / jitter の監査があるかを見ます。</li>
 <li><strong>何で読み書きしたか：</strong>ローダ / 変換器と、その version が明示されているかを見ます。</li>
 <li><strong>何で比べているか：</strong>benchmark、evaluation family、分割、指標、禁止事項が固定されているかを見ます。</li>
 <li><strong>raw と derivative を分けたか：</strong>前処理済みデータの lineage が追えるかを見ます。</li>
@@ -286,8 +317,13 @@ OpenNeuro は snapshot を semantic version の git tag として扱い、Physio
 
 <h2>参考文献と公式ページ</h2>
 <ul>
+<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/events.html" target="_blank">BIDS Specification: Task events</a></li>
 <li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS Specification: Electroencephalography</a></li>
 <li><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019), EEG-BIDS</a></li>
+<li><a href="https://doi.org/10.1007/s12021-021-09513-7" target="_blank">Robbins et al. (2021), HED for FAIR event annotation</a></li>
+<li><a href="https://doi.org/10.1038/s41597-025-05791-2" target="_blank">Hermes et al. (2025), HED library schema for EEG data annotation</a></li>
+<li><a href="https://doi.org/10.1162/imag_a_00136" target="_blank">Kothe et al. (2025), Lab Streaming Layer</a></li>
+<li><a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Jeung et al. (2024), Motion-BIDS</a></li>
 <li><a href="https://docs.openneuro.org/git.html" target="_blank">OpenNeuro Docs: Git access and snapshots</a></li>
 <li><a href="https://docs.openneuro.org/user_guide.html" target="_blank">OpenNeuro Docs: Dataset landing page and snapshot metadata</a></li>
 <li><a href="https://physionet.org/about/" target="_blank">PhysioNet: About and citation policy</a></li>

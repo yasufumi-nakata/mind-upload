@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Reading guide
+- 更新日: 2026-03-15 / 位置づけ: Reading guide
 
 ## このページの役割
 このページは、文献地図で出てくる U番号を日常語で読み替えるための補助ページです。番号を暗記することが目的ではなく、『自分はどの塊から読めばよいか』を見つけやすくすることを目標にします。
@@ -26,10 +26,12 @@
 - U は、文献地図の中で未解決問題を整理するための内部コードです。
 - 大きな問題群で見れば、どこから読むべきかはかなり分かりやすくなります。
 - 引用数や番号の大きさは、主張の強さや重要度そのものではありません。
+- 技術・自然科学の読者は、U0/U12/U15 を既定入口に置かない方が読み違えを減らせます。
 
 ## まだ分かっていないこと
 - 各 U の内容や境界は、今後の文献整理で更新される可能性があります。
 - どの U に最も研究資源を集中すべきかは、まだ固定していません。
+- U11 の意識指標比較を主導線へ戻すかどうかは、今後の prediction competition と benchmark 整備で変わり得ます。
 
 ---
 
@@ -86,23 +88,70 @@ U番号は試験の暗記項目ではありません。役割は「この文献�
 </thead>
 <tbody>
 <tr>
-<td>EEG や逆問題の限界</td>
+<td>EEG や逆問題、時刻同期の限界</td>
 <td>U1 / U7</td>
 </tr>
 <tr>
-<td>本人性やコピー問題</td>
-<td>U0 / U12</td>
-</tr>
-<tr>
-<td>模倣と本物の違い</td>
+<td>decode 成功と WBE 主張の違い</td>
 <td>U4 / U13</td>
 </tr>
 <tr>
-<td>公開運用や追試可能性</td>
-<td>U14 / U15</td>
+<td>長期 closed-loop の安定性</td>
+<td>U8</td>
+</tr>
+<tr>
+<td>connectome 外の maintenance-state</td>
+<td>U3</td>
+</tr>
+<tr>
+<td>物理コストや散逸まで含めたい</td>
+<td>U10</td>
 </tr>
 </tbody>
 </table>
+
+<h2>技術・自然科学で先に見る順</h2>
+<table>
+<thead>
+<tr>
+<th>順番</th>
+<th>U 群</th>
+<th>この順で見る理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>U1 / U7</strong></td>
+<td>まず、何が直接観測され、何がまだ推定かを固定しないと、その後の主張レベルが全部ぶれます。</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>U4 / U13</strong></td>
+<td>decode や模倣の成功を、因果保存や emulation と読み違えないためです。</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td><strong>U8</strong></td>
+<td>within-session の成功が、長期運用の安定とは限らないためです。</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td><strong>U3</strong></td>
+<td>connectome と cell type の外に残る maintenance-state を確認しないと、長期主張を読みすぎるためです。</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td><strong>U10</strong></td>
+<td>最後に、散逸と実効コストを反証条件として戻し、計算可能性だけで話を終えないためです。</td>
+</tr>
+</tbody>
+</table>
+
+<strong>主導線から外す群</strong>
+<p>
+<strong>U0 / U12 / U15</strong> は重要ですが、技術・自然科学の既定入口には置きません。ここで先に必要なのは、本人性や制度論よりも、<strong>何が測れて、どこまで直接妥当化できて、どこで閉ループが壊れ、どの state が残るか</strong>を固定することだからです。
+</p>
 
 <h2>U番号で読み違えないために</h2>
 

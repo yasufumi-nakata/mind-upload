@@ -208,17 +208,18 @@ Mind-Uploadの立場は、「派手な読み出し」を否定することでは
 <section class="section" id="q1b">
 <h2 class="section-title" id="brain-to-text">Q. brain-to-text のデモを見るとき、最低限どこを確認する？</h2>
 <p>
-A. 少なくとも次の 5 点でございます。
+A. 少なくとも次の 6 点でございます。
 </p>
 <ul>
 <li><strong>計測法：</strong>scalp EEG / MEG / fMRI / ECoG / intracortical array のどれか。高性能 speech neuroprosthesis の代表例は侵襲系です。</li>
 <li><strong>課題：</strong>聞いた単語、読んだ単語、発話運動、想起、自由会話のどれか。制約つき知覚課題と自由思考は別です。</li>
-<li><strong>prior：</strong>固定語彙、beam search、外部コーパス、LLM、prompt をどこまで使ったか。出力の流暢さが脳信号だけを反映しているとは限りません。</li>
+<li><strong>prior と baseline：</strong>固定語彙、beam search、外部コーパス、LLM、prompt に加え、<code>LM-only</code> / <code>no-brain</code> / shuffle baseline をどこまで置いたか。出力の流暢さが脳信号だけを反映しているとは限りません。</li>
 <li><strong>検証：</strong>held-out 条件、反事実テスト、adversarial control、失敗例があるか。訓練条件と近すぎる評価は強い証拠になりません。</li>
-<li><strong>信頼度運用：</strong>confidence が校正されているか、低信頼時に棄権できるか。高確率表示だけでは安全な解釈になりません。</li>
+<li><strong>信頼度運用：</strong>confidence が校正されているか、低信頼時に silence / abstention を返せるか。高確率表示だけでは安全な解釈になりません。</li>
+<li><strong>長期運用：</strong>within-session の速さだけでなく、tail latency、日跨ぎ安定性、再校正負荷を出しているか。速い demo と deployable loop は別です。</li>
 </ul>
 <p>
-特に、Metzger et al. (2023) や Card et al. (2024) の高性能 speech neuroprosthesis は cortical surface electrodes や intracortical arrays を用いた侵襲系で達成された値です。scalp EEG や一般的な non-invasive BCI は、そのまま同じ性能を名乗れません。
+Littlejohn et al. (2025) は 80 ms ごとの streaming brain-to-voice、Wairagkar et al. (2025) は 10 ms 未満の neural-to-voice synthesis と silence fallback を示しましたが、いずれも侵襲系の communication route でございます。さらに Wilson et al. (2025) は long-term unsupervised recalibration の必要性を示し、daily supervised recalibration 自体が別の壁であることを明確にしました。したがって、scalp EEG や一般的な non-invasive BCI が同じ条件なしに同水準を名乗ることはできません。
 </p>
 </section>
 
@@ -227,6 +228,9 @@ A. 少なくとも次の 5 点でございます。
 <p>
 A. decodeは“観測を翻訳する”ことで、emulateは“内部状態が時間発展し、介入に反応し、出力を生成する”ことです。
 WBEに近づくには、後者を評価できるベンチマーク（介入・反事実・閉ループ）へ寄せる必要があります。
+</p>
+<p>
+2025 年の non-invasive word decode や streaming speech neuroprosthesis は、communication route として非常に重要な前進です。しかし Mind-Upload では、<strong>language prior を超える neural contribution</strong>、<strong>OOD / cross-day 一般化</strong>、<strong>介入後の一致</strong>、<strong>tail latency / silence / recalibration burden</strong>、<strong>hidden state の監査</strong>がそろわない限り、それを emulate や WBE とは読み替えません。ここで前進したのは、まず decode あるいは局所 subsystem closed loop でございます。
 </p>
 <p><a href="wbe_101.html">入門（WBE 101）</a>と<a href="glossary.html">用語集</a>に加え、<a href="wiki/decode-vs-emulate.html">Wiki: Decode と Emulate</a> も近道です。</p>
 </section>
@@ -297,10 +301,10 @@ Mind-Uploadでは、失敗例・リーク検査・モデルカードを含めて
 A. それだけでは言えません。閉ループでは、出力が次の入力や環境を変えるため、end-to-end 遅延、ジッタ、ドリフト、安全停止の設計が必要です。あとから記録済みデータを読むのが得意でも、リアルタイムで安定とは限りません。
 </p>
 <p>
-近年の speech neuroprosthesis は real-time text / audio / avatar 出力で大きく前進しましたが、その代表例は高密度 cortical surface electrodes や intracortical arrays を使う侵襲系です。閉ループ性能を読むときは、遅延や語彙サイズだけでなく、装置の侵襲性、再校正時間、日跨ぎ安定性を切り分けてください。
+近年の speech neuroprosthesis は real-time text / audio / voice 出力で大きく前進しました。Littlejohn et al. (2025) は 80 ms ごとの streaming brain-to-voice、Wairagkar et al. (2025) は 10 ms 未満の neural-to-voice synthesis を示しましたが、これはあくまで侵襲系 communication subsystem の within-session 達成です。Wilson et al. (2025) が示す通り、daily supervised recalibration を減らしつつ long-term に維持できるかは別の問題でございます。
 </p>
 <p>
-Mind-Upload では、オフライン精度と L3 閉ループ安定性を分けて読みます。ここを初歩から整理したい場合は <a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: 閉ループ・遅延・ジッタ・安全停止</a> が近道です。
+Mind-Upload では、オフライン精度と L3 閉ループ安定性を分けて読みます。特に <strong>P50/P95/P99 latency</strong>、<strong>silence / abstention</strong>、<strong>recalibration burden</strong>、<strong>cross-day 劣化</strong>を accuracy と別に出していなければ、deployable closed loop と読みません。ここを初歩から整理したい場合は <a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: 閉ループ・遅延・ジッタ・安全停止</a> が近道です。
 </p>
 </section>
 
@@ -377,8 +381,10 @@ Mind-Uploadの差別化点は、<strong>「検証基盤（Verification Commons�
 <li>d'Ascoli, S., Bel, C., Rapin, J., et al. (2025). Towards decoding individual words from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">doi:10.1038/s41467-025-65499-0</a></li>
 <li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Validating EEG source imaging using intracranial electrical stimulation in focal epilepsy. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
 <li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
-<li>Metzger, S. L., Littlejohn, K. T., Silva, A. B., et al. (2023). A high-performance neuroprosthesis for speech decoding and avatar control. <a href="https://doi.org/10.1038/s41586-023-06443-4" target="_blank">doi:10.1038/s41586-023-06443-4</a></li>
-<li>Card, N. S., Glasser, M. F., et al. (2024). An accurate and rapidly calibrating speech neuroprosthesis. <a href="https://doi.org/10.1056/NEJMoa2314132" target="_blank">doi:10.1056/NEJMoa2314132</a></li>
+<li>Willett, F. R., Kunz, E. M., Fan, C., et al. (2023). A high-performance speech neuroprosthesis. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
+<li>Littlejohn, K. T., Dabagia, M., Ladwig, A., et al. (2025). A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
+<li>Wairagkar, M., Card, N. S., Singer-Clark, T., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+<li>Wilson, G. H., Stein, E. A., Kamdar, F., et al. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
 <li>Gouwens, N. W., et al. (2021). Integrated morphoelectric and transcriptomic classification of cortical GABAergic cells. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
 <li>Hengen, K. B., Torrado Pacheco, A., McGregor, J. N., Van Hooser, S. D., &amp; Turrigiano, G. G. (2016). Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
 <li>Torrado Pacheco, A., et al. (2021). Sleep Promotes Downward Firing Rate Homeostasis. <a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">doi:10.1016/j.neuron.2021.04.004</a></li>
