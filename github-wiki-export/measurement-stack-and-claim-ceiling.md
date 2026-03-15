@@ -7,7 +7,7 @@
 - 更新日: 2026-03-15 / 位置づけ: Technical / natural science only
 
 ## このページの役割
-このページは、WBE の議論で見落としやすい『measurement stack ごとの主張上限』を固定する wiki です。hidden state が重要だというだけでは足りません。EEG/MEG/fMRI、spatial transcriptomics、Patch-seq、volume EM、same-brain functional connectomics、local transmitter / glia imaging が、それぞれ何を直接観測し、何をまだ latent に残すのかを、一次文献ベースで整理します。
+このページは、WBE の議論で見落としやすい『measurement stack ごとの主張上限』を固定する wiki です。hidden state が重要だというだけでは足りません。EEG/MEG/fMRI、高密度 extracellular probe、spatial transcriptomics、Patch-seq、volume EM、same-brain functional connectomics、local transmitter / glia imaging が、それぞれ何を直接観測し、何をまだ latent に残すのかを、一次文献ベースで整理します。
 
 ## 正確さの前提
 以下の『claim ceiling』列は、各論文がそのまま宣言している結論ではありません。一次文献が直接観測した変数と、依然として未観測の状態変数から本サイトが引く運用上の推論でございます。
@@ -25,6 +25,7 @@
 
 ## いま分かっていること
 - EEG/MEG/fMRI はマクロな proxy を与えますが、細胞型、シナプス効率、神経修飾場、グリア状態を直接は与えません。
+- 高密度 extracellular probe は implant 近傍の local population を強く見ますが、chronic な single-unit identity は sorting と matching を介した推定です。
 - whole-brain spatial transcriptomics は cell-type taxonomy と空間配置を大きく前進させますが、動的状態の十分性は別問題です。
 - Patch-seq と same-brain connectomics は縮退を減らしますが、全脳 coverage と長期 maintenance-state の十分性は残ります。
 - local transmitter / glia imaging は coarse proxy の校正に有効ですが、そのまま全脳 ground truth にはなりません。
@@ -38,7 +39,7 @@
 
 <h2>いちばん短い結論</h2>
 <p>
-現行サイトの弱点は、<strong>重要な state は列挙できても、どの measurement stack が何を直接観測し、どこで主張上限に当たるか</strong>が前面に出ていなかった点でございました。一次文献を並べると、EEG/MEG/fMRI はマクロ state の tracking、whole-brain spatial atlas は cell-type と空間配置、Patch-seq は cell-type と morpho-electric phenotype の橋渡し、volume EM は structural scaffold、same-brain functional connectomics は局所 conditional prediction、local transmitter / astrocyte imaging は coarse proxy の較正を強くします。しかし、<strong>どの stack も単独では state-complete reconstruction を与えません</strong>。したがって本サイトでは、measurement stack ごとに claim ceiling を明記し、そこを超える表現を禁止します。
+現行サイトの弱点は、<strong>重要な state は列挙できても、どの measurement stack が何を直接観測し、どこで主張上限に当たるか</strong>が前面に出ていなかった点でございました。一次文献を並べると、EEG/MEG/fMRI はマクロ state の tracking、高密度 extracellular probe は implant 近傍の local population window、whole-brain spatial atlas は cell-type と空間配置、Patch-seq は cell-type と morpho-electric phenotype の橋渡し、volume EM は structural scaffold、same-brain functional connectomics は局所 conditional prediction、local transmitter / astrocyte imaging は coarse proxy の較正を強くします。しかし、<strong>どの stack も単独では state-complete reconstruction を与えません</strong>。したがって本サイトでは、measurement stack ごとに claim ceiling を明記し、そこを超える表現を禁止します。
 </p>
 
 <strong>このページの範囲</strong>
@@ -101,6 +102,13 @@
 <td><strong>cell-type-specific prior と局所 parameter constraint まで</strong>です。全脳 state completeness には使いません。</td>
 </tr>
 <tr>
+<td><strong>high-density extracellular probe<br>(Neuropixels / Utah / microwire)</strong></td>
+<td>implant 近傍の extracellular spike waveform、threshold crossing、multiunit / local field activity です。</td>
+<td>Steinmetz らや Neuropixels 系のように、implant region の local population dynamics、online decode、比較的強い局所 readout を一段強くできます。</td>
+<td>未記録 neuron、stable single-unit identity across days、sorting-dependent cluster boundary、probe drift、tissue response、synaptic / transmitter / glial state、全脳 coverage は残ります。</td>
+<td><strong>implant-region の local population window と stated validity horizon まで</strong>です。stable neuron identity や whole-brain ground truth には上げません。</td>
+</tr>
+<tr>
 <td><strong>volume EM connectomics</strong></td>
 <td>超微細形態と chemical synapse の構造 snapshot です。</td>
 <td>Dorkenwald らの全脳 fly wiring diagram のように、structural scaffold、projectome、候補回路を強くできます。</td>
@@ -143,17 +151,22 @@ Yao らは、whole mouse brain に対して scRNA-seq と MERFISH を組み合�
 Gouwens らは transcriptomic family 内に morpho-electric variation が連続的に残ることを示し、Gamlin らは Patch-seq で定義された MET-type を large-scale EM へ写像して、Sst MET-type ごとの myelination と synaptic output の差を示しました。これは <strong>cell-type label だけでは足りず、electrophysiology と morphology を足す価値が大きい</strong>ことを意味します。一方で、Patch-seq は sparse で destructive な sampling であり、同一個体の全脳 current state や longitudinal history を与えるわけではありません。したがって、これは <strong>bridge</strong> であって <strong>whole-brain completeness</strong> ではございません。
 </p>
 
-<h3>3. EM connectome は scaffold だが、dynamic state を凍結しません</h3>
+<h3>3. 高密度 extracellular probe は local population window だが、unit identity と chronic horizon は自動では固定されません</h3>
+<p>
+Steinmetz らの Neuropixels 2.0 は motion correction により安定な長期記録を大きく前進させ、Pachitariu らの Kilosort4 は drift、low-norm units、split / merge error を含む現実的 benchmark を前提に spike sorting を改良しました。しかし、ここから直ちに「同じ neuron を長期間そのまま見ている」とは言えません。Trautmann らは、dense array では <strong>population dynamics のかなりの部分が spike sorting を介さなくても回収できる</strong>ことを示し、van Beest らは high-density probe の cross-day matching を <strong>probabilistic unit identification</strong> として実装しました。さらに Gregory らは、埋め込み array 周辺の deep-layer pyramidal neuron に structural / functional change が起こることを示しました。したがって、この stack の強みは <strong>implant region の local population readout</strong> であり、<strong>stable single-unit identity</strong> は別監査項目でございます。
+</p>
+
+<h3>4. EM connectome は scaffold だが、dynamic state を凍結しません</h3>
 <p>
 Dorkenwald らの adult fly whole-brain connectome は、約 5 × 10<sup>7</sup> chemical synapses と 139,255 neurons を再構成した巨大な前進です。しかし、EM が強いのは structural scaffold であり、current weight、release probability、neuromodulatory context、glial / metabolic background を直接測る方法ではありません。ここから導かれる批判は単純で、<strong>配線が分かった</strong>ことと<strong>その瞬間の生成的状態が分かった</strong>ことを同一視してはならない、という点でございます。
 </p>
 
-<h3>4. same-brain function を足すと縮退は減るが、全脳 state-complete には届きません</h3>
+<h3>5. same-brain function を足すと縮退は減るが、全脳 state-complete には届きません</h3>
 <p>
 MICrONS は、同一脳で dense calcium imaging、行動状態、EM connectome を結びつけ、mouse visual cortex の multi-area functional connectomics を提示しました。これは connectome-only より一段強く、<strong>同じ脳での structure-function link</strong> を論じられる土台です。しかし、論文自体が扱うのは visual cortex の特定領域、特定課題、特定状態であり、そこから human whole-brain や all-state completeness へ飛躍することはできません。従って、この stack の ceiling は <strong>local functional twin</strong> です。
 </p>
 
-<h3>5. neuromodulator / glia imaging は coarse proxy の誤読を減らすが、全脳 ground truth にはなりません</h3>
+<h3>6. neuromodulator / glia imaging は coarse proxy の誤読を減らすが、全脳 ground truth にはなりません</h3>
 <p>
 Neyhart らは cortical ACh dynamics が cholinergic axon activity と behavioral state からかなり予測できること、同時に局所軸索からの距離と clearance kinetics に依存することを示しました。Cahill らは、局所的な neurotransmitter input が broad astrocyte network へ minutes-long に符号化されることを示しました。これらは、「pupil が上がった」「行動状態が変わった」だけで transmitter state や glial state を単純化してよいわけではないことを教えます。したがって、これらの stack は <strong>proxy calibration</strong> と <strong>glia omission の禁止</strong> には非常に有効ですが、そのまま全脳 internal state の ground truth にはなりません。
 </p>
@@ -163,10 +176,11 @@ Neyhart らは cortical ACh dynamics が cholinergic axon activity と behaviora
 <h4>Rule</h4>
 <ul>
 <li><strong>augmentation claim には measurement stack を書く：</strong>「transcriptomic label を足した」ではなく、whole-brain atlas か Patch-seq bridge か same-brain link かを区別します。</li>
-<li><strong>atlas / bridge / scaffold / local twin / proxy calibration を混ぜない：</strong>同じ「前進」でも、どの種類の前進かを固定します。</li>
+<li><strong>atlas / bridge / local population window / scaffold / local twin / proxy calibration を混ぜない：</strong>同じ「前進」でも、どの種類の前進かを固定します。</li>
 <li><strong>multimodal を state-complete の同義語にしない：</strong>何の latent state が依然として残るかを本文に併記します。</li>
 <li><strong>未観測状態を埋めるときは推定と書く：</strong>cell type から threshold / gain / set point を自動補完した場合は latent inference と明記します。</li>
-<li><strong>claim ceiling を超える表現を禁止する：</strong>たとえば EM だけで emulation-complete、Patch-seq だけで whole-brain state-complete、pupil だけで transmitter ground truth とは書きません。</li>
+<li><strong>sorted spike を stable neuron identity と書かない：</strong>chronic 記録では sorting version、drift correction、unit-match probability、dropout rate を別に残します。</li>
+<li><strong>claim ceiling を超える表現を禁止する：</strong>たとえば EM だけで emulation-complete、Patch-seq だけで whole-brain state-complete、同一 shank の sorted unit だけで cross-day same-neuron claim、pupil だけで transmitter ground truth とは書きません。</li>
 </ul>
 
 <table>
@@ -184,6 +198,12 @@ Neyhart らは cortical ACh dynamics が cholinergic axon activity と behaviora
 <td>外部 ground truth、侵襲記録、同一個体の構造/機能対応、介入応答です。</td>
 <td>macro decode から weak L2 へ進む根拠が少し強くなります。</td>
 <td>cell/synapse state の十分性、whole-brain WBE、state-complete claim は止めます。</td>
+</tr>
+<tr>
+<td><strong>extracellular probes</strong></td>
+<td>sorting benchmark、drift correction、unit-match probability、implant age / tissue-response log、cross-day validation です。</td>
+<td>implant region の local population dynamics と chronic decode の validity horizon を少し強くできます。</td>
+<td>stable same-neuron identity、whole-circuit ground truth、state-complete recording は止めます。</td>
 </tr>
 <tr>
 <td><strong>whole-brain atlas</strong></td>
@@ -211,6 +231,11 @@ Neyhart らは cortical ACh dynamics が cholinergic axon activity と behaviora
 <li>Dorkenwald, S., et al. (2024). Neuronal wiring diagram of an adult brain. <em>Nature</em>, 634, 124-138. <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">doi:10.1038/s41586-024-07558-y</a></li>
 <li>Yao, Z., et al. (2023). A high-resolution transcriptomic and spatial atlas of cell types in the whole mouse brain. <em>Nature</em>, 624, 317-332. <a href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank">doi:10.1038/s41586-023-06812-z</a></li>
 <li>Gouwens, N. W., et al. (2021). Phenotypic variation of transcriptomic cell types in mouse motor cortex. <em>Nature</em>, 598, 144-150. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
+<li>Steinmetz, N. A., Aydin, C., Lebedeva, A., et al. (2021). Neuropixels 2.0: A miniaturized high-density probe for stable, long-term brain recordings. <em>Science</em>, 372(6539), eabf4588. <a href="https://doi.org/10.1126/science.abf4588" target="_blank">doi:10.1126/science.abf4588</a></li>
+<li>Pachitariu, M., et al. (2024). Spike sorting with Kilosort4. <em>Nature Methods</em>, 21, 914-921. <a href="https://doi.org/10.1038/s41592-024-02595-5" target="_blank">doi:10.1038/s41592-024-02595-5</a></li>
+<li>Trautmann, E. M., Stavisky, S. D., Lahiri, S., et al. (2019). Accurate estimation of neural population dynamics without spike sorting. <em>Neuron</em>, 103(2), 292-308.e4. <a href="https://doi.org/10.1016/j.neuron.2019.05.003" target="_blank">doi:10.1016/j.neuron.2019.05.003</a></li>
+<li>van Beest, E. H., Jia, X., Deng, X., et al. (2024). Tracking neurons across days with high-density probes. <em>Nature Methods</em>. <a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">doi:10.1038/s41592-024-02440-1</a></li>
+<li>Gregory, N. S., et al. (2023). Structural and functional changes of deep layer pyramidal neurons surrounding implanted microelectrode arrays in rat motor cortex. <em>Journal of Neural Engineering</em>, 20(4), 046022. <a href="https://doi.org/10.1088/1741-2552/ace8ac" target="_blank">doi:10.1088/1741-2552/ace8ac</a></li>
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>, 640, 435-447. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <em>Nature</em>, 640, 497-505. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <em>Cell Reports</em>, 43(10), 114808. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>

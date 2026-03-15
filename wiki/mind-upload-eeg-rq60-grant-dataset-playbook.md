@@ -172,3 +172,11 @@ recommended_pages:
 - 独立監査結果として、`feasibility` ページの `ID -> データセット名` 表は現行CSVの再採番と固定一致しない点を確認。運用上は既存方針どおり `D1-D16 + DOI` 正本参照を優先する。
 - 方針を継続: 汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持。
 
+
+## 2026-03-16 00:02 JST 再検証ログ（本run / 申請プレイブック更新）
+
+- `RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認し、`mind-upload-eeg-rq60-feasibility-and-funds.md` と整合しました。
+- 全 `RQ` 行で `第一応募先/予備応募先/主EEG-DATA/最小成果物` の欠落 `0`、空欄 `0` を確認しました。
+- `主EEG-DATA` として参照するIDは `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）。
+- 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）の参照可能性を再確認しました。
+- 実務方針は据え置きです。`1RQ=1提出判断` を固定し、汎用テーマ化せずRQ単位で申請文へ転記する運用を継続します。

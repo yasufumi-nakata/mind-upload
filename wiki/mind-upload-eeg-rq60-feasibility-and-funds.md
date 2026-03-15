@@ -573,3 +573,12 @@ recommended_pages:
 - 独立監査結果として、`feasibility` ページの `ID -> データセット名` 表は現行CSVの再採番と固定一致しない点を確認。運用上は既存方針どおり `D1-D16 + DOI` 正本参照を優先する。
 - 方針を継続: 汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持。
 
+
+## 2026-03-16 00:02 JST 再検証ログ（本run / RQ60可否と助成テーマ更新）
+
+- 作業前に `git pull --rebase --autostash origin main` を実行し、`main` 最新状態で再検証しました。
+- `mind-upload/research_harvest_50.md` 正本に対して `Ux-RQy` を再突合し、`RQ_TOTAL=60`、`重複=0`、`欠落=0` を確認しました。
+- 判定内訳は再計数で `A/B/C=17/25/18` を維持し、本ページのRQ別表と整合しました。
+- `推奨EEG-DATA` で参照するID（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）。
+- 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再確認しました。
+- 方針は継続します。汎用俯瞰へ戻さず、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用で各課題を1件ずつ扱います。
