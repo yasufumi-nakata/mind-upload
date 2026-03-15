@@ -530,3 +530,10 @@ recommended_pages:
 - 判定内訳 `A/B/C=17/25/18` を再確認し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持しました。
 - 参照EEGデータID（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を確認しました。
 - 助成キー `G1-G6` 実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` と `grant_eeg_dataset_match.csv` で参照可能を再確認しました。
+
+## 2026-03-15 16:03 JST 再検証ログ（本run / submodule pull後）
+
+- `mind-upload` / `EEG-DATA` / `auto-research-funds` の `main` を pull 後に再点検し、`RQ_TOTAL=60` と `A/B/C=17/25/18` の整合を確認。
+- `1RQ=1検証命題=1応募テーマ=1主データ` の運用規則を継続し、汎用俯瞰へ戻さない方針を維持。
+- 参照EEGデータは `24 ID`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）で欠落なし。
+- 助成実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は引き続き参照可能。
