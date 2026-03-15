@@ -83,7 +83,7 @@ recommended_pages:
 <td><a href="../verification.html#state-completeness-gate">状態変数の完全性ゲート</a> / <a href="../tech_roadmap.html#qa-m3">M3 空間粒度</a></td>
 </tr>
 <tr>
-<td><strong>どの計測スタックで何が直接見えて、どこで主張上限に当たるか知りたい</strong></td>
+<td><strong>どの計測スタックで何が直接見えて、どの state variable がどの時定数で still latent か知りたい</strong></td>
 <td><a href="measurement-stack-and-claim-ceiling.html">計測スタックごとの observability と claim ceiling</a></td>
 <td><a href="../verification.html#state-completeness-gate">状態変数の完全性ゲート</a> / <a href="../tech_roadmap.html#qa-m1">M1 観測変数</a></td>
 </tr>

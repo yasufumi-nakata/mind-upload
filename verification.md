@@ -619,6 +619,11 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 <td>state-complete ではない結果を、emulation-complete や内部状態の唯一解へ繰り上げやすくなります。</td>
 </tr>
 <tr>
+<td><strong>state-variable coverage と timescale class</strong></td>
+<td>cell identity、synaptic efficacy / plastic history、intrinsic excitability、delay / myelin、neuromodulation、glia / slow-state、sleep / recovery、chronic unit identity の各行を、direct / proxy / inferred / absent のどれかでラベルし、dominant timescale を添えます。</td>
+<td>multimodal の結果を 1 本の強さとして圧縮してしまい、same-day の fit を cross-day stability や maintenance-state claim へ不当に延長しやすくなります。</td>
+</tr>
+<tr>
 <td><strong>external calibration route</strong></td>
 <td>phantom、intracranial stimulation、同時侵襲記録、same-brain co-registration、Patch-seq bridge など、外部妥当化の経路を書きます。</td>
 <td>精度や可視化の改善を、そのまま ground truth への接近と取り違えやすくなります。</td>
@@ -643,7 +648,7 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 <div class="note-box">
 <strong>最低運用ルール</strong>
 <p>
-このカードが無い場合、本サイトでは結果を <strong>L0/L1 の再現可能解析または限定つき decode</strong> として扱い、L2 以上へ上げません。たとえば、<strong>EEG / HD-EEG + MRI だけ</strong>なら default ceiling は macro state tracking、<strong>high-density extracellular probe だけ</strong>なら implant-region の local population window、<strong>volume EM だけ</strong>なら structural scaffold、<strong>whole-brain atlas だけ</strong>なら molecular / spatial prior、<strong>same-brain calcium + EM</strong> でも local conditional prediction までです。chronic probe 系で unit identity audit が無い場合、single-unit longitudinal claim は受理しません。詳細な stack 別 ceiling は <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: 計測スタックごとの observability と claim ceiling</a> に集約しています。
+このカードが無い場合、本サイトでは結果を <strong>L0/L1 の再現可能解析または限定つき decode</strong> として扱い、L2 以上へ上げません。たとえば、<strong>EEG / HD-EEG + MRI だけ</strong>なら default ceiling は macro state tracking、<strong>high-density extracellular probe だけ</strong>なら implant-region の local population window、<strong>volume EM だけ</strong>なら structural scaffold、<strong>whole-brain atlas だけ</strong>なら molecular / spatial prior、<strong>same-brain calcium + EM</strong> でも local conditional prediction までです。chronic probe 系で unit identity audit が無い場合、single-unit longitudinal claim は受理しません。詳細な stack 別 ceiling と <strong>state variable × timescale</strong> の行列は <a href="wiki/measurement-stack-and-claim-ceiling.html#state-variable-matrix">Wiki: 計測スタックごとの observability と claim ceiling</a> に集約しています。
 </p>
 </div>
 </section>

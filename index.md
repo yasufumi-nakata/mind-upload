@@ -5,7 +5,7 @@ description: "マインドアップロード/WBEを「進歩を測れる科学�
 article_type: Start Here
 subtitle: "勝利条件・標準・ベンチマーク・事前登録を先に作る"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-16"
 note: "Human-friendly landing page"
 audience: "はじめて来た人、全体像だけ先に知りたい人、読む順番で迷いたくない人"
 reading_time: "5〜10分"
@@ -80,7 +80,7 @@ Mind-Uploadは、「心をコンピュータで再現できるのか？」とい
 <div class="note-box">
 <strong>『どこまで直接見えているか』を先に確認したいとき</strong>
 <p>
-2026年3月の更新では、measurement stack ごとの主張上限を本文運用へ落とすため、<a href="verification.html#observability-budget">Verification の Observability Budget</a> を追加しました。multimodal という言葉だけで state-complete と読まないための整理表は <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: 計測スタックごとの observability と claim ceiling</a> に置いています。
+2026年3月の更新では、measurement stack ごとの主張上限を本文運用へ落とすため、<a href="verification.html#observability-budget">Verification の Observability Budget</a> を追加しました。multimodal という言葉だけで state-complete と読まないため、<a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: 計測スタックごとの observability と claim ceiling</a> では <strong>stack 別の整理表</strong>に加えて、<strong>state variable × timescale × direct / proxy / inferred</strong> の行列も公開しています。
 </p>
 </div>
 
