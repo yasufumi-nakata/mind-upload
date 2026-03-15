@@ -1,26 +1,32 @@
-# Mind-upload RQ60 深掘り焦点ノート（EEG-DATA × 助成）
-
-> 汎用要約ではなく、RQごとの論点を固定する
->
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
-
-- 更新日: 2026-03-16 / 位置づけ: RQ-by-RQ Deep Focus
-
-## このページの役割
-このページは、mind-uploadの60RQを1件ずつ対象に、EEG-DATAで直接確認する核、auto-research-funds向け応募テーマ、EEG外で必要な要件を固定した実務ノートです。
-
-## 正確さの前提
-A/B/C判定は mind-upload-eeg-rq60-feasibility-and-funds と同一。Cは『重要でない』ではなく『EEG単独で完結しない』を意味します。
-
-## 公開ページへ戻る
-- [文献地図](https://mind-upload.com/research_harvest_50.html)
-- [データ&ベンチ](https://mind-upload.com/datasets.html)
-
-## 関連 Wiki
-- [Wiki: RQ60 EEG検証可否と助成テーマ](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds) - 判定とデータ候補の正本。
-- [Wiki: RQ60 申請プレイブック](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - 応募先IDと最小成果物の固定表。
-
 ---
+layout: default
+title: "Mind-upload RQ60 深掘り焦点ノート（EEG-DATA × 助成）"
+description: "60RQを1件ずつ、EEGで直接検証する核・外部必須要件・応募テーマまで固定した深掘りノート。"
+article_type: Wiki
+subtitle: "汎用要約ではなく、RQごとの論点を固定する"
+author: Mind Uploading Research Project
+last_updated: "2026-03-16"
+note: "RQ-by-RQ Deep Focus"
+audience: "各RQを申請文と実験手順に直接落としたい人"
+reading_time: "20〜35分"
+page_intro: "このページは、mind-uploadの60RQを1件ずつ対象に、EEG-DATAで直接確認する核、auto-research-funds向け応募テーマ、EEG外で必要な要件を固定した実務ノートです。"
+accuracy_note: "A/B/C判定は mind-upload-eeg-rq60-feasibility-and-funds と同一。Cは『重要でない』ではなく『EEG単独で完結しない』を意味します。"
+wiki_links:
+  - label: "Wiki: RQ60 EEG検証可否と助成テーマ"
+    url: "/wiki/mind-upload-eeg-rq60-feasibility-and-funds.html"
+    description: "判定とデータ候補の正本。"
+  - label: "Wiki: RQ60 申請プレイブック"
+    url: "/wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html"
+    description: "応募先IDと最小成果物の固定表。"
+recommended_pages:
+  - label: "文献地図"
+    url: "/research_harvest_50.html"
+  - label: "データ&ベンチ"
+    url: "/datasets.html"
+---
+
+<main class="main-container">
+<article class="content-column">
 
 ## 使い方
 
@@ -256,6 +262,7 @@ A/B/C判定は mind-upload-eeg-rq60-feasibility-and-funds と同一。Cは『重
 - 助成実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue/*.yaml` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再確認しました。
 - 方針は据え置き: 汎用俯瞰へ戻さず、RQごとに検証可否・応募テーマ・使用EEGデータを固定して書く運用を継続します。
 
+
 ## 2026-03-15 19:02 JST 再検証ログ（本run / RQ単位深掘りの固定確認）
 
 - 全 `60RQ` 行を再点検し、`判定`・`応募テーマ（助成キー）`・`候補EEG-DATA`・`EEG外で必須` の欠落 `0` を確認。
@@ -279,6 +286,7 @@ A/B/C判定は mind-upload-eeg-rq60-feasibility-and-funds と同一。Cは『重
 - 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` と `auto-research-funds` で全件参照可能。
 - 独立監査結果として、`feasibility` ページの `ID -> データセット名` 表は現行CSVの再採番と固定一致しない点を確認。運用上は既存方針どおり `D1-D16 + DOI` 正本参照を優先する。
 - 方針を継続: 汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持。
+
 
 ## 2026-03-16 00:02 JST 再検証ログ（本run / RQ深掘りノート更新）
 
@@ -304,9 +312,24 @@ A/B/C判定は mind-upload-eeg-rq60-feasibility-and-funds と同一。Cは『重
 - 候補EEGデータID `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を確認しました。
 - 以後も方針は固定します。汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` で、各課題を1件ずつ深く扱います。
 
-## 2026-03-16 05:02 JST 再検証ログ（本run / 1件ずつ深掘り運用の再固定）
+## 2026-03-16 06:03 JST 再検証ログ（本run / 深掘りノート継続更新）
 
-- 本表（`## U0（同一性）` から `## 実務メモ` 直前）で `A=17`, `B=25`, `C=18` を再確認し、合計 `60RQ` を維持しました。
-- 全 `RQ` 行で `判定`・`EEGで直接検証する核`・`応募テーマ（助成キー）`・`候補EEG-DATA`・`EEG外で必須` の必須列が埋まっている状態を維持（欠落 `0`）。
-- 依頼どおり汎用俯瞰には戻さず、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り記述を正本運用として継続します。
-- 直近の実行優先順は `U8-1`, `U8-2`, `U14-1`, `U14-3`, `U7-2`, `U13-1` の6件で固定します。
+- 作業前に `mind-upload=364217a`、`EEG-DATA=99f6801432`、`auto-research-funds=5b3c35e83` まで `main` を `pull --ff-only` で更新しました。
+- `RQ` 行を再カウントし、`60件`（`A/B/C=17/25/18`）を再確認しました。
+- 全 `RQ` 行で `判定`・`EEGで直接検証する核`・`応募テーマ（助成キー）`・`候補EEG-DATA`・`EEG外で必須` の必須列が埋まっていることを再確認しました（欠落 `0`）。
+- `候補EEG-DATA` 参照IDは `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）でした。
+- 助成キー `G1-G6` は `grant_queue` と `auto-research-funds` の両方で再参照可能であることを再確認しました。
+
+### 深掘り実装カード（今回固定 / 6件）
+
+| RQ | EEG-DATAで解ける核（今回固定） | 初手実験（1件ずつ） | 応募テーマ（助成キー） | 主/予備EEG-DATA | 合否ゲート |
+|---|---|---|---|---|---|
+| U4-2 | 最小介入因果主張を再現可能か判定する | 既知介入条件で3回再走し、因果効果の符号一致率を算出 | ground-truth因果検証（G1/G4） | 56 / 1839 | 符号一致率が事前閾値以上 |
+| U7-5 | 前処理CIの停止閾値が妥当か検証する | 前処理差分3条件で再現率低下と誤ブロック率を算出 | 再現率低下の停止規則（G1/G3） | 676 / 783 | 誤ブロック率が許容上限未満 |
+| U8-4 | 異常検知遅延とフェイルセーフの両立域を求める | 異常注入シナリオで発動遅延・回復時間を同時計測 | 安全停止評価契約（G2/G5） | 2412 / 1972 | 発動遅延と回復時間が両閾値内 |
+| U11-1 | 指標間の順位保存を同一I/Oで評価する | PCI近似/LZ/wSMIを同一前処理で比較し順位保存率を算出 | 意識指標比較（G2/G4） | 859 / 842 | 順位保存率が採択基準以上 |
+| U13-3 | 同一出力・異機構を識別できるか検証する | 同一出力条件で介入応答差を測定し識別率を算出 | shortcut検出ベンチ（G1/G4） | 509 / 13 | 異機構識別率が基準以上 |
+| U14-6 | 再現性改善に対するコンテナ固定コストを定量化する | 環境固定あり/なしで追試成功率と実行コストを比較 | 再現コスト許容上限設定（G1/G3） | 56 / 719 | 再現率改善がコスト増を上回る |
+
+- 本runも方針を継続します。汎用俯瞰には戻さず、`1RQ=1検証命題=1応募テーマ=1主データ` で更新します。
+
