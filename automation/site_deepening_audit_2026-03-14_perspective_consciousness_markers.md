@@ -30,7 +30,7 @@
   - この差を曖昧にすると、`安静時 EEG だけで十分` という誤読を誘発します。
 - 根拠:
   - Tsuchiya et al. (2015) は no-report paradigms を NCC 抽出の設計として整理しています。
-  - Cohen et al. (2024) は visual awareness で、Dellert et al. (2025) は auditory awareness で、no-report 条件が post-perceptual processing の切り分けに有効であることを示しました。
+  - Cohen et al. (2024) は visual awareness で、Dellert et al. (2025) は auditory no-report fMRI で、no-report 条件が post-perceptual processing の切り分けに有効であることを示しました。
   - Casali et al. (2013) と Comolatti et al. (2019) は PCI / PCI-ST を state-level benchmark として前進させましたが、Hernandez-Pavon et al. (2023) は TMS-EEG の刺激条件・マスキング・アーチファクト管理が比較可能性の前提だと明示しています。
 - 修正:
   - `site rule` として、`no-report = confound control`、`PCI/PCI-ST = 主 benchmark 候補`、`安静時複雑性・臨界性 = 補助 / 探索トラック` を明記しました。
@@ -41,7 +41,7 @@
 - 問題:
   - 旧版は、安静時 EEG の臨界性指標から `侵襲なしの意識評価` や `統一説明` へ比較的滑らかにつなげていました。
   - しかし、Maschke et al. (2024) が示すのは麻酔誘導下の cohort での関連であり、広範な病態・装置・施設をまたぐ一般解ではありません。
-  - さらに Adam et al. (2025) は、MCS で spontaneous EEG marker と evoked EEG marker が解離しうることを示しており、安静時 proxy を PCI 代替とみなすのは危険です。
+  - さらに Casarotto et al. (2024) は、MCS で spontaneous EEG marker と evoked EEG marker が解離しうることを示しており、安静時 proxy を PCI 代替とみなすのは危険です。
 - 修正:
   - フェーズ2を `安静時 proxy の較正` へ変更し、`摂動なしで十分` という読みを止めました。
   - `proxy としてどこまで使えるかを外部較正する` という目的へ縮退させました。
@@ -80,8 +80,8 @@
   - https://doi.org/10.1016/j.tics.2015.10.002
 - Cohen MA, et al. Neural signatures of visual awareness independent of postperceptual processing. Cereb Cortex. 2024.
   - https://doi.org/10.1093/cercor/bhae415
-- Dellert T, et al. Neural correlates of auditory awareness under no-report conditions. Curr Biol. 2025.
-  - https://doi.org/10.1016/j.cub.2025.03.031
+- Dellert T, et al. Neural correlates of consciousness in an auditory no-report fMRI study. Curr Biol. 2025.
+  - https://doi.org/10.1016/j.cub.2025.10.026
 - Casali AG, et al. A theoretically based index of consciousness independent of sensory processing and behavior. Sci Transl Med. 2013.
   - https://doi.org/10.1126/scitranslmed.3006294
 - Comolatti R, et al. A fast and general method to empirically estimate the complexity of brain responses to transcranial and intracranial stimulations. Brain Stimul. 2019.
@@ -94,7 +94,7 @@
   - https://doi.org/10.1038/s42003-024-06613-8
 - Shew WL, Plenz D. The functional benefits of criticality in the cortex. Neuroscientist. 2013.
   - https://doi.org/10.1177/1073858412445487
-- Adam E, et al. A dissociation between spontaneous and evoked EEG markers of consciousness in the minimally conscious state. Brain. 2025.
-  - https://doi.org/10.1093/brain/awaf332
-- Ferreiro D, et al. Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness. Brain. 2025.
-  - https://doi.org/10.1093/brain/awaf287
+- Casarotto S, et al. Dissociations between spontaneous electroencephalographic features and the perturbational complexity index in the minimally conscious state. Eur J Neurosci. 2024.
+  - https://doi.org/10.1111/ejn.16299
+- Manasova D, et al. Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness. Brain. 2026.
+  - https://doi.org/10.1093/brain/awaf412

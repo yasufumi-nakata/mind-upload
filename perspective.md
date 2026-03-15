@@ -780,16 +780,22 @@ href="#ref-57">[57]</a></sup>。
 <section class="section" id="eeg-consciousness-roadmap">
 <h2 class="section-title">EEGで意識を測る：摂動指標を主軸に、安静時指標を補助で読む</h2>
 
-<p>WBE の「計測」段階で意識関連情報を扱う場合、EEG は有力ですが、単独で「意識がある / ない」を裁定する装置ではありません。現時点の一次文献が強く支持するのは、(a) 摂動応答の複雑性は state-level の benchmark 候補であること、(b) no-report paradigms は report confound を減らす設計条件であること、(c) 安静時複雑性・臨界性は有望だが補助 readout に留まること、(d) 臨床運用では multimodal・multicentre 検証が必要であることです<sup><a href="#ref-47">[47]</a></sup><sup><a href="#ref-51">[51]</a></sup><sup><a href="#ref-52">[52]</a></sup><sup><a href="#ref-100">[100]</a></sup><sup><a href="#ref-102">[102]</a></sup><sup><a href="#ref-103">[103]</a></sup><sup><a href="#ref-104">[104]</a></sup><sup><a href="#ref-105">[105]</a></sup>。したがって本節では、EEG を「単独の意識メータ」ではなく、証拠強度の異なる指標束として扱います。</p>
+<p>WBE の「計測」段階で意識関連情報を扱う場合、EEG は有力ですが、単独で「意識がある / ない」を裁定する装置ではありません。現時点の一次文献が強く支持するのは、(a) 摂動応答の複雑性は state-level の benchmark 候補であること、(b) no-report paradigms と criterion placement control は report / post-perceptual confound を減らす設計条件であること、(c) 安静時複雑性・臨界性は有望だが補助 readout に留まること、(d) 臨床運用では multimodal・multisite 検証が必要であることです<sup><a href="#ref-47">[47]</a></sup><sup><a href="#ref-51">[51]</a></sup><sup><a href="#ref-52">[52]</a></sup><sup><a href="#ref-100">[100]</a></sup><sup><a href="#ref-102">[102]</a></sup><sup><a href="#ref-103">[103]</a></sup><sup><a href="#ref-104">[104]</a></sup><sup><a href="#ref-105">[105]</a></sup><sup><a href="#ref-113">[113]</a></sup>。したがって本節では、EEG を「単独の意識メータ」ではなく、証拠強度の異なる指標束として扱います。</p>
 
 <div class="note-box">
 <strong>この節の site rule</strong><br>
-no-report は <strong>confound control</strong>、PCI/PCI-ST は <strong>主 benchmark 候補</strong>、安静時複雑性・臨界性は <strong>補助 / 探索トラック</strong>、臨床主張は <strong>multimodal external validation</strong> が揃うまで繰り上げません。
+no-report / criterion placement は <strong>confound control</strong>、PCI/PCI-ST は <strong>主 benchmark 候補</strong>、安静時複雑性・臨界性は <strong>補助 / 探索トラック</strong>、臨床主張は <strong>multimodal external validation</strong> が揃うまで繰り上げません。
 </div>
 
-<h3>この節で先に固定する4条件</h3>
+<div class="note-box">
+<strong>construct validity を別監査にします</strong><br>
+visual / auditory の no-report 文献は、どちらも <strong>設計条件</strong> の妥当性を支えますが、EEG 単独の bedside meter を直接支持するわけではありません。したがって本サイトでは、modality をまたぐ no-report evidence を <strong>confound control の根拠</strong> としてのみ使い、EEG benchmark の根拠とは切り分けます<sup><a href="#ref-102">[102]</a></sup><sup><a href="#ref-103">[103]</a></sup><sup><a href="#ref-113">[113]</a></sup>。
+</div>
+
+<h3>この節で先に固定する5条件</h3>
 <ol style="margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.6;">
 <li style="margin-bottom: 8px;"><strong>report confound を先に潰す</strong>：no-report paradigms は意識 readout そのものではなく、知覚と報告後処理を切り分けるための設計条件です<sup><a href="#ref-48">[48]</a></sup><sup><a href="#ref-102">[102]</a></sup><sup><a href="#ref-103">[103]</a></sup>。</li>
+<li style="margin-bottom: 8px;"><strong>criterion placement を別ログで監査する</strong>：no-report を入れても、response criterion のズレを放置すると neural marker が conscious content ではなく判定戦略を拾う可能性が残ります<sup><a href="#ref-113">[113]</a></sup>。</li>
 <li style="margin-bottom: 8px;"><strong>摂動 benchmark を主軸に置く</strong>：PCI/PCI-ST は altered states や disorders of consciousness をまたぐ有力 benchmark ですが、TMS-EEG の刺激条件とアーチファクト管理が前提です<sup><a href="#ref-47">[47]</a></sup><sup><a href="#ref-51">[51]</a></sup><sup><a href="#ref-100">[100]</a></sup>。</li>
 <li style="margin-bottom: 8px;"><strong>安静時指標は外部較正つきで使う</strong>：LZ 複雑性や臨界性は有望ですが、摂動指標や臨床アウトカムと較正しない限り、単独での主判定には使いません<sup><a href="#ref-50">[50]</a></sup><sup><a href="#ref-52">[52]</a></sup><sup><a href="#ref-104">[104]</a></sup>。</li>
 <li style="margin-bottom: 8px;"><strong>臨床主張は multimodal で外部妥当化する</strong>：単一指標の見栄えより、行動評価・画像・電気生理を束ねた incremental validity を重視します<sup><a href="#ref-55">[55]</a></sup><sup><a href="#ref-105">[105]</a></sup>。</li>
@@ -813,8 +819,8 @@ no-report は <strong>confound control</strong>、PCI/PCI-ST は <strong>主 ben
 <td><strong>主 benchmark 候補</strong></td>
 </tr>
 <tr>
-<td><strong>No-report paradigms</strong></td>
-<td>visual / auditory の両方で、post-perceptual processing と conscious content の分離に効く設計条件であることが強まりました<sup><a href="#ref-48">[48]</a></sup><sup><a href="#ref-102">[102]</a></sup><sup><a href="#ref-103">[103]</a></sup>。</td>
+<td><strong>No-report / criterion placement</strong></td>
+<td>visual / auditory の両課題で、post-perceptual processing と response criterion を切り分ける設計条件としての有効性が強まりました<sup><a href="#ref-48">[48]</a></sup><sup><a href="#ref-102">[102]</a></sup><sup><a href="#ref-103">[103]</a></sup><sup><a href="#ref-113">[113]</a></sup>。</td>
 <td>それ自体が bedside meter になるわけではなく、意識レベルの普遍 readout も自動的には与えません。</td>
 <td><strong>confound control</strong></td>
 </tr>
@@ -826,7 +832,7 @@ no-report は <strong>confound control</strong>、PCI/PCI-ST は <strong>主 ben
 </tr>
 <tr>
 <td><strong>Multimodal clinical panel</strong></td>
-<td>単一指標より、行動評価・EEG・画像・臨床変数を束ねた multicentre モデルの方が診断 / 予後に強い可能性があります<sup><a href="#ref-105">[105]</a></sup>。</td>
+<td>単一指標より、行動評価・HD-EEG・MRI・PET・臨床変数を束ねた multisite panel の方が診断 / 予後に強い可能性があります<sup><a href="#ref-105">[105]</a></sup>。</td>
 <td>まだ「世界標準の単独指標」はなく、施設間差・欠測・測定負荷を含む運用問題が残ります。</td>
 <td><strong>deployability gate</strong></td>
 </tr>
@@ -871,12 +877,12 @@ no-report は <strong>confound control</strong>、PCI/PCI-ST は <strong>主 ben
 <div class="stage-number"></div>
 <div class="stage-body">
 <h4>フェーズ0：基盤整備（〜1年）—「測れる」「再現できる」を固める</h4>
-<p>EEG解析パイプラインを固定し、安静時指標と report confound 制御を同一データ上で再現できる状態にします。</p>
+<p>EEG解析パイプラインを固定し、安静時指標と report / criterion confound 制御を同一データ上で再現できる状態にします。</p>
 <ul
 style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; line-height: 1.6;">
 <li style="margin-bottom: 8px;">前処理・アーチファクト除去・ログまで含む再現可能な解析（BIDS等）</li>
 <li style="margin-bottom: 8px;">公開データで、麻酔/鎮静に伴う<strong>複雑性・スペクトル・結合性</strong>の変化を再現する<sup><a href="#ref-23">[23]</a></sup><sup><a href="#ref-50">[50]</a></sup><sup><a href="#ref-53">[53]</a></sup></li>
-<li style="margin-bottom: 8px;">report あり / なし条件を併走できる課題設計にし、visual / auditory の no-report 文献と整合させる<sup><a href="#ref-102">[102]</a></sup><sup><a href="#ref-103">[103]</a></sup></li>
+<li style="margin-bottom: 8px;">report あり / なし条件を併走できる課題設計にし、visual / auditory の no-report 文献と criterion placement 監査の両方に整合させる<sup><a href="#ref-102">[102]</a></sup><sup><a href="#ref-103">[103]</a></sup><sup><a href="#ref-113">[113]</a></sup></li>
 <li style="margin-bottom: 8px;">同一データで LZ 複雑性・臨界性・スペクトル指標の再テスト信頼性を先に点検する</li>
 </ul>
 <div class="tag-list" style="margin-top: 12px;">
@@ -911,7 +917,7 @@ style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; li
 <div class="stage-body">
 <h4>フェーズ2：安静時 proxy の較正（2〜3年目相当）—「摂動なし」は代替ではなく補助として詰める</h4>
 <p>安静時 EEG の複雑性や臨界性を、摂動指標・行動・臨床アウトカムに対して外部較正します。目的は PCI の置換ではなく、どこまで proxy として使えるかを定量化することです。</p>
-<p style="margin-top: 8px;">Maschke らは麻酔誘導下で臨界性指標と PCI の関連を示しましたが<sup><a href="#ref-52">[52]</a></sup>、Adam らは MCS で spontaneous marker と evoked marker が解離しうることを報告しています<sup><a href="#ref-104">[104]</a></sup>。したがって、「摂動なしで十分」とは書かず、condition-specific な proxy 性能を監査します。</p>
+<p style="margin-top: 8px;">Maschke らは麻酔誘導下で臨界性指標と PCI の関連を示しましたが<sup><a href="#ref-52">[52]</a></sup>、Casarotto らは MCS で spontaneous marker と evoked marker が解離しうることを報告しています<sup><a href="#ref-104">[104]</a></sup>。したがって、「摂動なしで十分」とは書かず、condition-specific な proxy 性能を監査します。</p>
 <div class="tag-list" style="margin-top: 12px;">
 <span class="tag">Resting-State EEG</span>
 <span class="tag">Critical Dynamics</span>
@@ -944,7 +950,7 @@ style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; li
 <ul
 style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 13px; line-height: 1.5; color: #d7e2cf;">
 <li style="margin-bottom: 6px;">解析パイプラインとログ schema を固定し、安静時指標の再テスト信頼性を先に出す</li>
-<li style="margin-bottom: 6px;">report あり / なし条件を visual / auditory の no-report 文献と対応づけて設計する<sup><a href="#ref-102">[102]</a></sup><sup><a href="#ref-103">[103]</a></sup></li>
+<li style="margin-bottom: 6px;">report あり / なし条件を visual / auditory の no-report 文献と対応づけ、criterion placement を別ログで監査する<sup><a href="#ref-102">[102]</a></sup><sup><a href="#ref-103">[103]</a></sup><sup><a href="#ref-113">[113]</a></sup></li>
 <li style="margin-bottom: 6px;">公開データで、麻酔/鎮静に伴う変化を一度再現する<sup><a href="#ref-50">[50]</a></sup><sup><a href="#ref-52">[52]</a></sup></li>
 <li style="margin-bottom: 6px;">摂動導入の可否に応じて、PCI/PCI-ST 路線の刺激ログとアーチファクト窓を事前登録する<sup><a href="#ref-51">[51]</a></sup><sup><a href="#ref-100">[100]</a></sup></li>
 <li>安静時 proxy を bedside meter と誤読しないよう、multimodal validation の公開指標を先に決める<sup><a href="#ref-105">[105]</a></sup></li>
@@ -953,7 +959,7 @@ style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 13px; li
 
 <h3>技術的立ち位置と到達目標</h3>
 <p>本ロードマップは、特定の意識理論の正しさを証明することではなく、摂動指標・no-report 制御・安静時 proxy・multimodal 臨床評価を、同じ監査スキーマで比較可能にすることを目指します。Ferrante らの adversarial test が示したのは「単一理論への収束」ではなく、理論と課題設計を分けて監査すべきだという点です<sup><a href="#ref-54">[54]</a></sup>。</p>
-<p>したがって本節の到達目標は、「世界標準の単独意識メータ」を宣言することではありません。Ferreiro らの multicentre 研究が示す通り、診断・予後は behaviour 単独より multimodal 統合で改善しうる一方、各指標は互いに代替ではありません<sup><a href="#ref-105">[105]</a></sup>。本サイトが目指す成果は、事前登録・外部妥当化・校正・棄権を含む公開 benchmark を積み上げることです。</p>
+<p>したがって本節の到達目標は、「世界標準の単独意識メータ」を宣言することではありません。Manasova らの multisite 研究が示す通り、診断・予後は behaviour 単独より multimodal 統合で改善しうる一方、各指標は互いに代替ではありません<sup><a href="#ref-105">[105]</a></sup>。本サイトが目指す成果は、事前登録・外部妥当化・校正・棄権を含む公開 benchmark を積み上げることです。</p>
 </section>
 
 <!-- Technical Proposals -->
@@ -1317,9 +1323,9 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <li id="ref-100" value="100">Hernandez-Pavon, J. C., Metsomaa, J., Mutanen, T. P., et al. (2023). TMS combined with EEG: Recommendations and open issues. <em>Brain Stimulation</em>, 16(2), 350–366. <a href="https://doi.org/10.1016/j.brs.2023.02.009">doi:10.1016/j.brs.2023.02.009</a></li>
 <li id="ref-101" value="101">Srinivasan, R., Nunez, P. L., Tucker, D. M., Silberstein, R. B., & Cadusch, P. J. (1996). Spatial sampling and filtering of EEG with spline Laplacians to estimate cortical potentials. <em>Brain Topography</em>, 8(4), 355–366. <a href="https://doi.org/10.1007/BF01186911">doi:10.1007/BF01186911</a></li>
 <li id="ref-102" value="102">Cohen, M. A., et al. (2024). Neural signatures of visual awareness independent of postperceptual processing. <em>Cerebral Cortex</em>, 34(11), bhae415. <a href="https://doi.org/10.1093/cercor/bhae415">doi:10.1093/cercor/bhae415</a></li>
-<li id="ref-103" value="103">Dellert, T., et al. (2025). Neural correlates of auditory awareness under no-report conditions. <em>Current Biology</em>, 35(12), 2790–2804.e5. <a href="https://doi.org/10.1016/j.cub.2025.03.031">doi:10.1016/j.cub.2025.03.031</a></li>
-<li id="ref-104" value="104">Adam, E., et al. (2025). A dissociation between spontaneous and evoked EEG markers of consciousness in the minimally conscious state. <em>Brain</em>, 148(11), 3490–3505. <a href="https://doi.org/10.1093/brain/awaf332">doi:10.1093/brain/awaf332</a></li>
-<li id="ref-105" value="105">Ferreiro, D., et al. (2025). Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness. <em>Brain</em>. <a href="https://doi.org/10.1093/brain/awaf287">doi:10.1093/brain/awaf287</a></li>
+<li id="ref-103" value="103">Dellert, T., Balster, M., Schlossmacher, I., Bruchmann, M., Moeck, R., Straube, T., & Jacobsen, T. (2025). Neural correlates of consciousness in an auditory no-report fMRI study. <em>Current Biology</em>. <a href="https://doi.org/10.1016/j.cub.2025.10.026">doi:10.1016/j.cub.2025.10.026</a></li>
+<li id="ref-104" value="104">Casarotto, S., Hassan, M., Rosanova, M., Sarasso, S., Derchi, C. C., Trimarchi, P. D., Viganò, A., Russo, S., Moraes, T., Naro, A., Pigorini, A., Leonardi, G., Gosseries, O., Laureys, S., Boly, M., Bodart, O., Casali, A. G., Colombo, M. A., Casali, K. R., & Comolatti, R. (2024). Dissociations between spontaneous electroencephalographic features and the perturbational complexity index in the minimally conscious state. <em>European Journal of Neuroscience</em>. <a href="https://doi.org/10.1111/ejn.16299">doi:10.1111/ejn.16299</a></li>
+<li id="ref-105" value="105">Manasova, D., Belloli, T., Rosenfelder, M., Willacker, L., Fló Rama, M., Valota, A., Sinitsyn, D. O., Bourdillon, P., Comanducci, A., Heine, L., Sanz, L. R. D., Aabid, A., El-Daher, E., Liégeois-Chauvel, C., Biagioli, G., Woodruff, M., van Erp, W. S., Gomez, F., Gisquet, H., et al. (2026). Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness. <em>Brain</em>. <a href="https://doi.org/10.1093/brain/awaf412">doi:10.1093/brain/awaf412</a></li>
 <li id="ref-106" value="106">Défossez, A., Caucheteux, C., Rapin, J., Kabeli, O., & King, J.-R. (2023). Decoding speech perception from non-invasive brain recordings. <em>Nature Machine Intelligence</em>, 5, 1097–1107. <a href="https://doi.org/10.1038/s42256-023-00714-5">doi:10.1038/s42256-023-00714-5</a></li>
 <li id="ref-107" value="107">d'Ascoli, S., Ferrante, O., et al. (2025). Towards decoding individual words from non-invasive brain recordings. <em>Nature Communications</em>, 16, 10521. <a href="https://doi.org/10.1038/s41467-025-65499-0">doi:10.1038/s41467-025-65499-0</a></li>
 <li id="ref-108" value="108">Willett, F. R., Kunz, E. M., Fan, C., et al. (2023). A high-performance speech neuroprosthesis. <em>Nature</em>, 620, 1031–1036. <a href="https://doi.org/10.1038/s41586-023-06377-x">doi:10.1038/s41586-023-06377-x</a></li>
@@ -1327,6 +1333,7 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <li id="ref-110" value="110">Wairagkar, M., Card, N. S., Singer-Clark, T., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <em>Nature</em>, 644, 145–152. <a href="https://doi.org/10.1038/s41586-025-09127-3">doi:10.1038/s41586-025-09127-3</a></li>
 <li id="ref-111" value="111">Zada, Z., Goldstein, A., et al. (2024). Contextual embeddings from deep language models predict fMRI responses to naturalistic language. <em>Neuron</em>, 112(22), 3725–3740.e9. <a href="https://doi.org/10.1016/j.neuron.2024.09.018">doi:10.1016/j.neuron.2024.09.018</a></li>
 <li id="ref-112" value="112">Goldstein, A., Bar, A., et al. (2025). Connecting concepts in the brain by mapping cortical representations of semantic relations. <em>Nature Neuroscience</em>, 28, 1841–1848. <a href="https://doi.org/10.1038/s41593-025-01903-8">doi:10.1038/s41593-025-01903-8</a></li>
+<li id="ref-113" value="113">Fahrenfort, J. J., Johnson, D., Kloosterman, N. A., Stein, T., van Gaal, S., Pitts, M., & de Graaf, T. A. (2025). Criterion placement threatens the construct validity of neural measures of consciousness. <em>eLife</em>, 13, RP102335. <a href="https://doi.org/10.7554/eLife.102335">doi:10.7554/eLife.102335</a></li>
 </ol>
 </section>
 
