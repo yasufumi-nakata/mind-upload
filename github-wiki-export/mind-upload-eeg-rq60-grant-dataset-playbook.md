@@ -180,3 +180,10 @@ A/B/C 判定は `mind-upload-eeg-rq60-feasibility-and-funds.md` と同一基準�
 - `主EEG-DATA` として参照するID `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）です。
 - 助成ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` と `auto-research-funds` で参照可能でした。
 - 実務運用は継続します。`1RQ=1提出判断` を維持し、汎用要約に戻さずRQ単位で申請文へ転記します。
+
+## 2026-03-16 05:02 JST 再検証ログ（本run / 申請用固定表の再確認）
+
+- `RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認し、`mind-upload-eeg-rq60-feasibility-and-funds.md` との整合を維持しました。
+- 全 `RQ` 行で `第一応募先/予備応募先/主EEG-DATA/最小成果物` の欠落 `0` を再確認しました。
+- 助成キー `G1-G6` の実IDは `G1-G2=grant_queue`、`G3-G6=auto-research-funds` の分離参照を維持しています。
+- 運用方針は固定します。申請文は汎用化せず、`1RQ=1提出判断` で転記します。
