@@ -197,3 +197,12 @@ recommended_pages:
 - 助成キー `G1-G6` は `grant_queue` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の両系統で実ID参照できることを再確認しました。
 - 実務運用は継続します。汎用テーマ化は行わず、`1RQ=1提出判断` で申請文へ直接転記する粒度を維持します。
 
+
+## 2026-03-16 08:02 JST 再検証ログ（本run / 提出固定表の再確認）
+
+- 作業前に `main` を `pull --rebase` し、基準コミットを `mind-upload=34b8d748d4`、`EEG-DATA=7c606e8be1`、`auto-research-funds=f656d8638b` に更新しました。
+- 本ページの `RQ` 行を再カウントし、`RQ_TOTAL=60` を確認しました。
+- 判定内訳は再計数で `A/B/C=17/25/18` を維持し、`mind-upload-eeg-rq60-feasibility-and-funds.md` と整合しました。
+- 全 `RQ` 行で `第一応募先/予備応募先/主EEG-DATA/主データ採用理由/最小成果物` の必須列欠落 `0` を確認しました。
+- `主EEG-DATA` として使う `9 ID`（`6, 11, 13, 19, 49, 56, 509, 676, 735`）は `EEG-DATA/eeg_dataset_summary_ja.csv` 上で全件実在（欠落 `0`）。
+- 実務方針は維持します。汎用要約ではなく `1RQ=1提出判断` で申請文へ直接転記する運用を継続します。

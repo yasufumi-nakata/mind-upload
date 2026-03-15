@@ -616,3 +616,12 @@ recommended_pages:
 5. `U13-3`: 同一出力・異機構の識別率を実測（主データ `509`）
 6. `U14-6`: コンテナ固定の再現性改善とコスト増分を測定（主データ `56`）
 
+
+## 2026-03-16 08:02 JST 再検証ログ（本run / 最新pull後の整合確認）
+
+- 作業前に `main` を `pull --rebase` し、基準コミットを `mind-upload=34b8d748d4`、`EEG-DATA=7c606e8be1`、`auto-research-funds=f656d8638b` に更新しました。
+- `RQ` 判定表（`U0-1` から `U15-4`）の行を再カウントし、`RQ_TOTAL=60`（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）を再確認しました。
+- 判定内訳を再計数し、`A/B/C=17/25/18` を維持していることを確認しました。
+- `推奨EEG-DATA` 参照ID `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）。
+- 助成キー `G1-G6` 実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue/*.yaml` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再参照可能でした。
+- 方針を継続します。汎用俯瞰へ戻さず、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用で扱います。
