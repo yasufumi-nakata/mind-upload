@@ -5,7 +5,7 @@ description: "マインドアップロード/WBEを「進歩を測れる科学�
 article_type: Platform
 subtitle: "PDB×BIDS×PhysioNet×OSFの発想で、WBEの“勝利条件”と“再現可能な前進”を作る"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-16"
 note: "Operational Specification"
 audience: "このサイトの中心方針を知りたい人、何を揃えれば『前進』になるかを確認したい人"
 reading_time: "15〜25分"
@@ -15,11 +15,13 @@ page_highlights:
   - "標準、置き場、ベンチマーク、監査をセットでそろえる必要があります。"
   - "デコーディングとエミュレーションを混同しないために、主張レベルと失敗条件を先に固定します。"
   - "ここを読むと、なぜデータだけ集めても前進にならないのかが分かります。"
+  - "multimodal や atlas prior を使う結果では、Observability Budget に加えて Fusion Card で取得関係・同期・融合モデル・外部妥当化を固定します。"
   - "L2 以上では、Observability Budget に加えて latent-state error budget も付け、どの未観測状態がまだ claim を止めるかまで公開します。"
 known_points:
   - "標準、共有基盤、評価、監査をセットでそろえないと、比較可能な前進は作れません。"
   - "L0〜L2 では、再現性と反証条件を事前に設計することができます。"
   - "decode と emulate は別の主張であり、必要な証拠も別です。"
+  - "multimodal result は 1 種類ではなく、同時取得、幾何統合、侵襲校正、atlas prior を分けて監査する必要があります。"
 unknown_points:
   - "どの因果構造近似で L4 の本人性に十分と言えるかは、まだ決着していません。"
   - "熱力学、閉ループ、本人性をまとめた最終勝利条件は未完成です。"
@@ -348,7 +350,7 @@ BIDS、OpenNeuro、PhysioNet、BIDS Validator、benchmark は全部「研究基�
 <div class="stage-number">04</div>
 <div class="stage-body">
 <h4>Leaderboard & Model Cards（比較の運用）</h4>
-<p>スコアだけでなく、データリーク対策、失敗例、計算資源、既知の弱点、さらに L1 以上では <strong>どこまで直接観測し、どこから先が latent state か</strong> を示す <strong>Observability Budget</strong> を“カード”として公開し、再現性と安全性を担保する。</p>
+<p>スコアだけでなく、データリーク対策、失敗例、計算資源、既知の弱点、さらに L1 以上では <strong>どこまで直接観測し、どこから先が latent state か</strong> を示す <strong>Observability Budget</strong> を、multimodal / atlas prior を使う結果では <strong>どう結び付け、どこまで較正したか</strong> を示す <strong>Fusion Card</strong> を、L2 以上では <strong>どの latent state がまだ誤差を支配するか</strong> を示す <strong>latent-state error budget</strong> を併記して公開し、再現性と安全性を担保する。</p>
 <div class="tag-list">
 <span class="tag">Leaderboard</span><span class="tag">Reproducibility</span><span class="tag">Safety</span>
 </div>
@@ -443,6 +445,12 @@ Registry を作っても、更新をどこまで許すか、branch をどう記�
 <strong>L1 以上では『何を直接見たのか』も成果物に含めます</strong>
 <p>
 今回の再監査で見えた弱点は、hidden state を列挙できても、<strong>どの measurement stack がどの変数を直接観測しているか</strong>が提出物として固定されていなかった点でございます。したがって L1 以上の結果では、通常の model card に加えて <a href="#observability-budget">Observability Budget</a> を添付し、claim ceiling と abstention 条件まで残します。
+</p>
+</div>
+<div class="note-box">
+<strong>multimodal や atlas prior を使う結果では『どう結び付けたか』も成果物に含めます</strong>
+<p>
+今回さらに見えた弱点は、EEG 入門と multimodal wiki では止めていた論点が、<strong>検証基盤の提出物仕様</strong>にはまだ十分に落ちていなかったことです。したがって、<strong>複数モダリティを束ねた結果</strong>や<strong>atlas / transcriptomic prior を加えた結果</strong>では、通常の model card に加えて <a href="#fusion-card">Fusion Card</a> を添付し、取得関係、時計系、登録誤差、融合モデル、外部妥当化、coverage boundary まで残します。
 </p>
 </div>
 <div class="note-box">
@@ -583,7 +591,7 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 <section class="section" id="observability-budget">
 <h2 class="section-title">2026-03 追補：Observability Budget を必須提出物にする</h2>
 <p>
-今回もっとも深く更新すべきだった点は、<strong>「重要な hidden state が残る」</strong>という批判が、まだ<strong>提出物の形式</strong>にまで落ち切っていなかったことでございます。<a href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank">Yao et al. (2023)</a> は whole-brain atlas が cell-type taxonomy と空間配置を強くする一方で current state を直接は与えず、<a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">Dorkenwald et al. (2024)</a> は volume EM が structural scaffold を強くする一方で synaptic efficacy や neuromodulatory context を直接は与えず、<a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> は same-brain structure-function link を大きく前進させつつも local conditional prediction の域に留まります。さらに、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> と <a href="https://doi.org/10.1007/s00415-025-12886-9" target="_blank">Hao et al. (2025)</a> が示すように、HD-EEG / ESI は外部妥当化があっても source depth や頭部モデルに依存し、一般的一意復元を与えるわけではありません。したがって本サイトでは、<strong>L1 以上の提出物に Observability Budget を必須化</strong>し、何を直接見て何をまだ推定しているのかを先に固定します。
+今回もっとも深く更新すべきだった点は、<strong>「重要な hidden state が残る」</strong>という批判が、まだ<strong>提出物の形式</strong>にまで落ち切っていなかったことでございます。<a href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank">Yao et al. (2023)</a> は whole-brain atlas が cell-type taxonomy と空間配置を強くする一方で current state を直接は与えず、<a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">Dorkenwald et al. (2024)</a> は volume EM が structural scaffold を強くする一方で synaptic efficacy や neuromodulatory context を直接は与えず、<a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> は same-brain structure-function link を大きく前進させつつも local conditional prediction の域に留まります。さらに、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> と <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> が示すように、HD-EEG / ESI は外部妥当化があっても source depth や頭部モデルに依存し、一般的一意復元を与えるわけではありません。したがって本サイトでは、<strong>L1 以上の提出物に Observability Budget を必須化</strong>し、何を直接見て何をまだ推定しているのかを先に固定します。
 </p>
 <table class="data-table">
 <thead>
@@ -635,6 +643,71 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 <strong>最低運用ルール</strong>
 <p>
 このカードが無い場合、本サイトでは結果を <strong>L0/L1 の再現可能解析または限定つき decode</strong> として扱い、L2 以上へ上げません。たとえば、<strong>EEG / HD-EEG + MRI だけ</strong>なら default ceiling は macro state tracking、<strong>high-density extracellular probe だけ</strong>なら implant-region の local population window、<strong>volume EM だけ</strong>なら structural scaffold、<strong>whole-brain atlas だけ</strong>なら molecular / spatial prior、<strong>same-brain calcium + EM</strong> でも local conditional prediction までです。chronic probe 系で unit identity audit が無い場合、single-unit longitudinal claim は受理しません。詳細な stack 別 ceiling は <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: 計測スタックごとの observability と claim ceiling</a> に集約しています。
+</p>
+</div>
+</section>
+
+<section class="section" id="fusion-card">
+<h2 class="section-title">2026-03 追補：multimodal 結果には Fusion Card を添付する</h2>
+<p>
+今回もっとも深く修正すべきだった次の弱点は、<strong>multimodal の厳しさが局所ページに閉じ、Verification Commons の提出物仕様へまだ十分に入っていなかった</strong>ことです。<a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019)</a> と <a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Jeung et al. (2024)</a> が与えるのは、EEG や motion metadata を共有可能にする<strong>器</strong>であり、<a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe et al. (2025)</a> は LSL が synchronized recording を助けても device-side delay / jitter の ground truth を自動で与えないことを示しました。さらに、<a href="https://doi.org/10.1016/j.neuroimage.2019.116595" target="_blank">Wei et al. (2020)</a> は EEG-fMRI fusion が shared latent model を明示して初めて解釈可能になることを示し、<a href="https://doi.org/10.1016/j.neuroimage.2014.10.055" target="_blank">Jorge et al. (2015)</a> と <a href="https://doi.org/10.1371/journal.pone.0093154" target="_blank">Aydin et al. (2014)</a> は safety / artifact management と calibrated head model が成立条件であることを示しました。加えて、<a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a> と <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> は direct validation が強い一方で coverage-limited であることも示しています。したがって本サイトでは、<strong>multimodal / atlas prior 結果には Observability Budget だけでなく Fusion Card を必須化</strong>し、「何を直接見たか」だけでなく「どう結び付け、その結び付けがどこまで妥当化されたか」まで提出物化します。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Fusion Card の欄</th>
+<th>最低限書くこと</th>
+<th>これが無いと何が起きるか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>acquisition relation</strong></td>
+<td>simultaneous、same-subject non-simultaneous、coverage-limited validation、atlas / bridge / prior のどれかを書きます。</td>
+<td>「multimodal」という 1 語の下で、時計共有と prior 付与が同じ強さの証拠に見えてしまいます。</td>
+</tr>
+<tr>
+<td><strong>clock and timing audit</strong></td>
+<td>clock domain、offset / delay / jitter / drift、LSL / TTL / photodiode などの validation method、resync policy を書きます。</td>
+<td>shared clock が無い統合を trial-level alignment や causal order と誤読しやすくなります。</td>
+</tr>
+<tr>
+<td><strong>geometry and registration</strong></td>
+<td>individual MRI、sensor / electrode coordinates、co-registration error、head model、conductivity assumptions を書きます。</td>
+<td>幾何の改善と localizability の改善が、根拠なしに混ざります。</td>
+</tr>
+<tr>
+<td><strong>fusion model and uncertainty</strong></td>
+<td>late fusion か shared latent model か、loss、weights、priors、posterior / uncertainty representation、感度分析を書きます。</td>
+<td>fused map を raw truth と読み替え、比較不能な黒箱を受理しやすくなります。</td>
+</tr>
+<tr>
+<td><strong>incremental evidence</strong></td>
+<td>single-modality baseline、missing-modality ablation、behaviour-only / anatomy-only baseline との差分を残します。</td>
+<td>本当に modality を足した価値なのか、強い prior や task shortcut なのかを切り分けられません。</td>
+</tr>
+<tr>
+<td><strong>external validator</strong></td>
+<td>phantom、intracranial stimulation、simultaneous invasive recording、same-brain co-registration、post-op outcome などの較正経路を書きます。</td>
+<td>見た目の改善や相関上昇を、そのまま external validity と誤読しやすくなります。</td>
+</tr>
+<tr>
+<td><strong>coverage boundary and raw retention</strong></td>
+<td>何を still latent に残したかと、各 modality の raw / QC / BIDS metadata / artifact correction 前後の所在を書きます。</td>
+<td>coverage-limited validation や atlas prior を whole-brain state coverage と誤昇格させやすくなります。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Observability Budget との役割差</strong>
+<p>
+Observability Budget は <strong>各 measurement stack が何を直接観測したか</strong> を固定するカードで、Fusion Card は <strong>複数モダリティや prior をどう結び付け、どこまで較正したか</strong> を固定するカードでございます。前者だけでは acquisition relation と fusion model が消え、後者だけでは direct observable と claim ceiling が消えます。したがって本サイトでは、<strong>multimodal / atlas prior 結果では両方を同時提出</strong>します。
+</p>
+</div>
+<div class="note-box">
+<strong>最低運用ルール</strong>
+<p>
+Fusion Card が無い場合、本サイトではその結果を原則として <strong>single-modality result に prior を足した推定</strong>、または <strong>限定つきの cross-modal concordance</strong> として扱い、L2 以上へ昇格させません。shared clock が無い場合は trial-level state alignment を書かず、coverage-limited validation しか無い場合は whole-brain ground truth を書かず、single-modality baseline が無い場合は multimodal gain を書きません。
 </p>
 </div>
 </section>
@@ -1030,15 +1103,21 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Gorgolewski, K. J., et al. (2016). The brain imaging data structure. <a href="https://doi.org/10.1038/sdata.2016.44" target="_blank">doi:10.1038/sdata.2016.44</a></li>
 <li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS EEG Specification</a>（official documentation）</li>
 <li>Pernet, C. R., et al. (2019). EEG-BIDS. <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">doi:10.1038/s41597-019-0104-8</a></li>
+<li>Jeung, J., et al. (2024). Motion-BIDS. <a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">doi:10.1038/s41597-024-03559-8</a></li>
 <li>Bigdely-Shamlo, N., et al. (2016). Hierarchical Event Descriptors (HED). <a href="https://doi.org/10.3389/fninf.2016.00042" target="_blank">doi:10.3389/fninf.2016.00042</a></li>
 <li>Hermes, D., et al. (2025). HED library schema for EEG data annotation. <a href="https://doi.org/10.1038/s41597-025-05791-2" target="_blank">doi:10.1038/s41597-025-05791-2</a></li>
 <li>Pernet, C., et al. (2020). COBIDAS-MEEG recommendations. <a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">doi:10.1038/s41593-020-00709-0</a></li>
+<li>Kothe, C. A., et al. (2025). The lab streaming layer for synchronized multimodal recording. <a href="https://doi.org/10.1162/imag.a.136" target="_blank">doi:10.1162/imag.a.136</a></li>
 <li>Markiewicz, C. J., et al. (2021). OpenNeuro resource paper. <a href="https://doi.org/10.7554/eLife.71774" target="_blank">doi:10.7554/eLife.71774</a></li>
 <li>Goldberger, A. L., et al. (2000). PhysioBank / PhysioNet. <a href="https://doi.org/10.1161/01.CIR.101.23.e215" target="_blank">doi:10.1161/01.CIR.101.23.e215</a></li>
 <li>Jayaram, V., &amp; Barachant, A. (2018). MOABB: trustworthy algorithm benchmarking for BCIs. <a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">doi:10.1088/1741-2552/aadea0</a></li>
+<li>Wei, H., et al. (2020). Bayesian fusion and multimodal DCM for EEG and fMRI. <a href="https://doi.org/10.1016/j.neuroimage.2019.116595" target="_blank">doi:10.1016/j.neuroimage.2019.116595</a></li>
+<li>Jorge, J., et al. (2015). Simultaneous EEG-fMRI at ultra-high field: artifact prevention and safety assessment. <a href="https://doi.org/10.1016/j.neuroimage.2014.10.055" target="_blank">doi:10.1016/j.neuroimage.2014.10.055</a></li>
+<li>Aydin, U., et al. (2014). Combining EEG and MEG for the reconstruction of epileptic activity using a calibrated realistic volume conductor model. <a href="https://doi.org/10.1371/journal.pone.0093154" target="_blank">doi:10.1371/journal.pone.0093154</a></li>
 <li>Michel, C. M., &amp; Brunet, D. (2019). EEG source imaging: a practical review. <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">doi:10.3389/fneur.2019.00325</a></li>
+<li>Mikulan, E., et al. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
 <li>Unnwongse, K., et al. (2023). Validating EEG source imaging using intracranial electrical stimulation. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
-<li>Hao, W., et al. (2025). Localization accuracy of interictal and ictal EEG source imaging in simultaneous HD-EEG and SEEG. <a href="https://doi.org/10.1007/s00415-025-12886-9" target="_blank">doi:10.1007/s00415-025-12886-9</a></li>
+<li>Hao, S., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
 <li>Delorme, A. (2023). EEG is better left alone. <a href="https://doi.org/10.1038/s41598-023-27528-0" target="_blank">doi:10.1038/s41598-023-27528-0</a></li>
 <li>Klug, M., &amp; Kloosterman, N. A. (2022). Zapline-plus. <a href="https://doi.org/10.1002/hbm.25832" target="_blank">doi:10.1002/hbm.25832</a></li>
 <li>Hernandez-Pavon, J. C., et al. (2023). TMS combined with EEG: recommendations and open issues. <a href="https://doi.org/10.1016/j.brs.2023.02.009" target="_blank">doi:10.1016/j.brs.2023.02.009</a></li>

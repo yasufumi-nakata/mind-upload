@@ -5,7 +5,7 @@ description: "ベースライン、ベンチマーク、事前登録、モデル
 article_type: Wiki
 subtitle: "『何を比べ、どう固定し、何を残すか』を分けて考える"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-16"
 note: "Learning guide"
 audience: "研究運用の言葉が似て見える人、比較可能性の作り方を初歩から理解したい人"
 reading_time: "10〜15分"
@@ -14,6 +14,7 @@ accuracy_note: "ここでは運用上の役割差を分かりやすく説明し�
 page_highlights:
   - "ベースライン、ベンチマーク、事前登録、モデルカードは、役割が違います。"
   - "失敗例やネガティブ結果も、比較可能性の一部です。"
+  - "multimodal や atlas prior を使う結果では、通常のモデルカードに加えて Fusion Card も必要です。"
   - "点数だけではなく、どう測り、どう失敗したかまで残すのが重要です。"
 known_points:
   - "比較可能な前進には、出発点、採点基準、事前ルール、結果の記録が必要です。"
@@ -54,7 +55,7 @@ recommended_pages:
 <div class="note-box">
 <strong>2026-03 追補</strong>
 <p>
-L1 以上の結果では、通常のモデルカードに加えて <a href="../verification.html#observability-budget">Observability Budget</a> を添付し、measurement stack、直接観測量、残る latent state、claim ceiling、abstention 条件を明示する運用にそろえました。
+L1 以上の結果では、通常のモデルカードに加えて <a href="../verification.html#observability-budget">Observability Budget</a> を添付し、measurement stack、直接観測量、残る latent state、claim ceiling、abstention 条件を明示する運用にそろえました。さらに multimodal / atlas prior 結果では <a href="../verification.html#fusion-card">Fusion Card</a> を添付し、取得関係、時計系、登録誤差、融合モデル、single-modality baseline との差分、外部妥当化を同時に残します。
 </p>
 </div>
 
@@ -82,7 +83,7 @@ L1 以上の結果では、通常のモデルカードに加えて <a href="../v
 </tr>
 <tr>
 <td><strong>モデルカード</strong></td>
-<td>点数、弱点、リーク対策、失敗例、計算条件、さらに L1 以上では Observability Budget を残します。</td>
+<td>点数、弱点、リーク対策、失敗例、計算条件、さらに L1 以上では Observability Budget、multimodal / atlas prior 結果では Fusion Card を残します。</td>
 </tr>
 <tr>
 <td><strong>失敗例・ネガティブ結果</strong></td>
@@ -181,7 +182,7 @@ L1 以上の結果では、通常のモデルカードに加えて <a href="../v
 <li><strong>ベースラインがあるか：</strong>何と比べたのかが明示されているか。</li>
 <li><strong>ベンチマークが固定されているか：</strong>データ、分割、指標が書かれているか。</li>
 <li><strong>事前登録があるか：</strong>あとから条件を変えていないか。</li>
-<li><strong>モデルカードや失敗例があるか：</strong>弱点や崩れ方に加え、L1 以上では Observability Budget が見えるか。</li>
+<li><strong>モデルカードや失敗例があるか：</strong>弱点や崩れ方に加え、L1 以上では Observability Budget、multimodal / atlas prior 結果では Fusion Card が見えるか。</li>
 </ul>
 </div>
 </section>

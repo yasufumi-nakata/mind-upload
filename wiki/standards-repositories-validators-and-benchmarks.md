@@ -5,7 +5,7 @@ description: "BIDS、OpenNeuro/PhysioNet、HED、LSL、MNE-BIDS、MOABB の役�
 article_type: Wiki
 subtitle: "似て見える基盤群を、版固定と評価固定まで含めて切り分けます"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-16"
 note: "Operational guide"
 audience: "BIDS、OpenNeuro、PhysioNet、MNE-BIDS、MOABB が同じ種類のものに見える人"
 reading_time: "10〜15分"
@@ -16,6 +16,7 @@ page_highlights:
   - "OpenNeuro の snapshot や PhysioNet の version を固定しないと、同じデータ名でも再現できません。"
   - "HED や Motion-BIDS は、BIDS の器に機械可読な意味論や追加 metadata を載せる拡張です。"
   - "LSL は同期ミドルウェアであり、BIDS や benchmark の代わりではありません。"
+  - "multimodal 結果では、器や同期の外側に Fusion Card が要り、取得関係・融合モデル・外部妥当化を別に残します。"
   - "MNE-BIDS のようなローダ / 変換器と、MOABB のような benchmark harness は別役割です。"
 known_points:
   - "研究を比較可能にするには、データの形、公開先、検査手段、評価ルールを分けて整える必要があります。"
@@ -164,6 +165,12 @@ recommended_pages:
 OpenNeuro は snapshot を semantic version の git tag として扱い、PhysioNet も project ごとに version を明示して引用させます。したがって本サイトでは、dataset 名だけではなく <strong>snapshot / version / DOI または永続 URL</strong> まで成果物へ含めます。さらに、BIDS は器、HED / Motion-BIDS は意味論と追加 metadata、LSL は同期、MNE-BIDS は入出力経路、MOABB は比較ルールでございます。これらを混ぜて「BIDS にしたので benchmark まで済んだ」「LSL を入れたので hardware 遅延まで解決した」と読まないでください。
 </p>
 </div>
+<div class="note-box">
+<strong>multimodal では器の外側にもう 1 枚必要です</strong>
+<p>
+EEG-BIDS、Motion-BIDS、HED、LSL は重要ですが、これらだけでは <strong>どうモダリティを結び付け、どの融合モデルを使い、single-modality baseline をどこまで超え、どこで外部妥当化したか</strong> までは残りません。したがって本サイトでは、multimodal / atlas prior 結果に <a href="../verification.html#fusion-card">Verification の Fusion Card</a> を追加し、規格・同期・benchmark の外側にある結合条件までカード化します。
+</p>
+</div>
 </section>
 
 <section class="section" id="eeg-example">
@@ -206,6 +213,12 @@ OpenNeuro は snapshot を semantic version の git tag として扱い、Physio
 <strong>ここが重要です</strong>
 <p>
 規格にそろえただけでは、まだ「比べるルール」はありません。逆に benchmark だけあっても、入力の形がバラバラなら比較が崩れます。両方必要です。
+</p>
+</div>
+<div class="note-box">
+<strong>multimodal でさらに必要なもの</strong>
+<p>
+もし EEG と MRI、EEG と fMRI、EEG と侵襲記録を結び付けるなら、ここで終わりではありません。<strong>acquisition relation</strong>、<strong>clock and timing audit</strong>、<strong>geometry / registration</strong>、<strong>fusion model</strong>、<strong>missing-modality baseline</strong>、<strong>external validator</strong> を <a href="../verification.html#fusion-card">Fusion Card</a> として追加しない限り、本サイトでは multimodal gain を強く読みません。
 </p>
 </div>
 </section>

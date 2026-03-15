@@ -14,7 +14,7 @@ accuracy_note: "ここで示す claim ceiling は、各論文がそのまま宣�
 page_highlights:
   - "multimodal を、同時取得・同一個体の幾何統合・侵襲校正・atlas prior の 4 系統へ分けます。"
   - "融合後の地図は『直接見た真値』ではなく、raw と仮定を通した推定であることを固定します。"
-  - "共有時計、登録誤差、融合モデル、不確実性、coverage boundary を 1 枚の Fusion Card で監査します。"
+  - "共有時計、登録誤差、融合モデル、不確実性、single-modality baseline、coverage boundary を 1 枚の Fusion Card で監査します。"
   - "same-brain local twin や atlas prior を、human whole-brain state-complete と読み替えません。"
 known_points:
   - "複数モダリティを組み合わせると、時間・空間・局所性・外部妥当化の一部は補完できます。"
@@ -246,6 +246,10 @@ recommended_pages:
 <td>late fusion か shared latent model か、loss、weights、priors、uncertainty representation。</td>
 </tr>
 <tr>
+<td><strong>Incremental evidence</strong></td>
+<td>single-modality baseline、missing-modality ablation、behaviour-only / anatomy-only baseline と比べて、何がどれだけ増えたか。</td>
+</tr>
+<tr>
 <td><strong>External validator</strong></td>
 <td>phantom、intracranial stimulation、simultaneous invasive recording、post-op outcome、same-brain co-registration のどれで較正したか。</td>
 </tr>
@@ -262,7 +266,7 @@ recommended_pages:
 <div class="note-box">
 <strong>受理条件</strong>
 <p>
-Fusion Card が無い場合、本サイトでは `multimodal result` を強く読まず、原則として <strong>single-modality result に prior を足した推定</strong>または<strong>限定つきの cross-modal concordance</strong>として扱います。
+Fusion Card が無い場合、本サイトでは `multimodal result` を強く読まず、原則として <strong>single-modality result に prior を足した推定</strong>または<strong>限定つきの cross-modal concordance</strong>として扱います。さらに <strong>single-modality baseline や missing-modality ablation が無い場合</strong>、本サイトでは multimodal gain を書きません。
 </p>
 </div>
 </section>
