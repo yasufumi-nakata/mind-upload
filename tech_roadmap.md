@@ -509,6 +509,12 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 <td>未留置領域、全脳 coverage、長期の state completeness は残ります。</td>
 </tr>
 <tr>
+<td><strong>high-density extracellular probe<br>(Neuropixels / Utah / microwire)</strong></td>
+<td>implant 近傍の extracellular spike waveform、threshold crossing、multiunit / local field activity です。</td>
+<td>implant region の local population dynamics、online decode、比較的強い局所 readout を前進させます。</td>
+<td>未記録 neuron、stable single-unit identity across days、sorting / matching 誤差、probe drift、tissue response、全脳 coverage は残ります。</td>
+</tr>
+<tr>
 <td><strong>connectomics + same-brain function</strong></td>
 <td>構造 scaffold と、同一脳での機能応答の対応です。</td>
 <td>局所回路の wiring rule、cell-type 依存の結線、構造と機能の局所対応を強くできます。</td>
@@ -525,7 +531,7 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 <div class="note-box">
 <strong>2026-03 補足：multimodal は「全部見えた」の同義語ではありません</strong>
 <p>
-Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et al. (2025) は、HD-EEG と intracranial ground truth を組み合わせると何が監査できるかを一段前進させました。一方、Yao et al. (2023) の whole-brain spatial atlas、Gouwens et al. (2021) と Gamlin et al. (2025) の Patch-seq bridge、Dorkenwald et al. (2024) と MICrONS Consortium et al. (2025) の connectomics、Neyhart et al. (2024) と Cahill et al. (2024) の local state imaging が示すのは、stack ごとに <strong>強くなる変数</strong> と <strong>依然として残る latent state</strong> が違う、という事実です。したがって、このページでは <strong>観測量が増えた</strong>ことと、<strong>WBE に必要な状態変数が十分に同定できた</strong>ことを分けて扱います。stack ごとの整理表は <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: 計測スタックごとの observability と claim ceiling</a> を参照してください。
+Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et al. (2025) は、HD-EEG と intracranial ground truth を組み合わせると何が監査できるかを一段前進させました。一方、Steinmetz et al. (2021)、Pachitariu et al. (2024)、van Beest et al. (2024) が示すように、高密度 extracellular probe でも <strong>local population readout</strong> と <strong>chronic same-neuron identity</strong> は別問題であり、sorting / matching / drift audit を抜いて unit-level 安定性を断言できません。さらに Yao et al. (2023) の whole-brain spatial atlas、Gouwens et al. (2021) と Gamlin et al. (2025) の Patch-seq bridge、Dorkenwald et al. (2024) と MICrONS Consortium et al. (2025) の connectomics、Neyhart et al. (2024) と Cahill et al. (2024) の local state imaging が示すのは、stack ごとに <strong>強くなる変数</strong> と <strong>依然として残る latent state</strong> が違う、という事実です。したがって、このページでは <strong>観測量が増えた</strong>ことと、<strong>WBE に必要な状態変数が十分に同定できた</strong>ことを分けて扱います。stack ごとの整理表は <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: 計測スタックごとの observability と claim ceiling</a> を参照してください。
 </p>
 </div>
 <p><strong>次に必要：</strong>同一の課題・同一個体で、マルチモーダル同時計測（可能な範囲）＋位置合わせ（M5）</p>
@@ -636,7 +642,8 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 <div class="qa-body">
 <p><strong>問い：</strong>同一個体でも脳状態は揺れる。どの特徴が“本人らしさ”として頑健か？</p>
 <p><strong>反証条件：</strong>再現できるのが“その日の状態”に限られ、長期の同一性評価（V5）ができない</p>
-<p><strong>次に必要：</strong>同一被験者の複数セッションで、事前定義の同定スコア（V1）を追跡する</p>
+<p><strong>2026-03 補足：</strong>慢性 invasive 記録では、same neuron across days は channel 番号から自動で与えられません。Steinmetz et al. (2021) は motion correction 付き長期記録を前進させましたが、Pachitariu et al. (2024) は drift / split / merge を sorting 問題の中心に置き、van Beest et al. (2024) は cross-day unit matching を確率的推定として扱いました。したがって M7 では、<strong>sorting version</strong>、<strong>drift correction</strong>、<strong>unit-match probability</strong>、<strong>dropout / new-unit rate</strong> を hidden にしません。</p>
+<p><strong>次に必要：</strong>同一被験者の複数セッションで、事前定義の同定スコア（V1）に加えて、chronic probe 系では unit identity audit も追跡する</p>
 </div>
 </details>
 
@@ -1830,6 +1837,10 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 <li>Logothetis, N. K. (2008). What we can do and what we cannot do with fMRI. <a href="https://doi.org/10.1038/nature06976" target="_blank">doi:10.1038/nature06976</a></li>
 <li>Purdon, P. L., et al. (2013). EEG signatures of loss/recovery of consciousness.</li>
 <li>Boto, E., et al. (2018). Wearable OPM-MEG.</li>
+<li>Steinmetz, N. A., Aydin, C., Lebedeva, A., et al. (2021). Neuropixels 2.0: A miniaturized high-density probe for stable, long-term brain recordings. <a href="https://doi.org/10.1126/science.abf4588" target="_blank">doi:10.1126/science.abf4588</a></li>
+<li>Pachitariu, M., et al. (2024). Spike sorting with Kilosort4. <a href="https://doi.org/10.1038/s41592-024-02595-5" target="_blank">doi:10.1038/s41592-024-02595-5</a></li>
+<li>Trautmann, E. M., Stavisky, S. D., Lahiri, S., et al. (2019). Accurate estimation of neural population dynamics without spike sorting. <a href="https://doi.org/10.1016/j.neuron.2019.05.003" target="_blank">doi:10.1016/j.neuron.2019.05.003</a></li>
+<li>van Beest, E. H., Jia, X., Deng, X., et al. (2024). Tracking neurons across days with high-density probes. <a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">doi:10.1038/s41592-024-02440-1</a></li>
 </ol>
 
 <h3>D. 前処理・同期・ネットワーク解析</h3>

@@ -5,7 +5,7 @@ description: "状態変動、trait-like な安定性、生体側の表現ドリ�
 article_type: Wiki
 subtitle: "『今日の状態』『比較的安定な骨格』『運用ドリフト』は別々に監査します"
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
+last_updated: "2026-03-15"
 note: "Technical / natural science only"
 audience: "縦断評価、cross-day decode、closed-loop BCI を読むときに、state / trait / drift を感覚ではなく実測で分けたい人"
 reading_time: "12〜18分"
@@ -14,14 +14,17 @@ accuracy_note: "ここでは哲学や法制度は扱いません。state / trait
 page_highlights:
   - "同じ信号の中に、state 変動、trait-like な骨格、生体側 drift、計測・デコーダ側 drift が同時に混在します。"
   - "trait は単一ニューロンの不変性ではなく、latent dynamics、representational geometry、connectome fingerprint などの比較的安定な骨格として読む方が安全です。"
+  - "慢性 extracellular 記録では、same neuron across days は観測事実ではなく、sorting・drift correction・unit matching を介した推定です。"
   - "closed-loop や speech BCI では、fixed decoder の劣化と再較正負荷も drift の本体です。"
 known_points:
   - "行動状態、覚醒、無意図運動、自発行動は、trial-to-trial neural variance を大きく動かします。"
   - "単一ユニットや単一 voxel の変化があっても、population-level の構造や latent dynamics がより安定に残る場合があります。"
+  - "慢性 high-density probe では、probe drift、sorting 誤差、unit matching の不確実性、組織応答が single-unit longitudinal claim を動かします。"
   - "fixed decoder の cross-day 劣化と recalibration burden を出さない限り、長期安定性は評価できません。"
 unknown_points:
   - "どの task でどの骨格を trait と呼ぶべきかを site-wide に統一する基準は、まだ固定されていません。"
   - "生体側 drift と interface / decoder drift の会計を、EEG と侵襲 BCI とで横断比較する標準形式は未整備です。"
+  - "unit-match probability や dropout rate を、どこから chronic same-neuron claim の受理条件にするかは未固定です。"
   - "WBE 向けの長期 benchmark で、どの timescale までを同一の trait backbone と見なすかは未確定です。"
 wiki_links:
   - label: "Wiki: 不確実性・校正・棄権"
@@ -91,7 +94,7 @@ recommended_pages:
 </tr>
 <tr>
 <td><strong>interface / decoder drift</strong></td>
-<td>電極再装着、インピーダンス変化、feature 分布ずれ、decoder mismatch、再較正依存です。</td>
+<td>電極再装着、インピーダンス変化、probe drift、sorting / unit matching error、feature 分布ずれ、decoder mismatch、再較正依存です。</td>
 <td>セッション間から長期運用までです。</td>
 <td>fixed decoder 劣化、recalibration 頻度、recovery time、unsupervised adaptation の成否です。</td>
 </tr>
@@ -125,12 +128,17 @@ Musall ら (2019) は、課題遂行中の cortex-wide activity が task variabl
 Gallego ら (2020) は、サルの sensorimotor cortex を最大 2 年追跡し、記録される neurons が入れ替わっても、<strong>low-dimensional latent dynamics</strong> は安定に保たれ、aligned latent dynamics に基づく decoding は長期間維持できる一方、recorded activity に直接依存した fixed decoder は大きく劣化することを示しました。Finn ら (2015) も、functional connectivity profile が scan session をまたぎ、task と rest をまたいでも個人識別に使えることを示しています。ここから言えるのは、trait があるとしても、それはしばしば <strong>relation や manifold のレベル</strong>で見えるのであって、単一 feature の静止画ではない、ということでございます。
 </p>
 
-<h3>3. representational drift は、生体が安定環境でも起こしうる変化です</h3>
+<h3>3. 慢性 extracellular 記録では、unit identity audit を drift 本体から切り離せません</h3>
+<p>
+Steinmetz ら (2021) の Neuropixels 2.0 は motion correction を用いた安定長期記録を大きく前進させましたが、これは逆に <strong>motion correction が要るほど probe drift が本質的な問題</strong>であることも示します。Pachitariu ら (2024) の Kilosort4 も、awake recording の drift、low-norm unit、split / merge error を benchmark の中心に置いています。Trautmann ら (2019) は、dense array では population dynamics の多くが spike sorting なしでも推定できることを示し、van Beest ら (2024) は cross-day の same-neuron claim を <strong>probabilistic matching</strong> として実装しました。さらに Gregory ら (2023) は、埋め込み array 周囲の深層 pyramidal neuron に structural / functional change が起こることを示しました。したがって、慢性 invasive 記録で「同じ neuron が何日も安定に見えた」と書くには、<strong>sorting version</strong>、<strong>drift correction</strong>、<strong>unit-match probability</strong>、<strong>dropout / new-unit rate</strong>、<strong>implant age と tissue-response proxy</strong> を別に残す必要がございます。
+</p>
+
+<h3>4. representational drift は、生体が安定環境でも起こしうる変化です</h3>
 <p>
 Roth と Merriam (2023) は human V1 の longitudinal fMRI で、session 間の時間が離れるほど model fit の cvR² が下がることを示し、<strong>representational drift が月単位で累積する</strong>ことを報告しました。一方で representational dissimilarity 自体は比較的安定であり、下流が読める関係構造は残る可能性が示されました。さらに Noda ら (2025) は mouse auditory cortex で、individual neuron の tuning volatility があっても、<strong>population-level representational map は保たれうる</strong>こと、しかも selected neuron loss 後でも数日で回復しうることを示しました。つまり、生体側 drift は存在しても、すべてのレベルが同じ速さで崩れるわけではございません。
 </p>
 
-<h3>4. BCI の運用では、decoder drift と recalibration burden が別の壁になります</h3>
+<h3>5. BCI の運用では、decoder drift と recalibration burden が別の壁になります</h3>
 <p>
 Wilson ら (2025) は、intracortical cursor BCI が accumulating neural nonstationarities により <strong>frequent recalibration</strong> を要し、unsupervised target-inference recalibration がないと長期維持が難しいことを示しました。Wairagkar ら (2025) も、instantaneous voice-synthesis neuroprosthesis で <strong>non-speech 時に silence を返す</strong>ことが重要であり、しかも post-implant day 165 で固定した decoder の性能が <strong>約 15 日後から目立って低下</strong>することを示しています。したがって、online 系では「その日に動いた」だけでは足りず、<strong>fixed decoder が何日持つか</strong>、<strong>再較正にどれだけ依存したか</strong>、<strong>silence / abstention をどう使ったか</strong>まで含めて drift を評価する必要があります。
 </p>
@@ -156,6 +164,11 @@ Wilson ら (2025) は、intracortical cursor BCI が accumulating neural nonstat
 <td><strong>fixed-model stability</strong></td>
 <td>再学習なし decoder / readout を何日・何週 hold したか、その interval ごとの劣化曲線。</td>
 <td>「trait backbone がある」「長期運用できる」とは言えません。</td>
+</tr>
+<tr>
+<td><strong>unit identity audit</strong></td>
+<td>sorting version、drift correction、unit-match method / probability、dropout / new-unit rate、implant age、impedance や tissue-response proxy。</td>
+<td>「same neuron across days」「single-unit level での長期安定」が受理できません。</td>
 </tr>
 <tr>
 <td><strong>population backbone</strong></td>
@@ -233,6 +246,11 @@ Wilson ら (2025) は、intracortical cursor BCI が accumulating neural nonstat
 <li>Benisty, H., Barson, D., Moberly, A. H., Lohani, S., Tang, L., Coifman, R. R., Crair, M. C., Cardin, J. A., &amp; Higley, M. J. (2024). Rapid fluctuations in functional connectivity of cortical networks encode spontaneous behavior. <em>Nature Neuroscience</em>, 27, 148-158. <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">doi:10.1038/s41593-023-01498-y</a></li>
 <li>Gallego, J. A., Perich, M. G., Chowdhury, R. H., Solla, S. A., &amp; Miller, L. E. (2020). Long-term stability of cortical population dynamics underlying consistent behavior. <em>Nature Neuroscience</em>, 23, 260-270. <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">doi:10.1038/s41593-019-0555-4</a></li>
 <li>Finn, E. S., Shen, X., Scheinost, D., Rosenberg, M. D., Huang, J., Chun, M. M., Papademetris, X., &amp; Constable, R. T. (2015). Functional connectome fingerprinting: identifying individuals using patterns of brain connectivity. <em>Nature Neuroscience</em>, 18(11), 1664-1671. <a href="https://doi.org/10.1038/nn.4135" target="_blank">doi:10.1038/nn.4135</a></li>
+<li>Steinmetz, N. A., Aydin, C., Lebedeva, A., et al. (2021). Neuropixels 2.0: A miniaturized high-density probe for stable, long-term brain recordings. <em>Science</em>, 372(6539), eabf4588. <a href="https://doi.org/10.1126/science.abf4588" target="_blank">doi:10.1126/science.abf4588</a></li>
+<li>Pachitariu, M., et al. (2024). Spike sorting with Kilosort4. <em>Nature Methods</em>, 21, 914-921. <a href="https://doi.org/10.1038/s41592-024-02595-5" target="_blank">doi:10.1038/s41592-024-02595-5</a></li>
+<li>Trautmann, E. M., Stavisky, S. D., Lahiri, S., et al. (2019). Accurate estimation of neural population dynamics without spike sorting. <em>Neuron</em>, 103(2), 292-308.e4. <a href="https://doi.org/10.1016/j.neuron.2019.05.003" target="_blank">doi:10.1016/j.neuron.2019.05.003</a></li>
+<li>van Beest, E. H., Jia, X., Deng, X., et al. (2024). Tracking neurons across days with high-density probes. <em>Nature Methods</em>. <a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">doi:10.1038/s41592-024-02440-1</a></li>
+<li>Gregory, N. S., et al. (2023). Structural and functional changes of deep layer pyramidal neurons surrounding implanted microelectrode arrays in rat motor cortex. <em>Journal of Neural Engineering</em>, 20(4), 046022. <a href="https://doi.org/10.1088/1741-2552/ace8ac" target="_blank">doi:10.1088/1741-2552/ace8ac</a></li>
 <li>Roth, Z. N., &amp; Merriam, E. P. (2023). Representations in human primary visual cortex drift over time. <em>Nature Communications</em>, 14, 4422. <a href="https://doi.org/10.1038/s41467-023-40144-w" target="_blank">doi:10.1038/s41467-023-40144-w</a></li>
 <li>Noda, T., Kienle, E., Eppler, J.-B., Aschauer, D. F., Kaschube, M., Loewenstein, Y., &amp; Rumpel, S. (2025). Homeostasis of a representational map in the neocortex. <em>Nature Neuroscience</em>, 28, 1533-1545. <a href="https://doi.org/10.1038/s41593-025-01982-7" target="_blank">doi:10.1038/s41593-025-01982-7</a></li>
 <li>Wilson, G. H., Stein, E. A., Kamdar, F., Avansino, D. T., Pun, T. K., Gross, R., Hosman, T., Singer-Clark, T., Kapitonava, A., Hochberg, L. R., Simeral, J. D., Shenoy, K. V., Druckmann, S., Henderson, J. M., &amp; Willett, F. R. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <em>Nature Biomedical Engineering</em>. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>

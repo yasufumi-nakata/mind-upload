@@ -595,17 +595,17 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 <tbody>
 <tr>
 <td><strong>measurement stack</strong></td>
-<td>EEG / MEG / fMRI、whole-brain atlas、Patch-seq、volume EM、same-brain function、local transmitter / glia imaging のどれを使ったか。</td>
+<td>EEG / MEG / fMRI、high-density extracellular probe、whole-brain atlas、Patch-seq、volume EM、same-brain function、local transmitter / glia imaging のどれを使ったか。</td>
 <td>「multimodal」「atlas」「same-brain」という言葉だけが独り歩きし、直接観測量の違いが消えます。</td>
 </tr>
 <tr>
 <td><strong>direct observables</strong></td>
-<td>その stack が直接測った変数だけを書きます。BOLD、field potential、cell-type label、EM synapse、local ACh dynamics などです。</td>
+<td>その stack が直接測った変数だけを書きます。BOLD、field potential、spike waveform / threshold crossings、cell-type label、EM synapse、local ACh dynamics などです。</td>
 <td>推定した latent state を、最初から観測済みだったかのように誤読しやすくなります。</td>
 </tr>
 <tr>
 <td><strong>remaining latent state</strong></td>
-<td>weights、delay / myelin、intrinsic excitability / homeostatic set point、neuromodulation、glia / metabolic support、sleep-history など、まだ残る変数を列挙します。</td>
+<td>weights、delay / myelin、intrinsic excitability / homeostatic set point、neuromodulation、glia / metabolic support、sleep-history に加え、chronic probe 系では stable single-unit identity、sorting / matching error、tissue response も列挙します。</td>
 <td>state-complete ではない結果を、emulation-complete や内部状態の唯一解へ繰り上げやすくなります。</td>
 </tr>
 <tr>
@@ -619,6 +619,11 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 <td>same-day の fit を長期 stability や memory claim へ不当に延長しやすくなります。</td>
 </tr>
 <tr>
+<td><strong>unit identity audit</strong></td>
+<td>chronic extracellular 記録なら、sorting version、drift correction、unit-match method / probability、dropout / new-unit rate、implant age と tissue-response proxy を書きます。</td>
+<td>「same neuron across days」や single-unit level の長期安定性を、channel 番号だけで誤読しやすくなります。</td>
+</tr>
+<tr>
 <td><strong>claim ceiling と abstention</strong></td>
 <td>「macro state tracking」「structural scaffold」「local conditional prediction」など、その結果が到達してよい上限と、超えたら棄権する条件を書きます。</td>
 <td>論文の前進を過大に翻訳し、L1 の結果を L2/L3/L4 へ誤昇格させやすくなります。</td>
@@ -628,7 +633,7 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 <div class="note-box">
 <strong>最低運用ルール</strong>
 <p>
-このカードが無い場合、本サイトでは結果を <strong>L0/L1 の再現可能解析または限定つき decode</strong> として扱い、L2 以上へ上げません。たとえば、<strong>EEG / HD-EEG + MRI だけ</strong>なら default ceiling は macro state tracking、<strong>volume EM だけ</strong>なら structural scaffold、<strong>whole-brain atlas だけ</strong>なら molecular / spatial prior、<strong>same-brain calcium + EM</strong> でも local conditional prediction までです。詳細な stack 別 ceiling は <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: 計測スタックごとの observability と claim ceiling</a> に集約しています。
+このカードが無い場合、本サイトでは結果を <strong>L0/L1 の再現可能解析または限定つき decode</strong> として扱い、L2 以上へ上げません。たとえば、<strong>EEG / HD-EEG + MRI だけ</strong>なら default ceiling は macro state tracking、<strong>high-density extracellular probe だけ</strong>なら implant-region の local population window、<strong>volume EM だけ</strong>なら structural scaffold、<strong>whole-brain atlas だけ</strong>なら molecular / spatial prior、<strong>same-brain calcium + EM</strong> でも local conditional prediction までです。chronic probe 系で unit identity audit が無い場合、single-unit longitudinal claim は受理しません。詳細な stack 別 ceiling は <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: 計測スタックごとの observability と claim ceiling</a> に集約しています。
 </p>
 </div>
 </section>
@@ -977,6 +982,11 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Wairagkar, M., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
 <li>Flesher, S. N., et al. (2021). A brain-computer interface that evokes tactile sensations improves robotic arm control. <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
 <li>Wilson, G. H., et al. (2025). Long-term unsupervised recalibration of intracortical brain-computer interfaces using a hidden Markov model. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Steinmetz, N. A., Aydin, C., Lebedeva, A., et al. (2021). Neuropixels 2.0: A miniaturized high-density probe for stable, long-term brain recordings. <a href="https://doi.org/10.1126/science.abf4588" target="_blank">doi:10.1126/science.abf4588</a></li>
+<li>Pachitariu, M., et al. (2024). Spike sorting with Kilosort4. <a href="https://doi.org/10.1038/s41592-024-02595-5" target="_blank">doi:10.1038/s41592-024-02595-5</a></li>
+<li>Trautmann, E. M., Stavisky, S. D., Lahiri, S., et al. (2019). Accurate estimation of neural population dynamics without spike sorting. <a href="https://doi.org/10.1016/j.neuron.2019.05.003" target="_blank">doi:10.1016/j.neuron.2019.05.003</a></li>
+<li>van Beest, E. H., Jia, X., Deng, X., et al. (2024). Tracking neurons across days with high-density probes. <a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">doi:10.1038/s41592-024-02440-1</a></li>
+<li>Gregory, N. S., et al. (2023). Structural and functional changes of deep layer pyramidal neurons surrounding implanted microelectrode arrays in rat motor cortex. <a href="https://doi.org/10.1088/1741-2552/ace8ac" target="_blank">doi:10.1088/1741-2552/ace8ac</a></li>
 <li>Oehrn, C. R., et al. (2024). Chronic adaptive deep brain stimulation versus conventional stimulation in Parkinson's disease: a blinded randomized feasibility trial. <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">doi:10.1038/s41591-024-03196-z</a></li>
 <li>Dixon, S., et al. (2026). Movement-responsive deep brain stimulation for Parkinson’s disease using a remotely optimized neural decoder. <a href="https://doi.org/10.1038/s41551-025-01592-5" target="_blank">doi:10.1038/s41551-025-01592-5</a></li>
 <li>Cascino, S., et al. (2026). Chronic adaptive deep brain stimulation in Parkinson’s disease: ADAPT-START findings and programming principles. <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">doi:10.1038/s41531-026-01269-z</a></li>
