@@ -844,12 +844,17 @@ href="#ref-57">[57]</a></sup>。
 
 <div class="note-box">
 <strong>この節の site rule</strong><br>
-no-report / criterion placement は <strong>confound control</strong>、PCI/PCI-ST は <strong>主 benchmark 候補</strong>、安静時複雑性・臨界性は <strong>補助 / 探索トラック</strong>、臨床主張は <strong>multimodal external validation</strong> が揃うまで繰り上げません。
+no-report / criterion placement は <strong>construct-validity gate</strong>、PCI/PCI-ST は <strong>sensory control と reliability log つきの主 benchmark 候補</strong>、安静時複雑性・臨界性は <strong>same-cohort calibration を通った補助 proxy</strong>、臨床主張は <strong>behaviour-only baseline を上回る multimodal panel</strong> が揃うまで繰り上げません。
 </div>
 
 <div class="note-box">
 <strong>construct validity を別監査にします</strong><br>
 visual / auditory の no-report 文献は、どちらも <strong>設計条件</strong> の妥当性を支えますが、EEG 単独の bedside meter を直接支持するわけではありません。したがって本サイトでは、modality をまたぐ no-report evidence を <strong>confound control の根拠</strong> としてのみ使い、EEG benchmark の根拠とは切り分けます<sup><a href="#ref-102">[102]</a></sup><sup><a href="#ref-103">[103]</a></sup><sup><a href="#ref-113">[113]</a></sup>。
+</div>
+
+<div class="note-box">
+<strong>4トラックを並べるだけでは足りません</strong><br>
+従来の整理は方向として正しかった一方、最新の一次文献は、同じ「意識指標」でも <strong>construct validity</strong>、<strong>perturbational validity</strong>、<strong>same-cohort calibration</strong>、<strong>incremental validity over behavior</strong> を別ゲートで監査しない限り、claim ceiling が変わることを示しております。criterion placement を外すと no-report 自体の解釈が崩れ、sensory contamination と target-specific reliability を外すと PCI/TMS-EEG の読みが揺れ、same-cohort calibration を外すと resting-state 指標は proxy のまま残り、behaviour-only baseline を外すと multimodal panel は deployability を主張できません。したがって昇格可否は <a href="verification.html#consciousness-readout-gate">Verification の 4 ゲート</a> を通ったかで決めます<sup><a href="#ref-113">[113]</a></sup><sup><a href="#ref-124">[124]</a></sup><sup><a href="#ref-125">[125]</a></sup><sup><a href="#ref-126">[126]</a></sup><sup><a href="#ref-127">[127]</a></sup><sup><a href="#ref-128">[128]</a></sup>。
 </div>
 
 <h3>この節で先に固定する5条件</h3>
@@ -875,26 +880,59 @@ visual / auditory の no-report 文献は、どちらも <strong>設計条件</s
 <tr>
 <td><strong>PCI / PCI-ST</strong></td>
 <td>摂動に対する複雑な応答は、麻酔・睡眠・DoC をまたぐ state-level benchmark 候補になります<sup><a href="#ref-47">[47]</a></sup><sup><a href="#ref-51">[51]</a></sup><sup><a href="#ref-55">[55]</a></sup>。</td>
-<td>意識内容、本人性、理論の当否を単独で裁定するものではありません。TMS-EEG の厳密なアーチファクト管理を外すと比較不能になります<sup><a href="#ref-100">[100]</a></sup>。</td>
+<td>意識内容、本人性、理論の当否を単独で裁定するものではありません。さらに prefrontal TMS-EEG では reliability と sensory contamination が target / window 依存であるため、刺激条件、対照、artifact 窓を外すと benchmark として比較不能になります<sup><a href="#ref-124">[124]</a></sup><sup><a href="#ref-125">[125]</a></sup>。</td>
 <td><strong>主 benchmark 候補</strong></td>
 </tr>
 <tr>
 <td><strong>No-report / criterion placement</strong></td>
 <td>visual / auditory の両課題で、post-perceptual processing と response criterion を切り分ける設計条件としての有効性が強まりました<sup><a href="#ref-48">[48]</a></sup><sup><a href="#ref-102">[102]</a></sup><sup><a href="#ref-103">[103]</a></sup><sup><a href="#ref-113">[113]</a></sup>。</td>
-<td>それ自体が bedside meter になるわけではなく、意識レベルの普遍 readout も自動的には与えません。</td>
+<td>それ自体が bedside meter になるわけではなく、criterion placement や report strategy のログが無ければ neural marker が conscious content ではなく判断戦略を拾う可能性が残ります。</td>
 <td><strong>confound control</strong></td>
 </tr>
 <tr>
 <td><strong>安静時複雑性 / 臨界性</strong></td>
-<td>麻酔に伴う変化や、特定 cohort における PCI との関連は報告されています<sup><a href="#ref-50">[50]</a></sup><sup><a href="#ref-52">[52]</a></sup><sup><a href="#ref-56">[56]</a></sup>。</td>
-<td>摂動指標の置換ではありません。MCS では spontaneous marker と evoked marker が解離しうるため、同一視は危険です<sup><a href="#ref-104">[104]</a></sup>。</td>
+<td>麻酔に伴う変化、PCI との関連、さらに perturbation を使わない条件での consciousness 分類可能性は報告されています<sup><a href="#ref-50">[50]</a></sup><sup><a href="#ref-52">[52]</a></sup><sup><a href="#ref-56">[56]</a></sup><sup><a href="#ref-126">[126]</a></sup>。</td>
+<td>摂動指標の置換ではありません。MCS では spontaneous marker と evoked marker が解離しうるため<sup><a href="#ref-104">[104]</a></sup>、同一 cohort で PCI / 行動 / 臨床アウトカムへ較正しない限り、主判定へ上げません。</td>
 <td><strong>補助 / 探索トラック</strong></td>
 </tr>
 <tr>
 <td><strong>Multimodal clinical panel</strong></td>
-<td>単一指標より、行動評価・HD-EEG・MRI・PET・臨床変数を束ねた multisite panel の方が診断 / 予後に強い可能性があります<sup><a href="#ref-105">[105]</a></sup>。</td>
-<td>まだ「世界標準の単独指標」はなく、施設間差・欠測・測定負荷を含む運用問題が残ります。</td>
+<td>行動評価・HD-EEG・MRI・PET・臨床変数を束ねた multimodal panel は、coma / DoC の診断や予後で behaviour-only を上回る可能性があります<sup><a href="#ref-105">[105]</a></sup><sup><a href="#ref-127">[127]</a></sup><sup><a href="#ref-128">[128]</a></sup>。</td>
+<td>ただし cohort と欠測条件に依存し、baseline を上回る incremental validity、施設外一般化、missing-modality 耐性を出さない限り、ready-to-deploy とは書けません。</td>
 <td><strong>deployability gate</strong></td>
+</tr>
+</tbody>
+</table>
+
+<h3>昇格可否を決める4ゲート</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th>ゲート</th>
+<th>最低限ほしいもの</th>
+<th>通っていないときに止める主張</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Construct validity</strong></td>
+<td>no-report / report の切り分け、criterion placement の別ログ、失敗条件の事前固定。</td>
+<td>「この neural marker は意識内容そのものを読んだ」と言うことです。</td>
+</tr>
+<tr>
+<td><strong>Perturbational validity</strong></td>
+<td>TMS-EEG / intracranial perturbation の刺激条件、sensory control、artifact 窓、target-specific reliability。</td>
+<td>PCI 風の値だけで state-level benchmark と呼ぶことです。</td>
+</tr>
+<tr>
+<td><strong>Same-cohort calibration</strong></td>
+<td>同一 cohort で PCI、行動、臨床アウトカム、pipeline 感度分析へ較正すること。</td>
+<td>resting-state 指標を単独の bedside meter と呼ぶことです。</td>
+</tr>
+<tr>
+<td><strong>Incremental validity</strong></td>
+<td>behaviour-only baseline 比較、施設外一般化、missing-modality 条件での校正誤差。</td>
+<td>multimodal panel を ready-to-deploy と書くことです。</td>
 </tr>
 </tbody>
 </table>
@@ -1404,6 +1442,11 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <li id="ref-121" value="121">Looser, Z. J., et al. (2024). Oligodendrocyte-axon metabolic coupling is mediated by extracellular K<sup>+</sup> and maintains axonal health. <em>Nature Neuroscience</em>, 27, 1584–1598. <a href="https://doi.org/10.1038/s41593-023-01517-y">doi:10.1038/s41593-023-01517-y</a></li>
 <li id="ref-122" value="122">Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <em>Nature</em>, 629, 146–153. <a href="https://doi.org/10.1038/s41586-024-07311-5">doi:10.1038/s41586-024-07311-5</a></li>
 <li id="ref-123" value="123">Lee, J.-C., Wang, C.-Y., Lin, C.-L., & Lu, H.-C. (2022). Synaptic memory survives molecular turnover. <em>PNAS</em>, 119(42), e2211572119. <a href="https://doi.org/10.1073/pnas.2211572119">doi:10.1073/pnas.2211572119</a></li>
+<li id="ref-124" value="124">Gogulski, J., Bailey, N. W., Hoy, K. E., & Rogasch, N. C. (2024). The reliability and variability of TMS-evoked potentials in the dorsolateral prefrontal cortex in healthy adults. <em>Brain Stimulation</em>, 17(4), 547–556. <a href="https://doi.org/10.1016/j.brs.2024.06.001">doi:10.1016/j.brs.2024.06.001</a></li>
+<li id="ref-125" value="125">Biabani, M., Perera, T., Zalesky, A., et al. (2024). Characterising the contribution of auditory and somatosensory inputs to TMS-evoked potentials following stimulation of prefrontal, premotor, and parietal cortex. <em>Imaging Neuroscience</em>, 2. <a href="https://doi.org/10.1162/imag_a_00349">doi:10.1162/imag_a_00349</a></li>
+<li id="ref-126" value="126">Breyton, M., Lado, M. J., Laureys, S., et al. (2025). Spatiotemporal brain complexity quantifies consciousness outside of perturbation paradigms. <em>eLife</em>, 13, RP98920. <a href="https://doi.org/10.7554/eLife.98920">doi:10.7554/eLife.98920</a></li>
+<li id="ref-127" value="127">Rohaut, B., Naccache, L., Sitt, J. D., et al. (2024). Multimodal imaging reveals partially preserved semantic cognition in comatose patients after cardiac arrest. <em>Neurology</em>, 103(3), e209439. <a href="https://doi.org/10.1212/WNL.0000000000209439">doi:10.1212/WNL.0000000000209439</a></li>
+<li id="ref-128" value="128">Kawai, R., Migdady, I., Kim, M. H., et al. (2025). Multimodal assessment improves neuroprognosis performance after out-of-hospital cardiac arrest. <em>Nature Medicine</em>, 31, 1065–1073. <a href="https://doi.org/10.1038/s41591-024-03019-1">doi:10.1038/s41591-024-03019-1</a></li>
 </ol>
 </section>
 

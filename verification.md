@@ -779,6 +779,50 @@ connectome-complete は <strong>emulation-complete を意味しません</strong
 </div>
 </section>
 
+<section class="section" id="consciousness-readout-gate">
+<h2 class="section-title">2026-03 追補：意識 readout は 4 ゲートで受理する</h2>
+<p>
+今回さらに深掘りすべきだった弱点は、EEG / DoC / 麻酔文献を「no-report」「PCI」「resting-state」「multimodal」に分類するだけでは、<strong>どの条件で claim を一段上げてよいか</strong>がまだ operational でなかった点でございます。Cohen et al. (2024) と Fahrenfort et al. (2025) は、report / post-perceptual confound と criterion placement を別々に潰さなければ construct validity が壊れることを示しました。Gogulski et al. (2024) と Biabani et al. (2024) は、TMS-EEG の reliability と sensory contamination が target と time window に依存することを示し、Breyton et al. (2025) と Casarotto et al. (2024) は、resting-state complexity が有望でも PCI の置換ではなく同一 cohort での較正が要ることを示します。さらに Rohaut et al. (2024)、Kawai et al. (2025)、Manasova et al. (2026) は multimodal panel の前進を示しましたが、同時に behaviour-only baseline と missing-modality 条件を超えなければ deployability を主張できないことも意味します。したがって本サイトでは、意識関連 readout を以下の 4 ゲートで受理します。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>ゲート</th>
+<th>最低限出すもの</th>
+<th>通っていないときに止める主張</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Construct-validity gate</strong></td>
+<td>no-report / report の切り分け、criterion placement の別ログ、失敗条件の事前固定、少なくとも task / report confound を潰す設計根拠。</td>
+<td>「この neural marker は意識内容そのものを読んだ」と言うことです。現状は decision strategy や post-perceptual processing を拾った可能性を残します。</td>
+</tr>
+<tr>
+<td><strong>Perturbational gate</strong></td>
+<td>TMS-EEG / intracranial perturbation の刺激部位、強度、対照、auditory / somatosensory control、artifact 窓、target-specific reliability。</td>
+<td>PCI / PCI-ST 風の値だけで、state-level benchmark と呼ぶことです。条件ログが無ければ比較自体が崩れます。</td>
+</tr>
+<tr>
+<td><strong>Calibration gate</strong></td>
+<td>同一 cohort で PCI、行動評価、臨床アウトカム、pipeline 感度分析、棄権閾値へ較正すること。</td>
+<td>resting-state complexity、criticality、受動 EEG classifier を単独の bedside meter と呼ぶことです。外部較正前は補助 proxy に留めます。</td>
+</tr>
+<tr>
+<td><strong>Incremental / deployability gate</strong></td>
+<td>behaviour-only baseline との比較、施設外一般化、missing-modality 条件での頑健性、校正誤差、測定負荷の報告。</td>
+<td>multimodal panel を ready-to-deploy と書くことです。平均精度だけでは臨床運用の根拠になりません。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>最低運用ルール</strong>
+<p>
+no-report / criterion placement は <strong>construct-validity gate</strong>、PCI / PCI-ST は <strong>perturbational gate</strong> を通ったときだけ主 benchmark 候補、resting-state 複雑性 / 臨界性は <strong>calibration gate</strong> を通るまで補助 proxy、multimodal clinical panel は <strong>incremental / deployability gate</strong> を通るまで exploratory panel として扱います。つまり本サイトでは、同じ「意識指標」でも gate が違えば claim ceiling も違います。
+</p>
+</div>
+</section>
+
 <section class="section" id="causal-perturbation-suite">
 <h2 class="section-title">因果的摂動スイート（4ゲート制へ再編）</h2>
 <p>
@@ -939,6 +983,13 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Lynn, C. W., et al. (2021). Broken detailed balance and entropy production in the human brain. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>
 <li>de la Fuente, L. A., et al. (2022). Temporal irreversibility of neural dynamics as a signature of consciousness. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
 <li>Ishihara, K., &amp; Shimazaki, H. (2025). State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics. <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
+<li>Cohen, M. A., et al. (2024). Neural signatures of visual awareness independent of postperceptual processing. <a href="https://doi.org/10.1093/cercor/bhae415" target="_blank">doi:10.1093/cercor/bhae415</a></li>
+<li>Fahrenfort, J. J., et al. (2025). Criterion placement threatens the construct validity of neural measures of consciousness. <a href="https://doi.org/10.7554/eLife.102335" target="_blank">doi:10.7554/eLife.102335</a></li>
+<li>Gogulski, J., et al. (2024). The reliability and variability of TMS-evoked potentials in the dorsolateral prefrontal cortex in healthy adults. <a href="https://doi.org/10.1016/j.brs.2024.06.001" target="_blank">doi:10.1016/j.brs.2024.06.001</a></li>
+<li>Biabani, M., et al. (2024). Characterising the contribution of auditory and somatosensory inputs to TMS-evoked potentials following stimulation of prefrontal, premotor, and parietal cortex. <a href="https://doi.org/10.1162/imag_a_00349" target="_blank">doi:10.1162/imag_a_00349</a></li>
+<li>Breyton, M., et al. (2025). Spatiotemporal brain complexity quantifies consciousness outside of perturbation paradigms. <a href="https://doi.org/10.7554/eLife.98920" target="_blank">doi:10.7554/eLife.98920</a></li>
+<li>Rohaut, B., et al. (2024). Multimodal imaging reveals partially preserved semantic cognition in comatose patients after cardiac arrest. <a href="https://doi.org/10.1212/WNL.0000000000209439" target="_blank">doi:10.1212/WNL.0000000000209439</a></li>
+<li>Kawai, R., et al. (2025). Multimodal assessment improves neuroprognosis performance after out-of-hospital cardiac arrest. <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">doi:10.1038/s41591-024-03019-1</a></li>
 <li>Yao, Z., et al. (2023). A high-resolution transcriptomic and spatial atlas of cell types in the whole mouse brain. <a href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank">doi:10.1038/s41586-023-06812-z</a></li>
 <li>Dorkenwald, S., et al. (2024). Neuronal wiring diagram of an adult brain. <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">doi:10.1038/s41586-024-07558-y</a></li>
 <li>Lappalainen, J. K., Tschopp, F. D., Prakhya, S., et al. (2024). Connectome-constrained networks predict neural activity across the fly visual system. <a href="https://doi.org/10.1038/s41586-024-07939-3" target="_blank">doi:10.1038/s41586-024-07939-3</a></li>
