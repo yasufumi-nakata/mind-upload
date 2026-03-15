@@ -5,7 +5,7 @@ description: "順問題、逆問題、ESI、DCM、SCM、因果同値類を、同
 article_type: Wiki
 subtitle: "観測に合うこと、内部状態が分かること、因果が分かることは別です"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-16"
 note: "Technical / natural science only"
 audience: "逆問題や因果モデルの限界を、一次文献ベースで整理したい人"
 reading_time: "12〜18分"
@@ -14,17 +14,20 @@ accuracy_note: "ここで示すのは、どの手法を採用すべきかの固�
 page_highlights:
   - "逆問題は solver 名だけでは評価せず、幾何・導電率・不確実性・外部妥当化まで監査します。"
   - "connectivity は localization の次の段であり、lagged metric だけで leakage 問題が消えるわけではありません。"
+  - "局在妥当化、network 妥当化、perturbation 妥当化は別ラダーで、1 つの positive result で代用しません。"
   - "DCM は自動発見器ではなく候補モデル比較であり、SCM は介入を記述しやすくする言語です。"
   - "観測データだけで残る因果同値類を、介入や較正でどこまで狭めるかが鍵です。"
 known_points:
   - "頭皮 EEG から脳内活動を一意に決めることは原理的に難しく、推定には仮定が入ります。"
   - "高密度 EEG、個体別 MRI、FEM/BEM、経験ベイズ推定は条件を改善しえますが、単独で一意復元を保証しません。"
   - "source-space functional connectivity や directed connectivity は、source localization よりさらに強い仮定と妥当化を要します。"
+  - "局在に最適な source reconstruction parameter が、connectivity に最適とは限りません。"
   - "観測適合だけでは因果構造は確定せず、候補モデル集合と介入設計が必要です。"
 unknown_points:
   - "どの計測・モデル化の組み合わせが WBE の検証に最も有効かは未確定です。"
   - "非侵襲計測だけで、どこまで詳細な因果構造や状態変数を安定に復元できるかは研究途中です。"
   - "どの leakage-control / direct-validation 組み合わせを source connectivity の site-wide 既定路線にするかは未確定です。"
+  - "個体別 whole-brain connectome の ground truth は依然として欠如しており、局所 validation と group-level atlas の間に大きなギャップがあります。"
   - "どの外部妥当化ラダーを site-wide benchmark に固定するかは、まだ整備途中です。"
 wiki_links:
   - label: "Wiki: 計測からモデル化まで"
@@ -231,7 +234,56 @@ Bayesian / empirical Bayes / sparse Bayesian learning は、<strong>不確実性
 <div class="note-box">
 <strong>2026-03 の一次文献が切る境界</strong>
 <p>
-Vinck らの wPLI は volume-conduction、noise、sample-size bias を減らす候補ですが、Zhang らは scalp EEG functional network が reference choice で動くことを示しました。さらに Palva らは source reconstruction 後にも ghost interaction が残りうると警告し、Haufe らの simulation study は directed connectivity measure 間で結論が割れうることを示しました。一方、Papadopoulou らは同時 cortical recording と reconstructed source の controlled comparison で qualitative な directed pattern の一致を示し、Hao らは simultaneous SEEG/HD-EEG で外部妥当化の道筋を前進させました。したがって、本サイトでは <strong>lagged metric = leakage solved</strong>、<strong>directed metric = causality solved</strong> とは読みません。
+Mahjoory らは inverse method・forward model・software package を変えると <strong>functional / effective connectivity の方が localization より不安定</strong>だと示し、Vallarino らは <strong>source estimation に最適な regularization</strong> が connectivity には 1〜2 桁大きすぎる場合があると示しました。Vinck らの wPLI は volume-conduction、noise、sample-size bias を減らす候補ですが、Zhang らは scalp EEG functional network が reference choice で動くことを示しました。さらに Palva らは source reconstruction 後にも ghost interaction が残りうると警告し、Haufe らの simulation study は directed connectivity measure 間で結論が割れうることを示しました。一方、Papadopoulou らは controlled な cortical recording comparison で qualitative な directed pattern の一致を示し、Hao らは simultaneous SEEG/HD-EEG で coverage-limited な外部妥当化の道筋を前進させ、Afnan らは group-level では AEC / PLV が iEEG atlas と中等度相関する一方で OAEC / wPLI は相関が下がることを示しました。したがって、本サイトでは <strong>lagged metric = leakage solved</strong>、<strong>directed metric = causality solved</strong>、<strong>localization validated = network validated</strong> とは読みません。
+</p>
+</div>
+</section>
+
+<section class="section" id="connectivity-validation-ladder">
+<h2 class="section-title">2026-03 文献監査：局在妥当化と network 妥当化は別ラダーです</h2>
+<p>
+今回さらに深掘りすべきだった弱点は、Mikulan / Unnwongse / Hao のような <strong>source localization の直接妥当化</strong>を、読者がそのまま <strong>source-space connectivity の妥当化</strong>と誤読しうる点でございました。一次文献を並べると、network claim には少なくとも <strong>pipeline stability</strong>、<strong>connectivity-specific tuning</strong>、<strong>coverage-limited local concordance</strong>、<strong>group-level invasive atlas / perturbation consistency</strong> の段差があり、どれか 1 つだけで全部を代用できません。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>妥当化の段差</th>
+<th>一次文献が今支持すること</th>
+<th>このサイトで止める誤読</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. pipeline stability</strong></td>
+<td>Mahjoory らは、inverse method、forward model、software package を変えたとき、source localization よりも <strong>functional / effective connectivity の方が一貫性が低い</strong>ことを示しました。</td>
+<td>単一 pipeline で出た network map を、そのまま再現性十分な結果とみなしません。</td>
+</tr>
+<tr>
+<td><strong>2. connectivity-specific tuning</strong></td>
+<td>Vallarino らは、最良の connectivity estimation は最良の source estimation より <strong>1〜2 桁低い regularization</strong>で得られる場合があると示しました。つまり、局在最適化の設定をそのまま network へ流用すると false positive が増えます。</td>
+<td>localization 用に最適化した hyperparameter を、そのまま connectivity 用の標準設定だと書きません。</td>
+</tr>
+<tr>
+<td><strong>3. coverage-limited local concordance</strong></td>
+<td>Papadopoulou らは controlled な cortical recording と reconstructed source の間で <strong>qualitative に似た directed pattern</strong>を示し、Hao らは simultaneous SEEG/HD-EEG で implanted region 周辺の direct validation を前進させました。</td>
+<td>局所・条件付きの一致を、individual whole-brain connectome の ground truth と書きません。</td>
+</tr>
+<tr>
+<td><strong>4. group-level invasive atlas consistency</strong></td>
+<td>Afnan らは、group-level MEG resting-state connectome が iEEG atlas と <strong>AEC / PLV で中等度相関</strong>しうる一方、OAEC / wPLI では相関が低下することを示しました。zero-lag を消す操作は leakage を減らす候補ですが、真の zero-lag coupling まで削る trade-off を持ちます。</td>
+<td><strong>zero-lag を消す metric = より真の connectome</strong>とは書きません。population-level consistency と subject-specific truth も分けます。</td>
+</tr>
+<tr>
+<td><strong>5. perturbation で初めて強くなる段</strong></td>
+<td>Vink らは、resting-state functional connectome が causal activity flow の弱い予測子にとどまることを示しました。観測由来 network map だけでは、方向や機序はまだ十分に固定されません。</td>
+<td>resting-state network 図だけで causal mechanism や activity flow を確定したとは書きません。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>このサイトでの運用変更</strong>
+<p>
+今後このサイトでは、source-space network 結果を読むときに <strong>localization validator</strong>、<strong>network validator</strong>、<strong>perturbation validator</strong> を別欄で確認します。最初の欄しか埋まっていない結果は、<strong>localization-supported network summary</strong> として扱い、causal network claim へは上げません。
 </p>
 </div>
 </section>
@@ -308,6 +360,8 @@ DCM は神経回路の候補生成モデル比較、SCM は介入・反事実を
 <li><strong>solver 名を標準とは書かない：</strong>Bayesian solver、minimum norm、DCM、SCM は候補であり、採否は監査項目で決めます。</li>
 <li><strong>観測適合だけで因果主張を上げない：</strong>介入または外部妥当化がない場合は、同値類や候補モデルレベルに留めます。</li>
 <li><strong>connectivity を localization の延長と書かない：</strong>network claim には、reference / leakage / parcellation / metric assumptions の別監査を入れます。</li>
+<li><strong>局在妥当化を network 妥当化と書かない：</strong>source localization の direct validation があっても、network validator と perturbation validator は別に要求します。</li>
+<li><strong>localization 最適化の設定を network の既定路線にしない：</strong>regularization や leakage-control は connectivity 用に別監査します。</li>
 <li><strong>lagged / directed 指標を免罪符にしない：</strong>wPLI、Granger、DTF、STE、DCM は候補であり、source leakage や causal identifiability を自動で解決しません。</li>
 <li><strong>深部や細粒度は保留条件つきで書く：</strong>detectable と robust reconstruction を混同しません。</li>
 <li><strong>不確実性が広いときは棄権する：</strong>解が重なるなら、無理に 1 つへ潰さず保留を明示します。</li>
@@ -323,12 +377,15 @@ DCM は神経回路の候補生成モデル比較、SCM は介入・反事実を
 <li>Mikulan, E., Russo, S., Bares, M., et al. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <em>Scientific Data</em>, 7, 127. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
 <li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Direct validation of EEG source imaging by intracranial electric stimulation in human patients. <em>Brain Communications</em>, 5(1), fcad023. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
 <li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <em>Epilepsia</em>, 66(11), 4451-4464. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
+<li>Mahjoory, K., Nikulin, V. V., Botrel, L., et al. (2017). Consistency of EEG source localization and connectivity estimates. <em>NeuroImage</em>, 152, 590-601. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">doi:10.1016/j.neuroimage.2017.02.076</a></li>
+<li>Vallarino, E., Bartolomeo, P., Bénar, C., et al. (2023). Connectivity estimation results strongly depend on the choice of source reconstruction parameters. <em>NeuroImage</em>, 278, 120304. <a href="https://doi.org/10.1016/j.neuroimage.2023.120304" target="_blank">doi:10.1016/j.neuroimage.2023.120304</a></li>
 <li>Feng, Z., Mishne, G., Hashemi, A., et al. (2025). Block-Champagne: Imaging extended E/MEG source activation with empirical Bayesian uncertainty quantification. <em>IEEE Transactions on Medical Imaging</em>. <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">doi:10.1109/TMI.2025.3642620</a></li>
 <li>Vinck, M., Oostenveld, R., van Wingerden, M., et al. (2011). An improved index of phase-synchronization for electrophysiological data in the presence of volume-conduction, noise and sample-size bias. <em>NeuroImage</em>, 55(4), 1548-1565. <a href="https://doi.org/10.1016/j.neuroimage.2011.01.055" target="_blank">doi:10.1016/j.neuroimage.2011.01.055</a></li>
 <li>Zhang, L., Wang, P., Zhang, R., et al. (2020). The Influence of Different EEG References on Scalp EEG Functional Network Analysis During Hand Movement Tasks. <em>Frontiers in Human Neuroscience</em>, 14, 367. <a href="https://doi.org/10.3389/fnhum.2020.00367" target="_blank">doi:10.3389/fnhum.2020.00367</a></li>
 <li>Palva, J. M., Wang, S. H., Palva, S., et al. (2018). Ghost interactions in MEG/EEG source space: A note of caution on inter-areal coupling measures. <em>NeuroImage</em>, 173, 632-643. <a href="https://doi.org/10.1016/j.neuroimage.2018.02.032" target="_blank">doi:10.1016/j.neuroimage.2018.02.032</a></li>
 <li>Haufe, S., Nikulin, V. V., Müller, K.-R., &amp; Nolte, G. (2013). A critical assessment of connectivity measures for EEG data: A simulation study. <em>NeuroImage</em>, 64, 120-133. <a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">doi:10.1016/j.neuroimage.2012.09.036</a></li>
 <li>Papadopoulou, M., Friston, K., &amp; Marinazzo, D. (2019). Estimating Directed Connectivity from Cortical Recordings and Reconstructed Sources. <em>Brain Topography</em>, 32(4), 741-752. <a href="https://doi.org/10.1007/s10548-015-0450-6" target="_blank">doi:10.1007/s10548-015-0450-6</a></li>
+<li>Afnan, J., Cai, Z., Lina, J.-M., et al. (2025). Validating MEG estimated resting-state connectome with intracranial EEG. <em>Network Neuroscience</em>, 9(1), 421-446. <a href="https://doi.org/10.1162/netn_a_00445" target="_blank">doi:10.1162/netn_a_00445</a></li>
 <li>Friston, K. J., Harrison, L., &amp; Penny, W. (2003). Dynamic causal modelling. <em>NeuroImage</em>, 19(4), 1273-1302. <a href="https://doi.org/10.1016/S1053-8119(03)00202-7" target="_blank">doi:10.1016/S1053-8119(03)00202-7</a></li>
 <li>Penny, W. D., Stephan, K. E., Mechelli, A., &amp; Friston, K. J. (2004). Comparing dynamic causal models. <em>NeuroImage</em>, 22(3), 1157-1172. <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">doi:10.1016/j.neuroimage.2004.03.026</a></li>
 <li>Lee, H.-L., Zahneisen, B., Hugger, T., et al. (2017). Tracking dynamic effective connectivity from fMRI using changes induced by anesthesia. <em>NeuroImage</em>, 149, 441-451. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.012" target="_blank">doi:10.1016/j.neuroimage.2017.02.012</a></li>
