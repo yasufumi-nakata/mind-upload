@@ -15,6 +15,7 @@ page_highlights:
   - "標準、置き場、ベンチマーク、監査をセットでそろえる必要があります。"
   - "デコーディングとエミュレーションを混同しないために、主張レベルと失敗条件を先に固定します。"
   - "ここを読むと、なぜデータだけ集めても前進にならないのかが分かります。"
+  - "L2 以上では、Observability Budget に加えて latent-state error budget も付け、どの未観測状態がまだ claim を止めるかまで公開します。"
 known_points:
   - "標準、共有基盤、評価、監査をセットでそろえないと、比較可能な前進は作れません。"
   - "L0〜L2 では、再現性と反証条件を事前に設計することができます。"
@@ -638,6 +639,73 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 </div>
 </section>
 
+<section class="section" id="latent-state-error-budget">
+<h2 class="section-title">2026-03 追補：latent-state error budget を加える</h2>
+<p>
+今回さらに深掘りして見えた弱点は、<strong>Observability Budget だけでは「何が直接見えていないか」は書けても、どの latent state がいまの claim をどれだけ止めているか</strong>までは固定しきれないことでした。<a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> は connectome 制約を入れても dynamics の縮退が残ることを示し、<a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> は same-brain structure-function link が local conditional prediction を強くする一方で全脳 state-complete を与えないことを示しました。さらに、<a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">Gamlin et al. (2025)</a>、<a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">van Beest et al. (2024)</a>、<a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>、<a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">Hadzibegovic et al. (2026)</a> に加え、<a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">Torrado Pacheco et al. (2021)</a>、<a href="https://doi.org/10.1038/s41593-023-01517-y" target="_blank">Looser et al. (2024)</a> は、cell-type bridge、chronic unit identity、transmitter specificity、glial slow-state、intrinsic excitability、sleep-dependent recovery、axonal support が別々の誤差源として残ることを裏づけます。したがって本サイトでは、<strong>L2 以上の提出物に Observability Budget と latent-state error budget の両方</strong>を要求し、未観測状態を「列挙」ではなく「どの誤差項をまだ支配しているか」で管理します。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>latent-state error source</th>
+<th>最低限残す監査ログ</th>
+<th>比較・較正</th>
+<th>棄権条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>intrinsic excitability / homeostatic controller</strong></td>
+<td>cross-day / cross-perturbation の held-out 劣化、recovery time、可能なら excitability proxy または allocation proxy。</td>
+<td>fixed connectome / fixed decoder と、excitability・homeostasis 項を足した条件を同じ split で比べます。</td>
+<td>within-session の gain しか無い、または recovery を記録していない場合、長期安定性・記憶配分の claim を止めます。</td>
+</tr>
+<tr>
+<td><strong>synaptic efficacy / plastic history</strong></td>
+<td>connectome-only baseline と weight / plasticity 項を足したモデルの held-out perturbation 誤差、ablation、drift 曲線。</td>
+<td>edge count / EM synapse だけの条件と、現在の有効結合を持たせた条件を同一課題・同一 horizon で較正します。</td>
+<td>edge list だけで gain を主張している場合、L2 の介入予測と L3 の安定制御を保留します。</td>
+</tr>
+<tr>
+<td><strong>delay / myelin / axonal support</strong></td>
+<td>phase error、latency degradation curve、timing-sensitive task での失敗率、delay を固定定数で近似した箇所。</td>
+<td>timing-sensitive 条件で、delay fixed と delay-aware 条件の差を出し、cell-type / region 依存の caveat も併記します。</td>
+<td>delay を定数へ押し込んだだけなら、位相同期・閉ループ時間整合性・cross-day timing claim を止めます。</td>
+</tr>
+<tr>
+<td><strong>neuromodulatory specificity</strong></td>
+<td>proxy specificity 表、cross-state calibration、missing-modality 時の abstention、region / transmitter 限界。</td>
+<td>pupil / behavior / global arousal proxy と、local transmitter calibration を同じ cohort または外部基準で比較します。</td>
+<td>region-specific または transmitter-specific の較正が無い場合、内部状態を neuromodulator ground truth と書きません。</td>
+</tr>
+<tr>
+<td><strong>glial / slow-state support</strong></td>
+<td>分オーダー以上の recovery、slow-state covariate、neuron-only と glia-inclusive 条件の gain、適用時定数。</td>
+<td>fast neural feature だけの条件と、glial / metabolic covariate を足した条件を same split で比較します。</td>
+<td>fast activity fit しか無い場合、memory consolidation、slow-state、長期回復の claim を止めます。</td>
+</tr>
+<tr>
+<td><strong>chronic unit identity / tissue response</strong></td>
+<td>unit-match probability、dropout / new-unit rate、sorting version、drift correction、implant age、tissue-response proxy。</td>
+<td>cross-day decoding と single-unit longitudinal claim を分け、population readout と unit identity を別監査にします。</td>
+<td>matching probability と dropout が無い場合、same neuron across days や single-unit memory trace claim を止めます。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Observability Budget との役割差</strong>
+<p>
+Observability Budget は <strong>何を直接観測したか</strong> を固定するカードで、latent-state error budget は <strong>未観測状態のうち、どれがいまの claim をまだ支配しているか</strong> を固定するカードでございます。前者だけでは「latent state が残る」としか書けず、後者だけでは measurement ceiling が消えます。したがって、本サイトでは <strong>L2 以上で両方を同時提出</strong>し、どちらかが欠ける場合は強い claim へ昇格させません。
+</p>
+</div>
+<div class="note-box">
+<strong>最低運用ルール</strong>
+<p>
+error budget が無い場合、本サイトでは結果を <strong>state-partial</strong> として扱い、augmentation claim は <strong>annotation</strong>、<strong>covariate</strong>、<strong>post hoc explanation</strong> のいずれかへ降格します。逆に、connectome-only baseline との比較、cross-day / perturbation / recovery の held-out gain、proxy specificity、abstention 条件まで出ていれば、「どの latent state をどこまで削ったか」を限定つきで一段強く読めます。
+</p>
+</div>
+</section>
+
 <section class="section" id="state-completeness-gate">
 <h2 class="section-title">状態変数の完全性ゲート</h2>
 <p>
@@ -1006,6 +1074,9 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
 <li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
+<li>Hengen, K. B., Torrado Pacheco, A., McGregor, J. N., Van Hooser, S. D., &amp; Turrigiano, G. G. (2016). Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
+<li>Torrado Pacheco, A., et al. (2021). Sleep Promotes Downward Firing Rate Homeostasis. <a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">doi:10.1016/j.neuron.2021.04.004</a></li>
+<li>Looser, Z. J., et al. (2024). Oligodendrocyte-axon metabolic coupling is mediated by extracellular K<sup>+</sup> and maintains axonal health. <a href="https://doi.org/10.1038/s41593-023-01517-y" target="_blank">doi:10.1038/s41593-023-01517-y</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Vadisiute, A., Meijer, E., Therpurakal, R. N., et al. (2024). Glial cells undergo rapid changes following acute chemogenetic manipulation of cortical layer 5 projection neurons. <a href="https://doi.org/10.1038/s42003-024-06994-w" target="_blank">doi:10.1038/s42003-024-06994-w</a></li>

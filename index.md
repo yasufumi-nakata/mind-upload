@@ -85,6 +85,13 @@ Mind-Uploadは、「心をコンピュータで再現できるのか？」とい
 </div>
 
 <div class="note-box">
+<strong>『何がまだ claim を止めているか』まで見たいとき</strong>
+<p>
+Observability Budget で「何を直接見たか」を確認したら、次は <a href="verification.html#latent-state-error-budget">Verification の latent-state error budget</a> で、<strong>どの未観測状態がいまの誤差をまだ支配しているか</strong>を確認してください。ここでは、内在興奮性、現在のシナプス効率、遅延 / 髄鞘、神経修飾の specificity、glial / slow-state、chronic unit identity を別々の error source として監査し、connectome-only baseline と augmentation claim をどう読み分けるかまで固定しています。
+</p>
+</div>
+
+<div class="note-box">
 <strong>公開ページと wiki の役割分担</strong>
 <p>
 このトップページを含む公開ページは、まず「いま何が分かっていて、何がまだ未解決か」を早く把握するための<strong>情報ポータル</strong>です。背景から順に学びたい場合は、各ページ上部の <strong>wiki</strong> 導線から学習用ページへ進んでください。
