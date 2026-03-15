@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-14 / 位置づけ: Per-RQ Grant and Dataset Playbook
+- 更新日: 2026-03-15 / 位置づけ: Per-RQ Grant and Dataset Playbook
 
 ## このページの役割
 このページは、mind-upload の60リサーチクエスチョンを1件ずつ対象に、第一応募先/予備応募先、主EEG-DATA、採用理由、提出成果物を固定した実務用プレイブックです。
@@ -109,3 +109,11 @@ A/B/C 判定は `mind-upload-eeg-rq60-feasibility-and-funds.md` と同一基準�
 - 60RQを再走査し、各RQに `第一応募先/予備応募先/主EEG-DATA/最小成果物` を固定。
 - A/B/Cの件数（`17/25/18`）は元ページと一致。
 - 本ページの目的は、汎用要約を避けて `1RQ=1提出判断` を即時実行可能にすること。
+
+## 2026-03-15 10:02 JST 再検証ログ（本run / pull後）
+
+- `git pull --rebase --autostash` 実行後の `main` で再検証し、`RQ_TOTAL=60` を再確認。
+- 本ページと `mind-upload-rq60-deep-focus-notes.md` を突合し、`A/B/C=17/25/18` の内訳一致を確認。
+- 各RQ行の `第一応募先/予備応募先/主EEG-DATA/最小成果物` は欠落 `0`、空欄 `0`。
+- 助成実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `auto-research-funds` 側で参照可能。
+- 方針を継続: 汎用要約ではなく `1RQ=1提出判断` を固定し、RQ単位で申請文へ直接転記する。

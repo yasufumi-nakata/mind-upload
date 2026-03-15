@@ -5,7 +5,7 @@ description: "60RQを1件ずつ、応募先ID・主EEGデータ・選定理由�
 article_type: Wiki
 subtitle: "汎用要約ではなく、RQ単位で提出判断を固定する"
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
+last_updated: "2026-03-15"
 note: "Per-RQ Grant and Dataset Playbook"
 audience: "RQごとに助成応募と実験初手を同時に決めたい人"
 reading_time: "20〜30分"
@@ -116,6 +116,14 @@ recommended_pages:
 - 60RQを再走査し、各RQに `第一応募先/予備応募先/主EEG-DATA/最小成果物` を固定。
 - A/B/Cの件数（`17/25/18`）は元ページと一致。
 - 本ページの目的は、汎用要約を避けて `1RQ=1提出判断` を即時実行可能にすること。
+
+## 2026-03-15 10:02 JST 再検証ログ（本run / pull後）
+
+- `git pull --rebase --autostash` 実行後の `main` で再検証し、`RQ_TOTAL=60` を再確認。
+- 本ページと `mind-upload-rq60-deep-focus-notes.md` を突合し、`A/B/C=17/25/18` の内訳一致を確認。
+- 各RQ行の `第一応募先/予備応募先/主EEG-DATA/最小成果物` は欠落 `0`、空欄 `0`。
+- 助成実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `auto-research-funds` 側で参照可能。
+- 方針を継続: 汎用要約ではなく `1RQ=1提出判断` を固定し、RQ単位で申請文へ直接転記する。
 
 </article>
 </main>
