@@ -1,9 +1,9 @@
 ---
 layout: default
 title: "マインドアップロード実現への道：技術・理論の統合アプローチ"
-description: "マインドアップロード実現のための中核となるコアサイト。意識や記憶の交換・複製を可能とする技術の研究とコミュニティの中心的ハブ。"
+description: "マインドアップロード/WBEの理論・計測・実装を、一次文献と限界を並べて監査する研究ノート。"
 article_type: Perspective
-subtitle: "脳の情報処理を別の基盤で再現し、心的機能を移植・複製するという研究仮説の現状と展望"
+subtitle: "脳の情報処理を別基盤で再現する研究仮説を、計測可能性・同定可能性・維持状態の壁から監査する"
 author: Mind Uploading Research Project
 last_updated: "2026-03-15"
 note: "研究ノート (2026年3月再監査反映)"
@@ -376,6 +376,65 @@ href="#ref-16">[16]</a></sup>の知見を踏まえた整理である。</p>
 </tbody>
 </table>
 
+<div class="note-box">
+<strong>今回もっとも補強した批判点</strong>
+<p>この中心ページの弱点は、atlas、Patch-seq、EM connectomics、same-brain function、neuromodulator / glia imaging を、すべて「multimodal で前進した」という1語に畳み込みやすかった点でございます。しかし一次文献を並べると、各 stack が直接観測している変数は明確に異なり、したがって許される主張上限も違います。ここを曖昧にすると、<strong>構造 scaffold の前進</strong>、<strong>cell-type prior の強化</strong>、<strong>局所条件付き予測の改善</strong>、<strong>slow-state / proxy calibration</strong> が、あたかも同じ種類の前進に見えてしまいます。</p>
+</div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>measurement stack</th>
+<th>直接観測しているもの</th>
+<th>強くなる主張</th>
+<th>まだ latent に残るもの</th>
+<th>このページでの ceiling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EEG / MEG / fMRI</strong></td>
+<td>マクロな電流場や血行動態 proxy、広域 state の遷移です。</td>
+<td>大域 state tracking、timing constraint、比較的粗い network occupancy を監査できます。</td>
+<td>cell type、current synaptic efficacy、neuromodulatory field、glial / metabolic state は直接は決まりません。</td>
+<td><strong>macro state tracking と weak L2 まで</strong>です。state-complete reconstruction には上げません。</td>
+</tr>
+<tr>
+<td><strong>whole-brain spatial atlas</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank">Yao et al. (2023)</a> が押し上げたような、cell-type taxonomy と空間配置です。</td>
+<td>molecular identity と spatial prior を大きく強められます。</td>
+<td>threshold / gain、current state、sleep-history、perturbation 後の戻り先は残ります。</td>
+<td><strong>cell-type / spatial prior まで</strong>です。dynamic completeness とは書きません。</td>
+</tr>
+<tr>
+<td><strong>Patch-seq / morpho-electric bridge</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a> や <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">Gamlin et al. (2025)</a> が示す、transcriptome・形態・電気生理・局所結線の橋渡しです。</td>
+<td>cell-type label から morpho-electric phenotype や局所 motif への写像を強められます。</td>
+<td>全脳 coverage、same-brain の network context、longitudinal maintenance-state は残ります。</td>
+<td><strong>local parameter prior と bridge まで</strong>です。whole-brain state completeness には使いません。</td>
+</tr>
+<tr>
+<td><strong>volume EM / same-brain connectomics</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">Dorkenwald et al. (2024)</a> の structural scaffold と、<a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> の same-brain structure-function link です。</td>
+<td>局所 digital twin、条件付き応答予測、cell-type 依存 wiring rule を一段強くできます。</td>
+<td>current synaptic weight、all-state 一般化、全脳 coverage、homeostatic controller は残ります。</td>
+<td><strong>structural scaffold と local functional twin まで</strong>です。human whole-brain WBE と同列には置きません。</td>
+</tr>
+<tr>
+<td><strong>neuromodulator / glia imaging</strong></td>
+<td><a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> の transmitter-linked covariate と、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> の astrocyte network state です。</td>
+<td>arousal proxy の較正、slow-state のモデル化、glia omission の禁止を強められます。</td>
+<td>全脳 transmitter field、受容体状態、cross-day maintenance-state の十分性は残ります。</td>
+<td><strong>proxy calibration と slow-state constraint まで</strong>です。internal-state の全脳 ground truth とは書きません。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>この表から生じる修正ルール</strong>
+<p>以後このページでは、<strong>atlas</strong>、<strong>bridge</strong>、<strong>scaffold</strong>、<strong>local functional twin</strong>、<strong>proxy calibration</strong> を別カテゴリとして扱います。つまり、「multimodal だから state-complete」「same-brain だから whole-brain」「局所 causal evidence があるから長期 maintenance も十分」といった読み替えは許しません。主張を上げるには、measurement stack、直接観測量、残る latent state、abstention 条件を同時に出します。</p>
+</div>
+
 <div class="stage-list">
 <div class="stage-item" id="proposal-46">
 <div class="stage-number"></div>
@@ -604,6 +663,7 @@ Captioningに類するTransformerベースのモデルアーキテクチャ定�
 
 <h3>コネクトームとダイナミクスのギャップ</h3>
 <p>図1が示す構造的コネクトーム（神経配線図）の研究は、2024–2025 年に大きく前進しました。<a href="https://doi.org/10.1038/s41586-024-07558-y">Dorkenwald et al. (2024)</a> は成体ショウジョウバエ全脳の wiring diagram を示し、<a href="https://doi.org/10.1038/s41586-025-08790-w">MICrONS Consortium et al. (2025)</a> は同一個体の機能計測と connectomics を結びつけた局所 functional digital twin を提示しました。しかし、ここから直接言えるのは「配線図が強い scaffold になる」という点までであり、「配線図だけで全状態が決まる」という点ではございません。</p>
+<p>さらに、<a href="https://doi.org/10.1038/s41586-023-06812-z">Yao et al. (2023)</a> の whole-brain spatial atlas は cell identity と spatial prior を強くし、<a href="https://doi.org/10.1038/s41586-020-2907-3">Gouwens et al. (2021)</a> と <a href="https://doi.org/10.1038/s41586-025-08805-6">Gamlin et al. (2025)</a> は transcriptome から morpho-electric phenotype / local motif への橋を強くしました。また、<a href="https://doi.org/10.1016/j.celrep.2024.114808">Neyhart et al. (2024)</a> と <a href="https://doi.org/10.1038/s41586-024-07311-5">Cahill et al. (2024)</a> は transmitter / glia 側の slow-state を可視化し、粗い arousal proxy の誤読を減らしました。重要なのは、これらが<strong>別々の種類の不足</strong>を埋めているという点であり、1 本の stack の改善を「全部見えた」の代わりに使えないことでございます。</p>
 <p>少なくとも 6 つの状態クラスが残ります。第一に、<a href="https://doi.org/10.1038/s41586-025-08805-6">Gamlin et al. (2025)</a> が示すように、transcriptomic type によって接続モチーフやシナプス特性は系統的に異なります。第二に、<a href="https://doi.org/10.1038/s41586-020-2907-3">Gouwens et al. (2021)</a> や <a href="https://doi.org/10.1016/j.cell.2016.01.046">Hengen et al. (2016)</a> が示すように、同じ cell type でも morpho-electric phenotype と firing-rate set point は別に残り、threshold と gain は graph だけでは決まりません。第三に、シナプスは binary edge ではなく、ultrastructure・放出確率・可塑性履歴を伴います。第四に、遅延と髄鞘は timing state を規定し、同じグラフでも同期や位相を変えます。第五に、神経修飾は <strong>volume transmission</strong><sup><a href="#ref-19">[19]</a></sup> と動的機能結合の再編成<sup><a href="#ref-39">[39]</a></sup>を通じて働き、静的 wiring から一意に読めません。第六に、アストロサイトは広域の neurotransmitter input を network-level state に変換しうることが示されており<sup><a href="#ref-41">[41]</a></sup>、非神経細胞を後付け補正で済ませることはできません。</p>
 <p>したがって、脳のエミュレーションは、単なるニューロン接続性（connectome）の再現に留まらず、細胞型、内在興奮性 / 恒常性 set point、シナプス状態、遅延・髄鞘、神経修飾、グリア結合状態をどこまで取得・推定・棄権するかを第一級の設計変数として扱う必要があります。この静的構造と動的状態のギャップを埋めるには、トランスクリプトーム・コネクトミクス<sup><a href="#ref-33">[33]</a></sup>と、state-completeness gate を通した段階的検証が不可欠でございます。</p>
 
@@ -1334,6 +1394,16 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <li id="ref-111" value="111">Zada, Z., Goldstein, A., et al. (2024). Contextual embeddings from deep language models predict fMRI responses to naturalistic language. <em>Neuron</em>, 112(22), 3725–3740.e9. <a href="https://doi.org/10.1016/j.neuron.2024.09.018">doi:10.1016/j.neuron.2024.09.018</a></li>
 <li id="ref-112" value="112">Goldstein, A., Bar, A., et al. (2025). Connecting concepts in the brain by mapping cortical representations of semantic relations. <em>Nature Neuroscience</em>, 28, 1841–1848. <a href="https://doi.org/10.1038/s41593-025-01903-8">doi:10.1038/s41593-025-01903-8</a></li>
 <li id="ref-113" value="113">Fahrenfort, J. J., Johnson, D., Kloosterman, N. A., Stein, T., van Gaal, S., Pitts, M., & de Graaf, T. A. (2025). Criterion placement threatens the construct validity of neural measures of consciousness. <em>eLife</em>, 13, RP102335. <a href="https://doi.org/10.7554/eLife.102335">doi:10.7554/eLife.102335</a></li>
+<li id="ref-114" value="114">Gouwens, N. W., et al. (2021). Phenotypic variation of transcriptomic cell types in mouse motor cortex. <em>Nature</em>, 598, 144–150. <a href="https://doi.org/10.1038/s41586-020-2907-3">doi:10.1038/s41586-020-2907-3</a></li>
+<li id="ref-115" value="115">Yao, Z., et al. (2023). A high-resolution transcriptomic and spatial atlas of cell types in the whole mouse brain. <em>Nature</em>, 624, 317–332. <a href="https://doi.org/10.1038/s41586-023-06812-z">doi:10.1038/s41586-023-06812-z</a></li>
+<li id="ref-116" value="116">MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>, 640, 435–447. <a href="https://doi.org/10.1038/s41586-025-08790-w">doi:10.1038/s41586-025-08790-w</a></li>
+<li id="ref-117" value="117">Hengen, K. B., Torrado Pacheco, A., McGregor, J. N., Van Hooser, S. D., & Turrigiano, G. G. (2016). Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <em>Cell</em>, 165(1), 180–191. <a href="https://doi.org/10.1016/j.cell.2016.01.046">doi:10.1016/j.cell.2016.01.046</a></li>
+<li id="ref-118" value="118">Torrado Pacheco, A., et al. (2021). Sleep Promotes Downward Firing Rate Homeostasis. <em>Neuron</em>, 109(3), 530–544.e6. <a href="https://doi.org/10.1016/j.neuron.2021.04.004">doi:10.1016/j.neuron.2021.04.004</a></li>
+<li id="ref-119" value="119">Xu, W., et al. (2024). Sleep restores an optimal computational regime in cortical networks. <em>Nature Communications</em>, 15, 3820. <a href="https://doi.org/10.1038/s41467-024-47838-5">doi:10.1038/s41467-024-47838-5</a></li>
+<li id="ref-120" value="120">Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <em>Cell Reports</em>, 43(10), 114808. <a href="https://doi.org/10.1016/j.celrep.2024.114808">doi:10.1016/j.celrep.2024.114808</a></li>
+<li id="ref-121" value="121">Looser, Z. J., et al. (2024). Oligodendrocyte-axon metabolic coupling is mediated by extracellular K<sup>+</sup> and maintains axonal health. <em>Nature Neuroscience</em>, 27, 1584–1598. <a href="https://doi.org/10.1038/s41593-023-01517-y">doi:10.1038/s41593-023-01517-y</a></li>
+<li id="ref-122" value="122">Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <em>Nature</em>, 629, 146–153. <a href="https://doi.org/10.1038/s41586-024-07311-5">doi:10.1038/s41586-024-07311-5</a></li>
+<li id="ref-123" value="123">Lee, J.-C., Wang, C.-Y., Lin, C.-L., & Lu, H.-C. (2022). Synaptic memory survives molecular turnover. <em>PNAS</em>, 119(42), e2211572119. <a href="https://doi.org/10.1073/pnas.2211572119">doi:10.1073/pnas.2211572119</a></li>
 </ol>
 </section>
 
@@ -1374,7 +1444,7 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <ul>
 <li>IIT/GNWTなどの理論対立を実装要件に落とす</li>
 <li>ESI逆問題の克服策（IHM・不確実性定量化）を明記</li>
-<li>DCM/能動的推論でデコーディング→生成モデルへ拡張</li>
+<li>measurement stack ごとの claim ceiling を本文で固定</li>
 <li>EEG複雑性×摂動応答×臨界性で行動非依存の意識指標をロードマップ化</li>
 </ul>
 </div>
