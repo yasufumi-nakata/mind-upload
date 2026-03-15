@@ -15,11 +15,13 @@ page_highlights:
   - "まずは共有基盤を押さえ、その後にスターターデータセットを見る順にしています。"
   - "スターターデータは L0〜L1 の練習台であり、EEG source imaging の ground truth ではありません。"
   - "スターターデータごとに、annotation provenance・時間忠実度・独立な split 単位が違います。"
+  - "within-session / cross-session / cross-subject / adaptation は別の評価族であり、同じ score として横並びにしません。"
   - "最終目標は、第三者が同じ条件で走らせられる形へ寄せることです。"
 known_points:
   - "公開 EEG データは、L0 の再現解析や L1 のベースライン練習に十分役立ちます。"
   - "最初のデータ選びでは、難しさよりも追試しやすさを優先した方が前に進みます。"
   - "同じ『公開 EEG データ』でも、cue-locked event、専門家の区間注釈、sleep hypnogram、医師レポート由来ラベルは意味が違います。"
+  - "同じ accuracy でも、どの汎化条件で出た score かが違えば、読んでよい主張の強さも変わります。"
   - "個体別 MRI や侵襲 ground truth がないスターターデータだけで、ESI 精度改善を強く主張することはできません。"
 unknown_points:
   - "スターターデータセットだけで WBE の全論点を解くことはできません。"
@@ -42,6 +44,9 @@ wiki_links:
   - label: "Wiki: イベント同期と観測ログ"
     url: "/wiki/event-sync-and-measurement-logs.html"
     description: "raw EEG だけでは足りない理由を、イベントと同期の観点から説明します。"
+  - label: "Wiki: state・trait・ドリフト"
+    url: "/wiki/state-trait-and-drift.html"
+    description: "same-day score と cross-day stability を混同しないための縦断読みを整理します。"
   - label: "Wiki: マルチモーダル統合の基本"
     url: "/wiki/multimodal-integration-basics.html"
     description: "EEG に何を足すと何が補えるかを、初歩から整理します。"
@@ -125,6 +130,12 @@ recommended_pages:
 <strong>精度より先に見ること</strong>
 <p>
 データセット紹介を見ると、つい「何% 出たか」に目が向きます。しかし最初に確認すべきなのは、<strong>train/test を何単位で分けたか</strong>、<strong>リーク検査をしたか</strong>、<strong>単純なベースラインと比べたか</strong>です。ここで迷う場合は <a href="wiki/dataset-splits-and-leakage.html">Wiki: データ分割とデータリーク</a> を先に読むと判断しやすくなります。
+</p>
+</div>
+<div class="note-box">
+<strong>同じ score でも、汎化条件が違えば意味は変わります</strong>
+<p>
+MOABB は <strong>within-session</strong>、<strong>cross-session</strong>、<strong>cross-subject</strong> を別の evaluation family として扱います。つまり、同じ 70% でも「同じ日・同じ人・同じ setup」で出た 70% と、「別日」や「別人」を hold-out した 70% は別の達成でございます。短期 state の揺れと長期 drift を先に整理したい場合は <a href="wiki/state-trait-and-drift.html">Wiki: state・trait・ドリフト</a> も合わせてご覧ください。
 </p>
 </div>
 <div class="note-box">
@@ -280,6 +291,64 @@ OpenNeuro や PhysioNet は入口ですが、それだけでは再現性は固�
 </tr>
 </tbody>
 </table>
+</section>
+
+<section class="section" id="generalization-families">
+<h2 class="section-title">2.5) 同じ score でも、汎化の階段が違えば意味が変わります</h2>
+<p>
+ここが現行サイトでまだ弱かった点でございます。`within-session`、`cross-session`、`cross-subject`、`adaptation` は、同じ「分類精度」でも問うていることが違います。MOABB 公式 docs もこれらを別クラスとして実装しており、Ma et al. (2022) の 5 日間 MI dataset でも、subject-specific の平均 accuracy は <strong>within-session 68.8%</strong> から <strong>cross-session 53.7%</strong> へ落ち、target session の少量データを使う <strong>cross-session adaptation 78.9%</strong> で回復しました。したがって、本サイトでは score を単独で並べず、<strong>何を hold-out し、何で持ち直し、何がまだ未解決か</strong>を同時に書きます。
+</p>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>評価族</th>
+<th>何を hold-out するか</th>
+<th>ここから比較的安全に言えること</th>
+<th>このページで止める誤読</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>within-session</strong></td>
+<td>同一 subject・同一 session 内の fold を分けます。</td>
+<td>same-day / same-setup で class separation があるか、前処理と baseline が回るかを見られます。</td>
+<td>cross-day robustness や deployable decoder をそのまま主張することです。</td>
+</tr>
+<tr>
+<td><strong>cross-session</strong></td>
+<td>同一 subject の別 session / 別日を hold-out します。</td>
+<td>subject-specific feature が別日にどこまで持つか、state 変動や再装着の影響にどこまで耐えるかを見られます。</td>
+<td>subject-independent 一般化や再較正不要性まで言うことです。</td>
+</tr>
+<tr>
+<td><strong>cross-subject</strong></td>
+<td>1 人または複数 subject を丸ごと hold-out します。</td>
+<td>population-level に共有される feature があるか、初回導入時の cold-start がどこまで可能かを見られます。</td>
+<td>個人最適化済み decoder と同じ意味の score として読むことです。</td>
+</tr>
+<tr>
+<td><strong>cross-session adaptation</strong></td>
+<td>別 session を hold-out しつつ、target session の少量データで再較正します。</td>
+<td>再較正でどこまで性能を戻せるか、運用上の adaptation 余地がどの程度あるかを見られます。</td>
+<td>最初から stable な decoder があったかのように書くことです。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>自然科学の観点で、なぜこの区別が要るか</strong>
+<p>
+Musall et al. (2019) は、task 中の neural activity が uninstructed movement に強く支配されうることを示しました。したがって same-day の高 score は、純粋な task variable だけでなく、その日の行動状態や artifact 構造を拾っている可能性があります。さらに Wilson et al. (2025) は、長期 BCI では neural activity の変化が蓄積し、<strong>frequent recalibration</strong> が必要になることを示しました。つまり、同じ被験者で動いた decoder でも、<strong>短期分離能</strong>、<strong>別日耐性</strong>、<strong>長期運用</strong>は別の壁でございます。
+</p>
+</div>
+
+<div class="note-box">
+<strong>この節から出る site rule</strong>
+<p>
+今後このサイトでは、dataset card や baseline 結果に少なくとも <strong>(1) evaluation family</strong>、<strong>(2) 独立な hold-out 単位</strong>、<strong>(3) target session / target subject の使用有無</strong>、<strong>(4) recalibration の量と時点</strong>、<strong>(5) それでも止める主張</strong> を併記します。これが無い score は、L1 の限定つき decode として扱い、長期安定性や deployability へは上げません。
+</p>
+</div>
 </section>
 
 <section class="section" id="dataset-audit">
@@ -638,6 +707,12 @@ Mind-Uploadが目指すのは、単にデータを集めることではなく、
 <li><a href="https://mne.tools/mne-bids/stable/generated/mne_bids.write_raw_bids.html" target="_blank">MNE-BIDS Docs: write_raw_bids</a></li>
 <li><a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant (2018), MOABB</a></li>
 <li><a href="https://moabb.neurotechx.com/docs/index.html" target="_blank">MOABB Docs</a></li>
+<li><a href="https://moabb.neurotechx.com/docs/generated/moabb.evaluations.WithinSessionEvaluation.html" target="_blank">MOABB Docs: WithinSessionEvaluation</a></li>
+<li><a href="https://moabb.neurotechx.com/docs/generated/moabb.evaluations.CrossSessionEvaluation.html" target="_blank">MOABB Docs: CrossSessionEvaluation</a></li>
+<li><a href="https://moabb.neurotechx.com/docs/generated/moabb.evaluations.CrossSubjectEvaluation.html" target="_blank">MOABB Docs: CrossSubjectEvaluation</a></li>
+<li><a href="https://doi.org/10.1038/s41597-022-01647-1" target="_blank">Ma et al. (2022), A large EEG dataset for studying cross-session variability in motor imagery BCI</a></li>
+<li><a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019), Single-trial neural dynamics are dominated by richly varied movements</a></li>
+<li><a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025), Long-term unsupervised recalibration of cursor-based intracortical BCIs</a></li>
 <li><a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">PhysioNet: EEG Motor Movement/Imagery Dataset</a></li>
 <li><a href="https://physionet.org/content/chbmit/1.0.0/" target="_blank">PhysioNet: CHB-MIT Scalp EEG Database</a></li>
 <li><a href="https://physionet.org/content/sleep-edfx/1.0.0/" target="_blank">PhysioNet: Sleep-EDF Database Expanded</a></li>
