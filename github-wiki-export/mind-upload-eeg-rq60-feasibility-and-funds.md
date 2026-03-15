@@ -545,3 +545,11 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - RQ行で参照するEEGデータIDは `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）で、`EEG-DATA/eeg_dataset_summary_ja.csv` 上の欠落 `0`。
 - 助成実IDは `G1-G2=grant_queue`（`GR-2026-013`, `GR-2026-014`）と `G3-G6=auto-research-funds`（`9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）の分離参照で再確認。
 - 方針を継続: 汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持。
+
+## 2026-03-15 20:04 JST 再検証ログ（本run / RQ60×EEG可否と助成テーマ）
+
+- `git pull --rebase --autostash origin main` 後に再検証し、`RQ_TOTAL=60` を確認しました。
+- `A/B/C=17/25/18` を再計数し、本ページの判定内訳と一致しました。
+- 本ページの `EEG-DATA 参照データセット` で参照する `24 ID` は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を確認しました。
+- 助成キーは参照系統を分離して再確認しました（`G1-G2=grant_queue/*.yaml`、`G3-G6=auto-research-funds`）。
+- 方針を継続します。汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘りを維持します。

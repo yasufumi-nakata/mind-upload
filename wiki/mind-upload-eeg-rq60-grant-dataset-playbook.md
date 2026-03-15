@@ -155,3 +155,11 @@ recommended_pages:
 - `主EEG-DATA` で参照するIDは `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）。
 - 助成実IDは `G1-G2=grant_queue` と `G3-G6=auto-research-funds` の分離参照を維持。
 - 方針を維持: 汎用テーマ化ではなく `1RQ=1提出判断` で申請文へ直接転記する。
+
+## 2026-03-15 20:04 JST 再検証ログ（本run / 申請プレイブック整合）
+
+- `RQ_TOTAL=60` と `A/B/C=17/25/18` を再確認し、`mind-upload-eeg-rq60-feasibility-and-funds.md` と整合しました。
+- 全 `RQ` 行で `第一応募先/予備応募先/主EEG-DATA/最小成果物` の欠落 `0`、空欄 `0` を確認しました。
+- `主EEG-DATA` で参照するIDは `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を確認しました。
+- 助成キー `G1-G6` の実IDは `G1-G2=grant_queue`、`G3-G6=auto-research-funds` の系統で再参照可能です。
+- 実務方針は据え置きです。`1RQ=1提出判断` を固定し、申請文へ直接転記できる粒度を維持します。
