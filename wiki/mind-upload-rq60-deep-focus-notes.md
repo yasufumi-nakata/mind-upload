@@ -333,3 +333,14 @@ recommended_pages:
 
 - 本runも方針を継続します。汎用俯瞰には戻さず、`1RQ=1検証命題=1応募テーマ=1主データ` で更新します。
 
+
+## 2026-03-16 07:05 JST 再検証ログ（本run / pull後のID再採番対応）
+
+- 作業前に `main` を更新し、基準コミットを `mind-upload=7ff7cd284943`、`EEG-DATA=2459b959e53d`、`auto-research-funds=3bb6faeaecbc` に揃えました。
+- 正本 `mind-upload/research_harvest_50.md` の `リサーチクエスチョン分解` を機械再計数し、`RQ_TOTAL=60` を再確認しました。
+- 本表（`## U0` から `## 実務メモ` 直前）の `RQ` 行は `60件`、判定内訳は `A/B/C=17/25/18` を維持しました。
+- 全 `RQ` 行で `判定`・`EEGで直接検証する核`・`応募テーマ（助成キー）`・`候補EEG-DATA`・`EEG外で必須` の必須列が埋まっていることを再確認しました（欠落 `0`）。
+- 助成キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は、`grant_queue` と `auto-research-funds/wiki` で全件参照可能でした。
+- 重要: `EEG-DATA/eeg_dataset_summary_ja.csv` の数値 `ID` は再採番で変動しました。したがって本run以降は、`候補EEG-DATA` の運用参照を `ID固定` ではなく `Dキー + DOI固定`（`auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` 正本）へ統一します。
+- `D1-D16` の DOI は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件再検出済み（欠落 `0`）です。
+- 方針を継続: 汎用俯瞰には戻さず、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持します。
