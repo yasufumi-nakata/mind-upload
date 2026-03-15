@@ -759,9 +759,9 @@ Fusion Card が無い場合、本サイトではその結果を原則として <
 </tr>
 <tr>
 <td><strong>glial / slow-state support</strong></td>
-<td>分オーダー以上の recovery、slow-state covariate、neuron-only と glia-inclusive 条件の gain、適用時定数。</td>
-<td>fast neural feature だけの条件と、glial / metabolic covariate を足した条件を same split で比較します。</td>
-<td>fast activity fit しか無い場合、memory consolidation、slow-state、長期回復の claim を止めます。</td>
+<td>分オーダー以上の recovery、再想起後の restabilization window、slow-state covariate、neuron-only と glia-inclusive 条件の gain、適用時定数。</td>
+<td>fast neural feature だけの条件と、glial / metabolic covariate または astrocyte ensemble state を足した条件を same split で比較します。</td>
+<td>fast activity fit しか無い、または restabilization を見ていない場合、memory consolidation、long-term recall stabilization、slow-state、長期回復の claim を止めます。</td>
 </tr>
 <tr>
 <td><strong>chronic unit identity / tissue response</strong></td>
@@ -1231,6 +1231,9 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Looser, Z. J., et al. (2024). Oligodendrocyte-axon metabolic coupling is mediated by extracellular K<sup>+</sup> and maintains axonal health. <a href="https://doi.org/10.1038/s41593-023-01517-y" target="_blank">doi:10.1038/s41593-023-01517-y</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
+<li>Williamson, N. R., et al. (2025). Learning-associated astrocyte ensembles regulate memory recall. <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">doi:10.1038/s41586-024-08170-w</a></li>
+<li>Dewa, K., et al. (2025). The astrocytic ensemble acts as a multiday trace to stabilize memory. <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">doi:10.1038/s41586-025-09619-2</a></li>
+<li>Bukalo, O., et al. (2026). Astrocytes enable amygdala neural representations supporting memory. <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">doi:10.1038/s41586-025-10068-0</a></li>
 <li>Vadisiute, A., Meijer, E., Therpurakal, R. N., et al. (2024). Glial cells undergo rapid changes following acute chemogenetic manipulation of cortical layer 5 projection neurons. <a href="https://doi.org/10.1038/s42003-024-06994-w" target="_blank">doi:10.1038/s42003-024-06994-w</a></li>
 <li>Hadzibegovic, N., et al. (2026). Early intrinsic excitability plasticity of neocortical engram neurons defines memory formation and precision. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">doi:10.1038/s41467-025-66975-3</a></li>
 <li>Nosek, B. A., et al. (2015). Promoting an open research culture. <a href="https://doi.org/10.1126/science.aab2374" target="_blank">doi:10.1126/science.aab2374</a></li>
