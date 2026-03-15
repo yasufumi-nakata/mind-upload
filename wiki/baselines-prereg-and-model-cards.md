@@ -16,6 +16,7 @@ page_highlights:
   - "失敗例やネガティブ結果も、比較可能性の一部です。"
   - "multimodal や atlas prior を使う結果では、通常のモデルカードに加えて Fusion Card も必要です。"
   - "foundation / self-supervised EEG model の結果では、通常のモデルカードに加えて Pretraining Card も必要です。"
+  - "因果・閉ループ結果では、通常のモデルカードに加えて Intervention Card も必要です。"
   - "点数だけではなく、どう測り、どう失敗したかまで残すのが重要です。"
 known_points:
   - "比較可能な前進には、出発点、採点基準、事前ルール、結果の記録が必要です。"
@@ -56,7 +57,7 @@ recommended_pages:
 <div class="note-box">
 <strong>2026-03 追補</strong>
 <p>
-L1 以上の結果では、通常のモデルカードに加えて <a href="../verification.html#observability-budget">Observability Budget</a> を添付し、measurement stack、直接観測量、残る latent state、claim ceiling、abstention 条件を明示する運用にそろえました。さらに multimodal / atlas prior 結果では <a href="../verification.html#fusion-card">Fusion Card</a> を添付し、取得関係、時計系、登録誤差、融合モデル、single-modality baseline との差分、外部妥当化を同時に残します。
+L1 以上の結果では、通常のモデルカードに加えて <a href="../verification.html#observability-budget">Observability Budget</a> を添付し、measurement stack、直接観測量、残る latent state、claim ceiling、abstention 条件を明示する運用にそろえました。さらに multimodal / atlas prior 結果では <a href="../verification.html#fusion-card">Fusion Card</a> を添付し、取得関係、時計系、登録誤差、融合モデル、single-modality baseline との差分、外部妥当化を同時に残します。加えて因果・閉ループ結果では <a href="../verification.html#intervention-card">Intervention Card</a> を添付し、trigger rule、timing audit、control / sham、安全停止、再較正負荷を固定します。
 </p>
 </div>
 <div class="note-box">
@@ -90,7 +91,7 @@ EEG foundation model を使う結果では、通常の model card だけでは�
 </tr>
 <tr>
 <td><strong>モデルカード</strong></td>
-<td>点数、弱点、リーク対策、失敗例、計算条件、さらに L1 以上では Observability Budget、multimodal / atlas prior 結果では Fusion Card、foundation / self-supervised EEG 結果では Pretraining Card を残します。</td>
+<td>点数、弱点、リーク対策、失敗例、計算条件、さらに L1 以上では Observability Budget、multimodal / atlas prior 結果では Fusion Card、foundation / self-supervised EEG 結果では Pretraining Card、因果・閉ループ結果では Intervention Card を残します。</td>
 </tr>
 <tr>
 <td><strong>失敗例・ネガティブ結果</strong></td>
@@ -168,6 +169,22 @@ EEG foundation model を使う結果では、通常の model card だけでは�
 </div>
 </section>
 
+<section class="section" id="intervention-card">
+<h2 class="section-title">因果・閉ループ結果で追加するもの</h2>
+<p>
+同じ `closed-loop` や `adaptive` という言葉でも、中身は大きく違います。したがって本サイトでは、因果・閉ループ結果を通常の model card だけで受理しません。<a href="../verification.html#intervention-card">Verification の Intervention Card</a> を追加し、<strong>何を変えたか</strong>、<strong>どの state estimate / trigger で変えたか</strong>、<strong>どの comparator と timing で比べたか</strong>、<strong>どれだけ再較正を要したか</strong>まで残します。
+</p>
+<div class="key-points">
+<h4>Intervention Card で固定すること</h4>
+<ul>
+<li><strong>target / comparator：</strong>刺激部位、アクチュエータ、continuous・sham・fixed decoder などの比較条件。</li>
+<li><strong>trigger / timing：</strong>biomarker、threshold、latency、jitter、update cadence、clock domain。</li>
+<li><strong>artifact / safety：</strong>artifact window、masking、除外試行、安全停止、manual override。</li>
+<li><strong>stability / recovery：</strong>dropout、abstention、recalibration burden、fixed decoder interval、recovery time。</li>
+</ul>
+</div>
+</section>
+
 <section class="section" id="negative-results">
 <h2 class="section-title">失敗例はなぜ大事か</h2>
 <p>
@@ -189,7 +206,7 @@ EEG foundation model を使う結果では、通常の model card だけでは�
 <li><strong>ベースラインがあるか：</strong>何と比べたのかが明示されているか。</li>
 <li><strong>ベンチマークが固定されているか：</strong>データ、分割、指標が書かれているか。</li>
 <li><strong>事前登録があるか：</strong>あとから条件を変えていないか。</li>
-<li><strong>モデルカードや失敗例があるか：</strong>弱点や崩れ方に加え、L1 以上では Observability Budget、multimodal / atlas prior 結果では Fusion Card、foundation / self-supervised EEG 結果では Pretraining Card が見えるか。</li>
+<li><strong>モデルカードや失敗例があるか：</strong>弱点や崩れ方に加え、L1 以上では Observability Budget、multimodal / atlas prior 結果では Fusion Card、foundation / self-supervised EEG 結果では Pretraining Card、因果・閉ループ結果では Intervention Card が見えるか。</li>
 </ul>
 </div>
 </section>

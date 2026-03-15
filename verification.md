@@ -17,6 +17,7 @@ page_highlights:
   - "ここを読むと、なぜデータだけ集めても前進にならないのかが分かります。"
   - "multimodal や atlas prior を使う結果では、Observability Budget に加えて Fusion Card で取得関係・同期・融合モデル・外部妥当化を固定します。"
   - "L2 以上では、Observability Budget に加えて latent-state error budget も付け、どの未観測状態がまだ claim を止めるかまで公開します。"
+  - "L2 以上の介入・閉ループ結果では、Intervention Card で trigger rule・timing audit・control/sham・安全停止・再較正負荷を固定します。"
 known_points:
   - "標準、共有基盤、評価、監査をセットでそろえないと、比較可能な前進は作れません。"
   - "L0〜L2 では、再現性と反証条件を事前に設計することができます。"
@@ -350,7 +351,7 @@ BIDS、OpenNeuro、PhysioNet、BIDS Validator、benchmark は全部「研究基�
 <div class="stage-number">04</div>
 <div class="stage-body">
 <h4>Leaderboard & Model Cards（比較の運用）</h4>
-<p>スコアだけでなく、データリーク対策、失敗例、計算資源、既知の弱点、さらに L1 以上では <strong>どこまで直接観測し、どこから先が latent state か</strong> を示す <strong>Observability Budget</strong> を、multimodal / atlas prior を使う結果では <strong>どう結び付け、どこまで較正したか</strong> を示す <strong>Fusion Card</strong> を、L2 以上では <strong>どの latent state がまだ誤差を支配するか</strong> を示す <strong>latent-state error budget</strong> を併記して公開し、再現性と安全性を担保する。</p>
+<p>スコアだけでなく、データリーク対策、失敗例、計算資源、既知の弱点、さらに L1 以上では <strong>どこまで直接観測し、どこから先が latent state か</strong> を示す <strong>Observability Budget</strong> を、multimodal / atlas prior を使う結果では <strong>どう結び付け、どこまで較正したか</strong> を示す <strong>Fusion Card</strong> を、L2 以上では <strong>どの latent state がまだ誤差を支配するか</strong> を示す <strong>latent-state error budget</strong> を、因果・閉ループ結果では <strong>trigger rule・timing audit・control/sham・安全停止・再較正負荷</strong> を示す <strong>Intervention Card</strong> を併記して公開し、再現性と安全性を担保する。</p>
 <div class="tag-list">
 <span class="tag">Leaderboard</span><span class="tag">Reproducibility</span><span class="tag">Safety</span>
 </div>
@@ -1044,6 +1045,71 @@ held-out 精度、介入、反事実、摂動ベース検証の違いを日常�
 </div>
 </section>
 
+<section class="section" id="intervention-card">
+<h2 class="section-title">2026-03 追補：L2 以上の介入・閉ループ結果には Intervention Card を添付する</h2>
+<p>
+今回もっとも改善余地が大きかった弱点は、<strong>因果・閉ループ結果に対して、Fusion Card や Pretraining Card に相当する標準提出物がまだ無かった</strong>ことです。<a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> は EEG-triggered TMS が <strong>どの brain state を、どのタイミングで叩いたか</strong>で結果が変わることを示し、<a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">Oehrn et al. (2024)</a> は adaptive DBS の有効性が <strong>どの neural marker を state estimate として選び、どの comparator と blinded block で比べたか</strong>に依存することを示しました。さらに <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a> は 80 ms 単位の streaming 音声合成と continuous decode を示し、<a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> は accumulating neural change に対して <strong>再較正をどう回したか</strong>が長期運用の本体だと示しました。加えて <a href="https://doi.org/10.1113/JP283986" target="_blank">Gordon et al. (2023)</a> は、TMS-EEG では optimized sham を置かないと <strong>TMS 本体の応答</strong>と<strong>感覚入力由来の応答</strong>を切り分けにくいことを示しています。したがって本サイトでは、<strong>「adaptive」「closed-loop」「perturbation」</strong>というラベルだけでは因果証拠を受理せず、比較可能性を保つための <strong>Intervention Card</strong> を必須化します。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Intervention Card の欄</th>
+<th>最低限書くこと</th>
+<th>これが無いと何が起きるか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>target / actuator / comparator</strong></td>
+<td>刺激部位、記録部位、アクチュエータ、波形、強度、duty cycle、比較条件（continuous、sham、no-stim、fixed decoder など）を書きます。</td>
+<td>同じ `adaptive` という語でも、何を実際に変えた研究なのか比較不能になります。</td>
+</tr>
+<tr>
+<td><strong>state estimate / trigger rule</strong></td>
+<td>使った biomarker、しきい値または decoder、calibration window、confidence / abstention、fallback rule を書きます。</td>
+<td>state-dependent claim を、後付けの threshold tuning や operator judgment と切り分けられません。</td>
+</tr>
+<tr>
+<td><strong>timing audit</strong></td>
+<td>clock domain、sense→decode→decide→actuate の経路、update cadence、end-to-end latency の P50 / P95 / P99、jitter、resync policy を書きます。</td>
+<td>ms-sensitive intervention を、実際には timing が合っていない系と区別できません。</td>
+</tr>
+<tr>
+<td><strong>control / sham / artifact handling</strong></td>
+<td>optimized sham、active control、artifact window、masking、除外試行、前処理 pipeline version、採用しなかった cleaning 条件を残します。</td>
+<td>刺激応答を sensory confound や cleaning artifact と取り違えやすくなります。</td>
+</tr>
+<tr>
+<td><strong>safety / stop rule</strong></td>
+<td>intensity limit、manual override、kill switch、adverse event、resume 条件、在宅/臨床の監視条件を書きます。</td>
+<td>動いたデモと安全に運用できる系が同じ強さの evidence に見えてしまいます。</td>
+</tr>
+<tr>
+<td><strong>online stability / recovery</strong></td>
+<td>dropout、abstention、fixed decoder interval、recalibration burden、human intervention time、recovery time after perturbation を書きます。</td>
+<td>短時間デモを、そのまま deployable な closed loop と誤読しやすくなります。</td>
+</tr>
+<tr>
+<td><strong>claim ceiling</strong></td>
+<td>communication route、symptom control、local causal gain など、到達してよい上限を明示します。</td>
+<td>局所サブシステムの成功を、全脳WBE や state completeness へ誤昇格させやすくなります。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>最低運用ルール</strong>
+<p>
+Intervention Card が無い場合、本サイトではその結果を原則として <strong>online demo</strong>、<strong>exploratory intervention</strong>、または <strong>limited subsystem casework</strong> として扱い、L2/L3 の強い因果主張へ上げません。とくに <strong>timing audit</strong>、<strong>control / sham</strong>、<strong>recalibration burden</strong> のいずれかが欠ける場合、state-dependent / deployable / longitudinal の読替えを止めます。
+</p>
+</div>
+<div class="note-box">
+<strong>既存カードとの役割差</strong>
+<p>
+Observability Budget は「何を直接見たか」、Fusion Card は「どう結び付けたか」、latent-state error budget は「どの hidden state がまだ誤差を支配するか」を固定します。Intervention Card はその外側で、<strong>何を、どの trigger と comparator で、どの timing / artifact / safety 条件の下に実際に変えたか</strong>を固定するカードでございます。したがって、因果・閉ループ結果では <strong>Intervention Card を追加提出</strong>します。
+</p>
+</div>
+</section>
+
 <section class="section" id="verification-rigor-2026-02">
 <h2 class="section-title">追加監査ログ（適用条件つき）</h2>
 <p>
@@ -1124,6 +1190,8 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Casali, A. G., et al. (2013). A theoretically based index of consciousness independent of sensory processing and behavior. <a href="https://doi.org/10.1126/scitranslmed.3006294" target="_blank">doi:10.1126/scitranslmed.3006294</a></li>
 <li>Comolatti, R., et al. (2019). A fast and general method to empirically estimate the complexity of brain responses to transcranial and intracranial stimulations. <a href="https://doi.org/10.1016/j.brs.2019.05.013" target="_blank">doi:10.1016/j.brs.2019.05.013</a></li>
 <li>Forenzo, D., et al. (2024). Continuous tracking using deep learning-based decoding for noninvasive brain-computer interface. <a href="https://doi.org/10.1093/pnasnexus/pgae145" target="_blank">doi:10.1093/pnasnexus/pgae145</a></li>
+<li>Zrenner, C., Desideri, D., Belardinelli, P., &amp; Ziemann, U. (2018). Real-time EEG-defined excitability states determine efficacy of TMS-induced plasticity in human motor cortex. <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">doi:10.1016/j.brs.2017.11.016</a></li>
+<li>Gordon, P. C., Song, Y. F., Jovellar, D. B., Rostami, M., Belardinelli, P., &amp; Ziemann, U. (2023). Untangling TMS-EEG responses caused by TMS versus sensory input using optimized sham control and GABAergic challenge. <a href="https://doi.org/10.1113/JP283986" target="_blank">doi:10.1113/JP283986</a></li>
 <li>Willett, F. R., et al. (2023). A high-performance speech neuroprosthesis. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
 <li>Littlejohn, K. T., et al. (2025). A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
 <li>Wairagkar, M., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>

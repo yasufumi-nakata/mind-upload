@@ -5,7 +5,7 @@ description: "held-out 精度、オンライン操作、外部介入、反事実
 article_type: Wiki
 subtitle: "高精度と、条件変更への正しい応答は別です"
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
+last_updated: "2026-03-16"
 note: "Learning guide"
 audience: "decode と emulate の差をもう一段ていねいに理解したい人、因果検証の入口で止まりやすい人"
 reading_time: "12〜18分"
@@ -15,6 +15,7 @@ page_highlights:
   - "offline decode、online control、外部介入、長期閉ループは別々の壁です。"
   - "反事実を名乗るには、分岐条件、比較対象、失敗条件を事前固定する必要があります。"
   - "一次文献で強いのは局所系・課題限定の実証であり、全脳同値の証明ではありません。"
+  - "L2 以上の介入・閉ループ結果では、Intervention Card で trigger・timing・control/sham・再較正負荷を固定します。"
 known_points:
   - "高い held-out 精度だけでは、因果構造の一致は言えません。"
   - "双方向 feedback や state-dependent stimulation は causal evidence を強めますが、適用範囲は局所に限られやすいです。"
@@ -106,6 +107,49 @@ recommended_pages:
 </tr>
 </tbody>
 </table>
+</section>
+
+<section class="section" id="intervention-card">
+<h2 class="section-title">比較可能性のために Intervention Card を付ける</h2>
+<p>
+2026年3月の再監査で残っていた弱点は、<strong>因果証拠の段階表はあっても、各研究が何をどの条件で実際に変えたかを同じ書式で比べるカードが無かった</strong>ことです。<a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> は millisecond-resolution の EEG-triggered TMS で、同じ rTMS でも trigger する brain state により結果が変わることを示しました。<a href="https://doi.org/10.1113/JP283986" target="_blank">Gordon et al. (2023)</a> は optimized sham を使わないと TMS 由来応答と sensory input 由来応答の切り分けが難しいことを示しました。<a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">Oehrn et al. (2024)</a> は adaptive DBS の comparator と blinded block を、<a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a> は streaming speech の timing を、<a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> は long-term recalibration を、それぞれ主結果の中心へ置いています。したがって本サイトでは、因果・閉ループ結果を読むときに <a href="../verification.html#intervention-card">Verification の Intervention Card</a> を併記し、研究どうしを同じ軸で監査します。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Intervention Card の欄</th>
+<th>なぜ要るか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>target / comparator</strong></td>
+<td>何を刺激・制御し、何と比較したかが見えないと、`adaptive` の意味が研究ごとに変わってしまいます。</td>
+</tr>
+<tr>
+<td><strong>trigger / timing</strong></td>
+<td>state-dependent claim は biomarker、threshold、latency、jitter がずれるだけで意味が変わります。</td>
+</tr>
+<tr>
+<td><strong>control / sham / artifact</strong></td>
+<td>刺激系では sensory confound と cleaning artifact を切り分けないと、因果証拠を過大評価しやすくなります。</td>
+</tr>
+<tr>
+<td><strong>safety / stop rule</strong></td>
+<td>実験室で一度動いたことと、停止条件つきで安全に運用できることは別です。</td>
+</tr>
+<tr>
+<td><strong>stability / recalibration</strong></td>
+<td>短時間の成功と、cross-day / home use をまたぐ持続性は別問題だからです。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>このサイトでの最低運用ルール</strong>
+<p>
+Intervention Card が無い場合、本サイトでは結果を <strong>online demo</strong>、<strong>exploratory intervention</strong>、または <strong>limited subsystem evidence</strong> として扱います。とくに comparator、timing audit、recalibration burden のどれかが欠ける場合、state-dependent / deployable / longitudinal の読替えを止めます。
+</p>
+</div>
 </section>
 
 <section class="section" id="boundary-cases">
@@ -227,6 +271,8 @@ Willett et al. (2023) と Littlejohn et al. (2025) は、speech neuroprosthesis 
 <li>Littlejohn KT, Dabagia M, Ladwig A, et al. A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. Nat Neurosci. 2025. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
 <li>Wairagkar M, Moses DA, Metzger SL, et al. An instantaneous voice-synthesis neuroprosthesis. Nature. 2025. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
 <li>Flesher SN, Downey JE, Weiss JM, et al. A brain-computer interface that evokes tactile sensations improves robotic arm control. Science. 2021. <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
+<li>Zrenner C, Desideri D, Belardinelli P, Ziemann U. Real-time EEG-defined excitability states determine efficacy of TMS-induced plasticity in human motor cortex. Brain Stimul. 2018. <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">doi:10.1016/j.brs.2017.11.016</a></li>
+<li>Gordon PC, Song YF, Jovellar DB, Rostami M, Belardinelli P, Ziemann U. Untangling TMS-EEG responses caused by TMS versus sensory input using optimized sham control and GABAergic challenge. J Physiol. 2023. <a href="https://doi.org/10.1113/JP283986" target="_blank">doi:10.1113/JP283986</a></li>
 <li>Oehrn CR, Roediger J, Diehl A, et al. Chronic adaptive deep brain stimulation versus conventional stimulation in Parkinson's disease: a blinded randomized feasibility trial. Nat Med. 2024. <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">doi:10.1038/s41591-024-03196-z</a></li>
 <li>Wilson GH, Bray N, Franken M, et al. Long-term unsupervised recalibration of intracortical brain-computer interfaces using a hidden Markov model. Nat Biomed Eng. 2025. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
 <li>Casali AG, Gosseries O, Rosanova M, et al. A theoretically based index of consciousness independent of sensory processing and behavior. Sci Transl Med. 2013. <a href="https://doi.org/10.1126/scitranslmed.3006294" target="_blank">doi:10.1126/scitranslmed.3006294</a></li>
