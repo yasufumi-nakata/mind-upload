@@ -203,3 +203,10 @@ recommended_pages:
 
 </article>
 </main>
+
+## 2026-03-15 13:03 JST 再検証ログ（本run / 深掘り運用継続）
+
+- `main` pull後に `RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認し、本ページの `RQ` 行と整合することを確認しました。
+- 本ページで参照する EEG データIDは `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を再確認しました。
+- 助成実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `auto-research-funds` 側で全件参照可能を再確認しました。
+- 方針は継続: 汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` を維持し、RQ単位で深掘り記述を優先します。

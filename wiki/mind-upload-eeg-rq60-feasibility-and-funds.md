@@ -522,3 +522,11 @@ recommended_pages:
 
 </article>
 </main>
+
+## 2026-03-15 13:03 JST 再検証ログ（本run / 最新pull反映）
+
+- 作業前に `main` と3サブモジュールを `pull --ff-only` し、基準コミットを `mind-upload=7e4833b0e3`、`EEG-DATA=1bd4c93316`、`auto-research-funds=a8d32a90bc` に更新しました。
+- 本ページの `RQ` 行を再計数し、`RQ_TOTAL=60`、`U別内訳=U0(4)/U1(4)/U3(6)/U4(4)/U7(6)/U8(6)/U10(4)/U11(4)/U12(6)/U13(6)/U14(6)/U15(4)` を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` を再確認し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持しました。
+- 参照EEGデータID（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を確認しました。
+- 助成キー `G1-G6` 実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` と `grant_eeg_dataset_match.csv` で参照可能を再確認しました。
