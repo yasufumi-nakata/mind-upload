@@ -5,7 +5,7 @@ description: "WBE で connectome だけを保存しても足りない理由を�
 article_type: Wiki
 subtitle: "connectome-complete は emulation-complete ではありません"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-16"
 note: "Technical / natural science only"
 audience: "配線図が取れたら WBE に近いのかを、技術と自然科学だけで判断したい人"
 reading_time: "15〜20分"
@@ -16,18 +16,21 @@ page_highlights:
   - "一次文献だけを使い、state variable の欠落と parameter degeneracy を切り分けます。"
   - "このサイトで connectome-complete と connectome-constrained model をどう読み替えるかの運用ルールも固定します。"
   - "列挙で終わらせず、connectome-only から何を足したときに predictive gain が読めるかを augmentation / ablation で固定します。"
+  - "fly / mouse / human の証拠を混ぜたときの external validity ceiling も、本文で明示します。"
 known_points:
   - "全脳 connectome の作成は大きく前進していますが、それだけで動的再現が完了したとは言えません。"
   - "シナプス効率、遅延、神経修飾、グリア、細胞型ラベル、内在興奮性 / 恒常性 set point は、静的な edge list からは落ちやすい情報です。"
   - "粗い生理 proxy を ground truth と混同すると、内部状態の主張を過大化しやすくなります。"
   - "connectome-constrained なモデルでも、未測定の細胞・シナプス・修飾パラメータが残ると dynamics は縮退しえます。"
   - "same-brain function、transcriptomics、neuromodulatory dynamics、glial slow state を足すと条件付き予測は改善しえますが、その改善は課題・時定数・外部妥当化条件に依存します。"
+  - "human での petavoxel 級 ultrastructure や MRSI-based metabolic connectome も重要な前進ですが、現時点では structural / biochemical scaffold の主張に留まります。"
 unknown_points:
   - "どの状態クラスをどの解像度まで取れば WBE の十分条件に近づくかは未確定です。"
   - "欠落した状態変数をどこまで推定や coarse-graining で補えるかは、今後の検証課題です。"
   - "人で直接取得できない状態を、どの動物・侵襲系で較正すべきかはまだ固定されていません。"
   - "same-brain function を足したとき、どの程度まで縮退が解けるかもまだ系統的には定まっていません。"
   - "どの augmentation の順序が、どの誤差項をもっとも効率よく減らすかは、まだ dataset ごとに変わります。"
+  - "human macro-biochemical scaffold が local transmitter / glial maintenance-state をどこまで拘束できるかも未確定です。"
 wiki_links:
   - label: "Wiki: WBEの基本"
     url: "/wiki/mind-upload-basics.html"
@@ -134,12 +137,56 @@ recommended_pages:
 <section class="section" id="connectome-progress">
 <h2 class="section-title">配線図研究は大きく進んだが、それ自体は終点ではない</h2>
 <p>
-Dorkenwald らは成体ショウジョウバエ全脳の wiring diagram を示し、約 13 万ニューロン規模で全脳 connectome を提示しました。一方で MICrONS Consortium は、マウス視覚皮質の立方ミリメートル規模で、同一個体の機能計測と connectomics を結びつけるデータセットと局所 functional digital twin を公開しました。さらに Lappalainen らは、ショウジョウバエ視覚系で connectome-constrained network を task-optimized に学習させ、広い範囲の活動予測を可能にしました。これは非常に大きな前進ですが、逆に言えば、<strong>現在ようやく「配線＋一部機能＋追加仮定」を結び始めた段階</strong>であり、全脳・全状態の動的再現とはまだ別問題であることも示しています。
+Dorkenwald らは成体ショウジョウバエ全脳の wiring diagram を示し、約 13 万ニューロン規模で全脳 connectome を提示しました。一方で MICrONS Consortium は、マウス視覚皮質の立方ミリメートル規模で、同一個体の機能計測と connectomics を結びつけるデータセットと局所 functional digital twin を公開しました。さらに Lappalainen らは、ショウジョウバエ視覚系で connectome-constrained network を task-optimized に学習させ、広い範囲の活動予測を可能にしました。human 側でも、Shapson-Coe らは petavoxel 級のヒト大脳皮質断片を nanoscale で再構成し、Lucchetti らは 3D whole-brain <sup>1</sup>H-MRSI から human metabolic connectome を提示しました。これは非常に大きな前進ですが、逆に言えば、<strong>現在ようやく「配線＋一部機能＋一部 biochemical scaffold＋追加仮定」を結び始めた段階</strong>であり、全脳・全状態の動的再現とはまだ別問題であることも示しています。
 </p>
 <div class="note-box">
 <strong>ここでの読み替え</strong>
 <p>
-connectome-complete は「何がつながっているか」がかなり分かったという意味では重要です。しかし、それだけでは「どの強さで」「どの遅延で」「どの neuromodulatory context で」「どの glial coupling の下で」動くかまでは固定されません。さらに Lappalainen らの reductionist model でも、著者自身が electrical synapses、nonlinear chemical synapses、neuromodulation を説明外に置いています。したがって、本サイトでは connectome-complete を <strong>structural atlas / scaffold</strong> の達成として扱い、L2/L3 の emulation claim へは自動的に昇格させません。<strong>connectome-constrained による activity prediction</strong> も、まずは hypothesis engine と conditional model として読みます。
+connectome-complete は「何がつながっているか」がかなり分かったという意味では重要です。しかし、それだけでは「どの強さで」「どの遅延で」「どの neuromodulatory context で」「どの glial coupling の下で」動くかまでは固定されません。human metabolic connectome も、parcel-level の biochemical organization を前進させますが、current synaptic efficacy、local transmitter specificity、astrocyte ensemble、sleep-history を直接は与えません。さらに Lappalainen らの reductionist model でも、著者自身が electrical synapses、nonlinear chemical synapses、neuromodulation を説明外に置いています。したがって、本サイトでは connectome-complete を <strong>structural atlas / scaffold</strong> の達成として扱い、L2/L3 の emulation claim へは自動的に昇格させません。<strong>connectome-constrained による activity prediction</strong> も、まずは hypothesis engine と conditional model として読みます。
+</p>
+</div>
+</section>
+
+<section class="section" id="transfer-ceiling">
+<h2 class="section-title">2026-03 追補：species / scale / measurement stack の transfer ceiling を明示する</h2>
+<p>
+現行サイトの弱点は、fly、mouse、human の前進を同じ「connectome progress」として並べたときに、<strong>どこまで human whole-brain claim へ持ち込めるか</strong>の上限を本文で十分に固定していなかった点でした。一次文献はむしろ、<strong>種差</strong>、<strong>観測スケール</strong>、<strong>measurement stack</strong> の違いを無視すると主張が膨らみすぎることを示しています。Loomba らは、human cortex が mouse と同じ inhibitory microcircuit を単純拡大したものではなく、interneuron-to-interneuron network の拡張を持つことを示しました。したがって、「mouse で見えた局所対応」と「human whole-brain で何が言えるか」は、同じ connectomics でも別段階として扱う必要があります。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>一次文献の前進</th>
+<th>直接強くなったこと</th>
+<th>そのままでは言えないこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>fly whole-brain connectome / model</strong><br>Dorkenwald ら、Lappalainen ら</td>
+<td>全脳 structural completeness と、fly visual system での task-conditioned activity prediction が前進しました。</td>
+<td>mammalian cortical cell-type heterogeneity、human microcircuit 特異性、glial / metabolic maintenance-state を自動補完できません。</td>
+</tr>
+<tr>
+<td><strong>mouse same-brain local twin</strong><br>MICrONS、Gamlin ら</td>
+<td>same-brain structure-function link と、transcriptomic node label の増分価値が局所皮質で強くなりました。</td>
+<td>mouse local cortex の成功を、そのまま human whole-brain の十分条件や全状態一般化へは上げられません。</td>
+</tr>
+<tr>
+<td><strong>human nanoscale ultrastructure</strong><br>Shapson-Coe ら</td>
+<td>human cortex でも nanoscale ultrastructure を petavoxel 断片で直接再構成できることが示され、human structural scaffold は大きく前進しました。</td>
+<td>断片データであり、whole-brain connectome、current synaptic efficacy、neuromodulatory context、sleep-dependent maintenance-state はまだ直接与えません。</td>
+</tr>
+<tr>
+<td><strong>human metabolic connectome</strong><br>Lucchetti ら</td>
+<td>whole-brain <sup>1</sup>H-MRSI から、再現性のある parcel-level biochemical organization を human で描けるようになりました。</td>
+<td>Glx / Ins / Cho / tCr / tNAA の parcel-level similarity は、cell-specific transmitter state、astrocyte ensemble、synaptic weight、local recovery controller の ground truth ではありません。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>この追補で明確にした批判点</strong>
+<p>
+したがって、本サイトでは今後、<strong>「human でも EM が取れた」</strong>を<strong>whole-brain state-complete</strong>と読み替えず、<strong>「human で metabolic connectome が描けた」</strong>を<strong>local glial / transmitter state の直接観測</strong>と読み替えません。逆に、これらは human 側で何が見え始めたかを示す重要な前進であり、<strong>structural scaffold</strong> と <strong>macro-biochemical scaffold</strong> を分けて積み上げる方が、一次文献に整合的でございます。
 </p>
 </div>
 </section>
@@ -260,10 +307,12 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <li><strong>connectome-complete：</strong>構造アトラス、候補 scaffold、圧縮の出発点として扱います。L2/L3 の emulation 達成とは書きません。</li>
 <li><strong>connectome-constrained model：</strong>まずは hypothesis engine / conditional model として扱います。内部状態の唯一解とは書きません。</li>
 <li><strong>augmentation / ablation：</strong>connectome-only baseline を置かずに、「追加した state variable が効いた」とは書きません。</li>
+<li><strong>species / stack をまたぐとき：</strong>fly / mouse / human、local / fragment / whole-brain、structural / functional / metabolic の差を本文に残し、external validity ceiling を省略しません。</li>
 <li><strong>intrinsic excitability / homeostatic set point：</strong>cell-type ラベルや短時間の活動一致から自動推定されたことにはしません。測っていなければ latent state と書きます。</li>
 <li><strong>pupil / HRV：</strong>人データでは有用な state covariate ですが、トランスミッタ特異的 ground truth としては扱いません。</li>
 <li><strong>state variable が無いとき：</strong>推定したなら誤差と棄権条件を、推定していないなら absent と明記します。</li>
 <li><strong>weights / delays が無いとき：</strong>phase、timing、介入応答、閉ループ安定性の主張は降格します。</li>
+<li><strong>human metabolic scaffold：</strong>parcel-level biochemical organization と、cell-specific glial / transmitter maintenance-state を混同しません。</li>
 <li><strong>glia / neuromodulation を落とすとき：</strong>その近似で何の振る舞いを捨てたのかを、適用範囲として本文に書きます。</li>
 <li><strong>family が複数残るとき：</strong>confidence だけで押し切らず、family comparison、不確実性、abstention を公開します。</li>
 </ul>
@@ -316,6 +365,9 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <em>Nature</em>, 629, 146–153. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Vadisiute, A., Meijer, E., Therpurakal, R. N., et al. (2024). Glial cells undergo rapid changes following acute chemogenetic manipulation of cortical layer 5 projection neurons. <em>Communications Biology</em>, 7, 1498. <a href="https://doi.org/10.1038/s42003-024-06994-w" target="_blank">doi:10.1038/s42003-024-06994-w</a></li>
 <li>Hadzibegovic, N., et al. (2026). Early intrinsic excitability plasticity of neocortical engram neurons defines memory formation and precision. <em>Nature Communications</em>, 17, 291. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">doi:10.1038/s41467-025-66975-3</a></li>
+<li>Loomba, S., Straehle, J., Gangadharan, V., et al. (2022). Connectomic comparison of mouse and human cortex. <em>Science</em>, 377(6602), eabo0924. <a href="https://doi.org/10.1126/science.abo0924" target="_blank">doi:10.1126/science.abo0924</a></li>
+<li>Shapson-Coe, A., Januszewski, M., Berger, D. R., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <em>Science</em>, 384(6696), eadk4858. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
+<li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <em>Nature Communications</em>, 16, 11344. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
 </ol>
 </section>
 

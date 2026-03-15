@@ -15,14 +15,17 @@ page_highlights:
   - "maintenance-state は内在興奮性だけではなく、睡眠依存 homeostasis、髄鞘/オリゴデンドロサイト、グリア代謝と astrocyte ensemble まで含みます。"
   - "短期の活動一致と、長期の維持機構が同じであることは別の主張です。"
   - "記憶が残ること自体も、静的分子の保存ではなく、再正規化・再固定化・代謝支援を含む active maintenance として読む必要があります。"
+  - "sleep は平均発火率を戻すだけでなく、synapse diversity の維持にも関わるため、maintenance-state を1次元の補正量として扱えません。"
 known_points:
   - "同じ transcriptomic type の内部にも morpho-electric phenotype の連続性や variability が残ります。"
   - "firing rate や synaptic strength は、sleep/wake cycle をまたぐ homeostatic plasticity によって調整されます。"
   - "髄鞘、オリゴデンドロサイト、アストロサイトの状態は timing、代謝、記憶想起、長期回復に関わります。"
+  - "human でも MRSI-based metabolic connectome により macro biochemical scaffold は見え始めていますが、local maintenance-state はまだ粗く残ります。"
 unknown_points:
   - "どの粒度まで excitability / sleep-homeostasis / metabolic support を測れば WBE の十分条件に近づくかは未確定です。"
   - "人で直接測れない maintenance state を、どの proxy とどの外部基準で較正すべきかは未確定です。"
   - "長期 closed-loop claim に対して、どの sleep / myelin / metabolic 指標を共通提出物にするかもまだ固定されていません。"
+  - "parcel-level metabolic similarity が cell-specific glial / transmitter / synaptic maintenance-state をどこまで拘束するかも未確定です。"
 wiki_links:
   - label: "Wiki: 配線図だけでは足りない理由"
     url: "/wiki/connectome-is-not-enough.html"
@@ -126,7 +129,7 @@ recommended_pages:
 
 <h3>3. sleep / wake cycle は synapse と network regime を再配線します</h3>
 <p>
-現行サイトの弱点は、maintenance-state を excitability と molecular turnover に寄せすぎて、<strong>sleep が再正規化の時間軸そのものを担う</strong>ことを前面に出せていなかった点です。<a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">Torrado Pacheco et al. (2021)</a> は、wake で上がった firing rate が sleep 中に downward homeostasis で戻ることを示しました。<a href="https://doi.org/10.1126/science.aah5982" target="_blank">de Vivo et al. (2017)</a> は wake / sleep cycle をまたぐ ultrastructural な synaptic scaling を示し、<a href="https://doi.org/10.1126/science.aai8355" target="_blank">Diering et al. (2017)</a> は Homer1a を介した sleep 中の excitatory synapse scaling-down を示しました。さらに <a href="https://doi.org/10.1126/science.aav2642" target="_blank">Noya et al. (2019)</a> は forebrain synaptic proteome が sleep によって駆動されることを示し、<a href="https://doi.org/10.1038/s41467-024-47838-5" target="_blank">Xu et al. (2024)</a> は sleep が cortical network をよりよい computational regime へ戻すことを報告しました。したがって、<strong>same-day の活動一致だけで maintenance-state が合ったと読むことはできません</strong>。sleep history と overnight recovery log が無ければ、翌日の安定性や学習後の再平衡はまだ別問題です。
+現行サイトの弱点は、maintenance-state を excitability と molecular turnover に寄せすぎて、<strong>sleep が再正規化の時間軸そのものを担う</strong>ことを前面に出せていなかった点です。<a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">Torrado Pacheco et al. (2021)</a> は、wake で上がった firing rate が sleep 中に downward homeostasis で戻ることを示しました。<a href="https://doi.org/10.1126/science.aah5982" target="_blank">de Vivo et al. (2017)</a> は wake / sleep cycle をまたぐ ultrastructural な synaptic scaling を示し、<a href="https://doi.org/10.1126/science.aai8355" target="_blank">Diering et al. (2017)</a> は Homer1a を介した sleep 中の excitatory synapse scaling-down を示しました。さらに <a href="https://doi.org/10.1126/science.aav2642" target="_blank">Noya et al. (2019)</a> は forebrain synaptic proteome が sleep によって駆動されることを示し、<a href="https://doi.org/10.1038/s41467-024-47838-5" target="_blank">Xu et al. (2024)</a> は sleep が cortical network をよりよい computational regime へ戻すことを報告しました。加えて <a href="https://doi.org/10.1016/j.cub.2024.07.032" target="_blank">Koukaroudi et al. (2024)</a> は、sleep deprivation が cortex と hippocampus の excitatory synapse diversity を減らすことを示し、maintenance-state が単なる平均値の再較正ではなく、<strong>synaptic repertoire の分布維持</strong>も含むことを強めました。したがって、<strong>same-day の活動一致だけで maintenance-state が合ったと読むことはできません</strong>。sleep history と overnight recovery log が無ければ、翌日の安定性や学習後の再平衡はまだ別問題です。
 </p>
 
 <h3>4. 髄鞘とオリゴデンドロサイトは timing と support の変数です</h3>
@@ -157,6 +160,45 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 </p>
 </section>
 
+<section class="section" id="human-observability-ceiling">
+<h2 class="section-title">2026-03 追補：human maintenance-state の直接観測はまだ粗い</h2>
+<p>
+今回さらに深掘りして見えた弱点は、maintenance-state の議論がやや animal causal evidence に寄りすぎており、<strong>human で今どこまで直接見えているか</strong>の上限が本文で十分に固定されていなかった点です。Shapson-Coe らの human cortical petavoxel fragment は ultrastructure を大きく前進させ、Lucchetti らの whole-brain <sup>1</sup>H-MRSI は human metabolic connectome を提示しました。しかし、前者は structural snapshot、後者は parcel-level biochemical similarity であり、どちらも <strong>current synaptic efficacy</strong>、<strong>local transmitter specificity</strong>、<strong>astrocyte ensemble</strong>、<strong>sleep-dependent recovery controller</strong> を直接は与えません。つまり、human 側でも maintenance-state はまだ macro scaffold と local hidden state に分かれて残ります。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>human で見え始めたもの</th>
+<th>直接見えている層</th>
+<th>まだ latent の層</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>human nanoscale ultrastructure</strong><br>Shapson-Coe ら</td>
+<td>human cortex 断片の ultrastructure、細胞・シナプス配置、局所構造 scaffold。</td>
+<td>current weight、sleep-history、recovery controller、neuromodulatory context、glial slow-state。</td>
+</tr>
+<tr>
+<td><strong>human metabolic connectome</strong><br>Lucchetti ら</td>
+<td>Glx / Ins / Cho / tCr / tNAA に基づく parcel-level biochemical organization と、その再現性。</td>
+<td>cell-specific metabolic routing、astrocyte ensemble、local transmitter state、synapse-specific maintenance。</td>
+</tr>
+<tr>
+<td><strong>sleep 系の causal evidence</strong><br>Koukaroudi ら、Torrado Pacheco ら</td>
+<td>sleep が firing-rate homeostasis と synapse diversity に関与する、という maintenance の存在証拠。</td>
+<td>human individual での overnight maintenance-state を、どの proxy で operationalize するか。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>この追補での実務的な読み替え</strong>
+<p>
+したがって、本サイトでは <strong>human metabolic connectome</strong> を有望な <strong>macro-biochemical scaffold</strong> として扱いますが、<strong>glial / transmitter maintenance-state の ground truth</strong> とは書きません。同様に human EM 断片を、<strong>state-complete snapshot</strong> ではなく <strong>structural scaffold の強化</strong> として扱います。human で直接見えていない層は、animal causal evidence で existence を支えつつ、human 側では observability ceiling と abstention を明示するのが安全でございます。
+</p>
+</div>
+</section>
+
 <section class="section" id="dangerous-misreadings">
 <h2 class="section-title">よくある誤読と、このサイトでの降格ルール</h2>
 <table class="data-table">
@@ -184,6 +226,11 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <td>sleep / wake 注釈や翌日 recovery を出していない場合、cross-day stability claim は降格します。</td>
 </tr>
 <tr>
+<td><strong>human metabolic connectome があれば、glial / transmitter maintenance-state も直接見えた</strong></td>
+<td>parcel-level metabolic similarity は有用ですが、cell-specific astrocyte ensemble や transmitter state をそのまま与えません。</td>
+<td>human MRSI は macro-biochemical scaffold として扱い、local maintenance-state の ground truth とは書きません。</td>
+</tr>
+<tr>
 <td><strong>delay を定数で置けば、髄鞘やオリゴデンドロサイトは後回しでよい</strong></td>
 <td>adaptive myelination と axon-glia coupling は timing と long-term support に関わります。</td>
 <td>timing-sensitive claim では myelin / conduction の未測定を本文に明記します。</td>
@@ -209,10 +256,12 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <ul>
 <li><strong>長期 claim では maintenance-state を別列に出す：</strong>connectome / cell type / synapse と、intrinsic excitability、sleep-homeostasis、myelin / oligodendroglial support、glial / metabolic support を混ぜません。</li>
 <li><strong>sleep / wake 履歴を測っていなければ測っていないと書く：</strong>same-day fit から overnight maintenance を自動補完しません。</li>
+<li><strong>sleep を平均値補正に縮約しない：</strong>synapse diversity や network regime まで落ちる可能性を残します。</li>
 <li><strong>delay を定数で吸収したら吸収したと書く：</strong>timing state と axonal support を無言でモデル内へ押し込みません。</li>
 <li><strong>memory persistence を static storage と言い換えない：</strong>turnover をまたぐ再固定化と支援機構の可能性を先に残します。</li>
 <li><strong>perturbation 後の recovery を重視する：</strong>何が起きたかだけでなく、どこへ戻るか、睡眠をまたいでどう戻るかをログに残します。</li>
 <li><strong>proxy の限界を先に書く：</strong>EEG / pupil / behavior だけで maintenance-state を一意に決めたとは書きません。</li>
+<li><strong>human MRSI を local ground truth と誤読しない：</strong>macro-biochemical scaffold と cell-specific maintenance-state を分けて書きます。</li>
 <li><strong>neuron-only の成功から glia omission を補完しない：</strong>想起・再安定化・fear-state representation は astrocyte state を別に残します。</li>
 </ul>
 </div>
@@ -257,6 +306,7 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <li>de Vivo, L., et al. (2017). Ultrastructural evidence for synaptic scaling across the wake/sleep cycle. <em>Science</em>, 355(6324), 507-510. <a href="https://doi.org/10.1126/science.aah5982" target="_blank">doi:10.1126/science.aah5982</a></li>
 <li>Noya, S. B., et al. (2019). The forebrain synaptic transcriptome is organized by clocks but its proteome is driven by sleep. <em>Science</em>, 366(6462), eaav2642. <a href="https://doi.org/10.1126/science.aav2642" target="_blank">doi:10.1126/science.aav2642</a></li>
 <li>Xu, W., et al. (2024). Sleep restores an optimal computational regime in cortical networks. <em>Nature Communications</em>, 15, 3820. <a href="https://doi.org/10.1038/s41467-024-47838-5" target="_blank">doi:10.1038/s41467-024-47838-5</a></li>
+<li>Koukaroudi, D., Qiu, Z., Fransén, E., et al. (2024). Sleep maintains excitatory synapse diversity in the cortex and hippocampus. <em>Current Biology</em>, 34(16), 3836-3843.e5. <a href="https://doi.org/10.1016/j.cub.2024.07.032" target="_blank">doi:10.1016/j.cub.2024.07.032</a></li>
 <li>Yiu, A. P., et al. (2014). Neurons are recruited to a memory trace based on relative neuronal excitability immediately before training. <em>Neuron</em>, 83(3), 722-735. <a href="https://doi.org/10.1016/j.neuron.2014.07.017" target="_blank">doi:10.1016/j.neuron.2014.07.017</a></li>
 <li>Hadzibegovic, N., et al. (2026). Early intrinsic excitability plasticity of neocortical engram neurons defines memory formation and precision. <em>Nature Communications</em>, 17, 291. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">doi:10.1038/s41467-025-66975-3</a></li>
 <li>Gibson, E. M., et al. (2014). Neuronal activity promotes oligodendrogenesis and adaptive myelination in the mammalian brain. <em>Science</em>, 344(6183), 1252304. <a href="https://doi.org/10.1126/science.1252304" target="_blank">doi:10.1126/science.1252304</a></li>
@@ -271,6 +321,8 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <li>Dewa, K., et al. (2025). The astrocytic ensemble acts as a multiday trace to stabilize memory. <em>Nature</em>, 648, 99-107. <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">doi:10.1038/s41586-025-09619-2</a></li>
 <li>Bukalo, O., et al. (2026). Astrocytes enable amygdala neural representations supporting memory. <em>Nature</em>. <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">doi:10.1038/s41586-025-10068-0</a></li>
 <li>Lee, J.-C., Wang, C.-Y., Lin, C.-L., &amp; Lu, H.-C. (2022). Synaptic memory survives molecular turnover. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 119(42), e2211572119. <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">doi:10.1073/pnas.2211572119</a></li>
+<li>Shapson-Coe, A., Januszewski, M., Berger, D. R., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <em>Science</em>, 384(6696), eadk4858. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
+<li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <em>Nature Communications</em>, 16, 11344. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
 </ol>
 </section>
 
