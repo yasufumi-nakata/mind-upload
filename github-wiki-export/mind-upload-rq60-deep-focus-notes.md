@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-15 / 位置づけ: RQ-by-RQ Deep Focus
+- 更新日: 2026-03-16 / 位置づけ: RQ-by-RQ Deep Focus
 
 ## このページの役割
 このページは、mind-uploadの60RQを1件ずつ対象に、EEG-DATAで直接確認する核、auto-research-funds向け応募テーマ、EEG外で必要な要件を固定した実務ノートです。
@@ -287,3 +287,11 @@ A/B/C判定は mind-upload-eeg-rq60-feasibility-and-funds と同一。Cは『重
 - 候補EEGデータID `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）。
 - 助成実ID `G1-G6` は `G1-G2=grant_queue`、`G3-G6=auto-research-funds` の分離参照で追跡可能な状態を維持しています。
 - 本runでも運用を継続します。汎用要約を避け、`1RQ=1検証命題=1応募テーマ=1主データ` でRQ単位に深掘り記述します。
+
+## 2026-03-16 01:02 JST 再検証ログ（本run / 深掘り表60件の再確認）
+
+- `main` pull後に再検証し、`## U0` から `## 実務メモ` 直前までの `RQ` 行は `60件` を維持しました。
+- 判定内訳は `A/B/C=17/25/18` で、`mind-upload-eeg-rq60-feasibility-and-funds.md` と整合しています。
+- 参照EEGデータID `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を確認しました。
+- 助成ID `G1-G6` は `grant_queue` と `auto-research-funds` の分離参照で全件存在を再確認しました。
+- 実務方針は継続します。`1RQ=1検証命題=1応募テーマ=1主データ` を維持し、汎用要約を行わずRQ単位で更新します。

@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-15 / 位置づけ: RQ-by-RQ Deep Dive
+- 更新日: 2026-03-16 / 位置づけ: RQ-by-RQ Deep Dive
 
 ## このページの役割
 このページは research_harvest_50 の60 RQを対象に、EEG-DATAで解ける範囲をA/B/Cで判定し、各RQごとの検証設計・応募テーマ・使うデータセットIDをまとめた実務版です。
@@ -513,6 +513,14 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 
 </article>
 </main>
+
+## 2026-03-16 01:02 JST 再検証ログ（本run / RQ60判定表の整合確認）
+
+- `main` pull後に再検証し、`A/B/C=17/25/18` を再確認しました。
+- `mind-upload-rq60-deep-focus-notes.md` の本表（`## U0` から `## 実務メモ` 直前）を機械カウントし、`RQ_TOTAL=60` を再確認しました。
+- 参照EEGデータID `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）。
+- 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` と `auto-research-funds` で全件参照可能でした。
+- 方針を維持します。汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` で運用します。
 
 ## 2026-03-15 13:03 JST 再検証ログ（本run / 最新pull反映）
 

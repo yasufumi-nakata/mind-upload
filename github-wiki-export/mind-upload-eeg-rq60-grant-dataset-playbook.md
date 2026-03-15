@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-15 / 位置づけ: Per-RQ Grant and Dataset Playbook
+- 更新日: 2026-03-16 / 位置づけ: Per-RQ Grant and Dataset Playbook
 
 ## このページの役割
 このページは、mind-upload の60リサーチクエスチョンを1件ずつ対象に、第一応募先/予備応募先、主EEG-DATA、採用理由、提出成果物を固定した実務用プレイブックです。
@@ -172,3 +172,11 @@ A/B/C 判定は `mind-upload-eeg-rq60-feasibility-and-funds.md` と同一基準�
 - `主EEG-DATA` として参照するIDは `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）。
 - 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）の参照可能性を再確認しました。
 - 実務方針は据え置きです。`1RQ=1提出判断` を固定し、汎用テーマ化せずRQ単位で申請文へ転記する運用を継続します。
+
+## 2026-03-16 01:02 JST 再検証ログ（本run / 申請プレイブック整合）
+
+- `main` pull後に再検証し、全 `60RQ` 行で `第一応募先/予備応募先/主EEG-DATA/最小成果物` の欠落 `0` を確認しました。
+- 判定内訳 `A/B/C=17/25/18` は `mind-upload-eeg-rq60-feasibility-and-funds.md` と一致しています。
+- `主EEG-DATA` として参照するID `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）です。
+- 助成ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` と `auto-research-funds` で参照可能でした。
+- 実務運用は継続します。`1RQ=1提出判断` を維持し、汎用要約に戻さずRQ単位で申請文へ転記します。
