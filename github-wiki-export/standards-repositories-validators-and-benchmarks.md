@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-15 / 位置づけ: Operational guide
+- 更新日: 2026-03-16 / 位置づけ: Operational guide
 
 ## このページの役割
 このページは、Mind-Upload で何度も出てくる『規格』『置き場』『Validator』『ベンチマーク』に加えて、実務で重要な『版固定』『イベント意味論』『同期ミドルウェア』『ローダ / 変換器』『benchmark harness』の役割差を整理する wiki です。名前だけ覚えるのではなく、『どこで再現性が壊れやすいか』まで分けて理解することを目標にします。
@@ -141,6 +141,11 @@
 OpenNeuro は snapshot を semantic version の git tag として扱い、PhysioNet も project ごとに version を明示して引用させます。したがって本サイトでは、dataset 名だけではなく <strong>snapshot / version / DOI または永続 URL</strong> まで成果物へ含めます。さらに、BIDS は器、HED / Motion-BIDS は意味論と追加 metadata、LSL は同期、MNE-BIDS は入出力経路、MOABB は比較ルールでございます。これらを混ぜて「BIDS にしたので benchmark まで済んだ」「LSL を入れたので hardware 遅延まで解決した」と読まないでください。
 </p>
 
+<strong>multimodal では器の外側にもう 1 枚必要です</strong>
+<p>
+EEG-BIDS、Motion-BIDS、HED、LSL は重要ですが、これらだけでは <strong>どうモダリティを結び付け、どの融合モデルを使い、single-modality baseline をどこまで超え、どこで外部妥当化したか</strong> までは残りません。したがって本サイトでは、multimodal / atlas prior 結果に <a href="https://mind-upload.com/verification.html#fusion-card">Verification の Fusion Card</a> を追加し、規格・同期・benchmark の外側にある結合条件までカード化します。
+</p>
+
 <h2>EEG の例で見ると</h2>
 <table>
 <thead>
@@ -180,6 +185,11 @@ OpenNeuro は snapshot を semantic version の git tag として扱い、Physio
 <strong>ここが重要です</strong>
 <p>
 規格にそろえただけでは、まだ「比べるルール」はありません。逆に benchmark だけあっても、入力の形がバラバラなら比較が崩れます。両方必要です。
+</p>
+
+<strong>multimodal でさらに必要なもの</strong>
+<p>
+もし EEG と MRI、EEG と fMRI、EEG と侵襲記録を結び付けるなら、ここで終わりではありません。<strong>acquisition relation</strong>、<strong>clock and timing audit</strong>、<strong>geometry / registration</strong>、<strong>fusion model</strong>、<strong>missing-modality baseline</strong>、<strong>external validator</strong> を <a href="https://mind-upload.com/verification.html#fusion-card">Fusion Card</a> として追加しない限り、本サイトでは multimodal gain を強く読みません。
 </p>
 
 <h2>何が欠けると何が困るか</h2>

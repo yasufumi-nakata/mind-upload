@@ -5,7 +5,7 @@ description: "Mind-Upload を本当に初歩から学ぶための wiki。公開�
 article_type: Wiki
 subtitle: "公開ページは入口、Wiki は学習用の土台です"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-16"
 note: "Learning-first"
 audience: "本当に初歩から学びたい人、公開ページに入る前の足場がほしい人"
 reading_time: "10〜20分"
@@ -313,6 +313,11 @@ recommended_pages:
 <td><a href="../eeg_101.html">EEG入門</a> / <a href="../perspective.html">研究ノート</a></td>
 </tr>
 <tr>
+<td><strong>EEG foundation model / 自己教師あり学習を過大評価せずに読みたい</strong></td>
+<td><a href="eeg-foundation-models.html">EEG foundation model と事前学習</a></td>
+<td><a href="../eeg_101.html">EEG入門</a> / <a href="../datasets.html">データ&ベンチ</a></td>
+</tr>
+<tr>
 <td><strong>L4 本人性で何をどうテストしたいか知りたい</strong></td>
 <td><a href="identity-and-continuity-tests.html">本人性評価と連続性テスト</a></td>
 <td><a href="../wbe_101.html">WBE入門</a> / <a href="../tech_roadmap.html">技術ロードマップ</a></td>
@@ -501,6 +506,10 @@ recommended_pages:
 <td><a href="multimodal-integration-basics.html">マルチモーダル統合の基本</a></td>
 </tr>
 <tr>
+<td>EEG foundation model、自己教師あり学習、Pretraining Card の読み方</td>
+<td><a href="eeg-foundation-models.html">EEG foundation model と事前学習</a></td>
+</tr>
+<tr>
 <td>記憶、価値観、学習、分岐、縦断で見る L4 の入口</td>
 <td><a href="identity-and-continuity-tests.html">本人性評価と連続性テスト</a></td>
 </tr>
@@ -559,6 +568,7 @@ recommended_pages:
 <li><a href="counterfactual-and-perturbation-verification.html">反事実・介入・摂動の検証 →</a></li>
 <li><a href="uncertainty-confidence-and-abstention.html">不確実性・校正・棄権 →</a></li>
 <li><a href="multimodal-integration-basics.html">マルチモーダル統合の基本 →</a></li>
+<li><a href="eeg-foundation-models.html">EEG foundation model と事前学習 →</a></li>
 <li><a href="identity-and-continuity-tests.html">本人性評価と連続性テスト →</a></li>
 <li><a href="baselines-prereg-and-model-cards.html">ベースライン・事前登録・モデルカード →</a></li>
 <li><a href="state-trait-and-drift.html">state・trait・ドリフト →</a></li>

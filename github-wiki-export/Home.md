@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-15 / 位置づけ: Learning-first
+- 更新日: 2026-03-16 / 位置づけ: Learning-first
 
 ## このページの役割
 このページは、Mind-Upload の公開ページを読みやすくするための学習ポータルです。公開ページが『いま分かっていること / まだ分からないこと / 次の導線』を示すのに対し、wiki はその前提になる基礎説明を順番に学ぶために使います。
@@ -298,6 +298,11 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 <td><a href="https://mind-upload.com/eeg_101.html">EEG入門</a> / <a href="https://mind-upload.com/perspective.html">研究ノート</a></td>
 </tr>
 <tr>
+<td><strong>EEG foundation model / 自己教師あり学習を過大評価せずに読みたい</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-foundation-models">EEG foundation model と事前学習</a></td>
+<td><a href="https://mind-upload.com/eeg_101.html">EEG入門</a> / <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a></td>
+</tr>
+<tr>
 <td><strong>L4 本人性で何をどうテストしたいか知りたい</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/identity-and-continuity-tests">本人性評価と連続性テスト</a></td>
 <td><a href="https://mind-upload.com/wbe_101.html">WBE入門</a> / <a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a></td>
@@ -469,6 +474,10 @@ wiki は噛み砕いて説明しますが、分かりやすさのために未解
 <tr>
 <td>EEG、MEG、fMRI、ECoG、MRI の補完関係</td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/multimodal-integration-basics">マルチモーダル統合の基本</a></td>
+</tr>
+<tr>
+<td>EEG foundation model、自己教師あり学習、Pretraining Card の読み方</td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-foundation-models">EEG foundation model と事前学習</a></td>
 </tr>
 <tr>
 <td>記憶、価値観、学習、分岐、縦断で見る L4 の入口</td>

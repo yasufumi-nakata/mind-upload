@@ -37,6 +37,7 @@
 - [Mind-upload RQ60 深掘り焦点ノート（EEG-DATA × 助成）](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes)
 - [Mind-upload RQ60 申請プレイブック（RQ単位固定）](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook)
 - [Wiki：Decode と Emulate](https://github.com/yasufumi-nakata/mind-upload/wiki/decode-vs-emulate)
+- [Wiki：EEG foundation model と事前学習](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-foundation-models)
 - [Wiki：EEGからL0までの一本道](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-to-l0-route)
 - [Wiki：EEG前処理とQC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc)
 - [Wiki：L0で最低限そろえる成果物パック](https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack)

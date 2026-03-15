@@ -5,7 +5,7 @@ description: "公開データ（EEG中心）の選定から、BIDS→QC→前処
 article_type: Resource
 subtitle: "「何を使うか」と「どう再現するか」を分けずに最短ルートでつなぐ"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-16"
 note: "Curated List + L0 Practice"
 audience: "どの公開データから始めるべきか迷っている人、L0の練習台を探している人"
 reading_time: "12〜20分"
@@ -16,18 +16,21 @@ page_highlights:
   - "スターターデータは L0〜L1 の練習台であり、EEG source imaging の ground truth ではありません。"
   - "スターターデータごとに、annotation provenance・時間忠実度・独立な split 単位が違います。"
   - "within-session / cross-session / cross-subject / adaptation は別の評価族であり、同じ score として横並びにしません。"
+  - "foundation / self-supervised EEG model を使う場合も、pretraining corpus と harmonization の監査を省略しません。"
   - "最終目標は、第三者が同じ条件で走らせられる形へ寄せることです。"
 known_points:
   - "公開 EEG データは、L0 の再現解析や L1 のベースライン練習に十分役立ちます。"
   - "最初のデータ選びでは、難しさよりも追試しやすさを優先した方が前に進みます。"
   - "同じ『公開 EEG データ』でも、cue-locked event、専門家の区間注釈、sleep hypnogram、医師レポート由来ラベルは意味が違います。"
   - "同じ accuracy でも、どの汎化条件で出た score かが違えば、読んでよい主張の強さも変わります。"
+  - "foundation model の改善も、pretraining corpus、channel mismatch 処理、adaptation regime を出さないと比較不能です。"
   - "個体別 MRI や侵襲 ground truth がないスターターデータだけで、ESI 精度改善を強く主張することはできません。"
 unknown_points:
   - "スターターデータセットだけで WBE の全論点を解くことはできません。"
   - "どのデータが将来の因果・閉ループ検証へ最も効くかは、まだ固定していません。"
   - "どの公開データを annotation fidelity benchmark の既定路線にするかは、まだ固定していません。"
   - "どの公開データが source imaging の direct validation 用 benchmark として最も運用しやすいかは、まだ固定していません。"
+  - "foundation model が cross-day / cross-device / cross-task をどこまで同時に安定化できるかも未解決です。"
 wiki_links:
   - label: "Wiki: EEGの基本"
     url: "/wiki/eeg-basics.html"
@@ -47,6 +50,9 @@ wiki_links:
   - label: "Wiki: state・trait・ドリフト"
     url: "/wiki/state-trait-and-drift.html"
     description: "same-day score と cross-day stability を混同しないための縦断読みを整理します。"
+  - label: "Wiki: EEG foundation model と事前学習"
+    url: "/wiki/eeg-foundation-models.html"
+    description: "大規模事前学習の前進と限界、Pretraining Card の読み方を整理します。"
   - label: "Wiki: マルチモーダル統合の基本"
     url: "/wiki/multimodal-integration-basics.html"
     description: "EEG に何を足すと何が補えるかを、初歩から整理します。"
@@ -136,6 +142,12 @@ recommended_pages:
 <strong>同じ score でも、汎化条件が違えば意味は変わります</strong>
 <p>
 MOABB は <strong>within-session</strong>、<strong>cross-session</strong>、<strong>cross-subject</strong> を別の evaluation family として扱います。つまり、同じ 70% でも「同じ日・同じ人・同じ setup」で出た 70% と、「別日」や「別人」を hold-out した 70% は別の達成でございます。短期 state の揺れと長期 drift を先に整理したい場合は <a href="wiki/state-trait-and-drift.html">Wiki: state・trait・ドリフト</a> も合わせてご覧ください。
+</p>
+</div>
+<div class="note-box">
+<strong>foundation model を使うときも、dataset card は軽くなりません</strong>
+<p>
+最近の EEG foundation / self-supervised 系は有望ですが、そこで比較の土台になるのも結局は dataset です。pretraining corpus が巨大でも、<strong>channel mismatch</strong>、<strong>sample rate</strong>、<strong>missing channel</strong>、<strong>target session 利用の有無</strong> を隠すと score の意味は崩れます。実務上の読み方は <a href="wiki/eeg-foundation-models.html">Wiki: EEG foundation model と事前学習</a> にまとめました。
 </p>
 </div>
 <div class="note-box">
@@ -347,6 +359,64 @@ Musall et al. (2019) は、task 中の neural activity が uninstructed movement
 <strong>この節から出る site rule</strong>
 <p>
 今後このサイトでは、dataset card や baseline 結果に少なくとも <strong>(1) evaluation family</strong>、<strong>(2) 独立な hold-out 単位</strong>、<strong>(3) target session / target subject の使用有無</strong>、<strong>(4) recalibration の量と時点</strong>、<strong>(5) それでも止める主張</strong> を併記します。これが無い score は、L1 の限定つき decode として扱い、長期安定性や deployability へは上げません。
+</p>
+</div>
+</section>
+
+<section class="section" id="foundation-model-audit">
+<h2 class="section-title">2.6) foundation / self-supervised EEG model を使うときの追加監査</h2>
+<p>
+今回さらに深掘りすべきだった弱点は、サイトの Dataset 導線に <strong>EEG foundation model / self-supervised pretraining</strong> の実務監査が無く、最近の大規模事前学習をそのまま「dataset 問題が解けた」と誤読しうる点でした。<a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">Kostas et al. (2021)</a> は breadth を示しつつ downstream applicability は未確定だと述べ、<a href="https://papers.nips.cc/paper_files/paper/2023/file/f6b30f3e2dd9cb53bbf2024402d02295-Paper-Conference.pdf" target="_blank">Wang et al. (2023)</a> は sampling rate、channel、length、missing segment の mismatch 自体を cross-data 学習の中心問題に置きました。さらに <a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/47393e8594c82ce8fd83adc672cf9872-Abstract-Conference.html" target="_blank">Jiang et al. (2024)</a> と <a href="https://neurips.cc/virtual/2024/poster/93793" target="_blank">Wang et al. (2024)</a> は、electrode mismatch、varied task design、low SNR、inter-subject variability を解くために model 側の工夫を入れています。これは裏返すと、<strong>そこを出さない比較は比較不能</strong>だという意味でもございます。
+</p>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>Pretraining Card の項目</th>
+<th>最低限書くこと</th>
+<th>書かないと起きる誤読</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>pretraining corpus identity</strong></td>
+<td>使った corpus 名、version / snapshot、総時間、downstream dataset / subject / session との overlap audit です。</td>
+<td>train/test 分離を保ったように見えて、実際には近縁データが pretraining 側へ入っていた可能性を見落とします。</td>
+</tr>
+<tr>
+<td><strong>harmonization</strong></td>
+<td>channel map、reference、sample rate、window length、tokenization、missing-channel / missing-segment policy です。</td>
+<td>同じモデル名でも前処理と format 整形の差を、モデル能力の差と誤読します。</td>
+</tr>
+<tr>
+<td><strong>objective / adaptation regime</strong></td>
+<td>masked / autoregressive / contrastive の別、frozen / linear-probe / PEFT / full fine-tune の別、target data 使用量です。</td>
+<td>「pretraining が効いた」のか、「target data で強く適応した」のかを区別できません。</td>
+</tr>
+<tr>
+<td><strong>evaluation family</strong></td>
+<td>within-session、cross-session、cross-subject、device-holdout、longitudinal / closed-loop のどれか、独立な hold-out 単位です。</td>
+<td>same-day score を cross-day robustness や deployability と読み替えます。</td>
+</tr>
+<tr>
+<td><strong>stopped claim</strong></td>
+<td>この結果でもまだ言えないことを 1 行で固定します。たとえば source identifiability、direct validation、WBE state-completeness です。</td>
+<td>foundation model の成功を、そのまま生物学的十分性や source-level truth へ拡張します。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>この card は、本サイトの運用上の推論です</strong>
+<p>
+上の <strong>Pretraining Card</strong> は、各論文がそのまま規格として宣言しているものではなく、heterogeneous corpus pretraining を比較可能に保つために本サイトが引く運用ルールでございます。理由は単純で、pretraining corpus も dataset である以上、<strong>split の独立性</strong>、<strong>format harmonization</strong>、<strong>adaptation の量</strong> を出さなければ、downstream score の意味が固定できないからです。
+</p>
+</div>
+
+<div class="note-box">
+<strong>この節から出る site rule</strong>
+<p>
+今後このサイトでは、foundation / self-supervised 系の結果に通常の dataset card とは別に <strong>Pretraining Card</strong> を添えます。これが無い結果は、たとえ高スコアでも <strong>L1 の限定つき decode</strong> として扱い、cross-day stability、source imaging 改善、deployable loop、WBE 向け state reconstruction へは上げません。
 </p>
 </div>
 </section>
@@ -713,6 +783,11 @@ Mind-Uploadが目指すのは、単にデータを集めることではなく、
 <li><a href="https://doi.org/10.1038/s41597-022-01647-1" target="_blank">Ma et al. (2022), A large EEG dataset for studying cross-session variability in motor imagery BCI</a></li>
 <li><a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019), Single-trial neural dynamics are dominated by richly varied movements</a></li>
 <li><a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025), Long-term unsupervised recalibration of cursor-based intracortical BCIs</a></li>
+<li><a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">Kostas et al. (2021), BENDR</a></li>
+<li><a href="https://papers.nips.cc/paper_files/paper/2023/file/f6b30f3e2dd9cb53bbf2024402d02295-Paper-Conference.pdf" target="_blank">Wang et al. (2023), BIOT</a></li>
+<li><a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/47393e8594c82ce8fd83adc672cf9872-Abstract-Conference.html" target="_blank">Jiang et al. (2024), LaBraM</a></li>
+<li><a href="https://neurips.cc/virtual/2024/poster/93793" target="_blank">Wang et al. (2024), EEGPT</a></li>
+<li><a href="https://doi.org/10.1109/TBME.2025.3613730" target="_blank">Zhang et al. (2025), Cross Device Representation Consistency</a></li>
 <li><a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">PhysioNet: EEG Motor Movement/Imagery Dataset</a></li>
 <li><a href="https://physionet.org/content/chbmit/1.0.0/" target="_blank">PhysioNet: CHB-MIT Scalp EEG Database</a></li>
 <li><a href="https://physionet.org/content/sleep-edfx/1.0.0/" target="_blank">PhysioNet: Sleep-EDF Database Expanded</a></li>

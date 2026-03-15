@@ -15,6 +15,7 @@ page_highlights:
   - "ベースライン、ベンチマーク、事前登録、モデルカードは、役割が違います。"
   - "失敗例やネガティブ結果も、比較可能性の一部です。"
   - "multimodal や atlas prior を使う結果では、通常のモデルカードに加えて Fusion Card も必要です。"
+  - "foundation / self-supervised EEG model の結果では、通常のモデルカードに加えて Pretraining Card も必要です。"
   - "点数だけではなく、どう測り、どう失敗したかまで残すのが重要です。"
 known_points:
   - "比較可能な前進には、出発点、採点基準、事前ルール、結果の記録が必要です。"
@@ -58,6 +59,12 @@ recommended_pages:
 L1 以上の結果では、通常のモデルカードに加えて <a href="../verification.html#observability-budget">Observability Budget</a> を添付し、measurement stack、直接観測量、残る latent state、claim ceiling、abstention 条件を明示する運用にそろえました。さらに multimodal / atlas prior 結果では <a href="../verification.html#fusion-card">Fusion Card</a> を添付し、取得関係、時計系、登録誤差、融合モデル、single-modality baseline との差分、外部妥当化を同時に残します。
 </p>
 </div>
+<div class="note-box">
+<strong>foundation / self-supervised EEG model の追補</strong>
+<p>
+EEG foundation model を使う結果では、通常の model card だけでは比較可能性が足りません。pretraining corpus も dataset である以上、<strong>corpus identity</strong>、<strong>overlap audit</strong>、<strong>channel / reference / sampling の harmonization</strong>、<strong>adaptation regime</strong>、<strong>evaluation family</strong> を別紙で残す必要があります。本サイトではこれを <a href="eeg-foundation-models.html#pretraining-card">Pretraining Card</a> と呼びます。
+</p>
+</div>
 
 <section class="section" id="roles">
 <h2 class="section-title">まず役割を分ける</h2>
@@ -83,7 +90,7 @@ L1 以上の結果では、通常のモデルカードに加えて <a href="../v
 </tr>
 <tr>
 <td><strong>モデルカード</strong></td>
-<td>点数、弱点、リーク対策、失敗例、計算条件、さらに L1 以上では Observability Budget、multimodal / atlas prior 結果では Fusion Card を残します。</td>
+<td>点数、弱点、リーク対策、失敗例、計算条件、さらに L1 以上では Observability Budget、multimodal / atlas prior 結果では Fusion Card、foundation / self-supervised EEG 結果では Pretraining Card を残します。</td>
 </tr>
 <tr>
 <td><strong>失敗例・ネガティブ結果</strong></td>
@@ -182,7 +189,7 @@ L1 以上の結果では、通常のモデルカードに加えて <a href="../v
 <li><strong>ベースラインがあるか：</strong>何と比べたのかが明示されているか。</li>
 <li><strong>ベンチマークが固定されているか：</strong>データ、分割、指標が書かれているか。</li>
 <li><strong>事前登録があるか：</strong>あとから条件を変えていないか。</li>
-<li><strong>モデルカードや失敗例があるか：</strong>弱点や崩れ方に加え、L1 以上では Observability Budget、multimodal / atlas prior 結果では Fusion Card が見えるか。</li>
+<li><strong>モデルカードや失敗例があるか：</strong>弱点や崩れ方に加え、L1 以上では Observability Budget、multimodal / atlas prior 結果では Fusion Card、foundation / self-supervised EEG 結果では Pretraining Card が見えるか。</li>
 </ul>
 </div>
 </section>
