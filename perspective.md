@@ -5,8 +5,8 @@ description: "マインドアップロード実現のための中核となるコ
 article_type: Perspective
 subtitle: "脳の情報処理を別の基盤で再現し、心的機能を移植・複製するという研究仮説の現状と展望"
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
-note: "研究ノート (2026年1月改訂)"
+last_updated: "2026-03-15"
+note: "研究ノート (2026年3月再監査反映)"
 audience: "理論と実装のつながりまで追いたい人、限界や反論も含めて全体を知りたい人"
 reading_time: "30〜45分"
 page_intro: "このページは、マインドアップロードをめぐる理論・計測・実装の論点を、一次文献と限界を並べながら追う長い研究ノートです。楽観論だけでも悲観論だけでもなく、『どこまでは言えて、どこから先は未解決か』をはっきり分けて読めるようにしています。"
@@ -14,10 +14,12 @@ accuracy_note: "特定の意識理論がすでに正しいと確定した前提�
 page_highlights:
   - "理論の紹介だけで終わらず、実装へ落としたときの制約まで一緒に追います。"
   - "強い主張ほど、反証条件や代替説明を並べて確認します。"
+  - "局所 connectomics、非侵襲 source imaging、closed-loop 介入は別々の壁に当たるため、同列に読まない構成へ更新しました。"
   - "長文ですが、導入と注意書きだけでも全体の立場が分かる構成にしています。"
 known_points:
   - "主要理論のどれも、現時点では単独で決定打になっていません。"
   - "EEG 単体には逆問題や空間分解能の限界があり、強い主張の土台としては不足があります。"
+  - "局所 connectomics や source imaging の前進は、human whole-brain の state-complete 観測を意味しません。"
   - "因果的摂動、追試可能性、代替説明の排除を抜いた強い主張は危うい、という点はかなりはっきりしています。"
 unknown_points:
   - "どの理論の組み合わせが最終的に十分条件になるかは未確定です。"
@@ -36,6 +38,12 @@ wiki_links:
   - label: "Wiki: EEG前処理とQC"
     url: "/wiki/eeg-preprocessing-and-qc.html"
     description: "EEG の限界がどこから来るのかを、処理の流れから説明します。"
+  - label: "Wiki: 計測スタックごとの observability と claim ceiling"
+    url: "/wiki/measurement-stack-and-claim-ceiling.html"
+    description: "どの modality が何を直接見て、どこで主張上限に当たるかを整理します。"
+  - label: "Wiki: 恒常性可塑性と維持状態"
+    url: "/wiki/homeostatic-plasticity-and-maintenance-state.html"
+    description: "sleep / wake、髄鞘、グリア代謝を含む maintenance-state を補います。"
   - label: "Wiki: 主張と証拠の読み方"
     url: "/wiki/claims-and-evidence.html"
     description: "理論の話を、どの強さの主張かで整理しながら読む補助ページです。"
@@ -511,24 +519,61 @@ href="#ref-28">[28]</a></sup>。</li>
 </ol>
 
 <h3>因果構造・状態完全性・物理制約の検証境界（2026-03 監査で更新）</h3>
-<p>上記の実証プランを具体化するにあたり、GitHub Issues #64–#70 で出た論点は、「何を共通必須にし、何を探索トラックに残すか」を分けて整理するのが妥当でございます。強い主張ほど、推定器依存性と coarse-graining の影響を先に明示いたします。</p>
+<p>上記の実証プランを具体化するにあたり、今回もっとも改善すべきだったのは、異なる種類の限界を 1 つの「難しさ」として読ませていた点でございます。一次文献を突き合わせると、少なくとも <strong>observability</strong>、<strong>identifiability</strong>、<strong>maintenance-state</strong>、<strong>intervention</strong>、<strong>thermodynamic readout</strong> は別の壁であり、どれか 1 つの前進を残り全部の代替として読むことはできません。</p>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>壁</th>
+<th>一次文献が今支持すること</th>
+<th>まだ支持しないこと</th>
+<th>このページでの修正方針</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Observability の壁</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-024-07558-y">Dorkenwald et al. (2024)</a> と <a href="https://doi.org/10.1038/s41586-025-08790-w">MICrONS Consortium et al. (2025)</a> は、局所 connectomics と same-brain function の対応を大きく前進させました。また scalp EEG 側でも、forward model と頭部導電率の感度分析は監査可能です<sup><a href="#ref-5">[5]</a></sup><sup><a href="#ref-79">[79]</a></sup>。</td>
+<td>それでもなお、human whole-brain を state-complete に直接観測できたとは言えません。局所 digital twin や source imaging の改善を、そのまま全脳・全状態の可観測性へ読み替えることはできません。</td>
+<td>局所 connectomics、非侵襲 ESI、全脳 WBE を同列に書かず、measurement stack ごとの claim ceiling を先に明示します。</td>
+</tr>
+<tr>
+<td><strong>Identifiability の壁</strong></td>
+<td>EEG inverse problem は、head model、導電率仮定、モデル空間の比較を丁寧に扱えばかなり改善できます<sup><a href="#ref-5">[5]</a></sup><sup><a href="#ref-79">[79]</a></sup>。DCM 側でも、Regression DCM と Causal Fingerprinting は候補モデル族の比較と test-retest 監査を前進させます<sup><a href="#ref-96">[96]</a></sup>。</td>
+<td>しかし、改善された predictability や localization は、一般的一意復元を保証しません。観測データに適合する別モデル族や同値類が残る以上、「よく当たる」ことを「内部状態が一意に分かった」とは書けません。</td>
+<td>本ページでは solver 名より証拠鎖を優先し、family comparison、感度分析、棄権条件を必須にします。</td>
+</tr>
+<tr>
+<td><strong>Maintenance-state の壁</strong></td>
+<td><a href="https://doi.org/10.1016/j.cell.2016.01.046">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1016/j.neuron.2021.04.004">Torrado Pacheco et al. (2021)</a>、<a href="https://doi.org/10.1038/s41467-024-47838-5">Xu et al. (2024)</a> は sleep / wake に依存した homeostatic recovery を示し、<a href="https://doi.org/10.1038/s41593-023-01517-y">Looser et al. (2024)</a> は oligodendrocyte-axon metabolic coupling、<a href="https://doi.org/10.1038/s41586-024-07311-5">Cahill et al. (2024)</a> と <a href="https://doi.org/10.1073/pnas.2211572119">Lee et al. (2022)</a> は glial / active maintenance を強めました。</td>
+<td>same-day の decode 成績や短時間の activity match から、cross-day stability、overnight recovery、timing-sensitive maintenance まで同じとみなすことはできません。</td>
+<td>state-completeness gate に sleep history、髄鞘 / 遅延、glial / metabolic support を含め、cross-day claim では maintenance-state の縦断ログを要求します。</td>
+</tr>
+<tr>
+<td><strong>Intervention の壁</strong></td>
+<td><a href="https://doi.org/10.1016/j.brs.2023.02.009">Hernandez-Pavon et al. (2023)</a> が整理した TMS-EEG、<a href="https://doi.org/10.1126/science.abd0380">Flesher et al. (2021)</a> の双方向 BCI、<a href="https://doi.org/10.1038/s41591-024-03196-z">Oehrn et al. (2024)</a> の adaptive DBS は、局所サブシステムや疾患条件で強い causal evidence を与えます。</td>
+<td>それでも、局所 closed loop の成功は whole-brain branch-equivalence や本人性保存を直接支持しません。刺激部位、強度、latency/jitter、artifact 窓を外すと、比較自体が崩れます。</td>
+<td>介入 evidence は段階証拠として扱い、受動観測、held-out perturbation、online loop、長期適応運用を分けて書きます。</td>
+</tr>
+<tr>
+<td><strong>Thermodynamic readout の壁</strong></td>
+<td><a href="https://doi.org/10.1073/pnas.2109889118">Lynn et al. (2021)</a> と <a href="https://doi.org/10.1093/cercor/bhac177">de la Fuente et al. (2022)</a> は、粗視化した neural dynamics に time-irreversibility シグネチャが現れることを示しました。</td>
+<td>ただし、そこで扱われるのは coarse-grained neural data から得る information entropy production の lower bound であり、microscopic physical dissipation そのものではありません。<a href="https://doi.org/10.1038/s41467-025-66669-w">Ishihara &amp; Shimazaki (2025)</a> も、spiking から arrow of time を安定に測る難しさを残しています。</td>
+<td>EPR / irreversibility は補助ログへ下げ、主判定は OOD、摂動、外部妥当化、棄権条件の束で行います。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>この節で禁止する読み替え</strong>
+<p>
+「局所 connectomics が進んだから human whole-brain state が取れた」「ESI が改善したから内部状態が一意に復元できる」「closed loop が動いたから本人性まで検証できた」「irreversibility が出たから物理的同一性が保証された」という読み替えは、現時点の一次文献では支持されません。
+</p>
+</div>
 
 <ol style="margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.6;">
-<li style="margin-bottom: 12px;">
-<strong>DCMの適用限界と対策：</strong>EEG-based Dynamic Causal Modelling（DCM）はモデル同定可能性（model identifiability）の問題を内在します。特に、EEG の空間分解能制約下では、類似した観測データを生成する複数のモデルが存在し得ます。この問題に対し、Bayesian Model Reduction（BMR; Friston &amp; Penny, 2011）によるモデル空間の効率的探索と、Causal Fingerprinting（Frässle et al., 2021）<sup><a href="#ref-96">[96]</a></sup>による test-retest 信頼性の定量化を優先します。Regression DCM は従来の DCM に比べ、計算コストを抑えつつモデル比較の精度を維持できるため、大規模データへのスケーラビリティ確保に有用です。
-</li>
-<li style="margin-bottom: 12px;">
-<strong>因果指標は補助指標として扱います：</strong>反事実等価性（counterfactual equivalence）だけでは、エミュレーションの因果的忠実度を十分に評価できません。一方で、Effective Information、Causal Density、Symbolic Transfer Entropy（STE）<sup><a href="#ref-99">[99]</a></sup>は、課題依存性と実装依存性が大きく、単独で universal pass/fail を担えるほど標準化されていません。したがって本プロジェクトでは、これらを<strong>追加解析</strong>として用い、主要判定は事前登録した OOD 条件、摂動応答、不確実性、棄権条件、再テスト信頼性の束で行います。
-</li>
-<li style="margin-bottom: 12px;">
-<strong>connectome は scaffold であって state-complete ではありません：</strong><a href="https://doi.org/10.1038/s41586-024-07558-y">Dorkenwald et al. (2024)</a> による成体ショウジョウバエ全脳 connectome、<a href="https://doi.org/10.1038/s41586-025-08790-w">MICrONS Consortium et al. (2025)</a> による機能計測つき皮質 connectomics、<a href="https://doi.org/10.1038/s41586-025-08805-6">Gamlin et al. (2025)</a> による transcriptomic type ごとの接続差、<a href="https://doi.org/10.1038/s41586-024-07311-5">Cahill et al. (2024)</a> による astrocyte network encoding は、配線図が強い scaffold になることを示しました。しかし同時に、細胞型、内在興奮性と恒常性 set point、シナプス状態、遅延・髄鞘、神経修飾、グリア結合状態が落ちると、配線図だけでは動的再現の十分条件にならないことも示しております。したがって、L2 以上の主張には <strong>state-completeness gate</strong> を設け、欠測時は推定誤差または abstention を明示いたします。
-</li>
-<li style="margin-bottom: 12px;">
-<strong>熱力学指標は探索トラックに下げます：</strong><a href="https://doi.org/10.1073/pnas.2109889118">Lynn et al. (2021)</a> と <a href="https://doi.org/10.1093/cercor/bhac177">de la Fuente et al. (2022)</a> は、粗視化した neural dynamics に不可逆性シグネチャが現れることを示しましたが、Lynn ら自身が扱っている量は microscopic physical dissipation そのものではなく、coarse-grained neural data から得る <strong>information entropy production の lower bound</strong> です。さらに <a href="https://doi.org/10.1038/s41467-025-66669-w">Ishihara &amp; Shimazaki (2025)</a> は、neuronal spiking から time asymmetry を直接安定に評価すること自体がなお難しいと述べています。したがって、EPR / time irreversibility は有望な補助ログではありますが、<strong>同一性要件</strong>や<strong>単独の検証KPI</strong>には昇格させません。
-</li>
-<li style="margin-bottom: 12px;">
-<strong>最低限の証拠鎖を固定します：</strong>L2 以上の主張では、(a) 事前登録した hold-out / OOD 条件、(b) 摂動または外部基準つき妥当化、(c) 不確実性と棄権条件、(d) 代替モデルまたは同値類の報告、(e) 計算コストとハードウェア電力の切り分け、を最低ラインとします。熱力学ログはこの束に<strong>追加で添える補助解析</strong>であり、これだけで強い結論は出しません。
-</li>
+<li style="margin-bottom: 12px;"><strong>DCM と因果指標は family comparison 前提で使います：</strong>DCM、Effective Information、Causal Density、Symbolic Transfer Entropy（STE）<sup><a href="#ref-99">[99]</a></sup>は、追加解析としては有用ですが、単独の universal pass/fail には使いません。主要判定は、同値類の報告と再テスト信頼性を含む形で行います。</li>
+<li style="margin-bottom: 12px;"><strong>最低限の証拠鎖を固定します：</strong>L2 以上の主張では、(a) 事前登録した hold-out / OOD 条件、(b) 摂動または外部基準つき妥当化、(c) 不確実性と棄権条件、(d) 代替モデルまたは同値類の報告、(e) cross-day を含む maintenance-state ログ、(f) 計算コストとハードウェア電力の切り分け、を最低ラインとします。</li>
 </ol>
 
 </section>
@@ -1023,9 +1068,12 @@ style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 13px; li
 
 <h3>工学的限界</h3>
 <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; line-height: 1.6;">
-<li style="margin-bottom: 8px;"><strong>計測−再現ギャップ：</strong>非侵襲EEG（空間解像度~1-2cm）とWBEが要求する詳細度（シナプスレベル~nm）の間には約7桁のギャップがある。逆問題の不良設定性は原理的に解消されない。</li>
+<li style="margin-bottom: 8px;"><strong>Observability の上限：</strong>非侵襲 EEG / MEG / fMRI はマクロ proxy であり、<a href="https://doi.org/10.1038/s41586-024-07558-y">Dorkenwald et al. (2024)</a> や <a href="https://doi.org/10.1038/s41586-025-08790-w">MICrONS Consortium et al. (2025)</a> の局所 connectomics の前進も、そのまま human whole-brain の state-complete 観測を意味しません。</li>
+<li style="margin-bottom: 8px;"><strong>Identifiability の上限：</strong>EEG inverse problem は改善できますが、head model・導電率・候補モデル族への依存は残ります<sup><a href="#ref-5">[5]</a></sup><sup><a href="#ref-79">[79]</a></sup><sup><a href="#ref-96">[96]</a></sup>。したがって、高い当てはまりや局在精度を、そのまま内部状態の一意復元とみなすことはできません。</li>
+<li style="margin-bottom: 8px;"><strong>Maintenance-state の上限：</strong><a href="https://doi.org/10.1016/j.cell.2016.01.046">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1016/j.neuron.2021.04.004">Torrado Pacheco et al. (2021)</a>、<a href="https://doi.org/10.1038/s41467-024-47838-5">Xu et al. (2024)</a>、<a href="https://doi.org/10.1038/s41593-023-01517-y">Looser et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5">Cahill et al. (2024)</a> が示すように、sleep / wake、髄鞘、glial / metabolic support は別変数として残ります。same-day の再現と cross-day の維持は別問題です。</li>
+<li style="margin-bottom: 8px;"><strong>Intervention scope の上限：</strong><a href="https://doi.org/10.1016/j.brs.2023.02.009">TMS-EEG の推奨事項</a>、<a href="https://doi.org/10.1126/science.abd0380">双方向 BCI</a>、<a href="https://doi.org/10.1038/s41591-024-03196-z">adaptive DBS</a> は局所 causal gain を支持しますが、whole-brain branch-equivalence までは支持しません。latency / jitter / artifact の公開なしに比較可能性も担保できません。</li>
 <li style="margin-bottom: 8px;"><strong>再現性の現状：</strong>本プロジェクトが掲げるL0（第三者再現可能性）は、現時点では達成されていない。リポジトリは主にウェブサイトコンテンツであり、実行可能なコード・データ・環境情報は未公開である。</li>
-<li style="margin-bottom: 8px;"><strong>コネクトーム-ダイナミクスギャップの深刻さ：</strong>FlyWire（2024）やC. elegans（2019）のコネクトームが完成しても、それだけでは行動の予測に不十分であることが示されている。構造から機能への変換は、WBEの中核的未解決問題である。</li>
+<li style="margin-bottom: 8px;"><strong>コネクトーム-ダイナミクスギャップの深刻さ：</strong>FlyWire や MICrONS は構造 scaffold を強めましたが、構造から機能・維持・介入応答への写像は依然として中核的未解決問題でございます。</li>
 </ul>
 
 <h3>プロジェクト運営の限界</h3>

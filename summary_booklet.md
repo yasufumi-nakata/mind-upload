@@ -296,7 +296,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Perspective - 脳の情報処理を別の基盤で再現し、心的機能を移植・複製するという研究仮説の現状と展望 / 30〜45分</p>
   <p>このページは、マインドアップロード（WBE）を「本当に検証できる研究」にするための長い研究ノートです。内容は、<strong>どう測るか</strong>、<strong>どう読み取るか</strong>、<strong>どう実装するか</strong>の3段階で整理しています。最新研究の成果だけでなく、うまくいっていない点や限界も同じ重みで扱い、「どこまで言えて、どこから言えないか」をはっきり分ける構成にしています。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>理論の紹介だけで終わらず、実装へ落としたときの制約まで一緒に追います。</li><li>強い主張ほど、反証条件や代替説明を並べて確認します。</li><li>長文ですが、導入と注意書きだけでも全体の立場が分かる構成にしています。</li>
+    <li>理論の紹介だけで終わらず、実装へ落としたときの制約まで一緒に追います。</li><li>強い主張ほど、反証条件や代替説明を並べて確認します。</li><li>局所 connectomics、非侵襲 source imaging、closed-loop 介入は別々の壁に当たるため、同列に読まない構成へ更新しました。</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -309,7 +309,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Resource - 「何を使うか」と「どう再現するか」を分けずに最短ルートでつなぐ / 12〜20分</p>
   <p>このページは、「最初にどのデータで練習すればよいか」を決めるための実用リストです。まずは公開データで、<strong>同じ結果を再現できる状態（L0）</strong>を作り、その次に<strong>予測できるか・条件変更に耐えるか（L1〜L2）</strong>を確かめます。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>まずは共有基盤を押さえ、その後にスターターデータセットを見る順にしています。</li><li>スターターデータは L0〜L1 の練習台であり、EEG source imaging の ground truth ではありません。</li><li>最終目標は、第三者が同じ条件で走らせられる形へ寄せることです。</li>
+    <li>まずは共有基盤を押さえ、その後にスターターデータセットを見る順にしています。</li><li>スターターデータは L0〜L1 の練習台であり、EEG source imaging の ground truth ではありません。</li><li>スターターデータごとに、annotation provenance・時間忠実度・独立な split 単位が違います。</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -397,7 +397,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Primer - EEGを“魔法の心読み”にしないための現実的ガイド / 12〜18分</p>
   <p>EEGは、脳の中をそのまま見ているわけではなく、頭皮で測れた電気信号の「混ざった結果」を読んでいます。時間の変化には強い一方で、「脳のどこで起きたか」はぼやけやすいです。だからMind-Uploadでは、データ品質チェック（QC）とデータ整理の共通ルール（BIDS）を最優先にしています。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>EEGは時間変化を見るのが得意ですが、空間的にどこで起きたかを厳密に言うのは苦手です。</li><li>高密度EEGでも、source imaging の改善判定には個体別MRI・電極座標・外部基準が要ります。</li><li>Mind-Uploadでは、EEGを『全部を読む装置』ではなく、マクロな制約を与える計測として位置づけます。</li>
+    <li>EEGは時間変化を見るのが得意ですが、空間的にどこで起きたかを厳密に言うのは苦手です。</li><li>高密度EEGでも、source imaging の改善判定には個体別MRI・電極座標・外部基準が要ります。</li><li>前処理とQCは見栄え調整ではなく、どの主張を許すかを決める受理条件です。</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
