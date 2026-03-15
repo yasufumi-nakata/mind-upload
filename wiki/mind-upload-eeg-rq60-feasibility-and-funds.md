@@ -539,3 +539,12 @@ recommended_pages:
 - `1RQ=1検証命題=1応募テーマ=1主データ` の運用規則を継続し、汎用俯瞰へ戻さない方針を維持。
 - 参照EEGデータは `24 ID`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）で欠落なし。
 - 助成実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は引き続き参照可能。
+
+## 2026-03-15 18:03 JST 再検証ログ（本run / pull後更新）
+
+- 作業前に `main` と3サブモジュールを `pull --ff-only` し、基準コミットを `mind-upload=cf45498a5d6b`、`EEG-DATA=d05c3b7069a5`、`auto-research-funds=085b43eb13e5` に更新しました。
+- `mind-upload/research_harvest_50.md` の `60RQ` を正本として継続採用し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持します。
+- 参照EEGデータ `24 ID`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を確認しました。
+- 助成実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue/*.yaml` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再確認しました。
+- 方針は据え置き: 汎用俯瞰へ戻さず、RQごとに検証可否・応募テーマ・使用EEGデータを固定して書く運用を継続します。
+
