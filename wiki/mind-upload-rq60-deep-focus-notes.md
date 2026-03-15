@@ -210,3 +210,11 @@ recommended_pages:
 - 本ページで参照する EEG データIDは `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を再確認しました。
 - 助成実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `auto-research-funds` 側で全件参照可能を再確認しました。
 - 方針は継続: 汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` を維持し、RQ単位で深掘り記述を優先します。
+
+## 2026-03-15 14:03 JST 再検証ログ（本run / 全RQ深掘り固定の再確認）
+
+- `mind-upload/wiki/mind-upload-rq60-deep-focus-notes.md` の `RQ` 行を再カウントし、`60件`（`A/B/C=17/25/18`）を確認しました。
+- 全 `RQ` 行で `応募テーマ（助成キー）` は `G1-G6` のいずれかに割り当て済みで、空欄 `0` を確認しました。
+- `主EEG-DATA` 列で参照するデータIDは `24種類`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）で、`EEG-DATA/eeg_dataset_summary_ja.csv` 上の欠落 `0` を確認しました。
+- 助成実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `auto-research-funds` 配下で再参照可能を確認しました。
+- 方針は据え置きです。汎用要約ではなく、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続します。
