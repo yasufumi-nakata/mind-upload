@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-15 / 位置づけ: Reading guide
+- 更新日: 2026-03-16 / 位置づけ: Reading guide
 
 ## このページの役割
 このページは、Mind-Upload にある文献系ページの役割分担を整理する補助ページです。論文が多いページほど、役割を取り違えると読み方が崩れるため、『何をするページか』『どこまで確定扱いしないか』を先に説明します。
@@ -26,6 +26,7 @@
 ## いま分かっていること
 - 役割の違うページを分けると、量の多さと結論の強さを混同しにくくなります。
 - 論文集、文献地図、提案ページは、それぞれ読む目的が異なります。
+- 技術・自然科学では、source type と evidence class を分け、task demo の直後に mechanistic boundary paper を挟んだ方が読み違えを減らせます。
 - 重要な判断は、要約ではなく元論文や元ページへ戻って行う必要があります。
 
 ## まだ分かっていないこと
@@ -49,6 +50,11 @@
 <a href="https://mind-upload.com/mind_uploading_papers.html">論文集</a> は broad archive なので、年順の先頭がそのまま技術フロンティア順とは限りません。decode、speech neuroprosthesis、ESI direct validation、maintenance-state のような技術ルートを先に見たい場合は、論文集内の <strong>技術・自然科学の優先ルート</strong> から入ってください。
 </p>
 
+<strong>Badge と証拠クラスを分けたいとき</strong>
+<p>
+Scopus、arXiv、source_logged は入口や状態を示しますが、<strong>その論文が何を直接増やすか</strong>までは示しません。技術・自然科学の主導線では、direct validation、task-limited demo、mechanistic boundary / hidden-state evidence、dataset / benchmark / standard、review / context を別クラスとして読む必要があります。使い分けは <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status">Wiki: 文献のソース種別・状態・証拠クラスの読み方</a> にまとめました。
+</p>
+
 <h2>3つのページの違い</h2>
 <table>
 <thead>
@@ -63,13 +69,13 @@
 <tr>
 <td><strong>論文集</strong></td>
 <td>広く拾う入口</td>
-<td>年別の流れ、関連論文の存在、要約からの当たり付け。技術読者は優先ルートから主要一次文献へ入ります。</td>
+<td>年別の流れ、関連論文の存在、要約からの当たり付け。技術読者は優先ルートに加え、demo / validator / mechanistic boundary のどれかを見て主要一次文献へ入ります。</td>
 <td>各論文の最終評価をここだけで確定すること。</td>
 </tr>
 <tr>
 <td><strong>文献地図</strong></td>
 <td>未解決問題ごとの整理</td>
-<td>U番号ごとに、何が解けていて何が未解決かを見ること。</td>
+<td>U番号ごとに、何が解けていて何が未解決かを見ます。技術読者は U ごとに evidence class を見分け、demo と ceiling-setting paper を混ぜないようにします。</td>
 <td>引用数だけで結論の強さを決めること。</td>
 </tr>
 <tr>
@@ -109,18 +115,19 @@
 </tbody>
 </table>
 
-<h2>読み違えを防ぐ3つのルール</h2>
+<h2>読み違えを防ぐ4つのルール</h2>
 
 <h4>Rule</h4>
 <ul>
 <li><strong>量と強さを混同しない：</strong> 論文数や引用数は、結論の確定とは別です。</li>
+<li><strong>Badge と証拠クラスを混同しない：</strong> Scopus / arXiv / source_logged は入口や状態であり、direct validation、system demo、mechanistic boundary は別軸です。</li>
 <li><strong>要約で止めすぎない：</strong> 根拠として使うときは、必ず DOI や原文へ戻ります。</li>
 <li><strong>状態ラベルを読み違えない：</strong> source_logged、提案受理、文書反映は、それぞれ意味が違います。</li>
 </ul>
 
 <strong>Scopus / arXiv / source_logged の意味だけ先に確認したいとき</strong>
 <p>
-このページは役割差を説明する補助ページです。掲載元、文献種別、サイト内状態の違いを 1 枚で整理したい場合は、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status">Wiki: 文献のソース種別と状態ラベルの読み方</a> を先に見ると、論文集や文献地図の見え方が安定します。
+このページは役割差を説明する補助ページです。掲載元、文献種別、サイト内状態、evidence class の違いを 1 枚で整理したい場合は、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status">Wiki: 文献のソース種別・状態・証拠クラスの読み方</a> を先に見ると、論文集や文献地図の見え方が安定します。
 </p>
 
 <h2>次にどこへ戻るか</h2>

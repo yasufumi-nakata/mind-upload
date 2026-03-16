@@ -26,7 +26,7 @@
 
 ## 文献・参加
 - [Wiki：文献と証拠ページの読み方](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading)
-- [Wiki：文献のソース種別と状態ラベルの読み方](https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status)
+- [Wiki：文献のソース種別・状態・証拠クラスの読み方](https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status)
 - [Wiki：提案と状態ラベルの読み方](https://github.com/yasufumi-nakata/mind-upload/wiki/proposal-status-reading)
 - [Wiki：はじめての Issue の書き方](https://github.com/yasufumi-nakata/mind-upload/wiki/issue-writing-basics)
 - [Wiki：新しい情報の置き場所を決める基本](https://github.com/yasufumi-nakata/mind-upload/wiki/content-placement-basics)

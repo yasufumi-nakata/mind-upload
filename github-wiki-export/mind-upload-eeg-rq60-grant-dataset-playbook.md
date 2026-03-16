@@ -181,6 +181,15 @@ A/B/C 判定は `mind-upload-eeg-rq60-feasibility-and-funds.md` と同一基準�
 - 助成ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` と `auto-research-funds` で参照可能でした。
 - 実務運用は継続します。`1RQ=1提出判断` を維持し、汎用要約に戻さずRQ単位で申請文へ転記します。
 
+## 2026-03-16 19:04 JST 再検証ログ（本run / 申請固定表の継続確認）
+
+- 作業前に `main` と3サブモジュールを pull し、基準コミットを `mind-upload=d575cb4848bd`、`EEG-DATA=da82c1d37069`、`auto-research-funds=c92fd845bddf` に更新しました。
+- 正本 `research_harvest_50.md` の `リサーチクエスチョン分解` を再カウントし、`RQ_TOTAL=60` を再確認しました。
+- 本ページの全 `RQ` 行で `第一応募先/予備応募先/主EEG-DATA/最小成果物` の欠落 `0`、空欄 `0` を再確認しました。
+- `主EEG-DATA` として参照するID群（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）。
+- 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` と `auto-research-funds/grant_eeg_dataset_match.csv` で再参照可能でした。
+- 運用方針は据え置きです。汎用テーマ化ではなく `1RQ=1提出判断` を維持して、RQごとの申請テーマと使用EEGデータを固定します。
+
 ## 2026-03-16 06:03 JST 再検証ログ（本run / 申請固定表の再確認）
 
 - 作業前に `mind-upload=364217a`、`EEG-DATA=99f6801432`、`auto-research-funds=5b3c35e83` まで `main` を `pull --ff-only` で更新しました。

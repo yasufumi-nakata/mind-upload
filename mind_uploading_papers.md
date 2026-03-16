@@ -132,7 +132,7 @@ Badge は「どこから辿れる文献か」の手掛かりであり、それ�
 <section class="section" id="technical-fast-lane">
 <h2 class="section-title">2026-03 文献監査：技術・自然科学の優先ルート</h2>
 <p>
-このページの弱点は、<strong>年順のアーカイブ</strong>としては有用でも、<strong>実験的フロンティアへの入口</strong>としては並び順が弱い点でございます。技術・自然科学の観点でまず知りたいのは、(1) 非侵襲 decode がどこまで進んだか、(2) 侵襲 speech neuroprosthesis がどこまで closed loop を押し上げたか、(3) source imaging を direct validation でどこまで監査できるか、(4) multimodal 統合で何が本当に強くなり、どこで hemodynamic proxy ceiling に当たるか、(5) connectome の外に maintenance-state がどれだけ残るか、であって、法学・哲学・文化論の先頭表示ではありません。そこでこのページでは、以下を <strong>優先ルート</strong> として明示します。
+このページの弱点は、<strong>年順のアーカイブ</strong>としては有用でも、<strong>実験的フロンティアへの入口</strong>としては並び順が弱い点でございます。技術・自然科学の観点でまず知りたいのは、(1) 非侵襲 decode がどこまで進んだか、(2) 侵襲 speech neuroprosthesis がどこまで closed loop を押し上げたか、(3) source imaging を direct validation でどこまで監査できるか、(4) multimodal 統合で何が本当に強くなり、どこで hemodynamic proxy ceiling に当たるか、(5) connectome の外に maintenance-state と mechanistic boundary がどれだけ残るか、であって、法学・哲学・文化論の先頭表示ではありません。そこでこのページでは、以下を <strong>優先ルート</strong> として明示します。
 </p>
 <table class="data-table">
 <thead>
@@ -174,10 +174,10 @@ Badge は「どこから辿れる文献か」の手掛かりであり、それ�
 <td><a href="wiki/multimodal-integration-basics.html">Wiki: マルチモーダル統合の基本</a> / <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: 計測スタックごとの observability と claim ceiling</a></td>
 </tr>
 <tr>
-<td><strong>maintenance-state / hidden variable</strong></td>
-<td><a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a>、<a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Lee et al. (2022)</a></td>
-<td>sleep-dependent renormalization、oligodendrocyte-axon metabolic coupling、molecular turnover 下の memory maintenance が、connectome 外の状態変数として残ることを強く示します。</td>
-<td>配線図 + cell type だけで long-term dynamics が十分だ、という読みに替えてはいけません。</td>
+<td><strong>maintenance-state / mechanistic boundary</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a>、<a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>、<a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a></td>
+<td>cell type 内の morpho-electric 幅、sleep-dependent renormalization、myelin / metabolic support、astrocyte ensemble、connectome-constrained dynamics の縮退が、connectome 外に残る boundary condition だと分かります。</td>
+<td>配線図 + cell type + 高 score demo だけで long-term dynamics や state-complete reconstruction が十分だ、という読みに替えてはいけません。</td>
 <td><a href="wbe_101.html#state-completeness">WBE 101 の hidden state 節</a> / <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">恒常性可塑性と維持状態</a></td>
 </tr>
 </tbody>
@@ -188,11 +188,17 @@ Badge は「どこから辿れる文献か」の手掛かりであり、それ�
 技術・自然科学の一次証拠を探す場合は、まず上の 5 ルートのどれを見たいかを決めてください。そのうえで年別カードへ降り、要約ではなく DOI と原文要旨へ戻ります。年順の先頭にある論文が、そのまま strongest evidence を意味するわけではありません。
 </p>
 </div>
+<div class="note-box">
+<strong>demo と boundary paper を対で読む</strong>
+<p>
+decode や neuroprosthesis の高 score を見たときは、そのまま昇格させず、同じ論点に対する <strong>mechanistic boundary / hidden-state evidence</strong> を 1 本以上必ず併読してください。system demo は「何ができたか」を押し上げますが、Gouwens、Hengen、Xu、Looser、Cahill、Williamson、Beiran &amp; Litwin-Kumar のような論文は「何がまだ十分でないか」を押し上げます。技術 frontier を読むには、この両方が必要でございます。
+</p>
+</div>
 </section>
 <section class="section" id="technical-evidence-classes">
 <h2 class="section-title">2026-03 技術ルートでは evidence class を先に固定します</h2>
 <p>
-今回さらに修正すべきだった弱点は、<strong>Badge</strong> と <strong>年順</strong> だけでは、その論文が何を直接増やすのかが見えにくいことでした。たとえば <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> は <strong>local direct validation</strong> を押し上げますが、<a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a>、<a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a>、<a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>、<a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>、<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> が押し上げるのは <strong>task-limited system performance</strong> です。また <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019)</a>、<a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Burns et al. (2024)</a>、<a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe et al. (2025)</a>、<a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant (2018)</a>、<a href="https://proceedings.mlr.press/v37/blum15.html" target="_blank">Blum &amp; Hardt (2015)</a>、<a href="https://papers.neurips.cc/paper_files/paper/2019/hash/ee39e503b6bedf0c98c388b7e8589aca-Abstract.html" target="_blank">Roelofs et al. (2019)</a> は <strong>再現・同期・benchmark governance</strong> を強くします。したがってこのページでは、技術・自然科学の主導線で少なくとも次の 5 クラスを分けます。
+今回さらに修正すべきだった弱点は、<strong>Badge</strong> と <strong>年順</strong> だけでは、その論文が何を直接増やすのかが見えにくいことでした。たとえば <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> は <strong>local direct validation</strong> を押し上げますが、<a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a>、<a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a>、<a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>、<a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>、<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> が押し上げるのは <strong>task-limited system performance</strong> です。また <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019)</a>、<a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Burns et al. (2024)</a>、<a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe et al. (2025)</a>、<a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant (2018)</a>、<a href="https://proceedings.mlr.press/v37/blum15.html" target="_blank">Blum &amp; Hardt (2015)</a>、<a href="https://papers.neurips.cc/paper_files/paper/2019/hash/ee39e503b6bedf0c98c388b7e8589aca-Abstract.html" target="_blank">Roelofs et al. (2019)</a> は <strong>再現・同期・benchmark governance</strong> を強くします。さらに <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a>、<a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>、<a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> が押し上げるのは、<strong>何がまだ latent state / omitted mechanism として残るか</strong>という mechanistic boundary でございます。したがってこのページでは、技術・自然科学の主導線で少なくとも次の 6 クラスを分けます。
 </p>
 <table class="data-table">
 <thead>
@@ -223,6 +229,12 @@ Badge は「どこから辿れる文献か」の手掛かりであり、それ�
 <td>mechanistic truth や biological sufficiency の直接証拠ではありません。</td>
 </tr>
 <tr>
+<td><strong>mechanistic boundary / hidden-state evidence</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens 2021</a>、<a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen 2016</a>、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu 2024</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser 2024</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill 2024</a>、<a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson 2025</a>、<a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar 2025</a></td>
+<td>cell type だけで閉じない excitability、sleep-dependent recovery、myelin / metabolic support、astrocyte ensemble、connectome-constrained dynamics の縮退を固定できます。</td>
+<td>これ自体は direct validation や完成した実装を与えません。何がまだ足りないか、どの augmentation が必要かを示すクラスです。</td>
+</tr>
+<tr>
 <td><strong>review / synthesis</strong></td>
 <td>technical review、survey、benchmark synthesis</td>
 <td>分野地図、キーワード、論点の並べ替えです。</td>
@@ -239,7 +251,7 @@ Badge は「どこから辿れる文献か」の手掛かりであり、それ�
 <div class="note-box">
 <strong>このページでの読み順</strong>
 <p>
-まず <strong>evidence class</strong> を決め、その次に <strong>技術ルート</strong> を決め、最後に <strong>年順カード</strong> へ降りてください。年順は歴史の見取り図として有用ですが、技術 frontier を直接順位付けする表ではありません。
+まず <strong>evidence class</strong> を決め、その次に <strong>技術ルート</strong> を決め、最後に <strong>年順カード</strong> へ降りてください。とくに <strong>task-limited demo</strong> を見たら、同じ論点の <strong>mechanistic boundary / hidden-state evidence</strong> を 1 本以上併読し、何がまだ latent のままかを確認します。年順は歴史の見取り図として有用ですが、技術 frontier を直接順位付けする表ではありません。
 </p>
 </div>
 </section>
@@ -257,7 +269,7 @@ Badge は「どこから辿れる文献か」の手掛かりであり、それ�
 </tr>
 <tr>
 <td><strong>evidence class</strong></td>
-<td>その論文が direct validation、system demo、standard / benchmark、review、context のどれかを見分けます。技術・自然科学では、この列を年順より先に見ます。</td>
+<td>その論文が direct validation、system demo、mechanistic boundary、standard / benchmark、review、context のどれかを見分けます。技術・自然科学では、この列を年順より先に見ます。</td>
 </tr>
 <tr>
 <td><strong>和訳要約</strong></td>
@@ -283,7 +295,7 @@ Badge は「どこから辿れる文献か」の手掛かりであり、それ�
 <tbody>
 <tr>
 <td><strong>技術・自然科学の一次証拠だけ先に見たい</strong></td>
-<td>まず <a href="#technical-fast-lane">技術・自然科学の優先ルート</a> から入り、年順ではなく decode / neuroprosthesis / ESI / multimodal / maintenance-state の順に絞ってください。</td>
+<td>まず <a href="#technical-fast-lane">技術・自然科学の優先ルート</a> から入り、年順ではなく decode / neuroprosthesis / ESI / multimodal / maintenance-state・mechanistic boundary の順に絞ってください。</td>
 </tr>
 <tr>
 <td><strong>brain-to-text / language decode を見たい</strong></td>
@@ -299,7 +311,7 @@ Badge は「どこから辿れる文献か」の手掛かりであり、それ�
 </tr>
 <tr>
 <td><strong>構造推定・hidden state を見たい</strong></td>
-<td><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan 2020</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse 2023</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao 2025</a> と、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu 2024</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser 2024</a> を起点にしてください。</td>
+<td><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan 2020</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse 2023</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao 2025</a> と、<a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens 2021</a>、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu 2024</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser 2024</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill 2024</a>、<a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson 2025</a>、<a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar 2025</a> を起点にしてください。</td>
 </tr>
 </tbody>
 </table>

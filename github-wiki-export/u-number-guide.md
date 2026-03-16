@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-15 / 位置づけ: Reading guide
+- 更新日: 2026-03-16 / 位置づけ: Reading guide
 
 ## このページの役割
 このページは、文献地図で出てくる U番号を日常語で読み替えるための補助ページです。番号を暗記することが目的ではなく、『自分はどの塊から読めばよいか』を見つけやすくすることを目標にします。
@@ -100,7 +100,7 @@ U番号は試験の暗記項目ではありません。役割は「この文献�
 <td>U8</td>
 </tr>
 <tr>
-<td>connectome 外の maintenance-state</td>
+<td>connectome 外の maintenance-state と支持系</td>
 <td>U3</td>
 </tr>
 <tr>
@@ -138,7 +138,7 @@ U番号は試験の暗記項目ではありません。役割は「この文献�
 <tr>
 <td><strong>4</strong></td>
 <td><strong>U3</strong></td>
-<td>connectome と cell type の外に残る maintenance-state を確認しないと、長期主張を読みすぎるためです。</td>
+<td>sleep/homeostasis、髄鞘/代謝支持、astrocyte ensemble、clearance/immune support を分けて読まないと、構造の前進を長期主体同等性へ読みすぎるためです。</td>
 </tr>
 <tr>
 <td><strong>5</strong></td>

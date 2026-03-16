@@ -14,7 +14,7 @@ accuracy_note: "ラベルは読み方の補助であり、論文内容の正し�
 page_highlights:
   - "掲載元、文献種別、サイト内状態、証拠クラスを別の軸として分けて説明します。"
   - "Scopus や arXiv を、そのまま証拠の強さと誤読しないための基準を示します。"
-  - "技術・自然科学の読者向けに、direct validation、system demo、standard/benchmark、review/context の違いも固定します。"
+  - "技術・自然科学の読者向けに、direct validation、system demo、mechanistic boundary、standard/benchmark、review/context の違いも固定します。"
   - "どこで止めてよいか、どこから原文へ戻るべきかを表で確認できます。"
 known_points:
   - "同じ文献でも、掲載元、文献種別、サイト内状態、証拠クラスは別々に見る必要があります。"
@@ -103,7 +103,7 @@ recommended_pages:
 <section class="section" id="evidence-classes">
 <h2 class="section-title">技術・自然科学では『証拠クラス』を別軸で読みます</h2>
 <p>
-今回さらに固定すべきだったのは、<strong>掲載元や状態</strong>と、<strong>その論文が何を直接増やすか</strong>を分けることでした。これは普遍的な学術規格そのものではなく、<a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> のような <strong>direct validator</strong> と、<a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a>、<a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a>、<a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a> のような <strong>task-limited system demo</strong>、さらに <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019)</a>、<a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Burns et al. (2024)</a>、<a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe et al. (2025)</a>、<a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant (2018)</a>、<a href="https://proceedings.mlr.press/v37/blum15.html" target="_blank">Blum &amp; Hardt (2015)</a>、<a href="https://papers.neurips.cc/paper_files/paper/2019/hash/ee39e503b6bedf0c98c388b7e8589aca-Abstract.html" target="_blank">Roelofs et al. (2019)</a> が担う <strong>再現・比較・ガバナンス</strong> の役割差から、本サイトが引く <strong>運用上の分類</strong>でございます。
+今回さらに固定すべきだったのは、<strong>掲載元や状態</strong>と、<strong>その論文が何を直接増やすか</strong>を分けることでした。これは普遍的な学術規格そのものではなく、<a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> のような <strong>direct validator</strong> と、<a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a>、<a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a>、<a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a> のような <strong>task-limited system demo</strong>、<a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a>、<a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>、<a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> のような <strong>mechanistic boundary / hidden-state evidence</strong>、さらに <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019)</a>、<a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Burns et al. (2024)</a>、<a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe et al. (2025)</a>、<a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant (2018)</a>、<a href="https://proceedings.mlr.press/v37/blum15.html" target="_blank">Blum &amp; Hardt (2015)</a>、<a href="https://papers.neurips.cc/paper_files/paper/2019/hash/ee39e503b6bedf0c98c388b7e8589aca-Abstract.html" target="_blank">Roelofs et al. (2019)</a> が担う <strong>再現・比較・ガバナンス</strong> の役割差から、本サイトが引く <strong>運用上の分類</strong>でございます。
 </p>
 <table class="data-table">
 <thead>
@@ -134,6 +134,12 @@ recommended_pages:
 <td>生物学的十分性や mechanistic truth を直接は増やしません。</td>
 </tr>
 <tr>
+<td><strong>mechanistic boundary / hidden-state evidence</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens 2021</a>、<a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen 2016</a>、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu 2024</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser 2024</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill 2024</a>、<a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson 2025</a>、<a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar 2025</a></td>
+<td>何が latent state として残り、どの simplification が claim ceiling を作るかを強くします。</td>
+<td>それ自体は direct validation でも実装完了でもありません。何をまだ省略できないかを示すクラスです。</td>
+</tr>
+<tr>
 <td><strong>review / synthesis</strong></td>
 <td>technical review、survey、benchmark synthesis</td>
 <td>論点の地図、キーワード、比較軸を素早く揃えられます。</td>
@@ -150,7 +156,7 @@ recommended_pages:
 <div class="note-box">
 <strong>この分類の使い方</strong>
 <p>
-同じ文献が <strong>Scopus 掲載</strong>で、かつ<strong>一次研究</strong>で、しかも<strong>dataset / benchmark</strong> クラスに属することはありえます。重要なのは、最後に <strong>何を直接強くする論文なのか</strong> を固定することです。技術・自然科学の主導線では、まず <strong>direct validator</strong> と <strong>task-limited demo</strong> を見て、その後に <strong>standard / benchmark</strong> で比較条件を整えます。
+同じ文献が <strong>Scopus 掲載</strong>で、かつ<strong>一次研究</strong>で、しかも<strong>dataset / benchmark</strong> クラスに属することはありえます。重要なのは、最後に <strong>何を直接強くする論文なのか</strong> を固定することです。技術・自然科学の主導線では、まず <strong>direct validator</strong>、<strong>task-limited demo</strong>、<strong>mechanistic boundary / hidden-state evidence</strong> のどれかを見分け、その後に <strong>standard / benchmark</strong> で比較条件を整えます。
 </p>
 </div>
 </section>

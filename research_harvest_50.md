@@ -128,7 +128,7 @@ U番号は難しい理論名ではなく、「未解決問題の名前札」で�
 <section class="section" id="technical-priority-route-20260315">
 <h2 class="section-title">2026-03 技術・自然科学の優先ルート</h2>
 <p>
-このページの弱点は、<strong>入力受理ログ</strong>と<strong>実験フロンティア</strong>が近い位置に並ぶため、技術・自然科学の読者が「いま最も強い一次証拠はどこか」を入口で取り違えやすいことでした。そこで既定の読む順序を、<strong>計測と同定</strong>、<strong>直接妥当化と模倣分離</strong>、<strong>長期閉ループ安定性</strong>、<strong>connectome 外の maintenance-state</strong>、<strong>物理的接地</strong>の順に固定します。ここでの優先順位は、Tang ら (2023)、d'Ascoli ら (2025)、Willett ら (2023)、Littlejohn ら (2025)、Wairagkar ら (2025)、Unnwongse ら (2023)、Hao ら (2025)、Xu ら (2024)、Looser ら (2024)、Lee ら (2022) が示す現在の一次証拠の厚みに基づくものでございます。
+このページの弱点は、<strong>入力受理ログ</strong>と<strong>実験フロンティア</strong>が近い位置に並ぶため、技術・自然科学の読者が「いま最も強い一次証拠はどこか」を入口で取り違えやすいことでした。そこで既定の読む順序を、<strong>計測と同定</strong>、<strong>直接妥当化と模倣分離</strong>、<strong>長期閉ループ安定性</strong>、<strong>connectome 外の maintenance-state と mechanistic boundary</strong>、<strong>物理的接地</strong>の順に固定します。ここでの優先順位は、Tang ら (2023)、d'Ascoli ら (2025)、Willett ら (2023)、Littlejohn ら (2025)、Wairagkar ら (2025)、Unnwongse ら (2023)、Hao ら (2025)、Gouwens ら (2021)、Hengen ら (2016)、Xu ら (2024)、Looser ら (2024)、Cahill ら (2024)、Williamson ら (2025)、Beiran &amp; Litwin-Kumar (2025) が示す現在の一次証拠の厚みに基づくものでございます。
 </p>
 <table class="data-table">
 <thead>
@@ -159,10 +159,10 @@ U番号は難しい理論名ではなく、「未解決問題の名前札」で�
 <td>within-session の成功だけで、週〜月スケールの運用可能性を断言することです。</td>
 </tr>
 <tr>
-<td><strong>4. maintenance-state</strong></td>
+<td><strong>4. maintenance-state / mechanistic boundary</strong></td>
 <td><strong>U3</strong></td>
-<td>sleep-dependent homeostasis、myelin/metabolic support、active maintenance を落としていないかです。</td>
-<td>connectome と cell type だけで長期ダイナミクスが閉じたとみなすことです。</td>
+<td>sleep-dependent homeostasis、myelin/metabolic support、astrocyte ensemble、connectome-constrained dynamics の縮退を落としていないかです。</td>
+<td>connectome と cell type と高 score demo だけで長期ダイナミクスが閉じたとみなすことです。</td>
 </tr>
 <tr>
 <td><strong>5. 物理的接地</strong></td>
@@ -183,7 +183,7 @@ U番号は難しい理論名ではなく、「未解決問題の名前札」で�
 <section class="section" id="evidence-class-rule-20260316">
 <h2 class="section-title">2026-03 文献地図の共通 rule：state label と evidence class は別です</h2>
 <p>
-今回さらに深掘りして見えた弱点は、<strong>source_logged / curated</strong> のような <strong>サイト内状態</strong> と、<strong>その引用が U のどの部分を直接押し上げるか</strong> が、まだ十分に分離されていなかった点でございます。たとえば <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> は <strong>local direct validation</strong> を押し上げますが、<a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a>、<a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a>、<a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>、<a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a> は <strong>task-limited subsystem performance</strong> を押し上げる論文です。さらに <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019)</a>、<a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Burns et al. (2024)</a>、<a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe et al. (2025)</a>、<a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant (2018)</a>、<a href="https://proceedings.mlr.press/v37/blum15.html" target="_blank">Blum &amp; Hardt (2015)</a>、<a href="https://papers.neurips.cc/paper_files/paper/2019/hash/ee39e503b6bedf0c98c388b7e8589aca-Abstract.html" target="_blank">Roelofs et al. (2019)</a> は <strong>再現・benchmark governance</strong> を押し上げます。したがって文献地図では、状態ラベルとは別に evidence class を見ます。
+今回さらに深掘りして見えた弱点は、<strong>source_logged / curated</strong> のような <strong>サイト内状態</strong> と、<strong>その引用が U のどの部分を直接押し上げるか</strong> が、まだ十分に分離されていなかった点でございます。たとえば <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> は <strong>local direct validation</strong> を押し上げますが、<a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a>、<a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a>、<a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>、<a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a> は <strong>task-limited subsystem performance</strong> を押し上げる論文です。さらに <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019)</a>、<a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Burns et al. (2024)</a>、<a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe et al. (2025)</a>、<a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant (2018)</a>、<a href="https://proceedings.mlr.press/v37/blum15.html" target="_blank">Blum &amp; Hardt (2015)</a>、<a href="https://papers.neurips.cc/paper_files/paper/2019/hash/ee39e503b6bedf0c98c388b7e8589aca-Abstract.html" target="_blank">Roelofs et al. (2019)</a> は <strong>再現・benchmark governance</strong> を押し上げます。加えて <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a>、<a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>、<a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> は、<strong>どの latent state と omitted mechanism がまだ claim ceiling を作るか</strong>を押し上げます。したがって文献地図では、状態ラベルとは別に evidence class を見ます。
 </p>
 <table class="data-table">
 <thead>
@@ -214,6 +214,12 @@ U番号は難しい理論名ではなく、「未解決問題の名前札」で�
 <td>hidden state や mechanistic sufficiency を直接は解きません。</td>
 </tr>
 <tr>
+<td><strong>mechanistic boundary / hidden-state evidence</strong></td>
+<td>U3/U10 を中心に、U4/U8/U13 へ跨る claim ceiling と augmentation target を押し上げます。</td>
+<td><a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens 2021</a>、<a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen 2016</a>、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu 2024</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser 2024</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill 2024</a>、<a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson 2025</a>、<a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar 2025</a></td>
+<td>direct validation や完成した実装を与えるのではなく、何がまだ latent で、どの simplification が危険かを固定するクラスです。</td>
+</tr>
+<tr>
 <td><strong>review / synthesis / context</strong></td>
 <td>論点の地図、周辺文脈、次に追う一次文献の当たり付けを与えます。</td>
 <td>review、survey、総説、context 文献</td>
@@ -224,7 +230,13 @@ U番号は難しい理論名ではなく、「未解決問題の名前札」で�
 <div class="note-box">
 <strong>文献地図での読み方</strong>
 <p>
-もし引用が <strong>curated</strong> でも、その evidence class が <strong>dataset / benchmark</strong> なら、「比較条件が整った」とは読めますが、「hidden state が解けた」とは読みません。逆に <strong>task-limited demo</strong> が増えても、それだけで U4/U13 が閉じたとは書きません。状態ラベルは運用、evidence class は技術的効き方でございます。
+もし引用が <strong>curated</strong> でも、その evidence class が <strong>dataset / benchmark</strong> なら、「比較条件が整った」とは読めますが、「hidden state が解けた」とは読みません。逆に <strong>task-limited demo</strong> が増えても、それだけで U4/U13 が閉じたとは書きません。さらに <strong>mechanistic boundary / hidden-state evidence</strong> は、「まだ何が足りないか」を押し上げるクラスであり、demo と同じ意味では読みません。状態ラベルは運用、evidence class は技術的効き方でございます。
+</p>
+</div>
+<div class="note-box">
+<strong>高 score 論文のあとに必ず挟む 1 本</strong>
+<p>
+U4/U8/U13 の高 score 論文を読んだ直後は、同じテーマに対する <strong>mechanistic boundary / hidden-state evidence</strong> を 1 本以上挟んでください。system demo が押し上げるのは performance であり、boundary paper が押し上げるのは sufficiency ceiling と omitted variable の一覧です。この 2 つを混ぜると、最も危険な過大解釈が起きます。
 </p>
 </div>
 </section>

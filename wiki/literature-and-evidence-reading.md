@@ -14,13 +14,13 @@ accuracy_note: "このページは読み方の補助です。個別論文や個�
 page_highlights:
   - "論文集は広く拾う入口、文献地図は未解決問題ごとの整理、提案ページは実装方針の統合です。"
   - "論文数、引用数、状態ラベルを、そのまま結論の強さと読まないための補助です。"
-  - "技術・自然科学では、Badge や source_logged だけでなく evidence class を分けて読む必要があります。"
+  - "技術・自然科学では、Badge や source_logged だけでなく evidence class を分け、demo と mechanistic boundary を混同しない必要があります。"
   - "どこで止めてよいか、どこまで原文へ戻るべきかを示します。"
   - "技術・自然科学の一次証拠を追うときは、年順ではなく論文集内の優先ルートから入る方が安全です。"
 known_points:
   - "役割の違うページを分けると、量の多さと結論の強さを混同しにくくなります。"
   - "論文集、文献地図、提案ページは、それぞれ読む目的が異なります。"
-  - "技術・自然科学では、source type と evidence class を分けた方が読み違えを減らせます。"
+  - "技術・自然科学では、source type と evidence class を分け、task demo の直後に mechanistic boundary paper を挟んだ方が読み違えを減らせます。"
   - "重要な判断は、要約ではなく元論文や元ページへ戻って行う必要があります。"
 unknown_points:
   - "どの論文が最終的に中心的根拠として残るかは、今後の整理で変わる可能性があります。"
@@ -72,7 +72,7 @@ recommended_pages:
 <div class="note-box">
 <strong>Badge と証拠クラスを分けたいとき</strong>
 <p>
-Scopus、arXiv、source_logged は入口や状態を示しますが、<strong>その論文が何を直接増やすか</strong>までは示しません。技術・自然科学の主導線では、direct validation、task-limited demo、dataset / benchmark / standard、review / context を別クラスとして読む必要があります。使い分けは <a href="paper-source-types-and-evidence-status.html">Wiki: 文献のソース種別・状態・証拠クラスの読み方</a> にまとめました。
+Scopus、arXiv、source_logged は入口や状態を示しますが、<strong>その論文が何を直接増やすか</strong>までは示しません。技術・自然科学の主導線では、direct validation、task-limited demo、mechanistic boundary / hidden-state evidence、dataset / benchmark / standard、review / context を別クラスとして読む必要があります。使い分けは <a href="paper-source-types-and-evidence-status.html">Wiki: 文献のソース種別・状態・証拠クラスの読み方</a> にまとめました。
 </p>
 </div>
 
@@ -91,13 +91,13 @@ Scopus、arXiv、source_logged は入口や状態を示しますが、<strong>�
 <tr>
 <td><strong>論文集</strong></td>
 <td>広く拾う入口</td>
-<td>年別の流れ、関連論文の存在、要約からの当たり付け。技術読者は優先ルートに加え、evidence class を見て主要一次文献へ入ります。</td>
+<td>年別の流れ、関連論文の存在、要約からの当たり付け。技術読者は優先ルートに加え、demo / validator / mechanistic boundary のどれかを見て主要一次文献へ入ります。</td>
 <td>各論文の最終評価をここだけで確定すること。</td>
 </tr>
 <tr>
 <td><strong>文献地図</strong></td>
 <td>未解決問題ごとの整理</td>
-<td>U番号ごとに、何が解けていて何が未解決かを見ます。技術読者は U ごとに evidence class も見分けます。</td>
+<td>U番号ごとに、何が解けていて何が未解決かを見ます。技術読者は U ごとに evidence class を見分け、demo と ceiling-setting paper を混ぜないようにします。</td>
 <td>引用数だけで結論の強さを決めること。</td>
 </tr>
 <tr>
@@ -146,7 +146,7 @@ Scopus、arXiv、source_logged は入口や状態を示しますが、<strong>�
 <h4>Rule</h4>
 <ul>
 <li><strong>量と強さを混同しない：</strong> 論文数や引用数は、結論の確定とは別です。</li>
-<li><strong>Badge と証拠クラスを混同しない：</strong> Scopus / arXiv / source_logged は入口や状態であり、direct validation や system demo とは別軸です。</li>
+<li><strong>Badge と証拠クラスを混同しない：</strong> Scopus / arXiv / source_logged は入口や状態であり、direct validation、system demo、mechanistic boundary は別軸です。</li>
 <li><strong>要約で止めすぎない：</strong> 根拠として使うときは、必ず DOI や原文へ戻ります。</li>
 <li><strong>状態ラベルを読み違えない：</strong> source_logged、提案受理、文書反映は、それぞれ意味が違います。</li>
 </ul>

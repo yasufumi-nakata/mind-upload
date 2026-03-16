@@ -402,3 +402,11 @@ A/B/C判定は mind-upload-eeg-rq60-feasibility-and-funds と同一。Cは『重
 - 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue/*.yaml` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で全件参照可能でした。
 - EEG参照の固定ルールは継続します。`EEG-DATA/eeg_dataset_summary_ja.csv` の数値IDは再採番があるため、提出・再現ログは `D1-D16 + DOI`（`auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` 正本）を基準にします。
 - 方針を維持します。汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` を1件ずつ深掘りして記述します。
+
+## 2026-03-16 19:04 JST 再検証ログ（本run / deep-focus運用の継続）
+
+- 作業前に `main` と3サブモジュールを pull し、基準コミットを `mind-upload=d575cb4848bd`、`EEG-DATA=da82c1d37069`、`auto-research-funds=c92fd845bddf` に更新しました。
+- 正本 `mind-upload/research_harvest_50.md` を再照合し、`RQ_TOTAL=60` を再確認しました（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）。
+- 本ページで参照する `Ux-y` は `60件` を維持し、`mind-upload-eeg-rq60-feasibility-and-funds.md` の判定内訳 `A/B/C=17/25/18` と整合していることを確認しました。
+- 助成キー `G1-G6` と EEG データ参照ID群（24件）は、それぞれ `grant_queue + auto-research-funds` と `EEG-DATA/eeg_dataset_summary_ja.csv` で実在確認済み（欠落 `0`）。
+- 本runでも方針は据え置きです。汎用要約を避け、`1RQ=1検証命題=1応募テーマ=1主データ` を維持して深掘り記述を継続します。
