@@ -255,7 +255,7 @@ Temporal Validity Card が無い場合、本サイトでは原則として <stro
 <li><strong>state と trait を同じ指標で報告しない：</strong>短期変動と長期骨格を別列で残します。</li>
 <li><strong>trait は骨格として示す：</strong>latent dynamics、similarity matrix、fingerprint、stable subspace のいずれかを明示します。</li>
 <li><strong>drift は 2 系統に分ける：</strong>生体側 representational drift と interface / decoder drift を別ログにします。</li>
-<li><strong>fixed decoder interval を必ず出す：</strong>再較正なしで何日もったかを にしません。</li>
+<li><strong>fixed decoder interval を必ず出す：</strong>再較正なしで何日もったかを hidden にしません。</li>
 <li><strong>recalibration burden も性能です：</strong>再較正頻度、所要時間、fallback の内訳を accuracy と別に出します。</li>
 <li><strong>縦断比較には session 日付を入れる：</strong>日内、日間、週単位、月単位のどれかを明記します。</li>
 </ul>
@@ -273,7 +273,7 @@ Temporal Validity Card が無い場合、本サイトでは原則として <stro
 <li>Gregory, N. S., et al. (2023). Structural and functional changes of deep layer pyramidal neurons surrounding implanted microelectrode arrays in rat motor cortex. <em>Journal of Neural Engineering</em>, 20(4), 046022. <a href="https://doi.org/10.1088/1741-2552/ace8ac" target="_blank">doi:10.1088/1741-2552/ace8ac</a></li>
 <li>Roth, Z. N., &amp; Merriam, E. P. (2023). Representations in human primary visual cortex drift over time. <em>Nature Communications</em>, 14, 4422. <a href="https://doi.org/10.1038/s41467-023-40144-w" target="_blank">doi:10.1038/s41467-023-40144-w</a></li>
 <li>Noda, T., Kienle, E., Eppler, J.-B., Aschauer, D. F., Kaschube, M., Loewenstein, Y., &amp; Rumpel, S. (2025). Homeostasis of a representational map in the neocortex. <em>Nature Neuroscience</em>, 28, 1533-1545. <a href="https://doi.org/10.1038/s41593-025-01982-7" target="_blank">doi:10.1038/s41593-025-01982-7</a></li>
-<li>Wilson, G. H., Stein, E. A., Kamdar, F., Avansino, D. T., Pun, T. K., Gross, R., Hosman, T., Singer-Clark, T., Kapitonava, A., Hochberg, L. R., Simeral, J. D., Shenoy, K. V., Druckmann, S., Henderson, J. M., &amp; Willett, F. R. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a Markov model. <em>Nature Biomedical Engineering</em>. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Wilson, G. H., Stein, E. A., Kamdar, F., Avansino, D. T., Pun, T. K., Gross, R., Hosman, T., Singer-Clark, T., Kapitonava, A., Hochberg, L. R., Simeral, J. D., Shenoy, K. V., Druckmann, S., Henderson, J. M., &amp; Willett, F. R. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <em>Nature Biomedical Engineering</em>. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
 <li>Wairagkar, M., Card, N. S., Singer-Clark, T., Hou, X., Iacobacci, C., Miller, L. M., Hochberg, L. R., Brandman, D. M., &amp; Stavisky, S. D. (2025). An instantaneous voice-synthesis neuroprosthesis. <em>Nature</em>, 644, 145-152. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
 </ol>
 

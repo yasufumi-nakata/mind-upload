@@ -229,7 +229,7 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <td><strong>+ same-brain function / behavior</strong></td>
 <td>同一個体で co-registered な機能計測と行動状態です。</td>
 <td>MICrONS は同じマウスで dense neural activity、EM connectome、pupil diameter、locomotion を結び、構造と state-dependent function を同一脳内で比較できる足場を作りました。</td>
-<td>mouse visual cortex の特定課題・特定状態での前進であり、全脳・全状態の一般化や state の十分性までは保証しません。</td>
+<td>mouse visual cortex の特定課題・特定状態での前進であり、全脳・全状態の一般化や hidden state の十分性までは保証しません。</td>
 </tr>
 <tr>
 <td><strong>+ transcriptomic / cell-type label</strong></td>

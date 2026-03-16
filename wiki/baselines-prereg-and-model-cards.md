@@ -16,6 +16,7 @@ page_highlights:
   - "失敗例やネガティブ結果も、比較可能性の一部です。"
   - "multimodal や atlas prior を使う結果では、通常のモデルカードに加えて Fusion Card も必要です。"
   - "foundation / self-supervised EEG model の結果では、通常のモデルカードに加えて Pretraining Card も必要です。"
+  - "確率・区間・予測集合・棄権を出す結果では、通常のモデルカードに加えて Calibration & Abstention Card も必要です。"
   - "因果・閉ループ結果では、通常のモデルカードに加えて Intervention Card も必要です。"
   - "点数だけではなく、どう測り、どう失敗したかまで残すのが重要です。"
 known_points:
@@ -57,13 +58,19 @@ recommended_pages:
 <div class="note-box">
 <strong>2026-03 追補</strong>
 <p>
-L1 以上の結果では、通常のモデルカードに加えて <a href="../verification.html#observability-budget">Observability Budget</a> を添付し、measurement stack、直接観測量、残る latent state、claim ceiling、abstention 条件を明示する運用にそろえました。さらに multimodal / atlas prior 結果では <a href="../verification.html#fusion-card">Fusion Card</a> を添付し、取得関係、時計系、登録誤差、融合モデル、single-modality baseline との差分、外部妥当化を同時に残します。加えて因果・閉ループ結果では <a href="../verification.html#intervention-card">Intervention Card</a> を添付し、trigger rule、timing audit、control / sham、安全停止、再較正負荷を固定します。
+L1 以上の結果では、通常のモデルカードに加えて <a href="../verification.html#observability-budget">Observability Budget</a> を添付し、measurement stack、直接観測量、残る latent state、claim ceiling、abstention 条件を明示する運用にそろえました。さらに <strong>確率・区間・予測集合・棄権</strong> を出す結果では <a href="../verification.html#calibration-abstention-card">Calibration &amp; Abstention Card</a> を添付し、fit / calibration / test 分離、evaluation family、coverage-risk、fallback policy を固定します。multimodal / atlas prior 結果では <a href="../verification.html#fusion-card">Fusion Card</a> を添付し、取得関係、時計系、登録誤差、融合モデル、single-modality baseline との差分、外部妥当化を同時に残します。加えて因果・閉ループ結果では <a href="../verification.html#intervention-card">Intervention Card</a> を添付し、trigger rule、timing audit、control / sham、安全停止、再較正負荷を固定します。
 </p>
 </div>
 <div class="note-box">
 <strong>foundation / self-supervised EEG model の追補</strong>
 <p>
 EEG foundation model を使う結果では、通常の model card だけでは比較可能性が足りません。pretraining corpus も dataset である以上、<strong>corpus identity</strong>、<strong>overlap audit</strong>、<strong>channel / reference / sampling の harmonization</strong>、<strong>adaptation regime</strong>、<strong>evaluation family</strong> を別紙で残す必要があります。本サイトではこれを <a href="eeg-foundation-models.html#pretraining-card">Pretraining Card</a> と呼びます。
+</p>
+</div>
+<div class="note-box">
+<strong>confidence / 区間 / 棄権の追補</strong>
+<p>
+confidence や posterior を付けた結果、prediction set を返す結果、low-confidence 時に abstain する結果も、通常の model card だけでは比較可能性が足りません。fit / calibration / test を分けずに threshold を調整すると、出力の意味そのものが崩れるためです。本サイトではこれを <a href="../verification.html#calibration-abstention-card">Calibration &amp; Abstention Card</a> で管理し、詳しい読み方は <a href="uncertainty-confidence-and-abstention.html">Wiki: 不確実性・校正・棄権</a> にまとめています。
 </p>
 </div>
 
@@ -91,7 +98,7 @@ EEG foundation model を使う結果では、通常の model card だけでは�
 </tr>
 <tr>
 <td><strong>モデルカード</strong></td>
-<td>点数、弱点、リーク対策、失敗例、計算条件、さらに L1 以上では Observability Budget、multimodal / atlas prior 結果では Fusion Card、foundation / self-supervised EEG 結果では Pretraining Card、因果・閉ループ結果では Intervention Card を残します。</td>
+<td>点数、弱点、リーク対策、失敗例、計算条件、さらに L1 以上では Observability Budget、確率・区間・予測集合・棄権を出す結果では Calibration &amp; Abstention Card、multimodal / atlas prior 結果では Fusion Card、foundation / self-supervised EEG 結果では Pretraining Card、因果・閉ループ結果では Intervention Card を残します。</td>
 </tr>
 <tr>
 <td><strong>失敗例・ネガティブ結果</strong></td>
@@ -185,6 +192,22 @@ EEG foundation model を使う結果では、通常の model card だけでは�
 </div>
 </section>
 
+<section class="section" id="calibration-card">
+<h2 class="section-title">確率や棄権を出す結果で追加するもの</h2>
+<p>
+同じ `confidence` や `posterior` という語でも、fit split と calibration split を分けたか、within-session なのか cross-day なのか、prediction set を返したのか low-confidence 時に abstain したのかで意味が変わります。したがって本サイトでは、確率・区間・予測集合・棄権を前面に出す結果を通常の model card だけで受理しません。<a href="../verification.html#calibration-abstention-card">Verification の Calibration &amp; Abstention Card</a> を追加し、<strong>出力の型</strong>、<strong>fit / calibration / test の分離</strong>、<strong>evaluation family</strong>、<strong>coverage-risk</strong>、<strong>fallback policy</strong> まで残します。
+</p>
+<div class="key-points">
+<h4>Calibration &amp; Abstention Card で固定すること</h4>
+<ul>
+<li><strong>uncertainty target：</strong>class probability、interval、prediction set、abstention flag のどれを出したか。</li>
+<li><strong>split / slice：</strong>fit / calibration / test の分離、within-session / cross-session / cross-subject / temporal のどれで評価したか。</li>
+<li><strong>metrics / validity：</strong>ECE、Brier、NLL、empirical coverage、set size、coverage-risk、false alarm ceiling。</li>
+<li><strong>fallback / recalibration：</strong>re-measure、manual review、silence / freeze、recalibration trigger。</li>
+</ul>
+</div>
+</section>
+
 <section class="section" id="negative-results">
 <h2 class="section-title">失敗例はなぜ大事か</h2>
 <p>
@@ -206,7 +229,7 @@ EEG foundation model を使う結果では、通常の model card だけでは�
 <li><strong>ベースラインがあるか：</strong>何と比べたのかが明示されているか。</li>
 <li><strong>ベンチマークが固定されているか：</strong>データ、分割、指標が書かれているか。</li>
 <li><strong>事前登録があるか：</strong>あとから条件を変えていないか。</li>
-<li><strong>モデルカードや失敗例があるか：</strong>弱点や崩れ方に加え、L1 以上では Observability Budget、multimodal / atlas prior 結果では Fusion Card、foundation / self-supervised EEG 結果では Pretraining Card、因果・閉ループ結果では Intervention Card が見えるか。</li>
+<li><strong>モデルカードや失敗例があるか：</strong>弱点や崩れ方に加え、L1 以上では Observability Budget、確率・区間・予測集合・棄権を出す結果では Calibration &amp; Abstention Card、multimodal / atlas prior 結果では Fusion Card、foundation / self-supervised EEG 結果では Pretraining Card、因果・閉ループ結果では Intervention Card が見えるか。</li>
 </ul>
 </div>
 </section>

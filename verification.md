@@ -19,6 +19,7 @@ page_highlights:
   - "L2 以上では、Observability Budget に加えて latent-state error budget も付け、どの未観測状態がまだ claim を止めるかまで公開します。"
   - "L2 以上の介入・閉ループ結果では、Intervention Card で trigger rule・timing audit・control/sham・安全停止・再較正負荷を固定します。"
   - "cross-day / longitudinal claim では、Temporal Validity Card で fixed decoder interval・state 注釈・recalibration burden・transfer ceiling を独立監査します。"
+  - "確率・区間・予測集合・棄権を出す結果では、Calibration & Abstention Card で fit/calibration/test 分離・evaluation family・coverage-risk・fallback を固定します。"
 known_points:
   - "標準、共有基盤、評価、監査をセットでそろえないと、比較可能な前進は作れません。"
   - "L0〜L2 では、再現性と反証条件を事前に設計することができます。"
@@ -352,7 +353,7 @@ BIDS、OpenNeuro、PhysioNet、BIDS Validator、benchmark は全部「研究基�
 <div class="stage-number">04</div>
 <div class="stage-body">
 <h4>Leaderboard & Model Cards（比較の運用）</h4>
-<p>スコアだけでなく、データリーク対策、失敗例、計算資源、既知の弱点、さらに leaderboard / challenge 結果では <strong>どの split・hidden test・submission budget・checkpoint policy で score を出したか</strong> を示す <strong>Benchmark Governance Card</strong> を、L1 以上では <strong>どこまで直接観測し、どこから先が latent state か</strong> を示す <strong>Observability Budget</strong> を、multimodal / atlas prior を使う結果では <strong>どう結び付け、どこまで較正したか</strong> を示す <strong>Fusion Card</strong> を、cross-day / longitudinal claim では <strong>same-day score をどこまで外挿してよいか</strong> を示す <strong>Temporal Validity Card</strong> を、L2 以上では <strong>どの latent state がまだ誤差を支配するか</strong> を示す <strong>latent-state error budget</strong> を、因果・閉ループ結果では <strong>trigger rule・timing audit・control/sham・安全停止・再較正負荷</strong> を示す <strong>Intervention Card</strong> を併記して公開し、再現性と安全性を担保する。</p>
+<p>スコアだけでなく、データリーク対策、失敗例、計算資源、既知の弱点、さらに leaderboard / challenge 結果では <strong>どの split・hidden test・submission budget・checkpoint policy で score を出したか</strong> を示す <strong>Benchmark Governance Card</strong> を、L1 以上では <strong>どこまで直接観測し、どこから先が latent state か</strong> を示す <strong>Observability Budget</strong> を、確率・区間・予測集合・棄権を出す結果では <strong>fit / calibration / test の分離、evaluation family、coverage-risk、fallback policy</strong> を示す <strong>Calibration &amp; Abstention Card</strong> を、multimodal / atlas prior を使う結果では <strong>どう結び付け、どこまで較正したか</strong> を示す <strong>Fusion Card</strong> を、cross-day / longitudinal claim では <strong>same-day score をどこまで外挿してよいか</strong> を示す <strong>Temporal Validity Card</strong> を、L2 以上では <strong>どの latent state がまだ誤差を支配するか</strong> を示す <strong>latent-state error budget</strong> を、因果・閉ループ結果では <strong>trigger rule・timing audit・control/sham・安全停止・再較正負荷</strong> を示す <strong>Intervention Card</strong> を併記して公開し、再現性と安全性を担保する。</p>
 <div class="tag-list">
 <span class="tag">Leaderboard</span><span class="tag">Reproducibility</span><span class="tag">Safety</span>
 </div>
@@ -1229,6 +1230,71 @@ Observability Budget は「何を直接見たか」、Fusion Card は「どう�
 </div>
 </section>
 
+<section class="section" id="calibration-abstention-card">
+<h2 class="section-title">2026-03 追補：確率・区間・予測集合・棄権を出す結果には Calibration &amp; Abstention Card を添付する</h2>
+<p>
+今回さらに改善余地が大きかった弱点は、<strong>confidence / posterior / prediction set / abstention</strong> を各ページで注意書きとしては扱えていても、Observability Budget や Temporal Validity Card のような <strong>独立した提出物仕様</strong> にまだ落とせていなかったことです。<a href="https://www.mdpi.com/2227-7390/11/7/1650" target="_blank">Shafiezadeh et al. (2023)</a> は patient-independent seizure prediction で split 設計そのものが generalization estimate を大きく動かすことを示し、<a href="https://doi.org/10.3390/s24092863" target="_blank">Shafiezadeh et al. (2024)</a> と <a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">Segal et al. (2023)</a> は calibration / risk control が threshold 設計を直接変えることを示しました。さらに <a href="https://papers.nips.cc/paper_files/paper/2019/hash/8558cb408c1d76621371888657d2eb1d-Abstract.html" target="_blank">Ovadia et al. (2019)</a> は predictive uncertainty methods が dataset shift 下で広く劣化しうることを、<a href="https://proceedings.mlr.press/v235/han24d.html" target="_blank">Han et al. (2024)</a> は model assessment / selection 自体を temporal distribution shift に合わせて設計し直す必要を示しました。加えて <a href="https://doi.org/10.1080/01621459.2017.1307116" target="_blank">Lei et al. (2018)</a> と <a href="https://doi.org/10.1073/pnas.2107794118" target="_blank">Chernozhukov et al. (2021)</a> は calibration split を用いた conformal route を与え、<a href="https://proceedings.mlr.press/v105/eliades19a.html" target="_blank">Eliades &amp; Papadopoulos (2019)</a> は BCI / exoskeleton control で conformal prediction を safety design に組み込めることを示しました。したがって本サイトでは、確率や区間を出しただけでは「校正済み」「安全に棄権できる」「deployable threshold」とは読まず、<strong>Calibration &amp; Abstention Card</strong> で split、slice、coverage-risk、fallback を提出物化します。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Calibration &amp; Abstention Card の欄</th>
+<th>最低限書くこと</th>
+<th>これが無いと何が起きるか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>uncertainty target</strong></td>
+<td>class probability、interval、prediction set、risk score、abstention flag のどれを出したかを書きます。</td>
+<td>scalar confidence と set-valued output を同じ「信頼度」と誤読します。</td>
+</tr>
+<tr>
+<td><strong>fit / calibration / test separation</strong></td>
+<td>model fit、temperature scaling / conformal / threshold tuning、最終 test をどの split で分けたか、freeze date と再調整可否を書きます。</td>
+<td>test を見ながら閾値や温度を触った結果を、校正済み evidence と誤読します。</td>
+</tr>
+<tr>
+<td><strong>evaluation family / shift slices</strong></td>
+<td>within-session、cross-session、cross-subject、cross-site、temporal、OOD のどれかと、device / state / cohort / time の slice を書きます。</td>
+<td>same-day の ECE や coverage を、cross-day / cross-patient の reliability へ不当に読み替えます。</td>
+</tr>
+<tr>
+<td><strong>metrics / validity statement</strong></td>
+<td>ECE、Brier、NLL、empirical coverage、interval width、prediction-set size、false alarm rate、marginal / conditional / temporal validity のどれを保証したかを書きます。</td>
+<td>よい calibration だと思っていたものが、実際には平均的な 1 指標だけだった可能性を見落とします。</td>
+</tr>
+<tr>
+<td><strong>selective prediction / fallback policy</strong></td>
+<td>abstention threshold、coverage-risk trade-off、silence / hold-last-output / remeasure / manual review の分岐、false alarm ceiling を書きます。</td>
+<td>低信頼時に何が起きるか不明なまま、「安全な棄権がある」と書いてしまいます。</td>
+</tr>
+<tr>
+<td><strong>recalibration policy</strong></td>
+<td>online / longitudinal 系では、いつ再較正を許すか、誰が介入するか、state drift をどう検知するかを書きます。</td>
+<td>calibration が固定モデルの性質なのか、人手更新込みの運用成績なのかが混ざります。</td>
+</tr>
+<tr>
+<td><strong>claim ceiling</strong></td>
+<td>calibrated probability、risk-controlled alarm、safe abstention、deployable threshold からまだ言えないことを 1 行で固定します。</td>
+<td>単一 cohort や単一 horizon の calibration を、一般的な reliability と誤昇格させやすくなります。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>最低運用ルール</strong>
+<p>
+Calibration &amp; Abstention Card が無い場合、本サイトではその結果を原則として <strong>exploratory confidence output</strong>、<strong>uncalibrated score ranking</strong>、または <strong>local thresholded demo</strong> として扱い、calibrated probability、risk-controlled alarm、safe abstention、deployable threshold claim へ上げません。とくに <strong>fit / calibration / test separation</strong>、<strong>evaluation family / shift slices</strong>、<strong>fallback policy</strong> のいずれかが欠ける場合、confidence の読み替えを止めます。
+</p>
+</div>
+<div class="note-box">
+<strong>既存カードとの役割差</strong>
+<p>
+Model Card は <strong>モデルの弱点と失敗例</strong> を固定し、Benchmark Governance Card は <strong>score の露出条件</strong> を固定し、Temporal Validity Card は <strong>その結果を何日・何状態まで外挿できるか</strong> を固定します。Calibration &amp; Abstention Card はその中で、<strong>confidence / interval / set / fallback の意味</strong> を固定するカードでございます。したがって本サイトでは、確率や棄権を前面に出す結果に <strong>Calibration &amp; Abstention Card を別提出</strong> させ、model strength と reliability semantics を混ぜません。
+</p>
+</div>
+</section>
+
 <section class="section" id="benchmark-governance-card">
 <h2 class="section-title">2026-03 追補：leaderboard / challenge 結果には Benchmark Governance Card を添付する</h2>
 <p>
@@ -1442,6 +1508,14 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Bukalo, O., et al. (2026). Astrocytes enable amygdala neural representations supporting memory. <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">doi:10.1038/s41586-025-10068-0</a></li>
 <li>Vadisiute, A., Meijer, E., Therpurakal, R. N., et al. (2024). Glial cells undergo rapid changes following acute chemogenetic manipulation of cortical layer 5 projection neurons. <a href="https://doi.org/10.1038/s42003-024-06994-w" target="_blank">doi:10.1038/s42003-024-06994-w</a></li>
 <li>Hadzibegovic, N., et al. (2026). Early intrinsic excitability plasticity of neocortical engram neurons defines memory formation and precision. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">doi:10.1038/s41467-025-66975-3</a></li>
+<li>Ovadia, Y., Fertig, E., Ren, J., Nado, Z., Sculley, D., Nowozin, S., Dillon, J. V., Lakshminarayanan, B., &amp; Snoek, J. (2019). Can You Trust Your Model's Uncertainty? Evaluating Predictive Uncertainty Under Dataset Shift. <a href="https://papers.nips.cc/paper_files/paper/2019/hash/8558cb408c1d76621371888657d2eb1d-Abstract.html" target="_blank">NeurIPS 2019</a></li>
+<li>Han, J., Huang, Y., &amp; Wang, Y. (2024). Model Assessment and Selection under Temporal Distribution Shift. <a href="https://proceedings.mlr.press/v235/han24d.html" target="_blank">PMLR 235</a></li>
+<li>Shafiezadeh, S., Mento, G., &amp; Testolin, A. (2023). Methodological Issues in Evaluating Machine Learning Models for Patient-Independent Epileptic Seizure Prediction. <a href="https://doi.org/10.3390/math11071650" target="_blank">doi:10.3390/math11071650</a></li>
+<li>Shafiezadeh, S., Duma, G. M., Mento, G., Danieli, A., Antoniazzi, L., Del Popolo Cristaldi, F., Bonanni, P., &amp; Testolin, A. (2024). Calibrating Deep Learning Classifiers for Patient-Independent Electroencephalogram Seizure Forecasting. <a href="https://doi.org/10.3390/s24092863" target="_blank">doi:10.3390/s24092863</a></li>
+<li>Lei, J., G'Sell, M., Rinaldo, A., Tibshirani, R. J., &amp; Wasserman, L. (2018). Distribution-Free Predictive Inference for Regression. <a href="https://doi.org/10.1080/01621459.2017.1307116" target="_blank">doi:10.1080/01621459.2017.1307116</a></li>
+<li>Chernozhukov, V., Wüthrich, K., &amp; Zhu, Y. (2021). Distributional conformal prediction. <a href="https://doi.org/10.1073/pnas.2107794118" target="_blank">doi:10.1073/pnas.2107794118</a></li>
+<li>Segal, G., Keidar, N., Lotan, R. M., Romano, Y., Herskovitz, M., &amp; Yaniv, Y. (2023). Utilizing risk-controlling prediction calibration to reduce false alarm rates in epileptic seizure prediction. <a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">doi:10.3389/fnins.2023.1184990</a></li>
+<li>Eliades, G., &amp; Papadopoulos, H. (2019). Applying conformal prediction to control an exoskeleton. <a href="https://proceedings.mlr.press/v105/eliades19a.html" target="_blank">PMLR 105</a></li>
 <li>Nosek, B. A., et al. (2015). Promoting an open research culture. <a href="https://doi.org/10.1126/science.aab2374" target="_blank">doi:10.1126/science.aab2374</a></li>
 <li>Wilkinson, M. D., et al. (2016). The FAIR Guiding Principles. <a href="https://doi.org/10.1038/sdata.2016.18" target="_blank">doi:10.1038/sdata.2016.18</a></li>
 </ol>

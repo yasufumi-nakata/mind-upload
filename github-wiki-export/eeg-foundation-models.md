@@ -235,11 +235,11 @@ foundation / self-supervised 系の結果には、通常の model card に加え
 <h4>Rule</h4>
 <ul>
 <li><strong>foundation model の結果も split 監査を免除しません：</strong>pretraining corpus を含めて独立性を確認します。</li>
-<li><strong>population / setup diversity を にしません：</strong>dataset 数ではなく、どの recording distribution を含んだかを出します。</li>
-<li><strong>format harmonization を にしません：</strong>channel / reference / sampling の整形手順を必ず出します。</li>
+<li><strong>population / setup diversity を hidden にしません：</strong>dataset 数ではなく、どの recording distribution を含んだかを出します。</li>
+<li><strong>format harmonization を hidden にしません：</strong>channel / reference / sampling の整形手順を必ず出します。</li>
 <li><strong>adaptation の量を隠しません：</strong>linear probing、full fine-tune、TTT を同じ「transfer 成功」として並べません。</li>
-<li><strong>benchmark provenance を にしません：</strong>split / checkpoint / preprocessing の違いで ranking が動くので、benchmark 仕様も成果物です。</li>
-<li><strong>scale / efficiency を にしません：</strong>parameter 数、trainable fraction、学習時間を出さずに「foundation model が勝った」とは書きません。</li>
+<li><strong>benchmark provenance を hidden にしません：</strong>split / checkpoint / preprocessing の違いで ranking が動くので、benchmark 仕様も成果物です。</li>
+<li><strong>scale / efficiency を hidden にしません：</strong>parameter 数、trainable fraction、学習時間を出さずに「foundation model が勝った」とは書きません。</li>
 <li><strong>高スコアでも claim ceiling は維持します：</strong>source identifiability、direct validation、closed-loop deployability、WBE state-completeness は別ゲートです。</li>
 <li><strong>Pretraining Card が無い結果は限定つき decode として扱います：</strong>L2 以上へ自動昇格させません。</li>
 </ul>

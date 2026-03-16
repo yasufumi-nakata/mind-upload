@@ -1,32 +1,26 @@
----
-layout: default
-title: "Mind-upload RQ60 深掘り焦点ノート（EEG-DATA × 助成）"
-description: "60RQを1件ずつ、EEGで直接検証する核・外部必須要件・応募テーマまで固定した深掘りノート。"
-article_type: Wiki
-subtitle: "汎用要約ではなく、RQごとの論点を固定する"
-author: Mind Uploading Research Project
-last_updated: "2026-03-16"
-note: "RQ-by-RQ Deep Focus"
-audience: "各RQを申請文と実験手順に直接落としたい人"
-reading_time: "20〜35分"
-page_intro: "このページは、mind-uploadの60RQを1件ずつ対象に、EEG-DATAで直接確認する核、auto-research-funds向け応募テーマ、EEG外で必要な要件を固定した実務ノートです。"
-accuracy_note: "A/B/C判定は mind-upload-eeg-rq60-feasibility-and-funds と同一。Cは『重要でない』ではなく『EEG単独で完結しない』を意味します。"
-wiki_links:
-  - label: "Wiki: RQ60 EEG検証可否と助成テーマ"
-    url: "/wiki/mind-upload-eeg-rq60-feasibility-and-funds.html"
-    description: "判定とデータ候補の正本。"
-  - label: "Wiki: RQ60 申請プレイブック"
-    url: "/wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html"
-    description: "応募先IDと最小成果物の固定表。"
-recommended_pages:
-  - label: "文献地図"
-    url: "/research_harvest_50.html"
-  - label: "データ&ベンチ"
-    url: "/datasets.html"
----
+# Mind-upload RQ60 深掘り焦点ノート（EEG-DATA × 助成）
 
-<main class="main-container">
-<article class="content-column">
+> 汎用要約ではなく、RQごとの論点を固定する
+>
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+
+- 更新日: 2026-03-16 / 位置づけ: RQ-by-RQ Deep Focus
+
+## このページの役割
+このページは、mind-uploadの60RQを1件ずつ対象に、EEG-DATAで直接確認する核、auto-research-funds向け応募テーマ、EEG外で必要な要件を固定した実務ノートです。
+
+## 正確さの前提
+A/B/C判定は mind-upload-eeg-rq60-feasibility-and-funds と同一。Cは『重要でない』ではなく『EEG単独で完結しない』を意味します。
+
+## 公開ページへ戻る
+- [文献地図](https://mind-upload.com/research_harvest_50.html)
+- [データ&ベンチ](https://mind-upload.com/datasets.html)
+
+## 関連 Wiki
+- [Wiki: RQ60 EEG検証可否と助成テーマ](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds) - 判定とデータ候補の正本。
+- [Wiki: RQ60 申請プレイブック](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - 応募先IDと最小成果物の固定表。
+
+---
 
 ## 使い方
 
@@ -262,7 +256,6 @@ recommended_pages:
 - 助成実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue/*.yaml` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再確認しました。
 - 方針は据え置き: 汎用俯瞰へ戻さず、RQごとに検証可否・応募テーマ・使用EEGデータを固定して書く運用を継続します。
 
-
 ## 2026-03-15 19:02 JST 再検証ログ（本run / RQ単位深掘りの固定確認）
 
 - 全 `60RQ` 行を再点検し、`判定`・`応募テーマ（助成キー）`・`候補EEG-DATA`・`EEG外で必須` の欠落 `0` を確認。
@@ -286,7 +279,6 @@ recommended_pages:
 - 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` と `auto-research-funds` で全件参照可能。
 - 独立監査結果として、`feasibility` ページの `ID -> データセット名` 表は現行CSVの再採番と固定一致しない点を確認。運用上は既存方針どおり `D1-D16 + DOI` 正本参照を優先する。
 - 方針を継続: 汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持。
-
 
 ## 2026-03-16 00:02 JST 再検証ログ（本run / RQ深掘りノート更新）
 
@@ -332,7 +324,6 @@ recommended_pages:
 | U14-6 | 再現性改善に対するコンテナ固定コストを定量化する | 環境固定あり/なしで追試成功率と実行コストを比較 | 再現コスト許容上限設定（G1/G3） | 56 / 719 | 再現率改善がコスト増を上回る |
 
 - 本runも方針を継続します。汎用俯瞰には戻さず、`1RQ=1検証命題=1応募テーマ=1主データ` で更新します。
-
 
 ## 2026-03-16 07:05 JST 再検証ログ（本run / pull後のID再採番対応）
 
@@ -394,7 +385,6 @@ recommended_pages:
 - 判定内訳 `A/B/C=17/25/18` を再確認し、`mind-upload-eeg-rq60-feasibility-and-funds.md` と整合しました。
 - 助成キー `G1-G6` と候補EEGデータ `24件` の参照性を再確認しました。
 - 実務方針を再固定します。全課題を浅く横断するのではなく、`1RQ=1検証命題=1応募テーマ=1主データ` の順に個別深掘りで更新します。
-
 
 ## 2026-03-16 16:02 JST 再検証ログ（本run / 深掘り表の整合確認）
 

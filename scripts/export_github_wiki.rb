@@ -147,7 +147,7 @@ def normalize_html_for_github(text)
   normalized.gsub!(%r{\sclass="[^"]*"}, "")
   normalized.gsub!(%r{\sid="[^"]*"}, "")
   normalized.gsub!(%r{\saria-label="[^"]*"}, "")
-  normalized.gsub!(%r{\shidden(="hidden")?}, "")
+  normalized.gsub!(%r{(<[^>]*?)\shidden(="hidden")?(?=[\s>])}) { Regexp.last_match(1) }
   normalized.gsub!(%r{</?div[^>]*>}, "")
   normalized.gsub!(%r{</?section[^>]*>}, "")
   normalized.gsub!(/\n{3,}/, "\n\n")

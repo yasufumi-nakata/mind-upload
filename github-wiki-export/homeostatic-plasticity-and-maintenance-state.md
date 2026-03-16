@@ -38,7 +38,7 @@
 
 <h2>いちばん短い結論</h2>
 <p>
-<strong>connectome と cell type が分かっても、長期ダイナミクスはまだ決まりません</strong>。現状の一次文献が比較的一貫して示しているのは、少なくとも 6 種類の maintenance-state が残るということです。第一に、同じ transcriptomic type の内部でも morpho-electric phenotype と ion-channel expression は幅を持ちます。第二に、神経回路は firing rate や synaptic strength を homeostatic に調整し、<strong>今の活動</strong>を保つだけでなく、<strong>どこへ戻るか</strong>という set point 自体を持ちます。第三に、sleep / wake cycle は synaptic scaling と firing-rate homeostasis を時間的に分業させます。第四に、髄鞘とオリゴデンドロサイト結合は timing だけでなく axonal support にも関わります。第五に、アストロサイトやグリア代謝は記憶固定化の背景ではなく、<strong>記憶想起、数日スパンの安定化、恐怖記憶表現</strong>にも関わります。第六に、分子ターンオーバー下で記憶が残るとしても、それは静止した分子の永久保存ではなく、active maintenance が働いているという意味です。したがって、本サイトでは <strong>内在興奮性・恒常性 set point・睡眠依存再正規化・髄鞘/代謝維持・astrocyte ensemble を含む再固定化機構</strong>を、connectome の外側に残る state として扱います。
+<strong>connectome と cell type が分かっても、長期ダイナミクスはまだ決まりません</strong>。現状の一次文献が比較的一貫して示しているのは、少なくとも 6 種類の maintenance-state が残るということです。第一に、同じ transcriptomic type の内部でも morpho-electric phenotype と ion-channel expression は幅を持ちます。第二に、神経回路は firing rate や synaptic strength を homeostatic に調整し、<strong>今の活動</strong>を保つだけでなく、<strong>どこへ戻るか</strong>という set point 自体を持ちます。第三に、sleep / wake cycle は synaptic scaling と firing-rate homeostasis を時間的に分業させます。第四に、髄鞘とオリゴデンドロサイト結合は timing だけでなく axonal support にも関わります。第五に、アストロサイトやグリア代謝は記憶固定化の背景ではなく、<strong>記憶想起、数日スパンの安定化、恐怖記憶表現</strong>にも関わります。第六に、分子ターンオーバー下で記憶が残るとしても、それは静止した分子の永久保存ではなく、active maintenance が働いているという意味です。したがって、本サイトでは <strong>内在興奮性・恒常性 set point・睡眠依存再正規化・髄鞘/代謝維持・astrocyte ensemble を含む再固定化機構</strong>を、connectome の外側に残る hidden state として扱います。
 </p>
 
 <strong>このページの範囲</strong>
@@ -140,7 +140,7 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 
 <h2>2026-03 追補：human maintenance-state の直接観測はまだ粗い</h2>
 <p>
-今回さらに深掘りして見えた弱点は、maintenance-state の議論がやや animal causal evidence に寄りすぎており、<strong>human で今どこまで直接見えているか</strong>の上限が本文で十分に固定されていなかった点です。Shapson-Coe らの human cortical petavoxel fragment は ultrastructure を大きく前進させ、Lucchetti らの whole-brain <sup>1</sup>H-MRSI は human metabolic connectome を提示しました。しかし、前者は structural snapshot、後者は parcel-level biochemical similarity であり、どちらも <strong>current synaptic efficacy</strong>、<strong>local transmitter specificity</strong>、<strong>astrocyte ensemble</strong>、<strong>sleep-dependent recovery controller</strong> を直接は与えません。つまり、human 側でも maintenance-state はまだ macro scaffold と local state に分かれて残ります。
+今回さらに深掘りして見えた弱点は、maintenance-state の議論がやや animal causal evidence に寄りすぎており、<strong>human で今どこまで直接見えているか</strong>の上限が本文で十分に固定されていなかった点です。Shapson-Coe らの human cortical petavoxel fragment は ultrastructure を大きく前進させ、Lucchetti らの whole-brain <sup>1</sup>H-MRSI は human metabolic connectome を提示しました。しかし、前者は structural snapshot、後者は parcel-level biochemical similarity であり、どちらも <strong>current synaptic efficacy</strong>、<strong>local transmitter specificity</strong>、<strong>astrocyte ensemble</strong>、<strong>sleep-dependent recovery controller</strong> を直接は与えません。つまり、human 側でも maintenance-state はまだ macro scaffold と local hidden state に分かれて残ります。
 </p>
 <table>
 <thead>

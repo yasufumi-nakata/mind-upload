@@ -41,7 +41,7 @@
 
 <h2>いちばん短い結論</h2>
 <p>
-現行サイトの弱点は、<strong>重要な state は列挙できても、どの measurement stack が何を直接観測し、どこで主張上限に当たるか</strong>が前面に出ていなかった点でございました。一次文献を並べると、EEG/MEG/fMRI はマクロ state の tracking、高密度 extracellular probe は implant 近傍の local population window、whole-brain spatial atlas は cell-type と空間配置、Patch-seq は cell-type と morpho-electric phenotype の橋渡し、volume EM は structural scaffold、same-brain functional connectomics は局所 conditional prediction、local transmitter / astrocyte imaging は coarse proxy の較正を強くします。しかし、<strong>どの stack も単独では state-complete reconstruction を与えません</strong>。したがって本サイトでは、measurement stack ごとに claim ceiling を明記し、そこを超える表現を禁止します。
+現行サイトの弱点は、<strong>重要な hidden state は列挙できても、どの measurement stack が何を直接観測し、どこで主張上限に当たるか</strong>が前面に出ていなかった点でございました。一次文献を並べると、EEG/MEG/fMRI はマクロ state の tracking、高密度 extracellular probe は implant 近傍の local population window、whole-brain spatial atlas は cell-type と空間配置、Patch-seq は cell-type と morpho-electric phenotype の橋渡し、volume EM は structural scaffold、same-brain functional connectomics は局所 conditional prediction、local transmitter / astrocyte imaging は coarse proxy の較正を強くします。しかし、<strong>どの stack も単独では state-complete reconstruction を与えません</strong>。したがって本サイトでは、measurement stack ごとに claim ceiling を明記し、そこを超える表現を禁止します。
 </p>
 
 <strong>このページの範囲</strong>
