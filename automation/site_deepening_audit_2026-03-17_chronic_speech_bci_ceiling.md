@@ -79,6 +79,6 @@
 5. Steinmetz NA, Aydin C, Lebedeva A, et al. Neuropixels 2.0: A miniaturized high-density probe for stable, long-term brain recordings. *Science*. 2021;372:eabf4588.
    - https://doi.org/10.1126/science.abf4588
 6. Pachitariu M, Sridhar S, Pennington J, Stringer C. Spike sorting with Kilosort4. *Nature Methods*. 2024;21:914-921.
-   - https://doi.org/10.1038/s41592-024-02232-7
+   - https://doi.org/10.1038/s41592-024-02595-5
 7. van Beest EH, Bimbard C, Fabre JMJ, et al. Tracking neurons across days with high-density probes. *Nature Methods*. 2025;22:778-787.
    - https://doi.org/10.1038/s41592-024-02440-1

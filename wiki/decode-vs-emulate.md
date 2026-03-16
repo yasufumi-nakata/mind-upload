@@ -151,7 +151,7 @@ decode は「観測された信号から何かを当てること」、emulate �
 </tr>
 <tr>
 <td><strong>same-neuron tracking ceiling</strong></td>
-<td><a href="https://doi.org/10.1126/science.abf4588" target="_blank">Steinmetz et al. (2021)</a> は motion correction 付き stable recording、<a href="https://doi.org/10.1038/s41592-024-02232-7" target="_blank">Pachitariu et al. (2024)</a> は drift / split / merge を中心に据えた sorting、<a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">van Beest et al. (2025)</a> は probabilistic cross-day neuron tracking を前進させました。</td>
+<td><a href="https://doi.org/10.1126/science.abf4588" target="_blank">Steinmetz et al. (2021)</a> は motion correction 付き stable recording、<a href="https://doi.org/10.1038/s41592-024-02595-5" target="_blank">Pachitariu et al. (2024)</a> は drift / split / merge を中心に据えた sorting、<a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">van Beest et al. (2025)</a> は probabilistic cross-day neuron tracking を前進させました。</td>
 <td>microelectrode 系では、same-neuron claim を <code>sorting version + drift correction + unit-match probability</code> 付きの推定として読みます。</td>
 <td>chronic decode 成功を、そのまま stable single-neuron mechanism の直読とは書きません。</td>
 </tr>
@@ -160,7 +160,7 @@ decode は「観測された信号から何かを当てること」、emulate �
 <div class="note-box">
 <strong>この節での実務ルール</strong>
 <p>
-侵襲 speech BCI を上位主張へ進めるときは、同日内の streaming 性能だけでなく、<strong>固定 decoder が何日持つか</strong>、<strong>どれだけ人手再較正に依存したか</strong>、<strong>microelectrode 系なら same-neuron tracking をどう推定したか</strong>を同時に出します。背景の長い整理は <a href="state-trait-and-drift.html">Wiki: state・trait・ドリフト</a> を参照してください。
+侵襲 speech BCI を上位主張へ進めるときは、同日内の streaming 性能だけでなく、<strong>固定 decoder が何日持つか</strong>、<strong>どれだけ人手再較正に依存したか</strong>、<strong>microelectrode 系なら same-neuron tracking をどう推定したか</strong>、<strong>implant age / material / geometry / tissue-response proxy をどう監査したか</strong>を同時に出します。背景の長い整理は <a href="state-trait-and-drift.html">Wiki: state・trait・ドリフト</a> を参照してください。
 </p>
 </div>
 </section>
@@ -306,7 +306,7 @@ decode は「観測された信号から何かを当てること」、emulate �
 <li>Wilson, G. H., Stein, E. A., Kamdar, F., et al. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <em>Nature Biomedical Engineering</em>. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
 <li>Pun, T. K., Khoshnevis, M., Hosman, T., et al. (2024). Measuring instability in chronic human intracortical neural recordings towards stable, long-term brain-computer interfaces. <em>Communications Biology</em>, 7, 1363. <a href="https://doi.org/10.1038/s42003-024-06784-4" target="_blank">doi:10.1038/s42003-024-06784-4</a></li>
 <li>Steinmetz, N. A., Aydin, C., Lebedeva, A., et al. (2021). Neuropixels 2.0: A miniaturized high-density probe for stable, long-term brain recordings. <em>Science</em>, 372(6539), eabf4588. <a href="https://doi.org/10.1126/science.abf4588" target="_blank">doi:10.1126/science.abf4588</a></li>
-<li>Pachitariu, M., Sridhar, S., Pennington, J., &amp; Stringer, C. (2024). Spike sorting with Kilosort4. <em>Nature Methods</em>, 21, 914–921. <a href="https://doi.org/10.1038/s41592-024-02232-7" target="_blank">doi:10.1038/s41592-024-02232-7</a></li>
+<li>Pachitariu, M., Sridhar, S., Pennington, J., &amp; Stringer, C. (2024). Spike sorting with Kilosort4. <em>Nature Methods</em>, 21, 914–921. <a href="https://doi.org/10.1038/s41592-024-02595-5" target="_blank">doi:10.1038/s41592-024-02595-5</a></li>
 <li>van Beest, E. H., Bimbard, C., Fabre, J. M. J., et al. (2025). Tracking neurons across days with high-density probes. <em>Nature Methods</em>, 22, 778–787. <a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">doi:10.1038/s41592-024-02440-1</a></li>
 <li>Flesher, S. N., Downey, J. E., Weiss, J. M., et al. (2021). A brain-computer interface that evokes tactile sensations improves robotic arm control. <em>Science</em>, 372(6544), 831–836. <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>, 640, 435–447. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>

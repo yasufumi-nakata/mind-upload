@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-16 / 位置づけ: Technical / natural science only
+- 更新日: 2026-03-17 / 位置づけ: Technical / natural science only
 
 ## このページの役割
 このページは、Mind-Upload の縦断評価で頻出する state（その場の状態）、trait（比較的安定な骨格）、drift（時間とともに起きる変化）を、EEG・fMRI・慢性記録・BCI の一次文献に沿って整理する wiki です。短期変動と長期変化を言葉だけで分けるのではなく、どの時定数で、どのメカニズム由来で、どの評価系で観測したかまで固定することを目的にしています。
@@ -26,19 +26,21 @@
 - 行動状態、覚醒、無意図運動、自発行動は、trial-to-trial neural variance を大きく動かします。
 - 単一ユニットや単一 voxel の変化があっても、population-level の構造や latent dynamics がより安定に残る場合があります。
 - 慢性 high-density probe では、probe drift、sorting 誤差、unit matching の不確実性、組織応答が single-unit longitudinal claim を動かします。
+- implant 周囲の血管リモデリング、BBB leakiness、foreign-body response、近傍ニューロン変化は、chronic invasive BCI の性能変動を decoder drift だけでは説明できないことを示します。
 - fixed decoder の cross-day 劣化と recalibration burden を出さない限り、長期安定性は評価できません。
 
 ## まだ分かっていないこと
 - どの task でどの骨格を trait と呼ぶべきかを site-wide に統一する基準は、まだ固定されていません。
 - 生体側 drift と interface / decoder drift の会計を、EEG と侵襲 BCI とで横断比較する標準形式は未整備です。
 - unit-match probability や dropout rate を、どこから chronic same-neuron claim の受理条件にするかは未固定です。
+- どの tissue-response proxy が long-term decode 低下を最もよく予測するかは未固定です。
 - WBE 向けの長期 benchmark で、どの timescale までを同一の trait backbone と見なすかは未確定です。
 
 ---
 
 <h2>いちばん短い結論</h2>
 <p>
-<strong>state</strong>、<strong>trait</strong>、<strong>drift</strong> は、3 つの箱にデータを仕分けるだけの話ではございません。実際には、同じ記録の中に <strong>その場の行動・覚醒の揺れ</strong>、<strong>比較的安定な population backbone</strong>、<strong>生体側の representational drift</strong>、<strong>電極・前処理・デコーダ側の nonstationarity</strong> が同時に混ざります。したがって、このサイトでは <strong>timescale</strong>、<strong>由来</strong>、<strong>固定 decoder での held-out 劣化</strong>、<strong>再較正負荷</strong> を分けて監査します。
+<strong>state</strong>、<strong>trait</strong>、<strong>drift</strong> は、3 つの箱にデータを仕分けるだけの話ではございません。実際には、同じ記録の中に <strong>その場の行動・覚醒の揺れ</strong>、<strong>比較的安定な population backbone</strong>、<strong>生体側の representational drift</strong>、<strong>signal-chain / decoder の nonstationarity</strong>、<strong>implant 周囲の tissue response</strong> が同時に混ざります。したがって、このサイトでは <strong>timescale</strong>、<strong>由来</strong>、<strong>固定 decoder での held-out 劣化</strong>、<strong>再較正負荷</strong>、<strong>implant biology proxy</strong> を分けて監査します。
 </p>
 
 <strong>このページの範囲</strong>
@@ -46,7 +48,7 @@
 ここでは本人性や権利の最終判断には進みません。扱うのは、縦断 neuroscience と BCI の技術・自然科学です。state を trait と誤読しないこと、trait を「単一ニューロンが不変」と言い換えないこと、drift を 1 種類に潰さないことを先に固定します。
 </p>
 
-<h2>まず 4 つに分けて読む</h2>
+<h2>まず 5 つに分けて読む</h2>
 <table>
 <thead>
 <tr>
@@ -76,22 +78,28 @@
 <td>固定 readout の経時劣化、single-unit / voxel tuning の変化、population geometry の保持率です。</td>
 </tr>
 <tr>
-<td><strong>interface / decoder drift</strong></td>
+<td><strong>signal-chain / decoder drift</strong></td>
 <td>電極再装着、インピーダンス変化、probe drift、sorting / unit matching error、feature 分布ずれ、decoder mismatch、再較正依存です。</td>
 <td>セッション間から長期運用までです。</td>
 <td>fixed decoder 劣化、recalibration 頻度、recovery time、unsupervised adaptation の成否です。</td>
+</tr>
+<tr>
+<td><strong>implant biology drift</strong></td>
+<td>vascular injury、BBB leakiness、encapsulation、foreign-body response、近傍 neuron / glia / mural cell の再編成など、implant 周囲の生体反応です。</td>
+<td>留置直後から月単位です。</td>
+<td>implant age、array type / material / geometry、impedance trend、vascular / tissue-response proxy、可能なら imaging / histology です。</td>
 </tr>
 </tbody>
 </table>
 
 <h2>旧来の 3 分類だけでは足りない理由</h2>
 <p>
-現行の「state は今、trait は長く安定、drift は時間変化」という言い方だけですと、<strong>何が脳由来で、何が装置やデコーダ由来か</strong>が見えません。さらに、trait があたかも単一ニューロンや単一 feature の不変性であるかのようにも読めてしまいます。しかし一次文献が繰り返し示しているのは、<strong>individual unit はかなり動く</strong>一方で、<strong>population-level の関係構造の方が長く保たれることがある</strong>、という点でございます。
+現行の「state は今、trait は長く安定、drift は時間変化」という言い方だけですと、<strong>何が脳由来で、何が装置やデコーダ由来か</strong>が見えません。さらに invasive stack では、<strong>signal-chain の不安定さ</strong>と<strong>implant 周囲の tissue response</strong>も別物でございます。trait があたかも単一ニューロンや単一 feature の不変性であるかのようにも読めてしまいます。しかし一次文献が繰り返し示しているのは、<strong>individual unit はかなり動く</strong>一方で、<strong>population-level の関係構造の方が長く保たれることがある</strong>、という点でございます。
 </p>
 
 <strong>このサイトでの安全な読み替え</strong>
 <p>
-trait は「1 本の電極・1 個の neuron・1 本の voxel が不変」という意味ではなく、<strong>state 変動や一部の単位入れ替わりをまたいでも比較的安定に残る骨格</strong>として扱います。逆に、fixed decoder の劣化や再較正依存を見ていない主張は、trait stability を十分に示したことにはなりません。
+trait は「1 本の電極・1 個の neuron・1 本の voxel が不変」という意味ではなく、<strong>state 変動や一部の単位入れ替わりをまたいでも比較的安定に残る骨格</strong>として扱います。逆に、fixed decoder の劣化や再較正依存を見ていない主張は、trait stability を十分に示したことにはなりません。さらに chronic invasive stack では、sorting / feature shift を見ただけで十分ではなく、<strong>implant 周囲の biology が変わっていないか</strong>も別に監査する必要があります。
 </p>
 
 <h2>一次文献が実際に示していること</h2>
@@ -109,6 +117,11 @@ Gallego ら (2020) は、サルの sensorimotor cortex を最大 2 年追跡し�
 <h3>3. 慢性 extracellular 記録では、unit identity audit を drift 本体から切り離せません</h3>
 <p>
 Steinmetz ら (2021) の Neuropixels 2.0 は motion correction を用いた安定長期記録を大きく前進させましたが、これは逆に <strong>motion correction が要るほど probe drift が本質的な問題</strong>であることも示します。Pachitariu ら (2024) の Kilosort4 も、awake recording の drift、low-norm unit、split / merge error を benchmark の中心に置いています。Trautmann ら (2019) は、dense array では population dynamics の多くが spike sorting なしでも推定できることを示し、van Beest ら (2024) は cross-day の same-neuron claim を <strong>probabilistic matching</strong> として実装しました。さらに Gregory ら (2023) は、埋め込み array 周囲の深層 pyramidal neuron に structural / functional change が起こることを示しました。したがって、慢性 invasive 記録で「同じ neuron が何日も安定に見えた」と書くには、<strong>sorting version</strong>、<strong>drift correction</strong>、<strong>unit-match probability</strong>、<strong>dropout / new-unit rate</strong>、<strong>implant age と tissue-response proxy</strong> を別に残す必要がございます。
+</p>
+
+<h3>3.5. tissue response は sorting error ではなく、implant biology の独立軸です</h3>
+<p>
+今回さらに深掘りして見えた弱点は、慢性 invasive 記録の不安定性を <strong>decoder / sorting の問題</strong>としては書けていても、<strong>implant 周囲の生体反応そのもの</strong>が local readout を変える点が本文でまだ弱かったことでございます。<a href="https://doi.org/10.1088/1741-2552/ac127e" target="_blank">Szymanski et al. (2021)</a> は tetraplegic patient の chronically implanted intracortical microelectrode 周囲に meningeal encapsulation、foreign-body reaction、microhemorrhage、神経細胞脱落と白質壊死を報告しました。<a href="https://doi.org/10.1088/1741-2552/ace8ac" target="_blank">Gregory et al. (2023)</a> は rat motor cortex で array 周囲の deep-layer pyramidal neuron に structural / functional change が起こることを示しました。さらに <a href="https://doi.org/10.1016/j.biomaterials.2024.122963" target="_blank">Dynamic changes in mural cells drive vascular remodeling around chronically implanted neural probes</a> は、慢性留置で mural cell と血管リモデリングが進み、局所環境が recording-neutral ではないことを示しました。他方、<a href="https://doi.org/10.1016/j.biomaterials.2024.122543" target="_blank">Abbott et al. (2024)</a> は低プロファイルの planar amorphous silicon carbide array が minimal chronic tissue response を示しうることを報告しており、これは逆に <strong>material / geometry を変えると tissue response も変わる</strong>ことを意味します。ここからの推論として、chronic decode の劣化や feature turnover を <strong>sorting だけの問題</strong>、あるいは逆に <strong>純粋な生体 drift</strong> と決め打ちすることはできません。少なくとも <strong>implant age</strong>、<strong>array type / material / geometry</strong>、<strong>impedance trend</strong>、<strong>vascular / BBB / encapsulation proxy</strong> を、unit identity audit と別列で出す必要があります。
 </p>
 
 <h3>4. representational drift は、生体が安定環境でも起こしうる変化です</h3>
@@ -145,6 +158,11 @@ Wilson ら (2025) は、intracortical cursor BCI が accumulating neural nonstat
 <td><strong>unit identity audit</strong></td>
 <td>sorting version、drift correction、unit-match method / probability、dropout / new-unit rate、implant age、impedance や tissue-response proxy。</td>
 <td>「same neuron across days」「single-unit level での長期安定」が受理できません。</td>
+</tr>
+<tr>
+<td><strong>implant biology audit</strong></td>
+<td>implant age、array type / material / geometry、impedance trend、vascular / BBB / encapsulation proxy、可能なら imaging / histology。</td>
+<td>「chronic interface は biologically neutral」「性能低下は decoder だけの問題」とは言えません。</td>
 </tr>
 <tr>
 <td><strong>population backbone</strong></td>
@@ -190,6 +208,11 @@ Wilson ら (2025) は、intracortical cursor BCI が accumulating neural nonstat
 <td>biological drift と interface / decoder drift の切り分けを要求します。</td>
 </tr>
 <tr>
+<td><strong>sorting が不安定なだけで、implant biology は本質ではない</strong></td>
+<td>human pathology、vascular remodeling、近傍 neuron 変化が示すのは、interface が local tissue を変えうるという点です。</td>
+<td>signal-chain drift と implant biology drift を別ログにし、後者の proxy が無い chronic neutrality claim は受理しません。</td>
+</tr>
+<tr>
 <td><strong>silence / abstention が多いので性能が低いだけだ</strong></td>
 <td>low-confidence 条件を無理に出力しない方が、実運用では安全な場合があります。</td>
 <td>coverage と risk、silence 率と誤出力率をセットで出させます。</td>
@@ -226,9 +249,14 @@ Wilson ら (2025) は、intracortical cursor BCI が accumulating neural nonstat
 <td>再学習なしモデルを何日 hold したか、interval ごとの劣化曲線。</td>
 </tr>
 <tr>
-<td><strong>interface / decoder drift audit</strong></td>
+<td><strong>signal-chain drift audit</strong></td>
 <td>biological drift と、再装着・probe drift・sorting・feature shift を分けます。</td>
 <td>再装着有無、impedance、channel dropout、sorting version、unit-match probability、drift correction。</td>
+</tr>
+<tr>
+<td><strong>implant biology audit</strong></td>
+<td>signal-chain の不安定さと、vascular / BBB / tissue remodeling を同一視しません。</td>
+<td>implant age、array type / material / geometry、impedance trend、vascular / tissue-response proxy、可能なら imaging / histology。</td>
 </tr>
 <tr>
 <td><strong>population backbone metric</strong></td>
@@ -245,7 +273,7 @@ Wilson ら (2025) は、intracortical cursor BCI が accumulating neural nonstat
 
 <strong>このページから直接出る運用規則</strong>
 <p>
-Temporal Validity Card が無い場合、本サイトでは原則として <strong>within-session result</strong>、<strong>limited cross-session decode</strong>、または <strong>short-horizon online demo</strong> として扱います。逆に、state annotation、fixed-model interval、interface drift audit、recalibration burden がそろっていれば、同じ cross-day result でもどこまで安全に読めるかを明示できます。
+Temporal Validity Card が無い場合、本サイトでは原則として <strong>within-session result</strong>、<strong>limited cross-session decode</strong>、または <strong>short-horizon online demo</strong> として扱います。逆に、state annotation、fixed-model interval、signal-chain drift audit、implant biology audit、recalibration burden がそろっていれば、同じ cross-day result でもどこまで安全に読めるかを明示できます。
 </p>
 
 <h2>このサイトで採用する運用ルール</h2>
@@ -254,9 +282,10 @@ Temporal Validity Card が無い場合、本サイトでは原則として <stro
 <ul>
 <li><strong>state と trait を同じ指標で報告しない：</strong>短期変動と長期骨格を別列で残します。</li>
 <li><strong>trait は骨格として示す：</strong>latent dynamics、similarity matrix、fingerprint、stable subspace のいずれかを明示します。</li>
-<li><strong>drift は 2 系統に分ける：</strong>生体側 representational drift と interface / decoder drift を別ログにします。</li>
+<li><strong>drift は 3 系統に分ける：</strong>生体側 representational drift、signal-chain / decoder drift、implant biology drift を別ログにします。</li>
 <li><strong>fixed decoder interval を必ず出す：</strong>再較正なしで何日もったかを hidden にしません。</li>
 <li><strong>recalibration burden も性能です：</strong>再較正頻度、所要時間、fallback の内訳を accuracy と別に出します。</li>
+<li><strong>chronic invasive claim では implant biology を隠さない：</strong>material / geometry、implant age、impedance trend、tissue-response proxy を別欄で残します。</li>
 <li><strong>縦断比較には session 日付を入れる：</strong>日内、日間、週単位、月単位のどれかを明記します。</li>
 </ul>
 
@@ -271,6 +300,9 @@ Temporal Validity Card が無い場合、本サイトでは原則として <stro
 <li>Trautmann, E. M., Stavisky, S. D., Lahiri, S., et al. (2019). Accurate estimation of neural population dynamics without spike sorting. <em>Neuron</em>, 103(2), 292-308.e4. <a href="https://doi.org/10.1016/j.neuron.2019.05.003" target="_blank">doi:10.1016/j.neuron.2019.05.003</a></li>
 <li>van Beest, E. H., Jia, X., Deng, X., et al. (2024). Tracking neurons across days with high-density probes. <em>Nature Methods</em>. <a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">doi:10.1038/s41592-024-02440-1</a></li>
 <li>Gregory, N. S., et al. (2023). Structural and functional changes of deep layer pyramidal neurons surrounding implanted microelectrode arrays in rat motor cortex. <em>Journal of Neural Engineering</em>, 20(4), 046022. <a href="https://doi.org/10.1088/1741-2552/ace8ac" target="_blank">doi:10.1088/1741-2552/ace8ac</a></li>
+<li>Szymanski, L. J., Kellis, S., Liu, C. Y., Jones, K. T., Andersen, R. A., Commins, D. L., Lee, B., McCreery, D. B., &amp; Miller, C. A. (2021). Neuropathological effects of chronically implanted, intracortical microelectrodes in a tetraplegic patient. <em>Journal of Neural Engineering</em>, 18(4), 046026. <a href="https://doi.org/10.1088/1741-2552/ac127e" target="_blank">doi:10.1088/1741-2552/ac127e</a></li>
+<li>Dynamic changes in mural cells drive vascular remodeling around chronically implanted neural probes. (2025). <em>Biomaterials</em>. <a href="https://doi.org/10.1016/j.biomaterials.2024.122963" target="_blank">doi:10.1016/j.biomaterials.2024.122963</a></li>
+<li>Abbott, J. R., et al. (2024). Planar amorphous silicon carbide microelectrode arrays for chronic recording in rat motor cortex. <em>Biomaterials</em>, 317, 122543. <a href="https://doi.org/10.1016/j.biomaterials.2024.122543" target="_blank">doi:10.1016/j.biomaterials.2024.122543</a></li>
 <li>Roth, Z. N., &amp; Merriam, E. P. (2023). Representations in human primary visual cortex drift over time. <em>Nature Communications</em>, 14, 4422. <a href="https://doi.org/10.1038/s41467-023-40144-w" target="_blank">doi:10.1038/s41467-023-40144-w</a></li>
 <li>Noda, T., Kienle, E., Eppler, J.-B., Aschauer, D. F., Kaschube, M., Loewenstein, Y., &amp; Rumpel, S. (2025). Homeostasis of a representational map in the neocortex. <em>Nature Neuroscience</em>, 28, 1533-1545. <a href="https://doi.org/10.1038/s41593-025-01982-7" target="_blank">doi:10.1038/s41593-025-01982-7</a></li>
 <li>Wilson, G. H., Stein, E. A., Kamdar, F., Avansino, D. T., Pun, T. K., Gross, R., Hosman, T., Singer-Clark, T., Kapitonava, A., Hochberg, L. R., Simeral, J. D., Shenoy, K. V., Druckmann, S., Henderson, J. M., &amp; Willett, F. R. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <em>Nature Biomedical Engineering</em>. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>

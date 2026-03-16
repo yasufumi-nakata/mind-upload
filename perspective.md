@@ -15,13 +15,13 @@ page_highlights:
   - "理論の紹介だけで終わらず、実装へ落としたときの制約まで一緒に追います。"
   - "強い主張ほど、反証条件や代替説明を並べて確認します。"
   - "局所 connectomics、非侵襲 source imaging、closed-loop 介入は別々の壁に当たるため、同列に読まない構成へ更新しました。"
-  - "speech BCI の same-session streaming success と chronic deployability を分け、fixed decoder interval・recalibration burden・unit identity audit を別提出物として扱います。"
+  - "speech BCI の same-session streaming success と chronic deployability を分け、fixed decoder interval・recalibration burden・unit identity audit・implant biology audit を別提出物として扱います。"
   - "長文ですが、導入と注意書きだけでも全体の立場が分かる構成にしています。"
 known_points:
   - "主要理論のどれも、現時点では単独で決定打になっていません。"
   - "EEG 単体には逆問題や空間分解能の限界があり、強い主張の土台としては不足があります。"
   - "局所 connectomics や source imaging の前進は、human whole-brain の state-complete 観測を意味しません。"
-  - "侵襲 speech BCI の前進は communication subsystem の重要な証拠ですが、fixed decoder longevity と chronic unit identity を別監査しない限り chronic emulate evidence には上げません。"
+  - "侵襲 speech BCI の前進は communication subsystem の重要な証拠ですが、fixed decoder longevity、chronic unit identity、implant tissue-response proxy を別監査しない限り chronic emulate evidence には上げません。"
   - "因果的摂動、追試可能性、代替説明の排除を抜いた強い主張は危うい、という点はかなりはっきりしています。"
 unknown_points:
   - "どの理論の組み合わせが最終的に十分条件になるかは未確定です。"
@@ -751,7 +751,7 @@ href="#ref-57">[57]</a></sup>。
 </tr>
 <tr>
 <td>2</td>
-<td>chronic session log、fixed decoder interval、<code>time since last supervised calibration</code>、implant metadata を保存し、microelectrode 系では sorting version、drift correction、unit-match log を別管理します。</td>
+<td>chronic session log、fixed decoder interval、<code>time since last supervised calibration</code>、implant metadata を保存し、microelectrode 系では sorting version、drift correction、unit-match log に加え、array type / material / geometry、impedance trend、vascular / tissue-response proxy を別管理します。</td>
 <td>longitudinal stability audit として、固定 decoder の劣化曲線、unsupervised recalibration の成否、dropout / new-unit rate、recovery time を評価し、deployability claim の ceiling を決めます。</td>
 </tr>
 <tr>
@@ -763,9 +763,9 @@ href="#ref-57">[57]</a></sup>。
 </table>
 
 <div class="note-box">
-<strong>2026-03-17 追補：chronic speech BCI の 3 つの ceiling</strong>
+<strong>2026-03-17 追補：chronic speech BCI の 4 つの ceiling</strong>
 <p>
-<a href="https://doi.org/10.1038/s41593-025-01905-6">Littlejohn et al. (2025)</a> と <a href="https://doi.org/10.1038/s41586-025-09127-3">Wairagkar et al. (2025)</a> が押し上げたのは、まず <strong>same-session の streaming / voice route</strong> でございます。しかし次の壁は別で、<a href="https://doi.org/10.1038/s41551-025-01536-z">Wilson et al. (2025)</a> と <a href="https://doi.org/10.1038/s42003-024-06784-4">Pun et al. (2024)</a> が示すように、<strong>fixed decoder longevity</strong> と <strong>recalibration burden</strong> は長期運用の独立変数です。さらに microelectrode 系では、<a href="https://doi.org/10.1126/science.abf4588">Steinmetz et al. (2021)</a>、<a href="https://doi.org/10.1038/s41592-024-02232-7">Pachitariu et al. (2024)</a>、<a href="https://doi.org/10.1038/s41592-024-02440-1">van Beest et al. (2025)</a> が示す通り、<strong>same neuron across days</strong> は motion correction・sorting・probabilistic matching を介した推定であって、生の観測事実ではありません。
+<a href="https://doi.org/10.1038/s41593-025-01905-6">Littlejohn et al. (2025)</a> と <a href="https://doi.org/10.1038/s41586-025-09127-3">Wairagkar et al. (2025)</a> が押し上げたのは、まず <strong>same-session の streaming / voice route</strong> でございます。しかし次の壁は別で、<a href="https://doi.org/10.1038/s41551-025-01536-z">Wilson et al. (2025)</a> と <a href="https://doi.org/10.1038/s42003-024-06784-4">Pun et al. (2024)</a> が示すように、<strong>fixed decoder longevity</strong> と <strong>recalibration burden</strong> は長期運用の独立変数です。さらに microelectrode 系では、<a href="https://doi.org/10.1126/science.abf4588">Steinmetz et al. (2021)</a>、<a href="https://doi.org/10.1038/s41592-024-02595-5">Pachitariu et al. (2024)</a>、<a href="https://doi.org/10.1038/s41592-024-02440-1">van Beest et al. (2025)</a> が示す通り、<strong>same neuron across days</strong> は motion correction・sorting・probabilistic matching を介した推定であって、生の観測事実ではありません。加えて <a href="https://doi.org/10.1088/1741-2552/ac127e">Szymanski et al. (2021)</a>、<a href="https://doi.org/10.1088/1741-2552/ace8ac">Gregory et al. (2023)</a>、<a href="https://doi.org/10.1016/j.biomaterials.2024.122963">Wellman et al. (2025)</a>、<a href="https://doi.org/10.1016/j.biomaterials.2024.122543">Abbott et al. (2024)</a> が示すように、<strong>implant 周囲の血管・BBB・神経細胞・組織応答</strong>も chronic ceiling を作ります。
 </p>
 </div>
 
@@ -792,6 +792,11 @@ href="#ref-57">[57]</a></sup>。
 <td><strong>same-neuron tracking ceiling</strong></td>
 <td>Steinmetz らは motion correction 付き stable long-term recording、Pachitariu らは drift / split / merge を中心に据えた spike sorting、van Beest らは probability 付き cross-day neuron tracking を前進させました<sup><a href="#ref-136">[136]</a></sup><sup><a href="#ref-137">[137]</a></sup><sup><a href="#ref-138">[138]</a></sup>。</td>
 <td>microelectrode 系の chronic decode を、そのまま stable single-neuron mechanism の直読と扱うことはできません。</td>
+</tr>
+<tr>
+<td><strong>implant biology ceiling</strong></td>
+<td><a href="https://doi.org/10.1088/1741-2552/ac127e" target="_blank">Szymanski et al. (2021)</a>、<a href="https://doi.org/10.1088/1741-2552/ace8ac" target="_blank">Gregory et al. (2023)</a>、<a href="https://doi.org/10.1016/j.biomaterials.2024.122963" target="_blank">Wellman et al. (2025)</a> は、implant 周囲の encapsulation、microhemorrhage、vascular remodeling、近傍 neuron 変化が chronic interface を biologically neutral ではなくすることを示しました。さらに <a href="https://doi.org/10.1016/j.biomaterials.2024.122543" target="_blank">Abbott et al. (2024)</a> は、material / geometry により chronic tissue response が変わりうることを示しました。</td>
+<td>したがって、性能変動を decoder や sorting だけへ還元したり、現行 intracortical array を biologically neutral long-term interface と扱ったりはできません。</td>
 </tr>
 </tbody>
 </table>
@@ -852,13 +857,13 @@ href="#ref-57">[57]</a></sup>。
 <li style="margin-bottom: 8px;"><strong>神経寄与の切り分け：</strong><code>brainなし</code>、<code>time-shuffle</code>、<code>trial-shuffle</code>、<code>LM-only</code>、<code>no-LM</code> を並べ、候補集合からの検索なら candidate set size も明示します。</li>
 <li style="margin-bottom: 8px;"><strong>一般化の境界：</strong>held-out 文・held-out story・held-out vocabulary・cross-day・cross-task・cross-subject を分けて報告し、被験者協力や個人適応が必要なら隠さず書きます<sup><a href="#ref-30">[30]</a></sup><sup><a href="#ref-107">[107]</a></sup>。</li>
 <li style="margin-bottom: 8px;"><strong>real-time 指標：</strong>streaming を主張するなら、words/min だけでなく <strong>P50/P95/P99 latency</strong>、silence / abstention rate、dropout、recalibration burden、recovery time を出します<sup><a href="#ref-109">[109]</a></sup><sup><a href="#ref-110">[110]</a></sup>。</li>
-<li style="margin-bottom: 8px;"><strong>chronic stability 指標：</strong><strong>fixed decoder interval</strong>、<code>time since last supervised calibration</code>、microelectrode 系なら <strong>sorting version</strong>、<strong>drift correction</strong>、<strong>unit-match probability</strong>、<strong>dropout / new-unit rate</strong> を別列で残します<sup><a href="#ref-134">[134]</a></sup><sup><a href="#ref-135">[135]</a></sup><sup><a href="#ref-136">[136]</a></sup><sup><a href="#ref-137">[137]</a></sup><sup><a href="#ref-138">[138]</a></sup>。</li>
+<li style="margin-bottom: 8px;"><strong>chronic stability 指標：</strong><strong>fixed decoder interval</strong>、<code>time since last supervised calibration</code>、microelectrode 系なら <strong>sorting version</strong>、<strong>drift correction</strong>、<strong>unit-match probability</strong>、<strong>dropout / new-unit rate</strong> に加え、<strong>implant age</strong>、<strong>array type / material / geometry</strong>、<strong>impedance trend</strong>、<strong>tissue-response proxy</strong> を別列で残します<sup><a href="#ref-134">[134]</a></sup><sup><a href="#ref-135">[135]</a></sup><sup><a href="#ref-136">[136]</a></sup><sup><a href="#ref-137">[137]</a></sup><sup><a href="#ref-138">[138]</a></sup>。</li>
 <li style="margin-bottom: 8px;"><strong>再現ログ：</strong>brain encoder、language model、vocoder、context window、beam width、外部コーパス、prompt、キャリブレーション手順を固定し、モデル更新が評価を跨いだ場合は別 run として扱います。</li>
 </ul>
 
 <div class="note-box">
 <strong>2026-03-17 追補：same-session streaming を chronic evidence へ読み替えない</strong><br>
-Littlejohn / Wairagkar が押し上げたのは communication subsystem の同日内ないし短期の closed-loop 前進でございます。長期主張へ進むには、Wilson / Pun の再較正負荷、Steinmetz / Pachitariu / van Beest の chronic identity audit を別に通す必要があります。背景の整理は <a href="wiki/state-trait-and-drift.html">Wiki: state・trait・ドリフト</a> を参照してください<sup><a href="#ref-134">[134]</a></sup><sup><a href="#ref-135">[135]</a></sup><sup><a href="#ref-136">[136]</a></sup><sup><a href="#ref-137">[137]</a></sup><sup><a href="#ref-138">[138]</a></sup>。
+Littlejohn / Wairagkar が押し上げたのは communication subsystem の同日内ないし短期の closed-loop 前進でございます。長期主張へ進むには、Wilson / Pun の再較正負荷、Steinmetz / Pachitariu / van Beest の chronic identity audit に加え、Szymanski / Gregory / Wellman / Abbott が示す implant biology audit も別に通す必要があります。背景の整理は <a href="wiki/state-trait-and-drift.html">Wiki: state・trait・ドリフト</a> を参照してください<sup><a href="#ref-134">[134]</a></sup><sup><a href="#ref-135">[135]</a></sup><sup><a href="#ref-136">[136]</a></sup><sup><a href="#ref-137">[137]</a></sup><sup><a href="#ref-138">[138]</a></sup>。
 </div>
 
 <h3>Mind-Upload 側での運用ルール</h3>
@@ -1497,7 +1502,7 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <li id="ref-134" value="134">Wilson, G. H., Stein, E. A., Kamdar, F., et al. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <em>Nature Biomedical Engineering</em>. <a href="https://doi.org/10.1038/s41551-025-01536-z">doi:10.1038/s41551-025-01536-z</a></li>
 <li id="ref-135" value="135">Pun, T. K., Khoshnevis, M., Hosman, T., et al. (2024). Measuring instability in chronic human intracortical neural recordings towards stable, long-term brain-computer interfaces. <em>Communications Biology</em>, 7, 1363. <a href="https://doi.org/10.1038/s42003-024-06784-4">doi:10.1038/s42003-024-06784-4</a></li>
 <li id="ref-136" value="136">Steinmetz, N. A., Aydin, C., Lebedeva, A., et al. (2021). Neuropixels 2.0: A miniaturized high-density probe for stable, long-term brain recordings. <em>Science</em>, 372(6539), eabf4588. <a href="https://doi.org/10.1126/science.abf4588">doi:10.1126/science.abf4588</a></li>
-<li id="ref-137" value="137">Pachitariu, M., Sridhar, S., Pennington, J., &amp; Stringer, C. (2024). Spike sorting with Kilosort4. <em>Nature Methods</em>, 21, 914–921. <a href="https://doi.org/10.1038/s41592-024-02232-7">doi:10.1038/s41592-024-02232-7</a></li>
+<li id="ref-137" value="137">Pachitariu, M., Sridhar, S., Pennington, J., &amp; Stringer, C. (2024). Spike sorting with Kilosort4. <em>Nature Methods</em>, 21, 914–921. <a href="https://doi.org/10.1038/s41592-024-02595-5">doi:10.1038/s41592-024-02595-5</a></li>
 <li id="ref-138" value="138">van Beest, E. H., Bimbard, C., Fabre, J. M. J., et al. (2025). Tracking neurons across days with high-density probes. <em>Nature Methods</em>, 22, 778–787. <a href="https://doi.org/10.1038/s41592-024-02440-1">doi:10.1038/s41592-024-02440-1</a></li>
 </ol>
 </section>

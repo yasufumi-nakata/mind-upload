@@ -20,12 +20,14 @@ page_highlights:
   - "L2 以上では、Observability Budget に加えて latent-state error budget も付け、どの未観測状態がまだ claim を止めるかまで公開します。"
   - "L2 以上の介入・閉ループ結果では、Intervention Card で trigger rule・timing audit・control/sham・安全停止・再較正負荷を固定します。"
   - "cross-day / longitudinal claim では、Temporal Validity Card で fixed decoder interval・state 注釈・recalibration burden・transfer ceiling を独立監査します。"
+  - "chronic invasive claim では、signal-chain drift と implant tissue response を分けて監査し、unit identity audit だけで済ませません。"
   - "確率・区間・予測集合・棄権を出す結果では、Calibration & Abstention Card で fit/calibration/test 分離・evaluation family・coverage-risk・fallback を固定します。"
 known_points:
   - "標準、共有基盤、評価、監査をセットでそろえないと、比較可能な前進は作れません。"
   - "L0〜L2 では、再現性と反証条件を事前に設計することができます。"
   - "decode と emulate は別の主張であり、必要な証拠も別です。"
   - "multimodal result は 1 種類ではなく、同時取得、幾何統合、侵襲校正、atlas prior を分けて監査する必要があります。"
+  - "慢性侵襲記録では、unit matching の不確実性と implant 周囲の tissue response は別監査項目です。"
 unknown_points:
   - "どの因果構造近似で L4 の本人性に十分と言えるかは、まだ決着していません。"
   - "熱力学、閉ループ、本人性をまとめた最終勝利条件は未完成です。"
@@ -778,13 +780,25 @@ Fusion Card が無い場合、本サイトではその結果を原則として <
 <td>fast activity fit しか無い、または restabilization を見ていない場合、memory consolidation、long-term recall stabilization、slow-state、長期回復の claim を止めます。</td>
 </tr>
 <tr>
-<td><strong>chronic unit identity / tissue response</strong></td>
-<td>unit-match probability、dropout / new-unit rate、sorting version、drift correction、implant age、tissue-response proxy。</td>
+<td><strong>chronic unit identity / sorting uncertainty</strong></td>
+<td>unit-match probability、dropout / new-unit rate、sorting version、drift correction、feature shift。</td>
 <td>cross-day decoding と single-unit longitudinal claim を分け、population readout と unit identity を別監査にします。</td>
 <td>matching probability と dropout が無い場合、same neuron across days や single-unit memory trace claim を止めます。</td>
 </tr>
+<tr>
+<td><strong>implant tissue response / interface biology</strong></td>
+<td>implant age、array type / material / geometry、impedance trend、vascular / BBB / encapsulation proxy、可能なら imaging / histology。</td>
+<td>signal-chain drift と implant 周囲の biology を分け、chronic interface を biologically neutral と誤読させないようにします。</td>
+<td>implant age や tissue-response proxy が無い場合、長期 invasive readout を biologically stable / neutral interface と書きません。</td>
+</tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>2026-03-17 追補：tissue response は unit matching の別名ではありません</strong>
+<p>
+今回さらに深掘りして見えた弱点は、慢性 invasive stack の限界を <strong>sorting / matching の不確実性</strong>としては扱えていても、<strong>implant 周囲の組織応答そのもの</strong>を独立欄にできていなかった点でございます。<a href="https://doi.org/10.1088/1741-2552/ac127e" target="_blank">Szymanski et al. (2021)</a> は human intracortical microelectrode 周囲に encapsulation、foreign-body reaction、microhemorrhage、神経細胞脱落を報告し、<a href="https://doi.org/10.1088/1741-2552/ace8ac" target="_blank">Gregory et al. (2023)</a> は rat motor cortex で近傍 pyramidal neuron の structural / functional change を示しました。さらに <a href="https://doi.org/10.1016/j.biomaterials.2024.122963" target="_blank">Wellman et al. (2025)</a> は chronic microelectrode 周囲で mural cell と血管リモデリングが進むことを、<a href="https://doi.org/10.1016/j.biomaterials.2024.122543" target="_blank">Abbott et al. (2024)</a> は low-profile a-SiC array が chronic tissue response を弱めうることを示しました。ここからの推論として、長期 invasive readout の ceiling は <strong>decoder</strong> と <strong>sorting</strong> だけでなく、<strong>implant biology</strong> でも決まります。したがって本サイトでは、unit identity と tissue response を同じ行で監査しません。
+</p>
+</div>
 <div class="note-box">
 <strong>2026-03 追補：intrinsic excitability は 1 行では粗すぎます</strong>
 <p>
@@ -879,9 +893,9 @@ error budget が無い場合、本サイトでは結果を <strong>state-partial
 <td>state fluctuation や recovery history を、trait drift や decoder failure と誤認しやすくなります。</td>
 </tr>
 <tr>
-<td><strong>interface / decoder drift audit</strong></td>
-<td>再装着、impedance、channel dropout、probe drift、sorting version、drift correction、unit-match probability、feature shift を書きます。</td>
-<td>biological drift と interface / decoder drift が混ざり、same-neuron claim や single-unit longitudinal claim を過大評価しやすくなります。</td>
+<td><strong>signal-chain / implant-biology drift audit</strong></td>
+<td>再装着、impedance、channel dropout、probe drift、sorting version、drift correction、unit-match probability、feature shift に加え、implant age、array type / material / geometry、vascular / tissue-response proxy を書きます。</td>
+<td>biological drift、signal-chain drift、implant biology drift が混ざり、same-neuron claim や chronic invasive stability claim を過大評価しやすくなります。</td>
 </tr>
 <tr>
 <td><strong>population backbone / biological drift metric</strong></td>
@@ -1568,6 +1582,9 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Trautmann, E. M., Stavisky, S. D., Lahiri, S., et al. (2019). Accurate estimation of neural population dynamics without spike sorting. <a href="https://doi.org/10.1016/j.neuron.2019.05.003" target="_blank">doi:10.1016/j.neuron.2019.05.003</a></li>
 <li>van Beest, E. H., Jia, X., Deng, X., et al. (2024). Tracking neurons across days with high-density probes. <a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">doi:10.1038/s41592-024-02440-1</a></li>
 <li>Gregory, N. S., et al. (2023). Structural and functional changes of deep layer pyramidal neurons surrounding implanted microelectrode arrays in rat motor cortex. <a href="https://doi.org/10.1088/1741-2552/ace8ac" target="_blank">doi:10.1088/1741-2552/ace8ac</a></li>
+<li>Szymanski, L. J., Kellis, S., Liu, C. Y., Jones, K. T., Andersen, R. A., Commins, D. L., Lee, B., McCreery, D. B., &amp; Miller, C. A. (2021). Neuropathological effects of chronically implanted, intracortical microelectrodes in a tetraplegic patient. <a href="https://doi.org/10.1088/1741-2552/ac127e" target="_blank">doi:10.1088/1741-2552/ac127e</a></li>
+<li>Wellman, S. M., et al. (2025). Dynamic changes in mural cells drive vascular remodeling around chronically implanted neural probes. <a href="https://doi.org/10.1016/j.biomaterials.2024.122963" target="_blank">doi:10.1016/j.biomaterials.2024.122963</a></li>
+<li>Abbott, J. R., et al. (2024). Planar amorphous silicon carbide microelectrode arrays for chronic recording in rat motor cortex. <a href="https://doi.org/10.1016/j.biomaterials.2024.122543" target="_blank">doi:10.1016/j.biomaterials.2024.122543</a></li>
 <li>Musall, S., Kaufman, M. T., Juavinett, A. L., Gluf, S., &amp; Churchland, A. K. (2019). Single-trial neural dynamics are dominated by richly varied movements. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">doi:10.1038/s41593-019-0502-4</a></li>
 <li>Gallego, J. A., Perich, M. G., Chowdhury, R. H., Solla, S. A., &amp; Miller, L. E. (2020). Long-term stability of cortical population dynamics underlying consistent behavior. <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">doi:10.1038/s41593-019-0555-4</a></li>
 <li>Benisty, H., Barson, D., Moberly, A. H., Lohani, S., Tang, L., Coifman, R. R., Crair, M. C., Cardin, J. A., &amp; Higley, M. J. (2024). Rapid fluctuations in functional connectivity of cortical networks encode spontaneous behavior. <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">doi:10.1038/s41593-023-01498-y</a></li>
