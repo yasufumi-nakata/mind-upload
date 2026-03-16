@@ -243,6 +243,11 @@ shared clock と co-registration は、EEG-fMRI を比較可能にするため�
 <td>large-vessel mask、depth-dependent diagnostic、non-neural factor の補正 / 棄権条件を残します。</td>
 </tr>
 <tr>
+<td><strong>BOLD-CMRO<sub>2</sub> consistency / metabolic validator</strong></td>
+<td><a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> は human cortex の calibrated fMRI で、BOLD と酸素代謝変化が有意 voxel の約40%で逆向きになりうることを示しました。</td>
+<td>代謝や energetic mechanism を主張する場合は、calibrated BOLD、CMRO<sub>2</sub> 関連 readout、または明示的な abstention を残します。shared clock だけで metabolic interpretation へ上げません。</td>
+</tr>
+<tr>
 <td><strong>Mechanistic validator</strong></td>
 <td>shared clock があっても、EEG-fMRI だけでは mechanistic interpretation は閉じません。electrophysiology、intracranial validation、fPET / calibrated BOLD などの別 validator が必要です。</td>
 <td>mechanism claim をする場合は external validator を明示し、無い場合は macro concordance までに留めます。</td>
@@ -252,7 +257,7 @@ shared clock と co-registration は、EEG-fMRI を比較可能にするため�
 <div class="note-box">
 <strong>短い結論</strong>
 <p>
-EEG-fMRI の強みは、<strong>同一時点の macro-scale concordance</strong> と <strong>広域 coverage + ms 制約の併用</strong>にございます。しかし、hemodynamic proxy gate が無い場合、その ceiling はあくまで <strong>synchronized cross-modal constraint</strong> であって、fine-grained neural truth ではありません。
+EEG-fMRI の強みは、<strong>同一時点の macro-scale concordance</strong> と <strong>広域 coverage + ms 制約の併用</strong>にございます。しかし、hemodynamic proxy gate が無い場合、その ceiling はあくまで <strong>synchronized cross-modal constraint</strong> であって、fine-grained neural truth ではありません。さらに <strong>BOLD-CMRO<sub>2</sub> の不一致</strong>が残る以上、shared clock や細かい voxel map だけで energetic mechanism まで閉じたとは書きません。
 </p>
 </div>
 </section>
@@ -365,6 +370,7 @@ Fusion Card が無い場合、本サイトでは `multimodal result` を強く�
 <li>Bailes J, Millman R, Franklin C, et al. Resting-state fMRI signals contain spectral signatures of local hemodynamic response timing. <em>eLife</em>. 2023. <a href="https://doi.org/10.7554/eLife.86453" target="_blank">doi:10.7554/eLife.86453</a></li>
 <li>Kay KN, Jamison KW, Zhang RY, Uğurbil K. A critical assessment of data quality and venous effects in sub-millimeter fMRI. <em>NeuroImage</em>. 2019;189:847-869. <a href="https://doi.org/10.1016/j.neuroimage.2019.02.006" target="_blank">doi:10.1016/j.neuroimage.2019.02.006</a></li>
 <li>Kurzawski JW, Yablonskiy DA, Pointer R, et al. Non-Neural Factors Influencing BOLD Response Magnitudes within Individual Subjects. <em>Journal of Neuroscience</em>. 2022;42:7256-7266. <a href="https://doi.org/10.1523/JNEUROSCI.2532-21.2022" target="_blank">doi:10.1523/JNEUROSCI.2532-21.2022</a></li>
+<li>Epp KJ, Lu H, Lydon-Staley DM, et al. BOLD signal changes can oppose oxygen metabolism across the human cortex. <em>Nature Neuroscience</em>. 2025. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
 </ol>
 </section>
 

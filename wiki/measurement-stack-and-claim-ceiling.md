@@ -167,7 +167,7 @@ recommended_pages:
 <section class="section" id="fmri-proxy-audit">
 <h2 class="section-title">fMRI / BOLD を別扱いにする理由</h2>
 <p>
-現行サイトは fMRI を `blood-flow proxy` としては正しく扱えていました。しかし、技術・自然科学の観点では、それだけでは不十分でございます。重要なのは <strong>proxy であること</strong>そのものよりも、<strong>どの failure mode が BOLD の解釈 ceiling を作るか</strong>を提出物へ落とすことです。以下では、一次文献が比較的一貫して支持する 4 つの failure mode を固定します。
+現行サイトは fMRI を `blood-flow proxy` としては正しく扱えていました。しかし、技術・自然科学の観点では、それだけでは不十分でございます。重要なのは <strong>proxy であること</strong>そのものよりも、<strong>どの failure mode が BOLD の解釈 ceiling を作るか</strong>を提出物へ落とすことです。以下では、一次文献が比較的一貫して支持する 5 つの failure mode を固定します。
 </p>
 <table class="data-table">
 <thead>
@@ -198,12 +198,17 @@ recommended_pages:
 <td><a href="https://doi.org/10.1016/j.neuroimage.2019.02.006" target="_blank">Kay et al. (2019)</a> は sub-millimeter fMRI の data quality と venous effect を批判的に整理し、<a href="https://doi.org/10.1523/JNEUROSCI.2532-21.2022" target="_blank">Kurzawski et al. (2022)</a> は同一被験者内でも non-neural factor が BOLD magnitude を左右することを示しました。</td>
 <td>`細かい voxel map = 細かい neural map` とは読みません。laminar / sub-mm / large-vessel-near claim では venous / depth diagnostic を別提出物にします。</td>
 </tr>
+<tr>
+<td><strong>BOLD-CMRO<sub>2</sub> discordance</strong></td>
+<td><a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> は human cortex の calibrated fMRI で、BOLD と酸素代謝変化が有意 voxel の約40%で逆向きになりうることを示しました。</td>
+<td>BOLD の符号や振幅だけを、そのまま local metabolic demand や energetic mechanism と読みません。代謝や機序の主張をする場合は calibrated BOLD、CMRO<sub>2</sub> 関連 readout、または明示的な棄権条件を追加します。</td>
+</tr>
 </tbody>
 </table>
 <div class="note-box">
 <strong>このサイトでの運用ルール</strong>
 <p>
-fMRI を含む claim では、少なくとも <strong>(1) target neural claim</strong>、<strong>(2) HRF model granularity</strong>、<strong>(3) physiology / task-related nuisance</strong>、<strong>(4) venous / depth diagnostic</strong>、<strong>(5) abstention condition</strong> をセットで残します。これが無い場合、本サイトでは fMRI を <strong>broad coverage を与える hemodynamic proxy</strong> としては受理しても、fast mechanism や fine-grained localization の根拠には上げません。
+fMRI を含む claim では、少なくとも <strong>(1) target neural claim</strong>、<strong>(2) HRF model granularity</strong>、<strong>(3) physiology / task-related nuisance</strong>、<strong>(4) venous / depth diagnostic</strong>、<strong>(5) metabolic / calibrated validator または abstention condition</strong> をセットで残します。これが無い場合、本サイトでは fMRI を <strong>broad coverage を与える hemodynamic proxy</strong> としては受理しても、fast mechanism や fine-grained localization の根拠には上げません。
 </p>
 </div>
 </section>
@@ -485,6 +490,7 @@ MICrONS は、同一脳で dense calcium imaging、行動状態、EM connectome 
 <li>Bailes, J., Millman, R., Franklin, C., et al. (2023). Resting-state fMRI signals contain spectral signatures of local hemodynamic response timing. <em>eLife</em>. <a href="https://doi.org/10.7554/eLife.86453" target="_blank">doi:10.7554/eLife.86453</a></li>
 <li>Kay, K. N., Jamison, K. W., Zhang, R. Y., &amp; Uğurbil, K. (2019). A critical assessment of data quality and venous effects in sub-millimeter fMRI. <em>NeuroImage</em>, 189, 847-869. <a href="https://doi.org/10.1016/j.neuroimage.2019.02.006" target="_blank">doi:10.1016/j.neuroimage.2019.02.006</a></li>
 <li>Kurzawski, J. W., Yablonskiy, D. A., Pointer, R., et al. (2022). Non-Neural Factors Influencing BOLD Response Magnitudes within Individual Subjects. <em>Journal of Neuroscience</em>, 42, 7256-7266. <a href="https://doi.org/10.1523/JNEUROSCI.2532-21.2022" target="_blank">doi:10.1523/JNEUROSCI.2532-21.2022</a></li>
+<li>Epp, K. J., Lu, H., Lydon-Staley, D. M., et al. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
 </ol>
 </section>
 
