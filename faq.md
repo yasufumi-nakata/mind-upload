@@ -5,7 +5,7 @@ description: "Mind-Uploadを読んでいて出やすい疑問に、短く正確�
 article_type: FAQ
 subtitle: "派手な結論より、検証できる前進を"
 author: Mind Uploading Research Project
-last_updated: "2026-03-16"
+last_updated: "2026-03-17"
 note: "Human-first"
 audience: "まず疑問や誤解を整理したい人、短いQ&Aで全体像をつかみたい人"
 reading_time: "8〜15分"
@@ -202,28 +202,30 @@ Mind-Uploadの立場は、「派手な読み出し」を否定することでは
 <div class="note-box">
 <strong>Q1の読み替え禁止</strong>
 <p>
-<code>文字列が出た</code>、<code>脳由来情報だけで出た</code>、<code>内部状態が分かった</code> は別です。brain-to-text を読むときは、(1) 計測法、(2) 課題制約、(3) language prior、(4) 直接妥当化、(5) 校正と棄権条件、を分けて確認してください。
+<code>文字列が出た</code>、<code>脳由来情報だけで出た</code>、<code>real-time に使える</code>、<code>内部状態が分かった</code> は別です。brain-to-text を読むときは、(1) 計測法、(2) 課題制約、(3) language prior、(4) causal / non-causal の別、(5) 直接妥当化、(6) 校正と棄権条件、を分けて確認してください。
 </p>
 </div>
 
 <section class="section" id="q1b">
 <h2 class="section-title" id="brain-to-text">Q. brain-to-text のデモを見るとき、最低限どこを確認する？</h2>
 <p>
-A. 少なくとも次の 6 点でございます。
+A. 少なくとも次の 8 点でございます。
 </p>
 <ul>
 <li><strong>計測法：</strong>scalp EEG / MEG / fMRI / ECoG / intracortical array のどれか。高性能 speech neuroprosthesis の代表例は侵襲系です。</li>
 <li><strong>課題：</strong>聞いた単語、読んだ単語、発話運動、想起、自由会話のどれか。制約つき知覚課題と自由思考は別です。</li>
 <li><strong>prior と baseline：</strong>固定語彙、beam search、外部コーパス、LLM、prompt に加え、<code>LM-only</code> / <code>no-brain</code> / shuffle baseline をどこまで置いたか。出力の流暢さが脳信号だけを反映しているとは限りません。</li>
+<li><strong>causal性：</strong>causal decoder か、future context や post-onset auditory feedback を見ている non-causal decoder か。offline の見栄えと real-time deployability は別です。</li>
+<li><strong>adaptation / transfer：</strong>participant-specific training がどれだけ必要か、group-derived decoder や transfer learning を使ったか。一般 decoder と個別最適化は別です。</li>
 <li><strong>検証：</strong>held-out 条件、反事実テスト、adversarial control、失敗例があるか。訓練条件と近すぎる評価は強い証拠になりません。</li>
 <li><strong>信頼度運用：</strong>confidence が校正されているか、低信頼時に silence / abstention を返せるか。高確率表示だけでは安全な解釈になりません。</li>
 <li><strong>長期運用：</strong>within-session の速さだけでなく、tail latency、日跨ぎ安定性、再校正負荷を出しているか。速い demo と deployable loop は別です。</li>
 </ul>
 <p>
-Littlejohn et al. (2025) は 80 ms ごとの streaming brain-to-voice、Wairagkar et al. (2025) は 10 ms 未満の neural-to-voice synthesis と silence fallback を示しましたが、いずれも侵襲系の communication route でございます。さらに Wilson et al. (2025) は long-term unsupervised recalibration の必要性を示し、daily supervised recalibration 自体が別の壁であることを明確にしました。したがって、scalp EEG や一般的な non-invasive BCI が同じ条件なしに同水準を名乗ることはできません。
+Chen et al. (2024) は、speech decode で non-causal path が post-onset の auditory feedback を使うと offline score が inflate しうることを示しました。Singh et al. (2025) は、distributed brain recordings を用いた transfer learning が speech decoding の信頼性を押し上げても、shared task structure と calibration route が依然として必要だと示しました。Littlejohn et al. (2025) は 80 ms ごとの streaming brain-to-voice、Wairagkar et al. (2025) は 10 ms 未満の neural-to-voice synthesis と silence fallback を示しましたが、いずれも侵襲系の communication route でございます。さらに Wilson et al. (2025) は long-term unsupervised recalibration の必要性を示し、daily supervised recalibration 自体が別の壁であることを明確にしました。したがって、scalp EEG や一般的な non-invasive BCI が同じ条件なしに同水準を名乗ることはできません。
 </p>
 <p>
-提出物として比較したい場合は、<a href="verification.html#neural-contribution-card">Verification の Neural Contribution Card</a> を見てください。ここでは <strong>task regime</strong>、<strong>prior scaffold</strong>、<strong>no-brain / LM-only / no-LM / shuffle baseline</strong>、<strong>subject cooperation</strong>、<strong>generalization surface</strong>、<strong>online fallback</strong> を固定し、派手な出力をそのまま強い証拠へ読み替えません。
+提出物として比較したい場合は、<a href="verification.html#neural-contribution-card">Verification の Neural Contribution Card</a> と <a href="wiki/decode-vs-emulate.html#speech-decode-scaffolds">Wiki: Decode と Emulate の speech decode 足場節</a> を見てください。ここでは <strong>task regime</strong>、<strong>prior scaffold</strong>、<strong>no-brain / LM-only / no-LM / shuffle baseline</strong>、<strong>causal deployment guard</strong>、<strong>subject cooperation</strong>、<strong>generalization surface</strong>、<strong>online fallback</strong> を固定し、派手な出力をそのまま強い証拠へ読み替えません。
 </p>
 </section>
 
@@ -383,6 +385,8 @@ Mind-Uploadの差別化点は、<strong>「検証基盤（Verification Commons�
 <ol>
 <li>Tang, J., et al. (2023). Semantic reconstruction from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
 <li>d'Ascoli, S., Bel, C., Rapin, J., et al. (2025). Towards decoding individual words from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">doi:10.1038/s41467-025-65499-0</a></li>
+<li>Chen, Z., Yao, D., Wang, M., et al. (2024). A neural speech decoding framework leveraging deep learning and speech synthesis. <a href="https://doi.org/10.1038/s42256-024-00837-5" target="_blank">doi:10.1038/s42256-024-00837-5</a></li>
+<li>Singh, V., Papangelou, A., Sharma, M., et al. (2025). Transfer learning via distributed brain recordings enables reliable speech decoding. <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">doi:10.1038/s41467-025-63825-0</a></li>
 <li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Validating EEG source imaging using intracranial electrical stimulation in focal epilepsy. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
 <li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
 <li>Willett, F. R., Kunz, E. M., Fan, C., et al. (2023). A high-performance speech neuroprosthesis. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
