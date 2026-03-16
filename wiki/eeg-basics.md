@@ -5,7 +5,7 @@ description: "EEG が何を測り、なぜ得意なことと苦手なことが�
 article_type: Wiki
 subtitle: "EEG を魔法の読心術にしないための基礎知識"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-16"
 note: "Beginner guide"
 audience: "EEG を初めて学ぶ人、公開データや入門ページの前提を作りたい人"
 reading_time: "10〜15分"
@@ -15,11 +15,13 @@ page_highlights:
   - "EEG は頭皮で観測した混ざった電気信号です。"
   - "時間変化には強い一方、空間的な特定や深部推定には限界があります。"
   - "『頭皮で予測できる』ことと『脳内 source が一意に決まる』ことは別です。"
+  - "電極数の増加は field sampling を改善しえますが、source の一意復元や WBE sufficiency と同義ではありません。"
   - "QC と前処理の記録が、結果の信頼性を大きく左右します。"
 known_points:
   - "EEG はミリ秒単位の時間変化を見るのが得意です。"
   - "観測される信号は多くの活動が混ざった結果であり、解釈には前提が必要です。"
   - "個体別 MRI と外部基準を入れると source imaging は改善しますが、深部や弱い source の不確実性は残ります。"
+  - "高密度化の効果は sensor count だけでなく、head-surface coverage と外部妥当化の有無で変わります。"
   - "公開データでも、前処理とベースライン比較の練習は十分できます。"
 unknown_points:
   - "非侵襲 EEG だけで、脳内部の詳細な因果構造まで十分に再構成できるかは未解決です。"
@@ -113,6 +115,44 @@ EEG では、<strong>頭皮信号を観測した</strong>こと、<strong>脳内
 </table>
 </section>
 
+<section class="section" id="density">
+<h2 class="section-title">電極を増やすと何が変わるか</h2>
+<p>
+初心者が誤読しやすいのは、「電極が多いほど全部分かる」か、逆に「128ch を超えたら全部同じ」のどちらかへ振れることでございます。一次文献はそのどちらも支持していません。増やして改善する層はありますが、それでも source の一意復元や WBE に十分な情報量までは到達しません。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>問い</th>
+<th>一次文献が示すこと</th>
+<th>初心者向けの安全な読み方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>頭皮場の空間サンプリング</strong></td>
+<td><a href="https://doi.org/10.1046/j.1460-9568.1998.00269.x" target="_blank">Srinivasan et al. (1998)</a> は頭皮電位の空間平滑化を示し、<a href="https://doi.org/10.1088/1741-2552/ac288c" target="_blank">Iivanainen et al. (2021)</a> は head-surface field 推定が <strong>約 110 spatial samples</strong> までは改善しうると報告しました。</td>
+<td>32 / 64ch がいつも十分とは言いませんが、sensor 数をそのまま独立な脳内自由度とは読みません。</td>
+</tr>
+<tr>
+<td><strong>局所情報の取りこぼし</strong></td>
+<td><a href="https://doi.org/10.1038/s41598-017-16377-3" target="_blank">Robinson et al. (2017)</a> は、視覚野上の super-Nyquist-density EEG が標準密度 subset より追加情報を与えると示しました。</td>
+<td>「高密度化は全部無意味」とは書きません。ただし改善は局所 cortical 情報であり、全脳状態の完全復元ではありません。</td>
+</tr>
+<tr>
+<td><strong>source localization の改善</strong></td>
+<td><a href="https://doi.org/10.1046/j.1460-9568.2003.02483.x" target="_blank">Lantz et al. (2003)</a> は 31→63→123 electrodes で局在が改善すると示し、<a href="https://doi.org/10.1016/j.jneumeth.2015.08.015" target="_blank">Song et al. (2015)</a> は inferior surface を含む whole-head coverage が有利だと示しました。</td>
+<td>本数だけでなく、被覆、個体別 MRI、conductivity、外部基準を併記してはじめて改善を読みます。</td>
+</tr>
+<tr>
+<td><strong>WBE に十分か</strong></td>
+<td><a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">Seeber et al. (2019)</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> が示すのは条件付き detectability と誤差監査であり、state-complete reconstruction ではありません。</td>
+<td>高密度 EEG は強い macro constraint ですが、cell / synapse / glia を直接与える装置ではありません。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
 <section class="section" id="observability">
 <h2 class="section-title">観測・推定・同定は別です</h2>
 <table class="data-table">
@@ -195,6 +235,11 @@ EEG は WBE をいきなり完成させる装置ではありません。しか�
 <ol>
 <li>Pernet, C. R., Appelhoff, S., Gorgolewski, K. J., et al. (2019). EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. <em>Scientific Data</em>, 6, 103. <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">doi:10.1038/s41597-019-0104-8</a></li>
 <li>Michel, C. M., &amp; Brunet, D. (2019). EEG source imaging: a practical review of the analysis steps. <em>Frontiers in Neurology</em>, 10, 325. <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">doi:10.3389/fneur.2019.00325</a></li>
+<li>Srinivasan, R., Nunez, P. L., &amp; Silberstein, R. B. (1998). Spatial filtering and neocortical dynamics: estimates of EEG coherence. <em>Electroencephalography and Clinical Neurophysiology</em>, 106(3), 249-260. <a href="https://doi.org/10.1046/j.1460-9568.1998.00269.x" target="_blank">doi:10.1046/j.1460-9568.1998.00269.x</a></li>
+<li>Lantz, G., Grave de Peralta, R., Spinelli, L., Seeck, M., &amp; Michel, C. M. (2003). Epileptic source localization with high density EEG: how many electrodes are needed? <em>European Journal of Neuroscience</em>, 17(1), 63-69. <a href="https://doi.org/10.1046/j.1460-9568.2003.02483.x" target="_blank">doi:10.1046/j.1460-9568.2003.02483.x</a></li>
+<li>Song, J., Davey, C., Poulsen, C., et al. (2015). EEG source localization: Sensor density and head surface coverage. <em>Journal of Neuroscience Methods</em>, 256, 9-21. <a href="https://doi.org/10.1016/j.jneumeth.2015.08.015" target="_blank">doi:10.1016/j.jneumeth.2015.08.015</a></li>
+<li>Robinson, A. K., Venkatesh, P., Boring, M. J., et al. (2017). Very high density EEG elucidates spatiotemporal aspects of early visual processing. <em>Scientific Reports</em>, 7, 16248. <a href="https://doi.org/10.1038/s41598-017-16377-3" target="_blank">doi:10.1038/s41598-017-16377-3</a></li>
+<li>Iivanainen, J., Stenroos, M., Nummenmaa, A., &amp; Parkkonen, L. (2021). On the effect of spatial sampling in EEG head-surface field estimation and optimization. <em>Journal of Neural Engineering</em>. <a href="https://doi.org/10.1088/1741-2552/ac288c" target="_blank">doi:10.1088/1741-2552/ac288c</a></li>
 <li>Mikulan, E., Russo, S., Bares, M., et al. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <em>Scientific Data</em>, 7, 127. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
 <li>Seeber, M., Cantonas, L.-M., Hoevels, M., et al. (2019). Subcortical electrophysiological activity is detectable with high-density EEG source imaging. <em>Nature Communications</em>, 10, 753. <a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">doi:10.1038/s41467-019-08725-w</a></li>
 <li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Direct validation of EEG source imaging by intracranial electric stimulation in human patients. <em>Brain Communications</em>, 5(2), fcad023. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
