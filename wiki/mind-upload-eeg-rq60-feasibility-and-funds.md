@@ -777,3 +777,12 @@ recommended_pages:
 - 申請正本キー `D1-D16` の `DOI` も `EEG-DATA/eeg_dataset_summary_ja.csv` で欠落 `0` を再確認しました。
 - 助成キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue/*.yaml` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で全件再参照可能でした。
 - 方針を継続します。汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` を維持し、各RQを個別に深掘りして提出へ接続します。
+
+## 2026-03-17 08:02 JST 再検証ログ（本run / pull後・RQ60深掘り方針の再固定）
+
+- 作業前に `main` を `pull --ff-only` し、基準コミットを `mind-upload=b01826de2565`、`EEG-DATA=48261b83b10a`、`auto-research-funds=c81f22c6aafd` に更新しました。
+- `## U0 リサーチクエスチョン` から `## 実行優先順` 直前の `RQ` 行を機械再計数し、`RQ_TOTAL=60` を再確認しました。
+- 判定内訳は `A/B/C=17/25/18` を再確認しました。
+- `RQ` 行で参照する数値データID `17件`（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を確認しました。
+- 助成キー `G1-G6` は実体参照可能でした（`G1-G2=grant_queue`、`G3-G6=auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md + grant_eeg_dataset_match.csv`）。
+- 実務方針を継続します。汎用的に全課題を浅く横断せず、`1RQ=1検証命題=1応募テーマ=1主データ` の粒度で1件ずつ深く進めます。

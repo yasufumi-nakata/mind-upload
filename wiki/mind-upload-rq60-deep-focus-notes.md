@@ -429,3 +429,11 @@ recommended_pages:
 - 本ページで参照する `Ux-y` は `60件` を維持し、`mind-upload-eeg-rq60-feasibility-and-funds.md` の判定内訳 `A/B/C=17/25/18` と整合していることを確認しました。
 - 助成キー `G1-G6` と EEG データ参照ID群（24件）は、それぞれ `grant_queue + auto-research-funds` と `EEG-DATA/eeg_dataset_summary_ja.csv` で実在確認済み（欠落 `0`）。
 - 本runでも方針は据え置きです。汎用要約を避け、`1RQ=1検証命題=1応募テーマ=1主データ` を維持して深掘り記述を継続します。
+
+## 2026-03-17 08:02 JST 再検証ログ（本run / 1件ずつ深掘り運用の固定）
+
+- 作業前に `main` を `pull --ff-only` し、基準コミットを `mind-upload=b01826de2565`、`EEG-DATA=48261b83b10a`、`auto-research-funds=c81f22c6aafd` に更新しました。
+- 正本 `mind-upload/research_harvest_50.md` と本ページ主表を突合し、`RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認しました。
+- 本ページで参照する EEG データID `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）でした。
+- 助成キー `G1-G6` は `grant_queue` と `auto-research-funds` の両系統で実ID参照可能でした。
+- 以降も方針を固定します。網羅的な薄い要約は行わず、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘りを優先します。
