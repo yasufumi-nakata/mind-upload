@@ -15,6 +15,7 @@ page_highlights:
   - "Mind-Uploadの中心は、派手な結論を出すことではなく、前進を測れる検証基盤を作ることです。"
   - "迷ったら Verification → Roadmap → WBE/EEG入門 の順で読むと、話の軸を保ちやすいです。"
   - "配線図や cell type だけでは長期ダイナミクスは決まらず、sleep/homeostasis・髄鞘・グリア代謝も別変数として残ります。"
+  - "brain-to-text や speech demo では、Neural Contribution Card で神経寄与と task / language prior を切り分けます。"
   - "same-day の成功を cross-day / long-term claim へ読み替えないため、Temporal Validity Card を公開運用へ追加しました。"
   - "用語や前提で止まったときに戻れる入口として、FAQ と用語集も近くに置いています。"
 known_points:
@@ -95,6 +96,12 @@ Observability Budget で「何を直接見たか」を確認したら、次は <
 <strong>same-day の成功を cross-day / long-term claim へ上げる前に見たいとき</strong>
 <p>
 2026年3月の更新では、縦断主張の誤読を止めるため <a href="verification.html#temporal-validity-card">Verification の Temporal Validity Card</a> を追加しました。ここでは <strong>fixed decoder interval</strong>、<strong>state annotation</strong>、<strong>interface / decoder drift</strong>、<strong>recalibration burden</strong>、<strong>transfer ceiling</strong> を独立に出し、same-day の fit を別日安定性や長期 deployability へそのまま延長しません。背景は <a href="wiki/state-trait-and-drift.html">Wiki: state・trait・ドリフト</a> に集約しています。
+</p>
+</div>
+<div class="note-box">
+<strong>『文字列や音声が出た』ときに、何が脳由来か先に見たいとき</strong>
+<p>
+2026年3月の更新では、brain-to-text / speech decode の過大解釈を止めるため <a href="verification.html#neural-contribution-card">Verification の Neural Contribution Card</a> を追加しました。ここでは <strong>task constraint</strong>、<strong>language model / prompt / candidate set</strong>、<strong>no-brain / no-LM / shuffle baseline</strong>、<strong>subject cooperation / calibration burden</strong>、<strong>online / offline</strong> を固定し、「文字列が出た」をそのまま neural reconstruction と読み替えません。入口Q&amp;Aなら <a href="faq.html#brain-to-text">FAQ: brain-to-text の見方</a> が近道です。
 </p>
 </div>
 

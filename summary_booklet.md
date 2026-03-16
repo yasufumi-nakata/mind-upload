@@ -116,7 +116,7 @@ body_class: "summary-booklet-page"
     <div>
       <h3>先に固定すること</h3>
       <ul class="booklet-list">
-        <li>標準、置き場、ベンチマーク、監査をセットでそろえる必要があります。</li><li>デコーディングとエミュレーションを混同しないために、主張レベルと失敗条件を先に固定します。</li><li>ここを読むと、なぜデータだけ集めても前進にならないのかが分かります。</li><li>multimodal や atlas prior を使う結果では、Observability Budget に加えて Fusion Card で取得関係・同期・融合モデル・外部妥当化を固定します。</li>
+        <li>標準、置き場、ベンチマーク、監査をセットでそろえる必要があります。</li><li>デコーディングとエミュレーションを混同しないために、主張レベルと失敗条件を先に固定します。</li><li>ここを読むと、なぜデータだけ集めても前進にならないのかが分かります。</li><li>brain-to-text や speech decode では、Neural Contribution Card で task constraint・language prior・candidate set・no-brain / no-LM / shuffle baseline・subject cooperation を固定します。</li>
       </ul>
     </div>
     <div>

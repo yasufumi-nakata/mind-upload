@@ -15,6 +15,7 @@ page_highlights:
   - "『このサイトは何をするのか』『EEG / brain-to-text で何が言えるのか』など、最初の疑問をまとめて潰せます。"
   - "『コネクトームと cell type で十分か』という誤読にも、短くても科学的に答えます。"
   - "派手な言い切りを避け、何が未解決かも同時に書いています。"
+  - "brain-to-text では、Neural Contribution Card に沿って神経寄与と task / language prior を分けて読みます。"
   - "FAQだけで十分な場合と、本文ページへ進むべき場合を分けて読める構成です。"
 known_points:
   - "短い Q&A でも、強い主張を弱い主張へ分解して読むだけで誤解は減らせます。"
@@ -220,6 +221,9 @@ A. 少なくとも次の 6 点でございます。
 </ul>
 <p>
 Littlejohn et al. (2025) は 80 ms ごとの streaming brain-to-voice、Wairagkar et al. (2025) は 10 ms 未満の neural-to-voice synthesis と silence fallback を示しましたが、いずれも侵襲系の communication route でございます。さらに Wilson et al. (2025) は long-term unsupervised recalibration の必要性を示し、daily supervised recalibration 自体が別の壁であることを明確にしました。したがって、scalp EEG や一般的な non-invasive BCI が同じ条件なしに同水準を名乗ることはできません。
+</p>
+<p>
+提出物として比較したい場合は、<a href="verification.html#neural-contribution-card">Verification の Neural Contribution Card</a> を見てください。ここでは <strong>task regime</strong>、<strong>prior scaffold</strong>、<strong>no-brain / LM-only / no-LM / shuffle baseline</strong>、<strong>subject cooperation</strong>、<strong>generalization surface</strong>、<strong>online fallback</strong> を固定し、派手な出力をそのまま強い証拠へ読み替えません。
 </p>
 </section>
 

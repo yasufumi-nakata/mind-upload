@@ -15,6 +15,7 @@ page_highlights:
   - "標準、置き場、ベンチマーク、監査をセットでそろえる必要があります。"
   - "デコーディングとエミュレーションを混同しないために、主張レベルと失敗条件を先に固定します。"
   - "ここを読むと、なぜデータだけ集めても前進にならないのかが分かります。"
+  - "brain-to-text や speech decode では、Neural Contribution Card で task constraint・language prior・candidate set・no-brain / no-LM / shuffle baseline・subject cooperation を固定します。"
   - "multimodal や atlas prior を使う結果では、Observability Budget に加えて Fusion Card で取得関係・同期・融合モデル・外部妥当化を固定します。"
   - "L2 以上では、Observability Budget に加えて latent-state error budget も付け、どの未観測状態がまだ claim を止めるかまで公開します。"
   - "L2 以上の介入・閉ループ結果では、Intervention Card で trigger rule・timing audit・control/sham・安全停止・再較正負荷を固定します。"
@@ -353,7 +354,7 @@ BIDS、OpenNeuro、PhysioNet、BIDS Validator、benchmark は全部「研究基�
 <div class="stage-number">04</div>
 <div class="stage-body">
 <h4>Leaderboard & Model Cards（比較の運用）</h4>
-<p>スコアだけでなく、データリーク対策、失敗例、計算資源、既知の弱点、さらに leaderboard / challenge 結果では <strong>どの split・hidden test・submission budget・checkpoint policy で score を出したか</strong> を示す <strong>Benchmark Governance Card</strong> を、L1 以上では <strong>どこまで直接観測し、どこから先が latent state か</strong> を示す <strong>Observability Budget</strong> を、確率・区間・予測集合・棄権を出す結果では <strong>fit / calibration / test の分離、evaluation family、coverage-risk、fallback policy</strong> を示す <strong>Calibration &amp; Abstention Card</strong> を、multimodal / atlas prior を使う結果では <strong>どう結び付け、どこまで較正したか</strong> を示す <strong>Fusion Card</strong> を、cross-day / longitudinal claim では <strong>same-day score をどこまで外挿してよいか</strong> を示す <strong>Temporal Validity Card</strong> を、L2 以上では <strong>どの latent state がまだ誤差を支配するか</strong> を示す <strong>latent-state error budget</strong> を、因果・閉ループ結果では <strong>trigger rule・timing audit・control/sham・安全停止・再較正負荷</strong> を示す <strong>Intervention Card</strong> を併記して公開し、再現性と安全性を担保する。</p>
+<p>スコアだけでなく、データリーク対策、失敗例、計算資源、既知の弱点、さらに leaderboard / challenge 結果では <strong>どの split・hidden test・submission budget・checkpoint policy で score を出したか</strong> を示す <strong>Benchmark Governance Card</strong> を、L1 以上では <strong>どこまで直接観測し、どこから先が latent state か</strong> を示す <strong>Observability Budget</strong> を、brain-to-text / speech decode / generative language reconstruction 結果では <strong>何が brain-derived information で、何が task constraint・language prior・prompt・candidate set から来たか</strong> を示す <strong>Neural Contribution Card</strong> を、確率・区間・予測集合・棄権を出す結果では <strong>fit / calibration / test の分離、evaluation family、coverage-risk、fallback policy</strong> を示す <strong>Calibration &amp; Abstention Card</strong> を、multimodal / atlas prior を使う結果では <strong>どう結び付け、どこまで較正したか</strong> を示す <strong>Fusion Card</strong> を、cross-day / longitudinal claim では <strong>same-day score をどこまで外挿してよいか</strong> を示す <strong>Temporal Validity Card</strong> を、L2 以上では <strong>どの latent state がまだ誤差を支配するか</strong> を示す <strong>latent-state error budget</strong> を、因果・閉ループ結果では <strong>trigger rule・timing audit・control/sham・安全停止・再較正負荷</strong> を示す <strong>Intervention Card</strong> を併記して公開し、再現性と安全性を担保する。</p>
 <div class="tag-list">
 <span class="tag">Leaderboard</span><span class="tag">Reproducibility</span><span class="tag">Safety</span>
 </div>
@@ -1295,6 +1296,71 @@ Model Card は <strong>モデルの弱点と失敗例</strong> を固定し、Be
 </div>
 </section>
 
+<section class="section" id="neural-contribution-card">
+<h2 class="section-title">2026-03 追補：brain-to-text / speech decode 結果には Neural Contribution Card を添付する</h2>
+<p>
+今回さらに深掘りして見えた最大の弱点は、<strong>language prior と brain-derived information の切り分け</strong>が narrative としては説明できていても、<strong>Verification Commons の提出物仕様</strong>にはまだ落ち切っていなかったことです。<a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a> は non-invasive semantic reconstruction を示しましたが、decoder の学習と適用の双方で参加者の協力が必要でした。<a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">Défossez et al. (2023)</a> は non-invasive recordings から speech を識別できることを示しつつ、self-supervised speech representation と retrieval setting に依拠しました。<a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a> は 723 人規模で word decode を押し上げましたが、surrounding linguistic context と participant / modality / task の差が性能を大きく動かすことも示しました。さらに <a href="https://doi.org/10.1038/s42003-025-07751-z" target="_blank">Wang et al. (2025)</a> は fMRI 由来表現を prompt とともに large language model へ入れて text continuation を生成し、<a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a> と <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> は streaming / instantaneous voice synthesis を大きく前進させましたが、そこでも acoustic model、beam search、vocoder、silence fallback、participant-specific calibration が結果の意味を左右します。加えて <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> は、長期運用では decoder の精度そのもの以上に <strong>再較正をどう回したか</strong>が支配的であることを示しました。したがって本サイトでは、<strong>brain-to-text / speech decode / generative language reconstruction 結果には Neural Contribution Card を必須化</strong>し、「文字列や音声が出た」ことをそのまま neural reconstruction と読まないようにします。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Neural Contribution Card の欄</th>
+<th>最低限書くこと</th>
+<th>これが無いと何が起きるか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>target / task regime</strong></td>
+<td>text continuation、word identification、speech perception retrieval、attempted speech、voice synthesis など、何を出力対象にしたかと、closed vocabulary / candidate set / free generation の別を書きます。</td>
+<td>制約つき課題と open-ended decode が同じ強さの evidence に見えてしまいます。</td>
+</tr>
+<tr>
+<td><strong>prior scaffold</strong></td>
+<td>language model、prompt、context window、beam search、external corpus、ASR、vocoder、rescoring、candidate pruning の有無と役割を書きます。</td>
+<td>流暢な出力を、そのまま brain signal 由来の情報量と誤読しやすくなります。</td>
+</tr>
+<tr>
+<td><strong>brain-versus-prior baselines</strong></td>
+<td><code>no-brain</code>、<code>LM-only</code>、<code>no-LM</code>、time-shuffle、trial-shuffle、shuffled-electrode / chance control のどれを置いたかを書きます。</td>
+<td>神経寄与の増分なのか、task prior や decoder scaffold の寄与なのかを切り分けられません。</td>
+</tr>
+<tr>
+<td><strong>subject adaptation / cooperation</strong></td>
+<td>participant-specific training、calibration 時間、decoder 適用時の参加者協力、transfer learning の有無、学習と評価での task familiarity を書きます。</td>
+<td>subject-specific fitting を、一般 decoder や即時利用可能系と誤読しやすくなります。</td>
+</tr>
+<tr>
+<td><strong>generalization surface</strong></td>
+<td>held-out sentence / story / vocabulary、cross-task、cross-day、cross-subject、cross-site のどこまで見たかを書きます。</td>
+<td>訓練条件に近い成功を、自由会話や長期運用へ不当に延長しやすくなります。</td>
+</tr>
+<tr>
+<td><strong>online semantics / fallback</strong></td>
+<td>offline か online か、chunk / update cadence、P50 / P95 / P99 latency、silence / abstention / freeze / hold-last-output、human-in-the-loop の有無を書きます。</td>
+<td>オフライン再構成、streaming demo、deployable communication route を区別できません。</td>
+</tr>
+<tr>
+<td><strong>claim ceiling</strong></td>
+<td>L1 decode、communication subsystem、limited closed loop など、その結果が到達してよい上限を 1 行で固定します。</td>
+<td>decode 成功や自然な音声出力を、そのまま emulate / WBE / state-complete reconstruction へ誤昇格させやすくなります。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>最低運用ルール</strong>
+<p>
+Neural Contribution Card が無い場合、本サイトではその結果を原則として <strong>exploratory decode demo</strong>、<strong>task-limited language reconstruction</strong>、または <strong>communication subsystem casework</strong> として扱い、L1 の強い decode、L2 の一般化、L3 の deployable loop へ上げません。とくに <strong>prior scaffold</strong>、<strong>brain-versus-prior baselines</strong>、<strong>subject adaptation / cooperation</strong> のいずれかが欠ける場合、「何が脳由来か」の読み替えを止めます。
+</p>
+</div>
+<div class="note-box">
+<strong>既存カードとの役割差</strong>
+<p>
+Pretraining Card は <strong>事前学習 corpus と adaptation 条件</strong> を固定し、Calibration &amp; Abstention Card は <strong>confidence / set / fallback の意味</strong> を固定し、Temporal Validity Card は <strong>時間軸の外挿</strong> を固定します。Neural Contribution Card はその手前で、<strong>出力のうち何が neural signal に由来し、何が prompt / LM / task scaffold に由来するか</strong> を固定するカードでございます。したがって本サイトでは、brain-to-text / speech decode 結果に <strong>Neural Contribution Card を別提出</strong>させ、model strength、reliability、time horizon を混ぜません。
+</p>
+</div>
+</section>
+
 <section class="section" id="benchmark-governance-card">
 <h2 class="section-title">2026-03 追補：leaderboard / challenge 結果には Benchmark Governance Card を添付する</h2>
 <p>
@@ -1464,6 +1530,10 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Wairagkar, M., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
 <li>Flesher, S. N., et al. (2021). A brain-computer interface that evokes tactile sensations improves robotic arm control. <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
 <li>Wilson, G. H., et al. (2025). Long-term unsupervised recalibration of intracortical brain-computer interfaces using a hidden Markov model. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Tang, J., LeBel, A., Jain, S., &amp; Huth, A. G. (2023). Semantic reconstruction of continuous language from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
+<li>Défossez, A., Caucheteux, C., Rapin, J., Kabeli, O., &amp; King, J.-R. (2023). Decoding speech perception from non-invasive brain recordings. <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">doi:10.1038/s42256-023-00714-5</a></li>
+<li>Wang, Z., Huo, Y., Zhang, M., Li, Y., Ma, Y., Qu, D., &amp; Hu, X. (2025). Generative language reconstruction from brain recordings. <a href="https://doi.org/10.1038/s42003-025-07751-z" target="_blank">doi:10.1038/s42003-025-07751-z</a></li>
+<li>d'Ascoli, S., Bel, C., Rapin, J., Dubarry, A.-S., King, J.-R., &amp; Ferrante, O. (2025). Towards decoding individual words from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">doi:10.1038/s41467-025-65499-0</a></li>
 <li>Steinmetz, N. A., Aydin, C., Lebedeva, A., et al. (2021). Neuropixels 2.0: A miniaturized high-density probe for stable, long-term brain recordings. <a href="https://doi.org/10.1126/science.abf4588" target="_blank">doi:10.1126/science.abf4588</a></li>
 <li>Pachitariu, M., et al. (2024). Spike sorting with Kilosort4. <a href="https://doi.org/10.1038/s41592-024-02595-5" target="_blank">doi:10.1038/s41592-024-02595-5</a></li>
 <li>Trautmann, E. M., Stavisky, S. D., Lahiri, S., et al. (2019). Accurate estimation of neural population dynamics without spike sorting. <a href="https://doi.org/10.1016/j.neuron.2019.05.003" target="_blank">doi:10.1016/j.neuron.2019.05.003</a></li>

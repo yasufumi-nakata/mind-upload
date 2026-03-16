@@ -5,7 +5,7 @@ description: "Mind-Uploadで頻出する用語を、人間が迷子にならな�
 article_type: Reference
 subtitle: "まずは“言葉のすり替え”を止める"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-16"
 note: "Living document"
 audience: "用語で止まりたくない人、言葉のすり替えを防ぎたい人"
 reading_time: "必要な項目だけなら3〜10分"
@@ -15,6 +15,7 @@ page_highlights:
   - "用語を短く説明しつつ、どこで使う概念かも一緒に示します。"
   - "『似ているが違う』語を分けることで、話のすり替えを防ぎます。特に observability / identifiability / direct validation を混ぜないことを重視します。"
   - "detectable / localized / identified / validated / deployable は別レベルの主張であり、同じ成功ではありません。"
+  - "brain signal / language prior / Neural Contribution Card を分けることで、decode 系デモの過大解釈を防ぎます。"
   - "分からない言葉が出たら、このページに戻れば最低限の足場を作れます。"
 known_points:
   - "用語の混同を減らすだけで、議論の多くのすれ違いは防げます。"
@@ -498,6 +499,10 @@ EEG、MEG、fMRI、ECoG、MRI は全部「脳を測るもの」ですが、得�
 <tr>
 <td><strong>Language Prior</strong></td>
 <td>decoder が語彙・文脈・LLM から借りる統計的先験情報。文章を滑らかにできる一方、brain-derived information の寄与を見えにくくします。</td>
+</tr>
+<tr>
+<td><strong>Neural Contribution Card</strong></td>
+<td>brain-to-text / speech decode で、task constraint、LM / prompt / candidate set、<code>no-brain</code> / <code>LM-only</code> / shuffle baseline、subject cooperation、online / offline、claim ceiling を固定し、流暢な出力をそのまま neural reconstruction と読まないための提出物です。</td>
 </tr>
 <tr>
 <td><strong>DCM</strong></td>
