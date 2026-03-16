@@ -377,3 +377,12 @@ A/B/C判定は mind-upload-eeg-rq60-feasibility-and-funds と同一。Cは『重
 - 助成キー `G1-G6` 実IDは `grant_queue` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再参照可能でした。
 - 重要運用を再固定します。`EEG-DATA/eeg_dataset_summary_ja.csv` の数値IDは再採番前提とし、提出時のデータ参照は `D1-D16 + DOI + データセット名` を正本とします。
 - 方針を継続します。汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` で各課題を深掘りします。
+
+## 2026-03-16 15:04 JST 再検証ログ（本run / 1件ずつ深掘り運用の固定）
+
+- 作業前に `main` を `pull --ff-only` し、`mind-upload=35249d9ddb01`、`EEG-DATA=95e1605e5005`、`auto-research-funds=9eb599bbf875` の基準で再検証しました。
+- 正本 `research_harvest_50.md` の `60RQ` と本ページの `RQ` 行を再照合し、欠落 `0`、重複 `0` を確認しました。
+- 判定内訳 `A/B/C=17/25/18` を再確認し、`mind-upload-eeg-rq60-feasibility-and-funds.md` と整合しました。
+- 助成キー `G1-G6` と候補EEGデータ `24件` の参照性を再確認しました。
+- 実務方針を再固定します。全課題を浅く横断するのではなく、`1RQ=1検証命題=1応募テーマ=1主データ` の順に個別深掘りで更新します。
+

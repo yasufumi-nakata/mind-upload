@@ -232,3 +232,11 @@ recommended_pages:
 - 全 `RQ` 行で `第一応募先/予備応募先/主EEG-DATA/最小成果物` の必須列欠落 `0`、空欄 `0` を確認しました。
 - 助成キー `G1-G6` 実IDは `grant_queue` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再参照可能でした。
 - 運用方針は据え置きです。汎用テーマ化は行わず、`1RQ=1提出判断` を維持して申請文へ直接転記します。
+
+## 2026-03-16 15:04 JST 再検証ログ（本run / RQ単位提出判断の継続）
+
+- 作業前に `main` を `pull --ff-only` し、`mind-upload=35249d9ddb01`、`EEG-DATA=95e1605e5005`、`auto-research-funds=9eb599bbf875` の基準へ更新しました。
+- 本ページの `RQ_TOTAL=60`、`A/B/C=17/25/18`、必須列（`第一応募先/予備応募先/主EEG-DATA/最小成果物`）欠落 `0` を再確認しました。
+- 助成実ID `G1-G6` は `grant_queue` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の両系統で参照可能でした。
+- 本runでも運用は据え置きです。汎用テーマ化はせず、`1RQ=1提出判断` で申請文へ直接転記する粒度を維持します。
+
