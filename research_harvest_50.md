@@ -16,11 +16,13 @@ page_highlights:
   - "入力受理ログと学術統合済みの部分を分け、混入防止の手順も明示しています。"
   - "大量引用ページですが、統計と現状マップだけでも全体像を先に把握できます。"
   - "技術・自然科学の既定入口は、U1/U7→U4/U13→U8→U3→U10 の順に固定しました。"
+  - "技術・自然科学では、source_logged / curated とは別に evidence class も分けて読みます。"
 known_points:
   - "U0〜U15 ごとに論点を分けると、文献の量と結論の強さを混同しにくくなります。"
   - "source_logged / curated / noise_excluded を分けることで、入力受理と学術統合を混ぜない運用ができます。"
   - "引用数の多さは、結論の確定ではなく関心や関連度の厚みとして読む必要があります。"
   - "技術・自然科学の入口では、受理ログや制度論より先に、計測・直接妥当化・閉ループ安定性・maintenance-state を優先して読む方が安全です。"
+  - "技術・自然科学では、Uごとに『何を直接増やす文献か』も別軸で見た方が誤読しにくくなります。"
 unknown_points:
   - "各 U に十分な証拠が揃っているわけではなく、探索段階の領域も残っています。"
   - "source_logged の項目は、今後の精査で統合先や除外判断が変わる可能性があります。"
@@ -106,7 +108,7 @@ recommended_pages:
 <div class="note-box">
 <strong>Scopus / Review / source_logged の意味で止まったとき</strong>
 <p>
-このページでは、掲載元、文献種別、サイト内状態が混ざって見えやすいです。それぞれが何を示し、何をまだ保証しないかを先に整理したい場合は、<a href="wiki/paper-source-types-and-evidence-status.html">Wiki: 文献のソース種別と状態ラベルの読み方</a> をご覧ください。
+このページでは、掲載元、文献種別、サイト内状態に加えて、evidence class も混ざって見えやすいです。それぞれが何を示し、何をまだ保証しないかを先に整理したい場合は、<a href="wiki/paper-source-types-and-evidence-status.html">Wiki: 文献のソース種別・状態・証拠クラスの読み方</a> をご覧ください。
 </p>
 </div>
 
@@ -174,6 +176,55 @@ U番号は難しい理論名ではなく、「未解決問題の名前札」で�
 <strong>今回の主導線から外す群</strong>
 <p>
 <strong>U0 / U12 / U15</strong> は重要ですが、既定の技術・自然科学ルートには置きません。理由は、ここで先に必要なのが形而上学や法学ではなく、<strong>いま何が測れて、どこまで直接妥当化できて、どこで閉ループが壊れ、どの hidden state が残るか</strong>を固定することだからです。これらの群は、実験 front を読んだあとに戻る方が誤読しにくくなります。
+</p>
+</div>
+</section>
+
+<section class="section" id="evidence-class-rule-20260316">
+<h2 class="section-title">2026-03 文献地図の共通 rule：state label と evidence class は別です</h2>
+<p>
+今回さらに深掘りして見えた弱点は、<strong>source_logged / curated</strong> のような <strong>サイト内状態</strong> と、<strong>その引用が U のどの部分を直接押し上げるか</strong> が、まだ十分に分離されていなかった点でございます。たとえば <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> は <strong>local direct validation</strong> を押し上げますが、<a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a>、<a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a>、<a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>、<a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a> は <strong>task-limited subsystem performance</strong> を押し上げる論文です。さらに <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019)</a>、<a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Burns et al. (2024)</a>、<a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe et al. (2025)</a>、<a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant (2018)</a>、<a href="https://proceedings.mlr.press/v37/blum15.html" target="_blank">Blum &amp; Hardt (2015)</a>、<a href="https://papers.neurips.cc/paper_files/paper/2019/hash/ee39e503b6bedf0c98c388b7e8589aca-Abstract.html" target="_blank">Roelofs et al. (2019)</a> は <strong>再現・benchmark governance</strong> を押し上げます。したがって文献地図では、状態ラベルとは別に evidence class を見ます。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>evidence class</th>
+<th>Uマップでの役割</th>
+<th>代表例</th>
+<th>まだ解いたとみなさないもの</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>direct validator / causal calibration</strong></td>
+<td>U1/U7/U13 で、妥当化、誤差源、coverage boundary を直接押し上げます。</td>
+<td><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan 2020</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse 2023</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao 2025</a></td>
+<td>whole-brain truth や一般的一意復元は残ります。</td>
+</tr>
+<tr>
+<td><strong>task-limited system demonstration</strong></td>
+<td>U4/U8/U13 で、decode、speech neuroprosthesis、closed-loop subsystem を押し上げます。</td>
+<td><a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang 2023</a>、<a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett 2023</a>、<a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn 2025</a></td>
+<td>WBE 実証、本人性、state-complete reconstruction は残ります。</td>
+</tr>
+<tr>
+<td><strong>dataset / benchmark / standard / toolchain</strong></td>
+<td>U1/U7/U8 の比較可能性、同期、split、benchmark governance を押し上げます。</td>
+<td><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet 2019</a>、<a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Burns 2024</a>、<a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe 2025</a>、<a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant 2018</a></td>
+<td>hidden state や mechanistic sufficiency を直接は解きません。</td>
+</tr>
+<tr>
+<td><strong>review / synthesis / context</strong></td>
+<td>論点の地図、周辺文脈、次に追う一次文献の当たり付けを与えます。</td>
+<td>review、survey、総説、context 文献</td>
+<td>単独では U の解決証拠にしません。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>文献地図での読み方</strong>
+<p>
+もし引用が <strong>curated</strong> でも、その evidence class が <strong>dataset / benchmark</strong> なら、「比較条件が整った」とは読めますが、「hidden state が解けた」とは読みません。逆に <strong>task-limited demo</strong> が増えても、それだけで U4/U13 が閉じたとは書きません。状態ラベルは運用、evidence class は技術的効き方でございます。
 </p>
 </div>
 </section>
