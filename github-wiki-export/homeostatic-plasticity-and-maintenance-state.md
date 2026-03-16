@@ -26,11 +26,11 @@
 - 同じ transcriptomic type の内部にも morpho-electric phenotype の連続性や variability が残ります。
 - firing rate や synaptic strength は、sleep/wake cycle をまたぐ homeostatic plasticity によって調整されます。
 - 髄鞘、オリゴデンドロサイト、アストロサイトの状態は timing、代謝、記憶想起、長期回復に関わります。
-- human でも MRSI-based metabolic connectome により macro biochemical scaffold は見え始めていますが、local maintenance-state はまだ粗く残ります。
+- human でも MRSI-based metabolic connectome、myelin bilayer mapping、TMS/EEG・sleep plasticity proxy により macro scaffold と perturbational proxy は見え始めていますが、cell-specific maintenance-state はまだ粗く残ります。
 
 ## まだ分かっていないこと
 - どの粒度まで excitability / sleep-homeostasis / metabolic support を測れば WBE の十分条件に近づくかは未確定です。
-- 人で直接測れない maintenance state を、どの proxy とどの外部基準で較正すべきかは未確定です。
+- 人で直接測れない maintenance state を、MRSI / myelin bilayer / TMS-EEG / sleep plasticity proxy のどれで、どの外部基準へ較正すべきかは未確定です。
 - 長期 closed-loop claim に対して、どの sleep / myelin / metabolic 指標を共通提出物にするかもまだ固定されていません。
 - parcel-level metabolic similarity が cell-specific glial / transmitter / synaptic maintenance-state をどこまで拘束するかも未確定です。
 
@@ -150,7 +150,7 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 
 <h2>2026-03 追補：human maintenance-state の直接観測はまだ粗い</h2>
 <p>
-今回さらに深掘りして見えた弱点は、maintenance-state の議論がやや animal causal evidence に寄りすぎており、<strong>human で今どこまで直接見えているか</strong>の上限が本文で十分に固定されていなかった点です。Shapson-Coe らの human cortical petavoxel fragment は ultrastructure を大きく前進させ、Lucchetti らの whole-brain <sup>1</sup>H-MRSI は human metabolic connectome を提示しました。しかし、前者は structural snapshot、後者は parcel-level biochemical similarity であり、どちらも <strong>current synaptic efficacy</strong>、<strong>local transmitter specificity</strong>、<strong>astrocyte ensemble</strong>、<strong>sleep-dependent recovery controller</strong> を直接は与えません。つまり、human 側でも maintenance-state はまだ macro scaffold と local hidden state に分かれて残ります。
+今回さらに深掘りして見えた弱点は、human observability の節が、<strong>EM 断片</strong>、<strong>whole-brain MRSI</strong>、<strong>myelin bilayer imaging</strong>、<strong>TMS-EEG / sleep plasticity proxy</strong> を同じ「human で見え始めた証拠」としてまとめすぎていた点でございます。一次文献を並べると、それぞれが押し上げているのは <strong>structural scaffold</strong>、<strong>macro-biochemical scaffold</strong>、<strong>macro-myelin proxy</strong>、<strong>perturbation-conditioned plasticity proxy</strong> という別々の層です。どれも重要ですが、<strong>current synaptic efficacy</strong>、<strong>local transmitter specificity</strong>、<strong>astrocyte ensemble</strong>、<strong>sleep-dependent recovery controller</strong> を直接は与えません。したがって、human 側でも maintenance-state はなお <strong>macro scaffold / macro proxy / local hidden state</strong> に分かれて残ります。
 </p>
 <table>
 <thead>
@@ -163,7 +163,7 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <tbody>
 <tr>
 <td><strong>human nanoscale ultrastructure</strong><br>Shapson-Coe ら</td>
-<td>human cortex 断片の ultrastructure、細胞・シナプス配置、局所構造 scaffold。</td>
+<td>固定済み human cortex 断片の ultrastructure、細胞・シナプス配置、局所構造 scaffold。</td>
 <td>current weight、sleep-history、recovery controller、neuromodulatory context、glial slow-state。</td>
 </tr>
 <tr>
@@ -172,21 +172,29 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <td>cell-specific metabolic routing、astrocyte ensemble、local transmitter state、synapse-specific maintenance。</td>
 </tr>
 <tr>
-<td><strong>sleep 系の causal evidence</strong><br>Koukaroudi ら、Torrado Pacheco ら</td>
-<td>sleep が firing-rate homeostasis と synapse diversity に関与する、という maintenance の存在証拠。</td>
-<td>human individual での overnight maintenance-state を、どの proxy で operationalize するか。</td>
+<td><strong>human myelin bilayer map</strong><br>Baadsvik ら</td>
+<td>in vivo の 1.4 mm 級 myelin bilayer contrast と、regional myelin distribution。</td>
+<td>single-axon conduction delay、activity-dependent myelination、oligodendrocyte-axon metabolic support、cell-specific timing controller。</td>
 </tr>
 <tr>
-<td><strong>human perturbation-gated excitability proxy</strong><br>Zrenner ら</td>
-<td>EEG-defined excitability state が TMS-induced plasticity efficacy を左右する、という human 側の因果 proxy。</td>
+<td><strong>human sleep-homeostasis / plasticity proxy</strong><br>Huber ら、Kuhn ら、Fehér ら</td>
+<td>wake / sleep / nap に応じて TMS-EEG excitability や PAS 誘導 plasticity が変わる、という macro な perturbational proxy。</td>
+<td>どの cell type、どの synapse、どの glia、どの controller がその変化を担ったか。</td>
+</tr>
+<tr>
+<td><strong>human state-gated perturbation proxy</strong><br>Zrenner ら</td>
+<td>EEG-defined excitability state が TMS-induced plasticity efficacy を左右する、という state-conditioned causal proxy。</td>
 <td>AIS geometry、channel distribution、cell-specific allocation state、長期 recovery controller。</td>
 </tr>
 </tbody>
 </table>
+<p>
+この差は実務上重要でございます。<a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> は fixed tissue の局所 ultrastructure を、<a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> は whole-brain の biochemical covariance を、<a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> は myelin bilayer の in vivo map を、<a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>、<a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>、<a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a>、<a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> は sleep / wake / nap や瞬間 brain state が human plasticity response を変えることを、それぞれ別々に押し上げました。重要なのは、<strong>これらが同じ種類の direct measurement ではない</strong>という点であり、1 本の human proxy を cell-specific maintenance-state の ground truth へ読み替えてはいけないことです。
+</p>
 
 <strong>この追補での実務的な読み替え</strong>
 <p>
-したがって、本サイトでは <strong>human metabolic connectome</strong> を有望な <strong>macro-biochemical scaffold</strong> として扱いますが、<strong>glial / transmitter maintenance-state の ground truth</strong> とは書きません。同様に human EM 断片を、<strong>state-complete snapshot</strong> ではなく <strong>structural scaffold の強化</strong> として扱います。human で直接見えていない層は、animal causal evidence で existence を支えつつ、human 側では observability ceiling と abstention を明示するのが安全でございます。
+したがって、本サイトでは <strong>human metabolic connectome</strong> を <strong>macro-biochemical scaffold</strong>、<strong>human myelin bilayer map</strong> を <strong>macro-myelin proxy</strong>、<strong>TMS-EEG / sleep plasticity</strong> を <strong>perturbational proxy</strong> として扱います。いずれも有望ですが、<strong>glial / transmitter maintenance-state の ground truth</strong> や <strong>cell-specific recovery controller</strong> とは書きません。同様に human EM 断片も、<strong>state-complete snapshot</strong> ではなく <strong>structural scaffold の強化</strong> として扱います。human で直接見えていない層は、animal causal evidence で existence を支えつつ、human 側では observability ceiling と abstention を明示するのが安全でございます。
 </p>
 
 <h2>よくある誤読と、このサイトでの降格ルール</h2>
@@ -225,6 +233,11 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <td>human MRSI は macro-biochemical scaffold として扱い、local maintenance-state の ground truth とは書きません。</td>
 </tr>
 <tr>
+<td><strong>human myelin bilayer map や nap / TMS proxy があれば、cell-specific maintenance controller も見えた</strong></td>
+<td>myelin bilayer map は mm 級の tissue proxy であり、TMS-EEG / PAS は perturbational readout です。どの axon、oligodendrocyte、astrocyte、synapse がその変化を担ったかは別に残ります。</td>
+<td>human myelin / sleep / excitability データは macro or perturbational proxy と明記し、cell-specific controller の ground truth には上げません。</td>
+</tr>
+<tr>
 <td><strong>delay を定数で置けば、髄鞘やオリゴデンドロサイトは後回しでよい</strong></td>
 <td>adaptive myelination と axon-glia coupling は timing と long-term support に関わります。</td>
 <td>timing-sensitive claim では myelin / conduction の未測定を本文に明記します。</td>
@@ -254,6 +267,7 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <li><strong>memory persistence を static storage と言い換えない：</strong>turnover をまたぐ再固定化と支援機構の可能性を先に残します。</li>
 <li><strong>perturbation 後の recovery を重視する：</strong>何が起きたかだけでなく、どこへ戻るか、睡眠をまたいでどう戻るかをログに残します。</li>
 <li><strong>proxy の限界を先に書く：</strong>EEG / pupil / behavior だけで maintenance-state を一意に決めたとは書きません。</li>
+<li><strong>human proxy class を混ぜない：</strong>EM 断片、whole-brain MRSI、myelin bilayer map、sleep / TMS proxy を同じ「human で見えた」の 1 語に畳み込みません。</li>
 <li><strong>human MRSI を local ground truth と誤読しない：</strong>macro-biochemical scaffold と cell-specific maintenance-state を分けて書きます。</li>
 <li><strong>neuron-only の成功から glia omission を補完しない：</strong>想起・再安定化・fear-state representation は astrocyte state を別に残します。</li>
 </ul>
@@ -310,6 +324,9 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <li>Yiu, A. P., et al. (2014). Neurons are recruited to a memory trace based on relative neuronal excitability immediately before training. <em>Neuron</em>, 83(3), 722-735. <a href="https://doi.org/10.1016/j.neuron.2014.07.017" target="_blank">doi:10.1016/j.neuron.2014.07.017</a></li>
 <li>Hadzibegovic, N., et al. (2026). Early intrinsic excitability plasticity of neocortical engram neurons defines memory formation and precision. <em>Nature Communications</em>, 17, 291. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">doi:10.1038/s41467-025-66975-3</a></li>
 <li>Zrenner, C., Desideri, D., Belardinelli, P., &amp; Ziemann, U. (2018). Real-time EEG-defined excitability states determine efficacy of TMS-induced plasticity in human motor cortex. <em>Brain Stimulation</em>, 11(2), 374-389. <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">doi:10.1016/j.brs.2017.11.016</a></li>
+<li>Huber, R., Mäki, H., Rosanova, M., Casarotto, S., Canali, P., Casali, A. G., Tononi, G., &amp; Massimini, M. (2013). Human cortical excitability increases with time awake. <em>Cerebral Cortex</em>, 23(2), 332-338. <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">doi:10.1093/cercor/bhs014</a></li>
+<li>Kuhn, M., Wolf, E., Maier, J. G., Mainberger, F., Feige, B., Schmid, H., et al. (2016). Sleep recalibrates homeostatic and associative synaptic plasticity in the human cortex. <em>Nature Communications</em>, 7, 12455. <a href="https://doi.org/10.1038/ncomms12455" target="_blank">doi:10.1038/ncomms12455</a></li>
+<li>Fehér, K. D., Henckaerts, P., Hirsch, V., Bucsenez, U., Kuhn, M., Maier, J. G., et al. (2026). A nap can recalibrate homeostatic and associative synaptic plasticity in the human cortex. <em>NeuroImage</em>, 327, 121723. <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">doi:10.1016/j.neuroimage.2026.121723</a></li>
 <li>Gibson, E. M., et al. (2014). Neuronal activity promotes oligodendrogenesis and adaptive myelination in the mammalian brain. <em>Science</em>, 344(6183), 1252304. <a href="https://doi.org/10.1126/science.1252304" target="_blank">doi:10.1126/science.1252304</a></li>
 <li>McKenzie, I. A., et al. (2014). Motor skill learning requires active central myelination. <em>Science</em>, 346(6207), 318-322. <a href="https://doi.org/10.1126/science.1254960" target="_blank">doi:10.1126/science.1254960</a></li>
 <li>Looser, Z. J., et al. (2024). Oligodendrocyte-axon metabolic coupling is mediated by extracellular K<sup>+</sup> and maintains axonal health. <em>Nature Neuroscience</em>, 27, 1598-1609. <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">doi:10.1038/s41593-023-01558-3</a></li>
@@ -324,4 +341,5 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <li>Lee, J.-C., Wang, C.-Y., Lin, C.-L., &amp; Lu, H.-C. (2022). Synaptic memory survives molecular turnover. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 119(42), e2211572119. <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">doi:10.1073/pnas.2211572119</a></li>
 <li>Shapson-Coe, A., Januszewski, M., Berger, D. R., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <em>Science</em>, 384(6696), eadk4858. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
 <li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <em>Nature Communications</em>, 16, 11344. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
+<li>Baadsvik, E. L., Weiger, M., Froidevaux, R., Schildknecht, C. M., Ineichen, B. V., &amp; Pruessmann, K. P. (2024). Myelin bilayer mapping in the human brain in vivo. <em>Magnetic Resonance in Medicine</em>, 91(6), 2332-2344. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">doi:10.1002/mrm.29998</a></li>
 </ol>
