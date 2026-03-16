@@ -704,3 +704,20 @@ recommended_pages:
 - 本ページで参照する EEG データID `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）でした。
 - 助成キー `G1-G6` は `G1-G2=grant_queue/*.yaml` と `G3-G6=auto-research-funds/grant_eeg_dataset_match.csv` の系統で全件参照可能を再確認しました。
 - 運用方針は据え置きです。汎用俯瞰ではなく、各RQを1件ずつ深掘りして「検証命題・応募テーマ・使用EEGデータ」を固定して進めます。
+
+## 2026-03-16 22:48 JST 再検証ログ（本run / 依頼反映）
+
+- 作業前に `main` を `pull --ff-only` で最新化し、基準コミットを `mind-upload=c24de3cff1df`、`EEG-DATA=3dd9f5c3fe4d`、`auto-research-funds=f0d89423aa3f` に更新しました。
+- 本ページの `RQ` 行を再計数し、`RQ_TOTAL=60`（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）を再確認しました。
+- 判定内訳は再計数で `A/B/C=17/25/18` を維持し、`mind-upload-rq60-deep-focus-notes.md` / `mind-upload-eeg-rq60-grant-dataset-playbook.md` と整合しました。
+- 助成キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再参照可能でした。
+- 依頼どおり、汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用をこのページ正本として固定しました。
+
+### このrunの深掘り提出順（1件ずつ進める固定キュー）
+
+1. `U14-1`（G1）: 固定粒度と再現率比較（`D12/D8`）
+2. `U7-2`（G3）: 時刻同期誤差監査（`D7/D4`）
+3. `U8-2`（G2）: 概念ドリフト耐性オンライン較正（`D10/D8`）
+4. `U1-2`（G4）: 不確実性伝播評価（`D7/D12`）
+5. `U13-1`（G1）: 模倣/因果二軸ベンチ（`D2/D1`）
+6. `U15-2`（G6）: neurorights監査項目写像（`D4/D5`）
