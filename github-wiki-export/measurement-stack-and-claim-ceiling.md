@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-16 / 位置づけ: Technical / natural science only
+- 更新日: 2026-03-17 / 位置づけ: Technical / natural science only
 
 ## このページの役割
 このページは、WBE の議論で見落としやすい『measurement stack ごとの主張上限』を固定する wiki です。hidden state が重要だというだけでは足りません。EEG/MEG/fMRI、高密度 extracellular probe、spatial transcriptomics、Patch-seq、volume EM、same-brain functional connectomics、local transmitter / glia imaging が、それぞれ何を直接観測し、何をまだ latent に残すのかを、state variable と timescale まで含めて一次文献ベースで整理します。
@@ -28,7 +28,7 @@
 - fMRI の振幅や onset は、神経活動だけでなく HRF の変動や vascular geometry の影響も受けます。
 - 高密度 extracellular probe は implant 近傍の local population を強く見ますが、chronic な single-unit identity は sorting と matching を介した推定です。
 - whole-brain spatial transcriptomics は cell-type taxonomy と空間配置を大きく前進させますが、動的状態の十分性は別問題です。
-- Patch-seq と same-brain connectomics は縮退を減らしますが、全脳 coverage と長期 maintenance-state の十分性は残ります。
+- Patch-seq と same-brain connectomics は縮退を減らしますが、全脳 coverage と長期 maintenance-state の十分性に加え、momentary synaptic weight の直接読出しも残ります。
 - local transmitter / glia imaging は coarse proxy の校正に有効ですが、そのまま全脳 ground truth にはなりません。
 - pupil や locomotion は mixed arousal proxy であり、local transmitter sensor や receptor atlas / physiology とは別の evidence class です。
 
@@ -120,8 +120,8 @@
 <tr>
 <td><strong>same-brain functional connectomics</strong></td>
 <td>同一脳で co-registered な dense activity と EM connectome の対応です。</td>
-<td>MICrONS のように、局所回路で structure-function link、state-dependent response prediction、cell-type 依存 wiring rule を一段強くできます。</td>
-<td>全脳 coverage、全状態一般化、current synaptic efficacy の十分性、homeostatic controller、glial / metabolic maintenance-state は残ります。</td>
+<td>MICrONS のように、局所回路で structure-function link、state-dependent response prediction、cell-type 依存 wiring rule、synaptic-state prior の絞り込みを一段強くできます。</td>
+<td>全脳 coverage、全状態一般化、current synaptic efficacy の直接読出し、homeostatic controller、glial / metabolic maintenance-state は残ります。</td>
 <td><strong>局所 conditional prediction と local functional twin まで</strong>です。全脳 WBE や state-complete reconstructionへは上げません。</td>
 </tr>
 <tr>
@@ -215,9 +215,9 @@ stack 別の ceiling 表だけでは、「何が見えていないか」は分�
 <tr>
 <td><strong>current synaptic efficacy / plastic history</strong></td>
 <td>ms〜日で変わり、release probability、STP/LTP/LTD、recent plastic history が予測と介入応答を左右します。</td>
-<td>局所 paired physiology、same-brain function + perturbation、coverage-limited な direct validation です。</td>
-<td>EM synapse count、connectome-only model、cell-type label です。</td>
-<td><strong>非破壊・全脳の direct route は未整備</strong>です。held-out perturbation gain が無ければ inferred のままにします。</td>
+<td>局所 paired physiology、presynaptic-state manipulation、coverage-limited な direct validation です。</td>
+<td>EM synapse count、PSD / spine size、same-brain connectomics、connectome-only model、cell-type label です。</td>
+<td><strong>非破壊・全脳の direct route は未整備</strong>です。EM / same-brain structure-function link は prior を強くしえますが、paired physiology か held-out perturbation gain が無ければ current weight claim には上げません。</td>
 </tr>
 <tr>
 <td><strong>intrinsic excitability / homeostatic set point</strong></td>
@@ -266,7 +266,7 @@ stack 別の ceiling 表だけでは、「何が見えていないか」は分�
 
 <strong>短い結論</strong>
 <p>
-Yao らと Gouwens / Gamlin らは主に <strong>cell identity</strong> 行を、MICrONS は局所的に <strong>synaptic efficacy / plastic history</strong> 行を、Hengen / Torrado Pacheco / Xu らは <strong>sleep / recovery regime</strong> 行を、Gibson / McKenzie / Looser らは <strong>delay / myelin / axonal support</strong> 行を、Neyhart らは <strong>neuromodulatory specificity</strong> 行を、Cahill / Suzuki らは <strong>glial / metabolic slow-state</strong> 行を、van Beest / Gregory らは <strong>chronic unit identity</strong> 行を押し上げました。重要なのは、<strong>これらが別々の行を押し上げている</strong>という点であり、1 本の multimodal stack が入っただけで全行が direct になった扱いはできません。
+Yao らと Gouwens / Gamlin らは主に <strong>cell identity</strong> 行を、Holler / Dürst / Alle らは局所的に <strong>synaptic efficacy / plastic history</strong> 行を、MICrONS は <strong>same-brain structure-function link</strong> を、Hengen / Torrado Pacheco / Xu らは <strong>sleep / recovery regime</strong> 行を、Gibson / McKenzie / Looser らは <strong>delay / myelin / axonal support</strong> 行を、Neyhart らは <strong>neuromodulatory specificity</strong> 行を、Cahill / Suzuki らは <strong>glial / metabolic slow-state</strong> 行を、van Beest / Gregory らは <strong>chronic unit identity</strong> 行を押し上げました。重要なのは、<strong>これらが別々の行を押し上げている</strong>という点であり、1 本の multimodal stack が入っただけで全行が direct になった扱いはできません。
 </p>
 
 <h2>なぜ ceiling がこれほど違うのか</h2>
@@ -293,7 +293,7 @@ Dorkenwald らの adult fly whole-brain connectome は、約 5 × 10<sup>7</sup>
 
 <h3>5. same-brain function を足すと縮退は減るが、全脳 state-complete には届きません</h3>
 <p>
-MICrONS は、同一脳で dense calcium imaging、行動状態、EM connectome を結びつけ、mouse visual cortex の multi-area functional connectomics を提示しました。これは connectome-only より一段強く、<strong>同じ脳での structure-function link</strong> を論じられる土台です。しかし、論文自体が扱うのは visual cortex の特定領域、特定課題、特定状態であり、そこから human whole-brain や all-state completeness へ飛躍することはできません。従って、この stack の ceiling は <strong>local functional twin</strong> です。
+MICrONS は、同一脳で dense calcium imaging、行動状態、EM connectome を結びつけ、mouse visual cortex の multi-area functional connectomics を提示しました。これは connectome-only より一段強く、<strong>同じ脳での structure-function link</strong> を論じられる土台です。しかし、ここで直接強くなるのは local conditional prediction と state-dependent response の拘束であり、<strong>momentary synaptic weight そのものの direct readout</strong>ではございません。<a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">Holler et al. (2021)</a> が示した size-strength 関係も平均的な identified synapse の relation であり、<a href="https://doi.org/10.1038/s41467-024-50549-7" target="_blank">Dürst et al. (2024)</a> は bouton potency が vesicular release probability に強く依存すること、<a href="https://doi.org/10.1038/s41586-022-05483-6" target="_blank">Vardalaki et al. (2022)</a> は成人新皮質にも silent synapse substrate が残ること、<a href="https://doi.org/10.1038/s41467-024-51402-7" target="_blank">Alle et al. (2024)</a> は human neocortex でも membrane state が短時間で synaptic efficacy を動かすことを示しました。したがって、same-brain connectomics は synaptic-state の <strong>prior / bridge</strong> を強くしえますが、paired physiology や perturbation を伴わない限り current efficacy を直接測ったことにはしません。論文自体が扱うのは visual cortex の特定領域、特定課題、特定状態であり、そこから human whole-brain や all-state completeness へ飛躍することはできません。従って、この stack の ceiling は <strong>local functional twin</strong> です。
 </p>
 
 <h3>6. neuromodulatory observability は 1 本ではなく、proxy ladder として監査する必要があります</h3>
@@ -367,6 +367,7 @@ MICrONS は、同一脳で dense calcium imaging、行動状態、EM connectome 
 <li><strong>neuromodulation は compartment を書く：</strong>pupil / axon / sensor / receptor atlas / occupancy PET / displacement PET / pharmacology のどこを測ったかを明示し、chemical signal と receptor effect を混ぜません。</li>
 <li><strong>multimodal を state-complete の同義語にしない：</strong>何の latent state が依然として残るかを本文に併記します。</li>
 <li><strong>未観測状態を埋めるときは推定と書く：</strong>cell type から threshold / gain / set point を自動補完した場合は latent inference と明記します。</li>
+<li><strong>EM / PSD / spine / same-brain connectomics を current weight と書かない：</strong>paired physiology か held-out perturbation が無い限り、structural prior / bridge と書きます。</li>
 <li><strong>sorted spike を stable neuron identity と書かない：</strong>chronic 記録では sorting version、drift correction、unit-match probability、dropout rate を別に残します。</li>
 <li><strong>claim ceiling を超える表現を禁止する：</strong>たとえば EM だけで emulation-complete、Patch-seq だけで whole-brain state-complete、同一 shank の sorted unit だけで cross-day same-neuron claim、pupil だけで transmitter ground truth、receptor atlas だけで momentary release、occupancy / displacement PET だけで momentary whole-brain endogenous field とは書きません。</li>
 </ul>
@@ -419,6 +420,11 @@ MICrONS は、同一脳で dense calcium imaging、行動状態、EM connectome 
 <li>Dorkenwald, S., et al. (2024). Neuronal wiring diagram of an adult brain. <em>Nature</em>, 634, 124-138. <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">doi:10.1038/s41586-024-07558-y</a></li>
 <li>Yao, Z., et al. (2023). A high-resolution transcriptomic and spatial atlas of cell types in the whole mouse brain. <em>Nature</em>, 624, 317-332. <a href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank">doi:10.1038/s41586-023-06812-z</a></li>
 <li>Gouwens, N. W., et al. (2021). Phenotypic variation of transcriptomic cell types in mouse motor cortex. <em>Nature</em>, 598, 144-150. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
+<li>Holler, S., et al. (2021). Structure and function of a neocortical synapse. <em>Nature</em>, 591, 111-116. <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">doi:10.1038/s41586-020-03134-2</a></li>
+<li>Dürst, C. D., Boele, H.-J., Schonewille, M., &amp; Hoebeek, F. E. (2024). Number of releasable vesicles does not limit short-term plasticity at hippocampal synapses with low release probability. <em>Nature Communications</em>, 15, 6427. <a href="https://doi.org/10.1038/s41467-024-50549-7" target="_blank">doi:10.1038/s41467-024-50549-7</a></li>
+<li>Matsuzaki, M., Honkura, N., Ellis-Davies, G. C. R., &amp; Kasai, H. (2004). Structural basis of long-term potentiation in single dendritic spines. <em>Nature</em>, 429, 761-766. <a href="https://doi.org/10.1038/nature02617" target="_blank">doi:10.1038/nature02617</a></li>
+<li>Vardalaki, D., Chung, K., &amp; Harnett, M. T. (2022). Filopodia are a structural substrate for silent synapses in adult neocortex. <em>Nature</em>, 612, 323-327. <a href="https://doi.org/10.1038/s41586-022-05483-6" target="_blank">doi:10.1038/s41586-022-05483-6</a></li>
+<li>Alle, H., et al. (2024). Membrane potential states gate synaptic consolidation in human neocortical tissue. <em>Nature Communications</em>, 15, 7705. <a href="https://doi.org/10.1038/s41467-024-51402-7" target="_blank">doi:10.1038/s41467-024-51402-7</a></li>
 <li>Steinmetz, N. A., Aydin, C., Lebedeva, A., et al. (2021). Neuropixels 2.0: A miniaturized high-density probe for stable, long-term brain recordings. <em>Science</em>, 372(6539), eabf4588. <a href="https://doi.org/10.1126/science.abf4588" target="_blank">doi:10.1126/science.abf4588</a></li>
 <li>Pachitariu, M., et al. (2024). Spike sorting with Kilosort4. <em>Nature Methods</em>, 21, 914-921. <a href="https://doi.org/10.1038/s41592-024-02595-5" target="_blank">doi:10.1038/s41592-024-02595-5</a></li>
 <li>Trautmann, E. M., Stavisky, S. D., Lahiri, S., et al. (2019). Accurate estimation of neural population dynamics without spike sorting. <em>Neuron</em>, 103(2), 292-308.e4. <a href="https://doi.org/10.1016/j.neuron.2019.05.003" target="_blank">doi:10.1016/j.neuron.2019.05.003</a></li>

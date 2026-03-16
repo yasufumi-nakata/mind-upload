@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-15 / 位置づけ: Technical / natural science only
+- 更新日: 2026-03-17 / 位置づけ: Technical / natural science only
 
 ## このページの役割
 このページは、Mind-Upload で重要な区別である decode と emulate の違いを、一次文献ベースで整理する補助ページです。何が '高性能な翻訳機' で、何が '内部状態を動かす系' に近いのかを、観測・介入・閉ループの証拠で見分けるために使います。
@@ -21,12 +21,14 @@
 - [Wiki: 主張と証拠の読み方](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - L0〜L5 の強さと必要な証拠へ戻せます。
 - [Wiki: 配線図だけでは足りない理由](https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough) - state completeness の欠損を整理します。
 - [Wiki: 閉ループ・遅延・ジッタ・安全停止](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - L3 で必要な end-to-end 条件を補います。
+- [Wiki: state・trait・ドリフト](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - cross-day / chronic claim で drift と recalibration burden をどう読むかを補います。
 
 ## いま分かっていること
 - decode は主に L1、局所的な閉ループ義継や介入応答は L2〜L3 に近い主張です。
 - 出力一致だけでは、内部因果構造や状態変数の十分性を示せません。
 - language prior、candidate set、subject cooperation を分けて出さない限り、非侵襲 decode を過大評価しやすくなります。
 - tail latency、silence / abstention、recalibration burden は offline accuracy と別の軸であり、closed-loop claim の必須ログです。
+- microelectrode 系では same neuron across days は観測事実ではなく、motion correction・sorting・probabilistic matching を介した推定です。
 
 ## まだ分かっていないこと
 - どの程度の介入一致と状態変数の完全性があれば '十分に emulate した' と言えるかは未確定です。
@@ -47,7 +49,7 @@ decode は「観測された信号から何かを当てること」、emulate �
 
 <strong>2026-03 文献監査で改めた点</strong>
 <p>
-旧版の弱点は、decode と emulate の原理差自体は正しかった一方で、2025 年の一次文献が押し上げた <strong>open-vocabulary non-invasive decode</strong>、<strong>streaming / voice-synthesis neuroprosthesis</strong>、<strong>connectome-constrained prediction</strong> を、どの水準で止めるべきかの <strong>site rule</strong> まで落とし切れていなかった点でございます。今回の更新では、<strong>language prior</strong>、<strong>tail latency / silence / recalibration burden</strong>、<strong>parameter degeneracy</strong> を decode/emulate 境界の必須監査項目へ昇格させました。
+旧版の弱点は、decode と emulate の原理差自体は正しかった一方で、2025 年の一次文献が押し上げた <strong>open-vocabulary non-invasive decode</strong>、<strong>streaming / voice-synthesis neuroprosthesis</strong>、<strong>connectome-constrained prediction</strong> を、どの水準で止めるべきかの <strong>site rule</strong> まで落とし切れていなかった点でございます。今回の更新では、<strong>language prior</strong>、<strong>tail latency / silence / recalibration burden</strong>、<strong>fixed decoder interval</strong>、<strong>same-neuron tracking audit</strong>、<strong>parameter degeneracy</strong> を decode/emulate 境界の必須監査項目へ昇格させました。
 </p>
 
 <h2>いちばん短い違い</h2>
@@ -99,6 +101,43 @@ decode は「観測された信号から何かを当てること」、emulate �
 </tr>
 </tbody>
 </table>
+
+<h2>2026-03-17 追補：侵襲 communication route の chronic ceiling</h2>
+<table>
+<thead>
+<tr>
+<th>壁</th>
+<th>一次文献が今支持すること</th>
+<th>このページで許す読み方</th>
+<th>まだ上げない主張</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>same-session streaming ceiling</strong></td>
+<td><a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a> は streaming brain-to-voice、<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> は instantaneous voice synthesis と silence fallback を前進させました。</td>
+<td>communication subsystem の強い L2〜L3 証拠として読みます。</td>
+<td>fixed decoder の長期保持や chronic deployability を、そのまま主張しません。</td>
+</tr>
+<tr>
+<td><strong>recalibration ceiling</strong></td>
+<td><a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> は one-month の unsupervised recalibration を検証し、<a href="https://doi.org/10.1038/s42003-024-06784-4" target="_blank">Pun et al. (2024)</a> は chronic human intracortical recording の instability が BCI performance 低下と強く結びつくことを示しました。</td>
+<td><code>time since last supervised calibration</code>、recovery time、recalibration burden を別ログに出す限りで、長期運用の前段として読みます。</td>
+<td>「その日に動いた」ことを「再較正なしで長期に成立した」とは書きません。</td>
+</tr>
+<tr>
+<td><strong>same-neuron tracking ceiling</strong></td>
+<td><a href="https://doi.org/10.1126/science.abf4588" target="_blank">Steinmetz et al. (2021)</a> は motion correction 付き stable recording、<a href="https://doi.org/10.1038/s41592-024-02232-7" target="_blank">Pachitariu et al. (2024)</a> は drift / split / merge を中心に据えた sorting、<a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">van Beest et al. (2025)</a> は probabilistic cross-day neuron tracking を前進させました。</td>
+<td>microelectrode 系では、same-neuron claim を <code>sorting version + drift correction + unit-match probability</code> 付きの推定として読みます。</td>
+<td>chronic decode 成功を、そのまま stable single-neuron mechanism の直読とは書きません。</td>
+</tr>
+</tbody>
+</table>
+
+<strong>この節での実務ルール</strong>
+<p>
+侵襲 speech BCI を上位主張へ進めるときは、同日内の streaming 性能だけでなく、<strong>固定 decoder が何日持つか</strong>、<strong>どれだけ人手再較正に依存したか</strong>、<strong>microelectrode 系なら same-neuron tracking をどう推定したか</strong>を同時に出します。背景の長い整理は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift">Wiki: state・trait・ドリフト</a> を参照してください。
+</p>
 
 <h2>一次文献で見る境界事例</h2>
 <table>
@@ -199,12 +238,12 @@ decode は「観測された信号から何かを当てること」、emulate �
 <tr>
 <td><strong>G4: 閉ループと長期運用で安定か</strong></td>
 <td>出力が次の入力を変えると、offline accuracy はそのまま通用しません。さらに within-session の速さと long-term deployability も別問題です。</td>
-<td>end-to-end latency の <code>P50/P95/P99</code>、tail latency、silence / abstention、dropout、recalibration burden、recovery time。</td>
+<td>end-to-end latency の <code>P50/P95/P99</code>、tail latency、silence / abstention、dropout、<strong>fixed decoder interval</strong>、<code>time since last supervised calibration</code>、recalibration burden、recovery time。</td>
 </tr>
 <tr>
 <td><strong>G5: 状態変数が足りており、縮退を監査したか</strong></td>
 <td>同じ出力でも異なる内部パラメータ集合がありえます。状態欠損と model family の縮退を伏せると過大主張になります。</td>
-<td>connectome-only baseline と augmentation 比較、family comparison、不確実性、cell type / synaptic state / delay / neuromodulation / glia の監査。</td>
+<td>connectome-only baseline と augmentation 比較、family comparison、不確実性、cell type / synaptic state / delay / neuromodulation / glia の監査に加え、chronic microelectrode 系では <strong>sorting version</strong>、<strong>drift correction</strong>、<strong>unit-match probability</strong> も併記します。</td>
 </tr>
 </tbody>
 </table>
@@ -214,7 +253,7 @@ decode は「観測された信号から何かを当てること」、emulate �
 <h4>Rule</h4>
 <ul>
 <li><strong>decode と書く条件：</strong>観測信号から意味、刺激、行動、文章を予測する実証が中心で、<code>LM-only</code> や shuffle baseline を上回る neural contribution が示されていても、介入一致までは出ていないときです。</li>
-<li><strong>communication subsystem の L2〜L3 と書く条件：</strong>speech BCI や tactile BCI のように局所 loop が成立していても、対象が限定サブシステムであること、latency / silence / recalibration burden を含むことを明示します。</li>
+<li><strong>communication subsystem の L2〜L3 と書く条件：</strong>speech BCI や tactile BCI のように局所 loop が成立していても、対象が限定サブシステムであること、latency / silence / <strong>fixed decoder interval</strong> / recalibration burden を含むことを明示し、microelectrode 系なら unit identity audit も添えます。</li>
 <li><strong>局所 emulation と書ける条件：</strong>局所回路で、closed loop と因果介入の双方が示され、何を置換したかが限定的に明示されているときです。</li>
 <li><strong>WBE に近いと書く条件：</strong>prior 超過、OOD / cross-day 一般化、摂動一致、閉ループ長期安定性、状態変数の完全性監査の 5 点がそろったときだけです。</li>
 <li><strong>出力一致だけのとき：</strong>avatar、behavioral clone、decoder、language interface といった表現に留め、emulate と言い換えません。</li>
@@ -229,6 +268,10 @@ decode は「観測された信号から何かを当てること」、emulate �
 <li>Littlejohn, K. T., Dabagia, M., Ladwig, A., et al. (2025). A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <em>Nature Neuroscience</em>, 28, 1711–1719. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
 <li>Wairagkar, M., Card, N. S., Singer-Clark, T., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <em>Nature</em>, 644, 145–152. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
 <li>Wilson, G. H., Stein, E. A., Kamdar, F., et al. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <em>Nature Biomedical Engineering</em>. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Pun, T. K., Khoshnevis, M., Hosman, T., et al. (2024). Measuring instability in chronic human intracortical neural recordings towards stable, long-term brain-computer interfaces. <em>Communications Biology</em>, 7, 1363. <a href="https://doi.org/10.1038/s42003-024-06784-4" target="_blank">doi:10.1038/s42003-024-06784-4</a></li>
+<li>Steinmetz, N. A., Aydin, C., Lebedeva, A., et al. (2021). Neuropixels 2.0: A miniaturized high-density probe for stable, long-term brain recordings. <em>Science</em>, 372(6539), eabf4588. <a href="https://doi.org/10.1126/science.abf4588" target="_blank">doi:10.1126/science.abf4588</a></li>
+<li>Pachitariu, M., Sridhar, S., Pennington, J., &amp; Stringer, C. (2024). Spike sorting with Kilosort4. <em>Nature Methods</em>, 21, 914–921. <a href="https://doi.org/10.1038/s41592-024-02232-7" target="_blank">doi:10.1038/s41592-024-02232-7</a></li>
+<li>van Beest, E. H., Bimbard, C., Fabre, J. M. J., et al. (2025). Tracking neurons across days with high-density probes. <em>Nature Methods</em>, 22, 778–787. <a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">doi:10.1038/s41592-024-02440-1</a></li>
 <li>Flesher, S. N., Downey, J. E., Weiss, J. M., et al. (2021). A brain-computer interface that evokes tactile sensations improves robotic arm control. <em>Science</em>, 372(6544), 831–836. <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>, 640, 435–447. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <em>Nature Neuroscience</em>, 28, 1323–1334. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>

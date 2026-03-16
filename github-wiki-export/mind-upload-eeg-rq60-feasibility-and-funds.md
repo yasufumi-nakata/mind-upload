@@ -707,6 +707,15 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 5. `U13-1`（G1）: 模倣/因果二軸ベンチ（`D2/D1`）
 6. `U15-2`（G6）: neurorights監査項目写像（`D4/D5`）
 
+## 2026-03-17 03:04 JST 再検証ログ（本run / pull後・現行参照ID基準）
+
+- 作業前に `main` を pull し、基準コミットを `mind-upload=5e9852b6d60c`、`EEG-DATA=51264ec9ad34`、`auto-research-funds=b9bf691dd193` に更新しました。
+- 正本 `research_harvest_50.md` の U別件数テーブルを再照合し、`RQ_TOTAL=60`（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）を再確認しました。
+- 本ページの判定内訳は再計数で `A/B/C=17/25/18` を維持していることを確認しました。
+- 本ページで現行参照している数値IDは `17件`（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）で、`EEG-DATA/eeg_dataset_summary_ja.csv` 上の欠落は `0` でした。
+- 助成キー `G1-G6` の実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue/*.yaml` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で全件再参照可能でした。
+- 運用方針を継続します。汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` で、各RQを個別に深掘りして提出に落とし込みます。
+
 ## 2026-03-17 02:07 JST 再検証ログ（本run / pull後・全60RQ深掘り運用の再固定）
 
 - 作業前に `git pull origin main` を実行し、`main` 最新を基準に再検証しました。
