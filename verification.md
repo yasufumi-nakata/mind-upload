@@ -759,9 +759,9 @@ Fusion Card が無い場合、本サイトではその結果を原則として <
 </tr>
 <tr>
 <td><strong>neuromodulatory specificity</strong></td>
-<td>proxy specificity 表、cross-state calibration、missing-modality 時の abstention、region / transmitter 限界。</td>
-<td>pupil / behavior / global arousal proxy と、local transmitter calibration を同じ cohort または外部基準で比較します。</td>
-<td>region-specific または transmitter-specific の較正が無い場合、内部状態を neuromodulator ground truth と書きません。</td>
+<td>proxy specificity 表、compartment（pupil / axon / sensor / receptor）、spatial spread / clearance、receptor family / cell-type target、cross-state calibration、missing-modality 時の abstention。</td>
+<td>mixed arousal proxy、local transmitter sensor、receptor atlas / pharmacology を同じ cohort または外部基準で分けて較正します。</td>
+<td>compartment、spatial scope、receptor family のいずれかが無い場合、内部状態を neuromodulator ground truth と書きません。</td>
 </tr>
 <tr>
 <td><strong>glial / slow-state support</strong></td>
@@ -777,6 +777,12 @@ Fusion Card が無い場合、本サイトではその結果を原則として <
 </tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>2026-03 追補：neuromodulatory proxy も 1 本ではありません</strong>
+<p>
+<a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> は pupil が adrenergic / cholinergic の mixed proxy であることを示し、<a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">Lohani et al. (2022)</a> と <a href="https://doi.org/10.7554/eLife.86800.2" target="_blank">Collins et al. (2023)</a> は cortex-wide の共通信号と局所独立成分が共存することを示しました。さらに <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> は local ACh signal が axon distance と clearance kinetics に依存することを示し、<a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> と <a href="https://doi.org/10.1038/ncomms12826" target="_blank">Verhoog et al. (2016)</a> は receptor distribution と effect が region / layer 依存であることを示しました。したがって本サイトでは、neuromodulatory proxy について <strong>compartment</strong>、<strong>spatial scope</strong>、<strong>receptor family</strong> を独立欄として残します。
+</p>
+</div>
 <div class="note-box">
 <strong>2026-03 で追加した必須列</strong>
 <p>
@@ -929,8 +935,8 @@ Observability Budget は <strong>何を直接見たか</strong>、latent-state e
 </tr>
 <tr>
 <td><strong>神経修飾場</strong></td>
-<td>覚醒度や学習率の状態は静的配線から復元できず、瞳孔径や HRV は coarse proxy にとどまります。</td>
-<td>トランスミッタ特異的な内部状態は主張せず、共変量や層別化因子として扱います。</td>
+<td>覚醒度や学習率の状態は静的配線から復元できず、瞳孔径や HRV は mixed arousal proxy にとどまり、receptor atlas は region prior であって momentary release ではありません。</td>
+<td>トランスミッタ特異的な内部状態は主張せず、共変量・局所 chemical proxy・regional receptor prior を分けて扱います。</td>
 </tr>
 <tr>
 <td><strong>グリア・代謝結合状態</strong></td>
@@ -975,9 +981,9 @@ connectome-complete は <strong>emulation-complete を意味しません</strong
 </tr>
 <tr>
 <td><strong>+ neuromodulatory proxy</strong></td>
-<td>cross-state 条件での predictive gain、proxy specificity、region / transmitter 限界、abstention を出すこと。</td>
-<td>覚醒度や transmitter-linked state を、限定つき covariate として使えると書けます。</td>
-<td>層別化・共変量としてのみ扱い、ground truth と言い換えません。</td>
+<td>cross-state 条件での predictive gain、proxy specificity、compartment、spatial scope、receptor family、abstention を出すこと。</td>
+<td>覚醒度や transmitter-linked state を、限定つき covariate / local chemical proxy / regional receptor prior として使えると書けます。</td>
+<td>mixed arousal covariate に留め、ground truth や region-general transmitter field と言い換えません。</td>
 </tr>
 <tr>
 <td><strong>+ glial / slow-state</strong></td>
@@ -1424,7 +1430,12 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Hengen, K. B., Torrado Pacheco, A., McGregor, J. N., Van Hooser, S. D., &amp; Turrigiano, G. G. (2016). Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
 <li>Torrado Pacheco, A., et al. (2021). Sleep Promotes Downward Firing Rate Homeostasis. <a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">doi:10.1016/j.neuron.2021.04.004</a></li>
 <li>Looser, Z. J., et al. (2024). Oligodendrocyte-axon metabolic coupling is mediated by extracellular K<sup>+</sup> and maintains axonal health. <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">doi:10.1038/s41593-023-01558-3</a></li>
+<li>Reimer, J., McGinley, M. J., Liu, Y., et al. (2016). Pupil fluctuations track rapid changes in adrenergic and cholinergic activity in cortex. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">doi:10.1038/ncomms13289</a></li>
+<li>Lohani, S., Moberly, A. H., Benisty, H., et al. (2022). Spatiotemporally heterogeneous coordination of cholinergic and neocortical activity. <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">doi:10.1038/s41593-022-01202-6</a></li>
+<li>Collins, L., Reddy, C. B., Neal, S., et al. (2023). Cholinergic and noradrenergic axonal activity contains a behavioral-state signal that is coordinated across the dorsal cortex. <a href="https://doi.org/10.7554/eLife.86800.2" target="_blank">doi:10.7554/eLife.86800.2</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
+<li>Hansen, J. Y., Shafiei, G., Markello, R. D., et al. (2022). Mapping neurotransmitter systems to the structural and functional organization of the human neocortex. <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">doi:10.1038/s41593-022-01186-3</a></li>
+<li>Verhoog, M. B., Goriounova, N. A., Obermayer, J., et al. (2016). Mechanisms underlying the rules for associative plasticity at adult human neocortical synapses. <a href="https://doi.org/10.1038/ncomms12826" target="_blank">doi:10.1038/ncomms12826</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Williamson, N. R., et al. (2025). Learning-associated astrocyte ensembles regulate memory recall. <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">doi:10.1038/s41586-024-08170-w</a></li>
 <li>Dewa, K., et al. (2025). The astrocytic ensemble acts as a multiday trace to stabilize memory. <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">doi:10.1038/s41586-025-09619-2</a></li>

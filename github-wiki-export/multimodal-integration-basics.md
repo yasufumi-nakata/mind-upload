@@ -26,6 +26,7 @@
 ## いま分かっていること
 - 複数モダリティを組み合わせると、時間・空間・局所性・外部妥当化の一部は補完できます。
 - ただし改善量は、取得関係、共有時計、個体別解剖、co-registration、融合モデル、外部基準の有無に強く依存します。
+- fMRI を含む統合では、shared clock があっても BOLD を direct neural truth とは読めません。
 - 侵襲記録は強い calibration route ですが、coverage bias と patient bias を抱えます。
 - atlas や Patch-seq は強い prior を与えますが、current state を直接観測したことにはなりません。
 - same-brain structure-function data は局所 conditional prediction を押し上げますが、all-state / whole-brain completeness とは別問題です。
@@ -155,7 +156,7 @@
 <tr>
 <td><strong>同時計測 EEG + fMRI</strong></td>
 <td><a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021)</a> は、1.5T〜7T にまたがる simultaneous EEG-fMRI で connectome 関係が再現可能であることを示しました。<a href="https://doi.org/10.1016/j.neuroimage.2014.10.055" target="_blank">Jorge et al. (2015)</a> は ultra-high field で artifact prevention と safety assessment が前提条件であることを示しました。</td>
-<td>時間分解能の非対称性、MR artifact、head motion、setup 依存性が残ります。したがって、空間情報を足しただけで fine-grained neural truth になったとは言えません。</td>
+<td>時間分解能の非対称性、MR artifact、head motion、region-specific HRF、task-related haemodynamics、venous / depth bias、setup 依存性が残ります。したがって、空間情報を足しただけで fine-grained neural truth や trial-level causal order になったとは言えません。</td>
 </tr>
 <tr>
 <td><strong>EEG + MEG + 現実的 head model</strong></td>
@@ -179,6 +180,52 @@
 </tr>
 </tbody>
 </table>
+
+<h2>EEG-fMRI で追加する hemodynamic proxy gate</h2>
+<p>
+shared clock と co-registration は、EEG-fMRI を比較可能にするための必要条件ですが、十分条件ではございません。理由は単純で、fMRI 側の signal が <strong>direct neural truth</strong> ではなく、<strong>neurovascular transfer を通した hemodynamic proxy</strong> だからです。したがって EEG-fMRI では、通常の Fusion Card に加えて、少なくとも以下の gate を別に通します。
+</p>
+<table>
+<thead>
+<tr>
+<th>gate</th>
+<th>一次文献が支持すること</th>
+<th>最低限ほしい提出物</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Neural target statement</strong></td>
+<td><a href="https://doi.org/10.1038/35084005" target="_blank">Logothetis et al. (2001)</a> と <a href="https://doi.org/10.1038/nature09108" target="_blank">Lee et al. (2010)</a> は、BOLD が cell-type / population-input 依存の neurovascular proxy であることを示しました。</td>
+<td>BOLD を `spike count`、`population input`、`network occupancy` のどれとして読むのかを明示します。</td>
+</tr>
+<tr>
+<td><strong>Task / anticipatory component audit</strong></td>
+<td><a href="https://doi.org/10.1038/nature07664" target="_blank">Sirotin &amp; Das (2009)</a> と <a href="https://doi.org/10.1038/nn.3170" target="_blank">Cardoso et al. (2012)</a> は、task-related haemodynamics が local neuronal activity だけでは説明しきれないことを示しました。</td>
+<td>stimulus-related / task-related covariate、anticipation block、behavioural nuisance を分けて残します。</td>
+</tr>
+<tr>
+<td><strong>HRF model granularity</strong></td>
+<td><a href="https://doi.org/10.1016/j.neuroimage.2003.11.029" target="_blank">Handwerker et al. (2004)</a> と <a href="https://doi.org/10.7554/eLife.86453" target="_blank">Bailes et al. (2023)</a> は、HRF timing が subject / region / local circuit で変わりうることを示しました。</td>
+<td>canonical HRF か region-specific / subject-specific / voxelwise HRF か、latency claim の棄権条件も含めて残します。</td>
+</tr>
+<tr>
+<td><strong>Venous / depth diagnostic</strong></td>
+<td><a href="https://doi.org/10.1016/j.neuroimage.2019.02.006" target="_blank">Kay et al. (2019)</a> と <a href="https://doi.org/10.1523/JNEUROSCI.2532-21.2022" target="_blank">Kurzawski et al. (2022)</a> は、sub-mm map や BOLD magnitude が venous / non-neural factor に強く影響されうることを示しました。</td>
+<td>large-vessel mask、depth-dependent diagnostic、non-neural factor の補正 / 棄権条件を残します。</td>
+</tr>
+<tr>
+<td><strong>Mechanistic validator</strong></td>
+<td>shared clock があっても、EEG-fMRI だけでは mechanistic interpretation は閉じません。electrophysiology、intracranial validation、fPET / calibrated BOLD などの別 validator が必要です。</td>
+<td>mechanism claim をする場合は external validator を明示し、無い場合は macro concordance までに留めます。</td>
+</tr>
+</tbody>
+</table>
+
+<strong>短い結論</strong>
+<p>
+EEG-fMRI の強みは、<strong>同一時点の macro-scale concordance</strong> と <strong>広域 coverage + ms 制約の併用</strong>にございます。しかし、hemodynamic proxy gate が無い場合、その ceiling はあくまで <strong>synchronized cross-modal constraint</strong> であって、fine-grained neural truth ではありません。
+</p>
 
 <h2>融合後の地図は、直接観測ではなく推定です</h2>
 <p>
@@ -216,6 +263,10 @@
 <td>late fusion か shared latent model か、loss、weights、priors、uncertainty representation。</td>
 </tr>
 <tr>
+<td><strong>Hemodynamic proxy audit<br>(when fMRI / fNIRS is included)</strong></td>
+<td>BOLD / CBF / fNIRS のどの proxy を使ったか、target neural claim、HRF model granularity、physiology nuisance、venous / depth diagnostic、mechanistic validator を書きます。</td>
+</tr>
+<tr>
 <td><strong>Incremental evidence</strong></td>
 <td>single-modality baseline、missing-modality ablation、behaviour-only / anatomy-only baseline と比べて、何がどれだけ増えたか。</td>
 </tr>
@@ -248,6 +299,7 @@ Fusion Card が無い場合、本サイトでは `multimodal result` を強く�
 <li><strong>atlas / Patch-seq / transcriptomics は prior と書く：</strong>cell-type label や molecular atlas を、current state observation と書きません。</li>
 <li><strong>侵襲記録は gold standard ではなく coverage-limited validation と書く：</strong>implant 周辺で強いが、未計測領域を保証しません。</li>
 <li><strong>fusion output を raw truth と書かない：</strong>fusion model、weights、uncertainty、registration error を同時に残します。</li>
+<li><strong>fMRI / fNIRS を含む統合では hemodynamic proxy audit を出す：</strong>shared clock があっても、HRF・task-related haemodynamics・venous bias を通さずに neural truth とは書きません。</li>
 <li><strong>same-brain local twin を whole-brain WBE と読み替えない：</strong>MICrONS や related datasets は local conditional prediction の大きな前進ですが、all-state completeness とは別です。</li>
 </ul>
 
@@ -265,4 +317,12 @@ Fusion Card が無い場合、本サイトでは `multimodal result` を強く�
 <li>MICrONS Consortium, et al. Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>. 2025;638:425-435. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Yao Z, van Velthoven CTJ, Nguyen TN, et al. A high-resolution transcriptomic and spatial atlas of cell types in the whole mouse brain. <em>Nature</em>. 2023;624:317-332. <a href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank">doi:10.1038/s41586-023-06812-z</a></li>
 <li>Gamlin CR, et al. Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <em>Nature</em>. 2025;638:316-324. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
+<li>Logothetis NK, Pauls J, Augath M, Trinath T, Oeltermann A. Neurophysiological investigation of the basis of the fMRI signal. <em>Nature</em>. 2001;412:150-157. <a href="https://doi.org/10.1038/35084005" target="_blank">doi:10.1038/35084005</a></li>
+<li>Lee JH, Durand R, Gradinaru V, et al. Global and local fMRI signals driven by neurons defined optogenetically by type and wiring. <em>Nature</em>. 2010;465:788-792. <a href="https://doi.org/10.1038/nature09108" target="_blank">doi:10.1038/nature09108</a></li>
+<li>Sirotin YB, Das A. Anticipatory haemodynamic signals in sensory cortex not predicted by local neuronal activity. <em>Nature</em>. 2009;457:475-479. <a href="https://doi.org/10.1038/nature07664" target="_blank">doi:10.1038/nature07664</a></li>
+<li>Cardoso MMBM, Sirotin YB, Lima B, Glushenkova E, Das A. The neuroimaging signal is a linear sum of neurally distinct stimulus- and task-related components. <em>Nature Neuroscience</em>. 2012;15:1298-1306. <a href="https://doi.org/10.1038/nn.3170" target="_blank">doi:10.1038/nn.3170</a></li>
+<li>Handwerker DA, Ollinger JM, D'Esposito M. Variation of BOLD hemodynamic responses across subjects and brain regions and their effects on statistical analyses. <em>NeuroImage</em>. 2004;21:1639-1651. <a href="https://doi.org/10.1016/j.neuroimage.2003.11.029" target="_blank">doi:10.1016/j.neuroimage.2003.11.029</a></li>
+<li>Bailes J, Millman R, Franklin C, et al. Resting-state fMRI signals contain spectral signatures of local hemodynamic response timing. <em>eLife</em>. 2023. <a href="https://doi.org/10.7554/eLife.86453" target="_blank">doi:10.7554/eLife.86453</a></li>
+<li>Kay KN, Jamison KW, Zhang RY, Uğurbil K. A critical assessment of data quality and venous effects in sub-millimeter fMRI. <em>NeuroImage</em>. 2019;189:847-869. <a href="https://doi.org/10.1016/j.neuroimage.2019.02.006" target="_blank">doi:10.1016/j.neuroimage.2019.02.006</a></li>
+<li>Kurzawski JW, Yablonskiy DA, Pointer R, et al. Non-Neural Factors Influencing BOLD Response Magnitudes within Individual Subjects. <em>Journal of Neuroscience</em>. 2022;42:7256-7266. <a href="https://doi.org/10.1523/JNEUROSCI.2532-21.2022" target="_blank">doi:10.1523/JNEUROSCI.2532-21.2022</a></li>
 </ol>

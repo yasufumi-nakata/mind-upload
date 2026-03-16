@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-15 / 位置づけ: Technical / natural science only
+- 更新日: 2026-03-16 / 位置づけ: Technical / natural science only
 
 ## このページの役割
 このページは、Mind-Upload の縦断評価で頻出する state（その場の状態）、trait（比較的安定な骨格）、drift（時間とともに起きる変化）を、EEG・fMRI・慢性記録・BCI の一次文献に沿って整理する wiki です。短期変動と長期変化を言葉だけで分けるのではなく、どの時定数で、どのメカニズム由来で、どの評価系で観測したかまで固定することを目的にしています。
@@ -196,6 +196,57 @@ Wilson ら (2025) は、intracortical cursor BCI が accumulating neural nonstat
 </tr>
 </tbody>
 </table>
+
+<h2>この議論を提出物仕様へどう落とすか</h2>
+<p>
+ここまでの文献整理から見えるのは、state・trait・drift の区別が重要だというだけでは不十分で、<strong>その区別を提出物の欄として固定しないと、same-day の成功が cross-day / longitudinal claim へ再び流れ込む</strong>という点でございます。そこで本サイトでは、<a href="https://mind-upload.com/verification.html#temporal-validity-card">Verification の Temporal Validity Card</a> を追加し、時間軸の外挿を独立に監査します。
+</p>
+<table>
+<thead>
+<tr>
+<th>Temporal Validity Card で固定すること</th>
+<th>このページの概念とどう対応するか</th>
+<th>最低限のログ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>evaluation family / horizon</strong></td>
+<td>state の議論か、trait backbone の議論か、longitudinal / closed-loop の議論かを混ぜません。</td>
+<td>within-session / cross-session / cross-subject / multiday / closed-loop の別、セッション間隔、評価日数。</td>
+</tr>
+<tr>
+<td><strong>state annotation</strong></td>
+<td>その日の覚醒、行動、sleep / wake 履歴、薬理状態が結果をどこまで動かしたかを残します。</td>
+<td>行動量、覚醒指標、無意図運動、薬理条件、recording context。</td>
+</tr>
+<tr>
+<td><strong>fixed-model interval</strong></td>
+<td>trait backbone と fixed decoder の安定性を同一視しません。</td>
+<td>再学習なしモデルを何日 hold したか、interval ごとの劣化曲線。</td>
+</tr>
+<tr>
+<td><strong>interface / decoder drift audit</strong></td>
+<td>biological drift と、再装着・probe drift・sorting・feature shift を分けます。</td>
+<td>再装着有無、impedance、channel dropout、sorting version、unit-match probability、drift correction。</td>
+</tr>
+<tr>
+<td><strong>population backbone metric</strong></td>
+<td>unit-level の不安定さがあっても relation / manifold が残るかを別に見ます。</td>
+<td>latent dynamics、representational similarity、cross-session identification、map homeostasis 指標。</td>
+</tr>
+<tr>
+<td><strong>recalibration burden / fallback</strong></td>
+<td>運用が drift を吸収したのか、そもそも drift が小さいのかを切り分けます。</td>
+<td>再較正頻度、所要時間、supervised / unsupervised の別、silence / abstention、recovery time。</td>
+</tr>
+</tbody>
+</table>
+
+<strong>このページから直接出る運用規則</strong>
+<p>
+Temporal Validity Card が無い場合、本サイトでは原則として <strong>within-session result</strong>、<strong>limited cross-session decode</strong>、または <strong>short-horizon online demo</strong> として扱います。逆に、state annotation、fixed-model interval、interface drift audit、recalibration burden がそろっていれば、同じ cross-day result でもどこまで安全に読めるかを明示できます。
+</p>
 
 <h2>このサイトで採用する運用ルール</h2>
 

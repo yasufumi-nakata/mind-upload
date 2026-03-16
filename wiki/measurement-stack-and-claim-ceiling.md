@@ -16,6 +16,7 @@ page_highlights:
   - "multimodal / atlas / connectome の語を、そのまま state-complete と誤読しないための ceiling を固定します。"
   - "stack の表だけでなく、state variable × timescale × direct / proxy / inferred の行列も追加し、何が本当に直接見えているかを分解します。"
   - "fMRI / BOLD は neural truth ではなく、neurovascular transfer・HRF・venous geometry を介した proxy として扱います。"
+  - "neuromodulation も 1 本ではなく、behavior proxy / axon activity / local transmitter sensor / receptor atlas / receptor physiology の別ラダーとして扱います。"
 known_points:
   - "EEG/MEG/fMRI はマクロな proxy を与えますが、細胞型、シナプス効率、神経修飾場、グリア状態を直接は与えません。"
   - "fMRI の振幅や onset は、神経活動だけでなく HRF の変動や vascular geometry の影響も受けます。"
@@ -23,6 +24,7 @@ known_points:
   - "whole-brain spatial transcriptomics は cell-type taxonomy と空間配置を大きく前進させますが、動的状態の十分性は別問題です。"
   - "Patch-seq と same-brain connectomics は縮退を減らしますが、全脳 coverage と長期 maintenance-state の十分性は残ります。"
   - "local transmitter / glia imaging は coarse proxy の校正に有効ですが、そのまま全脳 ground truth にはなりません。"
+  - "pupil や locomotion は mixed arousal proxy であり、local transmitter sensor や receptor atlas / physiology とは別の evidence class です。"
 unknown_points:
   - "どの stack の組み合わせが WBE に対して最も効率よく縮退を減らすかは、まだ固定できません。"
   - "同一脳・全脳・長期縦断で、どの latent state まで取得すべきかの十分条件は未確定です。"
@@ -146,10 +148,10 @@ recommended_pages:
 </tr>
 <tr>
 <td><strong>local transmitter imaging / behavior-linked proxy</strong></td>
-<td>局所 transmitter dynamics と、その axon activity / pupil / locomotion との関係です。</td>
-<td>Neyhart らのように、coarse arousal proxy が何をどこまで代表するかを較正し、transmitter-linked covariate を少し強くできます。</td>
-<td>全脳の transmitter field、受容体状態、region-generalizable ground truth、long-timescale maintenance-state は残ります。</td>
-<td><strong>限定つき covariate / proxy calibration まで</strong>です。single-transmitter ground truth や全脳 internal state とは書きません。</td>
+<td>局所 transmitter dynamics と、その axon activity / pupil / locomotion / receptor prior との関係です。</td>
+<td>Neyhart、Lohani、Collins、Reimer らの系のように、mixed arousal proxy、axon activity、local chemical signal がどこまで一致しどこで分かれるかを較正できます。</td>
+<td>全脳の transmitter field、momentary receptor occupancy、cell-type-specific effect、region-generalizable ground truth、long-timescale maintenance-state は残ります。</td>
+<td><strong>mixed arousal proxy / local chemical proxy / regional receptor prior まで</strong>です。single-transmitter ground truth や全脳 internal state とは書きません。</td>
 </tr>
 <tr>
 <td><strong>astrocyte / glial imaging</strong></td>
@@ -255,10 +257,10 @@ stack 別の ceiling 表だけでは、「何が見えていないか」は分�
 </tr>
 <tr>
 <td><strong>neuromodulatory specificity</strong></td>
-<td>subsecond〜分で state gating と gain control を変えます。</td>
-<td>local transmitter sensor、axon activity imaging、transmitter-specific calibration です。</td>
-<td>pupil、locomotion、behaviour label、global arousal proxy です。</td>
-<td><strong>transmitter-specific / region-specific calibration が無ければ proxy</strong>と書き、internal state ground truth へ上げません。</td>
+<td>subsecond〜分で state gating と gain control を変え、release・clearance・receptor distribution の差で効果が局所化します。</td>
+<td>local transmitter sensor、axon activity imaging、receptor / transporter atlas、receptor-specific physiology / pharmacology です。</td>
+<td>pupil、locomotion、behaviour label、HRV、single global arousal proxy です。</td>
+<td><strong>compartment（pupil / axon / sensor / receptor）、spatial scope、receptor family が無ければ proxy</strong>と書き、momentary internal state ground truth へ上げません。</td>
 </tr>
 <tr>
 <td><strong>glial / metabolic slow-state</strong></td>
@@ -319,9 +321,60 @@ Dorkenwald らの adult fly whole-brain connectome は、約 5 × 10<sup>7</sup>
 MICrONS は、同一脳で dense calcium imaging、行動状態、EM connectome を結びつけ、mouse visual cortex の multi-area functional connectomics を提示しました。これは connectome-only より一段強く、<strong>同じ脳での structure-function link</strong> を論じられる土台です。しかし、論文自体が扱うのは visual cortex の特定領域、特定課題、特定状態であり、そこから human whole-brain や all-state completeness へ飛躍することはできません。従って、この stack の ceiling は <strong>local functional twin</strong> です。
 </p>
 
-<h3>6. neuromodulator / glia imaging は coarse proxy の誤読を減らすが、全脳 ground truth にはなりません</h3>
+<div id="neuromodulatory-proxy-ladder"></div>
+<h3>6. neuromodulatory observability は 1 本ではなく、proxy ladder として監査する必要があります</h3>
 <p>
-Neyhart らは cortical ACh dynamics が cholinergic axon activity と behavioral state からかなり予測できること、同時に局所軸索からの距離と clearance kinetics に依存することを示しました。Cahill らは、局所的な neurotransmitter input が broad astrocyte network へ minutes-long に符号化されることを示しました。これらは、「pupil が上がった」「行動状態が変わった」だけで transmitter state や glial state を単純化してよいわけではないことを教えます。したがって、これらの stack は <strong>proxy calibration</strong> と <strong>glia omission の禁止</strong> には非常に有効ですが、そのまま全脳 internal state の ground truth にはなりません。
+ここが今回もっとも深掘りして修正すべきだった点でございます。<a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> は瞳孔変動が皮質内の adrenergic と cholinergic activity の両方を追うことを示し、瞳孔径が <strong>mixed arousal proxy</strong> であることを明確にしました。さらに <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">Lohani et al. (2022)</a> と <a href="https://doi.org/10.7554/eLife.86800.2" target="_blank">Collins et al. (2023)</a> は、cholinergic / noradrenergic axonal activity に cortex-wide の共通 signal がある一方で、局所には独立成分も残ることを示しました。<a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> は、cortical ACh dynamics が cholinergic axon activity と behavioral state からかなり予測できても、signal が近傍軸索からの距離と clearance kinetics に依存することを示しました。したがって、<strong>pupil</strong>、<strong>axon activity</strong>、<strong>local transmitter sensor</strong> は同じものを見ているわけではございません。
+</p>
+<p>
+さらに、chemical specificity が上がっても、そこから直ちに functional effect の ground truth にはなりません。<a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a>、<a href="https://doi.org/10.1016/j.neuron.2023.02.013" target="_blank">Goulas et al. (2023)</a>、<a href="https://doi.org/10.3389/fnana.2017.00078" target="_blank">Zilles &amp; Palomero-Gallagher (2017)</a> は、human / macaque cortex で receptor / transporter density が領域ごと・層ごとに大きく異なることを示しました。加えて <a href="https://doi.org/10.1038/ncomms12826" target="_blank">Verhoog et al. (2016)</a> と <a href="https://doi.org/10.1523/JNEUROSCI.1455-23.2024" target="_blank">Gulledge et al. (2024)</a> は、同じ cholinergic drive でも layer や projection class に応じて plasticity / output effect が変わることを示しています。したがって本サイトでは、<strong>release proxy</strong> と <strong>receptor prior</strong> と <strong>receptor-mediated causal effect</strong> を別ラダーとして扱います。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>route</th>
+<th>直接言えること</th>
+<th>まだ残るもの</th>
+<th>このサイトでの ceiling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>mixed arousal proxy<br>(pupil / HRV / locomotion)</strong></td>
+<td>覚醒・行動 state に結び付いた広域 covariate を出せます。</td>
+<td>transmitter mixture、局所 release、receptor family、cell-type-specific effect は残ります。</td>
+<td><strong>state covariate まで</strong>です。single-transmitter ground truth とは書きません。</td>
+</tr>
+<tr>
+<td><strong>axon activity / innervation readout</strong></td>
+<td>transmitter-line の activity と cortex-wide の共通 signal、局所独立成分の両方を監査できます。</td>
+<td>extracellular concentration、clearance、receptor occupancy、downstream effect は残ります。</td>
+<td><strong>transmitter-linked axonal proxy まで</strong>です。chemical field や effect size の ground truth とは書きません。</td>
+</tr>
+<tr>
+<td><strong>local transmitter sensor</strong></td>
+<td>sensor 近傍の release / clearance dynamics を局所 chemical proxy として読めます。</td>
+<td>whole-brain field、receptor occupancy、projection-class-specific effect、region generalization は残ります。</td>
+<td><strong>local chemical proxy まで</strong>です。momentary internal state 全体の直接観測とは書きません。</td>
+</tr>
+<tr>
+<td><strong>receptor atlas / PET / autoradiography</strong></td>
+<td>どの領域・層で effect が変わりうるかという regional prior を与えます。</td>
+<td>momentary release、current state、trial-level fluctuation、局所 causal effect は残ります。</td>
+<td><strong>regional receptor prior まで</strong>です。current neuromodulatory state と同一視しません。</td>
+</tr>
+<tr>
+<td><strong>receptor-specific physiology / pharmacology</strong></td>
+<td>その回路・その cell class における effect direction と timescale を局所 causal calibration として出せます。</td>
+<td>全脳 coverage、別課題・別種への一般化、momentary whole-brain field は残ります。</td>
+<td><strong>local causal calibration まで</strong>です。whole-brain completeness には上げません。</td>
+</tr>
+</tbody>
+</table>
+
+<h3>7. glia imaging は slow-state の omission を止めるが、neuromodulatory ladder の代わりにはなりません</h3>
+<p>
+<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> は、局所的な neurotransmitter input が broad astrocyte network へ minutes-long に符号化されることを示しました。これは glia を背景ノイズとして落とせないことを強く裏づけますが、同時に <strong>glial signal が neuromodulatory release や receptor state を完全に置き換えるわけではない</strong>ことも意味します。したがって本サイトでは、glia imaging を <strong>slow-state calibration</strong> として重視しつつ、neuromodulatory proxy ladder と混ぜて 1 本化しません。
 </p>
 </section>
 
@@ -333,10 +386,11 @@ Neyhart らは cortical ACh dynamics が cholinergic axon activity と behaviora
 <li><strong>augmentation claim には measurement stack を書く：</strong>「transcriptomic label を足した」ではなく、whole-brain atlas か Patch-seq bridge か same-brain link かを区別します。</li>
 <li><strong>atlas / bridge / local population window / scaffold / local twin / proxy calibration を混ぜない：</strong>同じ「前進」でも、どの種類の前進かを固定します。</li>
 <li><strong>latent state を 1 箱にしない：</strong>cell identity、synaptic efficacy、intrinsic excitability、delay / myelin、neuromodulation、glia、sleep / recovery、chronic unit identity を分け、dominant timescale を添えます。</li>
+<li><strong>neuromodulation は compartment を書く：</strong>pupil / axon / sensor / receptor atlas / pharmacology のどこを測ったかを明示し、chemical signal と receptor effect を混ぜません。</li>
 <li><strong>multimodal を state-complete の同義語にしない：</strong>何の latent state が依然として残るかを本文に併記します。</li>
 <li><strong>未観測状態を埋めるときは推定と書く：</strong>cell type から threshold / gain / set point を自動補完した場合は latent inference と明記します。</li>
 <li><strong>sorted spike を stable neuron identity と書かない：</strong>chronic 記録では sorting version、drift correction、unit-match probability、dropout rate を別に残します。</li>
-<li><strong>claim ceiling を超える表現を禁止する：</strong>たとえば EM だけで emulation-complete、Patch-seq だけで whole-brain state-complete、同一 shank の sorted unit だけで cross-day same-neuron claim、pupil だけで transmitter ground truth とは書きません。</li>
+<li><strong>claim ceiling を超える表現を禁止する：</strong>たとえば EM だけで emulation-complete、Patch-seq だけで whole-brain state-complete、同一 shank の sorted unit だけで cross-day same-neuron claim、pupil だけで transmitter ground truth、receptor atlas だけで momentary release とは書きません。</li>
 </ul>
 </div>
 <table class="data-table">
@@ -396,7 +450,15 @@ Neyhart らは cortical ACh dynamics が cholinergic axon activity と behaviora
 <li>Gregory, N. S., et al. (2023). Structural and functional changes of deep layer pyramidal neurons surrounding implanted microelectrode arrays in rat motor cortex. <em>Journal of Neural Engineering</em>, 20(4), 046022. <a href="https://doi.org/10.1088/1741-2552/ace8ac" target="_blank">doi:10.1088/1741-2552/ace8ac</a></li>
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>, 640, 435-447. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <em>Nature</em>, 640, 497-505. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
+<li>Reimer, J., McGinley, M. J., Liu, Y., et al. (2016). Pupil fluctuations track rapid changes in adrenergic and cholinergic activity in cortex. <em>Nature Communications</em>, 7, 13289. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">doi:10.1038/ncomms13289</a></li>
+<li>Lohani, S., Moberly, A. H., Benisty, H., et al. (2022). Spatiotemporally heterogeneous coordination of cholinergic and neocortical activity. <em>Nature Neuroscience</em>, 25, 1706-1713. <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">doi:10.1038/s41593-022-01202-6</a></li>
+<li>Collins, L., Reddy, C. B., Neal, S., et al. (2023). Cholinergic and noradrenergic axonal activity contains a behavioral-state signal that is coordinated across the dorsal cortex. <em>eLife</em>, 12, RP86800. <a href="https://doi.org/10.7554/eLife.86800.2" target="_blank">doi:10.7554/eLife.86800.2</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <em>Cell Reports</em>, 43(10), 114808. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
+<li>Hansen, J. Y., Shafiei, G., Markello, R. D., et al. (2022). Mapping neurotransmitter systems to the structural and functional organization of the human neocortex. <em>Nature Neuroscience</em>, 25, 1569-1580. <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">doi:10.1038/s41593-022-01186-3</a></li>
+<li>Goulas, A., Changeux, J.-P., Wagstyl, K., et al. (2023). The natural axis of transmitter receptor distribution in the human cerebral cortex. <em>Neuron</em>, 111(9), 1461-1479.e8. <a href="https://doi.org/10.1016/j.neuron.2023.02.013" target="_blank">doi:10.1016/j.neuron.2023.02.013</a></li>
+<li>Zilles, K., &amp; Palomero-Gallagher, N. (2017). Multiple Transmitter Receptors in Regions and Layers of the Human Cerebral Cortex. <em>Frontiers in Neuroanatomy</em>, 11, 78. <a href="https://doi.org/10.3389/fnana.2017.00078" target="_blank">doi:10.3389/fnana.2017.00078</a></li>
+<li>Verhoog, M. B., Goriounova, N. A., Obermayer, J., et al. (2016). Mechanisms underlying the rules for associative plasticity at adult human neocortical synapses. <em>Nature Communications</em>, 7, 12826. <a href="https://doi.org/10.1038/ncomms12826" target="_blank">doi:10.1038/ncomms12826</a></li>
+<li>Gulledge, A. T., et al. (2024). M1-type muscarinic receptors inhibit corticofugal pyramidal tract neurons to suppress layer 5 cortical output. <em>Journal of Neuroscience</em>, 44(10), e1455232024. <a href="https://doi.org/10.1523/JNEUROSCI.1455-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1455-23.2024</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <em>Nature</em>, 629, 146-153. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Xu, W., et al. (2024). Sleep restores an optimal computational regime in cortical networks. <em>Nature Neuroscience</em>, 27, 972-980. <a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">doi:10.1038/s41593-023-01536-9</a></li>
 <li>Hengen, K. B., Torrado Pacheco, A., McGregor, J. N., Van Hooser, S. D., &amp; Turrigiano, G. G. (2016). Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <em>Cell</em>, 165(1), 180-191. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
