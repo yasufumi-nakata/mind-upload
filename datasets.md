@@ -366,7 +366,7 @@ Musall et al. (2019) は、task 中の neural activity が uninstructed movement
 <section class="section" id="foundation-model-audit">
 <h2 class="section-title">2.6) foundation / self-supervised EEG model を使うときの追加監査</h2>
 <p>
-今回さらに深掘りすべきだった弱点は、サイトの Dataset 導線に <strong>EEG foundation model / self-supervised pretraining</strong> の実務監査が無く、最近の大規模事前学習をそのまま「dataset 問題が解けた」と誤読しうる点でした。<a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">Kostas et al. (2021)</a> は breadth を示しつつ downstream applicability は未確定だと述べ、<a href="https://papers.nips.cc/paper_files/paper/2023/file/f6b30f3e2dd9cb53bbf2024402d02295-Paper-Conference.pdf" target="_blank">Wang et al. (2023)</a> は sampling rate、channel、length、missing segment の mismatch 自体を cross-data 学習の中心問題に置きました。さらに <a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/47393e8594c82ce8fd83adc672cf9872-Abstract-Conference.html" target="_blank">Jiang et al. (2024)</a> と <a href="https://neurips.cc/virtual/2024/poster/93793" target="_blank">Wang et al. (2024)</a> は、electrode mismatch、varied task design、low SNR、inter-subject variability を解くために model 側の工夫を入れています。これは裏返すと、<strong>そこを出さない比較は比較不能</strong>だという意味でもございます。
+今回さらに深掘りすべきだった弱点は、このサイトの Dataset 導線が「foundation model を使えば dataset 問題が軽くなる」という誤読をまだ止め切れていなかった点です。<a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">Kostas et al. (2021)</a>、<a href="https://papers.nips.cc/paper_files/paper/2023/file/f6b30f3e2dd9cb53bbf2024402d02295-Paper-Conference.pdf" target="_blank">Wang et al. (2023)</a>、<a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/47393e8594c82ce8fd83adc672cf9872-Abstract-Conference.html" target="_blank">Jiang et al. (2024)</a>、<a href="https://neurips.cc/virtual/2024/poster/93793" target="_blank">Wang et al. (2024)</a> が heterogeneity を残したうえで、<a href="https://openreview.net/forum?id=J5SbLoq7Uv" target="_blank">Lee et al. (2025)</a> は current LBM の改善幅が小さく parameter cost が大きいと報告しました。さらに <a href="https://eeg2025.github.io/" target="_blank">EEG Foundation Challenge 2025</a> と <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a> は benchmark standardization 自体が主要課題だと示し、<a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025)</a>、<a href="https://arxiv.org/abs/2512.19097" target="_blank">Han et al. (2025)</a>、<a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> は setup variation、scaling law、benchmark inconsistency をそれぞれ中心問題として扱いました。つまり dataset 側では、corpus identity だけでなく <strong>benchmark provenance</strong> と <strong>scale / efficiency</strong> まで出さないと比較が成立しません。
 </p>
 
 <table class="data-table">
@@ -384,14 +384,29 @@ Musall et al. (2019) は、task 中の neural activity が uninstructed movement
 <td>train/test 分離を保ったように見えて、実際には近縁データが pretraining 側へ入っていた可能性を見落とします。</td>
 </tr>
 <tr>
+<td><strong>population / setup diversity</strong></td>
+<td>収録地域、population、device 種別、electrode layout、reference 系、clinical / laboratory の別です。</td>
+<td>dataset 数や総時間だけを見て、実際には狭い recording distribution に偏った pretraining を過大評価します。</td>
+</tr>
+<tr>
 <td><strong>harmonization</strong></td>
 <td>channel map、reference、sample rate、window length、tokenization、missing-channel / missing-segment policy です。</td>
 <td>同じモデル名でも前処理と format 整形の差を、モデル能力の差と誤読します。</td>
 </tr>
 <tr>
 <td><strong>objective / adaptation regime</strong></td>
-<td>masked / autoregressive / contrastive の別、frozen / linear-probe / PEFT / full fine-tune の別、target data 使用量です。</td>
+<td>masked / autoregressive / contrastive の別、frozen / linear-probe / PEFT / full fine-tune / test-time adaptation の別、target data 使用量と label budget です。</td>
 <td>「pretraining が効いた」のか、「target data で強く適応した」のかを区別できません。</td>
+</tr>
+<tr>
+<td><strong>benchmark provenance</strong></td>
+<td>benchmark 名、version、split construction、checkpoint selection、segment length、normalization、外部 hold-out の作り方です。</td>
+<td>benchmark 設計差で起きた ranking 変動を、model capability の差と誤読します。</td>
+</tr>
+<tr>
+<td><strong>scale / efficiency</strong></td>
+<td>総 parameter 数、trainable parameter 数、pretraining steps / epochs、corpus 規模、adapter 学習量、推論コストです。</td>
+<td>「大きいから強い」「大規模だから一般化した」と読んで、実際には compute 配分や PEFT の効果だった可能性を落とします。</td>
 </tr>
 <tr>
 <td><strong>evaluation family</strong></td>
@@ -409,14 +424,14 @@ Musall et al. (2019) は、task 中の neural activity が uninstructed movement
 <div class="note-box">
 <strong>この card は、本サイトの運用上の推論です</strong>
 <p>
-上の <strong>Pretraining Card</strong> は、各論文がそのまま規格として宣言しているものではなく、heterogeneous corpus pretraining を比較可能に保つために本サイトが引く運用ルールでございます。理由は単純で、pretraining corpus も dataset である以上、<strong>split の独立性</strong>、<strong>format harmonization</strong>、<strong>adaptation の量</strong> を出さなければ、downstream score の意味が固定できないからです。
+上の <strong>Pretraining Card</strong> は、各論文がそのまま規格として宣言しているものではなく、heterogeneous corpus pretraining を比較可能に保つために本サイトが引く運用ルールでございます。理由は単純で、pretraining corpus も dataset であり、さらに <strong>benchmark specification</strong> と <strong>compute / adaptation budget</strong> も score の意味を変えるからです。したがって <strong>split の独立性</strong>、<strong>format harmonization</strong>、<strong>adaptation の量</strong>、<strong>benchmark provenance</strong>、<strong>scale / efficiency</strong> を出さなければ、downstream score の意味は固定できません。
 </p>
 </div>
 
 <div class="note-box">
 <strong>この節から出る site rule</strong>
 <p>
-今後このサイトでは、foundation / self-supervised 系の結果に通常の dataset card とは別に <strong>Pretraining Card</strong> を添えます。これが無い結果は、たとえ高スコアでも <strong>L1 の限定つき decode</strong> として扱い、cross-day stability、source imaging 改善、deployable loop、WBE 向け state reconstruction へは上げません。
+今後このサイトでは、foundation / self-supervised 系の結果に通常の dataset card とは別に <strong>Pretraining Card</strong> を添えます。これが無い結果、あるいは <strong>benchmark provenance</strong> と <strong>scale / efficiency profile</strong> が欠ける結果は、たとえ高スコアでも <strong>L1 の限定つき decode</strong> として扱い、cross-day stability、source imaging 改善、deployable loop、WBE 向け state reconstruction へは上げません。
 </p>
 </div>
 </section>
@@ -788,6 +803,12 @@ Mind-Uploadが目指すのは、単にデータを集めることではなく、
 <li><a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/47393e8594c82ce8fd83adc672cf9872-Abstract-Conference.html" target="_blank">Jiang et al. (2024), LaBraM</a></li>
 <li><a href="https://neurips.cc/virtual/2024/poster/93793" target="_blank">Wang et al. (2024), EEGPT</a></li>
 <li><a href="https://doi.org/10.1109/TBME.2025.3613730" target="_blank">Zhang et al. (2025), Cross Device Representation Consistency</a></li>
+<li><a href="https://openreview.net/forum?id=J5SbLoq7Uv" target="_blank">Lee et al. (2025), Are Large Brainwave Foundation Models Capable Yet? Insights from Fine-Tuning</a></li>
+<li><a href="https://eeg2025.github.io/" target="_blank">EEG Foundation Challenge (2025), official website</a></li>
+<li><a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025), EEG-FM-Bench</a></li>
+<li><a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025), REVE</a></li>
+<li><a href="https://arxiv.org/abs/2512.19097" target="_blank">Han et al. (2025), DIVER-1</a></li>
+<li><a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026), PRISM</a></li>
 <li><a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">PhysioNet: EEG Motor Movement/Imagery Dataset</a></li>
 <li><a href="https://physionet.org/content/chbmit/1.0.0/" target="_blank">PhysioNet: CHB-MIT Scalp EEG Database</a></li>
 <li><a href="https://physionet.org/content/sleep-edfx/1.0.0/" target="_blank">PhysioNet: Sleep-EDF Database Expanded</a></li>
