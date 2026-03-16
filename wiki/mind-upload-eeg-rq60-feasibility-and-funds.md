@@ -677,3 +677,12 @@ recommended_pages:
 - 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は、`grant_queue` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の分離参照で再確認しました。
 - 本runの運用固定: 汎用俯瞰を優先せず、`1RQ=1検証命題=1応募テーマ=1主データ` の単位で1件ずつ深掘りします。
 
+
+## 2026-03-16 16:02 JST 再検証ログ（本run / ID再採番差分の明示）
+
+- 作業前に `git pull origin main` を実行し、`main` 最新を基準に再検証しました。
+- `research_harvest_50.md` 正本と本ページの RQ表（`## U0` 〜 `## RQ別提出固定表（新規）` 直前）を再照合し、`RQ_TOTAL=60`（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）を再確認しました。
+- 判定内訳は再計数で `A/B/C=17/25/18` を維持し、`mind-upload-rq60-deep-focus-notes.md` / `mind-upload-eeg-rq60-grant-dataset-playbook.md` と整合しました。
+- 助成キー `G1-G6` 実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は、`grant_queue/*.yaml` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再参照可能でした。
+- 重要差分: 本ページ RQ表で参照される `推奨EEG-DATA` の数値IDは `24種類` ある一方、現行 `EEG-DATA/eeg_dataset_summary_ja.csv` では `ID=6` 以外の `23ID` が再採番により一致しませんでした。
+- 運用を再固定します。応募書類・再現ログの正本参照は引き続き `D1-D16（DOI固定）` を優先し、数値IDは補助表記としてのみ扱います。

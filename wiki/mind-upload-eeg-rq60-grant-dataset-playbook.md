@@ -240,3 +240,11 @@ recommended_pages:
 - 助成実ID `G1-G6` は `grant_queue` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の両系統で参照可能でした。
 - 本runでも運用は据え置きです。汎用テーマ化はせず、`1RQ=1提出判断` で申請文へ直接転記する粒度を維持します。
 
+
+## 2026-03-16 16:02 JST 再検証ログ（本run / 提出固定表の更新確認）
+
+- `main` pull 後に本ページの `RQ` 行を再計数し、`RQ_TOTAL=60` を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` は `mind-upload-eeg-rq60-feasibility-and-funds.md` と一致しています。
+- 全 `RQ` 行で `第一応募先/予備応募先/主EEG-DATA/主データ採用理由/最小成果物` の必須列欠落 `0` を確認しました。
+- 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再参照可能でした。
+- `主EEG-DATA` の数値IDは再採番で変動するため、提出時の固定参照は引き続き `D1-D16（DOI固定）` を優先し、数値IDは補助的に扱います。
