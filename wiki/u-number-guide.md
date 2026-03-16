@@ -5,7 +5,7 @@ description: "文献地図で使う U番号を、日常語で読み替えて迷�
 article_type: Wiki
 subtitle: "U は『未解決問題の名前札』です"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-16"
 note: "Reading guide"
 audience: "U0-U15 の番号で身構えやすい人、文献地図の入口を知りたい人"
 reading_time: "8〜12分"
@@ -117,7 +117,7 @@ U番号は試験の暗記項目ではありません。役割は「この文献�
 <td>U8</td>
 </tr>
 <tr>
-<td>connectome 外の maintenance-state</td>
+<td>connectome 外の maintenance-state と支持系</td>
 <td>U3</td>
 </tr>
 <tr>
@@ -157,7 +157,7 @@ U番号は試験の暗記項目ではありません。役割は「この文献�
 <tr>
 <td><strong>4</strong></td>
 <td><strong>U3</strong></td>
-<td>connectome と cell type の外に残る maintenance-state を確認しないと、長期主張を読みすぎるためです。</td>
+<td>sleep/homeostasis、髄鞘/代謝支持、astrocyte ensemble、clearance/immune support を分けて読まないと、構造の前進を長期主体同等性へ読みすぎるためです。</td>
 </tr>
 <tr>
 <td><strong>5</strong></td>

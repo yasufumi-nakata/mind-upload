@@ -462,7 +462,7 @@ U7 の文献は、<strong>器と時計系</strong>、<strong>同時計測の con
 <thead><tr><th>ID</th><th>問題名</th><th>現状</th><th>引用数</th><th>未解決の中心</th></tr></thead><tbody>
 <tr><td>U0</td><td>操作的同一性</td><td>部分解決</td><td>23</td><td>介入実験を含む同一性評価ベンチは未標準化。</td></tr>
 <tr><td>U1</td><td>逆問題同定可能性</td><td>部分解決</td><td>26</td><td>被験者間・装置間の不確実性を横断した一般化誤差境界が不足。</td></tr>
-<tr><td>U3</td><td>生物学的境界</td><td>部分解決</td><td>26</td><td>どの粒度まで含めれば『同等な主体』と見なせるかの閾値が未確定。</td></tr>
+<tr><td>U3</td><td>生物学的境界</td><td>部分解決</td><td>26</td><td>sleep/homeostasis・髄鞘/代謝支持・glia/clearance support の omission test と human proxy bridge が未標準化。</td></tr>
 <tr><td>U4</td><td>因果同値</td><td>部分解決</td><td>26</td><td>高次元時系列での因果識別可能性がデータ条件に強く依存。</td></tr>
 <tr><td>U7</td><td>マルチモーダル整合</td><td>部分解決</td><td>26</td><td>同期誤差の許容域をタスク別に定義した共通規約が不足。</td></tr>
 <tr><td>U8</td><td>閉ループ安定性</td><td>部分解決</td><td>26</td><td>長期運用でのドリフト耐性と再現性評価が不足。</td></tr>
@@ -493,7 +493,7 @@ U番号は内部管理用のコードであり、暗記するためのもので�
 <thead><tr><th>ID</th><th>厳密定義</th></tr></thead><tbody>
 <tr><td>U0</td><td>介入集合 I と時間窓 T を固定したとき、生体系とモデル系の条件付き分布差 D(P_bio, P_model | I, T) をしきい値以下で規定できるか。</td></tr>
 <tr><td>U1</td><td>観測 y から潜在源 x を推定する際、事後分布 p(x|y) の集中度・同定誤差境界・条件数を同時に報告できるか。</td></tr>
-<tr><td>U3</td><td>主体モデルに含める最小構成要素（ニューロン、グリア、neuromodulator、身体・環境ループ）を、予測性能低下で境界決定できるか。</td></tr>
+<tr><td>U3</td><td>主体モデルに含める最小構成要素を、connectome / cell type に加えて sleep-homeostasis、axon-myelin metabolic support、glial ensemble、clearance / immune support の omission / augmentation で境界決定できるか。</td></tr>
 <tr><td>U4</td><td>観測一致ではなく介入分岐（counterfactual / do-intervention）で、生体系とモデル系の因果機構一致を判定できるか。</td></tr>
 <tr><td>U7</td><td>EEG/fMRI/行動/生理の時刻系・空間系・前処理ログを監査可能に固定し、再解析で同一結論へ到達できるか。</td></tr>
 <tr><td>U8</td><td>遅延・ジッタ・ノイズ・ドリフト下で、閉ループ神経制御が安全制約を破らず安定に動作するか。</td></tr>
@@ -578,7 +578,7 @@ Round 1〜114 の情報は消しておらず、公開本文と <code>automation/
 <thead><tr><th>U</th><th>RQ総数</th><th>深掘り完了</th><th>今回本文に残した要点</th></tr></thead><tbody>
 <tr><td>U0</td><td>4</td><td>4</td><td>操作的同一性は理論整理が進む一方、介入応答を含むベンチ仕様が未整備であることを固定しました。</td></tr>
 <tr><td>U1</td><td>4</td><td>4</td><td>逆問題では点推定だけでなく、不確実性伝播と区間公開を要件化すべき段階に来ています。</td></tr>
-<tr><td>U3</td><td>6</td><td>6</td><td>グリア、リンパ系、免疫監視を「含めるべき最小構成」の候補として明示しました。</td></tr>
+<tr><td>U3</td><td>6</td><td>6</td><td>構造 scaffold、sleep/homeostasis、髄鞘/代謝支持、glia/clearance support を別の evidence axis として分けて読む必要を固定しました。</td></tr>
 <tr><td>U4 / U7 / U8</td><td>16</td><td>16</td><td>因果同値、BIDS/同期、閉ループ遅延の条件を、観測・再現・安全停止の観点で具体化しました。</td></tr>
 <tr><td>U10 / U11</td><td>8</td><td>8</td><td>熱力学的一貫性と意識指標近似は、理論主張より先に KPI と失敗条件を固定する必要があると整理しました。</td></tr>
 <tr><td>U12 / U15</td><td>10</td><td>10</td><td>規制トラックでは、本文更新前の証跡ゲート、再監視、再開台帳を標準化しました。</td></tr>
@@ -630,7 +630,7 @@ Round 1〜114 の情報は消しておらず、公開本文と <code>automation/
 <ul>
 <li><strong>U0:</strong> 操作的同一性は理論蓄積がある一方で、介入応答を含むベンチ仕様が依然不足しております。</li>
 <li><strong>U1:</strong> 逆問題では、点推定だけでなく不確実性伝播と信頼区間公開を最低要件として扱うべきです。</li>
-<li><strong>U3:</strong> グリア、リンパ系、免疫監視は「含めるべき最小構成」を見直す補助指標として浮上しました。</li>
+<li><strong>U3:</strong> connectome 外の境界は、sleep/homeostasis、髄鞘/代謝支持、astrocyte ensemble、clearance/immune support を時定数別に分けて読まないと誤読します。</li>
 <li><strong>U7 / U8:</strong> BIDS、同期誤差、閉ループ遅延の許容域は、再現可能性と安全停止の双方に直結します。</li>
 <li><strong>U10 / U11:</strong> 熱力学的一貫性と意識指標近似は、理論対立より先に KPI と失敗条件を固定すべき論点です。</li>
 <li><strong>U12 / U15:</strong> 制度・規制系は外部依存が大きいため、本文更新前の証跡ゲートと再監視運用が不可欠です。</li>
@@ -733,47 +733,84 @@ Round 1〜114 の情報は消しておらず、公開本文と <code>automation/
 
 <section class="section" id="u3">
 <h2 class="section-title">U3: 生物学的境界</h2>
-<p><strong>厳密定義:</strong> 主体モデルに含める最小構成要素（ニューロン、グリア、neuromodulator、身体・環境ループ）を、予測性能低下で境界決定できるか。</p>
+<p><strong>厳密定義:</strong> 主体モデルに含める最小構成要素を、connectome / cell type に加えて <strong>sleep-homeostasis</strong>、<strong>axon-myelin metabolic support</strong>、<strong>glial ensemble state</strong>、<strong>clearance / immune support</strong> の omission / augmentation で境界決定できるか。</p>
+<h3>2026-03 U3 再監査：生物学的境界を 4 つの evidence axis に分けます</h3>
+<p>
+今回もっとも改善すべきだった弱点は、旧 U3 が <strong>connectome の前進</strong>、<strong>sleep / homeostasis</strong>、<strong>髄鞘 / 代謝支持</strong>、<strong>astrocyte / clearance / immune support</strong>、<strong>身体・環境ループ</strong> を近い強さで並べ、しかも一部で <strong>直接性の弱い章論文や一般論</strong> を根拠例に混ぜていた点でございます。これでは読者が「ニューロン外のものは全部同じくらい必要」あるいは「全部まだ speculative」と両方向に誤読しやすくなります。一次文献を見直すと、現在の front はむしろ <strong>何が structural scaffold で、何が same-day から cross-day を左右する maintenance-state で、何がさらに遅い support-state か</strong> の分離にあります。したがって U3 では、以下の 4 軸に分けて evidence を読みます。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>evidence axis</th>
+<th>今の一次文献が直接押し上げること</th>
+<th>まだそのままは言えないこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>構造 scaffold / cell-type bridge</strong></td>
+<td>whole-brain connectome、same-brain functional connectomics、Patch-seq-to-EM bridge により、どの配線と cell-type variation が構造側の床かをかなり強く固定できます。</td>
+<td>current synaptic efficacy、intrinsic excitability、sleep-history、glial / metabolic state までは直接入りません。</td>
+</tr>
+<tr>
+<td><strong>sleep / homeostatic regime</strong></td>
+<td>sleep / wake に依存した firing-rate homeostasis と cortical regime recovery により、静的 wiring だけでは cross-day の戻り先が決まらないことを直接示せます。</td>
+<td>human whole-brain でどの sleep / state 変数まで測れば十分かの閾値は未確定です。</td>
+</tr>
+<tr>
+<td><strong>axon-myelin / glial support</strong></td>
+<td>oligodendrocyte-axon metabolic coupling、astrocyte transmitter encoding、learning-associated astrocyte ensembles は、非神経細胞支持系が背景条件ではなく performance variable であることを示します。</td>
+<td>whole-brain direct route や universal omission threshold はまだありません。</td>
+</tr>
+<tr>
+<td><strong>clearance / immune support</strong></td>
+<td>meningeal lymphatic dysfunction が synaptic physiology と memory を動かし、human CSF / glymphatic measurement も support-state として測定可能になりつつあります。</td>
+<td>moment-to-moment neural truth や universal minimal core をそのまま与えるわけではありません。</td>
+</tr>
+</tbody>
+</table>
+<p class="small"><strong>site rule:</strong> 身体・環境ループは重要候補でございますが、現時点では task-specific omission study が中心であり、上の 4 軸と同じ強さの primary evidence class にはまだ置きません。U3 ではまず <strong>brain-internal support-state</strong> を時定数別に監査し、その後に body / environment coupling を追加軸として扱います。</p>
 <h3>リサーチクエスチョン分解</h3>
 <ol>
-<li>ニューロン中心モデルに対して、グリア/体液性調節を追加した際の予測改善量をどう測るか。</li>
-<li>connectome完全性と機能予測性能の関係を、種横断でどう比較するか。</li>
-<li>身体・環境結合を除去したモデルで失われる機能をどう定量化するか。</li>
-<li>『必要最小構成』の判定を理論的主張ではなくデータでどう固定するか。</li>
-<li>glymphatic/meningeal lymphatic 系を含むとき、予測精度と説明可能性はどの程度改善するか。</li>
-<li>免疫監視（髄膜免疫・炎症性シグナル）を除外したモデルは、どの時点で長期予測が破綻するか。</li>
+<li>connectome / cell-type bridge 単独モデルと maintenance-state augmentation model の held-out prediction gap を、同じ split でどう測るか。</li>
+<li>sleep-history / homeostatic set point の omission が、cross-day predictability と recovery route をいつ壊すか。</li>
+<li>delay / myelin / axonal metabolic support の omission が、timing-sensitive task と long-horizon recovery をどれだけ落とすか。</li>
+<li>astrocyte / glial 変数を causal contributor と slow proxy にどう分けて評価するか。</li>
+<li>clearance / immune support を momentary neural truth と混同せず、人でどこまで measurable support-state として扱えるか。</li>
+<li>身体・環境ループを universal core と読む前に、どの same-task ablation / transfer test を要求するか。</li>
 </ol>
 <h3>今、解かれているもの（文献で積み上がっている領域）</h3>
 <ul>
-<li>C. elegans・Drosophila・マウスでconnectome再構成が進み、構造側の基盤は急速に整備。</li>
-<li>astrocyte-neuron相互作用やneuromodulatory volume transmissionの機能的寄与は実験報告が増加。</li>
-<li>embodied cognitionは脳単体モデルの限界を示す理論・実証が蓄積。</li>
+<li>whole-brain connectome、same-brain functional connectomics、Patch-seq-to-EM bridge により、<strong>構造 scaffold</strong> と <strong>cell-type bridge</strong> の前進は明確です。ただし connectome-constrained recurrent network でも dynamics の縮退は残ります。</li>
+<li>sleep / wake 依存の firing-rate homeostasis と、sleep による cortical regime recovery は、<strong>静的 wiring だけでは cross-day の戻り先が決まらない</strong>ことを直接示しています。</li>
+<li>oligodendrocyte-axon metabolic coupling、astrocyte network encoding、learning-associated astrocyte ensembles は、<strong>非神経細胞支持系が背景条件ではなく performance variable</strong> であることを強く示します。</li>
+<li>meningeal lymphatics-microglia axis と human CSF / glymphatic 測定は、clearance / immune support が観測可能な support-state 軸になりつつあることを示しますが、moment-to-moment neural completeness までは与えません。</li>
 </ul>
-<p class="small"><strong>根拠例:</strong> <a href="https://doi.org/10.1101/146035" target="_blank">The Emergent Connectome in C. elegans Embryogenesis</a>、<a href="https://doi.org/10.5220/0005190601840188" target="_blank">Towards an Electro-optical Emulation of the C. elegans Connectome</a>、<a href="https://doi.org/10.1007/978-3-031-64839-7_12" target="_blank">Astrocyte-Neuron Interactions Contributing to ALS Progression</a>、<a href="https://doi.org/10.1101/174276" target="_blank">Rhythms of the Body, Rhythms of the Brain</a>。</p>
+<p class="small"><strong>根拠例:</strong> <a href="https://doi.org/10.1038/s41586-024-07686-5" target="_blank">Whole-brain annotation and multi-connectome cell typing of Drosophila</a>、<a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">Functional connectomics spanning multiple areas of mouse visual cortex</a>、<a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Prediction of neural activity in connectome-constrained recurrent networks</a>、<a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Neuronal Firing Rate Homeostasis Is Inhibited by Sleep and Promoted by Wake</a>、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Sleep restores an optimal computational regime in cortical networks</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Oligodendrocyte-axon metabolic coupling is mediated by extracellular K+ and maintains axonal health</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Network-level encoding of local neurotransmitters in cortical astrocytes</a>、<a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Meningeal lymphatics-microglia axis regulates synaptic physiology</a>。</p>
 <h3>これから研究が必要なもの（未解決）</h3>
 <ul>
-<li>どの粒度まで含めれば『同等な主体』と見なせるかの閾値が未確定。</li>
-<li>構造データと機能ダイナミクスを統合する計算コストが依然高い。</li>
-<li>神経外要素（体内環境、ホルモン、免疫）を含む可搬な評価系が不足。</li>
+<li>どの omission / augmentation test を通れば、sleep/homeostasis、myelin/metabolic support、glial ensemble、clearance support を「必要最小構成」と呼べるかの共通ベンチが未標準化です。</li>
+<li>human で直接取れる support-state は依然として coarse proxy が中心で、glial / metabolic / clearance から momentary neural state への bridge は弱いままです。</li>
+<li>身体・環境ループは重要候補ですが、現時点の一次証拠は task-specific であり、U3 の既定 core を決める direct omission study はまだ薄いです。</li>
 </ul>
-<p class="small"><strong>根拠例:</strong> <a href="https://doi.org/10.1016/j.neuron.2025.10.036" target="_blank">Resolving the mysteries of brain clearance and immune surveillance</a>、<a href="https://doi.org/10.3390/neuroglia5010001" target="_blank">Contribution of Small Extracellular Vesicles from Glial Cells to Pain Processing</a>、<a href="https://arxiv.org/abs/1801.04819v3" target="_blank">Robots as Powerful Allies for the Study of Embodied Cognition</a>。</p>
+<p class="small"><strong>根拠例:</strong> <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Region-specific drivers of cerebrospinal fluid mobility measured with MRI in humans</a>、<a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">The glymphatic system clears amyloid-beta and tau from brain to plasma in humans</a>、<a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Synaptic memory survives molecular turnover</a>。</p>
 <h3>主要先行研究（再精査 15 件）</h3>
 <ol>
-<li><strong>[Nature]</strong> <a href="https://www.nature.com/articles/s41586-023-06808-9" target="_blank">Drosophila central brain connectome update</a> (2024)</li>
-<li><strong>[PubMed]</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/39902809/" target="_blank">Astrocyte-related intervention and behavior improvement</a> (PMID:39902809, 2025)</li>
-<li><strong>[PubMed]</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/40280131/" target="_blank">Neuron-astrocyte coupling mediates depressive-like behaviors</a> (PMID:40280131, 2025)</li>
-<li><strong>[PubMed]</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/39163862/" target="_blank">Acetate and cognitive performance under sleep disruption</a> (PMID:39163862, 2024)</li>
-<li><strong>[PubMed]</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/39172838/" target="_blank">Restoring glucose metabolism rescues cognition</a> (PMID:39172838, 2024)</li>
-<li><strong>[PubMed]</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/38448582/" target="_blank">Neuron-astrocyte program decline in ageing and schizophrenia</a> (PMID:38448582, 2024)</li>
-<li><strong>[PubMed]</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/39048816/" target="_blank">Single-cell multiregion dissection of Alzheimer's disease</a> (PMID:39048816, 2024)</li>
-<li><strong>[PubMed]</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/38418876/" target="_blank">Gamma stimulation promotes glymphatic clearance</a> (PMID:38418876, 2024)</li>
-<li><strong>[PubMed]</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/40120575/" target="_blank">Meningeal lymphatics-microglia axis regulates synaptic physiology</a> (PMID:40120575, 2025)</li>
-<li><strong>[Biomedicines]</strong> <a href="https://doi.org/10.3390/biomedicines14020409" target="_blank">Mapping the Brain's Glymphatic System</a> (2026)</li>
-<li><strong>[PubMed]</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/38762094/" target="_blank">Neuroinflammation-related long-term dysfunction evidence</a> (PMID:38762094, 2024)</li>
-<li><strong>[PubMed]</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/39888279/" target="_blank">Microglia-derived IL-6 and depression-like behavior</a> (PMID:39888279, 2025)</li>
-<li><strong>[PubMed]</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/40311620/" target="_blank">Neural-activity-regulated glia-mediated brain lymphatic development</a> (PMID:40311620, 2025)</li>
-<li><strong>[Neuron]</strong> <a href="https://doi.org/10.1016/j.neuron.2025.10.036" target="_blank">Resolving the mysteries of brain clearance and immune surveillance</a> (2025)</li>
-<li><strong>[Neuroglia]</strong> <a href="https://doi.org/10.3390/neuroglia5010001" target="_blank">Contribution of small extracellular vesicles from glial cells to pain processing</a> (2024)</li>
+<li><strong>[Nature]</strong> <a href="https://doi.org/10.1038/s41586-024-07686-5" target="_blank">Whole-brain annotation and multi-connectome cell typing of Drosophila</a> (2024)</li>
+<li><strong>[Nature]</strong> <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">Functional connectomics spanning multiple areas of mouse visual cortex</a> (2025)</li>
+<li><strong>[Nature Neuroscience]</strong> <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Prediction of neural activity in connectome-constrained recurrent networks</a> (2025)</li>
+<li><strong>[Nature]</strong> <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">Connectomics of predicted Sst transcriptomic types in mouse visual cortex</a> (2025)</li>
+<li><strong>[Cell]</strong> <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Neuronal Firing Rate Homeostasis Is Inhibited by Sleep and Promoted by Wake</a> (2016)</li>
+<li><strong>[Nature Neuroscience]</strong> <a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Sleep restores an optimal computational regime in cortical networks</a> (2024)</li>
+<li><strong>[Science]</strong> <a href="https://doi.org/10.1126/science.1252304" target="_blank">Neuronal activity promotes oligodendrogenesis and adaptive myelination in the mammalian brain</a> (2014)</li>
+<li><strong>[Science]</strong> <a href="https://doi.org/10.1126/science.1254960" target="_blank">Motor skill learning requires active central myelination</a> (2014)</li>
+<li><strong>[Nature Neuroscience]</strong> <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Oligodendrocyte-axon metabolic coupling is mediated by extracellular K+ and maintains axonal health</a> (2024)</li>
+<li><strong>[Nature]</strong> <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Network-level encoding of local neurotransmitters in cortical astrocytes</a> (2024)</li>
+<li><strong>[Nature]</strong> <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Learning-associated astrocyte ensembles regulate memory recall</a> (2025)</li>
+<li><strong>[PNAS]</strong> <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Synaptic memory survives molecular turnover</a> (2022)</li>
+<li><strong>[Cell]</strong> <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Meningeal lymphatics-microglia axis regulates synaptic physiology</a> (2025)</li>
+<li><strong>[Nature Neuroscience]</strong> <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Region-specific drivers of cerebrospinal fluid mobility measured with MRI in humans</a> (2025)</li>
+<li><strong>[Nature Communications]</strong> <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">The glymphatic system clears amyloid-beta and tau from brain to plasma in humans</a> (2026)</li>
 </ol>
 </section>
 
