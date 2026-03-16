@@ -131,7 +131,7 @@ Badge は「どこから辿れる文献か」の手掛かりであり、それ�
 <section class="section" id="technical-fast-lane">
 <h2 class="section-title">2026-03 文献監査：技術・自然科学の優先ルート</h2>
 <p>
-このページの弱点は、<strong>年順のアーカイブ</strong>としては有用でも、<strong>実験的フロンティアへの入口</strong>としては並び順が弱い点でございます。技術・自然科学の観点でまず知りたいのは、(1) 非侵襲 decode がどこまで進んだか、(2) 侵襲 speech neuroprosthesis がどこまで closed loop を押し上げたか、(3) source imaging を direct validation でどこまで監査できるか、(4) connectome の外に maintenance-state がどれだけ残るか、であって、法学・哲学・文化論の先頭表示ではありません。そこでこのページでは、以下を <strong>優先ルート</strong> として明示します。
+このページの弱点は、<strong>年順のアーカイブ</strong>としては有用でも、<strong>実験的フロンティアへの入口</strong>としては並び順が弱い点でございます。技術・自然科学の観点でまず知りたいのは、(1) 非侵襲 decode がどこまで進んだか、(2) 侵襲 speech neuroprosthesis がどこまで closed loop を押し上げたか、(3) source imaging を direct validation でどこまで監査できるか、(4) multimodal 統合で何が本当に強くなり、どこで hemodynamic proxy ceiling に当たるか、(5) connectome の外に maintenance-state がどれだけ残るか、であって、法学・哲学・文化論の先頭表示ではありません。そこでこのページでは、以下を <strong>優先ルート</strong> として明示します。
 </p>
 <table class="data-table">
 <thead>
@@ -166,6 +166,13 @@ Badge は「どこから辿れる文献か」の手掛かりであり、それ�
 <td><a href="datasets.html#validation-ladder">Datasets: validation ladder</a> / <a href="wiki/observation-to-estimation.html">観測から推定へ</a></td>
 </tr>
 <tr>
+<td><strong>multimodal alignment / hemodynamic gate</strong></td>
+<td><a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe et al. (2025)</a>、<a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021)</a>、<a href="https://doi.org/10.1038/35084005" target="_blank">Logothetis et al. (2001)</a>、<a href="https://doi.org/10.1016/j.neuroimage.2003.11.029" target="_blank">Handwerker et al. (2004)</a>、<a href="https://doi.org/10.1523/JNEUROSCI.2532-21.2022" target="_blank">Kurzawski et al. (2022)</a></td>
+<td>共有時計、metadata、同時計測 EEG-fMRI の再現可能な cross-modal concordance、BOLD の proxy ceiling まではかなり明確に読めます。</td>
+<td>shared clock をそのまま trial-level causal order や direct neural truth と読んだり、multimodal をそのまま state-complete measurement と読んだりはできません。</td>
+<td><a href="wiki/multimodal-integration-basics.html">Wiki: マルチモーダル統合の基本</a> / <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: 計測スタックごとの observability と claim ceiling</a></td>
+</tr>
+<tr>
 <td><strong>maintenance-state / hidden variable</strong></td>
 <td><a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a>、<a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Lee et al. (2022)</a></td>
 <td>sleep-dependent renormalization、oligodendrocyte-axon metabolic coupling、molecular turnover 下の memory maintenance が、connectome 外の状態変数として残ることを強く示します。</td>
@@ -177,7 +184,7 @@ Badge は「どこから辿れる文献か」の手掛かりであり、それ�
 <div class="note-box">
 <strong>この表の使い方</strong>
 <p>
-技術・自然科学の一次証拠を探す場合は、まず上の 4 ルートのどれを見たいかを決めてください。そのうえで年別カードへ降り、要約ではなく DOI と原文要旨へ戻ります。年順の先頭にある論文が、そのまま strongest evidence を意味するわけではありません。
+技術・自然科学の一次証拠を探す場合は、まず上の 5 ルートのどれを見たいかを決めてください。そのうえで年別カードへ降り、要約ではなく DOI と原文要旨へ戻ります。年順の先頭にある論文が、そのまま strongest evidence を意味するわけではありません。
 </p>
 </div>
 </section>
@@ -217,7 +224,7 @@ Badge は「どこから辿れる文献か」の手掛かりであり、それ�
 <tbody>
 <tr>
 <td><strong>技術・自然科学の一次証拠だけ先に見たい</strong></td>
-<td>まず <a href="#technical-fast-lane">技術・自然科学の優先ルート</a> から入り、年順ではなく decode / neuroprosthesis / ESI / maintenance-state の順に絞ってください。</td>
+<td>まず <a href="#technical-fast-lane">技術・自然科学の優先ルート</a> から入り、年順ではなく decode / neuroprosthesis / ESI / multimodal / maintenance-state の順に絞ってください。</td>
 </tr>
 <tr>
 <td><strong>brain-to-text / language decode を見たい</strong></td>
@@ -228,7 +235,11 @@ Badge は「どこから辿れる文献か」の手掛かりであり、それ�
 <td><a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett 2023</a>、<a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn 2025</a>、<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar 2025</a> を先に見て、latency・abstention・recalibration burden を確認してください。</td>
 </tr>
 <tr>
-<td><strong>構造推定と hidden state を見たい</strong></td>
+<td><strong>multimodal の ceiling を見たい</strong></td>
+<td><a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe 2025</a>、<a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich 2021</a>、<a href="https://doi.org/10.1038/35084005" target="_blank">Logothetis 2001</a>、<a href="https://doi.org/10.1016/j.neuroimage.2019.02.006" target="_blank">Kay 2019</a> を起点にし、共有時計・侵襲校正・BOLD proxy ceiling を分けて読んでください。</td>
+</tr>
+<tr>
+<td><strong>構造推定・hidden state を見たい</strong></td>
 <td><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan 2020</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse 2023</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao 2025</a> と、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu 2024</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser 2024</a> を起点にしてください。</td>
 </tr>
 </tbody>

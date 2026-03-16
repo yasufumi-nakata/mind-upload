@@ -5,7 +5,7 @@ description: "50分解クエスチョンで収集した先行研究を、解決�
 article_type: "Evidence Bank"
 subtitle: "U0-U15 の分解、現状評価、先行研究（大量引用）"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-16"
 note: "Compiled from 50 worker tasks (curated for relevance)"
 audience: "大量の文献を『何が未解決か』ごとに見たい人、論点別に引用を探したい人"
 reading_time: "20〜35分（統計とU別マップだけなら7分）"
@@ -141,7 +141,7 @@ U番号は難しい理論名ではなく、「未解決問題の名前札」で�
 <tr>
 <td><strong>1. 計測と同定</strong></td>
 <td><strong>U1 / U7</strong></td>
-<td>逆問題の不確実性、時刻同期、BIDS/LSL/直接妥当化の有無です。</td>
+<td>逆問題の不確実性、取得関係、共有時計、侵襲校正、hemodynamic proxy ceiling を分けて読めるかです。</td>
 <td>観測量が増えたことを、そのまま state-complete reconstruction と読むことです。</td>
 </tr>
 <tr>
@@ -174,6 +174,55 @@ U番号は難しい理論名ではなく、「未解決問題の名前札」で�
 <strong>今回の主導線から外す群</strong>
 <p>
 <strong>U0 / U12 / U15</strong> は重要ですが、既定の技術・自然科学ルートには置きません。理由は、ここで先に必要なのが形而上学や法学ではなく、<strong>いま何が測れて、どこまで直接妥当化できて、どこで閉ループが壊れ、どの hidden state が残るか</strong>を固定することだからです。これらの群は、実験 front を読んだあとに戻る方が誤読しにくくなります。
+</p>
+</div>
+</section>
+
+<section class="section" id="u7-evidence-classes-20260316">
+<h2 class="section-title">2026-03 U7 再監査：multimodal を 4 つの証拠クラスへ分けます</h2>
+<p>
+今回もっとも深掘りすべきだった弱点は、この文献地図の U7 が <strong>BIDS/LSL の器</strong>、<strong>同時計測の cross-modal concordance</strong>、<strong>coverage-limited な侵襲校正</strong>、<strong>fMRI 側の hemodynamic proxy ceiling</strong> を、まだ十分に別クラスとして見せ切れていなかった点でございます。これを混ぜると、技術読者は <strong>metadata が整っている</strong>ことを <strong>neural truth が強くなった</strong>ことと誤読しやすくなります。したがって U7 では、まず以下の 4 クラスに分けて証拠の直接性を見ます。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>証拠クラス</th>
+<th>代表一次文献</th>
+<th>ここで直接強くなること</th>
+<th>まだ言えないこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. 器と時計系</strong></td>
+<td><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019)</a>、<a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Burns et al. (2024)</a>、<a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe et al. (2025)</a></td>
+<td>EEG-BIDS / Motion-BIDS / LSL により、metadata、座標系、共有時計、再解析可能なログを固定できます。</td>
+<td>device-side delay の真値、融合後の不確実性、neural truth そのものは自動では増えません。</td>
+</tr>
+<tr>
+<td><strong>2. 同時計測の cross-modal concordance</strong></td>
+<td><a href="https://doi.org/10.1016/j.neuroimage.2014.10.055" target="_blank">Jorge et al. (2015)</a>、<a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021)</a></td>
+<td>同一時点の macro-scale concordance、safety / artifact 管理の前提、shared clock 下での再現可能な相関構造が強くなります。</td>
+<td>shared clock だけで trial-level causal order や mechanistic interpretation が閉じたとは言えません。</td>
+</tr>
+<tr>
+<td><strong>3. coverage-limited な侵襲校正</strong></td>
+<td><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a></td>
+<td>既知刺激位置や同時 SEEG に対する local source validation、depth / power / conductivity 依存の誤差監査ができます。</td>
+<td>whole-brain ground truth や一般的一意復元までは支えません。</td>
+</tr>
+<tr>
+<td><strong>4. hemodynamic proxy ceiling</strong></td>
+<td><a href="https://doi.org/10.1038/35084005" target="_blank">Logothetis et al. (2001)</a>、<a href="https://doi.org/10.1038/nature09108" target="_blank">Lee et al. (2010)</a>、<a href="https://doi.org/10.1038/nature07664" target="_blank">Sirotin &amp; Das (2009)</a>、<a href="https://doi.org/10.1016/j.neuroimage.2003.11.029" target="_blank">Handwerker et al. (2004)</a>、<a href="https://doi.org/10.1016/j.neuroimage.2019.02.006" target="_blank">Kay et al. (2019)</a>、<a href="https://doi.org/10.1523/JNEUROSCI.2532-21.2022" target="_blank">Kurzawski et al. (2022)</a></td>
+<td>BOLD が neurovascular proxy であり、HRF 変動、task-related haemodynamics、venous / non-neural bias が ceiling を作ることを固定できます。</td>
+<td>EEG-fMRI を direct neural truth や fine-grained mechanism の証拠とは書けません。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>U7 を読むときの site rule</strong>
+<p>
+U7 の文献は、<strong>器と時計系</strong>、<strong>同時計測の concordance</strong>、<strong>侵襲校正</strong>、<strong>proxy ceiling</strong> のどれに属するかを先にラベルしてください。もし 1 の証拠しか無いなら、それはまず <strong>再解析可能な基盤</strong>であって、multimodal gain の実証ではございません。逆に 2 と 3 があっても、4 の監査が欠ければ fMRI を neural truth と読み上げません。
 </p>
 </div>
 </section>
@@ -320,7 +369,7 @@ U番号は難しい理論名ではなく、「未解決問題の名前札」で�
 <tr>
 <td>EEG推定、source imaging、時刻同期の限界を知りたい</td>
 <td><strong>U1 / U7</strong></td>
-<td>観測からどこまで推定できるか、direct validation と同期規約がどう効くかが集まるためです。</td>
+<td>観測からどこまで推定できるか、direct validation・同期規約・hemodynamic gate がどう効くかが集まるためです。</td>
 </tr>
 <tr>
 <td>decode 成功と WBE 主張を切り分けたい</td>
@@ -726,44 +775,45 @@ Round 1〜114 の情報は消しておらず、公開本文と <code>automation/
 <h3>リサーチクエスチョン分解</h3>
 <ol>
 <li>BIDS拡張で同期・QC・刺激ログをどこまで必須化するか。</li>
-<li>LSL等の時刻同期誤差を検証可能な指標に落とせるか。</li>
-<li>アーチファクト除去（ASR, ZapLine等）の設定差が結果へ与える影響をどう監査するか。</li>
-<li>モダリティ間アライメント失敗時の再計測/除外基準をどう固定するか。</li>
-<li>前処理差分をCIで自動比較する場合、どの再現率低下をリリースブロック閾値にするか。</li>
-<li>モダリティ欠損（EEG欠損・fMRI欠損）条件でも同等結論を保てる最小観測セットは何か。</li>
+<li>同時計測、同一個体の非同時計測、coverage-limited な侵襲校正、atlas prior を、取得関係としてどう区別して残すか。</li>
+<li>LSL 等の時刻同期誤差を、device-side delay と分けて検証可能な指標へ落とせるか。</li>
+<li>EEG-fMRI で HRF、task-related haemodynamics、venous bias を別監査し、BOLD proxy ceiling を提出物にできるか。</li>
+<li>モダリティ間アライメント失敗時の再計測 / 除外基準と missing-modality baseline をどう固定するか。</li>
+<li>前処理差分や融合モデル差分を CI で自動比較する場合、どの再現率低下をリリースブロック閾値にするか。</li>
 </ol>
 <h3>今、解かれているもの（文献で積み上がっている領域）</h3>
 <ul>
-<li>BIDS/EEG-BIDSによりデータ配置と基本メタデータ仕様は共有可能になった。</li>
-<li>LSLと同期ログの実装実践はコミュニティで広く利用されている。</li>
-<li>EEG品質管理の標準的前処理（ASR等）に関する知見は蓄積。</li>
+<li>EEG-BIDS、Motion-BIDS、LSL により、multimodal の metadata、座標系、共有時計、再解析ログを比較可能な形で残せるようになりました。</li>
+<li>simultaneous EEG-fMRI では、setup と cleaning を厳しく固定すれば cross-modal connectome 関係の再現可能性を示せます。</li>
+<li>intracerebral stimulation や simultaneous HD-EEG / SEEG により、coverage-limited ですが direct validation route が成立しました。</li>
+<li>BOLD 側では、LFP 寄り coupling、task-related haemodynamics、HRF 変動、venous / non-neural bias が比較的一貫して再確認されており、proxy ceiling 自体はかなり明確です。</li>
 </ul>
-<p class="small"><strong>根拠例:</strong> <a href="https://doi.org/10.1162/imag.a.136" target="_blank">The lab streaming layer for synchronized multimodal recording</a>、<a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Motion-BIDS</a>、<a href="https://doi.org/10.1101/2024.02.13.580071" target="_blank">The Lab Streaming Layer for Synchronized Multimodal Recording</a>、<a href="https://doi.org/10.1093/sleep/zsad241" target="_blank">Artifact subspace reconstruction in EEG studies</a>、<a href="https://doi.org/10.3389/fnhum.2019.00141" target="_blank">Riemannian Modification of Artifact Subspace Reconstruction</a>。</p>
+<p class="small"><strong>根拠例:</strong> <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">EEG-BIDS</a>、<a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Motion-BIDS</a>、<a href="https://doi.org/10.1162/imag.a.136" target="_blank">The lab streaming layer for synchronized multimodal recording</a>、<a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">simultaneous EEG-fMRI connectome reproducibility</a>、<a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Localize-MI</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">direct validation by intracranial stimulation</a>、<a href="https://doi.org/10.1038/35084005" target="_blank">basis of the fMRI signal</a>。</p>
 <h3>これから研究が必要なもの（未解決）</h3>
 <ul>
-<li>同期誤差の許容域をタスク別に定義した共通規約が不足。</li>
-<li>異なる前処理パイプライン間での出力差分監査が不十分。</li>
-<li>失敗例まで含めた公開QCログ運用が限定的。</li>
+<li>取得関係のラベル付け、hardware delay 監査、missing-modality baseline を 1 枚で出す site-wide 規約がまだ不足しています。</li>
+<li>同時計測の concordance、侵襲校正、hemodynamic proxy audit を同一提出物で束ねた benchmark が不足しています。</li>
+<li>異なる前処理 / 融合モデル間での出力差分監査と、失敗例まで含めた公開 QC 運用がまだ限定的です。</li>
 </ul>
-<p class="small"><strong>根拠例:</strong> <a href="https://api.openalex.org/W4390079365" target="_blank">Two common issues in synchronized multimodal recordings with EEG: Jitter and latency</a>、<a href="https://doi.org/10.1109/bibm58861.2023.10385390" target="_blank">IMU-integrated Artifact Subspace Reconstruction for Wearable EEG Devices</a>、<a href="https://arxiv.org/abs/2403.09707v1" target="_blank">Understanding data analysis aspects of TMS-EEG in clinical study</a>。</p>
+<p class="small"><strong>根拠例:</strong> <a href="https://doi.org/10.1162/imag.a.136" target="_blank">LSL</a>、<a href="https://doi.org/10.1016/j.neuroimage.2014.10.055" target="_blank">simultaneous EEG-fMRI at ultra-high field</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">simultaneous HD-EEG / SEEG</a>、<a href="https://doi.org/10.1038/nature07664" target="_blank">anticipatory haemodynamic signals</a>、<a href="https://doi.org/10.1523/JNEUROSCI.2532-21.2022" target="_blank">non-neural BOLD factors</a>。</p>
 <h3>主要先行研究（再精査 16 件）</h3>
 <ol>
+<li><strong>[Scientific Data]</strong> <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">EEG-BIDS, an extension to the brain imaging data structure for electroencephalography</a> (2019)</li>
+<li><strong>[Scientific Data]</strong> <a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Motion-BIDS: extending BIDS to support standardized storage of motion data</a> (2024)</li>
 <li><strong>[Imaging Neuroscience]</strong> <a href="https://doi.org/10.1162/imag.a.136" target="_blank">The lab streaming layer for synchronized multimodal recording</a> (2025)</li>
-<li><strong>[Scientific Data]</strong> <a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Motion-BIDS extension for reproducible motion data</a> (2024)</li>
-<li><strong>[BIDS]</strong> <a href="https://bids-specification.readthedocs.io/en/stable/" target="_blank">BIDS Specification 1.10.1</a> (2025更新版)</li>
-<li><strong>[Zenodo]</strong> <a href="https://zenodo.org/records/18201723" target="_blank">BEP036 draft metadata extension</a> (2025)</li>
+<li><strong>[NeuroImage]</strong> <a href="https://doi.org/10.1016/j.neuroimage.2014.10.055" target="_blank">Simultaneous EEG-fMRI at ultra-high field: artifact prevention and safety assessment</a> (2015)</li>
+<li><strong>[NeuroImage]</strong> <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">The relationship between EEG and fMRI connectomes is reproducible across simultaneous EEG-fMRI studies from 1.5T to 7T</a> (2021)</li>
+<li><strong>[Scientific Data]</strong> <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods</a> (2020)</li>
+<li><strong>[Brain Communications]</strong> <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Direct validation of EEG source imaging by intracranial electric stimulation in human patients</a> (2023)</li>
+<li><strong>[Epilepsia]</strong> <a href="https://doi.org/10.1111/epi.18552" target="_blank">HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy</a> (2025)</li>
+<li><strong>[Nature]</strong> <a href="https://doi.org/10.1038/35084005" target="_blank">Neurophysiological investigation of the basis of the fMRI signal</a> (2001)</li>
+<li><strong>[Nature]</strong> <a href="https://doi.org/10.1038/nature09108" target="_blank">Global and local fMRI signals driven by neurons defined optogenetically by type and wiring</a> (2010)</li>
+<li><strong>[Nature]</strong> <a href="https://doi.org/10.1038/nature07664" target="_blank">Anticipatory haemodynamic signals in sensory cortex not predicted by local neuronal activity</a> (2009)</li>
+<li><strong>[Nature Neuroscience]</strong> <a href="https://doi.org/10.1038/nn.3170" target="_blank">The neuroimaging signal is a linear sum of neurally distinct stimulus- and task-related components</a> (2012)</li>
+<li><strong>[NeuroImage]</strong> <a href="https://doi.org/10.1016/j.neuroimage.2003.11.029" target="_blank">Variation of BOLD hemodynamic responses across subjects and brain regions and their effects on statistical analyses</a> (2004)</li>
+<li><strong>[NeuroImage]</strong> <a href="https://doi.org/10.1016/j.neuroimage.2019.02.006" target="_blank">A critical assessment of data quality and venous effects in sub-millimeter fMRI</a> (2019)</li>
+<li><strong>[Journal of Neuroscience]</strong> <a href="https://doi.org/10.1523/JNEUROSCI.2532-21.2022" target="_blank">Non-Neural Factors Influencing BOLD Response Magnitudes within Individual Subjects</a> (2022)</li>
 <li><strong>[Computer Methods and Programs in Biomedicine]</strong> <a href="https://doi.org/10.1016/j.cmpb.2024.108298" target="_blank">Haemosync: synchronisation algorithm for multimodal hemodynamic signals</a> (2024)</li>
-<li><strong>[PubMed]</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/34214093/" target="_blank">Simultaneous EEG-fMRI quality and safety study</a> (PMID:34214093)</li>
-<li><strong>[IEEE TBME]</strong> <a href="https://doi.org/10.1109/TBME.2024.3383142" target="_blank">Evaluation of EEG-fMRI artifact correction methods</a> (2024)</li>
-<li><strong>[arXiv]</strong> <a href="https://arxiv.org/abs/2411.05812" target="_blank">Low-rank plus sparse decomposition for simultaneous EEG-fMRI denoising</a> (2024)</li>
-<li><strong>[arXiv]</strong> <a href="https://arxiv.org/abs/2311.04912" target="_blank">ezBIDS for multimodal BIDS curation and validation</a> (2023)</li>
-<li><strong>[Scientific Data]</strong> <a href="https://doi.org/10.1038/s41597-024-03029-1" target="_blank">Multimodal single-neuron, iEEG and fMRI dataset during movie watching</a> (2024)</li>
-<li><strong>[Frontiers in Neuroergonomics]</strong> <a href="https://doi.org/10.3389/fnrgo.2024.1411305" target="_blank">BIDS multimodal dataset with EEG and motion</a> (2024)</li>
-<li><strong>[Reviews in the Neurosciences]</strong> <a href="https://doi.org/10.1515/revneuro-2023-0098" target="_blank">Single versus multimodal EEG and fMRI along AD continuum</a> (2024)</li>
-<li><strong>[Sleep]</strong> <a href="https://doi.org/10.1093/sleep/zsad241" target="_blank">Artifact subspace reconstruction for EEG studies</a> (2023)</li>
-<li><strong>[Frontiers in Human Neuroscience]</strong> <a href="https://doi.org/10.3389/fnhum.2019.00141" target="_blank">A Riemannian modification of artifact subspace reconstruction</a> (2019)</li>
-<li><strong>[IEEE BIBM]</strong> <a href="https://doi.org/10.1109/bibm58861.2023.10385390" target="_blank">IMU-integrated artifact subspace reconstruction for wearable EEG</a> (2023)</li>
-<li><strong>[OpenAlex]</strong> <a href="https://api.openalex.org/W4390079365" target="_blank">Two common issues in synchronized multimodal EEG recordings: jitter and latency</a> (2023)</li>
 </ol>
 </section>
 
