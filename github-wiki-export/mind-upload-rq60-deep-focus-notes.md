@@ -393,3 +393,12 @@ A/B/C判定は mind-upload-eeg-rq60-feasibility-and-funds と同一。Cは『重
 - 助成キーは `G1-G6` の固定運用を維持し、全RQで `応募テーマ（助成キー）` 欠落 `0` を確認しました。
 - 参照データ運用の注意点として、EEG数値IDは再採番が発生しているため、固定参照は `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `D1-D16 + DOI` を正本とします。
 - 方針を継続します。汎用俯瞰には戻さず、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り粒度で運用します。
+
+## 2026-03-16 17:03 JST 再検証ログ（本run / 1RQ深掘り運用の再固定）
+
+- 作業前に `main` と3サブモジュールを `pull --ff-only` し、基準コミットを `mind-upload=9dde203`、`EEG-DATA=3d27e5d4f7`、`auto-research-funds=5d6af61f5` に更新しました。
+- `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` の `Ux-n` 行を再計数し、`RQ_TOTAL=60` を再確認しました。
+- 判定内訳は再計数で `A/B/C=17/25/18` を維持し、`deep-focus` と `playbook` 側の判定列とも整合しました。
+- 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue/*.yaml` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で全件参照可能でした。
+- EEG参照の固定ルールは継続します。`EEG-DATA/eeg_dataset_summary_ja.csv` の数値IDは再採番があるため、提出・再現ログは `D1-D16 + DOI`（`auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` 正本）を基準にします。
+- 方針を維持します。汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` を1件ずつ深掘りして記述します。
