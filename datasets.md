@@ -436,6 +436,79 @@ Musall et al. (2019) は、task 中の neural activity が uninstructed movement
 </div>
 </section>
 
+<section class="section" id="benchmark-governance">
+<h2 class="section-title">2.7) benchmark governance を出さない leaderboard は比較可能な証拠になりません</h2>
+<p>
+今回さらに改善すべきだった弱点は、このページが <strong>evaluation family</strong> と <strong>benchmark provenance</strong> までは整理できていても、<strong>benchmark の運用規約そのもの</strong>をまだ card 化していなかった点でございます。<a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant (2018)</a> と <a href="https://moabb.neurotechx.com/docs/index.html" target="_blank">MOABB Docs</a> は within-session / cross-session / cross-subject の比較を標準化しますが、<a href="https://proceedings.mlr.press/v37/blum15.html" target="_blank">Blum &amp; Hardt (2015)</a> が示すように leaderboard は repeated submission により adaptive hold-out になりえます。一方で <a href="https://papers.neurips.cc/paper_files/paper/2019/hash/ee39e503b6bedf0c98c388b7e8589aca-Abstract.html" target="_blank">Roelofs et al. (2019)</a> は、separate final test を持つ設計では public leaderboard overfitting が必ずしも大きくないことも示しました。したがって結論は「leaderboard は全部無効」ではなく、<strong>hidden evaluation</strong>、<strong>submission budget</strong>、<strong>checkpoint selection policy</strong>、<strong>extra data / pretraining disclosure</strong> を governance として固定しない限り、score の意味が揺れる、でございます。実際、<a href="https://www.bbci.de/competition/iv/" target="_blank">BCI Competition IV</a> は labeled calibration + unlabeled evaluation と 1 researcher 1 result を採り、<a href="https://eeg2025.github.io/rules/" target="_blank">EEG Challenge 2025 Rules</a> と <a href="https://eeg2025.github.io/submission/" target="_blank">Submission</a> は code submission、single-GPU inference、daily submission limit、extra dataset / pretrained model の申告を要求しています。さらに <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a> と <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> は、protocol inconsistency 自体が cross-model comparison を壊し、同一 dataset 上でも ranking reversal を生むことを示しました。
+</p>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>Benchmark Governance Card の項目</th>
+<th>最低限書くこと</th>
+<th>書かないと起きる誤読</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>benchmark object</strong></td>
+<td>benchmark 名、version、task 定義、採点 metric、dataset snapshot / DOI、freeze date です。</td>
+<td>同じ dataset 名でも別 protocol の score を、そのまま同列比較してしまいます。</td>
+</tr>
+<tr>
+<td><strong>evaluation surface</strong></td>
+<td>public leaderboard なのか、hidden/private test なのか、prediction upload なのか、code submission なのかを書きます。</td>
+<td>adaptive に見えている score を、one-shot hold-out と同じ強さの evidence と誤読します。</td>
+</tr>
+<tr>
+<td><strong>submission budget</strong></td>
+<td>1 日あたりの submission cap、再提出回数、team 単位か個人単位か、final ranking が別 test かを書きます。</td>
+<td>public score 最適化の余地を hidden にしたまま、「公平な benchmark」と書いてしまいます。</td>
+</tr>
+<tr>
+<td><strong>model-selection policy</strong></td>
+<td>checkpoint selection、ensemble 可否、validation の使い方、post-hoc tuning の可否を固定します。</td>
+<td>ranking 差を model 本体の差と読み、実際には選択規則の差だった可能性を落とします。</td>
+</tr>
+<tr>
+<td><strong>external data / pretraining</strong></td>
+<td>追加 dataset、自己教師あり pretraining、既存 foundation model、外部 metadata の使用有無と範囲です。</td>
+<td>同じ benchmark score を、同じ情報条件で得た結果だと誤読します。</td>
+</tr>
+<tr>
+<td><strong>runtime envelope</strong></td>
+<td>推論 hardware、memory 上限、実行時間制約、determinism、主要 package version を残します。</td>
+<td>再現不能な engineering advantage を、科学的優位と混同します。</td>
+</tr>
+<tr>
+<td><strong>post-benchmark audit</strong></td>
+<td>code release、inference log、final rerun、external hold-out、protocol 更新履歴を残します。</td>
+<td>competition 後に順位が再現不能でも、そのまま frontier ranking として残ってしまいます。</td>
+</tr>
+<tr>
+<td><strong>stopped claim</strong></td>
+<td>この score でまだ言えないことを 1 行で固定します。たとえば universal ranking、cross-site deployability、general decoder です。</td>
+<td>single benchmark win を、そのまま broad generalization や deployable model と読み替えます。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>この card は、本サイトの運用推論です</strong>
+<p>
+上の <strong>Benchmark Governance Card</strong> は、各 benchmark や competition が単一の公式 schema として宣言しているものではございません。<a href="https://proceedings.mlr.press/v37/blum15.html" target="_blank">Blum &amp; Hardt (2015)</a>、<a href="https://papers.neurips.cc/paper_files/paper/2019/hash/ee39e503b6bedf0c98c388b7e8589aca-Abstract.html" target="_blank">Roelofs et al. (2019)</a>、<a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a>、<a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a>、および競技の公式 rules / submission 設計から、本サイトが引く運用上の整理でございます。つまり、ここで要求している欄名は **推論** ですが、その推論の根拠は「adaptive leaderboard は統計的に別問題である」「separate final test と submission governance が score の意味を左右する」「protocol inconsistency が ranking を反転させうる」という一次資料にあります。
+</p>
+</div>
+
+<div class="note-box">
+<strong>この節から出る site rule</strong>
+<p>
+今後このサイトでは、leaderboard、challenge、benchmark paper の score に <a href="verification.html#benchmark-governance-card">Verification の Benchmark Governance Card</a> を添えます。これが無い結果は、たとえ高スコアでも <strong>exploratory leaderboard result</strong> または <strong>single-protocol benchmark score</strong> として扱い、SOTA ranking、general decoder、cross-site deployability の主張へは上げません。
+</p>
+</div>
+</section>
+
 <section class="section" id="dataset-audit">
 <h2 class="section-title">3) スターターデータを過大評価しないための監査</h2>
 <p>
@@ -805,10 +878,15 @@ Mind-Uploadが目指すのは、単にデータを集めることではなく、
 <li><a href="https://doi.org/10.1109/TBME.2025.3613730" target="_blank">Zhang et al. (2025), Cross Device Representation Consistency</a></li>
 <li><a href="https://openreview.net/forum?id=J5SbLoq7Uv" target="_blank">Lee et al. (2025), Are Large Brainwave Foundation Models Capable Yet? Insights from Fine-Tuning</a></li>
 <li><a href="https://eeg2025.github.io/" target="_blank">EEG Foundation Challenge (2025), official website</a></li>
+<li><a href="https://eeg2025.github.io/rules/" target="_blank">EEG Foundation Challenge (2025), Rules</a></li>
+<li><a href="https://eeg2025.github.io/submission/" target="_blank">EEG Foundation Challenge (2025), Submission</a></li>
 <li><a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025), EEG-FM-Bench</a></li>
 <li><a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025), REVE</a></li>
 <li><a href="https://arxiv.org/abs/2512.19097" target="_blank">Han et al. (2025), DIVER-1</a></li>
 <li><a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026), PRISM</a></li>
+<li><a href="https://proceedings.mlr.press/v37/blum15.html" target="_blank">Blum &amp; Hardt (2015), The Ladder</a></li>
+<li><a href="https://papers.neurips.cc/paper_files/paper/2019/hash/ee39e503b6bedf0c98c388b7e8589aca-Abstract.html" target="_blank">Roelofs et al. (2019), A Meta-Analysis of Overfitting in Machine Learning</a></li>
+<li><a href="https://www.bbci.de/competition/iv/" target="_blank">BCI Competition IV, official website</a></li>
 <li><a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">PhysioNet: EEG Motor Movement/Imagery Dataset</a></li>
 <li><a href="https://physionet.org/content/chbmit/1.0.0/" target="_blank">PhysioNet: CHB-MIT Scalp EEG Database</a></li>
 <li><a href="https://physionet.org/content/sleep-edfx/1.0.0/" target="_blank">PhysioNet: Sleep-EDF Database Expanded</a></li>

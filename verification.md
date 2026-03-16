@@ -352,7 +352,7 @@ BIDS、OpenNeuro、PhysioNet、BIDS Validator、benchmark は全部「研究基�
 <div class="stage-number">04</div>
 <div class="stage-body">
 <h4>Leaderboard & Model Cards（比較の運用）</h4>
-<p>スコアだけでなく、データリーク対策、失敗例、計算資源、既知の弱点、さらに L1 以上では <strong>どこまで直接観測し、どこから先が latent state か</strong> を示す <strong>Observability Budget</strong> を、multimodal / atlas prior を使う結果では <strong>どう結び付け、どこまで較正したか</strong> を示す <strong>Fusion Card</strong> を、cross-day / longitudinal claim では <strong>same-day score をどこまで外挿してよいか</strong> を示す <strong>Temporal Validity Card</strong> を、L2 以上では <strong>どの latent state がまだ誤差を支配するか</strong> を示す <strong>latent-state error budget</strong> を、因果・閉ループ結果では <strong>trigger rule・timing audit・control/sham・安全停止・再較正負荷</strong> を示す <strong>Intervention Card</strong> を併記して公開し、再現性と安全性を担保する。</p>
+<p>スコアだけでなく、データリーク対策、失敗例、計算資源、既知の弱点、さらに leaderboard / challenge 結果では <strong>どの split・hidden test・submission budget・checkpoint policy で score を出したか</strong> を示す <strong>Benchmark Governance Card</strong> を、L1 以上では <strong>どこまで直接観測し、どこから先が latent state か</strong> を示す <strong>Observability Budget</strong> を、multimodal / atlas prior を使う結果では <strong>どう結び付け、どこまで較正したか</strong> を示す <strong>Fusion Card</strong> を、cross-day / longitudinal claim では <strong>same-day score をどこまで外挿してよいか</strong> を示す <strong>Temporal Validity Card</strong> を、L2 以上では <strong>どの latent state がまだ誤差を支配するか</strong> を示す <strong>latent-state error budget</strong> を、因果・閉ループ結果では <strong>trigger rule・timing audit・control/sham・安全停止・再較正負荷</strong> を示す <strong>Intervention Card</strong> を併記して公開し、再現性と安全性を担保する。</p>
 <div class="tag-list">
 <span class="tag">Leaderboard</span><span class="tag">Reproducibility</span><span class="tag">Safety</span>
 </div>
@@ -1218,6 +1218,81 @@ Observability Budget は「何を直接見たか」、Fusion Card は「どう�
 </div>
 </section>
 
+<section class="section" id="benchmark-governance-card">
+<h2 class="section-title">2026-03 追補：leaderboard / challenge 結果には Benchmark Governance Card を添付する</h2>
+<p>
+今回さらに改善余地が大きかった弱点は、<strong>benchmark の score を受け取る側の提出物仕様がまだ弱く、split と metric を知っていても、その score が adaptive に擦られたものか、hidden final test で確定したものか、checkpoint 選択込みでどこまで固定されているかが見えにくかった</strong>ことです。<a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant (2018)</a> と <a href="https://moabb.neurotechx.com/docs/index.html" target="_blank">MOABB Docs</a> は fair evaluation family を整えましたが、<a href="https://proceedings.mlr.press/v37/blum15.html" target="_blank">Blum &amp; Hardt (2015)</a> は leaderboard が repeated submission により adaptive hold-out になりうることを示しました。他方、<a href="https://papers.neurips.cc/paper_files/paper/2019/hash/ee39e503b6bedf0c98c388b7e8589aca-Abstract.html" target="_blank">Roelofs et al. (2019)</a> は、separate final test で最終順位を決める設計では public leaderboard overfitting が必ずしも大きくないことも示しています。歴史的にも <a href="https://www.bbci.de/competition/iv/" target="_blank">BCI Competition IV</a> は labeled calibration + unlabeled evaluation と 1 researcher 1 result を採り、<a href="https://eeg2025.github.io/rules/" target="_blank">EEG Challenge 2025 Rules</a> と <a href="https://eeg2025.github.io/submission/" target="_blank">Submission</a> は code submission、single-GPU inference、daily submission limit、extra dataset / pretrained model の明示を要求しています。さらに <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a> は standardized evaluation の欠如が比較を壊すと明示し、<a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> は split construction、checkpoint selection、segment length、normalization など 6 要因の不整合で ranking が反転しうると報告しました。したがって本サイトでは、score だけでなく <strong>score の露出条件そのもの</strong>を提出物にします。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Benchmark Governance Card の欄</th>
+<th>最低限書くこと</th>
+<th>これが無いと何が起きるか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>benchmark object</strong></td>
+<td>benchmark 名、version、task 定義、metric、dataset snapshot / DOI、freeze date を書きます。</td>
+<td>同名 benchmark の別 protocol を同一比較だと誤読します。</td>
+</tr>
+<tr>
+<td><strong>split / hold-out unit</strong></td>
+<td>subject / session / trial / site / device のどれを独立単位とし、validation と test をどう分けたかを書きます。</td>
+<td>ranking 差を model 能力の差と読み、実際には split 差だった可能性を見落とします。</td>
+</tr>
+<tr>
+<td><strong>evaluation surface</strong></td>
+<td>public leaderboard、private leaderboard、unlabeled evaluation、code submission、prediction upload のどれかを書きます。</td>
+<td>adaptive feedback 下の score を、one-shot final test と同じ強さの evidence と誤読します。</td>
+</tr>
+<tr>
+<td><strong>submission budget</strong></td>
+<td>submission cap、team 単位か個人単位か、再提出の回数、final ranking が別 hold-out かを書きます。</td>
+<td>public score 最適化の余地を hidden にしたまま、公平比較だと書いてしまいます。</td>
+</tr>
+<tr>
+<td><strong>model-selection policy</strong></td>
+<td>checkpoint selection、ensemble 可否、validation で見てよい情報、post-hoc tuning の可否を書きます。</td>
+<td>ranking 差を model の差と読み、実際には選択規則の差だった可能性を落とします。</td>
+</tr>
+<tr>
+<td><strong>external data / pretraining disclosure</strong></td>
+<td>追加 dataset、事前学習 corpus、既存 foundation model、metadata / report の外部利用を列挙します。</td>
+<td>同じ benchmark score を、同じ情報条件で得た結果だと誤読します。</td>
+</tr>
+<tr>
+<td><strong>runtime envelope</strong></td>
+<td>推論 hardware、memory 上限、実行時間制約、主要 package version、determinism 条件を書きます。</td>
+<td>engineering 上の実装差を、科学的優位と混同します。</td>
+</tr>
+<tr>
+<td><strong>post-benchmark audit trail</strong></td>
+<td>code release、inference log、rerun 手順、protocol 更新履歴、external hold-out の有無を書きます。</td>
+<td>competition 後に再現不能な ranking が、そのまま frontier result として残ります。</td>
+</tr>
+<tr>
+<td><strong>claim ceiling</strong></td>
+<td>single benchmark win からまだ言えないことを 1 行で固定します。たとえば universal ranking、cross-site deployability、general decoder です。</td>
+<td>単発の勝利を、そのまま broad generalization や production-ready 系と誤昇格させやすくなります。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>最低運用ルール</strong>
+<p>
+Benchmark Governance Card が無い場合、本サイトではその結果を原則として <strong>exploratory leaderboard result</strong>、<strong>single-protocol benchmark score</strong>、または <strong>local challenge outcome</strong> として扱い、cross-paper frontier ranking や deployable generalization claim へ上げません。とくに <strong>evaluation surface</strong>、<strong>submission budget</strong>、<strong>model-selection policy</strong> のいずれかが欠ける場合、public score の読み替えを止めます。
+</p>
+</div>
+<div class="note-box">
+<strong>既存カードとの役割差</strong>
+<p>
+Model Card は <strong>モデルの弱点と失敗例</strong>を固定し、Pretraining Card は <strong>事前学習 corpus と adaptation 条件</strong>を固定し、Benchmark Governance Card は <strong>score を比較可能にする評価面</strong>を固定します。Observability Budget や Intervention Card は、それぞれ measurement ceiling と causal evidence を扱います。したがって本サイトでは、leaderboard / challenge 結果を受け取るときに <strong>Benchmark Governance Card を別提出</strong>し、model 側と benchmark 側の責任を混ぜません。
+</p>
+</div>
+</section>
+
 <section class="section" id="verification-rigor-2026-02">
 <h2 class="section-title">追加監査ログ（適用条件つき）</h2>
 <p>
@@ -1285,6 +1360,13 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Markiewicz, C. J., et al. (2021). OpenNeuro resource paper. <a href="https://doi.org/10.7554/eLife.71774" target="_blank">doi:10.7554/eLife.71774</a></li>
 <li>Goldberger, A. L., et al. (2000). PhysioBank / PhysioNet. <a href="https://doi.org/10.1161/01.CIR.101.23.e215" target="_blank">doi:10.1161/01.CIR.101.23.e215</a></li>
 <li>Jayaram, V., &amp; Barachant, A. (2018). MOABB: trustworthy algorithm benchmarking for BCIs. <a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">doi:10.1088/1741-2552/aadea0</a></li>
+<li>Blum, A., &amp; Hardt, M. (2015). The Ladder: A Reliable Leaderboard for Machine Learning Competitions. <a href="https://proceedings.mlr.press/v37/blum15.html" target="_blank">PMLR 37</a></li>
+<li>Roelofs, R., Shankar, V., Recht, B., Fridovich-Keil, S., Hardt, M., Miller, J., &amp; Schmidt, L. (2019). A Meta-Analysis of Overfitting in Machine Learning. <a href="https://papers.neurips.cc/paper_files/paper/2019/hash/ee39e503b6bedf0c98c388b7e8589aca-Abstract.html" target="_blank">NeurIPS 2019</a></li>
+<li><a href="https://www.bbci.de/competition/iv/" target="_blank">BCI Competition IV</a>（official website）</li>
+<li><a href="https://eeg2025.github.io/rules/" target="_blank">EEG Challenge (2025): Rules</a></li>
+<li><a href="https://eeg2025.github.io/submission/" target="_blank">EEG Challenge (2025): Submission</a></li>
+<li>Xiong, W., Li, J., Li, J., Zhu, K., &amp; Jiang, C. (2025). EEG-FM-Bench: A Comprehensive Benchmark for the Systematic Evaluation of EEG Foundation Models. <a href="https://arxiv.org/abs/2508.17742" target="_blank">arXiv:2508.17742</a></li>
+<li>Lahiri, J. B., Runwal, P., Kulkarni, A., Jain, M., Mishra, A. R., Panwar, S., &amp; Singh, S. (2026). PRISM: Exploring Heterogeneous Pretrained EEG Foundation Model Transfer to Clinical Differential Diagnosis. <a href="https://arxiv.org/abs/2603.02268" target="_blank">arXiv:2603.02268</a></li>
 <li>Wei, H., et al. (2020). Bayesian fusion and multimodal DCM for EEG and fMRI. <a href="https://doi.org/10.1016/j.neuroimage.2019.116595" target="_blank">doi:10.1016/j.neuroimage.2019.116595</a></li>
 <li>Jorge, J., et al. (2015). Simultaneous EEG-fMRI at ultra-high field: artifact prevention and safety assessment. <a href="https://doi.org/10.1016/j.neuroimage.2014.10.055" target="_blank">doi:10.1016/j.neuroimage.2014.10.055</a></li>
 <li>Aydin, U., et al. (2014). Combining EEG and MEG for the reconstruction of epileptic activity using a calibrated realistic volume conductor model. <a href="https://doi.org/10.1371/journal.pone.0093154" target="_blank">doi:10.1371/journal.pone.0093154</a></li>
