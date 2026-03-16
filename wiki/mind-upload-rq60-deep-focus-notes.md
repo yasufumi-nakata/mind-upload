@@ -376,3 +376,13 @@ recommended_pages:
 - `research_harvest_50.md` 正本に対して `RQ_TOTAL=60` を再確認し、判定内訳 `A/B/C=17/25/18` を維持しました。
 - 本ページの `候補EEG-DATA` 列で参照するID `24件` は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）でした。
 - 実行単位を再固定しました: `1RQ=1検証命題=1応募テーマ=1主データ`。総覧優先ではなく、RQごとに深掘りして提出判断を確定します。
+
+## 2026-03-16 13:04 JST 再検証ログ（本run / 1問ずつ深掘り運用の継続）
+
+- 作業前に `main` と3サブモジュールを `pull --ff-only` し、基準コミットを `mind-upload=50e2093ed411`、`EEG-DATA=95e1605e5005`、`auto-research-funds=9eb599bbf875` に更新しました。
+- 正本 `research_harvest_50.md` を再照合し、`RQ_TOTAL=60` を再確認しました。
+- 本表（`## U0` から `## 実務メモ` 直前）の `RQ` 行は `60件`、判定内訳は `A/B/C=17/25/18` を維持しました。
+- 全 `RQ` 行で `判定`・`EEGで直接検証する核`・`応募テーマ（助成キー）`・`候補EEG-DATA`・`EEG外で必須` の必須列欠落 `0` を確認しました。
+- 助成キー `G1-G6` 実IDは `grant_queue` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再参照可能でした。
+- 重要運用を再固定します。`EEG-DATA/eeg_dataset_summary_ja.csv` の数値IDは再採番前提とし、提出時のデータ参照は `D1-D16 + DOI + データセット名` を正本とします。
+- 方針を継続します。汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` で各課題を深掘りします。
