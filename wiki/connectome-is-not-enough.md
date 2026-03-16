@@ -5,7 +5,7 @@ description: "WBE で connectome だけを保存しても足りない理由を�
 article_type: Wiki
 subtitle: "connectome-complete は emulation-complete ではありません"
 author: Mind Uploading Research Project
-last_updated: "2026-03-16"
+last_updated: "2026-03-17"
 note: "Technical / natural science only"
 audience: "配線図が取れたら WBE に近いのかを、技術と自然科学だけで判断したい人"
 reading_time: "15〜20分"
@@ -20,6 +20,7 @@ page_highlights:
 known_points:
   - "全脳 connectome の作成は大きく前進していますが、それだけで動的再現が完了したとは言えません。"
   - "シナプス効率、遅延、神経修飾、グリア、細胞型ラベル、内在興奮性 / 恒常性 set point は、静的な edge list からは落ちやすい情報です。"
+  - "EM の synapse count、PSD 面積、same-brain connectomics は synaptic-state の prior を強くしえますが、その瞬間の effective weight や release state の直接読出しではありません。"
   - "粗い生理 proxy を ground truth と混同すると、内部状態の主張を過大化しやすくなります。"
   - "connectome-constrained なモデルでも、未測定の細胞・シナプス・修飾パラメータが残ると dynamics は縮退しえます。"
   - "same-brain function、transcriptomics、neuromodulatory dynamics、glial slow state を足すと条件付き予測は改善しえますが、その改善は課題・時定数・外部妥当化条件に依存します。"
@@ -219,8 +220,14 @@ Gamlin らは、マウス視覚皮質で予測された Sst transcriptomic types
 
 <h3>3. シナプスは binary edge ではありません</h3>
 <p>
-Holler らは新皮質シナプスで、超微細構造と release property を結びつけて解析し、単純な「つながっている/いない」では伝達特性を表せないことを示しました。Matsuzaki らは単一 dendritic spine における LTP 誘導で、spine enlargement と AMPA 電流増加が結びつくことを示しています。さらに Vardalaki らは、成体新皮質でもおよそ 25% の filopodia が AMPA 受容体を欠く silent synapse の構造基盤になりうることを示しました。したがって、<strong>edge list だけでは current state の weight も plastic history も、そもそも機能的に active かどうかも落ちます</strong>。
+Holler らは、同定した新皮質錐体細胞間シナプスで <strong>PSD 面積と平均 EPSP</strong> の関係を前進させましたが、同じ研究で <strong>trial-to-trial の size-strength 対応は弱く</strong>、multivesicular release も残ることを示しました。つまり、EM の ultrastructure は mean strength の prior を強くしえても、その瞬間の有効重みをそのまま与えるわけではございません。さらに Dürst らは、個々の bouton の potency が主として <strong>vesicular release probability</strong> に依存し、readily releasable vesicle 数の寄与は高 release state で初めて強く出ることを示しました。Matsuzaki らは単一 dendritic spine における LTP 誘導で、spine enlargement と AMPA 電流増加が結びつくことを示し、Vardalaki らは成体新皮質でもおよそ 25% の filopodia が AMPA 受容体を欠く silent synapse の構造基盤になりうることを示しました。したがって、<strong>edge list、synapse count、PSD / spine size だけでは current state の weight も release state も plastic history も、そもそも機能的に active かどうかも落ちます</strong>。
 </p>
+<div class="note-box">
+<strong>今回固定する読み替え</strong>
+<p>
+このサイトでは今後、<strong>EM のシナプス数</strong>、<strong>PSD 面積</strong>、<strong>spine size</strong>、<strong>same-brain connectomics</strong> を、まず <strong>structural prior / state-averaged constraint</strong> として読みます。<a href="https://doi.org/10.1038/s41467-024-51402-7" target="_blank">Alle et al. (2024)</a> は human neocortical tissue で、sleep-like な membrane state sequence が unitary synapse の transmission と consolidation を短時間で動かすことを示しました。したがって、paired physiology、presynaptic-state manipulation、held-out perturbation が無い限り、本サイトではそれらを <strong>current effective weight の直接読出し</strong>とは書きません。
+</p>
+</div>
 
 <h3>4. 遅延と髄鞘は timing の一部です</h3>
 <p>
@@ -262,8 +269,8 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <tr>
 <td><strong>+ same-brain function / behavior</strong></td>
 <td>同一個体で co-registered な機能計測と行動状態です。</td>
-<td>MICrONS は同じマウスで dense neural activity、EM connectome、pupil diameter、locomotion を結び、構造と state-dependent function を同一脳内で比較できる足場を作りました。</td>
-<td>mouse visual cortex の特定課題・特定状態での前進であり、全脳・全状態の一般化や hidden state の十分性までは保証しません。</td>
+<td>MICrONS は同じマウスで dense neural activity、EM connectome、pupil diameter、locomotion を結び、構造と state-dependent function を同一脳内で比較できる足場を作りました。これは <strong>local structure-function constraint</strong> を大きく前進させますが、current synaptic efficacy の直接読出しそのものではありません。</td>
+<td>mouse visual cortex の特定課題・特定状態での前進であり、全脳・全状態の一般化や hidden state の十分性、さらには momentary synaptic weight の十分性までは保証しません。</td>
 </tr>
 <tr>
 <td><strong>+ transcriptomic / cell-type label</strong></td>
@@ -309,6 +316,7 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <li><strong>augmentation / ablation：</strong>connectome-only baseline を置かずに、「追加した state variable が効いた」とは書きません。</li>
 <li><strong>species / stack をまたぐとき：</strong>fly / mouse / human、local / fragment / whole-brain、structural / functional / metabolic の差を本文に残し、external validity ceiling を省略しません。</li>
 <li><strong>intrinsic excitability / homeostatic set point：</strong>cell-type ラベルや短時間の活動一致から自動推定されたことにはしません。測っていなければ latent state と書きます。</li>
+<li><strong>PSD 面積 / spine size / synapse count：</strong>paired physiology や perturbation が無い限り、current effective weight とは書かず、structural prior と書きます。</li>
 <li><strong>pupil / HRV：</strong>人データでは有用な state covariate ですが、トランスミッタ特異的 ground truth としては扱いません。</li>
 <li><strong>state variable が無いとき：</strong>推定したなら誤差と棄権条件を、推定していないなら absent と明記します。</li>
 <li><strong>weights / delays が無いとき：</strong>phase、timing、介入応答、閉ループ安定性の主張は降格します。</li>
@@ -354,8 +362,10 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <em>Nature Neuroscience</em>, 28, 2561–2574. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <em>Nature</em>, 640, 497–505. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
 <li>Holler, S., et al. (2021). Structure and function of a neocortical synapse. <em>Nature</em>, 591, 111–116. <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">doi:10.1038/s41586-020-03134-2</a></li>
+<li>Dürst, C. D., Boele, H.-J., Schonewille, M., &amp; Hoebeek, F. E. (2024). Number of releasable vesicles does not limit short-term plasticity at hippocampal synapses with low release probability. <em>Nature Communications</em>, 15, 6427. <a href="https://doi.org/10.1038/s41467-024-50549-7" target="_blank">doi:10.1038/s41467-024-50549-7</a></li>
 <li>Matsuzaki, M., Honkura, N., Ellis-Davies, G. C. R., & Kasai, H. (2004). Structural basis of long-term potentiation in single dendritic spines. <em>Nature</em>, 429, 761–766. <a href="https://doi.org/10.1038/nature02617" target="_blank">doi:10.1038/nature02617</a></li>
 <li>Vardalaki, D., Chung, K., &amp; Harnett, M. T. (2022). Filopodia are a structural substrate for silent synapses in adult neocortex. <em>Nature</em>, 612, 323–327. <a href="https://doi.org/10.1038/s41586-022-05483-6" target="_blank">doi:10.1038/s41586-022-05483-6</a></li>
+<li>Alle, H., et al. (2024). Membrane potential states gate synaptic consolidation in human neocortical tissue. <em>Nature Communications</em>, 15, 7705. <a href="https://doi.org/10.1038/s41467-024-51402-7" target="_blank">doi:10.1038/s41467-024-51402-7</a></li>
 <li>Gibson, E. M., et al. (2014). Neuronal activity promotes oligodendrogenesis and adaptive myelination in the mammalian brain. <em>Science</em>, 344(6183), 1252304. <a href="https://doi.org/10.1126/science.1252304" target="_blank">doi:10.1126/science.1252304</a></li>
 <li>McKenzie, I. A., et al. (2014). Motor skill learning requires active central myelination. <em>Science</em>, 346(6207), 318–322. <a href="https://doi.org/10.1126/science.1254960" target="_blank">doi:10.1126/science.1254960</a></li>
 <li>Micheva, K. D., Kiraly, M., Perez, M. M., & Madison, D. V. (2021). Conduction Velocity Along the Local Axons of Parvalbumin Interneurons Correlates With the Degree of Axonal Myelination. <em>Cerebral Cortex</em>, 31(7), 3374–3392. <a href="https://doi.org/10.1093/cercor/bhab018" target="_blank">doi:10.1093/cercor/bhab018</a></li>

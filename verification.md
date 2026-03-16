@@ -5,7 +5,7 @@ description: "マインドアップロード/WBEを「進歩を測れる科学�
 article_type: Platform
 subtitle: "PDB×BIDS×PhysioNet×OSFの発想で、WBEの“勝利条件”と“再現可能な前進”を作る"
 author: Mind Uploading Research Project
-last_updated: "2026-03-16"
+last_updated: "2026-03-17"
 note: "Operational Specification"
 audience: "このサイトの中心方針を知りたい人、何を揃えれば『前進』になるかを確認したい人"
 reading_time: "15〜25分"
@@ -749,9 +749,9 @@ Fusion Card が無い場合、本サイトではその結果を原則として <
 </tr>
 <tr>
 <td><strong>synaptic efficacy / plastic history</strong></td>
-<td>connectome-only baseline と weight / plasticity 項を足したモデルの held-out perturbation 誤差、ablation、drift 曲線。</td>
-<td>edge count / EM synapse だけの条件と、現在の有効結合を持たせた条件を同一課題・同一 horizon で較正します。</td>
-<td>edge list だけで gain を主張している場合、L2 の介入予測と L3 の安定制御を保留します。</td>
+<td>connectome-only baseline と weight / plasticity 項を足したモデルの held-out perturbation 誤差、ablation、drift 曲線、可能なら paired physiology または presynaptic-state manipulation の較正。</td>
+<td>edge count / EM synapse / PSD / spine size / same-brain connectomics だけの条件と、現在の有効結合を持たせた条件を同一課題・同一 horizon で較正します。</td>
+<td>structure-only 指標だけで gain を主張している場合、L2 の介入予測と L3 の安定制御を保留し、current weight claim も受理しません。</td>
 </tr>
 <tr>
 <td><strong>delay / myelin / axonal support</strong></td>
@@ -779,6 +779,12 @@ Fusion Card が無い場合、本サイトではその結果を原則として <
 </tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>2026-03 追補：structural synapse metric は current weight ではありません</strong>
+<p>
+<a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">Holler et al. (2021)</a> は identified neocortical synapse で PSD 面積と平均 EPSP の関係を前進させましたが、trial-to-trial の対応は弱く、multivesicular release も残ることを示しました。<a href="https://doi.org/10.1038/s41467-024-50549-7" target="_blank">Dürst et al. (2024)</a> は bouton potency が vesicular release probability に強く依存することを示し、<a href="https://doi.org/10.1038/s41586-022-05483-6" target="_blank">Vardalaki et al. (2022)</a> は成体新皮質にも silent synapse substrate が残ることを示しました。さらに <a href="https://doi.org/10.1038/s41467-024-51402-7" target="_blank">Alle et al. (2024)</a> は human neocortical tissue で membrane state が短時間に synaptic efficacy を動かすことを示しました。したがって本サイトでは、<strong>EM synapse count</strong>、<strong>PSD / spine size</strong>、<strong>same-brain connectomics</strong> をまず structural prior として扱い、paired physiology、state manipulation、held-out perturbation gain が無い限り <strong>current effective weight の direct readout</strong>とは書きません。
+</p>
+</div>
 <div class="note-box">
 <strong>2026-03 追補：neuromodulatory proxy も 1 本ではありません</strong>
 <p>
@@ -1563,6 +1569,11 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
 <li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
+<li>Holler, S., et al. (2021). Structure and function of a neocortical synapse. <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">doi:10.1038/s41586-020-03134-2</a></li>
+<li>Matsuzaki, M., Honkura, N., Ellis-Davies, G. C. R., &amp; Kasai, H. (2004). Structural basis of long-term potentiation in single dendritic spines. <a href="https://doi.org/10.1038/nature02617" target="_blank">doi:10.1038/nature02617</a></li>
+<li>Vardalaki, D., Chung, K., &amp; Harnett, M. T. (2022). Filopodia are a structural substrate for silent synapses in adult neocortex. <a href="https://doi.org/10.1038/s41586-022-05483-6" target="_blank">doi:10.1038/s41586-022-05483-6</a></li>
+<li>Dürst, C. D., Boele, H.-J., Schonewille, M., &amp; Hoebeek, F. E. (2024). Number of releasable vesicles does not limit short-term plasticity at hippocampal synapses with low release probability. <a href="https://doi.org/10.1038/s41467-024-50549-7" target="_blank">doi:10.1038/s41467-024-50549-7</a></li>
+<li>Alle, H., et al. (2024). Membrane potential states gate synaptic consolidation in human neocortical tissue. <a href="https://doi.org/10.1038/s41467-024-51402-7" target="_blank">doi:10.1038/s41467-024-51402-7</a></li>
 <li>Hengen, K. B., Torrado Pacheco, A., McGregor, J. N., Van Hooser, S. D., &amp; Turrigiano, G. G. (2016). Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
 <li>Torrado Pacheco, A., et al. (2021). Sleep Promotes Downward Firing Rate Homeostasis. <a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">doi:10.1016/j.neuron.2021.04.004</a></li>
 <li>Looser, Z. J., et al. (2024). Oligodendrocyte-axon metabolic coupling is mediated by extracellular K<sup>+</sup> and maintains axonal health. <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">doi:10.1038/s41593-023-01558-3</a></li>
