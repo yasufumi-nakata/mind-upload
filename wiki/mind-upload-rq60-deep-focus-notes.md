@@ -5,7 +5,7 @@ description: "60RQを1件ずつ、EEGで直接検証する核・外部必須要�
 article_type: Wiki
 subtitle: "汎用要約ではなく、RQごとの論点を固定する"
 author: Mind Uploading Research Project
-last_updated: "2026-03-16"
+last_updated: "2026-03-17"
 note: "RQ-by-RQ Deep Focus"
 audience: "各RQを申請文と実験手順に直接落としたい人"
 reading_time: "20〜35分"
@@ -218,6 +218,15 @@ recommended_pages:
 - `候補EEG-DATA` 列で参照するデータIDは `24種類`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）で、`EEG-DATA/eeg_dataset_summary_ja.csv` 上の欠落 `0` を確認しました。
 - 助成実IDの参照元を再確認（`G1-G2` は `grant_queue`、`G3-G6` は `auto-research-funds`）。
 - 方針は据え置きです。汎用要約ではなく、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続します。
+
+## 2026-03-17 07:02 JST 再検証ログ（本run / pull後・1RQ深掘り運用の再固定）
+
+- 作業前に `main` を `pull --ff-only` し、基準コミットを `mind-upload=0292e428d96e`、`EEG-DATA=48261b83b10a`、`auto-research-funds=c81f22c6aafd` に更新しました。
+- 正本 `mind-upload/research_harvest_50.md` の `RQ総数` 集計表（合計行）で `60` を再確認しました。
+- 本ページ主表（`## U0（同一性）` から `## 実務メモ` 直前）の `RQ` 行を機械再計数し、`RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認しました。
+- `候補EEG-DATA` の参照ID `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を再確認しました。
+- 助成キー `G1-G6` の実体は再確認済みです（`G1-G2=grant_queue`、`G3-G6=auto-research-funds/grant_eeg_dataset_match.csv`）。
+- 実務方針を継続します。汎用的に全課題を浅く横断せず、`1RQ=1検証命題=1応募テーマ=1主データ` の粒度で1件ずつ深掘りして更新します。
 
 ## 2026-03-15 16:22 JST 深掘り実装カード（6RQを1件ずつ実行）
 
