@@ -5,7 +5,7 @@ description: "research_harvest_50 の60リサーチクエスチョンを、EEG-D
 article_type: Wiki
 subtitle: "1問ずつ深掘りして、検証設計と応募テーマまで接続する"
 author: Mind Uploading Research Project
-last_updated: "2026-03-16"
+last_updated: "2026-03-17"
 note: "RQ-by-RQ Deep Dive"
 audience: "RQを実験計画に落としたい人、助成応募テーマとデータ根拠を同時に作りたい人"
 reading_time: "25〜40分"
@@ -714,6 +714,24 @@ recommended_pages:
 - 依頼どおり、汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用をこのページ正本として固定しました。
 
 ### このrunの深掘り提出順（1件ずつ進める固定キュー）
+
+1. `U14-1`（G1）: 固定粒度と再現率比較（`D12/D8`）
+2. `U7-2`（G3）: 時刻同期誤差監査（`D7/D4`）
+3. `U8-2`（G2）: 概念ドリフト耐性オンライン較正（`D10/D8`）
+4. `U1-2`（G4）: 不確実性伝播評価（`D7/D12`）
+5. `U13-1`（G1）: 模倣/因果二軸ベンチ（`D2/D1`）
+6. `U15-2`（G6）: neurorights監査項目写像（`D4/D5`）
+
+## 2026-03-17 02:07 JST 再検証ログ（本run / pull後・全60RQ深掘り運用の再固定）
+
+- 作業前に `git pull origin main` を実行し、`main` 最新を基準に再検証しました。
+- 正本 `research_harvest_50.md` と本ページの RQ 行を再照合し、`RQ_TOTAL=60`（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）を再確認しました。
+- 判定内訳は再計数で `A/B/C=17/25/18` を維持し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続します。
+- 参照EEGデータID `24件` は `EEG-DATA/eeg_dataset_summary_ja.csv` 上で全件実在（欠落 `0`）でした。
+- ただし数値IDは再採番影響を受けるため、応募・再現ログの正本参照は引き続き `D1-D16（DOI固定）` を優先します。
+- 助成キー `G1-G6` の実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue/*.yaml` と `auto-research-funds/wiki/cards/*.md` 系統で再確認しました。
+
+### このrunの提出優先キュー（1件ずつ深掘り）
 
 1. `U14-1`（G1）: 固定粒度と再現率比較（`D12/D8`）
 2. `U7-2`（G3）: 時刻同期誤差監査（`D7/D4`）
