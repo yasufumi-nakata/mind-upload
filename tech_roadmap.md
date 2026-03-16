@@ -4,7 +4,7 @@ title: "技術ロードマップ：計測→再構成→実装でWBEを理解す
 description: "マインドアップロード（WBE）を技術面から俯瞰する学習ロードマップ。計測→再構成→実装→検証の問いの木で整理。"
 article_type: "Roadmap (Definition #1)"
 subtitle: "「何を解けたら前進か」を問いの木に分解し、読む順番と最低限の到達点を示す"
-last_updated: "2026-03-15"
+last_updated: "2026-03-16"
 note: "暫定版（随時更新）"
 audience: "全体像を知りたい人、学習順序を決めたい人、主張の強さを段階で整理したい人"
 reading_time: "20〜30分（索引だけなら5分）"
@@ -486,9 +486,9 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 </tr>
 <tr>
 <td><strong>fMRI</strong></td>
-<td>血行動態の proxy です。</td>
+<td>BOLD を中心とする血行動態の proxy です。</td>
 <td>領域スケールの recruitment、比較的遅い network state、同一個体内の広域 coverage を見やすいです。</td>
-<td>ms スケールの timing、興奮性/抑制性の分離、速い介入応答は直接は見えません。</td>
+<td>ms スケールの timing、興奮性/抑制性の分離、region-specific HRF、task-related haemodynamics、venous / depth bias、速い介入応答は直接は見えません。</td>
 </tr>
 <tr>
 <td><strong>whole-brain spatial transcriptomics / cell atlas</strong></td>
@@ -532,6 +532,12 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 <strong>2026-03 補足：multimodal は「全部見えた」の同義語ではありません</strong>
 <p>
 Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et al. (2025) は、HD-EEG と intracranial ground truth を組み合わせると何が監査できるかを一段前進させました。一方、Steinmetz et al. (2021)、Pachitariu et al. (2024)、van Beest et al. (2024) が示すように、高密度 extracellular probe でも <strong>local population readout</strong> と <strong>chronic same-neuron identity</strong> は別問題であり、sorting / matching / drift audit を抜いて unit-level 安定性を断言できません。さらに Yao et al. (2023) の whole-brain spatial atlas、Gouwens et al. (2021) と Gamlin et al. (2025) の Patch-seq bridge、Dorkenwald et al. (2024) と MICrONS Consortium et al. (2025) の connectomics、Neyhart et al. (2024) と Cahill et al. (2024) の local state imaging が示すのは、stack ごとに <strong>強くなる変数</strong> と <strong>依然として残る latent state</strong> が違う、という事実です。したがって、このページでは <strong>観測量が増えた</strong>ことと、<strong>WBE に必要な状態変数が十分に同定できた</strong>ことを分けて扱います。stack ごとの整理表は <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: 計測スタックごとの observability と claim ceiling</a> を参照してください。
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03 補足：fMRI の proxy ceiling を 1 段厳しく読む</strong>
+<p>
+<a href="https://doi.org/10.1038/35084005" target="_blank">Logothetis et al. (2001)</a> と <a href="https://doi.org/10.1038/nature09108" target="_blank">Lee et al. (2010)</a> は BOLD が cell-type / population-input 依存の neurovascular proxy であることを、<a href="https://doi.org/10.1038/nature07664" target="_blank">Sirotin &amp; Das (2009)</a> と <a href="https://doi.org/10.1038/nn.3170" target="_blank">Cardoso et al. (2012)</a> は task-related haemodynamics が local neuronal activity だけでは閉じないことを、<a href="https://doi.org/10.1016/j.neuroimage.2003.11.029" target="_blank">Handwerker et al. (2004)</a> と <a href="https://doi.org/10.7554/eLife.86453" target="_blank">Bailes et al. (2023)</a> は HRF timing が領域・個体で動くことを、<a href="https://doi.org/10.1016/j.neuroimage.2019.02.006" target="_blank">Kay et al. (2019)</a> と <a href="https://doi.org/10.1523/JNEUROSCI.2532-21.2022" target="_blank">Kurzawski et al. (2022)</a> は venous / non-neural factor が空間地図の振幅を歪めうることを示しました。したがってこのロードマップでは、fMRI を neural truth ではなく <strong>hemodynamic proxy</strong> として読み、EEG-fMRI 統合でも <a href="wiki/multimodal-integration-basics.html#hemodynamic-gate">hemodynamic proxy gate</a> を通らない限り fine-grained mechanism を主張しません。
 </p>
 </div>
 <p><strong>次に必要：</strong>同一の課題・同一個体で、マルチモーダル同時計測（可能な範囲）＋位置合わせ（M5）</p>
@@ -610,6 +616,12 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 <p><strong>問い：</strong>異なる計測は座標系・遅延・ノイズ構造が違う。統合の誤差が“学習したい信号”を壊していないか？</p>
 <p><strong>反証条件：</strong>位置合わせ誤差で再構成（R2）が不安定になり、再現性（P2）が落ちる</p>
 <p><strong>次に必要：</strong>同一データに対し複数パイプラインで一致するか（解析差分監査）</p>
+<div class="note-box">
+<strong>fMRI を混ぜるときの追加監査</strong>
+<p>
+EEG-fMRI / MRI-fMRI の統合では、shared clock と geometry だけでは足りません。fMRI 側は hemodynamic proxy なので、少なくとも <strong>target neural claim</strong>、<strong>HRF model granularity</strong>、<strong>task / physiology nuisance</strong>、<strong>venous / depth diagnostic</strong> を <a href="verification.html#fusion-card">Fusion Card</a> に加えて残します。これが無い場合、このロードマップでは統合結果を <strong>macro concordance</strong> までに留めます。
+</p>
+</div>
 </div>
 </details>
 
@@ -1834,6 +1846,14 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 <li>Seeber, M., Cantonas, L.-M., Hoevels, M., et al. (2019). Subcortical electrophysiological activity is detectable with high-density EEG source imaging. <a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">doi:10.1038/s41467-019-08725-w</a></li>
 <li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Direct validation of EEG source imaging by intracranial electric stimulation in human patients. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
 <li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
+<li>Logothetis, N. K., Pauls, J., Augath, M., Trinath, T., &amp; Oeltermann, A. (2001). Neurophysiological investigation of the basis of the fMRI signal. <a href="https://doi.org/10.1038/35084005" target="_blank">doi:10.1038/35084005</a></li>
+<li>Lee, J. H., Durand, R., Gradinaru, V., et al. (2010). Global and local fMRI signals driven by neurons defined optogenetically by type and wiring. <a href="https://doi.org/10.1038/nature09108" target="_blank">doi:10.1038/nature09108</a></li>
+<li>Sirotin, Y. B., &amp; Das, A. (2009). Anticipatory haemodynamic signals in sensory cortex not predicted by local neuronal activity. <a href="https://doi.org/10.1038/nature07664" target="_blank">doi:10.1038/nature07664</a></li>
+<li>Cardoso, M. M. B. M., Sirotin, Y. B., Lima, B., Glushenkova, E., &amp; Das, A. (2012). The neuroimaging signal is a linear sum of neurally distinct stimulus- and task-related components. <a href="https://doi.org/10.1038/nn.3170" target="_blank">doi:10.1038/nn.3170</a></li>
+<li>Handwerker, D. A., Ollinger, J. M., &amp; D'Esposito, M. (2004). Variation of BOLD hemodynamic responses across subjects and brain regions and their effects on statistical analyses. <a href="https://doi.org/10.1016/j.neuroimage.2003.11.029" target="_blank">doi:10.1016/j.neuroimage.2003.11.029</a></li>
+<li>Bailes, J., Millman, R., Franklin, C., et al. (2023). Resting-state fMRI signals contain spectral signatures of local hemodynamic response timing. <a href="https://doi.org/10.7554/eLife.86453" target="_blank">doi:10.7554/eLife.86453</a></li>
+<li>Kay, K. N., Jamison, K. W., Zhang, R. Y., &amp; Uğurbil, K. (2019). A critical assessment of data quality and venous effects in sub-millimeter fMRI. <a href="https://doi.org/10.1016/j.neuroimage.2019.02.006" target="_blank">doi:10.1016/j.neuroimage.2019.02.006</a></li>
+<li>Kurzawski, J. W., Yablonskiy, D. A., Pointer, R., et al. (2022). Non-Neural Factors Influencing BOLD Response Magnitudes within Individual Subjects. <a href="https://doi.org/10.1523/JNEUROSCI.2532-21.2022" target="_blank">doi:10.1523/JNEUROSCI.2532-21.2022</a></li>
 <li>Logothetis, N. K. (2008). What we can do and what we cannot do with fMRI. <a href="https://doi.org/10.1038/nature06976" target="_blank">doi:10.1038/nature06976</a></li>
 <li>Purdon, P. L., et al. (2013). EEG signatures of loss/recovery of consciousness.</li>
 <li>Boto, E., et al. (2018). Wearable OPM-MEG.</li>

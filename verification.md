@@ -657,7 +657,7 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 <section class="section" id="fusion-card">
 <h2 class="section-title">2026-03 追補：multimodal 結果には Fusion Card を添付する</h2>
 <p>
-今回もっとも深く修正すべきだった次の弱点は、<strong>multimodal の厳しさが局所ページに閉じ、Verification Commons の提出物仕様へまだ十分に入っていなかった</strong>ことです。<a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019)</a> と <a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Jeung et al. (2024)</a> が与えるのは、EEG や motion metadata を共有可能にする<strong>器</strong>であり、<a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe et al. (2025)</a> は LSL が synchronized recording を助けても device-side delay / jitter の ground truth を自動で与えないことを示しました。さらに、<a href="https://doi.org/10.1016/j.neuroimage.2019.116595" target="_blank">Wei et al. (2020)</a> は EEG-fMRI fusion が shared latent model を明示して初めて解釈可能になることを示し、<a href="https://doi.org/10.1016/j.neuroimage.2014.10.055" target="_blank">Jorge et al. (2015)</a> と <a href="https://doi.org/10.1371/journal.pone.0093154" target="_blank">Aydin et al. (2014)</a> は safety / artifact management と calibrated head model が成立条件であることを示しました。加えて、<a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a> と <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> は direct validation が強い一方で coverage-limited であることも示しています。したがって本サイトでは、<strong>multimodal / atlas prior 結果には Observability Budget だけでなく Fusion Card を必須化</strong>し、「何を直接見たか」だけでなく「どう結び付け、その結び付けがどこまで妥当化されたか」まで提出物化します。
+今回もっとも深く修正すべきだった次の弱点は、<strong>multimodal の厳しさが局所ページに閉じ、Verification Commons の提出物仕様へまだ十分に入っていなかった</strong>ことです。<a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019)</a> と <a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Burns et al. (2024)</a> が与えるのは、EEG や motion metadata を共有可能にする<strong>器</strong>であり、<a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe et al. (2025)</a> は LSL が synchronized recording を助けても device-side delay / jitter の ground truth を自動で与えないことを示しました。さらに、<a href="https://doi.org/10.1016/j.neuroimage.2019.116595" target="_blank">Wei et al. (2020)</a> は EEG-fMRI fusion が shared latent model を明示して初めて解釈可能になることを示し、<a href="https://doi.org/10.1016/j.neuroimage.2014.10.055" target="_blank">Jorge et al. (2015)</a> と <a href="https://doi.org/10.1371/journal.pone.0093154" target="_blank">Aydin et al. (2014)</a> は safety / artifact management と calibrated head model が成立条件であることを示しました。加えて、<a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a> と <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> は direct validation が強い一方で coverage-limited であることも示しています。今回の再監査ではさらに、fMRI / fNIRS を含む統合では <strong>shared clock や co-registration だけでは不十分で、HRF・task-related haemodynamics・venous bias を別に監査しないと BOLD を direct neural truth と誤読しやすい</strong>ことも見えました。したがって本サイトでは、<strong>multimodal / atlas prior 結果には Observability Budget だけでなく Fusion Card を必須化</strong>し、「何を直接見たか」だけでなく「どう結び付け、その結び付けがどこまで妥当化されたか」まで提出物化します。
 </p>
 <table class="data-table">
 <thead>
@@ -689,6 +689,11 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 <td>fused map を raw truth と読み替え、比較不能な黒箱を受理しやすくなります。</td>
 </tr>
 <tr>
+<td><strong>hemodynamic proxy audit<br>(when fMRI / fNIRS is included)</strong></td>
+<td>BOLD / CBF / fNIRS のどの proxy を使ったか、target neural claim、HRF model granularity、task / physiology nuisance、venous / depth diagnostic、mechanistic validator を書きます。</td>
+<td>shared clock や geometry が揃っただけの結果を、そのまま direct neural truth や fine-grained mechanism と誤読しやすくなります。</td>
+</tr>
+<tr>
 <td><strong>incremental evidence</strong></td>
 <td>single-modality baseline、missing-modality ablation、behaviour-only / anatomy-only baseline との差分を残します。</td>
 <td>本当に modality を足した価値なのか、強い prior や task shortcut なのかを切り分けられません。</td>
@@ -714,7 +719,7 @@ Observability Budget は <strong>各 measurement stack が何を直接観測し�
 <div class="note-box">
 <strong>最低運用ルール</strong>
 <p>
-Fusion Card が無い場合、本サイトではその結果を原則として <strong>single-modality result に prior を足した推定</strong>、または <strong>限定つきの cross-modal concordance</strong> として扱い、L2 以上へ昇格させません。shared clock が無い場合は trial-level state alignment を書かず、coverage-limited validation しか無い場合は whole-brain ground truth を書かず、single-modality baseline が無い場合は multimodal gain を書きません。
+Fusion Card が無い場合、本サイトではその結果を原則として <strong>single-modality result に prior を足した推定</strong>、または <strong>限定つきの cross-modal concordance</strong> として扱い、L2 以上へ昇格させません。shared clock が無い場合は trial-level state alignment を書かず、coverage-limited validation しか無い場合は whole-brain ground truth を書かず、single-modality baseline が無い場合は multimodal gain を書きません。さらに <strong>fMRI / fNIRS を含む結果で hemodynamic proxy audit が無い場合</strong>、本サイトではその ceiling を <strong>macro concordance</strong> までに留め、fast causal order や fine-grained mechanism を書きません。
 </p>
 </div>
 </section>

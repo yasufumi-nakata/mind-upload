@@ -15,8 +15,10 @@ page_highlights:
   - "『hidden state がある』という一般論を、『どの計測 stack で何がまだ未観測か』へ落とし直します。"
   - "multimodal / atlas / connectome の語を、そのまま state-complete と誤読しないための ceiling を固定します。"
   - "stack の表だけでなく、state variable × timescale × direct / proxy / inferred の行列も追加し、何が本当に直接見えているかを分解します。"
+  - "fMRI / BOLD は neural truth ではなく、neurovascular transfer・HRF・venous geometry を介した proxy として扱います。"
 known_points:
   - "EEG/MEG/fMRI はマクロな proxy を与えますが、細胞型、シナプス効率、神経修飾場、グリア状態を直接は与えません。"
+  - "fMRI の振幅や onset は、神経活動だけでなく HRF の変動や vascular geometry の影響も受けます。"
   - "高密度 extracellular probe は implant 近傍の local population を強く見ますが、chronic な single-unit identity は sorting と matching を介した推定です。"
   - "whole-brain spatial transcriptomics は cell-type taxonomy と空間配置を大きく前進させますが、動的状態の十分性は別問題です。"
   - "Patch-seq と same-brain connectomics は縮退を減らしますが、全脳 coverage と長期 maintenance-state の十分性は残ります。"
@@ -102,10 +104,10 @@ recommended_pages:
 </tr>
 <tr>
 <td><strong>fMRI</strong></td>
-<td>血行動態 proxy と、領域スケールの遅い network state です。</td>
-<td>広域 coverage、recruitment pattern、比較的遅い state occupancy を同一個体内で追えます。</td>
-<td>ms timing、興奮/抑制の分離、局所 transmitter dynamics、current synaptic efficacy は直接は見えません。</td>
-<td><strong>広域 state atlas と coarse dynamical constraint まで</strong>です。速い causal mechanism や microstate の十分性は主張しません。</td>
+<td>BOLD を中心とする血行動態 proxy と、領域スケールの遅い network state です。</td>
+<td>広域 coverage、recruitment pattern、比較的遅い state occupancy、同一個体内の large-scale network constraint を追えます。</td>
+<td>ms timing、興奮/抑制の分離、region-specific HRF、静脈ドレナージと層方向の空間歪み、局所 transmitter dynamics、current synaptic efficacy は直接は見えません。</td>
+<td><strong>広域 state atlas と coarse dynamical constraint まで</strong>です。fast causal order、laminar microcircuit、BOLD 振幅の単純な neural gain 解釈は主張しません。</td>
 </tr>
 <tr>
 <td><strong>whole-brain spatial transcriptomics / cell atlas</strong></td>
@@ -158,6 +160,50 @@ recommended_pages:
 </tr>
 </tbody>
 </table>
+</section>
+
+<section class="section" id="fmri-proxy-audit">
+<h2 class="section-title">fMRI / BOLD を別扱いにする理由</h2>
+<p>
+現行サイトは fMRI を `blood-flow proxy` としては正しく扱えていました。しかし、技術・自然科学の観点では、それだけでは不十分でございます。重要なのは <strong>proxy であること</strong>そのものよりも、<strong>どの failure mode が BOLD の解釈 ceiling を作るか</strong>を提出物へ落とすことです。以下では、一次文献が比較的一貫して支持する 4 つの failure mode を固定します。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>failure mode</th>
+<th>一次文献が支持すること</th>
+<th>このサイトでの読み替え</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>neural coupling target</strong></td>
+<td><a href="https://doi.org/10.1038/35084005" target="_blank">Logothetis et al. (2001)</a> は BOLD が単純な multiunit output よりも局所場電位に強く結びつくことを示し、<a href="https://doi.org/10.1038/nature09108" target="_blank">Lee et al. (2010)</a> は cell type / wiring に応じて global / local fMRI signal が変わることを示しました。</td>
+<td>BOLD 振幅を `spike count` や `local computation amount` と 1 対 1 に読みません。まず <strong>population-input-weighted neurovascular proxy</strong> として扱います。</td>
+</tr>
+<tr>
+<td><strong>task / anticipatory haemodynamics</strong></td>
+<td><a href="https://doi.org/10.1038/nature07664" target="_blank">Sirotin &amp; Das (2009)</a> は sensory cortex で local neuronal activity によって予測されない anticipatory haemodynamic signal を報告し、<a href="https://doi.org/10.1038/nn.3170" target="_blank">Cardoso et al. (2012)</a> は neuroimaging signal が stimulus-related component と task-related component の線形和として振る舞うことを示しました。</td>
+<td>task-locked BOLD を、そのまま stimulus-driven computation と同一視しません。task structure や anticipation を covariate として別監査します。</td>
+</tr>
+<tr>
+<td><strong>HRF timing heterogeneity</strong></td>
+<td><a href="https://doi.org/10.1016/j.neuroimage.2003.11.029" target="_blank">Handwerker et al. (2004)</a> は BOLD response が被験者・脳領域で大きく変動することを示し、<a href="https://doi.org/10.7554/eLife.86453" target="_blank">Bailes et al. (2023)</a> は resting-state fMRI signal に local hemodynamic response timing の spectral signature が残ることを示しました。</td>
+<td>canonical HRF だけで onset 差、latency 差、spectral difference を mechanistic difference と読みません。region / subject / voxel ごとの transfer difference を残します。</td>
+</tr>
+<tr>
+<td><strong>venous / non-neural spatial bias</strong></td>
+<td><a href="https://doi.org/10.1016/j.neuroimage.2019.02.006" target="_blank">Kay et al. (2019)</a> は sub-millimeter fMRI の data quality と venous effect を批判的に整理し、<a href="https://doi.org/10.1523/JNEUROSCI.2532-21.2022" target="_blank">Kurzawski et al. (2022)</a> は同一被験者内でも non-neural factor が BOLD magnitude を左右することを示しました。</td>
+<td>`細かい voxel map = 細かい neural map` とは読みません。laminar / sub-mm / large-vessel-near claim では venous / depth diagnostic を別提出物にします。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>このサイトでの運用ルール</strong>
+<p>
+fMRI を含む claim では、少なくとも <strong>(1) target neural claim</strong>、<strong>(2) HRF model granularity</strong>、<strong>(3) physiology / task-related nuisance</strong>、<strong>(4) venous / depth diagnostic</strong>、<strong>(5) abstention condition</strong> をセットで残します。これが無い場合、本サイトでは fMRI を <strong>broad coverage を与える hemodynamic proxy</strong> としては受理しても、fast mechanism や fine-grained localization の根拠には上げません。
+</p>
+</div>
 </section>
 
 <section class="section" id="state-variable-matrix">
@@ -360,6 +406,14 @@ Neyhart らは cortical ACh dynamics が cholinergic axon activity と behaviora
 <li>McKenzie, I. A., et al. (2014). Motor skill learning requires active central myelination. <em>Science</em>, 346(6207), 318-322. <a href="https://doi.org/10.1126/science.1254960" target="_blank">doi:10.1126/science.1254960</a></li>
 <li>Looser, Z. J., et al. (2024). Oligodendrocyte-axon metabolic coupling is mediated by extracellular K<sup>+</sup> and maintains axonal health. <em>Nature Neuroscience</em>, 27, 1598-1609. <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">doi:10.1038/s41593-023-01558-3</a></li>
 <li>Suzuki, A., et al. (2011). Astrocyte-neuron lactate transport is required for long-term memory formation. <em>Cell</em>, 144(5), 810-823. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">doi:10.1016/j.cell.2011.02.018</a></li>
+<li>Logothetis, N. K., Pauls, J., Augath, M., Trinath, T., &amp; Oeltermann, A. (2001). Neurophysiological investigation of the basis of the fMRI signal. <em>Nature</em>, 412, 150-157. <a href="https://doi.org/10.1038/35084005" target="_blank">doi:10.1038/35084005</a></li>
+<li>Lee, J. H., Durand, R., Gradinaru, V., et al. (2010). Global and local fMRI signals driven by neurons defined optogenetically by type and wiring. <em>Nature</em>, 465, 788-792. <a href="https://doi.org/10.1038/nature09108" target="_blank">doi:10.1038/nature09108</a></li>
+<li>Sirotin, Y. B., &amp; Das, A. (2009). Anticipatory haemodynamic signals in sensory cortex not predicted by local neuronal activity. <em>Nature</em>, 457, 475-479. <a href="https://doi.org/10.1038/nature07664" target="_blank">doi:10.1038/nature07664</a></li>
+<li>Cardoso, M. M. B. M., Sirotin, Y. B., Lima, B., Glushenkova, E., &amp; Das, A. (2012). The neuroimaging signal is a linear sum of neurally distinct stimulus- and task-related components. <em>Nature Neuroscience</em>, 15, 1298-1306. <a href="https://doi.org/10.1038/nn.3170" target="_blank">doi:10.1038/nn.3170</a></li>
+<li>Handwerker, D. A., Ollinger, J. M., &amp; D'Esposito, M. (2004). Variation of BOLD hemodynamic responses across subjects and brain regions and their effects on statistical analyses. <em>NeuroImage</em>, 21, 1639-1651. <a href="https://doi.org/10.1016/j.neuroimage.2003.11.029" target="_blank">doi:10.1016/j.neuroimage.2003.11.029</a></li>
+<li>Bailes, J., Millman, R., Franklin, C., et al. (2023). Resting-state fMRI signals contain spectral signatures of local hemodynamic response timing. <em>eLife</em>. <a href="https://doi.org/10.7554/eLife.86453" target="_blank">doi:10.7554/eLife.86453</a></li>
+<li>Kay, K. N., Jamison, K. W., Zhang, R. Y., &amp; Uğurbil, K. (2019). A critical assessment of data quality and venous effects in sub-millimeter fMRI. <em>NeuroImage</em>, 189, 847-869. <a href="https://doi.org/10.1016/j.neuroimage.2019.02.006" target="_blank">doi:10.1016/j.neuroimage.2019.02.006</a></li>
+<li>Kurzawski, J. W., Yablonskiy, D. A., Pointer, R., et al. (2022). Non-Neural Factors Influencing BOLD Response Magnitudes within Individual Subjects. <em>Journal of Neuroscience</em>, 42, 7256-7266. <a href="https://doi.org/10.1523/JNEUROSCI.2532-21.2022" target="_blank">doi:10.1523/JNEUROSCI.2532-21.2022</a></li>
 </ol>
 </section>
 
