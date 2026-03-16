@@ -5,7 +5,7 @@ description: "マインドアップロード/WBEの理論・計測・実装を�
 article_type: Perspective
 subtitle: "脳の情報処理を別基盤で再現する研究仮説を、計測可能性・同定可能性・維持状態の壁から監査する"
 author: Mind Uploading Research Project
-last_updated: "2026-03-16"
+last_updated: "2026-03-17"
 note: "研究ノート (2026年3月再監査反映)"
 audience: "理論と実装のつながりまで追いたい人、限界や反論も含めて全体を知りたい人"
 reading_time: "30〜45分"
@@ -15,11 +15,13 @@ page_highlights:
   - "理論の紹介だけで終わらず、実装へ落としたときの制約まで一緒に追います。"
   - "強い主張ほど、反証条件や代替説明を並べて確認します。"
   - "局所 connectomics、非侵襲 source imaging、closed-loop 介入は別々の壁に当たるため、同列に読まない構成へ更新しました。"
+  - "speech BCI の same-session streaming success と chronic deployability を分け、fixed decoder interval・recalibration burden・unit identity audit を別提出物として扱います。"
   - "長文ですが、導入と注意書きだけでも全体の立場が分かる構成にしています。"
 known_points:
   - "主要理論のどれも、現時点では単独で決定打になっていません。"
   - "EEG 単体には逆問題や空間分解能の限界があり、強い主張の土台としては不足があります。"
   - "局所 connectomics や source imaging の前進は、human whole-brain の state-complete 観測を意味しません。"
+  - "侵襲 speech BCI の前進は communication subsystem の重要な証拠ですが、fixed decoder longevity と chronic unit identity を別監査しない限り chronic emulate evidence には上げません。"
   - "因果的摂動、追試可能性、代替説明の排除を抜いた強い主張は危うい、という点はかなりはっきりしています。"
 unknown_points:
   - "どの理論の組み合わせが最終的に十分条件になるかは未確定です。"
@@ -729,7 +731,7 @@ href="#ref-57">[57]</a></sup>。
 <section class="section" id="research-program">
 <h2 class="section-title">Research Program</h2>
 
-<p>論文化を意識した実証プランでは、計測・解読・実装の各段階を統合的に示す。目標はマルチモーダル計測と神経解読を統合した「本人性維持」評価系の設計と論文化である。加えて、計測段階の柱として、EEGを中心とした<strong>行動非依存の意識指標</strong>（複雑性×摂動応答×臨界性）のロードマップも明示する。
+<p>論文化を意識した実証プランでは、目標を抽象的な「本人性維持」へ先に置きません。まず <strong>communication subsystem で何ができたか</strong> を固定し、次に <strong>chronic stability</strong> を監査し、最後に <strong>perturbation / maintenance-state</strong> へ進めます。つまり phase の境界は大きな結論ではなく、<strong>どの提出物がそろったか</strong> で切ります。加えて、計測段階の柱として、EEGを中心とした<strong>行動非依存の意識指標</strong>（複雑性×摂動応答×臨界性）のロードマップも明示いたします。
 </p>
 
 <!-- Table: Roadmap -->
@@ -744,18 +746,52 @@ href="#ref-57">[57]</a></sup>。
 <tbody>
 <tr>
 <td>1</td>
-<td>HD-EEG/fMRI同時計測セットアップ、再現性データ収集。IHM採用とBIDSメタデータ拡充。</td>
-<td>brain-to-text 系で、<strong>brainなし / LMなし / shuffle / OOD / drift / latency</strong> を同時に監査する評価パックを固定し、言語事前分布と神経寄与を分離する。</td>
+<td>same-day / cross-day split を分けた EEG・fMRI・speech BCI benchmark pack を作り、task、candidate set、prompt、state annotation、BIDS メタデータを固定します。</td>
+<td>communication subsystem の L1〜L2 監査として、<strong>brainなし / LMなし / shuffle / OOD / latency / abstention</strong> を同時に監査し、言語事前分布と神経寄与、subsystem scope を分離します。</td>
 </tr>
 <tr>
 <td>2</td>
-<td>ESI信号分離とMEGデータの融合。逆問題制約条件の妥当性検証。</td>
-<td>Dynamic Causal Modeling (DCM) による部位間因果ダイナミクス解析と生成モデルの同定。</td>
+<td>chronic session log、fixed decoder interval、<code>time since last supervised calibration</code>、implant metadata を保存し、microelectrode 系では sorting version、drift correction、unit-match log を別管理します。</td>
+<td>longitudinal stability audit として、固定 decoder の劣化曲線、unsupervised recalibration の成否、dropout / new-unit rate、recovery time を評価し、deployability claim の ceiling を決めます。</td>
 </tr>
 <tr>
 <td>3</td>
-<td>WBA統合フレームワークでの動作検証。非神経細胞（グリア）のモデル化。</td>
-<td><strong>神経学的チューリングテスト（Neural Turing Test）</strong>：オリジナルの脳とエミュレーションの「摂動応答（PCI）」の統計的同一性を検証。</td>
+<td>sleep / wake 注釈、maintenance-state log、介入条件、closed-loop failure log、cross-day perturbation dataset を追加し、stack ごとの latent state を明示します。</td>
+<td>family comparison つき生成モデル、perturbation consistency、latent-state error budget、maintenance-state error budget を束で出し、subsystem evidence から causal / longitudinal benchmark へ進めます。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>2026-03-17 追補：chronic speech BCI の 3 つの ceiling</strong>
+<p>
+<a href="https://doi.org/10.1038/s41593-025-01905-6">Littlejohn et al. (2025)</a> と <a href="https://doi.org/10.1038/s41586-025-09127-3">Wairagkar et al. (2025)</a> が押し上げたのは、まず <strong>same-session の streaming / voice route</strong> でございます。しかし次の壁は別で、<a href="https://doi.org/10.1038/s41551-025-01536-z">Wilson et al. (2025)</a> と <a href="https://doi.org/10.1038/s42003-024-06784-4">Pun et al. (2024)</a> が示すように、<strong>fixed decoder longevity</strong> と <strong>recalibration burden</strong> は長期運用の独立変数です。さらに microelectrode 系では、<a href="https://doi.org/10.1126/science.abf4588">Steinmetz et al. (2021)</a>、<a href="https://doi.org/10.1038/s41592-024-02232-7">Pachitariu et al. (2024)</a>、<a href="https://doi.org/10.1038/s41592-024-02440-1">van Beest et al. (2025)</a> が示す通り、<strong>same neuron across days</strong> は motion correction・sorting・probabilistic matching を介した推定であって、生の観測事実ではありません。
+</p>
+</div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>壁</th>
+<th>一次文献が今支持すること</th>
+<th>まだ支持しないこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>same-session streaming ceiling</strong></td>
+<td>Littlejohn らは 80 ms increments の streaming brain-to-voice、Wairagkar らは 10 ms 未満の neural-to-voice synthesis と silence fallback を示しました<sup><a href="#ref-109">[109]</a></sup><sup><a href="#ref-110">[110]</a></sup>。</td>
+<td>ここから直ちに、fixed decoder の長期保持や chronic deployability を主張することはできません。</td>
+</tr>
+<tr>
+<td><strong>recalibration ceiling</strong></td>
+<td>Wilson らは one-month の unsupervised recalibration を検証し、Pun らは human intracortical recordings の instability が BCI performance 低下と高相関することを示しました<sup><a href="#ref-134">[134]</a></sup><sup><a href="#ref-135">[135]</a></sup>。</td>
+<td>したがって、<code>その日に動いた</code> だけで <code>recalibration-light に長期運用できる</code> とは書けません。</td>
+</tr>
+<tr>
+<td><strong>same-neuron tracking ceiling</strong></td>
+<td>Steinmetz らは motion correction 付き stable long-term recording、Pachitariu らは drift / split / merge を中心に据えた spike sorting、van Beest らは probability 付き cross-day neuron tracking を前進させました<sup><a href="#ref-136">[136]</a></sup><sup><a href="#ref-137">[137]</a></sup><sup><a href="#ref-138">[138]</a></sup>。</td>
+<td>microelectrode 系の chronic decode を、そのまま stable single-neuron mechanism の直読と扱うことはできません。</td>
 </tr>
 </tbody>
 </table>
@@ -799,7 +835,7 @@ href="#ref-57">[57]</a></sup>。
 <tr>
 <td><strong>侵襲 streaming speech neuroprosthesis</strong></td>
 <td>Willett らは 125,000 語語彙で高性能 speech BCI を示し、Littlejohn らは 48 words/min の streaming brain-to-voice、Wairagkar らは約 10 ms の instantaneous voice synthesis を示しました<sup><a href="#ref-108">[108]</a></sup><sup><a href="#ref-109">[109]</a></sup><sup><a href="#ref-110">[110]</a></sup>。</td>
-<td>全脳WBE、branch-equivalence、再較正不要の長期安定運用は示していません。ここで実証されたのは communication subsystem の closed loop です。</td>
+<td>全脳WBE、branch-equivalence、fixed decoder の長期保持、microelectrode 系の same-neuron tracking、再較正不要の長期安定運用は示していません。ここで実証されたのは communication subsystem の closed loop です。</td>
 <td><strong>L2〜L3 の局所 benchmark</strong></td>
 </tr>
 <tr>
@@ -816,14 +852,20 @@ href="#ref-57">[57]</a></sup>。
 <li style="margin-bottom: 8px;"><strong>神経寄与の切り分け：</strong><code>brainなし</code>、<code>time-shuffle</code>、<code>trial-shuffle</code>、<code>LM-only</code>、<code>no-LM</code> を並べ、候補集合からの検索なら candidate set size も明示します。</li>
 <li style="margin-bottom: 8px;"><strong>一般化の境界：</strong>held-out 文・held-out story・held-out vocabulary・cross-day・cross-task・cross-subject を分けて報告し、被験者協力や個人適応が必要なら隠さず書きます<sup><a href="#ref-30">[30]</a></sup><sup><a href="#ref-107">[107]</a></sup>。</li>
 <li style="margin-bottom: 8px;"><strong>real-time 指標：</strong>streaming を主張するなら、words/min だけでなく <strong>P50/P95/P99 latency</strong>、silence / abstention rate、dropout、recalibration burden、recovery time を出します<sup><a href="#ref-109">[109]</a></sup><sup><a href="#ref-110">[110]</a></sup>。</li>
+<li style="margin-bottom: 8px;"><strong>chronic stability 指標：</strong><strong>fixed decoder interval</strong>、<code>time since last supervised calibration</code>、microelectrode 系なら <strong>sorting version</strong>、<strong>drift correction</strong>、<strong>unit-match probability</strong>、<strong>dropout / new-unit rate</strong> を別列で残します<sup><a href="#ref-134">[134]</a></sup><sup><a href="#ref-135">[135]</a></sup><sup><a href="#ref-136">[136]</a></sup><sup><a href="#ref-137">[137]</a></sup><sup><a href="#ref-138">[138]</a></sup>。</li>
 <li style="margin-bottom: 8px;"><strong>再現ログ：</strong>brain encoder、language model、vocoder、context window、beam width、外部コーパス、prompt、キャリブレーション手順を固定し、モデル更新が評価を跨いだ場合は別 run として扱います。</li>
 </ul>
+
+<div class="note-box">
+<strong>2026-03-17 追補：same-session streaming を chronic evidence へ読み替えない</strong><br>
+Littlejohn / Wairagkar が押し上げたのは communication subsystem の同日内ないし短期の closed-loop 前進でございます。長期主張へ進むには、Wilson / Pun の再較正負荷、Steinmetz / Pachitariu / van Beest の chronic identity audit を別に通す必要があります。背景の整理は <a href="wiki/state-trait-and-drift.html">Wiki: state・trait・ドリフト</a> を参照してください<sup><a href="#ref-134">[134]</a></sup><sup><a href="#ref-135">[135]</a></sup><sup><a href="#ref-136">[136]</a></sup><sup><a href="#ref-137">[137]</a></sup><sup><a href="#ref-138">[138]</a></sup>。
+</div>
 
 <h3>Mind-Upload 側での運用ルール</h3>
 <ol style="margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.6;">
 <li style="margin-bottom: 8px;"><strong>L1 を主張する条件：</strong>LM-only / shuffle baseline を上回る神経寄与を示し、candidate set や評価条件を隠さないこと。</li>
 <li style="margin-bottom: 8px;"><strong>L2 を主張する条件：</strong>held-out 条件、cross-day ないし cross-task の一般化、低信頼時の abstention を含むこと。</li>
-<li style="margin-bottom: 8px;"><strong>L3 を主張する条件：</strong>streaming log、tail latency、silence / freeze、recalibration burden を提出し、closed-loop の failure mode を公開すること。</li>
+<li style="margin-bottom: 8px;"><strong>L3 を主張する条件：</strong>streaming log、tail latency、silence / freeze、<strong>fixed decoder interval</strong>、recalibration burden を提出し、microelectrode 系なら unit identity audit も含めて closed-loop の failure mode を公開すること。</li>
 <li style="margin-bottom: 8px;"><strong>上位主張への禁止事項：</strong>decode 成功、embedding 類似、会話の自然さを、そのまま emulate / WBE / 本人性保存へ読み替えません。</li>
 </ol>
 
@@ -1452,6 +1494,11 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <li id="ref-131" value="131">Haufe, S., Nikulin, V. V., Müller, K.-R., &amp; Nolte, G. (2013). A critical assessment of connectivity measures for EEG data: A simulation study. <em>NeuroImage</em>, 64, 120–133. <a href="https://doi.org/10.1016/j.neuroimage.2012.09.036">doi:10.1016/j.neuroimage.2012.09.036</a></li>
 <li id="ref-132" value="132">Papadopoulou, M., Friston, K., &amp; Marinazzo, D. (2019). Estimating Directed Connectivity from Cortical Recordings and Reconstructed Sources. <em>Brain Topography</em>, 32(4), 741–752. <a href="https://doi.org/10.1007/s10548-015-0450-6">doi:10.1007/s10548-015-0450-6</a></li>
 <li id="ref-133" value="133">Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <em>Epilepsia</em>, 66(11), 4451–4464. <a href="https://doi.org/10.1111/epi.18552">doi:10.1111/epi.18552</a></li>
+<li id="ref-134" value="134">Wilson, G. H., Stein, E. A., Kamdar, F., et al. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <em>Nature Biomedical Engineering</em>. <a href="https://doi.org/10.1038/s41551-025-01536-z">doi:10.1038/s41551-025-01536-z</a></li>
+<li id="ref-135" value="135">Pun, T. K., Khoshnevis, M., Hosman, T., et al. (2024). Measuring instability in chronic human intracortical neural recordings towards stable, long-term brain-computer interfaces. <em>Communications Biology</em>, 7, 1363. <a href="https://doi.org/10.1038/s42003-024-06784-4">doi:10.1038/s42003-024-06784-4</a></li>
+<li id="ref-136" value="136">Steinmetz, N. A., Aydin, C., Lebedeva, A., et al. (2021). Neuropixels 2.0: A miniaturized high-density probe for stable, long-term brain recordings. <em>Science</em>, 372(6539), eabf4588. <a href="https://doi.org/10.1126/science.abf4588">doi:10.1126/science.abf4588</a></li>
+<li id="ref-137" value="137">Pachitariu, M., Sridhar, S., Pennington, J., &amp; Stringer, C. (2024). Spike sorting with Kilosort4. <em>Nature Methods</em>, 21, 914–921. <a href="https://doi.org/10.1038/s41592-024-02232-7">doi:10.1038/s41592-024-02232-7</a></li>
+<li id="ref-138" value="138">van Beest, E. H., Bimbard, C., Fabre, J. M. J., et al. (2025). Tracking neurons across days with high-density probes. <em>Nature Methods</em>, 22, 778–787. <a href="https://doi.org/10.1038/s41592-024-02440-1">doi:10.1038/s41592-024-02440-1</a></li>
 </ol>
 </section>
 
