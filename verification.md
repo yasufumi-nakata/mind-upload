@@ -742,10 +742,16 @@ Fusion Card が無い場合、本サイトではその結果を原則として <
 </thead>
 <tbody>
 <tr>
-<td><strong>intrinsic excitability / homeostatic controller</strong></td>
-<td>cross-day / cross-perturbation の held-out 劣化、recovery time、可能なら excitability proxy または allocation proxy。</td>
-<td>fixed connectome / fixed decoder と、excitability・homeostasis 項を足した条件を同じ split で比べます。</td>
-<td>within-session の gain しか無い、または recovery を記録していない場合、長期安定性・記憶配分の claim を止めます。</td>
+<td><strong>intrinsic excitability landscape<br>（gain / AIS / allocation state）</strong></td>
+<td>within-day / cross-day の gain drift、relative excitability か allocation proxy、possible なら AIS / channel proxy、cross-perturbation held-out 劣化。</td>
+<td>fixed connectome / fixed decoder と、excitability state 項を足した条件を同じ split で比べ、allocation / gain / spike-initiation rule のどこに効いたかを分けて書きます。</td>
+<td>transcriptomic type か短時間の活動一致しか無い場合、学習配分・cross-day gain・same-cell transfer の claim を止めます。</td>
+</tr>
+<tr>
+<td><strong>homeostatic controller / recovery set point</strong></td>
+<td>cross-day / cross-perturbation の held-out 劣化、recovery time、sleep / wake 注釈、possible なら excitability proxy。</td>
+<td>fixed connectome / fixed decoder と、homeostasis 項を足した条件を同じ split で比べます。</td>
+<td>recovery を記録していない場合、長期安定性・maintenance claim を止めます。</td>
 </tr>
 <tr>
 <td><strong>synaptic efficacy / plastic history</strong></td>
@@ -779,6 +785,12 @@ Fusion Card が無い場合、本サイトではその結果を原則として <
 </tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>2026-03 追補：intrinsic excitability は 1 行では粗すぎます</strong>
+<p>
+今回さらに深掘りして見えた弱点は、<strong>relative excitability による memory allocation</strong>、<strong>AIS geometry / Na+ channel distribution による gain 調整</strong>、<strong>homeostatic recovery controller</strong> を、同じ `intrinsic excitability` の 1 行に畳み込んでいた点でございました。<a href="https://doi.org/10.1038/nature09160" target="_blank">Grubb &amp; Burrone (2010)</a> と <a href="https://doi.org/10.1038/nature09087" target="_blank">Kuba et al. (2010)</a> は、配線を描き替えなくても AIS relocation や Na+ channel distribution の変化で excitability が動くことを示し、<a href="https://doi.org/10.1038/s41467-020-20232-x" target="_blank">Jamann et al. (2021)</a> と <a href="https://doi.org/10.1126/sciadv.adf3885" target="_blank">Fréal et al. (2023)</a> は sensory drive と channel endocytosis が AIS plasticity を駆動することを示しました。さらに <a href="https://doi.org/10.1038/s41593-025-02152-5" target="_blank">Benoit et al. (2025)</a> は fear learning 中の AIS dynamics を、<a href="https://doi.org/10.1016/j.neuron.2014.07.017" target="_blank">Yiu et al. (2014)</a> と <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">Hadzibegovic et al. (2026)</a> は relative excitability が allocation と memory precision を左右することを、<a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> は human でも EEG-defined excitability state が TMS-induced plasticity の efficacy を左右することを示しました。したがって本サイトでは、<strong>excitability landscape</strong> と <strong>recovery controller</strong> を別行に分け、どの evidence tier を見ているかを提出物へ固定します。
+</p>
+</div>
 <div class="note-box">
 <strong>2026-03 追補：structural synapse metric は current weight ではありません</strong>
 <p>
@@ -1574,6 +1586,11 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Vardalaki, D., Chung, K., &amp; Harnett, M. T. (2022). Filopodia are a structural substrate for silent synapses in adult neocortex. <a href="https://doi.org/10.1038/s41586-022-05483-6" target="_blank">doi:10.1038/s41586-022-05483-6</a></li>
 <li>Dürst, C. D., Boele, H.-J., Schonewille, M., &amp; Hoebeek, F. E. (2024). Number of releasable vesicles does not limit short-term plasticity at hippocampal synapses with low release probability. <a href="https://doi.org/10.1038/s41467-024-50549-7" target="_blank">doi:10.1038/s41467-024-50549-7</a></li>
 <li>Alle, H., et al. (2024). Membrane potential states gate synaptic consolidation in human neocortical tissue. <a href="https://doi.org/10.1038/s41467-024-51402-7" target="_blank">doi:10.1038/s41467-024-51402-7</a></li>
+<li>Grubb, M. S., &amp; Burrone, J. (2010). Activity-dependent relocation of the axon initial segment fine-tunes neuronal excitability. <a href="https://doi.org/10.1038/nature09160" target="_blank">doi:10.1038/nature09160</a></li>
+<li>Kuba, H., Oichi, Y., &amp; Ohmori, H. (2010). Presynaptic activity regulates Na+ channel distribution at the axon initial segment. <a href="https://doi.org/10.1038/nature09087" target="_blank">doi:10.1038/nature09087</a></li>
+<li>Jamann, N., Dannehl, D., Lehmann, N., et al. (2021). Sensory input drives rapid homeostatic scaling of the axon initial segment in mouse barrel cortex. <a href="https://doi.org/10.1038/s41467-020-20232-x" target="_blank">doi:10.1038/s41467-020-20232-x</a></li>
+<li>Fréal, A., Jamann, N., Ten Bos, J., et al. (2023). Sodium channel endocytosis drives axon initial segment plasticity. <a href="https://doi.org/10.1126/sciadv.adf3885" target="_blank">doi:10.1126/sciadv.adf3885</a></li>
+<li>Benoit, C. M., Ganea, D. A., Paricio-Montesinos, R., et al. (2025). Axon initial segment dynamics during associative fear learning. <a href="https://doi.org/10.1038/s41593-025-02152-5" target="_blank">doi:10.1038/s41593-025-02152-5</a></li>
 <li>Hengen, K. B., Torrado Pacheco, A., McGregor, J. N., Van Hooser, S. D., &amp; Turrigiano, G. G. (2016). Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
 <li>Torrado Pacheco, A., et al. (2021). Sleep Promotes Downward Firing Rate Homeostasis. <a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">doi:10.1016/j.neuron.2021.04.004</a></li>
 <li>Looser, Z. J., et al. (2024). Oligodendrocyte-axon metabolic coupling is mediated by extracellular K<sup>+</sup> and maintains axonal health. <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">doi:10.1038/s41593-023-01558-3</a></li>
@@ -1592,6 +1609,7 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Dewa, K., et al. (2025). The astrocytic ensemble acts as a multiday trace to stabilize memory. <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">doi:10.1038/s41586-025-09619-2</a></li>
 <li>Bukalo, O., et al. (2026). Astrocytes enable amygdala neural representations supporting memory. <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">doi:10.1038/s41586-025-10068-0</a></li>
 <li>Vadisiute, A., Meijer, E., Therpurakal, R. N., et al. (2024). Glial cells undergo rapid changes following acute chemogenetic manipulation of cortical layer 5 projection neurons. <a href="https://doi.org/10.1038/s42003-024-06994-w" target="_blank">doi:10.1038/s42003-024-06994-w</a></li>
+<li>Yiu, A. P., et al. (2014). Neurons are recruited to a memory trace based on relative neuronal excitability immediately before training. <a href="https://doi.org/10.1016/j.neuron.2014.07.017" target="_blank">doi:10.1016/j.neuron.2014.07.017</a></li>
 <li>Hadzibegovic, N., et al. (2026). Early intrinsic excitability plasticity of neocortical engram neurons defines memory formation and precision. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">doi:10.1038/s41467-025-66975-3</a></li>
 <li>Ovadia, Y., Fertig, E., Ren, J., Nado, Z., Sculley, D., Nowozin, S., Dillon, J. V., Lakshminarayanan, B., &amp; Snoek, J. (2019). Can You Trust Your Model's Uncertainty? Evaluating Predictive Uncertainty Under Dataset Shift. <a href="https://papers.nips.cc/paper_files/paper/2019/hash/8558cb408c1d76621371888657d2eb1d-Abstract.html" target="_blank">NeurIPS 2019</a></li>
 <li>Han, J., Huang, Y., &amp; Wang, Y. (2024). Model Assessment and Selection under Temporal Distribution Shift. <a href="https://proceedings.mlr.press/v235/han24d.html" target="_blank">PMLR 235</a></li>

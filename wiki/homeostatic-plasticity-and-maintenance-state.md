@@ -1,21 +1,22 @@
 ---
 layout: default
 title: "Wiki：恒常性可塑性と維持状態"
-description: "connectome や細胞型ラベルがあっても残る、内在興奮性・睡眠依存 homeostasis・髄鞘/代謝維持・分子ターンオーバー下の維持機構を一次文献から整理します。"
+description: "connectome や細胞型ラベルがあっても残る、内在興奮性・AIS / ion-channel landscape・睡眠依存 homeostasis・髄鞘/代謝維持・分子ターンオーバー下の維持機構を一次文献から整理します。"
 article_type: Wiki
 subtitle: "『配線図＋細胞型』でも、長期ダイナミクスはまだ決まりません"
 author: Mind Uploading Research Project
-last_updated: "2026-03-16"
+last_updated: "2026-03-17"
 note: "Technical / natural science only"
 audience: "connectome の限界をさらに一段深く、内在状態と維持機構の側から確認したい人"
 reading_time: "16〜22分"
-page_intro: "このページは、『配線図も cell type も分かれば、残りはだいたい埋まるのではないか』という直感に対し、内在興奮性、発火率 set point、睡眠依存の再正規化、髄鞘/オリゴデンドロサイト結合、グリア代謝、分子ターンオーバー下の維持機構がなお別変数として残ることを、一次文献ベースで整理する wiki です。哲学や法制度ではなく、技術と自然科学だけに絞ります。"
+page_intro: "このページは、『配線図も cell type も分かれば、残りはだいたい埋まるのではないか』という直感に対し、内在興奮性、AIS / ion-channel landscape、発火率 set point、睡眠依存の再正規化、髄鞘/オリゴデンドロサイト結合、グリア代謝、分子ターンオーバー下の維持機構がなお別変数として残ることを、一次文献ベースで整理する wiki です。哲学や法制度ではなく、技術と自然科学だけに絞ります。"
 accuracy_note: "ここで示すのは、長期ダイナミクスや記憶維持を読むときに最低限外してはいけない hidden state の整理です。これで十分条件が確定したという意味ではありません。"
 page_highlights:
-  - "maintenance-state は内在興奮性だけではなく、睡眠依存 homeostasis、髄鞘/オリゴデンドロサイト、グリア代謝と astrocyte ensemble まで含みます。"
+  - "maintenance-state は内在興奮性だけではなく、AIS / ion-channel landscape、睡眠依存 homeostasis、髄鞘/オリゴデンドロサイト、グリア代謝と astrocyte ensemble まで含みます。"
   - "短期の活動一致と、長期の維持機構が同じであることは別の主張です。"
   - "記憶が残ること自体も、静的分子の保存ではなく、再正規化・再固定化・代謝支援を含む active maintenance として読む必要があります。"
   - "sleep は平均発火率を戻すだけでなく、synapse diversity の維持にも関わるため、maintenance-state を1次元の補正量として扱えません。"
+  - "intrinsic excitability は 1 行ではなく、relative excitability、AIS geometry / Na+ channel distribution、recovery controller に分けて読む必要があります。"
 known_points:
   - "同じ transcriptomic type の内部にも morpho-electric phenotype の連続性や variability が残ります。"
   - "firing rate や synaptic strength は、sleep/wake cycle をまたぐ homeostatic plasticity によって調整されます。"
@@ -51,7 +52,7 @@ recommended_pages:
 <div class="abstract-box">
 <h2>いちばん短い結論</h2>
 <p>
-<strong>connectome と cell type が分かっても、長期ダイナミクスはまだ決まりません</strong>。現状の一次文献が比較的一貫して示しているのは、少なくとも 6 種類の maintenance-state が残るということです。第一に、同じ transcriptomic type の内部でも morpho-electric phenotype と ion-channel expression は幅を持ちます。第二に、神経回路は firing rate や synaptic strength を homeostatic に調整し、<strong>今の活動</strong>を保つだけでなく、<strong>どこへ戻るか</strong>という set point 自体を持ちます。第三に、sleep / wake cycle は synaptic scaling と firing-rate homeostasis を時間的に分業させます。第四に、髄鞘とオリゴデンドロサイト結合は timing だけでなく axonal support にも関わります。第五に、アストロサイトやグリア代謝は記憶固定化の背景ではなく、<strong>記憶想起、数日スパンの安定化、恐怖記憶表現</strong>にも関わります。第六に、分子ターンオーバー下で記憶が残るとしても、それは静止した分子の永久保存ではなく、active maintenance が働いているという意味です。したがって、本サイトでは <strong>内在興奮性・恒常性 set point・睡眠依存再正規化・髄鞘/代謝維持・astrocyte ensemble を含む再固定化機構</strong>を、connectome の外側に残る hidden state として扱います。
+<strong>connectome と cell type が分かっても、長期ダイナミクスはまだ決まりません</strong>。現状の一次文献が比較的一貫して示しているのは、少なくとも 6 種類の maintenance-state が残るということです。第一に、同じ transcriptomic type の内部でも morpho-electric phenotype と ion-channel expression は幅を持ち、さらに AIS geometry や Na+ channel distribution が数時間から数日スパンで動きえます。第二に、神経回路は firing rate や synaptic strength を homeostatic に調整し、<strong>今の活動</strong>を保つだけでなく、<strong>どこへ戻るか</strong>という set point 自体を持ちます。第三に、sleep / wake cycle は synaptic scaling と firing-rate homeostasis を時間的に分業させます。第四に、髄鞘とオリゴデンドロサイト結合は timing だけでなく axonal support にも関わります。第五に、アストロサイトやグリア代謝は記憶固定化の背景ではなく、<strong>記憶想起、数日スパンの安定化、恐怖記憶表現</strong>にも関わります。第六に、分子ターンオーバー下で記憶が残るとしても、それは静止した分子の永久保存ではなく、active maintenance が働いているという意味です。したがって、本サイトでは <strong>relative excitability・AIS / channel state・恒常性 set point・睡眠依存再正規化・髄鞘/代謝維持・astrocyte ensemble を含む再固定化機構</strong>を、connectome の外側に残る hidden state として扱います。
 </p>
 </div>
 
@@ -75,8 +76,8 @@ recommended_pages:
 </thead>
 <tbody>
 <tr>
-<td><strong>内在興奮性 / ion-channel 構成</strong></td>
-<td>threshold、gain、afterhyperpolarization、burstiness、rebound など、入力に対する細胞側の応答則です。</td>
+<td><strong>内在興奮性 / AIS / ion-channel 構成</strong></td>
+<td>threshold、gain、afterhyperpolarization、burstiness、rebound、AIS length / position、Na+ channel distribution など、入力に対する細胞側の応答則です。</td>
 <td>cell-type ラベルか短い活動記録があれば、同じ入力出力則までほぼ決まる、と読むことです。</td>
 <td>morpho-electric か patch / perturbation を伴わない限り、latent state として残します。</td>
 </tr>
@@ -127,17 +128,28 @@ recommended_pages:
 <a href="https://doi.org/10.1038/36103" target="_blank">Turrigiano et al. (1998)</a> は、慢性活動遮断や活動増加に対して neocortical neurons が quantal amplitude を bidirectionally scaling することを示しました。さらに <a href="https://doi.org/10.1016/j.neuron.2014.04.002" target="_blank">O'Leary et al. (2014)</a> は、activity-dependent な ion-channel expression の簡潔な生物物理モデルから、activity set point、cell type、compensation の関係が説明できることを示しました。<a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a> は、in vivo の視覚野で individual neuron が precise firing-rate set point へ戻ることを示しています。ここで重要なのは、<strong>snapshot としての活動値</strong>だけでなく、<strong>perturbation 後にどこへ戻るか</strong>という controller 側の状態が別変数だという点でございます。
 </p>
 
-<h3>3. sleep / wake cycle は synapse と network regime を再配線します</h3>
+<h3>3. intrinsic excitability は 1 行ではなく、AIS と ion-channel landscape に分かれます</h3>
+<p>
+今回もっとも深掘りすべきだった弱点は、<strong>intrinsic excitability</strong> を 1 つの latent state として書くと、<strong>relative excitability による memory allocation</strong>、<strong>AIS geometry / Na+ channel distribution による gain 調整</strong>、<strong>homeostatic recovery controller</strong> が同じ証拠階層に見えてしまう点でございました。<a href="https://doi.org/10.1038/nature09160" target="_blank">Grubb &amp; Burrone (2010)</a> は activity に応じた AIS relocation が neuronal excitability を fine-tune することを示し、<a href="https://doi.org/10.1038/nature09087" target="_blank">Kuba et al. (2010)</a> は presynaptic activity が AIS の Na+ channel distribution を調整しうることを示しました。さらに <a href="https://doi.org/10.1038/s41467-020-20232-x" target="_blank">Jamann et al. (2021)</a> は mouse barrel cortex で sensory input に応じた rapid homeostatic AIS scaling を、<a href="https://doi.org/10.1126/sciadv.adf3885" target="_blank">Fréal et al. (2023)</a> は sodium channel endocytosis が AIS plasticity を駆動することを、<a href="https://doi.org/10.1038/s41593-025-02152-5" target="_blank">Benoit et al. (2025)</a> は associative fear learning の間に AIS dynamics が変わることを示しました。したがって、<strong>同じ connectome と同じ cell type</strong> が分かっていても、<strong>数時間から数日スパンの threshold / gain / spike-initiation rule</strong> はなお latent に残ります。
+</p>
+<div class="note-box">
+<strong>この節から直接言えること</strong>
+<p>
+ここから直接言えるのは、WBE や長期 BCI の入力出力則を読むとき、<strong>intrinsic excitability を 1 個の数字や 1 行の欠測欄に潰してはいけない</strong>という点でございます。allocation、AIS / channel state、recovery controller は別々に測るか、少なくとも別々に棄権理由を書く必要があります。
+</p>
+</div>
+
+<h3>4. sleep / wake cycle は synapse と network regime を再配線します</h3>
 <p>
 現行サイトの弱点は、maintenance-state を excitability と molecular turnover に寄せすぎて、<strong>sleep が再正規化の時間軸そのものを担う</strong>ことを前面に出せていなかった点です。<a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">Torrado Pacheco et al. (2021)</a> は、wake で上がった firing rate が sleep 中に downward homeostasis で戻ることを示しました。<a href="https://doi.org/10.1126/science.aah5982" target="_blank">de Vivo et al. (2017)</a> は wake / sleep cycle をまたぐ ultrastructural な synaptic scaling を示し、<a href="https://doi.org/10.1126/science.aai8355" target="_blank">Diering et al. (2017)</a> は Homer1a を介した sleep 中の excitatory synapse scaling-down を示しました。さらに <a href="https://doi.org/10.1126/science.aav2642" target="_blank">Noya et al. (2019)</a> は forebrain synaptic proteome が sleep によって駆動されることを示し、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a> は sleep が cortical network をよりよい computational regime へ戻すことを報告しました。加えて <a href="https://doi.org/10.1016/j.cub.2024.07.032" target="_blank">Koukaroudi et al. (2024)</a> は、sleep deprivation が cortex と hippocampus の excitatory synapse diversity を減らすことを示し、maintenance-state が単なる平均値の再較正ではなく、<strong>synaptic repertoire の分布維持</strong>も含むことを強めました。したがって、<strong>same-day の活動一致だけで maintenance-state が合ったと読むことはできません</strong>。sleep history と overnight recovery log が無ければ、翌日の安定性や学習後の再平衡はまだ別問題です。
 </p>
 
-<h3>4. 髄鞘とオリゴデンドロサイトは timing と support の変数です</h3>
+<h3>5. 髄鞘とオリゴデンドロサイトは timing と support の変数です</h3>
 <p>
 現行ページは内在興奮性には触れていても、<strong>delay を生む基盤である髄鞘の可塑性</strong>を maintenance-state として十分に固定していませんでした。<a href="https://doi.org/10.1126/science.1252304" target="_blank">Gibson et al. (2014)</a> は neuronal activity が oligodendrogenesis と adaptive myelination を促進することを示し、<a href="https://doi.org/10.1126/science.1254960" target="_blank">McKenzie et al. (2014)</a> は motor skill learning に active central myelination が必要であることを示しました。さらに <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a> は oligodendrocyte-axon metabolic coupling が extracellular K<sup>+</sup> に媒介され、axonal health の維持に関わることを示しました。したがって、<strong>同じ配線と同じ cell type でも、myelin / oligodendroglial state が違えば timing と回復性は変わりえます</strong>。delay を固定定数で置いたモデルは便利ですが、その近似で何を捨てたかを明記すべきでございます。
 </p>
 
-<h3>5. アストロサイトは記憶想起・安定化・表現の state variable です</h3>
+<h3>6. アストロサイトは記憶想起・安定化・表現の state variable です</h3>
 <p>
 maintenance-state を neuron-centric に読みすぎると、エネルギー供給と local transmitter integration を「背景ノイズ」と誤読しやすくなります。<a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a> は astrocyte-neuron lactate transport が long-term memory formation に必要であることを示しました。<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> は、局所的で瞬間的な neurotransmitter input が分オーダーにわたる広い astrocyte network state に符号化されることを示しました。さらに <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a> は hippocampus で learning-associated astrocyte ensemble が engram neuron の近傍に形成され、ensemble 再活性化が memory recall を引き起こし、astrocyte 特異的 NFIA deletion が recall を抑えることを示しました。<a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a> は emotional memory に伴う astrocyte ensemble が repeated recall をまたいで数日スパンの安定化へ寄与し、noradrenergic input と local engram signal を統合して memory stability と precision を左右することを示しました。さらに <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> は basolateral amygdala astrocytes が fear retrieval / extinction に応じて再編成され、astrocyte Ca<sup>2+</sup> signaling が amygdala-prefrontal circuit の neural representation を支えることを示しました。ここから直接言えるのは、<strong>glial / metabolic background を後付け補正とみなすのは危険であり、長期記憶では astrocyte ensemble 自体が state variable として残る</strong>という点です。memory consolidation や slow network state を論じるなら、少なくとも astrocyte / metabolic support をどこまで測ったか、どこから先を proxy で代用したかを区別する必要があります。
 </p>
@@ -149,12 +161,12 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 </p>
 </div>
 
-<h3>6. 分子ターンオーバー下の記憶は、静的保存ではなく再固定化として読むべきです</h3>
+<h3>7. 分子ターンオーバー下の記憶は、静的保存ではなく再固定化として読むべきです</h3>
 <p>
 <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Lee et al. (2022)</a> は、シミュレーションと解析を通じて、synaptic memory が molecular turnover の下でも active な CaMKII state transfer により維持されうることを示しました。ここから直接言えるのは、「分子が入れ替わっても記憶が残ることはありうる」という点です。しかし逆に言えば、<strong>記憶の持続は静的分子 snapshot の十分性を意味せず、維持機構が働いていることを意味する</strong>と読む方が安全でございます。sleep 中の synaptic scaling や glial-metabolic support を合わせて読むと、記憶維持は単一分子の凍結保存ではなく、<strong>再正規化と再固定化の連鎖</strong>として扱う方が一次文献に近い整理になります。
 </p>
 
-<h3>7. 相対 excitability は将来の記憶配分を左右します</h3>
+<h3>8. 相対 excitability は将来の記憶配分を左右します</h3>
 <p>
 <a href="https://doi.org/10.1016/j.neuron.2014.07.017" target="_blank">Yiu et al. (2014)</a> は、学習前の相対的な neuronal excitability が、どのニューロンが memory trace に組み込まれやすいかを左右することを示しました。さらに <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">Hadzibegovic et al. (2026)</a> は、neocortical engram neurons の early intrinsic excitability plasticity が memory formation と precision を規定することを示しています。したがって、<strong>connectome が同じでも excitability landscape が違えば、将来の学習経路と記憶配分は変わりえます</strong>。
 </p>
@@ -189,6 +201,11 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <td>sleep が firing-rate homeostasis と synapse diversity に関与する、という maintenance の存在証拠。</td>
 <td>human individual での overnight maintenance-state を、どの proxy で operationalize するか。</td>
 </tr>
+<tr>
+<td><strong>human perturbation-gated excitability proxy</strong><br>Zrenner ら</td>
+<td>EEG-defined excitability state が TMS-induced plasticity efficacy を左右する、という human 側の因果 proxy。</td>
+<td>AIS geometry、channel distribution、cell-specific allocation state、長期 recovery controller。</td>
+</tr>
 </tbody>
 </table>
 <div class="note-box">
@@ -214,6 +231,11 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <td><strong>cell-type ラベルが分かれば入力出力則もほぼ決まる</strong></td>
 <td>同じ type の内部にも morpho-electric variability と channel-expression variability が残ります。</td>
 <td>cell-type だけでは excitability fixed と書かず、latent state として残します。</td>
+</tr>
+<tr>
+<td><strong>同じ connectome / cell type なら、AIS や channel-state もほぼ同じだ</strong></td>
+<td>AIS length / position と Na+ channel distribution は、activity・sensory input・learning に応じて動きます。</td>
+<td>patch、perturbation、AIS proxy が無ければ、gain / allocation / spike-initiation rule は latent state として残します。</td>
 </tr>
 <tr>
 <td><strong>平均 firing rate が戻ったので内部状態も同じに戻った</strong></td>
@@ -255,6 +277,7 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <h4>Rule</h4>
 <ul>
 <li><strong>長期 claim では maintenance-state を別列に出す：</strong>connectome / cell type / synapse と、intrinsic excitability、sleep-homeostasis、myelin / oligodendroglial support、glial / metabolic support を混ぜません。</li>
+<li><strong>intrinsic excitability を 1 行に潰さない：</strong>relative excitability、AIS / channel state、recovery controller を別欄にします。</li>
 <li><strong>sleep / wake 履歴を測っていなければ測っていないと書く：</strong>same-day fit から overnight maintenance を自動補完しません。</li>
 <li><strong>sleep を平均値補正に縮約しない：</strong>synapse diversity や network regime まで落ちる可能性を残します。</li>
 <li><strong>delay を定数で吸収したら吸収したと書く：</strong>timing state と axonal support を無言でモデル内へ押し込みません。</li>
@@ -278,6 +301,10 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <td>fixed model の劣化曲線、recovery time、sleep / wake 注釈、state / trait / drift の切り分け、possible なら firing-rate distribution や excitability proxy。</td>
 </tr>
 <tr>
+<td><strong>gain / excitability claim</strong></td>
+<td>relative excitability か perturbation proxy、possible なら AIS / channel proxy、within-day / cross-day の gain drift、未測定 allocation / recovery controller の omission log。</td>
+</tr>
+<tr>
 <td><strong>長期 memory / learning claim</strong></td>
 <td>学習前後の perturbation 応答、relative excitability か allocation proxy、overnight renormalization の有無、glial / astrocyte covariate か omission log、未測定 maintenance-state 一覧。</td>
 </tr>
@@ -298,6 +325,11 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <ol>
 <li>Gouwens, N. W., et al. (2021). Phenotypic variation of transcriptomic cell types in mouse motor cortex. <em>Nature</em>, 598, 144-150. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
 <li>Schulz, D. J., Goaillard, J.-M., &amp; Marder, E. (2006). Variable channel expression in identified single and electrically coupled neurons in different animals. <em>Nature Neuroscience</em>, 9(3), 356-362. <a href="https://doi.org/10.1038/nn1639" target="_blank">doi:10.1038/nn1639</a></li>
+<li>Grubb, M. S., &amp; Burrone, J. (2010). Activity-dependent relocation of the axon initial segment fine-tunes neuronal excitability. <em>Nature</em>, 465(7301), 1070-1074. <a href="https://doi.org/10.1038/nature09160" target="_blank">doi:10.1038/nature09160</a></li>
+<li>Kuba, H., Oichi, Y., &amp; Ohmori, H. (2010). Presynaptic activity regulates Na+ channel distribution at the axon initial segment. <em>Nature</em>, 465(7301), 1075-1078. <a href="https://doi.org/10.1038/nature09087" target="_blank">doi:10.1038/nature09087</a></li>
+<li>Jamann, N., Dannehl, D., Lehmann, N., et al. (2021). Sensory input drives rapid homeostatic scaling of the axon initial segment in mouse barrel cortex. <em>Nature Communications</em>, 12, 23. <a href="https://doi.org/10.1038/s41467-020-20232-x" target="_blank">doi:10.1038/s41467-020-20232-x</a></li>
+<li>Fréal, A., Jamann, N., Ten Bos, J., et al. (2023). Sodium channel endocytosis drives axon initial segment plasticity. <em>Science Advances</em>, 9(37). <a href="https://doi.org/10.1126/sciadv.adf3885" target="_blank">doi:10.1126/sciadv.adf3885</a></li>
+<li>Benoit, C. M., Ganea, D. A., Paricio-Montesinos, R., et al. (2025). Axon initial segment dynamics during associative fear learning. <em>Nature Neuroscience</em>, 29(3), 535-542. <a href="https://doi.org/10.1038/s41593-025-02152-5" target="_blank">doi:10.1038/s41593-025-02152-5</a></li>
 <li>Turrigiano, G. G., Leslie, K. R., Desai, N. S., Rutherford, L. C., &amp; Nelson, S. B. (1998). Activity-dependent scaling of quantal amplitude in neocortical neurons. <em>Nature</em>, 391, 892-896. <a href="https://doi.org/10.1038/36103" target="_blank">doi:10.1038/36103</a></li>
 <li>O'Leary, T., Williams, A. H., Franci, A., &amp; Marder, E. (2014). Cell types, network homeostasis, and pathological compensation from a biologically plausible ion channel expression model. <em>Neuron</em>, 82(4), 809-821. <a href="https://doi.org/10.1016/j.neuron.2014.04.002" target="_blank">doi:10.1016/j.neuron.2014.04.002</a></li>
 <li>Hengen, K. B., Torrado Pacheco, A., McGregor, J. N., Van Hooser, S. D., &amp; Turrigiano, G. G. (2016). Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <em>Cell</em>, 165(1), 180-191. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
@@ -309,6 +341,7 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <li>Koukaroudi, D., Qiu, Z., Fransén, E., et al. (2024). Sleep maintains excitatory synapse diversity in the cortex and hippocampus. <em>Current Biology</em>, 34(16), 3836-3843.e5. <a href="https://doi.org/10.1016/j.cub.2024.07.032" target="_blank">doi:10.1016/j.cub.2024.07.032</a></li>
 <li>Yiu, A. P., et al. (2014). Neurons are recruited to a memory trace based on relative neuronal excitability immediately before training. <em>Neuron</em>, 83(3), 722-735. <a href="https://doi.org/10.1016/j.neuron.2014.07.017" target="_blank">doi:10.1016/j.neuron.2014.07.017</a></li>
 <li>Hadzibegovic, N., et al. (2026). Early intrinsic excitability plasticity of neocortical engram neurons defines memory formation and precision. <em>Nature Communications</em>, 17, 291. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">doi:10.1038/s41467-025-66975-3</a></li>
+<li>Zrenner, C., Desideri, D., Belardinelli, P., &amp; Ziemann, U. (2018). Real-time EEG-defined excitability states determine efficacy of TMS-induced plasticity in human motor cortex. <em>Brain Stimulation</em>, 11(2), 374-389. <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">doi:10.1016/j.brs.2017.11.016</a></li>
 <li>Gibson, E. M., et al. (2014). Neuronal activity promotes oligodendrogenesis and adaptive myelination in the mammalian brain. <em>Science</em>, 344(6183), 1252304. <a href="https://doi.org/10.1126/science.1252304" target="_blank">doi:10.1126/science.1252304</a></li>
 <li>McKenzie, I. A., et al. (2014). Motor skill learning requires active central myelination. <em>Science</em>, 346(6207), 318-322. <a href="https://doi.org/10.1126/science.1254960" target="_blank">doi:10.1126/science.1254960</a></li>
 <li>Looser, Z. J., et al. (2024). Oligodendrocyte-axon metabolic coupling is mediated by extracellular K<sup>+</sup> and maintains axonal health. <em>Nature Neuroscience</em>, 27, 1598-1609. <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">doi:10.1038/s41593-023-01558-3</a></li>
