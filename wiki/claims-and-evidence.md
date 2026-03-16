@@ -5,7 +5,7 @@ description: "Mind-Upload や脳科学のニュースを、主張の強さ・計
 article_type: Wiki
 subtitle: "派手な文言を、measurement ceiling と validation route まで分解して読む"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-16"
 note: "Reading guide (technical / natural science emphasis)"
 audience: "ニュースや研究発表を読み違えたくない人、L0〜L5 を measurement ceiling まで含めてつかみたい人"
 reading_time: "12〜18分"
@@ -170,7 +170,7 @@ recommended_pages:
 </p>
 
 <p>
-また、<a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a>、<a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">Torrado Pacheco et al. (2021)</a>、<a href="https://doi.org/10.1038/s41593-023-01517-y" target="_blank">Looser et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> から本サイトが引く <strong>推論</strong> は、`connectome-complete` をそのまま `emulation-complete` と読んではならない、という点でございます。これは structural scaffold の価値を否定するのではなく、hidden state がまだ残ることを明示するためです。
+また、<a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a>、<a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">Torrado Pacheco et al. (2021)</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> から本サイトが引く <strong>推論</strong> は、`connectome-complete` をそのまま `emulation-complete` と読んではならない、という点でございます。これは structural scaffold の価値を否定するのではなく、hidden state がまだ残ることを明示するためです。
 </p>
 </section>
 
@@ -287,7 +287,7 @@ measurement stack の差を詳しく見たい場合は <a href="measurement-stac
 <li>van Beest, E. H., Bimbard, C., Fabre, J. M. J., et al. (2024). Tracking neurons across days with high-density probes. <em>Nature Methods</em>, 21, 2071-2080. <a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">doi:10.1038/s41592-024-02440-1</a></li>
 <li>Gouwens, N. W., et al. (2021). Phenotypic variation of transcriptomic cell types in mouse motor cortex. <em>Nature</em>, 598, 144-150. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
 <li>Torrado Pacheco, A., et al. (2021). Sleep Promotes Downward Firing Rate Homeostasis. <em>Neuron</em>, 109(3), 530-544.e6. <a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">doi:10.1016/j.neuron.2021.04.004</a></li>
-<li>Looser, Z. J., et al. (2024). Oligodendrocyte-axon metabolic coupling is mediated by extracellular K<sup>+</sup> and maintains axonal health. <em>Nature Neuroscience</em>, 27, 1584-1598. <a href="https://doi.org/10.1038/s41593-023-01517-y" target="_blank">doi:10.1038/s41593-023-01517-y</a></li>
+<li>Looser, Z. J., et al. (2024). Oligodendrocyte-axon metabolic coupling is mediated by extracellular K<sup>+</sup> and maintains axonal health. <em>Nature Neuroscience</em>, 27, 1598-1609. <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">doi:10.1038/s41593-023-01558-3</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <em>Nature</em>, 629, 146-153. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 </ol>
 </section>

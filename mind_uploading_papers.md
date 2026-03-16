@@ -26,7 +26,7 @@ wiki_links:
   - label: "Wiki: 検証基盤の基本"
     url: "/wiki/verification-basics.html"
     description: "論文を読むとき、何を証拠として重く見るかの前提を補います。"
-last_updated: "2026-03-15"
+last_updated: "2026-03-16"
 note: "Curated archive"
 audience: "関連論文を広く見たい人、年別の傾向をざっと掴みたい人、元論文へ戻る入口が欲しい人"
 reading_time: "目次確認なら5分、精読は必要な論文だけ"
@@ -167,7 +167,7 @@ Badge は「どこから辿れる文献か」の手掛かりであり、それ�
 </tr>
 <tr>
 <td><strong>maintenance-state / hidden variable</strong></td>
-<td><a href="https://doi.org/10.1038/s41467-024-47838-5" target="_blank">Xu et al. (2024)</a>、<a href="https://doi.org/10.1038/s41593-023-01517-y" target="_blank">Looser et al. (2024)</a>、<a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Lee et al. (2022)</a></td>
+<td><a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a>、<a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Lee et al. (2022)</a></td>
 <td>sleep-dependent renormalization、oligodendrocyte-axon metabolic coupling、molecular turnover 下の memory maintenance が、connectome 外の状態変数として残ることを強く示します。</td>
 <td>配線図 + cell type だけで long-term dynamics が十分だ、という読みに替えてはいけません。</td>
 <td><a href="wbe_101.html#state-completeness">WBE 101 の hidden state 節</a> / <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">恒常性可塑性と維持状態</a></td>
@@ -229,7 +229,7 @@ Badge は「どこから辿れる文献か」の手掛かりであり、それ�
 </tr>
 <tr>
 <td><strong>構造推定と hidden state を見たい</strong></td>
-<td><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan 2020</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse 2023</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao 2025</a> と、<a href="https://doi.org/10.1038/s41467-024-47838-5" target="_blank">Xu 2024</a>、<a href="https://doi.org/10.1038/s41593-023-01517-y" target="_blank">Looser 2024</a> を起点にしてください。</td>
+<td><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan 2020</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse 2023</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao 2025</a> と、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu 2024</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser 2024</a> を起点にしてください。</td>
 </tr>
 </tbody>
 </table>

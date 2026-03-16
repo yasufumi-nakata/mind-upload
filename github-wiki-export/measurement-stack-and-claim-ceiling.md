@@ -4,10 +4,10 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-15 / 位置づけ: Technical / natural science only
+- 更新日: 2026-03-16 / 位置づけ: Technical / natural science only
 
 ## このページの役割
-このページは、WBE の議論で見落としやすい『measurement stack ごとの主張上限』を固定する wiki です。hidden state が重要だというだけでは足りません。EEG/MEG/fMRI、高密度 extracellular probe、spatial transcriptomics、Patch-seq、volume EM、same-brain functional connectomics、local transmitter / glia imaging が、それぞれ何を直接観測し、何をまだ latent に残すのかを、一次文献ベースで整理します。
+このページは、WBE の議論で見落としやすい『measurement stack ごとの主張上限』を固定する wiki です。hidden state が重要だというだけでは足りません。EEG/MEG/fMRI、高密度 extracellular probe、spatial transcriptomics、Patch-seq、volume EM、same-brain functional connectomics、local transmitter / glia imaging が、それぞれ何を直接観測し、何をまだ latent に残すのかを、state variable と timescale まで含めて一次文献ベースで整理します。
 
 ## 正確さの前提
 以下の『claim ceiling』列は、各論文がそのまま宣言している結論ではありません。一次文献が直接観測した変数と、依然として未観測の状態変数から本サイトが引く運用上の推論でございます。
@@ -52,7 +52,7 @@
 従来の公開ページは、connectome だけでは足りないこと、maintenance-state が残ること、augmentation / ablation で比較すべきことを既に押さえていました。しかし、それだけでは読者が <strong>multimodal</strong>、<strong>atlas</strong>、<strong>same-brain</strong> という語を見たときに、「かなり全部見えた」と過大解釈する余地が残ります。弱点は、<strong>state variable の議論</strong>と<strong>measurement stack の議論</strong>がまだ十分に一体化していなかったことでございます。
 </p>
 <p>
-そこで本ページでは、各 stack の直接観測量、何を少し強く言えるか、何が依然として latent state として残るか、そしてこのサイトで許す <strong>claim ceiling</strong> を 1 つの表に統合します。
+そこで本ページでは、各 stack の直接観測量、何を少し強く言えるか、何が依然として latent state として残るか、そしてこのサイトで許す <strong>claim ceiling</strong> を 1 つの表に統合します。今回の更新ではさらに、row を measurement stack から <strong>state variable</strong> へ切り替えた timescale 行列も追加し、「multimodal」という 1 語に畳み込まれやすい不足を分離します。
 </p>
 
 <h2>計測スタックごとの observability と claim ceiling</h2>
@@ -139,6 +139,88 @@
 </tbody>
 </table>
 
+<h2>state variable × timescale × observability matrix</h2>
+
+<strong>今回追加した批判軸</strong>
+<p>
+stack 別の ceiling 表だけでは、「何が見えていないか」は分かっても、<strong>どの state variable が、どの timescale で、どの route なら direct observation なのか</strong>までは固定できません。したがってここでは row を measurement stack ではなく <strong>state variable</strong> に切り替え、各行を <strong>direct</strong>、<strong>proxy / bridge</strong>、<strong>inferred / absent</strong> に分けます。
+</p>
+
+<table>
+<thead>
+<tr>
+<th>state variable</th>
+<th>支配 timescale / なぜ効くか</th>
+<th>今日もっとも direct な route</th>
+<th>direct と誤読されやすい proxy / bridge</th>
+<th>このサイトでの運用上の結論</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>cell identity / spatial placement</strong></td>
+<td>日〜生涯の比較的安定な骨格で、cell class と spatial prior を与えます。</td>
+<td>whole-brain spatial transcriptomics、Patch-seq、形態再構成です。</td>
+<td>in vivo activity だけからの cell-type classifier、atlas prior の投影です。</td>
+<td><strong>identity prior には direct</strong>ですが、current state や maintenance-state の直接観測には数えません。</td>
+</tr>
+<tr>
+<td><strong>current synaptic efficacy / plastic history</strong></td>
+<td>ms〜日で変わり、release probability、STP/LTP/LTD、recent plastic history が予測と介入応答を左右します。</td>
+<td>局所 paired physiology、same-brain function + perturbation、coverage-limited な direct validation です。</td>
+<td>EM synapse count、connectome-only model、cell-type label です。</td>
+<td><strong>非破壊・全脳の direct route は未整備</strong>です。held-out perturbation gain が無ければ inferred のままにします。</td>
+</tr>
+<tr>
+<td><strong>intrinsic excitability / homeostatic set point</strong></td>
+<td>秒〜日で threshold / gain / recovery target を変え、縦断安定性と memory allocation に効きます。</td>
+<td>局所 intracellular / patch、longitudinal perturbation と recovery log です。</td>
+<td>短時間 firing-rate snapshot、cell-type label、decoder fit です。</td>
+<td><strong>cross-day / recovery 記録が無ければ latent</strong>です。same-day fit を長期 stability へ延長しません。</td>
+</tr>
+<tr>
+<td><strong>delay / myelin / axonal support</strong></td>
+<td>ms〜週で位相、伝導遅延、学習後 timing を変えます。</td>
+<td>伝導測定、myelin histology、oligodendrocyte-axon physiology です。</td>
+<td>tract geometry、graph path length、fixed delay parameter です。</td>
+<td><strong>timing-sensitive claim では delay-aware audit を必須</strong>にします。固定遅延だけなら ceiling を下げます。</td>
+</tr>
+<tr>
+<td><strong>neuromodulatory specificity</strong></td>
+<td>subsecond〜分で state gating と gain control を変えます。</td>
+<td>local transmitter sensor、axon activity imaging、transmitter-specific calibration です。</td>
+<td>pupil、locomotion、behaviour label、global arousal proxy です。</td>
+<td><strong>transmitter-specific / region-specific calibration が無ければ proxy</strong>と書き、internal state ground truth へ上げません。</td>
+</tr>
+<tr>
+<td><strong>glial / metabolic slow-state</strong></td>
+<td>秒〜時間で recovery、consolidation、metabolic support を左右します。</td>
+<td>astrocyte / glia imaging、metabolic assay、slow-state covariate 記録です。</td>
+<td>BOLD、broadband LFP / EEG envelope、行動状態だけのラベルです。</td>
+<td><strong>neuron-only fit では slow-state completeness を主張しません</strong>。memory consolidation も別扱いにします。</td>
+</tr>
+<tr>
+<td><strong>sleep / recovery regime</strong></td>
+<td>時間〜日で overnight renormalization と regime recovery を決めます。</td>
+<td>polysomnography、sleep staging、overnight recovery log、cross-day perturbation です。</td>
+<td>same-day task fit、coarse vigilance label、短時間 resting-state 類似度です。</td>
+<td><strong>same-day agreement を翌日安定性へ延長しません</strong>。sleep history が無ければ maintenance-state claim は弱めます。</td>
+</tr>
+<tr>
+<td><strong>chronic unit identity / tissue response</strong></td>
+<td>日〜月で longitudinal decode と same-neuron claim の妥当範囲を決めます。</td>
+<td>probabilistic unit matching、drift correction、implant age と tissue-response audit です。</td>
+<td>channel continuity、waveform 類似、manual curation だけの継続判定です。</td>
+<td><strong>matching probability、dropout、tissue log が無ければ same-neuron claim を止めます</strong>。</td>
+</tr>
+</tbody>
+</table>
+
+<strong>短い結論</strong>
+<p>
+Yao らと Gouwens / Gamlin らは主に <strong>cell identity</strong> 行を、MICrONS は局所的に <strong>synaptic efficacy / plastic history</strong> 行を、Hengen / Torrado Pacheco / Xu らは <strong>sleep / recovery regime</strong> 行を、Gibson / McKenzie / Looser らは <strong>delay / myelin / axonal support</strong> 行を、Neyhart らは <strong>neuromodulatory specificity</strong> 行を、Cahill / Suzuki らは <strong>glial / metabolic slow-state</strong> 行を、van Beest / Gregory らは <strong>chronic unit identity</strong> 行を押し上げました。重要なのは、<strong>これらが別々の行を押し上げている</strong>という点であり、1 本の multimodal stack が入っただけで全行が direct になった扱いはできません。
+</p>
+
 <h2>なぜ ceiling がこれほど違うのか</h2>
 
 <h3>1. atlas は identity を強くするが、current state を直接は与えません</h3>
@@ -177,6 +259,7 @@ Neyhart らは cortical ACh dynamics が cholinergic axon activity と behaviora
 <ul>
 <li><strong>augmentation claim には measurement stack を書く：</strong>「transcriptomic label を足した」ではなく、whole-brain atlas か Patch-seq bridge か same-brain link かを区別します。</li>
 <li><strong>atlas / bridge / local population window / scaffold / local twin / proxy calibration を混ぜない：</strong>同じ「前進」でも、どの種類の前進かを固定します。</li>
+<li><strong>latent state を 1 箱にしない：</strong>cell identity、synaptic efficacy、intrinsic excitability、delay / myelin、neuromodulation、glia、sleep / recovery、chronic unit identity を分け、dominant timescale を添えます。</li>
 <li><strong>multimodal を state-complete の同義語にしない：</strong>何の latent state が依然として残るかを本文に併記します。</li>
 <li><strong>未観測状態を埋めるときは推定と書く：</strong>cell type から threshold / gain / set point を自動補完した場合は latent inference と明記します。</li>
 <li><strong>sorted spike を stable neuron identity と書かない：</strong>chronic 記録では sorting version、drift correction、unit-match probability、dropout rate を別に残します。</li>
@@ -240,5 +323,12 @@ Neyhart らは cortical ACh dynamics が cholinergic axon activity と behaviora
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <em>Nature</em>, 640, 497-505. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <em>Cell Reports</em>, 43(10), 114808. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <em>Nature</em>, 629, 146-153. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
-<li>Xu, W., et al. (2024). Sleep restores an optimal computational regime in cortical networks. <em>Nature Communications</em>, 15, 3820. <a href="https://doi.org/10.1038/s41467-024-47838-5" target="_blank">doi:10.1038/s41467-024-47838-5</a></li>
+<li>Xu, W., et al. (2024). Sleep restores an optimal computational regime in cortical networks. <em>Nature Neuroscience</em>, 27, 972-980. <a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">doi:10.1038/s41593-023-01536-9</a></li>
+<li>Hengen, K. B., Torrado Pacheco, A., McGregor, J. N., Van Hooser, S. D., &amp; Turrigiano, G. G. (2016). Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <em>Cell</em>, 165(1), 180-191. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
+<li>Torrado Pacheco, A., et al. (2021). Sleep Promotes Downward Firing Rate Homeostasis. <em>Neuron</em>, 109(3), 530-544.e6. <a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">doi:10.1016/j.neuron.2021.04.004</a></li>
+<li>Hadzibegovic, N., et al. (2026). Early intrinsic excitability plasticity of neocortical engram neurons defines memory formation and precision. <em>Nature Communications</em>, 17, 291. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">doi:10.1038/s41467-025-66975-3</a></li>
+<li>Gibson, E. M., et al. (2014). Neuronal activity promotes oligodendrogenesis and adaptive myelination in the mammalian brain. <em>Science</em>, 344(6183), 1252304. <a href="https://doi.org/10.1126/science.1252304" target="_blank">doi:10.1126/science.1252304</a></li>
+<li>McKenzie, I. A., et al. (2014). Motor skill learning requires active central myelination. <em>Science</em>, 346(6207), 318-322. <a href="https://doi.org/10.1126/science.1254960" target="_blank">doi:10.1126/science.1254960</a></li>
+<li>Looser, Z. J., et al. (2024). Oligodendrocyte-axon metabolic coupling is mediated by extracellular K<sup>+</sup> and maintains axonal health. <em>Nature Neuroscience</em>, 27, 1598-1609. <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">doi:10.1038/s41593-023-01558-3</a></li>
+<li>Suzuki, A., et al. (2011). Astrocyte-neuron lactate transport is required for long-term memory formation. <em>Cell</em>, 144(5), 810-823. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">doi:10.1016/j.cell.2011.02.018</a></li>
 </ol>

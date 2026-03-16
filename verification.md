@@ -721,7 +721,7 @@ Fusion Card が無い場合、本サイトではその結果を原則として <
 <section class="section" id="latent-state-error-budget">
 <h2 class="section-title">2026-03 追補：latent-state error budget を加える</h2>
 <p>
-今回さらに深掘りして見えた弱点は、<strong>Observability Budget だけでは「何が直接見えていないか」は書けても、どの latent state がいまの claim をどれだけ止めているか</strong>までは固定しきれないことでした。<a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> は connectome 制約を入れても dynamics の縮退が残ることを示し、<a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> は same-brain structure-function link が local conditional prediction を強くする一方で全脳 state-complete を与えないことを示しました。さらに、<a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">Gamlin et al. (2025)</a>、<a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">van Beest et al. (2024)</a>、<a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>、<a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">Hadzibegovic et al. (2026)</a> に加え、<a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">Torrado Pacheco et al. (2021)</a>、<a href="https://doi.org/10.1038/s41593-023-01517-y" target="_blank">Looser et al. (2024)</a> は、cell-type bridge、chronic unit identity、transmitter specificity、glial slow-state、intrinsic excitability、sleep-dependent recovery、axonal support が別々の誤差源として残ることを裏づけます。したがって本サイトでは、<strong>L2 以上の提出物に Observability Budget と latent-state error budget の両方</strong>を要求し、未観測状態を「列挙」ではなく「どの誤差項をまだ支配しているか」で管理します。
+今回さらに深掘りして見えた弱点は、<strong>Observability Budget だけでは「何が直接見えていないか」は書けても、どの latent state がいまの claim をどれだけ止めているか</strong>までは固定しきれないことでした。<a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> は connectome 制約を入れても dynamics の縮退が残ることを示し、<a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> は same-brain structure-function link が local conditional prediction を強くする一方で全脳 state-complete を与えないことを示しました。さらに、<a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">Gamlin et al. (2025)</a>、<a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">van Beest et al. (2024)</a>、<a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>、<a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">Hadzibegovic et al. (2026)</a> に加え、<a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">Torrado Pacheco et al. (2021)</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a> は、cell-type bridge、chronic unit identity、transmitter specificity、glial slow-state、intrinsic excitability、sleep-dependent recovery、axonal support が別々の誤差源として残ることを裏づけます。今回の再監査ではさらに、<strong>各 latent-state 行に dominant timescale、evidence tier、transfer ceiling を持たせないと、same-day fit を cross-day stability へ、rodent local causal result を human whole-brain sufficient condition へ読み替えやすい</strong>ことも見えました。したがって本サイトでは、<strong>L2 以上の提出物に Observability Budget と latent-state error budget の両方</strong>を要求し、未観測状態を「列挙」ではなく「どの誤差項をまだ支配しているか」で管理します。
 </p>
 <table class="data-table">
 <thead>
@@ -768,6 +768,38 @@ Fusion Card が無い場合、本サイトではその結果を原則として <
 <td>unit-match probability、dropout / new-unit rate、sorting version、drift correction、implant age、tissue-response proxy。</td>
 <td>cross-day decoding と single-unit longitudinal claim を分け、population readout と unit identity を別監査にします。</td>
 <td>matching probability と dropout が無い場合、same neuron across days や single-unit memory trace claim を止めます。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>2026-03 で追加した必須列</strong>
+<p>
+latent-state error budget は、誤差源の名前だけでなく、<strong>どの時間スケールで止まるのか</strong>、<strong>どの証拠階層に依拠しているのか</strong>、<strong>どこまで human へ持ち込めるのか</strong>を同時に固定して初めて、過大な昇格を防げます。
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>追記列</th>
+<th>最低限の書き方</th>
+<th>この列が無いと起きる誤読</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>dominant timescale</strong></td>
+<td>trial / within-session / within-day / cross-day / multiday のどこで誤差が支配的かを書きます。</td>
+<td>same-day の gain を、そのまま overnight recovery や長期安定性へ読み替えやすくなります。</td>
+</tr>
+<tr>
+<td><strong>evidence tier</strong></td>
+<td>direct human / same-brain mammal / causal rodent / model / proxy-only のどれかでラベルします。</td>
+<td>構造推定、proxy、rodent local intervention を同じ強さの ground truth と誤読しやすくなります。</td>
+</tr>
+<tr>
+<td><strong>transfer ceiling</strong></td>
+<td>local circuit、region-limited、species-limited、macro scaffold など、外挿の上限を書きます。</td>
+<td>rodent 局所回路の成功を human whole-brain sufficient condition へ、macro-biochemical scaffold を local transmitter ground truth へ誤昇格させやすくなります。</td>
 </tr>
 </tbody>
 </table>
@@ -1228,7 +1260,7 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
 <li>Hengen, K. B., Torrado Pacheco, A., McGregor, J. N., Van Hooser, S. D., &amp; Turrigiano, G. G. (2016). Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
 <li>Torrado Pacheco, A., et al. (2021). Sleep Promotes Downward Firing Rate Homeostasis. <a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">doi:10.1016/j.neuron.2021.04.004</a></li>
-<li>Looser, Z. J., et al. (2024). Oligodendrocyte-axon metabolic coupling is mediated by extracellular K<sup>+</sup> and maintains axonal health. <a href="https://doi.org/10.1038/s41593-023-01517-y" target="_blank">doi:10.1038/s41593-023-01517-y</a></li>
+<li>Looser, Z. J., et al. (2024). Oligodendrocyte-axon metabolic coupling is mediated by extracellular K<sup>+</sup> and maintains axonal health. <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">doi:10.1038/s41593-023-01558-3</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Williamson, N. R., et al. (2025). Learning-associated astrocyte ensembles regulate memory recall. <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">doi:10.1038/s41586-024-08170-w</a></li>

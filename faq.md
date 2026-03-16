@@ -5,7 +5,7 @@ description: "Mind-Uploadを読んでいて出やすい疑問に、短く正確�
 article_type: FAQ
 subtitle: "派手な結論より、検証できる前進を"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-16"
 note: "Human-first"
 audience: "まず疑問や誤解を整理したい人、短いQ&Aで全体像をつかみたい人"
 reading_time: "8〜15分"
@@ -249,10 +249,10 @@ Mind-Uploadで重視するのは、「人っぽく見えるか」だけでなく
 <section class="section" id="q2c">
 <h2 class="section-title">Q. コネクトームと cell type が分かれば、残りはほぼ埋まる？</h2>
 <p>
-A. まだ言えません。<a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a> が示したように、同じ transcriptomic type の内部にも morpho-electric phenotype の幅が残ります。さらに <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">Torrado Pacheco et al. (2021)</a>、<a href="https://doi.org/10.1038/s41467-024-47838-5" target="_blank">Xu et al. (2024)</a> は、sleep / wake cycle をまたぐ homeostasis と network recovery が別に残ることを示しました。
+A. まだ言えません。<a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a> が示したように、同じ transcriptomic type の内部にも morpho-electric phenotype の幅が残ります。さらに <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">Torrado Pacheco et al. (2021)</a>、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a> は、sleep / wake cycle をまたぐ homeostasis と network recovery が別に残ることを示しました。
 </p>
 <p>
-また、<a href="https://doi.org/10.1126/science.1252304" target="_blank">Gibson et al. (2014)</a>、<a href="https://doi.org/10.1126/science.1254960" target="_blank">McKenzie et al. (2014)</a>、<a href="https://doi.org/10.1038/s41593-023-01517-y" target="_blank">Looser et al. (2024)</a> は髄鞘と oligodendrocyte support が timing と axonal health に関わることを示し、<a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>、<a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Lee et al. (2022)</a> は glial / metabolic support と turnover 下の active maintenance が記憶固定化や slow state に関わることを示しました。したがって、<strong>same-day の活動一致</strong>と<strong>cross-day の維持機構一致</strong>は別の主張でございます。
+また、<a href="https://doi.org/10.1126/science.1252304" target="_blank">Gibson et al. (2014)</a>、<a href="https://doi.org/10.1126/science.1254960" target="_blank">McKenzie et al. (2014)</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a> は髄鞘と oligodendrocyte support が timing と axonal health に関わることを示し、<a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>、<a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Lee et al. (2022)</a> は glial / metabolic support と turnover 下の active maintenance が記憶固定化や slow state に関わることを示しました。加えて、glial / astrocyte の強い因果証拠の中心は現時点では rodent の局所回路・記憶課題であり、human whole-brain arbitrary content の直接 ground truth ではございません。したがって、<strong>same-day の活動一致</strong>と<strong>cross-day の維持機構一致</strong>は別の主張であり、human 側ではまず structural / macro-biochemical scaffold と local hidden state を分けて読みます。
 </p>
 <p>
 Mind-Upload では、ここから <strong>connectome-complete を structural scaffold の前進</strong>として扱い、<strong>emulation-complete</strong> とは言い換えません。短い答えの先としては <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> と <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> が最短です。
@@ -388,10 +388,10 @@ Mind-Uploadの差別化点は、<strong>「検証基盤（Verification Commons�
 <li>Gouwens, N. W., et al. (2021). Integrated morphoelectric and transcriptomic classification of cortical GABAergic cells. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
 <li>Hengen, K. B., Torrado Pacheco, A., McGregor, J. N., Van Hooser, S. D., &amp; Turrigiano, G. G. (2016). Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
 <li>Torrado Pacheco, A., et al. (2021). Sleep Promotes Downward Firing Rate Homeostasis. <a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">doi:10.1016/j.neuron.2021.04.004</a></li>
-<li>Xu, W., et al. (2024). Sleep restores an optimal computational regime in cortical networks. <a href="https://doi.org/10.1038/s41467-024-47838-5" target="_blank">doi:10.1038/s41467-024-47838-5</a></li>
+<li>Xu, W., et al. (2024). Sleep restores an optimal computational regime in cortical networks. <a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">doi:10.1038/s41593-023-01536-9</a></li>
 <li>Gibson, E. M., et al. (2014). Neuronal activity promotes oligodendrogenesis and adaptive myelination in the mammalian brain. <a href="https://doi.org/10.1126/science.1252304" target="_blank">doi:10.1126/science.1252304</a></li>
 <li>McKenzie, I. A., et al. (2014). Motor skill learning requires active central myelination. <a href="https://doi.org/10.1126/science.1254960" target="_blank">doi:10.1126/science.1254960</a></li>
-<li>Looser, Z. J., et al. (2024). Oligodendrocyte-axon metabolic coupling is mediated by extracellular K<sup>+</sup> and maintains axonal health. <a href="https://doi.org/10.1038/s41593-023-01517-y" target="_blank">doi:10.1038/s41593-023-01517-y</a></li>
+<li>Looser, Z. J., et al. (2024). Oligodendrocyte-axon metabolic coupling is mediated by extracellular K<sup>+</sup> and maintains axonal health. <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">doi:10.1038/s41593-023-01558-3</a></li>
 <li>Suzuki, A., et al. (2011). Astrocyte-neuron lactate transport is required for long-term memory formation. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">doi:10.1016/j.cell.2011.02.018</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Lee, J.-C., Wang, C.-Y., Lin, C.-L., &amp; Lu, H.-C. (2022). Synaptic memory survives molecular turnover. <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">doi:10.1073/pnas.2211572119</a></li>
