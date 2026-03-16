@@ -5,7 +5,7 @@ description: "公開データ（EEG中心）の選定から、BIDS→QC→前処
 article_type: Resource
 subtitle: "「何を使うか」と「どう再現するか」を分けずに最短ルートでつなぐ"
 author: Mind Uploading Research Project
-last_updated: "2026-03-16"
+last_updated: "2026-03-17"
 note: "Curated List + L0 Practice"
 audience: "どの公開データから始めるべきか迷っている人、L0の練習台を探している人"
 reading_time: "12〜20分"
@@ -366,7 +366,7 @@ Musall et al. (2019) は、task 中の neural activity が uninstructed movement
 <section class="section" id="foundation-model-audit">
 <h2 class="section-title">2.6) foundation / self-supervised EEG model を使うときの追加監査</h2>
 <p>
-今回さらに深掘りすべきだった弱点は、このサイトの Dataset 導線が「foundation model を使えば dataset 問題が軽くなる」という誤読をまだ止め切れていなかった点です。<a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">Kostas et al. (2021)</a>、<a href="https://papers.nips.cc/paper_files/paper/2023/file/f6b30f3e2dd9cb53bbf2024402d02295-Paper-Conference.pdf" target="_blank">Wang et al. (2023)</a>、<a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/47393e8594c82ce8fd83adc672cf9872-Abstract-Conference.html" target="_blank">Jiang et al. (2024)</a>、<a href="https://neurips.cc/virtual/2024/poster/93793" target="_blank">Wang et al. (2024)</a> が heterogeneity を残したうえで、<a href="https://openreview.net/forum?id=J5SbLoq7Uv" target="_blank">Lee et al. (2025)</a> は current LBM の改善幅が小さく parameter cost が大きいと報告しました。さらに <a href="https://eeg2025.github.io/" target="_blank">EEG Foundation Challenge 2025</a> と <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a> は benchmark standardization 自体が主要課題だと示し、<a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025)</a>、<a href="https://arxiv.org/abs/2512.19097" target="_blank">Han et al. (2025)</a>、<a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> は setup variation、scaling law、benchmark inconsistency をそれぞれ中心問題として扱いました。つまり dataset 側では、corpus identity だけでなく <strong>benchmark provenance</strong> と <strong>scale / efficiency</strong> まで出さないと比較が成立しません。
+今回さらに深掘りすべきだった弱点は、このサイトの Dataset 導線が「foundation model を使えば dataset 問題が軽くなる」という誤読をまだ止め切れていなかった点です。<a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">Kostas et al. (2021)</a>、<a href="https://papers.nips.cc/paper_files/paper/2023/file/f6b30f3e2dd9cb53bbf2024402d02295-Paper-Conference.pdf" target="_blank">Wang et al. (2023)</a>、<a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/47393e8594c82ce8fd83adc672cf9872-Abstract-Conference.html" target="_blank">Jiang et al. (2024)</a>、<a href="https://neurips.cc/virtual/2024/poster/93793" target="_blank">Wang et al. (2024)</a> が heterogeneity を残したうえで、<a href="https://openreview.net/forum?id=J5SbLoq7Uv" target="_blank">Lee et al. (2025)</a> は current LBM の改善幅が小さく parameter cost が大きいと報告しました。さらに <a href="https://eeg2025.github.io/" target="_blank">EEG Foundation Challenge 2025</a> と <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a> は benchmark standardization 自体が主要課題だと示し、<a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025)</a>、<a href="https://arxiv.org/abs/2512.19097" target="_blank">Han et al. (2025)</a>、<a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> は setup variation、scaling law、benchmark inconsistency をそれぞれ中心問題として扱いました。つまり dataset 側では、corpus identity だけでなく <strong>benchmark provenance</strong>、<strong>scale / efficiency</strong>、そして <strong>source type / evidence maturity</strong> まで出さないと比較が成立しません。
 </p>
 
 <table class="data-table">
@@ -399,6 +399,11 @@ Musall et al. (2019) は、task 中の neural activity が uninstructed movement
 <td>「pretraining が効いた」のか、「target data で強く適応した」のかを区別できません。</td>
 </tr>
 <tr>
+<td><strong>source type / evidence maturity</strong></td>
+<td>accepted journal / conference、accepted poster / workshop、official challenge docs、arXiv preprint、under-review manuscript の別と、moving target な website / rules なら last verified date です。</td>
+<td>benchmark 警告や運用文書を、accepted model paper と同じ強さの frontier evidence と誤読します。</td>
+</tr>
+<tr>
 <td><strong>benchmark provenance</strong></td>
 <td>benchmark 名、version、split construction、checkpoint selection、segment length、normalization、外部 hold-out の作り方です。</td>
 <td>benchmark 設計差で起きた ranking 変動を、model capability の差と誤読します。</td>
@@ -429,6 +434,13 @@ Musall et al. (2019) は、task 中の neural activity が uninstructed movement
 </div>
 
 <div class="note-box">
+<strong>2026-03-17 の追加 site rule</strong>
+<p>
+foundation / self-supervised 結果では、<strong>accepted model paper</strong>、<strong>official challenge website / rules</strong>、<strong>arXiv preprint / under-review manuscript</strong> を同じ証拠階級として扱いません。たとえば EEG Foundation Challenge の公式サイトは、challenge paper preprint が execution phase の変更を反映しておらず、現行の website と starter kit を参照するよう明記しています。したがって moving target な benchmark では、<strong>どの page を authority source とし、いつ確認したか</strong>まで card に含めます。
+</p>
+</div>
+
+<div class="note-box">
 <strong>この節から出る site rule</strong>
 <p>
 今後このサイトでは、foundation / self-supervised 系の結果に通常の dataset card とは別に <strong>Pretraining Card</strong> を添えます。これが無い結果、あるいは <strong>benchmark provenance</strong> と <strong>scale / efficiency profile</strong> が欠ける結果は、たとえ高スコアでも <strong>L1 の限定つき decode</strong> として扱い、cross-day stability、source imaging 改善、deployable loop、WBE 向け state reconstruction へは上げません。
@@ -439,7 +451,7 @@ Musall et al. (2019) は、task 中の neural activity が uninstructed movement
 <section class="section" id="benchmark-governance">
 <h2 class="section-title">2.7) benchmark governance を出さない leaderboard は比較可能な証拠になりません</h2>
 <p>
-今回さらに改善すべきだった弱点は、このページが <strong>evaluation family</strong> と <strong>benchmark provenance</strong> までは整理できていても、<strong>benchmark の運用規約そのもの</strong>をまだ card 化していなかった点でございます。<a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant (2018)</a> と <a href="https://moabb.neurotechx.com/docs/index.html" target="_blank">MOABB Docs</a> は within-session / cross-session / cross-subject の比較を標準化しますが、<a href="https://proceedings.mlr.press/v37/blum15.html" target="_blank">Blum &amp; Hardt (2015)</a> が示すように leaderboard は repeated submission により adaptive hold-out になりえます。一方で <a href="https://papers.neurips.cc/paper_files/paper/2019/hash/ee39e503b6bedf0c98c388b7e8589aca-Abstract.html" target="_blank">Roelofs et al. (2019)</a> は、separate final test を持つ設計では public leaderboard overfitting が必ずしも大きくないことも示しました。したがって結論は「leaderboard は全部無効」ではなく、<strong>hidden evaluation</strong>、<strong>submission budget</strong>、<strong>checkpoint selection policy</strong>、<strong>extra data / pretraining disclosure</strong> を governance として固定しない限り、score の意味が揺れる、でございます。実際、<a href="https://www.bbci.de/competition/iv/" target="_blank">BCI Competition IV</a> は labeled calibration + unlabeled evaluation と 1 researcher 1 result を採り、<a href="https://eeg2025.github.io/rules/" target="_blank">EEG Challenge 2025 Rules</a> と <a href="https://eeg2025.github.io/submission/" target="_blank">Submission</a> は code submission、single-GPU inference、daily submission limit、extra dataset / pretrained model の申告を要求しています。さらに <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a> と <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> は、protocol inconsistency 自体が cross-model comparison を壊し、同一 dataset 上でも ranking reversal を生むことを示しました。
+今回さらに改善すべきだった弱点は、このページが <strong>evaluation family</strong> と <strong>benchmark provenance</strong> までは整理できていても、<strong>benchmark の運用規約そのもの</strong>をまだ card 化していなかった点でございます。<a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant (2018)</a> と <a href="https://moabb.neurotechx.com/docs/index.html" target="_blank">MOABB Docs</a> は within-session / cross-session / cross-subject の比較を標準化しますが、<a href="https://proceedings.mlr.press/v37/blum15.html" target="_blank">Blum &amp; Hardt (2015)</a> が示すように leaderboard は repeated submission により adaptive hold-out になりえます。一方で <a href="https://papers.neurips.cc/paper_files/paper/2019/hash/ee39e503b6bedf0c98c388b7e8589aca-Abstract.html" target="_blank">Roelofs et al. (2019)</a> は、separate final test を持つ設計では public leaderboard overfitting が必ずしも大きくないことも示しました。したがって結論は「leaderboard は全部無効」ではなく、<strong>hidden evaluation</strong>、<strong>submission budget</strong>、<strong>checkpoint selection policy</strong>、<strong>extra data / pretraining disclosure</strong>、さらに <strong>どの source が current authority で、いつ確認したか</strong> を governance として固定しない限り、score の意味が揺れる、でございます。実際、<a href="https://www.bbci.de/competition/iv/" target="_blank">BCI Competition IV</a> は labeled calibration + unlabeled evaluation と 1 researcher 1 result を採り、<a href="https://eeg2025.github.io/rules/" target="_blank">EEG Challenge 2025 Rules</a> と <a href="https://eeg2025.github.io/submission/" target="_blank">Submission</a> は code submission、single-GPU inference、daily submission limit、extra dataset / pretrained model の申告を要求しています。さらに <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a> と <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> は、protocol inconsistency 自体が cross-model comparison を壊し、同一 dataset 上でも ranking reversal を生むことを示しました。
 </p>
 
 <table class="data-table">
@@ -455,6 +467,11 @@ Musall et al. (2019) は、task 中の neural activity が uninstructed movement
 <td><strong>benchmark object</strong></td>
 <td>benchmark 名、version、task 定義、採点 metric、dataset snapshot / DOI、freeze date です。</td>
 <td>同じ dataset 名でも別 protocol の score を、そのまま同列比較してしまいます。</td>
+</tr>
+<tr>
+<td><strong>authority source / last verified</strong></td>
+<td>official website、rules、submission page、starter kit、proposal / companion preprint のどれを authority としたか、そして最終確認日です。</td>
+<td>古い proposal や README を current rule と誤読し、動いている challenge の score 解釈を取り違えます。</td>
 </tr>
 <tr>
 <td><strong>evaluation surface</strong></td>
@@ -498,6 +515,13 @@ Musall et al. (2019) は、task 中の neural activity が uninstructed movement
 <strong>この card は、本サイトの運用推論です</strong>
 <p>
 上の <strong>Benchmark Governance Card</strong> は、各 benchmark や competition が単一の公式 schema として宣言しているものではございません。<a href="https://proceedings.mlr.press/v37/blum15.html" target="_blank">Blum &amp; Hardt (2015)</a>、<a href="https://papers.neurips.cc/paper_files/paper/2019/hash/ee39e503b6bedf0c98c388b7e8589aca-Abstract.html" target="_blank">Roelofs et al. (2019)</a>、<a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a>、<a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a>、および競技の公式 rules / submission 設計から、本サイトが引く運用上の整理でございます。つまり、ここで要求している欄名は **推論** ですが、その推論の根拠は「adaptive leaderboard は統計的に別問題である」「separate final test と submission governance が score の意味を左右する」「protocol inconsistency が ranking を反転させうる」という一次資料にあります。
+</p>
+</div>
+
+<div class="note-box">
+<strong>2026-03-17 の authority rule</strong>
+<p>
+challenge や benchmark が運用中なら、<strong>current authority は official website / rules / submission page</strong> であり、proposal preprint は背景資料として扱います。したがってこのサイトでは、Benchmark Governance Card に <strong>authority source / last verified</strong> が無い score を、stable benchmark evidence とは読みません。
 </p>
 </div>
 

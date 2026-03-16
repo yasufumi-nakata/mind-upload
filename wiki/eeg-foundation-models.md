@@ -5,7 +5,7 @@ description: "EEG の foundation / self-supervised model をどう読むかを�
 article_type: Wiki
 subtitle: "表現学習の前進と、まだ止める主張を分けて読む"
 author: Mind Uploading Research Project
-last_updated: "2026-03-16"
+last_updated: "2026-03-17"
 note: "Technical / natural science only"
 audience: "LaBraM、BIOT、EEGPT、BENDR のような EEG foundation model を過大評価せずに読みたい人"
 reading_time: "10〜15分"
@@ -14,6 +14,7 @@ accuracy_note: "ここで扱うのは技術と自然科学の読み方です。W
 page_highlights:
   - "foundation model は EEG decode を押し上げますが、observability / identifiability / deployability を一度に解決しません。"
   - "最近の一次文献自身が、electrode mismatch、sample-rate 差、missing channel、low SNR、inter-subject variability を主要課題として扱っています。"
+  - "受理済み論文、公式 challenge 規約、arXiv preprint / under-review manuscript は同じ証拠階級として扱いません。"
   - "2025〜2026 の challenge / benchmark 文献は、標準化された cross-task / cross-subject 評価そのものが未完成だと示しています。"
   - "大きい model が自動的に勝つわけではなく、parameter 効率、学習時間、benchmark 仕様で順位が動きます。"
   - "比較可能性を保つには、通常の model card に加えて Pretraining Card が必要です。"
@@ -72,12 +73,23 @@ EEG foundation model は、<strong>表現学習</strong>と<strong>少ラベル 
 </p>
 </div>
 
+<div class="note-box">
+<strong>2026-03-17 時点で先に固定する source type</strong>
+<p>
+このページで並べる source は、<strong>査読済み journal / accepted conference paper</strong>、<strong>accepted poster / workshop</strong>、<strong>official challenge website / rules</strong>、<strong>arXiv preprint</strong>、<strong>under-review manuscript</strong> が混在します。これは同じ強さの evidence ではありません。たとえば EEG Foundation Challenge の公式サイトは、2025-11-17 の更新で <strong>proposal preprint は execution phase の変更を反映しておらず、現行の website と starter kit を参照せよ</strong>と明記しています。したがって本ページでは、model capability の比較、benchmark governance の警告、moving target な competition rule を同じ 1 本の frontier ranking として並べません。
+</p>
+</div>
+
 <section class="section" id="paper-boundaries">
-<h2 class="section-title">一次文献が今支持する境界</h2>
+<h2 class="section-title">一次資料を evidence tier ごとに分けて読む</h2>
+<p>
+今回もっとも修正すべきだった弱点は、<strong>accepted model paper</strong>、<strong>official challenge documentation</strong>、<strong>benchmark-warning preprint</strong>、<strong>under-review manuscript</strong> を、同じ強さの「最新研究」として読みやすかった点でございます。技術的にはこれが重要です。なぜなら、accepted model paper が比較的強く支えるのは <strong>ある設定での representation learning / transfer の前進</strong>であり、official rules が支えるのは <strong>benchmark の露出条件</strong>であり、preprint benchmark audit が支えるのは <strong>比較の不安定性に関する警告</strong>だからです。したがって、source type を出さない table は、それ自体が誤読源になります。
+</p>
 <table class="data-table">
 <thead>
 <tr>
 <th>実例</th>
+<th>source type / 2026-03-17 時点</th>
 <th>比較的強く言えること</th>
 <th>論文自身が残している壁</th>
 </tr>
@@ -85,65 +97,76 @@ EEG foundation model は、<strong>表現学習</strong>と<strong>少ラベル 
 <tbody>
 <tr>
 <td><strong>Kostas et al. (2021)</strong><br>BENDR</td>
+<td>査読済み journal paper</td>
 <td>self-supervised pretraining が novel subjects / hardware / tasks へ breadth を持ちうることを示しました。</td>
 <td>downstream applicability はなお未確定で、pretraining だけで万能な転移が保証されたわけではありません。</td>
 </tr>
 <tr>
 <td><strong>Wang et al. (2023)</strong><br>BIOT</td>
+<td>accepted conference paper</td>
 <td>sampling rate、channel、recording duration、missing values が違う heterogeneous biosignal を cross-data 学習へ持ち込む具体策を示しました。</td>
 <td>裏返すと、format harmonization を書かない結果は比較不能だということです。</td>
 </tr>
 <tr>
 <td><strong>Jiang et al. (2024)</strong><br>LaBraM</td>
+<td>accepted conference paper</td>
 <td>約 20 dataset、約 2,500 時間の EEG で cross-dataset pretraining を行い、複数 downstream task で強い性能を示しました。</td>
 <td>EEG 側の主課題として、electrode mismatch、unequal length、varied task design、low SNR を正面から残しています。</td>
 </tr>
 <tr>
 <td><strong>Wang et al. (2024)</strong><br>EEGPT</td>
+<td>accepted conference presentation</td>
 <td>low SNR、inter-subject variability、channel mismatch に対して、pretrained transformer と linear probing で強い downstream 性能を示しました。</td>
 <td>高スコアがそのまま cross-day deployability や source identifiability を意味するわけではありません。</td>
 </tr>
 <tr>
 <td><strong>Lee et al. (2025)</strong><br>ICML fine-tuning audit</td>
+<td>accepted conference poster</td>
 <td>現行 large brainwave foundation model は従来 deep baseline をわずかに上回り、LoRA などの PEFT で trainable parameter を大きく減らせると示しました。</td>
 <td>改善幅は小さく、abstract レベルでも約 0.5% 程度です。したがって「大きい model ほど勝つ」とは読めません。</td>
 </tr>
 <tr>
 <td><strong>EEG Foundation Challenge (2025)</strong><br>NeurIPS competition</td>
+<td>official competition website / rules</td>
 <td>cross-task transfer と subject-invariant representation を、3,000 人超の HBN-EEG 参加者で標準化して測ろうとしています。</td>
-<td>裏返すと、2025 年時点でも benchmark 規格そのものがまだ整備中であり、単発の task win は universal generalization の証拠ではありません。</td>
+<td>ここが直接与えるのは current benchmark governance であり、model capability の最終判定ではありません。しかも official site 自身が proposal preprint の outdated 性を明記しているため、運用条件は現行 rules / starter kit で読みます。</td>
 </tr>
 <tr>
 <td><strong>Xiong et al. (2025)</strong><br>EEG-FM-Bench</td>
+<td>arXiv benchmark preprint</td>
 <td>foundation model の増殖が standardized evaluation を追い越し、fragmented comparison が科学的進歩を鈍らせていると明示しました。</td>
-<td>benchmark をそろえない比較は scientific inefficiency を生み、architecture の真の差を隠します。</td>
+<td>benchmark をそろえない比較は scientific inefficiency を生みますが、これは frontier ranking の最終裁定ではなく benchmark warning として読むのが安全です。</td>
 </tr>
 <tr>
 <td><strong>El Ouahidi et al. (2025)</strong><br>REVE</td>
-<td>arbitrary length と electrode arrangement を扱える 4D positional encoding を導入し、大規模 pretraining で多様 setup への転移を前進させました。</td>
-<td>論文の出発点自体が「既存 EEG foundation model は setup variation に弱い」ことであり、heterogeneity 問題は未解決のまま central です。</td>
+<td>accepted poster / arXiv manuscript</td>
+<td>arbitrary length と electrode arrangement を扱える 4D positional encoding を導入し、多様 setup への転移を押し上げる方向性を示しました。</td>
+<td>ここで比較的強く読めるのは heterogeneity 対応の方向性であり、accepted benchmark 全体で安定した universal ranking ではありません。</td>
 </tr>
 <tr>
 <td><strong>Han et al. (2025)</strong><br>DIVER-1</td>
-<td>largest-scale corpus と systematic scaling law analysis を提示し、electrophysiology では data-constrained scaling が成り立つと報告しました。</td>
-<td>固定 data / compute では smaller models trained longer が larger models trained briefly を上回りうるため、parameter count 単独で優劣は決まりません。</td>
+<td>under-review / arXiv manuscript</td>
+<td>largest-scale corpus と systematic scaling law analysis を提示し、electrophysiology では data-constrained scaling が論点だと主張しました。</td>
+<td>固定 data / compute では smaller models trained longer が larger models trained briefly を上回りうる、という警告は重要ですが、under-review source 単独で scale law の既定路線を固定しません。</td>
 </tr>
 <tr>
 <td><strong>Wang et al. (2025)</strong><br>NeuroTTT</td>
+<td>arXiv method preprint</td>
 <td>pretraining-downstream misalignment と cross-subject shift に対し、domain-tuned self-supervision と test-time training が有効だと示しました。</td>
-<td>裏返すと、foundation model 単体で downstream adaptation が十分だという前提は成立していません。</td>
+<td>裏返すと、foundation model 単体で downstream adaptation が十分だという前提は成立していません。また、TTT を含む結果は deployment simplicity の証拠としては読みません。</td>
 </tr>
 <tr>
 <td><strong>Lahiri et al. (2026)</strong><br>PRISM</td>
-<td>targeted diversity を含む pretraining が fine-tuning 下で優位になりうること、clinical mimicker task で大きな改善を示しうることを報告しました。</td>
-<td>benchmark inconsistency だけで identical dataset 上の ranking が最大 24 pp 反転しうるため、model ranking 自体を監査対象にすべきです。</td>
+<td>arXiv clinical-transfer preprint</td>
+<td>targeted diversity を含む pretraining が fine-tuning 下で優位になりうること、clinical mimicker task で改善が起こりうることを報告しました。</td>
+<td>benchmark inconsistency だけで identical dataset 上の ranking が大きく反転しうるという警告は重要ですが、これも accepted clinical benchmark の共通結論としてはまだ固定しません。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="seven-gates">
-<h2 class="section-title">foundation model を読む前の 7 つの gate</h2>
+<h2 class="section-title">foundation model を読む前の 8 つの gate</h2>
 <table class="data-table">
 <thead>
 <tr>
@@ -153,6 +176,11 @@ EEG foundation model は、<strong>表現学習</strong>と<strong>少ラベル 
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><strong>G0: source type / maturity</strong></td>
+<td>accepted paper、accepted poster、official rules、arXiv preprint、under-review manuscript では、主張の強さが違います。</td>
+<td>source type、accepted / preprint / under-review の別、moving target な rules page なら last verified date。</td>
+</tr>
 <tr>
 <td><strong>G1: corpus identity / overlap</strong></td>
 <td>pretraining corpus も dataset です。downstream と近縁データが混ざれば split の意味が崩れます。</td>
@@ -228,6 +256,11 @@ foundation / self-supervised 系の結果には、通常の model card に加え
 <td>どの inductive bias が効いたかを比較できません。</td>
 </tr>
 <tr>
+<td><strong>Source Type / Maturity</strong></td>
+<td>accepted journal / conference、accepted poster / workshop、official rules、arXiv preprint、under-review manuscript の別と、rules page なら last verified date。</td>
+<td>under-review warning や operational documentation を、accepted model paper と同じ強さの frontier evidence と誤読します。</td>
+</tr>
+<tr>
 <td><strong>Adaptation</strong></td>
 <td>frozen / linear-probe / PEFT / full fine-tune / TTT、target data 使用量、label budget、再較正の有無。</td>
 <td>「general representation が効いた」のか「target へ強く適応した」のかを混同します。</td>
@@ -261,11 +294,14 @@ foundation / self-supervised 系の結果には、通常の model card に加え
 <div class="key-points">
 <h4>Rule</h4>
 <ul>
+<li><strong>source type を hidden にしません：</strong>accepted paper、official rules、preprint / under-review を同じ強さの evidence として並べません。</li>
 <li><strong>foundation model の結果も split 監査を免除しません：</strong>pretraining corpus を含めて独立性を確認します。</li>
 <li><strong>population / setup diversity を hidden にしません：</strong>dataset 数ではなく、どの recording distribution を含んだかを出します。</li>
 <li><strong>format harmonization を hidden にしません：</strong>channel / reference / sampling の整形手順を必ず出します。</li>
 <li><strong>adaptation の量を隠しません：</strong>linear probing、full fine-tune、TTT を同じ「transfer 成功」として並べません。</li>
 <li><strong>benchmark provenance を hidden にしません：</strong>split / checkpoint / preprocessing の違いで ranking が動くので、benchmark 仕様も成果物です。</li>
+<li><strong>competition の現行ルールは official site で確認します：</strong>proposal や companion preprint は背景資料であり、運用条件は rules / submission / starter kit の current version を優先します。</li>
+<li><strong>preprint benchmark warning を frontier verdict にしません：</strong>ranking reversal や scaling law の主張は、accepted paper または independent rerun で補強されるまで exploratory として扱います。</li>
 <li><strong>scale / efficiency を hidden にしません：</strong>parameter 数、trainable fraction、学習時間を出さずに「foundation model が勝った」とは書きません。</li>
 <li><strong>高スコアでも claim ceiling は維持します：</strong>source identifiability、direct validation、closed-loop deployability、WBE state-completeness は別ゲートです。</li>
 <li><strong>Pretraining Card が無い結果は限定つき decode として扱います：</strong>L2 以上へ自動昇格させません。</li>
@@ -282,11 +318,13 @@ foundation / self-supervised 系の結果には、通常の model card に加え
 <li>Wang, G., Liu, W., He, Y., Xu, C., Ma, L., &amp; Li, H. (2024). EEGPT: Pretrained Transformer for Universal and Reliable Representation of EEG Signals. <em>NeurIPS 2024</em>. <a href="https://neurips.cc/virtual/2024/poster/93793" target="_blank">poster / abstract</a></li>
 <li>Lee, N., Barmpas, K., Panagakis, Y., Adamos, D., Laskaris, N., &amp; Zafeiriou, S. (2025). Are Large Brainwave Foundation Models Capable Yet? Insights from Fine-Tuning. <em>ICML 2025 poster</em>. <a href="https://openreview.net/forum?id=J5SbLoq7Uv" target="_blank">OpenReview</a></li>
 <li>EEG Foundation Challenge (2025). From Cross-Task to Cross-Subject EEG Decoding. <em>NeurIPS 2025 competition</em>. <a href="https://eeg2025.github.io/" target="_blank">official website</a></li>
+<li>EEG Foundation Challenge (2025). Rules. <a href="https://eeg2025.github.io/rules/" target="_blank">official rules</a></li>
+<li>EEG Foundation Challenge (2025). Submission. <a href="https://eeg2025.github.io/submission/" target="_blank">submission page</a></li>
 <li>Xiong, W., Li, J., Li, J., &amp; Zhu, K. (2025). EEG-FM-Bench: A Comprehensive Benchmark for the Systematic Evaluation of EEG Foundation Models. <em>arXiv</em>. <a href="https://arxiv.org/abs/2508.17742" target="_blank">arXiv:2508.17742</a></li>
-<li>El Ouahidi, Y., Lys, J., Thölke, P., Farrugia, N., Pasdeloup, B., Gripon, V., Jerbi, K., &amp; Lioi, G. (2025). REVE: A Foundation Model for EEG -- Adapting to Any Setup with Large-Scale Pretraining on 25,000 Subjects. <em>arXiv</em>. <a href="https://arxiv.org/abs/2510.21585" target="_blank">arXiv:2510.21585</a></li>
-<li>Han, D. D., Gwon, Y., Lee, A. L., et al. (2025). DIVER-1: Deep Integration of Vast Electrophysiological Recordings at Scale. <em>arXiv</em>. <a href="https://arxiv.org/abs/2512.19097" target="_blank">arXiv:2512.19097</a></li>
-<li>Wang, S., Deng, Y., Bao, Z., Zhan, X., &amp; Duan, Y. (2025). NeuroTTT: Bridging Pretraining-Downstream Task Misalignment in EEG Foundation Models via Test-Time Training. <em>arXiv</em>. <a href="https://arxiv.org/abs/2509.26301" target="_blank">arXiv:2509.26301</a></li>
-<li>Lahiri, J. B., Runwal, P., Kulkarni, A., Jain, M., Mishra, A. R., Panwar, S., &amp; Singh, S. (2026). PRISM: Exploring Heterogeneous Pretrained EEG Foundation Model Transfer to Clinical Differential Diagnosis. <em>arXiv</em>. <a href="https://arxiv.org/abs/2603.02268" target="_blank">arXiv:2603.02268</a></li>
+<li>El Ouahidi, Y., Lys, J., Thölke, P., Farrugia, N., Pasdeloup, B., Gripon, V., Jerbi, K., &amp; Lioi, G. (2025). REVE: A Foundation Model for EEG -- Adapting to Any Setup with Large-Scale Pretraining on 25,000 Subjects. <em>accepted poster / arXiv manuscript</em>. <a href="https://arxiv.org/abs/2510.21585" target="_blank">arXiv:2510.21585</a></li>
+<li>Han, D. D., Gwon, Y., Lee, A. L., et al. (2025). DIVER-1: Deep Integration of Vast Electrophysiological Recordings at Scale. <em>under-review / arXiv manuscript</em>. <a href="https://arxiv.org/abs/2512.19097" target="_blank">arXiv:2512.19097</a></li>
+<li>Wang, S., Deng, Y., Bao, Z., Zhan, X., &amp; Duan, Y. (2025). NeuroTTT: Bridging Pretraining-Downstream Task Misalignment in EEG Foundation Models via Test-Time Training. <em>arXiv preprint</em>. <a href="https://arxiv.org/abs/2509.26301" target="_blank">arXiv:2509.26301</a></li>
+<li>Lahiri, J. B., Runwal, P., Kulkarni, A., Jain, M., Mishra, A. R., Panwar, S., &amp; Singh, S. (2026). PRISM: Exploring Heterogeneous Pretrained EEG Foundation Model Transfer to Clinical Differential Diagnosis. <em>arXiv preprint</em>. <a href="https://arxiv.org/abs/2603.02268" target="_blank">arXiv:2603.02268</a></li>
 </ol>
 </section>
 

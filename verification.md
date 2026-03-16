@@ -1399,6 +1399,11 @@ Pretraining Card は <strong>事前学習 corpus と adaptation 条件</strong> 
 <td>同名 benchmark の別 protocol を同一比較だと誤読します。</td>
 </tr>
 <tr>
+<td><strong>authority source / last verified</strong></td>
+<td>official website、rules、submission page、starter kit、proposal / companion preprint のどれを current authority としたか、そして最終確認日を書きます。</td>
+<td>古い proposal や README を現行ルールだと誤読し、運用中 benchmark の score 解釈を取り違えます。</td>
+</tr>
+<tr>
 <td><strong>split / hold-out unit</strong></td>
 <td>subject / session / trial / site / device のどれを独立単位とし、validation と test をどう分けたかを書きます。</td>
 <td>ranking 差を model 能力の差と読み、実際には split 差だった可能性を見落とします。</td>
@@ -1444,6 +1449,12 @@ Pretraining Card は <strong>事前学習 corpus と adaptation 条件</strong> 
 <strong>最低運用ルール</strong>
 <p>
 Benchmark Governance Card が無い場合、本サイトではその結果を原則として <strong>exploratory leaderboard result</strong>、<strong>single-protocol benchmark score</strong>、または <strong>local challenge outcome</strong> として扱い、cross-paper frontier ranking や deployable generalization claim へ上げません。とくに <strong>evaluation surface</strong>、<strong>submission budget</strong>、<strong>model-selection policy</strong> のいずれかが欠ける場合、public score の読み替えを止めます。
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-17 追補：moving target benchmark の扱い</strong>
+<p>
+運用中 challenge では、proposal preprint と current rules がずれることがあります。実際に EEG Foundation Challenge の公式サイトは、challenge paper preprint が execution phase の変更を反映しておらず、現行の website と starter kit を参照するよう明記しています。したがって本サイトでは、<strong>authority source / last verified</strong> が欠ける benchmark score を frontier evidence として受理しません。
 </p>
 </div>
 <div class="note-box">
