@@ -45,7 +45,7 @@
 - 問題:
   - transmitter が同じなら effect も同じだと読める余地が残っていました。
 - 根拠:
-  - Hansen et al. (2022)、Goulas et al. (2023)、Zilles & Palomero-Gallagher (2017) は、human / macaque cortex の receptor / transporter density が領域ごと・層ごとに大きく異なることを示しました。
+  - Hansen et al. (2022)、Goulas et al. (2021)、Zilles & Palomero-Gallagher (2017) は、human / macaque cortex の receptor / transporter density が領域ごと・層ごとに大きく異なることを示しました。
   - Verhoog et al. (2016) と Gulledge et al. (2024) は、同じ cholinergic drive でも layer や projection class によって effect が変わることを示しました。
 - 修正:
   - `verification.md` の neuromodulatory row を `compartment`、`spatial scope`、`receptor family` を必須にする形へ改稿しました。
@@ -94,8 +94,8 @@
    - https://doi.org/10.1016/j.celrep.2024.114808
 5. Hansen JY, Shafiei G, Markello RD, et al. Mapping neurotransmitter systems to the structural and functional organization of the human neocortex. *Nature Neuroscience*. 2022.
    - https://doi.org/10.1038/s41593-022-01186-3
-6. Goulas A, Changeux J-P, Wagstyl K, et al. The natural axis of transmitter receptor distribution in the human cerebral cortex. *Neuron*. 2023.
-   - https://doi.org/10.1016/j.neuron.2023.02.013
+6. Goulas A, Changeux J-P, Wagstyl K, et al. The natural axis of transmitter receptor distribution in the human cerebral cortex. *PNAS*. 2021.
+   - https://doi.org/10.1073/pnas.2020574118
 7. Zilles K, Palomero-Gallagher N. Multiple Transmitter Receptors in Regions and Layers of the Human Cerebral Cortex. *Frontiers in Neuroanatomy*. 2017.
    - https://doi.org/10.3389/fnana.2017.00078
 8. Verhoog MB, Goriounova NA, Obermayer J, et al. Mechanisms underlying the rules for associative plasticity at adult human neocortical synapses. *Nature Communications*. 2016.

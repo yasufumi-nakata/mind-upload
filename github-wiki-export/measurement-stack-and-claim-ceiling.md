@@ -296,7 +296,7 @@ MICrONS は、同一脳で dense calcium imaging、行動状態、EM connectome 
 ここが今回もっとも深掘りして修正すべきだった点でございます。<a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> は瞳孔変動が皮質内の adrenergic と cholinergic activity の両方を追うことを示し、瞳孔径が <strong>mixed arousal proxy</strong> であることを明確にしました。さらに <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">Lohani et al. (2022)</a> と <a href="https://doi.org/10.7554/eLife.86800.2" target="_blank">Collins et al. (2023)</a> は、cholinergic / noradrenergic axonal activity に cortex-wide の共通 signal がある一方で、局所には独立成分も残ることを示しました。<a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> は、cortical ACh dynamics が cholinergic axon activity と behavioral state からかなり予測できても、signal が近傍軸索からの距離と clearance kinetics に依存することを示しました。したがって、<strong>pupil</strong>、<strong>axon activity</strong>、<strong>local transmitter sensor</strong> は同じものを見ているわけではございません。
 </p>
 <p>
-さらに、chemical specificity が上がっても、そこから直ちに functional effect の ground truth にはなりません。<a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a>、<a href="https://doi.org/10.1016/j.neuron.2023.02.013" target="_blank">Goulas et al. (2023)</a>、<a href="https://doi.org/10.3389/fnana.2017.00078" target="_blank">Zilles &amp; Palomero-Gallagher (2017)</a> は、human / macaque cortex で receptor / transporter density が領域ごと・層ごとに大きく異なることを示しました。加えて <a href="https://doi.org/10.1038/ncomms12826" target="_blank">Verhoog et al. (2016)</a> と <a href="https://doi.org/10.1523/JNEUROSCI.1455-23.2024" target="_blank">Gulledge et al. (2024)</a> は、同じ cholinergic drive でも layer や projection class に応じて plasticity / output effect が変わることを示しています。したがって本サイトでは、<strong>release proxy</strong> と <strong>receptor prior</strong> と <strong>receptor-mediated causal effect</strong> を別ラダーとして扱います。
+さらに、chemical specificity が上がっても、そこから直ちに functional effect の ground truth にはなりません。<a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a>、<a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">Goulas et al. (2021)</a>、<a href="https://doi.org/10.3389/fnana.2017.00078" target="_blank">Zilles &amp; Palomero-Gallagher (2017)</a> は、human / macaque cortex で receptor / transporter density が領域ごと・層ごとに大きく異なることを示しました。一方、human PET が直接与えるものも 1 本ではありません。<a href="https://doi.org/10.4088/JCP.12m08042" target="_blank">Wong et al. (2013)</a> は D<sub>2</sub> receptor occupancy PET が healthy subject における dose-dependent target engagement を与えることを示し、<a href="https://doi.org/10.1038/28364" target="_blank">Koepp et al. (1998)</a> と <a href="https://doi.org/10.1038/s41467-019-09897-z" target="_blank">Lippert et al. (2019)</a> は raclopride 系 PET で behavior / stimulus-linked dopamine release proxy を分オーダーで追えることを示しました。ただし、これらは ligand、receptor family、challenge、kinetic / displacement model に依存する <strong>receptor-specific proxy</strong> であり、momentary whole-brain transmitter field の直接読出しではございません。加えて <a href="https://doi.org/10.1038/ncomms12826" target="_blank">Verhoog et al. (2016)</a> と <a href="https://doi.org/10.1523/JNEUROSCI.1455-23.2024" target="_blank">Gulledge et al. (2024)</a> は、同じ cholinergic drive でも layer や projection class に応じて plasticity / output effect が変わることを示しています。したがって本サイトでは、<strong>receptor prior</strong>、<strong>occupancy / release PET</strong>、<strong>receptor-mediated causal effect</strong> を別ラダーとして扱います。
 </p>
 <table>
 <thead>
@@ -327,10 +327,16 @@ MICrONS は、同一脳で dense calcium imaging、行動状態、EM connectome 
 <td><strong>local chemical proxy まで</strong>です。momentary internal state 全体の直接観測とは書きません。</td>
 </tr>
 <tr>
-<td><strong>receptor atlas / PET / autoradiography</strong></td>
-<td>どの領域・層で effect が変わりうるかという regional prior を与えます。</td>
-<td>momentary release、current state、trial-level fluctuation、局所 causal effect は残ります。</td>
+<td><strong>receptor atlas / autoradiography</strong></td>
+<td>どの領域・層・network axis で receptor / transporter density が変わりうるかという regional prior を与えます。</td>
+<td>momentary release、current occupancy、trial-level fluctuation、局所 causal effect は残ります。</td>
 <td><strong>regional receptor prior まで</strong>です。current neuromodulatory state と同一視しません。</td>
+</tr>
+<tr>
+<td><strong>occupancy / release-sensitive PET</strong></td>
+<td>選んだ ligand / receptor family / challenge 下で、regional target engagement や分オーダーの displacement proxy を与えます。</td>
+<td>trial-level fluctuation、whole-brain momentary field、receptor-general inference、cell-type-specific effect は残ります。</td>
+<td><strong>receptor- and paradigm-specific occupancy / release proxy まで</strong>です。momentary endogenous field や universal transmitter ground truth とは書きません。</td>
 </tr>
 <tr>
 <td><strong>receptor-specific physiology / pharmacology</strong></td>
@@ -353,11 +359,11 @@ MICrONS は、同一脳で dense calcium imaging、行動状態、EM connectome 
 <li><strong>augmentation claim には measurement stack を書く：</strong>「transcriptomic label を足した」ではなく、whole-brain atlas か Patch-seq bridge か same-brain link かを区別します。</li>
 <li><strong>atlas / bridge / local population window / scaffold / local twin / proxy calibration を混ぜない：</strong>同じ「前進」でも、どの種類の前進かを固定します。</li>
 <li><strong>latent state を 1 箱にしない：</strong>cell identity、synaptic efficacy、intrinsic excitability、delay / myelin、neuromodulation、glia、sleep / recovery、chronic unit identity を分け、dominant timescale を添えます。</li>
-<li><strong>neuromodulation は compartment を書く：</strong>pupil / axon / sensor / receptor atlas / pharmacology のどこを測ったかを明示し、chemical signal と receptor effect を混ぜません。</li>
+<li><strong>neuromodulation は compartment を書く：</strong>pupil / axon / sensor / receptor atlas / occupancy PET / displacement PET / pharmacology のどこを測ったかを明示し、chemical signal と receptor effect を混ぜません。</li>
 <li><strong>multimodal を state-complete の同義語にしない：</strong>何の latent state が依然として残るかを本文に併記します。</li>
 <li><strong>未観測状態を埋めるときは推定と書く：</strong>cell type から threshold / gain / set point を自動補完した場合は latent inference と明記します。</li>
 <li><strong>sorted spike を stable neuron identity と書かない：</strong>chronic 記録では sorting version、drift correction、unit-match probability、dropout rate を別に残します。</li>
-<li><strong>claim ceiling を超える表現を禁止する：</strong>たとえば EM だけで emulation-complete、Patch-seq だけで whole-brain state-complete、同一 shank の sorted unit だけで cross-day same-neuron claim、pupil だけで transmitter ground truth、receptor atlas だけで momentary release とは書きません。</li>
+<li><strong>claim ceiling を超える表現を禁止する：</strong>たとえば EM だけで emulation-complete、Patch-seq だけで whole-brain state-complete、同一 shank の sorted unit だけで cross-day same-neuron claim、pupil だけで transmitter ground truth、receptor atlas だけで momentary release、occupancy / displacement PET だけで momentary whole-brain endogenous field とは書きません。</li>
 </ul>
 
 <table>
@@ -420,8 +426,11 @@ MICrONS は、同一脳で dense calcium imaging、行動状態、EM connectome 
 <li>Collins, L., Reddy, C. B., Neal, S., et al. (2023). Cholinergic and noradrenergic axonal activity contains a behavioral-state signal that is coordinated across the dorsal cortex. <em>eLife</em>, 12, RP86800. <a href="https://doi.org/10.7554/eLife.86800.2" target="_blank">doi:10.7554/eLife.86800.2</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <em>Cell Reports</em>, 43(10), 114808. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
 <li>Hansen, J. Y., Shafiei, G., Markello, R. D., et al. (2022). Mapping neurotransmitter systems to the structural and functional organization of the human neocortex. <em>Nature Neuroscience</em>, 25, 1569-1580. <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">doi:10.1038/s41593-022-01186-3</a></li>
-<li>Goulas, A., Changeux, J.-P., Wagstyl, K., et al. (2023). The natural axis of transmitter receptor distribution in the human cerebral cortex. <em>Neuron</em>, 111(9), 1461-1479.e8. <a href="https://doi.org/10.1016/j.neuron.2023.02.013" target="_blank">doi:10.1016/j.neuron.2023.02.013</a></li>
+<li>Goulas, A., Changeux, J.-P., Wagstyl, K., Amunts, K., Palomero-Gallagher, N., &amp; Hilgetag, C. C. (2021). The natural axis of transmitter receptor distribution in the human cerebral cortex. <em>Proceedings of the National Academy of Sciences</em>, 118(3), e2020574118. <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">doi:10.1073/pnas.2020574118</a></li>
 <li>Zilles, K., &amp; Palomero-Gallagher, N. (2017). Multiple Transmitter Receptors in Regions and Layers of the Human Cerebral Cortex. <em>Frontiers in Neuroanatomy</em>, 11, 78. <a href="https://doi.org/10.3389/fnana.2017.00078" target="_blank">doi:10.3389/fnana.2017.00078</a></li>
+<li>Wong, D. F., Kuwabara, H., Hsu, D. J., et al. (2013). D<sub>2</sub> receptor occupancy in the brains of healthy subjects by the novel atypical antipsychotic lurasidone. <em>Journal of Clinical Psychiatry</em>, 74(3), 305-310. <a href="https://doi.org/10.4088/JCP.12m08042" target="_blank">doi:10.4088/JCP.12m08042</a></li>
+<li>Koepp, M. J., Gunn, R. N., Lawrence, A. D., et al. (1998). Evidence for striatal dopamine release during a video game. <em>Nature</em>, 393, 266-268. <a href="https://doi.org/10.1038/28364" target="_blank">doi:10.1038/28364</a></li>
+<li>Lippert, R. N., Bolding, K. A., Abbott, L. F., et al. (2019). Time-dependent assessment of stimulus-evoked regional dopamine release. <em>Nature Communications</em>, 10, 336. <a href="https://doi.org/10.1038/s41467-019-09897-z" target="_blank">doi:10.1038/s41467-019-09897-z</a></li>
 <li>Verhoog, M. B., Goriounova, N. A., Obermayer, J., et al. (2016). Mechanisms underlying the rules for associative plasticity at adult human neocortical synapses. <em>Nature Communications</em>, 7, 12826. <a href="https://doi.org/10.1038/ncomms12826" target="_blank">doi:10.1038/ncomms12826</a></li>
 <li>Gulledge, A. T., et al. (2024). M1-type muscarinic receptors inhibit corticofugal pyramidal tract neurons to suppress layer 5 cortical output. <em>Journal of Neuroscience</em>, 44(10), e1455232024. <a href="https://doi.org/10.1523/JNEUROSCI.1455-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1455-23.2024</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <em>Nature</em>, 629, 146-153. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>

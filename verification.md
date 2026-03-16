@@ -761,9 +761,9 @@ Fusion Card が無い場合、本サイトではその結果を原則として <
 </tr>
 <tr>
 <td><strong>neuromodulatory specificity</strong></td>
-<td>proxy specificity 表、compartment（pupil / axon / sensor / receptor）、spatial spread / clearance、receptor family / cell-type target、cross-state calibration、missing-modality 時の abstention。</td>
-<td>mixed arousal proxy、local transmitter sensor、receptor atlas / pharmacology を同じ cohort または外部基準で分けて較正します。</td>
-<td>compartment、spatial scope、receptor family のいずれかが無い場合、内部状態を neuromodulator ground truth と書きません。</td>
+<td>proxy specificity 表、compartment（pupil / axon / sensor / receptor atlas / occupancy PET / displacement PET / pharmacology）、ligand / challenge、temporal window、spatial spread / clearance、receptor family / cell-type target、cross-state calibration、missing-modality 時の abstention。</td>
+<td>mixed arousal proxy、local transmitter sensor、receptor atlas、occupancy / displacement PET、pharmacology を同じ cohort または外部基準で分けて較正します。</td>
+<td>compartment、receptor family、ligand / challenge、temporal window のいずれかが無い場合、内部状態を neuromodulator ground truth と書きません。</td>
 </tr>
 <tr>
 <td><strong>glial / slow-state support</strong></td>
@@ -782,7 +782,7 @@ Fusion Card が無い場合、本サイトではその結果を原則として <
 <div class="note-box">
 <strong>2026-03 追補：neuromodulatory proxy も 1 本ではありません</strong>
 <p>
-<a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> は pupil が adrenergic / cholinergic の mixed proxy であることを示し、<a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">Lohani et al. (2022)</a> と <a href="https://doi.org/10.7554/eLife.86800.2" target="_blank">Collins et al. (2023)</a> は cortex-wide の共通信号と局所独立成分が共存することを示しました。さらに <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> は local ACh signal が axon distance と clearance kinetics に依存することを示し、<a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> と <a href="https://doi.org/10.1038/ncomms12826" target="_blank">Verhoog et al. (2016)</a> は receptor distribution と effect が region / layer 依存であることを示しました。したがって本サイトでは、neuromodulatory proxy について <strong>compartment</strong>、<strong>spatial scope</strong>、<strong>receptor family</strong> を独立欄として残します。
+<a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> は pupil が adrenergic / cholinergic の mixed proxy であることを示し、<a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">Lohani et al. (2022)</a> と <a href="https://doi.org/10.7554/eLife.86800.2" target="_blank">Collins et al. (2023)</a> は cortex-wide の共通信号と局所独立成分が共存することを示しました。さらに <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> は local ACh signal が axon distance と clearance kinetics に依存することを示し、<a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> と <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">Goulas et al. (2021)</a> は receptor atlas が regional prior を与えることを示しました。一方、<a href="https://doi.org/10.4088/JCP.12m08042" target="_blank">Wong et al. (2013)</a> は PET が dose-dependent receptor occupancy を、<a href="https://doi.org/10.1038/28364" target="_blank">Koepp et al. (1998)</a> と <a href="https://doi.org/10.1038/s41467-019-09897-z" target="_blank">Lippert et al. (2019)</a> は challenge 依存の regional dopamine release proxy を与えることを示しましたが、いずれも ligand・receptor family・challenge・時間窓に依存する <strong>receptor-specific proxy</strong> でございます。加えて <a href="https://doi.org/10.1038/ncomms12826" target="_blank">Verhoog et al. (2016)</a> は receptor-mediated effect が layer 依存であることを示しました。したがって本サイトでは、neuromodulatory proxy について <strong>compartment</strong>、<strong>receptor family</strong>、<strong>ligand / challenge</strong>、<strong>temporal window</strong> を独立欄として残します。
 </p>
 </div>
 <div class="note-box">
@@ -1571,6 +1571,10 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Collins, L., Reddy, C. B., Neal, S., et al. (2023). Cholinergic and noradrenergic axonal activity contains a behavioral-state signal that is coordinated across the dorsal cortex. <a href="https://doi.org/10.7554/eLife.86800.2" target="_blank">doi:10.7554/eLife.86800.2</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
 <li>Hansen, J. Y., Shafiei, G., Markello, R. D., et al. (2022). Mapping neurotransmitter systems to the structural and functional organization of the human neocortex. <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">doi:10.1038/s41593-022-01186-3</a></li>
+<li>Goulas, A., Changeux, J.-P., Wagstyl, K., Amunts, K., Palomero-Gallagher, N., &amp; Hilgetag, C. C. (2021). The natural axis of transmitter receptor distribution in the human cerebral cortex. <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">doi:10.1073/pnas.2020574118</a></li>
+<li>Wong, D. F., Kuwabara, H., Hsu, D. J., et al. (2013). D<sub>2</sub> receptor occupancy in the brains of healthy subjects by the novel atypical antipsychotic lurasidone. <a href="https://doi.org/10.4088/JCP.12m08042" target="_blank">doi:10.4088/JCP.12m08042</a></li>
+<li>Koepp, M. J., Gunn, R. N., Lawrence, A. D., et al. (1998). Evidence for striatal dopamine release during a video game. <a href="https://doi.org/10.1038/28364" target="_blank">doi:10.1038/28364</a></li>
+<li>Lippert, R. N., Bolding, K. A., Abbott, L. F., et al. (2019). Time-dependent assessment of stimulus-evoked regional dopamine release. <a href="https://doi.org/10.1038/s41467-019-09897-z" target="_blank">doi:10.1038/s41467-019-09897-z</a></li>
 <li>Verhoog, M. B., Goriounova, N. A., Obermayer, J., et al. (2016). Mechanisms underlying the rules for associative plasticity at adult human neocortical synapses. <a href="https://doi.org/10.1038/ncomms12826" target="_blank">doi:10.1038/ncomms12826</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Williamson, N. R., et al. (2025). Learning-associated astrocyte ensembles regulate memory recall. <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">doi:10.1038/s41586-024-08170-w</a></li>
