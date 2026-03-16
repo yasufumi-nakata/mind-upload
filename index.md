@@ -5,7 +5,7 @@ description: "マインドアップロード/WBEを「進歩を測れる科学�
 article_type: Start Here
 subtitle: "勝利条件・標準・ベンチマーク・事前登録を先に作る"
 author: Mind Uploading Research Project
-last_updated: "2026-03-16"
+last_updated: "2026-03-17"
 note: "Human-friendly landing page"
 audience: "はじめて来た人、全体像だけ先に知りたい人、読む順番で迷いたくない人"
 reading_time: "5〜10分"
@@ -75,7 +75,7 @@ Mind-Uploadは、「心をコンピュータで再現できるのか？」とい
 <div class="note-box">
 <strong>入口で先に防ぐ誤読</strong>
 <p>
-このサイトは 2026年3月の一次文献再監査を受けて、<strong>「配線図と cell type があれば、残りはほぼ埋まる」</strong>という読み方を入口ページでも採りません。sleep / wake に依存した再正規化、髄鞘 / オリゴデンドロサイト support、グリア代謝、分子ターンオーバー下の active maintenance が別変数として残るためです。したがって、本サイトでは <strong>connectome-complete</strong> をそのまま <strong>emulation-complete</strong> と読み替えません。短い説明は <a href="wbe_101.html#state-completeness">WBE入門の hidden state 節</a>、根拠の整理は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> と <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に集約しています。
+このサイトは 2026年3月の一次文献再監査を受けて、<strong>「配線図と cell type があれば、残りはほぼ埋まる」</strong>という読み方を入口ページでも採りません。sleep / wake に依存した再正規化、髄鞘 / オリゴデンドロサイト support、グリア代謝、分子ターンオーバー下の active maintenance が別変数として残るためです。今回の追補ではこの不足を、<strong>fast execution state</strong>、<strong>controller state</strong>、<strong>slow maintenance state</strong> の 3 層と timescale ごとの claim ceiling へ分け、same-day の fit から cross-day / long-term claim へ飛ばさない運用にそろえました。したがって、本サイトでは <strong>connectome-complete</strong> をそのまま <strong>emulation-complete</strong> と読み替えません。短い説明は <a href="wbe_101.html#state-completeness">WBE入門の hidden state 節</a>、根拠の整理は <a href="wiki/connectome-is-not-enough.html#timescale-matrix">Wiki: 配線図だけでは足りない理由の timescale matrix</a> と <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に集約しています。
 </p>
 </div>
 

@@ -113,6 +113,71 @@
 従来の 5 クラスに加えて、2026-03 の再監査では <strong>内在興奮性・恒常性 set point</strong> を独立クラスとして切り出しました。理由は、cell-type ラベルや connectome を持っていても、threshold、gain、発火率の戻り先、分子ターンオーバー下の維持機構が違えば、長期予測と摂動回復がまだ定まらないためです。一次文献のまとまった整理は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/homeostatic-plasticity-and-maintenance-state">Wiki: 恒常性可塑性と維持状態</a> に分けております。
 </p>
 
+<h2>2026-03 追補：hidden state を同じ 1 行に潰さない</h2>
+<p>
+今回さらに深掘りして見えた弱点は、connectome の外に残る state variable を 1 本の欠測リストとして並べると、<strong>ミリ秒スケールの実行状態</strong>、<strong>時間から日スケールの controller state</strong>、<strong>日から週スケールの maintenance state</strong> が混ざってしまう点でございました。一次文献が比較的一貫して示すのは、<strong>欠けた state class ごとに止まる主張が違う</strong>ということであり、same-day の fit から cross-day stability や long-term memory maintenance へ一足飛びには上げられません。
+</p>
+<table>
+<thead>
+<tr>
+<th>state class</th>
+<th>主に止まる時間スケール</th>
+<th>一次文献が直接支えること</th>
+<th>human での直接性</th>
+<th>欠けたときに止める主張</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>fast execution state</strong><br>current synaptic efficacy / release state / short-term plasticity</td>
+<td>ms〜分</td>
+<td><a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">Holler et al. (2021)</a>、<a href="https://doi.org/10.1038/s41467-024-50549-7" target="_blank">Dürst et al. (2024)</a>、<a href="https://doi.org/10.1038/s41467-024-51402-7" target="_blank">Alle et al. (2024)</a> は、ultrastructure が average strength の prior を強めても、その瞬間の release state や transmission reliability までは固定しないことを示します。</td>
+<td>human では主として局所 ex vivo / 断片レベルであり、whole-brain in vivo の current state を直接は与えません。</td>
+<td>phase-sensitive な介入予測、precise timing、closed-loop stability を強くは主張しません。</td>
+</tr>
+<tr>
+<td><strong>controller state</strong><br>intrinsic excitability / AIS / homeostatic set point</td>
+<td>時間〜日</td>
+<td><a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a>、<a href="https://doi.org/10.1016/j.neuron.2014.04.002" target="_blank">O'Leary et al. (2014)</a>、<a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1038/nature09160" target="_blank">Grubb &amp; Burrone (2010)</a>、<a href="https://doi.org/10.1038/s41467-020-20232-x" target="_blank">Jamann et al. (2021)</a> は、cell type と graph だけでは threshold / gain / recovery の戻り先が定まらないことを示します。</td>
+<td>human では perturbation 由来の coarse proxy が中心で、cell-specific な AIS / channel state の routine direct readout はまだありません。</td>
+<td>cross-day generalization、memory allocation、perturbation 後の回復一致をそのままは主張しません。</td>
+</tr>
+<tr>
+<td><strong>sleep-homeostatic renormalization</strong></td>
+<td>overnight〜日</td>
+<td><a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">Torrado Pacheco et al. (2021)</a>、<a href="https://doi.org/10.1126/science.aah5982" target="_blank">de Vivo et al. (2017)</a>、<a href="https://doi.org/10.1126/science.aai8355" target="_blank">Diering et al. (2017)</a>、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a>、<a href="https://doi.org/10.1016/j.cub.2024.07.032" target="_blank">Koukaroudi et al. (2024)</a> は、sleep が rate、synapse、network regime を再正規化することを示します。</td>
+<td>human での direct readout はまだ粗く、sleep annotation と indirect proxy が中心です。</td>
+<td>same-day の decode / fit を、そのまま overnight maintenance や multiday stability へ延長しません。</td>
+</tr>
+<tr>
+<td><strong>timing-support state</strong><br>delay / myelin / oligodendroglial support</td>
+<td>ms〜週</td>
+<td><a href="https://doi.org/10.1126/science.1252304" target="_blank">Gibson et al. (2014)</a>、<a href="https://doi.org/10.1126/science.1254960" target="_blank">McKenzie et al. (2014)</a>、<a href="https://doi.org/10.1093/cercor/bhab018" target="_blank">Micheva et al. (2021)</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a> は、myelination と oligodendrocyte-axon coupling が timing と support を左右することを示します。</td>
+<td>human では local conduction / support state の direct routine readout は乏しく、構造 proxy が中心です。</td>
+<td>delay-sensitive claim、phase coordination、long-term axonal support の一致は降格します。</td>
+</tr>
+<tr>
+<td><strong>neuromodulatory context</strong></td>
+<td>秒〜分</td>
+<td><a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> と <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> は、pupil / behavior が役に立つ一方で、local transmitter state を一意には与えないことを示します。</td>
+<td>human では pupil / HRV / behavior が主で、transmitter-specific・region-specific directness はまだ限定的です。</td>
+<td>単一 transmitter mechanism、region-specific gain control、learning-rate control を直接は主張しません。</td>
+</tr>
+<tr>
+<td><strong>slow maintenance state</strong><br>glial / metabolic ensemble</td>
+<td>分〜日</td>
+<td><a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>、<a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> は、astrocyte-metabolic support が memory / network state に関わる一方、human では macro-biochemical scaffold が主であることを示します。</td>
+<td>human では parcel-level biochemical organization までが主で、cell-specific astrocyte ensemble の direct readout ではありません。</td>
+<td>memory stabilization、slow-state、metabolic maintenance の一致を neuron-only success へ還元しません。</td>
+</tr>
+</tbody>
+</table>
+
+<strong>この行列で何を直したか</strong>
+<p>
+今回の修正では、<strong>fast execution state</strong>、<strong>controller state</strong>、<strong>slow maintenance state</strong> を本文で明示的に分けました。これにより、同じ「hidden state が残る」という一文でも、<strong>何が timing を止めるのか</strong>、<strong>何が cross-day claim を止めるのか</strong>、<strong>何が long-term stabilization を止めるのか</strong>を別々に読めます。今後このサイトでは、これらを 1 行の latent state 欄に潰さず、timescale ごとの claim ceiling と一緒に出します。
+</p>
+
 <h2>配線図研究は大きく進んだが、それ自体は終点ではない</h2>
 <p>
 Dorkenwald らは成体ショウジョウバエ全脳の wiring diagram を示し、約 13 万ニューロン規模で全脳 connectome を提示しました。一方で MICrONS Consortium は、マウス視覚皮質の立方ミリメートル規模で、同一個体の機能計測と connectomics を結びつけるデータセットと局所 functional digital twin を公開しました。さらに Lappalainen らは、ショウジョウバエ視覚系で connectome-constrained network を task-optimized に学習させ、広い範囲の活動予測を可能にしました。human 側でも、Shapson-Coe らは petavoxel 級のヒト大脳皮質断片を nanoscale で再構成し、Lucchetti らは 3D whole-brain <sup>1</sup>H-MRSI から human metabolic connectome を提示しました。これは非常に大きな前進ですが、逆に言えば、<strong>現在ようやく「配線＋一部機能＋一部 biochemical scaffold＋追加仮定」を結び始めた段階</strong>であり、全脳・全状態の動的再現とはまだ別問題であることも示しています。
