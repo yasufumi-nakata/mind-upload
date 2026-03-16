@@ -767,3 +767,13 @@ recommended_pages:
 | U13-1 | `D2` / `D1` | `G1` |
 | U14-1 | `D12` / `D8` | `G1` |
 | U15-2 | `D4` / `D5` | `G6` |
+
+## 2026-03-17 05:02 JST 再検証ログ（本run / 最新pull反映）
+
+- 作業前に `main` と3サブモジュールを `pull --ff-only` し、基準コミットを `mind-upload=eb20d32b7877`、`EEG-DATA=48261b83b1de`、`auto-research-funds=05a5d3664abb` に更新しました。
+- 正本 `research_harvest_50.md` と本ページの `Ux-n` 行を再照合し、`RQ_TOTAL=60`（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）を再確認しました。
+- 判定内訳は再計数で `A/B/C=17/25/18` を維持し、欠落・重複は `0` でした。
+- 本ページで現行参照する数値ID `17件`（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で欠落 `0` を確認しました。
+- 申請正本キー `D1-D16` の `DOI` も `EEG-DATA/eeg_dataset_summary_ja.csv` で欠落 `0` を再確認しました。
+- 助成キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue/*.yaml` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で全件再参照可能でした。
+- 方針を継続します。汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` を維持し、各RQを個別に深掘りして提出へ接続します。
