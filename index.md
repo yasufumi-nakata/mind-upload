@@ -15,6 +15,7 @@ page_highlights:
   - "Mind-Uploadの中心は、派手な結論を出すことではなく、前進を測れる検証基盤を作ることです。"
   - "迷ったら Verification → Roadmap → WBE/EEG入門 の順で読むと、話の軸を保ちやすいです。"
   - "配線図や cell type だけでは長期ダイナミクスは決まらず、sleep/homeostasis・髄鞘・グリア代謝も別変数として残ります。"
+  - "same-day の成功を cross-day / long-term claim へ読み替えないため、Temporal Validity Card を公開運用へ追加しました。"
   - "用語や前提で止まったときに戻れる入口として、FAQ と用語集も近くに置いています。"
 known_points:
   - "公開データ、標準、ベンチマーク、監査をそろえると、L0〜L2 の前進は比較可能な形で積み上げられます。"
@@ -88,6 +89,12 @@ Mind-Uploadは、「心をコンピュータで再現できるのか？」とい
 <strong>『何がまだ claim を止めているか』まで見たいとき</strong>
 <p>
 Observability Budget で「何を直接見たか」を確認したら、次は <a href="verification.html#latent-state-error-budget">Verification の latent-state error budget</a> で、<strong>どの未観測状態がいまの誤差をまだ支配しているか</strong>を確認してください。ここでは、内在興奮性、現在のシナプス効率、遅延 / 髄鞘、神経修飾の specificity、glial / slow-state、chronic unit identity を別々の error source として監査し、connectome-only baseline と augmentation claim をどう読み分けるかまで固定しています。
+</p>
+</div>
+<div class="note-box">
+<strong>same-day の成功を cross-day / long-term claim へ上げる前に見たいとき</strong>
+<p>
+2026年3月の更新では、縦断主張の誤読を止めるため <a href="verification.html#temporal-validity-card">Verification の Temporal Validity Card</a> を追加しました。ここでは <strong>fixed decoder interval</strong>、<strong>state annotation</strong>、<strong>interface / decoder drift</strong>、<strong>recalibration burden</strong>、<strong>transfer ceiling</strong> を独立に出し、same-day の fit を別日安定性や長期 deployability へそのまま延長しません。背景は <a href="wiki/state-trait-and-drift.html">Wiki: state・trait・ドリフト</a> に集約しています。
 </p>
 </div>
 

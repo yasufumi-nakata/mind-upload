@@ -5,7 +5,7 @@ description: "公開ページの要点を A4 冊子向けに自動生成した�
 article_type: "Briefing Booklet"
 subtitle: "公開ページの front matter と冒頭要約から再生成される A4 要約版"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-16"
 note: "Auto-generated from public pages"
 body_class: "summary-booklet-page"
 ---
@@ -25,7 +25,7 @@ body_class: "summary-booklet-page"
   <div class="booklet-cover-band">
     <div>
   <span>更新基準日</span>
-  <strong>2026-03-15</strong>
+  <strong>2026-03-16</strong>
 </div>
 <div>
   <span>現在の重点</span>
@@ -116,7 +116,7 @@ body_class: "summary-booklet-page"
     <div>
       <h3>先に固定すること</h3>
       <ul class="booklet-list">
-        <li>標準、置き場、ベンチマーク、監査をセットでそろえる必要があります。</li><li>デコーディングとエミュレーションを混同しないために、主張レベルと失敗条件を先に固定します。</li><li>ここを読むと、なぜデータだけ集めても前進にならないのかが分かります。</li><li>まず『いま言えること／言えないこと』を分けて、話を盛りすぎないようにします。</li>
+        <li>標準、置き場、ベンチマーク、監査をセットでそろえる必要があります。</li><li>デコーディングとエミュレーションを混同しないために、主張レベルと失敗条件を先に固定します。</li><li>ここを読むと、なぜデータだけ集めても前進にならないのかが分かります。</li><li>multimodal や atlas prior を使う結果では、Observability Budget に加えて Fusion Card で取得関係・同期・融合モデル・外部妥当化を固定します。</li>
       </ul>
     </div>
     <div>
@@ -234,7 +234,7 @@ body_class: "summary-booklet-page"
 </tr>
 <tr>
   <td><a href="/perspective.html">マインドアップロード実現への道：技術・理論の統合アプローチ</a></td>
-  <td>Perspective - 脳の情報処理を別の基盤で再現し、心的機能を移植・複製するという研究仮説の現状と展望</td>
+  <td>Perspective - 脳の情報処理を別基盤で再現する研究仮説を、計測可能性・同定可能性・維持状態の壁から監査する</td>
   <td>このページは、マインドアップロードをめぐる理論・計測・実装の論点を、一次文献と限界を並べながら追う長い研究ノートです。楽観論だけでも悲観論だけでもなく、『どこまでは言えて、どこから先は未解決か』をはっきり分けて読めるようにしています。</td>
 </tr>
 <tr>
@@ -293,7 +293,7 @@ body_class: "summary-booklet-page"
 </article>
 <article class="booklet-card booklet-page-card">
   <h3><a href="/perspective.html">マインドアップロード実現への道：技術・理論の統合アプローチ</a></h3>
-  <p class="booklet-page-meta">Perspective - 脳の情報処理を別の基盤で再現し、心的機能を移植・複製するという研究仮説の現状と展望 / 30〜45分</p>
+  <p class="booklet-page-meta">Perspective - 脳の情報処理を別基盤で再現する研究仮説を、計測可能性・同定可能性・維持状態の壁から監査する / 30〜45分</p>
   <p>このページは、マインドアップロード（WBE）を「本当に検証できる研究」にするための長い研究ノートです。内容は、<strong>どう測るか</strong>、<strong>どう読み取るか</strong>、<strong>どう実装するか</strong>の3段階で整理しています。最新研究の成果だけでなく、うまくいっていない点や限界も同じ重みで扱い、「どこまで言えて、どこから言えないか」をはっきり分ける構成にしています。</p>
   <ul class="booklet-list booklet-page-link-list">
     <li>理論の紹介だけで終わらず、実装へ落としたときの制約まで一緒に追います。</li><li>強い主張ほど、反証条件や代替説明を並べて確認します。</li><li>局所 connectomics、非侵襲 source imaging、closed-loop 介入は別々の壁に当たるため、同列に読まない構成へ更新しました。</li>
@@ -397,7 +397,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Primer - EEGを“魔法の心読み”にしないための現実的ガイド / 12〜18分</p>
   <p>EEGは、脳の中をそのまま見ているわけではなく、頭皮で測れた電気信号の「混ざった結果」を読んでいます。時間の変化には強い一方で、「脳のどこで起きたか」はぼやけやすいです。だからMind-Uploadでは、データ品質チェック（QC）とデータ整理の共通ルール（BIDS）を最優先にしています。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>EEGは時間変化を見るのが得意ですが、空間的にどこで起きたかを厳密に言うのは苦手です。</li><li>高密度EEGでも、source imaging の改善判定には個体別MRI・電極座標・外部基準が要ります。</li><li>前処理とQCは見栄え調整ではなく、どの主張を許すかを決める受理条件です。</li>
+    <li>EEGは時間変化を見るのが得意ですが、空間的にどこで起きたかを厳密に言うのは苦手です。</li><li>『信号に情報がある』『内部状態が一意に決まる』『長期運用で持つ』は別の監査です。</li><li>高密度EEGでも、source imaging の改善判定には個体別MRI・電極座標・外部基準が要ります。</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -423,7 +423,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Reference - まずは“言葉のすり替え”を止める / 必要な項目だけなら3〜10分</p>
   <p>この用語集は、用語の意味をすぐ確認するためのリファレンスです。まず日常語の説明で把握し、必要なときだけ厳密な定義に進む構成とし、議論を測定と扱い方に結び付けます。WBEの議論は言葉のズレで混乱しやすいため、ここでは<strong>実際にどう測って扱うか</strong>を重視します。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>用語を短く説明しつつ、どこで使う概念かも一緒に示します。</li><li>『似ているが違う』語を分けることで、話のすり替えを防ぎます。特に observability / identifiability / direct validation を混ぜないことを重視します。</li><li>分からない言葉が出たら、このページに戻れば最低限の足場を作れます。</li>
+    <li>用語を短く説明しつつ、どこで使う概念かも一緒に示します。</li><li>『似ているが違う』語を分けることで、話のすり替えを防ぎます。特に observability / identifiability / direct validation を混ぜないことを重視します。</li><li>detectable / localized / identified / validated / deployable は別レベルの主張であり、同じ成功ではありません。</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">

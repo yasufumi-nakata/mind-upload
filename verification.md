@@ -18,6 +18,7 @@ page_highlights:
   - "multimodal や atlas prior を使う結果では、Observability Budget に加えて Fusion Card で取得関係・同期・融合モデル・外部妥当化を固定します。"
   - "L2 以上では、Observability Budget に加えて latent-state error budget も付け、どの未観測状態がまだ claim を止めるかまで公開します。"
   - "L2 以上の介入・閉ループ結果では、Intervention Card で trigger rule・timing audit・control/sham・安全停止・再較正負荷を固定します。"
+  - "cross-day / longitudinal claim では、Temporal Validity Card で fixed decoder interval・state 注釈・recalibration burden・transfer ceiling を独立監査します。"
 known_points:
   - "標準、共有基盤、評価、監査をセットでそろえないと、比較可能な前進は作れません。"
   - "L0〜L2 では、再現性と反証条件を事前に設計することができます。"
@@ -351,7 +352,7 @@ BIDS、OpenNeuro、PhysioNet、BIDS Validator、benchmark は全部「研究基�
 <div class="stage-number">04</div>
 <div class="stage-body">
 <h4>Leaderboard & Model Cards（比較の運用）</h4>
-<p>スコアだけでなく、データリーク対策、失敗例、計算資源、既知の弱点、さらに L1 以上では <strong>どこまで直接観測し、どこから先が latent state か</strong> を示す <strong>Observability Budget</strong> を、multimodal / atlas prior を使う結果では <strong>どう結び付け、どこまで較正したか</strong> を示す <strong>Fusion Card</strong> を、L2 以上では <strong>どの latent state がまだ誤差を支配するか</strong> を示す <strong>latent-state error budget</strong> を、因果・閉ループ結果では <strong>trigger rule・timing audit・control/sham・安全停止・再較正負荷</strong> を示す <strong>Intervention Card</strong> を併記して公開し、再現性と安全性を担保する。</p>
+<p>スコアだけでなく、データリーク対策、失敗例、計算資源、既知の弱点、さらに L1 以上では <strong>どこまで直接観測し、どこから先が latent state か</strong> を示す <strong>Observability Budget</strong> を、multimodal / atlas prior を使う結果では <strong>どう結び付け、どこまで較正したか</strong> を示す <strong>Fusion Card</strong> を、cross-day / longitudinal claim では <strong>same-day score をどこまで外挿してよいか</strong> を示す <strong>Temporal Validity Card</strong> を、L2 以上では <strong>どの latent state がまだ誤差を支配するか</strong> を示す <strong>latent-state error budget</strong> を、因果・閉ループ結果では <strong>trigger rule・timing audit・control/sham・安全停止・再較正負荷</strong> を示す <strong>Intervention Card</strong> を併記して公開し、再現性と安全性を担保する。</p>
 <div class="tag-list">
 <span class="tag">Leaderboard</span><span class="tag">Reproducibility</span><span class="tag">Safety</span>
 </div>
@@ -817,6 +818,76 @@ error budget が無い場合、本サイトでは結果を <strong>state-partial
 </div>
 </section>
 
+<section class="section" id="temporal-validity-card">
+<h2 class="section-title">2026-03 追補：cross-day / longitudinal claim には Temporal Validity Card を添付する</h2>
+<p>
+今回の再監査で、サイト全体としてまだ最も改善余地が大きかった弱点は、<strong>same-day の score や短時間の closed-loop 成功を、cross-day stability や long-term deployability へ読み替える事故</strong>を、提出物仕様としてはまだ独立に止め切れていなかった点でございます。<a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> と <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">Benisty et al. (2024)</a> は、同一日内でも state fluctuation と自発行動が neural readout を大きく動かすことを示しました。<a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">Gallego et al. (2020)</a>、<a href="https://doi.org/10.1038/s41467-023-40144-w" target="_blank">Roth &amp; Merriam (2023)</a>、<a href="https://doi.org/10.1038/s41593-025-01982-7" target="_blank">Noda et al. (2025)</a> は、population backbone の比較的安定性と unit / voxel レベルの drift が同時に起こりうることを示しました。さらに <a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">van Beest et al. (2024)</a>、<a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a>、<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> は、same-neuron claim、fixed decoder の保持期間、recalibration burden、silence / fallback を別々に監査しない限り、長期運用を読めないことを示しています。したがって本サイトでは、<strong>cross-day / longitudinal / deployable</strong> を名乗る結果に <strong>Temporal Validity Card</strong> を必須化し、時間軸の外挿を 1 行の注意書きではなく独立カードとして管理します。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Temporal Validity Card の欄</th>
+<th>最低限書くこと</th>
+<th>これが無いと起きる誤読</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>evaluation family と horizon</strong></td>
+<td>within-session、cross-session、cross-subject、cross-state、multiday、closed-loop のどれかと、評価した日数 / セッション間隔を書きます。</td>
+<td>same-day score を、そのまま別日耐性や長期運用へ読み替えやすくなります。</td>
+</tr>
+<tr>
+<td><strong>fixed-model interval</strong></td>
+<td>再学習なし decoder / controller を何日・何セッション hold したか、各 interval の劣化曲線を書きます。</td>
+<td>高 score が fixed decoder の安定性から来たのか、頻繁な再較正から来たのかを切り分けられません。</td>
+</tr>
+<tr>
+<td><strong>state annotation と maintenance covariate</strong></td>
+<td>覚醒、睡眠 / wake 履歴、無意図運動、薬理状態、task engagement、recording context を、少なくとも長期比較で必要な粒度で残します。</td>
+<td>state fluctuation や recovery history を、trait drift や decoder failure と誤認しやすくなります。</td>
+</tr>
+<tr>
+<td><strong>interface / decoder drift audit</strong></td>
+<td>再装着、impedance、channel dropout、probe drift、sorting version、drift correction、unit-match probability、feature shift を書きます。</td>
+<td>biological drift と interface / decoder drift が混ざり、same-neuron claim や single-unit longitudinal claim を過大評価しやすくなります。</td>
+</tr>
+<tr>
+<td><strong>population backbone / biological drift metric</strong></td>
+<td>latent dynamics、representational similarity、cross-session identification、map homeostasis 指標など、骨格の安定性を示す metric を別列で残します。</td>
+<td>unit-level の変化だけで「trait は無い」と読んだり、逆に population-level backbone だけで「全部安定」と読み過ぎたりします。</td>
+</tr>
+<tr>
+<td><strong>recalibration burden と recovery route</strong></td>
+<td>再較正頻度、所要時間、supervised / unsupervised の別、human intervention time、recovery time、失敗時 fallback を書きます。</td>
+<td>accuracy や WER が維持された理由が、実際には heavy recalibration 依存だったことを隠しやすくなります。</td>
+</tr>
+<tr>
+<td><strong>abstention / silence / tail risk</strong></td>
+<td>abstention rate、silence / fallback rate、dropout、P50 / P95 / P99 latency、誤出力率を残します。</td>
+<td>low-confidence 条件で止まる設計と、たまたま成功した high-confidence 条件を区別できません。</td>
+</tr>
+<tr>
+<td><strong>transfer ceiling と abstention</strong></td>
+<td>same-day only、same-subject cross-day、device-limited、clinic-only、local subsystem など、時間軸と運用環境の外挿上限を書きます。</td>
+<td>限定つき decode や subsystem loop を、一般的な long-term deployability へ誤昇格させやすくなります。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Observability Budget / latent-state error budget / Intervention Card との役割差</strong>
+<p>
+Observability Budget は <strong>何を直接見たか</strong>、latent-state error budget は <strong>どの hidden state がまだ claim を止めているか</strong>、Intervention Card は <strong>何をどの trigger と timing で変えたか</strong> を固定するカードです。Temporal Validity Card はそのどれでもなく、<strong>いまの証拠が何日・何状態・どの運用条件まで外挿できるか</strong>を固定するカードでございます。したがって、本サイトでは <strong>cross-day / longitudinal claim で独立提出</strong>させ、validity horizon を 1 行の注釈へ押し込みません。
+</p>
+</div>
+<div class="note-box">
+<strong>最低運用ルール</strong>
+<p>
+このカードが無い場合、本サイトでは結果を原則として <strong>within-session result</strong>、<strong>limited cross-session decode</strong>、または <strong>short-horizon online demo</strong> として扱い、longitudinal / deployable / maintenance-consistent claim へは上げません。特に <strong>fixed-model interval</strong>、<strong>state annotation</strong>、<strong>recalibration burden</strong> のいずれかが欠ける場合、same-day から cross-day への読替えを止めます。詳しい背景は <a href="wiki/state-trait-and-drift.html">Wiki: state・trait・ドリフト</a> に集約しています。
+</p>
+</div>
+</section>
+
 <section class="section" id="state-completeness-gate">
 <h2 class="section-title">状態変数の完全性ゲート</h2>
 <p>
@@ -1239,6 +1310,11 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Trautmann, E. M., Stavisky, S. D., Lahiri, S., et al. (2019). Accurate estimation of neural population dynamics without spike sorting. <a href="https://doi.org/10.1016/j.neuron.2019.05.003" target="_blank">doi:10.1016/j.neuron.2019.05.003</a></li>
 <li>van Beest, E. H., Jia, X., Deng, X., et al. (2024). Tracking neurons across days with high-density probes. <a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">doi:10.1038/s41592-024-02440-1</a></li>
 <li>Gregory, N. S., et al. (2023). Structural and functional changes of deep layer pyramidal neurons surrounding implanted microelectrode arrays in rat motor cortex. <a href="https://doi.org/10.1088/1741-2552/ace8ac" target="_blank">doi:10.1088/1741-2552/ace8ac</a></li>
+<li>Musall, S., Kaufman, M. T., Juavinett, A. L., Gluf, S., &amp; Churchland, A. K. (2019). Single-trial neural dynamics are dominated by richly varied movements. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">doi:10.1038/s41593-019-0502-4</a></li>
+<li>Gallego, J. A., Perich, M. G., Chowdhury, R. H., Solla, S. A., &amp; Miller, L. E. (2020). Long-term stability of cortical population dynamics underlying consistent behavior. <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">doi:10.1038/s41593-019-0555-4</a></li>
+<li>Benisty, H., Barson, D., Moberly, A. H., Lohani, S., Tang, L., Coifman, R. R., Crair, M. C., Cardin, J. A., &amp; Higley, M. J. (2024). Rapid fluctuations in functional connectivity of cortical networks encode spontaneous behavior. <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">doi:10.1038/s41593-023-01498-y</a></li>
+<li>Roth, Z. N., &amp; Merriam, E. P. (2023). Representations in human primary visual cortex drift over time. <a href="https://doi.org/10.1038/s41467-023-40144-w" target="_blank">doi:10.1038/s41467-023-40144-w</a></li>
+<li>Noda, T., Kienle, E., Eppler, J.-B., Aschauer, D. F., Kaschube, M., Loewenstein, Y., &amp; Rumpel, S. (2025). Homeostasis of a representational map in the neocortex. <a href="https://doi.org/10.1038/s41593-025-01982-7" target="_blank">doi:10.1038/s41593-025-01982-7</a></li>
 <li>Oehrn, C. R., et al. (2024). Chronic adaptive deep brain stimulation versus conventional stimulation in Parkinson's disease: a blinded randomized feasibility trial. <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">doi:10.1038/s41591-024-03196-z</a></li>
 <li>Dixon, S., et al. (2026). Movement-responsive deep brain stimulation for Parkinson’s disease using a remotely optimized neural decoder. <a href="https://doi.org/10.1038/s41551-025-01592-5" target="_blank">doi:10.1038/s41551-025-01592-5</a></li>
 <li>Cascino, S., et al. (2026). Chronic adaptive deep brain stimulation in Parkinson’s disease: ADAPT-START findings and programming principles. <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">doi:10.1038/s41531-026-01269-z</a></li>

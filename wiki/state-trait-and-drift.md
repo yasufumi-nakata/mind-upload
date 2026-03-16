@@ -5,7 +5,7 @@ description: "状態変動、trait-like な安定性、生体側の表現ドリ�
 article_type: Wiki
 subtitle: "『今日の状態』『比較的安定な骨格』『運用ドリフト』は別々に監査します"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-16"
 note: "Technical / natural science only"
 audience: "縦断評価、cross-day decode、closed-loop BCI を読むときに、state / trait / drift を感覚ではなく実測で分けたい人"
 reading_time: "12〜18分"
@@ -16,6 +16,7 @@ page_highlights:
   - "trait は単一ニューロンの不変性ではなく、latent dynamics、representational geometry、connectome fingerprint などの比較的安定な骨格として読む方が安全です。"
   - "慢性 extracellular 記録では、same neuron across days は観測事実ではなく、sorting・drift correction・unit matching を介した推定です。"
   - "closed-loop や speech BCI では、fixed decoder の劣化と再較正負荷も drift の本体です。"
+  - "cross-day / longitudinal claim では、Temporal Validity Card として時間軸の外挿条件を独立提出する必要があります。"
 known_points:
   - "行動状態、覚醒、無意図運動、自発行動は、trial-to-trial neural variance を大きく動かします。"
   - "単一ユニットや単一 voxel の変化があっても、population-level の構造や latent dynamics がより安定に残る場合があります。"
@@ -222,6 +223,60 @@ Wilson ら (2025) は、intracortical cursor BCI が accumulating neural nonstat
 </tr>
 </tbody>
 </table>
+</section>
+
+<section class="section" id="temporal-validity-operation">
+<h2 class="section-title">この議論を提出物仕様へどう落とすか</h2>
+<p>
+ここまでの文献整理から見えるのは、state・trait・drift の区別が重要だというだけでは不十分で、<strong>その区別を提出物の欄として固定しないと、same-day の成功が cross-day / longitudinal claim へ再び流れ込む</strong>という点でございます。そこで本サイトでは、<a href="../verification.html#temporal-validity-card">Verification の Temporal Validity Card</a> を追加し、時間軸の外挿を独立に監査します。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Temporal Validity Card で固定すること</th>
+<th>このページの概念とどう対応するか</th>
+<th>最低限のログ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>evaluation family / horizon</strong></td>
+<td>state の議論か、trait backbone の議論か、longitudinal / closed-loop の議論かを混ぜません。</td>
+<td>within-session / cross-session / cross-subject / multiday / closed-loop の別、セッション間隔、評価日数。</td>
+</tr>
+<tr>
+<td><strong>state annotation</strong></td>
+<td>その日の覚醒、行動、sleep / wake 履歴、薬理状態が結果をどこまで動かしたかを残します。</td>
+<td>行動量、覚醒指標、無意図運動、薬理条件、recording context。</td>
+</tr>
+<tr>
+<td><strong>fixed-model interval</strong></td>
+<td>trait backbone と fixed decoder の安定性を同一視しません。</td>
+<td>再学習なしモデルを何日 hold したか、interval ごとの劣化曲線。</td>
+</tr>
+<tr>
+<td><strong>interface / decoder drift audit</strong></td>
+<td>biological drift と、再装着・probe drift・sorting・feature shift を分けます。</td>
+<td>再装着有無、impedance、channel dropout、sorting version、unit-match probability、drift correction。</td>
+</tr>
+<tr>
+<td><strong>population backbone metric</strong></td>
+<td>unit-level の不安定さがあっても relation / manifold が残るかを別に見ます。</td>
+<td>latent dynamics、representational similarity、cross-session identification、map homeostasis 指標。</td>
+</tr>
+<tr>
+<td><strong>recalibration burden / fallback</strong></td>
+<td>運用が drift を吸収したのか、そもそも drift が小さいのかを切り分けます。</td>
+<td>再較正頻度、所要時間、supervised / unsupervised の別、silence / abstention、recovery time。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>このページから直接出る運用規則</strong>
+<p>
+Temporal Validity Card が無い場合、本サイトでは原則として <strong>within-session result</strong>、<strong>limited cross-session decode</strong>、または <strong>short-horizon online demo</strong> として扱います。逆に、state annotation、fixed-model interval、interface drift audit、recalibration burden がそろっていれば、同じ cross-day result でもどこまで安全に読めるかを明示できます。
+</p>
+</div>
 </section>
 
 <section class="section" id="site-rules">
