@@ -4,7 +4,7 @@ title: "技術ロードマップ：計測→再構成→実装でWBEを理解す
 description: "マインドアップロード（WBE）を技術面から俯瞰する学習ロードマップ。計測→再構成→実装→検証の問いの木で整理。"
 article_type: "Roadmap (Definition #1)"
 subtitle: "「何を解けたら前進か」を問いの木に分解し、読む順番と最低限の到達点を示す"
-last_updated: "2026-03-16"
+last_updated: "2026-03-17"
 note: "暫定版（随時更新）"
 audience: "全体像を知りたい人、学習順序を決めたい人、主張の強さを段階で整理したい人"
 reading_time: "20〜30分（索引だけなら5分）"
@@ -14,14 +14,17 @@ page_highlights:
   - "まずP0〜P2で『何を成功と呼ぶか』を固定し、その後に計測や実装へ進みます。"
   - "索引を使えば、気になる論点だけ先に読むこともできます。"
   - "強い主張ほど後ろのレベルに置き、前のレベルを飛ばして語らない構造にしています。"
+  - "R3/R5 では latent-state を evidence tier と timescale で分け、same-day fit と multiday maintenance を同じ成功にしません。"
 known_points:
   - "P/M/R/I/V/D に分けると、どの問題が土台でどの問題が上位論点かを整理できます。"
   - "前の層を飛ばして強い主張へ進めない、という依存関係はかなりはっきりしています。"
   - "このページは解決済み一覧ではなく、依存関係の地図として使うのが正しい読み方です。"
+  - "connectome や local activity の前進があっても、latent-state と maintenance-state の監査は別に要ります。"
 unknown_points:
   - "どの計測粒度が最終的に WBE に十分かは、まだ決まっていません。"
   - "V5 の本人性や D 系列の社会実装条件は、依然として未解決です。"
   - "どのルートが最短かは、今後のデータとベンチの整備状況で変わり得ます。"
+  - "どの latent-state augmentation が human whole-brain claim をどこまで押し上げるかも未確定です。"
 wiki_links:
   - label: "Wiki: ロードマップの読み方"
     url: "/wiki/roadmap-reading-guide.html"
@@ -203,9 +206,9 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 </section>
 
 <section class="section" id="measurement-identifiability-audit">
-<h2 class="section-title">2026-03 文献監査：計測・同定・介入の3つの壁</h2>
+<h2 class="section-title">2026-03 文献監査：計測・潜在状態・同定・介入の4つの壁</h2>
 <p>
-今回の再監査では、このロードマップの中でも <strong>M3（空間粒度）</strong>、<strong>M6（介入設計）</strong>、<strong>R7（同定可能性）</strong>、<strong>V2（因果テスト）</strong> を重点更新しました。理由は単純で、WBE をめぐる技術議論で最も起きやすい誤読が、<strong>観測量の増加</strong>を<strong>状態完全性</strong>と読み替えること、<strong>予測性能の上昇</strong>を<strong>唯一解の獲得</strong>と読み替えること、そして<strong>介入を1回入れた</strong>ことを<strong>因果検証が済んだ</strong>と読み替えることだからです。以下の3つは、2026年3月時点の一次文献が比較的一貫して支持している下限でございます。
+今回の再監査では、このロードマップの中でも <strong>M3（空間粒度）</strong>、<strong>R3（潜在状態）</strong>、<strong>R5（可塑性 / maintenance-state）</strong>、<strong>R7（同定可能性）</strong>、<strong>V2（因果テスト）</strong> を重点更新しました。理由は単純で、WBE をめぐる技術議論で最も起きやすい誤読が、<strong>観測量の増加</strong>を<strong>状態完全性</strong>と読み替えること、<strong>same-day の予測成功</strong>を<strong>cross-day の維持機構一致</strong>と読み替えること、<strong>予測性能の上昇</strong>を<strong>唯一解の獲得</strong>と読み替えること、そして<strong>介入を1回入れた</strong>ことを<strong>因果検証が済んだ</strong>と読み替えることだからです。以下の4つは、2026年3月時点の一次文献が比較的一貫して支持している下限でございます。
 </p>
 <table class="data-table">
 <thead>
@@ -222,6 +225,11 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 <td>M3 では「何が直接見えて、何が潜在のまま残るか」を粒度ごとに固定し、構造 scaffold と状態完全性を分けて書きます。</td>
 </tr>
 <tr>
+<td><strong>潜在状態 / maintenance-state の壁</strong></td>
+<td>Gouwens et al. (2021)、Hengen et al. (2016)、Torrado Pacheco et al. (2021)、Xu et al. (2024)、Looser et al. (2024)、Cahill et al. (2024)、Dewa et al. (2025)、Hadzibegovic et al. (2026) が比較的強く支持するのは、morpho-electric heterogeneity、sleep-dependent recovery、delay / myelin / metabolic support、astrocyte / intrinsic excitability の各状態が別々の timescale で claim ceiling を作ることです。</td>
+<td>R3/R5 では latent state を evidence tier と dominant timescale で分け、same-day fit を cross-day maintenance や remote-memory claim へは自動で上げません。</td>
+</tr>
+<tr>
 <td><strong>同定可能性の壁</strong></td>
 <td>HD-EEG / ESI の直接妥当化は進んでいますが、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et al. (2025) が示すのは、条件付き detectability や局在誤差の監査可能性であって、内部状態の一般的一意復元ではありません。source depth、導電率仮定、頭部モデル、刺激条件で結論は動きます。</td>
 <td>R7 では predictability、localization、identifiability を別レベルとして定義し、family comparison と棄権条件を必須にします。</td>
@@ -236,7 +244,7 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 <div class="note-box">
 <strong>この監査で明確にした批判点</strong>
 <p>
-したがって、このロードマップでは今後、<strong>「多モーダルだから十分」</strong>、<strong>「精度が高いから一意」</strong>、<strong>「刺激を入れたから因果」</strong>という3つの短絡を許しません。WBE に近い強い主張ほど、<strong>計測粒度</strong>、<strong>候補モデル空間</strong>、<strong>介入設計</strong>、<strong>失敗時の棄権</strong>を先に公開する必要があります。
+したがって、このロードマップでは今後、<strong>「多モーダルだから十分」</strong>、<strong>「same-day の fit が出たから hidden state もかなり埋まった」</strong>、<strong>「精度が高いから一意」</strong>、<strong>「刺激を入れたから因果」</strong>という4つの短絡を許しません。WBE に近い強い主張ほど、<strong>計測粒度</strong>、<strong>latent-state の timescale</strong>、<strong>候補モデル空間</strong>、<strong>介入設計</strong>、<strong>失敗時の棄権</strong>を先に公開する必要があります。
 </p>
 </div>
 </section>
@@ -743,8 +751,51 @@ EEG-fMRI / MRI-fMRI の統合では、shared clock と geometry だけでは足�
 </summary>
 <div class="qa-body">
 <p><strong>問い：</strong>観測ノイズと真の状態を分離し、状態が“予測に効いている”ことを示せるか？</p>
-<p><strong>反証条件：</strong>潜在状態がデータの圧縮にしかなっておらず、介入予測（R4）に寄与しない</p>
-<p><strong>次に必要：</strong>未学習条件での外挿と、介入応答の予測誤差を評価する</p>
+<p><strong>2026-03-17 追補：</strong>このページでは latent state を 1 本の隠れ変数として扱いません。一次文献が比較的強く支持するのは、<strong>どの latent state が、どの timescale で、どの claim ceiling を作るか</strong>を分けて監査する必要でございます。same-day の held-out prediction が上がっても、それだけで sleep-dependent recovery、multiday stabilization、timing-sensitive closed loop の hidden state が埋まったとは書きません。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>latent-state class</th>
+<th>一次文献が比較的支持すること</th>
+<th>この節で止める過大主張</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>morpho-electric / intrinsic excitability</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a> と <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">Hadzibegovic et al. (2026)</a> は、cell type だけでは threshold / gain / early consolidation window が決まらないことを示しました。</td>
+<td>cell type と connectome があれば node state もほぼ固定された、と読むことです。</td>
+</tr>
+<tr>
+<td><strong>sleep / homeostasis / regime recovery</strong></td>
+<td><a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">Torrado Pacheco et al. (2021)</a>、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a> は、sleep / wake をまたぐ firing-rate homeostasis と cortical regime recovery を示しました。</td>
+<td>same-day fit を overnight / cross-day stability へそのまま延長することです。</td>
+</tr>
+<tr>
+<td><strong>delay / myelin / metabolic support</strong></td>
+<td><a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a> は、activity-dependent な oligodendrocyte-axon metabolic coupling が axonal health と recovery に重要だと示しました。</td>
+<td>同じ graph なら timing と fatigue / recovery もほぼ同じ、と読むことです。</td>
+</tr>
+<tr>
+<td><strong>astrocyte / slow-state / multiday stabilization</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>、<a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a> は、astrocyte ensemble と slow-state が minutes-to-days の memory-related state を支えることを示しました。</td>
+<td>rodent の局所因果証拠を、そのまま human whole-brain の十分条件へ上げることです。</td>
+</tr>
+<tr>
+<td><strong>connectome-constrained degeneracy</strong></td>
+<td><a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> は connectome 制約があっても dynamics の縮退が残ることを示し、<a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium (2025)</a> は same-brain structure + function が local scaffold を強くすることを示しました。</td>
+<td>connectome-constrained prediction を unique internal mechanism や state-complete reconstruction と読むことです。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>R3 で最低限ほしい提出物</strong>
+<p>
+少なくとも <strong>(1) 直接観測量と proxy</strong>、<strong>(2) latent-state class ごとの dominant timescale と evidence tier</strong>、<strong>(3) connectome-only baseline と augmentation 比較</strong>、<strong>(4) どの latent state がいまの誤差をまだ支配しているか</strong>、<strong>(5) cross-day claim なら fixed interval と state annotation</strong> を一緒に出します。これがない場合、本サイトでは結果をまず <strong>conditional prediction</strong> として扱い、maintenance-consistent model や emulation-ready state estimate へは上げません。
+</p>
+</div>
+<p><strong>反証条件：</strong>潜在状態がデータ圧縮にしかなっておらず、candidate family を変えると結論が大きく揺れる、あるいは介入予測（R4）と temporal validity に寄与しない場合は、状態を捉えたとはみなしません。</p>
+<p><strong>次に必要：</strong><a href="verification.html#latent-state-error-budget">Verification の latent-state error budget</a> と <a href="verification.html#temporal-validity-card">Temporal Validity Card</a> に接続し、未学習条件での外挿、介入応答の予測誤差、cross-day 劣化を束で評価します。</p>
 </div>
 </details>
 
@@ -771,8 +822,41 @@ EEG-fMRI / MRI-fMRI の統合では、shared clock と geometry だけでは足�
 </summary>
 <div class="qa-body">
 <p><strong>問い：</strong>長期の本人性（V5）を扱うなら、学習（更新）を入れざるを得ない。だが更新を入れると検証が難しくなる。</p>
-<p><strong>分岐（例）：</strong>(A) 学習しない（固定モデル） / (B) 制限付きで学習（安全な更新） / (C) 学習則まで推定</p>
-<p><strong>次に必要：</strong>学習を入れた時のドリフト監視（V4）と、安全策（I8）</p>
+<p><strong>2026-03-17 追補：</strong>可塑性の境界は、単に「学習則を書いたかどうか」ではありません。一次文献が比較的強く支持する本当の境界は、<strong>same-day の固定 decode</strong>、<strong>cross-day の maintenance</strong>、<strong>remote-memory / consolidation</strong> のどこまでを claim するかでございます。したがって本サイトでは、plasticity を <strong>claim timescale ごとに必要提出物が変わる問題</strong>として扱います。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>ルート</th>
+<th>ここまでなら比較的安全に読めること</th>
+<th>最低限ほしい提出物</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>(A) 固定モデル + state annotation</strong></td>
+<td>within-session / same-day の限定課題で、状態を固定した条件付き prediction や decode を比較できます。</td>
+<td>evaluation family、state annotation、hold-out、abstention、same-day の範囲から出ない claim ceiling です。</td>
+</tr>
+<tr>
+<td><strong>(B) 固定パラメータ + maintenance log</strong></td>
+<td><a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">Torrado Pacheco et al. (2021)</a>、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a> が示すように、cross-day claim では sleep / wake と recovery を別監査として扱えます。</td>
+<td>fixed decoder interval、sleep / wake history、recalibration burden、transfer ceiling、maintenance-state の未観測項目です。</td>
+</tr>
+<tr>
+<td><strong>(C) 明示的 plasticity / maintenance model</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a> と <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">Hadzibegovic et al. (2026)</a> が示すような multiday stabilization や early consolidation window を、候補機序として比較できます。</td>
+<td>update rule の明示、intervention / perturbation、family comparison、失敗時の downgrade rule、rodent local causal result を human whole-brain に上げない注記です。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>この節の site rule</strong>
+<p>
+固定モデルを許すのは、まず <strong>same-day / short-window</strong> の claim まででございます。cross-day stability を語るなら <a href="verification.html#temporal-validity-card">Temporal Validity Card</a> を、どの maintenance-state がまだ誤差を支配しているかを語るなら <a href="verification.html#latent-state-error-budget">latent-state error budget</a> を添えます。remote-memory や enduring-personalization を語る場合は、少なくとも intrinsic excitability、sleep-dependent recovery、delay / myelin / metabolic support、astrocyte / slow-state のどれを explicit に入れたか、あるいはどれを未解決として保留したかを出します。
+</p>
+</div>
+<p><strong>分岐（例）：</strong>(A) 学習しない（固定モデル） / (B) 制限付きで学習（安全な更新） / (C) 学習則まで推定、ではなく、<strong>どの timescale の claim を許すか</strong>で必要提出物を変えます。</p>
+<p><strong>次に必要：</strong>学習を入れた時のドリフト監視（V4）と安全策（I8）に加えて、cross-day では temporal validity、remote-memory では intervention と maintenance-state の証跡を束ねて公開します。</p>
 </div>
 </details>
 
