@@ -695,3 +695,12 @@ recommended_pages:
 - 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue/*.yaml` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で全件参照可能でした。
 - EEG参照の固定ルールは継続します。`EEG-DATA/eeg_dataset_summary_ja.csv` の数値IDは再採番があるため、提出・再現ログは `D1-D16 + DOI`（`auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` 正本）を基準にします。
 - 方針を維持します。汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` を1件ずつ深掘りして記述します。
+
+## 2026-03-16 19:04 JST 再検証ログ（本run / pull後・RQ単位深掘り維持）
+
+- 作業前に `main` と3サブモジュールを pull し、基準コミットを `mind-upload=d575cb4848bd`、`EEG-DATA=da82c1d37069`、`auto-research-funds=c92fd845bddf` に更新しました。
+- `mind-upload/research_harvest_50.md` の `リサーチクエスチョン分解` を再カウントし、`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`、合計 `60` を再確認しました。
+- 本ページの `RQ` 行は `60` 件、判定内訳は `A/B/C=17/25/18` を維持していることを再確認しました。
+- 本ページで参照する EEG データID `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）でした。
+- 助成キー `G1-G6` は `G1-G2=grant_queue/*.yaml` と `G3-G6=auto-research-funds/grant_eeg_dataset_match.csv` の系統で全件参照可能を再確認しました。
+- 運用方針は据え置きです。汎用俯瞰ではなく、各RQを1件ずつ深掘りして「検証命題・応募テーマ・使用EEGデータ」を固定して進めます。
