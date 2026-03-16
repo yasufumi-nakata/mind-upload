@@ -634,3 +634,19 @@ recommended_pages:
 - 助成キー `G1-G6` の実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再参照可能です。
 - 今回の重要差分: `EEG-DATA/eeg_dataset_summary_ja.csv` は再採番が入るため、固定参照は数値IDではなく `D1-D16（DOI固定） + データセット名` を正本として扱う運用に再固定しました。
 - 運用方針を維持します。汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` を1件ずつ実行する粒度で継続します。
+
+## 2026-03-16 10:02 JST 再検証ログ（本run / 1RQ深掘り固定）
+
+- 作業前に `main` を `pull --ff-only` で最新化し、`mind-upload/research_harvest_50.md` 正本に対して `RQ_TOTAL=60` を再確認しました。
+- 本ページの `RQ` 行を再計数し、判定内訳 `A/B/C=17/25/18` を再確認しました。
+- 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は、`grant_queue` と `auto-research-funds/wiki` の両系統で再参照可能でした。
+- 本runの運用を固定します。全課題を汎用俯瞰で一括処理せず、`1RQ=1検証命題=1応募テーマ=1主データ` の順に1件ずつ深掘りします。
+
+### 直近の深掘り優先6件（再固定）
+
+1. `U4-2`（最小介入因果主張）: `ID 56` を主データに、再現可否を先に固定。
+2. `U7-5`（前処理CI release block）: `ID 676` を主データに、閾値を固定。
+3. `U8-4`（異常検知×フェイルセーフ）: `ID 2412` を主データに、安全停止指標を固定。
+4. `U11-1`（意識指標順位保存）: `ID 859` を主データに、失敗条件を先に固定。
+5. `U13-3`（同一出力・異機構識別）: `ID 509` を主データに、模倣分離率を固定。
+6. `U14-6`（コンテナ固定再現性）: `ID 56` を主データに、再現率改善とコスト増分を同時測定。
