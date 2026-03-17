@@ -5,7 +5,7 @@ description: "research_harvest_50 の60リサーチクエスチョンを、EEG-D
 article_type: Wiki
 subtitle: "1問ずつ深掘りして、検証設計と応募テーマまで接続する"
 author: Mind Uploading Research Project
-last_updated: "2026-03-17"
+last_updated: "2026-03-18"
 note: "RQ-by-RQ Deep Dive"
 audience: "RQを実験計画に落としたい人、助成応募テーマとデータ根拠を同時に作りたい人"
 reading_time: "25〜40分"
@@ -898,3 +898,11 @@ recommended_pages:
 - `research_harvest_50.md` 正本と本ページの `RQ` 行整合（`60件`）を維持しました。
 - 本runでは `U8-2` を1件集中で追記し、`応募テーマ` と `EEG-DATAの種別` を1対1で固定しました。
 - `G1-G6` の助成キー定義と矛盾がないことを確認し、`G2/G5` レーンでの提出導線を維持しました。
+
+## 2026-03-18 09:31 JST 再検証ログ（本run / 全RQ深掘り整合の再固定）
+
+- `mind-upload/automation/rq_reading_path_timed_round19_2026-03-01.csv` を正本として再照合し、`RQ_TOTAL=60`（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）を確認。
+- 本ページの RQ 行数は `60`、`mind-upload-eeg-rq60-grant-dataset-playbook.md` の RQ 行数も `60` で一致。
+- 判定内訳は再計数で `A/B/C=17/25/18` を再確認。
+- 参照EEGデータID `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` 上で欠落 `0`。
+- 方針を継続: 汎用要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` を維持し、各RQを個別に深掘りして扱う。

@@ -5,7 +5,7 @@ description: "60RQを1件ずつ、応募先ID・主EEGデータ・選定理由�
 article_type: Wiki
 subtitle: "汎用要約ではなく、RQ単位で提出判断を固定する"
 author: Mind Uploading Research Project
-last_updated: "2026-03-17"
+last_updated: "2026-03-18"
 note: "Per-RQ Grant and Dataset Playbook"
 audience: "RQごとに助成応募と実験初手を同時に決めたい人"
 reading_time: "20〜30分"
@@ -311,3 +311,11 @@ recommended_pages:
 - 全 `RQ` 行で `第一応募先/予備応募先/主EEG-DATA/最小成果物` の必須列欠落 `0` を確認しました。
 - 助成キー `G1-G6` 実IDは `grant_queue` と `auto-research-funds` で全件参照可能でした（欠落 `0`）。
 - 提出時は `D1-D16 + DOI + データセット名` を固定参照として使い、`1RQ=1提出判断` で運用を継続します。
+
+## 2026-03-18 09:31 JST 再検証ログ（本run / 提出固定表の整合確認）
+
+- 本ページの `RQ` 行を再計数し、`RQ_TOTAL=60` を再確認。
+- 判定内訳 `A/B/C=17/25/18` は `mind-upload-eeg-rq60-feasibility-and-funds.md` と一致。
+- 全 `RQ` 行で `第一応募先/予備応募先/主EEG-DATA/主データ採用理由/最小成果物` の必須列欠落 `0` を確認。
+- 参照EEGデータID `24件` は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）。
+- 運用を再固定: 汎用テーマ化ではなく `1RQ=1提出判断` の粒度で申請文に直接転記する。

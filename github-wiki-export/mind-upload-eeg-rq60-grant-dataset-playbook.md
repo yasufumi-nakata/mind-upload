@@ -1,26 +1,32 @@
-# Mind-upload RQ60 申請プレイブック（RQ単位固定）
-
-> 汎用要約ではなく、RQ単位で提出判断を固定する
->
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
-
-- 更新日: 2026-03-17 / 位置づけ: Per-RQ Grant and Dataset Playbook
-
-## このページの役割
-このページは、mind-upload の60リサーチクエスチョンを1件ずつ対象に、第一応募先/予備応募先、主EEG-DATA、採用理由、提出成果物を固定した実務用プレイブックです。
-
-## 正確さの前提
-A/B/C 判定は `mind-upload-eeg-rq60-feasibility-and-funds.md` と同一基準を使います。
-
-## 公開ページへ戻る
-- [文献地図](https://mind-upload.com/research_harvest_50.html)
-- [データ&ベンチ](https://mind-upload.com/datasets.html)
-
-## 関連 Wiki
-- [Wiki: RQ60 EEG検証可否と助成テーマ](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds) - 判定根拠・U別背景・RQ表の正本。
-- [Wiki: 検証基盤の基本](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - 成果物を検証仕様に落とす基準。
-
 ---
+layout: default
+title: "Mind-upload RQ60 申請プレイブック（RQ単位固定）"
+description: "60RQを1件ずつ、応募先ID・主EEGデータ・選定理由・最小成果物まで固定した運用ページ。"
+article_type: Wiki
+subtitle: "汎用要約ではなく、RQ単位で提出判断を固定する"
+author: Mind Uploading Research Project
+last_updated: "2026-03-18"
+note: "Per-RQ Grant and Dataset Playbook"
+audience: "RQごとに助成応募と実験初手を同時に決めたい人"
+reading_time: "20〜30分"
+page_intro: "このページは、mind-upload の60リサーチクエスチョンを1件ずつ対象に、第一応募先/予備応募先、主EEG-DATA、採用理由、提出成果物を固定した実務用プレイブックです。"
+accuracy_note: "A/B/C 判定は `mind-upload-eeg-rq60-feasibility-and-funds.md` と同一基準を使います。"
+wiki_links:
+  - label: "Wiki: RQ60 EEG検証可否と助成テーマ"
+    url: "/wiki/mind-upload-eeg-rq60-feasibility-and-funds.html"
+    description: "判定根拠・U別背景・RQ表の正本。"
+  - label: "Wiki: 検証基盤の基本"
+    url: "/wiki/verification-basics.html"
+    description: "成果物を検証仕様に落とす基準。"
+recommended_pages:
+  - label: "文献地図"
+    url: "/research_harvest_50.html"
+  - label: "データ&ベンチ"
+    url: "/datasets.html"
+---
+
+<main class="main-container">
+<article class="content-column">
 
 ## 使い方
 
@@ -99,6 +105,7 @@ A/B/C 判定は `mind-upload-eeg-rq60-feasibility-and-funds.md` と同一基準�
 | U15-3 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 49 | 安全停止や権限管理の制度監査指標へ接続しやすい。 | 制度監査要件表（技術ログ対応） |
 | U15-4 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 49 | 安全停止や権限管理の制度監査指標へ接続しやすい。 | 制度監査要件表（技術ログ対応） |
 
+
 ## 補足
 
 - このページは「提出運用を固定する」ための早見表です。判定理由の詳細は `mind-upload-eeg-rq60-feasibility-and-funds` を参照してください。
@@ -165,6 +172,7 @@ A/B/C 判定は `mind-upload-eeg-rq60-feasibility-and-funds.md` と同一基準�
 - 独立監査結果として、`feasibility` ページの `ID -> データセット名` 表は現行CSVの再採番と固定一致しない点を確認。運用上は既存方針どおり `D1-D16 + DOI` 正本参照を優先する。
 - 方針を継続: 汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持。
 
+
 ## 2026-03-16 00:02 JST 再検証ログ（本run / 申請プレイブック更新）
 
 - `RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認し、`mind-upload-eeg-rq60-feasibility-and-funds.md` と整合しました。
@@ -197,6 +205,7 @@ A/B/C 判定は `mind-upload-eeg-rq60-feasibility-and-funds.md` と同一基準�
 - 全 `RQ` 行で `第一応募先`・`予備応募先`・`主EEG-DATA`・`主データ採用理由`・`最小成果物` の必須列が埋まっていることを再確認しました（欠落 `0`）。
 - 助成キー `G1-G6` は `grant_queue` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の両系統で実ID参照できることを再確認しました。
 - 実務運用は継続します。汎用テーマ化は行わず、`1RQ=1提出判断` で申請文へ直接転記する粒度を維持します。
+
 
 ## 2026-03-16 08:02 JST 再検証ログ（本run / 提出固定表の再確認）
 
@@ -239,6 +248,7 @@ A/B/C 判定は `mind-upload-eeg-rq60-feasibility-and-funds.md` と同一基準�
 - 本ページの `RQ_TOTAL=60`、`A/B/C=17/25/18`、必須列（`第一応募先/予備応募先/主EEG-DATA/最小成果物`）欠落 `0` を再確認しました。
 - 助成実ID `G1-G6` は `grant_queue` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の両系統で参照可能でした。
 - 本runでも運用は据え置きです。汎用テーマ化はせず、`1RQ=1提出判断` で申請文へ直接転記する粒度を維持します。
+
 
 ## 2026-03-16 16:02 JST 再検証ログ（本run / 提出固定表の更新確認）
 
@@ -301,3 +311,11 @@ A/B/C 判定は `mind-upload-eeg-rq60-feasibility-and-funds.md` と同一基準�
 - 全 `RQ` 行で `第一応募先/予備応募先/主EEG-DATA/最小成果物` の必須列欠落 `0` を確認しました。
 - 助成キー `G1-G6` 実IDは `grant_queue` と `auto-research-funds` で全件参照可能でした（欠落 `0`）。
 - 提出時は `D1-D16 + DOI + データセット名` を固定参照として使い、`1RQ=1提出判断` で運用を継続します。
+
+## 2026-03-18 09:31 JST 再検証ログ（本run / 提出固定表の整合確認）
+
+- 本ページの `RQ` 行を再計数し、`RQ_TOTAL=60` を再確認。
+- 判定内訳 `A/B/C=17/25/18` は `mind-upload-eeg-rq60-feasibility-and-funds.md` と一致。
+- 全 `RQ` 行で `第一応募先/予備応募先/主EEG-DATA/主データ採用理由/最小成果物` の必須列欠落 `0` を確認。
+- 参照EEGデータID `24件` は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）。
+- 運用を再固定: 汎用テーマ化ではなく `1RQ=1提出判断` の粒度で申請文に直接転記する。

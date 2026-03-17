@@ -5,7 +5,7 @@ description: "60RQを1件ずつ、EEGで直接検証する核・外部必須要�
 article_type: Wiki
 subtitle: "汎用要約ではなく、RQごとの論点を固定する"
 author: Mind Uploading Research Project
-last_updated: "2026-03-17"
+last_updated: "2026-03-18"
 note: "RQ-by-RQ Deep Focus"
 audience: "各RQを申請文と実験手順に直接落としたい人"
 reading_time: "20〜35分"
@@ -591,3 +591,11 @@ recommended_pages:
 - `RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認し、既存2ページ（`feasibility` / `playbook`）との整合を維持しました。
 - 本runは `U8-2` を1件集中で固定し、`応募テーマ` と `EEG-DATAのデータ種別`（視覚・運動課題/ERP・運動イメージ/睡眠）を対応付けました。
 - 方針を継続します。全課題を浅く横断せず、`1RQ=1検証命題=1応募テーマ=1主データ` で更新します。
+
+## 2026-03-18 09:31 JST 再検証ログ（本run / 1RQずつ深掘り運用の継続確認）
+
+- `mind-upload/automation/rq_reading_path_timed_round19_2026-03-01.csv` の `60RQ` と本ページの `RQ` 行を再照合し、件数一致（欠落 `0`、重複 `0`）。
+- 判定件数は `A/B/C=17/25/18` を再確認。
+- 本ページで参照する EEG データID `24件` は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）。
+- 助成キー `G1-G6` を用いた応募テーマ割当は維持し、`EEGで直接検証する核` と `EEG外で必須` の分離を継続。
+- 方針据え置き: 「すべてを浅く網羅」ではなく、RQごとに検証命題・応募テーマ・主データを固定して深掘りする。
