@@ -127,7 +127,7 @@ P/M/R/I/V/D の記号や依存関係を初歩から追いたい場合は、先�
 <div class="note-box">
 <strong>『コネクトームが取れたら十分では？』で止まったとき</strong>
 <p>
-R 系列では、配線図だけでなく、細胞型、内在興奮性 / 恒常性 set point、シナプス効率、樹状突起の branch-specific 統合状態、遅延と髄鞘、神経修飾、グリアをどう扱うかが分岐点になります。どの状態変数が抜けると何が主張できなくなるかを一次文献から整理したい場合は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> と <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> をご覧ください。
+R 系列では、配線図だけでなく、細胞型、内在興奮性 / 恒常性 set point、シナプス効率、樹状突起の branch-specific 統合状態、遅延と髄鞘、局所 ATP 供給とミトコンドリア配置、神経修飾、グリアをどう扱うかが分岐点になります。どの状態変数が抜けると何が主張できなくなるかを一次文献から整理したい場合は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> と <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> をご覧ください。
 </p>
 </div>
 <div class="note-box">
@@ -226,7 +226,7 @@ Roadmap を読んだあとに、計測、再構成、実装、検証、社会実
 </tr>
 <tr>
 <td><strong>潜在状態 / maintenance-state の壁</strong></td>
-<td>Gouwens et al. (2021)、Hengen et al. (2016)、Torrado Pacheco et al. (2021)、Xu et al. (2024)、Looser et al. (2024)、Cahill et al. (2024)、Dewa et al. (2025)、Hadzibegovic et al. (2026) が比較的強く支持するのは、morpho-electric heterogeneity、sleep-dependent recovery、delay / myelin / metabolic support、astrocyte / intrinsic excitability の各状態が別々の timescale で claim ceiling を作ることです。</td>
+<td>Gouwens et al. (2021)、Hengen et al. (2016)、Torrado Pacheco et al. (2021)、Xu et al. (2024)、Looser et al. (2024)、<a href="https://doi.org/10.1016/j.cell.2013.12.042" target="_blank">Rangaraju et al. (2014)</a>、<a href="https://doi.org/10.1016/j.cell.2018.12.013" target="_blank">Rangaraju et al. (2019)</a>、<a href="https://doi.org/10.1016/j.neuron.2018.09.025" target="_blank">Divakaruni et al. (2018)</a>、<a href="https://doi.org/10.1038/s41467-023-44233-8" target="_blank">Bapat et al. (2024)</a>、<a href="https://doi.org/10.1038/s42003-025-08963-3" target="_blank">Hu et al. (2025)</a>、Cahill et al. (2024)、Dewa et al. (2025)、Hadzibegovic et al. (2026) が比較的強く支持するのは、morpho-electric heterogeneity、sleep-dependent recovery、delay / myelin support、bioenergetic / mitochondrial state、astrocyte / intrinsic excitability の各状態が別々の timescale で claim ceiling を作ることです。</td>
 <td>R3/R5 では latent state を evidence tier と dominant timescale で分け、same-day fit を cross-day maintenance や remote-memory claim へは自動で上げません。</td>
 </tr>
 <tr>
@@ -777,6 +777,11 @@ EEG-fMRI / MRI-fMRI の統合では、shared clock と geometry だけでは足�
 <td>同じ graph なら timing と fatigue / recovery もほぼ同じ、と読むことです。</td>
 </tr>
 <tr>
+<td><strong>bioenergetic / mitochondrial state</strong></td>
+<td><a href="https://doi.org/10.1016/j.cell.2013.12.042" target="_blank">Rangaraju et al. (2014)</a>、<a href="https://doi.org/10.1016/j.cell.2018.12.013" target="_blank">Rangaraju et al. (2019)</a>、<a href="https://doi.org/10.1016/j.neuron.2018.09.025" target="_blank">Divakaruni et al. (2018)</a>、<a href="https://doi.org/10.1038/s41467-023-44233-8" target="_blank">Bapat et al. (2024)</a>、<a href="https://doi.org/10.1038/s42003-025-08963-3" target="_blank">Hu et al. (2025)</a> は、局所 ATP 供給、mitochondrial positioning、fission / fusion、ATP synthase polarisation が synaptic reliability と plasticity ceiling を左右することを示しました。</td>
+<td>macro metabolism や glial support が合っていれば、ニューロン局所の energetic mechanism も自動的に合った、と読むことです。</td>
+</tr>
+<tr>
 <td><strong>astrocyte / slow-state / multiday stabilization</strong></td>
 <td><a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>、<a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a> は、astrocyte ensemble と slow-state が minutes-to-days の memory-related state を支えることを示しました。</td>
 <td>rodent の局所因果証拠を、そのまま human whole-brain の十分条件へ上げることです。</td>
@@ -852,7 +857,7 @@ EEG-fMRI / MRI-fMRI の統合では、shared clock と geometry だけでは足�
 <div class="note-box">
 <strong>この節の site rule</strong>
 <p>
-固定モデルを許すのは、まず <strong>same-day / short-window</strong> の claim まででございます。cross-day stability を語るなら <a href="verification.html#temporal-validity-card">Temporal Validity Card</a> を、どの maintenance-state がまだ誤差を支配しているかを語るなら <a href="verification.html#latent-state-error-budget">latent-state error budget</a> を添えます。remote-memory や enduring-personalization を語る場合は、少なくとも intrinsic excitability、sleep-dependent recovery、delay / myelin / metabolic support、astrocyte / slow-state のどれを explicit に入れたか、あるいはどれを未解決として保留したかを出します。
+固定モデルを許すのは、まず <strong>same-day / short-window</strong> の claim まででございます。cross-day stability を語るなら <a href="verification.html#temporal-validity-card">Temporal Validity Card</a> を、どの maintenance-state がまだ誤差を支配しているかを語るなら <a href="verification.html#latent-state-error-budget">latent-state error budget</a> を添えます。remote-memory や enduring-personalization を語る場合は、少なくとも intrinsic excitability、sleep-dependent recovery、delay / myelin support、bioenergetic / mitochondrial state、astrocyte / slow-state のどれを explicit に入れたか、あるいはどれを未解決として保留したかを出します。
 </p>
 </div>
 <p><strong>分岐（例）：</strong>(A) 学習しない（固定モデル） / (B) 制限付きで学習（安全な更新） / (C) 学習則まで推定、ではなく、<strong>どの timescale の claim を許すか</strong>で必要提出物を変えます。</p>

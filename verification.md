@@ -731,7 +731,7 @@ Fusion Card が無い場合、本サイトではその結果を原則として <
 <section class="section" id="latent-state-error-budget">
 <h2 class="section-title">2026-03 追補：latent-state error budget を加える</h2>
 <p>
-今回さらに深掘りして見えた弱点は、<strong>Observability Budget だけでは「何が直接見えていないか」は書けても、どの latent state がいまの claim をどれだけ止めているか</strong>までは固定しきれないことでした。<a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> は connectome 制約を入れても dynamics の縮退が残ることを示し、<a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> は same-brain structure-function link が local conditional prediction を強くする一方で全脳 state-complete を与えないことを示しました。さらに、<a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">Gamlin et al. (2025)</a>、<a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">van Beest et al. (2025)</a>、<a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>、<a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">Hadzibegovic et al. (2026)</a>、<a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Kim et al. (2025)</a> に加え、<a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">Torrado Pacheco et al. (2021)</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a>、<a href="https://doi.org/10.1093/brain/awab285" target="_blank">Eide &amp; Ringstad (2021)</a>、<a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>、<a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> は、cell-type bridge、chronic unit identity、transmitter specificity、glial slow-state、intrinsic excitability、sleep-dependent recovery、axonal support、clearance / immune support が別々の誤差源として残ることを裏づけます。今回の再監査ではさらに、<strong>各 latent-state 行に dominant timescale、evidence tier、transfer ceiling を持たせないと、same-day fit を cross-day stability へ、rodent local causal result を human whole-brain sufficient condition へ読み替えやすい</strong>ことも見えました。したがって本サイトでは、<strong>L2 以上の提出物に Observability Budget と latent-state error budget の両方</strong>を要求し、未観測状態を「列挙」ではなく「どの誤差項をまだ支配しているか」で管理します。
+今回さらに深掘りして見えた弱点は、<strong>Observability Budget だけでは「何が直接見えていないか」は書けても、どの latent state がいまの claim をどれだけ止めているか</strong>までは固定しきれないことでした。<a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> は connectome 制約を入れても dynamics の縮退が残ることを示し、<a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> は same-brain structure-function link が local conditional prediction を強くする一方で全脳 state-complete を与えないことを示しました。さらに、<a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">Gamlin et al. (2025)</a>、<a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">van Beest et al. (2025)</a>、<a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>、<a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">Hadzibegovic et al. (2026)</a>、<a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Kim et al. (2025)</a> に加え、<a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">Torrado Pacheco et al. (2021)</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a>、<a href="https://doi.org/10.1016/j.cell.2013.12.042" target="_blank">Rangaraju et al. (2014)</a>、<a href="https://doi.org/10.1016/j.cell.2018.12.013" target="_blank">Rangaraju et al. (2019)</a>、<a href="https://doi.org/10.1016/j.neuron.2018.09.025" target="_blank">Divakaruni et al. (2018)</a>、<a href="https://doi.org/10.1038/s41467-023-44233-8" target="_blank">Bapat et al. (2024)</a>、<a href="https://doi.org/10.1038/s42003-025-08963-3" target="_blank">Hu et al. (2025)</a>、<a href="https://doi.org/10.1093/brain/awab285" target="_blank">Eide &amp; Ringstad (2021)</a>、<a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>、<a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> は、cell-type bridge、chronic unit identity、transmitter specificity、glial slow-state、intrinsic excitability、sleep-dependent recovery、axonal support、bioenergetic / mitochondrial state、clearance / immune support が別々の誤差源として残ることを裏づけます。今回の再監査ではさらに、<strong>各 latent-state 行に dominant timescale、evidence tier、transfer ceiling を持たせないと、same-day fit を cross-day stability へ、rodent local causal result を human whole-brain sufficient condition へ読み替えやすい</strong>ことも見えました。したがって本サイトでは、<strong>L2 以上の提出物に Observability Budget と latent-state error budget の両方</strong>を要求し、未観測状態を「列挙」ではなく「どの誤差項をまだ支配しているか」で管理します。
 </p>
 <table class="data-table">
 <thead>
@@ -772,6 +772,12 @@ Fusion Card が無い場合、本サイトではその結果を原則として <
 <td>phase error、latency degradation curve、timing-sensitive task での失敗率、delay を固定定数で近似した箇所。</td>
 <td>timing-sensitive 条件で、delay fixed と delay-aware 条件の差を出し、cell-type / region 依存の caveat も併記します。</td>
 <td>delay を定数へ押し込んだだけなら、位相同期・閉ループ時間整合性・cross-day timing claim を止めます。</td>
+</tr>
+<tr>
+<td><strong>bioenergetic / mitochondrial state</strong></td>
+<td>31P-MRS / dynamic DMI など energetic proxy、possible なら fatigue / repeated-burst failure のログ、bioenergetic state を fixed background にした箇所、未測定 mitochondrial positioning / redox reserve。</td>
+<td>neural-only 条件と bioenergetic-aware 条件を同じ split / horizon で比べ、human macro energetic proxy と rodent local causal evidence は evidence tier を分けて較正します。</td>
+<td>energetic log が無い場合、sustained release reliability、repeated-burst fatigue resistance、dendritic plasticity の energetic mechanism を止め、human energetic imaging も local mitochondrial truth とは書きません。</td>
 </tr>
 <tr>
 <td><strong>neuromodulatory specificity</strong></td>
@@ -839,6 +845,12 @@ Fusion Card が無い場合、本サイトではその結果を原則として <
 <strong>2026-03 追補：clearance / immune proxy は momentary neural truth ではありません</strong>
 <p>
 <a href="https://doi.org/10.1038/nature14432" target="_blank">Louveau et al. (2015)</a> は CNS lymphatic vessels を、<a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Kim et al. (2025)</a> は meningeal lymphatics-microglia axis が synaptic physiology を調整することを示しました。human 側でも <a href="https://doi.org/10.1093/brain/awab285" target="_blank">Eide &amp; Ringstad (2021)</a> は sleep deprivation 後の molecular clearance 低下を、<a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> は region-specific な CSF mobility を、<a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> は human で glymphatic route に沿った amyloid-beta / tau clearance を示しました。したがって本サイトでは、CSF / glymphatic data を <strong>macro support-state proxy</strong> として扱い、cell-specific immune controller や moment-to-moment neural truth とは書きません。
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03 追補：bioenergetic proxy は glial support の別名ではありません</strong>
+<p>
+<a href="https://doi.org/10.1016/j.cell.2013.12.042" target="_blank">Rangaraju et al. (2014)</a> と <a href="https://doi.org/10.1016/j.cell.2018.12.013" target="_blank">Rangaraju et al. (2019)</a> は、局所 ATP synthesis と spatially stable mitochondria が synaptic function と local translation に必要であることを示しました。<a href="https://doi.org/10.1016/j.neuron.2018.09.025" target="_blank">Divakaruni et al. (2018)</a>、<a href="https://doi.org/10.1038/s41467-023-44233-8" target="_blank">Bapat et al. (2024)</a>、<a href="https://doi.org/10.1038/s42003-025-08963-3" target="_blank">Hu et al. (2025)</a> は dendritic fission、mitochondrial anchoring、ATP synthase polarisation が plasticity の可否に関わることを示しました。一方 human 側の <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> と <a href="https://doi.org/10.1093/pnasnexus/pgaf079" target="_blank">Li et al. (2025)</a> は ATP / glucose turnover の <strong>macro energetic proxy</strong> を前進させたのであり、どの branch や synapse で ATP reserve が不足したかまでは与えません。したがって本サイトでは、bioenergetic / mitochondrial state を glial support に吸収せず、別行で監査します。
 </p>
 </div>
 <div class="note-box">
@@ -960,7 +972,7 @@ Observability Budget は <strong>何を直接見たか</strong>、latent-state e
 <section class="section" id="state-completeness-gate">
 <h2 class="section-title">状態変数の完全性ゲート</h2>
 <p>
-2026年3月の一次文献監査では、<strong>「配線図がある」こと</strong>と<strong>「生成的に振る舞える」こと</strong>の間に、少なくとも 7 種類の抜けやすい状態変数があることを再確認しました。既存の細胞型・シナプス・遅延・神経修飾・グリアに加えて、今回あらためて <strong>shared extracellular / electrical state</strong> と <strong>内在興奮性 / 恒常性 set point</strong> を独立クラスとして切り出しました。したがって本サイトでは <strong>edge list だけの提出物を L2 以上の合格条件に使いません</strong>。
+2026年3月の一次文献監査では、<strong>「配線図がある」こと</strong>と<strong>「生成的に振る舞える」こと</strong>の間に、少なくとも 8 種類の抜けやすい状態変数があることを再確認しました。既存の細胞型・シナプス・遅延・神経修飾・グリアに加えて、今回あらためて <strong>shared extracellular / electrical state</strong>、<strong>内在興奮性 / 恒常性 set point</strong>、<strong>bioenergetic / mitochondrial state</strong> を独立クラスとして切り出しました。したがって本サイトでは <strong>edge list だけの提出物を L2 以上の合格条件に使いません</strong>。
 </p>
 <table class="data-table">
 <thead>
@@ -997,6 +1009,11 @@ Observability Budget は <strong>何を直接見たか</strong>、latent-state e
 <td>閉ループや時間整合性の主張を止め、遅延不確実性を明示します。</td>
 </tr>
 <tr>
+<td><strong>bioenergetic / mitochondrial state</strong></td>
+<td>同じ graph でも、局所 ATP 供給、mitochondrial positioning、fission / fusion、redox reserve は決まりません。</td>
+<td>human energetic imaging を macro proxy として扱い、repeated-burst reliability や dendritic plasticity の energetic mechanism は latent state 付きに留めます。</td>
+</tr>
+<tr>
 <td><strong>神経修飾場</strong></td>
 <td>覚醒度や学習率の状態は静的配線から復元できず、瞳孔径や HRV は mixed arousal proxy にとどまり、receptor atlas は region prior であって momentary release ではありません。</td>
 <td>トランスミッタ特異的な内部状態は主張せず、共変量・局所 chemical proxy・regional receptor prior を分けて扱います。</td>
@@ -1011,7 +1028,7 @@ Observability Budget は <strong>何を直接見たか</strong>、latent-state e
 <div class="note-box">
 <strong>ここでの実務ルール</strong>
 <p>
-connectome-complete は <strong>emulation-complete を意味しません</strong>。詳細な一次文献と、どの状態変数を最低提出物に入れるべきかの技術的根拠は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> に集約します。今回追加した <strong>shared extracellular / electrical state</strong> と <strong>内在興奮性 / 恒常性 / 維持状態</strong> の論点は、<a href="wiki/connectome-is-not-enough.html#timescale-matrix">同 wiki の timescale matrix</a> と <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に切り出してあります。
+connectome-complete は <strong>emulation-complete を意味しません</strong>。詳細な一次文献と、どの状態変数を最低提出物に入れるべきかの技術的根拠は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> に集約します。今回追加した <strong>shared extracellular / electrical state</strong>、<strong>内在興奮性 / 恒常性 / 維持状態</strong>、<strong>bioenergetic / mitochondrial state</strong> の論点は、<a href="wiki/connectome-is-not-enough.html#timescale-matrix">同 wiki の timescale matrix</a> と <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に切り出してあります。
 </p>
 </div>
 <div class="note-box">
@@ -1684,6 +1701,11 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Hengen, K. B., Torrado Pacheco, A., McGregor, J. N., Van Hooser, S. D., &amp; Turrigiano, G. G. (2016). Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
 <li>Torrado Pacheco, A., et al. (2021). Sleep Promotes Downward Firing Rate Homeostasis. <a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">doi:10.1016/j.neuron.2021.04.004</a></li>
 <li>Looser, Z. J., et al. (2024). Oligodendrocyte-axon metabolic coupling is mediated by extracellular K<sup>+</sup> and maintains axonal health. <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">doi:10.1038/s41593-023-01558-3</a></li>
+<li>Rangaraju, V., Calloway, N., &amp; Ryan, T. A. (2014). Activity-driven local ATP synthesis is required for synaptic function. <a href="https://doi.org/10.1016/j.cell.2013.12.042" target="_blank">doi:10.1016/j.cell.2013.12.042</a></li>
+<li>Rangaraju, V., Lauterbach, M., &amp; Schuman, E. M. (2019). Spatially stable mitochondrial compartments fuel local translation during plasticity. <a href="https://doi.org/10.1016/j.cell.2018.12.013" target="_blank">doi:10.1016/j.cell.2018.12.013</a></li>
+<li>Divakaruni, S. S., Van Dyke, A. M., Chandra, R., et al. (2018). Long-term potentiation requires a rapid burst of dendritic mitochondrial fission during induction. <a href="https://doi.org/10.1016/j.neuron.2018.09.025" target="_blank">doi:10.1016/j.neuron.2018.09.025</a></li>
+<li>Bapat, P., Nirschl, J. J., Wilkerson, J. R., et al. (2024). VAP stabilizes dendritic mitochondria to locally support synaptic plasticity. <a href="https://doi.org/10.1038/s41467-023-44233-8" target="_blank">doi:10.1038/s41467-023-44233-8</a></li>
+<li>Hu, H., Tang, J., Wu, Y., et al. (2025). Polarized ATP synthase in synaptic mitochondria induced by learning and plasticity signals. <a href="https://doi.org/10.1038/s42003-025-08963-3" target="_blank">doi:10.1038/s42003-025-08963-3</a></li>
 <li>Reimer, J., McGinley, M. J., Liu, Y., et al. (2016). Pupil fluctuations track rapid changes in adrenergic and cholinergic activity in cortex. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">doi:10.1038/ncomms13289</a></li>
 <li>Lohani, S., Moberly, A. H., Benisty, H., et al. (2022). Spatiotemporally heterogeneous coordination of cholinergic and neocortical activity. <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">doi:10.1038/s41593-022-01202-6</a></li>
 <li>Collins, L., Reddy, C. B., Neal, S., et al. (2023). Cholinergic and noradrenergic axonal activity contains a behavioral-state signal that is coordinated across the dorsal cortex. <a href="https://doi.org/10.7554/eLife.86800.2" target="_blank">doi:10.7554/eLife.86800.2</a></li>
@@ -1702,6 +1724,8 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Louveau, A., Smirnov, I., Keyes, T. J., et al. (2015). Structural and functional features of central nervous system lymphatic vessels. <a href="https://doi.org/10.1038/nature14432" target="_blank">doi:10.1038/nature14432</a></li>
 <li>Kim, J., et al. (2025). Meningeal lymphatics-microglia axis regulates synaptic physiology. <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">doi:10.1016/j.cell.2025.02.022</a></li>
 <li>Eide, P. K., &amp; Ringstad, G. (2021). Sleep deprivation impairs molecular clearance from the human brain. <a href="https://doi.org/10.1093/brain/awab285" target="_blank">doi:10.1093/brain/awab285</a></li>
+<li>Ren, J., Sherry, A. D., &amp; Malloy, C. R. (2015). 31P-MRS of healthy human brain: ATP synthesis, metabolite concentrations, pH, and T1 relaxation times. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">doi:10.1002/nbm.3384</a></li>
+<li>Li, J., Xu, H. N., Yuan, J., et al. (2025). Dynamic deuterium metabolic imaging reveals whole-brain glucose metabolic turnover and neuronal function in humans. <a href="https://doi.org/10.1093/pnasnexus/pgaf079" target="_blank">doi:10.1093/pnasnexus/pgaf079</a></li>
 <li>Hirschler, L., et al. (2025). Region-specific drivers of cerebrospinal fluid mobility measured with MRI in humans. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
 <li>Dagum, P., et al. (2026). The glymphatic system clears amyloid-beta and tau from brain to plasma in humans. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
 <li>Yiu, A. P., et al. (2014). Neurons are recruited to a memory trace based on relative neuronal excitability immediately before training. <a href="https://doi.org/10.1016/j.neuron.2014.07.017" target="_blank">doi:10.1016/j.neuron.2014.07.017</a></li>

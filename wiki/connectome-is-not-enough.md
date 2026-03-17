@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Wiki：配線図だけでは足りない理由"
-description: "WBE で connectome だけを保存しても足りない理由を、shared extracellular / electrical state、樹状突起統合状態を含む状態変数の欠落と connectome-constrained 推定の限界まで含めて一次文献から整理します。clearance / immune support も独立軸として扱います。"
+description: "WBE で connectome だけを保存しても足りない理由を、shared extracellular / electrical state、樹状突起統合状態、bioenergetic / mitochondrial state を含む状態変数の欠落と connectome-constrained 推定の限界まで含めて一次文献から整理します。clearance / immune support も独立軸として扱います。"
 article_type: Wiki
 subtitle: "connectome-complete は emulation-complete ではありません"
 author: Mind Uploading Research Project
@@ -9,17 +9,17 @@ last_updated: "2026-03-17"
 note: "Technical / natural science only"
 audience: "配線図が取れたら WBE に近いのかを、技術と自然科学だけで判断したい人"
 reading_time: "15〜20分"
-page_intro: "このページは、『コネクトームが取れれば脳の再現に十分ではないか』という直感を、一次文献に基づいて分解するためのページです。哲学や法制度ではなく、どの状態変数が欠けると何が言えなくなるか、さらに connectome-constrained でもどの推定上の壁が残るかに絞って整理します。glial / metabolic support や clearance / immune support だけでなく、shared extracellular / electrical state と樹状突起の branch-specific な統合状態も独立に扱います。"
+page_intro: "このページは、『コネクトームが取れれば脳の再現に十分ではないか』という直感を、一次文献に基づいて分解するためのページです。哲学や法制度ではなく、どの状態変数が欠けると何が言えなくなるか、さらに connectome-constrained でもどの推定上の壁が残るかに絞って整理します。glial / metabolic support や clearance / immune support だけでなく、shared extracellular / electrical state、樹状突起の branch-specific な統合状態、局所 ATP 供給とミトコンドリア配置も独立に扱います。"
 accuracy_note: "ここで示すのは『最低限これを外すと主張が弱くなる』という整理と、『配線制約を入れてもなお残る縮退』の整理であり、最終的な十分条件が確定したという意味ではありません。"
 page_highlights:
-  - "配線図だけでは落ちる論点を、9つの状態クラスと1つの推定上の壁に分けて整理します。"
+  - "配線図だけでは落ちる論点を、10つの状態クラスと1つの推定上の壁に分けて整理します。"
   - "一次文献だけを使い、state variable の欠落と parameter degeneracy を切り分けます。"
   - "このサイトで connectome-complete と connectome-constrained model をどう読み替えるかの運用ルールも固定します。"
   - "列挙で終わらせず、connectome-only から何を足したときに predictive gain が読めるかを augmentation / ablation で固定します。"
   - "fly / mouse / human の証拠を混ぜたときの external validity ceiling も、本文で明示します。"
 known_points:
   - "全脳 connectome の作成は大きく前進していますが、それだけで動的再現が完了したとは言えません。"
-  - "シナプス効率、shared extracellular / electrical state、樹状突起の branch-specific 非線形統合、遅延、神経修飾、グリア、clearance / immune support、細胞型ラベル、内在興奮性 / 恒常性 set point は、静的な edge list からは落ちやすい情報です。"
+  - "シナプス効率、shared extracellular / electrical state、樹状突起の branch-specific 非線形統合、遅延、局所 ATP 供給とミトコンドリア配置、神経修飾、グリア、clearance / immune support、細胞型ラベル、内在興奮性 / 恒常性 set point は、静的な edge list からは落ちやすい情報です。"
   - "EM の synapse count、PSD 面積、same-brain connectomics は synaptic-state の prior を強くしえますが、その瞬間の effective weight や release state の直接読出しではありません。"
   - "粗い生理 proxy を ground truth と混同すると、内部状態の主張を過大化しやすくなります。"
   - "connectome-constrained なモデルでも、未測定の細胞・シナプス・修飾パラメータが残ると dynamics は縮退しえます。"
@@ -31,7 +31,7 @@ unknown_points:
   - "人で直接取得できない状態を、どの動物・侵襲系で較正すべきかはまだ固定されていません。"
   - "same-brain function を足したとき、どの程度まで縮退が解けるかもまだ系統的には定まっていません。"
   - "どの augmentation の順序が、どの誤差項をもっとも効率よく減らすかは、まだ dataset ごとに変わります。"
-  - "human macro-biochemical scaffold が local transmitter / glial maintenance-state をどこまで拘束できるかも未確定です。"
+  - "human macro-biochemical scaffold が local transmitter / glial maintenance-state / neuronal local bioenergetics をどこまで拘束できるかも未確定です。"
 wiki_links:
   - label: "Wiki: WBEの基本"
     url: "/wiki/mind-upload-basics.html"
@@ -60,7 +60,7 @@ recommended_pages:
 <div class="abstract-box">
 <h2>結論</h2>
 <p>
-配線図は WBE の重要な土台ですが、<strong>それだけでは動的再現の下限要件になりません</strong>。同じ隣接関係でも、細胞型ラベル、内在興奮性、シナプス効率、shared extracellular / electrical state、樹状突起 branch の非線形統合、伝導遅延、神経修飾、グリア結合状態、clearance / immune support が違えば、学習、位相同期、局所計算、覚醒度依存の応答、長期安定性は大きく変わります。さらに、2024-2025 年の connectome-constrained modelling 研究は、<strong>配線制約を入れても未測定パラメータと省略機構のために dynamics の縮退が残る</strong>ことを示しました。したがって、このサイトでは <strong>connectome-complete を structural atlas / scaffold の達成</strong>として扱い、<strong>emulation-complete と言い換えません</strong>。同様に、<strong>connectome-constrained model が一部の活動を再現した</strong>ことも、そのまま state-complete reconstruction とは読みません。
+配線図は WBE の重要な土台ですが、<strong>それだけでは動的再現の下限要件になりません</strong>。同じ隣接関係でも、細胞型ラベル、内在興奮性、シナプス効率、shared extracellular / electrical state、樹状突起 branch の非線形統合、伝導遅延、局所 ATP 供給とミトコンドリア配置、神経修飾、グリア結合状態、clearance / immune support が違えば、学習、位相同期、局所計算、覚醒度依存の応答、長期安定性は大きく変わります。さらに、2024-2025 年の connectome-constrained modelling 研究は、<strong>配線制約を入れても未測定パラメータと省略機構のために dynamics の縮退が残る</strong>ことを示しました。したがって、このサイトでは <strong>connectome-complete を structural atlas / scaffold の達成</strong>として扱い、<strong>emulation-complete と言い換えません</strong>。同様に、<strong>connectome-constrained model が一部の活動を再現した</strong>ことも、そのまま state-complete reconstruction とは読みません。
 </p>
 </div>
 
@@ -72,7 +72,7 @@ recommended_pages:
 </div>
 
 <section class="section" id="bottom-line">
-<h2 class="section-title">先に固定する 9 つの状態クラスと 1 つの推定上の壁</h2>
+<h2 class="section-title">先に固定する 10 の状態クラスと 1 つの推定上の壁</h2>
 <table class="data-table">
 <thead>
 <tr>
@@ -120,6 +120,12 @@ recommended_pages:
 <td>時間整合性、位相同期、閉ループ制御の主張は降格し、delay uncertainty を残します。</td>
 </tr>
 <tr>
+<td><strong>bioenergetic / mitochondrial state</strong></td>
+<td>同じ graph でも、局所 ATP 供給、ミトコンドリアの停止位置、fission / fusion、redox 余裕度、Ca<sup>2+</sup> buffering capacity は決まりません。</td>
+<td>glial / metabolic support が入っていれば、ニューロン局所のエネルギー制約も代表できる、と読むことです。</td>
+<td>反復バースト時の失敗率、sustained release reliability、LTP 誘導時の樹状突起エネルギー制約は latent state として分離します。</td>
+</tr>
+<tr>
 <td><strong>神経修飾場</strong></td>
 <td>覚醒度、学習率、利得調整は静的 wiring だけでは復元できず、瞳孔径や HRV は粗い proxy にとどまります。</td>
 <td>pupil / HRV や global arousal を、単一の transmitter ground truth と読むことです。</td>
@@ -148,7 +154,7 @@ recommended_pages:
 <div class="note-box">
 <strong>今回追加した不足変数</strong>
 <p>
-2026-03-17 の追加再監査では、従来の整理に加えて <strong>shared extracellular / electrical state</strong>、<strong>樹状突起統合状態</strong>、<strong>内在興奮性・恒常性 set point</strong>、<strong>clearance / immune support</strong> を独立クラスとして固定しました。理由は、cell-type ラベルや connectome を持っていても、gap junction / endogenous field / ion-state、branch-specific な非線形入力統合、threshold、gain、発火率の戻り先、CSF / glymphatic support、microglia-mediated surveillance が違えば、局所計算、長期予測、multiday recovery がまだ定まらないためです。一次文献のまとまった整理は <a href="homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に分けております。
+2026-03-17 の追加再監査では、従来の整理に加えて <strong>shared extracellular / electrical state</strong>、<strong>樹状突起統合状態</strong>、<strong>内在興奮性・恒常性 set point</strong>、<strong>bioenergetic / mitochondrial state</strong>、<strong>clearance / immune support</strong> を独立クラスとして固定しました。理由は、cell-type ラベルや connectome を持っていても、gap junction / endogenous field / ion-state、branch-specific な非線形入力統合、threshold、gain、発火率の戻り先、局所 ATP 供給、ミトコンドリア配置、CSF / glymphatic support、microglia-mediated surveillance が違えば、局所計算、反復刺激での維持、長期予測、multiday recovery がまだ定まらないためです。一次文献のまとまった整理は <a href="homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に分けております。
 </p>
 </div>
 </section>
@@ -212,6 +218,13 @@ recommended_pages:
 <td>delay-sensitive claim、phase coordination、long-term axonal support の一致は降格します。</td>
 </tr>
 <tr>
+<td><strong>bioenergetic / mitochondrial state</strong><br>local ATP supply / positioning / fission-fusion / redox reserve</td>
+<td>秒〜日</td>
+<td><a href="https://doi.org/10.1016/j.cell.2013.12.042" target="_blank">Rangaraju et al. (2014)</a> は activity-driven local ATP synthesis が presynaptic function に必要であることを示し、<a href="https://doi.org/10.1016/j.cell.2018.12.013" target="_blank">Rangaraju et al. (2019)</a> は spatially stable mitochondria が local translation during plasticity を支えることを示しました。さらに <a href="https://doi.org/10.1016/j.neuron.2018.09.025" target="_blank">Divakaruni et al. (2018)</a> は LTP induction に急速な dendritic mitochondrial fission が必要であることを、<a href="https://doi.org/10.1038/s41467-023-44233-8" target="_blank">Bapat et al. (2024)</a> は dendrite 上で固定化された mitochondria が局所 plasticity を支えることを、<a href="https://doi.org/10.1038/s42003-025-08963-3" target="_blank">Hu et al. (2025)</a> は learning / plasticity signal に応じた synaptic mitochondria 内 ATP synthase の極性化を示しました。</td>
+<td>human では <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> の 31P-MRS や <a href="https://doi.org/10.1093/pnasnexus/pgaf079" target="_blank">Li et al. (2025)</a> の dynamic deuterium metabolic imaging で ATP / PCr / glucose turnover の macro proxy は得られますが、cell-type 別・branch 別・synapse 別の local bioenergetic state は直接見えません。</td>
+<td>sustained release reliability、反復刺激での fatigue resistance、LTP の energetic mechanism を connectome だけで固定したとは主張しません。</td>
+</tr>
+<tr>
 <td><strong>neuromodulatory context</strong></td>
 <td>秒〜分</td>
 <td><a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> と <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> は、pupil / behavior が役に立つ一方で、local transmitter state を一意には与えないことを示します。</td>
@@ -243,7 +256,7 @@ recommended_pages:
 <div class="note-box">
 <strong>この行列で何を直したか</strong>
 <p>
-今回の修正では、<strong>fast execution state</strong>、<strong>shared extracellular / electrical state</strong>、<strong>branch-specific integration state</strong>、<strong>controller state</strong>、<strong>slow maintenance state</strong>、<strong>clearance / immune support</strong> を本文で明示的に分けました。これにより、同じ「hidden state が残る」という一文でも、<strong>何が momentary release を止めるのか</strong>、<strong>何が inhibition sign / gain と state switching を止めるのか</strong>、<strong>何が single-neuron transfer function を止めるのか</strong>、<strong>何が cross-day claim を止めるのか</strong>、<strong>何が long-term stabilization を止めるのか</strong>、<strong>何が multiday support-state を止めるのか</strong>を別々に読めます。今後このサイトでは、これらを 1 行の latent state 欄に潰さず、timescale ごとの claim ceiling と一緒に出します。
+今回の修正では、<strong>fast execution state</strong>、<strong>shared extracellular / electrical state</strong>、<strong>branch-specific integration state</strong>、<strong>controller state</strong>、<strong>bioenergetic / mitochondrial state</strong>、<strong>slow maintenance state</strong>、<strong>clearance / immune support</strong> を本文で明示的に分けました。これにより、同じ「hidden state が残る」という一文でも、<strong>何が momentary release を止めるのか</strong>、<strong>何が inhibition sign / gain と state switching を止めるのか</strong>、<strong>何が single-neuron transfer function を止めるのか</strong>、<strong>何が repeated-burst reliability と dendritic plasticity の energetic mechanism を止めるのか</strong>、<strong>何が cross-day claim を止めるのか</strong>、<strong>何が long-term stabilization を止めるのか</strong>、<strong>何が multiday support-state を止めるのか</strong>を別々に読めます。今後このサイトでは、これらを 1 行の latent state 欄に潰さず、timescale ごとの claim ceiling と一緒に出します。
 </p>
 </div>
 </section>
@@ -256,7 +269,7 @@ Dorkenwald らは成体ショウジョウバエ全脳の wiring diagram を示�
 <div class="note-box">
 <strong>ここでの読み替え</strong>
 <p>
-connectome-complete は「何がつながっているか」がかなり分かったという意味では重要です。しかし、それだけでは「どの強さで」「どの遅延で」「どの neuromodulatory context で」「どの glial coupling の下で」動くかまでは固定されません。human metabolic connectome も、parcel-level の biochemical organization を前進させますが、current synaptic efficacy、local transmitter specificity、astrocyte ensemble、sleep-history を直接は与えません。さらに Lappalainen らの reductionist model でも、著者自身が electrical synapses、nonlinear chemical synapses、neuromodulation を説明外に置いています。したがって、本サイトでは connectome-complete を <strong>structural atlas / scaffold</strong> の達成として扱い、L2/L3 の emulation claim へは自動的に昇格させません。<strong>connectome-constrained による activity prediction</strong> も、まずは hypothesis engine と conditional model として読みます。
+connectome-complete は「何がつながっているか」がかなり分かったという意味では重要です。しかし、それだけでは「どの強さで」「どの遅延で」「どの neuromodulatory context で」「どの glial coupling の下で」「どの局所 ATP 供給とミトコンドリア配置の下で」動くかまでは固定されません。human metabolic connectome も、parcel-level の biochemical organization を前進させますが、current synaptic efficacy、local transmitter specificity、astrocyte ensemble、sleep-history、cell-specific な mitochondrial positioning や local ATP reserve を直接は与えません。さらに Lappalainen らの reductionist model でも、著者自身が electrical synapses、nonlinear chemical synapses、neuromodulation を説明外に置いています。したがって、本サイトでは connectome-complete を <strong>structural atlas / scaffold</strong> の達成として扱い、L2/L3 の emulation claim へは自動的に昇格させません。<strong>connectome-constrained による activity prediction</strong> も、まずは hypothesis engine と conditional model として読みます。
 </p>
 </div>
 </section>
@@ -526,6 +539,11 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <li>Gibson, E. M., et al. (2014). Neuronal activity promotes oligodendrogenesis and adaptive myelination in the mammalian brain. <em>Science</em>, 344(6183), 1252304. <a href="https://doi.org/10.1126/science.1252304" target="_blank">doi:10.1126/science.1252304</a></li>
 <li>McKenzie, I. A., et al. (2014). Motor skill learning requires active central myelination. <em>Science</em>, 346(6207), 318–322. <a href="https://doi.org/10.1126/science.1254960" target="_blank">doi:10.1126/science.1254960</a></li>
 <li>Micheva, K. D., Kiraly, M., Perez, M. M., & Madison, D. V. (2021). Conduction Velocity Along the Local Axons of Parvalbumin Interneurons Correlates With the Degree of Axonal Myelination. <em>Cerebral Cortex</em>, 31(7), 3374–3392. <a href="https://doi.org/10.1093/cercor/bhab018" target="_blank">doi:10.1093/cercor/bhab018</a></li>
+<li>Rangaraju, V., Calloway, N., &amp; Ryan, T. A. (2014). Activity-driven local ATP synthesis is required for synaptic function. <em>Cell</em>, 156(4), 825–835. <a href="https://doi.org/10.1016/j.cell.2013.12.042" target="_blank">doi:10.1016/j.cell.2013.12.042</a></li>
+<li>Rangaraju, V., Lauterbach, M., &amp; Schuman, E. M. (2019). Spatially stable mitochondrial compartments fuel local translation during plasticity. <em>Cell</em>, 176(1-2), 73–84.e15. <a href="https://doi.org/10.1016/j.cell.2018.12.013" target="_blank">doi:10.1016/j.cell.2018.12.013</a></li>
+<li>Divakaruni, S. S., Van Dyke, A. M., Chandra, R., et al. (2018). Long-term potentiation requires a rapid burst of dendritic mitochondrial fission during induction. <em>Neuron</em>, 100(4), 860–875.e7. <a href="https://doi.org/10.1016/j.neuron.2018.09.025" target="_blank">doi:10.1016/j.neuron.2018.09.025</a></li>
+<li>Bapat, P., Nirschl, J. J., Wilkerson, J. R., et al. (2024). VAP stabilizes dendritic mitochondria to locally support synaptic plasticity. <em>Nature Communications</em>, 15, 742. <a href="https://doi.org/10.1038/s41467-023-44233-8" target="_blank">doi:10.1038/s41467-023-44233-8</a></li>
+<li>Hu, H., Tang, J., Wu, Y., et al. (2025). Polarized ATP synthase in synaptic mitochondria induced by learning and plasticity signals. <em>Communications Biology</em>, 8, 166. <a href="https://doi.org/10.1038/s42003-025-08963-3" target="_blank">doi:10.1038/s42003-025-08963-3</a></li>
 <li>Reimer, J., et al. (2016). Pupil fluctuations track rapid changes in adrenergic and cholinergic activity in cortex. <em>Nature Communications</em>, 7, 13289. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">doi:10.1038/ncomms13289</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <em>Cell Reports</em>, 43(10), 114808. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
 <li>Adamsky, A., et al. (2018). Astrocytic activation generates de novo neuronal potentiation and memory enhancement. <em>Nature Neuroscience</em>, 21, 1725–1733. <a href="https://doi.org/10.1038/s41593-018-0253-6" target="_blank">doi:10.1038/s41593-018-0253-6</a></li>
@@ -535,6 +553,8 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <li>Loomba, S., Straehle, J., Gangadharan, V., et al. (2022). Connectomic comparison of mouse and human cortex. <em>Science</em>, 377(6602), eabo0924. <a href="https://doi.org/10.1126/science.abo0924" target="_blank">doi:10.1126/science.abo0924</a></li>
 <li>Shapson-Coe, A., Januszewski, M., Berger, D. R., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <em>Science</em>, 384(6696), eadk4858. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
 <li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <em>Nature Communications</em>, 16, 11344. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
+<li>Ren, J., Sherry, A. D., &amp; Malloy, C. R. (2015). 31P-MRS of healthy human brain: ATP synthesis, metabolite concentrations, pH, and T1 relaxation times. <em>NMR in Biomedicine</em>, 28(11), 1455–1462. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">doi:10.1002/nbm.3384</a></li>
+<li>Li, J., Xu, H. N., Yuan, J., et al. (2025). Dynamic deuterium metabolic imaging reveals whole-brain glucose metabolic turnover and neuronal function in humans. <em>PNAS Nexus</em>, 4(3), pgaf079. <a href="https://doi.org/10.1093/pnasnexus/pgaf079" target="_blank">doi:10.1093/pnasnexus/pgaf079</a></li>
 <li>Louveau, A., Smirnov, I., Keyes, T. J., et al. (2015). Structural and functional features of central nervous system lymphatic vessels. <em>Nature</em>, 523, 337-341. <a href="https://doi.org/10.1038/nature14432" target="_blank">doi:10.1038/nature14432</a></li>
 <li>Kim, J., et al. (2025). Meningeal lymphatics-microglia axis regulates synaptic physiology. <em>Cell</em>, 188(8), 2129-2148.e21. <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">doi:10.1016/j.cell.2025.02.022</a></li>
 <li>Eide, P. K., &amp; Ringstad, G. (2021). Sleep deprivation impairs molecular clearance from the human brain. <em>Brain</em>, 144(3), 863-874. <a href="https://doi.org/10.1093/brain/awab285" target="_blank">doi:10.1093/brain/awab285</a></li>
