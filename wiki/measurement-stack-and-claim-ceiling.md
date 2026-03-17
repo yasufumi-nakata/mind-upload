@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Wiki：計測スタックごとの observability と claim ceiling"
-description: "EEG/MEG/fMRI、高密度 extracellular probe、whole-brain spatial atlas、Patch-seq、volume EM、same-brain functional connectomics、transmitter/glia imaging が何を直接観測し、どこで主張上限に当たるかを、樹状突起統合状態を含む state variable と timescale まで含めて整理します。"
+description: "EEG/MEG/fMRI、高密度 extracellular probe、whole-brain spatial atlas、Patch-seq、volume EM、SV2A PET、same-brain functional connectomics、transmitter/glia imaging が何を直接観測し、どこで主張上限に当たるかを、樹状突起統合状態を含む state variable と timescale まで含めて整理します。"
 article_type: Wiki
 subtitle: "multimodal は『全部見えた』の同義語ではありません"
 author: Mind Uploading Research Project
@@ -9,13 +9,14 @@ last_updated: "2026-03-17"
 note: "Technical / natural science only"
 audience: "どの modality で何が直接見え、どの claim までなら妥当かを、技術と自然科学だけで整理したい人"
 reading_time: "16〜24分"
-page_intro: "このページは、WBE の議論で見落としやすい『measurement stack ごとの主張上限』を固定する wiki です。hidden state が重要だというだけでは足りません。EEG/MEG/fMRI、高密度 extracellular probe、spatial transcriptomics、Patch-seq、volume EM、same-brain functional connectomics、local transmitter / glia imaging が、それぞれ何を直接観測し、何をまだ latent に残すのかを、樹状突起の branch-specific な統合状態まで含む state variable と timescale で一次文献ベースに整理します。"
+page_intro: "このページは、WBE の議論で見落としやすい『measurement stack ごとの主張上限』を固定する wiki です。hidden state が重要だというだけでは足りません。EEG/MEG/fMRI、高密度 extracellular probe、spatial transcriptomics、Patch-seq、volume EM、SV2A PET、same-brain functional connectomics、local transmitter / glia imaging が、それぞれ何を直接観測し、何をまだ latent に残すのかを、樹状突起の branch-specific な統合状態まで含む state variable と timescale で一次文献ベースに整理します。"
 accuracy_note: "以下の『claim ceiling』列は、各論文がそのまま宣言している結論ではありません。一次文献が直接観測した変数と、依然として未観測の状態変数から本サイトが引く運用上の推論でございます。"
 page_highlights:
   - "『hidden state がある』という一般論を、『どの計測 stack で何がまだ未観測か』へ落とし直します。"
   - "multimodal / atlas / connectome の語を、そのまま state-complete と誤読しないための ceiling を固定します。"
   - "stack の表だけでなく、state variable × timescale × direct / proxy / inferred の行列も追加し、何が本当に直接見えているかを分解します。"
   - "fMRI / BOLD は neural truth ではなく、neurovascular transfer・HRF・venous geometry を介した proxy として扱います。"
+  - "SV2A PET は human in vivo synaptic-density proxy として重要ですが、current synaptic efficacy / release probability の直読とは分けます。"
   - "neuromodulation も 1 本ではなく、behavior proxy / axon activity / local transmitter sensor / receptor atlas / receptor physiology の別ラダーとして扱います。"
 known_points:
   - "EEG/MEG/fMRI はマクロな proxy を与えますが、細胞型、シナプス効率、樹状突起 branch の非線形統合、神経修飾場、グリア状態を直接は与えません。"
@@ -23,6 +24,7 @@ known_points:
   - "高密度 extracellular probe は implant 近傍の local population を強く見ますが、chronic な single-unit identity は sorting と matching を介した推定です。"
   - "whole-brain spatial transcriptomics は cell-type taxonomy と空間配置を大きく前進させますが、動的状態の十分性は別問題です。"
   - "Patch-seq と same-brain connectomics は縮退を減らしますが、全脳 coverage と長期 maintenance-state の十分性に加え、momentary synaptic weight や branch-specific な dendritic state の直接読出しも残ります。"
+  - "human SV2A PET は regional synaptic-density atlas を前進させますが、silent synapse、postsynaptic receptor occupancy、trial-level efficacy はなお latent です。"
   - "local transmitter / glia imaging は coarse proxy の校正に有効ですが、そのまま全脳 ground truth にはなりません。"
   - "pupil や locomotion は mixed arousal proxy であり、local transmitter sensor や receptor atlas / physiology とは別の evidence class です。"
 unknown_points:
@@ -140,6 +142,13 @@ recommended_pages:
 <td><strong>structural atlas / scaffold まで</strong>です。connectome-complete を emulation-complete と言い換えません。</td>
 </tr>
 <tr>
+<td><strong>SV2A PET / synaptic-density PET</strong></td>
+<td>tracer と kinetic model に依存した、regional な synaptic vesicle glycoprotein 2A binding と presynaptic density proxy です。</td>
+<td>Finnema、Naganawa、Johansen らの系のように、human in vivo で regional synaptic-density atlas や disease / aging / intervention に伴う synapse-loss proxy を一段強くできます。</td>
+<td>current synaptic efficacy、release probability、postsynaptic receptor occupancy、silent synapse recruitment、excitatory / inhibitory composition、trial-level fluctuation は残ります。</td>
+<td><strong>regional presynaptic-density proxy まで</strong>です。current effective weight や whole-brain state-complete readout とは書きません。</td>
+</tr>
+<tr>
 <td><strong>same-brain functional connectomics</strong></td>
 <td>同一脳で co-registered な dense activity と EM connectome の対応です。</td>
 <td>MICrONS のように、局所回路で structure-function link、state-dependent response prediction、cell-type 依存 wiring rule、synaptic-state prior の絞り込みを一段強くできます。</td>
@@ -162,6 +171,12 @@ recommended_pages:
 </tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>2026-03-17 追補：human synaptic-density PET は structural scaffold と current state の中間です</strong>
+<p>
+今回さらに追加で固定すべきだった弱点は、human 側の synapse-related measurement class が <strong>EM fragment</strong> と <strong>current synaptic state</strong> の二択に見えやすかった点でございます。<a href="https://doi.org/10.1126/scitranslmed.aaf6667" target="_blank">Finnema et al. (2016)</a> は living human brain で SV2A PET による synaptic-density imaging を前進させ、<a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> は 18F-SynVesT-1 の first-in-human 評価で tracer route を拡張し、<a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> は human in vivo の high-resolution synaptic-density atlas を提示しました。さらに <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> は healthy humans で SV2A level が neural activity や cognition と関連することを示しましたが、これは逆に <strong>関連がある</strong>のであって <strong>同一量である</strong>ことを意味しません。したがって本サイトでは、SV2A PET を <strong>regional synaptic-density proxy</strong> として重く見つつ、<strong>current synaptic efficacy / release probability / postsynaptic receptor occupancy</strong> の直読には上げません。
+</p>
+</div>
 </section>
 
 <section class="section" id="fmri-proxy-audit">
@@ -243,7 +258,7 @@ stack 別の ceiling 表だけでは、「何が見えていないか」は分�
 <td><strong>current synaptic efficacy / plastic history</strong></td>
 <td>ms〜日で変わり、release probability、STP/LTP/LTD、recent plastic history が予測と介入応答を左右します。</td>
 <td>局所 paired physiology、presynaptic-state manipulation、coverage-limited な direct validation です。</td>
-<td>EM synapse count、PSD / spine size、same-brain connectomics、connectome-only model、cell-type label です。</td>
+<td>EM synapse count、PSD / spine size、SV2A PET / synaptic-density atlas、same-brain connectomics、connectome-only model、cell-type label です。</td>
 <td><strong>非破壊・全脳の direct route は未整備</strong>です。EM / same-brain structure-function link は prior を強くしえますが、paired physiology か held-out perturbation gain が無ければ current weight claim には上げません。</td>
 </tr>
 <tr>
@@ -300,7 +315,7 @@ stack 別の ceiling 表だけでは、「何が見えていないか」は分�
 <div class="note-box">
 <strong>短い結論</strong>
 <p>
-Yao らと Gouwens / Gamlin らは主に <strong>cell identity</strong> 行を、Holler / Dürst / Alle らは局所的に <strong>synaptic efficacy / plastic history</strong> 行を、Schiller / Polsky / Smith / Gidon / Sehgal らは <strong>dendritic integration</strong> 行を、MICrONS は <strong>same-brain structure-function link</strong> を、Hengen / Torrado Pacheco / Xu らは <strong>sleep / recovery regime</strong> 行を、Gibson / McKenzie / Looser らは <strong>delay / myelin / axonal support</strong> 行を、Neyhart らは <strong>neuromodulatory specificity</strong> 行を、Cahill / Suzuki らは <strong>glial / metabolic slow-state</strong> 行を、van Beest / Gregory らは <strong>chronic unit identity</strong> 行を押し上げました。重要なのは、<strong>これらが別々の行を押し上げている</strong>という点であり、1 本の multimodal stack が入っただけで全行が direct になった扱いはできません。
+Yao らと Gouwens / Gamlin らは主に <strong>cell identity</strong> 行を、Holler / Dürst / Alle らは局所的に <strong>synaptic efficacy / plastic history</strong> 行を、Finnema / Naganawa / Johansen / Shatalina らは <strong>regional synaptic-density proxy</strong> を介してその proxy 列を、Schiller / Polsky / Smith / Gidon / Sehgal らは <strong>dendritic integration</strong> 行を、MICrONS は <strong>same-brain structure-function link</strong> を、Hengen / Torrado Pacheco / Xu らは <strong>sleep / recovery regime</strong> 行を、Gibson / McKenzie / Looser らは <strong>delay / myelin / axonal support</strong> 行を、Neyhart らは <strong>neuromodulatory specificity</strong> 行を、Cahill / Suzuki らは <strong>glial / metabolic slow-state</strong> 行を、van Beest / Gregory らは <strong>chronic unit identity</strong> 行を押し上げました。重要なのは、<strong>これらが別々の行を押し上げている</strong>という点であり、1 本の multimodal stack が入っただけで全行が direct になった扱いはできません。
 </p>
 </div>
 </section>
@@ -483,6 +498,10 @@ MICrONS は、同一脳で dense calcium imaging、行動状態、EM connectome 
 <li>Gregory, N. S., et al. (2023). Structural and functional changes of deep layer pyramidal neurons surrounding implanted microelectrode arrays in rat motor cortex. <em>Journal of Neural Engineering</em>, 20(4), 046022. <a href="https://doi.org/10.1088/1741-2552/ace8ac" target="_blank">doi:10.1088/1741-2552/ace8ac</a></li>
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>, 640, 435-447. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <em>Nature</em>, 640, 497-505. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
+<li>Finnema, S. J., Nabulsi, N. B., Eid, T., et al. (2016). Imaging synaptic density in the living human brain. <em>Science Translational Medicine</em>, 8(348), 348ra96. <a href="https://doi.org/10.1126/scitranslmed.aaf6667" target="_blank">doi:10.1126/scitranslmed.aaf6667</a></li>
+<li>Naganawa, M., Nabulsi, N., Lin, S.-F., et al. (2021). First-in-human evaluation of 18F-SynVesT-1, a radioligand for PET imaging of synaptic vesicle glycoprotein 2A. <em>Journal of Nuclear Medicine</em>, 62(4), 561-567. <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">doi:10.2967/jnumed.120.249144</a></li>
+<li>Johansen, A., et al. (2024). An in vivo high-resolution human brain atlas of synaptic density. <em>Journal of Neuroscience</em>. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
+<li>Shatalina, E., et al. (2024). The relationship between SV2A levels, neural activity, and cognitive function in healthy humans. <em>Imaging Neuroscience</em>. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">doi:10.1162/imag_a_00190</a></li>
 <li>Reimer, J., McGinley, M. J., Liu, Y., et al. (2016). Pupil fluctuations track rapid changes in adrenergic and cholinergic activity in cortex. <em>Nature Communications</em>, 7, 13289. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">doi:10.1038/ncomms13289</a></li>
 <li>Lohani, S., Moberly, A. H., Benisty, H., et al. (2022). Spatiotemporally heterogeneous coordination of cholinergic and neocortical activity. <em>Nature Neuroscience</em>, 25, 1706-1713. <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">doi:10.1038/s41593-022-01202-6</a></li>
 <li>Collins, L., Reddy, C. B., Neal, S., et al. (2023). Cholinergic and noradrenergic axonal activity contains a behavioral-state signal that is coordinated across the dorsal cortex. <em>eLife</em>, 12, RP86800. <a href="https://doi.org/10.7554/eLife.86800.2" target="_blank">doi:10.7554/eLife.86800.2</a></li>

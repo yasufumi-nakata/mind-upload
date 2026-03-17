@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Wiki：恒常性可塑性と維持状態"
-description: "connectome や細胞型ラベルがあっても残る、内在興奮性・AIS / ion-channel landscape・睡眠依存 homeostasis・髄鞘 support・bioenergetic / mitochondrial state・clearance / immune support・分子ターンオーバー下の維持機構を一次文献から整理します。"
+description: "connectome や細胞型ラベルがあっても残る、内在興奮性・AIS / ion-channel landscape・睡眠依存 homeostasis・髄鞘 support・bioenergetic / mitochondrial state・SV2A PET を含む human synaptic-density proxy・clearance / immune support・分子ターンオーバー下の維持機構を一次文献から整理します。"
 article_type: Wiki
 subtitle: "『配線図＋細胞型』でも、長期ダイナミクスはまだ決まりません"
 author: Mind Uploading Research Project
@@ -9,7 +9,7 @@ last_updated: "2026-03-17"
 note: "Technical / natural science only"
 audience: "connectome の限界をさらに一段深く、内在状態と維持機構の側から確認したい人"
 reading_time: "16〜22分"
-page_intro: "このページは、『配線図も cell type も分かれば、残りはだいたい埋まるのではないか』という直感に対し、内在興奮性、AIS / ion-channel landscape、発火率 set point、睡眠依存の再正規化、髄鞘/オリゴデンドロサイト結合、局所 ATP 供給とミトコンドリア配置、グリア代謝、clearance / immune support、分子ターンオーバー下の維持機構がなお別変数として残ることを、一次文献ベースで整理する wiki です。哲学や法制度ではなく、技術と自然科学だけに絞ります。"
+page_intro: "このページは、『配線図も cell type も分かれば、残りはだいたい埋まるのではないか』という直感に対し、内在興奮性、AIS / ion-channel landscape、発火率 set point、睡眠依存の再正規化、髄鞘/オリゴデンドロサイト結合、局所 ATP 供給とミトコンドリア配置、human の SV2A PET を含む synaptic-density proxy、グリア代謝、clearance / immune support、分子ターンオーバー下の維持機構がなお別変数として残ることを、一次文献ベースで整理する wiki です。哲学や法制度ではなく、技術と自然科学だけに絞ります。"
 accuracy_note: "ここで示すのは、長期ダイナミクスや記憶維持を読むときに最低限外してはいけない hidden state の整理です。これで十分条件が確定したという意味ではありません。"
 page_highlights:
   - "maintenance-state は内在興奮性だけではなく、AIS / ion-channel landscape、睡眠依存 homeostasis、髄鞘/オリゴデンドロサイト、bioenergetic / mitochondrial state、グリア代謝と astrocyte ensemble、clearance / immune support まで含みます。"
@@ -17,15 +17,15 @@ page_highlights:
   - "記憶が残ること自体も、静的分子の保存ではなく、再正規化・再固定化・代謝支援を含む active maintenance として読む必要があります。"
   - "sleep は平均発火率を戻すだけでなく、synapse diversity の維持にも関わるため、maintenance-state を1次元の補正量として扱えません。"
   - "intrinsic excitability は 1 行ではなく、relative excitability、AIS geometry / Na+ channel distribution、recovery controller に分けて読む必要があります。"
-  - "human 側の前進も、EM 断片、whole-brain MRSI、myelin bilayer map、sleep / TMS proxy、CSF / glymphatic proxy という別階層の証拠として読み分ける必要があります。"
+  - "human 側の前進も、EM 断片、SV2A PET による synaptic-density proxy、whole-brain MRSI、myelin bilayer map、sleep / TMS proxy、CSF / glymphatic proxy という別階層の証拠として読み分ける必要があります。"
 known_points:
   - "同じ transcriptomic type の内部にも morpho-electric phenotype の連続性や variability が残ります。"
   - "firing rate や synaptic strength は、sleep/wake cycle をまたぐ homeostatic plasticity によって調整されます。"
   - "髄鞘、オリゴデンドロサイト、局所 ATP 供給とミトコンドリア配置、アストロサイト、microglia / meningeal lymphatic 系の状態は timing、代謝、記憶想起、長期回復、clearance support に関わります。"
-  - "human でも MRSI-based metabolic connectome、31P-MRS、dynamic deuterium metabolic imaging、myelin bilayer mapping、TMS/EEG・sleep plasticity proxy、CSF / glymphatic proxy により macro scaffold と support-state proxy は見え始めていますが、cell-specific maintenance-state はまだ粗く残ります。"
+  - "human でも SV2A PET、MRSI-based metabolic connectome、31P-MRS、dynamic deuterium metabolic imaging、myelin bilayer mapping、TMS/EEG・sleep plasticity proxy、CSF / glymphatic proxy により macro scaffold と support-state proxy は見え始めていますが、cell-specific maintenance-state はまだ粗く残ります。"
 unknown_points:
   - "どの粒度まで excitability / sleep-homeostasis / bioenergetic support / metabolic support / clearance support を測れば WBE の十分条件に近づくかは未確定です。"
-  - "人で直接測れない maintenance state を、MRSI / 31P-MRS / dynamic DMI / myelin bilayer / TMS-EEG / sleep plasticity proxy / CSF-glymphatic proxy のどれで、どの外部基準へ較正すべきかは未確定です。"
+  - "人で直接測れない maintenance state を、SV2A PET / MRSI / 31P-MRS / dynamic DMI / myelin bilayer / TMS-EEG / sleep plasticity proxy / CSF-glymphatic proxy のどれで、どの外部基準へ較正すべきかは未確定です。"
   - "長期 closed-loop claim に対して、どの sleep / myelin / bioenergetic / metabolic / clearance 指標を共通提出物にするかもまだ固定されていません。"
   - "parcel-level metabolic similarity や CSF mobility proxy が cell-specific glial / immune / transmitter / synaptic maintenance-state をどこまで拘束するかも未確定です。"
 wiki_links:
@@ -210,7 +210,7 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <section class="section" id="human-observability-ceiling">
 <h2 class="section-title">2026-03 追補：human maintenance-state の直接観測はまだ粗い</h2>
 <p>
-今回さらに深掘りして見えた弱点は、human observability の節が、<strong>EM 断片</strong>、<strong>whole-brain MRSI</strong>、<strong>31P-MRS / dynamic DMI</strong>、<strong>myelin bilayer imaging</strong>、<strong>TMS-EEG / sleep plasticity proxy</strong>、<strong>CSF / glymphatic proxy</strong> を同じ「human で見え始めた証拠」としてまとめすぎていた点でございます。一次文献を並べると、それぞれが押し上げているのは <strong>structural scaffold</strong>、<strong>macro-biochemical scaffold</strong>、<strong>macro energetic proxy</strong>、<strong>macro-myelin proxy</strong>、<strong>perturbation-conditioned plasticity proxy</strong>、<strong>macro support-state proxy</strong> という別々の層です。特に <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> で直接見えているのは 5 代謝物の parcel-level covariance であり、<a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> と <a href="https://doi.org/10.1093/pnasnexus/pgaf079" target="_blank">Li et al. (2025)</a> で押し上がるのは ATP / glucose turnover の macro proxy です。どれも重要ですが、<strong>current synaptic efficacy</strong>、<strong>local transmitter specificity</strong>、<strong>astrocyte ensemble</strong>、<strong>sleep-dependent recovery controller</strong>、<strong>cell-specific immune controller</strong>、<strong>branch-specific mitochondrial positioning</strong> を直接は与えません。したがって、human 側でも maintenance-state はなお <strong>macro scaffold / macro proxy / local hidden state</strong> に分かれて残ります。
+今回さらに深掘りして見えた弱点は、human observability の節が、<strong>EM 断片</strong>、<strong>SV2A PET</strong>、<strong>whole-brain MRSI</strong>、<strong>31P-MRS / dynamic DMI</strong>、<strong>myelin bilayer imaging</strong>、<strong>TMS-EEG / sleep plasticity proxy</strong>、<strong>CSF / glymphatic proxy</strong> を同じ「human で見え始めた証拠」としてまとめすぎていた点でございます。一次文献を並べると、それぞれが押し上げているのは <strong>structural scaffold</strong>、<strong>regional synaptic-density proxy</strong>、<strong>macro-biochemical scaffold</strong>、<strong>macro energetic proxy</strong>、<strong>macro-myelin proxy</strong>、<strong>perturbation-conditioned plasticity proxy</strong>、<strong>macro support-state proxy</strong> という別々の層です。特に <a href="https://doi.org/10.1126/scitranslmed.aaf6667" target="_blank">Finnema et al. (2016)</a>、<a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a>、<a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> で直接見えているのは regional SV2A binding と synaptic-density atlas であり、<a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> で直接見えているのは 5 代謝物の parcel-level covariance、<a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> と <a href="https://doi.org/10.1093/pnasnexus/pgaf079" target="_blank">Li et al. (2025)</a> で押し上がるのは ATP / glucose turnover の macro proxy です。どれも重要ですが、<strong>current synaptic efficacy</strong>、<strong>release probability</strong>、<strong>postsynaptic receptor occupancy</strong>、<strong>local transmitter specificity</strong>、<strong>astrocyte ensemble</strong>、<strong>sleep-dependent recovery controller</strong>、<strong>cell-specific immune controller</strong>、<strong>branch-specific mitochondrial positioning</strong> を直接は与えません。したがって、human 側でも maintenance-state はなお <strong>macro scaffold / macro proxy / local hidden state</strong> に分かれて残ります。
 </p>
 <table class="data-table">
 <thead>
@@ -225,6 +225,11 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <td><strong>human nanoscale ultrastructure</strong><br>Shapson-Coe ら</td>
 <td>固定済み human cortex 断片の ultrastructure、細胞・シナプス配置、局所構造 scaffold。</td>
 <td>current weight、sleep-history、recovery controller、neuromodulatory context、glial slow-state。</td>
+</tr>
+<tr>
+<td><strong>human synaptic-density PET</strong><br>Finnema ら、Naganawa ら、Johansen ら</td>
+<td>SV2A binding に基づく regional presynaptic vesicle density と、atlas-level の synaptic-density distribution。</td>
+<td>current synaptic efficacy、release probability、postsynaptic receptor occupancy、silent-synapse recruitment、excitatory / inhibitory composition、trial-level fluctuation。</td>
 </tr>
 <tr>
 <td><strong>human metabolic connectome</strong><br>Lucchetti ら</td>
@@ -259,7 +264,7 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 </tbody>
 </table>
 <p>
-この差は実務上重要でございます。<a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> は fixed tissue の局所 ultrastructure を、<a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> は whole-brain の 5 代謝物 covariance を、<a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> と <a href="https://doi.org/10.1093/pnasnexus/pgaf079" target="_blank">Li et al. (2025)</a> は ATP / glucose turnover の macro energetic proxy を、<a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> は myelin bilayer の in vivo map を、<a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>、<a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>、<a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a>、<a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> は sleep / wake / nap や瞬間 brain state が human plasticity response を変えることを、<a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> と <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> は human で CSF / glymphatic support-state を measurable にし始めたことを、それぞれ別々に押し上げました。重要なのは、<strong>これらが同じ種類の direct measurement ではない</strong>という点であり、1 本の human proxy を cell-specific maintenance-state の ground truth へ読み替えてはいけないことです。
+この差は実務上重要でございます。<a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> は fixed tissue の局所 ultrastructure を、<a href="https://doi.org/10.1126/scitranslmed.aaf6667" target="_blank">Finnema et al. (2016)</a>、<a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a>、<a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> は human で SV2A PET による regional synaptic-density proxy を、<a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> はそれが neural activity や cognition と関連しても同一量ではないことを示す関係パターンを、<a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> は whole-brain の 5 代謝物 covariance を、<a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> と <a href="https://doi.org/10.1093/pnasnexus/pgaf079" target="_blank">Li et al. (2025)</a> は ATP / glucose turnover の macro energetic proxy を、<a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> は myelin bilayer の in vivo map を、<a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>、<a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>、<a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a>、<a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> は sleep / wake / nap や瞬間 brain state が human plasticity response を変えることを、<a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> と <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> は human で CSF / glymphatic support-state を measurable にし始めたことを、それぞれ別々に押し上げました。重要なのは、<strong>これらが同じ種類の direct measurement ではない</strong>という点であり、1 本の human proxy を cell-specific maintenance-state の ground truth へ読み替えてはいけないことです。
 </p>
 <div class="note-box">
 <strong>この追補での実務的な読み替え</strong>
@@ -440,6 +445,10 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <li>Eide, P. K., &amp; Ringstad, G. (2021). Sleep deprivation impairs molecular clearance from the human brain. <em>Brain</em>, 144(3), 863-874. <a href="https://doi.org/10.1093/brain/awab285" target="_blank">doi:10.1093/brain/awab285</a></li>
 <li>Lee, J.-C., Wang, C.-Y., Lin, C.-L., &amp; Lu, H.-C. (2022). Synaptic memory survives molecular turnover. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 119(42), e2211572119. <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">doi:10.1073/pnas.2211572119</a></li>
 <li>Shapson-Coe, A., Januszewski, M., Berger, D. R., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <em>Science</em>, 384(6696), eadk4858. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
+<li>Finnema, S. J., Nabulsi, N. B., Eid, T., et al. (2016). Imaging synaptic density in the living human brain. <em>Science Translational Medicine</em>, 8(348), 348ra96. <a href="https://doi.org/10.1126/scitranslmed.aaf6667" target="_blank">doi:10.1126/scitranslmed.aaf6667</a></li>
+<li>Naganawa, M., Nabulsi, N., Lin, S.-F., et al. (2021). First-in-human evaluation of 18F-SynVesT-1, a radioligand for PET imaging of synaptic vesicle glycoprotein 2A. <em>Journal of Nuclear Medicine</em>, 62(4), 561-567. <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">doi:10.2967/jnumed.120.249144</a></li>
+<li>Johansen, A., et al. (2024). An in vivo high-resolution human brain atlas of synaptic density. <em>Journal of Neuroscience</em>. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
+<li>Shatalina, E., et al. (2024). The relationship between SV2A levels, neural activity, and cognitive function in healthy humans. <em>Imaging Neuroscience</em>. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">doi:10.1162/imag_a_00190</a></li>
 <li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <em>Nature Communications</em>, 16, 11344. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
 <li>Ren, J., Sherry, A. D., &amp; Malloy, C. R. (2015). 31P-MRS of healthy human brain: ATP synthesis, metabolite concentrations, pH, and T1 relaxation times. <em>NMR in Biomedicine</em>, 28(11), 1455-1462. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">doi:10.1002/nbm.3384</a></li>
 <li>Li, J., Xu, H. N., Yuan, J., et al. (2025). Dynamic deuterium metabolic imaging reveals whole-brain glucose metabolic turnover and neuronal function in humans. <em>PNAS Nexus</em>, 4(3), pgaf079. <a href="https://doi.org/10.1093/pnasnexus/pgaf079" target="_blank">doi:10.1093/pnasnexus/pgaf079</a></li>
