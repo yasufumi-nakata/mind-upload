@@ -651,6 +651,135 @@ If this card is missing, this site treats the result as <strong>L0/L1 reproducib
 </div>
 </section>
 
+<section class="section" id="latent-state-error-budget">
+<h2 class="section-title">Latent-state error budget</h2>
+<p>
+The <strong>Observability Budget</strong> fixes what entered the sensor and what was directly measured. The next question is different: <strong>which still-unobserved variables dominate the remaining error and stop the claim from being raised?</strong> This site therefore asks L2 and above submissions to disclose a <strong>latent-state error budget</strong> rather than only saying that "important hidden state remains." The purpose is to separate <strong>connectome-only or sensor-only limits</strong> from <strong>augmentation claims</strong>, and to show which omitted state family still blocks the current ceiling.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Latent-state family</th>
+<th>Minimum disclosure</th>
+<th>What this site stops claiming if still latent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Current synaptic efficacy / short-term state</strong></td>
+<td>Write whether current weights, release probability, receptor occupancy, or short-term state were directly measured, externally calibrated, modeled from proxy, or left latent.</td>
+<td>Mechanistic intervention prediction, closed-loop stability, and timing-sensitive reconstruction are demoted back toward structural or correlational claims.</td>
+</tr>
+<tr>
+<td><strong>Intrinsic excitability / homeostatic controller</strong></td>
+<td>Separate relative excitability for allocation, AIS / channel state, and recovery controller, and disclose which parts were measured versus only inferred.</td>
+<td>Cross-day stability, memory-allocation, and perturbation-recovery claims stay provisional.</td>
+</tr>
+<tr>
+<td><strong>Activity-dependent transcription / chromatin state</strong></td>
+<td>Disclose whether current transcriptional / chromatin state was time-stamped, causally perturbed, externally calibrated, or replaced by a static atlas / DEG clue.</td>
+<td>Allocation eligibility, late stabilization, and locus-specific plasticity-control claims remain latent.</td>
+</tr>
+<tr>
+<td><strong>Local proteostasis / synaptic-tagging route</strong></td>
+<td>State whether tag / PRP capture, branch-local translation-degradation balance, autophagy, or branch-local proxy was observed or only assumed.</td>
+<td>Late stabilization, reconsolidation, and cross-event capture do not become closed mechanisms.</td>
+</tr>
+<tr>
+<td><strong>Timing-state / conduction support</strong></td>
+<td>Separate device latency from biological timing-state, and disclose whether timing variables were measured, externally calibrated, absorbed into a constant, or left latent.</td>
+<td>Phase, synchrony, and timing-complete reconstruction claims are demoted to hardware-fast or macro-timing proxy claims.</td>
+</tr>
+<tr>
+<td><strong>Neuromodulatory specificity</strong></td>
+<td>Write which transmitter-linked or arousal-linked state was directly measured, what proxy family was used, and what specificity / abstention limit still remains.</td>
+<td>Transmitter-specific internal-state claims are reduced to coarse covariate or stratification claims.</td>
+</tr>
+<tr>
+<td><strong>Glial / slow-state support</strong></td>
+<td>Disclose whether astrocyte / glial / slow-state variables were measured, causally perturbed, externally calibrated, or left latent, together with species and timescale limits.</td>
+<td>Long-horizon plasticity and multiday stabilization claims remain partial-model claims.</td>
+</tr>
+<tr>
+<td><strong>Chronic unit identity</strong></td>
+<td>For chronic invasive work, report whether unit matching, tissue response, and interface drift were separately audited.</td>
+<td>Single-unit longitudinal and chronic closed-loop claims are not accepted as stable identity claims.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>How to use this budget on this site</strong>
+<p>
+The latent-state error budget is not a second abstract. It is a <strong>submission-side stop-rule table</strong>. If a paper adds one extra evidence layer, such as transcriptomics, SV2A PET, myelin imaging, or a glial perturbation, it should say <strong>which error term that layer reduces under the same held-out condition</strong> and which latent families remain untouched. This is the site-wide rule behind the augmentation / ablation logic in <a href="#state-completeness-gate">State variable integrity gate</a>.
+</p>
+</div>
+</section>
+
+<section class="section" id="maintenance-state-error-budget">
+<h2 class="section-title">Maintenance-state error budget</h2>
+<p>
+Cross-day and remote-memory claims fail for a different reason than same-session decoding claims. Even when short-term performance holds, the result may still leave the <strong>maintenance route</strong> almost completely latent. This site therefore asks cross-day, recovery, reconsolidation, or remote-memory submissions to disclose a <strong>maintenance-state error budget</strong> that keeps controller state, sleep history, timing support, and multiday support-state proxies separate.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Maintenance-state field</th>
+<th>Minimum disclosure</th>
+<th>Ceiling if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Controller state</strong></td>
+<td>State whether relative excitability, homeostatic return target, or allocation-related controller variables were measured, perturbed, externally calibrated, or left latent.</td>
+<td>Same-day fit does not become maintenance-consistent or memory-allocation-consistent.</td>
+</tr>
+<tr>
+<td><strong>Sleep / wake history</strong></td>
+<td>Report sleep / wake interval, deprivation, nap / recovery condition, and the time window over which renormalization was or was not checked.</td>
+<td>Cross-day hold is not promoted to overnight maintenance or post-learning re-equilibration.</td>
+</tr>
+<tr>
+<td><strong>Timing support</strong></td>
+<td>Separate hardware latency from tissue-side timing support such as myelin / conduction proxy or externally calibrated timing-state.</td>
+<td>Hardware-fast remains hardware-fast; it does not become timing-complete maintenance evidence.</td>
+</tr>
+<tr>
+<td><strong>Bioenergetic support</strong></td>
+<td>Disclose whether 31P-MRS, dynamic DMI, fatigue / repeated-burst logs, or other energetic proxies were available, and what local mitochondrial variables remained latent.</td>
+<td>Repeated-stimulation reliability and energetic mechanisms of dendritic plasticity remain provisional.</td>
+</tr>
+<tr>
+<td><strong>Glial / astrocyte support</strong></td>
+<td>Write whether glial or astrocyte variables were directly measured, causally perturbed, approximated by macro proxies, or left latent.</td>
+<td>Memory retrieval, multiday stabilization, and slow-state support remain partial-model claims.</td>
+</tr>
+<tr>
+<td><strong>Clearance / immune support</strong></td>
+<td>Report CSF / glymphatic / immune-related measurements, what part was a macro proxy, and what cell-specific clearance controller remained unobserved.</td>
+<td>Multiday recovery and protein-clearance claims remain support-proxy claims rather than local maintenance-state claims.</td>
+</tr>
+<tr>
+<td><strong>Human evidence class / observability ceiling</strong></td>
+<td>Label each human-side route as <strong>structural scaffold</strong>, <strong>regional density proxy</strong>, <strong>macro proxy</strong>, or <strong>perturbation-conditioned proxy</strong>, and state which local hidden states still remain.</td>
+<td>Human proxy bundles are not promoted to state-complete maintenance snapshots.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>2026-03-18 addendum: human maintenance evidence must be class-labeled</strong>
+<p>
+On this site, <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#human-observability-ceiling">Wiki: Homeostatic plasticity and maintenance-state</a> now distinguishes <strong>fixed-tissue structural scaffold</strong>, <strong>regional synaptic-density proxy</strong>, <strong>macro-biochemical scaffold</strong>, <strong>macro energetic proxy</strong>, <strong>macro-myelin proxy</strong>, <strong>perturbation-conditioned plasticity proxy</strong>, and <strong>macro support-state proxy</strong>. Human-side evidence is therefore not submitted as one generic “maintenance signal.” Each route must be class-labeled before the claim ceiling is interpreted.
+</p>
+</div>
+<div class="note-box">
+<strong>Minimum operating rules</strong>
+<p>
+If this budget is missing, this site allows at most <strong>same-session fit</strong>, <strong>cross-day performance with unresolved maintenance route</strong>, or <strong>support-proxy-aligned evidence</strong>. It does not promote the result to <strong>maintenance-consistent</strong>, <strong>reconsolidation-consistent</strong>, or <strong>remote-memory-relevant</strong>. In particular, if <strong>sleep / wake history</strong>, <strong>timing support</strong>, <strong>bioenergetic or glial support</strong>, and <strong>clearance / immune proxy class</strong> are all absent, this site stops the reader from rephrasing a temporal hold as long-horizon maintenance evidence.
+</p>
+</div>
+</section>
+
 <section class="section" id="specificity-shortcut-card">
 <h2 class="section-title">2026-03 addendum: attach a Specificity &amp; Shortcut Card to decode / biomarker results</h2>
 <p>
