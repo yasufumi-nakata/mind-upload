@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Wiki：配線図だけでは足りない理由"
-description: "WBE で connectome だけを保存しても足りない理由を、状態変数の欠落と connectome-constrained 推定の限界まで含めて一次文献から整理します。clearance / immune support も独立軸として扱います。"
+description: "WBE で connectome だけを保存しても足りない理由を、樹状突起統合状態を含む状態変数の欠落と connectome-constrained 推定の限界まで含めて一次文献から整理します。clearance / immune support も独立軸として扱います。"
 article_type: Wiki
 subtitle: "connectome-complete は emulation-complete ではありません"
 author: Mind Uploading Research Project
@@ -9,17 +9,17 @@ last_updated: "2026-03-17"
 note: "Technical / natural science only"
 audience: "配線図が取れたら WBE に近いのかを、技術と自然科学だけで判断したい人"
 reading_time: "15〜20分"
-page_intro: "このページは、『コネクトームが取れれば脳の再現に十分ではないか』という直感を、一次文献に基づいて分解するためのページです。哲学や法制度ではなく、どの状態変数が欠けると何が言えなくなるか、さらに connectome-constrained でもどの推定上の壁が残るかに絞って整理します。glial / metabolic support だけでなく clearance / immune support も独立に扱います。"
+page_intro: "このページは、『コネクトームが取れれば脳の再現に十分ではないか』という直感を、一次文献に基づいて分解するためのページです。哲学や法制度ではなく、どの状態変数が欠けると何が言えなくなるか、さらに connectome-constrained でもどの推定上の壁が残るかに絞って整理します。glial / metabolic support や clearance / immune support だけでなく、樹状突起の branch-specific な統合状態も独立に扱います。"
 accuracy_note: "ここで示すのは『最低限これを外すと主張が弱くなる』という整理と、『配線制約を入れてもなお残る縮退』の整理であり、最終的な十分条件が確定したという意味ではありません。"
 page_highlights:
-  - "配線図だけでは落ちる論点を、7つの状態クラスと1つの推定上の壁に分けて整理します。"
+  - "配線図だけでは落ちる論点を、8つの状態クラスと1つの推定上の壁に分けて整理します。"
   - "一次文献だけを使い、state variable の欠落と parameter degeneracy を切り分けます。"
   - "このサイトで connectome-complete と connectome-constrained model をどう読み替えるかの運用ルールも固定します。"
   - "列挙で終わらせず、connectome-only から何を足したときに predictive gain が読めるかを augmentation / ablation で固定します。"
   - "fly / mouse / human の証拠を混ぜたときの external validity ceiling も、本文で明示します。"
 known_points:
   - "全脳 connectome の作成は大きく前進していますが、それだけで動的再現が完了したとは言えません。"
-  - "シナプス効率、遅延、神経修飾、グリア、clearance / immune support、細胞型ラベル、内在興奮性 / 恒常性 set point は、静的な edge list からは落ちやすい情報です。"
+  - "シナプス効率、樹状突起の branch-specific 非線形統合、遅延、神経修飾、グリア、clearance / immune support、細胞型ラベル、内在興奮性 / 恒常性 set point は、静的な edge list からは落ちやすい情報です。"
   - "EM の synapse count、PSD 面積、same-brain connectomics は synaptic-state の prior を強くしえますが、その瞬間の effective weight や release state の直接読出しではありません。"
   - "粗い生理 proxy を ground truth と混同すると、内部状態の主張を過大化しやすくなります。"
   - "connectome-constrained なモデルでも、未測定の細胞・シナプス・修飾パラメータが残ると dynamics は縮退しえます。"
@@ -60,7 +60,7 @@ recommended_pages:
 <div class="abstract-box">
 <h2>結論</h2>
 <p>
-配線図は WBE の重要な土台ですが、<strong>それだけでは動的再現の下限要件になりません</strong>。同じ隣接関係でも、細胞型ラベル、内在興奮性、シナプス効率、伝導遅延、神経修飾、グリア結合状態、clearance / immune support が違えば、学習、位相同期、覚醒度依存の応答、長期安定性は大きく変わります。さらに、2024-2025 年の connectome-constrained modelling 研究は、<strong>配線制約を入れても未測定パラメータと省略機構のために dynamics の縮退が残る</strong>ことを示しました。したがって、このサイトでは <strong>connectome-complete を structural atlas / scaffold の達成</strong>として扱い、<strong>emulation-complete と言い換えません</strong>。同様に、<strong>connectome-constrained model が一部の活動を再現した</strong>ことも、そのまま state-complete reconstruction とは読みません。
+配線図は WBE の重要な土台ですが、<strong>それだけでは動的再現の下限要件になりません</strong>。同じ隣接関係でも、細胞型ラベル、内在興奮性、シナプス効率、樹状突起 branch の非線形統合、伝導遅延、神経修飾、グリア結合状態、clearance / immune support が違えば、学習、位相同期、局所計算、覚醒度依存の応答、長期安定性は大きく変わります。さらに、2024-2025 年の connectome-constrained modelling 研究は、<strong>配線制約を入れても未測定パラメータと省略機構のために dynamics の縮退が残る</strong>ことを示しました。したがって、このサイトでは <strong>connectome-complete を structural atlas / scaffold の達成</strong>として扱い、<strong>emulation-complete と言い換えません</strong>。同様に、<strong>connectome-constrained model が一部の活動を再現した</strong>ことも、そのまま state-complete reconstruction とは読みません。
 </p>
 </div>
 
@@ -72,7 +72,7 @@ recommended_pages:
 </div>
 
 <section class="section" id="bottom-line">
-<h2 class="section-title">先に固定する 7 つの状態クラスと 1 つの推定上の壁</h2>
+<h2 class="section-title">先に固定する 8 つの状態クラスと 1 つの推定上の壁</h2>
 <table class="data-table">
 <thead>
 <tr>
@@ -100,6 +100,12 @@ recommended_pages:
 <td>edge の有無だけでは重み、放出確率、短期可塑性、LTP/LTD の履歴を決められません。</td>
 <td>edge count や synapse count を、そのまま effective weight と読むことです。</td>
 <td>静的配線の記述までは可能ですが、L2 の介入予測や L3 の閉ループ安定性は主張しません。</td>
+</tr>
+<tr>
+<td><strong>樹状突起統合状態</strong></td>
+<td>同じ synapse set と somatic spike rule でも、branch-specific NMDA spike / plateau / dendritic sodium-calcium spike threshold、局所入力クラスタリング、compartmentalization が違えば、1 個のニューロンが実装する関数が変わります。</td>
+<td>cell type、形態、平均発火率が分かれば、single-neuron transfer function もほぼ固定された、と読むことです。</td>
+<td>dendritic recording / imaging / branch-specific perturbation が無い限り、point-neuron 化は近似として明示し、subcellular credit assignment や clustered-input causal claim は latent state 付きに留めます。</td>
 </tr>
 <tr>
 <td><strong>遅延・髄鞘</strong></td>
@@ -136,7 +142,7 @@ recommended_pages:
 <div class="note-box">
 <strong>今回追加した不足変数</strong>
 <p>
-2026-03 の再監査では、従来の整理に加えて <strong>内在興奮性・恒常性 set point</strong> と <strong>clearance / immune support</strong> を独立クラスとして固定しました。理由は、cell-type ラベルや connectome を持っていても、threshold、gain、発火率の戻り先、CSF / glymphatic support、microglia-mediated surveillance が違えば、長期予測と multiday recovery がまだ定まらないためです。一次文献のまとまった整理は <a href="homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に分けております。
+2026-03-17 の追加再監査では、従来の整理に加えて <strong>樹状突起統合状態</strong>、<strong>内在興奮性・恒常性 set point</strong>、<strong>clearance / immune support</strong> を独立クラスとして固定しました。理由は、cell-type ラベルや connectome を持っていても、branch-specific な非線形入力統合、threshold、gain、発火率の戻り先、CSF / glymphatic support、microglia-mediated surveillance が違えば、局所計算、長期予測、multiday recovery がまだ定まらないためです。一次文献のまとまった整理は <a href="homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に分けております。
 </p>
 </div>
 </section>
@@ -163,6 +169,13 @@ recommended_pages:
 <td><a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">Holler et al. (2021)</a>、<a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">Dürst et al. (2022)</a>、<a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">Alle et al. (2024)</a> は、ultrastructure や release-probability parameter が average potency の制約を強めても、その瞬間の release state や transmission reliability までは固定しないことを示します。</td>
 <td>human では主として局所 ex vivo / 断片レベルであり、whole-brain in vivo の current state を直接は与えません。</td>
 <td>phase-sensitive な介入予測、precise timing、closed-loop stability を強くは主張しません。</td>
+</tr>
+<tr>
+<td><strong>branch-specific integration state</strong><br>dendritic spikes / plateau / local nonlinear subunits</td>
+<td>ms〜時間</td>
+<td><a href="https://doi.org/10.1038/35005094" target="_blank">Schiller et al. (2000)</a>、<a href="https://doi.org/10.1038/nn1253" target="_blank">Polsky et al. (2004)</a>、<a href="https://doi.org/10.1038/nature12600" target="_blank">Smith et al. (2013)</a>、<a href="https://doi.org/10.1038/nature14251" target="_blank">Cichon &amp; Gan (2015)</a>、<a href="https://doi.org/10.1126/science.aah6066" target="_blank">Takahashi et al. (2016)</a>、<a href="https://doi.org/10.1038/s41593-025-01876-8" target="_blank">Sehgal et al. (2025)</a> は、樹状突起 branch が input summation の受け皿ではなく、感覚選択性・学習・文脈リンクを左右する非線形 subunit だと示します。</td>
+<td>human では <a href="https://doi.org/10.1016/j.cell.2018.08.045" target="_blank">Beaulieu-Laroche et al. (2018)</a> と <a href="https://doi.org/10.1126/science.aax6239" target="_blank">Gidon et al. (2020)</a> の ex vivo L2/3 evidence が中心で、whole-brain in vivo の branch-state direct readout はまだありません。</td>
+<td>clustered-input computation、subcellular credit assignment、single-neuron transfer-function equivalence を soma-only fit からは主張しません。</td>
 </tr>
 <tr>
 <td><strong>controller state</strong><br>intrinsic excitability / AIS / homeostatic set point</td>
@@ -217,7 +230,7 @@ recommended_pages:
 <div class="note-box">
 <strong>この行列で何を直したか</strong>
 <p>
-今回の修正では、<strong>fast execution state</strong>、<strong>controller state</strong>、<strong>slow maintenance state</strong>、<strong>clearance / immune support</strong> を本文で明示的に分けました。これにより、同じ「hidden state が残る」という一文でも、<strong>何が timing を止めるのか</strong>、<strong>何が cross-day claim を止めるのか</strong>、<strong>何が long-term stabilization を止めるのか</strong>、<strong>何が multiday support-state を止めるのか</strong>を別々に読めます。今後このサイトでは、これらを 1 行の latent state 欄に潰さず、timescale ごとの claim ceiling と一緒に出します。
+今回の修正では、<strong>fast execution state</strong>、<strong>branch-specific integration state</strong>、<strong>controller state</strong>、<strong>slow maintenance state</strong>、<strong>clearance / immune support</strong> を本文で明示的に分けました。これにより、同じ「hidden state が残る」という一文でも、<strong>何が momentary release を止めるのか</strong>、<strong>何が single-neuron transfer function を止めるのか</strong>、<strong>何が cross-day claim を止めるのか</strong>、<strong>何が long-term stabilization を止めるのか</strong>、<strong>何が multiday support-state を止めるのか</strong>を別々に読めます。今後このサイトでは、これらを 1 行の latent state 欄に潰さず、timescale ごとの claim ceiling と一緒に出します。
 </p>
 </div>
 </section>
@@ -293,7 +306,7 @@ connectome-complete は「何がつながっているか」がかなり分かっ
 </section>
 
 <section class="section" id="state-classes">
-<h2 class="section-title">なぜこの 6 クラスが抜けやすいのか</h2>
+<h2 class="section-title">なぜこれらの hidden state が抜けやすいのか</h2>
 
 <h3>1. 細胞型ラベルは node ID の飾りではありません</h3>
 <p>
@@ -316,17 +329,28 @@ Holler らは、同定した新皮質錐体細胞間シナプスで <strong>PSD 
 </p>
 </div>
 
-<h3>4. 遅延と髄鞘は timing の一部です</h3>
+<h3>4. 樹状突起は point neuron の自動補完先ではありません</h3>
+<p>
+<a href="https://doi.org/10.1038/35005094" target="_blank">Schiller et al. (2000)</a> は neocortical pyramidal neuron の basal dendrite で NMDA spike を示し、<a href="https://doi.org/10.1038/nn1253" target="_blank">Polsky et al. (2004)</a> は thin dendrite が独立した computational subunit として振る舞いうることを示しました。さらに <a href="https://doi.org/10.1038/nature12600" target="_blank">Smith et al. (2013)</a> は in vivo で dendritic spike が感覚選択性を高めることを、<a href="https://doi.org/10.1038/nature14251" target="_blank">Cichon &amp; Gan (2015)</a> は branch-specific dendritic Ca<sup>2+</sup> spike が持続的 plasticity を引き起こすことを、<a href="https://doi.org/10.1126/science.aah6066" target="_blank">Takahashi et al. (2016)</a> は active dendrite の介入が perception を動かすことを示しました。加えて human でも <a href="https://doi.org/10.1016/j.cell.2018.08.045" target="_blank">Beaulieu-Laroche et al. (2018)</a> と <a href="https://doi.org/10.1126/science.aax6239" target="_blank">Gidon et al. (2020)</a> が L2/3 neuron の強い compartmentalization と dendritic action potential を示し、<a href="https://doi.org/10.1038/s41593-025-01876-8" target="_blank">Sehgal et al. (2025)</a> は branch-specific plasticity が近接時刻の contextual memory linking に関わることを示しました。したがって、<strong>同じ connectome</strong>、<strong>同じ cell type</strong>、<strong>似た somatic firing</strong> があっても、branch ごとの非線形統合状態が違えば、single-neuron transfer function と学習の配分はまだ一致しません。
+</p>
+<div class="note-box">
+<strong>今回固定する読み替え</strong>
+<p>
+このサイトでは今後、<strong>樹状突起 morphology</strong>、<strong>somatic spike train</strong>、<strong>平均受容野</strong>だけから、branch-specific な NMDA spike / plateau / dendritic spike threshold が分かったとは書きません。dendritic imaging、branch-specific perturbation、あるいはそれに準じる local validation が無い限り、point-neuron 化は <strong>便宜的近似</strong>として明示し、subcellular credit assignment と dendrite-dependent causal claim は保留します。
+</p>
+</div>
+
+<h3>5. 遅延と髄鞘は timing の一部です</h3>
 <p>
 Gibson らは神経活動が oligodendrogenesis と adaptive myelination を促進することを示し、McKenzie らは motor skill learning に active central myelination が必要であることを報告しました。さらに Micheva らは、PV interneuron の局所軸索でも髄鞘化の程度が伝導速度と相関することを示しました。つまり、<strong>同じ配線でも timing state が違えば、局所抑制回路や学習のダイナミクスが変わる</strong>ため、delay を graph の外へ追い出すことはできません。
 </p>
 
-<h3>5. 神経修飾は「1つの気分スカラー」ではありません</h3>
+<h3>6. 神経修飾は「1つの気分スカラー」ではありません</h3>
 <p>
 Reimer らは、瞳孔変動が皮質内の adrenergic と cholinergic activity の両方を追うことを示しました。これは逆に、<strong>瞳孔径がどちらか一方の transmitter state を一意に表すわけではない</strong>ことも意味します。さらに Neyhart らは、皮質 ACh が cholinergic axon activity と行動状態からかなり予測できる一方で、<strong>近傍軸索からの距離と clearance kinetics に依存する局所性</strong>も持つことを示しました。したがって、人で瞳孔径や HRV を使うのは有用でも、それをトランスミッタ特異的・領域特異的な内部状態の ground truth と見なすのは過大主張です。必要なのは「良い proxy かどうか」だけではなく、<strong>何の proxy で何の proxy ではないか</strong>を明記することでございます。
 </p>
 
-<h3>6. グリアは後付けの補助変数ではありません</h3>
+<h3>7. グリアは後付けの補助変数ではありません</h3>
 <p>
 Adamsky らは astrocytic activation が de novo neuronal potentiation と memory enhancement を生みうることを示しました。Cahill らは、局所的で瞬間的な neurotransmitter input が、分単位にわたる広い astrocyte network の応答へ符号化されることを報告しています。したがって、<strong>グリアを無視したモデルは、可塑性や slow network state を部分的に欠いたモデル</strong>として扱うべきです。ここで重要なのは、「グリアも関わるらしい」という一般論ではなく、<strong>どの時定数のどの状態変数を捨てたか</strong>をモデル仕様として明示することでございます。
 </p>
@@ -335,7 +359,7 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <section class="section" id="augmentation-ablation">
 <h2 class="section-title">列挙で終わらせず、augmentation / ablation で比較する</h2>
 <p>
-現行サイトの弱点は、欠ける state variable を列挙できても、<strong>どの追加情報がどの誤差項を減らしたときに一段強い claim へ進めるのか</strong>が前面に出ていなかった点でした。2024-2026 年の一次文献は、connectome-only baseline から same-brain function、transcriptomic label、local transmitter dynamics、glial slow state、recovery log を足すと、改善の出方が別であることを示しています。したがって、このサイトでは <strong>state variable を「ある / ない」で数えるのではなく、augmentation / ablation で held-out predictive gain を比較する</strong>方針へ寄せます。
+現行サイトの弱点は、欠ける state variable を列挙できても、<strong>どの追加情報がどの誤差項を減らしたときに一段強い claim へ進めるのか</strong>が前面に出ていなかった点でした。2024-2026 年の一次文献は、connectome-only baseline から same-brain function、transcriptomic label、dendritic branch state、local transmitter dynamics、glial slow state、recovery log を足すと、改善の出方が別であることを示しています。したがって、このサイトでは <strong>state variable を「ある / ない」で数えるのではなく、augmentation / ablation で held-out predictive gain を比較する</strong>方針へ寄せます。
 </p>
 <table class="data-table">
 <thead>
@@ -364,6 +388,12 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <td>same-brain か近接条件での transcriptomic type と target specificity です。</td>
 <td>Gamlin らは predicted Sst transcriptomic types ごとに接続モチーフ、シナプス特性、髄鞘化が系統的に異なることを示し、node label の増分価値を具体化しました。</td>
 <td>within-type heterogeneity と morpho-electric variability は残るため、cell-type label を足しても threshold / gain / set point はまだ latent のままです。</td>
+</tr>
+<tr>
+<td><strong>+ dendritic branch readout / perturbation</strong></td>
+<td>dendritic voltage / Ca imaging、branch-specific stimulation、clustered-vs-dispersed input test です。</td>
+<td>Schiller、Smith、Cichon &amp; Gan、Takahashi、Sehgal らは、branch-specific な非線形統合を足すと感覚選択性、学習後の持続 plasticity、近接時刻記憶リンクの説明力が上がることを示しました。</td>
+<td>coverage は sparse で local です。human whole-brain では依然として soma-only readout と ex vivo validation の gap が大きく、point-neuron 近似の ceiling も残ります。</td>
 </tr>
 <tr>
 <td><strong>+ local transmitter dynamics</strong></td>
@@ -404,6 +434,7 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <li><strong>species / stack をまたぐとき：</strong>fly / mouse / human、local / fragment / whole-brain、structural / functional / metabolic の差を本文に残し、external validity ceiling を省略しません。</li>
 <li><strong>intrinsic excitability / homeostatic set point：</strong>cell-type ラベルや短時間の活動一致から自動推定されたことにはしません。測っていなければ latent state と書きます。</li>
 <li><strong>PSD 面積 / spine size / synapse count：</strong>paired physiology や perturbation が無い限り、current effective weight とは書かず、structural prior と書きます。</li>
+<li><strong>樹状突起 morphology / soma-only fit：</strong>branch-specific NMDA spike / plateau / dendritic action potential が直接見えたとは書かず、point-neuron 近似の適用範囲を残します。</li>
 <li><strong>pupil / HRV：</strong>人データでは有用な state covariate ですが、トランスミッタ特異的 ground truth としては扱いません。</li>
 <li><strong>state variable が無いとき：</strong>推定したなら誤差と棄権条件を、推定していないなら absent と明記します。</li>
 <li><strong>weights / delays が無いとき：</strong>phase、timing、介入応答、閉ループ安定性の主張は降格します。</li>
@@ -430,11 +461,11 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 </tr>
 <tr>
 <td><strong>条件付き dynamical claim</strong></td>
-<td>same-brain function または perturbation、欠測 state variable 一覧、proxy の限界、family / uncertainty、さらに intrinsic excitability / homeostatic set point を測っていない場合はその不在を添えます。</td>
+<td>same-brain function または perturbation、欠測 state variable 一覧、proxy の限界、family / uncertainty、さらに intrinsic excitability / homeostatic set point や dendritic integration state を測っていない場合はその不在を添えます。</td>
 </tr>
 <tr>
 <td><strong>介入・閉ループ claim</strong></td>
-<td>上記に加え、weights / delays / neuromodulation / excitability-homeostasis の較正ルート、外部妥当化、abstention / stop 条件まで公開します。</td>
+<td>上記に加え、weights / dendritic integration / delays / neuromodulation / excitability-homeostasis の較正ルート、外部妥当化、abstention / stop 条件まで公開します。</td>
 </tr>
 </tbody>
 </table>
@@ -450,9 +481,17 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <em>Nature</em>, 640, 497–505. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
 <li>Holler, S., et al. (2021). Structure and function of a neocortical synapse. <em>Nature</em>, 591, 111–116. <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">doi:10.1038/s41586-020-03134-2</a></li>
 <li>Dürst, C. D., Wiegert, J. S., Schulze, C., et al. (2022). Vesicular release probability sets the strength of individual Schaffer collateral synapses. <em>Nature Communications</em>, 13, 6126. <a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">doi:10.1038/s41467-022-33565-6</a></li>
+<li>Schiller, J., Major, G., Koester, H. J., &amp; Schiller, Y. (2000). NMDA spikes in basal dendrites of cortical pyramidal neurons. <em>Nature</em>, 404, 285–289. <a href="https://doi.org/10.1038/35005094" target="_blank">doi:10.1038/35005094</a></li>
+<li>Polsky, A., Mel, B. W., &amp; Schiller, J. (2004). Computational subunits in thin dendrites of pyramidal cells. <em>Nature Neuroscience</em>, 7, 621–627. <a href="https://doi.org/10.1038/nn1253" target="_blank">doi:10.1038/nn1253</a></li>
+<li>Smith, S. L., Smith, I. T., Branco, T., &amp; Häusser, M. (2013). Dendritic spikes enhance stimulus selectivity in cortical neurons in vivo. <em>Nature</em>, 503, 115–120. <a href="https://doi.org/10.1038/nature12600" target="_blank">doi:10.1038/nature12600</a></li>
+<li>Cichon, J., &amp; Gan, W.-B. (2015). Branch-specific dendritic Ca<sup>2+</sup> spikes cause persistent synaptic plasticity. <em>Nature</em>, 520, 180–185. <a href="https://doi.org/10.1038/nature14251" target="_blank">doi:10.1038/nature14251</a></li>
+<li>Takahashi, N., Oertner, T. G., Hegemann, P., &amp; Larkum, M. E. (2016). Active cortical dendrites modulate perception. <em>Science</em>, 354(6319), 1587–1590. <a href="https://doi.org/10.1126/science.aah6066" target="_blank">doi:10.1126/science.aah6066</a></li>
 <li>Matsuzaki, M., Honkura, N., Ellis-Davies, G. C. R., & Kasai, H. (2004). Structural basis of long-term potentiation in single dendritic spines. <em>Nature</em>, 429, 761–766. <a href="https://doi.org/10.1038/nature02617" target="_blank">doi:10.1038/nature02617</a></li>
 <li>Vardalaki, D., Chung, K., &amp; Harnett, M. T. (2022). Filopodia are a structural substrate for silent synapses in adult neocortex. <em>Nature</em>, 612, 323–327. <a href="https://doi.org/10.1038/s41586-022-05483-6" target="_blank">doi:10.1038/s41586-022-05483-6</a></li>
 <li>Alle, H., et al. (2024). Membrane potential states gate synaptic consolidation in human neocortical tissue. <em>Nature Communications</em>, 15, 10340. <a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">doi:10.1038/s41467-024-53901-2</a></li>
+<li>Beaulieu-Laroche, L., Toloza, E. H. S., van der Goes, M.-S., et al. (2018). Enhanced Dendritic Compartmentalization in Human Cortical Neurons. <em>Cell</em>, 175(3), 643–651.e14. <a href="https://doi.org/10.1016/j.cell.2018.08.045" target="_blank">doi:10.1016/j.cell.2018.08.045</a></li>
+<li>Gidon, A., Zolnik, T. A., Fidzinski, P., et al. (2020). Dendritic action potentials and computation in human layer 2/3 cortical neurons. <em>Science</em>, 367(6473), 83–87. <a href="https://doi.org/10.1126/science.aax6239" target="_blank">doi:10.1126/science.aax6239</a></li>
+<li>Sehgal, M., et al. (2025). Compartmentalized dendritic plasticity in the mouse retrosplenial cortex links contextual memories formed close in time. <em>Nature Neuroscience</em>, 28, 602–615. <a href="https://doi.org/10.1038/s41593-025-01876-8" target="_blank">doi:10.1038/s41593-025-01876-8</a></li>
 <li>Gibson, E. M., et al. (2014). Neuronal activity promotes oligodendrogenesis and adaptive myelination in the mammalian brain. <em>Science</em>, 344(6183), 1252304. <a href="https://doi.org/10.1126/science.1252304" target="_blank">doi:10.1126/science.1252304</a></li>
 <li>McKenzie, I. A., et al. (2014). Motor skill learning requires active central myelination. <em>Science</em>, 346(6207), 318–322. <a href="https://doi.org/10.1126/science.1254960" target="_blank">doi:10.1126/science.1254960</a></li>
 <li>Micheva, K. D., Kiraly, M., Perez, M. M., & Madison, D. V. (2021). Conduction Velocity Along the Local Axons of Parvalbumin Interneurons Correlates With the Degree of Axonal Myelination. <em>Cerebral Cortex</em>, 31(7), 3374–3392. <a href="https://doi.org/10.1093/cercor/bhab018" target="_blank">doi:10.1093/cercor/bhab018</a></li>

@@ -127,7 +127,7 @@ P/M/R/I/V/D の記号や依存関係を初歩から追いたい場合は、先�
 <div class="note-box">
 <strong>『コネクトームが取れたら十分では？』で止まったとき</strong>
 <p>
-R 系列では、配線図だけでなく、細胞型、内在興奮性 / 恒常性 set point、シナプス効率、遅延と髄鞘、神経修飾、グリアをどう扱うかが分岐点になります。どの状態変数が抜けると何が主張できなくなるかを一次文献から整理したい場合は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> と <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> をご覧ください。
+R 系列では、配線図だけでなく、細胞型、内在興奮性 / 恒常性 set point、シナプス効率、樹状突起の branch-specific 統合状態、遅延と髄鞘、神経修飾、グリアをどう扱うかが分岐点になります。どの状態変数が抜けると何が主張できなくなるかを一次文献から整理したい場合は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> と <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> をご覧ください。
 </p>
 </div>
 <div class="note-box">
@@ -595,7 +595,7 @@ Mikulan et al. (2020)、Seeber et al. (2019)、Unnwongse et al. (2023)、Hao et 
 <ul>
 <li><strong>非侵襲ヒト計測の上限：</strong>領域〜ネットワーク水準の状態遷移、比較的大域な timing 制約、条件差の追跡です。</li>
 <li><strong>connectomics 前線の上限：</strong>構造 scaffold、局所 functional twin、cell-type 依存結線の監査であって、現在のシナプス効率や神経修飾場までの完全観測ではありません。</li>
-<li><strong>残る潜在状態：</strong>シナプス重み、受容体状態、intrinsic excitability / homeostatic set point、neuromodulatory field、glial / metabolic state、plastic history は別変数として残ります。</li>
+<li><strong>残る潜在状態：</strong>シナプス重み、樹状突起 branch の非線形統合状態、受容体状態、intrinsic excitability / homeostatic set point、neuromodulatory field、glial / metabolic state、plastic history は別変数として残ります。</li>
 </ul>
 <p><strong>暫定判定規則：</strong>観測経路がマクロ proxy に留まる場合、このロードマップでは主張をまず <strong>L1〜弱い L2</strong> に留めます。局所回路やシナプス粒度の主張へ上げるには、同一脳での構造・機能対応、外部 ground truth、介入応答のいずれかを追加で要求します。</p>
 <p><strong>次に必要：</strong>仮定(A)(B)(C)ごとに、観測可能性（M1）、同定可能性（R7）、計算可能性（I3）を束で評価し、どの粒度で何を棄権するかまで公開します。背景は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> と <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> を参照してください。</p>

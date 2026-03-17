@@ -762,6 +762,12 @@ Fusion Card が無い場合、本サイトではその結果を原則として <
 <td>structure-only 指標だけで gain を主張している場合、L2 の介入予測と L3 の安定制御を保留し、current weight claim も受理しません。</td>
 </tr>
 <tr>
+<td><strong>dendritic integration / local nonlinear subunits</strong></td>
+<td>clustered-vs-dispersed input sensitivity、possible なら branch-specific stimulation / local dendritic recording、NMDA spike / plateau / dendritic spike threshold、soma-only と dendrite-aware 条件の誤差差分。</td>
+<td>point-neuron / soma-only 条件と、dendritic subunit または branch-state 項を足した条件を同一課題・同一 horizon で比べ、どの介入・どの入力配置で差が出るかを分けて書きます。</td>
+<td>morphology か soma-level fit しか無い場合、single-neuron transfer-function equivalence、subcellular credit assignment、clustered-input causal claim を止めます。</td>
+</tr>
+<tr>
 <td><strong>delay / myelin / axonal support</strong></td>
 <td>phase error、latency degradation curve、timing-sensitive task での失敗率、delay を固定定数で近似した箇所。</td>
 <td>timing-sensitive 条件で、delay fixed と delay-aware 条件の差を出し、cell-type / region 依存の caveat も併記します。</td>
@@ -815,6 +821,12 @@ Fusion Card が無い場合、本サイトではその結果を原則として <
 <strong>2026-03 追補：structural synapse metric は current weight ではありません</strong>
 <p>
 <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">Holler et al. (2021)</a> は identified neocortical synapse で PSD 面積と平均 EPSP の関係を前進させましたが、trial-to-trial の対応は弱く、multivesicular release も残ることを示しました。<a href="https://doi.org/10.1038/s41467-024-50549-7" target="_blank">Dürst et al. (2024)</a> は bouton potency が vesicular release probability に強く依存することを示し、<a href="https://doi.org/10.1038/s41586-022-05483-6" target="_blank">Vardalaki et al. (2022)</a> は成体新皮質にも silent synapse substrate が残ることを示しました。さらに <a href="https://doi.org/10.1038/s41467-024-51402-7" target="_blank">Alle et al. (2024)</a> は human neocortical tissue で membrane state が短時間に synaptic efficacy を動かすことを示しました。したがって本サイトでは、<strong>EM synapse count</strong>、<strong>PSD / spine size</strong>、<strong>same-brain connectomics</strong> をまず structural prior として扱い、paired physiology、state manipulation、held-out perturbation gain が無い限り <strong>current effective weight の direct readout</strong>とは書きません。
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03 追補：somatic agreement は dendritic-state agreement ではありません</strong>
+<p>
+<a href="https://doi.org/10.1038/35005094" target="_blank">Schiller et al. (2000)</a> と <a href="https://doi.org/10.1038/nn1253" target="_blank">Polsky et al. (2004)</a> は cortical pyramidal neuron の dendrite が非線形 subunit として振る舞いうることを示し、<a href="https://doi.org/10.1038/nature12600" target="_blank">Smith et al. (2013)</a> と <a href="https://doi.org/10.1126/science.aah6066" target="_blank">Takahashi et al. (2016)</a> は in vivo の選択性と知覚が active dendrite に依存することを示しました。さらに <a href="https://doi.org/10.1038/nature14251" target="_blank">Cichon &amp; Gan (2015)</a> と <a href="https://doi.org/10.1038/s41593-025-01876-8" target="_blank">Sehgal et al. (2025)</a> は branch-specific plasticity が持続効果と近接時刻記憶リンクに関わることを示し、human 側でも <a href="https://doi.org/10.1016/j.cell.2018.08.045" target="_blank">Beaulieu-Laroche et al. (2018)</a> と <a href="https://doi.org/10.1126/science.aax6239" target="_blank">Gidon et al. (2020)</a> が L2/3 の dendritic compartmentalization と dendritic action potential を示しました。したがって本サイトでは、<strong>soma-level decode</strong>、<strong>morphology</strong>、<strong>point-neuron fit</strong> だけで `single-neuron mechanism was matched` と書かず、dendritic-state audit を別提出物として残します。
 </p>
 </div>
 <div class="note-box">
@@ -1633,6 +1645,14 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Vardalaki, D., Chung, K., &amp; Harnett, M. T. (2022). Filopodia are a structural substrate for silent synapses in adult neocortex. <a href="https://doi.org/10.1038/s41586-022-05483-6" target="_blank">doi:10.1038/s41586-022-05483-6</a></li>
 <li>Dürst, C. D., Boele, H.-J., Schonewille, M., &amp; Hoebeek, F. E. (2024). Number of releasable vesicles does not limit short-term plasticity at hippocampal synapses with low release probability. <a href="https://doi.org/10.1038/s41467-024-50549-7" target="_blank">doi:10.1038/s41467-024-50549-7</a></li>
 <li>Alle, H., et al. (2024). Membrane potential states gate synaptic consolidation in human neocortical tissue. <a href="https://doi.org/10.1038/s41467-024-51402-7" target="_blank">doi:10.1038/s41467-024-51402-7</a></li>
+<li>Schiller, J., Major, G., Koester, H. J., &amp; Schiller, Y. (2000). NMDA spikes in basal dendrites of cortical pyramidal neurons. <a href="https://doi.org/10.1038/35005094" target="_blank">doi:10.1038/35005094</a></li>
+<li>Polsky, A., Mel, B. W., &amp; Schiller, J. (2004). Computational subunits in thin dendrites of pyramidal cells. <a href="https://doi.org/10.1038/nn1253" target="_blank">doi:10.1038/nn1253</a></li>
+<li>Smith, S. L., Smith, I. T., Branco, T., &amp; Häusser, M. (2013). Dendritic spikes enhance stimulus selectivity in cortical neurons in vivo. <a href="https://doi.org/10.1038/nature12600" target="_blank">doi:10.1038/nature12600</a></li>
+<li>Cichon, J., &amp; Gan, W.-B. (2015). Branch-specific dendritic Ca2+ spikes cause persistent synaptic plasticity. <a href="https://doi.org/10.1038/nature14251" target="_blank">doi:10.1038/nature14251</a></li>
+<li>Takahashi, N., Oertner, T. G., Hegemann, P., &amp; Larkum, M. E. (2016). Active cortical dendrites modulate perception. <a href="https://doi.org/10.1126/science.aah6066" target="_blank">doi:10.1126/science.aah6066</a></li>
+<li>Beaulieu-Laroche, L., Toloza, E. H. S., van der Goes, M.-S., et al. (2018). Enhanced Dendritic Compartmentalization in Human Cortical Neurons. <a href="https://doi.org/10.1016/j.cell.2018.08.045" target="_blank">doi:10.1016/j.cell.2018.08.045</a></li>
+<li>Gidon, A., Zolnik, T. A., Fidzinski, P., et al. (2020). Dendritic action potentials and computation in human layer 2/3 cortical neurons. <a href="https://doi.org/10.1126/science.aax6239" target="_blank">doi:10.1126/science.aax6239</a></li>
+<li>Sehgal, M., et al. (2025). Compartmentalized dendritic plasticity in the mouse retrosplenial cortex links contextual memories formed close in time. <a href="https://doi.org/10.1038/s41593-025-01876-8" target="_blank">doi:10.1038/s41593-025-01876-8</a></li>
 <li>Grubb, M. S., &amp; Burrone, J. (2010). Activity-dependent relocation of the axon initial segment fine-tunes neuronal excitability. <a href="https://doi.org/10.1038/nature09160" target="_blank">doi:10.1038/nature09160</a></li>
 <li>Kuba, H., Oichi, Y., &amp; Ohmori, H. (2010). Presynaptic activity regulates Na+ channel distribution at the axon initial segment. <a href="https://doi.org/10.1038/nature09087" target="_blank">doi:10.1038/nature09087</a></li>
 <li>Jamann, N., Dannehl, D., Lehmann, N., et al. (2021). Sensory input drives rapid homeostatic scaling of the axon initial segment in mouse barrel cortex. <a href="https://doi.org/10.1038/s41467-020-20232-x" target="_blank">doi:10.1038/s41467-020-20232-x</a></li>
