@@ -16,7 +16,7 @@ page_highlights:
   - "スターターデータは L0〜L1 の練習台であり、EEG source imaging の ground truth ではありません。"
   - "スターターデータごとに、annotation provenance・時間忠実度・独立な split 単位が違います。"
   - "within-session / cross-session / cross-subject / adaptation は別の評価族であり、同じ score として横並びにしません。"
-  - "同じ score でも、target neural variable、眼球・筋電・行動・feedback route を分けて読まないと過大評価になります。"
+  - "同じ score でも、target neural variable、眼球・筋電・行動・feedback route・subject / session fingerprint を分けて読まないと過大評価になります。"
   - "foundation / self-supervised EEG model を使う場合も、pretraining corpus と harmonization の監査を省略しません。"
   - "最終目標は、第三者が同じ条件で走らせられる形へ寄せることです。"
 known_points:
@@ -24,7 +24,7 @@ known_points:
   - "最初のデータ選びでは、難しさよりも追試しやすさを優先した方が前に進みます。"
   - "同じ『公開 EEG データ』でも、cue-locked event、専門家の区間注釈、sleep hypnogram、医師レポート由来ラベルは意味が違います。"
   - "同じ accuracy でも、どの汎化条件で出た score かが違えば、読んでよい主張の強さも変わります。"
-  - "same-day の score は、target signal だけでなく movement / EOG / EMG / feedback path を拾っている可能性があります。"
+  - "same-day の score は、target signal だけでなく movement / EOG / EMG / feedback path や subject / session fingerprint を拾っている可能性があります。"
   - "foundation model の改善も、pretraining corpus、channel mismatch 処理、adaptation regime を出さないと比較不能です。"
   - "個体別 MRI や侵襲 ground truth がないスターターデータだけで、ESI 精度改善を強く主張することはできません。"
 unknown_points:
@@ -360,14 +360,14 @@ Musall et al. (2019) は、task 中の neural activity が uninstructed movement
 <div class="note-box">
 <strong>2026-03-18 追補：同じ score でも、どの経路で出たかを固定します</strong>
 <p>
-同じ within-session の高 score でも、<a href="https://doi.org/10.1523/ENEURO.0401-17.2018" target="_blank">Mostert et al. (2018)</a> が示した eye movement confound、<a href="https://doi.org/10.1088/1741-2560/2/4/014" target="_blank">McFarland et al. (2005)</a> が示した EMG route、<a href="https://doi.org/10.1038/s42256-024-00837-5" target="_blank">Chen et al. (2024)</a> が示した post-onset auditory feedback のように、target neural variable とは別経路で説明できる場合がございます。したがって今後このサイトでは、dataset card や baseline 結果に <a href="verification.html#specificity-shortcut-card">Verification の Specificity &amp; Shortcut Card</a> を重ね、<strong>plausible nuisance routes</strong>、<strong>EOG / EMG / behavior / audio などの補助チャネル</strong>、<strong>nuisance-only baseline</strong>、<strong>nuisance regime 別 hold-out</strong>、<strong>止める主張</strong> を固定します。
+同じ within-session の高 score でも、<a href="https://doi.org/10.1523/ENEURO.0401-17.2018" target="_blank">Mostert et al. (2018)</a> が示した eye movement confound、<a href="https://doi.org/10.1088/1741-2560/2/4/014" target="_blank">McFarland et al. (2005)</a> が示した EMG route、<a href="https://doi.org/10.1038/s42256-024-00837-5" target="_blank">Chen et al. (2024)</a> が示した post-onset auditory feedback だけでなく、<a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a> が示した identity confounding、<a href="https://doi.org/10.1016/j.patcog.2020.107381" target="_blank">Wang et al. (2020)</a> と <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a> が示した resting-state EEG の time-robust fingerprint、<a href="https://doi.org/10.1016/j.neuroimage.2022.119034" target="_blank">Gibson et al. (2022)</a> が整理した subject-driven EEG variation のように、target neural variable とは別経路で説明できる場合がございます。したがって今後このサイトでは、dataset card や baseline 結果に <a href="verification.html#specificity-shortcut-card">Verification の Specificity &amp; Shortcut Card</a> を重ね、<strong>plausible nuisance routes</strong>、<strong>EOG / EMG / behavior / audio / metadata などの補助チャネル</strong>、<strong>nuisance-only baseline</strong>、<strong>fingerprint audit</strong>、<strong>nuisance regime 別 hold-out</strong>、<strong>止める主張</strong> を固定します。
 </p>
 </div>
 
 <div class="note-box">
 <strong>この節から出る site rule</strong>
 <p>
-今後このサイトでは、dataset card や baseline 結果に少なくとも <strong>(1) evaluation family</strong>、<strong>(2) 独立な hold-out 単位</strong>、<strong>(3) target session / target subject の使用有無</strong>、<strong>(4) recalibration の量と時点</strong>、<strong>(5) それでも止める主張</strong> を併記します。これが無い score は、L1 の限定つき decode として扱い、長期安定性や deployability へは上げません。
+今後このサイトでは、dataset card や baseline 結果に少なくとも <strong>(1) evaluation family</strong>、<strong>(2) 独立な hold-out 単位</strong>、<strong>(3) 同一 raw recording から切り出した window / epoch の ancestry</strong>、<strong>(4) subject / session disjointness と metadata-only baseline</strong>、<strong>(5) target session / target subject の使用有無</strong>、<strong>(6) recalibration の量と時点</strong>、<strong>(7) それでも止める主張</strong> を併記します。これが無い score は、L1 の限定つき decode または fingerprint-unresolved classifier として扱い、長期安定性や deployability へは上げません。
 </p>
 </div>
 </section>

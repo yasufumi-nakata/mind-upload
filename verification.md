@@ -14,7 +14,7 @@ accuracy_note: "このページは『WBEが可能だ』と断言するページ�
 page_highlights:
   - "標準、置き場、ベンチマーク、監査をセットでそろえる必要があります。"
   - "デコーディングとエミュレーションを混同しないために、主張レベルと失敗条件を先に固定します。"
-  - "decode / biomarker の score では、Specificity & Shortcut Card で target neural variable と nuisance route を分けます。"
+  - "decode / biomarker の score では、Specificity & Shortcut Card で target neural variable と nuisance route を分け、subject / session fingerprint も独立に監査します。"
   - "ここを読むと、なぜデータだけ集めても前進にならないのかが分かります。"
   - "brain-to-text や speech decode では、Neural Contribution Card で task constraint・language prior・candidate set・no-brain / no-LM / shuffle baseline・subject cooperation を固定します。"
   - "multimodal や atlas prior を使う結果では、Observability Budget に加えて Fusion Card で取得関係・同期・融合モデル・外部妥当化を固定します。"
@@ -28,7 +28,7 @@ known_points:
   - "標準、共有基盤、評価、監査をセットでそろえないと、比較可能な前進は作れません。"
   - "L0〜L2 では、再現性と反証条件を事前に設計することができます。"
   - "decode と emulate は別の主張であり、必要な証拠も別です。"
-  - "同じ decoding score でも、眼球・筋電・無意図運動・auditory feedback・session fingerprint が残ると target-specific evidence にはなりません。"
+  - "同じ decoding score でも、眼球・筋電・無意図運動・auditory feedback・subject / session fingerprint が残ると target-specific evidence にはなりません。"
   - "multimodal result は 1 種類ではなく、同時取得、幾何統合、侵襲校正、atlas prior を分けて監査する必要があります。"
   - "慢性侵襲記録では、unit matching の不確実性と implant 周囲の tissue response は別監査項目です。"
 unknown_points:
@@ -696,8 +696,13 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 <td>prediction gain が target neural information 由来なのか、補助経路だけで再現できるのかを切り分けられません。</td>
 </tr>
 <tr>
+<td><strong>fingerprint audit / independence unit</strong></td>
+<td>raw recording ancestry、同じ recording から切った window / epoch が train/test をまたいでいないか、subject / session / site / device disjointness、metadata-only baseline、identity classifier を書きます。</td>
+<td>diagnosis や state decode の score が、何を読んだかではなく、誰・いつ・どの装置で取ったかを読んだだけでも見抜けません。</td>
+</tr>
+<tr>
 <td><strong>slice-wise hold-out across nuisance regime</strong></td>
-<td>low / high movement、fixed gaze / free viewing、silent / overt、feedback on / off、device / session hold-out、artifact burden slice、state slice を分けて評価したかを書きます。</td>
+<td>low / high movement、fixed gaze / free viewing、silent / overt、feedback on / off、device / session / subject hold-out、artifact burden slice、state slice を分けて評価したかを書きます。</td>
 <td>同一分布内の成功を、nuisance 条件が変わっても保たれる target-specific evidence と誤読しやすくなります。</td>
 </tr>
 <tr>
@@ -713,6 +718,12 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 </tbody>
 </table>
 <div class="note-box">
+<strong>2026-03-18 追補：subject / session fingerprint は独立の shortcut です</strong>
+<p>
+<a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a> は repeated measures を participant-disjoint にしない診断学習で subject characteristics を学習しうることを示し、<a href="https://doi.org/10.1016/j.patcog.2020.107381" target="_blank">Wang et al. (2020)</a> と <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a> は resting-state EEG だけで高精度かつ time-robust な個人識別が成立しうると示しました。さらに <a href="https://doi.org/10.1016/j.neuroimage.2022.119034" target="_blank">Gibson et al. (2022)</a> は EEG variability に強い subject-driven 成分が残ると整理しました。したがって本サイトでは、subject / session fingerprint を movement や EMG と同列の <strong>shortcut family</strong> として扱い、<strong>independence unit</strong> と <strong>metadata-only baseline</strong> を別欄で固定します。
+</p>
+</div>
+<div class="note-box">
 <strong>2026-03-18 追補：Neural Contribution Card はこの一般カードの言語系特化版です</strong>
 <p>
 Specificity &amp; Shortcut Card は、motor / memory / biomarker / speech を含む一般形でございます。<a href="#neural-contribution-card">Neural Contribution Card</a> はそのうち <strong>language prior、candidate set、prompt、vocoder、causal deployment guard</strong> が支配的になる text / speech / generative reconstruction へ特化した版です。したがって speech / brain-to-text では、通常の shortcut 監査に加えて Neural Contribution Card を重ねます。
@@ -721,7 +732,7 @@ Specificity &amp; Shortcut Card は、motor / memory / biomarker / speech を含
 <div class="note-box">
 <strong>最低運用ルール</strong>
 <p>
-このカードが無い場合、本サイトでは結果を原則として <strong>exploratory decode</strong>、<strong>behavior-linked biomarker</strong>、または <strong>nuisance-unresolved classification</strong> として扱い、target-specific neural readout、mechanistic biomarker、deployable controller へは上げません。とくに <strong>plausible nuisance routes</strong>、<strong>nuisance-only baselines</strong>、<strong>slice-wise hold-out</strong> のいずれかが欠ける場合、「何が分かったか」の読み替えを止めます。
+このカードが無い場合、本サイトでは結果を原則として <strong>exploratory decode</strong>、<strong>behavior-linked biomarker</strong>、または <strong>nuisance-unresolved classification</strong> として扱い、target-specific neural readout、mechanistic biomarker、deployable controller へは上げません。とくに <strong>plausible nuisance routes</strong>、<strong>nuisance-only baselines</strong>、<strong>fingerprint audit / independence unit</strong>、<strong>slice-wise hold-out</strong> のいずれかが欠ける場合、「何が分かったか」の読み替えを止めます。
 </p>
 </div>
 <div class="note-box">

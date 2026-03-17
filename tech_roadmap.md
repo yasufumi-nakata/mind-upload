@@ -4,7 +4,7 @@ title: "技術ロードマップ：計測→再構成→実装でWBEを理解す
 description: "マインドアップロード（WBE）を技術面から俯瞰する学習ロードマップ。計測→再構成→実装→検証の問いの木で整理。"
 article_type: "Roadmap (Definition #1)"
 subtitle: "「何を解けたら前進か」を問いの木に分解し、読む順番と最低限の到達点を示す"
-last_updated: "2026-03-17"
+last_updated: "2026-03-18"
 note: "暫定版（随時更新）"
 audience: "全体像を知りたい人、学習順序を決めたい人、主張の強さを段階で整理したい人"
 reading_time: "20〜30分（索引だけなら5分）"
@@ -15,11 +15,13 @@ page_highlights:
   - "索引を使えば、気になる論点だけ先に読むこともできます。"
   - "強い主張ほど後ろのレベルに置き、前のレベルを飛ばして語らない構造にしています。"
   - "R3/R5 では latent-state と maintenance-state を evidence tier と timescale で分け、same-day fit と multiday maintenance を同じ成功にしません。"
+  - "R6 では personalization を性能改善の技巧ではなく、target signal と subject fingerprint を切り分ける検証課題として扱います。"
 known_points:
   - "P/M/R/I/V/D に分けると、どの問題が土台でどの問題が上位論点かを整理できます。"
   - "前の層を飛ばして強い主張へ進めない、という依存関係はかなりはっきりしています。"
   - "このページは解決済み一覧ではなく、依存関係の地図として使うのが正しい読み方です。"
   - "connectome や local activity の前進があっても、latent-state と maintenance-state の監査は別に要ります。"
+  - "personalization が効くことと、population-level の neural signal が取れていることは別であり、subject fingerprint の監査が要ります。"
 unknown_points:
   - "どの計測粒度が最終的に WBE に十分かは、まだ決まっていません。"
   - "V5 の本人性や D 系列の社会実装条件は、依然として未解決です。"
@@ -873,7 +875,41 @@ EEG-fMRI / MRI-fMRI の統合では、shared clock と geometry だけでは足�
 </summary>
 <div class="qa-body">
 <p><strong>問い：</strong>“本人性”を議論するなら個人化は避けられない。一方で、個人化しすぎると過学習と再現性が壊れる。</p>
-<p><strong>次に必要：</strong>個人内/個人間の性能分解（どこが個人差か）を評価指標に入れる</p>
+<p><strong>2026-03-18 追補：</strong>今回この節を深掘りした理由は、personalization を単なる性能改善の技巧として読むと、実際には <strong>target neural variable</strong> を読んだのか、<strong>subject / session fingerprint</strong> を読んだのかが崩れるからでございます。<a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a> は repeated measures を participant-disjoint にしないと診断学習が subject characteristics を学習しうると示し、<a href="https://doi.org/10.1016/j.patcog.2020.107381" target="_blank">Wang et al. (2020)</a> と <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a> は resting-state EEG だけで高精度かつ time-robust な個人識別が成立しうると示しました。さらに <a href="https://doi.org/10.1016/j.neuroimage.2022.119034" target="_blank">Gibson et al. (2022)</a> は EEG variability に強い subject-driven 成分が残ると整理しました。したがって R6 の本当の境界は、<strong>どこまで個人差を使ってよい claim なのか</strong> と、<strong>population signal と fingerprint route をどう切り分けたか</strong> でございます。</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>ルート</th>
+<th>ここまでなら比較的安全に読めること</th>
+<th>最低限ほしい提出物</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>(A) shared model + subject-disjoint evaluation</strong></td>
+<td>person-independent に残る signal があるか、population-level の一般化がどこまで成立するかを評価できます。</td>
+<td>leave-one-subject-out / leave-one-session-out、raw recording ancestry、subject/session/device metadata-only baseline、fingerprint classifier、同じ raw から切った window が train/test をまたがないことの明記です。</td>
+</tr>
+<tr>
+<td><strong>(B) shared encoder + light subject adaptation</strong></td>
+<td>共通表現の上に、どれだけ少量の calibration で target subject に乗るかを評価できます。</td>
+<td>frozen / trainable 部分、adaptation budget、target subject data を使う時点、adaptation 前後の score、fixed decoder horizon、cross-day の劣化と再較正負荷です。</td>
+</tr>
+<tr>
+<td><strong>(C) fully subject-specific decoder / controller</strong></td>
+<td>participant-conditioned な communication / control route が、その個人でどこまで成立するかを評価できます。</td>
+<td>学習時間、協力負荷、within-subject hold-out、cross-day hold-out、silence / abstention、recalibration burden、他人一般化を主張しない ceiling です。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>この節の site rule</strong>
+<p>
+本サイトでは、diagnosis、state biomarker、general decoder を名乗る結果に対し、少なくとも <strong>(1) split の独立単位</strong>、<strong>(2) raw recording / window ancestry</strong>、<strong>(3) subject / session disjointness</strong>、<strong>(4) metadata-only / fingerprint baseline</strong>、<strong>(5) target subject data を使う時点</strong>、<strong>(6) adaptation budget</strong> を要求します。これが無い場合、その結果はまず <strong>subject-aware classifier</strong>、<strong>participant-conditioned decoder</strong>、または <strong>fingerprint-unresolved biomarker</strong> として扱い、population marker や subject-independent mechanism へは上げません。
+</p>
+</div>
+<p><strong>分岐（例）：</strong>(A) では population signal の有無を、(B) では transfer と calibration burden を、(C) では個人内 route の運用可能性を見ます。したがって「個人化した方が高い」こと自体は前進でも失敗でもなく、<strong>何を claim したい系か</strong> と <strong>fingerprint をどこまで制御したか</strong> を合わせて読まなければなりません。</p>
+<p><strong>次に必要：</strong><a href="verification.html#specificity-shortcut-card">Verification の Specificity &amp; Shortcut Card</a>、<a href="datasets.html">Datasets の評価族と split 設計</a>、<a href="verification.html#temporal-validity-card">Temporal Validity Card</a> を束ね、same-subject 成功、cross-subject 一般化、cross-day 維持を別の提出物として管理します。</p>
 </div>
 </details>
 

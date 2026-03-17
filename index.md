@@ -5,7 +5,7 @@ description: "マインドアップロード/WBEを「進歩を測れる科学�
 article_type: Start Here
 subtitle: "勝利条件・標準・ベンチマーク・事前登録を先に作る"
 author: Mind Uploading Research Project
-last_updated: "2026-03-17"
+last_updated: "2026-03-18"
 note: "Human-friendly landing page"
 audience: "はじめて来た人、全体像だけ先に知りたい人、読む順番で迷いたくない人"
 reading_time: "5〜10分"
@@ -16,11 +16,13 @@ page_highlights:
   - "迷ったら Verification → Roadmap → WBE/EEG入門 の順で読むと、話の軸を保ちやすいです。"
   - "配線図や cell type だけでは長期ダイナミクスは決まらず、sleep/homeostasis・髄鞘・グリア代謝も別変数として残ります。"
   - "brain-to-text や speech demo では、Neural Contribution Card で神経寄与と task / language prior を切り分けます。"
+  - "decode / biomarker の高 score は、target signal だけでなく subject / session fingerprint で上がることがあるため、Specificity & Shortcut Card で独立に監査します。"
   - "same-day の成功を cross-day / long-term claim へ読み替えないため、Temporal Validity Card を公開運用へ追加しました。"
   - "用語や前提で止まったときに戻れる入口として、FAQ と用語集も近くに置いています。"
 known_points:
   - "公開データ、標準、ベンチマーク、監査をそろえると、L0〜L2 の前進は比較可能な形で積み上げられます。"
   - "EEGやデコーディング研究は、条件を限定すれば測定可能な前進を作れます。"
+  - "同じ decode score でも、subject / session fingerprint を拾っているだけなら target-specific biomarker とは読めません。"
   - "connectome-complete は emulation-complete を意味せず、maintenance-state の不足を別に監査する必要があります。"
   - "本人性や意識の強い主張は、入口ページではなく後段の検証設計として扱う必要があります。"
 unknown_points:
@@ -115,6 +117,12 @@ Observability Budget で「何を直接見たか」を確認したら、次は <
 <strong>『文字列や音声が出た』ときに、何が脳由来か先に見たいとき</strong>
 <p>
 2026年3月の更新では、brain-to-text / speech decode の過大解釈を止めるため <a href="verification.html#neural-contribution-card">Verification の Neural Contribution Card</a> を追加しました。ここでは <strong>task constraint</strong>、<strong>language model / prompt / candidate set</strong>、<strong>no-brain / no-LM / shuffle baseline</strong>、<strong>subject cooperation / calibration burden</strong>、<strong>online / offline</strong> を固定し、「文字列が出た」をそのまま neural reconstruction と読み替えません。入口Q&amp;Aなら <a href="faq.html#brain-to-text">FAQ: brain-to-text の見方</a> が近道です。
+</p>
+</div>
+<div class="note-box">
+<strong>高い decode score が、その人らしさを読んだだけでないかを先に見たいとき</strong>
+<p>
+2026年3月18日の追補では、<a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a> が repeated measures を participant-disjoint にしない診断学習で <strong>identity confounding</strong> が起こりうると示し、<a href="https://doi.org/10.1016/j.patcog.2020.107381" target="_blank">Wang et al. (2020)</a> と <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a> が resting-state EEG だけで高精度かつ time-robust な個人識別が成立しうると示し、<a href="https://doi.org/10.1016/j.neuroimage.2022.119034" target="_blank">Gibson et al. (2022)</a> が EEG variation に強い subject-driven 成分が残ると整理したことを踏まえ、<strong>subject / session fingerprint</strong> を独立の shortcut として入口にも反映しました。したがって本サイトでは、同一 raw recording から切り出した窓が train/test をまたぐ結果や、subject / session 情報だけで再現できる結果を、そのまま target-specific biomarker や neural readout とは読みません。まず <a href="verification.html#specificity-shortcut-card">Verification の Specificity &amp; Shortcut Card</a> と <a href="tech_roadmap.html#qa-r6">Roadmap の R6 個人化</a> を確認してください。
 </p>
 </div>
 
