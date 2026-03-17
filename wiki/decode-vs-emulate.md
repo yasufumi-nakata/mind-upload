@@ -127,6 +127,61 @@ decode は「観測された信号から何かを当てること」、emulate �
 </table>
 </section>
 
+<section class="section" id="paper-normalization">
+<h2 class="section-title">2026-03-17 追補：代表論文を同じ座標系で並べる</h2>
+<p>
+現行サイトの改善余地が大きかった点は、<strong>自然な text / voice output を示す代表論文どうしが、同じ軸で比較されやすい</strong>ことでした。しかし一次文献を並べると、<strong>perceived / imagined content の semantic reconstruction</strong>、<strong>known-onset word decode</strong>、<strong>prompt-conditioned language continuation</strong>、<strong>attempted-speech communication</strong>、<strong>streaming voice synthesis</strong> は、訓練深度、subject route、prior scaffold、時間軸が別物でございます。したがって、このページでは主要論文を 1 枚の比較表へ正規化し、何が直接示され、何がまだ示されていないかを固定いたします。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>代表論文</th>
+<th>信号と課題</th>
+<th>一次文献が直接示した制約</th>
+<th>このサイトでの ceiling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tang et al. (2023)</strong><br>semantic reconstruction</td>
+<td>fMRI から perceived speech / imagined speech / silent video の意味表現を再構成します。</td>
+<td>within-subject では recovered time-points が 65〜82% に達しましたが、cross-subject は 1〜5% に留まり、学習利得も約 7.5 時間で頭打ちでした。counting by sevens や naming animals のような countermeasure では recovery が 0〜50% まで低下しました。</td>
+<td>subject-cooperative な task-limited semantic reconstruction です。subject-free thought reader や unrestricted mental-state readout へは上げません。</td>
+</tr>
+<tr>
+<td><strong>d'Ascoli et al. (2025)</strong><br>open-vocabulary word decoding</td>
+<td>723 人・500 万語規模の M/EEG から、known word onset 下で word identity を推定します。</td>
+<td>sentence-level context を使う設計で、performance は additional training data、test averaging、MEG &gt; EEG、reading &gt; listening に強く依存しました。したがって「open-vocabulary」でも task structure と modality advantage が残ります。</td>
+<td>known-onset・perception-heavy 条件での open-vocabulary word decode です。free thought reading や unrestricted language generation へは上げません。</td>
+</tr>
+<tr>
+<td><strong>Wang et al. (2025)</strong><br>generative language reconstruction + LLM</td>
+<td>fMRI 由来表現を prompt とともに large language model へ入れ、32,000 語彙で text continuation を生成します。</td>
+<td>larger model と longer context で top-1 が改善し、best dataset でも top-1 は 65.8% でした。出力の流暢さは prompt と LLM scaffold の寄与を強く受けます。</td>
+<td>prompt-conditioned generative language reconstruction です。brain-only text generation や hidden-state recovery へは上げません。</td>
+</tr>
+<tr>
+<td><strong>Willett et al. (2023)</strong><br>high-performance speech neuroprosthesis</td>
+<td>intracortical array から attempted speech を decode し、大語彙 text output を返します。</td>
+<td>125,000 語語彙で 62 words/min、23.8% WER を達成しましたが、participant-specific invasive route の attempted speech decode です。</td>
+<td>高帯域の communication subsystem です。semantic autonomy や全脳 state reconstruction へは上げません。</td>
+</tr>
+<tr>
+<td><strong>Littlejohn et al. (2025)<br>Wairagkar et al. (2025)</strong><br>streaming brain-to-voice / instantaneous voice synthesis</td>
+<td>侵襲信号から own-voice に近い音声を streaming / low-latency で合成します。</td>
+<td>Littlejohn は 80 ms ごとの streaming brain-to-voice を、Wairagkar は 10 ms 未満推論と silence fallback を示しました。他方、Wairagkar では post-implant day 165 で固定した decoder が約 15 日後から有意に劣化しました。</td>
+<td>same-session から short-horizon までの invasive communication route です。chronic deployability や fixed decoder の長期安定性は、Temporal Validity Card なしに主張しません。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>この表が必要な理由</strong>
+<p>
+見た目が同じ「自然な言語出力」でも、<strong>semantic reconstruction</strong>、<strong>known-onset word decode</strong>、<strong>prompt-conditioned continuation</strong>、<strong>attempted speech communication</strong>、<strong>streaming voice synthesis</strong> は別ルートでございます。ここを分けずに横比較すると、deep single-subject fMRI、broad multi-subject M/EEG、participant-specific invasive BCI、LLM scaffold 付き生成系を、同じ強さの evidence と誤読しやすくなります。したがって本サイトでは、自然文出力を見たときにまず <strong>task regime</strong>、<strong>training depth / subject route</strong>、<strong>prior scaffold</strong>、<strong>fixed decoder horizon</strong> を戻し、媒体の派手さではなく証拠の種類で読みます。
+</p>
+</div>
+</section>
+
 <section class="section" id="chronic-communication-ceiling">
 <h2 class="section-title">2026-03-17 追補：侵襲 communication route の chronic ceiling</h2>
 <table class="data-table">

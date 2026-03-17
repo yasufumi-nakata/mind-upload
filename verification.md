@@ -1403,6 +1403,11 @@ Model Card は <strong>モデルの弱点と失敗例</strong> を固定し、Be
 <td>subject-specific fitting を、一般 decoder や即時利用可能系と誤読しやすくなります。</td>
 </tr>
 <tr>
+<td><strong>training depth / subject route</strong></td>
+<td>参加者数、within-subject の学習時間 / セッション数、participant-specific layer や fine-tuning の有無、cross-subject / cross-site drop、test averaging や repeated-trial 依存を書きます。</td>
+<td>深い single-subject fMRI、広い multi-subject M/EEG、participant-specific invasive BCI を同じ「自然言語 decode」として横比較し、deep-but-narrow な条件や subject-specific fitting を universal reader と誤読しやすくなります。</td>
+</tr>
+<tr>
 <td><strong>generalization surface</strong></td>
 <td>held-out sentence / story / vocabulary、cross-task、cross-day、cross-subject、cross-site のどこまで見たかを書きます。</td>
 <td>訓練条件に近い成功を、自由会話や長期運用へ不当に延長しやすくなります。</td>
@@ -1419,6 +1424,12 @@ Model Card は <strong>モデルの弱点と失敗例</strong> を固定し、Be
 </tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>2026-03-17 追補：同じ自然文出力でも data regime は別物です</strong>
+<p>
+<a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a> は non-invasive semantic reconstruction を示しましたが、within-subject では recovered time-points が 65〜82% に達する一方、cross-subject では 1〜5% に留まり、学習利得も約 7.5 時間で頭打ちになりました。さらに counting by sevens や naming animals のような countermeasure で recovery は 0〜50% まで低下しました。<a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a> は 723 人・500 万語規模で word decode を押し上げましたが、sentence-level context、test averaging、MEG &gt; EEG、reading &gt; listening の差も同時に示しました。<a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Wang et al. (2025)</a> は prompt-conditioned generative reconstruction を前進させましたが、32,000 語彙と LLM scaffold を使い、best dataset でも top-1 は 65.8% でした。したがって、本サイトでは <strong>target / task regime</strong> と <strong>training depth / subject route</strong> を分けて出し、「自然な文が出た」ことだけで同じ evidence class と扱いません。
+</p>
+</div>
 <div class="note-box">
 <strong>最低運用ルール</strong>
 <p>

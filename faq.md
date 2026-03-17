@@ -221,11 +221,17 @@ A. 少なくとも次の 8 点でございます。
 <li><strong>信頼度運用：</strong>confidence が校正されているか、低信頼時に silence / abstention を返せるか。高確率表示だけでは安全な解釈になりません。</li>
 <li><strong>長期運用：</strong>within-session の速さだけでなく、tail latency、日跨ぎ安定性、再校正負荷を出しているか。速い demo と deployable loop は別です。</li>
 </ul>
+<div class="note-box">
+<strong>2026-03-17 追補：代表論文を同じ物差しで読む</strong>
+<p>
+<a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a> は、within-subject では recovered time-points が 65〜82% まで上がる一方、cross-subject では 1〜5% に下がり、学習利得も約 7.5 時間で頭打ちになりました。<a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a> は 723 人・500 万語規模でも、sentence-level context、test averaging、MEG &gt; EEG、reading &gt; listening に性能が強く依存すると示しました。<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> は 10 ms 未満推論と silence fallback を示しましたが、固定 decoder は約 15 日で有意に劣化しました。したがって、自然な文字列や音声が出ても、まず <strong>training depth</strong>、<strong>subject route</strong>、<strong>task scaffold</strong>、<strong>fixed decoder horizon</strong> を別々に確認してください。
+</p>
+</div>
 <p>
 Chen et al. (2024) は、speech decode で non-causal path が post-onset の auditory feedback を使うと offline score が inflate しうることを示しました。Singh et al. (2025) は、distributed brain recordings を用いた transfer learning が speech decoding の信頼性を押し上げても、shared task structure と calibration route が依然として必要だと示しました。Littlejohn et al. (2025) は 80 ms ごとの streaming brain-to-voice、Wairagkar et al. (2025) は 10 ms 未満の neural-to-voice synthesis と silence fallback を示しましたが、いずれも侵襲系の communication route でございます。さらに Wilson et al. (2025) は long-term unsupervised recalibration の必要性を示し、daily supervised recalibration 自体が別の壁であることを明確にしました。したがって、scalp EEG や一般的な non-invasive BCI が同じ条件なしに同水準を名乗ることはできません。
 </p>
 <p>
-提出物として比較したい場合は、<a href="verification.html#neural-contribution-card">Verification の Neural Contribution Card</a> と <a href="wiki/decode-vs-emulate.html#speech-decode-scaffolds">Wiki: Decode と Emulate の speech decode 足場節</a> を見てください。ここでは <strong>task regime</strong>、<strong>prior scaffold</strong>、<strong>no-brain / LM-only / no-LM / shuffle baseline</strong>、<strong>causal deployment guard</strong>、<strong>subject cooperation</strong>、<strong>generalization surface</strong>、<strong>online fallback</strong> を固定し、派手な出力をそのまま強い証拠へ読み替えません。
+提出物として比較したい場合は、<a href="verification.html#neural-contribution-card">Verification の Neural Contribution Card</a> と <a href="wiki/decode-vs-emulate.html#paper-normalization">Wiki: Decode と Emulate の代表論文比較表</a> を見てください。ここでは <strong>task regime</strong>、<strong>prior scaffold</strong>、<strong>no-brain / LM-only / no-LM / shuffle baseline</strong>、<strong>causal deployment guard</strong>、<strong>subject cooperation</strong>、<strong>training depth / subject route</strong>、<strong>generalization surface</strong>、<strong>online fallback</strong> を固定し、派手な出力をそのまま強い証拠へ読み替えません。
 </p>
 </section>
 
