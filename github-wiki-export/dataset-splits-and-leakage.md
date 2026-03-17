@@ -2,33 +2,33 @@
 
 > Even if the accuracy is high, the evaluation will be corrupted if the classification is lax
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-15 / Role: Practical guide
+- 更新日: 2026-03-15 / 位置づけ: Practical guide
 
-## Role Of This Page
+## このページの役割
 This page is a wiki that explains from the beginning how to divide datasets and why data leaks are dangerous. In order to reduce accidents where data is highly accurate but cannot be trusted, we will at least organize where to look.
 
-## Accuracy Notes
+## 正確さの前提
 These are basic principles. The best partitioning method depends on the problem and the structure of the data, so there is no one-size-fits-all rule.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Data & Bench](https://mind-upload.com/datasets.html)
 - [Hands-on](https://mind-upload.com/datasets.html#l0-practice)
 - [Verification base](https://mind-upload.com/verification.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: EEG pretreatment and QC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - Compensates for where the preprocessing itself changes the result.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - See why leak prevention is 'part of operations'.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to the overall map of the learning page.
 
-## What Is Currently Known
+## いま分かっていること
 - Accuracy can easily be overestimated if the train/test separation is loose.
 - Apparent performance tends to improve when fragments from the same subject, same session, and near time are included on both sides.
 - In clinical EEG, report text and report-derived labels can also be leakage sources.
 - Preprocessing, normalization, and feature selection can also be a source of leaks if they are performed after looking at all the data.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - Which division is closest to future actual operation depends on the task setting and usage situation.
 - A deep understanding and auditing of data structures is required to be able to claim that leaks have been completely eliminated.
 - How to standardize report-derived labels from signal-only benchmarks is still in the process of operational design.

@@ -2,34 +2,34 @@
 
 > Public pages are the gateway, and the wiki is the foundation for learning.
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-16 / Role: Learning-first
+- 更新日: 2026-03-16 / 位置づけ: Learning-first
 
-## Role Of This Page
+## このページの役割
 This page is a learning portal that makes the public pages of Mind-Upload easier to read. The public pages show what we know now, what we do not know yet, and what to read next, while the wiki teaches the basic explanations behind those pages in a deliberate order.
 
 
-## Accuracy Notes
+## 正確さの前提
 The wiki explains things in an accessible way, but it does not present unresolved issues as solved. Difficult points remain difficult, and that is stated explicitly.
 
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Start Page](https://mind-upload.com)
 - [WBE Basics](https://mind-upload.com/wbe_101.html)
 - [EEG Basics](https://mind-upload.com/eeg_101.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Basics of WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - The first page to understand what the project is talking about.
 - [Wiki: How to read claims and evidence](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - Practice distinguishing the strength of claims in news and research announcements.
 - [Wiki: Basics of EEG](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-basics) - Explains from first principles what EEG measures.
 
-## What Is Currently Known
+## いま分かっていること
 - Current research already makes it possible to measure and reproducibly analyze part of the brain's signals.
 - Mind-Upload becomes much easier to follow if progress is separated from what remains unresolved.
 - Separating the roles of public pages and the wiki allows both an easy entry point and a deeper learning path.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - Research is still underway on the conditions under which WBE could count as established.
 - Final judgments about identity and phenomenal consciousness cannot be made from introductory pages alone.
 

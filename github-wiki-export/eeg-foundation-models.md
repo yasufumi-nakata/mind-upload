@@ -2,34 +2,34 @@
 
 > Read advances in representation learning separately from claims that still need to be stopped
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-17 / Role: Technical / natural science only
+- 更新日: 2026-03-17 / 位置づけ: Technical / natural science only
 
-## Role Of This Page
+## このページの役割
 This page is a learning wiki that organizes how to read EEG foundation / self-supervised models. Recent large-scale pretraining is clearly an advance, but to avoid jumping from that advance to claims such as 'generalization is solved' or 'we are one step closer to WBE,' we separate pretraining corpus, channel mismatch, adaptation regime, and evaluation family.
 
-## Accuracy Notes
+## 正確さの前提
 This page covers only how to read the technical and natural-science evidence. It does not address overall WBE completion criteria or philosophical questions.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [EEG Basics](https://mind-upload.com/eeg_101.html)
 - [Data and Benchmarks](https://mind-upload.com/datasets.html)
 - [Verification Stack](https://mind-upload.com/verification.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Baselines, preregistration, and model cards](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - Use this page to connect the Pretraining Card to the standard model-card workflow.
 - [Wiki: Dataset splits and leakage](https://github.com/yasufumi-nakata/mind-upload/wiki/dataset-splits-and-leakage) - This page explains why an overlap audit is necessary.
 - [Wiki: State, trait, and drift](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - Use this page to return to the basics when separating cross-day and longitudinal claims.
 
-## What Is Currently Known
+## いま分かっていること
 - Self-supervised / foundation models show promising gains under limited-label conditions and across mixed-task downstream settings.
 - EEG has severe format heterogeneity, and differences in channel count, reference, sample rate, and window length easily break comparison.
 - The meaning of a downstream score changes across frozen, linear-probe, and fine-tuning regimes.
 - Papers from 2025-2026 are beginning to show that model rankings can change even with benchmark split construction and preprocessing alone.
 - A successful foundation model cannot be read directly as source identifiability or WBE state-completeness.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - It is still unsettled which pretraining objective is the most stable across broad downstream families.
 - There is still no default path that simultaneously satisfies cross-day, cross-device, cross-task, and longitudinal deployability.
 - There is also no fixed common standard for auditing benchmark version, split rules, and checkpoint selection together.

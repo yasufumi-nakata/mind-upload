@@ -2,33 +2,33 @@
 
 > Divide big dreams into small questions that can be confirmed.
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Beginner guide
+- 更新日: 2026-03-14 / 位置づけ: Beginner guide
 
-## Role Of This Page
+## このページの役割
 This page is for organizing what Mind Upload and WBE aim for from the beginning. First, I place emphasis on not leaving ambiguous questions about ``What can I do to make a strong argument?''
 
-## Accuracy Notes
+## 正確さの前提
 I won't add more words to make it easier to understand. Issues that have not yet been decided will be written as unresolved.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Introduction to WBE](https://mind-upload.com/wbe_101.html)
 - [Verification platform](https://mind-upload.com/verification.html)
 - [FAQ](https://mind-upload.com/faq.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: How to read claims and evidence](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - We will translate this overall picture into how to read news and research publications.
 - [Wiki: Why wiring diagrams alone are not enough](https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough) - We will explain what is missing in wiring from the aspects of technology and natural science.
 - [Wiki: Identity and copying issues](https://github.com/yasufumi-nakata/mind-upload/wiki/personhood-and-copy-problem) - Let's clarify the difference between "copy" and "migration" in more detail.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - You can learn why we make the ruler first.
 
-## What Is Currently Known
+## いま分かっていること
 - Research is already underway to measure some brain signals and make predictions for specific tasks.
 - Without mechanisms for standardization and reproducibility, progress cannot be compared.
 - When it comes to WBE, it's one thing to have similar output and another thing to have the same internal workings.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - It remains unresolved whether functional reproduction guarantees identity and phenomenal consciousness.
 - It is not determined which measurement set provides sufficient internal information for WBE.
 - The rights, responsibilities, and suspension standards necessary for social implementation cannot be solved by technology alone.

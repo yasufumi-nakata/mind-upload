@@ -2,32 +2,32 @@
 
 > Breaking down the work that looks like 'waiting for the other person' into preparation work
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Operational guide
+- 更新日: 2026-03-14 / 位置づけ: Operational guide
 
-## Role Of This Page
+## このページの役割
 This page is an auxiliary page for reading the ``external dependencies'' that come up many times in the operation of Mind-Upload, not as a reason to stop, but as a target for decomposition.The focus here is to distinguish between things that can be created first with this repository and things that require a partner or system.
 
-## Accuracy Notes
+## 正確さの前提
 This page is an aid to help separate the work. This page alone cannot guarantee that an actual agreement, contract, IRB, or equipment use will be established.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Contribution Guide](https://mind-upload.com/issue.html)
 - [Collaboration candidate](https://mind-upload.com/issue.html#external-collaboration)
 - [Verification base](https://mind-upload.com/verification.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: How to read suggestions and state labels](https://github.com/yasufumi-nakata/mind-upload/wiki/proposal-status-reading) - We will first sort out the differences in stages such as proposals, document reflection, and external dependencies.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Explains why requirements specifications and judgment conditions are created first.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other auxiliary pages.
 
-## What Is Currently Known
+## いま分かっていること
 - Even for externally dependent tasks, requirements specifications, judgment conditions, public log formats, comparison tables, etc. can be created in-house first.
 - It will be easier to move forward if you organize the minimum deliverables and request details on one page before approaching the other party.
 - Whether it's an issue or a joint research project, it's important to clearly state what can be done right now.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - Which external candidates will actually agree and on what terms will depend on factors on the other side.
 - IRB, contract, funding, and equipment availability timing will be determined outside of this page.
 

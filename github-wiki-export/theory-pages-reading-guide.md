@@ -2,33 +2,33 @@
 
 > Strength of argument, design principles, and a map to avoid mixing dependencies
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Reading guide
+- 更新日: 2026-03-14 / 位置づけ: Reading guide
 
-## Role Of This Page
+## このページの役割
 This page is an auxiliary guide to help you distinguish between Mind-Upload's theory-oriented public pages. WBE 101 is an introduction, Perspective is a long research note, the theoretical frame section in Perspective is a design principle, and Roadmap is a map of dependencies, so they do not have the same role.
 
-## Accuracy Notes
+## 正確さの前提
 What we are dealing with here is the difference in the roles of the pages. Please check the validity of the theory and the verification conditions themselves on each main text page.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Introduction to WBE](https://mind-upload.com/wbe_101.html)
 - [Research Notes](https://mind-upload.com/perspective.html)
 - [Theoretical Frame Clause](https://mind-upload.com/perspective.html#design-principles)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Guide to reading public pages](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - This is for people who want to see the differences in roles across the public pages, not just those who are interested in theory.
 - [Wiki: Theory of Consciousness Map](https://github.com/yasufumi-nakata/mind-upload/wiki/consciousness-theory-map) - We will clarify the differences between IIT, GNWT, FEP, and PCI from the beginning.
 - [Wiki: Identity and copying issues](https://github.com/yasufumi-nakata/mind-upload/wiki/personhood-and-copy-problem) - Compensates for problems with identity and copying that appear on theory pages.
 - [Wiki: How to read the roadmap](https://github.com/yasufumi-nakata/mind-upload/wiki/roadmap-reading-guide) - This is for people who only want to check the roadmap symbols and how to read them first.
 
-## What Is Currently Known
+## いま分かっていること
 - WBE 101, Perspective, the theoretical frame section within Perspective, and Roadmap are all theoretical, but their roles are different.
 - WBE 101 is the entry point for aligning the strength of the argument, Perspective is a long text listing the basis and limitations, the theoretical frame section within Perspective is the design principle, and Roadmap is the map of dependencies.
 - If you separate the roles of pages first, it will be difficult to misread the theory.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - Which combination of theories will ultimately be a sufficient condition is still undetermined.
 - Which theory pages will be expanded independently in the future will change depending on the accumulation of points.
 

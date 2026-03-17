@@ -2,34 +2,34 @@
 
 > multimodal is not a synonym for ``seen everything''
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-15 / Role: Technical / natural science only
+- 更新日: 2026-03-15 / 位置づけ: Technical / natural science only
 
-## Role Of This Page
+## このページの役割
 This page is a wiki that fixes the ``upper claim limit for each measurement stack,'' which is often overlooked in WBE discussions. It's not enough to say that hidden state is important. Based on primary literature, we will explain what each of EEG/MEG/fMRI, spatial transcriptomics, Patch-seq, volume EM, same-brain functional connectomics, and local transmitter/glia imaging directly observes and what remains latent.
 
-## Accuracy Notes
+## 正確さの前提
 The ``claim ceiling'' column below is not the conclusion declared by each paper. This is an operational inference drawn by this site from variables directly observed in primary literature and state variables that are still unobserved.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Introduction to WBE](https://mind-upload.com/wbe_101.html)
 - [Verification platform](https://mind-upload.com/verification.html)
 - [technology roadmap](https://mind-upload.com/tech_roadmap.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Why wiring diagrams alone are not enough](https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough) - This is a page that first organizes which state variables will be omitted.
 - [Wiki: Homeostatic plasticity and maintenance state](https://github.com/yasufumi-nakata/mind-upload/wiki/homeostatic-plasticity-and-maintenance-state) - Dig deeper into missing variables from the long-term maintenance-state side.
 - [Wiki: Multimodal integration basics](https://github.com/yasufumi-nakata/mind-upload/wiki/multimodal-integration-basics) - Click here if you would like to take a closer look at the integrated audit of EEG/MEG/fMRI/invasive records.
 - [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - This is an entry point to avoid confusing observed values ​​and latent state estimates.
 
-## What Is Currently Known
+## いま分かっていること
 - EEG/MEG/fMRI provides macroscopic proxies, but not directly for cell types, synaptic efficiency, neuromodulatory fields, and glial status.
 - Whole-brain spatial transcriptomics provides a major advance in cell-type taxonomy and spatial location, but the sufficiency of dynamic states is another matter.
 - Patch-seq and same-brain connectomics reduce degeneracy, but the sufficiency of whole-brain coverage and long-term maintenance-state remains.
 - Local transmitter / glia imaging is effective for calibrating coarse proxies, but it does not directly provide whole-brain ground truth.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - It cannot yet be determined which stack combination will most efficiently reduce degeneracy for WBE.
 - The sufficient conditions for which latent state should be obtained in the same brain, whole brain, and long-term longitudinal study are not yet determined.
 - How to optimize the augmentation order between stacks can also vary depending on the task, species, and time constant.

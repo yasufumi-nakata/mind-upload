@@ -2,33 +2,33 @@
 
 > Being consistent with observation, understanding internal states, and understanding cause and effect are different things.
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Technical / natural science only
+- 更新日: 2026-03-14 / 位置づけ: Technical / natural science only
 
-## Role Of This Page
+## このページの役割
 This page is a wiki that organizes where to stop making claims and what to add to make them even stronger when estimating brain states and causal structures from observational signals such as EEG. Connect forward problems, inverse problems, ESI, DCM, SCM, and causal equivalence classes in the order of ``observation → estimation → intervention → validation.''
 
-## Accuracy Notes
+## 正確さの前提
 This is not a fixed recipe for which method to use. This page first fixes audit items that cannot be avoided no matter what method you use.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Introduction to EEG](https://mind-upload.com/eeg_101.html)
 - [Verification platform](https://mind-upload.com/verification.html)
 - [technology roadmap](https://mind-upload.com/tech_roadmap.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: From measurement to modeling](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-and-modeling-terms) - You can return to the overall map of measurement, organization, estimation, and verification.
 - [Wiki: EEG pretreatment and QC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - In the first stage of estimation, we compensate for what changes the results.
 - [Wiki: Uncertainty, proofreading, abstaining](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention) - Instead of point estimation, we supplement the width and how to leave conditions for abstention.
 - [Wiki: Counterfactuals/Interventions/Perturbations](https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification) - It supplements the conditions for proceeding from observational adaptation to intervention validation.
 
-## What Is Currently Known
+## いま分かっていること
 - In principle, it is difficult to uniquely determine brain activity from scalp EEG, and estimation requires assumptions.
 - High-density EEG, individualized MRI, FEM/BEM, and empirical Bayesian estimation can improve conditions, but alone do not guarantee unique recovery.
 - The causal structure cannot be determined by observational fit alone; a set of candidate models and an intervention design are required.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - It remains unclear which measurement/modeling combination is most effective for validating WBE.
 - Research is currently underway to determine how detailed the causal structure and state variables can be stably restored using non-invasive measurements alone.
 - Which external validation ladders will be pinned to the site-wide benchmark is still being worked out.

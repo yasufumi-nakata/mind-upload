@@ -2,32 +2,32 @@
 
 > Read your technology roadmap as a dependency map rather than a long list
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-06 / Role: Reading guide
+- 更新日: 2026-03-06 / 位置づけ: Reading guide
 
-## Role Of This Page
+## このページの役割
 This page is a supplementary page that explains what P/M/R/I/V/D in the technology roadmap means and where to start to read them to avoid getting lost. Rather than resummarizing the main text of the roadmap, we will organize the ``how to read the map'' itself.
 
-## Accuracy Notes
+## 正確さの前提
 This page is a reading aid. Please be sure to return to the main text of the technology roadmap for the official list of issues and current arrangement.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [technology roadmap](https://mind-upload.com/tech_roadmap.html)
 - [Introduction to WBE](https://mind-upload.com/wbe_101.html)
 - [Verification platform](https://mind-upload.com/verification.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Basics of WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - This is for people who want to see the overall picture of why this map is needed.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Complement what you want to fix in the V series.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other basic pages.
 
-## What Is Currently Known
+## いま分かっていること
 - P is the definition of progress, M is measurement, R is reconstruction, I is implementation, V is verification, and D is social implementation.
 - The stronger the argument, the further back it is, and the more unorganized the previous layer is, the more difficult it is to move forward.
 - It's best to read a roadmap as a map of dependencies rather than a collection of conclusions.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - Which route is the shortest and most effective may change as data benches are developed in the future.
 - The final conditions for V and D still have many unresolved issues.
 

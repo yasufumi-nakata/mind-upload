@@ -2,33 +2,33 @@
 
 > Auxiliary page for checking 'Minimal Loop' in the form of submissions
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Operational guide
+- 更新日: 2026-03-14 / 位置づけ: Operational guide
 
-## Role Of This Page
+## このページの役割
 This page is an auxiliary page that organizes what should be finalized as a set when creating a reproducible analysis of L0. Rather than a procedure manual, it is used to focus on the form of the submission and check ``what is necessary for a third party to rerun?''
 
-## Accuracy Notes
+## 正確さの前提
 What we are dealing with here is the bare minimum of L0. Although this alone will not allow us to proceed to a discussion of causal claims or identity, it is important as a starting point for comparison.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Hands-on](https://mind-upload.com/datasets.html#l0-practice)
 - [Data & Bench](https://mind-upload.com/datasets.html)
 - [Verification base](https://mind-upload.com/verification.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - You can see from the beginning why artifacts are fixed first.
 - [Wiki: Data partitioning and leaks](https://github.com/yasufumi-nakata/mind-upload/wiki/dataset-splits-and-leakage) - Supplements the reason why splitting rules go into artifacts.
 - [Wiki: Baseline/Pre-registration/Model Card](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - Compensates for the role differences between baseline and failure examples.
 
-## What Is Currently Known
+## いま分かっていること
 - For L0, it is more important than high accuracy that a third party can rerun under the same conditions.
 - Comparability is greatly improved just by having the BIDS format, QC logs, splitting rules, and baselines in place.
 - Even if the dataset name is the same, if the snapshot or version is different, it will not be reproduced.
 - Examples of failures and known stumbling blocks should be included as part of the deliverables.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - Which baselines and QC metrics ultimately work best will vary from challenge to challenge.
 - Beyond L0, the extent to which it will be extended to L1/L2 standard deliverables will depend on future development.
 

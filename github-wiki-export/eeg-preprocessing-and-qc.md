@@ -2,34 +2,34 @@
 
 > Pre-processing is not a pretense, it is a condition for acceptance of a claim
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-15 / Role: Technical / practical guide
+- 更新日: 2026-03-15 / 位置づけ: Technical / practical guide
 
-## Role Of This Page
+## このページの役割
 This page is a wiki that organizes EEG preprocessing and QC not as ``the process of adjusting the waveform at the end,'' but as ``an auditing process that determines which signals should be kept and which claims should be accepted.''
 
-## Accuracy Notes
+## 正確さの前提
 We do not provide a one-size-fits-all procedure. From the primary literature and official specifications, we will sort out what should be fixed at the bare minimum and what should not be stated yet.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Introduction to EEG](https://mind-upload.com/eeg_101.html)
 - [Hands-on](https://mind-upload.com/datasets.html#l0-practice)
 - [Data & Bench](https://mind-upload.com/datasets.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Basics of EEG](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-basics) - Click here if you want to return from the nature of the signal itself.
 - [Wiki: Event synchronization and observation log](https://github.com/yasufumi-nakata/mind-upload/wiki/event-sync-and-measurement-logs) - Supplements the time synchronization, event, and bad segment recording required before preprocessing.
 - [Wiki: Uncertainty, proofreading, abstaining](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention) - It supplements the idea of estimation width and abstention using preprocessing differences.
 - [Wiki: Standards/Location/Validator/Benchmark](https://github.com/yasufumi-nakata/mind-upload/wiki/standards-repositories-validators-and-benchmarks) - Compensates for the role differences between BIDS, public version, loader, and benchmark.
 
-## What Is Currently Known
+## いま分かっていること
 - Preprocessing is not a small implementation difference, but a choice that determines which signals are considered neural.
 - Reference method, filter design, bad channel processing, and exclusion criteria are the minimum information that should be kept.
 - EEG-BIDS and COBIDAS-MEEG provide a fairly concrete floor for reproducible EEG reporting.
 - Artifact suppression and signal preservation are different; accuracy alone does not determine the quality of preprocessing.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - It has not yet been decided which preprocessing group is optimal for which problem.
 - To determine how much of the high-frequency components can be treated as neural, it is necessary to audit myoelectricity, body movement, and task dependence.
 - Which sensitivity analysis set should be the site-wide standard is a future bench operation issue.

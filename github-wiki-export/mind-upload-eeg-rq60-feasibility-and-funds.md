@@ -2,23 +2,23 @@
 
 > Deeply digging into each question and connecting it to the verification design and application theme
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-15 / Role: RQ-by-RQ Deep Dive
+- 更新日: 2026-03-15 / 位置づけ: RQ-by-RQ Deep Dive
 
-## Role Of This Page
+## このページの役割
 This page is a practical version of research_harvest_50's 60 RQs, which uses A/B/C to determine the range that can be solved with EEG-DATA, and summarizes the verification design, application theme, and dataset ID to be used for each RQ.
 
-## Accuracy Notes
+## 正確さの前提
 Some RQs for U10/U12/U15 cannot be solved by EEG alone, so we judge that it is not possible and specify the necessary external requirements.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Literature map](https://mind-upload.com/research_harvest_50.html)
 - [Data & Bench](https://mind-upload.com/datasets.html)
 - [RQ60 Application Playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook)
 - [Issue](https://mind-upload.com/issue.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Criteria for reducing judgment to experimental specifications.
 - [Wiki: Counterfactual/Intervention Verification](https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification) - Directly linked to causal evaluation of U4/U13.
 - [Wiki: Data partitioning and leaks](https://github.com/yasufumi-nakata/mind-upload/wiki/dataset-splits-and-leakage) - Required for U14 reproducibility audits.

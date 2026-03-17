@@ -2,32 +2,32 @@
 
 > A guide to help you decide the next page without hesitation after reading the verification platform
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Reading route
+- 更新日: 2026-03-14 / 位置づけ: Reading route
 
-## Role Of This Page
+## このページの役割
 This page is a guide to help you decide which page to publish next depending on what you want to know after reading Verification. The next page will change depending on whether you go back to L0 implementation, L2 intervention verification, L3 closed loop, or L4 identity.
 
-## Accuracy Notes
+## 正確さの前提
 Here is the next entrance to Verification. Please be sure to check the actual conditions for each route in the main text of the original page.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Verification platform](https://mind-upload.com/verification.html)
 - [hands-on](https://mind-upload.com/datasets.html#l0-practice)
 - [technology roadmap](https://mind-upload.com/tech_roadmap.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: How to read each L0 to L5](https://github.com/yasufumi-nakata/mind-upload/wiki/claim-level-reading-routes) - This is for those who want to return to the overall path of the level.
 - [Wiki: Guide to reading practical pages](https://github.com/yasufumi-nakata/mind-upload/wiki/practical-pages-reading-guide) - This is for those who want to see the role differences between Verification, Datasets, and Hands-on first.
 - [Wiki: Straight path from EEG to L0](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-to-l0-route) - This is for people who want to see only the specific route on the L0 side right away.
 
-## What Is Currently Known
+## いま分かっていること
 - Verification is an overall blueprint, so the next page is too large as it is.
 - The page to return to differs depending on L0 implementation, L2 verification, L3 closed loop, and L4 identity.
 - If you fix the route after Verification, the reading becomes much more stable.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - Which route will ultimately become the most important may change as the project progresses.
 - The final conditions for L4 and L5 are still undetermined.
 

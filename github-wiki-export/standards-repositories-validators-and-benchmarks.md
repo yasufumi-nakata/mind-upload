@@ -2,28 +2,28 @@
 
 > Divides similar-looking infrastructure groups, including version fixing and evaluation fixing
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-15 / Role: Operational guide
+- 更新日: 2026-03-15 / 位置づけ: Operational guide
 
-## Role Of This Page
+## このページの役割
 This page is a wiki that organizes the roles of ``Standards,'' ``Stores,'' ``Validators,'' and ``Benchmarks,'' which appear many times in Mind-Upload, as well as ``version fixing,'' ``event semantics,'' ``synchronization middleware,'' ``loaders/converters,'' and ``benchmark harnesses,'' which are important in practice. The goal is not to memorize just the names, but to understand ``where reproducibility is most likely to break down.''
 
-## Accuracy Notes
+## 正確さの前提
 What I will explain here is a basic organization of roles. BIDS vessels, HED semantics, and LSL synchronization are complementary, and the final validity of any one is not guaranteed.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Data & Bench](https://mind-upload.com/datasets.html)
 - [Verification base](https://mind-upload.com/verification.html)
 - [Casework](https://mind-upload.com/verification.html#casework)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Return to the larger map of Standards, Bench, Registration, and Audit.
 - [Wiki: Baseline/Pre-registration/Model Card](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - Compensates for differences in operational language beyond Benchmark.
 - [Wiki: Event synchronization and observation log](https://github.com/yasufumi-nakata/mind-upload/wiki/event-sync-and-measurement-logs) - Add specific examples of log information you want to include in the standard.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other auxiliary pages.
 
-## What Is Currently Known
+## いま分かっていること
 - To make research comparable, it is necessary to separate the data format, publication destination, testing methods, and evaluation rules.
 - BIDS and EEG-BIDS are standards for 'how to place' them, not scoring rules themselves.
 - Event semantics like HED have the role of supplementing the meaning of events listed in BIDS in a machine-readable manner.
@@ -31,7 +31,7 @@ What I will explain here is a basic organization of roles. BIDS vessels, HED sem
 - OpenNeuro and PhysioNet are public platforms, but they do not automatically guarantee all input formats and evaluation procedures.
 - Even if the dataset name is the same, it cannot be compared if the snapshot / version and evaluation family are different.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - It is unclear what granularity the final common benchmark for WBE should be.
 - Which validators and audit items will become the final standard will depend on future operational design.
 

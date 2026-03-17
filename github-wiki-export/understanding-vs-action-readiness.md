@@ -2,32 +2,32 @@
 
 > Read the stage of understanding and the stage of action
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-06 / Role: Understanding vs action
+- 更新日: 2026-03-06 / 位置づけ: Understanding vs action
 
-## Role Of This Page
+## このページの役割
 This page is an auxiliary guide that helps you sort out the difference between the state where you feel like you 'understood' after reading the Mind-Upload page, and the state where you can 'actually proceed to the next step.' The level of readiness for action is different if you have just read the summary, read the original text, confirmed the victory conditions and counter-conditions, and isolated the correction positions and external dependencies. We will make the difference visible in stages.
 
-## Accuracy Notes
+## 正確さの前提
 This is a stage of understanding. Be sure to return to the original page and the rationale to check the validity of individual claims and proposed amendments.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [FAQ](https://mind-upload.com/faq.html)
 - [Verification base](https://mind-upload.com/verification.html)
 - [Contribution Guide](https://mind-upload.com/issue.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: How to use summary, original text, and issue history](https://github.com/yasufumi-nakata/mind-upload/wiki/summary-vs-source-reading) - For those who want to see first where to go back to the original source.
 - [Wiki: How to write your first issue](https://github.com/yasufumi-nakata/mind-upload/wiki/issue-writing-basics) - It supplements how to write in action.
 - [Wiki: 3 ways to use this site](https://github.com/yasufumi-nakata/mind-upload/wiki/site-usage-modes) - You can organize which mode you are currently in.
 
-## What Is Currently Known
+## いま分かっていること
 - In many cases, just reading the summary is not enough to make corrections or citations.
 - To proceed to the next step, confirmation of the basis, conditions, or correction position is required.
 - Dividing the stages of understanding allows you to calmly determine where you are stuck.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - Which stage is sufficient to check depends on your purpose.
 - When it comes to external dependence, even if understanding progresses, it may stop depending on the other party's conditions.
 

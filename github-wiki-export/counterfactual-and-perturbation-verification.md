@@ -2,33 +2,33 @@
 
 > High accuracy is one thing, correct response to changing conditions is another.
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Learning guide
+- 更新日: 2026-03-14 / 位置づけ: Learning guide
 
-## Role Of This Page
+## このページの役割
 This page is a wiki that separates the verification of held-out accuracy, online human-in-the-loop, external intervention, and perturbation complexity along the lines of primary literature. In addition to the concept words, list what papers actually change and what they don't show yet.
 
-## Accuracy Notes
+## 正確さの前提
 The primary literature as of March 2026 strongly supports local subsystem and task-specific causal evidence. This does not mean that the counterfactual equivalence of whole-brain WBE has been demonstrated.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Introduction to WBE](https://mind-upload.com/wbe_101.html)
 - [Verification platform](https://mind-upload.com/verification.html)
 - [FAQ](https://mind-upload.com/faq.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Decode and Emulate](https://github.com/yasufumi-nakata/mind-upload/wiki/decode-vs-emulate) - First, it is for those who want to go back to the difference between translation and generation.
 - [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - It compensates for the difference between inferential models and causal models.
 - [Wiki: Closed loop, delay, jitter, safe stop](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - Supplements practical indicators when reading causal verification online.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - It complements the role of Benchmark, Registry, and Model Card.
 
-## What Is Currently Known
+## いま分かっていること
 - High held-out precision alone does not guarantee agreement in causal structure.
 - Bidirectional feedback and state-dependent stimulation strengthen causal evidence, but their scope of application tends to be localized.
 - Logs of latency, recalibration, and abstention are essential in closed-loop systems.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - It is an open question which set of perturbations is sufficient to satisfy the generative equivalence of WBE.
 - The extent to which counterfactual bifurcations can be benchmarked is still under research in terms of both theory and engineering.
 - No public infrastructure exists yet to directly test branch-equivalence on a whole-brain scale.

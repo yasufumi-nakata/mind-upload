@@ -2,32 +2,32 @@
 
 > 'Today's status,' 'relatively stable framework,' and 'operational drift' will be audited separately.
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Technical / natural science only
+- 更新日: 2026-03-14 / 位置づけ: Technical / natural science only
 
-## Role Of This Page
+## このページの役割
 This page is a wiki that organizes state (in-situ state), trait (relatively stable skeleton), and drift (changes that occur over time), which frequently appear in Mind-Upload's longitudinal evaluation, along with EEG, fMRI, chronic recording, and BCI primary literature. Rather than just distinguishing between short-term fluctuations and long-term changes, we aim to fix what time constant, mechanism, and evaluation system they are used for.
 
-## Accuracy Notes
+## 正確さの前提
 We do not deal with philosophy or legal systems here. We treat state / trait / drift as audit items of technology and natural science. We do not call traits 'immutable' and we do not treat any type of drift.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Verification base](https://mind-upload.com/verification.html)
 - [Technology Roadmap](https://mind-upload.com/tech_roadmap.html)
 - [Introduction to EEG](https://mind-upload.com/eeg_101.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Uncertainty, proofreading, abstaining](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention) - How to connect drift with margin of error, calibration, and coverage-risk.
 - [Wiki: Closed loop, delay, jitter, safe stop](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - Corrects how to read drift and recalibration load in online systems.
 - [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - Compensates for the extent to which observed fluctuations can be lifted into latent states and structures.
 
-## What Is Currently Known
+## いま分かっていること
 - Behavioral state, arousal, unintentional movement, and spontaneous behavior greatly influence trial-to-trial neural variance.
 - The population-level structure and latent dynamics may remain more stable even with changes in a single unit or voxel.
 - Long-term stability cannot be assessed without cross-day degradation and recalibration burden of the fixed decoder.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - A site-wide standard for determining which task and which skeleton should be called a trait has not yet been fixed.
 - A standard format for cross-sectionally comparing the accounting of biological drift and interface/decoder drift between EEG and invasive BCI has not yet been established.
 - It is unclear up to which timescale the same trait backbone is considered as a long-term benchmark for WBE.

@@ -2,32 +2,32 @@
 
 > Auxiliary page to accurately read 'What's still missing?'
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-06 / Role: Reading guide
+- 更新日: 2026-03-06 / 位置づけ: Reading guide
 
-## Role Of This Page
+## このページの役割
 This is a supplementary page that organizes words such as 'partial solution', 'exploratory stage', 'unstandardized', 'undeveloped', and 'insufficient' that appear in literature maps, technology roadmaps, verification platforms, and research notes for beginners. The purpose here is not to be optimistic or pessimistic, but to specifically read 'what is still missing'.
 
-## Accuracy Notes
+## 正確さの前提
 Progress labels are not meant to praise or devalue the value of a topic. Read them as management labels that indicate what is in place and what is not yet.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Literature map](https://mind-upload.com/research_harvest_50.html)
 - [Technology Roadmap](https://mind-upload.com/tech_roadmap.html)
 - [Verification base](https://mind-upload.com/verification.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: U number guide](https://github.com/yasufumi-nakata/mind-upload/wiki/u-number-guide) - First, organize the objects that are currently labeled.
 - [Wiki: How to read the roadmap](https://github.com/yasufumi-nakata/mind-upload/wiki/roadmap-reading-guide) - This is a supplementary page to read along with P/M/R/I/V/D dependencies.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - We'll help you understand from the beginning what it takes to make comparable progress.
 
-## What Is Currently Known
+## いま分かっていること
 - Even the same word 'unresolved' has different meanings depending on whether there is no standard, there is weak evidence, or the threshold has not been determined.
 - Partial resolution is not 'all parts were solved', but a state in which at least part of the problem is progressing.
 - The exploratory stage does not mean that the question itself is meaningless; it is a state in which the type of comparison and verification is still weak.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - There is still room for future updates regarding which quantitative standards should be used to unify the boundaries of each label.
 - Even in the same area, the current label may change due to the appearance of new benches or standards.
 

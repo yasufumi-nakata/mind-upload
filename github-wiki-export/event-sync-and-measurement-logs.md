@@ -2,28 +2,28 @@
 
 > Comparisons break down if we don't leave behind the source of the label, not just the signal.
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-15 / Role: Practical guide
+- 更新日: 2026-03-15 / 位置づけ: Practical guide
 
-## Role Of This Page
+## このページの役割
 This page is a wiki that explains why raw EEG waveforms alone are not reproducible in research from the perspectives of event markers, event semantics, time synchronization, manual scoring, and report-derived labels. The purpose is to prevent not only ``waveform files are available but cannot be compared,'' but also ``labels are available but provenance is ambiguous and cannot be compared,'' and ``time is available but clock domain is ambiguous and cannot be compared.''
 
-## Accuracy Notes
+## 正確さの前提
 What we are dealing with here is the minimum observation log and label provenance, but in the 2026-03 update, we also clarify the differences in the roles of BIDS event tables, HED semantics, LSL synchronization, and Motion-BIDS-type metadata. Although each issue requires additional metadata, the principle of keeping events, meanings, and clock systems separate remains the same.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Introduction to EEG](https://mind-upload.com/eeg_101.html)
 - [Data & Bench](https://mind-upload.com/datasets.html)
 - [Hands-on](https://mind-upload.com/datasets.html#l0-practice)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: EEG pretreatment and QC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - Compensate for where the results change after observation.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Learn why logs are a public good.
 - [Wiki: Closed loop, delay, jitter, safe stop](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - Compensates for how to read delay and jitter in L3 closed-loop evaluation.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - Returns to the entire learning page.
 
-## What Is Currently Known
+## いま分かっていること
 - Waveform files alone may not be sufficient to reconstruct task and stimulus responses.
 - If you don't record delays, jitter, and drift, your strengths in temporal resolution will be undermined.
 - BIDS/EEG-BIDS provides a container for events and metadata, but machine-readable semantics like HED are useful for cross-study reuse.
@@ -31,7 +31,7 @@ What we are dealing with here is the minimum observation log and label provenanc
 - If you do not write annotation provenance, you may not be able to reuse the same label name.
 - Recording bad channels/bad segments is directly linked to transparency of exclusions.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - We are still in the process of operational design as to how detailed metadata will be required for all assignments.
 - How to unify the minimum synchronization log in complex multimodal simultaneous measurements is a future issue.
 - We still need to adjust how far event semantics should be made mandatory in HED / ontology / scorer rules.

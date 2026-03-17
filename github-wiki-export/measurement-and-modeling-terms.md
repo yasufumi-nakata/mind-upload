@@ -2,32 +2,32 @@
 
 > Don't memorize words by dots, connect them by flow.
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Learning guide
+- 更新日: 2026-03-14 / 位置づけ: Learning guide
 
-## Role Of This Page
+## このページの役割
 This page is a wiki for understanding measurement terms such as EEG, model terms such as ESI and DCM, and operational terms such as BIDS and QC by connecting them in the flow of ``observation → organization → estimation → verification.'' Rather than memorizing individual words, the aim is to first distinguish which words to use and where to stop making an argument.
 
-## Accuracy Notes
+## 正確さの前提
 The flow shown here is organized for understanding. Although there are back-and-forths and exceptions in actual research, it is important not to confuse observation and estimation, and estimation and verification.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Glossary](https://mind-upload.com/glossary.html)
 - [Introduction to EEG](https://mind-upload.com/eeg_101.html)
 - [Verification platform](https://mind-upload.com/verification.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Basics of EEG](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-basics) - As an entry point to measurements, you can see what EEG measures.
 - [Wiki: EEG pretreatment and QC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - Compensate on what changes the outcome during the organizing stage.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Make up for what to fix in the final validation step.
 
-## What Is Currently Known
+## いま分かっていること
 - Measurement, preprocessing, estimation, and verification have different roles and different words are used for each.
 - The observed signal is not the brain state as it is, and estimation involves uncertainty and candidate model dependence.
 - BIDS and QC are not an added bonus; they are the backbone of comparability.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - The extent to which non-invasive measurements alone can restore sufficient internal state for WBE remains an open question.
 - Which modeling combinations will ultimately be most effective is still being studied.
 - The extent to which causality can be identified using observational data alone varies greatly depending on the intervention design.

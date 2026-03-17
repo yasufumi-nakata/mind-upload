@@ -19,6 +19,7 @@ page_highlights:
   - "For brain-to-text and speech decode, the Neural Contribution Card fixes task constraint, language prior, candidate set, no-brain / no-LM / shuffle baselines, and subject cooperation."
   - "For multimodal or atlas-prior results, the Fusion Card is added on top of the Observability Budget so acquisition relation, synchronization, fusion model, and external validation are fixed explicitly."
   - "At L2 and above, the latent-state error budget is added on top of the Observability Budget so the still-unobserved states that stop the claim are disclosed."
+  - "At L2 and above, delay is treated as timing-state rather than one scalar, so device latency, biological conduction timing, and human macro timing proxies are not collapsed into one number."
   - "At L2 and above for intervention / closed-loop results, the Intervention Card fixes trigger rule, timing audit, control / sham, safe stop, and recalibration burden."
   - "For cross-day or longitudinal claims, the Temporal Validity Card audits fixed decoder interval, state annotation, recalibration burden, and transfer ceiling independently."
   - "For cross-day or remote-memory claims, the maintenance-state error budget reports controller state, sleep history, and support-state proxies separately, so temporal success is not auto-promoted to a maintenance-consistent claim."
@@ -30,6 +31,7 @@ known_points:
   - "Decode and emulate are distinct claims and require different evidence."
   - "The same decoding score is not target-specific evidence if eye movement, EMG, uninstructed movement, auditory feedback, or subject / session fingerprint remains unresolved."
   - "A multimodal result is not one thing; simultaneous acquisition, geometric fusion, invasive calibration, and atlas priors must be audited separately."
+  - "Passing a hardware latency audit is not the same as recovering biological timing-state; claims that depend on phase or synchrony need both sides separated."
   - "In chronic invasive recording, unit-matching uncertainty and tissue response around the implant are separate audit items."
 unknown_points:
   - "There is still no settled answer on which causal-structure approximation would be sufficient for L4 personal identity."
@@ -757,9 +759,9 @@ In our March 2026 primary-literature audit, we reconfirmed that there are at lea
 <td>It is possible to describe static wiring, but it cannot claim L2 intervention prediction or L3 stability control. </td>
 </tr>
 <tr>
-<td><strong>Delay/Myelin</strong></td>
-<td>Even if the graph is the same, if the conduction velocity is different, the synchronization and phase will change. </td>
-<td>Stop claiming closed loops and time consistency and make delay uncertainty explicit. </td>
+<td><strong>Delay / timing-state</strong></td>
+<td>Even with the same graph, different myelin thickness, node/internode geometry, periaxonal structure, or glial control can change conduction speed, synchrony, and phase. </td>
+<td>Stop claiming closed loops, phase consistency, or timing-complete reconstruction, and make timing-state uncertainty explicit. </td>
 </tr>
 <tr>
 <td><strong>Neural modification field</strong></td>
@@ -777,6 +779,12 @@ In our March 2026 primary-literature audit, we reconfirmed that there are at lea
 <strong>Practical rules here</strong>
 <p>
 connectome-complete does not mean<strong>emulation-complete</strong>. Detailed primary literature and the technical basis for which state variables should be included in the minimum submission are summarized in <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams alone are not enough</a>. The newly added issue of <strong>intrinsic excitability/homeostasis/maintenance state</strong> is discussed in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03 Addendum: delay is not one scalar</strong>
+<p>
+Hardware latency audit and biological timing-state audit solve different problems. <a href="https://doi.org/10.1038/ncomms9073" target="_blank">Seidl et al. (2015)</a>, <a href="https://doi.org/10.1073/pnas.1811013115" target="_blank">Dutta et al. (2018)</a>, <a href="https://doi.org/10.1016/j.cell.2019.11.039" target="_blank">Cohen et al. (2020)</a>, <a href="https://doi.org/10.1093/cercor/bhab018" target="_blank">Micheva et al. (2021)</a>, and <a href="https://doi.org/10.7554/eLife.73827" target="_blank">Dubey et al. (2022)</a> show that node/internode geometry, periaxonal coupling, astrocyte control, and PV-axon myelination can all alter spike-arrival timing and synchrony. <a href="https://doi.org/10.1038/s41593-023-01272-0" target="_blank">van Blooijs et al. (2023)</a> pushes human tract-scale transmission-speed measurement forward, but it still remains a macro proxy. Therefore, when a claim depends on phase, synchrony, or closed-loop timing, this site asks authors to disclose whether biological timing-state was measured, externally calibrated, absorbed into a constant, or left latent.
 </p>
 </div>
 <div class="note-box">
@@ -808,6 +816,12 @@ The weakness found in this re-audit was that by simply listing the state variabl
 <td>cell-type is a descriptive tag and does not auto-complete until threshold / gain / set point. </td>
 </tr>
 <tr>
+<td><strong>+ timing-state / conduction audit</strong></td>
+<td>Compare a fixed-delay baseline against a model or analysis that adds measured or externally calibrated timing variables under the same held-out conditions, and disclose phase / synchrony / perturbation gains separately. </td>
+<td>You can state more narrowly how much timing-sensitive prediction improves once biological conduction timing is treated explicitly rather than absorbed into a constant. </td>
+<td>Human myelin maps or tract-speed estimates remain macro timing proxies; without external calibration they do not become per-axon timing ground truth. </td>
+</tr>
+<tr>
 <td><strong>+ neuromodulatory proxy</strong></td>
 <td>Providing predictive gain, proxy specificity, region/transmitter limits, and abstention under cross-state conditions. </td>
 <td>We can write that alertness and transmitter-linked state can be used as limited covariates. </td>
@@ -815,9 +829,9 @@ The weakness found in this re-audit was that by simply listing the state variabl
 </tr>
 <tr>
 <td><strong>+ glial / slow-state</strong></td>
-Show gains in recovery, plasticity, and perturbation aftermath on the order of <td> minutes, and include species differences and cell-type dependence. </td>
+<td>Show gains in recovery, plasticity, and perturbation aftermath on the order of minutes, and include species differences and cell-type dependence. </td>
 <td>Some parts of slow network state and plasticity can be read as conditional models involving glia. </td>
-<td>neuron-only Limits the applicability of the approximation and demotes long-term stability claims. </td>
+<td>Neuron-only approximations keep limited applicability and demote long-term stability claims. </td>
 </tr>
 <tr>
 <td><strong>+ excitability / homeostatic recovery log</strong></td>

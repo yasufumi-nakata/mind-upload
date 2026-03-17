@@ -2,32 +2,32 @@
 
 > See everything from observation, proposal, execution, and isolation of external dependencies in one straight line
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Reading to change workflow
+- 更新日: 2026-03-14 / 位置づけ: Reading to change workflow
 
-## Role Of This Page
+## このページの役割
 This page is a workflow guide for connecting the insights gained from reading Mind-Upload pages to actual changes and organization. When you find a new paper, notice a theoretical weakness, see the shape of a proposal, know a fix that can be fixed right away, or know that an external dependency is required, it will guide you in a straight line to which page to go back to and what to make.
 
-## Accuracy Notes
+## 正確さの前提
 What is shown here is a workflow arrangement. To check the validity of individual proposals and papers, be sure to go back to the original page text and rationale.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Literature map](https://mind-upload.com/research_harvest_50.html)
 - [Technical proposal](https://mind-upload.com/issue.html#proposal-integration)
 - [Contribution Guide](https://mind-upload.com/issue.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Differences between facts, hypotheses, proposals, and execution tasks](https://github.com/yasufumi-nakata/mind-upload/wiki/facts-hypotheses-proposals-and-tasks) - This is for people who want to sort out the differences in roles between pages first.
 - [Wiki: 5 paths to follow after participation/collaboration page](https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes) - This is for people who want to decide on the next page after the participation page.
 - [Wiki: Basics of deciding where to put new information](https://github.com/yasufumi-nakata/mind-upload/wiki/content-placement-basics) - For those who want a more detailed look at where to put it.
 
-## What Is Currently Known
+## いま分かっていること
 - If you decide which artifact to turn what you read into, information will be less scattered.
 - The page to return to is different for literature organization, theory organization, proposal, execution task, and external dependence.
 - Even when it comes to external dependencies, there are quite a few preparations that can be made in-house first.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - Which realization will lead to the greatest results will depend on the unresolved problems and implementation status at the time.
 - The extent to which the discussion of external dependence progresses to concrete cooperation depends on the other party and the conditions.
 

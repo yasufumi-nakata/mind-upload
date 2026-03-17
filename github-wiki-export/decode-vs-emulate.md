@@ -2,30 +2,30 @@
 
 > Output matching is only the entrance; intervention matching and closed-loop stability are another wall.
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-17 / Role: Technical / natural science only
+- 更新日: 2026-03-17 / 位置づけ: Technical / natural science only
 
-## Role Of This Page
+## このページの役割
 This page is an auxiliary guide that organizes the difference between decode and emulate, one of the key distinctions in Mind-Upload, on the basis of primary literature. It separates a high-performance translator from a system that moves internal states by using observation, intervention, and closed-loop evidence.
 
 
-## Accuracy Notes
+## 正確さの前提
 What is presented here are technical boundary conditions. This page does not provide a final agreement on sufficient conditions, nor a sole determination of success, for WBE as a whole.
 
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [WBE 101](https://mind-upload.com/wbe_101.html)
 - [Verification](https://mind-upload.com/verification.html)
 - [Technology Roadmap](https://mind-upload.com/tech_roadmap.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: How to read claims and evidence](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - Return to L0-L5 claim strength and the evidence required for each level.
 - [Wiki: Why wiring diagrams alone are not enough](https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough) - Clarifies what remains missing at the level of state completeness.
 - [Wiki: Closed loop, delay, jitter, safe stop](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - Adds the end-to-end conditions required for L3 claims.
 - [Wiki: state / trait / drift](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - Explains how to read drift and recalibration burden in cross-day and chronic claims.
 
-## What Is Currently Known
+## いま分かっていること
 - Decode is mainly an L1 claim, while local closed-loop performance and intervention responses are closer to L2-L3.
 - Output matching alone does not establish internal causal structure or the sufficiency of state variables.
 - Non-invasive decoding is easy to overestimate unless language priors, candidate sets, and subject cooperation are separated.
@@ -33,7 +33,7 @@ What is presented here are technical boundary conditions. This page does not pro
 - Tail latency, silence/abstention, and recalibration burden are separate axes from offline accuracy and are required logs for closed-loop claims.
 - In microelectrode systems, the same neuron across days is not an observed fact, but an estimate built from motion correction, sorting, and probabilistic matching.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - It is unclear how much intervention matching and state-variable completeness is required to count as sufficiently emulated.
 - There is still no public benchmark for extrapolating from local-circuit successes to whole-brain emulation.
 - It is unclear how much same-brain function and maintenance-state must be added to connectome-constrained models to constrain degeneracy sufficiently.

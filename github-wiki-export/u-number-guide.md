@@ -2,35 +2,35 @@
 
 > U is a name tag for unresolved problems.
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-16 / Role: Reading guide
+- 更新日: 2026-03-16 / 位置づけ: Reading guide
 
-## Role Of This Page
+## このページの役割
 This page helps translate the U numbers that appear in the literature map into everyday language. The goal is not to memorize the numbers, but to make it easier to find which block a reader should start with.
 
 
-## Accuracy Notes
+## 正確さの前提
 The explanations here are entry-point paraphrases. For exact definitions and the latest status, always return to the main literature map.
 
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Literature Map](https://mind-upload.com/research_harvest_50.html)
 - [Technology Roadmap](https://mind-upload.com/tech_roadmap.html)
 - [Verification](https://mind-upload.com/verification.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: How to read the literature and evidence page](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading) - For readers who want to understand the role of the literature map itself first.
 - [Wiki: Basics of WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - For readers who want to see the big picture behind the U numbers first.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - A route back to the other foundational pages.
 
-## What Is Currently Known
+## いま分かっていること
 - U is an internal code used to organize unresolved problems in the literature map.
 - Looking at larger problem groups makes it much easier to see where to start reading.
 - Citation count or the size of the number does not directly express claim strength or importance.
 - For technology and natural-science readers, it is better not to treat U0/U12/U15 as the default entry point.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - The content and boundaries of each U may change as the literature map evolves.
 - It has not yet been fixed which U should receive the greatest concentration of research resources.
 - Whether U11's consciousness-metric comparison returns to the main route may change with future prediction competitions and benchmark development.

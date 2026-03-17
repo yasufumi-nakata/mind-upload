@@ -2,32 +2,32 @@
 
 > Use public portals, learning wikis, and action pages differently depending on your goal
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Site usage modes
+- 更新日: 2026-03-14 / 位置づけ: Site usage modes
 
-## Role Of This Page
+## このページの役割
 This page is a companion guide that explains three ways to use Mind-Upload as a whole: getting the big picture, learning from the basics, and actually fixing or participating. Public pages act as information portals, the wiki acts as a learning foundation, and Issues and Collaborations act as action entry points.
 
-## Accuracy Notes
+## 正確さの前提
 This page is about how to use the site. For any specific claim or technical condition, always return to the relevant page itself.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Start Page](https://mind-upload.com)
 - [Contribution Guide](https://mind-upload.com/issue.html)
 - [Public Content Integration Hub](https://mind-upload.com/content_hub.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Guide to reading public pages](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - For those who want to take a closer look at the differences between public pages used in big picture mode.
 - [Wiki: Learning portal for learning from the basics](https://github.com/yasufumi-nakata/mind-upload/wiki) - Entrance to the entire wiki to return to in learning mode.
 - [Wiki: 5 paths to follow after participation/collaboration page](https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes) - This is for people who want to decide the next page in participation mode.
 
-## What Is Currently Known
+## いま分かっていること
 - Public pages are effective as information portals that allow you to quickly get an overall picture.
 - If you put the explanations for learning from the beginning on a wiki, the entrance page will be easier to read.
 - Corrections and contributions should be posted to action pages such as Issues and Collaborations.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - Which mode is the shortest way to enter depends on the reader's prerequisite knowledge and purpose.
 - Future expansions may add more auxiliary pages for each mode.
 

@@ -2,32 +2,32 @@
 
 > Thinking about 'what to compare, how to fix, and what to keep'
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-15 / Role: Learning guide
+- 更新日: 2026-03-15 / 位置づけ: Learning guide
 
-## Role Of This Page
+## このページの役割
 This page is a wiki that organizes from the beginning the differences in the roles of ``baseline,'' ``benchmark,'' ``pre-registration,'' ``model card,'' and ``failure example,'' which appear repeatedly in Mind-Upload. Use it as a scaffold to understand the difference between getting a high score and making comparable progress.
 
-## Accuracy Notes
+## 正確さの前提
 Here we will explain the differences in operational roles in an easy-to-understand manner. Please check the actual template and specifications on the public page.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Verification base](https://mind-upload.com/verification.html)
 - [Hands-on](https://mind-upload.com/datasets.html#l0-practice)
 - [Casework](https://mind-upload.com/verification.html#casework)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - First, let's go back to the big picture of Verification Commons.
 - [Wiki: Data partitioning and leaks](https://github.com/yasufumi-nakata/mind-upload/wiki/dataset-splits-and-leakage) - Compensate for particularly dangerous leaks in benchmark operations.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other basic pages.
 
-## What Is Currently Known
+## いま分かっていること
 - Comparable progress requires a starting point, scoring criteria, a priori rules, and a record of results.
 - Without a baseline, it's harder to claim improvement.
 - Lack of pre-registration and model cards makes it easier to conveniently interpret later.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - Which templates will be standardized across WBE is still in the operational design stage.
 - The extent to which failure cases and negative results will be required to be disclosed is subject to future development.
 

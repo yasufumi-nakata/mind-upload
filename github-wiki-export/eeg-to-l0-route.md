@@ -2,34 +2,34 @@
 
 > From an introduction to EEG to reproducible analysis, a practical route to avoid getting lost
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Practical route
+- 更新日: 2026-03-14 / 位置づけ: Practical route
 
-## Role Of This Page
+## このページの役割
 This page is a practical guide that, after reading the basics of EEG, organizes in a straight line which public data to start with, what to keep as a set, and where to check the victory conditions. Use it as an auxiliary line to make it easier to go back and forth between EEG 101, Datasets, Hands-on, and Verification.
 
-## Accuracy Notes
+## 正確さの前提
 What we will deal with here is the entrance to reproducible analysis of L0. Arguments after L1 and discussions of identity will not be dealt with only through this route.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Introduction to EEG](https://mind-upload.com/eeg_101.html)
 - [Data & Bench](https://mind-upload.com/datasets.html)
 - [Hands-on](https://mind-upload.com/datasets.html#l0-practice)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Basics of EEG](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-basics) - For those who want to go back to the basics of EEG signals and noise.
 - [Wiki: Guide to reading practical pages](https://github.com/yasufumi-nakata/mind-upload/wiki/practical-pages-reading-guide) - You can first sort out the role differences between Datasets, Hands-on, and Verification.
 - [Wiki: Minimum artifact pack for L0](https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack) - See in one piece what you'll end up with.
 - [Wiki: Data partitioning and data leaks](https://github.com/yasufumi-nakata/mind-upload/wiki/dataset-splits-and-leakage) - It's for people who don't want to redo it in split units or in case of a leak accident.
 - [Wiki: Event synchronization and observation log](https://github.com/yasufumi-nakata/mind-upload/wiki/event-sync-and-measurement-logs) - Complete what's left of raw EEG.
 
-## What Is Currently Known
+## いま分かっていること
 - After understanding the basics of EEG, the flow of creating L0 with public data is relatively clear.
 - In L0, it is more important to have reproducible input, QC, processing, output, and auditing cycles than high accuracy.
 - Datasets, Hands-on, and Verification have different roles even in the same practice.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - We have not yet determined which starter data will most lead to future L2 and L3.
 - After L0, which task is the shortest way to proceed to generation/intervention prediction is task dependent.
 

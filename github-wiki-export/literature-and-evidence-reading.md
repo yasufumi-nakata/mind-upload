@@ -2,33 +2,33 @@
 
 > Don't confuse 'many papers' with 'strong conclusions'
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-15 / Role: Reading guide
+- 更新日: 2026-03-15 / 位置づけ: Reading guide
 
-## Role Of This Page
+## このページの役割
 This page is an auxiliary page that organizes the roles of the literature pages on Mind-Upload. The more papers there are on a page, the more difficult it is to read if the roles are mixed up, so this guide first explains ``what the page does'' and ``to what extent it should not be treated as definitive.''
 
-## Accuracy Notes
+## 正確さの前提
 This page is a reading aid. Please be sure to return to the original page and original paper to check the evaluation of individual papers and individual proposals.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Literature map](https://mind-upload.com/research_harvest_50.html)
 - [Collection of papers](https://mind-upload.com/mind_uploading_papers.html)
 - [Technical proposal](https://mind-upload.com/issue.html#proposal-integration)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Document source type and status label](https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status) - Organize the meaning of Scopus, arXiv, Review, Media, source_logged, etc.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Compensate with assumptions about the strength of evidence and what to look for.
 - [Wiki: Basics of WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - Each paper or proposal corresponds to an overall issue.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other basic pages.
 
-## What Is Currently Known
+## いま分かっていること
 - Separating pages with different roles makes it difficult to confuse volume with strength of conclusion.
 - The purpose of reading the collection of papers, bibliography map, and proposal page is different.
 - Important decisions should be made by going back to the original paper or page, not the summary.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - Which paper will ultimately remain as the central basis may change in the future.
 - States such as source_logged may be updated on subsequent scrutiny.
 

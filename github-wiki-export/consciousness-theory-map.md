@@ -2,33 +2,33 @@
 
 > Before the theory name, separate the prediction family and benchmark layer.
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-15 / Role: Technical / natural science only
+- 更新日: 2026-03-15 / 位置づけ: Technical / natural science only
 
-## Role Of This Page
+## このページの役割
 This page is a supplementary page that organizes the theories of consciousness and consciousness indicators that repeatedly appear in Mind-Upload from the perspective of technology and natural science. Rather than deciding which is true, we first separate what is a prediction family, what is a perturbation benchmark, and what is a spontaneous proxy or auxiliary analysis.
 
-## Accuracy Notes
+## 正確さの前提
 The usage shown here is not the conclusion that each paper declares as is. The primary literature as of 2026-03 supports this relatively strongly, and this site is an operational arrangement based on the remaining unconfirmed parts.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [research notes](https://mind-upload.com/perspective.html)
 - [technology roadmap](https://mind-upload.com/tech_roadmap.html)
 - [Verification platform](https://mind-upload.com/verification.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Counterfactuals/Interventions/Perturbations](https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification) - We will organize the conditions for dropping the theoretical marker into the intervention benchmark.
 - [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - This page is to avoid confusing observational fit and causal identification.
 - [Wiki: How to read the literature and evidence page](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading) - We will clarify the role differences between theoretical papers and primary experimental papers.
 
-## What Is Currently Known
+## いま分かっていること
 - If you mix theory names and measurement indicators, you will not know what is a hypothesis and what is a verification indicator.
 - If we remove the no-report/task-relevance/criterion placement controls, the construct validity of the theoretical markers collapses.
 - Perturbation indicators and spontaneous indicators are often related, but they can be dissociated even within the same cohort, so they cannot be treated as a substitution relationship.
 - Manifold/topology analysis is promising, but is sensitive to sampling and preprocessing and is not a stand-alone pass/fail indicator.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - It is unclear which theory family will ultimately be close to the sufficient condition for WBE.
 - It is also unclear which perturbation benchmark most consistently straddles altered states and disorders of consciousness.
 - It is unresolved under what conditions spontaneous proxy and geometry descriptor can be promoted to major indicators.

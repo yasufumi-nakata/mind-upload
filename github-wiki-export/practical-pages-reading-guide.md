@@ -2,33 +2,33 @@
 
 > Map to avoid mixing victory conditions, entrance data, work procedures, reference examples, and proposal organization
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Reading guide
+- 更新日: 2026-03-14 / 位置づけ: Reading guide
 
-## Role Of This Page
+## このページの役割
 This page is an auxiliary guide to help you distinguish between Mind-Upload's practice-oriented public pages. Verification is a victory condition, Datasets is entry data, L0 practice section in Datasets is a minimum loop procedure, casework section in Verification is a reference example, and proposal integration section in Issue is a proposal organization. Although they may look similar, they have different roles.
 
-## Accuracy Notes
+## 正確さの前提
 What we are dealing with here is the difference in the roles of pages. Please check the details of the actual verification conditions and procedures on each main page.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Verification base](https://mind-upload.com/verification.html)
 - [Data & Bench](https://mind-upload.com/datasets.html)
 - [L0 practice](https://mind-upload.com/datasets.html#l0-practice)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Guide to reading public pages](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - This is for people who want to see the role differences across public pages.
 - [Wiki: Minimum artifact pack for L0](https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack) - This is for people who want to check their L0 practice section submissions in one page.
 - [Wiki: Standards/Location/Validator/Benchmark](https://github.com/yasufumi-nakata/mind-upload/wiki/standards-repositories-validators-and-benchmarks) - Compensates for differences in casework clauses in Verification and operational words that appear in Verification.
 - [Wiki: Baseline/Pre-registration/Model Card](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - Organize what should remain on the practice page by role.
 
-## What Is Currently Known
+## いま分かっていること
 - Verification, Datasets, L0 practice section within Datasets, casework section within Verification, and proposal integration section within Issues are all practical-oriented, but their roles are different.
 - Verification is the definition of progress, Datasets is the entry selection, the L0 practice section in Datasets is the procedure, the casework section in Verification is the design reference, and the proposal integration section in Issue is the proposal organization.
 - If you separate the roles of pages first, it will be difficult to misread the practical guidance.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - We have not yet determined which practical route will be most effective for future L2 and L3.
 - Which practice pages will be expanded independently in the future will change depending on the accumulation of operations.
 

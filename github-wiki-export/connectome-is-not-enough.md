@@ -2,38 +2,39 @@
 
 > connectome-complete is not emulation-complete
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-15 / Role: Technical / natural science only
+- 更新日: 2026-03-18 / 位置づけ: Technical / natural science only
 
-## Role Of This Page
+## このページの役割
 This page is a page to analyze the intuition that ``If we can obtain the connectome, it would be sufficient to reproduce the brain'' based on primary literature. Rather than focusing on philosophy or legal systems, I will focus on what state variables can't be said if they are missing, and what putative barriers remain even in connectome-constrained.
 
-## Accuracy Notes
+## 正確さの前提
 What I'm showing here is an arrangement of ``at least removing this will weaken the argument'' and ``degeneracy that remains even if wiring constraints are included'', and does not mean that the final sufficient condition has been determined.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Introduction to WBE](https://mind-upload.com/wbe_101.html)
 - [Verification platform](https://mind-upload.com/verification.html)
 - [technology roadmap](https://mind-upload.com/tech_roadmap.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Basics of WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - Let's organize the overall picture that forms the premise of this argument from the beginning.
 - [Wiki: Homeostatic plasticity and maintenance state](https://github.com/yasufumi-nakata/mind-upload/wiki/homeostatic-plasticity-and-maintenance-state) - We take a deep dive into why intrinsic excitability, sleep-homeostasis, and myelin/metabolic maintenance are separate variables.
 - [Wiki: Decode and Emulate](https://github.com/yasufumi-nakata/mind-upload/wiki/decode-vs-emulate) - Sort out the differences between output translation and internal generation.
 - [Wiki: How to read claims and evidence](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - You can check how much evidence and how strong a claim is allowed.
 
-## What Is Currently Known
+## いま分かっていること
 - Great progress has been made in creating a whole-brain connectome, but this alone does not mean that dynamic reproduction is complete.
 - Synaptic efficiency, latency, neuromodification, glia, cell type labels, and intrinsic excitability/homeostasis set points are pieces of information that are likely to fall off a static edge list.
 - Confusing coarse physiological proxies with ground truths makes it easy to overstate claims about internal states.
 - Even in a connectome-constrained model, dynamics can degenerate if unmeasured cell/synapse/modification parameters remain.
 - Conditional predictions can be improved by adding same-brain function, transcriptomics, neuromodulatory dynamics, and glial slow state, but the improvement depends on the task, time constant, and external validation conditions.
+- Device latency audit and biological timing-state audit are different requirements; passing one does not automatically pass the other.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - It is unclear which state class and resolution should be taken to approach the sufficient condition for WBE.
 - The extent to which missing state variables can be compensated for by estimation or coarse-graining is an issue for future verification.
-- It is not yet fixed which animal/invasive system should be used to calibrate conditions that cannot be directly obtained in humans.
+- It is not yet fixed which animal/invasive system should be used to calibrate conditions that cannot be directly obtained in humans, including cell-specific timing-state.
 - It has not yet been systematically determined to what extent degeneracy can be resolved when adding same-brain functions.
 - Which order of augmentations most efficiently reduces which error terms still varies from dataset to dataset.
 
@@ -79,10 +80,10 @@ I am not going to deal with philosophy or legal systems here. From only the aspe
 <td>Although it is possible to describe static wiring, it does not claim L2 intervention prediction or L3 closed-loop stability. </td>
 </tr>
 <tr>
-<td><strong>Delay/Myelin</strong></td>
-<td>Even if the graph is the same, if the conduction velocity is different, the timing at which phase, synchronization, and inhibition arrive will change. </td>
-<td>If the graph is the same, the timing is also almost the same. </td>
-<td>Time consistency, phase synchronization, and closed-loop control claims are demoted, leaving behind delay uncertainty. </td>
+<td><strong>Delay / timing-state</strong></td>
+<td>Even with the same graph, differences in myelin thickness, node/internode geometry, or periaxonal structure can change conduction speed and spike-arrival timing. </td>
+<td>If the graph is the same, timing can be absorbed into a single constant. </td>
+<td>Demote phase, synchrony, and closed-loop claims unless timing-state is measured, externally calibrated, or explicitly left latent. </td>
 </tr>
 <tr>
 <td><strong>Neural modification field</strong></td>
@@ -149,7 +150,15 @@ Holler et al. analyzed the ultrastructure and release properties of neocortical 
 
 <h3>4. Delay and myelin are part of timing</h3>
 <p>
-Gibson et al. showed that neural activity promotes oligodendrogenesis and adaptive myelination, and McKenzie et al. reported that active central myelination is required for motor skill learning. Furthermore, Micheva et al. showed that the degree of myelination also correlated with conduction velocity in local axons of the PV interneuron. In other words, <strong>If the timing state is different even with the same wiring, the local suppression circuit and learning dynamics will change</strong>, so it is not possible to push the delay out of the graph.
+<a href="https://doi.org/10.1126/science.1252304" target="_blank">Gibson et al. (2014)</a> showed that neuronal activity promotes oligodendrogenesis and adaptive myelination, and <a href="https://doi.org/10.1126/science.1254960" target="_blank">McKenzie et al. (2014)</a> showed that active central myelination is required for motor-skill learning. But the weakness of the earlier page was that it still allowed the reader to compress this into the slogan "more myelin, faster signal." Primary literature now supports a stronger statement: <a href="https://doi.org/10.1038/ncomms9073" target="_blank">Seidl et al. (2015)</a> showed that node and internode geometry is tuned along auditory axons to adjust action-potential timing, <a href="https://doi.org/10.1073/pnas.1811013115" target="_blank">Dutta et al. (2018)</a> showed that perinodal astrocytes can reversibly alter nodal gap length and myelin structure to change conduction velocity and spike arrival, and <a href="https://doi.org/10.1016/j.cell.2019.11.039" target="_blank">Cohen et al. (2020)</a> showed that saltatory conduction depends on a conductive periaxonal nanocircuit rather than on a single scalar delay term.
+</p>
+<p>
+This matters for WBE because timing-sensitive circuits do not only depend on "who connects to whom," but also on <strong>when inhibition, synchrony, and phase-locked drive arrive</strong>. <a href="https://doi.org/10.1093/cercor/bhab018" target="_blank">Micheva et al. (2021)</a> showed that even locally projecting PV interneurons gain physiologically relevant conduction-speed differences with axonal myelination, and <a href="https://doi.org/10.7554/eLife.73827" target="_blank">Dubey et al. (2022)</a> linked loss of PV-axon myelination to weakened fast inhibition and failure of gamma synchronization. Therefore, if timing matters, the missing variable is better described as <strong>timing-state</strong> rather than simply "delay."
+</p>
+
+<strong>Human observability ceiling for timing-state</strong>
+<p>
+<a href="https://doi.org/10.1038/s41593-023-01272-0" target="_blank">van Blooijs et al. (2023)</a> showed that transmission speed in the human brain follows a developmental trajectory, which is useful evidence that conduction timing is biologically variable at the tract scale. But this is still a macro timing proxy, not a cell-specific readout of node length, periaxonal space, oligodendrocyte state, or local inhibitory arrival time. On this site, human myelin or tract-speed readouts are therefore treated as macro support for timing-state, not as ground truth of per-axon conduction state.
 </p>
 
 <h3>5. Neuromodulation is not “one mood scalar”</h3>
@@ -195,9 +204,15 @@ The weakness of the current site was that even if it was possible to enumerate t
 <td>Within-type heterogeneity and morpho-electric variability remain, so even if you add cell-type label, threshold / gain / set point will still be latent. </td>
 </tr>
 <tr>
+<td><strong>+ timing-state / conduction audit</strong></td>
+<td>Compare a fixed-delay baseline against a model or analysis that adds measured or externally calibrated timing variables under the same held-out conditions. </td>
+<td>Seidl, Dutta, Cohen, Micheva, and Dubey together support that timing-sensitive prediction can improve when node/internode structure, periaxonal coupling, or myelination-linked local speed are treated explicitly. </td>
+<td>Human myelin maps or tract-scale transmission-speed estimates remain macro proxies; without external calibration they do not become per-axon timing ground truth. </td>
+</tr>
+<tr>
 <td><strong>+ local transmitter dynamics</strong></td>
 <td>Local cholinergic axon activity or behavior-linked transmitter proxy. </td>
-Neyhart et al. showed that while cortical ACh dynamics can be fairly predicted from cholinergic axon activity and behavioral state, locality changes with distance from neighboring axons and clearance kinetics. </td>
+<td>Neyhart et al. showed that while cortical ACh dynamics can be fairly predicted from cholinergic axon activity and behavioral state, locality changes with distance from neighboring axons and clearance kinetics. </td>
 <td>pupil / behavior / global arousal is still a coarse proxy and cannot be automatically promoted to transmitter-specific or region-specific ground truth. </td>
 </tr>
 <tr>
@@ -217,7 +232,7 @@ Neyhart et al. showed that while cortical ACh dynamics can be fairly predicted f
 
 <strong>Conditions for passing on this site</strong>
 <p>
-An added state variable can be described as ``effective'' if it shows a predictive gain in any of the cross-state / cross-day / perturbation / recovery conditions when comparing <strong>(a) connectome-only baseline</strong> and <strong>(b) model with additional variables under <strong>same split / same held-out conditions</strong>, and at the same time shows <strong>proxy specificity</strong>, <strong>family / Only when uncertainty</strong>and<strong>abstention</strong> are made public. If it does not go that far, this site treats it as an annotation, stratification covariate, or post hoc explanation.
+An added state variable can be described as ``effective'' if it shows a predictive gain in any of the cross-state / cross-day / perturbation / recovery conditions when comparing <strong>(a) connectome-only baseline</strong> and <strong>(b) model with additional variables under the same split / same held-out conditions</strong>, and at the same time shows <strong>proxy specificity</strong>, <strong>family / uncertainty</strong>, <strong>abstention</strong>, and the <strong>time scale at which the added variable was observed or calibrated</strong>. If it does not go that far, this site treats it as an annotation, stratification covariate, or post hoc explanation.
 </p>
 
 <h2>Reading rules and minimum submissions adopted on this site</h2>
@@ -225,12 +240,13 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <h4>Rule</h4>
 <ul>
 <li><strong>connectome-complete:</strong> Treat as a structural atlas, candidate scaffold, and starting point for compaction. It is not written as achieving L2/L3 emulation. </li>
-<li><strong>connectome-constrained model:</strong>First of all, it is treated as a hypothesis engine / conditional model. It is not written as the unique solution of the internal state. </li>
+<li><strong>connectome-constrained model:</strong> First of all, it is treated as a hypothesis engine / conditional model. It is not written as the unique solution of the internal state. </li>
 <li><strong>augmentation / ablation:</strong>You can't write that "the added state variable worked" without putting a connectome-only baseline. </li>
 <li><strong>intrinsic excitability / homeostatic set point:</strong>Do not automatically infer from cell-type label or short-term activity matching. If not measured, write latent state. </li>
-<li><strong>pupil / HRV: A useful state covariate for human data, but not a transmitter-specific ground truth. </li>
+<li><strong>Delay is not one scalar:</strong>If timing matters, separate device latency, biological timing-state, and phase error; if the biological side is not measured, write timing-state as latent. </li>
+<li><strong>pupil / HRV:</strong> A useful state covariate for human data, but not a transmitter-specific ground truth. </li>
 <li><strong>When state variable is missing:</strong>If estimated, specify the error and abstention condition; if not, specify absent. </li>
-<li>When there are no weights / delays: phase, timing, intervention response, and closed-loop stability claims are demoted. </li>
+<li>When there are no weights / timing-state: phase, timing, intervention response, and closed-loop stability claims are demoted. </li>
 <li><strong>When dropping glia / neuromodulation:</strong>Write in the text what behavior was discarded in the approximation as the scope of application. </li>
 <li>When multiple <strong>families remain:</strong>Rather than just confidence, expose family comparison, uncertainty, and abstention. </li>
 </ul>
@@ -257,7 +273,7 @@ An added state variable can be described as ``effective'' if it shows a predicti
 </tr>
 <tr>
 <td><strong>Intervention/Closed Loop claim</strong></td>
-<td>In addition to the above, we will also publish calibration routes for weights / delays / neuromodulation / excitability-homeostasis, external validation, and abstention / stop conditions. </td>
+<td>In addition to the above, we will also publish calibration routes for weights / timing-state / neuromodulation / excitability-homeostasis, external validation, and abstention / stop conditions. </td>
 </tr>
 </tbody>
 </table>
@@ -274,7 +290,12 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li>Vardalaki, D., Chung, K., &amp; Harnett, M. T. (2022). Filopodia are a structural substrate for silent synapses in adult neocortex. <em>Nature</em>, 612, 323–327. <a href="https://doi.org/10.1038/s41586-022-05483-6" target="_blank">doi:10.1038/s41586-022-05483-6</a></li>
 <li>Gibson, E. M., et al. (2014). Neuronal activity promotes oligodendrogenesis and adaptive myelination in the mammalian brain. <em>Science</em>, 344(6183), 1252304. <a href="https://doi.org/10.1126/science.1252304" target="_blank">doi:10.1126/science.1252304</a></li>
 <li>McKenzie, I. A., et al. (2014). Motor skill learning requires active central myelination. <em>Science</em>, 346(6207), 318–322. <a href="https://doi.org/10.1126/science.1254960" target="_blank">doi:10.1126/science.1254960</a></li>
+<li>Seidl, A. H., Rubel, E. W., &amp; Barría, A. (2015). Tuning of Ranvier node and internode properties in myelinated axons to adjust action potential timing. <em>Nature Communications</em>, 6, 8073. <a href="https://doi.org/10.1038/ncomms9073" target="_blank">doi:10.1038/ncomms9073</a></li>
+<li>Dutta, D. J., Woo, D. H., Lee, P. R., et al. (2018). Regulation of myelin structure and conduction velocity by perinodal astrocytes. <em>Proceedings of the National Academy of Sciences USA</em>, 115(46), 11832–11837. <a href="https://doi.org/10.1073/pnas.1811013115" target="_blank">doi:10.1073/pnas.1811013115</a></li>
+<li>Cohen, C. C. H., Popovic, M. A., Klooster, J., et al. (2020). Saltatory conduction along myelinated axons involves a periaxonal nanocircuit. <em>Cell</em>, 180(2), 311–322.e15. <a href="https://doi.org/10.1016/j.cell.2019.11.039" target="_blank">doi:10.1016/j.cell.2019.11.039</a></li>
 <li>Micheva, K. D., Kiraly, M., Perez, M. M., & Madison, D. V. (2021). Conduction Velocity Along the Local Axons of Parvalbumin Interneurons Correlates With the Degree of Axonal Myelination. <em>Cerebral Cortex</em>, 31(7), 3374–3392. <a href="https://doi.org/10.1093/cercor/bhab018" target="_blank">doi:10.1093/cercor/bhab018</a></li>
+<li>Dubey, S., Kuschmitz, S., Mezey, S. E., et al. (2022). Myelination synchronizes cortical oscillations by consolidating parvalbumin-mediated phasic inhibition. <em>eLife</em>, 11, e73827. <a href="https://doi.org/10.7554/eLife.73827" target="_blank">doi:10.7554/eLife.73827</a></li>
+<li>van Blooijs, D., de Haan, A. M., Renaud, S., et al. (2023). Developmental trajectory of transmission speed in the human brain. <em>Nature Neuroscience</em>, 26, 828–838. <a href="https://doi.org/10.1038/s41593-023-01272-0" target="_blank">doi:10.1038/s41593-023-01272-0</a></li>
 <li>Reimer, J., et al. (2016). Pupil fluctuations track rapid changes in adrenergic and cholinergic activity in cortex. <em>Nature Communications</em>, 7, 13289. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">doi:10.1038/ncomms13289</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <em>Cell Reports</em>, 43(10), 114808. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
 <li>Adamsky, A., et al. (2018). Astrocytic activation generates de novo neuronal potentiation and memory enhancement. <em>Nature Neuroscience</em>, 21, 1725–1733. <a href="https://doi.org/10.1038/s41593-018-0253-6" target="_blank">doi:10.1038/s41593-018-0253-6</a></li>

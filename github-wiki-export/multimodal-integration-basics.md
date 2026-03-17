@@ -2,33 +2,33 @@
 
 > Rather than adding everything, it is designed to increase synchronization, geometry, and external validation.
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Technical / natural science only
+- 更新日: 2026-03-14 / 位置づけ: Technical / natural science only
 
-## Role Of This Page
+## このページの役割
 This page is a wiki that organizes what really improves when combining EEG, MEG, fMRI, invasive recording, and MRI based on primary literature. Rather than focusing on philosophy or legal systems, we focus only on synchronization, coordinate alignment, forward models, external validation, and state coverage.
 
-## Accuracy Notes
+## 正確さの前提
 What I'm trying to show here is not that ``if you integrate everything, you can figure it out.'' It's about sorting out what can be said a little more strongly when certain conditions are met, and what can't be said yet.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Introduction to EEG](https://mind-upload.com/eeg_101.html)
 - [Verification base](https://mind-upload.com/verification.html)
 - [Technology Roadmap](https://mind-upload.com/tech_roadmap.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Basics of EEG](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-basics) - Click here if you want to return to the limits of EEG alone.
 - [Wiki: Event synchronization and observation log](https://github.com/yasufumi-nakata/mind-upload/wiki/event-sync-and-measurement-logs) - Introduces the basics of shared clocks, delays, jitter, and drift.
 - [Wiki: Uncertainty, proofreading, abstaining](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention) - Compensates for why uncertainty persists with integration.
 - [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - An entry point to avoid confusing observed values and estimated values.
 
-## What Is Currently Known
+## いま分かっていること
 - By combining multiple modalities, some aspects of time, space, and locality can be complemented.
 - However, the amount of improvement is highly dependent on the shared clock, individual anatomy, electrode/sensor location, conductivity assumptions, and the presence or absence of an external reference.
 - Invasive recording is a strong calibration route, but suffers from coverage bias and patient bias.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - It is not yet certain which integration set is most effective for which stage of WBE.
 - Even with the integration of multiple modalities, the sufficiency of cells, synapses, neuromodifications, and glial states remain unresolved.
 - How to propagate and report post-integration uncertainties remains a research topic.

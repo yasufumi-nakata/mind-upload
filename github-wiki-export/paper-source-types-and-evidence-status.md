@@ -2,32 +2,32 @@
 
 > Auxiliary page to avoid confusing Badge, publication source, and status
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Reading guide
+- 更新日: 2026-03-14 / 位置づけ: Reading guide
 
-## Role Of This Page
+## このページの役割
 This page is an auxiliary page that organizes labels such as ``Scopus,'' ``arXiv,'' ``Review,'' ``Media,'' ``source_logged,'' and ``curated'' that appear in collections and bibliographic maps for beginners. The important thing here is to read the labels separately and understand what information they represent.
 
-## Accuracy Notes
+## 正確さの前提
 Labels are a reading aid and do not automatically guarantee the correctness of the article content. When using them as evidence, always refer back to the DOI, main text, and primary research.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Collection of papers](https://mind-upload.com/mind_uploading_papers.html)
 - [Literature map](https://mind-upload.com/research_harvest_50.html)
 - [Casework](https://mind-upload.com/verification.html#casework)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: How to read the literature and evidence page](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading) - First, we will clarify the differences in the roles of collections of papers, bibliographic maps, and proposal pages.
 - [Wiki: How to read claims and evidence](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - It helps you understand how to read the 'strength of claim' on the label.
 - [Wiki: U number guide](https://github.com/yasufumi-nakata/mind-upload/wiki/u-number-guide) - This is an auxiliary page to see which open questions are related to the bibliographic map.
 
-## What Is Currently Known
+## いま分かっていること
 - Even if the document is the same, the publication source, document type, and site status must be viewed separately.
 - Scopus is an index, arXiv is a preprint storage, and Review is a document type, and they do not have the same meaning.
 - source_logged and curated are labels that indicate how organized this site is.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - The extent to which individual papers ultimately remain central evidence will depend on subsequent scrutiny.
 - Top stories traced from reviews and news may weaken when returned to primary research.
 

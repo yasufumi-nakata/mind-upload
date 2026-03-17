@@ -2,32 +2,32 @@
 
 > A guide to help you decide the next page without hesitation after viewing the participation path
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Participation route
+- 更新日: 2026-03-14 / 位置づけ: Participation route
 
-## Role Of This Page
+## このページの役割
 This page is an auxiliary guide that helps you organize which public page or wiki to open next after reading the contribution guide and collaboration candidates. The next page will change depending on whether you want to make small corrections, fill in passing and disproving conditions, turn the literature into work that can be done now, break down external dependencies into preparations, or go down to L0 artifacts.
 
-## Accuracy Notes
+## 正確さの前提
 This is the entry point after reading the participation page. Be sure to check the original page for the conditions for individual issues and external collaboration.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Contribution Guide](https://mind-upload.com/issue.html)
 - [Collaboration candidate](https://mind-upload.com/issue.html#external-collaboration)
 - [Public Content Integration Hub](https://mind-upload.com/content_hub.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: What to do first in-house and external dependencies](https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies) - This is for people who are externally dependent but want to check what they can prepare now.
 - [Wiki: Straight path back from literature to implementation and participation](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-to-action-route) - For people who want to see the route back to participating work after reading the literature.
 - [Wiki: Minimum artifact pack for L0](https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack) - You can see what you leave behind as a set when you go down to the implementation side.
 
-## What Is Currently Known
+## いま分かっていること
 - If you narrow down your routes to one after reading the participation-related pages, your work will become much more concrete.
 - The page to return to is different for small modifications, conditional design, and decomposition of external dependencies.
 - Even when it comes to external dependencies, there are quite a few preparations that can be made in-house first.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - Which route will lead to the greatest results depends on the unresolved issues and implementation status at the time.
 - The extent to which external cooperation and system development will progress depends on the partner and external conditions.
 

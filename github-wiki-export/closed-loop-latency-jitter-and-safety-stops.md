@@ -2,34 +2,34 @@
 
 > Closed-loop time requirements are not a single number; they vary by loop type
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-15 / Role: Learning guide / evidence refresh
+- 更新日: 2026-03-15 / 位置づけ: Learning guide / evidence refresh
 
-## Role Of This Page
+## このページの役割
 This page is a wiki that organizes the differences between delay, jitter, drift, and safety stop, which are important in Mind-Upload's L3 'closed loop', according to primary literature. The purpose is to clarify that even in models with high offline accuracy, the required timing budget will change depending on the loop band and type of actuator.
 
-## Accuracy Notes
+## 正確さの前提
 Here, we do not set a ``fixed threshold common to all loops.'' We write on the premise that judgments are made based on actually measured end-to-end indicators according to the issue, target frequency, output mechanism, and safety requirements.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Verification base](https://mind-upload.com/verification.html)
 - [Introduction to EEG](https://mind-upload.com/eeg_101.html)
 - [Technology Roadmap](https://mind-upload.com/tech_roadmap.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Event synchronization and observation log](https://github.com/yasufumi-nakata/mind-upload/wiki/event-sync-and-measurement-logs) - Compensates for delay, jitter, and drift.
 - [Wiki: Uncertainty, proofreading, abstaining](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention) - Complements the design concept of 'not releasing' when reliability is low.
 - [Wiki: Update/branch/stop rules](https://github.com/yasufumi-nakata/mind-upload/wiki/update-branching-and-stop-rules) - Complements how to separate freeze and stop rules as operations.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other auxiliary pages.
 
-## What Is Currently Known
+## いま分かっていること
 - Offline accuracy and closed-loop stability are separate claims and cannot be audited with the same score.
 - Latency and jitter tolerances vary for state feedback, ERP/command BCI, streaming communication, phase-locked stimulation, and burst-driven neuromodulation.
 - Unless you actually measure input, processing, output, and return end-to-end, you won't know the timing of actual operation.
 - Speed-up within-session alone is not enough; it also leaves recalibration burden, clinic/home transition, and programming burden.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - It is unclear how far the closed-loop bandwidth required for WBE spans which loop types.
 - It is not yet possible to generalize the precision required for phase-specific control to all tasks in non-invasive human experiments.
 - What is considered 'unstable' or 'impractical' in terms of drift, recalibration frequency, and programming burden during long-term operation depends on the task.

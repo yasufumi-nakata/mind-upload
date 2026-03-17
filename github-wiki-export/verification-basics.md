@@ -2,33 +2,33 @@
 
 > Before making flashy claims, create a yardstick and a place for records.
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Beginner guide
+- 更新日: 2026-03-14 / 位置づけ: Beginner guide
 
-## Role Of This Page
+## このページの役割
 This page is a wiki that explains from the beginning why Mind-Upload focuses on "standards, benches, registration, and audits." The purpose is to learn not only the technical content but also the operational side to make comparable progress.
 
-## Accuracy Notes
+## 正確さの前提
 The analogy used here is to aid understanding. Don't think you understand it by analogy; please go back to the specifications on the public page and check the actual design.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Verification platform](https://mind-upload.com/verification.html)
 - [case work](https://mind-upload.com/verification.html#casework)
 - [Data & Bench](https://mind-upload.com/datasets.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: How to read claims and evidence](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - I will explain why this foundation is necessary to distinguish between claims.
 - [Wiki: Basics of WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - This is for people who want to go back and read the big picture.
 - [Wiki: Baseline/Pre-registration/Model card](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - We will organize the differences in the roles of operational words from the beginning.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other basic pages.
 
-## What Is Currently Known
+## いま分かっていること
 - Comparable progress requires four things: input, evaluation, rules, and records.
 - Without pre-registration and auditing, success conditions can be changed at a later date.
 - Progress has been accelerated in the development of public goods in other areas, such as PDB and BIDS.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - A final benchmark dedicated to WBE does not yet exist in complete form.
 - Which additional requirements are sufficient for L4 or L5 is still a matter of research and societal debate.
 

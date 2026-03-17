@@ -15,12 +15,14 @@ page_highlights:
   - "The index allows readers to jump directly to a specific question family."
   - "Stronger claims are deliberately placed later so earlier levels are not skipped."
   - "R3 / R5 separate latent-state and maintenance-state questions by evidence tier and timescale, so same-day fit and multiday maintenance do not collapse into one success."
+  - "M2 separates hardware latency from biological timing-state, so a fast device loop is not confused with timing-complete reconstruction."
   - "R6 treats personalization not as a pure performance trick, but as a verification problem that must separate target signal from subject fingerprint."
 known_points:
   - "Splitting the problem into P/M/R/I/V/D makes it easier to see which questions are foundational and which sit higher up."
   - "The dependency structure that prevents strong claims from skipping earlier layers is fairly clear."
   - "This page should be read as a dependency map, not as a checklist of solved items."
   - "Even if connectome or local-activity evidence improves, latent-state and maintenance-state audits are still separate requirements."
+  - "Closed-loop device timing and biological conduction timing are different audits; passing one does not auto-pass the other."
   - "The fact that personalization helps performance is not the same as showing a population-level neural signal; subject-fingerprint audit is still required."
 unknown_points:
   - "It is still unsettled which measurement granularity will ultimately be sufficient for WBE."
@@ -554,8 +556,12 @@ Mikulan et al. (2020), Seeber et al. (2019), Unnwongse et al. (2023), and Hao et
 <p>
 In the re-audit in March 2026, we decided that closed-loop timing requirements should be handled separately for each <strong>loop class</strong>. Slow neurofeedback, ERP/command BCI, phase-locked stimulation, and adaptive DBS have different dominant time scales. Wilson et al. (2010) showed that it is necessary to actually measure the latency/jitter of the entire system using hardware, and Belinskaia et al. (2020) reported that an additional 250 / 500 ms delay in alpha neurofeedback worsens learning. On the other hand, in the phase-targeting systems of Mansouri et al. (2018) and Zrenner et al. (2018), the delay should be evaluated as the <strong>phase error with respect to the target frequency</strong>, rather than the ms value itself.
 </p>
+<p>
+However, the deeper point is that <strong>biological timing is a separate audit from device latency</strong>. <a href="https://doi.org/10.1038/ncomms9073" target="_blank">Seidl et al. (2015)</a> showed that node and internode geometry can be tuned to adjust action-potential timing, <a href="https://doi.org/10.1073/pnas.1811013115" target="_blank">Dutta et al. (2018)</a> showed that perinodal astrocytes can reversibly alter conduction velocity, <a href="https://doi.org/10.1016/j.cell.2019.11.039" target="_blank">Cohen et al. (2020)</a> showed that saltatory conduction depends on a periaxonal nanocircuit, and <a href="https://doi.org/10.7554/eLife.73827" target="_blank">Dubey et al. (2022)</a> showed that myelination loss in PV axons disrupts fast inhibition and gamma rhythms. A loop can therefore be hardware-fast while still leaving a timing-state latent on the tissue side.
+</p>
 <ul>
 <li><strong>Do not fix the common gate to 1 ms:</strong>Measure the end-to-end median, P95/P99, and worst-case for each loop type. </li>
+<li><strong>Audit device and tissue separately:</strong>Hardware latency/jitter does not prove that biological timing-state has been recovered. </li>
 <li><strong>The phase system is read by the phase error:</strong>Evaluate the target frequency and the reliability of the estimated phase. </li>
 <li><strong>Separate the synchronization system by path:</strong> Separately record where LSL/TTL/photodiode/loopback was measured. </li>
 </ul>
@@ -579,7 +585,7 @@ Therefore, in this roadmap, we first fix ``which loop class is handled and which
 <ul>
 <li><strong>Upper limit of non-invasive human measurement: </strong>Tracking of region-to-network level state transitions, relatively global timing constraints, and condition differences. </li>
 <li><strong>Upper bound on the connectomics front:</strong>This is an audit of structural scaffolds, local functional twins, and cell-type dependent connections, not a complete observation of current synaptic efficiency and neuromodulation fields. </li>
-<li><strong>Remaining latent states:</strong>Synaptic weight, receptor state, intrinsic excitability / homeostatic set point, neuromodulatory field, glial / metabolic state, and plastic history remain as separate variables. </li>
+<li><strong>Remaining latent states:</strong>Synaptic weight, receptor state, delay / timing-state, intrinsic excitability / homeostatic set point, neuromodulatory field, glial / metabolic state, and plastic history remain as separate variables. </li>
 </ul>
 <p><strong>Temporary decision rule:</strong>If the observation path stays in the macro proxy, this roadmap first keeps the assertion between <strong>L1 and weak L2</strong>. In order to raise the claim to local circuits and synaptic granularity, we additionally require either structure/function correspondence in the same brain, external ground truth, or intervention response. </p>
 <p><strong>Next, we need:</strong>For each assumption (A), (B), and (C), evaluate observability (M1), identifiability (R7), and computability (I3) in bundles, and disclose what to abstain at which granularity. For background, see <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams are not enough</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>. </p>

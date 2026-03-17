@@ -2,33 +2,33 @@
 
 > Basic knowledge to prevent EEG from becoming a magical mind-reading technique
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Beginner guide
+- 更新日: 2026-03-14 / 位置づけ: Beginner guide
 
-## Role Of This Page
+## このページの役割
 This page is a wiki that explains from the basics what EEG measures. Beyond complicated formulas, the goal is to understand ``what kind of signals are mixed together and where'' and ``why preprocessing and QC are important.''
 
-## Accuracy Notes
+## 正確さの前提
 We highlight the limitations of EEG so as not to overestimate it, but that doesn't mean it's useless.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Introduction to EEG](https://mind-upload.com/eeg_101.html)
 - [Data & Bench](https://mind-upload.com/datasets.html)
 - [Hands-on](https://mind-upload.com/datasets.html#l0-practice)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Basics of WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - If you want to see first where EEG fits into the overall WBE, click here.
 - [Wiki: EEG pretreatment and QC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - We will organize preprocessing and logging methods in a practical manner.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Understand why EEG also requires standards and QC.
 
-## What Is Currently Known
+## いま分かっていること
 - EEG is good at looking at time changes in milliseconds.
 - The observed signal is the result of a mixture of many activities, and interpretation requires assumptions.
 - Including individualized MRI and external references improves source imaging, but uncertainty remains for deep and weak sources.
 - Public data provides plenty of practice with preprocessing and baseline comparisons.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - It remains unresolved whether non-invasive EEG alone is sufficient to reconstruct detailed causal structures within the brain.
 - The choice of preprocessing does not uniformly change the conclusion for each task.
 - It is not yet fixed which external benchmark will be the standard validation set for source imaging.

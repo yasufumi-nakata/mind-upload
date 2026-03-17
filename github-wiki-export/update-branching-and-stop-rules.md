@@ -2,34 +2,34 @@
 
 > Basics for auditing changing systems as they change
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Learning guide
+- 更新日: 2026-03-14 / 位置づけ: Learning guide
 
-## Role Of This Page
+## このページの役割
 This page is a wiki that breaks down the ``updates,'' ``versions,'' ``branches,'' ``stopping rules,'' and ``kill switches'' that frequently appear in Mind-Upload from the beginning. Don't just assume that just because your score has increased, it's a natural progression of the same system; use it as a basis for auditing changes with a history.
 
-## Accuracy Notes
+## 正確さの前提
 What is shown here is a basic arrangement for operation and verification. The final criteria for how much change should be maintained and which stopping rule is sufficient are still undetermined depending on issues and theories.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Technology Roadmap](https://mind-upload.com/tech_roadmap.html)
 - [Verification base](https://mind-upload.com/verification.html)
 - [Hands-on](https://mind-upload.com/datasets.html#l0-practice)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Identity assessment and continuity test](https://github.com/yasufumi-nakata/mind-upload/wiki/identity-and-continuity-tests) - Takes you back to the full L4 continuity test.
 - [Wiki: state/trait/drift](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - Complete how to distinguish between updates and long-term changes.
 - [Wiki: Baseline/Pre-registration/Model Card](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - Compensates for the role difference between pre-registration and result recording.
 - [Wiki: Closed loop, delay, jitter, safe stop](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - Complements how to think about safe stops in real time.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other auxiliary pages.
 
-## What Is Currently Known
+## いま分かっていること
 - If learning and model updates are allowed, history management and differential recording are necessary.
 - When bifurcation occurs, it becomes difficult to treat it as a single 'same individual.'
 - Stopping rules are stronger if you fix them in advance rather than after you see the results.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - It is undetermined how much drift or divergence is considered to be within the range of identity.
 - The handling of responsibilities and rights after the L4/L5 bifurcation is unresolved, including the institutional aspects.
 

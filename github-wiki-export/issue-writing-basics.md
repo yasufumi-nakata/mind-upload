@@ -2,32 +2,32 @@
 
 > The basics of turning a stagnant place into valuable work
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Issue writing basics
+- 更新日: 2026-03-14 / 位置づけ: Issue writing basics
 
-## Role Of This Page
+## このページの役割
 This page is a supplementary material for those who are writing an issue for the first time on Mind-Upload. Even if you don't have a complete solution, if you can write about where you stopped, what is missing, and what can be added to move forward, it will be a valuable issue.
 
-## Accuracy Notes
+## 正確さの前提
 What we introduce here is the minimum required to turn an issue into a workable change. Please be sure to return to the original page and check the individual technical claims and external collaboration conditions.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Contribution Guide](https://mind-upload.com/issue.html)
 - [Verification base](https://mind-upload.com/verification.html)
 - [Public Content Integration Hub](https://mind-upload.com/content_hub.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: 5 paths to follow after participation/collaboration page](https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes) - This is for people who want to see which page they go to after an issue.
 - [Wiki: What to do first in-house and external dependencies](https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies) - Compensates for separation when external dependencies are mixed in an issue.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Explains why advance conditions and disconfirmation conditions are placed first.
 
-## What Is Currently Known
+## いま分かっていること
 - Even if you don't have a perfect solution, if you know where it stopped and what kind of deficiency it is, it will be a worthwhile issue.
 - Advancing and disproving conditions make it clear how the issue ends.
 - You need to separate external dependencies from changes you want to make now.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - Which issues will ultimately lead to great results depends on the research situation at the time.
 - This wiki alone does not determine when externally dependent tasks are established.
 

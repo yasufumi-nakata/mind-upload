@@ -2,32 +2,32 @@
 
 > Read the blueprint by reducing it to one small example
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Worked example
+- 更新日: 2026-03-14 / 位置づけ: Worked example
 
-## Role Of This Page
+## このページの役割
 This page is a wiki where you can read the Verification Commons blueprint in order by converting it into a "small example of state classification using EEG". Rather than increasing the number of abstract words, visualize how input, procedure, evaluation, and falsification are connected.
 
-## Accuracy Notes
+## 正確さの前提
 This is a minimal example for understanding. This alone does not support WBE's strong claims; it is a supplementary course that embodies the entrance to L0-L2.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Verification platform](https://mind-upload.com/verification.html)
 - [hands-on](https://mind-upload.com/datasets.html#l0-practice)
 - [Data & Bench](https://mind-upload.com/datasets.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - This is for people who want to get an overview of the role first.
 - [Wiki: Data partitioning and leaks](https://github.com/yasufumi-nakata/mind-upload/wiki/dataset-splits-and-leakage) - This complements the train/test bounds assumed in this example.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other auxiliary pages.
 
-## What Is Currently Known
+## いま分かっていること
 - You can also practice creating a minimal form of Verification Commons with public EEG data.
 - Simply keeping inputs, procedures, evaluations, and counterevidence separate greatly increases comparability.
 - Even in small cases, leak prevention and failure recording are essential.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - Small examples like this alone do not allow us to proceed to the examination of identity or phenomenal consciousness.
 - Which tasks have the strongest connections to future L3 and beyond is still being explored.
 

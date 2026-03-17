@@ -2,32 +2,32 @@
 
 > A guide to deciding which public page to go to depending on the strength of your argument
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Reading guide
+- 更新日: 2026-03-14 / 位置づけ: Reading guide
 
-## Role Of This Page
+## このページの役割
 This page is an auxiliary page that organizes Mind-Upload's complaint ladder L0 to L5, not just by definition, but by ``which page should I go to when I want to follow the level of the story?'' As the strength of the claim increases, the pages and evidence required will change as well.
 
-## Accuracy Notes
+## 正確さの前提
 This page is a reading order aid. Please be sure to check the actual conditions for each level in the main text of the original page.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Introduction to WBE](https://mind-upload.com/wbe_101.html)
 - [Verification platform](https://mind-upload.com/verification.html)
 - [technology roadmap](https://mind-upload.com/tech_roadmap.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: How to read claims and evidence](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - You can check the meaning of L0-L5 in everyday language.
 - [Wiki: Guide to reading public pages](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - We will organize the differences in roles between public pages.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other auxiliary pages.
 
-## What Is Currently Known
+## いま分かっていること
 - L0 to L2 are relatively easy to advance in terms of engineering, and after L3, additional conditions suddenly increase.
 - L4 and L5 go beyond output matching and accuracy alone.
 - There are different pages to look at depending on the level of assertion.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - It is still undetermined which conditions must be met for L4 and L5 to finally hold.
 - The reading order may change slightly due to future data, benches, and system development.
 

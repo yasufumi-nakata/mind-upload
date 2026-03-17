@@ -2,35 +2,35 @@
 
 > Even with a wiring diagram and cell type labels, long-term dynamics are still not determined.
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-17 / Role: Technical / natural science only
+- 更新日: 2026-03-17 / 位置づけ: Technical / natural science only
 
-## Role Of This Page
+## このページの役割
 This page responds to the intuition that if we know the wiring diagram and cell type, most of the rest will fall into place. Against that intuition, it organizes the maintenance mechanisms that remain separate variables in primary literature: intrinsic excitability, AIS and ion-channel landscapes, firing-rate set points, sleep-dependent renormalization, myelin / oligodendrocyte coupling, local ATP supply and mitochondrial arrangement, synaptic-density proxies including human SV2A PET, glial metabolism, clearance / immune support, and molecular turnover. It focuses only on technology and natural science, not philosophy or legal systems.
 
 
-## Accuracy Notes
+## 正確さの前提
 What is shown here is the minimum list of hidden states that must be accounted for when reading long-term dynamics and memory maintenance. This does not mean sufficient conditions have been established.
 
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Verification](https://mind-upload.com/verification.html)
 - [Technology Roadmap](https://mind-upload.com/tech_roadmap.html)
 - [WBE Basics](https://mind-upload.com/wbe_101.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Why wiring diagrams alone are not enough](https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough) - Starts with the broader state variables that remain missing from the connectome.
 - [Wiki: state / trait / drift](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - Adds guidance for separating maintenance-state from drift in longitudinal evaluation.
 - [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - Clarifies how far latent states can be raised from observation alone.
 
-## What Is Currently Known
+## いま分かっていること
 - Continuity and variability in morpho-electric phenotype remain even within the same transcriptomic type.
 - Firing rates and synaptic strengths are regulated by homeostatic plasticity across sleep / wake cycles.
 - Myelin, oligodendrocytes, local ATP supply and mitochondrial positioning, astrocytes, and the microglia / meningeal-lymphatic system all contribute to timing, metabolism, memory retrieval, long-term recovery, and clearance support.
 - Even in humans, macro scaffolds and support-state proxies are starting to become visible through SV2A PET, MRSI-based metabolic connectomes, 31P-MRS, dynamic deuterium metabolic imaging, myelin bilayer mapping, TMS / EEG / sleep plasticity proxies, and CSF / glymphatic proxies, although cell-specific maintenance-states still remain coarse.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - It is unclear at what granularity excitability, sleep homeostasis, bioenergetic support, metabolic support, and clearance support must be measured to approach sufficient conditions for WBE.
 - It has not been fixed which external standards among SV2A PET, MRSI, 31P-MRS, dynamic DMI, myelin bilayers, TMS-EEG, sleep-plasticity proxies, and CSF-glymphatic proxies should calibrate maintenance-states that cannot be measured directly in humans.
 - It is not yet fixed which sleep, myelin, bioenergetic, metabolic, and clearance indicators will become standard submissions for long-term closed-loop claims.

@@ -2,33 +2,33 @@
 
 > Even if they look the same, whether they are the same person is a different matter.
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-14 / Role: Beginner guide
+- 更新日: 2026-03-14 / 位置づけ: Beginner guide
 
-## Role Of This Page
+## このページの役割
 This page is a wiki that organizes the ``copying problem'' and ``authenticity'' that often come up in Mind-Upload discussions from the beginning. Before memorizing the proper nouns of philosophy, I aim to understand why this issue does not escape from technology.
 
-## Accuracy Notes
+## 正確さの前提
 This page provides easy-to-understand explanations, but it is not a page to draw final conclusions about the person's identity. Clarify what remains unresolved.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [theory frame](https://mind-upload.com/perspective.html#design-principles)
 - [Introduction to WBE](https://mind-upload.com/wbe_101.html)
 - [Verification platform](https://mind-upload.com/verification.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Basics of WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - The position of this issue can be confirmed from the overall picture.
 - [Wiki: How to read claims and evidence](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - Compensates for how strong L4's identity claims are.
 - [Wiki: Identity assessment and continuity test](https://github.com/yasufumi-nakata/mind-upload/wiki/identity-and-continuity-tests) - Organize the philosophical issues back into the pre-registered test design.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other basic pages.
 
-## What Is Currently Known
+## いま分かっていること
 - Even if someone looks similar in behavior, that alone does not confirm their identity.
 - In situations where there are multiple copies, it is not automatically determined which one is the real person.
 - Therefore, in Mind-Upload, we treat how to verify continuity as a separate issue.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - There is no agreement on the conditions under which two persons can be considered as "the same person."
 - The conclusion will change depending on whether you emphasize psychological continuity, causal continuity, or phenomenal consciousness.
 - It is also unproven whether continuous transition designs adequately protect identity.

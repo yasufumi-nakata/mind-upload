@@ -2,32 +2,32 @@
 
 > Don't let flashy wording lead to strong conclusions.
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-06 / Role: Reading guide
+- 更新日: 2026-03-06 / 位置づけ: Reading guide
 
-## Role Of This Page
+## このページの役割
 This page is a guide to help you read the strong language that comes up in the talk of neuroscience and Mind-Upload by bringing it back to the strength of the necessary evidence. Practice differentiating between ``It looks amazing'' and ``What has been proven?''
 
-## Accuracy Notes
+## 正確さの前提
 The organization here is not to weaken the argument, but to prevent both overestimation and underestimation.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Introduction to WBE](https://mind-upload.com/wbe_101.html)
 - [Verification platform](https://mind-upload.com/verification.html)
 - [FAQ](https://mind-upload.com/faq.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: Basics of WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - This is the overall picture that is the premise of this reading.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - I will explain why the placement of evidence itself is important.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other basic pages.
 
-## What Is Currently Known
+## いま分かっていること
 - Reproducible analysis and claims of identity differ greatly in the strength of evidence required.
 - There is a difference between the output being correct and the internal mechanism being correct.
 - It is safe to read strong claims without conditions to disprove them or steps to reproduce them.
 
-## What Is Still Unknown
+## まだ分かっていないこと
 - It has not yet been decided at what stage L4 will proceed to assert its identity.
 - We are not yet at the stage where we can completely integrate the differences between theories into one evaluation axis.
 

@@ -2,21 +2,21 @@
 
 > Fix submission decisions based on RQ, not general abstracts
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- Updated: 2026-03-15 / Role: Per-RQ Grant and Dataset Playbook
+- 更新日: 2026-03-15 / 位置づけ: Per-RQ Grant and Dataset Playbook
 
-## Role Of This Page
+## このページの役割
 This page is a practical playbook that targets each of mind-upload's 60 research questions and fixes the primary application destination/preliminary application destination, main EEG-DATA, reason for hiring, and submitted deliverables.
 
-## Accuracy Notes
+## 正確さの前提
 A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-funds.md`.
 
-## Back To Public Pages
+## 公開ページへ戻る
 - [Literature map](https://mind-upload.com/research_harvest_50.html)
 - [Data & Bench](https://mind-upload.com/datasets.html)
 
-## Related Wiki Pages
+## 関連 Wiki
 - [Wiki: RQ60 EEG verification availability and subsidy theme](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds) - Original copy of judgment basis, U-specific background, and RQ table.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Criteria for converting artifacts into verification specifications.
 
