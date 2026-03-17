@@ -1,217 +1,217 @@
-# Wiki：更新・分岐・停止規則
+# Wiki: Update/branch/stop rules
 
-> 変わるシステムを、変わるまま監査するための基本
+> Basics for auditing changing systems as they change
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-14 / 位置づけ: Learning guide
+- Updated: 2026-03-14 / Role: Learning guide
 
-## このページの役割
-このページは、Mind-Upload で頻繁に出てくる『更新』『バージョン』『分岐』『停止規則』『キルスイッチ』を、初歩から切り分ける wiki です。スコアが上がったから同じ系の自然な進歩だ、と短絡せず、変化を履歴つきで監査するための土台として使います。
+## Role Of This Page
+This page is a wiki that breaks down the ``updates,'' ``versions,'' ``branches,'' ``stopping rules,'' and ``kill switches'' that frequently appear in Mind-Upload from the beginning. Don't just assume that just because your score has increased, it's a natural progression of the same system; use it as a basis for auditing changes with a history.
 
-## 正確さの前提
-ここで示すのは運用と検証の基本整理です。どの程度の変化まで同一性を保つか、どの停止規則が十分かの最終基準は、課題や理論によってまだ未確定です。
+## Accuracy Notes
+What is shown here is a basic arrangement for operation and verification. The final criteria for how much change should be maintained and which stopping rule is sufficient are still undetermined depending on issues and theories.
 
-## 公開ページへ戻る
-- [技術ロードマップ](https://mind-upload.com/tech_roadmap.html)
-- [検証基盤](https://mind-upload.com/verification.html)
-- [ハンズオン](https://mind-upload.com/datasets.html#l0-practice)
+## Back To Public Pages
+- [Technology Roadmap](https://mind-upload.com/tech_roadmap.html)
+- [Verification base](https://mind-upload.com/verification.html)
+- [Hands-on](https://mind-upload.com/datasets.html#l0-practice)
 
-## 関連 Wiki
-- [Wiki: 本人性評価と連続性テスト](https://github.com/yasufumi-nakata/mind-upload/wiki/identity-and-continuity-tests) - L4 の連続性テスト全体へ戻れます。
-- [Wiki: state・trait・ドリフト](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - 更新と長期変化をどう分けるかを補います。
-- [Wiki: ベースライン・事前登録・モデルカード](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - 事前登録と結果記録の役割差を補います。
-- [Wiki: 閉ループ・遅延・ジッタ・安全停止](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - 安全停止をリアルタイム系でどう考えるかを補います。
-- [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - 他の補助ページへ戻れます。
+## Related Wiki Pages
+- [Wiki: Identity assessment and continuity test](https://github.com/yasufumi-nakata/mind-upload/wiki/identity-and-continuity-tests) - Takes you back to the full L4 continuity test.
+- [Wiki: state/trait/drift](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - Complete how to distinguish between updates and long-term changes.
+- [Wiki: Baseline/Pre-registration/Model Card](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - Compensates for the role difference between pre-registration and result recording.
+- [Wiki: Closed loop, delay, jitter, safe stop](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - Complements how to think about safe stops in real time.
+- [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other auxiliary pages.
 
-## いま分かっていること
-- 学習やモデル更新を許すなら、履歴管理と差分記録が必要です。
-- 分岐が起きると、単一の『同じ個体』という扱いは難しくなります。
-- 停止規則は、結果を見たあとではなく、前もって固定する方が強いです。
+## What Is Currently Known
+- If learning and model updates are allowed, history management and differential recording are necessary.
+- When bifurcation occurs, it becomes difficult to treat it as a single 'same individual.'
+- Stopping rules are stronger if you fix them in advance rather than after you see the results.
 
-## まだ分かっていないこと
-- どの程度の drift や分岐差までを同一性の範囲内とみなすかは未確定です。
-- L4/L5 での分岐後の責任や権利の扱いは、制度面も含めて未解決です。
+## What Is Still Unknown
+- It is undetermined how much drift or divergence is considered to be within the range of identity.
+- The handling of responsibilities and rights after the L4/L5 bifurcation is unresolved, including the institutional aspects.
 
 ---
 
-<h2>いちばん短い区別</h2>
+<h2>The shortest distinction</h2>
 <p>
-<strong>更新</strong>は同じ履歴を引き継いだ変更、<strong>分岐</strong>は同じ起点から複数の履歴が走ること、<strong>停止規則</strong>はどんな結果で中止や保留にするかの事前ルール、<strong>キルスイッチ</strong>は危険時の緊急停止手段です。似ていますが、役割は別です。
+<strong>Update</strong> is a change that inherits the same history, <strong>Branch</strong> is when multiple histories are run from the same starting point, <strong>Stop rule</strong> is a pre-rule for what results to cancel or suspend, and <strong>Kill switch</strong> is an emergency stop method in case of danger. They are similar, but their roles are different.
 </p>
 
-<h2>なぜこの区別が必要なのか</h2>
+<h2>Why is this distinction necessary?</h2>
 <p>
-WBE や本人性の話では、システムが固定物ではありません。学習すれば変わり、複製すれば分かれ、運用すれば停止判断が要ります。ここを曖昧にすると、「前版より点が良いから同じ系の健全な進歩だ」「分岐後も全部まとめて同じ本人だ」といった、強すぎる読み方が起きやすくなります。
+When it comes to WBE and identity, the system is not fixed. If you learn, it will change, if you copy it, it will separate, and if you use it, you will have to decide whether to stop it. If this is left vague, it is easy to read things too strongly, such as, ``It's better than the previous version, so it's a healthy progression of the same system,'' or ``Even after the divergence, it's all the same person.''
 </p>
 
-<h2>まず用語を分ける</h2>
+<h2>First, separate terms</h2>
 <table>
 <thead>
 <tr>
-<th>用語</th>
-<th>ざっくり意味</th>
-<th>ここで重要な点</th>
+<th>Term</th>
+<th>Rough meaning</th>
+<th>Important points here</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>更新（update）</strong></td>
-<td>同じ系に対して、新しい学習や設定変更を入れることです。</td>
-<td>何が変わったかを差分で残さないと、評価の意味が曖昧になります。</td>
+<td><strong>update</strong></td>
+<td>Introducing new learning or setting changes to the same system. </td>
+<td>If you do not record what has changed in the differences, the meaning of the evaluation will be ambiguous. </td>
 </tr>
 <tr>
-<td><strong>バージョン（version）</strong></td>
-<td>その時点の固定された状態に付ける ID です。</td>
-<td>前版を上書きせず、戻って比較できることが重要です。</td>
+<td><strong>version</strong></td>
+<td>The ID assigned to the fixed state at that point. </td>
+<td>It is important to be able to go back and compare without overwriting previous versions. </td>
 </tr>
 <tr>
-<td><strong>分岐（branch）</strong></td>
-<td>同じ起点から、別々の更新履歴が走り始めることです。</td>
-<td>分岐後は別の履歴なので、同じ評価単位として混ぜない方が安全です。</td>
+<td><strong>branch</strong></td>
+<td>Separate update histories start running from the same starting point. </td>
+<td>Since the history after branching is different, it is safer not to mix them in the same evaluation unit. </td>
 </tr>
 <tr>
-<td><strong>停止規則（stop rule）</strong></td>
-<td>どの結果が出たら中止、保留、撤退とするかの事前ルールです。</td>
-<td>結果を見たあとで決めるより、先に固定した方が検証として強くなります。</td>
+<td><strong>stop rule</strong></td>
+<td>These are advance rules that determine which results should be used to cancel, suspend, or withdraw. </td>
+<td>It will be stronger as a verification if you fix it first rather than deciding after seeing the results. </td>
 </tr>
 <tr>
-<td><strong>キルスイッチ / 隔離</strong></td>
-<td>安全上の問題が出たときに動作を止めたり切り離したりする仕組みです。</td>
-<td>停止規則と違い、統計判断ではなく安全確保が主目的です。</td>
+<td><strong>Kill Switch / Isolation</strong></td>
+<td>This is a mechanism that stops or disconnects operations when a safety problem occurs. </td>
+<td>Unlike stopping rules, the main purpose is to ensure safety rather than statistical judgment. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>更新してよいかを見る最低チェック</h2>
+<h2>Minimum check to see if it is OK to update</h2>
 <table>
 <thead>
 <tr>
-<th>確認項目</th>
-<th>最低限やりたいこと</th>
+<th>Check items</th>
+<th>The minimum thing I want to do</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>変更点の明示</strong></td>
-<td>データ、前処理、モデル、評価指標のどこを変えたかを分けて書きます。</td>
+<td><strong>Clarification of changes</strong></td>
+<td>Write down the changes made to the data, preprocessing, model, and evaluation metrics. </td>
 </tr>
 <tr>
-<td><strong>前版の保存</strong></td>
-<td>前の版を上書きせず、同じ入力で再実行できる状態を残します。</td>
+<td><strong>Save previous version</strong></td>
+<td>Does not overwrite the previous version, leaving a state where it can be rerun with the same input. </td>
 </tr>
 <tr>
-<td><strong>比較条件の固定</strong></td>
-<td>同じ test、同じ評価指標、同じベースラインで前版と比べます。</td>
+<td><strong>Fixing comparison conditions</strong></td>
+<td>Compare with the previous version using the same test, the same evaluation metrics, and the same baseline. </td>
 </tr>
 <tr>
-<td><strong>リーク再点検</strong></td>
-<td>更新で train/test の境界や正規化手順が崩れていないかを再確認します。</td>
+<td><strong>Recheck for leaks</strong></td>
+<td>Recheck that the train/test boundaries and normalization procedure are not corrupted by updating. </td>
 </tr>
 <tr>
-<td><strong>失敗時の扱い</strong></td>
-<td>性能悪化や不安定化が出た場合に、どこで更新を保留・撤回するかを先に決めます。</td>
+<td><strong>Handling in case of failure</strong></td>
+<td>Decide first where to suspend or cancel updates in the event of performance deterioration or instability. </td>
 </tr>
 </tbody>
 </table>
 
-<strong>重要</strong>
+<strong>Important</strong>
 <p>
-スコアが上がっただけでは、安全な更新とは言えません。リーク、評価変更、都合のよいサブセット選択でも数字は上がり得るため、<strong>差分</strong>と<strong>比較条件</strong>をセットで残す必要があります。
+Just because your score has increased doesn't mean it's a safe update. Since the numbers can increase due to leaks, evaluation changes, or convenient subset selection, it is necessary to keep a set of <strong>differences</strong> and <strong>comparison conditions</strong>.
 </p>
 
-<h2>分岐が起きたら何を固定するか</h2>
+<h2>What to fix when a branch occurs</h2>
 <table>
 <thead>
 <tr>
-<th>固定したいもの</th>
-<th>理由</th>
+<th>What you want to fix</th>
+<th>Reason</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>分岐時点</strong></td>
-<td>どの版、どのデータ時点から枝分かれしたかを明確にするためです。</td>
+<td><strong>Branch point</strong></td>
+<td>This is to clarify which version and data point the branch was made from. </td>
 </tr>
 <tr>
-<td><strong>親子関係</strong></td>
-<td>どの branch がどの parent version を継いだかを監査できるようにします。</td>
+<td><strong>Parent-child relationship</strong></td>
+<td>Enables auditing of which branch inherited which parent version. </td>
 </tr>
 <tr>
-<td><strong>個体 ID / インスタンス ID</strong></td>
-<td>複数の履歴を同じ個体として混同しないためです。</td>
+<td><strong>Individual ID / Instance ID</strong></td>
+<td>This is to avoid confusing multiple histories as the same individual. </td>
 </tr>
 <tr>
-<td><strong>評価期間</strong></td>
-<td>分岐直後だけ似ているのか、長く似ているのかを分けて読むためです。</td>
+<td><strong>Evaluation period</strong></td>
+<td>This is to distinguish between whether they are similar just after the branch or whether they are similar for a long time. </td>
 </tr>
 <tr>
-<td><strong>帰属ルール</strong></td>
-<td>どの結果をどの branch の成果・失敗として記録するかを固定するためです。</td>
+<td><strong>Attribution rules</strong></td>
+<td>This is to fix which results are recorded as achievements/failures of which branch. </td>
 </tr>
 </tbody>
 </table>
 <p>
-特に本人性の議論では、分岐後の結果を全部まとめて「本人」と呼ぶのは危険です。少なくとも、<strong>どの時点まで同じ評価単位として扱うか</strong>を記録する必要があります。
+Particularly in discussions of identity, it is dangerous to collectively refer to all results after branching as the "principal." At a minimum, you should record<strong>up to what point you treat them as the same unit of</strong>evaluation.
 </p>
 
-<h2>停止規則とキルスイッチは別物</h2>
+<h2>Stopping rules and kill switches are different</h2>
 <table>
 <thead>
 <tr>
-<th>仕組み</th>
-<th>いつ決めるか</th>
-<th>主目的</th>
+<th>How it works</th>
+<th>When to decide</th>
+<th>Main purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>停止規則</strong></td>
-<td>実験や評価の前です。</td>
-<td>失敗判定や撤退ラインを、あと出しにしないためです。</td>
+<td><strong>Stopping rules</strong></td>
+<td>Before experiments and evaluation. </td>
+<td>This is to avoid leaving the failure judgment and withdrawal line behind. </td>
 </tr>
 <tr>
-<td><strong>保留 / freeze</strong></td>
-<td>問題が見つかった時点です。</td>
-<td>原因が分かるまで更新や公開を一時停止するためです。</td>
+<td><strong>Hold / freeze</strong></td>
+<td>This is when the problem was discovered. </td>
+<td>This is to temporarily suspend updates and publishing until the cause is determined. </td>
 </tr>
 <tr>
-<td><strong>キルスイッチ / 隔離</strong></td>
-<td>安全問題に備えて事前に実装しておきます。</td>
-<td>危険な挙動や逸脱が出たときに、速やかに止めるためです。</td>
+<td><strong>Kill Switch / Isolation</strong></td>
+<td>Implement it in advance in case of safety issues. </td>
+<td>This is to quickly stop any dangerous behavior or deviation. </td>
 </tr>
 </tbody>
 </table>
 
-<strong>ありがちな混同</strong>
+<strong>Common confusion</strong>
 <p>
-「結果が悪かったので止めた」は停止規則の話で、「危険なので即停止した」は安全の話です。同じ『止める』でも、証拠の扱いと安全対策では意味が違います。
+``I stopped because the results were bad'' is about stopping rules, and ``I stopped immediately because it was dangerous'' is about safety. The same word ``stop'' has different meanings when it comes to handling evidence and safety measures.
 </p>
 
 <p>
-特に閉ループ実装では、遅延や異常挙動に対する安全停止が追加で重要になります。リアルタイム系の入口だけ先に整理したい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops">Wiki: 閉ループ・遅延・ジッタ・安全停止</a> をご覧ください。
+Particularly in closed-loop implementations, safe stopping for delays and abnormal behavior becomes additionally important. If you want to organize only real-time system entrances first, please see <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops">Wiki: Closed loop, delay, jitter, and safety stops</a>.
 </p>
 
-<h2>最低限残したいログ</h2>
+<h2>The minimum log you want to keep</h2>
 
 <h4>Checklist</h4>
 <ul>
-<li><strong>version ID：</strong>今どの版を評価したか。</li>
-<li><strong>parent / branch ID：</strong>どこから分岐したか。</li>
-<li><strong>変更差分：</strong>データ、前処理、モデル、評価の何を変えたか。</li>
-<li><strong>比較結果：</strong>前版との差、改善点、悪化点、不確実性。</li>
-<li><strong>停止判断：</strong>どのルールに触れたか、触れなかったか。</li>
-<li><strong>失敗例：</strong>うまくいかなかった条件や崩れた条件。</li>
+<li><strong>version ID:</strong>Which version have you just evaluated? </li>
+<li><strong>parent / branch ID:</strong>Where you branched from. </li>
+<li><strong>Change Diff:</strong>What changed in the data, preprocessing, model, and evaluation? </li>
+<li><strong>Comparison results: Differences, improvements, deteriorations, and uncertainties from the previous version. </li>
+<li><strong>Stopping decision:</strong>What rules were touched or not touched? </li>
+<li><strong>Failure example:</strong>Conditions that did not work or collapsed. </li>
 </ul>
 
-<h2>強い主張を読むときの 3 問</h2>
+<h2>3 questions when reading strong arguments</h2>
 <ol>
-<li><strong>更新前後の差分が残っているか：</strong>何を変えたのかが曖昧なら、改善の意味を読みすぎない方が安全です。</li>
-<li><strong>分岐 ID と観測期間があるか：</strong>複数履歴を 1 つにまとめていないかを確認します。</li>
-<li><strong>停止規則が先に決まっているか：</strong>悪い結果が出たときの扱いを、あとから書き換えていないかを見ます。</li>
+<li><strong>Are there any differences before and after the update?</strong>If it's unclear what has changed, it's safe not to read too much into the meaning of the improvement. </li>
+<li><strong>Do you have a branch ID and observation period?</strong> Check if you have combined multiple histories into one. </li>
+<li><strong>Have the stopping rules been determined in advance?</strong>Check whether the handling when a bad result is obtained has not been rewritten later. </li>
 </ol>
 
-<h2>次にどこへ戻るか</h2>
+<h2>Where to go back next</h2>
 <p>
-Roadmap の I5 / I8 / V7 へ戻るなら <a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a>、検証基盤の Registry / Audit へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a>、L0 実務へ戻るなら <a href="https://mind-upload.com/datasets.html#l0-practice">ハンズオン</a> をご利用ください。
+If you want to go back to I5 / I8 / V7 of Roadmap, please use <a href="https://mind-upload.com/tech_roadmap.html">Technology Roadmap</a>, if you want to go back to Registry / Audit of verification platform, please use <a href="https://mind-upload.com/verification.html">Verification Platform</a>, and if you want to go back to L0 practice, please use <a href="https://mind-upload.com/datasets.html#l0-practice">Hands-on</a>.
 </p>

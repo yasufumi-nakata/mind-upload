@@ -1,280 +1,267 @@
-# Wiki：EEG前処理とQC
+# Wiki: EEG pretreatment and QC
 
-> 前処理は見栄えではなく、主張の受理条件です
+> Pre-processing is not a pretense, it is a condition for acceptance of a claim
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-15 / 位置づけ: Technical / practical guide
+- Updated: 2026-03-15 / Role: Technical / practical guide
 
-## このページの役割
-このページは、EEG の前処理と QC を『最後に波形を整える作業』ではなく、『どの信号を残し、どの主張を許すかを決める監査工程』として整理する wiki です。
+## Role Of This Page
+This page is a wiki that organizes EEG preprocessing and QC not as ``the process of adjusting the waveform at the end,'' but as ``an auditing process that determines which signals should be kept and which claims should be accepted.''
 
-## 正確さの前提
-万能の 1 手順は示しません。一次文献と公式仕様から、『最低限どこを固定し、何をまだ断言しないか』を整理します。
+## Accuracy Notes
+We do not provide a one-size-fits-all procedure. From the primary literature and official specifications, we will sort out what should be fixed at the bare minimum and what should not be stated yet.
 
-## 公開ページへ戻る
-- [EEG入門](https://mind-upload.com/eeg_101.html)
-- [ハンズオン](https://mind-upload.com/datasets.html#l0-practice)
-- [データ&ベンチ](https://mind-upload.com/datasets.html)
+## Back To Public Pages
+- [Introduction to EEG](https://mind-upload.com/eeg_101.html)
+- [Hands-on](https://mind-upload.com/datasets.html#l0-practice)
+- [Data & Bench](https://mind-upload.com/datasets.html)
 
-## 関連 Wiki
-- [Wiki: EEGの基本](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-basics) - 信号そのものの性質から戻りたいときはこちらです。
-- [Wiki: イベント同期と観測ログ](https://github.com/yasufumi-nakata/mind-upload/wiki/event-sync-and-measurement-logs) - 前処理の前段で必要な時刻同期、イベント、bad segment 記録を補います。
-- [Wiki: 不確実性・校正・棄権](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention) - 前処理差による推定幅や棄権の考え方を補います。
-- [Wiki: 規格・置き場・Validator・ベンチマーク](https://github.com/yasufumi-nakata/mind-upload/wiki/standards-repositories-validators-and-benchmarks) - BIDS、公開版、loader、benchmark の役割差を補います。
+## Related Wiki Pages
+- [Wiki: Basics of EEG](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-basics) - Click here if you want to return from the nature of the signal itself.
+- [Wiki: Event synchronization and observation log](https://github.com/yasufumi-nakata/mind-upload/wiki/event-sync-and-measurement-logs) - Supplements the time synchronization, event, and bad segment recording required before preprocessing.
+- [Wiki: Uncertainty, proofreading, abstaining](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention) - It supplements the idea of estimation width and abstention using preprocessing differences.
+- [Wiki: Standards/Location/Validator/Benchmark](https://github.com/yasufumi-nakata/mind-upload/wiki/standards-repositories-validators-and-benchmarks) - Compensates for the role differences between BIDS, public version, loader, and benchmark.
 
-## いま分かっていること
-- 前処理は小さな実装差ではなく、どの信号を neural とみなすかを決める選択です。
-- 参照法、フィルタ設計、bad channel 処理、除外基準は最低限残すべき情報です。
-- EEG-BIDS と COBIDAS-MEEG は、再現可能な EEG 報告の床をかなり具体的に与えています。
-- artifact suppression と signal preservation は別であり、精度だけで前処理の良し悪しは決められません。
+## What Is Currently Known
+- Preprocessing is not a small implementation difference, but a choice that determines which signals are considered neural.
+- Reference method, filter design, bad channel processing, and exclusion criteria are the minimum information that should be kept.
+- EEG-BIDS and COBIDAS-MEEG provide a fairly concrete floor for reproducible EEG reporting.
+- Artifact suppression and signal preservation are different; accuracy alone does not determine the quality of preprocessing.
 
-## まだ分かっていないこと
-- どの課題でどの前処理族が最適かは、いまだ一律には決まりません。
-- 高周波成分のどこまでを neural と扱えるかは、筋電・体動・課題依存性の監査を要します。
-- どの感度分析セットを site-wide の標準とするかも、今後のベンチ運用課題です。
+## What Is Still Unknown
+- It has not yet been decided which preprocessing group is optimal for which problem.
+- To determine how much of the high-frequency components can be treated as neural, it is necessary to audit myoelectricity, body movement, and task dependence.
+- Which sensitivity analysis set should be the site-wide standard is a future bench operation issue.
 
 ---
 
-<h2>最短結論</h2>
+<h2>Shortest conclusion</h2>
 <p>
-EEG の前処理は、図をきれいにする工程ではございません。<strong>どの信号を neural とみなし、どの主張を保留するかを決める監査工程</strong>でございます。したがって本サイトでは、参照法、フィルタ、アーティファクト処理、保持率、感度分析を、結果の後ろに付く補足ではなく <strong>受理条件</strong>として扱います。
+EEG preprocessing is not a process to clean up the diagram. <strong>This is an auditing process that determines which signals are considered neural and which claims to withhold. Therefore, this site treats reference methods, filters, artifact treatments, retention rates, and sensitivity analyzes as <strong>acceptance conditions</strong> rather than supplements attached to results.
 </p>
 
-<strong>このページの範囲</strong>
+<strong>Scope of this page</strong>
 <p>
-ここで扱うのは技術と自然科学の側面だけでございます。哲学、法制度、本人性は扱いません。問うのは「どの前処理が正義か」ではなく、<strong>どの条件を固定しないと EEG 由来の主張が過大化するか</strong>です。
+Only the technical and natural science aspects will be dealt with here. Philosophy, legal systems, and individuality are not covered. The question to ask is not ``which preprocessing is just?'' but rather ``Which conditions must be fixed to exaggerate EEG-derived claims?''
 </p>
 
-<h2>今回深掘りする弱点</h2>
+<h2>Weaknesses to be explored in depth</h2>
 <p>
-従来のページは、参照法、フィルタ、アーティファクト処理、除外基準という 4 論点を正しく挙げていました。しかし弱点は、<strong>なぜそれらが結果そのものを変えうるのか</strong>、そして <strong>何を残さないと主張レベルを上げられないのか</strong>が、一次文献ベースの監査ゲートになっていなかった点でございます。COBIDAS-MEEG と EEG-BIDS は報告の床をかなり具体的に与え、PREP pipeline は bad channel と rereference の相互依存を示し、Widmann らは filter design 自体が波形や latency を動かしうることを整理しました。さらに 2025 年の decoding 研究は、artifact correction が常に性能向上を意味しないことを示しています。したがって、この論点は実務上の小技ではなく、<strong>EEG 由来の主張の ceiling を決める本体</strong>でございます。
+The previous page correctly listed four issues: reference methods, filters, artifact handling, and exclusion criteria. However, the weakness is that <strong>why they can change the results themselves</strong> and <strong>what must be left behind to raise the level of claims</strong> was not an audit gate based on primary literature. COBIDAS-MEEG and EEG-BIDS provide a fairly concrete reporting platform, the PREP pipeline shows the interdependence of bad channel and rereference, and Widmann et al. have established that the filter design itself can drive waveform and latency. Additionally, a 2025 decoding study shows that artifact correction does not always mean improved performance. Therefore, this issue is not a practical trick, but is the main body that determines the ceiling of EEG-derived claims.
 </p>
 
-<h2>先に固定する5つの監査ゲート</h2>
+<h2>Five audit gates to fix first</h2>
 <table>
 <thead>
 <tr>
-<th>ゲート</th>
-<th>一次文献・公式仕様が今支持すること</th>
-<th>通っていないときに止める主張</th>
+<th>Gate</th>
+<th>What primary documents and official specifications currently support</th>
+<th>Assertion to stop when not passing</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>metadata / 報告ゲート</strong></td>
-<td>EEG-BIDS と COBIDAS-MEEG は、参照、ground、sampling rate、filters、bad channel、電極座標、events、除外規則を最低限の記録として要求します。</td>
-<td>「再現可能な EEG 解析」「比較可能な clean EEG」と書くことです。</td>
+<td><strong>metadata / reporting gate</strong></td>
+<td>EEG-BIDS and COBIDAS-MEEG require minimal recording of references, ground, sampling rate, filters, bad channels, electrode coordinates, events, and exclusion rules. </td>
+<td>Write it as ``reproducible EEG analysis'' or ``comparable clean EEG.'' </td>
 </tr>
 <tr>
-<td><strong>参照ゲート</strong></td>
-<td>PREP pipeline と reference comparison 研究は、bad channel 処理と rereference が波形・network 指標を動かすことを示しています。</td>
-<td>sensor-space の位相・connectivity・topography を、参照依存性なしに読むことです。</td>
+<td><strong>Reference gate</strong></td>
+<td>PREP pipeline and reference comparison studies show that bad channel processing and rereference drive waveform and network metrics. </td>
+<td>Reading the topology, connectivity, and topography of sensor-space without reference dependencies. </td>
 </tr>
 <tr>
-<td><strong>filter ゲート</strong></td>
-<td>Widmann らは cutoff、transition band、filter order、causal / acausal が waveform と latency を歪めうることを整理しました。</td>
-<td>ERP onset、slow component、high-frequency gain を、filter 設計を伏せたまま強く言うことです。</td>
+<td><strong>filter gate</strong></td>
+<td>Widmann et al. explained that cutoff, transition band, filter order, and causal/acausal can distort waveform and latency. </td>
+<td>Emphasis on ERP onset, slow component, and high-frequency gain without knowing the filter design. </td>
 </tr>
 <tr>
-<td><strong>artifact ゲート</strong></td>
-<td>ICA、ICLabel、Autoreject、PREP などは有力ですが、2025 年の研究は artifact correction が decoding 精度を必ずしも上げないこと、むしろ confound を減らした結果として精度が下がりうることを示しました。</td>
-<td>「最も高い精度を出した前処理が最良」と読むことです。</td>
+<td><strong>artifact gate</strong></td>
+<td>ICA, ICLabel, Autoreject, PREP, etc. are promising, but research in 2025 showed that artifact correction does not necessarily improve decoding accuracy, but rather can reduce accuracy as a result of reducing confound. </td>
+<td>It is read as "the preprocessing that produces the highest accuracy is the best." </td>
 </tr>
 <tr>
-<td><strong>保持率 / 高周波監査ゲート</strong></td>
-<td>筋電は高 beta / gamma と重なり、さらに aggressive cleaning は neural signal も削りえます。したがって retained trials、補間率、除外率、raw-clean 差分を数値で残す必要があります。</td>
-<td>高 beta / gamma の neural claim や、cleaning 後のデータだけで十分とすることです。</td>
+<td><strong>Retention Rate / High Frequency Audit Gate</strong></td>
+<td>Myoelectricity overlaps with high beta/gamma, and aggressive cleaning can also reduce neural signals. Therefore, it is necessary to keep numerical values ​​for retained trials, interpolation rate, exclusion rate, and raw-clean differences. </td>
+<td>High beta/gamma neural claims and data after cleaning are sufficient. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>1. 報告の床はアルゴリズム名ではなく metadata です</h2>
+<h2>1. The reporting floor is the metadata, not the algorithm name</h2>
 <p>
-EEG-BIDS とその公式仕様が先に固定するのは、派手な pipeline 名ではなく、<strong>何をどう測り、どの状態で保存したか</strong>でございます。`channels.tsv` には sampling frequency、low / high cutoff、notch、channel status を書けますし、`electrodes.tsv` と `coordsystem.json` は電極位置と座標系を固定します。COBIDAS-MEEG も同様に、参照法、フィルタ、bad channel 処理、除外規則、artifact handling の詳細報告を要求しています。ここから言えるのは単純で、<strong>metadata が無い clean EEG は再現可能成果物として扱えない</strong>ということです。
+What EEG-BIDS and its official specifications first fix is not the flashy pipeline name, but what is measured, how it is measured, and in what state it is stored. You can write sampling frequency, low / high cutoff, notch, and channel status in `channels.tsv`, and `electrodes.tsv` and `coordsystem.json` fix the electrode position and coordinate system. COBIDAS-MEEG similarly requires detailed reporting of reference methods, filters, bad channel handling, exclusion rules, and artifact handling. The simple conclusion here is that <strong>clean EEG without metadata cannot be treated as a reproducible artifact</strong>.
 </p>
 
-<strong>このサイトでの rule</strong>
+<strong>Rules on this site</strong>
 <p>
-最低限、<strong>raw reference</strong>、<strong>rereference 後の方式</strong>、<strong>filters</strong>、<strong>bad channel / bad segment</strong>、<strong>電極座標</strong>、<strong>イベント時刻</strong>、<strong>除外規則</strong> を残してください。processed data だけを置く場合でも、raw から clean への差分が追えなければ受理しません。
+At a minimum, please leave the <strong>raw reference</strong>, <strong>rereference method</strong>, <strong>filters</strong>, <strong>bad channel / bad segment</strong>, <strong>electrode coordinates</strong>, <strong>event time</strong>, and <strong>exclusion rules</strong>. Even if you only post processed data, it will not be accepted unless you can track the difference from raw to clean.
 </p>
 
-<h2>2. 参照法は小さな実装差ではなく、観測モデルの一部です</h2>
+<h2>2. The reference method is not a small implementation difference; it is part of the observation model</h2>
 <p>
-EEG は電位差計測なので、reference を変えると波形・topography・sensor-space connectivity は動きます。PREP pipeline が強調したのは、<strong>bad channel を見逃したまま平均参照を取ると rereference 自体が汚染される</strong>という点です。さらに、reference comparison 研究では functional connectivity graph や task-related network 指標が reference に依存して変化します。したがって本サイトでは、reference を「実装メモ」ではなく <strong>結果の意味を決める前提</strong>として扱います。
+EEG is a potential difference measurement, so changing the reference changes the waveform, topography, and sensor-space connectivity. What the PREP pipeline emphasized is that<strong>taking the average reference while overlooking the bad channel pollutes the rereference itself</strong>. Furthermore, in reference comparison studies, functional connectivity graphs and task-related network metrics change depending on the reference. Therefore, on this site, references are treated as <strong>premises that determine the meaning of results</strong>, rather than as ``implementation notes.''
 </p>
 <table>
 <thead>
 <tr>
-<th>最低限書くこと</th>
-<th>なぜ必要か</th>
+<th>Minimum things to write</th>
+<th>Why is it necessary</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>収録時 reference / ground</strong></td>
-<td>raw の電位差の前提が変わるためです。</td>
+<td><strong>When recording reference / ground</strong></td>
+<td>This is because the assumption of raw potential difference changes. </td>
 </tr>
 <tr>
-<td><strong>rereference の方式</strong></td>
-<td>average、linked mastoid、REST などで sensor-space 指標の意味が変わるためです。</td>
+<td><strong>rereference method</strong></td>
+<td>This is because the meaning of the sensor-space metric changes with average, linked mastoid, REST, etc. </td>
 </tr>
 <tr>
-<td><strong>rereference 前の bad channel 処理</strong></td>
-<td>壊れたチャンネルを混ぜると rereference 自体が汚染されるためです。</td>
+<td><strong>Bad channel handling before rereference</strong></td>
+<td>This is because mixing broken channels contaminates the rereference itself. </td>
 </tr>
 <tr>
-<td><strong>補間したチャンネル数</strong></td>
-<td>spatial pattern がどこまで実測でどこから補間かを区別するためです。</td>
+<td><strong>Number of interpolated channels</strong></td>
+<td>This is to distinguish between the actual measurement and the interpolation of the spatial pattern. </td>
 </tr>
 </tbody>
 </table>
 
-<strong>lagged 指標でも読み替え禁止です</strong>
+<h2>3. A filter is not only a "pass-through band" but also a distortion design</h2>
 <p>
-wPLI のような lagged metric は zero-lag mixing の一部を減らす候補ですが、reference choice で network は動き、source reconstruction 後にも ghost interaction は残りえます。したがって、<strong>wPLI を使ったので anatomical coupling が取れた</strong>、<strong>directed metric を使ったので causality が解けた</strong>とは書きません。connectivity / directionality の gate は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation#connectivity-gates">Wiki: 観測から推定へ</a> で別に監査します。
+As explained by Widmann et al., it is not enough to just write the cutoff frequency for filter. Transition band, filter order, passband / stopband ripple, causal / acausal, unidirectional / bidirectional application, latency and waveform move. Therefore, claims such as seeing a<strong>slow wave, an earlier onset, or an increase in gamma cannot be accepted without a record of the filter design.
 </p>
 
-<h2>3. filter は「通した帯域」だけでなく、歪みの設計です</h2>
+<strong>Rules on this site</strong>
 <p>
-Widmann らが整理した通り、filter は cutoff 周波数だけを書けば済む話ではございません。transition band、filter order、passband / stopband ripple、causal / acausal、片方向 / 両方向適用で、latency と waveform は動きます。したがって、<strong>slow wave が見えた</strong>、<strong>onset が早まった</strong>、<strong>gamma が増えた</strong>といった主張は、filter design の記録なしには受理できません。
+Regarding filter, please leave not only the cutoff of<strong>high-pass</strong>,<strong>low-pass</strong>, and<strong>notch</strong>, but also<strong>filter type</strong>, <strong>order</strong>, <strong>causal / acausal</strong>, and presence of<strong>forward-backward</strong>. When claiming ERP or latency, check conclusion drift in at least one alternative setting.
 </p>
 
-<strong>このサイトでの rule</strong>
+<h2>4. Artifact suppression is not always an improvement</h2>
 <p>
-filter については、<strong>high-pass</strong>、<strong>low-pass</strong>、<strong>notch</strong> の cutoff だけでなく、<strong>filter type</strong>、<strong>order</strong>、<strong>causal / acausal</strong>、<strong>forward-backward の有無</strong> を残してください。ERP や latency を主張する場合は、少なくとも 1 つの代替設定で conclusion drift を点検します。
-</p>
-
-<h2>4. artifact suppression は常に改善とは限りません</h2>
-<p>
-ICA、ICLabel、Autoreject、PREP などは有力な実務候補です。しかし、ここでの重要点は「どれを使ったか」ではなく、<strong>何を削り、何を残したかを監査できるか</strong>でございます。2025 年の decoding 研究は、artifact correction が分類性能を必ずしも上げず、むしろ artifact-related confounds を減らした結果として精度が下がりうることを示しました。これは cleaning が無意味という話ではなく、<strong>accuracy 最大化と neural specificity 最大化は同義ではない</strong>という意味です。
+ICA, ICLabel, Autoreject, PREP, etc. are strong practical candidates. However, the important point here is not ``which one was used'', but whether it is possible to audit what was cut and what was left. A 2025 decoding study showed that artifact correction does not necessarily improve classification performance, but rather can reduce accuracy as a result of reducing artifact-related confounds. This does not mean that cleaning is meaningless, but rather that maximizing accuracy and maximizing neural specificity are not synonymous.
 </p>
 <table>
 <thead>
 <tr>
-<th>候補手法</th>
-<th>役割</th>
-<th>自動的に標準解へ昇格しない理由</th>
+<th>Candidate method</th>
+<th>Role</th>
+<th>Reason why it is not automatically promoted to standard solution</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>PREP</strong></td>
-<td>line noise、bad channel、robust rereference の床を整えます。</td>
-<td>課題特異的 artifact や signal preservation は別途監査が要るためです。</td>
+<td>Clean the floor for line noise, bad channel, and robust reference. </td>
+<td>This is because task-specific artifacts and signal preservation require a separate audit. </td>
 </tr>
 <tr>
 <td><strong>Autoreject</strong></td>
-<td>trial / sensor 単位のしきい値調整と補間を自動化します。</td>
-<td>保持率と task-relevant signal がどう動いたかは別に確認が要るためです。</td>
+Automate threshold adjustment and interpolation in <td>trial/sensor units. </td>
+<td>This is because it is necessary to separately check how the retention rate and task-relevant signal worked. </td>
 </tr>
 <tr>
 <td><strong>ICA + ICLabel</strong></td>
-<td>眼球、筋電、心電などの independent component を候補化します。</td>
-<td>component 除去が neural 成分まで削る可能性があり、完全自動化は危険なためです。</td>
+<td>Candidate independent components such as eyeballs, myoelectrics, and electrocardiograms. </td>
+<td>Component removal may reduce the neural component, so full automation is dangerous. </td>
 </tr>
 </tbody>
 </table>
 
-<strong>このサイトでの rule</strong>
+<strong>Rules on this site</strong>
 <p>
-artifact 処理を報告するときは、<strong>使った手法名</strong>だけでは不十分です。<strong>除去した component / epoch / channel 数</strong>、<strong>補間率</strong>、<strong>保持した minutes / trials</strong>、<strong>raw-clean の主要指標差分</strong>、さらに可能なら <strong>代替 pipeline 1 本との比較</strong> を残してください。
+When reporting artifact processing, <strong>name of method used</strong> is not sufficient. Please include <strong>number of components / epochs / channels removed</strong>, <strong>interpolation rate</strong>, <strong>minutes / trials retained</strong>, <strong>raw-clean key metric differences</strong>, and if possible <strong>comparison with one alternative pipeline</strong>.
 </p>
 
-<h2>5. 高 beta / gamma は筋電監査なしに強く書きません</h2>
+<h2>5. High beta/gamma does not write strongly without electromyographic audit</h2>
 <p>
-Muthukumaraswamy が整理した通り、muscle artifact は 20-300 Hz 近辺に広く重なり、高 beta / gamma の神経成分と見分けにくい場合があります。したがって、額、顎、側頭筋の活動が入りやすい課題で <strong>high-frequency power 増加</strong> を主張するなら、少なくとも <strong>topography</strong>、<strong>EOG / EMG 補助チャネル</strong>、<strong>jaw / brow などの行動 confound</strong>、<strong>cleaning 前後の residual</strong> を点検してください。ここをやらずに gamma を neural gain と読むのは、本サイトでは止めます。
+As outlined by Muthukumaraswamy, muscle artifacts overlap widely around 20-300 Hz and can be difficult to distinguish from high beta/gamma neural components. Therefore, if you claim to increase <strong>high-frequency power</strong> in a task that tends to involve activation of the forehead, jaw, and temporalis muscles, at least check for behavioral confound</strong>s such as <strong>topography</strong>, <strong>EOG / EMG auxiliary channels</strong>, <strong>jaw / brow, and residual</strong>before and after cleaning. On this site, we will not read gamma as neural gain without doing this.
 </p>
 
-<h2>最低限の提出物</h2>
+<h2>Minimum submissions</h2>
 <table>
 <thead>
 <tr>
-<th>提出物</th>
-<th>最低限ほしい内容</th>
+<th>Submission</th>
+<th>Minimum desired content</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>acquisition metadata</strong></td>
-<td>reference、ground、sampling rate、line frequency、electrode coordinates、event timing です。</td>
+<td>reference, ground, sampling rate, line frequency, electrode coordinates, event timing. </td>
 </tr>
 <tr>
-<td><strong>bad channel / bad segment 台帳</strong></td>
-<td>何をどの基準で bad と判定し、補間したかを残します。</td>
+<td><strong>bad channel / bad segment ledger</strong></td>
+<td>What criteria were used to judge what was bad and what was interpolated is left. </td>
 </tr>
 <tr>
 <td><strong>filter design report</strong></td>
-<td>cutoff、order、type、causal / acausal、notch を残します。</td>
+<td>Leave cutoff, order, type, causal / acausal, notch. </td>
 </tr>
 <tr>
 <td><strong>artifact model report</strong></td>
-<td>PREP / ICA / ICLabel / Autoreject などの有無、除去数、しきい値、補間率を残します。</td>
+<td>Presence of PREP / ICA / ICLabel / Autoreject, etc., number of removals, threshold, and interpolation rate are left. </td>
 </tr>
 <tr>
 <td><strong>raw-clean delta</strong></td>
-<td>power spectrum、trial count、channel count、主要 feature の変化量を raw と clean で比較します。</td>
+<td>Compare the amount of change in power spectrum, trial count, channel count, and major features between raw and clean. </td>
 </tr>
 <tr>
 <td><strong>retention summary</strong></td>
-<td>最終的に何分、何試行、何チャンネルが残ったかを数値で出します。</td>
+<td>Finally, the number of minutes, number of trials, and number of channels remaining are displayed as numerical values. </td>
 </tr>
 <tr>
 <td><strong>sensitivity analysis</strong></td>
-<td>少なくとも 1 本の代替 reference または artifact pipeline で結論 drift を点検します。</td>
+<td>Check the conclusion drift with at least one alternative reference or artifact pipeline. </td>
 </tr>
 <tr>
 <td><strong>high-frequency exception note</strong></td>
-<td>beta / gamma を主張する場合は、EMG 監査をどう通したかを別記します。</td>
-</tr>
-<tr>
-<td><strong>connectivity claim card</strong></td>
-<td>reference strategy、sensor/source space、leakage control、null/surrogate、外部妥当化の有無を別記します。</td>
+<td>If you claim beta/gamma, please separately explain how you passed the EMG audit. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>この批判から止めるべき誤読</h2>
+<h2>Misinterpretations that should be avoided from this criticism</h2>
 <table>
 <thead>
 <tr>
-<th>誤読</th>
-<th>このサイトでの読み替え</th>
+<th>Misreading</th>
+<th>Replacement on this site</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>きれいな波形が出たので十分</td>
-<td>metadata、保持率、raw-clean 差分がなければ十分ではありません。</td>
+<td>I got a clean waveform, so that's enough</td>
+<td>Metadata, retention, and raw-clean diffs are not enough. </td>
 </tr>
 <tr>
-<td>最も高い decoding 精度を出した pipeline が最良</td>
-<td>artifact confound を拾っている可能性があるので、specificity と感度分析を先に見ます。</td>
+<td>The pipeline with the highest decoding accuracy is the best</td>
+<td>Since we may be picking up artifact confounds, we will look at specificity and sensitivity analysis first. </td>
 </tr>
 <tr>
-<td>average reference は無難なので書かなくてよい</td>
-<td>reference は結果の前提なので、raw / rereference の両方を書きます。</td>
+<td>average reference is safe, so you don't need to write it</td>
+<td>Reference is the premise of the result, so write both raw and rereference. </td>
 </tr>
 <tr>
-<td>filter は cutoff だけ書けば足りる</td>
-<td>order、type、causal / acausal まで必要です。</td>
+<td>It is enough to write only cutoff in filter</td>
+<td>Order, type, and causal/acausal are required. </td>
 </tr>
 <tr>
-<td>高 beta / gamma の増加は neural だろう</td>
-<td>筋電重なりが強いので、EMG 監査なしには強く書きません。</td>
+<td>High beta/gamma increase would be neural</td>
+<td>Since the myoelectric overlap is strong, I cannot write strongly without an EMG audit. </td>
 </tr>
 <tr>
-<td>自動 pipeline を使ったので再現可能</td>
-<td>自動化と再現可能性は別であり、入力、しきい値、除去量、保持率の公開が必要です。</td>
-</tr>
-<tr>
-<td>wPLI や directed metric を使ったので volume conduction や因果問題は解決した</td>
-<td>lagged / directed 指標は候補であり、reference、ghost interaction、surrogate、外部妥当化の別監査が要ります。</td>
+<td>Reproducible using automatic pipeline</td>
+<td>Automation and reproducibility are two different things and require disclosure of inputs, thresholds, removal amounts, and retention rates. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>参考文献</h2>
+<h2>References</h2>
 <ol>
 <li>BIDS Specification: Electroencephalography. <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">official docs</a></li>
 <li>Pernet CR, Appelhoff S, Gorgolewski KJ, et al. EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. <em>Scientific Data</em>. 2019. <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">doi:10.1038/s41597-019-0104-8</a></li>
@@ -286,8 +273,4 @@ Muthukumaraswamy が整理した通り、muscle artifact は 20-300 Hz 近辺に
 <li>Jas M, Engemann DA, Bekhti Y, Raimondo F, Gramfort A. Autoreject: automated artifact rejection for MEG and EEG data. <em>NeuroImage</em>. 2017. <a href="https://doi.org/10.1016/j.neuroimage.2017.08.030" target="_blank">doi:10.1016/j.neuroimage.2017.08.030</a></li>
 <li>Pion-Tonachini L, Kreutz-Delgado K, Makeig S. ICLabel: An automated electroencephalographic independent component classifier, dataset, and website. <em>NeuroImage</em>. 2019. <a href="https://doi.org/10.1016/j.neuroimage.2019.05.026" target="_blank">doi:10.1016/j.neuroimage.2019.05.026</a></li>
 <li>Kessler V, et al. How EEG preprocessing shapes decoding performance. <em>Communications Biology</em>. 2025. <a href="https://doi.org/10.1038/s42003-025-08464-3" target="_blank">doi:10.1038/s42003-025-08464-3</a></li>
-<li>Vinck M, Oostenveld R, van Wingerden M, et al. An improved index of phase-synchronization for electrophysiological data in the presence of volume-conduction, noise and sample-size bias. <em>NeuroImage</em>. 2011. <a href="https://doi.org/10.1016/j.neuroimage.2011.01.055" target="_blank">doi:10.1016/j.neuroimage.2011.01.055</a></li>
-<li>Zhang L, Wang P, Zhang R, et al. The Influence of Different EEG References on Scalp EEG Functional Network Analysis During Hand Movement Tasks. <em>Frontiers in Human Neuroscience</em>. 2020. <a href="https://doi.org/10.3389/fnhum.2020.00367" target="_blank">doi:10.3389/fnhum.2020.00367</a></li>
-<li>Palva JM, Wang SH, Palva S, et al. Ghost interactions in MEG/EEG source space: A note of caution on inter-areal coupling measures. <em>NeuroImage</em>. 2018. <a href="https://doi.org/10.1016/j.neuroimage.2018.02.032" target="_blank">doi:10.1016/j.neuroimage.2018.02.032</a></li>
-<li>Haufe S, Nikulin VV, Müller K-R, Nolte G. A critical assessment of connectivity measures for EEG data: A simulation study. <em>NeuroImage</em>. 2013. <a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">doi:10.1016/j.neuroimage.2012.09.036</a></li>
 </ol>

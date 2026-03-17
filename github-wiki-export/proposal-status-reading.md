@@ -1,116 +1,116 @@
-# Wiki：提案と状態ラベルの読み方
+# Wiki: How to read suggestions and status labels
 
-> 『採用された』と『終わった』は別です
+> 'Recruited' and 'finished' are two different things
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-14 / 位置づけ: Reading guide
+- Updated: 2026-03-14 / Role: Reading guide
 
-## このページの役割
-このページは、Mind-Upload の提案ページや Issue ページに出てくる状態ラベルを読み違えないための補助ページです。提案が受理されたことと、実装や外部合意まで終わったことは別なので、その差を日常語で整理します。
+## Role Of This Page
+This page is an auxiliary page to help you avoid misreading the status labels that appear on Mind-Upload's proposal and issue pages. There is a difference between a proposal being accepted and implementation and external agreement completed, so we will explain the difference in everyday language.
 
-## 正確さの前提
-ここでの説明は読み方の補助です。個別提案の最新状態は、必ず提案ページと Issue 履歴へ戻って確認してください。
+## Accuracy Notes
+The explanations here are a reading aid. Be sure to return to the proposal page and issue history for the latest status of individual proposals.
 
-## 公開ページへ戻る
-- [技術提案](https://mind-upload.com/issue.html#proposal-integration)
-- [貢献ガイド](https://mind-upload.com/issue.html)
-- [検証基盤](https://mind-upload.com/verification.html)
+## Back To Public Pages
+- [Technical proposal](https://mind-upload.com/issue.html#proposal-integration)
+- [Contribution Guide](https://mind-upload.com/issue.html)
+- [Verification base](https://mind-upload.com/verification.html)
 
-## 関連 Wiki
-- [Wiki: 文献と証拠ページの読み方](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading) - 提案ページが、文献系ページとどう違うかを補います。
-- [Wiki: 内製で先にやることと外部依存](https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies) - 外部依存を、今できる準備作業まで分解して読みたい人向けです。
-- [Wiki: 検証基盤の基本](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - なぜ達成条件と反証条件を先に置くのかを確認できます。
-- [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - 他の基礎ページへ戻れます。
+## Related Wiki Pages
+- [Wiki: How to read the literature and evidence page](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading) - Compensate for how proposal pages differ from literature pages.
+- [Wiki: What to do first in-house and external dependencies](https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies) - This book is for people who want to break down external dependencies into the preparation work that can be done now.
+- [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - You can see why achievement conditions and disconfirmation conditions are placed first.
+- [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other basic pages.
 
-## いま分かっていること
-- 提案受理や文書反映は、コードや共同研究の完了を自動的には意味しません。
-- 外部依存タスクは、こちら側の準備と相手側の合意を分けて読む必要があります。
-- 状態ラベルは、実装や公開の位置を示すもので、科学的確定そのものではありません。
+## What Is Currently Known
+- Acceptance of the proposal or reflection of the document does not automatically mean completion of the code or collaborative research.
+- For externally dependent tasks, you need to read the preparation on your side and the agreement on the other side separately.
+- Status labels indicate the location of implementation and publication, not scientific certainty per se.
 
-## まだ分かっていないこと
-- 各提案が最終的にどこまで実装されるかは、今後の進行で変わり得ます。
-- 外部依存タスクの完了時期や条件は、ラベルだけでは保証できません。
+## What Is Still Unknown
+- The extent to which each proposal is ultimately implemented may change as we proceed.
+- The completion timing and conditions of externally dependent tasks cannot be guaranteed by labels alone.
 
 ---
 
-<h2>まず区別したいこと</h2>
+<h2>What I would like to distinguish first</h2>
 <p>
-提案ページでは、「良い案として採った」「本文へ書いた」「コードまで動いた」「外部合意まで終わった」が別の段階です。この差を曖昧にすると、進んでいる作業とまだ保留の作業を混同してしまいます。
+On the proposal page, the different stages are ``accepted as a good idea,'' ``written in the main text,'' ``worked into code,'' and ``completed with external agreement.'' Blurring this distinction confuses work that is progressing with work that is still pending.
 </p>
 
-<h2>状態ラベルを日常語にする</h2>
+<h2>Make state labels everyday words</h2>
 <table>
 <thead>
 <tr>
-<th>ラベルの種類</th>
-<th>日常語で言うと</th>
-<th>まだ残ること</th>
+<th>Label type</th>
+<th>In everyday language</th>
+<th>What remains</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>提案公開</strong></td>
-<td>案として表に出ていて、議論できる状態です。</td>
-<td>妥当性や優先順位の確認が残ります。</td>
+<td><strong>Publish proposal</strong></td>
+<td>It has been put forward as a proposal and is open for discussion. </td>
+<td>Verification of validity and priority remains. </td>
 </tr>
 <tr>
-<td><strong>提案受理 / 方針反映</strong></td>
-<td>方向性としては採る価値が高いと判断した状態です。</td>
-<td>実装方法、検証条件、公開物の整備が残ります。</td>
+<td><strong>Proposal acceptance/policy reflection</strong></td>
+<td>As a direction, we have judged that it is worth taking. </td>
+<td>The implementation method, verification conditions, and publication materials remain. </td>
 </tr>
 <tr>
-<td><strong>文書反映</strong></td>
-<td>本文には書かれている状態です。</td>
-<td>コード、データ、ログが揃っているとは限りません。</td>
+<td><strong>Document reflection</strong></td>
+<td>The condition is as written in the main text. </td>
+<td>Code, data, and logs may not be complete. </td>
 </tr>
 <tr>
-<td><strong>実装済み</strong></td>
-<td>実際に動くものがある状態です。</td>
-<td>第三者追試や監査が別途必要なことがあります。</td>
+<td><strong>Implemented</strong></td>
+<td>It is a state where there is something that actually moves. </td>
+<td>Separate third-party supplementary examinations or audits may be required. </td>
 </tr>
 <tr>
-<td><strong>外部依存</strong></td>
-<td>こちらだけでは完了できず、相手先や制度が必要な状態です。</td>
-<td>合意、契約、実験、資金などが残ります。</td>
+<td><strong>External dependencies</strong></td>
+<td>We cannot complete the process alone; we need a partner and a system. </td>
+<td>Agreements, contracts, experiments, funding, etc. remain. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>ラベルが意味しないこと</h2>
+<h2>What labels don't mean</h2>
 
 <h4>Not Mean</h4>
 <ul>
-<li><strong>提案受理：</strong> 科学的に完全に正しいと確定した、という意味ではありません。</li>
-<li><strong>文書反映：</strong> 実装や共同研究まで終わった、という意味ではありません。</li>
-<li><strong>実装済み：</strong> 社会実装や制度整備まで済んだ、という意味ではありません。</li>
+<li><strong>Proposal acceptance:</strong> This does not mean that the proposal is completely scientifically correct. </li>
+<li><strong>Document reflection:</strong> This does not mean that implementation and joint research are finished. </li>
+<li><strong>Implemented:</strong> This does not mean that social implementation and system development have been completed. </li>
 </ul>
 
-<h2>どこへ戻るべきか</h2>
+<h2>Where should I go back</h2>
 <table>
 <thead>
 <tr>
-<th>知りたいこと</th>
-<th>戻るページ</th>
+<th>What I want to know</th>
+<th>Back page</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>提案の中身と根拠</td>
-<td><a href="https://mind-upload.com/issue.html#proposal-integration">技術提案</a></td>
+<td>Contents and basis of proposal</td>
+<td><a href="https://mind-upload.com/issue.html#proposal-integration">Technical proposal</a></td>
 </tr>
 <tr>
-<td>いま誰が何を手伝えるか</td>
-<td><a href="https://mind-upload.com/issue.html">貢献ガイド</a></td>
+<td>Who can help what now?</td>
+<td><a href="https://mind-upload.com/issue.html">Contribution guide</a></td>
 </tr>
 <tr>
-<td>達成条件や反証条件の前提</td>
-<td><a href="https://mind-upload.com/verification.html">検証基盤</a></td>
+<td>Assumptions of achievement conditions and disproval conditions</td>
+<td><a href="https://mind-upload.com/verification.html">Verification infrastructure</a></td>
 </tr>
 </tbody>
 </table>
 
-<strong>外部依存を『待ち箱』にしないために</strong>
+<strong>To avoid making external dependencies a "waiting box"</strong>
 <p>
-このページは段階差の説明です。外部依存になったあとに、こちらで何を先に作れるかまで整理したい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies">Wiki: 内製で先にやることと外部依存の切り分け</a> をご覧ください。
+This page explains the stage differences. If you want to organize what you can create first after becoming an external dependency, please see <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies">Wiki: What to do first in-house and separating external dependencies</a>.
 </p>

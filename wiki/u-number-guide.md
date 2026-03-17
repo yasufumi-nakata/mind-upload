@@ -1,46 +1,51 @@
 ---
 layout: default
-title: "Wiki：U番号ガイド"
-description: "文献地図で使う U番号を、日常語で読み替えて迷いにくくする補助ページです。"
+title: "Wiki: U Number Guide"
+description: "A supplementary page that paraphrases the U numbers used in the literature map into everyday language, making it easier to find an entry point."
 article_type: Wiki
-subtitle: "U は『未解決問題の名前札』です"
+subtitle: "U is a name tag for unresolved problems."
 author: Mind Uploading Research Project
 last_updated: "2026-03-16"
 note: "Reading guide"
-audience: "U0-U15 の番号で身構えやすい人、文献地図の入口を知りたい人"
-reading_time: "8〜12分"
-page_intro: "このページは、文献地図で出てくる U番号を日常語で読み替えるための補助ページです。番号を暗記することが目的ではなく、『自分はどの塊から読めばよいか』を見つけやすくすることを目標にします。"
-accuracy_note: "ここでの説明は入口用の言い換えです。厳密な定義や最新の状態は、必ず文献地図本文へ戻って確認してください。"
+audience: "People who feel intimidated by labels like U0-U15, and people who want to find the entrance to the literature map."
+reading_time: "8-12 minutes"
+page_intro: >
+  This page helps translate the U numbers that appear in the literature map into everyday
+  language. The goal is not to memorize the numbers, but to make it easier to find which block
+  a reader should start with.
+accuracy_note: >
+  The explanations here are entry-point paraphrases. For exact definitions and the latest status,
+  always return to the main literature map.
 page_highlights:
-  - "U番号はレベルではなく、未解決問題の名前札です。"
-  - "似た U を大きな問題群にまとめて、入口を見つけやすくしています。"
-  - "番号の暗記ではなく、関心に合う塊を見つける使い方を勧めます。"
-  - "技術・自然科学の既定入口は、U1/U7→U4/U13→U8→U3→U10 の順です。"
+  - "A U number is a name tag for an unresolved problem, not a level."
+  - "Similar U labels are grouped into larger problem clusters to make entry points easier to find."
+  - "The recommended use is not memorizing the numbers, but finding the cluster that matches your interests."
+  - "For technology and natural-science readers, the default route is U1/U7 -> U4/U13 -> U8 -> U3 -> U10."
 known_points:
-  - "U は、文献地図の中で未解決問題を整理するための内部コードです。"
-  - "大きな問題群で見れば、どこから読むべきかはかなり分かりやすくなります。"
-  - "引用数や番号の大きさは、主張の強さや重要度そのものではありません。"
-  - "技術・自然科学の読者は、U0/U12/U15 を既定入口に置かない方が読み違えを減らせます。"
+  - "U is an internal code used to organize unresolved problems in the literature map."
+  - "Looking at larger problem groups makes it much easier to see where to start reading."
+  - "Citation count or the size of the number does not directly express claim strength or importance."
+  - "For technology and natural-science readers, it is better not to treat U0/U12/U15 as the default entry point."
 unknown_points:
-  - "各 U の内容や境界は、今後の文献整理で更新される可能性があります。"
-  - "どの U に最も研究資源を集中すべきかは、まだ固定していません。"
-  - "U11 の意識指標比較を主導線へ戻すかどうかは、今後の prediction competition と benchmark 整備で変わり得ます。"
+  - "The content and boundaries of each U may change as the literature map evolves."
+  - "It has not yet been fixed which U should receive the greatest concentration of research resources."
+  - "Whether U11's consciousness-metric comparison returns to the main route may change with future prediction competitions and benchmark development."
 wiki_links:
-  - label: "Wiki: 文献と証拠ページの読み方"
+  - label: "Wiki: How to read the literature and evidence page"
     url: "/wiki/literature-and-evidence-reading.html"
-    description: "文献地図そのものの役割を先に押さえたい人向けです。"
-  - label: "Wiki: WBEの基本"
+    description: "For readers who want to understand the role of the literature map itself first."
+  - label: "Wiki: Basics of WBE"
     url: "/wiki/mind-upload-basics.html"
-    description: "U番号の背後にある全体像を先に見たい人向けです。"
+    description: "For readers who want to see the big picture behind the U numbers first."
   - label: "Wiki Home"
     url: "/wiki/"
-    description: "他の基礎ページへ戻れます。"
+    description: "A route back to the other foundational pages."
 recommended_pages:
-  - label: "文献地図"
+  - label: "Literature Map"
     url: "/research_harvest_50.html"
-  - label: "技術ロードマップ"
+  - label: "Technology Roadmap"
     url: "/tech_roadmap.html"
-  - label: "検証基盤"
+  - label: "Verification"
     url: "/verification.html"
 ---
 
@@ -48,80 +53,80 @@ recommended_pages:
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>まず覚えなくてよいこと</h2>
+<h2>What you don't need to remember first</h2>
 <p>
-U番号は試験の暗記項目ではありません。役割は「この文献は、どの未解決問題に関係するか」を揃えるための名前札です。まずは番号そのものより、どの塊の問題かを見る方が大事です。
+The U number is not a memorized item for the exam. The role is a name tag that helps you identify which unresolved problems this document is related to. First of all, it is more important to look at which block is the problem than the number itself.
 </p>
 </div>
 
 <section class="section" id="clusters">
-<h2 class="section-title">大きな問題群で見る</h2>
+<h2 class="section-title">Looking at big problems</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>大きな問題群</th>
-<th>主な U</th>
-<th>日常語でいうと</th>
+<th>Big problems</th>
+<th>Main U</th>
+<th>In everyday language</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>定義と評価</strong></td>
+<td><strong>Definition and evaluation</strong></td>
 <td>U0 / U11 / U13 / U14</td>
-<td>何を「同じ」「成功」「追試できる」と呼ぶかの問題です。</td>
+<td>The problem is what to call "same", "successful", and "able to try again". </td>
 </tr>
 <tr>
-<td><strong>計測と推定</strong></td>
+<td><strong>Measurement and estimation</strong></td>
 <td>U1 / U7</td>
-<td>脳や行動をどこまで測れ、どこまで推定できるかの問題です。</td>
+<td>The question is how much of the brain and behavior can be measured and how much can be estimated. </td>
 </tr>
 <tr>
-<td><strong>因果と実装安定性</strong></td>
+<td><strong>Causality and implementation stability</strong></td>
 <td>U4 / U8 / U10</td>
-<td>条件変更への反応、閉ループの安定、物理的コストの問題です。</td>
+<td>It is a matter of reaction to changes in conditions, stability of the closed loop, and physical cost. </td>
 </tr>
 <tr>
-<td><strong>境界と本人性</strong></td>
+<td><strong>Boundaries and identity</strong></td>
 <td>U3 / U12</td>
-<td>どこまでを主体に含めるか、分岐後の本人性をどう扱うかの問題です。</td>
+<td>The problem is how much to include in the subject and how to handle the identity after branching. </td>
 </tr>
 <tr>
-<td><strong>制度と公開運用</strong></td>
+<td><strong>System and public operation</strong></td>
 <td>U15</td>
-<td>停止基準、公開基準、責任の置き方まで含めた運用の問題です。</td>
+<td>This is an operational issue, including suspension standards, disclosure standards, and how to place responsibility. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="entry-points">
-<h2 class="section-title">関心別の入口</h2>
+<h2 class="section-title">Entrance by interest</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>いま気になること</th>
-<th>まず見る U 群</th>
+<th>What I'm curious about now</th>
+<th>First look at U group</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>EEG や逆問題、時刻同期の限界</td>
+<td>EEG, inverse problems, and limits of time synchronization</td>
 <td>U1 / U7</td>
 </tr>
 <tr>
-<td>decode 成功と WBE 主張の違い</td>
+<td>Difference between decode success and WBE claim</td>
 <td>U4 / U13</td>
 </tr>
 <tr>
-<td>長期 closed-loop の安定性</td>
+<td>Long-term closed-loop stability</td>
 <td>U8</td>
 </tr>
 <tr>
-<td>connectome 外の maintenance-state と支持系</td>
+<td>Maintenance-state and support system outside the connectome</td>
 <td>U3</td>
 </tr>
 <tr>
-<td>物理コストや散逸まで含めたい</td>
+<td>I want to include physical costs and dissipation</td>
 <td>U10</td>
 </tr>
 </tbody>
@@ -129,67 +134,67 @@ U番号は試験の暗記項目ではありません。役割は「この文献�
 </section>
 
 <section class="section" id="technical-first-route">
-<h2 class="section-title">技術・自然科学で先に見る順</h2>
+<h2 class="section-title">Order of viewing first by technology/natural science</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>順番</th>
-<th>U 群</th>
-<th>この順で見る理由</th>
+<th>Order</th>
+<th>U Groups</th>
+<th>Reasons for viewing in this order</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>1</strong></td>
 <td><strong>U1 / U7</strong></td>
-<td>まず、何が直接観測され、何がまだ推定かを固定しないと、その後の主張レベルが全部ぶれます。</td>
+<td>First, if we do not fix what is directly observed and what can still be estimated, all subsequent assertion levels will be unstable. </td>
 </tr>
 <tr>
 <td><strong>2</strong></td>
 <td><strong>U4 / U13</strong></td>
-<td>decode や模倣の成功を、因果保存や emulation と読み違えないためです。</td>
+<td>This is to avoid misinterpreting successful decoding or imitation as causal conservation or emulation. </td>
 </tr>
 <tr>
 <td><strong>3</strong></td>
 <td><strong>U8</strong></td>
-<td>within-session の成功が、長期運用の安定とは限らないためです。</td>
+<td>The success of within-session does not necessarily mean stable long-term operation. </td>
 </tr>
 <tr>
 <td><strong>4</strong></td>
 <td><strong>U3</strong></td>
-<td>sleep/homeostasis、髄鞘/代謝支持、astrocyte ensemble、clearance/immune support を分けて読まないと、構造の前進を長期主体同等性へ読みすぎるためです。</td>
+<td>If you do not read sleep/homeostasis, myelin/metabolic support, astrocyte ensemble, and clearance/immune support separately, you will read structural progress too much into long-term subject equivalence. </td>
 </tr>
 <tr>
 <td><strong>5</strong></td>
 <td><strong>U10</strong></td>
-<td>最後に、散逸と実効コストを反証条件として戻し、計算可能性だけで話を終えないためです。</td>
+<td>Finally, we bring back dissipation and effective cost as refutation conditions, so that we don't end the discussion with computability alone. </td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>主導線から外す群</strong>
+<strong>Group removed from lead line</strong>
 <p>
-<strong>U0 / U12 / U15</strong> は重要ですが、技術・自然科学の既定入口には置きません。ここで先に必要なのは、本人性や制度論よりも、<strong>何が測れて、どこまで直接妥当化できて、どこで閉ループが壊れ、どの hidden state が残るか</strong>を固定することだからです。
+Although <strong>U0 / U12 / U15</strong> are important, they should not be placed at the default entry point for technology and natural sciences. What is needed here is to fix what can be measured, to what extent it can be directly validated, where the closed loop breaks, and what hidden state remains, rather than focusing on identity or institutional theory.
 </p>
 </div>
 </section>
 
 <section class="section" id="what-not">
-<h2 class="section-title">U番号で読み違えないために</h2>
+<h2 class="section-title">To avoid misreading the U number</h2>
 <div class="key-points">
 <h4>Checklist</h4>
 <ul>
-<li><strong>番号を暗記しない：</strong> まず問題群から入ります。</li>
-<li><strong>引用数で判断しない：</strong> 多いことと、解決済みであることは別です。</li>
-<li><strong>厳密定義へ戻る：</strong> 本当に使うときは文献地図本文の定義表へ戻ります。</li>
+<li><strong>Don't memorize numbers:</strong> Start with the problem group. </li>
+<li><strong>Don't judge by the number of citations:</strong> There is a difference between having a lot and being solved. </li>
+<li><strong>Return to strict definition:</strong> When you actually use it, return to the definition table in the main text of the bibliographic map. </li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2 class="section-title">Where to return next</h2>
 <p>
-番号の意味がつかめたら <a href="../research_harvest_50.html">文献地図</a> に戻ってください。もし文献ページ全体の役割差がまだ曖昧なら、先に <a href="literature-and-evidence-reading.html">文献と証拠ページの読み方</a> を見るとさらに読みやすくなります。
+Once you understand the meaning of the numbers, please return to <a href="../research_harvest_50.html">Bibliography Map</a>. If the role of the literature page as a whole is still unclear, it will be easier to read if you first look at <a href="literature-and-evidence-reading.html">How to read the literature and evidence page</a>.
 </p>
 </section>
 
@@ -199,17 +204,17 @@ U番号は試験の暗記項目ではありません。役割は「この文献�
 <div class="sidebar-box">
 <h4>Related Wiki</h4>
 <ul>
-<li><a href="literature-and-evidence-reading.html">文献と証拠ページの読み方 →</a></li>
-<li><a href="mind-upload-basics.html">WBEの基本 →</a></li>
-<li><a href="proposal-status-reading.html">提案と状態ラベルの読み方 →</a></li>
+<li><a href="literature-and-evidence-reading.html">How to read the literature and evidence page →</a></li>
+<li><a href="mind-upload-basics.html">WBE basics →</a></li>
+<li><a href="proposal-status-reading.html">How to read proposals and status labels →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>公開ページ</h4>
+<h4>Public page</h4>
 <ul>
-<li><a href="../research_harvest_50.html">文献地図 →</a></li>
-<li><a href="../tech_roadmap.html">技術ロードマップ →</a></li>
-<li><a href="../verification.html">検証基盤 →</a></li>
+<li><a href="../research_harvest_50.html">Documentation map →</a></li>
+<li><a href="../tech_roadmap.html">Technology roadmap →</a></li>
+<li><a href="../verification.html">Verification infrastructure →</a></li>
 </ul>
 </div>
 </aside>

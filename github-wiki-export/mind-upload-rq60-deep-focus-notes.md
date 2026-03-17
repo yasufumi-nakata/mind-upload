@@ -1,601 +1,249 @@
----
-layout: default
-title: "Mind-upload RQ60 深掘り焦点ノート（EEG-DATA × 助成）"
-description: "60RQを1件ずつ、EEGで直接検証する核・外部必須要件・応募テーマまで固定した深掘りノート。"
-article_type: Wiki
-subtitle: "汎用要約ではなく、RQごとの論点を固定する"
-author: Mind Uploading Research Project
-last_updated: "2026-03-18"
-note: "RQ-by-RQ Deep Focus"
-audience: "各RQを申請文と実験手順に直接落としたい人"
-reading_time: "20〜35分"
-page_intro: "このページは、mind-uploadの60RQを1件ずつ対象に、EEG-DATAで直接確認する核、auto-research-funds向け応募テーマ、EEG外で必要な要件を固定した実務ノートです。"
-accuracy_note: "A/B/C判定は mind-upload-eeg-rq60-feasibility-and-funds と同一。Cは『重要でない』ではなく『EEG単独で完結しない』を意味します。"
-wiki_links:
-  - label: "Wiki: RQ60 EEG検証可否と助成テーマ"
-    url: "/wiki/mind-upload-eeg-rq60-feasibility-and-funds.html"
-    description: "判定とデータ候補の正本。"
-  - label: "Wiki: RQ60 申請プレイブック"
-    url: "/wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html"
-    description: "応募先IDと最小成果物の固定表。"
-recommended_pages:
-  - label: "文献地図"
-    url: "/research_harvest_50.html"
-  - label: "データ&ベンチ"
-    url: "/datasets.html"
+# Mind-upload RQ60 Deep focus notes (EEG-DATA × Grant)
+
+> Fix the issues for each RQ instead of a general summary
+>
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+
+- Updated: 2026-03-15 / Role: RQ-by-RQ Deep Focus
+
+## Role Of This Page
+This page is a practical note that fixes the core of mind-upload's 60 RQs, which can be confirmed directly with EEG-DATA, application themes for auto-research-funds, and necessary requirements outside of EEG.
+
+## Accuracy Notes
+A/B/C judgment is the same as mind-upload-eeg-rq60-feasibility-and-funds. C means 'not complete with EEG alone' rather than 'not important'.
+
+## Back To Public Pages
+- [Literature map](https://mind-upload.com/research_harvest_50.html)
+- [Data & Bench](https://mind-upload.com/datasets.html)
+
+## Related Wiki Pages
+- [Wiki: RQ60 EEG verification availability and subsidy theme](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds) - The original version of the judgment and data candidates.
+- [Wiki: RQ60 Application Playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - Fixed table of applicant ID and minimum deliverables.
+
 ---
 
-<main class="main-container">
-<article class="content-column">
+## How to use
 
-## 使い方
+1. Select only one `RQ` and implement only the `core to be directly verified with EEG` in the table below first.
+2. Copy the `application theme (grant key)` directly to the proposed application title.
+3. Don't expand your claim unless you can satisfy the ``required outside the EEG''.
 
-1. `RQ` を1件だけ選び、下表の `EEGで直接検証する核` だけ先に実装する。
-2. `応募テーマ（助成キー）` をそのまま申請タイトル案に転記する。
-3. `EEG外で必須` を満たせない限り、主張を拡張しない。
+## Meaning of judgment
 
-## 判定の意味
+- `A`: Main claims can be verified with EEG-DATA only.
+- `B`: EEG main analysis is possible. Requires additional external modality/design.
+- `C`: Mainly system/legal/theoretical integration. EEG is an audit log or supporting evidence.
 
-- `A`: EEG-DATAのみで主要主張まで実証可能。
-- `B`: EEG主解析は可能。外部モダリティ/設計の追加が必要。
-- `C`: 制度・法務・理論統合が主。EEGは監査ログまたは補助証拠。
+## U0 (identity)
 
-## U0（同一性）
-
-| RQ | 判定 | EEGで直接検証する核 | 応募テーマ（助成キー） | 候補EEG-DATA | EEG外で必須 |
+| RQ | Judgment | Core to be directly verified with EEG | Application theme (grant key) | Main EEG-DATA | Required outside of EEG |
 |---|---|---|---|---|---|
-| U0-1 | A | 観測一致と介入応答一致を分けた二軸ROC | 同一性KPIの必要条件/十分条件設計（G2/G3） | 11, 29, 696 | 人格同一性の規範定義 |
-| U0-2 | A | ms同期ずれと状態表現崩れの対応係数 | 時刻同期監査基準の標準化（G2/G3） | 11, 29, 696 | センサー間時計校正規約 |
-| U0-3 | A | タスク別閾値と過学習除外の外部検証差 | 汎化閾値つき個体同定法（G2/G3） | 11, 29, 696 | 閾値採択の審査ルール |
-| U0-4 | B | 分岐後の技術ID安定性の下限評価 | 分岐主体の同一性判定手順（G2/G3） | 11, 29, 696 | 法的主体定義・責任配分 |
+| U0-1 | A | Two-axis ROC that separates observation matching and intervention response matching | Necessary/sufficient condition design for identity KPI (G2/G3) | 11, 29, 696 | Normative definition of personality identity |
+| U0-2 | A | Correspondence coefficient between ms synchronization deviation and state representation collapse | Standardization of time synchronization audit criteria (G2/G3) | 11, 29, 696 | Inter-sensor clock calibration regular agreement |
+| U0-3 | A | External verification difference between task-specific thresholds and overfitting exclusion | Individual identification method with generalized threshold (G2/G3) | 11, 29, 696 | Screening rules for threshold selection |
+| U0-4 | B | Lower limit evaluation of technical ID stability after branching | Procedure for determining identity of branching entity (G2/G3) | 11, 29, 696 | Legal entity definition/responsibility allocation |
 
-## U1（逆問題）
+## U1 (inverse problem)
 
-| RQ | 判定 | EEGで直接検証する核 | 応募テーマ（助成キー） | 候補EEG-DATA | EEG外で必須 |
+| RQ | Judgment | Core to be directly verified with EEG | Application theme (grant key) | Main EEG-DATA | Required outside of EEG |
 |---|---|---|---|---|---|
-| U1-1 | A | 事前分布ごとの位置誤差と再現差 | 逆問題事前分布ベンチ（G1/G4） | 56, 676, 1839 | モデル選択規約 |
-| U1-2 | A | 導電率/電極欠損/ノイズ注入の不確実性伝播 | 不確実性校正つき逆推定（G1/G4） | 56, 676, 1839 | 頭部モデル同定条件 |
-| U1-3 | B | MNE/beamformer/Champagneの乖離率分布 | 手法乖離を許容する判定規則（G1/G4） | 56, 676, 1839 | 手法間合意プロトコル |
-| U1-4 | B | 推定値と後方分布公開時の再解析一致率 | 後方分布公開基準の策定（G1/G4） | 56, 676, 1839 | 公開範囲と匿名化判断 |
+| U1-1 | A | Position error and recall for each prior distribution | Inverse problem prior distribution bench (G1/G4) | 56, 676, 1839 | Model selection rules |
+| U1-2 | A | Uncertainty propagation of conductivity/electrode defects/noise injection | Inverse estimation with uncertainty calibration (G1/G4) | 56, 676, 1839 | Head model identification conditions |
+| U1-3 | B | Deviation rate distribution of MNE/beamformer/Champagne | Decision rule that allows method deviation (G1/G4) | 56, 676, 1839 | Inter-method agreement protocol |
+| U1-4 | B | Estimated values and reanalysis concordance rate when releasing backward distribution | Establishment of standards for publishing backward distribution (G1/G4) | 56, 676, 1839 | Scope of disclosure and anonymization decision |
 
-## U3（境界拡張）
+## U3 (boundary extension)
 
-| RQ | 判定 | EEGで直接検証する核 | 応募テーマ（助成キー） | 候補EEG-DATA | EEG外で必須 |
+| RQ | Judgment | Core to be directly verified with EEG | Application theme (grant key) | Main EEG-DATA | Required outside of EEG |
 |---|---|---|---|---|---|
-| U3-1 | B | EEG単独vs統合モデルの予測改善量 | 境界拡張の効果量推定（G2/G6） | 13, 16, 39 | 追加モダリティ収集 |
-| U3-2 | B | connectome proxyと機能予測の相関下限 | 種横断比較の設計研究（G2/G6） | 13, 16, 39 | 種横断connectomeデータ |
-| U3-3 | B | 身体/環境ループ除去時の性能劣化 | 身体結合の必要性検証（G2/G6） | 13, 16, 39 | 実環境介入ログ |
-| U3-4 | C | 必要最小構成の代理KPIのみ固定 | 最小構成判定の制度設計（G2/G6） | 13, 16, 39 | 理論採択基準の合意 |
-| U3-5 | C | glymphatic未観測下での代替指標探索 | 体液系統合の準備研究（G2/G6） | 13, 16, 39 | 代謝/体液計測データ |
-| U3-6 | C | 免疫監視除外モデルの短期破綻兆候抽出 | 長期破綻監視の設計（G2/G6） | 13, 16, 39 | 炎症・免疫縦断データ |
+| U3-1 | B | Predictive improvement of EEG alone vs. integrated model | Estimated effect size of boundary expansion (G2/G6) | 13, 16, 39 | Additional modality collection |
+| U3-2 | B | Lower bound of correlation between connectome proxy and functional prediction | Cross-species comparison design study (G2/G6) | 13, 16, 39 | Cross-species connectome data |
+| U3-3 | B | Performance deterioration when removing the body/environment loop | Verification of necessity of body connection (G2/G6) | 13, 16, 39 | Real environment intervention log |
+| U3-4 | C | Fixed only the proxy KPI for the required minimum configuration | System design for determining the minimum configuration (G2/G6) | 13, 16, 39 | Agreement on theory adoption criteria |
+| U3-5 | C | Search for alternative indicators under unobserved glymphatic conditions | Preparatory research on body fluid system integration (G2/G6) | 13, 16, 39 | Metabolic/body fluid measurement data |
+| U3-6 | C | Extraction of short-term failure signs of immune surveillance exclusion model | Design of long-term failure monitoring (G2/G6) | 13, 16, 39 | Longitudinal data on inflammation and immunity |
 
-## U4（因果）
+## U4 (causal)
 
-| RQ | 判定 | EEGで直接検証する核 | 応募テーマ（助成キー） | 候補EEG-DATA | EEG外で必須 |
+| RQ | Judgment | Core to be directly verified with EEG | Application theme (grant key) | Main EEG-DATA | Required outside of EEG |
 |---|---|---|---|---|---|
-| U4-1 | B | 相関推定と介入効果の符号不一致率 | 相関→因果移送条件の定式化（G1/G4） | 19, 56, 1839 | 介入設計の倫理審査 |
-| U4-2 | A | 最小介入主張の再現可否 | ground-truth因果検証（G1/G4） | 19, 56, 1839 | 介入失敗時停止規則 |
-| U4-3 | B | DCM/active inferenceの反事実誤差比較 | 理論予測の単一計画比較（G1/G4） | 19, 56, 676 | 理論間の共通I/O仕様 |
-| U4-4 | B | falsification閾値（ΔAUC/符号反転率） | 反証先行の評価契約（G1/G4） | 19, 56, 1839 | 失敗宣言の運用規約 |
+| U4-1 | B | Sign discrepancy rate between correlation estimation and intervention effect | Formulation of correlation → causal transfer conditions (G1/G4) | 19, 56, 1839 | Ethical review of intervention design |
+| U4-2 | A | Reproducibility of minimal intervention claim | Ground-truth causal verification (G1/G4) | 19, 56, 1839 | Stopping rule when intervention fails |
+| U4-3 | B | Counterfactual error comparison of DCM/active inference | Single design comparison of theoretical predictions (G1/G4) | 19, 56, 676 | Common I/O specifications between theories |
+| U4-4 | B | Falsification threshold (ΔAUC/sign reversal rate) | Evaluation contract with falsification precedent (G1/G4) | 19, 56, 1839 | Operating rules for failure declaration |
 
-## U7（標準化・再現性）
+## U7 (Standardization/Reproducibility)
 
-| RQ | 判定 | EEGで直接検証する核 | 応募テーマ（助成キー） | 候補EEG-DATA | EEG外で必須 |
+| RQ | Judgment | Core to be directly verified with EEG | Application theme (grant key) | Main EEG-DATA | Required outside of EEG |
 |---|---|---|---|---|---|
-| U7-1 | A | 同期/QC/刺激ログ必須項目の欠落率 | BIDS拡張監査基盤（G1/G3） | 676, 783, 4878 | 標準仕様の組織採択 |
-| U7-2 | A | LSL同期誤差のジッタ分布と閾値 | 同期誤差自動警告運用（G1/G3） | 676, 783, 4878 | 装置間校正SOP |
-| U7-3 | A | 前処理設定差分による結果ドリフト | 前処理監査CIの確立（G1/G3） | 676, 783, 4878 | CI運用ガバナンス |
-| U7-4 | A | アライメント失敗時の再計測判定木 | 再計測/除外の運用基準（G1/G3） | 676, 783, 4878 | 測定再実施コスト計画 |
-| U7-5 | A | release block閾値に対する偽ブロック率 | 再現率低下の停止規則（G1/G3） | 676, 783, 4878 | リリース責任体制 |
-| U7-6 | A | 欠損モダリティ下の結論保存率 | 最小観測セット設計（G1/G3） | 676, 783, 4878 | 欠損時の臨床運用基準 |
+| U7-1 | A | Missing rate of synchronization/QC/stimulation log required items | BIDS extended audit infrastructure (G1/G3) | 676, 783, 4878 | Organizational adoption of standard specifications |
+| U7-2 | A | LSL synchronization error jitter distribution and threshold | Synchronization error automatic warning operation (G1/G3) | 676, 783, 4878 | Inter-device calibration SOP |
+| U7-3 | A | Results drift due to preprocessing setting differences | Establishment of preprocessing audit CI (G1/G3) | 676, 783, 4878 | CI operation governance |
+| U7-4 | A | Re-measurement judgment tree in case of alignment failure | Operational criteria for re-measurement/exclusion (G1/G3) | 676, 783, 4878 | Measurement re-execution cost plan |
+| U7-5 | A | False block rate against release block threshold | Stopping rule for decreasing recall rate (G1/G3) | 676, 783, 4878 | Release responsibility system |
+| U7-6 | A | Conclusion preservation rate under missing modality | Minimum observation set design (G1/G3) | 676, 783, 4878 | Clinical operational standards when missing |
 
-## U8（閉ループ運用）
+## U8 (closed loop operation)
 
-| RQ | 判定 | EEGで直接検証する核 | 応募テーマ（助成キー） | 候補EEG-DATA | EEG外で必須 |
+| RQ | Judgment | Core to be directly verified with EEG | Application theme (grant key) | Main EEG-DATA | Required outside of EEG |
 |---|---|---|---|---|---|
-| U8-1 | B | 遅延変化に対する安定率/回復時間 | 閉ループ遅延許容域の同定（G2/G5） | 6, 1972, 2412, 696 | 実装系制御器の設計 |
-| U8-2 | B | オンライン較正頻度と性能維持率 | 概念ドリフト対策の最適化（G2/G5） | 6, 1972, 2412, 696 | 連続運用インフラ |
-| U8-3 | B | 個体差・日内変動の分散分解 | 長期安定性KPI設計（G2/G5） | 6, 1972, 2412, 696 | 長期追跡プロトコル |
-| U8-4 | B | 異常検知遅延とフェイルセーフ発動率 | 安全停止評価契約（G2/G5） | 6, 1972, 2412, 696 | 運用現場の安全手順 |
-| U8-5 | B | オーバーライド時の誤作動率と復帰時間 | Human-in-the-loop評価（G2/G5） | 6, 1972, 2412, 696 | 操作者教育と責任分界 |
-| U8-6 | B | 再学習間隔と安全余裕のトレードオフ曲線 | 再学習スケジューリング（G2/G5） | 6, 1972, 2412, 696 | MLOps更新統制 |
+| U8-1 | B | Stability rate/recovery time against delay changes | Identification of closed-loop delay tolerance range (G2/G5) | 6, 1972, 2412, 696 | Design of mounted system controller |
+| U8-2 | B | Online calibration frequency and performance maintenance rate | Optimization of concept drift countermeasures (G2/G5) | 6, 1972, 2412, 696 | Continuous operation infrastructure |
+| U8-3 | B | Variance decomposition of individual differences and diurnal variation | Long-term stability KPI design (G2/G5) | 6, 1972, 2412, 696 | Long-term tracking protocol |
+| U8-4 | B | Abnormality detection delay and failsafe activation rate | Safe shutdown evaluation contract (G2/G5) | 6, 1972, 2412, 696 | Safety procedures at operational sites |
+| U8-5 | B | Malfunction rate and recovery time during override | Human-in-the-loop evaluation (G2/G5) | 6, 1972, 2412, 696 | Operator training and demarcation of responsibility |
+| U8-6 | B | Trade-off curve between relearning interval and safety margin | Relearning scheduling (G2/G5) | 6, 1972, 2412, 696 | MLOps update control |
 
-## U10（情報熱力学）
+## U10 (Information Thermodynamics)
 
-| RQ | 判定 | EEGで直接検証する核 | 応募テーマ（助成キー） | 候補EEG-DATA | EEG外で必須 |
+| RQ | Judgment | Core to be directly verified with EEG | Application theme (grant key) | Main EEG-DATA | Required outside of EEG |
 |---|---|---|---|---|---|
-| U10-1 | C | 理論式との整合度をproxyで監査 | 神経計算とLandauer整合（G2/G6） | 735, 783, 1011 | 熱散逸の直接計測 |
-| U10-2 | C | 非平衡指標と情報効率proxyの弱相関 | 非平衡指標定義の検証設計（G2/G6） | 735, 783, 1011 | 代謝計測との同時計測 |
-| U10-3 | C | 神経活動+代謝proxyの観測設計妥当性 | 観測設計テンプレ構築（G2/G6） | 735, 783, 1011 | 代謝/温度センサー統合 |
-| U10-4 | C | 計算コスト評価の理論一貫性チェック | 熱制約つきWBEコスト評価（G2/G6） | 735, 783, 1011 | WBE実装側の実測データ |
+| U10-1 | C | Audit consistency with theoretical formula using proxy | Neural calculation and Landauer consistency (G2/G6) | 735, 783, 1011 | Direct measurement of heat dissipation |
+| U10-2 | C | Weak correlation between nonequilibrium index and information efficiency proxy | Verification design of nonequilibrium index definition (G2/G6) | 735, 783, 1011 | Simultaneous measurement with metabolic measurement |
+| U10-3 | C | Observation design validity of neural activity + metabolic proxy | Observation design template construction (G2/G6) | 735, 783, 1011 | Metabolic/temperature sensor integration |
+| U10-4 | C | Theoretical consistency check for calculation cost evaluation | WBE cost evaluation with thermal constraints (G2/G6) | 735, 783, 1011 | Actual measurement data on WBE implementation side |
 
-## U11（意識指標）
+## U11 (awareness index)
 
-| RQ | 判定 | EEGで直接検証する核 | 応募テーマ（助成キー） | 候補EEG-DATA | EEG外で必須 |
+| RQ | Judgment | Core to be directly verified with EEG | Application theme (grant key) | Main EEG-DATA | Required outside of EEG |
 |---|---|---|---|---|---|
-| U11-1 | B | PCI近似/LZ/wSMIの順位保存率 | 理論横断I/O仕様の統一（G2/G4） | 735, 842, 859 | 臨床運用の採択基準 |
-| U11-2 | C | 近似指標の計算予算内比較 | IIT近似の計算量制約評価（G2/G4） | 735, 842, 859 | 厳密IIT計算基盤 |
-| U11-3 | B | 理論対立点の単一条件比較 | 理論対立の単一実験化（G2/G4） | 735, 842, 859 | 共同実験デザイン合意 |
-| U11-4 | B | 偽陽性/偽陰性を含む失敗条件の先行宣言 | 意識指標の失敗条件定義（G2/G4） | 735, 842, 859 | 臨床責任分担と説明責任 |
+| U11-1 | B | PCI approximation/LZ/wSMI rank preservation rate | Unification of theoretical cross-sectional I/O specifications (G2/G4) | 735, 842, 859 | Clinical operation acceptance criteria |
+| U11-2 | C | Comparison of approximation indicators within calculation budget | Evaluation of calculation amount constraints for IIT approximation (G2/G4) | 735, 842, 859 | Exact IIT calculation platform |
+| U11-3 | B | Single-condition comparison of theoretical conflicting points | Single experimentalization of theoretical conflicting points (G2/G4) | 735, 842, 859 | Joint experimental design agreement |
+| U11-4 | B | Advance declaration of failure conditions including false positives/false negatives | Definition of failure conditions for awareness indicators (G2/G4) | 735, 842, 859 | Clinical responsibility division and accountability |
 
-## U12（主体・責任）
+## U12 (principal/responsibility)
 
-| RQ | 判定 | EEGで直接検証する核 | 応募テーマ（助成キー） | 候補EEG-DATA | EEG外で必須 |
+| RQ | Judgment | Core to be directly verified with EEG | Application theme (grant key) | Main EEG-DATA | Required outside of EEG |
 |---|---|---|---|---|---|
-| U12-1 | C | 分岐後IDの技術安定性ログ | 分岐主体IDの監査設計（G2/G6） | 11, 509, 696 | 法的ID付与基準 |
-| U12-2 | C | 継承時点に対する技術イベントログ | 責任/権利/同意継承規則（G2/G6） | 11, 509, 696 | 制度上の分岐規則 |
-| U12-3 | C | 心理連続性proxyの変動監査 | 心理基準と法基準の接続（G2/G6） | 11, 509, 696 | 規範判断フレーム |
-| U12-4 | C | 性能KPIと帰属KPIの対応ログ | 性能評価と人格評価の接続（G2/G6） | 11, 509, 696 | 司法/倫理レビュー |
-| U12-5 | C | 再同期イベント時のID再編候補抽出 | 記憶編集時のID再編基準（G2/G6） | 11, 509, 696 | 本人同意と法的妥当性 |
-| U12-6 | C | 同意撤回後の権限反映遅延監査 | 同意撤回と権限剥奪監査（G2/G6） | 11, 509, 696 | アクセス制御制度設計 |
+| U12-1 | C | Technical stability log of post-branch ID | Audit design of branch ID (G2/G6) | 11, 509, 696 | Legal ID granting criteria |
+| U12-2 | C | Technical Event Log for Succession Points | Responsibility/Rights/Consent Succession Rules (G2/G6) | 11, 509, 696 | Institutional Branching Rules |
+| U12-3 | C | Change audit of psychological continuity proxy | Connection of psychological standards and legal standards (G2/G6) | 11, 509, 696 | Normative judgment frame |
+| U12-4 | C | Correspondence log between performance KPI and attribution KPI | Connection between performance evaluation and personality evaluation (G2/G6) | 11, 509, 696 | Judicial/Ethical Review |
+| U12-5 | C | Extracting ID reorganization candidates during resynchronization events | ID reorganization criteria during memory editing (G2/G6) | 11, 509, 696 | Personal consent and legal validity |
+| U12-6 | C | Delayed audit of authority reflection after consent withdrawal | Consent withdrawal and authority revocation audit (G2/G6) | 11, 509, 696 | Access control system design |
 
-## U13（デコードと模倣分離）
+## U13 (Decoding and imitation separation)
 
-| RQ | 判定 | EEGで直接検証する核 | 応募テーマ（助成キー） | 候補EEG-DATA | EEG外で必須 |
+| RQ | Judgment | Core to be directly verified with EEG | Application theme (grant key) | Main EEG-DATA | Required outside of EEG |
 |---|---|---|---|---|---|
-| U13-1 | B | 意味一致率と因果一致率の乖離 | 意味復元/因果再現の分離評価（G1/G4） | 509, 13, 65 | 外部行動・言語評価系 |
-| U13-2 | B | 幻覚検査結果と神経状態差の相関 | 幻覚検査の神経デコード接続（G1/G4） | 509, 13, 65 | LLM評価基盤連携 |
-| U13-3 | B | 同一出力・異内部機構の識別率 | shortcut検出ベンチ（G1/G4） | 509, 13, 65 | モデル内部可視化基盤 |
-| U13-4 | B | 模倣スコア単独合格禁止の効果 | 因果整合つき模倣評価（G1/G4） | 509, 13, 65 | 因果介入設計 |
-| U13-5 | B | 知覚→想起での劣化分岐点推定 | 知覚/想起デコーダ分岐解析（G1/G4） | 509, 13, 65 | タスク設計の統一化 |
-| U13-6 | B | プロンプト誘導/リーク/shortcutの分離率 | 対照実験によるリーク監査（G1/G4） | 509, 13, 65 | データ管理ガバナンス |
+| U13-1 | B | Discrepancy between semantic matching rate and causal matching rate | Separate evaluation of meaning restoration/causal reproduction (G1/G4) | 509, 13, 65 | External behavior/language evaluation system |
+| U13-2 | B | Correlation between hallucination test results and neural state differences | Neural decoding connections for hallucination tests (G1/G4) | 509, 13, 65 | LLM evaluation platform collaboration |
+| U13-3 | B | Identification rate of the same output and different internal mechanisms | Shortcut detection bench (G1/G4) | 509, 13, 65 | Model internal visualization platform |
+| U13-4 | B | Effect of prohibiting passing based on imitation score alone | Imitation evaluation with causal consistency (G1/G4) | 509, 13, 65 | Causal intervention design |
+| U13-5 | B | Degradation branch point estimation from perception to recall | Perception/recall decoder branch analysis (G1/G4) | 509, 13, 65 | Unification of task design |
+| U13-6 | B | Prompt induction/leak/shortcut separation rate | Leak audit with controlled experiment (G1/G4) | 509, 13, 65 | Data management governance |
 
-## U14（運用・監査）
+## U14 (Operation/Audit)
 
-| RQ | 判定 | EEGで直接検証する核 | 応募テーマ（助成キー） | 候補EEG-DATA | EEG外で必須 |
+| RQ | Judgment | Core to be directly verified with EEG | Application theme (grant key) | Main EEG-DATA | Required outside of EEG |
 |---|---|---|---|---|---|
-| U14-1 | A | 固定粒度ごとの追試成功率 | 再現契約の最小粒度定義（G1/G3） | 6, 56, 719 | 契約文書テンプレ |
-| U14-2 | A | 探索/検証分離時の再現率差 | 探索と検証の運用分離（G1/G3） | 6, 56, 719 | 研究管理プロセス |
-| U14-3 | A | 被験者/時系列リーク検出率 | leaderboard監査運用（G1/G3） | 6, 56, 719 | 公表ルールの強制力 |
-| U14-4 | A | Card記述有無での監査容易性差 | Model/Dataset Card契約化（G1/G3） | 6, 56, 719 | 評価契約の法務整備 |
-| U14-5 | B | 否定例レジストリでの再試行改善率 | 否定例公開と再試行サイクル（G1/G3） | 6, 56, 719 | 公開同意・匿名化運用 |
-| U14-6 | A | コンテナ固定によるコスト増分 | 再現コスト許容上限の設定（G1/G3） | 6, 56, 719 | 計算資源調達計画 |
+| U14-1 | A | Follow-up success rate for each fixed granularity | Minimum granularity definition for reproduction contract (G1/G3) | 6, 56, 719 | Contract document template |
+| U14-2 | A | Recall rate difference when separating exploration/verification | Operational separation of exploration and verification (G1/G3) | 6, 56, 719 | Research management process |
+| U14-3 | A | Subject/time series leak detection rate | leaderboard audit operation (G1/G3) | 6, 56, 719 | Enforcement of publication rules |
+| U14-4 | A | Differences in ease of auditing with and without Card description | Model/Dataset Card contracting (G1/G3) | 6, 56, 719 | Legal preparation for evaluation contracts |
+| U14-5 | B | Retry improvement rate with negative example registry | Negative example disclosure and retry cycle (G1/G3) | 6, 56, 719 | Disclosure consent/anonymization operation |
+| U14-6 | A | Cost increase due to container fixation | Setting the maximum allowable reproduction cost (G1/G3) | 6, 56, 719 | Computing resource procurement plan |
 
-## U15（規制・neurorights）
+## U15 (Regulations/neurorights)
 
-| RQ | 判定 | EEGで直接検証する核 | 応募テーマ（助成キー） | 候補EEG-DATA | EEG外で必須 |
+| RQ | Judgment | Core to be directly verified with EEG | Application theme (grant key) | Main EEG-DATA | Required outside of EEG |
 |---|---|---|---|---|---|
-| U15-1 | C | 神経データ機微度の技術ログ化 | 神経データ法概念マッピング（G2/G6） | 49, 2412, 3419 | 法概念の公式定義 |
-| U15-2 | C | neurorights項目と技術監査ログの対応 | neurorights監査項目化（G2/G6） | 49, 2412, 3419 | 規制当局要件との整合 |
-| U15-3 | C | 法域別要求差の技術項目差分 | EU/US/JP最小共通運用定義（G2/G6） | 49, 2412, 3419 | 各法域の法務レビュー |
-| U15-4 | C | 停止/更新条件に結びつくリスク指標候補 | 停止条件・更新条件のガバナンス化（G2/G6） | 49, 2412, 3419 | 運用監督体制の設計 |
+| U15-1 | C | Technical logging of neural data sensitivity | Neural data law concept mapping (G2/G6) | 49, 2412, 3419 | Official definition of legal concepts |
+| U15-2 | C | Correspondence between neurorights items and technical audit logs | Neurorights audit itemization (G2/G6) | 49, 2412, 3419 | Consistency with regulatory agency requirements |
+| U15-3 | C | Differences in technical items for requirements by jurisdiction | EU/US/JP minimum common operational definition (G2/G6) | 49, 2412, 3419 | Legal review of each jurisdiction |
+| U15-4 | C | Risk indicator candidates linked to suspension/renewal conditions | Governance of suspension conditions/renewal conditions (G2/G6) | 49, 2412, 3419 | Design of operation supervision system |
 
-## 実務メモ（このページで固定したこと）
+## Practical notes (things fixed on this page)
 
-- `60RQ` すべてに `EEGで直接検証する核` と `EEG外で必須` を分離して記載。
-- `応募テーマ` は `G1-G6` の既存助成キーに統一。
-- 運用規則は `1RQ=1検証命題=1応募テーマ=1主データ`。
+- For all `60RQ`, `core to be verified directly with EEG` and `required outside of EEG` are listed separately.
+- `Application theme` is unified to the existing grant key of `G1-G6`.
+- The operating rule is `1RQ = 1 verification proposition = 1 application theme = 1 main data`.
 
-## 2026-03-15 13:18 JST 再検証ログ（本run）
+## 2026-03-15 13:18 JST revalidation log (main run)
 
-- `mind-upload/research_harvest_50.md` を正本として再照合し、`Ux-RQy` の行数 `60`、重複 `0`、欠落 `0` を確認。
-- 判定内訳 `A/B/C=17/25/18` を再計算し、本ページの各行と整合することを確認。
-- 参照している EEG データID（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` 上で全件実在（欠落 `0`）。
-- 助成キー `G1-G6` は根拠系統を分離して参照（`G1-G2=grant_queue/*.yaml`、`G3-G6=auto-research-funds/wiki/cards + grant_eeg_dataset_match.csv`）。
-- 方針は継続: 汎用的な俯瞰ではなく、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持。
+- Re-verify `mind-upload/research_harvest_50.md` as the original and check the number of lines in `Ux-RQy` is `60`, duplicate `0`, and missing `0`.
+- Recalculated the judgment breakdown `A/B/C=17/25/18` and confirmed that it is consistent with each line on this page.
+- The referenced EEG data ID (`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`) is `EEG-DATA/eeg_dataset_summary_ja.csv` All cases above exist (missing `0`).
+- The real ID of subsidy key `G1-G6` (`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`) is All items can be viewed on the `auto-research-funds` side.
+- The policy continues: Instead of a general overview, we maintain a deep-dive operation of `1 RQ = 1 verification proposition = 1 application theme = 1 main data`.
 
-## 2026-03-15 09:03 JST 再検証ログ（本run / pull後）
+## 2026-03-15 09:03 JST revalidation log (after main run/pull)
 
-- `main` 最新化後に再計数し、`RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認（本ページと `mind-upload-eeg-rq60-feasibility-and-funds.md` の両方で一致）。
-- `research_harvest_50.md` の `リサーチクエスチョン分解` セクションを正本として再抽出し、`RQ_COUNT=60`、欠落 `0`。
-- 本ページで参照する EEG データID（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）。
-- 助成IDは参照元を分離して確認（`G1-G2=grant_queue/*.yaml`、`G3-G6=auto-research-funds/wiki/cards + grant_eeg_dataset_match.csv`）。
+- `main` Recounted after updating and reconfirmed `RQ_TOTAL=60`, `A/B/C=17/25/18` (matched both on this page and `mind-upload-eeg-rq60-feasibility-and-funds.md`).
+- Re-extracted the `research question decomposition` section of `research_harvest_50.md` as the original, `RQ_COUNT=60`, missing `0`.
+- The EEG data ID (`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`) referenced on this page is `EEG-DATA/eeg_dataset_summary_ja.csv` All cases exist (missing `0`).
+- Grant ID (`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`) All can be viewed at `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`, `grant_queue/*.yaml`, and `auto-research-funds/grant_eeg_dataset_match.csv`.
 
-### 1問ずつ深掘りする直近6件（実行順固定）
+### Latest 6 questions to dig deeper into one question at a time (fixed order of execution)
 
-1. `U8-1` 閉ループ遅延許容域同定: `主データ=6`、応募先 `G2`（予備 `G5`）
-2. `U8-2` オンライン較正とドリフト対策: `主データ=696`、応募先 `G2`（予備 `G5`）
-3. `U14-1` 固定粒度と追試成功率: `主データ=56`、応募先 `G1`（予備 `G3`）
-4. `U14-3` リーク監査運用: `主データ=719`、応募先 `G1`（予備 `G3`）
-5. `U7-2` 時刻同期誤差監査: `主データ=6`、応募先 `G1`（予備 `G3`）
-6. `U13-1` 意味一致と因果一致の分離: `主データ=509`、応募先 `G1`（予備 `G4`）
+1. `U8-1` Closed loop delay tolerance range identification: `Main data = 6`, application destination `G2` (preliminary `G5`)
+2. `U8-2` Online calibration and drift countermeasures: `Main data = 696`, application destination `G2` (preliminary `G5`)
+3. `U14-1` Fixed granularity and supplementary exam success rate: `Main data = 56`, application destination `G1` (preliminary `G3`)
+4. `U14-3` Leak audit operation: `Main data = 719`, application destination `G1` (preliminary `G3`)
+5. `U7-2` Time synchronization error audit: `Main data = 6`, application destination `G1` (preliminary `G3`)
+6. `U13-1` Separation of semantic agreement and causal agreement: `Main data = 509`, applicant `G1` (preliminary `G4`)
 
-この順で進める理由:
-- `A/B` 判定で4週間以内に「実測KPI + 失敗条件 + 申請下書き」まで到達しやすい。
-- `C` 判定（制度主導）はこの6件の実測ログを根拠に後段で提出する方が通しやすい。
+Reasons for proceeding in this order:
+- It is easy to reach "actual KPI + failure conditions + application draft" within 4 weeks with `A/B` judgment.
+- It will be easier to pass the `C` judgment (system-driven) if you submit it at a later stage based on these 6 actual measurement logs.
 
-## 2026-03-15 12:02 JST 再検証ログ（本run / 深掘り対象固定）
+## 2026-03-15 12:02 JST re-verification log (main run / deep digging target fixed)
 
-- `RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認し、本ページの `RQ` 行数と整合することを確認。
-- `候補EEG-DATA` 列で参照しているIDは `EEG-DATA/eeg_dataset_summary_ja.csv` に全件存在（欠落 `0`）。
-- 助成キー `G1-G6` の実IDは `G1-G2=grant_queue`、`G3-G6=auto-research-funds` の系統で再参照可能。
-- 本ページの運用を継続: 1件ずつ深掘りして `EEGで直接検証する核` と `EEG外で必須` を明示し、汎用要約を避ける。
+- Reconfirmed `RQ_TOTAL=60` and `A/B/C=17/25/18` and confirmed that they match the number of `RQ` lines on this page.
+- All IDs referenced in the `main EEG-DATA` column exist in `EEG-DATA/eeg_dataset_summary_ja.csv` (missing `0`).
+- All real IDs of grant keys `G1-G6` can be viewed on the `auto-research-funds` side.
+- Continue to operate this page: Dig deeper into each case and clarify the ``key things that need to be verified directly with EEG'' and ``required things outside of EEG,'' and avoid general summaries.
 
 </article>
 </main>
 
-## 2026-03-15 13:03 JST 再検証ログ（本run / 深掘り運用継続）
+## 2026-03-15 13:03 JST re-verification log (main run / continued deep digging operation)
 
-- `main` pull後に `RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認し、本ページの `RQ` 行と整合することを確認しました。
-- 本ページで参照する EEG データIDは `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を再確認しました。
-- 助成実IDの参照元を再確認（`G1-G2` は `grant_queue`、`G3-G6` は `auto-research-funds`）。
-- 方針は継続: 汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` を維持し、RQ単位で深掘り記述を優先します。
+- After `main` pull, we reconfirmed `RQ_TOTAL=60` and `A/B/C=17/25/18` and confirmed that they are consistent with the `RQ` line on this page.
+- We reconfirmed that all EEG data IDs referenced on this page exist (missing `0`) in `EEG-DATA/eeg_dataset_summary_ja.csv`.
+- Grant real ID (`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`) is `auto-research-funds` I reconfirmed that all items can be viewed on the side.
+- The policy will continue: Instead of a general overview, we will maintain ``1 RQ = 1 verification proposition = 1 application theme = 1 main data'' and give priority to in-depth description of each RQ.
 
-## 2026-03-15 14:03 JST 再検証ログ（本run / 全RQ深掘り固定の再確認）
+## 2026-03-15 14:03 JST Re-verification log (main run / re-confirmation of all RQ deep digging fixed)
 
-- `mind-upload/wiki/mind-upload-rq60-deep-focus-notes.md` の `RQ` 行を再カウントし、`60件`（`A/B/C=17/25/18`）を確認しました。
-- 全 `RQ` 行で `応募テーマ（助成キー）` は `G1-G6` のいずれかに割り当て済みで、空欄 `0` を確認しました。
-- `候補EEG-DATA` 列で参照するデータIDは `24種類`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）で、`EEG-DATA/eeg_dataset_summary_ja.csv` 上の欠落 `0` を確認しました。
-- 助成実IDの参照元を再確認（`G1-G2` は `grant_queue`、`G3-G6` は `auto-research-funds`）。
-- 方針は据え置きです。汎用要約ではなく、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続します。
+- We re-counted the `RQ` line in `mind-upload/wiki/mind-upload-rq60-deep-focus-notes.md` and confirmed `60` (`A/B/C=17/25/18`).
+- In all `RQ` lines, `Application theme (grant key)` has been assigned to one of `G1-G6`, and we confirmed that there is a blank `0`.
+- There are 24 types of data IDs referenced in the `main EEG-DATA` column (`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`), we confirmed the missing `0` on `EEG-DATA/eeg_dataset_summary_ja.csv`.
+- Grant real ID (`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`) is `auto-research-funds` I confirmed that it can be re-referenced under it.
+- The policy remains unchanged. Rather than general summaries, we will continue to deeply dig into ``1 RQ = 1 verification proposition = 1 application theme = 1 main data.''
 
-## 2026-03-17 07:02 JST 再検証ログ（本run / pull後・1RQ深掘り運用の再固定）
+## 2026-03-15 16:22 JST Deep implementation card (execute 6RQ one by one)
 
-- 作業前に `main` を `pull --ff-only` し、基準コミットを `mind-upload=0292e428d96e`、`EEG-DATA=48261b83b10a`、`auto-research-funds=c81f22c6aafd` に更新しました。
-- 正本 `mind-upload/research_harvest_50.md` の `RQ総数` 集計表（合計行）で `60` を再確認しました。
-- 本ページ主表（`## U0（同一性）` から `## 実務メモ` 直前）の `RQ` 行を機械再計数し、`RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認しました。
-- `候補EEG-DATA` の参照ID `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を再確認しました。
-- 助成キー `G1-G6` の実体は再確認済みです（`G1-G2=grant_queue`、`G3-G6=auto-research-funds/grant_eeg_dataset_match.csv`）。
-- 実務方針を継続します。汎用的に全課題を浅く横断せず、`1RQ=1検証命題=1応募テーマ=1主データ` の粒度で1件ずつ深掘りして更新します。
+- Policy: We did not comprehensively update all RQs, but fixed the 6 RQs that are most likely to be implemented "in depth one by one" to the execution plan.
+- Target: `U8-1`, `U8-2`, `U14-1`, `U14-3`, `U7-2`, `U13-1` (maintains the previously fixed priority order).
 
-## 2026-03-15 16:22 JST 深掘り実装カード（6RQを1件ずつ実行）
-
-- 方針: 全RQの網羅更新は行わず、直近で実行可能性が高い6RQを「1件ずつ深く」実行計画まで固定しました。
-- 対象: `U8-1`, `U8-2`, `U14-1`, `U14-3`, `U7-2`, `U13-1`（前回固定した優先順を維持）。
-
-| RQ | EEG-DATAで解ける核（今回固定） | 2週間の初手実験（1件ずつ） | 応募テーマ（助成キー） | 使うEEG-DATA（主/予備） | 合否ゲート（次に進む条件） |
+| RQ | Nucleus that can be solved with EEG-DATA (fixed for this time) | Two-week initial experiment (one experiment each) | Application theme (grant key) | EEG-DATA to be used (main/preliminary) | Pass/fail gate (conditions for proceeding to the next) |
 |---|---|---|---|---|---|
-| U8-1 | 閉ループ遅延を操作したときの安定率と回復時間の関係を同定する。 | 1週目に遅延0/50/100/150ms条件で同一前処理パイプラインを固定。2週目に安定率・回復時間・異常停止率を再計測して閾値表を作成。 | 閉ループ遅延許容域の同定（`G2` 主 / `G5` 予備） | `6` / `1972` | 安定率の相対低下が20%以内、異常停止率が事前上限以内。 |
-| U8-2 | オンライン較正間隔が性能維持率に与える影響を定量化する。 | 1週目に較正間隔（毎試行/毎block/固定なし）の3条件を設定。2週目にドリフト量と再較正コストを同時評価し、運用上限を決める。 | 概念ドリフト対策の最適化（`G2` 主 / `G5` 予備） | `696` / `2412` | 較正コスト増分に対して性能維持率の改善が統計的に有意。 |
-| U14-1 | 追試契約の固定粒度（データ/コード/環境）と再現成功率の対応を測る。 | 1週目に「データのみ固定」「データ+コード固定」「データ+コード+環境固定」の3粒度で再実行。2週目に再現率差と工数差を定量化。 | 再現契約の最小粒度定義（`G1` 主 / `G3` 予備） | `56` / `719` | 再現率が目標値を満たし、工数増分が受容上限内。 |
-| U14-3 | 被験者リーク・時系列リークを自動検出し、leaderboard評価を監査可能にする。 | 1週目にリーク検出ルール（subject/session/time-window）を実装。2週目に既存分割へ適用し、再分割後の性能差を監査レポート化。 | leaderboard監査運用（`G1` 主 / `G3` 予備） | `719` / `56` | リーク検出ゼロ、再分割後の性能劣化が説明可能。 |
-| U7-2 | LSL同期誤差のジッタ分布を推定し、運用警告閾値を決める。 | 1週目にoffset/jitterの抽出処理を固定。2週目に閾値超過イベント率を算出し、再計測トリガー条件をルール化。 | 同期誤差自動警告運用（`G1` 主 / `G3` 予備） | `6` / `696` | 閾値超過イベントの再現性と、再計測ルールの誤警報率が許容内。 |
-| U13-1 | 意味一致と因果一致の乖離を同一デコーダで分離評価する。 | 1週目に意味一致スコアと介入応答一致スコアを別指標で算出。2週目に乖離ケースを失敗条件として明示し、模倣合格の単独採択を禁止。 | 意味復元/因果再現の分離評価（`G1` 主 / `G4` 予備） | `509` / `13` | 意味一致のみ高いケースを識別でき、因果一致なし合格を回避。 |
-
-### 実行順（固定）
-
-1. `U8-1`（遅延許容域）
-2. `U8-2`（較正間隔とドリフト）
-3. `U14-1`（再現契約粒度）
-4. `U14-3`（リーク監査）
-5. `U7-2`（同期誤差監査）
-6. `U13-1`（意味一致/因果一致の分離）
-
-### このrunで固定した運用ルール
-
-- `1RQ=1検証命題=1応募テーマ=1主データ` を6RQで再固定。
-- 2週間で「初手実験結果 + 合否ゲート」まで到達しないRQは次runへ持ち越さず、失敗理由を明記して別RQに切替える。
-- `C` 判定RQは今回対象外（技術実証を先に積む方針）。
-
-## 2026-03-15 16:03 JST 再検証ログ（本run / submodule pull後）
-
-- `mind-upload` / `EEG-DATA` / `auto-research-funds` の最新 `main` 反映後に、深掘りノートの `RQ` 行を再点検。
-- `RQ_TOTAL=60`、`A/B/C=17/25/18`、`応募テーマ（助成キー）` 欠落 `0`、`候補EEG-DATA` 欠落 `0` を再確認。
-- 方針は据え置き: `1RQ=1検証命題=1応募テーマ=1主データ` で、各課題を個別に深く扱う。
-
-## 2026-03-15 18:03 JST 再検証ログ（本run / pull後更新）
-
-- 作業前に `main` と3サブモジュールを `pull --ff-only` し、基準コミットを `mind-upload=cf45498a5d6b`、`EEG-DATA=d05c3b7069a5`、`auto-research-funds=085b43eb13e5` に更新しました。
-- `mind-upload/research_harvest_50.md` の `60RQ` を正本として継続採用し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持します。
-- 参照EEGデータ `24 ID`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を確認しました。
-- 助成実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue/*.yaml` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再確認しました。
-- 方針は据え置き: 汎用俯瞰へ戻さず、RQごとに検証可否・応募テーマ・使用EEGデータを固定して書く運用を継続します。
-
-
-## 2026-03-15 19:02 JST 再検証ログ（本run / RQ単位深掘りの固定確認）
-
-- 全 `60RQ` 行を再点検し、`判定`・`応募テーマ（助成キー）`・`候補EEG-DATA`・`EEG外で必須` の欠落 `0` を確認。
-- `A/B/C=17/25/18` を再確認し、`mind-upload-eeg-rq60-feasibility-and-funds.md` と一致。
-- 参照EEGデータIDは `24種類`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）で、`EEG-DATA/eeg_dataset_summary_ja.csv` 上の欠落 `0`。
-- 助成キー実IDは `G1-G2=grant_queue`、`G3-G6=auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の系統で再参照可能。
-- 運用を継続: 各課題を汎用要約しないで、RQごとに検証可否・応募テーマ・使用EEGデータを固定して記述する。
-
-## 2026-03-15 20:04 JST 再検証ログ（本run / RQ深掘りノート監査）
-
-- `RQ` 行を再カウントし、`60件`（`A/B/C=17/25/18`）を確認しました。
-- 全 `RQ` 行で `判定/応募テーマ（助成キー）/候補EEG-DATA/EEG外で必須` の4要素が埋まっていることを確認しました。
-- 候補EEG-DATAとして参照するIDは `24種類`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）で、`EEG-DATA/eeg_dataset_summary_ja.csv` 上の欠落 `0` を確認しました。
-- 助成実IDは分離参照（`G1-G2=grant_queue`、`G3-G6=auto-research-funds`）で追跡可能です。
-- 運用は継続します。汎用要約ではなく、RQ単位で深掘り記述を優先します。
-
-## 2026-03-15 21:02 JST 再検証ログ（本run / 独立監査反映）
-
-- `RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認し、3ページ（`feasibility`/`playbook`/`deep-focus`）間で整合を確認。
-- 参照EEGデータID `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）。
-- 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` と `auto-research-funds` で全件参照可能。
-- 独立監査結果として、`feasibility` ページの `ID -> データセット名` 表は現行CSVの再採番と固定一致しない点を確認。運用上は既存方針どおり `D1-D16 + DOI` 正本参照を優先する。
-- 方針を継続: 汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持。
-
-
-## 2026-03-16 00:02 JST 再検証ログ（本run / RQ深掘りノート更新）
-
-- `RQ` 行を再カウントし、`60件`（`A/B/C=17/25/18`）を確認しました。
-- 全 `RQ` 行で `判定`・`応募テーマ（助成キー）`・`候補EEG-DATA`・`EEG外で必須` の4要素が埋まっていることを再確認しました（欠落 `0`）。
-- 候補EEGデータID `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）。
-- 助成実ID `G1-G6` は `G1-G2=grant_queue`、`G3-G6=auto-research-funds` の分離参照で追跡可能な状態を維持しています。
-- 本runでも運用を継続します。汎用要約を避け、`1RQ=1検証命題=1応募テーマ=1主データ` でRQ単位に深掘り記述します。
-
-## 2026-03-16 01:02 JST 再検証ログ（本run / 深掘り表60件の再確認）
-
-- `main` pull後に再検証し、`## U0` から `## 実務メモ` 直前までの `RQ` 行は `60件` を維持しました。
-- 判定内訳は `A/B/C=17/25/18` で、`mind-upload-eeg-rq60-feasibility-and-funds.md` と整合しています。
-- 参照EEGデータID `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を確認しました。
-- 助成ID `G1-G6` は `grant_queue` と `auto-research-funds` の分離参照で全件存在を再確認しました。
-- 実務方針は継続します。`1RQ=1検証命題=1応募テーマ=1主データ` を維持し、汎用要約を行わずRQ単位で更新します。
-
-## 2026-03-16 03:04 JST 再検証ログ（本run / RQ単位深掘り運用の継続確認）
-
-- 本表（`## U0（同一性）` から `## 実務メモ` 直前）の `RQ` 行を機械カウントし、`60件` を再確認しました。
-- 判定内訳は `A/B/C=17/25/18` で、`mind-upload-eeg-rq60-feasibility-and-funds.md` と一致しています。
-- 全 `RQ` 行で `判定`・`EEGで直接検証する核`・`応募テーマ（助成キー）`・`候補EEG-DATA`・`EEG外で必須` の必須列が埋まっていることを再確認しました（欠落 `0`）。
-- 候補EEGデータID `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を確認しました。
-- 以後も方針は固定します。汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` で、各課題を1件ずつ深く扱います。
-
-## 2026-03-16 06:03 JST 再検証ログ（本run / 深掘りノート継続更新）
-
-- 作業前に `mind-upload=364217a`、`EEG-DATA=99f6801432`、`auto-research-funds=5b3c35e83` まで `main` を `pull --ff-only` で更新しました。
-- `RQ` 行を再カウントし、`60件`（`A/B/C=17/25/18`）を再確認しました。
-- 全 `RQ` 行で `判定`・`EEGで直接検証する核`・`応募テーマ（助成キー）`・`候補EEG-DATA`・`EEG外で必須` の必須列が埋まっていることを再確認しました（欠落 `0`）。
-- `候補EEG-DATA` 参照IDは `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）でした。
-- 助成キー `G1-G6` は `grant_queue` と `auto-research-funds` の両方で再参照可能であることを再確認しました。
-
-### 深掘り実装カード（今回固定 / 6件）
-
-| RQ | EEG-DATAで解ける核（今回固定） | 初手実験（1件ずつ） | 応募テーマ（助成キー） | 主/予備EEG-DATA | 合否ゲート |
-|---|---|---|---|---|---|
-| U4-2 | 最小介入因果主張を再現可能か判定する | 既知介入条件で3回再走し、因果効果の符号一致率を算出 | ground-truth因果検証（G1/G4） | 56 / 1839 | 符号一致率が事前閾値以上 |
-| U7-5 | 前処理CIの停止閾値が妥当か検証する | 前処理差分3条件で再現率低下と誤ブロック率を算出 | 再現率低下の停止規則（G1/G3） | 676 / 783 | 誤ブロック率が許容上限未満 |
-| U8-4 | 異常検知遅延とフェイルセーフの両立域を求める | 異常注入シナリオで発動遅延・回復時間を同時計測 | 安全停止評価契約（G2/G5） | 2412 / 1972 | 発動遅延と回復時間が両閾値内 |
-| U11-1 | 指標間の順位保存を同一I/Oで評価する | PCI近似/LZ/wSMIを同一前処理で比較し順位保存率を算出 | 意識指標比較（G2/G4） | 859 / 842 | 順位保存率が採択基準以上 |
-| U13-3 | 同一出力・異機構を識別できるか検証する | 同一出力条件で介入応答差を測定し識別率を算出 | shortcut検出ベンチ（G1/G4） | 509 / 13 | 異機構識別率が基準以上 |
-| U14-6 | 再現性改善に対するコンテナ固定コストを定量化する | 環境固定あり/なしで追試成功率と実行コストを比較 | 再現コスト許容上限設定（G1/G3） | 56 / 719 | 再現率改善がコスト増を上回る |
-
-- 本runも方針を継続します。汎用俯瞰には戻さず、`1RQ=1検証命題=1応募テーマ=1主データ` で更新します。
-
-
-## 2026-03-16 07:05 JST 再検証ログ（本run / pull後のID再採番対応）
-
-- 作業前に `main` を更新し、基準コミットを `mind-upload=7ff7cd284943`、`EEG-DATA=2459b959e53d`、`auto-research-funds=3bb6faeaecbc` に揃えました。
-- 正本 `mind-upload/research_harvest_50.md` の `リサーチクエスチョン分解` を機械再計数し、`RQ_TOTAL=60` を再確認しました。
-- 本表（`## U0` から `## 実務メモ` 直前）の `RQ` 行は `60件`、判定内訳は `A/B/C=17/25/18` を維持しました。
-- 全 `RQ` 行で `判定`・`EEGで直接検証する核`・`応募テーマ（助成キー）`・`候補EEG-DATA`・`EEG外で必須` の必須列が埋まっていることを再確認しました（欠落 `0`）。
-- 助成キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は、`grant_queue` と `auto-research-funds/wiki` で全件参照可能でした。
-- 重要: `EEG-DATA/eeg_dataset_summary_ja.csv` の数値 `ID` は再採番で変動しました。したがって本run以降は、`候補EEG-DATA` の運用参照を `ID固定` ではなく `Dキー + DOI固定`（`auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` 正本）へ統一します。
-- `D1-D16` の DOI は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件再検出済み（欠落 `0`）です。
-- 方針を継続: 汎用俯瞰には戻さず、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持します。
-
-## 2026-03-16 09:03 JST 再検証ログ（本run / pull後・1RQ深掘り運用の再固定）
-
-- 作業前に `main` を pull し、基準コミットを `mind-upload=7e31a0d8f1`、`EEG-DATA=56deab7770`、`auto-research-funds=500036faee` に更新しました。
-- 正本 `research_harvest_50.md` のRQを再照合し、`RQ_TOTAL=60` を再確認しました。
-- 判定内訳は `A/B/C=17/25/18` を維持し、3ページ（`feasibility`/`playbook`/`deep-focus`）間で整合しています。
-- 助成キー `G1-G6` の実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再参照可能です。
-- 今回の重要差分: `EEG-DATA/eeg_dataset_summary_ja.csv` は再採番が入るため、固定参照は数値IDではなく `D1-D16（DOI固定） + データセット名` を正本として扱う運用に再固定しました。
-- 運用方針を維持します。汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` を1件ずつ実行する粒度で継続します。
-
-## 2026-03-16 10:02 JST 再検証ログ（本run / 深掘り優先順の固定）
-
-- `research_harvest_50.md` を正本として再照合し、`60RQ`（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）を再確認しました。
-- 本ページは補助表を含むため機械行数が増えるため、正本カウントは `## U0` から `## 実務メモ` 直前の主表を対象に `RQ_TOTAL=60` を固定します。
-- 判定内訳 `A/B/C=17/25/18` は `mind-upload-eeg-rq60-feasibility-and-funds.md` と一致しています。
-- 実務運用を再固定します。汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の粒度で進めます。
-
-### 本runで優先する深掘り順（6件）
-
-1. `U4-2`（因果介入）
-2. `U7-5`（前処理CI閾値）
-3. `U8-4`（安全停止KPI）
-4. `U11-1`（意識指標順位保存）
-5. `U13-3`（模倣分離）
-6. `U14-6`（コンテナ固定再現）
-
-## 2026-03-16 12:02 JST 再検証ログ（本run / 1問ずつ深掘り運用の継続）
-
-- 作業前に `main` と3サブモジュールを pull し、基準コミットを `mind-upload=4e1956b319da`、`EEG-DATA=2df474b136f7`、`auto-research-funds=cdf8f75421b7` に更新しました。
-- `research_harvest_50.md` 正本に対して `RQ_TOTAL=60` を再確認し、判定内訳 `A/B/C=17/25/18` を維持しました。
-- 本ページの `候補EEG-DATA` 列で参照するID `24件` は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）でした。
-- 実行単位を再固定しました: `1RQ=1検証命題=1応募テーマ=1主データ`。総覧優先ではなく、RQごとに深掘りして提出判断を確定します。
-
-## 2026-03-16 13:04 JST 再検証ログ（本run / 1問ずつ深掘り運用の継続）
-
-- 作業前に `main` と3サブモジュールを `pull --ff-only` し、基準コミットを `mind-upload=50e2093ed411`、`EEG-DATA=95e1605e5005`、`auto-research-funds=9eb599bbf875` に更新しました。
-- 正本 `research_harvest_50.md` を再照合し、`RQ_TOTAL=60` を再確認しました。
-- 本表（`## U0` から `## 実務メモ` 直前）の `RQ` 行は `60件`、判定内訳は `A/B/C=17/25/18` を維持しました。
-- 全 `RQ` 行で `判定`・`EEGで直接検証する核`・`応募テーマ（助成キー）`・`候補EEG-DATA`・`EEG外で必須` の必須列欠落 `0` を確認しました。
-- 助成キー `G1-G6` 実IDは `grant_queue` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再参照可能でした。
-- 重要運用を再固定します。`EEG-DATA/eeg_dataset_summary_ja.csv` の数値IDは再採番前提とし、提出時のデータ参照は `D1-D16 + DOI + データセット名` を正本とします。
-- 方針を継続します。汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` で各課題を深掘りします。
-
-## 2026-03-16 15:04 JST 再検証ログ（本run / 1件ずつ深掘り運用の固定）
-
-- 作業前に `main` を `pull --ff-only` し、`mind-upload=35249d9ddb01`、`EEG-DATA=95e1605e5005`、`auto-research-funds=9eb599bbf875` の基準で再検証しました。
-- 正本 `research_harvest_50.md` の `60RQ` と本ページの `RQ` 行を再照合し、欠落 `0`、重複 `0` を確認しました。
-- 判定内訳 `A/B/C=17/25/18` を再確認し、`mind-upload-eeg-rq60-feasibility-and-funds.md` と整合しました。
-- 助成キー `G1-G6` と候補EEGデータ `24件` の参照性を再確認しました。
-- 実務方針を再固定します。全課題を浅く横断するのではなく、`1RQ=1検証命題=1応募テーマ=1主データ` の順に個別深掘りで更新します。
-
-
-## 2026-03-16 16:02 JST 再検証ログ（本run / 深掘り表の整合確認）
-
-- `main` pull 後に本ページの RQ本表（`## U0（同一性）` 〜 `## 実務メモ` 直前）を再カウントし、`RQ_TOTAL=60` を再確認しました。
-- 判定内訳は `A/B/C=17/25/18` のまま維持され、`mind-upload-eeg-rq60-feasibility-and-funds.md` と一致しています。
-- 助成キーは `G1-G6` の固定運用を維持し、全RQで `応募テーマ（助成キー）` 欠落 `0` を確認しました。
-- 参照データ運用の注意点として、EEG数値IDは再採番が発生しているため、固定参照は `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `D1-D16 + DOI` を正本とします。
-- 方針を継続します。汎用俯瞰には戻さず、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り粒度で運用します。
-
-## 2026-03-16 17:03 JST 再検証ログ（本run / 1RQ深掘り運用の再固定）
-
-- 作業前に `main` と3サブモジュールを `pull --ff-only` し、基準コミットを `mind-upload=9dde203`、`EEG-DATA=3d27e5d4f7`、`auto-research-funds=5d6af61f5` に更新しました。
-- `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` の `Ux-n` 行を再計数し、`RQ_TOTAL=60` を再確認しました。
-- 判定内訳は再計数で `A/B/C=17/25/18` を維持し、`deep-focus` と `playbook` 側の判定列とも整合しました。
-- 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue/*.yaml` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で全件参照可能でした。
-- EEG参照の固定ルールは継続します。`EEG-DATA/eeg_dataset_summary_ja.csv` の数値IDは再採番があるため、提出・再現ログは `D1-D16 + DOI`（`auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` 正本）を基準にします。
-- 方針を維持します。汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` を1件ずつ深掘りして記述します。
-
-## 2026-03-16 19:04 JST 再検証ログ（本run / deep-focus運用の継続）
-
-- 作業前に `main` と3サブモジュールを pull し、基準コミットを `mind-upload=d575cb4848bd`、`EEG-DATA=da82c1d37069`、`auto-research-funds=c92fd845bddf` に更新しました。
-- 正本 `mind-upload/research_harvest_50.md` を再照合し、`RQ_TOTAL=60` を再確認しました（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）。
-- 本ページで参照する `Ux-y` は `60件` を維持し、`mind-upload-eeg-rq60-feasibility-and-funds.md` の判定内訳 `A/B/C=17/25/18` と整合していることを確認しました。
-- 助成キー `G1-G6` と EEG データ参照ID群（24件）は、それぞれ `grant_queue + auto-research-funds` と `EEG-DATA/eeg_dataset_summary_ja.csv` で実在確認済み（欠落 `0`）。
-- 本runでも方針は据え置きです。汎用要約を避け、`1RQ=1検証命題=1応募テーマ=1主データ` を維持して深掘り記述を継続します。
-
-## 2026-03-17 08:02 JST 再検証ログ（本run / 1件ずつ深掘り運用の固定）
-
-- 作業前に `main` を `pull --ff-only` し、基準コミットを `mind-upload=b01826de2565`、`EEG-DATA=48261b83b10a`、`auto-research-funds=c81f22c6aafd` に更新しました。
-- 正本 `mind-upload/research_harvest_50.md` と本ページ主表を突合し、`RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認しました。
-- 本ページで参照する EEG データID `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）でした。
-- 助成キー `G1-G6` は `grant_queue` と `auto-research-funds` の両系統で実ID参照可能でした。
-- 以降も方針を固定します。網羅的な薄い要約は行わず、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘りを優先します。
-
-## 2026-03-17 09:04 JST 再検証ログ（本run / 深掘り実行優先の更新）
-
-- 作業前に `main` を `pull --rebase --autostash origin main` し、最新化済みを確認しました。
-- 本ページの `Ux-RQy` を機械再計数し、`RQ_TOTAL=60`（欠落 `0`、重複 `0`）を再確認しました。
-- 判定内訳 `A/B/C=17/25/18` は `mind-upload-eeg-rq60-feasibility-and-funds.md` と一致しました。
-- 参照EEGデータと助成IDの欠落チェックは `0` を確認しました。
-- 依頼方針を継続します。全体俯瞰より `1RQ=1検証命題=1応募テーマ=1主データ` の単位で、各課題を深掘りして記述します。
-
-### 直近の深掘り優先6件（更新版）
-
-1. `U14-1`（固定粒度と追試成功率）
-2. `U7-2`（LSL同期誤差監査）
-3. `U8-2`（オンライン較正頻度と性能維持）
-4. `U1-2`（導電率/電極/ノイズ不確実性伝播）
-5. `U13-1`（意味復元と因果再現の分離）
-6. `U15-2`（neurorights技術監査項目化）
-
-## 2026-03-17 10:04 JST 再検証ログ（本run / RQ深掘り表のID整合）
-
-- 作業前に `main` と3サブモジュールを `pull --ff-only` し、基準コミットを `mind-upload=a16abed18888`、`EEG-DATA=02360da7bb71`、`auto-research-funds=abc3f6524aca` に更新しました。
-- 本ページ主表（`## U0` から `## 実務メモ` 直前）を機械再計数し、`RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認しました。
-- `候補EEG-DATA` 列の参照ID `24件` を現行 `EEG-DATA/eeg_dataset_summary_ja.csv` と突合した結果、`23件` が再採番で不一致でした（`6` のみ一致）。
-- 実務運用を更新します。RQ深掘り時の主データ固定は数値IDではなく `Dキー + DOI + データセット名` を正本とし、数値IDは探索補助扱いに限定します。
-- 方針は継続です。全課題を浅く横断せず、`1RQ=1検証命題=1応募テーマ=1主データ` を1件ずつ深掘りして進めます。
-
-## 2026-03-17 12:02 JST 再検証ログ（本run / 深掘り粒度の維持確認）
-
-- `RQ_TOTAL=60` を再確認し、本ページの `RQ` 行に欠落 `0` を確認しました。
-- 全RQで `EEGで直接検証する核` と `EEG外で必須` の両方が定義されていることを再確認しました。
-- 全RQで `応募テーマ（助成キー）` と `候補EEG-DATA` が埋まっており、`1RQ=1検証命題=1応募テーマ=1主データ` の運用粒度を維持しています。
-- 方針継続: 全課題を浅く総覧するのではなく、RQ単位で深掘りして申請と実験初手に接続します。
-
-## 2026-03-17 14:02 JST 再検証ログ（本run / 1件ずつ深掘り方針の再固定）
-
-- 作業前に `main` を `pull --ff-only` し、基準コミットを `mind-upload=aec3d72cc717`、`EEG-DATA=02360da7bb71`、`auto-research-funds=e8703b40121c` に更新しました。
-- 本ページ主表（`## U0` から `## 実務メモ` 直前）の `RQ` 行を再計数し、`RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認しました。
-- 全 `RQ` 行で `EEGで直接検証する核` と `EEG外で必須` が分離記述されていることを再確認しました（欠落 `0`）。
-- 助成キー `G1-G6` は `grant_queue` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再参照可能でした（欠落 `0`）。
-- 依頼方針を継続します。全体俯瞰より `1RQ=1検証命題=1応募テーマ=1主データ` を優先し、各RQを1件ずつ深掘りして更新します。
-
-### 直近の深掘り優先6件（本run固定）
-
-1. `U14-1`（固定粒度と追試成功率）
-2. `U7-2`（LSL同期誤差監査）
-3. `U8-2`（オンライン較正頻度とドリフト）
-4. `U1-2`（導電率/電極/ノイズ不確実性伝播）
-5. `U13-1`（意味復元と因果再現の分離）
-6. `U15-2`（neurorights技術監査項目化）
-
-## 2026-03-17 18:02 JST 深掘りカード（本run / 1件集中）
-
-### 対象RQ
-
-- `U4-2` 介入実験（刺激・抑制・入力撹乱）で検証可能な最小因果主張は何か。
-
-### このRQを今runで深掘りした理由
-
-- `A` 判定であり、EEG-DATAだけで「相関ではなく最小因果主張」を直接テストできるため。
-- `G1/G4` 系の審査で要求される「反証条件を先に固定する設計」と相性が良いため。
-
-### 固定した検証命題（1命題）
-
-- 命題: `既知介入条件での応答方向（符号）と効果量が、事前登録した最小因果主張を満たすか`。
-
-### 使うEEG-DATA（主/予備）
-
-- 主データ: `ID 56`（既知介入位置を含む条件）
-- 予備データ: `ID 1839`（刺激系の再確認）
-
-### 応募テーマ（このRQ専用）
-
-- 第一応募先 `G1`: 「ground-truth介入で最小因果主張を反証可能化するEEG検証基盤」
-- 予備応募先 `G4`: 「介入応答の符号反転率を用いた因果失敗宣言ルールの標準化」
-
-### 2週間の最小成果物
-
-1. 事前登録テンプレ（命題・失敗条件・停止条件）
-2. `ID 56` の介入有/無比較スクリプト（効果量と符号の自動出力）
-3. `ID 1839` による再確認レポート（同符号率・乖離ケース）
-
-### 合否ゲート（次runに進む条件）
-
-- `介入応答の符号一致率 >= 90%` かつ `効果量の方向一致` を満たすこと。
-- 上記を満たさない場合は、`U4-2` は一段降格して `B` 相当の外部依存を明示すること。
-
-## 2026-03-17 18:02 JST 再検証ログ（本run / 深掘り運用の再固定）
-
-- `RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認し、`feasibility` と `playbook` の2ページと整合することを確認しました。
-- 本ページの `応募テーマ（助成キー）` は全行 `G1-G6` のいずれかに割り当て済み（空欄 `0`）でした。
-- `候補EEG-DATA` の参照IDは `EEG-DATA/eeg_dataset_summary_ja.csv` で欠落 `0` を再確認しました。
-- 実務方針を維持します。全課題を浅く横断せず、`1RQ=1検証命題=1応募テーマ=1主データ` を1件ずつ深く更新します。
-
-## 2026-03-17 19:02 JST 再検証ログ（本run / 依頼反映: 1件ずつ深掘り運用の再固定）
-
-- 作業前に `main` を `pull --ff-only` で確認し、最新状態で再検証しました。
-- 本ページ主表（`## U0（同一性）` から `## 実務メモ` 直前）の `RQ` 行を再計数し、`RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認しました。
-- `応募テーマ（助成キー）` は全 `RQ` で `G1-G6` のいずれかを割当済み、欠落 `0` を再確認しました。
-- 申請時のデータ参照は `D1-D16 + DOI` を正本、数値 `ID` は補助扱いとする運用を再固定しました。
-- 依頼方針どおり、全体を浅く総覧せず、`1RQ=1検証命題=1応募テーマ=1主データ` の粒度で更新を継続します。
-
-### このrunの1件集中カード（U14-1）
-
-- 対象RQ: `U14-1`（固定粒度ごとの追試成功率）
-- 検証命題: `データ固定 / データ+コード固定 / データ+コード+環境固定` の3条件で再現率と追加コストを比較し、最小契約粒度を決める。
-- 応募テーマ: `再現性向上の固定粒度ガイドライン`（`G1`、予備 `G4`）
-- 使うEEG-DATA: `主D12`（Synthetic EEG）、`予備D8`（CSTE）
-- 合否ゲート: `再現率改善が事前定義値を満たし、コスト増分が上限内`。未達時は `U14-1` を `B` 運用に降格し、外部依存を明示する。
-
-## 2026-03-17 20:02 JST 再検証ログ（本run / 依頼反映: 1件ずつ深掘り運用の固定確認）
-
-- 作業前に `main` を `pull --ff-only` で確認し、最新状態で再検証しました。
-- 本ページ主表（`## U0（同一性）` から `## 実務メモ` 直前）の `RQ` 行を再計数し、`RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認しました。
-- `応募テーマ（助成キー）` は全 `RQ` で `G1-G6` へ割当済み（欠落 `0`）を再確認しました。
-- `候補EEG-DATA` で参照する `24 ID` は `EEG-DATA/eeg_dataset_summary_ja.csv` で欠落 `0` を確認しました。
-- 申請時の正本参照は `D1-D16 + DOI + データセット名`、数値 `ID` は探索補助という運用を維持します。
-
-## 2026-03-17 22:02 JST 深掘りカード（本run / 1件集中）
-
-### このrunの1件集中カード（U8-2）
-
-- 対象RQ: `U8-2`（オンライン較正と概念ドリフト対策）
-- 判定: `B`（EEG中核は直接検証可能、長期運用は外部要件あり）
-- 第一応募先: `G2`（`GR-2026-014`）
-- 予備応募先: `G5`（`871pw3rLjNPKgqA0`）
-- 応募テーマ（固定）: `オンライン較正で概念ドリフトを抑制する閉ループEEG運用基盤`
-
-### EEG-DATAの「何を使うか」（データ種別まで固定）
-
-- `ID 6`（`40tar_data` / DOI `10.6084/m9.figshare.28844471.v1`）
-  - 種別: `視覚・運動課題`、実験条件 `SSVEP / 運動イメージ`
-  - 使いどころ: オンライン再較正の更新頻度と安定率の初期ベースライン
-- `ID 2412`（`Bayesian Signal Matching ... ERP-Based BCI` / DOI `10.6084/m9.figshare.30822632.v1`）
-  - 種別: `運動課題`、実験条件 `ERP / 運動イメージ`
-  - 使いどころ: セッション間移送でのドリフト耐性と回復時間
-- `ID 1972`（`101-nights ... sleep study` / DOI `10.5281/zenodo.7799759`）
-  - 種別: `睡眠`
-  - 使いどころ: 状態遷移（覚醒/睡眠）を跨ぐ較正劣化の確認
-- `ID 696`（`EEG RAW data` / DOI `10.6084/m9.figshare.31403511`）
-  - 種別: `視覚`
-  - 使いどころ: 日内・日間ドリフトの追加確認
-
-### 2週間の最小成果物（U8-2専用）
-
-1. `再較正間隔（なし/毎試行/毎ブロック）` の3条件比較レポート
-2. `安定率` と `回復時間(s)` の閾値案
-3. `外部依存`（長期連続運用インフラ）を分離した申請下書き（`G2` 主、`G5` 予備）
-
-## 2026-03-17 22:02 JST 再検証ログ（本run / 依頼反映: 1件ずつ深掘り運用の継続）
-
-- 作業前に `main` を `pull` し、更新差分なしを確認したうえで追記しました。
-- `RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認し、既存2ページ（`feasibility` / `playbook`）との整合を維持しました。
-- 本runは `U8-2` を1件集中で固定し、`応募テーマ` と `EEG-DATAのデータ種別`（視覚・運動課題/ERP・運動イメージ/睡眠）を対応付けました。
-- 方針を継続します。全課題を浅く横断せず、`1RQ=1検証命題=1応募テーマ=1主データ` で更新します。
-
-## 2026-03-18 09:31 JST 再検証ログ（本run / 1RQずつ深掘り運用の継続確認）
-
-- `mind-upload/automation/rq_reading_path_timed_round19_2026-03-01.csv` の `60RQ` と本ページの `RQ` 行を再照合し、件数一致（欠落 `0`、重複 `0`）。
-- 判定件数は `A/B/C=17/25/18` を再確認。
-- 本ページで参照する EEG データID `24件` は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）。
-- 助成キー `G1-G6` を用いた応募テーマ割当は維持し、`EEGで直接検証する核` と `EEG外で必須` の分離を継続。
-- 方針据え置き: 「すべてを浅く網羅」ではなく、RQごとに検証命題・応募テーマ・主データを固定して深掘りする。
+| U8-1 | Identify the relationship between stability rate and recovery time when closed-loop delay is manipulated. | The same preprocessing pipeline was fixed with a delay of 0/50/100/150ms in the first week. In the second week, we remeasured the stability rate, recovery time, and abnormal stoppage rate and created a threshold table. | Identification of closed-loop delay tolerance range (`G2` main / `G5` spare) | `6` / `1972` | Relative decrease in stability rate is within 20% and abnormal stop rate is within the prior upper limit. |
+| U8-2 | Quantify the impact of online calibration intervals on performance retention. | Three conditions of calibration interval (every trial/every block/no fixation) were set in the first week. In the second week, we simultaneously evaluate the amount of drift and recalibration cost and determine the upper limit of operation. | Optimization of concept drift countermeasures (`G2` main / `G5` spare) | `696` / `2412` | Improvement in performance maintenance rate is statistically significant with respect to increase in calibration cost. |
+| U14-1 | Measure the correspondence between the fixed granularity (data/code/environment) of supplementary trial contracts and the reproduction success rate. | In the first week, re-execute at three granularity: "Fixed data only", "Fixed data + code", "Fixed data + code + environment". Quantify the recall rate difference and the man-hour difference in the second week. | Minimum granularity definition of reproduction contract (`G1` main / `G3` reserve) | `56` / `719` | Recall rate meets target value and man-hour increment is within acceptable upper limit. |
+| U14-3 | Automatically detect subject leaks and time series leaks, and enable auditing of leaderboard evaluations. | Implemented leak detection rules (subject/session/time-window) in the first week. Apply it to the existing partition in the second week and create an audit report of the performance difference after re-partitioning. | leaderboard audit operation (`G1` main / `G3` spare) | `719` / `56` | Zero leak detection, performance deterioration after repartition can be explained. |
+| U7-2 | Estimate the jitter distribution of LSL synchronization error and determine the operational warning threshold. | Fixed offset/jitter extraction processing in the first week. Calculate the event rate exceeding the threshold in the second week and set the remeasurement trigger conditions as rules. | Synchronization error automatic warning operation (`G1` main / `G3` spare) | `6` / `696` | Reproducibility of threshold exceeded events and false alarm rate of remeasurement rules are within tolerance. |
+| U13-1 | Separately evaluate the discrepancy between semantic matching and causal matching using the same decoder. | U13-1 | | In the first week, the meaning match score and intervention response match score were calculated using separate indicators. In the second week, cases of deviation were specified as failure conditions, and the sole adoption of imitation passes was prohibited. | Separate evaluation of semantic restoration/causal reproduction (`G1` main / `G4` preliminary) | `509` / `13` | Cases where only semantic matching is high can be identified and cases where there is no causal matching can be avoided. |
+
+### Execution order (fixed)
+
+1. `U8-1` (delay tolerance area)
+2. `U8-2` (Calibration interval and drift)
+3. `U14-1` (Reproduction contract granularity)
+4. `U14-3` (Leak Audit)
+5. `U7-2` (Synchronization error audit)
+6. `U13-1` (Separation of semantic matching/causal matching)
+
+### Operation rules fixed in this run
+
+- Re-fix `1RQ=1 verification proposition=1 application theme=1 main data` as 6RQ.
+- RQs that do not reach "first experiment results + pass/fail gate" within two weeks will not be carried over to the next run, but will be switched to another RQ with a clear reason for failure.
+- `C` Judgment RQ is not subject to this time (the policy is to accumulate technology demonstration first).
+
+## 2026-03-15 16:03 JST revalidation log (after main run/submodule pull)
+
+- After reflecting the latest `main` of `mind-upload` / `EEG-DATA` / `auto-research-funds`, re-inspect the `RQ` line of the deep digging note.
+- Reconfirmed `RQ_TOTAL=60`, `A/B/C=17/25/18`, `Application theme (grant key)` missing `0`, `Main EEG-DATA` missing `0`.
+- The policy remains the same: `1RQ = 1 verification proposition = 1 application theme = 1 main data`, and each issue will be treated individually and in depth.

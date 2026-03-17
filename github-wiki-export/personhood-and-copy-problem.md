@@ -1,98 +1,98 @@
-# Wiki：本人性とコピー問題
+# Wiki: Identity and copying issues
 
-> 見た目が同じでも、『同じ本人』かは別問題です
+> Even if they look the same, whether they are the same person is a different matter.
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-14 / 位置づけ: Beginner guide
+- Updated: 2026-03-14 / Role: Beginner guide
 
-## このページの役割
-このページは、Mind-Upload の議論でよく出てくる『コピー問題』と『本人性』を初歩から整理する wiki です。哲学の固有名詞を覚えるより先に、なぜこの論点が技術の外に逃げないのかを理解することを目指します。
+## Role Of This Page
+This page is a wiki that organizes the ``copying problem'' and ``authenticity'' that often come up in Mind-Upload discussions from the beginning. Before memorizing the proper nouns of philosophy, I aim to understand why this issue does not escape from technology.
 
-## 正確さの前提
-このページは分かりやすく説明しますが、本人性の最終結論を出すページではありません。未解決のまま残る部分を明示します。
+## Accuracy Notes
+This page provides easy-to-understand explanations, but it is not a page to draw final conclusions about the person's identity. Clarify what remains unresolved.
 
-## 公開ページへ戻る
-- [理論フレーム](https://mind-upload.com/perspective.html#design-principles)
-- [WBE入門](https://mind-upload.com/wbe_101.html)
-- [検証基盤](https://mind-upload.com/verification.html)
+## Back To Public Pages
+- [theory frame](https://mind-upload.com/perspective.html#design-principles)
+- [Introduction to WBE](https://mind-upload.com/wbe_101.html)
+- [Verification platform](https://mind-upload.com/verification.html)
 
-## 関連 Wiki
-- [Wiki: WBEの基本](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - 全体像からこの論点の位置づけを確認できます。
-- [Wiki: 主張と証拠の読み方](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - L4 の本人性主張がどれだけ強いかを補います。
-- [Wiki: 本人性評価と連続性テスト](https://github.com/yasufumi-nakata/mind-upload/wiki/identity-and-continuity-tests) - 哲学の論点を、事前登録されたテスト設計へ戻して整理します。
-- [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - 他の基礎ページへ戻れます。
+## Related Wiki Pages
+- [Wiki: Basics of WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - The position of this issue can be confirmed from the overall picture.
+- [Wiki: How to read claims and evidence](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - Compensates for how strong L4's identity claims are.
+- [Wiki: Identity assessment and continuity test](https://github.com/yasufumi-nakata/mind-upload/wiki/identity-and-continuity-tests) - Organize the philosophical issues back into the pre-registered test design.
+- [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other basic pages.
 
-## いま分かっていること
-- 見た目の振る舞いが似ていても、それだけで本人性は確定しません。
-- コピーが複数ある状況では、『どれが本人か』が自動的には決まりません。
-- だから Mind-Upload では、連続性をどう検証するかを別問題として扱います。
+## What Is Currently Known
+- Even if someone looks similar in behavior, that alone does not confirm their identity.
+- In situations where there are multiple copies, it is not automatically determined which one is the real person.
+- Therefore, in Mind-Upload, we treat how to verify continuity as a separate issue.
 
-## まだ分かっていないこと
-- どの条件なら『同じ本人』と見なしてよいかについて、合意はありません。
-- 心理的連続性、因果連続性、現象的意識のどれを重視するかで結論が変わります。
-- 連続的移行の設計が、本人性を十分に守るかどうかも未証明です。
+## What Is Still Unknown
+- There is no agreement on the conditions under which two persons can be considered as "the same person."
+- The conclusion will change depending on whether you emphasize psychological continuity, causal continuity, or phenomenal consciousness.
+- It is also unproven whether continuous transition designs adequately protect identity.
 
 ---
 
-<h2>まず最初の区別</h2>
+<h2>First distinction</h2>
 <p>
-誰かとまったく同じように話し、同じ記憶を語り、同じ反応をしたとしても、それだけで「同じ本人」とは限りません。Mind-Upload では、この差を曖昧にしないために、<strong>性能の一致</strong>と<strong>本人性の主張</strong>を別のレベルとして扱います。
+Even if you speak exactly the same way, share the same memories, or react in the same way as someone else, that alone does not mean that you are the same person. At Mind-Upload, we treat <strong>performance matching</strong> and<strong>identity assertion</strong> as different levels in order to avoid blurring this difference.
 </p>
 
-<h2>なぜ難しいのか</h2>
+<h2>Why is it difficult</h2>
 <table>
 <thead>
 <tr>
-<th>問い</th>
-<th>なぜ難しいか</th>
+<th>Question</th>
+<th>Why is it difficult</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>同じ記憶を語れたら本人か</td>
-<td>記憶の再現と、体験の連続性は同じではないかもしれないからです。</td>
+<td>If I could share the same memory, would it be me?</td>
+<td>This is because the reproduction of memory and the continuity of experience may not be the same. </td>
 </tr>
 <tr>
-<td>コピーが1つなら本人か</td>
-<td>もし2つ作れたら、どちらが本人かを同じ理屈で決めにくくなるからです。</td>
+<td>If there is only one copy, it is the person himself/herself</td>
+<td>If two were created, it would be difficult to determine which one is the real person using the same logic. </td>
 </tr>
 <tr>
-<td>少しずつ置き換えたら安全か</td>
-<td>連続的移行は直感的に強そうですが、それが十分条件かはまだ分からないからです。</td>
+<td>Is it safe to replace it little by little?</td>
+<td>Continuous transition seems intuitively strong, but it remains to be seen whether it is a sufficient condition. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>静的コピーと連続的移行の違い</h2>
+<h2>Difference between static copy and continuous migration</h2>
 <table>
 <thead>
 <tr>
-<th>考え方</th>
-<th>何を重視するか</th>
-<th>残る疑問</th>
+<th>Thinking</th>
+<th>What to focus on</th>
+<th>Remaining questions</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>静的コピー</strong></td>
-<td>ある時点の構造や情報を複製すること。</td>
-<td>コピーが複数あれば、どれが本人かが分からなくなります。</td>
+<td><strong>Static copy</strong></td>
+<td>To copy a structure or information at a certain point in time. </td>
+<td>If you have multiple copies, you won't know which one is the real person. </td>
 </tr>
 <tr>
-<td><strong>連続的移行</strong></td>
-<td>プロセスや相互作用を切らさずに引き継ぐこと。</td>
-<td>連続であることが、本人性の十分条件かはまだ未証明です。</td>
+<td><strong>Continuous migration</strong></td>
+<td>To take over processes and interactions without interruption. </td>
+<td>It is still unproven whether continuity is a sufficient condition for identity. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>工学に戻すと、何をテストしたいのか</h2>
+<h2>Back to engineering, what do we want to test</h2>
 <p>
-この論点を工学に戻すと、ただ「よく似ているか」を見るだけでは足りません。記憶、価値観、学習履歴、条件変更への反応が、どこまで連続しているかを事前登録したテストで見る必要があります。つまり、哲学の話をそのまま放置するのではなく、<strong>どんな失敗なら本人性主張を保留にするか</strong>を定義する方向へ進みます。
+Returning this point to engineering, it is not enough to simply look at whether things are very similar. It is necessary to examine the continuum of memory, values, learning history, and response to changes in conditions through pre-registered tests. In other words, rather than leaving the philosophical discussion as it is, we move toward defining<strong>what kinds of failures would cause us to suspend our claim of identity</strong>.
 </p>
-<p>テスト設計の入口だけ先に見たい場合は、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/identity-and-continuity-tests">Wiki: 本人性評価と連続性テスト</a> が補講になります。</p>
+<p>If you want to look at the introduction to test design first, <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/identity-and-continuity-tests">Wiki: Identity Assessment and Continuity Tests</a> is a supplementary course. </p>
 
 <h4>Next</h4>
-<p>この論点を理論フレームとしてどう扱うかは、こちらで確認できます。</p>
-<a href="https://mind-upload.com/perspective.html#design-principles">理論フレームへ →</a>
+<p>You can check here how to treat this issue as a theoretical frame. </p>
+<a href="https://mind-upload.com/perspective.html#design-principles">Go to theory frame →</a>

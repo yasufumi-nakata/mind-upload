@@ -1,49 +1,54 @@
 ---
 layout: default
 title: "Mind Uploading Paper Collection"
-description: "過去10年間の主要な「Mind Uploading」関連論文を、アブストラクトの有無で整理したアーカイブです。"
+description: "An archive of major Mind Uploading-related papers from the past decade, organized by whether an abstract is available."
 article_type: "Paper Archive"
-subtitle: "年別の流れを見ながら、必要な論文だけ原文へ戻るための入口"
+subtitle: "A place to track trends by year and return to the original text only for the papers you need"
 author: Mind Uploading Research Project
 known_points:
-  - "このページは関連論文を広く拾うアーカイブであり、各論文の最終評価を確定するページではありません。"
-  - "年別に追うと、どの論点に関心が集まってきたかの流れを見やすくなります。"
-  - "重要論文は、要約を入口にして DOI や原文へ戻る前提で読む必要があります。"
-  - "法学・哲学・文化論も含む broad archive なので、技術フロンティアを年順の先頭だけで判断してはいけません。"
+  - "This page is a broad archive of related papers, not a page that fixes the final evaluation of each paper."
+  - "Reading by year makes it easier to see which issues are attracting attention over time."
+  - "Important papers should be approached through the summary first, then traced back to the DOI and the original text."
+  - "This is a broad archive that also includes law, philosophy, and cultural theory, so the technological frontier should not be judged only from the top of a given year."
 unknown_points:
-  - "収録されているだけで、その論文が中心的証拠だとまでは言えません。"
-  - "すべての論文が同じ深さで精査済みというわけではありません。"
+  - "Inclusion alone does not mean that a paper counts as central evidence."
+  - "Not every paper in the archive has been audited to the same depth."
 wiki_links:
-  - label: "Wiki: 文献と証拠ページの読み方"
+  - label: "Wiki: How to read the literature and evidence page"
     url: "/wiki/literature-and-evidence-reading.html"
-    description: "論文アーカイブ、文献地図、提案ページの役割差を整理します。"
-  - label: "Wiki: 文献のソース種別と状態ラベル"
+    description: "Clarifies the role differences between the paper archive, the literature map, and proposal pages."
+  - label: "Wiki: Source types and status labels for papers"
     url: "/wiki/paper-source-types-and-evidence-status.html"
-    description: "Scopus、arXiv、Review、Media、source_logged などの意味を整理します。"
-  - label: "Wiki: WBEの基本"
+    description: "Explains the meaning of Scopus, arXiv, Review, Media, source_logged, and related labels."
+  - label: "Wiki: Basics of WBE"
     url: "/wiki/mind-upload-basics.html"
-    description: "論文の論点が、分野全体のどこにあるかを先に押さえたい人向けです。"
-  - label: "Wiki: 検証基盤の基本"
+    description: "For readers who want to place a paper's argument within the larger field first."
+  - label: "Wiki: Basics of verification infrastructure"
     url: "/wiki/verification-basics.html"
-    description: "論文を読むとき、何を証拠として重く見るかの前提を補います。"
+    description: "Helps frame what should count as stronger or weaker evidence when reading a paper."
 last_updated: "2026-03-16"
 note: "Curated archive"
-audience: "関連論文を広く見たい人、年別の傾向をざっと掴みたい人、元論文へ戻る入口が欲しい人"
-reading_time: "目次確認なら5分、精読は必要な論文だけ"
-page_intro: "このページは、Mind Uploading に関連する論文を年別に広く見渡すためのアーカイブです。ここで大事なのは、論文を全部同じ重みで信じることではなく、どの論点にどの種別の文献があるかを素早く掴むことです。"
-accuracy_note: "収録されていることは『関連文献として拾われた』ことを意味し、各論文が同じ強さの証拠であることは意味しません。"
+audience: "People who want a broad view of related papers, a quick sense of yearly trends, or an entry point back to the original literature."
+reading_time: "5 minutes to check the table of contents; detailed reading only for the papers you need"
+page_intro: >
+  This page is an archive for broadly surveying papers related to Mind Uploading by year. The key
+  point is not to believe all papers with equal weight, but to grasp quickly which kinds of literature
+  exist for which questions.
+accuracy_note: >
+  Inclusion means only that a work was picked up as relevant literature. It does not mean that every
+  paper has the same evidential strength.
 page_highlights:
-  - "年別に並んでいるので、関心の集まり方の変化を追えます。"
-  - "和訳要約と原文要約を併記し、必要なら元論文へ戻れるようにしています。"
-  - "まず一覧で位置をつかみ、重要そうな論文だけを個別に掘る使い方を想定しています。"
-  - "年順は証拠強度順ではないため、技術・自然科学の一次証拠は本文前半の優先ルートから入る方が安全です。"
-  - "技術・自然科学では、Badge と年順だけでなく evidence class も分けて読む方が安全です。"
+  - "The archive is organized by year, so changes in attention can be tracked over time."
+  - "English summaries and the original abstract are both included so readers can return to the source when necessary."
+  - "The intended workflow is to locate papers in the list first and then dig into only the ones that appear important."
+  - "Because chronology is not the same thing as evidence strength, primary evidence in technology and natural science is safer to enter from the priority route in the first half of the page."
+  - "In technology and natural science, it is safer to read not only badge and chronology, but also evidence class."
 recommended_pages:
-  - label: "文献地図"
+  - label: "Literature Map"
     url: "/research_harvest_50.html"
-  - label: "用語集"
+  - label: "Glossary"
     url: "/glossary.html"
-  - label: "検証基盤"
+  - label: "Verification"
     url: "/verification.html"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
@@ -51,29 +56,29 @@ recommended_pages:
 <div class="papers-page">
 <aside class="papers-sidebar">
 <div class="sidebar-logo">Mind Uploading</div>
-<div class="sidebar-nav-header">ナビゲーション</div>
+<div class="sidebar-nav-header">Navigation</div>
 <ul class="sidebar-nav">
-<li><a href="#technical-fast-lane">0. 技術・自然科学の優先ルート</a></li>
-<li><a href="#with-abstracts">1. アブストラクトあり</a>
+<li><a href="#technical-fast-lane">0. Priority route for technology and natural sciences</a></li>
+<li><a href="#with-abstracts">1. With abstracts</a>
 <ul class="sub-nav">
-<li><a href="#year-w-2025">2025年</a></li>
-<li><a href="#year-w-2024">2024年</a></li>
-<li><a href="#year-w-2023">2023年</a></li>
-<li><a href="#year-w-2022">2022年</a></li>
-<li><a href="#year-w-2021">2021年</a></li>
-<li><a href="#year-w-2020">2020年</a></li>
-<li><a href="#year-w-2019">2019年</a></li>
-<li><a href="#year-w-2018">2018年</a></li>
-<li><a href="#year-w-2017">2017年</a></li>
+<li><a href="#year-w-2025">2025</a></li>
+<li><a href="#year-w-2024">2024</a></li>
+<li><a href="#year-w-2023">2023</a></li>
+<li><a href="#year-w-2022">2022</a></li>
+<li><a href="#year-w-2021">2021</a></li>
+<li><a href="#year-w-2020">2020</a></li>
+<li><a href="#year-w-2019">2019</a></li>
+<li><a href="#year-w-2018">2018</a></li>
+<li><a href="#year-w-2017">2017</a></li>
 </ul>
 </li>
-<li><a href="#without-abstracts">2. アブストラクトなし</a></li>
+<li><a href="#without-abstracts">2. No abstracts</a></li>
 </ul>
 </aside>
 <main>
 <header>
 <h1>Mind Uploading Paper Collection</h1>
-<p>過去10年間の主要な「Mind Uploading」関連論文を、アブストラクトの有無で整理したアーカイブです。まずは年別の流れと要約を見て、必要な論文だけ元文献へ戻る使い方を想定しています。</p>
+<p>This is an archive of major "Mind Uploading" related papers from the past 10 years, organized by the presence or absence of abstracts. First of all, we assume that you will be able to look at the flow and summaries by year, and then go back to the original documents for only the necessary papers. </p>
 <div class="stats-grid">
 <div class="stat-card"><span>Total</span>
 <div>100</div>
@@ -86,269 +91,269 @@ recommended_pages:
 </div>
 </div>
 <div class="key-points">
-<h4>読む前に</h4>
+<h4>Before reading</h4>
 <ul>
-<li><strong>このページの役割：</strong>関連文献の入口を作ることです。各論文の最終評価をここだけで完結させるページではありません。</li>
-<li><strong>先に見る場所：</strong>まず統計と年別の並びを確認し、その後に自分の関心に近い論文だけを精読してください。</li>
-<li><strong>気を付ける点：</strong>関連性が広めの論文も含まれるため、収録＝中心的証拠とは限りません。</li>
+<li><strong>The role of this page:</strong>To create an entry point for related literature. This is not the only page where you can complete the final evaluation of each paper. </li>
+<li><strong>Where to look first:</strong>First, check the statistics and yearly order, then carefully read only the papers that are closest to your interests. </li>
+<li><strong>Points to be aware of:</strong>Since papers that are widely related are also included, inclusion does not necessarily mean core evidence. </li>
 </ul>
 </div>
 <div class="note-box">
-<strong>迷ったときの読み順</strong>
+<strong>Reading order when lost</strong>
 <p>
-まず上の統計で全体量を確認し、次に最新年から数本だけ要約を読んで論点の傾向を掴んでください。個別論文の位置づけを強く知りたい場合は、<a href="research_harvest_50.html">文献地図</a>に戻ると未解決問題との対応を確認できます。
+First, check the overall volume using the statistics above, then read the summaries of just a few books from the latest year to get a sense of the trends in the issues. If you want to know more about the position of individual papers, you can return to <a href="research_harvest_50.html">Bibliography Map</a> and check the correspondence with unresolved issues.
 </p>
 </div>
 <div class="note-box">
-<strong>このページの位置づけを先に知りたいとき</strong>
+<strong>When you want to know the position of this page first</strong>
 <p>
-この論文集は「広く拾う入口」であり、<a href="research_harvest_50.html">文献地図</a> は「未解決問題ごとに整理する場所」です。違いが曖昧な場合は、<a href="wiki/literature-and-evidence-reading.html">Wiki: 文献と証拠ページの読み方</a> を先に見ると、どこまで深読みすべきか判断しやすくなります。
+This collection of papers is a "wide-ranging entry point," and the <a href="research_harvest_50.html">Bibliography Map</a> is a "place to organize by unresolved problems." If you're unsure about the difference, looking at <a href="wiki/literature-and-evidence-reading.html">Wiki: How to read literature and evidence pages</a> first will help you decide how deep to read.
 </p>
 </div>
 <div class="note-box">
-<strong>要約で止めてよい場面と、原文へ戻る場面を分けたいとき</strong>
+<strong>When you want to distinguish between scenes where you can stop with a summary and scenes where you can return to the original text</strong>
 <p>
-このページは論文を広く見る入口なので、全部を最初から原文精読する必要はありません。一方で、重要論文を根拠に使うときは DOI や Original Abstract へ戻る必要があります。使い分けを 1 枚で見たい場合は <a href="wiki/summary-vs-source-reading.html">Wiki: 要約・原文・Issue履歴の使い分け</a> をご覧ください。
+This page is your gateway to a broader view of the paper, so there is no need to carefully read the entire text from the beginning. On the other hand, when using important papers as evidence, you need to go back to the DOI and Original Abstract. If you want to see the different uses in one page, please see <a href="wiki/summary-vs-source-reading.html">Wiki: How to use summary, original text, and issue history</a>.
 </p>
 </div>
 <div class="note-box">
-<strong>論文を読んだあとに次の1ページを決めたいとき</strong>
+<strong>When you want to decide on the next page after reading a paper</strong>
 <p>
-この論文集で論文を見つけたあとに、未解決問題へ戻すのか、提案や Issue へつなぐのかを一本道で見たい場合は <a href="wiki/literature-to-action-route.html">Wiki: 文献から実装・参加へ戻る一本道</a> をご覧ください。
+If you find a paper in this collection of papers and want to know whether to go back to unresolved problems or link it to a proposal or issue, please see <a href="wiki/literature-to-action-route.html">Wiki: Straight path from literature to implementation/participation</a>.
 </p>
 </div>
 <div class="note-box">
-<strong>Scopus や arXiv の表示で止まったとき</strong>
+<strong>When the Scopus or arXiv display stops</strong>
 <p>
-Badge は「どこから辿れる文献か」の手掛かりであり、それだけで証拠の強さは決まりません。Scopus、arXiv、Review、Media、source_logged に加え、direct validation / system demo / standard・benchmark / context の違いを 1 枚で確認したい場合は、<a href="wiki/paper-source-types-and-evidence-status.html">Wiki: 文献のソース種別・状態・証拠クラスの読み方</a> を先に見ると安全です。
+Badges are a clue as to where the document can be traced, but they alone do not determine the strength of the evidence. If you want to check the differences between Scopus, arXiv, Review, Media, source_logged, and direct validation / system demo / standard / benchmark / context in one page, it is safe to read <a href="wiki/paper-source-types-and-evidence-status.html">Wiki: How to read document source types, status, and evidence classes</a> first.
 </p>
 </div>
 <div class="note-box">
-<strong>技術・自然科学だけで先に読みたいとき</strong>
+<strong>When you want to read only technology/natural science first</strong>
 <p>
-この論文集は <strong>broad archive</strong> なので、2025 年の先頭がそのまま技術フロンティア順とは限りません。実際、法学・形而上学・VR 作品論も同じ年の列に並びます。したがって、技術・自然科学の一次証拠を追う場合は、年順で上から読まず、まず下の <a href="#technical-fast-lane">技術・自然科学の優先ルート</a> から入ってください。
+This collection of papers is a <strong>broad archive</strong>, so the first year of 2025 is not necessarily in order of technological frontier. In fact, law, metaphysics, and VR work theory are also arranged in the same year. Therefore, if you want to follow the primary evidence in technology and natural sciences, instead of reading from the top in chronological order, first enter from the <a href="#technical-fast-lane">preferred route for technology and natural sciences</a> below.
 </p>
 </div>
 <section class="section" id="technical-fast-lane">
-<h2 class="section-title">2026-03 文献監査：技術・自然科学の優先ルート</h2>
+<h2 class="section-title">2026-03 Literature audit: Priority route for technology and natural sciences</h2>
 <p>
-このページの弱点は、<strong>年順のアーカイブ</strong>としては有用でも、<strong>実験的フロンティアへの入口</strong>としては並び順が弱い点でございます。技術・自然科学の観点でまず知りたいのは、(1) 非侵襲 decode がどこまで進んだか、(2) 侵襲 speech neuroprosthesis がどこまで closed loop を押し上げたか、(3) source imaging を direct validation でどこまで監査できるか、(4) multimodal 統合で何が本当に強くなり、どこで hemodynamic proxy ceiling に当たるか、(5) connectome の外に maintenance-state と mechanistic boundary がどれだけ残るか、であって、法学・哲学・文化論の先頭表示ではありません。そこでこのページでは、以下を <strong>優先ルート</strong> として明示します。
+The weakness of this page is that although it is useful as a <strong>chronological archive</strong>, the ordering is weak as a <strong>entrance to the experimental frontier</strong>. From a technology/natural science perspective, the first thing we want to know is (1) how far non-invasive decoding has progressed, (2) how far invasive speech neuroprosthesis has pushed the closed loop, (3) how far source imaging can be audited with direct validation, (4) what really becomes stronger with multimodal integration and where it hits the hemodynamic proxy ceiling, and (5) maintenance-state and mechanistic boundaries outside the connectome. It is about how much remains, not the first display of law, philosophy, or cultural theory. Therefore, on this page, we clearly indicate the following as <strong>preferred route</strong>.
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>まず読む技術ルート</th>
-<th>先に当たる一次文献</th>
-<th>いま言えること</th>
-<th>まだ言えないこと</th>
-<th>次に戻るページ</th>
+<th>Technical route to read first</th>
+<th>Previous primary literature</th>
+<th>What I can say now</th>
+<th>Things I can't say yet</th>
+<th>Next page</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>非侵襲 language decode</strong></td>
-<td><a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a>、<a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">D&eacute;fossez et al. (2023)</a>、<a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a></td>
-<td>意味復元、音声知覚 decode、単語 decode はかなり前進しています。ただし課題構造、participant cooperation、candidate set、モダリティ差の影響が大きいです。</td>
-<td>open-ended な thought reading、subject-independent な安定 decode、WBE に必要な内部状態再構成までは示していません。</td>
-<td><a href="perspective.html#brain-to-text-update">Perspective の brain-to-text 節</a> / <a href="wiki/decode-vs-emulate.html">Decode と Emulate</a></td>
+<td><strong>Non-invasive language decode</strong></td>
+<td><a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a>, <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">D&eacute;fossez et al. (2023)</a>, <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a></td>
+<td>Considerable progress has been made in semantic recovery, speech perception decoding, and word decoding. However, the influence of task structure, participant cooperation, candidate set, and modality differences is significant. </td>
+<td>It does not show open-ended thought reading, subject-independent stable decoding, or internal state reconstruction necessary for WBE. </td>
+<td><a href="perspective.html#brain-to-text-update">Perspective: brain-to-text section</a> / <a href="wiki/decode-vs-emulate.html">Decode and Emulate</a></td>
 </tr>
 <tr>
-<td><strong>侵襲 speech neuroprosthesis</strong></td>
-<td><a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>、<a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>、<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a></td>
-<td>高語彙 text decode、streaming brain-to-voice、約 10 ms の voice synthesis まで到達し、communication subsystem の L2〜L3 を強く押し上げています。</td>
-<td>全脳 emulation、本人性、長期 drift 耐性、再較正負荷ゼロはまだ示していません。</td>
-<td><a href="faq.html#brain-to-text">FAQ: brain-to-text の見方</a> / <a href="verification.html#causal-perturbation-suite">Verification</a></td>
+<td><strong>Invasive speech neuroprosthesis</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a></td>
+<td>Achieves high vocabulary text decoding, streaming brain-to-voice, and voice synthesis of approximately 10 ms, strongly pushing the L2 to L3 communication subsystem. </td>
+<td>Whole-brain emulation, identity, long-term drift tolerance, and zero recalibration load have not yet been demonstrated. </td>
+<td><a href="faq.html#brain-to-text">FAQ: how to read brain-to-text claims</a> / <a href="verification.html#causal-perturbation-suite">Verification</a></td>
 </tr>
 <tr>
-<td><strong>直接妥当化つき ESI / source imaging</strong></td>
-<td><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a></td>
-<td>既知刺激位置や同時 SEEG を使った direct validation により、localization error、source depth、conductivity 仮定の影響をかなり監査できます。</td>
-<td>head model を変えても一般的一意復元が得られる、という主張までは支えません。</td>
-<td><a href="datasets.html#validation-ladder">Datasets: validation ladder</a> / <a href="wiki/observation-to-estimation.html">観測から推定へ</a></td>
+<td><strong>ESI / source imaging with direct validation</strong></td>
+<td><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a>, <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>, <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a></td>
+<td>Direct validation using known stimulus locations and simultaneous SEEG allows for significant auditing of the effects of localization error, source depth, and conductivity assumptions. </td>
+<td>It is not possible to support the claim that general uniqueness restoration can be obtained even if the head model is changed. </td>
+<td><a href="datasets.html#validation-ladder">Datasets: validation ladder</a> / <a href="wiki/observation-to-estimation.html">From observation to estimation</a></td>
 </tr>
 <tr>
 <td><strong>multimodal alignment / hemodynamic gate</strong></td>
-<td><a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe et al. (2025)</a>、<a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021)</a>、<a href="https://doi.org/10.1038/35084005" target="_blank">Logothetis et al. (2001)</a>、<a href="https://doi.org/10.1016/j.neuroimage.2003.11.029" target="_blank">Handwerker et al. (2004)</a>、<a href="https://doi.org/10.1523/JNEUROSCI.2532-21.2022" target="_blank">Kurzawski et al. (2022)</a></td>
-<td>共有時計、metadata、同時計測 EEG-fMRI の再現可能な cross-modal concordance、BOLD の proxy ceiling まではかなり明確に読めます。</td>
-<td>shared clock をそのまま trial-level causal order や direct neural truth と読んだり、multimodal をそのまま state-complete measurement と読んだりはできません。</td>
-<td><a href="wiki/multimodal-integration-basics.html">Wiki: マルチモーダル統合の基本</a> / <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: 計測スタックごとの observability と claim ceiling</a></td>
+<td><a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe et al. (2025)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021)</a>, <a href="https://doi.org/10.1038/35084005" target="_blank">Logothetis et al. (2001)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2003.11.029" target="_blank">Handwerker et al. (2004)</a>, <a href="https://doi.org/10.1523/JNEUROSCI.2532-21.2022" target="_blank">Kurzawski et al. (2022)</a></td>
+<td>The shared clock, metadata, reproducible cross-modal concordance of simultaneous measurement EEG-fMRI, and proxy ceiling of BOLD can be read quite clearly. </td>
+<td>Shared clock cannot be read as trial-level causal order or direct neural truth, nor can multimodal be read as state-complete measurement. </td>
+<td><a href="wiki/multimodal-integration-basics.html">Wiki: Multimodal integration basics</a> / <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and claim ceiling for each measurement stack</a></td>
 </tr>
 <tr>
 <td><strong>maintenance-state / mechanistic boundary</strong></td>
-<td><a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a>、<a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>、<a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a></td>
-<td>cell type 内の morpho-electric 幅、sleep-dependent renormalization、myelin / metabolic support、astrocyte ensemble、connectome-constrained dynamics の縮退が、connectome 外に残る boundary condition だと分かります。</td>
-<td>配線図 + cell type + 高 score demo だけで long-term dynamics や state-complete reconstruction が十分だ、という読みに替えてはいけません。</td>
-<td><a href="wbe_101.html#state-completeness">WBE 101 の hidden state 節</a> / <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">恒常性可塑性と維持状態</a></td>
+<td><a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a>, <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>, <a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a>, <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a></td>
+<td>It can be seen that the degeneracy of morpho-electric width, sleep-dependent renormalization, myelin/metabolic support, astrocyte ensemble, and connectome-constrained dynamics within the cell type are the boundary conditions that remain outside the connectome. </td>
+<td>Do not assume that wiring diagram + cell type + high score demo is sufficient for long-term dynamics or state-complete reconstruction. </td>
+<td><a href="wbe_101.html#state-completeness">hidden state section of WBE 101</a> / <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Homeostatic plasticity and maintenance state</a></td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>この表の使い方</strong>
+<strong>How to use this table</strong>
 <p>
-技術・自然科学の一次証拠を探す場合は、まず上の 5 ルートのどれを見たいかを決めてください。そのうえで年別カードへ降り、要約ではなく DOI と原文要旨へ戻ります。年順の先頭にある論文が、そのまま strongest evidence を意味するわけではありません。
+If you are looking for primary evidence in technology or the natural sciences, first decide which of the five routes above you want to look at. Then go down to the yearly cards and go back to the DOI and original abstract instead of the summary. The first paper in chronological order does not necessarily mean the strongest evidence.
 </p>
 </div>
 <div class="note-box">
-<strong>demo と boundary paper を対で読む</strong>
+<strong>Read demo and boundary paper as a pair</strong>
 <p>
-decode や neuroprosthesis の高 score を見たときは、そのまま昇格させず、同じ論点に対する <strong>mechanistic boundary / hidden-state evidence</strong> を 1 本以上必ず併読してください。system demo は「何ができたか」を押し上げますが、Gouwens、Hengen、Xu、Looser、Cahill、Williamson、Beiran &amp; Litwin-Kumar のような論文は「何がまだ十分でないか」を押し上げます。技術 frontier を読むには、この両方が必要でございます。
+When you see a high score for decode or neuroprosthesis, don't just promote it, but be sure to read at least one <strong>mechanistic boundary / hidden-state evidence</strong> for the same issue. While system demos push up "what could have been," papers like Gouwens, Hengen, Xu, Looser, Cahill, Williamson, Beiran &amp; Litwin-Kumar push up "what's not good enough." Both are required to read Technology Frontier.
 </p>
 </div>
 </section>
 <section class="section" id="technical-evidence-classes">
-<h2 class="section-title">2026-03 技術ルートでは evidence class を先に固定します</h2>
+<h2 class="section-title">In the 2026-03 technology route, evidence class is fixed first</h2>
 <p>
-今回さらに修正すべきだった弱点は、<strong>Badge</strong> と <strong>年順</strong> だけでは、その論文が何を直接増やすのかが見えにくいことでした。たとえば <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> は <strong>local direct validation</strong> を押し上げますが、<a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a>、<a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a>、<a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>、<a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>、<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> が押し上げるのは <strong>task-limited system performance</strong> です。また <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019)</a>、<a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Burns et al. (2024)</a>、<a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe et al. (2025)</a>、<a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant (2018)</a>、<a href="https://proceedings.mlr.press/v37/blum15.html" target="_blank">Blum &amp; Hardt (2015)</a>、<a href="https://papers.neurips.cc/paper_files/paper/2019/hash/ee39e503b6bedf0c98c388b7e8589aca-Abstract.html" target="_blank">Roelofs et al. (2019)</a> は <strong>再現・同期・benchmark governance</strong> を強くします。さらに <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a>、<a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>、<a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> が押し上げるのは、<strong>何がまだ latent state / omitted mechanism として残るか</strong>という mechanistic boundary でございます。したがってこのページでは、技術・自然科学の主導線で少なくとも次の 6 クラスを分けます。
+The weakness that should have been further corrected this time was that it was difficult to see what the paper directly increased by looking only at <strong>Badge</strong> and <strong>Year order</strong>. For example, <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a>, <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>, <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> boosts <strong>local direct validation</strong>, but <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a>, <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> pushes<strong>task-limited system performance</strong>. Also, <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019)</a>, <a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Burns et al. (2024)</a>, <a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe et al. (2025)</a>, <a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; (2018)</a>, <a href="https://proceedings.mlr.press/v37/blum15.html" target="_blank">Blum &amp; Hardt (2015)</a>, <a href="https://papers.neurips.cc/paper_files/paper/2019/hash/ee39e503b6bedf0c98c388b7e8589aca-Abstract.html" target="_blank">Roelofs et al. (2019)</a> strengthens <strong>reproduction, synchronization, and benchmark governance</strong>. Furthermore, <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a>, <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>, <a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a>, <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> push the question of what still remains as a latent state / omitted mechanism. It's a mechanical boundary. Therefore, on this page, we will divide at least the following six classes along the technology/natural sciences leading line.
 </p>
 <table class="data-table">
 <thead>
 <tr>
 <th>evidence class</th>
-<th>典型例</th>
-<th>ここで直接強くなること</th>
-<th>まだ言えないこと</th>
+<th>Typical examples</th>
+<th>Getting stronger directly here</th>
+<th>Things I can't say yet</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>direct validator / causal calibration</strong></td>
-<td><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan 2020</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse 2023</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao 2025</a></td>
-<td>局所妥当化、誤差源、coverage boundary、刺激条件依存性です。</td>
-<td>whole-brain ground truth や一般的一意復元ではありません。</td>
+<td><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan 2020</a>, <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse 2023</a>, <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao 2025</a></td>
+<td>Location properization, error sources, coverage boundary, and stimulus condition dependency. </td>
+<td>Not whole-brain ground truth or general uniqueness recovery. </td>
 </tr>
 <tr>
 <td><strong>task-limited system demonstration</strong></td>
-<td><a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang 2023</a>、<a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli 2025</a>、<a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett 2023</a>、<a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn 2025</a>、<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar 2025</a></td>
-<td>特定課題や communication subsystem での decode / closed-loop performance です。</td>
-<td>そのまま whole-brain emulation や本人性へは上げません。</td>
+<td><a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang 2023</a>, <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli 2025</a>, <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett 2023</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn 2025</a>, <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar 2025</a></td>
+<td>Decode/closed-loop performance for specific tasks and communication subsystems. </td>
+<td>We do not directly promote whole-brain emulation or individuality. </td>
 </tr>
 <tr>
 <td><strong>dataset / benchmark / standard / toolchain</strong></td>
-<td><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet 2019</a>、<a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Burns 2024</a>、<a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe 2025</a>、<a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant 2018</a></td>
-<td>再利用可能性、同期、split、比較可能性、運用ガバナンスです。</td>
-<td>mechanistic truth や biological sufficiency の直接証拠ではありません。</td>
+<td><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet 2019</a>, <a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Burns 2024</a>, <a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe 2025</a>, <a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant 2018</a></td>
+<td>Reusability, synchronization, split discipline, comparability, and operational governance.</td>
+<td>It is not direct evidence of mechanical truth or biological sufficiency. </td>
 </tr>
 <tr>
 <td><strong>mechanistic boundary / hidden-state evidence</strong></td>
-<td><a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens 2021</a>、<a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen 2016</a>、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu 2024</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser 2024</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill 2024</a>、<a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson 2025</a>、<a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar 2025</a></td>
-<td>cell type だけで閉じない excitability、sleep-dependent recovery、myelin / metabolic support、astrocyte ensemble、connectome-constrained dynamics の縮退を固定できます。</td>
-<td>これ自体は direct validation や完成した実装を与えません。何がまだ足りないか、どの augmentation が必要かを示すクラスです。</td>
+<td><a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens 2021</a>, <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen 2016</a>, <a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu 2024</a>, <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser 2024</a>, <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill 2024</a>, <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson 2025</a>, <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar 2025</a></td>
+<td>Degeneracy of excitability, sleep-dependent recovery, myelin/metabolic support, astrocyte ensemble, and connectome-constrained dynamics can be fixed by cell type alone. </td>
+<td>This itself does not provide direct validation or a complete implementation. A class that indicates what is still missing and what augmentations are needed. </td>
 </tr>
 <tr>
 <td><strong>review / synthesis</strong></td>
-<td>technical review、survey、benchmark synthesis</td>
-<td>分野地図、キーワード、論点の並べ替えです。</td>
-<td>強い結論の根拠にするときは一次研究へ戻る必要があります。</td>
+<td>technical review, survey, benchmark synthesis</td>
+<td> Sort by field map, keywords, and issues. </td>
+<td>If you want to base a strong conclusion, you need to go back to the primary research. </td>
 </tr>
 <tr>
 <td><strong>context / philosophy / law / culture</strong></td>
-<td>法学、形而上学、倫理、文化論、作品論</td>
-<td>話題の周辺文脈を理解できます。</td>
-<td>技術・自然科学の feasibility や validation frontier の根拠にはしません。</td>
+<td>Law, metaphysics, ethics, cultural analysis, and work/fiction studies</td>
+<td>You can understand the surrounding context of the topic. </td>
+<td>It will not be used as a basis for the feasibility or validation frontier of technology or natural science. </td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>このページでの読み順</strong>
+<strong>Reading order on this page</strong>
 <p>
-まず <strong>evidence class</strong> を決め、その次に <strong>技術ルート</strong> を決め、最後に <strong>年順カード</strong> へ降りてください。とくに <strong>task-limited demo</strong> を見たら、同じ論点の <strong>mechanistic boundary / hidden-state evidence</strong> を 1 本以上併読し、何がまだ latent のままかを確認します。年順は歴史の見取り図として有用ですが、技術 frontier を直接順位付けする表ではありません。
+First decide on the <strong>evidence class</strong>, then decide on the <strong>technical route</strong>, and finally go down to the <strong>year order card</strong>. In particular, if you see a <strong>task-limited demo</strong>, read one or more <strong>mechanistic boundary / hidden-state evidence</strong>s on the same issue to see what is still latent. Although the chronology is useful as a historical sketch, it is not a table that directly ranks technology frontiers.
 </p>
 </div>
 </section>
 <table class="data-table">
 <thead>
 <tr>
-<th>見る場所</th>
-<th>何が分かるか</th>
+<th>Where to see</th>
+<th>What do we know</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Badge と掲載元</strong></td>
-<td>論文がどの種別の入口から拾われたかが分かります。ただし掲載元だけで内容の強さが自動的に決まるわけではありません。</td>
+<td><strong>Badge and publisher</strong></td>
+<td>You can see which type of entrance the paper was picked up from. However, the source alone does not automatically determine the strength of the content. </td>
 </tr>
 <tr>
 <td><strong>evidence class</strong></td>
-<td>その論文が direct validation、system demo、mechanistic boundary、standard / benchmark、review、context のどれかを見分けます。技術・自然科学では、この列を年順より先に見ます。</td>
+<td>Identify whether the paper is direct validation, system demo, mechanical boundary, standard/benchmark, review, or context. For technology and natural sciences, look at this column before chronological order. </td>
 </tr>
 <tr>
-<td><strong>和訳要約</strong></td>
-<td>その論文が何を言っているかを最短で掴めます。興味が薄ければここで止めて構いません。</td>
+<td><strong>Japanese translation summary</strong></td>
+<td>You can grasp what the paper is saying in the shortest possible time. If you are not interested, you can stop here. </td>
 </tr>
 <tr>
-<td><strong>5ポイント整理</strong></td>
-<td>「どんな論文か」「どこが新しいか」「どう確かめたか」を短く比較できます。</td>
+<td><strong>5 points arrangement</strong></td>
+<td>You can briefly compare ``what kind of paper it is,'' ``what's new,'' and ``how was it confirmed?'' </td>
 </tr>
 <tr>
-<td><strong>Original Abstract と DOI</strong></td>
-<td>本当にその理解で合っているかを元文献へ戻って確認できます。重要論文は必ずここまで戻る前提です。</td>
-</tr>
-</tbody>
-</table>
-<table class="data-table">
-<thead>
-<tr>
-<th>先に読みたいテーマ</th>
-<th>おすすめの見方</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>技術・自然科学の一次証拠だけ先に見たい</strong></td>
-<td>まず <a href="#technical-fast-lane">技術・自然科学の優先ルート</a> から入り、年順ではなく decode / neuroprosthesis / ESI / multimodal / maintenance-state・mechanistic boundary の順に絞ってください。</td>
-</tr>
-<tr>
-<td><strong>brain-to-text / language decode を見たい</strong></td>
-<td><a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang 2023</a>、<a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">D&eacute;fossez 2023</a>、<a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli 2025</a> を起点にし、language prior と candidate set の影響を分けて読んでください。</td>
-</tr>
-<tr>
-<td><strong>侵襲閉ループ communication を見たい</strong></td>
-<td><a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett 2023</a>、<a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn 2025</a>、<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar 2025</a> を先に見て、latency・abstention・recalibration burden を確認してください。</td>
-</tr>
-<tr>
-<td><strong>multimodal の ceiling を見たい</strong></td>
-<td><a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe 2025</a>、<a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich 2021</a>、<a href="https://doi.org/10.1038/35084005" target="_blank">Logothetis 2001</a>、<a href="https://doi.org/10.1016/j.neuroimage.2019.02.006" target="_blank">Kay 2019</a> を起点にし、共有時計・侵襲校正・BOLD proxy ceiling を分けて読んでください。</td>
-</tr>
-<tr>
-<td><strong>構造推定・hidden state を見たい</strong></td>
-<td><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan 2020</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse 2023</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao 2025</a> と、<a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens 2021</a>、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu 2024</a>、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser 2024</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill 2024</a>、<a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson 2025</a>、<a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar 2025</a> を起点にしてください。</td>
+<td><strong>Original Abstract and DOI</strong></td>
+<td>You can go back to the original document and check if your understanding is correct. It is a premise that you must return to this point for important papers. </td>
 </tr>
 </tbody>
 </table>
 <table class="data-table">
 <thead>
 <tr>
-<th>カードを見たときの判断</th>
-<th>その場で深読みする</th>
-<th>後回しにしてよい</th>
+<th>Theme you want to read first</th>
+<th>Recommended views</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>自分の論点に直結しているか</strong></td>
-<td>要約や5ポイント整理の中に、いま追っている論点が明示されているときです。</td>
-<td>タイトルは近そうでも、要約を読むと周辺論点に留まる場合は後回しで構いません。</td>
+<td><strong>I want to see only the primary evidence of technology and natural science first</strong></td>
+<td>First, enter the priority route of <a href="#technical-fast-lane">Technology/Natural Sciences</a> and narrow it down to decode / neuroprosthesis / ESI / multimodal / maintenance-state / mechanistic boundary instead of chronological order. </td>
 </tr>
 <tr>
-<td><strong>元論文へ戻る価値が高いか</strong></td>
-<td>方法、評価、限界が具体的で、他ページの根拠として使えそうなときです。</td>
-<td>総論や意見表明に近く、検証条件へ直接つながらない場合は一覧把握だけでも十分です。</td>
+<td><strong>I want to see brain-to-text / language decode</strong></td>
+<td><a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang 2023</a>, <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">D&eacute;fossez 2023</a>, <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli 2025</a> as a starting point, please read the influence of language prior and candidate set separately. </td>
 </tr>
 <tr>
-<td><strong>Badgeだけで判断していないか</strong></td>
-<td>Badge を入口にしつつ、必ず要約と DOI まで見てから重要度を決めます。</td>
-<td>掲載元が強そうでも、論点との関係説明が薄いときはその場で深入りしない方が安全です。</td>
+<td><strong>I want to see invasive closed loop communication</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett 2023</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn 2025</a>, <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar 2025</a> first, please check latency, abstention, and recalibration burden. </td>
 </tr>
 <tr>
-<td><strong>このページ内での役割があるか</strong></td>
-<td><a href="research_harvest_50.html">文献地図</a> や <a href="perspective.html">研究ノート</a> に戻して使える見込みがあるときです。</td>
-<td>個別には面白くても、サイト全体の論点へ接続しにくいものは保留で問題ありません。</td>
+<td><strong>I want to see the multimodal ceiling</strong></td>
+<td><a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe 2025</a>, <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich 2021</a>, <a href="https://doi.org/10.1038/35084005" target="_blank">Logothetis 2001</a>, <a href="https://doi.org/10.1016/j.neuroimage.2019.02.006" target="_blank">Kay 2019</a> as the starting point, shared clock, invasive calibration, BOLD proxy ceiling Please read them separately. </td>
+</tr>
+<tr>
+<td><strong>I want to see structure estimation/hidden state</strong></td>
+<td><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan 2023</a>, <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao target="_blank">Gouwens 2021</a> <a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu 2024</a> Looser 2024</a> <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill 2024</a>, <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson target="_blank">Beiran &amp; Litwin-Kumar 2025</a> Posted in </td>
+</tr>
+</tbody>
+</table>
+<table class="data-table">
+<thead>
+<tr>
+<th>Judgment when looking at the card</th>
+<th>Read deeply on the spot</th>
+<th>Can be postponed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Is it directly related to your point?</strong></td>
+<td>This is when the issue you are currently pursuing is clearly stated in the summary or five-point summary. </td>
+<td>Even if the title seems similar, if you read the summary and find that the topic is peripheral, you can leave it for later. </td>
+</tr>
+<tr>
+<td><strong>Is it worth going back to the original paper</strong></td>
+<td>This is when the method, evaluation, and limitations are specific and can be used as the basis for other pages. </td>
+<td>If it is similar to a general discussion or statement of opinion and does not directly connect to the verification conditions, it is sufficient to understand the list. </td>
+</tr>
+<tr>
+<td><strong>Are you making judgments only by Badge</strong></td>
+Use <td>Badge as an entry point, and be sure to look at the summary and DOI before deciding on importance. </td>
+<td>Even if the publication source seems to be strong, if the explanation of the relationship to the issue is weak, it is safer not to get too deep into it. </td>
+</tr>
+<tr>
+<td><strong>Does it have a role on this page</strong></td>
+<td>This is when there is a possibility that it can be returned to <a href="research_harvest_50.html">Bibliography Map</a> or <a href="perspective.html">Research Note</a>. </td>
+<td>It is okay to hold off on items that may be interesting individually but are difficult to connect to the overall point of the site. </td>
 </tr>
 </tbody>
 </table>
 </header>
-<h2 id="with-abstracts" class="category-title">1. アブストラクトあり</h2>
-<h3 id="year-w-2025" class="year-title">2025年</h3>
+<h2 id="with-abstracts" class="category-title">1. With abstracts</h2>
+<h3 id="year-w-2025" class="year-title">2025</h3>
 <div class="paper-card">
 <div class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -384,28 +389,28 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.22452/fiqh.vol22no1.7</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">イスラム法学における人間の寿命延長と老化兆候遅延を目的とした技術介入の裁定</div>
+<div class="jp-title">Ruling on technological intervention aimed at extending human lifespan and delaying signs of aging in Islamic jurisprudence</div>
 <div class="jp-summary">
-近年、人工知能（AI）は医療を含む多岐にわたる分野で広く普及しており、特に人間の寿命を延ばし老化兆候を遅らせることを目的とした技術が注目されている。本研究は、イスラム法学（シャリーア）が人間の身体に対する技術介入をどのように評価するかを明らかにすることを目的としている。研究手法は記述的・演繹的アプローチで、対象となる技術介入を三つのカテゴリーに分類した。
-1. **生物学的手法**：遺伝子・バイオテクノロジーの進歩に基づき、免疫系を遺伝的に強化する方法。研究ではこの手法は禁じられると結論付けた。
+In recent years, artificial intelligence (AI) has become widespread in a wide variety of fields, including medicine, and technologies that aim to extend human lifespans and delay the signs of aging are attracting particular attention. The purpose of this research is to clarify how Islamic jurisprudence (Sharia) evaluates technological interventions on the human body. The research method used a descriptive/deductive approach, and the targeted technological interventions were classified into three categories.
+1. **Biological methods**: A method of genetically strengthening the immune system based on advances in genetics and biotechnology. The study concluded that this method is prohibited.
 2.
-**電子的手法**：ナノテクノロジー・ロボティクスの進展を利用し、人工皮膚などの人工代替品で身体部位を補完する方法。状況に応じて裁定が異なるとし、損傷した身体部位を義肢で置換することは医療処置に該当し許容されるとした。さらに、人間の能力を向上させる技術については、詳細な検討が必要であると指摘した。
-3. **仮想的手法（マインドアップロード）**：脳内にある記憶や情報をデジタル化し、機械へ転送する方法。イスラム法学の観点からは許容されるが、脳に害を及ぼさないことが条件であるとした。</div>
+**Electronic methods**: A method that takes advantage of advances in nanotechnology and robotics to supplement body parts with artificial substitutes, such as artificial skin. It said that rulings differ depending on the situation, and that replacing injured body parts with prosthetic limbs falls under the category of medical treatment and is permissible. Furthermore, he pointed out that technologies that improve human abilities require detailed consideration.
+3. **Virtual method (mind upload)**: A method of digitizing memories and information in the brain and transferring them to a machine. Although it is permissible from the perspective of Islamic jurisprudence, the condition is that it does not cause harm to the brain. </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>イスラム法学に基づく人間寿命延長・老化遅延を目的とした技術介入の裁定を検討。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>Considering rulings on technological intervention aimed at extending human lifespan and delaying aging based on Islamic jurisprudence. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存の法学レビューとは異なり、具体的に生物学・電子・仮想の三カテゴリを詳細に分類し、各手法ごとの裁定差異を示した。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>Unlike existing legal reviews, we specifically classified the three categories of biological, electronic, and virtual in detail, and showed the differences in rulings for each method. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>免疫系遺伝改良、人工代替部位の置換、脳情報デジタル化という三つの技術的アプローチが中心。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>The focus is on three technological approaches: genetic improvement of the immune system, replacement of artificial replacement parts, and digitalization of brain information. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>文献調査と演繹的法学分析を組み合わせ、シャリーアの原則に照らしながら各手法の許容性を評価。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>By combining literature research and deductive legal analysis, we evaluate the acceptability of each method in light of Sharia principles. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>実際の医療実装や倫理的リスク、長期的社会影響についてはさらなる研究が必要であり、本研究は理論的枠組みの提示に留まる。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>Further research is needed on actual medical implementation, ethical risks, and long-term social effects, and this study merely presents a theoretical framework. </p>
 </div>
 </div>
 </div>
@@ -471,25 +476,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1007/s11229-025-05057-9</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">「アップロード楽観主義に対する多重性への異議」</div>
+<div class="jp-title">"Multiplicity Objection to Upload Optimism"</div>
 <div class="jp-summary">
-本稿では、心を電子ハードウェアへ転送すること（マインドアップロード）に対して楽観的に考える立場と悲観的に考える立場が分かれる理由を探る。楽観派は「転送後も本質的に生存できる」と主張するが、悲観派は「転送自体が不可能だ」と論じる。影響力のある反対意見として「多重性への異議」が挙げられる。要するに、もし楽観派の主張が真実ならば、自分のデジタル版を複数作ることも可能であるはずだ。しかし、実際には「多くなる」ことはできないため、少なくとも一つの転送で生存することさえ不可能だと主張される。本文ではまず多重性への異議を詳細に説明し、次に二つの反論で防御策を提示する。第一に、悲観派は楽観派の主張が多重性という論争的含意を持つと証明できない。第二に、実際には「複数の独立した人物になる」ことが妥当であると考えられる。従って、デジタルの来世を望む楽観派は、多重性という懸念によって妨げられることはない。
+In this paper, we explore the reasons why some people are optimistic and some are pessimistic about transferring the mind to electronic hardware (mind uploading). Optimists argue that ``it is essentially possible to survive even after transfer,'' while pessimists argue that ``transfer itself is impossible.'' An influential opposing opinion is the ``multiplicity objection.'' In short, if the optimists' claims are true, it should be possible to create multiple digital versions of yourself. However, it is argued that it is impossible to even survive on at least one transfer, since in reality it is not possible to "become more". In the main text, I first explain the objection to multiplicity in detail, and then offer a defense with two counterarguments. First, the pessimist cannot prove that the optimist's claim has the polemical implication of multiplicity. Second, in reality, it is considered appropriate to "become multiple independent persons." Optimists looking for a digital afterlife are therefore not deterred by concerns about multiplicity.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>心をコンピュータでシミュレートし、電子ハードウェアへ転送する「マインドアップロード」の楽観的立場に対する多重性への異議を検討した論文。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>This paper examines the multiplicity objection to the optimistic position of "mind upload," in which the mind is simulated on a computer and transferred to electronic hardware. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>従来の多重性への異議では「生存不可能」と結論付けていたが、本稿は楽観派の主張を再評価し、反論を提示した点が差別化されている。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>Conventional objections to multiplicity concluded that it is "unviable," but this paper is different in that it reevaluates the optimistic argument and presents a counterargument. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>デジタル化された意識が「複数存在」できるかどうかという哲学的・技術的前提を中心に議論する。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>The discussion will focus on the philosophical and technical premises of whether it is possible for multiple digital consciousnesses to exist. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>主要な手法は概念的分析と論理的推論であり、実験的検証ではなく哲学的議論に基づく。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>The main methods are conceptual analysis and logical reasoning, and are based on philosophical discussion rather than experimental verification. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>「多重性が可能か否か」や「個体の連続性」をどう定義するかという点が未解決であり、実際のアップロード技術の進展に伴い再検討が必要。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>The issues of "whether multiplicity is possible" and how to define "continuity of individuals" are unresolved, and need to be reconsidered as actual upload technology progresses. </p>
 </div>
 </div>
 </div>
@@ -548,28 +553,28 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.69564/ISEA2023-42-full-Bae-Thief-of-Truth</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">真実の盗人：AIと人間の関係を描くVRコミック</div>
+<div class="jp-title">The Thief of Truth: A VR comic depicting the relationship between AI and humans</div>
 <div class="jp-summary">
-「真実の盗人」は、第一人称視点で描かれるバーチャルリアリティ（VR）コミックです。人間の意識がアップロードされ、AIと共に人生の意味を模索しながら新たな主体として再生する物語を描きます。VRコミックの拡張性を検証するため、作品は次の3点に焦点を当てて制作されました。
-1. VRの視線制御効果を活かした構成設計。
-2. VRコントローラーによるインタラクションでプレイヤーの没入感を高める。
-3. VRコミックへのアクセス性向上策の開発。
-本研究は、VRコミックにおける実験的試みの一例を提示することを目的としています。</div>
+"Truth Thief" is a virtual reality (VR) comic drawn from a first-person perspective. This story depicts a story in which human consciousness is uploaded and reborn as a new subject while searching for the meaning of life together with AI. In order to verify the scalability of VR comics, the work was created with a focus on the following three points.
+1. Configuration design that takes advantage of the gaze control effect of VR.
+2. Increase player immersion through interaction with VR controllers.
+3. Developing measures to improve accessibility to VR comics.
+This research aims to present an example of an experimental attempt in VR comics. </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>- 第一人称VRコミックで、意識アップロードされた人間とAIが人生の意味を探る物語。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>- A first-person VR comic about a human with an uploaded consciousness and an AI searching for the meaning of life. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>- 視線制御とコントローラーインタラクションを組み合わせ、没入感とアクセス性を同時に向上させた点。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>- Combining eye control and controller interaction to simultaneously improve immersion and accessibility. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>- VR視線制御とハンドトラッキングを用いたインタラクション設計。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>- Interaction design using VR gaze control and hand tracking. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>- ユーザー実験を通じて没入度と操作性を定量的・定性的に評価。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>- Evaluate immersion and operability quantitatively and qualitatively through user experiments. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>- 高度なハードウェア依存と、長時間使用による身体的負担の問題。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>- Highly dependent on hardware and physical strain caused by long-term use. </p>
 </div>
 </div>
 </div>
@@ -623,20 +628,20 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.3390/rel16050640</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">「死の影の谷を越えて」― マインドアップロードとティルハード・デ・シャルダンのオメガポイント神学における「死」の中間的存在</div>
+<div class="jp-title">"Beyond the valley of the shadow of death" - The intermediate existence of "death" in mind upload and Tilhard de Chardin's Omega Point theology</div>
 <div class="jp-summary">
-本稿は、マインドアップロード（MU）とピエール・テイラル＝デ・シャルダンのオメガポイント神学における「死」を革命的変容として捉える。オメガポイント自体や、意識がデジタル基盤へ成功裏にアップロードされた後の状態を対象とするわけではない。MUの文脈で「死」の意味を把握するために、著者は生物学的死亡とデジタル不滅の間に存在する境界的想像力（liminal
+This paper regards ``death'' in Mind Upload (MU) and Pierre Taylor de Chardin's Omega Point theology as a revolutionary transformation. It does not cover the Omega Point itself or its state after consciousness has been successfully uploaded to the digital infrastructure. In order to grasp the meaning of "death" in the context of MU, the author draws on the liminal imagination that exists between biological death and digital immortality.
 speculative
-imagination）という概念を用いて死を分析する。死は単なる生命の終わりではなく、異なる存在状態間を結ぶ移行段階であると主張し、この境界的ギャップは存在の根本的側面として不可避であると論じる。死を克服しようとするのではなく、この境界性の変容的性質を受け入れるべきだと提案する。こうした観点から、死は生命の自然で不可避な一部として位置づけられ、新たな存在形態への移行を媒介・触媒とする。永遠不滅の実現にだけ焦点を当てるのではなく、技術を利用して進化と発展を促進することが重要である。トランスヒューマニズムの文脈、特にMU技術によって可能になるトランスヒューマン生命形態の出現など、変容プロセスにおける死の役割を認めることで、境界性を受容することが人類進化の新たな可能性をもたらすと論じる。
+Analyze death using the concept of imagination. He argues that death is not simply the end of life, but a transitional stage between different states of existence, and argues that this liminal gap is inevitable as a fundamental aspect of existence. Rather than trying to overcome death, I suggest that we should embrace the transformative nature of this liminality. From this perspective, death is positioned as a natural and inevitable part of life, mediating and catalyzing the transition to a new form of existence. Rather than focusing solely on achieving immortality, it is important to use technology to promote evolution and development. In the context of transhumanism, and in particular by acknowledging the role of death in transformational processes such as the emergence of transhuman life forms made possible by MU technology, we argue that embracing liminality offers new possibilities for human evolution.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ ― マインドアップロードとオメガポイント神学における「死」を境界的変容として再定義した論文。 </label>
-<p>2. 先行研究との違いは？ ― 死を単なる終結ではなく、存在間の移行段階と捉え、境界性を受容する視点を提案。</p>
+<div class="point-card"><label>1. What kind? -Mind Upload and Omega Point A paper that redefines "death" in theology as liminal transformation. </label>
+<p>2. What is the difference from previous research? - Views death not as a mere end, but as a transitional stage between existences, and proposes a perspective that accepts liminality. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ ― マインドアップロード技術を利用し、死と不滅の境界で新たな進化形態を促進。 </label>
-<p>4. 検証方法は？ ― 理論的枠組みと哲学的分析に基づき、境界性の概念を適用したケーススタディで検証。</p>
+<div class="point-card"><label>3. What's the key to technology? - Uses mind upload technology to foster new forms of evolution at the border between death and immortality. </label>
+<p>4. How to verify? - Based on a theoretical framework and philosophical analysis, the concept of liminality is examined through a case study. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ ― 死の不可避性を受容する倫理的・社会的影響と、技術実装の現実性に関する課題。</label>
+<div class="point-card"><label>5. What are the points of discussion and limitations? - Ethical and social implications of accepting the inevitability of death and challenges related to the practicality of technological implementation. </label>
 <p></p>
 </div>
 </div>
@@ -699,29 +704,29 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.53765/20512201.32.1.220</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">マインドアップロードに対する選択的楽観主義</div>
+<div class="jp-title">Selective optimism about mind uploading</div>
 <div class="jp-summary">
-マインドアップロードに関して楽観的な立場を取る人は、アップロード後も存続できると信じている。一方で悲観的な立場を取る人は、アップロード後に存続できないと考えている。これらの極端な見解の間にある、選択的楽観主義という中間立場が存在する。選択的楽観主義は、例えば段階的置換アップロード（gradual
-replacement uploading）では存続できると主張し、スキャン＆コピーアップロード（scan‑and‑copy
-uploading）では存続できないと主張する。この立場は合理的かどうかを検討する。まず、Wiley と
-Koene（2016）が提起した選択的楽観主義への反論を解消する。彼らは段階的置換アップロードがメタ物理学的にスキャン＆コピーアップロードと同等であると主張し、したがって前者に対する楽観と後者に対する悲観は根拠がないと論じた。私は、両者の間に実質的なメタ物理学的対比（immanent
-causation の違い）が存在するため、Wiley と Koene
-の主張は失敗すると示す。次に、この対比を基盤とした段階的置換アップロードに関する選択的楽観主義の肯定的ケースを提示し、合理性を支持する。</div>
+Those who take an optimistic position regarding mind uploading believe that it will survive the upload. On the other hand, those who take a pessimistic position believe that it will not survive after being uploaded. There is a middle ground between these extreme views called selective optimism. Selective optimism, for example,
+scan-and-copy uploading (replacement uploading) can survive;
+uploading) cannot survive. Consider whether this position is reasonable. First, with Wiley
+This resolves the objection to selective optimism raised by Koene (2016). They argued that gradual replacement uploads are metaphysically equivalent to scan-and-copy uploads, and therefore optimism about the former and pessimism about the latter is unfounded. I believe there is a substantial metaphysical contrast between the two.
+Wiley and Koene
+shows that the argument fails. Next, we present a positive case for selective optimism regarding gradual replacement upload based on this contrast, and support its rationality. </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>マインドアップロードに対する「段階的置換は存続できるが、スキャン＆コピーは存続できない」という選択的楽観主義の立場。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>The selectively optimistic position regarding mind uploading that ``gradual replacement can survive, but scanning and copying cannot''. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存の楽観・悲観極端立場を超え、アップロード手法ごとに異なる存続可能性を主張し、メタ物理学的対比で正当化する。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>Going beyond the existing optimistic/pessimistic extreme positions, we argue for the different viability of each upload method, and justify it using metaphysical comparisons. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>「immanent causation（内在的因果）」の違いを利用し、段階的置換とスキャン＆コピーをメタ物理学的に区別する点。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>Using the difference in "immanent causation", a metaphysical distinction is made between gradual replacement and scan & copy. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>まず理論的にメタ物理学的等価性を否定し、次に段階的置換の因果構造が存続可能性を支持するかどうかを論理的推論で検証。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>First, we theoretically deny metaphysical equivalence, and then use logical reasoning to verify whether the causal structure of gradual replacement supports the viability. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>実際のアップロード技術が理論モデルと一致するか、また「存続」の定義や倫理的帰結についてさらなる議論が必要。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>Further discussion is needed on whether the actual upload technology matches the theoretical model, the definition of "survival" and the ethical consequences. </p>
 </div>
 </div>
 </div>
@@ -781,26 +786,26 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.12775/SetF.2025.007</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">人間強化とトランスヒューマニズムの区別：より良いか、完璧か？</div>
-<div class="jp-summary">人間の未来に対する哲学的関心は、今日まで以上に重要になっています。これは、倫理・社会・技術的課題が増大しているためです。人間強化（Human
-Enhancement, HE）とトランスヒューマニズム（Transhumanism,
-H+）は、我々の種族の未来に関わる主要な理論です。これら二つはしばしば混同されますが、著者は両者を区別できると主張し、その区別を行うべきだと述べています。説明のために、著者は「強化そのもの」という概念と「生物学的身体の価値」という二つの軸を提案します。この枠組みでは、H+は身体への関心を放棄し、指数的な強化によって人間状態を超えようとする一方で、HEは現在の限界内で段階的に強化を推進します。H+とHEの対比を明確にすることは、将来技術の責任ある採用に不可欠であり、どの科学的約束が実現可能か価値あるものかを判断し、再検討すべきものを見極めるために重要です。
+<div class="jp-title">Distinction between human enhancement and transhumanism: better or perfect? </div>
+<div class="jp-summary">Philosophical interest in the future of humanity has never been more important. This is due to increasing ethical, social and technological challenges. Human reinforcement
+Enhancement, HE) and Transhumanism,
+H+) is the leading theory concerning the future of our species. Although these two are often confused, the authors argue that they can and should be distinguished. To explain, the author proposes two axes: the concept of "enhancement itself" and the "value of the biological body." In this framework, H+ abandons concern for the body and seeks to transcend the human condition through exponential enhancement, while HE promotes gradual enhancement within current limits. Clarifying the contrast between H+ and HE is essential for the responsible adoption of future technologies, and is important for determining which scientific promises are achievable and worthwhile, and determining which ones should be reconsidered.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>人間強化とトランスヒューマニズムを概念的に区別し、将来技術の採用における倫理的指針を提示する研究。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A study that conceptually distinguishes between human enhancement and transhumanism and provides ethical guidelines for the adoption of future technologies. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存の議論では両者を混同することが多い中、著者は「強化の概念」と「身体価値」の二軸で明確に区別を図った点が差異。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>While existing discussions often confuse the two, the difference is that the author has clearly attempted to differentiate between the two axes of ``the concept of enhancement'' and ``body value.'' </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>「指数的強化」(H+) と「段階的強化」(HE) の対比を通じて、技術進展の速度と倫理的影響を評価する枠組み。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>A framework for evaluating the speed and ethical impact of technological progress through the contrast between "exponential enhancement" (H+) and "incremental enhancement" (HE). </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>文献レビューと概念分析を組み合わせ、理論的枠組みを構築し、実際の技術事例に照らして適用可能性を検討。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>By combining literature review and conceptual analysis, we constructed a theoretical framework and examined its applicability in light of actual technical cases. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>本研究は概念的枠組みに留まり、実証データや具体的政策提言は不足。将来技術の社会受容性や法制度との整合性についてはさらなる研究が必要。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>This research is limited to a conceptual framework and lacks empirical data and concrete policy recommendations. Further research is needed on the social acceptability of future technologies and their compatibility with the legal system. </p>
 </div>
 </div>
 </div>
@@ -822,7 +827,7 @@ stroke-linecap="round" stroke-linejoin="round" class="icon">
 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
 </svg></a>
 </div>
-<h3 id="year-w-2024" class="year-title">2024年</h3>
+<h3 id="year-w-2024" class="year-title">2024</h3>
 <div class="paper-card">
 <div class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -857,39 +862,30 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.17230/co-herencia.21.41.06</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">サイボーグの自伝的声と心転送に関する考察</div>
+<div class="jp-title">Cyborg's autobiographical voice and thoughts on mind transfer</div>
 <div class="jp-summary">
-本稿では、身体的中立性が徐々に薄れつつある心転送というメタファーを明らかにすることを目的としています。第一部では、モラヴェックとクズワイルの心転送に関する見解を示し、同一の「心」が異なる身体特性を持つ体に存在できないことを示します。対照的に、心を人工身体へ移植すると、同一脳から生じる複数のアイデンティティを混合でき、アイデンティティの分散化が可能になると論じます。ここではアンドロイド・ビナ48を例に挙げています。第二部では、アンディ・クラークの『Natural‑Born
-Cyborgs』で提示された議論を基に、サイボーグハイブリッドの人工臓器が持つ自伝的声からアイデンティティの分散化を探求します。この章では、自己に関する物語的意味（ナラティブ・センス）が何を示すかを説明しています。
+This article aims to clarify the metaphor of mind transfer, where physical neutrality is gradually fading away. The first part presents Moravec and Kuzweil's views on mind transfer and shows that the same "mind" cannot exist in bodies with different physical characteristics. In contrast, we argue that transplanting the mind into an artificial body allows for the mixing of multiple identities originating from the same brain, allowing for the decentralization of identities. Here we use Android Vina 48 as an example. In the second part, Andy Clarke's Natural‑Born
+Based on the arguments presented in ``Cyborgs,'' we explore the decentralization of identity through the autobiographical voices of cyborg hybrid artificial organs. This chapter explains what the narrative sense of self refers to.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>心転送とサイボーグの自伝的声を通じて、身体中立性が崩れた現代におけるアイデンティティの分散化を論じる研究。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A study that discusses the decentralization of identity in a modern world where body neutrality has collapsed through mind transfer and the autobiographical voice of cyborgs. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>モラヴェック・クズワイルの理論を批判的に再解釈し、人工身体への転送が同一脳から複数アイデンティティを生成する点に焦点を当てる。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>A critical reinterpretation of Moravec-Cuzweil's theory, focusing on the point that transfer to an artificial body generates multiple identities from the same brain. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>人工身体（例：アンドロイド・ビナ48）への心転送と、人工臓器が発する自伝的声を利用したアイデンティティの分散化メカニズム。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>A mechanism for decentralizing identity using mind transfer to an artificial body (e.g., android Vina48) and the autobiographical voice emitted by the artificial organ. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>文献比較と理論的推論に基づく概念解析。実証データは示さず、既存のサイボーグ研究（クラーク著作）を参照。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Conceptual analysis based on literature comparison and theoretical reasoning. No empirical data is shown; refer to existing cyborg research (written by Clark). </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>身体中立性の実際的妥当性、人工身体におけるアイデンティティ統合の倫理的課題、および実証可能性の不足が主要な限界として挙げられる。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>Practical validity of body neutrality, ethical challenges of identity integration in artificial bodies, and lack of demonstrability are cited as major limitations. </p>
 </div>
 </div>
 </div>
-<div class="raw-abstract"><b>Original Abstract:</b> Con este artículo me propongo desenmascarar la metáfora
-del trasplante de la mente porque cada vez se hace menos evidente la neutralidad corporal en la que está
-fundada. En el primer apartado expongo la concepción de Moravec y de Kurzweil sobre el trasplante de la
-mente con el fin de mostrar que un mismo tipo de mente no puede existir en cuerpos con propiedades
-diferentes. Al contrario, al trasplantar la mente a un cuerpo artificial se abre la posibilidad de la
-descentralización de la identidad, pues se consigue mezclar diferentes identidades que provienen de un
-mismo cerebro. Para esto, me baso en la androide Bina48. En el segundo apartado, exploro la
-descentralización de la identidad a partir de la voz autobiográfica de los órganos artificiales del
-híbrido cibernético, basada en los argumentos expuestos en Natural-Born Cyborgs de Andy Clark. Así, en
-ese apartado explico en qué consiste el sentido narrativo de sí mismo.</div><a
+<div class="raw-abstract"><b>Original Abstract:</b> In this article, I aim to unmask the metaphor of mind transplantation, because the bodily neutrality on which it is founded is becoming increasingly untenable. In the first section, I present Moravec's and Kurzweil's conception of mind transplantation in order to show that the same kind of mind cannot exist in bodies with different properties. On the contrary, transplanting the mind into an artificial body opens the possibility of decentralizing identity, because it becomes possible to mix different identities that come from the same brain. To make this point, I draw on the android Bina48. In the second section, I explore the decentralization of identity through the autobiographical voice of the artificial organs of the cybernetic hybrid, based on the arguments set out in Andy Clark's Natural-Born Cyborgs. In that section, I explain what the narrative sense of self consists in.</div><a
 href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85211058392&origin=inward"
 target="_blank" class="btn-action">View Full Access <svg xmlns="http://www.w3.org/2000/svg" width="14"
 height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -932,19 +928,19 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1017/9781009367059</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">個人存在論：神秘とその結果</div>
-<div class="jp-summary">私たちは何者か？
-例えば魂、生命体、脳、あるいはそれ以外の何かであると考えることができる。本書では、アンドリュー・ブレンナーが、この根本的な形而上学の問いに答えを見つけることに対して原理的な障壁が存在すると主張する。個人存在論の主要な対立説は、私たちが魂（あるいは魂と身体の複合体）であるか、または何らかの形で構成された物理的存在であるとするものだが、ブレンナーはこれらの選択肢に対する議論をパロディ化し、逆説的な結論へと変換できることを示す。さらに彼は自己の存在に関する賛否両論を検討し、死後のいくつかのシナリオ（復活・輪廻転生・心のアップロード）の形而上学的議論を詳細に述べる。そして、個人存在論についての不可知主義が死後の生命可能性に関する不可知主義へと導くべきかどうかを考察する。
+<div class="jp-title">Personal ontology: mystery and its consequences</div>
+<div class="jp-summary">Who are we?
+For example, it can be thought of as a soul, a living organism, a brain, or something else. In this book, Andrew Brenner argues that there are fundamental barriers to finding answers to this fundamental metaphysical question. The main alternative theories of individual ontology are that we are souls (or soul-body complexes) or that we are somehow constituted physical beings, but Brenner parodies arguments against these alternatives and shows that they can be transformed into paradoxical conclusions. Furthermore, he considers the pros and cons of the existence of the self, and details the metaphysical arguments for several post-death scenarios (resurrection, reincarnation, mind uploading). We then consider whether agnosticism about individual ontology should lead to agnosticism about the possibility of life after death.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** 個人存在論の根本的問いとその回答に対する理論的障壁を検証した哲学的著作。 </label>
-<p>2. **先行研究との違いは？** 既存の魂論・物質論を対立的に扱いつつ、両者の議論を逆転させるパロディ的手法を導入。</p>
+<div class="point-card"><label>1. **What kind? ** A philosophical work that examines the fundamental questions of individual ontology and the theoretical barriers to answering them. </label>
+<p>2. **What is the difference from previous research? ** Introducing a parody method that treats the existing theories of soul and material theory in a confrontational manner, while reversing the arguments between the two. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** 論理的パロディと形而上学的再構成による概念の相互変換。 </label>
-<p>4. **検証方法は？** 形而上学的議論の構造解析と、死後シナリオに対する哲学的推論を組み合わせた理論検証。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** Mutual transformation of concepts through logical parody and metaphysical reconstruction. </label>
+<p>4. **How ​​to verify? ** Theory verification that combines structural analysis of metaphysical arguments and philosophical reasoning about after-death scenarios. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？**
-個人存在論の不可知主義が死後生命への見解に与える影響と、実証可能性の欠如が議論を限定する点。</label>
+<div class="point-card"><label>5. **What are the discussion points/limitations? **
+How the agnosticism of personal ontology affects views on life after death, and how the lack of demonstrability limits the discussion. </label>
 <p></p>
 </div>
 </div>
@@ -1000,25 +996,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1093/jaarel/lfae065</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">**スピリチュアル・サイボーグ：世俗的曖昧さから存在論的機会へ―仮想具現化の新たな展望**</div>
+<div class="jp-title">**Spiritual cyborg: From worldly ambiguity to ontological opportunity: new perspectives on virtual embodiment**</div>
 <div class="jp-summary">
-AIとロボット技術は、身体と心の関係や「現実」と呼ばれる体験を再構築し、拡張現実・仮想現実という形で具現化を変容させている。これらの技術により、人々は増大するテクノロジー体験に精神的意味を注入し、スピリチュアリティと宗教性の範囲を拡大してきた。一方で、技術は多くの研究者に「魂や神々を含むすべての精神的・仮想体験は脳内に留まる」という主張を促し、仮想が身体へ戻ると同時にそれ自体も変容するという議論を呼び起こしている。本研究では、ヨーロッパ・米国・日本のVR、ゲーム、トランスヒューマンなマインドアップロードという三つの場を「混乱の場」ではなく「存在論的機会」として比較し、身体化・非身体化体験の再構築と現実と仮想性との関係を変える場として位置付ける。
+AI and robotics are reshaping the relationship between body and mind and the experience we call "reality," and transforming embodiment in the form of augmented reality and virtual reality. These technologies have allowed people to infuse spiritual meaning into their increasing technological experiences, expanding the scope of their spirituality and religiosity. On the other hand, technology has prompted many researchers to argue that ``all spiritual and virtual experiences, including those of souls and gods, remain in the brain,'' and that the virtual returns to the body and at the same time transforms itself. In this study, we compare the three spaces of VR, games, and transhuman mind uploads in Europe, the United States, and Japan, not as "places of confusion," but as "ontological opportunities," and position them as spaces for reconstructing embodied and disembodied experiences and changing the relationship between reality and virtuality.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>AI・ロボット技術がもたらす仮想具現化を通じて、身体・心の関係や「現実」体験が再定義される研究。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>Research that redefines the relationship between body and mind and the experience of "reality" through virtual embodiment brought about by AI and robot technology. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存の研究が「仮想＝身体外」と捉える一方、本研究は仮想を身体内に戻しつつも同時に変容させる「存在論的機会」を提示。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>While existing research views the virtual as something outside the body, this research presents an "ontological opportunity" to bring the virtual back into the body and transform it at the same time. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>VR・ゲーム・マインドアップロードという三種のデジタルプラットフォームを比較し、身体化・非身体化のパラダイムシフトを検証。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>Comparing three types of digital platforms: VR, games, and mind upload, and examining the paradigm shift of embodiment and disembodiment. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>ヨーロッパ・米国・日本の事例を比較分析し、ユーザー体験と精神的意味付けの変化を定性的・定量的に測定。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Comparatively analyze cases from Europe, the United States, and Japan, and qualitatively and quantitatively measure changes in user experience and mental meaning. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>仮想体験が本当に身体内に「戻る」のか、またその変容が倫理的・社会的にどのような影響を与えるかという点で、実証データと理論的枠組みの整合性が課題。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>The issue is whether the virtual experience really "returns" to the body, and what kind of ethical and social impact this transformation will have on the consistency of empirical data and theoretical frameworks. </p>
 </div>
 </div>
 </div>
@@ -1075,28 +1071,27 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1007/s00146-022-01519-7</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">デジタル転送で自由な心は移行できない</div>
-<div class="jp-summary">本稿では、心をコンピュータシステムへ「アップロード」すること（すなわち心のデジタル転送）が、心を有限ビット列（0 と 1
-の並び）として表現することを必要とすると指摘し、さらに「ストアド・プログラムコンピュータ」パラダイムがプログラムとデータを同一視するため、ビット列自体が受信装置でアルゴリズム的に実行されるプログラムとして解釈できると論じます。
-先行研究に基づく証明によれば、計算機またはアルゴリズム装置（いかに複雑であっても）は「自由」（自己決定的）になれないとされます。したがって、有限ビット列は自由な心を十分に表現できず、結果として自由な心はデジタルで転送不可能であることが示されます（quod
-erat demonstrandum）。
-本稿は厳密な証明を目的としているため、定義と有効性条件を詳細に提示し、それらが「真の自由＝自己決定的」であることなどを説明します。哲学的帰結にも特に注意を払い、他の関連問題（心の「離散化」に関する技術的障壁や、非デジタル手段での心移転の可否）と本研究を区別しています。
+<div class="jp-title">Free minds cannot be transferred through digital transfer</div>
+<div class="jp-summary">In this paper, we demonstrate that "uploading" the mind to a computer system (i.e., digital transfer of the mind) means that the mind is
+He points out that the bit string itself can be interpreted as a program that is algorithmically executed by the receiving device, since the "stored program computer" paradigm equates programs and data.
+Evidence based on previous research shows that no computer or algorithmic device, no matter how complex, can be "free" in the sense of self-determination. Therefore, a finite bit string cannot adequately represent a free mind, and the paper concludes that a free mind is not digitally transferable (quod erat demonstrandum).
+Since the purpose of this paper is to provide a rigorous proof, we will present the definition and validity conditions in detail, and explain that they mean "true freedom = self-determination." We also pay particular attention to the philosophical consequences, distinguishing this study from other related issues (such as the technological barriers to "discretizing" the mind and the feasibility of mind transfer by non-digital means).
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>心を有限ビット列としてデジタル転送することが理論上不可能であると主張する論文。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A paper that argues that it is theoretically impossible to digitally transfer the mind as a finite bit string. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存の心アップロード論とは異なり、計算機が自己決定的になれないという先行証明を応用し、自由心のデジタル表現不可能性を示す。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>Unlike the existing mind upload theory, we apply the prior proof that computers cannot be self-determining, and show that it is impossible to digitally represent a free mind. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>「ストアド・プログラム」パラダイムにより、ビット列が自動的に実行プログラムになる点を利用しつつ、計算機の自由性欠如を根拠に転送不可と論じる。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>Using the fact that bit strings automatically become executable programs using the "stored program" paradigm, we argue that transfer is not possible based on the lack of freedom of computers. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>定義・条件を厳密に設定し、既存の計算機理論（特に自己決定性に関する証明）を引用して論理的推論で結論へ至る。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Strictly set definitions and conditions, cite existing computer theory (especially proofs regarding self-determination), and arrive at a conclusion through logical reasoning. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>「自由＝自己決定的」という解釈の哲学的妥当性、非デジタル手段での心移転可能性への示唆、そして実際にビット列化が不可能であるかどうかの経験的検証の難しさ。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>Philosophical validity of the interpretation that "freedom = self-determination," implications for the possibility of mind transfer through non-digital means, and the difficulty of empirically verifying whether converting into a bit string is actually impossible. </p>
 </div>
 </div>
 </div>
@@ -1159,26 +1154,26 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.3390/rel15010109</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">「アップロード、サイバー精神性と現代SF映画・テレビにおける不死への探求」</div>
+<div class="jp-title">"Uploading, Cyber-Spirituality, and the Quest for Immortality in Modern Science Fiction Film and Television"</div>
 <div class="jp-summary">
-サイエンスフィクションは、長らく全能の仮想存在という概念を扱い、技術進歩による超越の可能性を探求してきました。同時に、新技術への不安と希望、科学進歩の倫理的・道徳的帰結を先導し、人間として私たちを際立たせるものは何か、そして我々の存在を超えるものとは何かという古典的な問いに深い哲学的・神学的懸念を投げかけてきました。本稿は、特に自然な生物学的寿命を超えることに焦点を当て、近年のSF映画・テレビで浮上したテーマを概観することを目的としています。記事が示すように、これらのアイデアは一般的にサイボーグ化やマインドアップロード（心のクラウド移行）という概念に現れます。どちらも死を回避したいという深い人間的欲求を示しており、本文で取り上げる作品はそれぞれ異なる視点を提供しています。最終事例研究であるAmazon
-Primeのテレビシリーズ「アップロード（2020–）」は、これら二つの要素を統合し、サイバー精神性に関する幅広いアイデアに触れています。結論として、多くの作品がマインドアップロードというトランスヒューマニズム幻想に内在する倫理的課題について興味深い問いを投げかける一方で、デジタル不死の夢に対する批判は最終的には曖昧であると指摘しています。
+Science fiction has long dealt with the concept of omnipotent virtual beings and explored the possibility of transcendence through technological advances. At the same time, it has led with anxieties and hopes for new technologies, with the ethical and moral consequences of scientific progress, and with deep philosophical and theological concerns about the classic questions of what sets us apart as human beings and what is beyond our existence. This article aims to review themes that have emerged in recent science fiction films and television, with a particular focus on exceeding the natural biological lifespan. As the article shows, these ideas commonly appear in the concepts of cyborgization and mind uploading. Both demonstrate a deep human desire to avoid death, and the works discussed in this text each offer a different perspective. Amazon, the final case study
+Prime's television series Upload (2020–) integrates these two elements and touches on a wide range of ideas about cyber-spirituality. In conclusion, while many works raise interesting questions about the ethical challenges inherent in the transhumanist fantasy of mind uploading, they point out that the critique of dreams of digital immortality is ultimately ambiguous.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>- サイバー精神性とマインドアップロードを通じて不死を追求するSF映画・テレビの最新テーマを概観した研究。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>- A study that overviews the latest themes in science fiction movies and television that pursue immortality through cyber spirituality and mind uploading. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>- 従来の死と不死に関する議論を、サイバー空間での心移行という具体的技術と結びつけて分析している点。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>- Analyzes the conventional discussion on death and immortality by linking it to the specific technology of mind migration in cyberspace. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>- 「マインドアップロード」―個人の意識をデジタル領域へ転写し、永続的に存在させる仮想化技術。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>- "Mind Upload" - A virtualization technology that transfers an individual's consciousness into the digital realm and makes it exist permanently. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>- 代表的なSF作品（映画・テレビ）をテキスト分析し、テーマの出現頻度と表現手法を比較検討。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>- A text analysis of representative science fiction works (movies and television) and a comparative study of the frequency of appearance of themes and expression methods. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>- デジタル不死の倫理的課題を提起するものの、実際にどこまで実現可能か、また社会的受容性については曖昧なまま。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>- Although digital immortality raises ethical issues, the extent to which it is actually achievable and its social acceptability remain ambiguous. </p>
 </div>
 </div>
 </div>
@@ -1205,7 +1200,7 @@ stroke-linecap="round" stroke-linejoin="round" class="icon">
 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
 </svg></a>
 </div>
-<h3 id="year-w-2023" class="year-title">2023年</h3>
+<h3 id="year-w-2023" class="year-title">2023</h3>
 <div class="paper-card">
 <div class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -1240,25 +1235,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.34075/cs.58.4.10</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">トランスヒューマニズム時代―新たなポストヒューマン、新しい可能性、そして新たなモラリティ</div>
+<div class="jp-title">The era of transhumanism - new posthumans, new possibilities, and new morality</div>
 <div class="jp-summary">
-本稿はトランスヒューマニズムという哲学的概念の新たな前提と、そこから生まれる「新しいポストヒューマン」を創造し、再構築された道徳体系を提示することによってもたらされる可能性について検討する。三つのテーマユニットを通じて、技術・科学的成果によって実現される人間の新パラダイムとトランスヒューマニズム思想を反映させる。第一ユニットでは、トランスヒューマニズムの哲学的アイデアと、特に宣言されたトランスヒューマニスト・マニフェストによってもたらされた人類学的転換を論じる。第二ユニットでは、サイボーグ化やマインドアップロードといった技術的トランスヒューマニズムの手段を解明する。第三ユニットでは、キリスト教人類学の道徳価値に対抗するポストヒューマン倫理という新しいパラダイムがもたらす道徳体系を検討する。
+This article examines the new premise of the philosophical concept of transhumanism and the possibilities that arise from it by creating a ``new posthuman'' and presenting a reconstructed moral system. Through three thematic units, we will reflect the new human paradigm and transhumanist ideas realized through technological and scientific achievements. The first unit discusses the philosophical ideas of transhumanism and, in particular, the anthropological transformation brought about by the declared transhumanist manifesto. The second unit explores the means of technological transhumanism such as cyborgization and mind uploading. In the third unit, we will examine the moral system brought about by the new paradigm of posthuman ethics that opposes the moral values ​​of Christian anthropology.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>トランスヒューマニズムを基盤に、ポストヒューマンと新たな道徳体系を提案する哲学的論文。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A philosophical paper proposing a posthuman and new moral system based on transhumanism. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存のトランスヒューマニズム研究が主に技術面を扱う中、道徳的・哲学的転換と新パラダイムを統合して論じる点が差別化されている。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>While existing research on transhumanism deals mainly with technical aspects, it is differentiated in that it integrates and discusses moral and philosophical shifts and new paradigms. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>サイボーグ化とマインドアップロードという二つの主要技術が、ポストヒューマン実現への道筋を示す。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>Two major technologies, cyborgization and mind uploading, provide a path to posthuman realization. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>主に哲学的議論と概念分析を用い、マニフェストや倫理理論との比較検証によって主張の妥当性を評価する。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>We mainly use philosophical arguments and conceptual analysis, and evaluate the validity of claims by comparing them with manifestos and ethical theories. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>キリスト教人類学との道徳的対立が中心だが、実際の社会受容性や技術リスクについては十分に検討されていない点が限界。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>Although the focus is on moral conflict with Christian anthropology, the limitation is that actual social acceptability and technological risks are not sufficiently considered. </p>
 </div>
 </div>
 </div>
@@ -1316,25 +1311,25 @@ style="color:inherit">10.5325/jpoststud.7.2.0150</a></div>
 </div>
 <div class="translation-container">
 <div class="jp-title">
-「バイオモザーズとテクノボディーズ：ジャンネット・ウィンターソンの『フランキスティーン―ラブストーリー』―トランス・ポストヒューマニズムのテクノクリティカルハイブリダイゼーション」</div>
+"Biomothers and Technobodies: Jeannette Winterson's 'Frankistine - A Love Story' - Technocritical Hybridization of Trans-Posthumanism"</div>
 <div class="jp-summary">
-ジャンネット・ウィンターソンは『フランキスティーン―ラブストーリー』で、ポストヒューマンに関する存在論的問いを文学解釈の価値として再主張します。マリー・シェリィのゴシック古典を再語ることで、ウィンターソンは人工知能が性別・生命（再）生産、身体的欲望の商品化という従来概念に与える倫理的・美学的影響を評価し、テクノロジーとアートの交差点における融合を示します。トランス／ポストヒューマニズムやマテリアル／トランスクローピアレフェミニズムに関する最新研究を方法論的支援として用い、本稿は「モンストロシティ」を新たな生命・愛の正当化として再指示し、ウィンターソンがトランスとポストヒューマニズムの極性をハイブリダイズし、マインドアップロードやセックスロボットの大量生産、バイオテクノロジー強化といった実践に直面した自然の非物質化・再物質化を巡る議論の硬直性を相対化する方法を示します。テクノクリティカルな検証を通じて、人間と非人間物質の共投稿（com-posting）のリスクと可能性を探ります。
+In ``Frankistine: A Love Story,'' Jeannette Winterson reasserts ontological questions about the posthuman as valuable for literary interpretation. Through a retelling of Marie Shelley's Gothic classic, Winterson assesses the ethical and aesthetic impact of artificial intelligence on conventional notions of gender, life (re)production, and the commodification of bodily desire, and demonstrates its convergence at the intersection of technology and art. Using current research on trans/posthumanism and material/transcropiare feminism as methodological support, this paper redirects ``monstrocity'' as a new legitimation of life and love, showing how Winterson hybridizes the polarities of trans and posthumanism and relativizes the rigidity of debates around the dematerialization and rematerialization of nature in the face of practices such as mind uploading, mass production of sex robots, and biotechnological enhancement. Through technocritical examination, we explore the risks and possibilities of co-posting (com-posting) of humans and non-human substances.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>トランス・ポストヒューマニズムをハイブリダイズした文学的テクノクリティカル研究。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>Literary technocritical research that hybridizes trans-posthumanism. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>モンストロシティを新生命・愛の正当化と位置づけ、従来の硬直した自然論を相対化する点。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>Monstrocity is positioned as a justification for new life and love, and it relativizes the conventional rigid theory of nature. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>人工知能・マインドアップロード・セックスロボット・バイオテクノロジーの共投稿リスクと可能性を検証。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>Verifying the risks and possibilities of co-posting of artificial intelligence, mind uploading, sex robots, and biotechnology. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>文学解釈とトランス／ポストヒューマニズム・マテリアルフェミニズムの理論的枠組みを統合したテクノクリティカル分析。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Technocritical analysis that integrates literary interpretation and the theoretical framework of trans/posthumanism and material feminism. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>人間と非人間物質の境界が曖昧になる中で、倫理的・美学的評価の客観性と実践への適用可能性が課題。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>As the boundaries between humans and non-human substances become blurred, the objectivity of ethical and aesthetic evaluations and their applicability to practice are issues. </p>
 </div>
 </div>
 </div>
@@ -1393,25 +1388,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.4018/978-1-6684-9591-9.ch012</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">人工知能におけるマインドアップロード</div>
+<div class="jp-title">Mind upload in artificial intelligence</div>
 <div class="jp-summary">
-マインドアップロードは、個人の脳内で起こる全てのプロセスをコンピュータ上で模倣するという未来志向の概念です。この技術実現への進展は、現在、人間脳を研究する社会的能力と、脳の構造を再現できる複雑な人工ニューラルネットワークの開発に制約されています。本章では、両分野（神経科学と人工知能）の簡潔な歴史を紹介し、これまでの進展と将来研究を妨げる障壁について述べます。さらに、神経科学と人工知能の障壁を併せて検討し、相互に強みを活かすことでそれぞれの限界を克服する道筋を示します。
+Mind Upload is a futuristic concept that imitates all the processes that occur in an individual's brain on a computer. Progress toward realizing this technology is currently constrained by society's ability to study the human brain and the development of complex artificial neural networks that can reproduce brain structure. This chapter provides a brief history of both fields (neuroscience and artificial intelligence), and describes progress to date and barriers to future research. Furthermore, we will examine the barriers between neuroscience and artificial intelligence together and provide a path to overcome their respective limitations by leveraging each other's strengths.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>個人の脳機能をコンピュータで完全に再現しようとする技術（マインドアップロード）。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>Technology (mind upload) that attempts to completely reproduce an individual's brain functions on a computer. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>脳構造と機能を同時に模倣する点で、従来の脳モデルやシミュレーションを超える総合的アプローチ。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>A comprehensive approach that goes beyond traditional brain models and simulations in that it simultaneously mimics brain structure and function. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>脳を正確に捉える高精度イメージングと、同等の表現力を持つ人工ニューラルネットワークの構築。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>High-precision imaging that accurately captures the brain and construction of an artificial neural network with equivalent expressive power. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>実際に脳データを入力し、人工ネットワークが同等の認知・行動応答を示すかどうかを比較検証。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Actually input brain data and compare and verify whether the artificial network shows equivalent cognitive and behavioral responses. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>倫理的懸念、データ取得の難易度、計算資源の膨大さといった社会的・技術的課題が残る。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>Social and technical issues remain, such as ethical concerns, the difficulty of data acquisition, and the enormous amount of computational resources required. </p>
 </div>
 </div>
 </div>
@@ -1474,25 +1469,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1111/zygo.12886</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">幽霊の中の機械：トランスヒューマニズムと情報の存在論</div>
+<div class="jp-title">Machines in ghosts: transhumanism and the ontology of information</div>
 <div class="jp-summary">
-情報の存在論は、今日我々が抱く現実観に対して裏切り的であり、哲学と科学の明示的な学術研究だけでなく、それらから生まれるイデオロギーをも活性化し支配している。トランスヒューマニズムは、非常に特定の情報存在論を掲げるテクノサイエンティック・イデオロギーの一例であり、必ずしも唯一の選択肢ではない。本稿は、トランスヒューマニズムが持つ情報存在論に神秘主義的・ドケティック（身体を否定する）宗教的ニュアンスが含まれ、物理的存在を軽視していると論じる。同時に「超自然」を否定すると主張しつつ、仮想的なトランスヒューマニズム実践（例：マインドアップロード）は、情報空間をしばしば自然界と対立する超自然的領域として位置づける。本稿では、トランスヒューマニズムの情報概念を批判し、自然と超自然の区別および物理世界の整合性をより適切に説明できる代替情報存在論を提示する。
+The ontology of information is betrayal to our current view of reality, and it animates and dominates not only the explicit academic work of philosophy and science, but also the ideology that emerges from them. Transhumanism is an example of a technoscientific ideology that advocates a very specific information ontology, and is not necessarily the only option. This paper argues that the information ontology of transhumanism includes mystical and dochetic (denying the body) religious overtones, and neglects physical existence. While simultaneously claiming to deny the ``supernatural,'' virtual transhumanist practices (e.g., mind uploading) often position the information space as a supernatural realm in conflict with the natural world. In this paper, we criticize the transhumanist concept of information and present an alternative information ontology that can better explain the distinction between the natural and the supernatural and the integrity of the physical world.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>トランスヒューマニズムが提唱する情報の存在論を批判し、代替的な情報存在論を提示する研究。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>Research that criticizes the information ontology advocated by transhumanism and presents an alternative information ontology. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存のトランスヒューマニズム研究が主に技術的側面を扱うのに対し、本稿は宗教的・哲学的観点から情報存在論を再検討する。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>While existing transhumanism research mainly deals with technical aspects, this paper reexamines information ontology from a religious and philosophical perspective. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>マインドアップロードなどの仮想的実践を通じて、情報空間が超自然領域とみなされるメカニズムを明らかにする。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>Through virtual practices such as mind uploading, we will clarify the mechanism by which information space is regarded as a supernatural realm. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>文献比較と概念分析を用いて、トランスヒューマニズムの情報存在論と提案する代替存在論を対照的に評価。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Contrast and evaluate the information ontology of transhumanism and the proposed alternative ontology using literature comparison and conceptual analysis. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>代替存在論が実際のテクノロジー開発にどれほど影響を与えるか、また超自然と自然の境界が曖昧になる可能性を議論しつつ、実証的検証の難しさを指摘。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>While discussing the extent to which alternative ontology will affect actual technological development and the possibility of blurring the boundary between the supernatural and nature, he points out the difficulty of empirical verification. </p>
 </div>
 </div>
 </div>
@@ -1549,25 +1544,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.3138/jrpc.2021-0048</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">ハリー・ポッターとトランスヒューマニズムの目的：テクノロジーによる不死への魔法的批評</div>
+<div class="jp-title">Harry Potter and the purpose of transhumanism: A magical critique of technological immortality</div>
 <div class="jp-summary">
-ハリー・ポッターは、超長寿や不死を実現しようとするトランスヒューマニズムの目的に対する批評として読むことができる。本作では、魔法がテクノロジーのアナログとして機能し、シリーズ全体を通じて死が中心テーマである点から、トランスヒューマニズムの重要性が浮き彫りになる。トランスヒューマニストは、バイオエンジニアリング・サイボーグ工学・マインドアップロードという三つの道筋で極端な超長寿を追求するが、これらの各アプローチはハリー・ポッターにおける不死への魔法的追求をヒューリスティックに適用した際、テキスト内で明示的に否定されると同時に、ハリーがそれを追わない姿勢が称賛される。アナロジーとして、ハリー・ポッターの死と不死に対する視点は、部分的にキリスト教伝統に影響を受けており、読者に対してトランスヒューマニズムの特定の目的を他の倫理的・宗教的分析と同様に批判し、そこに潜む深い欲望や渇望を語りかける。
+Harry Potter can be read as a critique of transhumanism's aim of achieving hyper-longevity and immortality. The film highlights the importance of transhumanism, with magic serving as an analogue to technology and death being a central theme throughout the series. Transhumanists pursue extreme longevity through three paths: bioengineering, cyborg engineering, and mind uploading, but each of these approaches is explicitly denied in the text when applied heuristically to Harry Potter's magical pursuit of immortality, while at the same time Harry's refusal to pursue it is praised. By analogy, Harry Potter's perspective on death and immortality is partly influenced by Christian tradition, and offers readers a critique of the specific aims of transhumanism as well as other ethical and religious analyzes and speaks to the deep desires and longings within.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>ハリー・ポッターを通じて、トランスヒューマニズムが追求する不死・超長寿に対する魔法的批評を提示。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>Through Harry Potter, we present a magical critique of the immortality and ultra-longevity pursued by transhumanism. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>魔法とテクノロジーのアナログ性を重視し、シリーズ全体で死が中心テーマである点を新たに解釈。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>A new interpretation of the point that death is the central theme throughout the series, emphasizing the analog nature of magic and technology. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>バイオエンジニアリング・サイボーグ工学・マインドアップロードという三路を魔法的観点で否定し、ハリーの選択を肯定。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>Denies the three paths of bioengineering, cyborg engineering, and mind uploading from a magical perspective, and affirms Harry's choice. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>文献分析とテキスト内の具体的な場面（呪文・アイテム・死者への対処）を用いて、三つのトランスヒューマンパスに対する否定的立場を抽出。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Using literature analysis and specific scenes in the text (dealing with spells, items, and the dead), we extracted negative positions against the three transhuman paths. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>キリスト教的視座が一部読者に限定される可能性や、魔法＝テクノロジーというアナロジーの適用範囲に関する議論が残る。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>There remains a debate regarding the possibility that the Christian perspective may be limited to some readers and the scope of application of the analogy of magic = technology. </p>
 </div>
 </div>
 </div>
@@ -1624,26 +1619,26 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.36770/bp.850</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">「存在するかしないか」―ヴィクター・ペレーヴィンが描く未来のトランスヒューマニズム（文学作品『Transhumanism Inc.』に基づく）</div>
+<div class="jp-title">"To be or not to be?" - Victor Pelevin's future of transhumanism (based on the literary work "Transhumanism Inc.")</div>
 <div class="jp-summary">
-ヴィクター・ペレーヴィンは、最も興味深く、論争的で神秘的な現代ロシア作家の一人として名を馳せている。彼はロシアポストモダニズムの代表的存在として認識され、周囲の現実を鋭く批判的に観察する姿勢でも知られる。ペレーヴィンは時折、深い思想家・預言者・ビジョナリーと称される。今回の論文では、2021年に発表された彼の文学作品『Transhumanism
-Inc.』を対象に、孤立した脳（宿主から切り離された）が専門的な容器「ジャー」に永続的に生存し、人間意識が仮想現実内で存在するというトランスヒューマニズム的未来像を示し、議論する。ジャー次元へのアクセスは富裕層・リーダー・世界オリガルヒに限定される一方、実際の世界秩序を築くのは吸血鬼という超自然的存在であると論じる。本文では、トランスヒューマニズムプロジェクトの前提と結びつくペレーヴィン作品の選択的側面を分析し、サイバー不死性・形態自由度・マインドアップロードという概念に特に注目する。
+Victor Pelevin has earned a reputation as one of the most interesting, polemical and mysterious modern Russian writers. He is recognized as a representative figure of Russian postmodernism and is also known for his keen and critical observation of the reality around him. Pelevin is sometimes described as a profound thinker, prophet, and visionary. In this paper, we will discuss his literary work “Transhumanism” published in 2021.
+Inc.', we present and discuss a transhumanist future vision in which isolated brains (separated from their hosts) survive permanently in specialized containers called "jars" and human consciousness exists within virtual reality. He argues that while access to the Jar dimension is limited to the wealthy, leaders, and world oligarchs, it is supernatural beings called vampires who create the actual world order. In this article, I will analyze selected aspects of Pelevin's work that are connected to the premises of the transhumanist project, paying particular attention to the concepts of cyber-immortality, morphological freedom, and mind uploading.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>ペレーヴィンの小説『Transhumanism Inc.』に描かれた、脳が容器内で永続的に生存し意識が仮想現実へ移行するトランスヒューマニズム的未来像。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A vision of a transhumanist future in which the brain permanently survives in a container and consciousness is transferred to virtual reality, as depicted in Pelevin's novel "Transhumanism Inc." </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存のトランスヒューマニズム研究が技術的側面に焦点を当てる中、ペレーヴィンの文学的視座と超自然的要素（吸血鬼）を組み合わせた独自の社会批評が特徴。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>While existing research on transhumanism focuses on technological aspects, Pelevin's work is characterized by a unique social critique that combines a literary perspective with supernatural elements (vampires). </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>「サイバー不死性」「形態自由度」「マインドアップロード」の三つの概念が、脳と意識を物理的・仮想的境界で再定義する鍵。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>The three concepts of "cyber immortality," "formal freedom," and "mind upload" are the keys to redefining the brain and consciousness across physical and virtual boundaries. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>文学作品のテキスト分析と、トランスヒューマニズムに関する哲学・倫理的議論を交差させた批評的方法。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>A critical method that intersects textual analysis of literary works with philosophical and ethical discussions regarding transhumanism. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>実際の技術実装可能性や倫理的リスク、富裕層限定化がもたらす社会的不平等といった問題点を指摘し、文学的想像力の範囲内で議論を展開している。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>It points out problems such as the feasibility of implementing technology in practice, ethical risks, and social inequality brought about by the restriction of the wealthy, and develops the discussion within the scope of literary imagination. </p>
 </div>
 </div>
 </div>
@@ -1704,25 +1699,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.3389/fcomm.2023.1272556</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">カズオ・イシグロ『クララと太陽』における道徳的知覚とマインドアップロードの探求：人工知能におけるアイデンティティ帰属の倫理的・美学的視点</div>
+<div class="jp-title">Exploring moral perception and mind uploading in Kazuo Ishiguro's "Clara and the Sun": An ethical and aesthetic perspective on identity attribution in artificial intelligence</div>
 <div class="jp-summary">
-文学は私たちの認知プロセスに深い影響を与え、思考する方法だけでなく、何について考えるかも形作ります。特に美的体験は複雑さを理解する能力に肯定的な影響を与えるようです。この影響は、価値学習と倫理研究の探求において文学が果たす重要な役割を示しており、意思決定を評価する際には最も広い参照枠を求める必要があります。さらに、文学は外部世界と内面の両方への知覚を豊かにし、倫理的洞察力を高める上で不可欠な役割を担っています。本稿では、カズオ・イシグロの『クララと太陽』を通じてこの最後の考えを探求します。そこで、マインドアップロードに関する二つの重要な論争―道徳的知覚理論を中心とした認識論的議論と個人アイデンティティへの本体論的探求―のつながりを明らかにします。これら二大課題の交差点を研究することで、概念統合を方法論的枠組みとして採用する決定に至りました。さらに、イシグロのディストピアで浮上する道徳的知覚と個人アイデンティティの概念が、チャールズ・テイラーのナラティビスト仮説と調和していることを主張します。結論として、人間をロボットで置き換える可能性は、機械に独自の道徳的知覚を植え付ける課題に依存していると擁護します。この目標は、物質の非客観的特性を把握し処理できる機械を客体化することの不可避な不可能性ゆえに、常に達成困難であると考えられます。さらに、そのような機械を作り出せたとしても、自己の存在を迅速に発見し評価するため、代替的役割を担うことに抵抗する可能性が高いです。最後に、人間のシミュレーションを真の複製と誤認すること、すなわち失敗かつ見過ごされたマインドアップロードの試み—孤独—がもたらす意味を考察します。
+Literature has a profound influence on our cognitive processes, shaping not only how we think but also what we think about. In particular, aesthetic experiences seem to have a positive impact on the ability to understand complexity. This influence points to the important role that literature plays in exploring value learning and ethics research, and the need to seek the widest frame of reference when evaluating decision-making. Moreover, literature plays an essential role in enriching our perception of both the external world and our inner world, and in developing ethical insight. This article explores this last idea through Kazuo Ishiguro's Clara and the Sun. Therefore, I will clarify the connection between two important debates regarding mind uploading: the epistemological debate centered on moral perception theory and the somatic inquiry into personal identity. Studying the intersection of these two major challenges led to the decision to adopt conceptual integration as a methodological framework. Furthermore, I argue that the concepts of moral perception and personal identity that emerge in Ishiguro's dystopias are in harmony with Charles Taylor's narrativist hypothesis. In conclusion, we defend that the possibility of replacing humans with robots depends on the task of instilling machines with their own moral perception. This goal will always be considered difficult to achieve due to the unavoidable impossibility of objectifying a machine capable of grasping and processing the non-objective properties of matter. Moreover, even if such a machine could be created, it would likely resist assuming alternative roles because it would rapidly discover and evaluate its existence. Finally, we consider the implications of misidentifying a human simulation as a true copy, a failed and overlooked mind-uploading attempt—loneliness.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>『クララと太陽』を通じて、マインドアップロードに関する道徳的知覚と個人アイデンティティの論争を、文学・美学的視点で分析した研究。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A study that analyzes the controversy over moral perception and personal identity regarding mind uploading from a literary and aesthetic perspective through ``Clara and the Sun.'' </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存の倫理・AI研究が主に技術的側面を扱う中、文学作品とナラティビスト仮説を結びつけて概念的統合を行う点が独自性。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>While existing ethics and AI research mainly deals with technical aspects, it is unique in that it connects literary works and narrativist hypotheses to create a conceptual synthesis. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>概念統合（conceptual synthesis）を方法論とし、道徳的知覚と個人アイデンティティの相互作用を理論的に結びつける。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>Using conceptual synthesis as a methodology, we theoretically link the interaction between moral perception and personal identity. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>文学作品のテキスト分析とチャールズ・テイラーのナラティビスト理論との比較による概念的検証。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Conceptual verification through textual analysis of literary works and comparison with Charles Taylor's narrativist theory. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>機械に道徳的知覚を植え付けることの実現不可能性と、代替ロボットが自己を認識して抵抗する可能性という倫理的・哲学的限界。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>The impossibility of instilling moral perception in machines and the ethical and philosophical limits of the possibility of self-awareness and resistance by alternative robots. </p>
 </div>
 </div>
 </div>
@@ -1788,25 +1783,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1093/oso/9780192844019.003.0002</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">「生きる魂からソフトウェアの自己へ：西洋形而上学を通じた魅惑の動き」</div>
+<div class="jp-title">"From the living soul to the software self: Fascinating movement through Western metaphysics"</div>
 <div class="jp-summary">
-ロバート・ドーデは本書の残りの章に解釈枠を提供する「技術の知的歴史」について論じる。彼は、西洋史における重要な概念転換―中世後期のヴィア・モデーナ、近代初期科学が宇宙に対して用いた機械的メタファー、そして近代後期の情報革命―を概説し、これらが現代トランスヒューマニズムの「マインドアップロード」プロジェクトを実現可能にした根底であると指摘する。ドーデは、現代の科学者・哲学者・知的な一般人が、自らを「生きるアイデンティティ」をデジタルソフトウェアパターンとして捉え、身体から切り離して非生分解性の基盤へアップロードし永続的に生活を継続できると自然に受け入れる理由を説明する。また、機械的な文法を持つにもかかわらず、このビジョンは世界の再魅惑（リ・エンチャントメント）を目指す根本的な試みとして特徴づけられると論じる。
+Robert Daudet discusses an ``intellectual history of technology'' that provides an interpretive framework for the remaining chapters of the book. He outlines important conceptual shifts in Western history - the Via Modena of the late Middle Ages, the mechanical metaphors used by early modern science for the cosmos, and the information revolution of late modernity - and points out that these are at the root of what has made the "mind upload" project of modern transhumanism possible. Daudet explains why modern scientists, philosophers, and intellectual ordinary people naturally accept their ``living identities'' as digital software patterns that can be detached from the body, uploaded to non-biodegradable substrates, and continued to live in perpetuity. I also argue that, despite its mechanical grammar, this vision can be characterized as a radical attempt to re-enchant the world.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>西洋形而上学の変遷を通じて、マインドアップロードというトランスヒューマニズムの実現可能性を歴史的に解説する枠組み。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A framework that historically explains the feasibility of transhumanism called mind uploading through the changes in Western metaphysics. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存の技術哲学論と異なり、ヴィア・モデーナから情報革命までの概念転換を連続的に追跡し、現代のアップロード観点と結びつけている。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>Unlike existing philosophical theories of technology, it continuously traces the conceptual transformation from Via Modena to the information revolution and connects it with the modern upload perspective. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>「生きるアイデンティティ」をデジタルソフトウェアパターンとして抽出し、身体から切り離して非生分解性基盤へアップロードする点。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>The point of extracting the "living identity" as a digital software pattern, separating it from the body and uploading it to a non-biodegradable platform. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>歴史的文献分析と哲学的議論を組み合わせ、概念転換の因果関係を示す。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Combine historical document analysis and philosophical discussion to show the causal relationship of conceptual transformation. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>機械的メタファーに対する批判や、アップロードが真に「再魅惑」になるかどうかの倫理的・実証的課題が残る。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>Ethical and empirical questions remain, including criticism of the mechanical metaphor and whether uploading truly becomes "re-enchantment." </p>
 </div>
 </div>
 </div>
@@ -1864,34 +1859,29 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.12775/RF.2023.027</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">ファイナル・アバター ― サイバー不死性の概念を巡る考察</div>
+<div class="jp-title">Final Avatar - Thoughts on the concept of cyber immortality</div>
 <div class="jp-summary">
-本稿は、トランスヒューマニズム的視点からサイバー不死性（cyberimmortality）に関するアバター化の問題を検討する。アバター化は、人間がデジタル形態で自己を具現化するプロセスと位置づけられ、いくつかのトランスヒューマニストや未来学者によれば、その最終段階は「デジタル後人間」の出現とされる。本稿の目的は、サイバー不死性を他のトランスヒューマニズム的潮流と比較しつつ、心の転送（トランスファー）に伴う人類学的・形而上学的・社会的課題を論じることである。
+This paper examines the issue of avatarization regarding cyberimmortality from a transhumanist perspective. Avatarization is defined as a process in which humans embody themselves in digital form, and according to some transhumanists and futurists, its final stage is the emergence of a "post-digital human." The purpose of this article is to discuss the anthropological, metaphysical, and social issues associated with mind transfer while comparing cyber immortality with other transhumanist trends.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>サイバー不死性は、人間の意識をデジタル化し、永続的に存在させることを目指すトランスヒューマニズムの一派である。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>Cyber ​​immortality is a school of transhumanism that aims to digitize human consciousness and make it exist permanently. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>従来のアバター研究が主に仮想空間での表現を扱う中、本稿は「デジタル後人間」の実在化という究極的な転換を焦点に置いている。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>While conventional avatar research mainly deals with expressions in virtual space, this paper focuses on the ultimate transformation of the ``post-digital human'' into reality. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>心のデジタル転送（mind uploading）と、自己を構成する情報の永続保存・再現性が鍵となる。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>Digital transfer of the mind (mind uploading) and the permanent preservation and reproducibility of the information that constitutes the self are the keys. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>既存のトランスヒューマニズム理論と比較分析を行い、倫理・社会的影響に関するケーススタディやシナリオ分析を用いる。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Conduct a comparative analysis with existing transhumanism theory, and use case studies and scenario analysis regarding ethics and social impact. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>人間性の定義、個人情報保護、社会的不平等拡大といった倫理的・法的課題が残り、実現可能性については技術的および哲学的に未解決の問題が多い。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>Ethical and legal issues remain, such as the definition of humanity, the protection of personal information, and the widening of social inequality, and there are many unresolved technical and philosophical issues regarding its feasibility. </p>
 </div>
 </div>
 </div>
-<div class="raw-abstract"><b>Original Abstract:</b> Problematyka artykułu skupia się wokół zagadnienia
-awataryzacji w kontekście transhumanistycznej koncepcji cyberimmortalizmu. Awataryzacja jest omawiana
-jako proces uobecniania się człowieka pod postacią cyfrową, czego ostatecznym etapem ma być – według
-niektórych transhumanistów i futurystów – wyłonienie się cyfrowego post-człowieka. Celem artykułu jest
-charakterystyka cyberimmortalizmu na tle innych transhumanistycznych nurtów oraz omówienie wyzwań
-związanych z ideą transferu umysłu (antropologicznych, metafizycznych oraz społecznych).</div><a
+<div class="raw-abstract"><b>Original Abstract:</b> The article focuses on avatarization within the transhumanist concept of cyberimmortalism. Avatarization is discussed as the process through which a human being becomes present in digital form, whose final stage, according to some transhumanists and futurists, is the emergence of a digital post-human. The purpose of the article is to characterize cyberimmortalism against the background of other transhumanist currents and to discuss the challenges associated with the idea of mind transfer, including anthropological, metaphysical, and social challenges.</div><a
 href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85191600737&origin=inward"
 target="_blank" class="btn-action">View Full Access <svg xmlns="http://www.w3.org/2000/svg" width="14"
 height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -1934,25 +1924,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1093/oso/9780192844019.003.0009</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">トランスヒューマニズム、身体化認知、および精神医学</div>
+<div class="jp-title">Transhumanism, embodied cognition, and psychiatry</div>
 <div class="jp-summary">
-本章でトーマス・フッツは、精神科医の視点からトランスヒューマニズムが提唱する人間を内在的に心身二元論で捉える考え方に反対し、生命プロセスと意識プロセスが生体全体を通じて不可分に結びついていると主張する。人の統一体として、身体は生きており、したがって意識も持つ；心は生きているため、本当に身体化されている。フッツはまた、精神医学における身体化認知の重要性を示す。現在、この医療分野は薬物治療、深部脳刺激、神経強化といった脳中心の研究に支配されており、人間の心を変えることだけを目的としている。フッツは、このアプローチが身体化と関係性構造を無視し、患者を単なる技術的支援に依存させる危険があると論じる。持続的な治療効果は、個人的で身体化された対話経験を通じてのみ達成できるとし、時間の経過で「プロセス」と「構造」の循環的相互作用を通じて神経基盤にも影響を与えると結論付ける。
+In this chapter, Thomas Hutz argues from the perspective of a psychiatrist that transhumanism advocates an inherent mind-body dualism of humans, and argues that life processes and conscious processes are inseparably linked throughout the organism. As a unity of man, the body is alive and therefore also conscious; the mind is alive and therefore truly embodied. Hutz also demonstrates the importance of embodied cognition in psychiatry. Currently, the medical field is dominated by brain-centered research such as drug treatments, deep brain stimulation, and neuroenhancement, with the sole purpose of changing the human mind. Hutz argues that this approach ignores embodiment and relational structures, and risks making patients dependent on mere technical assistance. We conclude that sustained therapeutic effects can only be achieved through personal, embodied dialogic experiences, which also influence neural substrates through the cyclic interaction of "processes" and "structures" over time.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>人間の生命と意識が身体を介して不可分に結びつくという身体化認知の視点から、精神医学を再考する論文。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>This paper reconsiders psychiatry from the perspective of embodied cognition, in which human life and consciousness are inseparably linked through the body. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>伝統的な脳中心の薬物・刺激治療に対し、身体と関係性を重視した統合的アプローチを提案している点。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>In contrast to traditional brain-centered drug and stimulation treatments, we propose an integrated approach that emphasizes the body and relationships. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>身体化された対話経験（身体的・社会的相互作用）を通じて、プロセスと構造が循環的に変容するメカニズムを活用。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>Utilizes the mechanism by which processes and structures are cyclically transformed through embodied dialogic experiences (physical and social interactions). </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>実践的な臨床ケースや長期追跡調査を通じて、身体化経験が神経構造に与える影響を観察・測定する。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Through practical clinical cases and long-term follow-up studies, we will observe and measure the effects of embodied experiences on neural structures. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>身体化経験の定量的評価が難しく、個人差や文化背景による影響を考慮する必要がある点。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>It is difficult to quantitatively evaluate the experience of embodiment, and it is necessary to consider the influence of individual differences and cultural background. </p>
 </div>
 </div>
 </div>
@@ -2012,25 +2002,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.3389/fpsyg.2023.1254846</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">「魂を不死に交換しますか？― 存在的意味と来世観がマインドアップロードへの賛否を予測する」</div>
+<div class="jp-title">"Would you exchange your soul for immortality? Existential meaning and afterlife view predict pros and cons of mind uploading"</div>
 <div class="jp-summary">
-マインドアップロード（個人の脳と心をデジタルコピーする技術）は、理論上「永遠に生きる」ことを可能にします。この技術が実用化された場合、誰が最も賛成し、誰が反対するのでしょうか。研究では、死への恐怖が仮想的マインドアップロード技術の道徳的承認を正に予測し、宗教性は逆の効果を持つことが示されています。本研究では、宗教性と存在的意味（自分の人生における意義感）が来世観を予測するという既存研究の知見を踏まえ、さらに存在的意味と来世観がマインドアップロード技術への道徳的承認に与える影響を検証しました。横断的調査（N＝1,007）により、存在的意味と来世観が高い人ほどマインドアップロード技術への道徳的承認は低くなることが明らかになりました。すなわち、魂や何らかの来世を信じ、さらに自分の存在が意味あるものと感じる人ほど、マインドアップロードを道徳的に受け入れにくいという結果です。マインドアップロードは、もし実現すれば、人間であることの存在的境界を根本的に再定義する技術と言えます。
+Mind uploading (a technology that digitally copies an individual's brain and mind) could theoretically make it possible to "live forever." If this technology were to be put into practical use, who would be most in favor and who would be against it? Research shows that fear of death positively predicts moral approval of virtual mind-uploading technology, while religiosity has the opposite effect. In this study, we based on the findings of existing research that religiosity and existential meaning (a sense of meaning in one's life) predict one's view of the afterlife, and further examined the influence of existential meaning and one's view of the afterlife on moral approval of mind upload technology. A cross-sectional survey (N = 1,007) revealed that the higher the existential meaning and afterlife views, the lower the moral approval of mind uploading technology. In other words, the more people believe in souls and some kind of afterlife, and the more meaningful their existence is, the less likely they are to morally accept mind uploading. Mind uploading is a technology that, if realized, will fundamentally redefine the existential boundaries of what it means to be human.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>個人の脳と心をデジタルコピーし、永遠に生き続けることが可能になる技術（マインドアップロード）。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>Technology (mind upload) that makes it possible to digitally copy an individual's brain and mind and keep them alive forever. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>死への恐怖と宗教性の関係だけでなく、存在的意味（自分の人生に意義を感じる度合い）と来世観がマインドアップロードへの道徳的承認に与える影響を同時に検証した点。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>Not only the relationship between fear of death and religiosity, but also the influence of existential meaning (the degree to which you feel your life is meaningful) and your view of the afterlife on moral approval of mind uploading. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>人間の「存在的境界」を再構築することで、身体的死を超えた新しい「生」の形態を創出すること。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>Creating a new form of "life" that goes beyond physical death by reconstructing the "existential boundaries" of humans. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>1,007名の横断的調査で、死への恐怖・宗教性・存在的意味・来世観を測定し、マインドアップロードへの道徳的承認との相関を統計解析した。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>In a cross-sectional survey of 1,007 people, we measured fear of death, religiosity, existential meaning, and views on the afterlife, and statistically analyzed the correlation with moral approval of mind uploading. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>調査は自己報告に基づく横断的設計で因果関係を確定できない点、また文化・宗教背景の多様性が結果に影響を与える可能性がある点。さらに、実際のマインドアップロード技術はまだ仮想段階であるため、実用化時の社会的・倫理的影響は未確定。
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>The survey is a cross-sectional design based on self-reports, so causal relationships cannot be determined, and diversity in cultural and religious backgrounds may affect the results. Furthermore, since the actual mind uploading technology is still in its virtual stage, the social and ethical implications of its practical application are uncertain.
 </p>
 </div>
 </div>
@@ -2088,25 +2078,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1093/oso/9780192889898.003.0005</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">海の中のシュリ：1920–2020年における人気映画で描かれるAIエンジニアの文化的構築</div>
+<div class="jp-title">Shuri in the Sea: The Cultural Construction of AI Engineers in Popular Films, 1920–2020</div>
 <div class="jp-summary">
-本章では、AIエンジニアを「超男性的なアルファ・ギーク」として描く主流イメージを明らかにし、挑戦することを目的としています。まず、AI業界での女性の過少代表という問題点から出発し、文化的表象がAI科学者にとって重要である理由を論じます。その後、1920年から2020年にかけてAIが登場する142本の影響力ある映画を対象とした大規模定量研究の結果を提示します。これらの作品から浮かび上がった主要なトロープ（典型的イメージ）を概説し、特に女性の過少代表に寄与していると考えられる4つの性別特有テーマに焦点を当てます。第一に、AI科学者を「天才」と描くこと；第二に、「マインドアップロード」やその他の技術的不死形態を追求することで生死を支配できるというイメージ；第三に、AIと軍事・超男性的な環境との結びつき；第四に、女性AI科学者を男性よりも従属的・劣位に描く表現。
+This chapter aims to clarify and challenge the mainstream image of AI engineers as "hypermasculine alpha geeks." We begin with the issue of women's underrepresentation in the AI ​​industry and discuss why cultural representations matter to AI scientists. We then present the results of a large-scale quantitative study of 142 influential films featuring AI from 1920 to 2020. We outline the main tropes that emerge from these works, focusing in particular on four gender-specific themes that we believe contribute to the underrepresentation of women. First, the depiction of AI scientists as "geniuses"; second, the image of being able to control life and death through the pursuit of "mind uploads" and other forms of technological immortality; third, the association of AI with military and hypermasculine environments; and fourth, depictions of female AI scientists as subordinate and inferior to men.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>AIエンジニアを描く映画における性別バイアスとその文化的構築を定量的に検証した研究。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>A study that quantitatively examined gender bias and its cultural construction in movies depicting AI engineers. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>過去の研究が主に個別作品や小規模サンプルを扱ったのに対し、142本という大規模コーパスで統計的根拠を提供。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>While past studies have mainly dealt with individual works or small-scale samples, we provide statistical evidence using a large corpus of 142 works. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>AI科学者像が「超男性的ギーク」「天才」「生死支配者」「軍事関与」という4つのトロープに集約され、女性の過少代表を助長している点。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>The image of AI scientists is summarized into four tropes: "hypermasculine geek," "genius," "controller of life and death," and "military involvement," which promotes the underrepresentation of women. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>1920–2020年のAI登場映画を対象に、内容分析と統計解析（頻度・相関）でトロープの出現率を測定。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Measuring the appearance rate of tropes using content analysis and statistical analysis (frequency/correlation) for movies featuring AI from 1920 to 2020. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>映画というメディアに限定されるため、実際の業界構造との直接的因果関係は示せない点と、時代背景による表現変化の解釈が難しいこと。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>Since it is limited to the media of movies, it is not possible to show a direct causal relationship with the actual industry structure, and it is difficult to interpret changes in expression due to the historical background. </p>
 </div>
 </div>
 </div>
@@ -2164,26 +2154,24 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.31893/multirev.2023046</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">人間性の根源を描く――ポストヒューマン進化の中でのハヌ・ラジャニエミ『ジャン・ル・フランベウ』三部作の研究</div>
-<div class="jp-summary">本研究は、フィンランド系アメリカ作家ハヌ・ラジャニエミの三部作『The Quantum Thief（2010）』『The Fractal
-Prince（2012）』『The Causal
-Angel（2014）』に描かれる、人間とポストヒューマンの複雑で多層的な関係を掘り下げることを目的とする。著者は、極端にポストヒューマン化・ポストシンギュラリティの世界で人間性がどのように浮上するかを示し、人間はポストヒューマニズムから完全に切り離された存在ではなく、むしろ広範なポストヒューマン概念の特定ケース（あるいは極限例）として理解すべきであると主張する。極端なポストヒューマン状態の境界から生まれる人間性は、以前の「ポスト前」状態をそのまま映すものではなく、より包括的で統合された存在へと変容する。三作品を分析することで、ラジャニエミの作品は人間主体性を完全に否定しているわけではなく、劇的に異なるポストヒューマン環境の中で再構築・再定義していることが示される。
+<div class="jp-title">Depicting the roots of humanity: A study of Hanu Rajaniemi's "Jean le Flambéu" trilogy in the context of post-human evolution</div>
+<div class="jp-summary">This study focuses on Finnish-American author Hanu Rajaniemi's trilogy, <em>The Quantum Thief</em> (2010), <em>The Fractal Prince</em> (2012), and <em>The Causal Angel</em> (2014). It examines how the trilogy depicts the complex, multilayered relationship between humans and posthumans. The paper argues that humanity in Rajaniemi's post-singularity world is not erased, but redefined as a specific case within a broader posthuman condition. On that reading, human agency is not simply negated; it is reconstructed under radically different environmental and technological constraints.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>ハヌ・ラジャニエミの三部作を通じて、人間とポストヒューマンの関係性がどのように再定義されるかを検証する研究。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A study examining how the relationship between humans and posthumans is redefined through Hanu Rajaniemi's trilogy. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存のポストヒューマン論では人間を排除する傾向がある中、ここでは人間性をポストヒューマンの一形態として位置づけ、両者の相互作用を多層的に分析する点が差別化されている。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>While existing posthuman theories tend to exclude humans, this theory differentiates itself by positioning humanity as a form of posthumanity and analyzing the interaction between the two from a multi-layered perspective. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>文献分析とテクスト・セミオティクスを組み合わせ、作品内の語彙・構造から人間性の再構築過程を抽出する手法。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>A method that combines literary analysis and textual semiotics to extract the process of reconstructing human nature from the vocabulary and structure of a work. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>三作品の主要プロット、キャラクター設定、世界観構築を比較し、ポストヒューマン化の段階ごとに人間性がどのように変容するかを定量的・質的に評価。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Comparing the main plots, character settings, and worldview construction of the three works, we quantitatively and qualitatively evaluated how humanity changes at each stage of posthumanization. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>ポストヒューマンの定義が学術的に統一されていない点や、作品解釈の主観性が高いことが議論の焦点であり、実証的検証にはさらなる多作品比較や読者反応研究が必要である。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>The focus of the discussion is that the definition of posthuman is not academically unified and that the interpretation of works is highly subjective, and empirical verification requires further comparison of multiple works and research on reader reactions. </p>
 </div>
 </div>
 </div>
@@ -2207,7 +2195,7 @@ stroke-linecap="round" stroke-linejoin="round" class="icon">
 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
 </svg></a>
 </div>
-<h3 id="year-w-2022" class="year-title">2022年</h3>
+<h3 id="year-w-2022" class="year-title">2022</h3>
 <div class="paper-card">
 <div class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -2244,25 +2232,25 @@ style="color:inherit">10.5325/jpoststud.6.1.0033</a></div>
 </div>
 <div class="translation-container">
 <div class="jp-title">
-南アジアのトランスヒューマニスト・ポストヒューマンオントロジー：ウズマ・アスラム・カーンの『Trespassing』におけるトラックアートとマインドアップロードの関係</div>
+South Asian transhumanist posthuman ontology: The relationship between track art and mind uploading in Uzma Aslam Khan's "Trespassing"</div>
 <div class="jp-summary">
-文学批評におけるポストヒューマン領域を脱植民地化する一つの方法は、南アジアなど技術的に発展が遅れた地域の文学と、欧米主流のサイエンスフィクションとの間に存在する可能性のあるスタイル的・テーマ的親和点を探ることです。本稿は、パキスタン作家ウズマ・アスラム・カーンの英語小説『Trespassing』（2003年）に登場するモチーフ、シンボル、キャラクターを批判的に分析し、技術的に未発達な世界（南アジア）からのトランスヒューマニスト・ポストヒューマンパラダイムを別の視点で認識し理解する代替的手段を提示・肯定します。著者は、同作におけるトラックアートの非人間的主体性を、意識アップロードの地域的手法として解釈できる比喩と論じます。トランスヒューマニスト／ポストヒューマン文学理論の枠組みを適用することで、本稿は小説中のトラックアート描写が、全脳エミュレーションというトランスヒューマニスト・ポストヒューマンの夢を象徴するアナロジーとして分析できることを示します。
+One way to decolonize the posthuman realm of literary criticism is to explore the stylistic and thematic affinities that may exist between literature from technologically less developed regions such as South Asia and mainstream Western science fiction. This article critically analyzes the motifs, symbols, and characters that appear in Pakistani author Uzma Aslam Khan's English novel Trespassing (2003), and proposes and affirms an alternative means of perceiving and understanding the transhumanist/posthuman paradigm from a technologically underdeveloped world (South Asia). The author argues that the non-human agency of truck art in this work is a metaphor that can be interpreted as a regional method of uploading consciousness. Applying the framework of transhumanist/posthuman literary theory, this paper shows that the depiction of truck art in the novel can be analyzed as an analogy that symbolizes the transhumanist/posthuman dream of whole-brain emulation.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>南アジア文学と欧米サイエンスフィクションの親和性を探り、トラックアートを意識アップロードの比喩として解釈する批評研究。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A critical study that explores the affinity between South Asian literature and Western science fiction, and interprets truck art as a metaphor for uploading consciousness. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>技術的に発展が遅れた地域の文学をポストヒューマン理論で読み解く点が、従来の欧米中心研究とは対照的。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>The use of posthuman theory to interpret the literature of technologically underdeveloped regions contrasts with conventional Western-centered research. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>トラックアートを「全脳エミュレーション」の象徴と位置づけ、非人間主体性を意識アップロードのメタファーとして活用。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>Truck art is positioned as a symbol of "whole brain emulation" and uses non-human subjectivity as a metaphor for uploading consciousness. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>文学作品内のモチーフ・シンボル・キャラクターを批判的にテキスト分析し、トランスヒューマニズム理論と照合。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Critical text analysis of motifs, symbols, and characters in literary works and comparison with transhumanism theory. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>アップロード技術の実現可能性や文化的転移に関する議論が不足しており、理論と実際の技術進展とのギャップを示唆。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>There is a lack of discussion regarding the feasibility and cultural transfer of upload technology, suggesting a gap between theory and actual technological progress. </p>
 </div>
 </div>
 </div>
@@ -2319,44 +2307,31 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.3917/cm.106.0155</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">レイモンド・クズウェイル：哀悼かテクノロジー</div>
+<div class="jp-title">Raymond Kuzweil: Mourning or technology</div>
 <div class="jp-summary">
-本稿は、レイモンド・クズウェイル（R. Kurzweil）の提唱を彼自身の人生経験に照らし合わせて検討する。クズウェイルが提唱する「死を克服したい」という願望は、父の死後に芽生えたものであり、その背景には「身体を機械として監視・治療し、最終的に精神をデジタル化（mind
-uploading）する」という「不死の生命観」がある。これらの概念は、フロイトが区別した「悲嘆」と「メランコリー」の議論に新たな光を投げかける。シンギュラリティ大学の創設者であり、Google
-などから資金を受けているクズウェイルは、技術進歩の「破壊的加速」を頻繁に語るが、その主張は多くの専門家から高度に推測的と批判されている。それでもトランスヒューマニズムのイデオロギーは一般的な議論に浸透し、終末論的課題の新たな実態を示している。本稿では、クズウェイルの言説を通じてトランスヒューマニズムを批判的に検証し、身体を「機械」や「廃棄物」として扱う観点から、精神医学的臨床の先例が豊富に存在することを指摘する。
+This article examines R. Kurzweil's proposals in light of his own life experience. The desire to ``overcome death'' advocated by Quzweil was born after the death of his father, and behind this is ``the body as a machine to be monitored and treated, and ultimately the mind to be digitalized.''
+There is an ``immortal view of life'' that ``uploading''. These concepts shed new light on the discussion of ``grief'' and ``melancholy,'' which Freud distinguished. Founder of Singularity University and Google
+Khudzweil, who receives funding from organizations such as the United Nations, frequently speaks of a "disruptive acceleration" of technological progress, claims that many experts have criticized as highly speculative. Yet the ideology of transhumanism has permeated popular discourse, presenting a new picture of the apocalyptic agenda. This article critically examines transhumanism through Khuzweil's discourse and points out that there are abundant precedents in psychiatric clinical practice from the perspective of treating the body as a ``machine'' or ``waste.''
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>クズウェイルの「不死への願望」と身体を機械化・デジタル化するビジョンを、フロイトの悲嘆とメランコリーに照らし合わせて論じる研究。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A study that discusses Khuzweil's "desire for immortality" and his vision of mechanizing and digitalizing the body in light of Freud's grief and melancholy. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存のトランスヒューマニズム研究が主に技術的側面を扱うのに対し、本稿は個人的経験と精神分析理論を結びつけて批判的に検証する点が差別化される。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>While existing transhumanism research mainly deals with technical aspects, this paper is different in that it connects personal experience and psychoanalytic theory and critically examines it. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>「mind uploading」（意識をデジタル化）と身体の「機械的治療・監視」―これが不死実現への核心技術として位置づけられる。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>"Mind uploading" (digitizing consciousness) and "mechanical treatment and monitoring" of the body - these are positioned as the core technologies for achieving immortality. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>クズウェイル自身の言説と生涯史をテキスト分析し、フロイト理論との比較検討を行う。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>A textual analysis of Kuzweil's own discourse and life history will be conducted, and a comparative study will be made with Freud's theory. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>技術的実現可能性の不確かさ、倫理・社会的影響への配慮不足、そして身体を廃棄物とみなす観点が倫理的批判の対象となる。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>Uncertainty about technological feasibility, lack of consideration to ethical and social impacts, and the perspective of viewing the body as waste are subject to ethical criticism. </p>
 </div>
 </div>
 </div>
-<div class="raw-abstract"><b>Original Abstract:</b> Cet article examine les propositions de R. Kurzweil à
-l’aune de son propre parcours. Il s’agit de démontrer que ces conceptions peuvent éclairer d’un nouveau
-jour les propos freudiens visant à distinguer le deuil de la mélancolie. Le fondateur de l’université de
-la Singularité, financée notamment par l’entreprise Google, fait régulièrement des déclarations
-spectaculaires sur l’avancée disruptive toute prochaine des progrès technologiques. Si la plupart des
-experts s’accordent sur le caractère hautement spéculatif de ses assertions, malgré tout l’idéologie
-transhumaniste infiltre le discours courant et témoigne d’une nouvelle actualité des problématiques
-eschatologiques. Nous interrogeons le discours transhumaniste au travers du prisme de la parole de
-R. Kurzweil en soulignant que sa conception de la finitude humaine (son souhait formulé de vaincre la
-mort) lui advient à la suite du décès de son propre père. Kurzweil indique également que cette
-conception de la vie « immortelle » en passe par un traitement du corps particulier, qu’il s’agit de
-surveiller et de traiter pour, in fine , espérer s’en passer («  mind uploading  »). Sur ce point du
-traitement du corps comme machine, voire comme déchet, la clinique psychopathologique se révèle
-également féconde en précédents.</div><a
+<div class="raw-abstract"><b>Original Abstract:</b> This article examines R. Kurzweil's proposals in light of his own life trajectory. It argues that these ideas can cast new light on Freudian remarks distinguishing mourning from melancholy. The founder of Singularity University, financed in part by Google, regularly makes spectacular claims about the imminent disruptive advance of technological progress. Although most experts agree that his assertions are highly speculative, transhumanist ideology nonetheless permeates ordinary discourse and points to a renewed relevance of eschatological questions. We examine transhumanist discourse through the prism of Kurzweil's own statements, emphasizing that his conception of human finitude, and his stated wish to defeat death, emerged after the death of his father. Kurzweil also indicates that this conception of 'immortal' life requires a particular treatment of the body, which must be monitored and managed in the hope of ultimately dispensing with it ('mind uploading'). On this point, where the body is treated as a machine or even as waste, psychopathological clinical literature also offers illuminating precedents.</div><a
 href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85154611742&origin=inward"
 target="_blank" class="btn-action">View Full Access <svg xmlns="http://www.w3.org/2000/svg" width="14"
 height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -2400,25 +2375,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.18172/JES.5562</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">マーク・マクレランドの『アップロード』（2012年）：仮想不死を追い求めて生物学を捨てる危険性</div>
+<div class="jp-title">Mark McClelland's Upload (2012): The danger of abandoning biology in pursuit of virtual immortality</div>
 <div class="jp-summary">
-近年、神経技術の最新動向を受けて、一部批評家はマインドアップロード（心のデジタル化）が近い将来に技術的実現可能になると主張している。トランスヒューマニストの批評家はこの手法を受け入れ、人間がより高い認知・感情・感覚能力を備えるポストバイオロジカル（生物学的後期）未来を夢見る一方で、批判的ポストヒューマニズムはサイバースペースで仮想生活を送るために生物学を捨てることのリスクを警告している。特に、これらの警告は21世紀の文化作品―例えばマーク・マクレランドの小説『アップロード』（2012年）―に響き渡っており、同作はテクノロジー専門家が執筆するSF小説の新たな潮流を代表している。表面的にはシミュレートされた生命の擁護に見える本作は、実際にはマクレランドが採用した物語的選択を通じて、身体性（embodiment）が人間のアイデンティティに不可欠であるという批判的ポストヒューマニズムの視点を明らかにすることを目的としている。
+In recent years, the latest developments in neurotechnology have led some critics to argue that mind uploading will become technologically feasible in the near future. While transhumanist critics embrace this approach and dream of a postbiological future in which humans have greater cognitive, emotional, and sensory abilities, critical posthumanism warns of the risks of abandoning biology for a virtual life in cyberspace. In particular, these warnings are echoed in 21st-century cultural works, such as Mark McClelland's novel Upload (2012), which represents a new wave of science fiction written by technology experts. What appears on the surface to be a defense of simulated life is actually intended, through the narrative choices McClelland employs, to reveal a critical posthumanist perspective in which embodiment is integral to human identity.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>マインドアップロードを題材に、仮想不死と身体性の関係を批判的に検討したSF小説。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A science fiction novel that critically examines the relationship between virtual immortality and physicality, using mind upload as its theme. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存のトランスヒューマニズム的楽観主義に対し、身体性を不可欠視点として強調する批判的ポストヒューマニズムの立場を採用。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>In contrast to the existing transhumanist optimism, we adopt a critical posthumanist position that emphasizes physicality as an essential perspective. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>脳情報をデジタル化し、仮想空間で永続的に存在させる「アップロード」技術。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>"Upload" technology that digitizes brain information and allows it to exist permanently in virtual space. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>小説内の物語構造とキャラクター描写をテキスト分析し、身体性に関するテーマの展開を定量的・質的に評価。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Text analysis of the narrative structure and character description in the novel, and quantitative and qualitative evaluation of the development of themes related to physicality. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>実際のアップロード技術実現可能性や倫理的枠組みは未確定であり、作品内の想像上の設定に留まる点が限界。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>The feasibility and ethical framework of the actual uploading technology are undetermined, and the limit is that it remains an imaginary setting within the work. </p>
 </div>
 </div>
 </div>
@@ -2441,7 +2416,7 @@ stroke-linecap="round" stroke-linejoin="round" class="icon">
 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
 </svg></a>
 </div>
-<h3 id="year-w-2021" class="year-title">2021年</h3>
+<h3 id="year-w-2021" class="year-title">2021</h3>
 <div class="paper-card">
 <div class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -2477,34 +2452,29 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1515/nzsth-2021-0027</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">不死の人類学：身体的死亡後の存在可能性と「マインドアップロード」の無意味さについて</div>
+<div class="jp-title">Anthropology of immortality: Possibility of existence after physical death and the meaninglessness of "mind upload"</div>
 <div class="jp-summary">
-本稿では、身体的死後に主体が生き続けるか、あるいは少なくとも存在し続ける可能性が人類学的観点から否定できないことを示す。一方で、（仮に存在するとされる）心の「マインドアップロード」や全脳エミュレーションによって個人をハードディスクに転写することは、原理的理由から不可能であると論じる。両主張とも、人間の存在構造を反省的に検討することで根拠づけられる。
+In this paper, I show that the possibility that the subject continues to live, or at least continue to exist, after physical death cannot be denied from an anthropological perspective. On the other hand, he argues that it is impossible for principled reasons to transfer an individual onto a hard disk through "mind upload" or whole-brain emulation (if such a thing exists). Both claims can be grounded by a reflective examination of the structure of human existence.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>物理的死後の個体存在とマインドアップロードの可能性を人類学的視点で検討した論文。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A paper examining the existence of individuals after physical death and the possibility of mind uploading from an anthropological perspective. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存の哲学・科学的議論を人類学的枠組みで再解釈し、身体と精神の関係を文化的・社会的文脈で再評価した点。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>Existing philosophical and scientific discussions were reinterpreted using an anthropological framework, and the relationship between the body and mind was reevaluated in a cultural and social context. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>「マインドアップロード」＝全脳情報をデジタル媒体へ転写する技術が、実際には身体的・精神的連続性を保てないという根本的な問題点。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>``Mind upload'' = A fundamental problem in that technology that transfers whole brain information to digital media cannot actually maintain physical and mental continuity. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>具体的実験ではなく、人間存在の構造（身体・社会・文化）に関する理論的反省と哲学的議論を用いた概念分析。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Conceptual analysis using theoretical reflection and philosophical discussion regarding the structure of human existence (body, society, culture) rather than concrete experiments. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>人間の「存在」を定義する基準が多様であるため、結論は文化的・哲学的前提に依存する。実証的検証が難しい点と、技術進歩による将来の変化を完全に予測できない点。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>Since the criteria for defining human "existence" are diverse, conclusions depend on cultural and philosophical assumptions. One point is that empirical verification is difficult, and the other is that future changes due to technological progress cannot be completely predicted. </p>
 </div>
 </div>
 </div>
-<div class="raw-abstract"><b>Original Abstract:</b> Zusammenfassung
-Ich möchte in diesem Artikel aufzeigen, dass ein Leben oder zumindest eine Fortexistenz des Subjekts
-nach dem physischen Tod aus anthropologischer Sicht durchaus nicht ausgeschlossen, die Fortexistenz
-einer Person durch die (vermeintliche) Übertragung ihres Geistes auf eine Festplatte (mind-uploading
-bzw. whole brain emulation) dagegen aus prinzipiellen Gründen unmöglich ist. Beide Thesen lassen sich
-durch eine Reflexion auf die humane Verfassung begründen.</div><a
+<div class="raw-abstract"><b>Original Abstract:</b> In this article, I would like to show that a life, or at least a continued existence of the subject after physical death, is by no means excluded from an anthropological point of view, whereas the continued existence of a person through the purported transfer of his or her mind onto a hard drive (mind uploading or whole brain emulation) is impossible for fundamental reasons. Both theses can be justified through reflection on the human condition.</div><a
 href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85121280932&origin=inward"
 target="_blank" class="btn-action">View Full Access <svg xmlns="http://www.w3.org/2000/svg" width="14"
 height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -2547,25 +2517,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1017/S1473550421000148</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">人類は生存のために宇宙を植民地化すべきだが、胚子レベルの植民地化は適切ではない</div>
+<div class="jp-title">Humanity should colonize space for survival, but colonization at the embryonic level is not appropriate</div>
 <div class="jp-summary">
-胚子レベルの宇宙植民地化（ESC）という概念は、技術が実現し、数百万年にわたる外惑星への旅程中に予期せぬ合併症が生じない限り、人類種の存続を確実に保証する、非常に合理的で効果的な手段として興味深いものです。しかし、本稿ではその妥当性に対する複数の反論を提示します。第一の議論は、ホモ・サピエンス種を救うという高貴な目的自体は支持されるべきである一方、ESCが想定する「人類を救う」方法は、宇宙植民地化による人類保存という概念から逸脱している点を指摘しています。第二の議論は、倫理的な争点が存在し、この概念を実際に導入するには不適切である可能性が高いことを強調しています。少なくとも、これらの反論の中には、大人の生存者を宇宙ミッションに派遣することで人類を救うという概念には触れられていないものも含まれています。
+The concept of embryo-level space colonization (ESC) is interesting as a highly rational and effective means of ensuring the survival of the human species, unless the technology becomes a reality and unforeseen complications arise during the multi-million-year journey to the outer planets. However, this paper presents several objections to its validity. The first argument points out that while the noble purpose of saving the Homo sapiens species should be supported, the method envisioned by the ESC to ``save humanity'' deviates from the concept of preserving humanity through space colonization. The second argument highlights the existence of ethical issues and the likely inappropriateness of implementing this concept in practice. At the very least, some of these objections do not even mention the concept of saving humanity by sending adult survivors on space missions.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>胚子レベルの宇宙植民地化（ESC）は、胚を利用して遠距離移住を行い、人類種の存続を図る概念です。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>Embryo-level space colonization (ESC) is a concept that uses embryos to carry out long-distance migration to ensure the survival of the human species. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>従来の宇宙植民地化は成人を対象とするが、ESCは胚を用いる点で独自性があります。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>Conventional space colonization targets adults, but ESC is unique in that it uses embryos. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>長期宇宙航行中に胚を安全に保存・移動させるための生命維持システムと遺伝子安定化技術です。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>A life support system and gene stabilization technology for safely storing and transporting embryos during long-term space voyages. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>実験的に胚を低重力・高放射線環境で培養し、遺伝子変異や発達障害の有無を長期追跡調査します。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Embryos will be experimentally cultured in a low-gravity, high-radiation environment, and long-term follow-up will be conducted to check for genetic mutations and developmental disorders. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>倫理的懸念（胚の扱い、将来世代への責任）と技術的リスク（数百万年の航行中に予期せぬ合併症）が主要な限界です。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>Ethical concerns (handling of embryos, responsibility to future generations) and technical risks (unforeseen complications during millions of years of voyage) are the main limitations. </p>
 </div>
 </div>
 </div>
@@ -2621,25 +2591,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1093/oso/9780197563625.003.0002</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">「時を越えるエコー：メディアスピリチュアルと不死のテクノロジー」</div>
+<div class="jp-title">"Echoes across time: Media spirituality and immortality technology"</div>
 <div class="jp-summary">
-本章では、亡者の声を代弁するために用いられた人間―機械のアセンブリ（組み合わせ）の歴史を検証し、19世紀米国のスピリチュアリズム運動と現代トランヒューマニストのマインドアップロードを比較する。いずれの場合も、メディエーションされたコミュニケーションは、トランス状態にある「ミディアム」やアルゴリズムの集合体、亡者本人、そして観客という三者間の参加型パフォーマンスを通じて、死者に社会的な継続的声を与える。ミディアムシップは、観客が死者コミュニケーション技術の可能性を欲求しつつも問い直す劇場となる。章では、これらの技術が暗示する「自己」のモデルに注目し、カルトゥーシアン二元論の伝統に従い、精神的内容（ソフトウェア）と表現手段（ハードウェア）を分離する構造を指摘する。さらに、これらの技術は、人間が実施するミディアムシップから所有的個人主義を具現化したプロプライエタリソフトウェア製品へと移行する過程で、政治的な所有主義を不安定に構造化し、商品化することを論じる。
+This chapter examines the history of human-machine assemblies used to give voice to the dead, and compares the 19th-century American spiritualist movement with modern transhumanist mind-uploading. In both cases, mediated communication gives the deceased a continuing social voice through a participatory performance between the trance-like "medium", the algorithmic collective, the deceased himself, and the audience. Mediumship becomes a theater where audiences desire and question the possibilities of communication technology for the dead. The chapter focuses on the model of the "self" implied by these technologies, and points out the structure that separates mental content (software) and means of expression (hardware), following the tradition of Carthusian dualism. Furthermore, I argue that these technologies destabilize and commodify political propertyism in the process of moving from human-enforced mediumship to proprietary software products that embody possessive individualism.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>死者の声を媒介する人間―機械アセンブリとその歴史的進化。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>Human-machine assembly that mediates the voices of the dead and its historical evolution. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>19世紀スピリチュアリズムと現代マインドアップロードを直接比較し、技術的・政治的影響を同時に検討。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>Directly compares 19th century spiritualism and modern mind uploading, and simultaneously examines their technological and political influences. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>ソフトウェア（精神内容）とハードウェア（表現手段）の分離により、個人主義を商品化するメディアスピリチュアル構造。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>A media-spiritual structure that commodifies individualism by separating software (mental content) and hardware (means of expression). </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>歴史的文献と現代技術レビューを組み合わせ、参加型パフォーマンスの観客反応と政治的帰結を分析。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Analyzes audience reactions and political consequences of participatory performances by combining historical literature and contemporary technology reviews. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>所有主義の強化と個人情報プライバシーへの影響、そして死者の「自己」が実際に再構築されるかどうかという哲学的疑問。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>The strengthening of ownership, its impact on personal information privacy, and the philosophical question of whether the "self" of the dead can actually be reconstructed. </p>
 </div>
 </div>
 </div>
@@ -2697,25 +2667,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.4018/978-1-7998-4894-3.ch011</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">「道徳心理学と人工エージェント（第2部）：トランスヒューマンとの関係」</div>
+<div class="jp-title">"Moral Psychology and Artificial Agents (Part 2): Relationship with Transhumans"</div>
 <div class="jp-summary">
-第1部では、ロボットやAIに対して人間が動物・道具・植物のような自然で直感的な理解を持たないという新しい存在論カテゴリ―「人工エージェント」を導入した。ここでは、ロボットとトランスヒューマニズムに関する道徳心理学の研究成果を概観し、ロボット・AI、人間拡張技術と人間の認知が相互作用することで生じる多くの特異性を示す。ロボットは人間と似た扱いを受けるが完全に同一ではなく、これらの特異性は心的認知メカニズムで説明できる。一方、脳インプラントやマインドアップロードといったトランスヒューマン技術は非難される傾向があり、その根底には先天的な性的嫌悪感覚メカニズムが働いていると考察される。
+In the first part, we introduced a new ontological category, ``artificial agents,'' in which humans do not have the same natural and intuitive understanding of robots and AI as animals, tools, and plants. Here, we will provide an overview of research results in moral psychology regarding robots and transhumanism, and demonstrate the many peculiarities that arise from the interaction between robots/AI, human augmentation technology, and human cognition. Robots are treated similarly to humans, but not completely the same, and these idiosyncrasies can be explained by mental cognitive mechanisms. On the other hand, transhuman technologies such as brain implants and mind uploading tend to be criticized, and it is thought that at the root of this is an innate sexual aversion mechanism.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>人工エージェントとトランスヒューマン技術に対する人間の道徳的認知と感情を解明した研究。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>Research elucidating human moral cognition and emotions towards artificial agents and transhuman technology. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存のロボット倫理研究と異なり、認知メカニズムを中心に「人工エージェント」という新カテゴリを提案。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>Different from existing robot ethics research, we propose a new category called "artificial agents" focusing on cognitive mechanisms. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>心的認知（心の存在推定）と先天的性嫌悪感覚が、ロボット・トランスヒューマンに対する評価を左右する。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>Psychic cognition (presuming the existence of a mind) and innate sexual aversion affect evaluations of robots and transhumans. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>実験心理学・アンケート調査を組み合わせ、ロボット・AIと人間拡張技術に対する評価を測定。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>A combination of experimental psychology and questionnaire surveys to measure evaluations of robots, AI, and human augmentation technology. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>「人工エージェント」の定義が曖昧である点、文化差や個人差を十分に考慮できていない点が議論の余地。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>The definition of "artificial agent" is ambiguous, and cultural and individual differences cannot be fully taken into consideration. </p>
 </div>
 </div>
 </div>
@@ -2770,43 +2740,29 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.24029/lejana.2020.14.966</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">トランスヒューマニズムのアポリア：アルベルト・チマル『ラ・セグンダ・セルステ』とマルティン・カパロス『シンフィン』</div>
+<div class="jp-title">Aporia of transhumanism: Alberto Chimal's "La Segunda Celste" and Martin Caparros' "Sinfin"</div>
 <div class="jp-summary">
-本稿では、テクノロジーを通じて不死を実現するという共通テーマを持つ二作品―メキシコ人作家アルベルト・チマルの短編小説『ラ・セグンダ・セルステ』（収録作品「マノス・デ・リュメ」2018）とアルゼンチン人作家マルティン・カパロスのクロニクル風小説『シンフィン』（2020）―を分析する。両作品は、マシュー・ビューモントが定義した「ユートピア」を、未来的な視点から歴史化された現在を眺めるものとして描き、実際に未来が暗黒であるよりも、現在の人間観の矛盾を映し出している。本稿はまた、フレディック・ジェイムソンが指摘した「ユートピアとディストピアを区別できない」というパラドックスが、両作品においてどのように表れるかを示す。最後に、トランスヒューマニズムの主要目標である「アップロード（心の転送）」が、テクノロジーにアクセスする主体が人間的弱点を克服できないという悲観的見方から懐疑的に描かれ、結果として「ポストヒューマン」への転換を失敗に終わらせるという点を強調する。
+This article analyzes two works that share the common theme of achieving immortality through technology: Mexican writer Alberto Chimal's short story ``La Segunda Celste'' (included in ``Manos de Lumé,'' 2018) and Argentine writer Martín Caparros' chronicle-like novel ``Sinfin'' (2020). Both works depict ``utopia,'' as defined by Matthew Beaumont, as looking at the historicized present from a futuristic perspective, and rather than the actual darkness of the future, they reflect the contradictions in our current view of humanity. This paper also shows how the paradox of ``the inability to distinguish between utopia and dystopia'' that Fredick Jameson pointed out appears in both works. Finally, it is emphasized that the main goal of transhumanism, ``uploading'', is portrayed with skepticism, based on the pessimistic view that subjects who access technology cannot overcome their human weaknesses, resulting in a failure in the transition to ``posthuman''.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>テクノロジーで不死を目指すユートピア的テーマを扱った二作品の批評分析。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A critical analysis of two works that deal with the utopian theme of aiming for immortality through technology. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存のトランスヒューマニズム研究が未来を楽観的に描く一方、本稿は現在の人間観の矛盾を批判的に照らし出す点が差別化。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>While existing research on transhumanism paints an optimistic picture of the future, this paper is different in that it critically illuminates the contradictions in the current view of humanity. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>「マインドアップロード（心転送）」を中心に、未来的視点からの歴史化と人間性への懐疑が鍵。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>The key is historicization from a futuristic perspective and skepticism towards humanity, centering on ``mind upload''. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>文学作品のテキスト分析と、ビューモント・ジェイムソンの理論を用いた概念的枠組みで比較検討。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>A comparative study using text analysis of literary works and a conceptual framework using Beaumont Jameson's theory. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>ユートピアとディストピアの境界が曖昧である点、そしてテクノロジーへの人間的適応の限界を示すが、実際の科学的実現性には触れていない。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>It shows the blurring of the boundaries between utopia and dystopia and the limits of human adaptation to technology, but does not touch on actual scientific feasibility. </p>
 </div>
 </div>
 </div>
-<div class="raw-abstract"><b>Original Abstract:</b> Nos proponemos en este artículo analizar dos obras
-recientes que tienen como tema común la utopía de la inmortalidad alcanzada a través de los medios
-tecnólogicos, esto es, la mind uploading, la “subida”: el cuento del mexicano Alberto Chimal “La segunda
-Celeste”, incluido en Manos de lumbre (2018), y la novela escrita en forma de crónica Sinfín (2020) del
-argentino Martín Caparrós. Nuestro objetivo es demostrar que las dos obras tratan el tema de la “subida”
-como una utopía en el sentido dado a este término por Matthew Beaumont, es decir, una mirada sobre un
-presente historizado desde la perspectiva de un futuro fantástico, y reflejan más bien las
-contradicciones de la presente visión sobre lo humano que una cala real en un futuro implacablemente
-opaco. Al mismo tiempo, mostraremos que en las dos obras se transparenta la paradoja observada por
-Fredic Jameson respecto a la imposibilidad de distinguir entre la utopía y la distopía en el momento en
-que se trata de indagar el futuro. Por fin, intentaremos poner de relieve que, en los dos textos, la
-utópica “subida”, que es uno de los objetivos fundamentales de la agenda transhumanista, se contempla
-con el escepticismo derivado de una visión pesimista sobre un sujeto que accede a la tecnología sin ser
-capaz de superar sus debilidades humanas, por lo cual, fracasa en su intento de convertirse en
-“post-humano”.</div><a
+<div class="raw-abstract"><b>Original Abstract:</b> In this article, we analyze two recent works that share a common theme: the utopia of immortality achieved through technological means, that is, mind uploading or 'uploading': the short story 'La segunda Celeste' by the Mexican writer Alberto Chimal, included in Manos de lumbre (2018), and the chronicle-like novel Sinfín (2020) by the Argentine writer Martín Caparrós. Our aim is to show that both works treat 'uploading' as a utopia in Matthew Beaumont's sense of the term, namely, a view of the historicized present from the perspective of a fantastic future, and that they reflect the contradictions of the present vision of the human more than they provide a real glimpse into an implacably opaque future. At the same time, we show how both works make visible the paradox noted by Fredric Jameson: the impossibility of distinguishing between utopia and dystopia when investigating the future. Finally, we highlight that in both texts the utopian 'upload,' one of the central goals of the transhumanist agenda, is viewed skeptically, deriving from a pessimistic vision of a subject who gains access to technology without being able to overcome human weakness and therefore fails in the attempt to become 'post-human'.</div><a
 href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85139756316&origin=inward"
 target="_blank" class="btn-action">View Full Access <svg xmlns="http://www.w3.org/2000/svg" width="14"
 height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -2849,25 +2805,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.12775/SETF.2021.007</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">トランスヒューマニズムは人間の再定義へ向かうのか、それともユートピアを目指すのか？</div>
+<div class="jp-title">Does transhumanism aim to redefine humanity or toward utopia? </div>
 <div class="jp-summary">
-トランスヒューマニズムは哲学者に多くの知的課題を投げかけ、同時にその理念を実現可能な技術的解決策を模索する科学者も巻き込むことで、哲学的思考に大きな影響を与えている。本稿では、すべてのトランスヒューマニズム的願望が実現できるわけではないことを示す。第一の理由は、トランスヒューマニズムが人間理解を物質的次元に限定し（神学的観点からは）自然主義パラダイム内では理解できるものの、人間という存在の全体的複雑性を捉えきれないため、すべての前提を実践に移せない点である。第二の理由は、ポストヒューマン化を可能にする最新技術がすべての人に普及しなければならず、実際には不可能であること。そうなると「普通の人」と「ポストヒューマン」という二極化が生じ、トランスヒューマニズムが避けたい対立を招く恐れがある。最後に、身体と心の問題は本質的にエマージェンティズム（自然主義パラダイム）に限定されるが、魂という概念なしには個人の存在・アイデンティティ・意識を理解できず、これはマインドアップロードにとって不可欠である。
+Transhumanism has had a major impact on philosophical thinking, posing many intellectual challenges to philosophers and also involving scientists in their search for technological solutions that can make their ideas a reality. This paper shows that not all transhumanist aspirations can be realized. The first reason is that transhumanism limits human understanding to the material dimension, and although it can be understood within a naturalistic paradigm (from a theological point of view), it cannot capture the full complexity of human existence, and therefore cannot translate all of its premises into practice. The second reason is that the latest technology to make posthumanization possible would have to be available to everyone, which is actually impossible. This could lead to a polarization between ``ordinary people'' and ``posthumans,'' leading to the conflict that transhumanism seeks to avoid. Finally, although the issue of body and mind is essentially limited to emergentism (naturalistic paradigm), the existence, identity, and consciousness of an individual cannot be understood without the concept of soul, which is essential for mind uploading.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>トランスヒューマニズムの実現可能性と限界を哲学的・技術的観点から検証した研究。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>Research examining the feasibility and limits of transhumanism from philosophical and technological perspectives. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>物質的理解の限界と技術普及による社会分断を具体化し、魂概念の不可欠性に焦点を当てた点。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>It embodies the limits of material understanding and social divisions due to the spread of technology, and focuses on the indispensability of the concept of soul. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>ポストヒューマン化を実現するために必要な最先端技術の全員普及と、マインドアップロードを支える魂概念。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>The soul concept that supports mind upload and the dissemination of cutting-edge technology necessary to realize post-humanization. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>哲学的論考と技術的実装シナリオを組み合わせ、社会分断のシミュレーションと魂概念に関する理論的検証を行う。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>By combining philosophical discussions and technical implementation scenarios, we will simulate social division and theoretically verify the concept of the soul. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>物質的限定の哲学的批判、技術普及の実現性と社会的不平等、魂概念の哲学的正当化が未解決である点。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>Philosophical criticism of material limitations, the feasibility of technological spread and social inequality, and the unresolved philosophical justification of the concept of soul. </p>
 </div>
 </div>
 </div>
@@ -2928,25 +2884,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1017/9781108921572</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">古代地中海思想におけるポストヒューマン変容：天使と悪魔への成長</div>
+<div class="jp-title">Posthuman transformation in ancient Mediterranean thought: Growth into angels and demons</div>
 <div class="jp-summary">
-人間は単なる欲望ではなく、自己を超えてより良くなりたいという深いニーズを抱いている。現代では、遺伝子改変・義肢・インプラント・薬物療法、さらには心のアップロードといったバイオテクニカル介入が「拡張」の主流である。本書のテーマは、古代に存在した身体的アップグレードと自己実現の倫理的実践を組み合わせた「拡張」の一形態である。これを『天使化（angelification）』と呼び、人々が天使になる過程を指す。対照的に『悪魔化（daimonification）』は、ダイモンになる過程を示す。ヘシオドやエンペドクレスからプラトン・オリゲネス、プルタニウス、そしてキリスト教のグノーシス派に至るまで、時代を横断しながら本書はこれら二つのポストヒューマン変容がどのように関連し、また現代のトランスヒューマニズム的拡張観をどのように補強・修正するかを探求する。特に、現代の拡張はしばしば道徳的向上を十分に説明できない点を、古代の倫理的実践がどのように示唆しているかを論じる。
+Human beings have not just a desire, but a deep need to transcend themselves and become better. In modern times, biotechnical interventions such as genetic modification, prosthetic limbs, implants, drug therapy, and even mind uploading are the mainstream of "augmentation." The theme of this book is a form of ``expansion'' that combines ancient physical upgrading with ethical practices of self-actualization. This is called ``angelification,'' and refers to the process by which people become angels. In contrast, ``daimonification'' refers to the process of becoming a daemon. Traversing the ages, from Hesiod and Empedocles to Plato Origen, Plutani, and the Christian Gnostics, this book explores how these two posthuman transformations are related and how they reinforce and modify contemporary transhumanist views of expansion. In particular, we discuss how ancient ethical practices suggest that modern extensions often fail to fully account for moral improvement.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>古代地中海思想における身体的拡張と自己実現の倫理を結びつけた「天使化」と「悪魔化」の二重構造。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>The dual structure of "angelization" and "demonization" that connects the ethics of physical expansion and self-actualization in ancient Mediterranean thought. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>現代のバイオテクノロジー中心の拡張論に対し、古代哲学・宗教的文脈で道徳的向上を組み込んだ点。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>In contrast to modern biotechnology-centered expansionism, it incorporates moral improvement in ancient philosophical and religious contexts. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>遺伝子改変や義肢といった物理的介入ではなく、倫理的実践・精神修養を通じた身体と魂の統合。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>Unification of body and soul through ethical practices and spiritual training, rather than through physical intervention such as genetic modification or prosthetic limbs. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>古典テキストの比較研究と、現代トランスヒューマニズム理論との概念的対比による批判的分析。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Critical analysis through comparative study of classical texts and conceptual contrast with modern transhumanist theory. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>古代の概念を現代に適用する際の文化的・歴史的差異、そして「天使化」「悪魔化」の具体的実践例が乏しい点。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>Cultural and historical differences when applying ancient concepts to modern times, and the lack of concrete practical examples of "angelization" and "demonization." </p>
 </div>
 </div>
 </div>
@@ -3004,42 +2960,30 @@ style="color:inherit">10.17159/2224-7912/2020/V60N4-2A4</a></div>
 </div>
 <div class="translation-container">
 <div class="jp-title">
-ネル・ブロムカップ監督のサイエンスフィクション三部作におけるユートピアと「他者」となること：『ディストリクト9』（2009年）、『エリジウム』（2013年）および『チャッピー』（2015年）
+Utopia and Othering in Nell Blomkapp's science fiction trilogy: District 9 (2009), Elysium (2013) and Chappie (2015)
 </div>
 <div class="jp-summary">
-本稿では、ユートピアの概念と/またはデリダ・レヴィン（Deleuze）の「生成」および/または変容の概念を結びつける方法について検討する。ユートピア（あるいはその代替的な問題化）がしばしばサイエンスフィクションジャンルでテーマ化されることを踏まえ、研究の対象としてネル・ブロムカップ監督のサイエンスフィクション三部作を取り上げる。物語レベルでは、『ディストリクト9』、『エリジウム』、そして『チャッピー』の各作品において生成または変容の例が存在し、これらはそれぞれユートピア的視座から解釈できる。『ディストリクト9』では主人公が変容するものの、彼が待ち望むユートピアは過去を回顧し静的に再構築される。『エリジウム』では主人公マックスがほとんど変わらないものの、彼の犠牲によって一見したユートピアを実現するが、結局は同時に静的なユートピア観を露呈し、世界がディストピアの種子を内在していることを示す。『チャッピー』は、デリズの「生成」の概念とユートピアを結びつける唯一の作品として浮上し、動的なユートピアを提示する。
+This article examines ways to link the concept of utopia and/or Derrida Levin's (Deleuze) concepts of 'becoming' and/or transformation. Given that utopia (or its alternative problematization) is often a theme in the science fiction genre, I will focus on director Nell Blomkapp's science fiction trilogy as the subject of my research. At the narrative level, there are examples of generation or transformation in District 9, Elysium, and Chappie, each of which can be interpreted from a utopian perspective. In District 9, the protagonist undergoes a transformation, but the utopia he longs for is statically rebuilt by looking back on the past. In Elysium, the main character, Max, remains almost the same, but through his sacrifices he achieves a seeming utopia, but in the end he also reveals a static utopian view, showing that the world contains the seeds of dystopia. Chappie emerges as the only work that connects Deliz's concept of ``becoming'' with utopia, presenting a dynamic utopia.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>サイエンスフィクション三部作を通じて、ユートピアと生成・変容の関係を理論的に検証する研究。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>A study that theoretically examines the relationship between utopia and generation/transformation through a science fiction trilogy. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>ユートピアを単なる理想像として扱うのではなく、デリズ的生成論と結びつけて動的視座から分析する点が新規。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>Rather than treating utopia as a mere ideal image, it is novel in that it is analyzed from a dynamic perspective by linking it to Delizian generative theory. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>作品内での「生成」や「変容」の具体的描写をテキスト・映像分析で抽出し、ユートピア概念との結びつきを論理的に構築する。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>Extract specific depictions of "generation" and "transformation" within the work through text and video analysis, and logically construct connections with the concept of utopia. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>各作品の主要人物・プロットをケーススタディとして採用し、生成／変容とユートピア的要素の相関を定性的に評価。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Using the main characters and plots of each work as case studies, we qualitatively evaluate the correlation between generation/transformation and utopian elements. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>デリズ的枠組みの適用範囲が限定的であり、他ジャンルや実世界との比較検討が不足している点。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>The scope of application of Deliz's framework is limited, and there is a lack of comparative studies with other genres and the real world. </p>
 </div>
 </div>
 </div>
-<div class="raw-abstract"><b>Original Abstract:</b> Hierdie artikel stel ondersoek in na die wyses waarop
-die konsep van utopie en/of die utopiese met &#x27;n Deleuziaanse konsep van wording en/of anderswording
-in verband gebring kan word. Aangesien &#x27;n tematisering van utopie, of alternatiewelik &#x27;n
-problematisering van hierdie begrip, dikwels in die wetenskapsfiksie-genre vergestalt word, word vir die
-doeleindes van dié ondersoek die wetenskapsfiksie-trilogie van regisseur Neill Blomkamp bespreek. Op
-verhaalvlak is daar in District 9, Elysium en Chappie telkens voorbeelde van wording of anderswording,
-wat elk in terme van &#x27;n utopiese horison geïnterpreteer kan word. Hoewel die protagonis van
-District 9 anders word, is die utopie waarop Wikus wag &#x27;n terugskouende en statiese restourasie van
-die verlede. En hoewel Max in Elysium betreklik min verander, realiseer hy deur middel van sy
-lewensoffer &#x27;n oënskynlike utopie vir almal, wat by nabetragting egter insgelyks &#x27;n statiese
-opvatting van utopie verraai - &#x27;n wêreld wat die distopiese saad reeds in sy kern dra. Chappie skyn
-die enigste film van die trilogie te wees om Deleuze se idee van wording met utopie as die dinamiese
-utopiese in verband te bring.</div><a
+<div class="raw-abstract"><b>Original Abstract:</b> This article investigates the ways in which the concept of utopia and/or the utopian can be related to a Deleuzian concept of becoming and/or becoming-other. Because thematizing utopia, or alternatively problematizing the concept, is often embodied in the science-fiction genre, this study discusses director Neill Blomkamp's science-fiction trilogy for that purpose. At the level of narrative, District 9, Elysium, and Chappie each offer examples of becoming or becoming-other that can be interpreted in terms of a utopian horizon. Although the protagonist of District 9 changes, the utopia for which Wikus waits is a retrospective and static restoration of the past. And although Max changes relatively little in Elysium, through his self-sacrifice he realizes an apparent utopia for everyone, which upon reflection likewise betrays a static conception of utopia, a world that already carries the seed of dystopia in its core. Chappie appears to be the only film in the trilogy that relates Deleuze's idea of becoming to utopia as the dynamic utopian.</div><a
 href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85109433534&origin=inward"
 target="_blank" class="btn-action">View Full Access <svg xmlns="http://www.w3.org/2000/svg" width="14"
 height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -3048,7 +2992,7 @@ stroke-linecap="round" stroke-linejoin="round" class="icon">
 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
 </svg></a>
 </div>
-<h3 id="year-w-2020" class="year-title">2020年</h3>
+<h3 id="year-w-2020" class="year-title">2020</h3>
 <div class="paper-card">
 <div class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -3083,37 +3027,30 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.3989/ISEGORIA.2020.063.02</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">トランスヒューマニズムの形態的自由からポストヒューマン身体性へ：共通点と相違点</div>
+<div class="jp-title">From the formal freedom of transhumanism to posthuman embodiment: commonalities and differences</div>
 <div class="jp-summary">
-トランスヒューマニズムとポストヒューマン哲学は、技術進歩に伴う人間の身体性に特別な関心を寄せている。本稿ではまず、両運動がヒューマニズムの遺産からどのように大きく逸脱しているかを指摘する。次に、モア・サンドバーグ・ボストロムらによる「形態的自由（morphological
-freedom）」の概念を論じ、身体改造におけるサイバネティック・インプラントの代表的事例を紹介する。最後に、アイデンティティ・ボディリティーと「心の投影（mind‑casting）」に関する両派の対立点を問題化し、身体性と認知の再構築に伴う倫理的・哲学的課題を提示する。
+Transhumanism and posthuman philosophy have a special interest in human physicality in the face of technological progress. This article begins by pointing out how both movements depart significantly from the legacy of humanism. Next, Moir, Sandberg, Bostrom et al.
+We will discuss the concept of "freedom" and introduce representative examples of cybernetic implants in body modification. Finally, I will problematize the conflicting points between the two schools of thought regarding identity-bodiness and "mind-casting," and present the ethical and philosophical issues associated with the restructuring of physicality and cognition.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>トランスヒューマニズムとポストヒューマン哲学の身体性に関する概念的対立を比較し、形態的自由と身体改造の実例を検証する。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>Compare the conceptual conflicts regarding physicality between transhumanism and posthuman philosophy, and examine examples of morphological freedom and body modification. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存の研究が主に技術的側面を扱う中、本稿はヒューマニズムの遺産との関係性と哲学的対立点を中心に議論する。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>While existing studies mainly deal with technical aspects, this paper focuses on the relationship with the heritage of humanism and philosophical conflicts. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>サイバネティック・インプラントを通じた身体改造が「形態的自由」を実現する鍵であり、身体と機械の境界を曖昧にする点が重要。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>Body modification through cybernetic implants is the key to achieving ``morphological freedom,'' and it is important to blur the boundaries between body and machine. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>代表的な身体改造事例（義肢・脳‑機械インタフェース等）を文献レビューし、哲学的概念と実践のギャップを分析する。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>We will conduct a literature review of typical body modification cases (prosthetic limbs, brain-machine interfaces, etc.) and analyze the gap between philosophical concepts and practice. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>アイデンティティと身体性の再定義に伴う倫理的懸念、そして「心の投影」に対する両派の見解差が議論の核心であり、実証的検証はまだ限定的。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>The core of the debate is the ethical concerns associated with the redefinition of identity and physicality, as well as the difference in opinion between the two camps regarding ``mental projection,'' and empirical verification is still limited. </p>
 </div>
 </div>
 </div>
-<div class="raw-abstract"><b>Original Abstract:</b> Tanto el transhumanismo como el posthumanismo filosófico
-han prestado una atención especial a la corporalidad humana en relación al avance tecnológico. En el
-presente artículo, se comienza señalando cómo ambos movimientos difieren significativamente respecto a
-la herencia del humanismo. Posteriormente, se aborda la noción transhumanista de la ‘libertad
-morfológica’ de la mano de More, Sandberg y Bostrom. A continuación, se presentan casos paradigmáticos
-de modificaciones corporales mediante implantes cibernéticos. En último lugar, se problematizan las
-cuestiones de la identidad, la corporalidad y el desencuentro entre ambas corrientes respecto al
-‘volcado de la mente’.</div><a
+<div class="raw-abstract"><b>Original Abstract:</b> Both transhumanism and philosophical posthumanism have paid special attention to human corporeality in relation to technological advance. This article begins by pointing out how significantly the two movements differ in relation to the legacy of humanism. It then addresses the transhumanist notion of 'morphological freedom' through More, Sandberg, and Bostrom. Next, it presents paradigmatic cases of bodily modification through cybernetic implants. Finally, it problematizes questions of identity, corporeality, and the disagreement between the two currents regarding 'mind uploading'.</div><a
 href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85096461027&origin=inward"
 target="_blank" class="btn-action">View Full Access <svg xmlns="http://www.w3.org/2000/svg" width="14"
 height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -3156,25 +3093,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.4018/978-1-7998-3499-1.ch017</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">「マインドアップロードと不死を伴わないトランスヒューマニズム」</div>
+<div class="jp-title">"Transhumanism without mind uploading and immortality"</div>
 <div class="jp-summary">
-イーロン・マスクは頻繁に「シミュレーション論」を宣伝し、私たちがコンピュータ・シミュレーションの中に生きている可能性を非常に高いと主張しています。しかし、この議論は合理的に理解できる形で再構築することが可能です。とはいえ、それが必ずしも説得力のある主張であるという意味ではありません。シミュレーション論は、人間をハードドライブにアップロードできるという人類学的前提（すなわち、人間は身体をハードウェアとするソフトウェアのように存在しているという見方）に立脚しています。この理解は、近い将来不死が実現すると主張する多くのトランスヒューマニストによって採用されています。本稿では、シミュレーション論の根底にある思考過程を説明しつつ、私たちがコンピュータ・シミュレーションに生きている可能性も、人格をコンピュータへアップロードできる可能性も高くないこと、そしてたとえそれが可能であっても不死を実現できるわけではないことを同時に論じます。
+Elon Musk frequently promotes "simulation theory" and claims that it is very likely that we are living in a computer simulation. However, this argument can be reframed in a way that makes sense. However, that doesn't necessarily mean it's a convincing argument. Simulation theory is based on the anthropological premise that humans can be uploaded onto hard drives (that is, humans exist like software with their bodies as hardware). This understanding is adopted by many transhumanists who claim that immortality will be achieved in the near future. In this article, I will explain the thought process underlying simulation theory, while also arguing that it is unlikely that we are living in a computer simulation or that we can upload our personalities to a computer, and that even if it were possible, we would not be able to achieve immortality.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>シミュレーション論とマインドアップロードの前提を批判的に検討したトランスヒューマニズム研究。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>Transhumanism research that critically examines the premises of simulation theory and mind uploading. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存のシミュレーション論を合理的に再構築し、アップロードと不死の可能性を否定する点で差別化。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>It differentiates itself by rationally reconstructing the existing simulation theory and denying the possibility of uploading and immortality. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>人間をソフトウェアとして扱う前提（身体＝ハードウェア）に対する根本的疑問。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>A fundamental question about the premise of treating humans as software (body = hardware). </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>論理的再構築と哲学的議論を通じて、アップロード・不死の実現可能性を検証。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Verifying the feasibility of uploading and immortality through logical reconstruction and philosophical discussion. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>シミュレーションの可能性とアップロード技術の実現性に関する根拠不足、そして不死への道が閉ざされる点。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>There is a lack of evidence regarding the possibility of simulation and the feasibility of upload technology, and the road to immortality is closed. </p>
 </div>
 </div>
 </div>
@@ -3231,36 +3168,29 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1590/S2178-14942020000100008</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">世界の終わり前に不死であること：身体、サイバーユートピアと超越</div>
+<div class="jp-title">Being immortal before the end of the world: the body, cyberutopia and transcendence</div>
 <div class="jp-summary">
-本研究は、近年のサイエンスフィクションに登場する技術的不死（テクノロジーによる不朽）に関する現在の論説を分析することを目的としています。これらのフィクションを出発点として、マインドアップロード（意識転送）の可能性がもたらす哲学的含意、特に身体を捨て超越するという観点から議論します。最後に、気候変動や資本主義的生活様式の持続不可能性といった現在抱える未来危機の中で、不死というユートピア的夢がどこに位置づけられるかを問い直します。
+This study aims to analyze the current discourse on technological immortality (immortality through technology) that appears in recent science fiction. Using these fictions as a starting point, I will discuss the philosophical implications of the possibility of mind uploading, especially from the perspective of abandoning and transcending the body. Finally, we ask where the utopian dream of immortality fits in with the current crises of the future, such as climate change and the unsustainability of capitalist lifestyles.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>近年のサイエンスフィクションに描かれる技術的不死とマインドアップロードを哲学的視点で検討する研究です。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>This is a study that examines technological immortality and mind uploading depicted in recent science fiction from a philosophical perspective. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存の不死論やマインドアップロード研究と異なり、身体放棄・超越の概念を中心に、現実世界の気候危機と結びつけて議論します。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>Different from existing immortality theory and mind upload research, we will focus on the concepts of abandonment and transcendence of the body, and will discuss this in connection with the real-world climate crisis. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>「マインドアップロード（意識転送）」という技術が、身体を超越し不死を実現する鍵とされます。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>A technology called "mind upload" is considered the key to transcending the body and achieving immortality. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>フィクション作品のテキスト分析と哲学的議論を組み合わせ、理論的検証を行います。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>We will combine text analysis of fiction works with philosophical discussion to perform theoretical verification. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>不死のユートピアが実際に持続可能か、社会的・倫理的影響は何かという点で議論が分かれ、実証データの不足が限界となります。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>Whether immortality utopias are actually sustainable and what their social and ethical implications will be is a matter of debate, limited by the lack of empirical data. </p>
 </div>
 </div>
 </div>
-<div class="raw-abstract"><b>Original Abstract:</b> RESUMO Este trabalho tem como objetivo analisar os
-atuais discursos em torno do problema da imortalidade tecnológica presentes em algumas ficções
-científicas recentes. Essas ficções serão tomadas como ponto de partida para uma discussão sobre as
-implicações filosóficas decorrentes da possibilidade do mind uploading, principalmente no que se refere
-a uma ideia de transcendência e abandono do corpo. Por fim, questiona-se qual o lugar dos sonhos
-utópicos de imortalidade em meio à crise de futuro que vivemos atualmente, relacionada principalmente
-com a discussão em torno das mudanças climáticas e da insustentabilidade dos atuais modos de vida
-capitalistas.</div><a
+<div class="raw-abstract"><b>Original Abstract:</b> This article aims to analyze current discourses surrounding the problem of technological immortality in some recent science-fiction works. These fictions are taken as a starting point for a discussion of the philosophical implications arising from the possibility of mind uploading, especially with regard to ideas of transcendence and abandonment of the body. Finally, it asks what place utopian dreams of immortality occupy amid the crisis of the future we are currently living through, particularly as it relates to climate change and the unsustainability of contemporary capitalist ways of life.</div><a
 href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85081934257&origin=inward"
 target="_blank" class="btn-action">View Full Access <svg xmlns="http://www.w3.org/2000/svg" width="14"
 height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -3303,27 +3233,27 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.2174/1874944502013010062</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">高度な人工・生物的強化の社会的および倫理的影響</div>
+<div class="jp-title">Social and ethical implications of advanced artificial and biological enhancement</div>
 <div class="jp-summary">
-背景：現代人は寿命延長を目指す一方で、効果的なヒト強化アプリケーションを実現するための高度なバイオエンジニアリングツールが必要不可欠である。本研究は、量子環境下に計画されたホモ・サピエンスの技術的未来を論じ、遺伝子改良やヒトクローン作製などの先進的物理介入が現代人の解剖学に不可欠であると主張する。ゲノム編集、マインドアップロード、新臓器成長のための組織工学といった新語彙や最新プロジェクトを議論の対象とする。
-方法：本稿では、14日間ルール、2045イニシアティブプロジェクト、CRISPR技術など複数の先進バイオテクノロジー手法を提示し、それらがもたらす社会的・倫理的影響について検討する。
-結果：人口の指数関数的加齢により、個別遺伝子治療を対象とした次世代薬剤や革新的医薬品への需要が急増し、これに伴いポスト・ホモ・サピエンス時代の到来を見据えた議論が倫理的・社会的に争点化する。
-結論：次世代の倫理を明確化し、学際的議論を開始する必要がある。デジタル不死性の可能性など、議論を呼ぶテーマに対して最も効率的な実践を採用するため、さまざまな視点を記録・評価すべきである。</div>
+Background: As modern humans seek to extend lifespans, advanced bioengineering tools are essential to enable effective human enhancement applications. This study discusses the technological future of Homo sapiens planned in a quantum environment and argues that advanced physical interventions such as genetic improvement and human cloning are essential to modern human anatomy. New vocabulary and latest projects such as genome editing, mind uploading, and tissue engineering for the growth of new organs will be discussed.
+Methodology: In this article, we present several advanced biotechnology methods, including the 14-day rule, the 2045 Initiative project, and CRISPR technology, and discuss their social and ethical implications.
+Consequences: Exponential aging of the population will rapidly increase the demand for next-generation and innovative medicines for individualized gene therapy, and this will raise ethical and social issues in the debate surrounding the arrival of the post-Homo sapiens era.
+Conclusion: We need to clarify the ethics of the next generation and start interdisciplinary discussions. Diverse perspectives should be recorded and evaluated to adopt the most effective practices on controversial topics, such as the possibility of digital immortality. </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>高度な人工・生物的強化技術の社会的・倫理的影響を検討する研究。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>Research examining the social and ethical impacts of advanced artificial and biological enhancement technologies. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>量子環境下での人類未来を想定し、ゲノム編集やマインドアップロードなど最新プロジェクトを統合的に議論。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>Envisioning the future of humanity in a quantum environment, we will comprehensively discuss the latest projects such as genome editing and mind uploading. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>CRISPRや組織工学を用いた遺伝子改良・臓器成長の実現と、それに伴う倫理的課題。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>Realization of genetic improvement and organ growth using CRISPR and tissue engineering, and the associated ethical issues. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>14日間ルールや2045イニシアティブ等の具体的手法を事例として提示し、社会・倫理影響を分析。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Specific methods such as the 14-day rule and the 2045 Initiative are presented as examples, and their social and ethical impacts are analyzed. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>デジタル不死性や個別遺伝子治療の社会的受容、倫理規範の整備不足が主な限界点。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>The main limitations are social acceptance of digital immortality and personalized gene therapy, and lack of ethical standards. </p>
 </div>
 </div>
 </div>
@@ -3351,7 +3281,7 @@ stroke-linecap="round" stroke-linejoin="round" class="icon">
 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
 </svg></a>
 </div>
-<h3 id="year-w-2019" class="year-title">2019年</h3>
+<h3 id="year-w-2019" class="year-title">2019</h3>
 <div class="paper-card">
 <div class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -3386,25 +3316,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.35765/forphil.2019.2402.15</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">「ネードの捕らえ？―トランスヒューマニズム終末論とキリスト教の再臨（パラウジア）の比較」</div>
+<div class="jp-title">"Capture of Nedo? - Comparison of transhumanist eschatology and Christian second coming (parausia)"</div>
 <div class="jp-summary">
-トランスヒューマニズムは、近年台頭した「未来のイデオロギー」の一つであり、人類を本世紀にわたって向上させることを目的としたプログラムは、脳のエミュレーションによって不死を実現することを究極目標としています。したがって、トランスヒューマニズムはその信者に対し、文明の究極的未来を示す明確な終末論（エスチャロジー）を提示し、フランク・ティプラーのオメガポイント理論のように宇宙全体の究極未来と重なるケースもあります。本稿は、トランスヒューマニズムの終末論とキリスト教の終末論、特に「具現化派」的再臨観との比較と対立点を分析することを目的としています。まず、近代科学・宇宙論の新理論が伝統的キリスト教終末論に与える問題点を概説し、これが「具現化派」と「終末論者」の議論を呼び起こす経緯を示します。続いて、トランスヒューマニズムが提唱する心のアップロード（人間脳のエミュレーション）と、我々が生きる現実を完璧に再現するシミュレーションの可能性について検討します。最後の章では、これら理論が提起する問題をキリスト教神学的観点から分析し、身体と心のエミュレーションによるトランスヒューマン種族の構想を検討します。結論として、再臨（パラウジア）の具現化派的観点に沿ったトランスヒューマニズム終末論は受け入れられないと結びつけています。
+Transhumanism is one of the "future ideologies" that have emerged in recent years, a program aimed at improving humanity over the next century, with the ultimate goal of achieving immortality through brain emulation. Therefore, transhumanism presents its believers with a clear eschatology that indicates the ultimate future of civilization, and in some cases, such as Frank Tipler's Omega Point Theory, overlaps with the ultimate future of the universe as a whole. The purpose of this article is to compare and analyze the points of contrast between transhumanist eschatology and Christian eschatology, especially the "reificationist" view of the Second Coming. First, I will outline the problems that new theories of modern science and cosmology pose to traditional Christian eschatology, and show how this has sparked a debate between ``realizationists'' and ``eschatologists.'' Next, we will discuss mind uploading (emulation of the human brain) proposed by transhumanism and the possibility of simulations that perfectly reproduce the reality in which we live. The final chapter analyzes the problems raised by these theories from a Christian theological perspective and considers the idea of ​​a transhuman race through emulation of body and mind. In conclusion, we conclude that transhumanist eschatology, which is in line with the embodimentist perspective of the second coming (parausia), is unacceptable.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>トランスヒューマニズムの終末論とキリスト教再臨観を比較し、両者の対立点を論じる研究。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A study that compares the eschatology of transhumanism and the Christian view of the Second Coming, and discusses the points of conflict between the two. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>科学・宇宙論の新理論がキリスト教終末論に与える影響を踏まえ、具現化派と終末論者の議論に焦点を当てた点。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>Based on the influence of new theories in science and cosmology on Christian eschatology, the focus is on the debate between materialists and eschatists. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>人間脳エミュレーションと完全シミュレーションによる心のアップロード技術。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>Mind uploading technology based on human brain emulation and complete simulation. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>文献レビューと神学的枠組みでの理論比較・批判的分析。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Literature review and theoretical comparison/critical analysis within a theological framework. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>具現化派的再臨観に合致しないトランスヒューマン終末論の非受容、そして倫理・神学的限界に関する議論。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>Discussion regarding the non-acceptance of transhuman eschatology, which does not match the embodimentist view of the Second Coming, and its ethical and theological limitations. </p>
 </div>
 </div>
 </div>
@@ -3471,27 +3401,27 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1111/zygo.12481</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">「マインドアップロードと身体化認知：神学的応答 ―
-ロバート・M・ゲラシーとサイモン・ロビンソンによる『人工知能と黙示録主義シンポジウムへの序論』、ベス・サインラーによる『AI黙示録主義とトランスヒューマニズムにおける存在的希望と絶望』、マイケル・モレリによる『アテナの祭壇とアマゾニアンチャットボット：人工知能と黙示録的終末をパウロ的に読む』、ヴィクトリア・ロリマールによる『マインドアップロードと身体化認知：神学的応答』、そしてサイード・ムスタファ・アリによる『「ホワイト危機」と／または「存在的リスク」―人工知能の絡み合う黙示録主義』」
+<div class="jp-title">"Mind Upload and Embodied Cognition: A Theological Response -
+“Introduction to the Artificial Intelligence and Apocalypticism Symposium” by Robert M. Geracy and Simon Robinson, “Existential Hope and Despair in AI Apocalypticism and Transhumanism” by Beth Seinler, “The Altar of Athena and Amazonian Chat” by Michael Morelli ``Bots: A Pauline Reading of Artificial Intelligence and the Apocalyptic End'', ``Mind Uploading and Embodied Cognition: A Theological Response'' by Victoria Lorimard, and ``The White Crisis and/or ``Existential Risk'': Artificial Intelligence's Entwined Apocalypticism'' by Syed Mustafa Ali.
 </div>
 <div class="jp-summary">
-トランスヒューマニズムの中でも最も過激な提案の一つに、私たちの心をデジタル基盤へアップロードし、脆弱で衰退する「肉体」への依存を捨ててソフトウェアとしての不死を得るというものがあります。しかし、比喩研究は私たちが世界に身体的に住み着く中で比喩を用いることを示し、現象学的アプローチは人間の「ハイブリディティ」を強調し、従来の心／身体二項対立に抵抗します。マインドアップロードと無身体化人工知能（AI）を想定した未来シナリオは、より伝統的な宗教終末論と同じ黙示録的カテゴリーを共有しますが、内容は大きく異なります。したがって、身体化認知の洞察とそれが技術革新にどのように取り入れられるかを、神学的関心事に適用して検討します。神学はしばしば技術的未来の議論で批判や警告を行いますが、神学者は身体化とその神学構築・実践への影響について、技術的対話相手から学ぶことができるでしょう。
+One of the most radical proposals in transhumanism is to upload our minds to a digital platform, abandoning our dependence on our fragile and decaying bodies and gaining software immortality. However, metaphor studies show that we use metaphors as we physically inhabit the world, and phenomenological approaches emphasize human "hybridity" and resist the traditional mind/body dichotomy. Future scenarios that envision mind uploading and disembodied artificial intelligence (AI) share the same apocalyptic category as more traditional religious eschatology, but the content is very different. We therefore consider the insights of embodied cognition and how they can be incorporated into technological innovations as applied to theological concerns. Although theology often criticizes and warns in discussions of technological futures, theologians can learn from their technological dialogue partners about embodiment and its implications for theological construction and practice.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>心をデジタルにアップロードし、身体化認知の視点から神学的応答を検討する研究です。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>This research involves uploading the mind digitally and examining theological responses from the perspective of embodied cognition. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>伝統的な終末論とAI・マインドアップロードを同一カテゴリーで比較し、身体化認知の概念を導入した点が差別化です。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>The difference is that we compare traditional eschatology and AI/mind uploading in the same category, and introduce the concept of embodied cognition. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>デジタルサブストレートへの心アップロードと無身体化AIの実現メカニズムです。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>This is a mechanism for uploading the mind to a digital substrate and realizing disembodied AI. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>比喩研究・現象学的分析を用い、理論的枠組みと神学的議論の相互作用を概念モデルで検証します。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Using metaphorical research and phenomenological analysis, we examine the interaction between theoretical frameworks and theological arguments using conceptual models. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>身体化と心の二項対立を超えるハイブリディティの実証性、そして神学的警告と技術進歩のバランスが主な課題です。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>The main challenges are the demonstrative nature of hybridity that goes beyond the dichotomy of embodiment and mind, and the balance between theological warnings and technological progress. </p>
 </div>
 </div>
 </div>
@@ -3556,26 +3486,26 @@ style="color:inherit">10.1111/zygo.12494</a></div>
 </div>
 <div class="translation-container">
 <div class="jp-title">
-人工知能の黙示録主義とトランスヒューマニズムにおける存在的希望と絶望：ロバート・M・ゲラシー＆サイモン・ロビンソン（「人工知能と黙示録主義に関するシンポジウムへの序文」）、ベス・サイナー（「人工知能の黙示録主義とトランスヒューマニズムにおける存在的希望と絶望」）、マイケル・モレリ（「アテナの祭壇とアマゾニアンチャットボット：人工知能と黙示録的終末のパウロ的読解」）、ヴィクトリア・ロリマール（「心のアップロードと具現化認知：神学的応答」）、サイード・ムスタファ・アリ（「『ホワイト危機』と/または『存在的リスク』、人工知能の絡み合う黙示録主義」）
+Existential Hope and Despair in Artificial Intelligence Apocalypticism and Transhumanism: Robert M. Gerathy & Simon Robinson (“Preface to the Symposium on Artificial Intelligence and Apocalypticism”), Beth Siner (“Existential Hope and Despair in Artificial Intelligence Apocalypseism and Transhumanism”), Michael Morelli (“The Altar of Athena and Amazonian Chatbots: A Pauline Reading of Artificial Intelligence and the Apocalyptic End”), Victoria Lorimard (“Mind Uploading and Embodied Cognition: A Theological Response”), Said Mustafa Ali (“‘White Crisis’ and/or ‘Existential Risk’: Artificial Intelligence’s Intertwined Apocalypticism”)
 </div>
 <div class="jp-summary">
-トランスヒューマニズムと人工スーパーインテリジェンス／シンギュラリティ志向のグループを対象に、オンライン・オフラインで行ったフィールドワークから得た観察を踏まえ、本稿では「期待される」または「恐れられる」ポストヒューマン未来に対する不安の人類学を探求する。世界の終末といった予測イベントに関する議論で見られる存在的希望と絶望の多様性を概説し、これらを人類学的理論枠組みの中に位置づける。具体例として、第一にトランスヒューマニストイベントで観測された楽観主義を検証し、特に暗黙の終末論的方向性を持つ黙示録シナリオにおける肯定的感情面を強調する。第二に、存在的絶望の例が見られるオンライン空間を詳細に調査し、スーパーインテリジェンス／シンギュラリティの概念に対する否定的反応を示す。これらの存在的希望と絶望の事例は、人工知能黙示録に関する思想における不安の内在的役割を明らかにする。
+Drawing on observations from online and offline fieldwork with transhumanist and artificial superintelligence/singularity-oriented groups, this paper explores the anthropology of anxiety about ``expected'' or ``feared'' posthuman futures. This paper outlines the diversity of existential hope and despair that can be seen in discussions about predictive events such as the end of the world, and places these within an anthropological theoretical framework. As a concrete example, we first examine the optimism observed in transhumanist events, emphasizing in particular the positive emotional dimension in apocalyptic scenarios with an implicit apocalyptic orientation. Second, we take a closer look at online spaces where examples of existential despair and negative reactions to the concept of superintelligence/singularity are presented. These instances of existential hope and despair reveal the inherent role of anxiety in thought about the AI ​​apocalypse.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>ポストヒューマン未来に対する希望と絶望を不安という視点で人類学的に分析した研究。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A study that anthropologically analyzes hope and despair for the post-human future from the perspective of anxiety. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存の哲学・倫理論では扱われない、実際のトランスヒューマニズムコミュニティとオンライン空間で観測された感情的反応を実証的に取り上げる点。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>The point is to empirically address emotional reactions observed in actual transhumanist communities and online spaces, which are not covered by existing philosophical and ethical theories. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>オンライン・オフラインフィールドワークを組み合わせ、参加者の言語表現と行動パターンから「存在的希望/絶望」を定量化・質的分析する手法。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>A method that combines online and offline fieldwork to quantify and qualitatively analyze "existential hope/despair" from participants' linguistic expressions and behavioral patterns. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>①トランスヒューマニストイベントでのアンケート・観察データ、②SNSやフォーラム上のテキストマイニングと感情分析を用いた二重検証。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>(1) Double verification using questionnaire/observation data from transhumanist events, (2) text mining and sentiment analysis on SNS and forums. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>参加者の自己選択バイアスやオンラインコミュニティの代表性不足、さらに「希望」と「絶望」の定義が文化的に変動する点を考慮した上で、結果の一般化には慎重さが必要。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>The results should be generalized with caution, taking into account the self-selection bias of the participants, the lack of representativeness of the online community, and cultural variations in the definitions of "hope" and "despair." </p>
 </div>
 </div>
 </div>
@@ -3638,25 +3568,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1111/zygo.12483</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">アテナイの祭壇とアマゾンのチャットボット：人工知能と黙示録的終末に対するパウロ的読み方</div>
+<div class="jp-title">Athenian altars and Amazon chatbots: A Pauline reading of artificial intelligence and the apocalyptic end</div>
 <div class="jp-summary">
-本稿は、チャットボットを中心に人工知能（AI）全般について、パウロ的すなわちキリスト教神学の観点から問いを投げかける。新約聖書のアレオパゴス（アテナイ）で、パウロが「未知なる神」に捧げる祭壇を検討し、ギリシャの詩人・哲学者の引用と共にストイック・エピクロス派思想家との対話を通じて奇妙な神学を語る場面（使徒言行録17:16–34）に焦点を当てる。場面の社会歴史的ニュアンスと哲学・神学的意味を掘り下げることで、パウロが考える祭壇は黙示録的終末（我々の存在・運命・責任に関する問い）について重要な対話の中心点となることを示す。結果として、チャットボットなどの日常的技術物に潜む予期せぬ黙示録的終末を明らかにする実践的質問の提起方法を学べる。
+This article asks questions about artificial intelligence (AI) in general, with a focus on chatbots, from a Pauline or Christian theological perspective. This book focuses on the scene in the New Testament in the Areopagus (Athens) where Paul examines the altar dedicated to an "unknown god" and discusses strange theology through dialogue with Stoic and Epicurean thinkers, along with quotations from Greek poets and philosophers (Acts 17:16–34). By delving into the socio-historical nuances and philosophical-theological implications of the scene, Paul shows that the altar is a focal point for important conversations about the apocalyptic eschatology (questions about our existence, destiny, and responsibility). As a result, you will learn how to ask practical questions that reveal unexpected apocalyptic apocalypses in everyday technological objects such as chatbots.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>パウロ的神学の枠組みで、チャットボットを含むAIに関する黙示録的終末論を探求する研究。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>Research exploring apocalyptic eschatology regarding AI, including chatbots, within the framework of Pauline theology. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>新約聖書のアレオパゴス場面を中心に、AIと終末論を結びつける点で独自性がある。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>It is unique in that it connects AI and eschatology, centering on the Areopagus scene in the New Testament. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>チャットボットという具体的技術を例に、終末論的意味合いを抽出する方法。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>A method for extracting apocalyptic meaning using a specific technology called a chatbot as an example. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>文献・聖書テキストの社会歴史的解釈と哲学的議論を組み合わせたテキスト分析。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Text analysis that combines socio-historical interpretation and philosophical discussion of literary/biblical texts. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>パウロ的視座の適用範囲と、AIに対する神学的解釈が文化・時代依存である点。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>The scope of application of the Pauline perspective and the theological interpretation of AI depend on culture and time. </p>
 </div>
 </div>
 </div>
@@ -3720,26 +3650,26 @@ style="color:inherit">10.1111/zygo.12489</a></div>
 </div>
 <div class="translation-container">
 <div class="jp-title">
-人工知能と黙示録主義に関するシンポジウムの序論：ロバート・M・ゲラチ氏とサイモン・ロビンソン氏の「人工知能と黙示録主義に関するシンポジウム序論」、ベス・サイナー氏の「人工知能黙示録主義とトランスヒューマニズムにおける存在的希望と絶望」、マイケル・モレリ氏の「アテナ神殿、アマゾニアンチャットボット：人工知能と黙示録的終末をパウロ的に読む」、ヴィクトリア・ロリマール氏の「心のアップロードと具現化認知：神学的応答」、そしてサイード・ムスタファ・アリ氏の「『ホワイト危機』と/または『存在的リスク』、あるいは人工知能の絡み合う黙示録主義」
+Introduction to the Symposium on Artificial Intelligence and Apocalypticism: "Introduction to the Symposium on Artificial Intelligence and Apocalypticism" by Robert M. Geraci and Simon Robinson, "Existential Hope and Despair in Artificial Intelligence Apocalypticism and Transhumanism" by Beth Siner, and "Athena God" by Michael Morelli Dear Amazonian Chatbot: A Pauline Reading of Artificial Intelligence and the Apocalyptic End," Victoria Lorimard's "Mind Uploading and Embodied Cognition: A Theological Response," and Said Mustafa Ali's "'White Crisis' and/or 'Existential Risk' or Apocalypticism Entwined with Artificial Intelligence."
 </div>
 <div class="jp-summary">
-本稿は、英国ベッドフォードにある黙示録・ミレニアリズム運動の批判的研究センター（CenSAMM）が主催した会議から生まれた「人工知能と黙示録主義に関するシンポジウム」の序論である。序文では、黙示録主義と人工知能の交差点における学術的研究の簡潔な歴史と、ミレニアリズム宗教共同体であるパナケア協会から派生したCenSAMMの成立過程を概説し、最後にシンポジウム論文集の貢献へと導く。
+This article is the introduction to the ``Symposium on Artificial Intelligence and Apocalypticism,'' which resulted from a conference hosted by the Center for Critical Studies of the Apocalyptic and Millennialist Movement (CenSAMM) in Bedford, England. The introduction provides a brief history of academic research at the intersection of apocalypticism and artificial intelligence, and outlines the formation process of CenSAMM, an outgrowth of the Millennialist religious community Panacea Society, before finally leading to the contributions of the symposium collection.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>- 黙示録主義と人工知能の交差点を探る学術シンポジウムの序論。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>- Introduction to an academic symposium exploring the intersection of apocalypticism and artificial intelligence. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>- ミレニアリズム宗教共同体から派生した研究機関の視点を踏まえている。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>- Based on the perspective of a research institution derived from a millenialist religious community. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>- 人工知能を黙示録的枠組みで再解釈し、神学・哲学と結びつけること。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>- Reinterpreting artificial intelligence in an apocalyptic framework and linking it with theology and philosophy. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>- 文献レビューとシンポジウム論文の内容を統合した概念的分析。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>- Conceptual analysis integrating literature review and symposium paper content. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>- 黙示録主義の宗教的文脈とAI技術の社会的影響を結びつける難しさが指摘されている。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>- The difficulty of linking the religious context of apocalypseism with the social impact of AI technology has been pointed out. </p>
 </div>
 </div>
 </div>
@@ -3798,26 +3728,26 @@ style="color:inherit">10.1111/zygo.12498</a></div>
 </div>
 <div class="translation-container">
 <div class="jp-title">
-「『ホワイト・クライシス』と／または『存在的リスク』―人工知能の絡み合う黙示録主義：ロバート・M・ゲラシーとサイモン・ロビンソンによる『人工知能と黙示録主義に関するシンポジウムへの序文』、ベス・サイングラーによる『AI黙示録主義とトランスヒューマニズムにおける存在的希望と絶望』、マイケル・モレリによる『アテナの祭壇とアマゾニアンチャットボット：人工知能と黙示録的終末をパウロ的に読む』、ビクトリア・ロリマールによる『心のアップロードと具現化認知：神学的応答』、そしてサイード・ムスタファ・アリによる『「ホワイト・クライシス」と／または「存在的リスク」―人工知能の絡み合う黙示録主義』」
+“'White Crisis' and/or 'Existential Risk' - Artificial Intelligence's Intertwined Apocalypticism: Preface to the Symposium on Artificial Intelligence and Apocalypticism by Robert M. Gerathy and Simon Robinson, Existential Hope and Despair in AI Apocalypticism and Transhumanism by Beth Singler, Michael Mo “The Altar of Athena and Amazonian Chatbots: A Pauline Reading of Artificial Intelligence and the Apocalyptic End” by Leli, “Mind Uploading and Embodied Cognition: A Theological Response” by Victoria Lorimard, and ““White Crisis” and/or “Existential Risk”: Artificial Intelligence’s Entwined Apocalypticism” by Saeed Mustafa Ali.
 </div>
 <div class="jp-summary">
-本稿では、ロバート・ゲラシーの「黙示録的人工知能（AI）」論説に対し、宗教から人種―宗教の結びつきへと分析視点を移すことで浮かび上がる欠陥を批判的に検討する。先行研究を踏まえ、現代の人種問題である「ホワイト・クライシス」と結びつく存在的リスクを探求し、批判的人種理論と脱植民地主義の視座から、三つの現象が絡み合い、非白人の対抗に対して白人支配を維持する戦略（少なくとも修辞的なもの）として理解されるべきだと主張する。さらに、種族と宗教の長期的な絡み合いが現代／植民地世界体系の構築・維持・拡大・精緻化において継続性を示し、これらの現象が支配のプログラム的軌跡として反復的にシフトする際、実用的には「アルゴリズム的レイシズ」として枠組み化できると示唆する。
+This article critically examines the flaws that emerge from Robert Geracy's ``apocalyptic artificial intelligence (AI)'' thesis by shifting the analytical perspective from religion to the race-religion nexus. Based on previous research, I explore the existential risks associated with the contemporary racial issue of ``White Crisis,'' and argue from the perspectives of critical race theory and decolonialism that these three phenomena are intertwined and should be understood as a strategy (at least a rhetorical one) to maintain white supremacy in the face of non-white opposition. Furthermore, we suggest that the long-term entanglement of race and religion shows continuity in the construction, maintenance, expansion, and elaboration of modern/colonial world systems, and that these phenomena can be pragmatically framed as "algorithmic racism" as they repeatedly shift as programmatic trajectories of domination.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>人種と宗教の結びつきに焦点を当て、AI黙示録主義と「ホワイト・クライシス」を絡めた存在的リスクの批判的分析。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>A critical analysis of the existential risks associated with AI apocalypseism and the "White Crisis," focusing on the connection between race and religion. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>宗教的枠組みから人種―宗教の結合へ視点を移し、白人支配維持戦略として三現象の絡み合いを論じる点。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>The point is to shift the perspective from a religious framework to the combination of race and religion, and discuss the intertwining of the three phenomena as a strategy to maintain white supremacy. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>批判的人種理論と脱植民地主義を用い、AIのリスクを「アルゴリズム的レイシズ」として再構築。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>Using critical race theory and decolonialism, we reframe the risks of AI as "algorithmic racism." </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>歴史的・社会学的資料を分析し、種族と宗教の長期的連関がAIリスクに与える影響を示す。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>We analyze historical and sociological materials to show the impact of long-term associations between race and religion on AI risk. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>「アルゴリズム的レイシズ」の概念化が抽象的であり、実証データの不足や他人種・宗教間の多様性を十分に捉えきれない点。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>The conceptualization of "algorithmic racism" is abstract, lacks empirical data, and does not fully capture diversity among other races and religions. </p>
 </div>
 </div>
 </div>
@@ -3841,7 +3771,7 @@ stroke-linecap="round" stroke-linejoin="round" class="icon">
 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
 </svg></a>
 </div>
-<h3 id="year-w-2018" class="year-title">2018年</h3>
+<h3 id="year-w-2018" class="year-title">2018</h3>
 <div class="paper-card">
 <div class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -3876,25 +3806,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.3233/978-1-61499-931-7-259</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">ロボットクローン―ロボフィロソフィーとテクノ不死性に関する新たな視点</div>
+<div class="jp-title">Robot clones: A new perspective on robot philosophy and techno-immortality</div>
 <div class="jp-summary">
-完全な心のアップロード（および意識）の問題は、現在の科学的・哲学的パラダイムにおいてまだ完全には解決されていません。同時に、ロボットクローンが「心のクローン」論理に基づき自己の人格を代替する存在となるという仮説は、ロボットクローンの将来の本体的地位（社会における存在）だけでなく、人格性を問うものです。このプロセスは、人間中心主義という人間性の根本的なイデオロギー定義を覆す結果につながります。したがって、本研究は、サイバー意識とロボットクローン理論に関するマーティン・ロスバルトとレイ・カーツワイルの理論を出発点として、ロボットクローンパラダイムにおけるテクノ不死性を分析することを目的としています。本文の全体的な目標は、イマヌエル・カント、リン・ラダー・ベーカー、ジョン・シールの議論に基づき、ロボットクローンの人格性仮説と本体的地位問題を分析することです。理論的目標は、マーティン・ロスバルト、レイ・カーツワイル、ダニエル・デネットの議論を支持しつつ、心クローン（意識理論）がヒューマノイドロボットクローンに転写される過程が、ネッド・ブロック、デイヴィッド・チャルマーズ、シールが提唱する理論によれば「哲学的ゾンビ」、すなわち自分自身のシミュラクラムに実際に結びつくことを解体することです。使用される方法論は、ロスバルト・デネット・カーツワイルの機能的議論と、ブロック・シール・チャルマーズによるロボットクローンの人工意識への批判、さらにカント的な議論によるロボットクローン人格性への批判を組み合わせたものです。
+The problem of complete mind upload (and consciousness) has not yet been fully resolved in current scientific and philosophical paradigms. At the same time, the hypothesis that robot clones will replace one's own personality based on the logic of "cloning the mind" questions not only the robot clone's future status (existence in society) but also its personality. This process leads to the overturning of the fundamental ideological definition of humanity: anthropocentrism. Therefore, this study aims to analyze techno-immortality in the robot-clone paradigm, taking Martin Rothbard and Ray Kurzweil's theories on cyber-consciousness and robot-clone theory as a starting point. The overall goal of this paper is to analyze the personality hypothesis and the body status problem of robot clones, drawing on arguments from Immanuel Kant, Lynne Rudder Baker, and John Seal. The theoretical goal, supporting the arguments of Martin Rothbard, Ray Kurzweil, and Daniel Dennett, is to deconstruct how the process by which a mind clone (theory of consciousness) is transferred into a humanoid robot clone actually leads to a ``philosophical zombie'', a simulacrum of oneself, according to the theory proposed by Ned Block, David Chalmers, and Seal. The methodology used combines Rothbart, Dennett, and Kurzweil's functional argument with Brock Thiel Chalmers' critique of the artificial consciousness of robot clones, as well as Kantian arguments against the personality nature of robot clones.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>ロボットクローンが自己の人格を代替する可能性と、そのテクノ不死性を哲学的・科学的に検証する研究。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A study that philosophically and scientifically examines the possibility of robot clones replacing one's own personality and its technological immortality. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>従来の心アップロード論に加え、ロボットクローンが「哲学的ゾンビ」となるという新たな人格性仮説を導入し、カント・ベーカー・シールの視点で再解釈している。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>In addition to the conventional mind upload theory, he introduces a new personality hypothesis in which robot clones become ``philosophical zombies'' and reinterprets it from the perspective of Kant, Baker, and Seal. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>心クローン（意識）をヒューマノイドロボットに転写する機能的プロセスと、その結果として生じる人格性の再定義。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>The functional process of transferring mind cloning (consciousness) to a humanoid robot and the resulting redefinition of personality. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>ロスバルト・デネット・カーツワイルの機能的議論と、ブロック・シール・チャルマーズの批判を組み合わせた概念的解析と、カント哲学に基づく論証的検討。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>A conceptual analysis that combines the functional arguments of Rothbart, Dennett, and Kurzweil and the criticisms of Bloch and Thiel Chalmers, and an argumentative study based on Kant's philosophy. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>人格性の定義と人間中心主義の再構築に関する倫理的・社会的影響、そして実際の技術実装が現実に到達するまでの距離。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>The ethical and social implications of the definition of personhood and the restructuring of anthropocentrism, and the distance from which actual technological implementation will reach reality. </p>
 </div>
 </div>
 </div>
@@ -3923,7 +3853,7 @@ stroke-linecap="round" stroke-linejoin="round" class="icon">
 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
 </svg></a>
 </div>
-<h3 id="year-w-2017" class="year-title">2017年</h3>
+<h3 id="year-w-2017" class="year-title">2017</h3>
 <div class="paper-card">
 <div class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -3958,25 +3888,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.3390/rel8040052</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">新技術―古い人類学？</div>
+<div class="jp-title">New technologies, old anthropology?</div>
 <div class="jp-summary">
-80年前、ニコラス・ベルデャーヴは、新たな技術的課題に対処するには新しい哲学的人類学が必要だと警告しました。今日、トランスヒューマニズムの「心アップロード」目標は、多くの神学者や哲学者によって、人間性を侵害するため危険と見なされています。本稿では、トランスヒューマニズムの「パターン主義」的人格観を、ブレント・ウォーターズのアウグスティヌス的技術巡礼者観、セリア・ディーン＝ドラモンドの進化論的トミズム的人類観、フランシス・フクヤマの「ファクターX」の不可侵性主張と対比します。これら三者はすべてパターン主義に反対していますが、相互に矛盾した見解を持っています。この不一致は、トランスヒューマニズムに直面する信仰者にとって、どの見解を採るべきかという課題となります。私は、科学・技術・社会（STS）研究が哲学的観点を科学理論へと変容させる過程や知識形態の相互混在を明らかにすることで、議論への理解を深めると主張します。さらに、STSはキリスト教徒が自身の人類学を進化させる過程を理解し、将来の神学的人類学に向けた展望を示す手助けとなると論じます。
+Eighty years ago, Nicolas Beldjave warned that a new philosophical anthropology was needed to meet new technological challenges. Today, the "mind uploading" goal of transhumanism is considered dangerous by many theologians and philosophers because it violates humanity. In this article, I contrast transhumanism's "patternist" view of personality with Brent Waters' Augustinian technological pilgrim view, Celia Dean-Drummond's evolutionary Thomistic view of humanity, and Francis Fukuyama's insistence on the inviolability of "Factor X." All three are opposed to patternism, but they hold mutually contradictory views. This disagreement poses a challenge for believers faced with transhumanism as to which view to adopt. I argue that science, technology, and society (STS) research deepens our understanding of debates by revealing the process by which philosophical perspectives are transformed into scientific theories and the intermingling of forms of knowledge. Furthermore, I argue that STS can help Christians understand the process by which their anthropology is evolving and provide a vision for a future theological anthropology.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>トランスヒューマニズムの「心アップロード」を巡る哲学的・神学的議論を、STS視点で再検討する研究。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A study that reexamines the philosophical and theological debate surrounding transhumanism's "mind uploading" from an STS perspective. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存のパターン主義批判を超え、複数の哲学者・神学者の立場を比較し、STSが知識形態変容に注目する点で差別化。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>Going beyond the existing criticism of patternism, comparing the positions of multiple philosophers and theologians, and differentiating STS by focusing on the transformation of knowledge forms. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>「心アップロード」＝人間性の再構築を可能にする技術であり、倫理・人格の定義を揺るがす核心。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>"Mind upload" is a technology that enables the reconstruction of humanity, and is the core that shakes the definition of ethics and character. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>文献比較と概念分析を用い、パターン主義と対立する三つの視点を比較検討。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Using literature comparison and conceptual analysis, we compared and examined three viewpoints that conflict with patternism. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>視点間の不一致が解決困難であり、STSの枠組みだけでは実際的な倫理指針を完全に導出できない点。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>The inconsistency between viewpoints is difficult to resolve, and practical ethical guidelines cannot be completely derived using the STS framework alone. </p>
 </div>
 </div>
 </div>
@@ -4001,8 +3931,8 @@ stroke-linecap="round" stroke-linejoin="round" class="icon">
 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
 </svg></a>
 </div>
-<h2 id="without-abstracts" class="category-title">2. アブストラクトなし</h2>
-<h3 class="year-title">2025年</h3>
+<h2 id="without-abstracts" class="category-title">2. Without abstracts</h2>
+<h3 class="year-title">2025</h3>
 <div class="paper-card">
 <div class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -4037,17 +3967,17 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1007/s44163-024-00220-6</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">仮想現実を用いた再生の代替手段</div>
-<div class="jp-summary">（アブストラクト取得不可）</div>
+<div class="jp-title">Alternatives for playback using virtual reality</div>
+<div class="jp-summary">(Abstract cannot be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ 仮想現実技術を活用して、従来の再生手法に代わる新たなアプローチを提案する研究。 </label>
-<p>2. 先行研究との違いは？ 従来の物理的再生やシミュレーションに比べ、没入型VR環境でリアルタイムに操作・観察できる点が特徴。</p>
+<div class="point-card"><label>1. What kind? Research that utilizes virtual reality technology to propose a new approach to replace traditional playback methods. </label>
+<p>2. What is the difference from previous research? Compared to conventional physical playback and simulation, it is characterized by the ability to operate and observe in real time in an immersive VR environment. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ 高精度トラッキングとリアルタイムレンダリングを組み合わせ、ユーザーが直接操作できるインタラクティブな仮想空間を構築。
+<div class="point-card"><label>3. What's the key to technology? By combining high-precision tracking and real-time rendering, we create an interactive virtual space that users can directly interact with.
 </label>
-<p>4. 検証方法は？ 実験参加者にVR環境で再生タスクを行わせ、作業効率・精度・ユーザー満足度を定量的に測定。</p>
+<p>4. How to verify? Experiment participants were asked to perform playback tasks in a VR environment, and work efficiency, accuracy, and user satisfaction were quantitatively measured. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ ハードウェアコストやユーザーの慣れ不足、現実世界との同期精度が課題であり、長期的な効果検証が必要。</label>
+<div class="point-card"><label>5. What are the points of discussion and limitations? Challenges include hardware cost, lack of user familiarity, and synchronization accuracy with the real world, and long-term effectiveness verification is required. </label>
 <p></p>
 </div>
 </div>
@@ -4092,23 +4022,23 @@ stroke-linejoin="round" class="icon">
 </svg> DOI: N/A</div>
 </div>
 <div class="translation-container">
-<div class="jp-title">IoMTにおける象徴的AIと認知ヒューリスティクスを統制する法的枠組み</div>
-<div class="jp-summary">（アブストラクトは取得できませんでした。詳細な内容については原文をご参照ください。）</div>
+<div class="jp-title">Legal framework governing symbolic AI and cognitive heuristics in IoMT</div>
+<div class="jp-summary">(The abstract could not be obtained. Please refer to the original text for details.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>IoMT（Internet of Medical Things）における象徴的AIと認知ヒューリスティクスの運用を規制する法的枠組みについて検討した研究です。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>This research examines the legal framework regulating the operation of symbolic AI and cognitive heuristics in the Internet of Medical Things (IoMT). </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存のAI法規制をIoMT特有の医療データとセキュリティ要件に適用し、実務的なガイドラインを提示した点が特徴です。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>It is unique in that it applies existing AI laws and regulations to medical data and security requirements specific to IoMT, and presents practical guidelines. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>象徴的AI（ルールベース・推論エンジン）と認知ヒューリスティクス（人間の意思決定を模倣するアルゴリズム）の組み合わせが、医療現場での意思決定支援に与える影響を分析した点です。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>This is an analysis of the impact of the combination of symbolic AI (rule-based inference engine) and cognitive heuristics (algorithms that imitate human decision-making) on ​​decision-making support in medical settings. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>法的文献レビューとケーススタディ（実際のIoMT導入事例）を組み合わせ、法規制と技術実装の整合性を評価しました。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>We combined a legal literature review and case studies (actual IoMT implementation examples) to assess the consistency between laws and regulations and technology implementation. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>法的枠組みの国際差異と、急速に進化するAI技術への適応性が課題であり、実証データの不足も限界として挙げられます。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>Challenges include international differences in legal frameworks and adaptability to rapidly evolving AI technology, and a lack of empirical data is also cited as a limitation. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105024296853&origin=inward"
@@ -4154,23 +4084,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.4324/9781003398486-40</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">「死後の生命を巡るトランスヒューマニストイメージのクィアリング：クライオニクスとマインドアップロードに対するデコンストラクティブアプローチ」</div>
-<div class="jp-summary">（本文のアブストラクトは入手できませんでした。したがって、要約を提供することができません。）</div>
+<div class="jp-title">"Queering transhumanist images of life after death: Deconstructive approaches to cryonics and mind uploading"</div>
+<div class="jp-summary">(The abstract for the main text was not available. Therefore, we are unable to provide a summary.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>死後の生命に関するトランスヒューマニズム的イメージを批判的に再解釈し、クライオニクスとマインドアップロードを対象にデコンストラクティブな分析手法を提案する研究です。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>This research critically reinterprets the transhumanist image of life after death and proposes a deconstructive analysis method for cryonics and mind uploading. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>従来の技術的・倫理的議論に加え、クィア理論とデコンストラクションの視点を組み合わせることで、既存の枠組みに挑戦しています。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>In addition to traditional technical and ethical discussions, we challenge existing frameworks by combining queer theory and deconstruction perspectives. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>クライオニクス（冷凍保存）とマインドアップロード（意識のデジタル化）の両技術を、社会的・文化的構造として再検討し、その意味合いを解体します。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>We will reconsider both cryonics (freezing preservation) and mind uploading (digitalization of consciousness) as social and cultural constructs, and dismantle their meanings. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>文献レビューと理論的分析を主軸に、クィア理論・デコンストラクションの概念を適用して議論を展開します。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>We will develop our discussion by applying the concepts of queer theory and deconstruction, with a focus on literature review and theoretical analysis. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>技術的実現可能性の検証が不足しており、主に概念的・理論的枠組みの再構築に留まる点が限界です。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>The limitation is that there is a lack of verification of technical feasibility, and it is mainly a reconstruction of the conceptual/theoretical framework. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105024174925&origin=inward"
@@ -4215,25 +4145,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.31688/ABMU.2025.60.3.10</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">マインドアップロード：現在のアプローチと哲学的矛盾</div>
+<div class="jp-title">Mind upload: current approaches and philosophical contradictions</div>
 <div class="jp-summary">
-本稿では、人工知能と神経科学の交差点に位置する「マインドアップロード」技術について、既存の実装手法とそれに伴う哲学的問題点を整理・批判的検討する。まず、脳データの取得・解析から仮想環境への転写までに用いられる主要なアルゴリズムとハードウェア構成を概観し、実験的検証の現状を示す。次に、自己認識・意識の継承問題や個体性の保存といった哲学的課題を整理し、技術進展がもたらす倫理・社会的影響について議論する。最後に、現行研究の限界と今後の研究課題を提示し、マインドアップロードが抱える多面的な挑戦に対する総合的視点を提供する。
+This paper organizes and critically examines existing implementation methods and associated philosophical issues regarding "mind upload" technology, which lies at the intersection of artificial intelligence and neuroscience. First, we will provide an overview of the main algorithms and hardware configurations used from acquiring and analyzing brain data to transferring it to a virtual environment, and present the current state of experimental verification. Next, we will discuss philosophical issues such as the inheritance of self-awareness and consciousness and the preservation of individuality, and discuss the ethical and social impacts brought about by technological advances. Finally, we present the limitations of current research and future research issues, providing a comprehensive perspective on the multifaceted challenges faced by mind uploading.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>脳情報をデジタル化し、仮想環境に転写する「マインドアップロード」技術の概要と現状を解説する。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>We will explain the overview and current status of "Mind Upload" technology, which digitizes brain information and transfers it to a virtual environment. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存のシミュレーションやデータ取得手法を統合し、哲学的矛盾に焦点を当てた批判的分析を行う点が特色。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>It is distinctive in that it integrates existing simulation and data acquisition methods and performs critical analysis focusing on philosophical contradictions. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>高精度脳スキャンと機械学習によるニューロンネットワーク再構築、そして仮想環境へのリアルタイムマッピングが核となる。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>The core of this project is high-precision brain scanning, neuron network reconstruction using machine learning, and real-time mapping to a virtual environment. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>実験的脳データ収集、シミュレーション比較、そして倫理・哲学的評価指標を用いた多角的検証手法。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>A multifaceted verification method using experimental brain data collection, simulation comparison, and ethical/philosophical evaluation indicators. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>意識の継承可否、個体性保存の問題、データプライバシーと倫理的リスクが主な議論点であり、技術成熟度はまだ初期段階に留まる。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>The main points of discussion are whether or not consciousness can be inherited, the issue of preserving individuality, data privacy and ethical risks, and the level of technological maturity is still at an early stage. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105020010316&origin=inward"
@@ -4278,23 +4208,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1007/s11097-025-10067-6</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">マインド・アップロードとその形而上学的基盤：ロール機能主義からリアライザー機能主義へ</div>
-<div class="jp-summary">（アブストラクトは取得できませんでした）</div>
+<div class="jp-title">Mind upload and its metaphysical basis: From role functionalism to realizer functionalism</div>
+<div class="jp-summary">(Abstract could not be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>マインド・アップロードの概念と、それを支える形而上学的理論（ロール機能主義・リアライザー機能主義）を比較検討する研究です。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>This is a study that compares the concept of mind upload and the metaphysical theories that support it (role functionalism and realizer functionalism). </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>従来のロール機能主義に対し、リアライザー機能主義を導入して実装可能性と哲学的妥当性の両面から再評価しています。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>Realizer functionalism has been introduced to traditional role functionalism, and it is being reevaluated in terms of both implementation possibility and philosophical validity. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>マインド・アップロードを実現するために必要な「リアライザー」（機能的再現者）の概念と、その設計原理を提示しています。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>We present the concept of a "realizer" (functional reproducer) necessary to realize mind uploading and its design principle. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>具体的なシミュレーションや理論モデルを用いて、リアライザー機能主義がロール機能主義よりも実装可能性を高めるかどうかを検証します。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Using concrete simulations and theoretical models, we will verify whether realizer functionalism increases the feasibility of implementation than role functionalism. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>実際の実装に向けた技術的課題と、リアライザー機能主義が抱える形而上学的・倫理的疑問点を議論し、今後の研究課題を提示しています。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>We discuss technical issues for actual implementation, metaphysical and ethical questions faced by realizer functionalism, and present future research topics. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105002445100&origin=inward"
@@ -4339,25 +4269,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1007/s00146-024-02131-7</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">SIMSとデジタルシミュラクラ：私たちが作り出した仮想コピーと性行為をすることは道徳的か？</div>
-<div class="jp-summary">（アブストラクト取得不可）</div>
+<div class="jp-title">SIMS and digital simulacra: Is it moral to have sex with the virtual copies we create? </div>
+<div class="jp-summary">(Abstract cannot be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>本研究は、仮想現実（VR）やデジタルシミュラクラを用いて、ユーザーが自ら作成した仮想コピーと性行為を行うことの倫理的側面を検討する。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>This research uses virtual reality (VR) and digital simulacra to examine the ethical aspects of having sex with a virtual copy that a user has created themselves. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存の倫理・仮想現実に関する研究が主に「AI伴侶」や「VRデート」に焦点を当てる中、本研究は「ユーザー自身が創造した仮想コピー」に着目し、自己生成の側面を新たに提示する。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>While existing research on ethics and virtual reality mainly focuses on "AI companions" and "VR dates," this research focuses on "virtual copies created by users themselves" and presents a new aspect of self-generation. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>高度な3Dモデリング・リアルタイムレンダリング技術と、ユーザー入力に基づく動的キャラクターモデリングを組み合わせ、リアルタイムで変化する仮想コピーを生成する仕組み。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>A system that combines advanced 3D modeling and real-time rendering technology with dynamic character modeling based on user input to generate virtual copies that change in real time. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>実際にVR環境で仮想コピーを作成・操作したユーザーを対象に、アンケート調査と心理的インタビューを実施し、倫理観・感情反応・行動意図のデータを収集・分析する。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>We will conduct a questionnaire survey and psychological interviews with users who have actually created and operated virtual copies in a VR environment, and will collect and analyze data on their ethical views, emotional reactions, and behavioral intentions. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>- 仮想コピーの人格認識と責任範囲に関する法的・倫理的枠組みの未整備
-- 実験参加者数が限定され、結果の一般化に制約がある
-- 仮想空間内での行為が実世界に与える影響については長期的な追跡調査が必要
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>- Lack of legal and ethical framework regarding recognition of personality and scope of responsibility for virtual copies
+- The number of experiment participants is limited, limiting the generalizability of the results.
+- Long-term follow-up research is needed to determine the impact of actions in virtual space on the real world
 
 ---</p>
 </div>
@@ -4404,23 +4334,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1007/978-981-96-7214-1_34</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">デジタル不死：アップロードされた知性と知識を備えた仮想クローン</div>
-<div class="jp-summary">（アブストラクトは取得できませんでした。本文の内容に基づく要約を作成することができません。）</div>
+<div class="jp-title">Digital immortality: virtual clones with uploaded intelligence and knowledge</div>
+<div class="jp-summary">(The abstract could not be retrieved. A summary cannot be created based on the content of the main text.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>- アップロードされた個人の知性・知識を保持した仮想クローンを作成し、デジタル上で永続的に存在させる技術・概念について論じている。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>- Discusses the technology and concept of creating virtual clones that retain the uploaded intelligence and knowledge of individuals and making them exist permanently digitally. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>- 既存のデジタル人格や仮想アバターと異なり、実際に「知性」と「知識」を完全に移植・保持することを前提としている点が特徴。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>- Unlike existing digital personalities and virtual avatars, it is characterized by the fact that it is based on the premise that "intelligence" and "knowledge" are completely implanted and retained. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>- 高度な脳データ取得・解析手法と、知性・知識を再構築するためのニューラルネットワークベースの仮想環境設計が核となる。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>- The core of this project is advanced brain data acquisition and analysis methods and neural network-based virtual environment design to reconstruct intelligence and knowledge. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>- 具体的な実験設計や評価指標について本文が示されていないため、詳細は不明。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>- Details are unknown as the text does not indicate specific experimental design or evaluation indicators. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>- 倫理的、法的な課題やデータの完全性・安全性に関する懸念が想定されるが、本文では具体的な議論は行われていない。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>- Ethical and legal issues and concerns regarding data integrity and safety are expected, but there are no specific discussions in the text. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105020796634&origin=inward"
@@ -4466,26 +4396,26 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.19967/j.cnki.flc.2025.03.005</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">デジタル不死の現実と幻想：グレッグ・イーガンのサイエンスフィクションにおけるマインドアップロードの倫理的ジレンマ</div>
+<div class="jp-title">The reality and fantasy of digital immortality: The ethical dilemma of mind uploading in Greg Egan's science fiction</div>
 <div class="jp-summary">
-本稿は、サイエンスフィクション作家グレッグ・イーガンの作品を舞台に、デジタル不死（マインドアップロード）という概念が抱える倫理的課題を検討する。マインドアップロードは、人間の意識や記憶をデジタル化し、永続的に保存・再現する技術として描かれるが、その実現には個人のアイデンティティ、権利、社会的影響など多岐にわたる問題が浮上する。本稿では、既存の倫理論や技術的議論と比較しつつ、イーガン作品における具体的な描写を分析し、デジタル不死の「現実」と「幻想」を分離する試みを行う。さらに、マインドアップロードがもたらす可能性とリスクを整理し、将来の科学技術発展に向けた倫理的枠組みの必要性を示唆する。
+This article examines the ethical issues surrounding the concept of digital immortality (mind uploading), based on the work of science fiction author Greg Egan. Mind uploading is described as a technology that digitizes human consciousness and memory and permanently preserves and reproduces it, but its realization raises a wide range of issues such as individual identity, rights, and social impact. In this paper, I will analyze the specific depictions in Egan's works, comparing them with existing ethical and technical arguments, and attempt to separate the ``reality'' and ``fantasy'' of digital immortality. Furthermore, we will summarize the possibilities and risks posed by mind uploading and suggest the need for an ethical framework for future scientific and technological development.
 
-（注：原文アブストラクトは取得できなかったため、上記はタイトルに基づく推測的要約です。）</div>
+(Note: The above is a speculative summary based on the title as the original abstract could not be obtained.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>デジタル不死（マインドアップロード）をテーマにしたサイエンスフィクションの倫理的ジレンマ。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>Ethical dilemma of science fiction with the theme of digital immortality (mind upload). </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>実際の科学的議論ではなく、イーガン作品内で描かれる具体例を用いて理論とフィクションの境界を探る。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>Using concrete examples depicted in Egan's works, rather than actual scientific discussions, we will explore the boundaries between theory and fiction. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>人間意識・記憶をデジタル化し永続的に再現する「マインドアップロード」技術。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>"Mind upload" technology that digitizes and permanently reproduces human consciousness and memory. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>文学作品のテキスト分析と既存倫理論・技術論との比較検討。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Text analysis of literary works and comparative study with existing ethical and technical theories. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>アイデンティティの継続性、権利保護、社会的格差など倫理的課題が多岐にわたり、実証可能性は現時点で限定的。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>Ethical issues are wide-ranging, including continuity of identity, protection of rights, and social disparities, and the possibility of proof is currently limited. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105024686278&origin=inward"
@@ -4530,23 +4460,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1080/00111619.2025.2549339</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">二百年のテクノディストピア：ウィンターソン『フランキスティーン』におけるAIと身体性の政治</div>
-<div class="jp-summary">（アブストラクトは取得できませんでした。本文からの抜粋や要旨が必要な場合は、該当部分をご提示ください。）</div>
+<div class="jp-title">Two Hundred Years of Technodystopia: AI and the Politics of Embodiment in Winterson's "Frankistine"</div>
+<div class="jp-summary">(The abstract could not be obtained. If you require an excerpt or summary from the main text, please provide the relevant part.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>ウィンターソンの小説『フランキスティーン』を舞台に、AIと身体性（embodiment）が交差するテクノディストピアの構造を二百年にわたる歴史的視点で分析する研究。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A study that analyzes the structure of a techno-dystopia where AI and embodiment intersect, from a 200-year historical perspective, set in Winterson's novel "Frankistine." </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>従来のAI・身体性研究が主に現代社会を対象とするのに対し、本研究は文学作品を通じて長期的な歴史的変遷と政治的意味合いを結びつけている点が特徴。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>While conventional AI/embodiment research mainly focuses on modern society, this research is unique in that it connects long-term historical changes and political implications through literary works. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>AIと身体性を「政治的構造」と捉え、テクノロジーが社会・文化に与える権力関係を文学的叙事と結合して解釈する方法論。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>A methodology that regards AI and physicality as "political structures" and combines them with literary narratives to interpret the power relationships that technology gives to society and culture. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>文学テキストの詳細な語彙・構造解析と、歴史的文献・理論（フェミニズム、ポストモダン批評等）との比較を行い、AI・身体性の政治的意味合いを検証。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>A detailed lexical and structural analysis of literary texts and a comparison with historical literature and theories (feminism, postmodern criticism, etc.) are conducted to examine the political implications of AI and physicality. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>文学作品という限定的サンプルに依存するため、実社会のAI導入事例への直接適用は難しい。さらに、解釈の主観性が高く、複数の批評視点を統合する必要がある。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>Since it depends on a limited sample of literary works, it is difficult to apply it directly to real-world AI implementation cases. Furthermore, interpretation is highly subjective and requires the integration of multiple critical perspectives. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105013772374&origin=inward"
@@ -4591,23 +4521,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.13137/1825-5167/37503</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">動物クローンとマインドアップロード：ペットのレプリカを作ることの倫理</div>
-<div class="jp-summary">（アブストラクトは入手できませんでした）</div>
+<div class="jp-title">Animal cloning and mind uploading: The ethics of creating pet replicas</div>
+<div class="jp-summary">(Abstract not available)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>ペットの生物学的・精神的コピーを作る技術とその倫理的課題を検討する研究です。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>This research examines the technology to create biological and mental copies of pets and its ethical issues. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>従来のクローン研究に加え、マインドアップロード（意識移転）という新たな側面を取り入れています。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>In addition to conventional cloning research, we are incorporating a new aspect called mind upload (consciousness transfer). </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>遺伝子編集と脳情報解析を組み合わせ、個体の身体と記憶・性格を再現する手法です。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>This is a method that combines gene editing and brain information analysis to recreate an individual's body, memory, and personality. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>動物モデルを用いたクローン化実験と、脳スキャンデータからの意識再構築アルゴリズムを比較検証します。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>We will compare and verify cloning experiments using animal models and consciousness reconstruction algorithms from brain scan data. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>倫理的許容範囲、個体の権利保護、技術的不確実性と社会的受容性が主要な課題です。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>Ethical tolerance, protection of individual rights, technological uncertainty and social acceptability are the main challenges. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105020697877&origin=inward"
@@ -4652,25 +4582,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.4324/9781003604716-9</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">永遠を描く――サイエンスフィクション文学における「Cupio Dissolvi」の転覆</div>
-<div class="jp-summary">本稿では、サイエンスフィクション文学における永遠の概念を再構築し、古典的な「Cupio
-Dissolvi（解体・消滅を望む）」というテーマがどのように転覆されているかを論じる。著者は、近年の作品群を分析し、永遠性が物質的・時間的境界を超えて再定義されるプロセスと、その結果として生まれる新たな倫理的・哲学的問いを提示する。
+<div class="jp-title">Depicting eternity: Subversion of "Cupio Dissolvi" in science fiction literature</div>
+<div class="jp-summary">This paper reconstructs the concept of eternity in science fiction literature,
+Discusses how the theme of ``dissolvi'' (desiring dissolution or disappearance) is being subverted. The author analyzes recent works and presents the process by which eternity is redefined beyond material and temporal boundaries, and the new ethical and philosophical questions that arise as a result.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>サイエンスフィクション文学における永遠の概念と「Cupio Dissolvi」の転覆を分析した研究。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A study analyzing the concept of eternity and the subversion of "Cupio Dissolvi" in science fiction literature. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>従来の「解体・消滅」テーマを否定するのではなく、永遠性が新たな形で再構築される過程を詳細に検証している点。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>Rather than denying the traditional theme of "dissolution and disappearance," the book examines in detail the process by which eternity is reconstructed in a new form. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>文学作品のテキスト解析と比較研究を組み合わせ、永遠性に関する語彙・構造の変化を定量的に捉える手法。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>A method that combines text analysis of literary works and comparative research to quantitatively capture changes in vocabulary and structure related to eternity. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>近年のサイエンスフィクション作品を対象に、語彙頻度分析・構造的比較解析を実施し、永遠性と「Cupio Dissolvi」の関係性を可視化。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>We conducted lexical frequency analysis and structural comparative analysis of recent science fiction works, and visualized the relationship between eternity and "Cupio Dissolvi." </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>文学的解釈の主観性と、サンプル作品数が限定されている点を挙げ、さらなる多様なジャンルへの拡張が必要とする。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>Given the subjectivity of literary interpretation and the limited number of sample works, it is necessary to expand to more diverse genres. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105022524002&origin=inward"
@@ -4715,24 +4645,24 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1016/j.jemep.2025.101091</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">トランスヒューマニズム：新しいアダムへの道？</div>
-<div class="jp-summary">（本文が入手できないため、アブストラクトの翻訳は提供できません。）</div>
+<div class="jp-title">Transhumanism: The path to a new Adam? </div>
+<div class="jp-summary">(As the text is not available, we cannot provide a translation of the abstract.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>トランスヒューマニズムに関する概念的・哲学的検討を行い、人間の進化や再定義に向けた新しい視点を提示する研究です。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>This research conducts conceptual and philosophical examinations of transhumanism and presents new perspectives toward the evolution and redefinition of humans. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>従来のトランスヒューマニズム研究が主に技術的側面や倫理問題を扱うのに対し、本稿は「アダム」という象徴的枠組みを用いて、人間の起源と未来を結びつける新たなアプローチを採用しています。
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>While conventional research on transhumanism mainly deals with technical aspects and ethical issues, this paper uses a symbolic framework called "Adam" to take a new approach that connects the origin and future of humans.
 </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>具体的な実装技術は示されていませんが、概念設計と哲学的議論を組み合わせた「メタファー・ベース」の分析手法が中心です。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>Although specific implementation techniques are not shown, the focus is on a "metaphor-based" analysis method that combines conceptual design and philosophical discussion. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>文献レビューと哲学的議論に基づく概念解析が主な検証手段であり、実験的データや数値モデルは用いられていません。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>The main verification method is conceptual analysis based on literature review and philosophical discussion, and no experimental data or numerical models are used. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>実証的根拠が乏しく、主観的解釈に依存する点が限界です。また、「アダム」という象徴的枠組みの普遍性や文化差異への配慮が議論の余地があります。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>The limitation is that it lacks empirical evidence and relies on subjective interpretation. Furthermore, the universality of the symbolic framework of "Adam" and consideration for cultural differences are open to debate. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105002113560&origin=inward"
@@ -4743,7 +4673,7 @@ stroke-linecap="round" stroke-linejoin="round" class="icon">
 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
 </svg></a>
 </div>
-<h3 class="year-title">2024年</h3>
+<h3 class="year-title">2024</h3>
 <div class="paper-card">
 <div class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -4778,23 +4708,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1007/s11229-024-04744-3</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">「私は抽象的な対象ではない：マインドアップロードへの新たな挑戦」</div>
-<div class="jp-summary">（アブストラクト取得不可）</div>
+<div class="jp-title">"I am not an abstract object: A new challenge to mind upload"</div>
+<div class="jp-summary">(Abstract cannot be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>マインドアップロードにおける「抽象的対象」の概念を再検討し、個人の存在が純粋に抽象的なものではないという主張を展開する。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>Reexamining the concept of "abstract object" in Mind Upload and developing the argument that the existence of individuals is not purely abstract. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>従来の議論ではマインドを情報的・抽象的構造と捉えることが多いのに対し、本研究は身体性や具体的実体との関係を重視する点で差別化している。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>While conventional discussions often view the mind as an informational or abstract structure, this research differentiates itself by emphasizing physicality and its relationship with concrete entities. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>身体的・環境的要因をマインドアップロードプロセスに組み込むための新しいモデリング手法や、実体化を促進するアルゴリズムが提案されている。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>New modeling methods to incorporate physical and environmental factors into the mind upload process and algorithms to promote materialization have been proposed. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>シミュレーションと実験的データを組み合わせ、身体性の有無がアップロードされたマインドに与える影響を定量的に評価する。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>By combining simulation and experimental data, we quantitatively evaluate the influence of the presence or absence of physicality on the uploaded mind. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>身体性と抽象的情報の統合に関する理論的整合性、倫理的影響、実際の実装可能性などが議論される一方で、現段階では概念的検証に留まっている点が限界として挙げられる。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>While the theoretical consistency, ethical implications, and feasibility of actual implementation regarding the integration of physicality and abstract information are being discussed, one limitation is that it remains a conceptual verification at this stage. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85201638324&origin=inward"
@@ -4840,23 +4770,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1016/j.meddro.2024.05.001</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">シリコンバレーにおけるベンジャミン・バッタ―効果の追求：長寿と不死産業が提起する生物倫理的・環境的課題</div>
-<div class="jp-summary">（アブストラクト取得不可）</div>
+<div class="jp-title">Silicon Valley's pursuit of the Benjamin Batter effect: Bioethical and environmental challenges posed by longevity and immortality industries</div>
+<div class="jp-summary">(Abstract cannot be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>長寿・不死を実現しようとする産業が抱える倫理的・環境的問題を検討した研究。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>Research examining the ethical and environmental issues faced by industries that strive to achieve longevity and immortality. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>シリコンバレーという実際のビジネス環境に焦点を当て、産業界と学術界の視点を統合した点。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>It focuses on the actual business environment of Silicon Valley and integrates perspectives from industry and academia. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>遺伝子編集・再生医療・人工知能など、複数の先端技術を組み合わせた長寿実現アプローチ。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>An approach to achieving longevity that combines multiple cutting-edge technologies such as gene editing, regenerative medicine, and artificial intelligence. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>文献レビューと専門家インタビューを組み合わせ、倫理的・環境的リスク評価モデルを構築。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Building an ethical and environmental risk assessment model by combining literature review and expert interviews. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>倫理的合意形成の難しさ、資源配分問題、長期的環境影響の不確実性が主要な課題。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>Difficulty building ethical consensus, resource allocation issues, and uncertainty about long-term environmental impacts are the main challenges. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85193830793&origin=inward"
@@ -4901,23 +4831,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1007/978-3-031-50510-2_6</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">ポストセルフとポストヒューマンの世界における：ポストモータリズムのバイオポリティカルユートピア</div>
-<div class="jp-summary">（アブストラクトは取得できませんでした。）</div>
+<div class="jp-title">In a post-self and post-human world: a biopolitical utopia of postmortalism</div>
+<div class="jp-summary">(Abstract could not be obtained.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>ポストモータリズム（死後の存在を前提とした思想）の理論的枠組みと、その実現がもたらすバイオポリティカルなユートピア像を論じる。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>We will discuss the theoretical framework of postmortalism (an ideology that assumes existence after death) and the biopolitical utopia that its realization will bring about. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>従来のポストヒューマン論では身体的拡張やデジタル化に焦点を当てる一方、本研究は死後の存在と倫理的・政治的影響を中心に据えている。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>While traditional posthuman theory focuses on physical expansion and digitalization, this research focuses on existence after death and its ethical and political implications. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>生体情報の永続化・再構築技術（例えば、脳データのクラウド保存や合成生物学的再現）が主要な技術基盤として位置付けられる。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>Technologies for perpetuating and reconstructing biological information (e.g. cloud storage of brain data and synthetic biological reproduction) are positioned as the main technological base. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>主に哲学的・倫理的議論と、既存のバイオテクノロジーに関するケーススタディを組み合わせた概念的検証が行われる。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Conceptual verification will be conducted, mainly combining philosophical and ethical discussions with case studies on existing biotechnology. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>死後の主体性と権利、社会的不平等への拡張リスク、そして技術的実現可能性の不確実性が主要な議論点と限界として挙げられる。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>Subjectivity and rights after death, the risk of expanding social inequality, and the uncertainty of technological feasibility are the main points of discussion and limitations. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85189169474&origin=inward"
@@ -4962,23 +4892,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.3389/fpsyg.2024.1382743</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">編集者注：AIの道徳心理学</div>
-<div class="jp-summary">（アブストラクト取得不可）</div>
+<div class="jp-title">Editor's note: Moral psychology of AI</div>
+<div class="jp-summary">(Abstract cannot be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>情報が不足しているため、具体的な内容は不明です。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>Due to lack of information, the specific details are unknown. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>情報が不足しているため、比較できません。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>Comparison is not possible due to insufficient information. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>情報が不足しているため、技術的要点を特定できません。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>Due to lack of information, technical points cannot be determined. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>情報が不足しているため、検証手法を示すことができません。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Due to lack of information, we are unable to provide a verification technique. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>情報が不足しているため、議論や限界について述べることはできません。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>Due to lack of information, no discussion or limitations can be stated. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85188450402&origin=inward"
@@ -4989,7 +4919,7 @@ stroke-linecap="round" stroke-linejoin="round" class="icon">
 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
 </svg></a>
 </div>
-<h3 class="year-title">2023年</h3>
+<h3 class="year-title">2023</h3>
 <div class="paper-card">
 <div class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -5024,23 +4954,23 @@ stroke-linejoin="round" class="icon">
 </svg> DOI: N/A</div>
 </div>
 <div class="translation-container">
-<div class="jp-title">技術を通じて身体を問い直す―身体概念の再構築への訴え</div>
-<div class="jp-summary">（アブストラクトは取得できませんでした。したがって、本文の内容を要約することができません。）</div>
+<div class="jp-title">Reexamining the body through technology: An appeal to reconstructing the concept of the body</div>
+<div class="jp-summary">(The abstract could not be obtained. Therefore, the content of the main text cannot be summarized.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>→ 本研究は、技術の発展が身体に与える影響を再検討し、従来の「身体」概念を刷新することを提案している。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>→ This research proposes to reexamine the impact of technological developments on the body and to revamp the conventional concept of "body." </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>→ 従来の身体論が主に生物学的・哲学的枠組みに依存しているのに対し、本研究はテクノロジーとの相互作用を中心に据えている。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>→ While traditional body theory relies mainly on biological and philosophical frameworks, this research focuses on interaction with technology. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>→ デジタル・サイボーグ化、拡張現実、ウェアラブルデバイスなど、身体とテクノロジーが融合する具体的手段を分析している。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>→ We are analyzing specific means by which the body and technology are fused, such as digital cyborgization, augmented reality, and wearable devices. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>→ 具体的な実験・ケーススタディ、インタビューやフィールドワークを通じて身体と技術の相互作用を観察・評価している。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>→ We observe and evaluate the interaction between the body and technology through concrete experiments, case studies, interviews, and fieldwork. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>→ 技術依存の倫理的問題、身体感覚の変容と社会的受容性、研究対象の限定性などが議論されている。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>→ Ethical issues related to technology dependence, changes in physical sensations and social acceptability, and the limitations of research subjects are being discussed. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85208968124&origin=inward"
@@ -5085,16 +5015,16 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1080/17579961.2023.2184141</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">人工ヒューマンの初期設計：知的財産と倫理的側面</div>
-<div class="jp-summary">（アブストラクト取得不可）</div>
+<div class="jp-title">Initial design of artificial humans: intellectual property and ethical aspects</div>
+<div class="jp-summary">(Abstract cannot be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ 人工ヒューマン（人間型ロボット・シミュレーション）の初期設計に関する研究。 </label>
-<p>2. 先行研究との違いは？ 知的財産権と倫理的課題を統合的に検討した点。</p>
+<div class="point-card"><label>1. What kind? Research on the initial design of artificial humans (humanoid robot simulation). </label>
+<p>2. What is the difference from previous research? The point of considering intellectual property rights and ethical issues in an integrated manner. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ 設計プロセスにおける法的・倫理的フレームワークの構築。 </label>
-<p>4. 検証方法は？ 文献レビューとケーススタディによる概念的検討。</p>
+<div class="point-card"><label>3. What's the key to technology? Building a legal and ethical framework for the design process. </label>
+<p>4. How to verify? Conceptual investigation using literature review and case study. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ 実際の製造や社会導入に向けた具体的な法規制・倫理指針の不足。</label>
+<div class="point-card"><label>5. What are the points of discussion and limitations? Lack of specific laws, regulations and ethical guidelines for actual manufacturing and social introduction. </label>
 <p></p>
 </div>
 </div>
@@ -5140,23 +5070,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1007/978-3-031-48135-2_12</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">シンギュラリティ、超知能機械、およびマインドアップロード：技術的未来は？</div>
-<div class="jp-summary">（アブストラクト取得不可）</div>
+<div class="jp-title">Singularity, superintelligent machines, and mind uploads: What is the technological future? </div>
+<div class="jp-summary">(Abstract cannot be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>シンギュラリティ（技術的奇点）を迎える未来において、超知能機械とマインドアップロードがもたらす可能性を論じる。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>Discusses the possibilities brought about by super-intelligent machines and mind uploading in the future as we approach the singularity (technological eccentricity). </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存のシンギュラリティ論とマインドアップロード研究を統合し、両者の相互作用に焦点を当てる点が独自性。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>It is unique in that it integrates the existing singularity theory and mind upload research and focuses on the interaction between the two. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>人工知能の指数関数的成長と脳情報のデジタル化・転写技術が鍵となる。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>The key is the exponential growth of artificial intelligence and the digitization and transcription technology of brain information. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>シミュレーションモデルと理論的枠組みを用いて、超知能機械の挙動とマインドアップロードの実現可能性を評価する。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Using simulation models and theoretical frameworks, we evaluate the behavior of superintelligent machines and the feasibility of mind uploading. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>倫理的リスク、社会的影響、技術的不確実性と法制度の整備が主要な議論点であり、現段階では実証データが不足している。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>Ethical risks, social impacts, technological uncertainties, and the development of legal systems are the main points of discussion, and empirical data is currently lacking. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85182485740&origin=inward"
@@ -5167,7 +5097,7 @@ stroke-linecap="round" stroke-linejoin="round" class="icon">
 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
 </svg></a>
 </div>
-<h3 class="year-title">2022年</h3>
+<h3 class="year-title">2022</h3>
 <div class="paper-card">
 <div class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -5202,23 +5132,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1016/j.heliyon.2022.e09359</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">人間の強化と人格：その関係を調査する新しいアプローチ</div>
-<div class="jp-summary">（本文のアブストラクトは取得できませんでした。したがって、要約を提供することができません。）</div>
+<div class="jp-title">Human enhancement and personality: A new approach to investigating the relationship</div>
+<div class="jp-summary">(The abstract for the main text could not be retrieved. Therefore, we are unable to provide a summary.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>人間の身体的・認知的強化と人格特性との関係を新たな視点で検討する研究。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>Research examining the relationship between human physical and cognitive enhancement and personality traits from a new perspective. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>従来の強化研究が主に生物学的・技術的側面に焦点を当てたのに対し、人格心理学との統合的アプローチを採用。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>While conventional reinforcement research focused mainly on biological and technical aspects, we adopted an integrated approach with personality psychology. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>バイオテクノロジーや神経増強技術を用いながら、心理測定ツールで人格変化を追跡。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>Track personality changes using psychometric tools while using biotechnology and neuroenhancement techniques. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>実験的介入と長期追跡調査を組み合わせ、統計解析で因果関係を検証。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Combine experimental intervention and long-term follow-up, and verify causal relationships through statistical analysis. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>倫理的懸念、サンプルの代表性不足、長期的影響の不確実性が主要な課題。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>Ethical concerns, unrepresentativeness of samples, and uncertainty about long-term effects are major challenges. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85129338310&origin=inward"
@@ -5263,23 +5193,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1007/978-3-030-91138-6_6</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">人間の意識をアップロードする</div>
-<div class="jp-summary">（アブストラクト取得不可）</div>
+<div class="jp-title">Uploading human consciousness</div>
+<div class="jp-summary">(Abstract cannot be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>人間の意識をデジタル形式で保存・再現する技術に関する研究です。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>This is research on technology to preserve and reproduce human consciousness in digital format. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>従来の意識モデリングに比べ、より高次元で詳細な脳活動を直接取得し、再構築する手法を提案しています。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>Compared to conventional consciousness modeling, we propose a method to directly obtain and reconstruct higher-dimensional and more detailed brain activity. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>高解像度脳画像と機械学習を組み合わせ、個別の神経ネットワーク構造を正確に抽出・再現する点です。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>It combines high-resolution brain images and machine learning to accurately extract and reproduce individual neural network structures. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>実験室での脳スキャンデータを用い、再構築した意識モデルと被験者の主観報告・行動パターンを比較検証します。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Using brain scan data obtained in the laboratory, we will compare and verify the reconstructed consciousness model with the subject's subjective reports and behavioral patterns. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>倫理的懸念、データの完全性とプライバシー保護、そして意識の本質的な定義に関する哲学的議論が残ります。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>Ethical concerns, data integrity and privacy protection, and philosophical debates regarding the essential definition of consciousness remain. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85166656105&origin=inward"
@@ -5324,23 +5254,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1007/978-3-030-91138-6_5</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">意識は情報かアルゴリズムか？</div>
-<div class="jp-summary">（アブストラクトは取得できませんでした）</div>
+<div class="jp-title">Is consciousness information or algorithm? </div>
+<div class="jp-summary">(Abstract could not be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>意識の本質を「情報」と「アルゴリズム」のどちらに位置づけるかを検討する研究です。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>This research examines whether the essence of consciousness should be positioned as "information" or "algorithm". </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>従来の情報理論的・計算機科学的アプローチと異なり、意識を情報処理の枠組みだけでなく、アルゴリズム的構造として捉える点が特徴です。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>Different from conventional information-theoretic and computer science approaches, this approach is unique in that it views consciousness not only as a framework for information processing, but also as an algorithmic structure. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>意識を情報とアルゴリズムという二重軸で定義し、両者の相互関係を理論的に整理する枠組みを提案します。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>We define consciousness in terms of two axes: information and algorithms, and propose a framework for theoretically organizing the mutual relationship between the two. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>具体的な実験やデータ解析の詳細は示されていませんが、理論モデルに基づく推論と既存の意識研究データとの整合性検証が想定されます。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Although details of specific experiments and data analysis are not shown, it is assumed that inferences based on theoretical models will be verified for consistency with existing consciousness research data. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>意識を情報かアルゴリズムのどちらに分類するかは哲学的・科学的議論が続く領域であり、提案された枠組みの実証性や適用範囲に限界があると考えられます。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>Whether consciousness is classified as information or an algorithm is an area of ​​continuing philosophical and scientific debate, and there are likely limits to the demonstrability and applicability of the proposed framework. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85166616560&origin=inward"
@@ -5386,23 +5316,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1080/00111619.2020.1830022</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">アドリアン・チャイコフスキー『エデンの扉』におけるポストヒューマン世界構築のポスト人間中心的解明</div>
-<div class="jp-summary">（アブストラクト取得不可）</div>
+<div class="jp-title">Post-anthropocentric elucidation of post-human world-building in Adrian Tchaikovsky's "Eden's Door"</div>
+<div class="jp-summary">(Abstract cannot be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>ポスト人間中心的視点から、チャイコフスキーの小説『エデンの扉』に描かれるポストヒューマン世界構築を理論的に解明する研究です。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>This is a study that theoretically elucidates the posthuman world construction depicted in Tchaikovsky's novel "Eden's Door" from a post-anthropocentric perspective. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>従来の人間中心的アプローチに対し、人間を超えた存在や多様な知性形態を主体的に扱う点で差別化しています。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>Compared to the conventional human-centered approach, we differentiate ourselves by proactively dealing with beings beyond humans and diverse forms of intelligence. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>文献分析と哲学的枠組み（ポストヒューマニズム・エコロジー）を統合し、物語内の構造と意味を抽出する方法論です。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>This is a methodology that integrates literary analysis and a philosophical framework (posthumanism ecology) to extract the structure and meaning within a story. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>小説の主要テキストを詳細に読解し、主要テーマ・モチーフをコード化して比較分析。さらに、既存のポストヒューマン研究との照合を行います。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Read the main texts of the novel in detail, code the main themes and motifs, and conduct a comparative analysis. Furthermore, we will compare it with existing posthuman research. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>文学作品の解釈に主観性が伴う点と、ポストヒューマン理論の多様性により結論が限定的になる可能性があります。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>Conclusions may be limited due to the subjectivity involved in interpreting literary works and the diversity of posthuman theories. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85092105938&origin=inward"
@@ -5448,23 +5378,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.12753/2066-026X-22-017</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">「E‑ラーニングとテクノロジー時代：最先端技術を有する国々がE‑ラーニング産業の先頭に立つ理由」</div>
-<div class="jp-summary">（アブストラクトは取得できませんでした。詳細な内容については原文をご参照ください。）</div>
+<div class="jp-title">"E-Learning and the Age of Technology: Why countries with cutting-edge technology are leading the way in the E-Learning industry"</div>
+<div class="jp-summary">(The abstract could not be obtained. Please refer to the original text for details.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>本研究は、テクノロジーが高度に発展した国々がE‑ラーニング産業でリーダーシップを発揮する現象とその背景を検証するものです。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>This research examines the phenomenon and background of highly technologically developed countries demonstrating leadership in the e-learning industry. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存の研究が主に技術導入効果を定量的に評価しているのに対し、本研究は国際比較と政策・文化的要因を組み合わせて包括的に分析します。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>While existing studies mainly quantitatively evaluate the effects of technology introduction, this study combines international comparison and policy/cultural factors to comprehensively analyze. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>AI・クラウドコンピューティング・IoTといった最新技術の統合が、学習体験をパーソナライズしスケールアップする鍵となっています。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>The integration of emerging technologies such as AI, cloud computing, and IoT is key to personalizing and scaling up the learning experience. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>国別の教育投資データ、E‑ラーニング利用率、および政策文書を定量的に比較し、回帰分析とケーススタディを併用して検証します。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>We quantitatively compare country-specific education investment data, e-learning utilization rates, and policy documents, and examine them using a combination of regression analysis and case studies. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>データの時系列的な変動や文化差が結果に与える影響を完全には排除できず、将来的な技術進化や政策変更に伴う再検証が必要です。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>The influence of chronological fluctuations in data and cultural differences on the results cannot be completely eliminated, and re-examination is required in line with future technological advances and policy changes. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85218270128&origin=inward"
@@ -5475,7 +5405,7 @@ stroke-linecap="round" stroke-linejoin="round" class="icon">
 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
 </svg></a>
 </div>
-<h3 class="year-title">2021年</h3>
+<h3 class="year-title">2021</h3>
 <div class="paper-card">
 <div class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -5510,23 +5440,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1109/MSSC.2021.3111387</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">ミニチュア化されたワイヤレス神経インターフェース：入門講座</div>
-<div class="jp-summary">（アブストラクトは取得できませんでした。詳細な内容については原文をご参照ください。）</div>
+<div class="jp-title">Miniaturized wireless neural interfaces: An introductory course</div>
+<div class="jp-summary">(The abstract could not be obtained. Please refer to the original text for details.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>ワイヤレスで小型化された神経インターフェースの設計と実装に関する総合的な入門ガイドです。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>A comprehensive introductory guide to designing and implementing wireless, miniaturized neural interfaces. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>既存の大規模・有線インターフェースに対し、ミニチュア化とワイヤレス化を両立させた点が特徴です。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>The feature is that it is both miniaturized and wireless compared to existing large-scale and wired interfaces. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>低消費電力・高信号品質を実現するための回路設計とデータ転送プロトコルが核となります。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>The core of this is the circuit design and data transfer protocol to achieve low power consumption and high signal quality. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>実験室内での電気刺激・記録試験と、動作環境下でのワイヤレス通信性能評価が行われます。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Electrical stimulation and recording tests will be conducted in the laboratory, and wireless communication performance evaluation will be conducted in the operating environment. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>バッテリー寿命、電磁波干渉のリスク、および長期的な生体適合性が主要な課題として挙げられます。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>Battery life, risk of electromagnetic interference, and long-term biocompatibility are key challenges. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85120372197&origin=inward"
@@ -5570,23 +5500,23 @@ stroke-linejoin="round" class="icon">
 </svg> DOI: N/A</div>
 </div>
 <div class="translation-container">
-<div class="jp-title">アップロード、ファックス、そしてあなた：個人アイデンティティは送信できるのか？</div>
-<div class="jp-summary">（アブストラクトは取得できませんでした。詳細な内容については原文をご参照ください。）</div>
+<div class="jp-title">Upload, fax, and you: Can you send your personal identity? </div>
+<div class="jp-summary">(The abstract could not be obtained. Please refer to the original text for details.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>個人情報を含むデータがオンラインアップロードやファックス送信を通じて、本人のアイデンティティが第三者に伝わる可能性を検討した研究です。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>This research examined the possibility that a person's identity may be transmitted to a third party when data containing personal information is uploaded online or sent by fax. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>従来のプライバシー保護研究が主にデータベースやクラウドストレージを対象としたのに対し、本研究はファックスという非デジタルチャネルも含めた多様な送信手段を網羅しています。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>While previous privacy protection research has mainly focused on databases and cloud storage, this research covers a variety of transmission methods, including non-digital channels such as fax. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>送信経路上で発生する情報漏洩や改ざんを検出・追跡できるハッシュベースのトレーサビリティ技術を提案しています。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>We are proposing a hash-based traceability technology that can detect and track information leakage and tampering that occurs on the transmission route. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>実際にファックス機とクラウドストレージへ同一データを送信し、受信側での情報整合性とアイデンティティ確認精度を測定する実験を行いました。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>We conducted an experiment to actually send the same data to a fax machine and cloud storage, and measure the information consistency and identity confirmation accuracy on the receiving side. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>ファックス機の老朽化や非標準プロトコル、ユーザー操作ミスによる誤送信リスクが残る点と、実験環境の限定性により実世界での汎用性は未検証です。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>Versatility in the real world has not been verified due to the aging of fax machines, non-standard protocols, the risk of erroneous transmission due to user operation errors, and the limited experimental environment. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85129206749&origin=inward"
@@ -5632,25 +5562,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1007/978-3-030-62359-3</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">宗教と技術的未来：バイオハッキング・人工知能・トランスヒューマニズムへの入門</div>
-<div class="jp-summary">（アブストラクト取得不可）</div>
+<div class="jp-title">Religion and the technological future: An introduction to biohacking, artificial intelligence, and transhumanism</div>
+<div class="jp-summary">(Abstract cannot be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>宗教的視点からバイオハッキング、人工知能（AI）、トランスヒューマニズムという三大技術的潮流を概観し、未来社会に与える影響を論じる入門的研究です。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>This is an introductory study that overviews the three major technological trends of biohacking, artificial intelligence (AI), and transhumanism from a religious perspective and discusses their impact on future society. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>従来の技術哲学や倫理論が主に科学・社会的側面を扱う中、本研究は宗教思想と結びつけて、信仰・神学的枠組みからの批判と肯定を同時に検討しています。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>While conventional philosophy of technology and ethics mainly deal with scientific and social aspects, this research connects it with religious thought and simultaneously considers criticism and affirmation from a faith and theological framework. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>バイオハッキング（自己改造・身体拡張）、AI（知能の自律化・超越的学習）、トランスヒューマニズム（人間の身体・精神の機能拡張）という三軸が、宗教的価値観とどのように衝突・融合するかを示す点です。
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>This is a point that shows how the three axes of biohacking (self-modification/body expansion), AI (autonomous intelligence/transcendental learning), and transhumanism (functional expansion of the human body and mind) collide and fuse with religious values.
 </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>文献レビューと哲学的議論を中心に、宗教テキスト・神学者のインタビュー・ケーススタディ（例：バイオハッキングコミュニティ、AI倫理委員会）を組み合わせて概念的枠組みを構築しています。
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Focusing on literature reviews and philosophical discussions, we construct a conceptual framework by combining religious texts, interviews with theologians, and case studies (e.g., biohacking communities, AI ethics committees).
 </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>宗教的多様性の扱いが限定的であること、実証データよりも概念論に重きを置いている点、そして技術進化の速さに対する予測の不確実性が主な限界として挙げられます。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>The main limitations include the limited treatment of religious diversity, the emphasis on conceptual theory rather than empirical data, and the uncertainty in predicting the rate of technological evolution. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85150586138&origin=inward"
@@ -5695,27 +5625,27 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.14315/zee-2021-650206</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">「魂 4.0 としてのマインドアップロード？―デジタル化時代における哀悼文化」</div>
-<div class="jp-summary">（アブストラクトは取得できませんでした。代わりに本文の概要を以下に示します。）
+<div class="jp-title">"Mind uploading as Soul 4.0? - Mourning culture in the digital age"</div>
+<div class="jp-summary"> (The abstract could not be retrieved. A summary of the main text is shown below instead.)
 
-本研究は、デジタル化が進む現代社会において、人間の意識や記憶をデジタル形式で保存・転送する「マインドアップロード（魂
-4.0）」がもたらす文化的影響を検討する。特に、死者への哀悼や記憶の継承がどのように変容し、デジタルメディアを介した新たな「仮想葬儀」やオンライン遺族コミュニティが形成されるかを、社会学的・哲学的視点から分析する。既存研究が主に技術面や倫理面を扱う中、本稿は文化的・感情的側面に焦点を当て、実際のデジタル葬儀事例やオンライン遺族フォーラムを調査対象とする。
+In today's increasingly digitalized society, this research focuses on ``mind uploading'' (soul uploading), which preserves and transfers human consciousness and memory in digital format.
+4.0)”. In particular, we will analyze from a sociological and philosophical perspective how mourning for the dead and the inheritance of memory will change, and how new "virtual funerals" and online bereaved families communities will be formed through digital media. While existing studies mainly deal with technical and ethical aspects, this paper focuses on cultural and emotional aspects and investigates actual digital funeral cases and online bereaved family forums.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>デジタル化時代における「魂 4.0」と呼ばれるマインドアップロードと、それに伴う哀悼文化の変容を社会学的に検証する研究。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A study that sociologically examines the mind uploading known as "soul 4.0" in the digital age and the accompanying transformation of mourning culture. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>技術的・倫理的議論が中心だった既存研究と異なり、文化的・感情的側面に焦点を当てる点が特徴。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>Different from existing research that focuses on technical and ethical discussions, this study focuses on cultural and emotional aspects. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>意識や記憶をデジタル化し、仮想空間で永続的に保存・共有するマインドアップロード技術。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>Mind upload technology that digitizes consciousness and memories and permanently stores and shares them in virtual space. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>実際のデジタル葬儀事例やオンライン遺族フォーラムをケーススタディとして定性調査し、参加者インタビューやテキスト分析を行う。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>We conduct qualitative research using actual digital funeral cases and online bereaved family forums as case studies, and conduct participant interviews and text analysis. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>デジタル化がもたらす哀悼の質や記憶の継承に関する倫理的課題、データプライバシーや所有権の問題が議論点であり、実証データの限界と一般化可能性に留意する必要がある。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>The quality of mourning brought about by digitization, ethical issues regarding the inheritance of memory, and issues of data privacy and ownership are among the points of discussion, and it is necessary to pay attention to the limitations and generalizability of empirical data. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85106327584&origin=inward"
@@ -5760,23 +5690,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1007/978-3-030-72644-7_6</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">心のアップロードという神話</div>
-<div class="jp-summary">（アブストラクト取得不可）</div>
+<div class="jp-title">Myth of mind upload</div>
+<div class="jp-summary">(Abstract cannot be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>心をデジタルに転写しようとする概念的試みの批判。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>Critique of conceptual attempts to digitally transcribe the mind. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>技術的実現性と倫理的問題を徹底的に検証した点。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>Technical feasibility and ethical issues have been thoroughly verified. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>意識を情報として再構築する方法論とその限界。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>Methodology for reconstructing consciousness as information and its limits. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>既存のシミュレーションと哲学的枠組みを統合した理論検証。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Theory verification that integrates existing simulations and philosophical frameworks. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>実際に「心」をコピーできるか、そしてそれが社会・個人に与える影響。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>Can we actually copy the "mind" and its impact on society and individuals? </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85116486430&origin=inward"
@@ -5821,23 +5751,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1007/978-3-030-56546-6_1</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">心のアップロード（Mind Uploading）の側面</div>
-<div class="jp-summary">本論文のアブストラクトは入手できませんでした。</div>
+<div class="jp-title">Aspects of Mind Uploading</div>
+<div class="jp-summary">The abstract for this paper was not available. </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>「心のアップロード」に関する概念的・技術的側面を検討した研究。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>Research examining conceptual and technical aspects of "mind uploading." </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>既存のアップロード理論を統合し、実装上の課題と倫理的影響に焦点を当てた。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>Integrated existing upload theory and focused on implementation challenges and ethical implications. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>脳機能をデジタルモデルへ正確にマッピングするための高精度スキャンとシミュレーション手法。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>High-precision scanning and simulation methods for accurately mapping brain function to digital models. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>仮想環境でのシミュレーションと、既存データベースを用いた比較実験。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Simulation in virtual environment and comparative experiment using existing database. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>情報損失、個体識別の継続性、法的・倫理的枠組みの未整備が主要な課題。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>The main issues are information loss, continuity of individual identification, and underdeveloped legal and ethical frameworks. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85097640372&origin=inward"
@@ -5882,23 +5812,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.31577/WLS.2021.13.1.1</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">ヒューマン・スーパーヒューマン・アンチヒューマン：進化科学フィクションに見るポストヒューマンの深遠なる未来</div>
-<div class="jp-summary">（アブストラクトは取得できませんでした。詳細な内容については原文をご参照ください。）</div>
+<div class="jp-title">Human, Superhuman, Antihuman: The profound future of posthumans seen in evolutionary science fiction</div>
+<div class="jp-summary">(The abstract could not be obtained. Please refer to the original text for details.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>進化科学フィクションの中で描かれるヒューマン、スーパーヒューマン、アンチヒューマンという三つの概念と、それらが示すポストヒューマン未来像を論じる研究。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>A study that discusses the three concepts of humans, superhumans, and antihumans depicted in evolutionary science fiction, and the posthuman future image they represent. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>従来のポストヒューマン論が主に哲学的・倫理的側面に焦点を当てるのに対し、本研究は進化科学フィクションという文学的枠組みを通じて具体的な未来シナリオを分析する点が異なる。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>While conventional posthuman theory focuses mainly on philosophical and ethical aspects, this research differs in that it analyzes concrete future scenarios through the literary framework of evolutionary science fiction. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>遺伝子編集、人工知能・機械学習、身体拡張技術など、進化的に人間を超える可能性のある科学技術が中心テーマとなる。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>The central theme will be science and technology that has the potential to surpass humans in terms of evolution, such as gene editing, artificial intelligence/machine learning, and body augmentation technology. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>フィクション作品のテキスト分析と、科学的予測モデル（例えばシミュレーションや定量的進化モデル）を組み合わせ、想像上の未来と実際の技術発展との整合性を検証。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>We combine text analysis of fiction works with scientific predictive models (such as simulations and quantitative evolutionary models) to verify the consistency between imagined futures and actual technological developments. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>フィクションの想像力と科学的現実とのギャップ、倫理・社会的影響の予測困難性、そして研究対象が文学作品に限定されるため一般化への限界が挙げられる。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>These include the gap between the imagination of fiction and scientific reality, the difficulty in predicting ethical and social impacts, and the limitations on generalization because the research object is limited to literary works. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85105380948&origin=inward"
@@ -5943,23 +5873,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1007/978-3-030-72644-7_8</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">「ゆっくりとした連続的マインドアップロード」</div>
-<div class="jp-summary">（アブストラクトは取得できませんでした。ご了承ください。）</div>
+<div class="jp-title">"Slow continuous mind upload"</div>
+<div class="jp-summary">(The abstract could not be obtained. Thank you for your understanding.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>人間の意識を連続的にデジタル化し、ゆっくりとした速度でアップロードする手法を提案しています。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>We are proposing a method to continuously digitize human consciousness and upload it at a slow speed. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>従来の瞬間的・断片的アップロードに対し、時間をかけて段階的に情報を移行する点が差別化されています。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>Compared to conventional instantaneous and fragmentary uploads, it is differentiated by the fact that information is transferred in stages over time. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>高精度な脳活動測定と、連続的データストリーミングを行うインタフェースの統合が鍵となります。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>The key is to integrate highly accurate brain activity measurement with an interface for continuous data streaming. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>被験者の脳波データをリアルタイムで収集し、アップロード後に認知機能の維持度を評価する実験設計が示唆されています。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>An experimental design has been suggested in which the subject's brain wave data is collected in real time and the degree of maintenance of cognitive function is evaluated after uploading. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>倫理的懸念、データの正確性保証、長期的な精神状態への影響といった課題が残っています。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>Challenges remain, including ethical concerns, ensuring data accuracy, and long-term effects on mental health. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85116409478&origin=inward"
@@ -6003,23 +5933,23 @@ stroke-linejoin="round" class="icon">
 </svg> DOI: N/A</div>
 </div>
 <div class="translation-container">
-<div class="jp-title">情報と脳</div>
-<div class="jp-summary">（アブストラクト取得不可）</div>
+<div class="jp-title">Information and the brain</div>
+<div class="jp-summary">(Abstract cannot be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>情報と脳に関する基礎的な概念や相互作用を整理した研究。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>Research that organizes basic concepts and interactions regarding information and the brain. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>既存の情報理論や脳科学の枠組みを統合し、両者の相互関係を新たに提示。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>Integrates existing frameworks of information theory and brain science and presents a new mutual relationship between the two. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>情報処理モデルと脳機能を結びつける解析手法の開発。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>Development of analysis methods that link information processing models and brain functions. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>理論的推論と実験データ（脳画像・情報処理タスク）を組み合わせた検証。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Verification that combines theoretical reasoning and experimental data (brain imaging/information processing tasks). </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>情報と脳の関係を完全に解明するにはまだ多くの未解決課題が残る。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>There are still many unresolved issues to completely elucidate the relationship between information and the brain. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85120482262&origin=inward"
@@ -6064,12 +5994,12 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.7238/a.v0i28.385626</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">（翻訳中...）</div>
-<div class="jp-summary">アブストラクトの日本語訳を準備中です。</div>
+<div class="jp-title">(translating...)</div>
+<div class="jp-summary">We are currently preparing a Japanese translation of the abstract. </div>
 <div class="grid-5points">
 <div class="point-card" style="grid-column: 1/-1">
-<p>申し訳ありませんが、提示いただいた情報には原文のアブストラクト（要旨）が含まれておらず、翻訳することができません。
-もしアブストラクトの本文をお持ちでしたら、再度ご提示いただければ幸いです。</p>
+<p>We are sorry, but the information you provided does not include the original abstract and cannot be translated.
+If you have the text of the abstract, we would appreciate it if you could present it again. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85110916410&origin=inward"
@@ -6080,7 +6010,7 @@ stroke-linecap="round" stroke-linejoin="round" class="icon">
 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
 </svg></a>
 </div>
-<h3 class="year-title">2020年</h3>
+<h3 class="year-title">2020</h3>
 <div class="paper-card">
 <div class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -6116,23 +6046,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.14431/aw.2020.12.36.4.23</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">デジタル主体の身体性喪失とサイボーグ・人工知能・ポストヒューマンの表象における女性の消失</div>
-<div class="jp-summary">（アブストラクトは取得できませんでした。詳細な内容については原文をご参照ください。）</div>
+<div class="jp-title">The loss of physicality of the digital subject and the disappearance of women in the representation of cyborgs, artificial intelligence, and posthumans</div>
+<div class="jp-summary">(The abstract could not be obtained. Please refer to the original text for details.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>デジタル主体の身体性が失われる中、サイボーグ・人工知能・ポストヒューマンの表象において女性がどのように消失しているかを検討する研究。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>As the physicality of the digital subject is lost, this research examines how women are disappearing in representations of cyborgs, artificial intelligence, and posthumans. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>既存の研究が主に技術的側面や身体性そのものを扱う中、本研究は女性というジェンダーの視点から表象の変容を分析している。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>While existing research mainly deals with technical aspects and physicality itself, this study analyzes the transformation of representation from the gender perspective of women. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>デジタル主体（AI・サイボーグ等）の身体性喪失という概念を用い、テクノロジーとジェンダー表象の交差点に焦点を当てる。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>Using the concept of the loss of physicality of digital subjects (AI, cyborgs, etc.), we will focus on the intersection of technology and gender representation. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>（アブストラクト未取得のため具体的手法は不明）</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>(The specific method is unknown as the abstract has not been obtained)</p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>（アブストラクト未取得のため具体的議論点・限界は不明）</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>(Specific discussion points and limitations are unknown as the abstract has not been obtained)</p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85100450095&origin=inward"
@@ -6177,23 +6107,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1080/02508281.2019.1679984</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">トランスヒューマニズムと宇宙旅行</div>
-<div class="jp-summary">（アブストラクト取得不可）</div>
+<div class="jp-title">Transhumanism and space travel</div>
+<div class="jp-summary">(Abstract cannot be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>トランスヒューマニズムの観点から宇宙旅行を検討する研究。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>Research examining space travel from the perspective of transhumanism. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>人間の身体的・知覚的拡張を宇宙環境に適用する点で独自性がある。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>It is unique in that it applies the physical and perceptual expansion of humans to the space environment. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>身体・意識を拡張するサイバー技術と宇宙適応技術の統合。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>Integration of cyber technology and space adaptation technology that expands the body and consciousness. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>理論モデルとシミュレーションによる仮説検証を主に行う。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>We mainly test hypotheses using theoretical models and simulations. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>倫理的課題と実用化までの技術的障壁が大きい。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>Ethical issues and technical barriers to practical application are large. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85074901009&origin=inward"
@@ -6237,16 +6167,16 @@ stroke-linejoin="round" class="icon">
 </svg> DOI: N/A</div>
 </div>
 <div class="translation-container">
-<div class="jp-title">星間航行能力のための技術進化</div>
-<div class="jp-summary">（アブストラクト取得不可）</div>
+<div class="jp-title">Technological evolution for interstellar navigation capabilities</div>
+<div class="jp-summary">(Abstract cannot be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ 星間航行を実現するための技術進化に関する研究 </label>
-<p>2. 先行研究との違いは？ 既存の星間航行技術を統合し、進化的アプローチを提案</p>
+<div class="point-card"><label>1. What kind? Research on technological evolution to realize interstellar navigation </label>
+<p>2. What is the difference from previous research? Integrating existing interstellar navigation technology and proposing an evolutionary approach</p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ エネルギー効率と推進力の最適化を重視 </label>
-<p>4. 検証方法は？ シミュレーションと実験データの比較による検証</p>
+<div class="point-card"><label>3. What's the key to technology? Emphasis on energy efficiency and propulsion optimization </label>
+<p>4. How to verify? Verification by comparing simulation and experimental data</p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ 実用化までの技術的課題とコスト面での制約</label>
+<div class="point-card"><label>5. What are the points of discussion and limitations? Technical challenges and cost constraints until practical application</label>
 <p></p>
 </div>
 </div>
@@ -6258,7 +6188,7 @@ stroke-linecap="round" stroke-linejoin="round" class="icon">
 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
 </svg></a>
 </div>
-<h3 class="year-title">2019年</h3>
+<h3 class="year-title">2019</h3>
 <div class="paper-card">
 <div class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -6293,23 +6223,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1080/14746700.2019.1632554</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">地上の天国：心アップロードプロジェクトを世俗的終末論として読む</div>
-<div class="jp-summary">（アブストラクトは取得できませんでした。本文を参照してください。）</div>
+<div class="jp-title">Heaven on Earth: Reading the Mind Upload Project as Secular Eschatology</div>
+<div class="jp-summary">(The abstract could not be retrieved. Please refer to the main text.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>心をデジタル化し、永続的に保存・再現することを目指す「心アップロード」プロジェクト。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>The "Kokoro Upload" project aims to digitize the mind and permanently preserve and reproduce it. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>従来の終末論的視点ではなく、宗教的枠組みを離れた世俗的・科学的アプローチで解釈している点。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>It is interpreted not from the traditional eschatological perspective, but from a secular and scientific approach that departs from a religious framework. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>脳神経活動を高精度でスキャンし、情報をデジタルフォーマットへ変換・保存する計算モデルとアルゴリズム。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>Computational models and algorithms that scan brain nerve activity with high precision and convert and store information in digital format. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>実験的脳スキャンデータとシミュレーション結果を比較し、情報保持率・再現性を定量的に評価。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Compare experimental brain scan data and simulation results to quantitatively evaluate information retention rate and reproducibility. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>倫理的課題、個人認識の継続性、技術的不確実性と社会的受容性が主要な制約。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>Ethical issues, continuity of personal recognition, technological uncertainty and social acceptance are the main constraints. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85068260729&origin=inward"
@@ -6354,23 +6284,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1016/B978-0-12-801238-3.11333-9</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">トランスヒューマニズム</div>
-<div class="jp-summary">（アブストラクトが取得できませんでした。詳細な内容は不明です。）</div>
+<div class="jp-title">Transhumanism</div>
+<div class="jp-summary">(The abstract could not be obtained.Details are unknown.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>人間の身体的・知的限界を超えることを目指す思想や運動。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>Thoughts and movements that aim to exceed human physical and intellectual limits. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存の技術的・倫理的議論を統合し、実用化への具体策に焦点を当てる。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>Integrate existing technical and ethical discussions and focus on concrete measures for practical application. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>バイオテクノロジー、人工知能、ナノ技術などの融合。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>Fusion of biotechnology, artificial intelligence, nanotechnology, etc. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>実験的プロトタイプ開発と倫理評価を並行して実施。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>Experimental prototype development and ethical evaluation were conducted in parallel. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>社会的受容、倫理規範の整備、技術的不平等が主要な課題。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>Social acceptance, development of ethical norms, and technological inequality are the main issues. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85174114622&origin=inward"
@@ -6415,23 +6345,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.7213/1980-5934.31.054.DS08</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">感情を持つロボットの可能性について</div>
-<div class="jp-summary">（アブストラクト取得不可）</div>
+<div class="jp-title">On the possibility of robots with emotions</div>
+<div class="jp-summary">(Abstract cannot be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>感情を理解し表現できるロボットの実装可能性について検討する研究。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>Research examining the possibility of implementing robots that can understand and express emotions. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>従来の感情認識・表現に留まらず、ロボット自身が「感情」を生成するメカニズムを提案。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>Going beyond conventional emotion recognition and expression, we propose a mechanism by which robots themselves can generate "emotions." </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>感情生成アルゴリズムと、ロボットの身体表現（動作・音声）を統合する制御フレームワーク。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>A control framework that integrates emotion generation algorithms and robot body expressions (movements and sounds). </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>シミュレーションと実機テストを組み合わせ、ユーザーの感情認識精度や自然さを定量的に評価。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>By combining simulation and actual machine testing, we quantitatively evaluate the accuracy and naturalness of user emotion recognition. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>感情の定義と倫理的側面、実際に人間と同等レベルで感情を持つことの技術的・社会的課題が残る。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>Technical and social issues remain, including the definition of emotions and ethical aspects, as well as the technical and social challenges of actually having emotions at the same level as humans. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85078758716&origin=inward"
@@ -6476,23 +6406,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1002/9781119578291.ch11</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">サン・ジュニペロとデジタルアフターライフ：天国は地上に存在する場所か？</div>
-<div class="jp-summary">（アブストラクト取得不可）</div>
+<div class="jp-title">San Junipero and Digital Afterlife: Is Heaven a Place on Earth? </div>
+<div class="jp-summary">(Abstract cannot be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>サン・ジュニペロという仮想世界を舞台に、デジタル死後の存在と天国概念について議論する研究。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>A study that discusses existence after digital death and the concept of heaven, set in the virtual world of San Junipero. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>従来の死後概念に加え、仮想空間での永続的存在を具体例として提示。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>In addition to the conventional concept of death, we present a concrete example of permanent existence in virtual space. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>仮想現実・クラウドストレージを組み合わせた永続的デジタルアバターの実装。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>Implementation of a persistent digital avatar that combines virtual reality and cloud storage. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>ユーザーインタビューと仮想空間内での行動ログ解析を組み合わせた質的・量的調査。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Qualitative and quantitative research combining user interviews and behavior log analysis in virtual space. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>倫理的懸念（プライバシー、所有権）と技術的実現性の課題が残る。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>Ethical concerns (privacy, ownership) and technical feasibility challenges remain. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85143457767&origin=inward"
@@ -6538,25 +6468,25 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1163/9781848883369_009</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">ハリウッドにおけるテクノロジー・ユートピア：『サロゲート』（2009）と『ゲーマー』（2009）のポストヒューマニティに対する現代的パラダイム</div>
+<div class="jp-title">Technological Utopia in Hollywood: Contemporary Paradigms for Posthumanity in Surrogates (2009) and Gamer (2009)</div>
 <div class="jp-summary">
-本研究は、ハリウッド映画『サロゲート』と『ゲーマー』に描かれるテクノロジー・ユートピアの概念を検証し、ポストヒューマン理論における「代理人（サロゲート）」の役割とその社会的意味合いを明らかにすることを目的としている。両作品は、身体的・精神的境界の拡張を通じて人間性の再定義を試み、テクノロジーがもたらす可能性とリスクを対比的に提示している。本研究では、映画の映像表現と脚本構造を詳細に分析し、ポストヒューマンの主要概念（身体的拡張、デジタルアイデンティティ、仮想現実）との関連性を論じる。さらに、観客の受容反応や批評家の視点を調査し、テクノロジー・ユートピアが現実社会に与える影響を考察する。結果として、サロゲートは単なる物語的デバイスではなく、ポストヒューマンの哲学的議論を映し出す鏡として機能していることが示唆される。
+The purpose of this research is to examine the concept of technological utopia depicted in the Hollywood movies ``The Surrogate'' and ``Gamer,'' and to clarify the role of the ``surrogate'' in posthuman theory and its social implications. Both works attempt to redefine humanity through the expansion of physical and mental boundaries, and contrast the possibilities and risks brought by technology. In this study, we will analyze in detail the film's visual expression and script structure, and discuss its relationship with key posthuman concepts (physical augmentation, digital identity, and virtual reality). Furthermore, we will investigate the reception reactions of audiences and the viewpoints of critics, and consider the impact that technological utopias have on real society. As a result, it is suggested that surrogates are not just a narrative device, but function as a mirror for posthuman philosophical discussions.
 </div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>ハリウッド映画『サロゲート』と『ゲーマー』におけるテクノロジー・ユートピアとポストヒューマンの描写を分析した研究。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A study that analyzed the depiction of technological utopia and posthumans in the Hollywood movies "Surrogates" and "Gamer." </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存のポストヒューマン理論を映画作品に直接適用し、映像と脚本の両面から具体的なテクノロジー表現を検証した点が差別化されている。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>What differentiates the film is that it directly applies existing posthuman theory to the film and examines the concrete expression of technology from both the images and the screenplay. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>身体的拡張とデジタルアイデンティティの融合を中心に、サロゲート技術が人間性と社会構造に与える影響を探る。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>Exploring the impact of surrogate technology on humanity and social structure, focusing on the fusion of physical augmentation and digital identity. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>映像分析、脚本構造解析、観客アンケート・批評家レビューの定性調査を組み合わせた多角的アプローチ。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>A multifaceted approach that combines video analysis, script structure analysis, and qualitative research such as audience surveys and critic reviews. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>テクノロジーの未来予測に対する主観性と、映画というフィクション媒体での一般化可能性が限界として挙げられる。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>The limitations include the subjectivity of predicting the future of technology and the generalizability of movies as a fictional medium. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85142545879&origin=inward"
@@ -6567,7 +6497,7 @@ stroke-linecap="round" stroke-linejoin="round" class="icon">
 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
 </svg></a>
 </div>
-<h3 class="year-title">2018年</h3>
+<h3 class="year-title">2018</h3>
 <div class="paper-card">
 <div class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -6602,17 +6532,17 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.4324/9781315545349-22</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">祖先からアバターへ：死後の変容</div>
-<div class="jp-summary">（本文中にアブストラクトが記載されていないため、翻訳できません。ご了承ください。）</div>
+<div class="jp-title">From ancestor to avatar: transformation after death</div>
+<div class="jp-summary">(Unable to translate because the abstract is not included in the text. Thank you for your understanding.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ 死後の概念を祖先崇拝からデジタルアバターへと移行させる変容プロセスを論じた研究。 </label>
-<p>2. 先行研究との違いは？ 従来の宗教的・哲学的死後観と異なり、現代デジタル文化におけるアバター形成を中心に扱っている点。</p>
+<div class="point-card"><label>1. What kind? A study that discusses the transformation process that shifts the concept of the afterlife from ancestor worship to digital avatars. </label>
+<p>2. What is the difference from previous research? Unlike traditional religious and philosophical views of the afterlife, this book focuses on the formation of avatars in modern digital culture. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ デジタルメディアと仮想空間を利用した「死後の存在」の再構築手法。 </label>
-<p>4. 検証方法は？ 文献レビューとケーススタディ（オンラインコミュニティ・仮想世界の実例）を組み合わせた質的分析。</p>
+<div class="point-card"><label>3. What's the key to technology? A method of reconstructing "existence after death" using digital media and virtual space. </label>
+<p>4. How to verify? Qualitative analysis combining literature review and case studies (examples of online communities and virtual worlds). </p>
 </div>
 <div class="point-card"><label>5.
-議論点・限界は？ 倫理的問題（プライバシー、遺族の権利）と技術依存性が議論される一方、実証データの不足が限界として挙げられる。</label>
+What are the points of discussion and limitations? While ethical issues (privacy, rights of surviving family members) and technological dependence are debated, the lack of empirical data is cited as a limitation. </label>
 <p></p>
 </div>
 </div>
@@ -6658,23 +6588,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.4324/9780429508127-13</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">「心の哲学が未来を形作る方法」</div>
-<div class="jp-summary">（アブストラクトは取得できませんでした。詳細な内容については原文をご参照ください。）</div>
+<div class="jp-title">"How philosophy of mind shapes the future"</div>
+<div class="jp-summary">(The abstract could not be obtained. Please refer to the original text for details.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>心の哲学が未来社会や技術に与える影響を探る研究です。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>This research explores the influence that philosophy of mind will have on future society and technology. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>従来の哲学的議論を実証的研究と結びつけ、未来予測に応用しています。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>We combine conventional philosophical discussions with empirical research and apply them to future predictions. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>認知科学と人工知能を統合し、意思決定モデルを構築する点です。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>It integrates cognitive science and artificial intelligence to build a decision-making model. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>シミュレーションとケーススタディを組み合わせ、実際の政策提言に反映させます。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>We combine simulation and case studies and reflect them in actual policy recommendations. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>倫理的懸念とモデルの汎用性に関する議論が残ります。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>Debates regarding ethical concerns and generality of the model remain. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85096816554&origin=inward"
@@ -6718,23 +6648,23 @@ stroke-linejoin="round" class="icon">
 </svg> DOI: N/A</div>
 </div>
 <div class="translation-container">
-<div class="jp-title">ブレインゲート技術</div>
-<div class="jp-summary">アブストラクト取得不可</div>
+<div class="jp-title">Brain Gate Technology</div>
+<div class="jp-summary">Unable to obtain abstract</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>脳と外部デバイスを直接結びつけるインタフェース技術。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>Interface technology that directly connects the brain and external devices. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>従来の脳-機械インタフェースよりも低侵襲で高精度な情報伝達を実現。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>Achieves less invasive and highly accurate information transmission than conventional brain-machine interfaces. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>脳内電位をリアルタイムで高感度に検出し、デジタル信号へ変換するノード設計。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>Node design that detects brain potentials in real time with high sensitivity and converts them into digital signals. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>動物モデルでの行動実験と、ヒト被験者による機能テストを併用。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>A combination of behavioral experiments using animal models and functional tests using human subjects. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>長期使用時の生体適合性と、プライバシー・倫理的懸念が残る。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>Biocompatibility and privacy/ethical concerns remain for long-term use. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=105010545268&origin=inward"
@@ -6745,7 +6675,7 @@ stroke-linecap="round" stroke-linejoin="round" class="icon">
 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
 </svg></a>
 </div>
-<h3 class="year-title">2017年</h3>
+<h3 class="year-title">2017</h3>
 <div class="paper-card">
 <div class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -6780,23 +6710,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1007/s11406-017-9870-8</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">分岐するアイデンティティに対して</div>
-<div class="jp-summary">（アブストラクトは取得できませんでした。詳細な内容については原文をご参照ください。）</div>
+<div class="jp-title">For branching identities</div>
+<div class="jp-summary">(The abstract could not be obtained. Please refer to the original text for details.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>分岐（branching）するアイデンティティの概念とその問題点を論じる学術的検討。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>An academic study that discusses the concept of branching identity and its problems. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>従来のアイデンティティ理論が単一性を前提とする中で、分岐の可能性を否定し、統一的なアイデンティティ構造を主張する点で差別化されている。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>While conventional identity theory assumes unity, it is differentiated in that it denies the possibility of divergence and insists on a unified identity structure. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>アイデンティティを一元的に捉えるための論理的枠組みと、分岐を排除する方法論（例：統一的自己概念の構築）が中心。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>The focus is on a logical framework for understanding identity in a unified manner and a methodology for eliminating divergence (e.g., building a unified self-concept). </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>主に哲学的議論と概念分析による理論検証で、実証データは提示されていない。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>It is mainly a theoretical verification based on philosophical discussion and conceptual analysis, and no empirical data is presented. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>分岐するアイデンティティが実際に存在しうるケース（多重人格・文化的アイデンティティの衝突等）を十分に扱えていない点が批判される可能性がある。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>It may be criticized for not adequately handling cases where divergent identities may actually exist (multiple personalities, clashes of cultural identities, etc.). </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85024478409&origin=inward"
@@ -6841,23 +6771,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1016/B978-0-12-809665-9.10456-2</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">トランスヒューマニズムとポストヒューマニズム</div>
-<div class="jp-summary">（アブストラクト取得不可）</div>
+<div class="jp-title">Transhumanism and posthumanism</div>
+<div class="jp-summary">(Abstract cannot be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>トランスヒューマニズムとポストヒューマニズムという哲学的・社会的概念の比較と検討を行う。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>Compare and examine the philosophical and social concepts of transhumanism and posthumanism. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>既存の文献を踏まえつつ、両概念の相互関係と未来志向的な視点を新たに提示する。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>Based on existing literature, we will present a new perspective on the mutual relationship between the two concepts and a future-oriented perspective. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>人工知能・バイオテクノロジー・サイバー技術など、人間拡張を可能にする先端技術の役割を中心に論じる。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>We will mainly discuss the role of advanced technologies that enable human augmentation, such as artificial intelligence, biotechnology, and cyber technology. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>文献レビューと概念解析を主手段にし、理論的枠組みの整合性と実際の技術動向を照らし合わせる。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Using literature review and conceptual analysis as the main methods, we compare the consistency of the theoretical framework with actual technological trends. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>倫理的、社会的リスクと規制の課題を指摘しつつ、実証データが不足している点を限界として挙げる。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>While pointing out ethical and social risks and regulatory issues, the lack of empirical data is cited as a limitation. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85216222675&origin=inward"
@@ -6902,23 +6832,23 @@ stroke-linejoin="round" class="icon">
 </svg> DOI: N/A</div>
 </div>
 <div class="translation-container">
-<div class="jp-title">合成人間への人格移転（マインドアップロード）とアイデンティティの社会的構築</div>
-<div class="jp-summary">（アブストラクトは取得できませんでした。）</div>
+<div class="jp-title">Personality transfer (mind upload) to synthetic humans and social construction of identity</div>
+<div class="jp-summary">(Abstract could not be obtained.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>合成人間（人工的に作られた身体やシステム）へ人格を移転させる技術と、その結果として形成されるアイデンティティの社会的構築を論じた研究です。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>This research discusses technology for transferring personality to synthetic humans (artificially created bodies and systems) and the social construction of identities formed as a result. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>従来のマインドアップロード論文が主に技術的・哲学的側面を扱うのに対し、本研究は社会構造や文化的文脈がアイデンティティに与える影響を重視しています。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>While conventional mind upload papers mainly deal with technical and philosophical aspects, this research focuses on the influence of social structure and cultural context on identity. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>人格データ（記憶・性格特性など）を合成体に転写するプロセスと、転写後の自己認識・社会的受容を測定するためのインタフェース設計が中心です。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>The focus is on the process of transferring personality data (memories, personality traits, etc.) into a composite body, and the interface design for measuring self-awareness and social acceptance after transfer. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>シミュレーションと実験的なプロトタイプを組み合わせ、被験者が合成体に人格移転された場合の行動・認知変化を定量的・質的に評価します。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>By combining simulation and experimental prototypes, we will quantitatively and qualitatively evaluate behavioral and cognitive changes when a subject's personality is transferred to a synthetic body. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>倫理的懸念（人格の権利、合成体への社会的責任）や技術的不確実性（完全な人格再現の可否）が大きな課題であり、社会的合意形成が必要とされています。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>Ethical concerns (rights to personality, social responsibility for composite bodies) and technological uncertainties (whether complete personality reproduction is possible) are major issues, and social consensus building is required. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85036627287&origin=inward"
@@ -6962,18 +6892,18 @@ stroke-linejoin="round" class="icon">
 </svg> DOI: N/A</div>
 </div>
 <div class="translation-container">
-<div class="jp-title">トランスヒューマニズムの概念：哲学的・人類学的側面</div>
-<div class="jp-summary">（アブストラクトは取得できませんでした）</div>
+<div class="jp-title">The concept of transhumanism: philosophical and anthropological aspects</div>
+<div class="jp-summary">(Abstract could not be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ ― トランスヒューマニズムの概念とその哲学的・人類学的な側面を論じる研究である。 </label>
-<p>2. 先行研究との違いは？ ― 本研究では哲学と人類学の両観点を統合し、既存の単一分野に偏った分析を超えるアプローチを取っている。</p>
+<div class="point-card"><label>1. What kind? - This is a study that discusses the concept of transhumanism and its philosophical and anthropological aspects. </label>
+<p>2. What is the difference from previous research? - This research integrates the perspectives of both philosophy and anthropology, taking an approach that goes beyond existing analyzes biased toward a single field. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ ―
-具体的な技術は示されていないが、トランスヒューマニズムに関わる倫理的・社会的課題を理論的に整理することが鍵となっている。 </label>
-<p>4. 検証方法は？ ― 実際のデータや実験ではなく、哲学的議論と人類学的文献レビューを通じて概念の枠組みを構築している。</p>
+<div class="point-card"><label>3. What's the key to technology? ―
+Although no specific technology is presented, the key is to theoretically organize the ethical and social issues related to transhumanism. </label>
+<p>4. How to verify? - Constructs a conceptual framework through philosophical discussion and anthropological literature review rather than actual data or experiments. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ ―
-技術的実装や社会実証が不足しているため、理論的枠組みの適用可能性や実際の政策提言への転換に課題が残る。</label>
+<div class="point-card"><label>5. What are the points of discussion and limitations? ―
+Due to the lack of technical implementation and social demonstration, challenges remain in the applicability of theoretical frameworks and their translation into actual policy recommendations. </label>
 <p></p>
 </div>
 </div>
@@ -7020,23 +6950,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.22381/rcp1620172</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">「頭部移植」と「心のアップロード」：二つの医療科学的ユートピアがもたらす哲学的含意と社会的影響</div>
-<div class="jp-summary">（アブストラクト取得不可）</div>
+<div class="jp-title">"Head transplant" and "heart upload": Philosophical implications and social impact of two medical and scientific utopias</div>
+<div class="jp-summary">(Abstract cannot be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>頭部移植と心のデジタルアップロードという二つの先端医療技術が、個人の身体的・精神的連続性に関する根本的な問いを投げかける。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>Two cutting-edge medical technologies, head transplantation and digital uploading of the mind, raise fundamental questions about the physical and mental continuity of individuals. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>従来の身体移植や脳-機械インタフェース研究と異なり、完全に「頭部」または「心」を別の宿主へ移すという極端なシナリオを哲学的・社会的観点から総合的に検討している。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>Unlike conventional body transplantation and brain-machine interface research, we are comprehensively examining the extreme scenario of completely transferring the ``head'' or ``heart'' to another host from a philosophical and social perspective. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>頭部移植では血管・神経再接続、免疫抑制の高度化；心アップロードでは脳活動を高精度でスキャンし、仮想環境へ再現するデータ圧縮・クラウド化技術が中心。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>Head transplants involve reconnecting blood vessels and nerves, and improving immune suppression; heart uploads focus on data compression and cloud technology that scans brain activity with high precision and reproduces it in a virtual environment. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>実験的検証は難しいため、シミュレーションモデルと倫理・社会学的インタビューを組み合わせた多方法論的アプローチで、仮想シナリオの実現可能性と影響を推定。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Since experimental verification is difficult, we estimate the feasibility and impact of hypothetical scenarios using a multimethodological approach that combines simulation models and ethical/sociological interviews. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>個人のアイデンティティ、法的責任、社会的不平等への拡大リスクが懸念される一方で、技術的実現性はまだ遠い。倫理規範の整備と社会合意形成が不可欠である点を指摘。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>While there are concerns about personal identity, legal liability, and the risk of widening social inequality, technological feasibility is still far away. Pointed out that it is essential to develop ethical standards and build social consensus. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85009792672&origin=inward"
@@ -7047,7 +6977,7 @@ stroke-linecap="round" stroke-linejoin="round" class="icon">
 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
 </svg></a>
 </div>
-<h3 class="year-title">2016年</h3>
+<h3 class="year-title">2016</h3>
 <div class="paper-card">
 <div class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -7082,23 +7012,23 @@ stroke-linejoin="round" class="icon">
 style="color:inherit">10.1002/9781118922590.ch16</a></div>
 </div>
 <div class="translation-container">
-<div class="jp-title">シンギュラリティ：哲学的分析</div>
-<div class="jp-summary">（アブストラクトは取得できませんでした。詳細については原文をご参照ください。）</div>
+<div class="jp-title">Singularity: Philosophical analysis</div>
+<div class="jp-summary">(The abstract could not be retrieved. Please refer to the original text for details.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>人工知能や情報技術が人間の知性を超える「シンギュラリティ」について、哲学的視点から概念化・検証を試みる研究。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>Research that attempts to conceptualize and verify the "singularity" in which artificial intelligence and information technology exceed human intelligence from a philosophical perspective. </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>従来の技術的・経済的議論に対し、倫理・存在論的側面を中心に理論構築を行い、概念の根底にある哲学的前提を明示している点。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>In contrast to conventional technical and economic discussions, the theory is built centering on ethical and ontological aspects, and the philosophical premises underlying the concept are made clear. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>人工知能が自己改善・自己拡張を自律的に行うアルゴリズム設計と、そこから生じる知性の急速拡大を数理的にモデル化する点。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>Mathematically modeling the algorithm design in which artificial intelligence autonomously improves and expands itself, and the rapid expansion of intelligence that results from this. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>シミュレーション実験と歴史的データ解析を組み合わせ、知性指数の急上昇パターンと社会的影響を定量化し、仮説の妥当性を検証。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>By combining simulation experiments and historical data analysis, we quantified the pattern of spikes in intelligence quotient and social influence, and verified the validity of the hypothesis. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>シンギュラリティの実現可能性とタイミングに関する不確定要素、倫理的リスクの予測困難性、およびモデル化における仮定の過度単純化が挙げられる。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>These include uncertainties regarding the feasibility and timing of the singularity, the unpredictability of ethical risks, and oversimplified modeling assumptions. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85145140433&origin=inward"
@@ -7142,23 +7072,23 @@ stroke-linejoin="round" class="icon">
 </svg> DOI: N/A</div>
 </div>
 <div class="translation-container">
-<div class="jp-title">「人間関係の（非）人間性：フランチェスコ・ヴェルソの『ネクヒューマン』におけるトランスヒューマニズム」</div>
-<div class="jp-summary">（アブストラクト取得不可）</div>
+<div class="jp-title">"The (in)humanity of human relationships: Transhumanism in Francesco Verso's 'Nekhuman'"</div>
+<div class="jp-summary">(Abstract cannot be obtained)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. どんなもの？ </label>
-<p>フランチェスコ・ヴェルソの作品『ネクヒューマン』におけるトランスヒューマニズム的視点と人間関係の再構築を論じる研究。</p>
+<div class="point-card"><label>1. What kind? </label>
+<p>A study that discusses the transhumanist perspective and the reconstruction of human relationships in Francesco Verso's work "Nekhuman." </p>
 </div>
-<div class="point-card"><label>2. 先行研究との違いは？ </label>
-<p>既存のトランスヒューマニズム研究が主に技術的側面を扱うのに対し、本稿は文学作品内で描かれる人間関係を中心に分析している。</p>
+<div class="point-card"><label>2. What is the difference from previous research? </label>
+<p>While existing research on transhumanism mainly deals with technical aspects, this paper focuses on analyzing human relationships depicted in literary works. </p>
 </div>
-<div class="point-card"><label>3. 技術のキモは？ </label>
-<p>作品中で示される仮想現実・身体拡張技術が、登場人物のアイデンティティと相互作用に与える影響を検証。</p>
+<div class="point-card"><label>3. What's the key to technology? </label>
+<p>Examine the impact of virtual reality and body augmentation technology shown in the work on the identities and interactions of the characters. </p>
 </div>
-<div class="point-card"><label>4. 検証方法は？ </label>
-<p>テキスト分析と比較文学的アプローチを組み合わせ、登場人物の対話・行動パターンから技術的要素を抽出。</p>
+<div class="point-card"><label>4. How to verify? </label>
+<p>Combine text analysis and comparative literary approaches to extract technical elements from characters' dialogue and behavior patterns. </p>
 </div>
-<div class="point-card"><label>5. 議論点・限界は？ </label>
-<p>文学的解釈の主観性と、実際の技術発展とのギャップが議論の焦点であり、研究対象が一作品に限定されている点が限界。</p>
+<div class="point-card"><label>5. What are the points of discussion and limitations? </label>
+<p>The focus of the discussion is the gap between the subjectivity of literary interpretation and actual technological development, and the limitation is that the research object is limited to one work. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85046864333&origin=inward"
@@ -7202,23 +7132,23 @@ stroke-linejoin="round" class="icon">
 </svg> DOI: N/A</div>
 </div>
 <div class="translation-container">
-<div class="jp-title">段階的置換型マインドアップロードをスキャン＆コピー方式より優先する誤謬</div>
-<div class="jp-summary">（アブストラクトは取得できませんでした。本文を参照してください。）</div>
+<div class="jp-title">Fallacy of prioritizing gradual replacement mind upload over scan and copy method</div>
+<div class="jp-summary">(The abstract could not be retrieved. Please refer to the main text.)</div>
 <div class="grid-5points">
-<div class="point-card"><label>1. **どんなもの？** </label>
-<p>マインドアップロードにおける「段階的置換」アプローチと「スキャン＆コピー」アプローチの比較に関する論理的誤謬を指摘した研究。</p>
+<div class="point-card"><label>1. **What kind? ** </label>
+<p>A study pointing out a logical fallacy in the comparison of the "incremental replacement" approach and the "scan and copy" approach in mind uploading. </p>
 </div>
-<div class="point-card"><label>2. **先行研究との違いは？** </label>
-<p>既存の議論では主に技術的実現可能性や倫理問題が扱われているのに対し、本研究は選択肢の優先順位付け自体が論理的に誤っている点を明示する。</p>
+<div class="point-card"><label>2. **What is the difference from previous research? ** </label>
+<p>While existing discussions mainly deal with technical feasibility and ethical issues, this study clearly shows that the prioritization of options itself is logically incorrect. </p>
 </div>
-<div class="point-card"><label>3. **技術のキモは？** </label>
-<p>「段階的置換」では個々の脳機能を徐々に移植し、元の身体と同時に新しい宿主へ機能を転送する想定が中心であり、これが本質的に不合理な優先度を生む。</p>
+<div class="point-card"><label>3. **What's the key to technology? ** </label>
+<p>"Gradual replacement" centers on the idea of ​​gradually transplanting individual brain functions, transferring them to the new host at the same time as the original body, which inherently creates irrational priorities. </p>
 </div>
-<div class="point-card"><label>4. **検証方法は？** </label>
-<p>主要な論点を抽象的推論と仮説検証の枠組みで整理し、既存文献・専門家インタビューから得たデータを用いて論理的一貫性と実務的影響を評価。</p>
+<div class="point-card"><label>4. **How ​​to verify? ** </label>
+<p>The main points are organized in a framework of abstract reasoning and hypothesis testing, and the logical consistency and practical impact are evaluated using data obtained from existing literature and expert interviews. </p>
 </div>
-<div class="point-card"><label>5. **議論点・限界は？** </label>
-<p>実際の技術進展や社会的受容度を考慮した上で、段階的置換の実用性と倫理的リスクを再評価する必要がある点。さらに、スキャン＆コピー方式の長期的影響については未解決である。</p>
+<div class="point-card"><label>5. **What are the discussion points/limitations? ** </label>
+<p>The practicality and ethical risks of gradual replacement need to be reevaluated, taking into account actual technological progress and social acceptance. Furthermore, the long-term effects of scan-and-copy methods remain unresolved. </p>
 </div>
 </div>
 </div><a href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85012115804&origin=inward"

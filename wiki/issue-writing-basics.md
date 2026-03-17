@@ -1,43 +1,43 @@
 ---
 layout: default
-title: "Wiki：はじめての Issue の書き方"
-description: "『分からない』『直したい』を、実行可能な Issue に変えるための初歩ガイドです。"
+title: "Wiki: How to write your first issue"
+description: "This is a beginner's guide to turning 'I don't know' or 'I want to fix' into an actionable issue."
 article_type: Wiki
-subtitle: "止まった場所を、そのまま価値ある作業に変えるための基本"
+subtitle: "The basics of turning a stagnant place into valuable work"
 author: Mind Uploading Research Project
 last_updated: "2026-03-14"
 note: "Issue writing basics"
-audience: "初めて Issue を書く人、分からなさをどう報告すればよいか迷う人"
-reading_time: "8〜12分"
-page_intro: "このページは、Mind-Upload で初めて Issue を書く人向けの補助教材です。完全な解決策を持っていなくても、どこで止まったか、何が不足か、何が足されれば前進かを分けて書ければ、価値の高い Issue になります。"
-accuracy_note: "ここで紹介するのは、Issue を実行可能な変更へ変えるための最低限です。個別の技術的主張や外部連携条件は、必ず元ページへ戻って確認してください。"
+audience: "People who are writing an issue for the first time, or who are unsure how to report something they don't understand."
+reading_time: "8-12 minutes"
+page_intro: "This page is a supplementary material for those who are writing an issue for the first time on Mind-Upload. Even if you don't have a complete solution, if you can write about where you stopped, what is missing, and what can be added to move forward, it will be a valuable issue."
+accuracy_note: "What we introduce here is the minimum required to turn an issue into a workable change. Please be sure to return to the original page and check the individual technical claims and external collaboration conditions."
 page_highlights:
-  - "『分からない』をそのまま捨てず、修正可能な Issue に変える手順を説明します。"
-  - "前進条件、反証条件、外部依存タスクの分け方を初歩から整理します。"
-  - "小さな用語修正から、強い主張の条件設計まで、種類ごとの書き分けを示します。"
+  - "This page explains how to turn an ``I don't know'' moment into a fixable issue instead of discarding it."
+  - "We will organize the division of advance conditions, counter-evidence conditions, and externally dependent tasks from the beginning."
+  - "We will show you how to write each type, from minor terminology corrections to conditional design for strong claims."
 known_points:
-  - "完全な解決案がなくても、止まった位置と不足の種類が分かれば十分に価値ある Issue になります。"
-  - "前進条件と反証条件があると、Issue の終わり方が明確になります。"
-  - "外部依存の話は、今すぐ実行する変更と切り分ける必要があります。"
+  - "Even if you don't have a perfect solution, if you know where it stopped and what kind of deficiency it is, it will be a worthwhile issue."
+  - "Advancing and disproving conditions make it clear how the issue ends."
+  - "You need to separate external dependencies from changes you want to make now."
 unknown_points:
-  - "どの Issue が最終的に大きな成果へつながるかは、その時点の研究状況で変わります。"
-  - "外部依存タスクの成立時期は、この wiki だけでは決まりません。"
+  - "Which issues will ultimately lead to great results depends on the research situation at the time."
+  - "This wiki alone does not determine when externally dependent tasks are established."
 wiki_links:
-  - label: "Wiki: 参加・協業ページのあとに進む5つの道"
+  - label: "Wiki: 5 paths to follow after participation/collaboration page"
     url: "/wiki/participation-next-routes.html"
-    description: "Issue のあとにどのページへ進むかも一緒に見たい人向けです。"
-  - label: "Wiki: 内製で先にやることと外部依存"
+    description: "This is for people who want to see which page they go to after an issue."
+  - label: "Wiki: What to do first in-house and external dependencies"
     url: "/wiki/internal-prework-and-external-dependencies.html"
-    description: "Issue の中に外部依存が混ざったときの切り分けを補います。"
-  - label: "Wiki: 検証基盤の基本"
+    description: "Compensates for separation when external dependencies are mixed in an issue."
+  - label: "Wiki: Basics of verification infrastructure"
     url: "/wiki/verification-basics.html"
-    description: "前進条件や反証条件をなぜ先に置くかを補います。"
+    description: "Explains why advance conditions and disconfirmation conditions are placed first."
 recommended_pages:
-  - label: "貢献ガイド"
+  - label: "Contribution Guide"
     url: "/issue.html"
-  - label: "検証基盤"
+  - label: "Verification base"
     url: "/verification.html"
-  - label: "公開コンテンツ統合ハブ"
+  - label: "Public Content Integration Hub"
     url: "/content_hub.html"
 ---
 
@@ -45,163 +45,163 @@ recommended_pages:
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>Issue は「完全な答え」ではなく「動ける問い」です</h2>
+<h2>Issue is not a complete answer but a moving question</h2>
 <p>
-Issue は、完成した提案書である必要はありません。むしろ大事なのは、<strong>どこで止まったか</strong>、<strong>何が不足しているか</strong>、<strong>何が足されれば前進か</strong>を、他の人が追える形で残すことです。
+An issue does not have to be a completed proposal. Rather, what's important is to leave a record of where you stopped, what's missing, and what could be added to move forward in a way that others can follow.
 </p>
 </div>
 
 <section class="section" id="minimum-mindset">
-<h2 class="section-title">まず知っておきたい考え方</h2>
+<h2 class="section-title">Thoughts you should know first</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>誤解しやすい考え</th>
-<th>このサイトでの考え方</th>
+<th>Easy to misunderstand</th>
+<th>Thoughts on this site</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>解決策が全部分からないと Issue を書けない</td>
-<td>解決策がなくても、止まった場所と不足の種類が分かれば Issue にできます。</td>
+<td>You can't write an issue unless you know the entire solution</td>
+<td>Even if you don't have a solution, you can create an issue if you know where it stopped and what type of deficiency it is. </td>
 </tr>
 <tr>
-<td>大きい提案ほど価値がある</td>
-<td>小さくても、修正位置と完了条件が明確な Issue の方が動きやすいです。</td>
+<td>The bigger the proposal, the more valuable it is</td>
+<td>Even if the issue is small, it is easier to move the issue if the correction position and completion conditions are clear. </td>
 </tr>
 <tr>
-<td>外部依存も同じ Issue に全部書けばよい</td>
-<td>今このリポジトリで実行する変更と、外部依存タスクは分けて書きます。</td>
+<td>You can also write all external dependencies in the same issue</td>
+<td>Write the changes you want to perform in this repository and external dependent tasks separately. </td>
 </tr>
 <tr>
-<td>「分かりにくい」と書けば十分</td>
-<td>どのページのどの言葉や段落で止まったかを具体化すると修正しやすくなります。</td>
+<td>Writing “difficult to understand” is enough</td>
+<td>It will be easier to make corrections if you specify which word or paragraph on which page you stopped. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="from-confusion-to-issue">
-<h2 class="section-title">よくある止まり方を Issue に変える</h2>
+<h2 class="section-title">Turn common stoppages into issues</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>止まり方</th>
-<th>Issue に最低限書くこと</th>
-<th>次に戻るページ</th>
+<th>How to stop</th>
+<th>Minimum things to write in an issue</th>
+<th>Next page</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>用語が分からない</strong></td>
-<td>止まった用語、ページ位置、どう誤読したか、1 段落で欲しい説明。</td>
+<td><strong>I don't understand the term</strong></td>
+<td>A one-paragraph explanation of the term that stopped, the page location, and how it was misread. </td>
 <td><a href="../glossary.html">Glossary</a> / <a href="../content_hub.html">Content Hub</a></td>
 </tr>
 <tr>
-<td><strong>主張が強いのに条件が見えない</strong></td>
-<td>対象の主張、足りない条件、何が足されれば前進か、何が出たら保留か。</td>
+<td><strong>You have a strong claim but you can't see the conditions</strong></td>
+<td>Objective claims, missing conditions, what should be added to move forward, and what should be put on hold. </td>
 <td><a href="../verification.html">Verification</a> / <a href="../tech_roadmap.html">Roadmap</a></td>
 </tr>
 <tr>
-<td><strong>文献を見つけたが、どこへ戻すか分からない</strong></td>
-<td>文献名、何に効くと思ったか、未解決問題か提案か Issue かの候補。</td>
-<td><a href="literature-to-action-route.html">文献から実装・参加へ戻る一本道</a></td>
+<td><strong>I found a document, but I don't know where to put it back</strong></td>
+<td>The title of the document, what you thought it would be effective for, and suggestions whether it is an unresolved problem, a proposal, or an issue. </td>
+<td><a href="literature-to-action-route.html">A straight path back from literature to implementation and participation</a></td>
 </tr>
 <tr>
-<td><strong>実験や IRB が必要そうで止まる</strong></td>
-<td>今ここで作れる準備物、外部依存になる項目、完了判定を分けて書く。</td>
-<td><a href="internal-prework-and-external-dependencies.html">内製で先にやることと外部依存</a></td>
+<td><strong>Stops because experiment or IRB seems necessary</strong></td>
+<td>Write separately the preparations that can be made here and now, the items that depend on external sources, and the completion judgment. </td>
+<td><a href="internal-prework-and-external-dependencies.html">In-house production and external dependencies</a></td>
 </tr>
 <tr>
-<td><strong>どこへ追記すべきか分からない</strong></td>
-<td>追加したい情報の種類、候補ページ、なぜそこだと思うか。</td>
-<td><a href="content-placement-basics.html">新しい情報の置き場所を決める基本</a> / <a href="../content_hub.html">Content Hub</a></td>
+<td><strong>I don't know where to add it</strong></td>
+<td>What kind of information do you want to add, candidate pages, and why do you think it's there? </td>
+<td><a href="content-placement-basics.html">Basics of deciding where to place new information</a> / <a href="../content_hub.html">Content Hub</a></td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="minimum-template">
-<h2 class="section-title">最低限のテンプレ</h2>
+<h2 class="section-title">Minimal template</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>項目</th>
-<th>短くても入れたい内容</th>
+<th>Item</th>
+<th>Contents you want to include even if it is short</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>どこで止まったか</strong></td>
-<td>対象ページ、節、段落、用語、表など、修正位置が分かる情報。</td>
+<td><strong>Where did it stop</strong></td>
+<td>Information that shows the correction location, such as the target page, section, paragraph, term, table, etc. </td>
 </tr>
 <tr>
-<td><strong>何が不足しているか</strong></td>
-<td>定義不足、導線不足、根拠不足、状態ラベル不明、外部依存の混同などの種類。</td>
+<td><strong>What's missing</strong></td>
+<td> Types include insufficient definition, insufficient guidance, insufficient evidence, unknown state label, and confusion with external dependencies. </td>
 </tr>
 <tr>
-<td><strong>今回実行する変更</strong></td>
-<td>今このリポジトリで実施できる修正を 1 つに絞って書きます。</td>
+<td><strong>Changes to be made</strong></td>
+<td>I will now focus on one modification that can be implemented in this repository. </td>
 </tr>
 <tr>
-<td><strong>外部依存タスク</strong></td>
-<td>IRB、機材、契約、共同研究合意など、こちらだけでは完了できないもの。</td>
+<td><strong>External dependent task</strong></td>
+<td>IRB, equipment, contracts, collaborative research agreements, etc., which cannot be completed by us alone. </td>
 </tr>
 <tr>
-<td><strong>前進条件</strong></td>
-<td>何が足されれば「改善した」と言えるか。</td>
+<td><strong>Advance conditions</strong></td>
+<td>What needs to be added to make it ``improved''? </td>
 </tr>
 <tr>
-<td><strong>反証条件</strong></td>
-<td>何が確認されたら、その修正方針や主張を採らないか。</td>
+<td><strong>Rebuttal conditions</strong></td>
+<td>If something is confirmed, why not adopt the corrective policy or claim? </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="weak-vs-strong">
-<h2 class="section-title">弱い Issue と強い Issue の違い</h2>
+<h2 class="section-title">Difference between weak issues and strong issues</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>弱い書き方</th>
-<th>強い書き方</th>
+<th>Weak writing style</th>
+<th>Strong writing style</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>「このページは分かりにくいです」</td>
-<td>「`verification.html` の冒頭で `benchmark` の意味が分からず止まりました。1 段落の定義か wiki への導線があると改善と判定できます。」</td>
+<td>"This page is difficult to understand"</td>
+<td>"I stopped because I couldn't understand the meaning of `benchmark` at the beginning of `verification.html`. It would be an improvement if there was a one-paragraph definition or a link to the wiki."</td>
 </tr>
 <tr>
-<td>「EEG だけでは無理だと思います」</td>
-<td>「`eeg_101.html` に、EEG 単体で言えることと他モダリティが要ることの対比表を追加すると、誤読が減ると考えます。」</td>
+<td>"I don't think it's possible with EEG alone"</td>
+<td>"We believe that adding a comparison table of what can be said with EEG alone and what requires other modalities to `eeg_101.html' will reduce misinterpretation."</td>
 </tr>
 <tr>
-<td>「共同研究したいです」</td>
-<td>「`issue.html#external-collaboration` で、OpenNeuro 連携前に必要な 1 ページ要約と最小成果物を明示すると、外部依存の前段が具体化します。」</td>
+<td>“I would like to do joint research”</td>
+<td>"By specifying the one-page summary and minimum deliverables required before OpenNeuro collaboration in `issue.html#external-collaboration`, the first stage of external dependencies will take shape."</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="mistakes">
-<h2 class="section-title">よくある失敗</h2>
+<h2 class="section-title">Common mistakes</h2>
 <div class="key-points">
 <h4>Mistake</h4>
 <ul>
-<li><strong>問題を大きくしすぎる：</strong> まず 1 ページ、1 用語、1 導線のように最小単位へ切る方が動きます。</li>
-<li><strong>外部依存を完了条件に入れてしまう：</strong> その場で直せることと、相手先依存を分けてください。</li>
-<li><strong>前進条件だけで反証条件がない：</strong> 何が出たらその修正方針を採らないかも必要です。</li>
-<li><strong>置き場が未定のまま提案する：</strong> Content Hub で統合先を確認すると、重複が減ります。</li>
+<li><strong>Making the problem too big:</strong> It is better to cut it down to the smallest units, such as one page, one term, or one conductor. </li>
+<li><strong>Including external dependencies as completion conditions:</strong> Separate things that can be fixed on the spot from dependencies on other parties. </li>
+<li><strong>Only advance conditions, no disproval conditions:</strong> It is also necessary to know what will happen and not adopt the corrective policy. </li>
+<li><strong>Suggestion without a specific location:</strong> Checking the integration destination in Content Hub reduces duplication. </li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2 class="section-title">Where to return next</h2>
 <p>
-Issue の入口へ戻るなら <a href="../issue.html">貢献ガイド</a>、参加ページ読後の分岐へ戻るなら <a href="participation-next-routes.html">参加・協業ページのあとに進む5つの道</a>、条件設計の前提へ戻るなら <a href="../verification.html">Verification</a> をご利用ください。
+To return to the issue entrance, use <a href="../issue.html">Contribution Guide</a>, to return to the branch after reading the participation page, use <a href="participation-next-routes.html">Five paths to follow after participation/collaboration page</a>, and to return to the premise of condition design, use <a href="../verification.html">Verification</a>.
 </p>
 </section>
 
@@ -211,17 +211,17 @@ Issue の入口へ戻るなら <a href="../issue.html">貢献ガイド</a>、参
 <div class="sidebar-box">
 <h4>Related Wiki</h4>
 <ul>
-<li><a href="participation-next-routes.html">参加・協業ページのあとに進む5つの道 →</a></li>
-<li><a href="internal-prework-and-external-dependencies.html">内製で先にやることと外部依存 →</a></li>
-<li><a href="verification-basics.html">検証基盤の基本 →</a></li>
+<li><a href="participation-next-routes.html">Five paths to follow after participation/collaboration page →</a></li>
+<li><a href="internal-prework-and-external-dependencies.html">In-house production and external dependencies →</a></li>
+<li><a href="verification-basics.html">Basics of verification infrastructure →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>公開ページ</h4>
+<h4>Public page</h4>
 <ul>
-<li><a href="../issue.html">貢献ガイド →</a></li>
-<li><a href="../verification.html">検証基盤 →</a></li>
-<li><a href="../content_hub.html">公開コンテンツ統合ハブ →</a></li>
+<li><a href="../issue.html">Contribution guide →</a></li>
+<li><a href="../verification.html">Verification infrastructure →</a></li>
+<li><a href="../content_hub.html">Public content integration hub →</a></li>
 </ul>
 </div>
 </aside>

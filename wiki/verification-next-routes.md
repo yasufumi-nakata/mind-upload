@@ -1,168 +1,179 @@
 ---
 layout: default
-title: "Wiki：Verificationのあとに進む4つの道"
-description: "Verification を読んだあとに、L0 実装、L2 検証、L3 閉ループ、L4 本人性のどこへ進むかを整理します。"
+title: 'Wiki: 4 paths to follow after Verification'
+description: 'After reading Verification, organize where to proceed: L0 implementation,
+  L2 verification, L3 closed loop, and L4 identity.'
 article_type: Wiki
-subtitle: "検証基盤を読んだあと、次の1ページを迷わず決めるためのガイド"
+subtitle: A guide to help you decide the next page without hesitation after reading
+  the verification platform
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
-note: "Reading route"
-audience: "Verification を読んだあと、次にどこへ進むべきかで迷う人"
-reading_time: "6〜10分"
-page_intro: "このページは、Verification を読んだあとに、何を知りたいかに応じて次の公開ページを決める補助ガイドです。L0 の実装へ戻るのか、L2 の介入検証へ進むのか、L3 の閉ループへ進むのか、L4 の本人性へ進むのかで、次の1ページは変わります。"
-accuracy_note: "ここで示すのは Verification の次の入口です。各路線の成立条件そのものは、必ず元ページ本文で確認してください。"
+last_updated: '2026-03-14'
+note: Reading route
+audience: People who are confused about where to go next after reading Verification
+reading_time: 6-10 minutes
+page_intro: This page is a guide to help you decide which page to publish next depending
+  on what you want to know after reading Verification. The next page will change depending
+  on whether you go back to L0 implementation, L2 intervention verification, L3 closed
+  loop, or L4 identity.
+accuracy_note: Here is the next entrance to Verification. Please be sure to check
+  the actual conditions for each route in the main text of the original page.
 page_highlights:
-  - "Verification を読んだあとを、L0、L2、L3、L4 の 4 路線に分けて整理します。"
-  - "主張レベルが上がるごとに、次に必要なページが変わることを明示します。"
-  - "『検証基盤を読んだけど次に何を読むか分からない』状態を減らします。"
+- 'After reading Verification, organize it into four routes: L0, L2, L3, and L4.'
+- Specify that the next required page changes as the claim level increases.
+- Reduce the situation of ``I read the verification platform, but I don't know what
+  to read next''.
 known_points:
-  - "Verification は全体設計図なので、そのままでは次の1ページが広すぎます。"
-  - "L0 の実装、L2 の検証、L3 の閉ループ、L4 の本人性では、戻るべきページが違います。"
-  - "Verification のあとに路線を固定すると、読み方がかなり安定します。"
+- Verification is an overall blueprint, so the next page is too large as it is.
+- The page to return to differs depending on L0 implementation, L2 verification, L3
+  closed loop, and L4 identity.
+- If you fix the route after Verification, the reading becomes much more stable.
 unknown_points:
-  - "どの路線が最終的に最重要になるかは、今後の進捗で変わる可能性があります。"
-  - "L4 や L5 の最終成立条件は、まだ未確定です。"
+- Which route will ultimately become the most important may change as the project
+  progresses.
+- The final conditions for L4 and L5 are still undetermined.
 wiki_links:
-  - label: "Wiki: L0〜L5ごとの読み進め方"
-    url: "/wiki/claim-level-reading-routes.html"
-    description: "レベル全体から見た導線に戻りたい人向けです。"
-  - label: "Wiki: 実務系ページの読み分けガイド"
-    url: "/wiki/practical-pages-reading-guide.html"
-    description: "Verification、Datasets、Hands-on の役割差を先に見たい人向けです。"
-  - label: "Wiki: EEGからL0までの一本道"
-    url: "/wiki/eeg-to-l0-route.html"
-    description: "L0 側の具体ルートだけをすぐ見たい人向けです。"
+- label: 'Wiki: How to read each L0 to L5'
+  url: /wiki/claim-level-reading-routes.html
+  description: This is for those who want to return to the overall path of the level.
+- label: 'Wiki: Guide to reading practical pages'
+  url: /wiki/practical-pages-reading-guide.html
+  description: This is for those who want to see the role differences between Verification,
+    Datasets, and Hands-on first.
+- label: 'Wiki: Straight path from EEG to L0'
+  url: /wiki/eeg-to-l0-route.html
+  description: This is for people who want to see only the specific route on the L0
+    side right away.
 recommended_pages:
-  - label: "検証基盤"
-    url: "/verification.html"
-  - label: "ハンズオン"
-    url: "/datasets.html#l0-practice"
-  - label: "技術ロードマップ"
-    url: "/tech_roadmap.html"
+- label: Verification platform
+  url: /verification.html
+- label: hands-on
+  url: /datasets.html#l0-practice
+- label: technology roadmap
+  url: /tech_roadmap.html
 ---
 
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>次の1ページを決める</h2>
+<h2>Decide the next page</h2>
 <p>
-Verification は設計図として重要ですが、読むだけでは次の作業が広すぎます。ここでは、<strong>何を次に知りたいか</strong>で 4 本の道に分けて、次の1ページを固定します。
+Verification is important as a blueprint, but just reading it is too broad for the next work. Here, we will divide it into four paths based on <strong>What do you want to know next</strong> and pin the next page.
 </p>
 </div>
 
 <section class="section" id="four-routes">
-<h2 class="section-title">Verificationのあとに進む4つの道</h2>
+<h2 class="section-title">Four paths to follow after Verification</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>知りたいこと</th>
-<th>次に開くページ</th>
-<th>そこで決めること</th>
+<th>What I want to know</th>
+<th>Next page</th>
+<th>What to decide there</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>L0 の実装を作りたい</strong></td>
+<td><strong>I want to create an implementation of L0</strong></td>
 <td><a href="../datasets.html#l0-practice">Hands-on</a></td>
-<td>入力、QC、前処理、ベースライン、失敗例を一周つなぐ手順を固定します。</td>
+<td>Fix the procedure that connects input, QC, preprocessing, baseline, and failure cases. </td>
 </tr>
 <tr>
-<td><strong>L2 の介入・反事実検証を知りたい</strong></td>
+<td><strong>I want to know about L2 intervention/counterfactual verification</strong></td>
 <td><a href="../tech_roadmap.html">Roadmap</a></td>
-<td>どの課題が因果検証や生成予測へつながるかを依存関係で確認します。</td>
+<td>Check which issues lead to causal verification and generation prediction using dependency relationships. </td>
 </tr>
 <tr>
-<td><strong>L3 の閉ループ条件を知りたい</strong></td>
-<td><a href="../eeg_101.html">EEG 101</a> または <a href="closed-loop-latency-jitter-and-safety-stops.html">閉ループ・遅延・ジッタ・安全停止</a></td>
-<td>オフライン精度とリアルタイム安定性の違いを切り分けます。</td>
+<td><strong>I want to know the closed loop conditions of L3</strong></td>
+<td><a href="../eeg_101.html">EEG 101</a> or <a href="closed-loop-latency-jitter-and-safety-stops.html">Closed-loop/delay/jitter/safety stops</a></td>
+<td>Separate the difference between offline accuracy and real-time stability. </td>
 </tr>
 <tr>
-<td><strong>L4 の本人性を知りたい</strong></td>
-<td><a href="../wbe_101.html">WBE 101</a> または <a href="identity-and-continuity-tests.html">本人性評価と連続性テスト</a></td>
-<td>何を連続しているとみなしたいのかを、記憶、価値観、学習、分岐で確認します。</td>
+<td><strong>I want to know the identity of L4</strong></td>
+<td><a href="../wbe_101.html">WBE 101</a> or <a href="identity-and-continuity-tests.html">Identity Assessment and Continuity Tests</a></td>
+<td>Check what you want to consider as continuous in terms of memory, values, learning, and branching. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="why">
-<h2 class="section-title">なぜこの分け方なのか</h2>
+<h2 class="section-title">Why this division</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>道</th>
-<th>Verification のあとにそのページへ行く理由</th>
+<th>way</th>
+<th>Reasons for going to that page after Verification</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>L0 実装</strong></td>
-<td>Verification で決めた合格条件を、Hands-on で実際の成果物に落とす必要があるからです。</td>
+<td><strong>L0 implementation</strong></td>
+<td>This is because it is necessary to translate the passing conditions determined in Verification into actual deliverables in Hands-on. </td>
 </tr>
 <tr>
-<td><strong>L2 検証</strong></td>
-<td>介入や反事実は、どの論点が先に必要かを Roadmap で見ないと飛びやすいからです。</td>
+<td><strong>L2 validation</strong></td>
+<td>It's easy to jump into interventions and counterfactuals if you don't look at the roadmap to see which points need to be addressed first. </td>
 </tr>
 <tr>
-<td><strong>L3 閉ループ</strong></td>
-<td>閉ループは Verification の評価設計だけでは足りず、計測とリアルタイム制約も一緒に見る必要があるからです。</td>
+<td><strong>L3 Closed Loop</strong></td>
+<td>For closed loops, it is not enough to just evaluate the verification design; it is also necessary to look at measurement and real-time constraints. </td>
 </tr>
 <tr>
-<td><strong>L4 本人性</strong></td>
-<td>本人性はスコアだけで進めず、何を事前登録してテストしたいかを先に整理する必要があるからです。</td>
+<td><strong>L4 Personality</strong></td>
+<td>This is because you can't measure your identity based on your score alone; you need to first organize what you want to pre-register and test. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="helper-wiki">
-<h2 class="section-title">道ごとの補助 wiki</h2>
+<h2 class="section-title">Each-way assistance wiki</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>道</th>
-<th>一緒に見るとよい wiki</th>
+<th>way</th>
+<th>Wiki worth watching together</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>L0 実装</strong></td>
-<td><a href="eeg-to-l0-route.html">EEGからL0までの一本道</a> / <a href="l0-minimum-artifact-pack.html">L0で最低限そろえる成果物パック</a></td>
+<td><strong>L0 implementation</strong></td>
+<td><a href="eeg-to-l0-route.html">A straight path from EEG to L0</a> / <a href="l0-minimum-artifact-pack.html">The minimum artifact pack for L0</a></td>
 </tr>
 <tr>
-<td><strong>L2 検証</strong></td>
-<td><a href="counterfactual-and-perturbation-verification.html">反事実・介入・摂動の検証</a> / <a href="observation-to-estimation.html">観測から推定へ</a></td>
+<td><strong>L2 validation</strong></td>
+<td><a href="counterfactual-and-perturbation-verification.html">Verification of counterfactuals, interventions, and perturbations</a> / <a href="observation-to-estimation.html">From observation to estimation</a></td>
 </tr>
 <tr>
-<td><strong>L3 閉ループ</strong></td>
-<td><a href="closed-loop-latency-jitter-and-safety-stops.html">閉ループ・遅延・ジッタ・安全停止</a></td>
+<td><strong>L3 Closed Loop</strong></td>
+<td><a href="closed-loop-latency-jitter-and-safety-stops.html">Closed-loop/delay/jitter/safety stops</a></td>
 </tr>
 <tr>
-<td><strong>L4 本人性</strong></td>
-<td><a href="identity-and-continuity-tests.html">本人性評価と連続性テスト</a> / <a href="personhood-and-copy-problem.html">本人性とコピー問題</a></td>
+<td><strong>L4 Personality</strong></td>
+<td><a href="identity-and-continuity-tests.html">Personhood assessment and continuity tests</a> / <a href="personhood-and-copy-problem.html">Personhood and copy problems</a></td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="common-mistakes">
-<h2 class="section-title">よくある迷い方</h2>
+<h2 class="section-title">Common ways to get lost</h2>
 <div class="key-points">
 <h4>Mistake</h4>
 <ul>
-<li><strong>Verification を読んだだけで次の作業が決まった気になる：</strong> 実際には路線を 1 本に絞る必要があります。</li>
-<li><strong>L0 と L2 を同時に追い始める：</strong> まず再現可能解析を固めた方が手戻りが少ないです。</li>
-<li><strong>L3 を精度だけで考える：</strong> 閉ループでは遅延や安全停止が別に必要です。</li>
-<li><strong>L4 をスコアの延長で考える：</strong> 本人性は、何を連続しているとみなすかの事前設計が別に必要です。</li>
+<li><strong>Just reading Verification makes me feel like I've decided what to do next:</strong> Actually, I need to narrow it down to one route. </li>
+<li><strong>Start tracking L0 and L2 at the same time:</strong> It is easier to establish reproducible analysis first, as it will require less rework. </li>
+<li><strong>Think of L3 in terms of accuracy only:</strong> Closed loops require additional delays and safety stops. </li>
+<li><strong>Think of L4 as an extension of the score:</strong> It is necessary to separately design in advance what is considered to be continuous in terms of individuality. </li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2 class="section-title">Where to return next</h2>
 <p>
-Verification の本文へ戻るなら <a href="../verification.html">検証基盤</a>、レベル全体の導線へ戻るなら <a href="claim-level-reading-routes.html">L0〜L5ごとの読み進め方</a>、実務ページ全体の役割差へ戻るなら <a href="practical-pages-reading-guide.html">実務系ページの読み分けガイド</a> をご利用ください。
+To return to the main text of Verification, please use <a href="../verification.html">Verification base</a>. To return to the route of the entire level, please use <a href="claim-level-reading-routes.html">How to read each L0 to L5</a>. To return to the role differences across practical pages, please use <a href="practical-pages-reading-guide.html">Reading guide for practical pages</a>.
 </p>
 </section>
 
@@ -172,17 +183,17 @@ Verification の本文へ戻るなら <a href="../verification.html">検証基�
 <div class="sidebar-box">
 <h4>Related Wiki</h4>
 <ul>
-<li><a href="claim-level-reading-routes.html">L0〜L5ごとの読み進め方 →</a></li>
-<li><a href="practical-pages-reading-guide.html">実務系ページの読み分けガイド →</a></li>
-<li><a href="eeg-to-l0-route.html">EEGからL0までの一本道 →</a></li>
+<li><a href="claim-level-reading-routes.html">How to read each L0 to L5 →</a></li>
+<li><a href="practical-pages-reading-guide.html">Reading guide for practical pages →</a></li>
+<li><a href="eeg-to-l0-route.html">Single road from EEG to L0 →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>公開ページ</h4>
+<h4>Public page</h4>
 <ul>
-<li><a href="../verification.html">検証基盤 →</a></li>
-<li><a href="../datasets.html#l0-practice">ハンズオン →</a></li>
-<li><a href="../tech_roadmap.html">技術ロードマップ →</a></li>
+<li><a href="../verification.html">Verification infrastructure →</a></li>
+<li><a href="../datasets.html#l0-practice">Hands-on →</a></li>
+<li><a href="../tech_roadmap.html">Technology roadmap →</a></li>
 </ul>
 </div>
 </aside>

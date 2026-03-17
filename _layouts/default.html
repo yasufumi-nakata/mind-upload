@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -32,13 +32,13 @@
     <header class="journal-header" role="banner">
         <a class="site-title" href="{{ '/' | relative_url }}">Mind-Upload Commons</a>
         <nav aria-label="Primary">
-            <a href="{{ '/' | relative_url }}">スタート</a>
-            <a href="{{ '/verification.html' | relative_url }}">検証基盤</a>
-            <a href="{{ '/tech_roadmap.html' | relative_url }}">ロードマップ</a>
-            <a href="{{ '/content_hub.html' | relative_url }}">公開コンテンツ</a>
+            <a href="{{ '/' | relative_url }}">Start</a>
+            <a href="{{ '/verification.html' | relative_url }}">Verification</a>
+            <a href="{{ '/tech_roadmap.html' | relative_url }}">Roadmap</a>
+            <a href="{{ '/content_hub.html' | relative_url }}">Public Content</a>
             <a href="{{ wiki_home_href }}"{% if site.wiki_mode == 'github' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ wiki_home_label }}</a>
-            <a href="{{ '/mind_uploading_papers.html' | relative_url }}">論文集</a>
-            <a href="{{ '/issue.html' | relative_url }}">参加方法</a>
+            <a href="{{ '/mind_uploading_papers.html' | relative_url }}">Paper Archive</a>
+            <a href="{{ '/issue.html' | relative_url }}">Participate</a>
             <a href="https://github.com/yasufumi-nakata/mind-upload" target="_blank">GitHub</a>
         </nav>
     </header>
@@ -57,9 +57,9 @@
         </p>
         {% endif %}
         <div class="article-meta">
-            <span>公開ページ</span>
+            <span>Public Page</span>
             {% if page.last_updated %}
-            <span>更新日: {{ page.last_updated }}</span>
+            <span>Updated: {{ page.last_updated }}</span>
             {% endif %}
             {% if page.note %}
             <span>{{ page.note }}</span>
@@ -69,11 +69,11 @@
     {% endif %}
 
     {% if page.page_intro or page.page_highlights or page.recommended_pages or page.audience or page.reading_time or page.accuracy_note %}
-    <section class="page-guide" aria-label="このページの読み方">
+    <section class="page-guide" aria-label="How to use this page">
         <div class="page-guide-inner">
             <div class="page-guide-main">
-                <p class="page-guide-kicker">このページの読み方</p>
-                <h2>先にここだけ読むと迷いにくくなります</h2>
+                <p class="page-guide-kicker">How to use this page</p>
+                <h2>Read this first to avoid getting lost</h2>
                 {% if page.page_intro %}
                 <p class="page-guide-lead">{{ page.page_intro }}</p>
                 {% endif %}
@@ -86,7 +86,7 @@
                 {% endif %}
                 {% if page.recommended_pages %}
                 <div class="page-guide-links">
-                    <span>次に読むとわかりやすいページ</span>
+                    <span>Helpful next pages</span>
                     <div class="page-guide-link-list">
                         {% for link in page.recommended_pages %}
                         <a href="{{ link.url | relative_url }}">{{ link.label }}</a>
@@ -99,19 +99,19 @@
             <dl class="page-guide-facts">
                 {% if page.audience %}
                 <div>
-                    <dt>向いている人</dt>
+                    <dt>Best for</dt>
                     <dd>{{ page.audience }}</dd>
                 </div>
                 {% endif %}
                 {% if page.reading_time %}
                 <div>
-                    <dt>読む目安</dt>
+                    <dt>Reading time</dt>
                     <dd>{{ page.reading_time }}</dd>
                 </div>
                 {% endif %}
                 {% if page.accuracy_note %}
                 <div>
-                    <dt>正確さの前提</dt>
+                    <dt>Accuracy note</dt>
                     <dd>{{ page.accuracy_note }}</dd>
                 </div>
                 {% endif %}
@@ -121,12 +121,12 @@
     {% endif %}
 
     {% if page.known_points or page.unknown_points or page.wiki_links %}
-    <section class="topic-status" aria-label="この話で分かっていることと学習導線">
+    <section class="topic-status" aria-label="What is known here and where to learn more">
         <div class="topic-status-inner">
             {% if page.known_points %}
             <div class="topic-card topic-card-known">
-                <p class="topic-card-kicker">この話で比較的はっきりしていること</p>
-                <h2>いま分かっていること</h2>
+                <p class="topic-card-kicker">Relatively clear at this stage</p>
+                <h2>What we know now</h2>
                 <ul class="topic-point-list">
                     {% for item in page.known_points %}
                     <li>{{ item }}</li>
@@ -137,8 +137,8 @@
 
             {% if page.unknown_points %}
             <div class="topic-card topic-card-unknown">
-                <p class="topic-card-kicker">ここから先は未解決です</p>
-                <h2>まだ分かっていないこと</h2>
+                <p class="topic-card-kicker">Still unresolved beyond this point</p>
+                <h2>What we still do not know</h2>
                 <ul class="topic-point-list">
                     {% for item in page.unknown_points %}
                     <li>{{ item }}</li>
@@ -149,8 +149,8 @@
 
             {% if page.wiki_links %}
             <div class="topic-card topic-card-wiki">
-                <p class="topic-card-kicker">初歩から学ぶ</p>
-                <h2>wiki で基礎から確認する</h2>
+                <p class="topic-card-kicker">Learn the basics</p>
+                <h2>Check the basics in the wiki</h2>
                 <ul class="topic-link-list">
                     {% for link in page.wiki_links %}
                     <li>
@@ -168,28 +168,28 @@
     {% endif %}
 
     {% if page.article_type == "Wiki" %}
-    <section class="wiki-role-note" aria-label="Wikiの位置づけ">
+    <section class="wiki-role-note" aria-label="What the wiki is for">
         <div class="wiki-role-note-inner">
-            <strong>Wikiの位置づけ</strong>
-            <p>Wiki は学習用の補助ページです。公式の現状整理、勝利条件、運用方針は、必ず公開ページへ戻って確認してください。</p>
+            <strong>What the wiki is for</strong>
+            <p>The wiki is a learning aid. For the project's official current synthesis, success criteria, and operating rules, always return to the public pages.</p>
         </div>
     </section>
     {% endif %}
 
-    <section id="easy-guide" class="easy-guide" hidden aria-label="高校生向けの用語説明">
+    <section id="easy-guide" class="easy-guide" hidden aria-label="Plain-language terms">
         <div class="easy-guide-inner">
-            <h2>高校生向け：このページで出る言葉</h2>
+            <h2>Plain-language terms on this page</h2>
             <p id="easy-guide-status"></p>
             <ul id="easy-term-list"></ul>
-            <p class="easy-guide-more">もっと見る: <a href="{{ '/glossary.html' | relative_url }}">用語集</a></p>
+            <p class="easy-guide-more">See more: <a href="{{ '/glossary.html' | relative_url }}">Glossary</a></p>
         </div>
     </section>
 
-    <section id="section-map" class="section-map" hidden aria-label="ページ内の見取り図">
+    <section id="section-map" class="section-map" hidden aria-label="Page outline">
         <div class="section-map-inner">
             <div class="section-map-header">
-                <p class="section-map-kicker">ページ内の見取り図</p>
-                <h2>長いページでも、どこに何があるか先に分かります</h2>
+                <p class="section-map-kicker">Page outline</p>
+                <h2>See the structure before reading the whole page</h2>
                 <p id="section-map-status"></p>
             </div>
             <ol id="section-map-list" class="section-map-list"></ol>
@@ -201,7 +201,7 @@
 
     <!-- Footer -->
     <footer>
-        <p class="site-policy">本サイトは、再現可能性と透明性を重視した研究ノートです。公開ページでは要点と現状整理を示し、初歩からの学習用の詳しい説明は <a href="{{ wiki_home_href }}"{% if site.wiki_mode == 'github' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ wiki_home_label }}</a> に集約しています。わかりやすさを優先しつつ、定義・根拠・限界を省かない方針で更新しています。誤りの指摘や改善提案は GitHub Issues へお願いいたします。</p>
+        <p class="site-policy">This site is a research notebook centered on reproducibility and transparency. Public pages provide the key points and current synthesis, while detailed beginner-oriented explanations are collected in the <a href="{{ wiki_home_href }}"{% if site.wiki_mode == 'github' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ wiki_home_label }}</a>. The site is updated for clarity without omitting definitions, rationale, or limits. Please use GitHub Issues for corrections and improvement proposals.</p>
         <p>&copy; 2024-2026 Mind Uploading Research Project. <a href="https://github.com/yasufumi-nakata/mind-upload">GitHub</a></p>
     </footer>
 
@@ -287,25 +287,25 @@
             rewriteWikiLinksForMode();
 
             var terms = [
-                ["再現性", "同じ手順で、ほぼ同じ結果をもう一度出せることです。"],
-                ["反証可能性", "「間違っている」と確かめられる形で主張することです。"],
-                ["操作的定義", "言葉の意味を、実際にどう測るかで決めることです。"],
-                ["標準化", "データの形式や作業手順をそろえることです。"],
-                ["ベンチマーク", "同じ条件で性能を比べるための共通テストです。"],
-                ["メタデータ", "データについての説明データです（いつ、どう測ったか等）。"],
-                ["デコーディング", "脳信号から状態や内容を推定する作業です。"],
-                ["エミュレーション", "脳の働きを別の計算基盤で再現することです。"],
-                ["因果", "何が原因で何が起きるか、という関係です。"],
-                ["相関", "2つが一緒に変わる関係です（原因と結果とは限りません）。"],
-                ["反事実", "「もし条件を変えたらどうなるか」を考える検証です。"],
-                ["閉ループ", "結果を次の入力に戻しながら動く制御の仕組みです。"],
-                ["QC", "Quality Controlの略で、データ品質チェックのことです。"],
-                ["BIDS", "脳計測データを整理して共有するための共通ルールです。"],
-                ["クレーム階段", "主張の強さを段階で分ける整理法です。"],
-                ["本人性", "その人らしさや同一人物とみなせるか、という問題です。"],
-                ["公開基盤", "データ・コード・評価方法を共有するための土台です。"],
-                ["追試", "他の人が同じ研究をやり直して確かめることです。"],
-                ["ガバナンス", "安全に運用するためのルールと管理の仕組みです。"]
+                ["reproducibility", "Being able to rerun the same steps and obtain roughly the same result."],
+                ["falsifiability", "Stating a claim in a way that allows it to be shown wrong."],
+                ["operational definition", "Defining a term by how it is actually measured."],
+                ["standardization", "Using shared data formats and procedures."],
+                ["benchmark", "A shared test for comparing methods under the same conditions."],
+                ["metadata", "Data that describes the data, such as when and how it was measured."],
+                ["decoding", "Estimating states or contents from brain-related signals."],
+                ["emulation", "Reproducing brain function on another computational substrate."],
+                ["causal", "About what causes what, not just what changes together."],
+                ["correlation", "Two things changing together, which does not by itself prove causation."],
+                ["counterfactual", "Checking what would happen if a condition were changed."],
+                ["closed-loop", "A control setup where the output is fed back into the next input."],
+                ["qc", "Quality control: checking whether the data is usable and trustworthy."],
+                ["bids", "A shared standard for organizing and sharing neurophysiology data."],
+                ["claim ladder", "A way to separate weaker and stronger claims into levels."],
+                ["personhood", "The question of whether something counts as the same person."],
+                ["shared infrastructure", "The common base for sharing data, code, and evaluation rules."],
+                ["replication", "Another person rerunning the work to check whether it holds."],
+                ["governance", "The rules and oversight used to operate something safely."]
             ];
 
             var contentRoot = document.querySelector(".content-column") || document.querySelector(".papers-page > main") || document.querySelector("main");
@@ -365,7 +365,7 @@
                 }
 
                 if (sectionCount >= 3) {
-                    sectionMapStatus.textContent = "全" + sectionCount + "項目です。気になる節から読んでも大丈夫ですが、迷ったら上から順に追うと全体像を崩しにくくなります。";
+                    sectionMapStatus.textContent = "There are " + sectionCount + " sections. You can jump to any section, but reading from the top down is the safest way to keep the overall structure intact.";
                     sectionMap.hidden = false;
                 }
             }
@@ -374,11 +374,11 @@
                 return;
             }
 
-            var text = contentRoot.innerText || "";
+            var text = (contentRoot.innerText || "").toLowerCase();
             var found = [];
 
             for (var i = 0; i < terms.length; i++) {
-                if (text.indexOf(terms[i][0]) !== -1) {
+                if (text.indexOf(terms[i][0].toLowerCase()) !== -1) {
                     found.push(terms[i]);
                 }
             }
@@ -388,12 +388,12 @@
             }
 
             var limit = Math.min(found.length, 10);
-            status.textContent = "先に " + limit + " 個だけ、やさしい言葉で説明します。";
+            status.textContent = "Showing the first " + limit + " terms in plain language.";
 
             for (var j = 0; j < limit; j++) {
                 var item = document.createElement("li");
                 var term = document.createElement("strong");
-                term.textContent = found[j][0] + "：";
+                term.textContent = found[j][0] + ":";
                 item.appendChild(term);
                 item.appendChild(document.createTextNode(" " + found[j][1]));
                 list.appendChild(item);

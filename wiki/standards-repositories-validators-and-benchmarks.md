@@ -1,52 +1,51 @@
 ---
 layout: default
-title: "Wiki：規格・置き場・Validator・ベンチマーク"
-description: "BIDS、OpenNeuro/PhysioNet、HED、LSL、MNE-BIDS、MOABB の役割差と、版固定・評価固定の要点を整理します。"
+title: "Wiki: Standards/Location/Validator/Benchmark"
+description: "I will summarize the role differences among BIDS, OpenNeuro/PhysioNet, HED, LSL, MNE-BIDS, and MOABB, and the main points of version fixation and evaluation fixation."
 article_type: Wiki
-subtitle: "似て見える基盤群を、版固定と評価固定まで含めて切り分けます"
+subtitle: "Divides similar-looking infrastructure groups, including version fixing and evaluation fixing"
 author: Mind Uploading Research Project
-last_updated: "2026-03-16"
+last_updated: "2026-03-15"
 note: "Operational guide"
-audience: "BIDS、OpenNeuro、PhysioNet、MNE-BIDS、MOABB が同じ種類のものに見える人"
-reading_time: "10〜15分"
-page_intro: "このページは、Mind-Upload で何度も出てくる『規格』『置き場』『Validator』『ベンチマーク』に加えて、実務で重要な『版固定』『イベント意味論』『同期ミドルウェア』『ローダ / 変換器』『benchmark harness』の役割差を整理する wiki です。名前だけ覚えるのではなく、『どこで再現性が壊れやすいか』まで分けて理解することを目標にします。"
-accuracy_note: "ここで説明するのは役割の基本整理です。BIDS の器、HED の意味論、LSL の同期は相補的であり、どれか 1 つで最終的な妥当性が保証されるわけではありません。"
+audience: "People who see BIDS, OpenNeuro, PhysioNet, MNE-BIDS, and MOABB as the same kind of thing"
+reading_time: "10-15 minutes"
+page_intro: "This page is a wiki that organizes the roles of ``Standards,'' ``Stores,'' ``Validators,'' and ``Benchmarks,'' which appear many times in Mind-Upload, as well as ``version fixing,'' ``event semantics,'' ``synchronization middleware,'' ``loaders/converters,'' and ``benchmark harnesses,'' which are important in practice. The goal is not to memorize just the names, but to understand ``where reproducibility is most likely to break down.''"
+accuracy_note: "What I will explain here is a basic organization of roles. BIDS vessels, HED semantics, and LSL synchronization are complementary, and the final validity of any one is not guaranteed."
 page_highlights:
-  - "BIDS は規格、OpenNeuro や PhysioNet は置き場、Validator は機械検査、Benchmark は比較ルールです。"
-  - "OpenNeuro の snapshot や PhysioNet の version を固定しないと、同じデータ名でも再現できません。"
-  - "HED や Motion-BIDS は、BIDS の器に機械可読な意味論や追加 metadata を載せる拡張です。"
-  - "LSL は同期ミドルウェアであり、BIDS や benchmark の代わりではありません。"
-  - "multimodal 結果では、器や同期の外側に Fusion Card が要り、取得関係・融合モデル・外部妥当化を別に残します。"
-  - "MNE-BIDS のようなローダ / 変換器と、MOABB のような benchmark harness は別役割です。"
+  - "BIDS is a standard, OpenNeuro and PhysioNet are storage areas, Validator is a mechanical inspection, and Benchmark is a comparison rule."
+  - "If you do not fix the OpenNeuro snapshot or the PhysioNet version, you will not be able to reproduce the same data name."
+  - "HED and Motion-BIDS are extensions to BIDS that carry machine-readable semantics and additional metadata."
+  - "LSL is a synchronization middleware and is not a replacement for BIDS or benchmark."
+  - "A loader/transformer like MNE-BIDS and a benchmark harness like MOABB have different roles."
 known_points:
-  - "研究を比較可能にするには、データの形、公開先、検査手段、評価ルールを分けて整える必要があります。"
-  - "BIDS と EEG-BIDS は『どう置くか』の規格であり、採点ルールそのものではありません。"
-  - "HED のようなイベント意味論は、BIDS に載る event の意味を機械可読に補う役割があります。"
-  - "LSL は stream 間の clock alignment を助けますが、hardware delay の ground truth にはなりません。"
-  - "OpenNeuro や PhysioNet は公開基盤ですが、入力形式や評価手順を自動で全部保証するわけではありません。"
-  - "同じ dataset 名でも、snapshot / version と evaluation family が違えば比較不能です。"
+  - "To make research comparable, it is necessary to separate the data format, publication destination, testing methods, and evaluation rules."
+  - "BIDS and EEG-BIDS are standards for 'how to place' them, not scoring rules themselves."
+  - "Event semantics like HED have the role of supplementing the meaning of events listed in BIDS in a machine-readable manner."
+  - "LSL helps with clock alignment between streams, but is not the ground truth for hardware delays."
+  - "OpenNeuro and PhysioNet are public platforms, but they do not automatically guarantee all input formats and evaluation procedures."
+  - "Even if the dataset name is the same, it cannot be compared if the snapshot / version and evaluation family are different."
 unknown_points:
-  - "WBE 向けの最終的な共通 benchmark がどの粒度であるべきかは未確定です。"
-  - "どの validator や監査項目を最終標準にするかは、今後の運用設計に依存します。"
+  - "It is unclear what granularity the final common benchmark for WBE should be."
+  - "Which validators and audit items will become the final standard will depend on future operational design."
 wiki_links:
-  - label: "Wiki: 検証基盤の基本"
+  - label: "Wiki: Basics of verification infrastructure"
     url: "/wiki/verification-basics.html"
-    description: "標準、ベンチ、登録、監査の大きな地図へ戻れます。"
-  - label: "Wiki: ベースライン・事前登録・モデルカード"
+    description: "Return to the larger map of Standards, Bench, Registration, and Audit."
+  - label: "Wiki: Baseline/Pre-registration/Model Card"
     url: "/wiki/baselines-prereg-and-model-cards.html"
-    description: "Benchmark の先にある運用語の違いを補います。"
-  - label: "Wiki: イベント同期と観測ログ"
+    description: "Compensates for differences in operational language beyond Benchmark."
+  - label: "Wiki: Event synchronization and observation log"
     url: "/wiki/event-sync-and-measurement-logs.html"
-    description: "規格に入れたいログ情報の具体例を補います。"
+    description: "Add specific examples of log information you want to include in the standard."
   - label: "Wiki Home"
     url: "/wiki/"
-    description: "他の補助ページへ戻れます。"
+    description: "You can return to other auxiliary pages."
 recommended_pages:
-  - label: "データ&ベンチ"
+  - label: "Data & Bench"
     url: "/datasets.html"
-  - label: "検証基盤"
+  - label: "Verification base"
     url: "/verification.html"
-  - label: "ケースワーク"
+  - label: "Casework"
     url: "/verification.html#casework"
 ---
 
@@ -54,321 +53,309 @@ recommended_pages:
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>いちばん短い区別</h2>
+<h2>The shortest distinction</h2>
 <p>
-<strong>規格</strong>は「どういう形でそろえるか」、<strong>置き場</strong>は「どこへ公開するか」、<strong>Validator</strong>は「規格どおりかを機械で確かめる道具」、<strong>ベンチマーク</strong>は「何で比べるか」のルールです。同じ『研究基盤』でも役割は別です。
+<strong>Standards</strong> are the rules for ``how to arrange them,'' <strong>location</strong> is for ``where to publish them,'' <strong>Validator</strong> is a ``tool to mechanically check that the standards are met,'' and <strong>benchmarks</strong> are rules for ``what to compare.'' Even though they are the same ``research infrastructure,'' their roles are different.
 </p>
 </div>
 
 <section class="section" id="why-separate">
-<h2 class="section-title">なぜ分けて考えるのか</h2>
+<h2 class="section-title">Why consider separately</h2>
 <p>
-この 4 つを混同すると、「OpenNeuro に上げたから benchmark がある」「BIDS だから比較まで済んでいる」といった読み違いが起きます。実際には、データの形をそろえる仕事と、比較のルールを作る仕事は別です。
+If you confuse these four things, you'll get the wrong impression, such as, ``There's a benchmark because you uploaded it to OpenNeuro,'' or ``Because it's BIDS, you've already done the comparison.'' In reality, the task of aligning data and the task of creating comparison rules are two different things.
 </p>
 </section>
 
 <section class="section" id="terms">
-<h2 class="section-title">まず用語を分ける</h2>
+<h2 class="section-title">First, separate terms</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>用語</th>
-<th>何をするものか</th>
-<th>例</th>
+<th>Term</th>
+<th>What it does</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>規格（standard）</strong></td>
-<td>ファイルの置き方、名前、メタデータの書き方をそろえます。</td>
-<td>BIDS、EEG-BIDS です。</td>
+<td><strong>standard</strong></td>
+<td>The way to place the file, name it, and write the metadata will be the same. </td>
+<td>BIDS, EEG-BIDS. </td>
 </tr>
 <tr>
-<td><strong>置き場 / 共有基盤（repository）</strong></td>
-<td>データを公開し、他の人が取得できるようにします。</td>
-<td>OpenNeuro、PhysioNet、PDB などです。</td>
+<td><strong>Storage/shared infrastructure (repository)</strong></td>
+<td>Publish your data so others can retrieve it. </td>
+<td>OpenNeuro, PhysioNet, PDB, etc. </td>
 </tr>
 <tr>
 <td><strong>Validator</strong></td>
-<td>規格違反や不足メタデータを機械で点検します。</td>
-<td>BIDS Validator です。</td>
+<td>Mechanically inspects for standard violations and missing metadata. </td>
+<td>BIDS Validator. </td>
 </tr>
 <tr>
-<td><strong>ベンチマーク（benchmark）</strong></td>
-<td>課題、分割、指標、禁止事項を固定して比較可能にします。</td>
-<td>MOABB、MLPerf、ImageNet 型の運用です。</td>
+<td><strong>benchmark</strong></td>
+<td>Fix issues, divisions, indicators, and prohibitions to make them comparable. </td>
+<td>MOABB, MLPerf, ImageNet type operation. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="operational-stack">
-<h2 class="section-title">実務では 4 つでは足りず、7 層で見ます</h2>
+<h2 class="section-title">In practice, 4 layers are not enough, so we look at 7 layers</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>層</th>
-<th>代表例</th>
-<th>ここで固定するもの</th>
-<th>まだ保証しないこと</th>
+<th>layer</th>
+<th>Representative examples</th>
+<th>What to fix here</th>
+<th>No guarantees yet</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>1. 規格</strong></td>
-<td>BIDS、EEG-BIDS</td>
-<td>ファイル名、必須メタデータ、座標系、events/channels/electrodes の形です。</td>
-<td>train/test 分割や指標は決まりません。</td>
+<td><strong>1. Standards</strong></td>
+<td>BIDS, EEG-BIDS</td>
+<td>File name, required metadata, coordinate system, events/channels/electrodes format. </td>
+<td>train/test Splits and indicators are not determined. </td>
 </tr>
 <tr>
-<td><strong>2. 公開版</strong></td>
-<td>OpenNeuro snapshot、PhysioNet version</td>
-<td>どの版を取得したか、第三者が同じ入力へ戻れることです。</td>
-<td>その版が benchmark split や前処理条件まで固定するとは限りません。</td>
+<td><strong>2. Public version</strong></td>
+<td>OpenNeuro snapshot, PhysioNet version</td>
+<td>A third party can return to the same input to know which version was obtained. </td>
+<td>The version does not necessarily fix the benchmark split or preprocessing conditions. </td>
 </tr>
 <tr>
-<td><strong>3. イベント意味論 / 拡張 schema</strong></td>
-<td>HED、Motion-BIDS</td>
-<td><code>trial_type</code> の意味、event tag、追加センサの metadata、座標 frame です。</td>
-<td>clock alignment や benchmark split までは自動で決まりません。</td>
+<td><strong>3. Event semantics/extension schema</strong></td>
+<td>HED, Motion-BIDS</td>
+<td><code>trial_type</code> meaning, event tag, additional sensor metadata, and coordinate frame. </td>
+<td>Clock alignment and benchmark split are not determined automatically. </td>
 </tr>
 <tr>
-<td><strong>4. 同期ミドルウェア</strong></td>
+<td><strong>4. Synchronization middleware</strong></td>
 <td>LSL</td>
-<td>複数ストリームの時刻整列、clock offset 推定、stream metadata です。</td>
-<td>device-side delay や刺激提示遅延の真値までは保証しません。</td>
+<td>Time alignment of multiple streams, clock offset estimation, and stream metadata. </td>
+<td>We do not guarantee the true value of device-side delay or stimulus presentation delay. </td>
 </tr>
 <tr>
-<td><strong>5. 変換・読込</strong></td>
+<td><strong>5. Conversion/Reading</strong></td>
 <td>MNE-BIDS</td>
-<td>BIDSPath、metadata 抽出、MNE への読込経路、必要時の format 変換です。</td>
-<td>比較指標や評価族は固定しません。</td>
+<td>BIDSPath, metadata extraction, reading path to MNE, format conversion when necessary. </td>
+<td>Comparison indicators and evaluation families are not fixed. </td>
 </tr>
 <tr>
 <td><strong>6. Benchmark harness</strong></td>
 <td>MOABB</td>
-<td>paradigm、evaluation family、統計比較、同一 pipeline の横断評価です。</td>
-<td>source imaging の真値や実運用安全性までは保証しません。</td>
+<td>paradigm, evaluation family, statistical comparison, cross-sectional evaluation of the same pipeline. </td>
+<td>We do not guarantee the true value of source imaging or the safety of actual operation. </td>
 </tr>
 <tr>
-<td><strong>7. 学習器</strong></td>
-<td>線形分類器、Riemannian pipeline、deep model</td>
-<td>どのモデルを、どの前処理・乱数・ハイパーパラメータで回したかです。</td>
-<td>上の 1〜6 が固定されていなければ、公平比較にはなりません。</td>
+<td><strong>7. Learner</strong></td>
+<td>Linear classifier, Riemannian pipeline, deep model</td>
+<td>Which model was run with which preprocessing, random numbers, and hyperparameters. </td>
+<td>If 1-6 above are not fixed, it will not be a fair comparison. </td>
 </tr>
 </tbody>
 </table>
 
 <div class="note-box">
-<strong>2026-03 の site rule</strong>
+<strong>2026-03 site rule</strong>
 <p>
-OpenNeuro は snapshot を semantic version の git tag として扱い、PhysioNet も project ごとに version を明示して引用させます。したがって本サイトでは、dataset 名だけではなく <strong>snapshot / version / DOI または永続 URL</strong> まで成果物へ含めます。さらに、BIDS は器、HED / Motion-BIDS は意味論と追加 metadata、LSL は同期、MNE-BIDS は入出力経路、MOABB は比較ルールでございます。これらを混ぜて「BIDS にしたので benchmark まで済んだ」「LSL を入れたので hardware 遅延まで解決した」と読まないでください。
-</p>
-</div>
-<div class="note-box">
-<strong>multimodal では器の外側にもう 1 枚必要です</strong>
-<p>
-EEG-BIDS、Motion-BIDS、HED、LSL は重要ですが、これらだけでは <strong>どうモダリティを結び付け、どの融合モデルを使い、single-modality baseline をどこまで超え、どこで外部妥当化したか</strong> までは残りません。したがって本サイトでは、multimodal / atlas prior 結果に <a href="../verification.html#fusion-card">Verification の Fusion Card</a> を追加し、規格・同期・benchmark の外側にある結合条件までカード化します。
+OpenNeuro treats the snapshot as a git tag of the semantic version, and PhysioNet also explicitly cites the version for each project. Therefore, on this site, we include not only the dataset name but also the <strong>snapshot / version / DOI or persistent URL</strong> in the artifact. Additionally, BIDS is a container, HED/Motion-BIDS is semantics and additional metadata, LSL is synchronization, MNE-BIDS is an input/output path, and MOABB is a comparison rule. Please don't mix these up and read that ``Since I used BIDS, I was able to get past the benchmark'' or ``Since I installed LSL, I was able to solve the hardware delay.''
 </p>
 </div>
 </section>
 
 <section class="section" id="eeg-example">
-<h2 class="section-title">EEG の例で見ると</h2>
+<h2 class="section-title">Looking at the example of EEG</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>段階</th>
-<th>そこでやること</th>
+<th>stage</th>
+<th>What to do there</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>1. 規格へそろえる</strong></td>
-<td>EEG ファイル、events.tsv、channels.tsv、メタデータを BIDS 形へそろえます。</td>
+<td><strong>1. Align to standards</strong></td>
+<td>Align EEG files, events.tsv, channels.tsv, and metadata to BIDS format. </td>
 </tr>
 <tr>
-<td><strong>2. event semantics を付ける</strong></td>
-<td><code>trial_type</code>、条件説明、HED tags、manual scoring rule、report usage flag を明示します。</td>
+<td><strong>2. Add event semantics</strong></td>
+Specify <td><code>trial_type</code>, condition description, HED tags, manual scoring rule, and report usage flag. </td>
 </tr>
 <tr>
-<td><strong>3. 同期を監査する</strong></td>
-<td>clock domain、LSL / TTL / photodiode、delay / jitter / drift の測り方を残します。</td>
+<td><strong>3. Audit synchronization</strong></td>
+<td>How to measure clock domain, LSL / TTL / photodiode, delay / jitter / drift will be left. </td>
 </tr>
 <tr>
-<td><strong>4. Validator で点検する</strong></td>
-<td>規格違反や不足項目を機械的に洗い出します。</td>
+<td><strong>4. Check with Validator</strong></td>
+<td>Mechanically identifies violations of standards and missing items. </td>
 </tr>
 <tr>
-<td><strong>5. 置き場へ公開する</strong></td>
-<td>OpenNeuro や PhysioNet のような共有基盤に載せ、第三者が取得できるようにします。</td>
+<td><strong>5. Publish to storage</strong></td>
+<td>Put it on a shared platform like OpenNeuro or PhysioNet so it can be retrieved by third parties. </td>
 </tr>
 <tr>
-<td><strong>6. ベンチマークで比べる</strong></td>
-<td>同じ train/test 分割、同じ指標、同じベースラインでモデルを比較します。</td>
+<td><strong>6. Compare with benchmarks</strong></td>
+<td>Compare models with the same train/test split, the same metrics, and the same baseline. </td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>ここが重要です</strong>
+<strong>This is important</strong>
 <p>
-規格にそろえただけでは、まだ「比べるルール」はありません。逆に benchmark だけあっても、入力の形がバラバラなら比較が崩れます。両方必要です。
-</p>
-</div>
-<div class="note-box">
-<strong>multimodal でさらに必要なもの</strong>
-<p>
-もし EEG と MRI、EEG と fMRI、EEG と侵襲記録を結び付けるなら、ここで終わりではありません。<strong>acquisition relation</strong>、<strong>clock and timing audit</strong>、<strong>geometry / registration</strong>、<strong>fusion model</strong>、<strong>missing-modality baseline</strong>、<strong>external validator</strong> を <a href="../verification.html#fusion-card">Fusion Card</a> として追加しない限り、本サイトでは multimodal gain を強く読みません。
+Just by aligning to the standard, there is still no "rule for comparison." On the other hand, even if there is a benchmark, if the input shapes are different, the comparison will be broken. Both are required.
 </p>
 </div>
 </section>
 
 <section class="section" id="missing-piece">
-<h2 class="section-title">何が欠けると何が困るか</h2>
+<h2 class="section-title">What is missing?</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>欠けるもの</th>
-<th>起きやすい問題</th>
+<th>What is missing</th>
+<th>Problems that are likely to occur</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>規格</strong></td>
-<td>ファイル名やメタデータが人ごとに違い、追試の入口で止まります。</td>
+<td><strong>Standards</strong></td>
+<td>The file name and metadata are different for each person, and it stops at the entrance to the supplementary exam. </td>
 </tr>
 <tr>
-<td><strong>置き場</strong></td>
-<td>存在を知っても入手や再利用ができず、比較の輪が広がりません。</td>
+<td><strong>Storage place</strong></td>
+<td>Even if you know about its existence, you will not be able to obtain it or reuse it, and the circle of comparison will not expand. </td>
 </tr>
 <tr>
 <td><strong>Validator</strong></td>
-<td>規格違反に気づくのが遅れ、共有直前や再解析時に事故が出ます。</td>
+<td>Notice of violation of standards is delayed, and accidents occur immediately before sharing or during reanalysis. </td>
 </tr>
 <tr>
-<td><strong>ベンチマーク</strong></td>
-<td>各自が違う分割や指標で評価し、「勝った」の意味が揺れます。</td>
+<td><strong>Benchmark</strong></td>
+<td>Each person evaluates using different divisions and indicators, and the meaning of "winning" fluctuates. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="raw-is-not-enough">
-<h2 class="section-title">raw ファイルだけでは足りない理由</h2>
+<h2 class="section-title">Why raw files alone are not enough</h2>
 <p>
-波形ファイルを置いただけでは、規格も benchmark も十分ではありません。少なくとも、イベント定義、刺激ログ、同期情報、QC ログ、除外理由がないと、同じ課題として追試しにくくなります。
+Just having a waveform file is not enough for standards or benchmarks. At the very least, without event definitions, stimulus logs, synchronization information, QC logs, and reasons for exclusion, it will be difficult to repeat the same challenge.
 </p>
 <div class="note-box">
-<strong>安全な読み方</strong>
+<strong>Safe reading</strong>
 <p>
-「公開されている」ことと「比較可能である」ことは別です。公開は入口、比較可能性はその次の設計です。
+Being "publicly available" and being "comparable" are two different things. Publication is the first step, comparability is the next step in design.
 </p>
 </div>
 </section>
 
 <section class="section" id="common-confusions">
-<h2 class="section-title">ありがちな混同</h2>
+<h2 class="section-title">Common confusion</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>言いがちなこと</th>
-<th>より正確な言い換え</th>
+<th>Things I tend to say</th>
+<th>More accurate paraphrase</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>「BIDS にしたので benchmark がある」</td>
-<td>BIDS は入力形式の規格であり、比較ルールそのものではありません。</td>
+<td>“Since we chose BIDS, there is a benchmark”</td>
+<td>BIDS is an input format standard, not a comparison rule itself. </td>
 </tr>
 <tr>
-<td>「OpenNeuro に置いたので標準化された」</td>
-<td>置き場に載せても、規格やメタデータが十分とは限りません。</td>
+<td>“It was standardized because it was placed in OpenNeuro”</td>
+<td>Even if it is posted in the storage area, the standards and metadata are not necessarily sufficient. </td>
 </tr>
 <tr>
-<td>「同じ dataset 名だから同じ入力を使った」</td>
-<td>OpenNeuro snapshot や PhysioNet version を固定しない限り、同じ入力とは言えません。</td>
+<td>"We used the same input because the dataset name is the same"</td>
+<td>Unless you fix OpenNeuro snapshot or PhysioNet version, it cannot be said that it is the same input. </td>
 </tr>
 <tr>
-<td>「Validator が通ったので研究として十分」</td>
-<td>Validator は形式点検であり、研究の妥当性や benchmark の強さまでは保証しません。</td>
+<td>"Validator passed, so it's enough for research"</td>
+<td>Validator is a formal check and does not guarantee the validity of the research or the strength of the benchmark. </td>
 </tr>
 <tr>
-<td>「MNE-BIDS で読めたので benchmark になった」</td>
-<td>MNE-BIDS は読込・変換の助けであり、evaluation family や比較統計を固定するのは別作業です。</td>
+<td>"It became a benchmark because I could read it with MNE-BIDS"</td>
+<td>MNE-BIDS is a reading/conversion aid; fixing evaluation families and comparison statistics is a separate task. </td>
 </tr>
 <tr>
-<td>「`events.tsv` があるので event semantics まで固定された」</td>
-<td><code>events.tsv</code> は時刻と列の器であり、条件意味や scorer rule は <code>events.json</code>、HED、補助ログで別に固定する必要があります。</td>
+<td>“Event semantics are fixed because there is `events.tsv`”</td>
+<td><code>events.tsv</code> is a container for time and columns, and condition meanings and scorer rules must be fixed separately in <code>events.json</code>, HED, and auxiliary logs. </td>
 </tr>
 <tr>
-<td>「LSL を使ったので hardware 遅延まで解決した」</td>
-<td>LSL は stream 同期を助けますが、display / audio / amplifier の device-side delay は別測定が必要です。</td>
+<td>"Using LSL even solved the hardware delay"</td>
+<td>LSL helps with stream synchronization, but device-side delay for display/audio/amplifier requires separate measurement. </td>
 </tr>
 <tr>
-<td>「MOABB の score は task をまたいでそのまま比較できる」</td>
-<td>within-session、cross-session、cross-subject は別の評価族であり、同列には扱えません。</td>
+<td>“MOABB scores can be directly compared across tasks”</td>
+<td>Within-session, cross-session, and cross-subject are different evaluation families and cannot be treated equally. </td>
 </tr>
 <tr>
-<td>「前処理済みファイルを raw BIDS に戻しても問題ない」</td>
-<td>BIDS と MNE-BIDS は原則として unprocessed ないし minimally processed data を前提にしており、modified data は lineage を明示して derivatives として扱う方が安全です。</td>
+<td>"It's safe to convert preprocessed files back to raw BIDS"</td>
+<td>BIDS and MNE-BIDS basically assume unprocessed or minimally processed data, and it is safer to treat modified data as derivatives by specifying the lineage. </td>
 </tr>
 <tr>
-<td>「ベンチマークに勝ったので実運用も十分」</td>
-<td>benchmark は比較の物差しであり、実運用や L4/L5 の成立を自動では保証しません。</td>
+<td>"We won the benchmark, so it's good enough for actual operation"</td>
+<td>Benchmark is a yardstick for comparison and does not automatically guarantee actual operation or the establishment of L4/L5. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="freeze-ids">
-<h2 class="section-title">最低限固定したい 4 つの ID</h2>
+<h2 class="section-title">Minimum 4 IDs that you want to fix</h2>
 <table class="data-table">
 <thead>
 <tr>
 <th>ID</th>
-<th>最低限ほしいもの</th>
-<th>欠けると何が起きるか</th>
+<th>What I want at least</th>
+<th>What happens when it is missing</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Input ID</strong></td>
-<td>OpenNeuro snapshot tag、PhysioNet version、DOI、取得日です。</td>
-<td>同じ dataset 名でも別版を混ぜ、追試不能になります。</td>
+<td>OpenNeuro snapshot tag, PhysioNet version, DOI, acquisition date. </td>
+<td>If you mix different versions with the same dataset name, you will not be able to try again. </td>
 </tr>
 <tr>
 <td><strong>Schema ID</strong></td>
-<td>BIDS / EEG-BIDS の版、Validator の版、残した warning の理由です。</td>
-<td>規格差と実装差を切り分けられません。</td>
+<td>The version of BIDS/EEG-BIDS, the version of Validator, and the reason for the warning left. </td>
+<td>It is not possible to distinguish between standard differences and implementation differences. </td>
 </tr>
 <tr>
 <td><strong>Evaluation ID</strong></td>
-<td>within-session / cross-session / cross-subject、指標、split seed、禁止事項です。</td>
-<td>score の意味がずれ、公平比較が崩れます。</td>
+<td>Within-session / cross-session / cross-subject, indicators, split seed, and prohibitions. </td>
+<td>The meaning of score will be different and fair comparison will be broken. </td>
 </tr>
 <tr>
 <td><strong>Pipeline ID</strong></td>
-<td>MNE-BIDS / MOABB / 学習器 / 環境の version、commit、設定です。</td>
-<td>同じ版の入力でも再実行時に違う結果が出ます。</td>
+<td>MNE-BIDS / MOABB / learning device / environment version, commit, and settings. </td>
+<td>Even if you input the same version, you will get different results when you rerun it. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="how-to-read">
-<h2 class="section-title">強い主張を読むときの 6 問</h2>
+<h2 class="section-title">6 questions when reading strong arguments</h2>
 <ol>
-<li><strong>入力の規格は何か：</strong>BIDS などで形がそろっているかを確認します。</li>
-<li><strong>どの版を使ったか：</strong>snapshot、version、DOI、取得日が固定されているかを見ます。</li>
-<li><strong>event semantics と clock domain は何か：</strong><code>trial_type</code>、HED、scorer rule、LSL / TTL / photodiode、delay / jitter の監査があるかを見ます。</li>
-<li><strong>何で読み書きしたか：</strong>ローダ / 変換器と、その version が明示されているかを見ます。</li>
-<li><strong>何で比べているか：</strong>benchmark、evaluation family、分割、指標、禁止事項が固定されているかを見ます。</li>
-<li><strong>raw と derivative を分けたか：</strong>前処理済みデータの lineage が追えるかを見ます。</li>
+<li><strong>What is the input standard?</strong> Check to see if the format is consistent using BIDS, etc. </li>
+<li><strong>What version was used:</strong>See if the snapshot, version, DOI, and acquisition date are fixed. </li>
+<li><strong>What are the event semantics and clock domain: </strong>Look at <code>trial_type</code>, HED, scorer rule, LSL/TTL/photodiode, delay/jitter audits. </li>
+<li><strong>What was used to read/write:</strong>Look at the loader/transformer and see if its version is specified. </li>
+<li><strong>What are you comparing?</strong>See if benchmarks, evaluation families, splits, indicators, and prohibitions are fixed. </li>
+<li><strong>Did you separate raw and derivative?</strong>See if you can follow the lineage of preprocessed data. </li>
 </ol>
 </section>
 
 <section class="section" id="references">
-<h2 class="section-title">参考文献と公式ページ</h2>
+<h2 class="section-title">References and official pages</h2>
 <ul>
 <li><a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/events.html" target="_blank">BIDS Specification: Task events</a></li>
 <li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS Specification: Electroencephalography</a></li>
@@ -390,9 +377,9 @@ EEG-BIDS、Motion-BIDS、HED、LSL は重要ですが、これらだけでは <s
 </section>
 
 <section class="section" id="return">
-<h2 class="section-title">次にどこへ戻るか</h2>
+<h2 class="section-title">Where to go back next</h2>
 <p>
-実務の入口へ戻るなら <a href="../datasets.html">データ&ベンチ</a>、全体設計へ戻るなら <a href="../verification.html">検証基盤</a>、他分野の実例へ戻るなら <a href="../verification.html#casework">ケースワーク</a> をご利用ください。
+Please use <a href="../datasets.html">Data & Bench</a> to return to the practical entry point, <a href="../verification.html">Verification Platform</a> to return to overall design, and <a href="../verification.html#casework">Casework</a> to return to examples from other fields.
 </p>
 </section>
 
@@ -402,17 +389,17 @@ EEG-BIDS、Motion-BIDS、HED、LSL は重要ですが、これらだけでは <s
 <div class="sidebar-box">
 <h4>Related Wiki</h4>
 <ul>
-<li><a href="verification-basics.html">検証基盤の基本 →</a></li>
-<li><a href="baselines-prereg-and-model-cards.html">ベースライン・事前登録・モデルカード →</a></li>
-<li><a href="event-sync-and-measurement-logs.html">イベント同期と観測ログ →</a></li>
+<li><a href="verification-basics.html">Basics of verification infrastructure →</a></li>
+<li><a href="baselines-prereg-and-model-cards.html">Baselines/preregistration/model cards →</a></li>
+<li><a href="event-sync-and-measurement-logs.html">Event synchronization and observation logs →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>公開ページ</h4>
+<h4>Public page</h4>
 <ul>
-<li><a href="../datasets.html">データ&ベンチ →</a></li>
-<li><a href="../verification.html">検証基盤 →</a></li>
-<li><a href="../verification.html#casework">ケースワーク →</a></li>
+<li><a href="../datasets.html">Data & Bench →</a></li>
+<li><a href="../verification.html">Verification infrastructure →</a></li>
+<li><a href="../verification.html#casework">Casework →</a></li>
 </ul>
 </div>
 </aside>

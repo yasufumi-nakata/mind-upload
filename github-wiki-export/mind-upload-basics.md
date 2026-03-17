@@ -1,118 +1,118 @@
-# Wiki：マインドアップロード / WBE の基本
+# Wiki: Mind Upload / WBE Basics
 
-> 大きな夢を、小さく確かめられる問いに分ける
+> Divide big dreams into small questions that can be confirmed.
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-14 / 位置づけ: Beginner guide
+- Updated: 2026-03-14 / Role: Beginner guide
 
-## このページの役割
-このページは、マインドアップロードや WBE が何を目指す話なのかを、初歩から整理するためのページです。最初に『何ができたら強い主張になるのか』を曖昧にしないことを重視しています。
+## Role Of This Page
+This page is for organizing what Mind Upload and WBE aim for from the beginning. First, I place emphasis on not leaving ambiguous questions about ``What can I do to make a strong argument?''
 
-## 正確さの前提
-分かりやすくするために言い切りを増やしません。まだ決まっていない論点は、未解決のまま書きます。
+## Accuracy Notes
+I won't add more words to make it easier to understand. Issues that have not yet been decided will be written as unresolved.
 
-## 公開ページへ戻る
-- [WBE入門](https://mind-upload.com/wbe_101.html)
-- [検証基盤](https://mind-upload.com/verification.html)
+## Back To Public Pages
+- [Introduction to WBE](https://mind-upload.com/wbe_101.html)
+- [Verification platform](https://mind-upload.com/verification.html)
 - [FAQ](https://mind-upload.com/faq.html)
 
-## 関連 Wiki
-- [Wiki: 主張と証拠の読み方](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - この全体像を、ニュースや研究発表の読み方に落とします。
-- [Wiki: 配線図だけでは足りない理由](https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough) - 配線だけで何が欠けるかを、技術と自然科学の側面から整理します。
-- [Wiki: 本人性とコピー問題](https://github.com/yasufumi-nakata/mind-upload/wiki/personhood-and-copy-problem) - 『コピー』と『移行』の違いをもう一段ていねいに整理します。
-- [Wiki: 検証基盤の基本](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - なぜ先に物差しを作るのかを学べます。
+## Related Wiki Pages
+- [Wiki: How to read claims and evidence](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - We will translate this overall picture into how to read news and research publications.
+- [Wiki: Why wiring diagrams alone are not enough](https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough) - We will explain what is missing in wiring from the aspects of technology and natural science.
+- [Wiki: Identity and copying issues](https://github.com/yasufumi-nakata/mind-upload/wiki/personhood-and-copy-problem) - Let's clarify the difference between "copy" and "migration" in more detail.
+- [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - You can learn why we make the ruler first.
 
-## いま分かっていること
-- 脳信号の一部を測り、特定の課題で予測する研究はすでに進んでいます。
-- 標準化と再現性の仕組みがないと、進歩の比較ができません。
-- WBE の話では、出力が似ていることと内部の仕組みが同じことは別です。
+## What Is Currently Known
+- Research is already underway to measure some brain signals and make predictions for specific tasks.
+- Without mechanisms for standardization and reproducibility, progress cannot be compared.
+- When it comes to WBE, it's one thing to have similar output and another thing to have the same internal workings.
 
-## まだ分かっていないこと
-- 機能的な再現が、本人性や現象的意識まで保証するかは未解決です。
-- どの計測セットで WBE に十分な内部情報が取れるかは決まっていません。
-- 社会実装に必要な権利・責任・停止基準は、技術だけで解けません。
+## What Is Still Unknown
+- It remains unresolved whether functional reproduction guarantees identity and phenomenal consciousness.
+- It is not determined which measurement set provides sufficient internal information for WBE.
+- The rights, responsibilities, and suspension standards necessary for social implementation cannot be solved by technology alone.
 
 ---
 
-<h2>まず一言でいうと</h2>
+<h2>First of all, in a nutshell</h2>
 <p>
-マインドアップロードは、「心や記憶を別の基盤で保てるか」という大きな問いです。WBE（Whole Brain Emulation）は、その中でも<strong>脳の機能を別の計算基盤で再現する</strong>ことに寄った言い方です。ただし、何を再現できたら「成功」と呼ぶかは、まだ自動的には決まりません。
+Mind uploading is a big question: ``Can we maintain our minds and memories on another basis?'' WBE (Whole Brain Emulation) is a term that focuses on reproducing brain functions using a different computational platform. However, what we would call a "success" if we were able to reproduce it is not yet automatically determined.
 </p>
 
-<strong>このサイトが最初にやること</strong>
+<strong>What this site does first</strong>
 <p>
-このサイトは、いきなり「できる」「できない」を決めるよりも先に、<strong>何を達成したら前進か</strong>と<strong>何が出たらまだ不足か</strong>をそろえることを重視します。大きな夢を守るには、先に物差しを作る必要があるからです。
+Rather than suddenly deciding whether something can be done or not, this site focuses on aligning what needs to be achieved to move forward and what needs to be achieved to make progress. Because in order to protect your big dreams, you first need to create a measuring stick.
 </p>
 
-<h2>まず分けたい3つの言葉</h2>
+<h2>Three words I would like to share first</h2>
 <table>
 <thead>
 <tr>
-<th>言葉</th>
-<th>ここでの意味</th>
+<th>Words</th>
+<th>What it means here</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>マインドアップロード</strong></td>
-<td>心や記憶をデジタルに移す話全体を指す広い呼び方です。</td>
+<td><strong>Mind Upload</strong></td>
+<td>This is a broad term that refers to the whole story of transferring your mind and memories to digital. </td>
 </tr>
 <tr>
 <td><strong>WBE</strong></td>
-<td>脳の機能を別の基盤で再現することに寄った、技術寄りの呼び方です。</td>
+<td>It is a technological term that refers to recreating brain functions on a different basis. </td>
 </tr>
 <tr>
-<td><strong>検証基盤</strong></td>
-<td>データ、評価、ルール、監査をそろえて、他の人も同じ結論へ辿れるようにする土台です。</td>
+<td><strong>Verification base</strong></td>
+<td>It's a foundation that brings together data, evaluations, rules, and audits so that others can arrive at the same conclusions. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>いま比較的はっきりしていること / まだ未解決のこと</h2>
+<h2>What is relatively clear now / What is still unresolved</h2>
 <table>
 <thead>
 <tr>
-<th>比較的はっきりしていること</th>
-<th>まだ未解決のこと</th>
+<th>Relatively clear</th>
+<th>Still unresolved</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>脳信号の一部を測って、条件付きで状態を予測する研究はできています。</td>
-<td>その予測がそのまま本人性や意識の保存を意味するわけではありません。</td>
+<td>Research has been completed to measure some brain signals and conditionally predict states. </td>
+<td>That prediction does not necessarily mean the preservation of identity or consciousness. </td>
 </tr>
 <tr>
-<td>公開データ、標準、ベンチがそろうと、進歩を比較しやすくなります。</td>
-<td>どの条件なら「同じ本人」と見なせるかは、まだ合意がありません。</td>
+<td>Once we have public data, standards, and benches, it becomes easier to compare progress. </td>
+<td>There is still no agreement on the conditions under which two persons can be considered "the same person." </td>
 </tr>
 <tr>
-<td>出力の一致だけでは不十分で、介入や条件変更への応答も大事です。</td>
-<td>機能的な等価性が現象的意識まで保証するかは分かっていません。</td>
+<td>It is not enough to match the output, it is also important to respond to interventions and changes in conditions. </td>
+<td>It is not known whether functional equivalence guarantees phenomenal consciousness. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>なぜ、すぐ「できた」と言わないのか</h2>
+<h2>Why don't you say "done" right away</h2>
 <p>
-WBE の話では、似ているものを混同しやすいからです。たとえば、脳信号から文章を当てられることと、脳の内部状態を別基盤で生成できることは同じではありません。前者は<strong>観測の翻訳</strong>かもしれませんが、後者は<strong>内部の仕組みが時間とともに動き、条件変更にも反応する</strong>ことを要求します。
+When it comes to WBE, it's easy to confuse similar things. For example, being able to guess a sentence from brain signals is not the same as being able to generate the brain's internal state using a different basis. While the former may be<strong>translation of observations, the latter requires<strong>inner mechanisms to move over time and also react to</strong>changing conditions.
 </p>
 
-<strong>ここで大事なこと</strong>
+<strong>What's important here</strong>
 <p>
-この差を曖昧にすると、L1 の研究を L4 のように語ってしまいます。だからこのサイトでは、強い主張ほど、必要な証拠も強くする方針を取ります。
+If we obscure this difference, we end up talking about L1 research as if it were L4. Therefore, on this site, we take a policy that the stronger the claim, the stronger the evidence required.
 </p>
 
-<strong>「配線図があれば WBE に近いのか？」で止まったとき</strong>
+<strong>When you stop at "Is it close to WBE if I have a wiring diagram?"</strong>
 <p>
-配線図は重要ですが、シナプス状態、遅延と髄鞘、神経修飾、グリア、細胞型ラベルが欠けると強い主張はできません。技術と自然科学の側面だけでこの差を整理したい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough">Wiki: 配線図だけでは足りない理由</a> をご覧ください。
+Wiring diagrams are important, but without synaptic state, delay and myelination, neuromodification, glia, and cell type labels, no strong claims can be made. If you want to explain this difference only from the technical and natural science aspects, please see <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough">Wiki: Why wiring diagrams alone are not enough</a>.
 </p>
 
-<h2>このサイトの立ち位置</h2>
+<h2>Position of this site</h2>
 <p>
-このサイトは、WBE を最終的に証明した場所ではありません。むしろ、<strong>証明や反証ができるようにするための公共財</strong>を整える場所です。言い換えると、競技そのものよりも先に、ルール、採点表、試合記録の置き場を整える作業をしています。
+This site is not the final proof of WBE. Rather, it is a place in which<strong>the public goods</strong> are in place to enable proof or disproof. In other words, we work on preparing the rules, score sheets, and match records before the competition itself.
 </p>
 
 <h4>Next</h4>
-<p>この話を「主張の強さ」と「必要な証拠」に分けて読みたい場合はこちらです。</p>
-<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence">主張と証拠の読み方へ →</a>
+<p>Click here if you would like to read this story divided into "Strength of Claim" and "Necessary Evidence". </p>
+<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence">How to read claims and evidence →</a>

@@ -1,43 +1,43 @@
 ---
 layout: default
-title: "Wiki：事実・仮説・提案・実行タスクの違い"
-description: "Research、Perspective、Idea、Proposals、Issue、Collaborations を、『何が観察で、何が仮説で、何が提案で、何が今やる作業か』で読み分けるためのガイドです。"
+title: "Wiki: Differences between facts, hypotheses, proposals, and execution tasks"
+description: "A guide to help you distinguish between Research, Perspective, Idea, Proposals, Issues, and Collaborations based on what is an observation, what is a hypothesis, what is a proposal, and what is the work to be done now."
 article_type: Wiki
-subtitle: "ページの役割差を、事実・仮説・提案・タスクで整理する"
+subtitle: "Organize page roles by facts, hypotheses, proposals, and tasks"
 author: Mind Uploading Research Project
 last_updated: "2026-03-14"
 note: "Reading roles of claims"
-audience: "理論ページ、提案ページ、Issue ページの違いを整理したい人"
-reading_time: "8〜12分"
-page_intro: "このページは、Mind-Upload の各ページが『同じ種類の主張』ではないことを整理する補助ガイドです。観察や文献整理、理論的な作業仮説、提案、今このリポジトリで実行するタスク、外部依存の調整は、役割も証拠の重さも違います。その違いをそろえて読むために使います。"
-accuracy_note: "ここで扱うのはページの役割差です。個別の理論や提案の妥当性は、必ず各ページ本文と根拠へ戻って確認してください。"
+audience: "People who want to sort out the differences between theory pages, proposal pages, and issue pages"
+reading_time: "8-12 minutes"
+page_intro: "This page is an auxiliary guide to help you understand that each page of Mind-Upload is not the same type of argument. Observations, literature organization, theoretical working hypotheses, proposals, tasks performed in this repository, and coordination of external dependencies all have different roles and weights of evidence. Use this page to read these differences together."
+accuracy_note: "What we're dealing with here is the difference in the roles of pages. Be sure to go back to the main text and evidence of each page to check the validity of individual theories and proposals."
 page_highlights:
-  - "観察、仮説、提案、実行タスク、外部依存を同じ重さで読まないための基本を整理します。"
-  - "Perspective、Idea、Proposals、Issue、Collaborations の違いを一枚で確認できます。"
-  - "『文書に書いてある』ことと『今すぐ実行する変更』を混同しないためのガイドです。"
+  - "Organize the basics so that observations, hypotheses, proposals, execution tasks, and external dependencies are not given the same weight."
+  - "You can see the differences between Perspectives, Ideas, Proposals, Issues, and Collaborations on one page."
+  - "A guide to avoid confusing 'what's in the document' with 'changes to make now.'"
 known_points:
-  - "各ページは、観察、理論仮説、提案、実装タスク、外部依存で役割分担されています。"
-  - "提案受理や文書反映は、実装完了や外部合意完了を自動では意味しません。"
-  - "実行可能な変更は、Issue や Hands-on に落ちて初めて具体的に動きます。"
+  - "Each page is divided into observations, theoretical hypotheses, proposals, implementation tasks, and external dependencies."
+  - "Acceptance of a proposal or reflection of a document does not automatically mean completion of implementation or completion of external agreement."
+  - "A viable change only becomes concrete once it's an issue or hands-on."
 unknown_points:
-  - "どの仮説や提案が最終的に中心線として残るかは、今後の検証で変わります。"
-  - "外部依存の話がどこまで実際の連携へ進むかは、相手先や条件に依存します。"
+  - "Which hypothesis or proposal will ultimately remain as the center line will change with future verification."
+  - "The extent to which talk of external dependence progresses to actual cooperation depends on the other party and the conditions."
 wiki_links:
-  - label: "Wiki: 公開ページの読み分けガイド"
+  - label: "Wiki: Guide to reading public pages"
     url: "/wiki/public-page-reading-guide.html"
-    description: "ページ全体の役割差を先に見たい人向けです。"
-  - label: "Wiki: 提案と状態ラベルの読み方"
+    description: "This is for people who want to see the role differences across pages first."
+  - label: "Wiki: How to read suggestions and state labels"
     url: "/wiki/proposal-status-reading.html"
-    description: "提案ページの状態ラベルをさらに詳しく見たい人向けです。"
-  - label: "Wiki: はじめての Issue の書き方"
+    description: "For those who want a more detailed look at the status labels on suggestion pages."
+  - label: "Wiki: How to write your first issue"
     url: "/wiki/issue-writing-basics.html"
-    description: "実行タスクへ落とす書き方を補います。"
+    description: "Complements how to write down to execution task."
 recommended_pages:
-  - label: "研究ノート"
+  - label: "Research Notes"
     url: "/perspective.html"
-  - label: "理論フレーム"
+  - label: "Theoretical Frame"
     url: "/perspective.html#design-principles"
-  - label: "技術提案"
+  - label: "Technical proposal"
     url: "/issue.html#proposal-integration"
 ---
 
@@ -45,46 +45,46 @@ recommended_pages:
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>同じ「主張」に見えても、役割は同じではありません</h2>
+<h2>Even if the “claims” appear to be the same, their roles are not the same</h2>
 <p>
-文献整理、理論ノート、設計原理、技術提案、Issue、協業候補は、全部が同じ種類の文章ではありません。まず <strong>何を記録しているページか</strong> を分けると、断言の強さと次の行動を読み違えにくくなります。
+Literature organizing, theoretical notes, design principles, technical proposals, issues, and collaboration candidates are not all of the same type of text. First, separating <strong>what pages are recording</strong> makes it difficult to misread the strength of the affirmation and the next action.
 </p>
 </div>
 
 <section class="section" id="five-types">
-<h2 class="section-title">まず 5 種類に分ける</h2>
+<h2 class="section-title">First, divide into 5 types</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>種類</th>
-<th>何をしているか</th>
-<th>主なページ</th>
+<th>Type</th>
+<th>What are you doing</th>
+<th>Main page</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>観察 / 整理</strong></td>
-<td>何が知られていて、どこが未解決かを記録します。</td>
+<td><strong>Observation/Organization</strong></td>
+<td>Record what is known and what is unresolved. </td>
 <td><a href="../research_harvest_50.html">Research Harvest</a> / <a href="../mind_uploading_papers.html">Papers</a> / <a href="../verification.html#casework">Casework</a></td>
 </tr>
 <tr>
-<td><strong>仮説 / 理論フレーム</strong></td>
-<td>どう考えると設計条件へ落としやすいかを示します。</td>
+<td><strong>Hypothesis/Theoretical Frame</strong></td>
+<td>I will show you how to think about it so that it can be easily applied to the design conditions. </td>
 <td><a href="../perspective.html">Perspective</a> / <a href="../perspective.html#design-principles">Idea</a></td>
 </tr>
 <tr>
-<td><strong>提案 / 方針</strong></td>
-<td>どの方向で進めるか、どのストリームで整理するかを示します。</td>
+<td><strong>Proposal/Policy</strong></td>
+<td>Indicates in which direction to proceed and in which stream to organize. </td>
 <td><a href="../issue.html#proposal-integration">Proposals</a></td>
 </tr>
 <tr>
-<td><strong>実行タスク</strong></td>
-<td>今このリポジトリで直す変更、完了条件、反証条件を切ります。</td>
+<td><strong>Run task</strong></td>
+<td>Now cut the changes, completion conditions, and disproof conditions that you want to make in this repository. </td>
 <td><a href="../issue.html">Issue</a> / <a href="../datasets.html#l0-practice">Hands-on</a></td>
 </tr>
 <tr>
-<td><strong>外部依存タスク</strong></td>
-<td>共同研究、標準化、IRB、機材、法務など、外部条件が必要な作業を整理します。</td>
+<td><strong>External dependent task</strong></td>
+<td>We organize work that requires external conditions, such as joint research, standardization, IRB, equipment, legal matters, etc. </td>
 <td><a href="../issue.html#external-collaboration">Collaborations</a></td>
 </tr>
 </tbody>
@@ -92,102 +92,102 @@ recommended_pages:
 </section>
 
 <section class="section" id="page-differences">
-<h2 class="section-title">似て見えるページの違い</h2>
+<h2 class="section-title">Differences between pages that look similar</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>ページ</th>
-<th>主な役割</th>
-<th>誤読しやすい点</th>
+<th>Page</th>
+<th>Main role</th>
+<th>Easy to misread</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Perspective</strong></td>
-<td>文献と限界を並べて、理論の支持点と弱点を追う研究ノートです。</td>
-<td>長文でも、最終確定理論の宣言ではありません。</td>
+<td>A research note that tracks the supporting points and weaknesses of a theory by arranging literature and limitations. </td>
+<td>Although it is a long article, it is not a declaration of a final theory. </td>
 </tr>
 <tr>
 <td><strong>Idea</strong></td>
-<td>採用する設計原理や作業仮説を絞って示す理論フレームです。</td>
-<td>立場の整理であり、実験的に証明済みという意味ではありません。</td>
+<td>This is a theoretical frame that narrows down the design principles and working hypotheses to be adopted. </td>
+<td>This is a summary of the position and does not mean that it has been experimentally proven. </td>
 </tr>
 <tr>
 <td><strong>Proposals</strong></td>
-<td>提案の状態、ストリーム、根拠節を追う整理表です。</td>
-<td>提案受理は、コード実装や共同研究成立を意味しません。</td>
+<td>This is an organization chart that tracks the status, stream, and rationale of a proposal. </td>
+<td>Acceptance of a proposal does not mean code implementation or joint research. </td>
 </tr>
 <tr>
 <td><strong>Issue</strong></td>
-<td>今この場で実行する変更を、完了条件つきで管理する入口です。</td>
-<td>大きな理論や外部依存まで同じ箱で扱うと混乱します。</td>
+<td>This is the entry point for managing changes to be executed here and now, with completion conditions. </td>
+<td>It will be confusing if you treat big theories and external dependencies in the same box. </td>
 </tr>
 <tr>
 <td><strong>Collaborations</strong></td>
-<td>外部依存の候補と、連携前に必要な準備物を整理する実務ページです。</td>
-<td>候補一覧であり、合意済みリストではありません。</td>
+<td>This is a practical page that organizes candidates for external dependencies and necessary preparations before collaboration. </td>
+<td>This is a candidate list, not an agreed list. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="how-to-move">
-<h2 class="section-title">どう移ると自然か</h2>
+<h2 class="section-title">How to move naturally</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>いまいる場所</th>
-<th>次に移る自然な先</th>
-<th>理由</th>
+<th>Where you are now</th>
+<th>Next natural destination</th>
+<th>Reason</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>観察 / 整理</strong></td>
+<td><strong>Observation/Organization</strong></td>
 <td><a href="../perspective.html">Perspective</a> / <a href="../issue.html#proposal-integration">Proposals</a></td>
-<td>文献整理の次に、どう読むか、どの方針へ使うかを決めるためです。</td>
+<td>The next step is to organize the literature and decide how to read it and what policy to use it for. </td>
 </tr>
 <tr>
-<td><strong>仮説 / 理論フレーム</strong></td>
+<td><strong>Hypothesis/Theoretical Frame</strong></td>
 <td><a href="../verification.html">Verification</a> / <a href="../tech_roadmap.html">Roadmap</a></td>
-<td>仮説を、そのまま設計条件や検証条件へ落とす必要があるためです。</td>
+<td>This is because it is necessary to translate the hypothesis directly into design conditions and verification conditions. </td>
 </tr>
 <tr>
-<td><strong>提案 / 方針</strong></td>
+<td><strong>Proposal/Policy</strong></td>
 <td><a href="../issue.html">Issue</a> / <a href="../datasets.html#l0-practice">Hands-on</a></td>
-<td>提案を実際の変更や最小ループへ落とし込むためです。</td>
+<td>To translate suggestions into actual changes and minimal loops. </td>
 </tr>
 <tr>
-<td><strong>実行タスク</strong></td>
+<td><strong>Run task</strong></td>
 <td><a href="../content_hub.html">Content Hub</a> / <a href="../verification.html">Verification</a></td>
-<td>置き場所や完了条件を再確認しながら進めるためです。</td>
+<td>This is to proceed while re-checking the location and completion conditions. </td>
 </tr>
 <tr>
-<td><strong>外部依存タスク</strong></td>
-<td><a href="internal-prework-and-external-dependencies.html">内製で先にやることと外部依存</a></td>
-<td>まず内製できる準備物へ分解する必要があるためです。</td>
+<td><strong>External dependent task</strong></td>
+<td><a href="internal-prework-and-external-dependencies.html">In-house production and external dependencies</a></td>
+<td>This is because we first need to break it down into preparations that can be made in-house. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="common-mistakes">
-<h2 class="section-title">よくある混同</h2>
+<h2 class="section-title">Common confusion</h2>
 <div class="key-points">
 <h4>Mistake</h4>
 <ul>
-<li><strong>理論フレームを事実一覧として読む：</strong> Idea は作業仮説を含みます。</li>
-<li><strong>提案ページを実装完了と読む：</strong> Proposals は整理表であり、完了報告ではありません。</li>
-<li><strong>Issue を大きな構想メモにする：</strong> 今このリポジトリで切れる変更へ落とす方が安全です。</li>
-<li><strong>Collaborations を TODO 一覧と読む：</strong> 外部依存の候補と準備物の整理であり、即実行リストではありません。</li>
+<li><strong>Reading a theoretical frame as a list of facts:</strong> Idea contains a working hypothesis. </li>
+<li><strong>Reading the proposal page as implementation complete:</strong> Proposals are a summary table, not a completion report. </li>
+<li><strong>Turn the issue into a big idea note:</strong> It's safer to drop the issue to a change that expires in this repository now. </li>
+<li><strong>Read Collaborations as a TODO list:</strong> An organization of potential external dependencies and preparations, not a ready-to-do list. </li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2 class="section-title">Where to return next</h2>
 <p>
-公開ページ全体の役割差へ戻るなら <a href="public-page-reading-guide.html">公開ページの読み分けガイド</a>、提案ページの状態へ戻るなら <a href="proposal-status-reading.html">提案と状態ラベルの読み方</a>、実行タスクへ落とし込むなら <a href="issue-writing-basics.html">はじめての Issue の書き方</a> をご利用ください。
+If you want to go back to the role differences of the entire public page, please use <a href="public-page-reading-guide.html">Public page reading guide</a>, if you want to go back to the status of the proposal page, please use <a href="proposal-status-reading.html">How to read proposals and status labels</a>, and if you want to translate it into execution tasks, please use <a href="issue-writing-basics.html">How to write your first issue</a>.
 </p>
 </section>
 
@@ -197,17 +197,17 @@ recommended_pages:
 <div class="sidebar-box">
 <h4>Related Wiki</h4>
 <ul>
-<li><a href="public-page-reading-guide.html">公開ページの読み分けガイド →</a></li>
-<li><a href="proposal-status-reading.html">提案と状態ラベルの読み方 →</a></li>
-<li><a href="issue-writing-basics.html">はじめての Issue の書き方 →</a></li>
+<li><a href="public-page-reading-guide.html">Public page reading guide →</a></li>
+<li><a href="proposal-status-reading.html">How to read proposals and status labels →</a></li>
+<li><a href="issue-writing-basics.html">How to write your first issue →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>公開ページ</h4>
+<h4>Public page</h4>
 <ul>
-<li><a href="../perspective.html">研究ノート →</a></li>
-<li><a href="../perspective.html#design-principles">理論フレーム →</a></li>
-<li><a href="../issue.html#proposal-integration">技術提案 →</a></li>
+<li><a href="../perspective.html">Research notes →</a></li>
+<li><a href="../perspective.html#design-principles">Theoretical frame →</a></li>
+<li><a href="../issue.html#proposal-integration">Technical proposal →</a></li>
 </ul>
 </div>
 </aside>

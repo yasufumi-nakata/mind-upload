@@ -1,46 +1,46 @@
 ---
 layout: default
-title: "公開コンテンツ統合ハブ"
-description: "公開ページの役割・統合先・更新先を1ページに集約した運用ハブ。"
+title: "Public Content Integration Hub"
+description: "An operations hub that centralizes the roles, integration targets, and update destinations of public pages."
 article_type: "Navigation"
-subtitle: "散逸防止のための単一導線"
+subtitle: "A single routing layer to prevent content sprawl"
 author: Mind Uploading Research Project
 last_updated: "2026-03-14"
 note: "Single source of truth for public pages"
-audience: "公開ページの置き場所を確認したい人、新規追記の統合先を迷いたくない人"
-reading_time: "5〜10分"
-page_intro: "このページは、公開コンテンツが散らばらないように『どの話題をどのページへ足すべきか』を固定するための運用ハブです。新しい情報を書く前に、まず既存ページの統合先を確認する場所として使います。"
-accuracy_note: "ここは運用ハブであり、新しい主張を増やす本文ページではありません。どこへ統合すべきかを判断するためのページです。"
+audience: "Anyone checking where public content belongs and anyone who wants to avoid guessing where new material should be merged"
+reading_time: "5-10 min"
+page_intro: "This page is the operations hub for fixing where public content should go so material does not scatter across the site. Before writing anything new, use this page to check the existing integration target first."
+accuracy_note: "This is an operations hub, not a main content page for adding new claims. Its purpose is to decide where material should be integrated."
 page_highlights:
-  - "領域ごとに主ページと補助ページを分け、追記先を固定しています。"
-  - "新規ページを増やす前に、既存ページへ統合できるかを確認する前提です。"
-  - "公開導線と運用資料を一箇所で見渡せるようにしています。"
+  - "Each domain has a fixed main page and supporting pages."
+  - "Before creating a new page, the default is to check whether the material can be merged into an existing one."
+  - "Public navigation and operations references are visible in one place."
 known_points:
-  - "公開ページは、要点・現状・既知/未知・次の導線を示すポータルとして使う方針です。"
-  - "初歩から学ぶための詳しい背景説明は、wiki 側へ集約した方が入口ページの役割を保ちやすいです。"
-  - "新しい情報は、まず既存ページか wiki のどちらへ足すべきかを決める必要があります。"
+  - "Public pages are meant to function as portals: key points, current status, known/unknown boundaries, and next routes."
+  - "Detailed background explanations are usually better concentrated in the wiki so entry pages stay usable."
+  - "New information should first be classified as belonging either on an existing public page or in the wiki."
 unknown_points:
-  - "どの話題を将来独立ページへ昇格させるかは、論点の蓄積と読者需要を見ながら判断します。"
-  - "本文と wiki の分担がまだ粗い箇所は、今後の移管で整理を続けます。"
+  - "Which topics will eventually deserve their own standalone pages is still judged case by case."
+  - "Some boundaries between main content and wiki content are still rough and will continue to be cleaned up."
 wiki_links:
   - label: "Wiki Home"
     url: "/wiki/"
-    description: "学習用ページ全体の入口です。"
-  - label: "Wiki: 公開ページ冒頭ブロックの読み方"
+    description: "The main entry point to the learning pages."
+  - label: "Wiki: How To Read Public Page Headers"
     url: "/wiki/page-header-reading-guide.html"
-    description: "各公開ページの冒頭にある役割説明、既知/未知、wiki導線の読み方を整理します。"
-  - label: "Wiki: 検証基盤の基本"
+    description: "Explains the role descriptions, known/unknown sections, and wiki links at the top of public pages."
+  - label: "Wiki: Verification Basics"
     url: "/wiki/verification-basics.html"
-    description: "標準・ベンチ・登録・監査の意味を初歩から説明します。"
-  - label: "Wiki: EEGの基本"
+    description: "A beginner explanation of standards, benchmarks, registries, and audits."
+  - label: "Wiki: EEG Basics"
     url: "/wiki/eeg-basics.html"
-    description: "EEG を魔法扱いせずに理解するための基礎ページです。"
+    description: "A basic page for understanding EEG without treating it as magic."
 recommended_pages:
-  - label: "スタートページ"
+  - label: "Start"
     url: "/index.html"
-  - label: "検証基盤"
+  - label: "Verification"
     url: "/verification.html"
-  - label: "貢献ガイド"
+  - label: "Contribution Guide"
     url: "/issue.html"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
@@ -49,237 +49,237 @@ recommended_pages:
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>このページの役割</h2>
+<h2>What This Page Does</h2>
 <p>
-このページは、公開コンテンツの<strong>統合先</strong>と<strong>更新先</strong>を固定するハブです。新しい情報を追加するときは、まず本ページの対応表で既存ページを確認し、既存ページへ統合する運用を優先します。
+This page is the hub for deciding the <strong>integration target</strong> and <strong>update destination</strong> of public content. Before adding new information, check the mapping tables here and prefer merging into an existing page.
 </p>
 </div>
 
 <div class="note-box">
-<strong>このページで決めること</strong>
+<strong>What Gets Decided Here</strong>
 <p>
-ここで決めたいのは「何を書くか」よりも「どこへ書くか」でございます。内容の重複や導線の散逸を防ぐため、公開ページの入口と統合先をこのページで先に固定します。
+The goal here is not "what to write" but "where it should live." To prevent duplication and fragmented navigation, the public entry points and merge destinations are fixed here first.
 </p>
 </div>
 <div class="note-box">
-<strong>理論系ページの読み順で迷ったとき</strong>
+<strong>If You Are Unsure About Theory Page Order</strong>
 <p>
-WBE 101、Perspective、Perspective内の理論フレーム節、Roadmap の違いだけを理論系に絞って整理したい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a> をご覧ください。公開ページ全体の役割差はここで、理論系だけの詳しい読み分けは wiki 側で補います。
+If you want only the theory-side distinction among WBE 101, Perspective, the framework section inside Perspective, and Roadmap, see <a href="wiki/theory-pages-reading-guide.html">Wiki: Theory Page Reading Guide</a>. This page covers public-page roles at a high level; the wiki handles theory-specific detail.
 </p>
 </div>
 <div class="note-box">
-<strong>このサイト全体の使い方を目的別に整理したいとき</strong>
+<strong>If You Want A Goal-Based View Of The Whole Site</strong>
 <p>
-全体像をつかむ、初歩から学ぶ、実際に直す・参加する、の 3 モードでサイト全体を見たい場合は <a href="wiki/site-usage-modes.html">Wiki: このサイトの3つの使い方</a> をご覧ください。
+If you want the whole site organized into the three modes of getting the overview, learning from basics, and actually fixing or contributing, see <a href="wiki/site-usage-modes.html">Wiki: Three Ways To Use This Site</a>.
 </p>
 </div>
 <div class="note-box">
-<strong>実務系ページの読み順で迷ったとき</strong>
+<strong>If You Are Unsure About Practical Page Order</strong>
 <p>
-Verification、Datasets、Datasets内のL0実践節、Verification内のケースワーク節、Issue内の提案統合節の違いだけを実務系に絞って整理したい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。公開ページ全体の役割差はここで、実務系だけの詳しい読み分けは wiki 側で補います。
+If you want only the practical distinction among Verification, Datasets, the L0 practice section in Datasets, the casework section in Verification, and the proposal integration section in Issue, see <a href="wiki/practical-pages-reading-guide.html">Wiki: Practical Page Reading Guide</a>. This page keeps the public-page role map; the wiki provides the practical breakdown.
 </p>
 </div>
 <div class="note-box">
-<strong>参加・協業の話から次の1ページを決めたいとき</strong>
+<strong>If You Want The Next Page After Participation / Collaboration</strong>
 <p>
-Issue 本文やその外部依存・協業節を読んだあとに、今すぐ切る修正、条件設計、外部依存の分解、L0 実装準備のどこへ進むかを 1 枚で見たい場合は <a href="wiki/participation-next-routes.html">Wiki: 参加・協業ページのあとに進む5つの道</a> をご覧ください。
+If you want a one-page view of whether to go next to a small fix, condition design, external-dependency decomposition, or L0 implementation prep after reading the Issue page and its collaboration section, see <a href="wiki/participation-next-routes.html">Wiki: Five Routes After the Participation / Collaboration Page</a>.
 </p>
 </div>
 <div class="note-box">
-<strong>新しい情報をどこへ置くかを初歩から見たいとき</strong>
+<strong>If You Want A Beginner Guide To Where New Information Should Go</strong>
 <p>
-公開ページ、wiki、Issue本文、Issue内の外部依存・協業節、運用領域のどこへ置くべきかを学習用に整理したい場合は <a href="wiki/content-placement-basics.html">Wiki: 新しい情報の置き場所を決める基本</a> をご覧ください。
+If you want a learning-oriented guide to choosing among public pages, the wiki, the Issue body, the external dependency section inside Issue, and the operations area, see <a href="wiki/content-placement-basics.html">Wiki: The Basics of Deciding Where New Information Belongs</a>.
 </p>
 </div>
 <div class="note-box">
-<strong>各公開ページの『分かっている / 分かっていない』の意味をそろえたいとき</strong>
+<strong>If You Want To Standardize The Meaning Of "Known / Unknown" Across Public Pages</strong>
 <p>
-情報ポータルとしての公開ページで、既知/未知、正確さの前提、外部依存をどう読むかを 1 枚で整理したい場合は <a href="wiki/known-unknown-and-status-reading.html">Wiki: 『分かっていること / 分かっていないこと』の読み方</a> をご覧ください。
+If you want a one-page guide to reading known/unknown sections, accuracy assumptions, and external dependencies on information-portal pages, see <a href="wiki/known-unknown-and-status-reading.html">Wiki: How To Read "What Is Known / Not Yet Known"</a>.
 </p>
 </div>
 <div class="note-box">
-<strong>公開ページの冒頭ブロック自体の使い方をそろえたいとき</strong>
+<strong>If You Want To Standardize How Public Header Blocks Are Used</strong>
 <p>
-各ページの上部にある「このページの読み方」「向いている人」「正確さの前提」「いま分かっていること」「wiki で基礎から確認する」をどう使えばよいかを整理したい場合は <a href="wiki/page-header-reading-guide.html">Wiki: 公開ページ冒頭ブロックの読み方</a> をご覧ください。
+If you want to standardize how to use the blocks at the top of each page, "how to read this page," "who it is for," "accuracy assumptions," "what is currently known," and "check the basics in the wiki," see <a href="wiki/page-header-reading-guide.html">Wiki: How To Read Public Page Headers</a>.
 </p>
 </div>
 <div class="note-box">
-<strong>観察、仮説、提案、Issue の違いをそろえたいとき</strong>
+<strong>If You Want To Standardize The Difference Between Observation, Hypothesis, Proposal, And Issue</strong>
 <p>
-Research、Perspective、理論フレーム節、提案統合節、Issue本文、外部依存・協業節が全部同じ種類の文章に見える場合は <a href="wiki/facts-hypotheses-proposals-and-tasks.html">Wiki: 事実・仮説・提案・実行タスクの違い</a> をご覧ください。どのページが何を記録しているかを先に分けると、統合先の判断もしやすくなります。
+If Research, Perspective, the framework section, the proposal integration section, the Issue body, and the external dependency / collaboration section all look like the same kind of writing, see <a href="wiki/facts-hypotheses-proposals-and-tasks.html">Wiki: Facts, Hypotheses, Proposals, and Execution Tasks</a>. Separating what each page records makes integration decisions easier.
 </p>
 </div>
 <div class="note-box">
-<strong>要約ページと元ソースの使い分けで迷ったとき</strong>
+<strong>If You Are Unsure When To Use Summary Pages Vs. Original Sources</strong>
 <p>
-公開ページや wiki をどこまで入口として使い、どの場面で DOI、原文節、Issue 履歴へ戻るべきかを整理したい場合は <a href="wiki/summary-vs-source-reading.html">Wiki: 要約・原文・Issue履歴の使い分け</a> をご覧ください。
+If you want guidance on how far to use public pages and the wiki as entry points, and when to return to DOI links, source sections, or Issue history, see <a href="wiki/summary-vs-source-reading.html">Wiki: Using Summaries, Original Sources, and Issue History</a>.
 </p>
 </div>
 <div class="note-box">
-<strong>読んだ内容をどのページや作業へ変えるか迷ったとき</strong>
+<strong>If You Are Unsure How To Turn Reading Into A Concrete Change</strong>
 <p>
-文献整理、理論整理、提案、Issue、外部依存のどこへ戻すかを一本道で整理したい場合は <a href="wiki/reading-to-change-workflow.html">Wiki: 読んだ内容を変更へつなぐ流れ</a> をご覧ください。
+If you want a single route showing whether something you read should flow back into literature organization, theory organization, a proposal, an issue, or an external dependency task, see <a href="wiki/reading-to-change-workflow.html">Wiki: Connecting Reading To Change</a>.
 </p>
 </div>
 
 <section class="section" id="quick-routing">
-<h2 class="section-title">追加したい内容から統合先を決める</h2>
+<h2 class="section-title">Choose The Integration Target From The Content You Want To Add</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>追加したい内容</th>
-<th>まず足す先</th>
-<th>そのページに置く理由</th>
+<th>Content You Want To Add</th>
+<th>First Target</th>
+<th>Why It Belongs There</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>「何を満たせば前進か」「何が出たら失敗か」の説明</td>
+<td>An explanation of what counts as progress and what counts as failure</td>
 <td><a href="verification.html">verification.html</a></td>
-<td>このサイトの合格条件と反証条件を一番厳密に置く主ページだからです。</td>
+<td>Because it is the main page where success criteria and falsification conditions are stated most rigorously.</td>
 </tr>
 <tr>
-<td>技術的な順番、どこから解くべきか、未解決問題の整理</td>
+<td>Technical order, what to solve first, and the structure of open problems</td>
 <td><a href="tech_roadmap.html">tech_roadmap.html</a></td>
-<td>問題分解と到達条件を固定する場所であり、順序の話を散らさないためです。</td>
+<td>Because it fixes problem decomposition and arrival conditions, keeping sequence discussions from scattering.</td>
 </tr>
 <tr>
-<td>理論比較、批判点、哲学的前提の整理</td>
+<td>Theory comparison, criticisms, and philosophical assumptions</td>
 <td><a href="perspective.html">perspective.html</a></td>
-<td>理論ごとの立場の違いを、検証可能性と結び付けて読むためです。</td>
+<td>Because it is where differences among theoretical positions are read in relation to verifiability.</td>
 </tr>
 <tr>
-<td>論文の要約、未解決問題ごとの文献整理</td>
+<td>Paper summaries and literature organization by open problem</td>
 <td><a href="research_harvest_50.html">research_harvest_50.html</a></td>
-<td>論点別の受け皿があり、既存の問題番号と結び付けて蓄積できるからです。</td>
+<td>Because it already has problem-specific buckets and can accumulate material tied to existing question IDs.</td>
 </tr>
 <tr>
-<td>「まず何を読むか」という入口の説明</td>
+<td>Entry guidance for what to read first</td>
 <td><a href="index.html">index.html</a></td>
-<td>最初の導線を一本化し、同じ案内を複数ページに重複させないためです。</td>
+<td>Because it keeps the first navigation path unified and prevents the same guidance from being duplicated across multiple pages.</td>
 </tr>
 <tr>
-<td>本当に初歩から学ぶための説明、背景知識、噛み砕いた解説</td>
+<td>Truly beginner-level explanations, background knowledge, and simplified guidance</td>
 <td><a href="wiki/">wiki/</a></td>
-<td>公開ページを長い教科書化せず、情報ポータルとしての役割を保ちながら、学習用の詳説を集約できるためです。</td>
+<td>Because it concentrates learning-oriented detail without turning public pages into long textbooks, preserving their role as information portals.</td>
 </tr>
 <tr>
-<td>用語の意味や、似た言葉の違い</td>
+<td>Definitions of terms and distinctions between similar words</td>
 <td><a href="glossary.html">glossary.html</a></td>
-<td>本文ページを重くしすぎず、言葉の足場を共通化できるからです。</td>
+<td>Because it creates shared conceptual footing without making the main pages too heavy.</td>
 </tr>
 <tr>
-<td>参加方法、Issueの状態、外部依存タスクの切り分け</td>
+<td>How to participate, issue status, and separation of external dependency tasks</td>
 <td><a href="issue.html">issue.html</a></td>
-<td>実行可能な変更と保留事項を分けて記録する専用ページだからです。</td>
+<td>Because it is the dedicated page for recording executable changes separately from deferred items.</td>
 </tr>
 <tr>
-<td>実務手順、最小ループ、手を動かす順番</td>
+<td>Practical procedures, the minimum loop, and the order of hands-on work</td>
 <td><a href="datasets.html#l0-practice">datasets.html#l0-practice</a></td>
-<td>読むだけでなく、実際に再現可能な作業へ落とすためのページだからです。</td>
+<td>Because it is the page that turns reading into reproducible practical work.</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="portal-vs-wiki">
-<h2 class="section-title">公開ページと wiki の分担</h2>
+<h2 class="section-title">Division Of Roles Between Public Pages And The Wiki</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>置き場所</th>
-<th>主目的</th>
-<th>ここに置く内容</th>
-<th>避けたいこと</th>
+<th>Location</th>
+<th>Main Purpose</th>
+<th>What Belongs Here</th>
+<th>What To Avoid</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>公開ページ</strong></td>
-<td>情報ポータルとして、いま分かっていること・未解決なこと・次に読む場所を示すこと。</td>
-<td>要点、既知/未知の整理、判断表、比較表、主要リンク。</td>
-<td>背景説明を無制限に増やして、入口としての役割を失うこと。</td>
+<td><strong>Public pages</strong></td>
+<td>Serve as information portals that show what is known now, what remains unresolved, and what to read next.</td>
+<td>Key points, known/unknown structure, decision tables, comparison tables, and major links.</td>
+<td>Letting background explanation expand without limit until the page stops functioning as an entry point.</td>
 </tr>
 <tr>
 <td><strong>wiki</strong></td>
-<td>初学者が順番に学べるように、基礎説明と読み方を蓄積すること。</td>
-<td>用語の丁寧な説明、ニュースの読み方、EEGや検証基盤の初歩、公開ページの予備知識。</td>
-<td>最新の実装状況や運用判断の一次置き場にすること。</td>
+<td>Accumulate foundational explanations and reading guides so beginners can learn in sequence.</td>
+<td>Careful term definitions, how to read news, EEG basics, verification basics, and prerequisite knowledge for public pages.</td>
+<td>Using it as the primary storage location for the latest implementation status or operational judgments.</td>
 </tr>
 <tr>
-<td><strong>automation/ 等の運用領域</strong></td>
-<td>下書き、機械処理結果、中間成果を保管すること。</td>
-<td>未整理メモ、CSV、生成物、監査ログ。</td>
-<td>そのまま読者向け本文として公開すること。</td>
+<td><strong>Operations areas such as automation/</strong></td>
+<td>Store drafts, machine-generated outputs, and intermediate results.</td>
+<td>Unsorted notes, CSV files, generated artifacts, and audit logs.</td>
+<td>Publishing them directly as reader-facing prose without integration.</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <div class="note-box">
-<strong>新規ページを作る前の確認</strong>
+<strong>Check Before Creating A New Page</strong>
 <p>
-新しいページを増やす前に、その内容が既存ページの1節として自然に入らないかを確認してください。ページが増えるほど、読む順番と責任範囲が分散し、初学者ほど迷いやすくなります。内容が既存ページの目的に収まるなら、分割より統合を優先します。
+Before creating a new page, check whether the content can naturally fit as a section inside an existing one. The more pages the site has, the more reading order and responsibility boundaries fragment, and beginners become more likely to get lost. If the material fits an existing page's purpose, prefer integration over splitting.
 </p>
 </div>
 
 <table class="data-table">
 <thead>
 <tr>
-<th>こういう内容は入れない方がよい</th>
-<th>代わりにどうするか</th>
+<th>Content That Usually Should Not Be Added As-Is</th>
+<th>What To Do Instead</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>同じ説明を少し言い換えただけの重複ページ</td>
-<td>既存ページの該当節へ追記し、入口ページからの導線だけ整えます。</td>
+<td>A duplicate page that only lightly rephrases an existing explanation</td>
+<td>Add it to the relevant section of an existing page and adjust only the navigation if needed.</td>
 </tr>
 <tr>
-<td>背景知識を全部本文へ押し込み、入口ページを学習教材の長文にしてしまうこと</td>
-<td>要点は公開ページへ残し、初歩からの解説は <a href="wiki/">wiki</a> 側へ寄せます。</td>
+<td>Pushing all background knowledge into the main page until the entry page becomes a long tutorial</td>
+<td>Keep the essentials on the public page and move beginner-oriented explanation to the <a href="wiki/">wiki</a>.</td>
 </tr>
 <tr>
-<td>根拠や位置づけが未確定の断片メモを、そのまま公開本文に置くこと</td>
-<td>`automation/` などの運用領域で下書きを管理し、統合先が決まってから公開ページへ移します。</td>
+<td>Putting fragmentary notes with unclear evidence or unclear placement directly into public prose</td>
+<td>Keep the draft in an operations area such as `automation/` and move it into a public page only after its integration target is decided.</td>
 </tr>
 <tr>
-<td>外部依存タスクを、今この場で完了できる変更のように見せる書き方</td>
-<td><a href="issue.html">issue.html</a> や <a href="issue.html#external-collaboration">issue.html#external-collaboration</a> で、外部依存として分離して記録します。</td>
+<td>Writing external dependency tasks as if they were changes that can be completed immediately inside this repo</td>
+<td>Record them separately as external dependencies in <a href="issue.html">issue.html</a> or <a href="issue.html#external-collaboration">issue.html#external-collaboration</a>.</td>
 </tr>
 <tr>
-<td>単に面白いが、このサイトの未解決問題や検証基盤へ接続しない話題</td>
-<td>まず既存の U 番号や検証論点に結び付くかを確認し、結び付かないなら公開統合を急ぎません。</td>
+<td>A topic that is merely interesting but does not connect to this site's unsolved questions or verification commons</td>
+<td>First check whether it maps to an existing U-number or verification topic. If it does not, do not rush to integrate it publicly.</td>
 </tr>
 </tbody>
 </table>
 
 <section class="section" id="integration-map">
-<h2 class="section-title">統合マップ（公開ページ）</h2>
+<h2 class="section-title">Integration Map For Public Pages</h2>
 <table class="data-table">
-<thead><tr><th>領域</th><th>統合先（主ページ）</th><th>含める内容</th><th>補助ページ</th></tr></thead><tbody>
-<tr><td>検証基盤</td><td><a href="verification.html">verification.html</a></td><td>勝利条件、反証条件、監査契約、再現性基準</td><td><a href="datasets.html#l0-practice">datasets.html#l0-practice</a></td></tr>
-<tr><td>技術ロードマップ</td><td><a href="tech_roadmap.html">tech_roadmap.html</a></td><td>問題分解、到達条件、実装順序</td><td><a href="issue.html#proposal-integration">issue.html#proposal-integration</a></td></tr>
-<tr><td>研究論点</td><td><a href="perspective.html">perspective.html</a></td><td>理論整理、批判点、文献根拠</td><td><a href="perspective.html#design-principles">perspective.html#design-principles</a></td></tr>
-<tr><td>未解決問題×文献</td><td><a href="research_harvest_50.html">research_harvest_50.html</a></td><td>U別のリサーチクエスチョン、文献監査、重複整理</td><td><a href="datasets.html">datasets.html</a></td></tr>
-<tr><td>参加導線</td><td><a href="issue.html">issue.html</a></td><td>Issue運用、対応状況、外部依存タスクの分離</td><td><a href="issue.html#external-collaboration">issue.html#external-collaboration</a></td></tr>
-<tr><td>入門導線</td><td><a href="index.html">index.html</a></td><td>読む順番、主要ページへの入口</td><td><a href="wbe_101.html">wbe_101.html</a> / <a href="eeg_101.html">eeg_101.html</a></td></tr>
-<tr><td>基礎学習</td><td><a href="wiki/">wiki/</a></td><td>初歩の説明、背景知識、読み方の補助教材</td><td><a href="glossary.html">glossary.html</a> / <a href="faq.html">faq.html</a></td></tr>
+<thead><tr><th>Domain</th><th>Integration Target (Main Page)</th><th>What To Include</th><th>Supporting Page</th></tr></thead><tbody>
+<tr><td>Verification commons</td><td><a href="verification.html">verification.html</a></td><td>Success conditions, falsification conditions, audit contracts, reproducibility criteria</td><td><a href="datasets.html#l0-practice">datasets.html#l0-practice</a></td></tr>
+<tr><td>Technical roadmap</td><td><a href="tech_roadmap.html">tech_roadmap.html</a></td><td>Problem decomposition, arrival conditions, implementation order</td><td><a href="issue.html#proposal-integration">issue.html#proposal-integration</a></td></tr>
+<tr><td>Research questions</td><td><a href="perspective.html">perspective.html</a></td><td>Theory organization, criticisms, literature evidence</td><td><a href="perspective.html#design-principles">perspective.html#design-principles</a></td></tr>
+<tr><td>Open problems x literature</td><td><a href="research_harvest_50.html">research_harvest_50.html</a></td><td>U-specific research questions, literature audits, duplicate cleanup</td><td><a href="datasets.html">datasets.html</a></td></tr>
+<tr><td>Participation routing</td><td><a href="issue.html">issue.html</a></td><td>Issue workflow, response status, separation of external dependency tasks</td><td><a href="issue.html#external-collaboration">issue.html#external-collaboration</a></td></tr>
+<tr><td>Primer routing</td><td><a href="index.html">index.html</a></td><td>Reading order, entry points to major pages</td><td><a href="wbe_101.html">wbe_101.html</a> / <a href="eeg_101.html">eeg_101.html</a></td></tr>
+<tr><td>Foundational learning</td><td><a href="wiki/">wiki/</a></td><td>Beginner explanations, background knowledge, reading support materials</td><td><a href="glossary.html">glossary.html</a> / <a href="faq.html">faq.html</a></td></tr>
 </tbody></table>
 </section>
 
 <section class="section" id="rules">
-<h2 class="section-title">散逸防止ルール</h2>
+<h2 class="section-title">Anti-Sprawl Rules</h2>
 <ol>
-<li>新規ファイルを作る前に、既存の統合先へ追記できるかを先に確認する。</li>
-<li>一時的な下書き・中間成果は公開ページへ直結させず、運用ディレクトリ（`automation/` 等）で管理する。</li>
-<li>公開導線は `index.html` と本ページに集約し、重複導線を増やさない。</li>
-<li>Issue対応で追加した内容は、対応先ページと根拠リンクを必ず明記する。</li>
+<li>Before creating a new file, first check whether the content can be added to an existing integration target.</li>
+<li>Temporary drafts and intermediate results should be kept in operations directories such as `automation/`, not wired directly into public pages.</li>
+<li>Public navigation should stay concentrated in `index.html` and this page, rather than adding duplicate routes everywhere.</li>
+<li>When issue work adds content, always name the destination page and the evidence link.</li>
 </ol>
 </section>
 
 <section class="section" id="public-pages">
-<h2 class="section-title">公開ページ一覧</h2>
+<h2 class="section-title">Public Page Inventory</h2>
 <div class="key-points">
 <h4>Core</h4>
 <ul>
@@ -309,7 +309,7 @@ Research、Perspective、理論フレーム節、提案統合節、Issue本文�
 </ul>
 </div>
 <div class="key-points">
-<h4>Wiki: 入口とルート</h4>
+<h4>Wiki: Entry Points And Routes</h4>
 <ul>
 <li><a href="wiki/public-page-reading-guide.html">wiki/public-page-reading-guide.html</a></li>
 <li><a href="wiki/site-usage-modes.html">wiki/site-usage-modes.html</a></li>
@@ -327,7 +327,7 @@ Research、Perspective、理論フレーム節、提案統合節、Issue本文�
 </ul>
 </div>
 <div class="key-points">
-<h4>Wiki: 基礎学習と読み方</h4>
+<h4>Wiki: Foundational Learning And Reading Methods</h4>
 <ul>
 <li><a href="wiki/mind-upload-basics.html">wiki/mind-upload-basics.html</a></li>
 <li><a href="wiki/claims-and-evidence.html">wiki/claims-and-evidence.html</a></li>
@@ -349,7 +349,7 @@ Research、Perspective、理論フレーム節、提案統合節、Issue本文�
 </ul>
 </div>
 <div class="key-points">
-<h4>Wiki: 実務・検証・データ</h4>
+<h4>Wiki: Practice, Verification, And Data</h4>
 <ul>
 <li><a href="wiki/eeg-preprocessing-and-qc.html">wiki/eeg-preprocessing-and-qc.html</a></li>
 <li><a href="wiki/dataset-splits-and-leakage.html">wiki/dataset-splits-and-leakage.html</a></li>
@@ -371,7 +371,7 @@ Research、Perspective、理論フレーム節、提案統合節、Issue本文�
 </ul>
 </div>
 <div class="key-points">
-<h4>Wiki: 運用・参加・配置</h4>
+<h4>Wiki: Operations, Participation, And Placement</h4>
 <ul>
 <li><a href="wiki/internal-prework-and-external-dependencies.html">wiki/internal-prework-and-external-dependencies.html</a></li>
 <li><a href="wiki/issue-writing-basics.html">wiki/issue-writing-basics.html</a></li>
@@ -385,7 +385,7 @@ Research、Perspective、理論フレーム節、提案統合節、Issue本文�
 </article>
 <aside class="sidebar-column">
 <div class="sidebar-box">
-<h4>運用資料（GitHub）</h4>
+<h4>Operations References (GitHub)</h4>
 <ul>
 <li><a href="https://github.com/yasufumi-nakata/mind-upload/blob/main/README.md" target="_blank">README.md ↗</a></li>
 <li><a href="https://github.com/yasufumi-nakata/mind-upload/blob/main/AGENTS.md" target="_blank">AGENTS.md ↗</a></li>
@@ -394,26 +394,26 @@ Research、Perspective、理論フレーム節、提案統合節、Issue本文�
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>学習用 Wiki</h4>
+<h4>Learning Wiki</h4>
 <ul>
 <li><a href="wiki/">Wiki Home →</a></li>
-<li><a href="wiki/public-page-reading-guide.html">公開ページの読み分け →</a></li>
-<li><a href="wiki/site-usage-modes.html">このサイトの3つの使い方 →</a></li>
-<li><a href="wiki/page-header-reading-guide.html">公開ページ冒頭ブロックの読み方 →</a></li>
-<li><a href="wiki/first-30-minutes-by-goal.html">目的別の最初の30分 →</a></li>
-<li><a href="wiki/known-unknown-and-status-reading.html">既知/未知の読み方 →</a></li>
-<li><a href="wiki/facts-hypotheses-proposals-and-tasks.html">事実・仮説・提案・タスク →</a></li>
-<li><a href="wiki/summary-vs-source-reading.html">要約と原文の使い分け →</a></li>
-<li><a href="wiki/reading-to-change-workflow.html">読んだ内容を変更へ →</a></li>
-<li><a href="wiki/understanding-vs-action-readiness.html">理解と行動準備の違い →</a></li>
-<li><a href="wiki/wbe-to-theory-route.html">WBE入門の次ルート →</a></li>
-<li><a href="wiki/eeg-to-l0-route.html">EEGからL0まで →</a></li>
-<li><a href="wiki/verification-next-routes.html">Verification後の4ルート →</a></li>
-<li><a href="wiki/roadmap-next-routes.html">Roadmap後の5ルート →</a></li>
-<li><a href="wiki/literature-to-action-route.html">文献から実装・参加へ →</a></li>
-<li><a href="wiki/participation-next-routes.html">参加・協業の次ルート →</a></li>
-<li><a href="wiki/issue-writing-basics.html">Issueの書き方 →</a></li>
-<li><a href="wiki/content-placement-basics.html">置き場所を決める基本 →</a></li>
+<li><a href="wiki/public-page-reading-guide.html">How To Distinguish Public Pages -></a></li>
+<li><a href="wiki/site-usage-modes.html">Three Ways To Use This Site -></a></li>
+<li><a href="wiki/page-header-reading-guide.html">How To Read Public Page Headers -></a></li>
+<li><a href="wiki/first-30-minutes-by-goal.html">The First 30 Minutes By Goal -></a></li>
+<li><a href="wiki/known-unknown-and-status-reading.html">How To Read Known vs. Unknown -></a></li>
+<li><a href="wiki/facts-hypotheses-proposals-and-tasks.html">Facts, Hypotheses, Proposals, And Tasks -></a></li>
+<li><a href="wiki/summary-vs-source-reading.html">When To Use Summaries Vs. Original Sources -></a></li>
+<li><a href="wiki/reading-to-change-workflow.html">Turn Reading Into Change -></a></li>
+<li><a href="wiki/understanding-vs-action-readiness.html">Understanding Vs. Action Readiness -></a></li>
+<li><a href="wiki/wbe-to-theory-route.html">Next Routes After WBE 101 -></a></li>
+<li><a href="wiki/eeg-to-l0-route.html">From EEG To L0 -></a></li>
+<li><a href="wiki/verification-next-routes.html">Four Routes After Verification -></a></li>
+<li><a href="wiki/roadmap-next-routes.html">Five Routes After Roadmap -></a></li>
+<li><a href="wiki/literature-to-action-route.html">From Literature To Implementation / Participation -></a></li>
+<li><a href="wiki/participation-next-routes.html">Next Routes After Participation / Collaboration -></a></li>
+<li><a href="wiki/issue-writing-basics.html">How To Write Issues -></a></li>
+<li><a href="wiki/content-placement-basics.html">The Basics Of Content Placement -></a></li>
 </ul>
 </div>
 </aside>

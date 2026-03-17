@@ -1,202 +1,202 @@
-# Wiki：データ分割とデータリーク
+# Wiki: Data partitioning and data leaks
 
-> 高い精度でも、分け方が甘いと評価は壊れます
+> Even if the accuracy is high, the evaluation will be corrupted if the classification is lax
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-15 / 位置づけ: Practical guide
+- Updated: 2026-03-15 / Role: Practical guide
 
-## このページの役割
-このページは、データセットをどう分けるか、なぜデータリークが危険かを初歩から説明する wiki です。『精度が高いのに信用できない』という事故を減らすために、最小限どこを見ればよいかを整理します。
+## Role Of This Page
+This page is a wiki that explains from the beginning how to divide datasets and why data leaks are dangerous. In order to reduce accidents where data is highly accurate but cannot be trusted, we will at least organize where to look.
 
-## 正確さの前提
-ここで示すのは基本原則です。最適な分割方法は課題やデータの構造に依存するため、万能の 1 ルールではありません。
+## Accuracy Notes
+These are basic principles. The best partitioning method depends on the problem and the structure of the data, so there is no one-size-fits-all rule.
 
-## 公開ページへ戻る
-- [データ&ベンチ](https://mind-upload.com/datasets.html)
-- [ハンズオン](https://mind-upload.com/datasets.html#l0-practice)
-- [検証基盤](https://mind-upload.com/verification.html)
+## Back To Public Pages
+- [Data & Bench](https://mind-upload.com/datasets.html)
+- [Hands-on](https://mind-upload.com/datasets.html#l0-practice)
+- [Verification base](https://mind-upload.com/verification.html)
 
-## 関連 Wiki
-- [Wiki: EEG前処理とQC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - 前処理そのものがどこで結果を変えるかを補います。
-- [Wiki: 検証基盤の基本](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - なぜリーク対策が『運用の一部』なのかを確認できます。
-- [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - 学習用ページの全体マップへ戻れます。
+## Related Wiki Pages
+- [Wiki: EEG pretreatment and QC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - Compensates for where the preprocessing itself changes the result.
+- [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - See why leak prevention is 'part of operations'.
+- [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to the overall map of the learning page.
 
-## いま分かっていること
-- train/test の分け方が甘いと、精度は簡単に過大評価されます。
-- 同じ被験者、同じセッション、近い時刻の断片が両側に入ると、見かけ上の性能が上がりやすいです。
-- 臨床 EEG では、report text や report-derived label も leakage source になりえます。
-- 前処理、正規化、特徴選択も、全データを見てから行うとリーク源になりえます。
+## What Is Currently Known
+- Accuracy can easily be overestimated if the train/test separation is loose.
+- Apparent performance tends to improve when fragments from the same subject, same session, and near time are included on both sides.
+- In clinical EEG, report text and report-derived labels can also be leakage sources.
+- Preprocessing, normalization, and feature selection can also be a source of leaks if they are performed after looking at all the data.
 
-## まだ分かっていないこと
-- どの分割が最も将来の実運用に近いかは、課題設定と利用場面に依存します。
-- リークを完全にゼロにしたと言い切るには、データ構造の深い理解と監査が必要です。
-- report-derived label を signal-only benchmark からどう標準的に切り分けるかは、運用設計の途上です。
+## What Is Still Unknown
+- Which division is closest to future actual operation depends on the task setting and usage situation.
+- A deep understanding and auditing of data structures is required to be able to claim that leaks have been completely eliminated.
+- How to standardize report-derived labels from signal-only benchmarks is still in the process of operational design.
 
 ---
 
-<h2>いちばん短い説明</h2>
+<h2>The shortest explanation</h2>
 <p>
-データ分割は「答え合わせの前に、どこまで見てよいかを先に決める」作業です。データリークは、その境界をうっかり越えてしまい、<strong>本番では使えない情報を学習や調整に混ぜてしまうこと</strong>です。
+Data division is the process of ``determining how far you can look before comparing the answers.'' A data leak is when that boundary is inadvertently crossed and information that cannot be used in production is mixed into learning and adjustment.
 </p>
 
-<h2>なぜ分割がそんなに大事なのか</h2>
+<h2>Why partitioning matters so much</h2>
 <p>
-学校のテストで、答えを見ながら練習した問題をそのまま本番に出せば、点数は高くなります。ですが、その点数は「本当に新しい問題を解ける力」とは言えません。機械学習でも同じで、<strong>学習時に見た情報が test 側へにじむ</strong>と、数字だけ良く見えてしまいます。
+On school tests, if you practice the questions while looking at the answers, you will get a higher score. However, that score cannot be said to indicate the ability to solve truly new problems. The same goes for machine learning, if the information seen during learning bleeds into the test side, only the numbers will look good.
 </p>
 
-<h2>まず分ける単位を意識する</h2>
+<h2>First, be aware of the unit of division</h2>
 <table>
 <thead>
 <tr>
-<th>分ける単位</th>
-<th>どういう場面か</th>
-<th>注意点</th>
+<th>Unit of division</th>
+<th>What kind of scene is it?</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>被験者単位</strong></td>
-<td>新しい人に一般化できるかを見たいとき。</td>
-<td>同じ人の断片が train と test に両方入ると、見かけより簡単になります。</td>
+<td><strong>Subject unit</strong></td>
+<td>When you want to see if you can generalize to new people. </td>
+<td>It's easier than it looks when you have pieces of the same person in both train and test. </td>
 </tr>
 <tr>
-<td><strong>セッション単位</strong></td>
-<td>同じ人でも別日に安定するかを見たいとき。</td>
-<td>同日記録だけで分けると、日差や電極状態の違いを見落とします。</td>
+<td><strong>Per session</strong></td>
+<td>When you want to see if the same person will be stable on different days. </td>
+<td>If you divide only by recording on the same day, you will overlook differences in daily differences and electrode conditions. </td>
 </tr>
 <tr>
-<td><strong>時間単位</strong></td>
-<td>未来予測や連続運用を想定するとき。</td>
-<td>近い時刻の窓が両側に入ると、ほぼ同じ断片を見てしまうことがあります。</td>
+<td><strong>Time unit</strong></td>
+<td>When envisioning future predictions or continuous operation. </td>
+<td>If you enter windows with similar times on both sides, you may see almost the same fragment. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>スターターデータ 4 件で、独立単位は同じではありません</h2>
+<h2>4 starter data items, independent units are not the same</h2>
 
-<strong>最後の 2 列は、本サイトの運用推論です</strong>
+<strong>The last two columns are the operational reasoning for this site</strong>
 <p>
-下の表の <strong>なぜ漏れるか</strong> と <strong>安全側の分け方</strong> は、各データセットの公式説明と一次文献が示す階層構造から、本サイトが引く運用上のルールでございます。
+<strong>Why leaks</strong> and <strong>Safe classification</strong> in the table below are operational rules drawn by this site based on the official explanation of each dataset and the hierarchical structure shown in primary documents.
 </p>
 
 <table>
 <thead>
 <tr>
-<th>データセット</th>
-<th>独立単位として優先するもの</th>
-<th>ありがちな誤分割</th>
-<th>なぜ漏れるか</th>
-<th>安全側の分け方</th>
+<th>Dataset</th>
+<th>What should be prioritized as an independent unit</th>
+<th>Common misdivision</th>
+<th>Why does it leak</th>
+<th>How to divide on the safe side</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>EEG Motor Movement/Imagery</strong></td>
-<td>subject、必要なら run</td>
-<td>epoch / trial のランダム分割</td>
-<td>同一 subject・同一 session の信号特性と cue 構造が train / test にまたがります。</td>
-<td>まず subject 単位、同一 subject 内評価でも run 単位を分けます。</td>
+<td>subject, run if necessary</td>
+<td>Random split of epoch / trial</td>
+<td>Signal characteristics and cue structures of the same subject and session span train / test. </td>
+<td>First of all, separate the subject unit and the run unit even if the evaluation is within the same subject. </td>
 </tr>
 <tr>
 <td><strong>CHB-MIT</strong></td>
-<td>subject と case chronology</td>
-<td>file 単位のランダム分割</td>
-<td><code>chb21</code> は <code>chb01</code> と同一被験者で、file 間 gap も文脈を持つためです。</td>
-<td>case ではなく subject 対応を確認し、連続順と gap を保ったまま split します。</td>
+<td>subject and case chronology</td>
+<td>Random division by file</td>
+<td><code>chb21</code> is the same subject as <code>chb01</code>, and the gap between files also has a context. </td>
+<td>Check for subject correspondence instead of case, and split while preserving sequential order and gap. </td>
 </tr>
 <tr>
 <td><strong>Sleep-EDF</strong></td>
 <td>subject-night</td>
-<td>epoch のランダム分割</td>
-<td>同一夜の連続 hypnogram と subject 固有の睡眠構造が train / test にまたがります。</td>
-<td>night ごと保持し、subject をまたいだ generalization か within-subject かを先に宣言します。</td>
+<td>Random split of epoch</td>
+<td>Sequential hypnograms and subject-specific sleep structures from the same night span train / test. </td>
+<td>Keep each night and declare first whether it is generalization across subjects or within-subject. </td>
 </tr>
 <tr>
 <td><strong>TUH EEG / TUSZ</strong></td>
 <td>patient / session</td>
-<td>segment / file のランダム分割、report 併用のまま signal-only 評価</td>
-<td>同一患者の複数 session と de-identified report が、ラベルへ近い情報を持つからです。</td>
-<td>patient / session 単位 split と <strong>report usage flag</strong> を必須にします。</td>
+<td>Random division of segment / file, signal-only evaluation with report included</td>
+<td>This is because multiple sessions and de-identified reports of the same patient have information close to the label. </td>
+<td>Require per patient/session split and <strong>report usage flag</strong>. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>ありがちなリーク 5 パターン</h2>
+<h2>5 common leak patterns</h2>
 <table>
 <thead>
 <tr>
-<th>ありがちな事故</th>
-<th>何が起きているか</th>
+<th>Common accidents</th>
+<th>What's happening</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>同じ被験者の断片が両側に入る</strong></td>
-<td>個人固有の癖を覚えてしまい、新しい人への一般化性能より高く見えます。</td>
+<td><strong>Fragments of the same subject enter on both sides</strong></td>
+<td>The individual's unique habits are memorized, and the generalization performance to new people appears to be higher. </td>
 </tr>
 <tr>
-<td><strong>近接した時間窓を混ぜる</strong></td>
-<td>ほぼ同じ波形の切れ端を train/test に分けてしまい、未来予測の難しさを過小評価します。</td>
+<td><strong>Mix adjacent time windows</strong></td>
+<td>Separating almost the same waveform slices into train/test, it underestimates the difficulty of predicting the future. </td>
 </tr>
 <tr>
-<td><strong>全データで正規化や特徴選択をする</strong></td>
-<td>test 側の統計量を学習時に使ってしまい、情報が逆流します。</td>
+<td><strong>Normalize and select features on all data</strong></td>
+<td>The statistics on the test side are used during training, and the information flows backwards. </td>
 </tr>
 <tr>
-<td><strong>モデル選択を test で繰り返す</strong></td>
-<td>test が実質的に validation の役割を持ち、最後の点数が楽観的になります。</td>
+<td><strong>Repeat model selection with test</strong></td>
+<td>test essentially takes on the role of validation, and the final score is optimistic. </td>
 </tr>
 <tr>
-<td><strong>重複サンプルや派生サンプルを見逃す</strong></td>
-<td>元は同じ記録から切ったデータが両側に入り、独立試料でない比較になります。</td>
+<td><strong>Miss duplicate or derived samples</strong></td>
+<td>Data originally cut from the same record is included on both sides, resulting in a comparison that is not an independent sample. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>今回追加する dataset 固有のリーク注意</h2>
+<h2>Leak warning specific to the dataset added this time</h2>
 <table>
 <thead>
 <tr>
 <th>dataset</th>
-<th>今回固定する注意点</th>
+<th>Notes to be fixed this time</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>EEG Motor Movement/Imagery</strong></td>
-<td>cue-locked motor task なので、split を厳しくしても視覚 cue / 眼球 / 筋電寄与の監査を別に残します。</td>
+<td>Since it is a cue-locked motor task, even if the split is made stricter, the visual cue/eyeball/myoelectric contributions will still be audited separately. </td>
 </tr>
 <tr>
 <td><strong>CHB-MIT</strong></td>
-<td>subject 数と case 数を混同しません。file をシャッフルせず、gap と chronology を runbook に固定します。</td>
+<td>Do not confuse subject numbers with case numbers. Don't shuffle files and pin gap and chronology to runbook. </td>
 </tr>
 <tr>
 <td><strong>Sleep-EDF</strong></td>
-<td>R&amp;K hypnogram を AASM 相当として無言で混ぜません。label mapping を書かずに cross-dataset 比較しません。</td>
+<td>Do not silently mix R&K hypnogram as equivalent to AASM. No cross-dataset comparison without writing label mapping. </td>
 </tr>
 <tr>
 <td><strong>TUH EEG / TUSZ</strong></td>
-<td>report text、report keyword 由来の triage、session metadata を、signal-only benchmark の入力へ混ぜません。</td>
+<td>Do not mix report text, triage and session metadata derived from report keyword into input of signal-only benchmark. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>最低限これだけは報告したい</h2>
+<h2>At least I would like to report this</h2>
 
 <h4>Report Items</h4>
 <ul>
-<li><strong>分割単位：</strong>被験者、セッション、時間のどれで分けたか。</li>
-<li><strong>分割規則：</strong>何件を train/validation/test に置いたか。</li>
-<li><strong>独立 ID：</strong>subject / case / night / session のどれを独立単位とみなしたか。</li>
-<li><strong>report 使用：</strong>signal-only か、report / metadata を併用した multimodal 評価か。</li>
-<li><strong>label manual：</strong>manual scoring や mapping rule がある場合は、その基準。</li>
-<li><strong>前処理の境界：</strong>正規化や特徴選択を、train のみで fit したか。</li>
-<li><strong>ベースライン：</strong>単純な手法と比べてどこが改善したか。</li>
-<li><strong>失敗例：</strong>どの条件で崩れたか、除外理由は何か。</li>
+<li><strong>Divided by:</strong>Whether by subject, session, or time. </li>
+<li><strong>Split rule:</strong>How many items were placed in train/validation/test? </li>
+<li><strong>Independent ID: Which of the subject / case / night / session is considered an independent unit. </li>
+<li><strong>Report usage: signal-only or multimodal evaluation with report/metadata? </li>
+<li><strong>label manual: If there is a manual scoring or mapping rule, the standard. </li>
+<li><strong>Preprocessing boundaries:</strong> Did you fit normalization and feature selection using only train? </li>
+<li><strong>Baseline:</strong>What is the improvement compared to the simpler method? </li>
+<li><strong>Failure example:</strong>Under what conditions did it fail and what was the reason for its exclusion? </li>
 </ul>
 
-<h2>参考文献</h2>
+<h2>References</h2>
 <ul>
 <li><a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">PhysioNet: EEG Motor Movement/Imagery Dataset</a></li>
 <li><a href="https://physionet.org/content/chbmit/1.0.0/" target="_blank">PhysioNet: CHB-MIT Scalp EEG Database</a></li>
@@ -206,12 +206,12 @@
 <li><a href="https://pubmed.ncbi.nlm.nih.gov/19238800/" target="_blank">Moser et al. (2009), Sleep classification according to AASM and Rechtschaffen &amp; Kales</a></li>
 </ul>
 
-<h2>最初の 1 本で迷ったときの安全策</h2>
+<h2>Safety measures if you get lost in the first book</h2>
 <p>
-迷ったら、<strong>被験者単位で train/test を分ける</strong>、<strong>test は最後まで触らない</strong>、<strong>正規化や特徴選択は train だけで fit する</strong>、この 3 点を守るのが安全です。厳しすぎるように見えても、信用できる精度の方が、派手な数字より価値があります。
+When in doubt, it is safe to follow these three points: <strong>Separate train/test for each subject</strong> <strong>Do not touch test until the end</strong><strong>For normalization and feature selection, fit only with train</strong>. Even if it seems too harsh, reliable accuracy is more valuable than fancy numbers.
 </p>
 
-<h2>次にどこへ戻るか</h2>
+<h2>Where to go back next</h2>
 <p>
-実際のスターターデータを見直したい場合は <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a>、最小ループを作る作業へ戻りたい場合は <a href="https://mind-upload.com/datasets.html#l0-practice">ハンズオン</a>、なぜこれが検証基盤の一部なのかを確認したい場合は <a href="https://mind-upload.com/verification.html">検証基盤</a> へ戻ってください。
+Go back to <a href="https://mind-upload.com/datasets.html">Data & Bench</a> if you want to review the actual starter data, <a href="https://mind-upload.com/datasets.html#l0-practice">Hands-on</a> if you want to go back to creating minimal loops, or go back to <a href="https://mind-upload.com/verification.html">Verification Foundation</a> if you want to see why this is part of the verification foundation.
 </p>

@@ -1,93 +1,95 @@
 # Mind-Upload
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
 
-マインドアップロード実現のための中核となるコアサイト。
+Core site for building a public-facing hub around mind uploading research and implementation.
 
-## 目的
+## Purpose
 
-このサイトは、マインドアップロードの実現に向けた技術・研究・コミュニティの中心的ハブとなることを目指しています。
+This site aims to serve as a central hub for the technology, research, and community work needed to move mind uploading forward.
 
-ここでいうマインドアップロードとは、**意識や記憶の交換・複製を可能とする技術**を指します。
+Here, mind uploading refers to technologies that could make the transfer, exchange, or replication of consciousness and memory possible.
 
-## 今後の展望
+## Outlook
 
-本プロジェクトは、最終的にサイトの更新や運用プロセスを完全に自動化することを目指しています。現在は手動で行っているタスクも、順次自動化ツールやCI/CDパイプラインへ移行する予定です。
+This project ultimately aims to automate site updates and operations end to end. Tasks that are still handled manually today are expected to move gradually into automation tools and CI/CD pipelines.
 
-## 貢献方法
+## How To Contribute
 
-- [issue.md](issue.md) を参照
-- [Issueを立てる](https://github.com/yasufumi-nakata/mind-upload/issues)
+- See [issue.md](issue.md)
+- Open an [Issue](https://github.com/yasufumi-nakata/mind-upload/issues)
 
-## 公開コンテンツ統合ポリシー
+## Public Content Integration Policy
 
-- 公開ページの統合先は [content_hub.md](content_hub.md) で一元管理します。
-- 新規ファイルを作成する前に、既存ページ（`verification.md` / `tech_roadmap.md` / `perspective.md` / `research_harvest_50.md` / `issue.md`）へ統合可能かを確認します。
-- 中間成果・作業ログ・自動生成物は原則 `automation/` または `ignore/` で管理し、公開導線は `index.md` と `content_hub.md` に集約します。
+- The canonical integration hub for public pages is [content_hub.md](content_hub.md).
+- Before creating a new file, confirm whether the content can be integrated into an existing page (`verification.md` / `tech_roadmap.md` / `perspective.md` / `research_harvest_50.md` / `issue.md`).
+- Intermediate results, work logs, and generated artifacts should in principle live under `automation/` or `ignore/`; the public entry points are consolidated into `index.md` and `content_hub.md`.
+- Any AI-driven or automated update to public-facing content must be written in English.
 
-## GitHub Wiki 運用
+## GitHub Wiki Operations
 
-- 学習用の wiki 本体は GitHub Wiki を前提にします。
-- リポジトリ内の `wiki/` は GitHub Wiki 用ソースとして扱い、サイト内の学習ページ編集もここで行います。
-- 閲覧入口:
+- The learning wiki is expected to live in GitHub Wiki.
+- The repository's `wiki/` directory is treated as the source for GitHub Wiki, and in-site learning pages are also edited there.
+- View entry point:
   - GitHub Wiki Home: https://github.com/yasufumi-nakata/mind-upload/wiki
-- 編集入口:
+- Edit entry point:
   - Wiki Home source: [wiki/index.md](wiki/index.md)
-- GitHub Wiki 用の出力は `github-wiki-export/` に生成します。
-- 生成は `scripts/export_github_wiki.rb`、反映は `scripts/publish_github_wiki.sh` を使います。
-- `scripts/publish_github_wiki.sh` は、GitHub Wiki の clone 先をリポジトリ内の `ignore/github-wiki-publish/` に固定しており、リポジトリ外に `wiki/` フォルダを作りません。
-- `scripts/clean_github_wiki_noise.rb` は、`wiki/` と `github-wiki-export/` に混入した `.DS_Store` や `._*` を除去します。isolated self-test 用に `GITHUB_WIKI_NOISE_ROOT` / `GITHUB_WIKI_NOISE_TARGET_DIRS` も受けられます。
-- `scripts/check_github_wiki_boundaries.rb` は、`publish` が repo 内 `ignore/github-wiki-publish/` 固定のままで、`mktemp` や外部作業先 override が戻っていないことを検査します。
-- `scripts/check_github_wiki_boundaries.rb` は、`publish` が repo 内 `ignore/github-wiki-publish/` 固定のままで、`mktemp` や外部作業先 override が戻っていないことを検査します。isolated self-test 用に `GITHUB_WIKI_BOUNDARY_ROOT` も受けられます。
-- `scripts/check_github_wiki_ops_references.rb` は、運用ファイル群に親ディレクトリの `wiki` 参照や古い外部 wiki remote 参照が戻っていないことを検査します。isolated self-test 用に `GITHUB_WIKI_OPS_REFERENCE_ROOT` / `GITHUB_WIKI_OPS_REFERENCE_FILES` も受けられます。
-- `scripts/with_github_wiki_lock.sh` は、GitHub Wiki の export/publish 系処理を repo 内 lock で直列化します。既定待機は 180 秒で、`GITHUB_WIKI_LOCK_WAIT_SECONDS` で変更できます。孤立した `pid` を見つけた場合は stale lock を自動回収します。
-- `scripts/selftest_github_wiki_lock.sh` は、stale lock 回収、lock 直列化、timeout、ラップした失敗コマンド実行後の lock 解放を repo 内 `ignore/` 配下で再現確認します。self-test 自体も repo 内 guard で直列化し、実行前に live な toolchain lock が空くまで待ちます。
-- `scripts/selftest_github_wiki_sync.sh` は、isolated な sync fixture を `ignore/` 配下に作り、`sync_github_wiki_toolchain.sh` が self-test 群の前置実行、`verify -> publish` の順序、verify 失敗時の publish 停止、lock 解放を守ることを確認します。
-- `scripts/selftest_github_wiki_verify.sh` は、isolated な verify fixture を `ignore/` 配下に作り、`verify_github_wiki_toolchain.sh` が self-test 群の前置実行、syntax/runtime の実行順序、build 条件分岐、失敗時停止、lock 解放を守ることを確認します。
-- `scripts/selftest_github_wiki_boundaries.sh` は、現行の運用ファイル群を `ignore/` 配下に複製し、`check_github_wiki_boundaries.rb` が対象ファイル欠落、verify/sync workflow guard 欠落、sync workflow の `paths:` 監視漏れ、`publish` の `mktemp` 回帰と `GITHUB_WIKI_WORKDIR` 回帰、README 注記欠落を検出できることを確認します。
-- `scripts/selftest_github_wiki_noise.sh` は、isolated な `wiki/` と `github-wiki-export/` を `ignore/` 配下に作り、`clean_github_wiki_noise.rb` が `.DS_Store` と `._*` を除去しつつ通常ファイルを残すこと、および 2 回目に no-op になることを確認します。
-- `scripts/selftest_github_wiki_ops_references.sh` は、isolated な運用ファイル群を `ignore/` 配下に作り、`check_github_wiki_ops_references.rb` が親ディレクトリ経由の wiki 参照、古い remote 参照、対象ファイル欠落を検出できることを確認します。
-- `scripts/selftest_github_wiki_exporter.sh` は、isolated な `wiki/` と `github-wiki-export/` を `ignore/` 配下に作り、`scripts/export_github_wiki.rb` が `Home.md`、`_Sidebar.md`、`_Footer.md`、generated assets、wrapper 除去、link rewrite、ノイズ除去を正しく出力できることを確認します。
-- `scripts/selftest_github_wiki_export.sh` は、isolated な source/export を `ignore/` 配下に作り、export validator が missing export dir、missing/unexpected page、source/export の noise、unsafe link、sidebar 欠落、generated asset 欠落、`github-wiki-export/` の unstaged drift を検出できること、staged 済み drift は意図どおり無視されること、`GITHUB_WIKI_EXPORT_SKIP_GIT_DRIFT=1` で drift 検査を明示的に外せること、git 管理外 root では drift 検査をスキップすることを確認します。
-- `scripts/selftest_github_wiki_publish.sh` は、missing remote の失敗、`WIKI_PUBLISH_ALLOW_SKIP=1` の skip 成功、local bare repo を remote に見立てた publish 2 回実行を通し、repo 内作業先 cleanup と no-diff 再実行を確認します。
-- `scripts/verify_github_wiki_toolchain.sh` は、syntax check、boundary check、ops reference check、noise cleanup、export、export validate をまとめて実行します。`VERIFY_GITHUB_WIKI_LOCK_SELFTEST=1` を付けると lock self-test を先頭で実行し、`VERIFY_GITHUB_WIKI_SYNC_SELFTEST=1` を付けると sync wrapper self-test を先頭で実行し、`VERIFY_GITHUB_WIKI_VERIFY_SELFTEST=1` を付けると verify wrapper self-test を先頭で実行し、`VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST=1` を付けると boundary self-test を先頭で実行し、`VERIFY_GITHUB_WIKI_NOISE_SELFTEST=1` を付けると noise cleanup self-test を先頭で実行し、`VERIFY_GITHUB_WIKI_OPS_SELFTEST=1` を付けると ops reference self-test を先頭で実行し、`VERIFY_GITHUB_WIKI_EXPORTER_SELFTEST=1` を付けると exporter self-test を先頭で実行し、`VERIFY_GITHUB_WIKI_EXPORT_SELFTEST=1` を付けると export validator self-test を先頭で実行し、`VERIFY_GITHUB_WIKI_PUBLISH_SELFTEST=1` を付けると publish self-test を先頭で実行し、`VERIFY_GITHUB_WIKI_BUILD=1` を付けると `BUNDLE_PATH=vendor/bundle bundle exec jekyll build` まで含めて確認できます。
-- `scripts/sync_github_wiki_toolchain.sh` は、`scripts/verify_github_wiki_toolchain.sh` の成功後に `scripts/publish_github_wiki.sh` を実行する統合 sync 入口です。
-- export 検査は `scripts/check_github_wiki_export.rb` を使います。`wiki/**/*.md` の export 漏れ、`wiki/generated/` のコピー漏れ、GitHub Wiki 上で解決できない相対リンク、`_Sidebar.md` への掲載漏れ、`.DS_Store` などの混入、`github-wiki-export/` の未反映更新を検出します。isolated self-test 用に `GITHUB_WIKI_EXPORT_SRC_DIR` / `GITHUB_WIKI_EXPORT_DEST_DIR` / `GITHUB_WIKI_EXPORT_SKIP_GIT_DRIFT=1` も受けられます。
-- `scripts/export_github_wiki.rb` は、`GITHUB_WIKI_EXPORT_SRC_DIR` / `GITHUB_WIKI_EXPORT_DEST_DIR` で source/export 先を差し替えられます。`SIDEBAR_GROUPS` に未分類の wiki ページがあっても、存在ページだけを既定グループへ出し、残りは `その他` セクションへ自動掲載します。
-- GitHub Wiki の git リポジトリは、GitHub の Web UI で最初の Wiki ページを 1 つ作成した後でないと clone / push できません。その初期化後に `scripts/publish_github_wiki.sh` を実行してください。
-- `.github/workflows/sync-github-wiki.yml` も追加してあり、初期化後は `main` への push で `export -> validate -> publish` を自動実行できます。
-- `.github/workflows/validate-github-wiki-export.yml` も追加してあり、Pull Request 段階で `export -> validate -> jekyll build` を先に確認できます。
-- GitHub Actions の既定トークンで不足する場合は、`GH_WIKI_TOKEN` シークレットに `repo` 権限のトークンを設定してください。
+- GitHub Wiki output is generated into `github-wiki-export/`.
+- Use `scripts/export_github_wiki.rb` to generate the export, and `scripts/publish_github_wiki.sh` to publish it.
+- `scripts/publish_github_wiki.sh` fixes the GitHub Wiki clone destination to `ignore/github-wiki-publish/` inside the repository and does not create a `wiki/` folder outside the repository.
+- `scripts/clean_github_wiki_noise.rb` removes `.DS_Store` and `._*` noise from `wiki/` and `github-wiki-export/`. It also accepts `GITHUB_WIKI_NOISE_ROOT` / `GITHUB_WIKI_NOISE_TARGET_DIRS` for isolated self-tests.
+- `scripts/check_github_wiki_boundaries.rb` verifies that `publish` still uses the in-repo `ignore/github-wiki-publish/` location and that no `mktemp` or external workdir override has been reintroduced.
+- `scripts/check_github_wiki_boundaries.rb` also accepts `GITHUB_WIKI_BOUNDARY_ROOT` for isolated self-tests.
+- `scripts/check_github_wiki_ops_references.rb` verifies that operational files have not regressed to parent-directory `wiki` references or old external wiki remotes. It also accepts `GITHUB_WIKI_OPS_REFERENCE_ROOT` / `GITHUB_WIKI_OPS_REFERENCE_FILES` for isolated self-tests.
+- `scripts/with_github_wiki_lock.sh` serializes GitHub Wiki export/publish operations with an in-repo lock. The default wait is 180 seconds and can be changed with `GITHUB_WIKI_LOCK_WAIT_SECONDS`. Stale locks are reclaimed automatically when an orphaned `pid` is found.
+- `scripts/selftest_github_wiki_lock.sh` verifies stale-lock recovery, lock serialization, timeout handling, and lock release after wrapped command failure inside `ignore/`. The self-test itself is also serialized by an in-repo guard and waits for any live toolchain lock to clear before running.
+- `scripts/selftest_github_wiki_sync.sh` creates an isolated sync fixture under `ignore/` and verifies that `sync_github_wiki_toolchain.sh` runs its self-test prerequisites first, preserves the `verify -> publish` order, stops publish when verify fails, and releases the lock.
+- `scripts/selftest_github_wiki_verify.sh` creates an isolated verify fixture under `ignore/` and verifies that `verify_github_wiki_toolchain.sh` runs its self-test prerequisites first, preserves syntax/runtime execution order, respects build-condition branching, stops on failure, and releases the lock.
+- `scripts/selftest_github_wiki_boundaries.sh` copies the current operational files under `ignore/` and verifies that `check_github_wiki_boundaries.rb` can detect missing target files, missing verify/sync workflow guards, missing `paths:` watchers in the sync workflow, regressions to `mktemp` or `GITHUB_WIKI_WORKDIR` in `publish`, and missing README notes.
+- `scripts/selftest_github_wiki_noise.sh` creates isolated `wiki/` and `github-wiki-export/` directories under `ignore/` and verifies that `clean_github_wiki_noise.rb` removes `.DS_Store` and `._*` while keeping normal files intact, and that the second run is a no-op.
+- `scripts/selftest_github_wiki_ops_references.sh` creates isolated operational files under `ignore/` and verifies that `check_github_wiki_ops_references.rb` can detect parent-directory wiki references, old remote references, and missing target files.
+- `scripts/selftest_github_wiki_exporter.sh` creates isolated `wiki/` and `github-wiki-export/` directories under `ignore/` and verifies that `scripts/export_github_wiki.rb` correctly outputs `Home.md`, `_Sidebar.md`, `_Footer.md`, generated assets, wrapper removal, link rewriting, and noise cleanup.
+- `scripts/selftest_github_wiki_export.sh` creates isolated source/export directories under `ignore/` and verifies that the export validator can detect a missing export directory, missing or unexpected pages, source/export noise, unsafe links, a missing sidebar, missing generated assets, and unstaged drift in `github-wiki-export/`; it also verifies that staged-only drift is ignored as intended, that `GITHUB_WIKI_EXPORT_SKIP_GIT_DRIFT=1` explicitly disables drift checking, and that drift checking is skipped in a non-git root.
+- `scripts/selftest_github_wiki_publish.sh` verifies failure on a missing remote, success when `WIKI_PUBLISH_ALLOW_SKIP=1`, and two publish runs against a local bare repo used as the remote, including in-repo workdir cleanup and no-diff re-run handling.
+- `scripts/verify_github_wiki_toolchain.sh` runs syntax checks, boundary checks, ops-reference checks, noise cleanup, export, and export validation together. `VERIFY_GITHUB_WIKI_LOCK_SELFTEST=1` prepends the lock self-test, `VERIFY_GITHUB_WIKI_SYNC_SELFTEST=1` prepends the sync-wrapper self-test, `VERIFY_GITHUB_WIKI_VERIFY_SELFTEST=1` prepends the verify-wrapper self-test, `VERIFY_GITHUB_WIKI_BOUNDARY_SELFTEST=1` prepends the boundary self-test, `VERIFY_GITHUB_WIKI_NOISE_SELFTEST=1` prepends the noise-cleanup self-test, `VERIFY_GITHUB_WIKI_OPS_SELFTEST=1` prepends the ops-reference self-test, `VERIFY_GITHUB_WIKI_EXPORTER_SELFTEST=1` prepends the exporter self-test, `VERIFY_GITHUB_WIKI_EXPORT_SELFTEST=1` prepends the export-validator self-test, `VERIFY_GITHUB_WIKI_PUBLISH_SELFTEST=1` prepends the publish self-test, and `VERIFY_GITHUB_WIKI_BUILD=1` also runs `BUNDLE_PATH=vendor/bundle bundle exec jekyll build`.
+- `scripts/sync_github_wiki_toolchain.sh` is the integrated sync entry point that runs `scripts/publish_github_wiki.sh` after `scripts/verify_github_wiki_toolchain.sh` succeeds.
+- Export validation uses `scripts/check_github_wiki_export.rb`. It detects missing exports from `wiki/**/*.md`, missing copies from `wiki/generated/`, relative links that cannot resolve on GitHub Wiki, omissions from `_Sidebar.md`, noise such as `.DS_Store`, and unapplied updates in `github-wiki-export/`. It also accepts `GITHUB_WIKI_EXPORT_SRC_DIR` / `GITHUB_WIKI_EXPORT_DEST_DIR` / `GITHUB_WIKI_EXPORT_SKIP_GIT_DRIFT=1` for isolated self-tests.
+- `scripts/export_github_wiki.rb` can override the source/export directories with `GITHUB_WIKI_EXPORT_SRC_DIR` / `GITHUB_WIKI_EXPORT_DEST_DIR`. Even when `SIDEBAR_GROUPS` has unclassified wiki pages, it emits only existing pages into the default groups and places the rest under an automatically generated `Other` section.
+- The GitHub Wiki git repository cannot be cloned or pushed until the first Wiki page has been created in GitHub's Web UI. Run `scripts/publish_github_wiki.sh` after that initialization step.
+- `.github/workflows/sync-github-wiki.yml` is also included so that, after initialization, a push to `main` can automatically run `export -> validate -> publish`.
+- `.github/workflows/validate-github-wiki-export.yml` is also included so that Pull Requests can run `export -> validate -> jekyll build` before merge.
+- If the default GitHub Actions token is insufficient, set a token with `repo` scope in the `GH_WIKI_TOKEN` secret.
 
-## LLM向けプロンプトの利用
+## LLM Prompt Usage
 
-- LLMに調査や分析を依頼する際の科学者スタイルのプロンプト例は [.agent/agent.md](.agent/agent.md) にまとめています。
-- AI運用時は、実行可能な作業だけを提案・実施する「握れるボール原則」を必ず遵守してください（[.agent/agent.md](.agent/agent.md) の該当節）。
+- Scientist-style prompt examples for asking an LLM to investigate or analyze are collected in [.agent/agent.md](.agent/agent.md).
+- During AI-assisted operations, always follow the "Ownable Ball Principle": only propose and execute work that can actually be completed in the current session (see the relevant section in [.agent/agent.md](.agent/agent.md)).
+- Any AI or automated agent updating public-facing content must write that content in English.
 
-## リンク
+## Links
 
 - **GitHub**: https://github.com/yasufumi-nakata/mind-upload
 - **GitHub Wiki**: https://github.com/yasufumi-nakata/mind-upload/wiki
 
-## システム構成 (System Architecture)
+## System Architecture
 
-本プロジェクトでは、AIエージェントを活用した半自動的なコンテンツ更新ワークフローを採用しています。
+This project uses a semi-automated content-update workflow assisted by AI agents.
 
 ```mermaid
 graph LR
-    A[ユーザー] -->|Issue作成| B(Manus AI)
-    B -->|Issue登録| C[GitHub Issues]
-    C -->|Issue取得| D(Antigravity)
-    D -->|コード修正・コミット| E[GitHub Repository]
-    E -->|自動デプロイ| F[GitHub Pages]
-    F -->|閲覧| A
+    A[User] -->|Create issue| B(Manus AI)
+    B -->|Register issue| C[GitHub Issues]
+    C -->|Fetch issue| D(Antigravity)
+    D -->|Edit code and commit| E[GitHub Repository]
+    E -->|Auto deploy| F[GitHub Pages]
+    F -->|Browse| A
 ```
 
-### ワークフロー
+### Workflow
 
-1.  **Issue作成 (Manus)**: ユーザーがManus AIに対して改善提案や新機能のリクエストを伝えると、ManusがGitHub Issueを自動作成します。
-2.  **Issue処理 (Antigravity)**: Antigravity（本エージェント）がオープンなIssueを取得し、コードベースを分析・修正し、コミット＆プッシュを行います。コミットメッセージに `Fixes #N` を含めることで、Issueは自動的にクローズされます。
-3.  **デプロイ (GitHub Pages)**: `main` ブランチへのプッシュをトリガーに、GitHub Pagesが自動的にサイトを更新します。
+1. **Issue Creation (Manus)**: When a user sends an improvement proposal or feature request to Manus AI, Manus automatically creates a GitHub Issue.
+2. **Issue Handling (Antigravity)**: Antigravity (this agent) fetches open issues, analyzes and edits the codebase, then commits and pushes changes. Including `Fixes #N` in the commit message closes the corresponding issue automatically.
+3. **Deployment (GitHub Pages)**: A push to the `main` branch triggers GitHub Pages to update the site automatically.
 
-## ホスティング
+## Hosting
 
 - GitHub Pages

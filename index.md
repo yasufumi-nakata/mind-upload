@@ -1,54 +1,54 @@
 ---
 layout: default
 title: "Mind-Upload"
-description: "マインドアップロード/WBEを「進歩を測れる科学」に寄せるための検証基盤（Verification Commons）。"
+description: "A verification commons for turning mind uploading and WBE into a science with measurable progress."
 article_type: Start Here
-subtitle: "勝利条件・標準・ベンチマーク・事前登録を先に作る"
+subtitle: "Define success criteria, standards, benchmarks, and preregistration first"
 author: Mind Uploading Research Project
 last_updated: "2026-03-18"
 note: "Human-friendly landing page"
-audience: "はじめて来た人、全体像だけ先に知りたい人、読む順番で迷いたくない人"
-reading_time: "5〜10分"
-page_intro: "このページは、Mind-Upload 全体の入口です。『このサイトは何を目指しているか』『どこから読むと迷いにくいか』『今すぐ見に行くべきページはどれか』を最短で把握できるようにしています。"
-accuracy_note: "ここでは入口に必要なことだけを先に示します。細かい根拠や技術的な条件は、各リンク先で確認してください。"
+audience: "First-time visitors, readers who want only the big picture, and anyone who wants a clear reading order"
+reading_time: "5-10 min"
+page_intro: "This page is the main entry point to Mind-Upload. It is designed to show, as quickly as possible, what this site is trying to do, where to start reading, and which pages matter first."
+accuracy_note: "This page only covers what is needed at the entry point. For detailed evidence and technical conditions, follow the linked pages."
 page_highlights:
-  - "Mind-Uploadの中心は、派手な結論を出すことではなく、前進を測れる検証基盤を作ることです。"
-  - "迷ったら Verification → Roadmap → WBE/EEG入門 の順で読むと、話の軸を保ちやすいです。"
-  - "配線図や cell type だけでは長期ダイナミクスは決まらず、sleep/homeostasis・髄鞘・グリア代謝も別変数として残ります。"
-  - "brain-to-text や speech demo では、Neural Contribution Card で神経寄与と task / language prior を切り分けます。"
-  - "decode / biomarker の高 score は、target signal だけでなく subject / session fingerprint で上がることがあるため、Specificity & Shortcut Card で独立に監査します。"
-  - "same-day の成功を cross-day / long-term claim へ読み替えないため、Temporal Validity Card を公開運用へ追加しました。"
-  - "用語や前提で止まったときに戻れる入口として、FAQ と用語集も近くに置いています。"
+  - "The core of Mind-Upload is not bold conclusions but a verification commons that lets progress be measured."
+  - "If you are unsure where to start, read Verification -> Roadmap -> WBE/EEG 101."
+  - "Connectomes and cell types alone do not determine long-term dynamics; sleep/homeostasis, myelination, and glial metabolism remain separate variables."
+  - "Brain-to-text and speech demos are read through the Neural Contribution Card so neural contribution is not confused with task structure or language priors."
+  - "High decode / biomarker scores can rise from subject / session fingerprint alone, so the Specificity & Shortcut Card audits that shortcut independently."
+  - "The Temporal Validity Card is now part of the public workflow so same-day success is not silently promoted to cross-day or long-term claims."
+  - "FAQ and the glossary are kept close to the front door so you can recover quickly when terminology or assumptions become unclear."
 known_points:
-  - "公開データ、標準、ベンチマーク、監査をそろえると、L0〜L2 の前進は比較可能な形で積み上げられます。"
-  - "EEGやデコーディング研究は、条件を限定すれば測定可能な前進を作れます。"
-  - "同じ decode score でも、subject / session fingerprint を拾っているだけなら target-specific biomarker とは読めません。"
-  - "connectome-complete は emulation-complete を意味せず、maintenance-state の不足を別に監査する必要があります。"
-  - "本人性や意識の強い主張は、入口ページではなく後段の検証設計として扱う必要があります。"
+  - "When public data, standards, benchmarks, and audit rules are in place, L0-L2 progress can accumulate in comparable form."
+  - "EEG and decoding research can create measurable progress when their claims stay within their conditions."
+  - "The same decode score is not a target-specific biomarker if it can be reproduced by subject / session fingerprint alone."
+  - "Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately."
+  - "Strong claims about identity or consciousness belong in downstream verification design, not on the landing page."
 unknown_points:
-  - "どの条件を満たせば L4 の本人性を認めるかについて、分野横断の合意はまだありません。"
-  - "非侵襲計測だけで WBE に十分な内部情報が取れるかは未解決です。"
-  - "L5 の社会実装に必要な制度設計は、技術問題だけでは決まりません。"
+  - "There is still no cross-disciplinary agreement on what would count as sufficient evidence for L4 personal identity."
+  - "It remains unresolved whether noninvasive measurement alone can capture enough internal state for WBE."
+  - "The institutional design needed for L5 social deployment cannot be decided by technical requirements alone."
 wiki_links:
   - label: "Wiki Home"
     url: "/wiki/"
-    description: "初歩から学ぶための全体マップです。"
-  - label: "Wiki: 公開ページ冒頭ブロックの読み方"
+    description: "A full learning map for readers starting from first principles."
+  - label: "Wiki: How To Read Public Page Headers"
     url: "/wiki/page-header-reading-guide.html"
-    description: "各ページ上部の案内、既知/未知、wiki導線をどう読むかを整理します。"
-  - label: "Wiki: 公開ページの読み分けガイド"
+    description: "Explains how to read the guidance blocks, known/unknown sections, and wiki links at the top of each public page."
+  - label: "Wiki: Public Page Reading Guide"
     url: "/wiki/public-page-reading-guide.html"
-    description: "Verification、Roadmap、WBE 101、Datasets などの役割差を整理します。"
-  - label: "Wiki: WBEの基本"
+    description: "Clarifies the different roles of Verification, Roadmap, WBE 101, Datasets, and other public pages."
+  - label: "Wiki: WBE Basics"
     url: "/wiki/mind-upload-basics.html"
-    description: "マインドアップロードと WBE の最初の一歩を丁寧に説明します。"
-  - label: "Wiki: 主張の読み方"
+    description: "A careful first introduction to mind uploading and WBE."
+  - label: "Wiki: Reading Claims and Evidence"
     url: "/wiki/claims-and-evidence.html"
-    description: "ニュースや研究発表を、証拠の強さで読み分ける練習用ページです。"
+    description: "A practice page for reading news and research announcements by evidence strength."
 recommended_pages:
-  - label: "検証基盤"
+  - label: "Verification"
     url: "/verification.html"
-  - label: "WBE入門"
+  - label: "WBE 101"
     url: "/wbe_101.html"
   - label: "FAQ"
     url: "/faq.html"
@@ -61,164 +61,164 @@ recommended_pages:
 <div class="abstract-box">
 <h2>What This Is</h2>
 <p>
-Mind-Uploadは、「心をコンピュータで再現できるのか？」という大きな問いを、<strong>検証できる小さな課題</strong>に分けて進めるサイトです。大きな結論を急がず、まずは<strong>何を達成したら前進か</strong>と、<strong>他の人が同じ結果を確認できるか</strong>を先に決めます。
+Mind-Upload is a site for breaking the large question, "Can a mind be reproduced on a computer?", into <strong>small, testable tasks</strong>. Instead of rushing to a final conclusion, it starts by defining <strong>what counts as progress</strong> and <strong>whether other people can verify the same result</strong>.
 </p>
 </div>
 
 <div class="key-points">
-<h4>このページで先に分かること</h4>
+<h4>What You Learn First On This Page</h4>
 <ul>
-<li><strong>このサイトの中心：</strong>「本当にできるのか」をすぐ断言するのではなく、まず確かめ方を揃えることです。</li>
-<li><strong>最短の読み方：</strong>全体像だけ知りたい場合は、下の「読む順番」から 1〜3 を見れば十分です。</li>
-<li><strong>このページでしないこと：</strong>本人性や意識の最終結論を、入口ページだけで決めることはしません。</li>
+<li><strong>The center of this site:</strong> not immediate certainty about whether WBE works, but agreement on how to test it.</li>
+<li><strong>The shortest reading path:</strong> if you only want the overview, items 1-3 in the reading order below are enough.</li>
+<li><strong>What this page does not do:</strong> it does not settle the final questions of identity or consciousness by itself.</li>
 </ul>
 </div>
 
 <div class="note-box">
-<strong>入口で先に防ぐ誤読</strong>
+<strong>Misreading To Block At The Entrance</strong>
 <p>
-このサイトは 2026年3月の一次文献再監査を受けて、<strong>「配線図と cell type があれば、残りはほぼ埋まる」</strong>という読み方を入口ページでも採りません。sleep / wake に依存した再正規化、髄鞘 / オリゴデンドロサイト support、グリア代謝、分子ターンオーバー下の active maintenance が別変数として残るためです。今回の追補ではこの不足を、<strong>fast execution state</strong>、<strong>controller state</strong>、<strong>slow maintenance state</strong> の 3 層と timescale ごとの claim ceiling へ分け、same-day の fit から cross-day / long-term claim へ飛ばさない運用にそろえました。したがって、本サイトでは <strong>connectome-complete</strong> をそのまま <strong>emulation-complete</strong> と読み替えません。短い説明は <a href="wbe_101.html#state-completeness">WBE入門の hidden state 節</a>、根拠の整理は <a href="wiki/connectome-is-not-enough.html#timescale-matrix">Wiki: 配線図だけでは足りない理由の timescale matrix</a> と <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に集約しています。
+After the March 2026 re-audit of primary literature, this site no longer accepts the reading that <strong>"if we have the wiring diagram and cell types, the rest is almost filled in."</strong> Sleep/wake-dependent renormalization, myelination and oligodendrocyte support, glial metabolism, and active maintenance under molecular turnover remain separate variables. Accordingly, this site does not treat <strong>connectome-complete</strong> as equivalent to <strong>emulation-complete</strong>. For a short explanation, see the hidden-state section in <a href="wbe_101.html#state-completeness">WBE 101</a>; for the evidence structure, see <a href="wiki/connectome-is-not-enough.html">Wiki: Why a Connectome Is Not Enough</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic Plasticity and Maintenance State</a>.
 </p>
 </div>
 
 <div class="note-box">
-<strong>『どこまで直接見えているか』を先に確認したいとき</strong>
+<strong>If You Want To Check What Is Directly Observable First</strong>
 <p>
-2026年3月の更新では、measurement stack ごとの主張上限を本文運用へ落とすため、<a href="verification.html#observability-budget">Verification の Observability Budget</a> を追加しました。multimodal という言葉だけで state-complete と読まないため、<a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: 計測スタックごとの observability と claim ceiling</a> では <strong>stack 別の整理表</strong>に加えて、<strong>state variable × timescale × direct / proxy / inferred</strong> の行列も公開しています。
+The March 2026 update added <a href="verification.html#observability-budget">Verification's Observability Budget</a> so claim ceilings can be enforced in normal page operations. For the table that prevents "multimodal" from being misread as "state-complete," see <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceilings by Measurement Stack</a>.
 </p>
 </div>
 
 <div class="note-box">
-<strong>multimodal を見たときに、何が本当に増えたか先に切り分けたいとき</strong>
+<strong>Public Pages vs. Wiki</strong>
 <p>
-2026年3月の再監査では、<strong>同時計測 + 共有時計</strong>、<strong>同一個体の幾何統合</strong>、<strong>coverage-limited な侵襲校正</strong>、<strong>atlas / transcriptomic prior</strong> を、同じ <code>multimodal</code> の 1 語で読まない方針にそろえました。特に EEG-fMRI では、shared clock があっても BOLD は hemodynamic proxy であり、<strong>2025年12月16日公開の Epp et al.</strong> が示したように cortex の有意 voxel の約40%で BOLD と酸素代謝変化が逆向きになりえます。さらに今回の更新では、<strong>baseline vascular state / CVR</strong> を別監査しない限り、BOLD の群差や縦断差をそのまま neural difference と読みません。したがって本サイトでは、<code>multimodal = mechanistic truth</code> と読まず、<a href="verification.html#fusion-card">Verification の Fusion Card</a> と <a href="wiki/multimodal-integration-basics.html#hemodynamic-gate">Wiki: hemodynamic proxy gate</a> を先に確認してください。
+The public pages, including this one, are <strong>information portals</strong> for quickly seeing what is currently known, what remains unresolved, and where to read next. If you want to learn from the background upward, follow the <strong>wiki</strong> links at the top of each page.
+</p>
+</div>
+<div class="note-box">
+<strong>If You Are Unsure How To Use This Site</strong>
+<p>
+If you want a site-wide view organized into three modes, getting the overview, learning from the basics, and actually fixing/contributing, see <a href="wiki/site-usage-modes.html">Wiki: Three Ways To Use This Site</a>.
+</p>
+</div>
+<div class="note-box">
+<strong>If You Want The Big Picture In An A4 Booklet First</strong>
+<p>
+The <a href="summary_booklet.html">Summary Booklet</a> condenses the main public pages into a short briefing format. GitHub Actions also generates an A4 PDF from it.
+</p>
+</div>
+<div class="note-box">
+<strong>If The Differences Between Public Pages Feel Blurry</strong>
+<p>
+Verification, Roadmap, Perspective, WBE 101, and Datasets may sound similar, but they serve different roles. If you want to decide which public page should come first, see <a href="wiki/public-page-reading-guide.html">Wiki: Public Page Reading Guide</a>.
+</p>
+</div>
+<div class="note-box">
+<strong>If "Known" vs. "Unknown" Feels Ambiguous</strong>
+<p>
+This site's public pages separate what can be asserted from what must still remain provisional. If you want a one-page guide to reading known/unknown sections, accuracy assumptions, and external dependencies, see <a href="wiki/known-unknown-and-status-reading.html">Wiki: How To Read "What Is Known / Not Yet Known"</a>.
+</p>
+</div>
+<div class="note-box">
+<strong>If You Are Unsure How To Use The Header Blocks Themselves</strong>
+<p>
+Each public page begins with blocks such as "how to read this page," "who it is for," "accuracy assumptions," "what is currently known," and "check the basics in the wiki." If you want a one-page explanation of how to use those blocks in order, see <a href="wiki/page-header-reading-guide.html">Wiki: How To Read Public Page Headers</a>.
+</p>
+</div>
+<div class="note-box">
+<strong>If You Want To Start From Theory</strong>
+<p>
+If you want only the theory-side distinctions among WBE 101, Perspective, Framework, and Roadmap, see <a href="wiki/theory-pages-reading-guide.html">Wiki: Theory Page Reading Guide</a>.
+</p>
+</div>
+<div class="note-box">
+<strong>If You Want To Start From Practical Work</strong>
+<p>
+If you want only the practical distinctions among Verification, Datasets, the L0 practice section in Datasets, the casework section in Verification, and the proposal integration section in Issue, see <a href="wiki/practical-pages-reading-guide.html">Wiki: Practical Page Reading Guide</a>.
+</p>
+</div>
+<div class="note-box">
+<strong>If You Only Want To Decide Your First 30 Minutes</strong>
+<p>
+If you want a fixed first set of 3-4 pages depending on whether you start with overview, theory, practice, literature, or participation, see <a href="wiki/first-30-minutes-by-goal.html">Wiki: The First 30 Minutes By Goal</a>.
 </p>
 </div>
 
 <div class="note-box">
-<strong>『何がまだ claim を止めているか』まで見たいとき</strong>
+<strong>If You Want Current External WBE Materials</strong>
 <p>
-Observability Budget で「何を直接見たか」を確認したら、次は <a href="verification.html#latent-state-error-budget">Verification の latent-state error budget</a> で、<strong>どの未観測状態がいまの誤差をまだ支配しているか</strong>を確認してください。ここでは、内在興奮性、現在のシナプス効率、遅延 / 髄鞘、神経修飾の specificity、glial / slow-state、chronic unit identity を別々の error source として監査し、connectome-only baseline と augmentation claim をどう読み分けるかまで固定しています。
-</p>
-</div>
-<div class="note-box">
-<strong>same-day の成功を cross-day / long-term claim へ上げる前に見たいとき</strong>
-<p>
-2026年3月の更新では、縦断主張の誤読を止めるため <a href="verification.html#temporal-validity-card">Verification の Temporal Validity Card</a> を追加しました。ここでは <strong>fixed decoder interval</strong>、<strong>state annotation</strong>、<strong>interface / decoder drift</strong>、<strong>recalibration burden</strong>、<strong>transfer ceiling</strong> を独立に出し、same-day の fit を別日安定性や長期 deployability へそのまま延長しません。背景は <a href="wiki/state-trait-and-drift.html">Wiki: state・trait・ドリフト</a> に集約しています。
-</p>
-</div>
-<div class="note-box">
-<strong>cross-day の score だけで maintenance-consistent claim へ上げたくないとき</strong>
-<p>
-今回の追補では、時間軸の成功と maintenance route の証跡を分けるため <a href="verification.html#maintenance-state-error-budget">Verification の maintenance-state error budget</a> を追加しました。ここでは <strong>controller state</strong>、<strong>sleep / wake history</strong>、<strong>timing-support</strong>、<strong>bioenergetic / glial / clearance proxy</strong> を別欄で出し、same-day の fit や cross-day の hold を、そのまま <strong>maintenance-consistent</strong> や <strong>remote-memory relevant</strong> と読まないようにします。背景は <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に集約しています。
-</p>
-</div>
-<div class="note-box">
-<strong>『文字列や音声が出た』ときに、何が脳由来か先に見たいとき</strong>
-<p>
-2026年3月の更新では、brain-to-text / speech decode の過大解釈を止めるため <a href="verification.html#neural-contribution-card">Verification の Neural Contribution Card</a> を追加しました。ここでは <strong>task constraint</strong>、<strong>language model / prompt / candidate set</strong>、<strong>no-brain / no-LM / shuffle baseline</strong>、<strong>subject cooperation / calibration burden</strong>、<strong>online / offline</strong> を固定し、「文字列が出た」をそのまま neural reconstruction と読み替えません。入口Q&amp;Aなら <a href="faq.html#brain-to-text">FAQ: brain-to-text の見方</a> が近道です。
-</p>
-</div>
-<div class="note-box">
-<strong>高い decode score が、その人らしさを読んだだけでないかを先に見たいとき</strong>
-<p>
-2026年3月18日の追補では、<a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a> が repeated measures を participant-disjoint にしない診断学習で <strong>identity confounding</strong> が起こりうると示し、<a href="https://doi.org/10.1016/j.patcog.2020.107381" target="_blank">Wang et al. (2020)</a> と <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a> が resting-state EEG だけで高精度かつ time-robust な個人識別が成立しうると示し、<a href="https://doi.org/10.1016/j.neuroimage.2022.119034" target="_blank">Gibson et al. (2022)</a> が EEG variation に強い subject-driven 成分が残ると整理したことを踏まえ、<strong>subject / session fingerprint</strong> を独立の shortcut として入口にも反映しました。したがって本サイトでは、同一 raw recording から切り出した窓が train/test をまたぐ結果や、subject / session 情報だけで再現できる結果を、そのまま target-specific biomarker や neural readout とは読みません。まず <a href="verification.html#specificity-shortcut-card">Verification の Specificity &amp; Shortcut Card</a> と <a href="tech_roadmap.html#qa-r6">Roadmap の R6 個人化</a> を確認してください。
+For an up-to-date external resource hub, see the <a href="https://carboncopies.org/" target="_blank" rel="noopener">Carbon Copies Foundation</a>. As of <strong>March 16, 2026</strong>, their home page highlights the <a href="https://carboncopies.org/Newsletter/December2025/" target="_blank" rel="noopener">December 2025 newsletter</a>, the <a href="https://carboncopies.org/Research/BrainGenix/Challenge/Overview/" target="_blank" rel="noopener">Brain Emulation Challenge overview</a>, the <a href="https://carboncopies.org/Events/Workshops/UpcomingEvents/FebruaryWorkshop2025LandingPage/Page/" target="_blank" rel="noopener">February 22, 2025 Brain Emulation Challenge workshop</a>, the <a href="https://carboncopies.org/Events/JournalClubs/MemoryDecoding/" target="_blank" rel="noopener">Memory Decoding Journal Club</a>, and the broader <a href="https://braingenix.org/" target="_blank" rel="noopener">BrainGenix</a> stack for WBE-oriented simulation and validation work.
 </p>
 </div>
 
 <div class="note-box">
-<strong>公開ページと wiki の役割分担</strong>
+<strong>If You Want To See Which Unobserved States Still Dominate Error</strong>
 <p>
-このトップページを含む公開ページは、まず「いま何が分かっていて、何がまだ未解決か」を早く把握するための<strong>情報ポータル</strong>です。背景から順に学びたい場合は、各ページ上部の <strong>wiki</strong> 導線から学習用ページへ進んでください。
+After checking what is directly observed in the Observability Budget, move next to the <a href="verification.html#latent-state-error-budget">Verification: latent-state error budget</a>. That section fixes which still-unobserved states continue to dominate present error, including intrinsic excitability, current synaptic efficacy, delay / myelin, neuromodulatory specificity, glial / slow-state variables, and chronic unit identity. It also explains how to read the difference between a connectome-only baseline and an augmentation claim.
 </p>
 </div>
 <div class="note-box">
-<strong>このサイトをどう使うかで迷ったとき</strong>
+<strong>If You Want To Stop Promoting Same-Day Success To Cross-Day Or Long-Term Claims</strong>
 <p>
-全体像をつかむ、初歩から学ぶ、実際に直す・参加する、の 3 モードでサイト全体の使い方を見たい場合は <a href="wiki/site-usage-modes.html">Wiki: このサイトの3つの使い方</a> をご覧ください。
+The <a href="verification.html#temporal-validity-card">Verification: Temporal Validity Card</a> was added so longitudinal claims are not overread. It separates <strong>fixed decoder interval</strong>, <strong>state annotation</strong>, <strong>interface / decoder drift</strong>, <strong>recalibration burden</strong>, and <strong>transfer ceiling</strong>, so a same-day fit is not silently extended to cross-day stability or long-term deployability. The background logic is summarized in <a href="wiki/state-trait-and-drift.html">Wiki: state, trait, and drift</a>.
 </p>
 </div>
 <div class="note-box">
-<strong>A4 要約冊子で先に全体像だけ見たいとき</strong>
+<strong>If You Do Not Want Cross-Day Scores To Become Maintenance-Consistent Claims Too Early</strong>
 <p>
-公開ページの要点を短く束ねた版として <a href="summary_booklet.html">Summary Booklet</a> を追加しています。GitHub Actions ではこのページから A4 PDF も生成いたします。
+The <a href="verification.html#maintenance-state-error-budget">Verification: maintenance-state error budget</a> separates temporal success from evidence about maintenance routes. It reports <strong>controller state</strong>, <strong>sleep / wake history</strong>, <strong>timing support</strong>, and <strong>bioenergetic / glial / clearance proxies</strong> in separate fields, so a same-day fit or a cross-day hold is not automatically read as a <strong>maintenance-consistent</strong> or <strong>remote-memory-relevant</strong> claim. The background is summarized in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: homeostatic plasticity and maintenance state</a>.
 </p>
 </div>
 <div class="note-box">
-<strong>公開ページどうしの違いで迷ったとき</strong>
+<strong>If A System Outputs Text Or Speech And You Want To Check What Is Actually Brain-Derived</strong>
 <p>
-Verification、Roadmap、Perspective、WBE 101、Datasets などは、似た説明をしているようで役割が違います。まずどの公開ページから入るべきかを整理したい場合は <a href="wiki/public-page-reading-guide.html">Wiki: 公開ページの読み分けガイド</a> をご覧ください。
+The <a href="verification.html#neural-contribution-card">Verification: Neural Contribution Card</a> was added to stop overreading brain-to-text and speech-decode demos. It fixes <strong>task constraint</strong>, <strong>language model / prompt / candidate set</strong>, <strong>no-brain / no-LM / shuffle baselines</strong>, <strong>subject cooperation / calibration burden</strong>, and <strong>online vs offline</strong> so "a string came out" is not silently rephrased as neural reconstruction. For the shortest entry explanation, see <a href="faq.html#brain-to-text">FAQ: how to read brain-to-text claims</a>.
 </p>
 </div>
 <div class="note-box">
-<strong>『分かっていること / 分かっていないこと』の意味で迷ったとき</strong>
+<strong>If You Want To Check Whether A High Decode Score Is Just Reading The Person</strong>
 <p>
-このサイトの公開ページは、断言できる範囲と保留すべき範囲を先に分けています。既知/未知、正確さの前提、外部依存をどう読むかを 1 枚で見たい場合は <a href="wiki/known-unknown-and-status-reading.html">Wiki: 『分かっていること / 分かっていないこと』の読み方</a> をご覧ください。
-</p>
-</div>
-<div class="note-box">
-<strong>ページ上部の案内ブロック自体の使い方で迷ったとき</strong>
-<p>
-公開ページの冒頭には「このページの読み方」「向いている人」「正確さの前提」「いま分かっていること」「wiki で基礎から確認する」が並びます。この順番でどう読むと迷いにくいかを 1 枚で見たい場合は <a href="wiki/page-header-reading-guide.html">Wiki: 公開ページ冒頭ブロックの読み方</a> をご覧ください。
-</p>
-</div>
-<div class="note-box">
-<strong>理論から入りたいとき</strong>
-<p>
-WBE 101、Perspective、Framework、Roadmap の違いだけを理論系に絞って整理したい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a> をご覧ください。
-</p>
-</div>
-<div class="note-box">
-<strong>手を動かす側から入りたいとき</strong>
-<p>
-Verification、Datasets、Datasets内のL0実践節、Verification内のケースワーク節、Issue内の提案統合節の違いだけを実務系に絞って整理したい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
-</p>
-</div>
-<div class="note-box">
-<strong>最初の30分で何を見るかだけ決めたいとき</strong>
-<p>
-全体像、理論、実務、文献、参加のどこから入るかで、最初の 3〜4 ページを固定したい場合は <a href="wiki/first-30-minutes-by-goal.html">Wiki: 目的別の最初の30分ルート</a> をご覧ください。
+The 2026-03-18 addendum reflects the fact that <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a> showed identity confounding when repeated measures are not participant-disjoint, <a href="https://doi.org/10.1016/j.patcog.2020.107381" target="_blank">Wang et al. (2020)</a> and <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a> showed time-robust person identification from resting-state EEG, and <a href="https://doi.org/10.1016/j.neuroimage.2022.119034" target="_blank">Gibson et al. (2022)</a> summarized strong subject-driven EEG variation. For that reason, this landing page now treats <strong>subject / session fingerprint</strong> as an independent shortcut. Results that let windows from the same raw recording cross train/test, or that can be reproduced from subject / session metadata alone, are not read here as target-specific biomarkers or neural readouts. Start with the <a href="verification.html#specificity-shortcut-card">Verification: Specificity &amp; Shortcut Card</a> and <a href="tech_roadmap.html#qa-r6">Roadmap R6: personalization</a>.
 </p>
 </div>
 
 <table class="data-table">
 <thead>
 <tr>
-<th>こんな人に向く入口</th>
-<th>最初の1ページ</th>
-<th>次に進むページ</th>
+<th>Best Entry Point For</th>
+<th>First Page</th>
+<th>Next Page</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>全体像だけ先に知りたい</strong></td>
+<td><strong>I want only the big picture first</strong></td>
 <td><a href="verification.html">Verification</a></td>
-<td><a href="tech_roadmap.html">Roadmap</a> で、何を解けば前進かを見ます。</td>
+<td>Then go to <a href="tech_roadmap.html">Roadmap</a> to see which problems count as progress.</td>
 </tr>
 <tr>
-<td><strong>まず短く入門したい</strong></td>
+<td><strong>I want a short primer first</strong></td>
 <td><a href="wbe_101.html">WBE 101</a></td>
-<td><a href="eeg_101.html">EEG 101</a> で、現実に何が測れるかを押さえます。</td>
+<td>Then use <a href="eeg_101.html">EEG 101</a> to anchor what can actually be measured today.</td>
 </tr>
 <tr>
-<td><strong>用語や理論名で止まりやすい</strong></td>
+<td><strong>I get stuck on terminology or theory names</strong></td>
 <td><a href="glossary.html">Glossary</a></td>
-<td><a href="faq.html">FAQ</a> で、よくある誤解を先に潰します。</td>
+<td>Then use <a href="faq.html">FAQ</a> to clear the most common misunderstandings first.</td>
 </tr>
 <tr>
-<td><strong>本当に初歩から順番に学びたい</strong></td>
+<td><strong>I want to learn from the absolute basics in order</strong></td>
 <td><a href="wiki/">Wiki</a></td>
-<td><a href="wbe_101.html">WBE 101</a> や <a href="eeg_101.html">EEG 101</a> へ戻ると、公開ページの要点が読みやすくなります。</td>
+<td>Then return to <a href="wbe_101.html">WBE 101</a> and <a href="eeg_101.html">EEG 101</a> once the public pages become easier to read.</td>
 </tr>
 <tr>
-<td><strong>公開データで手を動かしたい</strong></td>
+<td><strong>I want to work hands-on with public data</strong></td>
 <td><a href="datasets.html">Datasets</a></td>
-<td><a href="datasets.html#l0-practice">Datasets内のL0実践節</a> で、最小ループへそのまま進みます。</td>
+<td>Then go straight to the <a href="datasets.html#l0-practice">L0 practice section inside Datasets</a>.</td>
 </tr>
 <tr>
-<td><strong>Issue対応や参加方法を見たい</strong></td>
+<td><strong>I want to contribute or follow issue work</strong></td>
 <td><a href="issue.html">Issue Guide</a></td>
-<td><a href="content_hub.html">Content Hub</a> で、どこへ追記するかを確認します。</td>
+<td>Then use <a href="content_hub.html">Content Hub</a> to decide where additions belong.</td>
 </tr>
 </tbody>
 </table>
@@ -226,78 +226,78 @@ Verification、Datasets、Datasets内のL0実践節、Verification内のケー�
 <table class="data-table">
 <thead>
 <tr>
-<th>このサイトが今やること</th>
-<th>この入口ページではまだ主張しないこと</th>
+<th>What This Site Is Doing Now</th>
+<th>What This Landing Page Does Not Yet Claim</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>L0〜L2 を中心に、再現可能な解析、比較可能な評価、介入を含む検証条件を整えることです。</td>
-<td>L4〜L5 に当たる本人性の最終判定や社会実装の成立を、入口だけで断言することはしません。</td>
+<td>It focuses on L0-L2: reproducible analysis, comparable evaluation, and verification conditions that include intervention where possible.</td>
+<td>It does not claim that the final questions of L4-L5 identity or successful social deployment are already settled.</td>
 </tr>
 <tr>
-<td>データ、コード、ログ、評価ルールをそろえ、他の人が追える形にすることです。</td>
-<td>「雰囲気として人っぽい」「会話が自然」といった印象だけで、WBE成立とみなすことはしません。</td>
+<td>It aims to align data, code, logs, and evaluation rules so other people can follow the same path.</td>
+<td>It does not treat "it feels human" or "the conversation sounds natural" as sufficient evidence that WBE has succeeded.</td>
 </tr>
 </tbody>
 </table>
 
 <section class="section" id="start">
-<h2 class="section-title">読む順番（迷ったらこれ）</h2>
+<h2 class="section-title">Reading Order</h2>
 <div class="stage-list">
 <div class="stage-item">
 <div class="stage-number">01</div>
 <div class="stage-body">
-<h4>検証基盤（Verification）</h4>
-<p>このサイトが「何を作るのか」を1ページで把握できます（勝利条件・標準・ベンチ・登録）。</p>
+<h4>Verification</h4>
+<p>A one-page overview of what this site is trying to build: success criteria, standards, benchmarks, and registries.</p>
 <a href="verification.html" class="btn-action">Open Verification</a>
 </div>
 </div>
 <div class="stage-item">
 <div class="stage-number">02</div>
 <div class="stage-body">
-<h4>技術ロードマップ（Roadmap）</h4>
-<p>WBEを「計測→再構成→実装→検証」の問いの木に分解して、何を解けば前進かを整理します。</p>
+<h4>Roadmap</h4>
+<p>Breaks WBE into a question tree from measurement to reconstruction, implementation, and verification.</p>
 <a href="tech_roadmap.html" class="btn-action">Open Roadmap</a>
 </div>
 </div>
 <div class="stage-item">
 <div class="stage-number">03</div>
 <div class="stage-body">
-<h4>研究ノート（Perspective）</h4>
-<p>理論・技術・批判点を含めて、現状と論点をまとめた長文ノートです。</p>
+<h4>Perspective</h4>
+<p>A long-form research note that tracks the current landscape, including theories, technical routes, and objections.</p>
 <a href="perspective.html" class="btn-action">Open Perspective</a>
 </div>
 </div>
 <div class="stage-item">
 <div class="stage-number">04</div>
 <div class="stage-body">
-<h4>理論フレーム（Framework）</h4>
-<p>「静的コピーではなく動的プロセスとしての意識」という立場から、設計要件へ落とすためのノートです。</p>
+<h4>Framework</h4>
+<p>A note for turning the view of consciousness as a dynamic process, rather than a static copy, into design requirements.</p>
 <a href="perspective.html#design-principles" class="btn-action">Open Framework In Perspective</a>
 </div>
 </div>
 <div class="stage-item">
 <div class="stage-number">05</div>
 <div class="stage-body">
-<h4>論文集（Papers）</h4>
-<p>過去10年のMind Uploading関連論文を収集・整理したアーカイブです。</p>
+<h4>Papers</h4>
+<p>An archive of mind-uploading-related papers collected and organized across the past decade.</p>
 <a href="mind_uploading_papers.html" class="btn-action">Open Papers</a>
 </div>
 </div>
 <div class="stage-item">
 <div class="stage-number">06</div>
 <div class="stage-body">
-<h4>技術提案統合（All Issues）</h4>
-<p>Issue #46/#47/#48/#56/#58/#61/#62 の提案・対応状況・根拠節を1ページ本文に統合しています。</p>
+<h4>Integrated Technical Proposals</h4>
+<p>Collects proposals, response status, and evidence sections from Issue #46/#47/#48/#56/#58/#61/#62 into a single page flow.</p>
 <a href="issue.html#proposal-integration" class="btn-action">Open Integrated Proposals</a>
 </div>
 </div>
 <div class="stage-item">
 <div class="stage-number">07</div>
 <div class="stage-body">
-<h4>外部依存・協業候補</h4>
-<p>検証基盤に接続可能な研究機関・プロジェクト・企業・助成制度を優先度付きで整理。</p>
+<h4>External Dependencies and Collaboration</h4>
+<p>Prioritized notes on research institutions, projects, companies, and funding programs that could connect to this verification commons.</p>
 <a href="issue.html#external-collaboration" class="btn-action">Open External Collaboration Plan</a>
 </div>
 </div>
@@ -305,46 +305,46 @@ Verification、Datasets、Datasets内のL0実践節、Verification内のケー�
 </section>
 
 <section class="section" id="beginner">
-<h2 class="section-title">はじめての人向け（15分コース）</h2>
-<p>いきなり長文（Perspective/Roadmap）に入ると大変なので、まずは“入門ページ”を用意しました。</p>
+<h2 class="section-title">15-Minute Beginner Route</h2>
+<p>Perspective and Roadmap are both long. If that is too much at first, start with the primer pages below.</p>
 <div class="stage-list">
 <div class="stage-item">
 <div class="stage-number">A</div>
 <div class="stage-body">
-<h4>WBE入門</h4>
-<p>マインドアップロードを「測れる問題」にするための考え方（勝利条件・反証条件）を短く整理。</p>
+<h4>WBE 101</h4>
+<p>A short introduction to treating mind uploading as a measurable problem with success and failure conditions.</p>
 <a href="wbe_101.html" class="btn-action">Open WBE 101</a>
 </div>
 </div>
 <div class="stage-item">
 <div class="stage-number">B</div>
 <div class="stage-body">
-<h4>EEG入門</h4>
-<p>EEGで何ができて何ができないか、解析の流れ、Mind-Uploadでの位置づけ。</p>
+<h4>EEG 101</h4>
+<p>What EEG can and cannot do, how the analysis flow works, and where it sits inside Mind-Upload.</p>
 <a href="eeg_101.html" class="btn-action">Open EEG 101</a>
 </div>
 </div>
 <div class="stage-item">
 <div class="stage-number">C</div>
 <div class="stage-body">
-<h4>用語集</h4>
-<p>頻出用語の“すり替え”を防ぐための最短辞書。</p>
+<h4>Glossary</h4>
+<p>A compact dictionary for preventing common term-swaps and category errors.</p>
 <a href="glossary.html" class="btn-action">Open Glossary</a>
 </div>
 </div>
 <div class="stage-item">
 <div class="stage-number">D</div>
 <div class="stage-body">
-<h4>データ&ベンチ</h4>
-<p>まず何で検証するか（公開データ、置き場、チェックリスト）を実務として整理。</p>
+<h4>Datasets and Benchmarks</h4>
+<p>A practical guide to what to validate on first: public datasets, repositories, and checklists.</p>
 <a href="datasets.html" class="btn-action">Open Datasets</a>
 </div>
 </div>
 <div class="stage-item">
 <div class="stage-number">E</div>
 <div class="stage-body">
-<h4>Wiki（基礎学習）</h4>
-<p>本当にゼロから学ぶ人向けに、用語、主張の読み方、EEGの基礎、検証基盤の考え方を順番に説明します。</p>
+<h4>Wiki</h4>
+<p>For readers starting from zero: a guided sequence through terminology, claim reading, EEG basics, and the logic of the verification-commons pages.</p>
 <a href="wiki/" class="btn-action">Open Wiki</a>
 </div>
 </div>
@@ -352,42 +352,42 @@ Verification、Datasets、Datasets内のL0実践節、Verification内のケー�
 </section>
 
 <div class="cta-box">
-<h4>L0実践（Datasets内）</h4>
-<p>「再現可能な解析（L0）」を最短で作る手順。</p>
-<a href="datasets.html#l0-practice">L0実践を見る →</a>
+<h4>L0 Practice</h4>
+<p>The shortest route to a reproducible analysis package at L0.</p>
+<a href="datasets.html#l0-practice">Open L0 Practice -></a>
 </div>
 
 <section class="section" id="cases">
-<h2 class="section-title">歴史のケースワーク（Verification内）</h2>
+<h2 class="section-title">Historical Casework</h2>
 <p>
-PDB、BIDS+OpenNeuro、PhysioNet、ImageNet、MLPerf、OSFで築かれた検証手法を整理し、Mind-Uploadに転用するための参照ページです。過去の成功例を型として提示し、必要な要素を即座に確認できます。
+This section distills verification patterns from PDB, BIDS + OpenNeuro, PhysioNet, ImageNet, MLPerf, and OSF, then treats them as reusable templates for Mind-Upload. Its purpose is to make the required components easy to compare against known success cases.
 </p>
 <div class="cta-box">
-<h4>Verification内ケースワーク</h4>
-<p>標準化・ベンチマーク・事前登録が、どう“前進を測れる状態”を作ったか。</p>
-<a href="verification.html#casework">ケースワーク集を見る →</a>
+<h4>Casework Inside Verification</h4>
+<p>How standardization, benchmarking, and preregistration created conditions where progress could actually be measured.</p>
+<a href="verification.html#casework">Open Casework -></a>
 </div>
 </section>
 
 <section class="section" id="contribute">
-<h2 class="section-title">参加（今できること）</h2>
+<h2 class="section-title">Contribute</h2>
 <div class="key-points">
 <h4>Ways To Help</h4>
 <ul>
-<li><strong>提案：</strong>「達成条件」と「反証条件」が書けるIssueは特に価値が高い</li>
-<li><strong>レビュー：</strong>既存ページの“すり替え”や“定義の曖昧さ”を指摘する</li>
-<li><strong>実装：</strong>まずL0〜L2（再現可能な解析・ベースライン・評価スイート）を積み上げる</li>
+<li><strong>Proposals:</strong> issues that clearly state success conditions and falsification conditions are especially valuable.</li>
+<li><strong>Review:</strong> point out category swaps or ambiguous definitions on existing pages.</li>
+<li><strong>Implementation:</strong> build up L0-L2 first: reproducible analysis, baselines, and evaluation suites.</li>
 </ul>
 </div>
 <div class="cta-box">
 <h4>Contribute</h4>
-<p>議論はGitHub Issueから始められます。</p>
-<a href="issue.html">貢献ガイドを見る →</a>
+<p>Discussion can start directly from GitHub Issues.</p>
+<a href="issue.html">Open The Contribution Guide -></a>
 </div>
 <div class="cta-box">
-<h4>Issue対応状況</h4>
-<p>Technical Proposal 系 Issue の対応内容と根拠リンクを確認できます。</p>
-<a href="issue.html#technical-issue-tracker">Issueトラッカーを見る →</a>
+<h4>Issue Status</h4>
+<p>Track implementation status and evidence links for technical proposal issues.</p>
+<a href="issue.html#technical-issue-tracker">Open The Issue Tracker -></a>
 </div>
 </section>
 
@@ -398,36 +398,47 @@ PDB、BIDS+OpenNeuro、PhysioNet、ImageNet、MLPerf、OSFで築かれた検証�
 <div class="sidebar-box">
 <h4>Quick Links</h4>
 <ul>
-<li><a href="verification.html">検証基盤（Verification）→</a></li>
-<li><a href="research_harvest_50.html">未解決問題×文献地図（50ワーカー）→</a></li>
-<li><a href="wbe_101.html">WBE入門 →</a></li>
-<li><a href="eeg_101.html">EEG入門 →</a></li>
-<li><a href="datasets.html">データ&ベンチ →</a></li>
-<li><a href="glossary.html">用語集 →</a></li>
+<li><a href="verification.html">Verification -></a></li>
+<li><a href="research_harvest_50.html">Unsolved Questions x Literature Map -></a></li>
+<li><a href="wbe_101.html">WBE 101 -></a></li>
+<li><a href="eeg_101.html">EEG 101 -></a></li>
+<li><a href="datasets.html">Datasets and Benchmarks -></a></li>
+<li><a href="glossary.html">Glossary -></a></li>
 <li><a href="faq.html">FAQ →</a></li>
-<li><a href="datasets.html#l0-practice">L0実践（Datasets内）→</a></li>
-<li><a href="verification.html#casework">Verification内ケースワーク →</a></li>
-<li><a href="issue.html#proposal-integration">Issue内の提案統合 →</a></li>
-<li><a href="mind_uploading_papers.html">論文集（Papers）→</a></li>
-<li><a href="issue.html#technical-issue-tracker">Issue対応トラッカー →</a></li>
-<li><a href="content_hub.html">公開コンテンツ統合ハブ →</a></li>
+<li><a href="datasets.html#l0-practice">L0 Practice -></a></li>
+<li><a href="verification.html#casework">Verification Casework -></a></li>
+<li><a href="issue.html#proposal-integration">Integrated Proposals -></a></li>
+<li><a href="mind_uploading_papers.html">Paper Collection -></a></li>
+<li><a href="issue.html#technical-issue-tracker">Issue Tracker -></a></li>
+<li><a href="content_hub.html">Content Hub -></a></li>
 </ul>
 </div>
 
 <div class="sidebar-box">
 <h4>Content Governance</h4>
 <ul>
-<li><a href="content_hub.html">公開コンテンツ統合ハブ →</a></li>
+<li><a href="content_hub.html">Public Content Integration Hub -></a></li>
 <li><a href="https://github.com/yasufumi-nakata/mind-upload/blob/main/README.md" target="_blank">README.md ↗</a></li>
 <li><a href="https://github.com/yasufumi-nakata/mind-upload/tree/main/.agent" target="_blank">.agent/ ↗</a></li>
 <li><a href="https://github.com/yasufumi-nakata/mind-upload/tree/main/automation" target="_blank">automation/ ↗</a></li>
 </ul>
 </div>
 
+<div class="sidebar-box">
+<h4>External WBE Materials</h4>
+<ul>
+<li><a href="https://carboncopies.org/" target="_blank" rel="noopener">Carbon Copies Foundation ↗</a></li>
+<li><a href="https://carboncopies.org/Newsletter/December2025/" target="_blank" rel="noopener">Dec 2025 Newsletter ↗</a></li>
+<li><a href="https://carboncopies.org/Research/BrainGenix/Challenge/Overview/" target="_blank" rel="noopener">Brain Emulation Challenge ↗</a></li>
+<li><a href="https://carboncopies.org/Events/JournalClubs/MemoryDecoding/" target="_blank" rel="noopener">Memory Decoding Journal Club ↗</a></li>
+<li><a href="https://braingenix.org/" target="_blank" rel="noopener">BrainGenix ↗</a></li>
+</ul>
+</div>
+
 <div class="note-box">
 <strong>Rule</strong>
 <p>
-このサイトでは、強い主張ほど、先に“小さく反証できる形”に分解します。読み物としても使えますが、最終的には検証可能な成果物（データ・コード・評価）に接続することを目的とします。
+On this site, the stronger the claim, the more aggressively it is decomposed into smaller, falsifiable parts first. The pages are readable as essays, but their actual purpose is to connect every strong claim to verifiable artifacts: data, code, and evaluation.
 </p>
 </div>
 

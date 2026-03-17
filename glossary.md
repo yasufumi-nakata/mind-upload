@@ -1,66 +1,62 @@
 ---
 layout: default
-title: "用語集（Glossary）"
-description: "Mind-Uploadで頻出する用語を、人間が迷子にならない粒度でまとめます。厳密定義はRoadmapにリンクします。"
+title: "Glossary"
+description: "A practical glossary of the terms used most often in Mind-Upload, with short explanations and links back to the main pages."
 article_type: Reference
-subtitle: "まずは“言葉のすり替え”を止める"
+subtitle: "Start by keeping the words straight"
 author: Mind Uploading Research Project
-last_updated: "2026-03-16"
+last_updated: "2026-03-14"
 note: "Living document"
-audience: "用語で止まりたくない人、言葉のすり替えを防ぎたい人"
-reading_time: "必要な項目だけなら3〜10分"
-page_intro: "このページは、Mind-Upload でよく出る言葉を『まず日常語で理解し、そのあと必要なら厳密に戻る』ための用語集です。議論で迷子にならないように、難しい単語を測定や検証の話に結び付けて説明します。"
-accuracy_note: "ここに書く説明は入口用の短い定義です。厳密な使い方は、リンク先の本文や元論文で確認してください。"
+audience: "Readers who do not want to get stuck on terminology and anyone trying to avoid category mistakes"
+reading_time: "3 to 10 minutes for only the necessary items"
+page_intro: "This page is a glossary for the terms that appear most often in Mind-Upload. It starts with short everyday-language explanations, then points you back to the more rigorous pages when needed."
+accuracy_note: "The definitions here are deliberately short. For exact usage, return to the linked page sections or original papers."
 page_highlights:
-  - "用語を短く説明しつつ、どこで使う概念かも一緒に示します。"
-  - "『似ているが違う』語を分けることで、話のすり替えを防ぎます。特に observability / identifiability / direct validation を混ぜないことを重視します。"
-  - "detectable / localized / identified / validated / deployable は別レベルの主張であり、同じ成功ではありません。"
-  - "brain signal / language prior / Neural Contribution Card を分けることで、decode 系デモの過大解釈を防ぎます。"
-  - "分からない言葉が出たら、このページに戻れば最低限の足場を作れます。"
+  - "It gives short explanations of terms and points to where each concept matters."
+  - "It is especially careful about pairs that sound similar but should not be collapsed, such as observability / identifiability / direct validation."
+  - "If a term blocks your reading, this page is meant to get you unstuck quickly and send you back to the main text."
 known_points:
-  - "用語の混同を減らすだけで、議論の多くのすれ違いは防げます。"
-  - "特に decode / emulate、相関 / 因果、observability / identifiability、モデル適合 / direct validation、brain signal / language prior の区別は重要です。"
-  - "connectivity、calibration、abstention、recalibration burden も、2026-03 時点では独立に監査すべき語です。"
-  - "このページは短い定義の入口であり、本文への戻り先を作る役割を持ちます。"
+  - "Many misunderstandings can be avoided simply by reducing terminology confusion."
+  - "It is especially important to distinguish between decode/emulate, correlation/causation, observability/identifiability, model fit/direct validation, and brain signal/language prior."
+  - "This page serves as an entry point for short definitions and a way to return to the main text."
 unknown_points:
-  - "意識理論まわりの用語は、論文や立場で意味の置き方が少しずつ異なります。"
-  - "短い定義だけで、研究上の争点まで完全に片づくわけではありません。"
-  - "calibration / abstention / deployability の共通 pass/fail を site-wide にどこまで固定するかはまだ検討中です。"
+  - "Terms related to the theory of consciousness have slightly different meanings depending on the paper or position."
+  - "A short definition alone does not completely resolve the issues in research."
 wiki_links:
-  - label: "Wiki: WBEの基本"
+  - label: "Wiki: WBE basics"
     url: "/wiki/mind-upload-basics.html"
-    description: "用語が使われる全体像を先に見たいときの入口です。"
-  - label: "Wiki: 公開ページの読み分けガイド"
+    description: "The starting point if you want to see how the terms fit into the broader topic."
+  - label: "Wiki: Guide to the public pages"
     url: "/wiki/public-page-reading-guide.html"
-    description: "用語確認のあとに、どの公開ページへ戻るかを整理します。"
-  - label: "Wiki: 意識理論マップ"
+    description: "Helps you decide which public page to return to after checking a term."
+  - label: "Wiki: Consciousness theory map"
     url: "/wiki/consciousness-theory-map.html"
-    description: "IIT、GNWT、FEP、PCI の違いを表で整理した補助ページです。"
-  - label: "Wiki: EEGの基本"
+    description: "A supplementary page that organizes IIT, GNWT, FEP, and PCI in one table."
+  - label: "Wiki: EEG basics"
     url: "/wiki/eeg-basics.html"
-    description: "EEG 関連語を、測定の流れに沿って理解したい人向けです。"
-  - label: "Wiki: 計測からモデル化まで"
+    description: "For readers who want EEG-related terms explained along the measurement workflow."
+  - label: "Wiki: From measurement to modeling"
     url: "/wiki/measurement-and-modeling-terms.html"
-    description: "EEG、QC、BIDS、ESI、DCM、SCM を 1 本の流れで整理します。"
-  - label: "Wiki: 観測から推定へ"
+    description: "Organizes EEG, QC, BIDS, ESI, DCM, and SCM in one workflow."
+  - label: "Wiki: From observation to estimation"
     url: "/wiki/observation-to-estimation.html"
-    description: "逆問題、ESI、DCM、SCM、因果同値類をもう一段ていねいに整理します。"
-  - label: "Wiki: 不確実性・校正・棄権"
+    description: "Explains inverse problems, ESI, DCM, SCM, and causal equivalence classes more carefully."
+  - label: "Wiki: Uncertainty, calibration, and abstention"
     url: "/wiki/uncertainty-confidence-and-abstention.html"
-    description: "点推定と区間の違い、不確実性伝播、低信頼時の棄権を整理します。"
-  - label: "Wiki: マルチモーダル統合の基本"
+    description: "Explains point estimates, intervals, uncertainty propagation, and abstention under low confidence."
+  - label: "Wiki: Basics of multimodal integration"
     url: "/wiki/multimodal-integration-basics.html"
-    description: "EEG、MEG、fMRI、ECoG、MRI の役割差を初歩から整理します。"
-  - label: "Wiki: ベースライン・事前登録・モデルカード"
+    description: "Clarifies the different roles of EEG, MEG, fMRI, ECoG, and MRI from the beginning."
+  - label: "Wiki: Baselines, preregistration, and model cards"
     url: "/wiki/baselines-prereg-and-model-cards.html"
-    description: "研究運用の言葉の役割差を、初歩から整理します。"
-  - label: "Wiki: 熱力学的接地の基本"
+    description: "Explains the different roles of common research-operations terms."
+  - label: "Wiki: Thermodynamic grounding basics"
     url: "/wiki/thermodynamic-grounding-basics.html"
-    description: "Landauer、散逸、NESS、EPR の入口を初歩から整理します。"
+    description: "Introduces Landauer, dissipation, NESS, and EPR from the beginning."
 recommended_pages:
-  - label: "WBE入門"
+  - label: "Introduction to WBE"
     url: "/wbe_101.html"
-  - label: "EEG入門"
+  - label: "Introduction to EEG"
     url: "/eeg_101.html"
   - label: "FAQ"
     url: "/faq.html"
@@ -73,545 +69,438 @@ recommended_pages:
 <div class="abstract-box">
 <h2>How To Use</h2>
 <p>
-この用語集は、用語の意味をすぐ確認するためのリファレンスです。まず日常語の説明で把握し、必要なときだけ厳密な定義に進む構成とし、議論を測定と扱い方に結び付けます。WBEの議論は言葉のズレで混乱しやすいため、ここでは<strong>実際にどう測って扱うか</strong>を重視します。
+This glossary is a quick reference for the meaning of terms. It starts with everyday-language explanations, moves to stricter definitions only when needed, and ties the discussion back to measurement, modeling, and verification.
 </p>
 </div>
 
 <div class="note-box">
-<strong>このページの見方</strong>
+<strong>How To Use This Page</strong>
 <p>
-一語一句を暗記する必要はありません。本文で止まった単語をここで確認し、「ざっくり意味が分かったら元のページに戻る」という使い方で十分です。
+There is no need to memorize every word. Check only the term that blocked you, get a rough sense of its meaning here, and then return to the original page.
 </p>
 </div>
 <div class="note-box">
-<strong>どの本文へ戻るか迷ったとき</strong>
+<strong>When You Are Unsure Which Page To Return To</strong>
 <p>
-用語だけ分かっても、次に Verification、Roadmap、WBE 101、EEG 101 のどこへ戻るかで迷うことがあります。公開ページどうしの役割差を先に整理したい場合は <a href="wiki/public-page-reading-guide.html">Wiki: 公開ページの読み分けガイド</a> をご覧ください。
+Even after checking the terminology, you may still be unsure whether to return next to Verification, Roadmap, WBE 101, or EEG 101. If you want the role differences among the public pages first, see <a href="wiki/public-page-reading-guide.html">Wiki: Guide to the public pages</a>.
 </p>
 </div>
 <div class="note-box">
-<strong>理論系か実務系かで戻り先を絞りたいとき</strong>
+<strong>When You Want To Split Theory Pages From Practical Pages</strong>
 <p>
-WBE 101、Perspective、Perspective内の理論フレーム節、Roadmap のような理論系ページへ戻りたい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a>、Verification、Datasets、Datasets内のL0実践節のような実務系ページへ戻りたい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
+If you want to return to theory-side pages such as WBE 101, Perspective, the framework section in Perspective, or Roadmap, use <a href="wiki/theory-pages-reading-guide.html">Wiki: Guide to the theory pages</a>. If you want to return instead to practical pages such as Verification, Datasets, or the L0 practice section in Datasets, use <a href="wiki/practical-pages-reading-guide.html">Wiki: Guide to the practical pages</a>.
 </p>
 </div>
 
 <section class="section" id="where-to-look">
-<h2 class="section-title">迷った言葉の種類ごとの引き方</h2>
+<h2 class="section-title">How to find lost words by type</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>こういう言葉で止まったら</th>
-<th>まず見る節</th>
-<th>ここで分かること</th>
+<th>If you stop at these words</th>
+<th>First section to look at</th>
+<th>What you'll learn here</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Mind-Upload、WBE、クレーム階段のような「このサイトの土台の言葉」</td>
-<td><a href="#core">コア概念</a></td>
-<td>このサイトが何を目標にし、どの強さの主張を区別しているかが分かります。</td>
+<td>"Foundation words of this site" such as Mind-Upload, WBE, and the claim ladder</td>
+<td><a href="#core">Core concepts</a></td>
+<td>You can see the site's goals and how it grades claim strength.</td>
 </tr>
 <tr>
-<td>decode、emulate、counterfactual のような「できることの違い」を示す言葉</td>
-<td><a href="#decode-emulate">Decode と Emulate</a></td>
-<td>観測の翻訳と、内部の仕組みを動かすことが別だと分かります。</td>
+<td>Words that indicate "differences in what can be done," such as decode, emulate, and counterfactual</td>
+<td><a href="#decode-emulate">Decode and Emulate</a></td>
+<td>You can see that translating observations and running internal dynamics are different claims.</td>
 </tr>
 <tr>
-<td>IIT、GNWT、FEP、PCI のような「意識理論や意識指標」の言葉</td>
-<td><a href="#consciousness-theories">意識理論</a></td>
-<td>どの理論や指標が、何を説明しようとしているかを短くつかめます。</td>
+<td>Words from consciousness theory or consciousness metrics, such as IIT, GNWT, FEP, and PCI</td>
+<td><a href="#consciousness-theories">Theories of consciousness</a></td>
+<td>You can get a quick sense of what each theory or metric is trying to explain.</td>
 </tr>
 <tr>
-<td>EEG、MEG、fMRI、ECoG、QC のような「計測方法」の言葉</td>
-<td><a href="#measurement">計測</a></td>
-<td>何を測る手法か、どこが得意でどこが弱いかを確認できます。</td>
+<td>Measurement method terms such as EEG, MEG, fMRI, ECoG, QC</td>
+<td><a href="#measurement">Measurement</a></td>
+<td>You can check what each method measures and where it is strong or weak.</td>
 </tr>
 <tr>
-<td>逆問題、ESI、因果、同定可能性のような「推定やモデル化」の言葉</td>
-<td><a href="#modeling">モデル化</a></td>
-<td>観測から中身を推定するときに、なぜ一意に決まらないことがあるのかを追えます。</td>
+<td>“Estimation and modeling” terms such as inverse problem, ESI, causality, and identifiability</td>
+<td><a href="#modeling">Modeling</a></td>
+<td>You can see why estimation from observations may fail to determine a unique answer.</td>
 </tr>
 <tr>
-<td>BIDS、ベンチマーク、再現性、事前登録のような「研究運用」の言葉</td>
-<td><a href="#open-science">標準化・再現性</a></td>
-<td>比較可能な前進を作るために、なぜ運用ルールが必要かが分かります。</td>
-</tr>
-<tr>
-<td>confidence、calibration、coverage、abstention、recalibration burden のような「運用上限」を決める言葉</td>
-<td><a href="#uncertainty-deployment">不確実性と運用</a></td>
-<td>高い score がそのまま安全な deployability を意味しない理由が分かります。</td>
+<td>"Research operations" terms such as BIDS, benchmark, reproducibility, and preregistration</td>
+<td><a href="#open-science">Standardization/Reproducibility</a></td>
+<td>You can see why operating rules are needed to create comparable progress.</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <div class="note-box">
-<strong>読み方のコツ</strong>
+<strong>Reading tips</strong>
 <p>
-似た言葉が並んだときは、まず「何を観測している言葉か」「その言葉だけで強い主張をしていないか」「条件を変えたときの反応まで含むか」を見ると混同しにくくなります。特に、相関の説明をそのまま因果や本人性の説明へ広げないことが重要です。
+When similar words appear next to each other, start by asking what each term directly observes, whether it supports a strong claim by itself, and whether it includes changed-condition or intervention responses. In particular, do not stretch a correlation claim directly into a claim about causation or identity.
 </p>
 </div>
 
 <div class="note-box">
-<strong>理論名が並んで苦しくなったとき</strong>
+<strong>When the theory names are lined up in a row and become difficult</strong>
 <p>
-IIT、GNWT、FEP、PCI の違いは、短い定義だけでは頭に入りにくいことがあります。その場合は <a href="wiki/consciousness-theory-map.html">Wiki: 意識理論マップ</a> を先に見て、何を説明したい理論なのかを表で掴んでから戻ると読みやすくなります。
+The differences among IIT, GNWT, FEP, and PCI can be hard to keep straight from short definitions alone. In that case, start with <a href="wiki/consciousness-theory-map.html">Wiki: Consciousness theory map</a>, get the table-level overview first, and then return here.
 </p>
 </div>
 
 <div class="note-box">
-<strong>計測語とモデル語が混ざって苦しくなったとき</strong>
+<strong>When measurement words and model words are mixed and become difficult</strong>
 <p>
-EEG、QC、BIDS、逆問題、ESI、DCM、SCM は、全部同じ種類の言葉ではありません。観測、整理、推定、検証のどの段階で使う語かを流れで見たい場合は <a href="wiki/measurement-and-modeling-terms.html">Wiki: 計測からモデル化までの用語ガイド</a> を先に見ると戻りやすくなります。
+EEG, QC, BIDS, inverse problems, ESI, DCM, and SCM are not synonyms. If you want to see which terms belong to observation, organization, estimation, and verification, start with <a href="wiki/measurement-and-modeling-terms.html">Wiki: Guide to terms from measurement to modeling</a>.
 </p>
 </div>
 
 <div class="note-box">
-<strong>逆問題や因果モデルで止まったとき</strong>
+<strong>When stuck at an inverse problem or causal model</strong>
 <p>
-「頭皮で見えた信号」と「脳内で本当に起きていたこと」と「因果が分かったこと」は別です。この差を順問題、逆問題、ESI、DCM、SCM の順に整理したい場合は <a href="wiki/observation-to-estimation.html">Wiki: 観測から推定へ</a> を先にご覧ください。
+There is a difference between "signals visible on the scalp," "what was actually happening in the brain," and "what counts as a causal explanation." If you want to organize that distinction through the forward problem, inverse problem, ESI, DCM, and SCM, start with <a href="wiki/observation-to-estimation.html">Wiki: From observation to estimation</a>.
 </p>
 </div>
 
 <div class="note-box">
-<strong>数字の幅や低信頼時の扱いで止まったとき</strong>
+<strong>When you get stuck due to the range of numbers or how to handle low reliability</strong>
 <p>
-信用区間、信頼区間、不確実性の伝播、棄権は、全部「1つの数字だけで断言しない」ための仕組みです。ここを初歩から整理したい場合は <a href="wiki/uncertainty-confidence-and-abstention.html">Wiki: 不確実性・校正・棄権</a> を先にご覧ください。
+Confidence intervals, credible intervals, uncertainty propagation, and abstention are all ways to avoid overreading a single number. If you want that organized from the beginning, see <a href="wiki/uncertainty-confidence-and-abstention.html">Wiki: Uncertainty, calibration, and abstention</a> first.
 </p>
 </div>
 
 <div class="note-box">
-<strong>計測装置の役割差で止まったとき</strong>
+<strong>When it stops due to the difference in the role of the measuring device</strong>
 <p>
-EEG、MEG、fMRI、ECoG、MRI は全部「脳を測るもの」ですが、得意不得意が違います。どれを何のために組み合わせるのかを初歩から整理したい場合は <a href="wiki/multimodal-integration-basics.html">Wiki: マルチモーダル統合の基本</a> を先にご覧ください。
+EEG, MEG, fMRI, ECoG, and MRI all measure the brain, but they do not provide the same kind of information. If you want to see what each modality contributes and why they are combined, start with <a href="wiki/multimodal-integration-basics.html">Wiki: Basics of multimodal integration</a>.
 </p>
 </div>
 
 <div class="note-box">
-<strong>研究運用の言葉で止まったとき</strong>
+<strong>When You Get Stuck On Research-Operations Terms</strong>
 <p>
-ベースライン、ベンチマーク、事前登録、モデルカード、失敗例は、全部「再現性に大事なもの」ですが役割が違います。その差を初歩から整理したい場合は <a href="wiki/baselines-prereg-and-model-cards.html">Wiki: ベースライン・事前登録・モデルカード</a> を先にご覧ください。
-</p>
-</div>
-
-<div class="note-box">
-<strong>2026-03 用語監査の要点</strong>
-<p>
-今回の更新では、最近の公開ページで強化した境界を、この用語集にも下ろしました。特に <strong>detectability / localization / identifiability / direct validation / deployability</strong> を 1 つの「性能」にまとめないこと、そして <strong>confidence / calibration / abstention / recalibration burden</strong> を別指標として読むことを、用語レベルでも固定いたします。
+Baselines, benchmarks, preregistration, model cards, and failure examples all matter for reproducibility, but they do different jobs. If you want to sort out those differences from the beginning, see <a href="wiki/baselines-prereg-and-model-cards.html">Wiki: Baselines, preregistration, and model cards</a> first.
 </p>
 </div>
 
 <section class="section" id="core">
-<h2 class="section-title">コア概念</h2>
+<h2 class="section-title">Core concepts</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>用語</th>
-<th>Mind-Uploadでの意味（ざっくり）</th>
+<th>Term</th>
+<th>Meaning of Mind-Upload (roughly)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>マインドアップロード</strong></td>
-<td>「意識や記憶をデジタルに移す」一般呼称。Mind-Uploadでは主張レベルをクレーム階段で分けて扱う。</td>
+<td><strong>Mind Upload</strong></td>
+<td>A broad term for transferring mind-relevant function, memory, or consciousness-related claims into a digital substrate. In Mind-Upload, such claims are separated by the claim ladder.</td>
 </tr>
 <tr>
 <td><strong>WBE（Whole Brain Emulation）</strong></td>
-<td>脳の機能を別基盤で再現すること。何を再現したら“成功”かは定義依存なので、先に評価を固定する。</td>
+<td>Reproducing brain-relevant function on a different substrate. What counts as "success" depends on the definition, so the evaluation criteria must be fixed first.</td>
 </tr>
 <tr>
-<td><strong>クレーム階段（L0〜L5）</strong></td>
-<td>成果の言い方を揃える枠組み。L1（デコーディング）をL4（本人性）と混同しないためのガードレール。</td>
+<td><strong>Claim stairs (L0-L5)</strong></td>
+<td>A framework for aligning claim wording with actual achievement. It prevents L1 decoding claims from being confused with L4 identity claims.</td>
 </tr>
 <tr>
-<td><strong>検証基盤（Verification Commons）</strong></td>
-<td>標準・データ・評価・登録・監査をまとめて提供し、「比較可能な前進」を積み上げる公共財。</td>
+<td><strong>Verification Commons</strong></td>
+<td>A public-good layer of standards, data, evaluation, registration, and auditing that allows "comparable progress" to accumulate.</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="decode-emulate">
-<h2 class="section-title">Decode と Emulate</h2>
+<h2 class="section-title">Decode and Emulate</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>用語</th>
-<th>違い</th>
+<th>Term</th>
+<th>Difference</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>デコーディング（Decoding）</strong></td>
-<td>観測された信号から、状態・刺激・文章などを予測する（相関ベースになりやすい）。</td>
+<td><strong>Decoding</strong></td>
+<td>Predict states, stimuli, sentences, etc. from observed signals (easily based on correlation). </td>
 </tr>
 <tr>
-<td><strong>エミュレーション（Emulation）</strong></td>
-<td>内部状態が時間発展し、介入に反応し、将来の出力を生成する（因果・生成の要求が強い）。</td>
+<td><strong>Emulation</strong></td>
+<td>Internal states evolve over time, respond to interventions, and generate future outputs (strong causal and generative demands). </td>
 </tr>
 <tr>
-<td><strong>反事実（Counterfactual）</strong></td>
-<td>「もし条件Xを変えたら？」という分岐に対する予測。decode→emulateのギャップを埋める検証の中心。</td>
+<td><strong>Counterfactual</strong></td>
+<td>Prediction for the branch "What if I change condition X?" The center of verification that fills the gap between decode and emulate. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="easy-confusions">
-<h2 class="section-title">よく混同する言葉</h2>
+<h2 class="section-title">Commonly confused words</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>混同しやすい組</th>
-<th>違いを一言で言うと</th>
+<th>Easy to confuse groups</th>
+<th>The difference in one word</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>マインドアップロード / WBE</strong></td>
-<td>マインドアップロードは広い一般呼称、WBE は脳機能を別基盤で再現する技術寄りの言い方です。</td>
+<td><strong>Mind Upload / WBE</strong></td>
+<td>Mind upload is a broad general term, and WBE is a technology-oriented way of reproducing brain functions on a different basis. </td>
 </tr>
 <tr>
-<td><strong>デコーディング / エミュレーション</strong></td>
-<td>デコーディングは「観測の翻訳」、エミュレーションは「中の仕組みごと動かすこと」です。</td>
+<td><strong>Decoding/Emulation</strong></td>
+<td>Decoding translates observations into outputs, while emulation requires internal dynamics that continue to evolve and respond to intervention.</td>
 </tr>
 <tr>
-<td><strong>相関 / 因果</strong></td>
-<td>相関は一緒に変わる関係、因果は片方を変えるともう片方も変わる関係です。</td>
+<td><strong>Correlation / Causation</strong></td>
+<td>Correlation is a relationship that changes together, and causation is a relationship that changes when one changes the other. </td>
 </tr>
 <tr>
-<td><strong>観測可能性 / 同定可能性</strong></td>
-<td>観測可能性は「見分けられるか」、同定可能性は「一意に決まるか」です。前者があっても後者は成立しません。</td>
+<td><strong>Observability/Identifiability</strong></td>
+<td>Observability asks whether states can be distinguished at all, while identifiability asks whether they can be uniquely determined. The first can hold without the second.</td>
 </tr>
 <tr>
-<td><strong>検出可能性 / 局在化</strong></td>
-<td>検出可能性は「何かが見えている」こと、局在化は「どこから来たかを絞る」ことです。前者だけで source claim にはなりません。</td>
+<td><strong>Model fitting/direct validation</strong></td>
+<td>Model fitting means matching observed data, and direct validation means checking against external ground truth. The evidence is stronger for the latter. </td>
 </tr>
 <tr>
-<td><strong>局在化 / 同定可能性</strong></td>
-<td>局在化は候補領域を推定すること、同定可能性は代替モデル族を除外して唯一性へ近づくことです。</td>
+<td><strong>Brain signals / language prior</strong></td>
+<td>Brain signals are measurement-derived information, and language prior is statistical clues supplemented by vocabulary, context, and LLM. Output fluency alone cannot separate the contributions. </td>
 </tr>
 <tr>
-<td><strong>同定可能性 / 直接妥当化</strong></td>
-<td>同定可能性は理論上どこまで絞れるか、直接妥当化は SEEG や intracranial stimulation などの外部 ground truth と照合したかです。</td>
-</tr>
-<tr>
-<td><strong>モデル適合 / 直接妥当化</strong></td>
-<td>モデル適合は観測データに合うこと、直接妥当化は外部の ground truth と照合することです。後者のほうが強い証拠です。</td>
-</tr>
-<tr>
-<td><strong>脳信号 / language prior</strong></td>
-<td>脳信号は計測由来の情報、language prior は語彙・文脈・LLM が補う統計的手掛かりです。出力の流暢さだけでは寄与を分けられません。</td>
-</tr>
-<tr>
-<td><strong>confidence / calibration</strong></td>
-<td>confidence はモデルの自己評価、calibration はその自己評価が経験的頻度と合っているかです。</td>
-</tr>
-<tr>
-<td><strong>calibration / deployability</strong></td>
-<td>校正が良いことは必要条件ですが、deployability には abstention、tail latency、drift、recalibration burden も要ります。</td>
-</tr>
-<tr>
-<td><strong>lagged connectivity / leakage control</strong></td>
-<td>wPLI や imaginary coherence は leakage を減らす候補ですが、reference 依存性や ghost interaction を自動では消しません。</td>
-</tr>
-<tr>
-<td><strong>ベンチマーク / リーダーボード</strong></td>
-<td>ベンチマークは比べるための課題と指標、リーダーボードはその結果を並べる運用画面です。</td>
+<td><strong>Benchmark/Leaderboard</strong></td>
+<td>Benchmarks are tasks and indicators for comparison, and leaderboards are operational screens that list the results. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="consciousness-theories">
-<h2 class="section-title">意識理論（Theories of Consciousness）</h2>
+<h2 class="section-title">Theories of Consciousness</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>用語</th>
-<th>Mind-Uploadでの意味</th>
+<th>Term</th>
+<th>Meaning in Mind-Upload</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>IIT（統合情報理論）</strong></td>
-<td>意識を「統合された情報量（Φ）」で測る理論。IIT 4.0（Albantakis et al., 2023）では公理系を刷新し、Φ構造（cause-effect structure）で意識を特定する。WBEでは因果構造の保存要件に直結する。</td>
+<td><strong>IIT (Integrated Information Theory)</strong></td>
+<td>A theory that measures consciousness by the amount of integrated information (Φ). IIT 4.0 (Albantakis et al., 2023) revamps the axiomatic system and specifies consciousness using a Φ structure (cause-effect structure). In WBE, this is directly linked to the preservation requirement of causal structure. </td>
 </tr>
 <tr>
-<td><strong>GNWT（グローバル神経ワークスペース理論）</strong></td>
-<td>情報が前頭-頭頂ネットワークで「イグニッション」し広域共有されることで意識が成立するとする理論。IITとの実験的対立はCogitate Consortium（2025）で検証された。</td>
+<td><strong>GNWT (Global Neural Workspace Theory)</strong></td>
+<td>The theory that consciousness is established when information is "ignited" in the frontal-parietal network and shared over a wide area. The experimental conflict with IIT was verified by Cogitate Consortium (2025). </td>
 </tr>
 <tr>
-<td><strong>FEP（自由エネルギー原理）</strong></td>
-<td>生物が環境との境界を維持するために、感覚入力の「驚き」を最小化するという包括的枠組み（Friston, 2010）。WBEでは実装原理として採用。</td>
+<td><strong>FEP (Free Energy Principle)</strong></td>
+<td>A comprehensive framework in which living things minimize the "surprise" of sensory input in order to maintain boundaries with the environment (Friston, 2010). WBE uses this as the implementation principle. </td>
 </tr>
 <tr>
-<td><strong>能動的推論（Active Inference）</strong></td>
-<td>FEPの行動側面。環境を能動的に変えて予測誤差を最小化する。エミュレータの自律性の基盤。</td>
+<td><strong>Active Inference</strong></td>
+<td>Behavioral aspects of FEP. Minimize prediction errors by actively changing the environment. Foundations of emulator autonomy. </td>
 </tr>
 <tr>
-<td><strong>PCI / PCI-ST（摂動複雑性指標）</strong></td>
-<td>TMS刺激に対するEEG応答の複雑性で意識レベルを定量する。理論に依存しない経験的指標としてWBEの検証基盤に位置づける（Casali et al., 2013）。</td>
+<td><strong>PCI/PCI-ST (Perturbation Complexity Index)</strong></td>
+<td>A metric that quantifies the complexity of the EEG response to TMS perturbation. In Mind-Upload it is treated as a theory-light empirical indicator, not as a final answer to consciousness.</td>
 </tr>
 <tr>
-<td><strong>マルコフブランケット（Markov Blanket）</strong></td>
-<td>システムと環境の統計的境界。FEPにおける「自己」の定義に使われるが、意識の境界への適用には批判もある（Bruineberg et al., 2022）。</td>
+<td><strong>Markov Blanket</strong></td>
+<td>Statistical boundaries between system and environment. Although it is used to define the “self” in FEP, its application to the boundaries of consciousness has been criticized (Bruineberg et al., 2022). </td>
 </tr>
 <tr>
 <td><strong>Unfolding Argument</strong></td>
-<td>任意のリカレントネットワークは機能的に等価なフィードフォワード網で置換でき、IITではΦ=0となるという批判（Doerig et al., 2019）。WBEでは因果構造保存の必要性を支持する論拠。</td>
+<td>The criticism is that any recurrent network can be replaced by a functionally equivalent feedforward network, and Φ=0 in IIT (Doerig et al., 2019). Arguments supporting the need to preserve causal structure in WBE. </td>
 </tr>
 <tr>
-<td><strong>HOT（高次理論）</strong></td>
-<td>意識は一次表象に対する高次の表象（「自分が知覚していることを知っている」）によって成立するとする理論群。</td>
+<td><strong>HOT (Higher Order Theory)</strong></td>
+<td>A group of theories that posit that consciousness is established by higher-order representations (``I know what I am perceiving'') relative to primary representations. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="measurement">
-<h2 class="section-title">計測（Measurement）</h2>
+<h2 class="section-title">Measurement</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>用語</th>
-<th>メモ</th>
+<th>Term</th>
+<th>Memo</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>EEG</strong></td>
-<td>頭皮上の電位差を高時間分解能で測る。空間分解能は弱いので不確実性の扱いが重要。</td>
+<td>Measures the potential difference on the scalp with high temporal resolution. Spatial resolution is weak, so handling uncertainty is important. </td>
 </tr>
 <tr>
 <td><strong>MEG</strong></td>
-<td>磁場を測る。EEGとは異なる感度分布で補完関係があるが、装置は高価。</td>
+<td>Measures magnetic fields. It complements EEG because the sensitivity profile is different, but the equipment is costly.</td>
 </tr>
 <tr>
 <td><strong>fMRI</strong></td>
-<td>血流（BOLD）を測る。空間分解能は良いが時間分解能は遅い。</td>
+<td>Measures blood-flow-related BOLD signals. Spatial resolution is relatively strong, but temporal resolution is slow.</td>
 </tr>
 <tr>
-<td><strong>ECoG / 侵襲計測</strong></td>
-<td>因果介入や高SNRの可能性がある一方、倫理・適用範囲の制約が大きい。</td>
+<td><strong>ECoG / Invasive measurement</strong></td>
+<td>While there is potential for causal intervention and high SNR, there are significant restrictions in ethics and scope of application. </td>
 </tr>
 <tr>
 <td><strong>QC（Quality Control）</strong></td>
-<td>インピーダンス、ノイズ、欠損、アーティファクトなどを定量化し、ログとして残すこと。</td>
-</tr>
-<tr>
-<td><strong>Observability Budget</strong></td>
-<td>選んだ計測スタックで、何が直接見えていて何が latent のまま残るかを先に固定する考え方です。</td>
-</tr>
-<tr>
-<td><strong>Claim Ceiling</strong></td>
-<td>その計測で無理なく言える主張の上限です。観測量が増えても、state-complete と自動では読みません。</td>
+<td>Quantifies impedance, noise, defects, artifacts, and related conditions, then records them in a log.</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="implementation">
-<h2 class="section-title">実装基盤（Implementation）</h2>
+<h2 class="section-title">Implementation</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>用語</th>
-<th>Mind-Uploadでの意味</th>
+<th>Term</th>
+<th>Meaning in Mind-Upload</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>ニューロモルフィック・ハードウェア</strong></td>
-<td>生物学的ニューロンの動態を電子回路で模倣する専用チップ（Intel Loihi 2, SpiNNaker 2等）。IITの因果構造要件への対応候補。</td>
+<td><strong>Neuromorphic hardware</strong></td>
+<td>Specialized chips (Intel Loihi 2, SpiNNaker 2, etc.) that imitate the dynamics of biological neurons using electronic circuits. A candidate for meeting IIT's causal structure requirements. </td>
 </tr>
 <tr>
 <td><strong>Slow Continuous Mind Uploading</strong></td>
-<td>一括コピーではなく、生体脳とデジタル基盤を段階的に統合する移行戦略（Clowes, 2021）。本人性保存の工学的アプローチ。</td>
+<td>A migration strategy that integrates the biological brain and digital infrastructure in stages, rather than a blanket copy (Clowes, 2021). An engineering approach to preserving identity. </td>
 </tr>
 <tr>
-<td><strong>コネクトーム（Connectome）</strong></td>
-<td>脳内の神経結合の完全地図。ショウジョウバエ全脳コネクトーム（FlyWire, Dorkenwald et al., 2024）が完成し、マウス脳が次の目標。</td>
+<td><strong>Connectome</strong></td>
+<td>Complete map of neural connections in the brain. The Drosophila whole brain connectome (FlyWire, Dorkenwald et al., 2024) has been completed, and the mouse brain is the next target. </td>
 </tr>
 <tr>
 <td><strong>NMM（Neural Mass Model）</strong></td>
-<td>大規模ニューロン群の平均活動を記述するモデル。DCMの基盤となり、E/Iバランスの推定に使用。</td>
+<td>A model that describes the average activity of a large neuronal population. It underlies DCM and is often used to estimate E/I balance.</td>
 </tr>
 <tr>
-<td><strong>E/Iバランス（興奮/抑制バランス）</strong></td>
-<td>神経回路の興奮性と抑制性の動的均衡。意識の質やレベルの変化に関与する。</td>
+<td><strong>E/I balance (excitation/inhibition balance)</strong></td>
+<td>Dynamic balance between excitability and inhibition in neural circuits. Involves changes in the quality and level of consciousness. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="modeling">
-<h2 class="section-title">モデル化（Modeling）</h2>
+<h2 class="section-title">Modeling</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>用語</th>
-<th>Mind-Uploadでの使いどころ</th>
+<th>Term</th>
+<th>How to use Mind-Upload</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>逆問題（Inverse Problem）</strong></td>
-<td>観測（頭皮EEG）から原因（脳内活動）を推定する問題。一般に解が一意に定まらない。</td>
+<td><strong>Inverse Problem</strong></td>
+<td>The problem of estimating causes such as brain activity from observations such as scalp EEG. In general, the solution is not unique.</td>
 </tr>
 <tr>
-<td><strong>観測可能性（Observability）</strong></td>
-<td>選んだ観測だけで latent state の違いを区別できるか。見えていることと、一意に分かることは別です。</td>
+<td><strong>Observability</strong></td>
+<td>Asks whether different latent states can be distinguished from the chosen observations. What is visible and what is uniquely knowable are different questions.</td>
 </tr>
 <tr>
-<td><strong>検出可能性（Detectability）</strong></td>
-<td>source や条件差の存在を「ある程度見つけられるか」です。deep activity が detectable でも state-complete reconstruction とは別です。</td>
-</tr>
-<tr>
-<td><strong>局在化（Localization）</strong></td>
-<td>推定 source を空間的にどこへ置くかです。fit が良いだけでは強い source claim にはなりません。</td>
-</tr>
-<tr>
-<td><strong>同定可能性（Identifiability）</strong></td>
-<td>異なる内部モデルや状態が、同じ観測を説明してしまわないか。予測精度が高くても唯一解とは限りません。</td>
+<td><strong>Identifiability</strong></td>
+<td>Asks whether different internal models or states could explain the same observation. High prediction accuracy does not guarantee a unique explanation.</td>
 </tr>
 <tr>
 <td><strong>ESI（EEG Source Imaging）</strong></td>
-<td>逆問題を解いて、脳内ソースを推定する。推定値だけでなく“不確実性”も一緒に扱うのが重要。</td>
+<td>Solves the inverse problem to estimate brain sources. The important point is to report not only the estimate itself but also its uncertainty.</td>
 </tr>
 <tr>
-<td><strong>Ghost Interaction</strong></td>
-<td>source reconstruction 後にも残りうる見かけの結合です。connectivity を localization の延長と読まないための警告語です。</td>
-</tr>
-<tr>
-<td><strong>直接妥当化（Direct Validation）</strong></td>
-<td>推定 source やモデル出力を、intracranial stimulation / SEEG / 外部 ground truth と照合すること。fit が良いだけでは代用できません。</td>
-</tr>
-<tr>
-<td><strong>Family Comparison</strong></td>
-<td>DCM などで候補モデル族を比較し、どの構造仮説が data に相対的に強いかを見る手続きです。単一モデルだけで断言しません。</td>
-</tr>
-<tr>
-<td><strong>Parameter Degeneracy</strong></td>
-<td>異なる内部パラメータ群が、ほぼ同じ出力を作れてしまうことです。出力一致だけで唯一の機序だと言えない理由になります。</td>
+<td><strong>Direct Validation</strong></td>
+<td>Compares an estimated source or model output against intracranial stimulation, SEEG, or other external ground truth. A good fit alone is not a substitute.</td>
 </tr>
 <tr>
 <td><strong>Language Prior</strong></td>
-<td>decoder が語彙・文脈・LLM から借りる統計的先験情報。文章を滑らかにできる一方、brain-derived information の寄与を見えにくくします。</td>
+<td>Statistical prior information that the decoder borrows from vocabulary, context, and LLM. While it can smooth out sentences, it also obscures the contribution of brain-derived information. </td>
 </tr>
 <tr>
-<td><strong>Neural Contribution Card</strong></td>
-<td>brain-to-text / speech decode で、task constraint、LM / prompt / candidate set、<code>no-brain</code> / <code>LM-only</code> / shuffle baseline、subject cooperation、online / offline、claim ceiling を固定し、流暢な出力をそのまま neural reconstruction と読まないための提出物です。</td>
+<td><strong>Calibration</strong></td>
+<td>For example, a prediction with 80% confidence is true about 80% of the time over the long term. This is the task of aligning the size and correctness of the scores. </td>
+</tr>
+<tr>
+<td><strong>Abstention / Reject Option</strong></td>
+<td>An operation that returns "I don't know" under low confidence, extrapolation, or outlier conditions. It trades coverage against risk to avoid overclaiming.</td>
 </tr>
 <tr>
 <td><strong>DCM</strong></td>
-<td>神経回路モデルを仮定し、結合を推定する枠組みの一種。介入設計と相性が良い。</td>
+<td>A framework that assumes a neural circuit model and estimates connections. It pairs naturally with intervention design.</td>
 </tr>
 <tr>
-<td><strong>SCM（構造的因果モデル）</strong></td>
-<td>因果関係を明示するモデル。反事実や介入予測を定義しやすい。</td>
+<td><strong>SCM (Structural Causal Model)</strong></td>
+<td>A model that clearly shows causal relationships. Easy to define counterfactuals and intervention predictions. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <div class="note-box">
-<strong>2026-03 の補足</strong>
+<strong>Supplementary information for 2026-03</strong>
 <p>
-non-invasive decoding や ESI は着実に前進していますが、成功した decoder や source estimate がそのまま内部状態の一意復元を意味するわけではありません。Seeber et al. (2019)、Mikulan et al. (2020)、Unnwongse et al. (2023)、Hao et al. (2025) を読むときは、<strong>detectability</strong>、<strong>localization</strong>、<strong>identifiability</strong>、<strong>direct validation</strong> を分けて見てください。さらに connectivity claim では Haufe et al. (2013) と Palva et al. (2018) が示した source mixing / ghost interaction を別監査に残します。
+Although non-invasive decoding and ESI are making steady progress, a successful decoder does not necessarily mean that the internal state can be uniquely restored. When reading Tang et al. (2023), d'Ascoli et al. (2025), Unnwongse et al. (2023), and Hao et al. (2025), look at task constraints, language prior, and direct validation separately.
 </p>
 </div>
-
-<section class="section" id="uncertainty-deployment">
-<h2 class="section-title">不確実性と運用（Uncertainty & Deployment）</h2>
-<table class="data-table">
-<thead>
-<tr>
-<th>用語</th>
-<th>意味</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>校正（Calibration）</strong></td>
-<td>たとえば confidence 80% の予測が、長期的に本当に約 80% 当たる状態です。score の大きさと正しさをそろえます。</td>
-</tr>
-<tr>
-<td><strong>Coverage</strong></td>
-<td>モデルが判定を返した割合です。棄権を増やすと risk は下げられますが、coverage は下がります。</td>
-</tr>
-<tr>
-<td><strong>棄権（Abstention / Reject Option）</strong></td>
-<td>低信頼・外挿・外れ値のときに「分からない」と返す運用です。過大主張を防ぐための技術的な安全弁です。</td>
-</tr>
-<tr>
-<td><strong>Tail Latency</strong></td>
-<td>P95 / P99 のような遅い側の応答時間です。closed loop では平均遅延だけでは安全性を読み切れません。</td>
-</tr>
-<tr>
-<td><strong>Recalibration Burden</strong></td>
-<td>decoder や BCI を使い続けるために、どれだけ再較正が必要かです。長期運用可能性の主要指標です。</td>
-</tr>
-</tbody>
-</table>
-<div class="note-box">
-<strong>運用で起きやすい誤読</strong>
-<p>
-高い accuracy や confidence は、すぐには deployability を意味しません。Segal et al. (2023) は false alarm rate を制御する calibration の必要性を示し、Wilson et al. (2025) は長期 iBCI で <strong>recalibration burden</strong> が臨床運用の主要障壁であることを示しました。したがって本サイトでは、<strong>confidence</strong>、<strong>calibration</strong>、<strong>abstention</strong>、<strong>tail latency</strong>、<strong>recalibration burden</strong> を別々に記録します。
-</p>
-</div>
-</section>
 
 <section class="section" id="open-science">
-<h2 class="section-title">標準化・再現性（Open Science）</h2>
+<h2 class="section-title">Standardization and reproducibility (Open Science)</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>用語</th>
-<th>意味</th>
+<th>Term</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>BIDS / EEG-BIDS</strong></td>
-<td>神経計測データの整理規約。共有と再現の“最初の壁”を下げる。</td>
+<td>Rules for organizing neural measurement data. Their role is to lower the barrier to sharing and reproduction.</td>
 </tr>
 <tr>
-<td><strong>ベンチマーク</strong></td>
-<td>タスク・データ・指標を固定して比較可能にする仕組み。</td>
+<td><strong>Benchmark</strong></td>
+<td>A mechanism for fixing tasks, data, and metrics so results can be compared.</td>
 </tr>
 <tr>
-<td><strong>ベースライン</strong></td>
-<td>比較の出発点。改善を主張するならベースラインとの差分が必要。</td>
+<td><strong>Baseline</strong></td>
+<td>Starting point for comparison. If you want to claim improvement, you need a difference from the baseline. </td>
 </tr>
 <tr>
-<td><strong>事前登録（Preregistration）</strong></td>
-<td>“やる前”に計画を固定し、探索と検証を区別する。報告バイアスを減らす。</td>
+<td><strong>Preregistration</strong></td>
+<td>Fixes the plan before running the work and separates exploration from verification. This helps reduce reporting bias.</td>
 </tr>
 <tr>
-<td><strong>モデルカード</strong></td>
-<td>スコアだけでなく、学習データ、計算資源、既知の弱点、失敗例を公開するフォーマット。</td>
+<td><strong>Model card</strong></td>
+<td>A format that publishes not only scores but also training data, compute requirements, known weaknesses, and failure examples.</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="references">
-<h2 class="section-title">参考文献（用語定義）</h2>
+<h2 class="section-title">References (term definitions)</h2>
 <ol>
 <li>Michel, C. M., &amp; Brunet, D. (2019). EEG source imaging review. <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">doi:10.3389/fneur.2019.00325</a></li>
 <li>Wipf, D., &amp; Nagarajan, S. (2009). Unified Bayesian framework for MEG/EEG source imaging. <a href="https://doi.org/10.1016/j.neuroimage.2008.02.059" target="_blank">doi:10.1016/j.neuroimage.2008.02.059</a></li>
 <li>Seeber, M., Cantonas, L.-M., Hoevels, M., et al. (2019). Subcortical electrophysiological activity is detectable with high-density EEG source imaging. <a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">doi:10.1038/s41467-019-08725-w</a></li>
-<li>Mikulan, E., Russo, S., Parmigiani, S., et al. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
 <li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Validating EEG source imaging using intracranial electrical stimulation in focal epilepsy. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
 <li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
-<li>Aydin, U., Vorwerk, J., Küpper, P., et al. (2019). Influence of head tissue conductivity uncertainties on EEG dipole reconstruction. <a href="https://doi.org/10.3389/fnins.2019.00531" target="_blank">doi:10.3389/fnins.2019.00531</a></li>
-<li>Haufe, S., Nikulin, V. V., Müller, K.-R., &amp; Nolte, G. (2013). A critical assessment of connectivity measures for EEG data: a simulation study. <a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">doi:10.1016/j.neuroimage.2012.09.036</a></li>
-<li>Palva, J. M., Wang, S. H., Palva, S., et al. (2018). Ghost interactions in MEG/EEG source space: A note of caution on inter-areal coupling measures. <a href="https://doi.org/10.1016/j.neuroimage.2018.02.032" target="_blank">doi:10.1016/j.neuroimage.2018.02.032</a></li>
-<li>Penny, W. D., Stephan, K. E., Mechelli, A., &amp; Friston, K. J. (2004). Comparing dynamic causal models. <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">doi:10.1016/j.neuroimage.2004.03.026</a></li>
-<li>Hauser, A., &amp; Bühlmann, P. (2012). Characterization and Greedy Learning of Interventional Markov Equivalence Classes of Directed Acyclic Graphs. <a href="https://jmlr.csail.mit.edu/papers/v13/hauser12a.html" target="_blank">JMLR 13:2409-2464</a></li>
-<li>Vink, J. J. T., Klooster, D. C. W., Ozdemir, R. A., et al. (2020). EEG Functional Connectivity is a Weak Predictor of Causal Brain Interactions. <a href="https://doi.org/10.1007/s10548-020-00757-6" target="_blank">doi:10.1007/s10548-020-00757-6</a></li>
 <li>Tang, J., LeBel, A., Jain, S., &amp; Huth, A. G. (2023). Semantic reconstruction of continuous language from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
 <li>d'Ascoli, S., Bel, C., Rapin, J., et al. (2025). Towards decoding individual words from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">doi:10.1038/s41467-025-65499-0</a></li>
 <li>Friston, K. J., Harrison, L., &amp; Penny, W. (2003). Dynamic causal modelling. <a href="https://doi.org/10.1016/S1053-8119(03)00202-7" target="_blank">doi:10.1016/S1053-8119(03)00202-7</a></li>
@@ -622,9 +511,6 @@ non-invasive decoding や ESI は着実に前進していますが、成功し�
 <li>Pernet, C. R., et al. (2020). Best practices in data analysis and sharing in neuroimaging using MEEG. <a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">doi:10.1038/s41593-020-00709-0</a></li>
 <li>Guo, C., Pleiss, G., Sun, Y., &amp; Weinberger, K. Q. (2017). On Calibration of Modern Neural Networks. <a href="https://proceedings.mlr.press/v70/guo17a.html" target="_blank">PMLR 70:1321-1330</a></li>
 <li>Geifman, Y., &amp; El-Yaniv, R. (2017). Selective Classification for Deep Neural Networks. <a href="https://papers.neurips.cc/paper/7073-selective-classification-for-deep-neural-networks" target="_blank">NeurIPS 2017</a></li>
-<li>Segal, G., Keidar, N., Lotan, R. M., et al. (2023). Utilizing risk-controlling prediction calibration to reduce false alarm rates in epileptic seizure prediction. <a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">doi:10.3389/fnins.2023.1184990</a></li>
-<li>Wilson, G. H., Stein, E. A., Kamdar, F., et al. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
-<li>Prinz, A. A., Bucher, D., &amp; Marder, E. (2004). Similar network activity from disparate circuit parameters. <a href="https://doi.org/10.1038/nn1352" target="_blank">doi:10.1038/nn1352</a></li>
 <li>Albantakis, L., et al. (2023). Integrated Information Theory (IIT) 4.0. <a href="https://doi.org/10.1371/journal.pcbi.1011465" target="_blank">doi:10.1371/journal.pcbi.1011465</a></li>
 <li>Friston, K. (2010). The free-energy principle. <a href="https://doi.org/10.1038/nrn2787" target="_blank">doi:10.1038/nrn2787</a></li>
 <li>Casali, A. G., et al. (2013). PCI. <a href="https://doi.org/10.1126/scitranslmed.3006294" target="_blank">doi:10.1126/scitranslmed.3006294</a></li>
@@ -640,17 +526,17 @@ non-invasive decoding や ESI は着実に前進していますが、成功し�
 <div class="sidebar-box">
 <h4>Related</h4>
 <ul>
-<li><a href="wbe_101.html">WBE入門 →</a></li>
-<li><a href="eeg_101.html">EEG入門 →</a></li>
-<li><a href="verification.html">検証基盤 →</a></li>
-<li><a href="tech_roadmap.html#definition">前進の定義 →</a></li>
+<li><a href="wbe_101.html">Introduction to WBE →</a></li>
+<li><a href="eeg_101.html">Introduction to EEG →</a></li>
+<li><a href="verification.html">Verification infrastructure →</a></li>
+<li><a href="tech_roadmap.html#definition">Definition of progress →</a></li>
 </ul>
 </div>
 
 <div class="note-box">
 <strong>Note</strong>
 <p>
-この用語集は「統一のための暫定」です。曖昧な語は、Roadmap側で“測れる定義”に固定していきます。
+This glossary is "provisional for unification". Ambiguous words will be fixed to “measurable definitions” on the Roadmap side.
 </p>
 </div>
 

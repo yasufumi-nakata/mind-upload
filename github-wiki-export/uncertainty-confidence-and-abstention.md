@@ -1,356 +1,358 @@
-# Wiki：不確実性・校正・棄権
+# Wiki: Uncertainty, Calibration, and Abstention
 
-> confidence はそのまま信頼度ではありません。校正と coverage を分けて見ます
+> Confidence is not the same thing as reliability. Calibration and coverage must be read separately.
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-16 / 位置づけ: Technical / natural science only
+- Updated: 2026-03-16 / Role: Technical / natural science only
 
-## このページの役割
-このページは、Mind-Upload で頻出する『不確実性』『信頼区間』『信用区間』『校正』『棄権』を、EEG source imaging、EEG分類、closed-loop BCI の一次文献に寄せて整理する wiki です。数字が 1 つ出たときにどこまで信じてよいかだけでなく、いつ出力を止めるべきかまで含めて扱います。
+## Role Of This Page
+This page organizes uncertainty, confidence intervals, calibration, and abstention in EEG source imaging, EEG classification, and closed-loop BCI using primary literature. It is not only about how much to trust a number when it appears, but also about when output should stop.
 
-## 正確さの前提
-ここでは統計学の完全な教科書説明より、技術・自然科学の監査項目を優先します。厳密な定義を省略する箇所はありますが、『confidence と calibration は別』『coverage を下げれば risk は下げられる』『online 系では再較正負荷も性能』という要点は曖昧にしません。
 
-## 公開ページへ戻る
-- [EEG入門](https://mind-upload.com/eeg_101.html)
-- [検証基盤](https://mind-upload.com/verification.html)
-- [技術ロードマップ](https://mind-upload.com/tech_roadmap.html)
+## Accuracy Notes
+This page prioritizes technical and natural-science audit items over textbook completeness in statistics. Some strict definitions are compressed, but the core points remain explicit: confidence and calibration are different, risk can be lowered by lowering coverage, and recalibration burden is itself a performance metric in online systems.
 
-## 関連 Wiki
-- [Wiki: 観測から推定へ](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - 逆問題や因果推定で、どこまで主張が止まるかへ戻れます。
-- [Wiki: ベースライン・事前登録・モデルカード](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - Calibration & Abstention Card を、他の提出物と並べて整理します。
-- [Wiki: state・trait・ドリフト](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - 日内変動、縦断変化、decoder drift を分けて読む補助ページです。
-- [Wiki: 反事実・介入・摂動](https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification) - 不確実性を、介入や held-out 条件までどう持ち込むかを補います。
-- [Wiki: 閉ループ・遅延・ジッタ・安全停止](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - online 系で棄権や停止をどう分けるかを補います。
 
-## いま分かっていること
-- 頭部幾何、導電率、subject shift、session drift、decoder drift は推定幅と実運用性能を大きく動かします。
-- fit / calibration / test の分離が曖昧だと、confidence や threshold の意味は崩れます。
-- accuracy が高くても calibration が悪いと、低信頼条件で過信した誤答を出しやすくなります。
-- online BCI では latency だけでなく、棄権率、dropout、recalibration burden、recovery time を別に残す必要があります。
+## Back To Public Pages
+- [EEG Basics](https://mind-upload.com/eeg_101.html)
+- [Verification](https://mind-upload.com/verification.html)
+- [Technology Roadmap](https://mind-upload.com/tech_roadmap.html)
 
-## まだ分かっていないこと
-- site-wide の最小提出物として Calibration & Abstention Card は固定しましたが、課題別の pass/fail 閾値はまだ詰め切れていません。
-- どの coverage / abstention 閾値を L2/L3 の共通 pass/fail にするかは、まだ詰め切れていません。
-- source imaging と online BCI をまたぐ統一的不確実性会計は、なお整備途中です。
+## Related Wiki Pages
+- [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - Returns to the point where an argument stops by using inverse problems and causal inference.
+- [Wiki: Baselines / pre-registration / model cards](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - Places Calibration & Abstention Cards alongside the rest of the submission set.
+- [Wiki: state / trait / drift](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - Separates day-scale variation, longitudinal change, and decoder drift.
+- [Wiki: Counterfactuals / interventions / perturbations](https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification) - Explains how to incorporate uncertainty into interventions and held-out conditions.
+- [Wiki: Closed loop, delay, jitter, safe stop](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - Adds guidance for separating abstention, freeze, and stop behavior in online systems.
+
+## What Is Currently Known
+- Head geometry, conductivity, subject shift, session drift, and decoder drift all strongly affect estimated width and real-world performance.
+- If fit / calibration / test separation is ambiguous, the meaning of confidence and thresholds collapses.
+- Even with high accuracy, poor calibration can still produce overconfident wrong answers under low-confidence conditions.
+- Online BCI requires not only latency, but also abstention rate, dropout, recalibration burden, and recovery time.
+
+## What Is Still Unknown
+- The Calibration & Abstention Card is fixed as a minimum site-wide submission, but pass/fail thresholds for each task are not finalized yet.
+- It is not yet fixed which coverage / abstention thresholds should become the common pass/fail rule for L2 and L3.
+- A unified uncertainty-accounting scheme across source imaging and online BCI is still in progress.
 
 ---
 
-<h2>結論</h2>
+<h2>Conclusion</h2>
 <p>
-このサイトでは、<strong>点推定だけ</strong>、<strong>未校正の confidence だけ</strong>、<strong>棄権条件なしの出力</strong>を強い証拠として扱いません。先に監査するのは、<strong>どこ由来の不確実性か</strong>、<strong>その確率・区間・予測集合がどの split と evaluation family で校正されたか</strong>、<strong>低信頼時にどこで止めるか</strong>、<strong>online 系なら再較正負荷をどう記録するか</strong>の 4 点でございます。2026年3月の再監査では、これを補助説明で終わらせず、<a href="https://mind-upload.com/verification.html#calibration-abstention-card">Verification の Calibration &amp; Abstention Card</a> へ接続しました。
+This site does not treat <strong>point estimates only</strong>, <strong>uncalibrated confidence only</strong>, or <strong>output without abstention conditions</strong> as strong evidence. The four points to be audited first are <strong>where does the uncertainty come from</strong>, <strong>which split and evaluation family was used to calibrate the probability/interval/prediction set</strong>, <strong>where to stop when reliability is low</strong>, and <strong>how to record the recalibration load in the case of an online system</strong>. In the re-audit in March 2026, we did not end this with an auxiliary explanation, but connected it to <a href="https://mind-upload.com/verification.html#calibration-abstention-card">Verification's Calibration &amp; Abstention Card</a>.
 </p>
 
-<strong>このページの範囲</strong>
+<strong>Scope of this page</strong>
 <p>
-ここでは哲学や法制度を扱いません。EEG source imaging、EEG分類、closed-loop BCI の技術と自然科学の側面だけから、不確実性と校正と棄権を整理します。
+I am not going to deal with philosophy or legal systems here. We sort out uncertainties, calibrations, and abstentions from only the technical and natural science aspects of EEG source imaging, EEG classification, and closed-loop BCI.
 </p>
 
-<strong>2026-03 再監査で今回さらに見えた弱点</strong>
+<strong>2026-03 Weaknesses revealed in re-audit</strong>
 <p>
-旧版は <strong>confidence ≠ calibration</strong> を教える補助ページとしては有用でしたが、Observability Budget や Temporal Validity Card のような <strong>再利用可能な提出物仕様</strong> にはまだなっていませんでした。一次文献を並べると、within-session の calibration を cross-day / cross-subject / temporal shift へそのまま外挿するのは危険であり、fit / calibration / test を分けずに threshold を触ると evidence gate 自体が崩れます。そこで本ページでは、split、slice、coverage-risk、fallback policy を <strong>Calibration &amp; Abstention Card</strong> として固定します。
+The previous version was useful as a support page for teaching <strong>confidence ≠ calibration</strong>, but it had not yet become a <strong>reusable submission specification</strong> like the Observability Budget or Temporal Validity Card. Looking at the primary literature, it is dangerous to directly extrapolate within-session calibration to cross-day / cross-subject / temporal shift, and if you touch the threshold without separating fit / calibration / test, the evidence gate itself will collapse. Therefore, on this page, split, slice, coverage-risk, and fallback policy are fixed as <strong>Calibration &amp; Abstention Card</strong>.
 </p>
 
-<h2>先に固定する 4 つの監査ゲート</h2>
+<h2>Four audit gates to be fixed first</h2>
 <table>
 <thead>
 <tr>
-<th>監査ゲート</th>
-<th>最低限ほしいもの</th>
-<th>足りないと止まる主張</th>
+<th>Audit gate</th>
+<th>What I want at least</th>
+<th>Claim that it stops when there is not enough</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Gate 1: 出所の切り分け</strong></td>
-<td>観測ノイズ、前処理差、頭部幾何、導電率、subject shift、session drift、decoder drift の内訳。</td>
-<td>「誤差の原因が分かっている」「改善策が有効だった」とは言えません。</td>
+<td><strong>Gate 1: Isolating the source</strong></td>
+<td>Breakdown of observation noise, preprocessing difference, head geometry, conductivity, subject shift, session drift, and decoder drift. </td>
+<td>It cannot be said that ``the cause of the error is known'' or ``the improvement measures were effective.'' </td>
 </tr>
 <tr>
-<td><strong>Gate 2: 校正</strong></td>
-<td>fit / calibration / test の分離、区間や集合の被覆、ECE/Brier/NLL、posterior 幅、slice-wise な calibration 監査。</td>
-<td>confidence や posterior を、使える確率や信頼度として読めません。</td>
+<td><strong>Gate 2: Proofreading</strong></td>
+<td>Separation of fit/calibration/test, coverage of intervals and sets, ECE/Brier/NLL, posterior width, slice-wise calibration audit. </td>
+<td>confidence and posterior cannot be read as usable probabilities or confidence levels. </td>
 </tr>
 <tr>
-<td><strong>Gate 3: 棄権</strong></td>
-<td>低信頼時の reject / abstain 条件、coverage 低下と risk 低下の交換、prediction-set size、false alarm ceiling、再計測や再解析の分岐。</td>
-<td>低信頼条件での誤答抑制や安全側運用を主張できません。</td>
+<td><strong>Gate 3: Abstain</strong></td>
+<td>Reject/abstain conditions when low reliability, exchange of coverage reduction and risk reduction, prediction-set size, false alarm ceiling, branching of remeasurement and reanalysis. </td>
+<td>We cannot claim to suppress incorrect answers or operate on the safe side under low reliability conditions. </td>
 </tr>
 <tr>
-<td><strong>Gate 4: online 負荷</strong></td>
-<td>再較正頻度、recalibration trigger、dropout、recovery time、hold-last-output / silence / freeze / hard stop の区別。</td>
-<td>閉ループでの運用安定性を、平均精度だけで語れません。</td>
+<td><strong>Gate 4: online load</strong></td>
+<td>Distinction between recalibration frequency, recalibration trigger, dropout, recovery time, hold-last-output / silence / freeze / hard stop. </td>
+<td>Operation stability in a closed loop cannot be expressed only in terms of average accuracy. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>confidence、区間、校正、棄権を混ぜない</h2>
+<h2>Do not mix confidence, intervals, proofreading, and abstention</h2>
 <table>
 <thead>
 <tr>
-<th>概念</th>
-<th>何が分かるか</th>
-<th>それだけではまだ分からないこと</th>
+<th>Concept</th>
+<th>What do we know</th>
+<th>What we still don't know</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>点推定</strong></td>
-<td>いまの代表値が分かります。</td>
-<td>どれくらい不安定か、条件を変えると崩れるかは分かりません。</td>
+<td><strong>Point Presumption</strong></td>
+<td>You can see the current representative value. </td>
+<td>We don't know how unstable it is or whether it will collapse if conditions are changed. </td>
 </tr>
 <tr>
-<td><strong>区間</strong></td>
-<td>推定値の周りにどれくらい幅があるかが見えます。</td>
-<td>その幅が実際に妥当な被覆を持つか、由来がどこかは別に確認が必要です。</td>
+<td><strong>section</strong></td>
+<td>You can see how much width there is around the estimated value. </td>
+<td>It is necessary to separately check whether the width actually has a reasonable coverage and where it comes from. </td>
 </tr>
 <tr>
-<td><strong>予測集合</strong></td>
-<td>「この条件では候補を何個まで狭められるか」が分かります。</td>
-<td>その集合がどの前提で coverage を保証し、集合サイズがどれだけ増えたかは別に確認が必要です。</td>
+<td><strong>Prediction set</strong></td>
+<td>You can see how many candidates can be narrowed down under these conditions. </td>
+<td>It is necessary to separately check under what assumptions the set guarantees coverage and how much the set size has increased. </td>
 </tr>
 <tr>
 <td><strong>confidence</strong></td>
-<td>モデル内部のスコアや確信度の順序づけが見えます。</td>
-<td>その数値が現実の的中確率に一致するかは分かりません。</td>
+<td>You can see the ordering of scores and confidence inside the model. </td>
+<td>I don't know if that number matches the actual probability of hitting the mark. </td>
 </tr>
 <tr>
-<td><strong>校正</strong></td>
-<td>0.8 と出たときに本当に 8 割程度当たるか、区間が期待通り被覆するかを見られます。</td>
-<td>校正が良くても、表現力不足や OOD 一般化の不足は別問題として残ります。</td>
+<td><strong>Correction</strong></td>
+When you get <td>0.8, you can see whether it really hits about 80% or whether the interval is covered as expected. </td>
+<td>Even if proofreading is good, lack of expressiveness and lack of OOD generalization remain separate issues. </td>
 </tr>
 <tr>
-<td><strong>棄権</strong></td>
-<td>低信頼条件で出力を止め、coverage と risk の交換条件を明示できます。</td>
-<td>閾値設定が妥当か、棄権後の再計測・再較正フローがあるかは別に必要です。</td>
+<td><strong>Abstain</strong></td>
+<td>Output can be stopped under low reliability conditions and exchange conditions between coverage and risk can be specified. </td>
+<td>It is necessary to determine whether the threshold setting is appropriate and whether there is a remeasurement/recalibration flow after abstention. </td>
 </tr>
 </tbody>
 </table>
 
-<strong>このサイトでの読み替え</strong>
+<strong>Replacement on this site</strong>
 <p>
-softmax、posterior probability、decoder の class score、prediction set は、そのままでは <strong>校正済み確率</strong>や<strong>安全な集合</strong>とみなしません。校正誤差、coverage-risk、interval / set coverage、さらに fit / calibration / test の分離を一緒に出して初めて、実運用に使える信頼度として扱います。
+Softmax, posterior probability, decoder class score, and prediction set are not considered as <strong>calibrated probabilities</strong> or <strong>safe sets</strong> as they are. Calibration error, coverage-risk, interval/set coverage, and separation of fit/calibration/test must be presented together before they can be considered reliable for actual operation.
 </p>
 
-<h2>校正は fit / calibration / test を分けて管理します</h2>
+<h2>Calibration is managed separately for fit / calibration / test</h2>
 <table>
 <thead>
 <tr>
-<th>段階</th>
-<th>ここで固定すること</th>
-<th>混ぜると何が壊れるか</th>
+<th>Stage</th>
+<th>Put it here</th>
+<th>What breaks when you mix</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>fit</strong></td>
-<td>model parameter、feature extractor、decoder 本体を学習します。</td>
-<td>この段階と校正を混ぜると、model 改善と threshold 調整の寄与が分からなくなります。</td>
+<td>Learn the model parameter, feature extractor, and decoder body. </td>
+<td>If you mix this stage with calibration, you will lose track of the contribution of model improvement and threshold adjustment. </td>
 </tr>
 <tr>
 <td><strong>calibration</strong></td>
-<td>temperature scaling、threshold tuning、conformal score、prediction-set size を、凍結した model に対して合わせます。</td>
-<td>test を見ながら閾値を動かすと、校正済み確率や coverage を主張できません。</td>
+<td>Adjust temperature scaling, threshold tuning, conformal score, and prediction-set size to the frozen model. </td>
+<td>If you move the threshold while looking at the test, you cannot claim calibrated probabilities or coverage. </td>
 </tr>
 <tr>
 <td><strong>test</strong></td>
-<td>最終的な ECE/Brier/NLL、empirical coverage、false alarm rate、coverage-risk を固定します。</td>
-<td>test で再調整すると、held-out evidence と local tuning が区別できません。</td>
+<td>Fix final ECE/Brier/NLL, empirical coverage, false alarm rate, coverage-risk. </td>
+<td>When retuning with test, held-out evidence and local tuning are indistinguishable. </td>
 </tr>
 <tr>
 <td><strong>deployment / temporal audit</strong></td>
-<td>cross-day、cross-subject、temporal shift、recalibration trigger、human intervention の扱いを固定します。</td>
-<td>same-day の calibration を、そのまま deployable threshold と誤読します。</td>
+<td>Fix the handling of cross-day, cross-subject, temporal shift, recalibration trigger, and human intervention. </td>
+<td>The same-day calibration is mistakenly read as deployable threshold. </td>
 </tr>
 </tbody>
 </table>
 <p>
-<a href="https://doi.org/10.1080/01621459.2017.1307116" target="_blank">Lei et al. (2018)</a> が split conformal に必要な calibration split を明示し、<a href="https://doi.org/10.1073/pnas.2107794118" target="_blank">Chernozhukov et al. (2021)</a> は distributional conformal route を拡張しました。したがって本サイトでは、校正を「後からいい感じに閾値を置く作業」とは呼ばず、<strong>独立 split を要する提出物</strong>として扱います。
+<a href="https://doi.org/10.1080/01621459.2017.1307116" target="_blank">Lei et al. (2018)</a> specified the calibration split necessary for split conformal, and <a href="https://doi.org/10.1073/pnas.2107794118" target="_blank">Chernozhukov et al. (2021)</a> extended the distributional conformal route. Therefore, on this site, we do not refer to proofreading as ``setting a threshold value after the fact,'' but treat it as a submission that requires an independent split.
 </p>
 
-<h2>同じ calibration でも evaluation family が違えば意味が変わります</h2>
+<h2>The same calibration has different meanings if the evaluation family is different</h2>
 <table>
 <thead>
 <tr>
 <th>evaluation family</th>
-<th>最低限ほしい slice</th>
-<th>ここで止める誤読</th>
+<th>Minimum desired slice</th>
+<th>Stop misreading here</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>within-session</strong></td>
-<td>trial / block / state / artifact burden ごとの calibration。</td>
-<td>same-day の confidence を、そのまま別日や別人へ読み替えません。</td>
+<td>Calibration per trial / block / state / artifact burden. </td>
+<td>The same-day confidence should not be translated into another day or person. </td>
 </tr>
 <tr>
 <td><strong>cross-session</strong></td>
-<td>recording day、electrode replacement、state annotation ごとの calibration。</td>
-<td>同一被験者内の day shift を hidden にしたまま、stable decoder と書きません。</td>
+<td>Calibration per recording day, electrode replacement, state annotation. </td>
+<td>Do not write stable decoder while leaving the day shift within the same subject as hidden. </td>
 </tr>
 <tr>
 <td><strong>cross-subject / cross-site / cross-device</strong></td>
-<td>cohort、site、device、reference scheme、population subgroup ごとの calibration。</td>
-<td>mixed validation で整った confidence を patient-independent reliability と誤読しません。</td>
+<td>Calibration by cohort, site, device, reference scheme, and population subgroup. </td>
+<td>Confidence provided by mixed validation is not misinterpreted as patient-independent reliability. </td>
 </tr>
 <tr>
 <td><strong>temporal / longitudinal / OOD</strong></td>
-<td>time-since-fit、time-since-calibration、novel task、drug / vigilance state、covariate shift ごとの calibration。</td>
-<td>固定モデルの短期成功を、長期 deployability や OOD safety へ上げません。</td>
+<td>Calibration per time-since-fit, time-since-calibration, novel task, drug/vigilance state, and covariate shift. </td>
+<td>We do not increase the short-term success of a fixed model to long-term deployability or OOD safety. </td>
 </tr>
 </tbody>
 </table>
 <p>
-<a href="https://www.mdpi.com/2227-7390/11/7/1650" target="_blank">Shafiezadeh et al. (2023)</a> は patient-independent seizure prediction で split 設計自体が結果を大きく動かすことを示し、<a href="https://papers.nips.cc/paper_files/paper/2019/hash/8558cb408c1d76621371888657d2eb1d-Abstract.html" target="_blank">Ovadia et al. (2019)</a> は dataset shift 下で predictive uncertainty が広く崩れうることを示しました。さらに <a href="https://proceedings.mlr.press/v235/han24d.html" target="_blank">Han et al. (2024)</a> は temporal distribution shift では assessment と selection 自体を時間軸に合わせる必要を示しています。したがって本サイトでは、<strong>global 1 数字の ECE</strong> を reliability の最終証明とは読みません。
+<a href="https://www.mdpi.com/2227-7390/11/7/1650" target="_blank">Shafiezadeh et al. (2023)</a> showed that the split design itself greatly influenced the results in patient-independent seizure prediction, and <a href="https://papers.nips.cc/paper_files/paper/2019/hash/8558cb408c1d76621371888657d2eb1d-Abstract.html" target="_blank">Ovadia et al. (2019)</a> showed that predictive uncertainty can widely collapse under dataset shift. Furthermore, <a href="https://proceedings.mlr.press/v235/han24d.html" target="_blank">Han et al. (2024)</a> shows that in temporal distribution shift, assessment and selection themselves need to be aligned with the time axis. Therefore, on this site, we do not read <strong>global 1-digit ECE</strong> as final proof of reliability.
 </p>
 
-<h2>確率・区間・予測集合・棄権は別の出力です</h2>
+<h2>Probability, interval, prediction set, and abstention are separate outputs</h2>
 <table>
 <thead>
 <tr>
-<th>出力の型</th>
-<th>最低限ほしい保証</th>
-<th>一緒に出すべきもの</th>
+<th>Output type</th>
+<th>Minimum guarantee you want</th>
+<th>Things that should be brought together</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>scalar probability / confidence</strong></td>
-<td>ECE、Brier、NLL、reliability diagram、slice-wise calibration。</td>
-<td>fit / calibration / test 分離、evaluation family、stopped claim。</td>
+<td>ECE, Brier, NLL, reliability diagram, and slice-wise calibration.</td>
+<td>Fit/calibration/test separation, evaluation family, and the claim being stopped.</td>
 </tr>
 <tr>
 <td><strong>interval / posterior band</strong></td>
-<td>empirical coverage、interval width、sensitivity analysis、external validation との整合。</td>
-<td>被覆が marginal か local か、width の増減、どの変数に対する幅か。</td>
+<td>Alignment with empirical coverage, interval width, sensitivity analysis, and external validation. </td>
+<td>Whether the coverage is marginal or local, increase or decrease the width, and for which variable. </td>
 </tr>
 <tr>
 <td><strong>prediction set / conformal output</strong></td>
-<td>set coverage、average set size、validity assumption、exchangeability / time-order rule。</td>
-<td>calibration split、set-size cost、marginal vs conditional validity、OOD で止める主張。</td>
+<td>Set coverage, average set size, the validity assumption, and the exchangeability / time-order rule.</td>
+<td>Calibration split, set-size cost, marginal vs conditional validity, arguments that stop at OOD. </td>
 </tr>
 <tr>
 <td><strong>abstention / selective prediction</strong></td>
-<td>coverage-risk curve、false alarm ceiling、fallback path、human review trigger。</td>
-<td>threshold、coverage drop、silence / freeze / stop の区別、recovery rule。</td>
+<td>Coverage-risk curve, false-alarm ceiling, fallback path, and human-review trigger.</td>
+<td>Threshold, coverage drop, silence/freeze/stop distinction, recovery rule. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>不確実性は 4 つの層で生まれます</h2>
+<h2>Uncertainty comes in four layers</h2>
 <table>
 <thead>
 <tr>
-<th>層</th>
-<th>代表例</th>
-<th>主に効くページ・課題</th>
+<th>Layer</th>
+<th>Representative examples</th>
+<th>Mainly effective pages/issues</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>観測ノイズ</strong></td>
-<td>電極接触、同期ずれ、筋電・瞬目、欠損、刺激アーチファクト。</td>
-<td>EEG 入門、event sync、closed-loop 実装。</td>
+<td><strong>Observation noise</strong></td>
+<td>Electrode contact, synchronization, myoelectricity/blinks, defects, stimulation artifacts. </td>
+<td>Introduction to EEG, event sync, closed-loop implementation. </td>
 </tr>
 <tr>
-<td><strong>モデル・幾何の不確かさ</strong></td>
-<td>頭部モデル、頭蓋導電率、source depth、solver 依存性。</td>
-<td>source imaging、multimodal integration、observation-to-estimation。</td>
+<td><strong>Model/geometry uncertainties</strong></td>
+<td>Head model, cranial conductivity, source depth, solver dependence. </td>
+<td>Source imaging, multimodal integration, and observation-to-estimation.</td>
 </tr>
 <tr>
-<td><strong>分布ずれ</strong></td>
-<td>被験者差、別日、薬理状態、麻酔、課題変更、OOD 条件。</td>
-<td>decode、forecasting、counterfactual/perturbation。</td>
+<td><strong>Distribution shift</strong></td>
+<td>Subject differences, different days, pharmacological conditions, anesthesia, task changes, OOD conditions. </td>
+<td>Decode, forecasting, and counterfactual / perturbation.</td>
 </tr>
 <tr>
-<td><strong>運用ドリフト</strong></td>
-<td>decoder drift、電極再装着、学習、疲労、再較正負荷。</td>
-<td>closed-loop BCI、state-trait-drift、longitudinal evaluation。</td>
+<td><strong>Operation Drift</strong></td>
+<td>decoder drift, electrode reseating, learning, fatigue, recalibration loads. </td>
+<td>Closed-loop BCI, state-trait-drift, and longitudinal evaluation.</td>
 </tr>
 </tbody>
 </table>
 <p>
-重要なのは、不確実性を 1 つの箱で語らないことでございます。source imaging の幅は幾何と導電率に強く依存し、EEG 分類の過信は校正誤差や subject shift に強く依存し、closed-loop の破綻は drift と再較正負荷に強く依存します。<strong>同じ「不確実性」という語でも、課題ごとに会計方法が違います</strong>。
+The important thing is not to talk about uncertainty in one box. Source imaging width strongly depends on geometry and conductivity, EEG classification overconfidence strongly depends on calibration error and subject shift, and closed-loop failure strongly depends on drift and recalibration load. <strong>Even though the word "uncertainty" is the same, accounting methods differ depending on the issue</strong>.
 </p>
 
-<h2>課題ごとに公開すべき指標を変えます</h2>
+<h2>Change the indicators to be published for each issue</h2>
 <table>
 <thead>
 <tr>
-<th>課題</th>
-<th>最低限ほしい指標</th>
-<th>点推定だけでは危険な理由</th>
+<th>Task</th>
+<th>Minimum desired indicators</th>
+<th>Why point estimation alone is dangerous</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>EEG source imaging</strong></td>
-<td>posterior / interval 幅、頭蓋導電率感度、solver 比較、external validator に対する empirical coverage。</td>
-<td>同じ頭皮信号を、複数の source 配置が説明できるからです。</td>
+<td>Posterior / interval width, cranial conductivity sensitivity, solver comparison, empirical coverage for external validator. </td>
+<td>This is because multiple source configurations can explain the same scalp signal. </td>
 </tr>
 <tr>
-<td><strong>offline EEG 分類</strong></td>
-<td>ECE、Brier score、NLL、fit / calibration / test separation、被験者外評価、coverage-risk curve。</td>
-<td>accuracy が高くても、mixed validation で整えた confidence は運用時に危険です。</td>
+<td><strong>Offline EEG classification</strong></td>
+<td>ECE, Brier score, NLL, fit/calibration/test separation, out-of-subject evaluation, coverage-risk curve. </td>
+<td>Even if the accuracy is high, the confidence created by mixed validation is dangerous during operation. </td>
 </tr>
 <tr>
-<td><strong>希少イベント予測</strong></td>
-<td>false alarm rate、sensitivity、calibration curve、risk-controlling threshold、alarm horizon ごとの coverage。</td>
-<td>発作予測のような低頻度課題では、わずかな過信が実用性を大きく損ねます。</td>
+<td><strong>Rare event prediction</strong></td>
+<td>False alarm rate, sensitivity, calibration curve, risk-controlling threshold, and coverage for each alarm horizon.</td>
+<td>In low-frequency tasks such as seizure prediction, even a small amount of overconfidence can greatly impair practicality. </td>
 </tr>
 <tr>
 <td><strong>online / closed-loop BCI</strong></td>
-<td>abstention rate、dropout、recalibration burden、recovery time、time-since-calibration、silence / freeze / hard stop の回数。</td>
-<td>平均精度だけでは、継続運用での破綻や介入不能時間が隠れるからです。</td>
+<td>abstention rate, dropout, recalibration burden, recovery time, time-since-calibration, number of silence / freeze / hard stops. </td>
+<td>Average accuracy alone hides breakdowns in continuous operation and time when intervention is unavailable. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>一次文献が実際に示していること</h2>
+<h2>What the primary literature actually shows</h2>
 
-<h3>1. source imaging では、幅を出さない推定は読みすぎです</h3>
+<h3>1. For source imaging, estimation without width is too much reading</h3>
 <p>
-Vorwerk らは頭部組織導電率の不確かさが dipole reconstruction を大きく動かすことを示し、Rimpiläinen らは未知の skull conductivity をベイズ的に扱うことで source localization の不確実性自体を推定対象へ入れました。Feng らの Block-Champagne も、重要なのは solver 名そのものではなく、<strong>empirical Bayesian uncertainty quantification を伴うこと</strong>でございます。したがって本サイトでは、<strong>「どの solver か」より「どの幅を、どの外部妥当化で示したか」</strong>を先に確認します。
+Vorwerk et al. showed that uncertainty in head tissue conductivity greatly affects dipole reconstruction, and Rimpiläinen et al. included uncertainty in source localization itself in estimation by treating unknown skull conductivity in a Bayesian manner. In Feng et al.'s Block-Champagne, the important thing is not the solver name itself, but the fact that it is accompanied by empirical Bayesian uncertainty quantification. Therefore, on this site, we first check ``which width and external validation was shown'' rather than ``which solver''.
 </p>
 
-<h3>2. EEG 分類では、split と shift を固定しない calibration は読みすぎです</h3>
+<h3>2. In EEG classification, calibration without fixing split and shift is reading too much</h3>
 <p>
-<a href="https://www.mdpi.com/2227-7390/11/7/1650" target="_blank">Shafiezadeh et al. (2023)</a> は patient-independent seizure prediction で random cross-validation と leave-one-patient-out が異なる estimate を与えることを示し、<a href="https://papers.nips.cc/paper_files/paper/2019/hash/8558cb408c1d76621371888657d2eb1d-Abstract.html" target="_blank">Ovadia et al. (2019)</a> は predictive uncertainty methods が dataset shift 下で広く劣化しうることを示しました。さらに <a href="https://proceedings.mlr.press/v235/han24d.html" target="_blank">Han et al. (2024)</a> は temporal distribution shift で model assessment と selection を時間順序に合わせて設計すべきことを示しています。Duan らの UNCER、Hu ら、Shafiezadeh ら (2024) は calibration 自体が重要だと示しましたが、ここから引く <strong>推論</strong> は、<strong>同じ ECE でも split と shift family が違えば別証拠</strong>だという点でございます。したがって本サイトでは、within-session の calibration を cross-day / cross-subject の reliability と同列に並べません。
+<a href="https://www.mdpi.com/2227-7390/11/7/1650" target="_blank">Shafiezadeh et al. (2023)</a> showed that random cross-validation and leave-one-patient-out give different estimates in patient-independent seizure prediction, and <a href="https://papers.nips.cc/paper_files/paper/2019/hash/8558cb408c1d76621371888657d2eb1d-Abstract.html" target="_blank">Ovadia et al. (2019)</a> showed that predictive uncertainty methods can be widely degraded under dataset shifts. Furthermore, <a href="https://proceedings.mlr.press/v235/han24d.html" target="_blank">Han et al. (2024)</a> shows that model assessment and selection should be designed according to the temporal order with temporal distribution shift. Duan et al.'s UNCER, Hu et al., and Shafiezadeh et al. (2024) showed that calibration itself is important, but the inference that can be drawn from this is that even if the ECE is the same, different split and shift families are different evidence. Therefore, this site does not equate within-session calibration with cross-day / cross-subject reliability.
 </p>
 
-<h3>3. conformal / risk-controlling route は有力ですが、前提と集合サイズを別に出す必要があります</h3>
+<h3>3. Conformal / risk-controlling routes are effective, but the assumptions and set size need to be stated separately</h3>
 <p>
-<a href="https://doi.org/10.1080/01621459.2017.1307116" target="_blank">Lei et al. (2018)</a> は split conformal により finite-sample marginal coverage を与え、<a href="https://doi.org/10.1073/pnas.2107794118" target="_blank">Chernozhukov et al. (2021)</a> は conditional distribution model を使った distributional conformal prediction を提示しました。さらに <a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">Segal et al. (2023)</a> は seizure prediction で risk-controlling prediction calibration により false alarm rate を抑える方向を示し、<a href="https://proceedings.mlr.press/v105/eliades19a.html" target="_blank">Eliades &amp; Papadopoulos (2019)</a> は BCI / exoskeleton control に conformal prediction を適用しました。したがって set-valued output や risk-controlled threshold は有力ですが、<strong>どの split で校正したか</strong>、<strong>coverage と set size をどう交換したか</strong>、<strong>marginal / conditional / temporal validity のどれを主張しているか</strong>を別々に出す必要があります。
+<a href="https://doi.org/10.1080/01621459.2017.1307116" target="_blank">Lei et al. (2018)</a> gives finite-sample marginal coverage by split conformal, and <a href="https://doi.org/10.1073/pnas.2107794118" target="_blank">Chernozhukov et al. (2021)</a> presented distributional conformal prediction using a conditional distribution model. Furthermore, <a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">Segal et al. (2023)</a> showed a direction to suppress false alarm rate by risk-controlling prediction calibration in seizure prediction, and <a href="https://proceedings.mlr.press/v105/eliades19a.html" target="_blank">Eliades &amp; Papadopoulos (2019)</a> applied conformal prediction to BCI / exoskeleton control. Therefore, set-valued output and risk-controlled threshold are effective, but it is necessary to separately state <strong>which split was used for calibration, <strong>how coverage and set size were exchanged</strong>, and which of <strong>marginal / conditional / temporal validity is claimed.
 </p>
 
-<h3>4. 棄権は「安全そうだから」ではなく、coverage と risk の公開です</h3>
+<h3>4. Abstaining is not "because it seems safe", but disclosure of coverage and risk</h3>
 <p>
-Ganeshkumar らは EEG motor imagery BCI に reject option を入れることで false prediction rate を下げられることを示しました。ここで重要なのは、誤りを減らす代わりに <strong>どれだけ coverage を下げたか</strong>を出すことでございます。したがって、棄権率だけ、または accuracy だけを単独で見せるのは不十分であり、coverage-risk の交換条件を一緒に公開する必要があります。
+Ganeshkumar et al. showed that the false prediction rate can be reduced by including a reject option in the EEG motor imagery BCI. What is important here is to show <strong>how much coverage has been reduced</strong> in exchange for reducing errors. Therefore, it is not enough to show only abstention rate or accuracy alone, and it is necessary to disclose coverage-risk exchange conditions together.
 </p>
 
-<h3>5. online BCI では、再較正と silence も性能です</h3>
+<h3>5. With online BCI, recalibration and silence are also performance features</h3>
 <p>
-Wairagkar らの instantaneous voice-synthesis neuroprosthesis は低遅延 loop を示しましたが、同時に non-speech 区間で silence を返す設計が重要でした。Wilson らは intracortical BCI の長期 unsupervised recalibration を示し、精度だけでなく <strong>どれだけ再較正を要するか</strong>が継続運用のボトルネックであることを示しました。したがって、closed-loop 系では latency や accuracy に加えて、<strong>abstention / silence / recalibration burden / recovery time</strong> を別指標で残します。
+Wairagkar et al.'s instantaneous voice-synthesis neuroprosthesis showed a low-latency loop, but at the same time it was important to design it to return silence in non-speech sections. Wilson et al. demonstrated long-term unsupervised recalibration of intracortical BCIs and showed that not only accuracy but also <strong>how much recalibration is required</strong> is the bottleneck for continued operation. Therefore, in the closed-loop system, in addition to latency and accuracy, <strong>abstention / silence / recalibration burden / recovery time</strong> are kept as separate indicators.
 </p>
 
-<h2>このサイトで採用する運用ルール</h2>
+<h2>Operation rules adopted by this site</h2>
 
 <h4>Rule</h4>
 <ul>
-<li><strong>confidence をそのまま確率と読まない：</strong>校正誤差か interval / set coverage が出ていなければ、内部スコアとして扱います。</li>
-<li><strong>fit / calibration / test を分ける：</strong>temperature scaling、threshold tuning、conformal score は独立 split で管理し、test を見て再調整しません。</li>
-<li><strong>calibration は evaluation family ごとに出す：</strong>within-session の ECE や coverage を、cross-day / cross-subject / temporal shift の reliability へ読み替えません。</li>
-<li><strong>source imaging は幅と感度分析を必須にする：</strong>頭蓋導電率、頭部モデル、solver family の違いで解が重なるなら、無理に 1 点へ潰しません。</li>
-<li><strong>EEG 分類は coverage-risk を出す：</strong>accuracy だけで通さず、ECE/Brier/NLL、slice-wise calibration、棄権後の coverage を併記します。</li>
-<li><strong>set-valued / conformal 結果は前提も出す：</strong>marginal / conditional validity、set size、exchangeability / temporal rule を隠しません。</li>
-<li><strong>発作予測や希少イベントは false alarm を別管理する：</strong>感度だけでなく、誤警報コストと threshold 制御を主指標に入れます。</li>
-<li><strong>online BCI は再較正負荷を性能として出す：</strong>再較正回数、所要時間、recovery time、silence / freeze / hard stop の内訳を公開します。</li>
-<li><strong>低信頼時は棄権を選べるようにする：</strong>無理に単一解を返すより、要再計測・要再解析・要介入停止へ分岐させます。</li>
-<li><strong>確率・区間・予測集合・棄権を前面に出す結果には Calibration &amp; Abstention Card を添付する：</strong><a href="https://mind-upload.com/verification.html#calibration-abstention-card">Verification</a> 側の共通提出物で split、slice、coverage-risk、fallback policy を固定します。</li>
+<li><strong>Do not read confidence as just probability:</strong>If there is no calibration error or interval / set coverage, treat it as an internal score. </li>
+<li><strong>Separate fit/calibration/test:</strong>Temperature scaling, threshold tuning, and conformal score are managed as independent splits, and they are not readjusted by looking at the test. </li>
+<li><strong>Calibration is issued for each evaluation family:</strong>Do not read within-session ECE or coverage as cross-day / cross-subject / temporal shift reliability. </li>
+<li><strong>Source imaging requires breadth and sensitivity analysis:</strong>If the solutions overlap due to differences in cranial conductivity, head model, and solver family, do not force them to collapse into one point. </li>
+<li><strong>EEG classification gives coverage-risk:</strong>Do not pass with accuracy alone, include ECE/Brier/NLL, slice-wise calibration, and coverage after abstention. </li>
+<li><strong>set-valued / conformal results also reveal assumptions: do not hide</strong>marginal / conditional validity, set size, exchangeability / temporal rule. </li>
+<li><strong>Manage false alarms separately for seizure prediction and rare events:</strong>In addition to sensitivity, include false alarm cost and threshold control as key metrics. </li>
+<li><strong>Online BCI publishes the recalibration load as performance:</strong>Publishes the breakdown of the number of recalibrations, required time, recovery time, silence / freeze / hard stop. </li>
+<li><strong>Make it possible to choose to abstain when reliability is low:</strong>Rather than forcefully returning a single answer, branch to the options that require remeasurement, reanalysis, or stoppage that requires intervention. </li>
+<li><strong>Attach a Calibration &amp; Abstention Card to results that highlight probabilities, intervals, prediction sets, and abstentions:</strong> Fix split, slice, coverage-risk, and fallback policy in the common submission on the <a href="https://mind-upload.com/verification.html#calibration-abstention-card">Verification</a> side. </li>
 </ul>
 
-<h2>参考文献</h2>
+<h2>References</h2>
 <ol>
 <li>Vorwerk, J., Aydin, U., Wolters, C. H., &amp; Butson, C. R. (2019). Influence of Head Tissue Conductivity Uncertainties on EEG Dipole Reconstruction. <em>Frontiers in Neuroscience</em>, 13, 531. <a href="https://doi.org/10.3389/fnins.2019.00531" target="_blank">doi:10.3389/fnins.2019.00531</a></li>
 <li>Rimpiläinen, I., Solis-Lemus, J. A., &amp; Särkkä, S. (2019). Improved EEG source localization with Bayesian uncertainty modelling of unknown skull conductivity. <em>NeuroImage</em>, 184, 52-60. <a href="https://doi.org/10.1016/j.neuroimage.2018.11.058" target="_blank">doi:10.1016/j.neuroimage.2018.11.058</a></li>
@@ -370,7 +372,7 @@ Wairagkar らの instantaneous voice-synthesis neuroprosthesis は低遅延 loop
 <li>Wairagkar, M., Card, N. S., Singer-Clark, T., Hou, X., Iacobacci, C., Miller, L. M., Hochberg, L. R., Brandman, D. M., &amp; Stavisky, S. D. (2025). An instantaneous voice-synthesis neuroprosthesis. <em>Nature</em>, 644(8075), 145-152. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
 </ol>
 
-<h2>次にどこへ戻るか</h2>
+<h2>Where to go back next</h2>
 <p>
-source imaging 側へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation">観測から推定へ</a>、closed-loop 側へ戻るなら <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops">閉ループ・遅延・ジッタ・安全停止</a>、公開ルール全体へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a> をご利用ください。
+To return to the source imaging side, please use <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation">From observation to estimation</a>. To return to the closed-loop side, please use <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops">Closed-loop, delay, jitter, and safety stops</a>. To return to the entire public rule, please use <a href="https://mind-upload.com/verification.html">Verification platform</a>.
 </p>

@@ -1,46 +1,46 @@
 ---
 layout: default
-title: "Wiki：文献から実装・参加へ戻る一本道"
-description: "論文集や文献地図を読んだあとに、未解決問題、提案、Issue、協業候補のどこへ戻るかを整理するガイドです。"
+title: "Wiki: A straight path back from literature to implementation and participation"
+description: "A guide to help you organize where to go back to unresolved problems, proposals, issues, and collaboration candidates after reading a collection of papers or a literature map."
 article_type: Wiki
-subtitle: "『文献を読んだあと、何に使うか』を固定するための次ページ案内"
+subtitle: "Next page guide to fix 'what to use after reading the literature'"
 author: Mind Uploading Research Project
 last_updated: "2026-03-14"
 note: "Literature route"
-audience: "論文を読んだあとに、次にどこへ戻るかで迷う人"
-reading_time: "6〜10分"
-page_intro: "このページは、論文集や文献地図を読んだあとに、その文献をどこへ戻して使うかを整理する補助ガイドです。未解決問題の地図へ戻るのか、提案へつなぐのか、Issue に落とすのか、協業候補の準備物に変えるのかで、次の1ページは変わります。"
-accuracy_note: "ここで示すのは文献読後の次の入口です。個別論文の評価や採否は、必ず元ページと元論文へ戻って確認してください。"
+audience: "People who are confused about where to go next after reading a paper"
+reading_time: "6-10 minutes"
+page_intro: "This page is an auxiliary guide that helps you organize where to return and use the documents after reading a collection of papers or a document map. The next page changes depending on whether you return to the map of unresolved problems, connect to a proposal, submit to an issue, or turn into a preparation for a collaboration candidate."
+accuracy_note: "This is the next entry point after reading the literature. Please be sure to return to the original page and the original paper to check the evaluation and acceptance/rejection of individual papers."
 page_highlights:
-  - "論文を読んだあとを、未解決問題整理、提案整理、Issue 化、協業準備の 4 ルートに分けて整理します。"
-  - "『面白かった』で止めず、文献をどの公開ページへ戻すかを固定します。"
-  - "文献系ページと参加系ページの接続を見失わないようにします。"
+  - "After reading a paper, organize it in four ways: organize unresolved problems, organize proposals, create issues, and prepare for collaboration."
+  - "Don't stop at 'That was interesting' and fix which public page you want to return the document to."
+  - "Make sure not to lose sight of the connection between literature pages and participation pages."
 known_points:
-  - "文献を読んだあとに何へ戻すかを決めると、情報が散らばりにくくなります。"
-  - "Research Harvest、Papers、Proposals、Issue、Collaborations は、文献の使い方が違います。"
-  - "文献の数や面白さだけでなく、どの未解決問題や提案へ効くかで戻り先を決める必要があります。"
+  - "If you decide what to return to after reading the literature, information will be less scattered."
+  - "Research Harvest, Papers, Proposals, Issues, and Collaborations use literature differently."
+  - "You need to decide where to return not only by the number and interest of the literature, but also by which unresolved problems and proposals it will be effective against."
 unknown_points:
-  - "どの文献が最終的に中心的根拠として残るかは、今後の整理で変わる可能性があります。"
-  - "提案や協業候補への接続が、将来どこまで進むかは未確定です。"
+  - "Which documents will ultimately remain as the central basis may change in the future."
+  - "It is unclear how far the proposal and connections to potential collaborations will go in the future."
 wiki_links:
-  - label: "Wiki: 文献と証拠ページの読み方"
+  - label: "Wiki: How to read the literature and evidence page"
     url: "/wiki/literature-and-evidence-reading.html"
-    description: "文献系ページ全体の役割差に戻りたい人向けです。"
-  - label: "Wiki: U番号ガイド"
+    description: "For those who want to return to the role differences across literature pages."
+  - label: "Wiki: U number guide"
     url: "/wiki/u-number-guide.html"
-    description: "未解決問題へ戻すときに、どの U かで迷う人向けです。"
-  - label: "Wiki: 提案と状態ラベルの読み方"
+    description: "For those who are confused about which U to use when returning to unsolved problems."
+  - label: "Wiki: How to read suggestions and state labels"
     url: "/wiki/proposal-status-reading.html"
-    description: "提案ページへ戻すときの状態ラベルを整理できます。"
-  - label: "Wiki: 内製で先にやることと外部依存"
+    description: "You can organize the status labels when returning to the suggestion page."
+  - label: "Wiki: What to do first in-house and external dependencies"
     url: "/wiki/internal-prework-and-external-dependencies.html"
-    description: "Issue や協業候補へ戻すときに、今できる準備を切り分けられます。"
+    description: "When returning to an issue or collaboration candidate, you can separate the preparations you can make now."
 recommended_pages:
-  - label: "文献地図"
+  - label: "Literature map"
     url: "/research_harvest_50.html"
-  - label: "技術提案"
+  - label: "Technical proposal"
     url: "/issue.html#proposal-integration"
-  - label: "貢献ガイド"
+  - label: "Contribution Guide"
     url: "/issue.html"
 ---
 
@@ -48,128 +48,128 @@ recommended_pages:
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>文献を読んだら戻り先を決める</h2>
+<h2>After reading the literature, decide where to return</h2>
 <p>
-論文を読んだあとに重要なのは、「面白かった」で止めないことです。ここでは、<strong>その文献をどこへ戻して使うか</strong>で 4 本の道に分けて、次の1ページを固定します。
+The important thing after reading a paper is not to stop because it was interesting. Here, we will divide the document into four paths depending on where it will be returned and used, and then pin the next page.
 </p>
 </div>
 
 <section class="section" id="four-routes">
-<h2 class="section-title">文献のあとに進む4つの道</h2>
+<h2 class="section-title">Four paths to follow after literature</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>文献を見て次にしたいこと</th>
-<th>次に開くページ</th>
-<th>そこで決めること</th>
+<th>What you want to do next after looking at the literature</th>
+<th>Next page</th>
+<th>What to decide there</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>未解決問題の地図へ戻したい</strong></td>
+<td><strong>I want to return to the unresolved problem map</strong></td>
 <td><a href="../research_harvest_50.html">Research Harvest</a></td>
-<td>どの U に効く文献か、何がまだ未解決かを整理します。</td>
+<td>I will organize which literature is effective for U and what is still unresolved. </td>
 </tr>
 <tr>
-<td><strong>提案や実装方針へつなぎたい</strong></td>
+<td><strong>I want to connect to proposals and implementation policies</strong></td>
 <td><a href="../issue.html#proposal-integration">Proposals</a></td>
-<td>その文献がどのストリームや提案の根拠になるかを確認します。</td>
+<td>Check which stream or proposal the literature supports. </td>
 </tr>
 <tr>
-<td><strong>今この場で切れる作業へ落としたい</strong></td>
+<td><strong>I want to shift to work that can be done right here and now</strong></td>
 <td><a href="../issue.html">Issue</a></td>
-<td>実行可能な変更、達成条件、反証条件、外部依存の有無を整理します。</td>
+<td>Organize executable changes, achievement conditions, disproval conditions, and presence or absence of external dependencies. </td>
 </tr>
 <tr>
-<td><strong>外部連携や共同研究の準備物へ変えたい</strong></td>
+<td><strong>I want to turn it into a preparation for external collaboration or joint research</strong></td>
 <td><a href="../issue.html#external-collaboration">Collaborations</a></td>
-<td>その文献が、どの連携候補や準備物に効くかを確認します。</td>
+<td>Check which collaboration candidates and preparations the document works with. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="why">
-<h2 class="section-title">なぜこの分け方なのか</h2>
+<h2 class="section-title">Why this division</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>道</th>
-<th>文献のあとにそのページへ行く理由</th>
+<th>way</th>
+<th>Reasons for going to the page after reading the literature</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>未解決問題整理</strong></td>
-<td>文献を読む目的が、まず「どの問題がどこまで解けているか」を更新することだからです。</td>
+<td><strong>Organize unresolved issues</strong></td>
+<td>The purpose of reading literature is to first update "which problems have been solved and to what extent." </td>
 </tr>
 <tr>
-<td><strong>提案整理</strong></td>
-<td>文献の知見を、そのまま提案や実装方針へつなげたい場合があるからです。</td>
+<td><strong>Proposal organization</strong></td>
+<td>This is because there are cases where you want to directly link knowledge from the literature to proposals and implementation policies. </td>
 </tr>
 <tr>
-<td><strong>Issue 化</strong></td>
-<td>今この場でできる作業に落とさないと、文献メモのまま散らばりやすいからです。</td>
+<td><strong>Issue conversion</strong></td>
+<td>If you don't reduce it to tasks that can be done right here and now, it's easy for your notes to be scattered as literature notes. </td>
 </tr>
 <tr>
-<td><strong>協業準備</strong></td>
-<td>外部連携が必要な話でも、文献をもとに内製の準備物を先に作れるからです。</td>
+<td><strong>Cooperation preparation</strong></td>
+<td>Even if external collaboration is required, we can first prepare in-house preparations based on literature. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="helper-wiki">
-<h2 class="section-title">途中で止まったときの補助 wiki</h2>
+<h2 class="section-title">Assistance wiki when you stop midway</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>止まる場所</th>
-<th>戻るとよい wiki</th>
+<th>Place to stop</th>
+<th>Go back to wiki</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>論文集と文献地図の違いで止まる</td>
-<td><a href="literature-and-evidence-reading.html">文献と証拠ページの読み方</a></td>
+<td>Stop at the difference between a collection of papers and a literature map</td>
+<td><a href="literature-and-evidence-reading.html">How to read the literature and evidence page</a></td>
 </tr>
 <tr>
-<td>U番号で止まる</td>
-<td><a href="u-number-guide.html">U番号ガイド</a></td>
+<td>Stop at U number</td>
+<td><a href="u-number-guide.html">U number guide</a></td>
 </tr>
 <tr>
-<td>Scopus、arXiv、source_logged の違いで止まる</td>
-<td><a href="paper-source-types-and-evidence-status.html">文献のソース種別と状態ラベルの読み方</a></td>
+<td>Stops due to difference between Scopus, arXiv, and source_logged</td>
+<td><a href="paper-source-types-and-evidence-status.html">How to read document source type and status labels</a></td>
 </tr>
 <tr>
-<td>提案の状態ラベルで止まる</td>
-<td><a href="proposal-status-reading.html">提案と状態ラベルの読み方</a></td>
+<td>Stop at suggestion state label</td>
+<td><a href="proposal-status-reading.html">How to read proposals and status labels</a></td>
 </tr>
 <tr>
-<td>Issue と協業候補の違いで止まる</td>
-<td><a href="internal-prework-and-external-dependencies.html">内製で先にやることと外部依存</a></td>
+<td>Stops due to difference between issue and collaboration candidate</td>
+<td><a href="internal-prework-and-external-dependencies.html">In-house production and external dependencies</a></td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="common-mistakes">
-<h2 class="section-title">よくある迷い方</h2>
+<h2 class="section-title">Common ways to get lost</h2>
 <div class="key-points">
 <h4>Mistake</h4>
 <ul>
-<li><strong>面白い論文を見つけて、そのままメモで止める：</strong> どの公開ページへ戻すかまで決めた方が散らばりません。</li>
-<li><strong>論文集の掲載だけで中心的根拠と読む：</strong> 未解決問題や提案への接続を確認する必要があります。</li>
-<li><strong>提案ページへ戻しただけで実装済みとみなす：</strong> Proposals は整理であり、Issue や成果物は別です。</li>
-<li><strong>協業候補へ飛んで、内製準備を飛ばす：</strong> 先に要求仕様や最小成果物を固めた方が進みやすいです。</li>
+<li><strong>Finding an interesting paper and leaving it as a note:</strong> It's better to decide which public page to return to so it won't get cluttered. </li>
+<li><strong>The publication of a collection of papers alone is read as the central rationale:</strong> Connections to open questions and proposals must be confirmed. </li>
+<li><strong>Regarding it as implemented just by returning to the proposal page:</strong> Proposals are organized, issues and deliverables are different. </li>
+<li><strong>Go to collaboration candidates and skip in-house preparations:</strong> It is easier to proceed if you solidify the required specifications and minimum deliverables first. </li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2 class="section-title">Where to return next</h2>
 <p>
-文献系ページ全体の役割差へ戻るなら <a href="literature-and-evidence-reading.html">文献と証拠ページの読み方</a>、未解決問題の地図へ戻るなら <a href="../research_harvest_50.html">文献地図</a>、今この場で切れる作業へ戻るなら <a href="../issue.html">貢献ガイド</a> をご利用ください。
+If you want to go back to the role differences of the entire literature page, please use <a href="literature-and-evidence-reading.html">How to read the literature and evidence page</a>, if you want to go back to the map of unresolved issues, please use <a href="../research_harvest_50.html">Literature map</a>, and if you want to go back to work that can be done right here and now, please use <a href="../issue.html">Contribution guide</a>.
 </p>
 </section>
 
@@ -179,17 +179,17 @@ recommended_pages:
 <div class="sidebar-box">
 <h4>Related Wiki</h4>
 <ul>
-<li><a href="literature-and-evidence-reading.html">文献と証拠ページの読み方 →</a></li>
-<li><a href="u-number-guide.html">U番号ガイド →</a></li>
-<li><a href="proposal-status-reading.html">提案と状態ラベルの読み方 →</a></li>
+<li><a href="literature-and-evidence-reading.html">How to read the literature and evidence page →</a></li>
+<li><a href="u-number-guide.html">U number guide →</a></li>
+<li><a href="proposal-status-reading.html">How to read proposals and status labels →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>公開ページ</h4>
+<h4>Public page</h4>
 <ul>
-<li><a href="../research_harvest_50.html">文献地図 →</a></li>
-<li><a href="../issue.html#proposal-integration">技術提案 →</a></li>
-<li><a href="../issue.html">貢献ガイド →</a></li>
+<li><a href="../research_harvest_50.html">Bibliography map →</a></li>
+<li><a href="../issue.html#proposal-integration">Technical proposal →</a></li>
+<li><a href="../issue.html">Contribution guide →</a></li>
 </ul>
 </div>
 </aside>

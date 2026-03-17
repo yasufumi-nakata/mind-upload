@@ -1,43 +1,43 @@
 ---
 layout: default
-title: "Wiki：WBE入門から理論を深掘る4ルート"
-description: "WBE 101 を読んだあとに、理論のどこを深掘りしたいかに応じて Perspective、Idea、Roadmap、FAQ などへ進むためのガイドです。"
+title: "Wiki: 4 routes to deepen the theory from introduction to WBE"
+description: "After reading WBE 101, this guide guides you to Perspective, Ideas, Roadmap, FAQ, etc. depending on where you want to dig deeper into theory."
 article_type: Wiki
-subtitle: "主張の強さ、設計原理、長文ノート、依存関係の地図を混ぜないための次ページ案内"
+subtitle: "Next page guide to avoid mixing argument strength, design principles, long notes, and dependency maps"
 author: Mind Uploading Research Project
 last_updated: "2026-03-14"
 note: "Theory route"
-audience: "WBE 101 のあとに理論系ページのどこへ進むかで迷う人"
-reading_time: "6〜10分"
-page_intro: "このページは、WBE 101 を読んだあとに、理論をどの方向へ深掘りするかを整理する補助ガイドです。ニュース誤読を避けたいのか、設計原理を知りたいのか、主要理論の支持点と限界を長文で追いたいのか、理論がどの技術課題へ落ちるかを知りたいのかで、次の1ページは変わります。"
-accuracy_note: "ここで示すのは WBE 101 の次の入口です。各理論や設計条件そのものは、必ず元ページ本文で確認してください。"
+audience: "People who are confused about where to go on the theory page after WBE 101"
+reading_time: "6-10 minutes"
+page_intro: "This page is an auxiliary guide to help you decide which direction to dig deeper into theory after reading WBE 101. The next page will change depending on whether you want to avoid misreading the news, know the design principles, follow the supporting points and limitations of the main theory in a long text, or find out which technical problem the theory falls into."
+accuracy_note: "What is shown here is the next entrance to WBE 101. Please be sure to check the main text of the original page for each theory and design conditions themselves."
 page_highlights:
-  - "WBE 101 のあとを、誤解整理、設計原理、長文研究ノート、依存関係の地図の 4 ルートに分けて整理します。"
-  - "理論系ページを、役割差だけでなく『次に何を知りたいか』で選べるようにします。"
-  - "理論の深掘りで、FAQ・Glossary・Perspective・Idea・Roadmap の使い分けを固定します。"
+  - "After WBE 101, we will organize it into 4 routes: Misconceptions, Design Principles, Long Research Notes, and Dependency Map."
+  - "We will make it possible to select theory-related pages not only based on role differences, but also based on ``what you want to know next.''"
+  - "Deeply digging into the theory and fixing the usage of FAQ, Glossary, Perspective, Idea, and Roadmap."
 known_points:
-  - "WBE 101 の次に読むべき理論系ページは、知りたい内容で変わります。"
-  - "FAQ は誤解整理、Idea は設計原理、Perspective は長文ノート、Roadmap は依存関係の地図です。"
-  - "理論系の深掘りでも、ページの役割差を先に固定すると読み違えが減ります。"
+  - "The theory page you should read next after WBE 101 will change depending on what you want to know."
+  - "FAQ is a list of misconceptions, Idea is a design principle, Perspective is a long note, and Roadmap is a map of dependencies."
+  - "Even when digging deeply into theory, if you fix the role differences between pages first, you will reduce misreadings."
 unknown_points:
-  - "どの理論の組み合わせが最終的に十分条件になるかは、まだ未確定です。"
-  - "将来どの理論ページが独立拡張されるかは、論点の蓄積次第で変わります。"
+  - "Which combination of theories will ultimately be a sufficient condition is still undetermined."
+  - "Which theory pages will be expanded independently in the future will change depending on the accumulation of points."
 wiki_links:
-  - label: "Wiki: 理論系ページの読み分けガイド"
+  - label: "Wiki: Guide to reading theory pages"
     url: "/wiki/theory-pages-reading-guide.html"
-    description: "理論系ページ全体の役割差に戻りたい人向けです。"
-  - label: "Wiki: 意識理論マップ"
+    description: "For those who want to return to the role differences across the theory pages."
+  - label: "Wiki: Theory of Consciousness Map"
     url: "/wiki/consciousness-theory-map.html"
-    description: "IIT、GNWT、FEP、PCI の違いで止まる人向けです。"
-  - label: "Wiki: 本人性とコピー問題"
+    description: "This is for people who are stopped by the difference between IIT, GNWT, FEP, and PCI."
+  - label: "Wiki: Identity and copying issues"
     url: "/wiki/personhood-and-copy-problem.html"
-    description: "本人性やコピー問題で止まる人向けです。"
+    description: "This is for people who are stopped due to identity issues or copying issues."
 recommended_pages:
-  - label: "WBE入門"
+  - label: "Introduction to WBE"
     url: "/wbe_101.html"
-  - label: "研究ノート"
+  - label: "Research Notes"
     url: "/perspective.html"
-  - label: "理論フレーム"
+  - label: "Theoretical Frame"
     url: "/perspective.html#design-principles"
 ---
 
@@ -45,128 +45,128 @@ recommended_pages:
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>次の1ページを決める</h2>
+<h2>Decide the next page</h2>
 <p>
-WBE 101 は入口として重要ですが、その次に読む理論ページは広く見えます。ここでは、<strong>何を次に知りたいか</strong>で 4 本の道に分けて、次の1ページを固定します。
+WBE 101 is important as an entry point, but the theory pages you read next seem broad. Here, we will divide it into four paths based on <strong>What do you want to know next</strong> and pin the next page.
 </p>
 </div>
 
 <section class="section" id="four-routes">
-<h2 class="section-title">WBE入門のあとに進む4つの道</h2>
+<h2 class="section-title">Four paths to follow after getting started with WBE</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>知りたいこと</th>
-<th>次に開くページ</th>
-<th>そこで分かること</th>
+<th>What I want to know</th>
+<th>Next page</th>
+<th>What you can find out</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>ニュース誤読や用語の混乱を減らしたい</strong></td>
+<td><strong>I want to reduce news misreading and terminology confusion</strong></td>
 <td><a href="../faq.html">FAQ</a> / <a href="../glossary.html">Glossary</a></td>
-<td>よくある誤解と、理論系で頻出する用語の足場を先にそろえられます。</td>
+<td>You can first get a foothold on common misconceptions and terms that frequently appear in theoretical fields. </td>
 </tr>
 <tr>
-<td><strong>なぜ「静的コピー」ではなく「動的移行」なのか知りたい</strong></td>
+<td><strong>I want to know why "dynamic migration" is used instead of "static copy"</strong></td>
 <td><a href="../perspective.html#design-principles">Idea</a></td>
-<td>このサイトが採用する設計原理と、コピー問題とのつながりを確認できます。</td>
+<td>You can see the design principles this site uses and how they relate to copying issues. </td>
 </tr>
 <tr>
-<td><strong>主要理論の支持点と限界を長文で追いたい</strong></td>
+<td><strong>I want to follow the supporting points and limitations of the main theories in a long text</strong></td>
 <td><a href="../perspective.html">Perspective</a></td>
-<td>IIT、GNWT、FEP、計測、反論、限界を並べた長文ノートとして読めます。</td>
+<td>It can be read as a long note listing IIT, GNWT, FEP, measurements, counterarguments, and limitations. </td>
 </tr>
 <tr>
-<td><strong>理論論点がどの技術課題へ落ちるか知りたい</strong></td>
+<td><strong>I want to know which technical issue the theoretical issue falls into</strong></td>
 <td><a href="../tech_roadmap.html">Roadmap</a></td>
-<td>理論、計測、再構成、実装、検証の依存関係を地図として確認できます。</td>
+<td>You can check the dependencies of theory, measurement, reconstruction, implementation, and verification as a map. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="why">
-<h2 class="section-title">なぜこの分け方なのか</h2>
+<h2 class="section-title">Why this division</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>道</th>
-<th>WBE 101 のあとにそのページへ行く理由</th>
+<th>way</th>
+<th>Why go to that page after WBE 101</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>誤解整理</strong></td>
-<td>理論を深掘りする前に、L1 と L4 のすり替えや用語の混乱を減らした方が読みやすいからです。</td>
+<td><strong>Correcting misconceptions</strong></td>
+<td>Before delving into the theory, it will be easier to read if you switch between L1 and L4 and reduce confusion in terminology. </td>
 </tr>
 <tr>
-<td><strong>設計原理</strong></td>
-<td>Idea は、このサイトがどの立場を採っているかを最も短く固定できるからです。</td>
+<td><strong>Design principles</strong></td>
+<td>Idea is the shortest way to determine which position this site takes. </td>
 </tr>
 <tr>
-<td><strong>長文ノート</strong></td>
-<td>Perspective は、理論ごとの支持点と限界をまとめて追える長文だからです。</td>
+<td><strong>Long notes</strong></td>
+<td>Perspective is a long text that allows you to summarize the supporting points and limitations of each theory. </td>
 </tr>
 <tr>
-<td><strong>依存関係の地図</strong></td>
-<td>Roadmap は、理論論点がどこで実装や検証に接続するかを整理できるからです。</td>
+<td><strong>Dependency map</strong></td>
+<td>Roadmap allows you to organize where theoretical issues connect to implementation and verification. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="helper-wiki">
-<h2 class="section-title">途中で止まったときの補助 wiki</h2>
+<h2 class="section-title">Assistance wiki when you stop midway</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>止まる場所</th>
-<th>戻るとよい wiki</th>
+<th>Place to stop</th>
+<th>Go back to wiki</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>理論名の違いで止まる</td>
-<td><a href="consciousness-theory-map.html">意識理論マップ</a></td>
+<td>Stops due to difference in theory name</td>
+<td><a href="consciousness-theory-map.html">Consciousness theory map</a></td>
 </tr>
 <tr>
-<td>本人性やコピー問題で止まる</td>
-<td><a href="personhood-and-copy-problem.html">本人性とコピー問題</a></td>
+<td>Stopped due to identity or copying problem</td>
+<td><a href="personhood-and-copy-problem.html">Personhood and copy problem</a></td>
 </tr>
 <tr>
-<td>理論系ページどうしの役割差で止まる</td>
-<td><a href="theory-pages-reading-guide.html">理論系ページの読み分けガイド</a></td>
+<td>Stops due to role difference between theory pages</td>
+<td><a href="theory-pages-reading-guide.html">Reading guide for theory pages</a></td>
 </tr>
 <tr>
-<td>理論論点がどのレベルの主張かで止まる</td>
-<td><a href="claim-level-reading-routes.html">L0〜L5ごとの読み進め方</a></td>
+<td>It stops depending on the level of the theoretical argument</td>
+<td><a href="claim-level-reading-routes.html">How to read each L0 to L5</a></td>
 </tr>
 <tr>
-<td>計測語とモデル語が混ざって止まる</td>
-<td><a href="measurement-and-modeling-terms.html">計測からモデル化までの用語ガイド</a></td>
+<td>Measurement word and model word mix and stop</td>
+<td><a href="measurement-and-modeling-terms.html">Terminology guide from measurement to modeling</a></td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="common-mistakes">
-<h2 class="section-title">よくある迷い方</h2>
+<h2 class="section-title">Common ways to get lost</h2>
 <div class="key-points">
 <h4>Mistake</h4>
 <ul>
-<li><strong>WBE 101 の次にいきなり Perspective 全文へ入る：</strong> まず FAQ や Idea を挟んだ方が迷いにくい場合があります。</li>
-<li><strong>Idea を実証済みの結論として読む：</strong> ここは設計原理の整理であり、実証完了の宣言ではありません。</li>
-<li><strong>Roadmap を理論本文の代わりに読む：</strong> ここは依存関係の地図であり、理論の背景説明は圧縮されています。</li>
-<li><strong>FAQ だけで理論判断を終える：</strong> 強い主張ほど、Perspective や Roadmap へ戻る必要があります。</li>
+<li><strong>Starting with WBE 101, then suddenly entering the full text of Perspective:</strong> It may be easier to get lost if you include FAQ or Idea first. </li>
+<li><strong>Reading an Idea as a Proven Conclusion:</strong> This is a summary of design principles, not a declaration that proof is complete. </li>
+<li><strong>Read Roadmap instead of theory text:</strong> This is a dependency map, with condensed theory background. </li>
+<li><strong>Finish your theoretical judgment with just the FAQ:</strong> The stronger the argument, the more you need to return to the Perspective and Roadmap. </li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2 class="section-title">Where to return next</h2>
 <p>
-WBE入門へ戻るなら <a href="../wbe_101.html">WBE入門</a>、理論系ページ全体の役割差へ戻るなら <a href="theory-pages-reading-guide.html">理論系ページの読み分けガイド</a>、公開ページ全体の役割差へ戻るなら <a href="public-page-reading-guide.html">公開ページの読み分けガイド</a> をご利用ください。
+If you want to go back to the introduction to WBE, please use <a href="../wbe_101.html">Introduction to WBE</a>. If you want to go back to the role differences among theory-related pages as a whole, please use <a href="theory-pages-reading-guide.html">Reading guide for theory-related pages</a>. If you want to go back to role differences among public pages as a whole, please use <a href="public-page-reading-guide.html">Reading guide for public pages</a>.
 </p>
 </section>
 
@@ -176,17 +176,17 @@ WBE入門へ戻るなら <a href="../wbe_101.html">WBE入門</a>、理論系ペ�
 <div class="sidebar-box">
 <h4>Related Wiki</h4>
 <ul>
-<li><a href="theory-pages-reading-guide.html">理論系ページの読み分けガイド →</a></li>
-<li><a href="consciousness-theory-map.html">意識理論マップ →</a></li>
-<li><a href="personhood-and-copy-problem.html">本人性とコピー問題 →</a></li>
+<li><a href="theory-pages-reading-guide.html">Reading guide for theory pages →</a></li>
+<li><a href="consciousness-theory-map.html">Consciousness theory map →</a></li>
+<li><a href="personhood-and-copy-problem.html">Personhood and copy problem →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>公開ページ</h4>
+<h4>Public page</h4>
 <ul>
-<li><a href="../wbe_101.html">WBE入門 →</a></li>
-<li><a href="../perspective.html">研究ノート →</a></li>
-<li><a href="../perspective.html#design-principles">理論フレーム →</a></li>
+<li><a href="../wbe_101.html">Introduction to WBE →</a></li>
+<li><a href="../perspective.html">Research notes →</a></li>
+<li><a href="../perspective.html#design-principles">Theoretical frame →</a></li>
 </ul>
 </div>
 </aside>

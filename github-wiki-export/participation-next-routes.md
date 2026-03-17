@@ -1,160 +1,160 @@
-# Wiki：参加・協業ページのあとに進む5つの道
+# Wiki: 5 paths to follow after participation/collaboration page
 
-> 参加導線を見たあと、次の1ページを迷わず決めるためのガイド
+> A guide to help you decide the next page without hesitation after viewing the participation path
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-14 / 位置づけ: Participation route
+- Updated: 2026-03-14 / Role: Participation route
 
-## このページの役割
-このページは、貢献ガイドや協業候補を読んだあとに、次にどの公開ページや wiki を開くべきかを整理する補助ガイドです。小さな修正を切りたいのか、合格条件と反証条件を詰めたいのか、文献を今できる作業へ変えたいのか、外部依存を準備物へ分解したいのか、L0 の成果物まで降りたいのかで、次の1ページは変わります。
+## Role Of This Page
+This page is an auxiliary guide that helps you organize which public page or wiki to open next after reading the contribution guide and collaboration candidates. The next page will change depending on whether you want to make small corrections, fill in passing and disproving conditions, turn the literature into work that can be done now, break down external dependencies into preparations, or go down to L0 artifacts.
 
-## 正確さの前提
-ここで示すのは参加ページ読後の入口です。個別 Issue や外部連携の成立条件は、必ず元ページ本文で確認してください。
+## Accuracy Notes
+This is the entry point after reading the participation page. Be sure to check the original page for the conditions for individual issues and external collaboration.
 
-## 公開ページへ戻る
-- [貢献ガイド](https://mind-upload.com/issue.html)
-- [協業候補](https://mind-upload.com/issue.html#external-collaboration)
-- [公開コンテンツ統合ハブ](https://mind-upload.com/content_hub.html)
+## Back To Public Pages
+- [Contribution Guide](https://mind-upload.com/issue.html)
+- [Collaboration candidate](https://mind-upload.com/issue.html#external-collaboration)
+- [Public Content Integration Hub](https://mind-upload.com/content_hub.html)
 
-## 関連 Wiki
-- [Wiki: 内製で先にやることと外部依存](https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies) - 外部依存でも今できる準備物を先に確認したい人向けです。
-- [Wiki: 文献から実装・参加へ戻る一本道](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-to-action-route) - 文献を読んだあとに参加作業へ戻すルートを見たい人向けです。
-- [Wiki: L0で最低限そろえる成果物パック](https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack) - 実装側へ降りるときに、何を一式として残すかを確認できます。
+## Related Wiki Pages
+- [Wiki: What to do first in-house and external dependencies](https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies) - This is for people who are externally dependent but want to check what they can prepare now.
+- [Wiki: Straight path back from literature to implementation and participation](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-to-action-route) - For people who want to see the route back to participating work after reading the literature.
+- [Wiki: Minimum artifact pack for L0](https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack) - You can see what you leave behind as a set when you go down to the implementation side.
 
-## いま分かっていること
-- 参加系ページを読んだあとに路線を 1 本に絞ると、作業がかなり具体化します。
-- 小さな修正、条件設計、外部依存の分解では、戻るべきページが違います。
-- 外部依存の話でも、先に内製できる準備物はかなりあります。
+## What Is Currently Known
+- If you narrow down your routes to one after reading the participation-related pages, your work will become much more concrete.
+- The page to return to is different for small modifications, conditional design, and decomposition of external dependencies.
+- Even when it comes to external dependencies, there are quite a few preparations that can be made in-house first.
 
-## まだ分かっていないこと
-- どの route が最も大きな成果につながるかは、その時点の未解決問題や実装状況で変わります。
-- 外部連携や制度整備がどこまで進むかは、相手先や外部条件に依存します。
+## What Is Still Unknown
+- Which route will lead to the greatest results depends on the unresolved issues and implementation status at the time.
+- The extent to which external cooperation and system development will progress depends on the partner and external conditions.
 
 ---
 
-<h2>参加導線の次に路線を決める</h2>
+<h2>Determine the route after the participating route</h2>
 <p>
-Issue や Collaborations は入口として重要ですが、そのままでは次に何を切るべきかが広すぎます。ここでは、<strong>いま何をしたいか</strong>で 5 本の道に分けて、次の1ページを固定します。
+Issues and Collaborations are important as entry points, but leaving them as they are leaves too many questions as to what to do next. Here, we will divide it into 5 paths based on <strong>What we want to do now</strong> and pin the next page.
 </p>
 
-<h2>参加・協業ページのあとに進む5つの道</h2>
+<h2>Five paths to follow after participation/collaboration page</h2>
 <table>
 <thead>
 <tr>
-<th>次にしたいこと</th>
-<th>次に開くページ</th>
-<th>そこで決めること</th>
+<th>What I want to do next</th>
+<th>Next page</th>
+<th>What to decide there</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>小さな修正を今すぐ切りたい</strong></td>
+<td><strong>I want to make small corrections now</strong></td>
 <td><a href="https://mind-upload.com/issue.html">Issue</a> / <a href="https://mind-upload.com/content_hub.html">Content Hub</a></td>
-<td>どのページのどの段落や用語を直すか、どこへ統合するかを固定します。</td>
+<td>Fix which paragraphs and terms on which pages will be corrected and where they will be integrated. </td>
 </tr>
 <tr>
-<td><strong>何を満たせば前進かを詰めたい</strong></td>
+<td><strong>I want to figure out what needs to be met to move forward</strong></td>
 <td><a href="https://mind-upload.com/verification.html">Verification</a> / <a href="https://mind-upload.com/tech_roadmap.html">Roadmap</a></td>
-<td>合格条件、反証条件、どのレベルの主張かを切り分けます。</td>
+<td>Distinguish the passing conditions, disproving conditions, and what level of assertion. </td>
 </tr>
 <tr>
-<td><strong>文献を今できる作業へ変えたい</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/literature-to-action-route">文献から実装・参加へ戻る一本道</a> / <a href="https://mind-upload.com/research_harvest_50.html">Research Harvest</a></td>
-<td>その文献を未解決問題、提案、Issue、協業準備のどこへ戻すかを決めます。</td>
+<td><strong>I want to turn literature into work that can be done now</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/literature-to-action-route">A straight path back from literature to implementation and participation</a> / <a href="https://mind-upload.com/research_harvest_50.html">Research Harvest</a></td>
+<td>Decide where to return the document to: Open Problems, Proposals, Issues, or Collaboration Preparations. </td>
 </tr>
 <tr>
-<td><strong>外部依存を準備物へ分解したい</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies">内製で先にやることと外部依存</a> / <a href="https://mind-upload.com/issue.html#external-collaboration">Collaborations</a></td>
-<td>いま内製できるものと、相手先や制度が必要なものを分けます。</td>
+<td><strong>I want to break down external dependencies into preparations</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies">In-house production and external dependencies</a> / <a href="https://mind-upload.com/issue.html#external-collaboration">Collaborations</a></td>
+<td>We will distinguish between things that can be produced in-house and things that require a partner or system. </td>
 </tr>
 <tr>
-<td><strong>L0 実装の最小ループまで降りたい</strong></td>
-<td><a href="https://mind-upload.com/datasets.html#l0-practice">Hands-on</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack">L0で最低限そろえる成果物パック</a></td>
-<td>再現可能な解析として何を一式で残すか、最小成果物を固定します。</td>
+<td><strong>I want to descend to the minimum loop of L0 implementation</strong></td>
+<td><a href="https://mind-upload.com/datasets.html#l0-practice">Hands-on</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack">L0 minimum artifact pack</a></td>
+<td>Fix the minimum deliverables of what should remain as a set of reproducible analyses. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>なぜこの分け方なのか</h2>
+<h2>Why this division</h2>
 <table>
 <thead>
 <tr>
-<th>道</th>
-<th>参加ページのあとにそのページへ行く理由</th>
+<th>way</th>
+<th>Reasons for going to the page after joining page</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>小さな修正</strong></td>
-<td>参加の最初の価値は大きな計画より、具体的な修正位置を特定して直すことにあるからです。</td>
+<td><strong>Small fixes</strong></td>
+<td>The initial value of participation lies in identifying and correcting specific points to be corrected, rather than in a big plan. </td>
 </tr>
 <tr>
-<td><strong>条件設計</strong></td>
-<td>曖昧な Issue を減らすには、何を満たせば前進かを先に Verification 側で固める必要があるからです。</td>
+<td><strong>Condition design</strong></td>
+<td>In order to reduce ambiguous issues, it is necessary to first determine on the Verification side what needs to be met to move forward. </td>
 </tr>
 <tr>
-<td><strong>文献からの作業化</strong></td>
-<td>論文メモのままでは散らばりやすく、どの公開ページへ戻すかを決める方が前進に変わりやすいからです。</td>
+<td><strong>Working from literature</strong></td>
+<td>Thesis notes tend to get scattered, and it is easier to move forward by deciding which public page to return to. </td>
 </tr>
 <tr>
-<td><strong>外部依存の分解</strong></td>
-<td>相手待ちに見える作業でも、仕様、比較表、最小成果物などは先に内製できるからです。</td>
+<td><strong>Decomposing external dependencies</strong></td>
+<td>Even if the work looks like it is waiting for a partner, specifications, comparison tables, minimum deliverables, etc. can be produced in-house first. </td>
 </tr>
 <tr>
-<td><strong>L0 実装準備</strong></td>
-<td>参加の一部は文章だけでなく、再現可能な成果物の最小ループを作ることに直結するからです。</td>
+<td><strong>L0 implementation preparation</strong></td>
+<td>Part of participating is not just about writing, but also about creating the smallest loop of reproducible artifacts. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>途中で止まったときの補助 wiki</h2>
+<h2>Assistance wiki when you stop midway</h2>
 <table>
 <thead>
 <tr>
-<th>止まる場所</th>
-<th>戻るとよい wiki</th>
+<th>Place to stop</th>
+<th>Go back to wiki</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>外部依存と実行可能な変更の境界で止まる</td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies">内製で先にやることと外部依存</a></td>
+<td>Stops at the boundary between external dependencies and executable changes</td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies">In-house production and external dependencies</a></td>
 </tr>
 <tr>
-<td>Issue に何を書けばよいかで止まる</td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/issue-writing-basics">はじめての Issue の書き方</a></td>
+<td>Stop thinking about what to write in the issue</td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/issue-writing-basics">How to write your first issue</a></td>
 </tr>
 <tr>
-<td>論文をどこへ戻すかで止まる</td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/literature-to-action-route">文献から実装・参加へ戻る一本道</a></td>
+<td>Stops depending on where you want to return the paper</td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/literature-to-action-route">A straight path back from literature to implementation and participation</a></td>
 </tr>
 <tr>
-<td>公開ページと wiki の置き場で止まる</td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/content-placement-basics">新しい情報の置き場所を決める基本</a> / <a href="https://mind-upload.com/content_hub.html">Content Hub</a></td>
+<td>Stops at public page and wiki locations</td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/content-placement-basics">Basics of deciding where to place new information</a> / <a href="https://mind-upload.com/content_hub.html">Content Hub</a></td>
 </tr>
 <tr>
-<td>L0 の最小成果物で止まる</td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack">L0で最低限そろえる成果物パック</a></td>
+<td>Stop at L0 minimum deliverables</td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack">L0 minimum artifact pack</a></td>
 </tr>
 <tr>
-<td>どの主張レベルの話かで止まる</td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claim-level-reading-routes">L0〜L5ごとの読み進め方</a></td>
+<td>Stop depending on what level of argument you are talking about</td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claim-level-reading-routes">How to read each L0 to L5</a></td>
 </tr>
 </tbody>
 </table>
 
-<h2>よくある迷い方</h2>
+<h2>Common ways to get lost</h2>
 
 <h4>Mistake</h4>
 <ul>
-<li><strong>Issue を開いただけで次の作業が決まった気になる：</strong> 実際には、修正、条件設計、外部依存の分解などに絞る必要があります。</li>
-<li><strong>大きい連携の話から始める：</strong> 先に 1 ページ要約や最小成果物を内製した方が進みやすいです。</li>
-<li><strong>文献を読んで、そのまま参加済みだと思う：</strong> どの公開ページや Issue へ戻すかを決める必要があります。</li>
-<li><strong>文章修正と主張レベルの修正を同じ重さで扱う：</strong> 用語修正なのか、合格条件の修正なのかを先に分ける方が安全です。</li>
+<li><strong>Just opening the issue makes you feel like you have decided what to do next:</strong> In reality, you need to focus on things like modification, condition design, and decomposition of external dependencies. </li>
+<li><strong>Start with the big collaboration:</strong> It will be easier to proceed if you create a one-page summary or minimum deliverables in-house first. </li>
+<li><strong>Read the article and think you've already joined:</strong> You need to decide which public page or issue to return to. </li>
+<li><strong>Treating text corrections and assertion-level corrections with the same weight:</strong> It is safer to distinguish between terminology corrections and passing condition corrections first. </li>
 </ul>
 
-<h2>次に戻る場所</h2>
+<h2>Where to return next</h2>
 <p>
-参加の入口へ戻るなら <a href="https://mind-upload.com/issue.html">貢献ガイド</a>、外部連携の候補へ戻るなら <a href="https://mind-upload.com/issue.html#external-collaboration">協業候補</a>、公開先の整理へ戻るなら <a href="https://mind-upload.com/content_hub.html">公開コンテンツ統合ハブ</a> をご利用ください。
+Please use <a href="https://mind-upload.com/issue.html">Contribution Guide</a> to return to the entry point for participation, <a href="https://mind-upload.com/issue.html#external-collaboration">Collaboration candidates</a> to return to external collaboration candidates, and <a href="https://mind-upload.com/content_hub.html">Public content integration hub</a> to return to organizing publishing destinations.
 </p>

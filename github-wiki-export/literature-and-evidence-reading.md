@@ -1,136 +1,129 @@
-# Wiki：文献と証拠ページの読み方
+# Wiki: How to read the literature and evidence page
 
-> 『論文が多い』と『結論が強い』を混同しないために
+> Don't confuse 'many papers' with 'strong conclusions'
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-16 / 位置づけ: Reading guide
+- Updated: 2026-03-15 / Role: Reading guide
 
-## このページの役割
-このページは、Mind-Upload にある文献系ページの役割分担を整理する補助ページです。論文が多いページほど、役割を取り違えると読み方が崩れるため、『何をするページか』『どこまで確定扱いしないか』を先に説明します。
+## Role Of This Page
+This page is an auxiliary page that organizes the roles of the literature pages on Mind-Upload. The more papers there are on a page, the more difficult it is to read if the roles are mixed up, so this guide first explains ``what the page does'' and ``to what extent it should not be treated as definitive.''
 
-## 正確さの前提
-このページは読み方の補助です。個別論文や個別提案の評価は、必ず元ページと元論文へ戻って確認してください。
+## Accuracy Notes
+This page is a reading aid. Please be sure to return to the original page and original paper to check the evaluation of individual papers and individual proposals.
 
-## 公開ページへ戻る
-- [文献地図](https://mind-upload.com/research_harvest_50.html)
-- [論文集](https://mind-upload.com/mind_uploading_papers.html)
-- [技術提案](https://mind-upload.com/issue.html#proposal-integration)
+## Back To Public Pages
+- [Literature map](https://mind-upload.com/research_harvest_50.html)
+- [Collection of papers](https://mind-upload.com/mind_uploading_papers.html)
+- [Technical proposal](https://mind-upload.com/issue.html#proposal-integration)
 
-## 関連 Wiki
-- [Wiki: 文献のソース種別と状態ラベル](https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status) - Scopus、arXiv、Review、Media、source_logged などの意味を整理します。
-- [Wiki: 検証基盤の基本](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - 証拠の強さを、何で見るべきかの前提を補います。
-- [Wiki: WBEの基本](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - 各論文や提案が、全体のどの論点に当たるかを補います。
-- [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - 他の基礎ページへ戻れます。
+## Related Wiki Pages
+- [Wiki: Document source type and status label](https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status) - Organize the meaning of Scopus, arXiv, Review, Media, source_logged, etc.
+- [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Compensate with assumptions about the strength of evidence and what to look for.
+- [Wiki: Basics of WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - Each paper or proposal corresponds to an overall issue.
+- [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other basic pages.
 
-## いま分かっていること
-- 役割の違うページを分けると、量の多さと結論の強さを混同しにくくなります。
-- 論文集、文献地図、提案ページは、それぞれ読む目的が異なります。
-- 技術・自然科学では、source type と evidence class を分け、task demo の直後に mechanistic boundary paper を挟んだ方が読み違えを減らせます。
-- 重要な判断は、要約ではなく元論文や元ページへ戻って行う必要があります。
+## What Is Currently Known
+- Separating pages with different roles makes it difficult to confuse volume with strength of conclusion.
+- The purpose of reading the collection of papers, bibliography map, and proposal page is different.
+- Important decisions should be made by going back to the original paper or page, not the summary.
 
-## まだ分かっていないこと
-- どの論文が最終的に中心的根拠として残るかは、今後の整理で変わる可能性があります。
-- source_logged などの状態は、後続の精査で更新されることがあります。
+## What Is Still Unknown
+- Which paper will ultimately remain as the central basis may change in the future.
+- States such as source_logged may be updated on subsequent scrutiny.
 
 ---
 
-<h2>まず役割を分ける</h2>
+<h2>First, separate roles</h2>
 <p>
-文献系ページは、全部が同じ役割ではありません。広く拾うページ、未解決問題ごとに整理するページ、提案として統合するページを分けることで、読者が「いま何を見ているのか」を見失いにくくしています。
+Not all literature pages have the same role. By separating the pages that collect broadly, the pages that organize by unresolved problems, and the pages that integrate as proposals, we make it difficult for readers to lose track of what they are currently looking at.
 </p>
 
-<strong>文献を読んだあとに次の1ページを決めたいとき</strong>
+<strong>When you want to decide the next page after reading the literature</strong>
 <p>
-役割差だけでなく、論文や文献地図を読んだあとに未解決問題、提案、Issue、協業候補のどこへ戻るかを一本道で見たい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/literature-to-action-route">文献から実装・参加へ戻る一本道</a> をご覧ください。
+If you want to see not only the difference in roles but also where to go back to unresolved problems, proposals, issues, and collaboration candidates after reading papers and literature maps, please see <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/literature-to-action-route">The straight path from literature to implementation and participation</a>.
 </p>
 
-<strong>技術・自然科学の一次証拠だけ先に追いたいとき</strong>
+<strong>When you want to follow only the primary evidence of technology/natural science</strong>
 <p>
-<a href="https://mind-upload.com/mind_uploading_papers.html">論文集</a> は broad archive なので、年順の先頭がそのまま技術フロンティア順とは限りません。decode、speech neuroprosthesis、ESI direct validation、maintenance-state のような技術ルートを先に見たい場合は、論文集内の <strong>技術・自然科学の優先ルート</strong> から入ってください。
+<a href="https://mind-upload.com/mind_uploading_papers.html">Collection of Papers</a> is a broad archive, so the first chronological order does not necessarily correspond to technological frontier order. If you would like to see technical routes such as decode, speech neuroprosthesis, ESI direct validation, and maintenance-state first, please enter from <strong>Technology/Natural Science Priority Route</strong> in the collection of papers.
 </p>
 
-<strong>Badge と証拠クラスを分けたいとき</strong>
-<p>
-Scopus、arXiv、source_logged は入口や状態を示しますが、<strong>その論文が何を直接増やすか</strong>までは示しません。技術・自然科学の主導線では、direct validation、task-limited demo、mechanistic boundary / hidden-state evidence、dataset / benchmark / standard、review / context を別クラスとして読む必要があります。使い分けは <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status">Wiki: 文献のソース種別・状態・証拠クラスの読み方</a> にまとめました。
-</p>
-
-<h2>3つのページの違い</h2>
+<h2>Differences between the three pages</h2>
 <table>
 <thead>
 <tr>
-<th>ページ</th>
-<th>役割</th>
-<th>ここでやること</th>
-<th>ここだけではしないこと</th>
+<th>Page</th>
+<th>Role</th>
+<th>What to do here</th>
+<th>Things not to do here</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>論文集</strong></td>
-<td>広く拾う入口</td>
-<td>年別の流れ、関連論文の存在、要約からの当たり付け。技術読者は優先ルートに加え、demo / validator / mechanistic boundary のどれかを見て主要一次文献へ入ります。</td>
-<td>各論文の最終評価をここだけで確定すること。</td>
+<td><strong>Collection of papers</strong></td>
+<td>Wide entrance</td>
+<td>The flow by year, existence of related papers, and guesses from the abstracts. Technical readers enter key primary sources through the preferred route. </td>
+<td>Confirm the final evaluation of each paper only here. </td>
 </tr>
 <tr>
-<td><strong>文献地図</strong></td>
-<td>未解決問題ごとの整理</td>
-<td>U番号ごとに、何が解けていて何が未解決かを見ます。技術読者は U ごとに evidence class を見分け、demo と ceiling-setting paper を混ぜないようにします。</td>
-<td>引用数だけで結論の強さを決めること。</td>
+<td><strong>Bibliography map</strong></td>
+<td>Organization by unresolved issues</td>
+<td>See what is solved and what is unsolved for each U number. </td>
+<td>The strength of a conclusion is determined by the number of citations alone. </td>
 </tr>
 <tr>
-<td><strong>技術提案</strong></td>
-<td>実装方針の統合</td>
-<td>どの提案があり、どの状態で、どこへ影響するかを追うこと。</td>
-<td>提案受理を、そのまま実装完了と読むこと。</td>
+<td><strong>Technical proposal</strong></td>
+<td>Integration of implementation strategies</td>
+<td>Keep track of which proposals are out there, what state they are in, and what impact they have. </td>
+<td> Acceptance of the proposal should be read as implementation completion. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>どこまで深読みするか</h2>
+<h2>How deep should you read</h2>
 <table>
 <thead>
 <tr>
-<th>見ているもの</th>
-<th>その場で止めてよい</th>
-<th>原文へ戻るべき</th>
+<th>What you're looking at</th>
+<th>You can stop on the spot</th>
+<th>Return to original text</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>論文カード</td>
-<td>自分の論点と遠いと分かった時点。</td>
-<td>方法、評価、限界を根拠として使いたいとき。</td>
+<td>Thesis card</td>
+<td>When you realize that your point is far from yours. </td>
+<td>When you want to use methods, evaluations, and limitations as evidence. </td>
 </tr>
 <tr>
-<td>U番号の現状マップ</td>
-<td>どの U が自分に関係するか分かった時点。</td>
-<td>本当にその U にその文献が効くか確認したいとき。</td>
+<td>Current U number map</td>
+<td>When you know which U is relevant to you. </td>
+<td>When you want to check whether the literature really works for that U. </td>
 </tr>
 <tr>
-<td>提案の要約表</td>
-<td>関係するストリームと状態が分かった時点。</td>
-<td>採否や妥当性を判断したいとき。</td>
+<td>Proposal summary table</td>
+<td>When the streams and state involved are known. </td>
+<td>When you want to judge acceptance or rejection or validity. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>読み違えを防ぐ4つのルール</h2>
+<h2>Three rules to prevent misreading</h2>
 
 <h4>Rule</h4>
 <ul>
-<li><strong>量と強さを混同しない：</strong> 論文数や引用数は、結論の確定とは別です。</li>
-<li><strong>Badge と証拠クラスを混同しない：</strong> Scopus / arXiv / source_logged は入口や状態であり、direct validation、system demo、mechanistic boundary は別軸です。</li>
-<li><strong>要約で止めすぎない：</strong> 根拠として使うときは、必ず DOI や原文へ戻ります。</li>
-<li><strong>状態ラベルを読み違えない：</strong> source_logged、提案受理、文書反映は、それぞれ意味が違います。</li>
+<li><strong>Don't confuse quantity with strength:</strong> The number of papers and citations is not the same as establishing a conclusion. </li>
+<li><strong>Don't stop at the summary:</strong> Always go back to the DOI or original text when using it as evidence. </li>
+<li><strong>Do not misread status labels:</strong> source_logged, proposal accepted, and document reflected each have different meanings. </li>
 </ul>
 
-<strong>Scopus / arXiv / source_logged の意味だけ先に確認したいとき</strong>
+<strong>When you want to check the meaning of Scopus / arXiv / source_logged first</strong>
 <p>
-このページは役割差を説明する補助ページです。掲載元、文献種別、サイト内状態、evidence class の違いを 1 枚で整理したい場合は、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status">Wiki: 文献のソース種別・状態・証拠クラスの読み方</a> を先に見ると、論文集や文献地図の見え方が安定します。
+This page is a supplementary page that explains the role differences. If you want to organize the differences in publication source, document type, and site status on a single page, look at <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status">Wiki: How to read document source type and status labels</a> first, and the way the collection of papers and bibliographic maps will look will be stabilized.
 </p>
 
-<h2>次にどこへ戻るか</h2>
+<h2>Where to go back next</h2>
 <p>
-広く論文を眺めたい場合は <a href="https://mind-upload.com/mind_uploading_papers.html">論文集</a>、未解決問題から入りたい場合は <a href="https://mind-upload.com/research_harvest_50.html">文献地図</a>、提案と実装方針を追いたい場合は <a href="https://mind-upload.com/issue.html#proposal-integration">技術提案</a> へ戻ってください。
+If you want to view a wide range of papers, please go back to <a href="https://mind-upload.com/mind_uploading_papers.html">Paper Collection</a>, if you want to start with unsolved problems, go to <a href="https://mind-upload.com/research_harvest_50.html">Literature Map</a>, and if you want to follow proposals and implementation policies, go back to <a href="https://mind-upload.com/issue.html#proposal-integration">Technical Proposal</a>.
 </p>

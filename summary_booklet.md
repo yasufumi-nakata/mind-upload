@@ -1,11 +1,11 @@
 ---
 layout: default
 title: "Mind-Upload Summary Booklet"
-description: "公開ページの要点を A4 冊子向けに自動生成した要約ページ。"
+description: "An auto-generated A4-style briefing page built from the site's public pages."
 article_type: "Briefing Booklet"
-subtitle: "公開ページの front matter と冒頭要約から再生成される A4 要約版"
+subtitle: "An A4 briefing regenerated from public-page front matter and lead summaries"
 author: Mind Uploading Research Project
-last_updated: "2026-03-17"
+last_updated: "2026-03-16"
 note: "Auto-generated from public pages"
 body_class: "summary-booklet-page"
 ---
@@ -17,39 +17,39 @@ body_class: "summary-booklet-page"
 
 <section class="booklet-sheet booklet-cover">
   <p class="booklet-kicker">Mind-Upload Commons</p>
-  <h2 class="booklet-cover-title">公開ページ要約冊子</h2>
+  <h2 class="booklet-cover-title">Public Page Summary Booklet</h2>
   <p class="booklet-cover-lead">
-    このページは、Mind-Upload 全体の入口です。『このサイトは何を目指しているか』『どこから読むと迷いにくいか』『今すぐ見に行くべきページはどれか』を最短で把握できるようにしています。
+    This page is the main entry point to Mind-Upload. It is designed to show, as quickly as possible, what this site is trying to do, where to start reading, and which pages matter first.
   </p>
 
   <div class="booklet-cover-band">
     <div>
-  <span>更新基準日</span>
-  <strong>2026-03-17</strong>
+  <span>Reference Date</span>
+  <strong>2026-03-16</strong>
 </div>
 <div>
-  <span>現在の重点</span>
-  <strong>標準、置き場、ベンチマーク、監査をセットでそろえる必要があります。</strong>
+  <span>Current Focus</span>
+  <strong>Standards, repositories, benchmarks, and audits must be b…</strong>
 </div>
 <div>
-  <span>最初の入口</span>
-  <strong>Mind-Upload / 検証基盤：Mind Uploading Verification Commons</strong>
+  <span>Primary Entry</span>
+  <strong>Mind-Upload / Verification: Mind Uploading Verification C…</strong>
 </div>
 
   </div>
 
   <div class="booklet-card-grid booklet-card-grid-3">
     <article class="booklet-card">
-  <h3>このサイトが最初に作るもの</h3>
-  <p>マインドアップロード（WBE）を「夢の話」で終わらせないために、まず必要なのは<strong>共通のルール</strong>です。Mind-Uploadでは、データの置き方、評価のしかた、失敗の判定、再現手順を先にそろえて、誰でも同じ基準で確かめられる土台を作ります。</p>
+  <h3>What This Site Builds First</h3>
+  <p>To keep mind uploading and WBE from remaining only a dream narrative, the first requirement is <strong>a shared rule set</strong>. Mind-Upload puts data layout, evaluation, failure judgment, and reproduction procedures in place first so anyone can check the same result against the same criteria.</p>
 </article>
 <article class="booklet-card">
-  <h3>すぐ断言しないもの</h3>
-  <p>どの条件を満たせば L4 の本人性を認めるかについて、分野横断の合意はまだありません。 / 非侵襲計測だけで WBE に十分な内部情報が取れるかは未解決です。 / L5 の社会実装に必要な制度設計は、技術問題だけでは決まりません。</p>
+  <h3>What It Does Not Claim Yet</h3>
+  <p>There is still no cross-disciplinary agreement on what would count as sufficient evidence for L4 personal identity. / It remains unresolved…</p>
 </article>
 <article class="booklet-card">
-  <h3>いま読むべき主ページ</h3>
-  <p>Mind-Upload / 検証基盤：Mind Uploading Verification Commons / 技術ロードマップ：計測→再構成→実装でWBEを理解する / マインドアップロード実現への道：技術・理論の統合アプローチ / データ &amp; ハンズオン：何で始めて、どうL0まで持っていくか / 貢献ガイド</p>
+  <h3>Core Pages To Read Now</h3>
+  <p>Mind-Upload / Verification: Mind Uploading Verification Commons / Technical Roadmap: Understanding WBE Through Measurement, Reconstruction, and Implementation / Toward Mind Uploading: An Integrated Technical and Theoretical Approach / Data &amp; Hands-on: Where to start and how to get to L0 / Contribution Guide</p>
 </article>
 
   </div>
@@ -58,45 +58,45 @@ body_class: "summary-booklet-page"
 <section class="booklet-sheet booklet-page-break">
   <div class="booklet-section-header">
     <p class="booklet-kicker">Contents</p>
-    <h2>この冊子の見取り図</h2>
+    <h2>Booklet Overview</h2>
   </div>
 
   <div class="booklet-card-grid booklet-card-grid-2">
     <article class="booklet-card">
-  <h3>1. 何を目指すサイトか</h3>
-  <p>このページは、Mind-Upload 全体の入口です。『このサイトは何を目指しているか』『どこから読むと迷いにくいか』『今すぐ見に行くべきページはどれか』を最短で把握できるようにしています。</p>
+  <h3>1. Site Scope</h3>
+  <p>This page is the main entry point to Mind-Upload. It is designed to show, as quickly as possible, what this site is try…</p>
 </article>
 <article class="booklet-card">
-  <h3>2. 何が既知で何が未解決か</h3>
-  <p>このページは『WBEが可能だ』と断言するページではありません。可能かどうかを確かめられる土台を作るページです。</p>
+  <h3>2. Known vs Unknown</h3>
+  <p>This page does not claim that WBE is already possible. It defines the substrate needed to test whether it is.</p>
 </article>
 <article class="booklet-card">
-  <h3>3. 主ページの役割分担</h3>
-  <p>このページは、WBEの論点を『計測』『再構成』『実装』『検証』『社会実装』に分けて並べた地図です。どの問題が土台で、どの問題がまだ未解決なのかを見失わないために使います。</p>
+  <h3>3. Core Page Roles</h3>
+  <p>This page is a map of WBE questions arranged under measurement, reconstruction, implementation, verification, and socia…</p>
 </article>
 <article class="booklet-card">
-  <h3>4. 補助ページと導線</h3>
-  <p>このページは、公開コンテンツが散らばらないように『どの話題をどのページへ足すべきか』を固定するための運用ハブです。新しい情報を書く前に、まず既存ページの統合先を確認する場所として使います。</p>
+  <h3>4. Support Routes</h3>
+  <p>This page is the operations hub for fixing where public content should go so material does not scatter across the site.…</p>
 </article>
 <article class="booklet-card">
-  <h3>5. 次のアクション</h3>
-  <p>このページは、Mind-Uploadにどう参加できるかを、Issue運用と対応状況ごとに整理した入口です。専門家だけの場所ではなく、『どの作業なら今すぐ役に立つか』が見えるようにしています。</p>
+  <h3>5. Next Actions</h3>
+  <p>This page explains how to participate in Mind-Upload, how to read issue status, and how to separate changes that can be…</p>
 </article>
 <article class="booklet-card">
-  <h3>6. 元ページ一覧</h3>
-  <p>詳細確認へ戻るための公開ページ導線を最後に集約します。</p>
+  <h3>6. Source Pages</h3>
+  <p>The booklet closes with a compact route back to the detailed public pages.</p>
 </article>
 
   </div>
 
   <div class="booklet-status-grid">
     <div class="booklet-status-card booklet-status-card-strong">
-  <span>ひとことで言うと</span>
-  <strong>Mind-Uploadの中心は、派手な結論を出すことではなく、前進を測れる検証基盤を作ることです。</strong>
+  <span>In One Sentence</span>
+  <strong>The core of Mind-Upload is not bold conclusions but a verification commons that lets progress be measured.</strong>
 </div>
 <div class="booklet-status-card">
-  <span>読了後に持ち帰るもの</span>
-  <strong>全体像、現実的な作業範囲、読む順番、協力の入口</strong>
+  <span>Main Takeaway</span>
+  <strong>The project scope, realistic work range, reading order, and collaboration entry points</strong>
 </div>
 
   </div>
@@ -105,24 +105,24 @@ body_class: "summary-booklet-page"
 <section class="booklet-sheet booklet-page-break">
   <div class="booklet-section-header">
     <p class="booklet-kicker">Project Scope</p>
-    <h2>何を目指すサイトか</h2>
+    <h2>What This Site Is Trying To Build</h2>
   </div>
 
   <div class="booklet-quote">
-    <p>マインドアップロード（WBE）を「夢の話」で終わらせないために、まず必要なのは<strong>共通のルール</strong>です。Mind-Uploadでは、データの置き方、評価のしかた、失敗の判定、再現手順を先にそろえて、誰でも同じ基準で確かめられる土台を作ります。</p>
+    <p>To keep mind uploading and WBE from remaining only a dream narrative, the first requirement is <strong>a shared rule set</strong>. Mind-Upload puts data layout, evaluation, failure judgment, and reproduction procedures in place first so anyone can check the same result against the same criteria.</p>
   </div>
 
   <div class="booklet-two-column">
     <div>
-      <h3>先に固定すること</h3>
+      <h3>What We Fix First</h3>
       <ul class="booklet-list">
-        <li>標準、置き場、ベンチマーク、監査をセットでそろえる必要があります。</li><li>デコーディングとエミュレーションを混同しないために、主張レベルと失敗条件を先に固定します。</li><li>ここを読むと、なぜデータだけ集めても前進にならないのかが分かります。</li><li>brain-to-text や speech decode では、Neural Contribution Card で task constraint・language prior・candidate set・no-brain / no-LM / shuffle baseline・subject cooperation を固定します。</li>
+        <li>Standards, repositories, benchmarks, and audits must be built as one package.</li><li>Claim levels and failure conditions are fixed up front so decoding is not confused with emulation.</li><li>This page explains why collecting data alone is not the same as making progress.</li><li>It separates what can and cannot be said now, so the discussion does not overclaim.</li>
       </ul>
     </div>
     <div>
-      <h3>入口で断言しないこと</h3>
+      <h3>What We Do Not Claim Up Front</h3>
       <ul class="booklet-list">
-        <li>どの条件を満たせば L4 の本人性を認めるかについて、分野横断の合意はまだありません。</li><li>非侵襲計測だけで WBE に十分な内部情報が取れるかは未解決です。</li><li>L5 の社会実装に必要な制度設計は、技術問題だけでは決まりません。</li><li>どの理論の組み合わせが最終的に十分条件になるかは未確定です。</li>
+        <li>There is still no cross-disciplinary agreement on what would count as sufficient evidence for L4 personal identity.</li><li>It remains unresolved whether noninvasive measurement alone can capture enough internal state for WBE.</li><li>The institutional design needed for L5 social deployment cannot be decided by technical requirements alone.</li><li>It remains unsettled which combination of theories, if any, will ultimately amount to a sufficient condition.</li>
       </ul>
     </div>
   </div>
@@ -130,26 +130,26 @@ body_class: "summary-booklet-page"
   <table class="data-table booklet-table">
     <thead>
       <tr>
-        <th>観点</th>
-        <th>いま読むべき説明</th>
+        <th>Lens</th>
+        <th>What To Read Now</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-  <td>入口</td>
-  <td><strong><a href="/index.html">Mind-Upload</a></strong><br>このページは、Mind-Upload 全体の入口です。『このサイトは何を目指しているか』『どこから読むと迷いにくいか』『今すぐ見に行くべきページはどれか』を最短で把握できるようにしています。</td>
+  <td>Entry</td>
+  <td><strong><a href="/index.html">Mind-Upload</a></strong><br>This page is the main entry point to Mind-Upload. It is designed to show, as quickly as possible, what this site is trying to do, where to start reading, and which pages matter first.</td>
 </tr>
 <tr>
-  <td>検証基盤</td>
-  <td><strong><a href="/verification.html">検証基盤：Mind Uploading Verification Commons</a></strong><br>このページは、Mind-Upload の中心となる設計図です。データ、評価、失敗判定、再現手順を先にそろえることで、『何を達成したら前進か』を後付けではなく事前に決める考え方を説明します。</td>
+  <td>Verification Commons</td>
+  <td><strong><a href="/verification.html">Verification: Mind Uploading Verification Commons</a></strong><br>This page is the core blueprint of Mind-Upload. It explains how to define progress in advance rather than retroactively by aligning data, evaluation, failure conditions, and reproduction pr…</td>
 </tr>
 <tr>
-  <td>技術地図</td>
-  <td><strong><a href="/tech_roadmap.html">技術ロードマップ：計測→再構成→実装でWBEを理解する</a></strong><br>このページは、WBEの論点を『計測』『再構成』『実装』『検証』『社会実装』に分けて並べた地図です。どの問題が土台で、どの問題がまだ未解決なのかを見失わないために使います。</td>
+  <td>Technical Map</td>
+  <td><strong><a href="/tech_roadmap.html">Technical Roadmap: Understanding WBE Through Measurement, Reconstruction, and Implementation</a></strong><br>This page is a map of WBE questions arranged under measurement, reconstruction, implementation, verification, and social deployment. Its purpose is to keep the reader from losing track of w…</td>
 </tr>
 <tr>
-  <td>理論整理</td>
-  <td><strong><a href="/perspective.html">マインドアップロード実現への道：技術・理論の統合アプローチ</a></strong><br>このページは、マインドアップロードをめぐる理論・計測・実装の論点を、一次文献と限界を並べながら追う長い研究ノートです。楽観論だけでも悲観論だけでもなく、『どこまでは言えて、どこから先は未解決か』をはっきり分けて読めるようにしています。</td>
+  <td>Theory Framing</td>
+  <td><strong><a href="/perspective.html">Toward Mind Uploading: An Integrated Technical and Theoretical Approach</a></strong><br>This page is a long research note that follows the theoretical, measurement, and implementation questions around mind uploading while keeping primary literature and hard limits side by side…</td>
 </tr>
 
     </tbody>
@@ -159,20 +159,20 @@ body_class: "summary-booklet-page"
 <section class="booklet-sheet booklet-page-break">
   <div class="booklet-section-header">
     <p class="booklet-kicker">Known vs Unknown</p>
-    <h2>何が既知で、何が未解決か</h2>
+    <h2>What Is Known and What Remains Open</h2>
   </div>
 
   <div class="booklet-card-grid booklet-card-grid-2">
     <article class="booklet-card booklet-card-positive">
-      <h3>比較的はっきりしていること</h3>
+      <h3>Relatively Well Supported</h3>
       <ul class="booklet-list">
-        <li>公開データ、標準、ベンチマーク、監査をそろえると、L0〜L2 の前進は比較可能な形で積み上げられます。</li><li>EEGやデコーディング研究は、条件を限定すれば測定可能な前進を作れます。</li><li>connectome-complete は emulation-complete を意味せず、maintenance-state の不足を別に監査する必要があります。</li><li>本人性や意識の強い主張は、入口ページではなく後段の検証設計として扱う必要があります。</li><li>標準、共有基盤、評価、監査をセットでそろえないと、比較可能な前進は作れません。</li>
+        <li>When public data, standards, benchmarks, and audit rules are in place, L0-L2 progress can accumulate in comparable form.</li><li>EEG and decoding research can create measurable progress when their claims stay within their conditions.</li><li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li><li>Strong claims about identity or consciousness belong in downstream verification design, not on the landing page.</li><li>Comparable progress does not exist unless standards, shared infrastructure, evaluation, and auditing are aligned together.</li>
       </ul>
     </article>
     <article class="booklet-card booklet-card-caution">
-      <h3>まだ保留すべきこと</h3>
+      <h3>Still Open or Conditional</h3>
       <ul class="booklet-list">
-        <li>どの条件を満たせば L4 の本人性を認めるかについて、分野横断の合意はまだありません。</li><li>非侵襲計測だけで WBE に十分な内部情報が取れるかは未解決です。</li><li>L5 の社会実装に必要な制度設計は、技術問題だけでは決まりません。</li><li>どの因果構造近似で L4 の本人性に十分と言えるかは、まだ決着していません。</li><li>熱力学、閉ループ、本人性をまとめた最終勝利条件は未完成です。</li>
+        <li>There is still no cross-disciplinary agreement on what would count as sufficient evidence for L4 personal identity.</li><li>It remains unresolved whether noninvasive measurement alone can capture enough internal state for WBE.</li><li>The institutional design needed for L5 social deployment cannot be decided by technical requirements alone.</li><li>There is still no settled answer on which causal-structure approximation would be sufficient for L4 personal identity.</li><li>A final success condition integrating thermodynamics, closed-loop behavior, and identity is still incomplete.</li>
       </ul>
     </article>
   </div>
@@ -180,23 +180,23 @@ body_class: "summary-booklet-page"
   <div class="booklet-timeline">
     <div class="booklet-step">
   <span>Step 1</span>
-  <strong>入口</strong>
-  <p>Mind-Uploadの中心は、派手な結論を出すことではなく、前進を測れる検証基盤を作ることです。</p>
+  <strong>Entry</strong>
+  <p>The core of Mind-Upload is not bold conclusions but a verification commons that lets progress be measured.</p>
 </div>
 <div class="booklet-step">
   <span>Step 2</span>
   <strong>L0</strong>
-  <p>まずは共有基盤を押さえ、その後にスターターデータセットを見る順にしています。</p>
+  <p>We&#39;re looking at the shared infrastructure first, then the starter dataset.</p>
 </div>
 <div class="booklet-step">
   <span>Step 3</span>
   <strong>L1-L2</strong>
-  <p>デコーディングとエミュレーションを混同しないために、主張レベルと失敗条件を先に固定します。</p>
+  <p>Claim levels and failure conditions are fixed up front so decoding is not confused with emulation.</p>
 </div>
 <div class="booklet-step">
   <span>Later</span>
-  <strong>上位主張</strong>
-  <p>どの計測粒度が最終的に WBE に十分かは、まだ決まっていません。</p>
+  <strong>Higher-Level Claims</strong>
+  <p>It is still unsettled which measurement granularity will ultimately be sufficient for WBE.</p>
 </div>
 
   </div>
@@ -205,47 +205,47 @@ body_class: "summary-booklet-page"
 <section class="booklet-sheet booklet-page-break">
   <div class="booklet-section-header">
     <p class="booklet-kicker">Core Pages</p>
-    <h2>主ページの役割分担</h2>
+    <h2>Role of the Core Pages</h2>
   </div>
 
   <table class="data-table booklet-table">
     <thead>
       <tr>
-        <th>ページ</th>
-        <th>役割</th>
-        <th>要約</th>
+        <th>Page</th>
+        <th>Role</th>
+        <th>Summary</th>
       </tr>
     </thead>
     <tbody>
       <tr>
   <td><a href="/index.html">Mind-Upload</a></td>
-  <td>Start Here - 勝利条件・標準・ベンチマーク・事前登録を先に作る</td>
-  <td>このページは、Mind-Upload 全体の入口です。『このサイトは何を目指しているか』『どこから読むと迷いにくいか』『今すぐ見に行くべきページはどれか』を最短で把握できるようにしています。</td>
+  <td>Start Here - Define success criteria, standards, benchmarks, and preregistration first</td>
+  <td>This page is the main entry point to Mind-Upload. It is designed to show, as quickly as possible, what this site is trying to do, where to start reading, and which pages matter first.</td>
 </tr>
 <tr>
-  <td><a href="/verification.html">検証基盤：Mind Uploading Verification Commons</a></td>
-  <td>Platform - PDB×BIDS×PhysioNet×OSFの発想で、WBEの“勝利条件”と“再現可能な前進”を作る</td>
-  <td>このページは、Mind-Upload の中心となる設計図です。データ、評価、失敗判定、再現手順を先にそろえることで、『何を達成したら前進か』を後付けではなく事前に決める考え方を説明します。</td>
+  <td><a href="/verification.html">Verification: Mind Uploading Verification Commons</a></td>
+  <td>Platform - Use the logic of PDB x BIDS x PhysioNet x OSF to define WBE success conditions and reproducible progress</td>
+  <td>This page is the core blueprint of Mind-Upload. It explains how to define progress in advance rather than retroactively by aligning data, evaluation, failure conditions, and reproduction pr…</td>
 </tr>
 <tr>
-  <td><a href="/tech_roadmap.html">技術ロードマップ：計測→再構成→実装でWBEを理解する</a></td>
-  <td>Roadmap (Definition #1) - 「何を解けたら前進か」を問いの木に分解し、読む順番と最低限の到達点を示す</td>
-  <td>このページは、WBEの論点を『計測』『再構成』『実装』『検証』『社会実装』に分けて並べた地図です。どの問題が土台で、どの問題がまだ未解決なのかを見失わないために使います。</td>
+  <td><a href="/tech_roadmap.html">Technical Roadmap: Understanding WBE Through Measurement, Reconstruction, and Implementation</a></td>
+  <td>Roadmap (Definition #1) - Break &#39;what counts as progress&#39; into a question tree with reading order and minimum arrival conditions</td>
+  <td>This page is a map of WBE questions arranged under measurement, reconstruction, implementation, verification, and social deployment. Its purpose is to keep the reader from losing track of w…</td>
 </tr>
 <tr>
-  <td><a href="/perspective.html">マインドアップロード実現への道：技術・理論の統合アプローチ</a></td>
-  <td>Perspective - 脳の情報処理を別基盤で再現する研究仮説を、計測可能性・同定可能性・維持状態の壁から監査する</td>
-  <td>このページは、マインドアップロードをめぐる理論・計測・実装の論点を、一次文献と限界を並べながら追う長い研究ノートです。楽観論だけでも悲観論だけでもなく、『どこまでは言えて、どこから先は未解決か』をはっきり分けて読めるようにしています。</td>
+  <td><a href="/perspective.html">Toward Mind Uploading: An Integrated Technical and Theoretical Approach</a></td>
+  <td>Perspective - Audit the hypothesis of reproducing brain information processing on another substrate through the barriers of measurability, identifiability, and maintenance state</td>
+  <td>This page is a long research note that follows the theoretical, measurement, and implementation questions around mind uploading while keeping primary literature and hard limits side by side…</td>
 </tr>
 <tr>
-  <td><a href="/datasets.html">データ &amp; ハンズオン：何で始めて、どうL0まで持っていくか</a></td>
-  <td>Resource - 「何を使うか」と「どう再現するか」を分けずに最短ルートでつなぐ</td>
-  <td>このページは、『最初にどの公開データで検証を始めるか』と『その後どうL0の再現可能解析まで持っていくか』を1本で追うための実務ガイドです。データ名の一覧で終わらせず、BIDS、QC、分割、ベースラインまで一本道でつなぎます。</td>
+  <td><a href="/datasets.html">Data &amp; Hands-on: Where to start and how to get to L0</a></td>
+  <td>Resource - Connect ``what to use&#39;&#39; and ``how to reproduce&#39;&#39; in the shortest route without separating them.</td>
+  <td>This page is a practical guide that answers both ``Which public data should I start validation with first?&#39;&#39; and ``How do I proceed to L0 reproducible analysis?&#39;&#39; in one place. It does not…</td>
 </tr>
 <tr>
-  <td><a href="/issue.html">貢献ガイド</a></td>
-  <td>Guide - Join the Research Community + Issue Tracker</td>
-  <td>このページは、Mind-Uploadにどう参加できるかを、Issue運用と対応状況ごとに整理した入口です。専門家だけの場所ではなく、『どの作業なら今すぐ役に立つか』が見えるようにしています。</td>
+  <td><a href="/issue.html">Contribution Guide</a></td>
+  <td>Guide - Join the research workflow and read the issue tracker</td>
+  <td>This page explains how to participate in Mind-Upload, how to read issue status, and how to separate changes that can be made now from tasks that remain externally dependent.</td>
 </tr>
 
     </tbody>
@@ -254,79 +254,79 @@ body_class: "summary-booklet-page"
   <div class="booklet-card-grid booklet-card-grid-2">
     <article class="booklet-card booklet-page-card">
   <h3><a href="/index.html">Mind-Upload</a></h3>
-  <p class="booklet-page-meta">Start Here - 勝利条件・標準・ベンチマーク・事前登録を先に作る / 5〜10分</p>
-  <p>Mind-Uploadは、「心をコンピュータで再現できるのか？」という大きな問いを、<strong>検証できる小さな課題</strong>に分けて進めるサイトです。大きな結論を急がず、まずは<strong>何を達成したら前進か</strong>と、<strong>他の人が同じ結果を確認できるか</strong>を先に決めます。</p>
+  <p class="booklet-page-meta">Start Here - Define success criteria, standards, benchmarks, and preregistration first / 5-10 min</p>
+  <p>Mind-Upload is a site for breaking the large question, "Can a mind be reproduced on a computer?", into <strong>small, testable tasks</strong>. Instead of rushing to a final conclusion, it starts by defining <strong>what counts as progress</strong> and <strong>whether other people can verify the same result</strong>.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>Mind-Uploadの中心は、派手な結論を出すことではなく、前進を測れる検証基盤を作ることです。</li><li>迷ったら Verification → Roadmap → WBE/EEG入門 の順で読むと、話の軸を保ちやすいです。</li><li>配線図や cell type だけでは長期ダイナミクスは決まらず、sleep/homeostasis・髄鞘・グリア代謝も別変数として残ります。</li>
+    <li>The core of Mind-Upload is not bold conclusions but a verification commons that lets progress be measured.</li><li>If you are unsure where to start, read Verification -&gt; Roadmap -&gt; WBE/EEG 101.</li><li>Connectomes and cell types alone do not determine long-term dynamics; sleep/homeostasis, myelination, and glial metabolism remain separate variables.</li>
   </ul>
-  <p class="booklet-page-meta">次に読む</p>
+  <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/verification.html">検証基盤</a></li><li><a href="/wbe_101.html">WBE入門</a></li><li><a href="/faq.html">FAQ</a></li>
+  <li><a href="/verification.html">Verification</a></li><li><a href="/wbe_101.html">WBE 101</a></li><li><a href="/faq.html">FAQ</a></li>
 </ul>
 
 </article>
 <article class="booklet-card booklet-page-card">
-  <h3><a href="/verification.html">検証基盤：Mind Uploading Verification Commons</a></h3>
-  <p class="booklet-page-meta">Platform - PDB×BIDS×PhysioNet×OSFの発想で、WBEの“勝利条件”と“再現可能な前進”を作る / 15〜25分</p>
-  <p>マインドアップロード（WBE）を「夢の話」で終わらせないために、まず必要なのは<strong>共通のルール</strong>です。Mind-Uploadでは、データの置き方、評価のしかた、失敗の判定、再現手順を先にそろえて、誰でも同じ基準で確かめられる土台を作ります。</p>
+  <h3><a href="/verification.html">Verification: Mind Uploading Verification Commons</a></h3>
+  <p class="booklet-page-meta">Platform - Use the logic of PDB x BIDS x PhysioNet x OSF to define WBE success conditions and reproducible progress / 15-25 min</p>
+  <p>To keep mind uploading and WBE from remaining only a dream narrative, the first requirement is <strong>a shared rule set</strong>. Mind-Upload puts data layout, evaluation, failure judgment, and reproduction procedures in place first so anyone can check the same result against the same criteria.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>標準、置き場、ベンチマーク、監査をセットでそろえる必要があります。</li><li>デコーディングとエミュレーションを混同しないために、主張レベルと失敗条件を先に固定します。</li><li>ここを読むと、なぜデータだけ集めても前進にならないのかが分かります。</li>
+    <li>Standards, repositories, benchmarks, and audits must be built as one package.</li><li>Claim levels and failure conditions are fixed up front so decoding is not confused with emulation.</li><li>This page explains why collecting data alone is not the same as making progress.</li>
   </ul>
-  <p class="booklet-page-meta">次に読む</p>
+  <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/tech_roadmap.html">技術ロードマップ</a></li><li><a href="/datasets.html">データ&amp;ベンチ</a></li><li><a href="/issue.html">貢献ガイド</a></li>
+  <li><a href="/tech_roadmap.html">Technical Roadmap</a></li><li><a href="/datasets.html">Datasets and Benchmarks</a></li><li><a href="/issue.html">Contribution Guide</a></li>
 </ul>
 
 </article>
 <article class="booklet-card booklet-page-card">
-  <h3><a href="/tech_roadmap.html">技術ロードマップ：計測→再構成→実装でWBEを理解する</a></h3>
-  <p class="booklet-page-meta">Roadmap (Definition #1) - 「何を解けたら前進か」を問いの木に分解し、読む順番と最低限の到達点を示す / 20〜30分（索引だけなら5分）</p>
-  <p>このページは、マインドアップロード研究の「地図」です。いきなり結論を目指すのではなく、<strong>何を測るか</strong>、<strong>何を再現するか</strong>、<strong>どう動かすか</strong>、<strong>どう確かめるか</strong>を順番に整理します。つまり、<strong>計測 → 再構成 → 実装 → 検証 → 社会実装</strong>の流れで「今どこまで進んだか」を見える化するページです。</p>
+  <h3><a href="/tech_roadmap.html">Technical Roadmap: Understanding WBE Through Measurement, Reconstruction, and Implementation</a></h3>
+  <p class="booklet-page-meta">Roadmap (Definition #1) - Break &#39;what counts as progress&#39; into a question tree with reading order and minimum arrival conditions / 20-30 min (5 min for the index only)</p>
+  <p>This page is the map of mind-uploading research. Instead of jumping straight to conclusions, it organizes in sequence <strong>what to measure</strong>, <strong>what to reconstruct</strong>, <strong>how to run it</strong>, and <strong>how to verify it</strong>. In practice, it visualizes where the field currently stands across <strong>measurement -> reconstruction -> implementation -> verification -> social deployment</strong>.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>まずP0〜P2で『何を成功と呼ぶか』を固定し、その後に計測や実装へ進みます。</li><li>索引を使えば、気になる論点だけ先に読むこともできます。</li><li>強い主張ほど後ろのレベルに置き、前のレベルを飛ばして語らない構造にしています。</li>
+    <li>P0-P2 fix what counts as success before measurement or implementation work is discussed.</li><li>The index allows readers to jump directly to a specific question family.</li><li>Stronger claims are deliberately placed later so earlier levels are not skipped.</li>
   </ul>
-  <p class="booklet-page-meta">次に読む</p>
+  <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/wbe_101.html">WBE入門</a></li><li><a href="/eeg_101.html">EEG入門</a></li><li><a href="/verification.html">検証基盤</a></li>
+  <li><a href="/wbe_101.html">WBE 101</a></li><li><a href="/eeg_101.html">EEG 101</a></li><li><a href="/verification.html">Verification</a></li>
 </ul>
 
 </article>
 <article class="booklet-card booklet-page-card">
-  <h3><a href="/perspective.html">マインドアップロード実現への道：技術・理論の統合アプローチ</a></h3>
-  <p class="booklet-page-meta">Perspective - 脳の情報処理を別基盤で再現する研究仮説を、計測可能性・同定可能性・維持状態の壁から監査する / 30〜45分</p>
-  <p>このページは、マインドアップロード（WBE）を「本当に検証できる研究」にするための長い研究ノートです。内容は、<strong>どう測るか</strong>、<strong>どう読み取るか</strong>、<strong>どう実装するか</strong>の3段階で整理しています。最新研究の成果だけでなく、うまくいっていない点や限界も同じ重みで扱い、「どこまで言えて、どこから言えないか」をはっきり分ける構成にしています。</p>
+  <h3><a href="/perspective.html">Toward Mind Uploading: An Integrated Technical and Theoretical Approach</a></h3>
+  <p class="booklet-page-meta">Perspective - Audit the hypothesis of reproducing brain information processing on another substrate through the barriers of measurability, identifiability, and maintenance state / 30-45 min</p>
+  <p>This page is a long-form research note aimed at turning mind uploading (WBE) into something that can be evaluated as real research. It is organized in three stages: <strong>how to measure</strong>, <strong>how to infer</strong>, and <strong>how to implement</strong>. It treats recent results, failures, and limits with the same weight so that the boundary between what can and cannot be claimed remains explicit.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>理論の紹介だけで終わらず、実装へ落としたときの制約まで一緒に追います。</li><li>強い主張ほど、反証条件や代替説明を並べて確認します。</li><li>局所 connectomics、非侵襲 source imaging、closed-loop 介入は別々の壁に当たるため、同列に読まない構成へ更新しました。</li>
+    <li>It does not stop at introducing theories; it follows the constraints that appear when those theories are pushed toward implementation.</li><li>The stronger the claim, the more explicitly it is checked against falsification criteria and alternative explanations.</li><li>The page has been reorganized so that local connectomics, noninvasive source imaging, and closed-loop intervention are not read as if they hit the same barrier.</li>
   </ul>
-  <p class="booklet-page-meta">次に読む</p>
+  <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/verification.html">検証基盤</a></li><li><a href="/tech_roadmap.html">技術ロードマップ</a></li><li><a href="/wbe_101.html">WBE入門</a></li>
+  <li><a href="/verification.html">Verification</a></li><li><a href="/tech_roadmap.html">Roadmap</a></li><li><a href="/wbe_101.html">WBE 101</a></li>
 </ul>
 
 </article>
 <article class="booklet-card booklet-page-card">
-  <h3><a href="/datasets.html">データ &amp; ハンズオン：何で始めて、どうL0まで持っていくか</a></h3>
-  <p class="booklet-page-meta">Resource - 「何を使うか」と「どう再現するか」を分けずに最短ルートでつなぐ / 12〜20分</p>
-  <p>このページは、「最初にどのデータで練習すればよいか」を決めるための実用リストです。まずは公開データで、<strong>同じ結果を再現できる状態（L0）</strong>を作り、その次に<strong>予測できるか・条件変更に耐えるか（L1〜L2）</strong>を確かめます。</p>
+  <h3><a href="/datasets.html">Data &amp; Hands-on: Where to start and how to get to L0</a></h3>
+  <p class="booklet-page-meta">Resource - Connect ``what to use&#39;&#39; and ``how to reproduce&#39;&#39; in the shortest route without separating them. / 12-20 minutes</p>
+  <p>This page is a practical list to help you decide which data to practice with first. First, we use public data to create a state in which we can reproduce the same results (L0), and then check to see if we can predict and withstand changes in conditions (L1-L2).</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>まずは共有基盤を押さえ、その後にスターターデータセットを見る順にしています。</li><li>スターターデータは L0〜L1 の練習台であり、EEG source imaging の ground truth ではありません。</li><li>スターターデータごとに、annotation provenance・時間忠実度・独立な split 単位が違います。</li>
+    <li>We&#39;re looking at the shared infrastructure first, then the starter dataset.</li><li>Starter data is a practice board for L0~L1, not the ground truth of EEG source imaging.</li><li>Each starter data has different annotation provenance, time fidelity, and independent split units.</li>
   </ul>
-  <p class="booklet-page-meta">次に読む</p>
+  <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/eeg_101.html">EEG入門</a></li><li><a href="/verification.html">検証基盤</a></li><li><a href="/tech_roadmap.html">技術ロードマップ</a></li>
+  <li><a href="/eeg_101.html">Introduction to EEG</a></li><li><a href="/verification.html">Verification base</a></li><li><a href="/tech_roadmap.html">Technology Roadmap</a></li>
 </ul>
 
 </article>
 <article class="booklet-card booklet-page-card">
-  <h3><a href="/issue.html">貢献ガイド</a></h3>
-  <p class="booklet-page-meta">Guide - Join the Research Community + Issue Tracker / 10〜20分</p>
-  <p>Mind-Uploadは、マインドアップロードを検証可能な研究へ進めるオープンコミュニティです。分野や経験を問わず、文章改善や用語整理、誤解の指摘など再現性向上に直結する作業からすぐに参加いただけます。</p>
+  <h3><a href="/issue.html">Contribution Guide</a></h3>
+  <p class="booklet-page-meta">Guide - Join the research workflow and read the issue tracker / 10-20 minutes</p>
+  <p>Mind-Upload is an open community that advances mind uploading into verifiable research. Regardless of your field or experience, you can immediately participate in tasks that directly lead to improved reproducibility, such as improving sentences, organizing terminology, and pointing out misunderstandings.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>文章改善や用語整理のような、小さくても価値の高い参加方法を明示しています。</li><li>Issueの状態と、どこまで実装済みかを切り分けて追えます。</li><li>強い主張より、達成条件と反証条件が明確なIssueを重視する方針です。</li>
+    <li>It highlights small but valuable ways to participate, such as improving writing, terminology, and link structure.</li><li>It lets you track issue status without confusing document-level reflection with implemented artifacts.</li><li>It prioritizes issues with clear achievement conditions and falsification conditions over vague strong claims.</li>
   </ul>
-  <p class="booklet-page-meta">次に読む</p>
+  <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/index.html">スタートページ</a></li><li><a href="/verification.html">検証基盤</a></li><li><a href="/glossary.html">用語集</a></li>
+  <li><a href="/index.html">Start Page</a></li><li><a href="/verification.html">Verification</a></li><li><a href="/glossary.html">Glossary</a></li>
 </ul>
 
 </article>
@@ -337,42 +337,42 @@ body_class: "summary-booklet-page"
 <section class="booklet-sheet booklet-page-break">
   <div class="booklet-section-header">
     <p class="booklet-kicker">Support Pages</p>
-    <h2>補助ページと実務導線</h2>
+    <h2>Support Pages and Practical Routes</h2>
   </div>
 
   <table class="data-table booklet-table">
     <thead>
       <tr>
-        <th>ページ</th>
-        <th>役割</th>
-        <th>要約</th>
+        <th>Page</th>
+        <th>Role</th>
+        <th>Summary</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-  <td><a href="/wbe_101.html">入門：マインドアップロード / WBE を「測れる問題」にする</a></td>
-  <td>Primer - 夢を守るために、まず物差しを作る</td>
-  <td>このページは、マインドアップロードや WBE の話を『夢の話』のまま受け取らず、何が言えて何がまだ言えないかを整理するための入門です。難しい哲学に入る前に、まず主張の強さをそろえることを目標にしています。</td>
+  <td><a href="/wbe_101.html">Introduction: Making Mind Uploading / WBE a Measurable Problem</a></td>
+  <td>Primer - To protect the dream, build the measuring stick first</td>
+  <td>This page is an introduction to mind uploading and WBE for readers who do not want to leave the topic at the level of a dream or a slogan. Its goal is to sort out what can be said now, what…</td>
 </tr>
 <tr>
-  <td><a href="/eeg_101.html">入門：EEGは何を測っていて、何ができて、何ができないか</a></td>
-  <td>Primer - EEGを“魔法の心読み”にしないための現実的ガイド</td>
-  <td>このページは、EEG が何を測っていて、何が得意で、何が苦手かを最初に整理する入門です。『EEGで心がそのまま読めるのか』という誤解を避けつつ、Mind-Upload で EEG をどこに使えるかを説明します。</td>
+  <td><a href="/eeg_101.html">Introduction: What EEG Measures, What It Can Do, and What It Cannot Do</a></td>
+  <td>Primer - A realistic guide that refuses to turn EEG into magical mind reading</td>
+  <td>This page is an introduction that sorts out what EEG measures, what it is good at, and what it is bad at. It is designed to avoid the misreading that EEG can simply read the mind, while exp…</td>
 </tr>
 <tr>
-  <td><a href="/faq.html">FAQ：よくある質問（と、よくある事故）</a></td>
-  <td>FAQ - 派手な結論より、検証できる前進を</td>
-  <td>このページは、Mind-Upload を読んでいて多くの人が最初にぶつかる疑問へ、短くても誤解の少ない答えを返すための Q&amp;A です。入口として短く書いていますが、強い主張は必ず根拠ページへ戻れるようにしています。</td>
+  <td><a href="/faq.html">FAQ: Common Questions and Common Failure Modes</a></td>
+  <td>FAQ - Prefer verifiable progress to flashy conclusions</td>
+  <td>This page is a Q&amp;A for the questions many readers hit first when reading Mind-Upload. It stays short as an entry point, but every strong claim is tied back to a page with evidence.</td>
 </tr>
 <tr>
-  <td><a href="/glossary.html">用語集（Glossary）</a></td>
-  <td>Reference - まずは“言葉のすり替え”を止める</td>
-  <td>このページは、Mind-Upload でよく出る言葉を『まず日常語で理解し、そのあと必要なら厳密に戻る』ための用語集です。議論で迷子にならないように、難しい単語を測定や検証の話に結び付けて説明します。</td>
+  <td><a href="/glossary.html">Glossary</a></td>
+  <td>Reference - Start by keeping the words straight</td>
+  <td>This page is a glossary for the terms that appear most often in Mind-Upload. It starts with short everyday-language explanations, then points you back to the more rigorous pages when needed.</td>
 </tr>
 <tr>
-  <td><a href="/content_hub.html">公開コンテンツ統合ハブ</a></td>
-  <td>Navigation - 散逸防止のための単一導線</td>
-  <td>このページは、公開コンテンツが散らばらないように『どの話題をどのページへ足すべきか』を固定するための運用ハブです。新しい情報を書く前に、まず既存ページの統合先を確認する場所として使います。</td>
+  <td><a href="/content_hub.html">Public Content Integration Hub</a></td>
+  <td>Navigation - A single routing layer to prevent content sprawl</td>
+  <td>This page is the operations hub for fixing where public content should go so material does not scatter across the site. Before writing anything new, use this page to check the existing inte…</td>
 </tr>
 
     </tbody>
@@ -380,67 +380,67 @@ body_class: "summary-booklet-page"
 
   <div class="booklet-card-grid booklet-card-grid-2">
     <article class="booklet-card booklet-page-card">
-  <h3><a href="/wbe_101.html">入門：マインドアップロード / WBE を「測れる問題」にする</a></h3>
-  <p class="booklet-page-meta">Primer - 夢を守るために、まず物差しを作る / 10〜15分</p>
-  <p>マインドアップロードを本気で前に進めるには、「できたと言える条件」と「できていないと分かる条件」を先に決めるのが最短です。Mind-Uploadは、そのチェック方法をそろえるための検証基盤を作っています。</p>
+  <h3><a href="/wbe_101.html">Introduction: Making Mind Uploading / WBE a Measurable Problem</a></h3>
+  <p class="booklet-page-meta">Primer - To protect the dream, build the measuring stick first / 10-15 minutes</p>
+  <p>If you want to move mind uploading forward seriously, the fastest route is to define in advance both the condition under which you can say “this worked” and the condition under which you must say “this failed.” Mind-Upload is building the verification infrastructure needed to make those checks comparable.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>まず『いま言えること／言えないこと』を分けて、話を盛りすぎないようにします。</li><li>クレーム階段で、L0の再現解析とL4の本人性主張を混同しないようにします。</li><li>connectome と cell type だけでは長期ダイナミクスも樹状突起 branch の局所計算も決まらず、hidden state の監査が別に要ります。</li>
+    <li>It separates what can and cannot be said now, so the discussion does not overclaim.</li><li>It uses a claim ladder so L0 reproducible analysis is not confused with L4 identity claims.</li><li>Connectomes and cell types alone do not determine long-term dynamics; hidden-state auditing remains necessary.</li>
   </ul>
-  <p class="booklet-page-meta">次に読む</p>
+  <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/verification.html">検証基盤</a></li><li><a href="/tech_roadmap.html">技術ロードマップ</a></li><li><a href="/faq.html">FAQ</a></li>
+  <li><a href="/verification.html">Verification</a></li><li><a href="/tech_roadmap.html">Technical Roadmap</a></li><li><a href="/faq.html">FAQ</a></li>
 </ul>
 
 </article>
 <article class="booklet-card booklet-page-card">
-  <h3><a href="/eeg_101.html">入門：EEGは何を測っていて、何ができて、何ができないか</a></h3>
-  <p class="booklet-page-meta">Primer - EEGを“魔法の心読み”にしないための現実的ガイド / 12〜18分</p>
-  <p>EEGは、脳の中をそのまま見ているわけではなく、頭皮で測れた電気信号の「混ざった結果」を読んでいます。時間の変化には強い一方で、「脳のどこで起きたか」はぼやけやすいです。だからMind-Uploadでは、データ品質チェック（QC）とデータ整理の共通ルール（BIDS）を最優先にしています。</p>
+  <h3><a href="/eeg_101.html">Introduction: What EEG Measures, What It Can Do, and What It Cannot Do</a></h3>
+  <p class="booklet-page-meta">Primer - A realistic guide that refuses to turn EEG into magical mind reading / 12-18 minutes</p>
+  <p>EEG does not directly show the inside of the brain. It measures a mixed electrical pattern at the scalp. That gives EEG strong temporal resolution, but weak and blurry spatial localization. For that reason, Mind-Upload prioritizes data quality control (QC) and shared data-organization rules such as BIDS before anything else.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>EEGは時間変化を見るのが得意ですが、空間的にどこで起きたかを厳密に言うのは苦手です。</li><li>『信号に情報がある』『内部状態が一意に決まる』『長期運用で持つ』は別の監査です。</li><li>高密度EEGでも、source imaging の改善判定には個体別MRI・電極座標・外部基準が要ります。</li>
+    <li>EEG is strong at tracking temporal change, but weak at identifying spatial origin with high precision.</li><li>Even with high-density EEG, claims of source-imaging improvement require individual MRI, electrode coordinates, and external validation.</li><li>Preprocessing and QC are not cosmetic cleanup; they are acceptance conditions that determine which claims are allowed.</li>
   </ul>
-  <p class="booklet-page-meta">次に読む</p>
+  <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/datasets.html">データ&amp;ベンチ</a></li><li><a href="/datasets.html#l0-practice">L0実践</a></li><li><a href="/faq.html">FAQ</a></li>
+  <li><a href="/datasets.html">Data and Benchmarks</a></li><li><a href="/datasets.html#l0-practice">L0 Practice</a></li><li><a href="/faq.html">FAQ</a></li>
 </ul>
 
 </article>
 <article class="booklet-card booklet-page-card">
-  <h3><a href="/faq.html">FAQ：よくある質問（と、よくある事故）</a></h3>
-  <p class="booklet-page-meta">FAQ - 派手な結論より、検証できる前進を / 8〜15分</p>
-  <p>ここは「よくある勘違い」を先に避けるためのページです。主張が大きいほど、(1)言葉の定義、(2)評価の物差し、(3)間違いと判定する条件、(4)再現手順の順で確認します。</p>
+  <h3><a href="/faq.html">FAQ: Common Questions and Common Failure Modes</a></h3>
+  <p class="booklet-page-meta">FAQ - Prefer verifiable progress to flashy conclusions / 8-15 minutes</p>
+  <p>This page is designed to block common misunderstandings early. The stronger the claim, the more carefully you should check, in order, (1) the definition of terms, (2) the measurement scale, (3) the condition that would count as failure, and (4) the reproduction procedure.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>『このサイトは何をするのか』『EEG / brain-to-text で何が言えるのか』など、最初の疑問をまとめて潰せます。</li><li>『コネクトームと cell type で十分か』という誤読にも、current synaptic state・dendritic integration・AIS / excitability・slow maintenance-state を分けて答えます。</li><li>派手な言い切りを避け、何が未解決かも同時に書いています。</li>
+    <li>It quickly clears up first-order questions such as what this site is for and what EEG or brain-to-text work can and cannot support.</li><li>It also gives a short but scientific answer to the common misreading that connectomes plus cell types are already enough.</li><li>It avoids dramatic overstatement and states what remains unresolved at the same time.</li>
   </ul>
-  <p class="booklet-page-meta">次に読む</p>
+  <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/verification.html">検証基盤</a></li><li><a href="/wbe_101.html">WBE入門</a></li><li><a href="/glossary.html">用語集</a></li>
+  <li><a href="/verification.html">Verification</a></li><li><a href="/wbe_101.html">WBE 101</a></li><li><a href="/glossary.html">Glossary</a></li>
 </ul>
 
 </article>
 <article class="booklet-card booklet-page-card">
-  <h3><a href="/glossary.html">用語集（Glossary）</a></h3>
-  <p class="booklet-page-meta">Reference - まずは“言葉のすり替え”を止める / 必要な項目だけなら3〜10分</p>
-  <p>この用語集は、用語の意味をすぐ確認するためのリファレンスです。まず日常語の説明で把握し、必要なときだけ厳密な定義に進む構成とし、議論を測定と扱い方に結び付けます。WBEの議論は言葉のズレで混乱しやすいため、ここでは<strong>実際にどう測って扱うか</strong>を重視します。</p>
+  <h3><a href="/glossary.html">Glossary</a></h3>
+  <p class="booklet-page-meta">Reference - Start by keeping the words straight / 3 to 10 minutes for only the necessary items</p>
+  <p>This glossary is a quick reference for the meaning of terms. It starts with everyday-language explanations, moves to stricter definitions only when needed, and ties the discussion back to measurement, modeling, and verification.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>用語を短く説明しつつ、どこで使う概念かも一緒に示します。</li><li>『似ているが違う』語を分けることで、話のすり替えを防ぎます。特に observability / identifiability / direct validation を混ぜないことを重視します。</li><li>detectable / localized / identified / validated / deployable は別レベルの主張であり、同じ成功ではありません。</li>
+    <li>It gives short explanations of terms and points to where each concept matters.</li><li>It is especially careful about pairs that sound similar but should not be collapsed, such as observability / identifiability / direct validation.</li><li>If a term blocks your reading, this page is meant to get you unstuck quickly and send you back to the main text.</li>
   </ul>
-  <p class="booklet-page-meta">次に読む</p>
+  <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/wbe_101.html">WBE入門</a></li><li><a href="/eeg_101.html">EEG入門</a></li><li><a href="/faq.html">FAQ</a></li>
+  <li><a href="/wbe_101.html">Introduction to WBE</a></li><li><a href="/eeg_101.html">Introduction to EEG</a></li><li><a href="/faq.html">FAQ</a></li>
 </ul>
 
 </article>
 <article class="booklet-card booklet-page-card">
-  <h3><a href="/content_hub.html">公開コンテンツ統合ハブ</a></h3>
-  <p class="booklet-page-meta">Navigation - 散逸防止のための単一導線 / 5〜10分</p>
-  <p>このページは、公開コンテンツの<strong>統合先</strong>と<strong>更新先</strong>を固定するハブです。新しい情報を追加するときは、まず本ページの対応表で既存ページを確認し、既存ページへ統合する運用を優先します。</p>
+  <h3><a href="/content_hub.html">Public Content Integration Hub</a></h3>
+  <p class="booklet-page-meta">Navigation - A single routing layer to prevent content sprawl / 5-10 min</p>
+  <p>This page is the hub for deciding the <strong>integration target</strong> and <strong>update destination</strong> of public content. Before adding new information, check the mapping tables here and prefer merging into an existing page.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>領域ごとに主ページと補助ページを分け、追記先を固定しています。</li><li>新規ページを増やす前に、既存ページへ統合できるかを確認する前提です。</li><li>公開導線と運用資料を一箇所で見渡せるようにしています。</li>
+    <li>Each domain has a fixed main page and supporting pages.</li><li>Before creating a new page, the default is to check whether the material can be merged into an existing one.</li><li>Public navigation and operations references are visible in one place.</li>
   </ul>
-  <p class="booklet-page-meta">次に読む</p>
+  <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/index.html">スタートページ</a></li><li><a href="/verification.html">検証基盤</a></li><li><a href="/issue.html">貢献ガイド</a></li>
+  <li><a href="/index.html">Start</a></li><li><a href="/verification.html">Verification</a></li><li><a href="/issue.html">Contribution Guide</a></li>
 </ul>
 
 </article>
@@ -451,29 +451,29 @@ body_class: "summary-booklet-page"
 <section class="booklet-sheet booklet-page-break">
   <div class="booklet-section-header">
     <p class="booklet-kicker">Next Actions</p>
-    <h2>次に何をすればよいか</h2>
+    <h2>What To Do Next</h2>
   </div>
 
   <div class="booklet-card-grid booklet-card-grid-3">
     <article class="booklet-card">
-  <h3>全体像を掴む</h3>
-  <p>Mind-Upload -&gt; 検証基盤：Mind Uploading Verification Commons -&gt; 技術ロードマップ：計測→再構成→実装でWBEを理解する</p>
+  <h3>Get the Overview</h3>
+  <p>Mind-Upload -&gt; Verification: Mind Uploading Verification Commons -&gt; Technical Roadmap: Understanding WBE Through Measurement, Reconstruction, and Implementation</p>
   <ul class="booklet-link-list booklet-page-link-list">
-    <li><a href="/verification.html">検証基盤</a></li><li><a href="/wbe_101.html">WBE入門</a></li>
+    <li><a href="/verification.html">Verification</a></li><li><a href="/wbe_101.html">WBE 101</a></li>
   </ul>
 </article>
 <article class="booklet-card">
-  <h3>初歩から学ぶ</h3>
-  <p>入門：マインドアップロード / WBE を「測れる問題」にする -&gt; 入門：EEGは何を測っていて、何ができて、何ができないか -&gt; FAQ：よくある質問（と、よくある事故）</p>
+  <h3>Start from Basics</h3>
+  <p>Introduction: Making Mind Uploading / WBE a Measurable Problem -&gt; Introduction: What EEG Measures, What It Can Do, and What It Cannot Do -&gt; FAQ: Common Questions and Common Failure Modes</p>
   <ul class="booklet-link-list booklet-page-link-list">
-    <li><a href="/verification.html">検証基盤</a></li><li><a href="/tech_roadmap.html">技術ロードマップ</a></li>
+    <li><a href="/verification.html">Verification</a></li><li><a href="/tech_roadmap.html">Technical Roadmap</a></li>
   </ul>
 </article>
 <article class="booklet-card">
-  <h3>参加と統合</h3>
-  <p>貢献ガイド / 公開コンテンツ統合ハブ</p>
+  <h3>Participate and Integrate</h3>
+  <p>Contribution Guide / Public Content Integration Hub</p>
   <ul class="booklet-link-list booklet-page-link-list">
-    <li><a href="/index.html">スタートページ</a></li><li><a href="/verification.html">検証基盤</a></li>
+    <li><a href="/index.html">Start Page</a></li><li><a href="/verification.html">Verification</a></li>
   </ul>
 </article>
 
@@ -481,24 +481,24 @@ body_class: "summary-booklet-page"
 
   <div class="booklet-status-grid">
     <div class="booklet-status-card booklet-status-card-strong">
-  <span>実務上の原則</span>
-  <strong>文章改善や用語整理のような、小さくても価値の高い参加方法を明示しています。</strong>
+  <span>Working Principle</span>
+  <strong>It highlights small but valuable ways to participate, such as improving writing, terminology, and link structure.</strong>
 </div>
 <div class="booklet-status-card">
-  <span>更新ルール</span>
-  <strong>公開ページが変わるたびに deploy / PDF workflow 内で booklet を再生成いたします。</strong>
+  <span>Update Rule</span>
+  <strong>Whenever a public page changes, the deploy/PDF workflow regenerates the booklet.</strong>
 </div>
 
   </div>
 
-  <h3>元ページ一覧</h3>
+  <h3>Source Pages</h3>
   <ul class="booklet-link-list">
-    <li><a href="/index.html">Mind-Upload</a></li><li><a href="/verification.html">検証基盤：Mind Uploading Verification Commons</a></li><li><a href="/tech_roadmap.html">技術ロードマップ：計測→再構成→実装でWBEを理解する</a></li><li><a href="/perspective.html">マインドアップロード実現への道：技術・理論の統合アプローチ</a></li><li><a href="/datasets.html">データ &amp; ハンズオン：何で始めて、どうL0まで持っていくか</a></li><li><a href="/issue.html">貢献ガイド</a></li><li><a href="/content_hub.html">公開コンテンツ統合ハブ</a></li><li><a href="/wbe_101.html">入門：マインドアップロード / WBE を「測れる問題」にする</a></li><li><a href="/eeg_101.html">入門：EEGは何を測っていて、何ができて、何ができないか</a></li><li><a href="/faq.html">FAQ：よくある質問（と、よくある事故）</a></li><li><a href="/glossary.html">用語集（Glossary）</a></li>
+    <li><a href="/index.html">Mind-Upload</a></li><li><a href="/verification.html">Verification: Mind Uploading Verification Commons</a></li><li><a href="/tech_roadmap.html">Technical Roadmap: Understanding WBE Through Measurement, Reconstruction, and Implementation</a></li><li><a href="/perspective.html">Toward Mind Uploading: An Integrated Technical and Theoretical Approach</a></li><li><a href="/datasets.html">Data &amp; Hands-on: Where to start and how to get to L0</a></li><li><a href="/issue.html">Contribution Guide</a></li><li><a href="/content_hub.html">Public Content Integration Hub</a></li><li><a href="/wbe_101.html">Introduction: Making Mind Uploading / WBE a Measurable Problem</a></li><li><a href="/eeg_101.html">Introduction: What EEG Measures, What It Can Do, and What It Cannot Do</a></li><li><a href="/faq.html">FAQ: Common Questions and Common Failure Modes</a></li><li><a href="/glossary.html">Glossary</a></li>
   </ul>
 
   <div class="booklet-quote">
     <p>
-      この冊子は公開ページから自動生成される入口版でございます。各ページの <strong>page_intro</strong>、<strong>page_highlights</strong>、<strong>known / unknown</strong>、冒頭要約の更新が、そのまま冊子と PDF に反映されます。
+      This booklet is an auto-generated entry layer built from the site's public pages. Updates to each page's <strong>page_intro</strong>, <strong>page_highlights</strong>, <strong>known / unknown</strong>, and opening summary flow directly into the booklet and PDF output.
     </p>
   </div>
 </section>

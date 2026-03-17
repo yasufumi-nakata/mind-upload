@@ -1,373 +1,373 @@
-# Wiki：イベント同期と観測ログの基本
+# Wiki: Basics of event synchronization and observation logs
 
-> 信号だけでなく、ラベルの出どころを残さないと比較は崩れます
+> Comparisons break down if we don't leave behind the source of the label, not just the signal.
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-15 / 位置づけ: Practical guide
+- Updated: 2026-03-15 / Role: Practical guide
 
-## このページの役割
-このページは、なぜ raw EEG の波形だけでは再現可能な研究にならないのかを、イベントマーカー、イベント意味論、時刻同期、manual scoring、report-derived label の観点から説明する wiki です。『波形ファイルはあるのに比較できない』だけでなく、『label はあるのに provenance が曖昧で比較できない』『時刻はあるのに clock domain が曖昧で比較できない』という事故も防ぐことが目的です。
+## Role Of This Page
+This page is a wiki that explains why raw EEG waveforms alone are not reproducible in research from the perspectives of event markers, event semantics, time synchronization, manual scoring, and report-derived labels. The purpose is to prevent not only ``waveform files are available but cannot be compared,'' but also ``labels are available but provenance is ambiguous and cannot be compared,'' and ``time is available but clock domain is ambiguous and cannot be compared.''
 
-## 正確さの前提
-ここで扱うのは最低限の観測ログと label provenance ですが、2026-03 の更新では BIDS の器、HED の意味論、LSL の同期、Motion-BIDS 型 metadata の役割差も明示します。課題ごとに追加のメタデータは必要ですが、出来事・意味・時計系を分けて残すという原則は変わりません。
+## Accuracy Notes
+What we are dealing with here is the minimum observation log and label provenance, but in the 2026-03 update, we also clarify the differences in the roles of BIDS event tables, HED semantics, LSL synchronization, and Motion-BIDS-type metadata. Although each issue requires additional metadata, the principle of keeping events, meanings, and clock systems separate remains the same.
 
-## 公開ページへ戻る
-- [EEG入門](https://mind-upload.com/eeg_101.html)
-- [データ&ベンチ](https://mind-upload.com/datasets.html)
-- [ハンズオン](https://mind-upload.com/datasets.html#l0-practice)
+## Back To Public Pages
+- [Introduction to EEG](https://mind-upload.com/eeg_101.html)
+- [Data & Bench](https://mind-upload.com/datasets.html)
+- [Hands-on](https://mind-upload.com/datasets.html#l0-practice)
 
-## 関連 Wiki
-- [Wiki: EEG前処理とQC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - 観測後にどこで結果が変わるかを補います。
-- [Wiki: 検証基盤の基本](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - なぜログが公共財になるかを補います。
-- [Wiki: 閉ループ・遅延・ジッタ・安全停止](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - 遅延やジッタを、L3 の閉ループ評価でどう読むかを補います。
-- [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - 学習用ページ全体へ戻れます。
+## Related Wiki Pages
+- [Wiki: EEG pretreatment and QC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - Compensate for where the results change after observation.
+- [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Learn why logs are a public good.
+- [Wiki: Closed loop, delay, jitter, safe stop](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - Compensates for how to read delay and jitter in L3 closed-loop evaluation.
+- [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - Returns to the entire learning page.
 
-## いま分かっていること
-- 波形ファイルだけでは、課題や刺激との対応を十分に再構成できないことがあります。
-- 遅延、ジッタ、ドリフトを記録しないと、時間解像度の強みが崩れます。
-- BIDS / EEG-BIDS は events と metadata の器を与えますが、cross-study 再利用には HED のような機械可読な意味論が有効です。
-- LSL や trigger 線があっても、clock domain と device-side delay を明示しないと時間忠実度は監査できません。
-- annotation provenance を書かないと、同じ label 名でも再利用不能になることがあります。
-- bad channel / bad segment の記録は、除外の透明性に直結します。
+## What Is Currently Known
+- Waveform files alone may not be sufficient to reconstruct task and stimulus responses.
+- If you don't record delays, jitter, and drift, your strengths in temporal resolution will be undermined.
+- BIDS/EEG-BIDS provides a container for events and metadata, but machine-readable semantics like HED are useful for cross-study reuse.
+- Even with LSL and trigger lines, time fidelity cannot be audited without specifying the clock domain and device-side delay.
+- If you do not write annotation provenance, you may not be able to reuse the same label name.
+- Recording bad channels/bad segments is directly linked to transparency of exclusions.
 
-## まだ分かっていないこと
-- どこまで細かいメタデータを全課題で共通必須にするかは、運用設計の途上です。
-- 複雑なマルチモーダル同時計測で、最低限の同期ログをどう統一するかは今後の課題です。
-- event semantics を HED / ontology / scorer rule のどこまでで共通必須化するかは、まだ調整が要ります。
-- report-derived label を signal-only benchmark からどこまで分離すべきかの site-wide schema は、まだ固定途上です。
+## What Is Still Unknown
+- We are still in the process of operational design as to how detailed metadata will be required for all assignments.
+- How to unify the minimum synchronization log in complex multimodal simultaneous measurements is a future issue.
+- We still need to adjust how far event semantics should be made mandatory in HED / ontology / scorer rules.
+- The site-wide schema for how far report-derived labels should be separated from signal-only benchmarks is still being finalized.
 
 ---
 
-<h2>いちばん短い答え</h2>
+<h2>The shortest answer</h2>
 <p>
-raw EEG は「電気信号の並び」です。しかし研究で知りたいのは、多くの場合「<strong>いつ、何が起きたときの信号か</strong>」です。その対応表がないと、あとから見ても意味があいまいになります。
+Raw EEG is a sequence of electrical signals. However, what we often want to know in research is ``<strong>When and what signals occur</strong>''. Without that correspondence table, the meaning will be ambiguous even if you look at it later.
 </p>
 
-<strong>2026-03 文献監査で追加した前提</strong>
+<strong>Assumptions added in 2026-03 literature audit</strong>
 <p>
-このページでは、event log だけでなく <strong>label provenance</strong> も観測ログとして扱います。つまり、同じ「正解ラベル」でも、それが <strong>annotation channel</strong> なのか、<strong>専門家の区間注釈</strong> なのか、<strong>whole-night hypnogram</strong> なのか、<strong>医師レポート由来ラベル</strong> なのかを書かなければ、比較可能な benchmark にはなりません。
+This page treats not only event logs but also <strong>label provenance</strong> as observation logs. In other words, even if the same "correct label" is used, it will not be a comparable benchmark unless it is written whether it is an <strong>annotation channel</strong>, an <strong>expert's interval annotation</strong>, a <strong>whole-night hypnogram</strong>, or a <strong>label derived from a doctor's report</strong>.
 </p>
 
-<strong>今回もっとも修正すべきだった弱点</strong>
+<strong>Main weakness this page needed to fix</strong>
 <p>
-現行サイトは「イベントと同期が重要」とは書けていましたが、<strong>時刻の器</strong>、<strong>イベント意味論</strong>、<strong>clock alignment</strong> をまだ十分に分離できていませんでした。BIDS task events は <code>events.tsv</code> と JSON sidecar による記述枠を与えますが、Robbins ら (2021) と Hermes ら (2025) が示すように、cross-study 再利用には <strong>HED のような機械可読な意味論</strong>が要ります。また Kothe ら (2025) が示す通り、LSL はネットワーク同期を強くしても、<strong>機器内の throughput delay や刺激提示系の遅延</strong>までは自動では与えません。したがって本サイトでは、イベント忠実度を 1 つの箱ではなく 3 層で監査します。
+Although the site already stated that events and synchronization matter, it still did not cleanly separate <strong>time anchors</strong>, <strong>event semantics</strong>, and <strong>clock alignment</strong>. BIDS task events provide a descriptive framework through <code>events.tsv</code> and JSON sidecars, but as Robbins et al. (2021) and Hermes et al. (2025) show, cross-study reuse also requires <strong>machine-readable semantics such as HED</strong>. Furthermore, as Kothe et al. (2025) show, LSL can strengthen network synchronization without automatically giving you device-internal delay or stimulus-presentation delay. That is why this site audits event fidelity in three tiers rather than treating it as a single checkbox.
 </p>
 
-<h2>なぜ raw EEG だけでは足りないのか</h2>
+<h2>Why raw EEG alone is not enough</h2>
 <p>
-たとえば、課題中に刺激が何回出たか、どのタイミングでボタンを押したか、どの区間がノイズで除外されたかが分からないと、同じ波形を見ても人ごとに解釈が変わります。つまり、波形だけでは「何を比べているのか」が崩れることがあります。
+For example, if we do not know how many times a stimulus appeared during a task, at what timing a button was pressed, or which sections were excluded due to noise, different people will interpret the same waveform differently. In other words, if you look only at the waveform, it may not be clear what you are comparing.
 </p>
 
-<h2>イベントマーカーと刺激ログ</h2>
+<h2>Event markers and stimulus log</h2>
 <table>
 <thead>
 <tr>
-<th>記録</th>
-<th>何のために要るか</th>
+<th>Record</th>
+<th>What is it needed for</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>イベントマーカー</strong></td>
-<td>刺激提示、反応、状態変化などが、波形のどこに対応するかを示します。</td>
+<td><strong>Event marker</strong></td>
+<td>Indicates where stimulus presentation, response, state change, etc. correspond to on the waveform. </td>
 </tr>
 <tr>
-<td><strong>刺激ログ</strong></td>
-<td>どの刺激が、どの順番で、どの条件で出たかを残します。</td>
+<td><strong>Stimulus log</strong></td>
+<td>It records which stimuli appeared, in what order, and under what conditions. </td>
 </tr>
 <tr>
-<td><strong>反応ログ</strong></td>
-<td>被験者のボタン押し、回答、失敗試行などを波形と結び付けます。</td>
+<td><strong>Reaction log</strong></td>
+<td>Associate the subject's button presses, answers, failed trials, etc. with the waveform. </td>
 </tr>
 </tbody>
 </table>
 <p>
-イベントマーカーだけがあっても、刺激の中身や条件名が曖昧だと解析し直しにくくなります。逆に刺激ログだけあっても、EEG の時刻と結び付いていなければ十分ではありません。
+Even if there is only an event marker, if the content of the stimulus or the name of the condition is ambiguous, it will be difficult to reanalyze it. Conversely, just having a stimulus log is not enough unless it is linked to EEG time.
 </p>
 
-<h2>イベント忠実度は 3 層で監査します</h2>
+<h2>Event fidelity is audited in three layers</h2>
 <table>
 <thead>
 <tr>
-<th>層</th>
-<th>ここで固定するもの</th>
-<th>欠けると起きやすい誤読</th>
+<th>layer</th>
+<th>What to fix here</th>
+<th>Misreading that is likely to occur if missing</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>1. 時間アンカー</strong></td>
-<td>onset / duration、sample index、clock domain、刺激・反応ログとの対応です。</td>
-<td>「いつ起きた出来事か」が曖昧になり、epoching や遅延評価が崩れます。</td>
+<td><strong>1. Time anchor</strong></td>
+<td>Correspondence with onset/duration, sample index, clock domain, stimulus/response log. </td>
+<td>``When the event happened'' becomes ambiguous, and epoching and delayed evaluation break down. </td>
 </tr>
 <tr>
-<td><strong>2. イベント意味論</strong></td>
-<td><code>trial_type</code>、条件名、HED tags、manual scoring rule、report usage flag です。</td>
-<td>同じ label 名でも意味がずれ、cross-study の meta / mega analysis が壊れます。</td>
+<td><strong>2. Event semantics</strong></td>
+<td><code>trial_type</code>, condition name, HED tags, manual scoring rule, report usage flag. </td>
+<td>Even if the label name is the same, the meaning will be different and cross-study meta/mega analysis will be broken. </td>
 </tr>
 <tr>
-<td><strong>3. 同期と輸送</strong></td>
-<td>clock offset、遅延、ジッタ、ドリフト、transport path、resampling / smoothing の有無です。</td>
-<td>LSL や trigger があるだけで sub-ms ground truth だと誤読しやすくなります。</td>
+<td><strong>3. Synchronization and transport</strong></td>
+<td>Clock offset, delay, jitter, drift, transport path, presence or absence of resampling/smoothing. </td>
+<td>If LSL or trigger is just a sub-ms ground truth, it will be easy to misread it. </td>
 </tr>
 </tbody>
 </table>
 <p>
-BIDS task events は主に <strong>1 層目の器</strong>を与え、HED は <strong>2 層目の意味論</strong>を補い、LSL は <strong>3 層目の network-level 同期</strong>を支えます。したがって、本サイトではこれらを代替可能な 1 個の道具として扱いません。
+BIDS task events primarily provide the <strong>first layer</strong>, HED supplements the <strong>second-layer semantics</strong>, and LSL supports <strong>third-layer network synchronization</strong>. Therefore, this site does not treat these as interchangeable tools.
 </p>
 
-<h2>ラベルの出どころは 4 種類に分けて読む</h2>
+<h2>Read the origins of labels in four different ways</h2>
 <table>
 <thead>
 <tr>
-<th>ラベルの型</th>
-<th>代表例</th>
-<th>直接表しているもの</th>
-<th>最低限残すべき補助ログ</th>
+<th>Label type</th>
+<th>Representative examples</th>
+<th>What it directly represents</th>
+<th>Minimum auxiliary log that should be kept</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>cue-locked annotation channel</strong></td>
-<td>EEG Motor Movement/Imagery の T0 / T1 / T2</td>
-<td>課題 cue と motion / imagery onset の設計上のタイミングです。</td>
-<td>run ID、task ID、subject ID、visual cue 条件、epoching rule を残します。</td>
+<td>EEG Motor Movement/Imagery T0 / T1 / T2</td>
+<td>The design timing of the issue cue and motion/imagery onset. </td>
+<td>Leave run ID, task ID, subject ID, visual cue condition, and epoching rule. </td>
 </tr>
 <tr>
 <td><strong>expert interval annotation</strong></td>
-<td>CHB-MIT の seizure onset / offset</td>
-<td>長時間記録中の event 区間です。</td>
-<td>file 順序、gap、case-to-subject 対応、montage 変化を残します。</td>
+<td>CHB-MIT seizure onset / offset</td>
+<td>This is the event section during long-term recording. </td>
+<td>Leave file order, gap, case-to-subject support, montage changes. </td>
 </tr>
 <tr>
 <td><strong>manual hypnogram</strong></td>
-<td>Sleep-EDF の R&amp;K sleep stage</td>
-<td>whole-night の coarse state label です。</td>
-<td>scoring manual、scorer ID、night / study 条件、label mapping を残します。</td>
+<td>Sleep-EDF's R&K sleep stage</td>
+<td>This is the coarse state label of whole-night. </td>
+<td>Leave scoring manual, scorer ID, night / study conditions, and label mapping. </td>
 </tr>
 <tr>
 <td><strong>report-derived / triaged label</strong></td>
-<td>TUH EEG / TUSZ の report keyword 検索や clinician report</td>
-<td>session / file に付く臨床ラベルや triage 情報です。</td>
-<td>report usage flag、patient / session ID、signal-only か multimodal かの宣言を残します。</td>
+<td>TUH EEG / TUSZ report keyword search and clinician report</td>
+<td>Clinical label and triage information attached to session/file. </td>
+<td>Leave report usage flag, patient / session ID, signal-only or multimodal declaration. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>時刻同期で見るべき 3 つ</h2>
+<h2>Three things to look for in time synchronization</h2>
 <table>
 <thead>
 <tr>
-<th>用語</th>
-<th>意味</th>
-<th>何が困るか</th>
+<th>Term</th>
+<th>Meaning</th>
+<th>What is the problem</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>遅延</strong></td>
-<td>本当の出来事から記録まで、何 ms ずれているか。</td>
-<td>刺激後応答の時刻がずれて解釈を誤ります。</td>
+<td><strong>Delay</strong></td>
+<td>How many ms is the difference between the actual event and the record? </td>
+<td>The time of the post-stimulus response is shifted, leading to incorrect interpretation. </td>
 </tr>
 <tr>
-<td><strong>ジッタ</strong></td>
-<td>そのずれが毎回どれくらい揺れるか。</td>
-<td>平均化するとピークがぼやけ、反応が弱く見えます。</td>
+<td><strong>Jitter</strong></td>
+<td>How much does the deviation fluctuate each time? </td>
+<td>Averaging will blur the peaks and make the response appear weaker. </td>
 </tr>
 <tr>
-<td><strong>ドリフト</strong></td>
-<td>長時間の中で時計のずれが増えていくこと。</td>
-<td>後半になるほど同期誤差が大きくなります。</td>
+<td><strong>Drift</strong></td>
+<td>The clock lag increases over a long period of time. </td>
+<td>The later the time, the greater the synchronization error becomes. </td>
 </tr>
 </tbody>
 </table>
 <p>
-ここでは観測ログとしての意味を説明しています。L3 の閉ループ評価で、これらが end-to-end 安定性や安全停止にどう効くかを見たい場合は <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops">Wiki: 閉ループ・遅延・ジッタ・安全停止</a> が補講になります。
+This section explains the meaning of the observation log. If you want to see how these affect end-to-end stability and safe stopping in L3 closed-loop evaluation, <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops">Wiki: Closed-loop, delay, jitter, and safe stopping</a> is a supplementary lesson.
 </p>
 
-<h2>LSL は有力ですが、hardware ground truth ではありません</h2>
+<h2>LSL is powerful, but not hardware ground truth</h2>
 <p>
-Lab Streaming Layer (LSL) は、同一 LAN 内の複数ストリームを同期し、clock offset や stream metadata を一貫して扱う基盤として非常に有用です。Kothe ら (2025) は、LSL が software-based 同期で millisecond precision を達成しうることを示しました。しかし同論文は同時に、<strong>input device の throughput delay や on-device processing delay は LSL 単体では推定・補正できない</strong>ことも明示しています。したがって、LSL を使っていても、表示遅延・音声遅延・アンプ内バッファ遅延を別に測る必要があります。
+The Lab Streaming Layer (LSL) is extremely useful as a foundation for synchronizing multiple streams within the same LAN and consistently handling clock offsets and stream metadata. Kothe et al. (2025) showed that LSL can achieve millisecond precision with software-based synchronization. However, the same paper also makes clear that <strong>the input device's throughput delay and on-device processing delay cannot be estimated or corrected by LSL alone</strong>. Therefore, even if LSL is used, display delay, audio delay, and amplifier buffer delay must still be measured separately.
 </p>
 <table>
 <thead>
 <tr>
-<th>LSL を使っていても別に残すべきもの</th>
-<th>理由</th>
+<th>Things you should leave behind even if you are using LSL</th>
+<th>Reason</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>timestamp domain</strong></td>
-<td>presentation PC、acquisition PC、device clock のどれを基準にしたかを書かないと、時刻差の意味が崩れます。</td>
+<td>If you do not write whether it is based on the presentation PC, acquisition PC, or device clock, the meaning of the time difference will be lost. </td>
 </tr>
 <tr>
 <td><strong>device-side delay</strong></td>
-<td>アンプ、ディスプレイ、音声出力、マイコンの内部遅延は software timestamp だけでは分かりません。</td>
+<td>The internal delays of the amplifier, display, audio output, and microcontroller cannot be determined by software timestamp alone. </td>
 </tr>
 <tr>
 <td><strong>drift / resync policy</strong></td>
-<td>長時間記録では drift 補正の有無で後半の整列誤差が変わります。</td>
+<td>In long-term recording, the alignment error in the second half changes depending on whether or not drift correction is applied. </td>
 </tr>
 <tr>
 <td><strong>validation method</strong></td>
-<td>photodiode、loopback、TTL、共通信号入力など、どの方法で遅延を見積もったかが必要です。</td>
+<td>You need to know which method you used to estimate the delay, such as photodiode, loopback, TTL, or common signal input. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>スターターデータ 4 件で、何をログとして残すか</h2>
+<h2>What to log with the 4 starter datasets</h2>
 
-<strong>最後の列は本サイトの運用推論です</strong>
+<strong>The last column is the operational reasoning for this site</strong>
 <p>
-下の表の <strong>止める誤読</strong> は、各データセットの公式説明と一次文献が直接与えるログの粒度から、本サイトが引く運用上の境界でございます。
+The <strong>what not to overread</strong> column below marks the operational boundary that this site draws from the logging granularity directly described in official dataset documentation and primary literature.
 </p>
 
 <table>
 <thead>
 <tr>
-<th>データセット</th>
-<th>今あるログ</th>
-<th>追加で残すべきこと</th>
-<th>止める誤読</th>
+<th>Dataset</th>
+<th>Current logging</th>
+<th>Additional details to preserve</th>
+<th>What not to overread</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>EEG Motor Movement/Imagery</strong></td>
-<td><code>.event</code> と annotation channel は同一で、T0 / T1 / T2 が cue-locked onset を示します。</td>
-<td>subject、run、task block、epoching 窓、EOG / EMG 監査結果を残します。</td>
-<td>cue-locked motor task の成績を、そのまま spontaneous thought readout と読むことを止めます。</td>
+<td><code>.event</code> and the annotation channel record cue-locked onset with T0 / T1 / T2 tags. </td>
+<td>Keep subject, run, task block, epoching window, and EOG / EMG audit results. </td>
+<td>Do not read this cue-locked motor task as spontaneous thought readout. </td>
 </tr>
 <tr>
 <td><strong>CHB-MIT</strong></td>
-<td>summary / <code>.seizure</code> 注釈、case 構造、file 間 gap、surrogate date が残ります。</td>
-<td>case-to-subject 対応、gap 長、連続記録か否か、montage summary を残します。</td>
-<td>file を独立試料とみなし、連続無欠損の監視ログだと読むことを止めます。</td>
+<td>The summary and <code>.seizure</code> annotations preserve seizure intervals, case structure, file gaps, and surrogate dates. </td>
+<td>Keep case-to-subject linkage, gap length, whether recording is continuous, and montage summaries. </td>
+<td>Do not treat each file as an independent sample or read the dataset as a gap-free monitoring log. </td>
 </tr>
 <tr>
 <td><strong>Sleep-EDF</strong></td>
-<td>R&amp;K hypnogram、Fpz-Cz / Pz-Oz EEG、1 Hz event marker が残ります。</td>
-<td>scoring manual、scorer、study arm、night ID、AASM へ写像した場合の rule を残します。</td>
-<td>100 Hz EEG があるから sub-second sleep event onset も benchmark できる、と読むことを止めます。</td>
+<td>The dataset includes an R&amp;K hypnogram, Fpz-Cz / Pz-Oz EEG, and a 1 Hz event marker. </td>
+<td>Keep the scoring manual, scorer, study arm, night ID, and any mapping rules to AASM labels. </td>
+<td>Do not claim sub-second sleep-event timing simply because the EEG itself is sampled at 100 Hz. </td>
 </tr>
 <tr>
 <td><strong>TUH EEG / TUSZ</strong></td>
-<td>patient / session 階層、EDF、clinician report、subset によっては expert seizure annotation が残ります。</td>
-<td>report usage flag、patient / session split、report keyword 由来の triage を残します。</td>
-<td>report-assisted clinical label を pure EEG signal-only 成績として書くことを止めます。</td>
+<td>Depending on the subset, the dataset includes patient / session hierarchy, EDF, clinician reports, and expert seizure annotation. </td>
+<td>Keep report-usage flags, patient / session splits, and any report-keyword-derived triage. </td>
+<td>Do not write report-assisted clinical labels as pure EEG signal-only results. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>bad channel / bad segment を残す理由</h2>
+<h2>Why leave bad channel / bad segment</h2>
 <p>
-ノイズが大きいチャンネルや、体動で壊れた区間を除外すること自体は普通です。ただし、その記録がないと、後から別の人が同じ除外を再現できません。
+It is normal to exclude channels with large noise or sections broken by body movement. However, without that record, another person cannot reproduce the same exclusion later.
 </p>
 
-<h4>最低限残したいこと</h4>
+<h4>What you want to keep as a minimum</h4>
 <ul>
-<li><strong>bad channel：</strong>どのチャンネルを、どんな理由で bad としたか。</li>
-<li><strong>bad segment：</strong>どの時間区間を除外したか。</li>
-<li><strong>閾値：</strong>どの基準で除外したか。</li>
-<li><strong>修正方法：</strong>補間したのか、捨てたのか。</li>
+<li><strong>bad channel:</strong>Which channel was marked bad and for what reason? </li>
+<li><strong>bad segment:</strong>Which time segment did you exclude? </li>
+<li><strong>Threshold:</strong>What criteria were used to exclude it? </li>
+<li><strong>How to fix:</strong>Did you interpolate or discard? </li>
 </ul>
 
-<h2>EEG-BIDS で最低限ほしい情報</h2>
+<h2>Minimum information required for EEG-BIDS</h2>
 <table>
 <thead>
 <tr>
-<th>項目</th>
-<th>意味</th>
+<th>Item</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>`events.tsv`</strong></td>
-<td>刺激や反応の時刻と種類を残します。</td>
+<td>Leaves the time and type of stimulus and response. </td>
 </tr>
 <tr>
-<td><strong>`events.json` と HED</strong></td>
-<td><code>trial_type</code> や列の意味を説明し、必要に応じて HED tags でイベント意味論を機械可読にします。</td>
+<td><strong>`events.json` and HED</strong></td>
+<td>Explain the meaning of <code>trial_type</code> and other columns, and optionally make event semantics machine-readable with HED tags. </td>
 </tr>
 <tr>
 <td><strong>`channels.tsv`</strong></td>
-<td>各チャンネルの状態や種類を残します。</td>
+<td>Leave the status and type of each channel. </td>
 </tr>
 <tr>
-<td><strong>JSON メタデータ</strong></td>
-<td>サンプリング周波数、参照法、計測条件などを残します。</td>
+<td><strong>JSON metadata</strong></td>
+<td>Leave the sampling frequency, reference method, measurement conditions, etc. </td>
 </tr>
 <tr>
 <td><strong>clock / sync log</strong></td>
-<td>clock domain、遅延、ジッタ、ドリフト、同期手段、測定方法を別ログで残します。</td>
+<td>Clock domain, delay, jitter, drift, synchronization method, and measurement method are recorded in separate logs. </td>
 </tr>
 <tr>
-<td><strong>`*_coordsystem.json` と拡張 schema</strong></td>
-<td>電極や motion sensor、pose stream を使う場合は、座標系と計測配置を first-class metadata として残します。</td>
+<td><strong>`*_coordsystem.json` and extended schema</strong></td>
+<td>When using electrodes, motion sensors, or pose streams, leave the coordinate system and measurement arrangement as first-class metadata. </td>
 </tr>
 <tr>
-<td><strong>QC / 除外ログ</strong></td>
-<td>bad channel、bad segment、ノイズ、除外理由を外部ログや派生物で残します。</td>
+<td><strong>QC / Exclusion Log</strong></td>
+<td>Leave bad channels, bad segments, noise, and exclusion reasons in external logs and derivatives. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>本サイトで必須にする Event Fidelity Card</h2>
+<h2>Event Fidelity Card required on this site</h2>
 <p>
-2026-03 の site rule として、イベントを含む dataset card や runbook には、少なくとも次の 5 項目を付けます。これは「理想的に全部そろうまで待つ」という意味ではなく、<strong>何が足りないからどこで主張を止めるか</strong>を先に公開するためのカードでございます。
+As of the 2026-03 site rule, dataset cards and runbooks that contain events must include at least the following five items. The point is not to wait until everything is perfect, but to make missing pieces visible and define where claims must stop.
 </p>
 <table>
 <thead>
 <tr>
-<th>項目</th>
-<th>最低限書くこと</th>
+<th>Item</th>
+<th>Minimum details to include</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>1. Event anchor</strong></td>
-<td>onset / duration / sample、元ファイル、どの clock domain 上の時刻か。</td>
+<td>Onset / duration / sample, source file, and the clock domain to which the time refers. </td>
 </tr>
 <tr>
 <td><strong>2. Event semantics</strong></td>
-<td><code>trial_type</code>、条件定義、HED または同等の語彙、manual scoring / report 由来の別。</td>
+<td><code>trial_type</code>, condition definitions, HED or an equivalent vocabulary, and whether semantics come from signal-only annotation or manual scoring / reports. </td>
 </tr>
 <tr>
 <td><strong>3. Sync evidence</strong></td>
-<td>LSL / TTL / photodiode / loopback などの同期手段、測った遅延・ジッタ・ドリフト、測定方法。</td>
+<td>Synchronization method such as LSL / TTL / photodiode / loopback, measured delay / jitter / drift, and how those values were measured. </td>
 </tr>
 <tr>
 <td><strong>4. Provenance</strong></td>
-<td>scorer ID、scoring manual、report usage flag、signal-only か multimodal か。</td>
+<td>Scorer ID, scoring manual, report-usage flag, and whether the label is signal-only or multimodal. </td>
 </tr>
 <tr>
 <td><strong>5. Geometry / multimodal metadata</strong></td>
-<td>電極座標、座標系、motion / video / physiology 追加ストリームがあればその frame と schema。</td>
+<td>Electrode coordinates, coordinate system, and the frame plus schema of any additional motion, video, or physiology streams. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>後から復元しにくい情報</h2>
+<h2>Information that is difficult to restore later</h2>
 <p>
-次の情報は、記録していなければ後から推測で埋めるしかなくなります。
+If you do not record the following information, you will have to guess it later.
 </p>
 <ul>
-<li><strong>刺激提示の正確な時刻：</strong>大まかな順番では代用できません。</li>
-<li><strong>clock domain：</strong>どの時計上の時刻かを書かなければ、複数ストリームの差分が解釈できません。</li>
-<li><strong>実際の遅延やジッタ：</strong>機器やソフトの設定だけでは足りないことがあります。</li>
-<li><strong>device-side delay：</strong>LSL や trigger を使っていても、ディスプレイ・音声・アンプの内部遅延は別に測る必要があります。</li>
-<li><strong>除外した理由：</strong>後から見ても、なぜ捨てたか分からなくなります。</li>
-<li><strong>label provenance：</strong>manual scoring か report-derived label かを書かなければ、同じ正解ラベルでも比較できません。</li>
-<li><strong>event semantics：</strong><code>trial_type</code> の意味、条件名、HED tags が無いと、同じ名前でも別条件かもしれません。</li>
-<li><strong>scoring manual / scorer：</strong>Sleep-EDF のような manual hypnogram は、基準と scorer を失うと再利用の意味が変わります。</li>
-<li><strong>report usage flag：</strong>TUH 系では report を見てよい評価か、signal-only かを後から復元できません。</li>
-<li><strong>座標系と sensor frame：</strong>motion や pose を足したのに frame を残さないと、multimodal 統合が再利用不能になります。</li>
-<li><strong>その場の運用メモ：</strong>電極トラブルや同期ミスは、波形だけでは読み取れません。</li>
+<li><strong>Exact time of stimulus presentation:</strong>Rough order cannot be substituted. </li>
+<li><strong>Clock domain:</strong>If you do not state which clock a timestamp belongs to, you cannot interpret differences across multiple streams. </li>
+<li><strong>Actual delay and jitter:</strong> Sometimes equipment and software settings are not enough. </li>
+<li><strong>Device-side delay:</strong>Even if you use LSL or trigger, you need to measure the internal delay of the display, audio, and amplifier separately. </li>
+<li><strong>Reason for exclusion:</strong>Even if you look back on it, you won't know why you threw it away. </li>
+<li><strong>Label provenance:</strong>If you do not record whether a label came from manual scoring or a report-derived rule, you cannot compare it safely even when the label name is the same. </li>
+<li><strong>Event semantics: </strong>If there is no meaning of <code>trial_type</code>, condition name, or HED tags, the same name may be different conditions. </li>
+<li><strong>scoring manual / scorer:</strong>Manual hypnograms like Sleep-EDF change their meaning for reuse when they lose their reference and scorer. </li>
+<li><strong>report usage flag:</strong>In TUH-style datasets, you otherwise cannot tell later whether a label depended on reports or came from signal-only processing. </li>
+<li><strong>Coordinate system and sensor frame:</strong> Adding motion and pose but not leaving frame makes multimodal integration non-reusable. </li>
+<li><strong>On-the-spot operational notes:</strong> Electrode troubles and synchronization errors cannot be read from the waveform alone. </li>
 </ul>
 
-<h2>参考文献</h2>
+<h2>References</h2>
 <ul>
 <li><a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/events.html" target="_blank">BIDS Specification: Task events</a></li>
 <li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS Specification: Electroencephalography</a></li>
@@ -384,7 +384,7 @@ Lab Streaming Layer (LSL) は、同一 LAN 内の複数ストリームを同期�
 <li><a href="https://pubmed.ncbi.nlm.nih.gov/19238800/" target="_blank">Moser et al. (2009), Sleep classification according to AASM and Rechtschaffen &amp; Kales</a></li>
 </ul>
 
-<h2>次にどこへ戻るか</h2>
+<h2>Where to go back next</h2>
 <p>
-EEG 全体の役割へ戻るなら <a href="https://mind-upload.com/eeg_101.html">EEG入門</a>、スターターデータ選びへ戻るなら <a href="https://mind-upload.com/datasets.html">データ&ベンチ</a>、最小ループの手順へ戻るなら <a href="https://mind-upload.com/datasets.html#l0-practice">ハンズオン</a> をご利用ください。
+Please use <a href="https://mind-upload.com/eeg_101.html">Introduction to EEG</a> to return to the role of EEG as a whole, <a href="https://mind-upload.com/datasets.html">Data & Bench</a> to return to selecting starter data, and <a href="https://mind-upload.com/datasets.html#l0-practice">Hands-on</a> to return to the minimal loop procedure.
 </p>

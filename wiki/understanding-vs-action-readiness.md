@@ -1,43 +1,43 @@
 ---
 layout: default
-title: "Wiki：『分かった』と『次に進める』の違い"
-description: "要約を読んで分かった気になる段階と、原文・条件・修正位置まで確認して実際に次へ進める段階の違いを整理するガイドです。"
+title: "Wiki: Difference between 'I understand' and 'Move on'"
+description: "This is a guide that helps you sort out the differences between the stage where you're curious after reading the summary, and the stage where you can actually proceed to the next stage by checking the original text, conditions, and correction positions."
 article_type: Wiki
-subtitle: "理解の段階と、行動できる段階を分けて読む"
+subtitle: "Read the stage of understanding and the stage of action"
 author: Mind Uploading Research Project
 last_updated: "2026-03-06"
 note: "Understanding vs action"
-audience: "読んだあとに『理解したつもり』で止まりたくない人、次に何が足りないか知りたい人"
-reading_time: "8〜12分"
-page_intro: "このページは、Mind-Upload のページを読んだあとに『分かった』と感じる状態と、『実際に次へ進める』状態の違いを整理する補助ガイドです。要約を読んだだけ、原文まで読んだ、勝利条件や反証条件を確認した、修正位置や外部依存まで切り分けた、では行動の準備度が違います。その差を段階で見えるようにします。"
-accuracy_note: "ここで扱うのは理解の段階です。個別の主張や修正案の妥当性は、必ず元ページと根拠へ戻って確認してください。"
+audience: "People who don't want to stop thinking that they understood it after reading it, and people who want to know what they're missing next."
+reading_time: "8-12 minutes"
+page_intro: "This page is an auxiliary guide that helps you sort out the difference between the state where you feel like you 'understood' after reading the Mind-Upload page, and the state where you can 'actually proceed to the next step.' The level of readiness for action is different if you have just read the summary, read the original text, confirmed the victory conditions and counter-conditions, and isolated the correction positions and external dependencies. We will make the difference visible in stages."
+accuracy_note: "This is a stage of understanding. Be sure to return to the original page and the rationale to check the validity of individual claims and proposed amendments."
 page_highlights:
-  - "『分かったつもり』と『次に進める』を段階で分けます。"
-  - "FAQ、文献、提案、Issue のどこで止まっているかを自己診断しやすくします。"
-  - "次に必要なのが、原文確認なのか、条件確認なのか、修正位置の特定なのかを整理します。"
+  - "Dividing ``I think I understand'' and ``moving on'' into stages."
+  - "Make it easy to self-diagnose where you are stuck in the FAQ, literature, suggestions, and issues."
+  - "I will decide whether what is needed next is checking the original text, checking the conditions, or identifying the correction position."
 known_points:
-  - "要約を読んだだけでは、まだ修正や引用に十分でない場面が多いです。"
-  - "次に進める状態には、根拠、条件、修正位置のいずれかの確認が必要です。"
-  - "理解の段階を分けると、どこで止まっているかを落ち着いて判断できます。"
+  - "In many cases, just reading the summary is not enough to make corrections or citations."
+  - "To proceed to the next step, confirmation of the basis, conditions, or correction position is required."
+  - "Dividing the stages of understanding allows you to calmly determine where you are stuck."
 unknown_points:
-  - "どの段階まで確認すれば十分かは、目的によって変わります。"
-  - "外部依存の話では、理解が進んでも相手先条件で止まる場合があります。"
+  - "Which stage is sufficient to check depends on your purpose."
+  - "When it comes to external dependence, even if understanding progresses, it may stop depending on the other party's conditions."
 wiki_links:
-  - label: "Wiki: 要約・原文・Issue履歴の使い分け"
+  - label: "Wiki: How to use summary, original text, and issue history"
     url: "/wiki/summary-vs-source-reading.html"
-    description: "どこで元ソースへ戻るべきかを先に見たい人向けです。"
-  - label: "Wiki: はじめての Issue の書き方"
+    description: "For those who want to see first where to go back to the original source."
+  - label: "Wiki: How to write your first issue"
     url: "/wiki/issue-writing-basics.html"
-    description: "実際に行動へ落とす書き方を補います。"
-  - label: "Wiki: このサイトの3つの使い方"
+    description: "It supplements how to write in action."
+  - label: "Wiki: 3 ways to use this site"
     url: "/wiki/site-usage-modes.html"
-    description: "いま自分がどのモードにいるかを整理できます。"
+    description: "You can organize which mode you are currently in."
 recommended_pages:
   - label: "FAQ"
     url: "/faq.html"
-  - label: "検証基盤"
+  - label: "Verification base"
     url: "/verification.html"
-  - label: "貢献ガイド"
+  - label: "Contribution Guide"
     url: "/issue.html"
 ---
 
@@ -45,133 +45,133 @@ recommended_pages:
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>理解には段階があります</h2>
+<h2>There are stages of understanding</h2>
 <p>
-「意味はなんとなく分かった」と、「次にどのページを直すか分かる」は同じではありません。このサイトでは、読む、原文へ戻る、条件を確認する、修正位置を特定する、外部依存を分ける、という段階を分けて考えます。
+``I kind of understand the meaning'' and ``I know which page to fix next'' are not the same. On this site, we will consider the following stages: reading, returning to the original text, checking conditions, identifying correction locations, and separating external dependencies.
 </p>
 </div>
 
 <section class="section" id="four-levels">
-<h2 class="section-title">4つの段階</h2>
+<h2 class="section-title">Four stages</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>段階</th>
-<th>いま言えること</th>
-<th>まだ足りないこと</th>
+<th>stage</th>
+<th>What I can say now</th>
+<th>What is still missing</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>1. 要約が分かった</strong></td>
-<td>そのページが何の話かは分かります。</td>
-<td>根拠として使うには、原文や条件がまだ足りません。</td>
+<td><strong>1. I got the summary</strong></td>
+<td>I know what the page is about. </td>
+<td>The original text and conditions are not yet sufficient to use as evidence. </td>
 </tr>
 <tr>
-<td><strong>2. 元ソースを確認した</strong></td>
-<td>論文、原文節、Issue 履歴のどこに何が書かれているかを確認できます。</td>
-<td>今度は、何を前進条件と反証条件にするかが必要です。</td>
+<td><strong>2. Checked the original source</strong></td>
+<td>You can check what is written where in the paper, original passage, and issue history. </td>
+<td>Now we need to decide what to make the advance condition and the disconfirmation condition. </td>
 </tr>
 <tr>
-<td><strong>3. 条件が分かった</strong></td>
-<td>何が足りず、何が満たされれば前進かを言えます。</td>
-<td>実際にどこを直すか、どこへ戻すかの特定が必要です。</td>
+<td><strong>3. I understand the conditions</strong></td>
+<td>You can say what is missing and what needs to be met to move forward. </td>
+<td>It is necessary to identify where to actually fix it and where to return it. </td>
 </tr>
 <tr>
-<td><strong>4. 次に進める</strong></td>
-<td>修正位置、戻る先、外部依存の切り分けまで分かります。</td>
-<td>あとは実際に変更や記録を行う段階です。</td>
+<td><strong>4. Proceed next</strong></td>
+<td>You can even see the correction position, return destination, and isolation of external dependencies. </td>
+<td>The next step is to actually make changes and record them. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="by-page-type">
-<h2 class="section-title">ページごとに足りないものが違います</h2>
+<h2 class="section-title">What's missing is different for each page</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>ページ</th>
-<th>「要約が分かった」の次に要ること</th>
+<th>Page</th>
+<th>What you need next after "I understand the summary"</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>FAQ</strong></td>
-<td>対応する公開ページや wiki に戻って、条件や前提を確認します。</td>
+<td>Return to the corresponding public page or wiki to review conditions and assumptions. </td>
 </tr>
 <tr>
 <td><strong>Papers / Research Harvest</strong></td>
-<td>DOI や元論文に戻って、方法、評価、限界を確認します。</td>
+<td>Go back to the DOI and original paper to review the method, evaluation, and limitations. </td>
 </tr>
 <tr>
 <td><strong>Proposals</strong></td>
-<td>原文節と Issue 履歴に戻って、採否と議論の文脈を確認します。</td>
+<td>Go back to the original passage and issue history to see the context of acceptance/rejection and discussion. </td>
 </tr>
 <tr>
 <td><strong>Issue</strong></td>
-<td>対象ページ本文へ戻って、どこを直すかを具体化します。</td>
+<td>Return to the main text of the target page and specify what needs to be fixed. </td>
 </tr>
 <tr>
 <td><strong>Collaborations</strong></td>
-<td>今この場で作れる準備物と、外部依存を分けます。</td>
+<td>Distinguish between preparations that can be made here and now and external dependencies. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="self-check">
-<h2 class="section-title">自己診断</h2>
+<h2 class="section-title">Self-diagnosis</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>自分に聞くこと</th>
-<th>`はい` なら</th>
-<th>`いいえ` なら</th>
+<th>Things to ask yourself</th>
+<th>`Yes` then</th>
+<th>`No` then</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>元ソースを確認したか</strong></td>
-<td>次は条件や修正位置を確認します。</td>
-<td><a href="summary-vs-source-reading.html">要約・原文・Issue履歴の使い分け</a> へ戻ります。</td>
+<td><strong>Have you checked the original source</strong></td>
+<td>Next, check the conditions and correction position. </td>
+Return to <td><a href="summary-vs-source-reading.html">How to use summary, original text, and issue history</a>. </td>
 </tr>
 <tr>
-<td><strong>何が足りないかを 1 文で言えるか</strong></td>
-<td>次はどこを直すかを決めます。</td>
-<td><a href="../verification.html">Verification</a> や <a href="../tech_roadmap.html">Roadmap</a> で条件を確認します。</td>
+<td><strong>Can you say in one sentence what is missing</strong></td>
+<td>Next, decide what to fix. </td>
+Check conditions with <td><a href="../verification.html">Verification</a> or <a href="../tech_roadmap.html">Roadmap</a>. </td>
 </tr>
 <tr>
-<td><strong>どのページのどこを直すか言えるか</strong></td>
-<td>Issue や修正に進めます。</td>
-<td><a href="../content_hub.html">Content Hub</a> や <a href="content-placement-basics.html">新しい情報の置き場所を決める基本</a> へ戻ります。</td>
+<td><strong>Can you tell me what page to fix?</strong></td>
+<td>Proceed to the issue or correction. </td>
+<td>Go back to <a href="../content_hub.html">Content Hub</a> and <a href="content-placement-basics.html">Basics of deciding where to place new information</a>. </td>
 </tr>
 <tr>
-<td><strong>外部依存かどうか分かるか</strong></td>
-<td>Issue か Collaborations かを決めます。</td>
-<td><a href="internal-prework-and-external-dependencies.html">内製で先にやることと外部依存</a> へ戻ります。</td>
+<td><strong>Do you know if there is an external dependency?</strong></td>
+<td>Decide between Issues and Collaborations. </td>
+<td>Go back to <a href="internal-prework-and-external-dependencies.html">What to do first in-house and external dependencies</a>. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="common-mistakes">
-<h2 class="section-title">よくある止まり方</h2>
+<h2 class="section-title">Common ways to stop</h2>
 <div class="key-points">
 <h4>Mistake</h4>
 <ul>
-<li><strong>要約を読んで、そのまま引用する：</strong> 根拠に使うなら元ソース確認が必要です。</li>
-<li><strong>条件が分からないまま Issue を書く：</strong> まず何が足りないかを 1 文で言える状態が必要です。</li>
-<li><strong>修正位置が決まらないまま大きな提案にする：</strong> Content Hub や対象ページ本文へ戻る方が安全です。</li>
-<li><strong>理解は進んだが外部依存を見落とす：</strong> 実行可能な変更と相手待ちを分ける必要があります。</li>
+<li><strong>Read the summary and quote verbatim:</strong> If you use it as evidence, you need to check the original source. </li>
+<li><strong>Writing an issue without knowing the conditions:</strong> First of all, you need to be able to state in one sentence what is missing. </li>
+<li><strong>Make a big suggestion without deciding where to make the correction:</strong> It is safer to return to Content Hub or the main text of the target page. </li>
+<li><strong>Advanced understanding but overlooking external dependencies:</strong> It is necessary to differentiate between actionable changes and waiting for others. </li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2 class="section-title">Where to return next</h2>
 <p>
-元ソース確認へ戻るなら <a href="summary-vs-source-reading.html">要約・原文・Issue履歴の使い分け</a>、実行へ落とすなら <a href="issue-writing-basics.html">はじめての Issue の書き方</a>、サイト全体の使い方へ戻るなら <a href="site-usage-modes.html">このサイトの3つの使い方</a> をご利用ください。
+If you want to go back to checking the original source, please use <a href="summary-vs-source-reading.html">How to use summary, original text, and issue history</a>, if you want to implement it, please use <a href="issue-writing-basics.html">How to write your first issue</a>, and if you want to go back to how to use the entire site, please use <a href="site-usage-modes.html">3 ways to use this site</a>.
 </p>
 </section>
 
@@ -181,17 +181,17 @@ recommended_pages:
 <div class="sidebar-box">
 <h4>Related Wiki</h4>
 <ul>
-<li><a href="summary-vs-source-reading.html">要約・原文・Issue履歴の使い分け →</a></li>
-<li><a href="issue-writing-basics.html">はじめての Issue の書き方 →</a></li>
-<li><a href="site-usage-modes.html">このサイトの3つの使い方 →</a></li>
+<li><a href="summary-vs-source-reading.html">How to use summary, original text, and issue history →</a></li>
+<li><a href="issue-writing-basics.html">How to write your first issue →</a></li>
+<li><a href="site-usage-modes.html">3 ways to use this site →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>公開ページ</h4>
+<h4>Public page</h4>
 <ul>
 <li><a href="../faq.html">FAQ →</a></li>
-<li><a href="../verification.html">検証基盤 →</a></li>
-<li><a href="../issue.html">貢献ガイド →</a></li>
+<li><a href="../verification.html">Verification infrastructure →</a></li>
+<li><a href="../issue.html">Contribution guide →</a></li>
 </ul>
 </div>
 </aside>

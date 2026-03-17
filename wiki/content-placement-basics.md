@@ -1,43 +1,43 @@
 ---
 layout: default
-title: "Wiki：新しい情報の置き場所を決める基本"
-description: "新しく見つけた説明、文献、修正案、外部依存タスクを、公開ページ、wiki、Issue、Collaborations、運用領域のどこへ置くべきかを初歩から整理するガイドです。"
+title: "Wiki: Basics of deciding where to put new information"
+description: "A guide to help you organize your newly discovered explanations, documents, suggested fixes, and external dependent tasks from the beginning, where to place them on public pages, wikis, issues, collaborations, and production areas."
 article_type: Wiki
-subtitle: "『何を書くか』の前に、『どこへ置くか』を決めるための基本"
+subtitle: "Before deciding what to write, the basics of deciding where to put it"
 author: Mind Uploading Research Project
 last_updated: "2026-03-14"
 note: "Content placement basics"
-audience: "新しい情報の統合先で迷う人、公開ページと wiki の役割差を初歩から知りたい人"
-reading_time: "8〜12分"
-page_intro: "このページは、Mind-Upload に新しい情報を足すときに、どこへ置くべきかを初歩から整理する補助教材です。公開ページは情報ポータル、wiki は学習用の詳説、Issue は実行する変更、Collaborations は外部依存の整理、運用領域は中間成果という役割差を、例と一緒に確認できます。"
-accuracy_note: "ここで示すのは置き場所の基本です。個別の主張の正しさや採否は、必ず元ページの本文と根拠へ戻って判断してください。"
+audience: "People who are confused about where to integrate new information, and people who want to understand the difference between the roles of public pages and wikis from the beginning."
+reading_time: "8-12 minutes"
+page_intro: "This page is a supplementary material that helps you organize from the beginning where to put new information when adding it to Mind-Upload. Public pages are information portals, wikis are detailed explanations for learning, Issues are changes to be made, Collaborations are for organizing external dependencies, and operations areas are intermediate results. You can check the role differences with examples."
+accuracy_note: "What is shown here is the basics of placement. Please be sure to return to the main text and basis of the original page to judge the correctness or rejection of individual claims."
 page_highlights:
-  - "公開ページ、wiki、Issue、Collaborations、運用領域の役割差を初歩から整理します。"
-  - "『とりあえず新規ページを作る』前に、既存の統合先を判断しやすくします。"
-  - "公開ページをポータルとして保ちつつ、学習用の厚みは wiki へ寄せる方針を具体化します。"
+  - "We will organize the role differences between public pages, wikis, issues, collaborations, and operational areas from the beginning."
+  - "Make it easier to decide where to integrate existing pages before 'creating a new page'."
+  - "While maintaining the public page as a portal, we will embody the policy of placing the learning depth on the wiki."
 known_points:
-  - "置き場所を先に決めると、情報の重複や導線の散逸が減ります。"
-  - "公開ページと wiki を分けると、入口の見やすさと説明の厚みを両立しやすいです。"
-  - "外部依存タスクは、今この場で実行する変更とは分けて管理する必要があります。"
+  - "Determining the location first reduces duplication of information and dissipation of leads."
+  - "Separating the public page and the wiki makes it easier to both make the entrance more visible and provide more detailed explanations."
+  - "Externally dependent tasks should be managed separately from changes made here and now."
 unknown_points:
-  - "どの論点が将来独立ページになるかは、蓄積量と読者需要で変わります。"
-  - "一部の話題は複数ページにまたがるため、最終的な統合先は今後も調整されます。"
+  - "Which issues will become independent pages in the future will change depending on the amount of content and reader demand."
+  - "Some topics span multiple pages, so the final destination will continue to be adjusted."
 wiki_links:
-  - label: "Wiki: 公開ページの読み分けガイド"
+  - label: "Wiki: Guide to reading public pages"
     url: "/wiki/public-page-reading-guide.html"
-    description: "公開ページどうしの役割差を先に見たい人向けです。"
-  - label: "Wiki: 参加・協業ページのあとに進む5つの道"
+    description: "This is for people who want to see the role differences between public pages first."
+  - label: "Wiki: 5 paths to follow after participation/collaboration page"
     url: "/wiki/participation-next-routes.html"
-    description: "置き場所の判断後に、次の作業へ進みたい人向けです。"
-  - label: "Wiki: はじめての Issue の書き方"
+    description: "This is for people who want to move on to the next task after determining the location."
+  - label: "Wiki: How to write your first issue"
     url: "/wiki/issue-writing-basics.html"
-    description: "置き場所が Issue になったときの書き方を補います。"
+    description: "Additional information on how to write when the location becomes an issue."
 recommended_pages:
-  - label: "公開コンテンツ統合ハブ"
+  - label: "Public Content Integration Hub"
     url: "/content_hub.html"
-  - label: "貢献ガイド"
+  - label: "Contribution Guide"
     url: "/issue.html"
-  - label: "協業候補"
+  - label: "Collaboration candidate"
     url: "/issue.html#external-collaboration"
 ---
 
@@ -45,126 +45,126 @@ recommended_pages:
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>最初に決めるのは「内容」より「置き場所」です</h2>
+<h2>The first thing to decide is "location" rather than "content"</h2>
 <p>
-新しい情報を見つけたとき、すぐ本文を書き始めると重複や迷子が増えます。先に<strong>その情報の役割</strong>を決めると、公開ページをポータルとして保ちつつ、必要な詳説を wiki へ増やしやすくなります。
+If you start writing the main text immediately when you find new information, you will end up with more duplication and confusion. Deciding<strong>the role</strong> of that information first will make it easier to add the necessary details to the wiki while keeping the public page as a portal.
 </p>
 </div>
 
 <section class="section" id="five-places">
-<h2 class="section-title">まずは 5 つの置き場所を分ける</h2>
+<h2 class="section-title">First, separate the 5 storage locations</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>置き場所</th>
-<th>何を置くか</th>
-<th>置かない方がよいもの</th>
+<th>Location</th>
+<th>What to put</th>
+<th>Things that should not be placed</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>公開ページ</strong></td>
-<td>いま分かっていること、まだ分かっていないこと、次に読む場所、判断表。</td>
-<td>背景知識を最初から最後まで教える長い教材。</td>
+<td><strong>Public page</strong></td>
+<td>What we know now, what we don't know yet, where to read next, and a decision chart. </td>
+<td>Long material that teaches background knowledge from beginning to end. </td>
 </tr>
 <tr>
 <td><strong>wiki</strong></td>
-<td>初歩の説明、似た言葉の違い、ページの読み方、学習用の補助教材。</td>
-<td>最新の運用判断や実装状況の一次置き場。</td>
+<td>Basic explanations, differences between similar words, how to read pages, supplementary materials for learning. </td>
+<td>A primary repository for the latest operational decisions and implementation status. </td>
 </tr>
 <tr>
 <td><strong>Issue</strong></td>
-<td>今このリポジトリで実行する変更、修正位置、前進条件、反証条件。</td>
-<td>外部依存を含む大きな計画を、完了済みのように書くこと。</td>
+<td>The changes to be performed in this repository now, the modification location, advance conditions, and disproof conditions. </td>
+<td>Writing big plans that include external dependencies as if they were completed. </td>
 </tr>
 <tr>
 <td><strong>Collaborations</strong></td>
-<td>共同研究、標準化提案、制度連携など、相手先や外部条件が必要な話。</td>
-<td>こちらだけで完了できる小さな修正の記録。</td>
+<td> Talks that require partners and external conditions, such as joint research, standardization proposals, and institutional cooperation. </td>
+<td>A record of small corrections that can be completed only here. </td>
 </tr>
 <tr>
-<td><strong>運用領域</strong></td>
-<td>未整理メモ、中間成果、CSV、機械処理結果、監査ログ。</td>
-<td>そのまま読者向け本文として見せること。</td>
+<td><strong>Operation area</strong></td>
+<td>Unorganized memos, intermediate results, CSV, machine processing results, audit logs. </td>
+<td>Show the text as is for readers. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="by-question">
-<h2 class="section-title">その情報が何に答えるかで置き場所を決める</h2>
+<h2 class="section-title">Decide where to place the information based on what it answers</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>その情報が答える問い</th>
-<th>まず置く先</th>
-<th>理由</th>
+<th>The question the information answers</th>
+<th>Where to put it first</th>
+<th>Reason</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>この分野で、いま何が分かっていて何が未解決か</strong></td>
-<td><a href="../verification.html">Verification</a>、<a href="../tech_roadmap.html">Roadmap</a> などの公開ページ</td>
-<td>公開ページは、判断の入口として既知/未知を示す役割だからです。</td>
+<td><strong>What is currently known and what remains unsolved in this field</strong></td>
+<td>Public pages such as <a href="../verification.html">Verification</a>, <a href="../tech_roadmap.html">Roadmap</a></td>
+<td>This is because the public page plays the role of indicating the known/unknown as an entry point for judgment. </td>
 </tr>
 <tr>
-<td><strong>用語や背景知識を初歩から説明したい</strong></td>
+<td><strong>I want to explain terms and background knowledge from the beginning</strong></td>
 <td><a href="../wiki/">wiki</a></td>
-<td>学習用の厚みは wiki に寄せた方が、入口ページが見やすく保てるからです。</td>
+<td>It is better to put the learning material on the wiki so that the entrance page can be kept more readable. </td>
 </tr>
 <tr>
-<td><strong>今すぐ直せる修正を切りたい</strong></td>
+<td><strong>I want to fix something that can be fixed now</strong></td>
 <td><a href="../issue.html">Issue</a></td>
-<td>実行可能な変更として、完了条件まで含めて管理できるからです。</td>
+<td>This is because you can manage executable changes, including completion conditions. </td>
 </tr>
 <tr>
-<td><strong>共同研究や標準化の候補を整理したい</strong></td>
+<td><strong>I want to organize candidates for joint research and standardization</strong></td>
 <td><a href="../issue.html#external-collaboration">Collaborations</a></td>
-<td>外部依存の話を、内製変更と混ぜないためです。</td>
+<td>This is to avoid mixing external dependencies with in-house changes. </td>
 </tr>
 <tr>
-<td><strong>まだ整理し切れていない生データやメモを残したい</strong></td>
-<td>運用領域</td>
-<td>統合先が決まる前の断片を、公開本文へ直接流し込まないためです。</td>
+<td><strong>I want to keep raw data and notes that have not been organized yet</strong></td>
+<td>Operation area</td>
+<td>This is to prevent fragments from being directly poured into the public text before the integration destination is determined. </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="common-cases">
-<h2 class="section-title">よくあるケースの置き方</h2>
+<h2 class="section-title">How to place common cases</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>見つけたもの</th>
-<th>まず置く先</th>
-<th>補助で見るページ</th>
+<th>What I found</th>
+<th>Where to put it first</th>
+<th>Page to view with assistance</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>中学生向けに噛み砕いた説明</strong></td>
+<td><strong>Explanation for junior high school students</strong></td>
 <td><a href="../wiki/">wiki</a></td>
-<td><a href="../content_hub.html">Content Hub</a> / <a href="public-page-reading-guide.html">公開ページの読み分けガイド</a></td>
+<td><a href="../content_hub.html">Content Hub</a> / <a href="public-page-reading-guide.html">Public page reading guide</a></td>
 </tr>
 <tr>
-<td><strong>既存の主張に足りない条件や注意書き</strong></td>
-<td><a href="../issue.html">Issue</a> から対象公開ページへ</td>
-<td><a href="../verification.html">Verification</a> / <a href="issue-writing-basics.html">はじめての Issue の書き方</a></td>
+<td><strong>Conditions and notes missing from existing claims</strong></td>
+<td><a href="../issue.html">Issue</a> to target public page</td>
+<td><a href="../verification.html">Verification</a> / <a href="issue-writing-basics.html">How to write your first issue</a></td>
 </tr>
 <tr>
-<td><strong>新しい論文やデータセット</strong></td>
-<td><a href="../research_harvest_50.html">Research Harvest</a> か <a href="../datasets.html">Datasets</a></td>
-<td><a href="literature-to-action-route.html">文献から実装・参加へ戻る一本道</a></td>
+<td><strong>New papers and datasets</strong></td>
+<td><a href="../research_harvest_50.html">Research Harvest</a> or <a href="../datasets.html">Datasets</a></td>
+<td><a href="literature-to-action-route.html">A straight path back from literature to implementation and participation</a></td>
 </tr>
 <tr>
-<td><strong>共同研究先へ渡す 1 ページ要約</strong></td>
-<td><a href="../issue.html#external-collaboration">Collaborations</a> に接続する準備物</td>
-<td><a href="internal-prework-and-external-dependencies.html">内製で先にやることと外部依存</a></td>
+<td><strong>One page summary to be handed over to joint research partner</strong></td>
+<td>Preparations for connecting to <a href="../issue.html#external-collaboration">Collaborations</a></td>
+<td><a href="internal-prework-and-external-dependencies.html">In-house production and external dependencies</a></td>
 </tr>
 <tr>
-<td><strong>まだ真偽や置き場が決まっていない断片メモ</strong></td>
-<td>運用領域</td>
+<td><strong>Fragmented memo whose authenticity and location have not yet been determined</strong></td>
+<td>Operation area</td>
 <td><a href="../content_hub.html">Content Hub</a></td>
 </tr>
 </tbody>
@@ -172,22 +172,22 @@ recommended_pages:
 </section>
 
 <section class="section" id="mistakes">
-<h2 class="section-title">よくある失敗</h2>
+<h2 class="section-title">Common mistakes</h2>
 <div class="key-points">
 <h4>Mistake</h4>
 <ul>
-<li><strong>とりあえず新規ページを作る：</strong> まず既存ページに統合できるかを確認してください。</li>
-<li><strong>公開ページを教科書化する：</strong> 詳説は wiki へ寄せた方が入口が見やすくなります。</li>
-<li><strong>Issue と Collaborations を混ぜる：</strong> 今できる変更と外部依存を分けてください。</li>
-<li><strong>未整理メモをそのまま公開する：</strong> まず運用領域で整理してから統合先を決める方が安全です。</li>
+<li><strong>Create a new page for now:</strong> First, check if it can be integrated into an existing page. </li>
+<li><strong>Turn public pages into textbooks:</strong> It will be easier to see the entrance if you submit detailed explanations to the wiki. </li>
+<li><strong>Mix Issues and Collaborations:</strong> Separate changes you can make now from external dependencies. </li>
+<li><strong>Publishing unorganized notes as is:</strong> It is safer to organize them in the operational area first and then decide where to integrate them. </li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="next-step">
-<h2 class="section-title">次に戻る場所</h2>
+<h2 class="section-title">Where to return next</h2>
 <p>
-統合先の一覧へ戻るなら <a href="../content_hub.html">公開コンテンツ統合ハブ</a>、参加導線へ戻るなら <a href="participation-next-routes.html">参加・協業ページのあとに進む5つの道</a>、Issue に落とし込む書き方へ戻るなら <a href="issue-writing-basics.html">はじめての Issue の書き方</a> をご利用ください。
+To return to the list of integration destinations, go to <a href="../content_hub.html">Public content integration hub</a>, to go back to participation routes, go to <a href="participation-next-routes.html">Five paths to take after the participation/collaboration page</a>, to go back to writing methods for writing issues, go to <a href="issue-writing-basics.html">How to write your first issue</a> Please use.
 </p>
 </section>
 
@@ -197,17 +197,17 @@ recommended_pages:
 <div class="sidebar-box">
 <h4>Related Wiki</h4>
 <ul>
-<li><a href="public-page-reading-guide.html">公開ページの読み分けガイド →</a></li>
-<li><a href="participation-next-routes.html">参加・協業ページのあとに進む5つの道 →</a></li>
-<li><a href="issue-writing-basics.html">はじめての Issue の書き方 →</a></li>
+<li><a href="public-page-reading-guide.html">Public page reading guide →</a></li>
+<li><a href="participation-next-routes.html">Five paths to follow after participation/collaboration page →</a></li>
+<li><a href="issue-writing-basics.html">How to write your first issue →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>公開ページ</h4>
+<h4>Public page</h4>
 <ul>
-<li><a href="../content_hub.html">公開コンテンツ統合ハブ →</a></li>
-<li><a href="../issue.html">貢献ガイド →</a></li>
-<li><a href="../issue.html#external-collaboration">協業候補 →</a></li>
+<li><a href="../content_hub.html">Public content integration hub →</a></li>
+<li><a href="../issue.html">Contribution guide →</a></li>
+<li><a href="../issue.html#external-collaboration">Collaboration candidates →</a></li>
 </ul>
 </div>
 </aside>

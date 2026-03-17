@@ -1,176 +1,176 @@
-# Wiki：L0〜L5ごとの読み進め方
+# Wiki: How to read each L0 to L5
 
-> 主張の強さごとに、どの公開ページへ行くかを決めるガイド
+> A guide to deciding which public page to go to depending on the strength of your argument
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-14 / 位置づけ: Reading guide
+- Updated: 2026-03-14 / Role: Reading guide
 
-## このページの役割
-このページは、Mind-Upload のクレーム階段 L0〜L5 を、単なる定義ではなく『どのレベルの話を追いたいとき、どのページへ行くべきか』で整理する補助ページです。主張の強さが上がるほど、必要なページと証拠も変わります。
+## Role Of This Page
+This page is an auxiliary page that organizes Mind-Upload's complaint ladder L0 to L5, not just by definition, but by ``which page should I go to when I want to follow the level of the story?'' As the strength of the claim increases, the pages and evidence required will change as well.
 
-## 正確さの前提
-このページは読み順の補助です。各レベルの成立条件そのものは、必ず元ページ本文で確認してください。
+## Accuracy Notes
+This page is a reading order aid. Please be sure to check the actual conditions for each level in the main text of the original page.
 
-## 公開ページへ戻る
-- [WBE入門](https://mind-upload.com/wbe_101.html)
-- [検証基盤](https://mind-upload.com/verification.html)
-- [技術ロードマップ](https://mind-upload.com/tech_roadmap.html)
+## Back To Public Pages
+- [Introduction to WBE](https://mind-upload.com/wbe_101.html)
+- [Verification platform](https://mind-upload.com/verification.html)
+- [technology roadmap](https://mind-upload.com/tech_roadmap.html)
 
-## 関連 Wiki
-- [Wiki: 主張と証拠の読み方](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - L0〜L5 の意味を日常語で確認できます。
-- [Wiki: 公開ページの読み分けガイド](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - 公開ページどうしの役割差そのものを整理します。
-- [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - 他の補助ページへ戻れます。
+## Related Wiki Pages
+- [Wiki: How to read claims and evidence](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - You can check the meaning of L0-L5 in everyday language.
+- [Wiki: Guide to reading public pages](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - We will organize the differences in roles between public pages.
+- [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other auxiliary pages.
 
-## いま分かっていること
-- L0〜L2 は比較的工学的に進めやすく、L3 以降は追加条件が急に増えます。
-- L4 と L5 は、出力一致や精度だけでは進めません。
-- 主張レベルごとに、見るべきページが違います。
+## What Is Currently Known
+- L0 to L2 are relatively easy to advance in terms of engineering, and after L3, additional conditions suddenly increase.
+- L4 and L5 go beyond output matching and accuracy alone.
+- There are different pages to look at depending on the level of assertion.
 
-## まだ分かっていないこと
-- どの条件を満たせば最終的に L4 や L5 が成立すると認めるかは、まだ未確定です。
-- 今後のデータ、ベンチ、制度整備で読む順が少し変わる可能性があります。
+## What Is Still Unknown
+- It is still undetermined which conditions must be met for L4 and L5 to finally hold.
+- The reading order may change slightly due to future data, benches, and system development.
 
 ---
 
-<h2>まず段階で分ける</h2>
+<h2>First, divide it into stages</h2>
 <p>
-L0〜L5 は「研究のえらさ」ではなく、<strong>主張の強さ</strong>です。したがって、読みたい主張の強さが変われば、先に見るべきページも変わります。
+L0 to L5 are not the "quality of research" but the strength of the argument. Therefore, if the strength of the argument you want to read changes, the page you should look at first will also change.
 </p>
 
-<h2>L0〜L5 ごとの入口</h2>
+<h2>Entrance for each L0 to L5</h2>
 <table>
 <thead>
 <tr>
-<th>レベル</th>
-<th>いま知りたいこと</th>
-<th>まず開くページ</th>
-<th>次に補うページ</th>
+<th>Level</th>
+<th>What I want to know now</th>
+<th>First page to open</th>
+<th>Next page to supplement</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>L0</strong> 再現可能な解析</td>
-<td>他の人が同じ結果を再実行できるかを知りたい。</td>
+<td><strong>L0</strong> Reproducible analysis</td>
+<td>I would like to know if other people can re-run the same result. </td>
 <td><a href="https://mind-upload.com/datasets.html#l0-practice">Hands-on</a></td>
 <td><a href="https://mind-upload.com/datasets.html">Datasets</a> / <a href="https://mind-upload.com/verification.html">Verification</a></td>
 </tr>
 <tr>
-<td><strong>L1</strong> デコーディング</td>
-<td>脳信号から何かを予測できた、という話を正しく読みたい。</td>
+<td><strong>L1</strong> Decoding</td>
+<td>I want to read the story correctly that something could be predicted from brain signals. </td>
 <td><a href="https://mind-upload.com/wbe_101.html">WBE 101</a></td>
 <td><a href="https://mind-upload.com/faq.html">FAQ</a> / <a href="https://mind-upload.com/eeg_101.html">EEG 101</a></td>
 </tr>
 <tr>
-<td><strong>L2</strong> 生成・介入予測</td>
-<td>未学習条件や条件変更への応答まで見たい。</td>
+<td><strong>L2</strong> Generation/intervention prediction</td>
+<td>I want to see responses to unlearned conditions and condition changes. </td>
 <td><a href="https://mind-upload.com/verification.html">Verification</a></td>
 <td><a href="https://mind-upload.com/tech_roadmap.html">Roadmap</a> / <a href="https://mind-upload.com/perspective.html">Perspective</a></td>
 </tr>
 <tr>
-<td><strong>L3</strong> 閉ループ</td>
-<td>リアルタイムで安定に動くか、安全停止まで見たい。</td>
+<td><strong>L3</strong> Closed loop</td>
+<td>I want to see whether it moves stably in real time or until it stops safely. </td>
 <td><a href="https://mind-upload.com/verification.html">Verification</a></td>
 <td><a href="https://mind-upload.com/eeg_101.html">EEG 101</a> / <a href="https://mind-upload.com/tech_roadmap.html">Roadmap</a></td>
 </tr>
 <tr>
-<td><strong>L4</strong> 本人性</td>
-<td>記憶、価値観、学習の連続性をどう読むか知りたい。</td>
+<td><strong>L4</strong> Identity</td>
+<td>I would like to know how to read the continuity of memory, values, and learning. </td>
 <td><a href="https://mind-upload.com/wbe_101.html">WBE 101</a></td>
 <td><a href="https://mind-upload.com/perspective.html#design-principles">Idea</a> / <a href="https://mind-upload.com/perspective.html">Perspective</a></td>
 </tr>
 <tr>
-<td><strong>L5</strong> 社会実装</td>
-<td>権利、安全、停止基準、制度まで含めて見たい。</td>
+<td><strong>L5</strong> Social implementation</td>
+<td>I would like to see it including rights, safety, stopping standards, and systems. </td>
 <td><a href="https://mind-upload.com/tech_roadmap.html">Roadmap</a></td>
 <td><a href="https://mind-upload.com/issue.html#external-collaboration">Collaborations</a> / <a href="https://mind-upload.com/issue.html">Issue</a></td>
 </tr>
 </tbody>
 </table>
 
-<h2>なぜこの順なのか</h2>
+<h2>Why this order?</h2>
 <table>
 <thead>
 <tr>
-<th>レベル</th>
-<th>このページから入る理由</th>
+<th>Level</th>
+<th>Reason for entering from this page</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>L0</strong></td>
-<td>L0 は概念より提出物と手順が重要なので、Hands-on から入る方が早いです。</td>
+<td>Since L0 is more about deliverables and procedures than concepts, it is faster to enter from Hands-on. </td>
 </tr>
 <tr>
 <td><strong>L1</strong></td>
-<td>L1 はニュースで誤読されやすいため、WBE 101 で主張レベルを先にそろえる方が安全です。</td>
+<td>Since L1 is easily misread in news, it is safer to align the assertion level with WBE 101 first. </td>
 </tr>
 <tr>
 <td><strong>L2</strong></td>
-<td>L2 は介入や反事実が入るため、評価設計の中心である Verification から入る方がよいです。</td>
+<td>Since L2 includes interventions and counterfactuals, it is better to start with Verification, which is the center of evaluation design. </td>
 </tr>
 <tr>
 <td><strong>L3</strong></td>
-<td>L3 はオフライン精度と別問題なので、Verification と Roadmap の両方が必要です。</td>
+<td>L3 is a separate issue from offline accuracy, so both Verification and Roadmap are required. </td>
 </tr>
 <tr>
 <td><strong>L4</strong></td>
-<td>L4 は本人性の主張なので、WBE 101 で強さを確認したあと、Idea や Perspective で深掘りします。</td>
+<td>L4 is an assertion of identity, so after confirming its strength with WBE 101, dig deeper with Idea and Perspective. </td>
 </tr>
 <tr>
 <td><strong>L5</strong></td>
-<td>L5 は制度や外部依存が大きいため、Roadmap と Collaborations を併読する必要があります。</td>
+<td>L5 has a large system and external dependence, so it is necessary to read Roadmap and Collaborations at the same time. </td>
 </tr>
 </tbody>
 </table>
 
-<h2>よくある読み違い</h2>
+<h2>Common misreadings</h2>
 
 <h4>Misread</h4>
 <ul>
-<li><strong>L0 の話を軽く見る：</strong> 実は比較可能性の土台なので、最初に最も重要です。</li>
-<li><strong>L1 の成功をそのまま L4 に伸ばす：</strong> ここが最も典型的なすり替えです。</li>
-<li><strong>L3 を精度だけで語る：</strong> 遅延、ジッタ、安全停止が無いと閉ループの主張になりません。</li>
-<li><strong>L5 を技術だけで決める：</strong> 制度、権利、責任の層が別にあります。</li>
+<li><strong>A quick look at L0:</strong> It is actually the most important first, as it is the basis of comparability. </li>
+<li><strong>Extend L1 success directly to L4:</strong> This is the most typical transfer. </li>
+<li><strong>L3 is all about accuracy:</strong> No delay, no jitter, no safe stops to claim closed loop. </li>
+<li><strong>Determine L5 only by technology:</strong> There are separate layers of systems, rights, and responsibilities. </li>
 </ul>
 
-<h2>各レベルで一緒に見るとよい wiki</h2>
+<h2>Wiki that can be viewed together at each level</h2>
 <table>
 <thead>
 <tr>
-<th>レベル</th>
-<th>補助 wiki</th>
+<th>Level</th>
+<th>Auxiliary wiki</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>L0</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack">L0で最低限そろえる成果物パック</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/dataset-splits-and-leakage">データ分割とデータリーク</a></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack">The minimum artifact pack for L0</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/dataset-splits-and-leakage">Data splitting and data leaks</a></td>
 </tr>
 <tr>
 <td><strong>L1</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/decode-vs-emulate">Decode と Emulate</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence">主張と証拠の読み方</a></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/decode-vs-emulate">Decode and Emulate</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence">How to read claims and evidence</a></td>
 </tr>
 <tr>
 <td><strong>L2</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification">反事実・介入・摂動の検証</a></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification">Counterfactual/intervention/perturbation verification</a></td>
 </tr>
 <tr>
 <td><strong>L3</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops">閉ループ・遅延・ジッタ・安全停止</a></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops">Closed-loop/delay/jitter/safety stops</a></td>
 </tr>
 <tr>
 <td><strong>L4</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/identity-and-continuity-tests">本人性評価と連続性テスト</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/personhood-and-copy-problem">本人性とコピー問題</a></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/identity-and-continuity-tests">Personhood assessment and continuity tests</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/personhood-and-copy-problem">Personhood and copy problems</a></td>
 </tr>
 <tr>
 <td><strong>L5</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies">内製と外部依存の切り分け</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/update-branching-and-stop-rules">更新・分岐・停止規則</a></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies">Separating in-house production and external dependencies</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/update-branching-and-stop-rules">Update/branching/stop rules</a></td>
 </tr>
 </tbody>
 </table>
 
-<h2>次に戻る場所</h2>
+<h2>Where to return next</h2>
 <p>
-L0〜L5 の定義そのものへ戻るなら <a href="https://mind-upload.com/wbe_101.html">WBE入門</a>、勝利条件の設計へ戻るなら <a href="https://mind-upload.com/verification.html">検証基盤</a>、依存関係の地図へ戻るなら <a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a> をご利用ください。
+To return to the definition of L0 to L5, please use <a href="https://mind-upload.com/wbe_101.html">Introduction to WBE</a>, to return to designing victory conditions, use <a href="https://mind-upload.com/verification.html">Verification base</a>, and to return to the dependency map, use <a href="https://mind-upload.com/tech_roadmap.html">Technology roadmap</a>.
 </p>
