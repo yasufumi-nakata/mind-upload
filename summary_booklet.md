@@ -5,7 +5,7 @@ description: "An auto-generated A4-style briefing page built from the site's pub
 article_type: "Briefing Booklet"
 subtitle: "An A4 briefing regenerated from public-page front matter and lead summaries"
 author: Mind Uploading Research Project
-last_updated: "2026-03-16"
+last_updated: "2026-03-18"
 note: "Auto-generated from public pages"
 body_class: "summary-booklet-page"
 ---
@@ -25,7 +25,7 @@ body_class: "summary-booklet-page"
   <div class="booklet-cover-band">
     <div>
   <span>Reference Date</span>
-  <strong>2026-03-16</strong>
+  <strong>2026-03-18</strong>
 </div>
 <div>
   <span>Current Focus</span>
@@ -116,7 +116,7 @@ body_class: "summary-booklet-page"
     <div>
       <h3>What We Fix First</h3>
       <ul class="booklet-list">
-        <li>Standards, repositories, benchmarks, and audits must be built as one package.</li><li>Claim levels and failure conditions are fixed up front so decoding is not confused with emulation.</li><li>This page explains why collecting data alone is not the same as making progress.</li><li>It separates what can and cannot be said now, so the discussion does not overclaim.</li>
+        <li>Standards, repositories, benchmarks, and audits must be built as one package.</li><li>Claim levels and failure conditions are fixed up front so decoding is not confused with emulation.</li><li>For decode / biomarker scores, the Specificity &amp; Shortcut Card separates the target neural variable from nuisance routes and audits subject / session fingerprint independently.</li><li>This page explains why collecting data alone is not the same as making progress.</li>
       </ul>
     </div>
     <div>
@@ -166,7 +166,7 @@ body_class: "summary-booklet-page"
     <article class="booklet-card booklet-card-positive">
       <h3>Relatively Well Supported</h3>
       <ul class="booklet-list">
-        <li>When public data, standards, benchmarks, and audit rules are in place, L0-L2 progress can accumulate in comparable form.</li><li>EEG and decoding research can create measurable progress when their claims stay within their conditions.</li><li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li><li>Strong claims about identity or consciousness belong in downstream verification design, not on the landing page.</li><li>Comparable progress does not exist unless standards, shared infrastructure, evaluation, and auditing are aligned together.</li>
+        <li>When public data, standards, benchmarks, and audit rules are in place, L0-L2 progress can accumulate in comparable form.</li><li>EEG and decoding research can create measurable progress when their claims stay within their conditions.</li><li>The same decode score is not a target-specific biomarker if it can be reproduced by subject / session fingerprint alone.</li><li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li><li>Strong claims about identity or consciousness belong in downstream verification design, not on the landing page.</li>
       </ul>
     </article>
     <article class="booklet-card booklet-card-caution">
@@ -186,7 +186,7 @@ body_class: "summary-booklet-page"
 <div class="booklet-step">
   <span>Step 2</span>
   <strong>L0</strong>
-  <p>We&#39;re looking at the shared infrastructure first, then the starter dataset.</p>
+  <p>We look at the shared infrastructure first, then the starter datasets.</p>
 </div>
 <div class="booklet-step">
   <span>Step 3</span>
@@ -270,7 +270,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Platform - Use the logic of PDB x BIDS x PhysioNet x OSF to define WBE success conditions and reproducible progress / 15-25 min</p>
   <p>To keep mind uploading and WBE from remaining only a dream narrative, the first requirement is <strong>a shared rule set</strong>. Mind-Upload puts data layout, evaluation, failure judgment, and reproduction procedures in place first so anyone can check the same result against the same criteria.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>Standards, repositories, benchmarks, and audits must be built as one package.</li><li>Claim levels and failure conditions are fixed up front so decoding is not confused with emulation.</li><li>This page explains why collecting data alone is not the same as making progress.</li>
+    <li>Standards, repositories, benchmarks, and audits must be built as one package.</li><li>Claim levels and failure conditions are fixed up front so decoding is not confused with emulation.</li><li>For decode / biomarker scores, the Specificity &amp; Shortcut Card separates the target neural variable from nuisance routes and audits subject / session fingerprint independently.</li>
   </ul>
   <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -309,7 +309,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Resource - Connect ``what to use&#39;&#39; and ``how to reproduce&#39;&#39; in the shortest route without separating them. / 12-20 minutes</p>
   <p>This page is a practical list to help you decide which data to practice with first. First, we use public data to create a state in which we can reproduce the same results (L0), and then check to see if we can predict and withstand changes in conditions (L1-L2).</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>We&#39;re looking at the shared infrastructure first, then the starter dataset.</li><li>Starter data is a practice board for L0~L1, not the ground truth of EEG source imaging.</li><li>Each starter data has different annotation provenance, time fidelity, and independent split units.</li>
+    <li>We look at the shared infrastructure first, then the starter datasets.</li><li>Starter data is a practice board for L0-L1, not the ground truth of EEG source imaging.</li><li>Each starter dataset has different annotation provenance, time fidelity, and independent split units.</li>
   </ul>
   <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -397,7 +397,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Primer - A realistic guide that refuses to turn EEG into magical mind reading / 12-18 minutes</p>
   <p>EEG does not directly show the inside of the brain. It measures a mixed electrical pattern at the scalp. That gives EEG strong temporal resolution, but weak and blurry spatial localization. For that reason, Mind-Upload prioritizes data quality control (QC) and shared data-organization rules such as BIDS before anything else.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>EEG is strong at tracking temporal change, but weak at identifying spatial origin with high precision.</li><li>Even with high-density EEG, claims of source-imaging improvement require individual MRI, electrode coordinates, and external validation.</li><li>Preprocessing and QC are not cosmetic cleanup; they are acceptance conditions that determine which claims are allowed.</li>
+    <li>EEG is strong at tracking temporal change, but weak at identifying spatial origin with high precision.</li><li>The questions &#39;there is information in the signal,&#39; &#39;the internal state is uniquely fixed,&#39; and &#39;the result survives long-term use&#39; require different audits.</li><li>Even when the score is the same, you still have to separate target-neural-variable signal from eye movement, EMG, uninstructed movement, feedback, and subject / session fingerprint.</li>
   </ul>
   <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
