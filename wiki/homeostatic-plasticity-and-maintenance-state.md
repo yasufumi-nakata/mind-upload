@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Wiki: Homeostatic Plasticity And Maintenance-State"
-description: "Uses primary literature to organize the maintenance mechanisms that remain outside connectome and cell-type labels: intrinsic excitability, AIS / ion-channel landscapes, sleep-dependent homeostasis, myelin support, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, human synaptic-density proxies including SV2A PET, clearance / immune support, and molecular turnover."
+description: "Uses primary literature to organize the maintenance mechanisms that remain outside connectome and cell-type labels: intrinsic excitability, activity-dependent transcription / chromatin state, AIS / ion-channel landscapes, sleep-dependent homeostasis, myelin support, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, human synaptic-density proxies including SV2A PET, clearance / immune support, and molecular turnover."
 article_type: Wiki
 subtitle: "Even with a wiring diagram and cell type labels, long-term dynamics are still not determined."
 author: Mind Uploading Research Project
@@ -12,17 +12,19 @@ reading_time: "16-22 minutes"
 page_intro: >
   This page responds to the intuition that if we know the wiring diagram and cell type, most of
   the rest will fall into place. Against that intuition, it organizes the maintenance mechanisms
-  that remain separate variables in primary literature: intrinsic excitability, AIS and ion-channel
-  landscapes, firing-rate set points, sleep-dependent renormalization, myelin / oligodendrocyte
-  coupling, perisynaptic extracellular matrix / perineuronal-net state, local ATP supply and
-  mitochondrial arrangement, synaptic-density proxies including human SV2A PET, glial metabolism,
-  clearance / immune support, and molecular turnover. It focuses only on technology and natural
-  science, not philosophy or legal systems.
+  that remain separate variables in primary literature: intrinsic excitability, activity-dependent
+  transcription / chromatin state, AIS and ion-channel landscapes, firing-rate set points,
+  sleep-dependent renormalization, myelin / oligodendrocyte coupling, perisynaptic extracellular
+  matrix / perineuronal-net state, local ATP supply and mitochondrial arrangement,
+  synaptic-density proxies including human SV2A PET, glial metabolism, clearance / immune support,
+  and molecular turnover. It focuses only on technology and natural science, not philosophy or
+  legal systems.
 accuracy_note: >
   What is shown here is the minimum list of hidden states that must be accounted for when reading
   long-term dynamics and memory maintenance. This does not mean sufficient conditions have been established.
 page_highlights:
-  - "Maintenance-state includes not only intrinsic excitability, but also AIS / ion-channel landscapes, sleep-dependent homeostasis, myelin / oligodendrocytes, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, glial metabolism and astrocyte ensembles, and clearance / immune support."
+  - "Maintenance-state includes not only intrinsic excitability, but also activity-dependent transcription / chromatin state, AIS / ion-channel landscapes, sleep-dependent homeostasis, myelin / oligodendrocytes, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, glial metabolism and astrocyte ensembles, and clearance / immune support."
+  - "Cell-type atlas and current plasticity-competent transcriptional state are different objects; static transcriptomic labels do not fix which neurons are eligible for allocation or stabilization."
   - "Short-term activity matching and long-term maintenance mechanisms being identical are different claims."
   - "Memory must be read not as static molecular preservation, but as active maintenance involving renormalization, reconsolidation, and metabolic support."
   - "Because sleep restores not only average firing rate but also synapse diversity, maintenance-state cannot be reduced to a one-dimensional correction term."
@@ -32,10 +34,11 @@ page_highlights:
 known_points:
   - "Continuity and variability in morpho-electric phenotype remain even within the same transcriptomic type."
   - "Firing rates and synaptic strengths are regulated by homeostatic plasticity across sleep / wake cycles."
-  - "Myelin, oligodendrocytes, perisynaptic ECM / PNN state, local ATP supply and mitochondrial positioning, astrocytes, and the microglia / meningeal-lymphatic system all contribute to timing, plasticity, memory retrieval, long-term recovery, and clearance support."
+  - "Myelin, oligodendrocytes, activity-dependent transcription / chromatin state, perisynaptic ECM / PNN state, local ATP supply and mitochondrial positioning, astrocytes, and the microglia / meningeal-lymphatic system all contribute to timing, plasticity, memory retrieval, long-term recovery, and clearance support."
   - "Even in humans, macro scaffolds and support-state proxies are starting to become visible through SV2A PET, MRSI-based metabolic connectomes, 31P-MRS, dynamic deuterium metabolic imaging, myelin bilayer mapping, TMS / EEG / sleep plasticity proxies, and CSF / glymphatic proxies, although cell-specific maintenance-states still remain coarse."
 unknown_points:
   - "It is unclear at what granularity excitability, sleep homeostasis, ECM / PNN state, bioenergetic support, metabolic support, and clearance support must be measured to approach sufficient conditions for WBE."
+  - "It is not yet fixed how time-resolved transcription / chromatin audit should be submitted so that cell identity, current plasticity program, and memory-stabilization controller are not mixed."
   - "It has not been fixed which external standards among SV2A PET, MRSI, 31P-MRS, dynamic DMI, myelin bilayers, TMS-EEG, sleep-plasticity proxies, and CSF-glymphatic proxies should calibrate maintenance-states that cannot be measured directly in humans."
   - "It is not yet fixed which sleep, myelin, ECM, bioenergetic, metabolic, and clearance indicators will become standard submissions for long-term closed-loop claims."
   - "It is also unclear how strongly parcel-level metabolic similarity and CSF-mobility proxies constrain cell-specific glial, immune, transmitter, and synaptic maintenance-states."
@@ -64,7 +67,7 @@ recommended_pages:
 <div class="abstract-box">
 <h2>The shortest conclusion</h2>
 <p>
-Even if<strong>the connectome and cell type are known, the long-term dynamics are not yet determined</strong>. Current primary literature shows relatively consistently that at least nine types of maintenance-states remain. First, even within the same transcriptomic type, the morpho-electric phenotype and ion-channel expression vary widely, and AIS geometry and Na+ channel distribution can vary over a span of hours to days. Second, neural circuits homeostatically adjust their firing rate and synaptic strength, not only maintaining <strong>current activity</strong> but also having a set point of <strong>where to return</strong>. Third, sleep/wake cycles create a temporal division of labor between synaptic scaling and firing-rate homeostasis. Fourth, the myelin sheath and oligodendrocyte connections are involved not only in timing but also in axonal support. Fifth, perisynaptic extracellular matrix / perineuronal-net state changes which plastic transitions, receptor-diffusion regimes, and stabilization paths remain available on the same graph. Sixth, local ATP supply, mitochondrial parking position, fission/fusion, and redox reserve constrain synaptic vesicle recycling, dendritic plasticity, and local translation. Seventh, astrocytes and glial metabolism are not the background of memory consolidation, but are also involved in<strong>memory retrieval, stabilization over a multi-day span, and fear memory expression</strong>. Eighth, clearance/immune support including meningeal lymphatic drainage, CSF-interstitial exchange, and microglia support synaptic physiology and multiday recovery. Ninth, even if memory remains under molecular turnover, this does not mean permanent preservation of stationary molecules, but active maintenance. Therefore, this site treats the reconsolidation mechanism, including relative excitability, AIS / channel state, homeostatic set point, sleep-dependent renormalization, myelin support, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, astrocyte ensemble, clearance / immune support, as a hidden state that remains outside the connectome.
+Even if<strong>the connectome and cell type are known, the long-term dynamics are not yet determined</strong>. Current primary literature shows relatively consistently that at least ten types of maintenance-states remain. First, even within the same transcriptomic type, the morpho-electric phenotype and ion-channel expression vary widely, and AIS geometry and Na+ channel distribution can vary over a span of hours to days. Second, activity-dependent transcription, chromatin accessibility, and epigenetic state change which neurons are eligible for allocation, which late gene programs stabilize memory, and which plastic transitions remain available over hours to weeks. Third, neural circuits homeostatically adjust their firing rate and synaptic strength, not only maintaining <strong>current activity</strong> but also having a set point of <strong>where to return</strong>. Fourth, sleep/wake cycles create a temporal division of labor between synaptic scaling and firing-rate homeostasis. Fifth, the myelin sheath and oligodendrocyte connections are involved not only in timing but also in axonal support. Sixth, perisynaptic extracellular matrix / perineuronal-net state changes which plastic transitions, receptor-diffusion regimes, and stabilization paths remain available on the same graph. Seventh, local ATP supply, mitochondrial parking position, fission/fusion, and redox reserve constrain synaptic vesicle recycling, dendritic plasticity, and local translation. Eighth, astrocytes and glial metabolism are not the background of memory consolidation, but are also involved in<strong>memory retrieval, stabilization over a multi-day span, and fear memory expression</strong>. Ninth, clearance/immune support including meningeal lymphatic drainage, CSF-interstitial exchange, and microglia support synaptic physiology and multiday recovery. Tenth, even if memory remains under molecular turnover, this does not mean permanent preservation of stationary molecules, but active maintenance. Therefore, this site treats the reconsolidation mechanism, including relative excitability, activity-dependent transcription / chromatin state, AIS / channel state, homeostatic set point, sleep-dependent renormalization, myelin support, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, astrocyte ensemble, clearance / immune support, as a hidden state that remains outside the connectome.
 </p>
 </div>
 
@@ -75,8 +78,8 @@ Philosophy, legal systems, and copying issues are not discussed here. It address
 </p>
 </div>
 
-<section class="section" id="eight-maintenance-classes">
-<h2 class="section-title">9 maintenance-states to fix first</h2>
+<section class="section" id="ten-maintenance-classes">
+<h2 class="section-title">10 maintenance-states to fix first</h2>
 <table class="data-table">
 <thead>
 <tr>
@@ -92,6 +95,12 @@ Philosophy, legal systems, and copying issues are not discussed here. It address
 <td>Response laws of the cell to input, such as threshold, gain, afterhyperpolarization, burstiness, rebound, AIS length/position, and Na+ channel distribution. </td>
 <td>If you have a cell-type label or a short activity record, you can almost determine the same input-output rules. </td>
 <td>Leave as latent state unless accompanied by morpho-electric or patch/perturbation. </td>
+</tr>
+<tr>
+<td><strong>Activity-dependent transcription / chromatin / epigenetic state</strong></td>
+<td>Which neurons are primed for allocation, which late-response programs stabilize memory, and which locus-specific plasticity rules are open over hours to weeks. </td>
+<td>If there is a cell-type atlas or a one-shot DEG list, the current plasticity-competent program is almost fixed too. </td>
+<td>Treat static transcriptomic labels as identity priors only; leave memory-stabilization programs as latent unless a time-stamped or causal route is shown. </td>
 </tr>
 <tr>
 <td><strong>Firing rate set point / recovery controller</strong></td>
@@ -153,12 +162,23 @@ Philosophy, legal systems, and copying issues are not discussed here. It address
 <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a> showed that transcriptomic cell types in the mouse motor cortex have continuous fluctuations within the morpho-electric space. This means that<strong>even if the cell-type label is known, the electrophysiological parameters of the field are not uniquely determined</strong>. Furthermore, <a href="https://doi.org/10.1038/nn1639" target="_blank">Schulz et al. (2006)</a> showed that although there are large individual differences in ion channel mRNA and current levels among identified neurons, some function can be maintained. Therefore, even if you overlay cell-type labels on the connectome, the<strong>threshold and gain layers</strong> still remain.
 </p>
 
-<h3>2. Sometimes what is maintained is not the “current value” but the “return destination”</h3>
+<h3>2. Activity-dependent transcription / chromatin state is not the same as cell identity</h3>
+<p>
+The weak point that became clearer in this pass was that the site had become good at separating <strong>cell identity</strong> from <strong>intrinsic excitability</strong>, while still leaving <strong>the current transcriptional / chromatin program that makes memory allocation and stabilization possible</strong> too close to the cell-type bucket. That is too coarse. <a href="https://doi.org/10.1126/science.adg9982" target="_blank">Santoni et al. (2024)</a> showed that chromatin plasticity predetermines neuronal eligibility for memory-trace formation, <a href="https://doi.org/10.1038/s41467-025-63029-6" target="_blank">Traunmüller et al. (2025)</a> showed that novel environment exposure drives temporally defined and region-specific chromatin-accessibility and gene-expression changes in the hippocampus, <a href="https://doi.org/10.1038/s41586-025-09334-w" target="_blank">Terceros et al. (2026)</a> showed thalamocortical transcriptional gates that coordinate memory stabilization across different post-learning windows, and <a href="https://doi.org/10.1038/s41588-025-02195-z" target="_blank">Coda et al. (2025)</a> showed that cell-type- and locus-specific epigenetic editing can bidirectionally regulate memory expression. Therefore, even if<strong>the connectome and the cell-type label are fixed</strong>, <strong>the current plasticity-competent transcriptional program and stabilization controller can still differ over hours to weeks</strong>.
+</p>
+<div class="note-box">
+<strong>How this site now reads transcriptomic evidence</strong>
+<p>
+<a href="https://doi.org/10.1038/s41586-023-07011-6" target="_blank">Sun et al. (2024)</a> provided a strong spatial-transcriptomic clue for long-term memory, but <a href="https://doi.org/10.1038/s41586-025-08988-y" target="_blank">Mukamel &amp; Yu (2025)</a> argued that some memory-related DEG claims are sensitive to animal-level dependence correction, and <a href="https://doi.org/10.1038/s41586-025-08989-x" target="_blank">Sun et al. (2025)</a> replied that the analysis target differs. Therefore, on this site, a memory-related transcriptomic signature is treated as <strong>time-stamped clue / hypothesis-generating evidence</strong> unless temporal calibration, locus specificity, or causal perturbation is also shown.
+</p>
+</div>
+
+<h3>3. Sometimes what is maintained is not the “current value” but the “return destination”</h3>
 <p>
 <a href="https://doi.org/10.1038/36103" target="_blank">Turrigiano et al. (1998)</a> showed that neocortical neurons bidirectionally scale their quantitative amplitude in response to chronic activity blockade or activity increase. Furthermore, <a href="https://doi.org/10.1016/j.neuron.2014.04.002" target="_blank">O'Leary et al. (2014)</a> showed that the relationship between activity set point, cell type, and compensation can be explained from a simple biophysical model of activity-dependent ion-channel expression. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a> show that individual neurons return to a precise firing-rate set point in the visual cortex in vivo. What is important here is that not only the activity value as a snapshot, but also the state of the controller, which is where to return after perturbation, is a separate variable.
 </p>
 
-<h3>3. Intrinsic excitability is not in one line, but is split into AIS and ion-channel landscape</h3>
+<h3>4. Intrinsic excitability is not in one line, but is split into AIS and ion-channel landscape</h3>
 <p>
 The weakness that we should have investigated most deeply this time was that if we write <strong>intrinsic excitability</strong> as one latent state, <strong>memory allocation by relative excitability</strong>, <strong>gain adjustment by AIS geometry / Na+ channel distribution</strong>, and <strong>homeostatic recovery controller</strong> appear to be in the same evidence layer. <a href="https://doi.org/10.1038/nature09160" target="_blank">Grubb &amp; Burrone (2010)</a> showed that AIS relocation according to activity fine-tune neural excitability, and <a href="https://doi.org/10.1038/nature09087" target="_blank">Kuba et al. (2010)</a> showed that presynaptic activity can regulate Na+ channel distribution in AIS. Furthermore, <a href="https://doi.org/10.1038/s41467-020-20232-x" target="_blank">Jamann et al. (2021)</a> demonstrated rapid homeostatic AIS scaling in response to sensory input in the mouse barrel cortex. target="_blank">Fréal et al. (2023)</a> showed that sodium channel endocytosis drives AIS plasticity, and <a href="https://doi.org/10.1038/s41593-025-02152-5" target="_blank">Benoit et al. (2025)</a> showed that AIS dynamics during associative fear learning. showed that it changes. Therefore, even if <strong>the same connectome and the same cell type</strong> are known, <strong>threshold / gain / spike-initiation rules with a span of hours to days</strong> will still remain latent.
 </p>
@@ -169,17 +189,17 @@ What we can say directly from this is that when reading the input-output rules f
 </p>
 </div>
 
-<h3>4. sleep / wake cycles rewire synapse and network regimes</h3>
+<h3>5. sleep / wake cycles rewire synapse and network regimes</h3>
 <p>
 The weakness of the current site is that it focuses maintenance-state too much on excitability and molecular turnover, and fails to emphasize that sleep is responsible for the time axis of renormalization itself. <a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">Torrado Pacheco et al. (2021)</a> showed that the firing rate that increases during wake returns to downward homeostasis during sleep. <a href="https://doi.org/10.1126/science.aah5982" target="_blank">de Vivo et al. (2017)</a> showed ultrastructural synaptic scaling across the wake/sleep cycle, and <a href="https://doi.org/10.1126/science.aai8355" target="_blank">Diering et al. (2017) showed excitatory synapse scaling-down during sleep via Homer1a. Furthermore, <a href="https://doi.org/10.1126/science.aav2642" target="_blank">Noya et al. (2019)</a> showed that the forebrain synaptic proteome is driven by sleep, and <a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a> reported that sleep returns the cortical network to a better computational regime. In addition, <a href="https://doi.org/10.1016/j.cub.2024.07.032" target="_blank">Koukaroudi et al. (2024)</a> showed that sleep deprivation reduces excitatory synapse diversity in the cortex and hippocampus, and maintenance-state is not just a recalibration of the mean value, but also includes maintaining the distribution of the synaptic repertoire. Therefore,<strong>same-day activity matching alone cannot be read as maintenance-state matching</strong>. Without sleep history and overnight recovery log, next-day stability and post-learning re-equilibration are another matter.
 </p>
 
-<h3>5. Myelin and oligodendrocytes are timing and support variables</h3>
+<h3>6. Myelin and oligodendrocytes are timing and support variables</h3>
 <p>
 Although the current page mentions intrinsic excitability, it did not sufficiently fix <strong>myelin plasticity, which is the basis of delay, as a maintenance-state. <a href="https://doi.org/10.1126/science.1252304" target="_blank">Gibson et al. (2014)</a> showed that neuronal activity promotes oligodendrogenesis and adaptive myelination, and <a href="https://doi.org/10.1126/science.1254960" target="_blank">McKenzie et al. al. (2014) showed that active central myelination is necessary for motor skill learning. Furthermore, <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a> showed that oligodendrocyte-axon metabolic coupling is mediated by extracellular K<sup>+</sup> and is involved in maintaining axonal health. Therefore,<strong>even with the same wiring and the same cell type, timing and recoverability can vary if the myelin/oligodendroglial state is different</strong>. A model in which delay is set as a fixed constant is convenient, but it is necessary to specify what is discarded in the approximation.
 </p>
 
-<h3>6. Perisynaptic ECM / PNN state is not passive packaging around synapses</h3>
+<h3>7. Perisynaptic ECM / PNN state is not passive packaging around synapses</h3>
 <p>
 The weakness I found in the current site is that although I separated synapses, timing, and glia, I still left <strong>the extracellular matrix around synapses and inhibitory neurons</strong> too implicit. That was too weak. <a href="https://doi.org/10.1126/science.1072699" target="_blank">Pizzorusso et al. (2002)</a> showed that digesting chondroitin-sulfate proteoglycans can reopen ocular-dominance plasticity in adult visual cortex. <a href="https://doi.org/10.1038/nn.2338" target="_blank">Frischknecht et al. (2009)</a> showed that brain extracellular matrix constrains AMPA-receptor lateral mobility and short-term synaptic plasticity. <a href="https://doi.org/10.1126/science.1174146" target="_blank">Gogolla et al. (2009)</a> showed that perineuronal nets protect fear memories from erasure. More recently, <a href="https://doi.org/10.1016/j.celrep.2024.114112" target="_blank">Chelini et al. (2024)</a> showed that focal clusters of peri-synaptic matrix contribute to activity-dependent plasticity and memory in mice, and <a href="https://doi.org/10.1016/j.matbio.2024.11.001" target="_blank">Jabłońska et al. (2024)</a> showed that extracellular-matrix integrity regulates hippocampal GABAergic plasticity. What we can say directly from this is that<strong>even with the same connectome and the same nominal synapses, the plasticity gate, receptor-diffusion regime, and stabilization path can still differ if ECM / PNN state differs</strong>.
 </p>
@@ -190,7 +210,7 @@ Human evidence for ECM / PNN state is still much weaker than the animal causal l
 </p>
 </div>
 
-<h3>7. bioenergetic / mitochondrial state is not another name for glial support</h3>
+<h3>8. bioenergetic / mitochondrial state is not another name for glial support</h3>
 <p>
 The weakness that I discovered after digging deeper this time is that while I wrote <strong>myelin / oligodendroglial support</strong> and <strong>astrocyte / metabolic support</strong>, I did not isolate <strong>neuron local ATP supply and mitochondrial arrangement</strong> as independent maintenance-states. <a href="https://doi.org/10.1016/j.cell.2013.12.042" target="_blank">Rangaraju et al. (2014)</a> showed that activity-driven local ATP synthesis is required for presynaptic function, and <a href="https://doi.org/10.1016/j.cell.2018.12.013" target="_blank">Rangaraju et al. (2019)</a> showed that spatially stable mitochondrial compartments support local translation during plasticity. Furthermore, <a href="https://doi.org/10.1016/j.neuron.2018.09.025" target="_blank">Divakaruni et al. (2018)</a> showed that rapid dendritic mitochondrial fission is required for LTP induction. href="https://doi.org/10.1038/s41467-023-44233-8" target="_blank">Bapat et al. (2024) showed that mitochondria stabilized on dendrites support local plasticity. href="https://doi.org/10.1038/s42003-025-08963-3" target="_blank">Hu et al. (2025)</a> showed polarization of ATP synthase in synaptic mitochondria in response to learning/plasticity signals. What we can directly say from this is that even with the same connectome, the same cell type, and the same astrocyte support, repeated-burst reliability and dendritic plasticity can still change if the local bioenergetic state of the neuron is different.
 </p>
@@ -201,7 +221,7 @@ The weakness that I discovered after digging deeper this time is that while I wr
 </p>
 </div>
 
-<h3>8. Astrocytes are state variables for memory retrieval, stabilization, and expression</h3>
+<h3>9. Astrocytes are state variables for memory retrieval, stabilization, and expression</h3>
 <p>
 Reading maintenance-state too neuron-centric makes it easy to misread energy supply and local transmitter integration as "background noise." <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a> showed that astrocyte-neuron lactate transport is required for long-term memory formation. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> showed that local, instantaneous neurotransmitter inputs are encoded into broad astrocyte network states over the order of minutes. Furthermore, <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a> showed that in hippocampus, a learning-associated astrocyte ensemble is formed near engram neurons, ensemble reactivation causes memory recall, and astrocyte-specific NFIA deletion causes recall. has been shown to suppress. <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a> showed that astrocyte ensemble associated with emotional memory contributes to stabilization over a span of several days across repeated recall, and integrates noradrenergic input and local engram signal to improve memory stability and precision. It was shown that it affects Furthermore, <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> showed that basolateral amygdala astrocytes reorganize in response to fear retrieval/extinction, and astrocyte Ca<sup>2+</sup> signaling We showed that it supports the neural representation of the amygdala-prefrontal circuit. What we can say directly from this is that it is dangerous to consider <strong>glial / metabolic background as an afterthought correction, and that the astrocyte ensemble itself remains as a state variable in long-term memory. However, these strong causal evidences center around rodent's hippocampus/amygdala issues, and do not directly translate into direct readout of human arbitrary content or whole-brain maintenance-state. When discussing memory consolidation and slow network state, it is necessary to at least distinguish between the extent to which astrocyte/metabolic support was measured and the point at which proxy was substituted.
 </p>
@@ -213,7 +233,7 @@ On the other hand, <a href="https://doi.org/10.1038/s41586-023-07011-6" target="
 </p>
 </div>
 
-<h3>9. clearance / immune support is not passive cleanup</h3>
+<h3>10. clearance / immune support is not passive cleanup</h3>
 <p>
 The weak point that I discovered after digging deeper this time is that while I wrote about <strong>astrocyte / metabolic support</strong> in detail, I did not sufficiently isolate <strong>meningeal lymphatics, CSF-interstitial exchange, clearance / immune support, including microglia, as an independent maintenance-state. <a href="https://doi.org/10.1038/nature14432" target="_blank">Louveau et al. (2015)</a> demonstrated the structure and function of CNS lymphatic vessels, and <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Kim et al. (2025) showed that the meningeal lymphatics-microglia axis regulates synaptic physiology. On the human side, <a href="https://doi.org/10.1093/brain/awab285" target="_blank">Eide &amp; Ringstad (2021)</a> has shown that sleep deprivation inhibits molecular clearance. target="_blank">Hirschler et al. (2025)</a> demonstrated that MRI can measure region-specific CSF mobility drivers, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> demonstrated that glymphatic routes can be measured in humans. showed amyloid-beta/tau clearance in line with What we can directly say from this is that<strong>clearance / immune support is not just a metaphor for cleaning, but is becoming measurable as a multiday support-state. At the same time, however, these human data are not a direct readout of <strong>local synaptic weight</strong> or <strong>moment-to-moment neural truth</strong>. Therefore, on this site, clearance / immune support is treated independently as <strong>slow support-state</strong>, while in human it is first read as <strong>macro support proxy</strong>.
 </p>
@@ -224,12 +244,12 @@ The weak point that I discovered after digging deeper this time is that while I 
 </p>
 </div>
 
-<h3>10. Memory under molecular turnover should be read as reconsolidation rather than static storage</h3>
+<h3>11. Memory under molecular turnover should be read as reconsolidation rather than static storage</h3>
 <p>
 <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Lee et al. (2022)</a> showed through simulation and analysis that synaptic memory can be maintained by active CaMKII state transfer even under molecular turnover. What we can say directly from this is that it is possible for memories to remain even if molecules are replaced. However, conversely, it is safer to read that<strong>memory persistence does not mean the sufficiency of static molecular snapshots, but means that a maintenance mechanism is working</strong>. When synaptic scaling and glial-metabolic support during sleep are read together, memory maintenance is treated as a chain of renormalization and refixation, rather than cryopreservation of a single molecule, which is closer to the primary literature.
 </p>
 
-<h3>11. Relative excitability influences future memory allocation</h3>
+<h3>12. Relative excitability influences future memory allocation</h3>
 <p>
 <a href="https://doi.org/10.1016/j.neuron.2014.07.017" target="_blank">Yiu et al. (2014)</a> showed that relative neuronal excitability before learning influences which neurons are more likely to be incorporated into a memory trace. Additionally, <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">Hadzibegovic et al. (2026)</a> show that early intrinsic excitability plasticity of neocortical engram neurons regulates memory formation and precision. Therefore, even if the connectome is the same, future learning paths and memory allocation can change if the excitability landscape is different.
 </p>
@@ -238,7 +258,7 @@ The weak point that I discovered after digging deeper this time is that while I 
 <section class="section" id="human-observability-ceiling">
 <h2 class="section-title">2026-03 Addendum: Direct observation of human maintenance-state is still rough</h2>
 <p>
-This time, we dug deeper and discovered that the human observability section is not as good as <strong>EM fragment</strong>, <strong>SV2A PET</strong>, <strong>whole-brain MRSI</strong>, <strong>31P-MRS / dynamic DMI</strong>, <strong>myelin bilayer imaging</strong>, <strong>TMS-EEG / sleep plasticity proxy</strong>, and <strong>CSF / glymphatic proxy</strong>, while <strong>ECM / PNN state still lacks a comparable in vivo whole-brain route</strong>. My point is that I was lumping these together as the same "evidence that started to appear in humans." If we look at the primary literature, each is pushing a separate layer: a structural scaffold, a regional synaptic-density proxy, a macro-biochemical scaffold, a macro energetic proxy, a macro-myelin proxy, a perturbation-conditioned plasticity proxy, and a macro support-state proxy. Human ECM evidence such as <a href="https://doi.org/10.3390/ijms23158197" target="_blank">Boonen et al. (2022)</a> is still mostly ex vivo pathology. All of these are important but do not directly confer <strong>current synaptic efficacy</strong>, <strong>release probability</strong>, <strong>postsynaptic receptor occupancy</strong>, <strong>local transmitter specificity</strong>, <strong>astrocyte ensemble</strong>, <strong>sleep-dependent recovery controller</strong>, <strong>cell-specific immune controller</strong>, <strong>branch-specific mitochondrial positioning</strong>, or <strong>current ECM / PNN gate state</strong>. Therefore, even on the human side, maintenance-state remains divided into <strong>macro scaffold / macro proxy / local hidden state</strong>.
+This time, we dug deeper and discovered that the human observability section is not as good as <strong>EM fragment</strong>, <strong>SV2A PET</strong>, <strong>whole-brain MRSI</strong>, <strong>31P-MRS / dynamic DMI</strong>, <strong>myelin bilayer imaging</strong>, <strong>TMS-EEG / sleep plasticity proxy</strong>, and <strong>CSF / glymphatic proxy</strong>, while <strong>ECM / PNN state and current transcriptional / chromatin state still lack a comparable in vivo whole-brain route</strong>. My point is that I was lumping these together as the same "evidence that started to appear in humans." If we look at the primary literature, each is pushing a separate layer: a structural scaffold, a regional synaptic-density proxy, a macro-biochemical scaffold, a macro energetic proxy, a macro-myelin proxy, a perturbation-conditioned plasticity proxy, and a macro support-state proxy. Human ECM evidence such as <a href="https://doi.org/10.3390/ijms23158197" target="_blank">Boonen et al. (2022)</a> is still mostly ex vivo pathology, and memory-related transcriptomic signatures remain dominated by animal destructive measurements rather than longitudinal human monitoring. All of these are important but do not directly confer <strong>current synaptic efficacy</strong>, <strong>release probability</strong>, <strong>postsynaptic receptor occupancy</strong>, <strong>local transmitter specificity</strong>, <strong>astrocyte ensemble</strong>, <strong>sleep-dependent recovery controller</strong>, <strong>cell-specific immune controller</strong>, <strong>branch-specific mitochondrial positioning</strong>, <strong>current transcriptional / chromatin program</strong>, or <strong>current ECM / PNN gate state</strong>. Therefore, even on the human side, maintenance-state remains divided into <strong>macro scaffold / macro proxy / local hidden state</strong>.
 </p>
 <table class="data-table">
 <thead>
@@ -319,6 +339,11 @@ Therefore, on this site, we will introduce <strong>human metabolic connectome</s
 <td>Do not write excitability fixed in cell-type alone, leave it as latent state. </td>
 </tr>
 <tr>
+<td><strong>If there is a spatial transcriptomic atlas or DEG list, the current memory-stabilization program is also fixed</strong></td>
+<td>Cell identity, transient experience-induced transcription, and locus-specific epigenetic control are different layers, and the latter is time-dependent and often destructive to measure. </td>
+<td>Atlas-level transcriptomics is treated as identity prior or clue; memory-stabilization controller remains latent unless temporal or causal evidence is shown. </td>
+</tr>
+<tr>
 <td><strong>If the connectome / cell type is the same, AIS and channel-state are also almost the same</strong></td>
 <td>AIS length / position and Na+ channel distribution change according to activity, sensory input, and learning. </td>
 <td>If there is no patch, perturbation, or AIS proxy, the gain / allocation / spike-initiation rule will remain in latent state. </td>
@@ -377,7 +402,8 @@ Therefore, on this site, we will introduce <strong>human metabolic connectome</s
 <div class="key-points">
 <h4>Rule</h4>
 <ul>
-<li><strong>In long-term claims, put maintenance-state in a separate column:</strong>Do not mix connectome / cell type / synapse with intrinsic excitability, sleep-homeostasis, myelin / oligodendroglial support, bioenergetic / mitochondrial state, glial / metabolic support, clearance / immune support. </li>
+<li><strong>In long-term claims, put maintenance-state in a separate column:</strong>Do not mix connectome / cell type / synapse with intrinsic excitability, activity-dependent transcription / chromatin state, sleep-homeostasis, myelin / oligodendroglial support, bioenergetic / mitochondrial state, glial / metabolic support, clearance / immune support. </li>
+<li><strong>Do not collapse cell identity into current plasticity program:</strong>Static transcriptomic labels and current memory-stabilization state should be written in separate columns. </li>
 <li><strong>Don't collapse intrinsic excitability into one line:</strong>Make relative excitability, AIS / channel state, and recovery controller separate columns. </li>
 <li><strong>If sleep / wake history is not measured, write it as not measured:</strong>Do not auto-complete overnight maintenance from same-day fit. </li>
 <li><strong>Do not reduce sleep to mean correction:</strong>Leaves the possibility of dropping down to synapse diversity or network regime. </li>
@@ -409,7 +435,7 @@ Therefore, on this site, we will introduce <strong>human metabolic connectome</s
 </tr>
 <tr>
 <td><strong>Long-horizon memory / learning claim</strong></td>
-<td>Perturbation responses before and after learning, relative excitability or allocation proxy, presence or absence of overnight renormalization, glial / astrocyte covariate or omission log, clearance / immune covariate if possible, and list of unmeasured maintenance-states. </td>
+<td>Perturbation responses before and after learning, relative excitability or allocation proxy, time-stamped transcription / chromatin route or omission log, presence or absence of overnight renormalization, glial / astrocyte covariate or omission log, clearance / immune covariate if possible, and list of unmeasured maintenance-states. </td>
 </tr>
 <tr>
 <td><strong>timing-sensitive claim</strong></td>
@@ -432,6 +458,10 @@ Therefore, on this site, we will introduce <strong>human metabolic connectome</s
 <ol>
 <li>Gouwens, N. W., et al. (2021). Phenotypic variation of transcriptomic cell types in mouse motor cortex. <em>Nature</em>, 598, 144-150. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
 <li>Schulz, D. J., Goaillard, J.-M., &amp; Marder, E. (2006). Variable channel expression in identified single and electrically coupled neurons in different animals. <em>Nature Neuroscience</em>, 9(3), 356-362. <a href="https://doi.org/10.1038/nn1639" target="_blank">doi:10.1038/nn1639</a></li>
+<li>Santoni, G., et al. (2024). Chromatin plasticity predetermines neuronal eligibility for memory trace formation. <em>Science</em>, 385(6716), eadg9982. <a href="https://doi.org/10.1126/science.adg9982" target="_blank">doi:10.1126/science.adg9982</a></li>
+<li>Traunmüller, L., et al. (2025). Novel environment exposure drives temporally defined and region-specific chromatin accessibility and gene expression changes in the hippocampus. <em>Nature Communications</em>, 16, 2613. <a href="https://doi.org/10.1038/s41467-025-63029-6" target="_blank">doi:10.1038/s41467-025-63029-6</a></li>
+<li>Coda, B., et al. (2025). Cell-type- and locus-specific epigenetic editing of memory expression. <em>Nature Genetics</em>, 57, 1211-1222. <a href="https://doi.org/10.1038/s41588-025-02195-z" target="_blank">doi:10.1038/s41588-025-02195-z</a></li>
+<li>Terceros, Y., et al. (2026). Thalamocortical transcriptional gates coordinate memory stabilization. <em>Nature</em>, 642, 489-498. <a href="https://doi.org/10.1038/s41586-025-09334-w" target="_blank">doi:10.1038/s41586-025-09334-w</a></li>
 <li>Grubb, M. S., &amp; Burrone, J. (2010). Activity-dependent relocation of the axon initial segment fine-tunes neuronal excitability. <em>Nature</em>, 465(7301), 1070-1074. <a href="https://doi.org/10.1038/nature09160" target="_blank">doi:10.1038/nature09160</a></li>
 <li>Kuba, H., Oichi, Y., &amp; Ohmori, H. (2010). Presynaptic activity regulates Na+ channel distribution at the axon initial segment. <em>Nature</em>, 465(7301), 1075-1078. <a href="https://doi.org/10.1038/nature09087" target="_blank">doi:10.1038/nature09087</a></li>
 <li>Jamann, N., Dannehl, D., Lehmann, N., et al. (2021). Sensory input drives rapid homeostatic scaling of the axon initial segment in mouse barrel cortex. <em>Nature Communications</em>, 12, 23. <a href="https://doi.org/10.1038/s41467-020-20232-x" target="_blank">doi:10.1038/s41467-020-20232-x</a></li>

@@ -734,7 +734,7 @@ The Observability Budget fixes <strong>what was directly observed</strong>. The 
 <section class="section" id="state-completeness-gate">
 <h2 class="section-title">State variable integrity gate</h2>
 <p>
-In our March 2026 primary-literature audit, we reconfirmed that there are at least seven loose state classes between <strong>“having a wiring diagram”</strong> and <strong>“being able to behave generatively”</strong>. In addition to cell types, synapses, delays, neuromodulation, and glia, we now also treat <strong>intrinsic excitability / homeostatic set points</strong> and <strong>perisynaptic ECM / PNN state</strong> as independent classes. Therefore, on this site, we do not accept <strong>edge-list submissions alone</strong> as a condition for passing L2 or above.
+In our March 2026 primary-literature audit, we reconfirmed that there are at least eight loose state classes between <strong>“having a wiring diagram”</strong> and <strong>“being able to behave generatively”</strong>. In addition to cell types, synapses, delays, neuromodulation, and glia, we now also treat <strong>activity-dependent transcription / chromatin state</strong>, <strong>intrinsic excitability / homeostatic set points</strong>, and <strong>perisynaptic ECM / PNN state</strong> as independent classes. Therefore, on this site, we do not accept <strong>edge-list submissions alone</strong> as a condition for passing L2 or above.
 </p>
 <table class="data-table">
 <thead>
@@ -749,6 +749,11 @@ In our March 2026 primary-literature audit, we reconfirmed that there are at lea
 <td><strong>Cell type label</strong></td>
 <td>Even with the same adjacency relationship, different transcript types have different binding motifs, synaptic properties, and myelination tendencies. </td>
 <td>Although useful as a structural atlas or candidate scaffold, it is not a sufficient condition for functional reproduction. </td>
+</tr>
+<tr>
+<td><strong>Activity-dependent transcription / chromatin / epigenetic state</strong></td>
+<td>Even with the same graph and cell type, allocation eligibility, late memory-stabilization programs, and locus-specific plasticity rules can still differ over hours to weeks. </td>
+<td>Static atlas labels or one-shot DEG lists stay as identity/context clues; memory-stabilization controller remains latent unless temporal or causal evidence is shown. </td>
 </tr>
 <tr>
 <td><strong>Intrinsic excitability/homeostasis/maintenance state</strong></td>
@@ -785,7 +790,13 @@ In our March 2026 primary-literature audit, we reconfirmed that there are at lea
 <div class="note-box">
 <strong>Practical rules here</strong>
 <p>
-connectome-complete does not mean<strong>emulation-complete</strong>. Detailed primary literature and the technical basis for which state variables should be included in the minimum submission are summarized in <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams alone are not enough</a>. The newly added issue of <strong>intrinsic excitability/homeostasis/maintenance state</strong> is discussed in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.
+connectome-complete does not mean<strong>emulation-complete</strong>. Detailed primary literature and the technical basis for which state variables should be included in the minimum submission are summarized in <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams alone are not enough</a>. The newly emphasized issues of <strong>activity-dependent transcription / chromatin state</strong> and <strong>intrinsic excitability/homeostasis/maintenance state</strong> are discussed in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-18 addendum: cell-type atlas is not current transcriptional state</strong>
+<p>
+<a href="https://doi.org/10.1126/science.adg9982" target="_blank">Santoni et al. (2024)</a> showed that chromatin plasticity predetermines neuronal eligibility for memory-trace formation, <a href="https://doi.org/10.1038/s41467-025-63029-6" target="_blank">Traunmüller et al. (2025)</a> showed temporally defined and region-specific chromatin / gene-expression changes after novel-environment exposure, <a href="https://doi.org/10.1038/s41588-025-02195-z" target="_blank">Coda et al. (2025)</a> showed cell-type- and locus-specific epigenetic editing of memory expression, and <a href="https://doi.org/10.1038/s41586-025-09334-w" target="_blank">Terceros et al. (2026)</a> showed distinct thalamocortical transcriptional gates for memory stabilization. Therefore, when a claim depends on allocation eligibility, late stabilization, or locus-specific plasticity, this site asks authors to disclose whether transcriptional / chromatin state was measured, perturbed, externally calibrated, or left latent.
 </p>
 </div>
 <div class="note-box">
@@ -827,6 +838,12 @@ The weakness found in this re-audit was that by simply listing the state variabl
 <td>Ablation with the condition that removes the node label, and generates gain of target specificity and held-out response. </td>
 <td>You can say how much cell-type information improves target-specific connectivity and response prediction. </td>
 <td>cell-type is a descriptive tag and does not auto-complete until threshold / gain / set point. </td>
+</tr>
+<tr>
+<td><strong>+ transcriptional / chromatin state audit</strong></td>
+<td>Compare a cell-atlas or connectome baseline against the same model with time-stamped expression / chromatin measurements or causal epigenetic perturbation under the same held-out learning or stabilization condition, and disclose gains separately. </td>
+<td>You can state more narrowly how much allocation eligibility, late stabilization, or locus-specific plasticity control improves once current transcriptional / chromatin state is treated explicitly. </td>
+<td>A static atlas or one-shot DEG list remains identity/context annotation or a time-stamped clue, and does not become ground truth of current plasticity state. </td>
 </tr>
 <tr>
 <td><strong>+ ECM / PNN state audit</strong></td>
@@ -1122,6 +1139,10 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Lappalainen, J. K., Tschopp, F. D., Prakhya, S., et al. (2024). Connectome-constrained networks predict neural activity across the fly visual system. <a href="https://doi.org/10.1038/s41586-024-07939-3" target="_blank">doi:10.1038/s41586-024-07939-3</a></li>
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
+<li>Santoni, G., et al. (2024). Chromatin plasticity predetermines neuronal eligibility for memory trace formation. <a href="https://doi.org/10.1126/science.adg9982" target="_blank">doi:10.1126/science.adg9982</a></li>
+<li>Traunmüller, L., et al. (2025). Novel environment exposure drives temporally defined and region-specific chromatin accessibility and gene expression changes in the hippocampus. <a href="https://doi.org/10.1038/s41467-025-63029-6" target="_blank">doi:10.1038/s41467-025-63029-6</a></li>
+<li>Coda, B., et al. (2025). Cell-type- and locus-specific epigenetic editing of memory expression. <a href="https://doi.org/10.1038/s41588-025-02195-z" target="_blank">doi:10.1038/s41588-025-02195-z</a></li>
+<li>Terceros, Y., et al. (2026). Thalamocortical transcriptional gates coordinate memory stabilization. <a href="https://doi.org/10.1038/s41586-025-09334-w" target="_blank">doi:10.1038/s41586-025-09334-w</a></li>
 <li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
 <li>Pizzorusso, T., Medini, P., Berardi, N., Chierzi, S., Fawcett, J. W., &amp; Maffei, L. (2002). Reactivation of ocular dominance plasticity in the adult visual cortex. <a href="https://doi.org/10.1126/science.1072699" target="_blank">doi:10.1126/science.1072699</a></li>
 <li>Frischknecht, R., Heine, M., Perrais, D., Seidenbecher, C. I., Choquet, D., &amp; Gundelfinger, E. D. (2009). Brain extracellular matrix affects AMPA receptor lateral mobility and short-term synaptic plasticity. <a href="https://doi.org/10.1038/nn.2338" target="_blank">doi:10.1038/nn.2338</a></li>
