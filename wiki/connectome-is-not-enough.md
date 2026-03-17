@@ -3,8 +3,9 @@ layout: default
 title: 'Wiki: Why wiring diagrams alone are not enough'
 description: We will summarize the reasons why storing only the connectome in WBE
   is insufficient, including the lack of state variables such as activity-dependent
-  transcription / chromatin state and perisynaptic extracellular matrix and the limitations
-  of connectome-constrained estimation, based on primary literature.
+  transcription / chromatin state, local proteostasis / synaptic tagging, and perisynaptic
+  extracellular matrix, as well as the limitations of connectome-constrained estimation,
+  based on primary literature.
 article_type: Wiki
 subtitle: connectome-complete is not emulation-complete
 author: Mind Uploading Research Project
@@ -23,7 +24,7 @@ accuracy_note: What I'm showing here is an arrangement of ``at least removing th
   are included'', and does not mean that the final sufficient condition has been determined.
 page_highlights:
 - We will organize the points that cannot be solved by wiring diagrams alone into
-  8 state classes and 1 presumed wall.
+  9 state classes and 1 presumed wall.
 - Use only primary literature to separate missing state variables from parameter degeneracy.
 - We will also fix operational rules for how to read connectome-complete and connectome-constrained
   model on this site.
@@ -35,9 +36,10 @@ known_points:
 - Great progress has been made in creating a whole-brain connectome, but this alone
   does not mean that dynamic reproduction is complete.
 - Synaptic efficiency, activity-dependent transcription / chromatin state, latency,
-  neuromodification, glia, cell type labels, and intrinsic excitability/homeostasis
-  set points are pieces of information that are likely to fall off a static edge list,
-  and perisynaptic ECM / PNN state is another.
+  neuromodification, glia, cell type labels, intrinsic excitability/homeostasis
+  set points, and local proteostasis / synaptic-tagging state are pieces of information
+  that are likely to fall off a static edge list, and perisynaptic ECM / PNN state
+  is another.
 - Confusing coarse physiological proxies with ground truths makes it easy to overstate
   claims about internal states.
 - Even in a connectome-constrained model, dynamics can degenerate if unmeasured cell/synapse/modification
@@ -88,7 +90,7 @@ recommended_pages:
 <div class="abstract-box">
 <h2>Conclusion</h2>
 <p>
-Although wiring diagrams are an important foundation for WBE,<strong>alone are not the minimum requirement for dynamic reproduction</strong>. Even within the same adjacency relationship, differences in cell type labeling, activity-dependent transcription / chromatin program, intrinsic excitability, synaptic efficiency, perisynaptic ECM / PNN organization, conduction delay, neuronal modification, and glial connectivity state can significantly alter learning, phase synchronization, arousal-dependent responses, and long-term stability. Furthermore, connectome-constrained modeling research in 2024-2025 showed that even with the inclusion of wiring constraints, degeneracy in dynamics remains due to unmeasured parameters and omitted mechanisms. Therefore, this site treats<strong>connectome-complete as a structural atlas/scaffold achievement</strong> and not as<strong>emulation-complete</strong>. Similarly, the fact that a<strong>connectome-constrained model reproduced some activities</strong> cannot be read as state-complete reconstruction.
+Although wiring diagrams are an important foundation for WBE,<strong>alone are not the minimum requirement for dynamic reproduction</strong>. Even within the same adjacency relationship, differences in cell type labeling, activity-dependent transcription / chromatin program, intrinsic excitability, synaptic efficiency, local proteostasis / synaptic-tagging route, perisynaptic ECM / PNN organization, conduction delay, neuronal modification, and glial connectivity state can significantly alter learning, phase synchronization, arousal-dependent responses, and long-term stability. Furthermore, connectome-constrained modeling research in 2024-2025 showed that even with the inclusion of wiring constraints, degeneracy in dynamics remains due to unmeasured parameters and omitted mechanisms. Therefore, this site treats<strong>connectome-complete as a structural atlas/scaffold achievement</strong> and not as<strong>emulation-complete</strong>. Similarly, the fact that a<strong>connectome-constrained model reproduced some activities</strong> cannot be read as state-complete reconstruction.
 </p>
 </div>
 
@@ -100,7 +102,7 @@ I am not going to deal with philosophy or legal systems here. From only the aspe
 </div>
 
 <section class="section" id="bottom-line">
-<h2 class="section-title">8 state classes and 1 putative wall to fix first</h2>
+<h2 class="section-title">9 state classes and 1 putative wall to fix first</h2>
 <table class="data-table">
 <thead>
 <tr>
@@ -134,6 +136,12 @@ I am not going to deal with philosophy or legal systems here. From only the aspe
 <td>The presence or absence of edges alone cannot determine weights, release probability, short-term plasticity, and LTP/LTD history. </td>
 <td>Edge count and synapse count can be read as effective weight. </td>
 <td>Although it is possible to describe static wiring, it does not claim L2 intervention prediction or L3 closed-loop stability. </td>
+</tr>
+<tr>
+<td><strong>Local proteostasis / synaptic-tagging state</strong></td>
+<td>Even with the same graph and current weights, tagged spines and branches can still differ in PRP capture, translation/degradation balance, and late-stabilization persistence. </td>
+<td>If the current weight is estimated, the late-stabilization route is also basically fixed. </td>
+<td>Unless the tag/capture/proteostasis route is measured, perturbed, or externally calibrated, keep late stabilization and reconsolidation claims as latent state. </td>
 </tr>
 <tr>
 <td><strong>Perisynaptic ECM / PNN state</strong></td>
@@ -170,7 +178,7 @@ I am not going to deal with philosophy or legal systems here. From only the aspe
 <div class="note-box">
 <strong>Missing variables added this time</strong>
 <p>
-The March 2026 re-audits first split <strong>intrinsic excitability / homeostasis set point</strong> from cell-type labels and <strong>perisynaptic ECM / PNN state</strong> from synaptic state. This pass adds <strong>activity-dependent transcription / chromatin state</strong> as another independent class. The reason is that even if we have cell-type labels, synapse counts, and connectomes, allocation eligibility, late memory-stabilization programs, and locus-specific plasticity rules still vary when the transcriptional / chromatin program differs. A more detailed arrangement of these maintenance-side variables is collected in <a href="homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.
+The March 2026 re-audits first split <strong>intrinsic excitability / homeostasis set point</strong> from cell-type labels and <strong>perisynaptic ECM / PNN state</strong> from synaptic state. This pass adds not only <strong>activity-dependent transcription / chromatin state</strong> but also <strong>local proteostasis / synaptic-tagging state</strong> as independent classes. The reason is that even if we have cell-type labels, synapse counts, connectomes, and a weight estimate, allocation eligibility, late memory-stabilization programs, and branch-local capture routes still vary. A more detailed arrangement of these maintenance-side variables is collected in <a href="homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.
 </p>
 </div>
 </section>
@@ -202,7 +210,7 @@ Even if there is only a wiring diagram, the only solution for the internal state
 </section>
 
 <section class="section" id="state-classes">
-<h2 class="section-title">Why are these 8 classes easy to skip</h2>
+<h2 class="section-title">Why are these 9 classes easy to skip</h2>
 
 <h3>1. Cell type labels are not decorations for node IDs</h3>
 <p>
@@ -229,6 +237,12 @@ On this site, a static atlas or one-shot memory-related DEG list is treated as <
 <p>
 Holler et al. analyzed the ultrastructure and release properties of neocortical synapses, and showed that transmission properties cannot be expressed simply by "connected/not connected." Matsuzaki et al. demonstrated that spine enlargement and AMPA current increases are linked in LTP induction in a single dendritic spine. Furthermore, Vardalaki et al. showed that even in the adult neocortex, approximately 25% of filopodia can serve as the structural basis for silent synapse lacking AMPA receptors. Therefore, <strong>edge list alone will reduce the weight of the current state, plastic history, and whether it is functionally active in the first place</strong>.
 </p>
+<div class="note-box">
+<strong>Current weight is not the same as the late-stabilization route</strong>
+<p>
+<a href="https://doi.org/10.1038/385533a0" target="_blank">Frey &amp; Morris (1997)</a> proposed synaptic tagging as the condition that allows late LTP to capture plasticity-related proteins, <a href="https://doi.org/10.1038/ncomms2250" target="_blank">Shires et al. (2012)</a> demonstrated synaptic tagging and capture in the living rat, <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">Govindarajan et al. (2011)</a> showed branch-level integration of protein-synthesis-dependent LTP, and <a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">Fonseca et al. (2006)</a> showed that late-LTP maintenance depends on a balance between protein synthesis and proteasome-dependent degradation. More recently, <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">Pandey et al. (2021)</a> linked local autophagy-coupled translation to long-term memory formation and <a href="https://doi.org/10.1038/s42003-025-08459-0" target="_blank">Thomas et al. (2025)</a> showed that actin/spine geometry can persist on the timescale of the synaptic tag. Therefore, even if the connectome and a weight estimate are given, the branch-local capture and stabilization route can still remain latent.
+</p>
+</div>
 
 <h3>5. Perisynaptic ECM / PNN state is not just packaging around synapses</h3>
 <p>
@@ -306,6 +320,12 @@ The weakness of the current site was that even if it was possible to enumerate t
 <td>A static atlas or one-shot DEG list remains identity/context annotation or a time-stamped clue, not a ground truth of current plasticity state. </td>
 </tr>
 <tr>
+<td><strong>+ local proteostasis / synaptic-tagging audit</strong></td>
+<td>Compare a synapse- or transcription-aware baseline against the same model with tag/PRP capture measurements, branch-local structural-tag proxy, or local translation/degradation/autophagy perturbation under the same held-out stabilization condition. </td>
+<td>Frey, Shires, Govindarajan, Fonseca, Pandey, and Thomas together support that late stabilization and reconsolidation can be read more narrowly once branch-local capture routes are treated explicitly. </td>
+<td>A current weight estimate or one-shot transcriptomic change remains a snapshot and does not become ground truth of the late-stabilization route. </td>
+</tr>
+<tr>
 <td><strong>+ ECM / PNN state audit</strong></td>
 <td>Compare a synapse- or connectome-based baseline against the same model with matrix markers, local matrix perturbation, or externally calibrated ECM state under the same held-out plasticity or recovery conditions. </td>
 <td>Pizzorusso, Frischknecht, Gogolla, and Jabłońska together support that adult plasticity, receptor mobility, inhibitory stabilization, and memory-update resistance can be read more narrowly once matrix state is treated explicitly. </td>
@@ -355,6 +375,7 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li><strong>augmentation / ablation:</strong>You can't write that "the added state variable worked" without putting a connectome-only baseline. </li>
 <li><strong>transcriptomic atlas is not current chromatin state:</strong>Do not auto-complete memory-stabilization controller from cell identity or one-shot DEG evidence. </li>
 <li><strong>intrinsic excitability / homeostatic set point:</strong>Do not automatically infer from cell-type label or short-term activity matching. If not measured, write latent state. </li>
+<li><strong>local proteostasis / synaptic tagging:</strong>Do not auto-complete late stabilization from current weight alone. If not measured, write latent state. </li>
 <li><strong>ECM / PNN state:</strong>Do not collapse plasticity gate, receptor mobility, or memory-stabilization resistance into synapse count or glial support. If not measured, write latent state. </li>
 <li><strong>Delay is not one scalar:</strong>If timing matters, separate device latency, biological timing-state, and phase error; if the biological side is not measured, write timing-state as latent. </li>
 <li><strong>pupil / HRV:</strong> A useful state covariate for human data, but not a transmitter-specific ground truth. </li>
@@ -404,6 +425,12 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li>Traunmüller, L., et al. (2025). Novel environment exposure drives temporally defined and region-specific chromatin accessibility and gene expression changes in the hippocampus. <em>Nature Communications</em>, 16, 2613. <a href="https://doi.org/10.1038/s41467-025-63029-6" target="_blank">doi:10.1038/s41467-025-63029-6</a></li>
 <li>Coda, B., et al. (2025). Cell-type- and locus-specific epigenetic editing of memory expression. <em>Nature Genetics</em>, 57, 1211–1222. <a href="https://doi.org/10.1038/s41588-025-02195-z" target="_blank">doi:10.1038/s41588-025-02195-z</a></li>
 <li>Terceros, Y., et al. (2026). Thalamocortical transcriptional gates coordinate memory stabilization. <em>Nature</em>, 642, 489–498. <a href="https://doi.org/10.1038/s41586-025-09334-w" target="_blank">doi:10.1038/s41586-025-09334-w</a></li>
+<li>Frey, U., &amp; Morris, R. G. M. (1997). Synaptic tagging and long-term potentiation. <em>Nature</em>, 385(6616), 533–536. <a href="https://doi.org/10.1038/385533a0" target="_blank">doi:10.1038/385533a0</a></li>
+<li>Fonseca, R., Vabulas, R. M., Hartl, F. U., Bonhoeffer, T., &amp; Nägerl, U. V. (2006). A balance of protein synthesis and proteasome-dependent degradation determines the maintenance of LTP. <em>Neuron</em>, 52(2), 239–245. <a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">doi:10.1016/j.neuron.2006.08.015</a></li>
+<li>Govindarajan, A., Israely, I., Huang, S.-Y., &amp; Tonegawa, S. (2011). The dendritic branch is the preferred integrative unit for protein synthesis-dependent LTP. <em>Neuron</em>, 69(1), 132–146. <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">doi:10.1016/j.neuron.2010.12.008</a></li>
+<li>Shires, K. L., Da Silva, B. M., Hawthorne, J. P., Morris, R. G. M., &amp; Martin, S. J. (2012). Synaptic tagging and capture in the living rat. <em>Nature Communications</em>, 3, 1246. <a href="https://doi.org/10.1038/ncomms2250" target="_blank">doi:10.1038/ncomms2250</a></li>
+<li>Pandey, K., Yu, X.-W., Steinmetz, A., &amp; Alberini, C. M. (2021). Autophagy coupled to translation is required for long-term memory formation. <em>Autophagy</em>, 17(9), 2489–2505. <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">doi:10.1080/15548627.2020.1775393</a></li>
+<li>Thomas, M., Bogaciu, C.-A., Rizzoli, S. O., et al. (2025). Long-term potentiation-induced changes in actin dynamics and spine geometry persist on the timescale of the synaptic tag. <em>Communications Biology</em>, 8, 756. <a href="https://doi.org/10.1038/s42003-025-08459-0" target="_blank">doi:10.1038/s42003-025-08459-0</a></li>
 <li>Holler, S., et al. (2021). Structure and function of a neocortical synapse. <em>Nature</em>, 591, 111–116. <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">doi:10.1038/s41586-020-03134-2</a></li>
 <li>Matsuzaki, M., Honkura, N., Ellis-Davies, G. C. R., & Kasai, H. (2004). Structural basis of long-term potentiation in single dendritic spines. <em>Nature</em>, 429, 761–766. <a href="https://doi.org/10.1038/nature02617" target="_blank">doi:10.1038/nature02617</a></li>
 <li>Vardalaki, D., Chung, K., &amp; Harnett, M. T. (2022). Filopodia are a structural substrate for silent synapses in adult neocortex. <em>Nature</em>, 612, 323–327. <a href="https://doi.org/10.1038/s41586-022-05483-6" target="_blank">doi:10.1038/s41586-022-05483-6</a></li>

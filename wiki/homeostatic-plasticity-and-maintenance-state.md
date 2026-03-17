@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Wiki: Homeostatic Plasticity And Maintenance-State"
-description: "Uses primary literature to organize the maintenance mechanisms that remain outside connectome and cell-type labels: intrinsic excitability, activity-dependent transcription / chromatin state, AIS / ion-channel landscapes, sleep-dependent homeostasis, myelin support, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, human synaptic-density proxies including SV2A PET, clearance / immune support, and molecular turnover."
+description: "Uses primary literature to organize the maintenance mechanisms that remain outside connectome and cell-type labels: intrinsic excitability, activity-dependent transcription / chromatin state, AIS / ion-channel landscapes, sleep-dependent homeostasis, myelin support, local proteostasis / synaptic-tagging state, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, human synaptic-density proxies including SV2A PET, clearance / immune support, and molecular turnover."
 article_type: Wiki
 subtitle: "Even with a wiring diagram and cell type labels, long-term dynamics are still not determined."
 author: Mind Uploading Research Project
@@ -14,8 +14,9 @@ page_intro: >
   the rest will fall into place. Against that intuition, it organizes the maintenance mechanisms
   that remain separate variables in primary literature: intrinsic excitability, activity-dependent
   transcription / chromatin state, AIS and ion-channel landscapes, firing-rate set points,
-  sleep-dependent renormalization, myelin / oligodendrocyte coupling, perisynaptic extracellular
-  matrix / perineuronal-net state, local ATP supply and mitochondrial arrangement,
+  sleep-dependent renormalization, myelin / oligodendrocyte coupling, local proteostasis /
+  synaptic-tagging state, perisynaptic extracellular matrix / perineuronal-net state,
+  local ATP supply and mitochondrial arrangement,
   synaptic-density proxies including human SV2A PET, glial metabolism, clearance / immune support,
   and molecular turnover. It focuses only on technology and natural science, not philosophy or
   legal systems.
@@ -23,8 +24,9 @@ accuracy_note: >
   What is shown here is the minimum list of hidden states that must be accounted for when reading
   long-term dynamics and memory maintenance. This does not mean sufficient conditions have been established.
 page_highlights:
-  - "Maintenance-state includes not only intrinsic excitability, but also activity-dependent transcription / chromatin state, AIS / ion-channel landscapes, sleep-dependent homeostasis, myelin / oligodendrocytes, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, glial metabolism and astrocyte ensembles, and clearance / immune support."
+  - "Maintenance-state includes not only intrinsic excitability, but also activity-dependent transcription / chromatin state, AIS / ion-channel landscapes, sleep-dependent homeostasis, myelin / oligodendrocytes, local proteostasis / synaptic-tagging state, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, glial metabolism and astrocyte ensembles, and clearance / immune support."
   - "Cell-type atlas and current plasticity-competent transcriptional state are different objects; static transcriptomic labels do not fix which neurons are eligible for allocation or stabilization."
+  - "Current weights do not fix which tagged synapses or dendritic branches capture plasticity-related proteins, so late stabilization remains another hidden layer."
   - "Short-term activity matching and long-term maintenance mechanisms being identical are different claims."
   - "Memory must be read not as static molecular preservation, but as active maintenance involving renormalization, reconsolidation, and metabolic support."
   - "Because sleep restores not only average firing rate but also synapse diversity, maintenance-state cannot be reduced to a one-dimensional correction term."
@@ -34,10 +36,10 @@ page_highlights:
 known_points:
   - "Continuity and variability in morpho-electric phenotype remain even within the same transcriptomic type."
   - "Firing rates and synaptic strengths are regulated by homeostatic plasticity across sleep / wake cycles."
-  - "Myelin, oligodendrocytes, activity-dependent transcription / chromatin state, perisynaptic ECM / PNN state, local ATP supply and mitochondrial positioning, astrocytes, and the microglia / meningeal-lymphatic system all contribute to timing, plasticity, memory retrieval, long-term recovery, and clearance support."
+  - "Myelin, oligodendrocytes, activity-dependent transcription / chromatin state, local proteostasis / synaptic-tagging state, perisynaptic ECM / PNN state, local ATP supply and mitochondrial positioning, astrocytes, and the microglia / meningeal-lymphatic system all contribute to timing, plasticity, memory retrieval, long-term recovery, and clearance support."
   - "Even in humans, macro scaffolds and support-state proxies are starting to become visible through SV2A PET, MRSI-based metabolic connectomes, 31P-MRS, dynamic deuterium metabolic imaging, myelin bilayer mapping, TMS / EEG / sleep plasticity proxies, and CSF / glymphatic proxies, although cell-specific maintenance-states still remain coarse."
 unknown_points:
-  - "It is unclear at what granularity excitability, sleep homeostasis, ECM / PNN state, bioenergetic support, metabolic support, and clearance support must be measured to approach sufficient conditions for WBE."
+  - "It is unclear at what granularity excitability, sleep homeostasis, local proteostasis / synaptic tagging, ECM / PNN state, bioenergetic support, metabolic support, and clearance support must be measured to approach sufficient conditions for WBE."
   - "It is not yet fixed how time-resolved transcription / chromatin audit should be submitted so that cell identity, current plasticity program, and memory-stabilization controller are not mixed."
   - "It has not been fixed which external standards among SV2A PET, MRSI, 31P-MRS, dynamic DMI, myelin bilayers, TMS-EEG, sleep-plasticity proxies, and CSF-glymphatic proxies should calibrate maintenance-states that cannot be measured directly in humans."
   - "It is not yet fixed which sleep, myelin, ECM, bioenergetic, metabolic, and clearance indicators will become standard submissions for long-term closed-loop claims."
@@ -67,7 +69,7 @@ recommended_pages:
 <div class="abstract-box">
 <h2>The shortest conclusion</h2>
 <p>
-Even if<strong>the connectome and cell type are known, the long-term dynamics are not yet determined</strong>. Current primary literature shows relatively consistently that at least ten types of maintenance-states remain. First, even within the same transcriptomic type, the morpho-electric phenotype and ion-channel expression vary widely, and AIS geometry and Na+ channel distribution can vary over a span of hours to days. Second, activity-dependent transcription, chromatin accessibility, and epigenetic state change which neurons are eligible for allocation, which late gene programs stabilize memory, and which plastic transitions remain available over hours to weeks. Third, neural circuits homeostatically adjust their firing rate and synaptic strength, not only maintaining <strong>current activity</strong> but also having a set point of <strong>where to return</strong>. Fourth, sleep/wake cycles create a temporal division of labor between synaptic scaling and firing-rate homeostasis. Fifth, the myelin sheath and oligodendrocyte connections are involved not only in timing but also in axonal support. Sixth, perisynaptic extracellular matrix / perineuronal-net state changes which plastic transitions, receptor-diffusion regimes, and stabilization paths remain available on the same graph. Seventh, local ATP supply, mitochondrial parking position, fission/fusion, and redox reserve constrain synaptic vesicle recycling, dendritic plasticity, and local translation. Eighth, astrocytes and glial metabolism are not the background of memory consolidation, but are also involved in<strong>memory retrieval, stabilization over a multi-day span, and fear memory expression</strong>. Ninth, clearance/immune support including meningeal lymphatic drainage, CSF-interstitial exchange, and microglia support synaptic physiology and multiday recovery. Tenth, even if memory remains under molecular turnover, this does not mean permanent preservation of stationary molecules, but active maintenance. Therefore, this site treats the reconsolidation mechanism, including relative excitability, activity-dependent transcription / chromatin state, AIS / channel state, homeostatic set point, sleep-dependent renormalization, myelin support, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, astrocyte ensemble, clearance / immune support, as a hidden state that remains outside the connectome.
+Even if<strong>the connectome and cell type are known, the long-term dynamics are not yet determined</strong>. Current primary literature shows relatively consistently that at least ten types of maintenance-states remain. First, even within the same transcriptomic type, the morpho-electric phenotype and ion-channel expression vary widely, and AIS geometry and Na+ channel distribution can vary over a span of hours to days. Second, activity-dependent transcription, chromatin accessibility, and epigenetic state change which neurons are eligible for allocation, which late gene programs stabilize memory, and which plastic transitions remain available over hours to weeks. Third, neural circuits homeostatically adjust their firing rate and synaptic strength, not only maintaining <strong>current activity</strong> but also having a set point of <strong>where to return</strong>. Fourth, sleep/wake cycles create a temporal division of labor between synaptic scaling and firing-rate homeostasis. Fifth, the myelin sheath and oligodendrocyte connections are involved not only in timing but also in axonal support. Sixth, local proteostasis and synaptic-tagging state determine which recently potentiated spines or dendritic branches capture plasticity-related proteins, how translation/degradation/autophagy remain balanced, and which late changes survive molecular turnover. Seventh, perisynaptic extracellular matrix / perineuronal-net state changes which plastic transitions, receptor-diffusion regimes, and stabilization paths remain available on the same graph. Eighth, local ATP supply, mitochondrial parking position, fission/fusion, and redox reserve constrain synaptic vesicle recycling, dendritic plasticity, and local translation. Ninth, astrocytes and glial metabolism are not the background of memory consolidation, but are also involved in<strong>memory retrieval, stabilization over a multi-day span, and fear memory expression</strong>. Tenth, clearance/immune support including meningeal lymphatic drainage, CSF-interstitial exchange, and microglia support synaptic physiology and multiday recovery. Therefore, this site treats the reconsolidation mechanism, including relative excitability, activity-dependent transcription / chromatin state, AIS / channel state, homeostatic set point, sleep-dependent renormalization, myelin support, local proteostasis / synaptic-tagging state, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, astrocyte ensemble, clearance / immune support, as a hidden state that remains outside the connectome.
 </p>
 </div>
 
@@ -145,10 +147,10 @@ Philosophy, legal systems, and copying issues are not discussed here. It address
 <td>If you reduce clearance / immune support, weaken multiday recovery, protein-clearance, and support-state claims, and specify human proxy as support-state proxy. </td>
 </tr>
 <tr>
-<td><strong>Reimmobilization under molecular turnover</strong></td>
-<td>Even if receptors, kinases, and scaffolding proteins are replaced, what maintains the memory trace? </td>
-<td>I read that if the memory is to remain, it is sufficient to save only a static molecule snapshot. </td>
-<td>If molecular retention is not claimed and the maintenance mechanism is not measured, it will be clearly stated as not measured. </td>
+<td><strong>Local proteostasis / synaptic tagging under turnover</strong></td>
+<td>Which tagged spine or branch captures plasticity-related proteins, how local translation/degradation/autophagy remain balanced, and which late changes survive molecular turnover. </td>
+<td>If current weight or transcriptomic program is known, the late-stabilization route is basically fixed too. </td>
+<td>If the tag/capture/proteostasis route is unmeasured, late stabilization and reconsolidation claims remain latent. </td>
 </tr>
 </tbody>
 </table>
@@ -244,10 +246,16 @@ The weak point that I discovered after digging deeper this time is that while I 
 </p>
 </div>
 
-<h3>11. Memory under molecular turnover should be read as reconsolidation rather than static storage</h3>
+<h3>11. Local proteostasis / synaptic tagging under molecular turnover is another state layer</h3>
 <p>
-<a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Lee et al. (2022)</a> showed through simulation and analysis that synaptic memory can be maintained by active CaMKII state transfer even under molecular turnover. What we can say directly from this is that it is possible for memories to remain even if molecules are replaced. However, conversely, it is safer to read that<strong>memory persistence does not mean the sufficiency of static molecular snapshots, but means that a maintenance mechanism is working</strong>. When synaptic scaling and glial-metabolic support during sleep are read together, memory maintenance is treated as a chain of renormalization and refixation, rather than cryopreservation of a single molecule, which is closer to the primary literature.
+The weak point that became clearer in this pass was that the site separated <strong>current synaptic state</strong> from <strong>transcriptional / chromatin state</strong>, while still leaving <strong>the branch-local route that decides which potentiated synapse captures plasticity-related proteins and survives turnover</strong> too implicit. That is too coarse. <a href="https://doi.org/10.1038/385533a0" target="_blank">Frey &amp; Morris (1997)</a> proposed synaptic tagging as the condition that allows late LTP to capture plasticity-related proteins, <a href="https://doi.org/10.1038/ncomms2250" target="_blank">Shires et al. (2012)</a> demonstrated synaptic tagging and capture in the living rat, and <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">Govindarajan et al. (2011)</a> showed that the dendritic branch is a preferred integrative unit for protein-synthesis-dependent LTP. Furthermore, <a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">Fonseca et al. (2006)</a> showed that maintenance of late LTP depends on a balance between protein synthesis and proteasome-dependent degradation, <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">Pandey et al. (2021)</a> linked local autophagy-coupled translation to long-term memory formation, <a href="https://doi.org/10.1038/s42003-025-08459-0" target="_blank">Thomas et al. (2025)</a> showed that actin/spine geometry changes can persist on the timescale of the synaptic tag, and <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Lee et al. (2022)</a> showed that synaptic memory can survive molecular turnover by active state transfer. Therefore, even if<strong>the connectome, a weight estimate, and a one-shot transcriptomic measurement</strong> are given, <strong>which synapses remain capture-ready and which late changes persist under turnover</strong> can still remain latent.
 </p>
+<div class="note-box">
+<strong>What is still missing in humans</strong>
+<p>
+The current human routes on this site, such as SV2A PET, MRSI, 31P-MRS / dynamic DMI, myelin maps, TMS-EEG, and CSF proxies, do not directly tell us which spine or dendritic branch carried the tag, captured the plasticity-related proteins, or ran the relevant translation/degradation/autophagy program. This is an inference from the measurement classes summarized below. Therefore, on this site, local proteostasis / synaptic tagging remains a <strong>local hidden state</strong> in humans unless it is externally calibrated or causally perturbed.
+</p>
+</div>
 
 <h3>12. Relative excitability influences future memory allocation</h3>
 <p>
@@ -258,7 +266,7 @@ The weak point that I discovered after digging deeper this time is that while I 
 <section class="section" id="human-observability-ceiling">
 <h2 class="section-title">2026-03 Addendum: Direct observation of human maintenance-state is still rough</h2>
 <p>
-This time, we dug deeper and discovered that the human observability section is not as good as <strong>EM fragment</strong>, <strong>SV2A PET</strong>, <strong>whole-brain MRSI</strong>, <strong>31P-MRS / dynamic DMI</strong>, <strong>myelin bilayer imaging</strong>, <strong>TMS-EEG / sleep plasticity proxy</strong>, and <strong>CSF / glymphatic proxy</strong>, while <strong>ECM / PNN state and current transcriptional / chromatin state still lack a comparable in vivo whole-brain route</strong>. My point is that I was lumping these together as the same "evidence that started to appear in humans." If we look at the primary literature, each is pushing a separate layer: a structural scaffold, a regional synaptic-density proxy, a macro-biochemical scaffold, a macro energetic proxy, a macro-myelin proxy, a perturbation-conditioned plasticity proxy, and a macro support-state proxy. Human ECM evidence such as <a href="https://doi.org/10.3390/ijms23158197" target="_blank">Boonen et al. (2022)</a> is still mostly ex vivo pathology, and memory-related transcriptomic signatures remain dominated by animal destructive measurements rather than longitudinal human monitoring. All of these are important but do not directly confer <strong>current synaptic efficacy</strong>, <strong>release probability</strong>, <strong>postsynaptic receptor occupancy</strong>, <strong>local transmitter specificity</strong>, <strong>astrocyte ensemble</strong>, <strong>sleep-dependent recovery controller</strong>, <strong>cell-specific immune controller</strong>, <strong>branch-specific mitochondrial positioning</strong>, <strong>current transcriptional / chromatin program</strong>, or <strong>current ECM / PNN gate state</strong>. Therefore, even on the human side, maintenance-state remains divided into <strong>macro scaffold / macro proxy / local hidden state</strong>.
+This time, we dug deeper and discovered that the human observability section is not as good as <strong>EM fragment</strong>, <strong>SV2A PET</strong>, <strong>whole-brain MRSI</strong>, <strong>31P-MRS / dynamic DMI</strong>, <strong>myelin bilayer imaging</strong>, <strong>TMS-EEG / sleep plasticity proxy</strong>, and <strong>CSF / glymphatic proxy</strong>, while <strong>ECM / PNN state</strong>, <strong>current transcriptional / chromatin state</strong>, and <strong>branch-local tag/proteostasis route</strong> still lack a comparable in vivo whole-brain route. My point is that I was lumping these together as the same "evidence that started to appear in humans." If we look at the primary literature, each is pushing a separate layer: a structural scaffold, a regional synaptic-density proxy, a macro-biochemical scaffold, a macro energetic proxy, a macro-myelin proxy, a perturbation-conditioned plasticity proxy, and a macro support-state proxy. Human ECM evidence such as <a href="https://doi.org/10.3390/ijms23158197" target="_blank">Boonen et al. (2022)</a> is still mostly ex vivo pathology, and memory-related transcriptomic signatures remain dominated by animal destructive measurements rather than longitudinal human monitoring. All of these are important but do not directly confer <strong>current synaptic efficacy</strong>, <strong>release probability</strong>, <strong>postsynaptic receptor occupancy</strong>, <strong>local transmitter specificity</strong>, <strong>branch-local PRP capture state</strong>, <strong>astrocyte ensemble</strong>, <strong>sleep-dependent recovery controller</strong>, <strong>cell-specific immune controller</strong>, <strong>branch-specific mitochondrial positioning</strong>, <strong>current transcriptional / chromatin program</strong>, or <strong>current ECM / PNN gate state</strong>. Therefore, even on the human side, maintenance-state remains divided into <strong>macro scaffold / macro proxy / local hidden state</strong>.
 </p>
 <table class="data-table">
 <thead>
@@ -359,6 +367,11 @@ Therefore, on this site, we will introduce <strong>human metabolic connectome</s
 <td>The cross-day stability claim is demoted if no sleep / wake annotations or next day recovery are issued. </td>
 </tr>
 <tr>
+<td><strong>If the current weight is known, the late-stabilization route is also basically fixed</strong></td>
+<td>Tagged spines and dendritic branches can still differ in PRP capture, local translation/degradation/autophagy balance, and the persistence of structural tag-state. </td>
+<td>If no tag/capture/proteostasis route is measured or perturbed, late stabilization and reconsolidation stay in latent state. </td>
+</tr>
+<tr>
 <td><strong>With the human metabolic connectome, the glial / transmitter maintenance-state was also directly visible</strong></td>
 <td>Parcel-level metabolic similarity is useful, but it does not directly provide cell-specific astrocyte ensemble or transmitter state. </td>
 <td>Human MRSI is treated as a macro-biochemical scaffold and is not written as the ground truth of local maintenance-state. </td>
@@ -402,8 +415,9 @@ Therefore, on this site, we will introduce <strong>human metabolic connectome</s
 <div class="key-points">
 <h4>Rule</h4>
 <ul>
-<li><strong>In long-term claims, put maintenance-state in a separate column:</strong>Do not mix connectome / cell type / synapse with intrinsic excitability, activity-dependent transcription / chromatin state, sleep-homeostasis, myelin / oligodendroglial support, bioenergetic / mitochondrial state, glial / metabolic support, clearance / immune support. </li>
+<li><strong>In long-term claims, put maintenance-state in a separate column:</strong>Do not mix connectome / cell type / synapse with intrinsic excitability, activity-dependent transcription / chromatin state, local proteostasis / synaptic tagging, sleep-homeostasis, myelin / oligodendroglial support, bioenergetic / mitochondrial state, glial / metabolic support, clearance / immune support. </li>
 <li><strong>Do not collapse cell identity into current plasticity program:</strong>Static transcriptomic labels and current memory-stabilization state should be written in separate columns. </li>
+<li><strong>Do not collapse current weight into late-stabilization route:</strong>Tagged branch state and local proteostasis should be measured separately, or written with separate abstention reasons. </li>
 <li><strong>Don't collapse intrinsic excitability into one line:</strong>Make relative excitability, AIS / channel state, and recovery controller separate columns. </li>
 <li><strong>If sleep / wake history is not measured, write it as not measured:</strong>Do not auto-complete overnight maintenance from same-day fit. </li>
 <li><strong>Do not reduce sleep to mean correction:</strong>Leaves the possibility of dropping down to synapse diversity or network regime. </li>
@@ -435,7 +449,7 @@ Therefore, on this site, we will introduce <strong>human metabolic connectome</s
 </tr>
 <tr>
 <td><strong>Long-horizon memory / learning claim</strong></td>
-<td>Perturbation responses before and after learning, relative excitability or allocation proxy, time-stamped transcription / chromatin route or omission log, presence or absence of overnight renormalization, glial / astrocyte covariate or omission log, clearance / immune covariate if possible, and list of unmeasured maintenance-states. </td>
+<td>Perturbation responses before and after learning, relative excitability or allocation proxy, time-stamped transcription / chromatin route or omission log, local proteostasis / tag-capture route or omission log, presence or absence of overnight renormalization, glial / astrocyte covariate or omission log, clearance / immune covariate if possible, and list of unmeasured maintenance-states. </td>
 </tr>
 <tr>
 <td><strong>timing-sensitive claim</strong></td>
@@ -447,7 +461,7 @@ Therefore, on this site, we will introduce <strong>human metabolic connectome</s
 </tr>
 <tr>
 <td><strong>Claim close to state-complete reconstruction</strong></td>
-<td>To what extent did you acquire connectome, cell type, synapse, delay / myelin, bioenergetic / mitochondrial state, neuromodulation, glia / metabolic support, clearance / immune support, sleep-homeostasis, intrinsic excitability / homeostasis, or did you abstain as a latent? </td>
+<td>To what extent did you acquire connectome, cell type, synapse, local proteostasis / synaptic tagging, delay / myelin, bioenergetic / mitochondrial state, neuromodulation, glia / metabolic support, clearance / immune support, sleep-homeostasis, intrinsic excitability / homeostasis, or did you abstain as a latent? </td>
 </tr>
 </tbody>
 </table>
@@ -462,6 +476,12 @@ Therefore, on this site, we will introduce <strong>human metabolic connectome</s
 <li>Traunmüller, L., et al. (2025). Novel environment exposure drives temporally defined and region-specific chromatin accessibility and gene expression changes in the hippocampus. <em>Nature Communications</em>, 16, 2613. <a href="https://doi.org/10.1038/s41467-025-63029-6" target="_blank">doi:10.1038/s41467-025-63029-6</a></li>
 <li>Coda, B., et al. (2025). Cell-type- and locus-specific epigenetic editing of memory expression. <em>Nature Genetics</em>, 57, 1211-1222. <a href="https://doi.org/10.1038/s41588-025-02195-z" target="_blank">doi:10.1038/s41588-025-02195-z</a></li>
 <li>Terceros, Y., et al. (2026). Thalamocortical transcriptional gates coordinate memory stabilization. <em>Nature</em>, 642, 489-498. <a href="https://doi.org/10.1038/s41586-025-09334-w" target="_blank">doi:10.1038/s41586-025-09334-w</a></li>
+<li>Frey, U., &amp; Morris, R. G. M. (1997). Synaptic tagging and long-term potentiation. <em>Nature</em>, 385(6616), 533-536. <a href="https://doi.org/10.1038/385533a0" target="_blank">doi:10.1038/385533a0</a></li>
+<li>Fonseca, R., Vabulas, R. M., Hartl, F. U., Bonhoeffer, T., &amp; Nägerl, U. V. (2006). A balance of protein synthesis and proteasome-dependent degradation determines the maintenance of LTP. <em>Neuron</em>, 52(2), 239-245. <a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">doi:10.1016/j.neuron.2006.08.015</a></li>
+<li>Govindarajan, A., Israely, I., Huang, S.-Y., &amp; Tonegawa, S. (2011). The dendritic branch is the preferred integrative unit for protein synthesis-dependent LTP. <em>Neuron</em>, 69(1), 132-146. <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">doi:10.1016/j.neuron.2010.12.008</a></li>
+<li>Shires, K. L., Da Silva, B. M., Hawthorne, J. P., Morris, R. G. M., &amp; Martin, S. J. (2012). Synaptic tagging and capture in the living rat. <em>Nature Communications</em>, 3, 1246. <a href="https://doi.org/10.1038/ncomms2250" target="_blank">doi:10.1038/ncomms2250</a></li>
+<li>Pandey, K., Yu, X.-W., Steinmetz, A., &amp; Alberini, C. M. (2021). Autophagy coupled to translation is required for long-term memory formation. <em>Autophagy</em>, 17(9), 2489-2505. <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">doi:10.1080/15548627.2020.1775393</a></li>
+<li>Thomas, M., Bogaciu, C.-A., Rizzoli, S. O., et al. (2025). Long-term potentiation-induced changes in actin dynamics and spine geometry persist on the timescale of the synaptic tag. <em>Communications Biology</em>, 8, 756. <a href="https://doi.org/10.1038/s42003-025-08459-0" target="_blank">doi:10.1038/s42003-025-08459-0</a></li>
 <li>Grubb, M. S., &amp; Burrone, J. (2010). Activity-dependent relocation of the axon initial segment fine-tunes neuronal excitability. <em>Nature</em>, 465(7301), 1070-1074. <a href="https://doi.org/10.1038/nature09160" target="_blank">doi:10.1038/nature09160</a></li>
 <li>Kuba, H., Oichi, Y., &amp; Ohmori, H. (2010). Presynaptic activity regulates Na+ channel distribution at the axon initial segment. <em>Nature</em>, 465(7301), 1075-1078. <a href="https://doi.org/10.1038/nature09087" target="_blank">doi:10.1038/nature09087</a></li>
 <li>Jamann, N., Dannehl, D., Lehmann, N., et al. (2021). Sensory input drives rapid homeostatic scaling of the axon initial segment in mouse barrel cortex. <em>Nature Communications</em>, 12, 23. <a href="https://doi.org/10.1038/s41467-020-20232-x" target="_blank">doi:10.1038/s41467-020-20232-x</a></li>

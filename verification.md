@@ -20,6 +20,7 @@ page_highlights:
   - "For multimodal or atlas-prior results, the Fusion Card is added on top of the Observability Budget so acquisition relation, synchronization, fusion model, and external validation are fixed explicitly."
   - "At L2 and above, the latent-state error budget is added on top of the Observability Budget so the still-unobserved states that stop the claim are disclosed."
   - "At L2 and above, perisynaptic ECM / PNN state is separated from synaptic weights and glia when a claim depends on adult plasticity, receptor mobility, or memory stabilization."
+  - "At L2 and above, local proteostasis / synaptic-tagging state is separated from current weights and transcription when a claim depends on late-LTP capture, consolidation, or reconsolidation."
   - "At L2 and above, delay is treated as timing-state rather than one scalar, so device latency, biological conduction timing, and human macro timing proxies are not collapsed into one number."
   - "At L2 and above for intervention / closed-loop results, the Intervention Card fixes trigger rule, timing audit, control / sham, safe stop, and recalibration burden."
   - "For cross-day or longitudinal claims, the Temporal Validity Card audits fixed decoder interval, state annotation, recalibration burden, and transfer ceiling independently."
@@ -33,6 +34,7 @@ known_points:
   - "The same decoding score is not target-specific evidence if eye movement, EMG, uninstructed movement, auditory feedback, or subject / session fingerprint remains unresolved."
   - "A multimodal result is not one thing; simultaneous acquisition, geometric fusion, invasive calibration, and atlas priors must be audited separately."
   - "A synapse list or weight estimate does not by itself fix perisynaptic ECM / PNN state, so plasticity and stabilization claims need a separate ceiling."
+  - "A weight estimate does not fix which tagged synapses or dendritic branches capture plasticity-related proteins, so late-stabilization claims need a separate proteostasis ceiling."
   - "Passing a hardware latency audit is not the same as recovering biological timing-state; claims that depend on phase or synchrony need both sides separated."
   - "In chronic invasive recording, unit-matching uncertainty and tissue response around the implant are separate audit items."
 unknown_points:
@@ -621,7 +623,7 @@ The most important update in this pass is that the criticism that ``important hi
 </tr>
 <tr>
 <td><strong>remaining latent state</strong></td>
-<td>List the remaining variables, including weights, perisynaptic ECM / PNN state, delay/myelin, intrinsic excitability/homeostatic set point, neuromodulation, glia/metabolic support, and sleep-history. </td>
+<td>List the remaining variables, including weights, local proteostasis / synaptic-tagging state, perisynaptic ECM / PNN state, delay/myelin, intrinsic excitability/homeostatic set point, neuromodulation, glia/metabolic support, and sleep-history. </td>
 <td>It is easier to roll up non-state-complete results to emulation-complete or internal state unique solutions. </td>
 </tr>
 <tr>
@@ -734,7 +736,7 @@ The Observability Budget fixes <strong>what was directly observed</strong>. The 
 <section class="section" id="state-completeness-gate">
 <h2 class="section-title">State variable integrity gate</h2>
 <p>
-In our March 2026 primary-literature audit, we reconfirmed that there are at least eight loose state classes between <strong>“having a wiring diagram”</strong> and <strong>“being able to behave generatively”</strong>. In addition to cell types, synapses, delays, neuromodulation, and glia, we now also treat <strong>activity-dependent transcription / chromatin state</strong>, <strong>intrinsic excitability / homeostatic set points</strong>, and <strong>perisynaptic ECM / PNN state</strong> as independent classes. Therefore, on this site, we do not accept <strong>edge-list submissions alone</strong> as a condition for passing L2 or above.
+In our March 2026 primary-literature audit, we reconfirmed that there are at least nine loose state classes between <strong>“having a wiring diagram”</strong> and <strong>“being able to behave generatively”</strong>. In addition to cell types, synapses, delays, neuromodulation, and glia, we now also treat <strong>activity-dependent transcription / chromatin state</strong>, <strong>intrinsic excitability / homeostatic set points</strong>, <strong>local proteostasis / synaptic-tagging state</strong>, and <strong>perisynaptic ECM / PNN state</strong> as independent classes. Therefore, on this site, we do not accept <strong>edge-list submissions alone</strong> as a condition for passing L2 or above.
 </p>
 <table class="data-table">
 <thead>
@@ -766,6 +768,11 @@ In our March 2026 primary-literature audit, we reconfirmed that there are at lea
 <td>It is possible to describe static wiring, but it cannot claim L2 intervention prediction or L3 stability control. </td>
 </tr>
 <tr>
+<td><strong>Local proteostasis / synaptic-tagging state</strong></td>
+<td>Even with the same graph and current weights, late-LTP capture, branch-specific stabilization, and the balance of local translation/degradation/autophagy can still differ. </td>
+<td>Stop treating late stabilization, cross-event capture, or reconsolidation as closed, and keep the tag/proteostasis route explicit as latent or externally calibrated. </td>
+</tr>
+<tr>
 <td><strong>Perisynaptic ECM / PNN state</strong></td>
 <td>Even with the same synapse graph, extracellular matrix organization can change receptor mobility, inhibitory plasticity, memory-update resistance, and the opening or closing of adult plasticity windows. </td>
 <td>Stop treating adult plasticity, reconsolidation resistance, or inhibitory stabilization as closed, and keep ECM / PNN state explicit as latent or externally calibrated. </td>
@@ -790,13 +797,19 @@ In our March 2026 primary-literature audit, we reconfirmed that there are at lea
 <div class="note-box">
 <strong>Practical rules here</strong>
 <p>
-connectome-complete does not mean<strong>emulation-complete</strong>. Detailed primary literature and the technical basis for which state variables should be included in the minimum submission are summarized in <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams alone are not enough</a>. The newly emphasized issues of <strong>activity-dependent transcription / chromatin state</strong> and <strong>intrinsic excitability/homeostasis/maintenance state</strong> are discussed in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.
+connectome-complete does not mean<strong>emulation-complete</strong>. Detailed primary literature and the technical basis for which state variables should be included in the minimum submission are summarized in <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams alone are not enough</a>. The newly emphasized issues of <strong>activity-dependent transcription / chromatin state</strong>, <strong>local proteostasis / synaptic-tagging state</strong>, and <strong>intrinsic excitability/homeostasis/maintenance state</strong> are discussed in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.
 </p>
 </div>
 <div class="note-box">
 <strong>2026-03-18 addendum: cell-type atlas is not current transcriptional state</strong>
 <p>
 <a href="https://doi.org/10.1126/science.adg9982" target="_blank">Santoni et al. (2024)</a> showed that chromatin plasticity predetermines neuronal eligibility for memory-trace formation, <a href="https://doi.org/10.1038/s41467-025-63029-6" target="_blank">Traunmüller et al. (2025)</a> showed temporally defined and region-specific chromatin / gene-expression changes after novel-environment exposure, <a href="https://doi.org/10.1038/s41588-025-02195-z" target="_blank">Coda et al. (2025)</a> showed cell-type- and locus-specific epigenetic editing of memory expression, and <a href="https://doi.org/10.1038/s41586-025-09334-w" target="_blank">Terceros et al. (2026)</a> showed distinct thalamocortical transcriptional gates for memory stabilization. Therefore, when a claim depends on allocation eligibility, late stabilization, or locus-specific plasticity, this site asks authors to disclose whether transcriptional / chromatin state was measured, perturbed, externally calibrated, or left latent.
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-18 addendum: current weight is not the late-stabilization route</strong>
+<p>
+<a href="https://doi.org/10.1038/385533a0" target="_blank">Frey &amp; Morris (1997)</a> proposed synaptic tagging as the condition that allows late LTP to capture plasticity-related proteins, <a href="https://doi.org/10.1038/ncomms2250" target="_blank">Shires et al. (2012)</a> demonstrated synaptic tagging and capture in the living rat, <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">Govindarajan et al. (2011)</a> showed that the dendritic branch is a preferred integrative unit for protein-synthesis-dependent LTP, <a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">Fonseca et al. (2006)</a> showed that late-LTP maintenance depends on the balance of protein synthesis and proteasome-dependent degradation, <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">Pandey et al. (2021)</a> linked local autophagy-coupled translation to long-term memory formation, and <a href="https://doi.org/10.1038/s42003-025-08459-0" target="_blank">Thomas et al. (2025)</a> showed that actin/spine states can persist on the timescale of the synaptic tag. Therefore, when a claim depends on late stabilization, reconsolidation, or cross-event capture, this site asks authors to disclose whether the local proteostasis / synaptic-tag route was measured, perturbed, externally calibrated, or left latent.
 </p>
 </div>
 <div class="note-box">
@@ -844,6 +857,12 @@ The weakness found in this re-audit was that by simply listing the state variabl
 <td>Compare a cell-atlas or connectome baseline against the same model with time-stamped expression / chromatin measurements or causal epigenetic perturbation under the same held-out learning or stabilization condition, and disclose gains separately. </td>
 <td>You can state more narrowly how much allocation eligibility, late stabilization, or locus-specific plasticity control improves once current transcriptional / chromatin state is treated explicitly. </td>
 <td>A static atlas or one-shot DEG list remains identity/context annotation or a time-stamped clue, and does not become ground truth of current plasticity state. </td>
+</tr>
+<tr>
+<td><strong>+ local proteostasis / synaptic-tagging audit</strong></td>
+<td>Compare a synapse- or transcription-aware baseline against the same model with tag/PRP capture measurements, local translation/degradation/autophagy perturbation, or branch-local tag proxy under the same held-out stabilization or reconsolidation condition, and disclose gains separately. </td>
+<td>You can state more narrowly how much late stabilization, branch-local persistence, or cross-event capture improves once the local proteostasis route is treated explicitly. </td>
+<td>A current weight estimate or one-shot transcriptomic change remains a snapshot and does not become ground truth of the late-stabilization route. </td>
 </tr>
 <tr>
 <td><strong>+ ECM / PNN state audit</strong></td>
@@ -1143,6 +1162,12 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Traunmüller, L., et al. (2025). Novel environment exposure drives temporally defined and region-specific chromatin accessibility and gene expression changes in the hippocampus. <a href="https://doi.org/10.1038/s41467-025-63029-6" target="_blank">doi:10.1038/s41467-025-63029-6</a></li>
 <li>Coda, B., et al. (2025). Cell-type- and locus-specific epigenetic editing of memory expression. <a href="https://doi.org/10.1038/s41588-025-02195-z" target="_blank">doi:10.1038/s41588-025-02195-z</a></li>
 <li>Terceros, Y., et al. (2026). Thalamocortical transcriptional gates coordinate memory stabilization. <a href="https://doi.org/10.1038/s41586-025-09334-w" target="_blank">doi:10.1038/s41586-025-09334-w</a></li>
+<li>Frey, U., &amp; Morris, R. G. M. (1997). Synaptic tagging and long-term potentiation. <a href="https://doi.org/10.1038/385533a0" target="_blank">doi:10.1038/385533a0</a></li>
+<li>Fonseca, R., Vabulas, R. M., Hartl, F. U., Bonhoeffer, T., &amp; Nägerl, U. V. (2006). A balance of protein synthesis and proteasome-dependent degradation determines the maintenance of LTP. <a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">doi:10.1016/j.neuron.2006.08.015</a></li>
+<li>Govindarajan, A., Israely, I., Huang, S.-Y., &amp; Tonegawa, S. (2011). The dendritic branch is the preferred integrative unit for protein synthesis-dependent LTP. <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">doi:10.1016/j.neuron.2010.12.008</a></li>
+<li>Shires, K. L., Da Silva, B. M., Hawthorne, J. P., Morris, R. G. M., &amp; Martin, S. J. (2012). Synaptic tagging and capture in the living rat. <a href="https://doi.org/10.1038/ncomms2250" target="_blank">doi:10.1038/ncomms2250</a></li>
+<li>Pandey, K., Yu, X.-W., Steinmetz, A., &amp; Alberini, C. M. (2021). Autophagy coupled to translation is required for long-term memory formation. <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">doi:10.1080/15548627.2020.1775393</a></li>
+<li>Thomas, M., Bogaciu, C.-A., Rizzoli, S. O., et al. (2025). Long-term potentiation-induced changes in actin dynamics and spine geometry persist on the timescale of the synaptic tag. <a href="https://doi.org/10.1038/s42003-025-08459-0" target="_blank">doi:10.1038/s42003-025-08459-0</a></li>
 <li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
 <li>Pizzorusso, T., Medini, P., Berardi, N., Chierzi, S., Fawcett, J. W., &amp; Maffei, L. (2002). Reactivation of ocular dominance plasticity in the adult visual cortex. <a href="https://doi.org/10.1126/science.1072699" target="_blank">doi:10.1126/science.1072699</a></li>
 <li>Frischknecht, R., Heine, M., Perrais, D., Seidenbecher, C. I., Choquet, D., &amp; Gundelfinger, E. D. (2009). Brain extracellular matrix affects AMPA receptor lateral mobility and short-term synaptic plasticity. <a href="https://doi.org/10.1038/nn.2338" target="_blank">doi:10.1038/nn.2338</a></li>
