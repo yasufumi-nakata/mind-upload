@@ -812,3 +812,27 @@ recommended_pages:
 - このため、申請・再現ログの正本を再固定します。今後は数値IDを固定参照に使わず、`auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `D1-D16 + DOI + データセット名` を必須記載とします。
 - 助成キー `G1-G6` 実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は再参照可能で欠落 `0` でした。
 - 依頼方針を継続します。汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持します。
+
+## 2026-03-17 12:02 JST 再検証ログ（本run / 1RQ深掘り要求への再固定）
+
+- 作業前に `main` を `pull --ff-only` し、最新状態で再検証しました（更新差分なし）。
+- `research_harvest_50.md` 正本に対して `U0/U1/U3/U4/U7/U8/U10/U11/U12/U13/U14/U15` の全 `60RQ` を再照合し、欠落 `0` を確認しました。
+- 本ページの `RQ単位` 記述で、各RQに `EEG-DATAで解けるか` `深掘り検証設計` `auto-research-funds向け応募テーマ` `推奨EEG-DATA` が埋まっていることを再確認しました（空欄 `0`）。
+- 方針を維持: 汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用で記述し、応募文へ直接転記できる粒度を保持します。
+
+## 2026-03-17 14:02 JST 再検証ログ（本run / 依頼反映: RQごと深掘りでWiki固定）
+
+- 作業前に `main` を `pull --ff-only` し、基準コミットを `mind-upload=aec3d72cc717`、`EEG-DATA=02360da7bb71`、`auto-research-funds=e8703b40121c` に更新しました。
+- 正本 `mind-upload/research_harvest_50.md` と本ページの `RQ` 行を再照合し、`RQ_TOTAL=60`（`A/B/C=17/25/18`）を再確認しました。
+- 本ページの `RQ` 行で使う参照データは、運用上 `D1-D16 + DOI + データセット名` を正本とする方針を維持し、`auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` と突合しました。
+- 助成キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` および `auto-research-funds` 側で再参照可能でした（欠落 `0`）。
+- 依頼方針をこのページで再固定します。汎用的に浅く横断せず、`1RQ=1検証命題=1応募テーマ=1主データ` の粒度で1件ずつ深掘りして更新します。
+
+### このrunで再固定した深掘り実行順（6件）
+
+1. `U14-1`（固定粒度と追試成功率）
+2. `U7-2`（LSL同期誤差監査）
+3. `U8-2`（オンライン較正頻度とドリフト）
+4. `U1-2`（不確実性伝播の校正）
+5. `U13-1`（意味復元と因果再現の分離）
+6. `U15-2`（neurorights監査項目化）

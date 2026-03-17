@@ -1,29 +1,39 @@
-# Mind-upload RQ60 × EEG-DATA 検証可否と助成テーマ（深掘り版）
-
-> 1問ずつ深掘りして、検証設計と応募テーマまで接続する
->
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
-
-- 更新日: 2026-03-17 / 位置づけ: RQ-by-RQ Deep Dive
-
-## このページの役割
-このページは research_harvest_50 の60 RQを対象に、EEG-DATAで解ける範囲をA/B/Cで判定し、各RQごとの検証設計・応募テーマ・使うデータセットIDをまとめた実務版です。
-
-## 正確さの前提
-U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定し、必要な外部要件を明記します。
-
-## 公開ページへ戻る
-- [文献地図](https://mind-upload.com/research_harvest_50.html)
-- [データ&ベンチ](https://mind-upload.com/datasets.html)
-- [RQ60 申請プレイブック](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook)
-- [Issue](https://mind-upload.com/issue.html)
-
-## 関連 Wiki
-- [Wiki: 検証基盤の基本](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - 判定を実験仕様に落とすときの基準。
-- [Wiki: 反事実・介入検証](https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification) - U4/U13の因果評価に直結。
-- [Wiki: データ分割とリーク](https://github.com/yasufumi-nakata/mind-upload/wiki/dataset-splits-and-leakage) - U14の再現性監査に必要。
-
 ---
+layout: default
+title: "Mind-upload RQ60 × EEG-DATA 検証可否と助成テーマ（深掘り版）"
+description: "research_harvest_50 の60リサーチクエスチョンを、EEG-DATAでどこまで検証可能かを1問ずつ判定し、auto-research-funds向け応募テーマと使用データIDを整理した実務ページ。"
+article_type: Wiki
+subtitle: "1問ずつ深掘りして、検証設計と応募テーマまで接続する"
+author: Mind Uploading Research Project
+last_updated: "2026-03-17"
+note: "RQ-by-RQ Deep Dive"
+audience: "RQを実験計画に落としたい人、助成応募テーマとデータ根拠を同時に作りたい人"
+reading_time: "25〜40分"
+page_intro: "このページは research_harvest_50 の60 RQを対象に、EEG-DATAで解ける範囲をA/B/Cで判定し、各RQごとの検証設計・応募テーマ・使うデータセットIDをまとめた実務版です。"
+accuracy_note: "U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定し、必要な外部要件を明記します。"
+wiki_links:
+  - label: "Wiki: 検証基盤の基本"
+    url: "/wiki/verification-basics.html"
+    description: "判定を実験仕様に落とすときの基準。"
+  - label: "Wiki: 反事実・介入検証"
+    url: "/wiki/counterfactual-and-perturbation-verification.html"
+    description: "U4/U13の因果評価に直結。"
+  - label: "Wiki: データ分割とリーク"
+    url: "/wiki/dataset-splits-and-leakage.html"
+    description: "U14の再現性監査に必要。"
+recommended_pages:
+  - label: "文献地図"
+    url: "/research_harvest_50.html"
+  - label: "データ&ベンチ"
+    url: "/datasets.html"
+  - label: "RQ60 申請プレイブック"
+    url: "/wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html"
+  - label: "Issue"
+    url: "/issue.html"
+---
+
+<main class="main-container">
+<article class="content-column">
 
 ## 判定ルール
 
@@ -484,6 +494,7 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 助成キー `G1-G6` と拡張候補ID（`1geD73ZENwB8yaor`, `lEYmRP97ng3perjO`, `1geD73Z9K2B8yaor`, `QKYgNPxZxN38bO1Z`, `46z9VPE6E0BrvEJR`, `1geD73ZE54B8yaor`, `1geD73Z6yq38yaor`）は `auto-research-funds/wiki` と `grant_eeg_dataset_match.csv` で実在を再確認しました。
 - このrunでも汎用要約は行わず、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続します。
 
+
 ## 2026-03-15 06:02 JST 再検証ログ（本run / automation追記）
 
 - `git pull origin main` 実行後の最新状態で再検証し、基準コミットを `mind-upload=8e75f7833c`、`EEG-DATA=b3fb0aabe3`、`auto-research-funds=6571303caf` に更新しました。
@@ -545,6 +556,7 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 助成実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue/*.yaml` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再確認しました。
 - 方針は据え置き: 汎用俯瞰へ戻さず、RQごとに検証可否・応募テーマ・使用EEGデータを固定して書く運用を継続します。
 
+
 ## 2026-03-15 19:02 JST 再検証ログ（本run / 60RQ深掘り整合チェック）
 
 - `research_harvest_50.md` 正本との再突合で、`RQ_TOTAL=60`、`U別内訳=U0(4)/U1(4)/U3(6)/U4(4)/U7(6)/U8(6)/U10(4)/U11(4)/U12(6)/U13(6)/U14(6)/U15(4)`、`重複=0`、`欠落=0` を確認。
@@ -568,6 +580,7 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` と `auto-research-funds` で全件参照可能。
 - 独立監査結果として、`feasibility` ページの `ID -> データセット名` 表は現行CSVの再採番と固定一致しない点を確認。運用上は既存方針どおり `D1-D16 + DOI` 正本参照を優先する。
 - 方針を継続: 汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持。
+
 
 ## 2026-03-16 00:02 JST 再検証ログ（本run / RQ60可否と助成テーマ更新）
 
@@ -602,6 +615,7 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 4. `U11-1`: 意識指標3系統の順位保存率を先に固定（主データ `859`）
 5. `U13-3`: 同一出力・異機構の識別率を実測（主データ `509`）
 6. `U14-6`: コンテナ固定の再現性改善とコスト増分を測定（主データ `56`）
+
 
 ## 2026-03-16 08:02 JST 再検証ログ（本run / 最新pull後の整合確認）
 
@@ -662,6 +676,7 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 参照EEGデータは `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）で、`EEG-DATA/eeg_dataset_summary_ja.csv` の欠落 `0` を確認しました。
 - 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は、`grant_queue` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の分離参照で再確認しました。
 - 本runの運用固定: 汎用俯瞰を優先せず、`1RQ=1検証命題=1応募テーマ=1主データ` の単位で1件ずつ深掘りします。
+
 
 ## 2026-03-16 16:02 JST 再検証ログ（本run / ID再採番差分の明示）
 
@@ -797,3 +812,27 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - このため、申請・再現ログの正本を再固定します。今後は数値IDを固定参照に使わず、`auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `D1-D16 + DOI + データセット名` を必須記載とします。
 - 助成キー `G1-G6` 実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は再参照可能で欠落 `0` でした。
 - 依頼方針を継続します。汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持します。
+
+## 2026-03-17 12:02 JST 再検証ログ（本run / 1RQ深掘り要求への再固定）
+
+- 作業前に `main` を `pull --ff-only` し、最新状態で再検証しました（更新差分なし）。
+- `research_harvest_50.md` 正本に対して `U0/U1/U3/U4/U7/U8/U10/U11/U12/U13/U14/U15` の全 `60RQ` を再照合し、欠落 `0` を確認しました。
+- 本ページの `RQ単位` 記述で、各RQに `EEG-DATAで解けるか` `深掘り検証設計` `auto-research-funds向け応募テーマ` `推奨EEG-DATA` が埋まっていることを再確認しました（空欄 `0`）。
+- 方針を維持: 汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用で記述し、応募文へ直接転記できる粒度を保持します。
+
+## 2026-03-17 14:02 JST 再検証ログ（本run / 依頼反映: RQごと深掘りでWiki固定）
+
+- 作業前に `main` を `pull --ff-only` し、基準コミットを `mind-upload=aec3d72cc717`、`EEG-DATA=02360da7bb71`、`auto-research-funds=e8703b40121c` に更新しました。
+- 正本 `mind-upload/research_harvest_50.md` と本ページの `RQ` 行を再照合し、`RQ_TOTAL=60`（`A/B/C=17/25/18`）を再確認しました。
+- 本ページの `RQ` 行で使う参照データは、運用上 `D1-D16 + DOI + データセット名` を正本とする方針を維持し、`auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` と突合しました。
+- 助成キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` および `auto-research-funds` 側で再参照可能でした（欠落 `0`）。
+- 依頼方針をこのページで再固定します。汎用的に浅く横断せず、`1RQ=1検証命題=1応募テーマ=1主データ` の粒度で1件ずつ深掘りして更新します。
+
+### このrunで再固定した深掘り実行順（6件）
+
+1. `U14-1`（固定粒度と追試成功率）
+2. `U7-2`（LSL同期誤差監査）
+3. `U8-2`（オンライン較正頻度とドリフト）
+4. `U1-2`（不確実性伝播の校正）
+5. `U13-1`（意味復元と因果再現の分離）
+6. `U15-2`（neurorights監査項目化）
