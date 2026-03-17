@@ -554,3 +554,10 @@ Operational rules: Prioritize `A/B` and link directly to the application, and `C
 - Rechecked that referenced EEG numeric IDs still exist in `EEG-DATA/eeg_dataset_summary_ja.csv`, but also confirmed current CSV has major reindex/remap and `ID -> dataset name` fixed mapping is unsafe.
 - Kept operation rule fixed: write each RQ as `1RQ = 1 verification proposition = 1 application theme`, and treat numeric IDs as search hints only.
 - For submissions/reproducibility logs, use canonical references with `DOI + dataset name + access class` from `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`.
+
+## 2026-03-18 15:20 JST revalidation log (main run / per-RQ consistency fix)
+
+- Pulled `main` with `git pull --ff-only origin main` before this run and rechecked `RQ_TOTAL=60` and `A/B/C=17/25/18`.
+- Fixed six-row priority queue consistency so grant fallback keys match the fixed U-level mapping: `U14-1 (G1/G3)`, `U7-2 (G1/G3)`, `U8-2 (G2/G5)`, `U1-2 (G1/G4)`, `U13-1 (G1/G4)`, `U15-2 (G2/G6)`.
+- Reconfirmed numeric EEG IDs are not stable keys under current remapping of `EEG-DATA/eeg_dataset_summary_ja.csv`; canonical submission references remain `D1-D16 + DOI + dataset name + access class`.
+- Re-fixed operation scope to deep per-question execution only: `1RQ = 1 verification proposition = 1 grant theme = 1 primary dataset` (no generic summary mode).
