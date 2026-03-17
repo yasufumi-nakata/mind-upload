@@ -844,3 +844,20 @@ recommended_pages:
 - `G1-G6` 実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で全件参照可能でした。
 - 本ページで参照する `ID` 群（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で欠落 `0` を確認しました。
 - 運用方針は据え置きです。汎用要約ではなく、`1RQ=1検証命題=1応募テーマ=1主データ` で深掘り記述を継続します。
+
+## 2026-03-17 19:02 JST 再検証ログ（本run / 依頼反映: 全60RQの深掘り運用をWikiへ固定）
+
+- 作業前に `main` を `pull --ff-only` で確認し、追跡差分なしの状態から再検証を開始しました。
+- 正本 `mind-upload/research_harvest_50.md` と本ページ `RQ` 行を再照合し、`RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認しました（欠落 `0`、重複 `0`）。
+- `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `D1-D16 + DOI` を申請正本、`EEG-DATA/eeg_dataset_summary_ja.csv` の数値 `ID` を探索補助として扱う運用を再固定しました。
+- `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` と `auto-research-funds` で再参照可能でした。
+- 依頼方針を本ページ正本として再固定します。汎用的な浅い総覧ではなく、`1RQ=1検証命題=1応募テーマ=1主データ` を維持し、各RQを1件ずつ深掘りして運用します。
+
+### このrunで固定した深掘り実行順（6件）
+
+1. `U14-1`（固定粒度と追試成功率）: `主D12 / 予備D8`、`G1`（予備 `G4`）
+2. `U7-2`（時刻同期誤差監査）: `主D7 / 予備D4`、`G1`（予備 `G5`）
+3. `U8-2`（オンライン較正とドリフト）: `主D10 / 予備D8`、`G2`（予備 `G3`）
+4. `U1-2`（不確実性伝播）: `主D7 / 予備D12`、`G1`（予備 `G3`）
+5. `U13-1`（意味一致と因果一致の分離）: `主D2 / 予備D1`、`G1`（予備 `G3`）
+6. `U15-2`（neurorights監査項目写像）: `主D4 / 予備D5`、`G2`（予備 `G6`）
