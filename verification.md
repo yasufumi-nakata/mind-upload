@@ -5,7 +5,7 @@ description: "マインドアップロード/WBEを「進歩を測れる科学�
 article_type: Platform
 subtitle: "PDB×BIDS×PhysioNet×OSFの発想で、WBEの“勝利条件”と“再現可能な前進”を作る"
 author: Mind Uploading Research Project
-last_updated: "2026-03-17"
+last_updated: "2026-03-18"
 note: "Operational Specification"
 audience: "このサイトの中心方針を知りたい人、何を揃えれば『前進』になるかを確認したい人"
 reading_time: "15〜25分"
@@ -14,6 +14,7 @@ accuracy_note: "このページは『WBEが可能だ』と断言するページ�
 page_highlights:
   - "標準、置き場、ベンチマーク、監査をセットでそろえる必要があります。"
   - "デコーディングとエミュレーションを混同しないために、主張レベルと失敗条件を先に固定します。"
+  - "decode / biomarker の score では、Specificity & Shortcut Card で target neural variable と nuisance route を分けます。"
   - "ここを読むと、なぜデータだけ集めても前進にならないのかが分かります。"
   - "brain-to-text や speech decode では、Neural Contribution Card で task constraint・language prior・candidate set・no-brain / no-LM / shuffle baseline・subject cooperation を固定します。"
   - "multimodal や atlas prior を使う結果では、Observability Budget に加えて Fusion Card で取得関係・同期・融合モデル・外部妥当化を固定します。"
@@ -27,6 +28,7 @@ known_points:
   - "標準、共有基盤、評価、監査をセットでそろえないと、比較可能な前進は作れません。"
   - "L0〜L2 では、再現性と反証条件を事前に設計することができます。"
   - "decode と emulate は別の主張であり、必要な証拠も別です。"
+  - "同じ decoding score でも、眼球・筋電・無意図運動・auditory feedback・session fingerprint が残ると target-specific evidence にはなりません。"
   - "multimodal result は 1 種類ではなく、同時取得、幾何統合、侵襲校正、atlas prior を分けて監査する必要があります。"
   - "慢性侵襲記録では、unit matching の不確実性と implant 周囲の tissue response は別監査項目です。"
 unknown_points:
@@ -357,7 +359,7 @@ BIDS、OpenNeuro、PhysioNet、BIDS Validator、benchmark は全部「研究基�
 <div class="stage-number">04</div>
 <div class="stage-body">
 <h4>Leaderboard & Model Cards（比較の運用）</h4>
-<p>スコアだけでなく、データリーク対策、失敗例、計算資源、既知の弱点、さらに leaderboard / challenge 結果では <strong>どの split・hidden test・submission budget・checkpoint policy で score を出したか</strong> を示す <strong>Benchmark Governance Card</strong> を、L1 以上では <strong>どこまで直接観測し、どこから先が latent state か</strong> を示す <strong>Observability Budget</strong> を、brain-to-text / speech decode / generative language reconstruction 結果では <strong>何が brain-derived information で、何が task constraint・language prior・prompt・candidate set から来たか</strong> を示す <strong>Neural Contribution Card</strong> を、確率・区間・予測集合・棄権を出す結果では <strong>fit / calibration / test の分離、evaluation family、coverage-risk、fallback policy</strong> を示す <strong>Calibration &amp; Abstention Card</strong> を、multimodal / atlas prior を使う結果では <strong>どう結び付け、どこまで較正したか</strong> を示す <strong>Fusion Card</strong> を、cross-day / longitudinal claim では <strong>same-day score をどこまで外挿してよいか</strong> を示す <strong>Temporal Validity Card</strong> を、L2 以上では <strong>どの latent state がまだ誤差を支配するか</strong> を示す <strong>latent-state error budget</strong> を、因果・閉ループ結果では <strong>trigger rule・timing audit・control/sham・安全停止・再較正負荷</strong> を示す <strong>Intervention Card</strong> を併記して公開し、再現性と安全性を担保する。</p>
+<p>スコアだけでなく、データリーク対策、失敗例、計算資源、既知の弱点、さらに leaderboard / challenge 結果では <strong>どの split・hidden test・submission budget・checkpoint policy で score を出したか</strong> を示す <strong>Benchmark Governance Card</strong> を、L1 以上では <strong>どこまで直接観測し、どこから先が latent state か</strong> を示す <strong>Observability Budget</strong> を、decode / biomarker 結果では <strong>target neural variable と nuisance route をどう切り分けたか</strong> を示す <strong>Specificity &amp; Shortcut Card</strong> を、brain-to-text / speech decode / generative language reconstruction 結果では <strong>何が brain-derived information で、何が task constraint・language prior・prompt・candidate set から来たか</strong> を示す <strong>Neural Contribution Card</strong> を、確率・区間・予測集合・棄権を出す結果では <strong>fit / calibration / test の分離、evaluation family、coverage-risk、fallback policy</strong> を示す <strong>Calibration &amp; Abstention Card</strong> を、multimodal / atlas prior を使う結果では <strong>どう結び付け、どこまで較正したか</strong> を示す <strong>Fusion Card</strong> を、cross-day / longitudinal claim では <strong>same-day score をどこまで外挿してよいか</strong> を示す <strong>Temporal Validity Card</strong> を、L2 以上では <strong>どの latent state がまだ誤差を支配するか</strong> を示す <strong>latent-state error budget</strong> を、因果・閉ループ結果では <strong>trigger rule・timing audit・control/sham・安全停止・再較正負荷</strong> を示す <strong>Intervention Card</strong> を併記して公開し、再現性と安全性を担保する。</p>
 <div class="tag-list">
 <span class="tag">Leaderboard</span><span class="tag">Reproducibility</span><span class="tag">Safety</span>
 </div>
@@ -655,6 +657,77 @@ Verification Commonsが「科学に貢献する」ために、以下のギャッ
 <strong>最低運用ルール</strong>
 <p>
 このカードが無い場合、本サイトでは結果を <strong>L0/L1 の再現可能解析または限定つき decode</strong> として扱い、L2 以上へ上げません。たとえば、<strong>EEG / HD-EEG + MRI だけ</strong>なら default ceiling は macro state tracking、<strong>high-density extracellular probe だけ</strong>なら implant-region の local population window、<strong>volume EM だけ</strong>なら structural scaffold、<strong>whole-brain atlas だけ</strong>なら molecular / spatial prior、<strong>same-brain calcium + EM</strong> でも local conditional prediction までです。chronic probe 系で unit identity audit が無い場合、single-unit longitudinal claim は受理しません。詳細な stack 別 ceiling と <strong>state variable × timescale</strong> の行列は <a href="wiki/measurement-stack-and-claim-ceiling.html#state-variable-matrix">Wiki: 計測スタックごとの observability と claim ceiling</a> に集約しています。
+</p>
+</div>
+</section>
+
+<section class="section" id="specificity-shortcut-card">
+<h2 class="section-title">2026-03 追補：decode / biomarker 結果には Specificity &amp; Shortcut Card を添付する</h2>
+<p>
+今回さらに深掘りして見えた弱点は、<strong>Observability Budget だけでは「何が sensor に入ったか」は書けても、その predictive information が target neural variable から来たのか、眼球・筋電・無意図運動・報告経路・auditory feedback・session fingerprint の shortcut から来たのかまでは固定しきれなかった</strong>ことです。<a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> は task 中の neural dynamics が uninstructed movements に強く支配されうることを示し、<a href="https://doi.org/10.1523/ENEURO.0401-17.2018" target="_blank">Mostert et al. (2018)</a> は attempted fixation 下の visual working memory decode でも eye movement confound が残りうることを示しました。<a href="https://doi.org/10.3389/fnhum.2013.00138" target="_blank">Muthukumaraswamy (2013)</a> は high-frequency EEG/MEG で muscle artifact が neural gain と重なりやすいことを整理し、<a href="https://doi.org/10.1088/1741-2560/2/4/014" target="_blank">McFarland et al. (2005)</a> は early BCI session で EMG が performance を押し上げうることを示しました。さらに <a href="https://doi.org/10.1038/s42256-024-00837-5" target="_blank">Chen et al. (2024)</a> は speech decode で post-onset auditory feedback を含む non-causal path が offline score を inflate しうると示しました。したがって本サイトでは、<strong>「情報がある」</strong>だけでなく、<strong>「その情報がどの経路から来たか」</strong>を独立提出物にします。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Specificity &amp; Shortcut Card の欄</th>
+<th>最低限書くこと</th>
+<th>これが無いと何が起きるか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>target variable / intended causal path</strong></td>
+<td>何を読みたいのかを 1 行で固定します。motor intention、stimulus category、memory content、state marker、speech intent などと、その signal path を書きます。</td>
+<td>task label、行動出力、装置状態、session fingerprint を、target neural variable と混同しやすくなります。</td>
+</tr>
+<tr>
+<td><strong>plausible nuisance routes</strong></td>
+<td>EOG、facial / jaw / neck EMG、button press、posture / body movement、speech motor output、auditory feedback、report path、cue timing、device / impedance / session fingerprint など、主要な代替経路を列挙します。</td>
+<td>高 score の説明が 1 本に固定され、shortcut の存在を後から検査できなくなります。</td>
+</tr>
+<tr>
+<td><strong>nuisance observables / auxiliary channels</strong></td>
+<td>EOG / EMG、audio、video / motion capture、button / force、pupil / gaze、impedance / hardware log、stimulus / feedback log の有無と利用方法を書きます。</td>
+<td>nuisance を「注意した」と書くだけで終わり、実測された監査量が残りません。</td>
+</tr>
+<tr>
+<td><strong>nuisance-only / nuisance-matched baselines</strong></td>
+<td>EOG-only、EMG-only、video / behavior-only、audio-only、no-brain、LM-only、feedback-on / off、time-shuffle、label-preserving nuisance match のどれを置いたかを書きます。</td>
+<td>prediction gain が target neural information 由来なのか、補助経路だけで再現できるのかを切り分けられません。</td>
+</tr>
+<tr>
+<td><strong>slice-wise hold-out across nuisance regime</strong></td>
+<td>low / high movement、fixed gaze / free viewing、silent / overt、feedback on / off、device / session hold-out、artifact burden slice、state slice を分けて評価したかを書きます。</td>
+<td>同一分布内の成功を、nuisance 条件が変わっても保たれる target-specific evidence と誤読しやすくなります。</td>
+</tr>
+<tr>
+<td><strong>countermeasure / perturbation check</strong></td>
+<td>fixation enforcement、EMG suppression、masking / sham、feedback removal、cue scrambling、behavior-matched control、countermeasure task など、shortcut を折る対照を置いたかを書きます。</td>
+<td>同じ出力を別経路で再現できる場合でも、causal route が target にあると早合点しやすくなります。</td>
+</tr>
+<tr>
+<td><strong>residual shortcut gap / claim ceiling</strong></td>
+<td>未監査の nuisance route、残った shortcut 可能性、この結果が到達してよい ceiling を 1 行で固定します。</td>
+<td>exploratory decode や behavior-linked biomarker を、target-specific neural readout や mechanistic marker へ誤昇格させやすくなります。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>2026-03-18 追補：Neural Contribution Card はこの一般カードの言語系特化版です</strong>
+<p>
+Specificity &amp; Shortcut Card は、motor / memory / biomarker / speech を含む一般形でございます。<a href="#neural-contribution-card">Neural Contribution Card</a> はそのうち <strong>language prior、candidate set、prompt、vocoder、causal deployment guard</strong> が支配的になる text / speech / generative reconstruction へ特化した版です。したがって speech / brain-to-text では、通常の shortcut 監査に加えて Neural Contribution Card を重ねます。
+</p>
+</div>
+<div class="note-box">
+<strong>最低運用ルール</strong>
+<p>
+このカードが無い場合、本サイトでは結果を原則として <strong>exploratory decode</strong>、<strong>behavior-linked biomarker</strong>、または <strong>nuisance-unresolved classification</strong> として扱い、target-specific neural readout、mechanistic biomarker、deployable controller へは上げません。とくに <strong>plausible nuisance routes</strong>、<strong>nuisance-only baselines</strong>、<strong>slice-wise hold-out</strong> のいずれかが欠ける場合、「何が分かったか」の読み替えを止めます。
+</p>
+</div>
+<div class="note-box">
+<strong>既存カードとの役割差</strong>
+<p>
+Observability Budget は <strong>何を直接見たか</strong> を固定し、Specificity &amp; Shortcut Card は <strong>その predictive information がどの経路から来たか</strong> を固定します。Temporal Validity Card は <strong>どこまで時間外挿できるか</strong> を、Calibration &amp; Abstention Card は <strong>confidence / fallback の意味</strong> を、Intervention Card は <strong>何を実際に変えたか</strong> を固定します。したがって本サイトでは、decode / biomarker 結果に shortcut 監査を別提出させ、観測の存在と target specificity を混ぜません。
 </p>
 </div>
 </section>
@@ -1732,6 +1805,9 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Wairagkar, M., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
 <li>Flesher, S. N., et al. (2021). A brain-computer interface that evokes tactile sensations improves robotic arm control. <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
 <li>Wilson, G. H., et al. (2025). Long-term unsupervised recalibration of intracortical brain-computer interfaces using a hidden Markov model. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Muthukumaraswamy, S. D. (2013). High-frequency brain activity and muscle artifacts in MEG/EEG: a review and recommendations. <a href="https://doi.org/10.3389/fnhum.2013.00138" target="_blank">doi:10.3389/fnhum.2013.00138</a></li>
+<li>Mostert, P., Albers, A. M., Brinkman, L., Todorova, L., &amp; de Lange, F. P. (2018). Eye movement-related confounds in neural decoding of visual working memory representations. <a href="https://doi.org/10.1523/ENEURO.0401-17.2018" target="_blank">doi:10.1523/ENEURO.0401-17.2018</a></li>
+<li>McFarland, D. J., McCane, L. M., David, S. V., &amp; Wolpaw, J. R. (2005). Brain-computer interface operation: signal and noise during early training sessions. <a href="https://doi.org/10.1088/1741-2560/2/4/014" target="_blank">doi:10.1088/1741-2560/2/4/014</a></li>
 <li>Chen, Z., Yao, D., Wang, M., et al. (2024). A neural speech decoding framework leveraging deep learning and speech synthesis. <a href="https://doi.org/10.1038/s42256-024-00837-5" target="_blank">doi:10.1038/s42256-024-00837-5</a></li>
 <li>Singh, V., Papangelou, A., Sharma, M., et al. (2025). Transfer learning via distributed brain recordings enables reliable speech decoding. <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">doi:10.1038/s41467-025-63825-0</a></li>
 <li>Tang, J., LeBel, A., Jain, S., &amp; Huth, A. G. (2023). Semantic reconstruction of continuous language from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
