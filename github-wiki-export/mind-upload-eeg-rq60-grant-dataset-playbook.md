@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-16 / 位置づけ: Per-RQ Grant and Dataset Playbook
+- 更新日: 2026-03-17 / 位置づけ: Per-RQ Grant and Dataset Playbook
 
 ## このページの役割
 このページは、mind-upload の60リサーチクエスチョンを1件ずつ対象に、第一応募先/予備応募先、主EEG-DATA、採用理由、提出成果物を固定した実務用プレイブックです。
@@ -256,3 +256,18 @@ A/B/C 判定は `mind-upload-eeg-rq60-feasibility-and-funds.md` と同一基準�
 - 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue/*.yaml` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で全件参照可能でした。
 - EEG参照の固定ルールは継続します。`EEG-DATA/eeg_dataset_summary_ja.csv` の数値IDは再採番があるため、提出・再現ログは `D1-D16 + DOI`（`auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` 正本）を基準にします。
 - 方針を維持します。汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` を1件ずつ深掘りして記述します。
+
+## 2026-03-17 08:02 JST 再検証ログ（本run / RQ単位申請固定表の更新確認）
+
+- 作業前に `main` を `pull --ff-only` し、基準コミットを `mind-upload=b01826de2565`、`EEG-DATA=48261b83b10a`、`auto-research-funds=c81f22c6aafd` に更新しました。
+- 本ページの `RQ` 行を再計数し、`RQ_TOTAL=60`、`A/B/C=17/25/18` が `mind-upload-eeg-rq60-feasibility-and-funds.md` と一致することを再確認しました。
+- 全 `RQ` 行で `第一応募先/予備応募先/主EEG-DATA/最小成果物` の必須列欠落 `0`、空欄 `0` を確認しました。
+- 実務方針を継続します。汎用テーマ化は行わず、`1RQ=1提出判断` で申請文へ直接転記できる粒度を維持します。
+
+## 2026-03-17 10:04 JST 再検証ログ（本run / 申請正本キーの再固定）
+
+- 作業前に `main` と3サブモジュールを `pull --ff-only` し、基準コミットを `mind-upload=a16abed18888`、`EEG-DATA=02360da7bb71`、`auto-research-funds=abc3f6524aca` に更新しました。
+- 本ページの `RQ` 行を再計数し、`RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認しました。
+- `主EEG-DATA` の数値ID参照を現行CSVと突合した結果、再採番で `23/24` が不一致になったため、申請固定表の正本参照は `D1-D16 + DOI` に再固定します。
+- 助成実ID `G1-G6` は `grant_queue` と `auto-research-funds` で再参照可能（欠落 `0`）でした。
+- 実務運用を継続します。`1RQ=1提出判断` の粒度で、申請文には `Dキー + DOI + データセット名` を必須記載します。
