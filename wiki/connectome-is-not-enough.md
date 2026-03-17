@@ -2,8 +2,9 @@
 layout: default
 title: 'Wiki: Why wiring diagrams alone are not enough'
 description: We will summarize the reasons why storing only the connectome in WBE
-  is insufficient, including the lack of state variables and the limitations of connectome-constrained
-  estimation, based on primary literature.
+  is insufficient, including the lack of state variables such as perisynaptic extracellular
+  matrix and the limitations of connectome-constrained estimation, based on primary
+  literature.
 article_type: Wiki
 subtitle: connectome-complete is not emulation-complete
 author: Mind Uploading Research Project
@@ -22,7 +23,7 @@ accuracy_note: What I'm showing here is an arrangement of ``at least removing th
   are included'', and does not mean that the final sufficient condition has been determined.
 page_highlights:
 - We will organize the points that cannot be solved by wiring diagrams alone into
-  6 state classes and 1 presumed wall.
+  7 state classes and 1 presumed wall.
 - Use only primary literature to separate missing state variables from parameter degeneracy.
 - We will also fix operational rules for how to read connectome-complete and connectome-constrained
   model on this site.
@@ -35,7 +36,7 @@ known_points:
   does not mean that dynamic reproduction is complete.
 - Synaptic efficiency, latency, neuromodification, glia, cell type labels, and intrinsic
   excitability/homeostasis set points are pieces of information that are likely to
-  fall off a static edge list.
+  fall off a static edge list, and perisynaptic ECM / PNN state is another.
 - Confusing coarse physiological proxies with ground truths makes it easy to overstate
   claims about internal states.
 - Even in a connectome-constrained model, dynamics can degenerate if unmeasured cell/synapse/modification
@@ -86,7 +87,7 @@ recommended_pages:
 <div class="abstract-box">
 <h2>Conclusion</h2>
 <p>
-Although wiring diagrams are an important foundation for WBE,<strong>alone are not the minimum requirement for dynamic reproduction</strong>. Even within the same adjacency relationship, differences in cell type labeling, intrinsic excitability, synaptic efficiency, conduction delay, neuronal modification, and glial connectivity state can significantly alter learning, phase synchronization, arousal-dependent responses, and long-term stability. Furthermore, connectome-constrained modeling research in 2024-2025 showed that even with the inclusion of wiring constraints, degeneracy in dynamics remains due to unmeasured parameters and omitted mechanisms. Therefore, this site treats<strong>connectome-complete as a structural atlas/scaffold achievement</strong> and not as<strong>emulation-complete</strong>. Similarly, the fact that a<strong>connectome-constrained model reproduced some activities</strong> cannot be read as state-complete reconstruction.
+Although wiring diagrams are an important foundation for WBE,<strong>alone are not the minimum requirement for dynamic reproduction</strong>. Even within the same adjacency relationship, differences in cell type labeling, intrinsic excitability, synaptic efficiency, perisynaptic ECM / PNN organization, conduction delay, neuronal modification, and glial connectivity state can significantly alter learning, phase synchronization, arousal-dependent responses, and long-term stability. Furthermore, connectome-constrained modeling research in 2024-2025 showed that even with the inclusion of wiring constraints, degeneracy in dynamics remains due to unmeasured parameters and omitted mechanisms. Therefore, this site treats<strong>connectome-complete as a structural atlas/scaffold achievement</strong> and not as<strong>emulation-complete</strong>. Similarly, the fact that a<strong>connectome-constrained model reproduced some activities</strong> cannot be read as state-complete reconstruction.
 </p>
 </div>
 
@@ -98,7 +99,7 @@ I am not going to deal with philosophy or legal systems here. From only the aspe
 </div>
 
 <section class="section" id="bottom-line">
-<h2 class="section-title">6 state classes and 1 putative wall to fix first</h2>
+<h2 class="section-title">7 state classes and 1 putative wall to fix first</h2>
 <table class="data-table">
 <thead>
 <tr>
@@ -126,6 +127,12 @@ I am not going to deal with philosophy or legal systems here. From only the aspe
 <td>The presence or absence of edges alone cannot determine weights, release probability, short-term plasticity, and LTP/LTD history. </td>
 <td>Edge count and synapse count can be read as effective weight. </td>
 <td>Although it is possible to describe static wiring, it does not claim L2 intervention prediction or L3 closed-loop stability. </td>
+</tr>
+<tr>
+<td><strong>Perisynaptic ECM / PNN state</strong></td>
+<td>Extracellular matrix organization can change receptor mobility, inhibitory plasticity, memory-update resistance, and adult plasticity even on the same synapse graph. </td>
+<td>Once synapses and weights are listed, the plasticity gate and stabilization state are basically fixed too. </td>
+<td>Unless ECM / PNN state is measured, perturbed, or externally calibrated, keep adult plasticity and stabilization claims as latent state. </td>
 </tr>
 <tr>
 <td><strong>Delay / timing-state</strong></td>
@@ -156,7 +163,7 @@ I am not going to deal with philosophy or legal systems here. From only the aspe
 <div class="note-box">
 <strong>Missing variables added this time</strong>
 <p>
-In addition to the previous 5 classes, the 2026-03 re-audit included <strong>intrinsic excitability/homeostasis set point</strong> as an independent class. The reason is that even if we have cell-type labels and connectomes, long-term prediction and perturbation recovery are still unclear if the threshold, gain, return destination of firing rate, and maintenance mechanism under molecular turnover are different. A comprehensive arrangement of primary literature is divided into <a href="homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.
+The March 2026 re-audits first split <strong>intrinsic excitability / homeostasis set point</strong> from cell-type labels, and this pass adds <strong>perisynaptic ECM / PNN state</strong> as another independent class. The reason is that even if we have cell-type labels, synapse counts, and connectomes, adult plasticity, receptor diffusion, inhibitory stabilization, and memory-update resistance still vary when the extracellular matrix state differs. A more detailed arrangement of these maintenance-side variables is collected in <a href="homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.
 </p>
 </div>
 </section>
@@ -188,7 +195,7 @@ Even if there is only a wiring diagram, the only solution for the internal state
 </section>
 
 <section class="section" id="state-classes">
-<h2 class="section-title">Why are these 6 classes easy to skip</h2>
+<h2 class="section-title">Why are these 7 classes easy to skip</h2>
 
 <h3>1. Cell type labels are not decorations for node IDs</h3>
 <p>
@@ -205,7 +212,18 @@ Gamlin et al. showed that connectivity motifs, synaptic properties, and myelinat
 Holler et al. analyzed the ultrastructure and release properties of neocortical synapses, and showed that transmission properties cannot be expressed simply by "connected/not connected." Matsuzaki et al. demonstrated that spine enlargement and AMPA current increases are linked in LTP induction in a single dendritic spine. Furthermore, Vardalaki et al. showed that even in the adult neocortex, approximately 25% of filopodia can serve as the structural basis for silent synapse lacking AMPA receptors. Therefore, <strong>edge list alone will reduce the weight of the current state, plastic history, and whether it is functionally active in the first place</strong>.
 </p>
 
-<h3>4. Delay and myelin are part of timing</h3>
+<h3>4. Perisynaptic ECM / PNN state is not just packaging around synapses</h3>
+<p>
+The current site used to separate synapses, timing, neuromodulation, and glia, while still leaving <strong>the extracellular matrix around synapses and inhibitory cells</strong> too implicit. That was too weak. <a href="https://doi.org/10.1126/science.1072699" target="_blank">Pizzorusso et al. (2002)</a> showed that digesting chondroitin-sulfate proteoglycans can reopen ocular-dominance plasticity in adult visual cortex. <a href="https://doi.org/10.1038/nn.2338" target="_blank">Frischknecht et al. (2009)</a> showed that brain extracellular matrix constrains AMPA-receptor lateral mobility and short-term synaptic plasticity. <a href="https://doi.org/10.1126/science.1174146" target="_blank">Gogolla et al. (2009)</a> showed that perineuronal nets protect fear memories from erasure, and <a href="https://doi.org/10.1016/j.matbio.2024.11.001" target="_blank">Jabłońska et al. (2024)</a> showed that extracellular-matrix integrity regulates hippocampal GABAergic plasticity. In other words, the missing variable is not only "how strong the synapse is now," but also <strong>which plasticity transitions and stabilization regimes are still available on that same graph</strong>.
+</p>
+<div class="note-box">
+<strong>Human observability ceiling for ECM / PNN state</strong>
+<p>
+Human evidence is moving, but it is still not an in vivo whole-brain ground truth of current ECM state. <a href="https://doi.org/10.3390/ijms23158197" target="_blank">Boonen et al. (2022)</a> showed extracellular-matrix reorganization in human hippocampal sclerosis tissue, which is useful evidence that the matrix layer is biologically real in human disease tissue. But this remains <strong>ex vivo pathology</strong>, not a direct readout of moment-to-moment perisynaptic matrix state in a living human brain. On this site, ECM / PNN is therefore treated as a latent state unless it is externally calibrated or locally perturbed.
+</p>
+</div>
+
+<h3>5. Delay and myelin are part of timing</h3>
 <p>
 <a href="https://doi.org/10.1126/science.1252304" target="_blank">Gibson et al. (2014)</a> showed that neuronal activity promotes oligodendrogenesis and adaptive myelination, and <a href="https://doi.org/10.1126/science.1254960" target="_blank">McKenzie et al. (2014)</a> showed that active central myelination is required for motor-skill learning. But the weakness of the earlier page was that it still allowed the reader to compress this into the slogan "more myelin, faster signal." Primary literature now supports a stronger statement: <a href="https://doi.org/10.1038/ncomms9073" target="_blank">Seidl et al. (2015)</a> showed that node and internode geometry is tuned along auditory axons to adjust action-potential timing, <a href="https://doi.org/10.1073/pnas.1811013115" target="_blank">Dutta et al. (2018)</a> showed that perinodal astrocytes can reversibly alter nodal gap length and myelin structure to change conduction velocity and spike arrival, and <a href="https://doi.org/10.1016/j.cell.2019.11.039" target="_blank">Cohen et al. (2020)</a> showed that saltatory conduction depends on a conductive periaxonal nanocircuit rather than on a single scalar delay term.
 </p>
@@ -219,12 +237,12 @@ This matters for WBE because timing-sensitive circuits do not only depend on "wh
 </p>
 </div>
 
-<h3>5. Neuromodulation is not “one mood scalar”</h3>
+<h3>6. Neuromodulation is not “one mood scalar”</h3>
 <p>
 Reimer et al. showed that pupil fluctuations track both adrenergic and cholinergic activity within the cortex. Conversely, this also means that<strong>pupil diameter does not uniquely represent one transmitter state or the other</strong>. Additionally, Neyhart et al. showed that while cortical ACh is highly predictable from cholinergic axon activity and behavioral state, it also has locality that depends on distance from neighboring axons and clearance kinetics. Therefore, although it is useful to use pupil diameter or HRV in humans, it is an overstatement to consider it as the ground truth of transmitter-specific and region-specific internal states. What is necessary is not only to say whether it is a good proxy or not, but also to specify what it is and what it is not.
 </p>
 
-<h3>6. Glia is not an afterthought auxiliary variable</h3>
+<h3>7. Glia is not an afterthought auxiliary variable</h3>
 <p>
 Adamsky et al. showed that astrocytic activation can produce de novo neuronal potentiation and memory enhancement. Cahill et al. reported that local, instantaneous neurotransmitter inputs are encoded into responses of a broad astrocyte network over minutes. Therefore, a model that ignores glia should be treated as a model that partially lacks plasticity and slow network state. What is important here is not to generalize that glia are also involved, but to clarify in the model specifications <strong>Which time constants and which state variables were discarded</strong>.
 </p>
@@ -233,7 +251,7 @@ Adamsky et al. showed that astrocytic activation can produce de novo neuronal po
 <section class="section" id="augmentation-ablation">
 <h2 class="section-title">Don't end with enumeration, compare with augmentation / ablation</h2>
 <p>
-The weakness of the current site was that even if it was possible to enumerate the missing state variables, it did not bring to the fore what additional information and which error terms could be reduced to advance to a stronger claim. Primary literature from 2024-2026 shows that when you add same-brain function, transcriptomic label, local transmitter dynamics, glial slow state, and recovery log from the connectome-only baseline, the improvement is different. Therefore, on this site, instead of counting state variables as "present/absent," we will compare held-out predictive gain using augmentation/ablation.
+The weakness of the current site was that even if it was possible to enumerate the missing state variables, it did not bring to the fore what additional information and which error terms could be reduced to advance to a stronger claim. Primary literature from 2024-2026 shows that when you add same-brain function, transcriptomic label, ECM / PNN state, local transmitter dynamics, glial slow state, and recovery log from the connectome-only baseline, the improvement is different. Therefore, on this site, instead of counting state variables as "present/absent," we will compare held-out predictive gain using augmentation/ablation.
 </p>
 <table class="data-table">
 <thead>
@@ -262,6 +280,12 @@ The weakness of the current site was that even if it was possible to enumerate t
 <td>transcriptomic type and target specificity with same-brain or proximity conditions. </td>
 <td>Gamlin et al. demonstrated that connectivity motifs, synaptic properties, and myelination differ systematically among predicted Sst transcriptomic types, embodying the incremental value of node labels. </td>
 <td>Within-type heterogeneity and morpho-electric variability remain, so even if you add cell-type label, threshold / gain / set point will still be latent. </td>
+</tr>
+<tr>
+<td><strong>+ ECM / PNN state audit</strong></td>
+<td>Compare a synapse- or connectome-based baseline against the same model with matrix markers, local matrix perturbation, or externally calibrated ECM state under the same held-out plasticity or recovery conditions. </td>
+<td>Pizzorusso, Frischknecht, Gogolla, and Jabłońska together support that adult plasticity, receptor mobility, inhibitory stabilization, and memory-update resistance can be read more narrowly once matrix state is treated explicitly. </td>
+<td>Histology, pathology, or generic scaffold annotation alone do not become a ground truth of current ECM / PNN state in vivo. </td>
 </tr>
 <tr>
 <td><strong>+ timing-state / conduction audit</strong></td>
@@ -306,6 +330,7 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li><strong>connectome-constrained model:</strong> First of all, it is treated as a hypothesis engine / conditional model. It is not written as the unique solution of the internal state. </li>
 <li><strong>augmentation / ablation:</strong>You can't write that "the added state variable worked" without putting a connectome-only baseline. </li>
 <li><strong>intrinsic excitability / homeostatic set point:</strong>Do not automatically infer from cell-type label or short-term activity matching. If not measured, write latent state. </li>
+<li><strong>ECM / PNN state:</strong>Do not collapse plasticity gate, receptor mobility, or memory-stabilization resistance into synapse count or glial support. If not measured, write latent state. </li>
 <li><strong>Delay is not one scalar:</strong>If timing matters, separate device latency, biological timing-state, and phase error; if the biological side is not measured, write timing-state as latent. </li>
 <li><strong>pupil / HRV:</strong> A useful state covariate for human data, but not a transmitter-specific ground truth. </li>
 <li><strong>When state variable is missing:</strong>If estimated, specify the error and abstention condition; if not, specify absent. </li>
@@ -353,6 +378,11 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li>Holler, S., et al. (2021). Structure and function of a neocortical synapse. <em>Nature</em>, 591, 111–116. <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">doi:10.1038/s41586-020-03134-2</a></li>
 <li>Matsuzaki, M., Honkura, N., Ellis-Davies, G. C. R., & Kasai, H. (2004). Structural basis of long-term potentiation in single dendritic spines. <em>Nature</em>, 429, 761–766. <a href="https://doi.org/10.1038/nature02617" target="_blank">doi:10.1038/nature02617</a></li>
 <li>Vardalaki, D., Chung, K., &amp; Harnett, M. T. (2022). Filopodia are a structural substrate for silent synapses in adult neocortex. <em>Nature</em>, 612, 323–327. <a href="https://doi.org/10.1038/s41586-022-05483-6" target="_blank">doi:10.1038/s41586-022-05483-6</a></li>
+<li>Pizzorusso, T., Medini, P., Berardi, N., Chierzi, S., Fawcett, J. W., &amp; Maffei, L. (2002). Reactivation of ocular dominance plasticity in the adult visual cortex. <em>Science</em>, 298(5596), 1248–1251. <a href="https://doi.org/10.1126/science.1072699" target="_blank">doi:10.1126/science.1072699</a></li>
+<li>Frischknecht, R., Heine, M., Perrais, D., Seidenbecher, C. I., Choquet, D., &amp; Gundelfinger, E. D. (2009). Brain extracellular matrix affects AMPA receptor lateral mobility and short-term synaptic plasticity. <em>Nature Neuroscience</em>, 12(7), 897–904. <a href="https://doi.org/10.1038/nn.2338" target="_blank">doi:10.1038/nn.2338</a></li>
+<li>Gogolla, N., Caroni, P., Lüthi, A., &amp; Herry, C. (2009). Perineuronal nets protect fear memories from erasure. <em>Science</em>, 325(5945), 1258–1261. <a href="https://doi.org/10.1126/science.1174146" target="_blank">doi:10.1126/science.1174146</a></li>
+<li>Jabłońska, K., Kaczor, K., Kółeczko, M., et al. (2024). Extracellular matrix integrity regulates GABAergic plasticity in the hippocampus. <em>Matrix Biology</em>, 136, 74–96. <a href="https://doi.org/10.1016/j.matbio.2024.11.001" target="_blank">doi:10.1016/j.matbio.2024.11.001</a></li>
+<li>Boonen, M., Hellings, N., Hoedemaekers, T., et al. (2022). Reorganization of the brain extracellular matrix in hippocampal sclerosis. <em>International Journal of Molecular Sciences</em>, 23(15), 8197. <a href="https://doi.org/10.3390/ijms23158197" target="_blank">doi:10.3390/ijms23158197</a></li>
 <li>Gibson, E. M., et al. (2014). Neuronal activity promotes oligodendrogenesis and adaptive myelination in the mammalian brain. <em>Science</em>, 344(6183), 1252304. <a href="https://doi.org/10.1126/science.1252304" target="_blank">doi:10.1126/science.1252304</a></li>
 <li>McKenzie, I. A., et al. (2014). Motor skill learning requires active central myelination. <em>Science</em>, 346(6207), 318–322. <a href="https://doi.org/10.1126/science.1254960" target="_blank">doi:10.1126/science.1254960</a></li>
 <li>Seidl, A. H., Rubel, E. W., &amp; Barría, A. (2015). Tuning of Ranvier node and internode properties in myelinated axons to adjust action potential timing. <em>Nature Communications</em>, 6, 8073. <a href="https://doi.org/10.1038/ncomms9073" target="_blank">doi:10.1038/ncomms9073</a></li>

@@ -19,6 +19,7 @@ page_highlights:
   - "For brain-to-text and speech decode, the Neural Contribution Card fixes task constraint, language prior, candidate set, no-brain / no-LM / shuffle baselines, and subject cooperation."
   - "For multimodal or atlas-prior results, the Fusion Card is added on top of the Observability Budget so acquisition relation, synchronization, fusion model, and external validation are fixed explicitly."
   - "At L2 and above, the latent-state error budget is added on top of the Observability Budget so the still-unobserved states that stop the claim are disclosed."
+  - "At L2 and above, perisynaptic ECM / PNN state is separated from synaptic weights and glia when a claim depends on adult plasticity, receptor mobility, or memory stabilization."
   - "At L2 and above, delay is treated as timing-state rather than one scalar, so device latency, biological conduction timing, and human macro timing proxies are not collapsed into one number."
   - "At L2 and above for intervention / closed-loop results, the Intervention Card fixes trigger rule, timing audit, control / sham, safe stop, and recalibration burden."
   - "For cross-day or longitudinal claims, the Temporal Validity Card audits fixed decoder interval, state annotation, recalibration burden, and transfer ceiling independently."
@@ -31,6 +32,7 @@ known_points:
   - "Decode and emulate are distinct claims and require different evidence."
   - "The same decoding score is not target-specific evidence if eye movement, EMG, uninstructed movement, auditory feedback, or subject / session fingerprint remains unresolved."
   - "A multimodal result is not one thing; simultaneous acquisition, geometric fusion, invasive calibration, and atlas priors must be audited separately."
+  - "A synapse list or weight estimate does not by itself fix perisynaptic ECM / PNN state, so plasticity and stabilization claims need a separate ceiling."
   - "Passing a hardware latency audit is not the same as recovering biological timing-state; claims that depend on phase or synchrony need both sides separated."
   - "In chronic invasive recording, unit-matching uncertainty and tissue response around the implant are separate audit items."
 unknown_points:
@@ -619,7 +621,7 @@ The most important update in this pass is that the criticism that ``important hi
 </tr>
 <tr>
 <td><strong>remaining latent state</strong></td>
-<td>List the remaining variables, including weights, delay/myelin, intrinsic excitability/homeostatic set point, neuromodulation, glia/metabolic support, and sleep-history. </td>
+<td>List the remaining variables, including weights, perisynaptic ECM / PNN state, delay/myelin, intrinsic excitability/homeostatic set point, neuromodulation, glia/metabolic support, and sleep-history. </td>
 <td>It is easier to roll up non-state-complete results to emulation-complete or internal state unique solutions. </td>
 </tr>
 <tr>
@@ -732,7 +734,7 @@ The Observability Budget fixes <strong>what was directly observed</strong>. The 
 <section class="section" id="state-completeness-gate">
 <h2 class="section-title">State variable integrity gate</h2>
 <p>
-In our March 2026 primary-literature audit, we reconfirmed that there are at least six loose state classes between <strong>“having a wiring diagram”</strong> and <strong>“being able to behave generatively”</strong>. In addition to cell types, synapses, delays, neuromodulation, and glia, we now also treat <strong>intrinsic excitability / homeostatic set points</strong> as an independent class. Therefore, on this site, we do not accept <strong>edge-list submissions alone</strong> as a condition for passing L2 or above.
+In our March 2026 primary-literature audit, we reconfirmed that there are at least seven loose state classes between <strong>“having a wiring diagram”</strong> and <strong>“being able to behave generatively”</strong>. In addition to cell types, synapses, delays, neuromodulation, and glia, we now also treat <strong>intrinsic excitability / homeostatic set points</strong> and <strong>perisynaptic ECM / PNN state</strong> as independent classes. Therefore, on this site, we do not accept <strong>edge-list submissions alone</strong> as a condition for passing L2 or above.
 </p>
 <table class="data-table">
 <thead>
@@ -757,6 +759,11 @@ In our March 2026 primary-literature audit, we reconfirmed that there are at lea
 <td><strong>Synaptic efficiency/short-term state</strong></td>
 <td>Weight, emission probability, and plastic change cannot be determined solely by the presence or absence of edges. </td>
 <td>It is possible to describe static wiring, but it cannot claim L2 intervention prediction or L3 stability control. </td>
+</tr>
+<tr>
+<td><strong>Perisynaptic ECM / PNN state</strong></td>
+<td>Even with the same synapse graph, extracellular matrix organization can change receptor mobility, inhibitory plasticity, memory-update resistance, and the opening or closing of adult plasticity windows. </td>
+<td>Stop treating adult plasticity, reconsolidation resistance, or inhibitory stabilization as closed, and keep ECM / PNN state explicit as latent or externally calibrated. </td>
 </tr>
 <tr>
 <td><strong>Delay / timing-state</strong></td>
@@ -788,6 +795,12 @@ Hardware latency audit and biological timing-state audit solve different problem
 </p>
 </div>
 <div class="note-box">
+<strong>2026-03-18 addendum: ECM / PNN is not just static scaffold</strong>
+<p>
+<a href="https://doi.org/10.1126/science.1072699" target="_blank">Pizzorusso et al. (2002)</a> showed that digesting chondroitin-sulfate proteoglycans can reopen adult ocular-dominance plasticity, <a href="https://doi.org/10.1038/nn.2338" target="_blank">Frischknecht et al. (2009)</a> showed that brain extracellular matrix constrains AMPA-receptor lateral mobility and short-term synaptic plasticity, <a href="https://doi.org/10.1126/science.1174146" target="_blank">Gogolla et al. (2009)</a> showed that perineuronal nets protect fear memories from erasure, and <a href="https://doi.org/10.1016/j.matbio.2024.11.001" target="_blank">Jabłońska et al. (2024)</a> showed that ECM integrity regulates hippocampal GABAergic plasticity. Human evidence such as <a href="https://doi.org/10.3390/ijms23158197" target="_blank">Boonen et al. (2022)</a> is still mainly ex vivo pathology rather than in vivo whole-brain ground truth. Therefore, when a claim depends on plasticity windows, receptor diffusion, or stabilization against erasure, this site asks authors to disclose whether ECM / PNN state was measured, perturbed, externally calibrated, or left latent.
+</p>
+</div>
+<div class="note-box">
 <strong>2026-03 Addendum: Use augmentation / ablation instead of enumeration</strong>
 <p>
 The weakness found in this re-audit was that by simply listing the state variables as ``missing,'' it was difficult to convey to the reader what could be added to make the claim even stronger. Therefore, on this site, we will compare the <strong>connectome-only baseline</strong> and the <strong>model with additional variables</strong> under the same held-out conditions, and request submissions that show which augmentation reduced which error term.
@@ -814,6 +827,12 @@ The weakness found in this re-audit was that by simply listing the state variabl
 <td>Ablation with the condition that removes the node label, and generates gain of target specificity and held-out response. </td>
 <td>You can say how much cell-type information improves target-specific connectivity and response prediction. </td>
 <td>cell-type is a descriptive tag and does not auto-complete until threshold / gain / set point. </td>
+</tr>
+<tr>
+<td><strong>+ ECM / PNN state audit</strong></td>
+<td>Compare a synapse- or connectome-based baseline against the same model with matrix markers, local matrix perturbation, or externally calibrated ECM state under the same held-out plasticity or recovery conditions, and disclose gains in plasticity / reversal / stabilization separately. </td>
+<td>You can state more narrowly how much plasticity-gate control, inhibitory stabilization, or memory-update resistance improves once ECM / PNN state is treated explicitly. </td>
+<td>Histology, pathology, or generic scaffold annotation alone remain structural context and do not become a ground truth of current ECM / PNN state in vivo. </td>
 </tr>
 <tr>
 <td><strong>+ timing-state / conduction audit</strong></td>
@@ -1104,6 +1123,11 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
 <li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
+<li>Pizzorusso, T., Medini, P., Berardi, N., Chierzi, S., Fawcett, J. W., &amp; Maffei, L. (2002). Reactivation of ocular dominance plasticity in the adult visual cortex. <a href="https://doi.org/10.1126/science.1072699" target="_blank">doi:10.1126/science.1072699</a></li>
+<li>Frischknecht, R., Heine, M., Perrais, D., Seidenbecher, C. I., Choquet, D., &amp; Gundelfinger, E. D. (2009). Brain extracellular matrix affects AMPA receptor lateral mobility and short-term synaptic plasticity. <a href="https://doi.org/10.1038/nn.2338" target="_blank">doi:10.1038/nn.2338</a></li>
+<li>Gogolla, N., Caroni, P., Lüthi, A., &amp; Herry, C. (2009). Perineuronal nets protect fear memories from erasure. <a href="https://doi.org/10.1126/science.1174146" target="_blank">doi:10.1126/science.1174146</a></li>
+<li>Jabłońska, K., Kaczor, K., Kółeczko, M., et al. (2024). Extracellular matrix integrity regulates GABAergic plasticity in the hippocampus. <a href="https://doi.org/10.1016/j.matbio.2024.11.001" target="_blank">doi:10.1016/j.matbio.2024.11.001</a></li>
+<li>Boonen, M., Hellings, N., Hoedemaekers, T., et al. (2022). Reorganization of the brain extracellular matrix in hippocampal sclerosis. <a href="https://doi.org/10.3390/ijms23158197" target="_blank">doi:10.3390/ijms23158197</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Vadisiute, A., Meijer, E., Therpurakal, R. N., et al. (2024). Glial cells undergo rapid changes following acute chemogenetic manipulation of cortical layer 5 projection neurons. <a href="https://doi.org/10.1038/s42003-024-06994-w" target="_blank">doi:10.1038/s42003-024-06994-w</a></li>
