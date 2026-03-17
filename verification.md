@@ -20,6 +20,7 @@ page_highlights:
   - "L2 以上では、Observability Budget に加えて latent-state error budget も付け、どの未観測状態がまだ claim を止めるかまで公開します。"
   - "L2 以上の介入・閉ループ結果では、Intervention Card で trigger rule・timing audit・control/sham・安全停止・再較正負荷を固定します。"
   - "cross-day / longitudinal claim では、Temporal Validity Card で fixed decoder interval・state 注釈・recalibration burden・transfer ceiling を独立監査します。"
+  - "cross-day / remote-memory claim では、maintenance-state error budget で controller state・sleep history・support-state proxy を別提出し、時間軸の成功を maintenance-consistent claim へ自動昇格させません。"
   - "chronic invasive claim では、signal-chain drift と implant tissue response を分けて監査し、unit identity audit だけで済ませません。"
   - "確率・区間・予測集合・棄権を出す結果では、Calibration & Abstention Card で fit/calibration/test 分離・evaluation family・coverage-risk・fallback を固定します。"
 known_points:
@@ -965,6 +966,79 @@ Observability Budget は <strong>何を直接見たか</strong>、latent-state e
 <strong>最低運用ルール</strong>
 <p>
 このカードが無い場合、本サイトでは結果を原則として <strong>within-session result</strong>、<strong>limited cross-session decode</strong>、または <strong>short-horizon online demo</strong> として扱い、longitudinal / deployable / maintenance-consistent claim へは上げません。特に <strong>fixed-model interval</strong>、<strong>state annotation</strong>、<strong>recalibration burden</strong> のいずれかが欠ける場合、same-day から cross-day への読替えを止めます。詳しい背景は <a href="wiki/state-trait-and-drift.html">Wiki: state・trait・ドリフト</a> に集約しています。
+</p>
+</div>
+</section>
+
+<section class="section" id="maintenance-state-error-budget">
+<h2 class="section-title">2026-03 追補：maintenance-state error budget を独立提出にする</h2>
+<p>
+今回さらに深掘りして見えた弱点は、<strong>Temporal Validity Card が time horizon を固定しても、どの maintenance route が実際に観測・較正され、どこが proxy のまま残ったか</strong>までは独立に書けないことでした。<a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">Torrado Pacheco et al. (2021)</a>、<a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a> は sleep-dependent recovery が別軸であることを、<a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a> は timing-support と axonal metabolic support を、<a href="https://doi.org/10.1016/j.cell.2013.12.042" target="_blank">Rangaraju et al. (2014)</a>、<a href="https://doi.org/10.1016/j.cell.2018.12.013" target="_blank">Rangaraju et al. (2019)</a>、<a href="https://doi.org/10.1016/j.neuron.2018.09.025" target="_blank">Divakaruni et al. (2018)</a>、<a href="https://doi.org/10.1038/s41467-023-44233-8" target="_blank">Bapat et al. (2024)</a>、<a href="https://doi.org/10.1038/s42003-025-08963-3" target="_blank">Hu et al. (2025)</a> は local bioenergetic route を、<a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a> と <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a> は astrocyte ensemble を、<a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Kim et al. (2025)</a>、<a href="https://doi.org/10.1093/brain/awab285" target="_blank">Eide &amp; Ringstad (2021)</a>、<a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>、<a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> は clearance / immune support を、それぞれ別の maintenance axis として裏づけます。したがって本サイトでは、<strong>cross-day / remote-memory / maintenance-consistent</strong> を名乗る結果に対し、<strong>maintenance-state error budget</strong> を独立提出させ、<strong>controller state</strong>、<strong>renormalization history</strong>、<strong>support-state proxy</strong> を 1 行に潰さず管理します。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>maintenance route</th>
+<th>最低限残す提出物</th>
+<th>比較・較正</th>
+<th>棄権 / 降格条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>controller state<br>（relative excitability / AIS / recovery set point）</strong></td>
+<td>cross-perturbation / cross-day の劣化と recovery time、possible なら allocation proxy、AIS / channel proxy、state-conditioned perturbation log。</td>
+<td>fixed connectome / fixed decoder と、controller state 項を足した条件を同じ split で比べ、allocation、gain、recovery route のどこに効いたかを分けて書きます。</td>
+<td>短時間の活動一致か transcriptomic label しか無い場合、memory allocation、controller consistency、recovery-route match の claim を止めます。</td>
+</tr>
+<tr>
+<td><strong>renormalization history<br>（sleep / wake / deprivation / recent learning）</strong></td>
+<td>sleep / wake history、deprivation や nap の有無、recent training / consolidation window、overnight recovery log、翌日 performance の held interval。</td>
+<td>same-day fit と overnight / multiday fit を分け、recent learning covariate を外した条件との差を出します。</td>
+<td>sleep history と overnight recovery が無い場合、same-day score を maintenance-consistent、cross-day stable、remote-memory ready へ上げません。</td>
+</tr>
+<tr>
+<td><strong>timing-support state<br>（myelin / oligodendroglial support）</strong></td>
+<td>latency degradation curve、phase error、timing-sensitive task failure、possible なら myelin / oligodendroglial proxy、delay を固定定数で近似した箇所。</td>
+<td>delay fixed と delay-aware 条件を同じ horizon で比べ、timing claim と support claim を混ぜずに書きます。</td>
+<td>timing-support log が無い場合、phase coordination、cross-day timing preservation、axonal support consistency の claim を止めます。</td>
+</tr>
+<tr>
+<td><strong>bioenergetic support<br>（local ATP / mitochondrial route）</strong></td>
+<td>31P-MRS / dynamic DMI などの energetic proxy、possible なら repeated-burst failure / fatigue log、未測定 mitochondrial positioning / redox reserve の明示。</td>
+<td>neural-only 条件と bioenergetic-aware 条件を同じ split / horizon で比較し、human macro energetic proxy と rodent local causal evidence は evidence tier を分けて較正します。</td>
+<td>energetic log が無い場合、fatigue resistance、sustained release reliability、dendritic plasticity の energetic mechanism を止め、human imaging も local mitochondrial truth と書きません。</td>
+</tr>
+<tr>
+<td><strong>glial / metabolic support<br>（astrocyte ensemble / slow restabilization）</strong></td>
+<td>restabilization window、再想起後の recovery、slow-state covariate、neuron-only と glia-inclusive 条件の差、適用した時定数。</td>
+<td>fast neural feature だけの条件と、glial / metabolic covariate または astrocyte ensemble state を足した条件を same split で比べ、rodent causal evidence と human proxy を分けて書きます。</td>
+<td>restabilization と slow-state log が無い場合、long-term recall stabilization、astrocyte-dependent maintenance、slow-state completeness の claim を止めます。</td>
+</tr>
+<tr>
+<td><strong>clearance / immune support<br>（CSF / glymphatic / meningeal / microglial route）</strong></td>
+<td>sleep / deprivation 注釈、CSF mobility か glymphatic proxy、immune / meningeal covariate、multiday recovery curve、protein-clearance 関連の support-state log。</td>
+<td>neural-only 条件と clearance / immune covariate を足した条件を same split で比べ、Hirschler / Dagum のような human macro proxy は Kim らの causal rodent evidence と evidence tier を分けて較正します。</td>
+<td>clearance / immune log が無い場合、multiday recovery、protein-clearance、local immune controller、support-state completeness の claim を止め、human CSF proxy も momentary neural truth と書きません。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Temporal Validity Card / latent-state error budget との役割差</strong>
+<p>
+Temporal Validity Card は <strong>何日・何状態まで結果が持ったか</strong> を固定するカードで、latent-state error budget は <strong>どの hidden state がいまの誤差をまだ支配しているか</strong> を固定するカードでございます。maintenance-state error budget はその中間で、<strong>maintenance に効く route のうち何を direct に見たか、何を proxy で代用したか、何を未測定のまま残したか</strong> を固定します。したがって本サイトでは、cross-day claim で <strong>Temporal Validity Card だけ</strong>を出して `maintenance-consistent` と書かず、maintenance route の証跡を別提出させます。
+</p>
+</div>
+<div class="note-box">
+<strong>human proxy class を 1 行で潰さない</strong>
+<p>
+human 側で maintenance-state に関係する前進があっても、<a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> と <a href="https://doi.org/10.1093/pnasnexus/pgaf079" target="_blank">Li et al. (2025)</a> は <strong>macro energetic proxy</strong>、<a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> は <strong>macro-myelin proxy</strong>、<a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> と <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a> は <strong>perturbational proxy</strong>、<a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> と <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> は <strong>macro support-state proxy</strong> でございます。したがって本サイトでは、human proxy があることを、そのまま cell-specific maintenance route の ground truth と読み替えません。
+</p>
+</div>
+<div class="note-box">
+<strong>最低運用ルール</strong>
+<p>
+このカードが無い場合、本サイトでは cross-day result をせいぜい <strong>temporal stability under unspecified maintenance-state</strong> として扱い、<strong>maintenance-consistent</strong>、<strong>remote-memory relevant</strong>、<strong>long-horizon mechanistically grounded</strong> とは書きません。特に <strong>controller state</strong>、<strong>sleep / renormalization history</strong>、<strong>support-state proxy class</strong> のいずれかが欠ける場合、same score を維持していても maintenance route の一致は保留します。
 </p>
 </div>
 </section>

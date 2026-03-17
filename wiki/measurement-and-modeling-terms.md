@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Wiki：計測からモデル化までの用語ガイド"
-description: "EEG、QC、BIDS、ESI、connectivity、DCM、SCM、Observability Budget / Fusion Card / Temporal Validity Card / Calibration & Abstention Card を、direct / proxy / inferred / deployable の境界つきで説明します。"
+description: "EEG、QC、BIDS、ESI、connectivity、DCM、SCM、Observability Budget / maintenance-state error budget / Temporal Validity Card / Calibration & Abstention Card を、direct / proxy / inferred / deployable の境界つきで説明します。"
 article_type: Wiki
 subtitle: "detectable と identified を混同しない"
 author: Mind Uploading Research Project
@@ -14,7 +14,7 @@ accuracy_note: "ここで示す流れは理解のための整理です。実際�
 page_highlights:
   - "EEG、QC、BIDS、ESI、connectivity、DCM、SCM、site-wide の提出物仕様を 1 本の流れで理解できます。"
   - "direct / proxy / inferred / deployable を、detectability / localization / identifiability / validation と混ぜずに切り分けます。"
-  - "Observability Budget、Fusion Card、latent-state error budget、Temporal Validity Card、Calibration & Abstention Card が、どの段階の失敗モードを止めるかを結び付けます。"
+  - "Observability Budget、Fusion Card、latent-state error budget、maintenance-state error budget、Temporal Validity Card、Calibration & Abstention Card が、どの段階の失敗モードを止めるかを結び付けます。"
   - "connectivity claim は localization の次の段であり、source mixing や ghost interaction の別監査が要ると分かります。"
 known_points:
   - "計測、前処理、推定、妥当化、運用は役割が違い、それぞれ別の言葉が使われます。"
@@ -64,7 +64,7 @@ recommended_pages:
 <div class="note-box">
 <strong>2026-03 の更新点</strong>
 <p>
-今回の更新では、最近の公開ページで強化した境界を、この補助ページにも下ろしました。特に <strong>detectability / localization / identifiability / direct validation / deployability</strong> を 1 列で読めるようにしつつ、<strong>direct / proxy / inferred / deployable</strong> も別の軸として明示しました。さらに、この 5 段階を <a href="../verification.html#observability-budget">Observability Budget</a>、<a href="../verification.html#fusion-card">Fusion Card</a>、<a href="../verification.html#latent-state-error-budget">latent-state error budget</a>、<a href="../verification.html#temporal-validity-card">Temporal Validity Card</a>、<a href="../verification.html#calibration-abstention-card">Calibration &amp; Abstention Card</a> へ対応づけ、学習ガイドと site-wide 提出物仕様のずれを埋めました。
+今回の更新では、最近の公開ページで強化した境界を、この補助ページにも下ろしました。特に <strong>detectability / localization / identifiability / direct validation / deployability</strong> を 1 列で読めるようにしつつ、<strong>direct / proxy / inferred / deployable</strong> も別の軸として明示しました。さらに、この 5 段階を <a href="../verification.html#observability-budget">Observability Budget</a>、<a href="../verification.html#fusion-card">Fusion Card</a>、<a href="../verification.html#latent-state-error-budget">latent-state error budget</a>、<a href="../verification.html#maintenance-state-error-budget">maintenance-state error budget</a>、<a href="../verification.html#temporal-validity-card">Temporal Validity Card</a>、<a href="../verification.html#calibration-abstention-card">Calibration &amp; Abstention Card</a> へ対応づけ、学習ガイドと site-wide 提出物仕様のずれを埋めました。
 </p>
 </div>
 
@@ -101,8 +101,8 @@ recommended_pages:
 </tr>
 <tr>
 <td><strong>5. 運用</strong></td>
-<td>Temporal Validity Card, Calibration &amp; Abstention Card, calibration, coverage, abstention, tail latency, recalibration burden</td>
-<td>精度が高いだけでなく、低信頼時に止まれるか、何日・何状態まで持つか、長期に使えるかを測ります。</td>
+<td>Temporal Validity Card, maintenance-state error budget, Calibration &amp; Abstention Card, calibration, coverage, abstention, tail latency, recalibration burden</td>
+<td>精度が高いだけでなく、どの maintenance route を実際に見たか、低信頼時に止まれるか、何日・何状態まで持つか、長期に使えるかを測ります。</td>
 </tr>
 </tbody>
 </table>
@@ -150,7 +150,7 @@ recommended_pages:
 <tr>
 <td><strong>運用</strong></td>
 <td>何日・何状態・どの低信頼条件まで外挿できるか。</td>
-<td><a href="../verification.html#temporal-validity-card">Temporal Validity Card</a> / <a href="../verification.html#calibration-abstention-card">Calibration &amp; Abstention Card</a></td>
+<td><a href="../verification.html#temporal-validity-card">Temporal Validity Card</a> / <a href="../verification.html#maintenance-state-error-budget">maintenance-state error budget</a> / <a href="../verification.html#calibration-abstention-card">Calibration &amp; Abstention Card</a></td>
 <td><code>same-day high score = chronic deployable</code>、<code>high confidence = safe</code> を止めます。</td>
 </tr>
 </tbody>

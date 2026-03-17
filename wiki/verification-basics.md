@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Wiki：検証基盤の基本"
-description: "なぜ WBE の話で標準、ベンチ、事前登録、監査が必要なのかを初歩から説明し、Observability Budget / Temporal Validity Card / Calibration & Abstention Card などの役割差も整理します。"
+description: "なぜ WBE の話で標準、ベンチ、事前登録、監査が必要なのかを初歩から説明し、Observability Budget / maintenance-state error budget / Temporal Validity Card / Calibration & Abstention Card などの役割差も整理します。"
 article_type: Wiki
 subtitle: "派手な主張より先に、物差しと記録の置き場を作る"
 author: Mind Uploading Research Project
@@ -14,12 +14,12 @@ accuracy_note: "ここで使うたとえは理解の補助です。たとえで�
 page_highlights:
   - "データがあるだけでは、比較可能な前進になりません。"
   - "標準、ベンチ、事前登録、監査は、互いに役割が違います。"
-  - "監査も 1 枚ではなく、何を直接見たか、何が未観測か、何日持つか、低信頼時にどう止まるかで役割が分かれます。"
+  - "監査も 1 枚ではなく、何を直接見たか、何が未観測か、どの maintenance route を実際に見たか、何日持つか、低信頼時にどう止まるかで役割が分かれます。"
   - "WBE のように主張が大きい分野ほど、運用面の厳しさが重要になります。"
 known_points:
   - "比較可能な前進には、入力、評価、ルール、記録の4つが必要です。"
   - "事前登録や監査がないと、あとから都合よく成功条件を変えられてしまいます。"
-  - "Observation、latent state、time horizon、confidence semantics は別 failure mode なので、site-wide では別の card に分けて管理します。"
+  - "Observation、latent state、maintenance route、time horizon、confidence semantics は別 failure mode なので、site-wide では別の card に分けて管理します。"
   - "PDB や BIDS など、他分野でも公共財の整備が進歩を加速してきました。"
 unknown_points:
   - "WBE 専用の最終ベンチマークが、まだ完成した形で存在するわけではありません。"
@@ -94,7 +94,7 @@ recommended_pages:
 <section class="section" id="site-cards">
 <h2 class="section-title">監査は 1 枚では足りません</h2>
 <p>
-今回この入門ページで補うべきだった弱点は、<strong>監査</strong> を 1 箱にまとめすぎ、公開サイトで実際に使っている提出物の役割差が見えにくかった点でございます。Mind-Upload では、<strong>何を直接見たか</strong>、<strong>どう結び付けたか</strong>、<strong>何がまだ未観測か</strong>、<strong>何日・何状態まで持つか</strong>、<strong>低信頼時にどう止まるか</strong> を別々に残します。
+今回この入門ページで補うべきだった弱点は、<strong>監査</strong> を 1 箱にまとめすぎ、公開サイトで実際に使っている提出物の役割差が見えにくかった点でございます。Mind-Upload では、<strong>何を直接見たか</strong>、<strong>どう結び付けたか</strong>、<strong>何がまだ未観測か</strong>、<strong>どの maintenance route を実際に見たか</strong>、<strong>何日・何状態まで持つか</strong>、<strong>低信頼時にどう止まるか</strong> を別々に残します。
 </p>
 <table class="data-table">
 <thead>
@@ -129,6 +129,11 @@ recommended_pages:
 <td><a href="../verification.html#temporal-validity-card"><strong>Temporal Validity Card</strong></a></td>
 <td>その結果を何日・何状態・何回の再較正まで外挿できるかを固定します。</td>
 <td><code>same-day high score = chronic deployable</code> と読みやすくなります。</td>
+</tr>
+<tr>
+<td><a href="../verification.html#maintenance-state-error-budget"><strong>maintenance-state error budget</strong></a></td>
+<td>controller state、sleep / wake history、support-state proxy のどこを direct / proxy / omitted で扱ったかを固定します。</td>
+<td><code>cross-day で持った = maintenance も揃った</code>、<code>human proxy がある = cell-specific maintenance route も見えた</code> と読みやすくなります。</td>
 </tr>
 <tr>
 <td><a href="../verification.html#calibration-abstention-card"><strong>Calibration &amp; Abstention Card</strong></a></td>

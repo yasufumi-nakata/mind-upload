@@ -14,7 +14,7 @@ page_highlights:
   - "まずP0〜P2で『何を成功と呼ぶか』を固定し、その後に計測や実装へ進みます。"
   - "索引を使えば、気になる論点だけ先に読むこともできます。"
   - "強い主張ほど後ろのレベルに置き、前のレベルを飛ばして語らない構造にしています。"
-  - "R3/R5 では latent-state を evidence tier と timescale で分け、same-day fit と multiday maintenance を同じ成功にしません。"
+  - "R3/R5 では latent-state と maintenance-state を evidence tier と timescale で分け、same-day fit と multiday maintenance を同じ成功にしません。"
 known_points:
   - "P/M/R/I/V/D に分けると、どの問題が土台でどの問題が上位論点かを整理できます。"
   - "前の層を飛ばして強い主張へ進めない、という依存関係はかなりはっきりしています。"
@@ -796,11 +796,11 @@ EEG-fMRI / MRI-fMRI の統合では、shared clock と geometry だけでは足�
 <div class="note-box">
 <strong>R3 で最低限ほしい提出物</strong>
 <p>
-少なくとも <strong>(1) 直接観測量と proxy</strong>、<strong>(2) latent-state class ごとの dominant timescale と evidence tier</strong>、<strong>(3) connectome-only baseline と augmentation 比較</strong>、<strong>(4) どの latent state がいまの誤差をまだ支配しているか</strong>、<strong>(5) cross-day claim なら fixed interval と state annotation</strong> を一緒に出します。これがない場合、本サイトでは結果をまず <strong>conditional prediction</strong> として扱い、maintenance-consistent model や emulation-ready state estimate へは上げません。
+少なくとも <strong>(1) 直接観測量と proxy</strong>、<strong>(2) latent-state class ごとの dominant timescale と evidence tier</strong>、<strong>(3) connectome-only baseline と augmentation 比較</strong>、<strong>(4) どの latent state がいまの誤差をまだ支配しているか</strong>、<strong>(5) cross-day claim なら fixed interval と state annotation</strong>、<strong>(6) controller state・sleep / wake history・support-state proxy のどこを実際に見たか</strong> を一緒に出します。これがない場合、本サイトでは結果をまず <strong>conditional prediction</strong> として扱い、maintenance-consistent model や emulation-ready state estimate へは上げません。
 </p>
 </div>
 <p><strong>反証条件：</strong>潜在状態がデータ圧縮にしかなっておらず、candidate family を変えると結論が大きく揺れる、あるいは介入予測（R4）と temporal validity に寄与しない場合は、状態を捉えたとはみなしません。</p>
-<p><strong>次に必要：</strong><a href="verification.html#latent-state-error-budget">Verification の latent-state error budget</a> と <a href="verification.html#temporal-validity-card">Temporal Validity Card</a> に接続し、未学習条件での外挿、介入応答の予測誤差、cross-day 劣化を束で評価します。</p>
+<p><strong>次に必要：</strong><a href="verification.html#latent-state-error-budget">Verification の latent-state error budget</a>、<a href="verification.html#maintenance-state-error-budget">maintenance-state error budget</a>、<a href="verification.html#temporal-validity-card">Temporal Validity Card</a> に接続し、未学習条件での外挿、介入応答の予測誤差、cross-day 劣化、maintenance route の未観測部を束で評価します。</p>
 </div>
 </details>
 
@@ -857,7 +857,7 @@ EEG-fMRI / MRI-fMRI の統合では、shared clock と geometry だけでは足�
 <div class="note-box">
 <strong>この節の site rule</strong>
 <p>
-固定モデルを許すのは、まず <strong>same-day / short-window</strong> の claim まででございます。cross-day stability を語るなら <a href="verification.html#temporal-validity-card">Temporal Validity Card</a> を、どの maintenance-state がまだ誤差を支配しているかを語るなら <a href="verification.html#latent-state-error-budget">latent-state error budget</a> を添えます。remote-memory や enduring-personalization を語る場合は、少なくとも intrinsic excitability、sleep-dependent recovery、delay / myelin support、bioenergetic / mitochondrial state、astrocyte / slow-state のどれを explicit に入れたか、あるいはどれを未解決として保留したかを出します。
+固定モデルを許すのは、まず <strong>same-day / short-window</strong> の claim まででございます。cross-day stability を語るなら <a href="verification.html#temporal-validity-card">Temporal Validity Card</a> を、どの maintenance-state がまだ誤差を支配しているかを語るなら <a href="verification.html#latent-state-error-budget">latent-state error budget</a> を、どの maintenance route を direct / proxy / omitted で扱ったかを語るなら <a href="verification.html#maintenance-state-error-budget">maintenance-state error budget</a> を添えます。remote-memory や enduring-personalization を語る場合は、少なくとも intrinsic excitability、sleep-dependent recovery、delay / myelin support、bioenergetic / mitochondrial state、astrocyte / slow-state のどれを explicit に入れたか、あるいはどれを未解決として保留したかを出します。
 </p>
 </div>
 <p><strong>分岐（例）：</strong>(A) 学習しない（固定モデル） / (B) 制限付きで学習（安全な更新） / (C) 学習則まで推定、ではなく、<strong>どの timescale の claim を許すか</strong>で必要提出物を変えます。</p>

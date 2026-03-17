@@ -106,6 +106,12 @@ Observability Budget で「何を直接見たか」を確認したら、次は <
 </p>
 </div>
 <div class="note-box">
+<strong>cross-day の score だけで maintenance-consistent claim へ上げたくないとき</strong>
+<p>
+今回の追補では、時間軸の成功と maintenance route の証跡を分けるため <a href="verification.html#maintenance-state-error-budget">Verification の maintenance-state error budget</a> を追加しました。ここでは <strong>controller state</strong>、<strong>sleep / wake history</strong>、<strong>timing-support</strong>、<strong>bioenergetic / glial / clearance proxy</strong> を別欄で出し、same-day の fit や cross-day の hold を、そのまま <strong>maintenance-consistent</strong> や <strong>remote-memory relevant</strong> と読まないようにします。背景は <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に集約しています。
+</p>
+</div>
+<div class="note-box">
 <strong>『文字列や音声が出た』ときに、何が脳由来か先に見たいとき</strong>
 <p>
 2026年3月の更新では、brain-to-text / speech decode の過大解釈を止めるため <a href="verification.html#neural-contribution-card">Verification の Neural Contribution Card</a> を追加しました。ここでは <strong>task constraint</strong>、<strong>language model / prompt / candidate set</strong>、<strong>no-brain / no-LM / shuffle baseline</strong>、<strong>subject cooperation / calibration burden</strong>、<strong>online / offline</strong> を固定し、「文字列が出た」をそのまま neural reconstruction と読み替えません。入口Q&amp;Aなら <a href="faq.html#brain-to-text">FAQ: brain-to-text の見方</a> が近道です。
