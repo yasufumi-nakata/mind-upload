@@ -89,7 +89,7 @@ Mind-Uploadは、「心をコンピュータで再現できるのか？」とい
 <div class="note-box">
 <strong>multimodal を見たときに、何が本当に増えたか先に切り分けたいとき</strong>
 <p>
-2026年3月の再監査では、<strong>同時計測 + 共有時計</strong>、<strong>同一個体の幾何統合</strong>、<strong>coverage-limited な侵襲校正</strong>、<strong>atlas / transcriptomic prior</strong> を、同じ <code>multimodal</code> の 1 語で読まない方針にそろえました。特に EEG-fMRI では、shared clock があっても BOLD は hemodynamic proxy であり、<strong>2025年12月16日公開の Epp et al.</strong> が示したように cortex の有意 voxel の約40%で BOLD と酸素代謝変化が逆向きになりえます。したがって本サイトでは、<code>multimodal = mechanistic truth</code> と読まず、<a href="verification.html#fusion-card">Verification の Fusion Card</a> と <a href="wiki/multimodal-integration-basics.html#hemodynamic-gate">Wiki: hemodynamic proxy gate</a> を先に確認してください。
+2026年3月の再監査では、<strong>同時計測 + 共有時計</strong>、<strong>同一個体の幾何統合</strong>、<strong>coverage-limited な侵襲校正</strong>、<strong>atlas / transcriptomic prior</strong> を、同じ <code>multimodal</code> の 1 語で読まない方針にそろえました。特に EEG-fMRI では、shared clock があっても BOLD は hemodynamic proxy であり、<strong>2025年12月16日公開の Epp et al.</strong> が示したように cortex の有意 voxel の約40%で BOLD と酸素代謝変化が逆向きになりえます。さらに今回の更新では、<strong>baseline vascular state / CVR</strong> を別監査しない限り、BOLD の群差や縦断差をそのまま neural difference と読みません。したがって本サイトでは、<code>multimodal = mechanistic truth</code> と読まず、<a href="verification.html#fusion-card">Verification の Fusion Card</a> と <a href="wiki/multimodal-integration-basics.html#hemodynamic-gate">Wiki: hemodynamic proxy gate</a> を先に確認してください。
 </p>
 </div>
 

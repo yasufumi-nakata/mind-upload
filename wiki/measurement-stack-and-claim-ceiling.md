@@ -16,11 +16,13 @@ page_highlights:
   - "multimodal / atlas / connectome の語を、そのまま state-complete と誤読しないための ceiling を固定します。"
   - "stack の表だけでなく、state variable × timescale × direct / proxy / inferred の行列も追加し、何が本当に直接見えているかを分解します。"
   - "fMRI / BOLD は neural truth ではなく、neurovascular transfer・HRF・venous geometry を介した proxy として扱います。"
+  - "hemodynamic modality では vascular state / cerebrovascular reactivity も measurement-side latent variable として監査します。"
   - "SV2A PET は human in vivo synaptic-density proxy として重要ですが、current synaptic efficacy / release probability の直読とは分けます。"
   - "neuromodulation も 1 本ではなく、behavior proxy / axon activity / local transmitter sensor / receptor atlas / receptor physiology の別ラダーとして扱います。"
 known_points:
   - "EEG/MEG/fMRI はマクロな proxy を与えますが、細胞型、シナプス効率、樹状突起 branch の非線形統合、神経修飾場、グリア状態を直接は与えません。"
   - "fMRI の振幅や onset は、神経活動だけでなく HRF の変動や vascular geometry の影響も受けます。"
+  - "BOLD / fNIRS の振幅差は、baseline vascular physiology や cerebrovascular reactivity の差だけでも動きます。"
   - "高密度 extracellular probe は implant 近傍の local population を強く見ますが、chronic な single-unit identity は sorting と matching を介した推定です。"
   - "whole-brain spatial transcriptomics は cell-type taxonomy と空間配置を大きく前進させますが、動的状態の十分性は別問題です。"
   - "Patch-seq と same-brain connectomics は縮退を減らしますが、全脳 coverage と長期 maintenance-state の十分性に加え、momentary synaptic weight や branch-specific な dendritic state の直接読出しも残ります。"
@@ -182,7 +184,7 @@ recommended_pages:
 <section class="section" id="fmri-proxy-audit">
 <h2 class="section-title">fMRI / BOLD を別扱いにする理由</h2>
 <p>
-現行サイトは fMRI を `blood-flow proxy` としては正しく扱えていました。しかし、技術・自然科学の観点では、それだけでは不十分でございます。重要なのは <strong>proxy であること</strong>そのものよりも、<strong>どの failure mode が BOLD の解釈 ceiling を作るか</strong>を提出物へ落とすことです。以下では、一次文献が比較的一貫して支持する 5 つの failure mode を固定します。
+現行サイトは fMRI を `blood-flow proxy` としては正しく扱えていました。しかし、技術・自然科学の観点では、それだけでは不十分でございます。重要なのは <strong>proxy であること</strong>そのものよりも、<strong>どの failure mode が BOLD の解釈 ceiling を作るか</strong>を提出物へ落とすことです。以下では、一次文献が比較的一貫して支持する 6 つの failure mode を固定します。
 </p>
 <table class="data-table">
 <thead>
@@ -209,6 +211,11 @@ recommended_pages:
 <td>canonical HRF だけで onset 差、latency 差、spectral difference を mechanistic difference と読みません。region / subject / voxel ごとの transfer difference を残します。</td>
 </tr>
 <tr>
+<td><strong>vascular state / cerebrovascular reactivity</strong></td>
+<td><a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">Murphy et al. (2011)</a> は local CBF / CBV の個体差が BOLD reactivity を動かし、breath-hold 由来の CVR covariate が group analysis を改善することを示しました。<a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">Williams et al. (2023)</a> は task BOLD magnitude が cortex の複数領域で CVR により予測され、CVR correction が感度を上げることを示しました。<a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">Wu et al. (2023)</a> は adult lifespan cohort で baseline CBF が age-related BOLD effect の一部を説明することを示しました。</td>
+<td>baseline perfusion / CVR を監査していない BOLD 差を、そのまま neural difference と読みません。between-subject、aging、drug、disease、cross-day 比較では、vascular calibration route か明示的な棄権条件を残します。</td>
+</tr>
+<tr>
 <td><strong>venous / non-neural spatial bias</strong></td>
 <td><a href="https://doi.org/10.1016/j.neuroimage.2019.02.006" target="_blank">Kay et al. (2019)</a> は sub-millimeter fMRI の data quality と venous effect を批判的に整理し、<a href="https://doi.org/10.1523/JNEUROSCI.2532-21.2022" target="_blank">Kurzawski et al. (2022)</a> は同一被験者内でも non-neural factor が BOLD magnitude を左右することを示しました。</td>
 <td>`細かい voxel map = 細かい neural map` とは読みません。laminar / sub-mm / large-vessel-near claim では venous / depth diagnostic を別提出物にします。</td>
@@ -223,7 +230,13 @@ recommended_pages:
 <div class="note-box">
 <strong>このサイトでの運用ルール</strong>
 <p>
-fMRI を含む claim では、少なくとも <strong>(1) target neural claim</strong>、<strong>(2) HRF model granularity</strong>、<strong>(3) physiology / task-related nuisance</strong>、<strong>(4) venous / depth diagnostic</strong>、<strong>(5) metabolic / calibrated validator または abstention condition</strong> をセットで残します。これが無い場合、本サイトでは fMRI を <strong>broad coverage を与える hemodynamic proxy</strong> としては受理しても、fast mechanism や fine-grained localization の根拠には上げません。
+fMRI を含む claim では、少なくとも <strong>(1) target neural claim</strong>、<strong>(2) HRF model granularity</strong>、<strong>(3) physiology / task-related nuisance</strong>、<strong>(4) vascular-state / cerebrovascular reactivity calibration または abstention condition</strong>、<strong>(5) venous / depth diagnostic</strong>、<strong>(6) metabolic / calibrated validator または abstention condition</strong> をセットで残します。これが無い場合、本サイトでは fMRI を <strong>broad coverage を与える hemodynamic proxy</strong> としては受理しても、fast mechanism や fine-grained localization の根拠には上げません。
+</p>
+</div>
+<div class="note-box">
+<strong>hemodynamic stack では vascular transfer state も latent variable です</strong>
+<p>
+WBE 側で hidden state と言うと neural state を想像しやすいですが、hemodynamic modality では <strong>measurement-side の hidden state</strong> もございます。baseline CBF、vascular reserve、hemodynamic lag、superficial / venous contribution がそれです。比較的 direct な route は breath-hold / gas challenge、ASL-CBF、calibrated fMRI、fNIRS の short-separation regression であり、raw BOLD / raw fNIRS amplitude 自体はその代理に過ぎません。したがって本サイトでは、hemodynamic modality の群差・縦断差を読むとき、<strong>neural state の未観測</strong>と<strong>vascular transfer state の未観測</strong>を分けて監査します。
 </p>
 </div>
 </section>
@@ -423,6 +436,7 @@ MICrONS は、同一脳で dense calcium imaging、行動状態、EM connectome 
 <li><strong>multimodal を state-complete の同義語にしない：</strong>何の latent state が依然として残るかを本文に併記します。</li>
 <li><strong>未観測状態を埋めるときは推定と書く：</strong>cell type から threshold / gain / set point を自動補完した場合は latent inference と明記します。</li>
 <li><strong>EM / PSD / spine / same-brain connectomics を current weight と書かない：</strong>paired physiology か held-out perturbation が無い限り、structural prior / bridge と書きます。</li>
+<li><strong>BOLD / fNIRS の振幅差を default で neural difference と書かない：</strong>vascular-state / CVR audit が無い比較は hemodynamic-limited difference に留めます。</li>
 <li><strong>sorted spike を stable neuron identity と書かない：</strong>chronic 記録では sorting version、drift correction、unit-match probability、dropout rate を別に残します。</li>
 <li><strong>claim ceiling を超える表現を禁止する：</strong>たとえば EM だけで emulation-complete、Patch-seq だけで whole-brain state-complete、同一 shank の sorted unit だけで cross-day same-neuron claim、pupil だけで transmitter ground truth、receptor atlas だけで momentary release、occupancy / displacement PET だけで momentary whole-brain endogenous field とは書きません。</li>
 </ul>
@@ -529,6 +543,10 @@ MICrONS は、同一脳で dense calcium imaging、行動状態、EM connectome 
 <li>Cardoso, M. M. B. M., Sirotin, Y. B., Lima, B., Glushenkova, E., &amp; Das, A. (2012). The neuroimaging signal is a linear sum of neurally distinct stimulus- and task-related components. <em>Nature Neuroscience</em>, 15, 1298-1306. <a href="https://doi.org/10.1038/nn.3170" target="_blank">doi:10.1038/nn.3170</a></li>
 <li>Handwerker, D. A., Ollinger, J. M., &amp; D'Esposito, M. (2004). Variation of BOLD hemodynamic responses across subjects and brain regions and their effects on statistical analyses. <em>NeuroImage</em>, 21, 1639-1651. <a href="https://doi.org/10.1016/j.neuroimage.2003.11.029" target="_blank">doi:10.1016/j.neuroimage.2003.11.029</a></li>
 <li>Bailes, J., Millman, R., Franklin, C., et al. (2023). Resting-state fMRI signals contain spectral signatures of local hemodynamic response timing. <em>eLife</em>. <a href="https://doi.org/10.7554/eLife.86453" target="_blank">doi:10.7554/eLife.86453</a></li>
+<li>Murphy, K., Harris, A. D., &amp; Wise, R. G. (2011). Robustly measuring vascular reactivity differences with breath-hold: normalising stimulus-evoked and resting state BOLD fMRI data. <em>NeuroImage</em>, 54(1), 369-379. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">doi:10.1016/j.neuroimage.2010.07.059</a></li>
+<li>Williams, R. J., Specht, J. L., Mazerolle, E. L., Lebel, R. M., MacDonald, M. E., &amp; Pike, G. B. (2023). Correspondence between BOLD fMRI task response and cerebrovascular reactivity across the cerebral cortex. <em>Frontiers in Physiology</em>, 14, 1167148. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">doi:10.3389/fphys.2023.1167148</a></li>
+<li>Wu, S., Tyler, L. K., Henson, R. N. A., Rowe, J. B., Cam-CAN, &amp; Tsvetanov, K. A. (2023). Cerebral blood flow predicts multiple demand network activity and fluid intelligence across the adult lifespan. <em>Neurobiology of Aging</em>, 121, 1-14. <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">doi:10.1016/j.neurobiolaging.2022.09.006</a></li>
+<li>Yücel, M. A., Selb, J., Aasted, C. M. A., Petkov, M. P., Becerra, L., Borsook, D., &amp; Boas, D. A. (2015). Short separation regression improves statistical significance and better localizes the hemodynamic response obtained by near-infrared spectroscopy for tasks with differing autonomic responses. <em>Neurophotonics</em>, 2(3), 035005. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">doi:10.1117/1.NPh.2.3.035005</a></li>
 <li>Kay, K. N., Jamison, K. W., Zhang, R. Y., &amp; Uğurbil, K. (2019). A critical assessment of data quality and venous effects in sub-millimeter fMRI. <em>NeuroImage</em>, 189, 847-869. <a href="https://doi.org/10.1016/j.neuroimage.2019.02.006" target="_blank">doi:10.1016/j.neuroimage.2019.02.006</a></li>
 <li>Kurzawski, J. W., Yablonskiy, D. A., Pointer, R., et al. (2022). Non-Neural Factors Influencing BOLD Response Magnitudes within Individual Subjects. <em>Journal of Neuroscience</em>, 42, 7256-7266. <a href="https://doi.org/10.1523/JNEUROSCI.2532-21.2022" target="_blank">doi:10.1523/JNEUROSCI.2532-21.2022</a></li>
 <li>Epp, K. J., Lu, H., Lydon-Staley, D. M., et al. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>

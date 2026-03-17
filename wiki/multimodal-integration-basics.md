@@ -5,7 +5,7 @@ description: "EEG、MEG、fMRI、侵襲記録、MRI、atlas prior をどう結�
 article_type: Wiki
 subtitle: "multimodal は 1 種類ではなく、取得関係ごとに claim ceiling が違います"
 author: Mind Uploading Research Project
-last_updated: "2026-03-16"
+last_updated: "2026-03-17"
 note: "Technical / natural science only"
 audience: "EEG 単体の限界を補いたいが、multimodal を過大評価したくない人"
 reading_time: "14〜22分"
@@ -16,11 +16,13 @@ page_highlights:
   - "融合後の地図は『直接見た真値』ではなく、raw と仮定を通した推定であることを固定します。"
   - "共有時計、登録誤差、融合モデル、不確実性、single-modality baseline、coverage boundary を 1 枚の Fusion Card で監査します。"
   - "EEG-fMRI では shared clock だけでなく、HRF・task-related haemodynamics・venous geometry を別監査します。"
+  - "hemodynamic modality では baseline vascular state / cerebrovascular reactivity も別監査し、BOLD / fNIRS の振幅差を default で neural difference と読みません。"
   - "same-brain local twin や atlas prior を、human whole-brain state-complete と読み替えません。"
 known_points:
   - "複数モダリティを組み合わせると、時間・空間・局所性・外部妥当化の一部は補完できます。"
   - "ただし改善量は、取得関係、共有時計、個体別解剖、co-registration、融合モデル、外部基準の有無に強く依存します。"
   - "fMRI を含む統合では、shared clock があっても BOLD を direct neural truth とは読めません。"
+  - "BOLD / fNIRS の振幅差は、baseline vascular physiology と cerebrovascular reactivity の差だけでも動きます。"
   - "侵襲記録は強い calibration route ですが、coverage bias と patient bias を抱えます。"
   - "atlas や Patch-seq は強い prior を与えますが、current state を直接観測したことにはなりません。"
   - "same-brain structure-function data は局所 conditional prediction を押し上げますが、all-state / whole-brain completeness とは別問題です。"
@@ -211,7 +213,7 @@ recommended_pages:
 <section class="section" id="hemodynamic-gate">
 <h2 class="section-title">EEG-fMRI で追加する hemodynamic proxy gate</h2>
 <p>
-shared clock と co-registration は、EEG-fMRI を比較可能にするための必要条件ですが、十分条件ではございません。理由は単純で、fMRI 側の signal が <strong>direct neural truth</strong> ではなく、<strong>neurovascular transfer を通した hemodynamic proxy</strong> だからです。したがって EEG-fMRI では、通常の Fusion Card に加えて、少なくとも以下の gate を別に通します。
+shared clock と co-registration は、EEG-fMRI を比較可能にするための必要条件ですが、十分条件ではございません。理由は単純で、fMRI 側の signal が <strong>direct neural truth</strong> ではなく、<strong>neurovascular transfer を通した hemodynamic proxy</strong> だからです。今回の再監査ではさらに、<strong>baseline vascular state / cerebrovascular reactivity</strong> 自体が signal transfer を変えるため、shared clock と HRF を監査しただけでは group 差や縦断差を neural difference と読み切れないことも見えました。したがって EEG-fMRI では、通常の Fusion Card に加えて、少なくとも以下の gate を別に通します。
 </p>
 <table class="data-table">
 <thead>
@@ -238,6 +240,11 @@ shared clock と co-registration は、EEG-fMRI を比較可能にするため�
 <td>canonical HRF か region-specific / subject-specific / voxelwise HRF か、latency claim の棄権条件も含めて残します。</td>
 </tr>
 <tr>
+<td><strong>Vascular-state / CVR audit</strong></td>
+<td><a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">Murphy et al. (2011)</a> は、local CBF / CBV の個体差が BOLD reactivity を動かし、breath-hold 由来の CVR covariate を入れると group analysis の感度が上がることを示しました。<a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">Williams et al. (2023)</a> は、task BOLD magnitude が cortex の複数領域で CVR によって強く予測され、CVR correction が感度を上げることを示しました。<a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">Wu et al. (2023)</a> は、adult lifespan cohort で baseline CBF が BOLD の age effect を一部説明することを示しました。</td>
+<td>breath-hold、gas challenge、ASL-CBF、resting-state surrogate のどれで vascular state を監査したか、また group / cross-day / pharmacology difference を neural difference と読む条件と棄権条件を残します。</td>
+</tr>
+<tr>
 <td><strong>Venous / depth diagnostic</strong></td>
 <td><a href="https://doi.org/10.1016/j.neuroimage.2019.02.006" target="_blank">Kay et al. (2019)</a> と <a href="https://doi.org/10.1523/JNEUROSCI.2532-21.2022" target="_blank">Kurzawski et al. (2022)</a> は、sub-mm map や BOLD magnitude が venous / non-neural factor に強く影響されうることを示しました。</td>
 <td>large-vessel mask、depth-dependent diagnostic、non-neural factor の補正 / 棄権条件を残します。</td>
@@ -257,7 +264,7 @@ shared clock と co-registration は、EEG-fMRI を比較可能にするため�
 <div class="note-box">
 <strong>短い結論</strong>
 <p>
-EEG-fMRI の強みは、<strong>同一時点の macro-scale concordance</strong> と <strong>広域 coverage + ms 制約の併用</strong>にございます。しかし、hemodynamic proxy gate が無い場合、その ceiling はあくまで <strong>synchronized cross-modal constraint</strong> であって、fine-grained neural truth ではありません。さらに <strong>BOLD-CMRO<sub>2</sub> の不一致</strong>が残る以上、shared clock や細かい voxel map だけで energetic mechanism まで閉じたとは書きません。
+EEG-fMRI の強みは、<strong>同一時点の macro-scale concordance</strong> と <strong>広域 coverage + ms 制約の併用</strong>にございます。しかし、hemodynamic proxy gate が無い場合、その ceiling はあくまで <strong>synchronized cross-modal constraint</strong> であって、fine-grained neural truth ではありません。さらに <strong>vascular-state / CVR audit</strong> が無い場合、between-subject、aging、drug、fatigue、cross-day の振幅差を default で neural difference に上げません。加えて <strong>BOLD-CMRO<sub>2</sub> の不一致</strong>が残る以上、shared clock や細かい voxel map だけで energetic mechanism まで閉じたとは書きません。
 </p>
 </div>
 </section>
@@ -303,7 +310,7 @@ EEG-fMRI の強みは、<strong>同一時点の macro-scale concordance</strong>
 </tr>
 <tr>
 <td><strong>Hemodynamic proxy audit<br>(when fMRI / fNIRS is included)</strong></td>
-<td>BOLD / CBF / fNIRS のどの proxy を使ったか、target neural claim、HRF model granularity、physiology nuisance、venous / depth diagnostic、mechanistic validator を書きます。</td>
+<td>BOLD / CBF / fNIRS のどの proxy を使ったか、target neural claim、HRF model granularity、vascular-state / CVR calibration route、physiology nuisance、venous / depth diagnostic（fNIRS なら short-separation / superficial diagnostic を含む）、mechanistic validator を書きます。</td>
 </tr>
 <tr>
 <td><strong>Incremental evidence</strong></td>
@@ -326,7 +333,7 @@ EEG-fMRI の強みは、<strong>同一時点の macro-scale concordance</strong>
 <div class="note-box">
 <strong>受理条件</strong>
 <p>
-Fusion Card が無い場合、本サイトでは `multimodal result` を強く読まず、原則として <strong>single-modality result に prior を足した推定</strong>または<strong>限定つきの cross-modal concordance</strong>として扱います。さらに <strong>single-modality baseline や missing-modality ablation が無い場合</strong>、本サイトでは multimodal gain を書きません。
+Fusion Card が無い場合、本サイトでは `multimodal result` を強く読まず、原則として <strong>single-modality result に prior を足した推定</strong>または<strong>限定つきの cross-modal concordance</strong>として扱います。さらに <strong>single-modality baseline や missing-modality ablation が無い場合</strong>、本サイトでは multimodal gain を書きません。加えて <strong>hemodynamic modality を含むのに vascular-state / CVR audit が無い場合</strong>、group 差・薬理差・縦断差を neural difference としては受理しません。
 </p>
 </div>
 </section>
@@ -341,7 +348,8 @@ Fusion Card が無い場合、本サイトでは `multimodal result` を強く�
 <li><strong>atlas / Patch-seq / transcriptomics は prior と書く：</strong>cell-type label や molecular atlas を、current state observation と書きません。</li>
 <li><strong>侵襲記録は gold standard ではなく coverage-limited validation と書く：</strong>implant 周辺で強いが、未計測領域を保証しません。</li>
 <li><strong>fusion output を raw truth と書かない：</strong>fusion model、weights、uncertainty、registration error を同時に残します。</li>
-<li><strong>fMRI / fNIRS を含む統合では hemodynamic proxy audit を出す：</strong>shared clock があっても、HRF・task-related haemodynamics・venous bias を通さずに neural truth とは書きません。</li>
+<li><strong>fMRI / fNIRS を含む統合では hemodynamic proxy audit を出す：</strong>shared clock があっても、HRF・vascular state / CVR・task-related haemodynamics・venous / superficial bias を通さずに neural truth とは書きません。</li>
+<li><strong>BOLD / fNIRS の振幅差を default で neural difference と書かない：</strong>vascular-state / CVR audit が無い比較は、macro concordance または hemodynamic-limited difference に留めます。</li>
 <li><strong>same-brain local twin を whole-brain WBE と読み替えない：</strong>MICrONS や related datasets は local conditional prediction の大きな前進ですが、all-state completeness とは別です。</li>
 </ul>
 </div>
@@ -368,6 +376,10 @@ Fusion Card が無い場合、本サイトでは `multimodal result` を強く�
 <li>Cardoso MMBM, Sirotin YB, Lima B, Glushenkova E, Das A. The neuroimaging signal is a linear sum of neurally distinct stimulus- and task-related components. <em>Nature Neuroscience</em>. 2012;15:1298-1306. <a href="https://doi.org/10.1038/nn.3170" target="_blank">doi:10.1038/nn.3170</a></li>
 <li>Handwerker DA, Ollinger JM, D'Esposito M. Variation of BOLD hemodynamic responses across subjects and brain regions and their effects on statistical analyses. <em>NeuroImage</em>. 2004;21:1639-1651. <a href="https://doi.org/10.1016/j.neuroimage.2003.11.029" target="_blank">doi:10.1016/j.neuroimage.2003.11.029</a></li>
 <li>Bailes J, Millman R, Franklin C, et al. Resting-state fMRI signals contain spectral signatures of local hemodynamic response timing. <em>eLife</em>. 2023. <a href="https://doi.org/10.7554/eLife.86453" target="_blank">doi:10.7554/eLife.86453</a></li>
+<li>Murphy K, Harris AD, Wise RG. Robustly measuring vascular reactivity differences with breath-hold: normalising stimulus-evoked and resting state BOLD fMRI data. <em>NeuroImage</em>. 2011;54(1):369-379. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">doi:10.1016/j.neuroimage.2010.07.059</a></li>
+<li>Williams RJ, Specht JL, Mazerolle EL, Lebel RM, MacDonald ME, Pike GB. Correspondence between BOLD fMRI task response and cerebrovascular reactivity across the cerebral cortex. <em>Front Physiol</em>. 2023;14:1167148. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">doi:10.3389/fphys.2023.1167148</a></li>
+<li>Wu S, Tyler LK, Henson RNA, Rowe JB, Cam-CAN, Tsvetanov KA. Cerebral blood flow predicts multiple demand network activity and fluid intelligence across the adult lifespan. <em>Neurobiol Aging</em>. 2023;121:1-14. <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">doi:10.1016/j.neurobiolaging.2022.09.006</a></li>
+<li>Yücel MAY, Selb J, Aasted CMA, Petkov MP, Becerra L, Borsook D, Boas DA. Short separation regression improves statistical significance and better localizes the hemodynamic response obtained by near-infrared spectroscopy for tasks with differing autonomic responses. <em>Neurophotonics</em>. 2015;2(3):035005. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">doi:10.1117/1.NPh.2.3.035005</a></li>
 <li>Kay KN, Jamison KW, Zhang RY, Uğurbil K. A critical assessment of data quality and venous effects in sub-millimeter fMRI. <em>NeuroImage</em>. 2019;189:847-869. <a href="https://doi.org/10.1016/j.neuroimage.2019.02.006" target="_blank">doi:10.1016/j.neuroimage.2019.02.006</a></li>
 <li>Kurzawski JW, Yablonskiy DA, Pointer R, et al. Non-Neural Factors Influencing BOLD Response Magnitudes within Individual Subjects. <em>Journal of Neuroscience</em>. 2022;42:7256-7266. <a href="https://doi.org/10.1523/JNEUROSCI.2532-21.2022" target="_blank">doi:10.1523/JNEUROSCI.2532-21.2022</a></li>
 <li>Epp KJ, Lu H, Lydon-Staley DM, et al. BOLD signal changes can oppose oxygen metabolism across the human cortex. <em>Nature Neuroscience</em>. 2025. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
