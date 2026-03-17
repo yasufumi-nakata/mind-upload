@@ -526,3 +526,12 @@ Operational rules: Prioritize `A/B` and link directly to the application, and `C
 - Continue the operational rule of `1RQ = 1 verification proposition = 1 application theme = 1 main data` and maintain a policy of not returning to a general-purpose overview.
 - Reference EEG data is `24 ID` (`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`) and no missing parts.
 - Grant real IDs (`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`) can still be referenced.
+
+## 2026-03-18 11:20 JST revalidation log (main run / per-RQ deep-audit refresh)
+
+- Before work, pulled all three repositories and fixed base commits to `mind-upload=d0a06cf30f2d`, `EEG-DATA=357cd9af4962`, `auto-research-funds=a6ffdb0898e8`.
+- Recounted `research_harvest_50.md` by U section and reconfirmed `RQ_TOTAL=60` (`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`).
+- Re-checked this page with unique `Ux-y` keys and reconfirmed `60 RQ` coverage with judgment split `A/B/C=17/25/18`.
+- Verified all EEG IDs referenced on this page (`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`) exist in `EEG-DATA/eeg_dataset_summary_ja.csv` (missing `0`).
+- Re-verified grant IDs `G1-G6` (`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`) against `grant_queue` and `auto-research-funds/grant_eeg_dataset_match.csv`.
+- The operating rule remains fixed: avoid generic summary and keep `1RQ = 1 verification claim = 1 grant theme = 1 primary EEG dataset`.

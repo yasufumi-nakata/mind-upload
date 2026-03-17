@@ -147,3 +147,11 @@ recommended_pages:
 - After `main` pull, check the `RQ=60` line again and check the missing `0` of `First applicant/Preliminary applicant/Main EEG-DATA/Minimum deliverables`.
 - Judgment breakdown `A/B/C=17/25/18` remains consistent with `mind-upload-eeg-rq60-feasibility-and-funds.md`.
 - Continue to operate this page: `1RQ=1 submission judgment` is fixed, and the application text is posted in RQ units instead of general summaries.
+
+## 2026-03-18 11:20 JST revalidation log (main run / playbook consistency refresh)
+
+- Pulled latest `main` and fixed base commits to `mind-upload=d0a06cf30f2d`, `EEG-DATA=357cd9af4962`, `auto-research-funds=a6ffdb0898e8`.
+- Re-checked this playbook with unique `Ux-y` keys and reconfirmed `60RQ` coverage (missing `0`, duplicate `0`).
+- Reconfirmed `A/B/C=17/25/18` consistency against `mind-upload-eeg-rq60-feasibility-and-funds.md`.
+- Re-verified grant keys `G1-G6` and confirmed each ID is still resolvable from `grant_queue` or `auto-research-funds` sources.
+- Continued the same rule for execution and writing: keep `1RQ=1 submission decision` and transfer to applications in RQ units, not generic themes.
