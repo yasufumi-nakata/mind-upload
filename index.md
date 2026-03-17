@@ -15,6 +15,7 @@ page_highlights:
   - "The core of Mind-Upload is not bold conclusions but a verification commons that lets progress be measured."
   - "If you are unsure where to start, read Verification -> Roadmap -> WBE/EEG 101."
   - "Connectomes and cell types alone do not determine long-term dynamics; sleep/homeostasis, myelination, and glial metabolism remain separate variables."
+  - "For hemodynamic modalities, BOLD or fNIRS amplitude is not read as neural difference unless vascular-state / CVR limits are audited separately."
   - "Brain-to-text and speech demos are read through the Neural Contribution Card so neural contribution is not confused with task structure or language priors."
   - "High decode / biomarker scores can rise from subject / session fingerprint alone, so the Specificity & Shortcut Card audits that shortcut independently."
   - "The Temporal Validity Card is now part of the public workflow so same-day success is not silently promoted to cross-day or long-term claims."
@@ -24,6 +25,7 @@ known_points:
   - "EEG and decoding research can create measurable progress when their claims stay within their conditions."
   - "The same decode score is not a target-specific biomarker if it can be reproduced by subject / session fingerprint alone."
   - "Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately."
+  - "For hemodynamic readouts, a group or longitudinal BOLD difference can still be dominated by vascular transfer state rather than neural change."
   - "Strong claims about identity or consciousness belong in downstream verification design, not on the landing page."
 unknown_points:
   - "There is still no cross-disciplinary agreement on what would count as sufficient evidence for L4 personal identity."
@@ -85,6 +87,13 @@ After the March 2026 re-audit of primary literature, this site no longer accepts
 <strong>If You Want To Check What Is Directly Observable First</strong>
 <p>
 The March 2026 update added <a href="verification.html#observability-budget">Verification's Observability Budget</a> so claim ceilings can be enforced in normal page operations. For the table that prevents "multimodal" from being misread as "state-complete," see <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceilings by Measurement Stack</a>.
+</p>
+</div>
+
+<div class="note-box">
+<strong>If You Read Hemodynamic Differences As Neural Differences Too Quickly</strong>
+<p>
+This site now treats <strong>vascular transfer state</strong> as a separate audit item for hemodynamic modalities. In other words, a BOLD or fNIRS amplitude difference is not read here as a neural difference by default unless the paper also reports a <strong>vascular-state / cerebrovascular-reactivity calibration route</strong> or abstains explicitly. The shortest route is <a href="verification.html#observability-budget">Verification: Observability Budget</a>, then <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceilings by Measurement Stack</a> and <a href="wiki/multimodal-integration-basics.html">Wiki: Basics of Multimodal Integration</a>.
 </p>
 </div>
 

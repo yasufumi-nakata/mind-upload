@@ -7,7 +7,7 @@ description: We will organize from primary literature what EEG/MEG/fMRI, whole-b
 article_type: Wiki
 subtitle: multimodal is not a synonym for ``seen everything''
 author: Mind Uploading Research Project
-last_updated: '2026-03-15'
+last_updated: '2026-03-18'
 note: Technical / natural science only
 audience: People who want to sort out what modalities are directly visible and which
   claims are valid using only technology and natural science.
@@ -26,11 +26,15 @@ page_highlights:
   stack and what has not yet been observed?''
 - Fixed a ceiling to prevent the words multimodal / atlas / connectome from being
   misread as state-complete.
+- Hemodynamic stacks are now separated into neural-side and vascular-transfer-side
+  uncertainty, so BOLD or fNIRS amplitude is not overread as neural truth.
 - Destination is divided into structural atlas, cell-type prior, local conditional
   prediction, and slow-state calibration.
 known_points:
 - EEG/MEG/fMRI provides macroscopic proxies, but not directly for cell types, synaptic
   efficiency, neuromodulatory fields, and glial status.
+- In hemodynamic modalities, vascular transfer state such as baseline perfusion, CVR,
+  and superficial/systemic contamination can also dominate amplitude differences.
 - Whole-brain spatial transcriptomics provides a major advance in cell-type taxonomy
   and spatial location, but the sufficiency of dynamic states is another matter.
 - Patch-seq and same-brain connectomics reduce degeneracy, but the sufficiency of
@@ -123,11 +127,11 @@ You can audit some of the <td>ms-scale global state transitions, frequency band 
 <td><strong>Macro state tracking and weak L2</strong>. It does not raise to cell/synapse granularity or state-complete claims. </td>
 </tr>
 <tr>
-<td><strong>fMRI</strong></td>
-<td>Hemodynamic proxy and slow regional scale network state. </td>
-<td>Wide coverage, recruitment patterns, and relatively slow state occupancy can be tracked within the same individual. </td>
-<td>ms timing, excitation/inhibition separation, local transmitter dynamics, and current synaptic efficacy are not directly visible. </td>
-<td><strong>Wide-area state atlas and coarse dynamical constraints</strong>. We do not claim the sufficiency of fast causal mechanisms or microstates. </td>
+<td><strong>fMRI / hemodynamic modalities</strong></td>
+<td>BOLD / HbO / HbR proxy and slow regional scale network state. </td>
+<td>Wide coverage, recruitment patterns, relatively slow state occupancy, and coarse task-state differences can be tracked within the same individual. </td>
+<td>ms timing, excitation/inhibition separation, local transmitter dynamics, current synaptic efficacy, and separation of neural state from vascular transfer state / CVR remain unresolved. </td>
+<td><strong>Wide-area hemodynamic state atlas and coarse dynamical constraints</strong>. Without vascular-state / CVR audit, amplitude differences remain hemodynamic-limited rather than clean neural differences. </td>
 </tr>
 <tr>
 <td><strong>whole-brain spatial transcriptomics / cell atlas</strong></td>
@@ -198,7 +202,18 @@ Dorkenwald et al.'s adult fly whole-brain connectome is a huge step forward, reo
 MICrONS combines dense calcium imaging, behavioral states, and the EM connectome in the same brain, presenting multi-area functional connectomics of the mouse visual cortex. This is even stronger than connectome-only, and provides a basis for discussing <strong>structure-function links in the same brain. However, the paper itself deals with specific regions, specific tasks, and specific states of the visual cortex, and it is not possible to make a leap from there to the human whole-brain or all-state completeness. Therefore, the ceiling of this stack is <strong>local functional twin</strong>.
 </p>
 
-<h3>5. Neuromodulator / glia imaging reduces misreading of coarse proxies, but does not provide whole-brain ground truth</h3>
+<h3>5. Hemodynamic stacks also observe through a vascular transfer state</h3>
+<p>
+The weak point that needed another pass was that this page already called fMRI a <strong>hemodynamic proxy</strong>, but still left too much room for the reader to translate a BOLD amplitude difference directly into a neural difference. That was too weak. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">Murphy et al. (2011)</a> showed that inter-subject differences in CBF and CBV contribute to BOLD reactivity and that breath-hold-derived vascular-reactivity covariates improve group analyses. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">Williams et al. (2023)</a> showed that task BOLD magnitude corresponds strongly to hypercapnia-based CVR across multiple cortical regions. <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">Wu et al. (2023)</a> showed that baseline CBF partly explains age-related components of multiple-demand-network BOLD responses, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that about 40% of task-responsive voxels can display oxygen-metabolism changes opposite in sign to the BOLD response. What follows directly from this is that <strong>hemodynamic stacks are limited not only by unobserved neural state, but also by unobserved vascular transfer state</strong>.
+</p>
+<div class="note-box">
+<strong>fNIRS belongs to the same caution family</strong>
+<p>
+The same logic applies to cortical hemodynamic modalities beyond fMRI. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">Yucel et al. (2015)</a> showed that short-separation regression improves both significance and localization for fNIRS tasks with differing autonomic responses. Therefore, on this site, fNIRS without <strong>short-separation / superficial diagnostic</strong> is not treated as a direct neural-difference readout either.
+</p>
+</div>
+
+<h3>6. Neuromodulator / glia imaging reduces misreading of coarse proxies, but does not provide whole-brain ground truth</h3>
 <p>
 Neyhart et al. showed that cortical ACh dynamics are highly predictable from cholinergic axon activity and behavioral state, and also depend on distance from local axons and clearance kinetics. Cahill et al. showed that local neurotransmitter inputs are minute-long encoded into broad astrocyte networks. These teach us that just because ``pupil has increased'' or ``behavioral state has changed'' does not mean that the transmitter state or glial state can be simplified. Therefore, these stacks are very effective for <strong>proxy calibration</strong> and <strong>banning glia omission</strong>, but they do not directly become the ground truth of the whole brain's internal state.
 </p>
@@ -213,6 +228,7 @@ Neyhart et al. showed that cortical ACh dynamics are highly predictable from cho
 <li><strong>Don't mix atlas / bridge / scaffold / local twin / proxy calibration:</strong>Fix which kind of advance is the same "advance". </li>
 <li><strong>Don't make multimodal a synonym for state-complete:</strong>Include in the text what latent state still remains. </li>
 <li><strong>When filling in unobserved states, write ``estimated'': </strong>If threshold / gain / set point is auto-completed from cell type, write ``latent inference''. </li>
+<li><strong>Do not promote BOLD / fNIRS amplitude to neural difference without hemodynamic audit:</strong>Write vascular-state / CVR calibration route or abstention explicitly. </li>
 <li><strong>Prohibit expressions that exceed the claim ceiling:</strong>For example, do not write EM alone as emulation-complete, Patch-seq as whole-brain state-complete, or pupil as transmitter ground truth. </li>
 </ul>
 </div>
@@ -262,6 +278,11 @@ Neyhart et al. showed that cortical ACh dynamics are highly predictable from cho
 <li>Gouwens, N. W., et al. (2021). Phenotypic variation of transcriptomic cell types in mouse motor cortex. <em>Nature</em>, 598, 144-150. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>, 640, 435-447. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <em>Nature</em>, 640, 497-505. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
+<li>Murphy, K., Harris, A. D., &amp; Wise, R. G. (2011). Robustly measuring vascular reactivity differences with breath-hold: normalising stimulus-evoked and resting state BOLD fMRI data. <em>NeuroImage</em>, 54(1), 369-379. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">doi:10.1016/j.neuroimage.2010.07.059</a></li>
+<li>Williams, R. J., Specht, J. L., Mazerolle, E. L., Lebel, R. M., MacDonald, M. E., &amp; Pike, G. B. (2023). Correspondence between BOLD fMRI task response and cerebrovascular reactivity across the cerebral cortex. <em>Frontiers in Physiology</em>, 14, 1167148. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">doi:10.3389/fphys.2023.1167148</a></li>
+<li>Wu, S., Tyler, L. K., Henson, R. N. A., Rowe, J. B., Cam-CAN, &amp; Tsvetanov, K. A. (2023). Cerebral blood flow predicts multiple demand network activity and fluid intelligence across the adult lifespan. <em>Neurobiology of Aging</em>, 121, 1-14. <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">doi:10.1016/j.neurobiolaging.2022.09.006</a></li>
+<li>Yucel, M. A. Y., Selb, J., Aasted, C. M. A., Petkov, M. P., Becerra, L., Borsook, D., &amp; Boas, D. A. (2015). Short separation regression improves statistical significance and better localizes the hemodynamic response obtained by near-infrared spectroscopy for tasks with differing autonomic responses. <em>Neurophotonics</em>, 2(3), 035005. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">doi:10.1117/1.NPh.2.3.035005</a></li>
+<li>Epp, S. M., Castrillon, G., Yuan, B., Andrews-Hanna, J., Preibisch, C., &amp; Riedl, V. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <em>Cell Reports</em>, 43(10), 114808. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <em>Nature</em>, 629, 146-153. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Xu, W., et al. (2024). Sleep restores an optimal computational regime in cortical networks. <em>Nature Communications</em>, 15, 3820. <a href="https://doi.org/10.1038/s41467-024-47838-5" target="_blank">doi:10.1038/s41467-024-47838-5</a></li>

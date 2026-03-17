@@ -5,19 +5,21 @@ description: "We will organize based on primary literature how EEG, MEG, fMRI, i
 article_type: Wiki
 subtitle: "Rather than adding everything, it is designed to increase synchronization, geometry, and external validation."
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
+last_updated: "2026-03-18"
 note: "Technical / natural science only"
 audience: "People who want to judge how to compensate for the limitations of EEG alone from only the technical and natural science aspects"
 reading_time: "12-18 minutes"
 page_intro: "This page is a wiki that organizes what really improves when combining EEG, MEG, fMRI, invasive recording, and MRI based on primary literature. Rather than focusing on philosophy or legal systems, we focus only on synchronization, coordinate alignment, forward models, external validation, and state coverage."
 accuracy_note: "What I'm trying to show here is not that ``if you integrate everything, you can figure it out.'' It's about sorting out what can be said a little more strongly when certain conditions are met, and what can't be said yet."
 page_highlights:
-  - "Read Multimodal Integration with 5 Audit Gates."
+  - "Read Multimodal Integration with 6 Audit Gates."
   - "Compare the differences between EEG+fMRI, EEG+MEG, and EEG+invasive recordings with primary literature."
+  - "Hemodynamic routes now separate neural interpretation from vascular-state / CVR and superficial/systemic confounds."
   - "Fix that inverse problem and state completeness will remain even after integration."
 known_points:
   - "By combining multiple modalities, some aspects of time, space, and locality can be complemented."
   - "However, the amount of improvement is highly dependent on the shared clock, individual anatomy, electrode/sensor location, conductivity assumptions, and the presence or absence of an external reference."
+  - "For EEG+fMRI or EEG+fNIRS, alignment alone is not enough; vascular transfer state must be audited separately from neural interpretation."
   - "Invasive recording is a strong calibration route, but suffers from coverage bias and patient bias."
 unknown_points:
   - "It is not yet certain which integration set is most effective for which stage of WBE."
@@ -63,7 +65,7 @@ Here we will only deal with the technical and natural science aspects. It does n
 </div>
 
 <section class="section" id="gates">
-<h2 class="section-title">Five audit gates to fix first</h2>
+<h2 class="section-title">Six audit gates to fix first</h2>
 <table class="data-table">
 <thead>
 <tr>
@@ -87,6 +89,11 @@ Here we will only deal with the technical and natural science aspects. It does n
 <td><strong>Noise/field gate</strong></td>
 <td>MR artifact, motion artifact, background field, and cross-talk can be handled separately. </td>
 <td>The idea is to treat a clean fused map as the true value of the neural signal. </td>
+</tr>
+<tr>
+<td><strong>Hemodynamic transfer gate</strong></td>
+<td>For fMRI / fNIRS, baseline vascular state, CVR, and superficial/systemic contamination are either calibrated or explicitly left as abstention limits. </td>
+<td>BOLD / HbO / HbR amplitude differences can be read as if they directly measured neural differences. </td>
 </tr>
 <tr>
 <td><strong>External validation gate</strong></td>
@@ -126,7 +133,7 @@ Here we will only deal with the technical and natural science aspects. It does n
 <tr>
 <td><strong>Simultaneous measurement EEG + fMRI</strong></td>
 <td>Two 2015 papers by Jorge et al. and Wirsich et al. (2021) showed that simultaneous measurements are possible even at 1.5T to 7T, and with an appropriate setup, it is possible to proceed to reproducible connectivity analysis. </td>
-<td>Artifact and safety control tend to deteriorate with magnetic field strength, leaving asymmetry in time resolution and poor EEG quality. </td>
+<td>Artifact and safety control tend to deteriorate with magnetic field strength, leaving asymmetry in time resolution, poor EEG quality, and a remaining vascular-state / CVR interpretation ceiling on the hemodynamic side. </td>
 </tr>
 <tr>
 <td><strong>EEG + invasive recording (ECoG/SEEG/DBS)</strong></td>
@@ -157,8 +164,14 @@ Integration makes sense because EEG and MEG have different sensitivities to volu
 
 <h3>3. EEG + fMRI is complementary in time and space, but increases artifact and safety</h3>
 <p>
-Simultaneous EEG-fMRI is attractive, but as the magnetic field strength increases, artifacts and setup dependence also increase, as shown in two 2015 papers by Jorge et al. Wirsich et al. (2021) showed reproducible connectome analysis over 1.5T to 7T, but this also means that this can only be achieved by incorporating appropriate hardware, cabling, and artifact control. Therefore, it is not just a matter of adding spatial resolution.
+Simultaneous EEG-fMRI is attractive, but as the magnetic field strength increases, artifacts and setup dependence also increase, as shown in two 2015 papers by Jorge et al. Wirsich et al. (2021) showed reproducible connectome analysis over 1.5T to 7T, but this also means that this can only be achieved by incorporating appropriate hardware, cabling, and artifact control. The deeper correction is that even after synchronization is solved, the hemodynamic side still carries a <strong>vascular transfer state</strong>. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">Murphy et al. (2011)</a> showed that inter-subject CBF / CBV differences contribute to BOLD reactivity and that breath-hold-derived vascular-reactivity covariates improve group analyses. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">Williams et al. (2023)</a> showed that task BOLD magnitude corresponds strongly to CVR across multiple cortical regions, <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">Wu et al. (2023)</a> showed that baseline CBF partly explains age-related components of BOLD responses, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that significant task BOLD changes can oppose oxygen-metabolism changes across a large fraction of cortex. Therefore, it is not just a matter of adding spatial resolution: EEG+fMRI still needs a <strong>vascular-state / CVR calibration route</strong> or explicit abstention.
 </p>
+<div class="note-box">
+<strong>Apply the same rule to fNIRS</strong>
+<p>
+If the hemodynamic side is fNIRS rather than fMRI, the same caution remains. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">Yucel et al. (2015)</a> showed that short-separation regression improves statistical significance and localization for tasks with differing autonomic responses. On this site, an fNIRS branch without <strong>short-separation / superficial diagnostic</strong> is therefore not treated as a direct neural-difference readout either.
+</p>
+</div>
 
 <h3>4. EEG + invasive recording is strong as a calibration route, but coverage is narrow</h3>
 <p>
@@ -173,7 +186,8 @@ Zhang et al. (2006) used simultaneous scalp EEG/ECoG to show that the main spati
 <ul>
 <li><strong>multimodal:</strong>Read as "which audit gate was passed through" instead of "multiple modalities were added." </li>
 <li><strong>EEG + MRI:</strong>Even if individual anatomy is included, if there is no external validation, the source claim will be limited. </li>
-<li><strong>EEG + fMRI:</strong>It is useful as a complement to spatial information, but requires auditing of artifacts, safety, and time series alignment. </li>
+<li><strong>EEG + fMRI:</strong>It is useful as a complement to spatial information, but requires auditing of artifacts, safety, time series alignment, and vascular-state / CVR limits before a BOLD difference is read as a neural difference. </li>
+<li><strong>EEG + fNIRS:</strong>Short-separation / superficial diagnostic is required before HbO / HbR differences are treated as neural differences. </li>
 <li><strong>EEG + invasive recording: Treated as a coverage-limited calibration/validation route, not a gold standard. </li>
 <li><strong>state coverage:</strong>If the synapse, neuromodification, glial, or cell type label is unobserved, it will be marked as unobserved. </li>
 </ul>
@@ -188,6 +202,11 @@ Zhang et al. (2006) used simultaneous scalp EEG/ECoG to show that the main spati
 <li>Jorge, J., Grouiller, F., Ipek, O., et al. (2015). Simultaneous EEG-fMRI at ultra-high field: artifact prevention and safety assessment. <em>NeuroImage</em>, 105, 132-144. <a href="https://doi.org/10.1016/j.neuroimage.2014.10.055" target="_blank">doi:10.1016/j.neuroimage.2014.10.055</a></li>
 <li>Jorge, J., Grouiller, F., Gruetter, R., et al. (2015). Towards high-quality simultaneous EEG-fMRI at 7 T: Detection and reduction of EEG artifacts due to head motion. <em>NeuroImage</em>, 120, 143-153. <a href="https://doi.org/10.1016/j.neuroimage.2015.07.020" target="_blank">doi:10.1016/j.neuroimage.2015.07.020</a></li>
 <li>Wirsich, J., Jorge, J., Iannotti, G. R., et al. (2021). The relationship between EEG and fMRI connectomes is reproducible across simultaneous EEG-fMRI studies from 1.5T to 7T. <em>NeuroImage</em>, 231, 117864. <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">doi:10.1016/j.neuroimage.2021.117864</a></li>
+<li>Murphy, K., Harris, A. D., &amp; Wise, R. G. (2011). Robustly measuring vascular reactivity differences with breath-hold: normalising stimulus-evoked and resting state BOLD fMRI data. <em>NeuroImage</em>, 54(1), 369-379. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">doi:10.1016/j.neuroimage.2010.07.059</a></li>
+<li>Williams, R. J., Specht, J. L., Mazerolle, E. L., Lebel, R. M., MacDonald, M. E., &amp; Pike, G. B. (2023). Correspondence between BOLD fMRI task response and cerebrovascular reactivity across the cerebral cortex. <em>Frontiers in Physiology</em>, 14, 1167148. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">doi:10.3389/fphys.2023.1167148</a></li>
+<li>Wu, S., Tyler, L. K., Henson, R. N. A., Rowe, J. B., Cam-CAN, &amp; Tsvetanov, K. A. (2023). Cerebral blood flow predicts multiple demand network activity and fluid intelligence across the adult lifespan. <em>Neurobiology of Aging</em>, 121, 1-14. <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">doi:10.1016/j.neurobiolaging.2022.09.006</a></li>
+<li>Yucel, M. A. Y., Selb, J., Aasted, C. M. A., Petkov, M. P., Becerra, L., Borsook, D., &amp; Boas, D. A. (2015). Short separation regression improves statistical significance and better localizes the hemodynamic response obtained by near-infrared spectroscopy for tasks with differing autonomic responses. <em>Neurophotonics</em>, 2(3), 035005. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">doi:10.1117/1.NPh.2.3.035005</a></li>
+<li>Epp, S. M., Castrillon, G., Yuan, B., Andrews-Hanna, J., Preibisch, C., &amp; Riedl, V. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
 <li>Aydin, U., Vorwerk, J., Kupper, P., et al. (2014). Combining EEG and MEG for the reconstruction of epileptic activity using a calibrated realistic volume conductor model. <em>PLoS ONE</em>, 9(3), e93154. <a href="https://doi.org/10.1371/journal.pone.0093154" target="_blank">doi:10.1371/journal.pone.0093154</a></li>
 <li>Zhang, Y., Ding, L., van Drongelen, W., et al. (2006). A cortical potential imaging study from simultaneous extra- and intracranial electrical recordings by means of the finite element method. <em>NeuroImage</em>, 31(4), 1517-1528. <a href="https://doi.org/10.1016/j.neuroimage.2006.02.027" target="_blank">doi:10.1016/j.neuroimage.2006.02.027</a></li>
 <li>Seeber, M., Cantonas, L.-M., Hoevels, M., et al. (2019). Subcortical electrophysiological activity is detectable with high-density EEG source imaging. <em>Nature Communications</em>, 10, 753. <a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">doi:10.1038/s41467-019-08725-w</a></li>

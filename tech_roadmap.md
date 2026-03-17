@@ -16,12 +16,14 @@ page_highlights:
   - "Stronger claims are deliberately placed later so earlier levels are not skipped."
   - "R3 / R5 separate latent-state and maintenance-state questions by evidence tier and timescale, so same-day fit and multiday maintenance do not collapse into one success."
   - "M2 separates hardware latency from biological timing-state, so a fast device loop is not confused with timing-complete reconstruction."
+  - "M1 / M5 keep neural state distinct from vascular transfer state, so a BOLD amplitude difference is not silently promoted to a neural difference."
   - "R6 treats personalization not as a pure performance trick, but as a verification problem that must separate target signal from subject fingerprint and setup shortcuts."
 known_points:
   - "Splitting the problem into P/M/R/I/V/D makes it easier to see which questions are foundational and which sit higher up."
   - "The dependency structure that prevents strong claims from skipping earlier layers is fairly clear."
   - "This page should be read as a dependency map, not as a checklist of solved items."
   - "Even if connectome or local-activity evidence improves, latent-state and maintenance-state audits are still separate requirements."
+  - "For hemodynamic modalities, neural interpretation and vascular transfer / CVR audit are separate requirements."
   - "Closed-loop device timing and biological conduction timing are different audits; passing one does not auto-pass the other."
   - "The fact that personalization helps performance is not the same as showing a population-level neural signal; subject-fingerprint and acquisition-distribution audits are still required."
 unknown_points:
@@ -494,7 +496,7 @@ Therefore, this roadmap will not allow the three short-circuits of <strong>``It'
 <td><strong>fMRI</strong></td>
 <td>Hemodynamic proxy. </td>
 <td>Region-scale recruitment, relatively slow network state, and wide coverage within the same individual are easy to see. </td>
-<td>ms-scale timing, excitatory/inhibitory separation, and fast intervention responses are not directly visible. </td>
+<td>ms-scale timing, excitatory/inhibitory separation, fast intervention responses, and the separation of neural change from vascular transfer state / CVR are not directly visible. </td>
 </tr>
 <tr>
 <td><strong>whole-brain spatial transcriptomics / cell atlas</strong></td>
@@ -532,6 +534,12 @@ Therefore, this roadmap will not allow the three short-circuits of <strong>``It'
 <strong>2026-03 Supplement: multimodal is not a synonym for "I could see everything"</strong>
 <p>
 Mikulan et al. (2020), Seeber et al. (2019), Unnwongse et al. (2023), and Hao et al. (2025) moved forward what can be audited by combining HD-EEG with intracranial ground truth. By contrast, Yao et al. (2023)'s whole-brain spatial atlas, the Patch-seq bridges of Gouwens et al. (2021) and Gamlin et al. (2025), the connectomics of Dorkenwald et al. (2024) and MICrONS Consortium et al. (2025), and the local state imaging of Neyhart et al. (2024) and Cahill et al. (2024) each strengthen different variables while leaving different latent states unresolved. Therefore, this page distinguishes clearly between <strong>increasing the number of observations</strong> and <strong>sufficiently identifying the state variables required for WBE</strong>. For the stack-by-stack layout, see <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: observability and claim ceiling for each measurement stack</a>.
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-18 addendum: hemodynamic proxy also has a vascular transfer ceiling</strong>
+<p>
+For hemodynamic modalities, the remaining uncertainty is not only on the neural side. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">Murphy et al. (2011)</a> showed that inter-subject CBF / CBV differences contribute to BOLD reactivity, <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">Williams et al. (2023)</a> showed that task BOLD magnitude corresponds strongly to CVR across multiple cortical regions, <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">Wu et al. (2023)</a> showed that baseline CBF partly explains age-related components of BOLD responses, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that significant task BOLD changes can oppose oxygen-metabolism changes across a large fraction of cortex. Therefore, this roadmap does not allow a raw hemodynamic amplitude difference to be promoted directly to a neural difference without a <strong>vascular-state / CVR calibration route</strong> or explicit abstention.
 </p>
 </div>
 <p><strong>Next required:</strong>Same task/same individual, multimodal simultaneous measurement (possible range) + positioning (M5)</p>
@@ -613,6 +621,7 @@ Therefore, in this roadmap, we first fix ``which loop class is handled and which
 <div class="qa-body">
 <p><strong>Question:</strong>Different measurements have different coordinate systems, delays, and noise structures. Are integration errors destroying the “signal you want to learn”? </p>
 <p><strong>Conditions for disproving: </strong>Reconstruction (R2) becomes unstable due to alignment error and reproducibility (P2) decreases</p>
+<p><strong>2026-03 supplement:</strong> For EEG + fMRI / fNIRS, a shared clock is still not enough. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">Murphy et al. (2011)</a> and <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">Williams et al. (2023)</a> show that vascular reactivity alters the meaning of task BOLD amplitude, <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">Wu et al. (2023)</a> shows that baseline CBF can partially explain age-related BOLD differences, and <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">Yucel et al. (2015)</a> show that fNIRS needs short-separation regression to suppress superficial autonomic contamination. Therefore, M5 now treats <strong>vascular-state / CVR calibration or abstention</strong> as part of multimodal alignment for hemodynamic stacks.</p>
 <p><strong>Next required:</strong>Does the same data match in multiple pipelines (Analysis differential audit)</p>
 </div>
 </details>
