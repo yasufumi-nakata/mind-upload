@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Wiki：配線図だけでは足りない理由"
-description: "WBE で connectome だけを保存しても足りない理由を、状態変数の欠落と connectome-constrained 推定の限界まで含めて一次文献から整理します。"
+description: "WBE で connectome だけを保存しても足りない理由を、状態変数の欠落と connectome-constrained 推定の限界まで含めて一次文献から整理します。clearance / immune support も独立軸として扱います。"
 article_type: Wiki
 subtitle: "connectome-complete は emulation-complete ではありません"
 author: Mind Uploading Research Project
@@ -9,17 +9,17 @@ last_updated: "2026-03-17"
 note: "Technical / natural science only"
 audience: "配線図が取れたら WBE に近いのかを、技術と自然科学だけで判断したい人"
 reading_time: "15〜20分"
-page_intro: "このページは、『コネクトームが取れれば脳の再現に十分ではないか』という直感を、一次文献に基づいて分解するためのページです。哲学や法制度ではなく、どの状態変数が欠けると何が言えなくなるか、さらに connectome-constrained でもどの推定上の壁が残るかに絞って整理します。"
+page_intro: "このページは、『コネクトームが取れれば脳の再現に十分ではないか』という直感を、一次文献に基づいて分解するためのページです。哲学や法制度ではなく、どの状態変数が欠けると何が言えなくなるか、さらに connectome-constrained でもどの推定上の壁が残るかに絞って整理します。glial / metabolic support だけでなく clearance / immune support も独立に扱います。"
 accuracy_note: "ここで示すのは『最低限これを外すと主張が弱くなる』という整理と、『配線制約を入れてもなお残る縮退』の整理であり、最終的な十分条件が確定したという意味ではありません。"
 page_highlights:
-  - "配線図だけでは落ちる論点を、6つの状態クラスと1つの推定上の壁に分けて整理します。"
+  - "配線図だけでは落ちる論点を、7つの状態クラスと1つの推定上の壁に分けて整理します。"
   - "一次文献だけを使い、state variable の欠落と parameter degeneracy を切り分けます。"
   - "このサイトで connectome-complete と connectome-constrained model をどう読み替えるかの運用ルールも固定します。"
   - "列挙で終わらせず、connectome-only から何を足したときに predictive gain が読めるかを augmentation / ablation で固定します。"
   - "fly / mouse / human の証拠を混ぜたときの external validity ceiling も、本文で明示します。"
 known_points:
   - "全脳 connectome の作成は大きく前進していますが、それだけで動的再現が完了したとは言えません。"
-  - "シナプス効率、遅延、神経修飾、グリア、細胞型ラベル、内在興奮性 / 恒常性 set point は、静的な edge list からは落ちやすい情報です。"
+  - "シナプス効率、遅延、神経修飾、グリア、clearance / immune support、細胞型ラベル、内在興奮性 / 恒常性 set point は、静的な edge list からは落ちやすい情報です。"
   - "EM の synapse count、PSD 面積、same-brain connectomics は synaptic-state の prior を強くしえますが、その瞬間の effective weight や release state の直接読出しではありません。"
   - "粗い生理 proxy を ground truth と混同すると、内部状態の主張を過大化しやすくなります。"
   - "connectome-constrained なモデルでも、未測定の細胞・シナプス・修飾パラメータが残ると dynamics は縮退しえます。"
@@ -60,7 +60,7 @@ recommended_pages:
 <div class="abstract-box">
 <h2>結論</h2>
 <p>
-配線図は WBE の重要な土台ですが、<strong>それだけでは動的再現の下限要件になりません</strong>。同じ隣接関係でも、細胞型ラベル、内在興奮性、シナプス効率、伝導遅延、神経修飾、グリア結合状態が違えば、学習、位相同期、覚醒度依存の応答、長期安定性は大きく変わります。さらに、2024-2025 年の connectome-constrained modelling 研究は、<strong>配線制約を入れても未測定パラメータと省略機構のために dynamics の縮退が残る</strong>ことを示しました。したがって、このサイトでは <strong>connectome-complete を structural atlas / scaffold の達成</strong>として扱い、<strong>emulation-complete と言い換えません</strong>。同様に、<strong>connectome-constrained model が一部の活動を再現した</strong>ことも、そのまま state-complete reconstruction とは読みません。
+配線図は WBE の重要な土台ですが、<strong>それだけでは動的再現の下限要件になりません</strong>。同じ隣接関係でも、細胞型ラベル、内在興奮性、シナプス効率、伝導遅延、神経修飾、グリア結合状態、clearance / immune support が違えば、学習、位相同期、覚醒度依存の応答、長期安定性は大きく変わります。さらに、2024-2025 年の connectome-constrained modelling 研究は、<strong>配線制約を入れても未測定パラメータと省略機構のために dynamics の縮退が残る</strong>ことを示しました。したがって、このサイトでは <strong>connectome-complete を structural atlas / scaffold の達成</strong>として扱い、<strong>emulation-complete と言い換えません</strong>。同様に、<strong>connectome-constrained model が一部の活動を再現した</strong>ことも、そのまま state-complete reconstruction とは読みません。
 </p>
 </div>
 
@@ -72,7 +72,7 @@ recommended_pages:
 </div>
 
 <section class="section" id="bottom-line">
-<h2 class="section-title">先に固定する 6 つの状態クラスと 1 つの推定上の壁</h2>
+<h2 class="section-title">先に固定する 7 つの状態クラスと 1 つの推定上の壁</h2>
 <table class="data-table">
 <thead>
 <tr>
@@ -120,6 +120,12 @@ recommended_pages:
 <td>長期可塑性や slow state を含む主張は弱め、何を捨てた近似かを適用範囲として明記します。</td>
 </tr>
 <tr>
+<td><strong>clearance / immune support</strong></td>
+<td>meningeal lymphatic drainage、CSF-interstitial exchange、microglia-mediated surveillance が multiday support-state を支えます。</td>
+<td>clearance は passive housekeeping なので neural fit と独立だ、と読むことです。</td>
+<td>human proxy は support-state proxy に留め、multiday recovery や protein-clearance を含む主張は限定つきにします。</td>
+</tr>
+<tr>
 <td><strong>パラメータ縮退（推定上の壁）</strong></td>
 <td>同じ connectome や似た出力を満たすモデルでも、細胞・シナプスの未知パラメータが違えば内部 dynamics は複数ありえます。</td>
 <td>connectome-constrained なら内部状態もほぼ一意だ、と読むことです。</td>
@@ -130,7 +136,7 @@ recommended_pages:
 <div class="note-box">
 <strong>今回追加した不足変数</strong>
 <p>
-従来の 5 クラスに加えて、2026-03 の再監査では <strong>内在興奮性・恒常性 set point</strong> を独立クラスとして切り出しました。理由は、cell-type ラベルや connectome を持っていても、threshold、gain、発火率の戻り先、分子ターンオーバー下の維持機構が違えば、長期予測と摂動回復がまだ定まらないためです。一次文献のまとまった整理は <a href="homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に分けております。
+2026-03 の再監査では、従来の整理に加えて <strong>内在興奮性・恒常性 set point</strong> と <strong>clearance / immune support</strong> を独立クラスとして固定しました。理由は、cell-type ラベルや connectome を持っていても、threshold、gain、発火率の戻り先、CSF / glymphatic support、microglia-mediated surveillance が違えば、長期予測と multiday recovery がまだ定まらないためです。一次文献のまとまった整理は <a href="homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に分けております。
 </p>
 </div>
 </section>
@@ -193,12 +199,19 @@ recommended_pages:
 <td>human では parcel-level biochemical organization までが主で、cell-specific astrocyte ensemble の direct readout ではありません。</td>
 <td>memory stabilization、slow-state、metabolic maintenance の一致を neuron-only success へ還元しません。</td>
 </tr>
+<tr>
+<td><strong>clearance / immune support</strong><br>meningeal lymphatic / CSF / microglia axis</td>
+<td>時間〜日</td>
+<td><a href="https://doi.org/10.1038/nature14432" target="_blank">Louveau et al. (2015)</a>、<a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Kim et al. (2025)</a>、<a href="https://doi.org/10.1093/brain/awab285" target="_blank">Eide &amp; Ringstad (2021)</a>、<a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>、<a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> は、clearance / immune support が synaptic physiology と human support-state proxy に関わる一方、moment-to-moment neural truth は与えないことを示します。</td>
+<td>human では CSF mobility や glymphatic clearance の macro proxy が中心で、cell-specific immune controller の direct readout ではありません。</td>
+<td>multiday recovery、protein-clearance、slow support-state を momentary neural completeness へ読み替えません。</td>
+</tr>
 </tbody>
 </table>
 <div class="note-box">
 <strong>この行列で何を直したか</strong>
 <p>
-今回の修正では、<strong>fast execution state</strong>、<strong>controller state</strong>、<strong>slow maintenance state</strong> を本文で明示的に分けました。これにより、同じ「hidden state が残る」という一文でも、<strong>何が timing を止めるのか</strong>、<strong>何が cross-day claim を止めるのか</strong>、<strong>何が long-term stabilization を止めるのか</strong>を別々に読めます。今後このサイトでは、これらを 1 行の latent state 欄に潰さず、timescale ごとの claim ceiling と一緒に出します。
+今回の修正では、<strong>fast execution state</strong>、<strong>controller state</strong>、<strong>slow maintenance state</strong>、<strong>clearance / immune support</strong> を本文で明示的に分けました。これにより、同じ「hidden state が残る」という一文でも、<strong>何が timing を止めるのか</strong>、<strong>何が cross-day claim を止めるのか</strong>、<strong>何が long-term stabilization を止めるのか</strong>、<strong>何が multiday support-state を止めるのか</strong>を別々に読めます。今後このサイトでは、これらを 1 行の latent state 欄に潰さず、timescale ごとの claim ceiling と一緒に出します。
 </p>
 </div>
 </section>
@@ -446,6 +459,11 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <li>Loomba, S., Straehle, J., Gangadharan, V., et al. (2022). Connectomic comparison of mouse and human cortex. <em>Science</em>, 377(6602), eabo0924. <a href="https://doi.org/10.1126/science.abo0924" target="_blank">doi:10.1126/science.abo0924</a></li>
 <li>Shapson-Coe, A., Januszewski, M., Berger, D. R., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <em>Science</em>, 384(6696), eadk4858. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
 <li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <em>Nature Communications</em>, 16, 11344. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
+<li>Louveau, A., Smirnov, I., Keyes, T. J., et al. (2015). Structural and functional features of central nervous system lymphatic vessels. <em>Nature</em>, 523, 337-341. <a href="https://doi.org/10.1038/nature14432" target="_blank">doi:10.1038/nature14432</a></li>
+<li>Kim, J., et al. (2025). Meningeal lymphatics-microglia axis regulates synaptic physiology. <em>Cell</em>, 188(8), 2129-2148.e21. <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">doi:10.1016/j.cell.2025.02.022</a></li>
+<li>Eide, P. K., &amp; Ringstad, G. (2021). Sleep deprivation impairs molecular clearance from the human brain. <em>Brain</em>, 144(3), 863-874. <a href="https://doi.org/10.1093/brain/awab285" target="_blank">doi:10.1093/brain/awab285</a></li>
+<li>Hirschler, L., et al. (2025). Region-specific drivers of cerebrospinal fluid mobility measured with MRI in humans. <em>Nature Neuroscience</em>, 28, 1115-1126. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
+<li>Dagum, P., et al. (2026). The glymphatic system clears amyloid-beta and tau from brain to plasma in humans. <em>Nature Communications</em>, 17, 7800. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
 </ol>
 </section>
 
