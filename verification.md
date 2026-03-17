@@ -14,7 +14,7 @@ accuracy_note: "This page does not claim that WBE is already possible. It define
 page_highlights:
   - "Standards, repositories, benchmarks, and audits must be built as one package."
   - "Claim levels and failure conditions are fixed up front so decoding is not confused with emulation."
-  - "For decode / biomarker scores, the Specificity & Shortcut Card separates the target neural variable from nuisance routes and audits subject / session fingerprint independently."
+  - "For decode / biomarker scores, the Specificity & Shortcut Card separates the target neural variable from nuisance routes and audits subject / session fingerprint plus acquisition-distribution shortcuts independently."
   - "This page explains why collecting data alone is not the same as making progress."
   - "For brain-to-text and speech decode, the Neural Contribution Card fixes task constraint, language prior, candidate set, no-brain / no-LM / shuffle baselines, and subject cooperation."
   - "For multimodal or atlas-prior results, the Fusion Card is added on top of the Observability Budget so acquisition relation, synchronization, fusion model, and external validation are fixed explicitly."
@@ -31,7 +31,7 @@ known_points:
   - "Comparable progress does not exist unless standards, shared infrastructure, evaluation, and auditing are aligned together."
   - "At L0-L2, reproducibility and falsification conditions can be designed in advance."
   - "Decode and emulate are distinct claims and require different evidence."
-  - "The same decoding score is not target-specific evidence if eye movement, EMG, uninstructed movement, auditory feedback, or subject / session fingerprint remains unresolved."
+  - "The same decoding score is not target-specific evidence if eye movement, EMG, uninstructed movement, auditory feedback, subject / session fingerprint, or acquisition-distribution shortcuts remain unresolved."
   - "A multimodal result is not one thing; simultaneous acquisition, geometric fusion, invasive calibration, and atlas priors must be audited separately."
   - "A synapse list or weight estimate does not by itself fix perisynaptic ECM / PNN state, so plasticity and stabilization claims need a separate ceiling."
   - "A weight estimate does not fix which tagged synapses or dendritic branches capture plasticity-related proteins, so late-stabilization claims need a separate proteostasis ceiling."
@@ -783,7 +783,7 @@ If this budget is missing, this site allows at most <strong>same-session fit</st
 <section class="section" id="specificity-shortcut-card">
 <h2 class="section-title">2026-03 addendum: attach a Specificity &amp; Shortcut Card to decode / biomarker results</h2>
 <p>
-The weakness that became clearer in the re-audit was that the <strong>Observability Budget</strong> can say what entered the sensor, but by itself it cannot fix whether predictive information came from the <strong>target neural variable</strong> or from shortcut routes such as eye movement, EMG, uninstructed movement, report paths, auditory feedback, or subject / session fingerprint. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> showed that neural dynamics during task can be strongly dominated by uninstructed movements, <a href="https://doi.org/10.1523/ENEURO.0401-17.2018" target="_blank">Mostert et al. (2018)</a> showed that visual-working-memory decode can retain an eye-movement confound even under attempted fixation, <a href="https://doi.org/10.3389/fnhum.2013.00138" target="_blank">Muthukumaraswamy (2013)</a> summarized the overlap between high-frequency EEG/MEG and muscle artifact, <a href="https://doi.org/10.1088/1741-2560/2/4/014" target="_blank">McFarland et al. (2005)</a> showed that EMG can boost early BCI-session performance, and <a href="https://doi.org/10.1038/s42256-024-00837-5" target="_blank">Chen et al. (2024)</a> showed that post-onset auditory feedback can inflate offline speech-decoding scores. For that reason, this site now requires an independent deliverable that fixes not only <strong>"there is information"</strong> but also <strong>"which route that information came from."</strong>
+The weakness that became clearer in the re-audit was that the <strong>Observability Budget</strong> can say what entered the sensor, but by itself it cannot fix whether predictive information came from the <strong>target neural variable</strong> or from shortcut routes such as eye movement, EMG, uninstructed movement, report paths, auditory feedback, subject / session fingerprint, or acquisition-distribution cues carried by site / device / reference / electrode layout. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> showed that neural dynamics during task can be strongly dominated by uninstructed movements, <a href="https://doi.org/10.1523/ENEURO.0401-17.2018" target="_blank">Mostert et al. (2018)</a> showed that visual-working-memory decode can retain an eye-movement confound even under attempted fixation, <a href="https://doi.org/10.3389/fnhum.2013.00138" target="_blank">Muthukumaraswamy (2013)</a> summarized the overlap between high-frequency EEG/MEG and muscle artifact, <a href="https://doi.org/10.1088/1741-2560/2/4/014" target="_blank">McFarland et al. (2005)</a> showed that EMG can boost early BCI-session performance, and <a href="https://doi.org/10.1038/s42256-024-00837-5" target="_blank">Chen et al. (2024)</a> showed that post-onset auditory feedback can inflate offline speech-decoding scores. For that reason, this site now requires an independent deliverable that fixes not only <strong>"there is information"</strong> but also <strong>"which route that information came from."</strong>
 </p>
 <table class="data-table">
 <thead>
@@ -801,12 +801,12 @@ The weakness that became clearer in the re-audit was that the <strong>Observabil
 </tr>
 <tr>
 <td><strong>plausible nuisance routes</strong></td>
-<td>List the main alternative routes, such as EOG, facial / jaw / neck EMG, button press, posture / body movement, speech motor output, auditory feedback, report path, cue timing, and device / impedance / session fingerprint.</td>
+<td>List the main alternative routes, such as EOG, facial / jaw / neck EMG, button press, posture / body movement, speech motor output, auditory feedback, report path, cue timing, and acquisition-distribution cues such as device / impedance / session fingerprint, reference system, electrode layout, and protocol differences.</td>
 <td>The explanation of a high score collapses to one favored story and the shortcut hypothesis cannot be audited later.</td>
 </tr>
 <tr>
 <td><strong>nuisance observables / auxiliary channels</strong></td>
-<td>State whether EOG / EMG, audio, video / motion capture, button / force, pupil / gaze, impedance / hardware logs, and stimulus / feedback logs exist and how they are used.</td>
+<td>State whether EOG / EMG, audio, video / motion capture, button / force, pupil / gaze, impedance / hardware logs, channel-map / reference / sample-rate / filter logs, and stimulus / feedback logs exist and how they are used.</td>
 <td>The paper can stop at saying it "paid attention" to nuisances without leaving measured audit traces behind.</td>
 </tr>
 <tr>
@@ -815,13 +815,13 @@ The weakness that became clearer in the re-audit was that the <strong>Observabil
 <td>You cannot separate prediction gain coming from target-neural information from gain that can be reproduced by auxiliary routes alone.</td>
 </tr>
 <tr>
-<td><strong>fingerprint audit / independence unit</strong></td>
-<td>Report raw-recording ancestry, whether windows / epochs cut from the same recording ever cross train/test, subject / session / site / device disjointness, metadata-only baselines, and identity classifiers.</td>
-<td>A diagnosis or state-decode score can be driven only by who, when, or on which device the data was recorded, and that failure would remain invisible.</td>
+<td><strong>fingerprint / acquisition-distribution audit / independence unit</strong></td>
+<td>Report raw-recording ancestry, whether windows / epochs cut from the same recording ever cross train/test, subject / session / site / device / reference-system / electrode-layout disjointness, metadata-only baselines, harmonization logs, and identity classifiers.</td>
+<td>A diagnosis or state-decode score can be driven only by who, when, where, or under which recording setup the data was acquired, and that failure would remain invisible.</td>
 </tr>
 <tr>
 <td><strong>slice-wise hold-out across nuisance regimes</strong></td>
-<td>Report whether evaluation was split across low/high movement, fixed gaze/free viewing, silent/overt, feedback on/off, device/session/subject hold-out, artifact-burden slices, and state slices.</td>
+<td>Report whether evaluation was split across low/high movement, fixed gaze/free viewing, silent/overt, feedback on/off, device/session/subject/reference/protocol hold-out, artifact-burden slices, and state slices.</td>
 <td>In-distribution success is too easily misread as target-specific evidence that survives when nuisance conditions change.</td>
 </tr>
 <tr>
@@ -843,6 +843,12 @@ The weakness that became clearer in the re-audit was that the <strong>Observabil
 </p>
 </div>
 <div class="note-box">
+<strong>2026-03-18 addendum: acquisition-distribution shortcut is also independent</strong>
+<p>
+<a href="https://doi.org/10.1088/1741-2552/aacfe4" target="_blank">Hu et al. (2018)</a> showed that reference montage and electrode setup alter the measured scalp potential itself, <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)</a> showed that EEG differences arise from system as well as subject and session, <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a> showed that cross-dataset EEG decoding is degraded by environmental variability such as amplifier, cap, sampling rate, and filtering, and <a href="https://doi.org/10.1016/j.brainresbull.2024.110906" target="_blank">Dong et al. (2024)</a> showed that comparative work across different channel locations needs explicit harmonization. For that reason, this site treats <strong>site / device / reference system / electrode layout / protocol distribution</strong> as a shortcut family on the same level as subject fingerprint, and requires <strong>setup disjointness</strong> plus <strong>harmonization logs</strong> as independent deliverables.
+</p>
+</div>
+<div class="note-box">
 <strong>2026-03-18 addendum: the Neural Contribution Card is the language-specific version of this general card</strong>
 <p>
 The Specificity &amp; Shortcut Card is the general form that covers motor, memory, biomarker, speech, and related decode settings. The <a href="#neural-contribution-card">Neural Contribution Card</a> is its language-specific specialization for text / speech / generative reconstruction settings, where <strong>language priors, candidate sets, prompts, vocoders, and causal deployment guards</strong> become dominant. In speech / brain-to-text work, the general shortcut audit is therefore stacked together with the Neural Contribution Card.
@@ -851,7 +857,7 @@ The Specificity &amp; Shortcut Card is the general form that covers motor, memor
 <div class="note-box">
 <strong>Minimum operating rules</strong>
 <p>
-If this card is missing, this site treats the result by default as <strong>exploratory decode</strong>, <strong>behavior-linked biomarker</strong>, or <strong>nuisance-unresolved classification</strong>, and does not promote it to a target-specific neural readout, mechanistic biomarker, or deployable controller. In particular, if any of <strong>plausible nuisance routes</strong>, <strong>nuisance-only baselines</strong>, <strong>fingerprint audit / independence unit</strong>, or <strong>slice-wise hold-out</strong> is missing, this site stops the reader from rephrasing the result as "we learned what this variable means."
+If this card is missing, this site treats the result by default as <strong>exploratory decode</strong>, <strong>behavior-linked biomarker</strong>, or <strong>nuisance-unresolved classification</strong>, and does not promote it to a target-specific neural readout, mechanistic biomarker, or deployable controller. In particular, if any of <strong>plausible nuisance routes</strong>, <strong>nuisance-only baselines</strong>, <strong>fingerprint / acquisition-distribution audit / independence unit</strong>, or <strong>slice-wise hold-out</strong> is missing, this site stops the reader from rephrasing the result as "we learned what this variable means."
 </p>
 </div>
 <div class="note-box">

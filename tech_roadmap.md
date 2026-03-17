@@ -16,14 +16,14 @@ page_highlights:
   - "Stronger claims are deliberately placed later so earlier levels are not skipped."
   - "R3 / R5 separate latent-state and maintenance-state questions by evidence tier and timescale, so same-day fit and multiday maintenance do not collapse into one success."
   - "M2 separates hardware latency from biological timing-state, so a fast device loop is not confused with timing-complete reconstruction."
-  - "R6 treats personalization not as a pure performance trick, but as a verification problem that must separate target signal from subject fingerprint."
+  - "R6 treats personalization not as a pure performance trick, but as a verification problem that must separate target signal from subject fingerprint and setup shortcuts."
 known_points:
   - "Splitting the problem into P/M/R/I/V/D makes it easier to see which questions are foundational and which sit higher up."
   - "The dependency structure that prevents strong claims from skipping earlier layers is fairly clear."
   - "This page should be read as a dependency map, not as a checklist of solved items."
   - "Even if connectome or local-activity evidence improves, latent-state and maintenance-state audits are still separate requirements."
   - "Closed-loop device timing and biological conduction timing are different audits; passing one does not auto-pass the other."
-  - "The fact that personalization helps performance is not the same as showing a population-level neural signal; subject-fingerprint audit is still required."
+  - "The fact that personalization helps performance is not the same as showing a population-level neural signal; subject-fingerprint and acquisition-distribution audits are still required."
 unknown_points:
   - "It is still unsettled which measurement granularity will ultimately be sufficient for WBE."
   - "V5 identity questions and D-series social deployment conditions remain unresolved."
@@ -775,7 +775,7 @@ Therefore, in this roadmap, we first fix ``which loop class is handled and which
 </summary>
 <div class="qa-body">
 <p><strong>Question:</strong>Personalization is unavoidable when discussing identity. On the other hand, too much personalization leads to overfitting and broken reproducibility.</p>
-<p><strong>2026-03-18 addendum:</strong>The reason this section was deepened is that if personalization is read only as a trick for improving performance, the distinction between the <strong>target neural variable</strong> and a <strong>subject / session fingerprint</strong> collapses. <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a> showed that diagnosis learning can absorb subject characteristics when repeated measures are not participant-disjoint, <a href="https://doi.org/10.1016/j.patcog.2020.107381" target="_blank">Wang et al. (2020)</a> and <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a> showed time-robust person identification from resting-state EEG alone, and <a href="https://doi.org/10.1016/j.neuroimage.2022.119034" target="_blank">Gibson et al. (2022)</a> summarized strong subject-driven EEG variation. The real boundary in R6 is therefore <strong>how much individual difference a given claim is allowed to use</strong> and <strong>how population signal is separated from fingerprint routes</strong>.</p>
+<p><strong>2026-03-18 addendum:</strong>The reason this section was deepened is that if personalization is read only as a trick for improving performance, the distinction between the <strong>target neural variable</strong> and a <strong>subject / session fingerprint</strong> collapses. <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a> showed that diagnosis learning can absorb subject characteristics when repeated measures are not participant-disjoint, <a href="https://doi.org/10.1016/j.patcog.2020.107381" target="_blank">Wang et al. (2020)</a> and <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a> showed time-robust person identification from resting-state EEG alone, and <a href="https://doi.org/10.1016/j.neuroimage.2022.119034" target="_blank">Gibson et al. (2022)</a> summarized strong subject-driven EEG variation. The same boundary also extends to acquisition distribution: <a href="https://doi.org/10.1088/1741-2552/aacfe4" target="_blank">Hu et al. (2018)</a> showed that reference montage and electrode setup alter scalp potentials, <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)</a> showed that system / subject / session all influence EEG, and <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a> showed that cross-dataset variability is driven in part by amplifier, cap, sampling rate, and filtering differences. The real boundary in R6 is therefore <strong>how much individual difference a given claim is allowed to use</strong> and <strong>how population signal is separated from fingerprint and setup routes</strong>.</p>
 <table class="data-table">
 <thead>
 <tr>
@@ -788,7 +788,7 @@ Therefore, in this roadmap, we first fix ``which loop class is handled and which
 <tr>
 <td><strong>(A) shared model + subject-disjoint evaluation</strong></td>
 <td>Whether a person-independent signal remains and how far population-level generalization can be established.</td>
-<td>Leave-one-subject-out / leave-one-session-out, raw-recording ancestry, subject/session/device metadata-only baselines, a fingerprint classifier, and an explicit guarantee that windows cut from the same raw recording do not cross train/test.</td>
+<td>Leave-one-subject-out / leave-one-session-out, raw-recording ancestry, subject/session/site/device/reference-system/electrode-layout metadata-only baselines, a fingerprint classifier, harmonization logs, and an explicit guarantee that windows cut from the same raw recording do not cross train/test.</td>
 </tr>
 <tr>
 <td><strong>(B) shared encoder + light subject adaptation</strong></td>
@@ -805,10 +805,10 @@ Therefore, in this roadmap, we first fix ``which loop class is handled and which
 <div class="note-box">
 <strong>Site rule for this section</strong>
 <p>
-On this site, any result that calls itself a diagnosis model, state biomarker, or general decoder must report at least <strong>(1) split independence unit</strong>, <strong>(2) raw-recording / window ancestry</strong>, <strong>(3) subject / session disjointness</strong>, <strong>(4) metadata-only or fingerprint baselines</strong>, <strong>(5) when target-subject data was used</strong>, and <strong>(6) the adaptation budget</strong>. Without that, the result is treated first as a <strong>subject-aware classifier</strong>, <strong>participant-conditioned decoder</strong>, or <strong>fingerprint-unresolved biomarker</strong>, not as a population marker or a subject-independent mechanism.
+On this site, any result that calls itself a diagnosis model, state biomarker, or general decoder must report at least <strong>(1) split independence unit</strong>, <strong>(2) raw-recording / window ancestry</strong>, <strong>(3) subject / session / site / device / reference-system / electrode-layout disjointness</strong>, <strong>(4) metadata-only or fingerprint baselines</strong>, <strong>(5) the harmonization log for channel map / reference / sample rate / filters</strong>, <strong>(6) when target-subject or target-site data was used</strong>, and <strong>(7) the adaptation budget</strong>. Without that, the result is treated first as a <strong>subject-aware classifier</strong>, <strong>participant-conditioned decoder</strong>, or <strong>fingerprint/setup-unresolved biomarker</strong>, not as a population marker or a subject-independent mechanism.
 </p>
 </div>
-<p><strong>Branch example:</strong> Route (A) asks whether any population signal is present, route (B) asks how much transfer plus calibration burden is needed, and route (C) asks whether an individual route is operationally usable. Therefore, the fact that personalization scores higher is neither a success nor a failure by itself; it only becomes interpretable after you state <strong>which claim family you want to support</strong> and <strong>how far fingerprint routes were controlled</strong>.</p>
+<p><strong>Branch example:</strong> Route (A) asks whether any population signal is present, route (B) asks how much transfer plus calibration burden is needed, and route (C) asks whether an individual route is operationally usable. Therefore, the fact that personalization scores higher is neither a success nor a failure by itself; it only becomes interpretable after you state <strong>which claim family you want to support</strong> and <strong>how far fingerprint and setup routes were controlled</strong>.</p>
 <p><strong>Next required:</strong>Bundle the <a href="verification.html#specificity-shortcut-card">Verification: Specificity &amp; Shortcut Card</a>, the evaluation-family and split design on <a href="datasets.html">Datasets</a>, and the <a href="verification.html#temporal-validity-card">Temporal Validity Card</a> so same-subject success, cross-subject generalization, and cross-day maintenance are managed as different deliverables.</p>
 </div>
 </details>

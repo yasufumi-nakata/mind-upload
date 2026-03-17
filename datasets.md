@@ -5,7 +5,7 @@ description: "From the selection of public data (mainly EEG) to the minimum loop
 article_type: Resource
 subtitle: "Connect ``what to use'' and ``how to reproduce'' in the shortest route without separating them."
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-18"
 note: "Curated List + L0 Practice"
 audience: "People who are wondering which public data to start with, people who are looking for an L0 practice board"
 reading_time: "12-20 minutes"
@@ -16,16 +16,18 @@ page_highlights:
   - "Starter data is a practice board for L0-L1, not the ground truth of EEG source imaging."
   - "Each starter dataset has different annotation provenance, time fidelity, and independent split units."
   - "Within-session / cross-session / cross-subject / adaptation are different evaluation families and should not be placed side by side under the same score."
-  - "Even when the score is numerically the same, you still have to separate the target neural variable from eye movement, EMG, behavior, feedback routes, and subject / session fingerprint."
+  - "Even when the score is numerically the same, you still have to separate the target neural variable from eye movement, EMG, behavior, feedback routes, subject / session fingerprint, and acquisition-distribution shortcuts such as site / device / reference / electrode layout."
   - "Even when foundation / self-supervised EEG models are used, pretraining-corpus and harmonization audits are still required."
+  - "Reference system, channel map, electrode layout, and device protocol are not cosmetic metadata; they can move scores and belong in the dataset card."
   - "The ultimate goal is to make it possible for a third party to rerun the result under the same conditions."
 known_points:
   - "Public EEG data is useful for L0 recall analysis and L1 baseline practice."
   - "When selecting data for the first time, you will move forward if you prioritize ease of retesting over difficulty."
   - "Cue-locked events, expert interval annotations, sleep hypnograms, and physician report-derived labels have different meanings even though they are the same 'public EEG data'."
   - "Even if the accuracy is the same, the strength of the argument that can be read will change depending on which generalization condition the score was obtained under."
-  - "A same-day score may reflect movement / EOG / EMG / feedback routes or subject / session fingerprint rather than the target signal."
-  - "Foundation-model improvements are not comparable unless the pretraining corpus, channel-mismatch handling, and adaptation regime are disclosed."
+  - "A same-day score may reflect movement / EOG / EMG / feedback routes, subject / session fingerprint, or acquisition-distribution shortcuts rather than the target signal."
+  - "Foundation-model improvements are not comparable unless the pretraining corpus, channel-mismatch handling, acquisition-distribution summary, and adaptation regime are disclosed."
+  - "Reference system, device, electrode layout, and filter chain can change what looks like the same EEG benchmark."
   - "With only starter data and no individual MRI or invasive ground truth, we cannot make strong claims about improved ESI accuracy."
 unknown_points:
   - "Starter datasets alone cannot solve all the issues of WBE."
@@ -355,9 +357,16 @@ Even when a within-session score is high, it can still be explained by eye-movem
 </div>
 
 <div class="note-box">
+<strong>2026-03-18 addendum: acquisition distribution is also an independent shortcut family</strong>
+<p>
+This site previously stopped more clearly at <strong>subject / session fingerprint</strong> than at <strong>setup effects</strong>. That was too weak. <a href="https://doi.org/10.1088/1741-2552/aacfe4" target="_blank">Hu et al. (2018)</a> showed that the measured scalp potential itself changes with reference montage and electrode setup, <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)</a> showed that EEG recordings vary not only by subject and session but also by recording system, <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a> showed that cross-dataset EEG decoding is degraded by environmental variability such as amplifier, cap, sampling rate, and filtering, <a href="https://doi.org/10.1002/brb3.2789" target="_blank">Ceballos-Villegas et al. (2022)</a> explicitly modeled multinational batch effects across studies and devices, and <a href="https://doi.org/10.1016/j.brainresbull.2024.110906" target="_blank">Dong et al. (2024)</a> showed that even comparative study across different channel locations needs explicit harmonization. Therefore, this site now treats <strong>site / device / reference system / electrode layout / protocol distribution</strong> as an independent shortcut family rather than as harmless metadata.
+</p>
+</div>
+
+<div class="note-box">
 <strong>Site rule from this section</strong>
 <p>
-From this section onward, dataset cards and baseline results must report at least <strong>(1) evaluation family</strong>, <strong>(2) the independent hold-out unit</strong>, <strong>(3) raw-recording / window ancestry</strong>, <strong>(4) subject / session disjointness together with a metadata-only baseline</strong>, <strong>(5) whether target-session or target-subject data were used</strong>, <strong>(6) recalibration amount and timing</strong>, and <strong>(7) a stopping claim</strong>. Scores without this context will be treated as limited L1 decode results or fingerprint-unresolved classifiers, not evidence of long-term stability or deployability.
+From this section onward, dataset cards and baseline results must report at least <strong>(1) evaluation family</strong>, <strong>(2) the independent hold-out unit</strong>, <strong>(3) raw-recording / window ancestry</strong>, <strong>(4) subject / session / site / device / reference-system / electrode-layout disjointness together with metadata-only baselines</strong>, <strong>(5) the channel-map / reference / sample-rate / filter harmonization log</strong>, <strong>(6) whether target-session, target-subject, or target-site data were used</strong>, <strong>(7) recalibration amount and timing</strong>, and <strong>(8) a stopping claim</strong>. Scores without this context will be treated as limited L1 decode results or fingerprint-unresolved / acquisition-distribution-unresolved classifiers, not evidence of long-term stability or deployability.
 </p>
 </div>
 </section>
@@ -457,14 +466,14 @@ The <strong>stopping claims</strong> and <strong>minimum operational rules</stro
 <div class="note-box">
 <strong>The most important site rule to add now</strong>
 <p>
-When introducing starter data, always include <strong>(1) label provenance</strong>, <strong>(2) time granularity</strong>, <strong>(3) clock domain and sync evidence</strong>, <strong>(4) event semantics</strong>, <strong>(5) independent split unit</strong>, and <strong>(6) stopping claim</strong>. A dataset card that does not include this will be considered insufficient as a practical guide for L0.
+When introducing starter data, always include <strong>(1) label provenance</strong>, <strong>(2) time granularity</strong>, <strong>(3) clock domain and sync evidence</strong>, <strong>(4) event semantics</strong>, <strong>(5) independent split unit</strong>, <strong>(6) acquisition-distribution summary plus harmonization policy</strong>, and <strong>(7) stopping claim</strong>. A dataset card that does not include this will be considered insufficient as a practical guide for L0.
 </p>
 </div>
 
 <div class="note-box">
 <strong>BIDS is a requirement, but not a ground truth</strong>
 <p>
-BIDS/EEG-BIDS is important, but it alone cannot prove the validity of source imaging. The BIDS specification itself also requires <code>EEGReference</code>, <code>SamplingFrequency</code>, <code>SoftwareFilters</code>, and if <code>*_electrodes.tsv</code> is issued, <code>*_coordsystem.json</code> is also required. However, this is a condition that makes it possible for a third party to trace the incident, not a condition that allows the true source to be known.
+BIDS/EEG-BIDS is important, but it alone cannot prove the validity of source imaging or the comparability of cross-dataset decoding. The BIDS specification itself also requires <code>EEGReference</code>, <code>SamplingFrequency</code>, <code>SoftwareFilters</code>, and if <code>*_electrodes.tsv</code> is issued, <code>*_coordsystem.json</code> is also required. However, this is a condition that makes it possible for a third party to trace the incident, not a condition that allows the true source to be known or that automatically harmonizes reference mismatch, electrode-layout mismatch, and device / filter differences across cohorts.
 </p>
 </div>
 
