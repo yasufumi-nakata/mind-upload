@@ -953,3 +953,11 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `EEG-DATA` 最新在庫は `TOTAL=28,145`、アクセス区分は `すぐに使える=23,862`、`公開だが要確認=3,694`、`要アカウント/利用登録=585`、`利用困難=4` を確認しました。
 - 助成キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` と `auto-research-funds/grant_eeg_dataset_match.csv` の両方で参照可能でした（欠落 `0`）。
 - 依頼方針を本ページ正本として再固定します。汎用的な浅い横断ではなく、`1RQ=1検証命題=1応募テーマ=1主データ` の粒度で1件ずつ深掘りして進めます。
+
+## 2026-03-18 16:28 JST 再検証ログ（本run / pull後の深掘り整合確認）
+
+- 作業前に `main` を `pull --ff-only` した状態で、`RQ60` の深掘り運用（`1RQ=1検証命題=1応募テーマ=1主データ`）を再確認しました。
+- 本ページ内の `Ux-RQy` 一意キーを再計数し、`RQ_TOTAL=60`（欠落 `0`、重複 `0`）を確認しました。
+- 判定内訳は `A/B/C=17/25/18` を再確認しました。
+- 参照EEG ID `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を確認しました。
+- 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再参照可能でした。

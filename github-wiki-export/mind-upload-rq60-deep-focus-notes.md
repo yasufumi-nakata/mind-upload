@@ -1,32 +1,26 @@
----
-layout: default
-title: "Mind-upload RQ60 Deep focus notes (EEG-DATA × Grant)"
-description: "A deep-dive note that fixes each of the 60 RQs, including the core, external requirements, and application themes that will be directly verified with EEG."
-article_type: Wiki
-subtitle: "Fix the issues for each RQ instead of a general summary"
-author: Mind Uploading Research Project
-last_updated: "2026-03-18"
-note: "RQ-by-RQ Deep Focus"
-audience: "People who want to translate each RQ directly into application statements and experimental procedures"
-reading_time: "20-35 minutes"
-page_intro: "This page is a practical note that fixes the core of mind-upload's 60 RQs, which can be confirmed directly with EEG-DATA, application themes for auto-research-funds, and necessary requirements outside of EEG."
-accuracy_note: "A/B/C judgment is the same as mind-upload-eeg-rq60-feasibility-and-funds. C means 'not complete with EEG alone' rather than 'not important'."
-wiki_links:
-  - label: "Wiki: RQ60 EEG verification availability and subsidy theme"
-    url: "/wiki/mind-upload-eeg-rq60-feasibility-and-funds.html"
-    description: "The original version of the judgment and data candidates."
-  - label: "Wiki: RQ60 Application Playbook"
-    url: "/wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html"
-    description: "Fixed table of applicant ID and minimum deliverables."
-recommended_pages:
-  - label: "Literature map"
-    url: "/research_harvest_50.html"
-  - label: "Data & Bench"
-    url: "/datasets.html"
----
+# Mind-upload RQ60 Deep focus notes (EEG-DATA × Grant)
 
-<main class="main-container">
-<article class="content-column">
+> Fix the issues for each RQ instead of a general summary
+>
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+
+- 更新日: 2026-03-18 / 位置づけ: RQ-by-RQ Deep Focus
+
+## このページの役割
+This page is a practical note that fixes the core of mind-upload's 60 RQs, which can be confirmed directly with EEG-DATA, application themes for auto-research-funds, and necessary requirements outside of EEG.
+
+## 正確さの前提
+A/B/C judgment is the same as mind-upload-eeg-rq60-feasibility-and-funds. C means 'not complete with EEG alone' rather than 'not important'.
+
+## 公開ページへ戻る
+- [Literature map](https://mind-upload.com/research_harvest_50.html)
+- [Data & Bench](https://mind-upload.com/datasets.html)
+
+## 関連 Wiki
+- [Wiki: RQ60 EEG verification availability and subsidy theme](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds) - The original version of the judgment and data candidates.
+- [Wiki: RQ60 Application Playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - Fixed table of applicant ID and minimum deliverables.
+
+---
 
 ## How to use
 
@@ -232,7 +226,7 @@ Reasons for proceeding in this order:
 | U14-1 | Measure the correspondence between the fixed granularity (data/code/environment) of supplementary trial contracts and the reproduction success rate. | In the first week, re-execute at three granularity: "Fixed data only", "Fixed data + code", "Fixed data + code + environment". Quantify the recall rate difference and the man-hour difference in the second week. | Minimum granularity definition of reproduction contract (`G1` main / `G3` reserve) | `56` / `719` | Recall rate meets target value and man-hour increment is within acceptable upper limit. |
 | U14-3 | Automatically detect subject leaks and time series leaks, and enable auditing of leaderboard evaluations. | Implemented leak detection rules (subject/session/time-window) in the first week. Apply it to the existing partition in the second week and create an audit report of the performance difference after re-partitioning. | leaderboard audit operation (`G1` main / `G3` spare) | `719` / `56` | Zero leak detection, performance deterioration after repartition can be explained. |
 | U7-2 | Estimate the jitter distribution of LSL synchronization error and determine the operational warning threshold. | Fixed offset/jitter extraction processing in the first week. Calculate the event rate exceeding the threshold in the second week and set the remeasurement trigger conditions as rules. | Synchronization error automatic warning operation (`G1` main / `G3` spare) | `6` / `696` | Reproducibility of threshold exceeded events and false alarm rate of remeasurement rules are within tolerance. |
-| U13-1 | Separately evaluate the discrepancy between semantic matching and causal matching using the same decoder. | U13-1 | | In the first week, the meaning match score and intervention response match score were calculated using separate indicators. In the second week, cases of deviation were specified as failure conditions, and the sole adoption of imitation passes was prohibited. | Separate evaluation of semantic restoration/causal reproduction (`G1` main / `G4` preliminary) | `509` / `13` | Cases where only semantic matching is high can be identified and cases where there is no causal matching can be avoided. |
+| U13-1 | Separately evaluate the discrepancy between semantic matching and causal matching using the same decoder. | In the first week, compute semantic match score and intervention-response match score with separate metrics. In the second week, register deviation cases as failure conditions and prohibit pass decisions based only on imitation score. | Separate evaluation of semantic restoration/causal reproduction (`G1` main / `G4` preliminary) | `509` / `13` | Cases where only semantic matching is high can be identified and cases where there is no causal matching can be avoided. |
 
 ### Execution order (fixed)
 
@@ -262,3 +256,11 @@ Reasons for proceeding in this order:
 - Revalidated grant keys `G1-G6` and source resolvability in `grant_queue`/`auto-research-funds`.
 - Confirmed EEG numeric IDs are present in latest `EEG-DATA` CSV but no longer reliable as fixed dataset identifiers after reindex/remap.
 - Fixed submission rule for this run: canonical references must be written using `DOI + dataset name + access class` in `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`.
+
+## 2026-03-18 16:28 JST revalidation log (main run / pull-after deep sync)
+
+- Pulled latest `main` before this run and revalidated this page in deep-by-RQ mode (`1RQ = 1 verification proposition = 1 application theme = 1 main data`).
+- Recounted unique RQ keys on this page and reconfirmed `RQ_TOTAL=60` with no missing key.
+- Recalculated judgment split from `mind-upload-eeg-rq60-feasibility-and-funds.md` and reconfirmed `A/B/C=17/25/18`.
+- Revalidated referenced EEG IDs (`24` IDs: `6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`) exist in latest `EEG-DATA/eeg_dataset_summary_ja.csv` (`missing=0`).
+- Revalidated grant real IDs `G1-G6` (`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`) remain resolvable in `grant_queue` and `auto-research-funds` mapping docs.

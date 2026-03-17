@@ -35,7 +35,7 @@
 ## その他
 - [Mind-upload RQ60 Application Playbook (RQ unit fixed)](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook)
 - [Mind-upload RQ60 Deep focus notes (EEG-DATA × Grant)](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes)
-- [Mind-upload RQ60 × EEG-DATA verifiability and subsidy themes (in-depth version)](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds)
+- [Mind-upload RQ60 × EEG-DATA 検証可否と助成テーマ（深掘り版）](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds)
 - [Wiki: 4 paths to follow after Verification](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-next-routes)
 - [Wiki: 4 routes to deepen the theory from introduction to WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/wbe-to-theory-route)
 - [Wiki: 5 paths to follow after participation/collaboration page](https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes)
