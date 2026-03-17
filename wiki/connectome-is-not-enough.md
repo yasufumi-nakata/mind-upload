@@ -160,7 +160,7 @@ recommended_pages:
 <tr>
 <td><strong>fast execution state</strong><br>current synaptic efficacy / release state / short-term plasticity</td>
 <td>ms〜分</td>
-<td><a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">Holler et al. (2021)</a>、<a href="https://doi.org/10.1038/s41467-024-50549-7" target="_blank">Dürst et al. (2024)</a>、<a href="https://doi.org/10.1038/s41467-024-51402-7" target="_blank">Alle et al. (2024)</a> は、ultrastructure が average strength の prior を強めても、その瞬間の release state や transmission reliability までは固定しないことを示します。</td>
+<td><a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">Holler et al. (2021)</a>、<a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">Dürst et al. (2022)</a>、<a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">Alle et al. (2024)</a> は、ultrastructure や release-probability parameter が average potency の制約を強めても、その瞬間の release state や transmission reliability までは固定しないことを示します。</td>
 <td>human では主として局所 ex vivo / 断片レベルであり、whole-brain in vivo の current state を直接は与えません。</td>
 <td>phase-sensitive な介入予測、precise timing、closed-loop stability を強くは主張しません。</td>
 </tr>
@@ -195,19 +195,25 @@ recommended_pages:
 <tr>
 <td><strong>slow maintenance state</strong><br>glial / metabolic ensemble</td>
 <td>分〜日</td>
-<td><a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a>、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>、<a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> は、astrocyte-metabolic support が memory / network state に関わる一方、human では macro-biochemical scaffold が主であることを示します。</td>
+<td><a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a> と <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> は rodent の記憶・局所回路で astrocyte-metabolic support の因果性と機序を強めました。一方 <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> は human で 5 代謝物の parcel-level covariance を示したのであり、cell-specific astrocyte ensemble の direct readout ではありません。</td>
 <td>human では parcel-level biochemical organization までが主で、cell-specific astrocyte ensemble の direct readout ではありません。</td>
 <td>memory stabilization、slow-state、metabolic maintenance の一致を neuron-only success へ還元しません。</td>
 </tr>
 <tr>
 <td><strong>clearance / immune support</strong><br>meningeal lymphatic / CSF / microglia axis</td>
 <td>時間〜日</td>
-<td><a href="https://doi.org/10.1038/nature14432" target="_blank">Louveau et al. (2015)</a>、<a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Kim et al. (2025)</a>、<a href="https://doi.org/10.1093/brain/awab285" target="_blank">Eide &amp; Ringstad (2021)</a>、<a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>、<a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> は、clearance / immune support が synaptic physiology と human support-state proxy に関わる一方、moment-to-moment neural truth は与えないことを示します。</td>
+<td><a href="https://doi.org/10.1038/nature14432" target="_blank">Louveau et al. (2015)</a> と <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Kim et al. (2025)</a> は lymphatic / microglia 軸の存在と局所 synaptic physiology への関与を強めました。human 側の <a href="https://doi.org/10.1093/brain/awab285" target="_blank">Eide &amp; Ringstad (2021)</a>、<a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>、<a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> は macro support-state proxy を前進させましたが、特に Dagum らは investigational device と compartment model を含むため、現時点では provisional human evidence として読みます。</td>
 <td>human では CSF mobility や glymphatic clearance の macro proxy が中心で、cell-specific immune controller の direct readout ではありません。</td>
 <td>multiday recovery、protein-clearance、slow support-state を momentary neural completeness へ読み替えません。</td>
 </tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>2026-03 文献監査で直した点</strong>
+<p>
+今回の監査では、<strong>Lucchetti et al. (2025)</strong> を glial causal evidence から外し、<strong>5 代謝物（tCr / tNAA / Glx / Ins / Cho）の parcel-level covariance</strong> に基づく human macro-biochemical scaffold として位置づけ直しました。また、<strong>Hirschler et al. (2025)</strong> は CSF mobility の 7T MRI technical report、<strong>Dagum et al. (2026)</strong> は investigational device と compartment model を含む biomarker transport study であるため、いずれも <strong>human support-state proxy</strong> として扱います。加えて、<strong>Dürst</strong> と <strong>Alle</strong> の DOI / 年次の整合性を修正し、synapse ultrastructure と momentary synaptic state の差をより厳密に書き分けました。
+</p>
+</div>
 <div class="note-box">
 <strong>この行列で何を直したか</strong>
 <p>
@@ -219,7 +225,7 @@ recommended_pages:
 <section class="section" id="connectome-progress">
 <h2 class="section-title">配線図研究は大きく進んだが、それ自体は終点ではない</h2>
 <p>
-Dorkenwald らは成体ショウジョウバエ全脳の wiring diagram を示し、約 13 万ニューロン規模で全脳 connectome を提示しました。一方で MICrONS Consortium は、マウス視覚皮質の立方ミリメートル規模で、同一個体の機能計測と connectomics を結びつけるデータセットと局所 functional digital twin を公開しました。さらに Lappalainen らは、ショウジョウバエ視覚系で connectome-constrained network を task-optimized に学習させ、広い範囲の活動予測を可能にしました。human 側でも、Shapson-Coe らは petavoxel 級のヒト大脳皮質断片を nanoscale で再構成し、Lucchetti らは 3D whole-brain <sup>1</sup>H-MRSI から human metabolic connectome を提示しました。これは非常に大きな前進ですが、逆に言えば、<strong>現在ようやく「配線＋一部機能＋一部 biochemical scaffold＋追加仮定」を結び始めた段階</strong>であり、全脳・全状態の動的再現とはまだ別問題であることも示しています。
+Dorkenwald らは成体ショウジョウバエ全脳の wiring diagram を示し、約 13 万ニューロン規模で全脳 connectome を提示しました。一方で MICrONS Consortium は、マウス視覚皮質の立方ミリメートル規模で、同一個体の機能計測と connectomics を結びつけるデータセットと局所 functional digital twin を公開しました。さらに Lappalainen らは、ショウジョウバエ視覚系で connectome-constrained network を task-optimized に学習させ、広い範囲の活動予測を可能にしました。human 側でも、Shapson-Coe らは petavoxel 級のヒト大脳皮質断片を nanoscale で再構成し、Lucchetti らは 3D whole-brain <sup>1</sup>H-MRSI から 5 代謝物の parcel-level covariance に基づく human metabolic connectome を提示しました。これは非常に大きな前進ですが、逆に言えば、<strong>現在ようやく「配線＋一部機能＋一部 biochemical scaffold＋追加仮定」を結び始めた段階</strong>であり、全脳・全状態の動的再現とはまだ別問題であることも示しています。
 </p>
 <div class="note-box">
 <strong>ここでの読み替え</strong>
@@ -301,12 +307,12 @@ Gamlin らは、マウス視覚皮質で予測された Sst transcriptomic types
 
 <h3>3. シナプスは binary edge ではありません</h3>
 <p>
-Holler らは、同定した新皮質錐体細胞間シナプスで <strong>PSD 面積と平均 EPSP</strong> の関係を前進させましたが、同じ研究で <strong>trial-to-trial の size-strength 対応は弱く</strong>、multivesicular release も残ることを示しました。つまり、EM の ultrastructure は mean strength の prior を強くしえても、その瞬間の有効重みをそのまま与えるわけではございません。さらに Dürst らは、個々の bouton の potency が主として <strong>vesicular release probability</strong> に依存し、readily releasable vesicle 数の寄与は高 release state で初めて強く出ることを示しました。Matsuzaki らは単一 dendritic spine における LTP 誘導で、spine enlargement と AMPA 電流増加が結びつくことを示し、Vardalaki らは成体新皮質でもおよそ 25% の filopodia が AMPA 受容体を欠く silent synapse の構造基盤になりうることを示しました。したがって、<strong>edge list、synapse count、PSD / spine size だけでは current state の weight も release state も plastic history も、そもそも機能的に active かどうかも落ちます</strong>。
+Holler らは、同定した新皮質錐体細胞間シナプスで <strong>PSD 面積と平均 EPSP</strong> の関係を前進させましたが、同じ研究で <strong>trial-to-trial の size-strength 対応は弱く</strong>、multivesicular release も残ることを示しました。つまり、EM の ultrastructure は mean strength の prior を強くしえても、その瞬間の有効重みをそのまま与えるわけではございません。さらに Dürst らは、個々の bouton の potency が主として <strong>vesicular release probability</strong> に依存し、releasable vesicle number の寄与は高 <em>p</em><sub>ves</sub> 条件で強くなることを示しました。Matsuzaki らは単一 dendritic spine における LTP 誘導で、spine enlargement と AMPA 電流増加が結びつくことを示し、Vardalaki らは成体新皮質でもおよそ 25% の filopodia が AMPA 受容体を欠く silent synapse の構造基盤になりうることを示しました。したがって、<strong>edge list、synapse count、PSD / spine size だけでは current state の weight も release state も plastic history も、そもそも機能的に active かどうかも落ちます</strong>。
 </p>
 <div class="note-box">
 <strong>今回固定する読み替え</strong>
 <p>
-このサイトでは今後、<strong>EM のシナプス数</strong>、<strong>PSD 面積</strong>、<strong>spine size</strong>、<strong>same-brain connectomics</strong> を、まず <strong>structural prior / state-averaged constraint</strong> として読みます。<a href="https://doi.org/10.1038/s41467-024-51402-7" target="_blank">Alle et al. (2024)</a> は human neocortical tissue で、sleep-like な membrane state sequence が unitary synapse の transmission と consolidation を短時間で動かすことを示しました。したがって、paired physiology、presynaptic-state manipulation、held-out perturbation が無い限り、本サイトではそれらを <strong>current effective weight の直接読出し</strong>とは書きません。
+このサイトでは今後、<strong>EM のシナプス数</strong>、<strong>PSD 面積</strong>、<strong>spine size</strong>、<strong>same-brain connectomics</strong> を、まず <strong>structural prior / state-averaged constraint</strong> として読みます。<a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">Alle et al. (2024)</a> は human neocortical tissue で、sleep-like な membrane state sequence が unitary synapse の transmission と consolidation を短時間で動かすことを示しました。したがって、paired physiology、presynaptic-state manipulation、held-out perturbation が無い限り、本サイトではそれらを <strong>current effective weight の直接読出し</strong>とは書きません。
 </p>
 </div>
 
@@ -443,10 +449,10 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <em>Nature Neuroscience</em>, 28, 2561–2574. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <em>Nature</em>, 640, 497–505. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
 <li>Holler, S., et al. (2021). Structure and function of a neocortical synapse. <em>Nature</em>, 591, 111–116. <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">doi:10.1038/s41586-020-03134-2</a></li>
-<li>Dürst, C. D., Boele, H.-J., Schonewille, M., &amp; Hoebeek, F. E. (2024). Number of releasable vesicles does not limit short-term plasticity at hippocampal synapses with low release probability. <em>Nature Communications</em>, 15, 6427. <a href="https://doi.org/10.1038/s41467-024-50549-7" target="_blank">doi:10.1038/s41467-024-50549-7</a></li>
+<li>Dürst, C. D., Wiegert, J. S., Schulze, C., et al. (2022). Vesicular release probability sets the strength of individual Schaffer collateral synapses. <em>Nature Communications</em>, 13, 6126. <a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">doi:10.1038/s41467-022-33565-6</a></li>
 <li>Matsuzaki, M., Honkura, N., Ellis-Davies, G. C. R., & Kasai, H. (2004). Structural basis of long-term potentiation in single dendritic spines. <em>Nature</em>, 429, 761–766. <a href="https://doi.org/10.1038/nature02617" target="_blank">doi:10.1038/nature02617</a></li>
 <li>Vardalaki, D., Chung, K., &amp; Harnett, M. T. (2022). Filopodia are a structural substrate for silent synapses in adult neocortex. <em>Nature</em>, 612, 323–327. <a href="https://doi.org/10.1038/s41586-022-05483-6" target="_blank">doi:10.1038/s41586-022-05483-6</a></li>
-<li>Alle, H., et al. (2024). Membrane potential states gate synaptic consolidation in human neocortical tissue. <em>Nature Communications</em>, 15, 7705. <a href="https://doi.org/10.1038/s41467-024-51402-7" target="_blank">doi:10.1038/s41467-024-51402-7</a></li>
+<li>Alle, H., et al. (2024). Membrane potential states gate synaptic consolidation in human neocortical tissue. <em>Nature Communications</em>, 15, 10340. <a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">doi:10.1038/s41467-024-53901-2</a></li>
 <li>Gibson, E. M., et al. (2014). Neuronal activity promotes oligodendrogenesis and adaptive myelination in the mammalian brain. <em>Science</em>, 344(6183), 1252304. <a href="https://doi.org/10.1126/science.1252304" target="_blank">doi:10.1126/science.1252304</a></li>
 <li>McKenzie, I. A., et al. (2014). Motor skill learning requires active central myelination. <em>Science</em>, 346(6207), 318–322. <a href="https://doi.org/10.1126/science.1254960" target="_blank">doi:10.1126/science.1254960</a></li>
 <li>Micheva, K. D., Kiraly, M., Perez, M. M., & Madison, D. V. (2021). Conduction Velocity Along the Local Axons of Parvalbumin Interneurons Correlates With the Degree of Axonal Myelination. <em>Cerebral Cortex</em>, 31(7), 3374–3392. <a href="https://doi.org/10.1093/cercor/bhab018" target="_blank">doi:10.1093/cercor/bhab018</a></li>
