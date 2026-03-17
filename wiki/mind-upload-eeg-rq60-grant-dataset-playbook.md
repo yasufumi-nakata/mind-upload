@@ -5,7 +5,7 @@ description: "An operation page with fixed application ID, main EEG data, select
 article_type: Wiki
 subtitle: "Fix submission decisions based on RQ, not general abstracts"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-18"
 note: "Per-RQ Grant and Dataset Playbook"
 audience: "People who want to apply for funding and decide on the first experiment for each RQ at the same time"
 reading_time: "20-30 minutes"
@@ -33,6 +33,7 @@ recommended_pages:
 1. Select one `RQ` and fix the `first application destination` and `main EEG-DATA`.
 2. Create only the `minimum deliverables` first (expand after completion).
 3. `C` judgments do not make performance claims and are submitted in the system/audit design track.
+4. Numeric `ID` in this page is for search guidance only. Submission/reproducibility logs must use `DOI + dataset name + access class` in the canonical map `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`.
 
 ## Fixed map (first application destination/preliminary application destination)
 
@@ -155,3 +156,11 @@ recommended_pages:
 - Reconfirmed `A/B/C=17/25/18` consistency against `mind-upload-eeg-rq60-feasibility-and-funds.md`.
 - Re-verified grant keys `G1-G6` and confirmed each ID is still resolvable from `grant_queue` or `auto-research-funds` sources.
 - Continued the same rule for execution and writing: keep `1RQ=1 submission decision` and transfer to applications in RQ units, not generic themes.
+
+## 2026-03-18 12:08 JST revalidation log (main run / one-RQ execution guard)
+
+- Rechecked this playbook row-by-row and reconfirmed `60RQ` coverage with no missing `Ux-RQy` line.
+- Revalidated consistency with feasibility page: `A/B/C=17/25/18` unchanged.
+- Revalidated grant IDs `G1-G6` in `grant_queue` and `auto-research-funds` sources.
+- Because current `EEG-DATA/eeg_dataset_summary_ja.csv` has remapped numeric IDs, this page's numeric IDs are handled as search aids only.
+- Submission-ready references are fixed to `DOI + dataset name + access class` from `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`.

@@ -1,32 +1,39 @@
-# Mind-upload RQ60 Application Playbook (RQ unit fixed)
-
-> Fix submission decisions based on RQ, not general abstracts
->
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
-
-- 更新日: 2026-03-15 / 位置づけ: Per-RQ Grant and Dataset Playbook
-
-## このページの役割
-This page is a practical playbook that targets each of mind-upload's 60 research questions and fixes the primary application destination/preliminary application destination, main EEG-DATA, reason for hiring, and submitted deliverables.
-
-## 正確さの前提
-A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-funds.md`.
-
-## 公開ページへ戻る
-- [Literature map](https://mind-upload.com/research_harvest_50.html)
-- [Data & Bench](https://mind-upload.com/datasets.html)
-
-## 関連 Wiki
-- [Wiki: RQ60 EEG verification availability and subsidy theme](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds) - Original copy of judgment basis, U-specific background, and RQ table.
-- [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Criteria for converting artifacts into verification specifications.
-
 ---
+layout: default
+title: "Mind-upload RQ60 Application Playbook (RQ unit fixed)"
+description: "An operation page with fixed application ID, main EEG data, selection reason, and minimum deliverables for each 60 RQ."
+article_type: Wiki
+subtitle: "Fix submission decisions based on RQ, not general abstracts"
+author: Mind Uploading Research Project
+last_updated: "2026-03-18"
+note: "Per-RQ Grant and Dataset Playbook"
+audience: "People who want to apply for funding and decide on the first experiment for each RQ at the same time"
+reading_time: "20-30 minutes"
+page_intro: "This page is a practical playbook that targets each of mind-upload's 60 research questions and fixes the primary application destination/preliminary application destination, main EEG-DATA, reason for hiring, and submitted deliverables."
+accuracy_note: "A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-funds.md`."
+wiki_links:
+  - label: "Wiki: RQ60 EEG verification availability and subsidy theme"
+    url: "/wiki/mind-upload-eeg-rq60-feasibility-and-funds.html"
+    description: "Original copy of judgment basis, U-specific background, and RQ table."
+  - label: "Wiki: Basics of verification infrastructure"
+    url: "/wiki/verification-basics.html"
+    description: "Criteria for converting artifacts into verification specifications."
+recommended_pages:
+  - label: "Literature map"
+    url: "/research_harvest_50.html"
+  - label: "Data & Bench"
+    url: "/datasets.html"
+---
+
+<main class="main-container">
+<article class="content-column">
 
 ## How to use
 
 1. Select one `RQ` and fix the `first application destination` and `main EEG-DATA`.
 2. Create only the `minimum deliverables` first (expand after completion).
 3. `C` judgments do not make performance claims and are submitted in the system/audit design track.
+4. Numeric `ID` in this page is for search guidance only. Submission/reproducibility logs must use `DOI + dataset name + access class` in the canonical map `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`.
 
 ## Fixed map (first application destination/preliminary application destination)
 
@@ -99,6 +106,7 @@ A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-f
 | U15-3 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 49 | Easy to connect to system audit indicators for safe shutdown and authority management. | System audit requirements table (technical log compatible) |
 | U15-4 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 49 | Easy to connect to system audit indicators for safe shutdown and authority management. | System audit requirements table (technical log compatible) |
 
+
 ## Additional information
 
 - This page is a quick guide for "fixing submission operations." Please refer to `mind-upload-eeg-rq60-feasibility-and-funds` for details on the reasons for the decision.
@@ -148,3 +156,11 @@ A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-f
 - Reconfirmed `A/B/C=17/25/18` consistency against `mind-upload-eeg-rq60-feasibility-and-funds.md`.
 - Re-verified grant keys `G1-G6` and confirmed each ID is still resolvable from `grant_queue` or `auto-research-funds` sources.
 - Continued the same rule for execution and writing: keep `1RQ=1 submission decision` and transfer to applications in RQ units, not generic themes.
+
+## 2026-03-18 12:08 JST revalidation log (main run / one-RQ execution guard)
+
+- Rechecked this playbook row-by-row and reconfirmed `60RQ` coverage with no missing `Ux-RQy` line.
+- Revalidated consistency with feasibility page: `A/B/C=17/25/18` unchanged.
+- Revalidated grant IDs `G1-G6` in `grant_queue` and `auto-research-funds` sources.
+- Because current `EEG-DATA/eeg_dataset_summary_ja.csv` has remapped numeric IDs, this page's numeric IDs are handled as search aids only.
+- Submission-ready references are fixed to `DOI + dataset name + access class` from `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`.

@@ -5,7 +5,7 @@ description: "A deep-dive note that fixes each of the 60 RQs, including the core
 article_type: Wiki
 subtitle: "Fix the issues for each RQ instead of a general summary"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-18"
 note: "RQ-by-RQ Deep Focus"
 audience: "People who want to translate each RQ directly into application statements and experimental procedures"
 reading_time: "20-35 minutes"
@@ -33,6 +33,7 @@ recommended_pages:
 1. Select only one `RQ` and implement only the `core to be directly verified with EEG` in the table below first.
 2. Copy the `application theme (grant key)` directly to the proposed application title.
 3. Don't expand your claim unless you can satisfy the ``required outside the EEG''.
+4. Numeric `ID` in this page is for search guidance only. Submission/reproducibility logs must use `DOI + dataset name + access class` in the canonical map `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`.
 
 ## Meaning of judgment
 
@@ -253,3 +254,11 @@ Reasons for proceeding in this order:
 - After reflecting the latest `main` of `mind-upload` / `EEG-DATA` / `auto-research-funds`, re-inspect the `RQ` line of the deep digging note.
 - Reconfirmed `RQ_TOTAL=60`, `A/B/C=17/25/18`, `Application theme (grant key)` missing `0`, `Main EEG-DATA` missing `0`.
 - The policy remains the same: `1RQ = 1 verification proposition = 1 application theme = 1 main data`, and each issue will be treated individually and in depth.
+
+## 2026-03-18 12:08 JST revalidation log (main run / deep-by-RQ enforcement)
+
+- Revalidated deep-focus operation with the same policy: avoid generic summaries and keep `1RQ = 1 verification proposition = 1 application theme = 1 main data`.
+- Rechecked RQ coverage on this page against `research_harvest_50.md` and related RQ60 pages (coverage maintained).
+- Revalidated grant keys `G1-G6` and source resolvability in `grant_queue`/`auto-research-funds`.
+- Confirmed EEG numeric IDs are present in latest `EEG-DATA` CSV but no longer reliable as fixed dataset identifiers after reindex/remap.
+- Fixed submission rule for this run: canonical references must be written using `DOI + dataset name + access class` in `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`.

@@ -1,32 +1,39 @@
-# Mind-upload RQ60 Deep focus notes (EEG-DATA × Grant)
-
-> Fix the issues for each RQ instead of a general summary
->
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
-
-- 更新日: 2026-03-15 / 位置づけ: RQ-by-RQ Deep Focus
-
-## このページの役割
-This page is a practical note that fixes the core of mind-upload's 60 RQs, which can be confirmed directly with EEG-DATA, application themes for auto-research-funds, and necessary requirements outside of EEG.
-
-## 正確さの前提
-A/B/C judgment is the same as mind-upload-eeg-rq60-feasibility-and-funds. C means 'not complete with EEG alone' rather than 'not important'.
-
-## 公開ページへ戻る
-- [Literature map](https://mind-upload.com/research_harvest_50.html)
-- [Data & Bench](https://mind-upload.com/datasets.html)
-
-## 関連 Wiki
-- [Wiki: RQ60 EEG verification availability and subsidy theme](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds) - The original version of the judgment and data candidates.
-- [Wiki: RQ60 Application Playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - Fixed table of applicant ID and minimum deliverables.
-
 ---
+layout: default
+title: "Mind-upload RQ60 Deep focus notes (EEG-DATA × Grant)"
+description: "A deep-dive note that fixes each of the 60 RQs, including the core, external requirements, and application themes that will be directly verified with EEG."
+article_type: Wiki
+subtitle: "Fix the issues for each RQ instead of a general summary"
+author: Mind Uploading Research Project
+last_updated: "2026-03-18"
+note: "RQ-by-RQ Deep Focus"
+audience: "People who want to translate each RQ directly into application statements and experimental procedures"
+reading_time: "20-35 minutes"
+page_intro: "This page is a practical note that fixes the core of mind-upload's 60 RQs, which can be confirmed directly with EEG-DATA, application themes for auto-research-funds, and necessary requirements outside of EEG."
+accuracy_note: "A/B/C judgment is the same as mind-upload-eeg-rq60-feasibility-and-funds. C means 'not complete with EEG alone' rather than 'not important'."
+wiki_links:
+  - label: "Wiki: RQ60 EEG verification availability and subsidy theme"
+    url: "/wiki/mind-upload-eeg-rq60-feasibility-and-funds.html"
+    description: "The original version of the judgment and data candidates."
+  - label: "Wiki: RQ60 Application Playbook"
+    url: "/wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html"
+    description: "Fixed table of applicant ID and minimum deliverables."
+recommended_pages:
+  - label: "Literature map"
+    url: "/research_harvest_50.html"
+  - label: "Data & Bench"
+    url: "/datasets.html"
+---
+
+<main class="main-container">
+<article class="content-column">
 
 ## How to use
 
 1. Select only one `RQ` and implement only the `core to be directly verified with EEG` in the table below first.
 2. Copy the `application theme (grant key)` directly to the proposed application title.
 3. Don't expand your claim unless you can satisfy the ``required outside the EEG''.
+4. Numeric `ID` in this page is for search guidance only. Submission/reproducibility logs must use `DOI + dataset name + access class` in the canonical map `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`.
 
 ## Meaning of judgment
 
@@ -247,3 +254,11 @@ Reasons for proceeding in this order:
 - After reflecting the latest `main` of `mind-upload` / `EEG-DATA` / `auto-research-funds`, re-inspect the `RQ` line of the deep digging note.
 - Reconfirmed `RQ_TOTAL=60`, `A/B/C=17/25/18`, `Application theme (grant key)` missing `0`, `Main EEG-DATA` missing `0`.
 - The policy remains the same: `1RQ = 1 verification proposition = 1 application theme = 1 main data`, and each issue will be treated individually and in depth.
+
+## 2026-03-18 12:08 JST revalidation log (main run / deep-by-RQ enforcement)
+
+- Revalidated deep-focus operation with the same policy: avoid generic summaries and keep `1RQ = 1 verification proposition = 1 application theme = 1 main data`.
+- Rechecked RQ coverage on this page against `research_harvest_50.md` and related RQ60 pages (coverage maintained).
+- Revalidated grant keys `G1-G6` and source resolvability in `grant_queue`/`auto-research-funds`.
+- Confirmed EEG numeric IDs are present in latest `EEG-DATA` CSV but no longer reliable as fixed dataset identifiers after reindex/remap.
+- Fixed submission rule for this run: canonical references must be written using `DOI + dataset name + access class` in `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`.

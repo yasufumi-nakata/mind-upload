@@ -5,7 +5,7 @@ description: "A practical page that determines the extent to which research_harv
 article_type: Wiki
 subtitle: "Deeply digging into each question and connecting it to the verification design and application theme"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-18"
 note: "RQ-by-RQ Deep Dive"
 audience: "People who want to translate RQ into experimental plans, people who want to create a grant application theme and data basis at the same time"
 reading_time: "25-40 minutes"
@@ -546,3 +546,11 @@ Operational rules: Prioritize `A/B` and link directly to the application, and `C
 - Verified all EEG IDs referenced on this page (`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`) exist in `EEG-DATA/eeg_dataset_summary_ja.csv` (missing `0`).
 - Re-verified grant IDs `G1-G6` (`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`) against `grant_queue` and `auto-research-funds/grant_eeg_dataset_match.csv`.
 - The operating rule remains fixed: avoid generic summary and keep `1RQ = 1 verification claim = 1 grant theme = 1 primary EEG dataset`.
+
+## 2026-03-18 12:08 JST revalidation log (main run / EEG-DATA remap guard)
+
+- Pulled latest `main` and rechecked `RQ=60` and `A/B/C=17/25/18` on this page (no missing row).
+- Rechecked grant keys `G1-G6` (`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`) against `grant_queue` and `auto-research-funds`.
+- Rechecked that referenced EEG numeric IDs still exist in `EEG-DATA/eeg_dataset_summary_ja.csv`, but also confirmed current CSV has major reindex/remap and `ID -> dataset name` fixed mapping is unsafe.
+- Kept operation rule fixed: write each RQ as `1RQ = 1 verification proposition = 1 application theme`, and treat numeric IDs as search hints only.
+- For submissions/reproducibility logs, use canonical references with `DOI + dataset name + access class` from `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`.

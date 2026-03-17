@@ -1,29 +1,39 @@
-# Mind-upload RQ60 × EEG-DATA verifiability and subsidy themes (in-depth version)
-
-> Deeply digging into each question and connecting it to the verification design and application theme
->
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
-
-- 更新日: 2026-03-15 / 位置づけ: RQ-by-RQ Deep Dive
-
-## このページの役割
-This page is a practical version of research_harvest_50's 60 RQs, which uses A/B/C to determine the range that can be solved with EEG-DATA, and summarizes the verification design, application theme, and dataset ID to be used for each RQ.
-
-## 正確さの前提
-Some RQs for U10/U12/U15 cannot be solved by EEG alone, so we judge that it is not possible and specify the necessary external requirements.
-
-## 公開ページへ戻る
-- [Literature map](https://mind-upload.com/research_harvest_50.html)
-- [Data & Bench](https://mind-upload.com/datasets.html)
-- [RQ60 Application Playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook)
-- [Issue](https://mind-upload.com/issue.html)
-
-## 関連 Wiki
-- [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Criteria for reducing judgment to experimental specifications.
-- [Wiki: Counterfactual/Intervention Verification](https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification) - Directly linked to causal evaluation of U4/U13.
-- [Wiki: Data partitioning and leaks](https://github.com/yasufumi-nakata/mind-upload/wiki/dataset-splits-and-leakage) - Required for U14 reproducibility audits.
-
 ---
+layout: default
+title: "Mind-upload RQ60 × EEG-DATA verifiability and subsidy themes (in-depth version)"
+description: "A practical page that determines the extent to which research_harvest_50's 60 research questions can be verified with EEG-DATA one by one, and organizes application themes and used data IDs for auto-research-funds."
+article_type: Wiki
+subtitle: "Deeply digging into each question and connecting it to the verification design and application theme"
+author: Mind Uploading Research Project
+last_updated: "2026-03-18"
+note: "RQ-by-RQ Deep Dive"
+audience: "People who want to translate RQ into experimental plans, people who want to create a grant application theme and data basis at the same time"
+reading_time: "25-40 minutes"
+page_intro: "This page is a practical version of research_harvest_50's 60 RQs, which uses A/B/C to determine the range that can be solved with EEG-DATA, and summarizes the verification design, application theme, and dataset ID to be used for each RQ."
+accuracy_note: "Some RQs for U10/U12/U15 cannot be solved by EEG alone, so we judge that it is not possible and specify the necessary external requirements."
+wiki_links:
+  - label: "Wiki: Basics of verification infrastructure"
+    url: "/wiki/verification-basics.html"
+    description: "Criteria for reducing judgment to experimental specifications."
+  - label: "Wiki: Counterfactual/Intervention Verification"
+    url: "/wiki/counterfactual-and-perturbation-verification.html"
+    description: "Directly linked to causal evaluation of U4/U13."
+  - label: "Wiki: Data partitioning and leaks"
+    url: "/wiki/dataset-splits-and-leakage.html"
+    description: "Required for U14 reproducibility audits."
+recommended_pages:
+  - label: "Literature map"
+    url: "/research_harvest_50.html"
+  - label: "Data & Bench"
+    url: "/datasets.html"
+  - label: "RQ60 Application Playbook"
+    url: "/wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html"
+  - label: "Issue"
+    url: "/issue.html"
+---
+
+<main class="main-container">
+<article class="content-column">
 
 ## Judgment rules
 
@@ -482,6 +492,7 @@ Operational rules: Prioritize `A/B` and link directly to the application, and `C
 - Subsidy key `G1-G6` and extension candidate ID (`1geD73ZENwB8yaor`, `lEYmRP97ng3perjO`, `1geD73Z9K2B8yaor`, `QKYgNPxZxN38bO1Z`, `46z9VPE6E0BrvEJR`, `1geD73ZE54B8yaor`, `1geD73Z6yq38yaor`) have been reconfirmed with `auto-research-funds/wiki` and `grant_eeg_dataset_match.csv`.
 - We will not perform a general summary in this run, but will continue to deeply dig into `1RQ = 1 verification proposition = 1 application theme = 1 main data`.
 
+
 ## 2026-03-15 06:02 JST revalidation log (main run/automation addition)
 
 - Re-verified with the latest state after running `git pull origin main` and updated the base commit to `mind-upload=8e75f7833c`, `EEG-DATA=b3fb0aabe3`, `auto-research-funds=6571303caf`.
@@ -535,3 +546,11 @@ Operational rules: Prioritize `A/B` and link directly to the application, and `C
 - Verified all EEG IDs referenced on this page (`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`) exist in `EEG-DATA/eeg_dataset_summary_ja.csv` (missing `0`).
 - Re-verified grant IDs `G1-G6` (`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`) against `grant_queue` and `auto-research-funds/grant_eeg_dataset_match.csv`.
 - The operating rule remains fixed: avoid generic summary and keep `1RQ = 1 verification claim = 1 grant theme = 1 primary EEG dataset`.
+
+## 2026-03-18 12:08 JST revalidation log (main run / EEG-DATA remap guard)
+
+- Pulled latest `main` and rechecked `RQ=60` and `A/B/C=17/25/18` on this page (no missing row).
+- Rechecked grant keys `G1-G6` (`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`) against `grant_queue` and `auto-research-funds`.
+- Rechecked that referenced EEG numeric IDs still exist in `EEG-DATA/eeg_dataset_summary_ja.csv`, but also confirmed current CSV has major reindex/remap and `ID -> dataset name` fixed mapping is unsafe.
+- Kept operation rule fixed: write each RQ as `1RQ = 1 verification proposition = 1 application theme`, and treat numeric IDs as search hints only.
+- For submissions/reproducibility logs, use canonical references with `DOI + dataset name + access class` from `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`.
