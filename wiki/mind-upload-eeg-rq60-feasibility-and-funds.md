@@ -836,3 +836,11 @@ recommended_pages:
 4. `U1-2`（不確実性伝播の校正）
 5. `U13-1`（意味復元と因果再現の分離）
 6. `U15-2`（neurorights監査項目化）
+
+## 2026-03-17 18:02 JST 再検証ログ（本run / RQ60可否判定の再固定）
+
+- 作業前に `main` を `pull --ff-only` し、既存差分を保持したまま本runの検証を実施しました。
+- `research_harvest_50` 系の `Ux-y` を再照合し、`RQ_UNIQUE=60`、判定内訳 `A/B/C=17/25/18` を再確認しました。
+- `G1-G6` 実ID（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で全件参照可能でした。
+- 本ページで参照する `ID` 群（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で欠落 `0` を確認しました。
+- 運用方針は据え置きです。汎用要約ではなく、`1RQ=1検証命題=1応募テーマ=1主データ` で深掘り記述を継続します。
