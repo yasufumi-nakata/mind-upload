@@ -304,6 +304,16 @@ connectome-complete は「何がつながっているか」がかなり分かっ
 <td>断片データであり、whole-brain connectome、current synaptic efficacy、neuromodulatory context、sleep-dependent maintenance-state はまだ直接与えません。</td>
 </tr>
 <tr>
+<td><strong>human ultra-high-gradient dMRI</strong><br>Ramos-Llorden ら</td>
+<td>living human brain で diffusion MRI の神経回路感度が上がり、細い白質束や軸索径 / 細胞サイズに関わる microstructural contrast を、従来より強い structural scaffold として読めるようになりました。</td>
+<td>synapse-resolved connectome、current synaptic efficacy、local transmitter / glia state、momentary delay / controller state の direct readout ではありません。</td>
+</tr>
+<tr>
+<td><strong>human connectomics-informed implant decoding</strong><br>Merk ら</td>
+<td>whole-brain connectomics と invasive neurophysiology が相補的であり、brain implant 患者で decoder の localization / transfer / generalization を押し上げうることが示されました。</td>
+<td>population-level spatial prior と complementary information の前進であり、individual の momentary latent state、same-brain whole-brain completeness、emulation-ready state estimate を直接は与えません。</td>
+</tr>
+<tr>
 <td><strong>human metabolic connectome</strong><br>Lucchetti ら</td>
 <td>whole-brain <sup>1</sup>H-MRSI から、再現性のある parcel-level biochemical organization を human で描けるようになりました。</td>
 <td>Glx / Ins / Cho / tCr / tNAA の parcel-level similarity は、cell-specific transmitter state、astrocyte ensemble、synaptic weight、local recovery controller の ground truth ではありません。</td>
@@ -313,7 +323,7 @@ connectome-complete は「何がつながっているか」がかなり分かっ
 <div class="note-box">
 <strong>この追補で明確にした批判点</strong>
 <p>
-したがって、本サイトでは今後、<strong>「human でも EM が取れた」</strong>を<strong>whole-brain state-complete</strong>と読み替えず、<strong>「human で metabolic connectome が描けた」</strong>を<strong>local glial / transmitter state の直接観測</strong>と読み替えません。逆に、これらは human 側で何が見え始めたかを示す重要な前進であり、<strong>structural scaffold</strong> と <strong>macro-biochemical scaffold</strong> を分けて積み上げる方が、一次文献に整合的でございます。
+前版の弱点は、human 側の bridge evidence を fragment EM と metabolic connectome に寄せすぎ、<strong>living human での structural-prior route</strong> と <strong>decoder-transfer route</strong> を十分に別扱いしていなかった点でございました。したがって、本サイトでは今後、<strong>「human でも EM が取れた」</strong>を<strong>whole-brain state-complete</strong>と読み替えず、<strong>「human で metabolic connectome が描けた」</strong>を<strong>local glial / transmitter state の直接観測</strong>と読み替えず、さらに <strong>「human connectomics で decoder が良くなった」</strong>を<strong>individual latent-state の direct readout</strong>と読み替えません。逆に、これらは human 側で何が見え始めたかを示す重要な前進であり、<strong>structural scaffold</strong>、<strong>decoder-oriented spatial prior</strong>、<strong>macro-biochemical scaffold</strong> を分けて積み上げる方が、一次文献に整合的でございます。
 </p>
 </div>
 </section>
@@ -421,6 +431,12 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <td>mouse visual cortex の特定課題・特定状態での前進であり、全脳・全状態の一般化や hidden state の十分性、さらには momentary synaptic weight の十分性までは保証しません。</td>
 </tr>
 <tr>
+<td><strong>+ normative human connectomic prior</strong></td>
+<td>ultra-high-gradient dMRI、atlas、whole-brain connectivity を decoder や localization へ足した条件です。</td>
+<td>Ramos-Llorden らと Merk らが示す route に沿って、living human で <strong>structural scaffold / spatial prior / decoder transfer</strong> の gain を定量できます。</td>
+<td>population prior と complementary information の改善であり、individual の current synaptic state や same-brain state completeness を直接与えません。</td>
+</tr>
+<tr>
 <td><strong>+ transcriptomic / cell-type label</strong></td>
 <td>same-brain か近接条件での transcriptomic type と target specificity です。</td>
 <td>Gamlin らは predicted Sst transcriptomic types ごとに接続モチーフ、シナプス特性、髄鞘化が系統的に異なることを示し、node label の増分価値を具体化しました。</td>
@@ -468,6 +484,7 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <li><strong>connectome-complete：</strong>構造アトラス、候補 scaffold、圧縮の出発点として扱います。L2/L3 の emulation 達成とは書きません。</li>
 <li><strong>connectome-constrained model：</strong>まずは hypothesis engine / conditional model として扱います。内部状態の唯一解とは書きません。</li>
 <li><strong>augmentation / ablation：</strong>connectome-only baseline を置かずに、「追加した state variable が効いた」とは書きません。</li>
+<li><strong>human connectomic prior / decoder transfer：</strong>dMRI、atlas、whole-brain connectomic prior が decoder を改善しても、まず <strong>population spatial prior</strong> と <strong>complementary information</strong> として扱います。individual momentary latent state の direct readout や emulation-ready estimate と言い換えません。</li>
 <li><strong>species / stack をまたぐとき：</strong>fly / mouse / human、local / fragment / whole-brain、structural / functional / metabolic の差を本文に残し、external validity ceiling を省略しません。</li>
 <li><strong>intrinsic excitability / homeostatic set point：</strong>cell-type ラベルや短時間の活動一致から自動推定されたことにはしません。測っていなければ latent state と書きます。</li>
 <li><strong>PSD 面積 / spine size / synapse count：</strong>paired physiology や perturbation が無い限り、current effective weight とは書かず、structural prior と書きます。</li>
@@ -552,6 +569,8 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <li>Hadzibegovic, N., et al. (2026). Early intrinsic excitability plasticity of neocortical engram neurons defines memory formation and precision. <em>Nature Communications</em>, 17, 291. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">doi:10.1038/s41467-025-66975-3</a></li>
 <li>Loomba, S., Straehle, J., Gangadharan, V., et al. (2022). Connectomic comparison of mouse and human cortex. <em>Science</em>, 377(6602), eabo0924. <a href="https://doi.org/10.1126/science.abo0924" target="_blank">doi:10.1126/science.abo0924</a></li>
 <li>Shapson-Coe, A., Januszewski, M., Berger, D. R., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <em>Science</em>, 384(6696), eadk4858. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
+<li>Ramos-Llorden, G., et al. (2026). Connectome 2.0: an ultra-high gradient MRI scanner for improved sensitivity to neural circuitry. <em>Nature Biomedical Engineering</em>, 10, 339–353. <a href="https://doi.org/10.1038/s41551-025-01457-x" target="_blank">doi:10.1038/s41551-025-01457-x</a></li>
+<li>Merk, T., et al. (2026). Invasive neurophysiology and whole brain connectomics provide complementary information for neural decoding in patients with brain implants. <em>Nature Biomedical Engineering</em>, 10, 354–367. <a href="https://doi.org/10.1038/s41551-025-01467-9" target="_blank">doi:10.1038/s41551-025-01467-9</a></li>
 <li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <em>Nature Communications</em>, 16, 11344. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
 <li>Ren, J., Sherry, A. D., &amp; Malloy, C. R. (2015). 31P-MRS of healthy human brain: ATP synthesis, metabolite concentrations, pH, and T1 relaxation times. <em>NMR in Biomedicine</em>, 28(11), 1455–1462. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">doi:10.1002/nbm.3384</a></li>
 <li>Li, J., Xu, H. N., Yuan, J., et al. (2025). Dynamic deuterium metabolic imaging reveals whole-brain glucose metabolic turnover and neuronal function in humans. <em>PNAS Nexus</em>, 4(3), pgaf079. <a href="https://doi.org/10.1093/pnasnexus/pgaf079" target="_blank">doi:10.1093/pnasnexus/pgaf079</a></li>

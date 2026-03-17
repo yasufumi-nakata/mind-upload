@@ -1060,6 +1060,12 @@ connectome-complete は <strong>emulation-complete を意味しません</strong
 <td>構造 scaffold と annotation に留め、dynamical claim へは上げません。</td>
 </tr>
 <tr>
+<td><strong>+ human connectomic prior</strong></td>
+<td>dMRI / atlas / whole-brain connectivity を足した条件と、signal-only baseline を同じ患者分割・施設外 split で比較すること。</td>
+<td>structural scaffold / spatial prior / decoder transfer が localization や generalization をどこまで改善したかを限定して言えます。</td>
+<td>population prior と complementary information の改善に留め、individual latent-state の direct readout や emulation-ready estimate とは言い換えません。</td>
+</tr>
+<tr>
 <td><strong>+ transcriptomic / cell-type label</strong></td>
 <td>node label を外した条件との ablation、target specificity や held-out response の gain を出すこと。</td>
 <td>cell-type 情報が target-specific connectivity や応答予測をどれだけ改善したかを言えます。</td>
@@ -1089,6 +1095,12 @@ connectome-complete は <strong>emulation-complete を意味しません</strong
 <strong>2026-03 追補：augmentation claim には measurement stack を添える</strong>
 <p>
 同じ「transcriptomic label を足した」「same-brain function を足した」でも、whole-brain spatial atlas、Patch-seq、volume EM、same-brain calcium+EM、local transmitter sensor では直接観測している変数が違います。したがって本サイトでは、augmentation claim に <strong>どの measurement stack で得た追加情報か</strong> を必ず添え、stack ごとの claim ceiling も別に書きます。整理表は <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: 計測スタックごとの observability と claim ceiling</a> を参照してください。
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-17 追補：human connectomic prior は decoder transfer を助けても latent-state readout ではありません</strong>
+<p>
+<a href="https://doi.org/10.1038/s41551-025-01457-x" target="_blank">Ramos-Llorden et al. (2026)</a> の ultra-high-gradient dMRI と <a href="https://doi.org/10.1038/s41551-025-01467-9" target="_blank">Merk et al. (2026)</a> の connectomics-informed implant decoding が示すように、living human でも whole-brain connectomics は <strong>structural scaffold</strong>、<strong>spatial prior</strong>、<strong>decoder transfer aid</strong> として大きな価値があります。一方で、それは synapse-resolved connectome でも individual momentary state の direct readout でもありません。したがって本サイトでは、human connectomic prior を足した augmentation claim を <strong>localization / generalization / transfer</strong> に限定し、state-complete reconstruction や emulation-ready estimate へは昇格させません。根拠整理は <a href="wiki/connectome-is-not-enough.html#transfer-ceiling">Wiki: 配線図だけでは足りない理由の transfer ceiling 節</a> に集約します。
 </p>
 </div>
 </section>
