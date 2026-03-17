@@ -5,7 +5,7 @@ description: "公開ページの要点を A4 冊子向けに自動生成した�
 article_type: "Briefing Booklet"
 subtitle: "公開ページの front matter と冒頭要約から再生成される A4 要約版"
 author: Mind Uploading Research Project
-last_updated: "2026-03-16"
+last_updated: "2026-03-17"
 note: "Auto-generated from public pages"
 body_class: "summary-booklet-page"
 ---
@@ -25,7 +25,7 @@ body_class: "summary-booklet-page"
   <div class="booklet-cover-band">
     <div>
   <span>更新基準日</span>
-  <strong>2026-03-16</strong>
+  <strong>2026-03-17</strong>
 </div>
 <div>
   <span>現在の重点</span>
@@ -384,7 +384,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Primer - 夢を守るために、まず物差しを作る / 10〜15分</p>
   <p>マインドアップロードを本気で前に進めるには、「できたと言える条件」と「できていないと分かる条件」を先に決めるのが最短です。Mind-Uploadは、そのチェック方法をそろえるための検証基盤を作っています。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>まず『いま言えること／言えないこと』を分けて、話を盛りすぎないようにします。</li><li>クレーム階段で、L0の再現解析とL4の本人性主張を混同しないようにします。</li><li>connectome と cell type だけでは長期ダイナミクスは決まらず、hidden state の監査が別に要ります。</li>
+    <li>まず『いま言えること／言えないこと』を分けて、話を盛りすぎないようにします。</li><li>クレーム階段で、L0の再現解析とL4の本人性主張を混同しないようにします。</li><li>connectome と cell type だけでは長期ダイナミクスも樹状突起 branch の局所計算も決まらず、hidden state の監査が別に要ります。</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -410,7 +410,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">FAQ - 派手な結論より、検証できる前進を / 8〜15分</p>
   <p>ここは「よくある勘違い」を先に避けるためのページです。主張が大きいほど、(1)言葉の定義、(2)評価の物差し、(3)間違いと判定する条件、(4)再現手順の順で確認します。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>『このサイトは何をするのか』『EEG / brain-to-text で何が言えるのか』など、最初の疑問をまとめて潰せます。</li><li>『コネクトームと cell type で十分か』という誤読にも、短くても科学的に答えます。</li><li>派手な言い切りを避け、何が未解決かも同時に書いています。</li>
+    <li>『このサイトは何をするのか』『EEG / brain-to-text で何が言えるのか』など、最初の疑問をまとめて潰せます。</li><li>『コネクトームと cell type で十分か』という誤読にも、current synaptic state・dendritic integration・AIS / excitability・slow maintenance-state を分けて答えます。</li><li>派手な言い切りを避け、何が未解決かも同時に書いています。</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
