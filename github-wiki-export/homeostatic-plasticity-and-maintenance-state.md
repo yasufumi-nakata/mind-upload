@@ -7,7 +7,7 @@
 - 更新日: 2026-03-17 / 位置づけ: Technical / natural science only
 
 ## このページの役割
-このページは、『配線図も cell type も分かれば、残りはだいたい埋まるのではないか』という直感に対し、内在興奮性、AIS / ion-channel landscape、発火率 set point、睡眠依存の再正規化、髄鞘/オリゴデンドロサイト結合、グリア代謝、分子ターンオーバー下の維持機構がなお別変数として残ることを、一次文献ベースで整理する wiki です。哲学や法制度ではなく、技術と自然科学だけに絞ります。
+このページは、『配線図も cell type も分かれば、残りはだいたい埋まるのではないか』という直感に対し、内在興奮性、AIS / ion-channel landscape、発火率 set point、睡眠依存の再正規化、髄鞘/オリゴデンドロサイト結合、グリア代謝、clearance / immune support、分子ターンオーバー下の維持機構がなお別変数として残ることを、一次文献ベースで整理する wiki です。哲学や法制度ではなく、技術と自然科学だけに絞ります。
 
 ## 正確さの前提
 ここで示すのは、長期ダイナミクスや記憶維持を読むときに最低限外してはいけない hidden state の整理です。これで十分条件が確定したという意味ではありません。
@@ -25,20 +25,20 @@
 ## いま分かっていること
 - 同じ transcriptomic type の内部にも morpho-electric phenotype の連続性や variability が残ります。
 - firing rate や synaptic strength は、sleep/wake cycle をまたぐ homeostatic plasticity によって調整されます。
-- 髄鞘、オリゴデンドロサイト、アストロサイトの状態は timing、代謝、記憶想起、長期回復に関わります。
-- human でも MRSI-based metabolic connectome、myelin bilayer mapping、TMS/EEG・sleep plasticity proxy により macro scaffold と perturbational proxy は見え始めていますが、cell-specific maintenance-state はまだ粗く残ります。
+- 髄鞘、オリゴデンドロサイト、アストロサイト、microglia / meningeal lymphatic 系の状態は timing、代謝、記憶想起、長期回復、clearance support に関わります。
+- human でも MRSI-based metabolic connectome、myelin bilayer mapping、TMS/EEG・sleep plasticity proxy、CSF / glymphatic proxy により macro scaffold と support-state proxy は見え始めていますが、cell-specific maintenance-state はまだ粗く残ります。
 
 ## まだ分かっていないこと
-- どの粒度まで excitability / sleep-homeostasis / metabolic support を測れば WBE の十分条件に近づくかは未確定です。
-- 人で直接測れない maintenance state を、MRSI / myelin bilayer / TMS-EEG / sleep plasticity proxy のどれで、どの外部基準へ較正すべきかは未確定です。
-- 長期 closed-loop claim に対して、どの sleep / myelin / metabolic 指標を共通提出物にするかもまだ固定されていません。
-- parcel-level metabolic similarity が cell-specific glial / transmitter / synaptic maintenance-state をどこまで拘束するかも未確定です。
+- どの粒度まで excitability / sleep-homeostasis / metabolic support / clearance support を測れば WBE の十分条件に近づくかは未確定です。
+- 人で直接測れない maintenance state を、MRSI / myelin bilayer / TMS-EEG / sleep plasticity proxy / CSF-glymphatic proxy のどれで、どの外部基準へ較正すべきかは未確定です。
+- 長期 closed-loop claim に対して、どの sleep / myelin / metabolic / clearance 指標を共通提出物にするかもまだ固定されていません。
+- parcel-level metabolic similarity や CSF mobility proxy が cell-specific glial / immune / transmitter / synaptic maintenance-state をどこまで拘束するかも未確定です。
 
 ---
 
 <h2>いちばん短い結論</h2>
 <p>
-<strong>connectome と cell type が分かっても、長期ダイナミクスはまだ決まりません</strong>。現状の一次文献が比較的一貫して示しているのは、少なくとも 6 種類の maintenance-state が残るということです。第一に、同じ transcriptomic type の内部でも morpho-electric phenotype と ion-channel expression は幅を持ち、さらに AIS geometry や Na+ channel distribution が数時間から数日スパンで動きえます。第二に、神経回路は firing rate や synaptic strength を homeostatic に調整し、<strong>今の活動</strong>を保つだけでなく、<strong>どこへ戻るか</strong>という set point 自体を持ちます。第三に、sleep / wake cycle は synaptic scaling と firing-rate homeostasis を時間的に分業させます。第四に、髄鞘とオリゴデンドロサイト結合は timing だけでなく axonal support にも関わります。第五に、アストロサイトやグリア代謝は記憶固定化の背景ではなく、<strong>記憶想起、数日スパンの安定化、恐怖記憶表現</strong>にも関わります。第六に、分子ターンオーバー下で記憶が残るとしても、それは静止した分子の永久保存ではなく、active maintenance が働いているという意味です。したがって、本サイトでは <strong>relative excitability・AIS / channel state・恒常性 set point・睡眠依存再正規化・髄鞘/代謝維持・astrocyte ensemble を含む再固定化機構</strong>を、connectome の外側に残る hidden state として扱います。
+<strong>connectome と cell type が分かっても、長期ダイナミクスはまだ決まりません</strong>。現状の一次文献が比較的一貫して示しているのは、少なくとも 7 種類の maintenance-state が残るということです。第一に、同じ transcriptomic type の内部でも morpho-electric phenotype と ion-channel expression は幅を持ち、さらに AIS geometry や Na+ channel distribution が数時間から数日スパンで動きえます。第二に、神経回路は firing rate や synaptic strength を homeostatic に調整し、<strong>今の活動</strong>を保つだけでなく、<strong>どこへ戻るか</strong>という set point 自体を持ちます。第三に、sleep / wake cycle は synaptic scaling と firing-rate homeostasis を時間的に分業させます。第四に、髄鞘とオリゴデンドロサイト結合は timing だけでなく axonal support にも関わります。第五に、アストロサイトやグリア代謝は記憶固定化の背景ではなく、<strong>記憶想起、数日スパンの安定化、恐怖記憶表現</strong>にも関わります。第六に、meningeal lymphatic drainage、CSF-interstitial exchange、microglia を含む clearance / immune support は synaptic physiology と multiday recovery を支えます。第七に、分子ターンオーバー下で記憶が残るとしても、それは静止した分子の永久保存ではなく、active maintenance が働いているという意味です。したがって、本サイトでは <strong>relative excitability・AIS / channel state・恒常性 set point・睡眠依存再正規化・髄鞘/代謝維持・astrocyte ensemble・clearance / immune support を含む再固定化機構</strong>を、connectome の外側に残る hidden state として扱います。
 </p>
 
 <strong>このページの範囲</strong>
@@ -46,7 +46,7 @@
 ここでは哲学、法制度、コピー問題は扱いません。扱うのは、WBE や長期 BCI を読むときに、配線図、cell type、短期活動一致だけではまだ過小規定である理由です。
 </p>
 
-<h2>先に固定する 6 つの maintenance-state</h2>
+<h2>先に固定する 7 つの maintenance-state</h2>
 <table>
 <thead>
 <tr>
@@ -86,6 +86,12 @@
 <td>astrocyte-neuron lactate shuttle、astrocyte ensemble の再活性化、local transmitter に対する astrocyte network 応答、slow metabolic support です。</td>
 <td>ニューロン側のエングラムだけ追えば、想起や数日後の安定化までほぼ決まる、と読むことです。</td>
 <td>glial / metabolic state を落とすなら、可塑性・記憶想起・再安定化・slow state の適用範囲を限定します。</td>
+</tr>
+<tr>
+<td><strong>clearance / immune support</strong></td>
+<td>meningeal lymphatic drainage、CSF-interstitial exchange、microglia-mediated surveillance、protein / metabolite clearance と回復時の免疫支持です。</td>
+<td>clearance は passive housekeeping なので、momentary neural fit や翌日の安定性にはほぼ関係しない、と読むことです。</td>
+<td>clearance / immune support を落とすなら、multiday recovery、protein-clearance、support-state claim を弱め、human proxy は support-state proxy と明記します。</td>
 </tr>
 <tr>
 <td><strong>分子ターンオーバー下の再固定化</strong></td>
@@ -130,7 +136,7 @@
 
 <h3>6. アストロサイトは記憶想起・安定化・表現の state variable です</h3>
 <p>
-maintenance-state を neuron-centric に読みすぎると、エネルギー供給と local transmitter integration を「背景ノイズ」と誤読しやすくなります。<a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a> は astrocyte-neuron lactate transport が long-term memory formation に必要であることを示しました。<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> は、局所的で瞬間的な neurotransmitter input が分オーダーにわたる広い astrocyte network state に符号化されることを示しました。さらに <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a> は hippocampus で learning-associated astrocyte ensemble が engram neuron の近傍に形成され、ensemble 再活性化が memory recall を引き起こし、astrocyte 特異的 NFIA deletion が recall を抑えることを示しました。<a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a> は emotional memory に伴う astrocyte ensemble が repeated recall をまたいで数日スパンの安定化へ寄与し、noradrenergic input と local engram signal を統合して memory stability と precision を左右することを示しました。さらに <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> は basolateral amygdala astrocytes が fear retrieval / extinction に応じて再編成され、astrocyte Ca<sup>2+</sup> signaling が amygdala-prefrontal circuit の neural representation を支えることを示しました。ここから直接言えるのは、<strong>glial / metabolic background を後付け補正とみなすのは危険であり、長期記憶では astrocyte ensemble 自体が state variable として残る</strong>という点です。memory consolidation や slow network state を論じるなら、少なくとも astrocyte / metabolic support をどこまで測ったか、どこから先を proxy で代用したかを区別する必要があります。
+maintenance-state を neuron-centric に読みすぎると、エネルギー供給と local transmitter integration を「背景ノイズ」と誤読しやすくなります。<a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a> は astrocyte-neuron lactate transport が long-term memory formation に必要であることを示しました。<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> は、局所的で瞬間的な neurotransmitter input が分オーダーにわたる広い astrocyte network state に符号化されることを示しました。さらに <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a> は hippocampus で learning-associated astrocyte ensemble が engram neuron の近傍に形成され、ensemble 再活性化が memory recall を引き起こし、astrocyte 特異的 NFIA deletion が recall を抑えることを示しました。<a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a> は emotional memory に伴う astrocyte ensemble が repeated recall をまたいで数日スパンの安定化へ寄与し、noradrenergic input と local engram signal を統合して memory stability と precision を左右することを示しました。さらに <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> は basolateral amygdala astrocytes が fear retrieval / extinction に応じて再編成され、astrocyte Ca<sup>2+</sup> signaling が amygdala-prefrontal circuit の neural representation を支えることを示しました。ここから直接言えるのは、<strong>glial / metabolic background を後付け補正とみなすのは危険であり、長期記憶では astrocyte ensemble 自体が state variable として残る</strong>という点です。ただしこれらの強い因果証拠の中心は rodent の hippocampus / amygdala 課題であり、human arbitrary content や whole-brain maintenance-state の直接読出しへはそのまま上げません。memory consolidation や slow network state を論じるなら、少なくとも astrocyte / metabolic support をどこまで測ったか、どこから先を proxy で代用したかを区別する必要があります。
 </p>
 
 <strong>証拠強度の読み方</strong>
@@ -138,19 +144,29 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 一方で、<a href="https://doi.org/10.1038/s41586-023-07011-6" target="_blank">Sun et al. (2024)</a> の spatial transcriptomics は peri-engram neuron と astrocyte の相互作用、および <em>Igfbp2</em> を long-term memory candidate として提案しましたが、<a href="https://doi.org/10.1038/s41586-025-08988-y" target="_blank">Mukamel &amp; Yu (2025)</a> は multiple-comparison と同一動物由来細胞の依存性を補正すると有意な DEG は残らないと批判し、<a href="https://doi.org/10.1038/s41586-025-08989-x" target="_blank">Sun et al. (2025)</a> は解析意図の違いを理由に反論しました。したがって本サイトでは、この系を <strong>transcriptomic clue / hypothesis-generating evidence</strong> として扱い、glia の因果的な重みづけは <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>、<a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a>、<a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> のような再活性化・阻害・回路表現の介入研究の方へ置きます。
 </p>
 
-<h3>7. 分子ターンオーバー下の記憶は、静的保存ではなく再固定化として読むべきです</h3>
+<h3>7. clearance / immune support は passive cleanup ではありません</h3>
+<p>
+今回さらに深掘りして見えた弱点は、<strong>astrocyte / metabolic support</strong> を厚く書いた一方で、<strong>meningeal lymphatics、CSF-interstitial exchange、microglia を含む clearance / immune support</strong> を独立の maintenance-state として十分に切り出せていなかった点でございます。<a href="https://doi.org/10.1038/nature14432" target="_blank">Louveau et al. (2015)</a> は CNS lymphatic vessels の構造と機能を示し、<a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Kim et al. (2025)</a> は meningeal lymphatics-microglia axis が synaptic physiology を調整することを示しました。human 側でも <a href="https://doi.org/10.1093/brain/awab285" target="_blank">Eide &amp; Ringstad (2021)</a> は sleep deprivation が molecular clearance を阻害することを、<a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> は MRI で region-specific な CSF mobility driver を測れることを、<a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> は human で glymphatic route に沿った amyloid-beta / tau clearance を示しました。ここから直接言えるのは、<strong>clearance / immune support は単なる掃除の比喩ではなく、multiday support-state として measurable になりつつある</strong>という点です。ただし同時に、これら human データは <strong>local synaptic weight</strong> や <strong>moment-to-moment neural truth</strong> の direct readout ではありません。したがって本サイトでは、clearance / immune support を <strong>slow support-state</strong> として独立扱いしつつ、human ではまず <strong>macro support proxy</strong> として読みます。
+</p>
+
+<strong>human clearance proxy の読み方</strong>
+<p>
+<a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> は <strong>CSF mobility</strong> を測る 7T MRI technical report であり、clearance flux そのものの direct readout ではありません。<a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> は randomized crossover と plasma biomarker を組み合わせた重要な前進ですが、<strong>investigational device</strong> と <strong>compartment model</strong> に依存し、論文自身も一部解析で multiple-comparison adjustment の不足を残しています。したがって本サイトでは、両者を <strong>provisional human support-state proxy</strong> として扱い、cell-specific immune controller や local synaptic maintenance の ground truth へは上げません。
+</p>
+
+<h3>8. 分子ターンオーバー下の記憶は、静的保存ではなく再固定化として読むべきです</h3>
 <p>
 <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Lee et al. (2022)</a> は、シミュレーションと解析を通じて、synaptic memory が molecular turnover の下でも active な CaMKII state transfer により維持されうることを示しました。ここから直接言えるのは、「分子が入れ替わっても記憶が残ることはありうる」という点です。しかし逆に言えば、<strong>記憶の持続は静的分子 snapshot の十分性を意味せず、維持機構が働いていることを意味する</strong>と読む方が安全でございます。sleep 中の synaptic scaling や glial-metabolic support を合わせて読むと、記憶維持は単一分子の凍結保存ではなく、<strong>再正規化と再固定化の連鎖</strong>として扱う方が一次文献に近い整理になります。
 </p>
 
-<h3>8. 相対 excitability は将来の記憶配分を左右します</h3>
+<h3>9. 相対 excitability は将来の記憶配分を左右します</h3>
 <p>
 <a href="https://doi.org/10.1016/j.neuron.2014.07.017" target="_blank">Yiu et al. (2014)</a> は、学習前の相対的な neuronal excitability が、どのニューロンが memory trace に組み込まれやすいかを左右することを示しました。さらに <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">Hadzibegovic et al. (2026)</a> は、neocortical engram neurons の early intrinsic excitability plasticity が memory formation と precision を規定することを示しています。したがって、<strong>connectome が同じでも excitability landscape が違えば、将来の学習経路と記憶配分は変わりえます</strong>。
 </p>
 
 <h2>2026-03 追補：human maintenance-state の直接観測はまだ粗い</h2>
 <p>
-今回さらに深掘りして見えた弱点は、human observability の節が、<strong>EM 断片</strong>、<strong>whole-brain MRSI</strong>、<strong>myelin bilayer imaging</strong>、<strong>TMS-EEG / sleep plasticity proxy</strong> を同じ「human で見え始めた証拠」としてまとめすぎていた点でございます。一次文献を並べると、それぞれが押し上げているのは <strong>structural scaffold</strong>、<strong>macro-biochemical scaffold</strong>、<strong>macro-myelin proxy</strong>、<strong>perturbation-conditioned plasticity proxy</strong> という別々の層です。どれも重要ですが、<strong>current synaptic efficacy</strong>、<strong>local transmitter specificity</strong>、<strong>astrocyte ensemble</strong>、<strong>sleep-dependent recovery controller</strong> を直接は与えません。したがって、human 側でも maintenance-state はなお <strong>macro scaffold / macro proxy / local hidden state</strong> に分かれて残ります。
+今回さらに深掘りして見えた弱点は、human observability の節が、<strong>EM 断片</strong>、<strong>whole-brain MRSI</strong>、<strong>myelin bilayer imaging</strong>、<strong>TMS-EEG / sleep plasticity proxy</strong>、<strong>CSF / glymphatic proxy</strong> を同じ「human で見え始めた証拠」としてまとめすぎていた点でございます。一次文献を並べると、それぞれが押し上げているのは <strong>structural scaffold</strong>、<strong>macro-biochemical scaffold</strong>、<strong>macro-myelin proxy</strong>、<strong>perturbation-conditioned plasticity proxy</strong>、<strong>macro support-state proxy</strong> という別々の層です。特に <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> で直接見えているのは 5 代謝物の parcel-level covariance であり、cell-specific glial routing ではありません。どれも重要ですが、<strong>current synaptic efficacy</strong>、<strong>local transmitter specificity</strong>、<strong>astrocyte ensemble</strong>、<strong>sleep-dependent recovery controller</strong>、<strong>cell-specific immune controller</strong> を直接は与えません。したがって、human 側でも maintenance-state はなお <strong>macro scaffold / macro proxy / local hidden state</strong> に分かれて残ります。
 </p>
 <table>
 <thead>
@@ -186,15 +202,20 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <td>EEG-defined excitability state が TMS-induced plasticity efficacy を左右する、という state-conditioned causal proxy。</td>
 <td>AIS geometry、channel distribution、cell-specific allocation state、長期 recovery controller。</td>
 </tr>
+<tr>
+<td><strong>human CSF / glymphatic proxy</strong><br>Hirschler ら、Dagum ら</td>
+<td>region-specific な CSF mobility と、device/model-based な protein-biomarker transport を用いた macro support-state proxy。</td>
+<td>どの synapse、どの astrocyte、どの microglia、どの meningeal lymphatic controller がその差を担ったか。</td>
+</tr>
 </tbody>
 </table>
 <p>
-この差は実務上重要でございます。<a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> は fixed tissue の局所 ultrastructure を、<a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> は whole-brain の biochemical covariance を、<a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> は myelin bilayer の in vivo map を、<a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>、<a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>、<a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a>、<a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> は sleep / wake / nap や瞬間 brain state が human plasticity response を変えることを、それぞれ別々に押し上げました。重要なのは、<strong>これらが同じ種類の direct measurement ではない</strong>という点であり、1 本の human proxy を cell-specific maintenance-state の ground truth へ読み替えてはいけないことです。
+この差は実務上重要でございます。<a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> は fixed tissue の局所 ultrastructure を、<a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> は whole-brain の 5 代謝物 covariance を、<a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> は myelin bilayer の in vivo map を、<a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>、<a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>、<a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a>、<a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> は sleep / wake / nap や瞬間 brain state が human plasticity response を変えることを、<a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> と <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> は human で CSF / glymphatic support-state を measurable にし始めたことを、それぞれ別々に押し上げました。重要なのは、<strong>これらが同じ種類の direct measurement ではない</strong>という点であり、1 本の human proxy を cell-specific maintenance-state の ground truth へ読み替えてはいけないことです。
 </p>
 
 <strong>この追補での実務的な読み替え</strong>
 <p>
-したがって、本サイトでは <strong>human metabolic connectome</strong> を <strong>macro-biochemical scaffold</strong>、<strong>human myelin bilayer map</strong> を <strong>macro-myelin proxy</strong>、<strong>TMS-EEG / sleep plasticity</strong> を <strong>perturbational proxy</strong> として扱います。いずれも有望ですが、<strong>glial / transmitter maintenance-state の ground truth</strong> や <strong>cell-specific recovery controller</strong> とは書きません。同様に human EM 断片も、<strong>state-complete snapshot</strong> ではなく <strong>structural scaffold の強化</strong> として扱います。human で直接見えていない層は、animal causal evidence で existence を支えつつ、human 側では observability ceiling と abstention を明示するのが安全でございます。
+したがって、本サイトでは <strong>human metabolic connectome</strong> を <strong>macro-biochemical scaffold</strong>、<strong>human myelin bilayer map</strong> を <strong>macro-myelin proxy</strong>、<strong>TMS-EEG / sleep plasticity</strong> を <strong>perturbational proxy</strong>、<strong>CSF mobility / glymphatic clearance</strong> を <strong>macro support-state proxy</strong> として扱います。いずれも有望ですが、<strong>glial / transmitter maintenance-state の ground truth</strong>、<strong>cell-specific recovery controller</strong>、<strong>local immune controller</strong> とは書きません。同様に human EM 断片も、<strong>state-complete snapshot</strong> ではなく <strong>structural scaffold の強化</strong> として扱います。human で直接見えていない層は、animal causal evidence で existence を支えつつ、human 側では observability ceiling と abstention を明示するのが安全でございます。
 </p>
 
 <h2>よくある誤読と、このサイトでの降格ルール</h2>
@@ -238,6 +259,11 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <td>human myelin / sleep / excitability データは macro or perturbational proxy と明記し、cell-specific controller の ground truth には上げません。</td>
 </tr>
 <tr>
+<td><strong>human CSF mobility や glymphatic clearance が見えたので、local immune / clearance controller も同定できた</strong></td>
+<td>human CSF / glymphatic data は macro support-state proxy であり、どの microglia、meningeal lymphatic segment、astrocyte endfoot、局所 synapse が差を担ったかは別に残ります。</td>
+<td>human clearance proxy は support-state proxy と書き、moment-to-moment neural truth や cell-specific immune controller へは上げません。</td>
+</tr>
+<tr>
 <td><strong>delay を定数で置けば、髄鞘やオリゴデンドロサイトは後回しでよい</strong></td>
 <td>adaptive myelination と axon-glia coupling は timing と long-term support に関わります。</td>
 <td>timing-sensitive claim では myelin / conduction の未測定を本文に明記します。</td>
@@ -259,7 +285,7 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 
 <h4>Rule</h4>
 <ul>
-<li><strong>長期 claim では maintenance-state を別列に出す：</strong>connectome / cell type / synapse と、intrinsic excitability、sleep-homeostasis、myelin / oligodendroglial support、glial / metabolic support を混ぜません。</li>
+<li><strong>長期 claim では maintenance-state を別列に出す：</strong>connectome / cell type / synapse と、intrinsic excitability、sleep-homeostasis、myelin / oligodendroglial support、glial / metabolic support、clearance / immune support を混ぜません。</li>
 <li><strong>intrinsic excitability を 1 行に潰さない：</strong>relative excitability、AIS / channel state、recovery controller を別欄にします。</li>
 <li><strong>sleep / wake 履歴を測っていなければ測っていないと書く：</strong>same-day fit から overnight maintenance を自動補完しません。</li>
 <li><strong>sleep を平均値補正に縮約しない：</strong>synapse diversity や network regime まで落ちる可能性を残します。</li>
@@ -269,6 +295,7 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <li><strong>proxy の限界を先に書く：</strong>EEG / pupil / behavior だけで maintenance-state を一意に決めたとは書きません。</li>
 <li><strong>human proxy class を混ぜない：</strong>EM 断片、whole-brain MRSI、myelin bilayer map、sleep / TMS proxy を同じ「human で見えた」の 1 語に畳み込みません。</li>
 <li><strong>human MRSI を local ground truth と誤読しない：</strong>macro-biochemical scaffold と cell-specific maintenance-state を分けて書きます。</li>
+<li><strong>human CSF / glymphatic proxy を local controller と誤読しない：</strong>macro support-state proxy と cell-specific immune / clearance state を分けて書きます。</li>
 <li><strong>neuron-only の成功から glia omission を補完しない：</strong>想起・再安定化・fear-state representation は astrocyte state を別に残します。</li>
 </ul>
 
@@ -290,7 +317,7 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 </tr>
 <tr>
 <td><strong>長期 memory / learning claim</strong></td>
-<td>学習前後の perturbation 応答、relative excitability か allocation proxy、overnight renormalization の有無、glial / astrocyte covariate か omission log、未測定 maintenance-state 一覧。</td>
+<td>学習前後の perturbation 応答、relative excitability か allocation proxy、overnight renormalization の有無、glial / astrocyte covariate か omission log、possible なら clearance / immune covariate、未測定 maintenance-state 一覧。</td>
 </tr>
 <tr>
 <td><strong>timing-sensitive claim</strong></td>
@@ -298,7 +325,7 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 </tr>
 <tr>
 <td><strong>state-complete reconstruction に近い claim</strong></td>
-<td>connectome・cell type・synapse・delay / myelin・neuromodulation・glia / metabolic support・sleep-homeostasis・intrinsic excitability / homeostasis をどこまで取得したか、あるいは latent として棄権したか。</td>
+<td>connectome・cell type・synapse・delay / myelin・neuromodulation・glia / metabolic support・clearance / immune support・sleep-homeostasis・intrinsic excitability / homeostasis をどこまで取得したか、あるいは latent として棄権したか。</td>
 </tr>
 </tbody>
 </table>
@@ -338,8 +365,13 @@ maintenance-state を neuron-centric に読みすぎると、エネルギー供�
 <li>Williamson, N. R., et al. (2025). Learning-associated astrocyte ensembles regulate memory recall. <em>Nature</em>, 636, 445-454. <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">doi:10.1038/s41586-024-08170-w</a></li>
 <li>Dewa, K., et al. (2025). The astrocytic ensemble acts as a multiday trace to stabilize memory. <em>Nature</em>, 648, 99-107. <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">doi:10.1038/s41586-025-09619-2</a></li>
 <li>Bukalo, O., et al. (2026). Astrocytes enable amygdala neural representations supporting memory. <em>Nature</em>. <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">doi:10.1038/s41586-025-10068-0</a></li>
+<li>Louveau, A., Smirnov, I., Keyes, T. J., et al. (2015). Structural and functional features of central nervous system lymphatic vessels. <em>Nature</em>, 523, 337-341. <a href="https://doi.org/10.1038/nature14432" target="_blank">doi:10.1038/nature14432</a></li>
+<li>Kim, J., et al. (2025). Meningeal lymphatics-microglia axis regulates synaptic physiology. <em>Cell</em>, 188(8), 2129-2148.e21. <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">doi:10.1016/j.cell.2025.02.022</a></li>
+<li>Eide, P. K., &amp; Ringstad, G. (2021). Sleep deprivation impairs molecular clearance from the human brain. <em>Brain</em>, 144(3), 863-874. <a href="https://doi.org/10.1093/brain/awab285" target="_blank">doi:10.1093/brain/awab285</a></li>
 <li>Lee, J.-C., Wang, C.-Y., Lin, C.-L., &amp; Lu, H.-C. (2022). Synaptic memory survives molecular turnover. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 119(42), e2211572119. <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">doi:10.1073/pnas.2211572119</a></li>
 <li>Shapson-Coe, A., Januszewski, M., Berger, D. R., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <em>Science</em>, 384(6696), eadk4858. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
 <li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <em>Nature Communications</em>, 16, 11344. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
 <li>Baadsvik, E. L., Weiger, M., Froidevaux, R., Schildknecht, C. M., Ineichen, B. V., &amp; Pruessmann, K. P. (2024). Myelin bilayer mapping in the human brain in vivo. <em>Magnetic Resonance in Medicine</em>, 91(6), 2332-2344. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">doi:10.1002/mrm.29998</a></li>
+<li>Hirschler, L., et al. (2025). Region-specific drivers of cerebrospinal fluid mobility measured with MRI in humans. <em>Nature Neuroscience</em>, 28, 1115-1126. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
+<li>Dagum, P., et al. (2026). The glymphatic system clears amyloid-beta and tau from brain to plasma in humans. <em>Nature Communications</em>, 17, 7800. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
 </ol>

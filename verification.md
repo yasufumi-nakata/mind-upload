@@ -757,8 +757,8 @@ Fusion Card が無い場合、本サイトではその結果を原則として <
 </tr>
 <tr>
 <td><strong>synaptic efficacy / plastic history</strong></td>
-<td>connectome-only baseline と weight / plasticity 項を足したモデルの held-out perturbation 誤差、ablation、drift 曲線、可能なら paired physiology または presynaptic-state manipulation の較正。</td>
-<td>edge count / EM synapse / PSD / spine size / same-brain connectomics だけの条件と、現在の有効結合を持たせた条件を同一課題・同一 horizon で較正します。</td>
+<td>connectome-only baseline と presynaptic release-probability / postsynaptic receptor-state / plasticity 項を足したモデルの held-out perturbation 誤差、ablation、drift 曲線、可能なら paired physiology、presynaptic-state manipulation、postsynaptic receptor-state proxy の較正。</td>
+<td>edge count / EM synapse / PSD / spine size / same-brain connectomics だけの条件と、現在の有効結合を持たせた条件を同一課題・同一 horizon で較正し、presynaptic と postsynaptic のどちらを増やしたのかまで分けて書きます。</td>
 <td>structure-only 指標だけで gain を主張している場合、L2 の介入予測と L3 の安定制御を保留し、current weight claim も受理しません。</td>
 </tr>
 <tr>
@@ -820,7 +820,7 @@ Fusion Card が無い場合、本サイトではその結果を原則として <
 <div class="note-box">
 <strong>2026-03 追補：structural synapse metric は current weight ではありません</strong>
 <p>
-<a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">Holler et al. (2021)</a> は identified neocortical synapse で PSD 面積と平均 EPSP の関係を前進させましたが、trial-to-trial の対応は弱く、multivesicular release も残ることを示しました。<a href="https://doi.org/10.1038/s41467-024-50549-7" target="_blank">Dürst et al. (2024)</a> は bouton potency が vesicular release probability に強く依存することを示し、<a href="https://doi.org/10.1038/s41586-022-05483-6" target="_blank">Vardalaki et al. (2022)</a> は成体新皮質にも silent synapse substrate が残ることを示しました。さらに <a href="https://doi.org/10.1038/s41467-024-51402-7" target="_blank">Alle et al. (2024)</a> は human neocortical tissue で membrane state が短時間に synaptic efficacy を動かすことを示しました。したがって本サイトでは、<strong>EM synapse count</strong>、<strong>PSD / spine size</strong>、<strong>same-brain connectomics</strong> をまず structural prior として扱い、paired physiology、state manipulation、held-out perturbation gain が無い限り <strong>current effective weight の direct readout</strong>とは書きません。
+<a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">Holler et al. (2021)</a> は identified neocortical synapse で PSD 面積と平均 EPSP の関係を前進させましたが、trial-to-trial の対応は弱く、multivesicular release も残ることを示しました。<a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">Dürst et al. (2022)</a> は bouton potency が主として vesicular release probability に依存することを示し、<a href="https://doi.org/10.1038/nature02617" target="_blank">Matsuzaki et al. (2004)</a>、<a href="https://doi.org/10.1038/s41586-022-05483-6" target="_blank">Vardalaki et al. (2022)</a>、<a href="https://doi.org/10.1016/j.neuron.2025.06.002" target="_blank">Li et al. (2025)</a> は spine enlargement、silent synapse substrate、learning-dependent AMPAR redistribution が postsynaptic 側の状態変数だと示しました。さらに <a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">Mittermaier et al. (2024)</a> は human neocortical tissue で membrane-state sequence が transmission と consolidation を短時間に動かすことを示しました。したがって本サイトでは、<strong>EM synapse count</strong>、<strong>PSD / spine size</strong>、<strong>same-brain connectomics</strong> をまず structural prior として扱い、paired physiology、state manipulation、held-out perturbation gain が無い限り <strong>current effective weight の direct readout</strong>とは書きません。
 </p>
 </div>
 <div class="note-box">
@@ -1665,8 +1665,9 @@ NESS（非平衡定常状態）や time irreversibility を使って脳ダイナ
 <li>Holler, S., et al. (2021). Structure and function of a neocortical synapse. <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">doi:10.1038/s41586-020-03134-2</a></li>
 <li>Matsuzaki, M., Honkura, N., Ellis-Davies, G. C. R., &amp; Kasai, H. (2004). Structural basis of long-term potentiation in single dendritic spines. <a href="https://doi.org/10.1038/nature02617" target="_blank">doi:10.1038/nature02617</a></li>
 <li>Vardalaki, D., Chung, K., &amp; Harnett, M. T. (2022). Filopodia are a structural substrate for silent synapses in adult neocortex. <a href="https://doi.org/10.1038/s41586-022-05483-6" target="_blank">doi:10.1038/s41586-022-05483-6</a></li>
-<li>Dürst, C. D., Boele, H.-J., Schonewille, M., &amp; Hoebeek, F. E. (2024). Number of releasable vesicles does not limit short-term plasticity at hippocampal synapses with low release probability. <a href="https://doi.org/10.1038/s41467-024-50549-7" target="_blank">doi:10.1038/s41467-024-50549-7</a></li>
-<li>Alle, H., et al. (2024). Membrane potential states gate synaptic consolidation in human neocortical tissue. <a href="https://doi.org/10.1038/s41467-024-51402-7" target="_blank">doi:10.1038/s41467-024-51402-7</a></li>
+<li>Dürst, C. D., Wiegert, J. S., Schulze, C., et al. (2022). Vesicular release probability sets the strength of individual Schaffer collateral synapses. <a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">doi:10.1038/s41467-022-33565-6</a></li>
+<li>Li, J., et al. (2025). Dynamic redistribution of AMPA receptors toward memory-related neuronal ensembles in mice barrel cortex during sensory learning. <a href="https://doi.org/10.1016/j.neuron.2025.06.002" target="_blank">doi:10.1016/j.neuron.2025.06.002</a></li>
+<li>Mittermaier, V., Kononenko, N. L., Jin, Y., et al. (2024). Membrane potential states gate synaptic consolidation in human neocortical tissue. <a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">doi:10.1038/s41467-024-53901-2</a></li>
 <li>Schiller, J., Major, G., Koester, H. J., &amp; Schiller, Y. (2000). NMDA spikes in basal dendrites of cortical pyramidal neurons. <a href="https://doi.org/10.1038/35005094" target="_blank">doi:10.1038/35005094</a></li>
 <li>Polsky, A., Mel, B. W., &amp; Schiller, J. (2004). Computational subunits in thin dendrites of pyramidal cells. <a href="https://doi.org/10.1038/nn1253" target="_blank">doi:10.1038/nn1253</a></li>
 <li>Smith, S. L., Smith, I. T., Branco, T., &amp; Häusser, M. (2013). Dendritic spikes enhance stimulus selectivity in cortical neurons in vivo. <a href="https://doi.org/10.1038/nature12600" target="_blank">doi:10.1038/nature12600</a></li>

@@ -20,7 +20,7 @@
   - その一方で、`current synaptic efficacy / release state`、`branch-specific dendritic integration`、`AIS / excitability / recovery controller` が FAQ 上では十分前面化されていませんでした。
 - 根拠:
   - Gouwens et al. (2021) は同じ transcriptomic type の内部に morpho-electric phenotype の幅が残ることを示しました。
-  - Alle et al. (2024) は human neocortical tissue で membrane state が synaptic efficacy を短時間で動かすことを示しました。
+  - Mittermaier et al. (2024) は human neocortical tissue で membrane-state sequence が synaptic efficacy と consolidation を短時間で動かすことを示しました。
   - Gidon et al. (2020) は human layer 2/3 neuron の dendritic action potential と計算特性を示しました。
   - Benoit et al. (2025) と Hadzibegovic et al. (2026) は excitability / AIS / memory allocation / recovery window が別 state class であることを示しました。
 - 批判:
@@ -54,7 +54,7 @@
   - `page_highlights` と `known_points` を、`current synaptic state / dendritic integration / AIS / maintenance-state` を見える形へ更新
   - 入口案内テーブルの `Q2c` 説明を `sleep / myelin / glia` から、`synaptic state / dendrite / AIS / maintenance-state` へ更新
   - `Q2c` を全面改稿し、`fast execution state`、`controller state`、`slow maintenance-state`、`human observability ceiling` の 4 層へ再分解
-  - MICrONS / Beiran-Litwin-Kumar / Alle / Gidon / Benoit / Hadzibegovic / Williamson / Kim / Lucchetti / Baadsvik / Zrenner / Dagum を追記
+  - MICrONS / Beiran-Litwin-Kumar / Mittermaier / Gidon / Benoit / Hadzibegovic / Williamson / Kim / Lucchetti / Baadsvik / Zrenner / Dagum を追記
 
 ## 外部依存で保留
 
@@ -69,8 +69,8 @@
    - https://doi.org/10.1038/s41586-025-08790-w
 3. Beiran M, Litwin-Kumar A. Prediction of neural activity in connectome-constrained recurrent networks. *Nature Neuroscience*. 2025.
    - https://doi.org/10.1038/s41593-025-02080-4
-4. Alle H, et al. Membrane potential states gate synaptic consolidation in human neocortical tissue. *Nature Communications*. 2024.
-   - https://doi.org/10.1038/s41467-024-51402-7
+4. Mittermaier V, Kononenko NL, Jin Y, et al. Membrane potential states gate synaptic consolidation in human neocortical tissue. *Nature Communications*. 2024.
+   - https://doi.org/10.1038/s41467-024-53901-2
 5. Gidon A, et al. Dendritic action potentials and computation in human layer 2/3 cortical neurons. *Science*. 2020.
    - https://doi.org/10.1126/science.aax6239
 6. Benoit CM, et al. Axon initial segment dynamics during associative fear learning. *Nature Neuroscience*. 2025.
