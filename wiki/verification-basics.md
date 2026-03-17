@@ -1,11 +1,11 @@
 ---
 layout: default
 title: "Wiki：検証基盤の基本"
-description: "なぜ WBE の話で標準、ベンチ、事前登録、監査が必要なのかを初歩から説明します。"
+description: "なぜ WBE の話で標準、ベンチ、事前登録、監査が必要なのかを初歩から説明し、Observability Budget / Temporal Validity Card / Calibration & Abstention Card などの役割差も整理します。"
 article_type: Wiki
 subtitle: "派手な主張より先に、物差しと記録の置き場を作る"
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
+last_updated: "2026-03-17"
 note: "Beginner guide"
 audience: "Verification Commons の考え方を初歩から理解したい人"
 reading_time: "10〜15分"
@@ -14,10 +14,12 @@ accuracy_note: "ここで使うたとえは理解の補助です。たとえで�
 page_highlights:
   - "データがあるだけでは、比較可能な前進になりません。"
   - "標準、ベンチ、事前登録、監査は、互いに役割が違います。"
+  - "監査も 1 枚ではなく、何を直接見たか、何が未観測か、何日持つか、低信頼時にどう止まるかで役割が分かれます。"
   - "WBE のように主張が大きい分野ほど、運用面の厳しさが重要になります。"
 known_points:
   - "比較可能な前進には、入力、評価、ルール、記録の4つが必要です。"
   - "事前登録や監査がないと、あとから都合よく成功条件を変えられてしまいます。"
+  - "Observation、latent state、time horizon、confidence semantics は別 failure mode なので、site-wide では別の card に分けて管理します。"
   - "PDB や BIDS など、他分野でも公共財の整備が進歩を加速してきました。"
 unknown_points:
   - "WBE 専用の最終ベンチマークが、まだ完成した形で存在するわけではありません。"
@@ -89,6 +91,60 @@ recommended_pages:
 </table>
 </section>
 
+<section class="section" id="site-cards">
+<h2 class="section-title">監査は 1 枚では足りません</h2>
+<p>
+今回この入門ページで補うべきだった弱点は、<strong>監査</strong> を 1 箱にまとめすぎ、公開サイトで実際に使っている提出物の役割差が見えにくかった点でございます。Mind-Upload では、<strong>何を直接見たか</strong>、<strong>どう結び付けたか</strong>、<strong>何がまだ未観測か</strong>、<strong>何日・何状態まで持つか</strong>、<strong>低信頼時にどう止まるか</strong> を別々に残します。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>card / 仕様</th>
+<th>何を固定するか</th>
+<th>これが無いと起きる誤読</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../verification.html#observability-budget"><strong>Observability Budget</strong></a></td>
+<td>何が direct で、何が proxy で、何がまだ latent かを固定します。</td>
+<td><code>multimodal だから全部見えた</code>、<code>proxy だから neural truth</code> と読みやすくなります。</td>
+</tr>
+<tr>
+<td><a href="../verification.html#fusion-card"><strong>Fusion Card</strong></a></td>
+<td>複数モダリティをどう結び付け、どの transfer assumption が残るかを固定します。</td>
+<td><code>統合したから mechanism も分かった</code> と読みやすくなります。</td>
+</tr>
+<tr>
+<td><a href="../verification.html#latent-state-error-budget"><strong>latent-state error budget</strong></a></td>
+<td>どの hidden state が、いまの claim をまだ止めているかを固定します。</td>
+<td><code>connectome-only でもかなり十分</code>、<code>same-day fit で hidden state も埋まった</code> と読みやすくなります。</td>
+</tr>
+<tr>
+<td><a href="../verification.html#intervention-card"><strong>Intervention Card</strong></a></td>
+<td>何を、どの trigger と comparator と timing で実際に変えたかを固定します。</td>
+<td><code>よく当たったから causal</code> と読みやすくなります。</td>
+</tr>
+<tr>
+<td><a href="../verification.html#temporal-validity-card"><strong>Temporal Validity Card</strong></a></td>
+<td>その結果を何日・何状態・何回の再較正まで外挿できるかを固定します。</td>
+<td><code>same-day high score = chronic deployable</code> と読みやすくなります。</td>
+</tr>
+<tr>
+<td><a href="../verification.html#calibration-abstention-card"><strong>Calibration &amp; Abstention Card</strong></a></td>
+<td>confidence、interval、prediction set、fallback、abstention の意味を固定します。</td>
+<td><code>high confidence = safe</code>、<code>threshold を付けたから reliable</code> と読みやすくなります。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>学校のテストの比喩で言うと</strong>
+<p>
+答案用紙と採点基準だけでは足りません。<strong>どの問題を直接見たか</strong>、<strong>カンニングになりうる補助線をどこまで使ったか</strong>、<strong>翌週も同じ点が取れるか</strong>、<strong>自信がないときに「分からない」と言えたか</strong>まで別々に記録して、初めて比較可能な成績表になります。
+</p>
+</div>
+</section>
+
 <section class="section" id="missing">
 <h2 class="section-title">どれか1つ欠けると何が起こるか</h2>
 <table class="data-table">
@@ -131,7 +187,7 @@ WBE は、話が大きい分だけ、レベルのすり替えが起きやすい�
 <p>
 Mind-Upload では、Verification ページが設計図、Hands-on が最小実装、Datasets が入口データ、Casework が他分野の先例です。wiki は、その前提知識を補うためにあります。
 </p>
-<p>ベースライン、事前登録、モデルカード、失敗例の役割差をもう一段ていねいに整理したい場合は、<a href="baselines-prereg-and-model-cards.html">Wiki: ベースライン・事前登録・モデルカード</a> が補講になります。</p>
+<p>ベースライン、事前登録、モデルカード、失敗例の役割差をもう一段ていねいに整理したい場合は <a href="baselines-prereg-and-model-cards.html">Wiki: ベースライン・事前登録・モデルカード</a>、計測から推定、妥当化、運用までの流れを用語ごとにつなげて見たい場合は <a href="measurement-and-modeling-terms.html">Wiki: 計測からモデル化までの用語ガイド</a> が補講になります。</p>
 <div class="cta-box">
 <h4>Next</h4>
 <p>この基礎を読んだあとで、実際の設計図を見たい場合はこちらです。</p>

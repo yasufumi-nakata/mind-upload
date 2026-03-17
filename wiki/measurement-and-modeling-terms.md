@@ -1,23 +1,26 @@
 ---
 layout: default
 title: "Wiki：計測からモデル化までの用語ガイド"
-description: "EEG、QC、BIDS、ESI、connectivity、DCM、SCM、校正・棄権を、観測→整理→推定→妥当化→運用の流れと監査項目でつなげて説明します。"
+description: "EEG、QC、BIDS、ESI、connectivity、DCM、SCM、Observability Budget / Fusion Card / Temporal Validity Card / Calibration & Abstention Card を、direct / proxy / inferred / deployable の境界つきで説明します。"
 article_type: Wiki
 subtitle: "detectable と identified を混同しない"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-17"
 note: "Learning guide"
 audience: "計測語とモデル語が混ざって見える人、主張の強さを段階つきで読みたい人"
 reading_time: "12〜18分"
 page_intro: "このページは、EEG のような計測語、ESI や DCM のようなモデル語、BIDS や QC のような運用語を『観測→整理→推定→妥当化→運用』の流れでつなげて理解するための wiki です。単語を個別に暗記するより、どの段階で主張が 1 段強くなるかを先に分けることを目的にします。"
 accuracy_note: "ここで示す流れは理解のための整理です。実際の研究では往復や例外がありますが、detectability、localization、identifiability、direct validation、deployability を混同しないことは崩しません。"
 page_highlights:
-  - "EEG、QC、BIDS、ESI、connectivity、DCM、SCM、calibration を 1 本の流れで理解できます。"
-  - "detectability / localization / identifiability / direct validation / deployability を、段階つきで切り分けます。"
+  - "EEG、QC、BIDS、ESI、connectivity、DCM、SCM、site-wide の提出物仕様を 1 本の流れで理解できます。"
+  - "direct / proxy / inferred / deployable を、detectability / localization / identifiability / validation と混ぜずに切り分けます。"
+  - "Observability Budget、Fusion Card、latent-state error budget、Temporal Validity Card、Calibration & Abstention Card が、どの段階の失敗モードを止めるかを結び付けます。"
   - "connectivity claim は localization の次の段であり、source mixing や ghost interaction の別監査が要ると分かります。"
 known_points:
   - "計測、前処理、推定、妥当化、運用は役割が違い、それぞれ別の言葉が使われます。"
+  - "観測段階でも、direct measurement、proxy、model-dependent inference、operational deployability は別です。"
   - "観測信号はそのまま脳内状態ではなく、推定には不確実性、候補モデル依存性、parameter degeneracy が伴います。"
+  - "fMRI / BOLD や SV2A PET のような proxy では、neural hidden state に加えて measurement-side hidden state も残ります。"
   - "BIDS、QC、calibration、abstention はおまけではなく、比較可能性と deployability を支える要素です。"
 unknown_points:
   - "非侵襲計測だけで WBE に十分な内部状態をどこまで復元できるかは未解決です。"
@@ -61,7 +64,7 @@ recommended_pages:
 <div class="note-box">
 <strong>2026-03 の更新点</strong>
 <p>
-今回の更新では、最近の公開ページで強化した境界を、この補助ページにも下ろしました。特に <strong>detectability / localization / identifiability / direct validation / deployability</strong> を 1 列で読めるようにし、connectivity claim と calibration / abstention / recalibration burden を別段として明示しています。
+今回の更新では、最近の公開ページで強化した境界を、この補助ページにも下ろしました。特に <strong>detectability / localization / identifiability / direct validation / deployability</strong> を 1 列で読めるようにしつつ、<strong>direct / proxy / inferred / deployable</strong> も別の軸として明示しました。さらに、この 5 段階を <a href="../verification.html#observability-budget">Observability Budget</a>、<a href="../verification.html#fusion-card">Fusion Card</a>、<a href="../verification.html#latent-state-error-budget">latent-state error budget</a>、<a href="../verification.html#temporal-validity-card">Temporal Validity Card</a>、<a href="../verification.html#calibration-abstention-card">Calibration &amp; Abstention Card</a> へ対応づけ、学習ガイドと site-wide 提出物仕様のずれを埋めました。
 </p>
 </div>
 
@@ -78,8 +81,8 @@ recommended_pages:
 <tbody>
 <tr>
 <td><strong>1. 観測</strong></td>
-<td>EEG, MEG, fMRI, ECoG, observability budget, claim ceiling</td>
-<td>脳や身体から外に出てくる信号を測り、「何が直接見えていて何が latent か」を固定します。</td>
+<td>EEG, MEG, fMRI, ECoG, SV2A PET, observability budget, claim ceiling</td>
+<td>脳や身体から外に出てくる信号を測り、「何が direct で何が proxy か」「何がまだ latent か」を固定します。</td>
 </tr>
 <tr>
 <td><strong>2. 整理</strong></td>
@@ -88,18 +91,67 @@ recommended_pages:
 </tr>
 <tr>
 <td><strong>3. 推定</strong></td>
-<td>detectability, localization, connectivity, identifiability, ESI, DCM, SCM</td>
-<td>観測から、どこまで source、回路、因果構造を推定できるかを段階つきで考えます。</td>
+<td>detectability, localization, connectivity, identifiability, ESI, DCM, SCM, latent-state error budget, Fusion Card</td>
+<td>観測から、どこまで source、回路、因果構造を推定できるかと、どの latent state / transfer assumption が残るかを段階つきで考えます。</td>
 </tr>
 <tr>
 <td><strong>4. 妥当化</strong></td>
-<td>direct validation, family comparison, held-out perturbation, benchmark</td>
+<td>direct validation, family comparison, held-out perturbation, Intervention Card, benchmark</td>
 <td>その推定やモデルを、外部 ground truth や介入、候補モデル比較で確かめます。</td>
 </tr>
 <tr>
 <td><strong>5. 運用</strong></td>
-<td>calibration, coverage, abstention, tail latency, recalibration burden</td>
-<td>精度が高いだけでなく、低信頼時に止まれるか、長期に使えるかを測ります。</td>
+<td>Temporal Validity Card, Calibration &amp; Abstention Card, calibration, coverage, abstention, tail latency, recalibration burden</td>
+<td>精度が高いだけでなく、低信頼時に止まれるか、何日・何状態まで持つか、長期に使えるかを測ります。</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="card-map">
+<h2 class="section-title">5段階と site-wide 提出物の対応</h2>
+<p>
+今回この補助ページで最も改善すべきだった弱点は、<strong>段階の説明</strong>はあっても、公開サイトが実際に要求する <strong>提出物仕様</strong> へまだ十分につながっていなかった点でございます。これでは、同じ「見えた」「当たった」「使えた」という言葉の中に、measurement ceiling、latent-state ceiling、介入妥当化、縦断妥当化、confidence semantics が混ざります。そこで以下の対応表を追加し、どの段階でどの card が誤読を止めるかを明示します。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>段階</th>
+<th>いちばん先に答える問い</th>
+<th>このサイトで主に対応する提出物</th>
+<th>ここで止める誤読</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>観測</strong></td>
+<td>何が direct で、何が proxy で、何が未観測か。</td>
+<td><a href="../verification.html#observability-budget">Observability Budget</a></td>
+<td><code>multimodal だから全部見えた</code>、<code>proxy だから neural truth</code> を止めます。</td>
+</tr>
+<tr>
+<td><strong>整理</strong></td>
+<td>何を除き、何を残し、同期と provenance をどう固定したか。</td>
+<td>QC log / BIDS / event-sync log</td>
+<td><code>前処理は見栄え調整</code>、<code>同期は細部</code> を止めます。</td>
+</tr>
+<tr>
+<td><strong>推定</strong></td>
+<td>どの latent state と transfer assumption がなお残るか。</td>
+<td><a href="../verification.html#latent-state-error-budget">latent-state error budget</a> / <a href="../verification.html#fusion-card">Fusion Card</a></td>
+<td><code>fit したから mechanism も分かった</code>、<code>統合したから真相に近い</code> を止めます。</td>
+</tr>
+<tr>
+<td><strong>妥当化</strong></td>
+<td>外部基準や介入で、どこまで候補モデルを狭めたか。</td>
+<td><a href="../verification.html#intervention-card">Intervention Card</a> / family comparison / benchmark log</td>
+<td><code>localized だから causal</code>、<code>1 回の positive result で validated</code> を止めます。</td>
+</tr>
+<tr>
+<td><strong>運用</strong></td>
+<td>何日・何状態・どの低信頼条件まで外挿できるか。</td>
+<td><a href="../verification.html#temporal-validity-card">Temporal Validity Card</a> / <a href="../verification.html#calibration-abstention-card">Calibration &amp; Abstention Card</a></td>
+<td><code>same-day high score = chronic deployable</code>、<code>high confidence = safe</code> を止めます。</td>
 </tr>
 </tbody>
 </table>
@@ -148,6 +200,55 @@ EEG や MEG は、脳の中を直接見ているのではなく、外から観�
 <strong>ここで止めるべき誤読</strong>
 <p>
 Seeber et al. (2019) は high-density EEG で deep activity が <strong>detectable</strong> になりうることを示しましたが、これは deep source の一般的一意復元を意味しません。Aydin et al. (2019) が示したように、頭部導電率の不確かさだけでも推定は動きます。したがって観測段階では、まず <strong>observability budget</strong> と <strong>claim ceiling</strong> を書きます。
+</p>
+</div>
+</section>
+
+<section class="section" id="direct-proxy-inferred">
+<h2 class="section-title">direct / proxy / inferred / deployable を同じ『見えた』にしない</h2>
+<p>
+技術・自然科学の観点で今回もっとも改善すべきだった弱点は、この補助ページが <strong>「見えた」</strong> を広く使いすぎ、<strong>sensor signal を直接観測した</strong>、<strong>proxy を得た</strong>、<strong>モデル依存で推定した</strong>、<strong>長期運用できた</strong> を 1 列に見せやすかった点でございます。一次文献を並べると、少なくとも以下の 4 層は分ける必要があります。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>route</th>
+<th>direct に取れているもの</th>
+<th>proxy / inferred に留まるもの</th>
+<th>このサイトで別に要求するもの</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EEG / MEG</strong></td>
+<td>頭皮上の電位差や磁場、その時間変化です。</td>
+<td>source localization、connectivity、因果機序は forward / inverse model と候補モデル族に依存します。</td>
+<td><a href="../verification.html#observability-budget">Observability Budget</a> と不確実性の公開が必要です。</td>
+</tr>
+<tr>
+<td><strong>fMRI / BOLD</strong></td>
+<td>血行動態 signal と領域スケールの遅い network state です。</td>
+<td>neural explanation は HRF、vascular state / CVR、venous geometry を介した proxy に留まります。</td>
+<td><a href="../verification.html#fusion-card">Fusion Card</a> と hemodynamic transfer の監査が必要です。</td>
+</tr>
+<tr>
+<td><strong>SV2A PET</strong></td>
+<td>tracer uptake と kinetic model に基づく regional SV2A binding です。</td>
+<td>regional presynaptic-density proxy までは言えますが、current synaptic efficacy や postsynaptic receptor occupancy は残ります。</td>
+<td><a href="../verification.html#observability-budget">Observability Budget</a> で proxy class を固定します。</td>
+</tr>
+<tr>
+<td><strong>chronic extracellular probe</strong></td>
+<td>implant 近傍の waveform、threshold crossing、local population activity です。</td>
+<td>stable unit identity across days、long-term deployability、recalibration-light 運用は sorting / drift / matching / recalibration を介した別問題です。</td>
+<td><a href="../verification.html#temporal-validity-card">Temporal Validity Card</a> と drift audit が必要です。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>一次文献が切る境界</strong>
+<p>
+<a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">Seeber et al. (2019)</a> は deep activity の <strong>detectability</strong> を、<a href="https://doi.org/10.3389/fnins.2019.00531" target="_blank">Aydin et al. (2019)</a> は conductivity uncertainty の影響を、<a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">Murphy et al. (2011)</a> と <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">Williams et al. (2023)</a> は BOLD の measurement-side hidden state を、<a href="https://doi.org/10.1126/scitranslmed.aaf6667" target="_blank">Finnema et al. (2016)</a>、<a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a>、<a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> は human in vivo の synaptic-density proxy route を、<a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> は long-term deployability と recalibration burden の壁を示しました。したがって本サイトでは、<strong>direct signal</strong>、<strong>proxy</strong>、<strong>model-dependent inference</strong>、<strong>operational evidence</strong> を同じ「見えた」で済ませません。
 </p>
 </div>
 </section>
@@ -344,13 +445,21 @@ Penny et al. (2004) が示すように DCM は候補構造の比較です。Haus
 Segal et al. (2023) は EEG seizure prediction で calibration により false alarm rate を制御できることを示し、Wilson et al. (2025) は intracortical BCI で long-term unsupervised recalibration が主要ボトルネックであることを示しました。したがって本サイトでは、<strong>high accuracy = deployable</strong> とは書かず、calibration、abstention、tail latency、recalibration burden を別指標で残します。
 </p>
 </div>
+<div class="note-box">
+<strong>このサイトでは運用段階を 2 枚の card に分けます</strong>
+<p>
+<a href="../verification.html#temporal-validity-card">Temporal Validity Card</a> は <strong>何日・何状態・何回の再較正まで外挿できるか</strong> を固定し、<a href="../verification.html#calibration-abstention-card">Calibration &amp; Abstention Card</a> は <strong>confidence / interval / set / fallback の意味</strong> を固定します。片方だけでは、<strong>validity horizon</strong> と <strong>reliability semantics</strong> が混ざります。
+</p>
+</div>
 </section>
 
 <section class="section" id="rules">
-<h2 class="section-title">このページから持ち帰る 5 つの site rule</h2>
+<h2 class="section-title">このページから持ち帰る 7 つの site rule</h2>
 <div class="key-points">
 <h4>読み替え禁止の最短版</h4>
 <ul>
+<li><strong>direct signal ≠ neural truth：</strong>sensor で直接測れたものと、脳内状態の意味づけは別です。</li>
+<li><strong>proxy ≠ identified state：</strong>BOLD や SV2A PET は有力でも、proxy class を超えて読みません。</li>
 <li><strong>detectable ≠ localized：</strong>見えたことと、どこから来たかは別です。</li>
 <li><strong>localized ≠ identified：</strong>source を置けても、唯一の内部機序とは限りません。</li>
 <li><strong>connectivity ≠ causality solved：</strong>network metric は別監査を要します。</li>
@@ -394,6 +503,11 @@ Segal et al. (2023) は EEG seizure prediction で calibration により false a
 <li>Mikulan, E., Russo, S., Parmigiani, S., et al. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
 <li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Validating EEG source imaging using intracranial electrical stimulation in focal epilepsy. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
 <li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
+<li>Murphy, K., Harris, A. D., &amp; Wise, R. G. (2011). Robustly measuring vascular reactivity differences with breath-hold: normalising stimulus-evoked and resting state BOLD fMRI data. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">doi:10.1016/j.neuroimage.2010.07.059</a></li>
+<li>Williams, R. J., Specht, J. L., Mazerolle, E. L., Lebel, R. M., MacDonald, M. E., &amp; Pike, G. B. (2023). Correspondence between BOLD fMRI task response and cerebrovascular reactivity across the cerebral cortex. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">doi:10.3389/fphys.2023.1167148</a></li>
+<li>Finnema, S. J., Nabulsi, N. B., Eid, T., et al. (2016). Imaging synaptic density in the living human brain. <a href="https://doi.org/10.1126/scitranslmed.aaf6667" target="_blank">doi:10.1126/scitranslmed.aaf6667</a></li>
+<li>Naganawa, M., Nabulsi, N., Lin, S.-F., et al. (2021). First-in-human evaluation of 18F-SynVesT-1, a radioligand for PET imaging of synaptic vesicle glycoprotein 2A. <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">doi:10.2967/jnumed.120.249144</a></li>
+<li>Johansen, A., et al. (2024). An in vivo high-resolution human brain atlas of synaptic density. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
 <li>Haufe, S., Nikulin, V. V., Müller, K.-R., &amp; Nolte, G. (2013). A critical assessment of connectivity measures for EEG data: a simulation study. <a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">doi:10.1016/j.neuroimage.2012.09.036</a></li>
 <li>Palva, J. M., Wang, S. H., Palva, S., et al. (2018). Ghost interactions in MEG/EEG source space: A note of caution on inter-areal coupling measures. <a href="https://doi.org/10.1016/j.neuroimage.2018.02.032" target="_blank">doi:10.1016/j.neuroimage.2018.02.032</a></li>
 <li>Penny, W. D., Stephan, K. E., Mechelli, A., &amp; Friston, K. J. (2004). Comparing dynamic causal models. <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">doi:10.1016/j.neuroimage.2004.03.026</a></li>
