@@ -958,3 +958,12 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 判定内訳は `A/B/C=17/25/18` を再確認しました。
 - 参照EEG ID `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を確認しました。
 - 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再参照可能でした。
+
+## 2026-03-18 08:04 JST 再検証ログ（本run / 依頼反映: 全60RQの深掘り運用を再固定）
+
+- 作業前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` の各 `main` を `pull --ff-only` で更新し、最新状態で再検証しました。
+- `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` の `Ux-RQy` 一意キーは `60` 件（欠落 `0` / 重複 `0`）を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` を再計数し、既存の判断配分と一致することを確認しました。
+- 深掘り運用で参照する EEG ID `24件`（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を確認しました。
+- 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue/*.yaml` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再参照可能でした。
+- 方針を継続します。汎用横断ではなく `1RQ=1検証命題=1応募テーマ=1主データ` を厳守し、各RQを個別に深掘りして申請文へ落とし込みます。

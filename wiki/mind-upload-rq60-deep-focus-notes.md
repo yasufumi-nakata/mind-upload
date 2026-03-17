@@ -270,3 +270,12 @@ Reasons for proceeding in this order:
 - Recalculated judgment split from `mind-upload-eeg-rq60-feasibility-and-funds.md` and reconfirmed `A/B/C=17/25/18`.
 - Revalidated referenced EEG IDs (`24` IDs: `6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`) exist in latest `EEG-DATA/eeg_dataset_summary_ja.csv` (`missing=0`).
 - Revalidated grant real IDs `G1-G6` (`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`) remain resolvable in `grant_queue` and `auto-research-funds` mapping docs.
+
+## 2026-03-18 08:04 JST revalidation log (main run / deep-by-RQ execution lock)
+
+- Pulled latest `main` in `auto-startup`, `mind-upload`, `auto-research-funds`, and `EEG-DATA` before this run.
+- Recounted unique `Ux-RQy` keys on this page and reconfirmed `RQ_TOTAL=60` (`missing=0`, `duplicate=0`).
+- Rechecked judgment split against `mind-upload-eeg-rq60-feasibility-and-funds.md` and reconfirmed `A/B/C=17/25/18`.
+- Revalidated the 24 referenced EEG IDs (`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`) in latest `EEG-DATA/eeg_dataset_summary_ja.csv` (`missing=0`).
+- Revalidated grant real IDs `G1-G6` (`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`) in `grant_queue` and `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`.
+- Execution policy is unchanged: no generic sweep, only deep one-by-one operation with `1RQ = 1 verification proposition = 1 application theme = 1 main data`.
