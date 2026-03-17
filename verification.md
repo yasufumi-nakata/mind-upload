@@ -59,7 +59,7 @@ wiki_links:
     description: "ESI、DCM、SCM、因果同値類を、観測と推定の違いから整理します。"
   - label: "Wiki: 配線図だけでは足りない理由"
     url: "/wiki/connectome-is-not-enough.html"
-    description: "connectome だけで落ちる状態変数を、シナプス・遅延・神経修飾・グリアから整理します。"
+    description: "connectome だけで落ちる状態変数を、shared extracellular / electrical state、シナプス・遅延・神経修飾・グリアから整理します。"
   - label: "Wiki: 計測スタックごとの observability と claim ceiling"
     url: "/wiki/measurement-stack-and-claim-ceiling.html"
     description: "どの measurement stack が何を直接観測し、どこで主張上限に当たるかを整理します。"
@@ -960,7 +960,7 @@ Observability Budget は <strong>何を直接見たか</strong>、latent-state e
 <section class="section" id="state-completeness-gate">
 <h2 class="section-title">状態変数の完全性ゲート</h2>
 <p>
-2026年3月の一次文献監査では、<strong>「配線図がある」こと</strong>と<strong>「生成的に振る舞える」こと</strong>の間に、少なくとも 6 種類の抜けやすい状態変数があることを再確認しました。既存の細胞型・シナプス・遅延・神経修飾・グリアに加えて、今回あらためて <strong>内在興奮性 / 恒常性 set point</strong> を独立クラスとして切り出しました。したがって本サイトでは <strong>edge list だけの提出物を L2 以上の合格条件に使いません</strong>。
+2026年3月の一次文献監査では、<strong>「配線図がある」こと</strong>と<strong>「生成的に振る舞える」こと</strong>の間に、少なくとも 7 種類の抜けやすい状態変数があることを再確認しました。既存の細胞型・シナプス・遅延・神経修飾・グリアに加えて、今回あらためて <strong>shared extracellular / electrical state</strong> と <strong>内在興奮性 / 恒常性 set point</strong> を独立クラスとして切り出しました。したがって本サイトでは <strong>edge list だけの提出物を L2 以上の合格条件に使いません</strong>。
 </p>
 <table class="data-table">
 <thead>
@@ -987,6 +987,11 @@ Observability Budget は <strong>何を直接見たか</strong>、latent-state e
 <td>静的配線の記述までは可能ですが、L2 の介入予測や L3 の安定制御は主張できません。</td>
 </tr>
 <tr>
+<td><strong>shared extracellular / electrical state</strong></td>
+<td>chemical wiring だけでは gap-junction coupling、ephaptic field、interstitial ion / chloride state が固定されず、同じ graph でも inhibition の効き方、同期、state switching が変わります。</td>
+<td>phase locking、inhibition sign / gain、state-transition threshold、plasticity gate は latent field / ion state 付きに留めます。</td>
+</tr>
+<tr>
 <td><strong>遅延・髄鞘</strong></td>
 <td>同じグラフでも伝導速度が違えば同期と位相が変わります。</td>
 <td>閉ループや時間整合性の主張を止め、遅延不確実性を明示します。</td>
@@ -1006,7 +1011,13 @@ Observability Budget は <strong>何を直接見たか</strong>、latent-state e
 <div class="note-box">
 <strong>ここでの実務ルール</strong>
 <p>
-connectome-complete は <strong>emulation-complete を意味しません</strong>。詳細な一次文献と、どの状態変数を最低提出物に入れるべきかの技術的根拠は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> に集約します。今回追加した <strong>内在興奮性 / 恒常性 / 維持状態</strong> の論点は、<a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に切り出してあります。
+connectome-complete は <strong>emulation-complete を意味しません</strong>。詳細な一次文献と、どの状態変数を最低提出物に入れるべきかの技術的根拠は <a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは足りない理由</a> に集約します。今回追加した <strong>shared extracellular / electrical state</strong> と <strong>内在興奮性 / 恒常性 / 維持状態</strong> の論点は、<a href="wiki/connectome-is-not-enough.html#timescale-matrix">同 wiki の timescale matrix</a> と <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に切り出してあります。
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-17 追補：chemical connectome は electrical / ionic completeness を自動では与えません</strong>
+<p>
+<a href="https://doi.org/10.1038/99496" target="_blank">Galarreta &amp; Hestrin (1999)</a> は neocortical fast-spiking interneuron 間の electrical coupling を、<a href="https://doi.org/10.1038/nn.2727" target="_blank">Anastassiou et al. (2011)</a> は endogenous electric field が spike timing を動かしうることを、<a href="https://doi.org/10.1126/science.aaf3736" target="_blank">Ding et al. (2016)</a> は interstitial ion composition の操作だけで sleep-wake transition を切り替えうることを示しました。さらに <a href="https://doi.org/10.1016/j.neuron.2023.07.013" target="_blank">Burman et al. (2023)</a> は active cortical network が in vivo で fast inhibition を shunting mode に寄せることを、<a href="https://doi.org/10.1016/j.cub.2025.01.050" target="_blank">Alfonsa et al. (2025)</a> は sleep-wake-related な intracellular chloride 変化が cortical plasticity を左右することを示しました。したがって本サイトでは、<strong>local ion / field / gap-junction state を持たない提出物</strong>に対して、<strong>inhibition sign / gain</strong>、<strong>fast synchrony</strong>、<strong>state-switch threshold</strong>、<strong>plasticity gate</strong> の強い claim を許しません。これらは rodent 局所回路の強い因果証拠であり、human whole-brain の十分条件にはまだ上げません。
 </p>
 </div>
 <div class="note-box">

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Wiki：配線図だけでは足りない理由"
-description: "WBE で connectome だけを保存しても足りない理由を、樹状突起統合状態を含む状態変数の欠落と connectome-constrained 推定の限界まで含めて一次文献から整理します。clearance / immune support も独立軸として扱います。"
+description: "WBE で connectome だけを保存しても足りない理由を、shared extracellular / electrical state、樹状突起統合状態を含む状態変数の欠落と connectome-constrained 推定の限界まで含めて一次文献から整理します。clearance / immune support も独立軸として扱います。"
 article_type: Wiki
 subtitle: "connectome-complete は emulation-complete ではありません"
 author: Mind Uploading Research Project
@@ -9,17 +9,17 @@ last_updated: "2026-03-17"
 note: "Technical / natural science only"
 audience: "配線図が取れたら WBE に近いのかを、技術と自然科学だけで判断したい人"
 reading_time: "15〜20分"
-page_intro: "このページは、『コネクトームが取れれば脳の再現に十分ではないか』という直感を、一次文献に基づいて分解するためのページです。哲学や法制度ではなく、どの状態変数が欠けると何が言えなくなるか、さらに connectome-constrained でもどの推定上の壁が残るかに絞って整理します。glial / metabolic support や clearance / immune support だけでなく、樹状突起の branch-specific な統合状態も独立に扱います。"
+page_intro: "このページは、『コネクトームが取れれば脳の再現に十分ではないか』という直感を、一次文献に基づいて分解するためのページです。哲学や法制度ではなく、どの状態変数が欠けると何が言えなくなるか、さらに connectome-constrained でもどの推定上の壁が残るかに絞って整理します。glial / metabolic support や clearance / immune support だけでなく、shared extracellular / electrical state と樹状突起の branch-specific な統合状態も独立に扱います。"
 accuracy_note: "ここで示すのは『最低限これを外すと主張が弱くなる』という整理と、『配線制約を入れてもなお残る縮退』の整理であり、最終的な十分条件が確定したという意味ではありません。"
 page_highlights:
-  - "配線図だけでは落ちる論点を、8つの状態クラスと1つの推定上の壁に分けて整理します。"
+  - "配線図だけでは落ちる論点を、9つの状態クラスと1つの推定上の壁に分けて整理します。"
   - "一次文献だけを使い、state variable の欠落と parameter degeneracy を切り分けます。"
   - "このサイトで connectome-complete と connectome-constrained model をどう読み替えるかの運用ルールも固定します。"
   - "列挙で終わらせず、connectome-only から何を足したときに predictive gain が読めるかを augmentation / ablation で固定します。"
   - "fly / mouse / human の証拠を混ぜたときの external validity ceiling も、本文で明示します。"
 known_points:
   - "全脳 connectome の作成は大きく前進していますが、それだけで動的再現が完了したとは言えません。"
-  - "シナプス効率、樹状突起の branch-specific 非線形統合、遅延、神経修飾、グリア、clearance / immune support、細胞型ラベル、内在興奮性 / 恒常性 set point は、静的な edge list からは落ちやすい情報です。"
+  - "シナプス効率、shared extracellular / electrical state、樹状突起の branch-specific 非線形統合、遅延、神経修飾、グリア、clearance / immune support、細胞型ラベル、内在興奮性 / 恒常性 set point は、静的な edge list からは落ちやすい情報です。"
   - "EM の synapse count、PSD 面積、same-brain connectomics は synaptic-state の prior を強くしえますが、その瞬間の effective weight や release state の直接読出しではありません。"
   - "粗い生理 proxy を ground truth と混同すると、内部状態の主張を過大化しやすくなります。"
   - "connectome-constrained なモデルでも、未測定の細胞・シナプス・修飾パラメータが残ると dynamics は縮退しえます。"
@@ -60,7 +60,7 @@ recommended_pages:
 <div class="abstract-box">
 <h2>結論</h2>
 <p>
-配線図は WBE の重要な土台ですが、<strong>それだけでは動的再現の下限要件になりません</strong>。同じ隣接関係でも、細胞型ラベル、内在興奮性、シナプス効率、樹状突起 branch の非線形統合、伝導遅延、神経修飾、グリア結合状態、clearance / immune support が違えば、学習、位相同期、局所計算、覚醒度依存の応答、長期安定性は大きく変わります。さらに、2024-2025 年の connectome-constrained modelling 研究は、<strong>配線制約を入れても未測定パラメータと省略機構のために dynamics の縮退が残る</strong>ことを示しました。したがって、このサイトでは <strong>connectome-complete を structural atlas / scaffold の達成</strong>として扱い、<strong>emulation-complete と言い換えません</strong>。同様に、<strong>connectome-constrained model が一部の活動を再現した</strong>ことも、そのまま state-complete reconstruction とは読みません。
+配線図は WBE の重要な土台ですが、<strong>それだけでは動的再現の下限要件になりません</strong>。同じ隣接関係でも、細胞型ラベル、内在興奮性、シナプス効率、shared extracellular / electrical state、樹状突起 branch の非線形統合、伝導遅延、神経修飾、グリア結合状態、clearance / immune support が違えば、学習、位相同期、局所計算、覚醒度依存の応答、長期安定性は大きく変わります。さらに、2024-2025 年の connectome-constrained modelling 研究は、<strong>配線制約を入れても未測定パラメータと省略機構のために dynamics の縮退が残る</strong>ことを示しました。したがって、このサイトでは <strong>connectome-complete を structural atlas / scaffold の達成</strong>として扱い、<strong>emulation-complete と言い換えません</strong>。同様に、<strong>connectome-constrained model が一部の活動を再現した</strong>ことも、そのまま state-complete reconstruction とは読みません。
 </p>
 </div>
 
@@ -72,7 +72,7 @@ recommended_pages:
 </div>
 
 <section class="section" id="bottom-line">
-<h2 class="section-title">先に固定する 8 つの状態クラスと 1 つの推定上の壁</h2>
+<h2 class="section-title">先に固定する 9 つの状態クラスと 1 つの推定上の壁</h2>
 <table class="data-table">
 <thead>
 <tr>
@@ -100,6 +100,12 @@ recommended_pages:
 <td>edge の有無だけでは重み、放出確率、短期可塑性、LTP/LTD の履歴を決められません。</td>
 <td>edge count や synapse count を、そのまま effective weight と読むことです。</td>
 <td>静的配線の記述までは可能ですが、L2 の介入予測や L3 の閉ループ安定性は主張しません。</td>
+</tr>
+<tr>
+<td><strong>shared extracellular / electrical state</strong></td>
+<td>chemical synapse の wiring だけでは、gap junction の結合、endogenous electric field、interstitial ion / chloride state が固定されず、同じ graph でも inhibition の効き方、同期、state switching が変わります。</td>
+<td>chemical connectome と cell type が分かれば、electrical coupling と inhibitory gain もほぼ固定された、と読むことです。</td>
+<td>local ion / field / gap-junction state を測っていない限り、phase locking、inhibition sign / gain、state-transition threshold、plasticity gate の強い主張は latent state 付きに留めます。</td>
 </tr>
 <tr>
 <td><strong>樹状突起統合状態</strong></td>
@@ -142,7 +148,7 @@ recommended_pages:
 <div class="note-box">
 <strong>今回追加した不足変数</strong>
 <p>
-2026-03-17 の追加再監査では、従来の整理に加えて <strong>樹状突起統合状態</strong>、<strong>内在興奮性・恒常性 set point</strong>、<strong>clearance / immune support</strong> を独立クラスとして固定しました。理由は、cell-type ラベルや connectome を持っていても、branch-specific な非線形入力統合、threshold、gain、発火率の戻り先、CSF / glymphatic support、microglia-mediated surveillance が違えば、局所計算、長期予測、multiday recovery がまだ定まらないためです。一次文献のまとまった整理は <a href="homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に分けております。
+2026-03-17 の追加再監査では、従来の整理に加えて <strong>shared extracellular / electrical state</strong>、<strong>樹状突起統合状態</strong>、<strong>内在興奮性・恒常性 set point</strong>、<strong>clearance / immune support</strong> を独立クラスとして固定しました。理由は、cell-type ラベルや connectome を持っていても、gap junction / endogenous field / ion-state、branch-specific な非線形入力統合、threshold、gain、発火率の戻り先、CSF / glymphatic support、microglia-mediated surveillance が違えば、局所計算、長期予測、multiday recovery がまだ定まらないためです。一次文献のまとまった整理は <a href="homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> に分けております。
 </p>
 </div>
 </section>
@@ -169,6 +175,13 @@ recommended_pages:
 <td><a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">Holler et al. (2021)</a>、<a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">Dürst et al. (2022)</a>、<a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">Alle et al. (2024)</a> は、ultrastructure や release-probability parameter が average potency の制約を強めても、その瞬間の release state や transmission reliability までは固定しないことを示します。</td>
 <td>human では主として局所 ex vivo / 断片レベルであり、whole-brain in vivo の current state を直接は与えません。</td>
 <td>phase-sensitive な介入予測、precise timing、closed-loop stability を強くは主張しません。</td>
+</tr>
+<tr>
+<td><strong>shared extracellular / electrical state</strong><br>gap junction / ephaptic field / interstitial ion &amp; chloride state</td>
+<td>ms〜時間</td>
+<td><a href="https://doi.org/10.1038/99496" target="_blank">Galarreta &amp; Hestrin (1999)</a> は neocortical fast-spiking interneuron 間の electrical coupling を、<a href="https://doi.org/10.1038/nn.2727" target="_blank">Anastassiou et al. (2011)</a> は endogenous electric field が spike timing を動かしうることを、<a href="https://doi.org/10.1126/science.aaf3736" target="_blank">Ding et al. (2016)</a> は interstitial ion composition の操作だけで sleep-wake transition を切り替えうることを、<a href="https://doi.org/10.1016/j.neuron.2023.07.013" target="_blank">Burman et al. (2023)</a> は active cortical network が in vivo で fast inhibition を shunting mode へ動かすことを、<a href="https://doi.org/10.1016/j.cub.2025.01.050" target="_blank">Alfonsa et al. (2025)</a> は sleep-wake-related な intracellular chloride 変化が cortical plasticity を左右することを示しました。</td>
+<td>human では local ion composition、E<sub>GABA</sub>、ephaptic microfield の routine direct readout はほぼ無く、侵襲局所計測か coarse proxy に限られます。</td>
+<td>inhibition sign / gain、fast synchrony、state-switch threshold、plasticity gate を fixed parameter としては主張しません。</td>
 </tr>
 <tr>
 <td><strong>branch-specific integration state</strong><br>dendritic spikes / plateau / local nonlinear subunits</td>
@@ -230,7 +243,7 @@ recommended_pages:
 <div class="note-box">
 <strong>この行列で何を直したか</strong>
 <p>
-今回の修正では、<strong>fast execution state</strong>、<strong>branch-specific integration state</strong>、<strong>controller state</strong>、<strong>slow maintenance state</strong>、<strong>clearance / immune support</strong> を本文で明示的に分けました。これにより、同じ「hidden state が残る」という一文でも、<strong>何が momentary release を止めるのか</strong>、<strong>何が single-neuron transfer function を止めるのか</strong>、<strong>何が cross-day claim を止めるのか</strong>、<strong>何が long-term stabilization を止めるのか</strong>、<strong>何が multiday support-state を止めるのか</strong>を別々に読めます。今後このサイトでは、これらを 1 行の latent state 欄に潰さず、timescale ごとの claim ceiling と一緒に出します。
+今回の修正では、<strong>fast execution state</strong>、<strong>shared extracellular / electrical state</strong>、<strong>branch-specific integration state</strong>、<strong>controller state</strong>、<strong>slow maintenance state</strong>、<strong>clearance / immune support</strong> を本文で明示的に分けました。これにより、同じ「hidden state が残る」という一文でも、<strong>何が momentary release を止めるのか</strong>、<strong>何が inhibition sign / gain と state switching を止めるのか</strong>、<strong>何が single-neuron transfer function を止めるのか</strong>、<strong>何が cross-day claim を止めるのか</strong>、<strong>何が long-term stabilization を止めるのか</strong>、<strong>何が multiday support-state を止めるのか</strong>を別々に読めます。今後このサイトでは、これらを 1 行の latent state 欄に潰さず、timescale ごとの claim ceiling と一緒に出します。
 </p>
 </div>
 </section>
@@ -329,7 +342,18 @@ Holler らは、同定した新皮質錐体細胞間シナプスで <strong>PSD 
 </p>
 </div>
 
-<h3>4. 樹状突起は point neuron の自動補完先ではありません</h3>
+<h3>4. shared extracellular / electrical state は edge list の外にあります</h3>
+<p>
+current connectomics の強みは chemical synapse の構造制約を押し上げることですが、<strong>それだけでは gap junction、endogenous electric field、interstitial ion / chloride state は固定されません</strong>。<a href="https://doi.org/10.1038/99496" target="_blank">Galarreta &amp; Hestrin (1999)</a> は neocortex の fast-spiking interneuron が electrical synapse で結ばれた network を作ることを示しました。さらに <a href="https://doi.org/10.1038/nn.2727" target="_blank">Anastassiou et al. (2011)</a> は、endogenous field が cortical neuron の発火タイミングを偏らせうることを示しました。加えて <a href="https://doi.org/10.1126/science.aaf3736" target="_blank">Ding et al. (2016)</a> は、brain interstitial ion composition を変えるだけで sleep-like / wake-like state を切り替えうることを示し、<a href="https://doi.org/10.1016/j.neuron.2023.07.013" target="_blank">Burman et al. (2023)</a> は active cortical network が in vivo で fast inhibition を shunting mode に寄せることを、<a href="https://doi.org/10.1016/j.cub.2025.01.050" target="_blank">Alfonsa et al. (2025)</a> は sleep-wake-related な intracellular chloride 変化が glutamatergic cortical synapse の plasticity を制御することを示しました。したがって、<strong>同じ chemical connectome と同じ cell type でも、field / ion / chloride state が違えば inhibition の効き方、同期、state transition、plasticity gate はまだ変わりえます</strong>。
+</p>
+<div class="note-box">
+<strong>今回固定する読み替え</strong>
+<p>
+このサイトでは今後、<strong>gap junction の有無</strong>、<strong>ephaptic field</strong>、<strong>interstitial ion / chloride state</strong> を、神経修飾や glial support の注釈へ埋め込んで済ませません。local ion / field / electrical-coupling 情報が無い場合、<strong>inhibition sign / gain</strong>、<strong>fast synchrony</strong>、<strong>state-switch threshold</strong>、<strong>plasticity gate</strong> は latent state として残し、chemical wiring だけで固定されたとは書きません。
+</p>
+</div>
+
+<h3>5. 樹状突起は point neuron の自動補完先ではありません</h3>
 <p>
 <a href="https://doi.org/10.1038/35005094" target="_blank">Schiller et al. (2000)</a> は neocortical pyramidal neuron の basal dendrite で NMDA spike を示し、<a href="https://doi.org/10.1038/nn1253" target="_blank">Polsky et al. (2004)</a> は thin dendrite が独立した computational subunit として振る舞いうることを示しました。さらに <a href="https://doi.org/10.1038/nature12600" target="_blank">Smith et al. (2013)</a> は in vivo で dendritic spike が感覚選択性を高めることを、<a href="https://doi.org/10.1038/nature14251" target="_blank">Cichon &amp; Gan (2015)</a> は branch-specific dendritic Ca<sup>2+</sup> spike が持続的 plasticity を引き起こすことを、<a href="https://doi.org/10.1126/science.aah6066" target="_blank">Takahashi et al. (2016)</a> は active dendrite の介入が perception を動かすことを示しました。加えて human でも <a href="https://doi.org/10.1016/j.cell.2018.08.045" target="_blank">Beaulieu-Laroche et al. (2018)</a> と <a href="https://doi.org/10.1126/science.aax6239" target="_blank">Gidon et al. (2020)</a> が L2/3 neuron の強い compartmentalization と dendritic action potential を示し、<a href="https://doi.org/10.1038/s41593-025-01876-8" target="_blank">Sehgal et al. (2025)</a> は branch-specific plasticity が近接時刻の contextual memory linking に関わることを示しました。したがって、<strong>同じ connectome</strong>、<strong>同じ cell type</strong>、<strong>似た somatic firing</strong> があっても、branch ごとの非線形統合状態が違えば、single-neuron transfer function と学習の配分はまだ一致しません。
 </p>
@@ -340,17 +364,17 @@ Holler らは、同定した新皮質錐体細胞間シナプスで <strong>PSD 
 </p>
 </div>
 
-<h3>5. 遅延と髄鞘は timing の一部です</h3>
+<h3>6. 遅延と髄鞘は timing の一部です</h3>
 <p>
 Gibson らは神経活動が oligodendrogenesis と adaptive myelination を促進することを示し、McKenzie らは motor skill learning に active central myelination が必要であることを報告しました。さらに Micheva らは、PV interneuron の局所軸索でも髄鞘化の程度が伝導速度と相関することを示しました。つまり、<strong>同じ配線でも timing state が違えば、局所抑制回路や学習のダイナミクスが変わる</strong>ため、delay を graph の外へ追い出すことはできません。
 </p>
 
-<h3>6. 神経修飾は「1つの気分スカラー」ではありません</h3>
+<h3>7. 神経修飾は「1つの気分スカラー」ではありません</h3>
 <p>
 Reimer らは、瞳孔変動が皮質内の adrenergic と cholinergic activity の両方を追うことを示しました。これは逆に、<strong>瞳孔径がどちらか一方の transmitter state を一意に表すわけではない</strong>ことも意味します。さらに Neyhart らは、皮質 ACh が cholinergic axon activity と行動状態からかなり予測できる一方で、<strong>近傍軸索からの距離と clearance kinetics に依存する局所性</strong>も持つことを示しました。したがって、人で瞳孔径や HRV を使うのは有用でも、それをトランスミッタ特異的・領域特異的な内部状態の ground truth と見なすのは過大主張です。必要なのは「良い proxy かどうか」だけではなく、<strong>何の proxy で何の proxy ではないか</strong>を明記することでございます。
 </p>
 
-<h3>7. グリアは後付けの補助変数ではありません</h3>
+<h3>8. グリアは後付けの補助変数ではありません</h3>
 <p>
 Adamsky らは astrocytic activation が de novo neuronal potentiation と memory enhancement を生みうることを示しました。Cahill らは、局所的で瞬間的な neurotransmitter input が、分単位にわたる広い astrocyte network の応答へ符号化されることを報告しています。したがって、<strong>グリアを無視したモデルは、可塑性や slow network state を部分的に欠いたモデル</strong>として扱うべきです。ここで重要なのは、「グリアも関わるらしい」という一般論ではなく、<strong>どの時定数のどの状態変数を捨てたか</strong>をモデル仕様として明示することでございます。
 </p>
@@ -359,7 +383,7 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <section class="section" id="augmentation-ablation">
 <h2 class="section-title">列挙で終わらせず、augmentation / ablation で比較する</h2>
 <p>
-現行サイトの弱点は、欠ける state variable を列挙できても、<strong>どの追加情報がどの誤差項を減らしたときに一段強い claim へ進めるのか</strong>が前面に出ていなかった点でした。2024-2026 年の一次文献は、connectome-only baseline から same-brain function、transcriptomic label、dendritic branch state、local transmitter dynamics、glial slow state、recovery log を足すと、改善の出方が別であることを示しています。したがって、このサイトでは <strong>state variable を「ある / ない」で数えるのではなく、augmentation / ablation で held-out predictive gain を比較する</strong>方針へ寄せます。
+現行サイトの弱点は、欠ける state variable を列挙できても、<strong>どの追加情報がどの誤差項を減らしたときに一段強い claim へ進めるのか</strong>が前面に出ていなかった点でした。2024-2026 年の一次文献は、connectome-only baseline から same-brain function、transcriptomic label、shared extracellular / electrical state、dendritic branch state、local transmitter dynamics、glial slow state、recovery log を足すと、改善の出方が別であることを示しています。したがって、このサイトでは <strong>state variable を「ある / ない」で数えるのではなく、augmentation / ablation で held-out predictive gain を比較する</strong>方針へ寄せます。
 </p>
 <table class="data-table">
 <thead>
@@ -489,6 +513,11 @@ Adamsky らは astrocytic activation が de novo neuronal potentiation と memor
 <li>Matsuzaki, M., Honkura, N., Ellis-Davies, G. C. R., & Kasai, H. (2004). Structural basis of long-term potentiation in single dendritic spines. <em>Nature</em>, 429, 761–766. <a href="https://doi.org/10.1038/nature02617" target="_blank">doi:10.1038/nature02617</a></li>
 <li>Vardalaki, D., Chung, K., &amp; Harnett, M. T. (2022). Filopodia are a structural substrate for silent synapses in adult neocortex. <em>Nature</em>, 612, 323–327. <a href="https://doi.org/10.1038/s41586-022-05483-6" target="_blank">doi:10.1038/s41586-022-05483-6</a></li>
 <li>Alle, H., et al. (2024). Membrane potential states gate synaptic consolidation in human neocortical tissue. <em>Nature Communications</em>, 15, 10340. <a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">doi:10.1038/s41467-024-53901-2</a></li>
+<li>Galarreta, M., &amp; Hestrin, S. (1999). A network of fast-spiking cells in the neocortex connected by electrical synapses. <em>Nature</em>, 402, 72–75. <a href="https://doi.org/10.1038/99496" target="_blank">doi:10.1038/99496</a></li>
+<li>Anastassiou, C. A., Perin, R., Markram, H., &amp; Koch, C. (2011). Ephaptic coupling of cortical neurons. <em>Nature Neuroscience</em>, 14, 217–223. <a href="https://doi.org/10.1038/nn.2727" target="_blank">doi:10.1038/nn.2727</a></li>
+<li>Ding, F., O'Donnell, J., Xu, Q., Kang, N., Goldman, N., &amp; Nedergaard, M. (2016). Changes in the composition of brain interstitial ions control the sleep-wake cycle. <em>Science</em>, 352(6285), 550–555. <a href="https://doi.org/10.1126/science.aaf3736" target="_blank">doi:10.1126/science.aaf3736</a></li>
+<li>Burman, R. J., et al. (2023). Active cortical networks promote shunting fast synaptic inhibition in vivo. <em>Neuron</em>, 111(22), 3633–3648.e8. <a href="https://doi.org/10.1016/j.neuron.2023.07.013" target="_blank">doi:10.1016/j.neuron.2023.07.013</a></li>
+<li>Alfonsa, H., et al. (2025). Sleep-wake-related changes in intracellular chloride regulate plasticity at glutamatergic cortical synapses. <em>Current Biology</em>. <a href="https://doi.org/10.1016/j.cub.2025.01.050" target="_blank">doi:10.1016/j.cub.2025.01.050</a></li>
 <li>Beaulieu-Laroche, L., Toloza, E. H. S., van der Goes, M.-S., et al. (2018). Enhanced Dendritic Compartmentalization in Human Cortical Neurons. <em>Cell</em>, 175(3), 643–651.e14. <a href="https://doi.org/10.1016/j.cell.2018.08.045" target="_blank">doi:10.1016/j.cell.2018.08.045</a></li>
 <li>Gidon, A., Zolnik, T. A., Fidzinski, P., et al. (2020). Dendritic action potentials and computation in human layer 2/3 cortical neurons. <em>Science</em>, 367(6473), 83–87. <a href="https://doi.org/10.1126/science.aax6239" target="_blank">doi:10.1126/science.aax6239</a></li>
 <li>Sehgal, M., et al. (2025). Compartmentalized dendritic plasticity in the mouse retrosplenial cortex links contextual memories formed close in time. <em>Nature Neuroscience</em>, 28, 602–615. <a href="https://doi.org/10.1038/s41593-025-01876-8" target="_blank">doi:10.1038/s41593-025-01876-8</a></li>
