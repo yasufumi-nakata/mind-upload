@@ -329,3 +329,11 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 助成テーマは `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）を正本キーとして維持しました。
 - EEG参照は引き続き `D1-D16 + DOI + データセット名 + access区分` を申請正本とし、数値IDは探索補助として扱います。
 - 依頼方針どおり、汎用的な浅い横断ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の粒度で、各課題を個別に深掘りする運用をwiki正本に固定しました。
+
+## 2026-03-18 13:01 JST 再検証ログ（本run / 深掘り方針の再固定）
+
+- 作業前に `auto-startup` の `main` で `git pull --ff-only origin main` を実行し、fast-forward不要（Already up to date）を確認しました。
+- `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` を正本に、`60RQ` すべてに `検証可否` `深掘り検証設計` `応募テーマ` `推奨EEG-DATA` が1行ずつ埋まっている構造を再確認しました。
+- 依頼方針どおり、横断的な一般論ではなく `1RQ=1検証命題=1応募テーマ=1主データ` で扱う運用を維持し、各RQの「EEG-DATA単独で言える範囲」と「外部依存境界」を分離して提示する方針を固定しました。
+- 応募先は `G1-G6` のキー運用を維持し、`A/B/C` 判定ごとに `A=再現性実装` `B=統合検証計画` `C=制度/理論連携` の提出戦略を使い分ける設計を継続しました。
+- wiki反映先は `mind-upload/wiki` と `mind-upload/github-wiki-export`、および `auto-research-funds/wiki` の3面同期を維持し、同一内容で更新しました。
