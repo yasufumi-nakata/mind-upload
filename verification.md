@@ -795,7 +795,7 @@ Cross-day and remote-memory claims fail for a different reason than same-session
 </tr>
 <tr>
 <td><strong>Human evidence class / observability ceiling</strong></td>
-<td>Label each human-side route as <strong>structural scaffold</strong>, <strong>regional density proxy</strong>, <strong>macro proxy</strong>, or <strong>perturbation-conditioned proxy</strong>, and state which local hidden states still remain.</td>
+<td>Label each human-side route as <strong>structural scaffold</strong>, <strong>regional density proxy</strong>, <strong>macro biochemical / energetic / ionic / thermal / myelin / support proxy</strong>, or <strong>perturbation-conditioned proxy</strong>, and state which local hidden states still remain.</td>
 <td>Human proxy bundles are not promoted to state-complete maintenance snapshots.</td>
 </tr>
 </tbody>
@@ -815,7 +815,7 @@ Cross-day and remote-memory claims fail for a different reason than same-session
 <div class="note-box">
 <strong>2026-03-18 addendum: human maintenance evidence must be class-labeled</strong>
 <p>
-On this site, <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#human-observability-ceiling">Wiki: Homeostatic plasticity and maintenance-state</a> now distinguishes <strong>fixed-tissue structural scaffold</strong>, <strong>regional synaptic-density proxy</strong>, <strong>macro-biochemical scaffold</strong>, <strong>macro energetic proxy</strong>, <strong>macro-myelin proxy</strong>, <strong>perturbation-conditioned plasticity proxy</strong>, and <strong>macro support-state proxy</strong>. Human-side evidence is therefore not submitted as one generic “maintenance signal.” Each route must be class-labeled before the claim ceiling is interpreted.
+On this site, <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#human-observability-ceiling">Wiki: Homeostatic plasticity and maintenance-state</a> now distinguishes <strong>fixed-tissue structural scaffold</strong>, <strong>regional synaptic-density proxy</strong>, <strong>macro-biochemical scaffold</strong>, <strong>macro energetic proxy</strong>, <strong>macro ionic proxy</strong>, <strong>macro thermal proxy</strong>, <strong>macro-myelin proxy</strong>, <strong>perturbation-conditioned plasticity proxy</strong>, and <strong>macro support-state proxy</strong>. Human-side evidence is therefore not submitted as one generic “maintenance signal.” Each route must be class-labeled before the claim ceiling is interpreted.
 </p>
 </div>
 <div class="note-box">
