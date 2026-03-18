@@ -356,3 +356,12 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` を比較し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り構造が維持されていることを確認しました。
 - 判定内訳 `A/B/C=17/25/18`、および `G1-G6` の助成キー運用を継続し、EEG-DATAは各RQに対して主データを明示したまま維持しました。
 - wiki反映は `mind-upload/wiki` / `mind-upload/github-wiki-export` / `auto-research-funds/wiki` の3面同期で更新しました。
+
+## 2026-03-18 17:03 JST 再検証ログ（本run / 深掘り方針で再実行）
+
+- 作業開始前に `auto-startup` の `main` で `git pull --ff-only origin main` を実行し、最新化済み（Already up to date）を確認しました。
+- `mind-upload/research_harvest_50.md` を正本として、`RQ_TOTAL=60` と `U別内訳（U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4）` を再照合しました。
+- `A/B/C=17/25/18` を再計数し、全RQに `検証可否` `深掘り検証設計` `応募テーマ` `推奨EEG-DATA`（Deep Evaluation Cards では `主張単位` `応募先` `最低成果物` を追加）が埋まっていることを確認しました。
+- 依頼方針どおり、汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持しました。
+- 応募先は `G1-G6` を継続利用し、`A=再現性実装` `B=統合検証計画` `C=制度/理論連携` の提出戦略を維持しました。
+- wiki反映先は `mind-upload/wiki` と `auto-research-funds/wiki` の両方に同期しました。
