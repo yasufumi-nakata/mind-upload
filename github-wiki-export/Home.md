@@ -235,7 +235,7 @@ If you just want to know the big picture first, you can go to the public page. H
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds">RQ60 judgment original</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook">RQ60 application playbook</a></td>
 </tr>
 <tr>
-<td><strong>I want one deep card per RQ to lock grant theme and EEG data quickly</strong></td>
+<td><strong>I want to fix submission decisions per RQ using one deep card for each item</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards">RQ60 Deep Evaluation Cards (EEG-DATA × auto-research-funds)</a></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds">RQ60 judgment original</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook">RQ60 application playbook</a></td>
 </tr>

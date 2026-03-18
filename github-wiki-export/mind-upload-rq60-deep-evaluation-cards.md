@@ -1,14 +1,11 @@
----
-layout: default
-title: "Mind-upload RQ60 Deep Evaluation Cards (EEG-DATA × auto-research-funds)"
-description: "RQごとに主張単位・判定境界・応募テーマ・主データ・最低成果物を固定したディープ評価カード。"
-article_type: Wiki
-subtitle: "1RQ=1検証命題=1応募テーマ=1主データを実行可能な形で固定"
-author: Mind Uploading Research Project
-last_updated: "2026-03-18"
-note: "Per-RQ Deep Evaluation Cards"
-audience: "RQを個別に深掘りしながら応募計画へ落とし込みたい研究者"
-reading_time: "35-55分"
+# Mind-upload RQ60 Deep Evaluation Cards (EEG-DATA × auto-research-funds)
+
+> 1RQ=1検証命題=1応募テーマ=1主データを実行可能な形で固定
+>
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+
+- 更新日: 2026-03-18 / 位置づけ: Per-RQ Deep Evaluation Cards
+
 ---
 
 # Mind-upload RQ60 Deep Evaluation Cards (EEG-DATA × auto-research-funds)
@@ -96,7 +93,6 @@ reading_time: "35-55分"
 | U15-3<br>法域差（EU/US/JP等）を跨ぐ最小共通運用をどう定義するか。 | 法域差を跨ぐ最小運用はデータでは確定できず、規制比較テーブル整備が必要。 | C（EEG-DATA単独では不可（制度・他モダリティ必須））<br>制度・法務・他モダリティが主対象で、EEGは補助証拠に限定。 | 制度設計助成（神経データ法制） | G2 (GR-2026-014) / G6 (46z9VPE4wnkrvEJR) | 49 | ID 49, 2412, 3419 | System audit requirements table (technical log compatible) |
 | U15-4<br>技術進展に応じた停止条件・更新条件をどうガバナンス化するか。 | 停止/更新条件のガバナンス化は制度KPIが主で、ID 49/3419はリスク閾値の補助根拠。 | C（EEG-DATA単独では不可（制度・他モダリティ必須））<br>制度・法務・他モダリティが主対象で、EEGは補助証拠に限定。 | 制度設計助成（神経データ法制） | G2 (GR-2026-014) / G6 (46z9VPE4wnkrvEJR) | 49 | ID 49, 2412, 3419 | System audit requirements table (technical log compatible) |
 
-
 ## 運用上の注意
 
 - 数値IDは再採番されるため、提出書類では `DOI + データセット名 + access区分` を併記する。
@@ -108,3 +104,12 @@ reading_time: "35-55分"
 - `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` と `mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook.md` を突合し、`60RQ` の統合カードを新規生成した。
 - 全行に対して `主張単位` `判定境界` `応募テーマ` `応募先` `主データ` `補助データ` `最低成果物` を固定した。
 - 判定内訳は再計数で `A/B/C=17/25/18` と一致した。
+
+## 2026-03-18 17:03 JST 再検証ログ（本run / 深掘り方針で再実行）
+
+- 作業開始前に `auto-startup` の `main` で `git pull --ff-only origin main` を実行し、最新化済み（Already up to date）を確認しました。
+- `mind-upload/research_harvest_50.md` を正本として、`RQ_TOTAL=60` と `U別内訳（U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4）` を再照合しました。
+- `A/B/C=17/25/18` を再計数し、全RQに `検証可否` `深掘り検証設計` `応募テーマ` `推奨EEG-DATA`（Deep Evaluation Cards では `主張単位` `応募先` `最低成果物` を追加）が埋まっていることを確認しました。
+- 依頼方針どおり、汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持しました。
+- 応募先は `G1-G6` を継続利用し、`A=再現性実装` `B=統合検証計画` `C=制度/理論連携` の提出戦略を維持しました。
+- wiki反映先は `mind-upload/wiki` と `auto-research-funds/wiki` の両方に同期しました。
