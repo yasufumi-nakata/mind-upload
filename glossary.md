@@ -5,7 +5,7 @@ description: "A practical glossary of the terms used most often in Mind-Upload, 
 article_type: Reference
 subtitle: "Start by keeping the words straight"
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
+last_updated: "2026-03-18"
 note: "Living document"
 audience: "Readers who do not want to get stuck on terminology and anyone trying to avoid category mistakes"
 reading_time: "3 to 10 minutes for only the necessary items"
@@ -13,11 +13,13 @@ page_intro: "This page is a glossary for the terms that appear most often in Min
 accuracy_note: "The definitions here are deliberately short. For exact usage, return to the linked page sections or original papers."
 page_highlights:
   - "It gives short explanations of terms and points to where each concept matters."
+  - "It now includes the front-door verification terms added in the March 2026 re-audit, such as claim ceiling, shortcut auditing, maintenance-state, and vascular-state / CVR audit."
   - "It is especially careful about pairs that sound similar but should not be collapsed, such as observability / identifiability / direct validation."
   - "If a term blocks your reading, this page is meant to get you unstuck quickly and send you back to the main text."
 known_points:
   - "Many misunderstandings can be avoided simply by reducing terminology confusion."
   - "It is especially important to distinguish between decode/emulate, correlation/causation, observability/identifiability, model fit/direct validation, and brain signal/language prior."
+  - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, timing-state, and vascular-state language."
   - "This page serves as an entry point for short definitions and a way to return to the main text."
 unknown_points:
   - "Terms related to the theory of consciousness have slightly different meanings depending on the paper or position."
@@ -47,6 +49,12 @@ wiki_links:
   - label: "Wiki: Basics of multimodal integration"
     url: "/wiki/multimodal-integration-basics.html"
     description: "Clarifies the different roles of EEG, MEG, fMRI, ECoG, and MRI from the beginning."
+  - label: "Wiki: Why a Connectome Is Not Enough"
+    url: "/wiki/connectome-is-not-enough.html"
+    description: "Explains why structure-only information still leaves multiple state classes unresolved."
+  - label: "Wiki: Observability and Claim Ceiling by Measurement Stack"
+    url: "/wiki/measurement-stack-and-claim-ceiling.html"
+    description: "Explains what each stack directly observes and where the reading ceiling appears."
   - label: "Wiki: Baselines, preregistration, and model cards"
     url: "/wiki/baselines-prereg-and-model-cards.html"
     description: "Explains the different roles of common research-operations terms."
@@ -186,6 +194,13 @@ Baselines, benchmarks, preregistration, model cards, and failure examples all ma
 </p>
 </div>
 
+<div class="note-box">
+<strong>When the new verification terms start to pile up</strong>
+<p>
+If words such as <strong>claim ceiling</strong>, <strong>hidden state</strong>, <strong>specificity / shortcut</strong>, <strong>maintenance-state</strong>, <strong>timing-state</strong>, or <strong>vascular-state / CVR audit</strong> start appearing faster than they can be digested, begin with <a href="verification.html#observability-budget">Verification: Observability Budget</a> and then return here. This glossary is meant to stop those terms from collapsing into one vague idea of “uncertainty.”
+</p>
+</div>
+
 <section class="section" id="core">
 <h2 class="section-title">Core concepts</h2>
 <table class="data-table">
@@ -284,6 +299,60 @@ Baselines, benchmarks, preregistration, model cards, and failure examples all ma
 </table>
 </section>
 
+<section class="section" id="verification-hidden-state">
+<h2 class="section-title">Verification and Hidden-State Terms</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning in Mind-Upload</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim ceiling</strong></td>
+<td>The strongest statement the current evidence is allowed to support. If key variables stay unobserved or unaudited, the claim stops at a lower level.</td>
+</tr>
+<tr>
+<td><strong>Hidden state / latent state</strong></td>
+<td>A variable that still affects behavior or dynamics but is not directly observed by the current measurement stack. “Not measured” and “not important” are different claims.</td>
+</tr>
+<tr>
+<td><strong>Observability Budget</strong></td>
+<td>A site rule that separates what entered the sensor from what still had to be inferred. It prevents “multimodal” or “higher resolution” from being misread as state-complete.</td>
+</tr>
+<tr>
+<td><strong>Specificity &amp; Shortcut Card</strong></td>
+<td>An audit that asks whether a high score came from the intended neural variable or from nuisance routes such as movement, EMG, fingerprint, or acquisition setup.</td>
+</tr>
+<tr>
+<td><strong>Neural Contribution Card</strong></td>
+<td>The speech / brain-to-text version of shortcut auditing. It separates brain-derived contribution from task structure, language priors, candidate sets, and feedback routes.</td>
+</tr>
+<tr>
+<td><strong>Subject / session fingerprint</strong></td>
+<td>Person- or session-specific signal that can raise scores even when the target neural variable is weak. Cross-subject or cross-session claims need this separated explicitly.</td>
+</tr>
+<tr>
+<td><strong>Acquisition-distribution shortcut</strong></td>
+<td>Performance that comes from site, device, reference system, electrode layout, impedance pattern, or protocol differences rather than from the intended biological target.</td>
+</tr>
+<tr>
+<td><strong>Vascular-state / CVR audit</strong></td>
+<td>A separate audit for hemodynamic modalities that asks whether baseline vascular state, cerebrovascular reactivity, or superficial/systemic contamination could explain the amplitude difference.</td>
+</tr>
+<tr>
+<td><strong>Maintenance-state</strong></td>
+<td>Slow controller and support variables, such as sleep / wake history, ionic state, glial / metabolic support, and clearance-related support, that matter for long-horizon stability.</td>
+</tr>
+<tr>
+<td><strong>Timing-state</strong></td>
+<td>Biological conduction-timing variables such as myelin, node / internode geometry, periaxonal coupling, and related support state. It is different from hardware latency.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
 <section class="section" id="consciousness-theories">
 <h2 class="section-title">Theories of Consciousness</h2>
 <table class="data-table">
@@ -350,7 +419,11 @@ Baselines, benchmarks, preregistration, model cards, and failure examples all ma
 </tr>
 <tr>
 <td><strong>fMRI</strong></td>
-<td>Measures blood-flow-related BOLD signals. Spatial resolution is relatively strong, but temporal resolution is slow.</td>
+<td>Measures blood-flow-related BOLD signals. Spatial resolution is relatively strong, but the signal is hemodynamic rather than direct electrical activity, so vascular-state / CVR limits still matter.</td>
+</tr>
+<tr>
+<td><strong>fNIRS</strong></td>
+<td>Measures near-infrared changes in oxy- and deoxy-hemoglobin in superficial cortex. It is portable, but short-separation and systemic-confound control are critical.</td>
 </tr>
 <tr>
 <td><strong>ECoG / Invasive measurement</strong></td>
@@ -384,7 +457,7 @@ Baselines, benchmarks, preregistration, model cards, and failure examples all ma
 </tr>
 <tr>
 <td><strong>Connectome</strong></td>
-<td>Complete map of neural connections in the brain. The Drosophila whole brain connectome (FlyWire, Dorkenwald et al., 2024) has been completed, and the mouse brain is the next target. </td>
+<td>Complete map of neural connections in the brain. In Mind-Upload it counts as <strong>structural scaffold evidence</strong>, not as state-complete reconstruction, because excitability, timing-state, transcription/chromatin, proteostasis, ECM, ionic state, and maintenance support remain separate variables.</td>
 </tr>
 <tr>
 <td><strong>NMM（Neural Mass Model）</strong></td>
@@ -455,7 +528,7 @@ Baselines, benchmarks, preregistration, model cards, and failure examples all ma
 <div class="note-box">
 <strong>Supplementary information for 2026-03</strong>
 <p>
-Although non-invasive decoding and ESI are making steady progress, a successful decoder does not necessarily mean that the internal state can be uniquely restored. When reading Tang et al. (2023), d'Ascoli et al. (2025), Unnwongse et al. (2023), and Hao et al. (2025), look at task constraints, language prior, and direct validation separately.
+Although non-invasive decoding and ESI are making steady progress, a successful decoder does not necessarily mean that the internal state can be uniquely restored, and a BOLD / fNIRS difference does not automatically mean a clean neural difference. When reading Tang et al. (2023), d'Ascoli et al. (2025), Unnwongse et al. (2023), and Hao et al. (2025), keep task constraints, shortcut routes, language prior, direct validation, and vascular-state limits separate.
 </p>
 </div>
 
@@ -487,7 +560,7 @@ Although non-invasive decoding and ESI are making steady progress, a successful 
 </tr>
 <tr>
 <td><strong>Model card</strong></td>
-<td>A format that publishes not only scores but also training data, compute requirements, known weaknesses, and failure examples.</td>
+<td>A format that publishes not only scores but also training data, compute requirements, shortcut risks, claim ceiling, known weaknesses, and failure examples.</td>
 </tr>
 </tbody>
 </table>
@@ -511,6 +584,18 @@ Although non-invasive decoding and ESI are making steady progress, a successful 
 <li>Pernet, C. R., et al. (2020). Best practices in data analysis and sharing in neuroimaging using MEEG. <a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">doi:10.1038/s41593-020-00709-0</a></li>
 <li>Guo, C., Pleiss, G., Sun, Y., &amp; Weinberger, K. Q. (2017). On Calibration of Modern Neural Networks. <a href="https://proceedings.mlr.press/v70/guo17a.html" target="_blank">PMLR 70:1321-1330</a></li>
 <li>Geifman, Y., &amp; El-Yaniv, R. (2017). Selective Classification for Deep Neural Networks. <a href="https://papers.neurips.cc/paper/7073-selective-classification-for-deep-neural-networks" target="_blank">NeurIPS 2017</a></li>
+<li>Gouwens, N. W., et al. (2021). Integrated morphoelectric and transcriptomic classification of cortical GABAergic cells. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
+<li>Hengen, K. B., Torrado Pacheco, A., McGregor, J. N., Van Hooser, S. D., &amp; Turrigiano, G. G. (2016). Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
+<li>Grubb, M. S., &amp; Burrone, J. (2010). Activity-dependent relocation of the axon initial segment fine-tunes neuronal excitability. <a href="https://doi.org/10.1038/nature09185" target="_blank">doi:10.1038/nature09185</a></li>
+<li>Santoni, G., et al. (2024). Chromatin plasticity predetermines neuronal eligibility for memory trace formation. <a href="https://doi.org/10.1126/science.adg9982" target="_blank">doi:10.1126/science.adg9982</a></li>
+<li>Govindarajan, A., Israely, I., Huang, S.-Y., &amp; Tonegawa, S. (2011). The dendritic branch is the preferred integrative unit for protein synthesis-dependent LTP. <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">doi:10.1016/j.neuron.2010.12.008</a></li>
+<li>Glykys, J., Dzhala, V., Egawa, K., et al. (2014). Local impermeant anions establish the neuronal chloride concentration. <a href="https://doi.org/10.1126/science.1245423" target="_blank">doi:10.1126/science.1245423</a></li>
+<li>Seidl, A. H., Rubel, E. W., &amp; Barria, A. (2015). Tuning of Ranvier node and internode properties in myelinated axons to adjust action potential timing. <a href="https://doi.org/10.1038/ncomms9073" target="_blank">doi:10.1038/ncomms9073</a></li>
+<li>Musall, S., Kaufman, M. T., Juavinett, A. L., Gluf, S., &amp; Churchland, A. K. (2019). Single-trial neural dynamics are dominated by richly varied movements. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">doi:10.1038/s41593-019-0502-4</a></li>
+<li>Chaibub Neto, E., Pratap, A., Perumal, T. M., et al. (2019). Identity confounding in machine learning can be controlled by design. <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">doi:10.1038/s41746-019-0178-x</a></li>
+<li>Murphy, K., Harris, A. D., &amp; Wise, R. G. (2011). Robustly measuring vascular reactivity differences with breath-hold: normalising stimulus-evoked and resting state BOLD fMRI data. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">doi:10.1016/j.neuroimage.2010.07.059</a></li>
+<li>Williams, R. J., Specht, J. L., Mazerolle, E. L., et al. (2023). Correspondence between BOLD fMRI task response and cerebrovascular reactivity across the cerebral cortex. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">doi:10.3389/fphys.2023.1167148</a></li>
+<li>Yücel, M. A., Selb, J., Huppert, T. J., Franceschini, M. A., &amp; Boas, D. A. (2015). Short separation regression improves statistical significance and better localizes the hemodynamic response obtained by near-infrared spectroscopy for tasks with differing autonomic responses. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">doi:10.1117/1.NPh.2.3.035005</a></li>
 <li>Albantakis, L., et al. (2023). Integrated Information Theory (IIT) 4.0. <a href="https://doi.org/10.1371/journal.pcbi.1011465" target="_blank">doi:10.1371/journal.pcbi.1011465</a></li>
 <li>Friston, K. (2010). The free-energy principle. <a href="https://doi.org/10.1038/nrn2787" target="_blank">doi:10.1038/nrn2787</a></li>
 <li>Casali, A. G., et al. (2013). PCI. <a href="https://doi.org/10.1126/scitranslmed.3006294" target="_blank">doi:10.1126/scitranslmed.3006294</a></li>

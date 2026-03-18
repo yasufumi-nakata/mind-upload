@@ -5,7 +5,7 @@ description: "Short, precise answers to the questions that come up most often wh
 article_type: FAQ
 subtitle: "Prefer verifiable progress to flashy conclusions"
 author: Mind Uploading Research Project
-last_updated: "2026-03-16"
+last_updated: "2026-03-18"
 note: "Human-first"
 audience: "Readers who want to sort out questions and misconceptions first, and readers who want a quick overview through short Q&A"
 reading_time: "8-15 minutes"
@@ -13,13 +13,14 @@ page_intro: "This page is a Q&A for the questions many readers hit first when re
 accuracy_note: "This page gives short answers. Please do not quote the conclusion alone; return to the linked pages and references when you need the full basis."
 page_highlights:
   - "It quickly clears up first-order questions such as what this site is for and what EEG or brain-to-text work can and cannot support."
-  - "It also gives a short but scientific answer to the common misreading that connectomes plus cell types are already enough."
+  - "It now front-loads three technical guardrails: connectome-complete is not state-complete, a high score is not automatically a target-specific neural readout, and BOLD / fNIRS differences need vascular-state / CVR audit."
   - "It avoids dramatic overstatement and states what remains unresolved at the same time."
   - "It is structured so readers can tell when the FAQ is enough and when they should move on to the full page."
 known_points:
   - "Even short Q&A becomes much safer when strong claims are decomposed into weaker, more testable claims."
-  - "The impressive appearance of EEG or LLM outputs must be separated from strong WBE claims, and the contributions of language priors and brain-derived information must also be separated."
-  - "Because wiring diagrams and cell types alone leave out maintenance-state variables, claims about long-term dynamics require separate auditing."
+  - "The impressive appearance of EEG or LLM outputs must be separated from strong WBE claims, and the contributions of language priors, nuisance routes, and brain-derived information must also be separated."
+  - "Because wiring diagrams and cell types still leave excitability, timing-state, transcription/chromatin, proteostasis, ECM / PNN, ionic-homeostasis, and maintenance-support variables unresolved, long-term dynamical claims require separate auditing."
+  - "A BOLD or fNIRS amplitude difference without vascular-state / CVR or short-separation auditing is still not a clean neural difference."
   - "FAQ works well as an entry point for avoiding the wrong direction."
 unknown_points:
   - "Short answers alone cannot settle theory choice or identity questions."
@@ -52,6 +53,12 @@ wiki_links:
   - label: "Wiki: Closed loop, latency, jitter, and safe stops"
     url: "/wiki/closed-loop-latency-jitter-and-safety-stops.html"
     description: "Explains the difference between offline accuracy and L3 from a real-time systems perspective."
+  - label: "Wiki: Why a Connectome Is Not Enough"
+    url: "/wiki/connectome-is-not-enough.html"
+    description: "Explains which state classes remain outside wiring diagram plus cell type."
+  - label: "Wiki: Observability and Claim Ceiling by Measurement Stack"
+    url: "/wiki/measurement-stack-and-claim-ceiling.html"
+    description: "Explains why hemodynamic differences and shortcut-prone scores still have strict reading ceilings."
 recommended_pages:
   - label: "Verification"
     url: "/verification.html"
@@ -127,6 +134,13 @@ If the FAQ helped you understand the topic but you still do not know what to ver
 </p>
 </div>
 
+<div class="note-box">
+<strong>Three technical guards now fixed at the front door</strong>
+<p>
+This FAQ now blocks three fast overreads before they spread through the site: <strong>connectome-complete is not state-complete</strong>, <strong>high score is not automatically target-specific neural evidence</strong>, and <strong>BOLD / fNIRS amplitude difference is not automatically a neural difference without vascular-state / CVR audit</strong>. If you need the full rule set behind those three, go next to <a href="verification.html#observability-budget">Verification: Observability Budget</a>, <a href="wiki/connectome-is-not-enough.html">Wiki: Why a Connectome Is Not Enough</a>, and <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>.
+</p>
+</div>
+
 <table class="data-table">
 <thead>
 <tr>
@@ -141,7 +155,7 @@ If the FAQ helped you understand the topic but you still do not know what to ver
 </tr>
 <tr>
 <td><strong>Avoid misreading flashy claims in news coverage</strong></td>
-<td>Read Q1, “Can EEG read thoughts?”, Q1b, “What is the minimum you should check in a brain-to-text demo?”, and Q2, “What is the difference between decode and emulate?” first.</td>
+<td>Read Q1, Q1b, Q1c, and Q1d first to separate task-limited decode, shortcut routes, and hemodynamic proxy limits before moving on to Q2.</td>
 </tr>
 <tr>
 <td><strong>Know only what counts as progress</strong></td>
@@ -149,7 +163,7 @@ If the FAQ helped you understand the topic but you still do not know what to ver
 </tr>
 <tr>
 <td><strong>Know whether the connectome alone is enough</strong></td>
-<td>Q2c, “If we know the connectome and cell type, is the rest mostly filled in?” clarifies what sleep, myelin, and glia still leave out.</td>
+<td>Q2c, “If we know the connectome and cell type, is the rest mostly filled in?” clarifies which hidden-state families remain outside connectome plus cell type.</td>
 </tr>
 <tr>
 <td><strong>Know the conditions for real-time or closed-loop work</strong></td>
@@ -200,7 +214,7 @@ The Mind-Upload position is not to deny ambitious readout work. It is to separat
 <div class="note-box">
 <strong>Do not collapse Q1 into one sentence</strong>
 <p>
-<code>A string came out</code>, <code>it came out from brain-derived information alone</code>, and <code>the internal state was identified</code> are different claims. When reading brain-to-text work, separate (1) the measurement method, (2) the task constraints, (3) the language prior, (4) the presence or absence of direct validation, and (5) calibration and abstention conditions.
+<code>A string came out</code>, <code>it came out from brain-derived information alone</code>, <code>the score followed the target variable rather than shortcut routes</code>, and <code>the internal state was identified</code> are different claims. When reading brain-to-text work, separate (1) the measurement method, (2) the task constraints, (3) the language prior, (4) the presence or absence of direct validation, (5) shortcut and nuisance-route auditing, and (6) calibration and abstention conditions.
 </p>
 </div>
 
@@ -219,6 +233,32 @@ A. At minimum, check the following six things.
 </ul>
 <p>
 Littlejohn et al. (2025) showed streaming brain-to-voice output every 80 ms, and Wairagkar et al. (2025) showed neural-to-voice synthesis under 10 ms with silence fallback, but both are invasive communication routes. Wilson et al. (2025) further showed the importance of long-term unsupervised recalibration, making it clear that daily supervised recalibration is itself another barrier. For that reason, general scalp EEG or ordinary non-invasive BCI cannot claim the same level without the same conditions.
+</p>
+</section>
+
+<section class="section" id="q1c">
+<h2 class="section-title">Q. If the score is high or cross-day stable, did we read the target neural variable?</h2>
+<p>
+A. Not necessarily. A score can stay high because the model is using <strong>shortcut routes</strong> rather than the intended neural variable. In EEG/BCI work, those routes can include eye position, facial/jaw/neck EMG, uninstructed movement, auditory feedback, subject / session fingerprint, and acquisition-distribution cues such as site, device, reference system, electrode layout, and protocol.
+</p>
+<p>
+<a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> showed that trial-by-trial neural dynamics can be dominated by richly varied movements, <a href="https://doi.org/10.1523/ENEURO.0401-17.2018" target="_blank">Mostert et al. (2018)</a> showed that visual-working-memory decode can retain an eye-movement confound, <a href="https://doi.org/10.1088/1741-2560/2/4/014" target="_blank">McFarland et al. (2005)</a> showed that EMG can contribute to early BCI performance, <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a> showed that repeated-measure record-wise splits can massively underestimate error through identity confounding, and <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a> showed that cross-dataset variability weakens EEG-decoding generalization.
+</p>
+<p>
+At Mind-Upload, a result is not read as <strong>target-specific neural evidence</strong> unless the paper also fixes the target variable, nuisance-only baselines, slice-wise hold-out, and independence units for subject / session / acquisition distribution. The shortest follow-up is <a href="verification.html#specificity-shortcut-card">Verification: Specificity &amp; Shortcut Card</a>.
+</p>
+</section>
+
+<section class="section" id="q1d">
+<h2 class="section-title">Q. If BOLD or fNIRS changes, does that mean neural state changed?</h2>
+<p>
+A. Not automatically. Hemodynamic modalities carry both neural-side uncertainty and a <strong>vascular transfer state</strong>. So a group difference or longitudinal BOLD / HbO / HbR change can partly reflect baseline vascular state, cerebrovascular reactivity, or superficial/systemic contamination rather than a clean neural difference.
+</p>
+<p>
+<a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">Murphy et al. (2011)</a> showed that accounting for individual vascular reactivity improves group-level BOLD analyses, <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">Williams et al. (2023)</a> showed that task BOLD magnitude is strongly predicted by CVR across the cortex, <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">Yücel et al. (2015)</a> showed that short-separation regression is needed to reduce superficial confounds in fNIRS, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that significant task BOLD changes can coexist with opposite oxygen-metabolism changes in many voxels.
+</p>
+<p>
+At Mind-Upload, a BOLD or fNIRS difference without <strong>vascular-state / CVR</strong> or <strong>short-separation</strong> audit stays a <strong>hemodynamic-limited difference</strong> rather than a clean neural difference. The shortest follow-up is <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a> plus <a href="verification.html#observability-budget">Verification: Observability Budget</a>.
 </p>
 </section>
 
@@ -247,13 +287,13 @@ Mind-Upload cares not only about whether something looks human-like, but whether
 <section class="section" id="q2c">
 <h2 class="section-title">Q. If we know the connectome and cell type, is the rest mostly filled in?</h2>
 <p>
-A. Not yet. As <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a> showed, even within the same transcriptomic type there is still a spread of morpho-electric phenotypes. In addition, <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>, <a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">Torrado Pacheco et al. (2021)</a>, and <a href="https://doi.org/10.1038/s41467-024-47838-5" target="_blank">Xu et al. (2024)</a> show that homeostasis and network recovery across the sleep/wake cycle remain additional variables.
+A. Not yet. Wiring and cell type still leave broad families of state latent. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a> showed morpho-electric spread even within the same transcriptomic type, <a href="https://doi.org/10.1038/nature09185" target="_blank">Grubb &amp; Burrone (2010)</a> showed activity-dependent AIS relocation that retunes excitability, <a href="https://doi.org/10.1126/science.adg9982" target="_blank">Santoni et al. (2024)</a> showed that chromatin plasticity can predetermine neuronal eligibility for memory trace formation, <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">Govindarajan et al. (2011)</a> showed branch-level protein-synthesis-dependent LTP integration, <a href="https://doi.org/10.1038/nn.2338" target="_blank">Frischknecht et al. (2009)</a> showed that ECM constrains AMPA-receptor mobility and short-term plasticity, <a href="https://doi.org/10.1126/science.1245423" target="_blank">Glykys et al. (2014)</a> showed that local impermeant anions constrain neuronal chloride concentration, and <a href="https://doi.org/10.1038/ncomms9073" target="_blank">Seidl et al. (2015)</a> showed that node and internode geometry can tune conduction timing.
 </p>
 <p>
-Likewise, <a href="https://doi.org/10.1126/science.1252304" target="_blank">Gibson et al. (2014)</a>, <a href="https://doi.org/10.1126/science.1254960" target="_blank">McKenzie et al. (2014)</a>, and <a href="https://doi.org/10.1038/s41593-023-01517-y" target="_blank">Looser et al. (2024)</a> show that myelin and oligodendrocyte support affect timing and axonal health, while <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a>, <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>, and <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Lee et al. (2022)</a> show that glial and metabolic support, plus active maintenance under molecular turnover, matter for memory consolidation and slow state. So <strong>same-day activity matching</strong> and <strong>cross-day maintenance matching</strong> are separate claims.
+Likewise, <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>, <a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">Torrado Pacheco et al. (2021)</a>, and <a href="https://doi.org/10.1038/s41467-024-47838-5" target="_blank">Xu et al. (2024)</a> show that sleep-dependent homeostasis and network recovery remain additional variables. <a href="https://doi.org/10.1126/science.1252304" target="_blank">Gibson et al. (2014)</a>, <a href="https://doi.org/10.1126/science.1254960" target="_blank">McKenzie et al. (2014)</a>, and <a href="https://doi.org/10.1038/s41593-023-01517-y" target="_blank">Looser et al. (2024)</a> show that myelin and oligodendrocyte support affect timing and axonal health, while <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a>, <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>, and <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Lee et al. (2022)</a> show that glial and metabolic support, plus active maintenance under molecular turnover, matter for memory consolidation and slow state.
 </p>
 <p>
-At Mind-Upload, this means we treat <strong>connectome-complete as progress on the structural scaffold</strong>, not as <strong>emulation-complete</strong>. The shortest follow-up is <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams alone are not enough</a> plus <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.
+At Mind-Upload, this means we treat <strong>connectome-complete as progress on the structural scaffold</strong>, not as <strong>emulation-complete</strong>. Current excitability, timing-state, transcription/chromatin, local proteostasis, ECM / PNN gate, ionic milieu, sleep/controller state, and glial/metabolic support still need to be disclosed or left explicitly latent. So <strong>same-day activity matching</strong>, <strong>cross-day stability</strong>, and <strong>maintenance-consistent dynamics</strong> remain separate claims. The shortest follow-up is <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams alone are not enough</a> plus <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.
 </p>
 </section>
 
@@ -378,6 +418,21 @@ The distinguishing strategy of Mind-Upload is <strong>to build the Verification 
 <li>Suzuki, A., et al. (2011). Astrocyte-neuron lactate transport is required for long-term memory formation. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">doi:10.1016/j.cell.2011.02.018</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Lee, J.-C., Wang, C.-Y., Lin, C.-L., &amp; Lu, H.-C. (2022). Synaptic memory survives molecular turnover. <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">doi:10.1073/pnas.2211572119</a></li>
+<li>Musall, S., Kaufman, M. T., Juavinett, A. L., Gluf, S., &amp; Churchland, A. K. (2019). Single-trial neural dynamics are dominated by richly varied movements. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">doi:10.1038/s41593-019-0502-4</a></li>
+<li>Mostert, P., Albers, A. M., Brinkman, L., Todorova, L., &amp; de Lange, F. P. (2018). Eye Movement-Related Confounds in Neural Decoding of Visual Working Memory Representations. <a href="https://doi.org/10.1523/ENEURO.0401-17.2018" target="_blank">doi:10.1523/ENEURO.0401-17.2018</a></li>
+<li>McFarland, D. J., McCane, L. M., David, S. V., &amp; Wolpaw, J. R. (2005). Brain-computer interface operation: signal and noise during early training sessions. <a href="https://doi.org/10.1088/1741-2560/2/4/014" target="_blank">doi:10.1088/1741-2560/2/4/014</a></li>
+<li>Chaibub Neto, E., Pratap, A., Perumal, T. M., et al. (2019). Identity confounding in machine learning can be controlled by design. <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">doi:10.1038/s41746-019-0178-x</a></li>
+<li>Xu, M., Fanton, S., Jahanbekam, A., et al. (2020). The Cross-Dataset Variability Problem in EEG Decoding With Deep Learning. <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">doi:10.3389/fnhum.2020.00103</a></li>
+<li>Murphy, K., Harris, A. D., &amp; Wise, R. G. (2011). Robustly measuring vascular reactivity differences with breath-hold: normalising stimulus-evoked and resting state BOLD fMRI data. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">doi:10.1016/j.neuroimage.2010.07.059</a></li>
+<li>Williams, R. J., Specht, J. L., Mazerolle, E. L., et al. (2023). Correspondence between BOLD fMRI task response and cerebrovascular reactivity across the cerebral cortex. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">doi:10.3389/fphys.2023.1167148</a></li>
+<li>Yücel, M. A., Selb, J., Huppert, T. J., Franceschini, M. A., &amp; Boas, D. A. (2015). Short separation regression improves statistical significance and better localizes the hemodynamic response obtained by near-infrared spectroscopy for tasks with differing autonomic responses. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">doi:10.1117/1.NPh.2.3.035005</a></li>
+<li>Epp, S. M., Halani, S., Paquette, M., et al. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
+<li>Grubb, M. S., &amp; Burrone, J. (2010). Activity-dependent relocation of the axon initial segment fine-tunes neuronal excitability. <a href="https://doi.org/10.1038/nature09185" target="_blank">doi:10.1038/nature09185</a></li>
+<li>Santoni, G., et al. (2024). Chromatin plasticity predetermines neuronal eligibility for memory trace formation. <a href="https://doi.org/10.1126/science.adg9982" target="_blank">doi:10.1126/science.adg9982</a></li>
+<li>Govindarajan, A., Israely, I., Huang, S.-Y., &amp; Tonegawa, S. (2011). The dendritic branch is the preferred integrative unit for protein synthesis-dependent LTP. <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">doi:10.1016/j.neuron.2010.12.008</a></li>
+<li>Frischknecht, R., Heine, M., Perrais, D., Seidenbecher, C. I., Choquet, D., &amp; Gundelfinger, E. D. (2009). Brain extracellular matrix affects AMPA receptor lateral mobility and short-term synaptic plasticity. <a href="https://doi.org/10.1038/nn.2338" target="_blank">doi:10.1038/nn.2338</a></li>
+<li>Glykys, J., Dzhala, V., Egawa, K., et al. (2014). Local impermeant anions establish the neuronal chloride concentration. <a href="https://doi.org/10.1126/science.1245423" target="_blank">doi:10.1126/science.1245423</a></li>
+<li>Seidl, A. H., Rubel, E. W., &amp; Barria, A. (2015). Tuning of Ranvier node and internode properties in myelinated axons to adjust action potential timing. <a href="https://doi.org/10.1038/ncomms9073" target="_blank">doi:10.1038/ncomms9073</a></li>
 <li>Guo, C., Pleiss, G., Sun, Y., &amp; Weinberger, K. Q. (2017). On Calibration of Modern Neural Networks. <a href="https://proceedings.mlr.press/v70/guo17a.html" target="_blank">PMLR 70:1321-1330</a></li>
 <li>Geifman, Y., &amp; El-Yaniv, R. (2017). Selective Classification for Deep Neural Networks. <a href="https://papers.neurips.cc/paper/7073-selective-classification-for-deep-neural-networks" target="_blank">NeurIPS 2017</a></li>
 <li>Ji, Z., et al. (2023). Survey of Hallucination in NLG. <a href="https://doi.org/10.1145/3571730" target="_blank">doi:10.1145/3571730</a></li>
