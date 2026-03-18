@@ -20,6 +20,7 @@ page_highlights:
   - "For multimodal or atlas-prior results, the Fusion Card is added on top of the Observability Budget so acquisition relation, synchronization, fusion model, vascular-state / CVR limits for hemodynamic stacks, and external validation are fixed explicitly."
   - "For diffusion-MRI tractography connectomes, the Observability Budget now requires a tractography route card that names direct observables, priors / filtering, uncertainty, and abstention."
   - "For DCM / effective-connectivity claims, the Observability Budget now requires an effective-connectivity route card that names candidate model space, observation-model assumptions, validation, reliability, and abstention."
+  - "For irreversibility / thermodynamic claims, the route card now names signal route, estimator family, null control, quantity type, and cost isolation before any claim ceiling is raised."
   - "For ESI claims, simulation / phantom, stimulation ground truth, simultaneous invasive recording, and postsurgical outcome are separate validation classes; 'externally validated' alone is insufficient."
   - "At L2 and above, the latent-state error budget is added on top of the Observability Budget so the still-unobserved states that stop the claim are disclosed."
   - "At L2 and above, perisynaptic ECM / PNN state is separated from synaptic weights and glia when a claim depends on adult plasticity, receptor mobility, or memory stabilization."
@@ -43,6 +44,7 @@ known_points:
   - "For ESI, passing one validation class does not auto-pass the others; stimulation error, simultaneous invasive concordance, and postsurgical outcome answer different questions."
   - "A BOLD or fNIRS amplitude difference without vascular-state / CVR audit remains a hemodynamic-limited difference rather than a clean neural difference."
   - "An effective-connectivity label without candidate-model, validation, and reliability disclosure remains a model-conditioned hypothesis rather than discovered causal wiring."
+  - "An irreversibility label without signal-route, estimator-family, and quantity-type disclosure remains an exploratory auxiliary result rather than a portable thermodynamic measurement."
   - "A synapse list or weight estimate does not by itself fix perisynaptic ECM / PNN state, so plasticity and stabilization claims need a separate ceiling."
   - "A weight estimate does not fix which tagged synapses or dendritic branches capture plasticity-related proteins, so late-stabilization claims need a separate proteostasis ceiling."
   - "Sleep duration or deprivation alone does not fix slow-oscillation / spindle / ripple coordination, so overnight retention claims need a separate sleep-architecture ceiling."
@@ -1396,7 +1398,7 @@ In response to technical criticisms (Issue #257-#260) submitted in the latter ha
 <li><strong>Preprocessing Fidelity Log:</strong>Records before and after spectra, exclusion/interpolation rates, changes in key metrics, and at least one task-consistent signal preservation metric, with or without ASR. </li>
 <li><strong>Event Semantics Log:</strong> Attach HED to BIDS metadata and map to CogAtlas / CogPO / NIF / SCORE etc. as necessary. Fixing to a specific ontology is not a common requirement. </li>
 <li><strong>Perturbation log:</strong>If local interventions or stimulation were used, expose the stimulation site, intensity, artifact window, masking, safe stop conditions, and retry conditions. If not used, specify "No perturbation evidence." </li>
-<li><strong>Supplementary thermodynamic log:</strong>When reporting irreversibility or EPR, specify coarse-graining, modality, sampling, estimator, lower bound or main body estimation, and isolation of hardware power and computational cost. </li>
+<li><strong>Irreversibility / Thermodynamic Route Card:</strong>When reporting irreversibility, arrow-of-time, entropy production, or entropy flow, name signal route and state definition, estimator family, null / surrogate control, quantity type (lower bound / asymmetry / model-based), and isolation of hardware power and computational cost. If this is missing, the result stays at the exploratory auxiliary-log level. </li>
 </ul>
 </div>
 <div class="note-box">
@@ -1412,6 +1414,12 @@ Validations that require real subject intervention (TMS/tDCS), IRB review, and e
 <p>
 Although research investigating brain dynamics using NESS (Non-Equilibrium Steady State) and time irreversibility is important, this site positions it as a <strong>Supplementary Research Track</strong> as of 2026-03. While the usefulness of irreversibility indicators is being shown, they are still a common acceptance criterion for WBE validation because of the strong influence of modality dependence and estimation assumptions. In particular, entropy production estimated from coarse-grained neural data is often <strong>information-theoretic lower bound</strong> and must be read separately from microscopic physical dissipation itself.
 </p>
+<div class="note-box">
+<strong>2026-03-19 addendum: irreversibility claims need a route card</strong>
+<p>
+<a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn et al. (2021)</a> estimated entropy-production lower bounds from coarse-grained BOLD state transitions, <a href="https://doi.org/10.1038/s42003-022-03505-7" target="_blank">Deco et al. (2022)</a> measured time asymmetry through forward / reversed time-shifted correlations, <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">de la Fuente et al. (2023)</a> used inversion decoding on ECoG, <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">Nartallo-Kaluarachchi et al. (2025)</a> used directed visibility graphs on MEG, and <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> estimated model-based entropy flow from spike trains. Therefore, the phrase "thermodynamic result" does not yet tell us which quantity was computed. On this site, any such claim now needs an <strong>Irreversibility / Thermodynamic Route Card</strong>; the longer public rule is summarized in <a href="wiki/thermodynamic-grounding-basics.html#irreversibility-route-card">Wiki: irreversibility route card</a>.
+</p>
+</div>
 <div class="key-points">
 <h4>What can be said at the moment</h4>
 <ul>
@@ -1421,17 +1429,18 @@ Although research investigating brain dynamics using NESS (Non-Equilibrium Stead
 </ul>
 </div>
 <div class="key-points">
-<h4>Minimum requirements for hiring</h4>
+<h4>Minimum reporting rule</h4>
 <ul>
-<li><strong>Disclosure of estimation conditions:</strong> Be sure to write whether coarse-graining, sampling period, state space reconstruction, Markov assumption, and lower bound estimation are used. </li>
+<li><strong>Route-card disclosure:</strong> Write signal route and state definition, estimator family, null / surrogate control, and whether the reported number is a lower bound, asymmetry score, or model-based entropy-flow estimate. </li>
 <li><strong>Cost Isolation:</strong>We report hardware power, wall-clock energy, FLOPs, and communication costs separately, and treat the approximately 20W of biological brains only as a background value for comparison. </li>
 <li><strong>Submitted as ancillary indicators:</strong>Read alongside existing reproducibility indicators, source validation, perturbed responses, baseline comparisons, and do not draw conclusions on their own. </li>
+<li><strong>Declare abstention explicitly:</strong>State what remains unresolved, such as microscopic dissipation, direct metabolic cost, direct causal wiring, or identity-relevant sameness. </li>
 </ul>
 </div>
 <div class="note-box">
 <strong>What to do now with this repository</strong>
 <p>
-In this repository, we do not make thermodynamic indicators a "required submission," but rather leave them at the stage where log formats and literature monitoring are in place. This will be treated as an exploratory auxiliary analysis until stable operation using actual data and estimation error auditing are confirmed.
+In this repository, we do not make thermodynamic indicators a "required submission," but rather leave them at the stage where route-card reporting, literature monitoring, and estimation-error auditing are in place. This will be treated as an exploratory auxiliary analysis until stable within-modality operation is confirmed.
 </p>
 </div>
 </section>
@@ -1473,7 +1482,9 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Dixon, S., et al. (2026). Movement-responsive deep brain stimulation for Parkinson’s disease using a remotely optimized neural decoder. <a href="https://doi.org/10.1038/s41551-025-01592-5" target="_blank">doi:10.1038/s41551-025-01592-5</a></li>
 <li>Cascino, S., et al. (2026). Chronic adaptive deep brain stimulation in Parkinson’s disease: ADAPT-START findings and programming principles. <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">doi:10.1038/s41531-026-01269-z</a></li>
 <li>Lynn, C. W., et al. (2021). Broken detailed balance and entropy production in the human brain. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>
-<li>de la Fuente, L. A., et al. (2022). Temporal irreversibility of neural dynamics as a signature of consciousness. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
+<li>Deco, G., Sanz Perl, Y., Bocaccio, H., Tagliazucchi, E., &amp; Kringelbach, M. L. (2022). The INSIDEOUT framework provides precise signatures of the balance of intrinsic and extrinsic dynamics in brain states. <a href="https://doi.org/10.1038/s42003-022-03505-7" target="_blank">doi:10.1038/s42003-022-03505-7</a></li>
+<li>de la Fuente, L. A., et al. (2023). Temporal irreversibility of neural dynamics as a signature of consciousness. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
+<li>Nartallo-Kaluarachchi, R., et al. (2025). Multilevel irreversibility reveals higher-order organization of nonequilibrium interactions in human brain dynamics. <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">doi:10.1073/pnas.2408791122</a></li>
 <li>Ishihara, K., &amp; Shimazaki, H. (2025). State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics. <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
 <li>Cohen, M. A., et al. (2024). Neural signatures of visual awareness independent of postperceptual processing. <a href="https://doi.org/10.1093/cercor/bhae415" target="_blank">doi:10.1093/cercor/bhae415</a></li>
 <li>Fahrenfort, J. J., et al. (2025). Criterion placement threatens the construct validity of neural measures of consciousness. <a href="https://doi.org/10.7554/eLife.102335" target="_blank">doi:10.7554/eLife.102335</a></li>

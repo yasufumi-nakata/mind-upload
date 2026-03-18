@@ -1037,10 +1037,11 @@ The EEG literature with direct validation is rather revealing of its limitations
 <li><strong>Do not make it a required gate:</strong>Maintaining EPR > 0, <code>Virtual Dissipation Protocol</code>, biological brain 20W matching, and communication: calculation ratio matching are not set as acceptance conditions at this time. </li>
 <li><strong>Treat as supplementary logs: </strong>Wall-plug power, FLOPs, time irreversibility, and model-based entropy flow are recorded separately. </li>
 <li><strong>Explicit modality dependence:</strong>Since the estimators have different meanings for fMRI / MEG / ECoG / spike train, they are not directly substituted for each other. </li>
+<li><strong>Name estimator family and null control:</strong>Transition-flux lower bounds, time-shifted correlation asymmetry, inversion classifiers, visibility-graph indices, and state-space kinetic Ising entropy flow are not interchangeable, and shuffle / surrogate controls are part of the claim. </li>
 <li><strong>Dividing the lower bound and the main body:</strong>The irreversibility obtained from the observation time series is often a coarse-grained lower bound, not the microscopic physical dissipation itself. </li>
 </ul>
 </div>
-<p><strong>Next:</strong> We need an irreversibility benchmark that is reproducible within the same modality and preprocessing chain, plus a log schema that separates wall-plug power, FLOPs, and simulated metabolic overhead. At minimum, publish the definitions of coarse-graining, sampling period, estimator, Markov / Ising / mean-field assumptions, lower-bound or model-based quantities, comparison tasks, and hardware power. For more information, see <a href="wiki/thermodynamic-grounding-basics.html">Wiki: Thermodynamic grounding basics</a>. </p>
+<p><strong>Next:</strong> We need an irreversibility benchmark that is reproducible within the same modality and preprocessing chain, plus a log schema that separates wall-plug power, FLOPs, and simulated metabolic overhead. At minimum, publish an <strong>irreversibility route card</strong> naming signal route, state definition, estimator family, null / surrogate control, lower-bound or model-based quantity type, and hardware power isolation. For more information, see <a href="wiki/thermodynamic-grounding-basics.html#irreversibility-route-card">Wiki: irreversibility route card</a>. </p>
 </div>
 </details>
 </div>

@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-15 / 位置づけ: Learning guide
+- 更新日: 2026-03-19 / 位置づけ: Learning guide
 
 ## このページの役割
 This page is a wiki that explains why topics on thermodynamics come up in Mind-Upload from the perspective of Landauer, dissipation, non-equilibrium steady state (NESS), and entropy production rate (EPR). It is used as an entry point for people who stop reading on the theory page when they suddenly see the topic of physics.
@@ -26,6 +26,7 @@ What we show here is the beginning of thermodynamic grounding. It has not been d
 - The biological brain is a system that has a continuous flow of energy, not static data.
 - Logical calculation costs and physical dissipation costs must be considered separately.
 - There are ideas for incorporating thermodynamic indicators into the validation process, but measurement and interpretation remain difficult.
+- Thermodynamic route cards are needed because signal route, estimator family, and quantity type change what a result can mean.
 
 ## まだ分かっていないこと
 - It is unclear which thermodynamic indicators affect which aspects of consciousness and identity.
@@ -119,6 +120,47 @@ This does not mean that if you understand thermodynamics, you can understand con
 </tbody>
 </table>
 
+<h2>"Irreversibility" is not one estimator family</h2>
+<p>
+One remaining weak point in thermodynamic discussions is that papers using similar words often compute different quantities. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn et al. (2021)</a> estimated entropy-production lower bounds from coarse-grained BOLD state transitions, <a href="https://doi.org/10.1038/s42003-022-03505-7" target="_blank">Deco et al. (2022)</a> and <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">de la Fuente et al. (2023)</a> measured time asymmetry from forward / reversed ECoG through time-shifted correlations or inversion decoding, <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">Nartallo-Kaluarachchi et al. (2025)</a> measured multilevel irreversibility from directed visibility-graph degree distributions on MEG, and <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> estimated time-varying entropy flow from spike trains under a state-space kinetic Ising model. Therefore, on this site, the phrase <strong>irreversibility result</strong> is not read as one common measurement object.
+</p>
+<table>
+<thead>
+<tr>
+<th>Estimator family</th>
+<th>Representative paper</th>
+<th>What is computed</th>
+<th>Safe ceiling on this site</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Coarse-grained state-transition lower bound</strong></td>
+<td>Lynn et al. (2021)</td>
+<td>Entropy-production lower bound from clustered BOLD state transitions.</td>
+<td>State-dependent broken detailed balance in coarse-grained macrostates, not direct heat dissipation.</td>
+</tr>
+<tr>
+<td><strong>Time-shifted correlation / inversion family</strong></td>
+<td>Deco et al. (2022), de la Fuente et al. (2023)</td>
+<td>Distance between forward / reversed time-shifted correlation matrices or inversion-classification accuracy on ECoG.</td>
+<td>Temporal-asymmetry signature under the stated preprocessing and state comparison, not direct EPR.</td>
+</tr>
+<tr>
+<td><strong>Multilevel visibility-graph irreversibility</strong></td>
+<td>Nartallo-Kaluarachchi et al. (2025)</td>
+<td>Jensen-Shannon divergence between in/out degree distributions of directed multiplex visibility graphs built from source-reconstructed MEG.</td>
+<td>Ordering of interaction-level nonequilibrium across tuples, not direct causal wiring or microscopic dissipation.</td>
+</tr>
+<tr>
+<td><strong>State-space kinetic Ising entropy flow</strong></td>
+<td>Ishihara &amp; Shimazaki (2025)</td>
+<td>Model-based time-varying entropy flow from binarized spike ensembles under nonstationary kinetic-Ising assumptions.</td>
+<td>Coupling-conditioned entropy-flow estimate in recorded ensembles, not whole-brain direct EPR measurement.</td>
+</tr>
+</tbody>
+</table>
+
 <h2>What I'm not saying here</h2>
 <table>
 <thead>
@@ -143,6 +185,10 @@ This does not mean that if you understand thermodynamics, you can understand con
 <tr>
 <td>"It's enough if the signaling budget ratio is the same"</td>
 <td>The tissue energy budget paper is a descriptive budget of biological tissue, not a pass/fail gate for WBE. </td>
+</tr>
+<tr>
+<td>"This paper measured EPR directly from brain activity"</td>
+<td>Often the paper measured a lower bound, asymmetry score, graph index, or model-conditioned entropy-flow estimate rather than direct microscopic dissipation. </td>
 </tr>
 </tbody>
 </table>
@@ -204,6 +250,55 @@ Logical computational complexity, such as FLOPs, is an indicator of how much com
 </tbody>
 </table>
 
+<h2>Irreversibility route card</h2>
+<p>
+The reason this site now asks for a route card is simple: thermodynamic language alone does not tell you what quantity was computed or how fragile it is. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn et al. (2021)</a> checked that fluxes vanish after temporal shuffling, and <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> used trial-shuffled data to isolate coupling-related contributions from firing-rate dynamics and sampling error. Therefore, a modality label alone is not enough.
+</p>
+<table>
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be disclosed</th>
+<th>What misreading it blocks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Signal route and state definition</strong></td>
+<td>Write modality, sensor / source / spike level, source reconstruction or parcelization if used, preprocessing summary, and the task / state contrast or segmentation window.</td>
+<td>It blocks BOLD, ECoG, MEG, and spike-train results from sounding as if they were the same observation route.</td>
+</tr>
+<tr>
+<td><strong>Estimator family</strong></td>
+<td>Name whether the result comes from transition-flux lower bounds, time-shifted correlations, inversion classifiers, visibility graphs, state-space kinetic Ising models, or another explicit family.</td>
+<td>It blocks all irreversibility papers from being collapsed into one common "EPR measurement."</td>
+</tr>
+<tr>
+<td><strong>Null / surrogate control</strong></td>
+<td>Write time-reversal baseline, temporal shuffle, trial shuffle, noise-floor estimate, motion control, or other surrogate that tests whether the headline asymmetry survives.</td>
+<td>It blocks pipeline artifacts or firing-rate changes from being silently rephrased as nonequilibrium structure.</td>
+</tr>
+<tr>
+<td><strong>Quantity type</strong></td>
+<td>State explicitly whether the reported number is an entropy-production lower bound, asymmetry score, graph divergence, entropy-flow component, or a fuller entropy-production estimate.</td>
+<td>It blocks asymmetry scores or lower bounds from being misread as direct microscopic dissipation.</td>
+</tr>
+<tr>
+<td><strong>Cost isolation</strong></td>
+<td>Report hardware power, wall-clock energy, FLOPs, and communication cost separately from the brain-signal irreversibility metric.</td>
+<td>It blocks observation-side nonequilibrium from being merged with implementation-side power accounting.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Declare what the analysis does not identify, such as microscopic dissipation, direct metabolic cost, direct causal wiring, or identity-relevant sameness.</td>
+<td>It blocks exploratory auxiliary analysis from being promoted to a thermodynamic gate for WBE.</td>
+</tr>
+</tbody>
+</table>
+<p>
+If this card is missing, this site keeps the result at <strong>exploratory auxiliary log</strong>. It is not promoted here to a common thermodynamic gate, direct microscopic dissipation, direct metabolic-cost readout, or WBE-relevant identity evidence.
+</p>
+
 <h2>Operation rules fixed in 2026-03 audit</h2>
 
 <h4>Rule</h4>
@@ -211,13 +306,15 @@ Logical computational complexity, such as FLOPs, is an indicator of how much com
 <li><strong>Separate Landauer and implemented power:</strong>Do not confuse lower bound theory and measured power. </li>
 <li><strong>Separate the organization's budget and acceptance gate:</strong>20W and signaling partition are background values and should not be made into site-wide KPIs. </li>
 <li><strong>Distinguish information entropy production and physical dissipation:</strong>Do not write the lower bound estimation from coarse-grained neural data as physical dissipation itself. </li>
+<li><strong>Name estimator family and null control:</strong>Transition-based lower bounds, time-shifted correlations, inversion classifiers, visibility graphs, and state-space Ising models are not interchangeable, and shuffle / surrogate controls are part of the claim. </li>
 <li><strong>Thermodynamic indicators are not used in place of auxiliary logs:</strong>OOD generalization, perturbation, validation, uncertainty, and abstention conditions. </li>
 <li><strong>Clarify modality dependence:</strong> Do not interchange fMRI, ECoG, EEG, and spiking with the same meaning. </li>
 </ul>
 
-<h2>3 questions when reading thermodynamic claims</h2>
+<h2>4 questions when reading thermodynamic claims</h2>
 <ol>
 <li><strong>Are we talking about lower bounds or actual measurements?</strong>It is important not to confuse theoretical lower bounds such as Landauer's with actual consumption or dissipation. </li>
+<li><strong>Which estimator family and null control were used?</strong>Check whether this is a transition-flux lower bound, time-shifted asymmetry score, visibility-graph index, or model-based spike-train estimate, and what shuffle / surrogate test was applied. </li>
 <li><strong>Are you separating logical and physical costs?</strong>Are you combining FLOPs and dissipation into one number? </li>
 <li><strong>What do you mean by this metric alone?</strong>Check whether EPR or NESS is being used alone to prove identity or consciousness. </li>
 </ol>
@@ -233,6 +330,7 @@ To return to the theory frame, please use <a href="https://mind-upload.com/persp
 <li>Attwell, D., &amp; Laughlin, S. B. (2001). An energy budget for signaling in the grey matter of the brain. <em>Journal of Cerebral Blood Flow &amp; Metabolism</em>, 21(10), 1133-1145. <a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">doi:10.1097/00004647-200110000-00001</a></li>
 <li>Seifert, U. (2012). Stochastic thermodynamics, fluctuation theorems and molecular machines. <em>Reports on Progress in Physics</em>, 75(12), 126001. <a href="https://doi.org/10.1088/0034-4885/75/12/126001" target="_blank">doi:10.1088/0034-4885/75/12/126001</a></li>
 <li>Lynn, C. W., et al. (2021). Broken detailed balance and entropy production in the human brain. <em>PNAS</em>, 118(47), e2109889118. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>
+<li>Deco, G., Sanz Perl, Y., Bocaccio, H., Tagliazucchi, E., &amp; Kringelbach, M. L. (2022). The INSIDEOUT framework provides precise signatures of the balance of intrinsic and extrinsic dynamics in brain states. <em>Communications Biology</em>, 5, 572. <a href="https://doi.org/10.1038/s42003-022-03505-7" target="_blank">doi:10.1038/s42003-022-03505-7</a></li>
 <li>de la Fuente, L. A., et al. (2023). Temporal irreversibility of neural dynamics as a signature of consciousness. <em>Cerebral Cortex</em>, 33(5), 1856–1865. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
 <li>Nartallo-Kaluarachchi, R., et al. (2025). Multilevel irreversibility reveals higher-order organization of nonequilibrium interactions in human brain dynamics. <em>PNAS</em>, 122(10), e2408791122. <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">doi:10.1073/pnas.2408791122</a></li>
 <li>Ishihara, K., &amp; Shimazaki, H. (2025). State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics. <em>Nature Communications</em>, 16, 10852. <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
