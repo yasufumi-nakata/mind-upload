@@ -28,6 +28,7 @@ page_highlights:
 - Use only primary literature to separate missing state variables from parameter degeneracy.
 - We will also fix operational rules for how to read connectome-complete and connectome-constrained
   model on this site.
+- "Flagship connectome results are split into four evidence classes here: wiring atlas, same-brain local scaffold, connectome-constrained conditional predictor, and identifiability audit."
 - Rather than ending with enumeration, we use augmentation/ablation to fix what should
   be added from connectome-only to read the predictive gain.
 - "Timing-state is treated as more than a single delay constant: node/internode geometry,
@@ -45,6 +46,7 @@ known_points:
   claims about internal states.
 - Even in a connectome-constrained model, dynamics can degenerate if unmeasured cell/synapse/modification
   parameters remain.
+- Dorkenwald et al. (2024), MICrONS Consortium et al. (2025), Lappalainen et al. (2024), and Beiran & Litwin-Kumar (2025) support different kinds of progress and should not be collapsed into one story that connectome is "almost enough."
 - Conditional predictions can be improved by adding same-brain function, transcriptomics,
   neuromodulatory dynamics, and glial slow state, but the improvement depends on the
   task, time constant, and external validation conditions.
@@ -193,12 +195,59 @@ The March 2026 re-audits first split <strong>intrinsic excitability / homeostasi
 <section class="section" id="connectome-progress">
 <h2 class="section-title">Wiring diagram research has made great progress, but it is not the end in itself</h2>
 <p>
-Dorkenwald et al. showed a wiring diagram of the adult Drosophila whole brain and presented a whole brain connectome with a scale of approximately 130,000 neurons. Meanwhile, the MICrONS Consortium has released a dataset and local functional digital twin that links functional measurements and connectomics in the same individual at the cubic millimeter scale of the mouse visual cortex. Furthermore, Lappalainen et al. trained a connectome-constrained network in the Drosophila visual system to be task-optimized, making it possible to predict a wide range of activities. This is a huge step forward, but on the other hand, we are only now at the stage where we are finally starting to connect "wiring + some functions + additional assumptions", and it also shows that dynamic reproduction of the whole brain and all states is still a different problem.
+Dorkenwald et al. (2024), MICrONS Consortium et al. (2025), Lappalainen et al. (2024), and Beiran &amp; Litwin-Kumar (2025) changed the connectome discussion qualitatively. However, they did not all solve the same problem. The first gave a whole-adult-brain wiring atlas in fly, the second co-registered function and ultrastructure within one awake mouse visual-cortex volume, the third showed that a connectome-constrained and task-optimized model can predict rich activity in a fly visual subsystem, and the fourth showed theoretically that a connectome often still does not uniquely determine recurrent dynamics when biophysical parameters remain uncertain. Therefore, the correct reading is not “the connectome is nearly enough,” but rather that <strong>different papers remove different uncertainties while leaving other uncertainties intact</strong>.
 </p>
 <div class="note-box">
-<strong>Replace here</strong>
+<strong>How this site now reads “connectome progress”</strong>
 <p>
-connectome-complete is important in the sense that we have a pretty good idea of what is connected. However, this alone does not fix ``with what strength,'' ``with what delay,'' ``under what ionic regime,'' ``in which neuromodulatory context,'' and ``under which glial coupling.'' Furthermore, even in Lappalainen et al.'s reductionist model, the authors themselves exclude electrical synapses, nonlinear chemical synapses, and neuromodulation. Therefore, this site treats connectome-complete as an achievement of <strong>structural atlas / scaffold</strong> and does not automatically promote it to L2/L3 emulation claim. <strong>Activity prediction by connectome-constrained</strong> can also be read as a hypothesis engine and a conditional model.
+On this site, connectome-related progress is now separated into four evidence classes before any WBE claim is read: <strong>(1) wiring atlas</strong>, <strong>(2) same-brain local structure-function scaffold</strong>, <strong>(3) connectome-constrained conditional predictor</strong>, and <strong>(4) identifiability / degeneracy audit</strong>. Collapsing these into one slogan such as “the connectome is almost enough” is too weak, because each class answers a different question and leaves a different ceiling in place.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Evidence class</th>
+<th>Representative result</th>
+<th>What primary literature directly advances</th>
+<th>What it still does not support</th>
+<th>How this site reads it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Wiring atlas</strong></td>
+<td>Dorkenwald et al. (2024)</td>
+<td>A whole-adult-brain fly connectome with about 130,000 neurons, about 5 x 10<sup>7</sup> chemical synapses, and linked annotations for cell classes, types, and neurotransmitter predictions.</td>
+<td>Current synaptic efficacy, timing-state, ionic regime, neuromodulation, glial coupling, or whole-state dynamics.</td>
+<td>Read as a <strong>structural atlas / scaffold achievement</strong>, not as emulation-complete state capture.</td>
+</tr>
+<tr>
+<td><strong>Same-brain local structure-function scaffold</strong></td>
+<td>MICrONS Consortium et al. (2025)</td>
+<td>Dense calcium imaging of about 75,000 neurons in multiple mouse visual areas co-registered with an EM reconstruction of more than 200,000 cells and 0.5 billion synapses in the same awake mouse.</td>
+<td>Whole-brain or all-state coverage, general human observability, or proof that local co-registration exhausts hidden-state variables.</td>
+<td>Read as a <strong>same-brain local digital-twin scaffold</strong> for visual-cortex questions, not as a state-complete whole-brain template.</td>
+</tr>
+<tr>
+<td><strong>Connectome-constrained conditional predictor</strong></td>
+<td>Lappalainen et al. (2024)</td>
+<td>Detailed neural-activity predictions across the fly visual system when connectome structure is combined with task optimization, strongly reducing free parameters and yielding single-neuron-scale hypotheses.</td>
+<td>Unique recovery of internal state, arbitrary tasks, or omitted mechanisms such as electrical synapses, nonlinear chemical synapses, and neuromodulation that the authors explicitly leave out.</td>
+<td>Read as a <strong>conditional model / hypothesis engine</strong>, not as proof that connectome plus fitting recovers all missing state.</td>
+</tr>
+<tr>
+<td><strong>Identifiability / degeneracy audit</strong></td>
+<td>Beiran &amp; Litwin-Kumar (2025)</td>
+<td>A formal result that even networks sharing the same synaptic weights can diverge strongly in dynamics when biophysical parameters differ, while a small subset of activity recordings can reduce the degeneracy.</td>
+<td>A claim that connectome-only is sufficient, or conversely that connectome is useless once recordings are added.</td>
+<td>Read as the reason <strong>connectome-constrained is not unique by default</strong>; additional recordings, family comparison, and abstention rules remain necessary.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Operational rule added here</strong>
+<p>
+When a paper says that “connectome progress” moves WBE forward, this site now asks <strong>which of the four evidence classes improved</strong>. A stronger claim requires not just more structure, but a narrower remaining latent-state family under the same held-out or perturbed condition.
 </p>
 </div>
 </section>
