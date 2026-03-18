@@ -1,9 +1,9 @@
 ---
 layout: default
 title: "Mind-Upload Summary Booklet"
-description: "An auto-generated A4-style briefing page built from the site's public pages."
+description: "公開ページの要点を A4 冊子向けに自動生成した要約ページ。"
 article_type: "Briefing Booklet"
-subtitle: "An A4 briefing regenerated from public-page front matter and lead summaries"
+subtitle: "公開ページの front matter と冒頭要約から再生成される A4 要約版"
 author: Mind Uploading Research Project
 last_updated: "2026-03-18"
 note: "Auto-generated from public pages"
@@ -17,22 +17,22 @@ body_class: "summary-booklet-page"
 
 <section class="booklet-sheet booklet-cover">
   <p class="booklet-kicker">Mind-Upload Commons</p>
-  <h2 class="booklet-cover-title">Public Page Summary Booklet</h2>
+  <h2 class="booklet-cover-title">公開ページ要約冊子</h2>
   <p class="booklet-cover-lead">
     This page is the main entry point to Mind-Upload. It is designed to show, as quickly as possible, what this site is trying to do, where to start reading, and which pages matter first.
   </p>
 
   <div class="booklet-cover-band">
     <div>
-  <span>Reference Date</span>
+  <span>更新基準日</span>
   <strong>2026-03-18</strong>
 </div>
 <div>
-  <span>Current Focus</span>
+  <span>現在の重点</span>
   <strong>Standards, repositories, benchmarks, and audits must be b…</strong>
 </div>
 <div>
-  <span>Primary Entry</span>
+  <span>最初の入口</span>
   <strong>Mind-Upload / Verification: Mind Uploading Verification C…</strong>
 </div>
 
@@ -40,15 +40,15 @@ body_class: "summary-booklet-page"
 
   <div class="booklet-card-grid booklet-card-grid-3">
     <article class="booklet-card">
-  <h3>What This Site Builds First</h3>
+  <h3>このサイトが最初に作るもの</h3>
   <p>To keep mind uploading and WBE from remaining only a dream narrative, the first requirement is <strong>a shared rule set</strong>. Mind-Upload puts data layout, evaluation, failure judgment, and reproduction procedures in place first so anyone can check the same result against the same criteria.</p>
 </article>
 <article class="booklet-card">
-  <h3>What It Does Not Claim Yet</h3>
+  <h3>すぐ断言しないもの</h3>
   <p>There is still no cross-disciplinary agreement on what would count as sufficient evidence for L4 personal identity. / It remains unresolved…</p>
 </article>
 <article class="booklet-card">
-  <h3>Core Pages To Read Now</h3>
+  <h3>いま読むべき主ページ</h3>
   <p>Mind-Upload / Verification: Mind Uploading Verification Commons / Technical Roadmap: Understanding WBE Through Measurement, Reconstruction, and Implementation / Toward Mind Uploading: An Integrated Technical and Theoretical Approach / Data &amp; Hands-on: Where to start and how to get to L0 / Contribution Guide</p>
 </article>
 
@@ -58,45 +58,45 @@ body_class: "summary-booklet-page"
 <section class="booklet-sheet booklet-page-break">
   <div class="booklet-section-header">
     <p class="booklet-kicker">Contents</p>
-    <h2>Booklet Overview</h2>
+    <h2>この冊子の見取り図</h2>
   </div>
 
   <div class="booklet-card-grid booklet-card-grid-2">
     <article class="booklet-card">
-  <h3>1. Site Scope</h3>
+  <h3>1. 何を目指すサイトか</h3>
   <p>This page is the main entry point to Mind-Upload. It is designed to show, as quickly as possible, what this site is try…</p>
 </article>
 <article class="booklet-card">
-  <h3>2. Known vs Unknown</h3>
+  <h3>2. 何が既知で何が未解決か</h3>
   <p>This page does not claim that WBE is already possible. It defines the substrate needed to test whether it is.</p>
 </article>
 <article class="booklet-card">
-  <h3>3. Core Page Roles</h3>
+  <h3>3. 主ページの役割分担</h3>
   <p>This page is a map of WBE questions arranged under measurement, reconstruction, implementation, verification, and socia…</p>
 </article>
 <article class="booklet-card">
-  <h3>4. Support Routes</h3>
+  <h3>4. 補助ページと導線</h3>
   <p>This page is the operations hub for fixing where public content should go so material does not scatter across the site.…</p>
 </article>
 <article class="booklet-card">
-  <h3>5. Next Actions</h3>
+  <h3>5. 次のアクション</h3>
   <p>This page explains how to participate in Mind-Upload, how to read issue status, and how to separate changes that can be…</p>
 </article>
 <article class="booklet-card">
-  <h3>6. Source Pages</h3>
-  <p>The booklet closes with a compact route back to the detailed public pages.</p>
+  <h3>6. 元ページ一覧</h3>
+  <p>詳細確認へ戻るための公開ページ導線を最後に集約します。</p>
 </article>
 
   </div>
 
   <div class="booklet-status-grid">
     <div class="booklet-status-card booklet-status-card-strong">
-  <span>In One Sentence</span>
+  <span>ひとことで言うと</span>
   <strong>The core of Mind-Upload is not bold conclusions but a verification commons that lets progress be measured.</strong>
 </div>
 <div class="booklet-status-card">
-  <span>Main Takeaway</span>
-  <strong>The project scope, realistic work range, reading order, and collaboration entry points</strong>
+  <span>読了後に持ち帰るもの</span>
+  <strong>全体像、現実的な作業範囲、読む順番、協力の入口</strong>
 </div>
 
   </div>
@@ -105,7 +105,7 @@ body_class: "summary-booklet-page"
 <section class="booklet-sheet booklet-page-break">
   <div class="booklet-section-header">
     <p class="booklet-kicker">Project Scope</p>
-    <h2>What This Site Is Trying To Build</h2>
+    <h2>何を目指すサイトか</h2>
   </div>
 
   <div class="booklet-quote">
@@ -114,13 +114,13 @@ body_class: "summary-booklet-page"
 
   <div class="booklet-two-column">
     <div>
-      <h3>What We Fix First</h3>
+      <h3>先に固定すること</h3>
       <ul class="booklet-list">
-        <li>Standards, repositories, benchmarks, and audits must be built as one package.</li><li>Claim levels and failure conditions are fixed up front so decoding is not confused with emulation.</li><li>For decode / biomarker scores, the Specificity &amp; Shortcut Card separates the target neural variable from nuisance routes and audits subject / session fingerprint independently.</li><li>This page explains why collecting data alone is not the same as making progress.</li>
+        <li>Standards, repositories, benchmarks, and audits must be built as one package.</li><li>Claim levels and failure conditions are fixed up front so decoding is not confused with emulation.</li><li>For decode / biomarker scores, the Specificity &amp; Shortcut Card separates the target neural variable from nuisance routes and audits subject / session fingerprint plus acquisition-distribution shortcuts independently.</li><li>This page explains why collecting data alone is not the same as making progress.</li>
       </ul>
     </div>
     <div>
-      <h3>What We Do Not Claim Up Front</h3>
+      <h3>入口で断言しないこと</h3>
       <ul class="booklet-list">
         <li>There is still no cross-disciplinary agreement on what would count as sufficient evidence for L4 personal identity.</li><li>It remains unresolved whether noninvasive measurement alone can capture enough internal state for WBE.</li><li>The institutional design needed for L5 social deployment cannot be decided by technical requirements alone.</li><li>It remains unsettled which combination of theories, if any, will ultimately amount to a sufficient condition.</li>
       </ul>
@@ -130,25 +130,25 @@ body_class: "summary-booklet-page"
   <table class="data-table booklet-table">
     <thead>
       <tr>
-        <th>Lens</th>
-        <th>What To Read Now</th>
+        <th>観点</th>
+        <th>いま読むべき説明</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-  <td>Entry</td>
+  <td>入口</td>
   <td><strong><a href="/index.html">Mind-Upload</a></strong><br>This page is the main entry point to Mind-Upload. It is designed to show, as quickly as possible, what this site is trying to do, where to start reading, and which pages matter first.</td>
 </tr>
 <tr>
-  <td>Verification Commons</td>
+  <td>検証基盤</td>
   <td><strong><a href="/verification.html">Verification: Mind Uploading Verification Commons</a></strong><br>This page is the core blueprint of Mind-Upload. It explains how to define progress in advance rather than retroactively by aligning data, evaluation, failure conditions, and reproduction pr…</td>
 </tr>
 <tr>
-  <td>Technical Map</td>
+  <td>技術地図</td>
   <td><strong><a href="/tech_roadmap.html">Technical Roadmap: Understanding WBE Through Measurement, Reconstruction, and Implementation</a></strong><br>This page is a map of WBE questions arranged under measurement, reconstruction, implementation, verification, and social deployment. Its purpose is to keep the reader from losing track of w…</td>
 </tr>
 <tr>
-  <td>Theory Framing</td>
+  <td>理論整理</td>
   <td><strong><a href="/perspective.html">Toward Mind Uploading: An Integrated Technical and Theoretical Approach</a></strong><br>This page is a long research note that follows the theoretical, measurement, and implementation questions around mind uploading while keeping primary literature and hard limits side by side…</td>
 </tr>
 
@@ -159,18 +159,18 @@ body_class: "summary-booklet-page"
 <section class="booklet-sheet booklet-page-break">
   <div class="booklet-section-header">
     <p class="booklet-kicker">Known vs Unknown</p>
-    <h2>What Is Known and What Remains Open</h2>
+    <h2>何が既知で、何が未解決か</h2>
   </div>
 
   <div class="booklet-card-grid booklet-card-grid-2">
     <article class="booklet-card booklet-card-positive">
-      <h3>Relatively Well Supported</h3>
+      <h3>比較的はっきりしていること</h3>
       <ul class="booklet-list">
-        <li>When public data, standards, benchmarks, and audit rules are in place, L0-L2 progress can accumulate in comparable form.</li><li>EEG and decoding research can create measurable progress when their claims stay within their conditions.</li><li>The same decode score is not a target-specific biomarker if it can be reproduced by subject / session fingerprint alone.</li><li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li><li>Strong claims about identity or consciousness belong in downstream verification design, not on the landing page.</li>
+        <li>When public data, standards, benchmarks, and audit rules are in place, L0-L2 progress can accumulate in comparable form.</li><li>EEG and decoding research can create measurable progress when their claims stay within their conditions.</li><li>The same decode score is not a target-specific biomarker if it can be reproduced by subject / session fingerprint alone.</li><li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li><li>Current human evidence comes in layers; proxy-rich routes still do not yield comparable whole-brain in vivo ground truth for every hidden state.</li>
       </ul>
     </article>
     <article class="booklet-card booklet-card-caution">
-      <h3>Still Open or Conditional</h3>
+      <h3>まだ保留すべきこと</h3>
       <ul class="booklet-list">
         <li>There is still no cross-disciplinary agreement on what would count as sufficient evidence for L4 personal identity.</li><li>It remains unresolved whether noninvasive measurement alone can capture enough internal state for WBE.</li><li>The institutional design needed for L5 social deployment cannot be decided by technical requirements alone.</li><li>There is still no settled answer on which causal-structure approximation would be sufficient for L4 personal identity.</li><li>A final success condition integrating thermodynamics, closed-loop behavior, and identity is still incomplete.</li>
       </ul>
@@ -180,7 +180,7 @@ body_class: "summary-booklet-page"
   <div class="booklet-timeline">
     <div class="booklet-step">
   <span>Step 1</span>
-  <strong>Entry</strong>
+  <strong>入口</strong>
   <p>The core of Mind-Upload is not bold conclusions but a verification commons that lets progress be measured.</p>
 </div>
 <div class="booklet-step">
@@ -195,7 +195,7 @@ body_class: "summary-booklet-page"
 </div>
 <div class="booklet-step">
   <span>Later</span>
-  <strong>Higher-Level Claims</strong>
+  <strong>上位主張</strong>
   <p>It is still unsettled which measurement granularity will ultimately be sufficient for WBE.</p>
 </div>
 
@@ -205,15 +205,15 @@ body_class: "summary-booklet-page"
 <section class="booklet-sheet booklet-page-break">
   <div class="booklet-section-header">
     <p class="booklet-kicker">Core Pages</p>
-    <h2>Role of the Core Pages</h2>
+    <h2>主ページの役割分担</h2>
   </div>
 
   <table class="data-table booklet-table">
     <thead>
       <tr>
-        <th>Page</th>
-        <th>Role</th>
-        <th>Summary</th>
+        <th>ページ</th>
+        <th>役割</th>
+        <th>要約</th>
       </tr>
     </thead>
     <tbody>
@@ -257,9 +257,9 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Start Here - Define success criteria, standards, benchmarks, and preregistration first / 5-10 min</p>
   <p>Mind-Upload is a site for breaking the large question, "Can a mind be reproduced on a computer?", into <strong>small, testable tasks</strong>. Instead of rushing to a final conclusion, it starts by defining <strong>what counts as progress</strong> and <strong>whether other people can verify the same result</strong>.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>The core of Mind-Upload is not bold conclusions but a verification commons that lets progress be measured.</li><li>If you are unsure where to start, read Verification -&gt; Roadmap -&gt; WBE/EEG 101.</li><li>Connectomes and cell types alone do not determine long-term dynamics; sleep/homeostasis, myelination, and glial metabolism remain separate variables.</li>
+    <li>The core of Mind-Upload is not bold conclusions but a verification commons that lets progress be measured.</li><li>If you are unsure where to start, read Verification -&gt; Roadmap -&gt; WBE/EEG 101.</li><li>Connectomes and cell types alone do not determine long-term dynamics; sleep/homeostasis, sleep architecture / replay-coupling, myelination, thermal-state, bioenergetic / mitochondrial state, and glial metabolism remain separate variables.</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
   <li><a href="/verification.html">Verification</a></li><li><a href="/wbe_101.html">WBE 101</a></li><li><a href="/faq.html">FAQ</a></li>
 </ul>
@@ -270,9 +270,9 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Platform - Use the logic of PDB x BIDS x PhysioNet x OSF to define WBE success conditions and reproducible progress / 15-25 min</p>
   <p>To keep mind uploading and WBE from remaining only a dream narrative, the first requirement is <strong>a shared rule set</strong>. Mind-Upload puts data layout, evaluation, failure judgment, and reproduction procedures in place first so anyone can check the same result against the same criteria.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>Standards, repositories, benchmarks, and audits must be built as one package.</li><li>Claim levels and failure conditions are fixed up front so decoding is not confused with emulation.</li><li>For decode / biomarker scores, the Specificity &amp; Shortcut Card separates the target neural variable from nuisance routes and audits subject / session fingerprint independently.</li>
+    <li>Standards, repositories, benchmarks, and audits must be built as one package.</li><li>Claim levels and failure conditions are fixed up front so decoding is not confused with emulation.</li><li>For decode / biomarker scores, the Specificity &amp; Shortcut Card separates the target neural variable from nuisance routes and audits subject / session fingerprint plus acquisition-distribution shortcuts independently.</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
   <li><a href="/tech_roadmap.html">Technical Roadmap</a></li><li><a href="/datasets.html">Datasets and Benchmarks</a></li><li><a href="/issue.html">Contribution Guide</a></li>
 </ul>
@@ -285,7 +285,7 @@ body_class: "summary-booklet-page"
   <ul class="booklet-list booklet-page-link-list">
     <li>P0-P2 fix what counts as success before measurement or implementation work is discussed.</li><li>The index allows readers to jump directly to a specific question family.</li><li>Stronger claims are deliberately placed later so earlier levels are not skipped.</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
   <li><a href="/wbe_101.html">WBE 101</a></li><li><a href="/eeg_101.html">EEG 101</a></li><li><a href="/verification.html">Verification</a></li>
 </ul>
@@ -298,7 +298,7 @@ body_class: "summary-booklet-page"
   <ul class="booklet-list booklet-page-link-list">
     <li>It does not stop at introducing theories; it follows the constraints that appear when those theories are pushed toward implementation.</li><li>The stronger the claim, the more explicitly it is checked against falsification criteria and alternative explanations.</li><li>The page has been reorganized so that local connectomics, noninvasive source imaging, and closed-loop intervention are not read as if they hit the same barrier.</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
   <li><a href="/verification.html">Verification</a></li><li><a href="/tech_roadmap.html">Roadmap</a></li><li><a href="/wbe_101.html">WBE 101</a></li>
 </ul>
@@ -311,7 +311,7 @@ body_class: "summary-booklet-page"
   <ul class="booklet-list booklet-page-link-list">
     <li>We look at the shared infrastructure first, then the starter datasets.</li><li>Starter data is a practice board for L0-L1, not the ground truth of EEG source imaging.</li><li>Each starter dataset has different annotation provenance, time fidelity, and independent split units.</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
   <li><a href="/eeg_101.html">Introduction to EEG</a></li><li><a href="/verification.html">Verification base</a></li><li><a href="/tech_roadmap.html">Technology Roadmap</a></li>
 </ul>
@@ -324,7 +324,7 @@ body_class: "summary-booklet-page"
   <ul class="booklet-list booklet-page-link-list">
     <li>It highlights small but valuable ways to participate, such as improving writing, terminology, and link structure.</li><li>It lets you track issue status without confusing document-level reflection with implemented artifacts.</li><li>It prioritizes issues with clear achievement conditions and falsification conditions over vague strong claims.</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
   <li><a href="/index.html">Start Page</a></li><li><a href="/verification.html">Verification</a></li><li><a href="/glossary.html">Glossary</a></li>
 </ul>
@@ -337,15 +337,15 @@ body_class: "summary-booklet-page"
 <section class="booklet-sheet booklet-page-break">
   <div class="booklet-section-header">
     <p class="booklet-kicker">Support Pages</p>
-    <h2>Support Pages and Practical Routes</h2>
+    <h2>補助ページと実務導線</h2>
   </div>
 
   <table class="data-table booklet-table">
     <thead>
       <tr>
-        <th>Page</th>
-        <th>Role</th>
-        <th>Summary</th>
+        <th>ページ</th>
+        <th>役割</th>
+        <th>要約</th>
       </tr>
     </thead>
     <tbody>
@@ -386,7 +386,7 @@ body_class: "summary-booklet-page"
   <ul class="booklet-list booklet-page-link-list">
     <li>It separates what can and cannot be said now, so the discussion does not overclaim.</li><li>It uses a claim ladder so L0 reproducible analysis is not confused with L4 identity claims.</li><li>Connectomes and cell types alone do not determine long-term dynamics; hidden-state auditing remains necessary.</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
   <li><a href="/verification.html">Verification</a></li><li><a href="/tech_roadmap.html">Technical Roadmap</a></li><li><a href="/faq.html">FAQ</a></li>
 </ul>
@@ -397,9 +397,9 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Primer - A realistic guide that refuses to turn EEG into magical mind reading / 12-18 minutes</p>
   <p>EEG does not directly show the inside of the brain. It measures a mixed electrical pattern at the scalp. That gives EEG strong temporal resolution, but weak and blurry spatial localization. For that reason, Mind-Upload prioritizes data quality control (QC) and shared data-organization rules such as BIDS before anything else.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>EEG is strong at tracking temporal change, but weak at identifying spatial origin with high precision.</li><li>The questions &#39;there is information in the signal,&#39; &#39;the internal state is uniquely fixed,&#39; and &#39;the result survives long-term use&#39; require different audits.</li><li>Even when the score is the same, you still have to separate target-neural-variable signal from eye movement, EMG, uninstructed movement, feedback, and subject / session fingerprint.</li>
+    <li>EEG is strong at tracking temporal change, but weak at identifying spatial origin with high precision.</li><li>The questions &#39;there is information in the signal,&#39; &#39;the internal state is uniquely fixed,&#39; and &#39;the result survives long-term use&#39; require different audits.</li><li>Even when the score is the same, you still have to separate target-neural-variable signal from eye movement, EMG, uninstructed movement, feedback, subject / session fingerprint, and acquisition-distribution shortcuts such as site / device / reference / electrode layout.</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
   <li><a href="/datasets.html">Data and Benchmarks</a></li><li><a href="/datasets.html#l0-practice">L0 Practice</a></li><li><a href="/faq.html">FAQ</a></li>
 </ul>
@@ -410,9 +410,9 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">FAQ - Prefer verifiable progress to flashy conclusions / 8-15 minutes</p>
   <p>This page is designed to block common misunderstandings early. The stronger the claim, the more carefully you should check, in order, (1) the definition of terms, (2) the measurement scale, (3) the condition that would count as failure, and (4) the reproduction procedure.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>It quickly clears up first-order questions such as what this site is for and what EEG or brain-to-text work can and cannot support.</li><li>It also gives a short but scientific answer to the common misreading that connectomes plus cell types are already enough.</li><li>It avoids dramatic overstatement and states what remains unresolved at the same time.</li>
+    <li>It quickly clears up first-order questions such as what this site is for and what EEG or brain-to-text work can and cannot support.</li><li>It now front-loads three technical guardrails: connectome-complete is not state-complete, a high score is not automatically a target-specific neural readout, and BOLD / fNIRS differences need vascular-state / CVR audit.</li><li>It avoids dramatic overstatement and states what remains unresolved at the same time.</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
   <li><a href="/verification.html">Verification</a></li><li><a href="/wbe_101.html">WBE 101</a></li><li><a href="/glossary.html">Glossary</a></li>
 </ul>
@@ -423,9 +423,9 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Reference - Start by keeping the words straight / 3 to 10 minutes for only the necessary items</p>
   <p>This glossary is a quick reference for the meaning of terms. It starts with everyday-language explanations, moves to stricter definitions only when needed, and ties the discussion back to measurement, modeling, and verification.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>It gives short explanations of terms and points to where each concept matters.</li><li>It is especially careful about pairs that sound similar but should not be collapsed, such as observability / identifiability / direct validation.</li><li>If a term blocks your reading, this page is meant to get you unstuck quickly and send you back to the main text.</li>
+    <li>It gives short explanations of terms and points to where each concept matters.</li><li>It now includes the front-door verification terms added in the March 2026 re-audit, such as claim ceiling, shortcut auditing, maintenance-state, and vascular-state / CVR audit.</li><li>It is especially careful about pairs that sound similar but should not be collapsed, such as observability / identifiability / direct validation.</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
   <li><a href="/wbe_101.html">Introduction to WBE</a></li><li><a href="/eeg_101.html">Introduction to EEG</a></li><li><a href="/faq.html">FAQ</a></li>
 </ul>
@@ -438,7 +438,7 @@ body_class: "summary-booklet-page"
   <ul class="booklet-list booklet-page-link-list">
     <li>Each domain has a fixed main page and supporting pages.</li><li>Before creating a new page, the default is to check whether the material can be merged into an existing one.</li><li>Public navigation and operations references are visible in one place.</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
   <li><a href="/index.html">Start</a></li><li><a href="/verification.html">Verification</a></li><li><a href="/issue.html">Contribution Guide</a></li>
 </ul>
@@ -451,26 +451,26 @@ body_class: "summary-booklet-page"
 <section class="booklet-sheet booklet-page-break">
   <div class="booklet-section-header">
     <p class="booklet-kicker">Next Actions</p>
-    <h2>What To Do Next</h2>
+    <h2>次に何をすればよいか</h2>
   </div>
 
   <div class="booklet-card-grid booklet-card-grid-3">
     <article class="booklet-card">
-  <h3>Get the Overview</h3>
+  <h3>全体像を掴む</h3>
   <p>Mind-Upload -&gt; Verification: Mind Uploading Verification Commons -&gt; Technical Roadmap: Understanding WBE Through Measurement, Reconstruction, and Implementation</p>
   <ul class="booklet-link-list booklet-page-link-list">
     <li><a href="/verification.html">Verification</a></li><li><a href="/wbe_101.html">WBE 101</a></li>
   </ul>
 </article>
 <article class="booklet-card">
-  <h3>Start from Basics</h3>
+  <h3>初歩から学ぶ</h3>
   <p>Introduction: Making Mind Uploading / WBE a Measurable Problem -&gt; Introduction: What EEG Measures, What It Can Do, and What It Cannot Do -&gt; FAQ: Common Questions and Common Failure Modes</p>
   <ul class="booklet-link-list booklet-page-link-list">
     <li><a href="/verification.html">Verification</a></li><li><a href="/tech_roadmap.html">Technical Roadmap</a></li>
   </ul>
 </article>
 <article class="booklet-card">
-  <h3>Participate and Integrate</h3>
+  <h3>参加と統合</h3>
   <p>Contribution Guide / Public Content Integration Hub</p>
   <ul class="booklet-link-list booklet-page-link-list">
     <li><a href="/index.html">Start Page</a></li><li><a href="/verification.html">Verification</a></li>
@@ -481,24 +481,24 @@ body_class: "summary-booklet-page"
 
   <div class="booklet-status-grid">
     <div class="booklet-status-card booklet-status-card-strong">
-  <span>Working Principle</span>
+  <span>実務上の原則</span>
   <strong>It highlights small but valuable ways to participate, such as improving writing, terminology, and link structure.</strong>
 </div>
 <div class="booklet-status-card">
-  <span>Update Rule</span>
-  <strong>Whenever a public page changes, the deploy/PDF workflow regenerates the booklet.</strong>
+  <span>更新ルール</span>
+  <strong>公開ページが変わるたびに deploy / PDF workflow 内で booklet を再生成いたします。</strong>
 </div>
 
   </div>
 
-  <h3>Source Pages</h3>
+  <h3>元ページ一覧</h3>
   <ul class="booklet-link-list">
     <li><a href="/index.html">Mind-Upload</a></li><li><a href="/verification.html">Verification: Mind Uploading Verification Commons</a></li><li><a href="/tech_roadmap.html">Technical Roadmap: Understanding WBE Through Measurement, Reconstruction, and Implementation</a></li><li><a href="/perspective.html">Toward Mind Uploading: An Integrated Technical and Theoretical Approach</a></li><li><a href="/datasets.html">Data &amp; Hands-on: Where to start and how to get to L0</a></li><li><a href="/issue.html">Contribution Guide</a></li><li><a href="/content_hub.html">Public Content Integration Hub</a></li><li><a href="/wbe_101.html">Introduction: Making Mind Uploading / WBE a Measurable Problem</a></li><li><a href="/eeg_101.html">Introduction: What EEG Measures, What It Can Do, and What It Cannot Do</a></li><li><a href="/faq.html">FAQ: Common Questions and Common Failure Modes</a></li><li><a href="/glossary.html">Glossary</a></li>
   </ul>
 
   <div class="booklet-quote">
     <p>
-      This booklet is an auto-generated entry layer built from the site's public pages. Updates to each page's <strong>page_intro</strong>, <strong>page_highlights</strong>, <strong>known / unknown</strong>, and opening summary flow directly into the booklet and PDF output.
+      この冊子は公開ページから自動生成される入口版でございます。各ページの <strong>page_intro</strong>、<strong>page_highlights</strong>、<strong>known / unknown</strong>、冒頭要約の更新が、そのまま冊子と PDF に反映されます。
     </p>
   </div>
 </section>

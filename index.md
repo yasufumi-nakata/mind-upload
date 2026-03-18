@@ -14,7 +14,7 @@ accuracy_note: "This page only covers what is needed at the entry point. For det
 page_highlights:
   - "The core of Mind-Upload is not bold conclusions but a verification commons that lets progress be measured."
   - "If you are unsure where to start, read Verification -> Roadmap -> WBE/EEG 101."
-  - "Connectomes and cell types alone do not determine long-term dynamics; sleep/homeostasis, myelination, thermal-state, bioenergetic / mitochondrial state, and glial metabolism remain separate variables."
+  - "Connectomes and cell types alone do not determine long-term dynamics; sleep/homeostasis, sleep architecture / replay-coupling, myelination, thermal-state, bioenergetic / mitochondrial state, and glial metabolism remain separate variables."
   - "Human evidence is layered: local ultrastructure, synaptic-density PET, and macro biochemical / energetic / ionic / thermal / myelin / clearance proxies are not one near-direct readout."
   - "For hemodynamic modalities, BOLD or fNIRS amplitude is not read as neural difference unless vascular-state / CVR limits are audited separately."
   - "Brain-to-text and speech demos are read through the Neural Contribution Card so neural contribution is not confused with task structure or language priors."
@@ -190,7 +190,7 @@ The <a href="verification.html#temporal-validity-card">Verification: Temporal Va
 <div class="note-box">
 <strong>If You Do Not Want Cross-Day Scores To Become Maintenance-Consistent Claims Too Early</strong>
 <p>
-The <a href="verification.html#maintenance-state-error-budget">Verification: maintenance-state error budget</a> separates temporal success from evidence about maintenance routes. It reports <strong>controller state</strong>, <strong>sleep / wake history</strong>, <strong>timing support</strong>, <strong>thermal-state</strong>, <strong>bioenergetic / mitochondrial support</strong>, <strong>glial / astrocyte support</strong>, and <strong>clearance proxies</strong> in separate fields, so a same-day fit or a cross-day hold is not automatically read as a <strong>maintenance-consistent</strong> or <strong>remote-memory-relevant</strong> claim. The background is summarized in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: homeostatic plasticity and maintenance state</a>.
+The <a href="verification.html#maintenance-state-error-budget">Verification: maintenance-state error budget</a> separates temporal success from evidence about maintenance routes. It reports <strong>controller state</strong>, <strong>sleep / wake history</strong>, <strong>sleep architecture / replay-coupling state</strong>, <strong>timing support</strong>, <strong>thermal-state</strong>, <strong>bioenergetic / mitochondrial support</strong>, <strong>glial / astrocyte support</strong>, and <strong>clearance proxies</strong> in separate fields, so a same-day fit or a cross-day hold is not automatically read as a <strong>maintenance-consistent</strong> or <strong>remote-memory-relevant</strong> claim. <a href="https://doi.org/10.1016/j.neuron.2013.03.006" target="_blank">Ngo et al. (2013)</a>, <a href="https://doi.org/10.1038/s41593-023-01324-5" target="_blank">Geva-Sagiv et al. (2023)</a>, and <a href="https://doi.org/10.1038/s41467-024-49572-8" target="_blank">Schreiner et al. (2024)</a> together show why `a night with sleep` and `consolidation-ready oscillatory coupling` are different claims. The background is summarized in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: homeostatic plasticity and maintenance state</a>.
 </p>
 </div>
 

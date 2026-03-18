@@ -27,7 +27,7 @@ page_highlights:
   - "At L2 and above, delay is treated as timing-state rather than one scalar, so device latency, biological conduction timing, and human macro timing proxies are not collapsed into one number."
   - "At L2 and above for intervention / closed-loop results, the Intervention Card fixes trigger rule, timing audit, control / sham, safe stop, and recalibration burden."
   - "For cross-day or longitudinal claims, the Temporal Validity Card audits fixed decoder interval, state annotation, recalibration burden, and transfer ceiling independently."
-  - "For cross-day or remote-memory claims, the maintenance-state error budget reports controller state, sleep history, and support-state proxies separately, so temporal success is not auto-promoted to a maintenance-consistent claim."
+  - "For cross-day or remote-memory claims, the maintenance-state error budget reports controller state, sleep history, sleep architecture / replay-coupling state, and support-state proxies separately, so temporal success is not auto-promoted to a maintenance-consistent claim."
   - "For chronic invasive claims, signal-chain drift and implant tissue response are audited separately rather than being folded into unit-identity audit alone."
   - "For outputs that include probabilities, intervals, prediction sets, or abstention, the Calibration & Abstention Card fixes fit/calibration/test separation, evaluation family, coverage-risk, and fallback behavior."
 known_points:
@@ -39,6 +39,7 @@ known_points:
   - "A BOLD or fNIRS amplitude difference without vascular-state / CVR audit remains a hemodynamic-limited difference rather than a clean neural difference."
   - "A synapse list or weight estimate does not by itself fix perisynaptic ECM / PNN state, so plasticity and stabilization claims need a separate ceiling."
   - "A weight estimate does not fix which tagged synapses or dendritic branches capture plasticity-related proteins, so late-stabilization claims need a separate proteostasis ceiling."
+  - "Sleep duration or deprivation alone does not fix slow-oscillation / spindle / ripple coordination, so overnight retention claims need a separate sleep-architecture ceiling."
   - "A connectome, cell type, and weight estimate do not by themselves fix ionic milieu / chloride homeostasis, so inhibitory sign and state-transition claims need a separate ceiling."
   - "A connectome, cell type, and timing proxy do not by themselves fix local thermal-state, so field-potential and sequence-timing claims need a separate ceiling."
   - "A connectome, cell type, and glial proxy do not by themselves fix local ATP reserve or mitochondrial positioning, so repeated-burst and dendritic-plasticity claims need a separate bioenergetic ceiling."
@@ -742,7 +743,7 @@ On this site, <strong>mixed arousal proxy</strong>, <strong>local transmitter se
 <section class="section" id="maintenance-state-error-budget">
 <h2 class="section-title">Maintenance-state error budget</h2>
 <p>
-Cross-day and remote-memory claims fail for a different reason than same-session decoding claims. Even when short-term performance holds, the result may still leave the <strong>maintenance route</strong> almost completely latent. This site therefore asks cross-day, recovery, reconsolidation, or remote-memory submissions to disclose a <strong>maintenance-state error budget</strong> that keeps controller state, sleep history, timing support, thermal-state, bioenergetic / mitochondrial support, glial / astrocyte support, and other multiday support-state proxies separate.
+Cross-day and remote-memory claims fail for a different reason than same-session decoding claims. Even when short-term performance holds, the result may still leave the <strong>maintenance route</strong> almost completely latent. This site therefore asks cross-day, recovery, reconsolidation, or remote-memory submissions to disclose a <strong>maintenance-state error budget</strong> that keeps controller state, sleep history, sleep architecture / replay-coupling state, timing support, thermal-state, bioenergetic / mitochondrial support, glial / astrocyte support, and other multiday support-state proxies separate.
 </p>
 <table class="data-table">
 <thead>
@@ -762,6 +763,11 @@ Cross-day and remote-memory claims fail for a different reason than same-session
 <td><strong>Sleep / wake history</strong></td>
 <td>Report sleep / wake interval, deprivation, nap / recovery condition, and the time window over which renormalization was or was not checked.</td>
 <td>Cross-day hold is not promoted to overnight maintenance or post-learning re-equilibration.</td>
+</tr>
+<tr>
+<td><strong>Sleep architecture / replay-coupling state</strong></td>
+<td>Report stage composition and, when relevant to consolidation claims, which slow-oscillation / spindle / ripple or targeted-memory-reactivation coupling measures were available, which were only proxy-estimated, and which replay-timing variables remained latent.</td>
+<td>A night with sleep is not promoted to replay-consistent or consolidation-mechanism evidence.</td>
 </tr>
 <tr>
 <td><strong>Timing support</strong></td>
@@ -801,6 +807,12 @@ Cross-day and remote-memory claims fail for a different reason than same-session
 </tbody>
 </table>
 <div class="note-box">
+<strong>2026-03-18 addendum: sleep history is not sleep architecture</strong>
+<p>
+<a href="https://doi.org/10.1016/j.neuron.2013.03.006" target="_blank">Ngo et al. (2013)</a> showed in humans that in-phase slow-oscillation stimulation enhances spindle coupling and memory whereas out-of-phase stimulation does not, <a href="https://doi.org/10.1038/nn.4304" target="_blank">Maingret et al. (2016)</a> and <a href="https://doi.org/10.1016/j.neuron.2017.06.025" target="_blank">Latchoumane et al. (2017)</a> showed in rodents that fine-tuned slow-oscillation / spindle / ripple coordination causally supports consolidation, <a href="https://doi.org/10.1038/s41467-021-23520-2" target="_blank">Schreiner et al. (2021)</a> showed that SO-spindle coupling precision predicts endogenous reactivation strength in humans, <a href="https://doi.org/10.1038/s41593-023-01324-5" target="_blank">Geva-Sagiv et al. (2023)</a> showed that real-time enhancement of hippocampal-prefrontal synchrony improves overnight human memory, <a href="https://doi.org/10.1038/s41467-024-49572-8" target="_blank">Schreiner et al. (2024)</a> linked spindle-locked ripples to human memory reactivation, and <a href="https://doi.org/10.1016/j.neuron.2025.03.020" target="_blank">Deng et al. (2025)</a> showed that NREM consolidation itself has a specific intracellular time window. This site therefore records <strong>sleep duration/history</strong> and <strong>sleep architecture / replay-coupling</strong> separately.
+</p>
+</div>
+<div class="note-box">
 <strong>Do not collapse energetic support into glial support</strong>
 <p>
 <a href="https://doi.org/10.1016/j.cell.2013.12.042" target="_blank">Rangaraju et al. (2014)</a>, <a href="https://doi.org/10.1016/j.cell.2018.12.013" target="_blank">Rangaraju et al. (2019)</a>, <a href="https://doi.org/10.1016/j.neuron.2018.09.025" target="_blank">Divakaruni et al. (2018)</a>, <a href="https://doi.org/10.1038/s41467-023-44233-8" target="_blank">Bapat et al. (2024)</a>, and <a href="https://doi.org/10.1038/s42003-025-08963-3" target="_blank">Hu et al. (2025)</a> support a narrower rule: local ATP supply, mitochondrial positioning, and energetic micro-organization can change repeated-burst reliability and dendritic plasticity even before one asks whether astrocyte or clearance-state matched. Conversely, human <a href="https://doi.org/10.1002/nbm.3384" target="_blank">31P-MRS (Ren et al., 2015)</a> and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">dynamic DMRSI (Li et al., 2025)</a> remain macro energetic proxies rather than direct readouts of branch-local mitochondrial state. This site therefore records energetic route and glial route separately.
@@ -821,7 +833,7 @@ On this site, <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#hu
 <div class="note-box">
 <strong>Minimum operating rules</strong>
 <p>
-If this budget is missing, this site allows at most <strong>same-session fit</strong>, <strong>cross-day performance with unresolved maintenance route</strong>, or <strong>support-proxy-aligned evidence</strong>. It does not promote the result to <strong>maintenance-consistent</strong>, <strong>reconsolidation-consistent</strong>, or <strong>remote-memory-relevant</strong>. In particular, if <strong>sleep / wake history</strong>, <strong>timing support</strong>, <strong>thermal-state</strong>, <strong>ionic / chloride state</strong>, <strong>bioenergetic support</strong>, <strong>glial / astrocyte support</strong>, and <strong>clearance / immune proxy class</strong> are all absent, this site stops the reader from rephrasing a temporal hold as long-horizon maintenance evidence.
+If this budget is missing, this site allows at most <strong>same-session fit</strong>, <strong>cross-day performance with unresolved maintenance route</strong>, or <strong>support-proxy-aligned evidence</strong>. It does not promote the result to <strong>maintenance-consistent</strong>, <strong>reconsolidation-consistent</strong>, or <strong>remote-memory-relevant</strong>. In particular, if <strong>sleep / wake history</strong>, <strong>sleep architecture / replay-coupling state</strong>, <strong>timing support</strong>, <strong>thermal-state</strong>, <strong>ionic / chloride state</strong>, <strong>bioenergetic support</strong>, <strong>glial / astrocyte support</strong>, and <strong>clearance / immune proxy class</strong> are all absent, this site stops the reader from rephrasing a temporal hold as long-horizon maintenance evidence.
 </p>
 </div>
 </section>
@@ -1403,6 +1415,13 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Vadisiute, A., Meijer, E., Therpurakal, R. N., et al. (2024). Glial cells undergo rapid changes following acute chemogenetic manipulation of cortical layer 5 projection neurons. <a href="https://doi.org/10.1038/s42003-024-06994-w" target="_blank">doi:10.1038/s42003-024-06994-w</a></li>
 <li>Hadzibegovic, N., et al. (2026). Early intrinsic excitability plasticity of neocortical engram neurons defines memory formation and precision. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">doi:10.1038/s41467-025-66975-3</a></li>
+<li>Ngo, H.-V. V., Martinetz, T., Born, J., &amp; Mölle, M. (2013). Auditory closed-loop stimulation of the sleep slow oscillation enhances memory. <a href="https://doi.org/10.1016/j.neuron.2013.03.006" target="_blank">doi:10.1016/j.neuron.2013.03.006</a></li>
+<li>Maingret, N., Girardeau, G., Todorova, R., et al. (2016). Hippocampo-cortical coupling mediates memory consolidation during sleep. <a href="https://doi.org/10.1038/nn.4304" target="_blank">doi:10.1038/nn.4304</a></li>
+<li>Latchoumane, C.-F. V., Ngo, H.-V. V., Born, J., &amp; Shin, H.-S. (2017). Thalamic Spindles Promote Memory Formation during Sleep through Triple Phase-Locking of Cortical, Thalamic, and Hippocampal Rhythms. <a href="https://doi.org/10.1016/j.neuron.2017.06.025" target="_blank">doi:10.1016/j.neuron.2017.06.025</a></li>
+<li>Schreiner, T., Petzka, M., Staudigl, T., &amp; Staresina, B. P. (2021). Endogenous memory reactivation during sleep in humans is clocked by slow oscillation-spindle complexes. <a href="https://doi.org/10.1038/s41467-021-23520-2" target="_blank">doi:10.1038/s41467-021-23520-2</a></li>
+<li>Geva-Sagiv, M., Mankin, E. A., Eliashiv, D., et al. (2023). Augmenting hippocampal-prefrontal neuronal synchrony during sleep enhances memory consolidation in humans. <a href="https://doi.org/10.1038/s41593-023-01324-5" target="_blank">doi:10.1038/s41593-023-01324-5</a></li>
+<li>Schreiner, T., Petzka, M., Staudigl, T., et al. (2024). Spindle-locked ripples mediate memory reactivation during human NREM sleep. <a href="https://doi.org/10.1038/s41467-024-49572-8" target="_blank">doi:10.1038/s41467-024-49572-8</a></li>
+<li>Deng, Z., Fei, X., Zhang, S., &amp; Xu, M. (2025). A time window for memory consolidation during NREM sleep revealed by cAMP oscillation. <a href="https://doi.org/10.1016/j.neuron.2025.03.020" target="_blank">doi:10.1016/j.neuron.2025.03.020</a></li>
 <li>Nosek, B. A., et al. (2015). Promoting an open research culture. <a href="https://doi.org/10.1126/science.aab2374" target="_blank">doi:10.1126/science.aab2374</a></li>
 <li>Wilkinson, M. D., et al. (2016). The FAIR Guiding Principles. <a href="https://doi.org/10.1038/sdata.2016.18" target="_blank">doi:10.1038/sdata.2016.18</a></li>
 </ol>
