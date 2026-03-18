@@ -529,10 +529,51 @@ If words such as <strong>claim ceiling</strong>, <strong>hidden state</strong>, 
 </table>
 </section>
 
+<section class="section" id="thermodynamics">
+<h2 class="section-title">Thermodynamics and cost</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning in Mind-Upload</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Landauer lower bound</strong></td>
+<td>The minimum dissipation lower bound for logically irreversible operations such as bit erasure. It is not a direct estimate of whole-brain wall power or WBE implementation cost.</td>
+</tr>
+<tr>
+<td><strong>Energy budget</strong></td>
+<td>A descriptive breakdown of how biological tissue spends energy. It helps compare cost components, but it is not by itself a pass/fail KPI for emulation.</td>
+</tr>
+<tr>
+<td><strong>NESS (nonequilibrium steady state)</strong></td>
+<td>A state that stays statistically stable only while energy continues to flow through the system. It is a concept for ongoing maintenance, not proof of identity or consciousness.</td>
+</tr>
+<tr>
+<td><strong>Irreversibility / EPR proxy</strong></td>
+<td>A family of estimates derived from time asymmetry or entropy-production logic. In Mind-Upload, this is not one common measurement object: lower-bound estimates, asymmetry scores, visibility-graph indices, and model-based entropy-flow estimates are kept separate.</td>
+</tr>
+<tr>
+<td><strong>Irreversibility / Thermodynamic Route Card</strong></td>
+<td>The disclosure rule for reporting thermodynamic-style claims: state the signal route, state definition, estimator family, null / surrogate control, quantity type, cost isolation, and abstention boundary before the claim ceiling is raised.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
 <div class="note-box">
 <strong>Supplementary information for 2026-03</strong>
 <p>
 Although non-invasive decoding and ESI are making steady progress, a successful decoder does not necessarily mean that the internal state can be uniquely restored, and a BOLD / fNIRS difference does not automatically mean a clean neural difference. When reading Tang et al. (2023), d'Ascoli et al. (2025), Unnwongse et al. (2023), and Hao et al. (2025), keep task constraints, shortcut routes, language prior, direct validation, and vascular-state limits separate.
+</p>
+</div>
+
+<div class="note-box">
+<strong>Thermodynamic words also need a claim ceiling</strong>
+<p>
+<a href="https://doi.org/10.1038/nature10872" target="_blank">Bérut et al. (2012)</a>, <a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">Attwell &amp; Laughlin (2001)</a>, <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn et al. (2021)</a>, <a href="https://doi.org/10.1038/s42003-022-03505-7" target="_blank">Deco et al. (2022)</a>, <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">de la Fuente et al. (2023)</a>, <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">Nartallo-Kaluarachchi et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> do not all compute the same quantity. In Mind-Upload, <strong>thermodynamic result</strong> therefore does not automatically mean measured physical dissipation, wall-power, or a WBE gate.
 </p>
 </div>
 
@@ -600,6 +641,13 @@ Although non-invasive decoding and ESI are making steady progress, a successful 
 <li>Murphy, K., Harris, A. D., &amp; Wise, R. G. (2011). Robustly measuring vascular reactivity differences with breath-hold: normalising stimulus-evoked and resting state BOLD fMRI data. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">doi:10.1016/j.neuroimage.2010.07.059</a></li>
 <li>Williams, R. J., Specht, J. L., Mazerolle, E. L., et al. (2023). Correspondence between BOLD fMRI task response and cerebrovascular reactivity across the cerebral cortex. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">doi:10.3389/fphys.2023.1167148</a></li>
 <li>Yücel, M. A., Selb, J., Huppert, T. J., Franceschini, M. A., &amp; Boas, D. A. (2015). Short separation regression improves statistical significance and better localizes the hemodynamic response obtained by near-infrared spectroscopy for tasks with differing autonomic responses. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">doi:10.1117/1.NPh.2.3.035005</a></li>
+<li>Bérut, A., Arakelyan, A., Petrosyan, A., et al. (2012). Experimental verification of Landauer&rsquo;s principle linking information and thermodynamics. <a href="https://doi.org/10.1038/nature10872" target="_blank">doi:10.1038/nature10872</a></li>
+<li>Attwell, D., &amp; Laughlin, S. B. (2001). An energy budget for signaling in the grey matter of the brain. <a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">doi:10.1097/00004647-200110000-00001</a></li>
+<li>Lynn, C. W., et al. (2021). Broken detailed balance and entropy production in the human brain. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>
+<li>Deco, G., Sanz Perl, Y., Bocaccio, H., Tagliazucchi, E., &amp; Kringelbach, M. L. (2022). The INSIDEOUT framework provides precise signatures of the balance of intrinsic and extrinsic dynamics in brain states. <a href="https://doi.org/10.1038/s42003-022-03505-7" target="_blank">doi:10.1038/s42003-022-03505-7</a></li>
+<li>de la Fuente, L. A., et al. (2023). Temporal irreversibility of neural dynamics as a signature of consciousness. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
+<li>Nartallo-Kaluarachchi, R., et al. (2025). Multilevel irreversibility reveals higher-order organization of nonequilibrium interactions in human brain dynamics. <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">doi:10.1073/pnas.2408791122</a></li>
+<li>Ishihara, K., &amp; Shimazaki, H. (2025). State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics. <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
 <li>Albantakis, L., et al. (2023). Integrated Information Theory (IIT) 4.0. <a href="https://doi.org/10.1371/journal.pcbi.1011465" target="_blank">doi:10.1371/journal.pcbi.1011465</a></li>
 <li>Friston, K. (2010). The free-energy principle. <a href="https://doi.org/10.1038/nrn2787" target="_blank">doi:10.1038/nrn2787</a></li>
 <li>Casali, A. G., et al. (2013). PCI. <a href="https://doi.org/10.1126/scitranslmed.3006294" target="_blank">doi:10.1126/scitranslmed.3006294</a></li>

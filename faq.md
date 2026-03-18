@@ -13,7 +13,7 @@ page_intro: "This page is a Q&A for the questions many readers hit first when re
 accuracy_note: "This page gives short answers. Please do not quote the conclusion alone; return to the linked pages and references when you need the full basis."
 page_highlights:
   - "It quickly clears up first-order questions such as what this site is for and what EEG or brain-to-text work can and cannot support."
-  - "It now front-loads four technical guardrails: connectome-complete is not state-complete, a high score is not automatically a target-specific neural readout, BOLD / fNIRS differences need vascular-state / CVR audit, and DCM / effective-connectivity labels do not by themselves identify true causal wiring."
+  - "It now front-loads five technical guardrails: connectome-complete is not state-complete, a high score is not automatically a target-specific neural readout, BOLD / fNIRS differences need vascular-state / CVR audit, DCM / effective-connectivity labels do not by themselves identify true causal wiring, and thermodynamic / irreversibility labels do not by themselves measure physical dissipation or WBE-ready cost."
   - "It avoids dramatic overstatement and states what remains unresolved at the same time."
   - "It is structured so readers can tell when the FAQ is enough and when they should move on to the full page."
 known_points:
@@ -22,6 +22,7 @@ known_points:
   - "Because wiring diagrams and cell types still leave excitability, timing-state, thermal-state, transcription/chromatin, proteostasis, ECM / PNN, ionic-homeostasis, bioenergetic / mitochondrial state, and maintenance-support variables unresolved, long-term dynamical claims require separate auditing."
   - "A BOLD or fNIRS amplitude difference without vascular-state / CVR or short-separation auditing is still not a clean neural difference."
   - "A DCM or effective-connectivity label does not by itself discover the one true causal circuit; candidate model space, validation, and reliability still matter."
+  - "An irreversibility / entropy-production label does not by itself tell you whether the paper estimated a lower bound, an asymmetry score, a visibility-graph index, or a model-based flow estimate, and it is not automatically a metabolic-cost readout."
   - "FAQ works well as an entry point for avoiding the wrong direction."
 unknown_points:
   - "Short answers alone cannot settle theory choice or identity questions."
@@ -63,6 +64,9 @@ wiki_links:
   - label: "Wiki: Observability and Claim Ceiling by Measurement Stack"
     url: "/wiki/measurement-stack-and-claim-ceiling.html"
     description: "Explains why hemodynamic differences and shortcut-prone scores still have strict reading ceilings."
+  - label: "Wiki: Thermodynamic grounding basics"
+    url: "/wiki/thermodynamic-grounding-basics.html"
+    description: "Explains Landauer, dissipation, NESS, irreversibility, and route cards from the beginning."
 recommended_pages:
   - label: "Verification"
     url: "/verification.html"
@@ -139,9 +143,9 @@ If the FAQ helped you understand the topic but you still do not know what to ver
 </div>
 
 <div class="note-box">
-<strong>Three technical guards now fixed at the front door</strong>
+<strong>Five technical guards now fixed at the front door</strong>
 <p>
-This FAQ now blocks three fast overreads before they spread through the site: <strong>connectome-complete is not state-complete</strong>, <strong>high score is not automatically target-specific neural evidence</strong>, and <strong>BOLD / fNIRS amplitude difference is not automatically a neural difference without vascular-state / CVR audit</strong>. If you need the full rule set behind those three, go next to <a href="verification.html#observability-budget">Verification: Observability Budget</a>, <a href="wiki/connectome-is-not-enough.html">Wiki: Why a Connectome Is Not Enough</a>, and <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>.
+This FAQ now blocks five fast overreads before they spread through the site: <strong>connectome-complete is not state-complete</strong>, <strong>high score is not automatically target-specific neural evidence</strong>, <strong>BOLD / fNIRS amplitude difference is not automatically a neural difference without vascular-state / CVR audit</strong>, <strong>DCM / effective-connectivity output is not automatically the brain's true causal wiring</strong>, and <strong>thermodynamic / irreversibility labels are not automatically direct physical-dissipation measurements or WBE gates</strong>. If you need the full rule set behind them, go next to <a href="verification.html#observability-budget">Verification: Observability Budget</a>, <a href="wiki/connectome-is-not-enough.html">Wiki: Why a Connectome Is Not Enough</a>, <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>, <a href="wiki/observation-to-estimation.html#effective-connectivity-route-card">Wiki: effective-connectivity route card</a>, and <a href="wiki/thermodynamic-grounding-basics.html#irreversibility-route-card">Wiki: irreversibility route card</a>.
 </p>
 </div>
 
@@ -159,7 +163,7 @@ This FAQ now blocks three fast overreads before they spread through the site: <s
 </tr>
 <tr>
 <td><strong>Avoid misreading flashy claims in news coverage</strong></td>
-<td>Read Q1, Q1b, Q1c, and Q1d first to separate task-limited decode, shortcut routes, and hemodynamic proxy limits before moving on to Q2.</td>
+<td>Read Q1, Q1b, Q1c, Q1d, Q1e, and Q1f first to separate task-limited decode, shortcut routes, hemodynamic proxy limits, model-conditioned causal claims, and thermodynamic overreads before moving on to Q2.</td>
 </tr>
 <tr>
 <td><strong>Know only what counts as progress</strong></td>
@@ -279,6 +283,19 @@ That does not make effective-connectivity work useless. It means the safe claim 
 </p>
 <p>
 At Mind-Upload, a paper that says “effective connectivity” must still disclose <strong>candidate model space</strong>, <strong>omitted alternatives</strong>, <strong>family comparison or model recovery</strong>, <strong>held-out perturbation / external validation</strong>, <strong>reliability window</strong>, and <strong>abstention boundary</strong>. If those are missing, we read it as a <strong>candidate-model result</strong>, not as causal-wiring discovery. The shortest follow-up is <a href="wiki/observation-to-estimation.html#effective-connectivity-route-card">Wiki: effective-connectivity route card</a> and <a href="tech_roadmap.html#qa-r4">Roadmap R4</a>.
+</p>
+</section>
+
+<section class="section" id="q1f">
+<h2 class="section-title">Q. If a paper reports entropy production, irreversibility, or arrow-of-time in brain data, did it measure the brain's physical dissipation or WBE-ready thermodynamic cost?</h2>
+<p>
+A. Not by default. On this site, thermodynamic language is split before interpretation. <a href="https://doi.org/10.1038/nature10872" target="_blank">B&eacute;rut et al. (2012)</a> tested the Landauer lower bound for bit erasure, <a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">Attwell &amp; Laughlin (2001)</a> summarized tissue-side signaling costs, and papers such as <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn et al. (2021)</a> and <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> estimate nonequilibrium quantities from neural data. Those objects are related, but they are not the same measurement.
+</p>
+<p>
+In the current primary literature, the same thermodynamic vocabulary still hides different estimator families. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn et al. (2021)</a> estimated entropy-production lower bounds from coarse-grained BOLD state transitions, <a href="https://doi.org/10.1038/s42003-022-03505-7" target="_blank">Deco et al. (2022)</a> used time-shifted correlation asymmetry, <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">de la Fuente et al. (2023)</a> used inversion decoding on ECoG, <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">Nartallo-Kaluarachchi et al. (2025)</a> used directed visibility graphs on MEG, and <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> estimated model-based entropy flow under a state-space kinetic Ising model. So the phrase <strong>thermodynamic result</strong> does not by itself tell you whether the paper reported a lower bound, an asymmetry score, a graph index, or a model-based flow estimate.
+</p>
+<p>
+At Mind-Upload, such a paper must still disclose <strong>signal route and state definition</strong>, <strong>estimator family</strong>, <strong>null / surrogate control</strong>, <strong>quantity type</strong>, <strong>cost isolation</strong>, and <strong>abstention boundary</strong>. If those are missing, we keep the result at the level of an <strong>exploratory auxiliary analysis</strong>, not a direct readout of microscopic dissipation, metabolic cost, or WBE-relevant validity. The shortest follow-up is <a href="wiki/thermodynamic-grounding-basics.html#irreversibility-route-card">Wiki: irreversibility route card</a> plus <a href="verification.html#thermodynamic-verification">Verification: thermodynamic indicators</a>.
 </p>
 </section>
 
@@ -476,6 +493,13 @@ The distinguishing strategy of Mind-Upload is <strong>to build the Verification 
 <li>Williams, R. J., Specht, J. L., Mazerolle, E. L., et al. (2023). Correspondence between BOLD fMRI task response and cerebrovascular reactivity across the cerebral cortex. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">doi:10.3389/fphys.2023.1167148</a></li>
 <li>Yücel, M. A., Selb, J., Huppert, T. J., Franceschini, M. A., &amp; Boas, D. A. (2015). Short separation regression improves statistical significance and better localizes the hemodynamic response obtained by near-infrared spectroscopy for tasks with differing autonomic responses. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">doi:10.1117/1.NPh.2.3.035005</a></li>
 <li>Epp, S. M., Halani, S., Paquette, M., et al. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
+<li>Bérut, A., Arakelyan, A., Petrosyan, A., et al. (2012). Experimental verification of Landauer&rsquo;s principle linking information and thermodynamics. <a href="https://doi.org/10.1038/nature10872" target="_blank">doi:10.1038/nature10872</a></li>
+<li>Attwell, D., &amp; Laughlin, S. B. (2001). An energy budget for signaling in the grey matter of the brain. <a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">doi:10.1097/00004647-200110000-00001</a></li>
+<li>Lynn, C. W., Cornblath, E. J., Papadopoulos, L., et al. (2021). Broken detailed balance and entropy production in the human brain. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>
+<li>Deco, G., Sanz Perl, Y., Bocaccio, H., Tagliazucchi, E., &amp; Kringelbach, M. L. (2022). The INSIDEOUT framework provides precise signatures of the balance of intrinsic and extrinsic dynamics in brain states. <a href="https://doi.org/10.1038/s42003-022-03505-7" target="_blank">doi:10.1038/s42003-022-03505-7</a></li>
+<li>de la Fuente, L. A., Zamberlan, F., Bocaccio, H., et al. (2023). Temporal irreversibility of neural dynamics as a signature of consciousness. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
+<li>Nartallo-Kaluarachchi, R., Bonetti, L., Fernández-Rubio, G., et al. (2025). Multilevel irreversibility reveals higher-order organization of nonequilibrium interactions in human brain dynamics. <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">doi:10.1073/pnas.2408791122</a></li>
+<li>Ishihara, K., &amp; Shimazaki, H. (2025). State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics. <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
 <li>Grubb, M. S., &amp; Burrone, J. (2010). Activity-dependent relocation of the axon initial segment fine-tunes neuronal excitability. <a href="https://doi.org/10.1038/nature09160" target="_blank">doi:10.1038/nature09160</a></li>
 <li>Thomas, C., Ye, F. Q., Irfanoglu, M. O., Modi, P., Saleem, K. S., Leopold, D. A., &amp; Pierpaoli, C. (2014). Anatomical accuracy of brain connections derived from diffusion MRI tractography is inherently limited. <a href="https://doi.org/10.1073/pnas.1405672111" target="_blank">doi:10.1073/pnas.1405672111</a></li>
 <li>Reveley, C., Seth, A. K., Pierpaoli, C., Silva, A. C., Yu, D., Saunders, R. C., Leopold, D. A., &amp; Ye, F. Q. (2015). Superficial white matter fiber systems impede detection of long-range cortical connections in diffusion MR tractography. <a href="https://doi.org/10.1073/pnas.1418198112" target="_blank">doi:10.1073/pnas.1418198112</a></li>

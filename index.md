@@ -17,6 +17,7 @@ page_highlights:
   - "Connectomes and cell types alone do not determine long-term dynamics; sleep/homeostasis, sleep architecture / replay-coupling, myelination, thermal-state, bioenergetic / mitochondrial state, and glial metabolism remain separate variables."
   - "Human evidence is layered: local ultrastructure, synaptic-density PET, and macro biochemical / energetic / ionic / thermal / myelin / clearance proxies are not one near-direct readout."
   - "For hemodynamic modalities, BOLD or fNIRS amplitude is not read as neural difference unless vascular-state / CVR limits are audited separately."
+  - "Thermodynamic or irreversibility papers are kept on an auxiliary track; arrow-of-time results are not read as direct physical-dissipation or WBE-readiness evidence without a route card."
   - "Brain-to-text and speech demos are read through the Neural Contribution Card so neural contribution is not confused with task structure or language priors."
   - "High decode / biomarker scores can rise from subject / session fingerprint alone, so the Specificity & Shortcut Card audits that shortcut independently."
   - "The Temporal Validity Card is now part of the public workflow so same-day success is not silently promoted to cross-day or long-term claims."
@@ -28,6 +29,7 @@ known_points:
   - "Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately."
   - "Current human evidence comes in layers; proxy-rich routes still do not yield comparable whole-brain in vivo ground truth for every hidden state."
   - "For hemodynamic readouts, a group or longitudinal BOLD difference can still be dominated by vascular transfer state rather than neural change."
+  - "For thermodynamic claims, different estimator families still answer different questions, so irreversibility results stay auxiliary unless their route card is disclosed."
   - "Strong claims about identity or consciousness belong in downstream verification design, not on the landing page."
 unknown_points:
   - "There is still no cross-disciplinary agreement on what would count as sufficient evidence for L4 personal identity."
@@ -110,6 +112,13 @@ This site now keeps <strong>mixed arousal proxies</strong> such as pupil / HRV, 
 <strong>If You Read Hemodynamic Differences As Neural Differences Too Quickly</strong>
 <p>
 This site now treats <strong>vascular transfer state</strong> as a separate audit item for hemodynamic modalities. In other words, a BOLD or fNIRS amplitude difference is not read here as a neural difference by default unless the paper also reports a <strong>vascular-state / cerebrovascular-reactivity calibration route</strong> or abstains explicitly. The shortest route is <a href="verification.html#observability-budget">Verification: Observability Budget</a>, then <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceilings by Measurement Stack</a> and <a href="wiki/multimodal-integration-basics.html">Wiki: Basics of Multimodal Integration</a>.
+</p>
+</div>
+
+<div class="note-box">
+<strong>If You Want To Read Thermodynamic Claims Without Promoting Them Too Early</strong>
+<p>
+This site now separates <strong>Landauer lower bounds</strong>, <strong>tissue-level energy budgets</strong>, <strong>irreversibility of coarse-grained neural time series</strong>, and <strong>model-based entropy-flow estimates</strong>. So a paper that reports entropy production, arrow-of-time, or irreversibility is not read here as a direct measurement of microscopic dissipation, whole-brain energy cost, or WBE readiness unless it also discloses its <strong>signal route</strong>, <strong>estimator family</strong>, <strong>null / surrogate control</strong>, <strong>quantity type</strong>, and <strong>cost isolation</strong>. The shortest route is <a href="faq.html#q1f">FAQ: how to read thermodynamic claims</a>, then <a href="wiki/thermodynamic-grounding-basics.html">Wiki: thermodynamic grounding basics</a>.
 </p>
 </div>
 
