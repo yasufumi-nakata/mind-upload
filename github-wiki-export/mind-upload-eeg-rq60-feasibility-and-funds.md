@@ -344,3 +344,12 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 方針は引き続き `1RQ=1検証命題=1応募テーマ=1主データ` を固定し、汎用横断要約ではなくRQ単位での深掘りを正本運用としました。
 - wiki反映先は `mind-upload/wiki` / `mind-upload/github-wiki-export` / `auto-research-funds/wiki` の3面同期を維持しました。
 
+
+
+## 2026-03-18 15:12 JST 再検証ログ（本run / 依頼の再実行）
+
+- 作業開始前に `auto-startup` の `main` で `git pull --ff-only origin main` を実行し、最新化済み（Already up to date）を確認しました。
+- `mind-upload/research_harvest_50.md` を正本として、`RQ_TOTAL=60` と `U別内訳（4/4/6/4/6/6/4/4/6/6/6/4）` を再照合しました。
+- `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` を比較し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り構造が維持されていることを確認しました。
+- 判定内訳 `A/B/C=17/25/18`、および `G1-G6` の助成キー運用を継続し、EEG-DATAは各RQに対して主データを明示したまま維持しました。
+- wiki反映は `mind-upload/wiki` / `mind-upload/github-wiki-export` / `auto-research-funds/wiki` の3面同期で更新しました。
