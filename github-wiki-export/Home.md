@@ -235,6 +235,11 @@ If you just want to know the big picture first, you can go to the public page. H
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds">RQ60 judgment original</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook">RQ60 application playbook</a></td>
 </tr>
 <tr>
+<td><strong>I want one deep card per RQ to lock grant theme and EEG data quickly</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards">RQ60 Deep Evaluation Cards (EEG-DATA × auto-research-funds)</a></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds">RQ60 judgment original</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook">RQ60 application playbook</a></td>
+</tr>
+<tr>
 <td><strong>Stops at the difference between partial solution, exploration stage, and undeveloped</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/progress-labels-and-open-problem-status">How to read partial solution/exploration stage/undeveloped</a></td>
 <td><a href="https://mind-upload.com/research_harvest_50.html">Literature map</a> / <a href="https://mind-upload.com/tech_roadmap.html">Technology roadmap</a></td>

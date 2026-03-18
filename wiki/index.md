@@ -253,6 +253,11 @@ If you just want to know the big picture first, you can go to the public page. H
 <td><a href="mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 judgment original</a> / <a href="mind-upload-eeg-rq60-grant-dataset-playbook.html">RQ60 application playbook</a></td>
 </tr>
 <tr>
+<td><strong>I want to fix submission decisions per RQ using one deep card for each item</strong></td>
+<td><a href="mind-upload-rq60-deep-evaluation-cards.html">RQ60 Deep Evaluation Cards (EEG-DATA × auto-research-funds)</a></td>
+<td><a href="mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 judgment original</a> / <a href="mind-upload-eeg-rq60-grant-dataset-playbook.html">RQ60 application playbook</a></td>
+</tr>
+<tr>
 <td><strong>Stops at the difference between partial solution, exploration stage, and undeveloped</strong></td>
 <td><a href="progress-labels-and-open-problem-status.html">How to read partial solution/exploration stage/undeveloped</a></td>
 <td><a href="../research_harvest_50.html">Literature map</a> / <a href="../tech_roadmap.html">Technology roadmap</a></td>
@@ -582,6 +587,7 @@ If you just want to know the big picture first, you can go to the public page. H
 <li><a href="closed-loop-latency-jitter-and-safety-stops.html">Closed-loop/delay/jitter/safety stops →</a></li>
 <li><a href="thermodynamic-grounding-basics.html">The basics of thermodynamic grounding →</a></li>
 <li><a href="mind-upload-rq60-deep-focus-notes.html">RQ60 Deep Focus Notes (EEG-DATA x Grant) →</a></li>
+<li><a href="mind-upload-rq60-deep-evaluation-cards.html">RQ60 Deep Evaluation Cards (EEG-DATA × auto-research-funds) →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
