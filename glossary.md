@@ -19,7 +19,7 @@ page_highlights:
 known_points:
   - "Many misunderstandings can be avoided simply by reducing terminology confusion."
   - "It is especially important to distinguish between decode/emulate, correlation/causation, observability/identifiability, model fit/direct validation, and brain signal/language prior."
-  - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, timing-state, and vascular-state language."
+  - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, thermal-state, timing-state, and vascular-state language."
   - "This page serves as an entry point for short definitions and a way to return to the main text."
 unknown_points:
   - "Terms related to the theory of consciousness have slightly different meanings depending on the paper or position."
@@ -343,7 +343,11 @@ If words such as <strong>claim ceiling</strong>, <strong>hidden state</strong>, 
 </tr>
 <tr>
 <td><strong>Maintenance-state</strong></td>
-<td>Slow controller and support variables, such as sleep / wake history, ionic state, bioenergetic / mitochondrial support, glial / metabolic support, and clearance-related support, that matter for long-horizon stability.</td>
+<td>Slow controller and support variables, such as sleep / wake history, thermal-state, ionic state, bioenergetic / mitochondrial support, glial / metabolic support, and clearance-related support, that matter for long-horizon stability.</td>
+</tr>
+<tr>
+<td><strong>Thermal-state</strong></td>
+<td>The tissue operating-temperature condition that can change membrane kinetics, field-potential amplitude, and sequence timing. It is different from both timing-state and bioenergetic-state.</td>
 </tr>
 <tr>
 <td><strong>Timing-state</strong></td>
