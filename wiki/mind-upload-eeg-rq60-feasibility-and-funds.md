@@ -398,3 +398,11 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 本ページで参照するEEGデータID（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と突合し、欠損IDが `0` 件であることを確認しました。
 - 助成テーマは `G1-G6` のキー運用を継続し、`A=再現性実装` `B=統合検証計画` `C=制度/理論連携` の提出戦略区分を維持しました。
 - 依頼方針どおり、汎用横断ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を再固定しました。
+
+## 2026-03-18 22:02 JST 再検証ログ（本run / 依頼再実行）
+
+- 作業開始前に `auto-startup` の `main` で `git pull --ff-only origin main` を実行し、`Already up to date` を確認しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` を再検算し、`RQ行数=60` を確認しました。
+- 判定内訳 `A/B/C=17/25/18` を再計数し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り構造を維持していることを再確認しました。
+- 参照EEG ID（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と突合し、欠損 `0` 件を確認しました。
+- 助成キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）の実在を `grant_queue` / `auto-research-funds` 側で再確認しました。
