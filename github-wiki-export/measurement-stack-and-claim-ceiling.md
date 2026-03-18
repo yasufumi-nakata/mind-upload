@@ -4,10 +4,10 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-18 / 位置づけ: Technical / natural science only
+- 更新日: 2026-03-19 / 位置づけ: Technical / natural science only
 
 ## このページの役割
-This page is a wiki that fixes the ``upper claim limit for each measurement stack,'' which is often overlooked in WBE discussions. It's not enough to say that hidden state is important. Based on primary literature, we will explain what each of EEG/MEG/fMRI, spatial transcriptomics, Patch-seq, volume EM, same-brain functional connectomics, synaptic-density PET, mixed arousal proxy, local transmitter sensor, receptor atlas / PET, and glia imaging directly observes and what remains latent.
+This page is a wiki that fixes the ``upper claim limit for each measurement stack,'' which is often overlooked in WBE discussions. It's not enough to say that hidden state is important. Based on primary literature, we will explain what each of EEG/MEG/fMRI, spatial transcriptomics, Patch-seq, volume EM, same-brain functional connectomics, synaptic-density PET, mixed arousal proxy, local transmitter sensor, receptor atlas / PET, glia imaging, and human biochemical / energetic / ionic / thermal / myelin / clearance routes directly observes and what remains latent.
 
 ## 正確さの前提
 The ``claim ceiling'' column below is not the conclusion declared by each paper. This is an operational inference drawn by this site from variables directly observed in primary literature and state variables that are still unobserved.
@@ -29,7 +29,7 @@ The ``claim ceiling'' column below is not the conclusion declared by each paper.
 - Whole-brain spatial transcriptomics provides a major advance in cell-type taxonomy and spatial location, but the sufficiency of dynamic states is another matter.
 - Patch-seq and same-brain connectomics reduce degeneracy, but the sufficiency of whole-brain coverage and long-term maintenance-state remains.
 - Local transmitter / glia imaging is effective for calibrating coarse proxies, but it does not directly provide whole-brain ground truth.
-- Human biochemical, energetic, ionic, thermal, myelin, and clearance routes reduce different latent-state error terms and should not be collapsed into one direct path to maintenance-state completeness.
+- Human biochemical, energetic, ionic, thermal, myelin, and clearance routes reduce different latent-state error terms and should not be summarized as one direct path to maintenance-state completeness.
 
 ## まだ分かっていないこと
 - It cannot yet be determined which stack combination will most efficiently reduce degeneracy for WBE.
@@ -214,9 +214,8 @@ The same caution extends to glia. <a href="https://doi.org/10.1038/s41586-024-07
 
 <h2>7. Human maintenance-state routes also form a ladder</h2>
 <p>
-Another weakness that remained on this page was that it separated generic measurement stacks while still leaving recent <strong>human maintenance-state evidence</strong> too easy to compress into one sentence such as ``human in vivo observability is getting close.'' That is too weak. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> pushed up <strong>local human nanoscale ultrastructure</strong>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> pushed up a <strong>regional synaptic-density atlas</strong>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> pushed up a <strong>whole-brain biochemical scaffold</strong>, <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> pushed up <strong>macro energetic routes</strong>, <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a> and <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">Qian et al. (2025)</a> pushed up <strong>macro ionic routes</strong>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a> pushed up <strong>macro thermal routes</strong>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> pushed up <strong>macro myelin mapping</strong>, and <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> plus <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> pushed up <strong>macro CSF / glymphatic support-state routes</strong>. What follows directly is that <strong>human evidence is layered across proxy classes</strong>, not a single near-direct route to current whole-brain maintenance-state.
+Another weakness that remained on this page was that it separated generic measurement stacks while still leaving recent <strong>human maintenance-state evidence</strong> too easy to compress into one sentence such as ``human in vivo observability is getting close.'' That is too weak. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> pushed up <strong>local human nanoscale ultrastructure</strong>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> pushed up a <strong>regional synaptic-density atlas</strong>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> pushed up a <strong>whole-brain biochemical scaffold</strong>, <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> pushed up <strong>macro energetic routes</strong>, <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a> and <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">Qian et al. (2025)</a> pushed up <strong>macro ionic routes</strong>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a> pushed up <strong>macro thermal routes</strong>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> pushed up <strong>macro myelin mapping</strong>, <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>, <a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a>, and <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> pushed up <strong>perturbation-conditioned human plasticity / state-gated routes</strong>, and <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> plus <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> pushed up <strong>macro CSF / glymphatic support-state routes</strong>. What follows directly is that <strong>human evidence is layered across proxy classes</strong>, not a single near-direct route to current whole-brain maintenance-state.
 </p>
-
 <table>
 <thead>
 <tr>
@@ -270,6 +269,18 @@ Another weakness that remained on this page was that it separated generic measur
 <td><strong>Macro myelin proxy</strong>. It is not full timing-state recovery.</td>
 </tr>
 <tr>
+<td><strong>Human sleep-homeostasis / plasticity proxy</strong><br>Huber et al. (2013); Kuhn et al. (2016); Fehér et al. (2026)</td>
+<td>Wake / sleep / nap manipulations that measurably shift TMS-EEG cortical excitability and PAS-like plasticity efficacy in living humans.</td>
+<td>Which cell type, AIS / channel change, synapse, glial controller, or recovery controller produced the effect.</td>
+<td><strong>Perturbation-conditioned maintenance proxy</strong>. It is not direct readout of the responsible excitability controller.</td>
+</tr>
+<tr>
+<td><strong>Human state-gated perturbation proxy</strong><br>Zrenner et al. (2018)</td>
+<td>State-conditioned causal evidence that EEG-defined excitability state changes the efficacy of TMS-induced plasticity.</td>
+<td>AIS geometry, channel distribution, cell-specific allocation state, and long-horizon recovery controller.</td>
+<td><strong>State-gated perturbation proxy</strong>. It is not direct measurement of the excitability mechanism itself.</td>
+</tr>
+<tr>
 <td><strong>Human CSF / glymphatic routes</strong><br>Hirschler et al. (2025); Dagum et al. (2026)</td>
 <td>In vivo CSF mobility mapping and sleep-related clearance evidence linking brain-to-plasma transport.</td>
 <td>Cell-specific immune control, local synaptic maintenance, and moment-to-moment neural state.</td>
@@ -286,7 +297,7 @@ Another weakness that remained on this page was that it separated generic measur
 
 <strong>Site rule for human proxy classes</strong>
 <p>
-On this site, human-side summaries must name the <strong>proxy class</strong> explicitly. ``Human evidence exists'' is too coarse. The summary has to tell the reader whether the result is a <strong>local structural scaffold</strong>, <strong>regional synaptic-density proxy</strong>, <strong>macro biochemical scaffold</strong>, <strong>macro energetic / ionic / thermal / myelin proxy</strong>, or <strong>macro support-state proxy</strong>.
+On this site, human-side summaries must name the <strong>proxy class</strong> explicitly. ``Human evidence exists'' is too coarse. The summary has to tell the reader whether the result is a <strong>local structural scaffold</strong>, <strong>regional synaptic-density proxy</strong>, <strong>macro biochemical scaffold</strong>, <strong>perturbation-conditioned maintenance / state-gated perturbation proxy</strong>, <strong>macro energetic / ionic / thermal / myelin proxy</strong>, or <strong>macro support-state proxy</strong>.
 </p>
 
 <strong>Why this ladder matters operationally</strong>
@@ -301,7 +312,7 @@ The danger is not only philosophical overreach. If these rows are compressed int
 <li><strong>Write the measurement stack in the augmentation claim:</strong>Instead of saying "added transcriptomic label", distinguish between whole-brain atlas, patch-seq bridge, or same-brain link. </li>
 <li><strong>Don't mix atlas / bridge / scaffold / local twin / proxy calibration:</strong>Fix which kind of advance is the same "advance". </li>
 <li><strong>Don't make multimodal a synonym for state-complete:</strong>Include in the text what latent state still remains. </li>
-<li><strong>In human-side summaries, name the proxy class:</strong>Do not compress local ultrastructure, synaptic-density PET, biochemical scaffold, energetic / ionic / thermal / myelin / clearance routes into one direct route. </li>
+<li><strong>In human-side summaries, name the proxy class:</strong>Do not compress local ultrastructure, synaptic-density PET, biochemical scaffold, perturbation-conditioned plasticity/state-gated perturbation routes, energetic / ionic / thermal / myelin / clearance routes into one direct route. </li>
 <li><strong>When filling in unobserved states, write ``estimated'': </strong>If threshold / gain / set point is auto-completed from cell type, write ``latent inference''. </li>
 <li><strong>Do not promote BOLD / fNIRS amplitude to neural difference without hemodynamic audit:</strong>Write vascular-state / CVR calibration route or abstention explicitly. </li>
 <li><strong>Prohibit expressions that exceed the claim ceiling:</strong>For example, do not write EM alone as emulation-complete, Patch-seq as whole-brain state-complete, pupil as transmitter ground truth, receptor atlas as current transmitter state, or displacement PET as whole-brain neuromodulatory ground truth. </li>
@@ -344,7 +355,7 @@ The danger is not only philosophical overreach. If these rows are compressed int
 <tr>
 <td><strong>human maintenance-state proxies</strong></td>
 <td>class-labeled submission, external calibration route, cross-stack comparison, and abstention boundary. </td>
-<td>It becomes easier to separate local scaffold, synaptic-density proxy, biochemical scaffold, energetic / ionic / thermal / myelin / clearance proxy, and still-missing human routes. </td>
+<td>It becomes easier to separate local scaffold, synaptic-density proxy, biochemical scaffold, perturbation-conditioned plasticity proxy, energetic / ionic / thermal / myelin / clearance proxy, and still-missing human routes. </td>
 <td>Stop near-direct human maintenance-state and state-complete claims. </td>
 </tr>
 </tbody>
@@ -377,6 +388,10 @@ The danger is not only philosophical overreach. If these rows are compressed int
 <li>Qian, Y., Lin, Y. C., Chen, X., et al. (2025). Single-quantum sodium MRI at 3 T for separation of mono- and bi-T<sub>2</sub> sodium signals. <em>Scientific Reports</em>, 15, 27427. <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">doi:10.1038/s41598-025-07800-1</a></li>
 <li>Rzechorzek, N. M., Thrippleton, M. J., Chappell, F. M., et al. (2022). A daily temperature rhythm in the human brain predicts survival after brain injury. <em>Brain</em>, 145(6), 2031-2048. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">doi:10.1093/brain/awab466</a></li>
 <li>Baadsvik, E. L., Weiger, M., Froidevaux, R., Schildknecht, C. M., Ineichen, B. V., &amp; Pruessmann, K. P. (2024). Myelin bilayer mapping in the human brain in vivo. <em>Magnetic Resonance in Medicine</em>, 91(6), 2332-2344. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">doi:10.1002/mrm.29998</a></li>
+<li>Huber, R., Mäki, H., Rosanova, M., Casarotto, S., Canali, P., Casali, A. G., Tononi, G., &amp; Massimini, M. (2013). Human cortical excitability increases with time awake. <em>Cerebral Cortex</em>, 23(2), 332-338. <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">doi:10.1093/cercor/bhs014</a></li>
+<li>Kuhn, M., Wolf, E., Maier, J. G., Mainberger, F., Feige, B., Schmid, H., et al. (2016). Sleep recalibrates homeostatic and associative synaptic plasticity in the human cortex. <em>Nature Communications</em>, 7, 12455. <a href="https://doi.org/10.1038/ncomms12455" target="_blank">doi:10.1038/ncomms12455</a></li>
+<li>Zrenner, C., Desideri, D., Belardinelli, P., &amp; Ziemann, U. (2018). Real-time EEG-defined excitability states determine efficacy of TMS-induced plasticity in human motor cortex. <em>Brain Stimulation</em>, 11(2), 374-389. <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">doi:10.1016/j.brs.2017.11.016</a></li>
+<li>Fehér, K. D., Henckaerts, P., Hirsch, V., Bucsenez, U., Kuhn, M., Maier, J. G., et al. (2026). A nap can recalibrate homeostatic and associative synaptic plasticity in the human cortex. <em>NeuroImage</em>, 327, 121723. <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">doi:10.1016/j.neuroimage.2026.121723</a></li>
 <li>Hirschler, L., Runderkamp, B. A. R., Decker, A., et al. (2025). Region-specific drivers of CSF mobility measured with MRI in humans. <em>Nature Neuroscience</em>, 28(11), 2392-2401. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
 <li>Dagum, P., Elbert, D. L., Giovangrandi, L., et al. (2026). The glymphatic system clears amyloid beta and tau from brain to plasma in humans. <em>Nature Communications</em>, 17, 715. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
 <li>Wong, D. F., Kuwabara, H., Hsu, D. J., et al. (2013). Determination of dopamine D<sub>2</sub> receptor occupancy by lurasidone using positron emission tomography in healthy male subjects. <em>Psychopharmacology</em>, 229(2), 245-252. <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">doi:10.1007/s00213-013-3103-z</a></li>

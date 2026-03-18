@@ -5,7 +5,7 @@ description: "A practical glossary of the terms used most often in Mind-Upload, 
 article_type: Reference
 subtitle: "Start by keeping the words straight"
 author: Mind Uploading Research Project
-last_updated: "2026-03-18"
+last_updated: "2026-03-19"
 note: "Living document"
 audience: "Readers who do not want to get stuck on terminology and anyone trying to avoid category mistakes"
 reading_time: "3 to 10 minutes for only the necessary items"
@@ -590,7 +590,7 @@ Although non-invasive decoding and ESI are making steady progress, a successful 
 <li>Geifman, Y., &amp; El-Yaniv, R. (2017). Selective Classification for Deep Neural Networks. <a href="https://papers.neurips.cc/paper/7073-selective-classification-for-deep-neural-networks" target="_blank">NeurIPS 2017</a></li>
 <li>Gouwens, N. W., et al. (2021). Integrated morphoelectric and transcriptomic classification of cortical GABAergic cells. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
 <li>Hengen, K. B., Torrado Pacheco, A., McGregor, J. N., Van Hooser, S. D., &amp; Turrigiano, G. G. (2016). Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
-<li>Grubb, M. S., &amp; Burrone, J. (2010). Activity-dependent relocation of the axon initial segment fine-tunes neuronal excitability. <a href="https://doi.org/10.1038/nature09185" target="_blank">doi:10.1038/nature09185</a></li>
+<li>Grubb, M. S., &amp; Burrone, J. (2010). Activity-dependent relocation of the axon initial segment fine-tunes neuronal excitability. <a href="https://doi.org/10.1038/nature09160" target="_blank">doi:10.1038/nature09160</a></li>
 <li>Santoni, G., et al. (2024). Chromatin plasticity predetermines neuronal eligibility for memory trace formation. <a href="https://doi.org/10.1126/science.adg9982" target="_blank">doi:10.1126/science.adg9982</a></li>
 <li>Govindarajan, A., Israely, I., Huang, S.-Y., &amp; Tonegawa, S. (2011). The dendritic branch is the preferred integrative unit for protein synthesis-dependent LTP. <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">doi:10.1016/j.neuron.2010.12.008</a></li>
 <li>Glykys, J., Dzhala, V., Egawa, K., et al. (2014). Local impermeant anions establish the neuronal chloride concentration. <a href="https://doi.org/10.1126/science.1245423" target="_blank">doi:10.1126/science.1245423</a></li>

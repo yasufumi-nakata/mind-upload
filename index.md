@@ -5,7 +5,7 @@ description: "A verification commons for turning mind uploading and WBE into a s
 article_type: Start Here
 subtitle: "Define success criteria, standards, benchmarks, and preregistration first"
 author: Mind Uploading Research Project
-last_updated: "2026-03-18"
+last_updated: "2026-03-19"
 note: "Human-friendly landing page"
 audience: "First-time visitors, readers who want only the big picture, and anyone who wants a clear reading order"
 reading_time: "5-10 min"
@@ -95,7 +95,7 @@ The March 2026 update added <a href="verification.html#observability-budget">Ver
 <div class="note-box">
 <strong>If You Want To Know Which Human Routes Are Real Advances And Which Are Still Only Proxies</strong>
 <p>
-The front door was still too coarse if it only said that many hidden states remain. <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> now separates local human nanoscale ultrastructure, regional synaptic-density PET, receptor / transporter atlas priors, selected occupancy / displacement PET routes for chosen neurotransmitter systems, macro biochemical / energetic / ionic / thermal / myelin / clearance proxies, and the still-missing whole-brain in vivo routes for current transcription / chromatin state, ECM / PNN gate state, branch-local proteostasis, current chloride set point, and local mitochondrial positioning. That separation is there so <strong>"human evidence exists"</strong> is not silently rephrased as <strong>"human state-complete measurement is close."</strong>
+The front door was still too coarse if it only said that many hidden states remain. <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> now separates local human nanoscale ultrastructure, regional synaptic-density PET, receptor / transporter atlas priors, selected occupancy / displacement PET routes for chosen neurotransmitter systems, perturbation-conditioned sleep-homeostasis / plasticity proxies, EEG-state-gated perturbation routes, macro biochemical / energetic / ionic / thermal / myelin / clearance proxies, and the still-missing whole-brain in vivo routes for current transcription / chromatin state, ECM / PNN gate state, branch-local proteostasis, current chloride set point, and local mitochondrial positioning. That separation is there so <strong>"human evidence exists"</strong> is not silently rephrased as <strong>"human state-complete measurement is close."</strong>
 </p>
 </div>
 
