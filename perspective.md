@@ -5,7 +5,7 @@ description: "A research note that audits theories, measurement paths, and imple
 article_type: Perspective
 subtitle: "Audit the hypothesis of reproducing brain information processing on another substrate through the barriers of measurability, identifiability, and maintenance state"
 author: Mind Uploading Research Project
-last_updated: '2026-03-18'
+last_updated: '2026-03-19'
 note: "Research note (updated with the March 2026 re-audit)"
 audience: "Readers who want to follow theory all the way into implementation, including limits and objections"
 reading_time: "30-45 min"
@@ -1155,12 +1155,14 @@ style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 13px; li
 <div class="stage-item" id="proposal-47">
 <div class="stage-number">47</div>
 <div class="stage-body">
-<h4>Enhanced preprocessing reproducibility and network metrics</h4>
-<p>The emphasis is on ensuring "reproducibility" of noise removal and connectivity estimation. Combining automatic ASR removal with ZapLine's line noise suppression to address volume conduction and directionality issues in wPLI/STE.</p>
+<h4>Enhanced preprocessing reproducibility and connectivity ceilings</h4>
+<p>The emphasis is on ensuring reproducible artifact and line-noise control first, while keeping a separate audit ceiling for connectivity claims. Automatic ASR removal and ZapLine can improve reproducibility of cleanup, but they do <strong>not</strong> by themselves solve volume conduction, source leakage, or directional identifiability for wPLI, source-space connectivity, or STE.<sup><a href="#ref-85">[85]</a></sup><sup><a href="#ref-86">[86]</a></sup><sup><a href="#ref-129">[129]</a></sup><sup><a href="#ref-130">[130]</a></sup></p>
 <ul>
 <li>ASR is being evaluated as an automatic artifact removal method, and guidelines for parameter ranges have been provided.<sup><a href="#ref-85">[85]</a></sup></li>
 <li>ZapLine is a proven method for line noise removal and can be applied to EEG/MEG<sup><a href="#ref-86">[86]</a></sup></li>
-<li>wPLI is a phase synchronization index that suppresses the effects of volume conduction and noise.<sup><a href="#ref-87">[87]</a></sup>, STE is effective for estimating directional information flow.<sup><a href="#ref-88">[88]</a></sup></li>
+<li>wPLI reduces sensitivity to some zero-lag mixing and noise, but it is not a leak-proof inter-areal coupling meter; simulated EEG and source-space analyses still show source leakage and ghost-interaction ceilings.<sup><a href="#ref-87">[87]</a></sup><sup><a href="#ref-129">[129]</a></sup><sup><a href="#ref-130">[130]</a></sup></li>
+<li>STE is useful as a directed-dependence estimator, but observational EEG alone does not settle causality. Ye et al. evaluated STE under TMS perturbation precisely because causality is difficult to identify from observations alone.<sup><a href="#ref-88">[88]</a></sup><sup><a href="#ref-131">[131]</a></sup></li>
+<li>Recent benchmarking still finds that rereferencing, epoch design, and metric choice materially change sensor-space connectivity estimates, so this site treats connectivity pipelines as auditable configurations rather than stable readouts.<sup><a href="#ref-132">[132]</a></sup></li>
 </ul>
 <p><a href="issue.html#proposal-integration">→ To organize the proposal status and external dependencies, please refer to the contribution guide.</a></p>
 </div>
@@ -1514,6 +1516,10 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <li id="ref-126" value="126">Breyton, M., Lado, M. J., Laureys, S., et al. (2025). Spatiotemporal brain complexity quantifies consciousness outside of perturbation paradigms. <em>eLife</em>, 13, RP98920. <a href="https://doi.org/10.7554/eLife.98920">doi:10.7554/eLife.98920</a></li>
 <li id="ref-127" value="127">Rohaut, B., Naccache, L., Sitt, J. D., et al. (2024). Multimodal imaging reveals partially preserved semantic cognition in comatose patients after cardiac arrest. <em>Neurology</em>, 103(3), e209439. <a href="https://doi.org/10.1212/WNL.0000000000209439">doi:10.1212/WNL.0000000000209439</a></li>
 <li id="ref-128" value="128">Kawai, R., Migdady, I., Kim, M. H., et al. (2025). Multimodal assessment improves neuroprognosis performance after out-of-hospital cardiac arrest. <em>Nature Medicine</em>, 31, 1065–1073. <a href="https://doi.org/10.1038/s41591-024-03019-1">doi:10.1038/s41591-024-03019-1</a></li>
+<li id="ref-129" value="129">Haufe, S., Nikulin, V. V., Müller, K.-R., &amp; Nolte, G. (2013). A critical assessment of connectivity measures for EEG data: A simulation study. <em>NeuroImage</em>, 64, 120–133. <a href="https://doi.org/10.1016/j.neuroimage.2012.09.036">doi:10.1016/j.neuroimage.2012.09.036</a></li>
+<li id="ref-130" value="130">Palva, J. M., Wang, S. H., Palva, S., Zhigalov, A., Monto, S., Brookes, M. J., Schoffelen, J.-M., &amp; Jerbi, K. (2018). Ghost interactions in MEG/EEG source space: A note of caution on inter-areal coupling measures. <em>NeuroImage</em>, 173, 632–643. <a href="https://doi.org/10.1016/j.neuroimage.2018.02.032">doi:10.1016/j.neuroimage.2018.02.032</a></li>
+<li id="ref-131" value="131">Ye, S., Kitajo, K., &amp; Kitano, K. (2020). Information-theoretic approach to detect directional information flow in EEG signals induced by TMS. <em>Neuroscience Research</em>, 154, 87–96. <a href="https://doi.org/10.1016/j.neures.2019.09.003">doi:10.1016/j.neures.2019.09.003</a></li>
+<li id="ref-132" value="132">Miljevic, A., Murphy, O. W., Fitzgerald, P. B., &amp; Bailey, N. W. (2025). Estimating sensor-space EEG connectivity PART 1: Identifying best performing methods for functional connectivity in simulated data. <em>Clinical Neurophysiology</em>, 174, 73–83. <a href="https://doi.org/10.1016/j.clinph.2025.03.043">doi:10.1016/j.clinph.2025.03.043</a></li>
 </ol>
 </section>
 
