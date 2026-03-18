@@ -5,7 +5,7 @@ description: "research_harvest_50由来の60リサーチクエスチョンを1�
 article_type: Wiki
 subtitle: "RQごとに検証設計と応募テーマまで接続する"
 author: Mind Uploading Research Project
-last_updated: "2026-03-18"
+last_updated: "2026-03-19"
 note: "RQ-by-RQ Deep Dive"
 audience: "RQを実験計画・応募書類へ落とし込む研究者/実装者"
 reading_time: "25-40分"
@@ -423,3 +423,11 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 本ページのRQ行を再計数し、`A/B/C=17/25/18` を再確認しました。
 - 助成キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）の参照整合を `grant_queue` / `auto-research-funds/wiki` で再確認しました。
 - 依頼方針どおり、汎用要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持しました。
+
+## 2026-03-19 14:02 JST 再検証ログ（本run / RQ単位深掘り監査）
+
+- 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull --ff-only origin main` を実行し、`Already up to date` を確認しました。
+- 本ページの `RQ` 行を再計数し `60`（`A/B/C=17/25/18`）を再確認しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` と突合し、`1RQ=1検証命題=1応募テーマ=1主データ` の欠損がないことを確認しました。
+- 本ページで参照する EEG 主要ID群（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と再照合し、未解決ID `0` を確認しました。
+- `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` 側の `RQ行数=60` も再確認し、wiki間整合を維持しました。
