@@ -26,7 +26,7 @@
 
 ## 文献・参加
 - [Wiki: How to read the literature and evidence page](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading)
-- [Wiki: How to read document source types and status labels](https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status)
+- [Wiki: How to read source types, status labels, and evidence classes](https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status)
 - [Wiki: How to read suggestions and status labels](https://github.com/yasufumi-nakata/mind-upload/wiki/proposal-status-reading)
 - [Wiki: How to write your first issue](https://github.com/yasufumi-nakata/mind-upload/wiki/issue-writing-basics)
 - [Wiki: Basics of deciding where to put new information](https://github.com/yasufumi-nakata/mind-upload/wiki/content-placement-basics)

@@ -1,13 +1,13 @@
-# Wiki: How to read document source types and status labels
+# Wiki: How to read source types, status labels, and evidence classes
 
-> Auxiliary page to avoid confusing Badge, publication source, and status
+> Auxiliary page to avoid confusing badge, source, status, and what a paper directly strengthens
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-14 / 位置づけ: Reading guide
+- 更新日: 2026-03-18 / 位置づけ: Reading guide
 
 ## このページの役割
-This page is an auxiliary page that organizes labels such as ``Scopus,'' ``arXiv,'' ``Review,'' ``Media,'' ``source_logged,'' and ``curated'' that appear in collections and bibliographic maps for beginners. The important thing here is to read the labels separately and understand what information they represent.
+This page is an auxiliary page that organizes labels such as ``Scopus,'' ``arXiv,'' ``Review,'' ``Media,'' ``source_logged,'' ``curated,'' and evidence classes that appear in collections and bibliographic maps for beginners. The important thing here is to read these labels separately and understand what information each one represents.
 
 ## 正確さの前提
 Labels are a reading aid and do not automatically guarantee the correctness of the article content. When using them as evidence, always refer back to the DOI, main text, and primary research.
@@ -23,9 +23,10 @@ Labels are a reading aid and do not automatically guarantee the correctness of t
 - [Wiki: U number guide](https://github.com/yasufumi-nakata/mind-upload/wiki/u-number-guide) - This is an auxiliary page to see which open questions are related to the bibliographic map.
 
 ## いま分かっていること
-- Even if the document is the same, the publication source, document type, and site status must be viewed separately.
+- Even for the same document, publication source, document type, site status, and evidence class must be viewed separately.
 - Scopus is an index, arXiv is a preprint storage, and Review is a document type, and they do not have the same meaning.
 - source_logged and curated are labels that indicate how organized this site is.
+- A human PET/MRS/MRI paper can strengthen observability without closing hidden state or proving causal sufficiency.
 
 ## まだ分かっていないこと
 - The extent to which individual papers ultimately remain central evidence will depend on subsequent scrutiny.
@@ -33,12 +34,12 @@ Labels are a reading aid and do not automatically guarantee the correctness of t
 
 ---
 
-<h2>First divide into three parts</h2>
+<h2>First divide into four parts</h2>
 <p>
-What can be confusing on literature pages is that <strong>where</strong> it is listed, <strong>what type of literature</strong>, and <strong>its current status on this site</strong> all seem to be the same thing. By just separating these three things, you can significantly reduce misreadings.
+What can be confusing on literature pages is that <strong>where</strong> a paper is listed, <strong>what type of literature</strong> it is, <strong>its current status on this site</strong>, and <strong>what it directly strengthens</strong> can all appear to be the same thing. By separating these four things first, you can significantly reduce misreadings.
 </p>
 
-<h2>Labels have three axes</h2>
+<h2>Labels have four axes</h2>
 <table>
 <thead>
 <tr>
@@ -67,12 +68,18 @@ What can be confusing on literature pages is that <strong>where</strong> it is l
 <td>source_logged / curated / noise_excluded</td>
 <td>It does not necessarily mean that the content of the paper is true or of low value. </td>
 </tr>
+<tr>
+<td><strong>Evidence class</strong></td>
+<td>Indicates what the paper directly strengthens in the technical reading flow. </td>
+<td>Direct validator / system demo / observability-class advance / benchmark / hidden-state boundary</td>
+<td>It is still not a claim that the whole problem is solved. It only fixes <strong>which evidential axis moved</strong>.</td>
+</tr>
 </tbody>
 </table>
 
 <strong>Multiple attributes overlap in the same document</strong>
 <p>
-For example, a document may be a<strong>review article on Scopus</strong> or a<strong>preprint of primary research on arXiv</strong>. Don't rely solely on one label.
+For example, a document may be a <strong>review article on Scopus</strong>, a <strong>preprint of primary research on arXiv</strong>, or a <strong>curated human-MRI paper that belongs to the observability-class-advance bin</strong>. Do not rely on only one label.
 </p>
 
 <h2>How to read publication source and type</h2>
@@ -115,6 +122,62 @@ For example, a document may be a<strong>review article on Scopus</strong> or a<s
 <td>Primary research that directly produces new data, experiments, and analyses. </td>
 <td>The evidence can be traced most directly by reviewing the method, evaluation, and limitations. </td>
 <td>Even primary research can have weak sample conditions, statistics, and reproducibility, so it cannot be used unconditionally. </td>
+</tr>
+</tbody>
+</table>
+
+<h2>How to read evidence class</h2>
+<table>
+<thead>
+<tr>
+<th>Evidence class</th>
+<th>What it directly strengthens</th>
+<th>Typical examples</th>
+<th>What it still does not justify</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>direct validator / causal calibration</strong></td>
+<td>Error sources, calibration limits, and local ground-truth checks.</td>
+<td>Mikulan (2020), Unnwongse (2023), Hao (2025)</td>
+<td>Whole-brain uniqueness recovery or full hidden-state closure.</td>
+</tr>
+<tr>
+<td><strong>task-limited system demonstration</strong></td>
+<td>Decode or closed-loop performance on a specific task and interface.</td>
+<td>Tang (2023), Willett (2023), Littlejohn (2025), Wairagkar (2025)</td>
+<td>Whole-brain emulation, identity continuity, or hidden-state completeness.</td>
+</tr>
+<tr>
+<td><strong>dataset / benchmark / standard / toolchain</strong></td>
+<td>Comparability, synchronization, governance, and reproducibility.</td>
+<td>EEG-BIDS, Motion-BIDS, LSL, MOABB</td>
+<td>Biological sufficiency or mechanistic truth.</td>
+</tr>
+<tr>
+<td><strong>observability-class advance / human proxy ladder</strong></td>
+<td>What humans can directly observe or approximate at a specific measurement class.</td>
+<td>Shapson-Coe (2024), Johansen (2024), Lucchetti (2025), Baadsvik (2024), Rzechorzek (2022), Hirschler (2025)</td>
+<td>State-complete measurement. Each proxy or atlas still has a claim ceiling.</td>
+</tr>
+<tr>
+<td><strong>mechanistic boundary / hidden-state evidence</strong></td>
+<td>What still remains latent or omitted even after connectome, cell type, or a strong demo.</td>
+<td>Gouwens (2021), Hengen (2016), Xu (2024), Looser (2024), Cahill (2024)</td>
+<td>Direct validation or a finished implementation.</td>
+</tr>
+<tr>
+<td><strong>review / synthesis</strong></td>
+<td>Field map, terminology, and issue clustering.</td>
+<td>Review articles and benchmark syntheses</td>
+<td>Strong conclusions without returning to primary research.</td>
+</tr>
+<tr>
+<td><strong>context / philosophy / law / culture</strong></td>
+<td>Context around the topic and its surrounding debates.</td>
+<td>Ethics, legal analysis, metaphysics, cultural studies</td>
+<td>The technical or natural-science frontier by itself.</td>
 </tr>
 </tbody>
 </table>
@@ -193,6 +256,7 @@ For example, a document may be a<strong>review article on Scopus</strong> or a<s
 <li><strong>“Review is enough”:</strong> Review articles are useful as maps, but for direct evidence you need to go back to primary research. </li>
 <li><strong>“Source_logged, so accepted”:</strong> This is still an acceptance log, and the decision to integrate or exclude is a follow-up work. </li>
 <li><strong>“curated so it is true”:</strong> Being organized and ultimately correct are two different things. </li>
+<li><strong>“A human proxy paper solved hidden state”:</strong> A human PET/MRS/MRI advance often raises an observability class, not a full state-complete readout.</li>
 </ul>
 
 <h2>Where to return next</h2>
