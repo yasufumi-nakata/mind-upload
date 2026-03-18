@@ -304,3 +304,21 @@ Reasons for proceeding in this order:
 4. `U11-1`（主データ `859` / `G2`）
 5. `U13-3`（主データ `509` / `G1`）
 6. `U14-6`（主データ `719` / `G1`）
+
+## 2026-03-18 19:02 JST 再検証ログ（本run / 総合確認）
+
+- `main` pull 後に `mind-upload/wiki/mind-upload-rq60-deep-focus-notes.md` を再検証し、`research_harvest_50.md` 由来の `RQ_TOTAL=60`（`missing=0`, `duplicate=0`）を再確認しました。
+- 判定内訳は `A/B/C=17/25/18` を再計数で確認しました。
+- 60RQの全行で `Application theme (grant key)` と `Main EEG-DATA` が埋まっていることを確認しました。
+- `Main EEG-DATA` の参照IDは `EEG-DATA/eeg_dataset_summary_ja.csv` 上で全件実在（`missing=0`）を再確認しました。
+- 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` と `auto-research-funds` 側マップで再参照可能でした。
+- 方針は継続: 汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` を固定し、1件ずつ深掘りします。
+
+### 本runで優先して深掘りする6RQ（1件ずつ実行）
+
+1. `U0-1`（同一性KPI二軸ROC、主データ `11`、応募 `G2`）
+2. `U1-2`（不確実性伝播校正、主データ `56`、応募 `G1`）
+3. `U4-2`（最小介入因果主張、主データ `56`、応募 `G1`）
+4. `U8-1`（閉ループ遅延許容域、主データ `6`、応募 `G2`）
+5. `U13-1`（意味一致/因果一致の分離、主データ `509`、応募 `G1`）
+6. `U14-3`（リーク監査運用、主データ `719`、応募 `G1`）
