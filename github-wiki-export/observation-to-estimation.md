@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-14 / 位置づけ: Technical / natural science only
+- 更新日: 2026-03-19 / 位置づけ: Technical / natural science only
 
 ## このページの役割
 This page is a wiki that organizes where to stop making claims and what to add to make them even stronger when estimating brain states and causal structures from observational signals such as EEG. Connect forward problems, inverse problems, ESI, DCM, SCM, and causal equivalence classes in the order of ``observation → estimation → intervention → validation.''
@@ -27,6 +27,7 @@ This is not a fixed recipe for which method to use. This page first fixes audit 
 - In principle, it is difficult to uniquely determine brain activity from scalp EEG, and estimation requires assumptions.
 - High-density EEG, individualized MRI, FEM/BEM, and empirical Bayesian estimation can improve conditions, but alone do not guarantee unique recovery.
 - The causal structure cannot be determined by observational fit alone; a set of candidate models and an intervention design are required.
+- Whole-brain or faster DCM improves tractability, but does not erase candidate-model dependence or observation-model assumptions.
 
 ## まだ分かっていないこと
 - It remains unclear which measurement/modeling combination is most effective for validating WBE.
@@ -181,6 +182,57 @@ DCM is a framework that specifies candidate generative models and compares them 
 <li><strong>Intervention Calibration:</strong>Is the held-out prediction correct with the stimulus or perturbation? </li>
 </ul>
 
+<strong>2026-03-19 deepening: why this page now needs a route card</strong>
+<p>
+The weak point here was not that it separated DCM from SCM, but that scaling advances could still be overread as if they had solved identifiability. <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">Rosa et al. (2012)</a> showed that DCM can search a potentially huge model space quickly from one full model, <a href="https://doi.org/10.1002/hbm.23061" target="_blank">Frässle et al. (2016)</a> showed that reliability itself must be checked rather than assumed, <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">Frässle et al. (2021)</a> pushed directed-connectivity estimation to whole-brain human fMRI, and <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">Wu et al. (2024)</a> reduced computation time further. Those are real advances in tractability, but they still operate inside explicit choices about node set, priors, hemodynamics, and omitted competitors. Therefore, on this site, scaling is read as <strong>better searchability of candidate models</strong>, not as automatic causal discovery.
+</p>
+
+<h2>Effective-connectivity route card</h2>
+<table>
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be written</th>
+<th>What misreading it blocks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Candidate model space</strong></td>
+<td>Compared node set, omitted nodes / edges, exogenous inputs, and the family of alternatives that were allowed to compete.</td>
+<td>It blocks “the best compared model” from being rephrased as “the true circuit was found.”</td>
+</tr>
+<tr>
+<td><strong>Observation model and priors</strong></td>
+<td>Neural-mass assumptions, linearization, HRF choice, mean-field or independence assumptions, sparsity priors, and any structural constraints.</td>
+<td>It blocks “effective connectivity” from sounding as if the result were independent of hemodynamic and prior assumptions.</td>
+</tr>
+<tr>
+<td><strong>Family comparison / model recovery</strong></td>
+<td>Family-level stability, simulation-based recovery, and whether nearby model families are confusable under the same data regime.</td>
+<td>It blocks fragile one-model wins from being promoted to robust identifiability.</td>
+</tr>
+<tr>
+<td><strong>Perturbation or external validation</strong></td>
+<td>Held-out perturbation prediction, stimulation / lesion validation, or an external standard that the model had to predict rather than explain post hoc.</td>
+<td>It blocks observational fit from being rephrased as causal validation.</td>
+</tr>
+<tr>
+<td><strong>Reliability window</strong></td>
+<td>Session interval, task or rest condition, site / scanner dependence, and whether reproducibility was shown only under closely matched conditions.</td>
+<td>It blocks a same-lab repeatability result from being rephrased as general portability.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Which edge directions, strengths, or mechanisms remain unresolved and under what alternative assumptions the interpretation changes.</td>
+<td>It blocks incomplete recovery from being silently collapsed into a complete causal graph.</td>
+</tr>
+</tbody>
+</table>
+<p>
+If this card is missing, this site stops at <strong>model-conditioned causal hypothesis</strong>. A whole-brain DCM graph, a regression DCM estimate, or an activity-flow-compatible diagram is not promoted here to discovered wiring merely because it is dense, scalable, or predictive.
+</p>
+
 <h2>SCM and causal discovery only become stronger with intervention</h2>
 <p>
 SCM is a framework that makes it easy to write down interventions and counterfactuals explicitly. However, when we learn only from observational data, we are often left with a<strong>Markov equivalence class</strong>. As shown by Hauser and Buhlmann, intervention data are important for narrowing this class of equivalences. Even in brain data, Vink et al. showed that resting-state functional connectivity remains a weak predictor of causal interaction, and it is dangerous to determine direction and mechanism based on correlation alone.
@@ -244,7 +296,12 @@ DCM is useful for comparing neural circuit candidate generation models, and SCM 
 <li>Feng, Z., Mishne, G., Hashemi, A., et al. (2025). Block-Champagne: Imaging extended E/MEG source activation with empirical Bayesian uncertainty quantification. <em>IEEE Transactions on Medical Imaging</em>. <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">doi:10.1109/TMI.2025.3642620</a></li>
 <li>Friston, K. J., Harrison, L., &amp; Penny, W. (2003). Dynamic causal modelling. <em>NeuroImage</em>, 19(4), 1273-1302. <a href="https://doi.org/10.1016/S1053-8119(03)00202-7" target="_blank">doi:10.1016/S1053-8119(03)00202-7</a></li>
 <li>Penny, W. D., Stephan, K. E., Mechelli, A., &amp; Friston, K. J. (2004). Comparing dynamic causal models. <em>NeuroImage</em>, 22(3), 1157-1172. <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">doi:10.1016/j.neuroimage.2004.03.026</a></li>
+<li>Rosa, M. J., Friston, K., &amp; Penny, W. (2012). Post-hoc selection of dynamic causal models. <em>Journal of Neuroscience Methods</em>, 208(1), 66-78. <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">doi:10.1016/j.jneumeth.2012.04.013</a></li>
 <li>Lee, H.-L., Zahneisen, B., Hugger, T., et al. (2017). Tracking dynamic effective connectivity from fMRI using changes induced by anesthesia. <em>NeuroImage</em>, 149, 441-451. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.012" target="_blank">doi:10.1016/j.neuroimage.2017.02.012</a></li>
+<li>Frässle, S., Paulus, F. M., Krach, S., &amp; Jansen, A. (2016). Test-retest reliability of effective connectivity in the face perception network. <em>Human Brain Mapping</em>, 37(2), 730-744. <a href="https://doi.org/10.1002/hbm.23061" target="_blank">doi:10.1002/hbm.23061</a></li>
+<li>Frässle, S., Manjaly, Z. M., Do, C. T., Kasper, L., Pruessmann, K. P., &amp; Stephan, K. E. (2021). Whole-brain estimates of directed connectivity for human connectomics. <em>NeuroImage</em>, 225, 117491. <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">doi:10.1016/j.neuroimage.2020.117491</a></li>
+<li>Wu, H., Hu, X., &amp; Zeng, Y. (2024). A fast dynamic causal modeling regression method for fMRI. <em>NeuroImage</em>, 304, 120954. <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">doi:10.1016/j.neuroimage.2024.120954</a></li>
+<li>Jafarian, A., Assem, M. K., Kocagoncu, E., et al. (2024). Reliability of dynamic causal modelling of resting-state magnetoencephalography. <em>Human Brain Mapping</em>. <a href="https://doi.org/10.1002/hbm.26782" target="_blank">doi:10.1002/hbm.26782</a></li>
 <li>Hauser, A., &amp; Buhlmann, P. (2012). Characterization and greedy learning of interventional Markov equivalence classes of directed acyclic graphs. <em>Journal of Machine Learning Research</em>, 13, 2409-2464. <a href="https://jmlr.org/papers/v13/hauser12a.html" target="_blank">JMLR</a></li>
 <li>Vink, J. J., Ramos-Nuñez, A. I., Bellesi, A., et al. (2020). The brain's functional connectome is a poor predictor of the brain's causal activity flow. <em>PLOS Computational Biology</em>, 16(1), e1007866. <a href="https://doi.org/10.1371/journal.pcbi.1007866" target="_blank">doi:10.1371/journal.pcbi.1007866</a></li>
 </ol>

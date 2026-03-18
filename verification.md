@@ -19,6 +19,7 @@ page_highlights:
   - "For brain-to-text and speech decode, the Neural Contribution Card fixes task constraint, language prior, candidate set, no-brain / no-LM / shuffle baselines, and subject cooperation."
   - "For multimodal or atlas-prior results, the Fusion Card is added on top of the Observability Budget so acquisition relation, synchronization, fusion model, vascular-state / CVR limits for hemodynamic stacks, and external validation are fixed explicitly."
   - "For diffusion-MRI tractography connectomes, the Observability Budget now requires a tractography route card that names direct observables, priors / filtering, uncertainty, and abstention."
+  - "For DCM / effective-connectivity claims, the Observability Budget now requires an effective-connectivity route card that names candidate model space, observation-model assumptions, validation, reliability, and abstention."
   - "For ESI claims, simulation / phantom, stimulation ground truth, simultaneous invasive recording, and postsurgical outcome are separate validation classes; 'externally validated' alone is insufficient."
   - "At L2 and above, the latent-state error budget is added on top of the Observability Budget so the still-unobserved states that stop the claim are disclosed."
   - "At L2 and above, perisynaptic ECM / PNN state is separated from synaptic weights and glia when a claim depends on adult plasticity, receptor mobility, or memory stabilization."
@@ -41,6 +42,7 @@ known_points:
   - "A multimodal result is not one thing; simultaneous acquisition, geometric fusion, invasive calibration, and atlas priors must be audited separately."
   - "For ESI, passing one validation class does not auto-pass the others; stimulation error, simultaneous invasive concordance, and postsurgical outcome answer different questions."
   - "A BOLD or fNIRS amplitude difference without vascular-state / CVR audit remains a hemodynamic-limited difference rather than a clean neural difference."
+  - "An effective-connectivity label without candidate-model, validation, and reliability disclosure remains a model-conditioned hypothesis rather than discovered causal wiring."
   - "A synapse list or weight estimate does not by itself fix perisynaptic ECM / PNN state, so plasticity and stabilization claims need a separate ceiling."
   - "A weight estimate does not fix which tagged synapses or dendritic branches capture plasticity-related proteins, so late-stabilization claims need a separate proteostasis ceiling."
   - "Sleep duration or deprivation alone does not fix slow-oscillation / spindle / ripple coordination, so overnight retention claims need a separate sleep-architecture ceiling."
@@ -487,6 +489,13 @@ Baselines, benchmarks, preregistration, model cards, and failure cases all matte
 <strong>If You Get Stuck On Uncertainty Or Causal Equivalence Classes</strong>
 <p>
 In Verification, estimates derived from observed signals are not treated as the single truth by default. If you want the relationships among inverse problems, ESI, DCM, SCM, and causal equivalence classes organized first, see <a href="wiki/observation-to-estimation.html">Wiki: From Observation To Estimation</a>. If you also want point estimates, intervals, and abstention under low confidence, see <a href="wiki/uncertainty-confidence-and-abstention.html">Wiki: Uncertainty, Calibration, and Abstention</a>.
+</p>
+</div>
+
+<div class="note-box">
+<strong>If A Paper Says "Effective Connectivity"</strong>
+<p>
+On this site, the phrase alone does not count as causal-wiring discovery. DCM and related effective-connectivity methods are read here as <strong>model-conditioned causal hypotheses</strong> unless the paper also discloses the compared model space, omitted alternatives, neural / hemodynamic assumptions, family comparison or model recovery, perturbation or external validation, test-retest window, and abstention boundary. The shortest operational rule is <a href="wiki/observation-to-estimation.html#effective-connectivity-route-card">Wiki: effective-connectivity route card</a>.
 </p>
 </div>
 
@@ -1383,6 +1392,7 @@ In response to technical criticisms (Issue #257-#260) submitted in the latter ha
 <ul>
 <li><strong>ESI/HBM logs:</strong>Only when making anatomical source claims, attach uncertainty maps from cranial conductivity, forward model sensitivity analysis, or hierarchical Bayesian estimation. </li>
 <li><strong>Alternative model log:</strong>Does not claim that the estimated model is the only solution, but reports the existence of alternative models or equivalence classes that can explain the same observed statistics. </li>
+<li><strong>Effective Connectivity Route Card:</strong>When reporting DCM or related effective-connectivity results, name the node set and omitted competitors, neural-mass / HRF / prior assumptions, family comparison or model-recovery results, perturbation / external validation route, reliability window, and abstention boundary. If this is missing, the result stays at the model-conditioned hypothesis level. </li>
 <li><strong>Preprocessing Fidelity Log:</strong>Records before and after spectra, exclusion/interpolation rates, changes in key metrics, and at least one task-consistent signal preservation metric, with or without ASR. </li>
 <li><strong>Event Semantics Log:</strong> Attach HED to BIDS metadata and map to CogAtlas / CogPO / NIF / SCORE etc. as necessary. Fixing to a specific ontology is not a common requirement. </li>
 <li><strong>Perturbation log:</strong>If local interventions or stimulation were used, expose the stimulation site, intensity, artifact window, masking, safe stop conditions, and retry conditions. If not used, specify "No perturbation evidence." </li>

@@ -13,7 +13,7 @@ page_intro: "This page is a Q&A for the questions many readers hit first when re
 accuracy_note: "This page gives short answers. Please do not quote the conclusion alone; return to the linked pages and references when you need the full basis."
 page_highlights:
   - "It quickly clears up first-order questions such as what this site is for and what EEG or brain-to-text work can and cannot support."
-  - "It now front-loads three technical guardrails: connectome-complete is not state-complete, a high score is not automatically a target-specific neural readout, and BOLD / fNIRS differences need vascular-state / CVR audit."
+  - "It now front-loads four technical guardrails: connectome-complete is not state-complete, a high score is not automatically a target-specific neural readout, BOLD / fNIRS differences need vascular-state / CVR audit, and DCM / effective-connectivity labels do not by themselves identify true causal wiring."
   - "It avoids dramatic overstatement and states what remains unresolved at the same time."
   - "It is structured so readers can tell when the FAQ is enough and when they should move on to the full page."
 known_points:
@@ -21,6 +21,7 @@ known_points:
   - "The impressive appearance of EEG or LLM outputs must be separated from strong WBE claims, and the contributions of language priors, nuisance routes, and brain-derived information must also be separated."
   - "Because wiring diagrams and cell types still leave excitability, timing-state, thermal-state, transcription/chromatin, proteostasis, ECM / PNN, ionic-homeostasis, bioenergetic / mitochondrial state, and maintenance-support variables unresolved, long-term dynamical claims require separate auditing."
   - "A BOLD or fNIRS amplitude difference without vascular-state / CVR or short-separation auditing is still not a clean neural difference."
+  - "A DCM or effective-connectivity label does not by itself discover the one true causal circuit; candidate model space, validation, and reliability still matter."
   - "FAQ works well as an entry point for avoiding the wrong direction."
 unknown_points:
   - "Short answers alone cannot settle theory choice or identity questions."
@@ -47,6 +48,9 @@ wiki_links:
   - label: "Wiki: Counterfactuals, interventions, and perturbations"
     url: "/wiki/counterfactual-and-perturbation-verification.html"
     description: "Explains the entry point for causal verification behind Q1-Q3."
+  - label: "Wiki: From observation to estimation"
+    url: "/wiki/observation-to-estimation.html"
+    description: "Organizes why ESI, DCM, and SCM remain model-conditioned unless validation and abstention are disclosed."
   - label: "Wiki: Standards, repositories, validators, and benchmarks"
     url: "/wiki/standards-repositories-validators-and-benchmarks.html"
     description: "Clarifies the standardization issues behind Q4 by role."
@@ -265,6 +269,19 @@ At Mind-Upload, a BOLD or fNIRS difference without <strong>vascular-state / CVR<
 </p>
 </section>
 
+<section class="section" id="q1e">
+<h2 class="section-title">Q. If a paper reports DCM or effective connectivity, did it find the brain's true causal wiring?</h2>
+<p>
+A. Not by default. On this site, DCM / effective-connectivity output is read as a <strong>model-conditioned causal hypothesis</strong>, not as automatic discovery of the one true circuit. <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">Penny et al. (2004)</a> showed that DCM conclusions are relative to the models being compared, and <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">Rosa et al. (2012)</a> showed that later workflows can search very large model spaces efficiently from one full model rather than make the true model unique. More recent scaling work such as <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">Frässle et al. (2021)</a> and <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">Wu et al. (2024)</a> pushes effective-connectivity estimation toward whole-brain or faster settings, but it still remains inside an explicitly chosen generative model and observation model.
+</p>
+<p>
+That does not make effective-connectivity work useless. It means the safe claim is narrower: under a disclosed node set, omitted alternatives, prior family, and observation assumptions, one model family explained the data better than named competitors. Even reproducibility is conditional. <a href="https://doi.org/10.1002/hbm.23061" target="_blank">Frässle et al. (2016)</a> and <a href="https://doi.org/10.1002/hbm.26782" target="_blank">Jafarian et al. (2024)</a> show that effective-connectivity reliability can be good when the task, session interval, and acquisition conditions are tightly controlled, but that is still not the same as proving a unique causal circuit in the wild.
+</p>
+<p>
+At Mind-Upload, a paper that says “effective connectivity” must still disclose <strong>candidate model space</strong>, <strong>omitted alternatives</strong>, <strong>family comparison or model recovery</strong>, <strong>held-out perturbation / external validation</strong>, <strong>reliability window</strong>, and <strong>abstention boundary</strong>. If those are missing, we read it as a <strong>candidate-model result</strong>, not as causal-wiring discovery. The shortest follow-up is <a href="wiki/observation-to-estimation.html#effective-connectivity-route-card">Wiki: effective-connectivity route card</a> and <a href="tech_roadmap.html#qa-r4">Roadmap R4</a>.
+</p>
+</section>
+
 <section class="section" id="q2">
 <h2 class="section-title">Q. What is the difference between decode and emulate?</h2>
 <p>
@@ -420,6 +437,12 @@ The distinguishing strategy of Mind-Upload is <strong>to build the Verification 
 <li>Littlejohn, K. T., Dabagia, M., Ladwig, A., et al. (2025). A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
 <li>Wairagkar, M., Card, N. S., Singer-Clark, T., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
 <li>Wilson, G. H., Stein, E. A., Kamdar, F., et al. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Penny, W. D., Stephan, K. E., Mechelli, A., &amp; Friston, K. J. (2004). Comparing dynamic causal models. <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">doi:10.1016/j.neuroimage.2004.03.026</a></li>
+<li>Rosa, M. J., Friston, K., &amp; Penny, W. (2012). Post-hoc selection of dynamic causal models. <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">doi:10.1016/j.jneumeth.2012.04.013</a></li>
+<li>Frässle, S., Paulus, F. M., Krach, S., &amp; Jansen, A. (2016). Test-retest reliability of effective connectivity in the face perception network. <a href="https://doi.org/10.1002/hbm.23061" target="_blank">doi:10.1002/hbm.23061</a></li>
+<li>Frässle, S., Manjaly, Z. M., Do, C. T., Kasper, L., Pruessmann, K. P., &amp; Stephan, K. E. (2021). Whole-brain estimates of directed connectivity for human connectomics. <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">doi:10.1016/j.neuroimage.2020.117491</a></li>
+<li>Wu, H., Hu, X., &amp; Zeng, Y. (2024). A fast dynamic causal modeling regression method for fMRI. <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">doi:10.1016/j.neuroimage.2024.120954</a></li>
+<li>Jafarian, A., Assem, M. K., Kocagoncu, E., et al. (2024). Reliability of dynamic causal modelling of resting-state magnetoencephalography. <a href="https://doi.org/10.1002/hbm.26782" target="_blank">doi:10.1002/hbm.26782</a></li>
 <li>Gouwens, N. W., et al. (2021). Integrated morphoelectric and transcriptomic classification of cortical GABAergic cells. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
 <li>Hengen, K. B., Torrado Pacheco, A., McGregor, J. N., Van Hooser, S. D., &amp; Turrigiano, G. G. (2016). Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
 <li>Torrado Pacheco, A., et al. (2021). Sleep Promotes Downward Firing Rate Homeostasis. <a href="https://doi.org/10.1016/j.neuron.2021.04.004" target="_blank">doi:10.1016/j.neuron.2021.04.004</a></li>

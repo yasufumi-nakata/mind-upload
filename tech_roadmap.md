@@ -4,7 +4,7 @@ title: "Technical Roadmap: Understanding WBE Through Measurement, Reconstruction
 description: "A learning roadmap for viewing mind uploading and WBE from the technical side, organized as a question tree from measurement to reconstruction, implementation, and verification."
 article_type: "Roadmap (Definition #1)"
 subtitle: "Break 'what counts as progress' into a question tree with reading order and minimum arrival conditions"
-last_updated: "2026-03-18"
+last_updated: "2026-03-19"
 note: "Provisional draft (updated continuously)"
 audience: "Readers who want the big picture, need a learning order, or want claim strength organized by level"
 reading_time: "20-30 min (5 min for the index only)"
@@ -18,6 +18,7 @@ page_highlights:
   - "M2 separates hardware latency from biological timing-state, so a fast device loop is not confused with timing-complete reconstruction."
   - "M1 / M5 keep neural state distinct from vascular transfer state, so a BOLD amplitude difference is not silently promoted to a neural difference."
   - "R6 treats personalization not as a pure performance trick, but as a verification problem that must separate target signal from subject fingerprint and setup shortcuts."
+  - "R4 now treats DCM / effective-connectivity outputs as route-card claims that must disclose model space, observation assumptions, validation, reliability, and abstention."
 known_points:
   - "Splitting the problem into P/M/R/I/V/D makes it easier to see which questions are foundational and which sit higher up."
   - "The dependency structure that prevents strong claims from skipping earlier layers is fairly clear."
@@ -757,6 +758,8 @@ Therefore, in this roadmap, we first fix ``which loop class is handled and which
 <div class="qa-body">
 <p><strong>Question:</strong>Rather than just applying correlations, can we say ``what should change'' in response to changes in stimuli or conditions? What chain of evidence should we use to make the leap from decoding (correlation) to emulation (causation)? </p>
 <p><strong>Policy:</strong>This project treats Active Inference, DCM, state-space models, SCM, and mechanistic circuit models as <strong>competitive candidate sets</strong>. DCM is useful for comparing candidate generation models, and SCM is useful for describing interventions and counterfactuals, but neither is an automatic causal detector on its own. If only observational data is used, equivalence classes remain, so we require <strong>clarification of candidate model space</strong>, <strong>family-level comparison</strong>, <strong>model recovery</strong>, and <strong>held-out perturbation prediction</strong>. </p>
+<p><strong>2026-03-19 addendum:</strong>The weakness of the older wording was that <strong>candidate model space</strong> remained a slogan rather than an operational gate. <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">Penny et al. (2004)</a> already fixed that DCM inference is relative to the compared models, <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">Rosa et al. (2012)</a> showed that very large model spaces can be searched efficiently from a full model, <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">Frässle et al. (2021)</a> scaled directed-connectivity estimation to whole-brain human fMRI, and <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">Wu et al. (2024)</a> accelerated regression-style DCM further. But that progress is progress in <strong>tractability</strong>, not an automatic solution to identifiability. Even whole-brain or faster effective-connectivity estimates still depend on the chosen node set, priors, hemodynamic assumptions, omitted alternatives, and validation design.</p>
+<p><strong>Effective-connectivity route card required:</strong>Any R4 claim using DCM or a related effective-connectivity estimator must publish (1) compared node set plus omitted competitors, (2) neural-mass / HRF / prior assumptions, (3) family comparison and model recovery, (4) held-out perturbation or external validation, (5) test-retest window and condition dependence, and (6) abstention boundary. If those are missing, this roadmap stops at <strong>model-conditioned causal hypothesis</strong> and does not promote the result to discovered causal wiring or WBE-relevant causal structure.</p>
 <p><strong>Improvement measures (positioning of Multi-scale):</strong> Multi-scale integration is a promising expansion route, but it should not be the default route. Even when passing EEG-derived macroconstraints to a circuit model, acceptance or rejection is not determined by the "theory name" but by prediction improvement for stimuli, lesions, and task perturbations, OOD generalization, and transparency of abstention conditions. </p>
 <p><strong>Stricter implementation (Issue #52):</strong> The uncertainty obtained in the inverse problem (R1/R2) is explicitly propagated to the subsequent model. However, what we are fixing here is not the precision implementation of Active Inference itself, but rather the<strong>upstream uncertainty does not disappear downstream</strong>. The implementation differences between candidate theories are compared on the same bench. </p>
 <p><strong>Next:</strong> Combine the Intervention Premise Evaluation Task (V2), Model Space Declaration, Family Comparison, and Perturbation Bench with External Validation into one deliverable pack. </p>
@@ -1919,12 +1922,16 @@ Below are the main documents directly related to the open questions of U0-U15. F
 
 <h3>F. Causal inference/active inference/counterfactual hypothetical</h3>
 <ol>
-<li>Friston, K. J., Harrison, L., &amp; Penny, W. (2003). Dynamic causal modelling.</li>
+<li>Friston, K. J., Harrison, L., &amp; Penny, W. (2003). Dynamic causal modelling. <a href="https://doi.org/10.1016/S1053-8119(03)00202-7" target="_blank">doi:10.1016/S1053-8119(03)00202-7</a></li>
 <li>Penny, W. D., Stephan, K. E., Mechelli, A., &amp; Friston, K. J. (2004). Comparing dynamic causal models. <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">doi:10.1016/j.neuroimage.2004.03.026</a></li>
+<li>Rosa, M. J., Friston, K., &amp; Penny, W. (2012). Post-hoc selection of dynamic causal models. <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">doi:10.1016/j.jneumeth.2012.04.013</a></li>
 <li>Friston, K. (2010). Free-energy principle.</li>
 <li>Friston, K. (2017). Active inference: a process theory.</li>
 <li>Parr, T., &amp; Friston, K. J. (2019). Generalised free energy.</li>
 <li>Lee, H.-L., Zahneisen, B., Hugger, T., et al. (2017). Tracking dynamic effective connectivity from fMRI using changes induced by anesthesia. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.012" target="_blank">doi:10.1016/j.neuroimage.2017.02.012</a></li>
+<li>Frässle, S., Manjaly, Z. M., Do, C. T., Kasper, L., Pruessmann, K. P., &amp; Stephan, K. E. (2021). Whole-brain estimates of directed connectivity for human connectomics. <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">doi:10.1016/j.neuroimage.2020.117491</a></li>
+<li>Wu, H., Hu, X., &amp; Zeng, Y. (2024). A fast dynamic causal modeling regression method for fMRI. <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">doi:10.1016/j.neuroimage.2024.120954</a></li>
+<li>Jafarian, A., Assem, M. K., Kocagoncu, E., et al. (2024). Reliability of dynamic causal modelling of resting-state magnetoencephalography. <a href="https://doi.org/10.1002/hbm.26782" target="_blank">doi:10.1002/hbm.26782</a></li>
 <li>Hauser, A., &amp; B&uuml;hlmann, P. (2012). Characterization and greedy learning of interventional Markov equivalence classes of directed acyclic graphs. <a href="https://jmlr.org/papers/v13/hauser12a.html" target="_blank">JMLR</a></li>
 <li>Vink, J. J., Ramos-Nu&ntilde;ez, A. I., Bellesi, A., et al. (2020). The brain's functional connectome is a poor predictor of the brain's causal activity flow. <a href="https://doi.org/10.1371/journal.pcbi.1007866" target="_blank">doi:10.1371/journal.pcbi.1007866</a></li>
 <li>Laukkonen, R., Friston, K., &amp; Chandaria, S. (2025). A beautiful loop.</li>
