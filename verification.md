@@ -21,6 +21,7 @@ page_highlights:
   - "At L2 and above, the latent-state error budget is added on top of the Observability Budget so the still-unobserved states that stop the claim are disclosed."
   - "At L2 and above, perisynaptic ECM / PNN state is separated from synaptic weights and glia when a claim depends on adult plasticity, receptor mobility, or memory stabilization."
   - "At L2 and above, local proteostasis / synaptic-tagging state is separated from current weights and transcription when a claim depends on late-LTP capture, consolidation, or reconsolidation."
+  - "At L2 and above, ionic milieu / chloride homeostasis is separated from excitability and glial support when a claim depends on inhibitory polarity, rhythm stability, or state transitions."
   - "At L2 and above, delay is treated as timing-state rather than one scalar, so device latency, biological conduction timing, and human macro timing proxies are not collapsed into one number."
   - "At L2 and above for intervention / closed-loop results, the Intervention Card fixes trigger rule, timing audit, control / sham, safe stop, and recalibration burden."
   - "For cross-day or longitudinal claims, the Temporal Validity Card audits fixed decoder interval, state annotation, recalibration burden, and transfer ceiling independently."
@@ -36,6 +37,7 @@ known_points:
   - "A BOLD or fNIRS amplitude difference without vascular-state / CVR audit remains a hemodynamic-limited difference rather than a clean neural difference."
   - "A synapse list or weight estimate does not by itself fix perisynaptic ECM / PNN state, so plasticity and stabilization claims need a separate ceiling."
   - "A weight estimate does not fix which tagged synapses or dendritic branches capture plasticity-related proteins, so late-stabilization claims need a separate proteostasis ceiling."
+  - "A connectome, cell type, and weight estimate do not by themselves fix ionic milieu / chloride homeostasis, so inhibitory sign and state-transition claims need a separate ceiling."
   - "Passing a hardware latency audit is not the same as recovering biological timing-state; claims that depend on phase or synchrony need both sides separated."
   - "In chronic invasive recording, unit-matching uncertainty and tissue response around the implant are separate audit items."
 unknown_points:
@@ -624,7 +626,7 @@ The most important update in this pass is that the criticism that ``important hi
 </tr>
 <tr>
 <td><strong>remaining latent state</strong></td>
-<td>List the remaining variables, including weights, local proteostasis / synaptic-tagging state, perisynaptic ECM / PNN state, delay/myelin, intrinsic excitability/homeostatic set point, neuromodulation, glia/metabolic support, sleep-history, and, for hemodynamic stacks, unresolved vascular transfer state such as baseline vascular state / CVR or superficial systemic contamination. </td>
+<td>List the remaining variables, including weights, local proteostasis / synaptic-tagging state, perisynaptic ECM / PNN state, ionic milieu / chloride homeostasis, delay/myelin, intrinsic excitability/homeostatic set point, neuromodulation, glia/metabolic support, sleep-history, and, for hemodynamic stacks, unresolved vascular transfer state such as baseline vascular state / CVR or superficial systemic contamination. </td>
 <td>It is easier to roll up non-state-complete results to emulation-complete or internal state unique solutions. </td>
 </tr>
 <tr>
@@ -693,6 +695,11 @@ The <strong>Observability Budget</strong> fixes what entered the sensor and what
 <td>Late stabilization, reconsolidation, and cross-event capture do not become closed mechanisms.</td>
 </tr>
 <tr>
+<td><strong>Ionic milieu / chloride homeostasis</strong></td>
+<td>Disclose whether chloride set point, transporter state, extracellular K<sup>+</sup> / Ca<sup>2+</sup> / pH composition, or an externally calibrated ionic proxy was measured, perturbed, or left latent.</td>
+<td>Inhibitory polarity, rhythm stability, and state-transition claims stay provisional or fall back to coarse excitability proxies.</td>
+</tr>
+<tr>
 <td><strong>Timing-state / conduction support</strong></td>
 <td>Separate device latency from biological timing-state, and disclose whether timing variables were measured, externally calibrated, absorbed into a constant, or left latent.</td>
 <td>Phase, synchrony, and timing-complete reconstruction claims are demoted to hardware-fast or macro-timing proxy claims.</td>
@@ -752,6 +759,11 @@ Cross-day and remote-memory claims fail for a different reason than same-session
 <td>Hardware-fast remains hardware-fast; it does not become timing-complete maintenance evidence.</td>
 </tr>
 <tr>
+<td><strong>Ionic / chloride state</strong></td>
+<td>Report whether chloride-related or ionic-state variables were directly measured, causally perturbed, approximated by sodium / macro ionic proxy, or left latent.</td>
+<td>Cross-day or recovery success is not promoted to inhibitory-polarity-consistent or state-transition-consistent maintenance evidence.</td>
+</tr>
+<tr>
 <td><strong>Bioenergetic support</strong></td>
 <td>Disclose whether 31P-MRS, dynamic DMI, fatigue / repeated-burst logs, or other energetic proxies were available, and what local mitochondrial variables remained latent.</td>
 <td>Repeated-stimulation reliability and energetic mechanisms of dendritic plasticity remain provisional.</td>
@@ -782,7 +794,7 @@ On this site, <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#hu
 <div class="note-box">
 <strong>Minimum operating rules</strong>
 <p>
-If this budget is missing, this site allows at most <strong>same-session fit</strong>, <strong>cross-day performance with unresolved maintenance route</strong>, or <strong>support-proxy-aligned evidence</strong>. It does not promote the result to <strong>maintenance-consistent</strong>, <strong>reconsolidation-consistent</strong>, or <strong>remote-memory-relevant</strong>. In particular, if <strong>sleep / wake history</strong>, <strong>timing support</strong>, <strong>bioenergetic or glial support</strong>, and <strong>clearance / immune proxy class</strong> are all absent, this site stops the reader from rephrasing a temporal hold as long-horizon maintenance evidence.
+If this budget is missing, this site allows at most <strong>same-session fit</strong>, <strong>cross-day performance with unresolved maintenance route</strong>, or <strong>support-proxy-aligned evidence</strong>. It does not promote the result to <strong>maintenance-consistent</strong>, <strong>reconsolidation-consistent</strong>, or <strong>remote-memory-relevant</strong>. In particular, if <strong>sleep / wake history</strong>, <strong>timing support</strong>, <strong>ionic / chloride state</strong>, <strong>bioenergetic or glial support</strong>, and <strong>clearance / immune proxy class</strong> are all absent, this site stops the reader from rephrasing a temporal hold as long-horizon maintenance evidence.
 </p>
 </div>
 </section>
@@ -878,7 +890,7 @@ The Observability Budget fixes <strong>what was directly observed</strong>. The 
 <section class="section" id="state-completeness-gate">
 <h2 class="section-title">State variable integrity gate</h2>
 <p>
-In our March 2026 primary-literature audit, we reconfirmed that there are at least nine loose state classes between <strong>“having a wiring diagram”</strong> and <strong>“being able to behave generatively”</strong>. In addition to cell types, synapses, delays, neuromodulation, and glia, we now also treat <strong>activity-dependent transcription / chromatin state</strong>, <strong>intrinsic excitability / homeostatic set points</strong>, <strong>local proteostasis / synaptic-tagging state</strong>, and <strong>perisynaptic ECM / PNN state</strong> as independent classes. Therefore, on this site, we do not accept <strong>edge-list submissions alone</strong> as a condition for passing L2 or above.
+In our March 2026 primary-literature audit, we reconfirmed that there are at least ten loose state classes between <strong>“having a wiring diagram”</strong> and <strong>“being able to behave generatively”</strong>. In addition to cell types, synapses, delays, neuromodulation, and glia, we now also treat <strong>activity-dependent transcription / chromatin state</strong>, <strong>intrinsic excitability / homeostatic set points</strong>, <strong>local proteostasis / synaptic-tagging state</strong>, <strong>perisynaptic ECM / PNN state</strong>, and <strong>ionic milieu / chloride homeostasis</strong> as independent classes. Therefore, on this site, we do not accept <strong>edge-list submissions alone</strong> as a condition for passing L2 or above.
 </p>
 <table class="data-table">
 <thead>
@@ -918,6 +930,11 @@ In our March 2026 primary-literature audit, we reconfirmed that there are at lea
 <td><strong>Perisynaptic ECM / PNN state</strong></td>
 <td>Even with the same synapse graph, extracellular matrix organization can change receptor mobility, inhibitory plasticity, memory-update resistance, and the opening or closing of adult plasticity windows. </td>
 <td>Stop treating adult plasticity, reconsolidation resistance, or inhibitory stabilization as closed, and keep ECM / PNN state explicit as latent or externally calibrated. </td>
+</tr>
+<tr>
+<td><strong>Ionic milieu / chloride homeostasis</strong></td>
+<td>Even with the same graph, cell type, and nominal weights, local chloride set point, transporter state, and extracellular ion composition can still change inhibitory sign, network gain, rhythm stability, and state transitions. </td>
+<td>Stop treating inhibition sign, rhythm stability, or state transitions as fixed, and keep ionic / chloride state explicit as latent, perturbed, externally calibrated, or only coarsely proxied. </td>
 </tr>
 <tr>
 <td><strong>Delay / timing-state</strong></td>
@@ -967,6 +984,12 @@ Hardware latency audit and biological timing-state audit solve different problem
 </p>
 </div>
 <div class="note-box">
+<strong>2026-03-18 addendum: ionic milieu is not background chemistry</strong>
+<p>
+<a href="https://doi.org/10.1126/science.1245423" target="_blank">Glykys et al. (2014)</a> showed that local impermeant anions help establish neuronal chloride concentration, <a href="https://doi.org/10.1038/s41467-017-01749-0" target="_blank">Heubl et al. (2017)</a> showed that GABA<sub>A</sub>-receptor-mediated inhibition rapidly tunes KCC2 activity via the Cl-sensitive WNK1 kinase, <a href="https://doi.org/10.1126/science.aad4821" target="_blank">Ding et al. (2016)</a> showed that changing interstitial K<sup>+</sup>, Ca<sup>2+</sup>, Mg<sup>2+</sup>, and H<sup>+</sup> is sufficient to shift cortical activity and sleep/wake state, <a href="https://doi.org/10.1523/JNEUROSCI.2761-07.2007" target="_blank">Huberfeld et al. (2007)</a> showed perturbed chloride homeostasis with depolarizing GABAergic signaling in human temporal-lobe epilepsy, and <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a> showed that present human in vivo routes are still coarse sodium proxies. Therefore, when a claim depends on inhibitory sign, rhythm stability, or state transitions, this site asks authors to disclose whether ionic / chloride state was measured, perturbed, externally calibrated, or left latent.
+</p>
+</div>
+<div class="note-box">
 <strong>2026-03 Addendum: Use augmentation / ablation instead of enumeration</strong>
 <p>
 The weakness found in this re-audit was that by simply listing the state variables as ``missing,'' it was difficult to convey to the reader what could be added to make the claim even stronger. Therefore, on this site, we will compare the <strong>connectome-only baseline</strong> and the <strong>model with additional variables</strong> under the same held-out conditions, and request submissions that show which augmentation reduced which error term.
@@ -1011,6 +1034,12 @@ The weakness found in this re-audit was that by simply listing the state variabl
 <td>Compare a synapse- or connectome-based baseline against the same model with matrix markers, local matrix perturbation, or externally calibrated ECM state under the same held-out plasticity or recovery conditions, and disclose gains in plasticity / reversal / stabilization separately. </td>
 <td>You can state more narrowly how much plasticity-gate control, inhibitory stabilization, or memory-update resistance improves once ECM / PNN state is treated explicitly. </td>
 <td>Histology, pathology, or generic scaffold annotation alone remain structural context and do not become a ground truth of current ECM / PNN state in vivo. </td>
+</tr>
+<tr>
+<td><strong>+ ionic milieu / chloride-homeostasis audit</strong></td>
+<td>Compare a synapse- or excitability-aware baseline against the same model with chloride-state measurements, ionic manipulation, transporter-state perturbation, or externally calibrated ionic proxy under the same held-out memory, rhythm, or state-transition condition, and disclose gains separately. </td>
+<td>You can state more narrowly how much inhibitory polarity, rhythm stability, or state-transition prediction improves once ionic / chloride state is treated explicitly. </td>
+<td>Human sodium MRI or pathology alone remains a macro or disease-linked proxy and does not become ground truth of current local chloride homeostasis in vivo. </td>
 </tr>
 <tr>
 <td><strong>+ timing-state / conduction audit</strong></td>
@@ -1321,6 +1350,11 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Gogolla, N., Caroni, P., Lüthi, A., &amp; Herry, C. (2009). Perineuronal nets protect fear memories from erasure. <a href="https://doi.org/10.1126/science.1174146" target="_blank">doi:10.1126/science.1174146</a></li>
 <li>Jabłońska, K., Kaczor, K., Kółeczko, M., et al. (2024). Extracellular matrix integrity regulates GABAergic plasticity in the hippocampus. <a href="https://doi.org/10.1016/j.matbio.2024.11.001" target="_blank">doi:10.1016/j.matbio.2024.11.001</a></li>
 <li>Boonen, M., Hellings, N., Hoedemaekers, T., et al. (2022). Reorganization of the brain extracellular matrix in hippocampal sclerosis. <a href="https://doi.org/10.3390/ijms23158197" target="_blank">doi:10.3390/ijms23158197</a></li>
+<li>Glykys, J., Dzhala, V., Egawa, K., Balena, T., Saponjian, Y., Kuchibhotla, K. V., Bacskai, B. J., Kahle, K. T., Zeuthen, T., &amp; Staley, K. J. (2014). Local impermeant anions establish the neuronal chloride concentration. <a href="https://doi.org/10.1126/science.1245423" target="_blank">doi:10.1126/science.1245423</a></li>
+<li>Heubl, M., Zhang, J., Pressey, J. C., Al Awabdh, S., Renner, M., Gomez-Castro, F., Moutkine, I., Eugène, E., Russeau, M., Kahle, K. T., Poncer, J.-C., &amp; Lévi, S. (2017). GABAA receptor dependent synaptic inhibition rapidly tunes KCC2 activity via the Cl-sensitive WNK1 kinase. <a href="https://doi.org/10.1038/s41467-017-01749-0" target="_blank">doi:10.1038/s41467-017-01749-0</a></li>
+<li>Ding, F., O'Donnell, J., Xu, Q., Kang, N., Goldman, N., &amp; Nedergaard, M. (2016). Changes in the composition of brain interstitial ions control the sleep-wake cycle. <a href="https://doi.org/10.1126/science.aad4821" target="_blank">doi:10.1126/science.aad4821</a></li>
+<li>Huberfeld, G., Wittner, L., Clemenceau, S., Baulac, M., Kaila, K., Miles, R., &amp; Rivera, C. (2007). Perturbed chloride homeostasis and GABAergic signaling in human temporal lobe epilepsy. <a href="https://doi.org/10.1523/JNEUROSCI.2761-07.2007" target="_blank">doi:10.1523/JNEUROSCI.2761-07.2007</a></li>
+<li>Qian, Y., Zhao, T., Zheng, H., Weimer, J., &amp; Boada, F. E. (2012). High-resolution sodium imaging of human brain at 7 T. <a href="https://doi.org/10.1002/mrm.23225" target="_blank">doi:10.1002/mrm.23225</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Vadisiute, A., Meijer, E., Therpurakal, R. N., et al. (2024). Glial cells undergo rapid changes following acute chemogenetic manipulation of cortical layer 5 projection neurons. <a href="https://doi.org/10.1038/s42003-024-06994-w" target="_blank">doi:10.1038/s42003-024-06994-w</a></li>

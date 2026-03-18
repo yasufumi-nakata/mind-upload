@@ -3,9 +3,9 @@ layout: default
 title: 'Wiki: Why wiring diagrams alone are not enough'
 description: We will summarize the reasons why storing only the connectome in WBE
   is insufficient, including the lack of state variables such as activity-dependent
-  transcription / chromatin state, local proteostasis / synaptic tagging, and perisynaptic
-  extracellular matrix, as well as the limitations of connectome-constrained estimation,
-  based on primary literature.
+  transcription / chromatin state, local proteostasis / synaptic tagging, perisynaptic
+  extracellular matrix, and ionic milieu / chloride homeostasis, as well as the limitations
+  of connectome-constrained estimation, based on primary literature.
 article_type: Wiki
 subtitle: connectome-complete is not emulation-complete
 author: Mind Uploading Research Project
@@ -24,7 +24,7 @@ accuracy_note: What I'm showing here is an arrangement of ``at least removing th
   are included'', and does not mean that the final sufficient condition has been determined.
 page_highlights:
 - We will organize the points that cannot be solved by wiring diagrams alone into
-  9 state classes and 1 presumed wall.
+  10 state classes and 1 presumed wall.
 - Use only primary literature to separate missing state variables from parameter degeneracy.
 - We will also fix operational rules for how to read connectome-complete and connectome-constrained
   model on this site.
@@ -32,14 +32,15 @@ page_highlights:
   be added from connectome-only to read the predictive gain.
 - "Timing-state is treated as more than a single delay constant: node/internode geometry,
   periaxonal structure, astrocyte control, and human macro timing proxies are read separately."
+- "Ionic milieu / chloride homeostasis is treated as another missing layer, because inhibition sign and sleep/wake state can still shift with local chloride set point and interstitial ion composition even on the same graph."
 known_points:
 - Great progress has been made in creating a whole-brain connectome, but this alone
   does not mean that dynamic reproduction is complete.
 - Synaptic efficiency, activity-dependent transcription / chromatin state, latency,
-  neuromodification, glia, cell type labels, intrinsic excitability/homeostasis
-  set points, and local proteostasis / synaptic-tagging state are pieces of information
-  that are likely to fall off a static edge list, and perisynaptic ECM / PNN state
-  is another.
+  ionic milieu / chloride homeostasis, neuromodification, glia, cell type labels,
+  intrinsic excitability/homeostasis set points, and local proteostasis / synaptic-tagging
+  state are pieces of information that are likely to fall off a static edge list,
+  and perisynaptic ECM / PNN state is another.
 - Confusing coarse physiological proxies with ground truths makes it easy to overstate
   claims about internal states.
 - Even in a connectome-constrained model, dynamics can degenerate if unmeasured cell/synapse/modification
@@ -90,7 +91,7 @@ recommended_pages:
 <div class="abstract-box">
 <h2>Conclusion</h2>
 <p>
-Although wiring diagrams are an important foundation for WBE,<strong>alone are not the minimum requirement for dynamic reproduction</strong>. Even within the same adjacency relationship, differences in cell type labeling, activity-dependent transcription / chromatin program, intrinsic excitability, synaptic efficiency, local proteostasis / synaptic-tagging route, perisynaptic ECM / PNN organization, conduction delay, neuronal modification, and glial connectivity state can significantly alter learning, phase synchronization, arousal-dependent responses, and long-term stability. Furthermore, connectome-constrained modeling research in 2024-2025 showed that even with the inclusion of wiring constraints, degeneracy in dynamics remains due to unmeasured parameters and omitted mechanisms. Therefore, this site treats<strong>connectome-complete as a structural atlas/scaffold achievement</strong> and not as<strong>emulation-complete</strong>. Similarly, the fact that a<strong>connectome-constrained model reproduced some activities</strong> cannot be read as state-complete reconstruction.
+Although wiring diagrams are an important foundation for WBE,<strong>alone are not the minimum requirement for dynamic reproduction</strong>. Even within the same adjacency relationship, differences in cell type labeling, activity-dependent transcription / chromatin program, intrinsic excitability, synaptic efficiency, local proteostasis / synaptic-tagging route, perisynaptic ECM / PNN organization, ionic milieu / chloride homeostasis, conduction delay, neuronal modification, and glial connectivity state can significantly alter learning, phase synchronization, arousal-dependent responses, inhibitory sign, and long-term stability. Furthermore, connectome-constrained modeling research in 2024-2025 showed that even with the inclusion of wiring constraints, degeneracy in dynamics remains due to unmeasured parameters and omitted mechanisms. Therefore, this site treats<strong>connectome-complete as a structural atlas/scaffold achievement</strong> and not as<strong>emulation-complete</strong>. Similarly, the fact that a<strong>connectome-constrained model reproduced some activities</strong> cannot be read as state-complete reconstruction.
 </p>
 </div>
 
@@ -102,7 +103,7 @@ I am not going to deal with philosophy or legal systems here. From only the aspe
 </div>
 
 <section class="section" id="bottom-line">
-<h2 class="section-title">9 state classes and 1 putative wall to fix first</h2>
+<h2 class="section-title">10 state classes and 1 putative wall to fix first</h2>
 <table class="data-table">
 <thead>
 <tr>
@@ -150,6 +151,12 @@ I am not going to deal with philosophy or legal systems here. From only the aspe
 <td>Unless ECM / PNN state is measured, perturbed, or externally calibrated, keep adult plasticity and stabilization claims as latent state. </td>
 </tr>
 <tr>
+<td><strong>Ionic milieu / chloride homeostasis</strong></td>
+<td>Even with the same graph, cell type, and nominal synaptic weights, local chloride set point, transporter state, and extracellular K<sup>+</sup> / Ca<sup>2+</sup> / pH composition can still change inhibitory sign, network gain, and state transitions.</td>
+<td>If the graph and synapses are the same, the sign of inhibition and the local brain-state regime are also basically fixed.</td>
+<td>Demote inhibitory-polarity, rhythm-stability, and state-transition claims unless ionic / chloride state is measured, perturbed, externally calibrated, or explicitly left latent.</td>
+</tr>
+<tr>
 <td><strong>Delay / timing-state</strong></td>
 <td>Even with the same graph, differences in myelin thickness, node/internode geometry, or periaxonal structure can change conduction speed and spike-arrival timing. </td>
 <td>If the graph is the same, timing can be absorbed into a single constant. </td>
@@ -178,7 +185,7 @@ I am not going to deal with philosophy or legal systems here. From only the aspe
 <div class="note-box">
 <strong>Missing variables added this time</strong>
 <p>
-The March 2026 re-audits first split <strong>intrinsic excitability / homeostasis set point</strong> from cell-type labels and <strong>perisynaptic ECM / PNN state</strong> from synaptic state. This pass adds not only <strong>activity-dependent transcription / chromatin state</strong> but also <strong>local proteostasis / synaptic-tagging state</strong> as independent classes. The reason is that even if we have cell-type labels, synapse counts, connectomes, and a weight estimate, allocation eligibility, late memory-stabilization programs, and branch-local capture routes still vary. A more detailed arrangement of these maintenance-side variables is collected in <a href="homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.
+The March 2026 re-audits first split <strong>intrinsic excitability / homeostasis set point</strong> from cell-type labels and <strong>perisynaptic ECM / PNN state</strong> from synaptic state. This pass adds not only <strong>activity-dependent transcription / chromatin state</strong>, <strong>local proteostasis / synaptic-tagging state</strong>, but also <strong>ionic milieu / chloride homeostasis</strong> as independent classes. The reason is that even if we have cell-type labels, synapse counts, connectomes, and a weight estimate, allocation eligibility, late memory-stabilization programs, branch-local capture routes, and even inhibitory sign can still vary. A more detailed arrangement of these maintenance-side variables is collected in <a href="homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.
 </p>
 </div>
 </section>
@@ -191,7 +198,7 @@ Dorkenwald et al. showed a wiring diagram of the adult Drosophila whole brain an
 <div class="note-box">
 <strong>Replace here</strong>
 <p>
-connectome-complete is important in the sense that we have a pretty good idea of what is connected. However, this alone does not fix ``with what strength,'' ``with what delay,'' ``in which neuromodulatory context,'' and ``under which glial coupling.'' Furthermore, even in Lappalainen et al.'s reductionist model, the authors themselves exclude electrical synapses, nonlinear chemical synapses, and neuromodulation. Therefore, this site treats connectome-complete as an achievement of <strong>structural atlas / scaffold</strong> and does not automatically promote it to L2/L3 emulation claim. <strong>Activity prediction by connectome-constrained</strong> can also be read as a hypothesis engine and a conditional model.
+connectome-complete is important in the sense that we have a pretty good idea of what is connected. However, this alone does not fix ``with what strength,'' ``with what delay,'' ``under what ionic regime,'' ``in which neuromodulatory context,'' and ``under which glial coupling.'' Furthermore, even in Lappalainen et al.'s reductionist model, the authors themselves exclude electrical synapses, nonlinear chemical synapses, and neuromodulation. Therefore, this site treats connectome-complete as an achievement of <strong>structural atlas / scaffold</strong> and does not automatically promote it to L2/L3 emulation claim. <strong>Activity prediction by connectome-constrained</strong> can also be read as a hypothesis engine and a conditional model.
 </p>
 </div>
 </section>
@@ -210,7 +217,7 @@ Even if there is only a wiring diagram, the only solution for the internal state
 </section>
 
 <section class="section" id="state-classes">
-<h2 class="section-title">Why are these 9 classes easy to skip</h2>
+<h2 class="section-title">Why are these 10 classes easy to skip</h2>
 
 <h3>1. Cell type labels are not decorations for node IDs</h3>
 <p>
@@ -255,7 +262,18 @@ Human evidence is moving, but it is still not an in vivo whole-brain ground trut
 </p>
 </div>
 
-<h3>6. Delay and myelin are part of timing</h3>
+<h3>6. Ionic milieu / chloride homeostasis is not background chemistry</h3>
+<p>
+The current site had become good at separating <strong>intrinsic excitability</strong>, <strong>ECM / PNN</strong>, <strong>timing-state</strong>, and <strong>glia</strong>, while still leaving <strong>chloride set point and interstitial ion composition</strong> too implicit. That was too weak. <a href="https://doi.org/10.1126/science.1245423" target="_blank">Glykys et al. (2014)</a> showed that local impermeant anions help establish neuronal chloride concentration, <a href="https://doi.org/10.1038/s41467-017-01749-0" target="_blank">Heubl et al. (2017)</a> showed that GABA<sub>A</sub>-receptor-mediated synaptic inhibition rapidly tunes KCC2 activity via the Cl-sensitive WNK1 kinase, <a href="https://doi.org/10.1126/science.aad4821" target="_blank">Ding et al. (2016)</a> showed that changing interstitial K<sup>+</sup>, Ca<sup>2+</sup>, Mg<sup>2+</sup>, and H<sup>+</sup> is sufficient to shift cortical activity and sleep/wake state, and <a href="https://doi.org/10.1523/JNEUROSCI.2761-07.2007" target="_blank">Huberfeld et al. (2007)</a> showed perturbed chloride homeostasis with depolarizing GABAergic signaling in human temporal-lobe epilepsy. More recently, <a href="https://doi.org/10.1038/s41386-022-01480-5" target="_blank">Simonnet et al. (2023)</a> linked KCC2 silencing to impaired hippocampal memory and altered rhythmogenesis, and <a href="https://doi.org/10.1007/s12576-018-00654-5" target="_blank">Nakamura et al. (2019)</a> showed that KCC2 overexpression enhances dendritic-spine plasticity and motor learning. In other words, the missing variable is not only <strong>how excitable a neuron is in general</strong>, but also <strong>what sign and gain inhibition has on that local circuit right now</strong>.
+</p>
+<div class="note-box">
+<strong>Human observability ceiling for ionic state</strong>
+<p>
+Human ionic evidence is still a coarse observability class. <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a> demonstrated high-resolution sodium imaging of healthy human brain at 7 T, which is useful evidence that some ionic layer is becoming visible in vivo. But this remains a mm-class tissue sodium map, not a direct readout of <strong>cell-specific chloride concentration</strong>, <strong>KCC2 / NKCC1 balance</strong>, <strong>extracellular K<sup>+</sup> or Ca<sup>2+</sup> microdomains</strong>, or <strong>local E<sub>GABA</sub></strong>. On this site, human sodium imaging is therefore treated as a <strong>macro ionic proxy</strong>, not as ground truth of current chloride homeostasis.
+</p>
+</div>
+
+<h3>7. Delay and myelin are part of timing</h3>
 <p>
 <a href="https://doi.org/10.1126/science.1252304" target="_blank">Gibson et al. (2014)</a> showed that neuronal activity promotes oligodendrogenesis and adaptive myelination, and <a href="https://doi.org/10.1126/science.1254960" target="_blank">McKenzie et al. (2014)</a> showed that active central myelination is required for motor-skill learning. But the weakness of the earlier page was that it still allowed the reader to compress this into the slogan "more myelin, faster signal." Primary literature now supports a stronger statement: <a href="https://doi.org/10.1038/ncomms9073" target="_blank">Seidl et al. (2015)</a> showed that node and internode geometry is tuned along auditory axons to adjust action-potential timing, <a href="https://doi.org/10.1073/pnas.1811013115" target="_blank">Dutta et al. (2018)</a> showed that perinodal astrocytes can reversibly alter nodal gap length and myelin structure to change conduction velocity and spike arrival, and <a href="https://doi.org/10.1016/j.cell.2019.11.039" target="_blank">Cohen et al. (2020)</a> showed that saltatory conduction depends on a conductive periaxonal nanocircuit rather than on a single scalar delay term.
 </p>
@@ -269,12 +287,12 @@ This matters for WBE because timing-sensitive circuits do not only depend on "wh
 </p>
 </div>
 
-<h3>7. Neuromodulation is not “one mood scalar”</h3>
+<h3>8. Neuromodulation is not “one mood scalar”</h3>
 <p>
 Reimer et al. showed that pupil fluctuations track both adrenergic and cholinergic activity within the cortex. Conversely, this also means that<strong>pupil diameter does not uniquely represent one transmitter state or the other</strong>. Additionally, Neyhart et al. showed that while cortical ACh is highly predictable from cholinergic axon activity and behavioral state, it also has locality that depends on distance from neighboring axons and clearance kinetics. Therefore, although it is useful to use pupil diameter or HRV in humans, it is an overstatement to consider it as the ground truth of transmitter-specific and region-specific internal states. What is necessary is not only to say whether it is a good proxy or not, but also to specify what it is and what it is not.
 </p>
 
-<h3>8. Glia is not an afterthought auxiliary variable</h3>
+<h3>9. Glia is not an afterthought auxiliary variable</h3>
 <p>
 Adamsky et al. showed that astrocytic activation can produce de novo neuronal potentiation and memory enhancement. Cahill et al. reported that local, instantaneous neurotransmitter inputs are encoded into responses of a broad astrocyte network over minutes. Therefore, a model that ignores glia should be treated as a model that partially lacks plasticity and slow network state. What is important here is not to generalize that glia are also involved, but to clarify in the model specifications <strong>Which time constants and which state variables were discarded</strong>.
 </p>
@@ -283,7 +301,7 @@ Adamsky et al. showed that astrocytic activation can produce de novo neuronal po
 <section class="section" id="augmentation-ablation">
 <h2 class="section-title">Don't end with enumeration, compare with augmentation / ablation</h2>
 <p>
-The weakness of the current site was that even if it was possible to enumerate the missing state variables, it did not bring to the fore what additional information and which error terms could be reduced to advance to a stronger claim. Primary literature from 2024-2026 shows that when you add same-brain function, transcriptomic label, activity-dependent transcription / chromatin audit, ECM / PNN state, local transmitter dynamics, glial slow state, and recovery log from the connectome-only baseline, the improvement is different. Therefore, on this site, instead of counting state variables as "present/absent," we will compare held-out predictive gain using augmentation/ablation.
+The weakness of the current site was that even if it was possible to enumerate the missing state variables, it did not bring to the fore what additional information and which error terms could be reduced to advance to a stronger claim. Primary literature from 2024-2026 shows that when you add same-brain function, transcriptomic label, activity-dependent transcription / chromatin audit, ECM / PNN state, ionic milieu / chloride-homeostasis audit, local transmitter dynamics, glial slow state, and recovery log from the connectome-only baseline, the improvement is different. Therefore, on this site, instead of counting state variables as "present/absent," we will compare held-out predictive gain using augmentation/ablation.
 </p>
 <table class="data-table">
 <thead>
@@ -332,6 +350,12 @@ The weakness of the current site was that even if it was possible to enumerate t
 <td>Histology, pathology, or generic scaffold annotation alone do not become a ground truth of current ECM / PNN state in vivo. </td>
 </tr>
 <tr>
+<td><strong>+ ionic milieu / chloride-homeostasis audit</strong></td>
+<td>Compare a synapse- or excitability-aware baseline against the same model with chloride-state measurements, ionic manipulations, transporter-state perturbation, or externally calibrated ionic proxy under the same held-out memory, rhythm, or state-transition conditions. </td>
+<td>Glykys, Heubl, Ding, Huberfeld, Simonnet, and Nakamura together support that inhibitory sign, rhythm stability, state transitions, and some learning-relevant plasticity can be read more narrowly once chloride / ionic state is treated explicitly. </td>
+<td>Human sodium MRI or pathology alone remains a macro or disease-linked proxy and does not become ground truth of local chloride homeostasis in vivo. </td>
+</tr>
+<tr>
 <td><strong>+ timing-state / conduction audit</strong></td>
 <td>Compare a fixed-delay baseline against a model or analysis that adds measured or externally calibrated timing variables under the same held-out conditions. </td>
 <td>Seidl, Dutta, Cohen, Micheva, and Dubey together support that timing-sensitive prediction can improve when node/internode structure, periaxonal coupling, or myelination-linked local speed are treated explicitly. </td>
@@ -377,6 +401,7 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li><strong>intrinsic excitability / homeostatic set point:</strong>Do not automatically infer from cell-type label or short-term activity matching. If not measured, write latent state. </li>
 <li><strong>local proteostasis / synaptic tagging:</strong>Do not auto-complete late stabilization from current weight alone. If not measured, write latent state. </li>
 <li><strong>ECM / PNN state:</strong>Do not collapse plasticity gate, receptor mobility, or memory-stabilization resistance into synapse count or glial support. If not measured, write latent state. </li>
+<li><strong>ionic milieu / chloride homeostasis:</strong>Do not collapse inhibitory sign or state-transition regime into cell type, weight snapshot, or generic excitability. If not measured, write latent state. </li>
 <li><strong>Delay is not one scalar:</strong>If timing matters, separate device latency, biological timing-state, and phase error; if the biological side is not measured, write timing-state as latent. </li>
 <li><strong>pupil / HRV:</strong> A useful state covariate for human data, but not a transmitter-specific ground truth. </li>
 <li><strong>When state variable is missing:</strong>If estimated, specify the error and abstention condition; if not, specify absent. </li>
@@ -403,11 +428,11 @@ An added state variable can be described as ``effective'' if it shows a predicti
 </tr>
 <tr>
 <td><strong>Conditional dynamical claim</strong></td>
-<td>Include same-brain function or perturbation, list of missing state variables, proxy limits, family/uncertainty, and absence of intrinsic excitability/homeostatic set point if not measured. </td>
+<td>Include same-brain function or perturbation, list of missing state variables, proxy limits, family/uncertainty, and absence of intrinsic excitability/homeostatic set point plus ionic / chloride state if not measured. </td>
 </tr>
 <tr>
 <td><strong>Intervention/Closed Loop claim</strong></td>
-<td>In addition to the above, we will also publish calibration routes for weights / timing-state / neuromodulation / excitability-homeostasis, external validation, and abstention / stop conditions. </td>
+<td>In addition to the above, we will also publish calibration routes for weights / timing-state / neuromodulation / excitability-homeostasis / ionic milieu, external validation, and abstention / stop conditions. </td>
 </tr>
 </tbody>
 </table>
@@ -439,6 +464,12 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li>Gogolla, N., Caroni, P., Lüthi, A., &amp; Herry, C. (2009). Perineuronal nets protect fear memories from erasure. <em>Science</em>, 325(5945), 1258–1261. <a href="https://doi.org/10.1126/science.1174146" target="_blank">doi:10.1126/science.1174146</a></li>
 <li>Jabłońska, K., Kaczor, K., Kółeczko, M., et al. (2024). Extracellular matrix integrity regulates GABAergic plasticity in the hippocampus. <em>Matrix Biology</em>, 136, 74–96. <a href="https://doi.org/10.1016/j.matbio.2024.11.001" target="_blank">doi:10.1016/j.matbio.2024.11.001</a></li>
 <li>Boonen, M., Hellings, N., Hoedemaekers, T., et al. (2022). Reorganization of the brain extracellular matrix in hippocampal sclerosis. <em>International Journal of Molecular Sciences</em>, 23(15), 8197. <a href="https://doi.org/10.3390/ijms23158197" target="_blank">doi:10.3390/ijms23158197</a></li>
+<li>Glykys, J., Dzhala, V., Egawa, K., Balena, T., Saponjian, Y., Kuchibhotla, K. V., Bacskai, B. J., Kahle, K. T., Zeuthen, T., &amp; Staley, K. J. (2014). Local impermeant anions establish the neuronal chloride concentration. <em>Science</em>, 343(6171), 670–675. <a href="https://doi.org/10.1126/science.1245423" target="_blank">doi:10.1126/science.1245423</a></li>
+<li>Heubl, M., Zhang, J., Pressey, J. C., Al Awabdh, S., Renner, M., Gomez-Castro, F., Moutkine, I., Eugène, E., Russeau, M., Kahle, K. T., Poncer, J.-C., &amp; Lévi, S. (2017). GABAA receptor dependent synaptic inhibition rapidly tunes KCC2 activity via the Cl-sensitive WNK1 kinase. <em>Nature Communications</em>, 8, 1776. <a href="https://doi.org/10.1038/s41467-017-01749-0" target="_blank">doi:10.1038/s41467-017-01749-0</a></li>
+<li>Ding, F., O'Donnell, J., Xu, Q., Kang, N., Goldman, N., &amp; Nedergaard, M. (2016). Changes in the composition of brain interstitial ions control the sleep-wake cycle. <em>Science</em>, 352(6285), 550–555. <a href="https://doi.org/10.1126/science.aad4821" target="_blank">doi:10.1126/science.aad4821</a></li>
+<li>Huberfeld, G., Wittner, L., Clemenceau, S., Baulac, M., Kaila, K., Miles, R., &amp; Rivera, C. (2007). Perturbed chloride homeostasis and GABAergic signaling in human temporal lobe epilepsy. <em>Journal of Neuroscience</em>, 27(37), 9866–9873. <a href="https://doi.org/10.1523/JNEUROSCI.2761-07.2007" target="_blank">doi:10.1523/JNEUROSCI.2761-07.2007</a></li>
+<li>Simonnet, C., Sinha, M., Goutierre, M., Moutkine, I., Daumas, S., &amp; Poncer, J.-C. (2023). Silencing KCC2 in mouse dorsal hippocampus compromises spatial and contextual memory. <em>Neuropsychopharmacology</em>, 48(7), 1067–1077. <a href="https://doi.org/10.1038/s41386-022-01480-5" target="_blank">doi:10.1038/s41386-022-01480-5</a></li>
+<li>Nakamura, K., Moorhouse, A. J., Cheung, D. L., Eto, K., Takeda, I., Rozenbroek, P. W., Inada, H., Housley, G. D., Wake, H., &amp; Nabekura, J. (2019). Overexpression of neuronal K+–Cl− co-transporter enhances dendritic spine plasticity and motor learning. <em>The Journal of Physiological Sciences</em>, 69, 453–463. <a href="https://doi.org/10.1007/s12576-018-00654-5" target="_blank">doi:10.1007/s12576-018-00654-5</a></li>
 <li>Gibson, E. M., et al. (2014). Neuronal activity promotes oligodendrogenesis and adaptive myelination in the mammalian brain. <em>Science</em>, 344(6183), 1252304. <a href="https://doi.org/10.1126/science.1252304" target="_blank">doi:10.1126/science.1252304</a></li>
 <li>McKenzie, I. A., et al. (2014). Motor skill learning requires active central myelination. <em>Science</em>, 346(6207), 318–322. <a href="https://doi.org/10.1126/science.1254960" target="_blank">doi:10.1126/science.1254960</a></li>
 <li>Seidl, A. H., Rubel, E. W., &amp; Barría, A. (2015). Tuning of Ranvier node and internode properties in myelinated axons to adjust action potential timing. <em>Nature Communications</em>, 6, 8073. <a href="https://doi.org/10.1038/ncomms9073" target="_blank">doi:10.1038/ncomms9073</a></li>
@@ -447,6 +478,7 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li>Micheva, K. D., Kiraly, M., Perez, M. M., & Madison, D. V. (2021). Conduction Velocity Along the Local Axons of Parvalbumin Interneurons Correlates With the Degree of Axonal Myelination. <em>Cerebral Cortex</em>, 31(7), 3374–3392. <a href="https://doi.org/10.1093/cercor/bhab018" target="_blank">doi:10.1093/cercor/bhab018</a></li>
 <li>Dubey, S., Kuschmitz, S., Mezey, S. E., et al. (2022). Myelination synchronizes cortical oscillations by consolidating parvalbumin-mediated phasic inhibition. <em>eLife</em>, 11, e73827. <a href="https://doi.org/10.7554/eLife.73827" target="_blank">doi:10.7554/eLife.73827</a></li>
 <li>van Blooijs, D., de Haan, A. M., Renaud, S., et al. (2023). Developmental trajectory of transmission speed in the human brain. <em>Nature Neuroscience</em>, 26, 828–838. <a href="https://doi.org/10.1038/s41593-023-01272-0" target="_blank">doi:10.1038/s41593-023-01272-0</a></li>
+<li>Qian, Y., Zhao, T., Zheng, H., Weimer, J., &amp; Boada, F. E. (2012). High-resolution sodium imaging of human brain at 7 T. <em>Magnetic Resonance in Medicine</em>, 68(1), 227–233. <a href="https://doi.org/10.1002/mrm.23225" target="_blank">doi:10.1002/mrm.23225</a></li>
 <li>Reimer, J., et al. (2016). Pupil fluctuations track rapid changes in adrenergic and cholinergic activity in cortex. <em>Nature Communications</em>, 7, 13289. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">doi:10.1038/ncomms13289</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <em>Cell Reports</em>, 43(10), 114808. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
 <li>Adamsky, A., et al. (2018). Astrocytic activation generates de novo neuronal potentiation and memory enhancement. <em>Nature Neuroscience</em>, 21, 1725–1733. <a href="https://doi.org/10.1038/s41593-018-0253-6" target="_blank">doi:10.1038/s41593-018-0253-6</a></li>
