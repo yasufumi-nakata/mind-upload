@@ -18,6 +18,7 @@ page_highlights:
   - "This page explains why collecting data alone is not the same as making progress."
   - "For brain-to-text and speech decode, the Neural Contribution Card fixes task constraint, language prior, candidate set, no-brain / no-LM / shuffle baselines, and subject cooperation."
   - "For multimodal or atlas-prior results, the Fusion Card is added on top of the Observability Budget so acquisition relation, synchronization, fusion model, vascular-state / CVR limits for hemodynamic stacks, and external validation are fixed explicitly."
+  - "For ESI claims, simulation / phantom, stimulation ground truth, simultaneous invasive recording, and postsurgical outcome are separate validation classes; 'externally validated' alone is insufficient."
   - "At L2 and above, the latent-state error budget is added on top of the Observability Budget so the still-unobserved states that stop the claim are disclosed."
   - "At L2 and above, perisynaptic ECM / PNN state is separated from synaptic weights and glia when a claim depends on adult plasticity, receptor mobility, or memory stabilization."
   - "At L2 and above, local proteostasis / synaptic-tagging state is separated from current weights and transcription when a claim depends on late-LTP capture, consolidation, or reconsolidation."
@@ -37,6 +38,7 @@ known_points:
   - "Decode and emulate are distinct claims and require different evidence."
   - "The same decoding score is not target-specific evidence if eye movement, EMG, uninstructed movement, auditory feedback, subject / session fingerprint, or acquisition-distribution shortcuts remain unresolved."
   - "A multimodal result is not one thing; simultaneous acquisition, geometric fusion, invasive calibration, and atlas priors must be audited separately."
+  - "For ESI, passing one validation class does not auto-pass the others; stimulation error, simultaneous invasive concordance, and postsurgical outcome answer different questions."
   - "A BOLD or fNIRS amplitude difference without vascular-state / CVR audit remains a hemodynamic-limited difference rather than a clean neural difference."
   - "A synapse list or weight estimate does not by itself fix perisynaptic ECM / PNN state, so plasticity and stabilization claims need a separate ceiling."
   - "A weight estimate does not fix which tagged synapses or dendritic branches capture plasticity-related proteins, so late-stabilization claims need a separate proteostasis ceiling."
@@ -610,7 +612,7 @@ For the Verification Commons to contribute to science, it must recognize the fol
 <section class="section" id="observability-budget">
 <h2 class="section-title">2026-03 Addendum: Make Observability Budget a required submission</h2>
 <p>
-The most important update in this pass is that the criticism that ``important hidden state remains'' has finally been translated into <strong>submission format</strong>. <a href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank">Yao et al. (2023)</a> show that whole-brain atlases strengthen cell-type taxonomy and spatial arrangement, but do not directly provide current state. <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">Dorkenwald et al. (2024)</a> and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> greatly advance same-brain structure-function links, but still remain in the domain of local conditional prediction. Furthermore, as <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> and <a href="https://doi.org/10.1007/s00415-025-12886-9" target="_blank">Hao et al. (2025)</a> show, even externally validated HD-EEG / ESI remains dependent on source depth and head model and does not provide a generally unique restoration. Therefore, this site requires an <strong>Observability Budget</strong> for submissions above L1 so that they first state what was directly observed and what remains estimated.
+The most important update in this pass is that the criticism that ``important hidden state remains'' has finally been translated into <strong>submission format</strong>. <a href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank">Yao et al. (2023)</a> show that whole-brain atlases strengthen cell-type taxonomy and spatial arrangement, but do not directly provide current state. <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">Dorkenwald et al. (2024)</a> and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> greatly advance same-brain structure-function links, but still remain in the domain of local conditional prediction. Furthermore, as <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> and <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> show, even externally validated HD-EEG / ESI remains dependent on source depth and head model and does not provide a generally unique restoration. Therefore, this site requires an <strong>Observability Budget</strong> for submissions above L1 so that they first state what was directly observed and what remains estimated.
 </p>
 <table class="data-table">
 <thead>
@@ -638,7 +640,7 @@ The most important update in this pass is that the criticism that ``important hi
 </tr>
 <tr>
 <td><strong>external calibration route</strong></td>
-<td>Write external validation pathways such as phantom, intracranial stimulation, concurrent invasive recording, same-brain co-registration, and Patch-seq bridge. </td>
+<td>Write the named validation class, such as simulation / phantom, intracranial stimulation, concurrent invasive recording, postsurgical outcome, same-brain co-registration, and Patch-seq bridge, together with which error term it audits. </td>
 <td>It is easy to confuse improvements in accuracy and visualization with getting closer to the ground truth. </td>
 </tr>
 <tr>
@@ -650,6 +652,43 @@ The most important update in this pass is that the criticism that ``important hi
 <td><strong>claim ceiling and abstention</strong></td>
 <td>Write the upper limits that the results can reach, such as "macro state tracking," "structural scaffold," and "local conditional prediction," as well as the conditions under which you will quit if they exceed them. </td>
 <td>It is easy to overtranslate the advancement of the paper and falsely promote L1 results to L2/L3/L4. </td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>2026-03-18 addendum: ESI validation is a ladder, not one checkbox</strong>
+<p>
+This site no longer accepts the phrase <strong>external validation</strong> without naming the validation class. Simulation / phantom audits solver behavior under known generative conditions, intracranial stimulation audits localization error to a known site and time (<a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al., 2020</a>; <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al., 2023</a>), simultaneous invasive recording audits concordance under the same event (<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al., 2025</a>), and postsurgical outcome audits clinical relevance rather than direct source ground truth (<a href="https://doi.org/10.1016/j.nicl.2014.06.005" target="_blank">Birot et al., 2014</a>). Passing one rung does not auto-pass the others.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Validation class</th>
+<th>What it constrains</th>
+<th>Ceiling if only this exists</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Simulation / phantom</strong></td>
+<td>Numerical stability, geometry sensitivity, and regression under known conditions.</td>
+<td>Method-behavior evidence, not living-brain ground truth.</td>
+</tr>
+<tr>
+<td><strong>Intracranial stimulation</strong></td>
+<td>Localization error to a known site and time under fixed geometry.</td>
+<td>Strong calibration for source error, but not spontaneous-dynamics or universal deep-source guarantees.</td>
+</tr>
+<tr>
+<td><strong>Simultaneous invasive recording</strong></td>
+<td>Concordance with concurrent SEEG/ECoG during the same event.</td>
+<td>Cohort- and pathology-bounded concordance, not unique recovery of internal state.</td>
+</tr>
+<tr>
+<td><strong>Postsurgical outcome</strong></td>
+<td>Clinical relevance to resection or seizure-onset-zone workflow.</td>
+<td>Decision-support evidence, not source ground truth.</td>
 </tr>
 </tbody>
 </table>
@@ -1149,7 +1188,7 @@ In the previous text, methods with different characteristics, such as ASR, ZapLi
 <ul>
 <li><strong>Shareable inputs: </strong>Compliant with BIDS / EEG-BIDS, leaving <code>events.tsv</code> and JSON sidecar, electrode coordinates, coordinate system, task description, instructions, and key artifact factors. It is strongly recommended that event semantics be supplemented with machine-readable vocabularies such as HED and CogAtlasID. </li>
 <li><strong>Transparent reporting:</strong>Publish acquisition conditions, reference methods, filters, bad channel processing, exclusion trials, ICA/regression/interpolation order and parameters in line with COBIDAS-MEEG. We do not use "automatic preprocessing" that cannot be reproduced. </li>
-<li><strong>External validation of ESI claims:</strong>When claiming improvements in EEG source imaging, clarify individual MRI, coordinates, and forward models as much as possible, and verify errors using simulations, phantoms, simultaneous invasive recordings, or intracranial stimulation. Deep accuracy should not be claimed simply by introducing high-density EEG or MRI. </li>
+<li><strong>External validation of ESI claims:</strong>When claiming improvements in EEG source imaging, clarify individual MRI, coordinates, and forward models as much as possible, and verify errors using named validation classes such as simulations / phantoms, intracranial stimulation, simultaneous invasive recordings, or postsurgical outcome. Deep accuracy should not be claimed simply by introducing high-density EEG or MRI. </li>
 <li><strong>Comparison design:</strong>The evaluation will not be completed with the accuracy of a single dataset, but will be divided by subject or session, compared with the existing baseline, and any failures, abstention conditions, and uncertainties will be disclosed. Improvements on a single dataset do not guarantee external generalization. </li>
 </ul>
 </div>
@@ -1356,8 +1395,10 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Goldberger, A. L., et al. (2000). PhysioBank / PhysioNet. <a href="https://doi.org/10.1161/01.CIR.101.23.e215" target="_blank">doi:10.1161/01.CIR.101.23.e215</a></li>
 <li>Jayaram, V., &amp; Barachant, A. (2018). MOABB: trustworthy algorithm benchmarking for BCIs. <a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">doi:10.1088/1741-2552/aadea0</a></li>
 <li>Michel, C. M., &amp; Brunet, D. (2019). EEG source imaging: a practical review. <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">doi:10.3389/fneur.2019.00325</a></li>
+<li>Mikulan, E., Russo, S., Parmigiani, S., et al. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
 <li>Unnwongse, K., et al. (2023). Validating EEG source imaging using intracranial electrical stimulation. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
-<li>Hao, W., et al. (2025). Localization accuracy of interictal and ictal EEG source imaging in simultaneous HD-EEG and SEEG. <a href="https://doi.org/10.1007/s00415-025-12886-9" target="_blank">doi:10.1007/s00415-025-12886-9</a></li>
+<li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
+<li>Birot, G., Spinelli, L., Vulliemoz, S., et al. (2014). Head model and electrical source imaging: a study of 38 epileptic patients. <a href="https://doi.org/10.1016/j.nicl.2014.06.005" target="_blank">doi:10.1016/j.nicl.2014.06.005</a></li>
 <li>Delorme, A. (2023). EEG is better left alone. <a href="https://doi.org/10.1038/s41598-023-27528-0" target="_blank">doi:10.1038/s41598-023-27528-0</a></li>
 <li>Klug, M., &amp; Kloosterman, N. A. (2022). Zapline-plus. <a href="https://doi.org/10.1002/hbm.25832" target="_blank">doi:10.1002/hbm.25832</a></li>
 <li>Hernandez-Pavon, J. C., et al. (2023). TMS combined with EEG: recommendations and open issues. <a href="https://doi.org/10.1016/j.brs.2023.02.009" target="_blank">doi:10.1016/j.brs.2023.02.009</a></li>

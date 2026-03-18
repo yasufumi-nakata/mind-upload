@@ -14,6 +14,7 @@ accuracy_note: "The datasets listed here are entry candidates. They are listed f
 page_highlights:
   - "We look at the shared infrastructure first, then the starter datasets."
   - "Starter data is a practice board for L0-L1, not the ground truth of EEG source imaging."
+  - "Even inside direct-validation data, stimulation ground truth, simultaneous invasive recording, and postsurgical outcome are different evidence classes."
   - "Each starter dataset has different annotation provenance, time fidelity, and independent split units."
   - "Within-session / cross-session / cross-subject / adaptation are different evaluation families and should not be placed side by side under the same score."
   - "Even when the score is numerically the same, you still have to separate the target neural variable from eye movement, EMG, behavior, feedback routes, subject / session fingerprint, and acquisition-distribution shortcuts such as site / device / reference / electrode layout."
@@ -29,6 +30,7 @@ known_points:
   - "Foundation-model improvements are not comparable unless the pretraining corpus, channel-mismatch handling, acquisition-distribution summary, and adaptation regime are disclosed."
   - "Reference system, device, electrode layout, and filter chain can change what looks like the same EEG benchmark."
   - "With only starter data and no individual MRI or invasive ground truth, we cannot make strong claims about improved ESI accuracy."
+  - "At source-imaging stage C, named validation class still matters because stimulation ground truth, simultaneous SEEG, and clinical outcome do not answer the same error question."
 unknown_points:
   - "Starter datasets alone cannot solve all the issues of WBE."
   - "We have not yet determined which data will be most effective for future causal/closed-loop verification."
@@ -522,16 +524,28 @@ The weak point of this page was that it only stopped by saying, ``Starter data i
 <tr>
 <td><strong>C: Direct validation</strong></td>
 <td>Localize-MI (Mikulan et al., 2020), scalp EEG with intracranial stimulation, simultaneous HD-EEG/SEEG, presurgical cohort with postoperative outcome</td>
-<td>Localization error, source depth dependent, conductivity dependent, direct evaluation of clinical concordance</td>
+<td>Named validation-class audit: localization error against known stimulation sites, concordance with simultaneous invasive recording, or clinical concordance against postoperative outcome</td>
 <td>Universal performance guarantee beyond task/cohort/montage</td>
 </tr>
 </tbody>
 </table>
 
 <div class="note-box">
+<strong>Stage C is not one box</strong>
+<p>
+On this site, you should still write which C-stage validation class you used:
+</p>
+<ul>
+<li><strong>stimulation ground truth:</strong> asks localization error against a known stimulation site and time (Mikulan et al., 2020; Unnwongse et al., 2023).</li>
+<li><strong>simultaneous invasive recording:</strong> asks concordance with concurrent SEEG/ECoG under the same event regime (Hao et al., 2025).</li>
+<li><strong>postsurgical outcome / clinical concordance:</strong> asks whether the source estimate points toward clinically relevant tissue, not whether the source was uniquely observed (Birot et al., 2014).</li>
+</ul>
+</div>
+
+<div class="note-box">
 <strong>The most important thing now is the C stage public benchmark</strong>
 <p>
-Localize-MI by Mikulan et al. (2020) is a rare data resource that exposes intracerebral stimulation with 256ch scalp EEG and stereo-EEG, allowing source imaging to be directly audited against “known stimulation locations.” Furthermore, Hao et al. (2025) reported an average localization error of ictal ESI of 14.07 mm and interictal of 17.38 mm in 29 cases using simultaneous HD-EEG/SEEG, indicating that source power and source depth greatly affect accuracy. Therefore, if you want to improve your source imaging, you need to connect it to at least a C-level benchmark rather than an A-level starter data.
+Localize-MI by Mikulan et al. (2020) is a rare data resource that exposes intracerebral stimulation with 256ch scalp EEG and stereo-EEG, allowing source imaging to be directly audited against “known stimulation locations.” Hao et al. (2025) reported average localization errors of 14.07 mm for ictal ESI and 17.38 mm for interictal ESI in 29 simultaneous HD-EEG/SEEG cases, indicating that source power and source depth greatly affect accuracy. Therefore, if you want to improve your source imaging, you need not only a C-level benchmark, but also a named C-stage validation class rather than an A-level starter dataset alone.
 </p>
 </div>
 
@@ -741,6 +755,7 @@ The shortest route to that end is to approach BIDS/EEG-BIDS.
 <li><a href="https://pubmed.ncbi.nlm.nih.gov/19238800/" target="_blank">Moser et al. (2009), Sleep classification difference between AASM and Rechtschaffen &amp; Kales</a></li>
 <li><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020), Localize-MI</a></li>
 <li><a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025), HD-EEG source imaging with simultaneous SEEG</a></li>
+<li><a href="https://doi.org/10.1016/j.nicl.2014.06.005" target="_blank">Birot et al. (2014), Head model and electrical source imaging</a></li>
 <li><a href="https://doi.org/10.1016/j.clinph.2018.12.016" target="_blank">Mouthaan et al. (2019), E-PILEPSY systematic review</a></li>
 <li><a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023), Validating EEG source imaging using intracranial electrical stimulation</a></li>
 <li><a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">Seeber et al. (2019), Subcortical electrophysiological activity is detectable with high-density EEG source imaging</a></li>

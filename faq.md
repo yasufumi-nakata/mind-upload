@@ -207,6 +207,9 @@ A. It is fair to say that some aspects can be read under constrained conditions,
 It is also not the case that scalp signals uniquely determine the internal state. In Unnwongse et al. (2023), which used intracranial stimulation for direct validation, the mean ESI localization error ranged from 10.3 to 26.0 mm depending on source depth and skull conductivity. In Hao et al. (2025), using simultaneous HD-EEG and SEEG, ictal ESI outperformed interictal ESI, but the figures were still 14.07 ± 4.62 mm versus 17.38 ± 4.16 mm, and accuracy depended strongly on source depth and spike power.
 </p>
 <p>
+On this site, we therefore do not treat “externally validated ESI” as one checkbox. Intracranial-stimulation ground truth, simultaneous HD-EEG/SEEG, and postsurgical outcome answer different error questions, so the benchmark class has to be named before the claim ceiling is raised. The shortest route is <a href="eeg_101.html#esi-uncertainty">EEG 101: what must now be stated rigorously about ESI</a> and <a href="datasets.html#validation-ladder">Datasets: the source-imaging validation ladder</a>.
+</p>
+<p>
 The Mind-Upload position is not to deny ambitious readout work. It is to separate the claim first into <strong>task-dependent decoding</strong> and <strong>internal-state identification</strong>, then make explicit the language prior, calibration, abstention conditions, and whether direct validation exists. If you skip those distinctions, you end up misreading “a string was produced” as if it were WBE-relevant state reconstruction.
 </p>
 </section>

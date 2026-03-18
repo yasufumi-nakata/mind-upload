@@ -111,7 +111,7 @@ I am not going to deal with philosophy or legal systems here. We will organize t
 </tr>
 <tr>
 <td><strong>Gate 4: External validation/intervention</strong></td>
-<td>Simulation, phantom, simultaneous invasive recording, intracranial stimulation, held-out prediction of stimulus/lesion/task perturbations. </td>
+<td>Named validation classes such as simulation, phantom, simultaneous invasive recording, intracranial stimulation, postsurgical outcome, and held-out prediction of stimulus/lesion/task perturbations. </td>
 <td> Observed fit cannot be promoted to causal validity or generalization performance. </td>
 </tr>
 </tbody>
@@ -203,7 +203,7 @@ ESI is a framework for estimating source from scalp signals. However, as shown b
 </tr>
 <tr>
 <td><strong>External validation</strong></td>
-<td>It is necessary to know where the simulation, phantom, simultaneous invasive recording, and intracranial stimulation were calibrated. </td>
+<td>It is necessary to know which validation class was used and where the simulation, phantom, simultaneous invasive recording, intracranial stimulation, or postsurgical outcome was calibrated. </td>
 </tr>
 </tbody>
 </table>
@@ -299,7 +299,7 @@ DCM is useful for comparing neural circuit candidate generation models, and SCM 
 <li>Aydin, U., Vorwerk, J., Kupper, P., et al. (2019). Influence of head tissue conductivity uncertainties on EEG dipole reconstruction. <em>Frontiers in Neuroscience</em>, 13, 531. <a href="https://doi.org/10.3389/fnins.2019.00531" target="_blank">doi:10.3389/fnins.2019.00531</a></li>
 <li>Mikulan, E., Russo, S., Bares, M., et al. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <em>Scientific Data</em>, 7, 127. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
 <li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Direct validation of EEG source imaging by intracranial electric stimulation in human patients. <em>Brain Communications</em>, 5(1), fcad023. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
-<li>Hao, Y., Alhilani, M., Asano, E., et al. (2025). High-density scalp EEG source imaging and directed functional connectivity validated by simultaneous stereo-electroencephalography. <em>Epilepsia</em>. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
+<li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <em>Epilepsia</em>, 66(11), 4451-4464. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
 <li>Feng, Z., Mishne, G., Hashemi, A., et al. (2025). Block-Champagne: Imaging extended E/MEG source activation with empirical Bayesian uncertainty quantification. <em>IEEE Transactions on Medical Imaging</em>. <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">doi:10.1109/TMI.2025.3642620</a></li>
 <li>Friston, K. J., Harrison, L., &amp; Penny, W. (2003). Dynamic causal modelling. <em>NeuroImage</em>, 19(4), 1273-1302. <a href="https://doi.org/10.1016/S1053-8119(03)00202-7" target="_blank">doi:10.1016/S1053-8119(03)00202-7</a></li>
 <li>Penny, W. D., Stephan, K. E., Mechelli, A., &amp; Friston, K. J. (2004). Comparing dynamic causal models. <em>NeuroImage</em>, 22(3), 1157-1172. <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">doi:10.1016/j.neuroimage.2004.03.026</a></li>
