@@ -343,7 +343,7 @@ If words such as <strong>claim ceiling</strong>, <strong>hidden state</strong>, 
 </tr>
 <tr>
 <td><strong>Maintenance-state</strong></td>
-<td>Slow controller and support variables, such as sleep / wake history, ionic state, glial / metabolic support, and clearance-related support, that matter for long-horizon stability.</td>
+<td>Slow controller and support variables, such as sleep / wake history, ionic state, bioenergetic / mitochondrial support, glial / metabolic support, and clearance-related support, that matter for long-horizon stability.</td>
 </tr>
 <tr>
 <td><strong>Timing-state</strong></td>

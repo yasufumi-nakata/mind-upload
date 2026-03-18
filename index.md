@@ -14,7 +14,7 @@ accuracy_note: "This page only covers what is needed at the entry point. For det
 page_highlights:
   - "The core of Mind-Upload is not bold conclusions but a verification commons that lets progress be measured."
   - "If you are unsure where to start, read Verification -> Roadmap -> WBE/EEG 101."
-  - "Connectomes and cell types alone do not determine long-term dynamics; sleep/homeostasis, myelination, and glial metabolism remain separate variables."
+  - "Connectomes and cell types alone do not determine long-term dynamics; sleep/homeostasis, myelination, bioenergetic / mitochondrial state, and glial metabolism remain separate variables."
   - "For hemodynamic modalities, BOLD or fNIRS amplitude is not read as neural difference unless vascular-state / CVR limits are audited separately."
   - "Brain-to-text and speech demos are read through the Neural Contribution Card so neural contribution is not confused with task structure or language priors."
   - "High decode / biomarker scores can rise from subject / session fingerprint alone, so the Specificity & Shortcut Card audits that shortcut independently."
@@ -79,7 +79,7 @@ Mind-Upload is a site for breaking the large question, "Can a mind be reproduced
 <div class="note-box">
 <strong>Misreading To Block At The Entrance</strong>
 <p>
-After the March 2026 re-audit of primary literature, this site no longer accepts the reading that <strong>"if we have the wiring diagram and cell types, the rest is almost filled in."</strong> Sleep/wake-dependent renormalization, myelination and oligodendrocyte support, glial metabolism, and active maintenance under molecular turnover remain separate variables. Accordingly, this site does not treat <strong>connectome-complete</strong> as equivalent to <strong>emulation-complete</strong>. For a short explanation, see the hidden-state section in <a href="wbe_101.html#state-completeness">WBE 101</a>; for the evidence structure, see <a href="wiki/connectome-is-not-enough.html">Wiki: Why a Connectome Is Not Enough</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic Plasticity and Maintenance State</a>.
+After the March 2026 re-audit of primary literature, this site no longer accepts the reading that <strong>"if we have the wiring diagram and cell types, the rest is almost filled in."</strong> Sleep/wake-dependent renormalization, myelination and oligodendrocyte support, local bioenergetic / mitochondrial state, glial metabolism, and active maintenance under molecular turnover remain separate variables. Accordingly, this site does not treat <strong>connectome-complete</strong> as equivalent to <strong>emulation-complete</strong>. For a short explanation, see the hidden-state section in <a href="wbe_101.html#state-completeness">WBE 101</a>; for the evidence structure, see <a href="wiki/connectome-is-not-enough.html">Wiki: Why a Connectome Is Not Enough</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic Plasticity and Maintenance State</a>.
 </p>
 </div>
 
@@ -174,7 +174,7 @@ The <a href="verification.html#temporal-validity-card">Verification: Temporal Va
 <div class="note-box">
 <strong>If You Do Not Want Cross-Day Scores To Become Maintenance-Consistent Claims Too Early</strong>
 <p>
-The <a href="verification.html#maintenance-state-error-budget">Verification: maintenance-state error budget</a> separates temporal success from evidence about maintenance routes. It reports <strong>controller state</strong>, <strong>sleep / wake history</strong>, <strong>timing support</strong>, and <strong>bioenergetic / glial / clearance proxies</strong> in separate fields, so a same-day fit or a cross-day hold is not automatically read as a <strong>maintenance-consistent</strong> or <strong>remote-memory-relevant</strong> claim. The background is summarized in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: homeostatic plasticity and maintenance state</a>.
+The <a href="verification.html#maintenance-state-error-budget">Verification: maintenance-state error budget</a> separates temporal success from evidence about maintenance routes. It reports <strong>controller state</strong>, <strong>sleep / wake history</strong>, <strong>timing support</strong>, <strong>bioenergetic / mitochondrial support</strong>, <strong>glial / astrocyte support</strong>, and <strong>clearance proxies</strong> in separate fields, so a same-day fit or a cross-day hold is not automatically read as a <strong>maintenance-consistent</strong> or <strong>remote-memory-relevant</strong> claim. The background is summarized in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: homeostatic plasticity and maintenance state</a>.
 </p>
 </div>
 <div class="note-box">
