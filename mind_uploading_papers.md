@@ -10,6 +10,7 @@ known_points:
   - "Reading by year makes it easier to see which issues are attracting attention over time."
   - "Important papers should be approached through the summary first, then traced back to the DOI and the original text."
   - "This is a broad archive that also includes law, philosophy, and cultural theory, so the technological frontier should not be judged only from the top of a given year."
+  - "Human ultrastructure, synaptic-density PET, metabolic MRSI, thermometry, myelin mapping, and CSF-mobility MRI strengthen different observability layers and should not be compressed into one progress bar."
 unknown_points:
   - "Inclusion alone does not mean that a paper counts as central evidence."
   - "Not every paper in the archive has been audited to the same depth."
@@ -17,16 +18,16 @@ wiki_links:
   - label: "Wiki: How to read the literature and evidence page"
     url: "/wiki/literature-and-evidence-reading.html"
     description: "Clarifies the role differences between the paper archive, the literature map, and proposal pages."
-  - label: "Wiki: Source types and status labels for papers"
+  - label: "Wiki: Source types, status labels, and evidence classes"
     url: "/wiki/paper-source-types-and-evidence-status.html"
-    description: "Explains the meaning of Scopus, arXiv, Review, Media, source_logged, and related labels."
+    description: "Explains the meaning of Scopus, arXiv, Review, Media, source_logged, and evidence classes."
   - label: "Wiki: Basics of WBE"
     url: "/wiki/mind-upload-basics.html"
     description: "For readers who want to place a paper's argument within the larger field first."
   - label: "Wiki: Basics of verification infrastructure"
     url: "/wiki/verification-basics.html"
     description: "Helps frame what should count as stronger or weaker evidence when reading a paper."
-last_updated: "2026-03-16"
+last_updated: "2026-03-18"
 note: "Curated archive"
 audience: "People who want a broad view of related papers, a quick sense of yearly trends, or an entry point back to the original literature."
 reading_time: "5 minutes to check the table of contents; detailed reading only for the papers you need"
@@ -43,6 +44,7 @@ page_highlights:
   - "The intended workflow is to locate papers in the list first and then dig into only the ones that appear important."
   - "Because chronology is not the same thing as evidence strength, primary evidence in technology and natural science is safer to enter from the priority route in the first half of the page."
   - "In technology and natural science, it is safer to read not only badge and chronology, but also evidence class."
+  - "Recent human measurement papers are treated here as observability-class advances with explicit claim ceilings, not as silent proof that hidden state has been closed."
 recommended_pages:
   - label: "Literature Map"
     url: "/research_harvest_50.html"
@@ -125,7 +127,7 @@ If you find a paper in this collection of papers and want to know whether to go 
 <div class="note-box">
 <strong>When the Scopus or arXiv display stops</strong>
 <p>
-Badges are a clue as to where the document can be traced, but they alone do not determine the strength of the evidence. If you want to check the differences between Scopus, arXiv, Review, Media, source_logged, and direct validation / system demo / standard / benchmark / context in one page, it is safe to read <a href="wiki/paper-source-types-and-evidence-status.html">Wiki: How to read document source types, status, and evidence classes</a> first.
+Badges are a clue as to where the document can be traced, but they alone do not determine the strength of the evidence. If you want to check the differences between Scopus, arXiv, Review, Media, source_logged, and evidence classes such as direct validation / system demo / observability-class advance / standard / benchmark / context in one page, it is safe to read <a href="wiki/paper-source-types-and-evidence-status.html">Wiki: How to read source types, status labels, and evidence classes</a> first.
 </p>
 </div>
 <div class="note-box">
@@ -137,7 +139,7 @@ This collection of papers is a <strong>broad archive</strong>, so the first year
 <section class="section" id="technical-fast-lane">
 <h2 class="section-title">2026-03 Literature audit: Priority route for technology and natural sciences</h2>
 <p>
-The weakness of this page is that although it is useful as a <strong>chronological archive</strong>, the ordering is weak as a <strong>entrance to the experimental frontier</strong>. From a technology/natural science perspective, the first thing we want to know is (1) how far non-invasive decoding has progressed, (2) how far invasive speech neuroprosthesis has pushed the closed loop, (3) how far source imaging can be audited with direct validation, (4) what really becomes stronger with multimodal integration and where it hits the hemodynamic proxy ceiling, and (5) maintenance-state and mechanistic boundaries outside the connectome. It is about how much remains, not the first display of law, philosophy, or cultural theory. Therefore, on this page, we clearly indicate the following as <strong>preferred route</strong>.
+The weakness of this page is that although it is useful as a <strong>chronological archive</strong>, the ordering is weak as a <strong>front door to the experimental frontier</strong>. From a technology / natural-science perspective, the first thing we want to know is (1) how far non-invasive decoding has progressed, (2) how far invasive speech neuroprosthesis has pushed the closed loop, (3) how far source imaging can be audited with direct validation, (4) what really becomes stronger with multimodal integration and where it hits the hemodynamic proxy ceiling, (5) what humans can actually observe now and at which measurement class, and (6) which maintenance-state and mechanistic boundaries still remain outside the connectome. It is about how much remains, not the first display of law, philosophy, or cultural theory. Therefore, on this page, we clearly indicate the following as the <strong>preferred route</strong>.
 </p>
 <table class="data-table">
 <thead>
@@ -179,6 +181,13 @@ The weakness of this page is that although it is useful as a <strong>chronologic
 <td><a href="wiki/multimodal-integration-basics.html">Wiki: Multimodal integration basics</a> / <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and claim ceiling for each measurement stack</a></td>
 </tr>
 <tr>
+<td><strong>human observability / proxy ladder</strong></td>
+<td><a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a></td>
+<td>It becomes much clearer which human advances are <strong>local ultrastructure</strong>, <strong>regional synaptic-density PET</strong>, <strong>macro biochemical scaffold</strong>, <strong>macro myelin proxy</strong>, <strong>macro thermal proxy</strong>, and <strong>macro clearance / support-state proxy</strong>.</td>
+<td>These papers do not provide a comparable in vivo whole-brain readout of current transcription / chromatin state, ECM / PNN gate state, branch-local proteostasis, chloride homeostasis, or branch-local mitochondrial positioning.</td>
+<td><a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> / <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and claim ceiling for each measurement stack</a></td>
+</tr>
+<tr>
 <td><strong>maintenance-state / mechanistic boundary</strong></td>
 <td><a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a>, <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>, <a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a>, <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a></td>
 <td>It can be seen that the degeneracy of morpho-electric width, sleep-dependent renormalization, myelin/metabolic support, astrocyte ensemble, and connectome-constrained dynamics within the cell type are the boundary conditions that remain outside the connectome. </td>
@@ -190,7 +199,7 @@ The weakness of this page is that although it is useful as a <strong>chronologic
 <div class="note-box">
 <strong>How to use this table</strong>
 <p>
-If you are looking for primary evidence in technology or the natural sciences, first decide which of the five routes above you want to look at. Then go down to the yearly cards and go back to the DOI and original abstract instead of the summary. The first paper in chronological order does not necessarily mean the strongest evidence.
+If you are looking for primary evidence in technology or the natural sciences, first decide which of the six routes above you want to look at. Then go down to the yearly cards and go back to the DOI and original abstract instead of the summary. The first paper in chronological order does not necessarily mean the strongest evidence.
 </p>
 </div>
 <div class="note-box">
@@ -199,11 +208,17 @@ If you are looking for primary evidence in technology or the natural sciences, f
 When you see a high score for decode or neuroprosthesis, don't just promote it, but be sure to read at least one <strong>mechanistic boundary / hidden-state evidence</strong> for the same issue. While system demos push up "what could have been," papers like Gouwens, Hengen, Xu, Looser, Cahill, Williamson, Beiran &amp; Litwin-Kumar push up "what's not good enough." Both are required to read Technology Frontier.
 </p>
 </div>
+<div class="note-box">
+<strong>Read observability papers in their own class</strong>
+<p>
+Papers such as <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>, and <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> do not fit cleanly into demo, benchmark, or hidden-state-boundary bins. Their main contribution is to raise <strong>what humans can directly observe or approximate</strong> at a specific measurement class. On this site, that class is read separately so readers do not collapse <strong>"a new human proxy exists"</strong> into <strong>"the hidden state was solved."</strong>
+</p>
+</div>
 </section>
 <section class="section" id="technical-evidence-classes">
 <h2 class="section-title">In the 2026-03 technology route, evidence class is fixed first</h2>
 <p>
-The weakness that should have been further corrected this time was that it was difficult to see what the paper directly increased by looking only at <strong>Badge</strong> and <strong>Year order</strong>. For example, <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a>, <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>, <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> boosts <strong>local direct validation</strong>, but <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a>, <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> pushes<strong>task-limited system performance</strong>. Also, <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019)</a>, <a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Burns et al. (2024)</a>, <a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe et al. (2025)</a>, <a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; (2018)</a>, <a href="https://proceedings.mlr.press/v37/blum15.html" target="_blank">Blum &amp; Hardt (2015)</a>, <a href="https://papers.neurips.cc/paper_files/paper/2019/hash/ee39e503b6bedf0c98c388b7e8589aca-Abstract.html" target="_blank">Roelofs et al. (2019)</a> strengthens <strong>reproduction, synchronization, and benchmark governance</strong>. Furthermore, <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a>, <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>, <a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a>, <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> push the question of what still remains as a latent state / omitted mechanism. It's a mechanical boundary. Therefore, on this page, we will divide at least the following six classes along the technology/natural sciences leading line.
+The weakness that needed another correction was that it was still difficult to see what a paper directly strengthened when readers looked only at <strong>Badge</strong> and <strong>Year order</strong>. For example, <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a>, <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>, and <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> strengthen <strong>local direct validation</strong>, whereas <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a>, <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> strengthen <strong>task-limited system performance</strong>. Likewise, <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>, and <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> strengthen <strong>human observability classes</strong> rather than demo performance or hidden-state closure. Also, <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019)</a>, <a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Burns et al. (2024)</a>, <a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe et al. (2025)</a>, <a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant (2018)</a>, <a href="https://proceedings.mlr.press/v37/blum15.html" target="_blank">Blum &amp; Hardt (2015)</a>, and <a href="https://papers.neurips.cc/paper_files/paper/2019/hash/ee39e503b6bedf0c98c388b7e8589aca-Abstract.html" target="_blank">Roelofs et al. (2019)</a> strengthen <strong>reproducibility, synchronization, and benchmark governance</strong>. Furthermore, <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a>, <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>, <a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a>, <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> push up the question of what still remains as a latent state or omitted mechanism. Therefore, on this page, we divide at least the following seven classes along the technology / natural-science reading line.
 </p>
 <table class="data-table">
 <thead>
@@ -234,6 +249,12 @@ The weakness that should have been further corrected this time was that it was d
 <td>It is not direct evidence of mechanical truth or biological sufficiency. </td>
 </tr>
 <tr>
+<td><strong>observability-class advance / human proxy ladder</strong></td>
+<td><a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe 2024</a>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen 2024</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti 2025</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik 2024</a>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek 2022</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler 2025</a></td>
+<td>What humans can directly observe or approximate at each measurement class: local ultrastructure, regional synaptic-density PET, macro biochemical scaffold, macro myelin proxy, macro thermal proxy, and macro clearance / support-state proxy.</td>
+<td>It is not a direct whole-brain readout of current hidden state. Each route reduces a different error term and still has an explicit claim ceiling.</td>
+</tr>
+<tr>
 <td><strong>mechanistic boundary / hidden-state evidence</strong></td>
 <td><a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens 2021</a>, <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen 2016</a>, <a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu 2024</a>, <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser 2024</a>, <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill 2024</a>, <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson 2025</a>, <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar 2025</a></td>
 <td>Degeneracy of excitability, sleep-dependent recovery, myelin/metabolic support, astrocyte ensemble, and connectome-constrained dynamics can be fixed by cell type alone. </td>
@@ -256,7 +277,7 @@ The weakness that should have been further corrected this time was that it was d
 <div class="note-box">
 <strong>Reading order on this page</strong>
 <p>
-First decide on the <strong>evidence class</strong>, then decide on the <strong>technical route</strong>, and finally go down to the <strong>year order card</strong>. In particular, if you see a <strong>task-limited demo</strong>, read one or more <strong>mechanistic boundary / hidden-state evidence</strong>s on the same issue to see what is still latent. Although the chronology is useful as a historical sketch, it is not a table that directly ranks technology frontiers.
+First decide on the <strong>evidence class</strong>, then decide on the <strong>technical route</strong>, and finally go down to the <strong>year-order card</strong>. In particular, if you see a <strong>task-limited demo</strong>, read one or more <strong>mechanistic boundary / hidden-state evidence</strong>s and one or more <strong>observability-class advances</strong> on the same issue. That combination prevents the common misreading that a good output, plus some new human proxy, already closes the hidden state. Although chronology is useful as a historical sketch, it is not a table that directly ranks technology frontiers.
 </p>
 </div>
 </section>
@@ -274,7 +295,7 @@ First decide on the <strong>evidence class</strong>, then decide on the <strong>
 </tr>
 <tr>
 <td><strong>evidence class</strong></td>
-<td>Identify whether the paper is direct validation, system demo, mechanical boundary, standard/benchmark, review, or context. For technology and natural sciences, look at this column before chronological order. </td>
+<td>Identify whether the paper is direct validation, system demo, observability-class advance, mechanistic boundary, standard/benchmark, review, or context. For technology and natural sciences, look at this column before chronological order. </td>
 </tr>
 <tr>
 <td><strong>Japanese translation summary</strong></td>
@@ -300,7 +321,11 @@ First decide on the <strong>evidence class</strong>, then decide on the <strong>
 <tbody>
 <tr>
 <td><strong>I want to see only the primary evidence of technology and natural science first</strong></td>
-<td>First, enter the priority route of <a href="#technical-fast-lane">Technology/Natural Sciences</a> and narrow it down to decode / neuroprosthesis / ESI / multimodal / maintenance-state / mechanistic boundary instead of chronological order. </td>
+<td>First, enter the priority route of <a href="#technical-fast-lane">Technology/Natural Sciences</a> and narrow it down to decode / neuroprosthesis / ESI / multimodal / human observability / maintenance-state instead of chronological order. </td>
+</tr>
+<tr>
+<td><strong>I want to see what humans can actually observe now</strong></td>
+<td>Start with <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe 2024</a>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen 2024</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti 2025</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik 2024</a>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek 2022</a>, and <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler 2025</a>, then read which hidden states each one still leaves latent.</td>
 </tr>
 <tr>
 <td><strong>I want to see brain-to-text / language decode</strong></td>
@@ -316,7 +341,7 @@ First decide on the <strong>evidence class</strong>, then decide on the <strong>
 </tr>
 <tr>
 <td><strong>I want to see structure estimation/hidden state</strong></td>
-<td><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan 2023</a>, <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao target="_blank">Gouwens 2021</a> <a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu 2024</a> Looser 2024</a> <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill 2024</a>, <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson target="_blank">Beiran &amp; Litwin-Kumar 2025</a> Posted in </td>
+<td>Start with <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan 2020</a>, <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse 2023</a>, and <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao 2025</a> for direct validation, then pair them with <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens 2021</a>, <a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu 2024</a>, <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser 2024</a>, <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill 2024</a>, <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson 2025</a>, and <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar 2025</a> for what still remains latent.</td>
 </tr>
 </tbody>
 </table>

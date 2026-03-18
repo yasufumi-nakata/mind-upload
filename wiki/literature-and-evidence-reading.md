@@ -5,7 +5,7 @@ description: "This is a supplementary page that organizes the differences betwee
 article_type: Wiki
 subtitle: "Don't confuse 'many papers' with 'strong conclusions'"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-18"
 note: "Reading guide"
 audience: "People who have difficulty understanding the difference between a collection of papers and a bibliographic map, or who are confused about which page to enter."
 reading_time: "8-12 minutes"
@@ -16,17 +16,19 @@ page_highlights:
   - "This is an aid to avoid reading the number of papers, number of citations, and status labels as the strength of the conclusion."
   - "It tells you where to stop and how far to go back to the original text."
   - "When pursuing primary evidence in the technical and natural sciences, it is safer to go through the priority route within the collection rather than the chronological order."
+  - "For technical reading, observability-class advances should be kept separate from demos, direct validators, and hidden-state boundary papers."
 known_points:
   - "Separating pages with different roles makes it difficult to confuse volume with strength of conclusion."
   - "The purpose of reading the collection of papers, bibliography map, and proposal page is different."
   - "Important decisions should be made by going back to the original paper or page, not the summary."
+  - "A human measurement paper often changes what is observable, not what is already solved."
 unknown_points:
   - "Which paper will ultimately remain as the central basis may change in the future."
   - "States such as source_logged may be updated on subsequent scrutiny."
 wiki_links:
-  - label: "Wiki: Document source type and status label"
+  - label: "Wiki: Source types, status labels, and evidence classes"
     url: "/wiki/paper-source-types-and-evidence-status.html"
-    description: "Organize the meaning of Scopus, arXiv, Review, Media, source_logged, etc."
+    description: "Organize the meaning of Scopus, arXiv, Review, Media, source_logged, and evidence classes."
   - label: "Wiki: Basics of verification infrastructure"
     url: "/wiki/verification-basics.html"
     description: "Compensate with assumptions about the strength of evidence and what to look for."
@@ -64,7 +66,13 @@ If you want to see not only the difference in roles but also where to go back to
 <div class="note-box">
 <strong>When you want to follow only the primary evidence of technology/natural science</strong>
 <p>
-<a href="../mind_uploading_papers.html">Collection of Papers</a> is a broad archive, so the first chronological order does not necessarily correspond to technological frontier order. If you would like to see technical routes such as decode, speech neuroprosthesis, ESI direct validation, and maintenance-state first, please enter from <strong>Technology/Natural Science Priority Route</strong> in the collection of papers.
+<a href="../mind_uploading_papers.html">Collection of Papers</a> is a broad archive, so the first chronological order does not necessarily correspond to technological frontier order. If you want to see technical routes such as decode, speech neuroprosthesis, ESI direct validation, human observability, and maintenance-state first, please enter from the <strong>Technology / Natural Science Priority Route</strong> in the collection of papers.
+</p>
+</div>
+<div class="note-box">
+<strong>When you see a new human measurement paper</strong>
+<p>
+Ask first whether the paper is a <strong>demo</strong>, a <strong>direct validator</strong>, an <strong>observability-class advance</strong>, or a <strong>hidden-state boundary paper</strong>. That one question blocks a common scientific overread: <strong>"humans measured more, therefore hidden state is almost closed."</strong>
 </p>
 </div>
 
@@ -133,13 +141,14 @@ If you want to see not only the difference in roles but also where to go back to
 </section>
 
 <section class="section" id="three-rules">
-<h2 class="section-title">Three rules to prevent misreading</h2>
+<h2 class="section-title">Four rules to prevent misreading</h2>
 <div class="key-points">
 <h4>Rule</h4>
 <ul>
 <li><strong>Don't confuse quantity with strength:</strong> The number of papers and citations is not the same as establishing a conclusion. </li>
 <li><strong>Don't stop at the summary:</strong> Always go back to the DOI or original text when using it as evidence. </li>
 <li><strong>Do not misread status labels:</strong> source_logged, proposal accepted, and document reflected each have different meanings. </li>
+<li><strong>Do not collapse observability into sufficiency:</strong> A new human proxy or atlas can raise what is observable without proving state-complete measurement.</li>
 </ul>
 </div>
 </section>
@@ -147,7 +156,7 @@ If you want to see not only the difference in roles but also where to go back to
 <div class="note-box">
 <strong>When you want to check the meaning of Scopus / arXiv / source_logged first</strong>
 <p>
-This page is a supplementary page that explains the role differences. If you want to organize the differences in publication source, document type, and site status on a single page, look at <a href="paper-source-types-and-evidence-status.html">Wiki: How to read document source type and status labels</a> first, and the way the collection of papers and bibliographic maps will look will be stabilized.
+This page is a supplementary page that explains the role differences. If you want to organize publication source, document type, site status, and evidence class on a single page, look first at <a href="paper-source-types-and-evidence-status.html">Wiki: How to read source types, status labels, and evidence classes</a>, and the way the collection of papers and bibliographic maps will look will stabilize.
 </p>
 </div>
 
