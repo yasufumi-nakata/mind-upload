@@ -145,11 +145,18 @@ The last column of the table below is not a summary of each paper, but the opera
 <td><strong>Up to regional chemoarchitectural prior</strong>. It is not read as the current neuromodulatory state. </td>
 </tr>
 <tr>
-<td><strong>occupancy / release-sensitive PET</strong></td>
-<td>Ligand-specific receptor occupancy or challenge-dependent displacement signal over bounded scan windows, interpreted through an explicit tracer and quantification model. </td>
-<td>You can quantify selected target engagement or release proxy for the chosen receptor family, ligand, and challenge. </td>
-<td>The complete transmitter field, unsampled receptor families, laminar / cell-specific effect, and continuous state outside the scan window remain unresolved. </td>
-<td><strong>Up to system-, ligand-, and challenge-limited proxy</strong>. We do not promote it to receptor-family-complete or whole-brain internal-state ground truth. </td>
+<td><strong>occupancy PET</strong></td>
+<td>Ligand- or drug-specific target engagement within a named receptor family over bounded scan windows, interpreted through an explicit tracer and quantification model. </td>
+<td>You can quantify selected exogenous target engagement for the chosen receptor family, ligand / drug, dose, and scan window. </td>
+<td>Endogenous transmitter release, unsampled receptor families, laminar / cell-specific effect, and continuous state outside the dosing window remain unresolved. </td>
+<td><strong>Up to ligand- and dose-limited target-engagement proxy</strong>. We do not read it as endogenous release or whole-brain current transmitter state. </td>
+</tr>
+<tr>
+<td><strong>displacement / release-sensitive PET</strong></td>
+<td>Challenge-linked change in binding potential for selected tracers / receptor families over bounded scan windows, used as a proxy for endogenous transmitter release under an explicit task or pharmacological challenge. </td>
+<td>You can test whether a named challenge perturbs a selected transmitter system within the scanned window and spatial scope. </td>
+<td>The complete transmitter field, unsampled receptor families, laminar / cell-specific effect, downstream consequence, and continuous state outside the challenge window remain unresolved. </td>
+<td><strong>Up to receptor-, tracer-, and challenge-limited release proxy</strong>. We do not promote it to receptor-family-complete or whole-brain internal-state ground truth. </td>
 </tr>
 <tr>
 <td><strong>astrocyte / glial imaging</strong></td>
@@ -195,17 +202,22 @@ The same logic applies to cortical hemodynamic modalities beyond fMRI. <a href="
 
 <h3>6. Neuromodulatory routes form a ladder, not one stack</h3>
 <p>
-The weakness that needed another pass was that this page still let <strong>pupil / HRV</strong>, <strong>local transmitter imaging</strong>, <strong>receptor maps</strong>, and <strong>PET displacement / occupancy</strong> sound closer than they are. That was too weak. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> showed that pupil fluctuations track both adrenergic and cholinergic activity rather than a single transmitter. <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">Lohani et al. (2022)</a> showed that cortical cholinergic signals are spatially heterogeneous across behavioral states, and <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> showed that local ACh depends on axon activity and local clearance kinetics. On the human side, <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> and <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">Goulas et al. (2021)</a> showed that receptor maps are structured regional priors, while <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a> and <a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">Lippert et al. (2019)</a> showed that raclopride PET gives challenge- and window-limited dopamine-release proxy. What follows directly is that <strong>neuromodulation is not one measurement class</strong>.
+The weakness that needed another pass was that this page still let <strong>pupil / HRV</strong>, <strong>local transmitter imaging</strong>, <strong>receptor maps</strong>, <strong>occupancy PET</strong>, and <strong>displacement / release-sensitive PET</strong> sound closer than they are. That was too weak. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> showed that pupil fluctuations track both adrenergic and cholinergic activity rather than a single transmitter. <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">Lohani et al. (2022)</a> showed that cortical cholinergic signals are spatially heterogeneous across behavioral states, and <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> showed that local ACh depends on axon activity and local clearance kinetics. On the human side, <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> and <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">Goulas et al. (2021)</a> showed that receptor maps are structured regional priors, <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a> showed selected D<sub>2</sub>-receptor target engagement by an administered drug, and <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a>, <a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">Lippert et al. (2019)</a>, and <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">Erritzoe et al. (2020)</a> showed challenge- and window-limited dopamine or serotonin release proxies. What follows directly is that <strong>neuromodulation is not one measurement class</strong>.
 </p>
 
 <strong>Site rule for the ladder</strong>
 <p>
-On this site, <strong>mixed arousal proxy</strong> is read as a coarse covariate, <strong>local transmitter sensor</strong> as local calibration, <strong>receptor / transporter atlas</strong> as a regional prior, and <strong>occupancy / displacement PET</strong> as a ligand- and challenge-limited proxy. None of those rungs is promoted by default to the claim that the current whole-brain neuromodulatory state was directly measured.
+On this site, <strong>mixed arousal proxy</strong> is read as a coarse covariate, <strong>local transmitter sensor</strong> as local calibration, <strong>receptor / transporter atlas</strong> as a regional prior, <strong>occupancy PET</strong> as target engagement, and <strong>displacement / release-sensitive PET</strong> as a challenge-limited release proxy. None of those rungs is promoted by default to the claim that the current whole-brain neuromodulatory state was directly measured.
+</p>
+
+<strong>Occupancy and displacement are different audit items</strong>
+<p>
+<a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a> asked whether an administered antipsychotic occupied a selected receptor target in healthy humans. By contrast, <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a>, <a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">Lippert et al. (2019)</a>, and <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">Erritzoe et al. (2020)</a> used task- or drug-challenge-linked binding changes as dopamine or serotonin release proxies within bounded windows. Those designs do not answer the same question. On this site, occupancy PET is therefore audited as <strong>target engagement</strong>, whereas displacement PET is audited as <strong>endogenous release proxy under a named challenge</strong>.
 </p>
 
 <strong>PET routes still need tracer and quantification disclosure</strong>
 <p>
-PET-based proxy classes are not readable from the modality label alone. <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> showed that human SV2A PET quantification depends on the tracer, arterial-versus-reference route, compartment model, and named scan window. <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> showed that [<sup>11</sup>C]UCB-J binding measures remain unchanged during brief functional activation even when tracer influx rises with blood flow, so synaptic-density PET is not a momentary synaptic-efficacy readout. <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> built a receptor atlas by collating PET data from more than 1,200 healthy individuals, so the resulting map is a normative chemoarchitectural prior rather than an individual's current transmitter state. <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a>, <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a>, and <a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">Lippert et al. (2019)</a> likewise show that occupancy / displacement PET answers receptor-family- and challenge-limited questions over bounded scan windows. Therefore, on this site, PET-based routes must name the tracer, quantification model or validated window, and partial-volume handling when relevant before their claim ceiling is interpreted.
+PET-based proxy classes are not readable from the modality label alone. <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> showed that human SV2A PET quantification depends on the tracer, arterial-versus-reference route, compartment model, and named scan window. <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> showed that [<sup>11</sup>C]UCB-J binding measures remain unchanged during brief functional activation even when tracer influx rises with blood flow, so synaptic-density PET is not a momentary synaptic-efficacy readout. <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> built a receptor atlas by collating PET data from more than 1,200 healthy individuals, so the resulting map is a normative chemoarchitectural prior rather than an individual's current transmitter state. <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a> quantified occupancy for an administered antipsychotic, while <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a>, <a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">Lippert et al. (2019)</a>, and <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">Erritzoe et al. (2020)</a> used challenge-linked binding changes as displacement-based release proxies. Therefore, on this site, PET-based routes must name the tracer, occupancy-versus-displacement design, challenge or administered drug plus dose when applicable, quantification model or validated window, and partial-volume handling when relevant before their claim ceiling is interpreted.
 </p>
 
 <p>
@@ -214,7 +226,7 @@ The same caution extends to glia. <a href="https://doi.org/10.1038/s41586-024-07
 
 <h2>7. Human maintenance-state routes also form a ladder</h2>
 <p>
-Another weakness that remained on this page was that it separated generic measurement stacks while still leaving recent <strong>human maintenance-state evidence</strong> too easy to compress into one sentence such as ``human in vivo observability is getting close.'' That is too weak. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> pushed up <strong>local human nanoscale ultrastructure</strong>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> pushed up a <strong>regional synaptic-density atlas</strong>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> pushed up a <strong>whole-brain biochemical scaffold</strong>, <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> pushed up <strong>macro energetic routes</strong>, <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a> and <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">Qian et al. (2025)</a> pushed up <strong>macro ionic routes</strong>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a> pushed up <strong>macro thermal routes</strong>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> pushed up <strong>macro myelin mapping</strong>, <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>, <a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a>, and <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> pushed up <strong>perturbation-conditioned human plasticity / state-gated routes</strong>, and <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> plus <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> pushed up <strong>macro CSF / glymphatic support-state routes</strong>. What follows directly is that <strong>human evidence is layered across proxy classes</strong>, not a single near-direct route to current whole-brain maintenance-state.
+Another weakness that remained on this page was that it separated generic measurement stacks while still leaving recent <strong>human maintenance-state evidence</strong> too easy to compress into one sentence such as ``human in vivo observability is getting close.'' That is too weak. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> pushed up <strong>local human nanoscale ultrastructure</strong>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> pushed up a <strong>regional synaptic-density atlas</strong>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> pushed up a <strong>whole-brain biochemical scaffold</strong>, <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> pushed up <strong>macro energetic routes</strong>, <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a> and <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">Qian et al. (2025)</a> pushed up <strong>macro ionic routes</strong>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a> pushed up <strong>macro thermal routes</strong>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> pushed up <strong>macro myelin mapping</strong>, <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>, <a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a>, and <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> pushed up <strong>perturbation-conditioned human plasticity / state-gated routes</strong>, and <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> plus <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> pushed up <strong>macro CSF / glymphatic support-state routes</strong>. What follows directly is that <strong>human evidence is layered across proxy classes</strong>, not a single near-direct route to current whole-brain maintenance-state. A second correction is also required: those rows are not all equally mature, routine, or deployment-ready.
 </p>
 <table>
 <thead>
@@ -239,13 +251,13 @@ Another weakness that remained on this page was that it separated generic measur
 <td><strong>Regional synaptic-density proxy</strong>. We do not read it as a direct measurement of current synaptic function.</td>
 </tr>
 <tr>
-<td><strong>Whole-brain metabolic connectome</strong><br>Lucchetti et al. (2025)</td>
+<td><strong>Whole-brain MRSI metabolic similarity scaffold</strong><br>Lucchetti et al. (2025)</td>
 <td>Parcel-level biochemical organization from whole-brain <sup>1</sup>H-MRSI metabolite profiles with within-subject metabolic similarity structure.</td>
 <td>Current transcriptional controller, branch-local energetic reserve, cell-specific recovery logic, and local transmitter / glial microstate.</td>
 <td><strong>Macro biochemical scaffold</strong>. It is not a local maintenance-state snapshot.</td>
 </tr>
 <tr>
-<td><strong>Human energetic imaging</strong><br>Ren et al. (2015); Li et al. (2025)</td>
+<td><strong>Human energetic imaging (31P-MRS / dynamic DMRSI)</strong><br>Ren et al. (2015); Li et al. (2025)</td>
 <td>ATP synthesis / pH and whole-brain glucose transport and metabolic-rate mapping in living humans.</td>
 <td>Which dendritic branch lacks ATP reserve, where mitochondria are parked, which compartment is energetically fragile right now, and which fission / fusion state is active.</td>
 <td><strong>Macro energetic proxy</strong>. It does not become branch-local mitochondrial ground truth.</td>
@@ -263,7 +275,7 @@ Another weakness that remained on this page was that it separated generic measur
 <td><strong>Macro thermal proxy</strong>. It is not cell-specific thermal-state ground truth.</td>
 </tr>
 <tr>
-<td><strong>Human myelin bilayer mapping</strong><br>Baadsvik et al. (2024)</td>
+<td><strong>Human myelin bilayer mapping (specialized proof-of-principle)</strong><br>Baadsvik et al. (2024)</td>
 <td>Direct MRI access to the myelin bilayer at macro scale in living human brain.</td>
 <td>Per-axon conduction controller, node / internode microgeometry, and local timing-state recovery.</td>
 <td><strong>Macro myelin proxy</strong>. It is not full timing-state recovery.</td>
@@ -281,7 +293,7 @@ Another weakness that remained on this page was that it separated generic measur
 <td><strong>State-gated perturbation proxy</strong>. It is not direct measurement of the excitability mechanism itself.</td>
 </tr>
 <tr>
-<td><strong>Human CSF / glymphatic routes</strong><br>Hirschler et al. (2025); Dagum et al. (2026)</td>
+<td><strong>Human CSF mobility / sleep-linked clearance proxy</strong><br>Hirschler et al. (2025); Dagum et al. (2026)</td>
 <td>In vivo CSF mobility mapping and sleep-related clearance evidence linking brain-to-plasma transport.</td>
 <td>Cell-specific immune control, local synaptic maintenance, and moment-to-moment neural state.</td>
 <td><strong>Macro support-state proxy</strong>. It is not a direct readout of local maintenance control.</td>
@@ -295,9 +307,14 @@ Another weakness that remained on this page was that it separated generic measur
 </tbody>
 </table>
 
+<strong>Proxy class and maturity have to be logged separately</strong>
+<p>
+The key operational criticism is that the presence of a human proxy class does not by itself tell you how mature the route is. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built an atlas from <strong>33 healthy participants</strong> calibrated against postmortem autoradiography. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derived a metabolic similarity scaffold from <strong>51 healthy adolescents</strong> with an <strong>independent replication sample of 13</strong>, using five-metabolite <sup>1</sup>H-MRSI and a correlation-based construction. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> reported whole-brain metabolic-rate mapping in <strong>five healthy participants</strong> at <strong>7 T</strong> with custom dual-frequency coils and blood-input modeling. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> showed myelin-bilayer mapping in <strong>two healthy volunteers</strong> on high-performance hardware. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> introduced a specialized 7 T CSF-mobility sequence in <strong>24 healthy adults</strong>, while <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> relied on older-adult crossover cohorts, an <strong>investigational wearable</strong>, and a <strong>compartmental model</strong> with notable QC attrition. Therefore, this page now treats <strong>proxy class</strong> and <strong>operational maturity</strong> as separate metadata that both have to be stated before claim ceilings are interpreted.
+</p>
+
 <strong>Site rule for human proxy classes</strong>
 <p>
-On this site, human-side summaries must name the <strong>proxy class</strong> explicitly. ``Human evidence exists'' is too coarse. The summary has to tell the reader whether the result is a <strong>local structural scaffold</strong>, <strong>regional synaptic-density proxy</strong>, <strong>macro biochemical scaffold</strong>, <strong>perturbation-conditioned maintenance / state-gated perturbation proxy</strong>, <strong>macro energetic / ionic / thermal / myelin proxy</strong>, or <strong>macro support-state proxy</strong>.
+On this site, human-side summaries must name the <strong>proxy class</strong> explicitly. ``Human evidence exists'' is too coarse. The summary has to tell the reader whether the result is a <strong>local structural scaffold</strong>, <strong>regional synaptic-density proxy</strong>, <strong>macro biochemical scaffold</strong>, <strong>perturbation-conditioned maintenance / state-gated perturbation proxy</strong>, <strong>macro energetic / ionic / thermal / myelin proxy</strong>, or <strong>macro support-state proxy</strong>. When the route is still specialized, model-dependent, or small-cohort, that maturity limit must be stated alongside the proxy class rather than left implicit.
 </p>
 
 <strong>Why this ladder matters operationally</strong>
@@ -315,7 +332,7 @@ The danger is not only philosophical overreach. If these rows are compressed int
 <li><strong>In human-side summaries, name the proxy class:</strong>Do not compress local ultrastructure, synaptic-density PET, biochemical scaffold, perturbation-conditioned plasticity/state-gated perturbation routes, energetic / ionic / thermal / myelin / clearance routes into one direct route. </li>
 <li><strong>When filling in unobserved states, write ``estimated'': </strong>If threshold / gain / set point is auto-completed from cell type, write ``latent inference''. </li>
 <li><strong>Do not promote BOLD / fNIRS amplitude to neural difference without hemodynamic audit:</strong>Write vascular-state / CVR calibration route or abstention explicitly. </li>
-<li><strong>Prohibit expressions that exceed the claim ceiling:</strong>For example, do not write EM alone as emulation-complete, Patch-seq as whole-brain state-complete, pupil as transmitter ground truth, receptor atlas as current transmitter state, or displacement PET as whole-brain neuromodulatory ground truth. </li>
+<li><strong>Prohibit expressions that exceed the claim ceiling:</strong>For example, do not write EM alone as emulation-complete, Patch-seq as whole-brain state-complete, pupil as transmitter ground truth, receptor atlas as current transmitter state, occupancy PET as whole-brain transmitter-state readout, or displacement PET as whole-brain neuromodulatory ground truth. </li>
 </ul>
 
 <table>
@@ -347,9 +364,9 @@ The danger is not only philosophical overreach. If these rows are compressed int
 <td>Stop rephrasing connectome-complete as emulation-complete. </td>
 </tr>
 <tr>
-<td><strong>mixed proxy / transmitter sensor / receptor atlas / PET</strong></td>
-<td>cross-stack calibration, ligand / challenge disclosure, cross-state validation, and abstention boundary. </td>
-<td>It becomes easier to distinguish coarse arousal covariate, local calibration, regional prior, and challenge-limited target engagement. </td>
+<td><strong>mixed proxy / transmitter sensor / receptor atlas / occupancy PET / displacement PET</strong></td>
+<td>cross-stack calibration, ligand / drug / challenge / dose disclosure, cross-state validation, and abstention boundary. </td>
+<td>It becomes easier to distinguish coarse arousal covariate, local calibration, regional prior, exogenous target engagement, and challenge-limited release proxy. </td>
 <td>Stop whole-brain transmitter-field ground truth and receptor-family-complete internal-state claims. </td>
 </tr>
 <tr>
@@ -397,6 +414,7 @@ The danger is not only philosophical overreach. If these rows are compressed int
 <li>Wong, D. F., Kuwabara, H., Hsu, D. J., et al. (2013). Determination of dopamine D<sub>2</sub> receptor occupancy by lurasidone using positron emission tomography in healthy male subjects. <em>Psychopharmacology</em>, 229(2), 245-252. <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">doi:10.1007/s00213-013-3103-z</a></li>
 <li>Koepp, M. J., Gunn, R. N., Lawrence, A. D., et al. (1998). Evidence for striatal dopamine release during a video game. <em>Nature</em>, 393(6682), 266-268. <a href="https://doi.org/10.1038/30498" target="_blank">doi:10.1038/30498</a></li>
 <li>Lippert, R. N., Cremer, A. L., Edwin Thanarajah, S., et al. (2019). Time-dependent assessment of stimulus-evoked regional dopamine release. <em>Nature Communications</em>, 10, 336. <a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">doi:10.1038/s41467-018-08143-4</a></li>
+<li>Erritzoe, D., Ashok, A. H., Searle, G. E., et al. (2020). Serotonin release measured in the human brain: a PET study with [<sup>11</sup>C]CIMBI-36 and d-amphetamine challenge. <em>Neuropsychopharmacology</em>, 45(5), 804-810. <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">doi:10.1038/s41386-019-0567-5</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <em>Cell Reports</em>, 43(10), 114808. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <em>Nature</em>, 629, 146-153. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Xu, W., et al. (2024). Sleep restores an optimal computational regime in cortical networks. <em>Nature Communications</em>, 15, 3820. <a href="https://doi.org/10.1038/s41467-024-47838-5" target="_blank">doi:10.1038/s41467-024-47838-5</a></li>
