@@ -3,8 +3,8 @@ layout: default
 title: 'Wiki: observability and claim ceiling by measurement stack'
 description: We will organize from primary literature what EEG/MEG/fMRI, whole-brain
   spatial atlas, Patch-seq, volume EM, same-brain functional connectomics, synaptic-density
-  PET, mixed
-  arousal proxies, transmitter sensors, receptor atlas / PET, and glia imaging directly
+  PET, mixed arousal proxies, transmitter sensors, receptor atlas / PET, glia imaging,
+  and human biochemical / energetic / ionic / thermal / myelin / clearance routes directly
   observe and where they hit the claimed upper limits.
 article_type: Wiki
 subtitle: multimodal is not a synonym for ``seen everything''
@@ -18,8 +18,9 @@ page_intro: This page is a wiki that fixes the ``upper claim limit for each meas
   stack,'' which is often overlooked in WBE discussions. It's not enough to say that
   hidden state is important. Based on primary literature, we will explain what each
   of EEG/MEG/fMRI, spatial transcriptomics, Patch-seq, volume EM, same-brain functional
-  connectomics, synaptic-density PET, mixed arousal proxy, local transmitter sensor, receptor atlas / PET,
-  and glia imaging directly observes and what remains latent.
+  connectomics, synaptic-density PET, mixed arousal proxy, local transmitter sensor,
+  receptor atlas / PET, glia imaging, and human biochemical / energetic / ionic / thermal /
+  myelin / clearance routes directly observes and what remains latent.
 accuracy_note: The ``claim ceiling'' column below is not the conclusion declared by
   each paper. This is an operational inference drawn by this site from variables directly
   observed in primary literature and state variables that are still unobserved.
@@ -32,6 +33,9 @@ page_highlights:
   uncertainty, so BOLD or fNIRS amplitude is not overread as neural truth.
 - Destination is divided into structural atlas, cell-type prior, local conditional
   prediction, and slow-state calibration.
+- Human evidence is also separated into proxy classes, so local ultrastructure, synaptic-density
+  PET, biochemical scaffold, energetic / ionic / thermal / myelin / clearance routes
+  are not compressed into one near-direct readout.
 known_points:
 - EEG/MEG/fMRI provides macroscopic proxies, but not directly for cell types, synaptic
   efficiency, neuromodulatory fields, and glial status.
@@ -43,6 +47,9 @@ known_points:
   whole-brain coverage and long-term maintenance-state remains.
 - Local transmitter / glia imaging is effective for calibrating coarse proxies, but
   it does not directly provide whole-brain ground truth.
+- Human biochemical, energetic, ionic, thermal, myelin, and clearance routes reduce
+  different latent-state error terms and should not be summarized as one direct path
+  to maintenance-state completeness.
 unknown_points:
 - It cannot yet be determined which stack combination will most efficiently reduce
   degeneracy for WBE.
@@ -264,6 +271,91 @@ The same caution extends to glia. <a href="https://doi.org/10.1038/s41586-024-07
 </p>
 </section>
 
+<section class="section" id="human-maintenance-proxy-ladder">
+<h2 class="section-title">7. Human maintenance-state routes also form a ladder</h2>
+<p>
+Another weakness that remained on this page was that it separated generic measurement stacks while still leaving recent <strong>human maintenance-state evidence</strong> too easy to compress into one sentence such as ``human in vivo observability is getting close.'' That is too weak. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> pushed up <strong>local human nanoscale ultrastructure</strong>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> pushed up a <strong>regional synaptic-density atlas</strong>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> pushed up a <strong>whole-brain biochemical scaffold</strong>, <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> pushed up <strong>macro energetic routes</strong>, <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a> and <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">Qian et al. (2025)</a> pushed up <strong>macro ionic routes</strong>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a> pushed up <strong>macro thermal routes</strong>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> pushed up <strong>macro myelin mapping</strong>, and <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> plus <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> pushed up <strong>macro CSF / glymphatic support-state routes</strong>. What follows directly is that <strong>human evidence is layered across proxy classes</strong>, not a single near-direct route to current whole-brain maintenance-state.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Human route</th>
+<th>What it directly advances</th>
+<th>What still remains latent</th>
+<th>Claim ceiling on this site</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Local human nanoscale ultrastructure</strong><br>Shapson-Coe et al. (2024)</td>
+<td>A cubic-millimeter human cortical fragment reconstructed at nanoscale resolution with dense local cell, axon, glia, vascular, and synapse structure.</td>
+<td>Living whole-brain dynamics, current synaptic efficacy, ongoing maintenance-state, and cross-brain generalization.</td>
+<td><strong>Local human structural scaffold</strong>. We do not promote it to living whole-brain state capture.</td>
+</tr>
+<tr>
+<td><strong>Regional synaptic-density PET atlas</strong><br>Johansen et al. (2024)</td>
+<td>Atlas-level distribution of the synaptic marker SV2A across the living human brain, estimated through tracer-specific kinetic modeling or a validated simplified window.</td>
+<td>Current synaptic efficacy, release probability, task-evoked momentary state change, synaptic-tag capture, and branch-local plasticity state.</td>
+<td><strong>Regional synaptic-density proxy</strong>. We do not read it as a direct measurement of current synaptic function.</td>
+</tr>
+<tr>
+<td><strong>Whole-brain metabolic connectome</strong><br>Lucchetti et al. (2025)</td>
+<td>Parcel-level biochemical organization from whole-brain <sup>1</sup>H-MRSI metabolite profiles with within-subject metabolic similarity structure.</td>
+<td>Current transcriptional controller, branch-local energetic reserve, cell-specific recovery logic, and local transmitter / glial microstate.</td>
+<td><strong>Macro biochemical scaffold</strong>. It is not a local maintenance-state snapshot.</td>
+</tr>
+<tr>
+<td><strong>Human energetic imaging</strong><br>Ren et al. (2015); Li et al. (2025)</td>
+<td>ATP synthesis / pH and whole-brain glucose transport and metabolic-rate mapping in living humans.</td>
+<td>Which dendritic branch lacks ATP reserve, where mitochondria are parked, which compartment is energetically fragile right now, and which fission / fusion state is active.</td>
+<td><strong>Macro energetic proxy</strong>. It does not become branch-local mitochondrial ground truth.</td>
+</tr>
+<tr>
+<td><strong>Human sodium MRI / ionic proxy</strong><br>Qian et al. (2012); Qian et al. (2025)</td>
+<td>mm-class tissue sodium mapping in vivo and emerging mono- / bi-T<sub>2</sub> sodium separation under specialized acquisition.</td>
+<td>Cell-specific chloride concentration, KCC2 / NKCC1 balance, extracellular K<sup>+</sup> / Ca<sup>2+</sup> / pH microdomains, local E<sub>GABA</sub>, and routine whole-brain intra- versus extracellular sodium partition.</td>
+<td><strong>Macro ionic proxy</strong>. It is not direct ground truth of current chloride homeostasis.</td>
+</tr>
+<tr>
+<td><strong>Human brain thermometry</strong><br>Rzechorzek et al. (2022)</td>
+<td>4D macro thermal maps and daily human brain-temperature rhythms.</td>
+<td>Cell-specific microtemperature, synapse-level heating burden, and local thermal controller state.</td>
+<td><strong>Macro thermal proxy</strong>. It is not cell-specific thermal-state ground truth.</td>
+</tr>
+<tr>
+<td><strong>Human myelin bilayer mapping</strong><br>Baadsvik et al. (2024)</td>
+<td>Direct MRI access to the myelin bilayer at macro scale in living human brain.</td>
+<td>Per-axon conduction controller, node / internode microgeometry, and local timing-state recovery.</td>
+<td><strong>Macro myelin proxy</strong>. It is not full timing-state recovery.</td>
+</tr>
+<tr>
+<td><strong>Human CSF / glymphatic routes</strong><br>Hirschler et al. (2025); Dagum et al. (2026)</td>
+<td>In vivo CSF mobility mapping and sleep-related clearance evidence linking brain-to-plasma transport.</td>
+<td>Cell-specific immune control, local synaptic maintenance, and moment-to-moment neural state.</td>
+<td><strong>Macro support-state proxy</strong>. It is not a direct readout of local maintenance control.</td>
+</tr>
+<tr>
+<td><strong>Still lacking a comparable in vivo whole-brain human route</strong></td>
+<td>Current transcription / chromatin state, ECM / PNN gate state, branch-local proteostasis / synaptic-tag capture, current chloride set point, and branch-local mitochondrial positioning remain important state classes.</td>
+<td>These layers still cannot be promoted from human evidence to comparable whole-brain in vivo ground truth on the basis of the reviewed measurement classes alone.</td>
+<td><strong>Keep them explicitly latent</strong> or externally calibrated; do not auto-fill them from the proxy rows above.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Site rule for human proxy classes</strong>
+<p>
+On this site, human-side summaries must name the <strong>proxy class</strong> explicitly. ``Human evidence exists'' is too coarse. The summary has to tell the reader whether the result is a <strong>local structural scaffold</strong>, <strong>regional synaptic-density proxy</strong>, <strong>macro biochemical scaffold</strong>, <strong>macro energetic / ionic / thermal / myelin proxy</strong>, or <strong>macro support-state proxy</strong>.
+</p>
+</div>
+<div class="note-box">
+<strong>Why this ladder matters operationally</strong>
+<p>
+The danger is not only philosophical overreach. If these rows are compressed into one sentence, readers can silently replace ``human proxy-rich evidence'' with ``human near-direct maintenance-state observation.'' This site does not allow that rephrasing. The missing layers above stay latent until a comparable whole-brain in vivo human route or an explicit external-calibration route is shown.
+</p>
+</div>
+</section>
+
 <section class="section" id="site-rules">
 <h2 class="section-title">Practical rules arising from this criticism</h2>
 <div class="key-points">
@@ -272,6 +364,7 @@ The same caution extends to glia. <a href="https://doi.org/10.1038/s41586-024-07
 <li><strong>Write the measurement stack in the augmentation claim:</strong>Instead of saying "added transcriptomic label", distinguish between whole-brain atlas, patch-seq bridge, or same-brain link. </li>
 <li><strong>Don't mix atlas / bridge / scaffold / local twin / proxy calibration:</strong>Fix which kind of advance is the same "advance". </li>
 <li><strong>Don't make multimodal a synonym for state-complete:</strong>Include in the text what latent state still remains. </li>
+<li><strong>In human-side summaries, name the proxy class:</strong>Do not compress local ultrastructure, synaptic-density PET, biochemical scaffold, energetic / ionic / thermal / myelin / clearance routes into one direct route. </li>
 <li><strong>When filling in unobserved states, write ``estimated'': </strong>If threshold / gain / set point is auto-completed from cell type, write ``latent inference''. </li>
 <li><strong>Do not promote BOLD / fNIRS amplitude to neural difference without hemodynamic audit:</strong>Write vascular-state / CVR calibration route or abstention explicitly. </li>
 <li><strong>Prohibit expressions that exceed the claim ceiling:</strong>For example, do not write EM alone as emulation-complete, Patch-seq as whole-brain state-complete, pupil as transmitter ground truth, receptor atlas as current transmitter state, or displacement PET as whole-brain neuromodulatory ground truth. </li>
@@ -311,6 +404,12 @@ The same caution extends to glia. <a href="https://doi.org/10.1038/s41586-024-07
 <td>It becomes easier to distinguish coarse arousal covariate, local calibration, regional prior, and challenge-limited target engagement. </td>
 <td>Stop whole-brain transmitter-field ground truth and receptor-family-complete internal-state claims. </td>
 </tr>
+<tr>
+<td><strong>human maintenance-state proxies</strong></td>
+<td>class-labeled submission, external calibration route, cross-stack comparison, and abstention boundary. </td>
+<td>It becomes easier to separate local scaffold, synaptic-density proxy, biochemical scaffold, energetic / ionic / thermal / myelin / clearance proxy, and still-missing human routes. </td>
+<td>Stop near-direct human maintenance-state and state-complete claims. </td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -335,6 +434,16 @@ The same caution extends to glia. <a href="https://doi.org/10.1038/s41586-024-07
 <li>Naganawa, M., Li, S., Nabulsi, N., et al. (2021). First-in-human evaluation of <sup>18</sup>F-SynVesT-1, a radioligand for PET imaging of synaptic vesicle glycoprotein 2A. <em>Journal of Nuclear Medicine</em>, 62(4), 561-567. <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">doi:10.2967/jnumed.120.249144</a></li>
 <li>Smart, K., Liu, H., Matuskey, D., et al. (2021). Binding of the synaptic vesicle radiotracer [<sup>11</sup>C]UCB-J is unchanged during functional brain activation using a visual stimulation task. <em>Journal of Cerebral Blood Flow &amp; Metabolism</em>, 41(5), 1067-1079. <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">doi:10.1177/0271678X20946198</a></li>
 <li>Johansen, A., Beliveau, V., Colliander, E., et al. (2024). An in vivo high-resolution human brain atlas of synaptic density. <em>Journal of Neuroscience</em>, 44(33), e1750232024. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
+<li>Shapson-Coe, A., Januszewski, M., Berger, D. R., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <em>Science</em>, 384(6696), eadk4858. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
+<li>Lucchetti, F., C&eacute;l&eacute;reau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <em>Nature Communications</em>, 16, 11344. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
+<li>Ren, J., Sherry, A. D., &amp; Malloy, C. R. (2015). <sup>31</sup>P-MRS of healthy human brain: ATP synthesis, metabolite concentrations, pH, and T1 relaxation times. <em>NMR in Biomedicine</em>, 28(11), 1455-1462. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">doi:10.1002/nbm.3384</a></li>
+<li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <em>PNAS Nexus</em>, 4(3), pgaf072. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
+<li>Qian, Y., Zhao, T., Zheng, H., Weimer, J., &amp; Boada, F. E. (2012). High-resolution sodium imaging of human brain at 7 T. <em>Magnetic Resonance in Medicine</em>, 68(1), 227-233. <a href="https://doi.org/10.1002/mrm.23225" target="_blank">doi:10.1002/mrm.23225</a></li>
+<li>Qian, Y., Lin, Y. C., Chen, X., et al. (2025). Single-quantum sodium MRI at 3 T for separation of mono- and bi-T<sub>2</sub> sodium signals. <em>Scientific Reports</em>, 15, 27427. <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">doi:10.1038/s41598-025-07800-1</a></li>
+<li>Rzechorzek, N. M., Thrippleton, M. J., Chappell, F. M., et al. (2022). A daily temperature rhythm in the human brain predicts survival after brain injury. <em>Brain</em>, 145(6), 2031-2048. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">doi:10.1093/brain/awab466</a></li>
+<li>Baadsvik, E. L., Weiger, M., Froidevaux, R., Schildknecht, C. M., Ineichen, B. V., &amp; Pruessmann, K. P. (2024). Myelin bilayer mapping in the human brain in vivo. <em>Magnetic Resonance in Medicine</em>, 91(6), 2332-2344. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">doi:10.1002/mrm.29998</a></li>
+<li>Hirschler, L., Runderkamp, B. A. R., Decker, A., et al. (2025). Region-specific drivers of CSF mobility measured with MRI in humans. <em>Nature Neuroscience</em>, 28(11), 2392-2401. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
+<li>Dagum, P., Elbert, D. L., Giovangrandi, L., et al. (2026). The glymphatic system clears amyloid beta and tau from brain to plasma in humans. <em>Nature Communications</em>, 17, 715. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
 <li>Wong, D. F., Kuwabara, H., Hsu, D. J., et al. (2013). Determination of dopamine D<sub>2</sub> receptor occupancy by lurasidone using positron emission tomography in healthy male subjects. <em>Psychopharmacology</em>, 229(2), 245-252. <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">doi:10.1007/s00213-013-3103-z</a></li>
 <li>Koepp, M. J., Gunn, R. N., Lawrence, A. D., et al. (1998). Evidence for striatal dopamine release during a video game. <em>Nature</em>, 393(6682), 266-268. <a href="https://doi.org/10.1038/30498" target="_blank">doi:10.1038/30498</a></li>
 <li>Lippert, R. N., Cremer, A. L., Edwin Thanarajah, S., et al. (2019). Time-dependent assessment of stimulus-evoked regional dopamine release. <em>Nature Communications</em>, 10, 336. <a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">doi:10.1038/s41467-018-08143-4</a></li>
@@ -351,6 +460,7 @@ The same caution extends to glia. <a href="https://doi.org/10.1038/s41586-024-07
     <h3>Pin this page</h3>
     <ul>
       <li>Direct observables per measurement stack</li>
+      <li>Human proxy classes for maintenance-state</li>
       <li>Latent state per stack</li>
       <li>Claim ceiling allowed on this site</li>
     </ul>
@@ -359,6 +469,7 @@ The same caution extends to glia. <a href="https://doi.org/10.1038/s41586-024-07
 <div class="sidebar-card">
     <h3>Read next</h3>
     <ul>
+      <li><a href="../wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a></li>
       <li><a href="../verification.html#state-completeness-gate">State variable integrity gate</a></li>
       <li><a href="../tech_roadmap.html#qa-m1">M1 observed variable</a></li>
       <li><a href="connectome-is-not-enough.html">Why wiring diagrams alone are not enough</a></li>
