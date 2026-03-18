@@ -401,3 +401,12 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 判定内訳 `A/B/C=17/25/18` を再計数し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り構造を維持していることを再確認しました。
 - 参照EEG ID（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と突合し、欠損 `0` 件を確認しました。
 - 助成キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）の実在を `grant_queue` / `auto-research-funds` 側で再確認しました。
+
+## 2026-03-18 23:03 JST 再検証ログ（本run / 3リポ pull 後の再固定）
+
+- 作業前に `mind-upload` / `auto-research-funds` / `EEG-DATA` の各 `main` で `git pull --ff-only` を実行し、最新更新を取り込んだ状態で検証しました。
+- `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` の `RQ` 行を再計数し、`RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認しました。
+- 全60行で `検証可否` `深掘り検証設計` `応募テーマ` `推奨EEG-DATA` が欠損なく埋まっていることを確認しました。
+- 参照EEG ID（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と再突合し、欠損 `0` 件を確認しました。
+- 助成キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再参照可能でした。
+- 運用方針は継続し、汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り固定を維持しました。
