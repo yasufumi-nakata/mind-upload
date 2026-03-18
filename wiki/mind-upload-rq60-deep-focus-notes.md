@@ -279,3 +279,12 @@ Reasons for proceeding in this order:
 - Revalidated the 24 referenced EEG IDs (`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`) in latest `EEG-DATA/eeg_dataset_summary_ja.csv` (`missing=0`).
 - Revalidated grant real IDs `G1-G6` (`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`) in `grant_queue` and `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`.
 - Execution policy is unchanged: no generic sweep, only deep one-by-one operation with `1RQ = 1 verification proposition = 1 application theme = 1 main data`.
+
+## 2026-03-18 09:04 JST revalidation log (main run / deep-by-RQ consistency refresh)
+
+- Pulled latest `main` in `auto-startup`, `mind-upload`, `auto-research-funds`, and `EEG-DATA` before this run.
+- Rechecked deep-by-RQ operation (`1RQ = 1 verification proposition = 1 application theme = 1 main data`) and reconfirmed `RQ_TOTAL=60` with `A/B/C=17/25/18`.
+- Revalidated the 24 referenced EEG IDs (`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`) in latest `EEG-DATA/eeg_dataset_summary_ja.csv` (`missing=0`).
+- Revalidated grant real IDs `G1-G6` (`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`) in `grant_queue` and `auto-research-funds` map docs.
+- Refreshed EEG inventory baseline from current CSV: `TOTAL=28,152`, `immediate=23,871`, `uncertain_public=3,692`, `account_required=585`, `restricted=4`.
+- Execution rule is unchanged: avoid generic sweep and maintain one-by-one deep operation for every RQ.
