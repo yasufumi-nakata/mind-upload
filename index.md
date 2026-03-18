@@ -95,7 +95,14 @@ The March 2026 update added <a href="verification.html#observability-budget">Ver
 <div class="note-box">
 <strong>If You Want To Know Which Human Routes Are Real Advances And Which Are Still Only Proxies</strong>
 <p>
-The front door was still too coarse if it only said that many hidden states remain. <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> now separates local human nanoscale ultrastructure, regional synaptic-density PET, macro biochemical / energetic / thermal / myelin / clearance proxies, and the still-missing whole-brain in vivo routes for current transcription / chromatin state, ECM / PNN gate state, branch-local proteostasis, and local mitochondrial positioning. That separation is there so <strong>"human evidence exists"</strong> is not silently rephrased as <strong>"human state-complete measurement is close."</strong>
+The front door was still too coarse if it only said that many hidden states remain. <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> now separates local human nanoscale ultrastructure, regional synaptic-density PET, receptor / transporter atlas priors, selected occupancy / displacement PET routes for chosen neurotransmitter systems, macro biochemical / energetic / thermal / myelin / clearance proxies, and the still-missing whole-brain in vivo routes for current transcription / chromatin state, ECM / PNN gate state, branch-local proteostasis, and local mitochondrial positioning. That separation is there so <strong>"human evidence exists"</strong> is not silently rephrased as <strong>"human state-complete measurement is close."</strong>
+</p>
+</div>
+
+<div class="note-box">
+<strong>If You Want To Read Neuromodulation Without Collapsing Proxy Classes</strong>
+<p>
+This site now keeps <strong>mixed arousal proxies</strong> such as pupil / HRV, <strong>local transmitter sensors</strong>, <strong>receptor / transporter atlas priors</strong>, and <strong>ligand- / challenge-limited occupancy or displacement PET</strong> on separate rungs. That separation is there so <strong>"some neuromodulatory evidence exists"</strong> is not silently rephrased as <strong>"the current whole-brain transmitter state was measured."</strong> Start with <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>, then see <a href="wiki/measurement-stack-and-claim-ceiling.html#neuromodulatory-proxy-ladder">Wiki: neuromodulatory proxy ladder</a>.
 </p>
 </div>
 

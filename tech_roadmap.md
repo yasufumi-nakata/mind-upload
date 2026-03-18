@@ -326,7 +326,7 @@ Therefore, this roadmap will not allow the three short-circuits of <strong>``It'
 <li><a href="#qa-r7"><strong>R7</strong> Identifiability: Does estimation approach the “unique solution”? What about uncertainty? </a></li>
 <li><a href="#qa-r8"><strong>R8</strong> Compression: Can you maintain the “verification standard” even if you discard any information? </a></li>
 <li><a href="#qa-r9"><strong>R9</strong> Audit: What is the mechanism to “record” model differences and failure examples? </a></li>
-<li><a href="#qa-r10"><strong>R10</strong> Neuromodification: How to incorporate mood and alertness (Volume Transmission)? </a></li>
+<li><a href="#qa-r10"><strong>R10</strong> Neuromodulation: How to incorporate mood, alertness, and volume transmission? </a></li>
 </ul>
 </details>
 
@@ -879,13 +879,13 @@ The EEG literature with direct validation is rather revealing of its limitations
 <details open class="qa" data-tags="reconstruction" id="qa-r10">
 <summary>
 <span class="qa-id">R10</span>
-<span class="qa-title">Neuromodification: How to incorporate mood and alertness (Volume Transmission)? </span>
+<span class="qa-title">Neuromodulation: How to incorporate mood, alertness, and volume transmission? </span>
 <span class="qa-tags"><span class="tag">NEUROMODULATION</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Synaptic connections (wiring transmission) alone cannot reproduce state-dependent regulation of dopamine and serotonin. Furthermore, pupil diameter and HRV are rough proxies and do not represent the ground truth of transmitter-specific or region-specific internal states. </p>
-<p><strong>Temporary policy:</strong>Neuromodulation is not treated as a ``single mood scalar,'' but as a latent state with spatial distribution, time scale, and receptor dependence. Although pupil diameter and HRV can be used as covariates and stratification in human data, this alone does not mean that the brainstem amine system has been identified. </p>
-<p><strong>Next:</strong> Calibrate the proxy using animal or invasive transmitter sensor / pharmacology / perturbation, and publish state estimation with uncertainty and abstention conditions on the human side. For background, see <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams alone are not enough</a>. </p>
+<p><strong>Question:</strong>Synaptic connections alone cannot reproduce state-dependent regulation of dopamine, serotonin, acetylcholine, and related volume-transmission systems. The weak point here was that this node still let <strong>pupil / HRV</strong>, <strong>local transmitter imaging</strong>, <strong>receptor maps</strong>, and <strong>PET target-engagement or displacement results</strong> sound more interchangeable than they are. That was too weak. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> showed that pupil fluctuations track both adrenergic and cholinergic activity, <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> showed that local cortical ACh depends on axon activity and local clearance, <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> and <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">Goulas et al. (2021)</a> showed that receptor maps are structured regional priors, and <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a> plus <a href="https://doi.org/10.1038/s41467-019-09897-z" target="_blank">Lippert et al. (2019)</a> showed that raclopride PET gives challenge- and time-window-limited dopamine-release proxy rather than a free readout of the whole transmitter field. </p>
+<p><strong>Operational rule:</strong>On this site, neuromodulation is not treated as a <code>single mood scalar</code>. It is a ladder with at least four non-equivalent rungs. <strong>(1) mixed arousal proxy</strong> such as pupil / HRV / locomotion is a coarse covariate only. <strong>(2) local axon or transmitter sensor</strong> calibrates a measured region's chemical signal but not the whole brain. <strong>(3) receptor / transporter atlas</strong> is a regional chemoarchitectural prior, not the current state. <strong>(4) occupancy / displacement PET</strong> is ligand-, receptor-family-, challenge-, and time-window-limited target-engagement or release proxy. None of these rungs alone is accepted here as the ground truth of the current whole-brain neuromodulatory state. </p>
+<p><strong>Next:</strong>When an R10 claim is made, publish <strong>which rung was used</strong>, plus receptor family, ligand / challenge, temporal window, spatial scope, and abstention boundary. Then compare the same baseline with and without that rung under the same held-out state transition. For the stack-level ceiling, see <a href="wiki/measurement-stack-and-claim-ceiling.html#neuromodulatory-proxy-ladder">Wiki: neuromodulatory proxy ladder</a>; for the broader hidden-state argument, see <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams alone are not enough</a>. </p>
 </div>
 </details>
 </div>
@@ -1931,13 +1931,19 @@ Below are the main documents directly related to the open questions of U0-U15. F
 <li>Correa, J. D., Lee, S., &amp; Bareinboim, E. (2021). Nested counterfactual identification.</li>
 </ol>
 
-<h3>G. Biological constraints (connectome, neuromodification, glia)</h3>
+<h3>G. Biological constraints (connectome, neuromodulation, glia)</h3>
 <ol>
 <li>Cook, S. J., et al. (2019). Whole-animal connectomes of both <em>C. elegans</em> sexes.</li>
 <li>Scheffer, L. K., et al. (2020). Adult <em>Drosophila</em> central brain connectome.</li>
 <li>Kasthuri, N., et al. (2015). Saturated reconstruction of neocortex volume.</li>
 <li>Santello, M., et al. (2019). Astrocyte-neuron interactions.</li>
 <li>Ozcete, O. D., et al. (2024). Neuromodulatory volume transmission.</li>
+<li>Reimer, J., McGinley, M. J., Liu, Y., et al. (2016). Pupil fluctuations track rapid changes in adrenergic and cholinergic activity in cortex. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">doi:10.1038/ncomms13289</a></li>
+<li>Hansen, J. Y., Shafiei, G., Markello, R. D., et al. (2022). Mapping neurotransmitter systems to the structural and functional organization of the human neocortex. <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">doi:10.1038/s41593-022-01186-3</a></li>
+<li>Goulas, A., Changeux, J.-P., Wagstyl, K., et al. (2021). The natural axis of transmitter receptor distribution in the human cerebral cortex. <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">doi:10.1073/pnas.2020574118</a></li>
+<li>Koepp, M. J., Gunn, R. N., Lawrence, A. D., et al. (1998). Evidence for striatal dopamine release during a video game. <a href="https://doi.org/10.1038/30498" target="_blank">doi:10.1038/30498</a></li>
+<li>Lippert, R. N., Bolding, K. A., Abbott, L. F., et al. (2019). Time-dependent assessment of stimulus-evoked regional dopamine release. <a href="https://doi.org/10.1038/s41467-019-09897-z" target="_blank">doi:10.1038/s41467-019-09897-z</a></li>
+<li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
 <li>Dorkenwald, S., et al. (2024). Neuronal wiring diagram of an adult brain. <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">doi:10.1038/s41586-024-07558-y</a></li>
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>

@@ -7,7 +7,7 @@
 - 更新日: 2026-03-18 / 位置づけ: Technical / natural science only
 
 ## このページの役割
-This page is a wiki that fixes the ``upper claim limit for each measurement stack,'' which is often overlooked in WBE discussions. It's not enough to say that hidden state is important. Based on primary literature, we will explain what each of EEG/MEG/fMRI, spatial transcriptomics, Patch-seq, volume EM, same-brain functional connectomics, and local transmitter/glia imaging directly observes and what remains latent.
+This page is a wiki that fixes the ``upper claim limit for each measurement stack,'' which is often overlooked in WBE discussions. It's not enough to say that hidden state is important. Based on primary literature, we will explain what each of EEG/MEG/fMRI, spatial transcriptomics, Patch-seq, volume EM, same-brain functional connectomics, mixed arousal proxy, local transmitter sensor, receptor atlas / PET, and glia imaging directly observes and what remains latent.
 
 ## 正確さの前提
 The ``claim ceiling'' column below is not the conclusion declared by each paper. This is an operational inference drawn by this site from variables directly observed in primary literature and state variables that are still unobserved.
@@ -76,7 +76,7 @@ The last column of the table below is not a summary of each paper, but the opera
 <tr>
 <td><strong>EEG / MEG</strong></td>
 <td>Globally synchronized current field and its time change. </td>
-You can audit some of the <td>ms-scale global state transitions, frequency band dynamics, and closed-loop timing constraints. </td>
+<td>ms-scale global state transitions, frequency band dynamics, and closed-loop timing constraints can be audited. </td>
 <td>The uniqueness of the deep source, cell type, current synaptic efficiency, neuromodulatory field, and glial/metabolic state are not directly determined. </td>
 <td><strong>Macro state tracking and weak L2</strong>. It does not raise to cell/synapse granularity or state-complete claims. </td>
 </tr>
@@ -116,11 +116,32 @@ You can audit some of the <td>ms-scale global state transitions, frequency band 
 <td><strong>Up to local conditional prediction and local functional twin</strong>. We do not promote whole-brain WBE or state-complete reconstruction. </td>
 </tr>
 <tr>
-<td><strong>local transmitter imaging / behavior-linked proxy</strong></td>
-<td>Local transmitter dynamics and its relationship with axon activity / pupil / locomotion. </td>
-<td>Like Neyhart et al., you can calibrate what and how representative the coarse arousal proxy is and make the transmitter-linked covariate a little stronger. </td>
-<td>The whole brain transmitter field, receptor state, region-generalizable ground truth, and long-timescale maintenance-state remain. </td>
-<td><strong>Up to limited covariate / proxy calibration</strong>. We do not write single-transmitter ground truth or whole-brain internal state. </td>
+<td><strong>mixed arousal proxy (pupil / HRV / locomotion / facial motion)</strong></td>
+<td>Behavior-linked arousal markers and their covariance with ongoing state. </td>
+<td>You can stratify coarse arousal-like state and test whether a behavioral proxy carries useful variance for the task. </td>
+<td>Transmitter identity, receptor family, regional release, cell-specific effect, and the whole-brain transmitter field remain unresolved. </td>
+<td><strong>Up to coarse covariate / stratification</strong>. We do not treat it as transmitter-specific ground truth. </td>
+</tr>
+<tr>
+<td><strong>local axon activity / transmitter sensor</strong></td>
+<td>Local cholinergic / aminergic axon activity or local extracellular transmitter signal in the measured region. </td>
+<td>You can calibrate local chemical dynamics, spatial heterogeneity, and where a mixed behavioral proxy fails or succeeds. </td>
+<td>The whole-brain distribution, receptor occupancy / downstream effect, and cross-species generalization to human current state remain unresolved. </td>
+<td><strong>Up to local transmitter-linked calibration</strong>. It is stronger than mixed proxy, but it is still not whole-brain neuromodulatory ground truth. </td>
+</tr>
+<tr>
+<td><strong>receptor / transporter atlas or autoradiography</strong></td>
+<td>Regional distribution of selected receptors / transporters and laminar density priors. </td>
+<td>You can show where selected transmitter systems are likely to differ and which cortical axes they follow. </td>
+<td>Current occupancy, task-evoked release, individual time-varying state, and cell-specific downstream effect remain unresolved. </td>
+<td><strong>Up to regional chemoarchitectural prior</strong>. It is not read as the current neuromodulatory state. </td>
+</tr>
+<tr>
+<td><strong>occupancy / release-sensitive PET</strong></td>
+<td>Ligand-specific receptor occupancy or challenge-dependent displacement signal over bounded time windows. </td>
+<td>You can quantify selected target engagement or release proxy for the chosen receptor family, ligand, and challenge. </td>
+<td>The complete transmitter field, unsampled receptor families, laminar / cell-specific effect, and continuous state outside the scan window remain unresolved. </td>
+<td><strong>Up to system-, ligand-, and challenge-limited proxy</strong>. We do not promote it to receptor-family-complete or whole-brain internal-state ground truth. </td>
 </tr>
 <tr>
 <td><strong>astrocyte / glial imaging</strong></td>
@@ -164,9 +185,18 @@ The weak point that needed another pass was that this page already called fMRI a
 The same logic applies to cortical hemodynamic modalities beyond fMRI. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">Yucel et al. (2015)</a> showed that short-separation regression improves both significance and localization for fNIRS tasks with differing autonomic responses. Therefore, on this site, fNIRS without <strong>short-separation / superficial diagnostic</strong> is not treated as a direct neural-difference readout either.
 </p>
 
-<h3>6. Neuromodulator / glia imaging reduces misreading of coarse proxies, but does not provide whole-brain ground truth</h3>
+<h3>6. Neuromodulatory routes form a ladder, not one stack</h3>
 <p>
-Neyhart et al. showed that cortical ACh dynamics are highly predictable from cholinergic axon activity and behavioral state, and also depend on distance from local axons and clearance kinetics. Cahill et al. showed that local neurotransmitter inputs are minute-long encoded into broad astrocyte networks. These teach us that just because ``pupil has increased'' or ``behavioral state has changed'' does not mean that the transmitter state or glial state can be simplified. Therefore, these stacks are very effective for <strong>proxy calibration</strong> and <strong>banning glia omission</strong>, but they do not directly become the ground truth of the whole brain's internal state.
+The weakness that needed another pass was that this page still let <strong>pupil / HRV</strong>, <strong>local transmitter imaging</strong>, <strong>receptor maps</strong>, and <strong>PET displacement / occupancy</strong> sound closer than they are. That was too weak. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> showed that pupil fluctuations track both adrenergic and cholinergic activity rather than a single transmitter. <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">Lohani et al. (2022)</a> showed that cortical cholinergic signals are spatially heterogeneous across behavioral states, and <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> showed that local ACh depends on axon activity and local clearance kinetics. On the human side, <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> and <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">Goulas et al. (2021)</a> showed that receptor maps are structured regional priors, while <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a> and <a href="https://doi.org/10.1038/s41467-019-09897-z" target="_blank">Lippert et al. (2019)</a> showed that raclopride PET gives challenge- and window-limited dopamine-release proxy. What follows directly is that <strong>neuromodulation is not one measurement class</strong>.
+</p>
+
+<strong>Site rule for the ladder</strong>
+<p>
+On this site, <strong>mixed arousal proxy</strong> is read as a coarse covariate, <strong>local transmitter sensor</strong> as local calibration, <strong>receptor / transporter atlas</strong> as a regional prior, and <strong>occupancy / displacement PET</strong> as a ligand- and challenge-limited proxy. None of those rungs is promoted by default to the claim that the current whole-brain neuromodulatory state was directly measured.
+</p>
+
+<p>
+The same caution extends to glia. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> showed that local neurotransmitter inputs are minute-long encoded into broad astrocyte networks. That is a real advance, but it is still a slow-state / support-state route, not an automatic shortcut to whole-brain internal-state completeness.
 </p>
 
 <h2>Practical rules arising from this criticism</h2>
@@ -178,7 +208,7 @@ Neyhart et al. showed that cortical ACh dynamics are highly predictable from cho
 <li><strong>Don't make multimodal a synonym for state-complete:</strong>Include in the text what latent state still remains. </li>
 <li><strong>When filling in unobserved states, write ``estimated'': </strong>If threshold / gain / set point is auto-completed from cell type, write ``latent inference''. </li>
 <li><strong>Do not promote BOLD / fNIRS amplitude to neural difference without hemodynamic audit:</strong>Write vascular-state / CVR calibration route or abstention explicitly. </li>
-<li><strong>Prohibit expressions that exceed the claim ceiling:</strong>For example, do not write EM alone as emulation-complete, Patch-seq as whole-brain state-complete, or pupil as transmitter ground truth. </li>
+<li><strong>Prohibit expressions that exceed the claim ceiling:</strong>For example, do not write EM alone as emulation-complete, Patch-seq as whole-brain state-complete, pupil as transmitter ground truth, receptor atlas as current transmitter state, or displacement PET as whole-brain neuromodulatory ground truth. </li>
 </ul>
 
 <table>
@@ -210,10 +240,10 @@ Neyhart et al. showed that cortical ACh dynamics are highly predictable from cho
 <td>Stop rephrasing connectome-complete as emulation-complete. </td>
 </tr>
 <tr>
-<td><strong>local transmitter / glia imaging</strong></td>
-<td>coverage, cross-stack calibration, cross-state / cross-day validation. </td>
-<td>Coarse proxy validity and slow-state modeling can be strengthened. </td>
-<td>Stop ground truth of single-transmitter global field and whole-brain internal state. </td>
+<td><strong>mixed proxy / transmitter sensor / receptor atlas / PET</strong></td>
+<td>cross-stack calibration, ligand / challenge disclosure, cross-state validation, and abstention boundary. </td>
+<td>It becomes easier to distinguish coarse arousal covariate, local calibration, regional prior, and challenge-limited target engagement. </td>
+<td>Stop whole-brain transmitter-field ground truth and receptor-family-complete internal-state claims. </td>
 </tr>
 </tbody>
 </table>
@@ -230,6 +260,12 @@ Neyhart et al. showed that cortical ACh dynamics are highly predictable from cho
 <li>Wu, S., Tyler, L. K., Henson, R. N. A., Rowe, J. B., Cam-CAN, &amp; Tsvetanov, K. A. (2023). Cerebral blood flow predicts multiple demand network activity and fluid intelligence across the adult lifespan. <em>Neurobiology of Aging</em>, 121, 1-14. <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">doi:10.1016/j.neurobiolaging.2022.09.006</a></li>
 <li>Yucel, M. A. Y., Selb, J., Aasted, C. M. A., Petkov, M. P., Becerra, L., Borsook, D., &amp; Boas, D. A. (2015). Short separation regression improves statistical significance and better localizes the hemodynamic response obtained by near-infrared spectroscopy for tasks with differing autonomic responses. <em>Neurophotonics</em>, 2(3), 035005. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">doi:10.1117/1.NPh.2.3.035005</a></li>
 <li>Epp, S. M., Castrillon, G., Yuan, B., Andrews-Hanna, J., Preibisch, C., &amp; Riedl, V. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
+<li>Reimer, J., McGinley, M. J., Liu, Y., et al. (2016). Pupil fluctuations track rapid changes in adrenergic and cholinergic activity in cortex. <em>Nature Communications</em>, 7, 13289. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">doi:10.1038/ncomms13289</a></li>
+<li>Lohani, S., Moberly, A. H., Benisty, H., et al. (2022). Spatiotemporally heterogeneous coordination of cholinergic and neocortical activity. <em>Nature Neuroscience</em>, 25(12), 1706-1713. <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">doi:10.1038/s41593-022-01202-6</a></li>
+<li>Hansen, J. Y., Shafiei, G., Markello, R. D., et al. (2022). Mapping neurotransmitter systems to the structural and functional organization of the human neocortex. <em>Nature Neuroscience</em>, 25(11), 1569-1581. <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">doi:10.1038/s41593-022-01186-3</a></li>
+<li>Goulas, A., Changeux, J.-P., Wagstyl, K., Amunts, K., Palomero-Gallagher, N., &amp; Hilgetag, C. C. (2021). The natural axis of transmitter receptor distribution in the human cerebral cortex. <em>PNAS</em>, 118(3), e2020574118. <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">doi:10.1073/pnas.2020574118</a></li>
+<li>Koepp, M. J., Gunn, R. N., Lawrence, A. D., et al. (1998). Evidence for striatal dopamine release during a video game. <em>Nature</em>, 393(6682), 266-268. <a href="https://doi.org/10.1038/30498" target="_blank">doi:10.1038/30498</a></li>
+<li>Lippert, R. N., Bolding, K. A., Abbott, L. F., et al. (2019). Time-dependent assessment of stimulus-evoked regional dopamine release. <em>Nature Communications</em>, 10, 3922. <a href="https://doi.org/10.1038/s41467-019-09897-z" target="_blank">doi:10.1038/s41467-019-09897-z</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <em>Cell Reports</em>, 43(10), 114808. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <em>Nature</em>, 629, 146-153. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Xu, W., et al. (2024). Sleep restores an optimal computational regime in cortical networks. <em>Nature Communications</em>, 15, 3820. <a href="https://doi.org/10.1038/s41467-024-47838-5" target="_blank">doi:10.1038/s41467-024-47838-5</a></li>

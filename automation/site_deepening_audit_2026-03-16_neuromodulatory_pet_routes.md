@@ -85,7 +85,7 @@
 3. Wong DF, Kuwabara H, Hsu DJ, et al. D2 receptor occupancy in the brains of healthy subjects by the novel atypical antipsychotic lurasidone. *J Clin Psychiatry*. 2013.
    - https://doi.org/10.4088/JCP.12m08042
 4. Koepp MJ, Gunn RN, Lawrence AD, et al. Evidence for striatal dopamine release during a video game. *Nature*. 1998.
-   - https://doi.org/10.1038/28364
+   - https://doi.org/10.1038/30498
 5. Lippert RN, Bolding KA, Abbott LF, et al. Time-dependent assessment of stimulus-evoked regional dopamine release. *Nature Communications*. 2019.
    - https://doi.org/10.1038/s41467-019-09897-z
 6. Reimer J, McGinley MJ, Liu Y, et al. Pupil fluctuations track rapid changes in adrenergic and cholinergic activity in cortex. *Nature Communications*. 2016.

@@ -282,3 +282,19 @@ Reasons for proceeding in this order:
 - Revalidated grant real IDs `G1-G6` (`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`) in `grant_queue` and `auto-research-funds` map docs.
 - Refreshed EEG inventory baseline from current CSV: `TOTAL=28,152`, `immediate=23,871`, `uncertain_public=3,692`, `account_required=585`, `restricted=4`.
 - Execution rule is unchanged: avoid generic sweep and maintain one-by-one deep operation for every RQ.
+
+## 2026-03-18 10:18 JST 再検証ログ（本run / 1件ずつ深掘りの固定）
+
+- 本ページの `RQ` 行を再計数し、`RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認しました。
+- `main EEG-DATA` 参照IDは `EEG-DATA/eeg_dataset_summary_ja.csv` で全件実在（欠落 `0`）を確認しました。
+- 助成実ID `G1-G6` は `grant_queue` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` で再参照可能でした。
+- 継続方針: 汎用要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` を維持します。
+
+### 直近で深掘りする6RQ（本run固定）
+
+1. `U4-2`（主データ `56` / `G1`）
+2. `U7-5`（主データ `676` / `G1`）
+3. `U8-4`（主データ `2412` / `G2`）
+4. `U11-1`（主データ `859` / `G2`）
+5. `U13-3`（主データ `509` / `G1`）
+6. `U14-6`（主データ `719` / `G1`）

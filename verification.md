@@ -710,8 +710,8 @@ The <strong>Observability Budget</strong> fixes what entered the sensor and what
 </tr>
 <tr>
 <td><strong>Neuromodulatory specificity</strong></td>
-<td>Write which transmitter-linked or arousal-linked state was directly measured, what proxy family was used, and what specificity / abstention limit still remains.</td>
-<td>Transmitter-specific internal-state claims are reduced to coarse covariate or stratification claims.</td>
+<td>Disclose whether the route was a mixed arousal proxy, local axon / transmitter sensor, receptor / transporter atlas, occupancy PET, or release-sensitive displacement PET; then report receptor family, ligand / challenge, temporal window, spatial scope, and abstention boundary.</td>
+<td>Momentary whole-brain transmitter-field, receptor-family-complete internal-state, and lamina- or cell-specific modulatory-effect claims fall back to coarse covariate, regional prior, or challenge-limited proxy claims.</td>
 </tr>
 <tr>
 <td><strong>Glial / slow-state support</strong></td>
@@ -728,7 +728,13 @@ The <strong>Observability Budget</strong> fixes what entered the sensor and what
 <div class="note-box">
 <strong>How to use this budget on this site</strong>
 <p>
-The latent-state error budget is not a second abstract. It is a <strong>submission-side stop-rule table</strong>. If a paper adds one extra evidence layer, such as transcriptomics, SV2A PET, myelin imaging, or a glial perturbation, it should say <strong>which error term that layer reduces under the same held-out condition</strong> and which latent families remain untouched. This is the site-wide rule behind the augmentation / ablation logic in <a href="#state-completeness-gate">State variable integrity gate</a>.
+The latent-state error budget is not a second abstract. It is a <strong>submission-side stop-rule table</strong>. If a paper adds one extra evidence layer, such as transcriptomics, SV2A PET, receptor / transporter atlas priors, occupancy or displacement PET, myelin imaging, or a glial perturbation, it should say <strong>which error term that layer reduces under the same held-out condition</strong> and which latent families remain untouched. This is the site-wide rule behind the augmentation / ablation logic in <a href="#state-completeness-gate">State variable integrity gate</a>.
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-18 addendum: neuromodulation is a ladder, not one proxy</strong>
+<p>
+On this site, <strong>mixed arousal proxy</strong>, <strong>local transmitter sensor</strong>, <strong>receptor / transporter atlas</strong>, and <strong>occupancy or displacement PET</strong> are not treated as equivalent. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> showed that pupil fluctuations track both adrenergic and cholinergic activity, <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> showed that local cortical ACh depends on axon activity and local clearance, <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> and <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">Goulas et al. (2021)</a> showed that receptor maps are structured regional priors, and <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a> plus <a href="https://doi.org/10.1038/s41467-019-09897-z" target="_blank">Lippert et al. (2019)</a> showed that raclopride PET gives task- and window-limited dopamine-release proxy. Therefore, a result must say which rung it used before any claim ceiling is raised.
 </p>
 </div>
 </section>
@@ -1069,10 +1075,10 @@ The weakness found in this re-audit was that by simply listing the state variabl
 <td>Human myelin maps or tract-speed estimates remain macro timing proxies; without external calibration they do not become per-axon timing ground truth. </td>
 </tr>
 <tr>
-<td><strong>+ neuromodulatory proxy</strong></td>
-<td>Providing predictive gain, proxy specificity, region/transmitter limits, and abstention under cross-state conditions. </td>
-<td>We can write that alertness and transmitter-linked state can be used as limited covariates. </td>
-<td>It is treated only as a stratification/covariate and cannot be interpreted as a ground truth. </td>
+<td><strong>+ neuromodulatory route audit</strong></td>
+<td>Compare the same baseline against mixed arousal proxy, local transmitter sensor, receptor / transporter atlas, occupancy PET, or release-sensitive PET under the same held-out state transition, and report ligand / challenge / time-window plus abstention separately. </td>
+<td>You can state more narrowly how much a selected transmitter-linked covariate, regional receptor prior, or challenge-limited release proxy improved prediction or stratification. </td>
+<td>Mixed proxy remains a covariate, receptor atlas remains a regional prior, and occupancy / displacement PET remains a ligand- and challenge-limited proxy rather than whole-brain neuromodulatory ground truth. </td>
 </tr>
 <tr>
 <td><strong>+ glial / slow-state</strong></td>
@@ -1388,6 +1394,11 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Ren, J., Sherry, A. D., &amp; Malloy, C. R. (2015). 31P-MRS of healthy human brain: ATP synthesis, metabolite concentrations, pH, and T1 relaxation times. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">doi:10.1002/nbm.3384</a></li>
 <li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
 <li>Rzechorzek, N. M., Thrippleton, M. J., Chappell, F. M., et al. (2022). A daily temperature rhythm in the human brain predicts survival after brain injury. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">doi:10.1093/brain/awab466</a></li>
+<li>Reimer, J., McGinley, M. J., Liu, Y., et al. (2016). Pupil fluctuations track rapid changes in adrenergic and cholinergic activity in cortex. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">doi:10.1038/ncomms13289</a></li>
+<li>Hansen, J. Y., Shafiei, G., Markello, R. D., et al. (2022). Mapping neurotransmitter systems to the structural and functional organization of the human neocortex. <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">doi:10.1038/s41593-022-01186-3</a></li>
+<li>Goulas, A., Changeux, J.-P., Wagstyl, K., Amunts, K., Palomero-Gallagher, N., &amp; Hilgetag, C. C. (2021). The natural axis of transmitter receptor distribution in the human cerebral cortex. <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">doi:10.1073/pnas.2020574118</a></li>
+<li>Koepp, M. J., Gunn, R. N., Lawrence, A. D., et al. (1998). Evidence for striatal dopamine release during a video game. <a href="https://doi.org/10.1038/30498" target="_blank">doi:10.1038/30498</a></li>
+<li>Lippert, R. N., Bolding, K. A., Abbott, L. F., et al. (2019). Time-dependent assessment of stimulus-evoked regional dopamine release. <a href="https://doi.org/10.1038/s41467-019-09897-z" target="_blank">doi:10.1038/s41467-019-09897-z</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Vadisiute, A., Meijer, E., Therpurakal, R. N., et al. (2024). Glial cells undergo rapid changes following acute chemogenetic manipulation of cortical layer 5 projection neurons. <a href="https://doi.org/10.1038/s42003-024-06994-w" target="_blank">doi:10.1038/s42003-024-06994-w</a></li>
