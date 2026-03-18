@@ -274,7 +274,7 @@ The same caution extends to glia. <a href="https://doi.org/10.1038/s41586-024-07
 <section class="section" id="human-maintenance-proxy-ladder">
 <h2 class="section-title">7. Human maintenance-state routes also form a ladder</h2>
 <p>
-Another weakness that remained on this page was that it separated generic measurement stacks while still leaving recent <strong>human maintenance-state evidence</strong> too easy to compress into one sentence such as ``human in vivo observability is getting close.'' That is too weak. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> pushed up <strong>local human nanoscale ultrastructure</strong>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> pushed up a <strong>regional synaptic-density atlas</strong>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> pushed up a <strong>whole-brain biochemical scaffold</strong>, <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> pushed up <strong>macro energetic routes</strong>, <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a> and <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">Qian et al. (2025)</a> pushed up <strong>macro ionic routes</strong>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a> pushed up <strong>macro thermal routes</strong>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> pushed up <strong>macro myelin mapping</strong>, <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>, <a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a>, and <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> pushed up <strong>perturbation-conditioned human plasticity / state-gated routes</strong>, and <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> plus <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> pushed up <strong>macro CSF / glymphatic support-state routes</strong>. What follows directly is that <strong>human evidence is layered across proxy classes</strong>, not a single near-direct route to current whole-brain maintenance-state.
+Another weakness that remained on this page was that it separated generic measurement stacks while still leaving recent <strong>human maintenance-state evidence</strong> too easy to compress into one sentence such as ``human in vivo observability is getting close.'' That is too weak. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> pushed up <strong>local human nanoscale ultrastructure</strong>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> pushed up a <strong>regional synaptic-density atlas</strong>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> pushed up a <strong>whole-brain biochemical scaffold</strong>, <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> pushed up <strong>macro energetic routes</strong>, <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a> and <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">Qian et al. (2025)</a> pushed up <strong>macro ionic routes</strong>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a> pushed up <strong>macro thermal routes</strong>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> pushed up <strong>macro myelin mapping</strong>, <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>, <a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a>, and <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> pushed up <strong>perturbation-conditioned human plasticity / state-gated routes</strong>, and <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> plus <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> pushed up <strong>macro CSF / glymphatic support-state routes</strong>. What follows directly is that <strong>human evidence is layered across proxy classes</strong>, not a single near-direct route to current whole-brain maintenance-state. A second correction is also required: those rows are not all equally mature, routine, or deployment-ready.
 </p>
 <table class="data-table">
 <thead>
@@ -299,13 +299,13 @@ Another weakness that remained on this page was that it separated generic measur
 <td><strong>Regional synaptic-density proxy</strong>. We do not read it as a direct measurement of current synaptic function.</td>
 </tr>
 <tr>
-<td><strong>Whole-brain metabolic connectome</strong><br>Lucchetti et al. (2025)</td>
+<td><strong>Whole-brain MRSI metabolic similarity scaffold</strong><br>Lucchetti et al. (2025)</td>
 <td>Parcel-level biochemical organization from whole-brain <sup>1</sup>H-MRSI metabolite profiles with within-subject metabolic similarity structure.</td>
 <td>Current transcriptional controller, branch-local energetic reserve, cell-specific recovery logic, and local transmitter / glial microstate.</td>
 <td><strong>Macro biochemical scaffold</strong>. It is not a local maintenance-state snapshot.</td>
 </tr>
 <tr>
-<td><strong>Human energetic imaging</strong><br>Ren et al. (2015); Li et al. (2025)</td>
+<td><strong>Human energetic imaging (31P-MRS / dynamic DMRSI)</strong><br>Ren et al. (2015); Li et al. (2025)</td>
 <td>ATP synthesis / pH and whole-brain glucose transport and metabolic-rate mapping in living humans.</td>
 <td>Which dendritic branch lacks ATP reserve, where mitochondria are parked, which compartment is energetically fragile right now, and which fission / fusion state is active.</td>
 <td><strong>Macro energetic proxy</strong>. It does not become branch-local mitochondrial ground truth.</td>
@@ -323,7 +323,7 @@ Another weakness that remained on this page was that it separated generic measur
 <td><strong>Macro thermal proxy</strong>. It is not cell-specific thermal-state ground truth.</td>
 </tr>
 <tr>
-<td><strong>Human myelin bilayer mapping</strong><br>Baadsvik et al. (2024)</td>
+<td><strong>Human myelin bilayer mapping (specialized proof-of-principle)</strong><br>Baadsvik et al. (2024)</td>
 <td>Direct MRI access to the myelin bilayer at macro scale in living human brain.</td>
 <td>Per-axon conduction controller, node / internode microgeometry, and local timing-state recovery.</td>
 <td><strong>Macro myelin proxy</strong>. It is not full timing-state recovery.</td>
@@ -341,7 +341,7 @@ Another weakness that remained on this page was that it separated generic measur
 <td><strong>State-gated perturbation proxy</strong>. It is not direct measurement of the excitability mechanism itself.</td>
 </tr>
 <tr>
-<td><strong>Human CSF / glymphatic routes</strong><br>Hirschler et al. (2025); Dagum et al. (2026)</td>
+<td><strong>Human CSF mobility / sleep-linked clearance proxy</strong><br>Hirschler et al. (2025); Dagum et al. (2026)</td>
 <td>In vivo CSF mobility mapping and sleep-related clearance evidence linking brain-to-plasma transport.</td>
 <td>Cell-specific immune control, local synaptic maintenance, and moment-to-moment neural state.</td>
 <td><strong>Macro support-state proxy</strong>. It is not a direct readout of local maintenance control.</td>
@@ -355,9 +355,15 @@ Another weakness that remained on this page was that it separated generic measur
 </tbody>
 </table>
 <div class="note-box">
+<strong>Proxy class and maturity have to be logged separately</strong>
+<p>
+The key operational criticism is that the presence of a human proxy class does not by itself tell you how mature the route is. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built an atlas from <strong>33 healthy participants</strong> calibrated against postmortem autoradiography. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derived a metabolic similarity scaffold from <strong>51 healthy adolescents</strong> with an <strong>independent replication sample of 13</strong>, using five-metabolite <sup>1</sup>H-MRSI and a correlation-based construction. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> reported whole-brain metabolic-rate mapping in <strong>five healthy participants</strong> at <strong>7 T</strong> with custom dual-frequency coils and blood-input modeling. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> showed myelin-bilayer mapping in <strong>two healthy volunteers</strong> on high-performance hardware. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> introduced a specialized 7 T CSF-mobility sequence in <strong>24 healthy adults</strong>, while <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> relied on older-adult crossover cohorts, an <strong>investigational wearable</strong>, and a <strong>compartmental model</strong> with notable QC attrition. Therefore, this page now treats <strong>proxy class</strong> and <strong>operational maturity</strong> as separate metadata that both have to be stated before claim ceilings are interpreted.
+</p>
+</div>
+<div class="note-box">
 <strong>Site rule for human proxy classes</strong>
 <p>
-On this site, human-side summaries must name the <strong>proxy class</strong> explicitly. ``Human evidence exists'' is too coarse. The summary has to tell the reader whether the result is a <strong>local structural scaffold</strong>, <strong>regional synaptic-density proxy</strong>, <strong>macro biochemical scaffold</strong>, <strong>perturbation-conditioned maintenance / state-gated perturbation proxy</strong>, <strong>macro energetic / ionic / thermal / myelin proxy</strong>, or <strong>macro support-state proxy</strong>.
+On this site, human-side summaries must name the <strong>proxy class</strong> explicitly. ``Human evidence exists'' is too coarse. The summary has to tell the reader whether the result is a <strong>local structural scaffold</strong>, <strong>regional synaptic-density proxy</strong>, <strong>macro biochemical scaffold</strong>, <strong>perturbation-conditioned maintenance / state-gated perturbation proxy</strong>, <strong>macro energetic / ionic / thermal / myelin proxy</strong>, or <strong>macro support-state proxy</strong>. When the route is still specialized, model-dependent, or small-cohort, that maturity limit must be stated alongside the proxy class rather than left implicit.
 </p>
 </div>
 <div class="note-box">
