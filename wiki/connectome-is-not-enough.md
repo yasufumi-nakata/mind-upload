@@ -10,7 +10,7 @@ description: We will summarize the reasons why storing only the connectome in WB
 article_type: Wiki
 subtitle: connectome-complete is not emulation-complete
 author: Mind Uploading Research Project
-last_updated: '2026-03-18'
+last_updated: '2026-03-19'
 note: Technical / natural science only
 audience: People who want to judge whether the wiring diagram is close to WBE based
   only on technology and natural science.
@@ -29,13 +29,14 @@ page_highlights:
 - Use only primary literature to separate missing state variables from parameter degeneracy.
 - We will also fix operational rules for how to read connectome-complete and connectome-constrained
   model on this site.
-- "Flagship connectome results are split into four evidence classes here: wiring atlas, same-brain local scaffold, connectome-constrained conditional predictor, and identifiability audit."
+- "Flagship connectome results are split into five evidence classes here: wiring atlas, same-brain local scaffold, human macro pathway prior / tractography connectome, connectome-constrained conditional predictor, and identifiability audit."
 - Rather than ending with enumeration, we use augmentation/ablation to fix what should
   be added from connectome-only to read the predictive gain.
 - "Timing-state is treated as more than a single delay constant: node/internode geometry,
   periaxonal structure, astrocyte control, and human macro timing proxies are read separately."
 - "Ionic milieu / chloride homeostasis is treated as another missing layer, because inhibition sign and sleep/wake state can still shift with local chloride set point and interstitial ion composition even on the same graph."
 - "Chemical connectome is not electrical-state complete: gap junctions, endogenous field effects, and direct inhibitory driving force remain separate variables."
+- "A diffusion-MRI-derived human connectome is treated as a macro pathway prior or targeted bundle hypothesis route, not as a synapse-resolved edge list."
 known_points:
 - Great progress has been made in creating a whole-brain connectome, but this alone
   does not mean that dynamic reproduction is complete.
@@ -49,7 +50,7 @@ known_points:
   claims about internal states.
 - Even in a connectome-constrained model, dynamics can degenerate if unmeasured cell/synapse/modification
   parameters remain.
-- Dorkenwald et al. (2024), MICrONS Consortium et al. (2025), Lappalainen et al. (2024), and Beiran & Litwin-Kumar (2025) support different kinds of progress and should not be collapsed into one story that connectome is "almost enough."
+- Dorkenwald et al. (2024), MICrONS Consortium et al. (2025), Thomas et al. (2014), Donahue et al. (2016), Schilling et al. (2020), Grisot et al. (2021), Lappalainen et al. (2024), and Beiran & Litwin-Kumar (2025) support different kinds of progress and should not be collapsed into one story that connectome is "almost enough."
 - Conditional predictions can be improved by adding same-brain function, transcriptomics,
   neuromodulatory dynamics, and glial slow state, but the improvement depends on the
   task, time constant, and external validation conditions.
@@ -96,7 +97,7 @@ recommended_pages:
 <div class="abstract-box">
 <h2>Conclusion</h2>
 <p>
-Although wiring diagrams are an important foundation for WBE,<strong>alone are not the minimum requirement for dynamic reproduction</strong>. Even within the same adjacency relationship, differences in cell type labeling, activity-dependent transcription / chromatin program, intrinsic excitability, synaptic efficiency, local proteostasis / synaptic-tagging route, perisynaptic ECM / PNN organization, ionic milieu / chloride homeostasis, shared extracellular / electrical state, conduction delay, neuronal modification, and glial connectivity state can significantly alter learning, phase synchronization, arousal-dependent responses, inhibitory sign, and long-term stability. Furthermore, connectome-constrained modeling research in 2024-2025 showed that even with the inclusion of wiring constraints, degeneracy in dynamics remains due to unmeasured parameters and omitted mechanisms. Therefore, this site treats<strong>connectome-complete as a structural atlas/scaffold achievement</strong> and not as<strong>emulation-complete</strong>. Similarly, the fact that a<strong>connectome-constrained model reproduced some activities</strong> cannot be read as state-complete reconstruction.
+Although wiring diagrams are an important foundation for WBE,<strong>alone are not the minimum requirement for dynamic reproduction</strong>. Even within the same adjacency relationship, differences in cell type labeling, activity-dependent transcription / chromatin program, intrinsic excitability, synaptic efficiency, local proteostasis / synaptic-tagging route, perisynaptic ECM / PNN organization, ionic milieu / chloride homeostasis, shared extracellular / electrical state, conduction delay, neuronal modification, and glial connectivity state can significantly alter learning, phase synchronization, arousal-dependent responses, inhibitory sign, and long-term stability. Furthermore, connectome-constrained modeling research in 2024-2025 showed that even with the inclusion of wiring constraints, degeneracy in dynamics remains due to unmeasured parameters and omitted mechanisms. Therefore, this site treats<strong>connectome-complete as a structural atlas/scaffold achievement</strong> and not as<strong>emulation-complete</strong>. Similarly, the fact that a<strong>connectome-constrained model reproduced some activities</strong> cannot be read as state-complete reconstruction. This warning becomes even stronger when the word <strong>connectome</strong> refers only to a diffusion-MRI-derived human tractography product, because current validation literature supports that object as a macro pathway prior rather than a synapse-resolved edge list.
 </p>
 </div>
 
@@ -204,12 +205,12 @@ The March 2026 re-audits first split <strong>intrinsic excitability / homeostasi
 <section class="section" id="connectome-progress">
 <h2 class="section-title">Wiring diagram research has made great progress, but it is not the end in itself</h2>
 <p>
-Dorkenwald et al. (2024), MICrONS Consortium et al. (2025), Lappalainen et al. (2024), and Beiran &amp; Litwin-Kumar (2025) changed the connectome discussion qualitatively. However, they did not all solve the same problem. The first gave a whole-adult-brain wiring atlas in fly, the second co-registered function and ultrastructure within one awake mouse visual-cortex volume, the third showed that a connectome-constrained and task-optimized model can predict rich activity in a fly visual subsystem, and the fourth showed theoretically that a connectome often still does not uniquely determine recurrent dynamics when biophysical parameters remain uncertain. Therefore, the correct reading is not “the connectome is nearly enough,” but rather that <strong>different papers remove different uncertainties while leaving other uncertainties intact</strong>.
+Dorkenwald et al. (2024), MICrONS Consortium et al. (2025), the tractography-validation literature from Thomas et al. (2014), Reveley et al. (2015), Donahue et al. (2016), Maier-Hein et al. (2017), Schilling et al. (2020), and Grisot et al. (2021), Lappalainen et al. (2024), and Beiran &amp; Litwin-Kumar (2025) changed the connectome discussion qualitatively. However, they did not all solve the same problem. The first gave a whole-adult-brain wiring atlas in fly, the second co-registered function and ultrastructure within one awake mouse visual-cortex volume, the tractography papers showed what can and cannot be inferred about long-range pathways from diffusion-MRI orientation data, the next showed that a connectome-constrained and task-optimized model can predict rich activity in a fly visual subsystem, and the last showed theoretically that a connectome often still does not uniquely determine recurrent dynamics when biophysical parameters remain uncertain. Therefore, the correct reading is not “the connectome is nearly enough,” but rather that <strong>different papers remove different uncertainties while leaving other uncertainties intact</strong>.
 </p>
 <div class="note-box">
 <strong>How this site now reads “connectome progress”</strong>
 <p>
-On this site, connectome-related progress is now separated into four evidence classes before any WBE claim is read: <strong>(1) wiring atlas</strong>, <strong>(2) same-brain local structure-function scaffold</strong>, <strong>(3) connectome-constrained conditional predictor</strong>, and <strong>(4) identifiability / degeneracy audit</strong>. Collapsing these into one slogan such as “the connectome is almost enough” is too weak, because each class answers a different question and leaves a different ceiling in place.
+On this site, connectome-related progress is now separated into five evidence classes before any WBE claim is read: <strong>(1) wiring atlas</strong>, <strong>(2) same-brain local structure-function scaffold</strong>, <strong>(3) human macro pathway prior / tractography connectome</strong>, <strong>(4) connectome-constrained conditional predictor</strong>, and <strong>(5) identifiability / degeneracy audit</strong>. Collapsing these into one slogan such as “the connectome is almost enough” is too weak, because each class answers a different question and leaves a different ceiling in place.
 </p>
 </div>
 <table class="data-table">
@@ -238,6 +239,13 @@ On this site, connectome-related progress is now separated into four evidence cl
 <td>Read as a <strong>same-brain local digital-twin scaffold</strong> for visual-cortex questions, not as a state-complete whole-brain template.</td>
 </tr>
 <tr>
+<td><strong>Human macro pathway prior / tractography connectome</strong></td>
+<td>Thomas et al. (2014); Donahue et al. (2016); Schilling et al. (2020); Grisot et al. (2021)</td>
+<td>Macro white-matter pathway priors, parcel-level connectivity clues, and targeted bundle reconstructions when strong anatomical start / end / exclusion constraints are supplied.</td>
+<td>Synapse-resolved edge completeness, cortical endpoint completeness across the whole brain, directionality, current weights, or unbiased discovery of all long-range pathways without strong priors.</td>
+<td>Read as a <strong>macro pathway prior / bundle-level hypothesis route</strong>, not as an edge-complete human connectome.</td>
+</tr>
+<tr>
 <td><strong>Connectome-constrained conditional predictor</strong></td>
 <td>Lappalainen et al. (2024)</td>
 <td>Detailed neural-activity predictions across the fly visual system when connectome structure is combined with task optimization, strongly reducing free parameters and yielding single-neuron-scale hypotheses.</td>
@@ -256,7 +264,20 @@ On this site, connectome-related progress is now separated into four evidence cl
 <div class="note-box">
 <strong>Operational rule added here</strong>
 <p>
-When a paper says that “connectome progress” moves WBE forward, this site now asks <strong>which of the four evidence classes improved</strong>. A stronger claim requires not just more structure, but a narrower remaining latent-state family under the same held-out or perturbed condition.
+When a paper says that “connectome progress” moves WBE forward, this site now asks <strong>which of the five evidence classes improved</strong>. A stronger claim requires not just more structure, but a narrower remaining latent-state family under the same held-out or perturbed condition.
+</p>
+</div>
+</section>
+
+<section class="section" id="tractography-ceiling">
+<h2 class="section-title">Human diffusion-MRI connectome is still a macro pathway prior</h2>
+<p>
+The earlier version of this site was already strong at saying that a connectome is not state-complete, but it still left one practical ambiguity too open: <strong>what if the “connectome” itself is a diffusion-MRI tractography product from a living human brain?</strong> Primary validation literature does not support reading that object as a synapse-resolved or edge-complete graph. <a href="https://doi.org/10.1073/pnas.1405672111" target="_blank">Thomas et al. (2014)</a> showed that even exceptional ex vivo macaque diffusion data did not yield high anatomical accuracy across tractography methods, with sensitivity/specificity trade-offs that changed by pathway. <a href="https://doi.org/10.1073/pnas.1418198112" target="_blank">Reveley et al. (2015)</a> showed that superficial white matter can block long-range tracking from roughly half of the cortical surface. <a href="https://doi.org/10.1523/JNEUROSCI.0493-16.2016" target="_blank">Donahue et al. (2016)</a> found useful but clearly incomplete predictive power for corticocortical connection strength relative to tracer data. <a href="https://doi.org/10.1038/s41467-017-01285-x" target="_blank">Maier-Hein et al. (2017)</a> showed in an open tractography challenge that most submissions recovered many invalid bundles, with 64% of systematically recovered bundles absent from the ground truth. <a href="https://doi.org/10.1007/s00429-020-02129-z" target="_blank">Schilling et al. (2020)</a> then showed that high anatomical accuracy is possible mainly when strong start / end / exclusion priors are supplied, and <a href="https://doi.org/10.1016/j.neuroimage.2021.118300" target="_blank">Grisot et al. (2021)</a> localized recurring same-brain errors at branching and turning configurations that are not fixed simply by higher q-space sampling.
+</p>
+<div class="note-box">
+<strong>Site rule for tractography-derived connectomes</strong>
+<p>
+On this site, a diffusion-MRI-derived human connectome is read as a <strong>macro pathway prior</strong> or <strong>targeted bundle hypothesis route</strong>. It can strengthen statements about major white-matter organization, parcel-level pathway likelihood, or bundle-specific anatomical hypotheses. It does <strong>not</strong> become a synapse-resolved edge list, a direction-complete cortical graph, or proof that the living human connectome is already close to WBE-ready capture.
 </p>
 </div>
 </section>
@@ -521,6 +542,12 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>, 640, 435–447. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Lappalainen, J. K., Tschopp, F. D., Prakhya, S., et al. (2024). Connectome-constrained networks predict neural activity across the fly visual system. <em>Nature</em>, 634, 1132–1140. <a href="https://doi.org/10.1038/s41586-024-07939-3" target="_blank">doi:10.1038/s41586-024-07939-3</a></li>
 <li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <em>Nature Neuroscience</em>, 28, 2561–2574. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
+<li>Thomas, C., Ye, F. Q., Irfanoglu, M. O., Modi, P., Saleem, K. S., Leopold, D. A., &amp; Pierpaoli, C. (2014). Anatomical accuracy of brain connections derived from diffusion MRI tractography is inherently limited. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 111(46), 16574–16579. <a href="https://doi.org/10.1073/pnas.1405672111" target="_blank">doi:10.1073/pnas.1405672111</a></li>
+<li>Reveley, C., Seth, A. K., Pierpaoli, C., Silva, A. C., Yu, D., Saunders, R. C., Leopold, D. A., &amp; Ye, F. Q. (2015). Superficial white matter fiber systems impede detection of long-range cortical connections in diffusion MR tractography. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 112(21), E2820–E2828. <a href="https://doi.org/10.1073/pnas.1418198112" target="_blank">doi:10.1073/pnas.1418198112</a></li>
+<li>Donahue, C. J., Sotiropoulos, S. N., Jbabdi, S., Hernandez-Fernandez, M., Behrens, T. E., Dyrby, T. B., Coalson, T., Kennedy, H., Knoblauch, K., Van Essen, D. C., &amp; Glasser, M. F. (2016). Using diffusion tractography to predict cortical connection strength and distance: A quantitative comparison with tracers in the monkey. <em>Journal of Neuroscience</em>, 36(25), 6758–6770. <a href="https://doi.org/10.1523/JNEUROSCI.0493-16.2016" target="_blank">doi:10.1523/JNEUROSCI.0493-16.2016</a></li>
+<li>Maier-Hein, K. H., Neher, P. F., Houde, J.-C., Côté, M.-A., Garyfallidis, E., Zhong, J., Chamberland, M., et al. (2017). The challenge of mapping the human connectome based on diffusion tractography. <em>Nature Communications</em>, 8, 1349. <a href="https://doi.org/10.1038/s41467-017-01285-x" target="_blank">doi:10.1038/s41467-017-01285-x</a></li>
+<li>Schilling, K. G., Petit, L., Rheault, F., Remedios, S., Pierpaoli, C., Anderson, A. W., Landman, B. A., &amp; Descoteaux, M. (2020). Brain connections derived from diffusion MRI tractography can be highly anatomically accurate if we know where white matter pathways start, where they end, and where they do not go. <em>Brain Structure and Function</em>, 225(8), 2387–2402. <a href="https://doi.org/10.1007/s00429-020-02129-z" target="_blank">doi:10.1007/s00429-020-02129-z</a></li>
+<li>Grisot, G., Haber, S. N., Hawrylycz, M., Yendiki, A., et al. (2021). Diffusion MRI and anatomic tracing in the same brain reveal common failure modes of tractography. <em>NeuroImage</em>, 239, 118300. <a href="https://doi.org/10.1016/j.neuroimage.2021.118300" target="_blank">doi:10.1016/j.neuroimage.2021.118300</a></li>
 <li>Galarreta, M., &amp; Hestrin, S. (1999). A network of fast-spiking cells in the neocortex connected by electrical synapses. <em>Nature</em>, 402, 72–75. <a href="https://doi.org/10.1038/99496" target="_blank">doi:10.1038/99496</a></li>
 <li>Anastassiou, C. A., Perin, R., Markram, H., &amp; Koch, C. (2011). Ephaptic coupling of cortical neurons. <em>Nature Neuroscience</em>, 14(2), 217–223. <a href="https://doi.org/10.1038/nn.2727" target="_blank">doi:10.1038/nn.2727</a></li>
 <li>Yang, Y.-C., Wang, G.-H., Chou, P., Hsueh, S.-W., Lai, Y.-C., &amp; Kuo, C.-C. (2024). Dynamic electrical synapses rewire brain networks for persistent oscillations and epileptogenesis. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 121(8), e2313042121. <a href="https://doi.org/10.1073/pnas.2313042121" target="_blank">doi:10.1073/pnas.2313042121</a></li>
