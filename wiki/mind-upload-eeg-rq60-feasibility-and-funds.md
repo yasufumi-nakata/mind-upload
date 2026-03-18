@@ -996,3 +996,36 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 4. `U11-1` 意識指標3系統の順位保存率（主データ `859` / 応募 `G2`）
 5. `U13-3` 同一出力・異内部機構の識別率（主データ `509` / 応募 `G1`）
 6. `U14-6` コンテナ固定時の再現コスト増分（主データ `719` / 応募 `G1`）
+
+## 2026-03-18 20:26 JST 再検証ログ（本run / 全60RQをテーマ別にEEG-DATAカテゴリへ再接続）
+
+- 作業前に `main` を `pull --ff-only` し、最新状態で検証しました。
+- `mind-upload` 側3ページ（`feasibility` / `deep-focus` / `playbook`）を突合し、`RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認しました。
+- 助成実ID `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）は `grant_queue` と `auto-research-funds` 正本で参照可能を再確認しました。
+- 依頼方針どおり、汎用俯瞰ではなく `1RQ=1検証命題=1応募テーマ=1主データ` を維持しつつ、全60RQをU群ごとに「どのEEG-DATAカテゴリを使えば実行できるか」へ再接続しました。
+
+### RQ群ごとの応募テーマとEEG-DATAカテゴリ対応（全60RQカバー）
+
+| 対象RQ群 | 主応募テーマ（auto-research-funds） | EEG-DATAで優先して使うカテゴリ（入口） | 補足（深掘り時の固定ポイント） |
+|---|---|---|---|
+| U0（同一性） | 同一性KPI/縦断同定（`G2` 主, `G3` 予備） | `by-target-task/motor-imagery-bci-speller.md`, `by-study-design/within-subject-repeated-measures.md`, `by-condition/eyes-open-closed.md` | セッション横断の閾値設計を先に固定 |
+| U1（逆問題） | 逆問題不確実性/ground-truth検証（`G1` 主, `G4` 予備） | `by-recording-modality/high-density-scalp-eeg.md`, `by-recording-modality/intracranial-ieeg-ecog-seeg.md`, `by-task-formulation/reconstruction-decoding.md` | 誤差伝播と後方分布の公開条件を固定 |
+| U3（主体境界） | 境界proxy/マルチモーダル統合（`G2` 主, `G6` 予備） | `by-aux-signal/fmri.md`, `by-aux-signal/fnirs.md`, `by-task-formulation/classification-discrete-labels.md` | EEG単独の主張範囲を限定して制度連携へ渡す |
+| U4（因果） | 介入同値/反証設計（`G1` 主, `G4` 予備） | `by-intervention/tms-rtms.md`, `by-task-formulation/control-actuation-online-control.md`, `by-executive-paradigm/stop-signal-countermanding.md` | 反事実評価と失敗閾値を事前登録 |
+| U7（標準化） | 同期監査/前処理CI/欠損ロバスト性（`G1` 主, `G3` 予備） | `by-aux-signal/fmri.md`, `by-aux-signal/fnirs.md`, `by-study-design/within-subject-repeated-measures.md` | `clock offset` と `sampling drift` を必須監査項目化 |
+| U8（閉ループ） | 安定化/再較正/フェイルセーフ（`G2` 主, `G5` 予備） | `by-task-formulation/control-actuation-online-control.md`, `by-response-mode/neurofeedback-closed-loop.md`, `by-intervention/dbs-direct-stimulation.md` | 安定率・停止介入率・回復時間を同時評価 |
+| U10（情報熱力学） | 理論整合とproxy相関（`G2` 主, `G6` 予備） | `by-stimulus/sleep.md`, `by-aux-signal/autonomic.md`, `by-aux-signal/ecg.md` | 熱散逸の直接主張は避け、proxy検証に限定 |
+| U11（意識指標） | 指標比較/失敗条件定義（`G2` 主, `G4` 予備） | `by-condition/sleep.md`, `by-intervention/sedation-anesthesia.md`, `by-task-formulation/regression-continuous-estimation.md` | 指標順位保存率と偽陽性/偽陰性を固定 |
+| U12（責任・同意） | 技術監査接続の制度設計（`G2` 主, `G6` 予備） | `by-study-design/within-subject-repeated-measures.md`, `by-task-formulation/forecasting-prognosis-risk.md`, `by-condition/resting-state.md` | EEGは監査ログ補助証拠として扱う |
+| U13（模倣分離） | 意味一致/因果一致の分離評価（`G1` 主, `G4` 予備） | `by-stimulus/speech-language.md`, `by-response-mode/speech-production-verbal-response.md`, `by-task-formulation/reconstruction-decoding.md` | 模倣スコア単独合格を禁止 |
+| U14（追試可能性） | リーク監査/再現コスト運用（`G1` 主, `G3` 予備） | `by-condition/p300.md`, `by-task-formulation/classification-discrete-labels.md`, `by-study-design/cross-sectional-cohort-observational.md` | 分割規則・カード・否定例公開を運用固定 |
+| U15（制度統合） | neurorights監査項目化（`G2` 主, `G6` 予備） | `by-condition/driving.md`, `by-condition/sleep.md`, `by-task-formulation/forecasting-prognosis-risk.md` | 停止条件と更新条件を制度KPIへ接続 |
+
+### 本runで固定した次の深掘り順（1件ずつ）
+
+1. `U4-2`（介入最小主張）
+2. `U7-5`（前処理CI閾値）
+3. `U8-4`（フェイルセーフ評価）
+4. `U11-1`（意識指標順位保存）
+5. `U13-3`（同一出力・異機構検出）
+6. `U14-6`（再現コスト上限）
