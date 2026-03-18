@@ -17,7 +17,7 @@ reading_time: "25-40分"
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-18 / 位置づけ: RQ-by-RQ Deep Dive
+- 更新日: 2026-03-19 / 位置づけ: RQ-by-RQ Deep Dive
 
 ## このページの役割
 このページは research_harvest_50 の60 RQを対象に、EEG-DATAで解ける範囲をA/B/Cで判定し、各RQごとの検証設計・応募テーマ・使うデータセットIDをまとめた実務版です。
@@ -431,3 +431,11 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` と突合し、`1RQ=1検証命題=1応募テーマ=1主データ` の欠損がないことを確認しました。
 - 本ページで参照する EEG 主要ID群（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と再照合し、未解決ID `0` を確認しました。
 - `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` 側の `RQ行数=60` も再確認し、wiki間整合を維持しました。
+
+## 2026-03-19 06:03 JST 再検証ログ（本run / 1RQ深掘り運用の再確認）
+
+- 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull --ff-only origin main` を実行し、`Already up to date` を確認しました。
+- 本ページの `RQ` 行を再計数し、`RQ_TOTAL=60` を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` を再計数し、全60行で `検証可否` `深掘り検証設計` `応募テーマ` `推奨EEG-DATA` が欠損なく埋まっていることを確認しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` および `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` と突合し、`1RQ=1検証命題=1応募テーマ=1主データ` の整合を維持しました。
+- EEG参照IDは `EEG-DATA/eeg_dataset_summary_ja.csv` と突合し、未解決ID `0` を確認しました。
