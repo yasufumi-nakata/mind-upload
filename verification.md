@@ -18,6 +18,7 @@ page_highlights:
   - "This page explains why collecting data alone is not the same as making progress."
   - "For brain-to-text and speech decode, the Neural Contribution Card fixes task constraint, language prior, candidate set, no-brain / no-LM / shuffle baselines, and subject cooperation."
   - "For multimodal or atlas-prior results, the Fusion Card is added on top of the Observability Budget so acquisition relation, synchronization, fusion model, vascular-state / CVR limits for hemodynamic stacks, and external validation are fixed explicitly."
+  - "For diffusion-MRI tractography connectomes, the Observability Budget now requires a tractography route card that names direct observables, priors / filtering, uncertainty, and abstention."
   - "For ESI claims, simulation / phantom, stimulation ground truth, simultaneous invasive recording, and postsurgical outcome are separate validation classes; 'externally validated' alone is insufficient."
   - "At L2 and above, the latent-state error budget is added on top of the Observability Budget so the still-unobserved states that stop the claim are disclosed."
   - "At L2 and above, perisynaptic ECM / PNN state is separated from synaptic weights and glia when a claim depends on adult plasticity, receptor mobility, or memory stabilization."
@@ -699,9 +700,46 @@ Hemodynamic stacks do not carry only neural uncertainty; they also carry a <stro
 </p>
 </div>
 <div class="note-box">
+<strong>2026-03-19 addendum: tractography connectomes need a tractography route card</strong>
+<p>
+For diffusion-MRI-derived connectomes, the modality label alone is not enough. <a href="https://doi.org/10.1016/j.neuroimage.2023.120376" target="_blank">Sarwar et al. (2023)</a> showed that filtering gains are modest in complex human-like architectures, <a href="https://doi.org/10.1016/j.neuroimage.2024.120904" target="_blank">He et al. (2024)</a> showed that filtering can significantly shift laterality indices for more than 10% of connections, <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">McMaster et al. (2025)</a> showed that voxel size changes the resulting connectome, <a href="https://doi.org/10.1016/j.media.2025.103580" target="_blank">Manzano-Patrón et al. (2025)</a> made fibre-orientation uncertainty explicit rather than silent, and <a href="https://doi.org/10.1016/j.media.2025.103498" target="_blank">Zhu et al. (2025)</a> improved tractography by fusing MRI with microscopy. Therefore, this site now asks any tractography-derived connectome claim to attach a <strong>tractography route card</strong> naming what was directly measured, which priors and filtering steps shaped the graph, how uncertainty and resolution sensitivity were quantified, what external calibration exists, and where abstention begins. The longer public reading rule is summarized in <a href="wiki/connectome-is-not-enough.html#tractography-route-card">Wiki: tractography route card</a>.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Tractography route-card field</th>
+<th>Minimum disclosure</th>
+<th>What this site stops claiming if absent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Direct observables</strong></td>
+<td>Write voxel size, shell / b-value scheme, orientation model, and state explicitly that the direct observable is diffusion signal / local fibre-orientation estimate.</td>
+<td>The streamline graph is not read as directly observed edges.</td>
+</tr>
+<tr>
+<td><strong>Priors and filtering</strong></td>
+<td>Write seeding rule, deterministic / probabilistic mode, start / end / exclusion ROIs, atlas constraints, stopping rules, and filtering / weighting method.</td>
+<td>Prior-driven bundle recovery is not read as unbiased connectome discovery.</td>
+</tr>
+<tr>
+<td><strong>Uncertainty and stability</strong></td>
+<td>Report resolution sensitivity, scan-rescan or ensemble stability, and posterior / bootstrap uncertainty for the headline graph metric.</td>
+<td>Reported connectome differences stay pipeline-conditioned rather than anatomical by default.</td>
+</tr>
+<tr>
+<td><strong>External calibration and ceiling</strong></td>
+<td>Name any tracer / histology / microscopy / phantom route and declare the ceiling as macro pathway prior, targeted bundle hypothesis, or calibrated bundle comparison.</td>
+<td>The result is not promoted to edge-complete graph or WBE-ready connectome language.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
 <strong>Minimum operating rules</strong>
 <p>
-If this card is missing, this site treats the result as <strong>L0/L1 reproducible analysis or limited decode</strong> and does not promote it to L2 or above. For example, the default ceiling is <strong>macro-state tracking</strong> for <strong>EEG / HD-EEG + MRI only</strong>, <strong>an implant-region local population window</strong> for <strong>high-density extracellular probe only</strong>, <strong>structural scaffold</strong> for <strong>volume EM only</strong>, <strong>molecular / spatial prior</strong> for <strong>whole-brain atlas only</strong>, and still only <strong>local conditional prediction</strong> even for <strong>same-brain calcium + EM</strong>. For hemodynamic modalities, a group or cross-day BOLD / fNIRS difference without <strong>vascular-state / CVR</strong> or <strong>short-separation / superficial-bias</strong> audit is not accepted here as a neural difference. If a chronic-probe result lacks a unit-identity audit, single-unit longitudinal claims are not accepted. Detailed stack-specific ceilings and the <strong>state variable × timescale</strong> matrix are summarized in <a href="wiki/measurement-stack-and-claim-ceiling.html#state-variable-matrix">Wiki: observability and claim ceiling by measurement stack</a>.
+If this card is missing, this site treats the result as <strong>L0/L1 reproducible analysis or limited decode</strong> and does not promote it to L2 or above. For example, the default ceiling is <strong>macro-state tracking</strong> for <strong>EEG / HD-EEG + MRI only</strong>, <strong>an implant-region local population window</strong> for <strong>high-density extracellular probe only</strong>, <strong>structural scaffold</strong> for <strong>volume EM only</strong>, <strong>molecular / spatial prior</strong> for <strong>whole-brain atlas only</strong>, and still only <strong>local conditional prediction</strong> even for <strong>same-brain calcium + EM</strong>. For hemodynamic modalities, a group or cross-day BOLD / fNIRS difference without <strong>vascular-state / CVR</strong> or <strong>short-separation / superficial-bias</strong> audit is not accepted here as a neural difference. For diffusion-MRI tractography, a connectome claim without a <strong>tractography route card</strong> is not accepted here as an edge-complete graph and remains at the <strong>macro pathway prior / targeted bundle hypothesis</strong> ceiling. If a chronic-probe result lacks a unit-identity audit, single-unit longitudinal claims are not accepted. Detailed stack-specific ceilings and the <strong>state variable × timescale</strong> matrix are summarized in <a href="wiki/measurement-stack-and-claim-ceiling.html#state-variable-matrix">Wiki: observability and claim ceiling by measurement stack</a>.
 </p>
 </div>
 </section>
@@ -1405,6 +1443,11 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Unnwongse, K., et al. (2023). Validating EEG source imaging using intracranial electrical stimulation. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
 <li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
 <li>Birot, G., Spinelli, L., Vulliemoz, S., et al. (2014). Head model and electrical source imaging: a study of 38 epileptic patients. <a href="https://doi.org/10.1016/j.nicl.2014.06.005" target="_blank">doi:10.1016/j.nicl.2014.06.005</a></li>
+<li>Sarwar, T., Ramamohanarao, K., Daducci, A., Schiavi, S., Smith, R. E., &amp; Zalesky, A. (2023). Evaluation of tractogram filtering methods using human-like connectome phantoms. <a href="https://doi.org/10.1016/j.neuroimage.2023.120376" target="_blank">doi:10.1016/j.neuroimage.2023.120376</a></li>
+<li>He, Y., Hong, Y., Wu, Y., et al. (2024). Spherical-deconvolution informed filtering of tractograms changes laterality of structural connectome. <a href="https://doi.org/10.1016/j.neuroimage.2024.120904" target="_blank">doi:10.1016/j.neuroimage.2024.120904</a></li>
+<li>McMaster, E. M., Newlin, N. R., Rudravaram, G., et al. (2025). Harmonized connectome resampling for variance in voxel sizes. <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">doi:10.1016/j.mri.2025.110424</a></li>
+<li>Manzano-Patrón, J. P., Deistler, M., Schröder, C., et al. (2025). Uncertainty mapping and probabilistic tractography using Simulation-based Inference in diffusion MRI: A comparison with classical Bayes. <a href="https://doi.org/10.1016/j.media.2025.103580" target="_blank">doi:10.1016/j.media.2025.103580</a></li>
+<li>Zhu, S., Huszar, I. N., Cottaar, M., et al. (2025). Imaging the structural connectome with hybrid MRI-microscopy tractography. <a href="https://doi.org/10.1016/j.media.2025.103498" target="_blank">doi:10.1016/j.media.2025.103498</a></li>
 <li>Delorme, A. (2023). EEG is better left alone. <a href="https://doi.org/10.1038/s41598-023-27528-0" target="_blank">doi:10.1038/s41598-023-27528-0</a></li>
 <li>Klug, M., &amp; Kloosterman, N. A. (2022). Zapline-plus. <a href="https://doi.org/10.1002/hbm.25832" target="_blank">doi:10.1002/hbm.25832</a></li>
 <li>Hernandez-Pavon, J. C., et al. (2023). TMS combined with EEG: recommendations and open issues. <a href="https://doi.org/10.1016/j.brs.2023.02.009" target="_blank">doi:10.1016/j.brs.2023.02.009</a></li>

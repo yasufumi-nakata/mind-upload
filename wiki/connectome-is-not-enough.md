@@ -36,7 +36,7 @@ page_highlights:
   periaxonal structure, astrocyte control, and human macro timing proxies are read separately."
 - "Ionic milieu / chloride homeostasis is treated as another missing layer, because inhibition sign and sleep/wake state can still shift with local chloride set point and interstitial ion composition even on the same graph."
 - "Chemical connectome is not electrical-state complete: gap junctions, endogenous field effects, and direct inhibitory driving force remain separate variables."
-- "A diffusion-MRI-derived human connectome is treated as a macro pathway prior or targeted bundle hypothesis route, not as a synapse-resolved edge list."
+- "A diffusion-MRI-derived human connectome is treated as an algorithm- and resolution-conditioned macro pathway prior or targeted bundle hypothesis route, not as a synapse-resolved edge list."
 known_points:
 - Great progress has been made in creating a whole-brain connectome, but this alone
   does not mean that dynamic reproduction is complete.
@@ -241,9 +241,9 @@ On this site, connectome-related progress is now separated into five evidence cl
 <tr>
 <td><strong>Human macro pathway prior / tractography connectome</strong></td>
 <td>Thomas et al. (2014); Donahue et al. (2016); Schilling et al. (2020); Grisot et al. (2021)</td>
-<td>Macro white-matter pathway priors, parcel-level connectivity clues, and targeted bundle reconstructions when strong anatomical start / end / exclusion constraints are supplied.</td>
-<td>Synapse-resolved edge completeness, cortical endpoint completeness across the whole brain, directionality, current weights, or unbiased discovery of all long-range pathways without strong priors.</td>
-<td>Read as a <strong>macro pathway prior / bundle-level hypothesis route</strong>, not as an edge-complete human connectome.</td>
+<td>Macro white-matter pathway priors, parcel-level connectivity clues, and targeted bundle reconstructions when strong anatomical start / end / exclusion constraints are supplied and the tractography route is disclosed.</td>
+<td>Synapse-resolved edge completeness, cortical endpoint completeness across the whole brain, directionality, current weights, stable graph metrics independent of filtering / voxel size, or unbiased discovery of all long-range pathways without strong priors.</td>
+<td>Read as an <strong>algorithm-conditioned macro pathway prior / bundle-level hypothesis route</strong>, not as an edge-complete human connectome.</td>
 </tr>
 <tr>
 <td><strong>Connectome-constrained conditional predictor</strong></td>
@@ -277,7 +277,53 @@ The earlier version of this site was already strong at saying that a connectome 
 <div class="note-box">
 <strong>Site rule for tractography-derived connectomes</strong>
 <p>
-On this site, a diffusion-MRI-derived human connectome is read as a <strong>macro pathway prior</strong> or <strong>targeted bundle hypothesis route</strong>. It can strengthen statements about major white-matter organization, parcel-level pathway likelihood, or bundle-specific anatomical hypotheses. It does <strong>not</strong> become a synapse-resolved edge list, a direction-complete cortical graph, or proof that the living human connectome is already close to WBE-ready capture.
+On this site, a diffusion-MRI-derived human connectome is read as an <strong>algorithm- and resolution-conditioned macro pathway prior</strong> or <strong>targeted bundle hypothesis route</strong>. It can strengthen statements about major white-matter organization, parcel-level pathway likelihood, or bundle-specific anatomical hypotheses. It does <strong>not</strong> become a synapse-resolved edge list, a direction-complete cortical graph, or proof that the living human connectome is already close to WBE-ready capture.
+</p>
+</div>
+<h3 id="tractography-route-card">Tractography connectomes need a route card</h3>
+<p>
+The earlier wording on this site said "macro pathway prior," which was directionally correct, but still too permissive in practice. It left room for readers to treat any tractography-derived connectome as a stable graph once a modern pipeline had been applied. The newer primary literature argues against that shortcut. <a href="https://doi.org/10.1016/j.neuroimage.2023.120376" target="_blank">Sarwar et al. (2023)</a> showed that filtering improves simple tubular bundles much more than complex brain-like architectures, <a href="https://doi.org/10.1016/j.neuroimage.2024.120904" target="_blank">He et al. (2024)</a> showed that tractography filtering can significantly change laterality indices for more than 10% of connections, <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">McMaster et al. (2025)</a> showed that voxel resolution changes the resulting connectome and recommended resampling to 1 mm isotropic for robust comparisons, <a href="https://doi.org/10.1016/j.media.2025.103580" target="_blank">Manzano-Patrón et al. (2025)</a> showed that fibre-orientation uncertainty can be propagated into tractography rather than hidden, and <a href="https://doi.org/10.1016/j.media.2025.103498" target="_blank">Zhu et al. (2025)</a> improved whole-brain reconstruction by fusing MRI with microscopy. That combination of results means that on this site the phrase <strong>human tractography connectome</strong> is not one object. It is an <strong>acquisition- and reconstruction-conditioned estimate</strong>.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Route-card item</th>
+<th>What must be disclosed</th>
+<th>Why this site asks for it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Direct observables</strong></td>
+<td>Write voxel size, shell / b-value scheme, orientation model, and state explicitly that the direct observable is diffusion signal / local fibre-orientation estimate rather than synapse identity, direction, or weight.</td>
+<td>Otherwise a streamline graph is misread as if the edges themselves had been directly observed.</td>
+</tr>
+<tr>
+<td><strong>Priors and post-processing</strong></td>
+<td>Write seeding rule, deterministic / probabilistic mode, start / end / exclusion ROIs, atlas constraints, stopping rules, and filtering / weighting method.</td>
+<td>Otherwise prior-driven bundle recovery is silently rephrased as unbiased graph discovery.</td>
+</tr>
+<tr>
+<td><strong>Instability and uncertainty</strong></td>
+<td>Report scan-rescan or ensemble stability, posterior / bootstrap uncertainty, and sensitivity to voxel size or filtering for the headline graph metric.</td>
+<td>Otherwise a connectome difference may only reflect pipeline choice rather than anatomy.</td>
+</tr>
+<tr>
+<td><strong>External calibration route</strong></td>
+<td>Name any tracer, same-brain histology, microscopy, or phantom route and say which error term it audits.</td>
+<td>Otherwise "biologically plausible" is confused with validated.</td>
+</tr>
+<tr>
+<td><strong>Ceiling and abstention</strong></td>
+<td>Declare whether the claim stops at macro pathway prior, targeted bundle hypothesis, or calibrated bundle comparison, and write what would trigger abstention.</td>
+<td>Otherwise tractography is rolled up to edge-complete or WBE-ready language.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Operational rule added in this pass</strong>
+<p>
+If a tractography-derived connectome claim lacks this route card, this site does not read it as a connectome-complete result. The default ceiling stays at <strong>macro pathway prior / targeted bundle hypothesis</strong>. The burden of proof is on the paper to show which part of the pipeline created the claim and which part has been externally calibrated.
 </p>
 </div>
 </section>
@@ -548,6 +594,11 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li>Maier-Hein, K. H., Neher, P. F., Houde, J.-C., Côté, M.-A., Garyfallidis, E., Zhong, J., Chamberland, M., et al. (2017). The challenge of mapping the human connectome based on diffusion tractography. <em>Nature Communications</em>, 8, 1349. <a href="https://doi.org/10.1038/s41467-017-01285-x" target="_blank">doi:10.1038/s41467-017-01285-x</a></li>
 <li>Schilling, K. G., Petit, L., Rheault, F., Remedios, S., Pierpaoli, C., Anderson, A. W., Landman, B. A., &amp; Descoteaux, M. (2020). Brain connections derived from diffusion MRI tractography can be highly anatomically accurate if we know where white matter pathways start, where they end, and where they do not go. <em>Brain Structure and Function</em>, 225(8), 2387–2402. <a href="https://doi.org/10.1007/s00429-020-02129-z" target="_blank">doi:10.1007/s00429-020-02129-z</a></li>
 <li>Grisot, G., Haber, S. N., Hawrylycz, M., Yendiki, A., et al. (2021). Diffusion MRI and anatomic tracing in the same brain reveal common failure modes of tractography. <em>NeuroImage</em>, 239, 118300. <a href="https://doi.org/10.1016/j.neuroimage.2021.118300" target="_blank">doi:10.1016/j.neuroimage.2021.118300</a></li>
+<li>Sarwar, T., Ramamohanarao, K., Daducci, A., Schiavi, S., Smith, R. E., &amp; Zalesky, A. (2023). Evaluation of tractogram filtering methods using human-like connectome phantoms. <em>NeuroImage</em>, 282, 120376. <a href="https://doi.org/10.1016/j.neuroimage.2023.120376" target="_blank">doi:10.1016/j.neuroimage.2023.120376</a></li>
+<li>He, Y., Hong, Y., Wu, Y., et al. (2024). Spherical-deconvolution informed filtering of tractograms changes laterality of structural connectome. <em>NeuroImage</em>, 303, 120904. <a href="https://doi.org/10.1016/j.neuroimage.2024.120904" target="_blank">doi:10.1016/j.neuroimage.2024.120904</a></li>
+<li>McMaster, E. M., Newlin, N. R., Rudravaram, G., et al. (2025). Harmonized connectome resampling for variance in voxel sizes. <em>Magnetic Resonance Imaging</em>, 121, 110424. <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">doi:10.1016/j.mri.2025.110424</a></li>
+<li>Manzano-Patrón, J. P., Deistler, M., Schröder, C., et al. (2025). Uncertainty mapping and probabilistic tractography using Simulation-based Inference in diffusion MRI: A comparison with classical Bayes. <em>Medical Image Analysis</em>, 103, 103580. <a href="https://doi.org/10.1016/j.media.2025.103580" target="_blank">doi:10.1016/j.media.2025.103580</a></li>
+<li>Zhu, S., Huszar, I. N., Cottaar, M., et al. (2025). Imaging the structural connectome with hybrid MRI-microscopy tractography. <em>Medical Image Analysis</em>, 102, 103498. <a href="https://doi.org/10.1016/j.media.2025.103498" target="_blank">doi:10.1016/j.media.2025.103498</a></li>
 <li>Galarreta, M., &amp; Hestrin, S. (1999). A network of fast-spiking cells in the neocortex connected by electrical synapses. <em>Nature</em>, 402, 72–75. <a href="https://doi.org/10.1038/99496" target="_blank">doi:10.1038/99496</a></li>
 <li>Anastassiou, C. A., Perin, R., Markram, H., &amp; Koch, C. (2011). Ephaptic coupling of cortical neurons. <em>Nature Neuroscience</em>, 14(2), 217–223. <a href="https://doi.org/10.1038/nn.2727" target="_blank">doi:10.1038/nn.2727</a></li>
 <li>Yang, Y.-C., Wang, G.-H., Chou, P., Hsueh, S.-W., Lai, Y.-C., &amp; Kuo, C.-C. (2024). Dynamic electrical synapses rewire brain networks for persistent oscillations and epileptogenesis. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 121(8), e2313042121. <a href="https://doi.org/10.1073/pnas.2313042121" target="_blank">doi:10.1073/pnas.2313042121</a></li>
