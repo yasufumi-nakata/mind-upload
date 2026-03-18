@@ -7,7 +7,7 @@
 - 更新日: 2026-03-18 / 位置づけ: Technical / natural science only
 
 ## このページの役割
-This page is a wiki that fixes the ``upper claim limit for each measurement stack,'' which is often overlooked in WBE discussions. It's not enough to say that hidden state is important. Based on primary literature, we will explain what each of EEG/MEG/fMRI, spatial transcriptomics, Patch-seq, volume EM, same-brain functional connectomics, mixed arousal proxy, local transmitter sensor, receptor atlas / PET, and glia imaging directly observes and what remains latent.
+This page is a wiki that fixes the ``upper claim limit for each measurement stack,'' which is often overlooked in WBE discussions. It's not enough to say that hidden state is important. Based on primary literature, we will explain what each of EEG/MEG/fMRI, spatial transcriptomics, Patch-seq, volume EM, same-brain functional connectomics, synaptic-density PET, mixed arousal proxy, local transmitter sensor, receptor atlas / PET, and glia imaging directly observes and what remains latent.
 
 ## 正確さの前提
 The ``claim ceiling'' column below is not the conclusion declared by each paper. This is an operational inference drawn by this site from variables directly observed in primary literature and state variables that are still unobserved.
@@ -116,6 +116,13 @@ The last column of the table below is not a summary of each paper, but the opera
 <td><strong>Up to local conditional prediction and local functional twin</strong>. We do not promote whole-brain WBE or state-complete reconstruction. </td>
 </tr>
 <tr>
+<td><strong>SV2A PET / synaptic-density PET</strong></td>
+<td>Tracer-defined regional SV2A binding interpreted through kinetic modeling or a validated simplified scan window. </td>
+<td>You can strengthen human in vivo regional synaptic-density gradients, atlas construction, and disease-linked density comparisons. </td>
+<td>Current release probability, postsynaptic receptor occupancy, task-evoked momentary synaptic efficacy, and branch-local plasticity state remain unresolved, and anatomy/partial-volume handling can still matter for interpretation. </td>
+<td><strong>Up to regional synaptic-density proxy</strong>. We do not read it as current synaptic efficacy or momentary synaptic state. </td>
+</tr>
+<tr>
 <td><strong>mixed arousal proxy (pupil / HRV / locomotion / facial motion)</strong></td>
 <td>Behavior-linked arousal markers and their covariance with ongoing state. </td>
 <td>You can stratify coarse arousal-like state and test whether a behavioral proxy carries useful variance for the task. </td>
@@ -131,14 +138,14 @@ The last column of the table below is not a summary of each paper, but the opera
 </tr>
 <tr>
 <td><strong>receptor / transporter atlas or autoradiography</strong></td>
-<td>Regional distribution of selected receptors / transporters and laminar density priors. </td>
+<td>Group-average regional distribution of selected receptors / transporters and laminar density priors from PET and autoradiography. </td>
 <td>You can show where selected transmitter systems are likely to differ and which cortical axes they follow. </td>
 <td>Current occupancy, task-evoked release, individual time-varying state, and cell-specific downstream effect remain unresolved. </td>
 <td><strong>Up to regional chemoarchitectural prior</strong>. It is not read as the current neuromodulatory state. </td>
 </tr>
 <tr>
 <td><strong>occupancy / release-sensitive PET</strong></td>
-<td>Ligand-specific receptor occupancy or challenge-dependent displacement signal over bounded time windows. </td>
+<td>Ligand-specific receptor occupancy or challenge-dependent displacement signal over bounded scan windows, interpreted through an explicit tracer and quantification model. </td>
 <td>You can quantify selected target engagement or release proxy for the chosen receptor family, ligand, and challenge. </td>
 <td>The complete transmitter field, unsampled receptor families, laminar / cell-specific effect, and continuous state outside the scan window remain unresolved. </td>
 <td><strong>Up to system-, ligand-, and challenge-limited proxy</strong>. We do not promote it to receptor-family-complete or whole-brain internal-state ground truth. </td>
@@ -187,12 +194,17 @@ The same logic applies to cortical hemodynamic modalities beyond fMRI. <a href="
 
 <h3>6. Neuromodulatory routes form a ladder, not one stack</h3>
 <p>
-The weakness that needed another pass was that this page still let <strong>pupil / HRV</strong>, <strong>local transmitter imaging</strong>, <strong>receptor maps</strong>, and <strong>PET displacement / occupancy</strong> sound closer than they are. That was too weak. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> showed that pupil fluctuations track both adrenergic and cholinergic activity rather than a single transmitter. <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">Lohani et al. (2022)</a> showed that cortical cholinergic signals are spatially heterogeneous across behavioral states, and <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> showed that local ACh depends on axon activity and local clearance kinetics. On the human side, <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> and <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">Goulas et al. (2021)</a> showed that receptor maps are structured regional priors, while <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a> and <a href="https://doi.org/10.1038/s41467-019-09897-z" target="_blank">Lippert et al. (2019)</a> showed that raclopride PET gives challenge- and window-limited dopamine-release proxy. What follows directly is that <strong>neuromodulation is not one measurement class</strong>.
+The weakness that needed another pass was that this page still let <strong>pupil / HRV</strong>, <strong>local transmitter imaging</strong>, <strong>receptor maps</strong>, and <strong>PET displacement / occupancy</strong> sound closer than they are. That was too weak. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> showed that pupil fluctuations track both adrenergic and cholinergic activity rather than a single transmitter. <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">Lohani et al. (2022)</a> showed that cortical cholinergic signals are spatially heterogeneous across behavioral states, and <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> showed that local ACh depends on axon activity and local clearance kinetics. On the human side, <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> and <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">Goulas et al. (2021)</a> showed that receptor maps are structured regional priors, while <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a> and <a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">Lippert et al. (2019)</a> showed that raclopride PET gives challenge- and window-limited dopamine-release proxy. What follows directly is that <strong>neuromodulation is not one measurement class</strong>.
 </p>
 
 <strong>Site rule for the ladder</strong>
 <p>
 On this site, <strong>mixed arousal proxy</strong> is read as a coarse covariate, <strong>local transmitter sensor</strong> as local calibration, <strong>receptor / transporter atlas</strong> as a regional prior, and <strong>occupancy / displacement PET</strong> as a ligand- and challenge-limited proxy. None of those rungs is promoted by default to the claim that the current whole-brain neuromodulatory state was directly measured.
+</p>
+
+<strong>PET routes still need tracer and quantification disclosure</strong>
+<p>
+PET-based proxy classes are not readable from the modality label alone. <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> showed that human SV2A PET quantification depends on the tracer, arterial-versus-reference route, compartment model, and named scan window. <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> showed that [<sup>11</sup>C]UCB-J binding measures remain unchanged during brief functional activation even when tracer influx rises with blood flow, so synaptic-density PET is not a momentary synaptic-efficacy readout. <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> built a receptor atlas by collating PET data from more than 1,200 healthy individuals, so the resulting map is a normative chemoarchitectural prior rather than an individual's current transmitter state. <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a>, <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a>, and <a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">Lippert et al. (2019)</a> likewise show that occupancy / displacement PET answers receptor-family- and challenge-limited questions over bounded scan windows. Therefore, on this site, PET-based routes must name the tracer, quantification model or validated window, and partial-volume handling when relevant before their claim ceiling is interpreted.
 </p>
 
 <p>
@@ -264,8 +276,12 @@ The same caution extends to glia. <a href="https://doi.org/10.1038/s41586-024-07
 <li>Lohani, S., Moberly, A. H., Benisty, H., et al. (2022). Spatiotemporally heterogeneous coordination of cholinergic and neocortical activity. <em>Nature Neuroscience</em>, 25(12), 1706-1713. <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">doi:10.1038/s41593-022-01202-6</a></li>
 <li>Hansen, J. Y., Shafiei, G., Markello, R. D., et al. (2022). Mapping neurotransmitter systems to the structural and functional organization of the human neocortex. <em>Nature Neuroscience</em>, 25(11), 1569-1581. <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">doi:10.1038/s41593-022-01186-3</a></li>
 <li>Goulas, A., Changeux, J.-P., Wagstyl, K., Amunts, K., Palomero-Gallagher, N., &amp; Hilgetag, C. C. (2021). The natural axis of transmitter receptor distribution in the human cerebral cortex. <em>PNAS</em>, 118(3), e2020574118. <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">doi:10.1073/pnas.2020574118</a></li>
+<li>Naganawa, M., Li, S., Nabulsi, N., et al. (2021). First-in-human evaluation of <sup>18</sup>F-SynVesT-1, a radioligand for PET imaging of synaptic vesicle glycoprotein 2A. <em>Journal of Nuclear Medicine</em>, 62(4), 561-567. <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">doi:10.2967/jnumed.120.249144</a></li>
+<li>Smart, K., Liu, H., Matuskey, D., et al. (2021). Binding of the synaptic vesicle radiotracer [<sup>11</sup>C]UCB-J is unchanged during functional brain activation using a visual stimulation task. <em>Journal of Cerebral Blood Flow &amp; Metabolism</em>, 41(5), 1067-1079. <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">doi:10.1177/0271678X20946198</a></li>
+<li>Johansen, A., Beliveau, V., Colliander, E., et al. (2024). An in vivo high-resolution human brain atlas of synaptic density. <em>Journal of Neuroscience</em>, 44(33), e1750232024. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
+<li>Wong, D. F., Kuwabara, H., Hsu, D. J., et al. (2013). Determination of dopamine D<sub>2</sub> receptor occupancy by lurasidone using positron emission tomography in healthy male subjects. <em>Psychopharmacology</em>, 229(2), 245-252. <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">doi:10.1007/s00213-013-3103-z</a></li>
 <li>Koepp, M. J., Gunn, R. N., Lawrence, A. D., et al. (1998). Evidence for striatal dopamine release during a video game. <em>Nature</em>, 393(6682), 266-268. <a href="https://doi.org/10.1038/30498" target="_blank">doi:10.1038/30498</a></li>
-<li>Lippert, R. N., Bolding, K. A., Abbott, L. F., et al. (2019). Time-dependent assessment of stimulus-evoked regional dopamine release. <em>Nature Communications</em>, 10, 3922. <a href="https://doi.org/10.1038/s41467-019-09897-z" target="_blank">doi:10.1038/s41467-019-09897-z</a></li>
+<li>Lippert, R. N., Cremer, A. L., Edwin Thanarajah, S., et al. (2019). Time-dependent assessment of stimulus-evoked regional dopamine release. <em>Nature Communications</em>, 10, 336. <a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">doi:10.1038/s41467-018-08143-4</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <em>Cell Reports</em>, 43(10), 114808. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <em>Nature</em>, 629, 146-153. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Xu, W., et al. (2024). Sleep restores an optimal computational regime in cortical networks. <em>Nature Communications</em>, 15, 3820. <a href="https://doi.org/10.1038/s41467-024-47838-5" target="_blank">doi:10.1038/s41467-024-47838-5</a></li>

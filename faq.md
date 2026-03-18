@@ -301,6 +301,9 @@ At Mind-Upload, this means we treat <strong>connectome-complete as progress on t
 <p>
 Human evidence should also be read as a <strong>ladder</strong>, not as one direct route. Local human nanoscale ultrastructure, regional synaptic-density PET, receptor / transporter atlas priors, ligand- / challenge-limited occupancy or displacement PET, and whole-brain biochemical / energetic / ionic / thermal / myelin / clearance proxies are all real advances, but they reduce different error terms and do not auto-fill current transcription / chromatin state, ECM / PNN gate state, current chloride homeostasis, branch-local proteostasis, or branch-local mitochondrial positioning. The shortest front-door table is <a href="wbe_101.html#human-observability-ladder">WBE 101: what human evidence currently looks like</a>.
 </p>
+<p>
+Even within the PET rows, the measurement model still matters. On this site, SV2A PET is read as a tracer-defined synaptic-density proxy rather than a readout of momentary synaptic efficacy, receptor atlases are read as normative group maps rather than current individual state, and occupancy / displacement PET is read as ligand- and challenge-limited evidence over bounded scan windows. If tracer, quantification model, or scan window is missing, the PET result is still too coarse to read as current internal state.
+</p>
 </section>
 
 <section class="section" id="q3">
