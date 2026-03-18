@@ -15,6 +15,7 @@ page_highlights:
   - "The core of Mind-Upload is not bold conclusions but a verification commons that lets progress be measured."
   - "If you are unsure where to start, read Verification -> Roadmap -> WBE/EEG 101."
   - "Connectomes and cell types alone do not determine long-term dynamics; sleep/homeostasis, myelination, thermal-state, bioenergetic / mitochondrial state, and glial metabolism remain separate variables."
+  - "Human evidence is layered: local ultrastructure, synaptic-density PET, and macro biochemical / energetic / thermal / myelin / clearance proxies are not one near-direct readout."
   - "For hemodynamic modalities, BOLD or fNIRS amplitude is not read as neural difference unless vascular-state / CVR limits are audited separately."
   - "Brain-to-text and speech demos are read through the Neural Contribution Card so neural contribution is not confused with task structure or language priors."
   - "High decode / biomarker scores can rise from subject / session fingerprint alone, so the Specificity & Shortcut Card audits that shortcut independently."
@@ -25,6 +26,7 @@ known_points:
   - "EEG and decoding research can create measurable progress when their claims stay within their conditions."
   - "The same decode score is not a target-specific biomarker if it can be reproduced by subject / session fingerprint alone."
   - "Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately."
+  - "Current human evidence comes in layers; proxy-rich routes still do not yield comparable whole-brain in vivo ground truth for every hidden state."
   - "For hemodynamic readouts, a group or longitudinal BOLD difference can still be dominated by vascular transfer state rather than neural change."
   - "Strong claims about identity or consciousness belong in downstream verification design, not on the landing page."
 unknown_points:
@@ -87,6 +89,13 @@ After the March 2026 re-audit of primary literature, this site no longer accepts
 <strong>If You Want To Check What Is Directly Observable First</strong>
 <p>
 The March 2026 update added <a href="verification.html#observability-budget">Verification's Observability Budget</a> so claim ceilings can be enforced in normal page operations. For the table that prevents "multimodal" from being misread as "state-complete," see <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceilings by Measurement Stack</a>.
+</p>
+</div>
+
+<div class="note-box">
+<strong>If You Want To Know Which Human Routes Are Real Advances And Which Are Still Only Proxies</strong>
+<p>
+The front door was still too coarse if it only said that many hidden states remain. <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> now separates local human nanoscale ultrastructure, regional synaptic-density PET, macro biochemical / energetic / thermal / myelin / clearance proxies, and the still-missing whole-brain in vivo routes for current transcription / chromatin state, ECM / PNN gate state, branch-local proteostasis, and local mitochondrial positioning. That separation is there so <strong>"human evidence exists"</strong> is not silently rephrased as <strong>"human state-complete measurement is close."</strong>
 </p>
 </div>
 
