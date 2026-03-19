@@ -208,3 +208,11 @@ reading_time: "35-55分"
 - `mind-upload` 側（Deep Cards / Feasibility）と `auto-research-funds` 側（Grant Map）で、`RQ_TOTAL=60` と `A/B/C=17/25/18` が一致することを再確認しました。
 - RQ行で参照するEEG ID（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
 - 方針は不変で、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続しました。
+## 2026-03-19 18:03 JST 再検証ログ（本run / Deep-by-RQ同期監査）
+
+- 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull --ff-only origin main` を実行し、`Already up to date` を確認しました。
+- `mind-upload` / `auto-research-funds` / `EEG-DATA` の各 `main` を `git pull --ff-only origin main` で最新化（`mind-upload: 66e2f8a -> 2b43943`、`auto-research-funds: 382a5f90e -> 5a6eda781`、`EEG-DATA: 88c625b0b6f -> 76b2c83256b`）した後、RQテーブルを再監査しました。
+- 本カードの `Ux-y` 行を再計数し、`RQ_TOTAL=60` と `A/B/C=17/25/18`（欠損・重複 `0`）を確認しました。
+- 全60行で `主張単位` `判定境界` `応募テーマ` `第一応募先/予備応募先` `主データ` `最低成果物` が埋まっていることを再確認しました。
+- RQ行で参照するEEG ID（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）を最新 `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
+- 方針は不変で、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続しました。
