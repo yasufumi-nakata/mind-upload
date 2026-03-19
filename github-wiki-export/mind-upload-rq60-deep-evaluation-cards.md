@@ -217,3 +217,10 @@
 - 本カードの `| Ux-y<br>` 行を再計数し、`RQ_TOTAL=60`（欠損・重複 `0`）と `A/B/C=17/25/18` を再確認しました。
 - `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` および `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` と突合し、同じ `RQ_TOTAL=60` / `A/B/C=17/25/18` で一致することを確認しました。
 - 方針は継続して `1RQ=1検証命題=1応募テーマ=1主データ` とし、汎用横断要約よりもRQ単位の深掘りを優先しました。
+
+## 2026-03-19 22:01 JST Revalidation Log (this run)
+
+- Pulled `main` in parent repo `auto-startup` before work and confirmed it is up to date.
+- Recounted `Ux-y` rows across deep cards / feasibility / grant map pages and reconfirmed `RQ_TOTAL=60`, `A/B/C=17/25/18`, `missing=0`, `duplicate=0`.
+- Rechecked EEG IDs (`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`) against `EEG-DATA/eeg_dataset_summary_ja.csv`; unresolved IDs remained `0`.
+- Kept the deep-by-RQ policy unchanged: `1RQ=1testable claim=1grant theme=1primary dataset`.

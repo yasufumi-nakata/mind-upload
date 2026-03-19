@@ -515,3 +515,10 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 本ページの `| Ux-y<br>` 行を再計数し、`RQ_TOTAL=60`（欠損・重複 `0`）と `A/B/C=17/25/18` を再確認しました。
 - 本ページ中の `ID nnn` を抽出して `EEG-DATA/eeg_dataset_summary_ja.csv` と再突合し、参照ID集合（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）の未解決 `0` 件を確認しました。
 - `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` と件数・判定内訳が一致することを再確認し、deep-by-RQ同期を維持しました。
+
+## 2026-03-19 22:01 JST Revalidation Log (this run)
+
+- Pulled `main` in parent repo `auto-startup` before work and confirmed it is up to date.
+- Recounted `Ux-y` rows across deep cards / feasibility / grant map pages and reconfirmed `RQ_TOTAL=60`, `A/B/C=17/25/18`, `missing=0`, `duplicate=0`.
+- Rechecked EEG IDs (`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`) against `EEG-DATA/eeg_dataset_summary_ja.csv`; unresolved IDs remained `0`.
+- Kept the deep-by-RQ policy unchanged: `1RQ=1testable claim=1grant theme=1primary dataset`.

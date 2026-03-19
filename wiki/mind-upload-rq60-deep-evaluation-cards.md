@@ -239,3 +239,10 @@ reading_time: "35-55分"
 - 本カードの `| Ux-y<br>` 行を再計数し、`RQ_TOTAL=60`（欠損・重複 `0`）と `A/B/C=17/25/18` を再確認しました。
 - `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` および `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` と突合し、同じ `RQ_TOTAL=60` / `A/B/C=17/25/18` で一致することを確認しました。
 - 方針は継続して `1RQ=1検証命題=1応募テーマ=1主データ` とし、汎用横断要約よりもRQ単位の深掘りを優先しました。
+
+## 2026-03-19 22:01 JST 再検証ログ（本run / ユーザー依頼: RQ別深掘りで再固定）
+
+- 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull origin main` を実行し、`Already up to date` を確認しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` / `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` / `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `Ux-y` 行を再計数し、すべて `RQ_TOTAL=60`、`A/B/C=17/25/18`、`missing=0`、`duplicate=0` を確認しました。
+- 3ページで参照されるEEG ID（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と再照合し、未解決ID `0` を確認しました。
+- 依頼方針どおり、汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持したまま wiki 同期を更新しました。
