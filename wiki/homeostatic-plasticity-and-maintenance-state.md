@@ -190,7 +190,7 @@ Philosophy, legal systems, and copying issues are not discussed here. It address
 
 <h3>2. Activity-dependent transcription / chromatin state is not the same as cell identity</h3>
 <p>
-The weak point that became clearer in this pass was that the site had become good at separating <strong>cell identity</strong> from <strong>intrinsic excitability</strong>, while still leaving <strong>the current transcriptional / chromatin program that makes memory allocation and stabilization possible</strong> too close to the cell-type bucket. That is too coarse. <a href="https://doi.org/10.1126/science.adg9982" target="_blank">Santoni et al. (2024)</a> showed that chromatin plasticity predetermines neuronal eligibility for memory-trace formation, <a href="https://doi.org/10.1038/s41467-025-63029-6" target="_blank">Traunmüller et al. (2025)</a> showed that novel-environment exposure drives temporally defined and region-specific chromatin-accessibility and gene-expression changes in hippocampus, <a href="https://doi.org/10.1038/s41586-025-09334-w" target="_blank">Terceros et al. (2026)</a> showed distinct thalamocortical transcriptional gates across post-learning windows, and <a href="https://doi.org/10.1038/s41588-025-02195-z" target="_blank">Coda et al. (2025)</a> showed that cell-type- and locus-specific epigenetic editing can bidirectionally regulate memory expression. Therefore, even if <strong>the connectome and the cell-type label are fixed</strong>, <strong>the current plasticity-competent transcriptional program and stabilization controller can still differ over hours to weeks</strong>.
+The weak point that became clearer in this pass was that the site had become good at separating <strong>cell identity</strong> from <strong>intrinsic excitability</strong>, while still leaving <strong>the current transcriptional / chromatin program that makes memory allocation and stabilization possible</strong> too close to the cell-type bucket. That is too coarse. <a href="https://doi.org/10.1126/science.adg9982" target="_blank">Santoni et al. (2024)</a> showed that chromatin plasticity predetermines neuronal eligibility for memory-trace formation, <a href="https://doi.org/10.1038/s41467-025-63029-6" target="_blank">Traunmüller et al. (2025)</a> showed that novel-environment exposure drives temporally defined and region-specific chromatin-accessibility and gene-expression changes in hippocampus, <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2026)</a> showed distinct thalamocortical transcriptional gates together with time-dependent causal requirements for memory stabilization over days to weeks, and <a href="https://doi.org/10.1038/s41588-025-02368-y" target="_blank">Coda et al. (2025)</a> showed that cell-type- and locus-specific epigenetic editing can bidirectionally regulate memory expression. Therefore, even if <strong>the connectome and the cell-type label are fixed</strong>, <strong>the current plasticity-competent transcriptional program and stabilization controller can still differ over hours to weeks</strong>.
 </p>
 <div class="note-box">
 <strong>How this site now reads transcriptomic evidence</strong>
@@ -198,6 +198,58 @@ The weak point that became clearer in this pass was that the site had become goo
 <a href="https://doi.org/10.1038/s41586-023-07011-6" target="_blank">Sun et al. (2024)</a> provided a strong spatial-transcriptomic clue for long-term memory, but <a href="https://doi.org/10.1038/s41586-025-08988-y" target="_blank">Mukamel &amp; Yu (2025)</a> argued that some memory-related DEG claims are sensitive to animal-level dependence correction, and <a href="https://doi.org/10.1038/s41586-025-08989-x" target="_blank">Sun et al. (2025)</a> replied that the analysis target differs. Therefore, on this site, a memory-related transcriptomic signature is treated as <strong>time-stamped clue / hypothesis-generating evidence</strong> unless temporal calibration, locus specificity, or causal perturbation is also shown.
 </p>
 </div>
+<div class="note-box" id="transcription-route-card">
+<strong>2026-03-19 addendum: transcription / chromatin claims now need a route card</strong>
+<p>
+The remaining weakness was that the site still let at least four different inferential objects collapse into one label such as <strong>"memory transcriptomics"</strong>. The primary literature does not support that shortcut. <a href="https://doi.org/10.1126/science.adg9982" target="_blank">Santoni et al. (2024)</a> is about <strong>allocation eligibility</strong>, <a href="https://doi.org/10.1038/s41467-025-63029-6" target="_blank">Traunmüller et al. (2025)</a> is a <strong>time-resolved response map</strong>, <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2026)</a> is a <strong>persistent stabilization cascade with time-dependent causal perturbation</strong>, and <a href="https://doi.org/10.1038/s41588-025-02368-y" target="_blank">Coda et al. (2025)</a> is <strong>locus-specific causal editability in a defined circuit</strong>. <a href="https://doi.org/10.1038/s41586-023-07011-6" target="_blank">Sun et al. (2024)</a> further showed that transcriptomic signatures can persist for weeks in a defined fear-memory paradigm, while <a href="https://doi.org/10.1038/s41586-025-08988-y" target="_blank">Mukamel &amp; Yu (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-08989-x" target="_blank">Sun et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-021-21038-1" target="_blank">Zimmerman et al. (2021)</a> show why the experimental unit and DEG statistics can materially change what survives as evidence. Therefore, on this site, we now require a <strong>transcription / chromatin route card</strong> before a claim is promoted beyond a time-stamped clue.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be fixed explicitly</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the result supports <strong>allocation eligibility</strong>, <strong>acute/post-learning time course</strong>, <strong>persistent stabilization program</strong>, or <strong>locus-specific causal editability</strong>.</td>
+<td>Different inferential objects collapse into one label such as <code>memory transcriptomics</code>.</td>
+</tr>
+<tr>
+<td><strong>Biological regime</strong></td>
+<td>Name species, sex, brain region / circuit, learning task, recall/reactivation state, and whether the design is observational or perturbational.</td>
+<td>Evidence from one region and one task is silently promoted to a generic memory controller.</td>
+</tr>
+<tr>
+<td><strong>Time axis</strong></td>
+<td>Write baseline and every post-learning / post-recall sampling window, and state whether the assay is destructive cross-sectional sampling rather than longitudinal readout in the same cells.</td>
+<td>An acute signature is overread as a persistent controller or a long-term trace.</td>
+</tr>
+<tr>
+<td><strong>Assay and direct observable</strong></td>
+<td>Name bulk RNA-seq, sc/snRNA-seq, sc/snATAC, spatial transcriptomics, ChIP-seq, or editing route, plus whether the direct observable is transcript abundance, chromatin accessibility, histone mark, or perturbation response.</td>
+<td>Cell identity, current transcription, chromatin openness, and causal control are treated as if they were the same measurement.</td>
+</tr>
+<tr>
+<td><strong>Experimental unit / dependence control</strong></td>
+<td>Report animal-level <em>n</em>, batch structure, whether cells from the same animal were treated as subsamples, and how pseudoreplication or animal-level dependence was handled.</td>
+<td>False-positive differential signals can be mistaken for memory-specific programs.</td>
+</tr>
+<tr>
+<td><strong>Causal leverage</strong></td>
+<td>Write whether the paper only observed a signature, perturbed regulators, or edited a named locus, and which behavioral phase was affected.</td>
+<td>Observational signatures are promoted to necessary or sufficient mechanisms.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Fix in one line which state variables remain latent, especially same-subject in vivo continuity, whole-brain coverage, and non-destructive time-resolved readout.</td>
+<td>A destructive, region-bounded assay is overread as current whole-brain state identification.</td>
+</tr>
+</tbody>
+</table>
 
 <h3>3. Sometimes what is maintained is not the “current value” but the “return destination”</h3>
 <p>
@@ -518,6 +570,7 @@ A final correction is that static <sup>1</sup>H-MRSI similarity is not the same 
 <li><strong>In long-term claims, put maintenance-state in a separate column:</strong>Do not mix connectome / cell type / synapse with intrinsic excitability, activity-dependent transcription / chromatin state, local proteostasis / synaptic tagging, sleep-homeostasis, myelin / oligodendroglial support, bioenergetic / mitochondrial state, glial / metabolic support, clearance / immune support. </li>
 <li><strong>Do not collapse cell identity into current plasticity program:</strong>Static transcriptomic labels and current memory-stabilization state should be written in separate columns. </li>
 <li><strong>Do not collapse current weight into late-stabilization route:</strong>Tagged branch state and local proteostasis should be measured separately, or written with separate abstention reasons. </li>
+<li><strong>Do not collapse transcription / chromatin into one bucket:</strong>Separate allocation eligibility, time-windowed response map, persistent stabilization program, and locus-specific causal editability, then attach the transcription / chromatin route card when the claim depends on them. </li>
 <li><strong>Don't collapse intrinsic excitability into one line:</strong>Make relative excitability, AIS / channel state, and recovery controller separate columns. </li>
 <li><strong>Do not collapse thermal-state into timing or bioenergetics:</strong>Write tissue temperature separately when field-potential amplitude, membrane kinetics, or sequence timing matters. </li>
 <li><strong>Do not collapse ionic milieu into excitability or glia:</strong>Write chloride set point / transporter state and interstitial-ion composition separately when inhibitory sign, rhythm, or state transition matters. </li>
@@ -577,8 +630,8 @@ A final correction is that static <sup>1</sup>H-MRSI similarity is not the same 
 <li>Schulz, D. J., Goaillard, J.-M., &amp; Marder, E. (2006). Variable channel expression in identified single and electrically coupled neurons in different animals. <em>Nature Neuroscience</em>, 9(3), 356-362. <a href="https://doi.org/10.1038/nn1639" target="_blank">doi:10.1038/nn1639</a></li>
 <li>Santoni, G., et al. (2024). Chromatin plasticity predetermines neuronal eligibility for memory trace formation. <em>Science</em>, 385(6716), eadg9982. <a href="https://doi.org/10.1126/science.adg9982" target="_blank">doi:10.1126/science.adg9982</a></li>
 <li>Traunmüller, L., et al. (2025). Novel environment exposure drives temporally defined and region-specific chromatin accessibility and gene expression changes in the hippocampus. <em>Nature Communications</em>, 16, 2613. <a href="https://doi.org/10.1038/s41467-025-63029-6" target="_blank">doi:10.1038/s41467-025-63029-6</a></li>
-<li>Coda, B., et al. (2025). Cell-type- and locus-specific epigenetic editing of memory expression. <em>Nature Genetics</em>, 57, 1211-1222. <a href="https://doi.org/10.1038/s41588-025-02195-z" target="_blank">doi:10.1038/s41588-025-02195-z</a></li>
-<li>Terceros, Y., et al. (2026). Thalamocortical transcriptional gates coordinate memory stabilization. <em>Nature</em>, 642, 489-498. <a href="https://doi.org/10.1038/s41586-025-09334-w" target="_blank">doi:10.1038/s41586-025-09334-w</a></li>
+<li>Coda, D. M., Watt, L., Glauser, L., et al. (2025). Cell-type- and locus-specific epigenetic editing of memory expression. <em>Nature Genetics</em>, 57, 2661-2668. <a href="https://doi.org/10.1038/s41588-025-02368-y" target="_blank">doi:10.1038/s41588-025-02368-y</a></li>
+<li>Terceros, A., Chen, C., Harada, Y., et al. (2026). Thalamocortical transcriptional gates coordinate memory stabilization. <em>Nature</em>, 649, 1254-1263. <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">doi:10.1038/s41586-025-09774-6</a></li>
 <li>Frey, U., &amp; Morris, R. G. M. (1997). Synaptic tagging and long-term potentiation. <em>Nature</em>, 385(6616), 533-536. <a href="https://doi.org/10.1038/385533a0" target="_blank">doi:10.1038/385533a0</a></li>
 <li>Fonseca, R., Vabulas, R. M., Hartl, F. U., Bonhoeffer, T., &amp; Nägerl, U. V. (2006). A balance of protein synthesis and proteasome-dependent degradation determines the maintenance of LTP. <em>Neuron</em>, 52(2), 239-245. <a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">doi:10.1016/j.neuron.2006.08.015</a></li>
 <li>Govindarajan, A., Israely, I., Huang, S.-Y., &amp; Tonegawa, S. (2011). The dendritic branch is the preferred integrative unit for protein synthesis-dependent LTP. <em>Neuron</em>, 69(1), 132-146. <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">doi:10.1016/j.neuron.2010.12.008</a></li>
@@ -641,6 +694,7 @@ A final correction is that static <sup>1</sup>H-MRSI similarity is not the same 
 <li>Sun, X., et al. (2024). Spatial transcriptomics reveal neuron-astrocyte synergy in long-term memory. <em>Nature</em>, 627, 374-381. <a href="https://doi.org/10.1038/s41586-023-07011-6" target="_blank">doi:10.1038/s41586-023-07011-6</a></li>
 <li>Mukamel, E. A., &amp; Yu, X. (2025). False positives in study of memory-related gene expression. <em>Nature</em>, 642, E1-E3. <a href="https://doi.org/10.1038/s41586-025-08988-y" target="_blank">doi:10.1038/s41586-025-08988-y</a></li>
 <li>Sun, X., et al. (2025). Reply to: False positives in study of memory-related gene expression. <em>Nature</em>, 642, E4-E6. <a href="https://doi.org/10.1038/s41586-025-08989-x" target="_blank">doi:10.1038/s41586-025-08989-x</a></li>
+<li>Zimmerman, K. D., Espeland, M. A., &amp; Langefeld, C. D. (2021). A practical solution to pseudoreplication bias in single-cell studies. <em>Nature Communications</em>, 12, 738. <a href="https://doi.org/10.1038/s41467-021-21038-1" target="_blank">doi:10.1038/s41467-021-21038-1</a></li>
 <li>Williamson, N. R., et al. (2025). Learning-associated astrocyte ensembles regulate memory recall. <em>Nature</em>, 636, 445-454. <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">doi:10.1038/s41586-024-08170-w</a></li>
 <li>Dewa, K., et al. (2025). The astrocytic ensemble acts as a multiday trace to stabilize memory. <em>Nature</em>, 648, 99-107. <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">doi:10.1038/s41586-025-09619-2</a></li>
 <li>Bukalo, O., et al. (2026). Astrocytes enable amygdala neural representations supporting memory. <em>Nature</em>. <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">doi:10.1038/s41586-025-10068-0</a></li>
