@@ -5,7 +5,7 @@ description: "A practical glossary of the terms used most often in Mind-Upload, 
 article_type: Reference
 subtitle: "Start by keeping the words straight"
 author: Mind Uploading Research Project
-last_updated: "2026-03-19"
+last_updated: "2026-03-20"
 note: "Living document"
 audience: "Readers who do not want to get stuck on terminology and anyone trying to avoid category mistakes"
 reading_time: "3 to 10 minutes for only the necessary items"
@@ -14,12 +14,13 @@ accuracy_note: "The definitions here are deliberately short. For exact usage, re
 page_highlights:
   - "It gives short explanations of terms and points to where each concept matters."
   - "It now includes the front-door verification terms added in the March 2026 re-audit, such as claim ceiling, shortcut auditing, maintenance-state, and vascular-state / CVR audit."
+  - "It now also includes the human-observability terms needed after the March 2026 deepening pass, such as proxy class, route maturity / model burden, and support-state proxy."
   - "It is especially careful about pairs that sound similar but should not be collapsed, such as observability / identifiability / direct validation and functional connectivity / effective connectivity / causal wiring."
   - "If a term blocks your reading, this page is meant to get you unstuck quickly and send you back to the main text."
 known_points:
   - "Many misunderstandings can be avoided simply by reducing terminology confusion."
   - "It is especially important to distinguish between decode/emulate, correlation/causation, functional connectivity/effective connectivity/causal wiring, observability/identifiability, model fit/direct validation, and brain signal/language prior."
-  - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, thermal-state, timing-state, and vascular-state language."
+  - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, thermal-state, timing-state, vascular-state, proxy-class, and route-maturity language."
   - "This page serves as an entry point for short definitions and a way to return to the main text."
 unknown_points:
   - "Terms related to the theory of consciousness have slightly different meanings depending on the paper or position."
@@ -201,6 +202,13 @@ If words such as <strong>claim ceiling</strong>, <strong>hidden state</strong>, 
 </p>
 </div>
 
+<div class="note-box">
+<strong>When human-evidence terms start sounding like one thing</strong>
+<p>
+Words such as <strong>proxy class</strong>, <strong>route maturity / model burden</strong>, and <strong>support-state proxy</strong> are there to stop local ultrastructure, SV2A PET, MRSI biochemical scaffold, dynamic DMRSI, myelin mapping, and clearance MRI from collapsing into one impression of “we can now see almost everything in humans.” If that distinction is what you need next, go to <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> and <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>.
+</p>
+</div>
+
 <section class="section" id="core">
 <h2 class="section-title">Core concepts</h2>
 <table class="data-table">
@@ -326,6 +334,18 @@ If words such as <strong>claim ceiling</strong>, <strong>hidden state</strong>, 
 <td>A site rule that separates what entered the sensor from what still had to be inferred. It prevents “multimodal” or “higher resolution” from being misread as state-complete.</td>
 </tr>
 <tr>
+<td><strong>Proxy class</strong></td>
+<td>The kind of variable a route actually constrains, such as structural scaffold, synaptic-density proxy, biochemical scaffold, macro energetic proxy, or clearance proxy. It says <strong>what object is being measured</strong>, not how mature the route is.</td>
+</tr>
+<tr>
+<td><strong>Route maturity / model burden</strong></td>
+<td>A separate label for how specialized, small-cohort, hardware-limited, or model-dependent a route still is. It prevents a useful proxy from being misread as field-ready or routine just because the paper is technically strong.</td>
+</tr>
+<tr>
+<td><strong>Human observability ladder</strong></td>
+<td>A front-door rule that compares human measurement routes along two axes at once: <strong>proxy class</strong> and <strong>route maturity</strong>. It stops “human evidence exists” from being compressed into “state-complete human measurement is close.”</td>
+</tr>
+<tr>
 <td><strong>Specificity &amp; Shortcut Card</strong></td>
 <td>An audit that asks whether a high score came from the intended neural variable or from nuisance routes such as movement, EMG, fingerprint, or acquisition setup.</td>
 </tr>
@@ -348,6 +368,10 @@ If words such as <strong>claim ceiling</strong>, <strong>hidden state</strong>, 
 <tr>
 <td><strong>Maintenance-state</strong></td>
 <td>Slow controller and support variables, such as sleep / wake history, thermal-state, ionic state, bioenergetic / mitochondrial support, glial / metabolic support, and clearance-related support, that matter for long-horizon stability.</td>
+</tr>
+<tr>
+<td><strong>Support-state proxy</strong></td>
+<td>A human route that constrains slow maintenance variables only at a coarse level, for example energetic, thermal, myelin, or clearance state. It is stronger than saying “nothing is visible,” but weaker than local controller or cell-specific ground truth.</td>
 </tr>
 <tr>
 <td><strong>Thermal-state</strong></td>
