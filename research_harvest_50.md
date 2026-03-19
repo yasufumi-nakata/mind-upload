@@ -5,7 +5,7 @@ description: "Publishes prior research collected through 50 decomposed questions
 article_type: "Evidence Bank"
 subtitle: "U0-U15 decomposition, current-status map, and prior literature (heavily cited)"
 author: Mind Uploading Research Project
-last_updated: "2026-03-19"
+last_updated: "2026-03-20"
 note: "Compiled from 50 worker tasks (curated for relevance)"
 audience: "Readers who want to browse a large literature set by unresolved issue rather than by paper count alone"
 reading_time: "20-35 min (about 7 min if you only read the statistics and U-map)"
@@ -16,13 +16,15 @@ page_highlights:
   - "It keeps intake logs separate from academically integrated evidence and makes the anti-contamination procedure explicit."
   - "Even though this page is citation-heavy, the statistics and current-status map alone provide a usable overview."
   - "The default entry path for technical and natural-science readers is fixed as U1/U7 -> U4 -> U13 -> U8 -> U3 -> U10."
-  - "For technical readers, human observability-class advances are kept separate from direct validation, demos, and hidden-state boundary papers."
+  - "For technical readers, human observability-class advances are kept separate from direct validation, demos, and hidden-state boundary papers, and proxy class is now read separately from route maturity."
+  - "For technical readers, maintenance-state papers now include transcriptional stabilization and astrocyte-state evidence rather than only generic support-variable papers."
 known_points:
   - "Breaking the literature into U0-U15 makes it easier not to confuse paper volume with conclusion strength."
   - "Separating source_logged, curated, and noise_excluded prevents intake logging from being confused with academic integration."
   - "Citation count should be read as thickness of attention or relevance, not as closure of the question."
   - "For technical and natural-science readers, it is safer to start with measurement, direct validation, closed-loop stability, and maintenance-state before moving to intake logs or governance topics."
-  - "Human measurement advances in ultrastructure, synaptic-density PET, MRSI, thermometry, myelin mapping, and CSF mobility do not all increase the same evidential axis."
+  - "Human measurement advances in ultrastructure, synaptic-density PET, static MRSI, dynamic DMRSI, thermometry, myelin mapping, CSF mobility, and sleep-linked clearance do not all increase the same evidential axis."
+  - "Maintenance-state papers on transcriptional stabilization and astrocyte multiday trace change what remains latent, not what is already directly measured."
 unknown_points:
   - "Not every U has enough evidence yet, and some regions remain exploratory."
   - "Items marked source_logged may change category or be excluded after deeper screening."
@@ -128,7 +130,7 @@ The "current status" labels on this page are not pass/fail outcomes. They are sh
 <section class="section" id="technical-priority-route-20260315">
 <h2 class="section-title">March 2026 priority route for technical and natural-science readers</h2>
 <p>
-The weakness of this page used to be that the <strong>intake log</strong> and the <strong>experimental frontier</strong> sat too close together, making it easy for technical readers to miss where the strongest primary evidence currently sits. The default reading order is now fixed as <strong>measurement and human observability</strong>, <strong>model-conditioned causal inference</strong>, <strong>direct validation and imitation-separation</strong>, <strong>long-horizon closed-loop stability</strong>, <strong>maintenance-state beyond the connectome</strong>, and <strong>physical grounding</strong>. That order reflects the current density of primary evidence represented by Tang et al. (2023), d'Ascoli et al. (2025), Willett et al. (2023), Littlejohn et al. (2025), Wairagkar et al. (2025), Unnwongse et al. (2023), Hao et al. (2025), Penny et al. (2004), Rosa et al. (2012), Jafarian et al. (2020), Fr&auml;ssle et al. (2021), Jafarian et al. (2024), Wu et al. (2024), Shapson-Coe et al. (2024), Johansen et al. (2024), Lucchetti et al. (2025), Baadsvik et al. (2024), Rzechorzek et al. (2022), Hirschler et al. (2025), Xu et al. (2024), Looser et al. (2024), and Lee et al. (2022).
+The weakness of this page used to be that the <strong>intake log</strong> and the <strong>experimental frontier</strong> sat too close together, making it easy for technical readers to miss where the strongest primary evidence currently sits. The default reading order is now fixed as <strong>measurement and human observability</strong>, <strong>model-conditioned causal inference</strong>, <strong>direct validation and imitation-separation</strong>, <strong>long-horizon closed-loop stability</strong>, <strong>maintenance-state beyond the connectome</strong>, and <strong>physical grounding</strong>. That order reflects the current density of primary evidence represented by Tang et al. (2023), d'Ascoli et al. (2025), Willett et al. (2023), Littlejohn et al. (2025), Wairagkar et al. (2025), Unnwongse et al. (2023), Hao et al. (2025), Penny et al. (2004), Rosa et al. (2012), Jafarian et al. (2020), Fr&auml;ssle et al. (2021), Jafarian et al. (2024), Wu et al. (2024), Shapson-Coe et al. (2024), Johansen et al. (2024), Lucchetti et al. (2025), Li et al. (2025), Baadsvik et al. (2024), Rzechorzek et al. (2022), Hirschler et al. (2025), Dagum et al. (2026), Xu et al. (2024), Looser et al. (2024), Terceros et al. (2025), Dewa et al. (2025), and Bukalo et al. (2026).
 </p>
 <table class="data-table">
 <thead>
@@ -143,7 +145,7 @@ The weakness of this page used to be that the <strong>intake log</strong> and th
 <tr>
 <td><strong>1. Measurement and human observability</strong></td>
 <td><strong>U1 / U7</strong></td>
-<td>Inverse-problem uncertainty, time synchronization, and whether a paper advances direct observables, a proxy layer, or only metadata / standards.</td>
+<td>Inverse-problem uncertainty, time synchronization, whether a paper advances direct observables, a proxy layer, or only metadata / standards, and whether the human route is still specialized or model-heavy.</td>
 <td>Reading an increase in observables or a new human proxy as if it already implied state-complete reconstruction.</td>
 </tr>
 <tr>
@@ -167,7 +169,7 @@ The weakness of this page used to be that the <strong>intake log</strong> and th
 <tr>
 <td><strong>5. maintenance-state</strong></td>
 <td><strong>U3</strong></td>
-<td>Whether sleep-dependent homeostasis, myelin/metabolic support, and active maintenance have been dropped from the picture.</td>
+<td>Whether sleep-dependent homeostasis, transcriptional stabilization, astrocyte multiday trace, myelin/metabolic support, and active maintenance have been dropped from the picture.</td>
 <td>Assuming that connectome plus cell type is already enough to close the long-run dynamical problem.</td>
 </tr>
 <tr>
@@ -187,7 +189,13 @@ The site-wide route-card update already fixed DCM / effective-connectivity claim
 <div class="note-box">
 <strong>Read human measurement papers as their own evidence class</strong>
 <p>
-For technical reading, papers such as <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>, and <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> should not be read as system demos or as hidden-state closure. They raise different <strong>observability classes</strong> inside the human measurement stack, and each one still leaves explicit latent-state ceilings.
+For technical reading, papers such as <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> should not be read as system demos or as hidden-state closure. They raise different <strong>observability classes</strong> inside the human measurement stack, and each one still leaves explicit latent-state ceilings. On this page, they are now read on two axes at once: <strong>what variable class the route constrains</strong> and <strong>how specialized or deployment-limited the route still is</strong>.
+</p>
+</div>
+<div class="note-box">
+<strong>Read maintenance-state papers as more than support background</strong>
+<p>
+Recent maintenance-state papers also changed in kind, not only in number. <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> do not merely say that "support variables matter." They sharpen which hidden-state families remain outside connectome-only reading: <strong>transcriptional stabilization gates</strong>, <strong>astrocyte multiday traces</strong>, and <strong>astrocyte-enabled neural representations</strong>.
 </p>
 </div>
 <div class="note-box">
