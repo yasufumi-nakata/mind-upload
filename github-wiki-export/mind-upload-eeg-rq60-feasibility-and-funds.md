@@ -460,3 +460,12 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 依頼方針に合わせて、汎用横断ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持したまま、各RQの `EEG-DATAで言える範囲` と `外部依存境界` を再確認しました。
 - 助成テーマは `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）で維持し、`A=再現性実装` `B=統合検証計画` `C=制度/理論連携` の提出戦略を継続しました。
 - wiki反映先として `auto-research-funds/wiki`, `mind-upload/wiki`, `mind-upload/github-wiki-export` の3面へ同内容の再検証ログを追記しました。
+
+## 2026-03-19 12:02 JST 再検証ログ（本run / deep-by-RQ更新後の再監査）
+
+- 作業開始時に `auto-startup` 親リポジトリの `main` で `git pull --ff-only origin main` を実行し、`Already up to date` を確認しました。
+- 続けて `mind-upload` / `auto-research-funds` / `EEG-DATA` の各 `main` で `git pull --ff-only origin main` を実行し、最新化後に検証しました。
+- `mind-upload` と `auto-research-funds` の対象wikiページで `RQ` 行を再計数し、いずれも `60` 件で一致することを確認しました。
+- 判定内訳 `A/B/C=17/25/18` を再計数し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持していることを確認しました。
+- 主要EEG参照ID（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）を最新 `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
+
