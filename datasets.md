@@ -5,7 +5,7 @@ description: "From the selection of public data (mainly EEG) to the minimum loop
 article_type: Resource
 subtitle: "Connect ``what to use'' and ``how to reproduce'' in the shortest route without separating them."
 author: Mind Uploading Research Project
-last_updated: "2026-03-18"
+last_updated: "2026-03-19"
 note: "Curated List + L0 Practice"
 audience: "People who are wondering which public data to start with, people who are looking for an L0 practice board"
 reading_time: "12-20 minutes"
@@ -15,6 +15,7 @@ page_highlights:
   - "We look at the shared infrastructure first, then the starter datasets."
   - "Starter data is a practice board for L0-L1, not the ground truth of EEG source imaging."
   - "Even inside direct-validation data, stimulation ground truth, simultaneous invasive recording, and postsurgical outcome are different evidence classes."
+  - "A fair inverse-problem benchmark also has to separate focal versus extended-source targets, solver family, and geometry / conductivity sensitivity rather than naming only a winning method."
   - "Each starter dataset has different annotation provenance, time fidelity, and independent split units."
   - "Within-session / cross-session / cross-subject / adaptation are different evaluation families and should not be placed side by side under the same score."
   - "Even when the score is numerically the same, you still have to separate the target neural variable from eye movement, EMG, behavior, feedback routes, subject / session fingerprint, and acquisition-distribution shortcuts such as site / device / reference / electrode layout."
@@ -31,11 +32,12 @@ known_points:
   - "Reference system, device, electrode layout, and filter chain can change what looks like the same EEG benchmark."
   - "With only starter data and no individual MRI or invasive ground truth, we cannot make strong claims about improved ESI accuracy."
   - "At source-imaging stage C, named validation class still matters because stimulation ground truth, simultaneous SEEG, and clinical outcome do not answer the same error question."
+  - "For inverse-problem claims, same raw data is still not enough; same head model, same preprocessing, same source regime, and a sensitivity report are also required before comparing solver families."
 unknown_points:
   - "Starter datasets alone cannot solve all the issues of WBE."
   - "We have not yet determined which data will be most effective for future causal/closed-loop verification."
   - "We have not decided yet which public data will be the default route for the annotation fidelity benchmark."
-  - "We have not determined yet which public data is most useful as a benchmark for direct validation of source imaging."
+  - "We have not determined yet which public benchmark board should become the default for comparing focal-source and extended-source inverse methods under the same geometry and uncertainty sweep."
 wiki_links:
   - label: "Wiki: Basics of EEG"
     url: "/wiki/eeg-basics.html"
@@ -559,7 +561,95 @@ In a systematic review by Mouthaan et al. (2019), the summary sensitivity of ele
 <div class="note-box">
 <strong>Practical reading</strong>
 <p>
-The first question when selecting data is not ``what is interesting?'' but <strong>what level of argument do you want to support this time</strong>? Level A is sufficient for practicing L0-L1. If you want to proceed with claiming improvements in source imaging, please put your claim on hold unless you audit the head model in stage B and take direct validation in stage C.
+The first question when selecting data is not ``what is interesting?'' but <strong>what level of argument do you want to support this time</strong>? Level A is sufficient for practicing L0-L1. If you want to proceed with claiming improvements in source imaging, please put your claim on hold unless you audit the head model in stage B and take direct validation in stage C. If you do proceed to solver comparison, the next section fixes what has to stay the same across methods before any leaderboard is accepted.
+</p>
+</div>
+</section>
+
+<section class="section" id="inverse-benchmark-board">
+<h2 class="section-title">4.5) Inverse-problem benchmark board: compare error questions, not solver names</h2>
+<p>
+The weakness of this page after the 2026-03-18 validation-class update was that it could still let a reader jump from ``we used C-stage data'' to ``solver X won.'' That is too weak. <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">Michel &amp; Brunet (2019)</a> describe ESI as a pipeline rather than a single algorithm. <a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">Pascarella et al. (2023)</a> then showed on an in-vivo focal-source benchmark that ten methods differ not only in best localization error but also in sensitivity to regularization and montage density, while <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> showed that skull conductivity and source depth still move localization error in direct validation. At the same time, <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> target extended-source reconstruction, which is not the same benchmark question as focal-source localization. Therefore, this site now treats solver comparison as a board with four fixed axes: <strong>validation class</strong>, <strong>source regime</strong>, <strong>same-geometry controls</strong>, and <strong>sensitivity sweep</strong>.
+</p>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>Benchmark question</th>
+<th>Keep fixed across methods</th>
+<th>Primary metric to publish</th>
+<th>What not to overread</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Focal-source localization against known stimulation site</strong></td>
+<td>Same raw recording, event window, electrode coordinates, head model, conductivity sweep, source space, and bad-channel mask.</td>
+<td>Distance to known stimulation site/time, plus spread across conductivity and regularization settings.</td>
+<td>Do not crown a universal solver for extended or distributed sources from a focal-source board alone.</td>
+</tr>
+<tr>
+<td><strong>Concordance with simultaneous SEEG/ECoG under the same event</strong></td>
+<td>Same event definition, same reference montage, same source-depth stratification, same preprocessing, and same concordance rule.</td>
+<td>Distance or overlap to invasive reference together with source depth and source power strata.</td>
+<td>Do not read concordance as direct ground truth for all generators, especially low-amplitude or deep activity.</td>
+</tr>
+<tr>
+<td><strong>Clinical concordance / postsurgical outcome</strong></td>
+<td>Same SOZ/resection definition, same outcome window, same blinding rule, and same patient inclusion criteria.</td>
+<td>Sensitivity/specificity or concordance against clinical outcome, clearly separated from localization error.</td>
+<td>Do not relabel surgical concordance as precise source-localization ground truth.</td>
+</tr>
+<tr>
+<td><strong>Extended-source reconstruction or multimodal-prior reconstruction</strong></td>
+<td>Same definition of source extent, same prior source, same anatomical constraints, and the same focal-versus-extended evaluation split.</td>
+<td>Extent overlap or reconstruction error for distributed sources, plus the gain from the added prior.</td>
+<td>Do not compare an extended-source method only on a focal-source leaderboard and call it inferior in general.</td>
+</tr>
+</tbody>
+</table>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>If MNE / beamformer / Champagne disagree</th>
+<th>What to publish now</th>
+<th>Safe reading on this site</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ranking flips when skull conductivity, head model, or electrode geometry is perturbed.</td>
+<td>Show the family-specific ranking under the full sensitivity sweep instead of only the best run.</td>
+<td>Method-conditioned improvement in a bounded geometry regime, not a solver winner in general.</td>
+</tr>
+<tr>
+<td>A method wins only at one hand-tuned regularization point.</td>
+<td>Publish the localization-error curve or interval across the tested hyperparameter range.</td>
+<td>Best-case performance only; robustness remains unresolved.</td>
+</tr>
+<tr>
+<td>Dense montages reduce dispersion but not localization error.</td>
+<td>Report localization error and spatial dispersion separately.</td>
+<td>Better concentration of the estimate, not automatic improvement in true-source accuracy.</td>
+</tr>
+<tr>
+<td>Deep and superficial sources behave differently.</td>
+<td>Stratify results by source depth rather than pooling into one mean.</td>
+<td>Conditional detectability only; do not generalize to deep sources as a whole.</td>
+</tr>
+<tr>
+<td>A focal-source board and an extended-source board favor different families.</td>
+<td>Keep separate leaderboards for focal, sparse, and extended-source tasks.</td>
+<td>Source-regime-specific strength, not a contradiction that can be collapsed into one number.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>Site rule from this section</strong>
+<p>
+A public inverse-problem comparison on this site must now disclose at least <strong>(1) validation class</strong>, <strong>(2) source regime (focal / sparse / extended)</strong>, <strong>(3) same-geometry controls</strong>, <strong>(4) sensitivity sweep over conductivity and key hyperparameters</strong>, <strong>(5) inter-method disagreement summary</strong>, and <strong>(6) the claim that must stop here</strong>. Without these fields, a result will be treated as a method illustration or lab-specific pipeline note, not as a reusable benchmark.
 </p>
 </div>
 </section>
@@ -575,6 +665,7 @@ The first question when selecting data is not ``what is interesting?'' but <stro
 <li><strong>Annotation provenance:</strong> Did you clearly indicate whether the label came from an annotation channel, manual scoring, or a report-derived rule?</li>
 <li><strong>QC:</strong>Are noise, defects, and artifacts quantified?</li>
 <li><strong>Comparison:</strong>Is there a baseline and can be compared using the same metrics as the evaluation family</li>
+<li><strong>Inverse-problem governance:</strong>If source imaging is compared, are validation class, source regime, geometry/control sweep, and inter-method disagreement disclosed before declaring a winner?</li>
 <li><strong>Rebuttal evidence:</strong>Are there data leak tests, counterfactual tests, and records of failures</li>
 </ul>
 </div>
@@ -754,11 +845,18 @@ The shortest route to that end is to approach BIDS/EEG-BIDS.
 <li><a href="https://doi.org/10.3389/fninf.2018.00083" target="_blank">Shah et al. (2018), TUH Seizure Detection Corpus</a></li>
 <li><a href="https://pubmed.ncbi.nlm.nih.gov/19238800/" target="_blank">Moser et al. (2009), Sleep classification difference between AASM and Rechtschaffen &amp; Kales</a></li>
 <li><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020), Localize-MI</a></li>
+<li><a href="https://doi.org/10.1088/0031-9155/46/1/306" target="_blank">Baillet et al. (2001), Evaluation of inverse methods and head models using a human skull phantom</a></li>
+<li><a href="https://doi.org/10.1016/j.neuroimage.2004.10.030" target="_blank">Phillips et al. (2005), An empirical Bayesian solution to the source reconstruction problem in EEG</a></li>
+<li><a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">Michel &amp; Brunet (2019), EEG source imaging: a practical review of the analysis steps</a></li>
+<li><a href="https://doi.org/10.3389/fnins.2019.00531" target="_blank">Aydin et al. (2019), Influence of head tissue conductivity uncertainties on EEG dipole reconstruction</a></li>
+<li><a href="https://doi.org/10.1016/j.neuroimage.2020.117411" target="_blank">Cai et al. (2021), Robust estimation of noise for electromagnetic brain imaging with the Champagne algorithm</a></li>
+<li><a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">Pascarella et al. (2023), An in-vivo validation of ESI methods with focal sources</a></li>
 <li><a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025), HD-EEG source imaging with simultaneous SEEG</a></li>
 <li><a href="https://doi.org/10.1016/j.nicl.2014.06.005" target="_blank">Birot et al. (2014), Head model and electrical source imaging</a></li>
 <li><a href="https://doi.org/10.1016/j.clinph.2018.12.016" target="_blank">Mouthaan et al. (2019), E-PILEPSY systematic review</a></li>
 <li><a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023), Validating EEG source imaging using intracranial electrical stimulation</a></li>
 <li><a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">Seeber et al. (2019), Subcortical electrophysiological activity is detectable with high-density EEG source imaging</a></li>
+<li><a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025), Block-Champagne for extended E/MEG source imaging</a></li>
 </ul>
 </section>
 
