@@ -4,7 +4,7 @@ title: "Technical Roadmap: Understanding WBE Through Measurement, Reconstruction
 description: "A learning roadmap for viewing mind uploading and WBE from the technical side, organized as a question tree from measurement to reconstruction, implementation, and verification."
 article_type: "Roadmap (Definition #1)"
 subtitle: "Break 'what counts as progress' into a question tree with reading order and minimum arrival conditions"
-last_updated: "2026-03-19"
+last_updated: "2026-03-20"
 note: "Provisional draft (updated continuously)"
 audience: "Readers who want the big picture, need a learning order, or want claim strength organized by level"
 reading_time: "20-30 min (5 min for the index only)"
@@ -18,6 +18,7 @@ page_highlights:
   - "R3 / R5 separate latent-state and maintenance-state questions by evidence tier and timescale, so same-day fit and multiday maintenance do not collapse into one success."
   - "M2 separates hardware latency from biological timing-state, so a fast device loop is not confused with timing-complete reconstruction."
   - "M1 / M5 keep neural state distinct from vascular transfer state, so a BOLD amplitude difference is not silently promoted to a neural difference."
+  - "M1 / M3 now treat human in vivo evidence as a two-axis ladder, so local ultrastructure, SV2A PET, MRSI biochemical scaffolds, DMRSI rate imaging, myelin mapping, and clearance proxies are not collapsed into one observability score."
   - "M4 / I6 now treat the body / environment boundary as an explicit scientific audit item, so a fast local loop is not silently promoted to solved embodiment."
   - "Wearable OPM-MEG is treated as movement-tolerant macro measurement only when shielding, field control, sensor calibration, and anatomy choice are disclosed."
   - "R6 treats personalization not as a pure performance trick, but as a verification problem that must separate target signal from subject fingerprint and setup shortcuts."
@@ -31,12 +32,14 @@ known_points:
   - "For hemodynamic modalities, neural interpretation and vascular transfer / CVR audit are separate requirements."
   - "Closed-loop device timing and biological conduction timing are different audits; passing one does not auto-pass the other."
   - "A disclosed body / environment boundary is a separate audit from low latency or online accuracy."
+  - "Human-side advances reduce different error terms and remain differently deployment-limited; proxy-rich evidence is not yet same-subject, same-session, externally calibrated state identification."
   - "OPM-MEG motion tolerance still depends on magnetic shielding, active nulling, calibration, and source-model disclosure."
   - "The fact that personalization helps performance is not the same as showing a population-level neural signal; subject-fingerprint and acquisition-distribution audits are still required."
 unknown_points:
   - "It is still unsettled which measurement granularity will ultimately be sufficient for WBE."
   - "V5 identity questions and D-series social deployment conditions remain unresolved."
   - "The shortest practical route may change as data and benchmark infrastructure improve."
+  - "How specialized human routes can be fused into same-subject, same-session, externally calibrated evidence without recreating latent-state ambiguity remains unresolved."
 wiki_links:
   - label: "Wiki: How To Read The Roadmap"
     url: "/wiki/roadmap-reading-guide.html"
@@ -140,6 +143,12 @@ Even when something is called "real-time," the difficulty depends on how latency
 <strong>If You Get Stuck On "Isn't A Connectome Enough?"</strong>
 <p>
 In the R-series, the branching point is not only the wiring diagram but also how cell types, intrinsic excitability/homeostatic set points, synaptic efficiency, delay and myelination, neuromodulation, and glia are treated. If you want to see from primary literature which claims fail when those state variables are missing, see <a href="wiki/connectome-is-not-enough.html">Wiki: Why a Connectome Is Not Enough</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic Plasticity and Maintenance State</a>.
+</p>
+</div>
+<div class="note-box">
+<strong>If You Want The Current Human In Vivo Measurement Ladder First</strong>
+<p>
+This roadmap now distinguishes not only <strong>which variable class a human route constrains</strong> but also <strong>how specialized or model-heavy that route still is</strong>. For the front-door ladder, start with <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>; for stack-specific ceilings and stop rules, see <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: observability and claim ceiling by measurement stack</a> and <a href="verification.html#observability-budget">Verification: Observability Budget</a>.
 </p>
 </div>
 <div class="note-box">
@@ -602,6 +611,51 @@ Therefore, in this roadmap, we first fix ``which loop class is handled and which
 <li><strong>Upper bound on the connectomics front:</strong>This is an audit of structural scaffolds, local functional twins, and cell-type dependent connections, not a complete observation of current synaptic efficiency and neuromodulation fields. </li>
 <li><strong>Remaining latent states:</strong>Synaptic weight, receptor state, delay / timing-state, intrinsic excitability / homeostatic set point, neuromodulatory field, glial / metabolic state, and plastic history remain as separate variables. </li>
 </ul>
+<div class="note-box">
+<strong>2026-03-20 addendum: human in vivo evidence is a two-axis ladder, not one progress bar</strong>
+<p>
+The remaining weakness in this roadmap was that M3 still let very different human-side advances sound like one generic increase in <strong>observability</strong>. The primary literature does not support that compression. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> reconstructed a cubic millimeter of surgically resected human temporal cortex at nanoscale resolution, which is a <strong>local ex vivo structural scaffold</strong>. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built an in vivo SV2A atlas in healthy humans (<strong>17F/16M</strong>) calibrated with postmortem autoradiography, which is a <strong>regional synaptic-density proxy</strong>. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derived a within-subject metabolic similarity matrix from <strong>five</strong> <sup>1</sup>H-MRSI metabolites in <strong>51 healthy participants</strong> with replication in <strong>13</strong>, which is a <strong>parcel-level biochemical scaffold</strong> rather than a flux map. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> used dynamic DMRSI plus a kinetic model at <strong>7 T</strong> across <strong>five healthy participants</strong> to estimate glucose transport and metabolic rates, while <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> demonstrated myelin-bilayer mapping in <strong>two healthy volunteers</strong> using specialized hardware. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> then advanced human-side CSF mobility and sleep-linked clearance routes, but still through <strong>specialized MRI</strong> or an <strong>investigational device plus multicompartment model</strong>. Therefore, this roadmap now asks readers to label both <strong>(1) which hidden-state family the route constrains</strong> and <strong>(2) how specialized, model-heavy, or deployment-limited that route still is</strong> before promoting any claim.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Human route</th>
+<th>What it strengthens</th>
+<th>Why the ceiling remains</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Local human ultrastructure</strong><br>Shapson-Coe et al. (2024)</td>
+<td>Local nanoscale structural scaffold</td>
+<td>Ex vivo fragment from one surgical sample, not living whole-brain current state</td>
+</tr>
+<tr>
+<td><strong>SV2A PET atlas</strong><br>Johansen et al. (2024)</td>
+<td>Regional synaptic-density proxy</td>
+<td>Tracer-defined atlas; not momentary synaptic efficacy or cell-specific plasticity state</td>
+</tr>
+<tr>
+<td><strong><sup>1</sup>H-MRSI metabolic connectome</strong><br>Lucchetti et al. (2025)</td>
+<td>Parcel-level biochemical similarity scaffold</td>
+<td>Five-metabolite similarity matrix, not axonal wiring or kinetic rate imaging</td>
+</tr>
+<tr>
+<td><strong>Dynamic DMRSI / myelin bilayer MRI</strong><br>Li et al. (2025); Baadsvik et al. (2024)</td>
+<td>Macro energetic and macro myelin routes</td>
+<td>Specialized hardware and small cohorts; not branch-local energetic reserve or per-axon timing control</td>
+</tr>
+<tr>
+<td><strong>CSF mobility / glymphatic clearance routes</strong><br>Hirschler et al. (2025); Dagum et al. (2026)</td>
+<td>Macro support-state proxy</td>
+<td>Model/device dependent and not direct readout of cell-specific maintenance control</td>
+</tr>
+</tbody>
+</table>
+<p>
+If several rows are combined in one argument, this roadmap still asks for <strong>same-subject / same-session / same-perturbation</strong> acquisition plus <strong>external calibration</strong> before talking about state-complete human measurement. Otherwise the result stays at <strong>proxy-rich but ceiling-limited human evidence</strong>. The front-door table is in <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>, and the submission-side stop rule is <a href="verification.html#observability-budget">Verification: Observability Budget</a>.
+</p>
+</div>
 <p><strong>Temporary decision rule:</strong>If the observation path stays in the macro proxy, this roadmap first keeps the assertion between <strong>L1 and weak L2</strong>. In order to raise the claim to local circuits and synaptic granularity, we additionally require either structure/function correspondence in the same brain, external ground truth, or intervention response. </p>
 <p><strong>Next, we need:</strong>For each assumption (A), (B), and (C), evaluate observability (M1), identifiability (R7), and computability (I3) in bundles, and disclose what to abstain at which granularity. For background, see <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams are not enough</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>. </p>
 </div>
@@ -1949,6 +2003,13 @@ Below are the main documents directly related to the open questions of U0-U15. F
 <li>Iivanainen, J., Borna, A., Zetter, R., et al. (2022). Calibration and Localization of Optically Pumped Magnetometers Using Electromagnetic Coils. <a href="https://doi.org/10.3390/s22083059" target="_blank">doi:10.3390/s22083059</a></li>
 <li>Rhodes, N., Rier, L., Boto, E., Hill, R. M., &amp; Brookes, M. J. (2025). Source reconstruction without an MRI using optically pumped magnetometer-based magnetoencephalography. <a href="https://doi.org/10.1162/IMAG.a.8" target="_blank">doi:10.1162/IMAG.a.8</a></li>
 <li>Wu, T., Xiao, W., Peng, X., Wu, T., &amp; Guo, H. (2025). Crosstalk reduction in optically pumped magnetometers arrays for biomagnetic measurement. <a href="https://doi.org/10.1063/5.0273491" target="_blank">doi:10.1063/5.0273491</a></li>
+<li>Shapson-Coe, A., Januszewski, M., Berger, D. R., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
+<li>Johansen, A., Beliveau, V., Colliander, E., et al. (2024). An In Vivo High-Resolution Human Brain Atlas of Synaptic Density. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
+<li>Baadsvik, E. L., Weiger, M., Froidevaux, R., Schildknecht, C. M., Ineichen, B. V., &amp; Pruessmann, K. P. (2024). Myelin bilayer mapping in the human brain in vivo. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">doi:10.1002/mrm.29998</a></li>
+<li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
+<li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
+<li>Hirschler, L., Runderkamp, B. A. R., Decker, A., et al. (2025). Region-specific drivers of CSF mobility measured with MRI in humans. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
+<li>Dagum, P., Elbert, D. L., Giovangrandi, L., et al. (2026). The glymphatic system clears amyloid beta and tau from brain to plasma in humans. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
 </ol>
 
 <h3>D. Preprocessing/synchronization/network analysis</h3>
