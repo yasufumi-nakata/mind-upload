@@ -28,6 +28,7 @@ page_highlights:
   - "For ESI claims, one best inverse map is not enough; this page now asks for cross-solver / cross-parameter spread or posterior / ensemble width before anatomical claims are read strongly."
   - "At L2 and above, the latent-state error budget is added on top of the Observability Budget so the still-unobserved states that stop the claim are disclosed."
   - "At L2 and above, perisynaptic ECM / PNN state is separated from synaptic weights and glia when a claim depends on adult plasticity, receptor mobility, or memory stabilization."
+  - "At L2 and above, post-transcriptional RNA-state is separated from gene-level transcript abundance and proteostasis when a claim depends on isoform choice, m6A-dependent translation / degradation, or RNA-editing ratios."
   - "At L2 and above, local proteostasis / synaptic-tagging state is separated from current weights and transcription when a claim depends on late-LTP capture, consolidation, or reconsolidation."
   - "At L2 and above, cargo-transport / cytoskeletal trafficking state is separated from proteostasis and bioenergetics when a claim depends on compartment-specific delivery of receptors, endosomes, RNA cargoes, or presynaptic components."
   - "At L2 and above, ionic milieu / chloride homeostasis is separated from excitability and glial support when a claim depends on inhibitory polarity, rhythm stability, or state transitions."
@@ -57,6 +58,7 @@ known_points:
   - "An effective-connectivity label without candidate-model, validation, and reliability disclosure remains a model-conditioned hypothesis rather than discovered causal wiring."
   - "An irreversibility label without signal-route, coarse-graining / timescale, estimator-family, dynamical-assumption, and quantity-type disclosure remains an exploratory auxiliary result rather than a portable thermodynamic measurement."
   - "A synapse list or weight estimate does not by itself fix perisynaptic ECM / PNN state, so plasticity and stabilization claims need a separate ceiling."
+  - "A cell atlas or gene-level transcript count does not by itself fix post-transcriptional RNA-state, so isoform-, m6A-, and RNA-editing-dependent claims need a separate ceiling."
   - "A weight estimate does not fix which tagged synapses or dendritic branches capture plasticity-related proteins, so late-stabilization claims need a separate proteostasis ceiling."
   - "A weight estimate or local-translation clue does not by itself fix branch- or bouton-specific cargo delivery, so compartment-specific stabilization and synaptogenesis claims need a separate transport ceiling."
   - "Sleep duration or deprivation alone does not fix slow-oscillation / spindle / ripple coordination, so overnight retention claims need a separate sleep-architecture ceiling."
@@ -901,6 +903,11 @@ The <strong>Observability Budget</strong> fixes what entered the sensor and what
 <td>Allocation eligibility, late stabilization, and locus-specific plasticity-control claims remain latent.</td>
 </tr>
 <tr>
+<td><strong>Post-transcriptional RNA-state</strong></td>
+<td>Disclose whether splice-isoform ratios, RNA-editing state, m6A modification / reader route, or isoform-resolved long-read assay was directly measured, causally perturbed, externally calibrated, or replaced by gene-level abundance alone.</td>
+<td>Isoform-specific receptor composition, m6A-dependent translation / degradation, and editing-dependent plasticity claims remain latent.</td>
+</tr>
+<tr>
 <td><strong>Local proteostasis / synaptic-tagging route</strong></td>
 <td>State whether tag / PRP capture, branch-local translation-degradation balance, autophagy, or branch-local proxy was observed or only assumed.</td>
 <td>Late stabilization, reconsolidation, and cross-event capture do not become closed mechanisms.</td>
@@ -960,7 +967,7 @@ For PET-based routes, naming the modality is still too coarse. <a href="https://
 <section class="section" id="maintenance-state-error-budget">
 <h2 class="section-title">Maintenance-state error budget</h2>
 <p>
-Cross-day and remote-memory claims fail for a different reason than same-session decoding claims. Even when short-term performance holds, the result may still leave the <strong>maintenance route</strong> almost completely latent. This site therefore asks cross-day, recovery, reconsolidation, or remote-memory submissions to disclose a <strong>maintenance-state error budget</strong> that keeps controller state, sleep history, sleep architecture / replay-coupling state, timing support, thermal-state, bioenergetic / mitochondrial support, glial / astrocyte support, and other multiday support-state proxies separate.
+Cross-day and remote-memory claims fail for a different reason than same-session decoding claims. Even when short-term performance holds, the result may still leave the <strong>maintenance route</strong> almost completely latent. This site therefore asks cross-day, recovery, reconsolidation, or remote-memory submissions to disclose a <strong>maintenance-state error budget</strong> that keeps controller state, post-transcriptional RNA-state, sleep history, sleep architecture / replay-coupling state, timing support, thermal-state, bioenergetic / mitochondrial support, glial / astrocyte support, and other multiday support-state proxies separate.
 </p>
 <table class="data-table">
 <thead>
@@ -975,6 +982,11 @@ Cross-day and remote-memory claims fail for a different reason than same-session
 <td><strong>Controller state</strong></td>
 <td>State whether relative excitability, homeostatic return target, or allocation-related controller variables were measured, perturbed, externally calibrated, or left latent.</td>
 <td>Same-day fit does not become maintenance-consistent or memory-allocation-consistent.</td>
+</tr>
+<tr>
+<td><strong>Post-transcriptional RNA-state</strong></td>
+<td>Report whether isoform ratios, m6A-dependent translation / degradation routes, RNA-editing ratios, or only gene-level transcript counts were available, and which assay or perturbation established the relevant RNA-state.</td>
+<td>Cross-day stabilization, receptor-composition carryover, and editing-dependent maintenance claims are not promoted to RNA-state-consistent maintenance evidence.</td>
 </tr>
 <tr>
 <td><strong>Sleep / wake history</strong></td>
@@ -1245,7 +1257,7 @@ The <a href="#observability-budget">Observability Budget</a> fixes <strong>what 
 <section class="section" id="state-completeness-gate">
 <h2 class="section-title">State variable integrity gate</h2>
 <p>
-In our March 2026 primary-literature audit, we reconfirmed that there are at least eleven loose state classes between <strong>“having a wiring diagram”</strong> and <strong>“being able to behave generatively”</strong>. In addition to cell types, synapses, delays, neuromodulation, and glia, we now also treat <strong>activity-dependent transcription / chromatin state</strong>, <strong>intrinsic excitability / homeostatic set points</strong>, <strong>local proteostasis / synaptic-tagging state</strong>, <strong>perisynaptic ECM / PNN state</strong>, <strong>ionic milieu / chloride homeostasis</strong>, and <strong>shared extracellular / electrical state</strong> as independent classes. Therefore, on this site, we do not accept <strong>edge-list submissions alone</strong> as a condition for passing L2 or above.
+In our March 2026 primary-literature audit, we reconfirmed that there are at least twelve loose state classes between <strong>“having a wiring diagram”</strong> and <strong>“being able to behave generatively”</strong>. In addition to cell types, synapses, delays, neuromodulation, and glia, we now also treat <strong>activity-dependent transcription / chromatin state</strong>, <strong>post-transcriptional RNA-state</strong>, <strong>intrinsic excitability / homeostatic set points</strong>, <strong>local proteostasis / synaptic-tagging state</strong>, <strong>perisynaptic ECM / PNN state</strong>, <strong>ionic milieu / chloride homeostasis</strong>, and <strong>shared extracellular / electrical state</strong> as independent classes. Therefore, on this site, we do not accept <strong>edge-list submissions alone</strong> as a condition for passing L2 or above.
 </p>
 <table class="data-table">
 <thead>
@@ -1265,6 +1277,11 @@ In our March 2026 primary-literature audit, we reconfirmed that there are at lea
 <td><strong>Activity-dependent transcription / chromatin / epigenetic state</strong></td>
 <td>Even with the same graph and cell type, allocation eligibility, late memory-stabilization programs, and locus-specific plasticity rules can still differ over hours to weeks. </td>
 <td>Static atlas labels or one-shot DEG lists stay as identity/context clues; memory-stabilization controller remains latent unless temporal or causal evidence is shown. </td>
+</tr>
+<tr>
+<td><strong>Post-transcriptional RNA-state</strong></td>
+<td>Even with the same graph, cell type, and gene-level transcript counts, alternative splicing, m6A-dependent translation / degradation, and RNA-editing ratios can still change receptor composition, plasticity rules, and maintenance behavior. </td>
+<td>Stop treating gene-level abundance or DEG signatures as if isoform, m6A, and RNA-editing control were fixed; keep RNA-state explicit as latent, perturbed, externally calibrated, or isoform-resolved. </td>
 </tr>
 <tr>
 <td><strong>Intrinsic excitability/homeostasis/maintenance state</strong></td>
@@ -1321,7 +1338,7 @@ In our March 2026 primary-literature audit, we reconfirmed that there are at lea
 <div class="note-box">
 <strong>Practical rules here</strong>
 <p>
-connectome-complete does not mean<strong>emulation-complete</strong>. Detailed primary literature and the technical basis for which state variables should be included in the minimum submission are summarized in <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams alone are not enough</a>. The newly emphasized issues of <strong>activity-dependent transcription / chromatin state</strong>, <strong>local proteostasis / synaptic-tagging state</strong>, <strong>cargo-transport / cytoskeletal trafficking state</strong>, <strong>astrocyte / glial-state</strong>, and <strong>intrinsic excitability/homeostasis/maintenance state</strong> are discussed in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.
+connectome-complete does not mean<strong>emulation-complete</strong>. Detailed primary literature and the technical basis for which state variables should be included in the minimum submission are summarized in <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams alone are not enough</a>. The newly emphasized issues of <strong>activity-dependent transcription / chromatin state</strong>, <strong>post-transcriptional RNA-state</strong>, <strong>local proteostasis / synaptic-tagging state</strong>, <strong>cargo-transport / cytoskeletal trafficking state</strong>, <strong>astrocyte / glial-state</strong>, and <strong>intrinsic excitability/homeostasis/maintenance state</strong> are discussed in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.
 </p>
 </div>
 <div class="note-box">
@@ -1334,6 +1351,12 @@ connectome-complete does not mean<strong>emulation-complete</strong>. Detailed p
 <strong>2026-03-19 addendum: transcription / chromatin evidence also needs a route card</strong>
 <p>
 The remaining weakness was that <strong>allocation eligibility</strong>, <strong>time-resolved response map</strong>, <strong>persistent stabilization cascade</strong>, and <strong>locus-specific causal editability</strong> could still be compressed into one bucket called <strong>transcriptomic evidence</strong>. The primary literature does not support that shortcut. On this site, such claims now have to disclose <strong>claim family</strong>, <strong>species / region / task</strong>, <strong>sampling windows</strong>, <strong>assay and direct observable</strong>, <strong>animal-level independence / pseudoreplication handling</strong>, <strong>causal perturbation status</strong>, and <strong>abstention boundary</strong>. The full operating rule is in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#transcription-route-card">Wiki: transcription / chromatin route card</a>.
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-20 addendum: transcript count is not post-transcriptional RNA-state</strong>
+<p>
+<a href="https://doi.org/10.1038/nn.4069" target="_blank">Wang et al. (2015)</a> showed that a neuron-specific LSD1 splice isoform regulates memory formation, <a href="https://doi.org/10.1016/j.neuron.2019.03.032" target="_blank">Dai et al. (2019)</a> showed that presynaptic neurexin alternative splicing changes postsynaptic receptor balance and contextual memory, <a href="https://doi.org/10.1038/s41586-018-0666-1" target="_blank">Shi et al. (2018)</a> and <a href="https://doi.org/10.1002/advs.202514926" target="_blank">Li et al. (2025)</a> showed that m6A-reader routes can alter hippocampus-dependent learning and memory, and <a href="https://doi.org/10.1126/scisignal.adr1442" target="_blank">Peterson et al. (2025)</a> showed that ADAR2-mediated GluA2 editing contributes to homeostatic synaptic plasticity. Therefore, when a claim depends on isoform choice, m6A-dependent translation / degradation, or RNA-editing ratio, this site asks authors to disclose whether post-transcriptional RNA-state was directly measured, causally perturbed, externally calibrated, or silently replaced by gene-level abundance alone. Specialized long-read atlas work such as <a href="https://doi.org/10.1038/s41593-024-01616-4" target="_blank">Joglekar et al. (2024)</a> is informative for the ceiling but still not a comparable in vivo whole-brain human route.
 </p>
 </div>
 <div class="note-box">
@@ -1822,6 +1845,12 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Traunmüller, L., et al. (2025). Novel environment exposure drives temporally defined and region-specific chromatin accessibility and gene expression changes in the hippocampus. <a href="https://doi.org/10.1038/s41467-025-63029-6" target="_blank">doi:10.1038/s41467-025-63029-6</a></li>
 <li>Coda, D. M., Watt, L., Glauser, L., et al. (2025). Cell-type- and locus-specific epigenetic editing of memory expression. <a href="https://doi.org/10.1038/s41588-025-02368-y" target="_blank">doi:10.1038/s41588-025-02368-y</a></li>
 <li>Terceros, A., Chen, C., Harada, Y., et al. (2026). Thalamocortical transcriptional gates coordinate memory stabilization. <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">doi:10.1038/s41586-025-09774-6</a></li>
+<li>Wang, J., Telese, F., Tan, Y., et al. (2015). LSD1n is an H4K20 demethylase regulating memory formation via transcriptional elongation control. <a href="https://doi.org/10.1038/nn.4069" target="_blank">doi:10.1038/nn.4069</a></li>
+<li>Dai, J., Aoto, J., &amp; Südhof, T. C. (2019). Alternative splicing of presynaptic neurexins differentially controls postsynaptic NMDA and AMPA receptor responses. <a href="https://doi.org/10.1016/j.neuron.2019.03.032" target="_blank">doi:10.1016/j.neuron.2019.03.032</a></li>
+<li>Shi, H., Zhang, X., Weng, Y.-L., et al. (2018). m6A facilitates hippocampus-dependent learning and memory through YTHDF1. <a href="https://doi.org/10.1038/s41586-018-0666-1" target="_blank">doi:10.1038/s41586-018-0666-1</a></li>
+<li>Peterson, L. N., Kasper, J. M., Allgaier, J. A., et al. (2025). ADAR2-mediated Q/R editing of GluA2 in homeostatic synaptic plasticity. <a href="https://doi.org/10.1126/scisignal.adr1442" target="_blank">doi:10.1126/scisignal.adr1442</a></li>
+<li>Joglekar, A., Prjibelski, A., Mahfouz, A., et al. (2024). Single-cell long-read sequencing-based mapping reveals specialized splicing patterns in developing and adult mouse and human brain. <a href="https://doi.org/10.1038/s41593-024-01616-4" target="_blank">doi:10.1038/s41593-024-01616-4</a></li>
+<li>Li, Y., Zhu, M., Li, X., et al. (2025). Enhanced Protein Synthesis and Hippocampus-Dependent Memory via Inhibition of YTHDF2-Mediated m6A mRNA Degradation. <a href="https://doi.org/10.1002/advs.202514926" target="_blank">doi:10.1002/advs.202514926</a></li>
 <li>Frey, U., &amp; Morris, R. G. M. (1997). Synaptic tagging and long-term potentiation. <a href="https://doi.org/10.1038/385533a0" target="_blank">doi:10.1038/385533a0</a></li>
 <li>Fonseca, R., Vabulas, R. M., Hartl, F. U., Bonhoeffer, T., &amp; Nägerl, U. V. (2006). A balance of protein synthesis and proteasome-dependent degradation determines the maintenance of LTP. <a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">doi:10.1016/j.neuron.2006.08.015</a></li>
 <li>Govindarajan, A., Israely, I., Huang, S.-Y., &amp; Tonegawa, S. (2011). The dendritic branch is the preferred integrative unit for protein synthesis-dependent LTP. <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">doi:10.1016/j.neuron.2010.12.008</a></li>
