@@ -13,13 +13,14 @@ page_intro: "This page is a Q&A for the questions many readers hit first when re
 accuracy_note: "This page gives short answers. Please do not quote the conclusion alone; return to the linked pages and references when you need the full basis."
 page_highlights:
   - "It quickly clears up first-order questions such as what this site is for and what EEG or brain-to-text work can and cannot support."
-  - "It now front-loads six technical guardrails: connectome-complete is not state-complete, a high score is not automatically a target-specific neural readout, BOLD / fNIRS differences need vascular-state / CVR audit, DCM / effective-connectivity labels do not by themselves identify true causal wiring, thermodynamic / irreversibility labels do not by themselves measure physical dissipation or WBE-ready cost, and low latency does not by itself solve the body / environment boundary."
+  - "It now front-loads seven technical guardrails: connectome-complete is not state-complete, a high score is not automatically a target-specific neural readout, EEG / MEG connectivity labels are not automatically leak-proof communication maps or causal circuits, BOLD / fNIRS differences need vascular-state / CVR audit, DCM / effective-connectivity labels do not by themselves identify true causal wiring, thermodynamic / irreversibility labels do not by themselves measure physical dissipation or WBE-ready cost, and low latency does not by itself solve the body / environment boundary."
   - "It avoids dramatic overstatement and states what remains unresolved at the same time."
   - "It is structured so readers can tell when the FAQ is enough and when they should move on to the full page."
 known_points:
   - "Even short Q&A becomes much safer when strong claims are decomposed into weaker, more testable claims."
   - "The impressive appearance of EEG or LLM outputs must be separated from strong WBE claims, and the contributions of language priors, nuisance routes, and brain-derived information must also be separated."
   - "Because wiring diagrams and cell types still leave excitability, timing-state, thermal-state, transcription/chromatin, proteostasis, ECM / PNN, ionic-homeostasis, bioenergetic / mitochondrial state, and maintenance-support variables unresolved, long-term dynamical claims require separate auditing."
+  - "An EEG / MEG connectivity label does not by itself show leak-free inter-areal communication or causality; volume conduction, source leakage, ghost interactions, and pipeline dependence still matter."
   - "A BOLD or fNIRS amplitude difference without vascular-state / CVR or short-separation auditing is still not a clean neural difference."
   - "A DCM or effective-connectivity label does not by itself discover the one true causal circuit; candidate model space, validation, and reliability still matter."
   - "An irreversibility / entropy-production label does not by itself tell you the coarse-graining, timescale, estimator family, or dynamical assumptions behind the number, and it is not automatically a metabolic-cost readout."
@@ -144,9 +145,9 @@ If the FAQ helped you understand the topic but you still do not know what to ver
 </div>
 
 <div class="note-box">
-<strong>Six technical guards now fixed at the front door</strong>
+<strong>Seven technical guards now fixed at the front door</strong>
 <p>
-This FAQ now blocks six fast overreads before they spread through the site: <strong>connectome-complete is not state-complete</strong>, <strong>high score is not automatically target-specific neural evidence</strong>, <strong>BOLD / fNIRS amplitude difference is not automatically a neural difference without vascular-state / CVR audit</strong>, <strong>DCM / effective-connectivity output is not automatically the brain's true causal wiring</strong>, <strong>thermodynamic / irreversibility labels are not automatically direct physical-dissipation measurements or WBE gates</strong>, and <strong>low latency is not automatically a solved body / environment boundary</strong>. If you need the full rule set behind them, go next to <a href="verification.html#observability-budget">Verification: Observability Budget</a>, <a href="verification.html#body-environment-boundary-card">Verification: Body / Environment Boundary Card</a>, <a href="wiki/connectome-is-not-enough.html">Wiki: Why a Connectome Is Not Enough</a>, <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>, <a href="wiki/observation-to-estimation.html#effective-connectivity-route-card">Wiki: effective-connectivity route card</a>, and <a href="wiki/thermodynamic-grounding-basics.html#irreversibility-route-card">Wiki: irreversibility route card</a>.
+This FAQ now blocks seven fast overreads before they spread through the site: <strong>connectome-complete is not state-complete</strong>, <strong>high score is not automatically target-specific neural evidence</strong>, <strong>sensor- or source-space connectivity is not automatically a leak-proof communication map or causal circuit</strong>, <strong>BOLD / fNIRS amplitude difference is not automatically a neural difference without vascular-state / CVR audit</strong>, <strong>DCM / effective-connectivity output is not automatically the brain's true causal wiring</strong>, <strong>thermodynamic / irreversibility labels are not automatically direct physical-dissipation measurements or WBE gates</strong>, and <strong>low latency is not automatically a solved body / environment boundary</strong>. If you need the full rule set behind them, go next to <a href="eeg_101.html">EEG 101</a>, <a href="verification.html#observability-budget">Verification: Observability Budget</a>, <a href="verification.html#body-environment-boundary-card">Verification: Body / Environment Boundary Card</a>, <a href="wiki/connectome-is-not-enough.html">Wiki: Why a Connectome Is Not Enough</a>, <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>, <a href="wiki/observation-to-estimation.html#effective-connectivity-route-card">Wiki: effective-connectivity route card</a>, and <a href="wiki/thermodynamic-grounding-basics.html#irreversibility-route-card">Wiki: irreversibility route card</a>.
 </p>
 </div>
 
@@ -164,7 +165,7 @@ This FAQ now blocks six fast overreads before they spread through the site: <str
 </tr>
 <tr>
 <td><strong>Avoid misreading flashy claims in news coverage</strong></td>
-<td>Read Q1, Q1b, Q1c, Q1d, Q1e, and Q1f first to separate task-limited decode, shortcut routes, hemodynamic proxy limits, model-conditioned causal claims, and thermodynamic overreads before moving on to Q2.</td>
+<td>Read the Q1 series first to separate task-limited decode, shortcut routes, connectivity-ceiling issues, hemodynamic proxy limits, model-conditioned causal claims, and thermodynamic overreads before moving on to Q2.</td>
 </tr>
 <tr>
 <td><strong>Know only what counts as progress</strong></td>
@@ -271,6 +272,19 @@ A. Not automatically. Hemodynamic modalities carry both neural-side uncertainty 
 </p>
 <p>
 At Mind-Upload, a BOLD or fNIRS difference without <strong>vascular-state / CVR</strong> or <strong>short-separation</strong> audit stays a <strong>hemodynamic-limited difference</strong> rather than a clean neural difference. The shortest follow-up is <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a> plus <a href="verification.html#observability-budget">Verification: Observability Budget</a>.
+</p>
+</section>
+
+<section class="section" id="q1d2">
+<h2 class="section-title">Q. If a paper shows EEG / MEG connectivity or information flow, did it identify communication channels or causality?</h2>
+<p>
+A. Not by default. On this site, sensor-space or source-space connectivity results are first read as <strong>dependence patterns under a named pipeline</strong>, not as leak-proof inter-areal communication maps or causal wiring. <a href="https://doi.org/10.1016/j.neuroimage.2011.01.055" target="_blank">Vinck et al. (2011)</a> made wPLI more conservative against some zero-lag mixing than older phase-synchrony measures, but that is not the same as eliminating leakage or proving directional influence.
+</p>
+<p>
+The deeper problem is that the remaining failure modes are different from ordinary cleanup. <a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">Haufe et al. (2013)</a> showed that sensor-space EEG connectivity remains strongly limited by volume conduction, <a href="https://doi.org/10.1016/j.neuroimage.2018.02.032" target="_blank">Palva et al. (2018)</a> showed that even leakage-insensitive source-space measures can generate ghost interactions, <a href="https://doi.org/10.1016/j.neures.2019.09.003" target="_blank">Ye et al. (2020)</a> evaluated symbolic transfer entropy with TMS precisely because observational data alone make causality difficult to identify, and <a href="https://doi.org/10.1016/j.clinph.2025.03.043" target="_blank">Miljevic et al. (2025)</a> showed that sensor-space functional-connectivity estimates still change materially with rereferencing, epoch length, epoch count, and metric choice.
+</p>
+<p>
+At Mind-Upload, a connectivity paper must therefore still disclose <strong>reference scheme and preprocessing route</strong>, <strong>leakage / volume-conduction countermeasures</strong>, <strong>source-model assumptions if used</strong>, <strong>perturbation or external validation route for directional claims</strong>, <strong>pipeline-sensitivity checks</strong>, and <strong>residual claim ceiling</strong>. If those are missing, we read the result as a <strong>pipeline-conditioned dependence map</strong>, not as a communication graph or causal circuit. The shortest follow-up is <a href="eeg_101.html">EEG 101</a>, especially the connectivity-ceiling note, then <a href="wiki/observation-to-estimation.html">Wiki: From observation to estimation</a>.
 </p>
 </section>
 
@@ -504,6 +518,11 @@ The distinguishing strategy of Mind-Upload is <strong>to build the Verification 
 <li>Williams, R. J., Specht, J. L., Mazerolle, E. L., et al. (2023). Correspondence between BOLD fMRI task response and cerebrovascular reactivity across the cerebral cortex. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">doi:10.3389/fphys.2023.1167148</a></li>
 <li>Yücel, M. A., Selb, J., Huppert, T. J., Franceschini, M. A., &amp; Boas, D. A. (2015). Short separation regression improves statistical significance and better localizes the hemodynamic response obtained by near-infrared spectroscopy for tasks with differing autonomic responses. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">doi:10.1117/1.NPh.2.3.035005</a></li>
 <li>Epp, S. M., Halani, S., Paquette, M., et al. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
+<li>Vinck, M., Oostenveld, R., van Wingerden, M., Battaglia, F., &amp; Pennartz, C. M. A. (2011). An improved index of phase-synchronization for electrophysiological data in the presence of volume-conduction, noise and sample-size bias. <a href="https://doi.org/10.1016/j.neuroimage.2011.01.055" target="_blank">doi:10.1016/j.neuroimage.2011.01.055</a></li>
+<li>Haufe, S., Nikulin, V. V., Müller, K.-R., &amp; Nolte, G. (2013). A critical assessment of connectivity measures for EEG data: A simulation study. <a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">doi:10.1016/j.neuroimage.2012.09.036</a></li>
+<li>Palva, J. M., Wang, S. H., Palva, S., Zhigalov, A., Monto, S., Brookes, M. J., Schoffelen, J.-M., &amp; Jerbi, K. (2018). Ghost interactions in MEG/EEG source space: A note of caution on inter-areal coupling measures. <a href="https://doi.org/10.1016/j.neuroimage.2018.02.032" target="_blank">doi:10.1016/j.neuroimage.2018.02.032</a></li>
+<li>Ye, S., Kitajo, K., &amp; Kitano, K. (2020). Information-theoretic approach to detect directional information flow in EEG signals induced by TMS. <a href="https://doi.org/10.1016/j.neures.2019.09.003" target="_blank">doi:10.1016/j.neures.2019.09.003</a></li>
+<li>Miljevic, A., Murphy, O. W., Fitzgerald, P. B., &amp; Bailey, N. W. (2025). Estimating sensor-space EEG connectivity PART 1: Identifying best performing methods for functional connectivity in simulated data. <a href="https://doi.org/10.1016/j.clinph.2025.03.043" target="_blank">doi:10.1016/j.clinph.2025.03.043</a></li>
 <li>Bérut, A., Arakelyan, A., Petrosyan, A., et al. (2012). Experimental verification of Landauer&rsquo;s principle linking information and thermodynamics. <a href="https://doi.org/10.1038/nature10872" target="_blank">doi:10.1038/nature10872</a></li>
 <li>Attwell, D., &amp; Laughlin, S. B. (2001). An energy budget for signaling in the grey matter of the brain. <a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">doi:10.1097/00004647-200110000-00001</a></li>
 <li>Lynn, C. W., Cornblath, E. J., Papadopoulos, L., et al. (2021). Broken detailed balance and entropy production in the human brain. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>

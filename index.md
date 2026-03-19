@@ -17,6 +17,7 @@ page_highlights:
   - "Connectomes and cell types alone do not determine long-term dynamics; sleep/homeostasis, sleep architecture / replay-coupling, myelination, thermal-state, bioenergetic / mitochondrial state, and glial metabolism remain separate variables."
   - "Human evidence is layered: local ultrastructure, synaptic-density PET, and macro biochemical / energetic / ionic / thermal / myelin / clearance proxies are not one near-direct readout."
   - "For hemodynamic modalities, BOLD or fNIRS amplitude is not read as neural difference unless vascular-state / CVR limits are audited separately."
+  - "For EEG / MEG connectivity, wPLI, source-space graphs, and information-flow labels are not read as leak-proof communication maps or causal circuits unless leakage, perturbation, and pipeline limits are disclosed separately."
   - "Thermodynamic or irreversibility papers are kept on an auxiliary track; arrow-of-time results are not read as direct physical-dissipation or WBE-readiness evidence without a route card."
   - "Brain-to-text and speech demos are read through the Neural Contribution Card so neural contribution is not confused with task structure or language priors."
   - "High decode / biomarker scores can rise from subject / session fingerprint alone, so the Specificity & Shortcut Card audits that shortcut independently."
@@ -29,6 +30,7 @@ known_points:
   - "Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately."
   - "Current human evidence comes in layers; proxy-rich routes still do not yield comparable whole-brain in vivo ground truth for every hidden state."
   - "For hemodynamic readouts, a group or longitudinal BOLD difference can still be dominated by vascular transfer state rather than neural change."
+  - "For EEG / MEG connectivity readouts, volume conduction, source leakage, ghost interactions, and pipeline dependence still stop the claim before communication or causality."
   - "For thermodynamic claims, different estimator families still answer different questions, so irreversibility results stay auxiliary unless their route card is disclosed."
   - "Strong claims about identity or consciousness belong in downstream verification design, not on the landing page."
 unknown_points:
@@ -112,6 +114,13 @@ This site now keeps <strong>mixed arousal proxies</strong> such as pupil / HRV, 
 <strong>If You Read Hemodynamic Differences As Neural Differences Too Quickly</strong>
 <p>
 This site now treats <strong>vascular transfer state</strong> as a separate audit item for hemodynamic modalities. In other words, a BOLD or fNIRS amplitude difference is not read here as a neural difference by default unless the paper also reports a <strong>vascular-state / cerebrovascular-reactivity calibration route</strong> or abstains explicitly. The shortest route is <a href="verification.html#observability-budget">Verification: Observability Budget</a>, then <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceilings by Measurement Stack</a> and <a href="wiki/multimodal-integration-basics.html">Wiki: Basics of Multimodal Integration</a>.
+</p>
+</div>
+
+<div class="note-box">
+<strong>If You Read EEG / MEG Connectivity As Communication Or Causality Too Quickly</strong>
+<p>
+This site does not treat <strong>wPLI</strong>, <strong>source-space connectivity</strong>, <strong>Granger-style directed metrics</strong>, or <strong>transfer-entropy labels</strong> as leak-proof communication maps or causal circuits by name alone. Volume conduction, source leakage, ghost interactions, pipeline dependence, and observation-only limits remain separate audit items. The shortest route is <a href="faq.html#q1d2">FAQ: how to read connectivity claims</a>, then <a href="eeg_101.html">EEG 101</a> and <a href="wiki/observation-to-estimation.html">Wiki: from observation to estimation</a>.
 </p>
 </div>
 

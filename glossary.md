@@ -14,11 +14,11 @@ accuracy_note: "The definitions here are deliberately short. For exact usage, re
 page_highlights:
   - "It gives short explanations of terms and points to where each concept matters."
   - "It now includes the front-door verification terms added in the March 2026 re-audit, such as claim ceiling, shortcut auditing, maintenance-state, and vascular-state / CVR audit."
-  - "It is especially careful about pairs that sound similar but should not be collapsed, such as observability / identifiability / direct validation."
+  - "It is especially careful about pairs that sound similar but should not be collapsed, such as observability / identifiability / direct validation and functional connectivity / effective connectivity / causal wiring."
   - "If a term blocks your reading, this page is meant to get you unstuck quickly and send you back to the main text."
 known_points:
   - "Many misunderstandings can be avoided simply by reducing terminology confusion."
-  - "It is especially important to distinguish between decode/emulate, correlation/causation, observability/identifiability, model fit/direct validation, and brain signal/language prior."
+  - "It is especially important to distinguish between decode/emulate, correlation/causation, functional connectivity/effective connectivity/causal wiring, observability/identifiability, model fit/direct validation, and brain signal/language prior."
   - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, thermal-state, timing-state, and vascular-state language."
   - "This page serves as an entry point for short definitions and a way to return to the main text."
 unknown_points:
@@ -280,6 +280,10 @@ If words such as <strong>claim ceiling</strong>, <strong>hidden state</strong>, 
 <td>Correlation is a relationship that changes together, and causation is a relationship that changes when one changes the other. </td>
 </tr>
 <tr>
+<td><strong>Functional connectivity / effective connectivity / causal wiring</strong></td>
+<td>Functional connectivity is statistical dependence, effective connectivity is a model-conditioned directed-influence claim, and causal wiring needs stronger intervention or external validation than either label alone.</td>
+</tr>
+<tr>
 <td><strong>Observability/Identifiability</strong></td>
 <td>Observability asks whether states can be distinguished at all, while identifiability asks whether they can be uniquely determined. The first can hold without the second.</td>
 </tr>
@@ -518,8 +522,24 @@ If words such as <strong>claim ceiling</strong>, <strong>hidden state</strong>, 
 <td>An operation that returns "I don't know" under low confidence, extrapolation, or outlier conditions. It trades coverage against risk to avoid overclaiming.</td>
 </tr>
 <tr>
+<td><strong>Functional connectivity</strong></td>
+<td>Statistical dependence among recorded signals or inferred sources. It can be useful, but it is not automatically leak-proof, directional, or causal.</td>
+</tr>
+<tr>
+<td><strong>Effective connectivity</strong></td>
+<td>A model-conditioned claim about directed influence among named nodes. It is stronger than undirected dependence, but it still depends on candidate model space, observation assumptions, and validation.</td>
+</tr>
+<tr>
+<td><strong>wPLI</strong></td>
+<td>A phase-lag metric designed to reduce sensitivity to some zero-lag mixing and noise. It is safer than some older phase-synchrony measures, but not a leak-proof inter-areal coupling readout.</td>
+</tr>
+<tr>
+<td><strong>STE (Symbolic Transfer Entropy)</strong></td>
+<td>A directional-dependence estimator based on temporal information flow. In Mind-Upload it is not treated as causal proof without perturbation or external validation.</td>
+</tr>
+<tr>
 <td><strong>DCM</strong></td>
-<td>A framework that assumes a neural circuit model and estimates connections. It pairs naturally with intervention design.</td>
+<td>A dynamic-causal-modeling framework that compares explicit generative circuit models. On this site it is read through candidate model space, validation, reliability, and abstention rather than as automatic discovery of true wiring.</td>
 </tr>
 <tr>
 <td><strong>SCM (Structural Causal Model)</strong></td>
@@ -622,8 +642,14 @@ Although non-invasive decoding and ESI are making steady progress, a successful 
 <li>Tang, J., LeBel, A., Jain, S., &amp; Huth, A. G. (2023). Semantic reconstruction of continuous language from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
 <li>d'Ascoli, S., Bel, C., Rapin, J., et al. (2025). Towards decoding individual words from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">doi:10.1038/s41467-025-65499-0</a></li>
 <li>Friston, K. J., Harrison, L., &amp; Penny, W. (2003). Dynamic causal modelling. <a href="https://doi.org/10.1016/S1053-8119(03)00202-7" target="_blank">doi:10.1016/S1053-8119(03)00202-7</a></li>
+<li>Penny, W. D., Stephan, K. E., Mechelli, A., &amp; Friston, K. J. (2004). Comparing dynamic causal models. <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">doi:10.1016/j.neuroimage.2004.03.026</a></li>
+<li>Rosa, M. J., Friston, K., &amp; Penny, W. (2012). Post-hoc selection of dynamic causal models. <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">doi:10.1016/j.jneumeth.2012.04.013</a></li>
 <li>Vinck, M., et al. (2011). Weighted Phase Lag Index (wPLI). <a href="https://doi.org/10.1016/j.neuroimage.2011.01.055" target="_blank">doi:10.1016/j.neuroimage.2011.01.055</a></li>
 <li>Staniek, M., &amp; Lehnertz, K. (2008). Symbolic Transfer Entropy. <a href="https://doi.org/10.1103/PhysRevLett.100.158101" target="_blank">doi:10.1103/PhysRevLett.100.158101</a></li>
+<li>Haufe, S., Nikulin, V. V., Müller, K.-R., &amp; Nolte, G. (2013). A critical assessment of connectivity measures for EEG data: A simulation study. <a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">doi:10.1016/j.neuroimage.2012.09.036</a></li>
+<li>Palva, J. M., Wang, S. H., Palva, S., Zhigalov, A., Monto, S., Brookes, M. J., Schoffelen, J.-M., &amp; Jerbi, K. (2018). Ghost interactions in MEG/EEG source space: A note of caution on inter-areal coupling measures. <a href="https://doi.org/10.1016/j.neuroimage.2018.02.032" target="_blank">doi:10.1016/j.neuroimage.2018.02.032</a></li>
+<li>Ye, S., Kitajo, K., &amp; Kitano, K. (2020). Information-theoretic approach to detect directional information flow in EEG signals induced by TMS. <a href="https://doi.org/10.1016/j.neures.2019.09.003" target="_blank">doi:10.1016/j.neures.2019.09.003</a></li>
+<li>Miljevic, A., Murphy, O. W., Fitzgerald, P. B., &amp; Bailey, N. W. (2025). Estimating sensor-space EEG connectivity PART 1: Identifying best performing methods for functional connectivity in simulated data. <a href="https://doi.org/10.1016/j.clinph.2025.03.043" target="_blank">doi:10.1016/j.clinph.2025.03.043</a></li>
 <li>Gorgolewski, K. J., et al. (2016). BIDS. <a href="https://doi.org/10.1038/sdata.2016.44" target="_blank">doi:10.1038/sdata.2016.44</a></li>
 <li>Pernet, C. R., et al. (2019). EEG-BIDS. <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">doi:10.1038/s41597-019-0104-8</a></li>
 <li>Pernet, C. R., et al. (2020). Best practices in data analysis and sharing in neuroimaging using MEEG. <a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">doi:10.1038/s41593-020-00709-0</a></li>
