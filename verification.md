@@ -34,6 +34,7 @@ page_highlights:
   - "At L2 and above, shared extracellular / electrical state is separated from chemical synapses and ionic proxy classes when a claim depends on fast synchrony, oscillatory coordination, or electrical-state regime."
   - "At L2 and above, thermal-state is separated from timing-state and bioenergetics when a claim depends on membrane kinetics, field-potential amplitude, or sequence timing."
   - "At L2 and above, bioenergetic / mitochondrial support is separated from glial support when a claim depends on repeated-burst reliability, local ATP reserve, or dendritic plasticity."
+  - "At L2 and above, astrocyte network / ensemble state is separated from generic support background when a claim depends on recall, multiday stabilization, or fear-state representations."
   - "At L2 and above, delay is treated as timing-state rather than one scalar, so device latency, biological conduction timing, and human macro timing proxies are not collapsed into one number."
   - "At L2 and above for intervention / closed-loop results, the Intervention Card fixes trigger rule, timing audit, control / sham, safe stop, and recalibration burden."
   - "At L3 and above for embodied-loop results, the Body / Environment Boundary Card fixes which sensory, motor, and interoceptive channels were preserved, substituted, or omitted."
@@ -63,6 +64,7 @@ known_points:
   - "A chemical connectome and nominal inhibition do not by themselves fix electrical coupling, endogenous field effects, or local inhibitory driving force, so fast-synchrony and oscillatory-coordination claims need a separate ceiling."
   - "A connectome, cell type, and timing proxy do not by themselves fix local thermal-state, so field-potential and sequence-timing claims need a separate ceiling."
   - "A connectome, cell type, and glial proxy do not by themselves fix local ATP reserve or mitochondrial positioning, so repeated-burst and dendritic-plasticity claims need a separate bioenergetic ceiling."
+  - "A glial proxy or generic metabolic note does not by itself fix astrocyte network / ensemble state, so recall, reconsolidation, and multiday-stabilization claims need a separate astrocyte-state ceiling."
   - "Passing a hardware latency audit is not the same as recovering biological timing-state; claims that depend on phase or synchrony need both sides separated."
   - "Passing a latency audit is not the same as fixing the body / environment boundary; L3 claims still need retained/substituted loop disclosure."
   - "In chronic invasive recording, unit-matching uncertainty and tissue response around the implant are separate audit items."
@@ -1011,8 +1013,8 @@ Cross-day and remote-memory claims fail for a different reason than same-session
 </tr>
 <tr>
 <td><strong>Glial / astrocyte support</strong></td>
-<td>Write whether glial or astrocyte variables were directly measured, causally perturbed, approximated by macro proxies, or left latent.</td>
-<td>Memory retrieval, multiday stabilization, and slow-state support remain partial-model claims.</td>
+<td>Write whether astrocyte network / ensemble variables, glial metabolic routes, or only macro support proxies were directly measured, causally perturbed, externally calibrated, or left latent, and name the species / region / timescale when rodent causal evidence is being used as support.</td>
+<td>Memory retrieval, reconsolidation, multiday stabilization, and fear-state support remain partial-model claims.</td>
 </tr>
 <tr>
 <td><strong>Clearance / immune support</strong></td>
@@ -1036,6 +1038,12 @@ Cross-day and remote-memory claims fail for a different reason than same-session
 <strong>Do not collapse energetic support into glial support</strong>
 <p>
 <a href="https://doi.org/10.1016/j.cell.2013.12.042" target="_blank">Rangaraju et al. (2014)</a>, <a href="https://doi.org/10.1016/j.cell.2018.12.013" target="_blank">Rangaraju et al. (2019)</a>, <a href="https://doi.org/10.1016/j.neuron.2018.09.025" target="_blank">Divakaruni et al. (2018)</a>, <a href="https://doi.org/10.1038/s41467-023-44233-8" target="_blank">Bapat et al. (2024)</a>, and <a href="https://doi.org/10.1038/s42003-025-08963-3" target="_blank">Hu et al. (2025)</a> support a narrower rule: local ATP supply, mitochondrial positioning, and energetic micro-organization can change repeated-burst reliability and dendritic plasticity even before one asks whether astrocyte or clearance-state matched. Conversely, human <a href="https://doi.org/10.1002/nbm.3384" target="_blank">31P-MRS (Ren et al., 2015)</a> and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">dynamic DMRSI (Li et al., 2025)</a> remain macro energetic proxies rather than direct readouts of branch-local mitochondrial state. This site therefore records energetic route and glial route separately.
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-20 addendum: astrocyte-state is not generic support background</strong>
+<p>
+<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> showed minute-scale cortical astrocyte-network encoding of local neurotransmitter input, <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a> showed that learning-associated astrocyte ensembles can regulate hippocampal memory recall, <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a> showed that astrocytic ensembles can stabilize emotional memory across multiple days, and <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> showed that basolateral-amygdala astrocyte Ca<sup>2+</sup> signalling supports fear-memory retrieval / extinction representations. Therefore, this site does not accept a submission that depends on recall, multiday stabilization, or fear-state support while writing only a generic glial-support sentence. Authors now have to state whether the relevant astrocyte-state was directly measured, perturbed, only coarsely proxied, or left latent, and they must keep the rodent-to-human observability gap explicit.
 </p>
 </div>
 <div class="note-box">
@@ -1304,16 +1312,16 @@ In our March 2026 primary-literature audit, we reconfirmed that there are at lea
 <td>We do not insist on transmitter-specific internal states, but treat them as covariates and stratification factors. </td>
 </tr>
 <tr>
-<td><strong>Glial-metabolic coupling status</strong></td>
-<td>Astrocytes are causally involved in plasticity and memory retrieval, and are not just supporting tissues. </td>
-<td>Plasticity and long-term stability are treated as partial models and the scope of application is limited. </td>
+<td><strong>Astrocyte / glial-state</strong></td>
+<td>Astrocyte network and ensemble state can causally influence transmitter integration, memory retrieval, multiday stabilization, and fear-state representations, and therefore cannot be collapsed into generic metabolic background. </td>
+<td>Recall, reconsolidation, and long-horizon stability stay partial-model claims unless astrocyte-state is measured, perturbed, or explicitly left latent with a species-limited ceiling. </td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
 <strong>Practical rules here</strong>
 <p>
-connectome-complete does not mean<strong>emulation-complete</strong>. Detailed primary literature and the technical basis for which state variables should be included in the minimum submission are summarized in <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams alone are not enough</a>. The newly emphasized issues of <strong>activity-dependent transcription / chromatin state</strong>, <strong>local proteostasis / synaptic-tagging state</strong>, <strong>cargo-transport / cytoskeletal trafficking state</strong>, and <strong>intrinsic excitability/homeostasis/maintenance state</strong> are discussed in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.
+connectome-complete does not mean<strong>emulation-complete</strong>. Detailed primary literature and the technical basis for which state variables should be included in the minimum submission are summarized in <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams alone are not enough</a>. The newly emphasized issues of <strong>activity-dependent transcription / chromatin state</strong>, <strong>local proteostasis / synaptic-tagging state</strong>, <strong>cargo-transport / cytoskeletal trafficking state</strong>, <strong>astrocyte / glial-state</strong>, and <strong>intrinsic excitability/homeostasis/maintenance state</strong> are discussed in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.
 </p>
 </div>
 <div class="note-box">
@@ -1871,6 +1879,9 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Erritzoe, D., Ashok, A. H., Searle, G. E., et al. (2020). Serotonin release measured in the human brain: a PET study with [<sup>11</sup>C]CIMBI-36 and d-amphetamine challenge. <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">doi:10.1038/s41386-019-0567-5</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
+<li>Williamson, N. R., et al. (2025). Learning-associated astrocyte ensembles regulate memory recall. <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">doi:10.1038/s41586-024-08170-w</a></li>
+<li>Dewa, K., et al. (2025). The astrocytic ensemble acts as a multiday trace to stabilize memory. <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">doi:10.1038/s41586-025-09619-2</a></li>
+<li>Bukalo, O., et al. (2026). Astrocytes enable amygdala neural representations supporting memory. <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">doi:10.1038/s41586-025-10068-0</a></li>
 <li>Vadisiute, A., Meijer, E., Therpurakal, R. N., et al. (2024). Glial cells undergo rapid changes following acute chemogenetic manipulation of cortical layer 5 projection neurons. <a href="https://doi.org/10.1038/s42003-024-06994-w" target="_blank">doi:10.1038/s42003-024-06994-w</a></li>
 <li>Hadzibegovic, N., et al. (2026). Early intrinsic excitability plasticity of neocortical engram neurons defines memory formation and precision. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">doi:10.1038/s41467-025-66975-3</a></li>
 <li>Stringer, C., Pachitariu, M., Steinmetz, N., et al. (2019). Spontaneous behaviors drive multidimensional, brainwide activity. <a href="https://doi.org/10.1126/science.aav7893" target="_blank">doi:10.1126/science.aav7893</a></li>

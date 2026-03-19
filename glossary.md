@@ -20,7 +20,7 @@ page_highlights:
 known_points:
   - "Many misunderstandings can be avoided simply by reducing terminology confusion."
   - "It is especially important to distinguish between decode/emulate, correlation/causation, functional connectivity/effective connectivity/causal wiring, observability/identifiability, model fit/direct validation, and brain signal/language prior."
-  - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, and route-maturity language."
+  - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, astrocyte-state, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, and route-maturity language."
   - "This page serves as an entry point for short definitions and a way to return to the main text."
 unknown_points:
   - "Terms related to the theory of consciousness have slightly different meanings depending on the paper or position."
@@ -367,11 +367,15 @@ Words such as <strong>proxy class</strong>, <strong>route maturity / model burde
 </tr>
 <tr>
 <td><strong>Maintenance-state</strong></td>
-<td>Slow controller and support variables, such as sleep / wake history, cargo-transport / cytoskeletal trafficking state, thermal-state, ionic state, bioenergetic / mitochondrial support, glial / metabolic support, and clearance-related support, that matter for long-horizon stability.</td>
+<td>Slow controller and support variables, such as sleep / wake history, cargo-transport / cytoskeletal trafficking state, thermal-state, ionic state, bioenergetic / mitochondrial support, astrocyte / glial-state, and clearance-related support, that matter for long-horizon stability.</td>
+</tr>
+<tr>
+<td><strong>Astrocyte / glial-state</strong></td>
+<td>The minutes-to-days non-neuronal state that includes astrocyte network responses, learning-associated ensembles, lactate transport, and related glial variables that can change recall, multiday stabilization, or fear-state representations. It should not be collapsed into generic metabolic background.</td>
 </tr>
 <tr>
 <td><strong>Support-state proxy</strong></td>
-<td>A human route that constrains slow maintenance variables only at a coarse level, for example energetic, thermal, myelin, or clearance state. It is stronger than saying “nothing is visible,” but weaker than local controller or cell-specific ground truth.</td>
+<td>A human route that constrains slow maintenance variables only at a coarse level, for example energetic, thermal, myelin, or clearance state. It is stronger than saying “nothing is visible,” but weaker than local controller, astrocyte-ensemble state, or other cell-specific ground truth.</td>
 </tr>
 <tr>
 <td><strong>Thermal-state</strong></td>
@@ -690,6 +694,11 @@ Although non-invasive decoding and ESI are making steady progress, a successful 
 <li>Govindarajan, A., Israely, I., Huang, S.-Y., &amp; Tonegawa, S. (2011). The dendritic branch is the preferred integrative unit for protein synthesis-dependent LTP. <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">doi:10.1016/j.neuron.2010.12.008</a></li>
 <li>Glykys, J., Dzhala, V., Egawa, K., et al. (2014). Local impermeant anions establish the neuronal chloride concentration. <a href="https://doi.org/10.1126/science.1245423" target="_blank">doi:10.1126/science.1245423</a></li>
 <li>Seidl, A. H., Rubel, E. W., &amp; Barria, A. (2015). Tuning of Ranvier node and internode properties in myelinated axons to adjust action potential timing. <a href="https://doi.org/10.1038/ncomms9073" target="_blank">doi:10.1038/ncomms9073</a></li>
+<li>Suzuki, A., et al. (2011). Astrocyte-neuron lactate transport is required for long-term memory formation. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">doi:10.1016/j.cell.2011.02.018</a></li>
+<li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
+<li>Williamson, N. R., et al. (2025). Learning-associated astrocyte ensembles regulate memory recall. <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">doi:10.1038/s41586-024-08170-w</a></li>
+<li>Dewa, K., et al. (2025). The astrocytic ensemble acts as a multiday trace to stabilize memory. <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">doi:10.1038/s41586-025-09619-2</a></li>
+<li>Bukalo, O., et al. (2026). Astrocytes enable amygdala neural representations supporting memory. <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">doi:10.1038/s41586-025-10068-0</a></li>
 <li>Musall, S., Kaufman, M. T., Juavinett, A. L., Gluf, S., &amp; Churchland, A. K. (2019). Single-trial neural dynamics are dominated by richly varied movements. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">doi:10.1038/s41593-019-0502-4</a></li>
 <li>Chaibub Neto, E., Pratap, A., Perumal, T. M., et al. (2019). Identity confounding in machine learning can be controlled by design. <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">doi:10.1038/s41746-019-0178-x</a></li>
 <li>Murphy, K., Harris, A. D., &amp; Wise, R. G. (2011). Robustly measuring vascular reactivity differences with breath-hold: normalising stimulus-evoked and resting state BOLD fMRI data. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">doi:10.1016/j.neuroimage.2010.07.059</a></li>
