@@ -1,23 +1,25 @@
 ---
 layout: default
 title: "Wiki: Closed Loop, Delay, Jitter, Safe Stop"
-description: "Delay, jitter, drift, and safety stop, which are important in closed-loop evaluation, are organized according to primary literature for each type of loop."
+description: "Delay, jitter, drift, safety stop, and the body/environment boundary are organized from primary literature for each type of closed loop."
 article_type: Wiki
 subtitle: "Closed-loop time requirements are not a single number; they vary by loop type"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-19"
 note: "Learning guide / evidence refresh"
 audience: "People who want to read about L3 closed-loop evaluation and real-time operation based on literature rather than general information"
 reading_time: "14-22 minutes"
-page_intro: "This page is a wiki that organizes the differences between delay, jitter, drift, and safety stop, which are important in Mind-Upload's L3 'closed loop', according to primary literature. The purpose is to clarify that even in models with high offline accuracy, the required timing budget will change depending on the loop band and type of actuator."
-accuracy_note: "Here, we do not set a ``fixed threshold common to all loops.'' We write on the premise that judgments are made based on actually measured end-to-end indicators according to the issue, target frequency, output mechanism, and safety requirements."
+page_intro: "This page is a wiki that organizes the differences among delay, jitter, drift, safety stop, and body/environment boundary in Mind-Upload's L3 'closed loop' using primary literature. The purpose is to clarify that even when offline accuracy is high, the required timing budget depends on the loop band and actuator, and low latency alone does not tell you which sensory, motor, interoceptive, or reafferent loops were actually preserved."
+accuracy_note: "Here, we do not set a ``fixed threshold common to all loops.'' We also do not treat a fast loop as boundary-complete by default. Judgments are written on the premise that both end-to-end timing indicators and the retained/substituted body/environment routes are disclosed explicitly."
 page_highlights:
   - "Closed-loop time requirements vary by loop type, not by a single ms value."
+  - "Low latency is not the same as reproducing the relevant body/environment boundary."
   - "Even if the event marker is less than 1 ms, it is a different matter from guaranteeing end-to-end for the entire system."
   - "Phase error is more important than ms for phase-targeting, burst detection delay and home programming burden are more important for adaptive DBS."
   - "Streaming speech BCI needs to record not only average delay but also tail latency, silence/hold-last-output, and recalibration load in separate logs."
 known_points:
   - "Offline accuracy and closed-loop stability are separate claims and cannot be audited with the same score."
+  - "Even a fast loop can remain boundary-incomplete if self-motion, predicted reafference, tactile feedback, respiration, arousal, or other subject-defining routes stay omitted or undisclosed."
   - "Latency and jitter tolerances vary for state feedback, ERP/command BCI, streaming communication, phase-locked stimulation, and burst-driven neuromodulation."
   - "Unless you actually measure input, processing, output, and return end-to-end, you won't know the timing of actual operation."
   - "Speed-up within-session alone is not enough; it also leaves recalibration burden, clinic/home transition, and programming burden."
@@ -64,6 +66,13 @@ On this page, instead of talking about "how fast is enough" in an abstract way, 
 </p>
 </div>
 
+<div class="note-box">
+<strong>Timing audit is not the whole loop audit</strong>
+<p>
+This page now keeps <strong>timing logs</strong> separate from <strong>body/environment boundary logs</strong>. A loop can be fast and still remain boundary-incomplete if the paper does not say which sensory, action, interoceptive, and self-generated-feedback routes were preserved, substituted, or omitted. On this site, low latency without that disclosure does not rise above a task-specific local controller or surrogate-body result.
+</p>
+</div>
+
 <section class="section" id="why-fixed-threshold-is-dangerous">
 <h2 class="section-title">Why fixed thresholds are dangerous</h2>
 <p>
@@ -73,6 +82,65 @@ Wilson et al. (2010) showed that for relatively slow BCI indicators such as mu r
 <strong>Reading principles</strong>
 <p>
 "Low latency is good" is generally correct, but it cannot immediately be said that "microsecond-level delay is required for all loops" or "1 ms or less is required for all loops." The correct question is<strong>in what loop band, what error breaks what</strong>.
+</p>
+</div>
+</section>
+
+<section class="section" id="boundary-before-latency">
+<h2 class="section-title">Before milliseconds, fix which loop boundary was actually preserved</h2>
+<p>
+The weakness of the older timing-only reading was that it could still let a reader say, <strong>"the loop was fast, therefore the closed-loop problem is close to solved."</strong> That is too weak. Primary literature shows that sensory cortex and higher-order dynamics are continuously reshaped by self-motion, predicted sensory consequences, multisensory navigation cues, respiration, arousal, and tactile feedback. Therefore, a low-latency controller is not automatically a boundary-complete controller.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Boundary component</th>
+<th>What primary literature shows</th>
+<th>Why timing alone is insufficient</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>self-motion / optic flow / proprioceptive coupling</strong></td>
+<td><a href="https://doi.org/10.1038/nn.3567" target="_blank">Saleem et al. (2013)</a> showed that V1 neurons combine visual speed with run speed during navigation.</td>
+<td>A fast visual loop still differs from the biological loop if locomotion- and proprioception-linked inputs were absent, simulated, or silently simplified.</td>
+</tr>
+<tr>
+<td><strong>predicted reafference / sensorimotor mismatch</strong></td>
+<td><a href="https://doi.org/10.1016/j.neuron.2012.03.040" target="_blank">Keller et al. (2012)</a> showed mismatch-sensitive responses in behaving-mouse V1, supporting the idea that expected sensory feedback matters beyond passive stimulation.</td>
+<td>The loop is not characterized only by delay; it also depends on whether self-generated sensory consequences and mismatch signals were available at all.</td>
+</tr>
+<tr>
+<td><strong>vestibular and multisensory navigation cues</strong></td>
+<td><a href="https://doi.org/10.1126/science.1232655" target="_blank">Ravassard et al. (2013)</a> showed that removing real-world multisensory cues changes hippocampal spatiotemporal selectivity in virtual reality.</td>
+<td>A low-latency virtual loop can still be a different loop class if vestibular and other navigation cues were missing or remapped.</td>
+</tr>
+<tr>
+<td><strong>corollary discharge of self-generated sensory consequences</strong></td>
+<td><a href="https://doi.org/10.1038/nature13724" target="_blank">Schneider et al. (2014)</a> showed a motor-to-auditory cortical circuit that suppresses sensory responses during movement.</td>
+<td>If a system does not disclose whether corollary-discharge-like routes or self-generated sensory predictions were preserved, timing alone cannot tell you whether the sensory loop is comparable.</td>
+</tr>
+<tr>
+<td><strong>respiration / arousal / organism-wide physiology</strong></td>
+<td><a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">Zelano et al. (2016)</a> showed nasal-respiration coupling to human limbic oscillations, and <a href="https://doi.org/10.1038/s41586-025-09544-4" target="_blank">Raut et al. (2025)</a> showed that neural activity, physiology, and behavior share a structured arousal manifold.</td>
+<td>A brain-only fast controller can still omit organism-wide state variables that co-organize the loop in vivo.</td>
+</tr>
+<tr>
+<td><strong>tactile contact feedback</strong></td>
+<td><a href="https://doi.org/10.1126/science.abd0380" target="_blank">Flesher et al. (2021)</a> showed that adding tactile feedback improves robotic-arm control in a bidirectional BCI.</td>
+<td>The main issue is not only whether the loop is fast, but which feedback channels were restored and which still remained absent.</td>
+</tr>
+<tr>
+<td><strong>movement-linked latent structure</strong></td>
+<td><a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> and <a href="https://doi.org/10.1126/science.aav7893" target="_blank">Stringer et al. (2019)</a> showed that ongoing behavior explains a large fraction of cortical and brainwide neural variance.</td>
+<td>Without a boundary card, a fast controller can overfit a narrow behavioral contract while still being read as a general closed-loop success.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Operating rule on this site</strong>
+<p>
+If the paper does not disclose which sensory, action, interoceptive, and self-generated-feedback routes were retained, substituted, or omitted, this site does not promote the result from <strong>fast local loop</strong> to <strong>boundary-complete L3 evidence</strong>. The formal public rule is the <a href="../verification.html#body-environment-boundary-card">Verification: Body / Environment Boundary Card</a>; this wiki supplies the timing-side companion logic.
 </p>
 </div>
 </section>
@@ -277,13 +345,19 @@ Whether it's ``I didn't get it right so I won't output it'', ``I'm going to use 
 <h4>Checklist</h4>
 <ul>
 <li><strong>loop class: One of</strong>state feedback, ERP/command, speech/streaming, phase-locked, burst-triggered. </li>
+<li><strong>declared boundary / target subsystem:</strong>State whether the loop is speech, grasp, navigation, memory-task, symptom-control, or another subsystem, and state the maximum claim ceiling. </li>
+<li><strong>retained / substituted sensory and self-generated-feedback routes:</strong>List which visual, tactile, auditory, proprioceptive, vestibular, respiration-linked, or predicted reafferent cues were present, simulated, or omitted. </li>
+<li><strong>retained / substituted action channels:</strong>Name the actual plant or actuator, such as cursor, robotic hand, speech synthesizer, avatar, or stimulator, together with its controllable degrees of freedom. </li>
+<li><strong>interoceptive / arousal logs:</strong>Record whether respiration, pupil, HR / HRV, effort, fatigue, or similar organism-wide covariates were logged, manipulated, or left latent. </li>
 <li><strong>end-to-end latency:</strong>Leave median, P95, P99, worst-case separate. </li>
 <li><strong>Module-wise latency:</strong> Separate input, inference, output, and recursive input, leaving what is rate-limiting. </li>
 <li><strong>Definition of jitter:</strong>Specify SD, IQR, or peak-to-peak. </li>
 <li><strong>clock offset / drift: Leave before and after the LSL and hardware marker correction. </li>
 <li><strong>Marker verification method:</strong>Write which of TTL, MCU, photodiode, microphone, or loopback was used for actual measurement. </li>
+<li><strong>loop-removal / ablation test:</strong>Report what happened when tactile feedback, self-motion cues, predicted sensory consequences, or another decisive route was removed, scrambled, or delayed. </li>
 <li><strong>Additional metrics for speech / streaming: </strong>Leave cue-to-output tail latency, audio driver latency, silence / hold-last-output rate, and false speech rate. </li>
 <li><strong>Additional metrics for phase/burst systems:</strong>Phase error distribution, missed trigger, burst detection delay, false positive/negative. </li>
+<li><strong>residual omitted loops / abstention boundary:</strong>State which body/environment routes remain absent and what stronger claim therefore remains forbidden. </li>
 <li><strong>Abstain/freeze/safety stop:</strong>Leave the number of activations, previous state, and return conditions. </li>
 <li><strong>Longitudinal burden: Record the elapsed time since the last supervised recalibration, presence or absence of unsupervised adaptation, and manpower/time required for recalibration. </li>
 <li><strong>naturalistic deployment: leave clinic/home performance difference, eligibility, continuation, programming change, duty cycle. </li>
@@ -293,14 +367,17 @@ Whether it's ``I didn't get it right so I won't output it'', ``I'm going to use 
 </section>
 
 <section class="section" id="how-to-read">
-<h2 class="section-title">6 questions when reading L3 arguments</h2>
+<h2 class="section-title">9 questions when reading L3 arguments</h2>
 <ol>
 <li><strong>Does it say which loop class it deals with?</strong> Check whether slow feedback, speech streaming, phase-locked, and aDBS are mentioned in the same table. </li>
-<li><strong>Are there module-wise measurements, not just end-to-end?</strong> Don't just rely on software timestamps, check which of the input, inference, and output paths are rate-limiting. </li>
-<li><strong>For speech / streaming, check whether silence and output path are displayed:</strong> Check whether false speech, audio driver, or hold-last-output are hidden. </li>
-<li><strong>Is delay mapped to phase error or burst time?</strong> Check to see if it's just a ms value. </li>
-<li><strong>Are there recalibration burden and clinic/home metastases?</strong> Check to see if it reads deployable only with within-session success. </li>
-<li><strong>Are abstentions, silence fallbacks, freezes, and safety stops separated?</strong> Confirm whether operations in times of danger and times of low reliability are not ambiguous. </li>
+<li><strong>Does it declare which body/environment boundary it actually used?</strong> Check whether the paper fixes the target subsystem and names preserved, substituted, and omitted loops instead of only saying "closed loop."</li>
+<li><strong>Are sensory, action, and interoceptive routes disclosed?</strong> Look for tactile, proprioceptive, vestibular, respiration-linked, and arousal-linked channels, not only the main output stream. </li>
+<li><strong>Was any decisive loop component removed or scrambled?</strong> Check whether feedback-removal or sensory-ablation tests were run, rather than assuming robustness. </li>
+<li><strong>Are there module-wise measurements, not just end-to-end?</strong> Don't just rely on software timestamps; check which of the input, inference, and output paths are rate-limiting. </li>
+<li><strong>For speech / streaming, are silence and output path displayed?</strong> Check whether false speech, audio driver, or hold-last-output are hidden. </li>
+<li><strong>Is delay mapped to phase error or burst time?</strong> Check whether the paper goes beyond a single ms value when phase or burst timing is what matters. </li>
+<li><strong>Are recalibration burden and clinic/home transfer shown separately?</strong> Check that deployability is not inferred from within-session success alone. </li>
+<li><strong>Are abstentions, silence fallbacks, freezes, and safety stops separated?</strong> Confirm that danger-handling and low-confidence handling are not collapsed into one outage label. </li>
 </ol>
 </section>
 
@@ -317,6 +394,15 @@ Whether it's ``I didn't get it right so I won't output it'', ``I'm going to use 
 <li>Tinkhauser G, Pogosyan A, Little S, et al. The modulatory effect of adaptive deep brain stimulation on beta bursts in Parkinson's disease. <em>Brain.</em> 2017;140(4):1053-1067. <a href="https://doi.org/10.1093/brain/awx010" target="_blank">doi:10.1093/brain/awx010</a></li>
 <li>Appelhoff S, Stenner T. In COM we trust: Feasibility of USB-based event marking. <em>Behav Res Methods.</em> 2021;53(6):2450-2455. <a href="https://doi.org/10.3758/s13428-021-01571-z" target="_blank">doi:10.3758/s13428-021-01571-z</a></li>
 <li>Kothe C, Shirazi SY, Stenner T, et al. The lab streaming layer for synchronized multimodal recording. <em>Imaging Neurosci.</em> 2025;3:IMAG.a.136. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
+<li>Keller GB, Bonhoeffer T, Hubener M. Sensorimotor mismatch signals in primary visual cortex of the behaving mouse. <em>Neuron.</em> 2012;74(5):809-815. <a href="https://doi.org/10.1016/j.neuron.2012.03.040" target="_blank">doi:10.1016/j.neuron.2012.03.040</a></li>
+<li>Saleem AB, Ayaz A, Jeffery KJ, Harris KD, Carandini M. Integration of visual motion and locomotion in mouse visual cortex. <em>Nat Neurosci.</em> 2013;16(12):1864-1869. <a href="https://doi.org/10.1038/nn.3567" target="_blank">doi:10.1038/nn.3567</a></li>
+<li>Ravassard P, Kees A, Willers B, et al. Multisensory control of hippocampal spatiotemporal selectivity. <em>Science.</em> 2013;340(6138):1342-1346. <a href="https://doi.org/10.1126/science.1232655" target="_blank">doi:10.1126/science.1232655</a></li>
+<li>Schneider DM, Nelson A, Mooney R. A synaptic and circuit basis for corollary discharge in the auditory cortex. <em>Nature.</em> 2014;513(7517):189-194. <a href="https://doi.org/10.1038/nature13724" target="_blank">doi:10.1038/nature13724</a></li>
+<li>Zelano C, Jiang H, Zhou G, et al. Nasal respiration entrains human limbic oscillations and modulates cognitive function. <em>J Neurosci.</em> 2016;36(49):12448-12467. <a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">doi:10.1523/JNEUROSCI.2586-16.2016</a></li>
+<li>Musall S, Kaufman MT, Juavinett AL, Gluf S, Churchland AK. Single-trial neural dynamics are dominated by richly varied movements. <em>Nat Neurosci.</em> 2019;22:1677-1686. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">doi:10.1038/s41593-019-0502-4</a></li>
+<li>Stringer C, Pachitariu M, Steinmetz N, et al. Spontaneous behaviors drive multidimensional, brainwide activity. <em>Science.</em> 2019;364(6437):eaav7893. <a href="https://doi.org/10.1126/science.aav7893" target="_blank">doi:10.1126/science.aav7893</a></li>
+<li>Flesher SN, Downey JE, Weiss JM, et al. A brain-computer interface that evokes tactile sensations improves robotic arm control. <em>Science.</em> 2021;372(6544):831-836. <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
+<li>Raut RV, Rosenthal ZP, Wang X, et al. Arousal as a universal embedding for spatiotemporal brain dynamics. <em>Nature.</em> 2025;647:454-461. <a href="https://doi.org/10.1038/s41586-025-09544-4" target="_blank">doi:10.1038/s41586-025-09544-4</a></li>
 <li>Littlejohn KT, Dabagia M, Ladwig A, et al. A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <em>Nat Neurosci.</em> 2025. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
 <li>Wairagkar M, Card NS, Singer-Clark T, et al. An instantaneous voice-synthesis neuroprosthesis. <em>Nature.</em> 2025. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
 <li>Wilson GH, Stein EA, Kamdar F, et al. Long-term unsupervised recalibration of intracortical brain-computer interfaces using a hidden Markov model. <em>Nat Biomed Eng.</em> 2025. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
