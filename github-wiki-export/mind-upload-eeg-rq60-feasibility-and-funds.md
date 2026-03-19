@@ -500,3 +500,11 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md`、`mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`、`auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `Ux-y` 行を再計数し、`RQ_TOTAL=60` と `A/B/C=17/25/18` の一致を再確認しました。
 - RQカードの `主データ/補助データ` から抽出したEEG参照ID（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）を最新 `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
 - 運用方針は継続し、汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` で各課題を個別に深掘りする形を維持しました。
+
+## 2026-03-19 20:02 JST 再検証ログ（本run / ユーザー依頼: 1RQ深掘り固定でWiki更新）
+
+- 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull origin main` を実行し、`Already up to date` を確認しました。
+- `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` と `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` の `Ux-y` 行を再計数し、`RQ_TOTAL=60`（欠損・重複 `0`）を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` を再計数し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り構造を維持しました。
+- 本runで参照したEEG ID（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
+- 同内容は `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` と `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` にも同期済みです。
