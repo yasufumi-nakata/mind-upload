@@ -5,7 +5,7 @@ description: "Uses primary literature to organize the maintenance mechanisms tha
 article_type: Wiki
 subtitle: "Even with a wiring diagram and cell type labels, long-term dynamics are still not determined."
 author: Mind Uploading Research Project
-last_updated: "2026-03-18"
+last_updated: "2026-03-19"
 note: "Technical / natural science only"
 audience: "People who want to probe the limits of the connectome more deeply from the perspective of internal states and maintenance mechanisms."
 reading_time: "16-22 minutes"
@@ -37,11 +37,13 @@ page_highlights:
   - "Thermal-state should be separated from both timing-state and bioenergetics, because modest temperature changes can alter release reliability, field-potential amplitude, and sequence timing without rewiring."
   - "Ionic milieu / chloride homeostasis should be separated from both excitability and glial support, because local chloride set point and extracellular ion composition can change inhibitory sign, network state, and plasticity without rewiring."
   - "Human-side advances must also be read as evidence for another layer: EM fragments, synaptic-density proxies by SV2A PET, whole-brain MRSI, MRS thermometry, myelin bilayer maps, sleep / TMS proxies, and CSF / glymphatic proxies."
+  - "A human metabolic connectome from 1H-MRSI is a five-metabolite gray-matter parcel-similarity graph; it is not structural wiring or kinetic flux imaging."
 known_points:
   - "Continuity and variability in morpho-electric phenotype remain even within the same transcriptomic type."
   - "Firing rates and synaptic strengths are regulated by homeostatic plasticity across sleep / wake cycles, but consolidation also depends on sleep architecture / replay-coupling."
   - "Myelin, oligodendrocytes, thermal-state, ionic milieu / chloride homeostasis, activity-dependent transcription / chromatin state, local proteostasis / synaptic-tagging state, perisynaptic ECM / PNN state, local ATP supply and mitochondrial positioning, astrocytes, and the microglia / meningeal-lymphatic system all contribute to timing, plasticity, memory retrieval, long-term recovery, and clearance support."
   - "Even in humans, macro scaffolds and support-state proxies are starting to become visible through SV2A PET, MRSI-based metabolic connectomes, MRS thermometry, 31P-MRS, sodium MRI, dynamic deuterium metabolic imaging, myelin bilayer mapping, TMS / EEG / sleep plasticity proxies, and CSF / glymphatic proxies, although cell-specific maintenance-states still remain coarse."
+  - "An MRSI-derived metabolic-connectome label still needs metabolite-set, parceling, correction-model, and QC disclosure before it can be interpreted safely."
 unknown_points:
   - "It is unclear at what granularity excitability, thermal-state, ionic milieu / chloride homeostasis, sleep homeostasis, local proteostasis / synaptic tagging, ECM / PNN state, bioenergetic support, metabolic support, and clearance support must be measured to approach sufficient conditions for WBE."
   - "It is not yet fixed how time-resolved transcription / chromatin audit should be submitted so that cell identity, current plasticity program, and memory-stabilization controller are not mixed."
@@ -342,9 +344,9 @@ The reason this section needed a second pass is that “human evidence is starti
 </tr>
 <tr>
 <td><strong>human metabolic connectome</strong><br>Lucchetti et al.</td>
-<td>Parcel-level biochemical organization based on Glx / Ins / Cho / tCr / tNAA and its reproducibility. </td>
-<td>Cell-specific metabolic routing, astrocyte ensemble, local transmitter state, and synapse-specific maintenance.</td>
-<td>Macro-biochemical scaffold or covariate, not local maintenance-state ground truth.</td>
+<td>Gray-matter parcel similarity graph built from five <sup>1</sup>H-MRSI metabolite profiles (tCr / tNAA / Glx / Ins / Cho). </td>
+<td>Axonal edge-level connectivity, current glucose metabolic rates / ATP turnover, cell-specific metabolic routing, astrocyte ensemble, local transmitter state, and synapse-specific maintenance.</td>
+<td>Macro-biochemical similarity scaffold or covariate, not local maintenance-state ground truth.</td>
 </tr>
 <tr>
 <td><strong>human energetic imaging</strong><br>Ren et al., Li et al.</td>
@@ -397,6 +399,18 @@ This distinction matters operationally. <a href="https://doi.org/10.1126/science
 <strong>Practical interpretation in this addendum</strong>
 <p>
 Therefore, on this site, <strong>human metabolic connectome</strong> is written as a <strong>macro-biochemical scaffold</strong>, <strong>MRS thermometry</strong> as a <strong>macro thermal proxy</strong>, <strong>31P-MRS / dynamic DMI</strong> as a <strong>macro energetic proxy</strong>, <strong>human sodium MRI</strong> as a <strong>macro ionic proxy</strong>, <strong>human myelin bilayer mapping</strong> as a <strong>macro-myelin proxy</strong>, <strong>TMS-EEG / sleep plasticity routes</strong> as <strong>perturbation-conditioned proxies</strong>, and <strong>CSF mobility / glymphatic evidence</strong> as a <strong>macro support-state proxy</strong>. Human ECM evidence such as <a href="https://doi.org/10.3390/ijms23158197" target="_blank">Boonen et al. (2022)</a> remains mostly <strong>ex vivo pathology</strong>, and current transcriptional / chromatin state plus branch-local proteostasis still lack a comparable in vivo whole-brain human route. It is therefore valid to use animal causal evidence to support the existence of these layers, but not to silently upgrade present human proxies into <strong>cell-specific recovery controller</strong>, <strong>local thermal-state</strong>, <strong>current chloride homeostasis</strong>, <strong>local immune controller</strong>, <strong>local mitochondrial state</strong>, or <strong>current ECM plasticity gate</strong> ground truth.
+</p>
+</div>
+<div class="note-box" id="metabolic-connectome-route-card">
+<strong>2026-03-19 addendum: the human metabolic connectome needs its own route card</strong>
+<p>
+The remaining weakness on this page was that <strong>metabolic connectome</strong> could still be read as if the field had obtained another connectome in the same sense as tractography or direct flux mapping. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> defined the object more narrowly: <strong>pairwise correlations among five metabolites</strong> (tCr, tNAA, Glx, Ins, Cho) <strong>across gray-matter parcels</strong> in <strong>51 healthy participants</strong>, with replication in 13 more participants at a different site. The same paper reported that overall metabolic similarity aligns only <strong>weakly</strong> with tractography-based structural connectivity and more closely with cytoarchitectonic similarity and gene co-expression. Therefore, this site reads the row first as a <strong>parcel-level biochemical similarity graph</strong>, not as axonal wiring or a local maintenance-state map.
+</p>
+<p>
+The measurement model also remains part of the object. <a href="https://doi.org/10.1002/brb3.1852" target="_blank">Bhogal et al. (2020)</a> showed that in vivo MRSI still faces <strong>low SNR</strong>, <strong>partial-volume effects</strong>, <strong>extracranial lipid artifacts</strong>, and scan-time constraints; <a href="https://doi.org/10.1016/j.neuroimage.2022.119574" target="_blank">Wright et al. (2022)</a> showed that averaged instead of voxel-specific metabolite T<sub>1</sub> corrections can bias maps; and <a href="https://doi.org/10.1148/radiol.232401" target="_blank">Baboli et al. (2024)</a> showed that absolute quantification can shift when tissue-water and relaxation corrections are individualized. Lucchetti et al. also corrected <strong>5 mm isotropic</strong> MRSI using <strong>partial-volume modeling and PSF deconvolution</strong>. On this site, an MRSI-derived metabolic connectome must therefore disclose the <strong>metabolite set</strong>, <strong>parceling unit</strong>, <strong>resolution plus PSF / partial-volume correction</strong>, <strong>water / lipid handling</strong>, <strong>spectral QC thresholds</strong>, and <strong>abstention boundary</strong> before its claim ceiling is interpreted.
+</p>
+<p>
+A final correction is that static <sup>1</sup>H-MRSI similarity is not the same object as rate imaging. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> used <strong>dynamic deuterium MRSI plus a kinetic model</strong> to map glucose transport and metabolic rates such as CMR<sub>Glc</sub>, CMR<sub>Lac</sub>, and V<sub>TCA</sub>. This site therefore does not let the phrase <strong>human metabolic connectome</strong> silently inherit claims about current glucose-flux, ATP-turnover, or energetic-rate imaging.
 </p>
 </div>
 </section>
@@ -456,6 +470,11 @@ Therefore, on this site, <strong>human metabolic connectome</strong> is written 
 <td><strong>With the human metabolic connectome, the glial / transmitter maintenance-state was also directly visible</strong></td>
 <td>Parcel-level metabolic similarity is useful, but it does not directly provide cell-specific astrocyte ensemble or transmitter state. </td>
 <td>Human MRSI is treated as a macro-biochemical scaffold and is not written as the ground truth of local maintenance-state. </td>
+</tr>
+<tr>
+<td><strong>Because a human metabolic connectome exists, we now have another connectome comparable to tractography or metabolic-rate maps</strong></td>
+<td><a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> built a five-metabolite gray-matter parcel-similarity graph and reported only weak overall alignment with tractography-based structural connectivity. Static <sup>1</sup>H-MRSI similarity is also not the same object as dynamic rate imaging.</td>
+<td>Treat it as a macro-biochemical similarity scaffold and require the metabolic-connectome route card before reading beyond that ceiling.</td>
 </tr>
 <tr>
 <td><strong>With human myelin bilayer map and nap / TMS proxy, cell-specific maintenance controller could also be seen</strong></td>
@@ -635,6 +654,9 @@ Therefore, on this site, <strong>human metabolic connectome</strong> is written 
 <li>Johansen, A., et al. (2024). An in vivo high-resolution human brain atlas of synaptic density. <em>Journal of Neuroscience</em>. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
 <li>Shatalina, E., et al. (2024). The relationship between SV2A levels, neural activity, and cognitive function in healthy humans. <em>Imaging Neuroscience</em>. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">doi:10.1162/imag_a_00190</a></li>
 <li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <em>Nature Communications</em>, 16, 11344. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
+<li>Bhogal, A. A., Broeders, T. A. A., Morsinkhof, L., et al. (2020). Lipid-suppressed and tissue-fraction corrected metabolic distributions in human central brain structures using 2D <sup>1</sup>H magnetic resonance spectroscopic imaging at 7 T. <em>Brain and Behavior</em>, 10(12), e01852. <a href="https://doi.org/10.1002/brb3.1852" target="_blank">doi:10.1002/brb3.1852</a></li>
+<li>Wright, A. M., Murali-Manohar, S., &amp; Henning, A. (2022). Quantitative T<sub>1</sub>-relaxation corrected metabolite mapping of 12 metabolites in the human brain at 9.4 T. <em>NeuroImage</em>, 263, 119574. <a href="https://doi.org/10.1016/j.neuroimage.2022.119574" target="_blank">doi:10.1016/j.neuroimage.2022.119574</a></li>
+<li>Baboli, M., Wang, F., Dong, Z., Dietrich, J., Uhlmann, E. J., Batchelor, T. T., Cahill, D. P., &amp; Andronesi, O. C. (2024). Absolute Metabolite Quantification in Individuals with Glioma and Healthy Individuals Using Whole-Brain Three-dimensional MR Spectroscopic and Echo-planar Time-resolved Imaging. <em>Radiology</em>, 312(3), e232401. <a href="https://doi.org/10.1148/radiol.232401" target="_blank">doi:10.1148/radiol.232401</a></li>
 <li>Ren, J., Sherry, A. D., &amp; Malloy, C. R. (2015). 31P-MRS of healthy human brain: ATP synthesis, metabolite concentrations, pH, and T1 relaxation times. <em>NMR in Biomedicine</em>, 28(11), 1455-1462. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">doi:10.1002/nbm.3384</a></li>
 <li>Qian, Y., Zhao, T., Zheng, H., Weimer, J., &amp; Boada, F. E. (2012). High-resolution sodium imaging of human brain at 7 T. <em>Magnetic Resonance in Medicine</em>, 68(1), 227-233. <a href="https://doi.org/10.1002/mrm.23225" target="_blank">doi:10.1002/mrm.23225</a></li>
 <li>Rzechorzek, N. M., Thrippleton, M. J., Chappell, F. M., et al. (2022). A daily temperature rhythm in the human brain predicts survival after brain injury. <em>Brain</em>, 145(6), 2031-2048. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">doi:10.1093/brain/awab466</a></li>
