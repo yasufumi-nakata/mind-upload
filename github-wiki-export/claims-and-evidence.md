@@ -1,16 +1,16 @@
 # Wiki: How to read claims and evidence
 
-> Don't let flashy wording lead to strong conclusions.
+> Strong language is cheap. Strong evidence is not.
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-06 / 位置づけ: Reading guide
+- 更新日: 2026-03-19 / 位置づけ: Reading guide
 
 ## このページの役割
-This page is a guide to help you read the strong language that comes up in the talk of neuroscience and Mind-Upload by bringing it back to the strength of the necessary evidence. Practice differentiating between ``It looks amazing'' and ``What has been proven?''
+This page turns flashy neuroscience and WBE wording back into claim strength, evidence class, and the minimum route cards needed before the claim can be read strongly. The goal is not to dampen progress, but to stop score inflation and evidence-class collapse at the entrance.
 
 ## 正確さの前提
-The organization here is not to weaken the argument, but to prevent both overestimation and underestimation.
+This page stays on the technology and natural-science side. It does not treat a headline, a high score, or one modeling framework as a substitute for disclosed measurement conditions, external validation, or abstention.
 
 ## 公開ページへ戻る
 - [Introduction to WBE](https://mind-upload.com/wbe_101.html)
@@ -18,116 +18,221 @@ The organization here is not to weaken the argument, but to prevent both overest
 - [FAQ](https://mind-upload.com/faq.html)
 
 ## 関連 Wiki
-- [Wiki: Basics of WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - This is the overall picture that is the premise of this reading.
-- [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - I will explain why the placement of evidence itself is important.
-- [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other basic pages.
+- [Wiki: Basics of WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - Sets the overall technical picture before claim reading.
+- [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Explains why route cards, audits, and preregistration matter operationally.
+- [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - Explains why ESI, DCM, and SCM do not all support the same kind of claim.
+- [Wiki: Measurement-stack observability and claim ceilings](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling) - Shows what each modality directly observes and where the claim ceiling appears.
 
 ## いま分かっていること
-- Reproducible analysis and claims of identity differ greatly in the strength of evidence required.
-- There is a difference between the output being correct and the internal mechanism being correct.
-- It is safe to read strong claims without conditions to disprove them or steps to reproduce them.
+- Reproducible analysis, decoding, intervention prediction, and identity claims require different evidence floors.
+- The same score can arise from different causal stories, so direct observables and shortcut routes must be separated.
+- Recent primary literature supports stricter beginner reading rules for decode, tractography, effective connectivity, thermodynamic claims, and closed loops.
 
 ## まだ分かっていないこと
-- It has not yet been decided at what stage L4 will proceed to assert its identity.
-- We are not yet at the stage where we can completely integrate the differences between theories into one evaluation axis.
+- It remains unsettled which measurement stack would be sufficient for WBE-level internal-state capture.
+- It remains unresolved how far any future L4 continuity test would justify identity claims.
 
 ---
 
-<h2>Basic rules</h2>
+<h2>Basic rule</h2>
 <p>
-The language in research publications often appears stronger than the actual evidence. Therefore, first, think about where to place ``What did this result do?'' from L0 to L5. The higher the level, the more evidence you need.
+When a neuroscience or WBE headline sounds strong, do not ask first whether it sounds impressive. Ask <strong>what was directly observed</strong>, <strong>what was only inferred through a model or prior</strong>, and <strong>what the result still does not identify</strong>. This page is the shortest beginner route for doing that.
 </p>
 
-<h2>Rephrasing L0-L5 in everyday language</h2>
+<strong>2026-03-19 deepening: why this beginner page was rewritten</strong>
+<p>
+The older version correctly said that L0-L5 differ in strength, but it was still too easy to read <strong>high accuracy</strong>, <strong>one graph</strong>, or <strong>one real-time demo</strong> as if they were one kind of evidence. The recent public updates across this site now require route cards for tractography, effective connectivity, thermodynamic irreversibility, neural contribution, and body/environment boundary. This page now exposes those distinctions at the beginner entrance instead of only later in the technical pages.
+</p>
+
+<h2>Rephrasing L0-L5 in everyday language, without losing the technical floor</h2>
 <table>
 <thead>
 <tr>
 <th>Level</th>
-<th>Roughly speaking</th>
-<th>Minimum evidence you want</th>
+<th>Safe everyday reading</th>
+<th>Minimum evidence floor</th>
+<th>Fastest overread to block</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>L0</strong></td>
-<td>Get the same result again</td>
-<td>The data, code, environment, and logs are complete and can be reproduced by a third party. </td>
+<td>Someone else can rerun the same result.</td>
+<td>Public data or artifact pack, code, environment, split rules, and logs are complete enough for third-party rerun.</td>
+<td>Do not read <strong>rerunnable</strong> as <strong>generalizable</strong>.</td>
 </tr>
 <tr>
 <td><strong>L1</strong></td>
-<td>You can guess something from the signal</td>
-<td>Reproducibility accuracy with baseline comparison, leak inspection, and matching conditions. </td>
+<td>A signal can be decoded or classified under stated conditions.</td>
+<td>Participant-/session-disjoint evaluation, measurement-condition disclosure, relevant baselines, shortcut audit, and abstention when confidence collapses.</td>
+<td>Do not read <strong>high score</strong> as <strong>target-specific neural evidence</strong> or <strong>correct internal mechanism</strong>.</td>
 </tr>
 <tr>
 <td><strong>L2</strong></td>
-<td>Can be predicted even if conditions are changed</td>
-<td>Predictive matching for unlearning conditions, counterfactuals, and interventions. </td>
+<td>The model still predicts or controls something after conditions are changed.</td>
+<td>Held-out perturbation or counterfactual evaluation, preregistered success/failure rules, and evidence that the effect survives beyond a fixed dataset regime.</td>
+<td>Do not read <strong>fit on observed data</strong> as <strong>causal robustness</strong>.</td>
 </tr>
 <tr>
 <td><strong>L3</strong></td>
-<td>Stable operation in closed loop</td>
-<td>Real-time operation, delay management, safe stop conditions. </td>
+<td>A closed loop runs stably under a disclosed boundary.</td>
+<td>Latency/jitter/safe-stop logs, recalibration burden, and a body/environment boundary card naming preserved, substituted, and omitted sensory, motor, and interoceptive loops.</td>
+<td>Do not read <strong>real-time demo</strong> as <strong>solved embodiment</strong> or <strong>state-complete closed loop</strong>.</td>
 </tr>
 <tr>
 <td><strong>L4</strong></td>
-<td>Discussing identity</td>
-<td>Pre-registered continuity test, branch verification of memory, values, and learning. </td>
+<td>Continuity or identity is being tested explicitly.</td>
+<td>Pre-registered continuity tests, branch handling, memory/value/learning criteria, and explicit alternative explanations.</td>
+<td>Do not read <strong>functional similarity</strong> as <strong>identity preserved</strong>.</td>
 </tr>
 <tr>
 <td><strong>L5</strong></td>
-<td>Can be used in society</td>
-<td>System design including rights, consent, suspension criteria, and audit structure. </td>
+<td>A system is being considered for durable operation in the world.</td>
+<td>Operational, safety, and governance conditions must exist in public form.</td>
+<td>Do not read <strong>works in a lab</strong> as <strong>ready for deployment</strong>.</td>
 </tr>
 </tbody>
 </table>
 
-<h2>Translating common phrases</h2>
+<h2>Translating common headline phrases into safer first readings</h2>
 <table>
 <thead>
 <tr>
-<th>How to write headings</th>
-<th>What is most likely actually being said</th>
-<th>Additional things to check</th>
+<th>Headline-style phrase</th>
+<th>Safest default reading</th>
+<th>What you must ask before reading stronger</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>"Recovered sentences from the brain"</td>
-<td>Mostly L1 decoding. </td>
-<td>We will see if it holds true even under unlearning conditions, and if it is different from LLM completion. </td>
+<td><strong>"Recovered sentences from the brain"</strong></td>
+<td>Usually an L1 decode or assistive BCI result under task- and participant-specific conditions.</td>
+<td>What were the task constraint, language prior, candidate set, subject cooperation requirement, calibration burden, and no-brain / no-LM / shuffle baselines?</td>
 </tr>
 <tr>
-<td>"Reproduced the brain state with high precision"</td>
-<td>L1, at best, may be the entrance to L2. </td>
-<td>Check whether you are looking at predictions for condition changes and interventions. </td>
+<td><strong>"Found a biomarker with 95% accuracy"</strong></td>
+<td>Usually an L1 classifier under a specific acquisition and split regime.</td>
+<td>Were subjects and sessions disjoint, could metadata or subject fingerprint explain the score, and was performance checked across sites/devices/datasets?</td>
 </tr>
 <tr>
-<td>"Behaved just like a human"</td>
-<td>There is a possibility that the story remains that the behavior is similar in appearance. </td>
-<td>Check whether the internal state, memory continuity, and failure conditions are exposed. </td>
+<td><strong>"Mapped the connectome in living humans"</strong></td>
+<td>Usually a tractography-conditioned macro pathway estimate, not an edge-complete connectome.</td>
+<td>What were the direct observables, tractography priors/filtering choices, uncertainty handling, and same-brain or external validation route?</td>
 </tr>
 <tr>
-<td>“Now you can save your identity”</td>
-<td>This is a very strong argument for L4. </td>
-<td>It is necessary to have a pre-registered identity test or to eliminate alternative explanations. </td>
+<td><strong>"Found causal wiring / effective connectivity"</strong></td>
+<td>Usually a model-conditioned causal hypothesis.</td>
+<td>What candidate model space competed, what priors and observation assumptions were imposed, how was model recovery checked, and what validation or reliability window exists?</td>
+</tr>
+<tr>
+<td><strong>"Measured entropy production / irreversibility in brain data"</strong></td>
+<td>Usually a modality- and estimator-conditioned auxiliary nonequilibrium analysis.</td>
+<td>What were the signal route, coarse-graining, estimator family, null control, quantity type, and abstention boundary?</td>
+</tr>
+<tr>
+<td><strong>"Ran a stable real-time closed loop"</strong></td>
+<td>Usually a local closed-loop success under a specific sensory/motor contract.</td>
+<td>Which loops were preserved, which were substituted, what recalibration was needed, and which body/environment channels remained omitted?</td>
 </tr>
 </tbody>
 </table>
 
-<h2>Three points to check when reading</h2>
+<h2>Why the beginner rules had to become stricter</h2>
+
+<strong>1. High accuracy does not become target-specific evidence by default</strong>
+<p>
+This is the first place beginners are most often misled. <a href="https://www.nature.com/articles/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a> showed that record-wise splits can inflate performance because the model learns who the participant is, not only the target label. <a href="https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2021.672946/full" target="_blank">Di et al. (2021)</a> showed that resting-state EEG can support time-robust individual identification. <a href="https://www.frontiersin.org/articles/10.3389/fnhum.2020.00103/full" target="_blank">Xu et al. (2020)</a> showed that cross-dataset variability weakens EEG-decoding generalization. Meanwhile, <a href="https://www.nature.com/articles/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a> showed that non-invasive semantic reconstruction requires subject cooperation, and <a href="https://www.nature.com/articles/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a> achieved strong speech-BCI performance under implanted, participant-specific conditions. Therefore, on this site, a decode headline is not read strongly until split unit, measurement condition, task/language prior, and shortcut routes are disclosed.
+</p>
+
+<strong>2. "Connectome" still names different evidence classes</strong>
+<p>
+The beginner route also needed tightening because the word <strong>connectome</strong> hides a large spread in evidence class. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4246325/" target="_blank">Thomas et al. (2014)</a> showed inherent limits in anatomical accuracy for diffusion-MRI tractography, <a href="https://www.nature.com/articles/s41467-017-01285-x" target="_blank">Maier-Hein et al. (2017)</a> exposed fundamental ambiguities and many invalid bundles in a community challenge, <a href="https://pubmed.ncbi.nlm.nih.gov/32816112/" target="_blank">Schilling et al. (2020)</a> showed that high anatomical accuracy depends on strong start/end/exclusion priors, and <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8475636/" target="_blank">Grisot et al. (2021)</a> localized recurring failure modes in the same brain. Therefore, a living-human tractography graph is not read here as connectome-complete by default. It stays at <strong>macro pathway prior</strong> unless the tractography route card is shown.
+</p>
+
+<strong>3. Model-conditioned graphs are not discovered causal wiring</strong>
+<p>
+For effective connectivity, the problem is not that DCM or related models are useless. The problem is overreading them. <a href="https://www.sciencedirect.com/science/article/abs/pii/S1053811904001648" target="_blank">Penny et al. (2004)</a> made explicit that DCM inferences are contingent on model structure. <a href="https://pubmed.ncbi.nlm.nih.gov/22561579/" target="_blank">Rosa et al. (2012)</a> showed that very large candidate spaces can be searched efficiently from a full model, which is progress in tractability, not automatic identifiability. <a href="https://pubmed.ncbi.nlm.nih.gov/26611397/" target="_blank">Frässle et al. (2016)</a> showed that reliability itself must be checked, and <a href="https://pubmed.ncbi.nlm.nih.gov/33115664/" target="_blank">Frässle et al. (2021)</a> pushed directed-connectivity estimation to whole-brain human fMRI. Therefore, on this site, a dense effective-connectivity graph without model-space disclosure, recovery, validation, reliability, and abstention remains a <strong>model-conditioned causal hypothesis</strong>.
+</p>
+
+<strong>4. Thermodynamic keywords still hide different measured objects</strong>
+<p>
+The older beginner wording was also too weak for thermodynamic claims. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8617485/" target="_blank">Lynn et al. (2021)</a> estimated entropy-production lower bounds from coarse-grained BOLD state transitions, <a href="https://academic.oup.com/cercor/article/33/5/1856/6577164" target="_blank">de la Fuente et al. (2023)</a> used temporal irreversibility decoding on ECoG, and <a href="https://www.nature.com/articles/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> estimated model-based entropy flow in a nonstationary state-space kinetic Ising model. Those are related, but not identical, objects. Therefore this site no longer allows the beginner reading that <strong>"thermodynamic paper"</strong> automatically means a common measurement of physical dissipation or WBE-relevant cost.
+</p>
+
+<strong>5. Real-time loop success still needs a disclosed body/environment boundary</strong>
+<p>
+Finally, closed-loop headlines needed a stricter beginner rule. <a href="https://pubmed.ncbi.nlm.nih.gov/31551604/" target="_blank">Musall et al. (2019)</a> showed that richly varied movements dominate cortex-wide activity, <a href="https://www.nature.com/articles/nn.3567" target="_blank">Saleem et al. (2013)</a> showed that locomotion changes visual-cortex coding, and <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8715714/" target="_blank">Flesher et al. (2021)</a> showed that restoring tactile feedback improves robotic-arm control. The safe reading is therefore not <strong>"closed loop solved"</strong> but <strong>"a specific local loop worked under a specific retained/substituted boundary."</strong>
+</p>
+
+<h2>Six questions before you believe the strong version of a headline</h2>
 
 <h4>Checklist</h4>
 <ul>
-<li><strong>This is somewhere between L0 and L5:</strong>First, put the strength of your argument. </li>
-<li><strong>What was measured:</strong>Look at whether it is just output matching or whether it includes condition changes and interventions. </li>
-<li><strong>What's a failure?</strong> Check if there are counter-conditions and steps to reproduce. </li>
+<li><strong>What was directly observed?</strong> Separate sensor output from inferred internal state.</li>
+<li><strong>What model space or prior was imposed?</strong> Candidate models, language priors, tractography filters, and neural-mass assumptions all matter.</li>
+<li><strong>Which shortcut could reproduce the score?</strong> Subject/session fingerprint, metadata leakage, device differences, and candidate-set structure must be checked explicitly.</li>
+<li><strong>What external or held-out validation exists?</strong> Same-dataset fit is weaker than perturbation, stimulation, same-brain tracing, or external benchmark prediction.</li>
+<li><strong>What loops or state variables remain outside the measurement?</strong> Boundary and hidden-state omissions still set the claim ceiling.</li>
+<li><strong>Where does the paper abstain?</strong> A strong paper says which interpretations it does <em>not</em> support.</li>
 </ul>
 
-<h2>What is missing to advance to the next level of argument</h2>
-<p>
-Even if you have the results for L1, you can't jump straight to L4. Normally, we first solidify the reproducibility of L0, then test changing the conditions of L2, and proceed by separating out any remaining points. In other words,<strong>a higher level cannot jump over a lower level</strong>.
-</p>
+<h2>Where to go next after this beginner page</h2>
+<table>
+<thead>
+<tr>
+<th>If the headline is mostly about...</th>
+<th>Read this next</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decode / biomarker / speech / EEG score</td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling">Measurement-stack observability and claim ceilings</a></td>
+<td>It fixes what was directly observed and which shortcut routes remain open.</td>
+</tr>
+<tr>
+<td>Connectome / tractography / structural prior</td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough">Why wiring diagrams alone are not enough</a></td>
+<td>It separates scaffold progress from hidden-state completeness.</td>
+</tr>
+<tr>
+<td>DCM / effective connectivity / causal graph</td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation#effective-connectivity-route-card">Effective-connectivity route card</a></td>
+<td>It shows why candidate-model dependence must be disclosed.</td>
+</tr>
+<tr>
+<td>Entropy production / irreversibility / time arrow</td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/thermodynamic-grounding-basics#irreversibility-route-card">Irreversibility route card</a></td>
+<td>It separates estimator families and null controls.</td>
+</tr>
+<tr>
+<td>Closed loop / BCI / embodiment</td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops">Closed loops, latency, jitter, and safety stops</a></td>
+<td>It explains why latency logs and boundary disclosure are separate requirements.</td>
+</tr>
+</tbody>
+</table>
 
-<h4>Next</h4>
-<p>Here is the concept of "standards, benches, registration, and audits" that supports this reading. </p>
-<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics">To the basics of verification infrastructure →</a>
+<h2>References</h2>
+<ol>
+<li>Chaibub Neto, E., Pratap, A., Perumal, T. M., et al. (2019). Detecting the impact of subject characteristics on machine learning-based diagnostic applications. <em>npj Digital Medicine</em>, 2, 99. <a href="https://www.nature.com/articles/s41746-019-0178-x" target="_blank">doi:10.1038/s41746-019-0178-x</a></li>
+<li>Xu, M., Yao, S., Wei, Z., et al. (2020). Cross-dataset variability problem in EEG decoding with deep learning. <em>Frontiers in Human Neuroscience</em>, 14, 103. <a href="https://www.frontiersin.org/articles/10.3389/fnhum.2020.00103/full" target="_blank">doi:10.3389/fnhum.2020.00103</a></li>
+<li>Di, Y., An, X., Zhong, W., Liu, S., &amp; Ming, D. (2021). The time-robustness analysis of individual identification based on resting-state EEG. <em>Frontiers in Human Neuroscience</em>, 15, 672946. <a href="https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2021.672946/full" target="_blank">doi:10.3389/fnhum.2021.672946</a></li>
+<li>Tang, J., LeBel, A., Jain, S., &amp; Huth, A. G. (2023). Semantic reconstruction of continuous language from non-invasive brain recordings. <em>Nature Neuroscience</em>, 26, 858-866. <a href="https://www.nature.com/articles/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
+<li>Willett, F. R., Kunz, E. M., Fan, C., et al. (2023). A high-performance speech neuroprosthesis. <em>Nature</em>, 620, 1031-1036. <a href="https://www.nature.com/articles/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
+<li>Thomas, C., Ye, F. Q., Irfanoglu, M. O., et al. (2014). Anatomical accuracy of brain connections derived from diffusion MRI tractography is inherently limited. <em>PNAS</em>, 111(46), 16574-16579. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4246325/" target="_blank">doi:10.1073/pnas.1405672111</a></li>
+<li>Maier-Hein, K. H., Neher, P. F., Houde, J.-C., et al. (2017). The challenge of mapping the human connectome based on diffusion tractography. <em>Nature Communications</em>, 8, 1349. <a href="https://www.nature.com/articles/s41467-017-01285-x" target="_blank">doi:10.1038/s41467-017-01285-x</a></li>
+<li>Schilling, K. G., Petit, L., Rheault, F., et al. (2020). Brain connections derived from diffusion MRI tractography can be highly anatomically accurate if we know where white matter pathways start, where they end, and where they do not go. <em>Brain Structure and Function</em>, 225, 2387-2402. <a href="https://pubmed.ncbi.nlm.nih.gov/32816112/" target="_blank">doi:10.1007/s00429-020-02129-z</a></li>
+<li>Grisot, G., Haber, S. N., Hawrylycz, M., Yendiki, A., et al. (2021). Diffusion MRI and anatomic tracing in the same brain reveal common failure modes of tractography. <em>NeuroImage</em>, 239, 118300. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8475636/" target="_blank">doi:10.1016/j.neuroimage.2021.118300</a></li>
+<li>Penny, W. D., Stephan, K. E., Mechelli, A., &amp; Friston, K. J. (2004). Comparing dynamic causal models. <em>NeuroImage</em>, 22(3), 1157-1172. <a href="https://www.sciencedirect.com/science/article/abs/pii/S1053811904001648" target="_blank">doi:10.1016/j.neuroimage.2004.03.026</a></li>
+<li>Rosa, M. J., Friston, K., &amp; Penny, W. (2012). Post-hoc selection of dynamic causal models. <em>Journal of Neuroscience Methods</em>, 208(1), 66-78. <a href="https://pubmed.ncbi.nlm.nih.gov/22561579/" target="_blank">doi:10.1016/j.jneumeth.2012.04.013</a></li>
+<li>Frässle, S., Paulus, F. M., Krach, S., &amp; Jansen, A. (2016). Test-retest reliability of effective connectivity in the face perception network. <em>Human Brain Mapping</em>, 37(2), 730-744. <a href="https://pubmed.ncbi.nlm.nih.gov/26611397/" target="_blank">doi:10.1002/hbm.23061</a></li>
+<li>Frässle, S., Manjaly, Z. M., Do, C. T., et al. (2021). Whole-brain estimates of directed connectivity for human connectomics. <em>NeuroImage</em>, 225, 117491. <a href="https://pubmed.ncbi.nlm.nih.gov/33115664/" target="_blank">doi:10.1016/j.neuroimage.2020.117491</a></li>
+<li>Lynn, C. W., Cornblath, E. J., Papadopoulos, L., et al. (2021). Broken detailed balance and entropy production in the human brain. <em>PNAS</em>, 118(47), e2109889118. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8617485/" target="_blank">doi:10.1073/pnas.2109889118</a></li>
+<li>de la Fuente, L. A., Zamberlan, F., Bocaccio, H., et al. (2023). Temporal irreversibility of neural dynamics as a signature of consciousness. <em>Cerebral Cortex</em>, 33(5), 1856-1865. <a href="https://academic.oup.com/cercor/article/33/5/1856/6577164" target="_blank">doi:10.1093/cercor/bhac177</a></li>
+<li>Ishihara, K., &amp; Shimazaki, H. (2025). State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics. <em>Nature Communications</em>, 16, 10852. <a href="https://www.nature.com/articles/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
+<li>Musall, S., Kaufman, M. T., Juavinett, A. L., Gluf, S., &amp; Churchland, A. K. (2019). Single-trial neural dynamics are dominated by richly varied movements. <em>Nature Neuroscience</em>, 22, 1677-1686. <a href="https://www.nature.com/articles/s41593-019-0502-4" target="_blank">doi:10.1038/s41593-019-0502-4</a></li>
+<li>Saleem, A. B., Ayaz, A., Jeffery, K. J., Harris, K. D., &amp; Carandini, M. (2013). Integration of visual motion and locomotion in mouse visual cortex. <em>Nature Neuroscience</em>, 16, 1864-1869. <a href="https://www.nature.com/articles/nn.3567" target="_blank">doi:10.1038/nn.3567</a></li>
+<li>Flesher, S. N., Downey, J. E., Weiss, J. M., et al. (2021). A brain-computer interface that evokes tactile sensations improves robotic arm control. <em>Science</em>, 372(6544), 831-836. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8715714/" target="_blank">doi:10.1126/science.abd0380</a></li>
+</ol>

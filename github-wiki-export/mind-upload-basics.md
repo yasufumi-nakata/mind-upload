@@ -1,16 +1,16 @@
 # Wiki: Mind Upload / WBE Basics
 
-> Divide big dreams into small questions that can be confirmed.
+> Divide the large dream into smaller questions that can be checked.
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-14 / 位置づけ: Beginner guide
+- 更新日: 2026-03-19 / 位置づけ: Beginner guide
 
 ## このページの役割
-This page is for organizing what Mind Upload and WBE aim for from the beginning. First, I place emphasis on not leaving ambiguous questions about ``What can I do to make a strong argument?''
+This page explains, from the beginning, what Mind Upload and WBE are trying to do and why strong claims must be broken into smaller technical questions before they can be judged. The emphasis is not on quick belief or disbelief, but on evidence class, verification, and claim ceiling.
 
 ## 正確さの前提
-I won't add more words to make it easier to understand. Issues that have not yet been decided will be written as unresolved.
+This page stays on the technology and natural-science side. Unresolved issues are kept unresolved rather than softened with vague language.
 
 ## 公開ページへ戻る
 - [Introduction to WBE](https://mind-upload.com/wbe_101.html)
@@ -18,58 +18,63 @@ I won't add more words to make it easier to understand. Issues that have not yet
 - [FAQ](https://mind-upload.com/faq.html)
 
 ## 関連 Wiki
-- [Wiki: How to read claims and evidence](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - We will translate this overall picture into how to read news and research publications.
-- [Wiki: Why wiring diagrams alone are not enough](https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough) - We will explain what is missing in wiring from the aspects of technology and natural science.
-- [Wiki: Identity and copying issues](https://github.com/yasufumi-nakata/mind-upload/wiki/personhood-and-copy-problem) - Let's clarify the difference between "copy" and "migration" in more detail.
-- [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - You can learn why we make the ruler first.
+- [Wiki: How to read claims and evidence](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - Translates the big picture into everyday claim-reading rules.
+- [Wiki: Why wiring diagrams alone are not enough](https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough) - Explains what current structure-only routes still leave unresolved.
+- [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - Explains why inverse models and causal models are not direct observation.
+- [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Shows why route cards, audits, and registries come before strong claims.
 
 ## いま分かっていること
-- Research is already underway to measure some brain signals and make predictions for specific tasks.
-- Without mechanisms for standardization and reproducibility, progress cannot be compared.
-- When it comes to WBE, it's one thing to have similar output and another thing to have the same internal workings.
+- Some brain signals can already be measured and decoded for specific tasks under bounded conditions.
+- Without standards, audits, and explicit claim ceilings, progress cannot be compared honestly.
+- A strong-looking result can still be heavily conditioned on task structure, priors, candidate models, or omitted loops.
 
 ## まだ分かっていないこと
-- It remains unresolved whether functional reproduction guarantees identity and phenomenal consciousness.
-- It is not determined which measurement set provides sufficient internal information for WBE.
-- The rights, responsibilities, and suspension standards necessary for social implementation cannot be solved by technology alone.
+- It remains unresolved whether functional reproduction would guarantee identity or phenomenal consciousness.
+- It is not yet determined which measurement set would be sufficient for WBE-level internal-state capture.
+- Social deployment questions cannot be solved by technical progress alone.
 
 ---
 
-<h2>First of all, in a nutshell</h2>
+<h2>First in one sentence</h2>
 <p>
-Mind uploading is a big question: ``Can we maintain our minds and memories on another basis?'' WBE (Whole Brain Emulation) is a term that focuses on reproducing brain functions using a different computational platform. However, what we would call a "success" if we were able to reproduce it is not yet automatically determined.
+Mind uploading asks whether a person's brain-relevant processes could be preserved on another substrate. WBE is the technical research program that tries to make parts of that question operational. The missing step is that <strong>success is not automatic just because a system produces impressive outputs</strong>.
 </p>
 
 <strong>What this site does first</strong>
 <p>
-Rather than suddenly deciding whether something can be done or not, this site focuses on aligning what needs to be achieved to move forward and what needs to be achieved to make progress. Because in order to protect your big dreams, you first need to create a measuring stick.
+Mind-Upload does not begin by declaring that WBE is either near or impossible. It begins by fixing what must be measured, what must be disclosed, what must be reproduced, and where the claim ceiling still sits. That is why this site builds a verification commons first.
 </p>
 
-<h2>Three words I would like to share first</h2>
+<strong>2026-03-19 beginner update: why the front door had to become stricter</strong>
+<p>
+The older beginner route was directionally correct, but it still left too much room for readers to treat <strong>high score</strong>, <strong>one graph</strong>, <strong>one model</strong>, or <strong>one real-time demo</strong> as if they were all one kind of progress. The recent literature does not support that shortcut. Decode, tractography, effective connectivity, irreversibility, and closed-loop results now have to be read through different route cards on this site.
+</p>
+
+<h2>Three words to align first</h2>
 <table>
 <thead>
 <tr>
-<th>Words</th>
+<th>Word</th>
 <th>What it means here</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Mind Upload</strong></td>
-<td>This is a broad term that refers to the whole story of transferring your mind and memories to digital. </td>
+<td>The broad story of preserving or reproducing mind-relevant processes on another substrate.</td>
 </tr>
 <tr>
 <td><strong>WBE</strong></td>
-<td>It is a technological term that refers to recreating brain functions on a different basis. </td>
+<td>The technical program of reproducing enough brain-relevant function and internal organization on a different computational basis.</td>
 </tr>
 <tr>
-<td><strong>Verification base</strong></td>
-<td>It's a foundation that brings together data, evaluations, rules, and audits so that others can arrive at the same conclusions. </td>
+<td><strong>Verification Commons</strong></td>
+<td>The shared standards, benchmarks, route cards, logs, and audits that let other people judge the same claim in the same way.</td>
 </tr>
 </tbody>
 </table>
 
-<h2>What is relatively clear now / What is still unresolved</h2>
+<h2>What is relatively clear now / what is still unresolved</h2>
 <table>
 <thead>
 <tr>
@@ -79,40 +84,83 @@ Rather than suddenly deciding whether something can be done or not, this site fo
 </thead>
 <tbody>
 <tr>
-<td>Research has been completed to measure some brain signals and conditionally predict states. </td>
-<td>That prediction does not necessarily mean the preservation of identity or consciousness. </td>
+<td>Some brain signals can already be decoded or controlled for specific tasks under bounded experimental conditions.</td>
+<td>That does not by itself establish preserved identity, consciousness, or WBE-level internal-state capture.</td>
 </tr>
 <tr>
-<td>Once we have public data, standards, and benches, it becomes easier to compare progress. </td>
-<td>There is still no agreement on the conditions under which two persons can be considered "the same person." </td>
+<td>Public standards, benchmarks, registries, and audits make progress more comparable.</td>
+<td>There is still no agreement on which measurement and verification package would be sufficient for strong WBE claims.</td>
 </tr>
 <tr>
-<td>It is not enough to match the output, it is also important to respond to interventions and changes in conditions. </td>
-<td>It is not known whether functional equivalence guarantees phenomenal consciousness. </td>
+<td>Current technical progress comes in different evidence classes, and each class reduces a different uncertainty.</td>
+<td>It remains unknown how far any future functional reproduction would justify continuity claims about a person.</td>
 </tr>
 </tbody>
 </table>
 
-<h2>Why don't you say "done" right away</h2>
+<h2>Why this site does not say "done" quickly</h2>
 <p>
-When it comes to WBE, it's easy to confuse similar things. For example, being able to guess a sentence from brain signals is not the same as being able to generate the brain's internal state using a different basis. While the former may be<strong>translation of observations, the latter requires<strong>inner mechanisms to move over time and also react to</strong>changing conditions.
+WBE is a field where different levels are easy to collapse into one another. A system can decode text without reproducing the generating mechanism. A tractography graph can be useful without being an edge-complete connectome. A DCM graph can be informative without being discovered causal wiring. A thermodynamic result can be interesting without being a direct measurement of physical dissipation. A closed-loop demo can be real progress without solving the full body/environment boundary.
 </p>
 
-<strong>What's important here</strong>
+<strong>Representative reasons, from current primary literature</strong>
 <p>
-If we obscure this difference, we end up talking about L1 research as if it were L4. Therefore, on this site, we take a policy that the stronger the claim, the stronger the evidence required.
+<a href="https://www.nature.com/articles/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a>, <a href="https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2021.672946/full" target="_blank">Di et al. (2021)</a>, <a href="https://www.nature.com/articles/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a>, and <a href="https://www.nature.com/articles/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a> together show why high decode scores still need shortcut and task-prior audits. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4246325/" target="_blank">Thomas et al. (2014)</a> and <a href="https://www.nature.com/articles/s41467-017-01285-x" target="_blank">Maier-Hein et al. (2017)</a> show why human tractography must be read as a ceiling-limited structural prior. <a href="https://www.sciencedirect.com/science/article/abs/pii/S1053811904001648" target="_blank">Penny et al. (2004)</a> and <a href="https://pubmed.ncbi.nlm.nih.gov/22561579/" target="_blank">Rosa et al. (2012)</a> show why effective-connectivity conclusions depend on candidate model space. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8617485/" target="_blank">Lynn et al. (2021)</a> and <a href="https://www.nature.com/articles/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> show why irreversibility results depend on estimator family and assumptions. <a href="https://pubmed.ncbi.nlm.nih.gov/31551604/" target="_blank">Musall et al. (2019)</a> and <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8715714/" target="_blank">Flesher et al. (2021)</a> show why local closed-loop success still needs a disclosed body/environment boundary.
 </p>
 
-<strong>When you stop at "Is it close to WBE if I have a wiring diagram?"</strong>
+<strong>What to do with that information</strong>
 <p>
-Wiring diagrams are important, but without synaptic state, delay and myelination, neuromodification, glia, and cell type labels, no strong claims can be made. If you want to explain this difference only from the technical and natural science aspects, please see <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough">Wiki: Why wiring diagrams alone are not enough</a>.
+The point is not to dismiss progress. The point is to read each result at the right level. On this site, the fastest route for that is now <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence">Wiki: how to read claims and evidence</a>, followed by the specific route-card pages for measurement stack, connectomes, effective connectivity, thermodynamic claims, and closed loops.
 </p>
 
-<h2>Position of this site</h2>
+<h2>What this site is trying to build</h2>
 <p>
-This site is not the final proof of WBE. Rather, it is a place in which<strong>the public goods</strong> are in place to enable proof or disproof. In other words, we work on preparing the rules, score sheets, and match records before the competition itself.
+Mind-Upload is not itself the proof of WBE. It is a place for assembling the public goods that would make proof or disproof possible in a comparable way: standards, benchmarks, route cards, failure conditions, logs, and reproducible examples. That is why the site often sounds stricter than ordinary hype-driven discussion. The goal is not smaller ambition. The goal is cleaner evidence.
 </p>
+
+<table>
+<thead>
+<tr>
+<th>If you are currently stuck on...</th>
+<th>Go here next</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>How strong a headline really is</td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence">How to read claims and evidence</a></td>
+<td>It translates headlines into claim level and route-card requirements.</td>
+</tr>
+<tr>
+<td>Why structure alone is not enough</td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough">Why wiring diagrams alone are not enough</a></td>
+<td>It separates structural progress from hidden-state completeness.</td>
+</tr>
+<tr>
+<td>Why verification comes before strong claims</td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics">Basics of verification infrastructure</a></td>
+<td>It explains the role of standards, benchmarks, preregistration, and audits.</td>
+</tr>
+</tbody>
+</table>
 
 <h4>Next</h4>
-<p>Click here if you would like to read this story divided into "Strength of Claim" and "Necessary Evidence". </p>
+<p>If you want the shortest technical page for reading strong-looking claims safely, continue here.</p>
 <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence">How to read claims and evidence →</a>
+
+<h2>References</h2>
+<ol>
+<li>Chaibub Neto, E., Pratap, A., Perumal, T. M., et al. (2019). Detecting the impact of subject characteristics on machine learning-based diagnostic applications. <em>npj Digital Medicine</em>, 2, 99. <a href="https://www.nature.com/articles/s41746-019-0178-x" target="_blank">doi:10.1038/s41746-019-0178-x</a></li>
+<li>Di, Y., An, X., Zhong, W., Liu, S., &amp; Ming, D. (2021). The time-robustness analysis of individual identification based on resting-state EEG. <em>Frontiers in Human Neuroscience</em>, 15, 672946. <a href="https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2021.672946/full" target="_blank">doi:10.3389/fnhum.2021.672946</a></li>
+<li>Tang, J., LeBel, A., Jain, S., &amp; Huth, A. G. (2023). Semantic reconstruction of continuous language from non-invasive brain recordings. <em>Nature Neuroscience</em>, 26, 858-866. <a href="https://www.nature.com/articles/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
+<li>Willett, F. R., Kunz, E. M., Fan, C., et al. (2023). A high-performance speech neuroprosthesis. <em>Nature</em>, 620, 1031-1036. <a href="https://www.nature.com/articles/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
+<li>Thomas, C., Ye, F. Q., Irfanoglu, M. O., et al. (2014). Anatomical accuracy of brain connections derived from diffusion MRI tractography is inherently limited. <em>PNAS</em>, 111(46), 16574-16579. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4246325/" target="_blank">doi:10.1073/pnas.1405672111</a></li>
+<li>Maier-Hein, K. H., Neher, P. F., Houde, J.-C., et al. (2017). The challenge of mapping the human connectome based on diffusion tractography. <em>Nature Communications</em>, 8, 1349. <a href="https://www.nature.com/articles/s41467-017-01285-x" target="_blank">doi:10.1038/s41467-017-01285-x</a></li>
+<li>Penny, W. D., Stephan, K. E., Mechelli, A., &amp; Friston, K. J. (2004). Comparing dynamic causal models. <em>NeuroImage</em>, 22(3), 1157-1172. <a href="https://www.sciencedirect.com/science/article/abs/pii/S1053811904001648" target="_blank">doi:10.1016/j.neuroimage.2004.03.026</a></li>
+<li>Rosa, M. J., Friston, K., &amp; Penny, W. (2012). Post-hoc selection of dynamic causal models. <em>Journal of Neuroscience Methods</em>, 208(1), 66-78. <a href="https://pubmed.ncbi.nlm.nih.gov/22561579/" target="_blank">doi:10.1016/j.jneumeth.2012.04.013</a></li>
+<li>Lynn, C. W., Cornblath, E. J., Papadopoulos, L., et al. (2021). Broken detailed balance and entropy production in the human brain. <em>PNAS</em>, 118(47), e2109889118. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8617485/" target="_blank">doi:10.1073/pnas.2109889118</a></li>
+<li>Ishihara, K., &amp; Shimazaki, H. (2025). State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics. <em>Nature Communications</em>, 16, 10852. <a href="https://www.nature.com/articles/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
+<li>Musall, S., Kaufman, M. T., Juavinett, A. L., Gluf, S., &amp; Churchland, A. K. (2019). Single-trial neural dynamics are dominated by richly varied movements. <em>Nature Neuroscience</em>, 22, 1677-1686. <a href="https://pubmed.ncbi.nlm.nih.gov/31551604/" target="_blank">doi:10.1038/s41593-019-0502-4</a></li>
+<li>Flesher, S. N., Downey, J. E., Weiss, J. M., et al. (2021). A brain-computer interface that evokes tactile sensations improves robotic arm control. <em>Science</em>, 372(6544), 831-836. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8715714/" target="_blank">doi:10.1126/science.abd0380</a></li>
+</ol>

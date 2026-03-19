@@ -322,6 +322,52 @@ On this site, human-side summaries must name the <strong>proxy class</strong> ex
 The danger is not only philosophical overreach. If these rows are compressed into one sentence, readers can silently replace ``human proxy-rich evidence'' with ``human near-direct maintenance-state observation.'' This site does not allow that rephrasing. The missing layers above stay latent until a comparable whole-brain in vivo human route or an explicit external-calibration route is shown.
 </p>
 
+<h2>8. Proxy-rich human evidence still does not become state-complete by composition</h2>
+<p>
+A remaining weakness after separating <strong>proxy class</strong> and <strong>operational maturity</strong> was that a reader could still mentally add the strongest human rows together and conclude that the hidden-state problem is almost solved. The primary literature does not support that shortcut. The rows above live on different spatial units, time windows, and inference layers, and several of the strongest demonstrations are still specialized or model-heavy. The safe reading on this site is therefore not ``the proxies add up to completeness,'' but ``the proxies reduce different error terms and still leave a fusion problem.''
+</p>
+<table>
+<thead>
+<tr>
+<th>Compositional shortcut to block</th>
+<th>Why the cited literature does not support it</th>
+<th>Operational correction on this site</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>``Atlas + proxy = current individual state''</strong></td>
+<td><a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> and <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> are atlas / cohort resources. They constrain regional organization and synaptic-density distribution, but they do not directly read one individual's current task-time state.</td>
+<td>Write <strong>atlas</strong> or <strong>normative prior</strong> explicitly; do not phrase these rows as current-state measurement.</td>
+</tr>
+<tr>
+<td><strong>``Several macro proxies = one local controller''</strong></td>
+<td><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>, <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">Qian et al. (2025)</a>, and <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> constrain different macro energetic, thermal, ionic, or myelin variables. They do not identify branch-local ATP reserve, current chloride set point, or per-axon conduction control as one merged mechanism.</td>
+<td>Keep local controllers explicit in the Observability Budget; do not auto-fill them from macro proxy coexistence.</td>
+</tr>
+<tr>
+<td><strong>``Support-state proxy = direct maintenance controller''</strong></td>
+<td><a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> constrain CSF mobility or brain-to-plasma clearance under explicit acquisition and model assumptions, not cell-specific immune control or synaptic maintenance logic.</td>
+<td>Read them as <strong>support-state evidence</strong> only; leave local maintenance control latent unless another calibrated route closes it.</td>
+</tr>
+<tr>
+<td><strong>``Cross-stack fusion adds only observables''</strong></td>
+<td><a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> each depend on explicit quantification models, validated windows, or compartment assumptions. Fusion therefore combines model burdens as well as direct observables.</td>
+<td>Log the <strong>fusion model</strong>, <strong>external calibration source</strong>, and <strong>abstention boundary</strong> separately instead of treating multimodal combination as self-justifying.</td>
+</tr>
+<tr>
+<td><strong>``Different scales acquired somewhere imply same-subject completeness''</strong></td>
+<td><a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> is local ex vivo nanoscale human cortex, whereas <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> and <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> are small-cohort specialized in vivo macro routes. The cited papers do not demonstrate same-subject, same-time, whole-brain cross-stack state identification.</td>
+<td>Reserve stronger wording for studies that disclose <strong>same-subject co-registration</strong>, <strong>same-regime alignment</strong>, and <strong>externally validated cross-stack fusion</strong>.</td>
+</tr>
+</tbody>
+</table>
+
+<strong>Composition rule on this site</strong>
+<p>
+This site now treats <strong>proxy-rich human evidence</strong> as a real advance over a single proxy class, but still below <strong>same-subject, cross-stack, externally calibrated state identification</strong>. To move upward, a paper or benchmark package has to disclose co-registration scope, perturbation alignment, quantification models, external calibration, and what latent states remain unmatched. That ranking is an inference from the primary literature summarized above.
+</p>
+
 <h2>Practical rules arising from this criticism</h2>
 
 <h4>Rule</h4>
@@ -330,6 +376,7 @@ The danger is not only philosophical overreach. If these rows are compressed int
 <li><strong>Don't mix atlas / bridge / scaffold / local twin / proxy calibration:</strong>Fix which kind of advance is the same "advance". </li>
 <li><strong>Don't make multimodal a synonym for state-complete:</strong>Include in the text what latent state still remains. </li>
 <li><strong>In human-side summaries, name the proxy class:</strong>Do not compress local ultrastructure, synaptic-density PET, biochemical scaffold, perturbation-conditioned plasticity/state-gated perturbation routes, energetic / ionic / thermal / myelin / clearance routes into one direct route. </li>
+<li><strong>Do not read proxy accumulation as automatic state-completeness:</strong>Cross-stack fusion still needs same-subject alignment, model disclosure, external calibration, and abstention boundaries.</li>
 <li><strong>When filling in unobserved states, write ``estimated'': </strong>If threshold / gain / set point is auto-completed from cell type, write ``latent inference''. </li>
 <li><strong>Do not promote BOLD / fNIRS amplitude to neural difference without hemodynamic audit:</strong>Write vascular-state / CVR calibration route or abstention explicitly. </li>
 <li><strong>Prohibit expressions that exceed the claim ceiling:</strong>For example, do not write EM alone as emulation-complete, Patch-seq as whole-brain state-complete, pupil as transmitter ground truth, receptor atlas as current transmitter state, occupancy PET as whole-brain transmitter-state readout, or displacement PET as whole-brain neuromodulatory ground truth. </li>
