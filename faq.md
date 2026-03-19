@@ -13,13 +13,14 @@ page_intro: "This page is a Q&A for the questions many readers hit first when re
 accuracy_note: "This page gives short answers. Please do not quote the conclusion alone; return to the linked pages and references when you need the full basis."
 page_highlights:
   - "It quickly clears up first-order questions such as what this site is for and what EEG or brain-to-text work can and cannot support."
-  - "It now front-loads seven technical guardrails: connectome-complete is not state-complete, a high score is not automatically a target-specific neural readout, EEG / MEG connectivity labels are not automatically leak-proof communication maps or causal circuits, BOLD / fNIRS differences need vascular-state / CVR audit, DCM / effective-connectivity labels do not by themselves identify true causal wiring, thermodynamic / irreversibility labels do not by themselves measure physical dissipation or WBE-ready cost, and low latency does not by itself solve the body / environment boundary."
+  - "It now front-loads eight technical guardrails: connectome-complete is not state-complete, human proxy-rich evidence is not automatically near-direct whole-brain state readout, a high score is not automatically a target-specific neural readout, EEG / MEG connectivity labels are not automatically leak-proof communication maps or causal circuits, BOLD / fNIRS differences need vascular-state / CVR audit, DCM / effective-connectivity labels do not by themselves identify true causal wiring, thermodynamic / irreversibility labels do not by themselves measure physical dissipation or WBE-ready cost, and low latency does not by itself solve the body / environment boundary."
   - "It avoids dramatic overstatement and states what remains unresolved at the same time."
   - "It is structured so readers can tell when the FAQ is enough and when they should move on to the full page."
 known_points:
   - "Even short Q&A becomes much safer when strong claims are decomposed into weaker, more testable claims."
   - "The impressive appearance of EEG or LLM outputs must be separated from strong WBE claims, and the contributions of language priors, nuisance routes, and brain-derived information must also be separated."
   - "Because wiring diagrams and cell types still leave excitability, timing-state, thermal-state, transcription/chromatin, proteostasis, cargo-transport / cytoskeletal trafficking state, ECM / PNN, ionic-homeostasis, bioenergetic / mitochondrial state, and maintenance-support variables unresolved, long-term dynamical claims require separate auditing."
+  - "Human measurement advances now span different proxy classes and different route maturities, so local ultrastructure, SV2A PET, MRSI biochemical scaffolds, kinetic DMRSI, myelin mapping, and clearance routes should not be compressed into one progress bar."
   - "An EEG / MEG connectivity label does not by itself show leak-free inter-areal communication or causality; volume conduction, source leakage, ghost interactions, and pipeline dependence still matter."
   - "A BOLD or fNIRS amplitude difference without vascular-state / CVR or short-separation auditing is still not a clean neural difference."
   - "A DCM or effective-connectivity label does not by itself discover the one true causal circuit; candidate model space, validation, and reliability still matter."
@@ -145,9 +146,9 @@ If the FAQ helped you understand the topic but you still do not know what to ver
 </div>
 
 <div class="note-box">
-<strong>Seven technical guards now fixed at the front door</strong>
+<strong>Eight technical guards now fixed at the front door</strong>
 <p>
-This FAQ now blocks seven fast overreads before they spread through the site: <strong>connectome-complete is not state-complete</strong>, <strong>high score is not automatically target-specific neural evidence</strong>, <strong>sensor- or source-space connectivity is not automatically a leak-proof communication map or causal circuit</strong>, <strong>BOLD / fNIRS amplitude difference is not automatically a neural difference without vascular-state / CVR audit</strong>, <strong>DCM / effective-connectivity output is not automatically the brain's true causal wiring</strong>, <strong>thermodynamic / irreversibility labels are not automatically direct physical-dissipation measurements or WBE gates</strong>, and <strong>low latency is not automatically a solved body / environment boundary</strong>. If you need the full rule set behind them, go next to <a href="eeg_101.html">EEG 101</a>, <a href="verification.html#observability-budget">Verification: Observability Budget</a>, <a href="verification.html#body-environment-boundary-card">Verification: Body / Environment Boundary Card</a>, <a href="wiki/connectome-is-not-enough.html">Wiki: Why a Connectome Is Not Enough</a>, <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>, <a href="wiki/observation-to-estimation.html#effective-connectivity-route-card">Wiki: effective-connectivity route card</a>, and <a href="wiki/thermodynamic-grounding-basics.html#irreversibility-route-card">Wiki: irreversibility route card</a>.
+This FAQ now blocks eight fast overreads before they spread through the site: <strong>connectome-complete is not state-complete</strong>, <strong>human proxy-rich evidence is not automatically near-direct whole-brain state readout</strong>, <strong>high score is not automatically target-specific neural evidence</strong>, <strong>sensor- or source-space connectivity is not automatically a leak-proof communication map or causal circuit</strong>, <strong>BOLD / fNIRS amplitude difference is not automatically a neural difference without vascular-state / CVR audit</strong>, <strong>DCM / effective-connectivity output is not automatically the brain's true causal wiring</strong>, <strong>thermodynamic / irreversibility labels are not automatically direct physical-dissipation measurements or WBE gates</strong>, and <strong>low latency is not automatically a solved body / environment boundary</strong>. If you need the full rule set behind them, go next to <a href="eeg_101.html">EEG 101</a>, <a href="verification.html#observability-budget">Verification: Observability Budget</a>, <a href="verification.html#body-environment-boundary-card">Verification: Body / Environment Boundary Card</a>, <a href="wiki/connectome-is-not-enough.html">Wiki: Why a Connectome Is Not Enough</a>, <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>, <a href="wiki/observation-to-estimation.html#effective-connectivity-route-card">Wiki: effective-connectivity route card</a>, and <a href="wiki/thermodynamic-grounding-basics.html#irreversibility-route-card">Wiki: irreversibility route card</a>.
 </p>
 </div>
 
@@ -174,6 +175,10 @@ This FAQ now blocks seven fast overreads before they spread through the site: <s
 <tr>
 <td><strong>Know whether the connectome alone is enough</strong></td>
 <td>Q2c, “If we know the connectome and cell type, is the rest mostly filled in?” clarifies which hidden-state families remain outside connectome plus cell type.</td>
+</tr>
+<tr>
+<td><strong>Know what humans can actually observe today</strong></td>
+<td>Q2d, “If human measurement keeps improving, are we close to state-complete readout?” separates proxy class from route maturity before you overread human evidence.</td>
 </tr>
 <tr>
 <td><strong>Know the conditions for real-time or closed-loop work</strong></td>
@@ -354,10 +359,51 @@ Likewise, <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">H
 At Mind-Upload, this means we treat <strong>connectome-complete as progress on the structural scaffold</strong>, not as <strong>emulation-complete</strong>. Current excitability, timing-state, thermal-state, transcription/chromatin, local proteostasis, cargo-transport / cytoskeletal trafficking state, ECM / PNN gate, ionic milieu, bioenergetic / mitochondrial state, sleep/controller state, and glial/metabolic support still need to be disclosed or left explicitly latent. So <strong>same-day activity matching</strong>, <strong>cross-day stability</strong>, and <strong>maintenance-consistent dynamics</strong> remain separate claims. The shortest follow-up is <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams alone are not enough</a> plus <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.
 </p>
 <p>
-Human evidence should also be read as a <strong>ladder</strong>, not as one direct route. Local human nanoscale ultrastructure, diffusion-MRI tractography-based macro pathway priors, regional synaptic-density PET, receptor / transporter atlas priors, ligand- / challenge-limited occupancy or displacement PET, <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">sleep-homeostasis / TMS-EEG plasticity proxies (Huber et al., 2013)</a>, <a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a>, <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">EEG-state-gated perturbation routes (Zrenner et al., 2018)</a>, and whole-brain biochemical / energetic / ionic / thermal / myelin / clearance proxies are all real advances, but they reduce different error terms and do not auto-fill current transcription / chromatin state, ECM / PNN gate state, current chloride homeostasis, branch-local proteostasis, branch- or bouton-specific cargo delivery, branch-local mitochondrial positioning, AIS geometry, or the cell-specific recovery controller. Several of the newer human routes are also still <strong>specialized, small-cohort, or model-dependent</strong>, and tractography remains <strong>ceiling-limited by validation constraints</strong> rather than by deployment alone, so proxy class and operational maturity should not be collapsed into one impression. The shortest front-door table is <a href="wbe_101.html#human-observability-ladder">WBE 101: what human evidence currently looks like</a>.
+The separate question of <strong>what human measurement can actually observe today</strong> is handled in <a href="#q2d">Q2d</a>. That separation is deliberate: <code>connectome insufficiency</code> and <code>human observability ladder</code> are related, but they are not the same reading task.
+</p>
+</section>
+
+<section class="section" id="q2d">
+<h2 class="section-title">Q. If human measurement keeps improving, are we close to state-complete readout?</h2>
+<p>
+A. Not yet. The strongest recent human papers do not all move the same evidential axis. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> reconstructed a <strong>cubic millimeter of human temporal cortex</strong> at nanoscale resolution, but that is a <strong>local ex vivo structural scaffold</strong>, not a living whole-brain state readout. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built an SV2A PET atlas in healthy humans (<strong>17F/16M</strong>) calibrated with postmortem autoradiography, which is a <strong>regional synaptic-density proxy</strong>. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> used five-metabolite <sup>1</sup>H-MRSI in <strong>51 healthy participants</strong> with an <strong>independent replication sample of 13</strong> to derive a parcel-level biochemical similarity scaffold. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> estimated glucose-transport and metabolic-rate maps using <strong>7 T dynamic DMRSI</strong>, <strong>kinetic modeling</strong>, and a dynamic cohort of <strong>five healthy participants</strong>. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> demonstrated myelin-bilayer mapping in <strong>two healthy volunteers</strong>, while <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> advanced human CSF-mobility and sleep-linked clearance routes through <strong>specialized MRI</strong> or an <strong>investigational device plus multicompartment model</strong>.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Human route</th>
+<th>What it strengthens</th>
+<th>What it still does not give you</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Local ultrastructure</strong><br>Shapson-Coe et al. (2024)</td>
+<td>A local human structural scaffold at nanoscale resolution.</td>
+<td>A living whole-brain readout of current state, maintenance-state, or longitudinal dynamics.</td>
+</tr>
+<tr>
+<td><strong>SV2A PET atlas</strong><br>Johansen et al. (2024)</td>
+<td>A regional synaptic-density proxy calibrated against postmortem autoradiography.</td>
+<td>Momentary synaptic efficacy, branch-local plasticity state, or current individual whole-brain state closure.</td>
+</tr>
+<tr>
+<td><strong>Whole-brain MRSI biochemical scaffold</strong><br>Lucchetti et al. (2025)</td>
+<td>A parcel-level biochemical similarity object built from five metabolites.</td>
+<td>A flux map, a wiring graph, or current transcription / chromatin / proteostasis control.</td>
+</tr>
+<tr>
+<td><strong>Dynamic energetic and support-state proxies</strong><br>Li et al. (2025); Baadsvik et al. (2024); Hirschler et al. (2025); Dagum et al. (2026)</td>
+<td>Macro energetic-rate imaging, myelin-bilayer proof-of-principle, CSF-mobility structure, and sleep-linked clearance physiology.</td>
+<td>Cell-specific chloride homeostasis, branch-local mitochondrial positioning, branch-specific cargo delivery, or same-subject whole-brain hidden-state closure.</td>
+</tr>
+</tbody>
+</table>
+<p>
+At Mind-Upload, the safe reading is therefore two-dimensional: name <strong>which proxy class the route constrains</strong>, and separately name <strong>how specialized, small-cohort, or model-heavy the route still is</strong>. If you skip that second step, you can silently turn <strong>"human evidence got richer"</strong> into <strong>"human state-complete measurement is close"</strong>. The current primary literature does not support that jump.
 </p>
 <p>
-Even within the PET rows, the measurement model still matters. On this site, SV2A PET is read as a tracer-defined synaptic-density proxy rather than a readout of momentary synaptic efficacy, receptor atlases are read as normative group maps rather than current individual state, and occupancy / displacement PET is read as ligand- and challenge-limited evidence over bounded scan windows. If tracer, quantification model, or scan window is missing, the PET result is still too coarse to read as current internal state.
+The shortest follow-up is <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> plus <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>. Those pages keep proxy class, route maturity, and the still-latent hidden-state families in one place.
 </p>
 </section>
 
@@ -512,6 +558,12 @@ The distinguishing strategy of Mind-Upload is <strong>to build the Verification 
 <li>Rzechorzek, N. M., Thrippleton, M. J., Chappell, F. M., et al. (2022). A daily temperature rhythm in the human brain predicts survival after brain injury. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">doi:10.1093/brain/awab466</a></li>
 <li>Ren, J., Sherry, A. D., &amp; Malloy, C. R. (2015). 31P-MRS of healthy human brain: ATP synthesis, metabolite concentrations, pH, and T1 relaxation times. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">doi:10.1002/nbm.3384</a></li>
 <li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
+<li>Shapson-Coe, A., Januszewski, M., Berger, D. R., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
+<li>Johansen, A., Beliveau, V., Colliander, E., et al. (2024). An In Vivo High-Resolution Human Brain Atlas of Synaptic Density. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
+<li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
+<li>Baadsvik, E. L., Weiger, M., Froidevaux, R., Schildknecht, C. M., Ineichen, B. V., &amp; Pruessmann, K. P. (2024). Myelin bilayer mapping in the human brain in vivo. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">doi:10.1002/mrm.29998</a></li>
+<li>Hirschler, L., Runderkamp, B. A. R., Decker, A., et al. (2025). Region-specific drivers of CSF mobility measured with MRI in humans. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
+<li>Dagum, P., Elbert, D. L., Giovangrandi, L., et al. (2026). The glymphatic system clears amyloid beta and tau from brain to plasma in humans. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
 <li>Qian, Y., Zhao, T., Zheng, H., Weimer, J., &amp; Boada, F. E. (2012). High-resolution sodium imaging of human brain at 7 T. <a href="https://doi.org/10.1002/mrm.23225" target="_blank">doi:10.1002/mrm.23225</a></li>
 <li>Qian, Y., Lin, Y.-C., Chen, X., et al. (2025). Single-quantum sodium MRI at 3 T for separation of mono- and bi-T2 sodium signals. <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">doi:10.1038/s41598-025-07800-1</a></li>
 <li>Suzuki, A., et al. (2011). Astrocyte-neuron lactate transport is required for long-term memory formation. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">doi:10.1016/j.cell.2011.02.018</a></li>
