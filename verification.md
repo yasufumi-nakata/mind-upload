@@ -31,6 +31,7 @@ page_highlights:
   - "At L2 and above, bioenergetic / mitochondrial support is separated from glial support when a claim depends on repeated-burst reliability, local ATP reserve, or dendritic plasticity."
   - "At L2 and above, delay is treated as timing-state rather than one scalar, so device latency, biological conduction timing, and human macro timing proxies are not collapsed into one number."
   - "At L2 and above for intervention / closed-loop results, the Intervention Card fixes trigger rule, timing audit, control / sham, safe stop, and recalibration burden."
+  - "At L3 and above for embodied-loop results, the Body / Environment Boundary Card fixes which sensory, motor, and interoceptive channels were preserved, substituted, or omitted."
   - "For cross-day or longitudinal claims, the Temporal Validity Card audits fixed decoder interval, state annotation, recalibration burden, and transfer ceiling independently."
   - "For cross-day or remote-memory claims, the maintenance-state error budget reports controller state, sleep history, sleep architecture / replay-coupling state, and support-state proxies separately, so temporal success is not auto-promoted to a maintenance-consistent claim."
   - "For chronic invasive claims, signal-chain drift and implant tissue response are audited separately rather than being folded into unit-identity audit alone."
@@ -53,6 +54,7 @@ known_points:
   - "A connectome, cell type, and timing proxy do not by themselves fix local thermal-state, so field-potential and sequence-timing claims need a separate ceiling."
   - "A connectome, cell type, and glial proxy do not by themselves fix local ATP reserve or mitochondrial positioning, so repeated-burst and dendritic-plasticity claims need a separate bioenergetic ceiling."
   - "Passing a hardware latency audit is not the same as recovering biological timing-state; claims that depend on phase or synchrony need both sides separated."
+  - "Passing a latency audit is not the same as fixing the body / environment boundary; L3 claims still need retained/substituted loop disclosure."
   - "In chronic invasive recording, unit-matching uncertainty and tissue response around the implant are separate audit items."
 unknown_points:
   - "There is still no settled answer on which causal-structure approximation would be sufficient for L4 personal identity."
@@ -287,7 +289,7 @@ If you want to separate "I read the summary" from "I checked the conditions and 
 </tr>
 <tr>
 <td><strong>L3</strong> Closed Loop</td>
-<td>Stability in real-time operation, latency management, and safe-stop conditions.</td>
+<td>Stability in real-time operation, latency management, safe-stop conditions, and a disclosed body / environment boundary with retained or substituted loop channels.</td>
 <td>Even then, identity and rights questions still require separate verification.</td>
 </tr>
 <tr>
@@ -311,7 +313,7 @@ For identity claims, preregistering what is being treated as continuous matters 
 <div class="note-box">
 <strong>If You Get Stuck At The L3 Entry Point</strong>
 <p>
-Closed-loop work needs more than offline accuracy. It also needs end-to-end latency, jitter, drift handling, and safety-stop design. For a beginner guide to that distinction, see <a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: Closed Loops, Latency, Jitter, and Safety Stops</a>.
+Closed-loop work needs more than offline accuracy. It also needs end-to-end latency, jitter, drift handling, safety-stop design, and an explicit statement of which body / environment loops were preserved or replaced. For a beginner guide to the timing side, see <a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: Closed Loops, Latency, Jitter, and Safety Stops</a>.
 </p>
 </div>
 </section>
@@ -1344,7 +1346,7 @@ If you want an everyday-language explanation of the differences between held-out
 </tr>
 <tr>
 <td><strong>Gate 2 / bidirectional perturbation</strong></td>
-<td>Feedback or a bidirectional loop in which a stimulus changes the next input, and behavior changes due to intervention. </td>
+<td>Feedback or a bidirectional loop in which a stimulus changes the next input, behavior changes due to intervention, and the surrogate body / environment mapping is disclosed. </td>
 <td>Flesher et al. (2021)</td>
 <td>Even if we can show the causal gain of local subsystems, we cannot show that whole-brain WBE holds true. </td>
 </tr>
@@ -1384,6 +1386,76 @@ If the branching conditions, comparison rules, failure conditions, and stimulus 
 </div>
 </section>
 
+<section class="section" id="body-environment-boundary-card">
+<h2 class="section-title">2026-03-19 addendum: attach a Body / Environment Boundary Card to L3 results</h2>
+<p>
+The weakness exposed in this pass was that latency, jitter, and safe-stop logs can show whether a loop is fast and stable, but not <strong>which subject boundary the loop actually preserved</strong>. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> and <a href="https://doi.org/10.1126/science.aav7893" target="_blank">Stringer et al. (2019)</a> showed that ongoing behavior explains a large fraction of cortical activity, <a href="https://doi.org/10.1038/nn.3567" target="_blank">Saleem et al. (2013)</a> and <a href="https://doi.org/10.1126/science.1232655" target="_blank">Ravassard et al. (2013)</a> showed that locomotion, optic flow, vestibular, and other sensory cues reshape cortical and hippocampal codes, <a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">Zelano et al. (2016)</a> and <a href="https://doi.org/10.1038/s41586-025-09544-4" target="_blank">Raut et al. (2025)</a> showed that breathing and arousal link brain dynamics to organism-wide physiological state, and <a href="https://doi.org/10.1126/science.abd0380" target="_blank">Flesher et al. (2021)</a> showed that restoring tactile feedback improves a local bidirectional BCI. Therefore, a loop result cannot be read here as “embodiment solved” unless it names which sensory, motor, interoceptive, and surrogate-body channels were preserved, substituted, or omitted.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Body / Environment Boundary Card field</th>
+<th>What must be written at minimum</th>
+<th>What goes wrong if it is omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>declared boundary / target subsystem</strong></td>
+<td>Fix whether the claim concerns a speech loop, grasp loop, navigation loop, memory-task loop, or a broader embodied agent, and state the maximum claim ceiling.</td>
+<td>A local loop is too easily misread as if the whole subject boundary had been reproduced.</td>
+</tr>
+<tr>
+<td><strong>retained / substituted sensory channels</strong></td>
+<td>List which inputs were preserved or replaced: vision, touch, proprioception, vestibular cues, respiration-related cues, auditory feedback, dialogue partner, and task-state cues.</td>
+<td>The reader cannot tell whether the observed performance depended on missing cues that were silently restored or on cues that never existed in the test.</td>
+</tr>
+<tr>
+<td><strong>retained / substituted action channels</strong></td>
+<td>Name the actual plant or actuator, such as cursor, robotic hand, speech synthesizer, virtual avatar, or stimulation output, together with its controllable degrees of freedom.</td>
+<td>The loop can look “embodied” even though the output space was heavily simplified.</td>
+</tr>
+<tr>
+<td><strong>interoceptive / autonomic / arousal routes</strong></td>
+<td>State whether respiration, pupil, HR / HRV, effort, fatigue, or other body-state observables were logged, manipulated, or left latent.</td>
+<td>Arousal- or body-state-driven gains can be misread as stable neural equivalence of the target subsystem.</td>
+</tr>
+<tr>
+<td><strong>surrogate body / environment contract</strong></td>
+<td>Describe the surrogate body or environment, including latency, noise, saturation, sensory remapping, and whether the environment was fixed, simulated, or interactive.</td>
+<td>A local engineering convenience can be mistaken for a biologically comparable sensorimotor world.</td>
+</tr>
+<tr>
+<td><strong>loop-removal / ablation test</strong></td>
+<td>Report what happened when feedback, tactile input, self-motion cues, or another key loop element was removed, scrambled, or delayed.</td>
+<td>The system may look robust only because the decisive loop component was never challenged.</td>
+</tr>
+<tr>
+<td><strong>environment OOD / perturbation slices</strong></td>
+<td>Report performance across changed environments, noise levels, partners, objects, tasks, or sensory conditions rather than only on the training setting.</td>
+<td>The result can be overread as general closed-loop competence even if it is tightly locked to one environment.</td>
+</tr>
+<tr>
+<td><strong>residual omitted loops / abstention boundary</strong></td>
+<td>Fix which body / environment routes still remained absent and what stronger claim is therefore forbidden.</td>
+<td>L3 subsystem evidence is too easily promoted to embodied equivalence or WBE readiness.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Minimum operating rules</strong>
+<p>
+If this card is missing, this site treats the result by default as a <strong>task-specific local controller</strong>, <strong>local subsystem loop</strong>, or <strong>surrogate-body demonstration</strong>. It does not promote the result to solved embodiment, subject-complete closed loop, or WBE-relevant body / environment equivalence.
+</p>
+</div>
+<div class="note-box">
+<strong>How this differs from the Intervention Card</strong>
+<p>
+The <a href="#causal-perturbation-suite">Intervention Card</a> fixes what was changed and how timing/safety were logged. The Body / Environment Boundary Card fixes <strong>what system boundary the loop actually used</strong>. On this site, a paper needs both before its L3 wording is allowed to rise.
+</p>
+</div>
+</section>
+
 <section class="section" id="verification-rigor-2026-02">
 <h2 class="section-title">Additional audit logs (with applicable conditions)</h2>
 <p>
@@ -1395,6 +1467,7 @@ In response to technical criticisms (Issue #257-#260) submitted in the latter ha
 <li><strong>ESI/HBM logs:</strong>Only when making anatomical source claims, attach uncertainty maps from cranial conductivity, forward model sensitivity analysis, or hierarchical Bayesian estimation. </li>
 <li><strong>Alternative model log:</strong>Does not claim that the estimated model is the only solution, but reports the existence of alternative models or equivalence classes that can explain the same observed statistics. </li>
 <li><strong>Effective Connectivity Route Card:</strong>When reporting DCM or related effective-connectivity results, name the node set and omitted competitors, neural-mass / HRF / prior assumptions, family comparison or model-recovery results, perturbation / external validation route, reliability window, and abstention boundary. If this is missing, the result stays at the model-conditioned hypothesis level. </li>
+<li><strong>Body / Environment Boundary Card:</strong>For online human-in-the-loop or embodied tasks, name retained / substituted sensory, motor, and interoceptive channels, the surrogate body / environment contract, loop-removal tests, OOD environment slices, and the abstention boundary. If this is missing, the result stays at the local-controller level. </li>
 <li><strong>Preprocessing Fidelity Log:</strong>Records before and after spectra, exclusion/interpolation rates, changes in key metrics, and at least one task-consistent signal preservation metric, with or without ASR. </li>
 <li><strong>Event Semantics Log:</strong> Attach HED to BIDS metadata and map to CogAtlas / CogPO / NIF / SCORE etc. as necessary. Fixing to a specific ontology is not a common requirement. </li>
 <li><strong>Perturbation log:</strong>If local interventions or stimulation were used, expose the stimulation site, intensity, artifact window, masking, safe stop conditions, and retry conditions. If not used, specify "No perturbation evidence." </li>
@@ -1557,6 +1630,11 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Vadisiute, A., Meijer, E., Therpurakal, R. N., et al. (2024). Glial cells undergo rapid changes following acute chemogenetic manipulation of cortical layer 5 projection neurons. <a href="https://doi.org/10.1038/s42003-024-06994-w" target="_blank">doi:10.1038/s42003-024-06994-w</a></li>
 <li>Hadzibegovic, N., et al. (2026). Early intrinsic excitability plasticity of neocortical engram neurons defines memory formation and precision. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">doi:10.1038/s41467-025-66975-3</a></li>
+<li>Stringer, C., Pachitariu, M., Steinmetz, N., et al. (2019). Spontaneous behaviors drive multidimensional, brainwide activity. <a href="https://doi.org/10.1126/science.aav7893" target="_blank">doi:10.1126/science.aav7893</a></li>
+<li>Saleem, A. B., Ayaz, A., Jeffery, K. J., Harris, K. D., &amp; Carandini, M. (2013). Integration of visual motion and locomotion in mouse visual cortex. <a href="https://doi.org/10.1038/nn.3567" target="_blank">doi:10.1038/nn.3567</a></li>
+<li>Ravassard, P., Kees, A., Willers, B., et al. (2013). Multisensory control of hippocampal spatiotemporal selectivity. <a href="https://doi.org/10.1126/science.1232655" target="_blank">doi:10.1126/science.1232655</a></li>
+<li>Zelano, C., Jiang, H., Zhou, G., et al. (2016). Nasal respiration entrains human limbic oscillations and modulates cognitive function. <a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">doi:10.1523/JNEUROSCI.2586-16.2016</a></li>
+<li>Raut, R. V., Rosenthal, Z. P., Wang, X., et al. (2025). Arousal as a universal embedding for spatiotemporal brain dynamics. <a href="https://doi.org/10.1038/s41586-025-09544-4" target="_blank">doi:10.1038/s41586-025-09544-4</a></li>
 <li>Ngo, H.-V. V., Martinetz, T., Born, J., &amp; Mölle, M. (2013). Auditory closed-loop stimulation of the sleep slow oscillation enhances memory. <a href="https://doi.org/10.1016/j.neuron.2013.03.006" target="_blank">doi:10.1016/j.neuron.2013.03.006</a></li>
 <li>Maingret, N., Girardeau, G., Todorova, R., et al. (2016). Hippocampo-cortical coupling mediates memory consolidation during sleep. <a href="https://doi.org/10.1038/nn.4304" target="_blank">doi:10.1038/nn.4304</a></li>
 <li>Latchoumane, C.-F. V., Ngo, H.-V. V., Born, J., &amp; Shin, H.-S. (2017). Thalamic Spindles Promote Memory Formation during Sleep through Triple Phase-Locking of Cortical, Thalamic, and Hippocampal Rhythms. <a href="https://doi.org/10.1016/j.neuron.2017.06.025" target="_blank">doi:10.1016/j.neuron.2017.06.025</a></li>

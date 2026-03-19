@@ -17,6 +17,7 @@ page_highlights:
   - "R3 / R5 separate latent-state and maintenance-state questions by evidence tier and timescale, so same-day fit and multiday maintenance do not collapse into one success."
   - "M2 separates hardware latency from biological timing-state, so a fast device loop is not confused with timing-complete reconstruction."
   - "M1 / M5 keep neural state distinct from vascular transfer state, so a BOLD amplitude difference is not silently promoted to a neural difference."
+  - "M4 / I6 now treat the body / environment boundary as an explicit scientific audit item, so a fast local loop is not silently promoted to solved embodiment."
   - "R6 treats personalization not as a pure performance trick, but as a verification problem that must separate target signal from subject fingerprint and setup shortcuts."
   - "R4 now treats DCM / effective-connectivity outputs as route-card claims that must disclose model space, observation assumptions, validation, reliability, and abstention."
 known_points:
@@ -26,6 +27,7 @@ known_points:
   - "Even if connectome or local-activity evidence improves, latent-state and maintenance-state audits are still separate requirements."
   - "For hemodynamic modalities, neural interpretation and vascular transfer / CVR audit are separate requirements."
   - "Closed-loop device timing and biological conduction timing are different audits; passing one does not auto-pass the other."
+  - "A disclosed body / environment boundary is a separate audit from low latency or online accuracy."
   - "The fact that personalization helps performance is not the same as showing a population-level neural signal; subject-fingerprint and acquisition-distribution audits are still required."
 unknown_points:
   - "It is still unsettled which measurement granularity will ultimately be sufficient for WBE."
@@ -609,7 +611,9 @@ Therefore, in this roadmap, we first fix ``which loop class is handled and which
 </summary>
 <div class="qa-body">
 <p><strong>Question:</strong>How do we handle “boundaries (what is included in the subject)” with limited measurements? </p>
-<p><strong>Next:</strong> Operatively place the "boundary of subject" in verification (V0) and clearly state necessary and unnecessary areas</p>
+<p><strong>2026-03-19 supplement:</strong>Subject boundary is not a philosophical garnish. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> and <a href="https://doi.org/10.1126/science.aav7893" target="_blank">Stringer et al. (2019)</a> showed that ongoing behavior is embedded in large fractions of cortical activity, <a href="https://doi.org/10.1038/nn.3567" target="_blank">Saleem et al. (2013)</a> and <a href="https://doi.org/10.1126/science.1232655" target="_blank">Ravassard et al. (2013)</a> showed that locomotion, optic flow, vestibular, and other sensory cues reshape cortical and hippocampal codes, <a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">Zelano et al. (2016)</a> and <a href="https://doi.org/10.1038/s41586-025-09544-4" target="_blank">Raut et al. (2025)</a> showed that respiration and arousal couple brain dynamics to organism-wide physiology, and <a href="https://doi.org/10.1126/science.abd0380" target="_blank">Flesher et al. (2021)</a> showed that reintroducing tactile feedback improves a local bidirectional BCI. Therefore, M4 now treats <strong>body / environment boundary disclosure</strong> as a measurement requirement rather than as a later interpretation issue.</p>
+<p><strong>Decision rule:</strong>If a submission does not name which sensory, motor, and interoceptive loops were preserved, substituted, or omitted, the result stays at <strong>local controller</strong>, <strong>task-specific subsystem loop</strong>, or <strong>brain-side-only proxy</strong> and does not advance to subject-complete L3 language.</p>
+<p><strong>Next:</strong> Operatively place the "boundary of subject" in verification (V0) and publish a boundary card listing retained / substituted channels, surrogate body / environment mapping, loop-removal tests, and residual omitted loops.</p>
 </div>
 </details>
 
@@ -994,7 +998,13 @@ The EEG literature with direct validation is rather revealing of its limitations
 </summary>
 <div class="qa-body">
 <p><strong>Question:</strong>Closed-loop verification (I1/V1) requires an environment and a body (or a substitute thereof). What is the minimum physicality? </p>
-<p><strong>Next:</strong> Fix the environment (VR/game/dialogue) and design an evaluation that can be repeated under the same conditions</p>
+<p><strong>Stricter policy:</strong>The word “embodiment” is too cheap if it only means that some output device existed. <a href="https://doi.org/10.1126/science.abd0380" target="_blank">Flesher et al. (2021)</a> showed that tactile feedback improves robotic-arm control, but this is evidence for a <strong>local surrogate sensorimotor loop</strong>, not that whole-body coupling is solved. Combined with <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a>, <a href="https://doi.org/10.1126/science.aav7893" target="_blank">Stringer et al. (2019)</a>, <a href="https://doi.org/10.1038/nn.3567" target="_blank">Saleem et al. (2013)</a>, <a href="https://doi.org/10.1126/science.1232655" target="_blank">Ravassard et al. (2013)</a>, and <a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">Zelano et al. (2016)</a>, this means I6 must disclose which body / environment loops were present rather than talking about embodiment as a yes/no label.</p>
+<ul>
+<li><strong>Declare retained / substituted channels:</strong> vision, touch, proprioception, vestibular cues, respiration / arousal routes, dialogue partner, and task-state cues.</li>
+<li><strong>Describe the surrogate plant:</strong> robotic hand, cursor, speech synthesizer, virtual avatar, or other actuator, together with latency, noise, and saturation.</li>
+<li><strong>Run removal tests:</strong> feedback-off, sensory-substitution-off, altered environment, or loop perturbation conditions that show what really carries the performance.</li>
+</ul>
+<p><strong>Next:</strong> Fix the environment (VR/game/dialogue) and design an evaluation that can be repeated under the same conditions, then publish a body / environment boundary card plus ablation plan.</p>
 </div>
 </details>
 
@@ -1097,7 +1107,7 @@ The EEG literature with direct validation is rather revealing of its limitations
 <li><strong>Gate 3 / local causal intervention:</strong> Interventions such as TMS-EEG, intracranial stimulation, and adaptive DBS in which stimulation site, intensity, artifact handling, and safety-stop conditions are disclosed. </li>
 <li><strong>Gate 4 / long-run closed loop:</strong>The ability to track recalibration loads, recovery times, and even failure modes over multiple sessions and long-term operations. </li>
 </ul>
-<p><strong>Required logs:</strong> Stimulation site, intensity, masking, artifact window, synchronization path, median end-to-end latency / P95 / P99, jitter, dropout, and recovery time. If these depart from the TMS-EEG recommendations summarized by Hernandez-Pavon et al. (2023), the result is not treated here as a comparable causal test. </p>
+<p><strong>Required logs:</strong> Stimulation site, intensity, masking, artifact window, synchronization path, median end-to-end latency / P95 / P99, jitter, dropout, recovery time, and a <strong>body / environment boundary card</strong> naming retained / substituted sensory, motor, and interoceptive channels plus the surrogate body / environment contract. If these depart from the TMS-EEG recommendations summarized by Hernandez-Pavon et al. (2023), the result is not treated here as a comparable causal test. </p>
 <p><strong>Decision rule:</strong>The success of Gate 1 alone does not assert L3 or "counterfactual equivalence." In order to advance to a stronger claim, it is necessary to submit a bundle of evaluation items, external validation, and abstention conditions that connect M6 (intervention design) and R4 (causal model). For detailed operational verification, see <a href="verification.html#causal-perturbation-suite">Verification Causal Perturbation Suite</a>. </p>
 <p><strong>Next:</strong> Create evaluation items that connect M6 (intervention design) and R4 (causal model), and reduce at least Gate 1 / Gate 2 to specifications that can be re-executed by a third party. </p>
 </div>
@@ -1359,7 +1369,7 @@ Here, we don't use "unresolved" as an ambiguous term; we define <strong>what is 
 <tr>
 <td>U3</td>
 <td><strong>Subject Boundary</strong>: Can the minimum set of physiological, neurological, and environmental elements included in the subject be fixed with a verifiable operational definition? </td>
-<td>Hybrid measurement protocol has been developed in Issue #12. </td>
+<td>Hybrid measurement protocol exists, and M4 / I6 now add a public body / environment boundary-card policy. </td>
 <td>Sensitivity analysis of how much the V5 judgment changes when the boundary changes has not been completed. </td>
 </tr>
 <tr>
@@ -1956,6 +1966,11 @@ Below are the main documents directly related to the open questions of U0-U15. F
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
+<li>Stringer, C., Pachitariu, M., Steinmetz, N., et al. (2019). Spontaneous behaviors drive multidimensional, brainwide activity. <a href="https://doi.org/10.1126/science.aav7893" target="_blank">doi:10.1126/science.aav7893</a></li>
+<li>Saleem, A. B., Ayaz, A., Jeffery, K. J., Harris, K. D., &amp; Carandini, M. (2013). Integration of visual motion and locomotion in mouse visual cortex. <a href="https://doi.org/10.1038/nn.3567" target="_blank">doi:10.1038/nn.3567</a></li>
+<li>Ravassard, P., Kees, A., Willers, B., et al. (2013). Multisensory control of hippocampal spatiotemporal selectivity. <a href="https://doi.org/10.1126/science.1232655" target="_blank">doi:10.1126/science.1232655</a></li>
+<li>Zelano, C., Jiang, H., Zhou, G., et al. (2016). Nasal respiration entrains human limbic oscillations and modulates cognitive function. <a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">doi:10.1523/JNEUROSCI.2586-16.2016</a></li>
+<li>Raut, R. V., Rosenthal, Z. P., Wang, X., et al. (2025). Arousal as a universal embedding for spatiotemporal brain dynamics. <a href="https://doi.org/10.1038/s41586-025-09544-4" target="_blank">doi:10.1038/s41586-025-09544-4</a></li>
 </ol>
 
 <h3>H. Standardization, reproducibility, ethics, system</h3>

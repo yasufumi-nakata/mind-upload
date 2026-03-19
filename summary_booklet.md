@@ -5,7 +5,7 @@ description: "公開ページの要点を A4 冊子向けに自動生成した�
 article_type: "Briefing Booklet"
 subtitle: "公開ページの front matter と冒頭要約から再生成される A4 要約版"
 author: Mind Uploading Research Project
-last_updated: "2026-03-18"
+last_updated: "2026-03-19"
 note: "Auto-generated from public pages"
 body_class: "summary-booklet-page"
 ---
@@ -25,7 +25,7 @@ body_class: "summary-booklet-page"
   <div class="booklet-cover-band">
     <div>
   <span>更新基準日</span>
-  <strong>2026-03-18</strong>
+  <strong>2026-03-19</strong>
 </div>
 <div>
   <span>現在の重点</span>
@@ -296,7 +296,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Perspective - Audit the hypothesis of reproducing brain information processing on another substrate through the barriers of measurability, identifiability, and maintenance state / 30-45 min</p>
   <p>This page is a long-form research note aimed at turning mind uploading (WBE) into something that can be evaluated as real research. It is organized in three stages: <strong>how to measure</strong>, <strong>how to infer</strong>, and <strong>how to implement</strong>. It treats recent results, failures, and limits with the same weight so that the boundary between what can and cannot be claimed remains explicit.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>It does not stop at introducing theories; it follows the constraints that appear when those theories are pushed toward implementation.</li><li>The stronger the claim, the more explicitly it is checked against falsification criteria and alternative explanations.</li><li>The page has been reorganized so that local connectomics, noninvasive source imaging, and closed-loop intervention are not read as if they hit the same barrier.</li>
+    <li>It does not stop at introducing theories; it follows the constraints that appear when those theories are pushed toward implementation.</li><li>The page now separates local connectomics, human structural scaffold evidence, synaptic-density PET, macro energetic / myelin / ionic proxies, and hemodynamic transfer audits instead of collapsing them into one &#39;multimodal&#39; advance.</li><li>The connectome-dynamics gap is now written as a 10-class latent-state problem rather than a loose warning that wiring alone is not enough.</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -309,7 +309,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Resource - Connect ``what to use&#39;&#39; and ``how to reproduce&#39;&#39; in the shortest route without separating them. / 12-20 minutes</p>
   <p>This page is a practical list to help you decide which data to practice with first. First, we use public data to create a state in which we can reproduce the same results (L0), and then check to see if we can predict and withstand changes in conditions (L1-L2).</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>We look at the shared infrastructure first, then the starter datasets.</li><li>Starter data is a practice board for L0-L1, not the ground truth of EEG source imaging.</li><li>Each starter dataset has different annotation provenance, time fidelity, and independent split units.</li>
+    <li>We look at the shared infrastructure first, then the starter datasets.</li><li>Starter data is a practice board for L0-L1, not the ground truth of EEG source imaging.</li><li>Even inside direct-validation data, stimulation ground truth, simultaneous invasive recording, and postsurgical outcome are different evidence classes.</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -410,7 +410,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">FAQ - Prefer verifiable progress to flashy conclusions / 8-15 minutes</p>
   <p>This page is designed to block common misunderstandings early. The stronger the claim, the more carefully you should check, in order, (1) the definition of terms, (2) the measurement scale, (3) the condition that would count as failure, and (4) the reproduction procedure.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>It quickly clears up first-order questions such as what this site is for and what EEG or brain-to-text work can and cannot support.</li><li>It now front-loads three technical guardrails: connectome-complete is not state-complete, a high score is not automatically a target-specific neural readout, and BOLD / fNIRS differences need vascular-state / CVR audit.</li><li>It avoids dramatic overstatement and states what remains unresolved at the same time.</li>
+    <li>It quickly clears up first-order questions such as what this site is for and what EEG or brain-to-text work can and cannot support.</li><li>It now front-loads six technical guardrails: connectome-complete is not state-complete, a high score is not automatically a target-specific neural readout, BOLD / fNIRS differences need vascular-state / CVR audit, DCM / effective-connectivity labels do not by themselves identify true causal wiring, thermodynamic / irreversibility labels do not by themselves measure physical dissipation or WBE-ready cost, and low latency does not by itself solve the body / environment boundary.</li><li>It avoids dramatic overstatement and states what remains unresolved at the same time.</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">

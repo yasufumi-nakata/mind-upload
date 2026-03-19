@@ -13,7 +13,7 @@ page_intro: "This page is a Q&A for the questions many readers hit first when re
 accuracy_note: "This page gives short answers. Please do not quote the conclusion alone; return to the linked pages and references when you need the full basis."
 page_highlights:
   - "It quickly clears up first-order questions such as what this site is for and what EEG or brain-to-text work can and cannot support."
-  - "It now front-loads five technical guardrails: connectome-complete is not state-complete, a high score is not automatically a target-specific neural readout, BOLD / fNIRS differences need vascular-state / CVR audit, DCM / effective-connectivity labels do not by themselves identify true causal wiring, and thermodynamic / irreversibility labels do not by themselves measure physical dissipation or WBE-ready cost."
+  - "It now front-loads six technical guardrails: connectome-complete is not state-complete, a high score is not automatically a target-specific neural readout, BOLD / fNIRS differences need vascular-state / CVR audit, DCM / effective-connectivity labels do not by themselves identify true causal wiring, thermodynamic / irreversibility labels do not by themselves measure physical dissipation or WBE-ready cost, and low latency does not by itself solve the body / environment boundary."
   - "It avoids dramatic overstatement and states what remains unresolved at the same time."
   - "It is structured so readers can tell when the FAQ is enough and when they should move on to the full page."
 known_points:
@@ -23,6 +23,7 @@ known_points:
   - "A BOLD or fNIRS amplitude difference without vascular-state / CVR or short-separation auditing is still not a clean neural difference."
   - "A DCM or effective-connectivity label does not by itself discover the one true causal circuit; candidate model space, validation, and reliability still matter."
   - "An irreversibility / entropy-production label does not by itself tell you the coarse-graining, timescale, estimator family, or dynamical assumptions behind the number, and it is not automatically a metabolic-cost readout."
+  - "A closed-loop demo without a disclosed body / environment boundary remains a local controller or subsystem-loop result rather than evidence that embodiment is solved."
   - "FAQ works well as an entry point for avoiding the wrong direction."
 unknown_points:
   - "Short answers alone cannot settle theory choice or identity questions."
@@ -143,9 +144,9 @@ If the FAQ helped you understand the topic but you still do not know what to ver
 </div>
 
 <div class="note-box">
-<strong>Five technical guards now fixed at the front door</strong>
+<strong>Six technical guards now fixed at the front door</strong>
 <p>
-This FAQ now blocks five fast overreads before they spread through the site: <strong>connectome-complete is not state-complete</strong>, <strong>high score is not automatically target-specific neural evidence</strong>, <strong>BOLD / fNIRS amplitude difference is not automatically a neural difference without vascular-state / CVR audit</strong>, <strong>DCM / effective-connectivity output is not automatically the brain's true causal wiring</strong>, and <strong>thermodynamic / irreversibility labels are not automatically direct physical-dissipation measurements or WBE gates</strong>. If you need the full rule set behind them, go next to <a href="verification.html#observability-budget">Verification: Observability Budget</a>, <a href="wiki/connectome-is-not-enough.html">Wiki: Why a Connectome Is Not Enough</a>, <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>, <a href="wiki/observation-to-estimation.html#effective-connectivity-route-card">Wiki: effective-connectivity route card</a>, and <a href="wiki/thermodynamic-grounding-basics.html#irreversibility-route-card">Wiki: irreversibility route card</a>.
+This FAQ now blocks six fast overreads before they spread through the site: <strong>connectome-complete is not state-complete</strong>, <strong>high score is not automatically target-specific neural evidence</strong>, <strong>BOLD / fNIRS amplitude difference is not automatically a neural difference without vascular-state / CVR audit</strong>, <strong>DCM / effective-connectivity output is not automatically the brain's true causal wiring</strong>, <strong>thermodynamic / irreversibility labels are not automatically direct physical-dissipation measurements or WBE gates</strong>, and <strong>low latency is not automatically a solved body / environment boundary</strong>. If you need the full rule set behind them, go next to <a href="verification.html#observability-budget">Verification: Observability Budget</a>, <a href="verification.html#body-environment-boundary-card">Verification: Body / Environment Boundary Card</a>, <a href="wiki/connectome-is-not-enough.html">Wiki: Why a Connectome Is Not Enough</a>, <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>, <a href="wiki/observation-to-estimation.html#effective-connectivity-route-card">Wiki: effective-connectivity route card</a>, and <a href="wiki/thermodynamic-grounding-basics.html#irreversibility-route-card">Wiki: irreversibility route card</a>.
 </p>
 </div>
 
@@ -390,6 +391,16 @@ At Mind-Upload, offline accuracy and L3 closed-loop stability are read separatel
 </p>
 </section>
 
+<section class="section" id="q5c">
+<h2 class="section-title">Q. If latency is low, does that mean the body/environment problem is solved?</h2>
+<p>
+A. No. Low latency only tells you that one loop is fast enough; it does not tell you that the relevant <strong>subject boundary</strong> has been reproduced. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> and <a href="https://doi.org/10.1126/science.aav7893" target="_blank">Stringer et al. (2019)</a> showed that ongoing behavior shapes a large fraction of cortical activity, <a href="https://doi.org/10.1038/nn.3567" target="_blank">Saleem et al. (2013)</a> and <a href="https://doi.org/10.1126/science.1232655" target="_blank">Ravassard et al. (2013)</a> showed that locomotion, optic flow, vestibular, and other sensory cues reshape cortical and hippocampal codes, <a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">Zelano et al. (2016)</a> showed that nasal respiration entrains human limbic activity and modulates memory, and <a href="https://doi.org/10.1126/science.abd0380" target="_blank">Flesher et al. (2021)</a> showed that adding tactile feedback improves a local bidirectional BCI loop.
+</p>
+<p>
+At Mind-Upload, a closed-loop paper that does not disclose <strong>which sensory, motor, and interoceptive channels were preserved, substituted, or omitted</strong>, plus what happened when those loops were removed or altered, stays a <strong>local controller</strong> or <strong>local subsystem-loop</strong> result. The shortest follow-up is <a href="verification.html#body-environment-boundary-card">Verification: Body / Environment Boundary Card</a> together with <a href="tech_roadmap.html#qa-m4">Roadmap M4</a> and <a href="tech_roadmap.html#qa-i6">Roadmap I6</a>.
+</p>
+</section>
+
 <section class="section" id="q6">
 <h2 class="section-title">Q. What is the site's stance on the hard problem of consciousness?</h2>
 <p>
@@ -515,6 +526,12 @@ The distinguishing strategy of Mind-Upload is <strong>to build the Verification 
 <li>Frischknecht, R., Heine, M., Perrais, D., Seidenbecher, C. I., Choquet, D., &amp; Gundelfinger, E. D. (2009). Brain extracellular matrix affects AMPA receptor lateral mobility and short-term synaptic plasticity. <a href="https://doi.org/10.1038/nn.2338" target="_blank">doi:10.1038/nn.2338</a></li>
 <li>Glykys, J., Dzhala, V., Egawa, K., et al. (2014). Local impermeant anions establish the neuronal chloride concentration. <a href="https://doi.org/10.1126/science.1245423" target="_blank">doi:10.1126/science.1245423</a></li>
 <li>Seidl, A. H., Rubel, E. W., &amp; Barria, A. (2015). Tuning of Ranvier node and internode properties in myelinated axons to adjust action potential timing. <a href="https://doi.org/10.1038/ncomms9073" target="_blank">doi:10.1038/ncomms9073</a></li>
+<li>Stringer, C., Pachitariu, M., Steinmetz, N., et al. (2019). Spontaneous behaviors drive multidimensional, brainwide activity. <a href="https://doi.org/10.1126/science.aav7893" target="_blank">doi:10.1126/science.aav7893</a></li>
+<li>Saleem, A. B., Ayaz, A., Jeffery, K. J., Harris, K. D., &amp; Carandini, M. (2013). Integration of visual motion and locomotion in mouse visual cortex. <a href="https://doi.org/10.1038/nn.3567" target="_blank">doi:10.1038/nn.3567</a></li>
+<li>Ravassard, P., Kees, A., Willers, B., et al. (2013). Multisensory control of hippocampal spatiotemporal selectivity. <a href="https://doi.org/10.1126/science.1232655" target="_blank">doi:10.1126/science.1232655</a></li>
+<li>Zelano, C., Jiang, H., Zhou, G., et al. (2016). Nasal respiration entrains human limbic oscillations and modulates cognitive function. <a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">doi:10.1523/JNEUROSCI.2586-16.2016</a></li>
+<li>Flesher, S. N., Downey, J. E., Weiss, J. M., et al. (2021). A brain-computer interface that evokes tactile sensations improves robotic arm control. <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
+<li>Raut, R. V., Rosenthal, Z. P., Wang, X., et al. (2025). Arousal as a universal embedding for spatiotemporal brain dynamics. <a href="https://doi.org/10.1038/s41586-025-09544-4" target="_blank">doi:10.1038/s41586-025-09544-4</a></li>
 <li>Guo, C., Pleiss, G., Sun, Y., &amp; Weinberger, K. Q. (2017). On Calibration of Modern Neural Networks. <a href="https://proceedings.mlr.press/v70/guo17a.html" target="_blank">PMLR 70:1321-1330</a></li>
 <li>Geifman, Y., &amp; El-Yaniv, R. (2017). Selective Classification for Deep Neural Networks. <a href="https://papers.neurips.cc/paper/7073-selective-classification-for-deep-neural-networks" target="_blank">NeurIPS 2017</a></li>
 <li>Ji, Z., et al. (2023). Survey of Hallucination in NLG. <a href="https://doi.org/10.1145/3571730" target="_blank">doi:10.1145/3571730</a></li>
