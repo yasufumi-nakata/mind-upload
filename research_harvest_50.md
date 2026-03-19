@@ -5,7 +5,7 @@ description: "Publishes prior research collected through 50 decomposed questions
 article_type: "Evidence Bank"
 subtitle: "U0-U15 decomposition, current-status map, and prior literature (heavily cited)"
 author: Mind Uploading Research Project
-last_updated: "2026-03-18"
+last_updated: "2026-03-19"
 note: "Compiled from 50 worker tasks (curated for relevance)"
 audience: "Readers who want to browse a large literature set by unresolved issue rather than by paper count alone"
 reading_time: "20-35 min (about 7 min if you only read the statistics and U-map)"
@@ -15,7 +15,7 @@ page_highlights:
   - "For each of U0-U15, it separates what is partially resolved from what remains open."
   - "It keeps intake logs separate from academically integrated evidence and makes the anti-contamination procedure explicit."
   - "Even though this page is citation-heavy, the statistics and current-status map alone provide a usable overview."
-  - "The default entry path for technical and natural-science readers is fixed as U1/U7 -> U4/U13 -> U8 -> U3 -> U10."
+  - "The default entry path for technical and natural-science readers is fixed as U1/U7 -> U4 -> U13 -> U8 -> U3 -> U10."
   - "For technical readers, human observability-class advances are kept separate from direct validation, demos, and hidden-state boundary papers."
 known_points:
   - "Breaking the literature into U0-U15 makes it easier not to confuse paper volume with conclusion strength."
@@ -128,7 +128,7 @@ The "current status" labels on this page are not pass/fail outcomes. They are sh
 <section class="section" id="technical-priority-route-20260315">
 <h2 class="section-title">March 2026 priority route for technical and natural-science readers</h2>
 <p>
-The weakness of this page used to be that the <strong>intake log</strong> and the <strong>experimental frontier</strong> sat too close together, making it easy for technical readers to miss where the strongest primary evidence currently sits. The default reading order is now fixed as <strong>measurement and human observability</strong>, <strong>direct validation and imitation-separation</strong>, <strong>long-horizon closed-loop stability</strong>, <strong>maintenance-state beyond the connectome</strong>, and <strong>physical grounding</strong>. That order reflects the current density of primary evidence represented by Tang et al. (2023), d'Ascoli et al. (2025), Willett et al. (2023), Littlejohn et al. (2025), Wairagkar et al. (2025), Unnwongse et al. (2023), Hao et al. (2025), Shapson-Coe et al. (2024), Johansen et al. (2024), Lucchetti et al. (2025), Baadsvik et al. (2024), Rzechorzek et al. (2022), Hirschler et al. (2025), Xu et al. (2024), Looser et al. (2024), and Lee et al. (2022).
+The weakness of this page used to be that the <strong>intake log</strong> and the <strong>experimental frontier</strong> sat too close together, making it easy for technical readers to miss where the strongest primary evidence currently sits. The default reading order is now fixed as <strong>measurement and human observability</strong>, <strong>model-conditioned causal inference</strong>, <strong>direct validation and imitation-separation</strong>, <strong>long-horizon closed-loop stability</strong>, <strong>maintenance-state beyond the connectome</strong>, and <strong>physical grounding</strong>. That order reflects the current density of primary evidence represented by Tang et al. (2023), d'Ascoli et al. (2025), Willett et al. (2023), Littlejohn et al. (2025), Wairagkar et al. (2025), Unnwongse et al. (2023), Hao et al. (2025), Penny et al. (2004), Rosa et al. (2012), Jafarian et al. (2020), Fr&auml;ssle et al. (2021), Jafarian et al. (2024), Wu et al. (2024), Shapson-Coe et al. (2024), Johansen et al. (2024), Lucchetti et al. (2025), Baadsvik et al. (2024), Rzechorzek et al. (2022), Hirschler et al. (2025), Xu et al. (2024), Looser et al. (2024), and Lee et al. (2022).
 </p>
 <table class="data-table">
 <thead>
@@ -147,31 +147,43 @@ The weakness of this page used to be that the <strong>intake log</strong> and th
 <td>Reading an increase in observables or a new human proxy as if it already implied state-complete reconstruction.</td>
 </tr>
 <tr>
-<td><strong>2. Direct validation and imitation-separation</strong></td>
-<td><strong>U4 / U13</strong></td>
-<td>That successful decoding does not, by itself, imply causal preservation under intervention or whole-brain emulation.</td>
+<td><strong>2. Model-conditioned causal inference</strong></td>
+<td><strong>U4</strong></td>
+<td>Candidate model space, observation assumptions, family comparison, external validation, reliability window, and abstention boundary for effective-connectivity claims.</td>
+<td>Reading a dense or fast DCM graph as discovered causal wiring or as unique internal-state recovery.</td>
+</tr>
+<tr>
+<td><strong>3. Direct validation and imitation-separation</strong></td>
+<td><strong>U13</strong></td>
+<td>That successful decoding or communication does not, by itself, imply causal preservation under intervention or whole-brain emulation.</td>
 <td>Calling brain-to-text or speech neuroprosthesis results direct proof of WBE.</td>
 </tr>
 <tr>
-<td><strong>3. Long-horizon closed-loop stability</strong></td>
+<td><strong>4. Long-horizon closed-loop stability</strong></td>
 <td><strong>U8</strong></td>
 <td>Whether latency, jitter, dropout, recalibration burden, and recovery time are tracked as separate metrics.</td>
 <td>Claiming week-to-month deployability on the basis of within-session success alone.</td>
 </tr>
 <tr>
-<td><strong>4. maintenance-state</strong></td>
+<td><strong>5. maintenance-state</strong></td>
 <td><strong>U3</strong></td>
 <td>Whether sleep-dependent homeostasis, myelin/metabolic support, and active maintenance have been dropped from the picture.</td>
 <td>Assuming that connectome plus cell type is already enough to close the long-run dynamical problem.</td>
 </tr>
 <tr>
-<td><strong>5. Physical grounding</strong></td>
+<td><strong>6. Physical grounding</strong></td>
 <td><strong>U10</strong></td>
 <td>Whether dissipation, energy constraints, and effective cost are being treated as falsifiable conditions rather than as afterthoughts.</td>
 <td>Acting as if computational plausibility alone settles physical implementation.</td>
 </tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>Why U4 now sits on its own rung</strong>
+<p>
+The site-wide route-card update already fixed DCM / effective-connectivity claims as <strong>model-conditioned causal hypotheses</strong> on the core pages, but this literature map still hid that rule inside a broader U4/U13 row. <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">Penny et al. (2004)</a>, <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">Rosa et al. (2012)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2020.116734" target="_blank">Jafarian et al. (2020)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">Fr&auml;ssle et al. (2021)</a>, <a href="https://doi.org/10.1002/hbm.26782" target="_blank">Jafarian et al. (2024)</a>, and <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">Wu et al. (2024)</a> together show why scaling and reliability do not erase candidate-model and observation-model dependence. Therefore, the technical route here now reads <strong>U4 before U13</strong> so model-conditioned causal inference is not compressed into decode / imitation discussion.
+</p>
+</div>
 <div class="note-box">
 <strong>Read human measurement papers as their own evidence class</strong>
 <p>
@@ -331,8 +343,13 @@ Here, <strong>ID</strong> is the name tag of the problem, <strong>Current status
 <td>This is because we need to know how far we can estimate from observations and how effective direct validation and synchronization rules are. </td>
 </tr>
 <tr>
+<td>I want to read effective-connectivity claims without overpromoting them</td>
+<td><strong>U4</strong></td>
+<td>This is because a directed graph or a better model fit can otherwise be mistaken for discovered causal wiring rather than a model-conditioned result. </td>
+</tr>
+<tr>
 <td>I want to separate decode success from WBE claim</td>
-<td><strong>U4 / U13</strong></td>
+<td><strong>U13</strong></td>
 <td>This is because observational coincidence and causal preservation, local communication and whole-brain emulation can be read separately. </td>
 </tr>
 <tr>
@@ -355,7 +372,7 @@ Here, <strong>ID</strong> is the name tag of the problem, <strong>Current status
 <div class="note-box">
 <strong>Default reading order for this table</strong>
 <p>
-For readers coming from technology and the natural sciences, the default route is <strong>U1 / U7 → U4 / U13 → U8 → U3 → U10</strong>. U11 is treated as a secondary route for experimental comparison, while U0 / U12 / U15 are treated as auxiliary routes that branch off and then return to the main line.
+For readers coming from technology and the natural sciences, the default route is <strong>U1 / U7 → U4 → U13 → U8 → U3 → U10</strong>. U11 is treated as a secondary route for experimental comparison, while U0 / U12 / U15 are treated as auxiliary routes that branch off and then return to the main line.
 </p>
 </div>
 <table class="data-table">
@@ -698,33 +715,36 @@ The old <code>research_deepening_continue_guide_2026-03-01.md</code>, which prev
 <h3>What has some traction now (areas with accumulated literature)</h3>
 <ul>
 <li>Causal identification theory based on do-calculus/SCM has matured. </li>
-<li>Practical knowledge exists for estimating causal direction using DCM and intervention experiments in neuroscience. </li>
-<li>There is almost theoretical agreement on the necessity of evaluation design that includes counterfactual reasoning. </li>
+<li>Candidate-model dependence in DCM / effective-connectivity claims is now operationally clear rather than only slogan-level. </li>
+<li>Large model-space search plus whole-brain / faster inversion improve tractability inside named generative assumptions. </li>
+<li>Reliability can be demonstrated under matched task, session, and acquisition conditions, but it remains a measured property rather than an automatic one. </li>
 </ul>
-<p class="small"><strong>Representative references:</strong> <a href="https://doi.org/10.1007/978-1-4614-7320-6_57-1" target="_blank">Dynamic Causal Modeling with Neural Population Models</a>, <a href="https://doi.org/10.1101/2021.06.01.446526" target="_blank">Test-retest reliability of regression dynamic causal modeling</a>, <a href="https://doi.org/10.1109/TBME.2024.3423803" target="_blank">A Deep Dynamic Causal Learning Model</a>, <a href="https://arxiv.org/abs/2010.09429v2" target="_blank">Neural Additive VAR for Causal Discovery in Time Series</a>.</p>
+<p class="small"><strong>Representative references:</strong> <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">Comparing dynamic causal models</a>, <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">Post-hoc selection of dynamic causal models</a>, <a href="https://doi.org/10.1016/j.neuroimage.2020.116734" target="_blank">Comparing dynamic causal models of neurovascular coupling with fMRI and EEG/MEG</a>, <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">Whole-brain estimates of directed connectivity for human connectomics</a>, <a href="https://doi.org/10.1002/hbm.26782" target="_blank">Reliability of dynamic causal modelling of resting-state magnetoencephalography</a>, <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">A fast dynamic causal modeling regression method for fMRI</a>.</p>
+<div class="note-box">
+<strong>2026-03-19 deepening: why U4 now needs route-card reading inside the literature map</strong>
+<p>
+The weak point here was not that the site already separated DCM from SCM on theory pages. The weak point was that this evidence bank still allowed <strong>whole-brain scale</strong>, <strong>faster inversion</strong>, or <strong>repeatability under matched conditions</strong> to sound closer than they are to solved identifiability. <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">Penny et al. (2004)</a> fixed that DCM inference is relative to the models being compared, <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">Rosa et al. (2012)</a> showed that very large model spaces can be searched efficiently from one full model, <a href="https://doi.org/10.1016/j.neuroimage.2020.116734" target="_blank">Jafarian et al. (2020)</a> showed that observation-model choices such as neurovascular coupling assumptions remain part of the inference target, <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">Fr&auml;ssle et al. (2021)</a> pushed directed-connectivity estimation to whole-brain human fMRI, <a href="https://doi.org/10.1002/hbm.26782" target="_blank">Jafarian et al. (2024)</a> showed that reliability can be strong under closely matched resting-state MEG conditions, and <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">Wu et al. (2024)</a> reduced computational burden further. Therefore, on this site, these papers raise <strong>tractability, disclosed assumptions, and reliability under named conditions</strong>, but do not by themselves raise U4 to discovered causal wiring or unique mechanism recovery.
+</p>
+</div>
 <h3>What still needs research (unresolved)</h3>
 <ul>
 <li>The possibility of causal identification in high-dimensional time series strongly depends on the data conditions. </li>
+<li>Different node sets, priors, hemodynamic choices, and omitted competitors can still materially change the interpretation. </li>
 <li>Robust evaluation in real-world settings including observation noise, delay, and unobserved confounding is insufficient. </li>
+<li>External perturbation / held-out validation that separates observational fit from causal validation is still sparse. </li>
 <li>A public bench that can be used to determine the equivalency of interventions at the WBE level is not yet in place. </li>
 </ul>
-<p class="small"><strong>Representative references:</strong> <a href="https://arxiv.org/abs/2209.03427v1" target="_blank">Causal discovery for time series with latent confounders</a>, <a href="https://arxiv.org/abs/2306.08946v2" target="_blank">Bootstrap aggregation and confidence measures for time-series causal discovery</a>, <a href="https://doi.org/10.32614/cran.package.cfid" target="_blank">cfid: Identification of Counterfactual Queries in Causal Models</a>.</p>
-<h3>Major previous studies (14 re-examinations)</h3>
+<p class="small"><strong>Representative references:</strong> <a href="https://jmlr.org/papers/v13/hauser12a.html" target="_blank">Characterization and greedy learning of interventional Markov equivalence classes of directed acyclic graphs</a>, <a href="https://doi.org/10.1371/journal.pcbi.1007866" target="_blank">The brain's functional connectome is a poor predictor of the brain's causal activity flow</a>, <a href="https://doi.org/10.1002/hbm.26782" target="_blank">Reliability of dynamic causal modelling of resting-state magnetoencephalography</a>.</p>
+<h3>Major previous studies (8 re-examinations)</h3>
 <ol>
-<li><strong>[Nature Reviews Neuroscience]</strong> <a href="https://doi.org/10.1038/s41583-024-00881-3" target="_blank">Structural constraints in effective connectivity analyses</a> (2025)</li>
-<li><strong>[NeuroImage]</strong> <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">Fast dynamic causal modeling regression for fMRI</a> (2024)</li>
-<li><strong>[IEEE TMI]</strong> <a href="https://doi.org/10.1109/TMI.2024.3381670" target="_blank">MCAN: Causal adversarial networks for dynamic effective connectivity</a> (2024)</li>
-<li><strong>[JAMA Network Open]</strong> <a href="https://doi.org/10.1001/jamanetworkopen.2024.9220" target="_blank">Personalized hippocampal network-targeted stimulation trial</a> (2024)</li>
-<li><strong>[PubMed]</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/38826672/" target="_blank">Dynamic causal modeling in multisensory speech perception</a> (PMID:38826672, 2024)</li>
-<li><strong>[IEEE TNSRE]</strong> <a href="https://doi.org/10.1109/TNSRE.2021.3123964" target="_blank">Systematic review of DCM in psychiatric disorders</a> (2021)</li>
-<li><strong>[Springer]</strong> <a href="https://doi.org/10.1007/978-1-4614-7320-6_57-1" target="_blank">Dynamic Causal Modeling with Neural Population Models</a> (2013)</li>
-<li><strong>[bioRxiv]</strong> <a href="https://doi.org/10.1101/2021.06.01.446526" target="_blank">Test-retest reliability of regression dynamic causal modeling</a> (2021)</li>
-<li><strong>[IEEE TBME]</strong> <a href="https://doi.org/10.1109/TBME.2024.3423803" target="_blank">A Deep Dynamic Causal Learning Model</a> (2024)</li>
-<li><strong>[arXiv]</strong> <a href="https://arxiv.org/abs/2010.09429v2" target="_blank">Neural Additive VAR for Causal Discovery in Time Series</a> (2020)</li>
-<li><strong>[arXiv]</strong> <a href="https://arxiv.org/abs/2209.03427v1" target="_blank">Causal discovery for time series with latent confounders</a> (2022)</li>
-<li><strong>[arXiv]</strong> <a href="https://arxiv.org/abs/2306.08946v2" target="_blank">Bootstrap aggregation and confidence measures for time-series causal discovery</a> (2023)</li>
-<li><strong>[CRAN]</strong> <a href="https://doi.org/10.32614/cran.package.cfid" target="_blank">cfid: Identification of Counterfactual Queries in Causal Models</a> (2021)</li>
-<li><strong>[arXiv]</strong> <a href="https://arxiv.org/abs/2308.08307v1" target="_blank">Integrating cognitive map learning and active inference for planning in ambiguous environments</a> (2023)</li>
+<li><strong>[NeuroImage]</strong> <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">Comparing dynamic causal models</a> (2004)</li>
+<li><strong>[Journal of Neuroscience Methods]</strong> <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">Post-hoc selection of dynamic causal models</a> (2012)</li>
+<li><strong>[Human Brain Mapping]</strong> <a href="https://doi.org/10.1002/hbm.23061" target="_blank">Test-retest reliability of effective connectivity in the face perception network</a> (2016)</li>
+<li><strong>[NeuroImage]</strong> <a href="https://doi.org/10.1016/j.neuroimage.2020.116734" target="_blank">Comparing dynamic causal models of neurovascular coupling with fMRI and EEG/MEG</a> (2020)</li>
+<li><strong>[PLOS Computational Biology]</strong> <a href="https://doi.org/10.1371/journal.pcbi.1007866" target="_blank">The brain's functional connectome is a poor predictor of the brain's causal activity flow</a> (2020)</li>
+<li><strong>[NeuroImage]</strong> <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">Whole-brain estimates of directed connectivity for human connectomics</a> (2021)</li>
+<li><strong>[Human Brain Mapping]</strong> <a href="https://doi.org/10.1002/hbm.26782" target="_blank">Reliability of dynamic causal modelling of resting-state magnetoencephalography</a> (2024)</li>
+<li><strong>[NeuroImage]</strong> <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">A fast dynamic causal modeling regression method for fMRI</a> (2024)</li>
 </ol>
 </section>
 
