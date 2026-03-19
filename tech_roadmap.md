@@ -14,6 +14,7 @@ page_highlights:
   - "P0-P2 fix what counts as success before measurement or implementation work is discussed."
   - "The index allows readers to jump directly to a specific question family."
   - "Stronger claims are deliberately placed later so earlier levels are not skipped."
+  - "R0 now separates structural scaffold, fast executable state, and maintenance-state families, so `connectome + state` is not treated as one knob."
   - "R3 / R5 separate latent-state and maintenance-state questions by evidence tier and timescale, so same-day fit and multiday maintenance do not collapse into one success."
   - "M2 separates hardware latency from biological timing-state, so a fast device loop is not confused with timing-complete reconstruction."
   - "M1 / M5 keep neural state distinct from vascular transfer state, so a BOLD amplitude difference is not silently promoted to a neural difference."
@@ -25,6 +26,7 @@ known_points:
   - "Splitting the problem into P/M/R/I/V/D makes it easier to see which questions are foundational and which sit higher up."
   - "The dependency structure that prevents strong claims from skipping earlier layers is fairly clear."
   - "This page should be read as a dependency map, not as a checklist of solved items."
+  - "A restoration target is not one dial; scaffold, fast state, and maintenance-state layers place different ceilings on what can be claimed."
   - "Even if connectome or local-activity evidence improves, latent-state and maintenance-state audits are still separate requirements."
   - "For hemodynamic modalities, neural interpretation and vascular transfer / CVR audit are separate requirements."
   - "Closed-loop device timing and biological conduction timing are different audits; passing one does not auto-pass the other."
@@ -710,9 +712,49 @@ Therefore, in this roadmap, we first fix ``which loop class is handled and which
 </summary>
 <div class="qa-body">
 <p><strong>Question:</strong>How far do I have to restore to win in verification (V0)? </p>
-<p><strong>Branching (example):</strong>(A) Structure + state (fixed) / (B) Structure + state + partial plasticity / (C) Fully dynamic, including plasticity</p>
-<p><strong>False condition: </strong>Closed-loop learning (I5) cannot be reproduced in (A), cannot be identified in (B) and (C) and fails due to overfitting</p>
-<p><strong>Next:</strong>Evaluate identifiability (R7) and computability (I3) simultaneously</p>
+<p><strong>2026-03-19 literature audit:</strong>The older wording here was too weak because it made <strong>structure</strong>, <strong>state</strong>, and <strong>plasticity</strong> sound like three clean knobs. The primary literature does not support that simplification. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a> showed that transcriptomic type still leaves morpho-electric spread within a cell class. <a href="https://doi.org/10.1038/385533a0" target="_blank">Frey &amp; Morris (1997)</a>, <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">Govindarajan et al. (2011)</a>, <a href="https://doi.org/10.1038/nature13028" target="_blank">Yang et al. (2014)</a>, and <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">Pandey et al. (2021)</a> show that long-term stabilization depends on synapse- and branch-specific tagging, clustered spine stabilization, and proteostatic maintenance rather than on graph structure alone. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>, <a href="https://doi.org/10.1016/j.neuron.2017.06.025" target="_blank">Latchoumane et al. (2017)</a>, and <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2026)</a> show that multi-day retention also depends on sleep / homeostatic / transcriptional programs. <a href="https://doi.org/10.1126/science.1252304" target="_blank">Gibson et al. (2014)</a>, <a href="https://doi.org/10.1073/pnas.1811013115" target="_blank">Dutta et al. (2018)</a>, <a href="https://doi.org/10.1016/j.cell.2019.11.039" target="_blank">Cohen et al. (2020)</a>, <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a>, and <a href="https://doi.org/10.1126/science.1072699" target="_blank">Pizzorusso et al. (2002)</a> show that myelin / perinodal state, glial metabolic support, and extracellular-matrix state can change timing, plasticity, and memory expression without rewiring. Therefore, this roadmap no longer treats <code>structure + state</code> as one dial.</p>
+<p><strong>Revised branching:</strong>(A) structural scaffold only / (B) structural scaffold + fast executable state / (C) structural scaffold + fast executable state + maintenance / plasticity state</p>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>Layer inside the restoration target</th>
+<th>What has to be named explicitly</th>
+<th>What fails if it is omitted</th>
+<th>Claim ceiling if still omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Structural scaffold</strong></td>
+<td>Cell identity, gross morphology, connection graph, major axonal routing constraints</td>
+<td>Local routing, lesion/perturbation path constraints, and circuit-level intervention matching have no substrate to run on</td>
+<td><strong>Structural prior only</strong>, not an executable person model</td>
+</tr>
+<tr>
+<td><strong>Fast executable state</strong></td>
+<td>Momentary activity state, effective synaptic efficacy, intrinsic excitability / operating point, and current neuromodulatory regime (<a href="#qa-r10">R10</a>)</td>
+<td>The same scaffold can express different immediate trajectories and intervention responses</td>
+<td><strong>Structure-conditioned simulator</strong> or same-session proxy, not a demonstrated state match</td>
+</tr>
+<tr>
+<td><strong>Maintenance / eligibility state</strong></td>
+<td>Synaptic tags and capture conditions, local proteostatic support, sleep/replay coupling, transcriptional stabilization, myelin / perinodal state, glial metabolic support, ECM / PNN state</td>
+<td>Learning persistence, day-to-day retention, timing stability, and recovery after perturbation become underdetermined</td>
+<td><strong>Short-window replay only</strong>; no claim here about stable multiday learning or continuity</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>Restoration-target card required</strong>
+<p>
+Every R0 claim on this site must publish a small card that states <strong>(1) which state families were directly measured</strong>, <strong>(2) which were only externally calibrated or model-estimated</strong>, <strong>(3) which were omitted</strong>, <strong>(4) which timescale each family is supposed to cover</strong> (milliseconds / seconds / hours / days / weeks), and <strong>(5) what claim ceiling and abstention boundary follow from those omissions</strong>. Without that card, same-session fit and multiday continuity collapse into one vague success label, which this roadmap no longer allows.
+</p>
+</div>
+
+<p><strong>Failure condition:</strong>If the chosen restoration target cannot reproduce intervention response at the declared timescale, or if the conclusion changes once omitted maintenance-state families are reintroduced, the target fails. A model that fits same-session data while hiding multiday maintenance burdens is not accepted here as a general restore target.</p>
+<p><strong>Next:</strong>Evaluate identifiability (R7) and computability (I3) simultaneously, but only after publishing the restoration-target card with omitted state families, audited timescales, and claim ceiling. For supporting background, use <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams are not enough</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.</p>
 </div>
 </details>
 
