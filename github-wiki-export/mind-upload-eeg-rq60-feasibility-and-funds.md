@@ -1,11 +1,14 @@
-# Mind-upload RQ60 × EEG-DATA 検証可否と助成テーマ（深掘り版）
-
-> RQごとに検証設計と応募テーマまで接続する
->
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
-
-- 更新日: 2026-03-19 / 位置づけ: RQ-by-RQ Deep Dive
-
+---
+layout: default
+title: "Mind-upload RQ60 × EEG-DATA 検証可否と助成テーマ（深掘り版）"
+description: "research_harvest_50由来の60リサーチクエスチョンを1問ずつ、EEG-DATAでの検証可否・auto-research-funds向け応募テーマ・使用データを実務運用向けに整理したページ。"
+article_type: Wiki
+subtitle: "RQごとに検証設計と応募テーマまで接続する"
+author: Mind Uploading Research Project
+last_updated: "2026-03-20"
+note: "RQ-by-RQ Deep Dive"
+audience: "RQを実験計画・応募書類へ落とし込む研究者/実装者"
+reading_time: "25-40分"
 ---
 
 # Mind-upload RQ60 × EEG-DATA 検証可否と助成テーマ（深掘り版）
@@ -14,7 +17,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-19 / 位置づけ: RQ-by-RQ Deep Dive
+- 更新日: 2026-03-20 / 位置づけ: RQ-by-RQ Deep Dive
 
 ## このページの役割
 このページは research_harvest_50 の60 RQを対象に、EEG-DATAで解ける範囲をA/B/Cで判定し、各RQごとの検証設計・応募テーマ・使うデータセットIDをまとめた実務版です。
@@ -46,6 +49,28 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `A`: 17件
 - `B`: 25件
 - `C`: 18件
+
+## 今回の深掘り実行パック（2026-03-20, 2週間で初回結果まで）
+
+汎用横断の更新ではなく、`A/B` 判定から「2週間で初回結果まで到達しやすい6RQ」を固定して、`1RQ=1検証命題=1応募テーマ=1主データ` で実行します。
+
+| RQ | 選定理由（1件ずつ深掘りする理由） | 最初の実験KPI | 失敗条件（このrunでの停止条件） | 提出最低成果物 | 応募先（第一/予備） |
+|---|---|---|---|---|---|
+| U14-1 | データ/コード/環境の固定粒度を分けて再実行するだけで、2週間で差分を出しやすい。 | `追試成功率` `再現率差` `追加工数` | 最も厳しい固定条件でも追試成功率が目標未達。 | Supplementary test operation report (including negative cases) | `G1 / G3` |
+| U7-2 | offset/jitter抽出を固定すればすぐ回せるため、警告閾値初版を短期で定義しやすい。 | `clock offset` `jitter p95` `閾値超過率` | 閾値超過イベントの再現性が低い、または誤警報率が高すぎる。 | Time synchronization audit report (offset/jitter distribution) | `G1 / G3` |
+| U14-3 | 既存分割に監査ルールを当てる方式で、再分割後の差分監査まで到達しやすい。 | `被験者リーク検出率` `時系列リーク検出率` `再分割後性能差` | 再分割後もリーク0件を達成できない。 | Leak audit results and repartition trail | `G1 / G3` |
+| U8-1 | 閉ループ遅延条件を振るだけで、許容域をKPIで表にできる。 | `安定率` `回復時間` `異常停止率` | 遅延増加で安定率低下が大きく、許容域を切れない。 | Closed loop safety KPI dashboard | `G2 / G5` |
+| U8-2 | 再較正頻度の3条件比較で、運用設計に直結する初回結果を出しやすい。 | `性能維持率` `ドリフト量` `再較正コスト` | 再較正コスト増に対して性能維持率改善が有意に出ない。 | Closed loop safety KPI dashboard | `G2 / G5` |
+| U13-1 | 同一デコーダの2軸評価に落とせるため、模倣スコア偏重を抑制できる。 | `意味一致率` `因果一致率` `乖離ケース率` | 「意味一致は高いが因果一致は低い」ケースを分離できない。 | Intervention protocol and rebuttal condition definition | `G1 / G4` |
+
+実行順（本run固定）:
+
+1. `U14-1`
+2. `U7-2`
+3. `U14-3`
+4. `U8-1`
+5. `U8-2`
+6. `U13-1`
 
 ## 今回の再検証ログ（2026-03-18）
 
@@ -359,6 +384,8 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 方針は引き続き `1RQ=1検証命題=1応募テーマ=1主データ` を固定し、汎用横断要約ではなくRQ単位での深掘りを正本運用としました。
 - wiki反映先は `mind-upload/wiki` / `mind-upload/github-wiki-export` / `auto-research-funds/wiki` の3面同期を維持しました。
 
+
+
 ## 2026-03-18 15:12 JST 再検証ログ（本run / 依頼の再実行）
 
 - 作業開始前に `auto-startup` の `main` で `git pull --ff-only origin main` を実行し、最新化済み（Already up to date）を確認しました。
@@ -469,6 +496,8 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 判定内訳 `A/B/C=17/25/18` を再計数し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持していることを確認しました。
 - 主要EEG参照ID（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）を最新 `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
 
+
+
 ## 2026-03-19 13:02 JST 再検証ログ（本run / EEG-DATA更新後の深掘り再監査）
 
 - 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull origin main` を実行し、`Already up to date` を確認しました。
@@ -485,6 +514,15 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` も同様に `RQ_TOTAL=60` と `A/B/C=17/25/18` を再確認し、両正本の整合を確認しました。
 - 深掘り運用は `1RQ=1検証命題=1応募テーマ=1主データ` を維持し、汎用横断要約ではなく各RQを個別に固定した運用を継続しました。
 - 参照EEG ID（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 2412`）を最新 `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
+
+## 2026-03-19 15:01 JST 再検証ログ（本run / ユーザー依頼の再実行）
+
+- 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull --ff-only origin main` を実行し、`Already up to date` を確認しました。
+- `mind-upload/research_harvest_50.md` を正本として `RQ_TOTAL=60`（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）を再照合しました。
+- 本ページの `RQ` 行を再計数し、`RQ_TOTAL=60` と `A/B/C=17/25/18` を再確認しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `RQ行数=60` を突合し、`1RQ=1検証命題=1応募テーマ=1主データ` の整合を再確認しました。
+- 参照EEG ID（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
+- 運用方針は継続し、汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘りで更新しました。
 
 ## 2026-03-19 16:02 JST 再検証ログ（本run / ユーザー依頼: RQ別深掘りを再固定）
 
@@ -504,10 +542,10 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 ## 2026-03-19 20:02 JST 再検証ログ（本run / ユーザー依頼: 1RQ深掘り固定でWiki更新）
 
 - 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull origin main` を実行し、`Already up to date` を確認しました。
-- `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` と `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` の `Ux-y` 行を再計数し、`RQ_TOTAL=60`（欠損・重複 `0`）を再確認しました。
-- 判定内訳 `A/B/C=17/25/18` を再計数し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り構造を維持しました。
-- 本runで参照したEEG ID（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
-- 同内容は `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` と `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` にも同期済みです。
+- 本ページと `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` の `Ux-y` 行を再計数し、`RQ_TOTAL=60`（欠損・重複 `0`）を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` を再計数し、全60行で `検証可否/深掘り検証設計/応募テーマ/推奨EEG-DATA` が埋まっていることを確認しました。
+- RQ運用で使うEEG参照ID（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
+- 汎用横断要約ではなく、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続しました。
 
 ## 2026-03-19 21:01 JST 再検証ログ（本run / RQ60可否×助成テーマ再固定）
 
@@ -516,17 +554,17 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 本ページ中の `ID nnn` を抽出して `EEG-DATA/eeg_dataset_summary_ja.csv` と再突合し、参照ID集合（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）の未解決 `0` 件を確認しました。
 - `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` と件数・判定内訳が一致することを再確認し、deep-by-RQ同期を維持しました。
 
-## 2026-03-19 22:01 JST Revalidation Log (this run)
+## 2026-03-19 22:01 JST 再検証ログ（本run / ユーザー依頼: RQ別深掘りで再固定）
 
-- Pulled `main` in parent repo `auto-startup` before work and confirmed it is up to date.
-- Recounted `Ux-y` rows across deep cards / feasibility / grant map pages and reconfirmed `RQ_TOTAL=60`, `A/B/C=17/25/18`, `missing=0`, `duplicate=0`.
-- Rechecked EEG IDs (`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`) against `EEG-DATA/eeg_dataset_summary_ja.csv`; unresolved IDs remained `0`.
-- Kept the deep-by-RQ policy unchanged: `1RQ=1testable claim=1grant theme=1primary dataset`.
+- 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull origin main` を実行し、`Already up to date` を確認しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` / `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` / `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `Ux-y` 行を再計数し、すべて `RQ_TOTAL=60`、`A/B/C=17/25/18`、`missing=0`、`duplicate=0` を確認しました。
+- 3ページで参照されるEEG ID（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と再照合し、未解決ID `0` を確認しました。
+- 依頼方針どおり、汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持したまま wiki 同期を更新しました。
 
-## 2026-03-19 23:02 JST Revalidation Log (this run)
+## 2026-03-19 23:02 JST 再検証ログ（本run / ユーザー依頼: RQ別深掘りをwikiへ再同期）
 
-- Pulled parent repository `auto-startup` on `main` with `git pull --ff-only origin main` before work and confirmed it is up to date.
-- Recounted `Ux-y` rows in feasibility and grant-map pages and reconfirmed `RQ_TOTAL=60` and `A/B/C=17/25/18` with `missing=0`, `duplicate=0`.
-- Rechecked EEG IDs (`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`) against `EEG-DATA/eeg_dataset_summary_ja.csv`; unresolved IDs remained `0`.
-- Reconfirmed grant-key alignment for `G1-G6` (`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`).
-- Kept the deep-by-RQ policy unchanged: `1RQ=1testable claim=1grant theme=1primary dataset`.
+- 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull --ff-only origin main` を実行し、`Already up to date` を確認しました。
+- `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `Ux-y` 行を再計数し、`RQ_TOTAL=60`、`A/B/C=17/25/18`（欠損・重複 `0`）を再確認しました。
+- 本ページ中のEEG参照ID（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と再照合し、未解決ID `0` を確認しました。
+- 助成キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）の参照整合を再確認しました。
+- 方針は継続し、汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持したままwiki同期を更新しました。

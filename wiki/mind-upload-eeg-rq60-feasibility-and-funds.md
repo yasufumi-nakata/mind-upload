@@ -5,7 +5,7 @@ description: "research_harvest_50由来の60リサーチクエスチョンを1�
 article_type: Wiki
 subtitle: "RQごとに検証設計と応募テーマまで接続する"
 author: Mind Uploading Research Project
-last_updated: "2026-03-19"
+last_updated: "2026-03-20"
 note: "RQ-by-RQ Deep Dive"
 audience: "RQを実験計画・応募書類へ落とし込む研究者/実装者"
 reading_time: "25-40分"
@@ -17,7 +17,7 @@ reading_time: "25-40分"
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-19 / 位置づけ: RQ-by-RQ Deep Dive
+- 更新日: 2026-03-20 / 位置づけ: RQ-by-RQ Deep Dive
 
 ## このページの役割
 このページは research_harvest_50 の60 RQを対象に、EEG-DATAで解ける範囲をA/B/Cで判定し、各RQごとの検証設計・応募テーマ・使うデータセットIDをまとめた実務版です。
@@ -49,6 +49,28 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `A`: 17件
 - `B`: 25件
 - `C`: 18件
+
+## 今回の深掘り実行パック（2026-03-20, 2週間で初回結果まで）
+
+汎用横断の更新ではなく、`A/B` 判定から「2週間で初回結果まで到達しやすい6RQ」を固定して、`1RQ=1検証命題=1応募テーマ=1主データ` で実行します。
+
+| RQ | 選定理由（1件ずつ深掘りする理由） | 最初の実験KPI | 失敗条件（このrunでの停止条件） | 提出最低成果物 | 応募先（第一/予備） |
+|---|---|---|---|---|---|
+| U14-1 | データ/コード/環境の固定粒度を分けて再実行するだけで、2週間で差分を出しやすい。 | `追試成功率` `再現率差` `追加工数` | 最も厳しい固定条件でも追試成功率が目標未達。 | Supplementary test operation report (including negative cases) | `G1 / G3` |
+| U7-2 | offset/jitter抽出を固定すればすぐ回せるため、警告閾値初版を短期で定義しやすい。 | `clock offset` `jitter p95` `閾値超過率` | 閾値超過イベントの再現性が低い、または誤警報率が高すぎる。 | Time synchronization audit report (offset/jitter distribution) | `G1 / G3` |
+| U14-3 | 既存分割に監査ルールを当てる方式で、再分割後の差分監査まで到達しやすい。 | `被験者リーク検出率` `時系列リーク検出率` `再分割後性能差` | 再分割後もリーク0件を達成できない。 | Leak audit results and repartition trail | `G1 / G3` |
+| U8-1 | 閉ループ遅延条件を振るだけで、許容域をKPIで表にできる。 | `安定率` `回復時間` `異常停止率` | 遅延増加で安定率低下が大きく、許容域を切れない。 | Closed loop safety KPI dashboard | `G2 / G5` |
+| U8-2 | 再較正頻度の3条件比較で、運用設計に直結する初回結果を出しやすい。 | `性能維持率` `ドリフト量` `再較正コスト` | 再較正コスト増に対して性能維持率改善が有意に出ない。 | Closed loop safety KPI dashboard | `G2 / G5` |
+| U13-1 | 同一デコーダの2軸評価に落とせるため、模倣スコア偏重を抑制できる。 | `意味一致率` `因果一致率` `乖離ケース率` | 「意味一致は高いが因果一致は低い」ケースを分離できない。 | Intervention protocol and rebuttal condition definition | `G1 / G4` |
+
+実行順（本run固定）:
+
+1. `U14-1`
+2. `U7-2`
+3. `U14-3`
+4. `U8-1`
+5. `U8-2`
+6. `U13-1`
 
 ## 今回の再検証ログ（2026-03-18）
 

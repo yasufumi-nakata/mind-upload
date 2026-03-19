@@ -5,7 +5,7 @@ description: "A deep-dive note that fixes each of the 60 RQs, including the core
 article_type: Wiki
 subtitle: "Fix the issues for each RQ instead of a general summary"
 author: Mind Uploading Research Project
-last_updated: "2026-03-18"
+last_updated: "2026-03-20"
 note: "RQ-by-RQ Deep Focus"
 audience: "People who want to translate each RQ directly into application statements and experimental procedures"
 reading_time: "20-35 minutes"
@@ -322,3 +322,20 @@ Reasons for proceeding in this order:
 4. `U8-1`（閉ループ遅延許容域、主データ `6`、応募 `G2`）
 5. `U13-1`（意味一致/因果一致の分離、主データ `509`、応募 `G1`）
 6. `U14-3`（リーク監査運用、主データ `719`、応募 `G1`）
+
+## 2026-03-20 09:35 JST 実行カード更新ログ（本run / 1件ずつ深掘りの固定）
+
+- `mind-upload` / `EEG-DATA` / `auto-research-funds` を再突合し、`RQ_TOTAL=60`、`A/B/C=17/25/18` を維持したまま、2週間で初回結果まで到達しやすい `6RQ` を実行カード化しました。
+- 汎用横断ではなく、`1RQ=1検証命題=1応募テーマ=1主データ` で、各RQに `KPI` `失敗条件` `提出最低成果物` を明示しました。
+- このrunでは `C` 判定RQを拡張せず、まず `A/B` の実測ログを積む順序に固定しました。
+
+### 本run固定: 2週間実行パック（深掘り6RQ）
+
+| RQ | 最初の実験KPI | 失敗条件 | 提出最低成果物 | 応募先（第一/予備） |
+|---|---|---|---|---|
+| `U14-1` | `追試成功率` `再現率差` `追加工数` | 最厳格固定条件でも追試成功率が目標未達 | Supplementary test operation report (including negative cases) | `G1 / G3` |
+| `U7-2` | `clock offset` `jitter p95` `閾値超過率` | 閾値超過イベントの再現性不足、または誤警報率過大 | Time synchronization audit report (offset/jitter distribution) | `G1 / G3` |
+| `U14-3` | `被験者リーク検出率` `時系列リーク検出率` `再分割後性能差` | 再分割後もリーク0件を達成できない | Leak audit results and repartition trail | `G1 / G3` |
+| `U8-1` | `安定率` `回復時間` `異常停止率` | 遅延増加で安定率低下が大きく許容域未確定 | Closed loop safety KPI dashboard | `G2 / G5` |
+| `U8-2` | `性能維持率` `ドリフト量` `再較正コスト` | 再較正コスト増に対して性能維持率改善が有意でない | Closed loop safety KPI dashboard | `G2 / G5` |
+| `U13-1` | `意味一致率` `因果一致率` `乖離ケース率` | 意味一致高・因果一致低ケースを分離できない | Intervention protocol and rebuttal condition definition | `G1 / G4` |
