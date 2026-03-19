@@ -232,3 +232,10 @@ reading_time: "35-55分"
 - 判定内訳 `A/B/C=17/25/18` を再計数し、全60行で `主張単位/判定境界/応募テーマ/応募先/主データ/最低成果物` が埋まっていることを確認しました。
 - RQ運用で使うEEG参照ID（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
 - 汎用横断要約ではなく、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続しました。
+
+## 2026-03-19 21:01 JST 再検証ログ（本run / deep-by-RQ監査）
+
+- 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull --ff-only` を実行し、最新化済み（Already up to date）を確認しました。
+- 本カードの `| Ux-y<br>` 行を再計数し、`RQ_TOTAL=60`（欠損・重複 `0`）と `A/B/C=17/25/18` を再確認しました。
+- `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` および `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` と突合し、同じ `RQ_TOTAL=60` / `A/B/C=17/25/18` で一致することを確認しました。
+- 方針は継続して `1RQ=1検証命題=1応募テーマ=1主データ` とし、汎用横断要約よりもRQ単位の深掘りを優先しました。
