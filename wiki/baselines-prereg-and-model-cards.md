@@ -5,7 +5,7 @@ description: "We will organize the roles of baseline, benchmark, pre-registratio
 article_type: Wiki
 subtitle: "Thinking about 'what to compare, how to fix, and what to keep'"
 author: Mind Uploading Research Project
-last_updated: "2026-03-19"
+last_updated: "2026-03-20"
 note: "Learning guide"
 audience: "People who find similar terms in research operations and people who want to understand how to create comparability from the beginning"
 reading_time: "10-15 minutes"
@@ -15,11 +15,13 @@ page_highlights:
   - "Baseline, benchmark, pre-registration, and model cards have different roles."
   - "Failures and negative results are also part of comparability."
   - "It's important to record not only the score, but also how you measured it and how you failed."
+  - "For multimodal or atlas-prior results, the usual model card plus Observability Budget is still not enough; a Fusion Card is also required."
   - "For foundation / self-supervised EEG results, the usual model card is not enough; a Pretraining Card is also required."
 known_points:
   - "Comparable progress requires a starting point, scoring criteria, a priori rules, and a record of results."
   - "Without a baseline, it's harder to claim improvement."
   - "Lack of pre-registration and model cards makes it easier to conveniently interpret later."
+  - "For multimodal or atlas-prior claims, acquisition relation, lag audit, co-registration, and fusion baseline are part of the result itself."
   - "For heterogeneous-corpus pretraining, corpus identity, harmonization, adaptation regime, and benchmark provenance are part of the result itself."
 unknown_points:
   - "Which templates will be standardized across WBE is still in the operational design stage."
@@ -67,6 +69,13 @@ The previous version still made it sound as if one generic model card could cove
 </p>
 </div>
 
+<div class="note-box">
+<strong>2026-03-20 Addendum: multimodal / atlas-prior results also need a Fusion Card</strong>
+<p>
+The remaining weakness was to let the words <strong>simultaneous</strong>, <strong>multimodal</strong>, or <strong>atlas-informed</strong> stand in for a validated fusion step. That is too weak. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025)</a> showed that synchronization middleware aligns streams but does not by itself certify device-side delay truth, <a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">Wei et al. (2020)</a> showed that EEG-fMRI fusion remains model-conditioned, and <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> plus <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed that simultaneous multimodal recordings can reveal both common and divergent structure across modalities. Therefore, this site now treats the <a href="../verification.html#fusion-card">Fusion Card</a> as a separate artifact on top of the usual model card and <a href="../verification.html#observability-budget">Observability Budget</a> for multimodal or atlas-prior results.
+</p>
+</div>
+
 <section class="section" id="roles">
 <h2 class="section-title">First, separate roles</h2>
 <table class="data-table">
@@ -92,6 +101,10 @@ The previous version still made it sound as if one generic model card could cove
 <tr>
 <td><strong>Model card</strong></td>
 <td>Scores, weaknesses, leak countermeasures, failure examples, calculation conditions, and Observability Budget for L1 and above. </td>
+</tr>
+<tr>
+<td><strong>Fusion Card</strong></td>
+<td>For multimodal or atlas-prior results, fix acquisition relation, synchronization / lag audit, co-registration scope, fusion model, unimodal baseline, external calibration, and abstention boundary.</td>
 </tr>
 <tr>
 <td><strong>Pretraining Card</strong></td>
@@ -125,6 +138,11 @@ The previous version still made it sound as if one generic model card could cove
 <td><strong>Observability Budget</strong></td>
 <td>What the measurement stack directly observed, what remained latent, and which claim ceiling still applies.</td>
 <td>It does not say whether a transfer claim changed because of corpus overlap, benchmark design, or fine-tuning amount.</td>
+</tr>
+<tr>
+<td><strong>Fusion Card</strong></td>
+<td>Acquisition relation, lag audit, co-registration scope, fusion model, unimodal / prior-only baseline, and external calibration for multimodal or atlas-prior claims.</td>
+<td>If it is missing, the fusion step can be overread as self-validating and a same-session combination can be misread as same-subject state identification.</td>
 </tr>
 <tr>
 <td><strong>Pretraining Card</strong></td>
@@ -225,6 +243,7 @@ Under what conditions, which indicators collapsed, and by how much? It is necess
 <li><strong>Are the benchmarks fixed:</strong>Are the data, splits, and metrics written? </li>
 <li><strong>Are there any pre-registrations?</strong>Have the conditions been changed afterwards? </li>
 <li><strong>Are there model cards or examples of failure?</strong>In addition to weaknesses and ways of collapse, is the Observability Budget visible at L1 and above? </li>
+<li><strong>If it is a multimodal or atlas-prior result, is a Fusion Card visible?</strong>Are acquisition relation, lag audit, co-registration, fusion baseline, and external calibration written? </li>
 <li><strong>If it is a foundation / self-supervised EEG result, is a Pretraining Card visible?</strong>Are corpus overlap, harmonization, adaptation, and benchmark version written? </li>
 </ul>
 </div>
@@ -238,6 +257,10 @@ Under what conditions, which indicators collapsed, and by how much? It is necess
 <li>Lee, N., Barmpas, K., Panagakis, Y., Adamos, D., Laskaris, N., &amp; Zafeiriou, S. (2025). Are Large Brainwave Foundation Models Capable Yet? Insights from Fine-Tuning. <a href="https://openreview.net/forum?id=J5SbLoq7Uv" target="_blank">ICML 2025 poster / OpenReview</a></li>
 <li>EEG Challenge (2025). Rules. <a href="https://eeg2025.github.io/rules/" target="_blank">official rules</a></li>
 <li>Xiong, W., Li, J., Li, J., Zhu, K., &amp; Jiang, C. (2025). EEG-FM-Bench: A Comprehensive Benchmark for the Systematic Evaluation of EEG Foundation Models. <a href="https://arxiv.org/abs/2508.17742" target="_blank">arXiv:2508.17742</a></li>
+<li>Kothe, C., Shirazi, S. Y., Stenner, T., Medine, D., Boulay, C., Grivich, M. I., Artoni, F., Mullen, T., Delorme, A., &amp; Makeig, S. (2025). The lab streaming layer for synchronized multimodal recording. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
+<li>Wei, H., Jafarian, A., Zeidman, P., Litvak, V., Razi, A., Garrido, M., Friston, K., &amp; Daunizeau, J. (2020). Bayesian fusion and multimodal DCM for EEG and fMRI. <a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">doi:10.1016/j.neuroimage.2020.116595</a></li>
+<li>Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
+<li>Chen, Z., Ye, M., Moradi, F., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
 </ol>
 </section>
 

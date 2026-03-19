@@ -5,7 +5,7 @@ description: "I will summarize the role differences among BIDS, OpenNeuro/Physio
 article_type: Wiki
 subtitle: "Divides similar-looking infrastructure groups, including version fixing and evaluation fixing"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-20"
 note: "Operational guide"
 audience: "People who see BIDS, OpenNeuro, PhysioNet, MNE-BIDS, and MOABB as the same kind of thing"
 reading_time: "10-15 minutes"
@@ -16,12 +16,14 @@ page_highlights:
   - "If you do not fix the OpenNeuro snapshot or the PhysioNet version, you will not be able to reproduce the same data name."
   - "HED and Motion-BIDS are extensions to BIDS that carry machine-readable semantics and additional metadata."
   - "LSL is a synchronization middleware and is not a replacement for BIDS or benchmark."
+  - "BIDS/HED/LSL do not by themselves validate multimodal biological fusion; that requires a separate Fusion Card."
   - "A loader/transformer like MNE-BIDS and a benchmark harness like MOABB have different roles."
 known_points:
   - "To make research comparable, it is necessary to separate the data format, publication destination, testing methods, and evaluation rules."
   - "BIDS and EEG-BIDS are standards for 'how to place' them, not scoring rules themselves."
   - "Event semantics like HED have the role of supplementing the meaning of events listed in BIDS in a machine-readable manner."
   - "LSL helps with clock alignment between streams, but is not the ground truth for hardware delays."
+  - "Even if clocks are aligned and metadata are standardized, multimodal claims still need a separate audit of fusion model, co-registration, and calibration."
   - "OpenNeuro and PhysioNet are public platforms, but they do not automatically guarantee all input formats and evaluation procedures."
   - "Even if the dataset name is the same, it cannot be compared if the snapshot / version and evaluation family are different."
 unknown_points:
@@ -162,6 +164,12 @@ If you confuse these four things, you'll get the wrong impression, such as, ``Th
 <strong>2026-03 site rule</strong>
 <p>
 OpenNeuro treats the snapshot as a git tag of the semantic version, and PhysioNet also explicitly cites the version for each project. Therefore, on this site, we include not only the dataset name but also the <strong>snapshot / version / DOI or persistent URL</strong> in the artifact. Additionally, BIDS is a container, HED/Motion-BIDS is semantics and additional metadata, LSL is synchronization, MNE-BIDS is an input/output path, and MOABB is a comparison rule. Please don't mix these up and read that ``Since I used BIDS, I was able to get past the benchmark'' or ``Since I installed LSL, I was able to solve the hardware delay.''
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-20 addendum: synchronization infrastructure is not a Fusion Card</strong>
+<p>
+The remaining weakness was to let <strong>BIDS + HED + LSL</strong> sound like a complete multimodal validity package. That is too strong. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025)</a> made clear that LSL solves synchronized stream transport rather than device-side delay truth. <a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">Wei et al. (2020)</a> showed that EEG-fMRI fusion remains model-conditioned, and <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> plus <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed that simultaneous multimodal recordings can retain modality-specific structure even when acquired together. Therefore, on this site, standards and synchronization infrastructure are necessary inputs to a multimodal study, but a separate <a href="../verification.html#fusion-card">Fusion Card</a> is still required before the claim ceiling is raised.
 </p>
 </div>
 </section>
@@ -362,7 +370,7 @@ Being "publicly available" and being "comparable" are two different things. Publ
 <li><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019), EEG-BIDS</a></li>
 <li><a href="https://doi.org/10.1007/s12021-021-09513-7" target="_blank">Robbins et al. (2021), HED for FAIR event annotation</a></li>
 <li><a href="https://doi.org/10.1038/s41597-025-05791-2" target="_blank">Hermes et al. (2025), HED library schema for EEG data annotation</a></li>
-<li><a href="https://doi.org/10.1162/imag_a_00136" target="_blank">Kothe et al. (2025), Lab Streaming Layer</a></li>
+<li><a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025), The lab streaming layer for synchronized multimodal recording</a></li>
 <li><a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Jeung et al. (2024), Motion-BIDS</a></li>
 <li><a href="https://docs.openneuro.org/git.html" target="_blank">OpenNeuro Docs: Git access and snapshots</a></li>
 <li><a href="https://docs.openneuro.org/user_guide.html" target="_blank">OpenNeuro Docs: Dataset landing page and snapshot metadata</a></li>
@@ -373,6 +381,9 @@ Being "publicly available" and being "comparable" are two different things. Publ
 <li><a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant (2018), MOABB</a></li>
 <li><a href="https://moabb.neurotechx.com/docs/index.html" target="_blank">MOABB Docs</a></li>
 <li><a href="https://moabb.neurotechx.com/docs/auto_examples/paradigm_examples/index.html" target="_blank">MOABB Docs: paradigm and evaluation examples</a></li>
+<li><a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">Wei et al. (2020), Bayesian fusion and multimodal DCM for EEG and fMRI</a></li>
+<li><a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024), multimodal spontaneous brain-activity organization</a></li>
+<li><a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025), simultaneous EEG-PET-MRI across wakefulness and NREM sleep</a></li>
 </ul>
 </section>
 

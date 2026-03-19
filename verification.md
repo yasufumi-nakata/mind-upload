@@ -684,6 +684,60 @@ The most important update in this pass is that the criticism that ``important hi
 </tr>
 </tbody>
 </table>
+<h3 class="section-title" id="fusion-card">Fusion Card for multimodal or atlas-prior results</h3>
+<div class="note-box">
+<strong>2026-03-20 addendum: multimodal and atlas-prior results need a Fusion Card</strong>
+<p>
+The remaining weakness after adding the <strong>Observability Budget</strong> was that the words <strong>simultaneous</strong>, <strong>multimodal</strong>, or <strong>atlas-informed</strong> could still be overread as if the fusion step itself had already been validated. The primary literature does not support that shortcut. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025)</a> showed that synchronization middleware can align streams, but does not by itself certify device-side delay truth or biological equivalence. <a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">Wei et al. (2020)</a> showed that EEG-fMRI fusion remains a model-conditioned inference problem. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> and <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> then showed that even simultaneous multimodal acquisition can reveal both convergent and divergent structure across modalities rather than one self-validating ground truth. Therefore, this site now asks multimodal or atlas-prior claims to attach a <strong>Fusion Card</strong> on top of the Observability Budget.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Fusion Card field</th>
+<th>Minimum disclosure</th>
+<th>What this site stops claiming if absent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Acquisition relation</strong></td>
+<td>Name whether the evidence is same-subject, same-session, same-perturbation, cross-day, atlas-prior only, or post hoc cross-cohort fusion, and specify which stacks were actually acquired together.</td>
+<td>The result is not read as same-subject cross-stack evidence and stays at the strongest directly supported single-stack or atlas-conditioned ceiling.</td>
+</tr>
+<tr>
+<td><strong>Clock / lag audit</strong></td>
+<td>Name the synchronization route such as LSL / TTL / photodiode / trigger lines, unresolved hardware delay and jitter, and whether timing was audited only between streams or also against device-side ground truth.</td>
+<td>The result is not read as temporally aligned latent-state evidence just because the streams share timestamps.</td>
+</tr>
+<tr>
+<td><strong>Geometry / registration scope</strong></td>
+<td>Name subject-specific MRI / head model / atlas use, parceling or voxel alignment, whether co-registration is same-brain or atlas-to-subject, and which spatial mismatch remains unresolved.</td>
+<td>The result is not read as if the modalities were already in one common anatomical state space.</td>
+</tr>
+<tr>
+<td><strong>Fusion object and model burden</strong></td>
+<td>State whether fusion used Bayesian model comparison, atlas priors, joint embeddings, canonical correlation, graph fusion, or only side-by-side interpretation, separate direct observables from inferred latent variables for each stack, and, for hemodynamic stacks, disclose vascular-transfer / CVR / short-separation calibration if neural-side interpretation is attempted.</td>
+<td>The result is not promoted from multimodal correlation or prior-conditioned estimation to direct state identification.</td>
+</tr>
+<tr>
+<td><strong>Incremental evidence over unimodal / prior-only baselines</strong></td>
+<td>Report what improves relative to each unimodal stack alone and to the atlas- or prior-only baseline under the same task/state split, including whether the gain is spatial, temporal, predictive, or calibration-only.</td>
+<td>The fusion step is not treated as self-justifying progress.</td>
+</tr>
+<tr>
+<td><strong>External calibration and abstention</strong></td>
+<td>Name whether validation came from stimulation, simultaneous invasive recording, same-brain co-registration, phantom/simulation, postsurgical outcome, or none, and specify where the claim ceiling and abstention boundary begin.</td>
+<td>The result is not read as externally validated cross-stack state recovery.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Minimum operating rule</strong>
+<p>
+If this card is missing, this site reads a multimodal or atlas-prior result at the ceiling of the <strong>strongest individually supported stack</strong>, not as <strong>same-subject, cross-stack, externally calibrated state identification</strong>. An atlas prior plus one live measurement remains an atlas-conditioned measurement, not automatic state completeness.
+</p>
+</div>
 <div class="note-box">
 <strong>2026-03-18 addendum: ESI validation is a ladder, not one checkbox</strong>
 <p>
@@ -1631,6 +1685,7 @@ In response to technical criticisms (Issue #257-#260) submitted in the latter ha
 <div class="key-points">
 <h4>Log with applicable conditions</h4>
 <ul>
+<li><strong>Fusion Card:</strong>When reporting multimodal or atlas-prior results, name the acquisition relation, synchronization route and unresolved lag, geometry / co-registration scope, fusion model, hemodynamic vascular-state / CVR calibration when applicable, unimodal and prior-only baselines, external calibration route, and abstention boundary. If this is missing, the result stays at the strongest unimodal or atlas-conditioned ceiling rather than same-subject cross-stack state identification. </li>
 <li><strong>ESI/HBM logs:</strong>Only when making anatomical source claims, attach uncertainty maps from cranial conductivity, forward model sensitivity analysis, or hierarchical Bayesian estimation. </li>
 <li><strong>Inverse-Solver Agreement Log:</strong>When reporting an anatomical ESI/HBM result, name the inverse families / packages compared, parameter window, headline-location spread or overlap metric, and whether the displayed map is best-case, median, or ensemble. If this is missing, the result stays at the method-sensitive source-hypothesis level. </li>
 <li><strong>Alternative model log:</strong>Does not claim that the estimated model is the only solution, but reports the existence of alternative models or equivalence classes that can explain the same observed statistics. </li>
@@ -1710,6 +1765,10 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Vorwerk, J., Wolters, C. H., &amp; Baumgarten, D. (2024). Global sensitivity of EEG source analysis to tissue conductivity uncertainties. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">doi:10.3389/fnhum.2024.1335212</a></li>
 <li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
 <li>Birot, G., Spinelli, L., Vulliemoz, S., et al. (2014). Head model and electrical source imaging: a study of 38 epileptic patients. <a href="https://doi.org/10.1016/j.nicl.2014.06.005" target="_blank">doi:10.1016/j.nicl.2014.06.005</a></li>
+<li>Kothe, C., Shirazi, S. Y., Stenner, T., Medine, D., Boulay, C., Grivich, M. I., Artoni, F., Mullen, T., Delorme, A., &amp; Makeig, S. (2025). The lab streaming layer for synchronized multimodal recording. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
+<li>Wei, H., Jafarian, A., Zeidman, P., Litvak, V., Razi, A., Garrido, M., Friston, K., &amp; Daunizeau, J. (2020). Bayesian fusion and multimodal DCM for EEG and fMRI. <a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">doi:10.1016/j.neuroimage.2020.116595</a></li>
+<li>Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
+<li>Chen, Z., Ye, M., Moradi, F., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
 <li>Sarwar, T., Ramamohanarao, K., Daducci, A., Schiavi, S., Smith, R. E., &amp; Zalesky, A. (2023). Evaluation of tractogram filtering methods using human-like connectome phantoms. <a href="https://doi.org/10.1016/j.neuroimage.2023.120376" target="_blank">doi:10.1016/j.neuroimage.2023.120376</a></li>
 <li>He, Y., Hong, Y., Wu, Y., et al. (2024). Spherical-deconvolution informed filtering of tractograms changes laterality of structural connectome. <a href="https://doi.org/10.1016/j.neuroimage.2024.120904" target="_blank">doi:10.1016/j.neuroimage.2024.120904</a></li>
 <li>McMaster, E. M., Newlin, N. R., Rudravaram, G., et al. (2025). Harmonized connectome resampling for variance in voxel sizes. <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">doi:10.1016/j.mri.2025.110424</a></li>

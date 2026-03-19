@@ -9,7 +9,7 @@ description: We will organize from primary literature what EEG/MEG/fMRI, whole-b
 article_type: Wiki
 subtitle: multimodal is not a synonym for ``seen everything''
 author: Mind Uploading Research Project
-last_updated: '2026-03-19'
+last_updated: '2026-03-20'
 note: Technical / natural science only
 audience: People who want to sort out what modalities are directly visible and which
   claims are valid using only technology and natural science.
@@ -31,6 +31,9 @@ page_highlights:
   misread as state-complete.
 - Hemodynamic stacks are now separated into neural-side and vascular-transfer-side
   uncertainty, so BOLD or fNIRS amplitude is not overread as neural truth.
+- Same-session multimodal acquisition is not treated as self-validating fusion; the
+  site now requires a Fusion Card before the ceiling is raised above the strongest
+  unimodal route.
 - Destination is divided into structural atlas, cell-type prior, local conditional
   prediction, and slow-state calibration.
 - Human evidence is also separated into proxy classes, so local ultrastructure, synaptic-density
@@ -418,8 +421,8 @@ A remaining weakness after separating <strong>proxy class</strong> and <strong>o
 </tr>
 <tr>
 <td><strong>``Cross-stack fusion adds only observables''</strong></td>
-<td><a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> each depend on explicit quantification models, validated windows, or compartment assumptions. Fusion therefore combines model burdens as well as direct observables.</td>
-<td>Log the <strong>fusion model</strong>, <strong>external calibration source</strong>, and <strong>abstention boundary</strong> separately instead of treating multimodal combination as self-justifying.</td>
+<td><a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">Wei et al. (2020)</a> made the model burden in EEG-fMRI fusion explicit, while <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> and <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed that simultaneous multimodal recordings can carry both common and divergent structure across modalities. Fusion therefore combines model burdens and mismatch risks as well as direct observables.</td>
+<td>Log the <strong>fusion model</strong>, <strong>external calibration source</strong>, and <strong>abstention boundary</strong> separately instead of treating multimodal combination as self-justifying; on this site that package is the <a href="../verification.html#fusion-card">Fusion Card</a>.</td>
 </tr>
 <tr>
 <td><strong>``Different scales acquired somewhere imply same-subject completeness''</strong></td>
@@ -431,7 +434,7 @@ A remaining weakness after separating <strong>proxy class</strong> and <strong>o
 <div class="note-box">
 <strong>Composition rule on this site</strong>
 <p>
-This site now treats <strong>proxy-rich human evidence</strong> as a real advance over a single proxy class, but still below <strong>same-subject, cross-stack, externally calibrated state identification</strong>. To move upward, a paper or benchmark package has to disclose co-registration scope, perturbation alignment, quantification models, external calibration, and what latent states remain unmatched. That ranking is an inference from the primary literature summarized above.
+This site now treats <strong>proxy-rich human evidence</strong> as a real advance over a single proxy class, but still below <strong>same-subject, cross-stack, externally calibrated state identification</strong>. To move upward, a paper or benchmark package has to disclose co-registration scope, perturbation alignment, clock / lag audit, quantification models, external calibration, and what latent states remain unmatched. On this site, that disclosure bundle is formalized as the <a href="../verification.html#fusion-card">Fusion Card</a>. That ranking is an inference from the primary literature summarized above.
 </p>
 </div>
 </section>
@@ -516,6 +519,10 @@ This site now treats <strong>proxy-rich human evidence</strong> as a real advanc
 <li>Smart, K., Liu, H., Matuskey, D., et al. (2021). Binding of the synaptic vesicle radiotracer [<sup>11</sup>C]UCB-J is unchanged during functional brain activation using a visual stimulation task. <em>Journal of Cerebral Blood Flow &amp; Metabolism</em>, 41(5), 1067-1079. <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">doi:10.1177/0271678X20946198</a></li>
 <li>Johansen, A., Beliveau, V., Colliander, E., et al. (2024). An in vivo high-resolution human brain atlas of synaptic density. <em>Journal of Neuroscience</em>, 44(33), e1750232024. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
 <li>Shapson-Coe, A., Januszewski, M., Berger, D. R., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <em>Science</em>, 384(6696), eadk4858. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
+<li>Kothe, C., Shirazi, S. Y., Stenner, T., Medine, D., Boulay, C., Grivich, M. I., Artoni, F., Mullen, T., Delorme, A., &amp; Makeig, S. (2025). The lab streaming layer for synchronized multimodal recording. <em>Imaging Neuroscience</em>, 3, IMAG.a.136. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
+<li>Wei, H., Jafarian, A., Zeidman, P., Litvak, V., Razi, A., Garrido, M., Friston, K., &amp; Daunizeau, J. (2020). Bayesian fusion and multimodal DCM for EEG and fMRI. <em>NeuroImage</em>, 211, 116595. <a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">doi:10.1016/j.neuroimage.2020.116595</a></li>
+<li>Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
+<li>Chen, Z., Ye, M., Moradi, F., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
 <li>Lucchetti, F., C&eacute;l&eacute;reau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <em>Nature Communications</em>, 16, 11344. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
 <li>Ren, J., Sherry, A. D., &amp; Malloy, C. R. (2015). <sup>31</sup>P-MRS of healthy human brain: ATP synthesis, metabolite concentrations, pH, and T1 relaxation times. <em>NMR in Biomedicine</em>, 28(11), 1455-1462. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">doi:10.1002/nbm.3384</a></li>
 <li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <em>PNAS Nexus</em>, 4(3), pgaf072. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
