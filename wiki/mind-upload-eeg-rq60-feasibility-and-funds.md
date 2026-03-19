@@ -439,3 +439,11 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 判定内訳 `A/B/C=17/25/18` を再計数し、全60行で `検証可否` `深掘り検証設計` `応募テーマ` `推奨EEG-DATA` が欠損なく埋まっていることを確認しました。
 - `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` および `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` と突合し、`1RQ=1検証命題=1応募テーマ=1主データ` の整合を維持しました。
 - EEG参照IDは `EEG-DATA/eeg_dataset_summary_ja.csv` と突合し、未解決ID `0` を確認しました。
+
+## 2026-03-19 09:05 JST 再検証ログ（本run / 3リポ最新化後の深掘り固定）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` の各 `main` で `git pull --ff-only origin main` を実行し、最新化した状態で検証しました。
+- `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` の `RQ` 行を再計数し、`RQ_TOTAL=60`（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` を再計数し、全60行で `検証可否` `深掘り検証設計` `応募テーマ` `推奨EEG-DATA` が欠損なく埋まっていることを確認しました。
+- 主要EEG参照ID（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）は、最新 `EEG-DATA/eeg_dataset_summary_ja.csv` 上で17件すべて存在することを再確認しました。
+- 依頼方針どおり、汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続しました。

@@ -148,3 +148,11 @@ reading_time: "35-55分"
 - `主データ（ID）` と `補助データ（推奨ID）` の参照を再抽出し、使用ID集合（24件）が `EEG-DATA/eeg_dataset_summary_ja.csv` に全件存在することを確認しました。
 - `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` 側の `RQ行数=60` と同期していることを再確認しました。
 - 本runも方針は不変で、汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持しました。
+
+## 2026-03-19 09:05 JST 再検証ログ（本run / deep cards 監査）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` の各 `main` で `git pull --ff-only origin main` を実行しました。
+- 本カードの `RQ行数=60` と `A/B/C=17/25/18` を再計数し、欠損・重複 `0` を確認しました。
+- 全行で `主張単位` `判定境界` `応募テーマ` `第一応募先/予備応募先` `主データ` `最低成果物` が埋まっていることを再確認しました。
+- 主要EEG参照ID（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）は、最新 `EEG-DATA/eeg_dataset_summary_ja.csv` に全件存在することを確認しました。
+- 方針は不変で、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持しました。
