@@ -261,3 +261,10 @@ reading_time: "35-55分"
 - RQ行から抽出したEEG参照ID（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
 - `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` は `Ux-y` 行が物理行で `66`（深掘り優先6RQの再掲あり）だが、`unique RQ=60` を再確認し、実体は本カードと一致していることを明記しました。
 - 方針は維持し、汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続しました。
+
+## 2026-03-20 04:02 JST 再検証ログ（本run / ユーザー依頼: 1RQ深掘りで再固定）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` の各 `main` で `git pull --ff-only origin main` を実行し、最新化しました。
+- 本カードの `Ux-y` 行を再計数し、`RQ_TOTAL=60` と `A/B/C=17/25/18`（欠損・重複 `0`）を確認しました。
+- `主データ（ID）` の一意集合（`6, 11, 13, 19, 49, 56, 509, 676, 735`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
+- 本runでも方針は不変で、汎用横断ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続しました。

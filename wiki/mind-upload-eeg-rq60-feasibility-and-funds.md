@@ -583,3 +583,21 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - RQ行から抽出したEEG参照ID（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
 - `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` は `Ux-y` の物理行が `66`（深掘り優先6RQの再掲あり）ですが、`unique RQ=60` を再確認し、本ページとの整合は維持されていることを明記しました。
 - 依頼方針どおり、汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持しました。
+
+## 2026-03-20 04:02 JST 再検証ログ（本run / ユーザー依頼: 1問ずつ深掘りで更新）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` の各 `main` で `git pull --ff-only origin main` を実行し、最新化しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` の `Ux-y` 行を再計数し、`RQ_TOTAL=60` と `A/B/C=17/25/18`（欠損・重複 `0`）を再確認しました。
+- 60RQの `主データ（ID）`（`6, 11, 13, 19, 49, 56, 509, 676, 735`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と突合し、未解決ID `0` を確認しました。
+- `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` 側と同一方針で同期し、汎用横断ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持しました。
+
+### 本runの深掘り優先6RQ（応募テーマと主EEGデータ実名）
+
+| RQ | 応募テーマ | 主EEGデータ（ID / 名称） | 第一/予備応募先 |
+|---|---|---|---|
+| U14-1 | 追試運用の固定粒度監査 | `6` / Acquisition delay of wireless EEG | `G1 / G3` |
+| U7-2 | 時刻同期監査（offset/jitter閾値） | `676` / Simultaneous EEG-fMRI XP1 | `G1 / G3` |
+| U14-3 | leaderboardリーク監査 | `719` / Ubiquitous P300 benchmark | `G1 / G3` |
+| U8-1 | 閉ループ遅延許容域同定 | `1972` / Closed-loop auditory stimulation (REM) | `G2 / G5` |
+| U8-2 | 再較正頻度最適化 | `2412` / NeuroSimo closed-loop EEG/EMG-guided TMS | `G2 / G5` |
+| U13-1 | 模倣と因果の分離評価 | `509` / 3M-CPSEED overt/silent/imagined speech EEG | `G1 / G4` |
