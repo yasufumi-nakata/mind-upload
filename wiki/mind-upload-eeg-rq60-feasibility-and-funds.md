@@ -601,3 +601,11 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 | U8-1 | 閉ループ遅延許容域同定 | `1972` / Closed-loop auditory stimulation (REM) | `G2 / G5` |
 | U8-2 | 再較正頻度最適化 | `2412` / NeuroSimo closed-loop EEG/EMG-guided TMS | `G2 / G5` |
 | U13-1 | 模倣と因果の分離評価 | `509` / 3M-CPSEED overt/silent/imagined speech EEG | `G1 / G4` |
+
+## 2026-03-20 08:01 JST 再検証ログ（本run / ユーザー依頼: RQ別深掘りでwiki更新）
+
+- 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull origin main` を実行し、`Already up to date` を確認しました。
+- `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` の `| Ux-y<br>` 行を再計数し、`RQ_TOTAL=60`（欠損・重複 `0`）を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` を再計数し、全60行で `検証可否/深掘り検証設計/応募テーマ/推奨EEG-DATA` が埋まっていることを再確認しました。
+- 参照EEG ID集合（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
+- 方針は維持し、汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続しました。
