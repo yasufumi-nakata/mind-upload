@@ -169,3 +169,12 @@
 - `mind-upload` と `auto-research-funds` の対象wikiページで `RQ` 行を再計数し、いずれも `60` 件で一致することを確認しました。
 - 判定内訳 `A/B/C=17/25/18` を再計数し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持していることを確認しました。
 - 主要EEG参照ID（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）を最新 `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
+
+
+## 2026-03-19 13:02 JST 再検証ログ（本run / deep cards 更新後監査）
+
+- 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull origin main` を実行し、`Already up to date` を確認しました。
+- 続けて `mind-upload` / `auto-research-funds` / `EEG-DATA` の各 `main` で `git pull --ff-only origin main` を実行し、最新差分取り込み後に本カードを再監査しました。
+- `Ux-y` 形式のRQ行を再計数し、`RQ_TOTAL=60` と `A/B/C=17/25/18`（欠損・重複 `0`）を確認しました。
+- `主データ（ID）` と `補助データ（推奨ID）` から抽出したEEG参照ID（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）を最新 `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
+- `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` 側の `Ux-y` 行も `60` 件で一致し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続しました。
