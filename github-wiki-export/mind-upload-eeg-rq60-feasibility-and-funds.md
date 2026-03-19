@@ -522,3 +522,11 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - Recounted `Ux-y` rows across deep cards / feasibility / grant map pages and reconfirmed `RQ_TOTAL=60`, `A/B/C=17/25/18`, `missing=0`, `duplicate=0`.
 - Rechecked EEG IDs (`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`) against `EEG-DATA/eeg_dataset_summary_ja.csv`; unresolved IDs remained `0`.
 - Kept the deep-by-RQ policy unchanged: `1RQ=1testable claim=1grant theme=1primary dataset`.
+
+## 2026-03-19 23:02 JST Revalidation Log (this run)
+
+- Pulled parent repository `auto-startup` on `main` with `git pull --ff-only origin main` before work and confirmed it is up to date.
+- Recounted `Ux-y` rows in feasibility and grant-map pages and reconfirmed `RQ_TOTAL=60` and `A/B/C=17/25/18` with `missing=0`, `duplicate=0`.
+- Rechecked EEG IDs (`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`) against `EEG-DATA/eeg_dataset_summary_ja.csv`; unresolved IDs remained `0`.
+- Reconfirmed grant-key alignment for `G1-G6` (`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`).
+- Kept the deep-by-RQ policy unchanged: `1RQ=1testable claim=1grant theme=1primary dataset`.
