@@ -5,7 +5,7 @@ description: "We will organize the roles of baseline, benchmark, pre-registratio
 article_type: Wiki
 subtitle: "Thinking about 'what to compare, how to fix, and what to keep'"
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-19"
 note: "Learning guide"
 audience: "People who find similar terms in research operations and people who want to understand how to create comparability from the beginning"
 reading_time: "10-15 minutes"
@@ -15,10 +15,12 @@ page_highlights:
   - "Baseline, benchmark, pre-registration, and model cards have different roles."
   - "Failures and negative results are also part of comparability."
   - "It's important to record not only the score, but also how you measured it and how you failed."
+  - "For foundation / self-supervised EEG results, the usual model card is not enough; a Pretraining Card is also required."
 known_points:
   - "Comparable progress requires a starting point, scoring criteria, a priori rules, and a record of results."
   - "Without a baseline, it's harder to claim improvement."
   - "Lack of pre-registration and model cards makes it easier to conveniently interpret later."
+  - "For heterogeneous-corpus pretraining, corpus identity, harmonization, adaptation regime, and benchmark provenance are part of the result itself."
 unknown_points:
   - "Which templates will be standardized across WBE is still in the operational design stage."
   - "The extent to which failure cases and negative results will be required to be disclosed is subject to future development."
@@ -58,6 +60,13 @@ For L1 and higher results, in addition to the usual model card, we have attached
 </p>
 </div>
 
+<div class="note-box">
+<strong>2026-03-19 Addendum: foundation / self-supervised EEG results also need a Pretraining Card</strong>
+<p>
+The previous version still made it sound as if one generic model card could cover all EEG results once scores and weaknesses were listed. That is too weak for large-scale EEG pretraining. Recent source papers and benchmark operations show that <strong>corpus identity</strong>, <strong>setup diversity</strong>, <strong>harmonization policy</strong>, <strong>adaptation regime</strong>, and <strong>benchmark provenance</strong> materially change what a transfer result means. Therefore, this site now treats the <a href="../verification.html#pretraining-card">Pretraining Card</a> as a separate artifact on top of the usual model card for foundation / self-supervised EEG results.
+</p>
+</div>
+
 <section class="section" id="roles">
 <h2 class="section-title">First, separate roles</h2>
 <table class="data-table">
@@ -85,8 +94,42 @@ For L1 and higher results, in addition to the usual model card, we have attached
 <td>Scores, weaknesses, leak countermeasures, failure examples, calculation conditions, and Observability Budget for L1 and above. </td>
 </tr>
 <tr>
+<td><strong>Pretraining Card</strong></td>
+<td>For foundation / self-supervised EEG results, fix corpus identity, overlap audit, harmonization, adaptation regime, benchmark provenance, and scale / efficiency.</td>
+</tr>
+<tr>
 <td><strong>Failure examples/negative results</strong></td>
 <td>Leave what didn't work and where it broke. </td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="model-card-vs-pretraining-card">
+<h2 class="section-title">When a normal model card is not enough</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>Artifact</th>
+<th>What it fixes</th>
+<th>What goes wrong if you stop there</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Model card</strong></td>
+<td>Scores, baselines, failure examples, compute usage, and practical weaknesses of one trained system.</td>
+<td>For foundation-model results, it can still hide what part of the gain came from pretraining corpus composition, harmonization choices, or downstream adaptation.</td>
+</tr>
+<tr>
+<td><strong>Observability Budget</strong></td>
+<td>What the measurement stack directly observed, what remained latent, and which claim ceiling still applies.</td>
+<td>It does not say whether a transfer claim changed because of corpus overlap, benchmark design, or fine-tuning amount.</td>
+</tr>
+<tr>
+<td><strong>Pretraining Card</strong></td>
+<td>Corpus identity / overlap, population and setup diversity, harmonization policy, adaptation regime, benchmark provenance, and scale / efficiency.</td>
+<td>If it is missing, a same-benchmark win can be overread as generic transfer or portable robustness.</td>
 </tr>
 </tbody>
 </table>
@@ -182,8 +225,20 @@ Under what conditions, which indicators collapsed, and by how much? It is necess
 <li><strong>Are the benchmarks fixed:</strong>Are the data, splits, and metrics written? </li>
 <li><strong>Are there any pre-registrations?</strong>Have the conditions been changed afterwards? </li>
 <li><strong>Are there model cards or examples of failure?</strong>In addition to weaknesses and ways of collapse, is the Observability Budget visible at L1 and above? </li>
+<li><strong>If it is a foundation / self-supervised EEG result, is a Pretraining Card visible?</strong>Are corpus overlap, harmonization, adaptation, and benchmark version written? </li>
 </ul>
 </div>
+</section>
+
+<section class="section" id="references">
+<h2 class="section-title">References</h2>
+<ol>
+<li>Kostas, D., Aroca-Ouellette, S., &amp; Rudzicz, F. (2021). BENDR: Using Transformers and a Contrastive Self-Supervised Learning Task to Learn From Massive Amounts of EEG Data. <a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">doi:10.3389/fnhum.2021.653659</a></li>
+<li>Jiang, W.-B., Zhao, L., &amp; Lu, B.-L. (2024). Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI. <a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/47393e8594c82ce8fd83adc672cf9872-Abstract-Conference.html" target="_blank">ICLR 2024 proceedings</a></li>
+<li>Lee, N., Barmpas, K., Panagakis, Y., Adamos, D., Laskaris, N., &amp; Zafeiriou, S. (2025). Are Large Brainwave Foundation Models Capable Yet? Insights from Fine-Tuning. <a href="https://openreview.net/forum?id=J5SbLoq7Uv" target="_blank">ICML 2025 poster / OpenReview</a></li>
+<li>EEG Challenge (2025). Rules. <a href="https://eeg2025.github.io/rules/" target="_blank">official rules</a></li>
+<li>Xiong, W., Li, J., Li, J., Zhu, K., &amp; Jiang, C. (2025). EEG-FM-Bench: A Comprehensive Benchmark for the Systematic Evaluation of EEG Foundation Models. <a href="https://arxiv.org/abs/2508.17742" target="_blank">arXiv:2508.17742</a></li>
+</ol>
 </section>
 
 <section class="section" id="return">

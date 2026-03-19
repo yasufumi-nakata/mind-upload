@@ -16,6 +16,7 @@ page_highlights:
   - "Claim levels and failure conditions are fixed up front so decoding is not confused with emulation."
   - "For decode / biomarker scores, the Specificity & Shortcut Card separates the target neural variable from nuisance routes and audits subject / session fingerprint plus acquisition-distribution shortcuts independently."
   - "This page explains why collecting data alone is not the same as making progress."
+  - "For foundation / self-supervised EEG results, the Pretraining Card fixes corpus identity, overlap audit, setup diversity, harmonization, adaptation regime, benchmark provenance, and scale / efficiency before any transfer claim is read strongly."
   - "For brain-to-text and speech decode, the Neural Contribution Card fixes task constraint, language prior, candidate set, no-brain / no-LM / shuffle baselines, and subject cooperation."
   - "For multimodal or atlas-prior results, the Fusion Card is added on top of the Observability Budget so acquisition relation, synchronization, fusion model, vascular-state / CVR limits for hemodynamic stacks, and external validation are fixed explicitly."
   - "For diffusion-MRI tractography connectomes, the Observability Budget now requires a tractography route card that names direct observables, priors / filtering, uncertainty, and abstention."
@@ -43,6 +44,7 @@ known_points:
   - "At L0-L2, reproducibility and falsification conditions can be designed in advance."
   - "Decode and emulate are distinct claims and require different evidence."
   - "The same decoding score is not target-specific evidence if eye movement, EMG, uninstructed movement, auditory feedback, subject / session fingerprint, or acquisition-distribution shortcuts remain unresolved."
+  - "A foundation-model score without corpus-overlap, harmonization, adaptation, and benchmark-version disclosure remains qualified decoding evidence rather than portable transfer evidence."
   - "A multimodal result is not one thing; simultaneous acquisition, geometric fusion, invasive calibration, and atlas priors must be audited separately."
   - "For ESI, passing one validation class does not auto-pass the others; stimulation error, simultaneous invasive concordance, and postsurgical outcome answer different questions."
   - "A BOLD or fNIRS amplitude difference without vascular-state / CVR audit remains a hemodynamic-limited difference rather than a clean neural difference."
@@ -1071,6 +1073,82 @@ The Observability Budget fixes <strong>what was directly observed</strong>. The 
 </div>
 </section>
 
+<section class="section" id="pretraining-card">
+<h2 class="section-title">2026-03-19 addendum: attach a Pretraining Card to foundation / self-supervised EEG results</h2>
+<p>
+The remaining weakness after adding the <strong>Observability Budget</strong> and the <strong>Specificity &amp; Shortcut Card</strong> was that large EEG pretraining results could still be reported as if an ordinary model card were enough. The recent primary literature and current benchmark operations do not support that shortcut. <a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">Kostas et al. (2021)</a> framed transfer across unseen datasets, hardware, subjects, and tasks as the core challenge rather than as a solved default. <a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/47393e8594c82ce8fd83adc672cf9872-Abstract-Conference.html" target="_blank">Jiang et al. (2024)</a> explicitly listed electrode mismatch, unequal length, varied task design, and low SNR as central EEG-side barriers even while reporting strong LaBraM performance. <a href="https://openreview.net/forum?id=J5SbLoq7Uv" target="_blank">Lee et al. (2025)</a> then reported only marginal gains, about 0.5%, over conventional deep baselines despite much larger parameter counts, while showing that PEFT can sharply reduce trainable parameters without degrading performance. <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a> argued that inconsistent protocols still make cross-model EEG-FM comparisons unreliable. Finally, the official <a href="https://eeg2025.github.io/rules/" target="_blank">EEG Challenge 2025 rules</a> explicitly require participants to disclose any additional pretraining data sources, which pretrained models were used, and how they were fine-tuned. Therefore, this site now requires a <strong>Pretraining Card</strong> for foundation / self-supervised EEG submissions in addition to the standard model card.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Pretraining Card field</th>
+<th>What must be written at minimum</th>
+<th>What goes wrong if it is omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>corpus identity / overlap audit</strong></td>
+<td>Name the pretraining corpus, version or snapshot, total hours, exclusions, and any overlap audit against downstream datasets, subjects, sessions, or near-duplicate recordings.</td>
+<td>What looked like transfer can still be silent reuse of closely related data.</td>
+</tr>
+<tr>
+<td><strong>population / setup diversity</strong></td>
+<td>Report covered population, device families, clinical vs. lab setting, electrode schema, and reference-system distribution.</td>
+<td>The number of datasets can be misread as recording diversity even when the corpus is narrow or setup-biased.</td>
+</tr>
+<tr>
+<td><strong>harmonization policy</strong></td>
+<td>Report channel mapping, reference handling, sample-rate conversion, token length, normalization, and missing-channel / missing-segment policy.</td>
+<td>Formatting choices can be misread as model-capability differences.</td>
+</tr>
+<tr>
+<td><strong>objective / inductive bias</strong></td>
+<td>Name the pretraining objective, such as masked, autoregressive, contrastive, tokenizer-based, or reconstruction-heavy, and the major architectural prior.</td>
+<td>The reader cannot tell whether the gain came from scale, objective choice, or domain-specific prior.</td>
+</tr>
+<tr>
+<td><strong>adaptation regime</strong></td>
+<td>State whether the downstream regime is frozen, linear-probe, PEFT, full fine-tune, or test-time training, together with target-data usage and label budget.</td>
+<td>A heavily adapted result can be misread as clean zero-shot or general transfer.</td>
+</tr>
+<tr>
+<td><strong>benchmark provenance</strong></td>
+<td>Name the benchmark, version, split rule, checkpoint-selection rule, segment length, preprocessing path, and external hold-out construction.</td>
+<td>Ranking changes driven by benchmark design can be misread as stable model superiority.</td>
+</tr>
+<tr>
+<td><strong>scale / efficiency</strong></td>
+<td>Report total parameter count, trainable fraction, pretraining steps or epochs, training time, adapter size, and inference cost.</td>
+<td>"The large model won" can hide that the real driver was compute allocation or parameter-efficient adaptation.</td>
+</tr>
+<tr>
+<td><strong>evaluation family / stop line</strong></td>
+<td>Report hold-out unit, device / site hold-out, cross-day evaluation, abstention or fallback behavior, and a one-line stopped claim stating what still cannot be asserted.</td>
+<td>A same-day benchmark win can be misread as deployability, source identifiability, or WBE-relevant state capture.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Official rules are not capability proof, but they are evidence of what comparability already requires</strong>
+<p>
+The EEG Challenge rules do not prove that any one model is best. They do something different and still important: they show that current operations already need <strong>pretraining-data disclosure</strong>, <strong>pretrained-model disclosure</strong>, and <strong>fine-tuning disclosure</strong> before a leaderboard is even interpretable. On this site, that operational lesson is promoted from benchmark-specific documentation to a general audit rule.
+</p>
+</div>
+<div class="note-box">
+<strong>Minimum operating rules</strong>
+<p>
+If this card is missing, this site treats the result by default as <strong>qualified representation-learning / decoding evidence</strong>, not as portable transfer evidence, deployable robustness, source-identifiable recovery, or WBE-relevant state capture. In particular, if <strong>corpus identity / overlap audit</strong>, <strong>harmonization policy</strong>, <strong>adaptation regime</strong>, or <strong>benchmark provenance</strong> is missing, this site stops the reader from rephrasing the result as "generalization is solved."
+</p>
+</div>
+<div class="note-box">
+<strong>How this differs from the existing cards</strong>
+<p>
+The <a href="#observability-budget">Observability Budget</a> fixes <strong>what the sensor directly observed</strong>. The <a href="#specificity-shortcut-card">Specificity &amp; Shortcut Card</a> fixes <strong>which route predictive information came from</strong>. The Pretraining Card fixes <strong>what part of the reported transfer came from corpus composition, harmonization, adaptation, benchmark design, and compute allocation</strong>. The <a href="#temporal-validity-card">Temporal Validity Card</a> then fixes <strong>how far the result can be extrapolated across time</strong>. On this site, a foundation-model result needs all of these boundaries kept separate.
+</p>
+</div>
+</section>
+
 <section class="section" id="state-completeness-gate">
 <h2 class="section-title">State variable integrity gate</h2>
 <p>
@@ -1515,6 +1593,7 @@ In response to technical criticisms (Issue #257-#260) submitted in the latter ha
 <li><strong>Alternative model log:</strong>Does not claim that the estimated model is the only solution, but reports the existence of alternative models or equivalence classes that can explain the same observed statistics. </li>
 <li><strong>Connectome-Constrained Model Card:</strong>When reporting a connectome-constrained predictor, name the structural prior and coverage, fitted degrees of freedom, task/state regime plus OOD slices, omitted mechanisms, validation / perturbation class, ensemble spread or alternative families, and abstention boundary. If this is missing, the result stays at the conditional-model / hypothesis-engine level. </li>
 <li><strong>Effective Connectivity Route Card:</strong>When reporting DCM or related effective-connectivity results, name the node set and omitted competitors, neural-mass / HRF / prior assumptions, family comparison or model-recovery results, perturbation / external validation route, reliability window, and abstention boundary. If this is missing, the result stays at the model-conditioned hypothesis level. </li>
+<li><strong>Pretraining Card:</strong>When reporting a foundation / self-supervised EEG result, name corpus identity and overlap audit, setup diversity, harmonization policy, adaptation regime, benchmark provenance, scale / efficiency, and the stopped claim. If this is missing, the result stays at the qualified representation-learning / decoding level. </li>
 <li><strong>Body / Environment Boundary Card:</strong>For online human-in-the-loop or embodied tasks, name retained / substituted sensory, motor, and interoceptive channels, the surrogate body / environment contract, loop-removal tests, OOD environment slices, and the abstention boundary. If this is missing, the result stays at the local-controller level. </li>
 <li><strong>Preprocessing Fidelity Log:</strong>Records before and after spectra, exclusion/interpolation rates, changes in key metrics, and at least one task-consistent signal preservation metric, with or without ASR. </li>
 <li><strong>Event Semantics Log:</strong> Attach HED to BIDS metadata and map to CogAtlas / CogPO / NIF / SCORE etc. as necessary. Fixing to a specific ontology is not a common requirement. </li>
@@ -1696,6 +1775,11 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Geva-Sagiv, M., Mankin, E. A., Eliashiv, D., et al. (2023). Augmenting hippocampal-prefrontal neuronal synchrony during sleep enhances memory consolidation in humans. <a href="https://doi.org/10.1038/s41593-023-01324-5" target="_blank">doi:10.1038/s41593-023-01324-5</a></li>
 <li>Schreiner, T., Petzka, M., Staudigl, T., et al. (2024). Spindle-locked ripples mediate memory reactivation during human NREM sleep. <a href="https://doi.org/10.1038/s41467-024-49572-8" target="_blank">doi:10.1038/s41467-024-49572-8</a></li>
 <li>Deng, Z., Fei, X., Zhang, S., &amp; Xu, M. (2025). A time window for memory consolidation during NREM sleep revealed by cAMP oscillation. <a href="https://doi.org/10.1016/j.neuron.2025.03.020" target="_blank">doi:10.1016/j.neuron.2025.03.020</a></li>
+<li>Kostas, D., Aroca-Ouellette, S., &amp; Rudzicz, F. (2021). BENDR: Using Transformers and a Contrastive Self-Supervised Learning Task to Learn From Massive Amounts of EEG Data. <a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">doi:10.3389/fnhum.2021.653659</a></li>
+<li>Jiang, W.-B., Zhao, L., &amp; Lu, B.-L. (2024). Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI. <a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/47393e8594c82ce8fd83adc672cf9872-Abstract-Conference.html" target="_blank">ICLR 2024 proceedings</a></li>
+<li>Lee, N., Barmpas, K., Panagakis, Y., Adamos, D., Laskaris, N., &amp; Zafeiriou, S. (2025). Are Large Brainwave Foundation Models Capable Yet? Insights from Fine-Tuning. <a href="https://openreview.net/forum?id=J5SbLoq7Uv" target="_blank">ICML 2025 poster / OpenReview</a></li>
+<li>EEG Challenge (2025). Rules. <a href="https://eeg2025.github.io/rules/" target="_blank">official rules</a></li>
+<li>Xiong, W., Li, J., Li, J., Zhu, K., &amp; Jiang, C. (2025). EEG-FM-Bench: A Comprehensive Benchmark for the Systematic Evaluation of EEG Foundation Models. <a href="https://arxiv.org/abs/2508.17742" target="_blank">arXiv:2508.17742</a></li>
 <li>Nosek, B. A., et al. (2015). Promoting an open research culture. <a href="https://doi.org/10.1126/science.aab2374" target="_blank">doi:10.1126/science.aab2374</a></li>
 <li>Wilkinson, M. D., et al. (2016). The FAIR Guiding Principles. <a href="https://doi.org/10.1038/sdata.2016.18" target="_blank">doi:10.1038/sdata.2016.18</a></li>
 </ol>
