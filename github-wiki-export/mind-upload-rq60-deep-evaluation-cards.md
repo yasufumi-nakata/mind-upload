@@ -224,3 +224,10 @@
 - Recounted `Ux-y` rows across deep cards / feasibility / grant map pages and reconfirmed `RQ_TOTAL=60`, `A/B/C=17/25/18`, `missing=0`, `duplicate=0`.
 - Rechecked EEG IDs (`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`) against `EEG-DATA/eeg_dataset_summary_ja.csv`; unresolved IDs remained `0`.
 - Kept the deep-by-RQ policy unchanged: `1RQ=1testable claim=1grant theme=1primary dataset`.
+## 2026-03-20 01:02 JST 再検証ログ（本run / ユーザー依頼: RQ別深掘りでwiki再同期）
+
+- 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull --ff-only origin main` を実行し、`Already up to date` を確認しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` の `| Ux-y<br>` 行を再計数し、`RQ_TOTAL=60`（欠損・重複 `0`）を再確認しました。
+- `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` でも同じ `RQ_TOTAL=60` / `A/B/C=17/25/18` を再確認しました。
+- RQ行から抽出したEEG参照ID集合（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
+- 方針は維持し、汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続しました。
