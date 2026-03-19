@@ -5,7 +5,7 @@ description: "This page organizes how to read EEG foundation / self-supervised m
 article_type: Wiki
 subtitle: "Read advances in representation learning separately from claims that still need to be stopped"
 author: Mind Uploading Research Project
-last_updated: "2026-03-17"
+last_updated: "2026-03-20"
 note: "Technical / natural science only"
 audience: "Readers who want to assess EEG foundation models such as LaBraM, BIOT, EEGPT, and BENDR without overclaiming"
 reading_time: "10-15 min"
@@ -16,6 +16,7 @@ page_highlights:
   - "Recent primary papers themselves treat electrode mismatch, sampling-rate differences, missing channels, low SNR, and inter-subject variability as major open problems."
   - "Accepted papers, official challenge rules, and arXiv preprints / under-review manuscripts are not treated as the same evidence tier."
   - "Challenge and benchmark papers from 2025-2026 show that standardized cross-task / cross-subject evaluation is itself still unfinished."
+  - "The official EEG Challenge leaderboard later disclosed a split-construction error in Challenge 2, so benchmark provenance here includes sample randomization, hidden grouping, and inference-stage constraints rather than only benchmark name."
   - "Larger models do not automatically win; rankings move with parameter efficiency, training time, and benchmark design."
   - "To preserve comparability, a standard model card is not enough; a Pretraining Card is also required."
   - "A pretraining corpus is also a dataset, so results without an overlap audit cannot be read safely."
@@ -24,6 +25,7 @@ known_points:
   - "EEG has severe format heterogeneity, and differences in channel count, reference, sample rate, and window length easily break comparison."
   - "The meaning of a downstream score changes across frozen, linear-probe, and fine-tuning regimes."
   - "Papers from 2025-2026 are beginning to show that model rankings can change even with benchmark split construction and preprocessing alone."
+  - "Official challenge operations can themselves expose hidden subject-order shortcuts or score-definition changes, so benchmark postmortems are treated here as primary evidence about comparability rather than as afterthoughts."
   - "A successful foundation model cannot be read directly as source identifiability or WBE state-completeness."
 unknown_points:
   - "It is still unsettled which pretraining objective is the most stable across broad downstream families."
@@ -74,9 +76,9 @@ The previous site had already strengthened QC, splits, multimodality, and drift,
 </div>
 
 <div class="note-box">
-<strong>Source types fixed in advance as of 2026-03-17</strong>
+<strong>Source types fixed in advance as of 2026-03-20</strong>
 <p>
-The sources on this page mix <strong>peer-reviewed journal / accepted conference papers</strong>, <strong>accepted posters / workshops</strong>, <strong>official challenge websites / rules</strong>, <strong>arXiv preprints</strong>, and <strong>under-review manuscripts</strong>. These are not evidence of the same strength. For example, the official EEG Foundation Challenge site states in its 2025-11-17 update that the <strong>proposal preprint does not reflect changes made during the execution phase and that the current website and starter kit should be used instead</strong>. Accordingly, this page does not place model-capability comparisons, benchmark-governance warnings, and moving-target competition rules into the same single frontier ranking.
+The sources on this page mix <strong>peer-reviewed journal / accepted conference papers</strong>, <strong>accepted posters / workshops</strong>, <strong>official challenge websites / rules</strong>, <strong>arXiv preprints</strong>, and <strong>under-review manuscripts</strong>. These are not evidence of the same strength. For example, the official EEG Foundation Challenge site states in its 2025-11-17 update that the <strong>proposal preprint does not reflect changes made during the execution phase and that the current website and starter kit should be used instead</strong>. The final leaderboard then disclosed that Challenge 2 had not randomized samples, which allowed teams to exploit the fact that contiguous trials likely came from the same subjects. Accordingly, this page does not place model-capability comparisons, benchmark-governance warnings, and moving-target competition rules into the same single frontier ranking.
 </p>
 </div>
 
@@ -89,7 +91,7 @@ The biggest weakness that needed correction here was that <strong>accepted model
 <thead>
 <tr>
 <th>Example</th>
-<th>Source type / as of 2026-03-17</th>
+<th>Source type / as of 2026-03-20</th>
 <th>What can be said relatively strongly</th>
 <th>What barrier the paper itself leaves unresolved</th>
 </tr>
@@ -130,6 +132,12 @@ The biggest weakness that needed correction here was that <strong>accepted model
 <td>Official competition website / rules</td>
 <td>It attempts to standardize measurement of cross-task transfer and subject-invariant representation over more than 3,000 HBN-EEG participants.</td>
 <td>What it provides directly is current benchmark governance, not a final verdict on model capability. The official site also states that the proposal preprint is outdated, so operational conditions should be read from the current rules and starter kit.</td>
+</tr>
+<tr>
+<td><strong>EEG Foundation Challenge final leaderboard (2025)</strong><br>Governance postmortem</td>
+<td>Official leaderboard / postmortem</td>
+<td>It shows that benchmark operations themselves can expose hidden subject-order shortcuts: the organizers reported that Challenge 2 samples had not been randomized, so contiguous trials could reveal same-subject structure and the final prize logic had to be changed.</td>
+<td>This is strong evidence about benchmark fragility, not a stable capability ranking of the submitted models. It tells us the measurement changed, not which architecture is universally best.</td>
 </tr>
 <tr>
 <td><strong>Xiong et al. (2025)</strong><br>EEG-FM-Bench</td>
@@ -203,8 +211,8 @@ The biggest weakness that needed correction here was that <strong>accepted model
 </tr>
 <tr>
 <td><strong>G5: benchmark provenance</strong></td>
-<td>Benchmark papers from 2025-2026 show that rankings can move with split construction, checkpoint selection, and segment length alone.</td>
-<td>Benchmark name, version, split rule, checkpoint selection, segment length, normalization, and how the external hold-out was built.</td>
+<td>Benchmark papers from 2025-2026 show that rankings can move with split construction, checkpoint selection, segment length, and even hidden sample ordering. The official EEG Challenge postmortem made that point operationally explicit.</td>
+<td>Benchmark name, version, split rule, sample-randomization / hidden-grouping policy, checkpoint selection, segment length, normalization, how the external hold-out was built, and any inference-stage compute / training restrictions.</td>
 </tr>
 <tr>
 <td><strong>G6: scale / efficiency</strong></td>
@@ -219,6 +227,13 @@ The biggest weakness that needed correction here was that <strong>accepted model
 </tbody>
 </table>
 </section>
+
+<div class="note-box">
+<strong>Official challenge postmortems count as benchmark evidence</strong>
+<p>
+The EEG Challenge submission page defines an <strong>inference-only code submission</strong> setting, while the final leaderboard discloses that Challenge 2 accidentally preserved same-subject trial contiguity. Those facts are not side notes. They directly change what a reported ranking means, because one result was obtained under a fixed inference budget and another could exploit an unintended grouping cue. On this site, benchmark provenance therefore includes <strong>operational constraints</strong> and <strong>postmortem disclosures</strong>, not only the benchmark title.
+</p>
+</div>
 
 <section class="section" id="pretraining-card">
 <h2 class="section-title">The Pretraining Card required on this site</h2>
@@ -301,6 +316,7 @@ For foundation / self-supervised results, this site requires a <strong>Pretraini
 <li><strong>We do not hide the amount of adaptation:</strong> linear probing, full fine-tuning, and TTT are not all listed as the same kind of "transfer success."</li>
 <li><strong>We do not hide benchmark provenance:</strong> because rankings move with split / checkpoint / preprocessing differences, benchmark specification is part of the result.</li>
 <li><strong>Current competition rules are checked on the official site:</strong> proposal papers or companion preprints are background material; current rules / submission instructions / starter kits take priority for operations.</li>
+<li><strong>We do not hide benchmark postmortems:</strong> if organizers later disclose split flaws, sample-order shortcuts, or scoring changes, that disclosure changes how we read the leaderboard.</li>
 <li><strong>Benchmark-warning preprints are not treated as frontier verdicts:</strong> ranking reversals and scaling-law claims remain exploratory until reinforced by accepted papers or independent reruns.</li>
 <li><strong>We do not hide scale / efficiency:</strong> we do not write that a foundation model won without reporting parameter count, trainable fraction, and training time.</li>
 <li><strong>Even at high scores, the claim ceiling is kept in place:</strong> source identifiability, direct validation, closed-loop deployability, and WBE state-completeness are separate gates.</li>
@@ -320,6 +336,7 @@ For foundation / self-supervised results, this site requires a <strong>Pretraini
 <li>EEG Foundation Challenge (2025). From Cross-Task to Cross-Subject EEG Decoding. <em>NeurIPS 2025 competition</em>. <a href="https://eeg2025.github.io/" target="_blank">official website</a></li>
 <li>EEG Foundation Challenge (2025). Rules. <a href="https://eeg2025.github.io/rules/" target="_blank">official rules</a></li>
 <li>EEG Foundation Challenge (2025). Submission. <a href="https://eeg2025.github.io/submission/" target="_blank">submission page</a></li>
+<li>EEG Foundation Challenge (2025). Leaderboard. <a href="https://eeg2025.github.io/leaderboard/" target="_blank">official leaderboard / postmortem</a></li>
 <li>Xiong, W., Li, J., Li, J., &amp; Zhu, K. (2025). EEG-FM-Bench: A Comprehensive Benchmark for the Systematic Evaluation of EEG Foundation Models. <em>arXiv</em>. <a href="https://arxiv.org/abs/2508.17742" target="_blank">arXiv:2508.17742</a></li>
 <li>El Ouahidi, Y., Lys, J., Thölke, P., Farrugia, N., Pasdeloup, B., Gripon, V., Jerbi, K., &amp; Lioi, G. (2025). REVE: A Foundation Model for EEG -- Adapting to Any Setup with Large-Scale Pretraining on 25,000 Subjects. <em>accepted poster / arXiv manuscript</em>. <a href="https://arxiv.org/abs/2510.21585" target="_blank">arXiv:2510.21585</a></li>
 <li>Han, D. D., Gwon, Y., Lee, A. L., et al. (2025). DIVER-1: Deep Integration of Vast Electrophysiological Recordings at Scale. <em>under-review / arXiv manuscript</em>. <a href="https://arxiv.org/abs/2512.19097" target="_blank">arXiv:2512.19097</a></li>

@@ -16,7 +16,7 @@ page_highlights:
   - "Claim levels and failure conditions are fixed up front so decoding is not confused with emulation."
   - "For decode / biomarker scores, the Specificity & Shortcut Card separates the target neural variable from nuisance routes and audits subject / session fingerprint plus acquisition-distribution shortcuts independently."
   - "This page explains why collecting data alone is not the same as making progress."
-  - "For foundation / self-supervised EEG results, the Pretraining Card fixes corpus identity, overlap audit, setup diversity, harmonization, adaptation regime, benchmark provenance, and scale / efficiency before any transfer claim is read strongly."
+  - "For foundation / self-supervised EEG results, the Pretraining Card fixes corpus identity, overlap audit, setup diversity, harmonization, adaptation regime, benchmark provenance including split randomness / hidden grouping and inference-stage budget, and scale / efficiency before any transfer claim is read strongly."
   - "For brain-to-text and speech decode, the Neural Contribution Card fixes task constraint, language prior, candidate set, no-brain / no-LM / shuffle baselines, and subject cooperation."
   - "For multimodal or atlas-prior results, the Fusion Card is added on top of the Observability Budget so acquisition relation, synchronization, fusion model, vascular-state / CVR limits for hemodynamic stacks, and external validation are fixed explicitly."
   - "For diffusion-MRI tractography connectomes, the Observability Budget now requires a tractography route card that names direct observables, priors / filtering, uncertainty, and abstention."
@@ -47,7 +47,7 @@ known_points:
   - "At L0-L2, reproducibility and falsification conditions can be designed in advance."
   - "Decode and emulate are distinct claims and require different evidence."
   - "The same decoding score is not target-specific evidence if eye movement, EMG, uninstructed movement, auditory feedback, subject / session fingerprint, or acquisition-distribution shortcuts remain unresolved."
-  - "A foundation-model score without corpus-overlap, harmonization, adaptation, and benchmark-version disclosure remains qualified decoding evidence rather than portable transfer evidence."
+  - "A foundation-model score without corpus-overlap, harmonization, adaptation, and benchmark-version disclosure, including split randomness / hidden grouping, remains qualified decoding evidence rather than portable transfer evidence."
   - "A multimodal result is not one thing; simultaneous acquisition, geometric fusion, invasive calibration, and atlas priors must be audited separately."
   - "For ESI, passing one validation class does not auto-pass the others; stimulation error, simultaneous invasive concordance, and postsurgical outcome answer different questions."
   - "For ESI, inverse-family, package, parameter, and conductivity choices can materially shift the reconstructed source, so solver-disagreement and uncertainty width are themselves audit items."
@@ -1167,9 +1167,9 @@ The Observability Budget fixes <strong>what was directly observed</strong>. The 
 </section>
 
 <section class="section" id="pretraining-card">
-<h2 class="section-title">2026-03-19 addendum: attach a Pretraining Card to foundation / self-supervised EEG results</h2>
+<h2 class="section-title">2026-03-20 addendum: attach a Pretraining Card to foundation / self-supervised EEG results</h2>
 <p>
-The remaining weakness after adding the <strong>Observability Budget</strong> and the <strong>Specificity &amp; Shortcut Card</strong> was that large EEG pretraining results could still be reported as if an ordinary model card were enough. The recent primary literature and current benchmark operations do not support that shortcut. <a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">Kostas et al. (2021)</a> framed transfer across unseen datasets, hardware, subjects, and tasks as the core challenge rather than as a solved default. <a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/47393e8594c82ce8fd83adc672cf9872-Abstract-Conference.html" target="_blank">Jiang et al. (2024)</a> explicitly listed electrode mismatch, unequal length, varied task design, and low SNR as central EEG-side barriers even while reporting strong LaBraM performance. <a href="https://openreview.net/forum?id=J5SbLoq7Uv" target="_blank">Lee et al. (2025)</a> then reported only marginal gains, about 0.5%, over conventional deep baselines despite much larger parameter counts, while showing that PEFT can sharply reduce trainable parameters without degrading performance. <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a> argued that inconsistent protocols still make cross-model EEG-FM comparisons unreliable. Finally, the official <a href="https://eeg2025.github.io/rules/" target="_blank">EEG Challenge 2025 rules</a> explicitly require participants to disclose any additional pretraining data sources, which pretrained models were used, and how they were fine-tuned. Therefore, this site now requires a <strong>Pretraining Card</strong> for foundation / self-supervised EEG submissions in addition to the standard model card.
+The remaining weakness after adding the <strong>Observability Budget</strong> and the <strong>Specificity &amp; Shortcut Card</strong> was that large EEG pretraining results could still be reported as if an ordinary model card were enough. The recent primary literature and current benchmark operations do not support that shortcut. <a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">Kostas et al. (2021)</a> framed transfer across unseen datasets, hardware, subjects, and tasks as the core challenge rather than as a solved default. <a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/47393e8594c82ce8fd83adc672cf9872-Abstract-Conference.html" target="_blank">Jiang et al. (2024)</a> explicitly listed electrode mismatch, unequal length, varied task design, and low SNR as central EEG-side barriers even while reporting strong LaBraM performance. <a href="https://openreview.net/forum?id=J5SbLoq7Uv" target="_blank">Lee et al. (2025)</a> then reported only marginal gains, about 0.5%, over conventional deep baselines despite much larger parameter counts, while showing that PEFT can sharply reduce trainable parameters without degrading performance. <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a> argued that inconsistent protocols still make cross-model EEG-FM comparisons unreliable. The official <a href="https://eeg2025.github.io/submission/" target="_blank">EEG Challenge 2025 submission page</a> further fixed this as an <strong>inference-only code competition</strong>, and the final <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> later disclosed that Challenge 2 samples had not been randomized, allowing some teams to exploit contiguous-trial same-subject structure and forcing the organizers to award Challenge 1 and Challenge 2 separately. Therefore, this site now requires a <strong>Pretraining Card</strong> for foundation / self-supervised EEG submissions in addition to the standard model card.
 </p>
 <table class="data-table">
 <thead>
@@ -1207,7 +1207,7 @@ The remaining weakness after adding the <strong>Observability Budget</strong> an
 </tr>
 <tr>
 <td><strong>benchmark provenance</strong></td>
-<td>Name the benchmark, version, split rule, checkpoint-selection rule, segment length, preprocessing path, and external hold-out construction.</td>
+<td>Name the benchmark, version, split rule, sample-randomization / hidden-grouping policy, checkpoint-selection rule, segment length, preprocessing path, external hold-out construction, and any inference-stage compute or training restrictions.</td>
 <td>Ranking changes driven by benchmark design can be misread as stable model superiority.</td>
 </tr>
 <tr>
@@ -1225,13 +1225,13 @@ The remaining weakness after adding the <strong>Observability Budget</strong> an
 <div class="note-box">
 <strong>Official rules are not capability proof, but they are evidence of what comparability already requires</strong>
 <p>
-The EEG Challenge rules do not prove that any one model is best. They do something different and still important: they show that current operations already need <strong>pretraining-data disclosure</strong>, <strong>pretrained-model disclosure</strong>, and <strong>fine-tuning disclosure</strong> before a leaderboard is even interpretable. On this site, that operational lesson is promoted from benchmark-specific documentation to a general audit rule.
+The EEG Challenge rules do not prove that any one model is best. They do something different and still important: they show that current operations already need <strong>pretraining-data disclosure</strong>, <strong>pretrained-model disclosure</strong>, and <strong>fine-tuning disclosure</strong> before a leaderboard is even interpretable. The later leaderboard postmortem sharpened the same point by showing that <strong>sample randomization</strong> and <strong>hidden grouping structure</strong> can change what the leaderboard was measuring at all. On this site, that operational lesson is promoted from benchmark-specific documentation to a general audit rule.
 </p>
 </div>
 <div class="note-box">
 <strong>Minimum operating rules</strong>
 <p>
-If this card is missing, this site treats the result by default as <strong>qualified representation-learning / decoding evidence</strong>, not as portable transfer evidence, deployable robustness, source-identifiable recovery, or WBE-relevant state capture. In particular, if <strong>corpus identity / overlap audit</strong>, <strong>harmonization policy</strong>, <strong>adaptation regime</strong>, or <strong>benchmark provenance</strong> is missing, this site stops the reader from rephrasing the result as "generalization is solved."
+If this card is missing, this site treats the result by default as <strong>qualified representation-learning / decoding evidence</strong>, not as portable transfer evidence, deployable robustness, source-identifiable recovery, or WBE-relevant state capture. In particular, if <strong>corpus identity / overlap audit</strong>, <strong>harmonization policy</strong>, <strong>adaptation regime</strong>, or <strong>benchmark provenance</strong> including <strong>split randomness / hidden grouping</strong> is missing, this site stops the reader from rephrasing the result as "generalization is solved."
 </p>
 </div>
 <div class="note-box">
