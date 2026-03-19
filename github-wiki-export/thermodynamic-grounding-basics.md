@@ -26,11 +26,12 @@ What we show here is the beginning of thermodynamic grounding. It has not been d
 - The biological brain is a system that has a continuous flow of energy, not static data.
 - Logical calculation costs and physical dissipation costs must be considered separately.
 - There are ideas for incorporating thermodynamic indicators into the validation process, but measurement and interpretation remain difficult.
-- Thermodynamic route cards are needed because signal route, estimator family, and quantity type change what a result can mean.
+- Thermodynamic route cards are needed because signal route, coarse-graining, estimator family, dynamical assumptions, and quantity type change what a result can mean.
 
 ## まだ分かっていないこと
 - It is unclear which thermodynamic indicators affect which aspects of consciousness and identity.
 - The extent to which EPR and dissipation proxy indicators can be stably estimated from neural data remains an open question.
+- Cross-estimator convergence and physiology-side calibration for energetic interpretations are still unresolved.
 
 ---
 
@@ -119,6 +120,17 @@ This does not mean that if you understand thermodynamics, you can understand con
 </tr>
 </tbody>
 </table>
+
+<h2>Main weakness this pass had to fix</h2>
+<p>
+The earlier version already separated Landauer, tissue-level energy budgets, and irreversibility metrics. That part was correct. The weak point was elsewhere: it still let the reader learn the <strong>estimator label</strong> while skipping <strong>how the state space itself was constructed</strong> and <strong>what assumptions were needed to connect the result to physiology</strong>. The current primary literature does not support that shortcut.
+</p>
+<p>
+<a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn et al. (2021)</a> estimated entropy production only after coarse-graining 100-parcel BOLD dynamics into clustered macrostates, proved that the estimate rises as the clustering becomes finer, and reported robustness only across a bounded range of coarse-graining choices. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">de la Fuente et al. (2023)</a> then showed that reversibility detection in ECoG depends on the number of retained principal components, whether frequency or phase features are used, and the complexity of the classifier. <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> introduced a nonstationary state-space kinetic Ising model because neuronal activity violates steady-state assumptions, but they also state that pairwise couplings and conditional independence limit interpretability and that fitted couplings are statistical summaries rather than direct synaptic mechanisms. Meanwhile, stochastic-thermodynamics work such as <a href="https://doi.org/10.1103/PhysRevLett.125.110601" target="_blank">Teza &amp; Stella (2020)</a> and <a href="https://doi.org/10.1103/PhysRevE.105.L042601" target="_blank">Cocconi et al. (2022)</a> shows that entropy production can be preserved or rescaled under coarse graining depending on the process class and scale of description. Therefore, on this site, the route card now has to expose <strong>coarse-graining geometry, timescale, and dynamical assumptions</strong>, not only the family name of the estimator.
+</p>
+<p>
+A second shortcut also had to be blocked. If an article uses irreversibility language and then casually switches to <strong>energy cost</strong> or <strong>metabolic demand</strong>, the burden of proof changes. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that about 40% of voxels with significant task-evoked BOLD changes displayed oxygen-metabolism changes in the opposite direction. Observation-side time asymmetry therefore cannot be upgraded to metabolic dissipation unless a physiology-side route such as calibrated CMRO<sub>2</sub>, FDG-PET, or <sup>31</sup>P-MRS is disclosed separately.
+</p>
 
 <h2>"Irreversibility" is not one estimator family</h2>
 <p>
@@ -252,7 +264,7 @@ Logical computational complexity, such as FLOPs, is an indicator of how much com
 
 <h2>Irreversibility route card</h2>
 <p>
-The reason this site now asks for a route card is simple: thermodynamic language alone does not tell you what quantity was computed or how fragile it is. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn et al. (2021)</a> checked that fluxes vanish after temporal shuffling, and <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> used trial-shuffled data to isolate coupling-related contributions from firing-rate dynamics and sampling error. Therefore, a modality label alone is not enough.
+The reason this site now asks for a route card is simple: thermodynamic language alone does not tell you what quantity was computed or how fragile it is. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn et al. (2021)</a> checked that fluxes vanish after temporal shuffling, <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> used trial-shuffled data to isolate coupling-related contributions from firing-rate dynamics and sampling error, and <a href="https://doi.org/10.1038/s42005-024-01742-2" target="_blank">Baiesi et al. (2024)</a> showed that rare or unobserved reverse transitions materially affect entropy-production estimation in data-poor regimes. Therefore, a modality label alone is not enough.
 </p>
 <table>
 <thead>
@@ -269,19 +281,29 @@ The reason this site now asks for a route card is simple: thermodynamic language
 <td>It blocks BOLD, ECoG, MEG, and spike-train results from sounding as if they were the same observation route.</td>
 </tr>
 <tr>
-<td><strong>Estimator family</strong></td>
-<td>Name whether the result comes from transition-flux lower bounds, time-shifted correlations, inversion classifiers, visibility graphs, state-space kinetic Ising models, or another explicit family.</td>
-<td>It blocks all irreversibility papers from being collapsed into one common "EPR measurement."</td>
+<td><strong>Coarse-graining geometry and timescale</strong></td>
+<td>Write parcel count, clustering rule and k if used, retained principal components, source model, temporal bin width, window length, sampling rate, and frequency range.</td>
+<td>It blocks the same paper title from sounding like the same quantity after state-space construction or temporal resolution has changed.</td>
 </tr>
 <tr>
-<td><strong>Null / surrogate control</strong></td>
-<td>Write time-reversal baseline, temporal shuffle, trial shuffle, noise-floor estimate, motion control, or other surrogate that tests whether the headline asymmetry survives.</td>
-<td>It blocks pipeline artifacts or firing-rate changes from being silently rephrased as nonequilibrium structure.</td>
+<td><strong>Estimator family and dynamical assumptions</strong></td>
+<td>Name whether the result comes from transition-flux lower bounds, time-shifted correlations, inversion classifiers, visibility graphs, state-space kinetic Ising models, or another explicit family, and state whether steady-state, Markov, pairwise, conditional-independence, or source-model assumptions are imposed.</td>
+<td>It blocks all irreversibility papers from being collapsed into one common "EPR measurement," and blocks model-conditioned summaries from sounding like model-free physiology.</td>
+</tr>
+<tr>
+<td><strong>Null / surrogate control and finite-data handling</strong></td>
+<td>Write time-reversal baseline, temporal shuffle, label shuffle, trial shuffle, motion control, rare-transition treatment, and the noise-floor or bootstrap method used when reverse transitions are sparse or unobserved.</td>
+<td>It blocks pipeline artifacts, firing-rate changes, and short-trajectory artifacts from being silently rephrased as nonequilibrium structure.</td>
 </tr>
 <tr>
 <td><strong>Quantity type</strong></td>
 <td>State explicitly whether the reported number is an entropy-production lower bound, asymmetry score, graph divergence, entropy-flow component, or a fuller entropy-production estimate.</td>
 <td>It blocks asymmetry scores or lower bounds from being misread as direct microscopic dissipation.</td>
+</tr>
+<tr>
+<td><strong>Physiology-side grounding</strong></td>
+<td>If the text interprets the result as energetic or metabolic, state whether there is a direct physiology-side route such as calibrated CMRO<sub>2</sub>, FDG-PET, or <sup>31</sup>P-MRS, or explicitly mark that no such route is present.</td>
+<td>It blocks brain-signal irreversibility from being silently upgraded to metabolic cost or physical dissipation.</td>
 </tr>
 <tr>
 <td><strong>Cost isolation</strong></td>
@@ -299,6 +321,42 @@ The reason this site now asks for a route card is simple: thermodynamic language
 If this card is missing, this site keeps the result at <strong>exploratory auxiliary log</strong>. It is not promoted here to a common thermodynamic gate, direct microscopic dissipation, direct metabolic-cost readout, or WBE-relevant identity evidence.
 </p>
 
+<h2>What would actually strengthen the claim</h2>
+<p>
+On this site, strengthening a thermodynamic interpretation does <strong>not</strong> mean promoting it to a WBE gate. It means making the auxiliary result harder to misread inside its own modality.
+</p>
+<table>
+<thead>
+<tr>
+<th>What to add</th>
+<th>Why it matters</th>
+<th>What it still does not prove</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Robustness across reasonable coarse-graining choices</strong></td>
+<td>Shows that the sign or ordering of the result is not a one-pipeline artifact of parcelization, clustering, PCA rank, or temporal binning.</td>
+<td>It still does not turn a lower bound or asymmetry score into direct physical dissipation.</td>
+</tr>
+<tr>
+<td><strong>Explicit model-sensitivity audit</strong></td>
+<td>Shows what changes when stationarity, pairwise couplings, conditional independence, or source-model assumptions are relaxed, rather than hiding those assumptions inside one fitted summary.</td>
+<td>It still does not identify the unique neural mechanism or synaptic circuit.</td>
+</tr>
+<tr>
+<td><strong>Finite-data disclosure</strong></td>
+<td>Shows whether rare or unobserved reverse transitions are driving the estimate and whether the claimed irreversibility survives a realistic sampling audit.</td>
+<td>It still does not solve hidden-variable bias by itself.</td>
+</tr>
+<tr>
+<td><strong>Physiology-side calibration when energetic language is used</strong></td>
+<td>Separates observation-side arrow-of-time from direct energy-side measurements by naming the metabolic route or abstaining clearly.</td>
+<td>It still does not establish identity, consciousness, or a universal thermodynamic acceptance criterion.</td>
+</tr>
+</tbody>
+</table>
+
 <h2>Operation rules fixed in 2026-03 audit</h2>
 
 <h4>Rule</h4>
@@ -306,15 +364,19 @@ If this card is missing, this site keeps the result at <strong>exploratory auxil
 <li><strong>Separate Landauer and implemented power:</strong>Do not confuse lower bound theory and measured power. </li>
 <li><strong>Separate the organization's budget and acceptance gate:</strong>20W and signaling partition are background values and should not be made into site-wide KPIs. </li>
 <li><strong>Distinguish information entropy production and physical dissipation:</strong>Do not write the lower bound estimation from coarse-grained neural data as physical dissipation itself. </li>
-<li><strong>Name estimator family and null control:</strong>Transition-based lower bounds, time-shifted correlations, inversion classifiers, visibility graphs, and state-space Ising models are not interchangeable, and shuffle / surrogate controls are part of the claim. </li>
+<li><strong>Name coarse-graining and timescale explicitly:</strong>Parcelization, clustering, PCA rank, source model, window length, and temporal binning are part of the claim, not implementation footnotes. </li>
+<li><strong>Name estimator family, dynamical assumptions, and finite-data treatment:</strong>Transition-based lower bounds, time-shifted correlations, inversion classifiers, visibility graphs, and state-space Ising models are not interchangeable, and steady-state / pairwise / rare-transition assumptions are part of the claim. </li>
+<li><strong>Do not infer metabolism without a physiology-side route:</strong>If the text uses energetic or metabolic language, disclose calibrated CMRO<sub>2</sub>, FDG-PET, <sup>31</sup>P-MRS, or abstain. </li>
 <li><strong>Thermodynamic indicators are not used in place of auxiliary logs:</strong>OOD generalization, perturbation, validation, uncertainty, and abstention conditions. </li>
 <li><strong>Clarify modality dependence:</strong> Do not interchange fMRI, ECoG, EEG, and spiking with the same meaning. </li>
 </ul>
 
-<h2>4 questions when reading thermodynamic claims</h2>
+<h2>6 questions when reading thermodynamic claims</h2>
 <ol>
 <li><strong>Are we talking about lower bounds or actual measurements?</strong>It is important not to confuse theoretical lower bounds such as Landauer's with actual consumption or dissipation. </li>
-<li><strong>Which estimator family and null control were used?</strong>Check whether this is a transition-flux lower bound, time-shifted asymmetry score, visibility-graph index, or model-based spike-train estimate, and what shuffle / surrogate test was applied. </li>
+<li><strong>How was the state space built?</strong>Check parcelization, clustering, PCA rank, source reconstruction, window length, and temporal binning before reading the number. </li>
+<li><strong>Which estimator family, dynamical assumptions, and null control were used?</strong>Check whether this is a transition-flux lower bound, time-shifted asymmetry score, visibility-graph index, or model-based spike-train estimate, together with steady-state / pairwise assumptions and shuffle / surrogate tests. </li>
+<li><strong>If the paper says "energy" or "metabolism," where is the physiology-side route?</strong>Check whether CMRO<sub>2</sub>, FDG-PET, <sup>31</sup>P-MRS, or another direct route was actually measured, rather than inferred from the irreversibility metric alone. </li>
 <li><strong>Are you separating logical and physical costs?</strong>Are you combining FLOPs and dissipation into one number? </li>
 <li><strong>What do you mean by this metric alone?</strong>Check whether EPR or NESS is being used alone to prove identity or consciousness. </li>
 </ol>
@@ -334,4 +396,8 @@ To return to the theory frame, please use <a href="https://mind-upload.com/persp
 <li>de la Fuente, L. A., et al. (2023). Temporal irreversibility of neural dynamics as a signature of consciousness. <em>Cerebral Cortex</em>, 33(5), 1856–1865. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
 <li>Nartallo-Kaluarachchi, R., et al. (2025). Multilevel irreversibility reveals higher-order organization of nonequilibrium interactions in human brain dynamics. <em>PNAS</em>, 122(10), e2408791122. <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">doi:10.1073/pnas.2408791122</a></li>
 <li>Ishihara, K., &amp; Shimazaki, H. (2025). State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics. <em>Nature Communications</em>, 16, 10852. <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
+<li>Teza, G., &amp; Stella, A. L. (2020). Exact coarse graining preserves entropy production out of equilibrium. <em>Physical Review Letters</em>, 125(11), 110601. <a href="https://doi.org/10.1103/PhysRevLett.125.110601" target="_blank">doi:10.1103/PhysRevLett.125.110601</a></li>
+<li>Cocconi, L., Salbreux, G., &amp; Pruessner, G. (2022). Scaling of entropy production under coarse graining in active disordered media. <em>Physical Review E</em>, 105(4), L042601. <a href="https://doi.org/10.1103/PhysRevE.105.L042601" target="_blank">doi:10.1103/PhysRevE.105.L042601</a></li>
+<li>Baiesi, M., Nishiyama, T., &amp; Falasco, G. (2024). Effective estimation of entropy production with lacking data. <em>Communications Physics</em>, 7, 264. <a href="https://doi.org/10.1038/s42005-024-01742-2" target="_blank">doi:10.1038/s42005-024-01742-2</a></li>
+<li>Epp, S. M., Castrill&oacute;n, G., Yuan, B., et al. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
 </ol>

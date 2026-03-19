@@ -30,6 +30,7 @@ page_highlights:
 - We will also fix operational rules for how to read connectome-complete and connectome-constrained
   model on this site.
 - "Flagship connectome results are split into five evidence classes here: wiring atlas, same-brain local scaffold, human macro pathway prior / tractography connectome, connectome-constrained conditional predictor, and identifiability audit."
+- "Connectome-constrained predictors now need a conditional-model route card that names the structural prior, fitted degrees of freedom, task/state regime, omitted mechanisms, validation route, and abstention boundary."
 - Rather than ending with enumeration, we use augmentation/ablation to fix what should
   be added from connectome-only to read the predictive gain.
 - "Timing-state is treated as more than a single delay constant: node/internode geometry,
@@ -341,6 +342,60 @@ Even if there is only a wiring diagram, the only solution for the internal state
 </div>
 </section>
 
+<section class="section" id="conditional-predictor-route-card">
+<h2 class="section-title">Connectome-constrained predictors need a conditional-model route card</h2>
+<p>
+The remaining weak point after splitting connectome evidence classes was that the site still did not fully fix <strong>what must be disclosed before a connectome-constrained activity predictor can be read as more than a local conditional model</strong>. <a href="https://doi.org/10.1038/s41586-024-07939-3" target="_blank">Lappalainen et al. (2024)</a> showed that a connectome-constrained and task-optimized fly visual-system model can make rich cell-type-level activity predictions while still relying on a partial motion-pathway connectome, periodic tiling, simplified single-compartment neurons, threshold-linear synapses, and an ensemble of <strong>50 local optima</strong>. <a href="https://doi.org/10.1038/s41586-024-07763-9" target="_blank">Shiu et al. (2024)</a> showed that a fly-brain model built from synapse-level connectivity and neurotransmitter identity can predict named feeding and grooming circuits, but the authors also describe that success as a <strong>coarse-level</strong> description of specific sensorimotor transformations. <a href="https://doi.org/10.1038/s41586-024-07982-0" target="_blank">Pospisil et al. (2024)</a> then used the connectome as a prior for a perturbation-based effectome and explicitly recovered a <strong>linear approximation</strong> to more realistic nonlinear dynamics rather than the full nonlinear state. Together with <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> and <a href="https://doi.org/10.1038/nn1352" target="_blank">Prinz et al. (2004)</a>, the operational lesson is now stronger: a successful connectome-constrained predictor is evidence of a useful <strong>conditional hypothesis engine</strong>, but not yet of unique internal-state recovery.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Conditional-model route-card field</th>
+<th>What must be disclosed</th>
+<th>Why this site asks for it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Structural prior actually used</strong></td>
+<td>Name whether the model used EM edges, synapse counts, neurotransmitter-sign predictions, same-brain recordings, tractography priors, periodic tiling, or atlas-level averages, and state the exact spatial and cell-type coverage.</td>
+<td>Otherwise a local or partially reconstructed scaffold is overread as if the whole relevant circuit had been directly observed.</td>
+</tr>
+<tr>
+<td><strong>Fitted degrees of freedom</strong></td>
+<td>List which quantities were still learned or tuned, such as neuron time constants, resting potentials, unitary synapse scales, decoder weights, gain functions, or Jacobian entries around the operating point.</td>
+<td>Otherwise “connectome-constrained” is misread as if the fitted dynamics were directly measured rather than inferred from many remaining free parameters.</td>
+</tr>
+<tr>
+<td><strong>Task / state regime and training distribution</strong></td>
+<td>Name the stimulus family, behaviour, operating state, species, local circuit window, held-out/OOD splits, and whether validation stayed inside the same task family.</td>
+<td>Otherwise success on one visual, sensorimotor, or state-limited regime is silently promoted to arbitrary-task or whole-brain competence.</td>
+</tr>
+<tr>
+<td><strong>Omitted mechanisms and adaptation boundary</strong></td>
+<td>State whether electrical synapses, nonlinear chemical synapses, neuromodulation, glia, plasticity, body/environment loops, or long-timescale maintenance controllers were omitted, frozen, or externally calibrated.</td>
+<td>Otherwise the reader cannot tell whether good prediction came from the connectome route itself or from a boundary where important mechanisms were removed from the question.</td>
+</tr>
+<tr>
+<td><strong>Validation and perturbation class</strong></td>
+<td>Name whether the model was checked against held-out activity, same-brain physiology, optogenetic perturbation, behavioural intervention, or only task loss, and say whether the claim is local-linear / Jacobian-like or long-horizon nonlinear.</td>
+<td>Otherwise “validated” blurs together offline task fit, local causal support, and true recovery of intervention response.</td>
+</tr>
+<tr>
+<td><strong>Equivalence classes, uncertainty, and abstention</strong></td>
+<td>Expose ensemble spread, alternative families, local optima, parameter non-uniqueness, and the point where the claim stops at hypothesis engine / conditional predictor / local effectome.</td>
+<td>Otherwise a single successful fit is overread as if competing internal explanations had disappeared.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Operational rule added in this pass</strong>
+<p>
+If a connectome-constrained predictor lacks this route card, this site keeps the result at <strong>conditional model / hypothesis engine</strong>, <strong>task-bounded local predictor</strong>, or at most <strong>locally validated perturbation model</strong>. It is not promoted to state-complete recovery, unique internal-state identification, or a whole-brain mechanistic solution.
+</p>
+</div>
+</section>
+
 <section class="section" id="state-classes">
 <h2 class="section-title">Why are these 11 classes easy to skip</h2>
 
@@ -588,6 +643,9 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>, 640, 435–447. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Lappalainen, J. K., Tschopp, F. D., Prakhya, S., et al. (2024). Connectome-constrained networks predict neural activity across the fly visual system. <em>Nature</em>, 634, 1132–1140. <a href="https://doi.org/10.1038/s41586-024-07939-3" target="_blank">doi:10.1038/s41586-024-07939-3</a></li>
 <li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <em>Nature Neuroscience</em>, 28, 2561–2574. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
+<li>Shiu, P.-K., et al. (2024). A Drosophila computational brain model reveals sensorimotor processing. <em>Nature</em>, 634, 210–219. <a href="https://doi.org/10.1038/s41586-024-07763-9" target="_blank">doi:10.1038/s41586-024-07763-9</a></li>
+<li>Pospisil, D. A., et al. (2024). The fly connectome reveals a path to the effectome. <em>Nature</em>, 634, 201–209. <a href="https://doi.org/10.1038/s41586-024-07982-0" target="_blank">doi:10.1038/s41586-024-07982-0</a></li>
+<li>Prinz, A. A., Bucher, D., &amp; Marder, E. (2004). Similar network activity from disparate circuit parameters. <em>Nature Neuroscience</em>, 7, 1345–1352. <a href="https://doi.org/10.1038/nn1352" target="_blank">doi:10.1038/nn1352</a></li>
 <li>Thomas, C., Ye, F. Q., Irfanoglu, M. O., Modi, P., Saleem, K. S., Leopold, D. A., &amp; Pierpaoli, C. (2014). Anatomical accuracy of brain connections derived from diffusion MRI tractography is inherently limited. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 111(46), 16574–16579. <a href="https://doi.org/10.1073/pnas.1405672111" target="_blank">doi:10.1073/pnas.1405672111</a></li>
 <li>Reveley, C., Seth, A. K., Pierpaoli, C., Silva, A. C., Yu, D., Saunders, R. C., Leopold, D. A., &amp; Ye, F. Q. (2015). Superficial white matter fiber systems impede detection of long-range cortical connections in diffusion MR tractography. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 112(21), E2820–E2828. <a href="https://doi.org/10.1073/pnas.1418198112" target="_blank">doi:10.1073/pnas.1418198112</a></li>
 <li>Donahue, C. J., Sotiropoulos, S. N., Jbabdi, S., Hernandez-Fernandez, M., Behrens, T. E., Dyrby, T. B., Coalson, T., Kennedy, H., Knoblauch, K., Van Essen, D. C., &amp; Glasser, M. F. (2016). Using diffusion tractography to predict cortical connection strength and distance: A quantitative comparison with tracers in the monkey. <em>Journal of Neuroscience</em>, 36(25), 6758–6770. <a href="https://doi.org/10.1523/JNEUROSCI.0493-16.2016" target="_blank">doi:10.1523/JNEUROSCI.0493-16.2016</a></li>

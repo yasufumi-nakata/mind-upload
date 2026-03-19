@@ -19,6 +19,7 @@ page_highlights:
   - "For brain-to-text and speech decode, the Neural Contribution Card fixes task constraint, language prior, candidate set, no-brain / no-LM / shuffle baselines, and subject cooperation."
   - "For multimodal or atlas-prior results, the Fusion Card is added on top of the Observability Budget so acquisition relation, synchronization, fusion model, vascular-state / CVR limits for hemodynamic stacks, and external validation are fixed explicitly."
   - "For diffusion-MRI tractography connectomes, the Observability Budget now requires a tractography route card that names direct observables, priors / filtering, uncertainty, and abstention."
+  - "For connectome-constrained predictors, the Observability Budget now requires a conditional-model route card that names the structural prior, fitted degrees of freedom, task/state regime, omitted mechanisms, validation class, and abstention boundary."
   - "For DCM / effective-connectivity claims, the Observability Budget now requires an effective-connectivity route card that names candidate model space, observation-model assumptions, validation, reliability, and abstention."
   - "For irreversibility / thermodynamic claims, the route card now names signal route, coarse-graining / timescale, estimator family plus dynamical assumptions, null control, quantity type, physiology-side grounding when energetic language is used, and cost isolation before any claim ceiling is raised."
   - "For ESI claims, simulation / phantom, stimulation ground truth, simultaneous invasive recording, and postsurgical outcome are separate validation classes; 'externally validated' alone is insufficient."
@@ -44,6 +45,7 @@ known_points:
   - "A multimodal result is not one thing; simultaneous acquisition, geometric fusion, invasive calibration, and atlas priors must be audited separately."
   - "For ESI, passing one validation class does not auto-pass the others; stimulation error, simultaneous invasive concordance, and postsurgical outcome answer different questions."
   - "A BOLD or fNIRS amplitude difference without vascular-state / CVR audit remains a hemodynamic-limited difference rather than a clean neural difference."
+  - "A connectome-constrained activity predictor without structural-prior, fitted-parameter, task-regime, omitted-mechanism, validation, and abstention disclosure remains a conditional model rather than internal-state recovery."
   - "An effective-connectivity label without candidate-model, validation, and reliability disclosure remains a model-conditioned hypothesis rather than discovered causal wiring."
   - "An irreversibility label without signal-route, coarse-graining / timescale, estimator-family, dynamical-assumption, and quantity-type disclosure remains an exploratory auxiliary result rather than a portable thermodynamic measurement."
   - "A synapse list or weight estimate does not by itself fix perisynaptic ECM / PNN state, so plasticity and stabilization claims need a separate ceiling."
@@ -750,9 +752,46 @@ For diffusion-MRI-derived connectomes, the modality label alone is not enough. <
 </tbody>
 </table>
 <div class="note-box">
+<strong>2026-03-19 addendum: connectome-constrained predictors need a conditional-model route card</strong>
+<p>
+For connectome-constrained neural predictors, the label alone is also not enough. <a href="https://doi.org/10.1038/s41586-024-07939-3" target="_blank">Lappalainen et al. (2024)</a> showed that connectome structure plus task optimization can yield rich fly visual-system activity predictions, but the model still depended on partial motion-pathway reconstruction, simplified neuron/synapse dynamics, and an ensemble of multiple local optima. <a href="https://doi.org/10.1038/s41586-024-07763-9" target="_blank">Shiu et al. (2024)</a> showed that synapse-level connectivity plus neurotransmitter identity can predict specific fly sensorimotor circuits, while explicitly reading the result as a coarse description of named behaviours. <a href="https://doi.org/10.1038/s41586-024-07982-0" target="_blank">Pospisil et al. (2024)</a> used the connectome as a prior for perturbation-based effect estimation, but explicitly recovered a linear approximation to nonlinear dynamics. Finally, <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that even with the same synaptic weights, different biophysical parameters can still generate divergent recurrent dynamics. Therefore, this site now asks any connectome-constrained model claim to attach a <strong>conditional-model route card</strong> naming what structure was actually used, what remained fitted, which regime was tested, which mechanisms were omitted, how validation was done, and where abstention begins. The longer public reading rule is summarized in <a href="wiki/connectome-is-not-enough.html#conditional-predictor-route-card">Wiki: conditional-model route card</a>.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Conditional-model route-card field</th>
+<th>Minimum disclosure</th>
+<th>What this site stops claiming if absent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Structural prior and coverage</strong></td>
+<td>Name whether the model used EM edges, synapse counts, neurotransmitter signs, same-brain recordings, tractography priors, atlas averages, periodic tiling, and the exact spatial/cell-type coverage.</td>
+<td>The result is not read as if the relevant circuit or state variables had been fully observed.</td>
+</tr>
+<tr>
+<td><strong>Fitted degrees of freedom</strong></td>
+<td>List the still-learned quantities such as time constants, resting potentials, unitary synapse strengths, decoder weights, gain functions, or Jacobian entries around the operating point.</td>
+<td>“Connectome-constrained” is not read as direct state measurement.</td>
+</tr>
+<tr>
+<td><strong>Task/state regime and omitted mechanisms</strong></td>
+<td>Name the stimulus/behaviour/state regime, held-out/OOD slices, and omitted or frozen mechanisms such as electrical synapses, neuromodulation, glia, plasticity, or body/environment loops.</td>
+<td>Task-bounded success is not promoted to arbitrary-task, whole-brain, or maintenance-complete competence.</td>
+</tr>
+<tr>
+<td><strong>Validation, uncertainty, and ceiling</strong></td>
+<td>Name whether validation came from held-out activity, same-brain physiology, perturbation, behaviour, or only task loss; then expose ensemble spread / alternative families and declare the ceiling.</td>
+<td>The result is not promoted to unique internal-state recovery or general mechanistic solution.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
 <strong>Minimum operating rules</strong>
 <p>
-If this card is missing, this site treats the result as <strong>L0/L1 reproducible analysis or limited decode</strong> and does not promote it to L2 or above. For example, the default ceiling is <strong>macro-state tracking</strong> for <strong>EEG / HD-EEG + MRI only</strong>, <strong>an implant-region local population window</strong> for <strong>high-density extracellular probe only</strong>, <strong>structural scaffold</strong> for <strong>volume EM only</strong>, <strong>molecular / spatial prior</strong> for <strong>whole-brain atlas only</strong>, and still only <strong>local conditional prediction</strong> even for <strong>same-brain calcium + EM</strong>. For hemodynamic modalities, a group or cross-day BOLD / fNIRS difference without <strong>vascular-state / CVR</strong> or <strong>short-separation / superficial-bias</strong> audit is not accepted here as a neural difference. For diffusion-MRI tractography, a connectome claim without a <strong>tractography route card</strong> is not accepted here as an edge-complete graph and remains at the <strong>macro pathway prior / targeted bundle hypothesis</strong> ceiling. If a chronic-probe result lacks a unit-identity audit, single-unit longitudinal claims are not accepted. Detailed stack-specific ceilings and the <strong>state variable × timescale</strong> matrix are summarized in <a href="wiki/measurement-stack-and-claim-ceiling.html#state-variable-matrix">Wiki: observability and claim ceiling by measurement stack</a>.
+If this card is missing, this site treats the result as <strong>L0/L1 reproducible analysis or limited decode</strong> and does not promote it to L2 or above. For example, the default ceiling is <strong>macro-state tracking</strong> for <strong>EEG / HD-EEG + MRI only</strong>, <strong>an implant-region local population window</strong> for <strong>high-density extracellular probe only</strong>, <strong>structural scaffold</strong> for <strong>volume EM only</strong>, <strong>molecular / spatial prior</strong> for <strong>whole-brain atlas only</strong>, and still only <strong>local conditional prediction</strong> even for <strong>same-brain calcium + EM</strong>. For hemodynamic modalities, a group or cross-day BOLD / fNIRS difference without <strong>vascular-state / CVR</strong> or <strong>short-separation / superficial-bias</strong> audit is not accepted here as a neural difference. For diffusion-MRI tractography, a connectome claim without a <strong>tractography route card</strong> is not accepted here as an edge-complete graph and remains at the <strong>macro pathway prior / targeted bundle hypothesis</strong> ceiling. For connectome-constrained predictors, a model claim without a <strong>conditional-model route card</strong> remains at the <strong>conditional hypothesis engine / task-bounded predictor</strong> ceiling and is not accepted here as unique internal-state recovery. If a chronic-probe result lacks a unit-identity audit, single-unit longitudinal claims are not accepted. Detailed stack-specific ceilings and the <strong>state variable × timescale</strong> matrix are summarized in <a href="wiki/measurement-stack-and-claim-ceiling.html#state-variable-matrix">Wiki: observability and claim ceiling by measurement stack</a>.
 </p>
 </div>
 </section>
@@ -1466,6 +1505,7 @@ In response to technical criticisms (Issue #257-#260) submitted in the latter ha
 <ul>
 <li><strong>ESI/HBM logs:</strong>Only when making anatomical source claims, attach uncertainty maps from cranial conductivity, forward model sensitivity analysis, or hierarchical Bayesian estimation. </li>
 <li><strong>Alternative model log:</strong>Does not claim that the estimated model is the only solution, but reports the existence of alternative models or equivalence classes that can explain the same observed statistics. </li>
+<li><strong>Connectome-Constrained Model Card:</strong>When reporting a connectome-constrained predictor, name the structural prior and coverage, fitted degrees of freedom, task/state regime plus OOD slices, omitted mechanisms, validation / perturbation class, ensemble spread or alternative families, and abstention boundary. If this is missing, the result stays at the conditional-model / hypothesis-engine level. </li>
 <li><strong>Effective Connectivity Route Card:</strong>When reporting DCM or related effective-connectivity results, name the node set and omitted competitors, neural-mass / HRF / prior assumptions, family comparison or model-recovery results, perturbation / external validation route, reliability window, and abstention boundary. If this is missing, the result stays at the model-conditioned hypothesis level. </li>
 <li><strong>Body / Environment Boundary Card:</strong>For online human-in-the-loop or embodied tasks, name retained / substituted sensory, motor, and interoceptive channels, the surrogate body / environment contract, loop-removal tests, OOD environment slices, and the abstention boundary. If this is missing, the result stays at the local-controller level. </li>
 <li><strong>Preprocessing Fidelity Log:</strong>Records before and after spectra, exclusion/interpolation rates, changes in key metrics, and at least one task-consistent signal preservation metric, with or without ASR. </li>
@@ -1590,6 +1630,8 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Pandey, K., Yu, X.-W., Steinmetz, A., &amp; Alberini, C. M. (2021). Autophagy coupled to translation is required for long-term memory formation. <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">doi:10.1080/15548627.2020.1775393</a></li>
 <li>Thomas, M., Bogaciu, C.-A., Rizzoli, S. O., et al. (2025). Long-term potentiation-induced changes in actin dynamics and spine geometry persist on the timescale of the synaptic tag. <a href="https://doi.org/10.1038/s42003-025-08459-0" target="_blank">doi:10.1038/s42003-025-08459-0</a></li>
 <li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
+<li>Shiu, P.-K., et al. (2024). A Drosophila computational brain model reveals sensorimotor processing. <a href="https://doi.org/10.1038/s41586-024-07763-9" target="_blank">doi:10.1038/s41586-024-07763-9</a></li>
+<li>Pospisil, D. A., et al. (2024). The fly connectome reveals a path to the effectome. <a href="https://doi.org/10.1038/s41586-024-07982-0" target="_blank">doi:10.1038/s41586-024-07982-0</a></li>
 <li>Galarreta, M., &amp; Hestrin, S. (1999). A network of fast-spiking cells in the neocortex connected by electrical synapses. <a href="https://doi.org/10.1038/99496" target="_blank">doi:10.1038/99496</a></li>
 <li>Anastassiou, C. A., Perin, R., Markram, H., &amp; Koch, C. (2011). Ephaptic coupling of cortical neurons. <a href="https://doi.org/10.1038/nn.2727" target="_blank">doi:10.1038/nn.2727</a></li>
 <li>Yang, Y.-C., Wang, G.-H., Chou, P., Hsueh, S.-W., Lai, Y.-C., &amp; Kuo, C.-C. (2024). Dynamic electrical synapses rewire brain networks for persistent oscillations and epileptogenesis. <a href="https://doi.org/10.1073/pnas.2313042121" target="_blank">doi:10.1073/pnas.2313042121</a></li>
