@@ -478,3 +478,12 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` を `Ux-y` 行で再計数し、`RQ_TOTAL=60` と `A/B/C=17/25/18` を再確認しました。
 - RQカードの `主データ/補助データ` から抽出したEEG参照ID（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）を最新 `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
 - `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` 側も `Ux-y` 行で `RQ_TOTAL=60` を再確認し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り同期を維持しました。
+
+## 2026-03-19 14:03 JST 再検証ログ（本run / ユーザー依頼: RQ別深掘りで再固定）
+
+- 作業開始前に `auto-startup` 親リポジトリで `git pull --ff-only origin main` を実行し、`Already up to date` を確認しました。
+- 続けて `mind-upload` / `auto-research-funds` / `EEG-DATA` の各 `main` で `git pull --ff-only origin main` を実行し、最新化後に再検証しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` の `Ux-y` 行を再計数し、`RQ_TOTAL=60` と `A/B/C=17/25/18` を再確認しました。
+- `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` も同様に `RQ_TOTAL=60` と `A/B/C=17/25/18` を再確認し、両正本の整合を確認しました。
+- 深掘り運用は `1RQ=1検証命題=1応募テーマ=1主データ` を維持し、汎用横断要約ではなく各RQを個別に固定した運用を継続しました。
+- 参照EEG ID（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 2412`）を最新 `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
