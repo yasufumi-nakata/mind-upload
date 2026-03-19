@@ -25,6 +25,7 @@ page_highlights:
   - "For DCM / effective-connectivity claims, the Observability Budget now requires an effective-connectivity route card that names candidate model space, observation-model assumptions, validation, reliability, and abstention."
   - "For irreversibility / thermodynamic claims, the route card now names signal route, coarse-graining / timescale, estimator family plus dynamical assumptions, null control, quantity type, physiology-side grounding when energetic language is used, and cost isolation before any claim ceiling is raised."
   - "For ESI claims, simulation / phantom, stimulation ground truth, simultaneous invasive recording, and postsurgical outcome are separate validation classes; 'externally validated' alone is insufficient."
+  - "For ESI claims, one best inverse map is not enough; this page now asks for cross-solver / cross-parameter spread or posterior / ensemble width before anatomical claims are read strongly."
   - "At L2 and above, the latent-state error budget is added on top of the Observability Budget so the still-unobserved states that stop the claim are disclosed."
   - "At L2 and above, perisynaptic ECM / PNN state is separated from synaptic weights and glia when a claim depends on adult plasticity, receptor mobility, or memory stabilization."
   - "At L2 and above, local proteostasis / synaptic-tagging state is separated from current weights and transcription when a claim depends on late-LTP capture, consolidation, or reconsolidation."
@@ -47,6 +48,7 @@ known_points:
   - "A foundation-model score without corpus-overlap, harmonization, adaptation, and benchmark-version disclosure remains qualified decoding evidence rather than portable transfer evidence."
   - "A multimodal result is not one thing; simultaneous acquisition, geometric fusion, invasive calibration, and atlas priors must be audited separately."
   - "For ESI, passing one validation class does not auto-pass the others; stimulation error, simultaneous invasive concordance, and postsurgical outcome answer different questions."
+  - "For ESI, inverse-family, package, parameter, and conductivity choices can materially shift the reconstructed source, so solver-disagreement and uncertainty width are themselves audit items."
   - "A BOLD or fNIRS amplitude difference without vascular-state / CVR audit remains a hemodynamic-limited difference rather than a clean neural difference."
   - "An MRSI-derived metabolic-connectome label without metabolite-set, parceling, correction-model, and QC disclosure remains a macro-biochemical similarity scaffold rather than tractography or flux imaging."
   - "A connectome-constrained activity predictor without structural-prior, fitted-parameter, task-regime, omitted-mechanism, validation, and abstention disclosure remains a conditional model rather than internal-state recovery."
@@ -664,6 +666,11 @@ The most important update in this pass is that the criticism that ``important hi
 <td>It is easy to confuse improvements in accuracy and visualization with getting closer to the ground truth. </td>
 </tr>
 <tr>
+<td><strong>solution-set stability</strong></td>
+<td>For inverse/model-based claims, write the cross-solver / cross-parameter spread or posterior / ensemble width, and say whether the displayed map is best-case, median, or ensemble summary. </td>
+<td>It is easy to publish one clean-looking map and hide that the inference is strongly method-conditioned. </td>
+</tr>
+<tr>
 <td><strong>validity horizon</strong></td>
 <td>Write how far within-session, cross-state, cross-day, perturbation, and recovery have been verified. </td>
 <td>It is easier to unduly extend same-day fit into long-term stability or memory claims. </td>
@@ -712,6 +719,12 @@ This site no longer accepts the phrase <strong>external validation</strong> with
 </tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>2026-03-19 addendum: ESI claims need a solver-disagreement audit</strong>
+<p>
+The remaining weakness was to let one inverse solution stand in for the whole solution set. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">Mahjoory et al. (2017)</a> showed that inverse-method and software-package choice induces considerable variability and explicitly recommended verifying EEG source findings with more than one source-imaging procedure. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a> then showed on intracranial-stimulation ground truth that only a small fraction of tested solutions reached the session-wise optimum, even though the benchmark was tightly controlled. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a> further showed that skull and skin conductivity uncertainty shifts reconstructed depth and location, especially for quasi-tangential sources. Therefore, when an anatomical source claim depends on one inverse family or one hand-picked parameter set, this site now asks for a <strong>solver-disagreement audit</strong> that reports compared solver families / packages, parameter window, and headline-location spread. If that is missing, the result stays at the <strong>method-sensitive source-hypothesis</strong> level rather than stable anatomical evidence.
+</p>
+</div>
 <div class="note-box">
 <strong>2026-03-18 addendum: hemodynamic modalities need a vascular-state / CVR audit</strong>
 <p>
@@ -1596,6 +1609,7 @@ In response to technical criticisms (Issue #257-#260) submitted in the latter ha
 <h4>Log with applicable conditions</h4>
 <ul>
 <li><strong>ESI/HBM logs:</strong>Only when making anatomical source claims, attach uncertainty maps from cranial conductivity, forward model sensitivity analysis, or hierarchical Bayesian estimation. </li>
+<li><strong>Inverse-Solver Agreement Log:</strong>When reporting an anatomical ESI/HBM result, name the inverse families / packages compared, parameter window, headline-location spread or overlap metric, and whether the displayed map is best-case, median, or ensemble. If this is missing, the result stays at the method-sensitive source-hypothesis level. </li>
 <li><strong>Alternative model log:</strong>Does not claim that the estimated model is the only solution, but reports the existence of alternative models or equivalence classes that can explain the same observed statistics. </li>
 <li><strong>Connectome-Constrained Model Card:</strong>When reporting a connectome-constrained predictor, name the structural prior and coverage, fitted degrees of freedom, task/state regime plus OOD slices, omitted mechanisms, validation / perturbation class, ensemble spread or alternative families, and abstention boundary. If this is missing, the result stays at the conditional-model / hypothesis-engine level. </li>
 <li><strong>Effective Connectivity Route Card:</strong>When reporting DCM or related effective-connectivity results, name the node set and omitted competitors, neural-mass / HRF / prior assumptions, family comparison or model-recovery results, perturbation / external validation route, reliability window, and abstention boundary. If this is missing, the result stays at the model-conditioned hypothesis level. </li>
@@ -1667,8 +1681,10 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Goldberger, A. L., et al. (2000). PhysioBank / PhysioNet. <a href="https://doi.org/10.1161/01.CIR.101.23.e215" target="_blank">doi:10.1161/01.CIR.101.23.e215</a></li>
 <li>Jayaram, V., &amp; Barachant, A. (2018). MOABB: trustworthy algorithm benchmarking for BCIs. <a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">doi:10.1088/1741-2552/aadea0</a></li>
 <li>Michel, C. M., &amp; Brunet, D. (2019). EEG source imaging: a practical review. <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">doi:10.3389/fneur.2019.00325</a></li>
+<li>Mahjoory, K., Nikulin, V. V., Botrel, L., et al. (2017). Consistency of EEG source localization and connectivity estimates. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">doi:10.1016/j.neuroimage.2017.02.076</a></li>
 <li>Mikulan, E., Russo, S., Parmigiani, S., et al. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
 <li>Unnwongse, K., et al. (2023). Validating EEG source imaging using intracranial electrical stimulation. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
+<li>Vorwerk, J., Wolters, C. H., &amp; Baumgarten, D. (2024). Global sensitivity of EEG source analysis to tissue conductivity uncertainties. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">doi:10.3389/fnhum.2024.1335212</a></li>
 <li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
 <li>Birot, G., Spinelli, L., Vulliemoz, S., et al. (2014). Head model and electrical source imaging: a study of 38 epileptic patients. <a href="https://doi.org/10.1016/j.nicl.2014.06.005" target="_blank">doi:10.1016/j.nicl.2014.06.005</a></li>
 <li>Sarwar, T., Ramamohanarao, K., Daducci, A., Schiavi, S., Smith, R. E., &amp; Zalesky, A. (2023). Evaluation of tractogram filtering methods using human-like connectome phantoms. <a href="https://doi.org/10.1016/j.neuroimage.2023.120376" target="_blank">doi:10.1016/j.neuroimage.2023.120376</a></li>
