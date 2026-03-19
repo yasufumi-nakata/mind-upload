@@ -5,7 +5,7 @@ description: "We will organize based on primary literature how EEG, MEG, fMRI, i
 article_type: Wiki
 subtitle: "Rather than adding everything, it is designed to increase synchronization, geometry, and external validation."
 author: Mind Uploading Research Project
-last_updated: "2026-03-18"
+last_updated: "2026-03-19"
 note: "Technical / natural science only"
 audience: "People who want to judge how to compensate for the limitations of EEG alone from only the technical and natural science aspects"
 reading_time: "12-18 minutes"
@@ -15,11 +15,13 @@ page_highlights:
   - "Read Multimodal Integration with 6 Audit Gates."
   - "Compare the differences between EEG+fMRI, EEG+MEG, and EEG+invasive recordings with primary literature."
   - "Hemodynamic routes now separate neural interpretation from vascular-state / CVR and superficial/systemic confounds."
+  - "Wearable OPM-MEG is read here as movement-tolerant electrophysiology only when magnetic-field control, calibration, and anatomy choice are disclosed."
   - "Fix that inverse problem and state completeness will remain even after integration."
 known_points:
   - "By combining multiple modalities, some aspects of time, space, and locality can be complemented."
   - "However, the amount of improvement is highly dependent on the shared clock, individual anatomy, electrode/sensor location, conductivity assumptions, and the presence or absence of an external reference."
   - "For EEG+fMRI or EEG+fNIRS, alignment alone is not enough; vascular transfer state must be audited separately from neural interpretation."
+  - "OPM-MEG can tolerate much more movement than SQUID-MEG, but it still depends on shielding, active field control, sensor calibration, and source-model disclosure."
   - "Invasive recording is a strong calibration route, but suffers from coverage bias and patient bias."
 unknown_points:
   - "It is not yet certain which integration set is most effective for which stage of WBE."
@@ -54,6 +56,13 @@ recommended_pages:
 <h2>Conclusion</h2>
 <p>
 Multimodal integration can compensate for some of the weaknesses of EEG. However, it can also simply replace <strong>one inverse problem with multiple problems involving synchronization, geometry, noise, and external validation</strong>. Therefore, on this site, we do not evaluate only by the fact that ``modalities were added'', but by <strong>which audit gate was passed</strong>.
+</p>
+</div>
+
+<div class="note-box">
+<strong>When wearable MEG sounds like unconstrained naturalism</strong>
+<p>
+The current OPM-MEG literature does show standing, ambulatory, and two-person proof-of-concept. But on this site, the safe reading remains narrower: the route still depends on <strong>magnetic shielding</strong>, <strong>active field control</strong>, <strong>sensor calibration / co-registration</strong>, and <strong>source-model disclosure</strong>. Without those, ``wearable'' is not treated as a portable substitute for standard MEG.
 </p>
 </div>
 
@@ -142,8 +151,8 @@ Here we will only deal with the technical and natural science aspects. It does n
 </tr>
 <tr>
 <td><strong>OPM-MEG system</strong></td>
-<td>Boto et al. (2018) demonstrated the feasibility of MEG measurement under conditions including natural movement using wearable OPM-MEG. </td>
-<td>It relies on background field nulling and motion-aware correction, and is not a simple mobile replacement device. </td>
+<td>Boto et al. (2018), Seymour et al. (2021), Holmes et al. (2023), and Holmes et al. (2023) showed wearable MEG during seated, standing/mobile, ambulatory, and two-person interactive paradigms. </td>
+<td>Low dynamic range / near-zero field operation, magnetically shielded rooms, active field nulling, optical tracking / interference suppression, sensor calibration, anatomy choice, and crosstalk management remain separate engineering gates. </td>
 </tr>
 </tbody>
 </table>
@@ -177,6 +186,24 @@ If the hemodynamic side is fNIRS rather than fMRI, the same caution remains. <a 
 <p>
 Zhang et al. (2006) used simultaneous scalp EEG/ECoG to show that the main spatial patterns of cortical potential reconstructions can be preserved with realistic FEM and co-registered MRI/CT. Seeber et al. (2019) also showed that deep signals are conditionally detectable using 256ch scalp EEG and simultaneous DBS recording. However, these only strengthen the area visible in the invasion record, and do not guarantee unmeasured areas.
 </p>
+
+<h3>5. OPM-MEG expands movement tolerance, but not without magnetic-field and source-model audits</h3>
+<p>
+Wearable OPM-MEG is a real advance because the sensors move with the head and can therefore support paradigms that fixed SQUID helmets cannot. <a href="https://doi.org/10.1038/nature26147" target="_blank">Boto et al. (2018)</a> established the first motion-tolerant wearable system, <a href="https://doi.org/10.1016/j.neuroimage.2021.118604" target="_blank">Seymour et al. (2021)</a> pushed this to standing/mobile participants, <a href="https://doi.org/10.1016/j.neuroimage.2023.120157" target="_blank">Holmes et al. (2023)</a> enabled ambulatory movement with matrix-coil active shielding, and <a href="https://doi.org/10.3390/s23125454" target="_blank">Holmes et al. (2023)</a> extended proof-of-concept to two-person hyperscanning. But the common lesson is not ``movement solved.'' It is that <strong>movement becomes measurable when the magnetic environment is controlled tightly enough</strong>.
+</p>
+<p>
+The main engineering ceiling is still the field environment. OPMs operate around near-zero field and have low dynamic range, so background field drift, participant movement through a non-zero field, and coil-induced interference all matter. <a href="https://doi.org/10.1109/TBME.2021.3100770" target="_blank">Mellor et al. (2022)</a> and <a href="https://doi.org/10.1016/j.neuroimage.2021.118401" target="_blank">Rea et al. (2021)</a> showed why precision field modeling and control are necessary, and <a href="https://doi.org/10.1109/TBME.2024.3465654" target="_blank">Holmes et al. (2025)</a> showed that lighter shielded rooms become plausible only when tSSS and active compensation are added. So on this site, wearable OPM-MEG is not read as ``shield-free'' or ``ordinary-room'' measurement.
+</p>
+<p>
+The second ceiling is source modeling. <a href="https://doi.org/10.3390/s22083059" target="_blank">Iivanainen et al. (2022)</a> showed that sensor gain, position, and orientation still need explicit calibration, <a href="https://doi.org/10.1162/IMAG.a.8" target="_blank">Rhodes et al. (2025)</a> showed that pseudo-MRI can be useful when MRI is difficult but that individual MRI remains the gold standard, and <a href="https://doi.org/10.1063/5.0273491" target="_blank">Wu et al. (2025)</a> showed that crosstalk remains a practical array-design limit. Therefore, the safe ceiling on this page is <strong>movement-tolerant macro electrophysiology under disclosed field control and source-model assumptions</strong>, not unconstrained naturalistic brain readout and not state-complete observation.
+</p>
+
+<div class="note-box">
+<strong>Do not read "wearable" as shield-free, calibration-free, or state-complete</strong>
+<p>
+Even when OP-MEG looks much closer to daily behavior, the public claim still has to name <strong>shielding class</strong>, <strong>field-nulling / interference-suppression method</strong>, <strong>motion-tracking path</strong>, <strong>sensor calibration route</strong>, <strong>anatomy route</strong>, and <strong>where abstention begins</strong>. If those are missing, this site keeps the result at the feasibility / proof-of-concept level.
+</p>
+</div>
 </section>
 
 <section class="section" id="site-rules">
@@ -189,6 +216,7 @@ Zhang et al. (2006) used simultaneous scalp EEG/ECoG to show that the main spati
 <li><strong>EEG + fMRI:</strong>It is useful as a complement to spatial information, but requires auditing of artifacts, safety, time series alignment, and vascular-state / CVR limits before a BOLD difference is read as a neural difference. </li>
 <li><strong>EEG + fNIRS:</strong>Short-separation / superficial diagnostic is required before HbO / HbR differences are treated as neural differences. </li>
 <li><strong>EEG + invasive recording: Treated as a coverage-limited calibration/validation route, not a gold standard. </li>
+<li><strong>OPM-MEG:</strong>Wearable and motion-tolerant does not waive shielding, field nulling, co-registration, anatomy, or crosstalk audit. </li>
 <li><strong>state coverage:</strong>If the synapse, neuromodification, glial, or cell type label is unobserved, it will be marked as unobserved. </li>
 </ul>
 </div>
@@ -212,6 +240,15 @@ Zhang et al. (2006) used simultaneous scalp EEG/ECoG to show that the main spati
 <li>Seeber, M., Cantonas, L.-M., Hoevels, M., et al. (2019). Subcortical electrophysiological activity is detectable with high-density EEG source imaging. <em>Nature Communications</em>, 10, 753. <a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">doi:10.1038/s41467-019-08725-w</a></li>
 <li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Direct validation of EEG source imaging by intracranial electric stimulation in human patients. <em>Brain Communications</em>, 5(2), fcad023. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
 <li>Boto, E., Holmes, N., Leggett, J., et al. (2018). Moving magnetoencephalography towards real-world applications with a wearable system. <em>Nature</em>, 555, 657-661. <a href="https://doi.org/10.1038/nature26147" target="_blank">doi:10.1038/nature26147</a></li>
+<li>Seymour, R. A., Alexander, N., Mellor, S., O'Neill, G. C., Tierney, T. M., Barnes, G. R., &amp; Maguire, E. A. (2021). Using OPMs to measure neural activity in standing, mobile participants. <em>NeuroImage</em>, 244, 118604. <a href="https://doi.org/10.1016/j.neuroimage.2021.118604" target="_blank">doi:10.1016/j.neuroimage.2021.118604</a></li>
+<li>Mellor, S. J., Tierney, T. M., O'Neill, G. C., Alexander, N., Seymour, R. A., Holmes, N., Lopez, J. D., Hill, R. M., Boto, E., Rea, M., Roberts, G., Leggett, J., Bowtell, R., Brookes, M. J., Maguire, E. A., Walker, M. C., &amp; Barnes, G. R. (2022). Magnetic Field Mapping and Correction for Moving OP-MEG. <em>IEEE Transactions on Biomedical Engineering</em>, 69(2), 528-536. <a href="https://doi.org/10.1109/TBME.2021.3100770" target="_blank">doi:10.1109/TBME.2021.3100770</a></li>
+<li>Rea, M., Holmes, N., Hill, R. M., Boto, E., Leggett, J., Edwards, L. J., Woolger, D., Dawson, E., Shah, V., Osborne, J., Bowtell, R., &amp; Brookes, M. J. (2021). Precision magnetic field modelling and control for wearable magnetoencephalography. <em>NeuroImage</em>, 241, 118401. <a href="https://doi.org/10.1016/j.neuroimage.2021.118401" target="_blank">doi:10.1016/j.neuroimage.2021.118401</a></li>
+<li>Holmes, N., Rea, M., Hill, R. M., Leggett, J., Edwards, L. J., Hobson, P. J., Boto, E., Tierney, T. M., Rier, L., Reina Rivero, G., Shah, V., Osborne, J., Fromhold, T. M., Glover, P., Brookes, M. J., &amp; Bowtell, R. (2023). Enabling ambulatory movement in wearable magnetoencephalography with matrix coil active magnetic shielding. <em>NeuroImage</em>, 274, 120157. <a href="https://doi.org/10.1016/j.neuroimage.2023.120157" target="_blank">doi:10.1016/j.neuroimage.2023.120157</a></li>
+<li>Holmes, N., Rea, M., Hill, R. M., Boto, E., Leggett, J., Edwards, L. J., Rhodes, N., Shah, V., Osborne, J., Fromhold, T. M., Glover, P., Montague, P. R., Brookes, M. J., &amp; Bowtell, R. (2023). Naturalistic hyperscanning with wearable magnetoencephalography. <em>Sensors</em>, 23(12), 5454. <a href="https://doi.org/10.3390/s23125454" target="_blank">doi:10.3390/s23125454</a></li>
+<li>Holmes, N., Leggett, J., Hill, R. M., Rier, L., Boto, E., Schofield, H., Hayward, T., Dawson, E., Woolger, D., Shah, V., Taulu, S., Brookes, M. J., &amp; Bowtell, R. (2025). Wearable magnetoencephalography in a lightly shielded environment. <em>IEEE Transactions on Biomedical Engineering</em>, 72(2), 609-618. <a href="https://doi.org/10.1109/TBME.2024.3465654" target="_blank">doi:10.1109/TBME.2024.3465654</a></li>
+<li>Iivanainen, J., Borna, A., Zetter, R., Carter, T. R., Stephen, J. M., McKay, J., Parkkonen, L., Taulu, S., &amp; Schwindt, P. D. D. (2022). Calibration and Localization of Optically Pumped Magnetometers Using Electromagnetic Coils. <em>Sensors</em>, 22(8), 3059. <a href="https://doi.org/10.3390/s22083059" target="_blank">doi:10.3390/s22083059</a></li>
+<li>Rhodes, N., Rier, L., Boto, E., Hill, R. M., &amp; Brookes, M. J. (2025). Source reconstruction without an MRI using optically pumped magnetometer-based magnetoencephalography. <em>Imaging Neuroscience</em>, 3, IMAG.a.8. <a href="https://doi.org/10.1162/IMAG.a.8" target="_blank">doi:10.1162/IMAG.a.8</a></li>
+<li>Wu, T., Xiao, W., Peng, X., Wu, T., &amp; Guo, H. (2025). Crosstalk reduction in optically pumped magnetometers arrays for biomagnetic measurement. <em>Review of Scientific Instruments</em>, 96(8), 085004. <a href="https://doi.org/10.1063/5.0273491" target="_blank">doi:10.1063/5.0273491</a></li>
 </ol>
 </section>
 

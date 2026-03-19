@@ -18,6 +18,7 @@ page_highlights:
   - "M2 separates hardware latency from biological timing-state, so a fast device loop is not confused with timing-complete reconstruction."
   - "M1 / M5 keep neural state distinct from vascular transfer state, so a BOLD amplitude difference is not silently promoted to a neural difference."
   - "M4 / I6 now treat the body / environment boundary as an explicit scientific audit item, so a fast local loop is not silently promoted to solved embodiment."
+  - "Wearable OPM-MEG is treated as movement-tolerant macro measurement only when shielding, field control, sensor calibration, and anatomy choice are disclosed."
   - "R6 treats personalization not as a pure performance trick, but as a verification problem that must separate target signal from subject fingerprint and setup shortcuts."
   - "R4 now treats DCM / effective-connectivity outputs as route-card claims that must disclose model space, observation assumptions, validation, reliability, and abstention."
 known_points:
@@ -28,6 +29,7 @@ known_points:
   - "For hemodynamic modalities, neural interpretation and vascular transfer / CVR audit are separate requirements."
   - "Closed-loop device timing and biological conduction timing are different audits; passing one does not auto-pass the other."
   - "A disclosed body / environment boundary is a separate audit from low latency or online accuracy."
+  - "OPM-MEG motion tolerance still depends on magnetic shielding, active nulling, calibration, and source-model disclosure."
   - "The fact that personalization helps performance is not the same as showing a population-level neural signal; subject-fingerprint and acquisition-distribution audits are still required."
 unknown_points:
   - "It is still unsettled which measurement granularity will ultimately be sufficient for WBE."
@@ -627,6 +629,7 @@ Therefore, in this roadmap, we first fix ``which loop class is handled and which
 <p><strong>Question:</strong>Different measurements have different coordinate systems, delays, and noise structures. Are integration errors destroying the “signal you want to learn”? </p>
 <p><strong>Conditions for disproving: </strong>Reconstruction (R2) becomes unstable due to alignment error and reproducibility (P2) decreases</p>
 <p><strong>2026-03 supplement:</strong> For EEG + fMRI / fNIRS, a shared clock is still not enough. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">Murphy et al. (2011)</a> and <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">Williams et al. (2023)</a> show that vascular reactivity alters the meaning of task BOLD amplitude, <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">Wu et al. (2023)</a> shows that baseline CBF can partially explain age-related BOLD differences, and <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">Yucel et al. (2015)</a> show that fNIRS needs short-separation regression to suppress superficial autonomic contamination. Therefore, M5 now treats <strong>vascular-state / CVR calibration or abstention</strong> as part of multimodal alignment for hemodynamic stacks.</p>
+<p><strong>2026-03-19 supplement:</strong> OPM-MEG adds movement tolerance, but not a free pass on measurement conditions. <a href="https://doi.org/10.1038/nature26147" target="_blank">Boto et al. (2018)</a> and <a href="https://doi.org/10.1016/j.neuroimage.2021.118604" target="_blank">Seymour et al. (2021)</a> showed motion-tolerant OP-MEG recordings, <a href="https://doi.org/10.1016/j.neuroimage.2023.120157" target="_blank">Holmes et al. (2023)</a> and <a href="https://doi.org/10.3390/s23125454" target="_blank">Holmes et al. (2023)</a> extended this to ambulatory movement and two-person hyperscanning by coupling field nulling to optical tracking, <a href="https://doi.org/10.1109/TBME.2024.3465654" target="_blank">Holmes et al. (2025)</a> showed that lighter shielded rooms become plausible only with tSSS plus active compensation, and <a href="https://doi.org/10.1162/IMAG.a.8" target="_blank">Rhodes et al. (2025)</a> showed that pseudo-MRI can help when MRI is difficult but still leaves individual MRI as the gold standard. Therefore, on this roadmap, OPM-MEG is read as <strong>movement-tolerant macro electrophysiology under disclosed magnetic-field control, sensor calibration, and anatomy route</strong>, not as shield-free naturalistic brain readout.</p>
 <p><strong>Next required:</strong>Does the same data match in multiple pipelines (Analysis differential audit)</p>
 </div>
 </details>
@@ -1547,7 +1550,7 @@ Prior research necessary to solve unresolved problems is organized by field. The
 </tr>
 <tr>
 <td>Measurement extension (OPM etc.)</td>
-<td>Boto et al. (2018), Logothetis (2008), Purdon et al. (2013)</td>
+<td>Boto et al. (2018), Seymour et al. (2021), Holmes et al. (2023), Holmes et al. (2025), Rhodes et al. (2025)</td>
 <td>U2, U7, U8</td>
 </tr>
 <tr>
@@ -1896,7 +1899,14 @@ Below are the main documents directly related to the open questions of U0-U15. F
 <li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
 <li>Logothetis, N. K. (2008). What we can do and what we cannot do with fMRI. <a href="https://doi.org/10.1038/nature06976" target="_blank">doi:10.1038/nature06976</a></li>
 <li>Purdon, P. L., et al. (2013). EEG signatures of loss/recovery of consciousness.</li>
-<li>Boto, E., et al. (2018). Wearable OPM-MEG.</li>
+<li>Boto, E., Holmes, N., Leggett, J., et al. (2018). Moving magnetoencephalography towards real-world applications with a wearable system. <a href="https://doi.org/10.1038/nature26147" target="_blank">doi:10.1038/nature26147</a></li>
+<li>Seymour, R. A., Alexander, N., Mellor, S., O'Neill, G. C., Tierney, T. M., Barnes, G. R., &amp; Maguire, E. A. (2021). Using OPMs to measure neural activity in standing, mobile participants. <a href="https://doi.org/10.1016/j.neuroimage.2021.118604" target="_blank">doi:10.1016/j.neuroimage.2021.118604</a></li>
+<li>Holmes, N., Rea, M., Hill, R. M., et al. (2023). Enabling ambulatory movement in wearable magnetoencephalography with matrix coil active magnetic shielding. <a href="https://doi.org/10.1016/j.neuroimage.2023.120157" target="_blank">doi:10.1016/j.neuroimage.2023.120157</a></li>
+<li>Holmes, N., Rea, M., Hill, R. M., et al. (2023). Naturalistic hyperscanning with wearable magnetoencephalography. <a href="https://doi.org/10.3390/s23125454" target="_blank">doi:10.3390/s23125454</a></li>
+<li>Holmes, N., Leggett, J., Hill, R. M., et al. (2025). Wearable magnetoencephalography in a lightly shielded environment. <a href="https://doi.org/10.1109/TBME.2024.3465654" target="_blank">doi:10.1109/TBME.2024.3465654</a></li>
+<li>Iivanainen, J., Borna, A., Zetter, R., et al. (2022). Calibration and Localization of Optically Pumped Magnetometers Using Electromagnetic Coils. <a href="https://doi.org/10.3390/s22083059" target="_blank">doi:10.3390/s22083059</a></li>
+<li>Rhodes, N., Rier, L., Boto, E., Hill, R. M., &amp; Brookes, M. J. (2025). Source reconstruction without an MRI using optically pumped magnetometer-based magnetoencephalography. <a href="https://doi.org/10.1162/IMAG.a.8" target="_blank">doi:10.1162/IMAG.a.8</a></li>
+<li>Wu, T., Xiao, W., Peng, X., Wu, T., &amp; Guo, H. (2025). Crosstalk reduction in optically pumped magnetometers arrays for biomagnetic measurement. <a href="https://doi.org/10.1063/5.0273491" target="_blank">doi:10.1063/5.0273491</a></li>
 </ol>
 
 <h3>D. Preprocessing/synchronization/network analysis</h3>
