@@ -20,7 +20,7 @@ page_highlights:
 known_points:
   - "Many misunderstandings can be avoided simply by reducing terminology confusion."
   - "It is especially important to distinguish between decode/emulate, correlation/causation, functional connectivity/effective connectivity/causal wiring, observability/identifiability, model fit/direct validation, and brain signal/language prior."
-  - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, thermal-state, timing-state, vascular-state, proxy-class, and route-maturity language."
+  - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, and route-maturity language."
   - "This page serves as an entry point for short definitions and a way to return to the main text."
 unknown_points:
   - "Terms related to the theory of consciousness have slightly different meanings depending on the paper or position."
@@ -367,7 +367,7 @@ Words such as <strong>proxy class</strong>, <strong>route maturity / model burde
 </tr>
 <tr>
 <td><strong>Maintenance-state</strong></td>
-<td>Slow controller and support variables, such as sleep / wake history, thermal-state, ionic state, bioenergetic / mitochondrial support, glial / metabolic support, and clearance-related support, that matter for long-horizon stability.</td>
+<td>Slow controller and support variables, such as sleep / wake history, cargo-transport / cytoskeletal trafficking state, thermal-state, ionic state, bioenergetic / mitochondrial support, glial / metabolic support, and clearance-related support, that matter for long-horizon stability.</td>
 </tr>
 <tr>
 <td><strong>Support-state proxy</strong></td>
@@ -380,6 +380,10 @@ Words such as <strong>proxy class</strong>, <strong>route maturity / model burde
 <tr>
 <td><strong>Timing-state</strong></td>
 <td>Biological conduction-timing variables such as myelin, node / internode geometry, periaxonal coupling, and related support state. It is different from hardware latency.</td>
+</tr>
+<tr>
+<td><strong>Cargo-transport / cytoskeletal trafficking state</strong></td>
+<td>The branch-, spine-, or bouton-specific delivery and retention of receptors, endosomes, RNA cargoes, organelles, and presynaptic components. It is different from both local proteostasis and bioenergetic-state.</td>
 </tr>
 </tbody>
 </table>
