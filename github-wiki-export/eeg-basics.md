@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-14 / 位置づけ: Beginner guide
+- 更新日: 2026-03-19 / 位置づけ: Beginner guide
 
 ## このページの役割
 This page is a wiki that explains from the basics what EEG measures. Beyond complicated formulas, the goal is to understand ``what kind of signals are mixed together and where'' and ``why preprocessing and QC are important.''
@@ -21,11 +21,14 @@ We highlight the limitations of EEG so as not to overestimate it, but that doesn
 - [Wiki: Basics of WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - If you want to see first where EEG fits into the overall WBE, click here.
 - [Wiki: EEG pretreatment and QC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - We will organize preprocessing and logging methods in a practical manner.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Understand why EEG also requires standards and QC.
+- [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - Use this page when you want the limits of ESI, DCM, and SCM organized together.
 
 ## いま分かっていること
 - EEG is good at looking at time changes in milliseconds.
 - The observed signal is the result of a mixture of many activities, and interpretation requires assumptions.
 - Including individualized MRI and external references improves source imaging, but uncertainty remains for deep and weak sources.
+- Reference choice, recording setup, and channel layout can materially change ERP, connectivity, and decoding conclusions.
+- Artifact cleanup does not by itself solve source leakage or turn directed connectivity into causal proof.
 - Public data provides plenty of practice with preprocessing and baseline comparisons.
 
 ## まだ分かっていないこと
@@ -42,7 +45,12 @@ EEG is a method that measures electrical potential differences using electrodes 
 
 <strong>Switch to stop on this page first</strong>
 <p>
-With EEG, it is different to<strong>observe scalp signals, conditionally estimate the brain source, and<strong>uniquely identify internal states. If these three are confused, beginners will read "seen" and "estimated" to mean the same thing.
+With EEG, it is different to <strong>observe scalp signals</strong>, <strong>conditionally estimate brain sources</strong>, <strong>estimate interactions</strong>, and <strong>uniquely identify internal states</strong>. If these are confused, beginners will read "seen" and "estimated" as if they were the same thing.
+</p>
+
+<strong>2026-03 correction for the beginner route</strong>
+<p>
+The older beginner route on this site stopped at "EEG is mixed and source imaging is hard." That was too weak. For EEG, <strong>measurement condition itself</strong> matters: reference system, electrode layout, device chain, and protocol can change what the scalp signal even means. It was also necessary to say more clearly that a <strong>connectivity map or directed graph</strong> is a stronger claim than a sensor trace or even a source estimate.
 </p>
 
 <h2>What EEG is good at</h2>
@@ -90,6 +98,10 @@ With EEG, it is different to<strong>observe scalp signals, conditionally estimat
 <td>Making a strong claim of identity using EEG alone</td>
 <td>EEG is an important clue, but it alone cannot confirm memories, values, or causal continuity. </td>
 </tr>
+<tr>
+<td>Treating a connectivity map or directed graph as discovered causal wiring</td>
+<td>Reference choice, sensor mixing, source leakage, parcellation, and missing external validation can all change the network result even after the waveform looks clean. </td>
+</tr>
 </tbody>
 </table>
 
@@ -114,6 +126,11 @@ With EEG, it is different to<strong>observe scalp signals, conditionally estimat
 <td>Being able to detect when the conditions are severe is different from being able to restore uniqueness in general. </td>
 </tr>
 <tr>
+<td><strong>Network / directed-connectivity estimate</strong></td>
+<td>With source modeling, parcellation, and explicit metrics, one can estimate conditional interaction structure more strongly than at pure sensor level. </td>
+<td>That still does not prove leak-free inter-areal coupling or causal direction. Connectivity and directed connectivity need their own validation and abstention rules. </td>
+</tr>
+<tr>
 <td><strong>Identification</strong></td>
 <td>External criteria such as intracranial stimulation, simultaneous SEEG/ECoG, phantoms, and postoperative outcomes allow for error auditing. </td>
 <td>Without an external standard, it is impossible to say ``I have found the source'' or ``I have achieved a sufficient state for WBE.'' </td>
@@ -126,22 +143,33 @@ With EEG, it is different to<strong>observe scalp signals, conditionally estimat
 Seeber et al. (2019) demonstrated detectability of subcortical signals with 256ch scalp EEG and simultaneous DBS recordings, but did not claim general unique reconstruction. Unnwongse et al. (2023) reported that localization error depends on cranial conductivity and source depth in direct validation for intracranial stimulation, and Hao et al. (2025) showed that source power and source depth strongly influence error in 29 cases of simultaneous HD-EEG/SEEG. Therefore, the correct way to read it is ``partially auditable if the conditions are strictly fixed'', not ``the brain source can be uniquely read using EEG alone''.
 </p>
 
+<strong>Connectivity is not just one more EEG output</strong>
+<p>
+It is tempting to think that once a source estimate exists, a connectivity graph is just the next summary. That is too strong. Vinck et al. (2011) made wPLI safer against some zero-lag mixing, but Haufe et al. (2013) showed that sensor-space connectivity remains strongly limited by volume conduction, Palva et al. (2018) showed that even source-space measures can create ghost interactions, and Miljevic et al. (2025) showed that sensor-space network results move with rereferencing, epoch design, and metric choice. On this site, EEG connectivity is therefore read as a <strong>model- and pipeline-conditioned estimator</strong>, not as automatically discovered wiring.
+</p>
+
 <h2>Why QC and pretreatment are important</h2>
 <p>
-EEG is a measurement that is susceptible to noise. Results vary depending on eye blinks, myoelectricity, body movements, power supply noise, reference electrode placement, filter settings, etc. Therefore, it is not enough just to have a diagram that looks good, it is necessary to record how it was processed.
+EEG is a measurement that is susceptible to noise, but the important correction is that the issue is not only noise. Results can move with eye blinks, myoelectricity, body movements, power supply noise, <strong>reference choice</strong>, <strong>electrode layout</strong>, <strong>device-side filtering</strong>, and <strong>site-specific setup</strong>. Therefore, it is not enough to keep only a clean-looking figure; one must also record the measurement condition that made that figure possible.
 </p>
 
 <h4>What you want to keep as a minimum</h4>
 <ul>
 <li><strong>Reference method:</strong>What standard was used to measure the potential difference? </li>
+<li><strong>Recording setup:</strong>Which device chain, sampling policy, and electrode layout were used? </li>
 <li><strong>Filter:</strong>Which frequency band is passed through? </li>
 <li><strong>Artifact processing:</strong>Which noise was removed and how? </li>
 <li><strong>Exclusion criteria:</strong>Which data were excluded and why? </li>
 </ul>
 
+<strong>Same task does not guarantee the same measurement condition</strong>
+<p>
+Xu et al. (2020) showed that cross-dataset deep-learning results move with environmental variability such as amplifier, cap, sampling rate, and filtering. That is why this site does not treat setup as a background nuisance. It is part of the observation model and has to be logged before the score is interpreted.
+</p>
+
 <h2>How to connect with WBE</h2>
 <p>
-EEG is not a device that suddenly completes WBE. However, it is important for providing time information on state changes, baseline comparison, and reproducibility with public data. At Mind-Upload, we treat EEG not as a device that reads everything, but as an observation tool that provides macroscopic constraints.
+EEG is not a device that suddenly completes WBE. However, it is important for providing time information on state changes, baseline comparison, and reproducibility with public data. At Mind-Upload, we treat EEG not as a device that reads everything, but as an observation tool that provides macroscopic constraints. The practical consequence is that <strong>measurement condition, source-estimation validation class, and connectivity ceiling</strong> all have to be disclosed separately before an EEG result is promoted.
 </p>
 
 <h4>Next</h4>
@@ -159,9 +187,15 @@ EEG is not a device that suddenly completes WBE. However, it is important for pr
 <h2>References</h2>
 <ol>
 <li>Pernet, C. R., Appelhoff, S., Gorgolewski, K. J., et al. (2019). EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. <em>Scientific Data</em>, 6, 103. <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">doi:10.1038/s41597-019-0104-8</a></li>
+<li>Pernet, C., Garrido, M. I., Gramfort, A., et al. (2020). Issues and recommendations from the OHBM COBIDAS MEEG committee for reproducible EEG and MEG research. <em>Nature Neuroscience</em>, 23, 1473-1483. <a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">doi:10.1038/s41593-020-00709-0</a></li>
 <li>Michel, C. M., &amp; Brunet, D. (2019). EEG source imaging: a practical review of the analysis steps. <em>Frontiers in Neurology</em>, 10, 325. <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">doi:10.3389/fneur.2019.00325</a></li>
 <li>Mikulan, E., Russo, S., Bares, M., et al. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <em>Scientific Data</em>, 7, 127. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
 <li>Seeber, M., Cantonas, L.-M., Hoevels, M., et al. (2019). Subcortical electrophysiological activity is detectable with high-density EEG source imaging. <em>Nature Communications</em>, 10, 753. <a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">doi:10.1038/s41467-019-08725-w</a></li>
 <li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Direct validation of EEG source imaging by intracranial electric stimulation in human patients. <em>Brain Communications</em>, 5(2), fcad023. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
 <li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <em>Epilepsia</em>, 66(11), 4451-4464. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
+<li>Xu, M., Yao, S., Wei, Z., et al. (2020). Cross-dataset variability problem in EEG decoding with deep learning. <em>Frontiers in Human Neuroscience</em>, 14, 103. <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">doi:10.3389/fnhum.2020.00103</a></li>
+<li>Vinck, M., Oostenveld, R., van Wingerden, M., Battaglia, F., &amp; Pennartz, C. M. A. (2011). An improved index of phase-synchronization for electrophysiological data in the presence of volume-conduction, noise and sample-size bias. <em>NeuroImage</em>, 55(4), 1548-1565. <a href="https://doi.org/10.1016/j.neuroimage.2011.01.055" target="_blank">doi:10.1016/j.neuroimage.2011.01.055</a></li>
+<li>Haufe, S., Nikulin, V. V., Müller, K.-R., &amp; Nolte, G. (2013). A critical assessment of connectivity measures for EEG data: a simulation study. <em>NeuroImage</em>, 64, 120-133. <a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">doi:10.1016/j.neuroimage.2012.09.036</a></li>
+<li>Palva, J. M., Wang, S. H., Palva, S., et al. (2018). Ghost interactions in MEG/EEG source space: a note of caution on inter-areal coupling measures. <em>NeuroImage</em>, 173, 632-643. <a href="https://doi.org/10.1016/j.neuroimage.2018.02.032" target="_blank">doi:10.1016/j.neuroimage.2018.02.032</a></li>
+<li>Miljevic, A., Murphy, O. W., Fitzgerald, P. B., &amp; Bailey, N. W. (2025). Estimating sensor-space EEG connectivity PART 1: Identifying best performing methods for functional connectivity in simulated data. <em>Clinical Neurophysiology</em>, 174, 73-83. <a href="https://doi.org/10.1016/j.clinph.2025.03.043" target="_blank">doi:10.1016/j.clinph.2025.03.043</a></li>
 </ol>
