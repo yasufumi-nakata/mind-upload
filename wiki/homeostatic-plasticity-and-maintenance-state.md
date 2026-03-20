@@ -5,7 +5,7 @@ description: "Uses primary literature to organize the maintenance mechanisms tha
 article_type: Wiki
 subtitle: "Even with a wiring diagram and cell type labels, long-term dynamics are still not determined."
 author: Mind Uploading Research Project
-last_updated: "2026-03-20"
+last_updated: "2026-03-21"
 note: "Technical / natural science only"
 audience: "People who want to probe the limits of the connectome more deeply from the perspective of internal states and maintenance mechanisms."
 reading_time: "16-22 minutes"
@@ -27,6 +27,7 @@ accuracy_note: >
 page_highlights:
   - "Maintenance-state includes not only intrinsic excitability, but also activity-dependent transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, AIS / ion-channel landscapes, sleep-dependent homeostasis, myelin / oligodendrocytes, thermal-state, ionic milieu / chloride homeostasis, local proteostasis / synaptic-tagging state, cargo-transport / cytoskeletal trafficking state, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, glial metabolism and astrocyte ensembles, and clearance / immune support."
   - "Sleep replay evidence is not one class: stage label, scalp coupling proxy, intracranial ripple evidence, closed-loop intervention, and difficulty-selective TMR should be audited separately with a route card."
+  - "Myelin evidence is not one class: learning-dependent oligodendrogenesis, conduction microgeometry / timing-state control, plasticity-brake effects, remyelination-to-function recovery, and human macro-myelin proxies should be audited separately with a route card."
   - "Cell-type atlas and current plasticity-competent transcriptional state are different objects; static transcriptomic labels do not fix which neurons are eligible for allocation or stabilization."
   - "Gene-level transcript abundance does not fix post-transcriptional RNA-state: isoform choice, m6A-dependent translation / degradation, and RNA-editing ratio can still change plasticity and memory on the same transcript-count background."
   - "Transcript or bulk protein abundance does not fix phospho-signaling / second-messenger state: phosphosite occupancy, kinase/phosphatase balance, and signaling nanodomains can still change plasticity on the same abundance background."
@@ -48,6 +49,7 @@ known_points:
   - "Firing rates and synaptic strengths are regulated by homeostatic plasticity across sleep / wake cycles, but consolidation also depends on sleep architecture / replay-coupling."
   - "Myelin, oligodendrocytes, thermal-state, ionic milieu / chloride homeostasis, activity-dependent transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local proteostasis / synaptic-tagging state, perisynaptic ECM / PNN state, local ATP supply and mitochondrial positioning, astrocytes, and the microglia / meningeal-lymphatic system all contribute to timing, plasticity, memory retrieval, long-term recovery, and clearance support."
   - "Even in humans, macro scaffolds and support-state proxies are starting to become visible through SV2A PET, MRSI-based metabolic connectomes, MRS thermometry, 31P-MRS, sodium MRI, dynamic deuterium metabolic imaging, myelin bilayer mapping, TMS / EEG / sleep plasticity proxies, and CSF / glymphatic proxies, although cell-specific maintenance-states still remain coarse."
+  - "Myelin evidence already spans adaptive learning, timing-state control, plasticity-brake effects, remyelination recovery, and human macro-proxy classes, so a human myelin map alone does not settle per-axon timing-state or plasticity-complete restoration."
   - "An MRSI-derived metabolic-connectome label still needs metabolite-set, parceling, correction-model, and QC disclosure before it can be interpreted safely."
 unknown_points:
   - "It is unclear at what granularity excitability, thermal-state, ionic milieu / chloride homeostasis, sleep homeostasis, local proteostasis / synaptic tagging, ECM / PNN state, bioenergetic support, metabolic support, and clearance support must be measured to approach sufficient conditions for WBE."
@@ -55,6 +57,7 @@ unknown_points:
   - "It is not yet fixed how post-transcriptional RNA-state should be audited without collapsing isoform choice, m6A-dependent translation / degradation, and RNA-editing ratio back into gene-level abundance."
   - "It is not yet fixed which same-subject or human-compatible external calibrators could raise phospho-signaling / second-messenger claims beyond region-structured ex vivo atlas evidence."
   - "It has not been fixed which external standards among SV2A PET, MRSI, MRS thermometry, 31P-MRS, sodium MRI, dynamic DMI, myelin bilayers, TMS-EEG, sleep-plasticity proxies, and CSF-glymphatic proxies should calibrate maintenance-states that cannot be measured directly in humans."
+  - "It is not yet fixed which route-card fields should be mandatory when a myelin paper mixes learning, timing-state, plasticity, remyelination, and human proxy language in one argument."
   - "It is not yet fixed which sleep-history, sleep-architecture, myelin, thermal, ECM, bioenergetic, metabolic, and clearance indicators will become standard submissions for long-term closed-loop claims."
   - "It is not yet fixed which sleep replay fields should be mandatory across scalp EEG, intracranial recordings, and cue-driven interventions so that event definition, timing policy, and item-selection regime are not collapsed into one sentence."
   - "It is also unclear how strongly parcel-level metabolic similarity and CSF-mobility proxies constrain cell-specific glial, immune, transmitter, and synaptic maintenance-states."
@@ -437,8 +440,66 @@ The remaining weakness on this page was that it still let several different infe
 
 <h3>8. Myelin and oligodendrocytes are timing and support variables</h3>
 <p>
-The earlier version mentioned delay and myelin, but still left <strong>myelin plasticity and oligodendrocyte support</strong> too close to a fixed delay constant. <a href="https://doi.org/10.1126/science.1252304" target="_blank">Gibson et al. (2014)</a> showed that neuronal activity promotes oligodendrogenesis and adaptive myelination, <a href="https://doi.org/10.1126/science.1254960" target="_blank">McKenzie et al. (2014)</a> showed that active central myelination is required for motor-skill learning, and <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a> showed that oligodendrocyte-axon metabolic coupling via extracellular K<sup>+</sup> contributes to axonal health. Therefore, <strong>even with the same wiring and the same cell type, timing, synchrony, and recoverability can still differ if the myelin / oligodendroglial state differs</strong>. A model that absorbs delay into a fixed constant must state explicitly which timing-sensitive behaviors are discarded in that approximation.
+The earlier version mentioned delay and myelin, but still left <strong>myelin plasticity and oligodendrocyte support</strong> too close to a fixed delay constant. That was too coarse. <a href="https://doi.org/10.1126/science.1252304" target="_blank">Gibson et al. (2014)</a> showed that neuronal activity promotes oligodendrogenesis and adaptive myelination, and <a href="https://doi.org/10.1126/science.1254960" target="_blank">McKenzie et al. (2014)</a> showed that active central myelination is required for motor-skill learning. <a href="https://doi.org/10.1038/ncomms9073" target="_blank">Seidl et al. (2015)</a>, <a href="https://doi.org/10.1073/pnas.1811013115" target="_blank">Dutta et al. (2018)</a>, <a href="https://doi.org/10.1016/j.cell.2019.11.039" target="_blank">Cohen et al. (2020)</a>, <a href="https://doi.org/10.1093/cercor/bhab018" target="_blank">Micheva et al. (2021)</a>, and <a href="https://doi.org/10.7554/eLife.73827" target="_blank">Dubey et al. (2022)</a> further show that node / internode geometry, periaxonal coupling, and PV-axon myelination can tune conduction timing and synchrony rather than acting like one fixed scalar delay. <a href="https://doi.org/10.1038/s41586-024-07853-8" target="_blank">Xin et al. (2024)</a> then showed that adolescent oligodendrogenesis can act as a functional brake on adult visual-cortex plasticity, while <a href="https://doi.org/10.1038/s41467-025-56092-6" target="_blank">Della-Flora Nunes et al. (2025)</a> showed that neuronal recovery after demyelination does not require complete restoration of healthy myelin levels. Together with <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a>, these papers show that <strong>even with the same wiring and the same cell type, timing, synchrony, plasticity windows, and recoverability can still differ if the myelin / oligodendroglial state differs</strong>. A model that absorbs delay into a fixed constant must state explicitly which timing-sensitive, plasticity-sensitive, and recovery-sensitive behaviors are discarded in that approximation.
 </p>
+<div class="note-box" id="myelin-route-card">
+<strong>2026-03-21 addendum: myelin / oligodendrocyte evidence now needs a route card</strong>
+<p>
+The remaining weakness on this page was that <strong>myelin evidence</strong> could still collapse several different inferential objects into one bucket. The primary literature does not support that shortcut. <a href="https://doi.org/10.1126/science.1252304" target="_blank">Gibson et al. (2014)</a> and <a href="https://doi.org/10.1126/science.1254960" target="_blank">McKenzie et al. (2014)</a> are about <strong>activity-dependent oligodendrogenesis and learning</strong>. <a href="https://doi.org/10.1038/ncomms9073" target="_blank">Seidl et al. (2015)</a>, <a href="https://doi.org/10.1073/pnas.1811013115" target="_blank">Dutta et al. (2018)</a>, <a href="https://doi.org/10.1016/j.cell.2019.11.039" target="_blank">Cohen et al. (2020)</a>, <a href="https://doi.org/10.1093/cercor/bhab018" target="_blank">Micheva et al. (2021)</a>, and <a href="https://doi.org/10.7554/eLife.73827" target="_blank">Dubey et al. (2022)</a> are about <strong>node / internode / periaxonal timing-state control</strong>. <a href="https://doi.org/10.1038/s41586-024-07853-8" target="_blank">Xin et al. (2024)</a> is about <strong>developmental myelination acting as a brake on adult plasticity</strong>. <a href="https://doi.org/10.1038/s41467-025-56092-6" target="_blank">Della-Flora Nunes et al. (2025)</a> is about <strong>how much remyelination is needed for functional recovery</strong> and explicitly shows that functional recovery does not require complete restoration of healthy myelin levels. <a href="https://doi.org/10.1038/s41593-023-01272-0" target="_blank">van Blooijs et al. (2023)</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41467-025-58604-w" target="_blank">Genc et al. (2025)</a> push human observability upward, but still as <strong>macro timing or MRI proxy classes</strong> rather than per-axon ground truth. Therefore, on this site, myelin / oligodendrocyte claims now require a <strong>route card</strong> before they are promoted beyond a local, explicitly named ceiling.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be fixed explicitly</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the paper is about <strong>activity-dependent oligodendrogenesis / learning</strong>, <strong>timing-state microgeometry</strong>, <strong>plasticity-brake function</strong>, <strong>remyelination-to-function recovery</strong>, or a <strong>human macro-proxy route</strong>.</td>
+<td>Different inferential objects collapse into one phrase such as <code>myelin evidence supports timing and learning</code>.</td>
+</tr>
+<tr>
+<td><strong>Biological regime</strong></td>
+<td>Name species, developmental stage, healthy versus demyelinated or injured preparation, circuit / brain region, and whether the study is local, tract-scale, or whole-brain.</td>
+<td>Adolescent visual-cortex plasticity, adult motor learning, demyelination recovery, and living-human MRI are silently promoted into one generic statement about brain-wide myelin function.</td>
+</tr>
+<tr>
+<td><strong>Direct observable / structural unit</strong></td>
+<td>Write whether the direct observable is new oligodendrocyte generation, myelin sheath / bilayer contrast, nodal gap length, internode geometry, periaxonal structure, tract-scale transmission speed, or another explicitly measured object.</td>
+<td><code>myelin changed</code> replaces the actual scale of evidence, and proxy rows are overread as if they had already measured the timing controller itself.</td>
+</tr>
+<tr>
+<td><strong>Functional target</strong></td>
+<td>Name the dependent variable that the claim is about, such as skill learning, deprived-eye response, phase / synchrony precision, VEP latency, single-neuron latency, or axonal-health support.</td>
+<td>The site silently shifts from one dependent variable to another, for example from learning success to timing-complete reconstruction.</td>
+</tr>
+<tr>
+<td><strong>Recovery / completeness boundary</strong></td>
+<td>State whether healthy oligodendrocyte or myelin levels were actually restored, whether function recovered under partial remyelination, and whether the paper shows prevention, compensation, or full state restoration.</td>
+<td>Any functional rescue is overread as proof that the healthy myelin-state was completely reconstructed.</td>
+</tr>
+<tr>
+<td><strong>Human route / measurement model</strong></td>
+<td>For human evidence, disclose whether the route is tract-speed estimation, myelin-bilayer MRI, diffusion-microstructure modelling with ex vivo gene-expression alignment, or another proxy class, together with hardware burden, spatial scale, and modelling assumptions.</td>
+<td>A human myelin paper is treated as if it had directly measured per-axon conduction timing, oligodendrocyte support state, or plasticity gate without a proxy audit.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Fix in one line what remains latent, especially per-axon conduction delay, node / internode / periaxonal microgeometry in humans, oligodendrocyte-axon metabolic support, local plasticity gating, and same-subject whole-brain controller identification.</td>
+<td>Macro proxy or partial-recovery evidence is promoted to timing-complete, plasticity-complete, or maintenance-complete language.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Why this route card is necessary here</strong>
+<p>
+The need is two-sided. On the recovery side, <a href="https://doi.org/10.1038/s41467-025-56092-6" target="_blank">Della-Flora Nunes et al. (2025)</a> explicitly showed that visual neuronal recovery can return before myelin is fully restored to healthy levels, so <strong>functional rescue</strong> and <strong>myelin-state completion</strong> are not the same claim. On the human observability side, <a href="https://doi.org/10.1038/s41467-025-58604-w" target="_blank">Genc et al. (2025)</a> aligned cortical microstructure MRI with oligodendrocyte gene-expression trajectories but also stated that <strong>histopathological confirmation is still needed</strong>, while <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> remained a <strong>two-volunteer specialized proof-of-principle</strong>. Therefore, this site does not let a human myelin row inherit timing-complete or plasticity-complete language, and it does not let remyelination-linked recovery silently stand in for restored healthy myelin-state.
+</p>
+</div>
 
 <h3>9. Perisynaptic ECM / PNN state is not passive packaging around synapses</h3>
 <p>
@@ -859,6 +920,15 @@ A final correction is that static <sup>1</sup>H-MRSI similarity is not the same 
 <li>Fehér, K. D., Henckaerts, P., Hirsch, V., Bucsenez, U., Kuhn, M., Maier, J. G., et al. (2026). A nap can recalibrate homeostatic and associative synaptic plasticity in the human cortex. <em>NeuroImage</em>, 327, 121723. <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">doi:10.1016/j.neuroimage.2026.121723</a></li>
 <li>Gibson, E. M., et al. (2014). Neuronal activity promotes oligodendrogenesis and adaptive myelination in the mammalian brain. <em>Science</em>, 344(6183), 1252304. <a href="https://doi.org/10.1126/science.1252304" target="_blank">doi:10.1126/science.1252304</a></li>
 <li>McKenzie, I. A., et al. (2014). Motor skill learning requires active central myelination. <em>Science</em>, 346(6207), 318-322. <a href="https://doi.org/10.1126/science.1254960" target="_blank">doi:10.1126/science.1254960</a></li>
+<li>Seidl, A. H., Rubel, E. W., &amp; Barría, A. (2015). Tuning of Ranvier node and internode properties in myelinated axons to adjust action potential timing. <em>Nature Communications</em>, 6, 8073. <a href="https://doi.org/10.1038/ncomms9073" target="_blank">doi:10.1038/ncomms9073</a></li>
+<li>Dutta, D. J., Woo, D. H., Lee, P. R., et al. (2018). Regulation of myelin structure and conduction velocity by perinodal astrocytes. <em>Proceedings of the National Academy of Sciences USA</em>, 115(46), 11832-11837. <a href="https://doi.org/10.1073/pnas.1811013115" target="_blank">doi:10.1073/pnas.1811013115</a></li>
+<li>Cohen, C. C. H., Popovic, M. A., Klooster, J., et al. (2020). Saltatory conduction along myelinated axons involves a periaxonal nanocircuit. <em>Cell</em>, 180(2), 311-322.e15. <a href="https://doi.org/10.1016/j.cell.2019.11.039" target="_blank">doi:10.1016/j.cell.2019.11.039</a></li>
+<li>Micheva, K. D., Kiraly, M., Perez, M. M., &amp; Madison, D. V. (2021). Conduction Velocity Along the Local Axons of Parvalbumin Interneurons Correlates With the Degree of Axonal Myelination. <em>Cerebral Cortex</em>, 31(7), 3374-3392. <a href="https://doi.org/10.1093/cercor/bhab018" target="_blank">doi:10.1093/cercor/bhab018</a></li>
+<li>Dubey, S., Kuschmitz, S., Mezey, S. E., et al. (2022). Myelination synchronizes cortical oscillations by consolidating parvalbumin-mediated phasic inhibition. <em>eLife</em>, 11, e73827. <a href="https://doi.org/10.7554/eLife.73827" target="_blank">doi:10.7554/eLife.73827</a></li>
+<li>van Blooijs, D., de Haan, A. M., Renaud, S., et al. (2023). Developmental trajectory of transmission speed in the human brain. <em>Nature Neuroscience</em>, 26, 828-838. <a href="https://doi.org/10.1038/s41593-023-01272-0" target="_blank">doi:10.1038/s41593-023-01272-0</a></li>
+<li>Xin, W., Kaneko, M., Roth, R. H., Zhang, A., Nocera, S., Ding, J. B., Stryker, M. P., &amp; Chan, J. R. (2024). Oligodendrocytes and myelin limit neuronal plasticity in visual cortex. <em>Nature</em>, 633, 856-863. <a href="https://doi.org/10.1038/s41586-024-07853-8" target="_blank">doi:10.1038/s41586-024-07853-8</a></li>
+<li>Della-Flora Nunes, G., Osso, L. A., Haynes, J. A., et al. (2025). Incomplete remyelination via therapeutically enhanced oligodendrogenesis is sufficient to recover visual cortical function. <em>Nature Communications</em>, 16, 732. <a href="https://doi.org/10.1038/s41467-025-56092-6" target="_blank">doi:10.1038/s41467-025-56092-6</a></li>
+<li>Genc, S., Ball, G., Chamberland, M., et al. (2025). MRI signatures of cortical microstructure in human development align with oligodendrocyte cell-type expression. <em>Nature Communications</em>, 16, 3317. <a href="https://doi.org/10.1038/s41467-025-58604-w" target="_blank">doi:10.1038/s41467-025-58604-w</a></li>
 <li>Looser, Z. J., et al. (2024). Oligodendrocyte-axon metabolic coupling is mediated by extracellular K<sup>+</sup> and maintains axonal health. <em>Nature Neuroscience</em>, 27, 1598-1609. <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">doi:10.1038/s41593-023-01558-3</a></li>
 <li>Hardingham, N. R., &amp; Larkman, A. U. (1998). The reliability of excitatory synaptic transmission in slices of rat visual cortex in vitro is temperature dependent. <em>The Journal of Physiology</em>, 507(1), 249-256. <a href="https://doi.org/10.1111/j.1469-7793.1998.249bu.x" target="_blank">doi:10.1111/j.1469-7793.1998.249bu.x</a></li>
 <li>Volgushev, M., Vidyasagar, T. R., Chistiakova, M., Yousef, T., &amp; Eysel, U. T. (2000). Membrane properties and spike generation in rat visual cortical cells during reversible cooling. <em>The Journal of Physiology</em>, 522(1), 59-76. <a href="https://doi.org/10.1111/j.1469-7793.2000.00059.x" target="_blank">doi:10.1111/j.1469-7793.2000.00059.x</a></li>

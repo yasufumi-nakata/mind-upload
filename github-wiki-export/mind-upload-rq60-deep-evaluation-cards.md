@@ -364,3 +364,11 @@
 - `RQ_TOTAL=60` と `A/B/C=17/25/18` を再確認し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持しました。
 - `EEG-DATA` の大規模再採番により、カード本文の数値IDは将来変動しうるため、提出実務では `mind-upload-eeg-rq60-feasibility-and-funds` と `Mind-Upload-EEG-RQ-Grant-Map` に追記した `D01-D24（DOI固定）` を正本キーとして扱ってください。
 - 本カードはRQごとの検証命題・失敗条件・成果物定義を正本とし、データ参照の最終キーは DOI 側に委譲します。
+
+## 2026-03-21 04:03 JST 再検証ログ（本run / 1RQ深掘り固定でwiki同期）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` の各 `main` で `git pull --ff-only origin main` を実行し、最新化後に再検証しました。
+- 本カードと `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `| Ux-y<br>` 行を再計数し、双方とも `RQ_TOTAL=60`（欠損・重複 `0`）を確認しました。
+- 判定内訳は双方で `A/B/C=17/25/18` を再確認しました。
+- 本カード運用で参照するEEG ID（本runの参照集合）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
+- 方針は不変で、汎用横断の要約更新ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持して wiki 同期を継続しました。

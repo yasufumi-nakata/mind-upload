@@ -115,6 +115,13 @@ The front door was still too coarse if it only said that many hidden states rema
 </div>
 
 <div class="note-box">
+<strong>If You Are Treating Myelin As One Solved Timing Variable</strong>
+<p>
+This site now blocks that shortcut too. A myelin paper can be about <strong>learning-dependent oligodendrogenesis</strong>, <strong>node / internode / periaxonal timing control</strong>, <strong>developmental plasticity brake</strong>, <strong>remyelination-linked functional recovery</strong>, or a <strong>macro human MRI proxy</strong>, and those are not the same inferential object. Therefore, a human myelin map or tract-speed estimate is not read here as per-axon timing-state ground truth, and functional recovery under remyelination is not read as proof that healthy myelin-state was completely restored. The shortest route is <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> plus <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#myelin-route-card">Wiki: myelin / oligodendrocyte route card</a>.
+</p>
+</div>
+
+<div class="note-box">
 <strong>If You Want To Know When Several Human Proxy Rows May Be Combined</strong>
 <p>
 The 2026-03-21 audit tightened one more point: <strong>proxy-rich</strong> is not the same as <strong>same-subject state identification</strong>. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> constrain different variable classes with different cohort sizes, hardware burdens, and measurement models, and the cited studies do not show field-ready same-subject fusion across those routes. This site now requires a <a href="verification.html#human-proxy-composition-card">Human Proxy Composition Card</a> before several living-human proxy rows may be promoted together. The shortest explanation is in <a href="wbe_101.html#human-proxy-composition-rule">WBE 101: human-proxy composition rule</a>.
