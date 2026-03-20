@@ -10,6 +10,7 @@ known_points:
   - "Reading by year makes it easier to see which issues are attracting attention over time."
   - "Important papers should be approached through the summary first, then traced back to the DOI and the original text."
   - "This is a broad archive that also includes law, philosophy, and cultural theory, so the technological frontier should not be judged only from the top of a given year."
+  - "A compact 2025-2026 technical-only shortlist now sits ahead of the mixed year cards so readers can skip archive noise when they only want current primary routes."
   - "Foundation-model / pretraining papers do not only say something about model scale; official challenge rules and leaderboard postmortems also say something about what the benchmark itself was measuring."
   - "Human ultrastructure, synaptic-density PET, static MRSI, dynamic DMRSI, thermometry, myelin mapping, CSF-mobility MRI, and sleep-linked clearance strengthen different observability layers and should not be compressed into one progress bar."
   - "Recent maintenance-state papers now include transcriptional stabilization and astrocyte-state evidence, so they should not be filed only as generic background on support variables."
@@ -45,6 +46,7 @@ page_highlights:
   - "English summaries and the original abstract are both included so readers can return to the source when necessary."
   - "The intended workflow is to locate papers in the list first and then dig into only the ones that appear important."
   - "Because chronology is not the same thing as evidence strength, primary evidence in technology and natural science is safer to enter from the priority route in the first half of the page."
+  - "A compact 2025-2026 technical-only shortlist now gives a minimal reading path before the mixed year cards begin."
   - "In technology and natural science, it is safer to read not only badge and chronology, but also evidence class."
   - "EEG foundation-model papers are now treated as a distinct technical route because corpus disclosure, adaptation regime, benchmark governance, and leaderboard postmortems materially change what a score means."
   - "Recent human measurement papers are treated here as observability-class advances with explicit claim ceilings, and now also as a proxy-class x route-maturity ladder rather than one progress bar."
@@ -65,6 +67,7 @@ recommended_pages:
 <div class="sidebar-nav-header">Navigation</div>
 <ul class="sidebar-nav">
 <li><a href="#technical-fast-lane">0. Priority route for technology and natural sciences</a></li>
+<li><a href="#technical-shortlist-20260320">0a. 2025-2026 technical-only shortlist</a></li>
 <li><a href="#with-abstracts">1. With abstracts</a>
 <ul class="sub-nav">
 <li><a href="#year-w-2025">2025</a></li>
@@ -254,6 +257,60 @@ Papers such as <a href="https://doi.org/10.1126/science.adk4858" target="_blank"
 <strong>Read maintenance-state papers as route-changing evidence</strong>
 <p>
 Papers such as <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> should not be filed as vague background on "plasticity" or "support." They sharpen which hidden-state families stay outside a neuron-only or connectome-only reading: <strong>transcriptional stabilization gates</strong>, <strong>astrocyte multiday traces</strong>, and <strong>astrocyte-enabled neural representations</strong>. On this site, these are read as boundary papers that change what a high-score demo still cannot claim.
+</p>
+</div>
+</section>
+<section class="section" id="technical-shortlist-20260320">
+<h2 class="section-title">2025-2026 technical-only shortlist</h2>
+<p>
+The remaining weakness after adding the broader priority route was speed. Technical readers could still lose time once the page dropped back into mixed year-order cards. The shortlist below is the minimum front door if you want only the strongest 2025-2026 technology / natural-science routes before touching the broader archive.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Read this first</th>
+<th>Anchor sources</th>
+<th>What gets stronger directly here</th>
+<th>What still must not be claimed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EEG foundation-model governance</strong></td>
+<td><a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">Kostas et al. (2021)</a>, <a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/47393e8594c82ce8fd83adc672cf9872-Abstract-Conference.html" target="_blank">Jiang et al. (2024)</a>, <a href="https://openreview.net/forum?id=J5SbLoq7Uv" target="_blank">Lee et al. (2025)</a>, <a href="https://eeg2025.github.io/leaderboard/" target="_blank">EEG Challenge 2025 leaderboard</a>, <a href="https://arxiv.org/abs/2508.17742" target="_blank">EEG-FM-Bench (2025)</a>, <a href="https://arxiv.org/abs/2603.02268" target="_blank">PRISM (2026)</a></td>
+<td>Pretraining can improve low-label transfer, but the same sources also show that corpus composition, adaptation regime, split construction, inference-stage rules, and benchmark implementation can materially move the ranking itself.</td>
+<td>Do not read a top leaderboard rank or a larger model as if subject-invariant, site-robust EEG decoding were already solved.</td>
+</tr>
+<tr>
+<td><strong>Human observability ladder</strong></td>
+<td><a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a></td>
+<td>The route distinction becomes concrete: local ultrastructure, regional synaptic-density PET, kinetic glucose-rate imaging, and sleep-linked clearance each raise different observability classes and different route burdens.</td>
+<td>Do not collapse these papers into one progress bar or treat them as same-subject whole-brain hidden-state closure.</td>
+</tr>
+<tr>
+<td><strong>Maintenance-state boundary papers</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a></td>
+<td>These papers sharpen what remains outside a connectome-only or neuron-only read: transcriptional stabilization gates, astrocyte multiday traces, and astrocyte-supported neuronal representations.</td>
+<td>Do not file them as generic support-background literature or reinterpret them as direct human readout papers.</td>
+</tr>
+<tr>
+<td><strong>Direct source-validation anchors</strong></td>
+<td><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a>, <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>, <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a></td>
+<td>Known stimulation sites and simultaneous invasive reference make localization error, source depth, and conductivity sensitivity auditable rather than rhetorical.</td>
+<td>Do not promote these results to unique whole-brain internal-state recovery or solver-independent anatomical truth.</td>
+</tr>
+<tr>
+<td><strong>Closed-loop communication frontier</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a></td>
+<td>Task-limited speech and communication subsystems can be pushed much farther than the older non-invasive decode literature suggested.</td>
+<td>Do not translate communication success into WBE, durable identity transfer, or low-recalibration long-term autonomy.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>If you only want the shortest technical path</strong>
+<p>
+Read one row from the shortlist above, follow its linked next page, and postpone the mixed year cards until you need neighboring papers around that anchor. This prevents law, philosophy, and broad cultural-theory entries from setting the first impression of the technical frontier.
 </p>
 </div>
 </section>

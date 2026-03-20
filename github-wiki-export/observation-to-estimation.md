@@ -26,6 +26,7 @@ This is not a fixed recipe for which method to use. This page first fixes audit 
 ## いま分かっていること
 - In principle, it is difficult to uniquely determine brain activity from scalp EEG, and estimation requires assumptions.
 - High-density EEG, individualized MRI, FEM/BEM, and empirical Bayesian estimation can improve conditions, but alone do not guarantee unique recovery.
+- For ESI, method/package/parameter choice can materially move the estimated source, so stability across standard pipelines is part of the claim.
 - The causal structure cannot be determined by observational fit alone; a set of candidate models and an intervention design are required.
 - Whole-brain or faster DCM improves tractability, but does not erase candidate-model dependence or observation-model assumptions.
 
@@ -135,7 +136,7 @@ The inverse problem is difficult because<strong>multiple internal states can pro
 
 <h2>Read ESI in the validation ladder first, rather than the solver name</h2>
 <p>
-ESI is a framework for estimating source from scalp signals. However, as shown by direct validation studies by Mikulan et al. and Unnwongse et al., the error varies greatly depending on source depth, cranial conductivity, head model, electrode geometry, and solver selection. Therefore, it is not possible to make a strong argument just by saying<strong>Because it is a high-density EEG or because it is a Bayesian solver</strong>.
+ESI is a framework for estimating source from scalp signals. However, as shown by direct validation studies by Mikulan et al. and Unnwongse et al., the error varies greatly depending on source depth, cranial conductivity, head model, electrode geometry, solver family, and implementation choice. Therefore, it is not possible to make a strong argument just by saying<strong>Because it is a high-density EEG or because it is a Bayesian solver</strong>.
 </p>
 <table>
 <thead>
@@ -154,6 +155,10 @@ ESI is a framework for estimating source from scalp signals. However, as shown b
 <td>Empirical Bayes and ensemble are powerful, but what is essential is visualization of the width, not the solver name. </td>
 </tr>
 <tr>
+<td><strong>Cross-solver stability</strong></td>
+<td>If WMNE / eLORETA / beamformer / Bayesian families or reasonable parameter windows disagree materially, the spread itself has to be reported. </td>
+</tr>
+<tr>
 <td><strong>Withholding deep/micro sources</strong></td>
 <td>Detectable and general reconstruction are different, and deep generalization requires a suspension condition. </td>
 </tr>
@@ -167,6 +172,11 @@ ESI is a framework for estimating source from scalp signals. However, as shown b
 <strong>Replacement on this site</strong>
 <p>
 Bayesian / empirical Bayes / sparse Bayesian learning is a good candidate for<strong>estimation with uncertainty</strong>. However, on this site, rather than ``accepting a proposal because it is Bayesian'', the criteria for acceptance or rejection are <strong>how uncertainty is disclosed and what external standards were used for calibration</strong>.
+</p>
+
+<strong>2026-03-19 deepening: one best map is not the same as a stable solution</strong>
+<p>
+The weak point here was to separate solver name from audit items, but still leave room for a reader to overtrust one polished map. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">Mahjoory et al. (2017)</a> showed that inverse-method and software-package choice induces considerable variability and explicitly encouraged verifying results with more than one source-imaging procedure. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a> then showed on intracranial-stimulation ground truth that only a small fraction of tested solutions reached the session-wise optimum. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a> further showed that skull/skin conductivity uncertainty can move reconstructed depth and localization. Therefore, on this site, one best inverse map is read only as a <strong>candidate solution</strong> unless the paper also exposes <strong>cross-solver / cross-parameter spread</strong> or a <strong>posterior / ensemble width</strong>.
 </p>
 
 <h2>DCM is not "a device that automatically discovers true cause and effect"</h2>
@@ -289,9 +299,11 @@ DCM is useful for comparing neural circuit candidate generation models, and SCM 
 <h2>References</h2>
 <ol>
 <li>Wipf, D., &amp; Nagarajan, S. (2009). A unified Bayesian framework for MEG/EEG source imaging. <em>NeuroImage</em>, 44(3), 947-966. <a href="https://doi.org/10.1016/j.neuroimage.2008.02.059" target="_blank">doi:10.1016/j.neuroimage.2008.02.059</a></li>
+<li>Mahjoory, K., Nikulin, V. V., Botrel, L., Linkenkaer-Hansen, K., Fato, M. M., &amp; Haufe, S. (2017). Consistency of EEG source localization and connectivity estimates. <em>NeuroImage</em>, 152, 590-601. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">doi:10.1016/j.neuroimage.2017.02.076</a></li>
 <li>Aydin, U., Vorwerk, J., Kupper, P., et al. (2019). Influence of head tissue conductivity uncertainties on EEG dipole reconstruction. <em>Frontiers in Neuroscience</em>, 13, 531. <a href="https://doi.org/10.3389/fnins.2019.00531" target="_blank">doi:10.3389/fnins.2019.00531</a></li>
 <li>Mikulan, E., Russo, S., Bares, M., et al. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <em>Scientific Data</em>, 7, 127. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
 <li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Direct validation of EEG source imaging by intracranial electric stimulation in human patients. <em>Brain Communications</em>, 5(1), fcad023. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
+<li>Vorwerk, J., Wolters, C. H., &amp; Baumgarten, D. (2024). Global sensitivity of EEG source analysis to tissue conductivity uncertainties. <em>Frontiers in Human Neuroscience</em>, 18, 1335212. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">doi:10.3389/fnhum.2024.1335212</a></li>
 <li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <em>Epilepsia</em>, 66(11), 4451-4464. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
 <li>Feng, Z., Mishne, G., Hashemi, A., et al. (2025). Block-Champagne: Imaging extended E/MEG source activation with empirical Bayesian uncertainty quantification. <em>IEEE Transactions on Medical Imaging</em>. <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">doi:10.1109/TMI.2025.3642620</a></li>
 <li>Friston, K. J., Harrison, L., &amp; Penny, W. (2003). Dynamic causal modelling. <em>NeuroImage</em>, 19(4), 1273-1302. <a href="https://doi.org/10.1016/S1053-8119(03)00202-7" target="_blank">doi:10.1016/S1053-8119(03)00202-7</a></li>

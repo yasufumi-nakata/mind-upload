@@ -16,6 +16,7 @@ page_highlights:
   - "It keeps intake logs separate from academically integrated evidence and makes the anti-contamination procedure explicit."
   - "Even though this page is citation-heavy, the statistics and current-status map alone provide a usable overview."
   - "The default entry path for technical and natural-science readers is fixed as U1/U7 -> U4 -> U13 -> U8 -> U3 -> U10."
+  - "A paper-level technical-only shortlist is now linked at the front door so readers can jump from U labels to concrete anchors without scanning mixed archive pages first."
   - "For technical readers, human observability-class advances are kept separate from direct validation, demos, and hidden-state boundary papers, and proxy class is now read separately from route maturity."
   - "For technical readers, maintenance-state papers now include transcriptional stabilization and astrocyte-state evidence rather than only generic support-variable papers."
 known_points:
@@ -23,6 +24,7 @@ known_points:
   - "Separating source_logged, curated, and noise_excluded prevents intake logging from being confused with academic integration."
   - "Citation count should be read as thickness of attention or relevance, not as closure of the question."
   - "For technical and natural-science readers, it is safer to start with measurement, direct validation, closed-loop stability, and maintenance-state before moving to intake logs or governance topics."
+  - "Technical readers who want concrete paper anchors first can now jump directly to the paper archive's 2025-2026 technical-only shortlist."
   - "Human measurement advances in ultrastructure, synaptic-density PET, static MRSI, dynamic DMRSI, thermometry, myelin mapping, CSF mobility, and sleep-linked clearance do not all increase the same evidential axis."
   - "Maintenance-state papers on transcriptional stabilization and astrocyte multiday trace change what remains latent, not what is already directly measured."
 unknown_points:
@@ -196,6 +198,12 @@ For technical reading, papers such as <a href="https://doi.org/10.1126/science.a
 <strong>Read maintenance-state papers as more than support background</strong>
 <p>
 Recent maintenance-state papers also changed in kind, not only in number. <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> do not merely say that "support variables matter." They sharpen which hidden-state families remain outside connectome-only reading: <strong>transcriptional stabilization gates</strong>, <strong>astrocyte multiday traces</strong>, and <strong>astrocyte-enabled neural representations</strong>.
+</p>
+</div>
+<div class="note-box">
+<strong>If you want paper-level anchors before the U map</strong>
+<p>
+The default route on this page is still organized by unresolved question. If you already know that you want only the 2025-2026 technology / natural-science frontier papers first, jump directly to the <a href="mind_uploading_papers.html#technical-shortlist-20260320">Paper Collection: 2025-2026 technical-only shortlist</a>. That table gives concrete anchor papers for EEG foundation-model governance, human observability, maintenance-state boundary papers, direct source validation, and closed-loop communication before you return here to place them in U1/U7/U4/U13/U8/U3/U10.
 </p>
 </div>
 <div class="note-box">

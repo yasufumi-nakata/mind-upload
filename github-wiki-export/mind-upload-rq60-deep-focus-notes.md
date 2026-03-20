@@ -1,32 +1,26 @@
----
-layout: default
-title: "Mind-upload RQ60 Deep focus notes (EEG-DATA × Grant)"
-description: "A deep-dive note that fixes each of the 60 RQs, including the core, external requirements, and application themes that will be directly verified with EEG."
-article_type: Wiki
-subtitle: "Fix the issues for each RQ instead of a general summary"
-author: Mind Uploading Research Project
-last_updated: "2026-03-20"
-note: "RQ-by-RQ Deep Focus"
-audience: "People who want to translate each RQ directly into application statements and experimental procedures"
-reading_time: "20-35 minutes"
-page_intro: "This page is a practical note that fixes the core of mind-upload's 60 RQs, which can be confirmed directly with EEG-DATA, application themes for auto-research-funds, and necessary requirements outside of EEG."
-accuracy_note: "A/B/C judgment is the same as mind-upload-eeg-rq60-feasibility-and-funds. C means 'not complete with EEG alone' rather than 'not important'."
-wiki_links:
-  - label: "Wiki: RQ60 EEG verification availability and subsidy theme"
-    url: "/wiki/mind-upload-eeg-rq60-feasibility-and-funds.html"
-    description: "The original version of the judgment and data candidates."
-  - label: "Wiki: RQ60 Application Playbook"
-    url: "/wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html"
-    description: "Fixed table of applicant ID and minimum deliverables."
-recommended_pages:
-  - label: "Literature map"
-    url: "/research_harvest_50.html"
-  - label: "Data & Bench"
-    url: "/datasets.html"
----
+# Mind-upload RQ60 Deep focus notes (EEG-DATA × Grant)
 
-<main class="main-container">
-<article class="content-column">
+> Fix the issues for each RQ instead of a general summary
+>
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+
+- 更新日: 2026-03-20 / 位置づけ: RQ-by-RQ Deep Focus
+
+## このページの役割
+This page is a practical note that fixes the core of mind-upload's 60 RQs, which can be confirmed directly with EEG-DATA, application themes for auto-research-funds, and necessary requirements outside of EEG.
+
+## 正確さの前提
+A/B/C judgment is the same as mind-upload-eeg-rq60-feasibility-and-funds. C means 'not complete with EEG alone' rather than 'not important'.
+
+## 公開ページへ戻る
+- [Literature map](https://mind-upload.com/research_harvest_50.html)
+- [Data & Bench](https://mind-upload.com/datasets.html)
+
+## 関連 Wiki
+- [Wiki: RQ60 EEG verification availability and subsidy theme](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds) - The original version of the judgment and data candidates.
+- [Wiki: RQ60 Application Playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - Fixed table of applicant ID and minimum deliverables.
+
+---
 
 ## How to use
 

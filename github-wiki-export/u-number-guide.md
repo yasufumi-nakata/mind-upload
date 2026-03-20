@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-16 / 位置づけ: Reading guide
+- 更新日: 2026-03-19 / 位置づけ: Reading guide
 
 ## このページの役割
 This page helps translate the U numbers that appear in the literature map into everyday language. The goal is not to memorize the numbers, but to make it easier to find which block a reader should start with.
@@ -65,7 +65,7 @@ The U number is not a memorized item for the exam. The role is a name tag that h
 <tr>
 <td><strong>Causality and implementation stability</strong></td>
 <td>U4 / U8 / U10</td>
-<td>It is a matter of reaction to changes in conditions, stability of the closed loop, and physical cost. </td>
+<td>It is a matter of model-conditioned causal claims, reaction to changes in conditions, stability of the closed loop, and physical cost. </td>
 </tr>
 <tr>
 <td><strong>Boundaries and identity</strong></td>
@@ -94,8 +94,12 @@ The U number is not a memorized item for the exam. The role is a name tag that h
 <td>U1 / U7</td>
 </tr>
 <tr>
+<td>How to read effective-connectivity / DCM claims without overpromoting them</td>
+<td>U4</td>
+</tr>
+<tr>
 <td>Difference between decode success and WBE claim</td>
-<td>U4 / U13</td>
+<td>U13</td>
 </tr>
 <tr>
 <td>Long-term closed-loop stability</td>
@@ -129,26 +133,36 @@ The U number is not a memorized item for the exam. The role is a name tag that h
 </tr>
 <tr>
 <td><strong>2</strong></td>
-<td><strong>U4 / U13</strong></td>
-<td>This is to avoid misinterpreting successful decoding or imitation as causal conservation or emulation. </td>
+<td><strong>U4</strong></td>
+<td>This is to avoid misreading a directed graph or DCM fit as discovered causal wiring before candidate model space and observation assumptions are checked. </td>
 </tr>
 <tr>
 <td><strong>3</strong></td>
+<td><strong>U13</strong></td>
+<td>This is to avoid misinterpreting successful decoding or imitation as causal conservation or emulation. </td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
 <td><strong>U8</strong></td>
 <td>The success of within-session does not necessarily mean stable long-term operation. </td>
 </tr>
 <tr>
-<td><strong>4</strong></td>
+<td><strong>5</strong></td>
 <td><strong>U3</strong></td>
 <td>If you do not read sleep/homeostasis, myelin/metabolic support, astrocyte ensemble, and clearance/immune support separately, you will read structural progress too much into long-term subject equivalence. </td>
 </tr>
 <tr>
-<td><strong>5</strong></td>
+<td><strong>6</strong></td>
 <td><strong>U10</strong></td>
 <td>Finally, we bring back dissipation and effective cost as refutation conditions, so that we don't end the discussion with computability alone. </td>
 </tr>
 </tbody>
 </table>
+
+<strong>Why U4 now comes before U13</strong>
+<p>
+On the public pages, effective-connectivity / DCM claims are already read as <strong>model-conditioned causal hypotheses</strong>. This guide now mirrors that rule. The reason is practical: if a reader first sees a directed graph and reads it as discovered causal wiring, the later distinction between <strong>decode success</strong> and <strong>WBE-level causal preservation</strong> becomes harder to recover. So in the literature route, U4 is now checked before U13.
+</p>
 
 <strong>Group removed from lead line</strong>
 <p>

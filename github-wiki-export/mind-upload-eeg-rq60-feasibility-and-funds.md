@@ -1,14 +1,11 @@
----
-layout: default
-title: "Mind-upload RQ60 × EEG-DATA 検証可否と助成テーマ（深掘り版）"
-description: "research_harvest_50由来の60リサーチクエスチョンを1問ずつ、EEG-DATAでの検証可否・auto-research-funds向け応募テーマ・使用データを実務運用向けに整理したページ。"
-article_type: Wiki
-subtitle: "RQごとに検証設計と応募テーマまで接続する"
-author: Mind Uploading Research Project
-last_updated: "2026-03-20"
-note: "RQ-by-RQ Deep Dive"
-audience: "RQを実験計画・応募書類へ落とし込む研究者/実装者"
-reading_time: "25-40分"
+# Mind-upload RQ60 × EEG-DATA 検証可否と助成テーマ（深掘り版）
+
+> RQごとに検証設計と応募テーマまで接続する
+>
+> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+
+- 更新日: 2026-03-20 / 位置づけ: RQ-by-RQ Deep Dive
+
 ---
 
 # Mind-upload RQ60 × EEG-DATA 検証可否と助成テーマ（深掘り版）
@@ -405,8 +402,6 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 方針は引き続き `1RQ=1検証命題=1応募テーマ=1主データ` を固定し、汎用横断要約ではなくRQ単位での深掘りを正本運用としました。
 - wiki反映先は `mind-upload/wiki` / `mind-upload/github-wiki-export` / `auto-research-funds/wiki` の3面同期を維持しました。
 
-
-
 ## 2026-03-18 15:12 JST 再検証ログ（本run / 依頼の再実行）
 
 - 作業開始前に `auto-startup` の `main` で `git pull --ff-only origin main` を実行し、最新化済み（Already up to date）を確認しました。
@@ -516,8 +511,6 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `mind-upload` と `auto-research-funds` の対象wikiページで `RQ` 行を再計数し、いずれも `60` 件で一致することを確認しました。
 - 判定内訳 `A/B/C=17/25/18` を再計数し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持していることを確認しました。
 - 主要EEG参照ID（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）を最新 `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
-
-
 
 ## 2026-03-19 13:02 JST 再検証ログ（本run / EEG-DATA更新後の深掘り再監査）
 
