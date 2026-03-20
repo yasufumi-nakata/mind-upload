@@ -28,6 +28,7 @@ page_highlights:
   - "Maintenance-state includes not only intrinsic excitability, but also activity-dependent transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, AIS / ion-channel landscapes, sleep-dependent homeostasis, myelin / oligodendrocytes, thermal-state, ionic milieu / chloride homeostasis, local proteostasis / synaptic-tagging state, cargo-transport / cytoskeletal trafficking state, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, glial metabolism and astrocyte ensembles, and clearance / immune support."
   - "Sleep replay evidence is not one class: stage label, scalp coupling proxy, intracranial ripple evidence, closed-loop intervention, and difficulty-selective TMR should be audited separately with a route card."
   - "Myelin evidence is not one class: learning-dependent oligodendrogenesis, conduction microgeometry / timing-state control, plasticity-brake effects, remyelination-to-function recovery, and human macro-myelin proxies should be audited separately with a route card."
+  - "Clearance / immune evidence is not one class: drainage anatomy, ageing / AD lymphatic dysfunction, microglia-mediated synaptic control, human CSF-mobility MRI, and model-based human biomarker efflux should be audited separately with a route card."
   - "Cell-type atlas and current plasticity-competent transcriptional state are different objects; static transcriptomic labels do not fix which neurons are eligible for allocation or stabilization."
   - "Gene-level transcript abundance does not fix post-transcriptional RNA-state: isoform choice, m6A-dependent translation / degradation, and RNA-editing ratio can still change plasticity and memory on the same transcript-count background."
   - "Transcript or bulk protein abundance does not fix phospho-signaling / second-messenger state: phosphosite occupancy, kinase/phosphatase balance, and signaling nanodomains can still change plasticity on the same abundance background."
@@ -58,6 +59,7 @@ unknown_points:
   - "It is not yet fixed which same-subject or human-compatible external calibrators could raise phospho-signaling / second-messenger claims beyond region-structured ex vivo atlas evidence."
   - "It has not been fixed which external standards among SV2A PET, MRSI, MRS thermometry, 31P-MRS, sodium MRI, dynamic DMI, myelin bilayers, TMS-EEG, sleep-plasticity proxies, and CSF-glymphatic proxies should calibrate maintenance-states that cannot be measured directly in humans."
   - "It is not yet fixed which route-card fields should be mandatory when a myelin paper mixes learning, timing-state, plasticity, remyelination, and human proxy language in one argument."
+  - "It is not yet fixed which route-card fields should be mandatory when a clearance / immune paper mixes drainage anatomy, immune effector state, physiology drivers, human mobility imaging, and biomarker-efflux modeling in one argument."
   - "It is not yet fixed which sleep-history, sleep-architecture, myelin, thermal, ECM, bioenergetic, metabolic, and clearance indicators will become standard submissions for long-term closed-loop claims."
   - "It is not yet fixed which sleep replay fields should be mandatory across scalp EEG, intracranial recordings, and cue-driven interventions so that event definition, timing policy, and item-selection regime are not collapsed into one sentence."
   - "It is also unclear how strongly parcel-level metabolic similarity and CSF-mobility proxies constrain cell-specific glial, immune, transmitter, and synaptic maintenance-states."
@@ -578,6 +580,64 @@ The weak point that became clear here was that while I wrote about <strong>astro
 <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> is a 7T MRI technical report on <strong>CSF mobility</strong>, not a direct readout of clearance flux itself. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> is an important advance that combines randomized crossover and plasma biomarkers, but it still relies on an <strong>investigational device</strong> and <strong>compartment model</strong>. Therefore, this site treats both as <strong>provisional human support-state proxies</strong> and does not promote them to ground truth of cell-specific immune control or local synaptic maintenance.
 </p>
 </div>
+<div class="note-box" id="clearance-route-card">
+<strong>2026-03-21 addendum: clearance / immune evidence now needs a route card</strong>
+<p>
+The remaining weakness on this page was that <strong>clearance / immune evidence</strong> could still collapse several different inferential objects into one bucket. The primary literature does not support that shortcut. <a href="https://doi.org/10.1038/nature14432" target="_blank">Louveau et al. (2015)</a> and <a href="https://doi.org/10.1038/s41586-019-1419-5" target="_blank">Ahn et al. (2019)</a> are about <strong>meningeal-lymphatic structure and drainage anatomy</strong>. <a href="https://doi.org/10.1038/s41586-021-03489-0" target="_blank">Da Mesquita et al. (2021)</a> is about <strong>ageing / AD-like consequence and immunotherapy modulation when lymphatic function is impaired</strong>. <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Kim et al. (2025)</a> is about a <strong>meningeal-lymphatics-microglia route that regulates synaptic physiology</strong>. <a href="https://doi.org/10.1126/sciadv.aav5447" target="_blank">Hablitz et al. (2019)</a> and <a href="https://doi.org/10.1093/brain/awaa443" target="_blank">Eide &amp; Ringstad (2021)</a> constrain <strong>physiology-linked clearance dynamics</strong>. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> is a <strong>human CSF-mobility MRI route</strong>. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> is a <strong>model-based human biomarker-efflux route</strong>. Therefore, on this site, clearance / immune claims now require a <strong>route card</strong> before they are promoted beyond a narrow, explicitly named ceiling.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be fixed explicitly</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the paper is about <strong>drainage anatomy</strong>, <strong>disease / ageing lymphatic dysfunction</strong>, <strong>microglia-mediated synaptic maintenance</strong>, <strong>sleep / physiology-linked mobility</strong>, <strong>human CSF-mobility imaging</strong>, or <strong>human biomarker-efflux modeling</strong>.</td>
+<td>Different inferential objects collapse into one phrase such as <code>clearance evidence shows maintenance is measured</code>.</td>
+</tr>
+<tr>
+<td><strong>Biological regime</strong></td>
+<td>Name species, healthy versus disease context, sleep / anesthesia / wake manipulation, local versus whole-brain preparation, and whether the paper studies normal support, pathology aggravation, or therapeutic rescue.</td>
+<td>Mouse meningeal ablation, AD-like disease modulation, healthy-human sleep deprivation, and healthy-human MRI are silently promoted into one generic statement about clearance.</td>
+</tr>
+<tr>
+<td><strong>Direct observable / route object</strong></td>
+<td>Write whether the direct observable is lymphatic vessel anatomy, tracer movement, CSF mobility, protein concentration change, microglial transcriptional state, synaptic physiology, or another explicitly measured object.</td>
+<td><code>clearance changed</code> replaces the actual observable, and a mobility proxy is overread as if it had directly measured local immune control or synaptic maintenance.</td>
+</tr>
+<tr>
+<td><strong>Driver / perturbation route</strong></td>
+<td>State whether the paper manipulates lymphatic integrity, vascular / vasomotion state, sleep deprivation, microglial signaling, pharmacology, or nothing causal at all.</td>
+<td>The site silently shifts from correlational support-state language to controller-identification or causal-maintenance language without a disclosed intervention route.</td>
+</tr>
+<tr>
+<td><strong>Human measurement / model burden</strong></td>
+<td>For human evidence, disclose whether the route is CSF-specific MRI mobility, sleep-deprivation plus contrast-tracer readout, or plasma-biomarker efflux inferred through a device and compartment model, together with acquisition burden and model assumptions.</td>
+<td>A human clearance paper is treated as if it had directly measured glymphatic flux, local microglial state, or cell-specific immune control without a proxy / model audit.</td>
+</tr>
+<tr>
+<td><strong>Functional target</strong></td>
+<td>Name the dependent variable the claim is actually about, such as macromolecule drainage, amyloid burden, immunotherapy response, synaptic physiology, cognitive deficit, or multiday recovery support.</td>
+<td>The site silently jumps from one target to another, for example from amyloid-handling or MRI mobility to general memory-maintenance completeness.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Fix in one line what remains latent, especially cell-specific immune controller, responsible synapse, local astrocyte-microglia coordination, instantaneous neural state, and same-subject whole-brain support-state identification.</td>
+<td>Macro proxy, disease-model modulation, or biomarker-efflux evidence is promoted to local maintenance-controller or moment-to-moment neural-readout language.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Why this route card is necessary here</strong>
+<p>
+The need is multi-axis. On the anatomy side, <a href="https://doi.org/10.1038/nature14432" target="_blank">Louveau et al. (2015)</a> and <a href="https://doi.org/10.1038/s41586-019-1419-5" target="_blank">Ahn et al. (2019)</a> establish drainage routes, but they do not by themselves identify the immune effector. On the disease-modulation side, <a href="https://doi.org/10.1038/s41586-021-03489-0" target="_blank">Da Mesquita et al. (2021)</a> links impaired meningeal lymphatics to worse microglial inflammatory response and poorer anti-Aβ immunotherapy outcome, which is stronger than a purely anatomical statement but still not a general human readout. On the physiology-driver side, <a href="https://doi.org/10.1126/sciadv.aav5447" target="_blank">Hablitz et al. (2019)</a> shows that glymphatic influx tracks delta power and heart rate under anesthesia, while <a href="https://doi.org/10.1093/brain/awaa443" target="_blank">Eide &amp; Ringstad (2021)</a> shows that one night of sleep deprivation impairs molecular clearance in humans; these are about <strong>state dependence</strong>, not direct identification of the responsible local controller. On the human observability side, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> measures <strong>CSF mobility</strong> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> infers <strong>brain-to-plasma biomarker clearance</strong> with a device and compartment model. Therefore, this site does not let these rows inherit one another's claim ceiling, and it does not let any of them stand in for local synaptic maintenance or cell-specific immune control without a route-card audit.
+</p>
+</div>
 
 <h3>16. Local proteostasis / synaptic tagging under molecular turnover is another state layer</h3>
 <p>
@@ -968,6 +1028,8 @@ A final correction is that static <sup>1</sup>H-MRSI similarity is not the same 
 <li>Bukalo, O., et al. (2026). Astrocytes enable amygdala neural representations supporting memory. <em>Nature</em>. <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">doi:10.1038/s41586-025-10068-0</a></li>
 <li>Louveau, A., Smirnov, I., Keyes, T. J., et al. (2015). Structural and functional features of central nervous system lymphatic vessels. <em>Nature</em>, 523, 337-341. <a href="https://doi.org/10.1038/nature14432" target="_blank">doi:10.1038/nature14432</a></li>
 <li>Ahn, J. H., Cho, H., Kim, J.-H., et al. (2019). Meningeal lymphatic vessels at the skull base drain cerebrospinal fluid. <em>Nature</em>, 572, 62-66. <a href="https://doi.org/10.1038/s41586-019-1419-5" target="_blank">doi:10.1038/s41586-019-1419-5</a></li>
+<li>Hablitz, L. M., Vinitsky, H. S., Sun, Q., et al. (2019). Increased glymphatic influx is correlated with high EEG delta power and low heart rate in mice under anesthesia. <em>Science Advances</em>, 5(2), eaav5447. <a href="https://doi.org/10.1126/sciadv.aav5447" target="_blank">doi:10.1126/sciadv.aav5447</a></li>
+<li>Da Mesquita, S., Papadopoulos, Z., Dykstra, T., et al. (2021). Meningeal lymphatics affect microglia responses and anti-Aβ immunotherapy. <em>Nature</em>, 593, 255-260. <a href="https://doi.org/10.1038/s41586-021-03489-0" target="_blank">doi:10.1038/s41586-021-03489-0</a></li>
 <li>Kim, J., et al. (2025). Meningeal lymphatics-microglia axis regulates synaptic physiology. <em>Cell</em>, 188(8), 2129-2148.e21. <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">doi:10.1016/j.cell.2025.02.022</a></li>
 <li>Eide, P. K., &amp; Ringstad, G. (2021). Sleep deprivation impairs molecular clearance from the human brain. <em>Brain</em>, 144(3), 863-874. <a href="https://doi.org/10.1093/brain/awaa443" target="_blank">doi:10.1093/brain/awaa443</a></li>
 <li>Lee, J.-C., Wang, C.-Y., Lin, C.-L., &amp; Lu, H.-C. (2022). Synaptic memory survives molecular turnover. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 119(42), e2211572119. <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">doi:10.1073/pnas.2211572119</a></li>
