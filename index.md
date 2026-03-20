@@ -5,7 +5,7 @@ description: "A verification commons for turning mind uploading and WBE into a s
 article_type: Start Here
 subtitle: "Define success criteria, standards, benchmarks, and preregistration first"
 author: Mind Uploading Research Project
-last_updated: "2026-03-20"
+last_updated: "2026-03-21"
 note: "Human-friendly landing page"
 audience: "First-time visitors, readers who want only the big picture, and anyone who wants a clear reading order"
 reading_time: "5-10 min"
@@ -16,6 +16,7 @@ page_highlights:
   - "If you are unsure where to start, read Verification -> Roadmap -> WBE/EEG 101."
   - "Connectomes and cell types alone do not determine long-term dynamics; sleep/homeostasis, sleep architecture / replay-coupling, myelination, thermal-state, bioenergetic / mitochondrial state, astrocyte / glial-state, and clearance / immune support remain separate variables."
   - "Human evidence is layered: local ultrastructure, synaptic-density PET, and macro biochemical / energetic / ionic / thermal / myelin / clearance proxies are not one near-direct readout."
+  - "Several living-human proxy rows are not promoted together unless same-subject relation, model burden, and residual hidden-state ceilings are disclosed explicitly."
   - "For hemodynamic modalities, BOLD or fNIRS amplitude is not read as neural difference unless vascular-state / CVR limits are audited separately."
   - "For EEG / MEG connectivity, wPLI, source-space graphs, and information-flow labels are not read as leak-proof communication maps or causal circuits unless leakage, perturbation, and pipeline limits are disclosed separately."
   - "Thermodynamic or irreversibility papers are kept on an auxiliary track; arrow-of-time results are not read as direct physical-dissipation or WBE-readiness evidence without a route card."
@@ -31,6 +32,7 @@ known_points:
   - "Recent rodent causal studies show that astrocyte-state can matter for recall, multiday stabilization, and fear-state representations, but this still does not provide a human whole-brain readout."
   - "Current primary literature also treats clearance / immune support as a measurable multiday support-state, but current human CSF / glymphatic routes still stop at macro support-state proxy rather than local immune-controller readout."
   - "Current human evidence comes in layers; proxy-rich routes still do not yield comparable whole-brain in vivo ground truth for every hidden state."
+  - "Several human proxy rows do not add automatically; without same-subject relation, measurement-model disclosure, and cross-row calibration, the bundle stays below state-identification language."
   - "For hemodynamic readouts, a group or longitudinal BOLD difference can still be dominated by vascular transfer state rather than neural change."
   - "For EEG / MEG connectivity readouts, volume conduction, source leakage, ghost interactions, and pipeline dependence still stop the claim before communication or causality."
   - "For thermodynamic claims, different estimator families still answer different questions, so irreversibility results stay auxiliary unless their route card is disclosed."
@@ -102,6 +104,13 @@ The March 2026 update added <a href="verification.html#observability-budget">Ver
 <strong>If You Want To Know Which Human Routes Are Real Advances And Which Are Still Only Proxies</strong>
 <p>
 The front door was still too coarse if it only said that many hidden states remain. <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> now separates <strong>destructive local human nanoscale ultrastructure</strong> from <strong>living-human in vivo proxy routes</strong> such as regional synaptic-density PET, receptor / transporter atlas priors, selected occupancy / displacement PET routes for chosen neurotransmitter systems, perturbation-conditioned sleep-homeostasis / plasticity proxies, EEG-state-gated perturbation routes, and macro biochemical / energetic / ionic / thermal / myelin / clearance proxies. It also keeps visible the still-missing whole-brain in vivo routes for current transcription / chromatin state, ECM / PNN gate state, branch-local proteostasis, current chloride set point, and local mitochondrial positioning. In other words, <strong>"a human nanoscale paper exists"</strong> is not silently rephrased here as <strong>"living-human state-complete measurement is close and already field-ready."</strong>
+</p>
+</div>
+
+<div class="note-box">
+<strong>If You Want To Know When Several Human Proxy Rows May Be Combined</strong>
+<p>
+The 2026-03-21 audit tightened one more point: <strong>proxy-rich</strong> is not the same as <strong>same-subject state identification</strong>. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> constrain different variable classes with different cohort sizes, hardware burdens, and measurement models, and the cited studies do not show field-ready same-subject fusion across those routes. This site now requires a <a href="verification.html#human-proxy-composition-card">Human Proxy Composition Card</a> before several living-human proxy rows may be promoted together. The shortest explanation is in <a href="wbe_101.html#human-proxy-composition-rule">WBE 101: human-proxy composition rule</a>.
 </p>
 </div>
 

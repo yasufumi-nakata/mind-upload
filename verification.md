@@ -5,7 +5,7 @@ description: "A blueprint of standards, benchmarks, registries, and audits for t
 article_type: Platform
 subtitle: "Use the logic of PDB x BIDS x PhysioNet x OSF to define WBE success conditions and reproducible progress"
 author: Mind Uploading Research Project
-last_updated: "2026-03-20"
+last_updated: "2026-03-21"
 note: "Operational Specification"
 audience: "Readers who want the site's core policy and anyone checking what must exist before progress can honestly be claimed"
 reading_time: "15-25 min"
@@ -20,6 +20,7 @@ page_highlights:
   - "For foundation / self-supervised EEG results, the Pretraining Card fixes corpus identity, overlap audit, setup diversity, harmonization, adaptation regime, benchmark provenance including split randomness / hidden grouping and inference-stage budget, and scale / efficiency before any transfer claim is read strongly."
   - "For brain-to-text and speech decode, the Neural Contribution Card fixes task constraint, language prior, candidate set, no-brain / no-LM / shuffle baselines, and subject cooperation."
   - "For multimodal or atlas-prior results, the Fusion Card is added on top of the Observability Budget so acquisition relation, synchronization, fusion model, vascular-state / CVR limits for hemodynamic stacks, and external validation are fixed explicitly."
+  - "For living-human proxy bundles, the Human Proxy Composition Card fixes direct observable by row, same-subject relation, model burden, incremental evidence, and residual latent-state ceiling before several proxy routes may be promoted together."
   - "For diffusion-MRI tractography connectomes, the Observability Budget now requires a tractography route card that names direct observables, priors / filtering, uncertainty, and abstention."
   - "For MRSI-derived metabolic-connectome claims, the Observability Budget now requires a metabolic-similarity route card that names the metabolite set, parceling, correction model, spectral QC, and whether the object is static similarity or kinetic rate imaging."
   - "For destructive ultrastructure claims, the Observability Budget now requires a destructive-structure route card that names preservation route, live-to-fix delay, registration scope, section-loss / segmentation QA, throughput scale, and omitted live-state families."
@@ -58,6 +59,7 @@ known_points:
   - "The same decoding score is not target-specific evidence if eye movement, EMG, uninstructed movement, auditory feedback, subject / session fingerprint, or acquisition-distribution shortcuts remain unresolved."
   - "A foundation-model score without corpus-overlap, harmonization, adaptation, and benchmark-version disclosure, including split randomness / hidden grouping, remains qualified decoding evidence rather than portable transfer evidence."
   - "A multimodal result is not one thing; simultaneous acquisition, geometric fusion, invasive calibration, and atlas priors must be audited separately."
+  - "Several living-human proxy routes do not add automatically; without same-subject relation, model disclosure, and cross-row calibration, the bundle remains below state-identification language."
   - "For ESI, passing one validation class does not auto-pass the others; stimulation error, simultaneous invasive concordance, and postsurgical outcome answer different questions."
   - "For ESI, inverse-family, package, parameter, and conductivity choices can materially shift the reconstructed source, so solver-disagreement and uncertainty width are themselves audit items."
   - "A BOLD or fNIRS amplitude difference without vascular-state / CVR audit remains a hemodynamic-limited difference rather than a clean neural difference."
@@ -817,6 +819,65 @@ The remaining weakness after adding the <strong>Observability Budget</strong> wa
 If this card is missing, this site reads a multimodal or atlas-prior result at the ceiling of the <strong>strongest individually supported stack</strong>, not as <strong>same-subject, cross-stack, externally calibrated state identification</strong>. An atlas prior plus one live measurement remains an atlas-conditioned measurement, not automatic state completeness.
 </p>
 </div>
+<h3 class="section-title" id="human-proxy-composition-card">Human Proxy Composition Card for living-human multi-stack claims</h3>
+<div class="note-box">
+<strong>2026-03-21 addendum: proxy-rich human evidence must be composed explicitly, not rhetorically</strong>
+<p>
+After adding the <strong>Observability Budget</strong> and the <strong>Fusion Card</strong>, one weak point still remained: several living-human proxy rows could still be listed side by side as if coverage automatically added up. The primary literature does not support that shortcut. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> provide a <strong>33-participant SV2A atlas</strong> calibrated to autoradiography, which is a cohort-level synaptic-density proxy. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> define a <strong>five-metabolite within-subject similarity graph</strong> in <strong>51 healthy adolescents</strong> with <strong>13-person site replication</strong>, not kinetic flux imaging. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> provide <strong>7 T dynamic DMRSI kinetic maps</strong> in <strong>five healthy participants</strong>. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> provide <strong>myelin-bilayer mapping</strong> in <strong>two healthy volunteers</strong> on specialized hardware. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> provide a <strong>24-participant CSF-mobility MRI route</strong>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> infer sleep-linked glymphatic clearance through <strong>older-adult crossover cohorts</strong>, an <strong>investigational wearable</strong>, and a <strong>compartmental model</strong>. These routes differ in direct observable, time window, spatial unit, model burden, and deployment maturity, and the cited studies do not show that they already compose into same-subject whole-brain state identification. Therefore, this site now requires a <strong>Human Proxy Composition Card</strong> whenever multiple living-human proxy rows are used together to raise a claim ceiling.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Human Proxy Composition Card field</th>
+<th>Minimum disclosure</th>
+<th>What this site stops claiming if absent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claimed latent variable family</strong></td>
+<td>Name the exact hidden-state family or maintenance-state bundle the combined rows are supposed to constrain, and specify the spatial unit and timescale of that claim.</td>
+<td>A proxy bundle is not read as if it had already become one coherent state object.</td>
+</tr>
+<tr>
+<td><strong>Proxy-row inventory and direct observables</strong></td>
+<td>For each row, name the stack, direct observable, spatial unit, time window, and whether the row is a structural scaffold, regional density proxy, macro biochemical / energetic / ionic / thermal / myelin / support proxy, or perturbation-conditioned proxy.</td>
+<td>Several rows are not allowed to collapse into the vague statement that “human evidence exists.”</td>
+</tr>
+<tr>
+<td><strong>Evidence relation across rows</strong></td>
+<td>State whether the rows come from the same subject, same session, same perturbation, same day, cross-day, atlas prior, or post hoc cross-cohort juxtaposition, and say explicitly which rows were never acquired together.</td>
+<td>The bundle is not promoted to same-subject or same-state evidence.</td>
+</tr>
+<tr>
+<td><strong>Measurement-model and acquisition burden</strong></td>
+<td>Name the tracer / kinetic model / blood-input route, field strength, specialized hardware, scan burden, correction model, or compartment model that each row depends on, plus any small-cohort or proof-of-principle limitation.</td>
+<td>A specialized or model-heavy route is not read as field-ready generic observability.</td>
+</tr>
+<tr>
+<td><strong>Increment over the strongest single row</strong></td>
+<td>Report what the bundle adds beyond the strongest individual row under the same reading rule: reduced latent-state family, narrower ceiling, better calibration, or none.</td>
+<td>Listing multiple rows is not treated as self-justifying progress.</td>
+</tr>
+<tr>
+<td><strong>Cross-row calibration / bridge</strong></td>
+<td>Name any same-brain co-registration, invasive calibration, perturbation bridge, pharmacological challenge, or external dataset that justifies reading the rows as evidence about one shared biological variable, and say when no such bridge exists.</td>
+<td>The bundle is not promoted to one externally calibrated cross-stack state measurement.</td>
+</tr>
+<tr>
+<td><strong>Residual latent state and abstention</strong></td>
+<td>List which hidden-state families still remain latent after composition, and state the exact claim ceiling that remains in force.</td>
+<td>The bundle is not promoted from proxy-rich human evidence to state-complete or maintenance-complete language.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Minimum operating rule</strong>
+<p>
+If this card is missing, this site reads a living-human proxy bundle at the ceiling of the <strong>strongest individually supported row</strong>, or at most as <strong>proxy-rich but ceiling-limited human evidence</strong>. It is not promoted to <strong>same-subject, cross-stack, externally calibrated state identification</strong>.
+</p>
+</div>
 <h3 class="section-title" id="destructive-structure-card">Destructive-Structure Route Card for ultrastructure claims</h3>
 <div class="note-box">
 <strong>2026-03-20 addendum: destructive ultrastructure routes need their own card</strong>
@@ -991,7 +1052,7 @@ For connectome-constrained neural predictors, the label alone is also not enough
 <div class="note-box">
 <strong>Minimum operating rules</strong>
 <p>
-If this card is missing, this site treats the result as <strong>L0/L1 reproducible analysis or limited decode</strong> and does not promote it to L2 or above. For example, the default ceiling is <strong>macro-state tracking</strong> for <strong>EEG / HD-EEG + MRI only</strong>, <strong>an implant-region local population window</strong> for <strong>high-density extracellular probe only</strong>, <strong>structural scaffold</strong> for <strong>volume EM only</strong>, <strong>local ex vivo scaffold</strong> for <strong>human ultrastructure without a destructive-structure route card</strong>, <strong>molecular / spatial prior</strong> for <strong>whole-brain atlas only</strong>, and still only <strong>local conditional prediction</strong> even for <strong>same-brain calcium + EM</strong>. For inverse or model-based claims, a submission without an <strong>Identifiability Card</strong> is not accepted here as <strong>unique internal-state recovery</strong> and remains at the predictive / localization / model-conditioned ceiling even if its observability class improved. For hemodynamic modalities, a group or cross-day BOLD / fNIRS difference without <strong>vascular-state / CVR</strong> or <strong>short-separation / superficial-bias</strong> audit is not accepted here as a neural difference. For diffusion-MRI tractography, a connectome claim without a <strong>tractography route card</strong> is not accepted here as an edge-complete graph and remains at the <strong>macro pathway prior / targeted bundle hypothesis</strong> ceiling. For connectome-constrained predictors, a model claim without a <strong>conditional-model route card</strong> remains at the <strong>conditional hypothesis engine / task-bounded predictor</strong> ceiling and is not accepted here as unique internal-state recovery. If a chronic-probe result lacks a unit-identity audit, single-unit longitudinal claims are not accepted. Detailed stack-specific ceilings and the <strong>state variable × timescale</strong> matrix are summarized in <a href="wiki/measurement-stack-and-claim-ceiling.html#state-variable-matrix">Wiki: observability and claim ceiling by measurement stack</a>.
+If this card is missing, this site treats the result as <strong>L0/L1 reproducible analysis or limited decode</strong> and does not promote it to L2 or above. For example, the default ceiling is <strong>macro-state tracking</strong> for <strong>EEG / HD-EEG + MRI only</strong>, <strong>an implant-region local population window</strong> for <strong>high-density extracellular probe only</strong>, <strong>structural scaffold</strong> for <strong>volume EM only</strong>, <strong>local ex vivo scaffold</strong> for <strong>human ultrastructure without a destructive-structure route card</strong>, <strong>molecular / spatial prior</strong> for <strong>whole-brain atlas only</strong>, and still only <strong>local conditional prediction</strong> even for <strong>same-brain calcium + EM</strong>. For inverse or model-based claims, a submission without an <strong>Identifiability Card</strong> is not accepted here as <strong>unique internal-state recovery</strong> and remains at the predictive / localization / model-conditioned ceiling even if its observability class improved. For living-human multi-stack proxy claims, a submission without a <strong>Human Proxy Composition Card</strong> is not accepted here as <strong>same-subject cross-stack state identification</strong> and remains at the <strong>strongest single-route</strong> or <strong>proxy-rich but ceiling-limited</strong> level. For hemodynamic modalities, a group or cross-day BOLD / fNIRS difference without <strong>vascular-state / CVR</strong> or <strong>short-separation / superficial-bias</strong> audit is not accepted here as a neural difference. For diffusion-MRI tractography, a connectome claim without a <strong>tractography route card</strong> is not accepted here as an edge-complete graph and remains at the <strong>macro pathway prior / targeted bundle hypothesis</strong> ceiling. For connectome-constrained predictors, a model claim without a <strong>conditional-model route card</strong> remains at the <strong>conditional hypothesis engine / task-bounded predictor</strong> ceiling and is not accepted here as unique internal-state recovery. If a chronic-probe result lacks a unit-identity audit, single-unit longitudinal claims are not accepted. Detailed stack-specific ceilings and the <strong>state variable × timescale</strong> matrix are summarized in <a href="wiki/measurement-stack-and-claim-ceiling.html#state-variable-matrix">Wiki: observability and claim ceiling by measurement stack</a>.
 </p>
 </div>
 </section>
@@ -1168,7 +1229,7 @@ Cross-day and remote-memory claims fail for a different reason than same-session
 </tr>
 <tr>
 <td><strong>Human evidence class / observability ceiling</strong></td>
-<td>Label each human-side route as <strong>structural scaffold</strong>, <strong>regional density proxy</strong>, <strong>macro biochemical / energetic / ionic / thermal / myelin / support proxy</strong>, or <strong>perturbation-conditioned proxy</strong>, and state which local hidden states still remain. If the route is PET-based, also name the tracer, quantification model or validated scan window, and whether partial-volume correction or atlas calibration was used. If the route is MRSI-based, also name the <strong>metabolite set</strong>, <strong>parceling unit</strong>, <strong>resolution plus PSF / partial-volume correction</strong>, <strong>water / lipid handling</strong>, <strong>spectral QC thresholds</strong>, and whether the claim is <strong>static similarity</strong> or <strong>kinetic rate imaging</strong>.</td>
+<td>Label each human-side route as <strong>structural scaffold</strong>, <strong>regional density proxy</strong>, <strong>macro biochemical / energetic / ionic / thermal / myelin / support proxy</strong>, or <strong>perturbation-conditioned proxy</strong>, and state which local hidden states still remain. If the route is PET-based, also name the tracer, quantification model or validated scan window, and whether partial-volume correction or atlas calibration was used. If the route is MRSI-based, also name the <strong>metabolite set</strong>, <strong>parceling unit</strong>, <strong>resolution plus PSF / partial-volume correction</strong>, <strong>water / lipid handling</strong>, <strong>spectral QC thresholds</strong>, and whether the claim is <strong>static similarity</strong> or <strong>kinetic rate imaging</strong>. If several living-human routes are combined, also attach a <a href="#human-proxy-composition-card">Human Proxy Composition Card</a>.</td>
 <td>Human proxy bundles are not promoted to state-complete maintenance snapshots.</td>
 </tr>
 </tbody>
@@ -1890,6 +1951,7 @@ In response to technical criticisms (Issue #257-#260) submitted in the latter ha
 <div class="key-points">
 <h4>Log with applicable conditions</h4>
 <ul>
+<li><strong>Human Proxy Composition Card:</strong>When several living-human proxy rows are used together, name the claimed latent variable, direct observable by row, same-subject / same-session relation, model burden, incremental evidence over the strongest single row, cross-row calibration route, and residual latent-state ceiling. If this is missing, the bundle stays at the strongest single-row or proxy-rich ceiling rather than same-subject state identification. </li>
 <li><strong>Fusion Card:</strong>When reporting multimodal or atlas-prior results, name the acquisition relation, synchronization route and unresolved lag, geometry / co-registration scope, fusion model, hemodynamic vascular-state / CVR calibration when applicable, unimodal and prior-only baselines, external calibration route, and abstention boundary. If this is missing, the result stays at the strongest unimodal or atlas-conditioned ceiling rather than same-subject cross-stack state identification. </li>
 <li><strong>ESI/HBM logs:</strong>Only when making anatomical source claims, attach uncertainty maps from cranial conductivity, forward model sensitivity analysis, or hierarchical Bayesian estimation. </li>
 <li><strong>Inverse-Solver Agreement Log:</strong>When reporting an anatomical ESI/HBM result, name the inverse families / packages compared, parameter window, headline-location spread or overlap metric, and whether the displayed map is best-case, median, or ensemble. If this is missing, the result stays at the method-sensitive source-hypothesis level. </li>
