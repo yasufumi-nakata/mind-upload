@@ -14,6 +14,7 @@ accuracy_note: "This page does not claim that WBE is already possible. It define
 page_highlights:
   - "Standards, repositories, benchmarks, and audits must be built as one package."
   - "Claim levels and failure conditions are fixed up front so decoding is not confused with emulation."
+  - "For maintenance-state claims, local causal evidence and living-human proxy evidence are kept on separate axes, so bridge assumptions must be disclosed rather than silently fused."
   - "For decode / biomarker scores, the Specificity & Shortcut Card separates the target neural variable from nuisance routes and audits subject / session fingerprint plus acquisition-distribution shortcuts independently."
   - "This page explains why collecting data alone is not the same as making progress."
   - "For foundation / self-supervised EEG results, the Pretraining Card fixes corpus identity, overlap audit, setup diversity, harmonization, adaptation regime, benchmark provenance including split randomness / hidden grouping and inference-stage budget, and scale / efficiency before any transfer claim is read strongly."
@@ -53,6 +54,7 @@ known_points:
   - "Comparable progress does not exist unless standards, shared infrastructure, evaluation, and auditing are aligned together."
   - "At L0-L2, reproducibility and falsification conditions can be designed in advance."
   - "Decode and emulate are distinct claims and require different evidence."
+  - "A maintenance-state claim that combines rodent causal evidence with human proxy evidence still needs an explicit bridge statement naming the matched state family, proxy class, and remaining latent controller."
   - "The same decoding score is not target-specific evidence if eye movement, EMG, uninstructed movement, auditory feedback, subject / session fingerprint, or acquisition-distribution shortcuts remain unresolved."
   - "A foundation-model score without corpus-overlap, harmonization, adaptation, and benchmark-version disclosure, including split randomness / hidden grouping, remains qualified decoding evidence rather than portable transfer evidence."
   - "A multimodal result is not one thing; simultaneous acquisition, geometric fusion, invasive calibration, and atlas priors must be audited separately."
@@ -1232,6 +1234,12 @@ On this site, <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#hu
 </p>
 </div>
 <div class="note-box">
+<strong>2026-03-20 addendum: causal relevance and human observability must be bridged, not fused</strong>
+<p>
+This site now keeps two axes separate when a maintenance-state claim cites both animal causal work and human proxy work. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">Hadzibegovic et al. (2025)</a> and <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2026)</a> strengthen controller-state and transcriptional-stabilization causality in rodents, while <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> strengthen perturbation-conditioned excitability or macro support-state observability in humans. These are not the same inferential step. Therefore, when a submission combines them, it must state <strong>which state family the causal paper makes relevant</strong>, <strong>which human proxy class was actually observed</strong>, <strong>which bridge assumptions remain unvalidated</strong>, and <strong>which local controller remains latent</strong>. Without that bridge disclosure, this site does not promote the result to measured human maintenance-state control.
+</p>
+</div>
+<div class="note-box">
 <strong>2026-03-19 addendum: MRSI metabolic connectome is a similarity graph, not a flux map</strong>
 <p>
 <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> defined the human metabolic connectome as <strong>pairwise correlations among five metabolites across gray-matter parcels</strong> and reported only <strong>weak</strong> overall alignment with tractography-based structural connectivity. <a href="https://doi.org/10.1002/brb3.1852" target="_blank">Bhogal et al. (2020)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2022.119574" target="_blank">Wright et al. (2022)</a>, and <a href="https://doi.org/10.1148/radiol.232401" target="_blank">Baboli et al. (2024)</a> show why this route still needs a measurement-model audit: MRSI interpretation depends on SNR, partial-volume / lipid handling, and voxel-specific correction or tissue-water modeling. Therefore, on this site, an MRSI-derived metabolic connectome is read as a <strong>macro-biochemical similarity scaffold</strong> unless the submission names the <strong>metabolite set</strong>, <strong>parceling unit</strong>, <strong>correction model</strong>, <strong>spectral QC thresholds</strong>, and whether the object is <strong>static similarity</strong> or <strong>dynamic kinetic rate imaging</strong>. If the claim is about glucose-flux or rate mapping, the route must be audited separately against rate-imaging methods such as <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>.
@@ -2098,7 +2106,7 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Dewa, K., et al. (2025). The astrocytic ensemble acts as a multiday trace to stabilize memory. <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">doi:10.1038/s41586-025-09619-2</a></li>
 <li>Bukalo, O., et al. (2026). Astrocytes enable amygdala neural representations supporting memory. <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">doi:10.1038/s41586-025-10068-0</a></li>
 <li>Vadisiute, A., Meijer, E., Therpurakal, R. N., et al. (2024). Glial cells undergo rapid changes following acute chemogenetic manipulation of cortical layer 5 projection neurons. <a href="https://doi.org/10.1038/s42003-024-06994-w" target="_blank">doi:10.1038/s42003-024-06994-w</a></li>
-<li>Hadzibegovic, N., et al. (2026). Early intrinsic excitability plasticity of neocortical engram neurons defines memory formation and precision. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">doi:10.1038/s41467-025-66975-3</a></li>
+<li>Hadzibegovic, N., et al. (2025). Early intrinsic excitability plasticity of neocortical engram neurons defines memory formation and precision. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">doi:10.1038/s41467-025-66975-3</a></li>
 <li>Stringer, C., Pachitariu, M., Steinmetz, N., et al. (2019). Spontaneous behaviors drive multidimensional, brainwide activity. <a href="https://doi.org/10.1126/science.aav7893" target="_blank">doi:10.1126/science.aav7893</a></li>
 <li>Saleem, A. B., Ayaz, A., Jeffery, K. J., Harris, K. D., &amp; Carandini, M. (2013). Integration of visual motion and locomotion in mouse visual cortex. <a href="https://doi.org/10.1038/nn.3567" target="_blank">doi:10.1038/nn.3567</a></li>
 <li>Ravassard, P., Kees, A., Willers, B., et al. (2013). Multisensory control of hippocampal spatiotemporal selectivity. <a href="https://doi.org/10.1126/science.1232655" target="_blank">doi:10.1126/science.1232655</a></li>
