@@ -5,7 +5,7 @@ description: "A wiki for learning Mind-Upload from the very beginning. It prepar
 article_type: Wiki
 subtitle: "Public pages are the gateway, and the wiki is the foundation for learning."
 author: Mind Uploading Research Project
-last_updated: "2026-03-16"
+last_updated: "2026-03-21"
 note: "Learning-first"
 audience: "People who want to learn from the basics, and people who want a foothold before entering the public pages."
 reading_time: "10-20 minutes"
@@ -91,6 +91,11 @@ If you just want to know the big picture first, you can go to the public page. H
 <td><strong>I want to know what is directly visible in which measurement stack and which state variable is still latent with which time constant</strong></td>
 <td><a href="measurement-stack-and-claim-ceiling.html">Observability and claim ceiling per measurement stack</a></td>
 <td><a href="../verification.html#state-completeness-gate">State variable completeness gate</a> / <a href="../tech_roadmap.html#qa-m1">M1 observed variable</a></td>
+</tr>
+<tr>
+<td><strong>I want to know why current human proxy bundles still do not add up to state-complete readout</strong></td>
+<td><a href="human-proxy-composition.html">Human proxy composition and route maturity</a></td>
+<td><a href="../wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> / <a href="../verification.html#human-proxy-composition-card">Human Proxy Composition Card</a></td>
 </tr>
 <tr>
 <td><strong>Don't want to misread flashy claims</strong></td>

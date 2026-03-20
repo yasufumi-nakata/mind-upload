@@ -57,6 +57,7 @@
 - [Wiki: Homeostatic Plasticity And Maintenance-State](https://github.com/yasufumi-nakata/mind-upload/wiki/homeostatic-plasticity-and-maintenance-state)
 - [Wiki: How to read partial solution/exploration stage/undeveloped](https://github.com/yasufumi-nakata/mind-upload/wiki/progress-labels-and-open-problem-status)
 - [Wiki: How to use summary, original text, and issue history](https://github.com/yasufumi-nakata/mind-upload/wiki/summary-vs-source-reading)
+- [Wiki: Human Proxy Composition and Route Maturity](https://github.com/yasufumi-nakata/mind-upload/wiki/human-proxy-composition)
 - [Wiki: Identity and copying issues](https://github.com/yasufumi-nakata/mind-upload/wiki/personhood-and-copy-problem)
 - [Wiki: Minimum artifact pack for L0](https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack)
 - [Wiki: observability and claim ceiling by measurement stack](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling)

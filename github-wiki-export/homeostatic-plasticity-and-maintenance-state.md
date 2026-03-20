@@ -30,6 +30,7 @@ What is shown here is the minimum list of hidden states that must be accounted f
 - Myelin, oligodendrocytes, thermal-state, ionic milieu / chloride homeostasis, activity-dependent transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local proteostasis / synaptic-tagging state, perisynaptic ECM / PNN state, local ATP supply and mitochondrial positioning, astrocytes, and the microglia / meningeal-lymphatic system all contribute to timing, plasticity, memory retrieval, long-term recovery, and clearance support.
 - Even in humans, macro scaffolds and support-state proxies are starting to become visible through SV2A PET, MRSI-based metabolic connectomes, MRS thermometry, 31P-MRS, sodium MRI, dynamic deuterium metabolic imaging, myelin bilayer mapping, TMS / EEG / sleep plasticity proxies, and CSF / glymphatic proxies, although cell-specific maintenance-states still remain coarse.
 - Myelin evidence already spans adaptive learning, timing-state control, plasticity-brake effects, remyelination recovery, and human macro-proxy classes, so a human myelin map alone does not settle per-axon timing-state or plasticity-complete restoration.
+- Bioenergetic evidence already spans presynaptic ATP-linked respiration, dendritic positioning / fission, synaptic ATP-synthase nano-organization, conserved mitochondrial Ca2+-efflux tuning, and human macro energetic proxy routes, so one energetic paper does not settle local mitochondrial state.
 - An MRSI-derived metabolic-connectome label still needs metabolite-set, parceling, correction-model, and QC disclosure before it can be interpreted safely.
 
 ## まだ分かっていないこと
@@ -37,8 +38,10 @@ What is shown here is the minimum list of hidden states that must be accounted f
 - It is not yet fixed how time-resolved transcription / chromatin audit should be submitted so that cell identity, current plasticity program, and memory-stabilization controller are not mixed.
 - It is not yet fixed how post-transcriptional RNA-state should be audited without collapsing isoform choice, m6A-dependent translation / degradation, and RNA-editing ratio back into gene-level abundance.
 - It is not yet fixed which same-subject or human-compatible external calibrators could raise phospho-signaling / second-messenger claims beyond region-structured ex vivo atlas evidence.
+- It is not yet fixed which same-subject or human-compatible external calibrators could raise bioenergetic / mitochondrial claims beyond macro energetic proxy evidence.
 - It has not been fixed which external standards among SV2A PET, MRSI, MRS thermometry, 31P-MRS, sodium MRI, dynamic DMI, myelin bilayers, TMS-EEG, sleep-plasticity proxies, and CSF-glymphatic proxies should calibrate maintenance-states that cannot be measured directly in humans.
 - It is not yet fixed which route-card fields should be mandatory when a myelin paper mixes learning, timing-state, plasticity, remyelination, and human proxy language in one argument.
+- It is not yet fixed which route-card fields should be mandatory when a clearance / immune paper mixes drainage anatomy, immune effector state, physiology drivers, human mobility imaging, and biomarker-efflux modeling in one argument.
 - It is not yet fixed which sleep-history, sleep-architecture, myelin, thermal, ECM, bioenergetic, metabolic, and clearance indicators will become standard submissions for long-term closed-loop claims.
 - It is not yet fixed which sleep replay fields should be mandatory across scalp EEG, intracranial recordings, and cue-driven interventions so that event definition, timing policy, and item-selection regime are not collapsed into one sentence.
 - It is also unclear how strongly parcel-level metabolic similarity and CSF-mobility proxies constrain cell-specific glial, immune, transmitter, and synaptic maintenance-states.
@@ -482,12 +485,74 @@ Healthy-human <a href="https://doi.org/10.1093/brain/awab466" target="_blank">MR
 
 <h3>12. bioenergetic / mitochondrial state is not another name for glial support</h3>
 <p>
-The weakness that became clearer here was that while I wrote about <strong>myelin / oligodendroglial support</strong> and <strong>astrocyte / metabolic support</strong>, I did not isolate <strong>neuronal local ATP supply and mitochondrial arrangement</strong> as independent maintenance-states. <a href="https://doi.org/10.1016/j.cell.2013.12.042" target="_blank">Rangaraju et al. (2014)</a> showed that activity-driven local ATP synthesis is required for presynaptic function, <a href="https://doi.org/10.1016/j.cell.2018.12.013" target="_blank">Rangaraju et al. (2019)</a> showed that spatially stable mitochondrial compartments fuel local translation during plasticity, <a href="https://doi.org/10.1016/j.neuron.2018.09.025" target="_blank">Divakaruni et al. (2018)</a> showed that rapid dendritic mitochondrial fission is required for LTP induction, <a href="https://doi.org/10.1038/s41467-023-44233-8" target="_blank">Bapat et al. (2024)</a> showed that stabilized dendritic mitochondria locally support synaptic plasticity, and <a href="https://doi.org/10.1038/s42003-025-08963-3" target="_blank">Hu et al. (2025)</a> showed polarized ATP synthase in synaptic mitochondria in response to learning and plasticity signals. Therefore, even with the same connectome, the same cell type, and the same astrocyte support, <strong>repeated-burst reliability and dendritic plasticity can still change if the local neuronal bioenergetic state differs</strong>.
+The weakness that became clearer here was that while I wrote about <strong>myelin / oligodendroglial support</strong> and <strong>astrocyte / metabolic support</strong>, I did not isolate <strong>neuronal local ATP supply and mitochondrial arrangement</strong> as independent maintenance-states. <a href="https://doi.org/10.1016/j.cell.2013.12.042" target="_blank">Rangaraju et al. (2014)</a> showed that activity-driven local ATP synthesis is required for presynaptic function, <a href="https://doi.org/10.1038/s41598-023-40877-0" target="_blank">Underwood et al. (2023)</a> showed that fear training increases presynaptic mitochondrial respiration and that Drp1-linked enhancement is required for contextual memory, <a href="https://doi.org/10.1016/j.cell.2018.12.013" target="_blank">Rangaraju et al. (2019)</a> showed that spatially stable mitochondrial compartments fuel local translation during plasticity, <a href="https://doi.org/10.1016/j.neuron.2018.09.025" target="_blank">Divakaruni et al. (2018)</a> showed that rapid dendritic mitochondrial fission is required for LTP induction, <a href="https://doi.org/10.1038/s41467-023-44233-8" target="_blank">Bapat et al. (2024)</a> showed that stabilized dendritic mitochondria locally support synaptic plasticity, <a href="https://doi.org/10.1038/s42003-025-08963-3" target="_blank">Hu et al. (2025)</a> showed polarized ATP synthase in synaptic mitochondria in response to learning and plasticity signals, and <a href="https://doi.org/10.1038/s42255-026-01451-w" target="_blank">Vishwanath et al. (2026)</a> showed that mitochondrial Ca<sup>2+</sup> efflux can tune neuronal metabolism and long-term memory across species. Therefore, even with the same connectome, the same cell type, and the same astrocyte support, <strong>repeated-burst reliability, local plasticity support, and memory-relevant metabolic control can still change if the local neuronal bioenergetic state differs</strong>.
 </p>
 
 <strong>What you can currently see in human is the macro energetic proxy</strong>
 <p>
 <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> measured ATP synthesis, metabolite concentration, and pH using 31P-MRS in healthy human brains, and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> quantified whole-brain glucose transport and metabolic rates using dynamic deuterium magnetic resonance spectroscopic imaging. However, these are just <strong>macro energetic proxies</strong> and do not directly tell us <strong>which synapse neighborhood mitochondria are staying at and which dendritic branch lacks ATP reserve</strong>. Therefore, on this site, while acknowledging energetic imaging in humans as an important advance, we do not refer to direct readout of cell-specific bioenergetic / mitochondrial state.
+</p>
+
+<strong>2026-03-21 addendum: bioenergetic / mitochondrial evidence now needs a route card</strong>
+<p>
+The remaining weakness on this page was that <strong>bioenergetic evidence</strong> could still collapse several different inferential objects into one bucket. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.cell.2013.12.042" target="_blank">Rangaraju et al. (2014)</a> and <a href="https://doi.org/10.1038/s41598-023-40877-0" target="_blank">Underwood et al. (2023)</a> are about <strong>presynaptic ATP-linked energetic support / respiration for transmission and memory formation</strong>. <a href="https://doi.org/10.1016/j.cell.2018.12.013" target="_blank">Rangaraju et al. (2019)</a>, <a href="https://doi.org/10.1016/j.neuron.2018.09.025" target="_blank">Divakaruni et al. (2018)</a>, and <a href="https://doi.org/10.1038/s41467-023-44233-8" target="_blank">Bapat et al. (2024)</a> are about <strong>dendritic positioning, fission, and local plasticity support</strong>. <a href="https://doi.org/10.1038/s42003-025-08963-3" target="_blank">Hu et al. (2025)</a> is about <strong>synaptic ATP-synthase nano-organization under learning-like conditions</strong>. <a href="https://doi.org/10.1038/s42255-026-01451-w" target="_blank">Vishwanath et al. (2026)</a> is about <strong>mitochondrial Ca<sup>2+</sup>-efflux tuning as a metabolic control lever for long-term memory across species</strong>. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> raise human observability, but only as <strong>macro energetic proxy routes</strong>. Therefore, this site now requires a <strong>bioenergetic / mitochondrial route card</strong> before a claim is promoted beyond a local, explicitly named ceiling.
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be fixed explicitly</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the result supports <strong>presynaptic ATP-demand support</strong>, <strong>dendritic plasticity support</strong>, <strong>organelle micro-organization</strong>, <strong>metabolic-tuning intervention</strong>, or <strong>human macro energetic proxy</strong>.</td>
+<td>Acute synaptic support, local plasticity mechanism, memory enhancement, and human proxy imaging collapse into one label such as <code>energetic evidence</code>.</td>
+</tr>
+<tr>
+<td><strong>Biological regime / compartment</strong></td>
+<td>Name species, brain region, memory or plasticity paradigm, and whether the claim is presynaptic, dendritic, somatic, or whole-brain.</td>
+<td>A dendritic-slice mechanism or a rodent memory intervention is silently promoted to a generic whole-brain energetic controller.</td>
+</tr>
+<tr>
+<td><strong>Direct energetic observable</strong></td>
+<td>Write the direct readout: ATP synthesis, oxygen-consumption / respiration, mitochondrial position or stability, fission / fusion event rate, ATP-synthase nanocluster distribution, Ca<sup>2+</sup>-efflux kinetics, or macro metabolic-rate map.</td>
+<td>A paper that measured one energetic object is overread as if it had measured all local mitochondrial state variables.</td>
+</tr>
+<tr>
+<td><strong>Controller / perturbation route</strong></td>
+<td>State which controller or intervention was actually manipulated or assumed, such as Drp1, VAP stabilization, Letm1-mediated Ca<sup>2+</sup> efflux, or a kinetic model applied to 31P-MRS / dynamic DMRSI.</td>
+<td>The claim ceases to distinguish between direct mechanism, model-conditioned inference, and proxy-only readout.</td>
+</tr>
+<tr>
+<td><strong>Quantity type / model burden</strong></td>
+<td>Separate <strong>static structural organization</strong>, <strong>acute respiration / ATP-linked flux</strong>, <strong>event-triggered dynamics</strong>, and <strong>whole-brain macro rate imaging</strong>, and disclose any kinetic or compartment model burden.</td>
+<td>Static mitochondrial organization is overread as ATP turnover truth, or a macro imaging estimate is overread as branch-local energetic state.</td>
+</tr>
+<tr>
+<td><strong>Functional target</strong></td>
+<td>Name the target phenomenon explicitly: vesicle cycling, repeated-burst reliability, LTP induction, local translation, recall, or long-term memory formation.</td>
+<td>A result that only constrains one function target is promoted to a generic statement that `bioenergetics solved memory maintenance`.</td>
+</tr>
+<tr>
+<td><strong>Human observability / external calibration</strong></td>
+<td>State whether the human route is only a macro energetic proxy and what local mitochondrial variables still require external calibration.</td>
+<td>31P-MRS or dynamic DMRSI is silently promoted to branch-local mitochondrial-state ground truth.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Write which local variables remain latent, such as branch-specific ATP reserve, synapse-neighbor mitochondrial residence, fission/fusion controller state, redox reserve, or cell-specific Ca<sup>2+</sup>-efflux control.</td>
+<td>The site accidentally treats `energetic evidence exists` as equivalent to energetic-complete or maintenance-complete state capture.</td>
+</tr>
+</tbody>
+</table>
+
+<strong>Why this route card is necessary here</strong>
+<p>
+The need is two-sided. On the mechanism side, <a href="https://doi.org/10.1038/s41598-023-40877-0" target="_blank">Underwood et al. (2023)</a> and <a href="https://doi.org/10.1038/s42255-026-01451-w" target="_blank">Vishwanath et al. (2026)</a> show that changing mitochondrial respiration or Ca<sup>2+</sup>-efflux control can alter memory without turning bioenergetics into one generic support row. On the human-observability side, <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> remain macro energetic routes, so this site does not let a human energetic image inherit branch-local mitochondrial-state language.
 </p>
 
 <h3>13. Cargo-transport / cytoskeletal trafficking is not implied by proteostasis or ATP</h3>
@@ -518,6 +583,63 @@ The weak point that became clear here was that while I wrote about <strong>astro
 <strong>How to read human clearance proxy</strong>
 <p>
 <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> is a 7T MRI technical report on <strong>CSF mobility</strong>, not a direct readout of clearance flux itself. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> is an important advance that combines randomized crossover and plasma biomarkers, but it still relies on an <strong>investigational device</strong> and <strong>compartment model</strong>. Therefore, this site treats both as <strong>provisional human support-state proxies</strong> and does not promote them to ground truth of cell-specific immune control or local synaptic maintenance.
+</p>
+
+<strong>2026-03-21 addendum: clearance / immune evidence now needs a route card</strong>
+<p>
+The remaining weakness on this page was that <strong>clearance / immune evidence</strong> could still collapse several different inferential objects into one bucket. The primary literature does not support that shortcut. <a href="https://doi.org/10.1038/nature14432" target="_blank">Louveau et al. (2015)</a> and <a href="https://doi.org/10.1038/s41586-019-1419-5" target="_blank">Ahn et al. (2019)</a> are about <strong>meningeal-lymphatic structure and drainage anatomy</strong>. <a href="https://doi.org/10.1038/s41586-021-03489-0" target="_blank">Da Mesquita et al. (2021)</a> is about <strong>ageing / AD-like consequence and immunotherapy modulation when lymphatic function is impaired</strong>. <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Kim et al. (2025)</a> is about a <strong>meningeal-lymphatics-microglia route that regulates synaptic physiology</strong>. <a href="https://doi.org/10.1126/sciadv.aav5447" target="_blank">Hablitz et al. (2019)</a> and <a href="https://doi.org/10.1093/brain/awaa443" target="_blank">Eide &amp; Ringstad (2021)</a> constrain <strong>physiology-linked clearance dynamics</strong>. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> is a <strong>human CSF-mobility MRI route</strong>. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> is a <strong>model-based human biomarker-efflux route</strong>. Therefore, on this site, clearance / immune claims now require a <strong>route card</strong> before they are promoted beyond a narrow, explicitly named ceiling.
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be fixed explicitly</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the paper is about <strong>drainage anatomy</strong>, <strong>disease / ageing lymphatic dysfunction</strong>, <strong>microglia-mediated synaptic maintenance</strong>, <strong>sleep / physiology-linked mobility</strong>, <strong>human CSF-mobility imaging</strong>, or <strong>human biomarker-efflux modeling</strong>.</td>
+<td>Different inferential objects collapse into one phrase such as <code>clearance evidence shows maintenance is measured</code>.</td>
+</tr>
+<tr>
+<td><strong>Biological regime</strong></td>
+<td>Name species, healthy versus disease context, sleep / anesthesia / wake manipulation, local versus whole-brain preparation, and whether the paper studies normal support, pathology aggravation, or therapeutic rescue.</td>
+<td>Mouse meningeal ablation, AD-like disease modulation, healthy-human sleep deprivation, and healthy-human MRI are silently promoted into one generic statement about clearance.</td>
+</tr>
+<tr>
+<td><strong>Direct observable / route object</strong></td>
+<td>Write whether the direct observable is lymphatic vessel anatomy, tracer movement, CSF mobility, protein concentration change, microglial transcriptional state, synaptic physiology, or another explicitly measured object.</td>
+<td><code>clearance changed</code> replaces the actual observable, and a mobility proxy is overread as if it had directly measured local immune control or synaptic maintenance.</td>
+</tr>
+<tr>
+<td><strong>Driver / perturbation route</strong></td>
+<td>State whether the paper manipulates lymphatic integrity, vascular / vasomotion state, sleep deprivation, microglial signaling, pharmacology, or nothing causal at all.</td>
+<td>The site silently shifts from correlational support-state language to controller-identification or causal-maintenance language without a disclosed intervention route.</td>
+</tr>
+<tr>
+<td><strong>Human measurement / model burden</strong></td>
+<td>For human evidence, disclose whether the route is CSF-specific MRI mobility, sleep-deprivation plus contrast-tracer readout, or plasma-biomarker efflux inferred through a device and compartment model, together with acquisition burden and model assumptions.</td>
+<td>A human clearance paper is treated as if it had directly measured glymphatic flux, local microglial state, or cell-specific immune control without a proxy / model audit.</td>
+</tr>
+<tr>
+<td><strong>Functional target</strong></td>
+<td>Name the dependent variable the claim is actually about, such as macromolecule drainage, amyloid burden, immunotherapy response, synaptic physiology, cognitive deficit, or multiday recovery support.</td>
+<td>The site silently jumps from one target to another, for example from amyloid-handling or MRI mobility to general memory-maintenance completeness.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Fix in one line what remains latent, especially cell-specific immune controller, responsible synapse, local astrocyte-microglia coordination, instantaneous neural state, and same-subject whole-brain support-state identification.</td>
+<td>Macro proxy, disease-model modulation, or biomarker-efflux evidence is promoted to local maintenance-controller or moment-to-moment neural-readout language.</td>
+</tr>
+</tbody>
+</table>
+
+<strong>Why this route card is necessary here</strong>
+<p>
+The need is multi-axis. On the anatomy side, <a href="https://doi.org/10.1038/nature14432" target="_blank">Louveau et al. (2015)</a> and <a href="https://doi.org/10.1038/s41586-019-1419-5" target="_blank">Ahn et al. (2019)</a> establish drainage routes, but they do not by themselves identify the immune effector. On the disease-modulation side, <a href="https://doi.org/10.1038/s41586-021-03489-0" target="_blank">Da Mesquita et al. (2021)</a> links impaired meningeal lymphatics to worse microglial inflammatory response and poorer anti-Aβ immunotherapy outcome, which is stronger than a purely anatomical statement but still not a general human readout. On the physiology-driver side, <a href="https://doi.org/10.1126/sciadv.aav5447" target="_blank">Hablitz et al. (2019)</a> shows that glymphatic influx tracks delta power and heart rate under anesthesia, while <a href="https://doi.org/10.1093/brain/awaa443" target="_blank">Eide &amp; Ringstad (2021)</a> shows that one night of sleep deprivation impairs molecular clearance in humans; these are about <strong>state dependence</strong>, not direct identification of the responsible local controller. On the human observability side, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> measures <strong>CSF mobility</strong> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> infers <strong>brain-to-plasma biomarker clearance</strong> with a device and compartment model. Therefore, this site does not let these rows inherit one another's claim ceiling, and it does not let any of them stand in for local synaptic maintenance or cell-specific immune control without a route-card audit.
 </p>
 
 <h3>16. Local proteostasis / synaptic tagging under molecular turnover is another state layer</h3>
@@ -879,8 +1001,10 @@ A final correction is that static <sup>1</sup>H-MRSI similarity is not the same 
 <li>Rangaraju, V., Calloway, N., &amp; Ryan, T. A. (2014). Activity-driven local ATP synthesis is required for synaptic function. <em>Cell</em>, 156(4), 825-835. <a href="https://doi.org/10.1016/j.cell.2013.12.042" target="_blank">doi:10.1016/j.cell.2013.12.042</a></li>
 <li>Rangaraju, V., Lauterbach, M., &amp; Schuman, E. M. (2019). Spatially stable mitochondrial compartments fuel local translation during plasticity. <em>Cell</em>, 176(1-2), 73-84.e15. <a href="https://doi.org/10.1016/j.cell.2018.12.013" target="_blank">doi:10.1016/j.cell.2018.12.013</a></li>
 <li>Divakaruni, S. S., Van Dyke, A. M., Chandra, R., et al. (2018). Long-term potentiation requires a rapid burst of dendritic mitochondrial fission during induction. <em>Neuron</em>, 100(4), 860-875.e7. <a href="https://doi.org/10.1016/j.neuron.2018.09.025" target="_blank">doi:10.1016/j.neuron.2018.09.025</a></li>
+<li>Underwood, E. L., Redell, J. B., Hood, K. N., et al. (2023). Enhanced presynaptic mitochondrial energy production is required for memory formation. <em>Scientific Reports</em>, 13, 14431. <a href="https://doi.org/10.1038/s41598-023-40877-0" target="_blank">doi:10.1038/s41598-023-40877-0</a></li>
 <li>Bapat, P., Nirschl, J. J., Wilkerson, J. R., et al. (2024). VAP stabilizes dendritic mitochondria to locally support synaptic plasticity. <em>Nature Communications</em>, 15, 742. <a href="https://doi.org/10.1038/s41467-023-44233-8" target="_blank">doi:10.1038/s41467-023-44233-8</a></li>
 <li>Hu, H., Tang, J., Wu, Y., et al. (2025). Polarized ATP synthase in synaptic mitochondria induced by learning and plasticity signals. <em>Communications Biology</em>, 8, 166. <a href="https://doi.org/10.1038/s42003-025-08963-3" target="_blank">doi:10.1038/s42003-025-08963-3</a></li>
+<li>Vishwanath, A. A., Comyn, T., Mira, R. G., et al. (2026). Mitochondrial Ca2+ efflux controls neuronal metabolism and long-term memory across species. <em>Nature Metabolism</em>, 8, 467-488. <a href="https://doi.org/10.1038/s42255-026-01451-w" target="_blank">doi:10.1038/s42255-026-01451-w</a></li>
 <li>Park, M., Salgado, J. M., Ostroff, L., Helton, T. D., Robinson, C. G., Harris, K. M., &amp; Ehlers, M. D. (2006). Plasticity-induced growth of dendritic spines by exocytic trafficking from recycling endosomes. <em>Neuron</em>, 52(5), 817-830. <a href="https://doi.org/10.1016/j.neuron.2006.09.040" target="_blank">doi:10.1016/j.neuron.2006.09.040</a></li>
 <li>Maas, C., Belgardt, D., Lee, H. K., Heisler, F. F., Lappe-Siefke, C., Magiera, M. M., van Dijk, J., Hausrat, T. J., Janke, C., &amp; Kneussel, M. (2009). Synaptic activation modifies microtubules underlying transport of postsynaptic cargo. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 106(21), 8731-8736. <a href="https://doi.org/10.1073/pnas.0902304106" target="_blank">doi:10.1073/pnas.0902304106</a></li>
 <li>Yin, X., Takei, Y., Kido, M. A., &amp; Hirokawa, N. (2011). Molecular motor KIF17 is fundamental for memory and learning via differential support of synaptic NR2A/2B levels. <em>Neuron</em>, 70(2), 310-325. <a href="https://doi.org/10.1016/j.neuron.2011.03.026" target="_blank">doi:10.1016/j.neuron.2011.03.026</a></li>
@@ -898,6 +1022,8 @@ A final correction is that static <sup>1</sup>H-MRSI similarity is not the same 
 <li>Bukalo, O., et al. (2026). Astrocytes enable amygdala neural representations supporting memory. <em>Nature</em>. <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">doi:10.1038/s41586-025-10068-0</a></li>
 <li>Louveau, A., Smirnov, I., Keyes, T. J., et al. (2015). Structural and functional features of central nervous system lymphatic vessels. <em>Nature</em>, 523, 337-341. <a href="https://doi.org/10.1038/nature14432" target="_blank">doi:10.1038/nature14432</a></li>
 <li>Ahn, J. H., Cho, H., Kim, J.-H., et al. (2019). Meningeal lymphatic vessels at the skull base drain cerebrospinal fluid. <em>Nature</em>, 572, 62-66. <a href="https://doi.org/10.1038/s41586-019-1419-5" target="_blank">doi:10.1038/s41586-019-1419-5</a></li>
+<li>Hablitz, L. M., Vinitsky, H. S., Sun, Q., et al. (2019). Increased glymphatic influx is correlated with high EEG delta power and low heart rate in mice under anesthesia. <em>Science Advances</em>, 5(2), eaav5447. <a href="https://doi.org/10.1126/sciadv.aav5447" target="_blank">doi:10.1126/sciadv.aav5447</a></li>
+<li>Da Mesquita, S., Papadopoulos, Z., Dykstra, T., et al. (2021). Meningeal lymphatics affect microglia responses and anti-Aβ immunotherapy. <em>Nature</em>, 593, 255-260. <a href="https://doi.org/10.1038/s41586-021-03489-0" target="_blank">doi:10.1038/s41586-021-03489-0</a></li>
 <li>Kim, J., et al. (2025). Meningeal lymphatics-microglia axis regulates synaptic physiology. <em>Cell</em>, 188(8), 2129-2148.e21. <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">doi:10.1016/j.cell.2025.02.022</a></li>
 <li>Eide, P. K., &amp; Ringstad, G. (2021). Sleep deprivation impairs molecular clearance from the human brain. <em>Brain</em>, 144(3), 863-874. <a href="https://doi.org/10.1093/brain/awaa443" target="_blank">doi:10.1093/brain/awaa443</a></li>
 <li>Lee, J.-C., Wang, C.-Y., Lin, C.-L., &amp; Lu, H.-C. (2022). Synaptic memory survives molecular turnover. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 119(42), e2211572119. <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">doi:10.1073/pnas.2211572119</a></li>

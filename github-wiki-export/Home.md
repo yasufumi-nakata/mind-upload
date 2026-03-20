@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-16 / 位置づけ: Learning-first
+- 更新日: 2026-03-21 / 位置づけ: Learning-first
 
 ## このページの役割
 This page is a learning portal that makes the public pages of Mind-Upload easier to read. The public pages show what we know now, what we do not know yet, and what to read next, while the wiki teaches the basic explanations behind those pages in a deliberate order.
@@ -73,6 +73,11 @@ If you just want to know the big picture first, you can go to the public page. H
 <td><strong>I want to know what is directly visible in which measurement stack and which state variable is still latent with which time constant</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling">Observability and claim ceiling per measurement stack</a></td>
 <td><a href="https://mind-upload.com/verification.html#state-completeness-gate">State variable completeness gate</a> / <a href="https://mind-upload.com/tech_roadmap.html#qa-m1">M1 observed variable</a></td>
+</tr>
+<tr>
+<td><strong>I want to know why current human proxy bundles still do not add up to state-complete readout</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/human-proxy-composition">Human proxy composition and route maturity</a></td>
+<td><a href="https://mind-upload.com/wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> / <a href="https://mind-upload.com/verification.html#human-proxy-composition-card">Human Proxy Composition Card</a></td>
 </tr>
 <tr>
 <td><strong>Don't want to misread flashy claims</strong></td>

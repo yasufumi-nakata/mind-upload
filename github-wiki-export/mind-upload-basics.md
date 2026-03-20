@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-20 / 位置づけ: Beginner guide
+- 更新日: 2026-03-21 / 位置づけ: Beginner guide
 
 ## このページの役割
 This page explains, from the beginning, what Mind Upload and WBE are trying to do and why strong claims must be broken into smaller technical questions before they can be judged. The emphasis is not on quick belief or disbelief, but on evidence class, verification, and claim ceiling.
@@ -21,6 +21,7 @@ This page stays on the technology and natural-science side. Unresolved issues ar
 - [Wiki: How to read claims and evidence](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - Translates the big picture into everyday claim-reading rules.
 - [Wiki: Why wiring diagrams alone are not enough](https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough) - Explains what current structure-only routes still leave unresolved.
 - [Wiki: Observability and claim ceiling by measurement stack](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling) - Separates human proxy classes and measurement ceilings by what is directly observed.
+- [Wiki: Human Proxy Composition and Route Maturity](https://github.com/yasufumi-nakata/mind-upload/wiki/human-proxy-composition) - Explains why current human proxy bundles still stop below same-subject state-complete readout.
 - [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - Explains why inverse models and causal models are not direct observation.
 - [Wiki: Homeostatic plasticity and maintenance state](https://github.com/yasufumi-nakata/mind-upload/wiki/homeostatic-plasticity-and-maintenance-state) - Organizes the slow hidden-state families that remain outside structure-only routes.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Shows why route cards, audits, and registries come before strong claims.
@@ -56,7 +57,7 @@ The older beginner route was directionally correct, but it still left too much r
 
 <strong>2026-03-20 technical correction: human evidence is not one progress bar</strong>
 <p>
-The beginner route also had to become stricter about human evidence itself. Local human ultrastructure, SV2A PET, whole-brain <sup>1</sup>H-MRSI, dynamic DMRSI, myelin-bilayer MRI, and CSF / glymphatic routes are all real advances, but they constrain different variable classes and they do not carry the same deployment maturity. On this site, the first beginner question is now <strong>what proxy class does this route constrain?</strong> and the second is <strong>how specialized, small-cohort, or model-heavy is the route still?</strong> The shortest follow-up is <a href="https://mind-upload.com/wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> plus <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling">Wiki: observability and claim ceiling by measurement stack</a>.
+The beginner route also had to become stricter about human evidence itself. Local human ultrastructure, SV2A PET, whole-brain <sup>1</sup>H-MRSI, dynamic DMRSI, myelin-bilayer MRI, and CSF / glymphatic routes are all real advances, but they constrain different variable classes and they do not carry the same deployment maturity. On this site, the first beginner question is now <strong>what proxy class does this route constrain?</strong> and the second is <strong>how specialized, small-cohort, or model-heavy is the route still?</strong> The shortest follow-up is <a href="https://mind-upload.com/wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>, <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/human-proxy-composition">Wiki: Human Proxy Composition and Route Maturity</a>, and <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling">Wiki: observability and claim ceiling by measurement stack</a>.
 </p>
 
 <h2>Three words to align first</h2>
@@ -147,7 +148,7 @@ The older beginner summary was still too coarse because it let very different hu
 </tr>
 <tr>
 <td><strong>CSF mobility and sleep-linked clearance</strong><br><a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>; <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a></td>
-<td>Noninvasive MRI measured region-specific CSF mobility in 24 healthy individuals, and a randomized crossover trial with 39 participants linked normal sleep to increased plasma Aβ / tau through an investigational device plus multicompartment model.</td>
+<td>Noninvasive MRI measured region-specific CSF mobility in 20 healthy younger individuals, with region averages reported in 11, and a randomized crossover trial with 39 participants linked normal sleep to increased plasma Aβ / tau through an investigational device plus multicompartment model.</td>
 <td>Cell-specific immune control, local synaptic maintenance, and moment-to-moment neural state.</td>
 <td>Read as a <strong>macro support-state proxy</strong>, not as local clearance-controller ground truth.</td>
 </tr>
