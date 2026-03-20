@@ -17,7 +17,7 @@ page_highlights:
   - "Even though this page is citation-heavy, the statistics and current-status map alone provide a usable overview."
   - "The default entry path for technical and natural-science readers is fixed as U1/U7 -> U4 -> U13 -> U8 -> U3 -> U10."
   - "A paper-level technical-only shortlist is now linked at the front door so readers can jump from U labels to concrete anchors without scanning mixed archive pages first."
-  - "For technical readers, human observability-class advances are kept separate from direct validation, demos, and hidden-state boundary papers, and proxy class is now read separately from route maturity."
+  - "For technical readers, destructive local ultrastructure is kept separate from living-human in vivo observability, and proxy class is now read separately from route maturity."
   - "For technical readers, maintenance-state papers now include transcriptional stabilization, post-transcriptional RNA control, phospho-signaling, local proteostasis, cargo-routing, and astrocyte-state evidence rather than only generic support-variable papers."
   - "For technical readers, U10 now separates route families inside thermodynamic language, so lower bounds, time-asymmetry indices, model-based entropy flow, and physiology-side grounding are not compressed into one frontier."
 known_points:
@@ -26,7 +26,7 @@ known_points:
   - "Citation count should be read as thickness of attention or relevance, not as closure of the question."
   - "For technical and natural-science readers, it is safer to start with measurement, direct validation, closed-loop stability, and maintenance-state before moving to intake logs or governance topics."
   - "Technical readers who want concrete paper anchors first can now jump directly to the paper archive's 2025-2026 technical-only shortlist."
-  - "Human measurement advances in ultrastructure, synaptic-density PET, static MRSI, dynamic DMRSI, thermometry, myelin mapping, CSF mobility, and sleep-linked clearance do not all increase the same evidential axis."
+  - "Destructive local ultrastructure and living-human in vivo proxy routes do not increase the same evidential axis, even when both are called human measurement advances."
   - "Maintenance-state papers on transcriptional stabilization, post-transcriptional RNA control, phospho-signaling, local proteostasis, cargo-routing, and astrocyte multiday trace change what remains latent, not what is already directly measured."
   - "Thermodynamic evidence on this site is read only after route-family disclosure: brain-signal irreversibility, model-based entropy flow, and physiology-side energetic grounding remain different claim types."
 unknown_points:
@@ -149,7 +149,7 @@ The weakness of this page used to be that the <strong>intake log</strong> and th
 <tr>
 <td><strong>1. Measurement and human observability</strong></td>
 <td><strong>U1 / U7</strong></td>
-<td>Inverse-problem uncertainty, time synchronization, whether a paper advances direct observables, a proxy layer, or only metadata / standards, and whether the human route is still specialized or model-heavy.</td>
+<td>Inverse-problem uncertainty, time synchronization, whether a paper advances a destructive local scaffold, a living-human proxy layer, or only metadata / standards, and whether the human route is still specialized or model-heavy.</td>
 <td>Reading an increase in observables or a new human proxy as if it already implied state-complete reconstruction.</td>
 </tr>
 <tr>
@@ -193,7 +193,7 @@ The site-wide route-card update already fixed DCM / effective-connectivity claim
 <div class="note-box">
 <strong>Read human measurement papers as their own evidence class</strong>
 <p>
-For technical reading, papers such as <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> should not be read as system demos or as hidden-state closure. They raise different <strong>observability classes</strong> inside the human measurement stack, and each one still leaves explicit latent-state ceilings. On this page, they are now read on two axes at once: <strong>what variable class the route constrains</strong> and <strong>how specialized or deployment-limited the route still is</strong>. Those ceilings still include <strong>current post-transcriptional RNA-state</strong>, <strong>current phospho-signaling / second-messenger state</strong>, <strong>branch-local proteostasis / tag-capture</strong>, <strong>branch- or bouton-specific cargo-routing</strong>, and other cell-specific maintenance controllers that current human in vivo routes do not yet close.
+For technical reading, the first split is between <strong>destructive local structure</strong> and <strong>living-human in vivo proxy routes</strong>. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a>, <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">Dorkenwald et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> belong to the destructive-route class because preservation, registration, throughput, and proofreading burden materially change what the structural result means. By contrast, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> raise different <strong>living-human observability classes</strong> and still leave explicit latent-state ceilings. On this page, the in vivo papers are read on two axes at once: <strong>what variable class the route constrains</strong> and <strong>how specialized or deployment-limited the route still is</strong>. Those ceilings still include <strong>current post-transcriptional RNA-state</strong>, <strong>current phospho-signaling / second-messenger state</strong>, <strong>branch-local proteostasis / tag-capture</strong>, <strong>branch- or bouton-specific cargo-routing</strong>, and other cell-specific maintenance controllers that current human in vivo routes do not yet close.
 </p>
 </div>
 <div class="note-box">
@@ -211,7 +211,7 @@ On the core pages, thermodynamic claims already require a route card, but this e
 <div class="note-box">
 <strong>If you want paper-level anchors before the U map</strong>
 <p>
-The default route on this page is still organized by unresolved question. If you already know that you want only the 2025-2026 technology / natural-science frontier papers first, jump directly to the <a href="mind_uploading_papers.html#technical-shortlist-20260320">Paper Collection: 2025-2026 technical-only shortlist</a>. That table gives concrete anchor papers for EEG foundation-model governance, human observability, maintenance-state boundary papers, direct source validation, closed-loop communication, and thermodynamic route-family splits before you return here to place them in U1/U7/U4/U13/U8/U3/U10.
+The default route on this page is still organized by unresolved question. If you already know that you want only the 2025-2026 technology / natural-science frontier papers first, jump directly to the <a href="mind_uploading_papers.html#technical-shortlist-20260320">Paper Collection: 2025-2026 technical-only shortlist</a>. That table gives concrete anchor papers for EEG foundation-model governance, destructive ultrastructure audit, living-human observability, maintenance-state boundary papers, direct source validation, closed-loop communication, and thermodynamic route-family splits before you return here to place them in U1/U7/U4/U13/U8/U3/U10.
 </p>
 </div>
 <div class="note-box">
