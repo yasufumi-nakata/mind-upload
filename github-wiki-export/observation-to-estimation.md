@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-19 / 位置づけ: Technical / natural science only
+- 更新日: 2026-03-20 / 位置づけ: Technical / natural science only
 
 ## このページの役割
 This page is a wiki that organizes where to stop making claims and what to add to make them even stronger when estimating brain states and causal structures from observational signals such as EEG. Connect forward problems, inverse problems, ESI, DCM, SCM, and causal equivalence classes in the order of ``observation → estimation → intervention → validation.''
@@ -26,6 +26,7 @@ This is not a fixed recipe for which method to use. This page first fixes audit 
 ## いま分かっていること
 - In principle, it is difficult to uniquely determine brain activity from scalp EEG, and estimation requires assumptions.
 - High-density EEG, individualized MRI, FEM/BEM, and empirical Bayesian estimation can improve conditions, but alone do not guarantee unique recovery.
+- More direct observables do not by themselves guarantee unique recovery; degeneracy can persist unless candidate space, recorded subset, and experiment design are exposed.
 - For ESI, method/package/parameter choice can materially move the estimated source, so stability across standard pipelines is part of the claim.
 - The causal structure cannot be determined by observational fit alone; a set of candidate models and an intervention design are required.
 - Whole-brain or faster DCM improves tractability, but does not erase candidate-model dependence or observation-model assumptions.
@@ -79,6 +80,42 @@ I am not going to deal with philosophy or legal systems here. We will organize t
 </tr>
 </tbody>
 </table>
+
+<h2>Keep three layers separate: observability, structural identifiability, practical identifiability</h2>
+<p>
+One remaining weakness in inverse-problem discussions is to let <strong>"more measured signals"</strong> sound too close to <strong>"the internal state is now uniquely known"</strong>. The systems-identification literature does not support that shortcut. <a href="https://doi.org/10.1155/2019/8497093" target="_blank">Villaverde (2019)</a> reviews that observability and structural identifiability are related but different questions, and <a href="https://doi.org/10.1098/rsif.2019.0043" target="_blank">Villaverde et al. (2019)</a> show that unknown inputs, states, and parameters often have to be analysed jointly rather than one at a time.
+</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Question</th>
+<th>What can still fail even if this layer looks good</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Observability</strong></td>
+<td>Does the chosen output route contain information about the target state at all?</td>
+<td>You may still have multiple different internal states or parameter sets that generate the same observable pattern.</td>
+</tr>
+<tr>
+<td><strong>Structural identifiability</strong></td>
+<td>Given the declared equations and ideal noise-free data, is the target uniquely recoverable up to named symmetries or reparameterizations?</td>
+<td>The real dataset may still be too short, too noisy, too sparse, or too weakly excited to recover that target in practice.</td>
+</tr>
+<tr>
+<td><strong>Practical identifiability</strong></td>
+<td>Under the actual finite data, SNR, sampling window, and perturbation design, does the compatible solution set become narrow enough to support the stated claim?</td>
+<td>A theoretically identifiable model can still remain numerically or experimentally degenerate.</td>
+</tr>
+</tbody>
+</table>
+
+<strong>2026-03-20 deepening: similar outputs do not prove similar internal states</strong>
+<p>
+This separation is not only a control-theory point. <a href="https://doi.org/10.1038/nn1352" target="_blank">Prinz et al. (2004)</a> showed that similar circuit activity can arise from disparate parameters, <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">Rasero et al. (2024)</a> showed that similar human activation patterns can still hide different macroscopic network states, and <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that even connectome-constrained recurrent networks remain degenerate until additional recordings are supplied. <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">Liu et al. (2025)</a> then showed that practical identifiability depends on data-collection policy, not only on the fitting method. On this site, that means <strong>observability</strong> and <strong>identifiability</strong> are audited separately.
+</p>
 
 <h2>Do not mix observation, estimation, and causal verification</h2>
 <table>
@@ -243,6 +280,52 @@ The weak point here was not that it separated DCM from SCM, but that scaling adv
 If this card is missing, this site stops at <strong>model-conditioned causal hypothesis</strong>. A whole-brain DCM graph, a regression DCM estimate, or an activity-flow-compatible diagram is not promoted here to discovered wiring merely because it is dense, scalable, or predictive.
 </p>
 
+<h2>Identifiability card for inverse and model-based claims</h2>
+<table>
+<thead>
+<tr>
+<th>Card field</th>
+<th>What must be written</th>
+<th>What misreading it blocks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim object</strong></td>
+<td>Name whether the target is source location, latent state, parameter, connectivity, controller variable, or connectome-conditioned predictor, together with its timescale and spatial unit.</td>
+<td>It blocks different kinds of "recovery" from being read as one common achievement.</td>
+</tr>
+<tr>
+<td><strong>Structural identifiability layer</strong></td>
+<td>Name whether the declared model is identifiable in principle and disclose known symmetries, reparameterizations, or variables that remain non-identifiable even with ideal data.</td>
+<td>It blocks finite-data success from being overread as in-principle uniqueness.</td>
+</tr>
+<tr>
+<td><strong>Practical identifiability layer</strong></td>
+<td>Report posterior/profile-likelihood width, ensemble spread, SNR dependence, sample-size or time-window dependence, and other finite-data limits under the submitted experiment.</td>
+<td>It blocks a theoretically identifiable model from being overread as practically recovered.</td>
+</tr>
+<tr>
+<td><strong>Competing solution set</strong></td>
+<td>Name the alternative model families, local optima, or near-equivalent solutions that remain compatible with the observations.</td>
+<td>It blocks one good fit from sounding like the only explanation.</td>
+</tr>
+<tr>
+<td><strong>Experiment-design leverage</strong></td>
+<td>Name which perturbations, tasks, or active data-collection choices were used to reduce degeneracy, and say explicitly if the evidence is passive only.</td>
+<td>It blocks "better prediction" from being rephrased as "solved identification."</td>
+</tr>
+<tr>
+<td><strong>Recorded subset and abstention</strong></td>
+<td>Name which parts of the system were actually observed, what remained latent, and where the uniqueness claim stops.</td>
+<td>It blocks sparse coverage from being overread as state closure.</td>
+</tr>
+</tbody>
+</table>
+<p>
+If this card is missing, this site stays at <strong>observed-fit / candidate-model</strong> level. The submission-side operational version is <a href="https://mind-upload.com/verification.html#identifiability-card">Verification: Identifiability Card</a>.
+</p>
+
 <h2>SCM and causal discovery only become stronger with intervention</h2>
 <p>
 SCM is a framework that makes it easy to write down interventions and counterfactuals explicitly. However, when we learn only from observational data, we are often left with a<strong>Markov equivalence class</strong>. As shown by Hauser and Buhlmann, intervention data are important for narrowing this class of equivalences. Even in brain data, Vink et al. showed that resting-state functional connectivity remains a weak predictor of causal interaction, and it is dangerous to determine direction and mechanism based on correlation alone.
@@ -316,4 +399,10 @@ DCM is useful for comparing neural circuit candidate generation models, and SCM 
 <li>Jafarian, A., Assem, M. K., Kocagoncu, E., et al. (2024). Reliability of dynamic causal modelling of resting-state magnetoencephalography. <em>Human Brain Mapping</em>. <a href="https://doi.org/10.1002/hbm.26782" target="_blank">doi:10.1002/hbm.26782</a></li>
 <li>Hauser, A., &amp; Buhlmann, P. (2012). Characterization and greedy learning of interventional Markov equivalence classes of directed acyclic graphs. <em>Journal of Machine Learning Research</em>, 13, 2409-2464. <a href="https://jmlr.org/papers/v13/hauser12a.html" target="_blank">JMLR</a></li>
 <li>Vink, J. J., Ramos-Nuñez, A. I., Bellesi, A., et al. (2020). The brain's functional connectome is a poor predictor of the brain's causal activity flow. <em>PLOS Computational Biology</em>, 16(1), e1007866. <a href="https://doi.org/10.1371/journal.pcbi.1007866" target="_blank">doi:10.1371/journal.pcbi.1007866</a></li>
+<li>Villaverde, A. F. (2019). Observability and Structural Identifiability of Nonlinear Biological Systems. <em>Complexity</em>, 2019, 8497093. <a href="https://doi.org/10.1155/2019/8497093" target="_blank">doi:10.1155/2019/8497093</a></li>
+<li>Villaverde, A. F., Tsiantis, N., &amp; Banga, J. R. (2019). Full observability and estimation of unknown inputs, states and parameters of nonlinear biological models. <em>Journal of The Royal Society Interface</em>, 16(156), 20190043. <a href="https://doi.org/10.1098/rsif.2019.0043" target="_blank">doi:10.1098/rsif.2019.0043</a></li>
+<li>Prinz, A. A., Bucher, D., &amp; Marder, E. (2004). Similar network activity from disparate circuit parameters. <em>Nature Neuroscience</em>, 7, 1345-1352. <a href="https://doi.org/10.1038/nn1352" target="_blank">doi:10.1038/nn1352</a></li>
+<li>Rasero, J., Betzel, R., Sentis, A. I., Kraynak, T. E., Gianaros, P. J., &amp; Verstynen, T. (2024). Similarity in evoked responses does not imply similarity in macroscopic network states. <em>Network Neuroscience</em>, 8(1), 335-354. <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">doi:10.1162/netn_a_00354</a></li>
+<li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <em>Nature Neuroscience</em>, 28, 2561-2574. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
+<li>Liu, X., Wanika, L., Chappell, M. J., &amp; Branke, J. (2025). Efficient data collection for establishing practical identifiability via active learning. <em>Computational and Structural Biotechnology Journal</em>, 27, 4992-5006. <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">doi:10.1016/j.csbj.2025.10.058</a></li>
 </ol>

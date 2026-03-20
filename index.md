@@ -101,6 +101,13 @@ The March 2026 update added <a href="verification.html#observability-budget">Ver
 </div>
 
 <div class="note-box">
+<strong>If A Shared Multimodal Factor Sounds Like One Solved State Variable</strong>
+<p>
+This site now blocks that shortcut too. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> and <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed that simultaneous multimodal recordings keep both shared and modality-specific structure, while <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> and <a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">Özbay et al. (2019)</a> showed that low-frequency/global fMRI-linked components can also carry autonomic physiology. Therefore, a coupled common factor is not read here as the target neural variable unless the <a href="verification.html#fusion-card">Fusion Card</a> discloses shared-vs-specific decomposition and physiology-side calibration or abstention.
+</p>
+</div>
+
+<div class="note-box">
 <strong>If You Want To Know Which Human Routes Are Real Advances And Which Are Still Only Proxies</strong>
 <p>
 The front door was still too coarse if it only said that many hidden states remain. <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> now separates <strong>destructive local human nanoscale ultrastructure</strong> from <strong>living-human in vivo proxy routes</strong> such as regional synaptic-density PET, receptor / transporter atlas priors, selected occupancy / displacement PET routes for chosen neurotransmitter systems, perturbation-conditioned sleep-homeostasis / plasticity proxies, EEG-state-gated perturbation routes, and macro biochemical / energetic / ionic / thermal / myelin / clearance proxies. It also keeps visible the still-missing whole-brain in vivo routes for current transcription / chromatin state, ECM / PNN gate state, branch-local proteostasis, current chloride set point, and local mitochondrial positioning. In other words, <strong>"a human nanoscale paper exists"</strong> is not silently rephrased here as <strong>"living-human state-complete measurement is close and already field-ready."</strong>

@@ -61,7 +61,7 @@
 - [Wiki: Minimum artifact pack for L0](https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack)
 - [Wiki: observability and claim ceiling by measurement stack](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling)
 - [Wiki: Standards/Location/Validator/Benchmark](https://github.com/yasufumi-nakata/mind-upload/wiki/standards-repositories-validators-and-benchmarks)
-- [Wiki: state/trait/drift](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift)
+- [Wiki: state, trait, and drift](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift)
 - [Wiki: Straight path from EEG to L0](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-to-l0-route)
 - [Wiki: Terminology guide from measurement to modeling](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-and-modeling-terms)
 - [Wiki: U Number Guide](https://github.com/yasufumi-nakata/mind-upload/wiki/u-number-guide)

@@ -190,6 +190,42 @@ Dorkenwald et al.'s adult fly whole-brain connectome is a huge step forward, reo
 MICrONS combines dense calcium imaging, behavioral states, and the EM connectome in the same brain, presenting multi-area functional connectomics of the mouse visual cortex. This is even stronger than connectome-only, and provides a basis for discussing <strong>structure-function links in the same brain. However, the paper itself deals with specific regions, specific tasks, and specific states of the visual cortex, and it is not possible to make a leap from there to the human whole-brain or all-state completeness. Therefore, the ceiling of this stack is <strong>local functional twin</strong>.
 </p>
 
+<h3>4.5. Destructive ultrastructure still faces a preservation / registration / throughput wall</h3>
+<p>
+Another weakness that remained on this page was that <strong>volume EM</strong>, <strong>petascale</strong>, or <strong>same-brain</strong> could still be overread as if destructive ultrastructure had already solved native-state preservation, whole-brain scaling, and reconstruction quality in one move. That is too weak. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> showed that conventional aldehyde fixation collapses extracellular space, that the fixation time course itself is not instantaneous, and that high-pressure freezing preserves extracellular space only in samples thinner than roughly <strong>200 μm</strong>. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> then showed that a rapidly preserved human sample can yield a remarkable nanoscale reconstruction, but still as a <strong>1.05 mm<sup>3</sup></strong> surgical fragment with <strong>1.8 PB</strong> raw data and <strong>326 days</strong> of imaging. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> showed that same-brain function plus EM is a sequential local pipeline rather than simultaneous state capture, and <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">Dorkenwald et al. (2024)</a> showed that even the adult fly whole-brain frontier still depended on proofreading, thresholding, and substantial manual correction effort. What follows directly is that <strong>resolution alone does not erase preservation artifacts, local registration limits, or reconstruction burden</strong>.
+</p>
+<table>
+<thead>
+<tr>
+<th>Wall</th>
+<th>What the primary literature now supports</th>
+<th>Site rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Preservation wall</strong></td>
+<td>Fixation route changes what the ultrastructure looks like; preserving extracellular space and fine geometry requires an explicit preservation protocol and does not mean that live molecular or electrophysiological state was captured.</td>
+<td>Do not read <strong>nanoscale</strong> or <strong>EM</strong> as automatic native-state preservation.</td>
+</tr>
+<tr>
+<td><strong>Registration wall</strong></td>
+<td>Same-brain function + EM is stronger than connectome-only, but it is still a sequential, local, and registration-limited route rather than same-time whole-brain state capture.</td>
+<td>Do not read <strong>same-brain</strong> as <strong>same-time complete state</strong>.</td>
+</tr>
+<tr>
+<td><strong>Throughput / proof wall</strong></td>
+<td>Petascale imaging still implies long acquisition windows, sectioning/alignment risk, segmentation trade-offs, and nontrivial proofreading burden.</td>
+<td>Do not read <strong>petascale</strong> as <strong>finished, error-free, or whole-brain-ready</strong>.</td>
+</tr>
+</tbody>
+</table>
+
+<strong>Operating rule for destructive ultrastructure</strong>
+<p>
+On this site, a destructive ultrastructure result is read first as a <strong>structural scaffold</strong> or <strong>local ex vivo scaffold</strong> unless it also discloses preservation route, live-to-fix window, registration scope, section-loss / alignment risk, segmentation / proofreading status, and omitted live-state families. That disclosure bundle is formalized in <a href="https://mind-upload.com/verification.html#destructive-structure-card">Verification: Destructive-Structure Route Card</a>.
+</p>
+
 <h3>5. Hemodynamic stacks also observe through a vascular transfer state</h3>
 <p>
 The weak point that needed another pass was that this page already called fMRI a <strong>hemodynamic proxy</strong>, but still left too much room for the reader to translate a BOLD amplitude difference directly into a neural difference. That was too weak. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">Murphy et al. (2011)</a> showed that inter-subject differences in CBF and CBV contribute to BOLD reactivity and that breath-hold-derived vascular-reactivity covariates improve group analyses. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">Williams et al. (2023)</a> showed that task BOLD magnitude corresponds strongly to hypercapnia-based CVR across multiple cortical regions. <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">Wu et al. (2023)</a> showed that baseline CBF partly explains age-related components of multiple-demand-network BOLD responses, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that about 40% of task-responsive voxels can display oxygen-metabolism changes opposite in sign to the BOLD response. What follows directly from this is that <strong>hemodynamic stacks are limited not only by unobserved neural state, but also by unobserved vascular transfer state</strong>.
@@ -428,6 +464,7 @@ This site now treats <strong>proxy-rich human evidence</strong> as a real advanc
 <h2>References</h2>
 <ol>
 <li>Dorkenwald, S., et al. (2024). Neuronal wiring diagram of an adult brain. <em>Nature</em>, 634, 124-138. <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">doi:10.1038/s41586-024-07558-y</a></li>
+<li>Lu, X., Han, X., Meirovitch, Y., et al. (2023). Preserving extracellular space for high-quality optical and ultrastructural studies of whole mammalian brains. <em>Cell Reports Methods</em>, 3(7), 100520. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
 <li>Yao, Z., et al. (2023). A high-resolution transcriptomic and spatial atlas of cell types in the whole mouse brain. <em>Nature</em>, 624, 317-332. <a href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank">doi:10.1038/s41586-023-06812-z</a></li>
 <li>Gouwens, N. W., et al. (2021). Phenotypic variation of transcriptomic cell types in mouse motor cortex. <em>Nature</em>, 598, 144-150. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>, 640, 435-447. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
@@ -448,7 +485,7 @@ This site now treats <strong>proxy-rich human evidence</strong> as a real advanc
 <li>Kothe, C., Shirazi, S. Y., Stenner, T., Medine, D., Boulay, C., Grivich, M. I., Artoni, F., Mullen, T., Delorme, A., &amp; Makeig, S. (2025). The lab streaming layer for synchronized multimodal recording. <em>Imaging Neuroscience</em>, 3, IMAG.a.136. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
 <li>Wei, H., Jafarian, A., Zeidman, P., Litvak, V., Razi, A., Garrido, M., Friston, K., &amp; Daunizeau, J. (2020). Bayesian fusion and multimodal DCM for EEG and fMRI. <em>NeuroImage</em>, 211, 116595. <a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">doi:10.1016/j.neuroimage.2020.116595</a></li>
 <li>Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
-<li>Chen, Z., Ye, M., Moradi, F., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
+<li>Chen, J. E., Lewis, L. D., Coursey, S. E., Catana, C., Polimeni, J. R., Fan, J., Droppa, K. S., Patel, R., Wey, H.-Y., Chang, C., Manoach, D. S., Price, J. C., Sander, C. Y., &amp; Rosen, B. R. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
 <li>Lucchetti, F., C&eacute;l&eacute;reau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <em>Nature Communications</em>, 16, 11344. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
 <li>Ren, J., Sherry, A. D., &amp; Malloy, C. R. (2015). <sup>31</sup>P-MRS of healthy human brain: ATP synthesis, metabolite concentrations, pH, and T1 relaxation times. <em>NMR in Biomedicine</em>, 28(11), 1455-1462. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">doi:10.1002/nbm.3384</a></li>
 <li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <em>PNAS Nexus</em>, 4(3), pgaf072. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
