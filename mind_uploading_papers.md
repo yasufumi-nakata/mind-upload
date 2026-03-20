@@ -13,7 +13,7 @@ known_points:
   - "A compact 2025-2026 technical-only shortlist now sits ahead of the mixed year cards so readers can skip archive noise when they only want current primary routes."
   - "Foundation-model / pretraining papers do not only say something about model scale; official challenge rules and leaderboard postmortems also say something about what the benchmark itself was measuring."
   - "Human ultrastructure, synaptic-density PET, static MRSI, dynamic DMRSI, thermometry, myelin mapping, CSF-mobility MRI, and sleep-linked clearance strengthen different observability layers and should not be compressed into one progress bar."
-  - "Recent maintenance-state papers now include transcriptional stabilization and astrocyte-state evidence, so they should not be filed only as generic background on support variables."
+  - "Recent maintenance-state papers now include transcriptional stabilization, post-transcriptional RNA control, phospho-signaling, local proteostasis, cargo-routing, and astrocyte-state evidence, so they should not be filed only as generic background on support variables."
   - "Thermodynamic / irreversibility papers are now treated here as route-family claims: coarse-grained lower bounds, time-asymmetry classifiers / graph measures, model-based entropy-flow estimates, and physiology-side grounding are not one common measurement."
 unknown_points:
   - "Inclusion alone does not mean that a paper counts as central evidence."
@@ -51,7 +51,7 @@ page_highlights:
   - "In technology and natural science, it is safer to read not only badge and chronology, but also evidence class."
   - "EEG foundation-model papers are now treated as a distinct technical route because corpus disclosure, adaptation regime, benchmark governance, and leaderboard postmortems materially change what a score means."
   - "Recent human measurement papers are treated here as observability-class advances with explicit claim ceilings, and now also as a proxy-class x route-maturity ladder rather than one progress bar."
-  - "Recent maintenance-state papers are treated here as route-changing boundary papers because transcriptional stabilization and astrocyte multiday traces remain outside connectome-only reading."
+  - "Recent maintenance-state papers are treated here as route-changing boundary papers because transcriptional stabilization, post-transcriptional RNA control, phospho-signaling, local proteostasis, cargo-routing, and astrocyte multiday traces remain outside connectome-only reading."
   - "Recent thermodynamic papers are treated here as an auxiliary physical-grounding route only after route family, coarse-graining / timescale, and physiology-side grounding are disclosed."
 recommended_pages:
   - label: "Literature Map"
@@ -213,13 +213,13 @@ The weakness of this page is that although it is useful as a <strong>chronologic
 <td><strong>human observability / proxy ladder</strong></td>
 <td><a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a></td>
 <td>It becomes much clearer which human advances are <strong>local ultrastructure</strong>, <strong>regional synaptic-density PET</strong>, <strong>macro biochemical scaffold</strong>, <strong>kinetic glucose-rate imaging</strong>, <strong>macro myelin / thermal proxy</strong>, <strong>CSF-mobility MRI</strong>, and <strong>sleep-linked clearance physiology</strong>. It also becomes clearer that these routes sit at different operational maturities.</td>
-<td>These papers do not provide a comparable in vivo whole-brain readout of current transcription / chromatin state, ECM / PNN gate state, branch-local proteostasis, chloride homeostasis, or branch-local mitochondrial positioning, and they do not yet compose into same-subject, same-session, externally calibrated state closure.</td>
+<td>These papers do not provide a comparable in vivo whole-brain readout of current transcription / chromatin state, current post-transcriptional RNA-state, current phospho-signaling / second-messenger state, ECM / PNN gate state, branch-local proteostasis / synaptic-tag capture, branch- or bouton-specific cargo-routing, chloride homeostasis, branch-local mitochondrial positioning, or cell-specific immune-controller state, and they do not yet compose into same-subject, same-session, externally calibrated state closure.</td>
 <td><a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> / <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and claim ceiling for each measurement stack</a></td>
 </tr>
 <tr>
 <td><strong>maintenance-state / mechanistic boundary</strong></td>
 <td><a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a>, <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>, <a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a>, <a href="https://doi.org/10.1038/s41593-023-01558-3" target="_blank">Looser et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a></td>
-<td>It can be seen that morpho-electric spread within a cell type, sleep-dependent renormalization, myelin/metabolic support, <strong>transcriptional stabilization gates</strong>, <strong>astrocyte multiday trace</strong>, and astrocyte-enabled neural representations remain boundary conditions outside the connectome.</td>
+<td>It can be seen that morpho-electric spread within a cell type, sleep-dependent renormalization, myelin/metabolic support, <strong>transcriptional stabilization gates</strong>, <strong>post-transcriptional RNA control</strong>, <strong>phospho-signaling nanodomains</strong>, <strong>local proteostasis / tag-capture balance</strong>, <strong>cargo-routing state</strong>, <strong>astrocyte multiday trace</strong>, and astrocyte-enabled neural representations remain boundary conditions outside the connectome.</td>
 <td>Do not assume that wiring diagram + cell type + high-score demo is sufficient for long-term dynamics, recall stabilization, or state-complete reconstruction.</td>
 <td><a href="wbe_101.html#state-completeness">hidden state section of WBE 101</a> / <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Homeostatic plasticity and maintenance state</a></td>
 </tr>
@@ -253,7 +253,7 @@ Do not read EEG foundation-model papers through architecture name alone. <a href
 <div class="note-box">
 <strong>Read demo and boundary paper as a pair</strong>
 <p>
-When you see a high score for decode or neuroprosthesis, don't just promote it, but be sure to read at least one <strong>mechanistic boundary / hidden-state evidence</strong> for the same issue. While system demos push up "what could have been," papers like Gouwens, Hengen, Xu, Looser, Terceros, Cahill, Dewa, and Bukalo push up "what's not good enough." Both are required to read Technology Frontier.
+When you see a high score for decode or neuroprosthesis, don't just promote it, but be sure to read at least one <strong>mechanistic boundary / hidden-state evidence</strong> for the same issue. While system demos push up "what could have been," papers like Gouwens, Hengen, Xu, Looser, Terceros, Shi, Peterson, Vierra, Pandey, Aiken, Cahill, Dewa, and Bukalo push up "what's not good enough." Both are required to read Technology Frontier.
 </p>
 </div>
 <div class="note-box">
@@ -265,7 +265,7 @@ Papers such as <a href="https://doi.org/10.1126/science.adk4858" target="_blank"
 <div class="note-box">
 <strong>Read maintenance-state papers as route-changing evidence</strong>
 <p>
-Papers such as <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> should not be filed as vague background on "plasticity" or "support." They sharpen which hidden-state families stay outside a neuron-only or connectome-only reading: <strong>transcriptional stabilization gates</strong>, <strong>astrocyte multiday traces</strong>, and <strong>astrocyte-enabled neural representations</strong>. On this site, these are read as boundary papers that change what a high-score demo still cannot claim.
+Papers such as <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-018-0666-1" target="_blank">Shi et al. (2018)</a>, <a href="https://doi.org/10.1126/scisignal.adr1442" target="_blank">Peterson et al. (2025)</a>, <a href="https://doi.org/10.1038/s41467-023-40930-6" target="_blank">Vierra et al. (2023)</a>, <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">Pandey et al. (2021)</a>, <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">Aiken &amp; Holzbaur (2024)</a>, <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> should not be filed as vague background on "plasticity" or "support." Together they sharpen which hidden-state families stay outside a neuron-only or connectome-only reading: <strong>transcriptional stabilization gates</strong>, <strong>post-transcriptional RNA control</strong>, <strong>phospho-signaling / second-messenger routing</strong>, <strong>local proteostasis / tag-capture balance</strong>, <strong>cargo-routing state</strong>, <strong>astrocyte multiday traces</strong>, and <strong>astrocyte-enabled neural representations</strong>. On this site, these are read as boundary papers that change what a high-score demo still cannot claim.
 </p>
 </div>
 <div class="note-box">
@@ -305,7 +305,7 @@ The remaining weakness after adding the broader priority route was speed. Techni
 <tr>
 <td><strong>Maintenance-state boundary papers</strong></td>
 <td><a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a></td>
-<td>These papers sharpen what remains outside a connectome-only or neuron-only read: transcriptional stabilization gates, astrocyte multiday traces, and astrocyte-supported neuronal representations.</td>
+<td>These papers sharpen one subset of the broader maintenance-state family: transcriptional stabilization gates, astrocyte multiday traces, and astrocyte-supported neuronal representations. On this site, they are then read beside RNA-control, phospho-signaling, proteostasis, and cargo-routing boundary papers before any long-horizon closure claim is raised.</td>
 <td>Do not file them as generic support-background literature or reinterpret them as direct human readout papers.</td>
 </tr>
 <tr>
