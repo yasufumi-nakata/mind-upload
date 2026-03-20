@@ -5,7 +5,7 @@ description: "research_harvest_50由来の60リサーチクエスチョンを1�
 article_type: Wiki
 subtitle: "RQごとに検証設計と応募テーマまで接続する"
 author: Mind Uploading Research Project
-last_updated: "2026-03-20"
+last_updated: "2026-03-21"
 note: "RQ-by-RQ Deep Dive"
 audience: "RQを実験計画・応募書類へ落とし込む研究者/実装者"
 reading_time: "25-40分"
@@ -17,7 +17,7 @@ reading_time: "25-40分"
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-20 / 位置づけ: RQ-by-RQ Deep Dive
+- 更新日: 2026-03-21 / 位置づけ: RQ-by-RQ Deep Dive
 
 ## このページの役割
 このページは research_harvest_50 の60 RQを対象に、EEG-DATAで解ける範囲をA/B/Cで判定し、各RQごとの検証設計・応募テーマ・使うデータセットIDをまとめた実務版です。
@@ -699,4 +699,43 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - RQ行で参照されるEEG ID一意集合（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
 - 助成キーは `G3-G6` を `auto-research-funds/wiki/cards/*.md` と `grant_eeg_dataset_match.csv` で照合し欠落 `0`、`G1/G2` は `mind-upload/wiki` と `auto-research-funds/wiki` の固定運用キーとして再確認しました。
 - 方針は不変で、汎用横断要約ではなく「1件ずつ深く理解して書く」実行形で wiki 同期を維持しました。
+
+
+## 2026-03-21 09:20 JST 再検証ログ（本run / EEG-DATA再採番対応）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` の `main` で `git pull --ff-only origin main` を実行し、最新化した上で検証しました。
+- `RQ_TOTAL=60` と `A/B/C=17/25/18` は維持される一方、`EEG-DATA/eeg_dataset_summary_ja.csv` 更新により旧数値IDの多くが再採番で無効化されることを確認しました。
+- そのため本runでは、運用キーを `旧ID中心` から `DOI + データセット名 + access区分` へ再固定し、`D01-D24` の DOIアンカーを正本にしました。
+- `RQごとの深掘り` 方針（`1RQ=1検証命題=1応募テーマ=1主データ`）は維持し、助成テーマ紐付けは据え置きでデータ参照方法のみ更新しています。
+
+### EEG-DATA DOIアンカー（2026-03-21運用）
+
+| Key | データセット（正本名） | DOI | 現在ID（探索補助） | 備考 |
+|---|---|---|---:|---|
+| D01 | Acquisition delay of wireless EEG | `10.21227/dv1p-vq18` | 15962 | 旧ID `6` から再採番。 |
+| D02 | CSTE: A Dataset for Cross-Sessions and Cross-Tasks EEG Biometrics | `10.21227/j162-nh61` | 5311 | 旧ID `11` 対応。 |
+| D03 | Data of Multimodal Fusion System for Cognitive Load Assessment in Psychological Experiments: An EEG and Eye-Tracking Study | `10.21227/6106-6120` | 10821 | 旧ID `13` 運用先。 |
+| D04 | Deep Nonparametric Bayesian Multimodal Sensor Fusion Method for Real-Time Motion and Emotion Modeling in Immersive Virtual Reality | `10.21227/4fb5-7d89` | 10824 | 旧ID `16` 運用先。 |
+| D05 | EEG cortical responses after HiPi: High-speed robot-controlled pinprick stimulation | `10.21227/8snc-7h06` | 10826 | 旧ID `19` 運用先。 |
+| D06 | ERP Data from a Longitudinal Working Memory Task in Children With and Without Dyslexia | `10.21227/r34y-c988` | 10831 | 旧ID `29` 運用先。 |
+| D07 | Physiological Indicators of Driver Sleepiness | `10.21227/rnms-3h47` | 10843 | 旧ID `49` 運用先。 |
+| D08 | Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods | `10.21227/7may-9q56` | 15972 | 旧ID `56` 運用先。 |
+| D09 | VICODEV dataset – visual-cognitive distraction in a dynamic driving simulator | `10.21227/r8fc-2y40` | 1369 | 旧ID `65` 運用先。 |
+| D10 | 3M-CPSEED: EEG dataset for overt/silent/imagined speech | `10.18112/openneuro.ds006465.v2.0.0` | 1370 | 旧ID `509` 運用先。 |
+| D11 | A multi-session simultaneous EEG-fMRI dataset with online experience sampling | `10.18112/openneuro.ds007216.v1.0.0` | 35 | 旧ID `676` の運用代替。 |
+| D12 | Longitudinal MI-BCI training with transcutaneous spinal stimulation | `10.5281/zenodo.15454354` | 33 | 旧ID `696` 運用先。 |
+| D13 | A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications | `10.17632/vyczny2r4w` | 536 | 旧ID `719` 運用先。 |
+| D14 | PK-NMM EEG simulation during propofol anesthesia | `10.6084/m9.figshare.1485719` | 6111 | 旧ID `735` 運用先。 |
+| D15 | A simultaneous EEG-fNIRS dataset for investigating working memory load | `10.21227/tswy-m550` | 16223 | 旧ID `783` 運用先。 |
+| D16 | Aalborg University Wearable Sleep Study (AAUWSS) | `10.5281/zenodo.16919070` | 5344 | 旧ID `842` 運用先。 |
+| D17 | DoC EEG biomarker pilot (preliminary ML outcome detection) | `10.5281/zenodo.6951439` | 6159 | 旧ID `859` 運用先。 |
+| D18 | AlphaDirection1: EEG, ECG, PPG (resting + working memory) | `10.18112/openneuro.ds006848.v1.0.0` | 1374 | 旧ID `1011` 運用先。 |
+| D19 | CerebellarTMSEEGData | `10.6084/m9.figshare.13082495` | 1531 | 旧ID `1839` 運用先。 |
+| D20 | Closed-loop auditory stimulation targeting REM oscillations | `10.5281/zenodo.10663994` | 2723 | 旧ID `1972` 運用先。 |
+| D21 | NeuroSimo: closed-loop EEG/EMG-guided TMS | `10.5281/zenodo.14398633` | 6852 | 旧ID `2412` 運用先。 |
+| D22 | rTMS responder/non-responder EEG after-effects | `10.17632/vgbghtzvt2` | 7244 | 旧ID `3419` 運用先。 |
+| D23 | EEG, PPG, GSR signals for rehabilitation fatigue detection | `10.6084/m9.figshare.31169026` | 3530 | 旧ID `4878` 運用先。 |
+| D24 | LLaMAC multimodal affective computing dataset（MAD運用代替） | `10.6084/m9.figshare.28748696` | 4010 | 旧ID `39` の現行代替。 |
+
+- 実務ルール: 応募書類・再現ログでは `Dxx + DOI + データセット名 + access区分` を正とし、`現在ID` は探索補助に限定します。
 

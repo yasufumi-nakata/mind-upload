@@ -5,7 +5,7 @@ description: "RQごとに主張単位・判定境界・応募テーマ・主デ�
 article_type: Wiki
 subtitle: "1RQ=1検証命題=1応募テーマ=1主データを実行可能な形で固定"
 author: Mind Uploading Research Project
-last_updated: "2026-03-20"
+last_updated: "2026-03-21"
 note: "Per-RQ Deep Evaluation Cards"
 audience: "RQを個別に深掘りしながら応募計画へ落とし込みたい研究者"
 reading_time: "35-55分"
@@ -15,7 +15,7 @@ reading_time: "35-55分"
 
 > 汎用横断の要約ではなく、60RQを1件ずつ深く読むための固定カード集。
 
-- 更新日: 2026-03-20
+- 更新日: 2026-03-21
 - 前提: `mind-upload-eeg-rq60-feasibility-and-funds` と `mind-upload-eeg-rq60-grant-dataset-playbook` の整合を取った統合版
 
 ## このページの使い方
@@ -364,4 +364,11 @@ reading_time: "35-55分"
 - RQ行で参照されるEEG ID一意集合（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
 - 助成キーは `G3-G6` を `auto-research-funds/wiki/cards/*.md` と `grant_eeg_dataset_match.csv` で照合し欠落 `0`、`G1/G2` は `mind-upload/wiki` と `auto-research-funds/wiki` の固定運用キーとして再確認しました。
 - 方針は不変で、汎用横断要約ではなく「1件ずつ深く理解して書く」実行形で wiki 同期を維持しました。
+
+
+## 2026-03-21 09:20 JST 再検証ログ（本run / DOIアンカー運用）
+
+- `RQ_TOTAL=60` と `A/B/C=17/25/18` を再確認し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持しました。
+- `EEG-DATA` の大規模再採番により、カード本文の数値IDは将来変動しうるため、提出実務では `mind-upload-eeg-rq60-feasibility-and-funds` と `Mind-Upload-EEG-RQ-Grant-Map` に追記した `D01-D24（DOI固定）` を正本キーとして扱ってください。
+- 本カードはRQごとの検証命題・失敗条件・成果物定義を正本とし、データ参照の最終キーは DOI 側に委譲します。
 
