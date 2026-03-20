@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-19 / 位置づけ: Technical / natural science only
+- 更新日: 2026-03-20 / 位置づけ: Technical / natural science only
 
 ## このページの役割
 This page is a wiki that organizes what really improves when combining EEG, MEG, fMRI, invasive recording, and MRI based on primary literature. Rather than focusing on philosophy or legal systems, we focus only on synchronization, coordinate alignment, forward models, external validation, and state coverage.
@@ -19,13 +19,16 @@ What I'm trying to show here is not that ``if you integrate everything, you can 
 
 ## 関連 Wiki
 - [Wiki: Basics of EEG](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-basics) - Click here if you want to return to the limits of EEG alone.
+- [Wiki: observability and claim ceiling by measurement stack](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling) - Use this page when you want the cross-stack ceiling table next.
 - [Wiki: Event synchronization and observation log](https://github.com/yasufumi-nakata/mind-upload/wiki/event-sync-and-measurement-logs) - Introduces the basics of shared clocks, delays, jitter, and drift.
 - [Wiki: Uncertainty, proofreading, abstaining](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention) - Compensates for why uncertainty persists with integration.
 - [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - An entry point to avoid confusing observed values and estimated values.
+- [Wiki: Baselines, preregistration, and model cards](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - Use this page when multimodal results need the Fusion Card workflow.
 
 ## いま分かっていること
 - By combining multiple modalities, some aspects of time, space, and locality can be complemented.
 - However, the amount of improvement is highly dependent on the shared clock, individual anatomy, electrode/sensor location, conductivity assumptions, and the presence or absence of an external reference.
+- Simultaneous acquisition, atlas-informed interpretation, and externally calibrated fusion are different claim levels.
 - For EEG+fMRI or EEG+fNIRS, alignment alone is not enough; vascular transfer state must be audited separately from neural interpretation.
 - OPM-MEG can tolerate much more movement than SQUID-MEG, but it still depends on shielding, active field control, sensor calibration, and source-model disclosure.
 - Invasive recording is a strong calibration route, but suffers from coverage bias and patient bias.
@@ -42,6 +45,11 @@ What I'm trying to show here is not that ``if you integrate everything, you can 
 Multimodal integration can compensate for some of the weaknesses of EEG. However, it can also simply replace <strong>one inverse problem with multiple problems involving synchronization, geometry, noise, and external validation</strong>. Therefore, on this site, we do not evaluate only by the fact that ``modalities were added'', but by <strong>which audit gate was passed</strong>.
 </p>
 
+<strong>Even same-session multimodal acquisition still needs a Fusion Card</strong>
+<p>
+The remaining weakness on this page was that <strong>simultaneous</strong>, <strong>multimodal</strong>, or <strong>atlas-informed</strong> could still be overread as if fusion validity were already built in. The primary literature does not support that shortcut. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025)</a> describe LSL as synchronization infrastructure rather than device-side delay truth, <a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">Wei et al. (2020)</a> show that EEG-fMRI fusion remains a model-conditioned inference problem, <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> show that simultaneous multimodal recordings can retain both common and divergent network organization, and <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> show that simultaneous EEG-PET-MRI can reveal coupled global dynamics together with modality- and network-specific structure across wakefulness and NREM sleep. Therefore, on this site, even same-session multimodal claims still need a <a href="https://mind-upload.com/verification.html#fusion-card">Fusion Card</a> before they are read above the strongest unimodal or prior-conditioned ceiling.
+</p>
+
 <strong>When wearable MEG sounds like unconstrained naturalism</strong>
 <p>
 The current OPM-MEG literature does show standing, ambulatory, and two-person proof-of-concept. But on this site, the safe reading remains narrower: the route still depends on <strong>magnetic shielding</strong>, <strong>active field control</strong>, <strong>sensor calibration / co-registration</strong>, and <strong>source-model disclosure</strong>. Without those, ``wearable'' is not treated as a portable substitute for standard MEG.
@@ -49,10 +57,10 @@ The current OPM-MEG literature does show standing, ambulatory, and two-person pr
 
 <strong>Scope of this page</strong>
 <p>
-Here we will only deal with the technical and natural science aspects. It does not include issues of identity, consciousness, or the legal system. The question to ask is not ``what could be observed?'' but <strong>what and to what extent could it be audited?
+Here we will only deal with the technical and natural science aspects. It does not include issues of identity, consciousness, or the legal system. The question to ask is not ``what could be observed?'' but <strong>what and to what extent could it be audited</strong>.
 </p>
 
-<h2>Six audit gates to fix first</h2>
+<h2>Seven audit gates to fix first</h2>
 <table>
 <thead>
 <tr>
@@ -88,12 +96,22 @@ Here we will only deal with the technical and natural science aspects. It does n
 <td>It can be said that there has been an "improvement" based on the estimation results alone. </td>
 </tr>
 <tr>
+<td><strong>Fusion Card gate</strong></td>
+<td>Acquisition relation, lag audit, co-registration scope, fusion model, and gain over unimodal / prior-only baselines are visible, so the result can be read as bounded cross-stack evidence rather than a loose stack collage.</td>
+<td>It is too strong to read same-session, atlas-informed, or tri-modal wording as if one biological state variable had already been jointly identified.</td>
+</tr>
+<tr>
 <td><strong>state coverage gate</strong></td>
 <td>This integration can limit which of time, space, and locality will be compensated for and which state variables will still be missing. </td>
 <td>It can be read that just by integrating it, it became sufficient observation for WBE. </td>
 </tr>
 </tbody>
 </table>
+
+<strong>Minimum fusion package on this site</strong>
+<p>
+For multimodal or atlas-prior routes, this page now follows the same disclosure bundle used in <a href="https://mind-upload.com/verification.html#fusion-card">Verification: Fusion Card</a>: <strong>acquisition relation</strong>, <strong>clock / lag audit</strong>, <strong>geometry / co-registration scope</strong>, <strong>fusion object and model burden</strong>, <strong>incremental evidence over unimodal / prior-only baselines</strong>, and <strong>external calibration plus abstention boundary</strong>. If those fields are missing, the result stays at the ceiling of the strongest individually supported stack rather than becoming same-subject cross-stack state identification.
+</p>
 
 <h2>What is currently proven for each major route</h2>
 <table>
@@ -118,7 +136,12 @@ Here we will only deal with the technical and natural science aspects. It does n
 <tr>
 <td><strong>Simultaneous measurement EEG + fMRI</strong></td>
 <td>Two 2015 papers by Jorge et al. and Wirsich et al. (2021) showed that simultaneous measurements are possible even at 1.5T to 7T, and with an appropriate setup, it is possible to proceed to reproducible connectivity analysis. </td>
-<td>Artifact and safety control tend to deteriorate with magnetic field strength, leaving asymmetry in time resolution, poor EEG quality, and a remaining vascular-state / CVR interpretation ceiling on the hemodynamic side. </td>
+<td>Artifact and safety control tend to deteriorate with magnetic field strength, leaving asymmetry in time resolution, poor EEG quality, and a remaining vascular-state / CVR interpretation ceiling on the hemodynamic side. Same-session acquisition also still needs a disclosed fusion model and unimodal / prior-only baselines. </td>
+</tr>
+<tr>
+<td><strong>Simultaneous EEG + PET + MRI</strong></td>
+<td><a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed temporally coupled global hemodynamic and metabolic progression across wakefulness and NREM sleep while resolving distinct network patterns inside the same tri-modal session.</td>
+<td>The route still depends on PET quantification model, hemodynamic / metabolic interpretation, co-registration, and a disclosed fusion baseline; it does not by itself identify one externally validated latent brain state or solve hidden-state completeness.</td>
 </tr>
 <tr>
 <td><strong>EEG + invasive recording (ECoG/SEEG/DBS)</strong></td>
@@ -155,12 +178,17 @@ Simultaneous EEG-fMRI is attractive, but as the magnetic field strength increase
 If the hemodynamic side is fNIRS rather than fMRI, the same caution remains. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">Yucel et al. (2015)</a> showed that short-separation regression improves statistical significance and localization for tasks with differing autonomic responses. On this site, an fNIRS branch without <strong>short-separation / superficial diagnostic</strong> is therefore not treated as a direct neural-difference readout either.
 </p>
 
-<h3>4. EEG + invasive recording is strong as a calibration route, but coverage is narrow</h3>
+<h3>4. EEG + PET + MRI adds arousal-state fusion, not fused ground truth</h3>
+<p>
+The newest route that needed to be fixed here is tri-modal EEG-PET-MRI. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed that simultaneous EEG-PET-MRI can reveal tightly coupled global hemodynamic and metabolic progression together with distinct network structure across wakefulness and NREM sleep. That is a real advance because one protocol can now compare electrophysiological arousal, hemodynamic fluctuations, and metabolic decline under the same experimental window. But the safe reading still stops well short of fused ground truth: PET quantification remains model-bearing, the hemodynamic side still carries vascular interpretation, and the fusion step itself still needs a disclosed baseline over each unimodal route. On this site, tri-modal results therefore still require a <a href="https://mind-upload.com/verification.html#fusion-card">Fusion Card</a> rather than being treated as automatic cross-stack state identification.
+</p>
+
+<h3>5. EEG + invasive recording is strong as a calibration route, but coverage is narrow</h3>
 <p>
 Zhang et al. (2006) used simultaneous scalp EEG/ECoG to show that the main spatial patterns of cortical potential reconstructions can be preserved with realistic FEM and co-registered MRI/CT. Seeber et al. (2019) also showed that deep signals are conditionally detectable using 256ch scalp EEG and simultaneous DBS recording. However, these only strengthen the area visible in the invasion record, and do not guarantee unmeasured areas.
 </p>
 
-<h3>5. OPM-MEG expands movement tolerance, but not without magnetic-field and source-model audits</h3>
+<h3>6. OPM-MEG expands movement tolerance, but not without magnetic-field and source-model audits</h3>
 <p>
 Wearable OPM-MEG is a real advance because the sensors move with the head and can therefore support paradigms that fixed SQUID helmets cannot. <a href="https://doi.org/10.1038/nature26147" target="_blank">Boto et al. (2018)</a> established the first motion-tolerant wearable system, <a href="https://doi.org/10.1016/j.neuroimage.2021.118604" target="_blank">Seymour et al. (2021)</a> pushed this to standing/mobile participants, <a href="https://doi.org/10.1016/j.neuroimage.2023.120157" target="_blank">Holmes et al. (2023)</a> enabled ambulatory movement with matrix-coil active shielding, and <a href="https://doi.org/10.3390/s23125454" target="_blank">Holmes et al. (2023)</a> extended proof-of-concept to two-person hyperscanning. But the common lesson is not ``movement solved.'' It is that <strong>movement becomes measurable when the magnetic environment is controlled tightly enough</strong>.
 </p>
@@ -181,10 +209,12 @@ Even when OP-MEG looks much closer to daily behavior, the public claim still has
 <h4>Rule</h4>
 <ul>
 <li><strong>multimodal:</strong>Read as "which audit gate was passed through" instead of "multiple modalities were added." </li>
+<li><strong>same-session / atlas-informed:</strong>Do not read this as one validated biological state variable unless a <a href="https://mind-upload.com/verification.html#fusion-card">Fusion Card</a> discloses acquisition relation, lag audit, co-registration scope, unimodal / prior-only baselines, and external calibration.</li>
 <li><strong>EEG + MRI:</strong>Even if individual anatomy is included, if there is no external validation, the source claim will be limited. </li>
 <li><strong>EEG + fMRI:</strong>It is useful as a complement to spatial information, but requires auditing of artifacts, safety, time series alignment, and vascular-state / CVR limits before a BOLD difference is read as a neural difference. </li>
+<li><strong>EEG + PET + MRI:</strong>Read as a stronger shared acquisition window for electrophysiology, hemodynamics, and metabolism, not as fused latent-state truth.</li>
 <li><strong>EEG + fNIRS:</strong>Short-separation / superficial diagnostic is required before HbO / HbR differences are treated as neural differences. </li>
-<li><strong>EEG + invasive recording: Treated as a coverage-limited calibration/validation route, not a gold standard. </li>
+<li><strong>EEG + invasive recording:</strong>Treated as a coverage-limited calibration/validation route, not a gold standard. </li>
 <li><strong>OPM-MEG:</strong>Wearable and motion-tolerant does not waive shielding, field nulling, co-registration, anatomy, or crosstalk audit. </li>
 <li><strong>state coverage:</strong>If the synapse, neuromodification, glial, or cell type label is unobserved, it will be marked as unobserved. </li>
 </ul>
@@ -193,6 +223,10 @@ Even when OP-MEG looks much closer to daily behavior, the public claim still has
 <ol>
 <li>Pernet, C. R., Appelhoff, S., Gorgolewski, K. J., et al. (2019). EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. <em>Scientific Data</em>, 6, 103. <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">doi:10.1038/s41597-019-0104-8</a></li>
 <li>Pernet, C., Garrido, M. I., Gramfort, A., et al. (2020). Issues and recommendations from the OHBM COBIDAS MEEG committee for reproducible EEG and MEG research. <em>Nature Neuroscience</em>, 23, 1473-1483. <a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">doi:10.1038/s41593-020-00709-0</a></li>
+<li>Kothe, C., Shirazi, S. Y., Stenner, T., Medine, D., Boulay, C., Grivich, M. I., Artoni, F., Mullen, T., Delorme, A., &amp; Makeig, S. (2025). The lab streaming layer for synchronized multimodal recording. <em>Imaging Neuroscience</em>, 3, IMAG.a.136. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
+<li>Wei, H., Jafarian, A., Zeidman, P., Litvak, V., Razi, A., Garrido, M., Friston, K., &amp; Daunizeau, J. (2020). Bayesian fusion and multimodal DCM for EEG and fMRI. <em>NeuroImage</em>, 211, 116595. <a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">doi:10.1016/j.neuroimage.2020.116595</a></li>
+<li>Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., O'Connor, D., Markicevic, M., Shen, X., Ge, X., Herman, P., Hyder, F., Papademetris, X., Chakravarty, M., Crair, M. C., Constable, R. T., Lake, E. M. R., &amp; Pessoa, L. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <em>Nature Communications</em>, 15, 229. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
+<li>Chen, J. E., Lewis, L. D., Coursey, S. E., Catana, C., Polimeni, J. R., Fan, J., Droppa, K. S., Patel, R., Wey, H.-Y., Chang, C., Manoach, D. S., Price, J. C., Sander, C. Y., &amp; Rosen, B. R. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <em>Nature Communications</em>, 16, 8887. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
 <li>Jorge, J., Grouiller, F., Ipek, O., et al. (2015). Simultaneous EEG-fMRI at ultra-high field: artifact prevention and safety assessment. <em>NeuroImage</em>, 105, 132-144. <a href="https://doi.org/10.1016/j.neuroimage.2014.10.055" target="_blank">doi:10.1016/j.neuroimage.2014.10.055</a></li>
 <li>Jorge, J., Grouiller, F., Gruetter, R., et al. (2015). Towards high-quality simultaneous EEG-fMRI at 7 T: Detection and reduction of EEG artifacts due to head motion. <em>NeuroImage</em>, 120, 143-153. <a href="https://doi.org/10.1016/j.neuroimage.2015.07.020" target="_blank">doi:10.1016/j.neuroimage.2015.07.020</a></li>
 <li>Wirsich, J., Jorge, J., Iannotti, G. R., et al. (2021). The relationship between EEG and fMRI connectomes is reproducible across simultaneous EEG-fMRI studies from 1.5T to 7T. <em>NeuroImage</em>, 231, 117864. <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">doi:10.1016/j.neuroimage.2021.117864</a></li>

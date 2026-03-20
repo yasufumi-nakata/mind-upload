@@ -5,7 +5,7 @@ description: "From the selection of public data (mainly EEG) to the minimum loop
 article_type: Resource
 subtitle: "Connect ``what to use'' and ``how to reproduce'' in the shortest route without separating them."
 author: Mind Uploading Research Project
-last_updated: "2026-03-19"
+last_updated: "2026-03-20"
 note: "Curated List + L0 Practice"
 audience: "People who are wondering which public data to start with, people who are looking for an L0 practice board"
 reading_time: "12-20 minutes"
@@ -22,6 +22,7 @@ page_highlights:
   - "Even when foundation / self-supervised EEG models are used, pretraining-corpus and harmonization audits are still required."
   - "Reference system, channel map, electrode layout, and device protocol are not cosmetic metadata; they can move scores and belong in the dataset card."
   - "The ultimate goal is to make it possible for a third party to rerun the result under the same conditions."
+  - "The L0 artifact pack now follows this page's stricter site rule: event fidelity, label provenance, acquisition-distribution summary, derivative lineage, and a stopping claim are required alongside version/BIDS/QC/split/baseline."
 known_points:
   - "Public EEG data is useful for L0 recall analysis and L1 baseline practice."
   - "When selecting data for the first time, you will move forward if you prioritize ease of retesting over difficulty."
@@ -33,6 +34,7 @@ known_points:
   - "With only starter data and no individual MRI or invasive ground truth, we cannot make strong claims about improved ESI accuracy."
   - "At source-imaging stage C, named validation class still matters because stimulation ground truth, simultaneous SEEG, and clinical outcome do not answer the same error question."
   - "For inverse-problem claims, same raw data is still not enough; same head model, same preprocessing, same source regime, and a sensitivity report are also required before comparing solver families."
+  - "At L0, a reusable artifact pack now also requires event fidelity, label provenance, hold-out ancestry, acquisition-distribution summary, derivative lineage, and a stopping claim rather than only version/BIDS/QC/split/baseline."
 unknown_points:
   - "Starter datasets alone cannot solve all the issues of WBE."
   - "We have not yet determined which data will be most effective for future causal/closed-loop verification."
@@ -674,20 +676,29 @@ A public inverse-problem comparison on this site must now disclose at least <str
 <section class="section" id="l0-practice">
 <h2 class="section-title">6) Run the L0 minimum loop here</h2>
 <p>
-The goal here is not to compete for high accuracy, but to create the smallest loop that a third party can follow in the same way. The first thing you need is a fixed dataset version, BIDS format, QC log, splitting rules including evaluation family, preprocessing conditions, and baseline.
+The goal here is not to compete for high accuracy, but to create the smallest loop that a third party can follow in the same way. The minimum pack on this site is no longer just <strong>version + BIDS + QC + split + baseline</strong>. It now also requires <strong>event fidelity</strong>, <strong>label provenance</strong>, <strong>acquisition-distribution summary</strong>, <strong>derivative lineage</strong>, and <strong>a stopping claim</strong> so later accuracy can still be read correctly.
 </p>
 
 <div class="key-points">
 <h4>L0 Loop</h4>
 <ul>
 <li><strong>Version:</strong>OpenNeuro snapshot / PhysioNet version / DOI / leave acquisition date</li>
-<li><strong>Input:</strong>Create a format that can be placed in BIDS (data + metadata)</li>
+<li><strong>Input:</strong>Create a format that can be placed in BIDS / EEG-BIDS (data + metadata + reference / channels / electrodes / events)</li>
+<li><strong>Event fidelity:</strong>Record onset / duration / sample, clock domain, delay / jitter evidence, and event semantics</li>
+<li><strong>Label provenance:</strong>State whether the target comes from annotation channels, expert scoring, clinician reports, or other rules</li>
 <li><strong>Quality: </strong>Record missing, noise, artifact, and exclusion reasons in numerical form</li>
-<li><strong>Processing:</strong>Fix preprocessing conditions, random numbers, software version, and splitting rules</li>
-<li><strong>Evaluation: </strong>Fix one of within-session / cross-session / cross-subject first</li>
-<li><strong>Output:</strong> Even if it is simple, publish at least one baseline indicator that can be compared later.</li>
-<li><strong>Audit:</strong>Failure cases, leak tests, pending conditions are also recorded along with the results</li>
+<li><strong>Processing:</strong>Fix preprocessing conditions, random numbers, software version, and derivative lineage from raw to outputs</li>
+<li><strong>Evaluation: </strong>Fix one of within-session / cross-session / cross-subject first, together with the independent hold-out unit and raw-recording / window ancestry</li>
+<li><strong>Output:</strong>Even if it is simple, publish at least one baseline indicator that can be compared later, and state what claim must stop here</li>
+<li><strong>Audit:</strong>Failure cases, leak tests, harmonization logs, and pending conditions are also recorded along with the results</li>
 </ul>
+</div>
+
+<div class="note-box">
+<strong>2026-03-20 addendum: the public L0 pack is now synchronized</strong>
+<p>
+The weakness of this page was that the public checklist had become stricter than the wiki page readers actually use when assembling an L0 submission. That gap is now closed. If you want the submission shape itself, not only the route on this page, go directly to <a href="wiki/l0-minimum-artifact-pack.html">Wiki: Minimum artifact pack for L0</a>. The synced pack now fixes <strong>dataset identity</strong>, <strong>event fidelity</strong>, <strong>label provenance</strong>, <strong>evaluation family + hold-out ancestry</strong>, <strong>acquisition-distribution summary</strong>, <strong>derivative lineage</strong>, and <strong>stopping claim</strong> as first-class deliverables.
+</p>
 </div>
 
 <table class="data-table">
