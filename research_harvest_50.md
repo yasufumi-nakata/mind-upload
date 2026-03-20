@@ -19,6 +19,7 @@ page_highlights:
   - "A paper-level technical-only shortlist is now linked at the front door so readers can jump from U labels to concrete anchors without scanning mixed archive pages first."
   - "For technical readers, human observability-class advances are kept separate from direct validation, demos, and hidden-state boundary papers, and proxy class is now read separately from route maturity."
   - "For technical readers, maintenance-state papers now include transcriptional stabilization and astrocyte-state evidence rather than only generic support-variable papers."
+  - "For technical readers, U10 now separates route families inside thermodynamic language, so lower bounds, time-asymmetry indices, model-based entropy flow, and physiology-side grounding are not compressed into one frontier."
 known_points:
   - "Breaking the literature into U0-U15 makes it easier not to confuse paper volume with conclusion strength."
   - "Separating source_logged, curated, and noise_excluded prevents intake logging from being confused with academic integration."
@@ -27,6 +28,7 @@ known_points:
   - "Technical readers who want concrete paper anchors first can now jump directly to the paper archive's 2025-2026 technical-only shortlist."
   - "Human measurement advances in ultrastructure, synaptic-density PET, static MRSI, dynamic DMRSI, thermometry, myelin mapping, CSF mobility, and sleep-linked clearance do not all increase the same evidential axis."
   - "Maintenance-state papers on transcriptional stabilization and astrocyte multiday trace change what remains latent, not what is already directly measured."
+  - "Thermodynamic evidence on this site is read only after route-family disclosure: brain-signal irreversibility, model-based entropy flow, and physiology-side energetic grounding remain different claim types."
 unknown_points:
   - "Not every U has enough evidence yet, and some regions remain exploratory."
   - "Items marked source_logged may change category or be excluded after deeper screening."
@@ -132,7 +134,7 @@ The "current status" labels on this page are not pass/fail outcomes. They are sh
 <section class="section" id="technical-priority-route-20260315">
 <h2 class="section-title">March 2026 priority route for technical and natural-science readers</h2>
 <p>
-The weakness of this page used to be that the <strong>intake log</strong> and the <strong>experimental frontier</strong> sat too close together, making it easy for technical readers to miss where the strongest primary evidence currently sits. The default reading order is now fixed as <strong>measurement and human observability</strong>, <strong>model-conditioned causal inference</strong>, <strong>direct validation and imitation-separation</strong>, <strong>long-horizon closed-loop stability</strong>, <strong>maintenance-state beyond the connectome</strong>, and <strong>physical grounding</strong>. That order reflects the current density of primary evidence represented by Tang et al. (2023), d'Ascoli et al. (2025), Willett et al. (2023), Littlejohn et al. (2025), Wairagkar et al. (2025), Unnwongse et al. (2023), Hao et al. (2025), Penny et al. (2004), Rosa et al. (2012), Jafarian et al. (2020), Fr&auml;ssle et al. (2021), Jafarian et al. (2024), Wu et al. (2024), Shapson-Coe et al. (2024), Johansen et al. (2024), Lucchetti et al. (2025), Li et al. (2025), Baadsvik et al. (2024), Rzechorzek et al. (2022), Hirschler et al. (2025), Dagum et al. (2026), Xu et al. (2024), Looser et al. (2024), Terceros et al. (2025), Dewa et al. (2025), and Bukalo et al. (2026).
+The weakness of this page used to be that the <strong>intake log</strong> and the <strong>experimental frontier</strong> sat too close together, making it easy for technical readers to miss where the strongest primary evidence currently sits. The default reading order is now fixed as <strong>measurement and human observability</strong>, <strong>model-conditioned causal inference</strong>, <strong>direct validation and imitation-separation</strong>, <strong>long-horizon closed-loop stability</strong>, <strong>maintenance-state beyond the connectome</strong>, and <strong>physical grounding</strong>. That order reflects the current density of primary evidence represented by Tang et al. (2023), d'Ascoli et al. (2025), Willett et al. (2023), Littlejohn et al. (2025), Wairagkar et al. (2025), Unnwongse et al. (2023), Hao et al. (2025), Penny et al. (2004), Rosa et al. (2012), Jafarian et al. (2020), Fr&auml;ssle et al. (2021), Jafarian et al. (2024), Wu et al. (2024), Shapson-Coe et al. (2024), Johansen et al. (2024), Lucchetti et al. (2025), Li et al. (2025), Baadsvik et al. (2024), Rzechorzek et al. (2022), Hirschler et al. (2025), Dagum et al. (2026), Xu et al. (2024), Looser et al. (2024), Terceros et al. (2025), Dewa et al. (2025), Bukalo et al. (2026), Lynn et al. (2021), de la Fuente et al. (2023), Nartallo-Kaluarachchi et al. (2025), Ishihara &amp; Shimazaki (2025), and Epp et al. (2025).
 </p>
 <table class="data-table">
 <thead>
@@ -177,8 +179,8 @@ The weakness of this page used to be that the <strong>intake log</strong> and th
 <tr>
 <td><strong>6. Physical grounding</strong></td>
 <td><strong>U10</strong></td>
-<td>Whether dissipation, energy constraints, and effective cost are being treated as falsifiable conditions rather than as afterthoughts.</td>
-<td>Acting as if computational plausibility alone settles physical implementation.</td>
+<td>Whether signal route, state definition, coarse-graining / timescale, estimator family, and physiology-side grounding are disclosed before dissipation, energy constraints, or effective cost are interpreted.</td>
+<td>Acting as if one irreversibility result already gives direct dissipation, a common thermodynamic scale, or a WBE gate.</td>
 </tr>
 </tbody>
 </table>
@@ -201,9 +203,15 @@ Recent maintenance-state papers also changed in kind, not only in number. <a hre
 </p>
 </div>
 <div class="note-box">
+<strong>Read U10 as a route-family split, not as one thermodynamic frontier</strong>
+<p>
+On the core pages, thermodynamic claims already require a route card, but this evidence bank had still left U10 too close to a generic "physical grounding" bucket. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn et al. (2021)</a> estimated coarse-grained entropy-production lower bounds from fMRI state transitions, <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">de la Fuente et al. (2023)</a> used inversion decoding on ECoG, <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">Nartallo-Kaluarachchi et al. (2025)</a> used multilevel visibility-graph irreversibility on MEG, <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> estimated model-based entropy flow from spike ensembles, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that BOLD changes can oppose oxygen-metabolism changes. Therefore, on this page, U10 is now read as a split among <strong>route families</strong> plus a separate <strong>physiology-side grounding</strong> burden, not as one common thermodynamic measurement frontier.
+</p>
+</div>
+<div class="note-box">
 <strong>If you want paper-level anchors before the U map</strong>
 <p>
-The default route on this page is still organized by unresolved question. If you already know that you want only the 2025-2026 technology / natural-science frontier papers first, jump directly to the <a href="mind_uploading_papers.html#technical-shortlist-20260320">Paper Collection: 2025-2026 technical-only shortlist</a>. That table gives concrete anchor papers for EEG foundation-model governance, human observability, maintenance-state boundary papers, direct source validation, and closed-loop communication before you return here to place them in U1/U7/U4/U13/U8/U3/U10.
+The default route on this page is still organized by unresolved question. If you already know that you want only the 2025-2026 technology / natural-science frontier papers first, jump directly to the <a href="mind_uploading_papers.html#technical-shortlist-20260320">Paper Collection: 2025-2026 technical-only shortlist</a>. That table gives concrete anchor papers for EEG foundation-model governance, human observability, maintenance-state boundary papers, direct source validation, closed-loop communication, and thermodynamic route-family splits before you return here to place them in U1/U7/U4/U13/U8/U3/U10.
 </p>
 </div>
 <div class="note-box">
@@ -865,6 +873,12 @@ The weak point here was not that the site already separated DCM from SCM on theo
 This section is a bibliographic map, so the descriptions of Landauer, NESS, and EPR are condensed. If you want to clarify only the beginning of the meaning, it will be easier to follow if you look at <a href="wiki/thermodynamic-grounding-basics.html">Wiki: Thermodynamic grounding basics</a> first.
 </p>
 </div>
+<div class="note-box">
+<strong>2026-03-20 addendum: U10 must separate route families before reading "thermodynamic consistency"</strong>
+<p>
+The remaining weakness in U10 was that it still read too much like one bucket about energy cost. The primary literature does not support that compression. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn et al. (2021)</a> estimated entropy-production lower bounds only after coarse-graining fMRI dynamics into macrostates, <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">de la Fuente et al. (2023)</a> used inversion decoding on ECoG and showed dependence on feature choice and model complexity, <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">Nartallo-Kaluarachchi et al. (2025)</a> measured multilevel irreversibility from MEG visibility-graph structure, and <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> estimated model-based entropy flow from spiking populations under explicit kinetic-Ising assumptions. Meanwhile, <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that BOLD changes can oppose oxygen-metabolism changes, which means energetic wording still needs physiology-side grounding rather than brain-signal irreversibility alone. On this page, U10 now separates <strong>brain-signal route family</strong>, <strong>coarse-graining / state definition</strong>, <strong>model burden</strong>, and <strong>physiology-side grounding</strong>.
+</p>
+</div>
 <h3>Research question breakdown</h3>
 <ol>
 <li>How to apply/interpret the Landauer lower bound in neural computation. </li>
@@ -874,34 +888,32 @@ This section is a bibliographic map, so the descriptions of Landauer, NESS, and 
 </ol>
 <h3>What has some traction now (areas with accumulated literature)</h3>
 <ul>
-<li>The theoretical framework of Landauer principle/information thermodynamics has been established. </li>
-<li>The number of review/perspective papers connecting information thermodynamics to neuroscience has increased. </li>
-<li>The problem setting for simultaneous evaluation of computational efficiency and energy constraints has been clarified. </li>
+<li>Primary studies now support several distinct <strong>brain-signal route families</strong> rather than one generic thermodynamic readout: coarse-grained entropy-production lower bounds from fMRI state transitions, inversion-decoding asymmetry from ECoG, visibility-graph irreversibility from MEG, and model-based entropy flow from spike ensembles.</li>
+<li>Current papers also support that <strong>coarse-graining, timescale, and model assumptions are part of the result</strong>, not harmless implementation detail.</li>
+<li>Physiology-side grounding has become a separable audit burden: energetic language is stronger only when a route to oxygen metabolism or another physiology-side observable is disclosed, rather than inferred from irreversibility language alone.</li>
 </ul>
-<p class="small"><strong>Representative references:</strong> <a href="https://arxiv.org/abs/2003.07436v1" target="_blank">Landauer Principle and General Relativity</a>, <a href="https://doi.org/10.3390/e26090779" target="_blank">Information Thermodynamics: From Physics to Neuroscience</a>, <a href="https://doi.org/10.1016/j.tics.2024.03.009" target="_blank">The Thermodynamics of Mind</a>, <a href="https://doi.org/10.1017/9781316650394.024" target="_blank">Information and Thermodynamics</a>.</p>
+<p class="small"><strong>Representative references:</strong> <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn et al. (2021)</a>, <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">de la Fuente et al. (2023)</a>, <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">Nartallo-Kaluarachchi et al. (2025)</a>, <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a>, <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a>.</p>
 <h3>What still needs research (unresolved)</h3>
 <ul>
-<li>Actual measurement research on the effective lower limit in neural circuit implementation is limited. </li>
-<li>Lack of standardized measurement pipeline for heat dissipation estimation. </li>
-<li>A consensus cost model that can be used for WBE scale estimation has not yet been established. </li>
+<li>There is still no standardized route card that makes fMRI, ECoG, MEG, and spike-based irreversibility results comparable as one common measurement object.</li>
+<li>Brain-signal irreversibility still does not directly yield microscopic dissipation, hardware power, or implementation-level metabolic cost without separate physiology-side or device-side measurements.</li>
+<li>Finite-data regimes, missing backward transitions, and coarse-graining choices still move the estimate enough that cross-paper comparison remains fragile.</li>
 </ul>
-<p class="small"><strong>Representative references:</strong> <a href="https://doi.org/10.1007/978-3-319-93458-7_2" target="_blank">Conditional Erasure and the Landauer Limit</a>, <a href="https://doi.org/10.3390/books978-3-7258-4142-4" target="_blank">The Landauer Principle and Its Implementations in Physics, Chemistry and Biology</a>, <a href="https://doi.org/10.1016/b978-0-444-59557-7.00011-4" target="_blank">Thermodynamics and Biological Systems</a>.</p>
-<h3>Major previous studies (14 re-examinations)</h3>
+<p class="small"><strong>Representative references:</strong> <a href="https://doi.org/10.1103/PhysRevLett.125.110601" target="_blank">Teza &amp; Stella (2020)</a>, <a href="https://doi.org/10.1103/PhysRevE.105.L042601" target="_blank">Cocconi et al. (2022)</a>, <a href="https://doi.org/10.1038/s42005-024-01742-2" target="_blank">Baiesi et al. (2024)</a>, <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a>.</p>
+<h3>Major studies and route anchors</h3>
 <ol>
-<li><strong>[Entropy]</strong> <a href="https://doi.org/10.3390/e26090779" target="_blank">Information Thermodynamics: From Physics to Neuroscience</a> (2024)</li>
-<li><strong>[arXiv]</strong> <a href="https://arxiv.org/abs/2502.03603" target="_blank">Dynamical Landauer principle and thermodynamic cost of entropy production</a> (2025)</li>
+<li><strong>[Nature]</strong> <a href="https://doi.org/10.1038/nature10872" target="_blank">Experimental verification of Landauer&rsquo;s principle linking information and thermodynamics</a> (2012)</li>
+<li><strong>[PNAS]</strong> <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Broken detailed balance and entropy production in the human brain</a> (2021)</li>
+<li><strong>[Communications Biology]</strong> <a href="https://doi.org/10.1038/s42003-022-03505-7" target="_blank">The INSIDEOUT framework provides precise signatures of the balance of intrinsic and extrinsic dynamics in brain states</a> (2022)</li>
+<li><strong>[Cerebral Cortex]</strong> <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">Temporal irreversibility of neural dynamics as a signature of consciousness</a> (2023)</li>
 <li><strong>[Physical Review E]</strong> <a href="https://doi.org/10.1103/PhysRevE.107.024121" target="_blank">Entropy production correlates with consciousness levels</a> (2023)</li>
-<li><strong>[Trends in Cognitive Sciences]</strong> <a href="https://doi.org/10.1016/j.tics.2024.03.009" target="_blank">The Thermodynamics of Mind</a> (2024)</li>
-<li><strong>[Neuroscience and Biobehavioral Reviews]</strong> <a href="https://doi.org/10.1016/j.neubiorev.2023.105070" target="_blank">A primer on entropy in neuroscience</a> (2023)</li>
-<li><strong>[Springer]</strong> <a href="https://doi.org/10.1007/978-3-319-93458-7_2" target="_blank">Conditional Erasure and the Landauer Limit</a> (2018)</li>
-<li><strong>[MDPI Books]</strong> <a href="https://doi.org/10.3390/books978-3-7258-4142-4" target="_blank">The Landauer Principle and Its Implementations in Physics, Chemistry and Biology</a> (2025)</li>
-<li><strong>[Cambridge]</strong> <a href="https://doi.org/10.1017/9781316650394.024" target="_blank">Information and Thermodynamics</a> (book chapter)</li>
-<li><strong>[Elsevier]</strong> <a href="https://doi.org/10.1016/b978-0-444-59557-7.00011-4" target="_blank">Thermodynamics and Biological Systems</a> (2014)</li>
-<li><strong>[arXiv]</strong> <a href="https://arxiv.org/abs/2003.07436v1" target="_blank">Landauer Principle and General Relativity</a> (2020)</li>
-<li><strong>[arXiv]</strong> <a href="https://arxiv.org/abs/2409.17599v1" target="_blank">Information thermodynamics: from physics to neuroscience</a> (2024)</li>
-<li><strong>[JPCL supporting information]</strong> <a href="https://doi.org/10.1021/acs.jpclett.4c03156.s001" target="_blank">Deriving the Landauer Principle from the Quantum Shannon Entropy</a> (supporting material)</li>
-<li><strong>[CRC Press]</strong> <a href="https://doi.org/10.1201/b10962-10" target="_blank">Chemical Thermodynamics, Information, and Horizons</a> (2011)</li>
-<li><strong>[OpenAlex]</strong> <a href="https://api.openalex.org/W3023669232" target="_blank">Nonequilibrium Thermodynamics in Cell Biology</a> (2020)</li>
+<li><strong>[Physical Review Letters]</strong> <a href="https://doi.org/10.1103/PhysRevLett.125.110601" target="_blank">Exact coarse graining preserves entropy production out of equilibrium</a> (2020)</li>
+<li><strong>[Physical Review E]</strong> <a href="https://doi.org/10.1103/PhysRevE.105.L042601" target="_blank">Scaling of entropy production under coarse graining in active disordered media</a> (2022)</li>
+<li><strong>[Communications Physics]</strong> <a href="https://doi.org/10.1038/s42005-024-01742-2" target="_blank">Effective estimation of entropy production with lacking data</a> (2024)</li>
+<li><strong>[PNAS]</strong> <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">Multilevel irreversibility reveals higher-order organization of nonequilibrium interactions in human brain dynamics</a> (2025)</li>
+<li><strong>[Nature Communications]</strong> <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics</a> (2025)</li>
+<li><strong>[Nature Neuroscience]</strong> <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">BOLD signal changes can oppose oxygen metabolism across the human cortex</a> (2025)</li>
+<li><strong>[Trends in Cognitive Sciences]</strong> <a href="https://doi.org/10.1016/j.tics.2024.03.009" target="_blank">The Thermodynamics of Mind</a> (2024 review)</li>
 </ol>
 </section>
 
