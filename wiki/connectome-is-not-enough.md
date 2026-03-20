@@ -10,7 +10,7 @@ description: We will summarize the reasons why storing only the connectome in WB
 article_type: Wiki
 subtitle: connectome-complete is not emulation-complete
 author: Mind Uploading Research Project
-last_updated: '2026-03-20'
+last_updated: '2026-03-21'
 note: Technical / natural science only
 audience: People who want to judge whether the wiring diagram is close to WBE based
   only on technology and natural science.
@@ -291,6 +291,12 @@ On this site, connectome-related progress is now separated into five evidence cl
 When a paper says that “connectome progress” moves WBE forward, this site now asks <strong>which of the five evidence classes improved</strong>. A stronger claim requires not just more structure, but a narrower remaining latent-state family under the same held-out or perturbed condition.
 </p>
 </div>
+<div class="note-box">
+<strong>2026-03-21 addendum: even the graph and node labels need robustness audits</strong>
+<p>
+Another weakness in older summaries was to treat edge existence and cell labels as if they had already become binary facts once a large EM resource appeared. The primary literature is narrower. <a href="https://doi.org/10.1038/s41586-024-07686-5" target="_blank">Schlegel et al. (2024)</a> showed across three fly hemispheres that edges stronger than ten synapses or at least 0.9% of a target cell type's total inputs persist more than 90% of the time, whereas weaker edges are less reliable and cell types should be treated as predictions or hypotheses to be validated across brains. In mammalian cortex, <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">Gamlin et al. (2025)</a> linked EM connectivity to transcriptomic Sst subtypes through morphology-based prediction from Patch-seq rather than by directly reading transcriptomes out of the connectome itself, and those predicted subtypes differed in axon myelination and synaptic output patterns. Therefore, this site now separates <strong>edge robustness</strong>, <strong>cell-type bridge quality</strong>, and <strong>dynamical sufficiency</strong> instead of treating them as one package.
+</p>
+</div>
 </section>
 
 <section class="section" id="tractography-ceiling">
@@ -424,7 +430,7 @@ If a connectome-constrained predictor lacks this route card, this site keeps the
 
 <h3>1. Cell type labels are not decorations for node IDs</h3>
 <p>
-Gamlin et al. showed that connectivity motifs, synaptic properties, and myelination differ systematically among predicted Sst transcriptomic types in mouse visual cortex. Furthermore, the MICrONS Consortium emphasized that in the mammalian cortex, cells of different cell types may contain neurons with different tuning preferences, so it is necessary to read same-brain connectivity and same-brain function together. In other words, even if the graph structure is the same, the physical meaning of the circuit changes if the node label and same-brain physiology are different. An unlabeled graph with a reduced cell type may be convenient for compression, but it loses a lot of the information required to reproduce the function.
+Gamlin et al. (2025) did not obtain transcriptomic labels directly from the connectome itself; they used Patch-seq morphology to predict transcriptomic Sst types inside a large EM volume and then showed that those predicted Sst subtypes differed in axon myelination and synaptic output patterns. Furthermore, the MICrONS Consortium emphasized that in mammalian cortex, cells of different cell types can still contain neurons with different tuning preferences, so same-brain connectivity and same-brain function must be read together. In other words, even if the graph structure is the same, the physical meaning of the circuit changes if the node label and same-brain physiology are different. An unlabeled graph with a reduced cell type may be convenient for compression, but it loses a large fraction of the information required to reproduce function.
 </p>
 
 <h3>2. Activity-dependent transcription / chromatin state is not reducible to node label</h3>
@@ -698,6 +704,7 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <h2 class="section-title">References</h2>
 <ol>
 <li>Dorkenwald, S., et al. (2024). Neuronal wiring diagram of an adult brain. <em>Nature</em>, 634, 124–138. <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">doi:10.1038/s41586-024-07558-y</a></li>
+<li>Schlegel, P., et al. (2024). Whole-brain annotation and multi-connectome cell typing of Drosophila. <em>Nature</em>, 634, 139–150. <a href="https://doi.org/10.1038/s41586-024-07686-5" target="_blank">doi:10.1038/s41586-024-07686-5</a></li>
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>, 640, 435–447. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Lappalainen, J. K., Tschopp, F. D., Prakhya, S., et al. (2024). Connectome-constrained networks predict neural activity across the fly visual system. <em>Nature</em>, 634, 1132–1140. <a href="https://doi.org/10.1038/s41586-024-07939-3" target="_blank">doi:10.1038/s41586-024-07939-3</a></li>
 <li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <em>Nature Neuroscience</em>, 28, 2561–2574. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
