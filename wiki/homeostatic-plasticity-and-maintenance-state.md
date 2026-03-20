@@ -26,6 +26,7 @@ accuracy_note: >
   long-term dynamics and memory maintenance. This does not mean sufficient conditions have been established.
 page_highlights:
   - "Maintenance-state includes not only intrinsic excitability, but also activity-dependent transcription / chromatin state, post-transcriptional RNA-state, AIS / ion-channel landscapes, sleep-dependent homeostasis, myelin / oligodendrocytes, thermal-state, ionic milieu / chloride homeostasis, local proteostasis / synaptic-tagging state, cargo-transport / cytoskeletal trafficking state, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, glial metabolism and astrocyte ensembles, and clearance / immune support."
+  - "Sleep replay evidence is not one class: stage label, scalp coupling proxy, intracranial ripple evidence, closed-loop intervention, and difficulty-selective TMR should be audited separately with a route card."
   - "Cell-type atlas and current plasticity-competent transcriptional state are different objects; static transcriptomic labels do not fix which neurons are eligible for allocation or stabilization."
   - "Gene-level transcript abundance does not fix post-transcriptional RNA-state: isoform choice, m6A-dependent translation / degradation, and RNA-editing ratio can still change plasticity and memory on the same transcript-count background."
   - "Current weights do not fix which tagged synapses or dendritic branches capture plasticity-related proteins, so late stabilization remains another hidden layer."
@@ -52,6 +53,7 @@ unknown_points:
   - "It is not yet fixed how post-transcriptional RNA-state should be audited without collapsing isoform choice, m6A-dependent translation / degradation, and RNA-editing ratio back into gene-level abundance."
   - "It has not been fixed which external standards among SV2A PET, MRSI, MRS thermometry, 31P-MRS, sodium MRI, dynamic DMI, myelin bilayers, TMS-EEG, sleep-plasticity proxies, and CSF-glymphatic proxies should calibrate maintenance-states that cannot be measured directly in humans."
   - "It is not yet fixed which sleep-history, sleep-architecture, myelin, thermal, ECM, bioenergetic, metabolic, and clearance indicators will become standard submissions for long-term closed-loop claims."
+  - "It is not yet fixed which sleep replay fields should be mandatory across scalp EEG, intracranial recordings, and cue-driven interventions so that event definition, timing policy, and item-selection regime are not collapsed into one sentence."
   - "It is also unclear how strongly parcel-level metabolic similarity and CSF-mobility proxies constrain cell-specific glial, immune, transmitter, and synaptic maintenance-states."
 wiki_links:
   - label: "Wiki: Why wiring diagrams alone are not enough"
@@ -134,8 +136,8 @@ Philosophy, legal systems, and copying issues are not discussed here. It address
 <tr>
 <td><strong>Sleep architecture / replay-coupling state</strong></td>
 <td>Whether slow oscillations, spindles, ripples, and consolidation-permissive NREM windows align strongly enough for replay and long-term stabilization.</td>
-<td>If a night of sleep occurred, then the consolidation mechanism was also already matched.</td>
-<td>If architecture or replay-coupling is unmeasured, overnight retention remains different from replay-consistent maintenance. </td>
+<td>If a night of sleep occurred, or a cue was delivered during sleep, then the consolidation mechanism was also already matched.</td>
+<td>If architecture, event definition, or replay-coupling is unmeasured, overnight retention or TMR gain remains different from replay-consistent maintenance. </td>
 </tr>
 <tr>
 <td><strong>Myelin / oligodendrocyte support</strong></td>
@@ -301,6 +303,64 @@ The weakness of the current site was that it focused maintenance-state too much 
 <strong>Sleep history is not sleep architecture</strong>
 <p>
 <a href="https://doi.org/10.1016/j.neuron.2013.03.006" target="_blank">Ngo et al. (2013)</a> showed in humans that slow-oscillation stimulation only improves memory when phase-locked to the right part of the ongoing rhythm, <a href="https://doi.org/10.1038/nn.4304" target="_blank">Maingret et al. (2016)</a> showed in rats that timed coupling of hippocampal ripples to cortical delta/spindle events boosts next-day memory, and <a href="https://doi.org/10.1016/j.neuron.2017.06.025" target="_blank">Latchoumane et al. (2017)</a> showed in mice that in-phase spindle induction promotes hippocampus-dependent memory whereas out-of-phase manipulation does not. On the human side, <a href="https://doi.org/10.1038/s41467-021-23520-2" target="_blank">Schreiner et al. (2021)</a> showed that endogenous reactivation is clocked by SO-spindle complexes, <a href="https://doi.org/10.1038/s41593-023-01324-5" target="_blank">Geva-Sagiv et al. (2023)</a> showed that enhancing hippocampal-prefrontal synchrony during sleep improves memory, <a href="https://doi.org/10.1038/s41467-024-49572-8" target="_blank">Schreiner et al. (2024)</a> linked spindle-locked ripples to human memory reactivation, and <a href="https://doi.org/10.1016/j.neuron.2025.03.020" target="_blank">Deng et al. (2025)</a> showed that even within NREM the consolidation window is time-structured. Therefore, on this site, <strong>sleep duration/history</strong> and <strong>sleep architecture / replay-coupling</strong> are treated as separate maintenance-state variables.
+</p>
+</div>
+<div class="note-box" id="sleep-replay-route-card">
+<strong>2026-03-20 addendum: sleep replay claims now need a route card</strong>
+<p>
+The remaining weakness on this page was that it still let several different inferential objects collapse into one label such as <strong>sleep replay evidence</strong>. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuron.2013.03.006" target="_blank">Ngo et al. (2013)</a> is a <strong>phase-locked auditory intervention</strong> in healthy humans, <a href="https://doi.org/10.1038/s41467-021-23520-2" target="_blank">Schreiner et al. (2021)</a> is <strong>endogenous scalp-EEG decoding</strong> around aggregated SO-spindle events, <a href="https://doi.org/10.1038/s41593-023-01324-5" target="_blank">Geva-Sagiv et al. (2023)</a> is an <strong>intracranial closed-loop synchrony intervention</strong>, <a href="https://doi.org/10.1038/s41467-024-49572-8" target="_blank">Schreiner et al. (2024)</a> is <strong>human ripple-linked iEEG evidence</strong>, <a href="https://doi.org/10.1038/s41467-025-57766-x" target="_blank">Duan et al. (2025)</a> shows <strong>item-level strengthening versus decay under TMR</strong>, <a href="https://doi.org/10.1038/s41539-025-00340-3" target="_blank">Shin et al. (2025)</a> shows <strong>difficulty-selective benefit under personalized TMR</strong>, and <a href="https://doi.org/10.1016/j.neuron.2025.03.020" target="_blank">Deng et al. (2025)</a> shows a <strong>time-structured intracellular NREM window</strong>. Therefore, this site now requires a <strong>sleep replay route card</strong> before overnight retention, TMR benefit, or ripple-linked evidence is promoted beyond a stage- or cue-conditioned claim.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be fixed explicitly</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family / memory target</strong></td>
+<td>State whether the paper supports <strong>endogenous reactivation</strong>, <strong>cue-driven strengthening</strong>, <strong>closed-loop synchrony intervention</strong>, <strong>item-selective preservation / decay</strong>, <strong>challenging-memory rescue</strong>, or a <strong>cellular timing window</strong>.</td>
+<td>Different inferential objects collapse into one phrase such as <code>sleep replay supports memory</code>.</td>
+</tr>
+<tr>
+<td><strong>Preparation / spatial access</strong></td>
+<td>Name healthy-human scalp EEG, human intracranial EEG / DBS, rodent LFP / optogenetics, or another preparation, plus the brain regions actually measured or stimulated.</td>
+<td>Local or patient-specific evidence is silently promoted to generic whole-brain human mechanism evidence.</td>
+</tr>
+<tr>
+<td><strong>State and event definition</strong></td>
+<td>Write sleep stage, SO/spindle/ripple detector or coupling metric, whether the events were endogenous or cue-evoked, and any cue-free baseline or non-event comparison.</td>
+<td><code>NREM sleep</code> or <code>sleep happened</code> replaces the actual oscillatory regime that the claim depends on.</td>
+</tr>
+<tr>
+<td><strong>Timing / control policy</strong></td>
+<td>Report phase target, cue spacing, mixed-phase / sham / off-window controls, refractory-period handling, and the exact time window in which the effect is claimed.</td>
+<td>A cue delivered during sleep is overread as phase-specific or mechanism-specific causal evidence.</td>
+</tr>
+<tr>
+<td><strong>Direct observable / analysis unit</strong></td>
+<td>Name whether the readout is average retention, item-level strengthening versus decay, scalp decoding, ripple rate, hippocampal-cortical coupling, or another neural/behavioral observable.</td>
+<td>Across-item variability and the difference between aggregate score gain and replay-specific evidence disappear.</td>
+</tr>
+<tr>
+<td><strong>Difficulty / selection regime</strong></td>
+<td>State whether the protocol targeted all items, cued subsets, weak memories, high-difficulty memories, or another selection rule.</td>
+<td>Selective benefits for difficult or weak items are silently promoted to uniform overnight consolidation.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Fix in one line what remains latent, especially ripple ground truth in scalp EEG, patient-to-healthy generalization, item-level coverage, and the difference between cue efficacy and endogenous mechanism.</td>
+<td>Proxy-rich or intervention-rich results are promoted to complete replay-mechanism evidence.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Why this route card is necessary here</strong>
+<p>
+<a href="https://doi.org/10.1038/s41467-021-23520-2" target="_blank">Schreiner et al. (2021)</a> explicitly reported modest decoding levels, aggregation across SO-spindle events, and limited scalp access to ripples, while <a href="https://doi.org/10.1038/s41467-025-57766-x" target="_blank">Duan et al. (2025)</a> showed that the same TMR session can produce both strengthening and decaying items with different coupling dynamics. <a href="https://doi.org/10.1038/s41539-025-00340-3" target="_blank">Shin et al. (2025)</a> further showed that behavioral benefit and SW-spindle coupling can concentrate in the <strong>challenging-memory regime</strong> rather than appearing uniformly across all items. Therefore, on this site, average overnight improvement or a generic TMR sentence is not enough: the claim must disclose which event class, which memory subset, and which timing policy produced the reported effect.
 </p>
 </div>
 
@@ -708,6 +768,8 @@ A final correction is that static <sup>1</sup>H-MRSI similarity is not the same 
 <li>Geva-Sagiv, M., Mankin, E. A., Eliashiv, D., et al. (2023). Augmenting hippocampal-prefrontal neuronal synchrony during sleep enhances memory consolidation in humans. <em>Nature Neuroscience</em>, 26, 1100-1110. <a href="https://doi.org/10.1038/s41593-023-01324-5" target="_blank">doi:10.1038/s41593-023-01324-5</a></li>
 <li>Schreiner, T., Petzka, M., Staudigl, T., et al. (2024). Spindle-locked ripples mediate memory reactivation during human NREM sleep. <em>Nature Communications</em>, 15, 5367. <a href="https://doi.org/10.1038/s41467-024-49572-8" target="_blank">doi:10.1038/s41467-024-49572-8</a></li>
 <li>Deng, Z., Fei, X., Zhang, S., &amp; Xu, M. (2025). A time window for memory consolidation during NREM sleep revealed by cAMP oscillation. <em>Neuron</em>, 113(12), 1983-1997.e7. <a href="https://doi.org/10.1016/j.neuron.2025.03.020" target="_blank">doi:10.1016/j.neuron.2025.03.020</a></li>
+<li>Duan, W., Xu, Z., Chen, D., et al. (2025). Electrophysiological signatures underlying variability in human memory consolidation. <em>Nature Communications</em>, 16, 2472. <a href="https://doi.org/10.1038/s41467-025-57766-x" target="_blank">doi:10.1038/s41467-025-57766-x</a></li>
+<li>Shin, G.-H., Kweon, Y.-S., Oh, S., et al. (2025). Personalized targeted memory reactivation enhances consolidation of challenging memories via slow wave and spindle dynamics. <em>npj Science of Learning</em>, 10, 47. <a href="https://doi.org/10.1038/s41539-025-00340-3" target="_blank">doi:10.1038/s41539-025-00340-3</a></li>
 <li>Koukaroudi, D., Qiu, Z., Fransén, E., et al. (2024). Sleep maintains excitatory synapse diversity in the cortex and hippocampus. <em>Current Biology</em>, 34(16), 3836-3843.e5. <a href="https://doi.org/10.1016/j.cub.2024.07.032" target="_blank">doi:10.1016/j.cub.2024.07.032</a></li>
 <li>Yiu, A. P., et al. (2014). Neurons are recruited to a memory trace based on relative neuronal excitability immediately before training. <em>Neuron</em>, 83(3), 722-735. <a href="https://doi.org/10.1016/j.neuron.2014.07.017" target="_blank">doi:10.1016/j.neuron.2014.07.017</a></li>
 <li>Hadzibegovic, N., et al. (2026). Early intrinsic excitability plasticity of neocortical engram neurons defines memory formation and precision. <em>Nature Communications</em>, 17, 291. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">doi:10.1038/s41467-025-66975-3</a></li>
