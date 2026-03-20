@@ -50,6 +50,27 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `B`: 25件
 - `C`: 18件
 
+## U別・助成テーマ×EEG-DATA実行マップ（全RQ再点検）
+
+`mind-upload-rq60-deep-evaluation-cards` を1行ずつ再確認し、`1RQ=1検証命題=1応募テーマ=1主データ` で提出できるよう、U単位の入口を固定しました。
+
+| U | RQ数 | auto-research-funds向け提出テーマ（RQ深掘り時の主軸） | 主に使うEEG-DATA（主/補助） | 可否帯 |
+|---|---:|---|---|---|
+| U0 | 4 | 同一性KPI（観測一致/介入一致の二軸判定） | 主: `ID 11` / 補助: `ID 29, 696` | `A中心（一部B）` |
+| U1 | 4 | 逆問題不確実性・手法比較・後方分布公開 | 主: `ID 56` / 補助: `ID 676, 1839` | `A/B` |
+| U3 | 6 | 境界拡張のproxy検証（EEG単独と統合条件の差分） | 主: `ID 13` / 補助: `ID 16, 39` | `B/C` |
+| U4 | 4 | 介入同値・反事実評価・反証条件の固定 | 主: `ID 19` / 補助: `ID 56, 1839` | `A/B` |
+| U7 | 6 | 同期監査・前処理差分監査・再現性契約化 | 主: `ID 676` / 補助: `ID 783, 4878` | `A` |
+| U8 | 6 | 閉ループ安定化・再較正・フェイルセーフ運用 | 主: `ID 6` / 補助: `ID 1972, 2412, 696` | `B` |
+| U10 | 4 | 情報熱力学の理論整合（proxy段階） | 主: `ID 735` / 補助: `ID 783, 1011` | `C` |
+| U11 | 4 | 意識指標比較・失敗条件付き理論比較 | 主: `ID 735` / 補助: `ID 842, 859` | `B/C` |
+| U12 | 6 | 分岐/複製監査ログ設計・制度接続 | 主: `ID 11` / 補助: `ID 509, 696` | `C` |
+| U13 | 6 | 模倣分離（意味一致と因果一致の分離） | 主: `ID 509` / 補助: `ID 13, 65` | `B` |
+| U14 | 6 | 追試契約・リーク監査・否定例公開運用 | 主: `ID 6` / 補助: `ID 56, 719` | `A中心（一部B）` |
+| U15 | 4 | 制度統合・停止/更新条件の監査設計 | 主: `ID 49` / 補助: `ID 2412, 3419` | `C` |
+
+上表は「どの助成テーマで出すか」と「そのテーマで最初に使うEEG-DATAは何か」を、RQ群ごとに即決できるようにするための実務入口です。実際の提出では、各RQ行（60行）に戻して `主張単位` と `最低成果物` を固定してください。
+
 ## 今回の深掘り実行パック（2026-03-20, 2週間で初回結果まで）
 
 汎用横断の更新ではなく、`A/B` 判定から「2週間で初回結果まで到達しやすい6RQ」を固定して、`1RQ=1検証命題=1応募テーマ=1主データ` で実行します。
@@ -576,12 +597,31 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - RQ行から抽出したEEG参照ID集合（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
 - 方針は維持し、汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続しました。
 
+## 2026-03-20 02:03 JST 再検証ログ（本run / ユーザー依頼: RQ別深掘りで更新）
+
+- 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull origin main` を実行し、`Already up to date` を確認しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` の `| Ux-y<br>` 行を再計数し、`RQ_TOTAL=60` と `A/B/C=17/25/18`（欠損・重複 `0`）を再確認しました。
+- RQ行から抽出したEEG参照ID（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
+- `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` は `Ux-y` の物理行が `66`（深掘り優先6RQの再掲あり）ですが、`unique RQ=60` を再確認し、本ページとの整合は維持されていることを明記しました。
+- 依頼方針どおり、汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持しました。
+
 ## 2026-03-20 04:02 JST 再検証ログ（本run / ユーザー依頼: 1問ずつ深掘りで更新）
 
 - 作業開始前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` の各 `main` で `git pull --ff-only origin main` を実行し、最新化しました。
 - `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` の `Ux-y` 行を再計数し、`RQ_TOTAL=60` と `A/B/C=17/25/18`（欠損・重複 `0`）を再確認しました。
 - 60RQの `主データ（ID）`（`6, 11, 13, 19, 49, 56, 509, 676, 735`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と突合し、未解決ID `0` を確認しました。
 - `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` 側と同一方針で同期し、汎用横断ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持しました。
+
+### 本runの深掘り優先6RQ（応募テーマと主EEGデータ実名）
+
+| RQ | 応募テーマ | 主EEGデータ（ID / 名称） | 第一/予備応募先 |
+|---|---|---|---|
+| U14-1 | 追試運用の固定粒度監査 | `6` / Acquisition delay of wireless EEG | `G1 / G3` |
+| U7-2 | 時刻同期監査（offset/jitter閾値） | `676` / Simultaneous EEG-fMRI XP1 | `G1 / G3` |
+| U14-3 | leaderboardリーク監査 | `719` / Ubiquitous P300 benchmark | `G1 / G3` |
+| U8-1 | 閉ループ遅延許容域同定 | `1972` / Closed-loop auditory stimulation (REM) | `G2 / G5` |
+| U8-2 | 再較正頻度最適化 | `2412` / NeuroSimo closed-loop EEG/EMG-guided TMS | `G2 / G5` |
+| U13-1 | 模倣と因果の分離評価 | `509` / 3M-CPSEED overt/silent/imagined speech EEG | `G1 / G4` |
 
 ## 2026-03-20 08:01 JST 再検証ログ（本run / ユーザー依頼: RQ別深掘りでwiki更新）
 
@@ -605,4 +645,4 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` / `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` / `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `unique Ux-y` を再計数し、3ページとも `RQ_TOTAL=60`（欠損・重複 `0`）を確認しました。
 - 判定内訳 `A/B/C=17/25/18` を再確認しました。
 - RQ行由来のEEG参照ID集合（`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
-- 依頼方針どおり、汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続しました。
+- 方針は不変で、汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続しました。

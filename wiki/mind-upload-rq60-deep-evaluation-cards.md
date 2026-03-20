@@ -258,6 +258,13 @@ reading_time: "35-55分"
 
 - 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull origin main` を実行し、`Already up to date` を確認しました。
 - 本カードの `| Ux-y<br>` 行を再計数し、`RQ_TOTAL=60` と `A/B/C=17/25/18`（欠損・重複 `0`）を再確認しました。
+
+## 2026-03-20 11:03 JST 再検証ログ（本run / RQ別深掘りの助成テーマ×EEG実行導線を固定）
+
+- 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull --ff-only origin main` を実行し、`Already up to date` を確認しました。
+- 本カードを `Ux-y` 単位で再読し、`RQ_TOTAL=60` と `A/B/C=17/25/18`（欠損・重複 `0`）を再確認しました。
+- `mind-upload-eeg-rq60-feasibility-and-funds.md` に、U別の `auto-research-funds向け提出テーマ` と `主/補助EEG-DATA` を直結する実行マップを追記しました。
+- 方針は維持し、汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用で wiki を更新しました。
 - RQ行から抽出したEEG参照ID（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
 - `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` は `Ux-y` 行が物理行で `66`（深掘り優先6RQの再掲あり）だが、`unique RQ=60` を再確認し、実体は本カードと一致していることを明記しました。
 - 方針は維持し、汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続しました。
