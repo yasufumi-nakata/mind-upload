@@ -20,7 +20,7 @@ page_highlights:
 known_points:
   - "Many misunderstandings can be avoided simply by reducing terminology confusion."
   - "It is especially important to distinguish between decode/emulate, correlation/causation, functional connectivity/effective connectivity/causal wiring, observability/identifiability, model fit/direct validation, and brain signal/language prior."
-  - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, post-transcriptional RNA-state, astrocyte-state, clearance / immune support, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, and route-maturity language."
+  - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, astrocyte-state, clearance / immune support, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, and route-maturity language."
   - "This page serves as an entry point for short definitions and a way to return to the main text."
 unknown_points:
   - "Terms related to the theory of consciousness have slightly different meanings depending on the paper or position."
@@ -367,11 +367,15 @@ Words such as <strong>proxy class</strong>, <strong>route maturity / model burde
 </tr>
 <tr>
 <td><strong>Maintenance-state</strong></td>
-<td>Slow controller and support variables, such as sleep / wake history, post-transcriptional RNA-state, cargo-transport / cytoskeletal trafficking state, thermal-state, ionic state, bioenergetic / mitochondrial support, astrocyte / glial-state, and clearance-related support, that matter for long-horizon stability.</td>
+<td>Slow controller and support variables, such as sleep / wake history, post-transcriptional RNA-state, phospho-signaling / second-messenger state, cargo-transport / cytoskeletal trafficking state, thermal-state, ionic state, bioenergetic / mitochondrial support, astrocyte / glial-state, and clearance-related support, that matter for long-horizon stability.</td>
 </tr>
 <tr>
 <td><strong>Post-transcriptional RNA-state</strong></td>
 <td>The layer between gene-level transcript abundance and protein outcome that includes alternative splicing, m6A-dependent translation / degradation, and ADAR-mediated RNA editing. It should not be collapsed into either static transcript counts or local proteostasis.</td>
+</tr>
+<tr>
+<td><strong>Phospho-signaling / second-messenger state</strong></td>
+<td>The fast controller layer between protein presence and current pathway activity that includes phosphosite occupancy, kinase/phosphatase balance, and compartment-specific cAMP/Ca<sup>2+</sup>/PKA signaling nanodomains. It should not be collapsed into either transcript abundance, bulk proteomics, or nominal synaptic weight.</td>
 </tr>
 <tr>
 <td><strong>Astrocyte / glial-state</strong></td>
@@ -705,6 +709,11 @@ Although non-invasive decoding and ESI are making steady progress, a successful 
 <li>Peterson, L. N., Kasper, J. M., Allgaier, J. A., et al. (2025). ADAR2-mediated Q/R editing of GluA2 in homeostatic synaptic plasticity. <a href="https://doi.org/10.1126/scisignal.adr1442" target="_blank">doi:10.1126/scisignal.adr1442</a></li>
 <li>Joglekar, A., Prjibelski, A., Mahfouz, A., et al. (2024). Single-cell long-read sequencing-based mapping reveals specialized splicing patterns in developing and adult mouse and human brain. <a href="https://doi.org/10.1038/s41593-024-01616-4" target="_blank">doi:10.1038/s41593-024-01616-4</a></li>
 <li>Li, Y., Zhu, M., Li, X., et al. (2025). Enhanced Protein Synthesis and Hippocampus-Dependent Memory via Inhibition of YTHDF2-Mediated m6A mRNA Degradation. <a href="https://doi.org/10.1002/advs.202514926" target="_blank">doi:10.1002/advs.202514926</a></li>
+<li>Giese, K. P., Fedorov, N. B., Filipkowski, R. K., &amp; Silva, A. J. (1998). Autophosphorylation at Thr286 of the alpha calcium-calmodulin kinase II in LTP and learning. <a href="https://doi.org/10.1126/science.279.5352.870" target="_blank">doi:10.1126/science.279.5352.870</a></li>
+<li>Lee, H.-K., Barbarosie, M., Kameyama, K., Bear, M. F., &amp; Huganir, R. L. (2003). Regulation of distinct AMPA receptor phosphorylation sites during bidirectional synaptic plasticity. <a href="https://doi.org/10.1016/S0092-8674(03)00122-3" target="_blank">doi:10.1016/S0092-8674(03)00122-3</a></li>
+<li>Tomita, S., Stein, V., Stocker, T. J., Nicoll, R. A., &amp; Bredt, D. S. (2005). Bidirectional synaptic plasticity regulated by phosphorylation of stargazin-like TARPs. <a href="https://doi.org/10.1016/j.neuron.2005.01.009" target="_blank">doi:10.1016/j.neuron.2005.01.009</a></li>
+<li>Vierra, N. C., et al. (2023). Endoplasmic reticulum-plasma membrane junctions couple electrical activity to Ca2+-activated PKA signaling in neurons. <a href="https://doi.org/10.1038/s41467-023-40930-6" target="_blank">doi:10.1038/s41467-023-40930-6</a></li>
+<li>Biswas, D., et al. (2023). The landscape of the human brain phosphoproteome reveals region-specific phosphorylation events. <a href="https://doi.org/10.1021/acs.jproteome.2c00244" target="_blank">doi:10.1021/acs.jproteome.2c00244</a></li>
 <li>Govindarajan, A., Israely, I., Huang, S.-Y., &amp; Tonegawa, S. (2011). The dendritic branch is the preferred integrative unit for protein synthesis-dependent LTP. <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">doi:10.1016/j.neuron.2010.12.008</a></li>
 <li>Glykys, J., Dzhala, V., Egawa, K., et al. (2014). Local impermeant anions establish the neuronal chloride concentration. <a href="https://doi.org/10.1126/science.1245423" target="_blank">doi:10.1126/science.1245423</a></li>
 <li>Seidl, A. H., Rubel, E. W., &amp; Barria, A. (2015). Tuning of Ranvier node and internode properties in myelinated axons to adjust action potential timing. <a href="https://doi.org/10.1038/ncomms9073" target="_blank">doi:10.1038/ncomms9073</a></li>

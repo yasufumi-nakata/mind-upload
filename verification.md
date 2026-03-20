@@ -30,6 +30,7 @@ page_highlights:
   - "At L2 and above, the latent-state error budget is added on top of the Observability Budget so the still-unobserved states that stop the claim are disclosed."
   - "At L2 and above, perisynaptic ECM / PNN state is separated from synaptic weights and glia when a claim depends on adult plasticity, receptor mobility, or memory stabilization."
   - "At L2 and above, post-transcriptional RNA-state is separated from gene-level transcript abundance and proteostasis when a claim depends on isoform choice, m6A-dependent translation / degradation, or RNA-editing ratios."
+  - "At L2 and above, phospho-signaling / second-messenger state is separated from transcriptomics, proteomics, and nominal weights when a claim depends on phosphosite occupancy, kinase/phosphatase balance, or signaling nanodomains."
   - "At L2 and above, local proteostasis / synaptic-tagging state is separated from current weights and transcription when a claim depends on late-LTP capture, consolidation, or reconsolidation."
   - "At L2 and above, cargo-transport / cytoskeletal trafficking state is separated from proteostasis and bioenergetics when a claim depends on compartment-specific delivery of receptors, endosomes, RNA cargoes, or presynaptic components."
   - "At L2 and above, ionic milieu / chloride homeostasis is separated from excitability and glial support when a claim depends on inhibitory polarity, rhythm stability, or state transitions."
@@ -61,6 +62,7 @@ known_points:
   - "An irreversibility label without signal-route, coarse-graining / timescale, estimator-family, dynamical-assumption, and quantity-type disclosure remains an exploratory auxiliary result rather than a portable thermodynamic measurement."
   - "A synapse list or weight estimate does not by itself fix perisynaptic ECM / PNN state, so plasticity and stabilization claims need a separate ceiling."
   - "A cell atlas or gene-level transcript count does not by itself fix post-transcriptional RNA-state, so isoform-, m6A-, and RNA-editing-dependent claims need a separate ceiling."
+  - "A transcriptomic or proteomic snapshot does not by itself fix phospho-signaling / second-messenger state, so phosphosite-dependent plasticity and nanodomain-signaling claims need a separate ceiling."
   - "A weight estimate does not fix which tagged synapses or dendritic branches capture plasticity-related proteins, so late-stabilization claims need a separate proteostasis ceiling."
   - "A weight estimate or local-translation clue does not by itself fix branch- or bouton-specific cargo delivery, so compartment-specific stabilization and synaptogenesis claims need a separate transport ceiling."
   - "Sleep duration or deprivation alone does not fix slow-oscillation / spindle / ripple coordination, so overnight retention claims need a separate sleep-architecture ceiling."
@@ -911,6 +913,11 @@ The <strong>Observability Budget</strong> fixes what entered the sensor and what
 <td>Isoform-specific receptor composition, m6A-dependent translation / degradation, and editing-dependent plasticity claims remain latent.</td>
 </tr>
 <tr>
+<td><strong>Phospho-signaling / second-messenger state</strong></td>
+<td>Disclose whether phosphosite occupancy, kinase/phosphatase balance, cAMP/Ca<sup>2+</sup>/PKA nanodomain state, or phospho-proteomic route was directly measured, causally perturbed, externally calibrated, or silently replaced by transcript/protein abundance alone.</td>
+<td>Phosphosite-dependent plasticity, signaling-gate, and nanodomain-controller claims remain latent.</td>
+</tr>
+<tr>
 <td><strong>Local proteostasis / synaptic-tagging route</strong></td>
 <td>State whether tag / PRP capture, branch-local translation-degradation balance, autophagy, or branch-local proxy was observed or only assumed.</td>
 <td>Late stabilization, reconsolidation, and cross-event capture do not become closed mechanisms.</td>
@@ -970,7 +977,7 @@ For PET-based routes, naming the modality is still too coarse. <a href="https://
 <section class="section" id="maintenance-state-error-budget">
 <h2 class="section-title">Maintenance-state error budget</h2>
 <p>
-Cross-day and remote-memory claims fail for a different reason than same-session decoding claims. Even when short-term performance holds, the result may still leave the <strong>maintenance route</strong> almost completely latent. This site therefore asks cross-day, recovery, reconsolidation, or remote-memory submissions to disclose a <strong>maintenance-state error budget</strong> that keeps controller state, post-transcriptional RNA-state, sleep history, sleep architecture / replay-coupling state, timing support, thermal-state, bioenergetic / mitochondrial support, glial / astrocyte support, and other multiday support-state proxies separate.
+Cross-day and remote-memory claims fail for a different reason than same-session decoding claims. Even when short-term performance holds, the result may still leave the <strong>maintenance route</strong> almost completely latent. This site therefore asks cross-day, recovery, reconsolidation, or remote-memory submissions to disclose a <strong>maintenance-state error budget</strong> that keeps controller state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, sleep history, sleep architecture / replay-coupling state, timing support, thermal-state, bioenergetic / mitochondrial support, glial / astrocyte support, and other multiday support-state proxies separate.
 </p>
 <table class="data-table">
 <thead>
@@ -990,6 +997,11 @@ Cross-day and remote-memory claims fail for a different reason than same-session
 <td><strong>Post-transcriptional RNA-state</strong></td>
 <td>Report whether isoform ratios, m6A-dependent translation / degradation routes, RNA-editing ratios, or only gene-level transcript counts were available, and which assay or perturbation established the relevant RNA-state.</td>
 <td>Cross-day stabilization, receptor-composition carryover, and editing-dependent maintenance claims are not promoted to RNA-state-consistent maintenance evidence.</td>
+</tr>
+<tr>
+<td><strong>Phospho-signaling / second-messenger state</strong></td>
+<td>Report whether phosphosite occupancy, kinase/phosphatase balance, local cAMP/Ca<sup>2+</sup>/PKA signaling state, or only transcript/protein abundance was available, and which assay or perturbation established the relevant phospho-controller.</td>
+<td>Cross-day stabilization, phosphosite-dependent capture, and signaling-gate claims are not promoted to phospho-state-consistent maintenance evidence.</td>
 </tr>
 <tr>
 <td><strong>Sleep / wake history</strong></td>
@@ -1056,6 +1068,12 @@ The remaining weakness was that <strong>sleep replay evidence</strong> could sti
 </p>
 </div>
 <div class="note-box">
+<strong>2026-03-20 addendum: do not collapse phospho-signaling into transcript or protein abundance</strong>
+<p>
+<a href="https://doi.org/10.1126/science.279.5352.870" target="_blank">Giese et al. (1998)</a>, <a href="https://doi.org/10.1016/S0092-8674(03)00122-3" target="_blank">Lee et al. (2003)</a>, <a href="https://doi.org/10.1523/JNEUROSCI.5303-03.2004" target="_blank">Rodrigues et al. (2004)</a>, <a href="https://doi.org/10.1016/j.neuron.2005.01.009" target="_blank">Tomita et al. (2005)</a>, and <a href="https://doi.org/10.1038/s41467-023-40930-6" target="_blank">Vierra et al. (2023)</a> show that phosphosite-specific and nanodomain-specific signaling states can determine plasticity expression and maintenance-relevant routing even when transcript or bulk protein abundance looks similar. Current human evidence such as the ex vivo phosphoproteome atlas from <a href="https://doi.org/10.1021/acs.jproteome.2c00244" target="_blank">Biswas et al. (2023)</a> is informative for region-specific ceiling setting, but it is still not a comparable in vivo whole-brain human route. Therefore, when a claim depends on phosphosite occupancy, kinase/phosphatase balance, or local second-messenger state, this site asks authors to disclose whether phospho-signaling was directly measured, causally perturbed, externally calibrated, or silently replaced by transcript/protein abundance alone.
+</p>
+</div>
+<div class="note-box">
 <strong>Do not collapse energetic support into glial support</strong>
 <p>
 <a href="https://doi.org/10.1016/j.cell.2013.12.042" target="_blank">Rangaraju et al. (2014)</a>, <a href="https://doi.org/10.1016/j.cell.2018.12.013" target="_blank">Rangaraju et al. (2019)</a>, <a href="https://doi.org/10.1016/j.neuron.2018.09.025" target="_blank">Divakaruni et al. (2018)</a>, <a href="https://doi.org/10.1038/s41467-023-44233-8" target="_blank">Bapat et al. (2024)</a>, and <a href="https://doi.org/10.1038/s42003-025-08963-3" target="_blank">Hu et al. (2025)</a> support a narrower rule: local ATP supply, mitochondrial positioning, and energetic micro-organization can change repeated-burst reliability and dendritic plasticity even before one asks whether astrocyte or clearance-state matched. Conversely, human <a href="https://doi.org/10.1002/nbm.3384" target="_blank">31P-MRS (Ren et al., 2015)</a> and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">dynamic DMRSI (Li et al., 2025)</a> remain macro energetic proxies rather than direct readouts of branch-local mitochondrial state. This site therefore records energetic route and glial route separately.
@@ -1100,7 +1118,7 @@ On this site, <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#hu
 <div class="note-box">
 <strong>Minimum operating rules</strong>
 <p>
-If this budget is missing, this site allows at most <strong>same-session fit</strong>, <strong>cross-day performance with unresolved maintenance route</strong>, or <strong>support-proxy-aligned evidence</strong>. It does not promote the result to <strong>maintenance-consistent</strong>, <strong>reconsolidation-consistent</strong>, or <strong>remote-memory-relevant</strong>. In particular, if <strong>sleep / wake history</strong>, <strong>sleep architecture / replay-coupling state</strong>, <strong>timing support</strong>, <strong>thermal-state</strong>, <strong>ionic / chloride state</strong>, <strong>bioenergetic support</strong>, <strong>glial / astrocyte support</strong>, and <strong>clearance / immune proxy class</strong> are all absent, this site stops the reader from rephrasing a temporal hold as long-horizon maintenance evidence.
+If this budget is missing, this site allows at most <strong>same-session fit</strong>, <strong>cross-day performance with unresolved maintenance route</strong>, or <strong>support-proxy-aligned evidence</strong>. It does not promote the result to <strong>maintenance-consistent</strong>, <strong>reconsolidation-consistent</strong>, or <strong>remote-memory-relevant</strong>. In particular, if <strong>phospho-signaling / second-messenger state</strong>, <strong>sleep / wake history</strong>, <strong>sleep architecture / replay-coupling state</strong>, <strong>timing support</strong>, <strong>thermal-state</strong>, <strong>ionic / chloride state</strong>, <strong>bioenergetic support</strong>, <strong>glial / astrocyte support</strong>, and <strong>clearance / immune proxy class</strong> are all absent, this site stops the reader from rephrasing a temporal hold as long-horizon maintenance evidence.
 </p>
 </div>
 </section>
@@ -1272,7 +1290,7 @@ The <a href="#observability-budget">Observability Budget</a> fixes <strong>what 
 <section class="section" id="state-completeness-gate">
 <h2 class="section-title">State variable integrity gate</h2>
 <p>
-In our March 2026 primary-literature audit, we reconfirmed that there are at least twelve loose state classes between <strong>“having a wiring diagram”</strong> and <strong>“being able to behave generatively”</strong>. In addition to cell types, synapses, delays, neuromodulation, and glia, we now also treat <strong>activity-dependent transcription / chromatin state</strong>, <strong>post-transcriptional RNA-state</strong>, <strong>intrinsic excitability / homeostatic set points</strong>, <strong>local proteostasis / synaptic-tagging state</strong>, <strong>perisynaptic ECM / PNN state</strong>, <strong>ionic milieu / chloride homeostasis</strong>, and <strong>shared extracellular / electrical state</strong> as independent classes. Therefore, on this site, we do not accept <strong>edge-list submissions alone</strong> as a condition for passing L2 or above.
+In our March 2026 primary-literature audit, we reconfirmed that there are at least thirteen loose state classes between <strong>“having a wiring diagram”</strong> and <strong>“being able to behave generatively”</strong>. In addition to cell types, synapses, delays, neuromodulation, and glia, we now also treat <strong>activity-dependent transcription / chromatin state</strong>, <strong>post-transcriptional RNA-state</strong>, <strong>phospho-signaling / second-messenger state</strong>, <strong>intrinsic excitability / homeostatic set points</strong>, <strong>local proteostasis / synaptic-tagging state</strong>, <strong>perisynaptic ECM / PNN state</strong>, <strong>ionic milieu / chloride homeostasis</strong>, and <strong>shared extracellular / electrical state</strong> as independent classes. Therefore, on this site, we do not accept <strong>edge-list submissions alone</strong> as a condition for passing L2 or above.
 </p>
 <table class="data-table">
 <thead>
@@ -1297,6 +1315,11 @@ In our March 2026 primary-literature audit, we reconfirmed that there are at lea
 <td><strong>Post-transcriptional RNA-state</strong></td>
 <td>Even with the same graph, cell type, and gene-level transcript counts, alternative splicing, m6A-dependent translation / degradation, and RNA-editing ratios can still change receptor composition, plasticity rules, and maintenance behavior. </td>
 <td>Stop treating gene-level abundance or DEG signatures as if isoform, m6A, and RNA-editing control were fixed; keep RNA-state explicit as latent, perturbed, externally calibrated, or isoform-resolved. </td>
+</tr>
+<tr>
+<td><strong>Phospho-signaling / second-messenger state</strong></td>
+<td>Even with the same graph, transcript state, and bulk protein abundance, phosphosite occupancy, kinase/phosphatase balance, and compartment-specific second-messenger nanodomains can still change plasticity expression and controller state. </td>
+<td>Stop treating transcriptomics, proteomics, or nominal weights as if the active phospho-controller were fixed; keep phospho-signaling explicit as latent, perturbed, externally calibrated, or phosphosite-resolved. </td>
 </tr>
 <tr>
 <td><strong>Intrinsic excitability/homeostasis/maintenance state</strong></td>
@@ -1372,6 +1395,12 @@ The remaining weakness was that <strong>allocation eligibility</strong>, <strong
 <strong>2026-03-20 addendum: transcript count is not post-transcriptional RNA-state</strong>
 <p>
 <a href="https://doi.org/10.1038/nn.4069" target="_blank">Wang et al. (2015)</a> showed that a neuron-specific LSD1 splice isoform regulates memory formation, <a href="https://doi.org/10.1016/j.neuron.2019.03.032" target="_blank">Dai et al. (2019)</a> showed that presynaptic neurexin alternative splicing changes postsynaptic receptor balance and contextual memory, <a href="https://doi.org/10.1038/s41586-018-0666-1" target="_blank">Shi et al. (2018)</a> and <a href="https://doi.org/10.1002/advs.202514926" target="_blank">Li et al. (2025)</a> showed that m6A-reader routes can alter hippocampus-dependent learning and memory, and <a href="https://doi.org/10.1126/scisignal.adr1442" target="_blank">Peterson et al. (2025)</a> showed that ADAR2-mediated GluA2 editing contributes to homeostatic synaptic plasticity. Therefore, when a claim depends on isoform choice, m6A-dependent translation / degradation, or RNA-editing ratio, this site asks authors to disclose whether post-transcriptional RNA-state was directly measured, causally perturbed, externally calibrated, or silently replaced by gene-level abundance alone. Specialized long-read atlas work such as <a href="https://doi.org/10.1038/s41593-024-01616-4" target="_blank">Joglekar et al. (2024)</a> is informative for the ceiling but still not a comparable in vivo whole-brain human route.
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-20 addendum: transcript or protein abundance is not phospho-signaling state</strong>
+<p>
+<a href="https://doi.org/10.1126/science.279.5352.870" target="_blank">Giese et al. (1998)</a>, <a href="https://doi.org/10.1016/S0092-8674(03)00122-3" target="_blank">Lee et al. (2003)</a>, <a href="https://doi.org/10.1523/JNEUROSCI.5303-03.2004" target="_blank">Rodrigues et al. (2004)</a>, <a href="https://doi.org/10.1016/j.neuron.2005.01.009" target="_blank">Tomita et al. (2005)</a>, and <a href="https://doi.org/10.1038/s41467-023-40930-6" target="_blank">Vierra et al. (2023)</a> show that memory-relevant phosphosite occupancy and signaling nanodomains remain another control layer even when transcript or bulk protein abundance looks similar. Therefore, when a claim depends on kinase/phosphatase balance, phosphosite occupancy, or local second-messenger routing, this site asks authors to disclose whether phospho-signaling / second-messenger state was directly measured, causally perturbed, externally calibrated, or silently replaced by abundance-only evidence. Human phosphoproteome atlas work such as <a href="https://doi.org/10.1021/acs.jproteome.2c00244" target="_blank">Biswas et al. (2023)</a> is informative for the ceiling but still not a comparable in vivo whole-brain human route.
 </p>
 </div>
 <div class="note-box">
@@ -1866,6 +1895,12 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Peterson, L. N., Kasper, J. M., Allgaier, J. A., et al. (2025). ADAR2-mediated Q/R editing of GluA2 in homeostatic synaptic plasticity. <a href="https://doi.org/10.1126/scisignal.adr1442" target="_blank">doi:10.1126/scisignal.adr1442</a></li>
 <li>Joglekar, A., Prjibelski, A., Mahfouz, A., et al. (2024). Single-cell long-read sequencing-based mapping reveals specialized splicing patterns in developing and adult mouse and human brain. <a href="https://doi.org/10.1038/s41593-024-01616-4" target="_blank">doi:10.1038/s41593-024-01616-4</a></li>
 <li>Li, Y., Zhu, M., Li, X., et al. (2025). Enhanced Protein Synthesis and Hippocampus-Dependent Memory via Inhibition of YTHDF2-Mediated m6A mRNA Degradation. <a href="https://doi.org/10.1002/advs.202514926" target="_blank">doi:10.1002/advs.202514926</a></li>
+<li>Giese, K. P., Fedorov, N. B., Filipkowski, R. K., &amp; Silva, A. J. (1998). Autophosphorylation at Thr286 of the alpha calcium-calmodulin kinase II in LTP and learning. <a href="https://doi.org/10.1126/science.279.5352.870" target="_blank">doi:10.1126/science.279.5352.870</a></li>
+<li>Lee, H.-K., Barbarosie, M., Kameyama, K., Bear, M. F., &amp; Huganir, R. L. (2003). Regulation of distinct AMPA receptor phosphorylation sites during bidirectional synaptic plasticity. <a href="https://doi.org/10.1016/S0092-8674(03)00122-3" target="_blank">doi:10.1016/S0092-8674(03)00122-3</a></li>
+<li>Rodrigues, S. M., Farb, C. R., Bauer, E. P., LeDoux, J. E., &amp; Schafe, G. E. (2004). Pavlovian fear conditioning regulates Thr286 autophosphorylation of Ca2+/calmodulin-dependent protein kinase II at lateral amygdala synapses. <a href="https://doi.org/10.1523/JNEUROSCI.5303-03.2004" target="_blank">doi:10.1523/JNEUROSCI.5303-03.2004</a></li>
+<li>Tomita, S., Stein, V., Stocker, T. J., Nicoll, R. A., &amp; Bredt, D. S. (2005). Bidirectional synaptic plasticity regulated by phosphorylation of stargazin-like TARPs. <a href="https://doi.org/10.1016/j.neuron.2005.01.009" target="_blank">doi:10.1016/j.neuron.2005.01.009</a></li>
+<li>Vierra, N. C., et al. (2023). Endoplasmic reticulum-plasma membrane junctions couple electrical activity to Ca2+-activated PKA signaling in neurons. <a href="https://doi.org/10.1038/s41467-023-40930-6" target="_blank">doi:10.1038/s41467-023-40930-6</a></li>
+<li>Biswas, D., et al. (2023). The landscape of the human brain phosphoproteome reveals region-specific phosphorylation events. <a href="https://doi.org/10.1021/acs.jproteome.2c00244" target="_blank">doi:10.1021/acs.jproteome.2c00244</a></li>
 <li>Frey, U., &amp; Morris, R. G. M. (1997). Synaptic tagging and long-term potentiation. <a href="https://doi.org/10.1038/385533a0" target="_blank">doi:10.1038/385533a0</a></li>
 <li>Fonseca, R., Vabulas, R. M., Hartl, F. U., Bonhoeffer, T., &amp; Nägerl, U. V. (2006). A balance of protein synthesis and proteasome-dependent degradation determines the maintenance of LTP. <a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">doi:10.1016/j.neuron.2006.08.015</a></li>
 <li>Govindarajan, A., Israely, I., Huang, S.-Y., &amp; Tonegawa, S. (2011). The dendritic branch is the preferred integrative unit for protein synthesis-dependent LTP. <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">doi:10.1016/j.neuron.2010.12.008</a></li>
