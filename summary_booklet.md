@@ -257,7 +257,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Start Here - Define success criteria, standards, benchmarks, and preregistration first / 5-10 min</p>
   <p>Mind-Upload is a site for breaking the large question, "Can a mind be reproduced on a computer?", into <strong>small, testable tasks</strong>. Instead of rushing to a final conclusion, it starts by defining <strong>what counts as progress</strong> and <strong>whether other people can verify the same result</strong>.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>The core of Mind-Upload is not bold conclusions but a verification commons that lets progress be measured.</li><li>If you are unsure where to start, read Verification -&gt; Roadmap -&gt; WBE/EEG 101.</li><li>Connectomes and cell types alone do not determine long-term dynamics; sleep/homeostasis, sleep architecture / replay-coupling, myelination, thermal-state, bioenergetic / mitochondrial state, and astrocyte / glial-state remain separate variables.</li>
+    <li>The core of Mind-Upload is not bold conclusions but a verification commons that lets progress be measured.</li><li>If you are unsure where to start, read Verification -&gt; Roadmap -&gt; WBE/EEG 101.</li><li>Connectomes and cell types alone do not determine long-term dynamics; sleep/homeostasis, sleep architecture / replay-coupling, myelination, thermal-state, bioenergetic / mitochondrial state, astrocyte / glial-state, and clearance / immune support remain separate variables.</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -423,7 +423,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Reference - Start by keeping the words straight / 3 to 10 minutes for only the necessary items</p>
   <p>This glossary is a quick reference for the meaning of terms. It starts with everyday-language explanations, moves to stricter definitions only when needed, and ties the discussion back to measurement, modeling, and verification.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>It gives short explanations of terms and points to where each concept matters.</li><li>It now includes the front-door verification terms added in the March 2026 re-audit, such as claim ceiling, shortcut auditing, maintenance-state, and vascular-state / CVR audit.</li><li>It now also includes the human-observability terms needed after the March 2026 deepening pass, such as proxy class, route maturity / model burden, and support-state proxy.</li>
+    <li>It gives short explanations of terms and points to where each concept matters.</li><li>It now includes the front-door verification terms added in the March 2026 re-audit, such as claim ceiling, shortcut auditing, maintenance-state, and vascular-state / CVR audit.</li><li>It now also includes the human-observability and support-state terms needed after the March 2026 deepening pass, such as proxy class, route maturity / model burden, support-state proxy, and clearance / immune support.</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">

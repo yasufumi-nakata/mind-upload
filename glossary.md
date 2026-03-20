@@ -14,13 +14,13 @@ accuracy_note: "The definitions here are deliberately short. For exact usage, re
 page_highlights:
   - "It gives short explanations of terms and points to where each concept matters."
   - "It now includes the front-door verification terms added in the March 2026 re-audit, such as claim ceiling, shortcut auditing, maintenance-state, and vascular-state / CVR audit."
-  - "It now also includes the human-observability terms needed after the March 2026 deepening pass, such as proxy class, route maturity / model burden, and support-state proxy."
+  - "It now also includes the human-observability and support-state terms needed after the March 2026 deepening pass, such as proxy class, route maturity / model burden, support-state proxy, and clearance / immune support."
   - "It is especially careful about pairs that sound similar but should not be collapsed, such as observability / identifiability / direct validation and functional connectivity / effective connectivity / causal wiring."
   - "If a term blocks your reading, this page is meant to get you unstuck quickly and send you back to the main text."
 known_points:
   - "Many misunderstandings can be avoided simply by reducing terminology confusion."
   - "It is especially important to distinguish between decode/emulate, correlation/causation, functional connectivity/effective connectivity/causal wiring, observability/identifiability, model fit/direct validation, and brain signal/language prior."
-  - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, post-transcriptional RNA-state, astrocyte-state, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, and route-maturity language."
+  - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, post-transcriptional RNA-state, astrocyte-state, clearance / immune support, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, and route-maturity language."
   - "This page serves as an entry point for short definitions and a way to return to the main text."
 unknown_points:
   - "Terms related to the theory of consciousness have slightly different meanings depending on the paper or position."
@@ -205,7 +205,7 @@ If words such as <strong>claim ceiling</strong>, <strong>hidden state</strong>, 
 <div class="note-box">
 <strong>When human-evidence terms start sounding like one thing</strong>
 <p>
-Words such as <strong>proxy class</strong>, <strong>route maturity / model burden</strong>, and <strong>support-state proxy</strong> are there to stop local ultrastructure, SV2A PET, MRSI biochemical scaffold, dynamic DMRSI, myelin mapping, and clearance MRI from collapsing into one impression of “we can now see almost everything in humans.” If that distinction is what you need next, go to <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> and <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>.
+Words such as <strong>proxy class</strong>, <strong>route maturity / model burden</strong>, and <strong>support-state proxy</strong> are there to stop local ultrastructure, SV2A PET, MRSI biochemical scaffold, dynamic DMRSI, myelin mapping, CSF mobility, and glymphatic evidence from collapsing into one impression of “we can now see almost everything in humans.” If that distinction is what you need next, go to <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> and <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>.
 </p>
 </div>
 
@@ -378,8 +378,12 @@ Words such as <strong>proxy class</strong>, <strong>route maturity / model burde
 <td>The minutes-to-days non-neuronal state that includes astrocyte network responses, learning-associated ensembles, lactate transport, and related glial variables that can change recall, multiday stabilization, or fear-state representations. It should not be collapsed into generic metabolic background.</td>
 </tr>
 <tr>
+<td><strong>Clearance / immune support</strong></td>
+<td>The multiday support layer that includes meningeal lymphatic drainage, CSF-interstitial exchange, microglia-related support, and related clearance routes that can change synaptic physiology, recovery, and protein-clearance claims. It should not be collapsed either into astrocyte-state or into a generic cleanup metaphor.</td>
+</tr>
+<tr>
 <td><strong>Support-state proxy</strong></td>
-<td>A human route that constrains slow maintenance variables only at a coarse level, for example energetic, thermal, myelin, or clearance state. It is stronger than saying “nothing is visible,” but weaker than local controller, astrocyte-ensemble state, or other cell-specific ground truth.</td>
+<td>A human route that constrains slow maintenance variables only at a coarse level, for example energetic, thermal, myelin, or CSF / glymphatic clearance state. It is stronger than saying “nothing is visible,” but weaker than local controller, astrocyte-ensemble state, cell-specific immune control, or other cell-specific ground truth.</td>
 </tr>
 <tr>
 <td><strong>Thermal-state</strong></td>

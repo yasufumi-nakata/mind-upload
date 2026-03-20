@@ -37,6 +37,7 @@ page_highlights:
   - "At L2 and above, thermal-state is separated from timing-state and bioenergetics when a claim depends on membrane kinetics, field-potential amplitude, or sequence timing."
   - "At L2 and above, bioenergetic / mitochondrial support is separated from glial support when a claim depends on repeated-burst reliability, local ATP reserve, or dendritic plasticity."
   - "At L2 and above, astrocyte network / ensemble state is separated from generic support background when a claim depends on recall, multiday stabilization, or fear-state representations."
+  - "At L2 and above, clearance / immune support is separated from astrocyte / glial-state when a claim depends on multiday recovery, protein clearance, or microglia-mediated synaptic maintenance."
   - "At L2 and above, delay is treated as timing-state rather than one scalar, so device latency, biological conduction timing, and human macro timing proxies are not collapsed into one number."
   - "At L2 and above for intervention / closed-loop results, the Intervention Card fixes trigger rule, timing audit, control / sham, safe stop, and recalibration burden."
   - "At L3 and above for embodied-loop results, the Body / Environment Boundary Card fixes which sensory, motor, and interoceptive channels were preserved, substituted, or omitted."
@@ -68,6 +69,7 @@ known_points:
   - "A connectome, cell type, and timing proxy do not by themselves fix local thermal-state, so field-potential and sequence-timing claims need a separate ceiling."
   - "A connectome, cell type, and glial proxy do not by themselves fix local ATP reserve or mitochondrial positioning, so repeated-burst and dendritic-plasticity claims need a separate bioenergetic ceiling."
   - "A glial proxy or generic metabolic note does not by itself fix astrocyte network / ensemble state, so recall, reconsolidation, and multiday-stabilization claims need a separate astrocyte-state ceiling."
+  - "A CSF-mobility or glymphatic result without cell-specific immune / synaptic-maintenance disclosure remains a macro support-state proxy rather than local clearance-controller evidence."
   - "Passing a hardware latency audit is not the same as recovering biological timing-state; claims that depend on phase or synchrony need both sides separated."
   - "Passing a latency audit is not the same as fixing the body / environment boundary; L3 claims still need retained/substituted loop disclosure."
   - "In chronic invasive recording, unit-matching uncertainty and tissue response around the implant are separate audit items."
@@ -1031,8 +1033,8 @@ Cross-day and remote-memory claims fail for a different reason than same-session
 </tr>
 <tr>
 <td><strong>Clearance / immune support</strong></td>
-<td>Report CSF / glymphatic / immune-related measurements, what part was a macro proxy, and what cell-specific clearance controller remained unobserved.</td>
-<td>Multiday recovery and protein-clearance claims remain support-proxy claims rather than local maintenance-state claims.</td>
+<td>Report whether meningeal-lymphatic, CSF-interstitial, microglia-related, or sleep-linked clearance measurements were available, what part remained only a macro proxy, and what cell-specific controller remained unobserved.</td>
+<td>Multiday recovery, protein-clearance, and synaptic-maintenance claims remain support-proxy claims rather than local maintenance-state claims.</td>
 </tr>
 <tr>
 <td><strong>Human evidence class / observability ceiling</strong></td>
@@ -1063,6 +1065,12 @@ The remaining weakness was that <strong>sleep replay evidence</strong> could sti
 <strong>2026-03-20 addendum: astrocyte-state is not generic support background</strong>
 <p>
 <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> showed minute-scale cortical astrocyte-network encoding of local neurotransmitter input, <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a> showed that learning-associated astrocyte ensembles can regulate hippocampal memory recall, <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a> showed that astrocytic ensembles can stabilize emotional memory across multiple days, and <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> showed that basolateral-amygdala astrocyte Ca<sup>2+</sup> signalling supports fear-memory retrieval / extinction representations. Therefore, this site does not accept a submission that depends on recall, multiday stabilization, or fear-state support while writing only a generic glial-support sentence. Authors now have to state whether the relevant astrocyte-state was directly measured, perturbed, only coarsely proxied, or left latent, and they must keep the rodent-to-human observability gap explicit.
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-20 addendum: clearance / immune support is not passive cleanup</strong>
+<p>
+<a href="https://doi.org/10.1038/nature14432" target="_blank">Louveau et al. (2015)</a> and <a href="https://doi.org/10.1038/s41586-019-1419-5" target="_blank">Ahn et al. (2019)</a> established meningeal-lymphatic drainage routes, <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Kim et al. (2025)</a> showed that a meningeal-lymphatics-microglia axis can regulate synaptic physiology, <a href="https://doi.org/10.1093/brain/awaa443" target="_blank">Eide &amp; Ringstad (2021)</a> showed that sleep deprivation impairs molecular clearance in humans, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> measured region-specific CSF-mobility drivers, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> linked sleep-active physiology to overnight Aβ / tau clearance to plasma in healthy older adults. Therefore, this site does not accept a submission that depends on multiday recovery, protein clearance, or maintenance support while naming only a generic cleanup story. Authors now have to state whether the relevant evidence was <strong>meningeal-lymphatic / CSF-interstitial / microglia-related</strong>, whether it remained only a <strong>macro support-state proxy</strong>, and which local immune or synaptic-maintenance controller remained latent.
 </p>
 </div>
 <div class="note-box">
@@ -1905,6 +1913,10 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
 <li>Rzechorzek, N. M., Thrippleton, M. J., Chappell, F. M., et al. (2022). A daily temperature rhythm in the human brain predicts survival after brain injury. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">doi:10.1093/brain/awab466</a></li>
 <li>Reimer, J., McGinley, M. J., Liu, Y., et al. (2016). Pupil fluctuations track rapid changes in adrenergic and cholinergic activity in cortex. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">doi:10.1038/ncomms13289</a></li>
+<li>Louveau, A., Smirnov, I., Keyes, T. J., et al. (2015). Structural and functional features of central nervous system lymphatic vessels. <a href="https://doi.org/10.1038/nature14432" target="_blank">doi:10.1038/nature14432</a></li>
+<li>Ahn, J. H., Cho, H., Kim, J.-H., et al. (2019). Meningeal lymphatic vessels at the skull base drain cerebrospinal fluid. <a href="https://doi.org/10.1038/s41586-019-1419-5" target="_blank">doi:10.1038/s41586-019-1419-5</a></li>
+<li>Kim, J., et al. (2025). Meningeal lymphatics-microglia axis regulates synaptic physiology. <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">doi:10.1016/j.cell.2025.02.022</a></li>
+<li>Eide, P. K., &amp; Ringstad, G. (2021). Sleep deprivation impairs molecular clearance from the human brain. <a href="https://doi.org/10.1093/brain/awaa443" target="_blank">doi:10.1093/brain/awaa443</a></li>
 <li>Hansen, J. Y., Shafiei, G., Markello, R. D., et al. (2022). Mapping neurotransmitter systems to the structural and functional organization of the human neocortex. <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">doi:10.1038/s41593-022-01186-3</a></li>
 <li>Goulas, A., Changeux, J.-P., Wagstyl, K., Amunts, K., Palomero-Gallagher, N., &amp; Hilgetag, C. C. (2021). The natural axis of transmitter receptor distribution in the human cerebral cortex. <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">doi:10.1073/pnas.2020574118</a></li>
 <li>Naganawa, M., Li, S., Nabulsi, N., et al. (2021). First-in-human evaluation of <sup>18</sup>F-SynVesT-1, a radioligand for PET imaging of synaptic vesicle glycoprotein 2A. <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">doi:10.2967/jnumed.120.249144</a></li>
