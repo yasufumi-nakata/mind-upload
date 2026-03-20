@@ -30,6 +30,7 @@ page_highlights:
   - "Cell-type atlas and current plasticity-competent transcriptional state are different objects; static transcriptomic labels do not fix which neurons are eligible for allocation or stabilization."
   - "Gene-level transcript abundance does not fix post-transcriptional RNA-state: isoform choice, m6A-dependent translation / degradation, and RNA-editing ratio can still change plasticity and memory on the same transcript-count background."
   - "Transcript or bulk protein abundance does not fix phospho-signaling / second-messenger state: phosphosite occupancy, kinase/phosphatase balance, and signaling nanodomains can still change plasticity on the same abundance background."
+  - "Phospho-signaling evidence is not one class: phosphosite-specific causal gates, compartmentalized second-messenger routing, region-structured phosphoproteome atlases, and phospho-mutant memory experiments should be audited separately with a route card."
   - "Current weights do not fix which tagged synapses or dendritic branches capture plasticity-related proteins, so late stabilization remains another hidden layer."
   - "Current weights, translation capacity, or ATP support do not fix which receptors, endosomes, RNA cargoes, and presynaptic components actually reach the relevant branch or bouton."
   - "Short-term activity matching and long-term maintenance mechanisms being identical are different claims."
@@ -52,7 +53,7 @@ unknown_points:
   - "It is unclear at what granularity excitability, thermal-state, ionic milieu / chloride homeostasis, sleep homeostasis, local proteostasis / synaptic tagging, ECM / PNN state, bioenergetic support, metabolic support, and clearance support must be measured to approach sufficient conditions for WBE."
   - "It is not yet fixed how time-resolved transcription / chromatin audit should be submitted so that cell identity, current plasticity program, and memory-stabilization controller are not mixed."
   - "It is not yet fixed how post-transcriptional RNA-state should be audited without collapsing isoform choice, m6A-dependent translation / degradation, and RNA-editing ratio back into gene-level abundance."
-  - "It is not yet fixed how phospho-signaling / second-messenger state should be audited without collapsing phosphosite occupancy and signaling nanodomains back into transcriptomics or proteomics."
+  - "It is not yet fixed which same-subject or human-compatible external calibrators could raise phospho-signaling / second-messenger claims beyond region-structured ex vivo atlas evidence."
   - "It has not been fixed which external standards among SV2A PET, MRSI, MRS thermometry, 31P-MRS, sodium MRI, dynamic DMI, myelin bilayers, TMS-EEG, sleep-plasticity proxies, and CSF-glymphatic proxies should calibrate maintenance-states that cannot be measured directly in humans."
   - "It is not yet fixed which sleep-history, sleep-architecture, myelin, thermal, ECM, bioenergetic, metabolic, and clearance indicators will become standard submissions for long-term closed-loop claims."
   - "It is not yet fixed which sleep replay fields should be mandatory across scalp EEG, intracranial recordings, and cue-driven interventions so that event definition, timing policy, and item-selection regime are not collapsed into one sentence."
@@ -288,7 +289,7 @@ Current human in vivo routes on this site do not directly reveal <strong>isoform
 </div>
 <h3 id="phospho-signaling-state">4. Phospho-signaling / second-messenger state is not the same as transcript or protein abundance</h3>
 <p>
-The remaining weakness after separating <strong>post-transcriptional RNA-state</strong> from <strong>gene-level transcript abundance</strong> was that the site still left <strong>phospho-signaling / second-messenger state</strong> too close to transcriptomics, proteomics, or nominal weights. That was too coarse. <a href="https://doi.org/10.1126/science.279.5352.870" target="_blank">Giese et al. (1998)</a> showed that CaMKII Thr286 autophosphorylation is required for LTP and learning, <a href="https://doi.org/10.1016/S0092-8674(03)00122-3" target="_blank">Lee et al. (2003)</a> showed that distinct AMPA-receptor phosphorylation sites regulate bidirectional synaptic plasticity, <a href="https://doi.org/10.1523/JNEUROSCI.5303-03.2004" target="_blank">Rodrigues et al. (2004)</a> showed learning-linked CaMKII phospho-state changes at lateral amygdala synapses, <a href="https://doi.org/10.1016/j.neuron.2005.01.009" target="_blank">Tomita et al. (2005)</a> showed phosphorylation-dependent control of TARP-mediated AMPAR plasticity, and <a href="https://doi.org/10.1038/s41467-023-40930-6" target="_blank">Vierra et al. (2023)</a> showed that ER-plasma membrane junctions create Ca<sup>2+</sup>-activated PKA signaling nanodomains in neurons. Therefore, even if <strong>the connectome</strong>, <strong>cell-type label</strong>, <strong>gene-level abundance</strong>, and <strong>bulk protein abundance</strong> are similar, <strong>the operative phospho-controller that helps set plasticity expression and memory-relevant signaling can still differ</strong>.
+The remaining weakness after separating <strong>post-transcriptional RNA-state</strong> from <strong>gene-level transcript abundance</strong> was that the site still left <strong>phospho-signaling / second-messenger state</strong> too close to transcriptomics, proteomics, or nominal weights. That was too coarse. <a href="https://doi.org/10.1126/science.279.5352.870" target="_blank">Giese et al. (1998)</a> showed that CaMKII Thr286 autophosphorylation is required for LTP and learning, <a href="https://doi.org/10.1016/S0092-8674(03)00122-3" target="_blank">Lee et al. (2003)</a> showed that distinct AMPA-receptor phosphorylation sites regulate bidirectional synaptic plasticity, <a href="https://doi.org/10.1523/JNEUROSCI.0248-16.2016" target="_blank">Havekes et al. (2016)</a> showed that compartment-targeted PDE4A5 signaling can impair hippocampal LTP and long-term memory without a global cAMP claim, <a href="https://doi.org/10.1038/s41467-023-40930-6" target="_blank">Vierra et al. (2023)</a> showed that ER-plasma membrane junctions create Ca<sup>2+</sup>-activated PKA signaling nanodomains in neurons, <a href="https://doi.org/10.1016/j.biopsych.2023.12.020" target="_blank">Altas et al. (2024)</a> showed that region-specific phosphorylation redirects neuroligin-3 localization between excitatory and inhibitory synapses in mouse and human brain samples, and <a href="https://doi.org/10.1523/JNEUROSCI.1619-24.2025" target="_blank">Rodriguez et al. (2025)</a> showed that a single HDAC3 phosphosite mutation bidirectionally modulates LTP and long-term memory in adult and aging mice. Therefore, even if <strong>the connectome</strong>, <strong>cell-type label</strong>, <strong>gene-level abundance</strong>, and <strong>bulk protein abundance</strong> are similar, <strong>the operative phospho-controller that helps set plasticity expression and memory-relevant signaling can still differ</strong>.
 </p>
 <div class="note-box">
 <strong>Human observability ceiling for phospho-signaling / second-messenger state</strong>
@@ -296,6 +297,58 @@ The remaining weakness after separating <strong>post-transcriptional RNA-state</
 Current human in vivo routes on this site do not directly reveal <strong>phosphosite occupancy</strong>, <strong>kinase/phosphatase balance</strong>, or <strong>compartment-specific signaling nanodomains</strong> across the whole living brain. Ex vivo atlas work such as <a href="https://doi.org/10.1021/acs.jproteome.2c00244" target="_blank">Biswas et al. (2023)</a> is important evidence that the human brain phosphoproteome is region-structured, but it is still an atlas-building / ex vivo observability route rather than a comparable in vivo whole-brain human measurement. Therefore, on this site, phospho-signaling / second-messenger state remains a <strong>local hidden state</strong> in humans unless it is externally calibrated or causally perturbed in a narrower preparation.
 </p>
 </div>
+<div class="note-box" id="phospho-route-card">
+<strong>2026-03-20 addendum: phospho-signaling claims now need a route card</strong>
+<p>
+The remaining weakness on this page was that it still let several different inferential objects collapse into one label such as <strong>phospho-signaling evidence</strong>. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/S0092-8674(03)00122-3" target="_blank">Lee et al. (2003)</a> and <a href="https://doi.org/10.1016/j.neuron.2005.01.009" target="_blank">Tomita et al. (2005)</a> are about <strong>phosphosite-specific gating of bidirectional synaptic plasticity</strong>, <a href="https://doi.org/10.1523/JNEUROSCI.0248-16.2016" target="_blank">Havekes et al. (2016)</a> and <a href="https://doi.org/10.1038/s41467-023-40930-6" target="_blank">Vierra et al. (2023)</a> are about <strong>compartmentalized second-messenger routing</strong>, <a href="https://doi.org/10.1016/j.biopsych.2023.12.020" target="_blank">Altas et al. (2024)</a> is <strong>region-specific phosphorylation with synapse-type relocalization in mouse and human samples</strong>, <a href="https://doi.org/10.1523/JNEUROSCI.1619-24.2025" target="_blank">Rodriguez et al. (2025)</a> is a <strong>single-site phospho-mutant causal memory intervention</strong>, and <a href="https://doi.org/10.1021/acs.jproteome.2c00244" target="_blank">Biswas et al. (2023)</a> is a <strong>human ex vivo phosphoproteome atlas</strong>. Therefore, this site now requires a <strong>phospho-signaling route card</strong> before a claim is promoted beyond a phosphosite clue, a local signalosome intervention, or a region-structured atlas readout.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be fixed explicitly</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the result supports <strong>phosphosite-specific plasticity gating</strong>, <strong>kinase/phosphatase controller logic</strong>, <strong>compartmentalized second-messenger routing</strong>, <strong>region-structured phosphoproteome atlas</strong>, or <strong>phospho-mutant causal intervention</strong>.</td>
+<td>Endpoint phosphoproteomics, live signaling, and causal phosphosite edits collapse into one vague label such as <code>phospho evidence</code>.</td>
+</tr>
+<tr>
+<td><strong>Biological regime</strong></td>
+<td>Name species, sex, brain region / circuit, cell class, synapse class, behavioral phase, and whether the preparation is slice, culture, fixed tissue, awake animal, or human ex vivo sample.</td>
+<td>Evidence from one preparation is silently promoted to a generic brain-wide phospho-controller.</td>
+</tr>
+<tr>
+<td><strong>Time axis</strong></td>
+<td>Write baseline and every post-learning / post-stimulation / post-recall sampling window, and state whether the assay is an endpoint snapshot or a time-resolved reporter.</td>
+<td>An acute phosphosite change is overread as a persistent maintenance controller or vice versa.</td>
+</tr>
+<tr>
+<td><strong>Assay and direct observable</strong></td>
+<td>Name phospho-specific immunoblot / staining, phosphoproteomics, FRET or biosensor imaging, kinase / phosphatase manipulation, or phospho-mimic / phospho-null replacement, and write the direct observable explicitly.</td>
+<td>Protein abundance, phosphosite occupancy, second-messenger concentration, and causal leverage are treated as if they were the same measurement.</td>
+</tr>
+<tr>
+<td><strong>Spatial / compartment scope</strong></td>
+<td>Specify whether the result resolves tissue region, cell type, synapse class, dendritic compartment, ER-plasma membrane junction, or another nanodomain / signalosome anchor.</td>
+<td>A region-level atlas is overread as if it fixed the operative local signaling nanodomain in the relevant cells.</td>
+</tr>
+<tr>
+<td><strong>Causal leverage</strong></td>
+<td>Write whether the paper only observed a phospho pattern, perturbed a kinase / phosphatase pathway, or used a named phospho-mutant or targeted localization intervention, and which physiological or behavioral output changed.</td>
+<td>Correlated phosphosite changes are promoted to necessary or sufficient controllers without intervention support.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Fix in one line which state variables remain latent, especially same-subject whole-brain in vivo continuity, phosphatase balance outside the assayed compartment, and human live-readout availability.</td>
+<td>Region-bounded or ex vivo evidence is overread as current whole-brain phospho-state identification.</td>
+</tr>
+</tbody>
+</table>
 
 <h3>5. Sometimes what is maintained is not the “current value” but the “return destination”</h3>
 <p>
@@ -764,7 +817,10 @@ A final correction is that static <sup>1</sup>H-MRSI similarity is not the same 
 <li>Lee, H.-K., Barbarosie, M., Kameyama, K., Bear, M. F., &amp; Huganir, R. L. (2003). Regulation of distinct AMPA receptor phosphorylation sites during bidirectional synaptic plasticity. <em>Cell</em>, 112(5), 631-643. <a href="https://doi.org/10.1016/S0092-8674(03)00122-3" target="_blank">doi:10.1016/S0092-8674(03)00122-3</a></li>
 <li>Rodrigues, S. M., Farb, C. R., Bauer, E. P., LeDoux, J. E., &amp; Schafe, G. E. (2004). Pavlovian fear conditioning regulates Thr286 autophosphorylation of Ca2+/calmodulin-dependent protein kinase II at lateral amygdala synapses. <em>Journal of Neuroscience</em>, 24(13), 3281-3288. <a href="https://doi.org/10.1523/JNEUROSCI.5303-03.2004" target="_blank">doi:10.1523/JNEUROSCI.5303-03.2004</a></li>
 <li>Tomita, S., Stein, V., Stocker, T. J., Nicoll, R. A., &amp; Bredt, D. S. (2005). Bidirectional synaptic plasticity regulated by phosphorylation of stargazin-like TARPs. <em>Neuron</em>, 45(2), 269-277. <a href="https://doi.org/10.1016/j.neuron.2005.01.009" target="_blank">doi:10.1016/j.neuron.2005.01.009</a></li>
+<li>Havekes, R., Park, A. J., Tolentino, R. E., et al. (2016). Compartmentalized PDE4A5 signaling impairs hippocampal synaptic plasticity and long-term memory. <em>Journal of Neuroscience</em>, 36(34), 8936-8946. <a href="https://doi.org/10.1523/JNEUROSCI.0248-16.2016" target="_blank">doi:10.1523/JNEUROSCI.0248-16.2016</a></li>
 <li>Vierra, N. C., et al. (2023). Endoplasmic reticulum-plasma membrane junctions couple electrical activity to Ca2+-activated PKA signaling in neurons. <em>Nature Communications</em>, 14, 6040. <a href="https://doi.org/10.1038/s41467-023-40930-6" target="_blank">doi:10.1038/s41467-023-40930-6</a></li>
+<li>Altas, B., Tuffy, L. P., Patrizi, A., et al. (2024). Region-specific phosphorylation determines Neuroligin-3 localization to excitatory versus inhibitory synapses. <em>Biological Psychiatry</em>, 96(10), 815-828. <a href="https://doi.org/10.1016/j.biopsych.2023.12.020" target="_blank">doi:10.1016/j.biopsych.2023.12.020</a></li>
+<li>Rodriguez, A. C., Kramár, E. A., Augustynski, A. S., et al. (2025). HDAC3 Serine 424 phospho-mimic and phospho-null mutants bidirectionally modulate long-term memory formation and synaptic plasticity in the adult and aging mouse brain. <em>Journal of Neuroscience</em>, 45(29), e1619242025. <a href="https://doi.org/10.1523/JNEUROSCI.1619-24.2025" target="_blank">doi:10.1523/JNEUROSCI.1619-24.2025</a></li>
 <li>Biswas, D., et al. (2023). The landscape of the human brain phosphoproteome reveals region-specific phosphorylation events. <em>Journal of Proteome Research</em>, 22(4), 1390-1404. <a href="https://doi.org/10.1021/acs.jproteome.2c00244" target="_blank">doi:10.1021/acs.jproteome.2c00244</a></li>
 <li>Frey, U., &amp; Morris, R. G. M. (1997). Synaptic tagging and long-term potentiation. <em>Nature</em>, 385(6616), 533-536. <a href="https://doi.org/10.1038/385533a0" target="_blank">doi:10.1038/385533a0</a></li>
 <li>Fonseca, R., Vabulas, R. M., Hartl, F. U., Bonhoeffer, T., &amp; Nägerl, U. V. (2006). A balance of protein synthesis and proteasome-dependent degradation determines the maintenance of LTP. <em>Neuron</em>, 52(2), 239-245. <a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">doi:10.1016/j.neuron.2006.08.015</a></li>
