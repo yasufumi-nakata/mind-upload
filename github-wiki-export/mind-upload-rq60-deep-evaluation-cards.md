@@ -254,3 +254,11 @@
 - 判定内訳は `A/B/C=17/25/18` を再確認しました。
 - Deep Evaluation Cards で参照されるEEG ID 一意集合（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
 - 依頼方針どおり、汎用横断要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続しました。
+
+## 2026-03-20 10:03 JST Revalidation Log (this run)
+
+- Pulled `main` in parent repo `auto-startup` before work and confirmed `Already up to date`.
+- Recounted `unique Ux-y` keys across deep cards / feasibility / grant map pages and reconfirmed `RQ_TOTAL=60` (missing `0`, duplicate `0`).
+- Reconfirmed judgment breakdown `A/B/C=17/25/18`.
+- Rechecked EEG IDs extracted from `primary + supporting dataset` columns (`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`) against `EEG-DATA/eeg_dataset_summary_ja.csv`; unresolved IDs remained `0`.
+- Kept the deep-by-RQ policy unchanged: `1RQ=1testable claim=1grant theme=1primary dataset`.
