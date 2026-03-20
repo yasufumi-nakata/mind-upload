@@ -21,6 +21,7 @@ page_highlights:
   - "For multimodal or atlas-prior results, the Fusion Card is added on top of the Observability Budget so acquisition relation, synchronization, fusion model, vascular-state / CVR limits for hemodynamic stacks, and external validation are fixed explicitly."
   - "For diffusion-MRI tractography connectomes, the Observability Budget now requires a tractography route card that names direct observables, priors / filtering, uncertainty, and abstention."
   - "For MRSI-derived metabolic-connectome claims, the Observability Budget now requires a metabolic-similarity route card that names the metabolite set, parceling, correction model, spectral QC, and whether the object is static similarity or kinetic rate imaging."
+  - "For destructive ultrastructure claims, the Observability Budget now requires a destructive-structure route card that names preservation route, live-to-fix delay, registration scope, section-loss / segmentation QA, throughput scale, and omitted live-state families."
   - "For connectome-constrained predictors, the Observability Budget now requires a conditional-model route card that names the structural prior, fitted degrees of freedom, task/state regime, omitted mechanisms, validation class, and abstention boundary."
   - "For sleep replay claims, the maintenance-state budget now requires a route card that names preparation, event definition, timing policy, item-selection regime, and abstention before overnight gain is read mechanistically."
   - "For phospho-signaling / second-messenger claims, the maintenance-state budget now requires a route card that names claim family, assay / direct observable, compartment scope, timing window, causal leverage, and abstention."
@@ -748,6 +749,54 @@ The remaining weakness after adding the <strong>Observability Budget</strong> wa
 If this card is missing, this site reads a multimodal or atlas-prior result at the ceiling of the <strong>strongest individually supported stack</strong>, not as <strong>same-subject, cross-stack, externally calibrated state identification</strong>. An atlas prior plus one live measurement remains an atlas-conditioned measurement, not automatic state completeness.
 </p>
 </div>
+<h3 class="section-title" id="destructive-structure-card">Destructive-Structure Route Card for ultrastructure claims</h3>
+<div class="note-box">
+<strong>2026-03-20 addendum: destructive ultrastructure routes need their own card</strong>
+<p>
+The remaining weakness after the <strong>Observability Budget</strong> and <strong>Fusion Card</strong> was that words such as <strong>nanoscale</strong>, <strong>petascale</strong>, or <strong>same-brain</strong> could still be overread as if the destructive route had already preserved native state, solved scaling, and certified reconstruction quality in one move. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> showed that conventional aldehyde fixation collapses extracellular space, that fixation itself has a non-negligible time course, and that even high-pressure freezing preserves extracellular space only in samples thinner than about <strong>200 μm</strong>. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> then showed that extraordinary human ultrastructure can now be reconstructed, but still from a rapidly preserved <strong>1.05 mm<sup>3</sup></strong> surgical fragment with <strong>1.8 PB</strong> raw data and <strong>326 days</strong> of imaging. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> showed that same-brain function plus EM is a <strong>sequential local pipeline</strong>, with in vivo two-photon imaging first and fixation / sectioning / ex vivo EM afterward, producing about <strong>2 Pb</strong> of raw data over about <strong>6 months</strong>. <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">Dorkenwald et al. (2024)</a> further showed that even the adult-fly whole-brain frontier still depended on proofreading, thresholding, and about <strong>33 person-years</strong> of manual correction. Therefore, this site now asks destructive ultrastructure claims to attach a <strong>Destructive-Structure Route Card</strong> instead of letting resolution language silently stand in for native-state completeness.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Destructive-Structure Card field</th>
+<th>Minimum disclosure</th>
+<th>What this site stops claiming if absent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Preservation route and live-to-fix window</strong></td>
+<td>Name immersion / perfusion / cryo route, the interval from live physiology or resection to fixation/freezing, whether extracellular-space preservation was audited, and any osmotic / staining manipulations that materially shape ultrastructure.</td>
+<td>The result is not read as if native geometry or microenvironment were automatically preserved by the word <code>EM</code> or <code>nanoscale</code>.</td>
+</tr>
+<tr>
+<td><strong>Sample origin and physiological regime</strong></td>
+<td>Name species, brain region, whether the tissue was ex vivo surgical, acute slice, perfusion-fixed animal, or same-brain postmortem follow-up to in vivo recording, and what behavioural / state regime was actually sampled before fixation.</td>
+<td>A local or pathology-bounded fragment is not promoted to a generic living-brain state claim.</td>
+</tr>
+<tr>
+<td><strong>Registration scope to live data</strong></td>
+<td>Name whether registration is none, atlas-level, same-brain structural, same-brain functional, or same-perturbation; state which correspondences were manual versus automated and which mismatch remains unresolved.</td>
+<td><strong>Same-brain</strong> is not read as <strong>same-time whole-state capture</strong>.</td>
+</tr>
+<tr>
+<td><strong>Sectioning / imaging scale and loss audit</strong></td>
+<td>Report imaged volume, section count, voxel size, acquisition time, section loss / folds / cracks, whether multiple subvolumes had to be stitched, and where tissue was omitted or alignment deemed insufficient.</td>
+<td>A petascale stack is not read as operationally complete or whole-brain-ready by default.</td>
+</tr>
+<tr>
+<td><strong>Segmentation / proofreading status</strong></td>
+<td>Name automated segmentation family, merge / split trade-offs, proofreading scope, released versions, attachment / completeness metrics when available, and which analyses depend on thresholds or proofread subsets.</td>
+<td>A polished reconstruction is not read as error-free ground truth.</td>
+</tr>
+<tr>
+<td><strong>Omitted live-state families and ceiling</strong></td>
+<td>Explicitly list which current-state families remain absent, including current synaptic efficacy, neuromodulatory context, ionic milieu, glial / metabolic support, phospho-signaling, and other maintenance-state variables; then declare the claim ceiling and abstention boundary.</td>
+<td>The result is not promoted from <strong>structural scaffold</strong> or <strong>local ex vivo scaffold</strong> to native-state capture, maintenance-consistent readout, or sufficient-condition language for WBE.</td>
+</tr>
+</tbody>
+</table>
 <div class="note-box">
 <strong>2026-03-18 addendum: ESI validation is a ladder, not one checkbox</strong>
 <p>
@@ -874,7 +923,7 @@ For connectome-constrained neural predictors, the label alone is also not enough
 <div class="note-box">
 <strong>Minimum operating rules</strong>
 <p>
-If this card is missing, this site treats the result as <strong>L0/L1 reproducible analysis or limited decode</strong> and does not promote it to L2 or above. For example, the default ceiling is <strong>macro-state tracking</strong> for <strong>EEG / HD-EEG + MRI only</strong>, <strong>an implant-region local population window</strong> for <strong>high-density extracellular probe only</strong>, <strong>structural scaffold</strong> for <strong>volume EM only</strong>, <strong>molecular / spatial prior</strong> for <strong>whole-brain atlas only</strong>, and still only <strong>local conditional prediction</strong> even for <strong>same-brain calcium + EM</strong>. For hemodynamic modalities, a group or cross-day BOLD / fNIRS difference without <strong>vascular-state / CVR</strong> or <strong>short-separation / superficial-bias</strong> audit is not accepted here as a neural difference. For diffusion-MRI tractography, a connectome claim without a <strong>tractography route card</strong> is not accepted here as an edge-complete graph and remains at the <strong>macro pathway prior / targeted bundle hypothesis</strong> ceiling. For connectome-constrained predictors, a model claim without a <strong>conditional-model route card</strong> remains at the <strong>conditional hypothesis engine / task-bounded predictor</strong> ceiling and is not accepted here as unique internal-state recovery. If a chronic-probe result lacks a unit-identity audit, single-unit longitudinal claims are not accepted. Detailed stack-specific ceilings and the <strong>state variable × timescale</strong> matrix are summarized in <a href="wiki/measurement-stack-and-claim-ceiling.html#state-variable-matrix">Wiki: observability and claim ceiling by measurement stack</a>.
+If this card is missing, this site treats the result as <strong>L0/L1 reproducible analysis or limited decode</strong> and does not promote it to L2 or above. For example, the default ceiling is <strong>macro-state tracking</strong> for <strong>EEG / HD-EEG + MRI only</strong>, <strong>an implant-region local population window</strong> for <strong>high-density extracellular probe only</strong>, <strong>structural scaffold</strong> for <strong>volume EM only</strong>, <strong>local ex vivo scaffold</strong> for <strong>human ultrastructure without a destructive-structure route card</strong>, <strong>molecular / spatial prior</strong> for <strong>whole-brain atlas only</strong>, and still only <strong>local conditional prediction</strong> even for <strong>same-brain calcium + EM</strong>. For hemodynamic modalities, a group or cross-day BOLD / fNIRS difference without <strong>vascular-state / CVR</strong> or <strong>short-separation / superficial-bias</strong> audit is not accepted here as a neural difference. For diffusion-MRI tractography, a connectome claim without a <strong>tractography route card</strong> is not accepted here as an edge-complete graph and remains at the <strong>macro pathway prior / targeted bundle hypothesis</strong> ceiling. For connectome-constrained predictors, a model claim without a <strong>conditional-model route card</strong> remains at the <strong>conditional hypothesis engine / task-bounded predictor</strong> ceiling and is not accepted here as unique internal-state recovery. If a chronic-probe result lacks a unit-identity audit, single-unit longitudinal claims are not accepted. Detailed stack-specific ceilings and the <strong>state variable × timescale</strong> matrix are summarized in <a href="wiki/measurement-stack-and-claim-ceiling.html#state-variable-matrix">Wiki: observability and claim ceiling by measurement stack</a>.
 </p>
 </div>
 </section>
@@ -1889,6 +1938,8 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Epp, S. M., Castrillon, G., Yuan, B., Andrews-Hanna, J., Preibisch, C., &amp; Riedl, V. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
 <li>Yao, Z., et al. (2023). A high-resolution transcriptomic and spatial atlas of cell types in the whole mouse brain. <a href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank">doi:10.1038/s41586-023-06812-z</a></li>
 <li>Dorkenwald, S., et al. (2024). Neuronal wiring diagram of an adult brain. <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">doi:10.1038/s41586-024-07558-y</a></li>
+<li>Lu, X., Han, X., Meirovitch, Y., et al. (2023). Preserving extracellular space for high-quality optical and ultrastructural studies of whole mammalian brains. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
+<li>Shapson-Coe, A., Januszewski, M., Berger, D. R., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
 <li>Lappalainen, J. K., Tschopp, F. D., Prakhya, S., et al. (2024). Connectome-constrained networks predict neural activity across the fly visual system. <a href="https://doi.org/10.1038/s41586-024-07939-3" target="_blank">doi:10.1038/s41586-024-07939-3</a></li>
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>

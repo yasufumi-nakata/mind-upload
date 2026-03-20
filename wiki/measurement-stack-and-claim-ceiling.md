@@ -34,6 +34,8 @@ page_highlights:
 - Same-session multimodal acquisition is not treated as self-validating fusion; the
   site now requires a Fusion Card before the ceiling is raised above the strongest
   unimodal route.
+- Destructive ultrastructure routes are now read through preservation, registration,
+  and proofreading burden rather than through resolution language alone.
 - Destination is divided into structural atlas, cell-type prior, local conditional
   prediction, and slow-state calibration.
 - Human evidence is also separated into proxy classes, so local ultrastructure, synaptic-density
@@ -248,6 +250,43 @@ Dorkenwald et al.'s adult fly whole-brain connectome is a huge step forward, reo
 <p>
 MICrONS combines dense calcium imaging, behavioral states, and the EM connectome in the same brain, presenting multi-area functional connectomics of the mouse visual cortex. This is even stronger than connectome-only, and provides a basis for discussing <strong>structure-function links in the same brain. However, the paper itself deals with specific regions, specific tasks, and specific states of the visual cortex, and it is not possible to make a leap from there to the human whole-brain or all-state completeness. Therefore, the ceiling of this stack is <strong>local functional twin</strong>.
 </p>
+
+<h3 id="destructive-ultrastructure-wall">4.5. Destructive ultrastructure still faces a preservation / registration / throughput wall</h3>
+<p>
+Another weakness that remained on this page was that <strong>volume EM</strong>, <strong>petascale</strong>, or <strong>same-brain</strong> could still be overread as if destructive ultrastructure had already solved native-state preservation, whole-brain scaling, and reconstruction quality in one move. That is too weak. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> showed that conventional aldehyde fixation collapses extracellular space, that the fixation time course itself is not instantaneous, and that high-pressure freezing preserves extracellular space only in samples thinner than roughly <strong>200 μm</strong>. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> then showed that a rapidly preserved human sample can yield a remarkable nanoscale reconstruction, but still as a <strong>1.05 mm<sup>3</sup></strong> surgical fragment with <strong>1.8 PB</strong> raw data and <strong>326 days</strong> of imaging. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> showed that same-brain function plus EM is a sequential local pipeline rather than simultaneous state capture, and <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">Dorkenwald et al. (2024)</a> showed that even the adult fly whole-brain frontier still depended on proofreading, thresholding, and substantial manual correction effort. What follows directly is that <strong>resolution alone does not erase preservation artifacts, local registration limits, or reconstruction burden</strong>.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Wall</th>
+<th>What the primary literature now supports</th>
+<th>Site rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Preservation wall</strong></td>
+<td>Fixation route changes what the ultrastructure looks like; preserving extracellular space and fine geometry requires an explicit preservation protocol and does not mean that live molecular or electrophysiological state was captured.</td>
+<td>Do not read <strong>nanoscale</strong> or <strong>EM</strong> as automatic native-state preservation.</td>
+</tr>
+<tr>
+<td><strong>Registration wall</strong></td>
+<td>Same-brain function + EM is stronger than connectome-only, but it is still a sequential, local, and registration-limited route rather than same-time whole-brain state capture.</td>
+<td>Do not read <strong>same-brain</strong> as <strong>same-time complete state</strong>.</td>
+</tr>
+<tr>
+<td><strong>Throughput / proof wall</strong></td>
+<td>Petascale imaging still implies long acquisition windows, sectioning/alignment risk, segmentation trade-offs, and nontrivial proofreading burden.</td>
+<td>Do not read <strong>petascale</strong> as <strong>finished, error-free, or whole-brain-ready</strong>.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Operating rule for destructive ultrastructure</strong>
+<p>
+On this site, a destructive ultrastructure result is read first as a <strong>structural scaffold</strong> or <strong>local ex vivo scaffold</strong> unless it also discloses preservation route, live-to-fix window, registration scope, section-loss / alignment risk, segmentation / proofreading status, and omitted live-state families. That disclosure bundle is formalized in <a href="../verification.html#destructive-structure-card">Verification: Destructive-Structure Route Card</a>.
+</p>
+</div>
 
 <h3>5. Hemodynamic stacks also observe through a vascular transfer state</h3>
 <p>
@@ -502,6 +541,7 @@ This site now treats <strong>proxy-rich human evidence</strong> as a real advanc
 <h2 class="section-title">References</h2>
 <ol>
 <li>Dorkenwald, S., et al. (2024). Neuronal wiring diagram of an adult brain. <em>Nature</em>, 634, 124-138. <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">doi:10.1038/s41586-024-07558-y</a></li>
+<li>Lu, X., Han, X., Meirovitch, Y., et al. (2023). Preserving extracellular space for high-quality optical and ultrastructural studies of whole mammalian brains. <em>Cell Reports Methods</em>, 3(7), 100520. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
 <li>Yao, Z., et al. (2023). A high-resolution transcriptomic and spatial atlas of cell types in the whole mouse brain. <em>Nature</em>, 624, 317-332. <a href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank">doi:10.1038/s41586-023-06812-z</a></li>
 <li>Gouwens, N. W., et al. (2021). Phenotypic variation of transcriptomic cell types in mouse motor cortex. <em>Nature</em>, 598, 144-150. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>, 640, 435-447. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
