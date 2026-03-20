@@ -379,3 +379,12 @@ reading_time: "35-55分"
 - 判定内訳は双方で `A/B/C=17/25/18` を再確認しました。
 - 本カード運用で参照するEEG ID（本runの参照集合）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
 - 方針は不変で、汎用横断の要約更新ではなく `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持して wiki 同期を継続しました。
+
+## 2026-03-21 05:02 JST 再検証ログ（本run / ユーザー依頼: 各RQを1件ずつ深掘りでwiki固定）
+
+- 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull --ff-only origin main` を実行し、`Already up to date` を確認しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` / `auto-research-funds/wiki/Mind-Upload-RQ60-Deep-Evaluation-Cards.md` / `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `Ux-y` 行を再計数し、すべて `RQ_TOTAL=60`（欠損・重複 `0`）を確認しました。
+- 判定内訳は `A/B/C=17/25/18` を再確認し、全行で `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用が維持されていることを確認しました。
+- 本カードの参照EEG ID一意集合（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
+- 助成キーは `G3-G6` を `auto-research-funds/wiki/cards/*.md` と `grant_eeg_dataset_match.csv` で再照合し欠落 `0`、`G1/G2` は `mind-upload/wiki` と `auto-research-funds/wiki` の固定運用キーとして再確認しました。
+- 方針は不変で、汎用横断要約ではなく「1件ずつ深く理解して書く」実行形で wiki 同期を維持しました。
