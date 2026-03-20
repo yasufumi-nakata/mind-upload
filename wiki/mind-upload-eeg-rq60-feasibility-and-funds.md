@@ -108,13 +108,13 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `C` 判定RQは「EEG単独で不可」の理由（法務/制度/他モダリティ）を明記
 - データセット参照はID再採番の影響を避けるため、提出時は `DOI + dataset名 + access区分` を必ず併記
 
-2026-03-20 19:02 JST の再計数結果（機械検証）:
+2026-03-20 22:04 JST の再計数結果（機械検証）:
 
 - `RQ件数`: `60`（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）
 - `A/B/C`: `17/25/18`
-- `参照EEG ID`: `24件`（`6,11,13,16,19,29,39,49,56,65,509,676,696,719,735,783,842,859,1011,1839,1972,2412,3419,4878`）
+- `参照EEG ID`: `17件`（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）
 - `EEG ID欠落`: `0`（照合先: `EEG-DATA/eeg_dataset_summary_ja.csv`）
-- `助成ID欠落`: `0`（照合先: `grant_queue/*.yaml` と `auto-research-funds/wiki/cards/*.md`）
+- `助成ID検証`: `G3-G6` は `auto-research-funds/wiki/cards/*.md` と `grant_eeg_dataset_match.csv` で欠落 `0`、`G1/G2` は本ページと `Mind-Upload-EEG-RQ-Grant-Map.md` の固定運用キーとして再確認（現行 `auto-research-funds` に `grant_queue/` は未配置）
 
 ## auto-research-fundsで使う応募レーン（本ページで参照した根拠）
 
@@ -125,8 +125,8 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 
 ### 実務で使う助成キー（IDつき）
 
-- `G1`: `GR-2026-013`（`grant_queue` 上の応募トラックID / 技術実証・再現性中心）
-- `G2`: `GR-2026-014`（`grant_queue` 上の応募トラックID / 統合検証・社会実装中心）
+- `G1`: `GR-2026-013`（固定運用トラックID / 技術実証・再現性中心）
+- `G2`: `GR-2026-014`（固定運用トラックID / 統合検証・社会実装中心）
 - `G3`: `9Lx4dPK6a4k2gOb7`（研究助成（国内））
 - `G4`: `Drbm6vBRDJkn0NGJ`（研究助成）
 - `G5`: `871pw3rLjNPKgqA0`（研究助成金）
@@ -136,14 +136,14 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 
 | Key | 制度名 | 締切窓（根拠種別） | RQ60での使いどころ |
 |---|---|---|---|
-| G1 | `GR-2026-013`（応募トラックID。名称は `grant_queue/GR-2026-013.yaml` を正本） | `grant_queue` 管理値（都度更新） | `U1/U4/U7/U13/U14` の技術検証を、再現性パッケージ付きで短中期成果として出す。 |
-| G2 | `GR-2026-014`（応募トラックID。名称は `grant_queue/GR-2026-014.yaml` を正本） | `grant_queue` 管理値（都度更新） | `U0/U3/U8/U10/U11/U12/U15` の統合設計・長期テーマを博士計画として束ねる。 |
+| G1 | `GR-2026-013`（応募トラックID。`Mind-Upload-EEG-RQ-Grant-Map` の固定キー） | `mind-upload/wiki` と `auto-research-funds/wiki` の同期管理値（`grant_queue` は現行未配置） | `U1/U4/U7/U13/U14` の技術検証を、再現性パッケージ付きで短中期成果として出す。 |
+| G2 | `GR-2026-014`（応募トラックID。`Mind-Upload-EEG-RQ-Grant-Map` の固定キー） | `mind-upload/wiki` と `auto-research-funds/wiki` の同期管理値（`grant_queue` は現行未配置） | `U0/U3/U8/U10/U11/U12/U15` の統合設計・長期テーマを博士計画として束ねる。 |
 | G3 | 大川情報通信基金 研究助成 (`9Lx4dPK6a4k2gOb7`) | 2025年度実績ベースの想定窓（2026年は要再確認） | 再現基盤・データ標準化寄りの `A` 判定RQ（U7/U14）を補助応募として出す。 |
 | G4 | 成茂神経科学研究助成基金 (`Drbm6vBRDJkn0NGJ`) | 2022/11/18〜2023/02/17実績ベース（制度継続状況は不明） | 方法論高度化（因果・逆問題・デコード監査）として `U1/U4/U11/U13/U14` を中心に出す。 |
 | G5 | 日本産業科学研究所 研究助成金 (`871pw3rLjNPKgqA0`) | 2025年度実績ベースの想定窓（2026年は要再確認） | `U8` の閉ループ運用・ドリフト対策の運用研究を小中規模実装として出す。 |
 | G6 | 住友電工グループ社会貢献基金 学術・研究助成 (`46z9VPE4wnkrvEJR`) | 2025年度実績ベースの想定窓（2026年は要再確認） | `C` 判定RQ（U3/U10/U12/U15）で必要な制度・多モーダル連携の準備研究に使う。 |
 
-- 参照ルール: `G1-G2` は `grant_queue/*.yaml`、`G3-G6` は `auto-research-funds/wiki/cards` と `grant_eeg_dataset_match.csv` を正本として扱います。
+- 参照ルール: `G1-G2` は `mind-upload/wiki` と `auto-research-funds/wiki` の同期キーとして扱い、`G3-G6` は `auto-research-funds/wiki/cards` と `grant_eeg_dataset_match.csv` を正本として扱います。
 
 ### U別の第一応募先/予備応募先（運用固定）
 
