@@ -19,7 +19,7 @@ page_highlights:
   - "Several living-human proxy rows are not promoted together unless same-subject relation, model burden, and residual hidden-state ceilings are disclosed explicitly."
   - "For hemodynamic modalities, BOLD or fNIRS amplitude is not read as neural difference unless vascular-state / CVR limits are audited separately."
   - "For EEG / MEG connectivity, wPLI, source-space graphs, and information-flow labels are not read as leak-proof communication maps or causal circuits unless leakage, perturbation, and pipeline limits are disclosed separately."
-  - "Thermodynamic or irreversibility papers are kept on an auxiliary track; arrow-of-time results are not read as direct physical-dissipation or WBE-readiness evidence without a route card."
+  - "Thermodynamic or irreversibility papers are kept on an auxiliary track; arrow-of-time results are not read as direct physical-dissipation or WBE-readiness evidence without a route card that names coarse-graining, hidden-degree risk, and quantity type."
   - "Brain-to-text and speech demos are read through the Neural Contribution Card so neural contribution is not confused with task structure or language priors."
   - "High decode / biomarker scores can rise from subject / session fingerprint alone, so the Specificity & Shortcut Card audits that shortcut independently."
   - "The Temporal Validity Card is now part of the public workflow so same-day success is not silently promoted to cross-day or long-term claims."
@@ -35,7 +35,7 @@ known_points:
   - "Several human proxy rows do not add automatically; without same-subject relation, measurement-model disclosure, and cross-row calibration, the bundle stays below state-identification language."
   - "For hemodynamic readouts, a group or longitudinal BOLD difference can still be dominated by vascular transfer state rather than neural change."
   - "For EEG / MEG connectivity readouts, volume conduction, source leakage, ghost interactions, and pipeline dependence still stop the claim before communication or causality."
-  - "For thermodynamic claims, different estimator families still answer different questions, so irreversibility results stay auxiliary unless their route card is disclosed."
+  - "For thermodynamic claims, different estimator families still answer different questions, and partial observation can still hide dissipation, so irreversibility results stay auxiliary unless their route card is disclosed."
   - "Strong claims about identity or consciousness belong in downstream verification design, not on the landing page."
 unknown_points:
   - "There is still no cross-disciplinary agreement on what would count as sufficient evidence for L4 personal identity."
@@ -138,7 +138,7 @@ This site does not treat <strong>wPLI</strong>, <strong>source-space connectivit
 <div class="note-box">
 <strong>If You Want To Read Thermodynamic Claims Without Promoting Them Too Early</strong>
 <p>
-This site now separates <strong>Landauer lower bounds</strong>, <strong>tissue-level energy budgets</strong>, <strong>irreversibility of coarse-grained neural time series</strong>, and <strong>model-based entropy-flow estimates</strong>. So a paper that reports entropy production, arrow-of-time, or irreversibility is not read here as a direct measurement of microscopic dissipation, whole-brain energy cost, or WBE readiness unless it also discloses its <strong>signal route</strong>, <strong>estimator family</strong>, <strong>null / surrogate control</strong>, <strong>quantity type</strong>, and <strong>cost isolation</strong>. The shortest route is <a href="faq.html#q1f">FAQ: how to read thermodynamic claims</a>, then <a href="wiki/thermodynamic-grounding-basics.html">Wiki: thermodynamic grounding basics</a>.
+This site now separates <strong>Landauer lower bounds</strong>, <strong>tissue-level energy budgets</strong>, <strong>irreversibility of coarse-grained neural time series</strong>, and <strong>model-based entropy-flow estimates</strong>. So a paper that reports entropy production, arrow-of-time, or irreversibility is not read here as a direct measurement of microscopic dissipation, whole-brain energy cost, or WBE readiness unless it also discloses its <strong>signal route</strong>, <strong>coarse-graining / hidden-degree risk</strong>, <strong>estimator family</strong>, <strong>null / surrogate control</strong>, <strong>quantity type</strong>, and <strong>cost isolation</strong>. A zero current or a small asymmetry score is not read here as near-equilibrium unless hidden-cycle and memory-order risk are also disclosed. The shortest route is <a href="faq.html#q1f">FAQ: how to read thermodynamic claims</a>, then <a href="wiki/thermodynamic-grounding-basics.html">Wiki: thermodynamic grounding basics</a>.
 </p>
 </div>
 

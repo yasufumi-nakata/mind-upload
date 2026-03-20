@@ -5,7 +5,7 @@ description: "We will explain from the beginning why Landauer, dissipation, NESS
 article_type: Wiki
 subtitle: "It's an entry point to see not only how information circulates, but also what kind of physical cost it takes to circulate information."
 author: Mind Uploading Research Project
-last_updated: "2026-03-19"
+last_updated: "2026-03-21"
 note: "Learning guide"
 audience: "Landauer, NESS, EPR, people who are easy to stop in the sense of dissipative structure"
 reading_time: "10-15 minutes"
@@ -16,6 +16,7 @@ page_highlights:
   - "Landauer lower bounds, tissue-level energy budgets, and irreversibility of neural time series are another layer of measurement."
   - "Irreversibility results are not one estimator family; coarse-grained transition lower bounds, time-shifted asymmetry scores, visibility-graph indices, and model-based spike-train entropy flow answer different questions."
   - "Coarse-graining, time binning, source reconstruction, and dynamical assumptions can materially change an irreversibility estimate, so the route card now names them explicitly."
+  - "Partial observation can hide dissipative cycles and generate non-Markov memory, so a low or zero observable current is not enough to infer near-equilibrium."
   - "NESS and EPR are words used to describe a system that continues to move."
   - "The thermodynamics story is an auxiliary line that strengthens the hypothesis, not a magical indicator that alone can lead to a conclusion."
 known_points:
@@ -23,6 +24,7 @@ known_points:
   - "Logical calculation costs and physical dissipation costs must be considered separately."
   - "There are ideas for incorporating thermodynamic indicators into the validation process, but measurement and interpretation remain difficult."
   - "Thermodynamic route cards are needed because signal route, coarse-graining, estimator family, dynamical assumptions, and quantity type change what a result can mean."
+  - "Partial observation can hide dissipative cycles and introduce memory, so a weak estimate is not automatically evidence that dissipation is absent."
 unknown_points:
   - "It is unclear which thermodynamic indicators affect which aspects of consciousness and identity."
   - "The extent to which EPR and dissipation proxy indicators can be stably estimated from neural data remains an open question."
@@ -154,6 +156,9 @@ The earlier version already separated Landauer, tissue-level energy budgets, and
 </p>
 <p>
 A second shortcut also had to be blocked. If an article uses irreversibility language and then casually switches to <strong>energy cost</strong> or <strong>metabolic demand</strong>, the burden of proof changes. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that about 40% of voxels with significant task-evoked BOLD changes displayed oxygen-metabolism changes in the opposite direction. Observation-side time asymmetry therefore cannot be upgraded to metabolic dissipation unless a physiology-side route such as calibrated CMRO<sub>2</sub>, FDG-PET, or <sup>31</sup>P-MRS is disclosed separately.
+</p>
+<p>
+A third weakness remained even after that fix: the page still let the reader treat the observed trajectory as if it were thermodynamically sufficient by default. The current thermodynamics literature does not support that shortcut. <a href="https://doi.org/10.1038/s41467-019-11051-w" target="_blank">Martínez et al. (2019)</a> showed that waiting-time asymmetry can reveal hidden dissipation even when observable current vanishes. <a href="https://doi.org/10.1038/s41467-024-52602-0" target="_blank">Hartich &amp; Godec (2024)</a> then showed that this reading can fail when coarse-graining and time reversal do not commute, and <a href="https://doi.org/10.1038/s41467-024-52603-z" target="_blank">Martínez et al. (2024)</a> replied by limiting the original claim to coarse-grainings that are local in time and, where needed, second-order semi-Markov constructions. <a href="https://doi.org/10.1073/pnas.2318333121" target="_blank">Blom et al. (2024)</a> further showed that lumped observations can hide dissipative cycles, acquire memory, and strongly underestimate entropy production when the coarse trajectory is naively treated as Markov. Therefore, on this site, the route card now has to expose <strong>observed-state closure, hidden-degree risk, and memory order</strong>, not only coarse-graining geometry and estimator family.
 </p>
 </section>
 
@@ -322,6 +327,11 @@ The reason this site now asks for a route card is simple: thermodynamic language
 <td>It blocks the same paper title from sounding like the same quantity after state-space construction or temporal resolution has changed.</td>
 </tr>
 <tr>
+<td><strong>Observed-state closure / hidden-degree risk</strong></td>
+<td>State whether the observed process is treated as Markov, 1st/2nd-order semi-Markov, or another memory-bearing process, whether coarse-graining and time reversal commute under the adopted construction, which hidden states or cycles were collapsed, and whether waiting-time or memory diagnostics were checked.</td>
+<td>It blocks zero current or a small irreversibility score from being misread as near-equilibrium when dissipation may simply be hidden in unobserved degrees of freedom or in neglected memory.</td>
+</tr>
+<tr>
 <td><strong>Estimator family and dynamical assumptions</strong></td>
 <td>Name whether the result comes from transition-flux lower bounds, time-shifted correlations, inversion classifiers, visibility graphs, state-space kinetic Ising models, or another explicit family, and state whether steady-state, Markov, pairwise, conditional-independence, or source-model assumptions are imposed.</td>
 <td>It blocks all irreversibility papers from being collapsed into one common "EPR measurement," and blocks model-conditioned summaries from sounding like model-free physiology.</td>
@@ -383,6 +393,11 @@ On this site, strengthening a thermodynamic interpretation does <strong>not</str
 <td>It still does not identify the unique neural mechanism or synaptic circuit.</td>
 </tr>
 <tr>
+<td><strong>Observed-state closure / memory-order audit</strong></td>
+<td>Shows whether zero current or a small estimate could be an artifact of hidden cycles, hidden variables, or a too-low Markov order rather than evidence that dissipation is genuinely weak.</td>
+<td>It still does not recover the total microscopic entropy production by itself.</td>
+</tr>
+<tr>
 <td><strong>Finite-data disclosure</strong></td>
 <td>Shows whether rare or unobserved reverse transitions are driving the estimate and whether the claimed irreversibility survives a realistic sampling audit.</td>
 <td>It still does not solve hidden-variable bias by itself.</td>
@@ -405,6 +420,7 @@ On this site, strengthening a thermodynamic interpretation does <strong>not</str
 <li><strong>Separate the organization's budget and acceptance gate:</strong>20W and signaling partition are background values and should not be made into site-wide KPIs. </li>
 <li><strong>Distinguish information entropy production and physical dissipation:</strong>Do not write the lower bound estimation from coarse-grained neural data as physical dissipation itself. </li>
 <li><strong>Name coarse-graining and timescale explicitly:</strong>Parcelization, clustering, PCA rank, source model, window length, and temporal binning are part of the claim, not implementation footnotes. </li>
+<li><strong>Do not assume the observed trajectory is thermodynamically closed:</strong>Write hidden-degree risk, local-in-time coarse-graining assumption, and effective memory order explicitly when waiting-time or semi-Markov arguments are used. </li>
 <li><strong>Name estimator family, dynamical assumptions, and finite-data treatment:</strong>Transition-based lower bounds, time-shifted correlations, inversion classifiers, visibility graphs, and state-space Ising models are not interchangeable, and steady-state / pairwise / rare-transition assumptions are part of the claim. </li>
 <li><strong>Do not infer metabolism without a physiology-side route:</strong>If the text uses energetic or metabolic language, disclose calibrated CMRO<sub>2</sub>, FDG-PET, <sup>31</sup>P-MRS, or abstain. </li>
 <li><strong>Thermodynamic indicators are not used in place of auxiliary logs:</strong>OOD generalization, perturbation, validation, uncertainty, and abstention conditions. </li>
@@ -417,7 +433,7 @@ On this site, strengthening a thermodynamic interpretation does <strong>not</str
 <h2 class="section-title">6 questions when reading thermodynamic claims</h2>
 <ol>
 <li><strong>Are we talking about lower bounds or actual measurements?</strong>It is important not to confuse theoretical lower bounds such as Landauer's with actual consumption or dissipation. </li>
-<li><strong>How was the state space built?</strong>Check parcelization, clustering, PCA rank, source reconstruction, window length, and temporal binning before reading the number. </li>
+<li><strong>How was the state space built, and what hidden-state / memory risk remains?</strong>Check parcelization, clustering, PCA rank, source reconstruction, window length, temporal binning, whether the observed process is treated as Markov or semi-Markov, and whether hidden cycles or nonlocal coarse-graining could still carry the dissipation. </li>
 <li><strong>Which estimator family, dynamical assumptions, and null control were used?</strong>Check whether this is a transition-flux lower bound, time-shifted asymmetry score, visibility-graph index, or model-based spike-train estimate, together with steady-state / pairwise assumptions and shuffle / surrogate tests. </li>
 <li><strong>If the paper says "energy" or "metabolism," where is the physiology-side route?</strong>Check whether CMRO<sub>2</sub>, FDG-PET, <sup>31</sup>P-MRS, or another direct route was actually measured, rather than inferred from the irreversibility metric alone. </li>
 <li><strong>Are you separating logical and physical costs?</strong>Are you combining FLOPs and dissipation into one number? </li>
@@ -439,10 +455,14 @@ To return to the theory frame, please use <a href="../perspective.html#design-pr
 <li>Attwell, D., &amp; Laughlin, S. B. (2001). An energy budget for signaling in the grey matter of the brain. <em>Journal of Cerebral Blood Flow &amp; Metabolism</em>, 21(10), 1133-1145. <a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">doi:10.1097/00004647-200110000-00001</a></li>
 <li>Seifert, U. (2012). Stochastic thermodynamics, fluctuation theorems and molecular machines. <em>Reports on Progress in Physics</em>, 75(12), 126001. <a href="https://doi.org/10.1088/0034-4885/75/12/126001" target="_blank">doi:10.1088/0034-4885/75/12/126001</a></li>
 <li>Lynn, C. W., et al. (2021). Broken detailed balance and entropy production in the human brain. <em>PNAS</em>, 118(47), e2109889118. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>
+<li>Martínez, I. A., Bisker, G., Horowitz, J. M., &amp; Parrondo, J. M. R. (2019). Inferring broken detailed balance in the absence of observable currents. <em>Nature Communications</em>, 10, 3542. <a href="https://doi.org/10.1038/s41467-019-11051-w" target="_blank">doi:10.1038/s41467-019-11051-w</a></li>
+<li>Hartich, D., &amp; Godec, A. (2024). Comment on “Inferring broken detailed balance in the absence of observable currents”. <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-024-52602-0" target="_blank">doi:10.1038/s41467-024-52602-0</a></li>
+<li>Martínez, I. A., Bisker, G., Horowitz, J. M., &amp; Parrondo, J. M. R. (2024). Reply to: Comment on “Inferring broken detailed balance in the absence of observable currents”. <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-024-52603-z" target="_blank">doi:10.1038/s41467-024-52603-z</a></li>
 <li>Deco, G., Sanz Perl, Y., Bocaccio, H., Tagliazucchi, E., &amp; Kringelbach, M. L. (2022). The INSIDEOUT framework provides precise signatures of the balance of intrinsic and extrinsic dynamics in brain states. <em>Communications Biology</em>, 5, 572. <a href="https://doi.org/10.1038/s42003-022-03505-7" target="_blank">doi:10.1038/s42003-022-03505-7</a></li>
 <li>de la Fuente, L. A., et al. (2023). Temporal irreversibility of neural dynamics as a signature of consciousness. <em>Cerebral Cortex</em>, 33(5), 1856–1865. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
 <li>Nartallo-Kaluarachchi, R., et al. (2025). Multilevel irreversibility reveals higher-order organization of nonequilibrium interactions in human brain dynamics. <em>PNAS</em>, 122(10), e2408791122. <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">doi:10.1073/pnas.2408791122</a></li>
 <li>Ishihara, K., &amp; Shimazaki, H. (2025). State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics. <em>Nature Communications</em>, 16, 10852. <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
+<li>Blom, K., Song, K., Vouga, E., Godec, A., &amp; Makarov, D. E. (2024). Milestoning estimators of dissipation in systems observed at a coarse resolution. <em>PNAS</em>, 121(17), e2318333121. <a href="https://doi.org/10.1073/pnas.2318333121" target="_blank">doi:10.1073/pnas.2318333121</a></li>
 <li>Teza, G., &amp; Stella, A. L. (2020). Exact coarse graining preserves entropy production out of equilibrium. <em>Physical Review Letters</em>, 125(11), 110601. <a href="https://doi.org/10.1103/PhysRevLett.125.110601" target="_blank">doi:10.1103/PhysRevLett.125.110601</a></li>
 <li>Cocconi, L., Salbreux, G., &amp; Pruessner, G. (2022). Scaling of entropy production under coarse graining in active disordered media. <em>Physical Review E</em>, 105(4), L042601. <a href="https://doi.org/10.1103/PhysRevE.105.L042601" target="_blank">doi:10.1103/PhysRevE.105.L042601</a></li>
 <li>Baiesi, M., Nishiyama, T., &amp; Falasco, G. (2024). Effective estimation of entropy production with lacking data. <em>Communications Physics</em>, 7, 264. <a href="https://doi.org/10.1038/s42005-024-01742-2" target="_blank">doi:10.1038/s42005-024-01742-2</a></li>
