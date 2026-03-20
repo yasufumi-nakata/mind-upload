@@ -17,6 +17,7 @@ page_highlights:
   - "Connectomes and cell types alone do not determine long-term dynamics; sleep/homeostasis, sleep architecture / replay-coupling, myelination, thermal-state, bioenergetic / mitochondrial state, astrocyte / glial-state, and clearance / immune support remain separate variables."
   - "Human evidence is layered: local ultrastructure, synaptic-density PET, and macro biochemical / energetic / ionic / thermal / myelin / clearance proxies are not one near-direct readout."
   - "Clearance / immune evidence is not one class: drainage anatomy, microglia-related synaptic control, human CSF-mobility MRI, and model-based biomarker-efflux routes are kept separate."
+  - "Bioenergetic evidence is not one class: presynaptic ATP-demand support, dendritic mitochondrial positioning / fission, synaptic ATP-synthase nano-organization, mitochondrial Ca2+-efflux tuning, and human macro energetic imaging are kept separate."
   - "Several living-human proxy rows are not promoted together unless same-subject relation, model burden, and residual hidden-state ceilings are disclosed explicitly."
   - "For hemodynamic modalities, BOLD or fNIRS amplitude is not read as neural difference unless vascular-state / CVR limits are audited separately."
   - "For EEG / MEG connectivity, wPLI, source-space graphs, and information-flow labels are not read as leak-proof communication maps or causal circuits unless leakage, perturbation, and pipeline limits are disclosed separately."
@@ -119,6 +120,13 @@ The front door was still too coarse if it only said that many hidden states rema
 <strong>If You Are Treating Myelin As One Solved Timing Variable</strong>
 <p>
 This site now blocks that shortcut too. A myelin paper can be about <strong>learning-dependent oligodendrogenesis</strong>, <strong>node / internode / periaxonal timing control</strong>, <strong>developmental plasticity brake</strong>, <strong>remyelination-linked functional recovery</strong>, or a <strong>macro human MRI proxy</strong>, and those are not the same inferential object. Therefore, a human myelin map or tract-speed estimate is not read here as per-axon timing-state ground truth, and functional recovery under remyelination is not read as proof that healthy myelin-state was completely restored. The shortest route is <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> plus <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#myelin-route-card">Wiki: myelin / oligodendrocyte route card</a>.
+</p>
+</div>
+
+<div class="note-box">
+<strong>If You Are Treating Energetic Evidence As One Solved Row</strong>
+<p>
+Recent primary papers require a narrower reading here as well. <a href="https://doi.org/10.1016/j.cell.2013.12.042" target="_blank">Rangaraju et al. (2014)</a> and <a href="https://doi.org/10.1038/s41598-023-40877-0" target="_blank">Underwood et al. (2023)</a> constrain <strong>presynaptic ATP-linked support / respiration</strong>, <a href="https://doi.org/10.1016/j.cell.2018.12.013" target="_blank">Rangaraju et al. (2019)</a>, <a href="https://doi.org/10.1016/j.neuron.2018.09.025" target="_blank">Divakaruni et al. (2018)</a>, <a href="https://doi.org/10.1038/s41467-023-44233-8" target="_blank">Bapat et al. (2024)</a>, and <a href="https://doi.org/10.1038/s42003-025-08963-3" target="_blank">Hu et al. (2025)</a> constrain <strong>dendritic positioning / fission and synaptic nano-organization</strong>, <a href="https://doi.org/10.1038/s42255-026-01451-w" target="_blank">Vishwanath et al. (2026)</a> constrains <strong>mitochondrial Ca<sup>2+</sup>-efflux tuning of long-term memory</strong>, and <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> plus <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> remain <strong>macro human energetic proxies</strong>. Therefore, a 31P-MRS or dynamic DMRSI result is not read here as local mitochondrial-state ground truth, and an animal mitochondrial-plasticity paper is not read here as solved human observability. The shortest route is <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> plus <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#bioenergetic-route-card">Wiki: bioenergetic / mitochondrial route card</a>.
 </p>
 </div>
 
