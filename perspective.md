@@ -5,7 +5,7 @@ description: "A research note that audits theories, measurement paths, and imple
 article_type: Perspective
 subtitle: "Audit the hypothesis of reproducing brain information processing on another substrate through the barriers of measurability, identifiability, and maintenance state"
 author: Mind Uploading Research Project
-last_updated: '2026-03-19'
+last_updated: '2026-03-20'
 note: "Research note (updated with the March 2026 re-audit)"
 audience: "Readers who want to follow theory all the way into implementation, including limits and objections"
 reading_time: "30-45 min"
@@ -13,15 +13,17 @@ page_intro: "This page is a long research note that follows the theoretical, mea
 accuracy_note: "This page does not assume that any specific theory of consciousness has already been proven correct. Supportive evidence and unresolved points are treated separately."
 page_highlights:
   - "It does not stop at introducing theories; it follows the constraints that appear when those theories are pushed toward implementation."
-  - "The page now separates local connectomics, human structural scaffold evidence, synaptic-density PET, macro energetic / myelin / ionic proxies, and hemodynamic transfer audits instead of collapsing them into one 'multimodal' advance."
-  - "The connectome-dynamics gap is now written as a 10-class latent-state problem rather than a loose warning that wiring alone is not enough."
+  - "The page now separates local connectomics, human structural scaffold evidence, synaptic-density PET, receptor / transporter atlas priors, occupancy / displacement PET, biochemical scaffolds, energetic imaging, macro support-state proxies, and hemodynamic transfer audits instead of collapsing them into one 'multimodal' advance."
+  - "The connectome-dynamics gap is now written as a 15-class maintenance / hidden-state problem rather than a loose warning that wiring alone is not enough."
   - "The stronger the claim, the more explicitly it is checked against falsification criteria, alternative explanations, and abstention conditions."
+  - "Human proxy class and operational maturity are kept separate, so proxy-rich evidence is not silently read as field-ready state identification."
   - "Even though it is long, the introduction and framing notes alone should make the page's overall stance clear."
 known_points:
   - "No major theory has become a decisive standalone answer at this point."
   - "EEG alone is constrained by inverse-problem uncertainty and spatial resolution limits, so it is insufficient as the sole basis for strong claims."
   - "Progress in local connectomics or source imaging does not imply state-complete observation of the human whole brain."
-  - "Human whole-brain evidence remains layered and proxy-based; no current route directly fixes current transcription / chromatin state, ECM / PNN gate state, local proteostasis / synaptic-tag capture, chloride set point, or branch-local mitochondrial positioning."
+  - "Human whole-brain evidence remains layered and proxy-based; no current route directly fixes current transcription / chromatin state, post-transcriptional RNA-state, ECM / PNN gate state, local proteostasis / synaptic-tag capture, cargo-routing state, chloride set point, or branch-local mitochondrial positioning."
+  - "Proxy-rich human evidence and deployment-ready measurement are different claims; sample size, model burden, hardware specialization, and fusion status remain separate ceilings."
   - "Hemodynamic modalities carry vascular transfer / CVR uncertainty in addition to neural-side uncertainty."
   - "Strong claims that omit causal perturbation, reproducibility, and explicit exclusion of alternative explanations remain on shaky ground."
 unknown_points:
@@ -414,8 +416,8 @@ href="#ref-16">[16]</a></sup>.</p>
 </div>
 
 <div class="note-box">
-<strong>2026-03-18 correction: human evidence is layered, not one progress bar</strong>
-<p>One weakness of the earlier version of this page was that it could make very different human evidence classes look like one kind of advance. The current literature does not support that reading. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a>, <a href="https://doi.org/10.1126/scitranslmed.aaf6667" target="_blank">Finnema et al. (2016)</a>, <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>, <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a>, and <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a> reduce different error terms rather than one common "state completeness" score.</p>
+<strong>2026-03-20 correction: human evidence is layered, not one progress bar</strong>
+<p>One weakness of the earlier version of this page was that it could still make very different human evidence classes look like one kind of advance. The current literature does not support that reading. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a>, <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a>, <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> reduce different error terms rather than one common "state completeness" score.</p>
 </div>
 
 <table class="data-table">
@@ -435,22 +437,46 @@ href="#ref-16">[16]</a></sup>.</p>
 <td><strong>Local structural scaffold</strong>, not living human state completeness.</td>
 </tr>
 <tr>
-<td><strong>Regional synaptic-density PET</strong><br><a href="https://doi.org/10.1126/scitranslmed.aaf6667" target="_blank">Finnema et al. (2016)</a>; <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a>; <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a></td>
+<td><strong>Regional synaptic-density PET atlas</strong><br><a href="https://doi.org/10.1126/scitranslmed.aaf6667" target="_blank">Finnema et al. (2016)</a>; <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a>; <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a></td>
 <td>Regional in vivo proxy for synaptic density and its spatial distribution.</td>
 <td>Release probability, tagged-spine history, receptor mobility, and branch-local stabilization routes.</td>
 <td><strong>Regional synaptic-density proxy</strong>, not direct ground truth of current synaptic state.</td>
 </tr>
 <tr>
-<td><strong>Parcel-level biochemical / energetic organization</strong><br><a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>; <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a>; <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a></td>
-<td>Macro biochemical organization, ATP-related metabolism, and whole-brain energetic turnover patterns.</td>
-<td>Branch-local ATP reserve, mitochondrial positioning, local proteostasis, and cell-specific energetic fragility.</td>
-<td><strong>Macro biochemical / energetic proxy</strong>, not branch-local neuronal energetic state.</td>
+<td><strong>Human receptor / transporter atlas prior</strong><br><a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a>; <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">Goulas et al. (2021)</a></td>
+<td>Normative chemoarchitectural priors for selected receptor / transporter systems across healthy human cortex.</td>
+<td>Momentary transmitter release, current receptor occupancy during the task, and an individual's time-varying neuromodulatory state.</td>
+<td><strong>Regional chemoarchitectural prior</strong>, not current whole-brain neuromodulatory state.</td>
 </tr>
 <tr>
-<td><strong>Macro support-state proxies</strong><br><a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>; <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a>; <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a></td>
-<td>In vivo macro maps for myelin bilayer, tissue sodium, and whole-brain thermal rhythms.</td>
+<td><strong>Human occupancy / displacement PET</strong><br><a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a>; <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a>; <a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">Lippert et al. (2019)</a>; <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">Erritzoe et al. (2020)</a></td>
+<td>Selected target engagement or challenge-linked release proxies for named ligands, receptor families, and scan windows.</td>
+<td>Unsampled receptor families, lamina- or cell-specific downstream effect, and continuous whole-brain transmitter state outside the bounded window.</td>
+<td><strong>Ligand- and challenge-limited neuromodulatory proxy</strong>, not direct whole-brain transmitter ground truth.</td>
+</tr>
+<tr>
+<td><strong>Whole-brain MRSI metabolic similarity scaffold</strong><br><a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a></td>
+<td>Gray-matter parcel similarity graph built from five <sup>1</sup>H-MRSI metabolite profiles.</td>
+<td>Axonal edge-level connectivity, current glucose metabolic rates / ATP turnover, current transcriptional controller, and branch-local energetic reserve.</td>
+<td><strong>Macro biochemical similarity scaffold</strong>, not tractography, flux imaging, or a local maintenance-state snapshot.</td>
+</tr>
+<tr>
+<td><strong>Human energetic imaging (31P-MRS / dynamic DMRSI)</strong><br><a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a>; <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a></td>
+<td>ATP synthesis / pH and whole-brain glucose-transport and metabolic-rate mapping in living humans.</td>
+<td>Which dendritic branch lacks ATP reserve, where mitochondria are parked, and which compartment is energetically fragile right now.</td>
+<td><strong>Macro energetic proxy</strong>, not branch-local mitochondrial ground truth.</td>
+</tr>
+<tr>
+<td><strong>Macro support-state proxies</strong><br><a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a>; <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>; <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a></td>
+<td>In vivo macro maps for tissue sodium, whole-brain thermal rhythms, and myelin bilayer organization.</td>
 <td>Cell-specific chloride set point, microtemperature gradients, adaptive conduction timing, and local inhibitory reversal potential.</td>
 <td><strong>Macro support-state proxy</strong>, not cell-specific timing or ionic ground truth.</td>
+</tr>
+<tr>
+<td><strong>Human CSF mobility / sleep-linked clearance proxy</strong><br><a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>; <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a></td>
+<td>In vivo CSF-mobility mapping and sleep-linked clearance evidence linking brain-to-plasma transport.</td>
+<td>Cell-specific immune control, local synaptic maintenance, and moment-to-moment neural state.</td>
+<td><strong>Macro support-state proxy</strong>, not direct readout of local maintenance control.</td>
 </tr>
 <tr>
 <td><strong>Hemodynamic transfer audit</strong><br><a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">Murphy et al. (2011)</a>; <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">Williams et al. (2023)</a>; <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a></td>
@@ -462,8 +488,13 @@ href="#ref-16">[16]</a></sup>.</p>
 </table>
 
 <div class="note-box">
-<strong>What this correction changes in practice</strong>
-<p>The point is not that these routes are weak. The point is that each route lowers a <strong>different</strong> latent-state error term. On this page, "human evidence advanced" now means "a specific layer advanced under a specific ceiling," not "the human whole-brain state became nearly observable."</p>
+<strong>Proxy class is not the same thing as operational maturity</strong>
+<p><a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built an SV2A atlas from <strong>33 healthy participants</strong> calibrated against postmortem autoradiography, which is a real atlas resource but still a cohort-level synaptic-density proxy. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> used <strong>51 healthy participants</strong> plus an <strong>independent replication sample of 13</strong> to derive a metabolic similarity matrix from five <sup>1</sup>H-MRSI metabolites, which is a biochemical scaffold rather than direct flux imaging. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> quantified glucose-transport and metabolic-rate maps in only <strong>five healthy participants</strong> using <strong>7 T</strong>, custom dual-frequency coils, and blood-input functions, while <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> demonstrated myelin-bilayer mapping in <strong>two healthy volunteers</strong> on high-performance hardware. Likewise, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> introduced a specialized 7 T CSF-mobility route in <strong>24 healthy adults</strong>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> combined crossover cohorts, an <strong>investigational wearable</strong>, and a <strong>compartmental model</strong> to infer sleep-linked clearance. Therefore, these rows have to be read along two axes at once: <strong>what variable class the route constrains</strong> and <strong>how specialized or deployment-limited the route still is</strong>.</p>
+</div>
+
+<div class="note-box">
+<strong>Multiple proxy rows still do not add up to state-complete measurement</strong>
+<p>The point is not that these routes are weak. The point is that each route lowers a <strong>different</strong> latent-state error term. On this page, "human evidence advanced" now means "a specific layer advanced under a specific ceiling," not "the human whole-brain state became nearly observable." The cited papers do not yet show same-person, same-session, externally validated fusion of these rows into one state-complete readout, so proxy-rich human evidence remains weaker than <strong>same-subject state closure</strong>. That last sentence is an inference from the measurement properties summarized above.</p>
 </div>
 
 <div class="stage-list">
@@ -680,8 +711,8 @@ Captioning-like Transformer model definitions and training / inference code usin
 
 <h3>Gap between connectome and dynamics</h3>
 <p>Research on the structural connectome has advanced substantially in 2024-2025. <a href="https://doi.org/10.1038/s41586-024-07558-y">Dorkenwald et al. (2024)</a> mapped the wiring diagram of an adult Drosophila whole brain, while <a href="https://doi.org/10.1038/s41586-025-08790-w">MICrONS Consortium et al. (2025)</a> proposed a local functional digital twin that combines functional measurements with connectomics from the same individual. What follows directly from these results is that the wiring diagram is a strong scaffold, not that wiring alone determines the full state.</p>
-<p>Likewise, <a href="https://doi.org/10.1038/s41586-023-06812-z">Yao et al. (2023)</a> strengthened whole-brain spatial atlases for cell identity and spatial priors, <a href="https://doi.org/10.1038/s41586-020-2907-3">Gouwens et al. (2021)</a> and <a href="https://doi.org/10.1038/s41586-025-08805-6">Gamlin et al. (2025)</a> strengthened the bridge from transcriptomes to morpho-electric phenotypes and local motifs, and <a href="https://doi.org/10.1126/science.adk4858">Shapson-Coe et al. (2024)</a>, <a href="https://doi.org/10.1126/scitranslmed.aaf6667">Finnema et al. (2016)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w">Lucchetti et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-024-07311-5">Cahill et al. (2024)</a> strengthened different human evidence classes. Importantly, these solve <strong>different kinds of deficits</strong>; improvement in one stack cannot be treated as if it meant "we now see everything."</p>
-<p>Even if one already grants current synaptic efficacy as a separate missing variable, current public evidence still leaves at least ten additional hidden-state families. <a href="https://doi.org/10.1038/s41586-020-2907-3">Gouwens et al. (2021)</a> and <a href="https://doi.org/10.1016/j.cell.2016.01.046">Hengen et al. (2016)</a> show that intrinsic excitability and firing-rate set points are not fixed by graph plus cell-type label alone. <a href="https://doi.org/10.1038/s42003-025-08459-0">Thomas et al. (2025)</a> and <a href="https://doi.org/10.1080/15548627.2020.1775393">Pandey et al. (2021)</a> show that late stabilization depends on local synaptic tagging and proteostasis. <a href="https://doi.org/10.1038/s41467-021-23520-2">Schreiner et al. (2021)</a>, <a href="https://doi.org/10.1038/s41467-024-49572-8">Schreiner et al. (2024)</a>, and <a href="https://doi.org/10.1016/j.neuron.2025.03.020">Deng et al. (2025)</a> show that replay-coupling and specific sleep windows matter for consolidation. <a href="https://doi.org/10.1038/s41593-023-01558-3">Looser et al. (2024)</a> shows that timing support remains partly myelin-dependent, <a href="https://doi.org/10.1111/j.1469-7793.1998.249bu.x">Hardingham &amp; Larkman (1998)</a> and <a href="https://doi.org/10.1038/nature07448">Long &amp; Fee (2008)</a> show that local thermal-state can alter kinetics without rewiring, <a href="https://doi.org/10.1126/science.1072699">Pizzorusso et al. (2002)</a> and <a href="https://doi.org/10.1126/science.1174146">Gogolla et al. (2009)</a> show that ECM / PNN state changes plasticity gates, <a href="https://doi.org/10.1126/science.1245423">Glykys et al. (2014)</a> and <a href="https://doi.org/10.1126/science.aad4821">Ding et al. (2016)</a> show that ionic milieu / chloride homeostasis changes inhibitory polarity and state transitions, <a href="https://doi.org/10.1016/j.cell.2018.12.013">Rangaraju et al. (2019)</a> and <a href="https://doi.org/10.1038/s41467-023-44233-8">Bapat et al. (2024)</a> show that branch-local mitochondrial support remains consequential, and <a href="https://doi.org/10.1038/s41586-024-07311-5">Cahill et al. (2024)</a> together with <a href="https://doi.org/10.1073/pnas.2211572119">Lee et al. (2022)</a> show that glial / metabolic support remains part of active maintenance.</p>
+<p>Likewise, <a href="https://doi.org/10.1038/s41586-023-06812-z">Yao et al. (2023)</a> strengthened whole-brain spatial atlases for cell identity and spatial priors, <a href="https://doi.org/10.1038/s41586-020-2907-3">Gouwens et al. (2021)</a> and <a href="https://doi.org/10.1038/s41586-025-08805-6">Gamlin et al. (2025)</a> strengthened the bridge from transcriptomes to morpho-electric phenotypes and local motifs, and <a href="https://doi.org/10.1126/science.adk4858">Shapson-Coe et al. (2024)</a>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072">Li et al. (2025)</a>, <a href="https://doi.org/10.1002/mrm.29998">Baadsvik et al. (2024)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8">Dagum et al. (2026)</a> strengthened different human evidence classes. Importantly, these solve <strong>different kinds of deficits</strong>: cell identity and spatial priors, local morpho-electric bridges, local human structural scaffold, regional synaptic-density proxy, biochemical similarity scaffold, energetic rate imaging, macro support-state mapping, and clearance proxies are not the same evidential object. Improvement in one stack therefore cannot be treated as if it meant "we now see everything."</p>
+<p>Current public evidence still leaves at least fifteen hidden-state families that remain outside connectome plus cell-type description. <a href="https://doi.org/10.1038/s41586-020-2907-3">Gouwens et al. (2021)</a>, <a href="https://doi.org/10.1038/nature09160">Grubb &amp; Burrone (2010)</a>, and <a href="https://doi.org/10.1016/j.cell.2016.01.046">Hengen et al. (2016)</a> show that intrinsic excitability and homeostatic return points are not fixed by graph plus label alone. <a href="https://doi.org/10.1126/science.adg9982">Santoni et al. (2024)</a>, <a href="https://doi.org/10.1038/nn.4069">Wang et al. (2015)</a>, <a href="https://doi.org/10.1016/j.neuron.2019.03.032">Dai et al. (2019)</a>, <a href="https://doi.org/10.1038/s41586-018-0666-1">Shi et al. (2018)</a>, and <a href="https://doi.org/10.1126/scisignal.adr1442">Peterson et al. (2025)</a> show that transcriptional and post-transcriptional controllers alter memory eligibility, receptor composition, and homeostatic plasticity. <a href="https://doi.org/10.1038/385533a0">Frey &amp; Morris (1997)</a>, <a href="https://doi.org/10.1016/j.neuron.2010.12.008">Govindarajan et al. (2011)</a>, <a href="https://doi.org/10.1080/15548627.2020.1775393">Pandey et al. (2021)</a>, and <a href="https://doi.org/10.1038/s42003-025-08459-0">Thomas et al. (2025)</a> show that late stabilization depends on local proteostasis and synaptic tagging, while <a href="https://doi.org/10.1016/j.neuron.2006.09.040">Park et al. (2006)</a>, <a href="https://doi.org/10.7554/eLife.53456">Zhao et al. (2020)</a>, and <a href="https://doi.org/10.1016/j.celrep.2021.109369">Swarnkar et al. (2021)</a> show that compartment-specific cargo delivery remains another state layer. <a href="https://doi.org/10.1016/j.neuron.2021.04.004">Torrado Pacheco et al. (2021)</a> and <a href="https://doi.org/10.1038/s41467-024-47838-5">Xu et al. (2024)</a> show that sleep/wake renormalization changes the network's operating regime, while <a href="https://doi.org/10.1016/j.neuron.2013.03.006">Ngo et al. (2013)</a>, <a href="https://doi.org/10.1038/s41593-023-01324-5">Geva-Sagiv et al. (2023)</a>, <a href="https://doi.org/10.1038/s41467-024-49572-8">Schreiner et al. (2024)</a>, and <a href="https://doi.org/10.1016/j.neuron.2025.03.020">Deng et al. (2025)</a> show that replay-coupling and specific NREM windows matter for consolidation. <a href="https://doi.org/10.1126/science.1252304">Gibson et al. (2014)</a>, <a href="https://doi.org/10.1126/science.1254960">McKenzie et al. (2014)</a>, and <a href="https://doi.org/10.1038/s41593-023-01558-3">Looser et al. (2024)</a> show that timing support remains partly myelin-dependent, <a href="https://doi.org/10.1111/j.1469-7793.1998.249bu.x">Hardingham &amp; Larkman (1998)</a>, <a href="https://doi.org/10.1111/j.1469-7793.2000.00059.x">Volgushev et al. (2000)</a>, <a href="https://doi.org/10.1038/nature07448">Long &amp; Fee (2008)</a> show that local thermal-state can alter kinetics without rewiring, <a href="https://doi.org/10.1126/science.1072699">Pizzorusso et al. (2002)</a>, <a href="https://doi.org/10.1038/nn.2338">Frischknecht et al. (2009)</a>, and <a href="https://doi.org/10.1126/science.1174146">Gogolla et al. (2009)</a> show that ECM / PNN state changes plasticity gates, <a href="https://doi.org/10.1126/science.1245423">Glykys et al. (2014)</a>, <a href="https://doi.org/10.1038/s41467-017-01749-0">Heubl et al. (2017)</a>, and <a href="https://doi.org/10.1126/science.aad4821">Ding et al. (2016)</a> show that ionic milieu / chloride homeostasis changes inhibitory polarity and state transitions, <a href="https://doi.org/10.1038/99496">Galarreta &amp; Hestrin (1999)</a>, <a href="https://doi.org/10.1038/nn.2727">Anastassiou et al. (2011)</a>, <a href="https://doi.org/10.1073/pnas.2313042121">Yang et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41467-024-53074-y">Selfe et al. (2024)</a> show that shared extracellular / electrical state can alter synchrony outside the chemical synapse graph, <a href="https://doi.org/10.1016/j.cell.2013.12.042">Rangaraju et al. (2014)</a>, <a href="https://doi.org/10.1016/j.cell.2018.12.013">Rangaraju et al. (2019)</a>, <a href="https://doi.org/10.1016/j.neuron.2018.09.025">Divakaruni et al. (2018)</a>, <a href="https://doi.org/10.1038/s41467-023-44233-8">Bapat et al. (2024)</a>, and <a href="https://doi.org/10.1038/s42003-025-08963-3">Hu et al. (2025)</a> show that branch-local bioenergetic / mitochondrial support remains consequential, <a href="https://doi.org/10.1016/j.cell.2011.02.018">Suzuki et al. (2011)</a>, <a href="https://doi.org/10.1038/s41586-024-07311-5">Cahill et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-08170-w">Williamson et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09619-2">Dewa et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-10068-0">Bukalo et al. (2026)</a> show that astrocyte-state is part of active maintenance rather than generic background, and <a href="https://doi.org/10.1038/nature14432">Louveau et al. (2015)</a>, <a href="https://doi.org/10.1093/brain/awab285">Eide &amp; Ringstad (2021)</a>, <a href="https://doi.org/10.1016/j.cell.2025.02.022">Kim et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8">Dagum et al. (2026)</a> show that clearance / immune support is another measurable but still coarse support-state layer.</p>
 
 <table class="data-table">
 <thead>
@@ -694,18 +725,33 @@ Captioning-like Transformer model definitions and training / inference code usin
 <tbody>
 <tr>
 <td><strong>Intrinsic excitability / homeostatic set point</strong></td>
-<td>Threshold, gain, and post-perturbation return point can differ within the same transcriptomic label.</td>
+<td>Threshold, gain, and the post-perturbation return point can still differ within the same transcriptomic label.</td>
 <td>Do not read short-term activity matching as proof of long-horizon dynamical equivalence.</td>
 </tr>
 <tr>
 <td><strong>Activity-dependent transcription / chromatin state</strong></td>
-<td>Allocation eligibility and late stabilization programs can differ over hours to weeks on the same graph.</td>
-<td>Do not read atlas completeness as if current memory-allocation state were already fixed.</td>
+<td>Allocation eligibility, late stabilization programs, and locus-specific plasticity control can still differ over hours to weeks on the same graph.</td>
+<td>Do not read atlas completeness as if the current memory-allocation controller were already fixed.</td>
+</tr>
+<tr>
+<td><strong>Post-transcriptional RNA-state</strong></td>
+<td>Isoform choice, m6A-dependent translation / degradation, and RNA-editing ratios can still change plasticity on the same graph even when gene-level abundance looks similar.</td>
+<td>Do not read transcript abundance as if it already fixed the active RNA controller.</td>
 </tr>
 <tr>
 <td><strong>Local proteostasis / synaptic-tagging state</strong></td>
 <td>Tagged spines and branches can differ in PRP capture, translation, degradation, and autophagy balance even when current weights look similar.</td>
 <td>Do not treat a weight snapshot as the late-stabilization route.</td>
+</tr>
+<tr>
+<td><strong>Cargo-transport / cytoskeletal trafficking state</strong></td>
+<td>Branch-, spine-, and bouton-specific delivery and retention of receptors, endosomes, RNA cargoes, mitochondria, and presynaptic components still remain variable.</td>
+<td>Do not treat a graph plus local protein availability as proof that the correct cargo reached the correct compartment.</td>
+</tr>
+<tr>
+<td><strong>Sleep/wake-dependent renormalization</strong></td>
+<td>A same-day fit is a different issue from overnight maintenance of the operating regime.</td>
+<td>Do not treat daytime success as proof of sleep-consistent network recovery.</td>
 </tr>
 <tr>
 <td><strong>Sleep architecture / replay-coupling state</strong></td>
@@ -719,7 +765,7 @@ Captioning-like Transformer model definitions and training / inference code usin
 </tr>
 <tr>
 <td><strong>Thermal-state</strong></td>
-<td>Local temperature still shifts membrane kinetics, spike generation, and field-potential amplitude on the same graph.</td>
+<td>Local temperature still shifts membrane kinetics, spike generation, field-potential amplitude, and sequence timing on the same graph.</td>
 <td>Macro thermometry is not proof that local timing-state matched.</td>
 </tr>
 <tr>
@@ -733,19 +779,29 @@ Captioning-like Transformer model definitions and training / inference code usin
 <td>Do not treat connectome plus nominal weights as sufficient for inhibitory polarity or rhythm claims.</td>
 </tr>
 <tr>
+<td><strong>Shared extracellular / electrical state</strong></td>
+<td>Gap-junction coupling, endogenous field effects, and local inhibitory driving force can still shift fast synchrony and spike timing outside the chemical synapse graph.</td>
+<td>Do not treat a chemical connectome as proof that the local electrotonic regime also matched.</td>
+</tr>
+<tr>
 <td><strong>Bioenergetic / mitochondrial state</strong></td>
 <td>Branch-local ATP reserve, mitochondrial positioning, and fission/fusion still change repeated-burst reliability and dendritic plasticity.</td>
 <td>Macro energetic proxies are not ground truth for branch-local energetic state.</td>
 </tr>
 <tr>
-<td><strong>Glial / metabolic support</strong></td>
-<td>Astrocyte network state, lactate support, and memory maintenance under turnover remain active variables.</td>
+<td><strong>Astrocyte / glial-state</strong></td>
+<td>Astrocyte network responses, learning-associated ensembles, lactate transport, and multiday stabilization remain active variables.</td>
 <td>Do not reinterpret persistence as static storage; active maintenance remains visible in the evidence.</td>
+</tr>
+<tr>
+<td><strong>Clearance / immune support</strong></td>
+<td>Meningeal lymphatics, CSF-interstitial exchange, and microglia-mediated support still shape multiday recovery and maintenance without being fixed by the graph.</td>
+<td>Do not read macro clearance evidence as if the local immune controller were already identified.</td>
 </tr>
 </tbody>
 </table>
 
-<p>Brain emulation therefore requires more than reproducing neuronal connectivity. Current connectomics, atlas work, and human proxy layers are all valuable, but they push different parts of the problem. On this page the correction rule is simple: each claim must state <strong>which hidden-state families were directly measured</strong>, <strong>which were only constrained by priors or proxies</strong>, and <strong>which remained latent and forced abstention</strong>. Bridging the gap between static structure and dynamic state still requires transcriptomic connectomics<sup><a href="#ref-33">[33]</a></sup> plus stepwise verification through state-completeness gates.</p>
+<p>Brain emulation therefore requires more than reproducing neuronal connectivity. Current connectomics, atlas work, and human proxy layers are all valuable, but they push different parts of the problem. Same-day activity matching, cross-day stability, and maintenance-consistent dynamics therefore remain separate claims. On this page the correction rule is simple: each claim must state <strong>which hidden-state families were directly measured</strong>, <strong>which were only constrained by priors or proxies</strong>, and <strong>which remained latent and forced abstention</strong>. Bridging the gap between static structure and dynamic state still requires transcriptomic connectomics<sup><a href="#ref-33">[33]</a></sup> plus stepwise verification through state-completeness gates.</p>
 
 <!-- Figure: Connectome Progress -->
 <div class="figure-box">
