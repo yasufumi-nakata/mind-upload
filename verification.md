@@ -23,6 +23,7 @@ page_highlights:
   - "For MRSI-derived metabolic-connectome claims, the Observability Budget now requires a metabolic-similarity route card that names the metabolite set, parceling, correction model, spectral QC, and whether the object is static similarity or kinetic rate imaging."
   - "For destructive ultrastructure claims, the Observability Budget now requires a destructive-structure route card that names preservation route, live-to-fix delay, registration scope, section-loss / segmentation QA, throughput scale, and omitted live-state families."
   - "For connectome-constrained predictors, the Observability Budget now requires a conditional-model route card that names the structural prior, fitted degrees of freedom, task/state regime, omitted mechanisms, validation class, and abstention boundary."
+  - "For inverse and model-based claims, the Identifiability Card now separates observability, structural identifiability, and practical identifiability, and requires candidate-space, experiment-design, and abstention disclosure before uniqueness language is allowed."
   - "For sleep replay claims, the maintenance-state budget now requires a route card that names preparation, event definition, timing policy, item-selection regime, and abstention before overnight gain is read mechanistically."
   - "For phospho-signaling / second-messenger claims, the maintenance-state budget now requires a route card that names claim family, assay / direct observable, compartment scope, timing window, causal leverage, and abstention."
   - "For DCM / effective-connectivity claims, the Observability Budget now requires an effective-connectivity route card that names candidate model space, observation-model assumptions, validation, reliability, and abstention."
@@ -60,6 +61,7 @@ known_points:
   - "A BOLD or fNIRS amplitude difference without vascular-state / CVR audit remains a hemodynamic-limited difference rather than a clean neural difference."
   - "An MRSI-derived metabolic-connectome label without metabolite-set, parceling, correction-model, and QC disclosure remains a macro-biochemical similarity scaffold rather than tractography or flux imaging."
   - "A connectome-constrained activity predictor without structural-prior, fitted-parameter, task-regime, omitted-mechanism, validation, and abstention disclosure remains a conditional model rather than internal-state recovery."
+  - "More direct observables do not by themselves guarantee unique recovery; degeneracy can persist unless candidate-model space, recorded subset, and perturbation design are disclosed."
   - "An effective-connectivity label without candidate-model, validation, and reliability disclosure remains a model-conditioned hypothesis rather than discovered causal wiring."
   - "An irreversibility label without signal-route, coarse-graining / timescale, estimator-family, dynamical-assumption, and quantity-type disclosure remains an exploratory auxiliary result rather than a portable thermodynamic measurement."
   - "A synapse list or weight estimate does not by itself fix perisynaptic ECM / PNN state, so plasticity and stabilization claims need a separate ceiling."
@@ -695,6 +697,70 @@ The most important update in this pass is that the criticism that ``important hi
 </tr>
 </tbody>
 </table>
+<h3 class="section-title" id="identifiability-card">Identifiability Card for inverse and model-based claims</h3>
+<div class="note-box">
+<strong>2026-03-20 addendum: observability and identifiability must be logged separately</strong>
+<p>
+The remaining weakness after adding the <strong>Observability Budget</strong> was that richer measurement could still be overread as if it had already collapsed the solution set. The primary literature does not support that shortcut. <a href="https://doi.org/10.1155/2019/8497093" target="_blank">Villaverde (2019)</a> reviewed that <strong>observability</strong> and <strong>structural identifiability</strong> are different theoretical questions, and <a href="https://doi.org/10.1098/rsif.2019.0043" target="_blank">Villaverde et al. (2019)</a> showed that unknown states, parameters, and inputs must often be treated jointly rather than as separable audits. In neuroscience, <a href="https://doi.org/10.1038/nn1352" target="_blank">Prinz et al. (2004)</a> showed that similar circuit activity can arise from disparate parameters, <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">Rasero et al. (2024)</a> showed that similar human activation patterns can still hide different macroscopic network states, and <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that connectome-constrained recurrent networks remain degenerate until additional recordings collapse the space of compatible dynamics. <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">Liu et al. (2025)</a> then showed that practical identifiability depends on experiment design and data-collection policy, not only on the estimation algorithm. Therefore, this site now asks inverse and model-based claims to attach an <strong>Identifiability Card</strong> on top of the Observability Budget.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Identifiability Card field</th>
+<th>Minimum disclosure</th>
+<th>What this site stops claiming if absent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim object</strong></td>
+<td>Name whether the submission claims source location, latent state, parameter set, effective connectivity, controller variable, or connectome-conditioned predictor, and specify the timescale and spatial unit of that object.</td>
+<td>The paper is not read as if all forms of "recovery" were interchangeable.</td>
+</tr>
+<tr>
+<td><strong>Structural identifiability layer</strong></td>
+<td>State whether the declared equations / priors / outputs make the target theoretically identifiable, and name known symmetries, reparameterizations, or variables that remain non-identifiable even with noise-free data.</td>
+<td>Finite-data success is not promoted to in-principle uniqueness.</td>
+</tr>
+<tr>
+<td><strong>Practical identifiability layer</strong></td>
+<td>Report the finite-data evidence such as posterior width, profile likelihood, bootstrap / ensemble spread, SNR dependence, and sample or time-window dependence under the actual dataset.</td>
+<td>A theoretically identifiable model is not read as practically recoverable from the submitted data.</td>
+</tr>
+<tr>
+<td><strong>Competing solution set</strong></td>
+<td>Name the alternative model families, near-equivalent fits, solver families, or local optima that remained competitive, and summarize how different their internal variables still are.</td>
+<td>One good fit is not read as recovered mechanism or unique internal state.</td>
+</tr>
+<tr>
+<td><strong>Experiment-design leverage</strong></td>
+<td>Disclose which perturbations, tasks, stimulus regimes, or active data-collection choices were intentionally used to collapse degeneracy, and say explicitly if the evidence is passive-observation only.</td>
+<td>Passive fit is not promoted to solved identification just because prediction improved.</td>
+</tr>
+<tr>
+<td><strong>Coverage / recorded subset</strong></td>
+<td>Name which regions, neurons, channels, or variables were actually observed, how that subset was chosen, and what latent compartments remain unmeasured but could still change the solution.</td>
+<td>Sparse or convenience coverage is not read as state closure for the whole system.</td>
+</tr>
+<tr>
+<td><strong>Held-out falsification route</strong></td>
+<td>Report held-out perturbation prediction, external calibration, or an explicit failure test that the chosen solution had to pass rather than explain post hoc.</td>
+<td>Observed fit is not read as uniquely recovered state dynamics.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Name which uniqueness claim is <em>not</em> being made, and under which alternative assumptions the interpretation changes materially.</td>
+<td>The result is not promoted from predictive/localized/model-conditioned evidence to unique recovery language.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Minimum operating rule</strong>
+<p>
+If this card is missing, this site stops at <strong>predictive fit</strong>, <strong>localized source hypothesis</strong>, or <strong>model-conditioned mechanism</strong>. It does not promote the result to <strong>unique internal-state recovery</strong>, <strong>state-complete reconstruction</strong>, or <strong>mechanism uniquely identified</strong> language.
+</p>
+</div>
 <h3 class="section-title" id="fusion-card">Fusion Card for multimodal or atlas-prior results</h3>
 <div class="note-box">
 <strong>2026-03-20 addendum: multimodal and atlas-prior results need a Fusion Card</strong>
@@ -923,7 +989,7 @@ For connectome-constrained neural predictors, the label alone is also not enough
 <div class="note-box">
 <strong>Minimum operating rules</strong>
 <p>
-If this card is missing, this site treats the result as <strong>L0/L1 reproducible analysis or limited decode</strong> and does not promote it to L2 or above. For example, the default ceiling is <strong>macro-state tracking</strong> for <strong>EEG / HD-EEG + MRI only</strong>, <strong>an implant-region local population window</strong> for <strong>high-density extracellular probe only</strong>, <strong>structural scaffold</strong> for <strong>volume EM only</strong>, <strong>local ex vivo scaffold</strong> for <strong>human ultrastructure without a destructive-structure route card</strong>, <strong>molecular / spatial prior</strong> for <strong>whole-brain atlas only</strong>, and still only <strong>local conditional prediction</strong> even for <strong>same-brain calcium + EM</strong>. For hemodynamic modalities, a group or cross-day BOLD / fNIRS difference without <strong>vascular-state / CVR</strong> or <strong>short-separation / superficial-bias</strong> audit is not accepted here as a neural difference. For diffusion-MRI tractography, a connectome claim without a <strong>tractography route card</strong> is not accepted here as an edge-complete graph and remains at the <strong>macro pathway prior / targeted bundle hypothesis</strong> ceiling. For connectome-constrained predictors, a model claim without a <strong>conditional-model route card</strong> remains at the <strong>conditional hypothesis engine / task-bounded predictor</strong> ceiling and is not accepted here as unique internal-state recovery. If a chronic-probe result lacks a unit-identity audit, single-unit longitudinal claims are not accepted. Detailed stack-specific ceilings and the <strong>state variable × timescale</strong> matrix are summarized in <a href="wiki/measurement-stack-and-claim-ceiling.html#state-variable-matrix">Wiki: observability and claim ceiling by measurement stack</a>.
+If this card is missing, this site treats the result as <strong>L0/L1 reproducible analysis or limited decode</strong> and does not promote it to L2 or above. For example, the default ceiling is <strong>macro-state tracking</strong> for <strong>EEG / HD-EEG + MRI only</strong>, <strong>an implant-region local population window</strong> for <strong>high-density extracellular probe only</strong>, <strong>structural scaffold</strong> for <strong>volume EM only</strong>, <strong>local ex vivo scaffold</strong> for <strong>human ultrastructure without a destructive-structure route card</strong>, <strong>molecular / spatial prior</strong> for <strong>whole-brain atlas only</strong>, and still only <strong>local conditional prediction</strong> even for <strong>same-brain calcium + EM</strong>. For inverse or model-based claims, a submission without an <strong>Identifiability Card</strong> is not accepted here as <strong>unique internal-state recovery</strong> and remains at the predictive / localization / model-conditioned ceiling even if its observability class improved. For hemodynamic modalities, a group or cross-day BOLD / fNIRS difference without <strong>vascular-state / CVR</strong> or <strong>short-separation / superficial-bias</strong> audit is not accepted here as a neural difference. For diffusion-MRI tractography, a connectome claim without a <strong>tractography route card</strong> is not accepted here as an edge-complete graph and remains at the <strong>macro pathway prior / targeted bundle hypothesis</strong> ceiling. For connectome-constrained predictors, a model claim without a <strong>conditional-model route card</strong> remains at the <strong>conditional hypothesis engine / task-bounded predictor</strong> ceiling and is not accepted here as unique internal-state recovery. If a chronic-probe result lacks a unit-identity audit, single-unit longitudinal claims are not accepted. Detailed stack-specific ceilings and the <strong>state variable × timescale</strong> matrix are summarized in <a href="wiki/measurement-stack-and-claim-ceiling.html#state-variable-matrix">Wiki: observability and claim ceiling by measurement stack</a>.
 </p>
 </div>
 </section>
@@ -1819,6 +1885,7 @@ In response to technical criticisms (Issue #257-#260) submitted in the latter ha
 <li><strong>Fusion Card:</strong>When reporting multimodal or atlas-prior results, name the acquisition relation, synchronization route and unresolved lag, geometry / co-registration scope, fusion model, hemodynamic vascular-state / CVR calibration when applicable, unimodal and prior-only baselines, external calibration route, and abstention boundary. If this is missing, the result stays at the strongest unimodal or atlas-conditioned ceiling rather than same-subject cross-stack state identification. </li>
 <li><strong>ESI/HBM logs:</strong>Only when making anatomical source claims, attach uncertainty maps from cranial conductivity, forward model sensitivity analysis, or hierarchical Bayesian estimation. </li>
 <li><strong>Inverse-Solver Agreement Log:</strong>When reporting an anatomical ESI/HBM result, name the inverse families / packages compared, parameter window, headline-location spread or overlap metric, and whether the displayed map is best-case, median, or ensemble. If this is missing, the result stays at the method-sensitive source-hypothesis level. </li>
+<li><strong>Identifiability Card:</strong>For inverse or model-based claims, name the claim object, structural-identifiability assumptions, practical-identifiability evidence, alternative solution set, experiment-design leverage, recorded subset, held-out falsification route, and abstention boundary. If this is missing, the result stays at predictive / localization / model-conditioned level rather than unique recovery. </li>
 <li><strong>Alternative model log:</strong>Does not claim that the estimated model is the only solution, but reports the existence of alternative models or equivalence classes that can explain the same observed statistics. </li>
 <li><strong>Connectome-Constrained Model Card:</strong>When reporting a connectome-constrained predictor, name the structural prior and coverage, fitted degrees of freedom, task/state regime plus OOD slices, omitted mechanisms, validation / perturbation class, ensemble spread or alternative families, and abstention boundary. If this is missing, the result stays at the conditional-model / hypothesis-engine level. </li>
 <li><strong>Effective Connectivity Route Card:</strong>When reporting DCM or related effective-connectivity results, name the node set and omitted competitors, neural-mass / HRF / prior assumptions, family comparison or model-recovery results, perturbation / external validation route, reliability window, and abstention boundary. If this is missing, the result stays at the model-conditioned hypothesis level. </li>
@@ -1975,6 +2042,10 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Swarnkar, S., Avchalumov, Y., Espadas, I., Grinman, E., Liu, X.-A., Raveendra, B. L., Zucca, A., Mediouni, S., Sadhu, A., Valente, S., Page, D., Miller, K., &amp; Puthanveettil, S. V. (2021). Molecular motor protein KIF5C mediates structural plasticity and long-term memory by constraining local translation. <a href="https://doi.org/10.1016/j.celrep.2021.109369" target="_blank">doi:10.1016/j.celrep.2021.109369</a></li>
 <li>Aiken, J., &amp; Holzbaur, E. L. F. (2024). Spastin locally amplifies microtubule dynamics to pattern the axon for presynaptic cargo delivery. <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">doi:10.1016/j.cub.2024.03.010</a></li>
 <li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
+<li>Villaverde, A. F. (2019). Observability and Structural Identifiability of Nonlinear Biological Systems. <em>Complexity</em>, 2019, 8497093. <a href="https://doi.org/10.1155/2019/8497093" target="_blank">doi:10.1155/2019/8497093</a></li>
+<li>Villaverde, A. F., Tsiantis, N., &amp; Banga, J. R. (2019). Full observability and estimation of unknown inputs, states and parameters of nonlinear biological models. <em>Journal of The Royal Society Interface</em>, 16(156), 20190043. <a href="https://doi.org/10.1098/rsif.2019.0043" target="_blank">doi:10.1098/rsif.2019.0043</a></li>
+<li>Rasero, J., Betzel, R., Sentis, A. I., Kraynak, T. E., Gianaros, P. J., &amp; Verstynen, T. (2024). Similarity in evoked responses does not imply similarity in macroscopic network states. <em>Network Neuroscience</em>, 8(1), 335-354. <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">doi:10.1162/netn_a_00354</a></li>
+<li>Liu, X., Wanika, L., Chappell, M. J., &amp; Branke, J. (2025). Efficient data collection for establishing practical identifiability via active learning. <em>Computational and Structural Biotechnology Journal</em>, 27, 4992-5006. <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">doi:10.1016/j.csbj.2025.10.058</a></li>
 <li>Shiu, P.-K., et al. (2024). A Drosophila computational brain model reveals sensorimotor processing. <a href="https://doi.org/10.1038/s41586-024-07763-9" target="_blank">doi:10.1038/s41586-024-07763-9</a></li>
 <li>Pospisil, D. A., et al. (2024). The fly connectome reveals a path to the effectome. <a href="https://doi.org/10.1038/s41586-024-07982-0" target="_blank">doi:10.1038/s41586-024-07982-0</a></li>
 <li>Galarreta, M., &amp; Hestrin, S. (1999). A network of fast-spiking cells in the neocortex connected by electrical synapses. <a href="https://doi.org/10.1038/99496" target="_blank">doi:10.1038/99496</a></li>

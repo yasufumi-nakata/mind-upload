@@ -23,6 +23,7 @@ page_highlights:
   - "Wearable OPM-MEG is treated as movement-tolerant macro measurement only when shielding, field control, sensor calibration, and anatomy choice are disclosed."
   - "R6 treats personalization not as a pure performance trick, but as a verification problem that must separate target signal from subject fingerprint and setup shortcuts."
   - "R4 now treats DCM / effective-connectivity outputs as route-card claims that must disclose model space, observation assumptions, validation, reliability, and abstention."
+  - "R7 now separates observability, structural identifiability, and practical identifiability, so richer proxies are not silently promoted to uniqueness."
 known_points:
   - "Splitting the problem into P/M/R/I/V/D makes it easier to see which questions are foundational and which sit higher up."
   - "The dependency structure that prevents strong claims from skipping earlier layers is fairly clear."
@@ -35,6 +36,7 @@ known_points:
   - "Human-side advances reduce different error terms and remain differently deployment-limited; proxy-rich evidence is not yet same-subject, same-session, externally calibrated state identification."
   - "OPM-MEG motion tolerance still depends on magnetic shielding, active nulling, calibration, and source-model disclosure."
   - "The fact that personalization helps performance is not the same as showing a population-level neural signal; subject-fingerprint and acquisition-distribution audits are still required."
+  - "Richer observability and better fit do not by themselves collapse the compatible solution set; candidate-space and experiment-design audits remain separate."
 unknown_points:
   - "It is still unsettled which measurement granularity will ultimately be sufficient for WBE."
   - "V5 identity questions and D-series social deployment conditions remain unresolved."
@@ -943,7 +945,7 @@ On this site, any result that calls itself a diagnosis model, state biomarker, o
 <div class="qa-body">
 <p><strong>Question:</strong>When there are many different models that explain the same observation, which assumptions can be used to narrow it down? Where does the uncertainty come from: sensor geometry, conductivity, preprocessing, candidate model ensembles, and intervention design? </p>
 <p><strong>Recondition:</strong>If the conclusion is significantly reversed due to small preconditioning differences, conductivity assumptions, or changes in the candidate model space, or cannot be recovered using held-out perturbations or external criteria, we do not consider the identification to be successful. </p>
-<p><strong>Next, we need:</strong>In addition to prior distribution/regularization, we publish all of the <strong>compared and excluded families</strong>, <strong>sensitivity analysis of electrode geometry, head model, and conductivity</strong>, <strong>simulation/phantom/invasive calibration</strong>, and <strong>abstention conditions when models overlap</strong>, and only adopt robust conclusions. </p>
+<p><strong>Next, we need:</strong>In addition to prior distribution/regularization, we publish all of the <strong>compared and excluded families</strong>, <strong>sensitivity analysis of electrode geometry, head model, and conductivity</strong>, <strong>simulation/phantom/invasive calibration</strong>, and <strong>abstention conditions when models overlap</strong>, and only adopt robust conclusions. The submission-side rule for this node is <a href="verification.html#identifiability-card">Verification: Identifiability Card</a>. </p>
 <div class="note-box">
 <strong>Separate predictability, localization, and identity</strong>
 <p>
@@ -959,6 +961,12 @@ This page does not treat <strong>improved held-out prediction</strong>, <strong>
 <strong>2026-03 Supplement: Correlation, prediction, and identification are not treated with the same strength</strong>
 <p>
 The EEG literature with direct validation is rather revealing of its limitations when read carefully. Seeber et al. (2019) showed that the subcortical signal was <strong>conditionally detectable</strong> in 256ch scalp EEG, but did not claim general unique reconstruction. Unnwongse et al. (2023) showed in direct verification using intracranial stimulation that localization error depends on the conductivity assumption and source depth, and Hao et al. (2025) reported that source power and source depth greatly influenced the error in a patient cohort of simultaneous HD-EEG/SEEG. Therefore, even if a cross-modal correlation or a held-out prediction appears, it is primarily an improvement in predictability / localization, and does not necessarily lead to a unique solution to the internal state.
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-20 supplement: richer observables are not the same as a collapsed solution set</strong>
+<p>
+The remaining weak point here was that <strong>more measured variables</strong> could still sound too close to <strong>unique recovery</strong>. <a href="https://doi.org/10.1155/2019/8497093" target="_blank">Villaverde (2019)</a> reviewed that observability and structural identifiability are different questions, and <a href="https://doi.org/10.1098/rsif.2019.0043" target="_blank">Villaverde et al. (2019)</a> showed that unknown inputs, states, and parameters often have to be analysed jointly. In neuroscience, <a href="https://doi.org/10.1038/nn1352" target="_blank">Prinz et al. (2004)</a> showed that similar circuit activity can arise from disparate parameters, <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">Rasero et al. (2024)</a> showed that similar human activation patterns can still hide different macroscopic network states, and <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that connectome-constrained dynamics remain degenerate until additional recordings are supplied. Therefore, this roadmap now treats R7 as a three-step audit: <strong>(1) what the measurement stack makes observable</strong>, <strong>(2) what the declared model could identify in principle</strong>, and <strong>(3) what the actual dataset and perturbation design identify in practice</strong>.
 </p>
 </div>
 </div>
@@ -2065,6 +2073,9 @@ Below are the main documents directly related to the open questions of U0-U15. F
 <li>Jafarian, A., Assem, M. K., Kocagoncu, E., et al. (2024). Reliability of dynamic causal modelling of resting-state magnetoencephalography. <a href="https://doi.org/10.1002/hbm.26782" target="_blank">doi:10.1002/hbm.26782</a></li>
 <li>Hauser, A., &amp; B&uuml;hlmann, P. (2012). Characterization and greedy learning of interventional Markov equivalence classes of directed acyclic graphs. <a href="https://jmlr.org/papers/v13/hauser12a.html" target="_blank">JMLR</a></li>
 <li>Vink, J. J., Ramos-Nu&ntilde;ez, A. I., Bellesi, A., et al. (2020). The brain's functional connectome is a poor predictor of the brain's causal activity flow. <a href="https://doi.org/10.1371/journal.pcbi.1007866" target="_blank">doi:10.1371/journal.pcbi.1007866</a></li>
+<li>Villaverde, A. F. (2019). Observability and Structural Identifiability of Nonlinear Biological Systems. <a href="https://doi.org/10.1155/2019/8497093" target="_blank">doi:10.1155/2019/8497093</a></li>
+<li>Villaverde, A. F., Tsiantis, N., &amp; Banga, J. R. (2019). Full observability and estimation of unknown inputs, states and parameters of nonlinear biological models. <a href="https://doi.org/10.1098/rsif.2019.0043" target="_blank">doi:10.1098/rsif.2019.0043</a></li>
+<li>Rasero, J., Betzel, R., Sentis, A. I., Kraynak, T. E., Gianaros, P. J., &amp; Verstynen, T. (2024). Similarity in evoked responses does not imply similarity in macroscopic network states. <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">doi:10.1162/netn_a_00354</a></li>
 <li>Laukkonen, R., Friston, K., &amp; Chandaria, S. (2025). A beautiful loop.</li>
 <li>Correa, J. D., Lee, S., &amp; Bareinboim, E. (2021). Nested counterfactual identification.</li>
 </ol>
@@ -2084,6 +2095,8 @@ Below are the main documents directly related to the open questions of U0-U15. F
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
 <li>Dorkenwald, S., et al. (2024). Neuronal wiring diagram of an adult brain. <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">doi:10.1038/s41586-024-07558-y</a></li>
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
+<li>Prinz, A. A., Bucher, D., &amp; Marder, E. (2004). Similar network activity from disparate circuit parameters. <a href="https://doi.org/10.1038/nn1352" target="_blank">doi:10.1038/nn1352</a></li>
+<li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Stringer, C., Pachitariu, M., Steinmetz, N., et al. (2019). Spontaneous behaviors drive multidimensional, brainwide activity. <a href="https://doi.org/10.1126/science.aav7893" target="_blank">doi:10.1126/science.aav7893</a></li>
