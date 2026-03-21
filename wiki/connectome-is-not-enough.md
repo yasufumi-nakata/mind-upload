@@ -10,7 +10,7 @@ description: We will summarize the reasons why storing only the connectome in WB
 article_type: Wiki
 subtitle: connectome-complete is not emulation-complete
 author: Mind Uploading Research Project
-last_updated: '2026-03-21'
+last_updated: '2026-03-22'
 note: Technical / natural science only
 audience: People who want to judge whether the wiring diagram is close to WBE based
   only on technology and natural science.
@@ -39,7 +39,7 @@ page_highlights:
 - "Phospho-signaling / second-messenger state is treated as another missing layer, because transcript or bulk protein abundance does not by itself fix phosphosite occupancy, kinase/phosphatase balance, or signaling nanodomains."
 - "Cargo-transport / cytoskeletal trafficking is treated as another missing layer, because receptor, endosome, RNA, and presynaptic cargo delivery are not implied by graph, weight, or ATP alone."
 - "Ionic milieu / chloride homeostasis is treated as another missing layer, because inhibition sign and sleep/wake state can still shift with local chloride set point and interstitial ion composition even on the same graph."
-- "Chemical connectome is not electrical-state complete: gap junctions, endogenous field effects, and direct inhibitory driving force remain separate variables."
+- "Chemical connectome is not electrical-state complete: gap junctions, endogenous field effects, and inhibitory-driving-force state remain separate variables, and electrical-state claims now need a route card."
 - "A diffusion-MRI-derived human connectome is treated as an algorithm- and resolution-conditioned macro pathway prior or targeted bundle hypothesis route, not as a synapse-resolved edge list."
 known_points:
 - Great progress has been made in creating a whole-brain connectome, but this alone
@@ -511,12 +511,63 @@ Human ionic evidence is still a coarse observability class. <a href="https://doi
 
 <h3>9. Shared extracellular / electrical state is not reducible to chemical wiring</h3>
 <p>
-The remaining weakness was that the site had become much better at separating <strong>ionic / chloride state</strong>, <strong>timing-state</strong>, and <strong>glia</strong>, while still leaving <strong>gap-junction coupling, endogenous field effects, and local inhibitory driving force</strong> too close to the chemical-synapse bucket. That was too weak. <a href="https://doi.org/10.1038/99496" target="_blank">Galarreta &amp; Hestrin (1999)</a> showed that fast-spiking interneurons in neocortex form electrical-synapse networks, <a href="https://doi.org/10.1038/nn.2727" target="_blank">Anastassiou et al. (2011)</a> showed that endogenous extracellular fields can causally entrain cortical spike timing under physiological conditions, <a href="https://doi.org/10.1073/pnas.2313042121" target="_blank">Yang et al. (2024)</a> showed that dynamic electrical synapses can rewire brain networks for persistent oscillations, and <a href="https://doi.org/10.1038/s41467-024-53074-y" target="_blank">Selfe et al. (2024)</a> showed with ORCHID that inhibitory driving force can now be measured directly, but only with specialized local optical methods. In other words, the missing variable is not only <strong>how strong chemical inhibition is</strong>, but also <strong>how electrical coupling and local field state coordinate spikes and oscillations on that same chemical graph</strong>.
+The remaining weakness was that the site had become much better at separating <strong>ionic / chloride state</strong>, <strong>timing-state</strong>, and <strong>glia</strong>, while still leaving <strong>gap-junction coupling, endogenous field effects, and local inhibitory driving force</strong> too close to the chemical-synapse bucket. That was too weak. <a href="https://doi.org/10.1038/47029" target="_blank">Galarreta &amp; Hestrin (1999)</a> showed that fast-spiking interneurons in neocortex form electrical-synapse networks, <a href="https://doi.org/10.1038/nn.2727" target="_blank">Anastassiou et al. (2011)</a> showed that endogenous extracellular fields can causally entrain cortical spike timing under physiological conditions, <a href="https://doi.org/10.1016/j.neuron.2023.08.005" target="_blank">Burman et al. (2023)</a> showed that active cortical networks can shift fast inhibition toward a predominantly shunting regime in vivo, <a href="https://doi.org/10.1073/pnas.2313042121" target="_blank">Yang et al. (2024)</a> showed that dynamic electrical synapses can rewire brain networks for persistent oscillations, and <a href="https://doi.org/10.1038/s41467-024-53074-y" target="_blank">Selfe et al. (2024)</a> showed with ORCHID that inhibitory driving force can now be measured directly, but only with specialized local optical methods. In other words, the missing variable is not only <strong>how strong chemical inhibition is</strong>, but also <strong>how electrical coupling, extracellular-field geometry, and inhibitory driving-force regime coordinate spikes and oscillations on that same chemical graph</strong>.
 </p>
 <div class="note-box">
 <strong>Human observability ceiling for electrical-state</strong>
 <p>
 Human evidence for this layer is still indirect. <a href="https://doi.org/10.1111/ejn.70401" target="_blank">Feld et al. (2026)</a> reported that mefloquine before sleep impaired declarative-memory retention and disrupted spindle-to-slow-oscillation coupling in healthy participants, which is useful perturbation evidence that electrical coupling can matter for systems-memory coordination. But the same paper also leaves off-target effects as a caveat, and it is not a direct readout of <strong>which cells were electrically coupled</strong> or <strong>what the local inhibitory driving force was</strong>. On this site, human evidence for shared electrical state is therefore read first as a <strong>perturbation-conditioned clue</strong>, not as ground truth of local electrical coupling in vivo.
+</p>
+</div>
+<h4 id="electrical-state-route-card">Electrical-state evidence now needs a route card</h4>
+<p>
+The critique here is not merely that <strong>electrical state exists</strong>, but that recent primary literature spans <strong>different inferential objects</strong>. Gap-junction topology, endogenous-field coupling, inhibitory-driving-force state, and activity-dependent electrical-synapse remodeling do not all answer the same question. A human sleep perturbation clue is different again. If a paper moves among those objects without naming the route, the reader can silently overread a local mechanistic result as if it had already fixed the broader electrical regime.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Route-card item</th>
+<th>What must be disclosed</th>
+<th>Why this site asks for it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the paper is about a <strong>gap-junction coupling network</strong>, an <strong>endogenous-field / ephaptic route</strong>, an <strong>inhibitory-driving-force regime</strong>, an <strong>activity-dependent electrical-synapse remodeling route</strong>, or only a <strong>human perturbation-conditioned clue</strong>.</td>
+<td>Otherwise the paper's object changes silently while the headline claim stays broad.</td>
+</tr>
+<tr>
+<td><strong>Direct electrical observable</strong></td>
+<td>Name the direct observable explicitly, such as paired-cell electrical coupling, extracellular field effect on spike timing, local inhibitory driving force, oscillation-coupling statistic, or only a downstream behavioral / sleep-coupling proxy.</td>
+<td>Otherwise a downstream phenotype is misread as if the electrical state itself had been observed.</td>
+</tr>
+<tr>
+<td><strong>Spatial regime</strong></td>
+<td>State whether the route is a paired-cell microcircuit, a local cortical population, a network oscillation preparation, or a macro human perturbation regime.</td>
+<td>Otherwise a narrow local mechanism is overread as if it already fixed a broader electrical regime.</td>
+</tr>
+<tr>
+<td><strong>Perturbation / calibration route</strong></td>
+<td>Name the perturbation or calibration route, such as connexin-linked coupling measurement, extracellular-field manipulation, ORCHID-style optical assay, pharmacological perturbation, or no direct calibration at all.</td>
+<td>Otherwise causal leverage and calibration burden disappear behind the word <strong>electrical</strong>.</td>
+</tr>
+<tr>
+<td><strong>Human evidence class</strong></td>
+<td>Write whether the strongest human-facing evidence is a <strong>direct local assay</strong>, a <strong>specialized optical / invasive route</strong>, a <strong>perturbation-conditioned clue</strong>, or <strong>no human route</strong>.</td>
+<td>Otherwise a human perturbation result is silently promoted toward local state identification.</td>
+</tr>
+<tr>
+<td><strong>Ceiling and abstention</strong></td>
+<td>Declare whether the claim stops at <strong>local electrical mechanism</strong>, <strong>narrow network-regime evidence</strong>, or <strong>human perturbation clue</strong>, and write what would trigger abstention.</td>
+<td>Otherwise the phrase <strong>electrical-state complete</strong> is allowed to outrun the actual evidence class.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Operational rule added in this pass</strong>
+<p>
+If an electrical-state claim lacks this route card, this site keeps the result at <strong>local mechanism</strong>, <strong>specialized assay</strong>, or <strong>human perturbation clue</strong>. It is not promoted to chemical-connectome-complete state capture, whole-brain electrical-regime recovery, or maintenance-complete synchrony control.
 </p>
 </div>
 
@@ -611,7 +662,7 @@ The weakness of the current site was that even if it was possible to enumerate t
 <tr>
 <td><strong>+ shared extracellular / electrical-state audit</strong></td>
 <td>Compare a chemical-connectome or synapse-aware baseline against the same model with gap-junction measurements or perturbation, local field calibration, or direct inhibitory-driving-force measurement under the same held-out synchrony, sleep-oscillation, or state-switch condition.</td>
-<td>Galarreta, Anastassiou, Yang, Selfe, and Feld together support that fast synchrony, oscillatory coordination, and electrical-state regime can be read more narrowly once electrical coupling and local driving-force state are treated explicitly.</td>
+<td>Galarreta, Anastassiou, Burman, Yang, Selfe, and Feld together support that fast synchrony, oscillatory coordination, and electrical-state regime can be read more narrowly once coupling topology, inhibitory driving force, and human perturbation clues are kept on separate rows.</td>
 <td>Human perturbation or macro field evidence alone remains indirect and does not become ground truth of local electrical coupling or cell-specific inhibitory driving force in vivo.</td>
 </tr>
 <tr>
@@ -722,7 +773,7 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li>McMaster, E. M., Newlin, N. R., Rudravaram, G., et al. (2025). Harmonized connectome resampling for variance in voxel sizes. <em>Magnetic Resonance Imaging</em>, 121, 110424. <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">doi:10.1016/j.mri.2025.110424</a></li>
 <li>Manzano-Patrón, J. P., Deistler, M., Schröder, C., et al. (2025). Uncertainty mapping and probabilistic tractography using Simulation-based Inference in diffusion MRI: A comparison with classical Bayes. <em>Medical Image Analysis</em>, 103, 103580. <a href="https://doi.org/10.1016/j.media.2025.103580" target="_blank">doi:10.1016/j.media.2025.103580</a></li>
 <li>Zhu, S., Huszar, I. N., Cottaar, M., et al. (2025). Imaging the structural connectome with hybrid MRI-microscopy tractography. <em>Medical Image Analysis</em>, 102, 103498. <a href="https://doi.org/10.1016/j.media.2025.103498" target="_blank">doi:10.1016/j.media.2025.103498</a></li>
-<li>Galarreta, M., &amp; Hestrin, S. (1999). A network of fast-spiking cells in the neocortex connected by electrical synapses. <em>Nature</em>, 402, 72–75. <a href="https://doi.org/10.1038/99496" target="_blank">doi:10.1038/99496</a></li>
+<li>Galarreta, M., &amp; Hestrin, S. (1999). A network of fast-spiking cells in the neocortex connected by electrical synapses. <em>Nature</em>, 402, 72–75. <a href="https://doi.org/10.1038/47029" target="_blank">doi:10.1038/47029</a></li>
 <li>Anastassiou, C. A., Perin, R., Markram, H., &amp; Koch, C. (2011). Ephaptic coupling of cortical neurons. <em>Nature Neuroscience</em>, 14(2), 217–223. <a href="https://doi.org/10.1038/nn.2727" target="_blank">doi:10.1038/nn.2727</a></li>
 <li>Yang, Y.-C., Wang, G.-H., Chou, P., Hsueh, S.-W., Lai, Y.-C., &amp; Kuo, C.-C. (2024). Dynamic electrical synapses rewire brain networks for persistent oscillations and epileptogenesis. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 121(8), e2313042121. <a href="https://doi.org/10.1073/pnas.2313042121" target="_blank">doi:10.1073/pnas.2313042121</a></li>
 <li>Selfe, J. S., et al. (2024). All-optical reporting of inhibitory receptor driving force in the nervous system. <em>Nature Communications</em>, 15(1), 8913. <a href="https://doi.org/10.1038/s41467-024-53074-y" target="_blank">doi:10.1038/s41467-024-53074-y</a></li>

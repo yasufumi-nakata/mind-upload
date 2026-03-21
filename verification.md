@@ -51,7 +51,7 @@ page_highlights:
   - "At L2 and above, local proteostasis / synaptic-tagging state is separated from current weights and transcription when a claim depends on late-LTP capture, consolidation, or reconsolidation."
   - "At L2 and above, cargo-transport / cytoskeletal trafficking state is separated from proteostasis and bioenergetics when a claim depends on compartment-specific delivery of receptors, endosomes, RNA cargoes, or presynaptic components."
   - "At L2 and above, ionic milieu / chloride homeostasis is separated from excitability and glial support when a claim depends on inhibitory polarity, rhythm stability, or state transitions."
-  - "At L2 and above, shared extracellular / electrical state is separated from chemical synapses and ionic proxy classes when a claim depends on fast synchrony, oscillatory coordination, or electrical-state regime."
+  - "At L2 and above, shared extracellular / electrical state is separated from chemical synapses and ionic proxy classes, and electrical-state claims now require a route card naming claim family, direct electrical observable, spatial regime, perturbation / calibration route, human evidence class, and abstention."
   - "For thermal-state claims, the maintenance-state budget now requires a route card that names claim family, direct thermal observable, driver / perturbation route, time window, function target, human proxy class, and abstention."
   - "At L2 and above, bioenergetic / mitochondrial support is separated from glial support when a claim depends on repeated-burst reliability, local ATP reserve, or dendritic plasticity."
   - "At L2 and above, astrocyte network / ensemble state is separated from generic support background when a claim depends on recall, multiday stabilization, or fear-state representations."
@@ -1248,6 +1248,11 @@ The <strong>Observability Budget</strong> fixes what entered the sensor and what
 <td>Inhibitory polarity, rhythm stability, and state-transition claims stay provisional or fall back to coarse excitability proxies.</td>
 </tr>
 <tr>
+<td><strong>Shared extracellular / electrical state</strong></td>
+<td>Attach an electrical-state route card that states the <strong>claim family</strong> (gap-junction coupling network, endogenous-field / ephaptic route, inhibitory driving-force regime, activity-dependent electrical-synapse remodeling, or human perturbation-conditioned clue), the <strong>direct electrical observable</strong>, the <strong>spatial regime</strong>, the <strong>perturbation / calibration route</strong>, and whether the strongest human-facing evidence is a direct local preparation, a specialized optical assay, a pharmacological perturbation clue, or no human route at all.</td>
+<td>Fast synchrony, oscillatory coordination, spindle / slow-oscillation coupling, and electrotonic-regime claims stay provisional or fall back to chemical-connectome-plus-proxy language.</td>
+</tr>
+<tr>
 <td><strong>Timing-state / conduction support</strong></td>
 <td>Separate device latency from biological timing-state, and disclose whether timing variables were measured, externally calibrated, absorbed into a constant, or left latent.</td>
 <td>Phase, synchrony, and timing-complete reconstruction claims are demoted to hardware-fast or macro-timing proxy claims.</td>
@@ -1348,6 +1353,11 @@ Cross-day and remote-memory claims fail for a different reason than same-session
 <td><strong>Ionic / chloride state</strong></td>
 <td>Attach an ionic / chloride route card that states the claim family, direct ionic observable, spatial regime, perturbation / controller route, function target, and whether the evidence is local physiology, pathology tissue, CSF ion assay, sodium MRI proxy, or only a coarse external calibrator. Also disclose what chloride microdomains, transporter balance, perisynaptic K<sup>+</sup> handling, or local E<sub>GABAA</sub> variables remained latent.</td>
 <td>Cross-day or recovery success is not promoted to inhibitory-polarity-consistent or state-transition-consistent maintenance evidence.</td>
+</tr>
+<tr>
+<td><strong>Shared extracellular / electrical state</strong></td>
+<td>Attach an electrical-state route card that states the claim family, direct electrical observable, spatial regime, perturbation / calibration route, function target, and whether the evidence is a gap-junction preparation, an endogenous-field / ephaptic perturbation, a direct inhibitory-driving-force assay, an activity-dependent electrical-synapse remodeling experiment, or only a human perturbation-conditioned clue. Also disclose what local coupling topology, extracellular-field geometry, inhibitory reversal / shunt regime, or state-switch thresholds remained latent.</td>
+<td>Cross-day or recovery success is not promoted to electrical-state-consistent synchrony, oscillation, or spindle / slow-oscillation coordination evidence.</td>
 </tr>
 <tr>
 <td><strong>Bioenergetic / mitochondrial support</strong></td>
@@ -1797,9 +1807,9 @@ The remaining weakness was that <strong>ionic evidence</strong> could still comp
 </p>
 </div>
 <div class="note-box">
-<strong>2026-03-18 addendum: chemical connectome is not electrical-state complete</strong>
+<strong>2026-03-22 addendum: electrical-state evidence also needs a route card</strong>
 <p>
-<a href="https://doi.org/10.1038/99496" target="_blank">Galarreta &amp; Hestrin (1999)</a> showed that fast-spiking interneurons form electrical-synapse networks in neocortex, <a href="https://doi.org/10.1038/nn.2727" target="_blank">Anastassiou et al. (2011)</a> showed that endogenous extracellular fields can causally entrain cortical spike timing, <a href="https://doi.org/10.1073/pnas.2313042121" target="_blank">Yang et al. (2024)</a> showed that dynamic electrical synapses can rewire brain networks for persistent oscillations, and <a href="https://doi.org/10.1038/s41467-024-53074-y" target="_blank">Selfe et al. (2024)</a> showed that direct inhibitory driving-force measurement now exists but only with specialized local optical tools. Human perturbation evidence such as <a href="https://doi.org/10.1111/ejn.70401" target="_blank">Feld et al. (2026)</a> is useful as a clue that electrical coupling can matter for spindle-to-slow-oscillation coordination, but it is not a direct whole-brain readout of local electrical state and carries pharmacological caveats. Therefore, when a claim depends on fast synchrony, oscillatory coordination, spindle/SO coupling, or state-switch thresholds, this site asks authors to disclose whether electrical coupling / field state was measured, perturbed, externally calibrated, or left latent.
+The remaining weakness was that <strong>electrical-state evidence</strong> could still compress several different inferential objects into one bucket. The primary literature does not support that shortcut. <a href="https://doi.org/10.1038/47029" target="_blank">Galarreta &amp; Hestrin (1999)</a> is about <strong>gap-junction coupling networks</strong>, <a href="https://doi.org/10.1038/nn.2727" target="_blank">Anastassiou et al. (2011)</a> is about <strong>endogenous-field / ephaptic spike-timing bias</strong>, <a href="https://doi.org/10.1016/j.neuron.2023.08.005" target="_blank">Burman et al. (2023)</a> is about <strong>inhibitory driving-force regime in active cortex</strong>, <a href="https://doi.org/10.1073/pnas.2313042121" target="_blank">Yang et al. (2024)</a> is about <strong>activity-dependent electrical-synapse remodeling</strong>, <a href="https://doi.org/10.1038/s41467-024-53074-y" target="_blank">Selfe et al. (2024)</a> is a <strong>direct inhibitory-driving-force assay</strong> with a specialized local optical route, and <a href="https://doi.org/10.1111/ejn.70401" target="_blank">Feld et al. (2026)</a> remains a <strong>human perturbation-conditioned clue</strong> with pharmacological caveats rather than a local whole-brain readout. On this site, electrical-state claims therefore have to disclose <strong>which claim family</strong>, <strong>which direct electrical observable</strong>, <strong>which spatial regime</strong>, <strong>which perturbation or calibration route</strong>, <strong>which human evidence class</strong>, and <strong>which abstention boundary</strong> apply before any claim ceiling is raised. The full operating rule is summarized in <a href="wiki/connectome-is-not-enough.html#electrical-state-route-card">Wiki: electrical-state route card</a>.
 </p>
 </div>
 <div class="note-box">
@@ -2315,7 +2325,7 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Liu, X., Wanika, L., Chappell, M. J., &amp; Branke, J. (2025). Efficient data collection for establishing practical identifiability via active learning. <em>Computational and Structural Biotechnology Journal</em>, 27, 4992-5006. <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">doi:10.1016/j.csbj.2025.10.058</a></li>
 <li>Shiu, P.-K., et al. (2024). A Drosophila computational brain model reveals sensorimotor processing. <a href="https://doi.org/10.1038/s41586-024-07763-9" target="_blank">doi:10.1038/s41586-024-07763-9</a></li>
 <li>Pospisil, D. A., et al. (2024). The fly connectome reveals a path to the effectome. <a href="https://doi.org/10.1038/s41586-024-07982-0" target="_blank">doi:10.1038/s41586-024-07982-0</a></li>
-<li>Galarreta, M., &amp; Hestrin, S. (1999). A network of fast-spiking cells in the neocortex connected by electrical synapses. <a href="https://doi.org/10.1038/99496" target="_blank">doi:10.1038/99496</a></li>
+<li>Galarreta, M., &amp; Hestrin, S. (1999). A network of fast-spiking cells in the neocortex connected by electrical synapses. <a href="https://doi.org/10.1038/47029" target="_blank">doi:10.1038/47029</a></li>
 <li>Anastassiou, C. A., Perin, R., Markram, H., &amp; Koch, C. (2011). Ephaptic coupling of cortical neurons. <a href="https://doi.org/10.1038/nn.2727" target="_blank">doi:10.1038/nn.2727</a></li>
 <li>Yang, Y.-C., Wang, G.-H., Chou, P., Hsueh, S.-W., Lai, Y.-C., &amp; Kuo, C.-C. (2024). Dynamic electrical synapses rewire brain networks for persistent oscillations and epileptogenesis. <a href="https://doi.org/10.1073/pnas.2313042121" target="_blank">doi:10.1073/pnas.2313042121</a></li>
 <li>Selfe, J. S., et al. (2024). All-optical reporting of inhibitory receptor driving force in the nervous system. <a href="https://doi.org/10.1038/s41467-024-53074-y" target="_blank">doi:10.1038/s41467-024-53074-y</a></li>
