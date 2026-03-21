@@ -170,9 +170,45 @@ Recent primary papers require a narrower reading here as well. <a href="https://
 <div class="note-box">
 <strong>If You Want To Know When Several Human Proxy Rows May Be Combined</strong>
 <p>
-The 2026-03-21 audit tightened one more point: <strong>proxy-rich</strong> is not the same as <strong>same-subject state identification</strong>. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> constrain different variable classes with different cohort sizes, hardware burdens, and measurement models, and the cited studies do not show field-ready same-subject fusion across those routes. This site now requires a <a href="verification.html#human-proxy-composition-card">Human Proxy Composition Card</a> before several living-human proxy rows may be promoted together, including a check on whether the apparent agreement survives a <strong>shared-driver audit</strong> and what the bundle adds beyond the <strong>strongest single row</strong>. The shortest explanations are in <a href="wbe_101.html#human-proxy-composition-rule">WBE 101: human-proxy composition rule</a> and <a href="wiki/human-proxy-composition.html">Wiki: Human Proxy Composition and Route Maturity</a>.
+The 2026-03-22 recheck tightened one more point at the front door: <strong>proxy-rich</strong> is not the same as <strong>same-subject state identification</strong>. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> is a <strong>33-person SV2A atlas</strong>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> is a <strong>51-adolescent five-metabolite similarity graph with 13-person site replication</strong>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> is a <strong>7 T dynamic kinetic route in five healthy participants</strong>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> is a <strong>two-volunteer myelin proof-of-principle</strong>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> is a <strong>7 T CSF-mobility route with 20-person whole-brain rest maps</strong>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> is a <strong>39-participant randomized crossover trial interpreted through a compartmental model</strong>. These are not interchangeable pieces of one already field-ready whole-brain state meter. This site therefore requires a <a href="verification.html#human-proxy-composition-card">Human Proxy Composition Card</a> before several living-human proxy rows may be promoted together, including a check on whether the apparent agreement survives a <strong>shared-driver audit</strong> and what the bundle adds beyond the <strong>strongest single row</strong>. The shortest explanations are in <a href="wbe_101.html#human-proxy-composition-rule">WBE 101: human-proxy composition rule</a> and <a href="wiki/human-proxy-composition.html">Wiki: Human Proxy Composition and Route Maturity</a>.
 </p>
 </div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Representative human row</th>
+<th>What the cited paper directly constrains</th>
+<th>Why it still does not compose automatically</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Johansen et al. (2024)</strong><br>SV2A atlas</td>
+<td>A cohort-level regional synaptic-density atlas in 33 healthy participants.</td>
+<td>Atlas-level density is not momentary synaptic efficacy, and it is not a same-session multistack bridge.</td>
+</tr>
+<tr>
+<td><strong>Li et al. (2025)</strong><br>dynamic DMRSI</td>
+<td>A 7 T kinetic glucose-rate route in five healthy participants with explicit model burden.</td>
+<td>Kinetic macro rates are not the same quantity as density, similarity, or myelin-sensitive contrast.</td>
+</tr>
+<tr>
+<td><strong>Hirschler et al. (2025)</strong><br>CSF-mobility MRI</td>
+<td>A specialized 7 T route for whole-brain CSF mobility maps in younger healthy adults.</td>
+<td>Mobility is not net clearance flux, and it is not a local immune-controller or synapse-specific readout.</td>
+</tr>
+<tr>
+<td><strong>Dagum et al. (2026)</strong><br>sleep-linked glymphatic clearance</td>
+<td>A randomized crossover, model-based efflux route in 39 participants.</td>
+<td>Model-derived sleep-linked efflux is still not a direct local maintenance-state meter.</td>
+</tr>
+<tr>
+<td><strong>Chen et al. (2025)</strong><br>simultaneous EEG-PET-MRI</td>
+<td>A same-session tri-modal comparison showing coupled global progression plus two distinct network patterns.</td>
+<td>Even simultaneous acquisition keeps shared and modality-specific structure, so agreement alone is not a solved common state axis.</td>
+</tr>
+</tbody>
+</table>
 <div class="note-box">
 <strong>If You Are Treating Same-Subject As Same-State</strong>
 <p>
