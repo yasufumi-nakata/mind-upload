@@ -32,6 +32,7 @@ page_highlights:
   - "Bioenergetic evidence is not one class: presynaptic ATP-demand support, dendritic mitochondrial positioning / fission, synaptic ATP-synthase nano-organization, mitochondrial Ca2+-efflux tuning, and human macro energetic imaging should be audited separately with a route card."
   - "Astrocyte evidence is not one class: lactate-shuttle support, minute-scale cortical network encoding, learning-associated recall ensembles, multiday stabilization ensembles, fear-state representations, and human reactive-astrogliosis PET should be audited separately with a route card."
   - "Proteostasis evidence is not one class: tag/capture eligibility, branch-level integration, synthesis-degradation balance, autophagy subtypes, turnover-resistant persistence, and proteasome-capacity interventions should be audited separately with a route card."
+  - "Cargo evidence is not one class: postsynaptic receptor delivery, transport-path microtubule gating, local vesicle confinement, axonal RNA localization, and presynaptic cargo retention should be audited separately with a route card."
   - "Cell-type atlas and current plasticity-competent transcriptional state are different objects; static transcriptomic labels do not fix which neurons are eligible for allocation or stabilization."
   - "Gene-level transcript abundance does not fix post-transcriptional RNA-state: isoform choice, m6A-dependent translation / degradation, and RNA-editing ratio can still change plasticity and memory on the same transcript-count background."
   - "Transcript or bulk protein abundance does not fix phospho-signaling / second-messenger state: phosphosite occupancy, kinase/phosphatase balance, and signaling nanodomains can still change plasticity on the same abundance background."
@@ -56,6 +57,7 @@ known_points:
   - "Myelin evidence already spans adaptive learning, timing-state control, plasticity-brake effects, remyelination recovery, and human macro-proxy classes, so a human myelin map alone does not settle per-axon timing-state or plasticity-complete restoration."
   - "Proteostasis evidence already spans tag/capture, branch-level integration, synthesis/degradation balance, autophagy-linked remodeling, turnover-resistant persistence, and proteasome-capacity intervention, so one proteostasis paper does not settle late-stabilization completeness."
   - "Bioenergetic evidence already spans presynaptic ATP-linked respiration, dendritic positioning / fission, synaptic ATP-synthase nano-organization, conserved mitochondrial Ca2+-efflux tuning, and human macro energetic proxy routes, so one energetic paper does not settle local mitochondrial state."
+  - "Cargo evidence already spans postsynaptic receptor delivery, learning-phase microtubule-state gating, local vesicle confinement, axonal RNA localization, and presynaptic cargo retention, so one trafficking paper does not settle compartment-delivery completeness."
   - "Astrocyte evidence already spans lactate-shuttle support, minute-scale cortical network encoding, learning-associated recall ensembles, multiday stabilization, fear-state representation, and human MAO-B / reactive-astrogliosis PET proxy routes, so one astrocyte paper does not settle astrocyte-state observability."
   - "An MRSI-derived metabolic-connectome label still needs metabolite-set, parceling, correction-model, and QC disclosure before it can be interpreted safely."
 unknown_points:
@@ -65,6 +67,7 @@ unknown_points:
   - "It is not yet fixed which route-card fields should be mandatory when a proteostasis paper mixes tag/capture, autophagy subtype, turnover-resistant persistence, proteasome-capacity intervention, and human proxy language in one argument."
   - "It is not yet fixed which same-subject or human-compatible external calibrators could raise phospho-signaling / second-messenger claims beyond region-structured ex vivo atlas evidence."
   - "It is not yet fixed which same-subject or human-compatible external calibrators could raise bioenergetic / mitochondrial claims beyond macro energetic proxy evidence."
+  - "It is not yet fixed which route-card fields should be mandatory when a cargo paper mixes postsynaptic receptor delivery, axonal RNA localization, presynaptic cargo retention, and culture-to-human language in one argument."
   - "It is not yet fixed which route-card fields should be mandatory when an astrocyte paper mixes lactate-shuttle support, ensemble recall / stabilization, fear-state representation, and human proxy language in one argument."
   - "It has not been fixed which external standards among SV2A PET, MRSI, MRS thermometry, 31P-MRS, sodium MRI, dynamic DMI, myelin bilayers, TMS-EEG, sleep-plasticity proxies, and CSF-glymphatic proxies should calibrate maintenance-states that cannot be measured directly in humans."
   - "It is not yet fixed which route-card fields should be mandatory when a myelin paper mixes learning, timing-state, plasticity, remyelination, and human proxy language in one argument."
@@ -621,12 +624,80 @@ The need is two-sided. On the mechanism side, <a href="https://doi.org/10.1038/s
 
 <h3>13. Cargo-transport / cytoskeletal trafficking is not implied by proteostasis or ATP</h3>
 <p>
-The site had become good at separating <strong>local proteostasis</strong> from <strong>bioenergetics</strong>, while still leaving <strong>the delivery route itself</strong> too implicit. That was too weak. <a href="https://doi.org/10.1016/j.neuron.2006.09.040" target="_blank">Park et al. (2006)</a> showed that recycling-endosome exocytosis is required for LTP-associated spine growth, <a href="https://doi.org/10.1073/pnas.0902304106" target="_blank">Maas et al. (2009)</a> showed that synaptic activation rewrites microtubules supporting postsynaptic cargo transport, <a href="https://doi.org/10.1016/j.neuron.2011.03.026" target="_blank">Yin et al. (2011)</a> showed that KIF17 supports synaptic NR2A/2B balance and memory, <a href="https://doi.org/10.7554/eLife.53456" target="_blank">Zhao et al. (2020)</a> showed that KIF5B depletion impairs dendritic transport, synaptic plasticity, and memory, <a href="https://doi.org/10.1016/j.celrep.2021.109369" target="_blank">Swarnkar et al. (2021)</a> linked KIF5C-mediated transport to structural plasticity and long-term memory, and <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">Aiken &amp; Holzbaur (2024)</a> showed that local axonal microtubule patterning controls presynaptic cargo delivery. Therefore, even with the same connectome, the same weight estimate, the same local translation program, and the same ATP support, <strong>which cargo reaches which compartment can still differ</strong>.
+The site had become good at separating <strong>local proteostasis</strong> from <strong>bioenergetics</strong>, while still leaving <strong>the delivery route itself</strong> too implicit. That was too weak. <a href="https://doi.org/10.1016/j.neuron.2006.09.040" target="_blank">Park et al. (2006)</a> showed that recycling-endosome exocytosis is required for LTP-associated spine growth, and <a href="https://doi.org/10.1038/nn2063" target="_blank">Correia et al. (2008)</a> showed myosin-Va-dependent translocation of GluR1 from dendritic shaft to spine during LTP. <a href="https://doi.org/10.1073/pnas.0902304106" target="_blank">Maas et al. (2009)</a> showed that synaptic activation rewrites microtubules supporting postsynaptic cargo transport, <a href="https://doi.org/10.1038/ncomms5389" target="_blank">Uchida et al. (2014)</a> showed that learning-phase microtubule stability controls KIF5-mediated GluA2 localization and memory, and <a href="https://doi.org/10.7554/eLife.80622" target="_blank">Wong et al. (2024)</a> showed that synaptic activity confines endogenous GluA1 vesicles near stimulated dendritic regions rather than making `cargo reached the correct spine` a solved generic statement. <a href="https://doi.org/10.7554/eLife.53456" target="_blank">Zhao et al. (2020)</a> showed that KIF5B depletion impairs dendritic transport, synaptic plasticity, and memory, <a href="https://doi.org/10.1016/j.celrep.2021.109369" target="_blank">Swarnkar et al. (2021)</a> linked KIF5C-mediated transport to structural plasticity and long-term memory by constraining local translation, <a href="https://doi.org/10.1038/s41467-025-57651-7" target="_blank">de Queiroz et al. (2025)</a> showed that axonal RNA localization is required for long-term but not short-term memory in a mature in vivo memory circuit, and <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">Aiken &amp; Holzbaur (2024)</a> showed that local axonal microtubule patterning controls presynaptic cargo pausing and delivery. Therefore, even with the same connectome, the same weight estimate, the same local translation program, and the same ATP support, <strong>which cargo reaches which compartment, stays there, and remains available on the relevant timescale can still differ</strong>.
 </p>
 <div class="note-box">
 <strong>How this site reads current human evidence</strong>
 <p>
-Current human in vivo routes still do not directly reveal branch- or bouton-specific cargo pausing, motor engagement, or microtubule traffic state. This is an inference from the measurement classes available on the site, not a direct transport measurement. Therefore, on this site, cargo-transport / cytoskeletal trafficking remains a <strong>local hidden state</strong> in humans unless it is externally calibrated or causally perturbed in a narrower preparation.
+Current human in vivo routes still do not directly reveal branch- or bouton-specific cargo pausing, motor engagement, or microtubule traffic state. Narrow human-neuron preparations such as the induced-neuron axon system in <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">Aiken &amp; Holzbaur (2024)</a> strengthen the mechanism side, but they do not erase the living-human whole-brain observability gap. This is an inference from the measurement classes available on the site, not a direct transport measurement. Therefore, on this site, cargo-transport / cytoskeletal trafficking remains a <strong>local hidden state</strong> in humans unless it is externally calibrated or causally perturbed in a narrower preparation.
+</p>
+</div>
+<div class="note-box" id="cargo-route-card">
+<strong>2026-03-21 addendum: cargo-transport evidence now needs a route card</strong>
+<p>
+The remaining weakness on this page was that <strong>cargo evidence</strong> could still collapse several different inferential objects into one bucket. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuron.2006.09.040" target="_blank">Park et al. (2006)</a> and <a href="https://doi.org/10.1038/nn2063" target="_blank">Correia et al. (2008)</a> are about <strong>postsynaptic AMPAR / recycling-endosome delivery during LTP</strong>. <a href="https://doi.org/10.1073/pnas.0902304106" target="_blank">Maas et al. (2009)</a>, <a href="https://doi.org/10.1038/ncomms5389" target="_blank">Uchida et al. (2014)</a>, and <a href="https://doi.org/10.7554/eLife.80622" target="_blank">Wong et al. (2024)</a> are about <strong>transport-path state</strong>, namely microtubule remodeling, learning-phase-dependent microtubule stability, and activity-dependent vesicle confinement near the stimulated dendritic region. <a href="https://doi.org/10.1016/j.celrep.2021.109369" target="_blank">Swarnkar et al. (2021)</a> and <a href="https://doi.org/10.1038/s41467-025-57651-7" target="_blank">de Queiroz et al. (2025)</a> are about <strong>RNA cargo localization / local translation support for long-term memory</strong>. <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">Aiken &amp; Holzbaur (2024)</a> is about <strong>presynaptic cargo delivery and retention patterned by local axonal microtubule dynamics</strong>. Therefore, on this site, cargo-transport claims now require a <strong>route card</strong> before they are promoted beyond a narrow, explicitly named ceiling.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be fixed explicitly</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the paper is about <strong>postsynaptic receptor delivery</strong>, <strong>activity-dependent vesicle confinement / reservoir formation</strong>, <strong>learning-dependent microtubule-state gating</strong>, <strong>axonal RNA localization / local translation support</strong>, or <strong>presynaptic cargo retention / synaptogenesis</strong>.</td>
+<td>Different inferential objects collapse into one phrase such as <code>transport evidence shows compartment delivery is solved</code>.</td>
+</tr>
+<tr>
+<td><strong>Cargo object</strong></td>
+<td>Name the actual cargo: AMPAR-containing vesicle, recycling endosome, GluA2-related receptor cargo, RNA granule / localized mRNA, synaptic-vesicle precursor, mitochondrion, or another explicitly followed object.</td>
+<td><code>cargo</code> becomes a generic word and one tracked object is silently promoted to all receptor, organelle, or RNA classes.</td>
+</tr>
+<tr>
+<td><strong>Compartment scope</strong></td>
+<td>Write whether the route is dendritic shaft, stimulated spine neighborhood, axonal branch, bouton, or presynaptic terminal, and whether the relevant unit is one spine, one branch, or a larger compartment.</td>
+<td>Dendritic transport, spine entry, axonal delivery, and bouton retention are treated as if they had the same spatial ceiling.</td>
+</tr>
+<tr>
+<td><strong>Transport phase / state variable</strong></td>
+<td>Fix whether the result addresses long-range transport, local pausing / confinement, docking, exocytosis, retention, recycling, or translation-coupled capture.</td>
+<td>A paper that only constrains one phase is promoted to a generic statement that the whole delivery route is known.</td>
+</tr>
+<tr>
+<td><strong>Trigger / time window</strong></td>
+<td>Name the regime that drives the route, such as seconds-to-minutes LTP induction, post-learning hours, multiday consolidation, development, or degeneration / ageing.</td>
+<td>Learning-phase transport gates, acute plasticity delivery, and long-term memory consolidation are silently fused into one transport timeline.</td>
+</tr>
+<tr>
+<td><strong>Direct observable / assay</strong></td>
+<td>State whether the paper directly tracked cargo motion, measured microtubule state, quantified synaptosome-localized RNAs, imaged cargo reservoirs, or inferred transport only indirectly from endpoint receptor levels or behavior.</td>
+<td><code>transport changed</code> replaces the actual measurement, and endpoint memory phenotypes are overread as if they had directly revealed the delivery process.</td>
+</tr>
+<tr>
+<td><strong>Driver / perturbation route</strong></td>
+<td>Write whether the paper uses motor-protein depletion, microtubule stabilization or destabilization, actin perturbation, localization-element mutation, RNA-binding-protein mutation, or no causal perturbation at all.</td>
+<td>The site silently shifts from correlational localization language to controller-identification language without a disclosed intervention route.</td>
+</tr>
+<tr>
+<td><strong>Human observability / transfer ceiling</strong></td>
+<td>For human-facing claims, disclose whether the strongest evidence is only a cultured human-neuron preparation, an ex vivo route, or no human route at all, and which living-human in vivo observables remain unavailable.</td>
+<td>A narrow human preparation is promoted to living-human whole-brain cargo-state ground truth without an observability audit.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Fix what remains latent, especially arbitrary cargo identity across the whole neuron, same-subject living-human branch / bouton delivery, motor engagement at unmeasured compartments, and whether transport actually reached the functionally decisive synapse.</td>
+<td>The site accidentally treats <code>transport evidence exists</code> as equivalent to cargo-complete or maintenance-complete state capture.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Why this route card is necessary here</strong>
+<p>
+The need is multi-axis. On the postsynaptic side, <a href="https://doi.org/10.1016/j.neuron.2006.09.040" target="_blank">Park et al. (2006)</a> and <a href="https://doi.org/10.1038/nn2063" target="_blank">Correia et al. (2008)</a> are about AMPAR / recycling-endosome delivery during LTP, not presynaptic cargo patterning. On the transport-path side, <a href="https://doi.org/10.1038/ncomms5389" target="_blank">Uchida et al. (2014)</a> shows that learning-phase microtubule stability changes memory through KIF5-dependent GluA2 localization, while <a href="https://doi.org/10.7554/eLife.80622" target="_blank">Wong et al. (2024)</a> shows local confinement of endogenous GluA1 vesicles near active synapses rather than proving that direct spine exocytosis is the universal rule. On the RNA side, <a href="https://doi.org/10.1016/j.celrep.2021.109369" target="_blank">Swarnkar et al. (2021)</a> and <a href="https://doi.org/10.1038/s41467-025-57651-7" target="_blank">de Queiroz et al. (2025)</a> show that local translation support depends on where RNA cargoes are localized, not only on transcript abundance in the soma. On the presynaptic side, <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">Aiken &amp; Holzbaur (2024)</a> is about bouton-oriented cargo delivery shaped by axonal microtubule dynamics in a human-neuron preparation, not a living-human whole-brain route. Therefore, this site does not let these rows inherit one another's claim ceiling, and it does not let any of them stand in for human whole-brain cargo-state identification without a route-card audit.
 </p>
 </div>
 
@@ -1221,11 +1292,15 @@ A final correction is that static <sup>1</sup>H-MRSI similarity is not the same 
 <li>Hu, H., Tang, J., Wu, Y., et al. (2025). Polarized ATP synthase in synaptic mitochondria induced by learning and plasticity signals. <em>Communications Biology</em>, 8, 166. <a href="https://doi.org/10.1038/s42003-025-08963-3" target="_blank">doi:10.1038/s42003-025-08963-3</a></li>
 <li>Vishwanath, A. A., Comyn, T., Mira, R. G., et al. (2026). Mitochondrial Ca2+ efflux controls neuronal metabolism and long-term memory across species. <em>Nature Metabolism</em>, 8, 467-488. <a href="https://doi.org/10.1038/s42255-026-01451-w" target="_blank">doi:10.1038/s42255-026-01451-w</a></li>
 <li>Park, M., Salgado, J. M., Ostroff, L., Helton, T. D., Robinson, C. G., Harris, K. M., &amp; Ehlers, M. D. (2006). Plasticity-induced growth of dendritic spines by exocytic trafficking from recycling endosomes. <em>Neuron</em>, 52(5), 817-830. <a href="https://doi.org/10.1016/j.neuron.2006.09.040" target="_blank">doi:10.1016/j.neuron.2006.09.040</a></li>
+<li>Correia, S. S., Bassani, S., Brown, T. C., Lisé, M.-F., Backos, D. S., El-Husseini, A., Passafaro, M., &amp; Esteban, J. A. (2008). Motor protein-dependent transport of AMPA receptors into spines during long-term potentiation. <em>Nature Neuroscience</em>, 11, 457-466. <a href="https://doi.org/10.1038/nn2063" target="_blank">doi:10.1038/nn2063</a></li>
 <li>Maas, C., Belgardt, D., Lee, H. K., Heisler, F. F., Lappe-Siefke, C., Magiera, M. M., van Dijk, J., Hausrat, T. J., Janke, C., &amp; Kneussel, M. (2009). Synaptic activation modifies microtubules underlying transport of postsynaptic cargo. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 106(21), 8731-8736. <a href="https://doi.org/10.1073/pnas.0902304106" target="_blank">doi:10.1073/pnas.0902304106</a></li>
+<li>Uchida, S., Martel, G., Pavlowsky, A., Takizawa, S., Hevi, C., Watanabe, Y., Alarcon, J. M., &amp; Shumyatsky, G. P. (2014). Learning-induced and stathmin-dependent changes in microtubule stability are critical for memory and disrupted in ageing. <em>Nature Communications</em>, 5, 4389. <a href="https://doi.org/10.1038/ncomms5389" target="_blank">doi:10.1038/ncomms5389</a></li>
 <li>Yin, X., Takei, Y., Kido, M. A., &amp; Hirokawa, N. (2011). Molecular motor KIF17 is fundamental for memory and learning via differential support of synaptic NR2A/2B levels. <em>Neuron</em>, 70(2), 310-325. <a href="https://doi.org/10.1016/j.neuron.2011.03.026" target="_blank">doi:10.1016/j.neuron.2011.03.026</a></li>
 <li>Zhao, J., Fok, A. H. K., Fan, R., Kwan, P.-Y., Chan, H.-L., Lo, L. H.-Y., Chan, Y.-S., Yung, W.-H., Huang, J., Lai, C. S. W., &amp; Lai, K.-O. (2020). Specific depletion of the motor protein KIF5B leads to deficits in dendritic transport, synaptic plasticity and memory. <em>eLife</em>, 9, e53456. <a href="https://doi.org/10.7554/eLife.53456" target="_blank">doi:10.7554/eLife.53456</a></li>
 <li>Swarnkar, S., Avchalumov, Y., Espadas, I., Grinman, E., Liu, X.-A., Raveendra, B. L., Zucca, A., Mediouni, S., Sadhu, A., Valente, S., Page, D., Miller, K., &amp; Puthanveettil, S. V. (2021). Molecular motor protein KIF5C mediates structural plasticity and long-term memory by constraining local translation. <em>Cell Reports</em>, 36(2), 109369. <a href="https://doi.org/10.1016/j.celrep.2021.109369" target="_blank">doi:10.1016/j.celrep.2021.109369</a></li>
+<li>Wong, V. C., Houlihan, P. R., Liu, H., Walpita, D., DeSantis, M. C., Liu, Z., &amp; O'Shea, E. K. (2024). Plasticity-induced actin polymerization in the dendritic shaft regulates intracellular AMPA receptor trafficking. <em>eLife</em>, 13, e80622. <a href="https://doi.org/10.7554/eLife.80622" target="_blank">doi:10.7554/eLife.80622</a></li>
 <li>Aiken, J., &amp; Holzbaur, E. L. F. (2024). Spastin locally amplifies microtubule dynamics to pattern the axon for presynaptic cargo delivery. <em>Current Biology</em>, 34(8), 1687-1704.e8. <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">doi:10.1016/j.cub.2024.03.010</a></li>
+<li>de Queiroz, B. R., Laghrissi, H., Rajeev, S., Blot, L., De Graeve, F., Dehecq, M., Keleman, K., Ule, J., Hubstenberger, A., &amp; Besse, F. (2025). Axonal RNA localization is essential for long-term memory. <em>Nature Communications</em>, 16, 2560. <a href="https://doi.org/10.1038/s41467-025-57651-7" target="_blank">doi:10.1038/s41467-025-57651-7</a></li>
 <li>Suzuki, A., et al. (2011). Astrocyte-neuron lactate transport is required for long-term memory formation. <em>Cell</em>, 144(5), 810-823. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">doi:10.1016/j.cell.2011.02.018</a></li>
 <li>Villemagne, V. L., Harada, R., Dore, V., et al. (2022). First-in-Humans Evaluation of <sup>18</sup>F-SMBT-1, a Novel <sup>18</sup>F-Labeled Monoamine Oxidase-B PET Tracer for Imaging Reactive Astrogliosis. <em>Journal of Nuclear Medicine</em>, 63(10), 1551-1559. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">doi:10.2967/jnumed.121.263254</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <em>Nature</em>, 629, 146-153. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
