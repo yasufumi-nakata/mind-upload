@@ -5,7 +5,7 @@ description: "Short, precise answers to the questions that come up most often wh
 article_type: FAQ
 subtitle: "Prefer verifiable progress to flashy conclusions"
 author: Mind Uploading Research Project
-last_updated: "2026-03-21"
+last_updated: "2026-03-22"
 note: "Human-first"
 audience: "Readers who want to sort out questions and misconceptions first, and readers who want a quick overview through short Q&A"
 reading_time: "8-15 minutes"
@@ -15,6 +15,7 @@ page_highlights:
   - "It quickly clears up first-order questions such as what this site is for and what EEG or brain-to-text work can and cannot support."
   - "It now front-loads nine technical guardrails: connectome-complete is not state-complete, human proxy-rich evidence is not automatically near-direct whole-brain state readout, same-subject / same-brain wording does not by itself make a sequential workflow one state sample, a high score is not automatically a target-specific neural readout, EEG / MEG connectivity labels are not automatically leak-proof communication maps or causal circuits, BOLD / fNIRS differences need vascular-state / CVR audit, DCM / effective-connectivity labels do not by themselves identify true causal wiring, thermodynamic / irreversibility labels do not by themselves measure physical dissipation or WBE-ready cost, and low latency does not by itself solve the body / environment boundary."
   - "It also keeps one extra asymmetry visible: the strongest maintenance-state causal papers and the best current human-observability papers are often different ladders."
+  - "It now makes one asymmetry concrete: rodent astrocyte / lymphatic causality, human reactive-astrogliosis PET, human CSF mobility, and model-based biomarker efflux are kept on separate rows rather than one progress bar."
   - "It avoids dramatic overstatement and states what remains unresolved at the same time."
   - "It is structured so readers can tell when the FAQ is enough and when they should move on to the full page."
 known_points:
@@ -22,6 +23,7 @@ known_points:
   - "The impressive appearance of EEG or LLM outputs must be separated from strong WBE claims, and the contributions of language priors, nuisance routes, and brain-derived information must also be separated."
   - "Because wiring diagrams and cell types still leave excitability, timing-state, thermal-state, transcription/chromatin, post-transcriptional RNA-state, phospho-signaling / second-messenger state, proteostasis, cargo-transport / cytoskeletal trafficking state, ECM / PNN, ionic-homeostasis, bioenergetic / mitochondrial state, astrocyte / glial-state, clearance / immune support, and other maintenance-support variables unresolved, long-term dynamical claims require separate auditing."
   - "For several maintenance-state families, local causal evidence and living-human observability remain misaligned, so a human proxy does not by itself mean the causal controller was measured."
+  - "Rodent astrocyte causality plus human astrocyte / clearance proxies still do not identify the responsible human controller because the direct observables, spatial units, and model burdens differ."
   - "Destructive local ultrastructure and living-human in vivo proxy routes raise different measurement classes and different route burdens, so local ultrastructure, SV2A PET, MRSI biochemical scaffolds, kinetic DMRSI, myelin mapping, and clearance routes should not be compressed into one progress bar."
   - "Same-subject or same-brain wording does not by itself make a live-to-fix, cross-regime, or cross-day workflow one state sample; bridge delay, regime continuity, coordinate transfer, and bridge validation still matter."
   - "An EEG / MEG connectivity label does not by itself show leak-free inter-areal communication or causality; volume conduction, source leakage, ghost interactions, and pipeline dependence still matter."
@@ -432,6 +434,32 @@ A further tightening follows on this site: even if several rows are listed toget
 <p>
 One more correction is needed before overreading the same literature: the strongest maintenance-state <strong>causal</strong> papers and the strongest current <strong>human-observability</strong> papers are often on different ladders. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">Hadzibegovic et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2026)</a>, and <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> strengthen local causal relevance, while <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> strengthen human perturbation or proxy routes. That combination still does <strong>not</strong> mean that the responsible human controller was measured. The short crosswalk is in <a href="wbe_101.html#causal-observability-asymmetry">WBE 101: causal relevance vs human observability</a>.
 </p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Route</th>
+<th>What it directly gives you</th>
+<th>Why it still stops short</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rodent astrocyte causal studies</strong><br>Cahill et al. (2024); Williamson et al. (2025); Dewa et al. (2025); Bukalo et al. (2026)</td>
+<td>Local perturbation-linked evidence that astrocytes can matter for encoding, recall, stabilization, or fear-state support.</td>
+<td>Not a living-human readout, not a whole-brain route, and not the same spatial unit as human proxy studies.</td>
+</tr>
+<tr>
+<td><strong>Human astrocyte PET proxy</strong><br>Villemagne et al. (2022)</td>
+<td>A tracer-defined MAO-B / reactive-astrogliosis signal in living humans.</td>
+<td>A reactive-astrogliosis proxy is not a healthy-memory-state meter and not a content-specific astrocyte-ensemble readout.</td>
+</tr>
+<tr>
+<td><strong>Human clearance routes</strong><br>Hirschler et al. (2025); Dagum et al. (2026)</td>
+<td>CSF mobility and model-based overnight biomarker efflux to plasma.</td>
+<td>They still do not identify which astrocyte, meningeal-lymphatic segment, microglial controller, or synapse caused the effect.</td>
+</tr>
+</tbody>
+</table>
 <p>
 A second safety rule follows from the same literature: <strong>local human ultrastructure is not simply the first rung of a living-human proxy ladder</strong>. On this site it is paired with the <a href="verification.html#destructive-structure-card">Destructive-Structure Route Card</a> because preservation route, live-to-fix window, registration scope, and proofreading burden still change what the paper means.
 </p>
