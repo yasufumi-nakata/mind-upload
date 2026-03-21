@@ -35,6 +35,9 @@ wiki_links:
   - label: "Wiki: Multimodal integration basics"
     url: "/wiki/multimodal-integration-basics.html"
     description: "Explains why simultaneous acquisition still needs a fusion audit."
+  - label: "Wiki: State-Continuity Bridge"
+    url: "/wiki/state-continuity-bridge.html"
+    description: "Explains why same-subject or same-brain sequential workflows still need a bridge audit before same-state language is allowed."
   - label: "Wiki: Homeostatic plasticity and maintenance state"
     url: "/wiki/homeostatic-plasticity-and-maintenance-state.html"
     description: "Organizes the hidden-state families that current human routes still leave unresolved."
@@ -264,7 +267,7 @@ The next shortcut to block is subtler than ordinary multimodal overreading. Even
 <div class="note-box">
 <strong>Operational rule on this site</strong>
 <p>
-If the claim depends on treating a sequential bridge as one latent-state sample, this site now asks for the <a href="../verification.html#state-continuity-bridge-card">Verification: State-Continuity Bridge Card</a>. Without that card, the result stays at the <strong>strongest directly supported live or destructive stage</strong> plus, at most, an <strong>unvalidated bridge hypothesis</strong>; it is not promoted to same-state cross-regime evidence.
+If the claim depends on treating a sequential bridge as one latent-state sample, this site now asks for the <a href="../verification.html#state-continuity-bridge-card">Verification: State-Continuity Bridge Card</a>. Without that card, the result stays at the <strong>strongest directly supported live or destructive stage</strong> plus, at most, an <strong>unvalidated bridge hypothesis</strong>; it is not promoted to same-state cross-regime evidence. If the bridge problem itself is your main question, the longer background is in <a href="../wiki/state-continuity-bridge.html">Wiki: State-Continuity Bridge</a>.
 </p>
 </div>
 </section>

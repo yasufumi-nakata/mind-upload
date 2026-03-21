@@ -127,6 +127,9 @@ wiki_links:
   - label: "Wiki: Observability And Claim Ceiling By Measurement Stack"
     url: "/wiki/measurement-stack-and-claim-ceiling.html"
     description: "Shows what each measurement stack directly observes and where its claim ceiling appears."
+  - label: "Wiki: State-Continuity Bridge"
+    url: "/wiki/state-continuity-bridge.html"
+    description: "Explains why same-subject or same-brain sequential workflows still need a bridge audit before same-state language is allowed."
   - label: "Wiki: Counterfactuals, Interventions, And Perturbations"
     url: "/wiki/counterfactual-and-perturbation-verification.html"
     description: "Explains from first principles the difference between held-out accuracy and causal perturbation testing."
@@ -966,6 +969,12 @@ After adding the <strong>Fusion Card</strong>, the <strong>Human Proxy Compositi
 <strong>Minimum operating rule</strong>
 <p>
 If this card is missing, this site reads a sequential cross-regime result at the ceiling of the <strong>strongest directly supported live or destructive stage</strong> plus, at most, an <strong>unvalidated bridge hypothesis</strong>. It is not promoted to <strong>same-state</strong>, <strong>same-time</strong>, or <strong>maintenance-consistent</strong> evidence.
+</p>
+</div>
+<div class="note-box">
+<strong>Need the longer bridge critique?</strong>
+<p>
+For the background logic behind preservation change, cross-day regime mismatch, bridge-validation rungs, and card stacking, see <a href="wiki/state-continuity-bridge.html">Wiki: State-Continuity Bridge</a>.
 </p>
 </div>
 <h3 class="section-title" id="destructive-structure-card">Destructive-Structure Route Card for ultrastructure claims</h3>
