@@ -13,7 +13,7 @@ page_intro: "This page is a Q&A for the questions many readers hit first when re
 accuracy_note: "This page gives short answers. Please do not quote the conclusion alone; return to the linked pages and references when you need the full basis."
 page_highlights:
   - "It quickly clears up first-order questions such as what this site is for and what EEG or brain-to-text work can and cannot support."
-  - "It now front-loads eight technical guardrails: connectome-complete is not state-complete, human proxy-rich evidence is not automatically near-direct whole-brain state readout, a high score is not automatically a target-specific neural readout, EEG / MEG connectivity labels are not automatically leak-proof communication maps or causal circuits, BOLD / fNIRS differences need vascular-state / CVR audit, DCM / effective-connectivity labels do not by themselves identify true causal wiring, thermodynamic / irreversibility labels do not by themselves measure physical dissipation or WBE-ready cost, and low latency does not by itself solve the body / environment boundary."
+  - "It now front-loads nine technical guardrails: connectome-complete is not state-complete, human proxy-rich evidence is not automatically near-direct whole-brain state readout, same-subject / same-brain wording does not by itself make a sequential workflow one state sample, a high score is not automatically a target-specific neural readout, EEG / MEG connectivity labels are not automatically leak-proof communication maps or causal circuits, BOLD / fNIRS differences need vascular-state / CVR audit, DCM / effective-connectivity labels do not by themselves identify true causal wiring, thermodynamic / irreversibility labels do not by themselves measure physical dissipation or WBE-ready cost, and low latency does not by itself solve the body / environment boundary."
   - "It also keeps one extra asymmetry visible: the strongest maintenance-state causal papers and the best current human-observability papers are often different ladders."
   - "It avoids dramatic overstatement and states what remains unresolved at the same time."
   - "It is structured so readers can tell when the FAQ is enough and when they should move on to the full page."
@@ -23,6 +23,7 @@ known_points:
   - "Because wiring diagrams and cell types still leave excitability, timing-state, thermal-state, transcription/chromatin, post-transcriptional RNA-state, phospho-signaling / second-messenger state, proteostasis, cargo-transport / cytoskeletal trafficking state, ECM / PNN, ionic-homeostasis, bioenergetic / mitochondrial state, astrocyte / glial-state, clearance / immune support, and other maintenance-support variables unresolved, long-term dynamical claims require separate auditing."
   - "For several maintenance-state families, local causal evidence and living-human observability remain misaligned, so a human proxy does not by itself mean the causal controller was measured."
   - "Destructive local ultrastructure and living-human in vivo proxy routes raise different measurement classes and different route burdens, so local ultrastructure, SV2A PET, MRSI biochemical scaffolds, kinetic DMRSI, myelin mapping, and clearance routes should not be compressed into one progress bar."
+  - "Same-subject or same-brain wording does not by itself make a live-to-fix, cross-regime, or cross-day workflow one state sample; bridge delay, regime continuity, coordinate transfer, and bridge validation still matter."
   - "An EEG / MEG connectivity label does not by itself show leak-free inter-areal communication or causality; volume conduction, source leakage, ghost interactions, and pipeline dependence still matter."
   - "A BOLD or fNIRS amplitude difference without vascular-state / CVR or short-separation auditing is still not a clean neural difference."
   - "A DCM or effective-connectivity label does not by itself discover the one true causal circuit; candidate model space, validation, and reliability still matter."
@@ -72,6 +73,9 @@ wiki_links:
   - label: "Wiki: Human Proxy Composition and Route Maturity"
     url: "/wiki/human-proxy-composition.html"
     description: "Explains why current human proxy rows do not yet add up to same-subject state-complete readout."
+  - label: "Wiki: State-Continuity Bridge"
+    url: "/wiki/state-continuity-bridge.html"
+    description: "Explains why same-subject or same-brain sequential workflows still need bridge disclosure before same-state language is allowed."
   - label: "Wiki: Thermodynamic grounding basics"
     url: "/wiki/thermodynamic-grounding-basics.html"
     description: "Explains Landauer, dissipation, NESS, irreversibility, and route cards from the beginning."
@@ -151,9 +155,9 @@ If the FAQ helped you understand the topic but you still do not know what to ver
 </div>
 
 <div class="note-box">
-<strong>Eight technical guards now fixed at the front door</strong>
+<strong>Nine technical guards now fixed at the front door</strong>
 <p>
-This FAQ now blocks eight fast overreads before they spread through the site: <strong>connectome-complete is not state-complete</strong>, <strong>human proxy-rich evidence is not automatically near-direct whole-brain state readout</strong>, <strong>high score is not automatically target-specific neural evidence</strong>, <strong>sensor- or source-space connectivity is not automatically a leak-proof communication map or causal circuit</strong>, <strong>BOLD / fNIRS amplitude difference is not automatically a neural difference without vascular-state / CVR audit</strong>, <strong>DCM / effective-connectivity output is not automatically the brain's true causal wiring</strong>, <strong>thermodynamic / irreversibility labels are not automatically direct physical-dissipation measurements or WBE gates</strong>, and <strong>low latency is not automatically a solved body / environment boundary</strong>. If you need the full rule set behind them, go next to <a href="eeg_101.html">EEG 101</a>, <a href="verification.html#observability-budget">Verification: Observability Budget</a>, <a href="verification.html#body-environment-boundary-card">Verification: Body / Environment Boundary Card</a>, <a href="wiki/connectome-is-not-enough.html">Wiki: Why a Connectome Is Not Enough</a>, <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>, <a href="wiki/observation-to-estimation.html#effective-connectivity-route-card">Wiki: effective-connectivity route card</a>, and <a href="wiki/thermodynamic-grounding-basics.html#irreversibility-route-card">Wiki: irreversibility route card</a>.
+This FAQ now blocks nine fast overreads before they spread through the site: <strong>connectome-complete is not state-complete</strong>, <strong>human proxy-rich evidence is not automatically near-direct whole-brain state readout</strong>, <strong>same-subject / same-brain is not automatically same-state in a sequential bridge</strong>, <strong>high score is not automatically target-specific neural evidence</strong>, <strong>sensor- or source-space connectivity is not automatically a leak-proof communication map or causal circuit</strong>, <strong>BOLD / fNIRS amplitude difference is not automatically a neural difference without vascular-state / CVR audit</strong>, <strong>DCM / effective-connectivity output is not automatically the brain's true causal wiring</strong>, <strong>thermodynamic / irreversibility labels are not automatically direct physical-dissipation measurements or WBE gates</strong>, and <strong>low latency is not automatically a solved body / environment boundary</strong>. If you need the full rule set behind them, go next to <a href="eeg_101.html">EEG 101</a>, <a href="verification.html#observability-budget">Verification: Observability Budget</a>, <a href="verification.html#state-continuity-bridge-card">Verification: State-Continuity Bridge Card</a>, <a href="verification.html#body-environment-boundary-card">Verification: Body / Environment Boundary Card</a>, <a href="wiki/connectome-is-not-enough.html">Wiki: Why a Connectome Is Not Enough</a>, <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>, <a href="wiki/state-continuity-bridge.html">Wiki: State-Continuity Bridge</a>, <a href="wiki/observation-to-estimation.html#effective-connectivity-route-card">Wiki: effective-connectivity route card</a>, and <a href="wiki/thermodynamic-grounding-basics.html#irreversibility-route-card">Wiki: irreversibility route card</a>.
 </p>
 </div>
 
@@ -184,6 +188,10 @@ This FAQ now blocks eight fast overreads before they spread through the site: <s
 <tr>
 <td><strong>Know what humans can actually observe today</strong></td>
 <td>Q2d, “If human measurement keeps improving, are we close to state-complete readout?” separates proxy class from route maturity before you overread human evidence.</td>
+</tr>
+<tr>
+<td><strong>Know whether same-subject or same-brain really means one state sample</strong></td>
+<td>Q2e, “If a paper says same-subject or same-brain, does that mean one state was captured?” separates specimen identity from bridge validity.</td>
 </tr>
 <tr>
 <td><strong>Know the conditions for real-time or closed-loop work</strong></td>
@@ -431,7 +439,32 @@ A second safety rule follows from the same literature: <strong>local human ultra
 That caution applies especially to human clearance papers. On this site, CSF-mobility MRI and sleep-linked glymphatic studies lower a <strong>support-state uncertainty</strong>, but they still do not tell you which meningeal-lymphatic segment, which microglial controller, or which local synapse is responsible for the difference. They therefore stay below a <strong>local maintenance-controller</strong> claim ceiling.
 </p>
 <p>
-The shortest follow-up is <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>, <a href="wiki/human-proxy-composition.html">Wiki: Human Proxy Composition and Route Maturity</a>, and <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>. Those pages keep proxy class, route maturity, composition failure modes, and the still-latent hidden-state families in one place.
+The shortest follow-up is <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>, <a href="wiki/human-proxy-composition.html">Wiki: Human Proxy Composition and Route Maturity</a>, and <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>. Those pages keep proxy class, route maturity, composition failure modes, and the still-latent hidden-state families in one place. If the argument then promotes <strong>same-subject</strong> or <strong>same-brain</strong> wording into one state sample across stages or days, continue directly to <a href="#q2e">Q2e</a>.
+</p>
+</section>
+
+<section class="section" id="q2e">
+<h2 class="section-title">Q. If a paper says same-subject or same-brain, does that mean one state was captured?</h2>
+<p>
+A. Not automatically. On this site, <strong>same-subject</strong> or <strong>same-brain</strong> solves <strong>specimen identity</strong>, not <strong>state continuity</strong>. A sequential bridge still has to justify <strong>elapsed time</strong>, <strong>physiological-regime continuity</strong>, <strong>coordinate transfer</strong>, and <strong>bridge validation</strong> before one later stage is read as the same state rather than the same specimen at another stage.
+</p>
+<p>
+The primary literature is already strong enough to require that separation. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> showed that preservation route changes extracellular-space retention and native geometry, and <a href="https://doi.org/10.1523/ENEURO.0104-23.2023" target="_blank">Idziak et al. (2023)</a> showed subtle spine-morphology changes plus substantial membrane damage after chemical fixation. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a> and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> then showed why even very strong correlative same-brain workflows remain <strong>multistage local bridges</strong> with landmarks, targeted subvolumes, and later reconstruction rather than simultaneous whole-state capture.
+</p>
+<p>
+The same warning applies even without fixation. <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">Benisty et al. (2024)</a> showed that spontaneous behavior changes both activity magnitude and functional-connectivity structure, and <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> showed 10-hour EEG dynamics that materially affect decoding and motivate adaptive decoders. Therefore, a cross-day or cross-regime bridge still cannot be read as one stable state sample by wording alone.
+</p>
+<div class="key-points">
+<h4>Four checks before raising the claim ceiling</h4>
+<ul>
+<li><strong>Time window:</strong> how much time elapsed, and which state families could drift during that window?</li>
+<li><strong>Regime continuity:</strong> were task, arousal, sleep pressure, anesthesia, pharmacology, or recovery status matched?</li>
+<li><strong>Coordinate continuity:</strong> were landmarks, deformation model, and residual mismatch disclosed?</li>
+<li><strong>Validation rung:</strong> was the bridge itself independently checked, or is the workflow only specimen linkage plus an unvalidated bridge hypothesis?</li>
+</ul>
+</div>
+<p>
+At Mind-Upload, if those fields are missing, we read the result as <strong>specimen linkage only</strong> or at most a <strong>sequential local scaffold</strong>, not as same-state evidence. The shortest follow-up is <a href="verification.html#state-continuity-bridge-card">Verification: State-Continuity Bridge Card</a> and <a href="wiki/state-continuity-bridge.html">Wiki: State-Continuity Bridge</a>. If the bridge crosses hours to days in a live stack, add <a href="verification.html#temporal-validity-card">Verification: Temporal Validity Card</a> as well.
 </p>
 </section>
 
