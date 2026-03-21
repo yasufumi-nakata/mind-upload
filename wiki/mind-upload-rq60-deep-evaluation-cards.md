@@ -429,3 +429,11 @@ reading_time: "35-55分"
 - ただし `EEG-DATA` 側の再採番により、数値IDは「同じ値でも別データセットを指す」ケースが発生するため、`主データ（ID）` と `補助データ（推奨ID）` は legacy 参照として扱います。
 - 実務正本は `mind-upload-eeg-rq60-feasibility-and-funds` 側の `D01-D24 + DOI + データセット名 + access区分` に固定し、当カードは `RQごとの主張境界・応募テーマ・最低成果物` の深掘り正本として運用します。
 
+## 2026-03-22 02:03 JST 再検証ログ（本run / ユーザー依頼: RQを1件ずつ深掘りでwiki更新）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` の `main` で `git pull --ff-only origin main` を実行し、最新化を確認しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` / `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` / `auto-research-funds/wiki/Mind-Upload-RQ60-Deep-Evaluation-Cards.md` / `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `unique Ux-y` を再計数し、4ページすべて `RQ_TOTAL=60`（欠損・重複 `0`）を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` を4ページで再計数し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用が維持されていることを確認しました。
+- `mind-upload` 側カードで参照しているEEG ID一意集合（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と突合し、未解決ID `0` を確認しました。
+- `C` 判定RQ（主に `U10/U12/U15` と `U3/U11` の一部）は、EEG単独では不可という境界を維持し、`G2/G6` を中心に制度・理論連携トラックへ接続する方針を再固定しました。
+- `A/B` 判定RQは、各行の `最低成果物`（監査レポート・リーク監査・閉ループKPI等）を提出単位として使う方針を維持し、汎用横断要約ではなくRQ単位での深掘り提出を継続します。

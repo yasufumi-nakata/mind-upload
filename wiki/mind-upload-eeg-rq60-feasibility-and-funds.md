@@ -791,3 +791,11 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 既存の `ID` 列は探索補助の legacy スナップショットとしてのみ扱い、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用は維持します。
 - 助成キー `G3/G5/G6` は最新カード上で 2026年度想定窓（`G3: 2026-04-21〜2026-07-10`, `G5: 2026-08-01〜2026-09-01`, `G6: 2026-04-03〜2026-06-06`）を再確認し、`G4` は予備キーとして継続運用します。
 
+## 2026-03-22 02:03 JST 再検証ログ（本run / ユーザー依頼: RQを1件ずつ深掘りでwiki更新）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` の `main` で `git pull --ff-only origin main` を実行し、最新化を確認しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` / `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` / `auto-research-funds/wiki/Mind-Upload-RQ60-Deep-Evaluation-Cards.md` / `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `unique Ux-y` を再計数し、4ページすべて `RQ_TOTAL=60`（欠損・重複 `0`）を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` を4ページで再計数し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用が維持されていることを確認しました。
+- `mind-upload` 側カードで参照しているEEG ID一意集合（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と突合し、未解決ID `0` を確認しました。
+- `C` 判定RQ（主に `U10/U12/U15` と `U3/U11` の一部）は、EEG単独では不可という境界を維持し、`G2/G6` を中心に制度・理論連携トラックへ接続する方針を再固定しました。
+- `A/B` 判定RQは、各行の `最低成果物`（監査レポート・リーク監査・閉ループKPI等）を提出単位として使う方針を維持し、汎用横断要約ではなくRQ単位での深掘り提出を継続します。
