@@ -36,6 +36,7 @@ page_highlights:
   - "Cargo evidence is not one class: postsynaptic receptor delivery, transport-path microtubule gating, local vesicle confinement, axonal RNA localization, and presynaptic cargo retention should be audited separately with a route card."
   - "Cell-type atlas and current plasticity-competent transcriptional state are different objects; static transcriptomic labels do not fix which neurons are eligible for allocation or stabilization."
   - "Gene-level transcript abundance does not fix post-transcriptional RNA-state: isoform choice, m6A-dependent translation / degradation, and RNA-editing ratio can still change plasticity and memory on the same transcript-count background."
+  - "Post-transcriptional RNA evidence is not one class: hybrid splice-isoform controllers, m6A-dependent translation, m6A-dependent degradation, RNA-editing control, and long-read atlas ceilings should be audited separately with a route card."
   - "Transcript or bulk protein abundance does not fix phospho-signaling / second-messenger state: phosphosite occupancy, kinase/phosphatase balance, and signaling nanodomains can still change plasticity on the same abundance background."
   - "Phospho-signaling evidence is not one class: phosphosite-specific causal gates, compartmentalized second-messenger routing, region-structured phosphoproteome atlases, and phospho-mutant memory experiments should be audited separately with a route card."
   - "Current weights do not fix which tagged synapses or dendritic branches capture plasticity-related proteins, so late stabilization remains another hidden layer."
@@ -57,6 +58,7 @@ known_points:
   - "Even in humans, macro scaffolds and support-state proxies are starting to become visible through SV2A PET, MRSI-based metabolic connectomes, MRS thermometry, 31P-MRS, sodium MRI, dynamic deuterium metabolic imaging, myelin bilayer mapping, TMS / EEG / sleep plasticity proxies, and CSF / glymphatic proxies, although cell-specific maintenance-states still remain coarse."
   - "Myelin evidence already spans adaptive learning, timing-state control, plasticity-brake effects, remyelination recovery, and human macro-proxy classes, so a human myelin map alone does not settle per-axon timing-state or plasticity-complete restoration."
   - "Ionic evidence already spans chloride-set-point mechanisms, transporter-state regulation, interstitial-ion state switching, perisynaptic K+ clearance, sleep-wake-history-dependent E_GABAA shifts, human pathology, and macro human proxy routes, so one ionic paper does not settle inhibitory-state observability."
+  - "Post-transcriptional RNA evidence already spans isoform-dependent downstream transcriptional control, transsynaptic receptor-balance control, m6A-dependent translation, m6A-dependent degradation, RNA-editing-dependent homeostatic scaling, and atlas / ex vivo observability ceilings, so one RNA paper does not settle current RNA-state."
   - "Proteostasis evidence already spans tag/capture, branch-level integration, synthesis/degradation balance, autophagy-linked remodeling, turnover-resistant persistence, and proteasome-capacity intervention, so one proteostasis paper does not settle late-stabilization completeness."
   - "Bioenergetic evidence already spans presynaptic ATP-linked respiration, dendritic positioning / fission, synaptic ATP-synthase nano-organization, conserved mitochondrial Ca2+-efflux tuning, and human macro energetic proxy routes, so one energetic paper does not settle local mitochondrial state."
   - "Cargo evidence already spans postsynaptic receptor delivery, learning-phase microtubule-state gating, local vesicle confinement, axonal RNA localization, and presynaptic cargo retention, so one trafficking paper does not settle compartment-delivery completeness."
@@ -65,7 +67,8 @@ known_points:
 unknown_points:
   - "It is unclear at what granularity excitability, thermal-state, ionic milieu / chloride homeostasis, sleep homeostasis, local proteostasis / synaptic tagging, ECM / PNN state, bioenergetic support, metabolic support, and clearance support must be measured to approach sufficient conditions for WBE."
   - "It is not yet fixed how time-resolved transcription / chromatin audit should be submitted so that cell identity, current plasticity program, and memory-stabilization controller are not mixed."
-  - "It is not yet fixed how post-transcriptional RNA-state should be audited without collapsing isoform choice, m6A-dependent translation / degradation, and RNA-editing ratio back into gene-level abundance."
+  - "It is not yet fixed which route-card fields should be mandatory when a post-transcriptional paper mixes alternative splicing, m6A-dependent translation or degradation, RNA editing, and ex vivo atlas language in one argument."
+  - "It is not yet fixed which human-compatible external calibrators could raise post-transcriptional RNA-state claims beyond hippocampal or ex vivo long-read atlas evidence."
   - "It is not yet fixed which route-card fields should be mandatory when a proteostasis paper mixes tag/capture, autophagy subtype, turnover-resistant persistence, proteasome-capacity intervention, and human proxy language in one argument."
   - "It is not yet fixed which same-subject or human-compatible external calibrators could raise phospho-signaling / second-messenger claims beyond region-structured ex vivo atlas evidence."
   - "It is not yet fixed which route-card fields should be mandatory when an ionic paper mixes chloride set point, interstitial-ion composition, perisynaptic K+ clearance, sleep-wake-history-dependent E_GABAA shifts, pathology tissue, and human proxy language in one argument."
@@ -305,6 +308,74 @@ The remaining weakness after separating <strong>cell identity</strong> from <str
 <strong>Human observability ceiling for post-transcriptional RNA-state</strong>
 <p>
 Current human in vivo routes on this site do not directly reveal <strong>isoform choice</strong>, <strong>m6A-reader engagement</strong>, or <strong>RNA-editing ratio</strong> across the whole living brain. Specialized long-read atlas work such as <a href="https://doi.org/10.1038/s41593-024-01616-4" target="_blank">Joglekar et al. (2024)</a> is important evidence that brain splicing programs are rich and cell-type-specific, but it is still an atlas-building / ex vivo observability route rather than a comparable in vivo whole-brain human measurement. Therefore, on this site, post-transcriptional RNA-state remains a <strong>local hidden state</strong> in humans unless it is externally calibrated or causally perturbed in a narrower preparation.
+</p>
+</div>
+<div class="note-box" id="post-transcriptional-rna-route-card">
+<strong>2026-03-21 addendum: post-transcriptional RNA evidence now needs a route card</strong>
+<p>
+The remaining weakness on this page was that it still let several different inferential objects collapse into one label such as <strong>post-transcriptional RNA evidence</strong>. The primary literature does not support that shortcut. <a href="https://doi.org/10.1038/nn.4069" target="_blank">Wang et al. (2015)</a> is about an <strong>alternative-splice isoform that changes downstream chromatin / transcriptional control</strong>, <a href="https://doi.org/10.1016/j.neuron.2019.03.032" target="_blank">Dai et al. (2019)</a> is about <strong>presynaptic alternative splicing that shifts postsynaptic NMDA versus AMPA receptor balance</strong>, <a href="https://doi.org/10.1038/s41586-018-0666-1" target="_blank">Shi et al. (2018)</a> is about <strong>neuronal-stimulus-dependent m6A translation through YTHDF1</strong>, <a href="https://doi.org/10.1002/advs.202514926" target="_blank">Li et al. (2025)</a> is about <strong>YTHDF2-mediated m6A degradation constraining protein synthesis and memory</strong>, <a href="https://doi.org/10.1126/scisignal.adr1442" target="_blank">Peterson et al. (2025)</a> is about <strong>ADAR2-mediated RNA editing controlling homeostatic AMPAR composition</strong>, and <a href="https://doi.org/10.1038/s41593-024-01616-4" target="_blank">Joglekar et al. (2024)</a> is an <strong>isoform atlas / observability-ceiling route</strong>. Therefore, this site now requires a <strong>post-transcriptional RNA route card</strong> before a claim is promoted beyond a narrow, explicitly named ceiling.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be fixed explicitly</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the result supports <strong>alternative-splice controller logic</strong>, <strong>m6A-dependent translation</strong>, <strong>m6A-dependent degradation / stabilization</strong>, <strong>RNA-editing controller logic</strong>, or an <strong>atlas / observability map</strong>.</td>
+<td>Mechanistically different papers collapse into one vague label such as <code>RNA-state evidence</code>.</td>
+</tr>
+<tr>
+<td><strong>RNA control axis</strong></td>
+<td>Name the actual RNA-side controller: splice isoform / exon choice, m6A writer / eraser / reader route, editing enzyme and edited site, or long-read isoform survey axis.</td>
+<td>The word <code>post-transcriptional</code> hides whether the paper is really about recoding, translation, degradation, or isoform allocation.</td>
+</tr>
+<tr>
+<td><strong>Biological regime</strong></td>
+<td>Name species, sex, brain region / circuit, cell class, developmental stage, behavioral phase, and whether the preparation is culture, slice, awake animal, fixed tissue, or human ex vivo sample.</td>
+<td>A local route in one circuit or age window is silently promoted to a generic brain-wide memory controller.</td>
+</tr>
+<tr>
+<td><strong>Time axis / state dependence</strong></td>
+<td>Write baseline and every post-learning / post-stimulation / post-recall window, and state whether the assay is an endpoint snapshot or a repeated readout across the relevant state change.</td>
+<td>An acute RNA response is overread as a persistent maintenance controller or a long-term trace.</td>
+</tr>
+<tr>
+<td><strong>Assay and direct observable</strong></td>
+<td>Name the direct RNA observable explicitly, such as isoform ratio, exon inclusion, m6A-marked transcript binding / occupancy, editing fraction, or isoform-resolved long-read map, and separate it from downstream electrophysiology or behavior.</td>
+<td>Gene-level abundance, bulk RNA summaries, and downstream physiology are treated as if they directly measured the operative RNA-state.</td>
+</tr>
+<tr>
+<td><strong>Downstream functional object</strong></td>
+<td>State whether the RNA route is claimed to alter <strong>chromatin / transcriptional control</strong>, <strong>receptor composition</strong>, <strong>protein synthesis</strong>, <strong>mRNA decay</strong>, <strong>homeostatic scaling</strong>, or only an <strong>observability ceiling</strong>.</td>
+<td>Hybrid papers such as splice-dependent chromatin control and editing-dependent receptor recoding are misread as if they fixed the same latent variable.</td>
+</tr>
+<tr>
+<td><strong>Causal leverage</strong></td>
+<td>Write whether the paper only observed an RNA pattern, perturbed the reader / writer / editor, edited a named site, rescued a knockout, or re-expressed a controller, and which physiological or behavioral output changed.</td>
+<td>Correlated RNA signatures are promoted to necessary or sufficient controllers without intervention support.</td>
+</tr>
+<tr>
+<td><strong>Human observability ceiling</strong></td>
+<td>State whether the strongest human-facing evidence is an ex vivo long-read atlas, a targeted human tissue sample, or no human route at all, and do not blur that with living-human in vivo measurement.</td>
+<td>Atlas-building or hippocampus-limited evidence is overread as current whole-brain human RNA-state identification.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Fix in one line which state variables remain latent, especially same-subject whole-brain continuity, compartment-specific RNA localization, live cell-type-specific readout, and non-destructive human coverage.</td>
+<td>A local mechanistic paper or atlas is overread as if the current living-brain RNA controller were nearly solved.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Why this route card is necessary here</strong>
+<p>
+The need is multi-axis. <a href="https://doi.org/10.1038/nn.4069" target="_blank">Wang et al. (2015)</a> is not just <strong>an RNA paper</strong>; it is an <strong>alternative-splice isoform</strong> whose downstream object is <strong>activity-dependent transcriptional elongation</strong>. <a href="https://doi.org/10.1016/j.neuron.2019.03.032" target="_blank">Dai et al. (2019)</a> is not about a generic memory trace either; it is about <strong>presynaptic neurexin splice choice</strong> differentially controlling <strong>postsynaptic receptor responses without synapse-density change</strong>. <a href="https://doi.org/10.1038/s41586-018-0666-1" target="_blank">Shi et al. (2018)</a> and <a href="https://doi.org/10.1002/advs.202514926" target="_blank">Li et al. (2025)</a> are both m6A papers, but one is about <strong>stimulus-dependent translation via YTHDF1</strong> whereas the other is about <strong>mRNA degradation via YTHDF2</strong>. <a href="https://doi.org/10.1126/scisignal.adr1442" target="_blank">Peterson et al. (2025)</a> is different again because it is about <strong>RNA editing of a named receptor subunit during homeostatic synaptic scaling</strong>. Finally, <a href="https://doi.org/10.1038/s41593-024-01616-4" target="_blank">Joglekar et al. (2024)</a> shows that isoform diversity varies strongly across cell type, region, development, and species, but that remains an <strong>atlas ceiling</strong>, not a living-human whole-brain readout. Therefore, this site does not let these rows inherit one another's claim ceiling, and it does not let any of them stand in for current human whole-brain RNA-state identification without a route-card audit.
 </p>
 </div>
 <h3 id="phospho-signaling-state">4. Phospho-signaling / second-messenger state is not the same as transcript or protein abundance</h3>

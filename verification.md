@@ -34,6 +34,7 @@ page_highlights:
   - "For bioenergetic / mitochondrial claims, the maintenance-state budget now requires a route card that names claim family, compartment, direct energetic observable, quantity type / model burden, function target, human proxy class, and abstention."
   - "For astrocyte / glial-state claims, the maintenance-state budget now requires a route card that names claim family, direct astrocyte observable, perturbation route, function target, human proxy class, and abstention."
   - "For phospho-signaling / second-messenger claims, the maintenance-state budget now requires a route card that names claim family, assay / direct observable, compartment scope, timing window, causal leverage, and abstention."
+  - "For post-transcriptional RNA-state claims, the maintenance-state budget now requires a route card that names claim family, RNA control axis, assay / direct observable, downstream object, time window, human observability ceiling, and abstention."
   - "For local proteostasis / synaptic-tagging claims, the maintenance-state budget now requires a route card that names claim family, integrative unit, direct observable, turnover window, perturbation route, human observability ceiling, and abstention."
   - "For DCM / effective-connectivity claims, the Observability Budget now requires an effective-connectivity route card that names candidate model space, observation-model assumptions, validation, reliability, and abstention."
   - "For irreversibility / thermodynamic claims, the route card now names signal route, coarse-graining / timescale, observed-state closure / hidden-degree risk, estimator family plus dynamical assumptions, null control, quantity type, physiology-side grounding when energetic language is used, and cost isolation before any claim ceiling is raised."
@@ -1177,7 +1178,7 @@ The <strong>Observability Budget</strong> fixes what entered the sensor and what
 </tr>
 <tr>
 <td><strong>Post-transcriptional RNA-state</strong></td>
-<td>Disclose whether splice-isoform ratios, RNA-editing state, m6A modification / reader route, or isoform-resolved long-read assay was directly measured, causally perturbed, externally calibrated, or replaced by gene-level abundance alone.</td>
+<td>Disclose whether splice-isoform ratios, RNA-editing state, m6A modification / reader route, or isoform-resolved long-read assay was directly measured, causally perturbed, externally calibrated, or replaced by gene-level abundance alone, and state which downstream object the paper actually constrained.</td>
 <td>Isoform-specific receptor composition, m6A-dependent translation / degradation, and editing-dependent plasticity claims remain latent.</td>
 </tr>
 <tr>
@@ -1623,7 +1624,7 @@ In our March 2026 primary-literature audit, we reconfirmed that there are at lea
 </tr>
 <tr>
 <td><strong>Post-transcriptional RNA-state</strong></td>
-<td>Even with the same graph, cell type, and gene-level transcript counts, alternative splicing, m6A-dependent translation / degradation, and RNA-editing ratios can still change receptor composition, plasticity rules, and maintenance behavior. </td>
+<td>Even with the same graph, cell type, and gene-level transcript counts, alternative splicing, m6A-dependent translation / degradation, and RNA-editing ratios can still change receptor composition, downstream transcriptional control, plasticity rules, and maintenance behavior. </td>
 <td>Stop treating gene-level abundance or DEG signatures as if isoform, m6A, and RNA-editing control were fixed; keep RNA-state explicit as latent, perturbed, externally calibrated, or isoform-resolved. </td>
 </tr>
 <tr>
@@ -1705,6 +1706,12 @@ The remaining weakness was that <strong>allocation eligibility</strong>, <strong
 <strong>2026-03-20 addendum: transcript count is not post-transcriptional RNA-state</strong>
 <p>
 <a href="https://doi.org/10.1038/nn.4069" target="_blank">Wang et al. (2015)</a> showed that a neuron-specific LSD1 splice isoform regulates memory formation, <a href="https://doi.org/10.1016/j.neuron.2019.03.032" target="_blank">Dai et al. (2019)</a> showed that presynaptic neurexin alternative splicing changes postsynaptic receptor balance and contextual memory, <a href="https://doi.org/10.1038/s41586-018-0666-1" target="_blank">Shi et al. (2018)</a> and <a href="https://doi.org/10.1002/advs.202514926" target="_blank">Li et al. (2025)</a> showed that m6A-reader routes can alter hippocampus-dependent learning and memory, and <a href="https://doi.org/10.1126/scisignal.adr1442" target="_blank">Peterson et al. (2025)</a> showed that ADAR2-mediated GluA2 editing contributes to homeostatic synaptic plasticity. Therefore, when a claim depends on isoform choice, m6A-dependent translation / degradation, or RNA-editing ratio, this site asks authors to disclose whether post-transcriptional RNA-state was directly measured, causally perturbed, externally calibrated, or silently replaced by gene-level abundance alone. Specialized long-read atlas work such as <a href="https://doi.org/10.1038/s41593-024-01616-4" target="_blank">Joglekar et al. (2024)</a> is informative for the ceiling but still not a comparable in vivo whole-brain human route.
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-21 addendum: post-transcriptional RNA evidence now needs a route card</strong>
+<p>
+The remaining weakness was that <strong>alternative-splice controller papers</strong>, <strong>m6A-dependent translation papers</strong>, <strong>m6A-dependent degradation papers</strong>, <strong>RNA-editing controller papers</strong>, and <strong>long-read atlas papers</strong> could still be compressed into one bucket called <strong>post-transcriptional evidence</strong>. The primary literature does not support that shortcut. <a href="https://doi.org/10.1038/nn.4069" target="_blank">Wang et al. (2015)</a> is a splice-isoform route whose downstream object is chromatin / transcriptional control, <a href="https://doi.org/10.1016/j.neuron.2019.03.032" target="_blank">Dai et al. (2019)</a> is a splice-dependent transsynaptic receptor-balance route, <a href="https://doi.org/10.1038/s41586-018-0666-1" target="_blank">Shi et al. (2018)</a> and <a href="https://doi.org/10.1002/advs.202514926" target="_blank">Li et al. (2025)</a> are distinct m6A translation-versus-degradation routes, <a href="https://doi.org/10.1126/scisignal.adr1442" target="_blank">Peterson et al. (2025)</a> is an ADAR2 / GluA2 editing route for homeostatic scaling, and <a href="https://doi.org/10.1038/s41593-024-01616-4" target="_blank">Joglekar et al. (2024)</a> is an atlas / observability-ceiling route. On this site, post-transcriptional claims therefore have to disclose <strong>claim family</strong>, <strong>RNA control axis</strong>, <strong>time axis</strong>, <strong>assay and direct observable</strong>, <strong>downstream functional object</strong>, <strong>causal leverage</strong>, <strong>human observability ceiling</strong>, and <strong>abstention boundary</strong> before any claim ceiling is raised. The full operating rule is summarized in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#post-transcriptional-rna-route-card">Wiki: post-transcriptional RNA route card</a>.
 </p>
 </div>
 <div class="note-box">
