@@ -35,6 +35,7 @@ page_highlights:
   - "Astrocyte evidence is not one class: lactate-shuttle support, minute-scale cortical network encoding, learning-associated recall ensembles, multiday stabilization ensembles, fear-state representations, and human reactive-astrogliosis PET should be audited separately with a route card."
   - "Proteostasis evidence is not one class: tag/capture eligibility, branch-level integration, synthesis-degradation balance, autophagy subtypes, turnover-resistant persistence, and proteasome-capacity interventions should be audited separately with a route card."
   - "Cargo evidence is not one class: postsynaptic receptor delivery, transport-path microtubule gating, local vesicle confinement, axonal RNA localization, and presynaptic cargo retention should be audited separately with a route card."
+  - "SV2A / synaptic-density PET evidence is not one class: tracer / quantification route, healthy atlas, disease contrast, task / cognition association, and longitudinal intervention / target-engagement should be audited separately with a route card."
   - "Cell-type atlas and current plasticity-competent transcriptional state are different objects; static transcriptomic labels do not fix which neurons are eligible for allocation or stabilization."
   - "Gene-level transcript abundance does not fix post-transcriptional RNA-state: isoform choice, m6A-dependent translation / degradation, and RNA-editing ratio can still change plasticity and memory on the same transcript-count background."
   - "Post-transcriptional RNA evidence is not one class: hybrid splice-isoform controllers, m6A-dependent translation, m6A-dependent degradation, RNA-editing control, and long-read atlas ceilings should be audited separately with a route card."
@@ -1220,7 +1221,7 @@ This distinction matters operationally. <a href="https://doi.org/10.1126/science
 <div class="note-box">
 <strong>Practical interpretation in this addendum</strong>
 <p>
-Therefore, on this site, <strong>human metabolic connectome</strong> is written as a <strong>macro-biochemical scaffold</strong>, <strong>MRS thermometry</strong> as a <strong>macro thermal proxy</strong>, <strong>31P-MRS / dynamic DMI</strong> as a <strong>macro energetic proxy</strong>, <strong>human sodium MRI and CSF ion assays</strong> as <strong>macro ionic proxies</strong>, <strong>human myelin bilayer mapping</strong> as a <strong>macro-myelin proxy</strong>, <strong>TMS-EEG / sleep plasticity routes</strong> as <strong>perturbation-conditioned proxies</strong>, <strong>human astrocyte PET</strong> as a <strong>tracer-defined astrocyte-related proxy</strong>, and <strong>CSF mobility / glymphatic evidence</strong> as a <strong>macro support-state proxy</strong>. Human ECM evidence such as <a href="https://doi.org/10.3390/ijms23158197" target="_blank">Boonen et al. (2022)</a> remains mostly <strong>ex vivo pathology</strong>, and current transcriptional / chromatin state, current post-transcriptional RNA-state, current phospho-signaling / second-messenger state, plus branch-local proteostasis still lack a comparable in vivo whole-brain human route. It is therefore valid to use animal causal evidence to support the existence of these layers, but not to silently upgrade present human proxies into <strong>cell-specific recovery controller</strong>, <strong>astrocyte-ensemble identity</strong>, <strong>local thermal-state</strong>, <strong>current chloride homeostasis</strong>, <strong>local immune controller</strong>, <strong>local mitochondrial state</strong>, <strong>current RNA-state controller</strong>, <strong>current phospho-controller</strong>, or <strong>current ECM plasticity gate</strong> ground truth.
+Therefore, on this site, <strong>human synaptic-density PET</strong> is written as a <strong>tracer-defined regional synaptic-density proxy</strong>, <strong>human metabolic connectome</strong> as a <strong>macro-biochemical scaffold</strong>, <strong>MRS thermometry</strong> as a <strong>macro thermal proxy</strong>, <strong>31P-MRS / dynamic DMI</strong> as a <strong>macro energetic proxy</strong>, <strong>human sodium MRI and CSF ion assays</strong> as <strong>macro ionic proxies</strong>, <strong>human myelin bilayer mapping</strong> as a <strong>macro-myelin proxy</strong>, <strong>TMS-EEG / sleep plasticity routes</strong> as <strong>perturbation-conditioned proxies</strong>, <strong>human astrocyte PET</strong> as a <strong>tracer-defined astrocyte-related proxy</strong>, and <strong>CSF mobility / glymphatic evidence</strong> as a <strong>macro support-state proxy</strong>. Human ECM evidence such as <a href="https://doi.org/10.3390/ijms23158197" target="_blank">Boonen et al. (2022)</a> remains mostly <strong>ex vivo pathology</strong>, and current transcriptional / chromatin state, current post-transcriptional RNA-state, current phospho-signaling / second-messenger state, plus branch-local proteostasis still lack a comparable in vivo whole-brain human route. It is therefore valid to use animal causal evidence to support the existence of these layers, but not to silently upgrade present human proxies into <strong>cell-specific recovery controller</strong>, <strong>astrocyte-ensemble identity</strong>, <strong>local thermal-state</strong>, <strong>current synaptic efficacy</strong>, <strong>current chloride homeostasis</strong>, <strong>local immune controller</strong>, <strong>local mitochondrial state</strong>, <strong>current RNA-state controller</strong>, <strong>current phospho-controller</strong>, or <strong>current ECM plasticity gate</strong> ground truth.
 </p>
 </div>
 <div class="note-box" id="metabolic-connectome-route-card">
@@ -1233,6 +1234,69 @@ The measurement model also remains part of the object. <a href="https://doi.org/
 </p>
 <p>
 A final correction is that static <sup>1</sup>H-MRSI similarity is not the same object as rate imaging. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> used <strong>dynamic deuterium MRSI plus a kinetic model</strong> to map glucose transport and metabolic rates such as CMR<sub>Glc</sub>, CMR<sub>Lac</sub>, and V<sub>TCA</sub>. This site therefore does not let the phrase <strong>human metabolic connectome</strong> silently inherit claims about current glucose-flux, ATP-turnover, or energetic-rate imaging.
+</p>
+</div>
+<div class="note-box" id="sv2a-route-card">
+<strong>2026-03-21 addendum: SV2A / synaptic-density PET now needs a route card</strong>
+<p>
+The remaining weakness on this page was that <strong>human synaptic-density PET</strong> could still collapse several different inferential objects into one bucket. The primary literature does not support that shortcut. <a href="https://doi.org/10.1126/scitranslmed.aaf6667" target="_blank">Finnema et al. (2016)</a> established a living-human SV2A PET route and showed sensitivity to synaptic loss in temporal-lobe epilepsy. <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> showed that quantification depends on the tracer, arterial-versus-reference route, compartment model, and named scan window. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> is a <strong>healthy-human atlas route</strong> calibrated against autoradiography. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> is a <strong>healthy-human task / cognition association route</strong> linking [<sup>11</sup>C]UCB-J DVRcs to task-related activity and cognition. <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> showed that brief visual activation does not measurably change [<sup>11</sup>C]UCB-J binding even when tracer influx rises with blood flow, so the route is not a momentary synaptic-efficacy meter. <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a> found no measurable overall SV2A change 24 h after ketamine despite symptom improvement, showing that intervention response and synaptic-density readout are not the same question. Therefore, this site now requires a <strong>SV2A / synaptic-density PET route card</strong> before a claim is promoted beyond a regional, explicitly named ceiling.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be fixed explicitly</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the paper is about <strong>tracer / validation</strong>, <strong>healthy atlas construction</strong>, <strong>disease or risk-group contrast</strong>, <strong>task / cognition association</strong>, or <strong>longitudinal intervention / target-engagement</strong>.</td>
+<td>Atlas papers, case-control contrasts, healthy correlation studies, and drug-response designs collapse into one phrase such as <code>synaptic-density PET shows current synaptic state</code>.</td>
+</tr>
+<tr>
+<td><strong>Tracer and target route</strong></td>
+<td>Name the ligand, target, selectivity / blocking context, and whether the route uses [<sup>11</sup>C]UCB-J, <sup>18</sup>F-SynVesT-1, or another explicitly identified SV2A tracer.</td>
+<td>A result obtained with one tracer or validation context is silently promoted to all SV2A PET implementations.</td>
+</tr>
+<tr>
+<td><strong>Quantification route</strong></td>
+<td>Disclose arterial versus reference-tissue route, kinetic model or validated simplified window, and the reported quantity such as V<sub>T</sub>, DVR, or BP<sub>ND</sub>.</td>
+<td>The site treats the modality label alone as sufficient and hides how much the conclusion depends on model choice and scan window.</td>
+</tr>
+<tr>
+<td><strong>Spatial unit / anatomy handling</strong></td>
+<td>Write whether the object is voxelwise, parcelwise, or ROI-based, together with anatomy registration, atrophy handling, and partial-volume correction or abstention.</td>
+<td>Regional density estimates are overread as if anatomy, tissue mixing, and resolution burden were negligible.</td>
+</tr>
+<tr>
+<td><strong>Comparison design / cohort relation</strong></td>
+<td>State whether the result is a healthy normative atlas, a cross-sectional disease comparison, a risk-group contrast, a same-subject longitudinal intervention, or a drug-occupancy / displacement design, and name the cohort or sample relation explicitly.</td>
+<td>A healthy atlas is silently promoted to disease mechanism evidence, or a same-subject drug study is silently promoted to a normative state map.</td>
+</tr>
+<tr>
+<td><strong>Functional target</strong></td>
+<td>Name the dependent claim precisely: regional synaptic-density gradient, pathology burden, risk enrichment, task-related association, or target engagement under an administered intervention.</td>
+<td>A paper that supports one inferential target is promoted to a generic statement that current synaptic function or plasticity was measured.</td>
+</tr>
+<tr>
+<td><strong>Human observability ceiling</strong></td>
+<td>Fix the ceiling in one line: <strong>regional presynaptic vesicle-density proxy</strong>, not current release probability, postsynaptic receptor occupancy, branch-local plasticity state, or arbitrary memory-content readout.</td>
+<td>Regional SV2A density is silently rephrased as current synaptic efficacy or rapid plasticity ground truth.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Write which variables remain latent, especially task-time synaptic efficacy, E/I balance, synaptic-tag capture, branch-specific stabilization, and the responsible cell-specific controller.</td>
+<td>The site accidentally treats `human synaptic-density PET exists` as equivalent to synaptic-complete or maintenance-complete state capture.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Why this route card is necessary here</strong>
+<p>
+The need is multi-axis. On the measurement side, <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> makes the tracer and quantification route part of the object. On the cohort side, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> is a normative atlas, not one participant's current task-time state. On the association side, <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> relates regional SV2A signal to task-linked activity and cognition, which is not the same claim as detecting momentary synaptic change. On the dynamics side, <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> and <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a> show why brief activation or rapid symptom improvement must not be silently rephrased as measurable synaptic-density change. Therefore, this site does not let atlas, disease, cognition, and intervention routes inherit one another's claim ceiling without a route-card audit.
 </p>
 </div>
 </section>
@@ -1302,6 +1366,11 @@ A final correction is that static <sup>1</sup>H-MRSI similarity is not the same 
 <td><strong>Because a human metabolic connectome exists, we now have another connectome comparable to tractography or metabolic-rate maps</strong></td>
 <td><a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> built a five-metabolite gray-matter parcel-similarity graph and reported only weak overall alignment with tractography-based structural connectivity. Static <sup>1</sup>H-MRSI similarity is also not the same object as dynamic rate imaging.</td>
 <td>Treat it as a macro-biochemical similarity scaffold and require the metabolic-connectome route card before reading beyond that ceiling.</td>
+</tr>
+<tr>
+<td><strong>With human synaptic-density PET, the current synaptic efficacy or plasticity state was directly visible</strong></td>
+<td><a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> showed that SV2A PET depends on tracer and quantification route, while <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> and <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a> showed that brief activation or rapid symptom change need not produce measurable SV2A change.</td>
+<td>Require the SV2A route card and treat the result as a regional synaptic-density proxy, atlas, disease/risk contrast, association study, or intervention audit only.</td>
 </tr>
 <tr>
 <td><strong>With human myelin bilayer map and nap / TMS proxy, cell-specific maintenance controller could also be seen</strong></td>
@@ -1532,8 +1601,10 @@ A final correction is that static <sup>1</sup>H-MRSI similarity is not the same 
 <li>Shapson-Coe, A., Januszewski, M., Berger, D. R., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <em>Science</em>, 384(6696), eadk4858. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
 <li>Finnema, S. J., Nabulsi, N. B., Eid, T., et al. (2016). Imaging synaptic density in the living human brain. <em>Science Translational Medicine</em>, 8(348), 348ra96. <a href="https://doi.org/10.1126/scitranslmed.aaf6667" target="_blank">doi:10.1126/scitranslmed.aaf6667</a></li>
 <li>Naganawa, M., Nabulsi, N., Lin, S.-F., et al. (2021). First-in-human evaluation of 18F-SynVesT-1, a radioligand for PET imaging of synaptic vesicle glycoprotein 2A. <em>Journal of Nuclear Medicine</em>, 62(4), 561-567. <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">doi:10.2967/jnumed.120.249144</a></li>
+<li>Smart, K., Liu, H., Matuskey, D., et al. (2021). Binding of the synaptic vesicle radiotracer [<sup>11</sup>C]UCB-J is unchanged during functional brain activation using a visual stimulation task. <em>Journal of Cerebral Blood Flow &amp; Metabolism</em>, 41(5), 1067-1079. <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">doi:10.1177/0271678X20946198</a></li>
 <li>Johansen, A., et al. (2024). An in vivo high-resolution human brain atlas of synaptic density. <em>Journal of Neuroscience</em>. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
 <li>Shatalina, E., et al. (2024). The relationship between SV2A levels, neural activity, and cognitive function in healthy humans. <em>Imaging Neuroscience</em>. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">doi:10.1162/imag_a_00190</a></li>
+<li>Holmes, S. E., Finnema, S. J., Naganawa, M., et al. (2022). Imaging the effect of ketamine on synaptic density (SV2A) in the living brain. <em>Molecular Psychiatry</em>, 27(4), 2273-2281. <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">doi:10.1038/s41380-022-01465-2</a></li>
 <li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <em>Nature Communications</em>, 16, 11344. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
 <li>Bhogal, A. A., Broeders, T. A. A., Morsinkhof, L., et al. (2020). Lipid-suppressed and tissue-fraction corrected metabolic distributions in human central brain structures using 2D <sup>1</sup>H magnetic resonance spectroscopic imaging at 7 T. <em>Brain and Behavior</em>, 10(12), e01852. <a href="https://doi.org/10.1002/brb3.1852" target="_blank">doi:10.1002/brb3.1852</a></li>
 <li>Wright, A. M., Murali-Manohar, S., &amp; Henning, A. (2022). Quantitative T<sub>1</sub>-relaxation corrected metabolite mapping of 12 metabolites in the human brain at 9.4 T. <em>NeuroImage</em>, 263, 119574. <a href="https://doi.org/10.1016/j.neuroimage.2022.119574" target="_blank">doi:10.1016/j.neuroimage.2022.119574</a></li>

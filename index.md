@@ -16,6 +16,7 @@ page_highlights:
   - "If you are unsure where to start, read Verification -> Roadmap -> WBE/EEG 101."
   - "Connectomes and cell types alone do not determine long-term dynamics; sleep/homeostasis, sleep architecture / replay-coupling, myelination, thermal-state, bioenergetic / mitochondrial state, astrocyte / glial-state, and clearance / immune support remain separate variables."
   - "Human evidence is layered: local ultrastructure, synaptic-density PET, and macro biochemical / energetic / ionic / thermal / myelin / clearance proxies are not one near-direct readout."
+  - "Synaptic-density PET evidence is not one class: tracer / quantification route, healthy atlas, disease contrast, task / cognition association, and longitudinal intervention must not be compressed into current synaptic state."
   - "Clearance / immune evidence is not one class: drainage anatomy, microglia-related synaptic control, human CSF-mobility MRI, and model-based biomarker-efflux routes are kept separate."
   - "Bioenergetic evidence is not one class: presynaptic ATP-demand support, dendritic mitochondrial positioning / fission, synaptic ATP-synthase nano-organization, mitochondrial Ca2+-efflux tuning, and human macro energetic imaging are kept separate."
   - "Post-transcriptional RNA evidence is not one class: splice-isoform control, m6A-dependent translation, m6A-dependent degradation, RNA editing, and atlas ceilings are kept separate."
@@ -123,6 +124,13 @@ This site now blocks that shortcut too. <a href="https://doi.org/10.1038/s41467-
 <strong>If You Want To Know Which Human Routes Are Real Advances And Which Are Still Only Proxies</strong>
 <p>
 The front door was still too coarse if it only said that many hidden states remain. <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> now separates <strong>destructive local human nanoscale ultrastructure</strong> from <strong>living-human in vivo proxy routes</strong> such as regional synaptic-density PET, receptor / transporter atlas priors, selected occupancy / displacement PET routes for chosen neurotransmitter systems, perturbation-conditioned sleep-homeostasis / plasticity proxies, EEG-state-gated perturbation routes, and macro biochemical / energetic / ionic / thermal / myelin / clearance proxies. It also keeps visible the still-missing whole-brain in vivo routes for current transcription / chromatin state, ECM / PNN gate state, branch-local proteostasis, current chloride set point, and local mitochondrial positioning. In other words, <strong>"a human nanoscale paper exists"</strong> is not silently rephrased here as <strong>"living-human state-complete measurement is close and already field-ready."</strong>
+</p>
+</div>
+
+<div class="note-box">
+<strong>If You Are Treating Synaptic-Density PET As Current Synaptic State</strong>
+<p>
+This site now blocks that shortcut too. <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> showed that SV2A PET depends on tracer and quantification route, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> is a healthy-human atlas, <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> is a task/cognition association study, <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> showed that brief visual activation does not measurably change [<sup>11</sup>C]UCB-J binding, and <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a> found no measurable overall SV2A change 24 h after ketamine despite symptom improvement. Therefore, a synaptic-density PET result is not read here as a direct meter of current synaptic efficacy or rapid plasticity. The shortest route is <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: PET measurement-model caution</a> plus <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#sv2a-route-card">Wiki: SV2A / synaptic-density PET route card</a>.
 </p>
 </div>
 
