@@ -42,6 +42,7 @@ page_highlights:
   - "For irreversibility / thermodynamic claims, the route card now names signal route, coarse-graining / timescale, observed-state closure / hidden-degree risk, estimator family plus dynamical assumptions, null control, quantity type, physiology-side grounding when energetic language is used, and cost isolation before any claim ceiling is raised."
   - "For ESI claims, simulation / phantom, stimulation ground truth, simultaneous invasive recording, and postsurgical outcome are separate validation classes; 'externally validated' alone is insufficient."
   - "For ESI claims, one best inverse map is not enough; this page now asks for cross-solver / cross-parameter spread or posterior / ensemble width before anatomical claims are read strongly."
+  - "For ESI claims, a field-formation audit now asks whether the target source class should reach the scalp at all given extent, orientation, cancellation, and tissue-model assumptions."
   - "At L2 and above, the latent-state error budget is added on top of the Observability Budget so the still-unobserved states that stop the claim are disclosed."
   - "At L2 and above, perisynaptic ECM / PNN state is separated from synaptic weights and glia when a claim depends on adult plasticity, receptor mobility, or memory stabilization."
   - "At L2 and above, post-transcriptional RNA-state is separated from gene-level transcript abundance and proteostasis when a claim depends on isoform choice, m6A-dependent translation / degradation, or RNA-editing ratios."
@@ -73,6 +74,7 @@ known_points:
   - "A same-subject or same-brain pipeline can still be sequential and bridge-limited; live-to-fix delay, regime mismatch, deformation correction, and state drift remain separate audit items."
   - "For ESI, passing one validation class does not auto-pass the others; stimulation error, simultaneous invasive concordance, and postsurgical outcome answer different questions."
   - "For ESI, inverse-family, package, parameter, and conductivity choices can materially shift the reconstructed source, so solver-disagreement and uncertainty width are themselves audit items."
+  - "For ESI, the target generator may already be filtered out upstream by field formation, so visibility, cancellation, and CSF-aware head-model assumptions are separate audit items from inverse choice."
   - "A BOLD or fNIRS amplitude difference without vascular-state / CVR audit remains a hemodynamic-limited difference rather than a clean neural difference."
   - "An MRSI-derived metabolic-connectome label without metabolite-set, parceling, correction-model, and QC disclosure remains a macro-biochemical similarity scaffold rather than tractography or flux imaging."
   - "A connectome-constrained activity predictor without structural-prior, fitted-parameter, task-regime, omitted-mechanism, validation, and abstention disclosure remains a conditional model rather than internal-state recovery."
@@ -1070,6 +1072,38 @@ This site no longer accepts the phrase <strong>external validation</strong> with
 The remaining weakness was to let one inverse solution stand in for the whole solution set. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">Mahjoory et al. (2017)</a> showed that inverse-method and software-package choice induces considerable variability and explicitly recommended verifying EEG source findings with more than one source-imaging procedure. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a> then showed on intracranial-stimulation ground truth that only a small fraction of tested solutions reached the session-wise optimum, even though the benchmark was tightly controlled. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a> further showed that skull and skin conductivity uncertainty shifts reconstructed depth and location, especially for quasi-tangential sources. Therefore, when an anatomical source claim depends on one inverse family or one hand-picked parameter set, this site now asks for a <strong>solver-disagreement audit</strong> that reports compared solver families / packages, parameter window, and headline-location spread. If that is missing, the result stays at the <strong>method-sensitive source-hypothesis</strong> level rather than stable anatomical evidence.
 </p>
 </div>
+<div class="note-box">
+<strong>2026-03-22 addendum: ESI claims need a field-formation audit</strong>
+<p>
+The remaining weakness was upstream of the inverse solver itself. A paper can report a cleaner map, a lower benchmark error, or better regularization and still leave unasked whether the targeted source class was expected to generate a usable scalp field in the first place. <a href="https://doi.org/10.1007/s10548-010-0154-x" target="_blank">Ahlfors et al. (2010)</a> showed with realistic tissue boundaries that source orientation matters far more for MEG than for EEG, with median lowest-to-highest sensitivity ratios of <strong>0.06</strong> for MEG and <strong>0.63</strong> for EEG. <a href="https://doi.org/10.1002/hbm.20851" target="_blank">Ahlfors et al. (2010)</a> and <a href="https://doi.org/10.1002/hbm.20571" target="_blank">Goldenholz et al. (2009)</a> showed that extended sources, cortical folding, and cancellation can materially reshape or suppress surface signals, while <a href="https://doi.org/10.1002/hbm.25272" target="_blank">Piastra et al. (2021)</a> showed that omitting the <strong>CSF compartment</strong> overestimates EEG SNR and changes cortical / subcortical sensitivity comparisons. Therefore, when a submission claims deep-source recovery or anatomical improvement from EEG/MEG, this site now asks for a <strong>field-formation audit</strong> before the inverse result is read strongly.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Field-formation audit field</th>
+<th>Minimum disclosure</th>
+<th>What this site stops claiming if absent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Target source class and expected extent</strong></td>
+<td>Name the target generator family, its expected depth and orientation regime, whether the source is treated as focal or extended, and the synchrony / timescale assumed to make it visible.</td>
+<td>A success on one benchmark is not promoted to generic deep-source observability.</td>
+</tr>
+<tr>
+<td><strong>Geometry / cancellation sensitivity</strong></td>
+<td>State whether cortical folding, opposing-bank cancellation, or source-extent effects were assessed for the target, and provide a sensitivity / SNR map or equivalent justification when anatomical visibility is central to the claim.</td>
+<td>A missing or weak scalp signal is not read as source absence, and a visible scalp pattern is not read as unique state recovery.</td>
+</tr>
+<tr>
+<td><strong>Head-model / tissue visibility assumptions</strong></td>
+<td>Name the compartments and conductivity assumptions in the forward model, including whether CSF was modeled and whether uncertainty in skull / tissue parameters was tested.</td>
+<td><strong>High-density</strong> or <strong>MRI-informed</strong> is not read as visibility-complete by default.</td>
+</tr>
+</tbody>
+</table>
 <div class="note-box">
 <strong>2026-03-18 addendum: hemodynamic modalities need a vascular-state / CVR audit</strong>
 <p>
@@ -2171,9 +2205,13 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Goldberger, A. L., et al. (2000). PhysioBank / PhysioNet. <a href="https://doi.org/10.1161/01.CIR.101.23.e215" target="_blank">doi:10.1161/01.CIR.101.23.e215</a></li>
 <li>Jayaram, V., &amp; Barachant, A. (2018). MOABB: trustworthy algorithm benchmarking for BCIs. <a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">doi:10.1088/1741-2552/aadea0</a></li>
 <li>Michel, C. M., &amp; Brunet, D. (2019). EEG source imaging: a practical review. <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">doi:10.3389/fneur.2019.00325</a></li>
+<li>Ahlfors, S. P., Han, J., Belliveau, J. W., &amp; H&auml;m&auml;l&auml;inen, M. S. (2010). Sensitivity of MEG and EEG to source orientation. <a href="https://doi.org/10.1007/s10548-010-0154-x" target="_blank">doi:10.1007/s10548-010-0154-x</a></li>
+<li>Ahlfors, S. P., Han, J., Lin, F.-H., Witzel, T., Belliveau, J. W., H&auml;m&auml;l&auml;inen, M. S., &amp; Halgren, E. (2010). Cancellation of EEG and MEG signals generated by extended and distributed sources. <a href="https://doi.org/10.1002/hbm.20851" target="_blank">doi:10.1002/hbm.20851</a></li>
+<li>Goldenholz, D. M., Ahlfors, S. P., H&auml;m&auml;l&auml;inen, M. S., Sharon, D., Ishitobi, M., Vaina, L. M., &amp; Stufflebeam, S. M. (2009). Mapping the signal-to-noise-ratios of cortical sources in magnetoencephalography and electroencephalography. <a href="https://doi.org/10.1002/hbm.20571" target="_blank">doi:10.1002/hbm.20571</a></li>
 <li>Mahjoory, K., Nikulin, V. V., Botrel, L., et al. (2017). Consistency of EEG source localization and connectivity estimates. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">doi:10.1016/j.neuroimage.2017.02.076</a></li>
 <li>Mikulan, E., Russo, S., Parmigiani, S., et al. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
 <li>Unnwongse, K., et al. (2023). Validating EEG source imaging using intracranial electrical stimulation. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
+<li>Piastra, M. C., N&uuml;&szlig;ing, A., Vorwerk, J., Clerc, M., Engwer, C., &amp; Wolters, C. H. (2021). A comprehensive study on electroencephalography and magnetoencephalography sensitivity to cortical and subcortical sources. <a href="https://doi.org/10.1002/hbm.25272" target="_blank">doi:10.1002/hbm.25272</a></li>
 <li>Vorwerk, J., Wolters, C. H., &amp; Baumgarten, D. (2024). Global sensitivity of EEG source analysis to tissue conductivity uncertainties. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">doi:10.3389/fnhum.2024.1335212</a></li>
 <li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
 <li>Birot, G., Spinelli, L., Vulliemoz, S., et al. (2014). Head model and electrical source imaging: a study of 38 epileptic patients. <a href="https://doi.org/10.1016/j.nicl.2014.06.005" target="_blank">doi:10.1016/j.nicl.2014.06.005</a></li>
