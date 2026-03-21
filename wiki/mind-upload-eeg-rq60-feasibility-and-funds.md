@@ -71,29 +71,29 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 
 上表は「どの助成テーマで出すか」と「そのテーマで最初に使うEEG-DATAは何か」を、RQ群ごとに即決できるようにするための実務入口です。実際の提出では、各RQ行（60行）に戻して `主張単位` と `最低成果物` を固定してください。
 
-## 今回の深掘り実行パック（2026-03-20, 2週間で初回結果まで）
+## 今回の深掘り実行パック（2026-03-22, 2週間で初回結果まで）
 
 汎用横断の更新ではなく、`A/B` 判定から「2週間で初回結果まで到達しやすい6RQ」を固定して、`1RQ=1検証命題=1応募テーマ=1主データ` で実行します。
 
 | RQ | 選定理由（1件ずつ深掘りする理由） | 最初の実験KPI | 失敗条件（このrunでの停止条件） | 提出最低成果物 | 応募先（第一/予備） |
 |---|---|---|---|---|---|
-| U14-1 | データ/コード/環境の固定粒度を分けて再実行するだけで、2週間で差分を出しやすい。 | `追試成功率` `再現率差` `追加工数` | 最も厳しい固定条件でも追試成功率が目標未達。 | Supplementary test operation report (including negative cases) | `G1 / G3` |
-| U7-2 | offset/jitter抽出を固定すればすぐ回せるため、警告閾値初版を短期で定義しやすい。 | `clock offset` `jitter p95` `閾値超過率` | 閾値超過イベントの再現性が低い、または誤警報率が高すぎる。 | Time synchronization audit report (offset/jitter distribution) | `G1 / G3` |
-| U14-3 | 既存分割に監査ルールを当てる方式で、再分割後の差分監査まで到達しやすい。 | `被験者リーク検出率` `時系列リーク検出率` `再分割後性能差` | 再分割後もリーク0件を達成できない。 | Leak audit results and repartition trail | `G1 / G3` |
-| U8-1 | 閉ループ遅延条件を振るだけで、許容域をKPIで表にできる。 | `安定率` `回復時間` `異常停止率` | 遅延増加で安定率低下が大きく、許容域を切れない。 | Closed loop safety KPI dashboard | `G2 / G5` |
-| U8-2 | 再較正頻度の3条件比較で、運用設計に直結する初回結果を出しやすい。 | `性能維持率` `ドリフト量` `再較正コスト` | 再較正コスト増に対して性能維持率改善が有意に出ない。 | Closed loop safety KPI dashboard | `G2 / G5` |
-| U13-1 | 同一デコーダの2軸評価に落とせるため、模倣スコア偏重を抑制できる。 | `意味一致率` `因果一致率` `乖離ケース率` | 「意味一致は高いが因果一致は低い」ケースを分離できない。 | Intervention protocol and rebuttal condition definition | `G1 / G4` |
+| U0-2 | 同期ずれと状態表現崩れを同時に監査でき、同一性判定の運用閾値を短期で固定しやすい。 | `clock offset p95` `状態特徴崩れ率` `タスク間一致率` | 同期改善後も状態特徴崩れ率が閾値未満へ下がらない。 | Time synchronization audit report (offset/jitter distribution) | `G2 / G3` |
+| U1-3 | 逆解法間の乖離ルールを先に固定すると、U1系の応募で「判定不能」を防げる。 | `method disagreement rate` `task別順位一致率` `不一致時の保留率` | 主要タスクで順位一致率が最低基準を下回る。 | Inverse solution comparison table and uncertainty distribution chart | `G1 / G4` |
+| U4-4 | 反証条件を先に宣言すれば、因果主張の過剰解釈を抑えた提案書に直結しやすい。 | `ΔAUC` `符号反転率` `反証宣言件数` | 反証条件を満たすケースが連続しても判定規則が収束しない。 | Causal verification report (minimum intervention claim) | `G1 / G4` |
+| U11-1 | 指標間順位の保存率を測るだけで、理論比較の実行可能性を早期判定できる。 | `順位保存率` `指標間相関` `偽陽性率` | 順位保存率が事前閾値を下回り、運用候補指標を固定できない。 | Consciousness-index benchmark report (PCI/LZ/wSMI) | `G2 / G4` |
+| U14-5 | 否定例レジストリ運用は、再現性テーマの差別化要素として応募文脈が強い。 | `failure capture rate` `rerun success delta` `公開同意取得率` | 否定例の登録率が低く、再試行改善差が示せない。 | Supplementary test operation report (including negative cases) | `G1 / G3` |
+| U15-4 | 停止/更新条件を先に技術ログへ落とすことで、制度系RQの実装入口を具体化できる。 | `stop-trigger precision` `false stop rate` `更新監査遅延` | 停止条件の誤判定率が高く、運用規程へ接続できない。 | Governance stop/update audit sheet | `G2 / G6` |
 
 実行順（本run固定）:
 
-1. `U14-1`
-2. `U7-2`
-3. `U14-3`
-4. `U8-1`
-5. `U8-2`
-6. `U13-1`
+1. `U0-2`
+2. `U1-3`
+3. `U4-4`
+4. `U11-1`
+5. `U14-5`
+6. `U15-4`
 
-## 今回の再検証ログ（2026-03-20 19:02 JST）
+## 今回の再検証ログ（2026-03-22 15:40 JST）
 
 本ページは、`mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` の60行を1行ずつ読み、各RQについて下記4点が埋まっていることを再確認した上で更新しています。
 
@@ -108,7 +108,7 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `C` 判定RQは「EEG単独で不可」の理由（法務/制度/他モダリティ）を明記
 - データセット参照はID再採番の影響を避けるため、提出時は `DOI + dataset名 + access区分` を必ず併記
 
-2026-03-20 22:04 JST の再計数結果（機械検証）:
+2026-03-22 15:40 JST の再計数結果（機械検証）:
 
 - `RQ件数`: `60`（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）
 - `A/B/C`: `17/25/18`

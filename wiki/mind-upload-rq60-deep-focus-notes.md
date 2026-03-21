@@ -5,7 +5,7 @@ description: "A deep-dive note that fixes each of the 60 RQs, including the core
 article_type: Wiki
 subtitle: "Fix the issues for each RQ instead of a general summary"
 author: Mind Uploading Research Project
-last_updated: "2026-03-20"
+last_updated: "2026-03-22"
 note: "RQ-by-RQ Deep Focus"
 audience: "People who want to translate each RQ directly into application statements and experimental procedures"
 reading_time: "20-35 minutes"
@@ -357,3 +357,9 @@ Reasons for proceeding in this order:
 - 助成キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）を `grant_queue` と `auto-research-funds` 側で再照合し、全件実在を確認しました。
 - 方針は不変で、汎用横断要約ではなく「1件ずつ深く理解して書く」運用を継続します。
 
+## 2026-03-22 15:40 JST 実行カード更新ログ（本run / 6RQ追加バッチ）
+
+- `RQ_TOTAL=60`、`A/B/C=17/25/18` を維持したまま、既存6RQバッチとは重複しない新規6RQを追加し、実行順を固定しました。
+- 追加した6RQは `U0-2` `U1-3` `U4-4` `U11-1` `U14-5` `U15-4` で、`KPI` `失敗条件` `提出最低成果物` を明示しました。
+- `U15-4`（C判定）を含め、制度系RQでも技術監査ログとして2週間で到達できる入口を固定しました。
+- 運用ルールは継続して `1RQ=1検証命題=1応募テーマ=1主データ` を適用します。
