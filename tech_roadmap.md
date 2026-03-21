@@ -265,6 +265,12 @@ In this re-audit, we focused on updating <strong>M3 (spatial granularity)</stron
 Therefore, this roadmap will not allow the three short-circuits of <strong>``It's enough because it's multimodal''</strong>, <strong>``It's unique because it's highly accurate''</strong>, and <strong>``It's causal because it's stimulated''</strong>. The stronger the claim is, the closer to the WBE, the earlier the <strong>measurement granularity</strong>, <strong>candidate model space</strong>, <strong>intervention design</strong>, and <strong>abstention in case of failure</strong> should be made public.
 </p>
 </div>
+<div class="note-box">
+<strong>If You Want The Quantitative Reason Non-invasive Routes Still Stop Early</strong>
+<p>
+The updated measurement-stack wiki now makes explicit why EEG / MEG remain conditional for deep sources even after intracranial validation, and why hemodynamic amplitudes remain limited by vascular-transfer and autonomic-state confounds. For the direct-validation numbers and the resulting ceiling, see <a href="wiki/measurement-stack-and-claim-ceiling.html#eeg-meg-validation-wall">Wiki: EEG / MEG visibility, inverse, and validation wall</a> and <a href="wiki/measurement-stack-and-claim-ceiling.html#hemodynamic-transfer-wall">Wiki: hemodynamic transfer wall</a>.
+</p>
+</div>
 </section>
 
 <section class="section" id="roadmap-index">

@@ -104,6 +104,13 @@ The March 2026 update added <a href="verification.html#observability-budget">Ver
 </div>
 
 <div class="note-box">
+<strong>If You Want The Quantitative Reason EEG / MEG And fMRI Still Stop Early</strong>
+<p>
+The measurement-stack wiki now pulls together the direct intracranial-validation literature for EEG / MEG and the vascular / autonomic literature for hemodynamic signals. If you want the numbers rather than the slogan, start with <a href="wiki/measurement-stack-and-claim-ceiling.html#eeg-meg-validation-wall">EEG / MEG visibility, inverse, and validation wall</a> and <a href="wiki/measurement-stack-and-claim-ceiling.html#hemodynamic-transfer-wall">hemodynamic transfer wall</a>.
+</p>
+</div>
+
+<div class="note-box">
 <strong>If A Shared Multimodal Factor Sounds Like One Solved State Variable</strong>
 <p>
 This site now blocks that shortcut too. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> and <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed that simultaneous multimodal recordings keep both shared and modality-specific structure, while <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> and <a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">Özbay et al. (2019)</a> showed that low-frequency/global fMRI-linked components can also carry autonomic physiology. Therefore, a coupled common factor is not read here as the target neural variable unless the <a href="verification.html#fusion-card">Fusion Card</a> discloses shared-vs-specific decomposition and physiology-side calibration or abstention.

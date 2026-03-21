@@ -9,7 +9,7 @@ description: We will organize from primary literature what EEG/MEG/fMRI, whole-b
 article_type: Wiki
 subtitle: multimodal is not a synonym for ``seen everything''
 author: Mind Uploading Research Project
-last_updated: '2026-03-20'
+last_updated: '2026-03-21'
 note: Technical / natural science only
 audience: People who want to sort out what modalities are directly visible and which
   claims are valid using only technology and natural science.
@@ -29,6 +29,9 @@ page_highlights:
   stack and what has not yet been observed?''
 - Fixed a ceiling to prevent the words multimodal / atlas / connectome from being
   misread as state-complete.
+- EEG / MEG rows now separate conditional deep detectability from general unique
+  recovery, so intracranial-validation studies are not overread as state-complete
+  readout.
 - Hemodynamic stacks are now separated into neural-side and vascular-transfer-side
   uncertainty, so BOLD or fNIRS amplitude is not overread as neural truth.
 - Same-session multimodal acquisition is not treated as self-validating fusion; the
@@ -288,9 +291,46 @@ On this site, a destructive ultrastructure result is read first as a <strong>str
 </p>
 </div>
 
-<h3>5. Hemodynamic stacks also observe through a vascular transfer state</h3>
+<h3 id="eeg-meg-validation-wall">4.6. EEG / MEG still face a visibility / inverse / validation wall</h3>
 <p>
-The weak point that needed another pass was that this page already called fMRI a <strong>hemodynamic proxy</strong>, but still left too much room for the reader to translate a BOLD amplitude difference directly into a neural difference. That was too weak. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">Murphy et al. (2011)</a> showed that inter-subject differences in CBF and CBV contribute to BOLD reactivity and that breath-hold-derived vascular-reactivity covariates improve group analyses. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">Williams et al. (2023)</a> showed that task BOLD magnitude corresponds strongly to hypercapnia-based CVR across multiple cortical regions. <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">Wu et al. (2023)</a> showed that baseline CBF partly explains age-related components of multiple-demand-network BOLD responses, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that about 40% of task-responsive voxels can display oxygen-metabolism changes opposite in sign to the BOLD response. What follows directly from this is that <strong>hemodynamic stacks are limited not only by unobserved neural state, but also by unobserved vascular transfer state</strong>.
+Another weakness that remained on this page was that <strong>source-localized</strong>, <strong>deep-source detectable</strong>, or <strong>intracranially validated</strong> could still be overread as if non-invasive field recordings had already crossed from macro observables into general internal-state recovery. That is too weak. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a> created the first open human ground-truth benchmark by combining <strong>256-channel HD-EEG</strong> with precisely known intracerebral stimulation sites, but they also stated explicitly that stimulation artifacts are <strong>non-physiological</strong> and that spatial sampling remains anatomically clustered. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> then evaluated <strong>3,619</strong> known stimulation locations in <strong>11 patients</strong> with simultaneous SEEG and scalp EEG and found mean localization errors ranging from <strong>10.3 to 26 mm</strong>, worsening with source depth and lower skull conductivity. <a href="https://doi.org/10.1016/j.jneumeth.2024.110193" target="_blank">Zauli et al. (2024)</a> showed that hidden interictal discharges not visible on single-trial scalp HD-EEG can be uncovered with simultaneous SEEG-triggered averaging, but the resulting ESI still remained <strong>method- and parameter-dependent</strong> with localization accuracy of only about <strong>2 cm</strong>. <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> reported that simultaneous HD-EEG/SEEG ictal ESI localizes better than interictal ESI, yet still at <strong>14.07 ± 4.62 mm</strong> versus <strong>17.38 ± 4.16 mm</strong>, with accuracy strongly influenced by source depth and spike power. Finally, <a href="https://doi.org/10.1038/s41467-019-08665-5" target="_blank">Pizzo et al. (2019)</a> showed that MEG can detect direct hippocampal or amygdalar contributions under simultaneous intracranial validation, but only after blind source separation because the deep contribution reaching the surface was <strong>small but significant</strong> rather than dominating the sensor signal. What follows directly is that <strong>EEG / MEG can gain conditional access to some deeper generators, but they still do not collapse the inverse problem or provide general deep-state observability</strong>.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Wall</th>
+<th>What the primary literature now supports</th>
+<th>Site rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Visibility wall</strong></td>
+<td>Deep or low-power events can be absent at the scalp in single trials and may only appear after intracranial timing information, averaging, or special source-separation steps.</td>
+<td>Do not read <strong>scalp-invisible</strong> as <strong>nonexistent</strong>, but do not read <strong>recoverable under SEEG guidance</strong> as <strong>routinely visible non-invasively</strong> either.</td>
+</tr>
+<tr>
+<td><strong>Inverse / model wall</strong></td>
+<td>Localization error changes with source depth, skull conductivity, forward model, and chosen inverse method; better fit does not imply unique recovery of the underlying neural state.</td>
+<td>Do not read <strong>source-localized</strong> as <strong>unique internal-state reconstruction</strong>; always disclose the head model, conductivity assumptions, and abstention conditions.</td>
+</tr>
+<tr>
+<td><strong>Validation wall</strong></td>
+<td>Current direct-validation routes mostly come from intracranial stimulation, epilepsy discharges, or simultaneous SEEG/MEG recordings, which answer conditional localization questions rather than physiological whole-brain cognition in healthy humans.</td>
+<td>Do not promote <strong>intracranially validated epilepsy benchmarks</strong> to <strong>general-purpose whole-brain state readout</strong>.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Operating rule for EEG / MEG</strong>
+<p>
+On this site, EEG / MEG are read first as <strong>macro field observables</strong>. Even when deeper sources become conditionally detectable, the claim ceiling stays bounded by synchrony, source depth, head-model assumptions, and the exact validation route. To argue above macro state tracking or weak L2, a result now has to disclose whether the support comes from <strong>stimulation benchmark</strong>, <strong>simultaneous intracranial recording</strong>, <strong>task-only inference</strong>, or <strong>model transfer</strong>, plus what deep or cell-scale state variables remain latent.
+</p>
+</div>
+
+<h3 id="hemodynamic-transfer-wall">5. Hemodynamic stacks also observe through a vascular transfer state</h3>
+<p>
+The weak point that needed another pass was that this page already called fMRI a <strong>hemodynamic proxy</strong>, but still left too much room for the reader to translate a BOLD amplitude difference directly into a neural difference. That was too weak. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">Murphy et al. (2011)</a> showed that inter-subject differences in CBF and CBV contribute to BOLD reactivity and that breath-hold-derived vascular-reactivity covariates improve group analyses. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">Williams et al. (2023)</a> showed that task BOLD magnitude corresponds strongly to hypercapnia-based CVR across multiple cortical regions. <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">Wu et al. (2023)</a> showed that baseline CBF partly explains age-related components of multiple-demand-network BOLD responses. <a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">Özbay et al. (2019)</a> showed that widespread fMRI changes can co-occur with EEG K-complexes and sympathetic-linked vascular-tone changes, and <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> showed across multiple datasets that a major low-frequency global fMRI mode cofluctuates with EEG and multiple autonomic signals. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> then showed that about <strong>40%</strong> of task-responsive voxels can display oxygen-metabolism changes opposite in sign to the BOLD response. What follows directly from this is that <strong>hemodynamic stacks are limited not only by unobserved neural state, but also by unobserved vascular transfer state and autonomic-body coupling</strong>.
 </p>
 <div class="note-box">
 <strong>fNIRS belongs to the same caution family</strong>
@@ -546,10 +586,17 @@ This site now treats <strong>proxy-rich human evidence</strong> as a real advanc
 <li>Gouwens, N. W., et al. (2021). Phenotypic variation of transcriptomic cell types in mouse motor cortex. <em>Nature</em>, 598, 144-150. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>, 640, 435-447. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <em>Nature</em>, 640, 497-505. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
+<li>Mikulan, E., Russo, S., Bares, M., et al. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <em>Scientific Data</em>, 7, 127. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
+<li>Unnwongse, K., Rampp, S., Wehner, T., et al. (2023). Validating EEG source imaging using intracranial electrical stimulation. <em>Brain Communications</em>, 5(1), fcad023. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
+<li>Pizzo, F., Roehri, N., Medina Villalon, S., et al. (2019). Deep brain activities can be detected with magnetoencephalography. <em>Nature Communications</em>, 10, 971. <a href="https://doi.org/10.1038/s41467-019-08665-5" target="_blank">doi:10.1038/s41467-019-08665-5</a></li>
+<li>Zauli, F. M., Del Vecchio, M., Pigorini, A., et al. (2024). Localizing hidden Interictal Epileptiform Discharges with simultaneous intracerebral and scalp high-density EEG recordings. <em>Journal of Neuroscience Methods</em>, 409, 110193. <a href="https://doi.org/10.1016/j.jneumeth.2024.110193" target="_blank">doi:10.1016/j.jneumeth.2024.110193</a></li>
+<li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <em>Epilepsia</em>, 66(11), 4451-4464. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
 <li>Murphy, K., Harris, A. D., &amp; Wise, R. G. (2011). Robustly measuring vascular reactivity differences with breath-hold: normalising stimulus-evoked and resting state BOLD fMRI data. <em>NeuroImage</em>, 54(1), 369-379. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">doi:10.1016/j.neuroimage.2010.07.059</a></li>
 <li>Williams, R. J., Specht, J. L., Mazerolle, E. L., Lebel, R. M., MacDonald, M. E., &amp; Pike, G. B. (2023). Correspondence between BOLD fMRI task response and cerebrovascular reactivity across the cerebral cortex. <em>Frontiers in Physiology</em>, 14, 1167148. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">doi:10.3389/fphys.2023.1167148</a></li>
 <li>Wu, S., Tyler, L. K., Henson, R. N. A., Rowe, J. B., Cam-CAN, &amp; Tsvetanov, K. A. (2023). Cerebral blood flow predicts multiple demand network activity and fluid intelligence across the adult lifespan. <em>Neurobiology of Aging</em>, 121, 1-14. <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">doi:10.1016/j.neurobiolaging.2022.09.006</a></li>
+<li>Özbay, P. S., Chang, C., Picchioni, D., et al. (2019). Sympathetic activity contributes to the fMRI signal. <em>Communications Biology</em>, 2, 421. <a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">doi:10.1038/s42003-019-0659-0</a></li>
 <li>Yucel, M. A. Y., Selb, J., Aasted, C. M. A., Petkov, M. P., Becerra, L., Borsook, D., &amp; Boas, D. A. (2015). Short separation regression improves statistical significance and better localizes the hemodynamic response obtained by near-infrared spectroscopy for tasks with differing autonomic responses. <em>Neurophotonics</em>, 2(3), 035005. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">doi:10.1117/1.NPh.2.3.035005</a></li>
+<li>Bolt, T., Wang, S., Nomi, J. S., et al. (2025). Autonomic physiological coupling of the global fMRI signal. <em>Nature Neuroscience</em>, 28, 1327-1335. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">doi:10.1038/s41593-025-01945-y</a></li>
 <li>Epp, S. M., Castrillon, G., Yuan, B., Andrews-Hanna, J., Preibisch, C., &amp; Riedl, V. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
 <li>Reimer, J., McGinley, M. J., Liu, Y., et al. (2016). Pupil fluctuations track rapid changes in adrenergic and cholinergic activity in cortex. <em>Nature Communications</em>, 7, 13289. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">doi:10.1038/ncomms13289</a></li>
 <li>Lohani, S., Moberly, A. H., Benisty, H., et al. (2022). Spatiotemporally heterogeneous coordination of cholinergic and neocortical activity. <em>Nature Neuroscience</em>, 25(12), 1706-1713. <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">doi:10.1038/s41593-022-01202-6</a></li>
