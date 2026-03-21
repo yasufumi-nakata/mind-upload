@@ -31,6 +31,7 @@ page_highlights:
   - "For myelin / oligodendrocyte claims, the maintenance-state budget now requires a route card that names claim family, structural unit, function target, recovery boundary, human proxy class, and abstention."
   - "For clearance / immune claims, the maintenance-state budget now requires a route card that names claim family, direct observable, driver / perturbation route, human model burden, function target, and abstention."
   - "For bioenergetic / mitochondrial claims, the maintenance-state budget now requires a route card that names claim family, compartment, direct energetic observable, quantity type / model burden, function target, human proxy class, and abstention."
+  - "For astrocyte / glial-state claims, the maintenance-state budget now requires a route card that names claim family, direct astrocyte observable, perturbation route, function target, human proxy class, and abstention."
   - "For phospho-signaling / second-messenger claims, the maintenance-state budget now requires a route card that names claim family, assay / direct observable, compartment scope, timing window, causal leverage, and abstention."
   - "For DCM / effective-connectivity claims, the Observability Budget now requires an effective-connectivity route card that names candidate model space, observation-model assumptions, validation, reliability, and abstention."
   - "For irreversibility / thermodynamic claims, the route card now names signal route, coarse-graining / timescale, observed-state closure / hidden-degree risk, estimator family plus dynamical assumptions, null control, quantity type, physiology-side grounding when energetic language is used, and cost isolation before any claim ceiling is raised."
@@ -1294,7 +1295,7 @@ Cross-day and remote-memory claims fail for a different reason than same-session
 </tr>
 <tr>
 <td><strong>Glial / astrocyte support</strong></td>
-<td>Write whether astrocyte network / ensemble variables, glial metabolic routes, or only macro support proxies were directly measured, causally perturbed, externally calibrated, or left latent, and name the species / region / timescale when rodent causal evidence is being used as support.</td>
+<td>Write whether the route is lactate-shuttle support, astrocyte network / ensemble state, fear-state representation, human MAO-B / reactive-astrogliosis PET, glial metabolic proxy, or only a macro support proxy, and name the species / region / timescale when rodent causal evidence is being used as support.</td>
 <td>Memory retrieval, reconsolidation, multiday stabilization, and fear-state support remain partial-model claims.</td>
 </tr>
 <tr>
@@ -1355,6 +1356,12 @@ The remaining weakness was that <strong>bioenergetic evidence</strong> could sti
 <strong>2026-03-20 addendum: astrocyte-state is not generic support background</strong>
 <p>
 <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> showed minute-scale cortical astrocyte-network encoding of local neurotransmitter input, <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a> showed that learning-associated astrocyte ensembles can regulate hippocampal memory recall, <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a> showed that astrocytic ensembles can stabilize emotional memory across multiple days, and <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> showed that basolateral-amygdala astrocyte Ca<sup>2+</sup> signalling supports fear-memory retrieval / extinction representations. Therefore, this site does not accept a submission that depends on recall, multiday stabilization, or fear-state support while writing only a generic glial-support sentence. Authors now have to state whether the relevant astrocyte-state was directly measured, perturbed, only coarsely proxied, or left latent, and they must keep the rodent-to-human observability gap explicit.
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-21 addendum: astrocyte evidence also needs a route card</strong>
+<p>
+The remaining weakness was that <strong>astrocyte evidence</strong> could still compress <strong>lactate-shuttle support</strong>, <strong>minute-scale cortical network encoding</strong>, <strong>learning-associated recall ensembles</strong>, <strong>multiday stabilization ensembles</strong>, <strong>fear-state representations</strong>, and <strong>human MAO-B / reactive-astrogliosis PET</strong> into one bucket. The primary literature does not support that shortcut. On this site, maintenance-state submissions must now state which inferential object they are actually using, what the direct astrocyte observable is, whether the result depends on transporter blockade, ensemble reactivation, gene deletion, astrocyte Ca<sup>2+</sup> intervention, or only tracer binding, what the functional target actually is, what human proxy class remains, and which human astrocyte controller is still latent. The full public rule is summarized in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#astrocyte-route-card">Wiki: astrocyte route card</a>.
 </p>
 </div>
 <div class="note-box">
@@ -2267,6 +2274,7 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Lippert, R. N., Cremer, A. L., Edwin Thanarajah, S., et al. (2019). Time-dependent assessment of stimulus-evoked regional dopamine release. <a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">doi:10.1038/s41467-018-08143-4</a></li>
 <li>Erritzoe, D., Ashok, A. H., Searle, G. E., et al. (2020). Serotonin release measured in the human brain: a PET study with [<sup>11</sup>C]CIMBI-36 and d-amphetamine challenge. <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">doi:10.1038/s41386-019-0567-5</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
+<li>Villemagne, V. L., Harada, R., Dore, V., et al. (2022). First-in-Humans Evaluation of <sup>18</sup>F-SMBT-1, a Novel <sup>18</sup>F-Labeled Monoamine Oxidase-B PET Tracer for Imaging Reactive Astrogliosis. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">doi:10.2967/jnumed.121.263254</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Williamson, N. R., et al. (2025). Learning-associated astrocyte ensembles regulate memory recall. <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">doi:10.1038/s41586-024-08170-w</a></li>
 <li>Dewa, K., et al. (2025). The astrocytic ensemble acts as a multiday trace to stabilize memory. <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">doi:10.1038/s41586-025-09619-2</a></li>

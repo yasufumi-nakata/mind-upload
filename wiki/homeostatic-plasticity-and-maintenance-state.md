@@ -30,6 +30,7 @@ page_highlights:
   - "Myelin evidence is not one class: learning-dependent oligodendrogenesis, conduction microgeometry / timing-state control, plasticity-brake effects, remyelination-to-function recovery, and human macro-myelin proxies should be audited separately with a route card."
   - "Clearance / immune evidence is not one class: drainage anatomy, ageing / AD lymphatic dysfunction, microglia-mediated synaptic control, human CSF-mobility MRI, and model-based human biomarker efflux should be audited separately with a route card."
   - "Bioenergetic evidence is not one class: presynaptic ATP-demand support, dendritic mitochondrial positioning / fission, synaptic ATP-synthase nano-organization, mitochondrial Ca2+-efflux tuning, and human macro energetic imaging should be audited separately with a route card."
+  - "Astrocyte evidence is not one class: lactate-shuttle support, minute-scale cortical network encoding, learning-associated recall ensembles, multiday stabilization ensembles, fear-state representations, and human reactive-astrogliosis PET should be audited separately with a route card."
   - "Cell-type atlas and current plasticity-competent transcriptional state are different objects; static transcriptomic labels do not fix which neurons are eligible for allocation or stabilization."
   - "Gene-level transcript abundance does not fix post-transcriptional RNA-state: isoform choice, m6A-dependent translation / degradation, and RNA-editing ratio can still change plasticity and memory on the same transcript-count background."
   - "Transcript or bulk protein abundance does not fix phospho-signaling / second-messenger state: phosphosite occupancy, kinase/phosphatase balance, and signaling nanodomains can still change plasticity on the same abundance background."
@@ -53,6 +54,7 @@ known_points:
   - "Even in humans, macro scaffolds and support-state proxies are starting to become visible through SV2A PET, MRSI-based metabolic connectomes, MRS thermometry, 31P-MRS, sodium MRI, dynamic deuterium metabolic imaging, myelin bilayer mapping, TMS / EEG / sleep plasticity proxies, and CSF / glymphatic proxies, although cell-specific maintenance-states still remain coarse."
   - "Myelin evidence already spans adaptive learning, timing-state control, plasticity-brake effects, remyelination recovery, and human macro-proxy classes, so a human myelin map alone does not settle per-axon timing-state or plasticity-complete restoration."
   - "Bioenergetic evidence already spans presynaptic ATP-linked respiration, dendritic positioning / fission, synaptic ATP-synthase nano-organization, conserved mitochondrial Ca2+-efflux tuning, and human macro energetic proxy routes, so one energetic paper does not settle local mitochondrial state."
+  - "Astrocyte evidence already spans lactate-shuttle support, minute-scale cortical network encoding, learning-associated recall ensembles, multiday stabilization, fear-state representation, and human MAO-B / reactive-astrogliosis PET proxy routes, so one astrocyte paper does not settle astrocyte-state observability."
   - "An MRSI-derived metabolic-connectome label still needs metabolite-set, parceling, correction-model, and QC disclosure before it can be interpreted safely."
 unknown_points:
   - "It is unclear at what granularity excitability, thermal-state, ionic milieu / chloride homeostasis, sleep homeostasis, local proteostasis / synaptic tagging, ECM / PNN state, bioenergetic support, metabolic support, and clearance support must be measured to approach sufficient conditions for WBE."
@@ -60,6 +62,7 @@ unknown_points:
   - "It is not yet fixed how post-transcriptional RNA-state should be audited without collapsing isoform choice, m6A-dependent translation / degradation, and RNA-editing ratio back into gene-level abundance."
   - "It is not yet fixed which same-subject or human-compatible external calibrators could raise phospho-signaling / second-messenger claims beyond region-structured ex vivo atlas evidence."
   - "It is not yet fixed which same-subject or human-compatible external calibrators could raise bioenergetic / mitochondrial claims beyond macro energetic proxy evidence."
+  - "It is not yet fixed which route-card fields should be mandatory when an astrocyte paper mixes lactate-shuttle support, ensemble recall / stabilization, fear-state representation, and human proxy language in one argument."
   - "It has not been fixed which external standards among SV2A PET, MRSI, MRS thermometry, 31P-MRS, sodium MRI, dynamic DMI, myelin bilayers, TMS-EEG, sleep-plasticity proxies, and CSF-glymphatic proxies should calibrate maintenance-states that cannot be measured directly in humans."
   - "It is not yet fixed which route-card fields should be mandatory when a myelin paper mixes learning, timing-state, plasticity, remyelination, and human proxy language in one argument."
   - "It is not yet fixed which route-card fields should be mandatory when a clearance / immune paper mixes drainage anatomy, immune effector state, physiology drivers, human mobility imaging, and biomarker-efflux modeling in one argument."
@@ -630,9 +633,75 @@ Reading maintenance-state too neuron-centrically makes it easy to misread energy
 </p>
 
 <div class="note-box">
+<strong>How this site reads current human astrocyte evidence</strong>
+<p>
+Current human evidence is narrower than the rodent causal literature. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a> characterized <strong><sup>18</sup>F-SMBT-1 PET</strong> as an MAO-B-selective <strong>reactive-astrogliosis proxy</strong> with pharmacological blockade. That is stronger than saying no human astrocyte-related route exists, but it is still much weaker than a direct readout of learning-associated astrocyte ensembles, recall-state astrocytes, or arbitrary memory content. Therefore, on this site, current human astrocyte PET is read as a <strong>human astrocyte-related proxy route</strong>, not as human whole-brain astrocyte-state ground truth.
+</p>
+</div>
+
+<div class="note-box">
 <strong>How to read the strength of evidence</strong>
 <p>
 <a href="https://doi.org/10.1038/s41586-023-07011-6" target="_blank">Sun et al. (2024)</a> suggested peri-engram neuron-astrocyte interaction and nominated <em>Igfbp2</em> as a long-term-memory candidate, but <a href="https://doi.org/10.1038/s41586-025-08988-y" target="_blank">Mukamel &amp; Yu (2025)</a> argued that some DEG claims are sensitive to animal-level dependence correction, and <a href="https://doi.org/10.1038/s41586-025-08989-x" target="_blank">Sun et al. (2025)</a> replied that the target of inference differs. Therefore, on this site, transcriptomic neuron-astrocyte evidence is treated as <strong>clue / hypothesis-generating evidence</strong>, while the causal weight of glia is read mainly from intervention studies such as <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a>.
+</p>
+</div>
+
+<div class="note-box" id="astrocyte-route-card">
+<strong>2026-03-21 addendum: astrocyte evidence now needs a route card</strong>
+<p>
+The remaining weakness on this page was that <strong>astrocyte evidence</strong> could still collapse several different inferential objects into one bucket. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a> is about <strong>astrocyte-neuron lactate-shuttle support for long-term memory formation</strong>. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> is about <strong>minute-scale cortical astrocyte-network encoding of local neurotransmitter input</strong>. <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a> is about <strong>learning-associated hippocampal astrocyte ensembles and recall</strong>. <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a> is about <strong>multiday astrocytic stabilization of emotional memory</strong>. <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> is about <strong>amygdala astrocyte Ca<sup>2+</sup> signaling and fear-memory representations</strong>. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a> is a <strong>human MAO-B / reactive-astrogliosis PET proxy</strong>. Therefore, on this site, astrocyte claims now require a <strong>route card</strong> before they are promoted beyond a narrow, explicitly named ceiling.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be fixed explicitly</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the paper is about <strong>lactate-shuttle support</strong>, <strong>minute-scale astrocyte-network encoding</strong>, <strong>learning-associated recall ensemble</strong>, <strong>multiday stabilization ensemble</strong>, <strong>fear-state representation</strong>, or <strong>human astrocyte-related PET proxy</strong>.</td>
+<td>Different inferential objects collapse into one phrase such as <code>astrocyte evidence shows memory state is measured</code>.</td>
+</tr>
+<tr>
+<td><strong>Biological regime</strong></td>
+<td>Name species, brain region, task regime, healthy versus pathology context, and whether the relevant timescale is minutes, same-day recall, or multiday stabilization.</td>
+<td>Cortical transmitter encoding, hippocampal recall, amygdala fear representation, and human PET all get silently promoted into one generic astrocyte claim.</td>
+</tr>
+<tr>
+<td><strong>Direct astrocyte observable</strong></td>
+<td>Write whether the direct observable is lactate-transport dependence, astrocyte Ca<sup>2+</sup> dynamics, network-state readout, ensemble labeling, PET tracer binding, or another explicitly measured astrocyte-related object.</td>
+<td><code>astrocyte state changed</code> replaces the actual measurement, and a tracer proxy is overread as if it had directly measured ensemble identity or memory-specific astrocyte configuration.</td>
+</tr>
+<tr>
+<td><strong>Driver / perturbation route</strong></td>
+<td>State whether the paper uses transporter blockade, local transmitter manipulation, ensemble reactivation, gene deletion, astrocyte Ca<sup>2+</sup> intervention, pharmacological blocking for PET selectivity, or no causal manipulation at all.</td>
+<td>The site silently shifts from correlational astrocyte language to controller-identification language without a disclosed perturbation route.</td>
+</tr>
+<tr>
+<td><strong>Functional target</strong></td>
+<td>Name the dependent variable the claim is actually about, such as long-term memory formation, recall, multiday stabilization, fear-memory representation, or reactive-astrogliosis burden.</td>
+<td>The site silently jumps from one target to another, for example from recall support or PET tracer binding to general maintenance completeness.</td>
+</tr>
+<tr>
+<td><strong>Human proxy class / tracer burden</strong></td>
+<td>For human evidence, disclose whether the route is MAO-B / reactive-astrogliosis PET, only a macro energetic / support proxy, or no human astrocyte-related route at all, together with tracer specificity and context ceiling.</td>
+<td>A human astrocyte paper is treated as if it had directly measured learning-associated ensembles, whole-brain astrocyte network state, or memory content without a proxy audit.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Fix in one line what remains latent, especially arbitrary memory content, whole-brain human astrocyte-ensemble identity, cell-specific neuron-astrocyte controller assignment, and same-subject human maintenance-state completeness.</td>
+<td>Rodent causal evidence or human tracer evidence is promoted to human whole-brain memory-readout or state-complete maintenance language.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Why this route card is necessary here</strong>
+<p>
+The need is multi-axis. On the metabolic-support side, <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a> shows that astrocyte-neuron lactate transport is required for long-term memory formation, but it is not a direct readout of learning-associated astrocyte ensembles. On the network-state side, <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> shows minute-scale cortical astrocyte-network encoding, which is not the same inferential object as recall or multiday stabilization. On the memory-ensemble side, <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a> and <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a> move from ensemble identity to recall and multiday stabilization, while <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> is about fear-memory representations in a specific amygdala circuit. On the human side, <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a> measures an MAO-B-linked reactive-astrogliosis PET signal, which is stronger than saying that nothing human is visible but still not a recall-ensemble or arbitrary-content route. Therefore, this site does not let these rows inherit one another's claim ceiling, and it does not let any of them stand in for human whole-brain astrocyte-state identification without a route-card audit.
 </p>
 </div>
 
@@ -792,6 +861,12 @@ The reason this section needed a second pass is that “human evidence is starti
 <td>State-conditioned causal proxy, not direct measurement of the excitability mechanism itself.</td>
 </tr>
 <tr>
+<td><strong>human astrocyte PET / reactive-astrogliosis proxy</strong><br>Villemagne et al.</td>
+<td>A tracer-defined regional MAO-B-related astrocyte signal with pharmacological blocking, giving a bounded living-human astrocyte-related proxy route.</td>
+<td>Learning-associated astrocyte ensembles, minute-scale transmitter integration, recall-state astrocytes, and arbitrary memory-content readout.</td>
+<td>Human astrocyte-related proxy / reactive-astrogliosis route, not direct astrocyte-ensemble or memory-state ground truth.</td>
+</tr>
+<tr>
 <td><strong>human CSF / glymphatic proxy</strong><br>Hirschler et al., Dagum et al.</td>
 <td>Macro support-state proxy using region-specific CSF mobility and device/model-based protein-biomarker transport. </td>
 <td>Which synapse, which astrocyte, which microglia, and which meningeal lymphatic controller are responsible for the difference? </td>
@@ -800,12 +875,12 @@ The reason this section needed a second pass is that “human evidence is starti
 </tbody>
 </table>
 <p>
-This distinction matters operationally. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> push the <strong>fixed-tissue structural scaffold</strong>. <a href="https://doi.org/10.1126/scitranslmed.aaf6667" target="_blank">Finnema et al. (2016)</a>, <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a>, and <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> push a <strong>regional synaptic-density proxy</strong>. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> and <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> push parcel-level biochemical organization. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a> push a <strong>macro thermal proxy</strong>. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> push energetic proxies. <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a> pushes a <strong>macro ionic proxy</strong>. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> pushes a macro-myelin proxy. <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>, <a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a>, and <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> push perturbation-conditioned plasticity proxies. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> push macro support-state proxies. <strong>These are not interchangeable evidence classes.</strong>
+This distinction matters operationally. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> push the <strong>fixed-tissue structural scaffold</strong>. <a href="https://doi.org/10.1126/scitranslmed.aaf6667" target="_blank">Finnema et al. (2016)</a>, <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a>, and <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> push a <strong>regional synaptic-density proxy</strong>. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> and <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> push parcel-level biochemical organization. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a> push a <strong>macro thermal proxy</strong>. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> push energetic proxies. <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a> pushes a <strong>macro ionic proxy</strong>. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> pushes a macro-myelin proxy. <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>, <a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a>, and <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> push perturbation-conditioned plasticity proxies. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a> push a <strong>human astrocyte-related PET proxy</strong>. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> push macro support-state proxies. <strong>These are not interchangeable evidence classes.</strong>
 </p>
 <div class="note-box">
 <strong>Practical interpretation in this addendum</strong>
 <p>
-Therefore, on this site, <strong>human metabolic connectome</strong> is written as a <strong>macro-biochemical scaffold</strong>, <strong>MRS thermometry</strong> as a <strong>macro thermal proxy</strong>, <strong>31P-MRS / dynamic DMI</strong> as a <strong>macro energetic proxy</strong>, <strong>human sodium MRI</strong> as a <strong>macro ionic proxy</strong>, <strong>human myelin bilayer mapping</strong> as a <strong>macro-myelin proxy</strong>, <strong>TMS-EEG / sleep plasticity routes</strong> as <strong>perturbation-conditioned proxies</strong>, and <strong>CSF mobility / glymphatic evidence</strong> as a <strong>macro support-state proxy</strong>. Human ECM evidence such as <a href="https://doi.org/10.3390/ijms23158197" target="_blank">Boonen et al. (2022)</a> remains mostly <strong>ex vivo pathology</strong>, and current transcriptional / chromatin state, current post-transcriptional RNA-state, current phospho-signaling / second-messenger state, plus branch-local proteostasis still lack a comparable in vivo whole-brain human route. It is therefore valid to use animal causal evidence to support the existence of these layers, but not to silently upgrade present human proxies into <strong>cell-specific recovery controller</strong>, <strong>local thermal-state</strong>, <strong>current chloride homeostasis</strong>, <strong>local immune controller</strong>, <strong>local mitochondrial state</strong>, <strong>current RNA-state controller</strong>, <strong>current phospho-controller</strong>, or <strong>current ECM plasticity gate</strong> ground truth.
+Therefore, on this site, <strong>human metabolic connectome</strong> is written as a <strong>macro-biochemical scaffold</strong>, <strong>MRS thermometry</strong> as a <strong>macro thermal proxy</strong>, <strong>31P-MRS / dynamic DMI</strong> as a <strong>macro energetic proxy</strong>, <strong>human sodium MRI</strong> as a <strong>macro ionic proxy</strong>, <strong>human myelin bilayer mapping</strong> as a <strong>macro-myelin proxy</strong>, <strong>TMS-EEG / sleep plasticity routes</strong> as <strong>perturbation-conditioned proxies</strong>, <strong>human astrocyte PET</strong> as a <strong>tracer-defined astrocyte-related proxy</strong>, and <strong>CSF mobility / glymphatic evidence</strong> as a <strong>macro support-state proxy</strong>. Human ECM evidence such as <a href="https://doi.org/10.3390/ijms23158197" target="_blank">Boonen et al. (2022)</a> remains mostly <strong>ex vivo pathology</strong>, and current transcriptional / chromatin state, current post-transcriptional RNA-state, current phospho-signaling / second-messenger state, plus branch-local proteostasis still lack a comparable in vivo whole-brain human route. It is therefore valid to use animal causal evidence to support the existence of these layers, but not to silently upgrade present human proxies into <strong>cell-specific recovery controller</strong>, <strong>astrocyte-ensemble identity</strong>, <strong>local thermal-state</strong>, <strong>current chloride homeostasis</strong>, <strong>local immune controller</strong>, <strong>local mitochondrial state</strong>, <strong>current RNA-state controller</strong>, <strong>current phospho-controller</strong>, or <strong>current ECM plasticity gate</strong> ground truth.
 </p>
 </div>
 <div class="note-box" id="metabolic-connectome-route-card">
@@ -1086,6 +1161,7 @@ A final correction is that static <sup>1</sup>H-MRSI similarity is not the same 
 <li>Swarnkar, S., Avchalumov, Y., Espadas, I., Grinman, E., Liu, X.-A., Raveendra, B. L., Zucca, A., Mediouni, S., Sadhu, A., Valente, S., Page, D., Miller, K., &amp; Puthanveettil, S. V. (2021). Molecular motor protein KIF5C mediates structural plasticity and long-term memory by constraining local translation. <em>Cell Reports</em>, 36(2), 109369. <a href="https://doi.org/10.1016/j.celrep.2021.109369" target="_blank">doi:10.1016/j.celrep.2021.109369</a></li>
 <li>Aiken, J., &amp; Holzbaur, E. L. F. (2024). Spastin locally amplifies microtubule dynamics to pattern the axon for presynaptic cargo delivery. <em>Current Biology</em>, 34(8), 1687-1704.e8. <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">doi:10.1016/j.cub.2024.03.010</a></li>
 <li>Suzuki, A., et al. (2011). Astrocyte-neuron lactate transport is required for long-term memory formation. <em>Cell</em>, 144(5), 810-823. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">doi:10.1016/j.cell.2011.02.018</a></li>
+<li>Villemagne, V. L., Harada, R., Dore, V., et al. (2022). First-in-Humans Evaluation of <sup>18</sup>F-SMBT-1, a Novel <sup>18</sup>F-Labeled Monoamine Oxidase-B PET Tracer for Imaging Reactive Astrogliosis. <em>Journal of Nuclear Medicine</em>, 63(10), 1551-1559. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">doi:10.2967/jnumed.121.263254</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <em>Nature</em>, 629, 146-153. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Sun, X., et al. (2024). Spatial transcriptomics reveal neuron-astrocyte synergy in long-term memory. <em>Nature</em>, 627, 374-381. <a href="https://doi.org/10.1038/s41586-023-07011-6" target="_blank">doi:10.1038/s41586-023-07011-6</a></li>
 <li>Mukamel, E. A., &amp; Yu, X. (2025). False positives in study of memory-related gene expression. <em>Nature</em>, 642, E1-E3. <a href="https://doi.org/10.1038/s41586-025-08988-y" target="_blank">doi:10.1038/s41586-025-08988-y</a></li>
