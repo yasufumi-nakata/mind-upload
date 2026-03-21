@@ -150,7 +150,7 @@ In the R-series, the branching point is not only the wiring diagram but also how
 <div class="note-box">
 <strong>If You Want The Current Human In Vivo Measurement Ladder First</strong>
 <p>
-This roadmap now distinguishes not only <strong>which variable class a human route constrains</strong> but also <strong>how specialized or model-heavy that route still is</strong>. For the front-door ladder, start with <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>; for stack-specific ceilings and stop rules, see <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: observability and claim ceiling by measurement stack</a> and <a href="verification.html#observability-budget">Verification: Observability Budget</a>.
+This roadmap now distinguishes not only <strong>which variable class a human route constrains</strong> but also <strong>how specialized or model-heavy that route still is</strong>. For the front-door ladder, start with <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>; for stack-specific ceilings and stop rules, see <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: observability and claim ceiling by measurement stack</a> and <a href="verification.html#observability-budget">Verification: Observability Budget</a>. If the argument also bridges live measurement to later fixation / ex vivo follow-up or cross-day reacquisition, add the <a href="verification.html#state-continuity-bridge-card">Verification: State-Continuity Bridge Card</a> instead of reading <strong>same-subject</strong> or <strong>same-brain</strong> as <strong>same-state</strong> by default.
 </p>
 </div>
 <div class="note-box">
@@ -655,7 +655,7 @@ The remaining weakness in this roadmap was that M3 still let very different huma
 </tbody>
 </table>
 <p>
-If several rows are combined in one argument, this roadmap still asks for <strong>same-subject / same-session / same-perturbation</strong> acquisition plus <strong>external calibration</strong> before talking about state-complete human measurement. Otherwise the result stays at <strong>proxy-rich but ceiling-limited human evidence</strong>. The front-door table is in <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>, and the submission-side stop rule is <a href="verification.html#observability-budget">Verification: Observability Budget</a>.
+If several rows are combined in one argument, this roadmap still asks for <strong>same-subject / same-session / same-perturbation</strong> acquisition plus <strong>external calibration</strong> before talking about state-complete human measurement. If the bridge is sequential across live and ex vivo or across separated state regimes, it also asks for a <a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a>. Otherwise the result stays at <strong>proxy-rich but ceiling-limited human evidence</strong>. The front-door table is in <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>, and the submission-side stop rule is <a href="verification.html#observability-budget">Verification: Observability Budget</a>.
 </p>
 </div>
 <div class="note-box">

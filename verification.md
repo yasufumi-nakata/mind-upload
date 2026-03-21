@@ -21,6 +21,7 @@ page_highlights:
   - "For brain-to-text and speech decode, the Neural Contribution Card fixes task constraint, language prior, candidate set, no-brain / no-LM / shuffle baselines, and subject cooperation."
   - "For multimodal or atlas-prior results, the Fusion Card is added on top of the Observability Budget so acquisition relation, synchronization, fusion model, vascular-state / CVR limits for hemodynamic stacks, and external validation are fixed explicitly."
   - "For living-human proxy bundles, the Human Proxy Composition Card fixes direct observable by row, same-subject relation, model burden, incremental evidence, and residual latent-state ceiling before several proxy routes may be promoted together."
+  - "For sequential cross-regime claims that bridge live measurement to later fixation / ex vivo follow-up or cross-day reacquisition, the State-Continuity Bridge Card fixes acquisition order, elapsed time, regime continuity, coordinate transfer / deformation model, bridge validation rung, and residual drift ceiling before same-state language is allowed."
   - "For diffusion-MRI tractography connectomes, the Observability Budget now requires a tractography route card that names direct observables, priors / filtering, uncertainty, and abstention."
   - "For MRSI-derived metabolic-connectome claims, the Observability Budget now requires a metabolic-similarity route card that names the metabolite set, parceling, correction model, spectral QC, and whether the object is static similarity or kinetic rate imaging."
   - "For destructive ultrastructure claims, the Observability Budget now requires a destructive-structure route card that names preservation route, live-to-fix delay, registration scope, section-loss / segmentation QA, throughput scale, and omitted live-state families."
@@ -63,6 +64,7 @@ known_points:
   - "A foundation-model score without corpus-overlap, harmonization, adaptation, and benchmark-version disclosure, including split randomness / hidden grouping, remains qualified decoding evidence rather than portable transfer evidence."
   - "A multimodal result is not one thing; simultaneous acquisition, geometric fusion, invasive calibration, and atlas priors must be audited separately."
   - "Several living-human proxy routes do not add automatically; without same-subject relation, model disclosure, and cross-row calibration, the bundle remains below state-identification language."
+  - "A same-subject or same-brain pipeline can still be sequential and bridge-limited; live-to-fix delay, regime mismatch, deformation correction, and state drift remain separate audit items."
   - "For ESI, passing one validation class does not auto-pass the others; stimulation error, simultaneous invasive concordance, and postsurgical outcome answer different questions."
   - "For ESI, inverse-family, package, parameter, and conductivity choices can materially shift the reconstructed source, so solver-disagreement and uncertainty width are themselves audit items."
   - "A BOLD or fNIRS amplitude difference without vascular-state / CVR audit remains a hemodynamic-limited difference rather than a clean neural difference."
@@ -886,6 +888,60 @@ After adding the <strong>Observability Budget</strong> and the <strong>Fusion Ca
 If this card is missing, this site reads a living-human proxy bundle at the ceiling of the <strong>strongest individually supported row</strong>, or at most as <strong>proxy-rich but ceiling-limited human evidence</strong>. It is not promoted to <strong>same-subject, cross-stack, externally calibrated state identification</strong>.
 </p>
 </div>
+<h3 class="section-title" id="state-continuity-bridge-card">State-Continuity Bridge Card for sequential cross-regime claims</h3>
+<div class="note-box">
+<strong>2026-03-21 addendum: same-subject is not enough when the bridge itself is sequential</strong>
+<p>
+After adding the <strong>Fusion Card</strong>, the <strong>Human Proxy Composition Card</strong>, and the <strong>Destructive-Structure Route Card</strong>, one weak point still remained: a result could still be described as <strong>same-subject</strong> or <strong>same-brain</strong> even when the claim depended on bridging across live measurement, later fixation, ex vivo follow-up, or cross-day reacquisition as if those stages sampled one latent state. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> showed that preservation route and fixation time course alter extracellular-space retention and geometry. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a> showed that bridging in vivo two-photon physiology to synchrotron microtomography and serial block-face EM requires a multistage landmark-based correlative workflow. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> showed that same-brain function plus EM remains a <strong>sequential local pipeline</strong>, not simultaneous whole-state capture. <a href="https://doi.org/10.1038/nature14467" target="_blank">Attardo et al. (2015)</a> further showed that adult CA1 spine lifetimes are on the order of <strong>1-2 weeks</strong>, so relaxed bridge windows cannot be treated as silent continuity. Therefore, this site now requires a <strong>State-Continuity Bridge Card</strong> whenever a claim depends on treating measurements from different acquisition regimes as one latent-state sample.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>State-Continuity Bridge Card field</th>
+<th>Minimum disclosure</th>
+<th>What this site stops claiming if absent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bridge target and acquisition order</strong></td>
+<td>Name which stacks were linked, in which order, and which claim depends on that bridge: for example live imaging -&gt; fixation -&gt; ex vivo EM, same-day live stack A -&gt; live stack B, or cross-day reacquisition.</td>
+<td>A multi-stage workflow is not read as one state object by default.</td>
+</tr>
+<tr>
+<td><strong>Elapsed time and state window</strong></td>
+<td>Report the delay between acquisitions or between live physiology and fixation, whether the bridge stayed within one trial / session / day / sleep cycle or crossed days, and which hidden-state families could drift over that interval.</td>
+<td><strong>Same-subject</strong> is not read as <strong>same-time</strong> or <strong>same-state</strong>.</td>
+</tr>
+<tr>
+<td><strong>Physiological / perturbation regime continuity</strong></td>
+<td>Name whether task, arousal, anesthesia, deprivation, pharmacology, and behavioral context were matched, intentionally shifted, or left unmatched across the bridge.</td>
+<td>A bridge is not read as if calibration transfers automatically across state regimes.</td>
+</tr>
+<tr>
+<td><strong>Coordinate transfer and deformation model</strong></td>
+<td>Name fiducials, vascular landmarks, subject-specific MRI, warping or shrinkage correction, manual versus automated matching, and which spatial mismatch remains unresolved.</td>
+<td><strong>Same-brain</strong> is not read as cell-precise or deformation-free correspondence.</td>
+</tr>
+<tr>
+<td><strong>Bridge validation rung</strong></td>
+<td>Name what validates the bridge itself: repeated live measurement, vascular / cellular landmark recovery, stimulation-site correspondence, histology recovery, or no external validation.</td>
+<td>The bridge is not promoted to externally validated same-state evidence.</td>
+</tr>
+<tr>
+<td><strong>Residual drift, omitted state families, and ceiling</strong></td>
+<td>List which latent-state families could still change across the bridge, including synaptic efficacy, excitability, neuromodulatory context, support-state, and structural turnover where relevant, then declare the remaining claim ceiling and abstention boundary.</td>
+<td>The result is not promoted to same-state cross-regime reconstruction, maintenance-consistent language, or state-complete readout.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Minimum operating rule</strong>
+<p>
+If this card is missing, this site reads a sequential cross-regime result at the ceiling of the <strong>strongest directly supported live or destructive stage</strong> plus, at most, an <strong>unvalidated bridge hypothesis</strong>. It is not promoted to <strong>same-state</strong>, <strong>same-time</strong>, or <strong>maintenance-consistent</strong> evidence.
+</p>
+</div>
 <h3 class="section-title" id="destructive-structure-card">Destructive-Structure Route Card for ultrastructure claims</h3>
 <div class="note-box">
 <strong>2026-03-20 addendum: destructive ultrastructure routes need their own card</strong>
@@ -1060,7 +1116,7 @@ For connectome-constrained neural predictors, the label alone is also not enough
 <div class="note-box">
 <strong>Minimum operating rules</strong>
 <p>
-If this card is missing, this site treats the result as <strong>L0/L1 reproducible analysis or limited decode</strong> and does not promote it to L2 or above. For example, the default ceiling is <strong>macro-state tracking</strong> for <strong>EEG / HD-EEG + MRI only</strong>, <strong>an implant-region local population window</strong> for <strong>high-density extracellular probe only</strong>, <strong>structural scaffold</strong> for <strong>volume EM only</strong>, <strong>local ex vivo scaffold</strong> for <strong>human ultrastructure without a destructive-structure route card</strong>, <strong>molecular / spatial prior</strong> for <strong>whole-brain atlas only</strong>, and still only <strong>local conditional prediction</strong> even for <strong>same-brain calcium + EM</strong>. For inverse or model-based claims, a submission without an <strong>Identifiability Card</strong> is not accepted here as <strong>unique internal-state recovery</strong> and remains at the predictive / localization / model-conditioned ceiling even if its observability class improved. For living-human multi-stack proxy claims, a submission without a <strong>Human Proxy Composition Card</strong> is not accepted here as <strong>same-subject cross-stack state identification</strong> and remains at the <strong>strongest single-route</strong> or <strong>proxy-rich but ceiling-limited</strong> level. For hemodynamic modalities, a group or cross-day BOLD / fNIRS difference without <strong>vascular-state / CVR</strong> or <strong>short-separation / superficial-bias</strong> audit is not accepted here as a neural difference. For diffusion-MRI tractography, a connectome claim without a <strong>tractography route card</strong> is not accepted here as an edge-complete graph and remains at the <strong>macro pathway prior / targeted bundle hypothesis</strong> ceiling. For connectome-constrained predictors, a model claim without a <strong>conditional-model route card</strong> remains at the <strong>conditional hypothesis engine / task-bounded predictor</strong> ceiling and is not accepted here as unique internal-state recovery. If a chronic-probe result lacks a unit-identity audit, single-unit longitudinal claims are not accepted. Detailed stack-specific ceilings and the <strong>state variable × timescale</strong> matrix are summarized in <a href="wiki/measurement-stack-and-claim-ceiling.html#state-variable-matrix">Wiki: observability and claim ceiling by measurement stack</a>.
+If this card is missing, this site treats the result as <strong>L0/L1 reproducible analysis or limited decode</strong> and does not promote it to L2 or above. For example, the default ceiling is <strong>macro-state tracking</strong> for <strong>EEG / HD-EEG + MRI only</strong>, <strong>an implant-region local population window</strong> for <strong>high-density extracellular probe only</strong>, <strong>structural scaffold</strong> for <strong>volume EM only</strong>, <strong>local ex vivo scaffold</strong> for <strong>human ultrastructure without a destructive-structure route card</strong>, <strong>molecular / spatial prior</strong> for <strong>whole-brain atlas only</strong>, and still only <strong>local conditional prediction</strong> even for <strong>same-brain calcium + EM</strong>. For inverse or model-based claims, a submission without an <strong>Identifiability Card</strong> is not accepted here as <strong>unique internal-state recovery</strong> and remains at the predictive / localization / model-conditioned ceiling even if its observability class improved. For living-human multi-stack proxy claims, a submission without a <strong>Human Proxy Composition Card</strong> is not accepted here as <strong>same-subject cross-stack state identification</strong> and remains at the <strong>strongest single-route</strong> or <strong>proxy-rich but ceiling-limited</strong> level. For sequential cross-regime claims, a submission without a <strong>State-Continuity Bridge Card</strong> is not accepted here as <strong>same-state evidence</strong> and remains at the <strong>strongest directly supported stage</strong> plus an unvalidated bridge. For hemodynamic modalities, a group or cross-day BOLD / fNIRS difference without <strong>vascular-state / CVR</strong> or <strong>short-separation / superficial-bias</strong> audit is not accepted here as a neural difference. For diffusion-MRI tractography, a connectome claim without a <strong>tractography route card</strong> is not accepted here as an edge-complete graph and remains at the <strong>macro pathway prior / targeted bundle hypothesis</strong> ceiling. For connectome-constrained predictors, a model claim without a <strong>conditional-model route card</strong> remains at the <strong>conditional hypothesis engine / task-bounded predictor</strong> ceiling and is not accepted here as unique internal-state recovery. If a chronic-probe result lacks a unit-identity audit, single-unit longitudinal claims are not accepted. Detailed stack-specific ceilings and the <strong>state variable × timescale</strong> matrix are summarized in <a href="wiki/measurement-stack-and-claim-ceiling.html#state-variable-matrix">Wiki: observability and claim ceiling by measurement stack</a>.
 </p>
 </div>
 </section>
@@ -2109,9 +2165,11 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Yao, Z., et al. (2023). A high-resolution transcriptomic and spatial atlas of cell types in the whole mouse brain. <a href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank">doi:10.1038/s41586-023-06812-z</a></li>
 <li>Dorkenwald, S., et al. (2024). Neuronal wiring diagram of an adult brain. <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">doi:10.1038/s41586-024-07558-y</a></li>
 <li>Lu, X., Han, X., Meirovitch, Y., et al. (2023). Preserving extracellular space for high-quality optical and ultrastructural studies of whole mammalian brains. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
+<li>Bosch, C., Pacureanu, A., Patiño, J., et al. (2022). Functional and multiscale 3D structural investigation of brain tissue through correlative in vivo physiology, synchrotron microtomography and volume electron microscopy. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">doi:10.1038/s41467-022-30199-6</a></li>
 <li>Shapson-Coe, A., Januszewski, M., Berger, D. R., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
 <li>Lappalainen, J. K., Tschopp, F. D., Prakhya, S., et al. (2024). Connectome-constrained networks predict neural activity across the fly visual system. <a href="https://doi.org/10.1038/s41586-024-07939-3" target="_blank">doi:10.1038/s41586-024-07939-3</a></li>
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
+<li>Attardo, A., Fitzgerald, J. E., &amp; Schnitzer, M. J. (2015). Impermanence of dendritic spines in live adult CA1 hippocampus. <a href="https://doi.org/10.1038/nature14467" target="_blank">doi:10.1038/nature14467</a></li>
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
 <li>Santoni, G., et al. (2024). Chromatin plasticity predetermines neuronal eligibility for memory trace formation. <a href="https://doi.org/10.1126/science.adg9982" target="_blank">doi:10.1126/science.adg9982</a></li>
 <li>Traunmüller, L., et al. (2025). Novel environment exposure drives temporally defined and region-specific chromatin accessibility and gene expression changes in the hippocampus. <a href="https://doi.org/10.1038/s41467-025-63029-6" target="_blank">doi:10.1038/s41467-025-63029-6</a></li>
