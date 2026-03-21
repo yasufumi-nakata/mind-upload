@@ -30,18 +30,24 @@ What is shown here is the minimum list of hidden states that must be accounted f
 - Myelin, oligodendrocytes, thermal-state, ionic milieu / chloride homeostasis, activity-dependent transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local proteostasis / synaptic-tagging state, perisynaptic ECM / PNN state, local ATP supply and mitochondrial positioning, astrocytes, and the microglia / meningeal-lymphatic system all contribute to timing, plasticity, memory retrieval, long-term recovery, and clearance support.
 - Even in humans, macro scaffolds and support-state proxies are starting to become visible through SV2A PET, MRSI-based metabolic connectomes, MRS thermometry, 31P-MRS, sodium MRI, dynamic deuterium metabolic imaging, myelin bilayer mapping, TMS / EEG / sleep plasticity proxies, and CSF / glymphatic proxies, although cell-specific maintenance-states still remain coarse.
 - Myelin evidence already spans adaptive learning, timing-state control, plasticity-brake effects, remyelination recovery, and human macro-proxy classes, so a human myelin map alone does not settle per-axon timing-state or plasticity-complete restoration.
+- Ionic evidence already spans chloride-set-point mechanisms, transporter-state regulation, interstitial-ion state switching, perisynaptic K+ clearance, sleep-wake-history-dependent E_GABAA shifts, human pathology, and macro human proxy routes, so one ionic paper does not settle inhibitory-state observability.
+- Post-transcriptional RNA evidence already spans isoform-dependent downstream transcriptional control, transsynaptic receptor-balance control, m6A-dependent translation, m6A-dependent degradation, RNA-editing-dependent homeostatic scaling, and atlas / ex vivo observability ceilings, so one RNA paper does not settle current RNA-state.
+- Proteostasis evidence already spans tag/capture, branch-level integration, synthesis/degradation balance, autophagy-linked remodeling, turnover-resistant persistence, and proteasome-capacity intervention, so one proteostasis paper does not settle late-stabilization completeness.
 - Bioenergetic evidence already spans presynaptic ATP-linked respiration, dendritic positioning / fission, synaptic ATP-synthase nano-organization, conserved mitochondrial Ca2+-efflux tuning, and human macro energetic proxy routes, so one energetic paper does not settle local mitochondrial state.
+- Cargo evidence already spans postsynaptic receptor delivery, learning-phase microtubule-state gating, local vesicle confinement, axonal RNA localization, and presynaptic cargo retention, so one trafficking paper does not settle compartment-delivery completeness.
+- Astrocyte evidence already spans lactate-shuttle support, minute-scale cortical network encoding, learning-associated recall ensembles, multiday stabilization, fear-state representation, and human MAO-B / reactive-astrogliosis PET proxy routes, so one astrocyte paper does not settle astrocyte-state observability.
 - An MRSI-derived metabolic-connectome label still needs metabolite-set, parceling, correction-model, and QC disclosure before it can be interpreted safely.
+- Current human routes already imply a calibrator-role matrix: SV2A PET constrains regional synaptic-density proxy space, 1H-MRSI constrains parcel-level biochemical similarity, dynamic DMI / 31P-MRS constrain macro energetic burden, myelin MRI constrains macro myelin burden, astrocyte PET constrains reactive-astrogliosis routes, and CSF mobility / glymphatic routes constrain macro support-state rather than local controller identity.
 
 ## まだ分かっていないこと
 - It is unclear at what granularity excitability, thermal-state, ionic milieu / chloride homeostasis, sleep homeostasis, local proteostasis / synaptic tagging, ECM / PNN state, bioenergetic support, metabolic support, and clearance support must be measured to approach sufficient conditions for WBE.
 - It is not yet fixed how time-resolved transcription / chromatin audit should be submitted so that cell identity, current plasticity program, and memory-stabilization controller are not mixed.
-- It is not yet fixed how post-transcriptional RNA-state should be audited without collapsing isoform choice, m6A-dependent translation / degradation, and RNA-editing ratio back into gene-level abundance.
+- It is not yet fixed which human-compatible external calibrators could raise post-transcriptional RNA-state claims beyond hippocampal or ex vivo long-read atlas evidence.
 - It is not yet fixed which same-subject or human-compatible external calibrators could raise phospho-signaling / second-messenger claims beyond region-structured ex vivo atlas evidence.
 - It is not yet fixed which same-subject or human-compatible external calibrators could raise bioenergetic / mitochondrial claims beyond macro energetic proxy evidence.
 - It has not been fixed which external standards among SV2A PET, MRSI, MRS thermometry, 31P-MRS, sodium MRI, dynamic DMI, myelin bilayers, TMS-EEG, sleep-plasticity proxies, and CSF-glymphatic proxies should calibrate maintenance-states that cannot be measured directly in humans.
-- It is not yet fixed which route-card fields should be mandatory when a myelin paper mixes learning, timing-state, plasticity, remyelination, and human proxy language in one argument.
-- It is not yet fixed which route-card fields should be mandatory when a clearance / immune paper mixes drainage anatomy, immune effector state, physiology drivers, human mobility imaging, and biomarker-efflux modeling in one argument.
+- It is not yet fixed which same-subject acquisition stacks and perturbation regimes could externally calibrate the calibrator-role matrix itself, rather than only showing several proxy rows side by side.
+- It is not yet fixed which submission fields should be mandatory when several human proxy rows are used together to claim one latent maintenance-state family, especially when proxy class, operational maturity, and calibrator role diverge.
 - It is not yet fixed which sleep-history, sleep-architecture, myelin, thermal, ECM, bioenergetic, metabolic, and clearance indicators will become standard submissions for long-term closed-loop claims.
 - It is not yet fixed which sleep replay fields should be mandatory across scalp EEG, intracranial recordings, and cue-driven interventions so that event definition, timing policy, and item-selection regime are not collapsed into one sentence.
 - It is also unclear how strongly parcel-level metabolic similarity and CSF-mobility proxies constrain cell-specific glial, immune, transmitter, and synaptic maintenance-states.
@@ -245,6 +251,73 @@ The remaining weakness after separating <strong>cell identity</strong> from <str
 <strong>Human observability ceiling for post-transcriptional RNA-state</strong>
 <p>
 Current human in vivo routes on this site do not directly reveal <strong>isoform choice</strong>, <strong>m6A-reader engagement</strong>, or <strong>RNA-editing ratio</strong> across the whole living brain. Specialized long-read atlas work such as <a href="https://doi.org/10.1038/s41593-024-01616-4" target="_blank">Joglekar et al. (2024)</a> is important evidence that brain splicing programs are rich and cell-type-specific, but it is still an atlas-building / ex vivo observability route rather than a comparable in vivo whole-brain human measurement. Therefore, on this site, post-transcriptional RNA-state remains a <strong>local hidden state</strong> in humans unless it is externally calibrated or causally perturbed in a narrower preparation.
+</p>
+
+<strong>2026-03-21 addendum: post-transcriptional RNA evidence now needs a route card</strong>
+<p>
+The remaining weakness on this page was that it still let several different inferential objects collapse into one label such as <strong>post-transcriptional RNA evidence</strong>. The primary literature does not support that shortcut. <a href="https://doi.org/10.1038/nn.4069" target="_blank">Wang et al. (2015)</a> is about an <strong>alternative-splice isoform that changes downstream chromatin / transcriptional control</strong>, <a href="https://doi.org/10.1016/j.neuron.2019.03.032" target="_blank">Dai et al. (2019)</a> is about <strong>presynaptic alternative splicing that shifts postsynaptic NMDA versus AMPA receptor balance</strong>, <a href="https://doi.org/10.1038/s41586-018-0666-1" target="_blank">Shi et al. (2018)</a> is about <strong>neuronal-stimulus-dependent m6A translation through YTHDF1</strong>, <a href="https://doi.org/10.1002/advs.202514926" target="_blank">Li et al. (2025)</a> is about <strong>YTHDF2-mediated m6A degradation constraining protein synthesis and memory</strong>, <a href="https://doi.org/10.1126/scisignal.adr1442" target="_blank">Peterson et al. (2025)</a> is about <strong>ADAR2-mediated RNA editing controlling homeostatic AMPAR composition</strong>, and <a href="https://doi.org/10.1038/s41593-024-01616-4" target="_blank">Joglekar et al. (2024)</a> is an <strong>isoform atlas / observability-ceiling route</strong>. Therefore, this site now requires a <strong>post-transcriptional RNA route card</strong> before a claim is promoted beyond a narrow, explicitly named ceiling.
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be fixed explicitly</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the result supports <strong>alternative-splice controller logic</strong>, <strong>m6A-dependent translation</strong>, <strong>m6A-dependent degradation / stabilization</strong>, <strong>RNA-editing controller logic</strong>, or an <strong>atlas / observability map</strong>.</td>
+<td>Mechanistically different papers collapse into one vague label such as <code>RNA-state evidence</code>.</td>
+</tr>
+<tr>
+<td><strong>RNA control axis</strong></td>
+<td>Name the actual RNA-side controller: splice isoform / exon choice, m6A writer / eraser / reader route, editing enzyme and edited site, or long-read isoform survey axis.</td>
+<td>The word <code>post-transcriptional</code> hides whether the paper is really about recoding, translation, degradation, or isoform allocation.</td>
+</tr>
+<tr>
+<td><strong>Biological regime</strong></td>
+<td>Name species, sex, brain region / circuit, cell class, developmental stage, behavioral phase, and whether the preparation is culture, slice, awake animal, fixed tissue, or human ex vivo sample.</td>
+<td>A local route in one circuit or age window is silently promoted to a generic brain-wide memory controller.</td>
+</tr>
+<tr>
+<td><strong>Time axis / state dependence</strong></td>
+<td>Write baseline and every post-learning / post-stimulation / post-recall window, and state whether the assay is an endpoint snapshot or a repeated readout across the relevant state change.</td>
+<td>An acute RNA response is overread as a persistent maintenance controller or a long-term trace.</td>
+</tr>
+<tr>
+<td><strong>Assay and direct observable</strong></td>
+<td>Name the direct RNA observable explicitly, such as isoform ratio, exon inclusion, m6A-marked transcript binding / occupancy, editing fraction, or isoform-resolved long-read map, and separate it from downstream electrophysiology or behavior.</td>
+<td>Gene-level abundance, bulk RNA summaries, and downstream physiology are treated as if they directly measured the operative RNA-state.</td>
+</tr>
+<tr>
+<td><strong>Downstream functional object</strong></td>
+<td>State whether the RNA route is claimed to alter <strong>chromatin / transcriptional control</strong>, <strong>receptor composition</strong>, <strong>protein synthesis</strong>, <strong>mRNA decay</strong>, <strong>homeostatic scaling</strong>, or only an <strong>observability ceiling</strong>.</td>
+<td>Hybrid papers such as splice-dependent chromatin control and editing-dependent receptor recoding are misread as if they fixed the same latent variable.</td>
+</tr>
+<tr>
+<td><strong>Causal leverage</strong></td>
+<td>Write whether the paper only observed an RNA pattern, perturbed the reader / writer / editor, edited a named site, rescued a knockout, or re-expressed a controller, and which physiological or behavioral output changed.</td>
+<td>Correlated RNA signatures are promoted to necessary or sufficient controllers without intervention support.</td>
+</tr>
+<tr>
+<td><strong>Human observability ceiling</strong></td>
+<td>State whether the strongest human-facing evidence is an ex vivo long-read atlas, a targeted human tissue sample, or no human route at all, and do not blur that with living-human in vivo measurement.</td>
+<td>Atlas-building or hippocampus-limited evidence is overread as current whole-brain human RNA-state identification.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Fix in one line which state variables remain latent, especially same-subject whole-brain continuity, compartment-specific RNA localization, live cell-type-specific readout, and non-destructive human coverage.</td>
+<td>A local mechanistic paper or atlas is overread as if the current living-brain RNA controller were nearly solved.</td>
+</tr>
+</tbody>
+</table>
+
+<strong>Why this route card is necessary here</strong>
+<p>
+The need is multi-axis. <a href="https://doi.org/10.1038/nn.4069" target="_blank">Wang et al. (2015)</a> is not just <strong>an RNA paper</strong>; it is an <strong>alternative-splice isoform</strong> whose downstream object is <strong>activity-dependent transcriptional elongation</strong>. <a href="https://doi.org/10.1016/j.neuron.2019.03.032" target="_blank">Dai et al. (2019)</a> is not about a generic memory trace either; it is about <strong>presynaptic neurexin splice choice</strong> differentially controlling <strong>postsynaptic receptor responses without synapse-density change</strong>. <a href="https://doi.org/10.1038/s41586-018-0666-1" target="_blank">Shi et al. (2018)</a> and <a href="https://doi.org/10.1002/advs.202514926" target="_blank">Li et al. (2025)</a> are both m6A papers, but one is about <strong>stimulus-dependent translation via YTHDF1</strong> whereas the other is about <strong>mRNA degradation via YTHDF2</strong>. <a href="https://doi.org/10.1126/scisignal.adr1442" target="_blank">Peterson et al. (2025)</a> is different again because it is about <strong>RNA editing of a named receptor subunit during homeostatic synaptic scaling</strong>. Finally, <a href="https://doi.org/10.1038/s41593-024-01616-4" target="_blank">Joglekar et al. (2024)</a> shows that isoform diversity varies strongly across cell type, region, development, and species, but that remains an <strong>atlas ceiling</strong>, not a living-human whole-brain readout. Therefore, this site does not let these rows inherit one another's claim ceiling, and it does not let any of them stand in for current human whole-brain RNA-state identification without a route-card audit.
 </p>
 
 <h3>4. Phospho-signaling / second-messenger state is not the same as transcript or protein abundance</h3>
@@ -463,6 +536,68 @@ The weakness I found in the current site was that although I separated synapses,
 Human evidence for ECM / PNN state is still much weaker than the animal causal literature. <a href="https://doi.org/10.3390/ijms23158197" target="_blank">Boonen et al. (2022)</a> showed extracellular-matrix reorganization in human hippocampal sclerosis tissue, which is useful evidence that the matrix layer is biologically real in human disease tissue. But this remains <strong>ex vivo pathology</strong>, not an in vivo whole-brain readout of current ECM / PNN state. Therefore, on this site, human ECM evidence is treated as support for the existence of another layer, not as a direct measurement of ongoing plasticity gates.
 </p>
 
+<strong>2026-03-21 addendum: ECM / PNN evidence now needs a route card</strong>
+<p>
+The remaining weakness on this page was that <strong>ECM / PNN evidence</strong> could still collapse several different inferential objects into one bucket. The primary literature does not support that shortcut. <a href="https://doi.org/10.1126/science.1072699" target="_blank">Pizzorusso et al. (2002)</a> is about <strong>enzymatic reopening of adult cortical plasticity windows</strong>. <a href="https://doi.org/10.1038/nn.2338" target="_blank">Frischknecht et al. (2009)</a> is about <strong>receptor lateral mobility and short-term plasticity under intact matrix constraints</strong>. <a href="https://doi.org/10.1016/j.cell.2020.05.050" target="_blank">Nguyen et al. (2020)</a> is about <strong>microglia-driven ECM engulfment that promotes synapse remodeling and memory consolidation</strong>. <a href="https://doi.org/10.1523/JNEUROSCI.1626-24.2024" target="_blank">Alexander et al. (2025)</a> is about <strong>cell-type-specific aggrecan loss that dissociates CA2 social / reversal memory from PV-cell contextual fear memory</strong>. <a href="https://doi.org/10.1111/acel.70139" target="_blank">Mehak et al. (2025)</a> is about <strong>age-linked CA2 PNN accumulation and ChABC rescue of recognition memory plus theta oscillations</strong>. <a href="https://doi.org/10.1002/epi4.12963" target="_blank">Lehner et al. (2024)</a> and <a href="https://doi.org/10.1007/s12035-024-04306-1" target="_blank">Banovac et al. (2025)</a> raise human relevance, but only as <strong>ex vivo hippocampal or postmortem cortical histology</strong>. Therefore, on this site, ECM / PNN claims now require a <strong>route card</strong> before they are promoted beyond a narrow, explicitly named ceiling.
+</p>
+
+<table>
+<thead>
+<tr>
+<th>ECM / PNN route-card field</th>
+<th>What must be stated</th>
+<th>What goes wrong without it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the paper is about reopening a plasticity window, constraining receptor mobility, microglia- or protease-mediated matrix remodeling, cell-type-specific memory support, age / pathology-associated matrix shift, or human ex vivo mapping.</td>
+<td>One positive ECM result is silently promoted to <code>ECM controls memory</code> in general.</td>
+</tr>
+<tr>
+<td><strong>Matrix object and cell population</strong></td>
+<td>Name the actual matrix object and target population, such as CSPG digestion, aggrecan loss, brevican / lectican remodeling, peri-synaptic matrix clusters, CA2 pyramidal-cell PNNs, PV-cell PNNs, or postmortem WFA / VCAN / NCAN classes.</td>
+<td>The site accidentally treats every ECM paper as if it measured one interchangeable brain-wide matrix variable.</td>
+</tr>
+<tr>
+<td><strong>Direct observable</strong></td>
+<td>Write the direct readout: PNN density or intensity, receptor lateral mobility, matrix-cluster abundance, ECM engulfment / proteolysis, oscillatory readout, synapse-density change, or histological morphology / laminar distribution.</td>
+<td>A behavioral or electrophysiological effect is overread as direct ground truth of the current ECM controller.</td>
+</tr>
+<tr>
+<td><strong>Controller / perturbation route</strong></td>
+<td>State which controller or intervention was actually used, such as ChABC digestion, conditional aggrecan deletion, IL-33 / microglial ECM engulfment, ageing comparison, epilepsy pathology, or non-interventional postmortem mapping.</td>
+<td>Direct perturbation, developmental change, disease association, and descriptive histology are mixed together.</td>
+</tr>
+<tr>
+<td><strong>Functional target</strong></td>
+<td>Name the dependent variable explicitly: ocular-dominance plasticity, AMPAR mobility, social novelty memory, reversal learning, contextual fear memory, recognition memory, theta rhythmicity, or GABAergic plasticity.</td>
+<td>A paper that constrains one task or circuit phenomenon is promoted to a generic statement that <code>ECM solved plasticity or stabilization</code>.</td>
+</tr>
+<tr>
+<td><strong>Recovery / completeness boundary</strong></td>
+<td>State whether the result shows reopening, rescue under an aged or pathological condition, preservation against erasure, or complete restoration of a healthy matrix state.</td>
+<td>Any rescue after ECM manipulation is overread as proof that the healthy ECM / PNN state was fully reconstructed.</td>
+</tr>
+<tr>
+<td><strong>Human observability / external calibration</strong></td>
+<td>Disclose whether the human route is epilepsy pathology, postmortem cortical histology, or another ex vivo assay, and state explicitly that an in vivo whole-brain readout of current ECM / PNN gate state is still absent here.</td>
+<td>Human histology is silently promoted to same-subject, time-varying, whole-brain ECM-state observability.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Write which variables remain latent, especially current whole-brain matrix state, same-subject longitudinal ECM change, local plasticity-gate identity outside the measured circuit, and any human-compatible controller readout.</td>
+<td>The site accidentally treats <code>ECM evidence exists</code> as equivalent to ECM-complete or maintenance-complete state capture.</td>
+</tr>
+</tbody>
+</table>
+
+<strong>Why this route card is necessary here</strong>
+<p>
+This route card forces the reader to separate <strong>what matrix object changed</strong>, <strong>which cells carried that matrix</strong>, <strong>which intervention or controller was used</strong>, and <strong>whether the result was rescue, stabilization, or direct observation</strong>. Without that separation, ChABC reopening, CA2-specific aggrecan deletion, microglial ECM engulfment, ageing rescue, epilepsy histology, and postmortem cortical mapping can all sound like the same kind of progress even though they reduce different uncertainty terms and stop at very different claim ceilings.
+</p>
+
 <h3>10. Ionic milieu / chloride homeostasis is not background chemistry</h3>
 <p>
 The current site had become good at separating <strong>intrinsic excitability</strong>, <strong>ECM / PNN</strong>, <strong>myelin</strong>, and <strong>glial support</strong>, while still leaving <strong>chloride set point and interstitial ion composition</strong> in the background. That was too weak. <a href="https://doi.org/10.1126/science.1245423" target="_blank">Glykys et al. (2014)</a> showed that local impermeant anions help establish neuronal chloride concentration, <a href="https://doi.org/10.1038/s41467-017-01749-0" target="_blank">Heubl et al. (2017)</a> showed that GABA<sub>A</sub>-receptor-mediated synaptic inhibition rapidly tunes KCC2 activity via the Cl-sensitive WNK1 kinase, <a href="https://doi.org/10.1126/science.aad4821" target="_blank">Ding et al. (2016)</a> showed that changing interstitial K<sup>+</sup>, Ca<sup>2+</sup>, Mg<sup>2+</sup>, and H<sup>+</sup> is sufficient to shift cortical activity and sleep/wake state, and <a href="https://doi.org/10.1523/JNEUROSCI.2761-07.2007" target="_blank">Huberfeld et al. (2007)</a> showed perturbed chloride homeostasis together with depolarizing GABAergic signaling in human temporal-lobe epilepsy. More recently, <a href="https://doi.org/10.1038/s41386-022-01480-5" target="_blank">Simonnet et al. (2023)</a> showed that silencing KCC2 in mouse dorsal hippocampus compromises spatial/contextual memory and alters hippocampal rhythmogenesis, and <a href="https://doi.org/10.1007/s12576-018-00654-5" target="_blank">Nakamura et al. (2019)</a> showed that KCC2 overexpression enhances dendritic-spine plasticity and motor learning. Therefore, even with the same connectome, cell type, and nominal synaptic weights, <strong>inhibitory sign, network gain, rhythm stability, and part of memory-relevant plasticity can still differ if ionic milieu / chloride homeostasis differs</strong>.
@@ -471,6 +606,63 @@ The current site had become good at separating <strong>intrinsic excitability</s
 <strong>How to read current human ionic evidence</strong>
 <p>
 Human ionic evidence is still a coarse observability class. <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a> demonstrated high-resolution sodium imaging of healthy human brain at 7 T, which is important as mm-class tissue sodium mapping. But it still does not tell us <strong>cell-specific chloride concentration</strong>, <strong>KCC2 / NKCC1 state</strong>, <strong>extracellular K<sup>+</sup> or Ca<sup>2+</sup> microdomains</strong>, or <strong>local E<sub>GABA</sub></strong>. Therefore, on this site, human sodium imaging is treated as a <strong>macro ionic proxy</strong>, not as direct ground truth of current chloride homeostasis.
+</p>
+
+<strong>2026-03-21 addendum: ionic / chloride evidence now needs a route card</strong>
+<p>
+The remaining weakness on this page was that <strong>ionic evidence</strong> could still collapse several different inferential objects into one bucket. The primary literature does not support that shortcut. <a href="https://doi.org/10.1126/science.1245423" target="_blank">Glykys et al. (2014)</a> is about <strong>local chloride set point established by impermeant anions</strong>. <a href="https://doi.org/10.1038/s41467-017-01749-0" target="_blank">Heubl et al. (2017)</a> is about <strong>activity-dependent KCC2 membrane regulation via Cl-sensitive WNK1 signaling</strong>. <a href="https://doi.org/10.1126/science.aad4821" target="_blank">Ding et al. (2016)</a> and <a href="https://doi.org/10.1111/jsr.13522" target="_blank">Forsberg et al. (2022)</a> are about <strong>interstitial / CSF ion composition linked to sleep-wake state</strong>. <a href="https://doi.org/10.1016/j.celrep.2023.112934" target="_blank">Byvaltsev et al. (2023)</a> is about <strong>perisynaptic K<sup>+</sup> clearance by reverse-mode KCC2 shaping glutamatergic transmission and LTP</strong>. <a href="https://doi.org/10.1016/j.cub.2025.01.050" target="_blank">Alfonsa et al. (2025)</a> is about <strong>sleep-wake-history-related shifts in E<sub>GABAA</sub> and plasticity induction</strong>. <a href="https://doi.org/10.1523/JNEUROSCI.2761-07.2007" target="_blank">Huberfeld et al. (2007)</a> is a <strong>human pathology route with depolarizing GABA and altered KCC2 expression</strong>. <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a> and <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">Qian et al. (2025)</a> are <strong>macro human sodium-proxy routes</strong>. Therefore, on this site, ionic / chloride claims now require a <strong>route card</strong> before they are promoted beyond a narrow, explicitly named ceiling.
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be fixed explicitly</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the result supports <strong>chloride-set-point / E<sub>GABAA</sub> tuning</strong>, <strong>transporter-state regulation</strong>, <strong>interstitial-ion state switching</strong>, <strong>perisynaptic K<sup>+</sup> clearance</strong>, <strong>human pathology route</strong>, or <strong>human macro ionic proxy</strong>.</td>
+<td>Local inhibitory control, sleep-wake state transition, glutamatergic K<sup>+</sup> clearance, pathology tissue, and macro sodium / CSF proxy results collapse into one label such as <code>ionic evidence</code>.</td>
+</tr>
+<tr>
+<td><strong>Biological regime / spatial scale</strong></td>
+<td>Name species, region, cell class or compartment, and whether the claim is about a dendritic spine / perisynaptic microdomain, a cortical network state, a hippocampal memory circuit, pathology tissue, CSF, or whole-brain sodium imaging.</td>
+<td>A local microdomain mechanism or pathology-specific route is silently promoted to a generic whole-brain ionic controller.</td>
+</tr>
+<tr>
+<td><strong>Direct ionic observable</strong></td>
+<td>Write the direct readout: intracellular chloride concentration, E<sub>GABAA</sub>, KCC2 / NKCC1 / WNK1 state, extracellular K<sup>+</sup> / Ca<sup>2+</sup> / Mg<sup>2+</sup> / H<sup>+</sup> composition, tissue-sodium class, or CSF ion concentration.</td>
+<td>A paper that measured one ionic object is overread as if it had fixed the entire chloride / ionic state.</td>
+</tr>
+<tr>
+<td><strong>Perturbation / controller route</strong></td>
+<td>State which controller or intervention was actually used, such as cotransporter block / overexpression, GABA<sub>A</sub>-receptor manipulation, sleep deprivation or sleep / wake history, extracellular-ion substitution, or a proxy-only imaging acquisition.</td>
+<td>Direct mechanism, state-conditioned intervention, pathology observation, and proxy-only readout are mixed together.</td>
+</tr>
+<tr>
+<td><strong>Functional target</strong></td>
+<td>Name the target phenomenon explicitly: inhibitory polarity, residual depolarization, LTP induction, rhythm stability, sleep-wake transition, seizure-like activity, or memory formation.</td>
+<td>A result that only constrains one target is promoted to a generic statement that <code>ionic state solved plasticity or maintenance</code>.</td>
+</tr>
+<tr>
+<td><strong>Human observability / external calibration</strong></td>
+<td>State whether the human route is pathology tissue, a CSF ion assay, a sodium MRI proxy, or another externally calibrated ionic measurement, and what local chloride variables still require external calibration.</td>
+<td>Healthy-human CSF or sodium measurements are silently promoted to direct readout of local chloride homeostasis.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Write which local variables remain latent, such as cell-specific chloride concentration, transporter balance, perisynaptic K<sup>+</sup> handling, intra- versus extracellular sodium partition in routine practice, and local inhibitory reversal potential.</td>
+<td>The site accidentally treats <code>ionic evidence exists</code> as equivalent to ionic-complete or maintenance-complete state capture.</td>
+</tr>
+</tbody>
+</table>
+
+<strong>Why this route card is necessary here</strong>
+<p>
+This route card forces the reader to state whether the paper <strong>measured a local ionic variable</strong>, <strong>manipulated an ionic controller</strong>, <strong>observed a pathology-specific failure mode</strong>, or merely <strong>reported a macro human proxy</strong>. Without that separation, sodium MRI, CSF assays, KCC2 manipulations, and sleep-history-dependent E<sub>GABAA</sub> shifts can all sound like the same kind of progress even though they reduce different uncertainty terms and stop at different claim ceilings.
 </p>
 
 <h3>11. thermal-state is not a background constant</h3>
@@ -557,12 +749,79 @@ The need is two-sided. On the mechanism side, <a href="https://doi.org/10.1038/s
 
 <h3>13. Cargo-transport / cytoskeletal trafficking is not implied by proteostasis or ATP</h3>
 <p>
-The site had become good at separating <strong>local proteostasis</strong> from <strong>bioenergetics</strong>, while still leaving <strong>the delivery route itself</strong> too implicit. That was too weak. <a href="https://doi.org/10.1016/j.neuron.2006.09.040" target="_blank">Park et al. (2006)</a> showed that recycling-endosome exocytosis is required for LTP-associated spine growth, <a href="https://doi.org/10.1073/pnas.0902304106" target="_blank">Maas et al. (2009)</a> showed that synaptic activation rewrites microtubules supporting postsynaptic cargo transport, <a href="https://doi.org/10.1016/j.neuron.2011.03.026" target="_blank">Yin et al. (2011)</a> showed that KIF17 supports synaptic NR2A/2B balance and memory, <a href="https://doi.org/10.7554/eLife.53456" target="_blank">Zhao et al. (2020)</a> showed that KIF5B depletion impairs dendritic transport, synaptic plasticity, and memory, <a href="https://doi.org/10.1016/j.celrep.2021.109369" target="_blank">Swarnkar et al. (2021)</a> linked KIF5C-mediated transport to structural plasticity and long-term memory, and <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">Aiken &amp; Holzbaur (2024)</a> showed that local axonal microtubule patterning controls presynaptic cargo delivery. Therefore, even with the same connectome, the same weight estimate, the same local translation program, and the same ATP support, <strong>which cargo reaches which compartment can still differ</strong>.
+The site had become good at separating <strong>local proteostasis</strong> from <strong>bioenergetics</strong>, while still leaving <strong>the delivery route itself</strong> too implicit. That was too weak. <a href="https://doi.org/10.1016/j.neuron.2006.09.040" target="_blank">Park et al. (2006)</a> showed that recycling-endosome exocytosis is required for LTP-associated spine growth, and <a href="https://doi.org/10.1038/nn2063" target="_blank">Correia et al. (2008)</a> showed myosin-Va-dependent translocation of GluR1 from dendritic shaft to spine during LTP. <a href="https://doi.org/10.1073/pnas.0902304106" target="_blank">Maas et al. (2009)</a> showed that synaptic activation rewrites microtubules supporting postsynaptic cargo transport, <a href="https://doi.org/10.1038/ncomms5389" target="_blank">Uchida et al. (2014)</a> showed that learning-phase microtubule stability controls KIF5-mediated GluA2 localization and memory, and <a href="https://doi.org/10.7554/eLife.80622" target="_blank">Wong et al. (2024)</a> showed that synaptic activity confines endogenous GluA1 vesicles near stimulated dendritic regions rather than making `cargo reached the correct spine` a solved generic statement. <a href="https://doi.org/10.7554/eLife.53456" target="_blank">Zhao et al. (2020)</a> showed that KIF5B depletion impairs dendritic transport, synaptic plasticity, and memory, <a href="https://doi.org/10.1016/j.celrep.2021.109369" target="_blank">Swarnkar et al. (2021)</a> linked KIF5C-mediated transport to structural plasticity and long-term memory by constraining local translation, <a href="https://doi.org/10.1038/s41467-025-57651-7" target="_blank">de Queiroz et al. (2025)</a> showed that axonal RNA localization is required for long-term but not short-term memory in a mature in vivo memory circuit, and <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">Aiken &amp; Holzbaur (2024)</a> showed that local axonal microtubule patterning controls presynaptic cargo pausing and delivery. Therefore, even with the same connectome, the same weight estimate, the same local translation program, and the same ATP support, <strong>which cargo reaches which compartment, stays there, and remains available on the relevant timescale can still differ</strong>.
 </p>
 
 <strong>How this site reads current human evidence</strong>
 <p>
-Current human in vivo routes still do not directly reveal branch- or bouton-specific cargo pausing, motor engagement, or microtubule traffic state. This is an inference from the measurement classes available on the site, not a direct transport measurement. Therefore, on this site, cargo-transport / cytoskeletal trafficking remains a <strong>local hidden state</strong> in humans unless it is externally calibrated or causally perturbed in a narrower preparation.
+Current human in vivo routes still do not directly reveal branch- or bouton-specific cargo pausing, motor engagement, or microtubule traffic state. Narrow human-neuron preparations such as the induced-neuron axon system in <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">Aiken &amp; Holzbaur (2024)</a> strengthen the mechanism side, but they do not erase the living-human whole-brain observability gap. This is an inference from the measurement classes available on the site, not a direct transport measurement. Therefore, on this site, cargo-transport / cytoskeletal trafficking remains a <strong>local hidden state</strong> in humans unless it is externally calibrated or causally perturbed in a narrower preparation.
+</p>
+
+<strong>2026-03-21 addendum: cargo-transport evidence now needs a route card</strong>
+<p>
+The remaining weakness on this page was that <strong>cargo evidence</strong> could still collapse several different inferential objects into one bucket. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuron.2006.09.040" target="_blank">Park et al. (2006)</a> and <a href="https://doi.org/10.1038/nn2063" target="_blank">Correia et al. (2008)</a> are about <strong>postsynaptic AMPAR / recycling-endosome delivery during LTP</strong>. <a href="https://doi.org/10.1073/pnas.0902304106" target="_blank">Maas et al. (2009)</a>, <a href="https://doi.org/10.1038/ncomms5389" target="_blank">Uchida et al. (2014)</a>, and <a href="https://doi.org/10.7554/eLife.80622" target="_blank">Wong et al. (2024)</a> are about <strong>transport-path state</strong>, namely microtubule remodeling, learning-phase-dependent microtubule stability, and activity-dependent vesicle confinement near the stimulated dendritic region. <a href="https://doi.org/10.1016/j.celrep.2021.109369" target="_blank">Swarnkar et al. (2021)</a> and <a href="https://doi.org/10.1038/s41467-025-57651-7" target="_blank">de Queiroz et al. (2025)</a> are about <strong>RNA cargo localization / local translation support for long-term memory</strong>. <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">Aiken &amp; Holzbaur (2024)</a> is about <strong>presynaptic cargo delivery and retention patterned by local axonal microtubule dynamics</strong>. Therefore, on this site, cargo-transport claims now require a <strong>route card</strong> before they are promoted beyond a narrow, explicitly named ceiling.
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be fixed explicitly</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the paper is about <strong>postsynaptic receptor delivery</strong>, <strong>activity-dependent vesicle confinement / reservoir formation</strong>, <strong>learning-dependent microtubule-state gating</strong>, <strong>axonal RNA localization / local translation support</strong>, or <strong>presynaptic cargo retention / synaptogenesis</strong>.</td>
+<td>Different inferential objects collapse into one phrase such as <code>transport evidence shows compartment delivery is solved</code>.</td>
+</tr>
+<tr>
+<td><strong>Cargo object</strong></td>
+<td>Name the actual cargo: AMPAR-containing vesicle, recycling endosome, GluA2-related receptor cargo, RNA granule / localized mRNA, synaptic-vesicle precursor, mitochondrion, or another explicitly followed object.</td>
+<td><code>cargo</code> becomes a generic word and one tracked object is silently promoted to all receptor, organelle, or RNA classes.</td>
+</tr>
+<tr>
+<td><strong>Compartment scope</strong></td>
+<td>Write whether the route is dendritic shaft, stimulated spine neighborhood, axonal branch, bouton, or presynaptic terminal, and whether the relevant unit is one spine, one branch, or a larger compartment.</td>
+<td>Dendritic transport, spine entry, axonal delivery, and bouton retention are treated as if they had the same spatial ceiling.</td>
+</tr>
+<tr>
+<td><strong>Transport phase / state variable</strong></td>
+<td>Fix whether the result addresses long-range transport, local pausing / confinement, docking, exocytosis, retention, recycling, or translation-coupled capture.</td>
+<td>A paper that only constrains one phase is promoted to a generic statement that the whole delivery route is known.</td>
+</tr>
+<tr>
+<td><strong>Trigger / time window</strong></td>
+<td>Name the regime that drives the route, such as seconds-to-minutes LTP induction, post-learning hours, multiday consolidation, development, or degeneration / ageing.</td>
+<td>Learning-phase transport gates, acute plasticity delivery, and long-term memory consolidation are silently fused into one transport timeline.</td>
+</tr>
+<tr>
+<td><strong>Direct observable / assay</strong></td>
+<td>State whether the paper directly tracked cargo motion, measured microtubule state, quantified synaptosome-localized RNAs, imaged cargo reservoirs, or inferred transport only indirectly from endpoint receptor levels or behavior.</td>
+<td><code>transport changed</code> replaces the actual measurement, and endpoint memory phenotypes are overread as if they had directly revealed the delivery process.</td>
+</tr>
+<tr>
+<td><strong>Driver / perturbation route</strong></td>
+<td>Write whether the paper uses motor-protein depletion, microtubule stabilization or destabilization, actin perturbation, localization-element mutation, RNA-binding-protein mutation, or no causal perturbation at all.</td>
+<td>The site silently shifts from correlational localization language to controller-identification language without a disclosed intervention route.</td>
+</tr>
+<tr>
+<td><strong>Human observability / transfer ceiling</strong></td>
+<td>For human-facing claims, disclose whether the strongest evidence is only a cultured human-neuron preparation, an ex vivo route, or no human route at all, and which living-human in vivo observables remain unavailable.</td>
+<td>A narrow human preparation is promoted to living-human whole-brain cargo-state ground truth without an observability audit.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Fix what remains latent, especially arbitrary cargo identity across the whole neuron, same-subject living-human branch / bouton delivery, motor engagement at unmeasured compartments, and whether transport actually reached the functionally decisive synapse.</td>
+<td>The site accidentally treats <code>transport evidence exists</code> as equivalent to cargo-complete or maintenance-complete state capture.</td>
+</tr>
+</tbody>
+</table>
+
+<strong>Why this route card is necessary here</strong>
+<p>
+The need is multi-axis. On the postsynaptic side, <a href="https://doi.org/10.1016/j.neuron.2006.09.040" target="_blank">Park et al. (2006)</a> and <a href="https://doi.org/10.1038/nn2063" target="_blank">Correia et al. (2008)</a> are about AMPAR / recycling-endosome delivery during LTP, not presynaptic cargo patterning. On the transport-path side, <a href="https://doi.org/10.1038/ncomms5389" target="_blank">Uchida et al. (2014)</a> shows that learning-phase microtubule stability changes memory through KIF5-dependent GluA2 localization, while <a href="https://doi.org/10.7554/eLife.80622" target="_blank">Wong et al. (2024)</a> shows local confinement of endogenous GluA1 vesicles near active synapses rather than proving that direct spine exocytosis is the universal rule. On the RNA side, <a href="https://doi.org/10.1016/j.celrep.2021.109369" target="_blank">Swarnkar et al. (2021)</a> and <a href="https://doi.org/10.1038/s41467-025-57651-7" target="_blank">de Queiroz et al. (2025)</a> show that local translation support depends on where RNA cargoes are localized, not only on transcript abundance in the soma. On the presynaptic side, <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">Aiken &amp; Holzbaur (2024)</a> is about bouton-oriented cargo delivery shaped by axonal microtubule dynamics in a human-neuron preparation, not a living-human whole-brain route. Therefore, this site does not let these rows inherit one another's claim ceiling, and it does not let any of them stand in for human whole-brain cargo-state identification without a route-card audit.
 </p>
 
 <h3>14. Astrocytes are state variables for memory retrieval, stabilization, and expression</h3>
@@ -570,9 +829,71 @@ Current human in vivo routes still do not directly reveal branch- or bouton-spec
 Reading maintenance-state too neuron-centrically makes it easy to misread energy supply and local transmitter integration as “background noise.” <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a> showed that astrocyte-neuron lactate transport is required for long-term memory formation. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> showed that local neurotransmitter inputs are encoded into broad cortical astrocyte network states over minutes. Furthermore, <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a> showed that a learning-associated astrocyte ensemble forms near engram neurons in hippocampus, that ensemble reactivation promotes recall, and astrocyte-specific NFIA deletion suppresses recall. <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a> showed that an emotional-memory-associated astrocytic ensemble contributes to multiday stabilization across repeated recall while integrating noradrenergic input and local engram signal, and <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> showed that basolateral-amygdala astrocytes reorganize during fear retrieval / extinction and that astrocyte Ca<sup>2+</sup> signaling supports amygdala-prefrontal representations. Therefore, it is dangerous to treat <strong>glial / metabolic support as an afterthought correction</strong>; the <strong>astrocyte ensemble itself remains a state variable in long-term memory</strong>. At the same time, the strongest causal evidence still centers on rodent hippocampus and amygdala, so these results should not be rephrased as direct readout of arbitrary human content or whole-brain maintenance-state.
 </p>
 
+<strong>How this site reads current human astrocyte evidence</strong>
+<p>
+Current human evidence is narrower than the rodent causal literature. <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> characterized <strong><sup>18</sup>F-SMBT-1 PET</strong> as an MAO-B-selective <strong>reactive-astrogliosis proxy</strong> with pharmacological blockade. That is stronger than saying no human astrocyte-related route exists, but it is still much weaker than a direct readout of learning-associated astrocyte ensembles, recall-state astrocytes, or arbitrary memory content. Therefore, on this site, current human astrocyte PET is read as a <strong>human astrocyte-related proxy route</strong>, not as human whole-brain astrocyte-state ground truth.
+</p>
+
 <strong>How to read the strength of evidence</strong>
 <p>
 <a href="https://doi.org/10.1038/s41586-023-07011-6" target="_blank">Sun et al. (2024)</a> suggested peri-engram neuron-astrocyte interaction and nominated <em>Igfbp2</em> as a long-term-memory candidate, but <a href="https://doi.org/10.1038/s41586-025-08988-y" target="_blank">Mukamel &amp; Yu (2025)</a> argued that some DEG claims are sensitive to animal-level dependence correction, and <a href="https://doi.org/10.1038/s41586-025-08989-x" target="_blank">Sun et al. (2025)</a> replied that the target of inference differs. Therefore, on this site, transcriptomic neuron-astrocyte evidence is treated as <strong>clue / hypothesis-generating evidence</strong>, while the causal weight of glia is read mainly from intervention studies such as <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a>.
+</p>
+
+<strong>2026-03-21 addendum: astrocyte evidence now needs a route card</strong>
+<p>
+The remaining weakness on this page was that <strong>astrocyte evidence</strong> could still collapse several different inferential objects into one bucket. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a> is about <strong>astrocyte-neuron lactate-shuttle support for long-term memory formation</strong>. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> is about <strong>minute-scale cortical astrocyte-network encoding of local neurotransmitter input</strong>. <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a> is about <strong>learning-associated hippocampal astrocyte ensembles and recall</strong>. <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a> is about <strong>multiday astrocytic stabilization of emotional memory</strong>. <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> is about <strong>amygdala astrocyte Ca<sup>2+</sup> signaling and fear-memory representations</strong>. <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> is a <strong>human MAO-B / reactive-astrogliosis PET proxy</strong>. Therefore, on this site, astrocyte claims now require a <strong>route card</strong> before they are promoted beyond a narrow, explicitly named ceiling.
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be fixed explicitly</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the paper is about <strong>lactate-shuttle support</strong>, <strong>minute-scale astrocyte-network encoding</strong>, <strong>learning-associated recall ensemble</strong>, <strong>multiday stabilization ensemble</strong>, <strong>fear-state representation</strong>, or <strong>human astrocyte-related PET proxy</strong>.</td>
+<td>Different inferential objects collapse into one phrase such as <code>astrocyte evidence shows memory state is measured</code>.</td>
+</tr>
+<tr>
+<td><strong>Biological regime</strong></td>
+<td>Name species, brain region, task regime, healthy versus pathology context, and whether the relevant timescale is minutes, same-day recall, or multiday stabilization.</td>
+<td>Cortical transmitter encoding, hippocampal recall, amygdala fear representation, and human PET all get silently promoted into one generic astrocyte claim.</td>
+</tr>
+<tr>
+<td><strong>Direct astrocyte observable</strong></td>
+<td>Write whether the direct observable is lactate-transport dependence, astrocyte Ca<sup>2+</sup> dynamics, network-state readout, ensemble labeling, PET tracer binding, or another explicitly measured astrocyte-related object.</td>
+<td><code>astrocyte state changed</code> replaces the actual measurement, and a tracer proxy is overread as if it had directly measured ensemble identity or memory-specific astrocyte configuration.</td>
+</tr>
+<tr>
+<td><strong>Driver / perturbation route</strong></td>
+<td>State whether the paper uses transporter blockade, local transmitter manipulation, ensemble reactivation, gene deletion, astrocyte Ca<sup>2+</sup> intervention, pharmacological blocking for PET selectivity, or no causal manipulation at all.</td>
+<td>The site silently shifts from correlational astrocyte language to controller-identification language without a disclosed perturbation route.</td>
+</tr>
+<tr>
+<td><strong>Functional target</strong></td>
+<td>Name the dependent variable the claim is actually about, such as long-term memory formation, recall, multiday stabilization, fear-memory representation, or reactive-astrogliosis burden.</td>
+<td>The site silently jumps from one target to another, for example from recall support or PET tracer binding to general maintenance completeness.</td>
+</tr>
+<tr>
+<td><strong>Human proxy class / tracer burden</strong></td>
+<td>For human evidence, disclose whether the route is MAO-B / reactive-astrogliosis PET, only a macro energetic / support proxy, or no human astrocyte-related route at all, together with tracer specificity and context ceiling.</td>
+<td>A human astrocyte paper is treated as if it had directly measured learning-associated ensembles, whole-brain astrocyte network state, or memory content without a proxy audit.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Fix in one line what remains latent, especially arbitrary memory content, whole-brain human astrocyte-ensemble identity, cell-specific neuron-astrocyte controller assignment, and same-subject human maintenance-state completeness.</td>
+<td>Rodent causal evidence or human tracer evidence is promoted to human whole-brain memory-readout or state-complete maintenance language.</td>
+</tr>
+</tbody>
+</table>
+
+<strong>Why this route card is necessary here</strong>
+<p>
+The need is multi-axis. On the metabolic-support side, <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a> shows that astrocyte-neuron lactate transport is required for long-term memory formation, but it is not a direct readout of learning-associated astrocyte ensembles. On the network-state side, <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> shows minute-scale cortical astrocyte-network encoding, which is not the same inferential object as recall or multiday stabilization. On the memory-ensemble side, <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a> and <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a> move from ensemble identity to recall and multiday stabilization, while <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> is about fear-memory representations in a specific amygdala circuit. On the human side, <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> measures an MAO-B-linked reactive-astrogliosis PET signal, which is stronger than saying that nothing human is visible but still not a recall-ensemble or arbitrary-content route. Therefore, this site does not let these rows inherit one another's claim ceiling, and it does not let any of them stand in for human whole-brain astrocyte-state identification without a route-card audit.
 </p>
 
 <h3>15. clearance / immune support is not passive cleanup</h3>
@@ -644,12 +965,74 @@ The need is multi-axis. On the anatomy side, <a href="https://doi.org/10.1038/na
 
 <h3>16. Local proteostasis / synaptic tagging under molecular turnover is another state layer</h3>
 <p>
-The weak point that became clearer in this pass was that the site separated <strong>current synaptic state</strong> from <strong>transcriptional / chromatin state</strong>, while still leaving <strong>the branch-local route that decides which potentiated synapse captures plasticity-related proteins and survives turnover</strong> too implicit. That is too coarse. <a href="https://doi.org/10.1038/385533a0" target="_blank">Frey &amp; Morris (1997)</a> proposed synaptic tagging as the condition that allows late LTP to capture plasticity-related proteins, <a href="https://doi.org/10.1038/ncomms2250" target="_blank">Shires et al. (2012)</a> demonstrated synaptic tagging and capture in the living rat, and <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">Govindarajan et al. (2011)</a> showed that the dendritic branch is a preferred integrative unit for protein-synthesis-dependent LTP. Furthermore, <a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">Fonseca et al. (2006)</a> showed that maintenance of late LTP depends on a balance between protein synthesis and proteasome-dependent degradation, <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">Pandey et al. (2021)</a> linked local autophagy-coupled translation to long-term memory formation, <a href="https://doi.org/10.1038/s42003-025-08459-0" target="_blank">Thomas et al. (2025)</a> showed that actin / spine geometry can persist on the timescale of the synaptic tag, and <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Lee et al. (2022)</a> showed that synaptic memory can survive molecular turnover by active state transfer. Therefore, even if <strong>the connectome, a weight estimate, and a one-shot transcriptomic measurement</strong> are given, <strong>which synapses remain capture-ready and which late changes persist under turnover</strong> can still remain latent.
+The weak point that became clearer in this pass was that the site separated <strong>current synaptic state</strong> from <strong>transcriptional / chromatin state</strong>, while still leaving <strong>the branch-local route that decides which potentiated synapse captures plasticity-related proteins and survives turnover</strong> too implicit. That is too coarse. <a href="https://doi.org/10.1038/385533a0" target="_blank">Frey &amp; Morris (1997)</a> proposed synaptic tagging as the condition that allows late LTP to capture plasticity-related proteins, <a href="https://doi.org/10.1038/ncomms2250" target="_blank">Shires et al. (2012)</a> demonstrated synaptic tagging and capture in the living rat, and <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">Govindarajan et al. (2011)</a> showed that the dendritic branch is a preferred integrative unit for protein-synthesis-dependent LTP. Furthermore, <a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">Fonseca et al. (2006)</a> showed that maintenance of late LTP depends on a balance between protein synthesis and proteasome-dependent degradation, <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">Pandey et al. (2021)</a> linked local autophagy-coupled translation to long-term memory formation, <a href="https://doi.org/10.1073/pnas.2315958121" target="_blank">Chang et al. (2024)</a> showed that secretory autophagy is a distinct route for activity-induced synaptic remodeling, <a href="https://doi.org/10.1038/s42003-025-08459-0" target="_blank">Thomas et al. (2025)</a> showed that actin / spine geometry can persist on the timescale of the synaptic tag, <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Lee et al. (2022)</a> showed that synaptic memory can survive molecular turnover by active state transfer, and <a href="https://doi.org/10.1111/acel.14492" target="_blank">Parker et al. (2025)</a> showed that proteasome augmentation can mitigate age-related spatial learning and memory decline in mice. Therefore, even if <strong>the connectome, a weight estimate, and a one-shot transcriptomic measurement</strong> are given, <strong>which synapses remain capture-ready, which local proteostasis route is operative, and which late changes persist under turnover</strong> can still remain latent.
 </p>
 
 <strong>What is still missing in humans</strong>
 <p>
 The current human routes on this site, such as SV2A PET, MRSI, 31P-MRS / sodium MRI / dynamic DMI, myelin maps, TMS-EEG, and CSF proxies, do not directly tell us which spine or dendritic branch carried the tag, captured the plasticity-related proteins, or ran the relevant translation/degradation/autophagy program. This is an inference from the measurement classes summarized below. Therefore, on this site, local proteostasis / synaptic tagging remains a <strong>local hidden state</strong> in humans unless it is externally calibrated or causally perturbed.
+</p>
+
+<strong>2026-03-21 addendum: local proteostasis / synaptic-tagging evidence now needs a route card</strong>
+<p>
+The remaining weakness on this page was that it still let several different inferential objects collapse into one label such as <strong>proteostasis evidence</strong>. The primary literature does not support that shortcut. <a href="https://doi.org/10.1038/385533a0" target="_blank">Frey &amp; Morris (1997)</a> and <a href="https://doi.org/10.1038/ncomms2250" target="_blank">Shires et al. (2012)</a> are about <strong>tag / capture eligibility</strong>. <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">Govindarajan et al. (2011)</a> is about <strong>dendritic branch-level integration of protein-synthesis-dependent LTP</strong>. <a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">Fonseca et al. (2006)</a> and <a href="https://doi.org/10.1111/acel.14492" target="_blank">Parker et al. (2025)</a> are about <strong>synthesis-degradation or proteasome-capacity balance with memory consequences</strong>. <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">Pandey et al. (2021)</a> and <a href="https://doi.org/10.1073/pnas.2315958121" target="_blank">Chang et al. (2024)</a> are about <strong>autophagy-linked plasticity routes</strong>. <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Lee et al. (2022)</a> and <a href="https://doi.org/10.1038/s42003-025-08459-0" target="_blank">Thomas et al. (2025)</a> are about <strong>turnover-resistant persistence or a candidate tag substrate</strong>. Therefore, this site now requires a <strong>local proteostasis / synaptic-tagging route card</strong> before a claim is promoted beyond a tag-setting clue, a branch-level integration result, an autophagy / proteasome perturbation, or a turnover-resistance mechanism.
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be fixed explicitly</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the paper supports <strong>tag / capture eligibility</strong>, <strong>branch-level integration</strong>, <strong>synthesis-degradation balance</strong>, <strong>autophagy-linked remodeling</strong>, <strong>turnover-resistant persistence</strong>, or a <strong>proteasome-capacity intervention</strong>.</td>
+<td>Different inferential objects collapse into one phrase such as <code>proteostasis evidence supports memory stability</code>.</td>
+</tr>
+<tr>
+<td><strong>Biological regime / integrative unit</strong></td>
+<td>Name species, brain region, synapse or branch class, behavioral phase, and whether the relevant unit is the synapse, dendritic branch, neuron, or whole preparation.</td>
+<td>A branch-local mechanism or aging-intervention result is silently promoted to a generic whole-brain late-stabilization controller.</td>
+</tr>
+<tr>
+<td><strong>Direct observable / assay</strong></td>
+<td>Write the actual readout explicitly: tag/capture protocol, branch-restricted LTP, proteasome activity / assembly, autophagosome-autolysosome route, secretory-autophagy marker, stable actin fraction, spine geometry persistence, or another named observable.</td>
+<td><code>proteostasis changed</code> replaces the actual measured object, and assay-specific ceilings disappear.</td>
+</tr>
+<tr>
+<td><strong>Turnover / time window</strong></td>
+<td>State whether the claim is about minutes-to-hours late LTP, reconsolidation after retrieval, multiday persistence, ageing-related decline, or another explicitly named turnover window.</td>
+<td>An acute stabilization effect is overread as a durable turnover-resistant controller, or a chronic intervention is overread as an acute tag readout.</td>
+</tr>
+<tr>
+<td><strong>Controller / perturbation route</strong></td>
+<td>Name what was actually manipulated or assumed, such as protein synthesis blockade, proteasome modulation, autophagy pathway component, secretory-autophagy release factor, or active-state-transfer mechanism.</td>
+<td>The site ceases to distinguish direct mechanism, pathway perturbation, and inferred persistence under turnover.</td>
+</tr>
+<tr>
+<td><strong>Functional target</strong></td>
+<td>Name the dependent variable the claim is about, such as late LTP maintenance, spine remodeling, reconsolidation, contextual fear memory, spatial learning, or age-related cognitive decline.</td>
+<td>A result that constrains one target is promoted to a generic statement that <code>proteostasis solved long-term memory maintenance</code>.</td>
+</tr>
+<tr>
+<td><strong>Human observability / external calibration</strong></td>
+<td>State whether any human route is direct or whether current evidence remains an externally calibrated or proxy-only ceiling.</td>
+<td>Regional human proxies or animal causal evidence are silently promoted to branch-local human proteostasis readout.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Fix in one line what remains latent, especially tagged branch identity, PRP capture map, local ribosome / proteasome / autophagy state, same-subject whole-brain continuity, and responsible controller beyond the assayed pathway.</td>
+<td>The site accidentally treats <code>proteostasis evidence exists</code> as equivalent to late-stabilization-complete or maintenance-complete state capture.</td>
+</tr>
+</tbody>
+</table>
+
+<strong>Why this route card is necessary here</strong>
+<p>
+The need is multi-axis. On the local-integration side, <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">Govindarajan et al. (2011)</a> shows that the relevant unit can be the <strong>dendritic branch</strong> rather than the whole neuron. On the pathway side, <a href="https://doi.org/10.1073/pnas.2315958121" target="_blank">Chang et al. (2024)</a> shows that activity-induced remodeling is not exhausted by degradative autophagy because <strong>secretory autophagy</strong> can be selectively required. On the intervention side, <a href="https://doi.org/10.1111/acel.14492" target="_blank">Parker et al. (2025)</a> shows that changing <strong>proteasome capacity</strong> can alter learning and memory in aged mice, which is stronger than a correlational proteostasis sentence but still not a direct tag readout. On the human-observability side, current routes on this site still do not resolve tagged branches, PRP capture, local ribosome / proteasome / autophagy state, or same-subject whole-brain late-stabilization controllers. Therefore, this site does not let <strong>proteostasis evidence exists</strong> stand in for <strong>late-stabilization completeness</strong>.
 </p>
 
 <h3>17. Relative excitability influences future memory allocation</h3>
@@ -696,10 +1079,16 @@ The reason this section needed a second pass is that “human evidence is starti
 <td>Macro energetic proxy, not direct readout of local mitochondrial state.</td>
 </tr>
 <tr>
-<td><strong>human ionic proxy</strong><br>Qian et al.</td>
-<td>mm-class tissue sodium mapping in vivo by 7T sodium MRI.</td>
-<td>Cell-specific chloride concentration, KCC2 / NKCC1 balance, extracellular K<sup>+</sup> / Ca<sup>2+</sup> / pH microdomains, and local inhibitory reversal potential.</td>
+<td><strong>human sodium MRI / ionic proxy</strong><br>Qian et al.</td>
+<td>mm-class tissue sodium mapping in vivo plus newer mono- / bi-T<sub>2</sub> sodium separation under specialized sodium MRI acquisition.</td>
+<td>Cell-specific chloride concentration, KCC2 / NKCC1 balance, extracellular K<sup>+</sup> / Ca<sup>2+</sup> / pH microdomains, local inhibitory reversal potential, and routine identification of intra- versus extracellular sodium partition.</td>
 <td>Macro ionic proxy, not direct readout of current chloride homeostasis.</td>
+</tr>
+<tr>
+<td><strong>human CSF ionic assay</strong><br>Forsberg et al.</td>
+<td>Healthy-human CSF potassium, calcium, and magnesium measurements across wakefulness, sleep, and sleep deprivation.</td>
+<td>Which local microdomain, which cell class, which chloride transporter, and which synapse-level inhibitory controller produced the bulk change.</td>
+<td>CSF-level ionic / circadian proxy, not local chloride or E<sub>GABA</sub> ground truth.</td>
 </tr>
 <tr>
 <td><strong>human brain thermometry</strong><br>Rzechorzek et al.</td>
@@ -726,6 +1115,12 @@ The reason this section needed a second pass is that “human evidence is starti
 <td>State-conditioned causal proxy, not direct measurement of the excitability mechanism itself.</td>
 </tr>
 <tr>
+<td><strong>human astrocyte PET / reactive-astrogliosis proxy</strong><br>Villemagne et al.</td>
+<td>A tracer-defined regional MAO-B-related astrocyte signal with pharmacological blocking, giving a bounded living-human astrocyte-related proxy route.</td>
+<td>Learning-associated astrocyte ensembles, minute-scale transmitter integration, recall-state astrocytes, and arbitrary memory-content readout.</td>
+<td>Human astrocyte-related proxy / reactive-astrogliosis route, not direct astrocyte-ensemble or memory-state ground truth.</td>
+</tr>
+<tr>
 <td><strong>human CSF / glymphatic proxy</strong><br>Hirschler et al., Dagum et al.</td>
 <td>Macro support-state proxy using region-specific CSF mobility and device/model-based protein-biomarker transport. </td>
 <td>Which synapse, which astrocyte, which microglia, and which meningeal lymphatic controller are responsible for the difference? </td>
@@ -734,13 +1129,70 @@ The reason this section needed a second pass is that “human evidence is starti
 </tbody>
 </table>
 <p>
-This distinction matters operationally. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> push the <strong>fixed-tissue structural scaffold</strong>. <a href="https://doi.org/10.1126/scitranslmed.aaf6667" target="_blank">Finnema et al. (2016)</a>, <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a>, and <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> push a <strong>regional synaptic-density proxy</strong>. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> and <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> push parcel-level biochemical organization. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a> push a <strong>macro thermal proxy</strong>. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> push energetic proxies. <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a> pushes a <strong>macro ionic proxy</strong>. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> pushes a macro-myelin proxy. <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>, <a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a>, and <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> push perturbation-conditioned plasticity proxies. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> push macro support-state proxies. <strong>These are not interchangeable evidence classes.</strong>
+This distinction matters operationally. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> push the <strong>fixed-tissue structural scaffold</strong>. <a href="https://doi.org/10.1126/scitranslmed.aaf6667" target="_blank">Finnema et al. (2016)</a>, <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a>, and <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> push a <strong>regional synaptic-density proxy</strong>. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> and <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> push parcel-level biochemical organization. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a> push a <strong>macro thermal proxy</strong>. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> push energetic proxies. <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a>, <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">Qian et al. (2025)</a>, and <a href="https://doi.org/10.1111/jsr.13522" target="_blank">Forsberg et al. (2022)</a> push <strong>macro ionic proxies</strong>. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> pushes a macro-myelin proxy. <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>, <a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a>, and <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> push perturbation-conditioned plasticity proxies. <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> push a <strong>human astrocyte-related PET proxy</strong>. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> push macro support-state proxies. <strong>These are not interchangeable evidence classes.</strong>
 </p>
 
 <strong>Practical interpretation in this addendum</strong>
 <p>
-Therefore, on this site, <strong>human metabolic connectome</strong> is written as a <strong>macro-biochemical scaffold</strong>, <strong>MRS thermometry</strong> as a <strong>macro thermal proxy</strong>, <strong>31P-MRS / dynamic DMI</strong> as a <strong>macro energetic proxy</strong>, <strong>human sodium MRI</strong> as a <strong>macro ionic proxy</strong>, <strong>human myelin bilayer mapping</strong> as a <strong>macro-myelin proxy</strong>, <strong>TMS-EEG / sleep plasticity routes</strong> as <strong>perturbation-conditioned proxies</strong>, and <strong>CSF mobility / glymphatic evidence</strong> as a <strong>macro support-state proxy</strong>. Human ECM evidence such as <a href="https://doi.org/10.3390/ijms23158197" target="_blank">Boonen et al. (2022)</a> remains mostly <strong>ex vivo pathology</strong>, and current transcriptional / chromatin state, current post-transcriptional RNA-state, current phospho-signaling / second-messenger state, plus branch-local proteostasis still lack a comparable in vivo whole-brain human route. It is therefore valid to use animal causal evidence to support the existence of these layers, but not to silently upgrade present human proxies into <strong>cell-specific recovery controller</strong>, <strong>local thermal-state</strong>, <strong>current chloride homeostasis</strong>, <strong>local immune controller</strong>, <strong>local mitochondrial state</strong>, <strong>current RNA-state controller</strong>, <strong>current phospho-controller</strong>, or <strong>current ECM plasticity gate</strong> ground truth.
+Therefore, on this site, <strong>human synaptic-density PET</strong> is written as a <strong>tracer-defined regional synaptic-density proxy</strong>, <strong>human metabolic connectome</strong> as a <strong>macro-biochemical scaffold</strong>, <strong>MRS thermometry</strong> as a <strong>macro thermal proxy</strong>, <strong>31P-MRS / dynamic DMI</strong> as a <strong>macro energetic proxy</strong>, <strong>human sodium MRI and CSF ion assays</strong> as <strong>macro ionic proxies</strong>, <strong>human myelin bilayer mapping</strong> as a <strong>macro-myelin proxy</strong>, <strong>TMS-EEG / sleep plasticity routes</strong> as <strong>perturbation-conditioned proxies</strong>, <strong>human astrocyte PET</strong> as a <strong>tracer-defined astrocyte-related proxy</strong>, and <strong>CSF mobility / glymphatic evidence</strong> as a <strong>macro support-state proxy</strong>. Human ECM evidence such as <a href="https://doi.org/10.3390/ijms23158197" target="_blank">Boonen et al. (2022)</a> remains mostly <strong>ex vivo pathology</strong>, and current transcriptional / chromatin state, current post-transcriptional RNA-state, current phospho-signaling / second-messenger state, plus branch-local proteostasis still lack a comparable in vivo whole-brain human route. It is therefore valid to use animal causal evidence to support the existence of these layers, but not to silently upgrade present human proxies into <strong>cell-specific recovery controller</strong>, <strong>astrocyte-ensemble identity</strong>, <strong>local thermal-state</strong>, <strong>current synaptic efficacy</strong>, <strong>current chloride homeostasis</strong>, <strong>local immune controller</strong>, <strong>local mitochondrial state</strong>, <strong>current RNA-state controller</strong>, <strong>current phospho-controller</strong>, or <strong>current ECM plasticity gate</strong> ground truth.
 </p>
+
+<strong>2026-03-21 addendum: human proxy rows also need a calibrator-role matrix</strong>
+<p>
+The remaining weakness after adding route cards was subtler. This page already separated <strong>proxy class</strong> and, elsewhere on the site, <strong>operational maturity</strong>. But a third axis still remained undernamed: <strong>calibrator role</strong>. The primary literature does not show that every living-human proxy calibrates the same hidden-state family. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> is a regional synaptic-density atlas route; <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> is a parcel-level biochemical similarity route; <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> is a kinetic energetic-rate route in a very small, high-burden cohort; <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> and <a href="https://doi.org/10.1038/s41467-025-58604-w" target="_blank">Genc et al. (2025)</a> constrain macro myelin / oligodendrocyte-linked burden; <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> constrains a reactive-astrogliosis route; and <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> plus <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> constrain macro support-state / clearance routes. Therefore, on this site, each human row must now say not only what class it belongs to and how mature it is, but also <strong>which latent maintenance-state family it safely calibrates</strong>.
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Human route</th>
+<th>Safe calibrator role on this site</th>
+<th>What it still does not calibrate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SV2A PET</strong><br>Finnema et al., Naganawa et al., Johansen et al.</td>
+<td>Regional synaptic-density proxy with explicit tracer / quantification route.</td>
+<td>Momentary synaptic efficacy, tagged-synapse eligibility, branch-local plasticity capture, or arbitrary memory content.</td>
+</tr>
+<tr>
+<td><strong><sup>1</sup>H-MRSI metabolic connectome</strong><br>Lucchetti et al.</td>
+<td>Parcel-level biochemical similarity scaffold constrained by a named metabolite set and correction model.</td>
+<td>Structural wiring, local ATP flux, cell-specific glial state, or current synaptic controller identity.</td>
+</tr>
+<tr>
+<td><strong>Dynamic DMI / <sup>31</sup>P-MRS</strong><br>Li et al., Ren et al.</td>
+<td>Macro energetic burden or kinetic rate route under a named model and acquisition burden.</td>
+<td>Branch-local mitochondrial positioning, local ATP sufficiency at a tagged synapse, or cell-specific recovery controller identity.</td>
+</tr>
+<tr>
+<td><strong>Myelin MRI / oligodendrocyte-linked microstructure MRI</strong><br>Baadsvik et al., Genc et al.</td>
+<td>Macro myelin / oligodendrocyte-linked burden and developmental microstructure route.</td>
+<td>Per-axon conduction timing, nodal microgeometry, or plasticity-complete restoration of a specific circuit.</td>
+</tr>
+<tr>
+<td><strong>Sodium MRI / MRS thermometry</strong><br>Qian et al., Rzechorzek et al.</td>
+<td>Macro ionic or thermal proxy for bounded whole-brain state burden.</td>
+<td>Local chloride set point, inhibitory sign at a given synapse, or submillimeter thermal microstate.</td>
+</tr>
+<tr>
+<td><strong>TMS-EEG / sleep-plasticity proxy</strong><br>Huber et al., Kuhn et al., Zrenner et al., Fehér et al.</td>
+<td>Perturbation-conditioned excitability / plasticity response route.</td>
+<td>Direct measurement of the underlying cellular controller, synapse-specific allocation state, or stable long-horizon maintenance identity.</td>
+</tr>
+<tr>
+<td><strong>Astrocyte PET (<sup>18</sup>F-SMBT-1)</strong><br>Villemagne et al.</td>
+<td>Reactive-astrogliosis-related astrocyte proxy with a tracer-defined MAO-B route.</td>
+<td>Learning-associated astrocyte ensemble identity, recall-state astrocytes, or arbitrary-content memory readout.</td>
+</tr>
+<tr>
+<td><strong>CSF mobility / glymphatic routes</strong><br>Hirschler et al., Dagum et al.</td>
+<td>Macro support-state / clearance route for CSF mobility or modeled brain-to-plasma efflux.</td>
+<td>Cell-specific immune controller identity, synapse-specific clearance support, or local astrocyte / microglia mechanism assignment.</td>
+</tr>
+</tbody>
+</table>
 
 <strong>2026-03-19 addendum: the human metabolic connectome needs its own route card</strong>
 <p>
@@ -751,6 +1203,68 @@ The measurement model also remains part of the object. <a href="https://doi.org/
 </p>
 <p>
 A final correction is that static <sup>1</sup>H-MRSI similarity is not the same object as rate imaging. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> used <strong>dynamic deuterium MRSI plus a kinetic model</strong> to map glucose transport and metabolic rates such as CMR<sub>Glc</sub>, CMR<sub>Lac</sub>, and V<sub>TCA</sub>. This site therefore does not let the phrase <strong>human metabolic connectome</strong> silently inherit claims about current glucose-flux, ATP-turnover, or energetic-rate imaging.
+</p>
+
+<strong>2026-03-21 addendum: SV2A / synaptic-density PET now needs a route card</strong>
+<p>
+The remaining weakness on this page was that <strong>human synaptic-density PET</strong> could still collapse several different inferential objects into one bucket. The primary literature does not support that shortcut. <a href="https://doi.org/10.1126/scitranslmed.aaf6667" target="_blank">Finnema et al. (2016)</a> established a living-human SV2A PET route and showed sensitivity to synaptic loss in temporal-lobe epilepsy. <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> showed that quantification depends on the tracer, arterial-versus-reference route, compartment model, and named scan window. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> is a <strong>healthy-human atlas route</strong> calibrated against autoradiography. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> is a <strong>healthy-human task / cognition association route</strong> linking [<sup>11</sup>C]UCB-J DVRcs to task-related activity and cognition. <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> showed that brief visual activation does not measurably change [<sup>11</sup>C]UCB-J binding even when tracer influx rises with blood flow, so the route is not a momentary synaptic-efficacy meter. <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a> found no measurable overall SV2A change 24 h after ketamine despite symptom improvement, showing that intervention response and synaptic-density readout are not the same question. Therefore, this site now requires a <strong>SV2A / synaptic-density PET route card</strong> before a claim is promoted beyond a regional, explicitly named ceiling.
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be fixed explicitly</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the paper is about <strong>tracer / validation</strong>, <strong>healthy atlas construction</strong>, <strong>disease or risk-group contrast</strong>, <strong>task / cognition association</strong>, or <strong>longitudinal intervention / target-engagement</strong>.</td>
+<td>Atlas papers, case-control contrasts, healthy correlation studies, and drug-response designs collapse into one phrase such as <code>synaptic-density PET shows current synaptic state</code>.</td>
+</tr>
+<tr>
+<td><strong>Tracer and target route</strong></td>
+<td>Name the ligand, target, selectivity / blocking context, and whether the route uses [<sup>11</sup>C]UCB-J, <sup>18</sup>F-SynVesT-1, or another explicitly identified SV2A tracer.</td>
+<td>A result obtained with one tracer or validation context is silently promoted to all SV2A PET implementations.</td>
+</tr>
+<tr>
+<td><strong>Quantification route</strong></td>
+<td>Disclose arterial versus reference-tissue route, kinetic model or validated simplified window, and the reported quantity such as V<sub>T</sub>, DVR, or BP<sub>ND</sub>.</td>
+<td>The site treats the modality label alone as sufficient and hides how much the conclusion depends on model choice and scan window.</td>
+</tr>
+<tr>
+<td><strong>Spatial unit / anatomy handling</strong></td>
+<td>Write whether the object is voxelwise, parcelwise, or ROI-based, together with anatomy registration, atrophy handling, and partial-volume correction or abstention.</td>
+<td>Regional density estimates are overread as if anatomy, tissue mixing, and resolution burden were negligible.</td>
+</tr>
+<tr>
+<td><strong>Comparison design / cohort relation</strong></td>
+<td>State whether the result is a healthy normative atlas, a cross-sectional disease comparison, a risk-group contrast, a same-subject longitudinal intervention, or a drug-occupancy / displacement design, and name the cohort or sample relation explicitly.</td>
+<td>A healthy atlas is silently promoted to disease mechanism evidence, or a same-subject drug study is silently promoted to a normative state map.</td>
+</tr>
+<tr>
+<td><strong>Functional target</strong></td>
+<td>Name the dependent claim precisely: regional synaptic-density gradient, pathology burden, risk enrichment, task-related association, or target engagement under an administered intervention.</td>
+<td>A paper that supports one inferential target is promoted to a generic statement that current synaptic function or plasticity was measured.</td>
+</tr>
+<tr>
+<td><strong>Human observability ceiling</strong></td>
+<td>Fix the ceiling in one line: <strong>regional presynaptic vesicle-density proxy</strong>, not current release probability, postsynaptic receptor occupancy, branch-local plasticity state, or arbitrary memory-content readout.</td>
+<td>Regional SV2A density is silently rephrased as current synaptic efficacy or rapid plasticity ground truth.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Write which variables remain latent, especially task-time synaptic efficacy, E/I balance, synaptic-tag capture, branch-specific stabilization, and the responsible cell-specific controller.</td>
+<td>The site accidentally treats `human synaptic-density PET exists` as equivalent to synaptic-complete or maintenance-complete state capture.</td>
+</tr>
+</tbody>
+</table>
+
+<strong>Why this route card is necessary here</strong>
+<p>
+The need is multi-axis. On the measurement side, <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> makes the tracer and quantification route part of the object. On the cohort side, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> is a normative atlas, not one participant's current task-time state. On the association side, <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> relates regional SV2A signal to task-linked activity and cognition, which is not the same claim as detecting momentary synaptic change. On the dynamics side, <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> and <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a> show why brief activation or rapid symptom improvement must not be silently rephrased as measurable synaptic-density change. Therefore, this site does not let atlas, disease, cognition, and intervention routes inherit one another's claim ceiling without a route-card audit.
 </p>
 
 <h2>Common misreadings and demotion rules on this site</h2>
@@ -817,6 +1331,11 @@ A final correction is that static <sup>1</sup>H-MRSI similarity is not the same 
 <td><strong>Because a human metabolic connectome exists, we now have another connectome comparable to tractography or metabolic-rate maps</strong></td>
 <td><a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> built a five-metabolite gray-matter parcel-similarity graph and reported only weak overall alignment with tractography-based structural connectivity. Static <sup>1</sup>H-MRSI similarity is also not the same object as dynamic rate imaging.</td>
 <td>Treat it as a macro-biochemical similarity scaffold and require the metabolic-connectome route card before reading beyond that ceiling.</td>
+</tr>
+<tr>
+<td><strong>With human synaptic-density PET, the current synaptic efficacy or plasticity state was directly visible</strong></td>
+<td><a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> showed that SV2A PET depends on tracer and quantification route, while <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> and <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a> showed that brief activation or rapid symptom change need not produce measurable SV2A change.</td>
+<td>Require the SV2A route card and treat the result as a regional synaptic-density proxy, atlas, disease/risk contrast, association study, or intervention audit only.</td>
 </tr>
 <tr>
 <td><strong>With human myelin bilayer map and nap / TMS proxy, cell-specific maintenance controller could also be seen</strong></td>
@@ -992,12 +1511,20 @@ A final correction is that static <sup>1</sup>H-MRSI similarity is not the same 
 <li>Chelini, G., Pantazopoulos, H., Durning, P., et al. (2024). Focal clusters of peri-synaptic matrix contribute to activity-dependent plasticity and memory in mice. <em>Cell Reports</em>, 43(7), 114112. <a href="https://doi.org/10.1016/j.celrep.2024.114112" target="_blank">doi:10.1016/j.celrep.2024.114112</a></li>
 <li>Jabłońska, K., Kaczor, K., Kółeczko, M., et al. (2024). Extracellular matrix integrity regulates GABAergic plasticity in the hippocampus. <em>Matrix Biology</em>, 136, 74-96. <a href="https://doi.org/10.1016/j.matbio.2024.11.001" target="_blank">doi:10.1016/j.matbio.2024.11.001</a></li>
 <li>Boonen, M., Hellings, N., Hoedemaekers, T., et al. (2022). Reorganization of the brain extracellular matrix in hippocampal sclerosis. <em>International Journal of Molecular Sciences</em>, 23(15), 8197. <a href="https://doi.org/10.3390/ijms23158197" target="_blank">doi:10.3390/ijms23158197</a></li>
+<li>Nguyen, P. T., Dorman, L. C., Pan, S., et al. (2020). Microglial Remodeling of the Extracellular Matrix Promotes Synapse Plasticity. <em>Cell</em>, 182(2), 388-403.e15. <a href="https://doi.org/10.1016/j.cell.2020.05.050" target="_blank">doi:10.1016/j.cell.2020.05.050</a></li>
+<li>Lehner, A., Hoffmann, L., Rampp, S., et al. (2024). Age-dependent increase of perineuronal nets in the human hippocampus and precocious aging in epilepsy. <em>Epilepsia Open</em>, 9(4), 1372-1381. <a href="https://doi.org/10.1002/epi4.12963" target="_blank">doi:10.1002/epi4.12963</a></li>
+<li>Alexander, G. M., Nikolova, V. D., Stöber, T. M., Gruzdev, A., Moy, S. S., &amp; Dudek, S. M. (2025). Perineuronal Nets on CA2 Pyramidal Cells and Parvalbumin-Expressing Cells Differentially Regulate Hippocampal-Dependent Memory. <em>Journal of Neuroscience</em>, 45(6), e1626242024. <a href="https://doi.org/10.1523/JNEUROSCI.1626-24.2024" target="_blank">doi:10.1523/JNEUROSCI.1626-24.2024</a></li>
+<li>Banovac, I., Prkačin, M. V., Kirchbaum, I., et al. (2025). Morphological and Molecular Characteristics of Perineuronal Nets in the Human Prefrontal Cortex-A Possible Link to Microcircuitry Specialization. <em>Molecular Neurobiology</em>, 62(1), 1094-1111. <a href="https://doi.org/10.1007/s12035-024-04306-1" target="_blank">doi:10.1007/s12035-024-04306-1</a></li>
+<li>Mehak, S. F., Shivakumar, A. B., Jijimon, F., Gupta, A., Pillai, V. G., &amp; Gangadharan, G. (2025). Targeting CA2 Perineuronal Nets Restores Recognition Memory and Theta Oscillations in Aged Mice. <em>Aging Cell</em>, 24(9), e70139. <a href="https://doi.org/10.1111/acel.70139" target="_blank">doi:10.1111/acel.70139</a></li>
 <li>Glykys, J., Dzhala, V., Egawa, K., Balena, T., Saponjian, Y., Kuchibhotla, K. V., Bacskai, B. J., Kahle, K. T., Zeuthen, T., &amp; Staley, K. J. (2014). Local impermeant anions establish the neuronal chloride concentration. <em>Science</em>, 343(6171), 670-675. <a href="https://doi.org/10.1126/science.1245423" target="_blank">doi:10.1126/science.1245423</a></li>
 <li>Heubl, M., Zhang, J., Pressey, J. C., Al Awabdh, S., Renner, M., Gomez-Castro, F., Moutkine, I., Eugène, E., Russeau, M., Kahle, K. T., Poncer, J.-C., &amp; Lévi, S. (2017). GABAA receptor dependent synaptic inhibition rapidly tunes KCC2 activity via the Cl-sensitive WNK1 kinase. <em>Nature Communications</em>, 8, 1776. <a href="https://doi.org/10.1038/s41467-017-01749-0" target="_blank">doi:10.1038/s41467-017-01749-0</a></li>
 <li>Ding, F., O'Donnell, J., Xu, Q., Kang, N., Goldman, N., &amp; Nedergaard, M. (2016). Changes in the composition of brain interstitial ions control the sleep-wake cycle. <em>Science</em>, 352(6285), 550-555. <a href="https://doi.org/10.1126/science.aad4821" target="_blank">doi:10.1126/science.aad4821</a></li>
 <li>Huberfeld, G., Wittner, L., Clemenceau, S., Baulac, M., Kaila, K., Miles, R., &amp; Rivera, C. (2007). Perturbed chloride homeostasis and GABAergic signaling in human temporal lobe epilepsy. <em>Journal of Neuroscience</em>, 27(37), 9866-9873. <a href="https://doi.org/10.1523/JNEUROSCI.2761-07.2007" target="_blank">doi:10.1523/JNEUROSCI.2761-07.2007</a></li>
 <li>Simonnet, C., Sinha, M., Goutierre, M., Moutkine, I., Daumas, S., &amp; Poncer, J.-C. (2023). Silencing KCC2 in mouse dorsal hippocampus compromises spatial and contextual memory. <em>Neuropsychopharmacology</em>, 48(7), 1067-1077. <a href="https://doi.org/10.1038/s41386-022-01480-5" target="_blank">doi:10.1038/s41386-022-01480-5</a></li>
 <li>Nakamura, K., Moorhouse, A. J., Cheung, D. L., Eto, K., Takeda, I., Rozenbroek, P. W., Inada, H., Housley, G. D., Wake, H., &amp; Nabekura, J. (2019). Overexpression of neuronal K+-Cl- co-transporter enhances dendritic spine plasticity and motor learning. <em>The Journal of Physiological Sciences</em>, 69, 453-463. <a href="https://doi.org/10.1007/s12576-018-00654-5" target="_blank">doi:10.1007/s12576-018-00654-5</a></li>
+<li>Forsberg, M., Olsson, M., Seth, H., Wasling, P., Zetterberg, H., Hedner, J., &amp; Hanse, E. (2022). Ion concentrations in cerebrospinal fluid in wakefulness, sleep and sleep deprivation in healthy humans. <em>Journal of Sleep Research</em>, 31(3), e13522. <a href="https://doi.org/10.1111/jsr.13522" target="_blank">doi:10.1111/jsr.13522</a></li>
+<li>Byvaltsev, E., Behbood, M., Schleimer, J.-H., Gensch, T., Semyanov, A., Schreiber, S., &amp; Strauss, U. (2023). KCC2 reverse mode helps to clear postsynaptically released potassium at glutamatergic synapses. <em>Cell Reports</em>, 42(8), 112934. <a href="https://doi.org/10.1016/j.celrep.2023.112934" target="_blank">doi:10.1016/j.celrep.2023.112934</a></li>
+<li>Alfonsa, H., Chakrabarty, A., Vyazovskiy, V. V., &amp; Akerman, C. J. (2025). Sleep-wake-related changes in intracellular chloride regulate plasticity at glutamatergic cortical synapses. <em>Current Biology</em>, 35(6), 1373-1381.e3. <a href="https://doi.org/10.1016/j.cub.2025.01.050" target="_blank">doi:10.1016/j.cub.2025.01.050</a></li>
 <li>Rangaraju, V., Calloway, N., &amp; Ryan, T. A. (2014). Activity-driven local ATP synthesis is required for synaptic function. <em>Cell</em>, 156(4), 825-835. <a href="https://doi.org/10.1016/j.cell.2013.12.042" target="_blank">doi:10.1016/j.cell.2013.12.042</a></li>
 <li>Rangaraju, V., Lauterbach, M., &amp; Schuman, E. M. (2019). Spatially stable mitochondrial compartments fuel local translation during plasticity. <em>Cell</em>, 176(1-2), 73-84.e15. <a href="https://doi.org/10.1016/j.cell.2018.12.013" target="_blank">doi:10.1016/j.cell.2018.12.013</a></li>
 <li>Divakaruni, S. S., Van Dyke, A. M., Chandra, R., et al. (2018). Long-term potentiation requires a rapid burst of dendritic mitochondrial fission during induction. <em>Neuron</em>, 100(4), 860-875.e7. <a href="https://doi.org/10.1016/j.neuron.2018.09.025" target="_blank">doi:10.1016/j.neuron.2018.09.025</a></li>
@@ -1006,12 +1533,17 @@ A final correction is that static <sup>1</sup>H-MRSI similarity is not the same 
 <li>Hu, H., Tang, J., Wu, Y., et al. (2025). Polarized ATP synthase in synaptic mitochondria induced by learning and plasticity signals. <em>Communications Biology</em>, 8, 166. <a href="https://doi.org/10.1038/s42003-025-08963-3" target="_blank">doi:10.1038/s42003-025-08963-3</a></li>
 <li>Vishwanath, A. A., Comyn, T., Mira, R. G., et al. (2026). Mitochondrial Ca2+ efflux controls neuronal metabolism and long-term memory across species. <em>Nature Metabolism</em>, 8, 467-488. <a href="https://doi.org/10.1038/s42255-026-01451-w" target="_blank">doi:10.1038/s42255-026-01451-w</a></li>
 <li>Park, M., Salgado, J. M., Ostroff, L., Helton, T. D., Robinson, C. G., Harris, K. M., &amp; Ehlers, M. D. (2006). Plasticity-induced growth of dendritic spines by exocytic trafficking from recycling endosomes. <em>Neuron</em>, 52(5), 817-830. <a href="https://doi.org/10.1016/j.neuron.2006.09.040" target="_blank">doi:10.1016/j.neuron.2006.09.040</a></li>
+<li>Correia, S. S., Bassani, S., Brown, T. C., Lisé, M.-F., Backos, D. S., El-Husseini, A., Passafaro, M., &amp; Esteban, J. A. (2008). Motor protein-dependent transport of AMPA receptors into spines during long-term potentiation. <em>Nature Neuroscience</em>, 11, 457-466. <a href="https://doi.org/10.1038/nn2063" target="_blank">doi:10.1038/nn2063</a></li>
 <li>Maas, C., Belgardt, D., Lee, H. K., Heisler, F. F., Lappe-Siefke, C., Magiera, M. M., van Dijk, J., Hausrat, T. J., Janke, C., &amp; Kneussel, M. (2009). Synaptic activation modifies microtubules underlying transport of postsynaptic cargo. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 106(21), 8731-8736. <a href="https://doi.org/10.1073/pnas.0902304106" target="_blank">doi:10.1073/pnas.0902304106</a></li>
+<li>Uchida, S., Martel, G., Pavlowsky, A., Takizawa, S., Hevi, C., Watanabe, Y., Alarcon, J. M., &amp; Shumyatsky, G. P. (2014). Learning-induced and stathmin-dependent changes in microtubule stability are critical for memory and disrupted in ageing. <em>Nature Communications</em>, 5, 4389. <a href="https://doi.org/10.1038/ncomms5389" target="_blank">doi:10.1038/ncomms5389</a></li>
 <li>Yin, X., Takei, Y., Kido, M. A., &amp; Hirokawa, N. (2011). Molecular motor KIF17 is fundamental for memory and learning via differential support of synaptic NR2A/2B levels. <em>Neuron</em>, 70(2), 310-325. <a href="https://doi.org/10.1016/j.neuron.2011.03.026" target="_blank">doi:10.1016/j.neuron.2011.03.026</a></li>
 <li>Zhao, J., Fok, A. H. K., Fan, R., Kwan, P.-Y., Chan, H.-L., Lo, L. H.-Y., Chan, Y.-S., Yung, W.-H., Huang, J., Lai, C. S. W., &amp; Lai, K.-O. (2020). Specific depletion of the motor protein KIF5B leads to deficits in dendritic transport, synaptic plasticity and memory. <em>eLife</em>, 9, e53456. <a href="https://doi.org/10.7554/eLife.53456" target="_blank">doi:10.7554/eLife.53456</a></li>
 <li>Swarnkar, S., Avchalumov, Y., Espadas, I., Grinman, E., Liu, X.-A., Raveendra, B. L., Zucca, A., Mediouni, S., Sadhu, A., Valente, S., Page, D., Miller, K., &amp; Puthanveettil, S. V. (2021). Molecular motor protein KIF5C mediates structural plasticity and long-term memory by constraining local translation. <em>Cell Reports</em>, 36(2), 109369. <a href="https://doi.org/10.1016/j.celrep.2021.109369" target="_blank">doi:10.1016/j.celrep.2021.109369</a></li>
+<li>Wong, V. C., Houlihan, P. R., Liu, H., Walpita, D., DeSantis, M. C., Liu, Z., &amp; O'Shea, E. K. (2024). Plasticity-induced actin polymerization in the dendritic shaft regulates intracellular AMPA receptor trafficking. <em>eLife</em>, 13, e80622. <a href="https://doi.org/10.7554/eLife.80622" target="_blank">doi:10.7554/eLife.80622</a></li>
 <li>Aiken, J., &amp; Holzbaur, E. L. F. (2024). Spastin locally amplifies microtubule dynamics to pattern the axon for presynaptic cargo delivery. <em>Current Biology</em>, 34(8), 1687-1704.e8. <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">doi:10.1016/j.cub.2024.03.010</a></li>
+<li>de Queiroz, B. R., Laghrissi, H., Rajeev, S., Blot, L., De Graeve, F., Dehecq, M., Keleman, K., Ule, J., Hubstenberger, A., &amp; Besse, F. (2025). Axonal RNA localization is essential for long-term memory. <em>Nature Communications</em>, 16, 2560. <a href="https://doi.org/10.1038/s41467-025-57651-7" target="_blank">doi:10.1038/s41467-025-57651-7</a></li>
 <li>Suzuki, A., et al. (2011). Astrocyte-neuron lactate transport is required for long-term memory formation. <em>Cell</em>, 144(5), 810-823. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">doi:10.1016/j.cell.2011.02.018</a></li>
+<li>Villemagne, V. L., Harada, R., Dore, V., et al. (2022). First-in-Humans Evaluation of <sup>18</sup>F-SMBT-1, a Novel <sup>18</sup>F-Labeled Monoamine Oxidase-B PET Tracer for Imaging Reactive Astrogliosis. <em>Journal of Nuclear Medicine</em>, 63(10), 1551-1559. <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">doi:10.2967/jnumed.121.263255</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <em>Nature</em>, 629, 146-153. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Sun, X., et al. (2024). Spatial transcriptomics reveal neuron-astrocyte synergy in long-term memory. <em>Nature</em>, 627, 374-381. <a href="https://doi.org/10.1038/s41586-023-07011-6" target="_blank">doi:10.1038/s41586-023-07011-6</a></li>
 <li>Mukamel, E. A., &amp; Yu, X. (2025). False positives in study of memory-related gene expression. <em>Nature</em>, 642, E1-E3. <a href="https://doi.org/10.1038/s41586-025-08988-y" target="_blank">doi:10.1038/s41586-025-08988-y</a></li>
@@ -1030,14 +1562,17 @@ A final correction is that static <sup>1</sup>H-MRSI similarity is not the same 
 <li>Shapson-Coe, A., Januszewski, M., Berger, D. R., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <em>Science</em>, 384(6696), eadk4858. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
 <li>Finnema, S. J., Nabulsi, N. B., Eid, T., et al. (2016). Imaging synaptic density in the living human brain. <em>Science Translational Medicine</em>, 8(348), 348ra96. <a href="https://doi.org/10.1126/scitranslmed.aaf6667" target="_blank">doi:10.1126/scitranslmed.aaf6667</a></li>
 <li>Naganawa, M., Nabulsi, N., Lin, S.-F., et al. (2021). First-in-human evaluation of 18F-SynVesT-1, a radioligand for PET imaging of synaptic vesicle glycoprotein 2A. <em>Journal of Nuclear Medicine</em>, 62(4), 561-567. <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">doi:10.2967/jnumed.120.249144</a></li>
+<li>Smart, K., Liu, H., Matuskey, D., et al. (2021). Binding of the synaptic vesicle radiotracer [<sup>11</sup>C]UCB-J is unchanged during functional brain activation using a visual stimulation task. <em>Journal of Cerebral Blood Flow &amp; Metabolism</em>, 41(5), 1067-1079. <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">doi:10.1177/0271678X20946198</a></li>
 <li>Johansen, A., et al. (2024). An in vivo high-resolution human brain atlas of synaptic density. <em>Journal of Neuroscience</em>. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
 <li>Shatalina, E., et al. (2024). The relationship between SV2A levels, neural activity, and cognitive function in healthy humans. <em>Imaging Neuroscience</em>. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">doi:10.1162/imag_a_00190</a></li>
+<li>Holmes, S. E., Finnema, S. J., Naganawa, M., et al. (2022). Imaging the effect of ketamine on synaptic density (SV2A) in the living brain. <em>Molecular Psychiatry</em>, 27(4), 2273-2281. <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">doi:10.1038/s41380-022-01465-2</a></li>
 <li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <em>Nature Communications</em>, 16, 11344. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
 <li>Bhogal, A. A., Broeders, T. A. A., Morsinkhof, L., et al. (2020). Lipid-suppressed and tissue-fraction corrected metabolic distributions in human central brain structures using 2D <sup>1</sup>H magnetic resonance spectroscopic imaging at 7 T. <em>Brain and Behavior</em>, 10(12), e01852. <a href="https://doi.org/10.1002/brb3.1852" target="_blank">doi:10.1002/brb3.1852</a></li>
 <li>Wright, A. M., Murali-Manohar, S., &amp; Henning, A. (2022). Quantitative T<sub>1</sub>-relaxation corrected metabolite mapping of 12 metabolites in the human brain at 9.4 T. <em>NeuroImage</em>, 263, 119574. <a href="https://doi.org/10.1016/j.neuroimage.2022.119574" target="_blank">doi:10.1016/j.neuroimage.2022.119574</a></li>
 <li>Baboli, M., Wang, F., Dong, Z., Dietrich, J., Uhlmann, E. J., Batchelor, T. T., Cahill, D. P., &amp; Andronesi, O. C. (2024). Absolute Metabolite Quantification in Individuals with Glioma and Healthy Individuals Using Whole-Brain Three-dimensional MR Spectroscopic and Echo-planar Time-resolved Imaging. <em>Radiology</em>, 312(3), e232401. <a href="https://doi.org/10.1148/radiol.232401" target="_blank">doi:10.1148/radiol.232401</a></li>
 <li>Ren, J., Sherry, A. D., &amp; Malloy, C. R. (2015). 31P-MRS of healthy human brain: ATP synthesis, metabolite concentrations, pH, and T1 relaxation times. <em>NMR in Biomedicine</em>, 28(11), 1455-1462. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">doi:10.1002/nbm.3384</a></li>
 <li>Qian, Y., Zhao, T., Zheng, H., Weimer, J., &amp; Boada, F. E. (2012). High-resolution sodium imaging of human brain at 7 T. <em>Magnetic Resonance in Medicine</em>, 68(1), 227-233. <a href="https://doi.org/10.1002/mrm.23225" target="_blank">doi:10.1002/mrm.23225</a></li>
+<li>Qian, Y., Lin, Y.-C., Chen, X., Ge, Y., Lui, Y. W., &amp; Boada, F. E. (2025). Single-quantum sodium MRI at 3 T for separation of mono- and bi-T2 sodium signals. <em>Scientific Reports</em>, 15, 27427. <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">doi:10.1038/s41598-025-07800-1</a></li>
 <li>Rzechorzek, N. M., Thrippleton, M. J., Chappell, F. M., et al. (2022). A daily temperature rhythm in the human brain predicts survival after brain injury. <em>Brain</em>, 145(6), 2031-2048. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">doi:10.1093/brain/awab466</a></li>
 <li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <em>PNAS Nexus</em>, 4(3), pgaf072. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
 <li>Baadsvik, E. L., Weiger, M., Froidevaux, R., Schildknecht, C. M., Ineichen, B. V., &amp; Pruessmann, K. P. (2024). Myelin bilayer mapping in the human brain in vivo. <em>Magnetic Resonance in Medicine</em>, 91(6), 2332-2344. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">doi:10.1002/mrm.29998</a></li>
