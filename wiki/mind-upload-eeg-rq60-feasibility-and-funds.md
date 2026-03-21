@@ -739,3 +739,12 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 
 - 実務ルール: 応募書類・再現ログでは `Dxx + DOI + データセット名 + access区分` を正とし、`現在ID` は探索補助に限定します。
 
+
+## 2026-03-21 10:04 JST 再検証ログ（本run / 依頼: RQを1件ずつ深掘りしwiki固定）
+
+- 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull --ff-only` を実行し、`Already up to date` を確認しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` / 本ページ / `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `| Ux-y<br>` 行を再計数し、3ページとも `RQ_TOTAL=60`（欠損・重複 `0`）を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` を再確認し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用が全行で維持されていることを確認しました。
+- 本ページの再検証で参照した主要EEG ID（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
+- 助成キー `G1-G6` は `mind-upload/wiki` と `auto-research-funds/wiki` の双方で再確認し、欠落 `0` を確認しました。
+- 方針は不変で、汎用横断要約ではなく「1件ずつ深く理解して書く」運用を継続します。
