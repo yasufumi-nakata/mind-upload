@@ -1876,7 +1876,7 @@ In the previous text, methods with different characteristics, such as ASR, ZapLi
 <section class="section" id="consciousness-readout-gate">
 <h2 class="section-title">2026-03 Addendum: Consciousness readout is accepted at 4 gates</h2>
 <p>
-The weakness that should have been explored more deeply this time is that simply classifying EEG/DoC/anesthesia literature into "no-report," "PCI," "resting-state," and "multimodal" was not enough to determine which conditions would allow the claim to be raised to the next level. Cohen et al. (2024) and Fahrenfort et al. (2025) showed that construct validity is broken unless report / post-perceptual confound and criterion placement are broken separately. Gogulski et al. (2024) and Biabani et al. (2024) showed that TMS-EEG reliability and sensory contamination depend on target and time window, and Breyton et al. (2025) and Casarotto et al. (2024) showed that TMS-EEG reliability and sensory contamination depend on target and time window, and Breyton et al. Indicates that calibration is required. Furthermore, Rohaut et al. (2024), Kawai et al. (2025), and Manasova et al. (2026) have shown progress in multimodal panels, but this also means that deployability cannot be claimed unless behavior-only baseline and missing-modality conditions are exceeded. Therefore, this site accepts consciousness-related readouts at the following four gates.
+The remaining weakness in this section was that simply sorting EEG / DoC / anesthesia papers into "no-report," "PCI," "resting-state," and "multimodal" still left the promotion rule too coarse. <a href="https://doi.org/10.1093/cercor/bhae415" target="_blank">Cohen et al. (2024)</a> and <a href="https://doi.org/10.7554/eLife.102335" target="_blank">Fahrenfort et al. (2025)</a> showed that post-perceptual / report confounds and criterion placement must be broken separately, so no-report design alone is not yet construct validity. <a href="https://doi.org/10.1093/cercor/bhae130" target="_blank">Gogulski et al. (2024)</a> showed that early/local dlPFC TMS-evoked responses vary markedly in reliability across targets and analysis windows, and <a href="https://doi.org/10.1162/imag_a_00349" target="_blank">Biabani et al. (2024)</a> showed that auditory and somatosensory inputs can materially contaminate TMS-evoked responses across prefrontal, premotor, and parietal stimulation. <a href="https://doi.org/10.7554/eLife.98920" target="_blank">Breyton et al. (2025)</a> then showed that spatiotemporal brain complexity can separate consciousness-related states outside perturbation paradigms, while <a href="https://doi.org/10.1111/ejn.16299" target="_blank">Casarotto et al. (2024)</a> showed that spontaneous EEG features and PCI can dissociate in minimally conscious patients, so resting-state markers still require same-cohort calibration rather than substitution for perturbational benchmarks. Finally, <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2022)</a>, <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">Rohaut et al. (2024)</a>, and <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> showed that multimodal panels can improve diagnosis / prognosis and cross-centre robustness, but only as bundles whose value must still be measured against behavior-only baselines, missing-modality slices, and site transfer. Therefore, this site accepts consciousness-related readouts at the following four gates.
 </p>
 <table class="data-table">
 <thead>
@@ -1889,23 +1889,23 @@ The weakness that should have been explored more deeply this time is that simply
 <tbody>
 <tr>
 <td><strong>Construct-validity gate</strong></td>
-<td>Separate no-report / report, separate log for criterion placement, fixing failure conditions in advance, at least design basis for crushing task / report confound. </td>
-<td>This means that this neural marker has read the contents of consciousness itself. The current situation leaves open the possibility of picking up decision strategy or post-perceptual processing. </td>
+<td>Separate no-report from report, log criterion placement separately, predefine failure conditions, and disclose how task / report confounds were suppressed. </td>
+<td>Do not say the marker reads conscious content itself; decision strategy and post-perceptual processing remain viable alternatives. </td>
 </tr>
 <tr>
 <td><strong>Perturbational gate</strong></td>
-<td>TMS-EEG/intracranial perturbation stimulation site, intensity, control, auditory/somatosensory control, artifact window, target-specific reliability. </td>
-<td>It is just a PCI / PCI-ST style value and is called a state-level benchmark. If there is no condition log, the comparison itself will break down. </td>
+<td>For TMS-EEG or intracranial perturbation, report stimulation site, intensity, control / sham, auditory and somatosensory suppression, artifact window, analysis window, and target-specific reliability. </td>
+<td>Do not call a PCI / PCI-ST-style value a stable state-level benchmark if the perturbation and reliability log is incomplete. </td>
 </tr>
 <tr>
 <td><strong>Calibration gate</strong></td>
-<td> Calibrate PCI, behavioral assessment, clinical outcomes, pipeline sensitivity analysis, and withdrawal thresholds in the same cohort. </td>
-<td>The resting-state complexity, criticality, and passive EEG classifier is called a single bedside meter. Leave it as an auxiliary proxy before external calibration. </td>
+<td>Calibrate resting-state complexity / criticality, PCI, behavioral assessment, clinical outcomes, and pipeline sensitivity within the same cohort, and publish the decision / abstention threshold used at evaluation time. </td>
+<td>Do not present resting-state complexity or passive EEG classifiers as standalone bedside meters; without same-cohort calibration they remain auxiliary proxies. </td>
 </tr>
 <tr>
 <td><strong>Incremental / deployability gate</strong></td>
-<td>Comparison with behavior-only baseline, generalization outside the facility, robustness under missing-modality conditions, calibration error, and reporting of measurement burden. </td>
-<td> Multimodal panel is written as ready-to-deploy. Average accuracy alone is not the basis for clinical operation. </td>
+<td>Show incremental value over a behavior-only baseline, external-site generalization, robustness under missing-modality conditions, calibration error, and measurement burden. </td>
+<td>Do not describe a multimodal panel as ready to deploy or portable across hospitals on average accuracy alone. </td>
 </tr>
 </tbody>
 </table>
@@ -2189,11 +2189,13 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Blom, K., Song, K., Vouga, E., Godec, A., &amp; Makarov, D. E. (2024). Milestoning estimators of dissipation in systems observed at a coarse resolution. <a href="https://doi.org/10.1073/pnas.2318333121" target="_blank">doi:10.1073/pnas.2318333121</a></li>
 <li>Cohen, M. A., et al. (2024). Neural signatures of visual awareness independent of postperceptual processing. <a href="https://doi.org/10.1093/cercor/bhae415" target="_blank">doi:10.1093/cercor/bhae415</a></li>
 <li>Fahrenfort, J. J., et al. (2025). Criterion placement threatens the construct validity of neural measures of consciousness. <a href="https://doi.org/10.7554/eLife.102335" target="_blank">doi:10.7554/eLife.102335</a></li>
-<li>Gogulski, J., et al. (2024). The reliability and variability of TMS-evoked potentials in the dorsolateral prefrontal cortex in healthy adults. <a href="https://doi.org/10.1016/j.brs.2024.06.001" target="_blank">doi:10.1016/j.brs.2024.06.001</a></li>
+<li>Gogulski, J., et al. (2024). Reliability of the TMS-evoked potential in dorsolateral prefrontal cortex. <a href="https://doi.org/10.1093/cercor/bhae130" target="_blank">doi:10.1093/cercor/bhae130</a></li>
 <li>Biabani, M., et al. (2024). Characterising the contribution of auditory and somatosensory inputs to TMS-evoked potentials following stimulation of prefrontal, premotor, and parietal cortex. <a href="https://doi.org/10.1162/imag_a_00349" target="_blank">doi:10.1162/imag_a_00349</a></li>
 <li>Breyton, M., et al. (2025). Spatiotemporal brain complexity quantifies consciousness outside of perturbation paradigms. <a href="https://doi.org/10.7554/eLife.98920" target="_blank">doi:10.7554/eLife.98920</a></li>
-<li>Rohaut, B., et al. (2024). Multimodal imaging reveals partially preserved semantic cognition in comatose patients after cardiac arrest. <a href="https://doi.org/10.1212/WNL.0000000000209439" target="_blank">doi:10.1212/WNL.0000000000209439</a></li>
-<li>Kawai, R., et al. (2025). Multimodal assessment improves neuroprognosis performance after out-of-hospital cardiac arrest. <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">doi:10.1038/s41591-024-03019-1</a></li>
+<li>Casarotto, S., et al. (2024). Dissociations between spontaneous electroencephalographic features and the perturbational complexity index in the minimally conscious state. <a href="https://doi.org/10.1111/ejn.16299" target="_blank">doi:10.1111/ejn.16299</a></li>
+<li>Amiri, A. M., et al. (2022). Multimodal prediction of residual consciousness in the intensive care unit: the CONNECT-ME study. <a href="https://doi.org/10.1093/brain/awac335" target="_blank">doi:10.1093/brain/awac335</a></li>
+<li>Rohaut, B., et al. (2024). Multimodal assessment improves neuroprognosis performance in clinically unresponsive critical-care patients with brain injury. <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">doi:10.1038/s41591-024-03019-1</a></li>
+<li>Manasova, D., et al. (2026). Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness. <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">doi:10.1093/brain/awaf412</a></li>
 <li>Murphy, K., Harris, A. D., &amp; Wise, R. G. (2011). Robustly measuring vascular reactivity differences with breath-hold: normalising stimulus-evoked and resting state BOLD fMRI data. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">doi:10.1016/j.neuroimage.2010.07.059</a></li>
 <li>Williams, R. J., Specht, J. L., Mazerolle, E. L., Lebel, R. M., MacDonald, M. E., &amp; Pike, G. B. (2023). Correspondence between BOLD fMRI task response and cerebrovascular reactivity across the cerebral cortex. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">doi:10.3389/fphys.2023.1167148</a></li>
 <li>Wu, S., Tyler, L. K., Henson, R. N. A., Rowe, J. B., Cam-CAN, &amp; Tsvetanov, K. A. (2023). Cerebral blood flow predicts multiple demand network activity and fluid intelligence across the adult lifespan. <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">doi:10.1016/j.neurobiolaging.2022.09.006</a></li>
