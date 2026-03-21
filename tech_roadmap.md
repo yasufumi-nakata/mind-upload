@@ -4,7 +4,7 @@ title: "Technical Roadmap: Understanding WBE Through Measurement, Reconstruction
 description: "A learning roadmap for viewing mind uploading and WBE from the technical side, organized as a question tree from measurement to reconstruction, implementation, and verification."
 article_type: "Roadmap (Definition #1)"
 subtitle: "Break 'what counts as progress' into a question tree with reading order and minimum arrival conditions"
-last_updated: "2026-03-21"
+last_updated: "2026-03-22"
 note: "Provisional draft (updated continuously)"
 audience: "Readers who want the big picture, need a learning order, or want claim strength organized by level"
 reading_time: "20-30 min (5 min for the index only)"
@@ -20,6 +20,7 @@ page_highlights:
   - "M1 / M5 keep neural state distinct from vascular transfer state, so a BOLD amplitude difference is not silently promoted to a neural difference."
   - "M1 / M3 now treat human in vivo evidence as a two-axis ladder, so local ultrastructure, SV2A PET, MRSI biochemical scaffolds, DMRSI rate imaging, myelin mapping, and clearance proxies are not collapsed into one observability score."
   - "M4 / I6 now treat the body / environment boundary as an explicit scientific audit item, so a fast local loop is not silently promoted to solved embodiment."
+  - "M7 / V4 now separate state annotation, trait-like backbone, biological drift, interface / decoder drift, and recalibration burden, so same-day success and adaptive rescue do not collapse into one longitudinal claim."
   - "Wearable OPM-MEG is treated as movement-tolerant macro measurement only when shielding, field control, sensor calibration, and anatomy choice are disclosed."
   - "R6 treats personalization not as a pure performance trick, but as a verification problem that must separate target signal from subject fingerprint and setup shortcuts."
   - "R4 now treats DCM / effective-connectivity outputs as route-card claims that must disclose model space, observation assumptions, validation, reliability, and abstention."
@@ -34,6 +35,7 @@ known_points:
   - "Closed-loop device timing and biological conduction timing are different audits; passing one does not auto-pass the other."
   - "A disclosed body / environment boundary is a separate audit from low latency or online accuracy."
   - "Human-side advances reduce different error terms and remain differently deployment-limited; proxy-rich evidence is not yet same-subject, same-session, externally calibrated state identification."
+  - "Longitudinal success is not one axis; within-day state fluctuation, trait-like backbone, biological drift, interface / decoder drift, and recalibration burden answer different questions."
   - "OPM-MEG motion tolerance still depends on magnetic shielding, active nulling, calibration, and source-model disclosure."
   - "The fact that personalization helps performance is not the same as showing a population-level neural signal; subject-fingerprint and acquisition-distribution audits are still required."
   - "Richer observability and better fit do not by themselves collapse the compatible solution set; candidate-space and experiment-design audits remain separate."
@@ -42,6 +44,7 @@ unknown_points:
   - "V5 identity questions and D-series social deployment conditions remain unresolved."
   - "The shortest practical route may change as data and benchmark infrastructure improve."
   - "How specialized human routes can be fused into same-subject, same-session, externally calibrated evidence without recreating latent-state ambiguity remains unresolved."
+  - "It also remains unsettled which backbone object should be the default target for WBE-relevant longitudinal claims: latent dynamics, representational geometry, or another cross-modal invariant."
 wiki_links:
   - label: "Wiki: How To Read The Roadmap"
     url: "/wiki/roadmap-reading-guide.html"
@@ -734,9 +737,46 @@ It would still be too strong to read <strong>nanoscale</strong>, <strong>petasca
 <span class="qa-tags"><span class="tag">LONGITUDINAL</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Even in the same individual, brain states vary. Which characteristics are strong enough to make us unique? </p>
-<p><strong>Conditions for disproving:</strong>Reproducibility is limited to “the state of the day” and long-term identity evaluation (V5) is not possible</p>
-<p><strong>Next:</strong>Tracking a predefined identification score (V1) across multiple sessions of the same subject</p>
+<p><strong>Question:</strong>Even in the same individual, brain states vary across minutes, hours, days, and months. The operational question here is no longer simply “is the person stable?” but <strong>which part of the result reflects state fluctuation, trait-like backbone, biological drift, interface / decoder drift, or adaptive rescue</strong>.</p>
+<p><strong>2026-03-22 addendum:</strong>The older wording here was too weak because it still allowed <strong>same-day success</strong>, <strong>cross-day persistence</strong>, and <strong>algorithmically rescued performance</strong> to sound like one continuous longitudinal achievement. The primary literature does not support that compression. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> showed that trial-to-trial cortical dynamics are strongly shaped by richly varied movements, <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">Benisty et al. (2024)</a> showed that spontaneous behavior rapidly changes functional-connectivity structure, and <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> showed 10-hour EEG changes that materially alter decoding and motivate adaptive decoders. By contrast, <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">Gallego et al. (2020)</a> and <a href="https://doi.org/10.1038/s41593-025-01982-7" target="_blank">Noda et al. (2025)</a> show that a <strong>population-level backbone</strong> can remain more stable than individual units. Finally, <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a>, <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> show why <strong>stabilized operation</strong> and <strong>fixed-decoder durability</strong> must be reported separately. Therefore, M7 now treats longitudinal evidence as a multi-field audit, not one score.</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Audit field</th>
+<th>What must be named</th>
+<th>What this stops you from overreading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>state annotation</strong></td>
+<td>Arousal, spontaneous behavior, movement, task mode, time-of-day, sleep pressure, medication, or stimulation state.</td>
+<td>A same-day or cross-day difference cannot be read as trait instability if the state itself was left unlogged.</td>
+</tr>
+<tr>
+<td><strong>trait-like backbone</strong></td>
+<td>The named backbone object that remained stable: for example latent dynamics or representational geometry.</td>
+<td>Do not treat single-unit or single-channel volatility as if it automatically disproved a stable population backbone.</td>
+</tr>
+<tr>
+<td><strong>biological drift</strong></td>
+<td>Plasticity, remapping, unit turnover, recovery, or learning-related change in the living system.</td>
+<td>Do not collapse organism-side change into interface or preprocessing failure.</td>
+</tr>
+<tr>
+<td><strong>interface / decoder drift</strong></td>
+<td>Electrode shift, channel loss, impedance change, feature-distribution shift, or decoder mismatch.</td>
+<td>Do not say the biological representation collapsed when the unstable object was the interface or decoder.</td>
+</tr>
+<tr>
+<td><strong>fixed decoder interval / recalibration burden</strong></td>
+<td>How long the decoder was held unchanged, how often rescue or recalibration occurred, what data it used, and what happened when it failed.</td>
+<td>Do not rephrase adaptive rescue as if the original decoder had remained valid on its own.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Decision rule:</strong>If a result does not report <strong>state annotation</strong>, <strong>fixed decoder interval</strong>, and <strong>recalibration burden</strong> separately, this roadmap stops at <strong>state-conditioned performance</strong> or <strong>participant-specific stabilized operation</strong>. It does not promote the result to trait stability, durable fixed-decoder use, or long-horizon deployability.</p>
+<p><strong>Next:</strong>Bundle <a href="verification.html#temporal-validity-card">Verification: Temporal Validity Card</a> with <a href="wiki/state-trait-and-drift.html">Wiki: State, Trait, and Drift</a>. If the evidence also bridges across acquisition regimes or days as if it were one latent state, add the <a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> rather than relying on same-subject wording alone.</p>
 </div>
 </details>
 
@@ -1255,8 +1295,14 @@ The remaining weak point here was that <strong>more measured variables</strong> 
 <span class="qa-tags"><span class="tag">LONGITUDINAL</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>The more you learn, the more likely you are to deviate from the original person. Define the range in which change is “acceptable”. </p>
-<p><strong>Required next:</strong>Session identity index (M7) + update log (P2)</p>
+<p><strong>Question:</strong>Long-term verification is not just whether a score stayed high. It asks whether <strong>state fluctuation</strong>, <strong>trait-like backbone</strong>, <strong>biological drift</strong>, <strong>interface / decoder drift</strong>, and <strong>maintenance-route burden</strong> were separated well enough that the time claim becomes falsifiable.</p>
+<p><strong>2026-03-22 addendum:</strong>The older wording was too close to an abstract question about “acceptable change.” The site's current technical rule is narrower. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> showed that long-term iBCI control can be maintained by unsupervised recalibration, but that usability and <strong>fixed-decoder durability</strong> are different claims. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> showed a strong communication route while also quantifying degradation of a decoder trained on a specific earlier day. Therefore, V4 now treats long-term verification as the conjunction of <strong>temporal validity</strong>, <strong>bridge validity when acquisition regimes are crossed</strong>, and <strong>maintenance-state disclosure when persistence or forgetting is the claim</strong>.</p>
+<ul>
+<li><strong>Temporal validity:</strong> audit fixed decoder interval, state annotation, interface / decoder drift, recalibration burden, and transfer ceiling.</li>
+<li><strong>Bridge validity:</strong> if “same-subject” evidence crosses live-to-fix, cross-regime, or cross-day reacquisition, attach the <a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a>; same-subject is not same-state by default.</li>
+<li><strong>Maintenance route:</strong> if the claim concerns persistence, forgetting, reconsolidation, remote memory, or recovery, attach the <a href="verification.html#maintenance-state-error-budget">maintenance-state error budget</a> instead of treating temporal hold as sufficient evidence.</li>
+</ul>
+<p><strong>Required next:</strong>M7 longitudinal audit + <a href="verification.html#temporal-validity-card">Temporal Validity Card</a> + update log (P2). For multiday or cross-regime claims, add the relevant bridge and maintenance-route cards instead of leaving the time burden implicit.</p>
 </div>
 </details>
 
@@ -2067,6 +2113,16 @@ Below are the main documents directly related to the open questions of U0-U15. F
 <li>Littlejohn, K. T., Dabagia, M., Ladwig, A., et al. (2025). A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
 <li>Wairagkar, M., Card, N. S., Singer-Clark, T., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
 <li>Wilson, G. H., Stein, E. A., Kamdar, F., et al. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain&ndash;computer interfaces using a hidden Markov model. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+</ol>
+
+<h3>E2. Longitudinal validity, state / trait / drift, and recalibration</h3>
+<ol>
+<li>Musall, S., Kaufman, M. T., Juavinett, A. L., Gluf, S., &amp; Churchland, A. K. (2019). Single-trial neural dynamics are dominated by richly varied movements. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">doi:10.1038/s41593-019-0502-4</a></li>
+<li>Benisty, H., Barson, D., Moberly, A. H., et al. (2024). Rapid fluctuations in functional connectivity of cortical networks encode spontaneous behavior. <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">doi:10.1038/s41593-023-01498-y</a></li>
+<li>Egger, A., Bayon, C., d'Almeida, J., et al. (2024). Chrono-EEG dynamics influencing hand gesture decoding: a 10-hour study. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">doi:10.1038/s41598-024-70609-x</a></li>
+<li>Gallego, J. A., Perich, M. G., Chowdhury, R. H., Solla, S. A., &amp; Miller, L. E. (2020). Long-term stability of cortical population dynamics underlying consistent behavior. <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">doi:10.1038/s41593-019-0555-4</a></li>
+<li>Noda, T., Kienle, E., Eppler, J.-B., et al. (2025). Homeostasis of a representational map in the neocortex. <a href="https://doi.org/10.1038/s41593-025-01982-7" target="_blank">doi:10.1038/s41593-025-01982-7</a></li>
+<li>Karpowicz, B. M., Ali, Y. H., Wimalasena, L. N., et al. (2025). Stabilizing brain-computer interfaces through alignment of latent dynamics. <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">doi:10.1038/s41467-025-59652-y</a></li>
 </ol>
 
 <h3>F. Causal inference/active inference/counterfactual hypothetical</h3>
