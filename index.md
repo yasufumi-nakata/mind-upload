@@ -5,7 +5,7 @@ description: "A verification commons for turning mind uploading and WBE into a s
 article_type: Start Here
 subtitle: "Define success criteria, standards, benchmarks, and preregistration first"
 author: Mind Uploading Research Project
-last_updated: "2026-03-21"
+last_updated: "2026-03-22"
 note: "Human-friendly landing page"
 audience: "First-time visitors, readers who want only the big picture, and anyone who wants a clear reading order"
 reading_time: "5-10 min"
@@ -303,9 +303,9 @@ Recent primary papers require a narrower reading here as well. <a href="https://
 </div>
 
 <div class="note-box">
-<strong>If You Want To Check Whether Temperature Was Quietly Treated As Constant</strong>
+<strong>If You Want To Check Whether Temperature Was Quietly Treated As One Solved Row</strong>
 <p>
-The March 2026 deepening pass now keeps <strong>thermal-state</strong> separate from timing, bioenergetics, and glial support. A stable field potential, a same-day fit, or a clean sequence-timing result is not read here as thermal-state-matched unless tissue temperature or an explicit thermal proxy is reported. The shortest route is <a href="verification.html#maintenance-state-error-budget">Verification: maintenance-state error budget</a> plus <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: homeostatic plasticity and maintenance state</a>.
+The March 2026 deepening pass now treats <strong>thermal evidence</strong> as more than one class. Local operating-point physiology, field-potential confound, sequence-timing perturbation, device-heating artifact, and human macro thermometry do not answer the same question. Therefore, a stable field potential, a same-day fit, or a clean sequence-timing result is not read here as thermal-state-matched unless the claim names its thermal route and what remained latent. The shortest route is <a href="verification.html#maintenance-state-error-budget">Verification: maintenance-state error budget</a> plus <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#thermal-route-card">Wiki: thermal route card</a>.
 </p>
 </div>
 <div class="note-box">

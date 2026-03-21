@@ -5,7 +5,7 @@ description: "A blueprint of standards, benchmarks, registries, and audits for t
 article_type: Platform
 subtitle: "Use the logic of PDB x BIDS x PhysioNet x OSF to define WBE success conditions and reproducible progress"
 author: Mind Uploading Research Project
-last_updated: "2026-03-21"
+last_updated: "2026-03-22"
 note: "Operational Specification"
 audience: "Readers who want the site's core policy and anyone checking what must exist before progress can honestly be claimed"
 reading_time: "15-25 min"
@@ -50,7 +50,7 @@ page_highlights:
   - "At L2 and above, cargo-transport / cytoskeletal trafficking state is separated from proteostasis and bioenergetics when a claim depends on compartment-specific delivery of receptors, endosomes, RNA cargoes, or presynaptic components."
   - "At L2 and above, ionic milieu / chloride homeostasis is separated from excitability and glial support when a claim depends on inhibitory polarity, rhythm stability, or state transitions."
   - "At L2 and above, shared extracellular / electrical state is separated from chemical synapses and ionic proxy classes when a claim depends on fast synchrony, oscillatory coordination, or electrical-state regime."
-  - "At L2 and above, thermal-state is separated from timing-state and bioenergetics when a claim depends on membrane kinetics, field-potential amplitude, or sequence timing."
+  - "For thermal-state claims, the maintenance-state budget now requires a route card that names claim family, direct thermal observable, driver / perturbation route, time window, function target, human proxy class, and abstention."
   - "At L2 and above, bioenergetic / mitochondrial support is separated from glial support when a claim depends on repeated-burst reliability, local ATP reserve, or dendritic plasticity."
   - "At L2 and above, astrocyte network / ensemble state is separated from generic support background when a claim depends on recall, multiday stabilization, or fear-state representations."
   - "At L2 and above, clearance / immune support is separated from astrocyte / glial-state when a claim depends on multiday recovery, protein clearance, or microglia-mediated synaptic maintenance."
@@ -1306,8 +1306,8 @@ Cross-day and remote-memory claims fail for a different reason than same-session
 </tr>
 <tr>
 <td><strong>Thermal-state</strong></td>
-<td>Report whether brain temperature, heating / cooling logs, MRS thermometry, or other thermal covariates were measured, externally calibrated, held fixed, or left latent.</td>
-<td>Field-potential amplitude, membrane-kinetic, and sequence-timing claims are not promoted to thermal-state-consistent maintenance evidence.</td>
+<td>Attach a thermal route card that states the claim family, direct thermal observable, spatial / preparation regime, driver / perturbation route, time window, function target, and whether the evidence is local physiology, a field-potential confound audit, a device-heating artifact, a brain-state proxy, or only a human macro thermometry / task-linked thermal mapping route. Also disclose what microtemperature gradients, synapse-specific heating burden, thermal-controller variables, or local thermal sensitivities remained latent.</td>
+<td>Field-potential amplitude, membrane-kinetic, rhythm-state, and sequence-timing claims are not promoted to thermal-state-consistent maintenance evidence.</td>
 </tr>
 <tr>
 <td><strong>Ionic / chloride state</strong></td>
@@ -1420,9 +1420,9 @@ The remaining weakness was that <strong>cargo evidence</strong> could still comp
 </p>
 </div>
 <div class="note-box">
-<strong>2026-03-18 addendum: thermal-state is not a background constant</strong>
+<strong>2026-03-22 addendum: thermal evidence also needs a route card</strong>
 <p>
-<a href="https://doi.org/10.1111/j.1469-7793.1998.249bu.x" target="_blank">Hardingham &amp; Larkman (1998)</a> showed that excitatory-transmission reliability in rat visual cortex is temperature dependent, <a href="https://doi.org/10.1111/j.1469-7793.2000.00059.x" target="_blank">Volgushev et al. (2000)</a> showed that reversible cooling changes membrane properties and spike generation, <a href="https://doi.org/10.1126/science.8446900" target="_blank">Moser et al. (1993)</a> showed that dentate field potentials can track brain temperature strongly enough to mask learning-specific change, and <a href="https://doi.org/10.1038/nature07448" target="_blank">Long &amp; Fee (2008)</a> showed that local cooling dilates neural-sequence timing. Healthy-human <a href="https://doi.org/10.1093/brain/awab466" target="_blank">MRS thermometry (Rzechorzek et al., 2022)</a> is therefore treated here as a <strong>macro thermal proxy</strong>, not as cell-specific thermal-state ground truth. This site records thermal-state separately whenever amplitude, timing, or repeated-state interpretation depends on it.
+The remaining weakness was that <strong>thermal evidence</strong> could still compress <strong>local operating-point physiology</strong>, <strong>field-potential confound</strong>, <strong>sequence / rhythm perturbation</strong>, <strong>device-heating artifact</strong>, and <strong>human macro thermometry / task-linked thermal mapping</strong> into one bucket. The primary literature does not support that shortcut. <a href="https://doi.org/10.1111/j.1469-7793.1998.249bu.x" target="_blank">Hardingham &amp; Larkman (1998)</a> is about <strong>temperature-dependent synaptic reliability</strong>, <a href="https://doi.org/10.1126/science.8446900" target="_blank">Moser et al. (1993)</a> is about <strong>field-potential amplitude being masked by temperature variation</strong>, <a href="https://doi.org/10.1038/nature07448" target="_blank">Long &amp; Fee (2008)</a> is about <strong>sequence timing under local cooling</strong>, <a href="https://doi.org/10.1038/s41593-019-0422-3" target="_blank">Owen et al. (2019)</a> is about <strong>heating introduced by the perturbation device itself</strong>, and <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>, <a href="https://doi.org/10.3389/fnhum.2024.1398034" target="_blank">Rogala et al. (2024)</a>, plus <a href="https://doi.org/10.1007/s00062-024-01467-3" target="_blank">Tan et al. (2025)</a> remain <strong>macro human thermal routes</strong>. On this site, maintenance-state submissions must now state which inferential object they are actually using, what the direct thermal observable is, whether the result depends on local cooling / warming, a recording confound audit, or a device-heating burden, what time window and function target were tested, what human proxy class remains, and which local thermal controller is still latent. The full public rule is summarized in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#thermal-route-card">Wiki: thermal route card</a>.
 </p>
 </div>
 <div class="note-box">
@@ -2304,6 +2304,7 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Volgushev, M., Vidyasagar, T. R., Chistiakova, M., Yousef, T., &amp; Eysel, U. T. (2000). Membrane properties and spike generation in rat visual cortical cells during reversible cooling. <a href="https://doi.org/10.1111/j.1469-7793.2000.00059.x" target="_blank">doi:10.1111/j.1469-7793.2000.00059.x</a></li>
 <li>Moser, E., Mathiesen, I., &amp; Andersen, P. (1993). Association between brain temperature and dentate field potentials in exploring and swimming rats. <a href="https://doi.org/10.1126/science.8446900" target="_blank">doi:10.1126/science.8446900</a></li>
 <li>Long, M. A., &amp; Fee, M. S. (2008). Using temperature to analyse temporal dynamics in the songbird motor pathway. <a href="https://doi.org/10.1038/nature07448" target="_blank">doi:10.1038/nature07448</a></li>
+<li>Owen, S. F., Liu, M. H., &amp; Kreitzer, A. C. (2019). Thermal constraints on in vivo optogenetic manipulations. <a href="https://doi.org/10.1038/s41593-019-0422-3" target="_blank">doi:10.1038/s41593-019-0422-3</a></li>
 <li>Rangaraju, V., Calloway, N., &amp; Ryan, T. A. (2014). Activity-driven local ATP synthesis is required for synaptic function. <a href="https://doi.org/10.1016/j.cell.2013.12.042" target="_blank">doi:10.1016/j.cell.2013.12.042</a></li>
 <li>Rangaraju, V., Lauterbach, M., &amp; Schuman, E. M. (2019). Spatially stable mitochondrial compartments fuel local translation during plasticity. <a href="https://doi.org/10.1016/j.cell.2018.12.013" target="_blank">doi:10.1016/j.cell.2018.12.013</a></li>
 <li>Divakaruni, S. S., Van Dyke, A. M., Chandra, R., et al. (2018). Long-term potentiation requires a rapid burst of dendritic mitochondrial fission during induction. <a href="https://doi.org/10.1016/j.neuron.2018.09.025" target="_blank">doi:10.1016/j.neuron.2018.09.025</a></li>
@@ -2318,6 +2319,8 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Baboli, M., Wang, F., Dong, Z., et al. (2024). Absolute Metabolite Quantification in Individuals with Glioma and Healthy Individuals Using Whole-Brain Three-dimensional MR Spectroscopic and Echo-planar Time-resolved Imaging. <a href="https://doi.org/10.1148/radiol.232401" target="_blank">doi:10.1148/radiol.232401</a></li>
 <li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
 <li>Rzechorzek, N. M., Thrippleton, M. J., Chappell, F. M., et al. (2022). A daily temperature rhythm in the human brain predicts survival after brain injury. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">doi:10.1093/brain/awab466</a></li>
+<li>Rogala, J., et al. (2024). Local variation in brain temperature explains gender-specificity of working memory performance. <a href="https://doi.org/10.3389/fnhum.2024.1398034" target="_blank">doi:10.3389/fnhum.2024.1398034</a></li>
+<li>Tan, Y., Liu, W., Li, Y., et al. (2025). Measurement of Healthy Adult Brain Temperature Using <sup>1</sup>H Magnetic Resonance Spectroscopy Thermometry. <a href="https://doi.org/10.1007/s00062-024-01467-3" target="_blank">doi:10.1007/s00062-024-01467-3</a></li>
 <li>Reimer, J., McGinley, M. J., Liu, Y., et al. (2016). Pupil fluctuations track rapid changes in adrenergic and cholinergic activity in cortex. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">doi:10.1038/ncomms13289</a></li>
 <li>Louveau, A., Smirnov, I., Keyes, T. J., et al. (2015). Structural and functional features of central nervous system lymphatic vessels. <a href="https://doi.org/10.1038/nature14432" target="_blank">doi:10.1038/nature14432</a></li>
 <li>Ahn, J. H., Cho, H., Kim, J.-H., et al. (2019). Meningeal lymphatic vessels at the skull base drain cerebrospinal fluid. <a href="https://doi.org/10.1038/s41586-019-1419-5" target="_blank">doi:10.1038/s41586-019-1419-5</a></li>

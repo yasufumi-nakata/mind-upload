@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-21 / 位置づけ: Technical / natural science only
+- 更新日: 2026-03-22 / 位置づけ: Technical / natural science only
 
 ## このページの役割
 This page responds to the intuition that if we know the wiring diagram and cell type, most of the rest will fall into place. Against that intuition, it organizes the maintenance mechanisms that remain separate variables in primary literature: intrinsic excitability, activity-dependent transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, AIS and ion-channel landscapes, firing-rate set points, sleep-dependent renormalization, sleep architecture / replay-coupling, myelin / oligodendrocyte coupling, thermal-state, ionic milieu / chloride homeostasis, local proteostasis / synaptic-tagging state, cargo-transport / cytoskeletal trafficking state, perisynaptic extracellular matrix / perineuronal-net state, local ATP supply and mitochondrial arrangement, synaptic-density proxies including human SV2A PET, glial metabolism, clearance / immune support, and molecular turnover. It focuses only on technology and natural science, not philosophy or legal systems.
@@ -35,6 +35,7 @@ What is shown here is the minimum list of hidden states that must be accounted f
 - Proteostasis evidence already spans tag/capture, branch-level integration, synthesis/degradation balance, autophagy-linked remodeling, turnover-resistant persistence, and proteasome-capacity intervention, so one proteostasis paper does not settle late-stabilization completeness.
 - Bioenergetic evidence already spans presynaptic ATP-linked respiration, dendritic positioning / fission, synaptic ATP-synthase nano-organization, conserved mitochondrial Ca2+-efflux tuning, and human macro energetic proxy routes, so one energetic paper does not settle local mitochondrial state.
 - Cargo evidence already spans postsynaptic receptor delivery, learning-phase microtubule-state gating, local vesicle confinement, axonal RNA localization, and presynaptic cargo retention, so one trafficking paper does not settle compartment-delivery completeness.
+- Thermal evidence already spans cellular / synaptic operating-point effects, rhythm / sequence perturbation, field-potential confound, device- or preparation-linked heating artifacts, brain-state proxy routes, and human macro thermometry, so one thermal paper does not settle thermal-state observability.
 - Astrocyte evidence already spans lactate-shuttle support, minute-scale cortical network encoding, learning-associated recall ensembles, multiday stabilization, fear-state representation, and human MAO-B / reactive-astrogliosis PET proxy routes, so one astrocyte paper does not settle astrocyte-state observability.
 - An MRSI-derived metabolic-connectome label still needs metabolite-set, parceling, correction-model, and QC disclosure before it can be interpreted safely.
 - Current human routes already imply a calibrator-role matrix: SV2A PET constrains regional synaptic-density proxy space, 1H-MRSI constrains parcel-level biochemical similarity, dynamic DMI / 31P-MRS constrain macro energetic burden, myelin MRI constrains macro myelin burden, astrocyte PET constrains reactive-astrogliosis routes, and CSF mobility / glymphatic routes constrain macro support-state rather than local controller identity.
@@ -667,12 +668,74 @@ This route card forces the reader to state whether the paper <strong>measured a 
 
 <h3>11. thermal-state is not a background constant</h3>
 <p>
-The site had become good at separating <strong>timing-state</strong>, <strong>ionic state</strong>, and <strong>bioenergetic state</strong>, while still leaving <strong>brain temperature</strong> too implicit, as if it were already controlled once wiring and delay were discussed. That was too weak. <a href="https://doi.org/10.1111/j.1469-7793.1998.249bu.x" target="_blank">Hardingham &amp; Larkman (1998)</a> showed that the reliability of excitatory synaptic transmission in rat visual cortex depends on temperature, <a href="https://doi.org/10.1111/j.1469-7793.2000.00059.x" target="_blank">Volgushev et al. (2000)</a> showed that reversible cooling changes membrane properties and spike generation in rat visual cortical neurons, <a href="https://doi.org/10.1126/science.8446900" target="_blank">Moser et al. (1993)</a> showed that dentate field excitatory potentials can scale linearly with brain temperature and mask learning-specific changes, and <a href="https://doi.org/10.1038/nature07448" target="_blank">Long &amp; Fee (2008)</a> showed that local cooling stretches song timing across timescales. Therefore, even with the same connectome, cell type, nominal weights, and myelin proxy, <strong>release reliability, membrane kinetics, field-potential amplitude, and sequence timing can still differ if thermal-state differs</strong>.
+The site had become good at separating <strong>timing-state</strong>, <strong>ionic state</strong>, and <strong>bioenergetic state</strong>, while still leaving <strong>brain temperature</strong> too implicit, as if it were already controlled once wiring and delay were discussed. That was too weak. <a href="https://doi.org/10.1111/j.1469-7793.1998.249bu.x" target="_blank">Hardingham &amp; Larkman (1998)</a>, <a href="https://doi.org/10.1371/journal.pone.0232451" target="_blank">Van Hook (2020)</a>, and <a href="https://doi.org/10.1111/j.1469-7793.2000.00059.x" target="_blank">Volgushev et al. (2000)</a> show that synaptic reliability, membrane properties, and spike output can all change with thermal operating point. <a href="https://doi.org/10.1126/science.8446900" target="_blank">Moser et al. (1993)</a> showed that dentate field excitatory potentials can scale linearly with brain temperature and mask learning-specific changes. <a href="https://doi.org/10.1038/nature07448" target="_blank">Long &amp; Fee (2008)</a> and <a href="https://doi.org/10.1152/jn.00890.2009" target="_blank">Reig et al. (2010)</a> showed that cooling or warming can move sequence timing and cortical rhythm regime. Therefore, even with the same connectome, cell type, nominal weights, and myelin proxy, <strong>release reliability, membrane kinetics, field-potential amplitude, and sequence timing can still differ if thermal-state differs</strong>.
 </p>
 
 <strong>How this site reads current human evidence</strong>
 <p>
-Healthy-human <a href="https://doi.org/10.1093/brain/awab466" target="_blank">MRS thermometry (Rzechorzek et al., 2022)</a> established a 4D map of brain temperature and daily thermal rhythms, which is important evidence that thermal-state is biologically real and measurable in humans. However, it remains a <strong>regional macro thermal proxy</strong>, not a direct readout of cell-specific microtemperature, synapse-specific heating burden, or a local thermal controller. On this site, human thermometry therefore supports the existence of another layer without being promoted to local thermal-state ground truth.
+Healthy-human thermal evidence is also not one thing. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a> established a 4D map of brain temperature and daily thermal rhythms. <a href="https://doi.org/10.3389/fnhum.2024.1398034" target="_blank">Rogala et al. (2024)</a> linked task-related temperature change to working-memory performance and BOLD responses in explicitly sampled voxels. <a href="https://doi.org/10.1007/s00062-024-01467-3" target="_blank">Tan et al. (2025)</a> measured healthy-adult frontal-lobe temperature with <sup>1</sup>H-MRS thermometry and reported an age-related decrease in brain temperature together with a brain-body temperature gradient. These are important advances, but they remain <strong>macro thermal proxy</strong> routes, not direct readouts of cell-specific microtemperature, synapse-specific heating burden, or a local thermal controller. On this site, human thermometry therefore supports the existence of another layer without being promoted to local thermal-state ground truth.
+</p>
+
+<strong>2026-03-22 addendum: thermal evidence now needs a route card</strong>
+<p>
+The remaining weakness on this page was that <strong>thermal evidence</strong> could still collapse several different inferential objects into one bucket. The primary literature does not support that shortcut. <a href="https://doi.org/10.1111/j.1469-7793.1998.249bu.x" target="_blank">Hardingham &amp; Larkman (1998)</a> and <a href="https://doi.org/10.1371/journal.pone.0232451" target="_blank">Van Hook (2020)</a> are about <strong>temperature-dependent synaptic / membrane operating point</strong>. <a href="https://doi.org/10.1126/science.8446900" target="_blank">Moser et al. (1993)</a> is about <strong>field-potential confounding by brain temperature</strong>. <a href="https://doi.org/10.1038/nature07448" target="_blank">Long &amp; Fee (2008)</a> and <a href="https://doi.org/10.1152/jn.00890.2009" target="_blank">Reig et al. (2010)</a> are about <strong>sequence-timing / rhythm-regime perturbation under cooling or warming</strong>. <a href="https://doi.org/10.1038/s41593-019-0422-3" target="_blank">Owen et al. (2019)</a> and <a href="https://doi.org/10.1038/s42003-023-04542-6" target="_blank">Boorman et al. (2023)</a> show that <strong>device- or preparation-linked heating/cooling can distort neural and neurovascular readouts</strong>. <a href="https://doi.org/10.1038/s41598-025-21175-3" target="_blank">Lazopulo et al. (2025)</a> is a <strong>brain-state proxy route</strong>, while <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>, <a href="https://doi.org/10.3389/fnhum.2024.1398034" target="_blank">Rogala et al. (2024)</a>, and <a href="https://doi.org/10.1007/s00062-024-01467-3" target="_blank">Tan et al. (2025)</a> are <strong>human macro thermometry / task-linked thermal routes</strong>. Therefore, this site now requires a <strong>thermal route card</strong> before a claim is promoted beyond a local, explicitly named ceiling.
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be fixed explicitly</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the paper is about <strong>cellular / synaptic operating point</strong>, <strong>field-potential confound</strong>, <strong>sequence / rhythm perturbation</strong>, <strong>device- or preparation-linked heating artifact</strong>, <strong>brain-state proxy</strong>, or <strong>human macro thermometry</strong>.</td>
+<td>Local cooling, electrophysiology confounds, optogenetic heating, and human MRS thermometry collapse into one phrase such as <code>thermal evidence shows the relevant state</code>.</td>
+</tr>
+<tr>
+<td><strong>Direct thermal observable</strong></td>
+<td>Name the actual thermal object: tissue temperature, cortical-surface setpoint, implanted thermistor readout, MRS-derived temperature estimate, or a temperature-modulated neural / vascular response.</td>
+<td>The site stops distinguishing between directly measured temperature and a downstream neural or hemodynamic effect that only co-varies with temperature.</td>
+</tr>
+<tr>
+<td><strong>Spatial / preparation regime</strong></td>
+<td>Fix whether the result comes from acute slice, local cortical surface, implanted in vivo probe, named human MRS voxel, or whole-brain macro map.</td>
+<td>A local slice mechanism or a frontal-voxel human measurement is silently promoted to whole-brain thermal-state observability.</td>
+</tr>
+<tr>
+<td><strong>Driver / perturbation route</strong></td>
+<td>Disclose whether temperature changed through local cooling, bath warming, laser / device heating, anesthesia / preparation effects, endogenous state transitions, or only passive observation.</td>
+<td>The paper is overread as if the temperature route were controlled and interpretable when the driver itself remained ambiguous.</td>
+</tr>
+<tr>
+<td><strong>Time window</strong></td>
+<td>Name whether the route concerns subsecond-to-seconds kinetics, trial-averaged field potentials, minutes-long stimulation, task-block change, sleep-state transitions, or circadian / daily rhythm.</td>
+<td>A diurnal human map is silently rephrased as current local thermal-state, or a short stimulation artifact is silently promoted to long-horizon maintenance evidence.</td>
+</tr>
+<tr>
+<td><strong>Functional target</strong></td>
+<td>State whether the dependent claim is synaptic reliability, spike generation, rhythm regime, sequence timing, neurovascular transfer, task association, or state tracking.</td>
+<td>A result that supports one target is promoted to a generic statement that temperature-complete neural state was obtained.</td>
+</tr>
+<tr>
+<td><strong>Human proxy class / acquisition burden</strong></td>
+<td>If the route is human, write whether it is macro thermometry, task-linked thermal mapping, or another bounded proxy, together with voxel coverage, acquisition burden, and whether the route is whole-brain or local.</td>
+<td>Human thermometry is silently promoted to cell-specific thermal controller readout or routine field-ready whole-brain thermal surveillance.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Write which local variables remained latent, especially microtemperature gradients, synapse-specific heating burden, cell-type-specific thermal sensitivity, and the controller that produced the observed temperature change.</td>
+<td>The site accidentally treats <code>brain temperature was measured</code> as equivalent to local thermal-state completeness.</td>
+</tr>
+</tbody>
+</table>
+
+<strong>Why this route card is necessary here</strong>
+<p>
+This route card forces the reader to state whether the paper uses temperature as a <strong>controller</strong>, a <strong>confound</strong>, a <strong>proxy</strong>, or a <strong>macro human measurement</strong>. Without that separation, a local cooling paper, an optogenetic-heating warning, a neurovascular temperature study, and an MRS thermometry paper can all sound like the same kind of progress even though they answer different questions and stop at different claim ceilings.
 </p>
 
 <h3>12. bioenergetic / mitochondrial state is not another name for glial support</h3>
@@ -1091,8 +1154,8 @@ The reason this section needed a second pass is that “human evidence is starti
 <td>CSF-level ionic / circadian proxy, not local chloride or E<sub>GABA</sub> ground truth.</td>
 </tr>
 <tr>
-<td><strong>human brain thermometry</strong><br>Rzechorzek et al.</td>
-<td>Regional brain temperature rhythms and a macro thermal map measured with MRS thermometry.</td>
+<td><strong>human brain thermometry / task-linked thermal mapping</strong><br>Rzechorzek et al., Rogala et al., Tan et al.</td>
+<td>Regional brain temperature rhythms, frontal-lobe spectroscopy temperatures, and task-linked macro thermal changes measured with MRS thermometry.</td>
 <td>Cell-specific microtemperature, synapse-specific heating burden, and local thermal control around the same circuit.</td>
 <td>Macro thermal proxy, not direct readout of local thermal-state.</td>
 </tr>
@@ -1129,7 +1192,7 @@ The reason this section needed a second pass is that “human evidence is starti
 </tbody>
 </table>
 <p>
-This distinction matters operationally. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> push the <strong>fixed-tissue structural scaffold</strong>. <a href="https://doi.org/10.1126/scitranslmed.aaf6667" target="_blank">Finnema et al. (2016)</a>, <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a>, and <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> push a <strong>regional synaptic-density proxy</strong>. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> and <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> push parcel-level biochemical organization. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a> push a <strong>macro thermal proxy</strong>. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> push energetic proxies. <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a>, <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">Qian et al. (2025)</a>, and <a href="https://doi.org/10.1111/jsr.13522" target="_blank">Forsberg et al. (2022)</a> push <strong>macro ionic proxies</strong>. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> pushes a macro-myelin proxy. <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>, <a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a>, and <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> push perturbation-conditioned plasticity proxies. <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> push a <strong>human astrocyte-related PET proxy</strong>. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> push macro support-state proxies. <strong>These are not interchangeable evidence classes.</strong>
+This distinction matters operationally. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> push the <strong>fixed-tissue structural scaffold</strong>. <a href="https://doi.org/10.1126/scitranslmed.aaf6667" target="_blank">Finnema et al. (2016)</a>, <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a>, and <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> push a <strong>regional synaptic-density proxy</strong>. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> and <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> push parcel-level biochemical organization. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>, <a href="https://doi.org/10.3389/fnhum.2024.1398034" target="_blank">Rogala et al. (2024)</a>, and <a href="https://doi.org/10.1007/s00062-024-01467-3" target="_blank">Tan et al. (2025)</a> push a <strong>macro thermal proxy</strong>. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> push energetic proxies. <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a>, <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">Qian et al. (2025)</a>, and <a href="https://doi.org/10.1111/jsr.13522" target="_blank">Forsberg et al. (2022)</a> push <strong>macro ionic proxies</strong>. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> pushes a macro-myelin proxy. <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>, <a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a>, and <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> push perturbation-conditioned plasticity proxies. <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> push a <strong>human astrocyte-related PET proxy</strong>. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> push macro support-state proxies. <strong>These are not interchangeable evidence classes.</strong>
 </p>
 
 <strong>Practical interpretation in this addendum</strong>
@@ -1172,9 +1235,14 @@ The remaining weakness after adding route cards was subtler. This page already s
 <td>Per-axon conduction timing, nodal microgeometry, or plasticity-complete restoration of a specific circuit.</td>
 </tr>
 <tr>
-<td><strong>Sodium MRI / MRS thermometry</strong><br>Qian et al., Rzechorzek et al.</td>
-<td>Macro ionic or thermal proxy for bounded whole-brain state burden.</td>
-<td>Local chloride set point, inhibitory sign at a given synapse, or submillimeter thermal microstate.</td>
+<td><strong>Sodium MRI / ionic proxy</strong><br>Qian et al.</td>
+<td>Macro ionic proxy for bounded whole-brain ion-state burden.</td>
+<td>Local chloride set point, transporter balance, or inhibitory sign at a given synapse.</td>
+</tr>
+<tr>
+<td><strong>MRS thermometry / task-linked thermal mapping</strong><br>Rzechorzek et al., Rogala et al., Tan et al.</td>
+<td>Macro thermal proxy for whole-brain rhythm, task-linked thermal shift, or bounded voxel-level thermal burden.</td>
+<td>Submillimeter thermal microstate, synapse-specific heating burden, or local thermal-controller identity.</td>
 </tr>
 <tr>
 <td><strong>TMS-EEG / sleep-plasticity proxy</strong><br>Huber et al., Kuhn et al., Zrenner et al., Fehér et al.</td>
@@ -1505,6 +1573,11 @@ The need is multi-axis. On the measurement side, <a href="https://doi.org/10.296
 <li>Volgushev, M., Vidyasagar, T. R., Chistiakova, M., Yousef, T., &amp; Eysel, U. T. (2000). Membrane properties and spike generation in rat visual cortical cells during reversible cooling. <em>The Journal of Physiology</em>, 522(1), 59-76. <a href="https://doi.org/10.1111/j.1469-7793.2000.00059.x" target="_blank">doi:10.1111/j.1469-7793.2000.00059.x</a></li>
 <li>Moser, E., Mathiesen, I., &amp; Andersen, P. (1993). Association between brain temperature and dentate field potentials in exploring and swimming rats. <em>Science</em>, 259(5099), 1324-1326. <a href="https://doi.org/10.1126/science.8446900" target="_blank">doi:10.1126/science.8446900</a></li>
 <li>Long, M. A., &amp; Fee, M. S. (2008). Using temperature to analyse temporal dynamics in the songbird motor pathway. <em>Nature</em>, 456, 189-194. <a href="https://doi.org/10.1038/nature07448" target="_blank">doi:10.1038/nature07448</a></li>
+<li>Van Hook, M. J. (2020). Temperature effects on synaptic transmission and neuronal function in the visual thalamus. <em>PLoS One</em>, 15(4), e0232451. <a href="https://doi.org/10.1371/journal.pone.0232451" target="_blank">doi:10.1371/journal.pone.0232451</a></li>
+<li>Reig, R., Mattia, M., Compte, A., Belmonte, C., &amp; Sanchez-Vives, M. V. (2010). Temperature modulation of slow and fast cortical rhythms. <em>Journal of Neurophysiology</em>, 103(3), 1253-1261. <a href="https://doi.org/10.1152/jn.00890.2009" target="_blank">doi:10.1152/jn.00890.2009</a></li>
+<li>Owen, S. F., Liu, M. H., &amp; Kreitzer, A. C. (2019). Thermal constraints on in vivo optogenetic manipulations. <em>Nature Neuroscience</em>, 22, 1061-1065. <a href="https://doi.org/10.1038/s41593-019-0422-3" target="_blank">doi:10.1038/s41593-019-0422-3</a></li>
+<li>Boorman, L. W., Harris, S. S., Shabir, O., Lee, L., Eyre, B., Howarth, C., &amp; Berwick, J. (2023). Bidirectional alterations in brain temperature profoundly modulate spatiotemporal neurovascular responses in-vivo. <em>Communications Biology</em>, 6, 185. <a href="https://doi.org/10.1038/s42003-023-04542-6" target="_blank">doi:10.1038/s42003-023-04542-6</a></li>
+<li>Lazopulo, A., Emmenegger, Y., Đukanović, N., Hoekstra, M. M. B., &amp; Franken, P. (2025). Brain temperature as proxy for brain state and oscillatory activity in the mouse. <em>Scientific Reports</em>, 15, 37301. <a href="https://doi.org/10.1038/s41598-025-21175-3" target="_blank">doi:10.1038/s41598-025-21175-3</a></li>
 <li>Pizzorusso, T., Medini, P., Berardi, N., Chierzi, S., Fawcett, J. W., &amp; Maffei, L. (2002). Reactivation of ocular dominance plasticity in the adult visual cortex. <em>Science</em>, 298(5596), 1248-1251. <a href="https://doi.org/10.1126/science.1072699" target="_blank">doi:10.1126/science.1072699</a></li>
 <li>Frischknecht, R., Heine, M., Perrais, D., Seidenbecher, C. I., Choquet, D., &amp; Gundelfinger, E. D. (2009). Brain extracellular matrix affects AMPA receptor lateral mobility and short-term synaptic plasticity. <em>Nature Neuroscience</em>, 12(7), 897-904. <a href="https://doi.org/10.1038/nn.2338" target="_blank">doi:10.1038/nn.2338</a></li>
 <li>Gogolla, N., Caroni, P., Lüthi, A., &amp; Herry, C. (2009). Perineuronal nets protect fear memories from erasure. <em>Science</em>, 325(5945), 1258-1261. <a href="https://doi.org/10.1126/science.1174146" target="_blank">doi:10.1126/science.1174146</a></li>
@@ -1574,6 +1647,8 @@ The need is multi-axis. On the measurement side, <a href="https://doi.org/10.296
 <li>Qian, Y., Zhao, T., Zheng, H., Weimer, J., &amp; Boada, F. E. (2012). High-resolution sodium imaging of human brain at 7 T. <em>Magnetic Resonance in Medicine</em>, 68(1), 227-233. <a href="https://doi.org/10.1002/mrm.23225" target="_blank">doi:10.1002/mrm.23225</a></li>
 <li>Qian, Y., Lin, Y.-C., Chen, X., Ge, Y., Lui, Y. W., &amp; Boada, F. E. (2025). Single-quantum sodium MRI at 3 T for separation of mono- and bi-T2 sodium signals. <em>Scientific Reports</em>, 15, 27427. <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">doi:10.1038/s41598-025-07800-1</a></li>
 <li>Rzechorzek, N. M., Thrippleton, M. J., Chappell, F. M., et al. (2022). A daily temperature rhythm in the human brain predicts survival after brain injury. <em>Brain</em>, 145(6), 2031-2048. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">doi:10.1093/brain/awab466</a></li>
+<li>Rogala, J., Dreszer, J., Sińczuk, M., Miciuk, Ł., Piątkowska-Janko, E., Bogorodzki, P., Wolak, T., Wróbel, A., &amp; Konarzewski, M. (2024). Local variation in brain temperature explains gender-specificity of working memory performance. <em>Frontiers in Human Neuroscience</em>, 18, 1398034. <a href="https://doi.org/10.3389/fnhum.2024.1398034" target="_blank">doi:10.3389/fnhum.2024.1398034</a></li>
+<li>Tan, Y., Liu, W., Li, Y., Zhang, N., Wang, M., Sun, S., &amp; Ma, L. (2025). Measurement of Healthy Adult Brain Temperature Using <sup>1</sup>H Magnetic Resonance Spectroscopy Thermometry. <em>Clinical Neuroradiology</em>, 35(1), 159-164. <a href="https://doi.org/10.1007/s00062-024-01467-3" target="_blank">doi:10.1007/s00062-024-01467-3</a></li>
 <li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <em>PNAS Nexus</em>, 4(3), pgaf072. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
 <li>Baadsvik, E. L., Weiger, M., Froidevaux, R., Schildknecht, C. M., Ineichen, B. V., &amp; Pruessmann, K. P. (2024). Myelin bilayer mapping in the human brain in vivo. <em>Magnetic Resonance in Medicine</em>, 91(6), 2332-2344. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">doi:10.1002/mrm.29998</a></li>
 <li>Hirschler, L., et al. (2025). Region-specific drivers of cerebrospinal fluid mobility measured with MRI in humans. <em>Nature Neuroscience</em>, 28, 1115-1126. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
