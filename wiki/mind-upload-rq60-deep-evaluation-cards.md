@@ -404,3 +404,19 @@ reading_time: "35-55分"
 - 判定内訳 `A/B/C=17/25/18` を再確認し、全行で `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用が維持されていることを確認しました。
 - `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` および `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` と突合し、同じ `RQ_TOTAL=60` / `A/B/C=17/25/18` を再確認しました。
 - `EEG-DATA` の数値ID再採番リスクを踏まえ、提出時参照は引き続き `DOI + dataset名 + access区分` を正とする運用を維持します。
+
+## 2026-03-21 23:26 JST 再検証ログ（本run / 深掘り4RQを固定）
+
+- `| Ux-y<br>` 行を機械再計数し、`RQ_TOTAL=60`（欠損・重複 `0`）を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` を再確認しました。
+- 本カード行で参照する主要EEG ID集合（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv`（`ID/旧ID`）に照合し、未解決ID `0` を確認しました。
+- `G3-G6` は `auto-research-funds/wiki/cards/*.md` で再照合し欠落 `0`、`G1/G2` は固定運用キーとして継続しました。
+
+### 本runで重点深掘りした4RQ（1件ずつの提出判断）
+
+| RQ | このrunで固定した焦点 | 最低成果物（このカードの提出単位） | 応募先（第一/予備） |
+|---|---|---|---|
+| U1-2 | 不確実性伝播の校正曲線を主成果に据えて、逆問題の再現境界を明示する。 | Inverse problem reproduction report (error/uncertainty) | `G1 / G4` |
+| U8-2 | 再較正頻度3条件で `性能維持率` と `運用コスト` の境界を可視化する。 | Closed loop safety KPI dashboard | `G2 / G5` |
+| U13-1 | 意味一致と因果一致の乖離を必須KPIにして、模倣過大評価を抑える。 | Intervention protocol and rebuttal condition definition | `G1 / G4` |
+| U15-2 | neurorights を技術監査項目へ写像し、EEGは補助証跡として扱う。 | System audit requirements table (technical log compatible) | `G2 / G6` |

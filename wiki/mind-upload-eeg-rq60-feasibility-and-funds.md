@@ -763,3 +763,20 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `A/B/C=17/25/18` を再計数し、全RQで `検証可否` `深掘り検証設計` `応募テーマ` `推奨EEG-DATA` が埋まっていることを確認しました。
 - `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` と `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` に同内容を同期し、`1RQ=1検証命題=1応募テーマ=1主データ` の運用を再固定しました。
 - 提出参照はID依存を避け、`DOI + dataset名 + access区分` を正本にする運用を継続します。
+
+## 2026-03-21 23:26 JST 再検証ログ（本run / 依頼: 全RQを1件ずつ深掘りでwiki更新）
+
+- 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull origin main` を実行し、`Already up to date` を確認しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` / 本ページ / `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `unique Ux-y` を機械再計数し、3ページとも `RQ_TOTAL=60`（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）を再確認しました。
+- `A/B/C=17/25/18` を再確認し、全RQで `検証可否` `深掘り検証設計` `応募テーマ` `推奨EEG-DATA` の欠損 `0` を確認しました。
+- RQ行由来の主要EEG参照ID集合（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv`（`ID/旧ID`）に照合し、未解決ID `0` を確認しました。
+- 助成ID `9Lx4dPK6a4k2gOb7` `Drbm6vBRDJkn0NGJ` `871pw3rLjNPKgqA0` `46z9VPE4wnkrvEJR` は `auto-research-funds/wiki/cards/*.md` で実在を再確認し、`G1/G2` は運用固定キーとして継続しました。
+
+### 本runで深掘り固定した4RQ（汎用横断ではなく1件ずつ）
+
+| RQ | 深掘りした検証命題 | 主データ（EEG-DATA） | 応募テーマ（auto-research-funds） | 応募先（第一/予備） |
+|---|---|---|---|---|
+| U1-2 | 導電率/電極配置/ノイズの不確実性が逆問題の信頼区間へどう伝播するかを、校正曲線で固定する。 | ID `56`（補助: `676, 1839`） | 不確実性推定・逆問題検証 | `G1 / G4` |
+| U8-2 | 再較正頻度の3条件比較で、性能維持率と運用コストのトレードオフ境界を固定する。 | ID `6`（補助: `2412, 696`） | 閉ループ運用・再較正設計 | `G2 / G5` |
+| U13-1 | 意味一致と因果一致を同一デコーダで分離し、模倣成功の過大主張を抑止する。 | ID `509`（補助: `13, 65`） | 模倣分離・因果整合KPI | `G1 / G4` |
+| U15-2 | neurorights を監査ログ要件へ写像し、EEGは制度監査の技術証跡として限定使用する。 | ID `49`（補助: `2412, 3419`） | 制度設計・監査要件定義 | `G2 / G6` |
