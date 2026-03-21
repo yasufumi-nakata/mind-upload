@@ -31,6 +31,7 @@ page_highlights:
   - "Clearance / immune evidence is not one class: drainage anatomy, ageing / AD lymphatic dysfunction, microglia-mediated synaptic control, human CSF-mobility MRI, and model-based human biomarker efflux should be audited separately with a route card."
   - "Bioenergetic evidence is not one class: presynaptic ATP-demand support, dendritic mitochondrial positioning / fission, synaptic ATP-synthase nano-organization, mitochondrial Ca2+-efflux tuning, and human macro energetic imaging should be audited separately with a route card."
   - "Astrocyte evidence is not one class: lactate-shuttle support, minute-scale cortical network encoding, learning-associated recall ensembles, multiday stabilization ensembles, fear-state representations, and human reactive-astrogliosis PET should be audited separately with a route card."
+  - "Proteostasis evidence is not one class: tag/capture eligibility, branch-level integration, synthesis-degradation balance, autophagy subtypes, turnover-resistant persistence, and proteasome-capacity interventions should be audited separately with a route card."
   - "Cell-type atlas and current plasticity-competent transcriptional state are different objects; static transcriptomic labels do not fix which neurons are eligible for allocation or stabilization."
   - "Gene-level transcript abundance does not fix post-transcriptional RNA-state: isoform choice, m6A-dependent translation / degradation, and RNA-editing ratio can still change plasticity and memory on the same transcript-count background."
   - "Transcript or bulk protein abundance does not fix phospho-signaling / second-messenger state: phosphosite occupancy, kinase/phosphatase balance, and signaling nanodomains can still change plasticity on the same abundance background."
@@ -53,6 +54,7 @@ known_points:
   - "Myelin, oligodendrocytes, thermal-state, ionic milieu / chloride homeostasis, activity-dependent transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local proteostasis / synaptic-tagging state, perisynaptic ECM / PNN state, local ATP supply and mitochondrial positioning, astrocytes, and the microglia / meningeal-lymphatic system all contribute to timing, plasticity, memory retrieval, long-term recovery, and clearance support."
   - "Even in humans, macro scaffolds and support-state proxies are starting to become visible through SV2A PET, MRSI-based metabolic connectomes, MRS thermometry, 31P-MRS, sodium MRI, dynamic deuterium metabolic imaging, myelin bilayer mapping, TMS / EEG / sleep plasticity proxies, and CSF / glymphatic proxies, although cell-specific maintenance-states still remain coarse."
   - "Myelin evidence already spans adaptive learning, timing-state control, plasticity-brake effects, remyelination recovery, and human macro-proxy classes, so a human myelin map alone does not settle per-axon timing-state or plasticity-complete restoration."
+  - "Proteostasis evidence already spans tag/capture, branch-level integration, synthesis/degradation balance, autophagy-linked remodeling, turnover-resistant persistence, and proteasome-capacity intervention, so one proteostasis paper does not settle late-stabilization completeness."
   - "Bioenergetic evidence already spans presynaptic ATP-linked respiration, dendritic positioning / fission, synaptic ATP-synthase nano-organization, conserved mitochondrial Ca2+-efflux tuning, and human macro energetic proxy routes, so one energetic paper does not settle local mitochondrial state."
   - "Astrocyte evidence already spans lactate-shuttle support, minute-scale cortical network encoding, learning-associated recall ensembles, multiday stabilization, fear-state representation, and human MAO-B / reactive-astrogliosis PET proxy routes, so one astrocyte paper does not settle astrocyte-state observability."
   - "An MRSI-derived metabolic-connectome label still needs metabolite-set, parceling, correction-model, and QC disclosure before it can be interpreted safely."
@@ -60,6 +62,7 @@ unknown_points:
   - "It is unclear at what granularity excitability, thermal-state, ionic milieu / chloride homeostasis, sleep homeostasis, local proteostasis / synaptic tagging, ECM / PNN state, bioenergetic support, metabolic support, and clearance support must be measured to approach sufficient conditions for WBE."
   - "It is not yet fixed how time-resolved transcription / chromatin audit should be submitted so that cell identity, current plasticity program, and memory-stabilization controller are not mixed."
   - "It is not yet fixed how post-transcriptional RNA-state should be audited without collapsing isoform choice, m6A-dependent translation / degradation, and RNA-editing ratio back into gene-level abundance."
+  - "It is not yet fixed which route-card fields should be mandatory when a proteostasis paper mixes tag/capture, autophagy subtype, turnover-resistant persistence, proteasome-capacity intervention, and human proxy language in one argument."
   - "It is not yet fixed which same-subject or human-compatible external calibrators could raise phospho-signaling / second-messenger claims beyond region-structured ex vivo atlas evidence."
   - "It is not yet fixed which same-subject or human-compatible external calibrators could raise bioenergetic / mitochondrial claims beyond macro energetic proxy evidence."
   - "It is not yet fixed which route-card fields should be mandatory when an astrocyte paper mixes lactate-shuttle support, ensemble recall / stabilization, fear-state representation, and human proxy language in one argument."
@@ -776,12 +779,75 @@ The need is multi-axis. On the anatomy side, <a href="https://doi.org/10.1038/na
 
 <h3>16. Local proteostasis / synaptic tagging under molecular turnover is another state layer</h3>
 <p>
-The weak point that became clearer in this pass was that the site separated <strong>current synaptic state</strong> from <strong>transcriptional / chromatin state</strong>, while still leaving <strong>the branch-local route that decides which potentiated synapse captures plasticity-related proteins and survives turnover</strong> too implicit. That is too coarse. <a href="https://doi.org/10.1038/385533a0" target="_blank">Frey &amp; Morris (1997)</a> proposed synaptic tagging as the condition that allows late LTP to capture plasticity-related proteins, <a href="https://doi.org/10.1038/ncomms2250" target="_blank">Shires et al. (2012)</a> demonstrated synaptic tagging and capture in the living rat, and <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">Govindarajan et al. (2011)</a> showed that the dendritic branch is a preferred integrative unit for protein-synthesis-dependent LTP. Furthermore, <a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">Fonseca et al. (2006)</a> showed that maintenance of late LTP depends on a balance between protein synthesis and proteasome-dependent degradation, <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">Pandey et al. (2021)</a> linked local autophagy-coupled translation to long-term memory formation, <a href="https://doi.org/10.1038/s42003-025-08459-0" target="_blank">Thomas et al. (2025)</a> showed that actin / spine geometry can persist on the timescale of the synaptic tag, and <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Lee et al. (2022)</a> showed that synaptic memory can survive molecular turnover by active state transfer. Therefore, even if <strong>the connectome, a weight estimate, and a one-shot transcriptomic measurement</strong> are given, <strong>which synapses remain capture-ready and which late changes persist under turnover</strong> can still remain latent.
+The weak point that became clearer in this pass was that the site separated <strong>current synaptic state</strong> from <strong>transcriptional / chromatin state</strong>, while still leaving <strong>the branch-local route that decides which potentiated synapse captures plasticity-related proteins and survives turnover</strong> too implicit. That is too coarse. <a href="https://doi.org/10.1038/385533a0" target="_blank">Frey &amp; Morris (1997)</a> proposed synaptic tagging as the condition that allows late LTP to capture plasticity-related proteins, <a href="https://doi.org/10.1038/ncomms2250" target="_blank">Shires et al. (2012)</a> demonstrated synaptic tagging and capture in the living rat, and <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">Govindarajan et al. (2011)</a> showed that the dendritic branch is a preferred integrative unit for protein-synthesis-dependent LTP. Furthermore, <a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">Fonseca et al. (2006)</a> showed that maintenance of late LTP depends on a balance between protein synthesis and proteasome-dependent degradation, <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">Pandey et al. (2021)</a> linked local autophagy-coupled translation to long-term memory formation, <a href="https://doi.org/10.1073/pnas.2315958121" target="_blank">Chang et al. (2024)</a> showed that secretory autophagy is a distinct route for activity-induced synaptic remodeling, <a href="https://doi.org/10.1038/s42003-025-08459-0" target="_blank">Thomas et al. (2025)</a> showed that actin / spine geometry can persist on the timescale of the synaptic tag, <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Lee et al. (2022)</a> showed that synaptic memory can survive molecular turnover by active state transfer, and <a href="https://doi.org/10.1111/acel.14492" target="_blank">Parker et al. (2025)</a> showed that proteasome augmentation can mitigate age-related spatial learning and memory decline in mice. Therefore, even if <strong>the connectome, a weight estimate, and a one-shot transcriptomic measurement</strong> are given, <strong>which synapses remain capture-ready, which local proteostasis route is operative, and which late changes persist under turnover</strong> can still remain latent.
 </p>
 <div class="note-box">
 <strong>What is still missing in humans</strong>
 <p>
 The current human routes on this site, such as SV2A PET, MRSI, 31P-MRS / sodium MRI / dynamic DMI, myelin maps, TMS-EEG, and CSF proxies, do not directly tell us which spine or dendritic branch carried the tag, captured the plasticity-related proteins, or ran the relevant translation/degradation/autophagy program. This is an inference from the measurement classes summarized below. Therefore, on this site, local proteostasis / synaptic tagging remains a <strong>local hidden state</strong> in humans unless it is externally calibrated or causally perturbed.
+</p>
+</div>
+<div class="note-box" id="proteostasis-route-card">
+<strong>2026-03-21 addendum: local proteostasis / synaptic-tagging evidence now needs a route card</strong>
+<p>
+The remaining weakness on this page was that it still let several different inferential objects collapse into one label such as <strong>proteostasis evidence</strong>. The primary literature does not support that shortcut. <a href="https://doi.org/10.1038/385533a0" target="_blank">Frey &amp; Morris (1997)</a> and <a href="https://doi.org/10.1038/ncomms2250" target="_blank">Shires et al. (2012)</a> are about <strong>tag / capture eligibility</strong>. <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">Govindarajan et al. (2011)</a> is about <strong>dendritic branch-level integration of protein-synthesis-dependent LTP</strong>. <a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">Fonseca et al. (2006)</a> and <a href="https://doi.org/10.1111/acel.14492" target="_blank">Parker et al. (2025)</a> are about <strong>synthesis-degradation or proteasome-capacity balance with memory consequences</strong>. <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">Pandey et al. (2021)</a> and <a href="https://doi.org/10.1073/pnas.2315958121" target="_blank">Chang et al. (2024)</a> are about <strong>autophagy-linked plasticity routes</strong>. <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">Lee et al. (2022)</a> and <a href="https://doi.org/10.1038/s42003-025-08459-0" target="_blank">Thomas et al. (2025)</a> are about <strong>turnover-resistant persistence or a candidate tag substrate</strong>. Therefore, this site now requires a <strong>local proteostasis / synaptic-tagging route card</strong> before a claim is promoted beyond a tag-setting clue, a branch-level integration result, an autophagy / proteasome perturbation, or a turnover-resistance mechanism.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be fixed explicitly</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the paper supports <strong>tag / capture eligibility</strong>, <strong>branch-level integration</strong>, <strong>synthesis-degradation balance</strong>, <strong>autophagy-linked remodeling</strong>, <strong>turnover-resistant persistence</strong>, or a <strong>proteasome-capacity intervention</strong>.</td>
+<td>Different inferential objects collapse into one phrase such as <code>proteostasis evidence supports memory stability</code>.</td>
+</tr>
+<tr>
+<td><strong>Biological regime / integrative unit</strong></td>
+<td>Name species, brain region, synapse or branch class, behavioral phase, and whether the relevant unit is the synapse, dendritic branch, neuron, or whole preparation.</td>
+<td>A branch-local mechanism or aging-intervention result is silently promoted to a generic whole-brain late-stabilization controller.</td>
+</tr>
+<tr>
+<td><strong>Direct observable / assay</strong></td>
+<td>Write the actual readout explicitly: tag/capture protocol, branch-restricted LTP, proteasome activity / assembly, autophagosome-autolysosome route, secretory-autophagy marker, stable actin fraction, spine geometry persistence, or another named observable.</td>
+<td><code>proteostasis changed</code> replaces the actual measured object, and assay-specific ceilings disappear.</td>
+</tr>
+<tr>
+<td><strong>Turnover / time window</strong></td>
+<td>State whether the claim is about minutes-to-hours late LTP, reconsolidation after retrieval, multiday persistence, ageing-related decline, or another explicitly named turnover window.</td>
+<td>An acute stabilization effect is overread as a durable turnover-resistant controller, or a chronic intervention is overread as an acute tag readout.</td>
+</tr>
+<tr>
+<td><strong>Controller / perturbation route</strong></td>
+<td>Name what was actually manipulated or assumed, such as protein synthesis blockade, proteasome modulation, autophagy pathway component, secretory-autophagy release factor, or active-state-transfer mechanism.</td>
+<td>The site ceases to distinguish direct mechanism, pathway perturbation, and inferred persistence under turnover.</td>
+</tr>
+<tr>
+<td><strong>Functional target</strong></td>
+<td>Name the dependent variable the claim is about, such as late LTP maintenance, spine remodeling, reconsolidation, contextual fear memory, spatial learning, or age-related cognitive decline.</td>
+<td>A result that constrains one target is promoted to a generic statement that <code>proteostasis solved long-term memory maintenance</code>.</td>
+</tr>
+<tr>
+<td><strong>Human observability / external calibration</strong></td>
+<td>State whether any human route is direct or whether current evidence remains an externally calibrated or proxy-only ceiling.</td>
+<td>Regional human proxies or animal causal evidence are silently promoted to branch-local human proteostasis readout.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Fix in one line what remains latent, especially tagged branch identity, PRP capture map, local ribosome / proteasome / autophagy state, same-subject whole-brain continuity, and responsible controller beyond the assayed pathway.</td>
+<td>The site accidentally treats <code>proteostasis evidence exists</code> as equivalent to late-stabilization-complete or maintenance-complete state capture.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Why this route card is necessary here</strong>
+<p>
+The need is multi-axis. On the local-integration side, <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">Govindarajan et al. (2011)</a> shows that the relevant unit can be the <strong>dendritic branch</strong> rather than the whole neuron. On the pathway side, <a href="https://doi.org/10.1073/pnas.2315958121" target="_blank">Chang et al. (2024)</a> shows that activity-induced remodeling is not exhausted by degradative autophagy because <strong>secretory autophagy</strong> can be selectively required. On the intervention side, <a href="https://doi.org/10.1111/acel.14492" target="_blank">Parker et al. (2025)</a> shows that changing <strong>proteasome capacity</strong> can alter learning and memory in aged mice, which is stronger than a correlational proteostasis sentence but still not a direct tag readout. On the human-observability side, current routes on this site still do not resolve tagged branches, PRP capture, local ribosome / proteasome / autophagy state, or same-subject whole-brain late-stabilization controllers. Therefore, this site does not let <strong>proteostasis evidence exists</strong> stand in for <strong>late-stabilization completeness</strong>.
 </p>
 </div>
 
