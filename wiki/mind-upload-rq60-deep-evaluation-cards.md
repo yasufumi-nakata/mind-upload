@@ -5,7 +5,7 @@ description: "RQごとに主張単位・判定境界・応募テーマ・主デ�
 article_type: Wiki
 subtitle: "1RQ=1検証命題=1応募テーマ=1主データを実行可能な形で固定"
 author: Mind Uploading Research Project
-last_updated: "2026-03-21"
+last_updated: "2026-03-22"
 note: "Per-RQ Deep Evaluation Cards"
 audience: "RQを個別に深掘りしながら応募計画へ落とし込みたい研究者"
 reading_time: "35-55分"
@@ -15,7 +15,7 @@ reading_time: "35-55分"
 
 > 汎用横断の要約ではなく、60RQを1件ずつ深く読むための固定カード集。
 
-- 更新日: 2026-03-21
+- 更新日: 2026-03-22
 - 前提: `mind-upload-eeg-rq60-feasibility-and-funds` と `mind-upload-eeg-rq60-grant-dataset-playbook` の整合を取った統合版
 
 ## このページの使い方
@@ -420,3 +420,12 @@ reading_time: "35-55分"
 | U8-2 | 再較正頻度3条件で `性能維持率` と `運用コスト` の境界を可視化する。 | Closed loop safety KPI dashboard | `G2 / G5` |
 | U13-1 | 意味一致と因果一致の乖離を必須KPIにして、模倣過大評価を抑える。 | Intervention protocol and rebuttal condition definition | `G1 / G4` |
 | U15-2 | neurorights を技術監査項目へ写像し、EEGは補助証跡として扱う。 | System audit requirements table (technical log compatible) | `G2 / G6` |
+
+## 2026-03-22 JST 再検証ログ（本run / pull後の深掘りカード監査）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `EEG-DATA` / `auto-research-funds` の各 `main` で `git pull --ff-only origin main` を実行し、最新化してから監査しました。
+- 本カードの `| Ux-y<br>` 行を再計数し、`RQ_TOTAL=60`（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` は維持されています。
+- ただし `EEG-DATA` 側の再採番により、数値IDは「同じ値でも別データセットを指す」ケースが発生するため、`主データ（ID）` と `補助データ（推奨ID）` は legacy 参照として扱います。
+- 実務正本は `mind-upload-eeg-rq60-feasibility-and-funds` 側の `D01-D24 + DOI + データセット名 + access区分` に固定し、当カードは `RQごとの主張境界・応募テーマ・最低成果物` の深掘り正本として運用します。
+

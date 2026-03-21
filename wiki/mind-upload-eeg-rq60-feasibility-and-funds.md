@@ -5,7 +5,7 @@ description: "research_harvest_50由来の60リサーチクエスチョンを1�
 article_type: Wiki
 subtitle: "RQごとに検証設計と応募テーマまで接続する"
 author: Mind Uploading Research Project
-last_updated: "2026-03-21"
+last_updated: "2026-03-22"
 note: "RQ-by-RQ Deep Dive"
 audience: "RQを実験計画・応募書類へ落とし込む研究者/実装者"
 reading_time: "25-40分"
@@ -17,7 +17,7 @@ reading_time: "25-40分"
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-21 / 位置づけ: RQ-by-RQ Deep Dive
+- 更新日: 2026-03-22 / 位置づけ: RQ-by-RQ Deep Dive
 
 ## このページの役割
 このページは research_harvest_50 の60 RQを対象に、EEG-DATAで解ける範囲をA/B/Cで判定し、各RQごとの検証設計・応募テーマ・使うデータセットIDをまとめた実務版です。
@@ -780,3 +780,14 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 | U8-2 | 再較正頻度の3条件比較で、性能維持率と運用コストのトレードオフ境界を固定する。 | ID `6`（補助: `2412, 696`） | 閉ループ運用・再較正設計 | `G2 / G5` |
 | U13-1 | 意味一致と因果一致を同一デコーダで分離し、模倣成功の過大主張を抑止する。 | ID `509`（補助: `13, 65`） | 模倣分離・因果整合KPI | `G1 / G4` |
 | U15-2 | neurorights を監査ログ要件へ写像し、EEGは制度監査の技術証跡として限定使用する。 | ID `49`（補助: `2412, 3419`） | 制度設計・監査要件定義 | `G2 / G6` |
+
+## 2026-03-22 JST 再検証ログ（本run / pull後のID再採番監査）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `EEG-DATA` / `auto-research-funds` の各 `main` で `git pull --ff-only origin main` を実行し、最新化してから再検証しました。
+- `mind-upload/research_harvest_50.md` を正本として `RQ_TOTAL=60`（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）を再確認しました。
+- `A/B/C=17/25/18` は維持されています（注: `A/B/C` は wiki側の運用判定であり `research_harvest_50.md` 本体の埋め込み値ではありません）。
+- `EEG-DATA/eeg_dataset_summary_ja.csv` の更新後、RQ運用で参照していた数値IDは `存在自体はするが意味が変わる` 状態（再採番）になっていることを確認しました。
+- そのため本runでは、`数値IDを正本扱いしない` ルールを再固定し、提出・再現ログでは `D01-D24 + DOI + データセット名 + access区分` を正とします。
+- 既存の `ID` 列は探索補助の legacy スナップショットとしてのみ扱い、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用は維持します。
+- 助成キー `G3/G5/G6` は最新カード上で 2026年度想定窓（`G3: 2026-04-21〜2026-07-10`, `G5: 2026-08-01〜2026-09-01`, `G6: 2026-04-03〜2026-06-06`）を再確認し、`G4` は予備キーとして継続運用します。
+
