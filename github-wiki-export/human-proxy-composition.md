@@ -28,6 +28,7 @@ The ceilings on this page are operational inferences drawn from primary literatu
 - SV2A PET, MRSI similarity graphs, dynamic DMRSI, myelin bilayer MRI, and CSF / glymphatic routes all require route-specific interpretation.
 - Simultaneous multimodal acquisition can reveal both common and divergent structure across modalities.
 - Global or shared multimodal factors can still include autonomic or vascular physiology, not only the target neural variable.
+- A same-subject bridge can still fail to preserve state continuity when acquisition order, elapsed time, or deformation correction are left implicit.
 
 ## まだ分かっていないこと
 - There is still no settled recipe for fusing current human proxy rows into same-subject, externally calibrated state identification.
@@ -101,7 +102,7 @@ This page stays on the technology and natural-science side only. It does not dis
 <tr>
 <td><strong>CSF mobility MRI</strong><br><a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a></td>
 <td>CSF mobility, explicitly distinguished from net flow or diffusion.</td>
-<td>0.45-mm isotropic 7 T MRI in 20 healthy younger individuals at rest, with region averages reported in 11.</td>
+<td>0.45-mm isotropic 7 T MRI with whole-brain rest maps in 20 healthy younger individuals, plus driver analyses reported in 11 of 24 total healthy participants.</td>
 <td>CSF-specific sequence design, mobility-encoding tensor model, 7 T acquisition, region interpretation.</td>
 <td><strong>Macro support-state / mobility proxy</strong>, not direct clearance flux or local immune-controller identification.</td>
 </tr>
@@ -115,7 +116,7 @@ This page stays on the technology and natural-science side only. It does not dis
 </tbody>
 </table>
 
-<h2>Five collapse errors to block</h2>
+<h2>Seven collapse errors to block</h2>
 <table>
 <thead>
 <tr>
@@ -150,6 +151,16 @@ This page stays on the technology and natural-science side only. It does not dis
 <td>Li used custom 7 T hardware in five participants; Baadsvik used two healthy volunteers with high-performance hardware; Hirschler used ultra-high-field MRI with a specialized sequence; Dagum used an investigational device. These are advances, but not routine whole-brain deployment.</td>
 <td>Name cohort size, hardware class, scan burden, device status, and whether the route is routine, specialized, or proof-of-principle.</td>
 </tr>
+<tr>
+<td><strong>Common-driver collapse</strong><br><code>if rows move together, they must be the same latent variable</code></td>
+<td><a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> found both common and divergent cross-modal structure, <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> found coupled global progression plus two distinct network patterns in simultaneous EEG-PET-MRI, and <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> showed that a major global fMRI mode is substantially coupled to autonomic physiology. Agreement can therefore reflect shared nuisance or shared global state rather than one solved target variable.</td>
+<td>Disclose shared-vs-specific decomposition, nuisance calibration, matched perturbation, and what still remains vulnerable to autonomic / vascular / motion-linked common drivers.</td>
+</tr>
+<tr>
+<td><strong>Increment-collapse</strong><br><code>more rows listed = more state closure</code></td>
+<td>Current primary papers advance different rows, but they do not by themselves show that a bundle outperforms the strongest row under matched subject, session, and condition. Diversity of rows is not yet evidence of incremental state closure.</td>
+<td>Report what the bundle adds beyond the strongest single row under the same reading rule, ideally with matched-condition or held-out evaluation, and say explicitly when the gain is only rhetorical.</td>
+</tr>
 </tbody>
 </table>
 
@@ -173,7 +184,51 @@ The distinction is explicit in the primary paper. <a href="https://doi.org/10.10
 It is tempting to think that if several modalities are acquired simultaneously, the composition problem disappears. The current primary literature does not support that shortcut. Simultaneous acquisition narrows one class of timing mismatch, but it still leaves open <strong>what is shared</strong>, <strong>what remains modality-specific</strong>, and <strong>what common factors may come from physiology rather than the target neural variable</strong>.
 </p>
 <p>
-<a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> used simultaneous wide-field Ca<sup>2+</sup> imaging and fMRI-BOLD in mice and found that the modalities reveal both <strong>common</strong> and <strong>divergent</strong> features of network organization. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> used simultaneous EEG-PET-MRI in humans and found tightly coupled global hemodynamic and metabolic progressions during descent into NREM sleep, while also identifying <strong>two distinct network patterns</strong> rather than one uniform multimodal state. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> further showed that a major low-frequency global fMRI mode is substantially coupled to <strong>autonomic arousal physiology</strong>. On this site, that means same-session multimodal acquisition still needs a <a href="https://mind-upload.com/verification.html#fusion-card">Fusion Card</a> and does not auto-upgrade a result to same-subject state closure.
+<a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> used simultaneous wide-field Ca<sup>2+</sup> imaging and fMRI-BOLD in mice and found that the modalities reveal both <strong>common</strong> and <strong>divergent</strong> features of network organization. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> used simultaneous EEG-PET-MRI in humans and found tightly coupled global hemodynamic and metabolic progressions during descent into NREM sleep, while also identifying <strong>two distinct network patterns</strong> rather than one uniform multimodal state. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> further showed that a major low-frequency global fMRI mode is substantially coupled to <strong>autonomic arousal physiology</strong>. On this site, that means same-session multimodal acquisition still needs a <a href="https://mind-upload.com/verification.html#fusion-card">Fusion Card</a> and does not auto-upgrade a result to same-subject state closure. It also means a proxy bundle still has to disclose whether the apparent agreement survives a <strong>common-driver audit</strong> and whether the bundle adds anything beyond the strongest single row.
+</p>
+
+<h2>Same-subject is not yet same-state when the bridge is sequential</h2>
+<p>
+The next shortcut to block is subtler than ordinary multimodal overreading. Even if two measurements come from the <strong>same subject</strong> or the <strong>same brain</strong>, they still do not automatically form one state sample when the bridge itself is sequential. The problem is not only that the modalities differ. The problem is that the pipeline can cross <strong>time</strong>, <strong>physiological regime</strong>, and <strong>tissue transformation</strong> before the second stage is acquired.
+</p>
+<p>
+<a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> showed that preservation route and fixation time course materially change extracellular-space retention and native geometry. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a> then showed that linking in vivo two-photon physiology to synchrotron microtomography and serial block-face EM requires a multistage correlative workflow with explicit landmarks and targeted subvolumes. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> showed that same-brain function plus EM remains a <strong>sequential local pipeline</strong> rather than simultaneous whole-state capture. Finally, <a href="https://doi.org/10.1038/nature14467" target="_blank">Attardo et al. (2015)</a> showed that adult CA1 dendritic spines are not static over relaxed windows, with mean lifetimes on the order of <strong>1-2 weeks</strong>. On this site, that means same-subject wording solves specimen identity only; it does <strong>not</strong> solve state continuity by itself.
+</p>
+<table>
+<thead>
+<tr>
+<th>Bridge failure mode</th>
+<th>Why it matters</th>
+<th>What must be disclosed instead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Time-gap collapse</strong><br><code>same subject = same time</code></td>
+<td>A live measurement and a later fixation or cross-day reacquisition can cross windows in which synaptic, excitability, sleep-related, or support-state variables drift.</td>
+<td>Name the exact elapsed time and which hidden-state families could change inside that window.</td>
+</tr>
+<tr>
+<td><strong>Regime-collapse</strong><br><code>same specimen = same physiological state</code></td>
+<td>Arousal, anesthesia, sleep deprivation, task condition, pharmacology, or recovery status can differ across the bridge even when the specimen is the same.</td>
+<td>Name whether the regime was matched, intentionally shifted, or left unmatched.</td>
+</tr>
+<tr>
+<td><strong>Geometry-collapse</strong><br><code>same brain = same coordinates</code></td>
+<td>Fixation, shrinkage, sectioning, and correlative registration change how points in live space are mapped to ex vivo space.</td>
+<td>Name landmarks, deformation model, manual versus automated correspondence, and unresolved mismatch.</td>
+</tr>
+<tr>
+<td><strong>Validation-collapse</strong><br><code>correlative workflow = validated bridge</code></td>
+<td>A bridge can be carefully engineered and still remain unvalidated for the exact state claim being made.</td>
+<td>Name the bridge validation rung: repeated live measurement, vessel / cell recovery, stimulation-site correspondence, histology check, or none.</td>
+</tr>
+</tbody>
+</table>
+
+<strong>Operational rule on this site</strong>
+<p>
+If the claim depends on treating a sequential bridge as one latent-state sample, this site now asks for the <a href="https://mind-upload.com/verification.html#state-continuity-bridge-card">Verification: State-Continuity Bridge Card</a>. Without that card, the result stays at the <strong>strongest directly supported live or destructive stage</strong> plus, at most, an <strong>unvalidated bridge hypothesis</strong>; it is not promoted to same-state cross-regime evidence.
 </p>
 
 <h2>What must be fixed before a proxy bundle is promoted</h2>
@@ -214,13 +269,14 @@ It is tempting to think that if several modalities are acquired simultaneously, 
 
 <strong>Operational rule on this site</strong>
 <p>
-If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich but ceiling-limited human evidence</strong>. It is not promoted to <strong>same-subject cross-stack state identification</strong>, <strong>unique internal-state recovery</strong>, or <strong>state-complete readout</strong>. The public-facing implementation of that rule is the <a href="https://mind-upload.com/verification.html#human-proxy-composition-card">Verification: Human Proxy Composition Card</a>.
+If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich but ceiling-limited human evidence</strong>. It is not promoted to <strong>same-subject cross-stack state identification</strong>, <strong>unique internal-state recovery</strong>, or <strong>state-complete readout</strong>. In particular, row diversity without a <strong>common-driver audit</strong> and without a clear <strong>increment over the strongest single row</strong> is not treated as real state closure. The public-facing implementation of that rule is the <a href="https://mind-upload.com/verification.html#human-proxy-composition-card">Verification: Human Proxy Composition Card</a>.
 </p>
 
 <h2>References (main)</h2>
 <ol>
-<li>Lu, Y., et al. (2023). Preserving the extracellular space for 3D electron microscopy of neural tissue. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
-<li>Shapson-Coe, A., et al. (2024). A petascale automated imaging pipeline for mapping neuronal circuits in human cortex. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
+<li>Lu, X., Han, X., Meirovitch, Y., et al. (2023). Preserving extracellular space for high-quality optical and ultrastructural studies of whole mammalian brains. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
+<li>Shapson-Coe, A., Januszewski, M., Berger, D. R., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
+<li>Bosch, C., Pacureanu, A., Patiño, J., et al. (2022). Functional and multiscale 3D structural investigation of brain tissue through correlative in vivo physiology, synchrotron microtomography and volume electron microscopy. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">doi:10.1038/s41467-022-30199-6</a></li>
 <li>Naganawa, M., Li, S., Nabulsi, N., et al. (2021). First-in-human evaluation of <sup>18</sup>F-SynVesT-1, a radioligand for PET imaging of synaptic vesicle glycoprotein 2A. <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">doi:10.2967/jnumed.120.249144</a></li>
 <li>Johansen, A., Beliveau, V., Colliander, E., et al. (2024). An in vivo high-resolution human brain atlas of synaptic density. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
 <li>Shatalina, E., Onwordi, E. C., Whitehurst, T., et al. (2024). The relationship between SV2A levels, neural activity, and cognitive function in healthy humans: A [<sup>11</sup>C]UCB-J PET and fMRI study. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">doi:10.1162/imag_a_00190</a></li>
@@ -232,4 +288,6 @@ If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich b
 <li>Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
 <li>Chen, J. E., Lewis, L. D., Coursey, S. E., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
 <li>Bolt, T. S., et al. (2025). Autonomic physiological coupling of the global fMRI signal. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">doi:10.1038/s41593-025-01945-y</a></li>
+<li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
+<li>Attardo, A., Fitzgerald, J. E., &amp; Schnitzer, M. J. (2015). Impermanence of dendritic spines in live adult CA1 hippocampus. <a href="https://doi.org/10.1038/nature14467" target="_blank">doi:10.1038/nature14467</a></li>
 </ol>

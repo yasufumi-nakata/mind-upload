@@ -125,7 +125,7 @@ This page stays on the technology and natural-science side only. It does not dis
 <tr>
 <td><strong>CSF mobility MRI</strong><br><a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a></td>
 <td>CSF mobility, explicitly distinguished from net flow or diffusion.</td>
-<td>0.45-mm isotropic 7 T MRI in 20 healthy younger individuals at rest, with region averages reported in 11.</td>
+<td>0.45-mm isotropic 7 T MRI with whole-brain rest maps in 20 healthy younger individuals, plus driver analyses reported in 11 of 24 total healthy participants.</td>
 <td>CSF-specific sequence design, mobility-encoding tensor model, 7 T acquisition, region interpretation.</td>
 <td><strong>Macro support-state / mobility proxy</strong>, not direct clearance flux or local immune-controller identification.</td>
 </tr>
@@ -141,7 +141,7 @@ This page stays on the technology and natural-science side only. It does not dis
 </section>
 
 <section class="section" id="collapse-errors">
-<h2 class="section-title">Five collapse errors to block</h2>
+<h2 class="section-title">Seven collapse errors to block</h2>
 <table class="data-table">
 <thead>
 <tr>
@@ -176,6 +176,16 @@ This page stays on the technology and natural-science side only. It does not dis
 <td>Li used custom 7 T hardware in five participants; Baadsvik used two healthy volunteers with high-performance hardware; Hirschler used ultra-high-field MRI with a specialized sequence; Dagum used an investigational device. These are advances, but not routine whole-brain deployment.</td>
 <td>Name cohort size, hardware class, scan burden, device status, and whether the route is routine, specialized, or proof-of-principle.</td>
 </tr>
+<tr>
+<td><strong>Common-driver collapse</strong><br><code>if rows move together, they must be the same latent variable</code></td>
+<td><a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> found both common and divergent cross-modal structure, <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> found coupled global progression plus two distinct network patterns in simultaneous EEG-PET-MRI, and <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> showed that a major global fMRI mode is substantially coupled to autonomic physiology. Agreement can therefore reflect shared nuisance or shared global state rather than one solved target variable.</td>
+<td>Disclose shared-vs-specific decomposition, nuisance calibration, matched perturbation, and what still remains vulnerable to autonomic / vascular / motion-linked common drivers.</td>
+</tr>
+<tr>
+<td><strong>Increment-collapse</strong><br><code>more rows listed = more state closure</code></td>
+<td>Current primary papers advance different rows, but they do not by themselves show that a bundle outperforms the strongest row under matched subject, session, and condition. Diversity of rows is not yet evidence of incremental state closure.</td>
+<td>Report what the bundle adds beyond the strongest single row under the same reading rule, ideally with matched-condition or held-out evaluation, and say explicitly when the gain is only rhetorical.</td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -207,7 +217,7 @@ The distinction is explicit in the primary paper. <a href="https://doi.org/10.10
 It is tempting to think that if several modalities are acquired simultaneously, the composition problem disappears. The current primary literature does not support that shortcut. Simultaneous acquisition narrows one class of timing mismatch, but it still leaves open <strong>what is shared</strong>, <strong>what remains modality-specific</strong>, and <strong>what common factors may come from physiology rather than the target neural variable</strong>.
 </p>
 <p>
-<a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> used simultaneous wide-field Ca<sup>2+</sup> imaging and fMRI-BOLD in mice and found that the modalities reveal both <strong>common</strong> and <strong>divergent</strong> features of network organization. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> used simultaneous EEG-PET-MRI in humans and found tightly coupled global hemodynamic and metabolic progressions during descent into NREM sleep, while also identifying <strong>two distinct network patterns</strong> rather than one uniform multimodal state. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> further showed that a major low-frequency global fMRI mode is substantially coupled to <strong>autonomic arousal physiology</strong>. On this site, that means same-session multimodal acquisition still needs a <a href="../verification.html#fusion-card">Fusion Card</a> and does not auto-upgrade a result to same-subject state closure.
+<a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> used simultaneous wide-field Ca<sup>2+</sup> imaging and fMRI-BOLD in mice and found that the modalities reveal both <strong>common</strong> and <strong>divergent</strong> features of network organization. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> used simultaneous EEG-PET-MRI in humans and found tightly coupled global hemodynamic and metabolic progressions during descent into NREM sleep, while also identifying <strong>two distinct network patterns</strong> rather than one uniform multimodal state. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> further showed that a major low-frequency global fMRI mode is substantially coupled to <strong>autonomic arousal physiology</strong>. On this site, that means same-session multimodal acquisition still needs a <a href="../verification.html#fusion-card">Fusion Card</a> and does not auto-upgrade a result to same-subject state closure. It also means a proxy bundle still has to disclose whether the apparent agreement survives a <strong>common-driver audit</strong> and whether the bundle adds anything beyond the strongest single row.
 </p>
 </section>
 
@@ -299,7 +309,7 @@ If the claim depends on treating a sequential bridge as one latent-state sample,
 <div class="note-box">
 <strong>Operational rule on this site</strong>
 <p>
-If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich but ceiling-limited human evidence</strong>. It is not promoted to <strong>same-subject cross-stack state identification</strong>, <strong>unique internal-state recovery</strong>, or <strong>state-complete readout</strong>. The public-facing implementation of that rule is the <a href="../verification.html#human-proxy-composition-card">Verification: Human Proxy Composition Card</a>.
+If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich but ceiling-limited human evidence</strong>. It is not promoted to <strong>same-subject cross-stack state identification</strong>, <strong>unique internal-state recovery</strong>, or <strong>state-complete readout</strong>. In particular, row diversity without a <strong>common-driver audit</strong> and without a clear <strong>increment over the strongest single row</strong> is not treated as real state closure. The public-facing implementation of that rule is the <a href="../verification.html#human-proxy-composition-card">Verification: Human Proxy Composition Card</a>.
 </p>
 </div>
 </section>
