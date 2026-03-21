@@ -5,7 +5,7 @@ description: "Publishes prior research collected through 50 decomposed questions
 article_type: "Evidence Bank"
 subtitle: "U0-U15 decomposition, current-status map, and prior literature (heavily cited)"
 author: Mind Uploading Research Project
-last_updated: "2026-03-20"
+last_updated: "2026-03-22"
 note: "Compiled from 50 worker tasks (curated for relevance)"
 audience: "Readers who want to browse a large literature set by unresolved issue rather than by paper count alone"
 reading_time: "20-35 min (about 7 min if you only read the statistics and U-map)"
@@ -17,7 +17,9 @@ page_highlights:
   - "Even though this page is citation-heavy, the statistics and current-status map alone provide a usable overview."
   - "The default entry path for technical and natural-science readers is fixed as U1/U7 -> U4 -> U13 -> U8 -> U3 -> U10."
   - "A paper-level technical-only shortlist is now linked at the front door so readers can jump from U labels to concrete anchors without scanning mixed archive pages first."
+  - "For technical readers, U1/U7 now separate field-formation visibility from inverse-solver uncertainty and direct-validation class, so scalp reachability is checked before source recovery language."
   - "For technical readers, destructive local ultrastructure is kept separate from living-human in vivo observability, and proxy class is now read separately from route maturity."
+  - "For technical readers, neuromodulatory evidence is now split into mixed arousal proxy, local transmitter sensing, regional atlas prior, occupancy PET, and challenge-linked displacement rather than one human-state meter."
   - "For technical readers, maintenance-state papers now include transcriptional stabilization, post-transcriptional RNA control, phospho-signaling, local proteostasis, cargo-routing, and astrocyte-state evidence rather than only generic support-variable papers."
   - "For technical readers, U10 now separates route families inside thermodynamic language, so lower bounds, time-asymmetry indices, model-based entropy flow, and physiology-side grounding are not compressed into one frontier."
 known_points:
@@ -26,7 +28,9 @@ known_points:
   - "Citation count should be read as thickness of attention or relevance, not as closure of the question."
   - "For technical and natural-science readers, it is safer to start with measurement, direct validation, closed-loop stability, and maintenance-state before moving to intake logs or governance topics."
   - "Technical readers who want concrete paper anchors first can now jump directly to the paper archive's 2025-2026 technical-only shortlist."
+  - "For U1/U7, a source-imaging paper still has to pass a field-formation visibility check before inverse-method or validation gains are read as broader recoverability."
   - "Destructive local ultrastructure and living-human in vivo proxy routes do not increase the same evidential axis, even when both are called human measurement advances."
+  - "For U3, neuromodulatory papers do not constrain one shared inferential object; mixed arousal proxies, local sensors, atlas priors, occupancy PET, and displacement PET still need to be read separately."
   - "Maintenance-state papers on transcriptional stabilization, post-transcriptional RNA control, phospho-signaling, local proteostasis, cargo-routing, and astrocyte multiday trace change what remains latent, not what is already directly measured."
   - "Thermodynamic evidence on this site is read only after route-family disclosure: brain-signal irreversibility, model-based entropy flow, and physiology-side energetic grounding remain different claim types."
 unknown_points:
@@ -149,7 +153,7 @@ The weakness of this page used to be that the <strong>intake log</strong> and th
 <tr>
 <td><strong>1. Measurement and human observability</strong></td>
 <td><strong>U1 / U7</strong></td>
-<td>Inverse-problem uncertainty, time synchronization, whether a paper advances a destructive local scaffold, a living-human proxy layer, or only metadata / standards, and whether the human route is still specialized or model-heavy.</td>
+<td>Field-formation visibility, inverse-problem uncertainty, time synchronization, whether a paper advances a destructive local scaffold, a living-human proxy layer, or only metadata / standards, and whether the human route is still specialized or model-heavy.</td>
 <td>Reading an increase in observables or a new human proxy as if it already implied state-complete reconstruction.</td>
 </tr>
 <tr>
@@ -173,7 +177,7 @@ The weakness of this page used to be that the <strong>intake log</strong> and th
 <tr>
 <td><strong>5. maintenance-state</strong></td>
 <td><strong>U3</strong></td>
-<td>Whether sleep-dependent homeostasis, transcriptional stabilization, post-transcriptional RNA control, phospho-signaling, local proteostasis / tag-capture balance, cargo-routing state, astrocyte multiday trace, myelin/metabolic support, and active maintenance have been dropped from the picture.</td>
+<td>Whether sleep-dependent homeostasis, transcriptional stabilization, post-transcriptional RNA control, phospho-signaling, local proteostasis / tag-capture balance, cargo-routing state, neuromodulatory class split, astrocyte multiday trace, myelin/metabolic support, and active maintenance have been dropped from the picture.</td>
 <td>Assuming that connectome plus cell type is already enough to close the long-run dynamical problem.</td>
 </tr>
 <tr>
@@ -191,9 +195,21 @@ The site-wide route-card update already fixed DCM / effective-connectivity claim
 </p>
 </div>
 <div class="note-box">
+<strong>Read U1 / U7 through the field-formation wall first</strong>
+<p>
+The remaining weakness in the literature route was that <strong>source validation</strong> and <strong>inverse-solver comparison</strong> still sat too close to the hidden assumption that the target source class had already reached the sensors. The primary literature does not support that shortcut. <a href="https://doi.org/10.1007/s10548-010-0154-x" target="_blank">Ahlfors et al. (2010)</a> showed strong orientation dependence in EEG / MEG sensitivity, <a href="https://doi.org/10.1002/hbm.20851" target="_blank">Ahlfors et al. (2010)</a> showed that extended or distributed sources can cancel at the surface, <a href="https://doi.org/10.1002/hbm.20571" target="_blank">Goldenholz et al. (2009)</a> showed that source extent and anatomy materially change cortical SNR, and <a href="https://doi.org/10.1002/hbm.25272" target="_blank">Piastra et al. (2021)</a> showed that EEG / MEG sensitivity depends on head-model detail including the CSF compartment. Therefore, on this page, U1 / U7 now asks technical readers to separate <strong>field-formation visibility</strong>, <strong>inverse uncertainty</strong>, and <strong>validation class</strong> rather than reading `validated ESI` as a general route to internal-state recovery.
+</p>
+</div>
+<div class="note-box">
 <strong>Read human measurement papers as their own evidence class</strong>
 <p>
 For technical reading, the first split is between <strong>destructive local structure</strong> and <strong>living-human in vivo proxy routes</strong>. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a>, <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">Dorkenwald et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> belong to the destructive-route class because preservation, registration, throughput, and proofreading burden materially change what the structural result means. By contrast, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> raise different <strong>living-human observability classes</strong> and still leave explicit latent-state ceilings. On this page, the in vivo papers are read on two axes at once: <strong>what variable class the route constrains</strong> and <strong>how specialized or deployment-limited the route still is</strong>. Those ceilings still include <strong>current post-transcriptional RNA-state</strong>, <strong>current phospho-signaling / second-messenger state</strong>, <strong>branch-local proteostasis / tag-capture</strong>, <strong>branch- or bouton-specific cargo-routing</strong>, and other cell-specific maintenance controllers that current human in vivo routes do not yet close.
+</p>
+</div>
+<div class="note-box">
+<strong>Read neuromodulatory papers as a route-family split</strong>
+<p>
+The literature route for U3 also needed one more correction. The current primary literature does not support reading all neuromodulatory papers as one human-state meter. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> is a <strong>mixed arousal proxy</strong>, <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">Lohani et al. (2022)</a> and <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> are <strong>local acetylcholine sensing routes</strong>, <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> and <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">Goulas et al. (2021)</a> are <strong>receptor / transporter atlas priors</strong>, <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a> is <strong>occupancy PET</strong>, and <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a> plus <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">Erritzoe et al. (2020)</a> are <strong>challenge-linked displacement / release-sensitive PET</strong>. Therefore, on this page, U3 now asks readers to name the <strong>inferential object</strong>, <strong>time window</strong>, <strong>spatial scope</strong>, and <strong>model / challenge burden</strong> before any neuromodulatory paper is read as evidence about the current whole-brain transmitter state.
 </p>
 </div>
 <div class="note-box">
@@ -211,7 +227,7 @@ On the core pages, thermodynamic claims already require a route card, but this e
 <div class="note-box">
 <strong>If you want paper-level anchors before the U map</strong>
 <p>
-The default route on this page is still organized by unresolved question. If you already know that you want only the 2025-2026 technology / natural-science frontier papers first, jump directly to the <a href="mind_uploading_papers.html#technical-shortlist-20260320">Paper Collection: 2025-2026 technical-only shortlist</a>. That table gives concrete anchor papers for EEG foundation-model governance, destructive ultrastructure audit, living-human observability, maintenance-state boundary papers, direct source validation, closed-loop communication, and thermodynamic route-family splits before you return here to place them in U1/U7/U4/U13/U8/U3/U10.
+The default route on this page is still organized by unresolved question. If you already know that you want only the 2025-2026 technology / natural-science frontier papers first, jump directly to the <a href="mind_uploading_papers.html#technical-shortlist-20260320">Paper Collection: 2025-2026 technical-only shortlist</a>. That table gives concrete anchor papers for EEG foundation-model governance, field-formation visibility, destructive ultrastructure audit, living-human observability, neuromodulatory route-family splits, maintenance-state boundary papers, direct source validation, closed-loop communication, and thermodynamic route-family splits before you return here to place them in U1/U7/U4/U13/U8/U3/U10.
 </p>
 </div>
 <div class="note-box">

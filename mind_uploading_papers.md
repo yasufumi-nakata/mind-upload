@@ -12,7 +12,9 @@ known_points:
   - "This is a broad archive that also includes law, philosophy, and cultural theory, so the technological frontier should not be judged only from the top of a given year."
   - "A compact 2025-2026 technical-only shortlist now sits ahead of the mixed year cards so readers can skip archive noise when they only want current primary routes."
   - "Foundation-model / pretraining papers do not only say something about model scale; official challenge rules and leaderboard postmortems also say something about what the benchmark itself was measuring."
+  - "Source-imaging papers do not begin at the inverse solver; field-formation visibility remains an upstream route that determines which source classes can reach the sensors at all."
   - "Destructive human ultrastructure and living-human in vivo proxy routes strengthen different observability layers and should not be compressed into one progress bar."
+  - "Neuromodulatory papers do not constrain one common inferential object: mixed arousal proxy, local transmitter sensing, receptor / transporter atlas prior, occupancy PET, and challenge-linked displacement PET stay separate reading routes."
   - "Recent maintenance-state papers now include transcriptional stabilization, post-transcriptional RNA control, phospho-signaling, local proteostasis, cargo-routing, and astrocyte-state evidence, so they should not be filed only as generic background on support variables."
   - "Thermodynamic / irreversibility papers are now treated here as route-family claims: coarse-grained lower bounds, time-asymmetry classifiers / graph measures, model-based entropy-flow estimates, and physiology-side grounding are not one common measurement."
 unknown_points:
@@ -31,7 +33,7 @@ wiki_links:
   - label: "Wiki: Basics of verification infrastructure"
     url: "/wiki/verification-basics.html"
     description: "Helps frame what should count as stronger or weaker evidence when reading a paper."
-last_updated: "2026-03-20"
+last_updated: "2026-03-22"
 note: "Curated archive"
 audience: "People who want a broad view of related papers, a quick sense of yearly trends, or an entry point back to the original literature."
 reading_time: "5 minutes to check the table of contents; detailed reading only for the papers you need"
@@ -50,7 +52,9 @@ page_highlights:
   - "A compact 2025-2026 technical-only shortlist now gives a minimal reading path before the mixed year cards begin."
   - "In technology and natural science, it is safer to read not only badge and chronology, but also evidence class."
   - "EEG foundation-model papers are now treated as a distinct technical route because corpus disclosure, adaptation regime, benchmark governance, and leaderboard postmortems materially change what a score means."
+  - "ESI / source-imaging papers are now paired with a field-formation visibility route, because visibility failure is upstream of inverse-solver disagreement and direct validation."
   - "Recent human measurement papers are treated here as two linked but distinct classes: destructive local structure with explicit preservation / registration / proofreading burden, and living-human in vivo proxy routes with explicit claim ceilings and route maturity."
+  - "Neuromodulatory papers are now treated as a distinct route-family split because mixed proxies, local sensors, atlas priors, occupancy PET, and displacement PET answer different questions."
   - "Recent maintenance-state papers are treated here as route-changing boundary papers because transcriptional stabilization, post-transcriptional RNA control, phospho-signaling, local proteostasis, cargo-routing, and astrocyte multiday traces remain outside connectome-only reading."
   - "Recent thermodynamic papers are treated here as an auxiliary physical-grounding route only after route family, coarse-graining / timescale, and physiology-side grounding are disclosed."
 recommended_pages:
@@ -304,6 +308,12 @@ The remaining weakness after adding the broader priority route was speed. Techni
 <td>Do not read a top leaderboard rank or a larger model as if subject-invariant, site-robust EEG decoding were already solved.</td>
 </tr>
 <tr>
+<td><strong>Field-formation visibility wall</strong></td>
+<td><a href="https://doi.org/10.1007/s10548-010-0154-x" target="_blank">Ahlfors et al. (2010)</a>, <a href="https://doi.org/10.1002/hbm.20851" target="_blank">Ahlfors et al. (2010)</a>, <a href="https://doi.org/10.1002/hbm.20571" target="_blank">Goldenholz et al. (2009)</a>, <a href="https://doi.org/10.1002/hbm.25272" target="_blank">Piastra et al. (2021)</a></td>
+<td>These papers make the upstream constraint explicit: scalp observability already depends on source orientation, source extent, anatomy, cancellation, and head-model detail before any inverse solver is run.</td>
+<td>Do not read direct validation, dense sensors, or a better inverse method as if the target source class had already been fully visible at the sensors.</td>
+</tr>
+<tr>
 <td><strong>Destructive ultrastructure audit</strong></td>
 <td><a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a>, <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">Dorkenwald et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a></td>
 <td>The route distinction becomes concrete on the destructive side: preservation route, local surgical-fragment scope, sequential same-brain registration, and proofreading burden materially change what a nanoscale or petascale paper means.</td>
@@ -314,6 +324,12 @@ The remaining weakness after adding the broader priority route was speed. Techni
 <td><a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a></td>
 <td>The route distinction becomes concrete on the living-human side: regional synaptic-density PET, biochemical scaffold, kinetic glucose-rate imaging, and sleep-linked clearance each raise different in vivo observability classes and different route burdens.</td>
 <td>Do not collapse these papers into one progress bar or treat them as same-subject whole-brain hidden-state closure.</td>
+</tr>
+<tr>
+<td><strong>Neuromodulatory route-card split</strong></td>
+<td><a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a>, <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">Lohani et al. (2022)</a>, <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a>, <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a>, <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a>, <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">Erritzoe et al. (2020)</a></td>
+<td>The split becomes concrete between mixed arousal proxy, local transmitter sensing, regional receptor / transporter prior, exogenous occupancy PET, and challenge-linked displacement / release-sensitive PET.</td>
+<td>Do not read these papers as one direct meter of the current whole-brain neuromodulatory state or as interchangeable evidence about the same transmitter object.</td>
 </tr>
 <tr>
 <td><strong>Maintenance-state boundary papers</strong></td>
@@ -341,6 +357,18 @@ The remaining weakness after adding the broader priority route was speed. Techni
 </tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>Read source-imaging papers only after a visibility check</strong>
+<p>
+The archive is still too easy to overread if a reader sees a strong source-localization or direct-validation paper and silently assumes the relevant source class was already visible at the scalp. The upstream literature does not support that shortcut. <a href="https://doi.org/10.1007/s10548-010-0154-x" target="_blank">Ahlfors et al. (2010)</a> showed strong orientation dependence, <a href="https://doi.org/10.1002/hbm.20851" target="_blank">Ahlfors et al. (2010)</a> showed surface cancellation from extended sources, <a href="https://doi.org/10.1002/hbm.20571" target="_blank">Goldenholz et al. (2009)</a> showed that source extent and anatomy move detectability, and <a href="https://doi.org/10.1002/hbm.25272" target="_blank">Piastra et al. (2021)</a> showed that EEG / MEG sensitivity depends on head-model detail including CSF. On this site, field formation is therefore read as its own route before inverse-solver or validation papers are promoted.
+</p>
+</div>
+<div class="note-box">
+<strong>Read neuromodulatory papers as several different human routes</strong>
+<p>
+This archive also needed one more split to match the current public reading rules. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> is a mixed pupil-linked arousal route, <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">Lohani et al. (2022)</a> and <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> are local acetylcholine sensing routes, <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> and <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">Goulas et al. (2021)</a> are receptor / transporter atlas priors, <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a> is occupancy PET, and <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a> plus <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">Erritzoe et al. (2020)</a> are challenge-linked displacement routes. They do not constrain one common current-state object, so this archive now surfaces them as a separate route-family split instead of leaving them buried under generic `human observability`.
+</p>
+</div>
 <div class="note-box">
 <strong>If you only want the shortest technical path</strong>
 <p>
