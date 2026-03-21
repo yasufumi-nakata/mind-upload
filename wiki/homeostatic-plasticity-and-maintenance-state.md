@@ -26,6 +26,7 @@ accuracy_note: >
   long-term dynamics and memory maintenance. This does not mean sufficient conditions have been established.
 page_highlights:
   - "Maintenance-state includes not only intrinsic excitability, but also activity-dependent transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, AIS / ion-channel landscapes, sleep-dependent homeostasis, myelin / oligodendrocytes, thermal-state, ionic milieu / chloride homeostasis, local proteostasis / synaptic-tagging state, cargo-transport / cytoskeletal trafficking state, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, glial metabolism and astrocyte ensembles, and clearance / immune support."
+  - "ECM / PNN evidence is not one class: plasticity-window reopening, receptor-mobility constraint, microglia-driven matrix remodeling, cell-type-specific memory support, age-linked rescue, and human ex vivo histology should be audited separately with a route card."
   - "Sleep replay evidence is not one class: stage label, scalp coupling proxy, intracranial ripple evidence, closed-loop intervention, and difficulty-selective TMR should be audited separately with a route card."
   - "Myelin evidence is not one class: learning-dependent oligodendrogenesis, conduction microgeometry / timing-state control, plasticity-brake effects, remyelination-to-function recovery, and human macro-myelin proxies should be audited separately with a route card."
   - "Ionic evidence is not one class: chloride-set-point / E_GABAA tuning, interstitial-ion state switching, perisynaptic K+ clearance, human pathology, and macro human ionic proxies should be audited separately with a route card."
@@ -67,6 +68,7 @@ known_points:
 unknown_points:
   - "It is unclear at what granularity excitability, thermal-state, ionic milieu / chloride homeostasis, sleep homeostasis, local proteostasis / synaptic tagging, ECM / PNN state, bioenergetic support, metabolic support, and clearance support must be measured to approach sufficient conditions for WBE."
   - "It is not yet fixed how time-resolved transcription / chromatin audit should be submitted so that cell identity, current plasticity program, and memory-stabilization controller are not mixed."
+  - "It is not yet fixed which route-card fields should be mandatory when an ECM / PNN paper mixes enzymatic reopening, receptor-mobility constraint, microglial proteolysis, cell-type-specific deletion, aging rescue, and human histology in one argument."
   - "It is not yet fixed which route-card fields should be mandatory when a post-transcriptional paper mixes alternative splicing, m6A-dependent translation or degradation, RNA editing, and ex vivo atlas language in one argument."
   - "It is not yet fixed which human-compatible external calibrators could raise post-transcriptional RNA-state claims beyond hippocampal or ex vivo long-read atlas evidence."
   - "It is not yet fixed which route-card fields should be mandatory when a proteostasis paper mixes tag/capture, autophagy subtype, turnover-resistant persistence, proteasome-capacity intervention, and human proxy language in one argument."
@@ -597,6 +599,69 @@ The weakness I found in the current site was that although I separated synapses,
 <strong>How to read current human evidence</strong>
 <p>
 Human evidence for ECM / PNN state is still much weaker than the animal causal literature. <a href="https://doi.org/10.3390/ijms23158197" target="_blank">Boonen et al. (2022)</a> showed extracellular-matrix reorganization in human hippocampal sclerosis tissue, which is useful evidence that the matrix layer is biologically real in human disease tissue. But this remains <strong>ex vivo pathology</strong>, not an in vivo whole-brain readout of current ECM / PNN state. Therefore, on this site, human ECM evidence is treated as support for the existence of another layer, not as a direct measurement of ongoing plasticity gates.
+</p>
+</div>
+<div class="note-box" id="ecm-pnn-route-card">
+<strong>2026-03-21 addendum: ECM / PNN evidence now needs a route card</strong>
+<p>
+The remaining weakness on this page was that <strong>ECM / PNN evidence</strong> could still collapse several different inferential objects into one bucket. The primary literature does not support that shortcut. <a href="https://doi.org/10.1126/science.1072699" target="_blank">Pizzorusso et al. (2002)</a> is about <strong>enzymatic reopening of adult cortical plasticity windows</strong>. <a href="https://doi.org/10.1038/nn.2338" target="_blank">Frischknecht et al. (2009)</a> is about <strong>receptor lateral mobility and short-term plasticity under intact matrix constraints</strong>. <a href="https://doi.org/10.1016/j.cell.2020.05.050" target="_blank">Nguyen et al. (2020)</a> is about <strong>microglia-driven ECM engulfment that promotes synapse remodeling and memory consolidation</strong>. <a href="https://doi.org/10.1523/JNEUROSCI.1626-24.2024" target="_blank">Alexander et al. (2025)</a> is about <strong>cell-type-specific aggrecan loss that dissociates CA2 social / reversal memory from PV-cell contextual fear memory</strong>. <a href="https://doi.org/10.1111/acel.70139" target="_blank">Mehak et al. (2025)</a> is about <strong>age-linked CA2 PNN accumulation and ChABC rescue of recognition memory plus theta oscillations</strong>. <a href="https://doi.org/10.1002/epi4.12963" target="_blank">Lehner et al. (2024)</a> and <a href="https://doi.org/10.1007/s12035-024-04306-1" target="_blank">Banovac et al. (2025)</a> raise human relevance, but only as <strong>ex vivo hippocampal or postmortem cortical histology</strong>. Therefore, on this site, ECM / PNN claims now require a <strong>route card</strong> before they are promoted beyond a narrow, explicitly named ceiling.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>ECM / PNN route-card field</th>
+<th>What must be stated</th>
+<th>What goes wrong without it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the paper is about reopening a plasticity window, constraining receptor mobility, microglia- or protease-mediated matrix remodeling, cell-type-specific memory support, age / pathology-associated matrix shift, or human ex vivo mapping.</td>
+<td>One positive ECM result is silently promoted to <code>ECM controls memory</code> in general.</td>
+</tr>
+<tr>
+<td><strong>Matrix object and cell population</strong></td>
+<td>Name the actual matrix object and target population, such as CSPG digestion, aggrecan loss, brevican / lectican remodeling, peri-synaptic matrix clusters, CA2 pyramidal-cell PNNs, PV-cell PNNs, or postmortem WFA / VCAN / NCAN classes.</td>
+<td>The site accidentally treats every ECM paper as if it measured one interchangeable brain-wide matrix variable.</td>
+</tr>
+<tr>
+<td><strong>Direct observable</strong></td>
+<td>Write the direct readout: PNN density or intensity, receptor lateral mobility, matrix-cluster abundance, ECM engulfment / proteolysis, oscillatory readout, synapse-density change, or histological morphology / laminar distribution.</td>
+<td>A behavioral or electrophysiological effect is overread as direct ground truth of the current ECM controller.</td>
+</tr>
+<tr>
+<td><strong>Controller / perturbation route</strong></td>
+<td>State which controller or intervention was actually used, such as ChABC digestion, conditional aggrecan deletion, IL-33 / microglial ECM engulfment, ageing comparison, epilepsy pathology, or non-interventional postmortem mapping.</td>
+<td>Direct perturbation, developmental change, disease association, and descriptive histology are mixed together.</td>
+</tr>
+<tr>
+<td><strong>Functional target</strong></td>
+<td>Name the dependent variable explicitly: ocular-dominance plasticity, AMPAR mobility, social novelty memory, reversal learning, contextual fear memory, recognition memory, theta rhythmicity, or GABAergic plasticity.</td>
+<td>A paper that constrains one task or circuit phenomenon is promoted to a generic statement that <code>ECM solved plasticity or stabilization</code>.</td>
+</tr>
+<tr>
+<td><strong>Recovery / completeness boundary</strong></td>
+<td>State whether the result shows reopening, rescue under an aged or pathological condition, preservation against erasure, or complete restoration of a healthy matrix state.</td>
+<td>Any rescue after ECM manipulation is overread as proof that the healthy ECM / PNN state was fully reconstructed.</td>
+</tr>
+<tr>
+<td><strong>Human observability / external calibration</strong></td>
+<td>Disclose whether the human route is epilepsy pathology, postmortem cortical histology, or another ex vivo assay, and state explicitly that an in vivo whole-brain readout of current ECM / PNN gate state is still absent here.</td>
+<td>Human histology is silently promoted to same-subject, time-varying, whole-brain ECM-state observability.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Write which variables remain latent, especially current whole-brain matrix state, same-subject longitudinal ECM change, local plasticity-gate identity outside the measured circuit, and any human-compatible controller readout.</td>
+<td>The site accidentally treats <code>ECM evidence exists</code> as equivalent to ECM-complete or maintenance-complete state capture.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Why this route card is necessary here</strong>
+<p>
+This route card forces the reader to separate <strong>what matrix object changed</strong>, <strong>which cells carried that matrix</strong>, <strong>which intervention or controller was used</strong>, and <strong>whether the result was rescue, stabilization, or direct observation</strong>. Without that separation, ChABC reopening, CA2-specific aggrecan deletion, microglial ECM engulfment, ageing rescue, epilepsy histology, and postmortem cortical mapping can all sound like the same kind of progress even though they reduce different uncertainty terms and stop at very different claim ceilings.
 </p>
 </div>
 
@@ -1416,6 +1481,11 @@ A final correction is that static <sup>1</sup>H-MRSI similarity is not the same 
 <li>Chelini, G., Pantazopoulos, H., Durning, P., et al. (2024). Focal clusters of peri-synaptic matrix contribute to activity-dependent plasticity and memory in mice. <em>Cell Reports</em>, 43(7), 114112. <a href="https://doi.org/10.1016/j.celrep.2024.114112" target="_blank">doi:10.1016/j.celrep.2024.114112</a></li>
 <li>Jabłońska, K., Kaczor, K., Kółeczko, M., et al. (2024). Extracellular matrix integrity regulates GABAergic plasticity in the hippocampus. <em>Matrix Biology</em>, 136, 74-96. <a href="https://doi.org/10.1016/j.matbio.2024.11.001" target="_blank">doi:10.1016/j.matbio.2024.11.001</a></li>
 <li>Boonen, M., Hellings, N., Hoedemaekers, T., et al. (2022). Reorganization of the brain extracellular matrix in hippocampal sclerosis. <em>International Journal of Molecular Sciences</em>, 23(15), 8197. <a href="https://doi.org/10.3390/ijms23158197" target="_blank">doi:10.3390/ijms23158197</a></li>
+<li>Nguyen, P. T., Dorman, L. C., Pan, S., et al. (2020). Microglial Remodeling of the Extracellular Matrix Promotes Synapse Plasticity. <em>Cell</em>, 182(2), 388-403.e15. <a href="https://doi.org/10.1016/j.cell.2020.05.050" target="_blank">doi:10.1016/j.cell.2020.05.050</a></li>
+<li>Lehner, A., Hoffmann, L., Rampp, S., et al. (2024). Age-dependent increase of perineuronal nets in the human hippocampus and precocious aging in epilepsy. <em>Epilepsia Open</em>, 9(4), 1372-1381. <a href="https://doi.org/10.1002/epi4.12963" target="_blank">doi:10.1002/epi4.12963</a></li>
+<li>Alexander, G. M., Nikolova, V. D., Stöber, T. M., Gruzdev, A., Moy, S. S., &amp; Dudek, S. M. (2025). Perineuronal Nets on CA2 Pyramidal Cells and Parvalbumin-Expressing Cells Differentially Regulate Hippocampal-Dependent Memory. <em>Journal of Neuroscience</em>, 45(6), e1626242024. <a href="https://doi.org/10.1523/JNEUROSCI.1626-24.2024" target="_blank">doi:10.1523/JNEUROSCI.1626-24.2024</a></li>
+<li>Banovac, I., Prkačin, M. V., Kirchbaum, I., et al. (2025). Morphological and Molecular Characteristics of Perineuronal Nets in the Human Prefrontal Cortex-A Possible Link to Microcircuitry Specialization. <em>Molecular Neurobiology</em>, 62(1), 1094-1111. <a href="https://doi.org/10.1007/s12035-024-04306-1" target="_blank">doi:10.1007/s12035-024-04306-1</a></li>
+<li>Mehak, S. F., Shivakumar, A. B., Jijimon, F., Gupta, A., Pillai, V. G., &amp; Gangadharan, G. (2025). Targeting CA2 Perineuronal Nets Restores Recognition Memory and Theta Oscillations in Aged Mice. <em>Aging Cell</em>, 24(9), e70139. <a href="https://doi.org/10.1111/acel.70139" target="_blank">doi:10.1111/acel.70139</a></li>
 <li>Glykys, J., Dzhala, V., Egawa, K., Balena, T., Saponjian, Y., Kuchibhotla, K. V., Bacskai, B. J., Kahle, K. T., Zeuthen, T., &amp; Staley, K. J. (2014). Local impermeant anions establish the neuronal chloride concentration. <em>Science</em>, 343(6171), 670-675. <a href="https://doi.org/10.1126/science.1245423" target="_blank">doi:10.1126/science.1245423</a></li>
 <li>Heubl, M., Zhang, J., Pressey, J. C., Al Awabdh, S., Renner, M., Gomez-Castro, F., Moutkine, I., Eugène, E., Russeau, M., Kahle, K. T., Poncer, J.-C., &amp; Lévi, S. (2017). GABAA receptor dependent synaptic inhibition rapidly tunes KCC2 activity via the Cl-sensitive WNK1 kinase. <em>Nature Communications</em>, 8, 1776. <a href="https://doi.org/10.1038/s41467-017-01749-0" target="_blank">doi:10.1038/s41467-017-01749-0</a></li>
 <li>Ding, F., O'Donnell, J., Xu, Q., Kang, N., Goldman, N., &amp; Nedergaard, M. (2016). Changes in the composition of brain interstitial ions control the sleep-wake cycle. <em>Science</em>, 352(6285), 550-555. <a href="https://doi.org/10.1126/science.aad4821" target="_blank">doi:10.1126/science.aad4821</a></li>
