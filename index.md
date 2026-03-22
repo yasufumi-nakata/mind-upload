@@ -27,6 +27,7 @@ page_highlights:
   - "Astrocyte evidence is not one class: lactate-shuttle support, minute-scale cortical network encoding, learning-associated recall ensembles, multiday stabilization ensembles, fear-state representations, and human astrocyte PET proxies are kept separate."
   - "Rodent astrocyte causality, human reactive-astrogliosis PET, human CSF-mobility MRI, and model-based sleep-linked biomarker efflux do not compose automatically into one human maintenance-controller readout."
   - "Several living-human proxy rows are not promoted together unless same-subject relation, model burden, and residual hidden-state ceilings are disclosed explicitly."
+  - "A human tractography graph is not one stable object: superficial-white-matter access, gyral-endpoint bias, parcellation choice, and voxel resolution still change what the graph means."
   - "For hemodynamic modalities, BOLD or fNIRS amplitude is not read as neural difference unless vascular-state / CVR limits are audited separately."
   - "For EEG / MEG connectivity, wPLI, source-space graphs, and information-flow labels are not read as leak-proof communication maps or causal circuits unless leakage, perturbation, and pipeline limits are disclosed separately."
   - "Thermodynamic or irreversibility papers are kept on an auxiliary track; arrow-of-time results are not read as direct physical-dissipation or WBE-readiness evidence without a route card that names coarse-graining, hidden-degree risk, and quantity type."
@@ -45,6 +46,7 @@ known_points:
   - "Current human evidence comes in layers; proxy-rich routes still do not yield comparable whole-brain in vivo ground truth for every hidden state."
   - "Several human proxy rows do not add automatically; without same-subject relation, measurement-model disclosure, and cross-row calibration, the bundle stays below state-identification language."
   - "A chemical connectome plus nominal inhibitory edges still does not fix gap-junction coupling, endogenous field effects, or local inhibitory driving force."
+  - "A tractography-derived connectome can still change at the cortical-endpoint and parcel-graph stage even when the underlying diffusion signal is the same."
   - "For hemodynamic readouts, a group or longitudinal BOLD difference can still be dominated by vascular transfer state rather than neural change."
   - "For EEG / MEG connectivity readouts, volume conduction, source leakage, ghost interactions, and pipeline dependence still stop the claim before communication or causality."
   - "For thermodynamic claims, different estimator families still answer different questions, and partial observation can still hide dissipation, so irreversibility results stay auxiliary unless their route card is disclosed."
@@ -102,6 +104,13 @@ Mind-Upload is a site for breaking the large question, "Can a mind be reproduced
 <strong>Misreading To Block At The Entrance</strong>
 <p>
 After the March 2026 re-audit of primary literature, this site no longer accepts the reading that <strong>"if we have the wiring diagram and cell types, the rest is almost filled in."</strong> Sleep/wake-dependent renormalization, myelination and oligodendrocyte support, local bioenergetic / mitochondrial state, glial metabolism, and active maintenance under molecular turnover remain separate variables. Accordingly, this site does not treat <strong>connectome-complete</strong> as equivalent to <strong>emulation-complete</strong>. For a short explanation, see the hidden-state section in <a href="wbe_101.html#state-completeness">WBE 101</a>; for the evidence structure, see <a href="wiki/connectome-is-not-enough.html">Wiki: Why a Connectome Is Not Enough</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic Plasticity and Maintenance State</a>.
+</p>
+</div>
+
+<div class="note-box">
+<strong>If A Human Tractography Graph Sounds Like The Connectome Itself</strong>
+<p>
+This site now blocks that shortcut too. <a href="https://doi.org/10.1073/pnas.1418198112" target="_blank">Reveley et al. (2015)</a> showed that superficial white matter can hide long-range cortical connections from roughly half of the cortical surface, <a href="https://doi.org/10.1002/hbm.23936" target="_blank">Schilling et al. (2018)</a> showed that tractography endpoints are biased toward gyral crowns across deterministic and probabilistic algorithms and even high-resolution data, <a href="https://doi.org/10.1162/netn_a_00324" target="_blank">Gajwani et al. (2023)</a> showed across <strong>40 pipelines</strong> and <strong>44</strong> group-representative reconstructions that hub location is highly variable and that hub connectivity correlates with regional surface area in <strong>69%</strong> of assessed pipelines, and <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">McMaster et al. (2025)</a> showed that graph measures shift significantly across voxel-resolution changes and recommended resampling to <strong>1 mm isotropic</strong> for robust comparisons. Therefore, this site does not read a tractography-derived graph as the connectome itself. It reads it as a <strong>pipeline-conditioned macro pathway prior</strong> whose endpoint assignment, parcellation, weighting, and abstention boundary still need to be disclosed. The shortest route is <a href="wbe_101.html#state-completeness">WBE 101: hidden state at the entry point</a>, <a href="verification.html#observability-budget">Verification: Observability Budget</a>, and <a href="wiki/connectome-is-not-enough.html#tractography-route-card">Wiki: tractography route card</a>.
 </p>
 </div>
 
