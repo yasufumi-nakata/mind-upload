@@ -5,7 +5,7 @@ description: "From the selection of public data (mainly EEG) to the minimum loop
 article_type: Resource
 subtitle: "Connect ``what to use'' and ``how to reproduce'' in the shortest route without separating them."
 author: Mind Uploading Research Project
-last_updated: "2026-03-20"
+last_updated: "2026-03-22"
 note: "Curated List + L0 Practice"
 audience: "People who are wondering which public data to start with, people who are looking for an L0 practice board"
 reading_time: "12-20 minutes"
@@ -18,6 +18,7 @@ page_highlights:
   - "A fair inverse-problem benchmark also has to separate focal versus extended-source targets, solver family, and geometry / conductivity sensitivity rather than naming only a winning method."
   - "Each starter dataset has different annotation provenance, time fidelity, and independent split units."
   - "Within-session / cross-session / cross-subject / adaptation are different evaluation families and should not be placed side by side under the same score."
+  - "Cross-session and adaptation labels are not yet temporal-validity claims; state annotation, fixed decoder interval, recalibration burden, and transfer ceiling still have to be disclosed separately."
   - "Even when the score is numerically the same, you still have to separate the target neural variable from eye movement, EMG, behavior, feedback routes, subject / session fingerprint, and acquisition-distribution shortcuts such as site / device / reference / electrode layout."
   - "Even when foundation / self-supervised EEG models are used, pretraining-corpus and harmonization audits are still required."
   - "Reference system, channel map, electrode layout, and device protocol are not cosmetic metadata; they can move scores and belong in the dataset card."
@@ -28,6 +29,7 @@ known_points:
   - "When selecting data for the first time, you will move forward if you prioritize ease of retesting over difficulty."
   - "Cue-locked events, expert interval annotations, sleep hypnograms, and physician report-derived labels have different meanings even though they are the same 'public EEG data'."
   - "Even if the accuracy is the same, the strength of the argument that can be read will change depending on which generalization condition the score was obtained under."
+  - "Cross-session accuracy and cross-session adaptation still do not say whether a fixed decoder survived, how much recalibration was needed, or what transfer ceiling remains."
   - "A same-day score may reflect movement / EOG / EMG / feedback routes, subject / session fingerprint, or acquisition-distribution shortcuts rather than the target signal."
   - "Foundation-model improvements are not comparable unless the pretraining corpus, channel-mismatch handling, acquisition-distribution summary, and adaptation regime are disclosed."
   - "Reference system, device, electrode layout, and filter chain can change what looks like the same EEG benchmark."
@@ -40,6 +42,7 @@ unknown_points:
   - "We have not yet determined which data will be most effective for future causal/closed-loop verification."
   - "We have not decided yet which public data will be the default route for the annotation fidelity benchmark."
   - "We have not determined yet which public benchmark board should become the default for comparing focal-source and extended-source inverse methods under the same geometry and uncertainty sweep."
+  - "We still do not have a default public EEG benchmark that logs state annotation, fixed decoder interval, recalibration burden, and transfer ceiling under one shared temporal-validity schema."
 wiki_links:
   - label: "Wiki: Basics of EEG"
     url: "/wiki/eeg-basics.html"
@@ -356,6 +359,40 @@ Musall et al. (2019) showed that neural activity during tasks can be strongly do
 </div>
 
 <div class="note-box">
+<strong>2026-03-22 addendum: evaluation family is not yet temporal validity</strong>
+<p>
+The practical gap on this page was subtler than simple split naming. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> showed over a <strong>10-hour EEG day</strong> that movement-related decoding changes enough to motivate <strong>adaptive decoders</strong>, <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a> showed that <strong>latent-dynamics alignment</strong> can stabilize BCI performance but is still a rescue route for interface instability, <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> showed up to <strong>one month of unsupervised recalibration</strong> in online cursor iBCI use, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> showed that a speech neuroprosthesis can be impressively fast while still remaining a <strong>participant-specific communication route</strong> rather than a generic temporal-validity benchmark. Therefore, on this site, <strong>cross-session</strong>, <strong>adaptation</strong>, and <strong>online use</strong> are still not enough by themselves. A temporal claim also has to name <strong>state annotation</strong>, <strong>fixed decoder interval</strong>, <strong>recalibration burden</strong>, and <strong>transfer ceiling</strong>. The operational rule is <a href="verification.html#temporal-validity-card">Verification: Temporal Validity Card</a>, with technical background in <a href="wiki/state-trait-and-drift.html">Wiki: state, trait, and drift</a>.
+</p>
+</div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>If the result is reported as...</th>
+<th>You still have to disclose</th>
+<th>Stopped claim if missing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>cross-session</strong></td>
+<td>State annotation, fixed decoder interval, and whether the setup was reattached, re-referenced, or otherwise changed.</td>
+<td>Read only as cross-day tolerance under named conditions, not as durable decoding.</td>
+</tr>
+<tr>
+<td><strong>cross-session adaptation</strong></td>
+<td>How much target-session data was used, when recalibration happened, and what the pre-adaptation score was.</td>
+<td>Do not promote to fixed-decoder stability or low-burden deployment.</td>
+</tr>
+<tr>
+<td><strong>longitudinal / chronic use</strong></td>
+<td>Fixed decoder interval, recalibration burden, failure / fallback mode, and participant / site / task transfer ceiling.</td>
+<td>Do not promote to generic long-term robustness or deployability.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
 <strong>2026-03-18 addendum: fix the route behind the same score</strong>
 <p>
 Even when a within-session score is high, it can still be explained by eye-movement confounds shown by <a href="https://doi.org/10.1523/ENEURO.0401-17.2018" target="_blank">Mostert et al. (2018)</a>, the EMG route shown by <a href="https://doi.org/10.1088/1741-2560/2/4/014" target="_blank">McFarland et al. (2005)</a>, post-onset auditory feedback shown by <a href="https://doi.org/10.1038/s42256-024-00837-5" target="_blank">Chen et al. (2024)</a>, identity confounding shown by <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a>, time-robust resting-state fingerprints shown by <a href="https://doi.org/10.1016/j.patcog.2020.107381" target="_blank">Wang et al. (2020)</a> and <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a>, or subject-driven EEG variation summarized by <a href="https://doi.org/10.1016/j.neuroimage.2022.119034" target="_blank">Gibson et al. (2022)</a>. For that reason, this site now overlays the <a href="verification.html#specificity-shortcut-card">Verification: Specificity &amp; Shortcut Card</a> on dataset cards and baseline results, fixing <strong>plausible nuisance routes</strong>, <strong>auxiliary channels such as EOG / EMG / behavior / audio / metadata</strong>, <strong>nuisance-only baselines</strong>, <strong>fingerprint audit</strong>, <strong>nuisance-regime hold-outs</strong>, and <strong>the claim that must stop here</strong>.
@@ -372,7 +409,7 @@ This site previously stopped more clearly at <strong>subject / session fingerpri
 <div class="note-box">
 <strong>Site rule from this section</strong>
 <p>
-From this section onward, dataset cards and baseline results must report at least <strong>(1) evaluation family</strong>, <strong>(2) the independent hold-out unit</strong>, <strong>(3) raw-recording / window ancestry</strong>, <strong>(4) subject / session / site / device / reference-system / electrode-layout disjointness together with metadata-only baselines</strong>, <strong>(5) the channel-map / reference / sample-rate / filter harmonization log</strong>, <strong>(6) whether target-session, target-subject, or target-site data were used</strong>, <strong>(7) recalibration amount and timing</strong>, and <strong>(8) a stopping claim</strong>. Scores without this context will be treated as limited L1 decode results or fingerprint-unresolved / acquisition-distribution-unresolved classifiers, not evidence of long-term stability or deployability.
+From this section onward, dataset cards and baseline results must report at least <strong>(1) evaluation family</strong>, <strong>(2) the independent hold-out unit</strong>, <strong>(3) raw-recording / window ancestry</strong>, <strong>(4) subject / session / site / device / reference-system / electrode-layout disjointness together with metadata-only baselines</strong>, <strong>(5) the channel-map / reference / sample-rate / filter harmonization log</strong>, <strong>(6) whether target-session, target-subject, or target-site data were used</strong>, <strong>(7) recalibration amount and timing</strong>, and <strong>(8) a stopping claim</strong>. If the claim spans more than one session or day, it must additionally disclose the site's <strong>Temporal Validity</strong> fields: <strong>state annotation</strong>, <strong>fixed decoder interval</strong>, <strong>recalibration burden</strong>, and <strong>transfer ceiling</strong>. Scores without this context will be treated as limited L1 decode results or fingerprint-unresolved / acquisition-distribution-unresolved classifiers, not evidence of long-term stability or deployability.
 </p>
 </div>
 </section>
@@ -848,7 +885,10 @@ The shortest route to that end is to approach BIDS/EEG-BIDS.
 <li><a href="https://moabb.neurotechx.com/docs/generated/moabb.evaluations.CrossSubjectEvaluation.html" target="_blank">MOABB Docs: CrossSubjectEvaluation</a></li>
 <li><a href="https://doi.org/10.1038/s41597-022-01647-1" target="_blank">Ma et al. (2022), A large EEG dataset for studying cross-session variability in motor imagery BCI</a></li>
 <li><a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019), Single-trial neural dynamics are dominated by richly varied movements</a></li>
+<li><a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024), Chrono-EEG dynamics influencing hand gesture decoding: a 10-hour study</a></li>
+<li><a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025), Stabilizing brain-computer interfaces through alignment of latent dynamics</a></li>
 <li><a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025), Long-term unsupervised recalibration of cursor-based intracortical BCIs</a></li>
+<li><a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025), An instantaneous voice-synthesis neuroprosthesis</a></li>
 <li><a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">PhysioNet: EEG Motor Movement/Imagery Dataset</a></li>
 <li><a href="https://physionet.org/content/chbmit/1.0.0/" target="_blank">PhysioNet: CHB-MIT Scalp EEG Database</a></li>
 <li><a href="https://physionet.org/content/sleep-edfx/1.0.0/" target="_blank">PhysioNet: Sleep-EDF Database Expanded</a></li>
