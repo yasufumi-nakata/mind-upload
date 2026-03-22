@@ -71,29 +71,30 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 
 上表は「どの助成テーマで出すか」と「そのテーマで最初に使うEEG-DATAは何か」を、RQ群ごとに即決できるようにするための実務入口です。実際の提出では、各RQ行（60行）に戻して `主張単位` と `最低成果物` を固定してください。
 
-## 今回の深掘り実行パック（2026-03-22, 2週間で初回結果まで）
+## 今回の深掘り実行パック（2026-03-22 09:01 JST, 2週間で初回結果まで）
 
-汎用横断の更新ではなく、`A/B` 判定から「2週間で初回結果まで到達しやすい6RQ」を固定して、`1RQ=1検証命題=1応募テーマ=1主データ` で実行します。
+汎用横断の更新ではなく、今回は直近runと重複しない `6RQ` を固定し、`1RQ=1検証命題=1応募テーマ=1主データ` で深掘りします。
 
 | RQ | 選定理由（1件ずつ深掘りする理由） | 最初の実験KPI | 失敗条件（このrunでの停止条件） | 提出最低成果物 | 応募先（第一/予備） |
 |---|---|---|---|---|---|
-| U0-2 | 同期ずれと状態表現崩れを同時に監査でき、同一性判定の運用閾値を短期で固定しやすい。 | `clock offset p95` `状態特徴崩れ率` `タスク間一致率` | 同期改善後も状態特徴崩れ率が閾値未満へ下がらない。 | Time synchronization audit report (offset/jitter distribution) | `G2 / G3` |
-| U1-3 | 逆解法間の乖離ルールを先に固定すると、U1系の応募で「判定不能」を防げる。 | `method disagreement rate` `task別順位一致率` `不一致時の保留率` | 主要タスクで順位一致率が最低基準を下回る。 | Inverse solution comparison table and uncertainty distribution chart | `G1 / G4` |
-| U4-4 | 反証条件を先に宣言すれば、因果主張の過剰解釈を抑えた提案書に直結しやすい。 | `ΔAUC` `符号反転率` `反証宣言件数` | 反証条件を満たすケースが連続しても判定規則が収束しない。 | Causal verification report (minimum intervention claim) | `G1 / G4` |
-| U11-1 | 指標間順位の保存率を測るだけで、理論比較の実行可能性を早期判定できる。 | `順位保存率` `指標間相関` `偽陽性率` | 順位保存率が事前閾値を下回り、運用候補指標を固定できない。 | Consciousness-index benchmark report (PCI/LZ/wSMI) | `G2 / G4` |
-| U14-5 | 否定例レジストリ運用は、再現性テーマの差別化要素として応募文脈が強い。 | `failure capture rate` `rerun success delta` `公開同意取得率` | 否定例の登録率が低く、再試行改善差が示せない。 | Supplementary test operation report (including negative cases) | `G1 / G3` |
-| U15-4 | 停止/更新条件を先に技術ログへ落とすことで、制度系RQの実装入口を具体化できる。 | `stop-trigger precision` `false stop rate` `更新監査遅延` | 停止条件の誤判定率が高く、運用規程へ接続できない。 | Governance stop/update audit sheet | `G2 / G6` |
+| U0-3 | タスク依存閾値と過学習境界を同時に監査でき、同一性判定を運用条件に落とし込みやすい。 | `task別ROC-AUC` `閾値外れ率` `外部検証一致率` | 外部検証で閾値外れ率が連続して許容上限を超える。 | Generalization-threshold audit sheet | `G2 / G3` |
+| U1-2 | 不確実性伝播を定量化すると、逆問題系RQの再現性主張を安全に限定できる。 | `calibration error` `credible interval coverage` `source localization error` | 信頼区間被覆率が事前基準を満たさず、手法校正が収束しない。 | Uncertainty propagation report (inverse pipeline) | `G1 / G4` |
+| U7-3 | 前処理差分による結果ドリフトを定量化すると、再現性契約の必須項目を先に固定できる。 | `preprocess drift score` `rank stability` `rerun variance` | 前処理設定差の影響が許容幅を超えて順位保存が崩れる。 | Preprocessing-drift CI audit report | `G1 / G3` |
+| U8-4 | フェイルセーフ発火遅延を評価すると、閉ループ運用の安全境界を短期で定義できる。 | `anomaly detection latency` `failsafe trigger rate` `false-safe rate` | 異常検知遅延が上限を超え、フェイルセーフが実運用基準に達しない。 | Closed-loop failsafe validation log | `G2 / G5` |
+| U13-2 | 幻覚テストと神経状態差の接続を固定すると、模倣分離テーマの主張を過大化せず出せる。 | `hallucination separation score` `state-difference effect size` `cross-fold consistency` | 幻覚指標と状態差の効果量が再現せず、分離主張を維持できない。 | Hallucination-decoding separation note | `G1 / G4` |
+| U15-2 | neurorights条項を監査ログ項目へ写像すると、制度系RQを技術成果物として提出しやすい。 | `clause-log coverage` `revocation latency` `audit completeness` | 条項とログの一意対応が成立せず、同意撤回監査が欠落する。 | Neurorights audit mapping table | `G2 / G6` |
 
 実行順（本run固定）:
 
-1. `U0-2`
-2. `U1-3`
-3. `U4-4`
-4. `U11-1`
-5. `U14-5`
-6. `U15-4`
+1. `U0-3`
+2. `U1-2`
+3. `U7-3`
+4. `U8-4`
+5. `U13-2`
+6. `U15-2`
 
-## 今回の再検証ログ（2026-03-22 15:40 JST）
+## 今回の再検証ログ（2026-03-22 09:01 JST）
+
 
 本ページは、`mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` の60行を1行ずつ読み、各RQについて下記4点が埋まっていることを再確認した上で更新しています。
 
@@ -833,4 +834,25 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 補足:
 
 - 旧数値IDは探索補助としてのみ扱い、提出物では `Dxx + DOI + データセット名 + access区分` を正本参照にします。
+- 既存60RQの件数、A/B/C内訳、G1-G6運用キーは変更していません。
+
+## 2026-03-22 09:01 JST 再検証ログ（本run / 1RQ深掘り固定の継続）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `EEG-DATA` / `auto-research-funds` / `auto-startup.wiki` で `git pull --ff-only` を実行し、最新化してから更新しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` を正本として `RQ_TOTAL=60`（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` は維持され、欠損・重複 `0` を再確認しました。
+- 本runでは汎用横断を増やさず、`U0-3/U1-2/U7-3/U8-4/U13-2/U15-2` の6RQだけを深掘り対象として固定しました。
+
+| RQ | 判定 | 主データ（Dアンカー） | 第一/予備応募先 | 今回固定した深掘りポイント |
+|---|---|---|---|---|
+| U0-3 | A | `D02`（補助 `D11/D23`） | `G2 / G3` | タスク別閾値の外部検証一致率を固定し、過学習境界を再現可能な監査項目へ分解。 |
+| U1-2 | A | `D08`（補助 `D11/D19`） | `G1 / G4` | 不確実性伝播の校正誤差と区間被覆率を同時監査して、逆問題主張の範囲を限定。 |
+| U7-3 | A | `D11`（補助 `D12/D24`） | `G1 / G3` | 前処理差分起因の順位崩れをCIで監査し、再現性契約の必須設定項目を固定。 |
+| U8-4 | B | `D20`（補助 `D01/D21`） | `G2 / G5` | 異常検知遅延とフェイルセーフ発火率を同時計測し、閉ループ停止条件を運用化。 |
+| U13-2 | B | `D10`（補助 `D03/D09`） | `G1 / G4` | 幻覚テストと神経状態差の効果量整合を検証し、模倣分離主張の過大化を抑制。 |
+| U15-2 | C | `D07`（補助 `D20/D21`） | `G2 / G6` | neurorights条項を監査ログ項目へ写像し、同意撤回の技術監査可能性を最低成果物化。 |
+
+補足:
+
+- 数値IDは探索補助のみとし、提出時は `Dxx + DOI + データセット名 + access区分` を正本参照にします。
 - 既存60RQの件数、A/B/C内訳、G1-G6運用キーは変更していません。

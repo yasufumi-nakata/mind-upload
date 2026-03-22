@@ -363,3 +363,10 @@ Reasons for proceeding in this order:
 - 追加した6RQは `U0-2` `U1-3` `U4-4` `U11-1` `U14-5` `U15-4` で、`KPI` `失敗条件` `提出最低成果物` を明示しました。
 - `U15-4`（C判定）を含め、制度系RQでも技術監査ログとして2週間で到達できる入口を固定しました。
 - 運用ルールは継続して `1RQ=1検証命題=1応募テーマ=1主データ` を適用します。
+
+## 2026-03-22 09:01 JST revalidation log (main run / one-by-one deepening)
+
+- Updated the fixed deep-dive batch without broad summary expansion; selected only `U0-3/U1-2/U7-3/U8-4/U13-2/U15-2`.
+- Kept `RQ_TOTAL=60`, `A/B/C=17/25/18`, and the same `G1-G6` operating keys.
+- Locked the submission rule as `Dxx + DOI + dataset name + access class` (numeric ID is search-only legacy guidance).
+- Focused deliverable style remains: `1RQ = 1 verification proposition = 1 application theme = 1 primary dataset`.
