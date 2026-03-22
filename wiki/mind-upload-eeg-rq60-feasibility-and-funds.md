@@ -71,29 +71,29 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 
 上表は「どの助成テーマで出すか」と「そのテーマで最初に使うEEG-DATAは何か」を、RQ群ごとに即決できるようにするための実務入口です。実際の提出では、各RQ行（60行）に戻して `主張単位` と `最低成果物` を固定してください。
 
-## 今回の深掘り実行パック（2026-03-22 09:01 JST, 2週間で初回結果まで）
+## 今回の深掘り実行パック（2026-03-22 11:03 JST, 2週間で初回結果まで）
 
 汎用横断の更新ではなく、今回は直近runと重複しない `6RQ` を固定し、`1RQ=1検証命題=1応募テーマ=1主データ` で深掘りします。
 
 | RQ | 選定理由（1件ずつ深掘りする理由） | 最初の実験KPI | 失敗条件（このrunでの停止条件） | 提出最低成果物 | 応募先（第一/予備） |
 |---|---|---|---|---|---|
-| U0-3 | タスク依存閾値と過学習境界を同時に監査でき、同一性判定を運用条件に落とし込みやすい。 | `task別ROC-AUC` `閾値外れ率` `外部検証一致率` | 外部検証で閾値外れ率が連続して許容上限を超える。 | Generalization-threshold audit sheet | `G2 / G3` |
-| U1-2 | 不確実性伝播を定量化すると、逆問題系RQの再現性主張を安全に限定できる。 | `calibration error` `credible interval coverage` `source localization error` | 信頼区間被覆率が事前基準を満たさず、手法校正が収束しない。 | Uncertainty propagation report (inverse pipeline) | `G1 / G4` |
-| U7-3 | 前処理差分による結果ドリフトを定量化すると、再現性契約の必須項目を先に固定できる。 | `preprocess drift score` `rank stability` `rerun variance` | 前処理設定差の影響が許容幅を超えて順位保存が崩れる。 | Preprocessing-drift CI audit report | `G1 / G3` |
-| U8-4 | フェイルセーフ発火遅延を評価すると、閉ループ運用の安全境界を短期で定義できる。 | `anomaly detection latency` `failsafe trigger rate` `false-safe rate` | 異常検知遅延が上限を超え、フェイルセーフが実運用基準に達しない。 | Closed-loop failsafe validation log | `G2 / G5` |
-| U13-2 | 幻覚テストと神経状態差の接続を固定すると、模倣分離テーマの主張を過大化せず出せる。 | `hallucination separation score` `state-difference effect size` `cross-fold consistency` | 幻覚指標と状態差の効果量が再現せず、分離主張を維持できない。 | Hallucination-decoding separation note | `G1 / G4` |
-| U15-2 | neurorights条項を監査ログ項目へ写像すると、制度系RQを技術成果物として提出しやすい。 | `clause-log coverage` `revocation latency` `audit completeness` | 条項とログの一意対応が成立せず、同意撤回監査が欠落する。 | Neurorights audit mapping table | `G2 / G6` |
+| U0-1 | 観測一致と介入一致の二軸を先に固定すると、同一性RQ群の判定基準を以後のRQへ再利用できる。 | `二軸ROC-AUC` `介入応答一致率` `閾値頑健性` | 介入条件を変えると一致率が連続して基準未満になり、閾値が安定しない。 | Identity KPI two-axis baseline card | `G2 / G3` |
+| U3-3 | 身体・環境ループ除去の劣化量は境界拡張の中心論点で、proxy検証でも実装価値が高い。 | `統合モデル対単体モデルのΔAUC` `機能劣化率` `再現一致率` | ループ除去時の劣化が有意に出ず、境界拡張主張を維持できない。 | Boundary-loss quantification note | `G2 / G6` |
+| U4-2 | 最小介入因果主張はA判定の中核で、短期で「反証可能な因果主張」を提出できる。 | `介入前後効果量` `再現率` `符号反転率` | 事前登録した効果方向が再現せず、符号反転率が許容上限を超える。 | Minimum-causal-claim prereg report | `G1 / G4` |
+| U7-5 | 前処理CIのrelease block閾値は再現性運用の実務価値が高く、助成申請の成果物化が容易。 | `再現率低下量` `release block発火率` `誤ブロック率` | 誤ブロック率が上限を超え、閾値運用で実務上の採用が成立しない。 | Reproducibility CI gate threshold sheet | `G1 / G3` |
+| U11-3 | 理論競合点を単一条件で比較すると、意識指標RQの主張過大化を抑えて応募できる。 | `理論間順位一致率` `指標差分効果量` `条件間安定性` | 理論間の差分が条件依存で逆転し、比較主張を固定できない。 | Consciousness-index conflict test memo | `G2 / G4` |
+| U14-2 | 探索/検証分離の運用効果は追試失敗を直接減らせるため、監査運用テーマとして通しやすい。 | `探索-検証分離後の再現率` `リーク率` `再実行コスト` | 分離しても再現率改善が出ず、運用コスト増のみが残る。 | Exploration-vs-validation split audit | `G1 / G3` |
 
 実行順（本run固定）:
 
-1. `U0-3`
-2. `U1-2`
-3. `U7-3`
-4. `U8-4`
-5. `U13-2`
-6. `U15-2`
+1. `U0-1`
+2. `U3-3`
+3. `U4-2`
+4. `U7-5`
+5. `U11-3`
+6. `U14-2`
 
-## 今回の再検証ログ（2026-03-22 09:01 JST）
+## 今回の再検証ログ（2026-03-22 11:03 JST）
 
 
 本ページは、`mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` の60行を1行ずつ読み、各RQについて下記4点が埋まっていることを再確認した上で更新しています。
@@ -109,7 +109,7 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `C` 判定RQは「EEG単独で不可」の理由（法務/制度/他モダリティ）を明記
 - データセット参照はID再採番の影響を避けるため、提出時は `DOI + dataset名 + access区分` を必ず併記
 
-2026-03-22 15:40 JST の再計数結果（機械検証）:
+2026-03-22 11:03 JST の再計数結果（機械検証）:
 
 - `RQ件数`: `60`（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）
 - `A/B/C`: `17/25/18`

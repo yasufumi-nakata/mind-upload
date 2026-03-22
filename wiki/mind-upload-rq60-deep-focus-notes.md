@@ -258,6 +258,16 @@ Reasons for proceeding in this order:
 ## 2026-03-18 12:08 JST revalidation log (main run / deep-by-RQ enforcement)
 
 - Revalidated deep-focus operation with the same policy: avoid generic summaries and keep `1RQ = 1 verification proposition = 1 application theme = 1 main data`.
+
+## 2026-03-22 11:03 JST revalidation log (main run / one-by-one deep pack refresh)
+
+- Reconfirmed `RQ_TOTAL=60` and `A/B/C=17/25/18` against `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`.
+- Refreshed the fixed deep pack to a non-overlapping 6RQ set for this run:
+  `U0-1`, `U3-3`, `U4-2`, `U7-5`, `U11-3`, `U14-2`.
+- Re-fixed the operational policy: avoid broad summaries and enforce `1RQ = 1 verification proposition = 1 application theme = 1 main data`.
+- Updated synchronized map pages:
+  `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` and
+  `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`.
 - Rechecked RQ coverage on this page against `research_harvest_50.md` and related RQ60 pages (coverage maintained).
 - Revalidated grant keys `G1-G6` and source resolvability in `grant_queue`/`auto-research-funds`.
 - Confirmed EEG numeric IDs are present in latest `EEG-DATA` CSV but no longer reliable as fixed dataset identifiers after reindex/remap.
