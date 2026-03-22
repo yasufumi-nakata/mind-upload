@@ -17,6 +17,7 @@ page_highlights:
   - "The connectome-dynamics gap is now written as a 15-class maintenance / hidden-state problem rather than a loose warning that wiring alone is not enough."
   - "The stronger the claim, the more explicitly it is checked against falsification criteria, alternative explanations, and abstention conditions."
   - "Human proxy class and operational maturity are kept separate, so proxy-rich evidence is not silently read as field-ready state identification."
+  - "Living-human proxy bundles now stay behind an explicit composition rule: quantity type, model / hardware burden, common-driver audit, and gain beyond the strongest single row must be disclosed before state-identification language."
   - "Even though it is long, the introduction and framing notes alone should make the page's overall stance clear."
 known_points:
   - "No major theory has become a decisive standalone answer at this point."
@@ -24,6 +25,7 @@ known_points:
   - "Progress in local connectomics or source imaging does not imply state-complete observation of the human whole brain."
   - "Human whole-brain evidence remains layered and proxy-based; no current route directly fixes current transcription / chromatin state, post-transcriptional RNA-state, ECM / PNN gate state, local proteostasis / synaptic-tag capture, cargo-routing state, chloride set point, or branch-local mitochondrial positioning."
   - "Proxy-rich human evidence and deployment-ready measurement are different claims; sample size, model burden, hardware specialization, and fusion status remain separate ceilings."
+  - "Several living-human proxy rows can move together while still constraining different quantities or shared autonomic / vascular drivers, so same-session agreement is not yet same-subject state closure."
   - "Hemodynamic modalities carry vascular transfer / CVR uncertainty in addition to neural-side uncertainty."
   - "Strong claims that omit causal perturbation, reproducibility, and explicit exclusion of alternative explanations remain on shaky ground."
 unknown_points:
@@ -49,6 +51,9 @@ wiki_links:
   - label: "Wiki: Homeostatic Plasticity and Maintenance State"
     url: "/wiki/homeostatic-plasticity-and-maintenance-state.html"
     description: "Adds background on maintenance-state variables such as sleep/wake dynamics, myelination, and glial metabolism."
+  - label: "Wiki: Human Proxy Composition and Route Maturity"
+    url: "/wiki/human-proxy-composition.html"
+    description: "Explains why recent human PET, MRSI, myelin, and clearance rows still do not compose automatically into same-subject state closure."
   - label: "Wiki: How to Read Claims and Evidence"
     url: "/wiki/claims-and-evidence.html"
     description: "A helper page for reading theoretical discussion through the lens of claim strength."
@@ -495,6 +500,42 @@ href="#ref-16">[16]</a></sup>.</p>
 <div class="note-box">
 <strong>Multiple proxy rows still do not add up to state-complete measurement</strong>
 <p>The point is not that these routes are weak. The point is that each route lowers a <strong>different</strong> latent-state error term. On this page, "human evidence advanced" now means "a specific layer advanced under a specific ceiling," not "the human whole-brain state became nearly observable." The cited papers do not yet show same-person, same-session, externally validated fusion of these rows into one state-complete readout, so proxy-rich human evidence remains weaker than <strong>same-subject state closure</strong>. That last sentence is an inference from the measurement properties summarized above.</p>
+</div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>Composition failure that still remains</th>
+<th>What the primary literature actually gives</th>
+<th>Why the bundle still cannot be promoted directly</th>
+<th>What this page now requires instead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Quantity-type collapse</strong></td>
+<td><a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> provide a cohort-level SV2A density atlas, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> provide a five-metabolite similarity scaffold, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> provide dynamic kinetic glucose-rate imaging, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> provide CSF mobility, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> provide model-based overnight biomarker-efflux inference.</td>
+<td>Density, similarity, rate, mobility, and model-based efflux are different inferential objects. Row count is therefore not yet a validated latent coordinate.</td>
+<td>Name the claimed latent variable and the <strong>direct observable by row</strong> before any cross-row promotion.</td>
+</tr>
+<tr>
+<td><strong>Operational-maturity collapse</strong></td>
+<td><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> used 7 T dynamic DMRSI in five healthy participants, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> mapped myelin bilayer in two healthy volunteers on high-performance hardware, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> used a specialized 7 T CSF-mobility sequence, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> combined overnight physiology with an investigational device and a multicompartment model.</td>
+<td>A route can be scientifically real while still being proof-of-principle, hardware-specialized, small-cohort, or model-heavy. Existence is not the same as deployment-ready composition.</td>
+<td>Disclose <strong>cohort size</strong>, <strong>hardware class</strong>, <strong>model burden</strong>, and whether the row is routine, specialized, or proof-of-principle.</td>
+</tr>
+<tr>
+<td><strong>Common-driver / fusion collapse</strong></td>
+<td><a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> showed both common and divergent cross-modal organization, <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed coupled global progression plus two distinct network patterns in simultaneous EEG-PET-MRI, <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> showed that a major global fMRI mode is substantially coupled to autonomic physiology, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that significant BOLD changes can coexist with opposite oxygen-metabolism changes.</td>
+<td>Same-session agreement still does not prove one solved biological state axis. Some rows can share nuisance or autonomic drivers, while others diverge even when acquired together.</td>
+<td>Require a <strong>shared-driver audit</strong>, an explicit <strong>shared-versus-specific decomposition</strong>, and a report of what the bundle adds beyond the <strong>strongest single row</strong>.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>The stop rule is now explicit, not only implied</strong>
+<p>On this page, several living-human proxy rows are promoted together only after the bundle names <strong>the claimed latent variable</strong>, <strong>the direct observable by row</strong>, <strong>same-subject / same-session / same-perturbation status</strong>, <strong>model and hardware burden</strong>, <strong>whether the apparent agreement survives a common-driver audit</strong>, and <strong>what the bundle adds beyond the strongest single row under matched conditions</strong>. That operational rule is implemented on the site as the <a href="verification.html#human-proxy-composition-card">Verification: Human Proxy Composition Card</a>. If the bridge is sequential rather than simultaneous, the site also adds the <a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> rather than letting same-subject wording stand in for same-state evidence. This promotion rule is an inference from the measurement properties summarized above.</p>
 </div>
 
 <div class="stage-list">
