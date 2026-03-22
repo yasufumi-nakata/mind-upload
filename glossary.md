@@ -5,7 +5,7 @@ description: "A practical glossary of the terms used most often in Mind-Upload, 
 article_type: Reference
 subtitle: "Start by keeping the words straight"
 author: Mind Uploading Research Project
-last_updated: "2026-03-20"
+last_updated: "2026-03-22"
 note: "Living document"
 audience: "Readers who do not want to get stuck on terminology and anyone trying to avoid category mistakes"
 reading_time: "3 to 10 minutes for only the necessary items"
@@ -15,12 +15,14 @@ page_highlights:
   - "It gives short explanations of terms and points to where each concept matters."
   - "It now includes the front-door verification terms added in the March 2026 re-audit, such as claim ceiling, shortcut auditing, maintenance-state, and vascular-state / CVR audit."
   - "It now also includes the human-observability and support-state terms needed after the March 2026 deepening pass, such as proxy class, route maturity / model burden, support-state proxy, and clearance / immune support."
+  - "It now also defines the newer route-card semantics added in the late-March 2026 passes, such as field-formation wall, Fusion Card, Human Proxy Composition Card, shared-driver audit, strongest single row, and State-Continuity Bridge Card."
   - "It is especially careful about pairs that sound similar but should not be collapsed, such as observability / identifiability / direct validation and functional connectivity / effective connectivity / causal wiring."
   - "If a term blocks your reading, this page is meant to get you unstuck quickly and send you back to the main text."
 known_points:
   - "Many misunderstandings can be avoided simply by reducing terminology confusion."
   - "It is especially important to distinguish between decode/emulate, correlation/causation, functional connectivity/effective connectivity/causal wiring, observability/identifiability, model fit/direct validation, and brain signal/language prior."
   - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, astrocyte-state, clearance / immune support, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, and route-maturity language."
+  - "The newer route-card names are not decorative labels; they each name a distinct failure mode such as upstream visibility loss, cross-stack shared-driver risk, or broken state continuity across a sequential bridge."
   - "This page serves as an entry point for short definitions and a way to return to the main text."
 unknown_points:
   - "Terms related to the theory of consciousness have slightly different meanings depending on the paper or position."
@@ -209,6 +211,13 @@ Words such as <strong>proxy class</strong>, <strong>route maturity / model burde
 </p>
 </div>
 
+<div class="note-box">
+<strong>When the newer card names start piling up</strong>
+<p>
+If names such as <strong>field-formation wall</strong>, <strong>Fusion Card</strong>, <strong>Human Proxy Composition Card</strong>, <strong>shared-driver audit</strong>, <strong>strongest single row</strong>, or <strong>State-Continuity Bridge Card</strong> start appearing faster than they can be digested, use this glossary to keep the failure modes separate. These terms are not just site jargon: they mark different reasons why <strong>same-session</strong>, <strong>multimodal</strong>, <strong>same-subject</strong>, or <strong>proxy-rich</strong> still may fail to raise the claim ceiling.
+</p>
+</div>
+
 <section class="section" id="core">
 <h2 class="section-title">Core concepts</h2>
 <table class="data-table">
@@ -344,6 +353,30 @@ Words such as <strong>proxy class</strong>, <strong>route maturity / model burde
 <tr>
 <td><strong>Human observability ladder</strong></td>
 <td>A front-door rule that compares human measurement routes along two axes at once: <strong>proxy class</strong> and <strong>route maturity</strong>. It stops “human evidence exists” from being compressed into “state-complete human measurement is close.”</td>
+</tr>
+<tr>
+<td><strong>Human Proxy Composition Card</strong></td>
+<td>The disclosure rule for combining several living-human proxy rows. It asks what each row directly measures, whether the rows are truly same-subject / same-session / same-perturbation, whether the agreement survives a <strong>shared-driver audit</strong>, what the bundle adds beyond the <strong>strongest single row</strong>, and which hidden-state families still remain latent.</td>
+</tr>
+<tr>
+<td><strong>Shared-driver audit</strong></td>
+<td>A check on whether apparent agreement across modalities or proxy rows could still be explained by a common nuisance source, such as arousal, autonomic physiology, global vascular fluctuations, or a shared preprocessing artifact, rather than by one uniquely identified biological target.</td>
+</tr>
+<tr>
+<td><strong>Strongest single row</strong></td>
+<td>The best individual route in a proxy bundle under matched conditions. On this site, a bundle does not raise the claim ceiling merely by having more rows; it must show what it adds beyond the strongest single route already available.</td>
+</tr>
+<tr>
+<td><strong>Fusion Card</strong></td>
+<td>The disclosure rule for multimodal or atlas-informed claims. It asks for acquisition relation, lag / synchronization audit, co-registration scope, fusion-model burden, shared-vs-specific component disclosure, external calibration, and abstention boundary before “multimodal” is read as stronger than the best unimodal route.</td>
+</tr>
+<tr>
+<td><strong>State-Continuity Bridge Card</strong></td>
+<td>The disclosure rule for claims that bridge across live measurement, later fixation, ex vivo follow-up, or cross-day reacquisition. It asks for acquisition order, elapsed time, regime continuity, coordinate transfer, bridge validation, and residual drift ceiling before specimen linkage is promoted to one state sample.</td>
+</tr>
+<tr>
+<td><strong>Same-state evidence</strong></td>
+<td>Evidence that supports not only <strong>same subject</strong> or <strong>same brain</strong>, but also continuity of the relevant latent state across the bridge being claimed. It is stronger than specimen identity alone and usually requires an explicit bridge audit.</td>
 </tr>
 <tr>
 <td><strong>Specificity &amp; Shortcut Card</strong></td>
@@ -533,6 +566,10 @@ Words such as <strong>proxy class</strong>, <strong>route maturity / model burde
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><strong>Field-formation wall</strong></td>
+<td>The upstream visibility limit that decides whether a source class can reach the sensors at all with usable signal. Source extent, orientation, folding, cancellation, and tissue conductivities matter here, so this wall comes <strong>before</strong> the inverse solver.</td>
+</tr>
 <tr>
 <td><strong>Inverse Problem</strong></td>
 <td>The problem of estimating causes such as brain activity from observations such as scalp EEG. In general, the solution is not unique.</td>
@@ -727,6 +764,22 @@ Although non-invasive decoding and ESI are making steady progress, a successful 
 <li>Murphy, K., Harris, A. D., &amp; Wise, R. G. (2011). Robustly measuring vascular reactivity differences with breath-hold: normalising stimulus-evoked and resting state BOLD fMRI data. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">doi:10.1016/j.neuroimage.2010.07.059</a></li>
 <li>Williams, R. J., Specht, J. L., Mazerolle, E. L., et al. (2023). Correspondence between BOLD fMRI task response and cerebrovascular reactivity across the cerebral cortex. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">doi:10.3389/fphys.2023.1167148</a></li>
 <li>Yücel, M. A., Selb, J., Huppert, T. J., Franceschini, M. A., &amp; Boas, D. A. (2015). Short separation regression improves statistical significance and better localizes the hemodynamic response obtained by near-infrared spectroscopy for tasks with differing autonomic responses. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">doi:10.1117/1.NPh.2.3.035005</a></li>
+<li>Ahlfors, S. P., Han, J., Belliveau, J. W., &amp; Hämäläinen, M. S. (2010). Sensitivity of MEG and EEG to source orientation. <a href="https://doi.org/10.1007/s10548-010-0154-x" target="_blank">doi:10.1007/s10548-010-0154-x</a></li>
+<li>Goldenholz, D. M., Ahlfors, S. P., Hämäläinen, M. S., Sharon, D., Ishitobi, M., Vaina, L. M., &amp; Stufflebeam, S. M. (2009). Mapping the signal-to-noise-ratios of cortical sources in magnetoencephalography and electroencephalography. <a href="https://doi.org/10.1002/hbm.20571" target="_blank">doi:10.1002/hbm.20571</a></li>
+<li>Piastra, M. C., Nüßing, A., Vorwerk, J., Clerc, M., Engwer, C., &amp; Wolters, C. H. (2021). A comprehensive study on electroencephalography and magnetoencephalography sensitivity to cortical and subcortical sources. <a href="https://doi.org/10.1002/hbm.25272" target="_blank">doi:10.1002/hbm.25272</a></li>
+<li>Kothe, C., Shirazi, S. Y., Stenner, T., Medine, D., Boulay, C., Grivich, M. I., Artoni, F., Mullen, T., Delorme, A., &amp; Makeig, S. (2025). The lab streaming layer for synchronized multimodal recording. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
+<li>Wei, H., Prasad, G., Ombao, H., &amp; Hajnal, J. V. (2020). Bayesian fusion and multimodal DCM for EEG and fMRI. <a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">doi:10.1016/j.neuroimage.2020.116595</a></li>
+<li>Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
+<li>Johansen, A., Beliveau, V., Colliander, E., et al. (2024). An In Vivo High-Resolution Human Brain Atlas of Synaptic Density. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
+<li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
+<li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
+<li>Hirschler, L., et al. (2025). Whole-brain mapping of cerebrospinal fluid mobility in humans. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
+<li>Dagum, P., et al. (2026). The glymphatic system clears amyloid beta and tau from brain to plasma in humans. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
+<li>Chen, J. E., Lewis, L. D., Coursey, S. E., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
+<li>Bolt, T., Falahpour, M., Nalci, A., et al. (2025). Autonomic physiological coupling of the global fMRI signal. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">doi:10.1038/s41593-025-01945-y</a></li>
+<li>Epp, S. M., Castrillón, G., Yuan, B., et al. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
+<li>Lu, X., Han, X., Meirovitch, Y., Sjöstedt, E., Schalek, R. L., &amp; Lichtman, J. W. (2023). Preserving extracellular space for high-quality optical and ultrastructural studies of whole mammalian brains. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
+<li>MICrONS Consortium, Bae, J. A., Bak, J. H., et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Bérut, A., Arakelyan, A., Petrosyan, A., et al. (2012). Experimental verification of Landauer&rsquo;s principle linking information and thermodynamics. <a href="https://doi.org/10.1038/nature10872" target="_blank">doi:10.1038/nature10872</a></li>
 <li>Attwell, D., &amp; Laughlin, S. B. (2001). An energy budget for signaling in the grey matter of the brain. <a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">doi:10.1097/00004647-200110000-00001</a></li>
 <li>Lynn, C. W., et al. (2021). Broken detailed balance and entropy production in the human brain. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>
