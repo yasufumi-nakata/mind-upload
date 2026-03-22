@@ -856,3 +856,24 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 
 - 数値IDは探索補助のみとし、提出時は `Dxx + DOI + データセット名 + access区分` を正本参照にします。
 - 既存60RQの件数、A/B/C内訳、G1-G6運用キーは変更していません。
+
+## 2026-03-22 12:02 JST 再検証ログ（本run / 6RQディープバッチ追加）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` の `main` で `git pull --ff-only origin main` を実行し、最新化を確認しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` / 本ページ / `auto-research-funds/wiki/Mind-Upload-RQ60-Deep-Evaluation-Cards.md` / `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `unique Ux-y` を再計数し、4ページすべて `RQ_TOTAL=60`（欠損・重複 `0`）を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` を4ページで再計数し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用が維持されていることを確認しました。
+- 本runでは汎用横断要約を増やさず、`U3-6/U4-1/U7-5/U10-1/U12-5/U14-2` の6RQだけを追加で深掘り固定しました。
+
+| RQ | 判定 | 主データ（Dアンカー） | 第一/予備応募先 | 今回固定した深掘りポイント |
+|---|---|---|---|---|
+| U3-6 | C | `D03`（補助 `D04/D24`） | `G2 / G6` | 免疫監視除外モデルの長期破綻を `ドメイン外劣化率` と `再同期不能率` で proxy 監査し、EEG単独主張の上限を明文化。 |
+| U4-1 | B | `D05`（補助 `D08/D19`） | `G1 / G4` | 観測相関と介入応答の乖離を `ΔAUC` と `介入符号一致率` で分離し、因果主張の採択境界を固定。 |
+| U7-5 | A | `D11`（補助 `D15/D23`） | `G1 / G3` | 前処理CIで `再現率低下-5pt` の release block を実運用し、誤ブロック率を併記して閾値妥当性を監査。 |
+| U10-1 | C | `D14`（補助 `D15/D18`） | `G2 / G6` | Landauer下限は理論主張に限定し、EEGでは `理論整合proxy` のみを成果物化する境界を明示。 |
+| U12-5 | C | `D02`（補助 `D10/D12`） | `G2 / G6` | 分岐主体の記憶編集/再同期イベントを `subject_branch_id/consent_state/relink_trace` で監査し、法的ID再編は外部依存へ分離。 |
+| U14-2 | A | `D01`（補助 `D08/D13`） | `G1 / G3` | 探索系と検証系の実験トラックを分離し、`split固定率` と `追試成功率` を同時KPIとして運用固定。 |
+
+補足:
+
+- 数値IDは探索補助のみとし、提出時は `Dxx + DOI + データセット名 + access区分` を正本参照にします。
+- 既存60RQの件数、A/B/C内訳、G1-G6運用キーは変更していません。
