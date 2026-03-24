@@ -621,3 +621,21 @@ reading_time: "35-55分"
 
 - 提出時のデータ参照は継続して `Dxx + DOI + データセット名 + access区分` を正本とし、数値IDは探索補助として扱います。
 - 既存の60RQ行、`A/B/C=17/25/18`、および `G1-G6` 運用キーは変更していません。
+
+## 2026-03-25 04:02 JST 再検証ログ（本run / 6RQディープバッチ追加）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` で `git pull --ff-only` を実行し、最新化を確認しました。
+- `| Ux-y<br>` 行を再計数し、`RQ_TOTAL=60`（欠損・重複 `0`）と `A/B/C=17/25/18` を再確認しました。
+- 本runは汎用横断更新を行わず、直近バッチと重複しない `U0-3/U1-1/U8-1/U11-2/U12-2/U14-1` の6RQを深掘り対象として固定しました。
+
+| RQ | 判定 | 主データ（Dアンカー） | 第一/予備応募先 | 深掘りで固定した検証焦点 | 失敗条件（停止条件） | 最低成果物 |
+|---|---|---|---|---|---|---|
+| U0-3 | A | `D02`（補助 `D11/D23`） | `G2 / G3` | タスク別同一性閾値を固定し、セッション外性能で過学習モデル除外規則を確立する。 | セッション外で閾値が収束せず、除外規則がfold間で逆転する。 | Threshold search notebook and selection rationale table |
+| U1-1 | A | `D08`（補助 `D11/D19`） | `G1 / G4` | 事前分布ごとの逆解誤差と被覆率を比較し、不良設定性に対する採択規則を固定する。 | 事前分布間の誤差順位が再現せず、優位性が固定できない。 | Inverse solution comparison table and uncertainty distribution chart |
+| U8-1 | B | `D01`（補助 `D18/D20`） | `G2 / G5` | 遅延・位相ずれ条件で安定率/停止介入率/回復時間を同時評価し、閉ループ安全域を定義する。 | 遅延増加で安全域境界が再現せず、停止規則が過検知/過少検知に偏る。 | Closed loop safety KPI dashboard |
+| U11-2 | C | `D14`（補助 `D15/D16`） | `G2 / G4` | 計算予算制約下で `PCI近似/LZ/wSMI` の順位保存率を比較し、理論比較の主張上限を固定する。 | 予算制約下で順位が不安定化し、理論比較結果が条件依存で反転する。 | Theoretical comparison I/O specifications and calculation budget |
+| U12-2 | C | `D02`（補助 `D10/D12`） | `G2 / G6` | 責任・権利・同意継承を `branch_id/consent_state/lineage_hash` 監査鎖へ写像し、制度連携境界を固定する。 | 分岐ごとに同意状態の追跡が不能となり、監査鎖が一意対応しない。 | System audit requirements table (technical log compatible) |
+| U14-1 | A | `D01`（補助 `D08/D13`） | `G1 / G3` | データ/コード/評価環境の固定粒度を段階比較し、最小追試パックの要求水準を運用定義する。 | 固定粒度を上げても追試成功率が改善せず、コスト増分のみが残る。 | Supplementary test operation report (including negative cases) |
+
+- 提出時参照は継続して `Dxx + DOI + データセット名 + access区分` を正本とし、数値IDは探索補助として扱います。
+- 既存60RQの件数、`A/B/C` 内訳、`G1-G6` 運用キーは変更していません。
