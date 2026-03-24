@@ -581,3 +581,23 @@ reading_time: "35-55分"
 - 第一/予備応募先: `G2 / G4`
 - 失敗条件: 境界ケースで指標符号が反転し、閾値変更後に再現性が維持できない。
 - 最低成果物: `Awareness index comparison report (with failure condition)`
+
+## 2026-03-25 02:36 JST 再検証ログ（本run / 6RQディープバッチ追加）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` で `git pull --ff-only` を実行し、更新を確認しました。
+- `| Ux-y<br>` 行を再計数し、`RQ_TOTAL=60`（欠損・重複 `0`）および判定内訳 `A/B/C=17/25/18` を再確認しました。
+- 本runでは汎用横断要約を増やさず、直近バッチと重複しない `U3-5/U7-6/U10-4/U12-6/U13-5/U14-6` の6RQを深掘り対象として固定しました。
+
+| RQ | 判定 | 主データ（Dアンカー） | 第一/予備応募先 | 深掘りで固定した検証焦点 | 失敗条件（停止条件） | 最低成果物 |
+|---|---|---|---|---|---|---|
+| U3-5 | C | `D03`（補助 `D04/D24`） | `G2 / G6` | glymphatic/meningeal 要素の有無で、境界拡張 proxy（統合条件と単体条件の差）を固定比較する。 | 統合条件でも改善が再現せず、外部モダリティ依存を分離できない。 | Boundary expansion evaluation report (single/integrated comparison) |
+| U7-6 | A | `D11`（補助 `D15/D23`） | `G1 / G3` | EEG欠損・fMRI/fNIRS欠損を系統的に入れ、結論一致率と安全警告再現率で最小観測セットを決める。 | full-modality基準との一致率が下限未満、または欠損時に安全警告の見逃しが増える。 | Reproducibility audit report (synchronization/QC/preprocessing difference) |
+| U10-4 | C | `D14`（補助 `D15/D18`） | `G2 / G6` | 情報熱力学制約をWBE計算コスト評価へ接続する際の proxy 指標と適用境界を事前固定する。 | proxy 指標の方向性が条件間で反転し、理論整合の再現が維持できない。 | Theory consistency memo and proxy correlation analysis |
+| U12-6 | C | `D02`（補助 `D10/D12`） | `G2 / G6` | 同意撤回イベントを分岐主体へ伝播させる監査鎖（`branch_id/consent_state/evidence_hash`）を技術要件化する。 | 同意撤回の伝播遅延が閾値を超える、または剥奪証跡ログが欠損する。 | System audit requirements table (technical log compatible) |
+| U13-5 | B | `D03`（補助 `D10/D09`） | `G1 / G4` | 知覚と想起で同一デコーダを適用し、意味復元劣化の分岐点をセッション横断で固定する。 | 分岐点推定がセッション間で安定せず、効果量区間が0を跨ぐ。 | Mimic separation evaluation script and control condition table |
+| U14-6 | A | `D01`（補助 `D08/D13`） | `G1 / G3` | コンテナ固定（OS/依存/seed）で再現率向上と計算コスト増分を同時監査し、許容上限を決める。 | 再現率改善が小さい一方で計算コスト増分が許容域を超える。 | Fixed container reproduction procedure manual and cost measurement |
+
+補足:
+
+- 本runの提出実務は `Dxx + DOI + データセット名 + access区分` を正本参照とし、数値IDは探索補助に限定します。
+- 既存の60RQ行、`A/B/C=17/25/18`、および `G1-G6` 運用キーは変更していません。
