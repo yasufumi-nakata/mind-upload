@@ -5,7 +5,7 @@ description: "RQごとに主張単位・判定境界・応募テーマ・主デ�
 article_type: Wiki
 subtitle: "1RQ=1検証命題=1応募テーマ=1主データを実行可能な形で固定"
 author: Mind Uploading Research Project
-last_updated: "2026-03-22"
+last_updated: "2026-03-25"
 note: "Per-RQ Deep Evaluation Cards"
 audience: "RQを個別に深掘りしながら応募計画へ落とし込みたい研究者"
 reading_time: "35-55分"
@@ -15,7 +15,7 @@ reading_time: "35-55分"
 
 > 汎用横断の要約ではなく、60RQを1件ずつ深く読むための固定カード集。
 
-- 更新日: 2026-03-22
+- 更新日: 2026-03-25
 - 前提: `mind-upload-eeg-rq60-feasibility-and-funds` と `mind-upload-eeg-rq60-grant-dataset-playbook` の整合を取った統合版
 
 ## このページの使い方
@@ -547,3 +547,37 @@ reading_time: "35-55分"
 
 - 提出時のデータ参照は引き続き `Dxx + DOI + データセット名 + access区分` を正本とし、数値IDは探索補助として扱います。
 - 外部依存タスク（制度確定・法的主体再編判断・縦断臨床連携）は `C` 判定RQで明示分離し、今回runでは実行可能な監査項目定義までを更新しました。
+
+## 2026-03-25 02:03 JST 再検証ログ（本run / 6RQディープバッチ追加）
+
+- `RQ_TOTAL=60` と `A/B/C=17/25/18` を再確認し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続しました。
+- 本runでは汎用要約を増やさず、`U0-4/U1-4/U8-5/U11-4/U13-6/U15-3` を固定対象として追記します。
+
+| RQ | 判定 | 主データ（Dアンカー） | 第一/予備応募先 | 深掘りで固定した最低提出単位 |
+|---|---|---|---|---|
+| U0-4 | B | `D02`（補助 `D10/D12`） | `G2 / G3` | Identity determination two-axis report（branch/copy ケースの運用上限を明記） |
+| U1-4 | B | `D08`（補助 `D11/D19`） | `G1 / G4` | Inverse solution comparison table and uncertainty distribution chart（後方分布公開基準つき） |
+| U8-5 | B | `D21`（補助 `D20/D12`） | `G2 / G5` | Operational stability report（human override 誤作動率/回復時間/再発率） |
+| U11-4 | B | `D15`（補助 `D16/D17`） | `G2 / G4` | Awareness index comparison report（偽陽性/偽陰性の停止条件つき） |
+| U13-6 | B | `D10`（補助 `D03/D09`） | `G1 / G4` | Leak audit results and repartition trail（prompt誘導・リーク・shortcut分離） |
+| U15-3 | C | `D07`（補助 `D21/D22`） | `G2 / G6` | System audit requirements table（法域差比較の最小共通監査項目） |
+
+### U13-6 deep card（prompt誘導・リーク・shortcut分離）
+
+- 判定: `B`
+- 主張単位: 同一出力でも内部機構が異なるケースを、prompt誘導・データリーク・shortcut学習の3経路へ分解して検出する。
+- 主データ: `D10`（`10.18112/openneuro.ds006465.v2.0.0`）
+- 補助データ: `D03`（`10.21227/6106-6120`）, `D09`（`10.21227/r8fc-2y40`）
+- 第一/予備応募先: `G1 / G4`
+- 失敗条件: `リーク検出率` が fold 間で不安定、または shortcut疑いケースが対照条件で再現しない。
+- 最低成果物: `Leak audit results and repartition trail`
+
+### U11-4 deep card（意識指標の失敗条件を先宣言）
+
+- 判定: `B`
+- 主張単位: 指標精度ではなく、臨床/研究運用で許容できない `偽陽性/偽陰性` の閾値を先に固定する。
+- 主データ: `D15`（`10.21227/tswy-m550`）
+- 補助データ: `D16`（`10.5281/zenodo.16919070`）, `D17`（`10.5281/zenodo.6951439`）
+- 第一/予備応募先: `G2 / G4`
+- 失敗条件: 境界ケースで指標符号が反転し、閾値変更後に再現性が維持できない。
+- 最低成果物: `Awareness index comparison report (with failure condition)`
