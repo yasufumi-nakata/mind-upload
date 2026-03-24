@@ -5,7 +5,7 @@ description: "Publishes prior research collected through 50 decomposed questions
 article_type: "Evidence Bank"
 subtitle: "U0-U15 decomposition, current-status map, and prior literature (heavily cited)"
 author: Mind Uploading Research Project
-last_updated: "2026-03-22"
+last_updated: "2026-03-25"
 note: "Compiled from 50 worker tasks (curated for relevance)"
 audience: "Readers who want to browse a large literature set by unresolved issue rather than by paper count alone"
 reading_time: "20-35 min (about 7 min if you only read the statistics and U-map)"
@@ -15,10 +15,11 @@ page_highlights:
   - "For each of U0-U15, it separates what is partially resolved from what remains open."
   - "It keeps intake logs separate from academically integrated evidence and makes the anti-contamination procedure explicit."
   - "Even though this page is citation-heavy, the statistics and current-status map alone provide a usable overview."
-  - "The default entry path for technical and natural-science readers is fixed as U1/U7 -> U4 -> U13 -> U8 -> U3 -> U10."
+  - "The default entry path for technical and natural-science readers is fixed as U1/U7 -> bridge (U7/U8) -> U4 -> U13 -> U8 -> U3 -> U10."
   - "A paper-level technical-only shortlist is now linked at the front door so readers can jump from U labels to concrete anchors without scanning mixed archive pages first."
   - "For technical readers, U1/U7 now separate field-formation visibility from inverse-solver uncertainty and direct-validation class, so scalp reachability is checked before source recovery language."
   - "For technical readers, destructive local ultrastructure is kept separate from living-human in vivo observability, and proxy class is now read separately from route maturity."
+  - "For technical readers, same-subject / same-brain papers now sit on their own bridge rung, so preservation route, regime continuity, and bridge validation are checked before same-state language."
   - "For technical readers, neuromodulatory evidence is now split into mixed arousal proxy, local transmitter sensing, regional atlas prior, occupancy PET, and challenge-linked displacement rather than one human-state meter."
   - "For technical readers, maintenance-state papers now include transcriptional stabilization, post-transcriptional RNA control, phospho-signaling, local proteostasis, cargo-routing, and astrocyte-state evidence rather than only generic support-variable papers."
   - "For technical readers, U10 now separates route families inside thermodynamic language, so lower bounds, time-asymmetry indices, model-based entropy flow, and physiology-side grounding are not compressed into one frontier."
@@ -30,6 +31,7 @@ known_points:
   - "Technical readers who want concrete paper anchors first can now jump directly to the paper archive's 2025-2026 technical-only shortlist."
   - "For U1/U7, a source-imaging paper still has to pass a field-formation visibility check before inverse-method or validation gains are read as broader recoverability."
   - "Destructive local ultrastructure and living-human in vivo proxy routes do not increase the same evidential axis, even when both are called human measurement advances."
+  - "Same-subject or same-brain wording can still hide a sequential bridge problem, so preservation route, elapsed time, regime continuity, and bridge-validation rung remain separate evidence fields."
   - "For U3, neuromodulatory papers do not constrain one shared inferential object; mixed arousal proxies, local sensors, atlas priors, occupancy PET, and displacement PET still need to be read separately."
   - "Maintenance-state papers on transcriptional stabilization, post-transcriptional RNA control, phospho-signaling, local proteostasis, cargo-routing, and astrocyte multiday trace change what remains latent, not what is already directly measured."
   - "Thermodynamic evidence on this site is read only after route-family disclosure: brain-signal irreversibility, model-based entropy flow, and physiology-side energetic grounding remain different claim types."
@@ -138,7 +140,7 @@ The "current status" labels on this page are not pass/fail outcomes. They are sh
 <section class="section" id="technical-priority-route-20260315">
 <h2 class="section-title">March 2026 priority route for technical and natural-science readers</h2>
 <p>
-The weakness of this page used to be that the <strong>intake log</strong> and the <strong>experimental frontier</strong> sat too close together, making it easy for technical readers to miss where the strongest primary evidence currently sits. The default reading order is now fixed as <strong>measurement and human observability</strong>, <strong>model-conditioned causal inference</strong>, <strong>direct validation and imitation-separation</strong>, <strong>long-horizon closed-loop stability</strong>, <strong>maintenance-state beyond the connectome</strong>, and <strong>physical grounding</strong>. That order reflects the current density of primary evidence represented by Tang et al. (2023), d'Ascoli et al. (2025), Willett et al. (2023), Littlejohn et al. (2025), Wairagkar et al. (2025), Unnwongse et al. (2023), Hao et al. (2025), Penny et al. (2004), Rosa et al. (2012), Jafarian et al. (2020), Fr&auml;ssle et al. (2021), Jafarian et al. (2024), Wu et al. (2024), Shapson-Coe et al. (2024), Johansen et al. (2024), Lucchetti et al. (2025), Li et al. (2025), Baadsvik et al. (2024), Rzechorzek et al. (2022), Hirschler et al. (2025), Dagum et al. (2026), Xu et al. (2024), Looser et al. (2024), Terceros et al. (2025), Dewa et al. (2025), Bukalo et al. (2026), Lynn et al. (2021), de la Fuente et al. (2023), Nartallo-Kaluarachchi et al. (2025), Ishihara &amp; Shimazaki (2025), and Epp et al. (2025).
+The weakness of this page used to be that the <strong>intake log</strong> and the <strong>experimental frontier</strong> sat too close together, making it easy for technical readers to miss where the strongest primary evidence currently sits. The default reading order is now fixed as <strong>measurement and human observability</strong>, <strong>sequential bridge validity</strong>, <strong>model-conditioned causal inference</strong>, <strong>direct validation and imitation-separation</strong>, <strong>long-horizon closed-loop stability</strong>, <strong>maintenance-state beyond the connectome</strong>, and <strong>physical grounding</strong>. That order reflects the current density of primary evidence represented by Tang et al. (2023), d'Ascoli et al. (2025), Willett et al. (2023), Littlejohn et al. (2025), Wairagkar et al. (2025), Unnwongse et al. (2023), Hao et al. (2025), Lu et al. (2023), Bosch et al. (2022), MICrONS Consortium et al. (2025), Egger et al. (2024), Penny et al. (2004), Rosa et al. (2012), Jafarian et al. (2020), Fr&auml;ssle et al. (2021), Jafarian et al. (2024), Wu et al. (2024), Shapson-Coe et al. (2024), Johansen et al. (2024), Lucchetti et al. (2025), Li et al. (2025), Baadsvik et al. (2024), Rzechorzek et al. (2022), Hirschler et al. (2025), Dagum et al. (2026), Xu et al. (2024), Looser et al. (2024), Terceros et al. (2025), Dewa et al. (2025), Bukalo et al. (2026), Lynn et al. (2021), de la Fuente et al. (2023), Nartallo-Kaluarachchi et al. (2025), Ishihara &amp; Shimazaki (2025), and Epp et al. (2025).
 </p>
 <table class="data-table">
 <thead>
@@ -157,31 +159,37 @@ The weakness of this page used to be that the <strong>intake log</strong> and th
 <td>Reading an increase in observables or a new human proxy as if it already implied state-complete reconstruction.</td>
 </tr>
 <tr>
-<td><strong>2. Model-conditioned causal inference</strong></td>
+<td><strong>2. Sequential bridge validity</strong></td>
+<td><strong>U7 / U8</strong></td>
+<td>Acquisition order, live-to-fix or cross-day delay, regime continuity, deformation / coordinate transfer, and bridge-validation rung before same-subject or same-brain language is promoted.</td>
+<td>Reading specimen identity, landmark-based correlative workflow, or repeated-live reacquisition as if they already sampled one latent state.</td>
+</tr>
+<tr>
+<td><strong>3. Model-conditioned causal inference</strong></td>
 <td><strong>U4</strong></td>
 <td>Candidate model space, observation assumptions, family comparison, external validation, reliability window, and abstention boundary for effective-connectivity claims.</td>
 <td>Reading a dense or fast DCM graph as discovered causal wiring or as unique internal-state recovery.</td>
 </tr>
 <tr>
-<td><strong>3. Direct validation and imitation-separation</strong></td>
+<td><strong>4. Direct validation and imitation-separation</strong></td>
 <td><strong>U13</strong></td>
 <td>That successful decoding or communication does not, by itself, imply causal preservation under intervention or whole-brain emulation.</td>
 <td>Calling brain-to-text or speech neuroprosthesis results direct proof of WBE.</td>
 </tr>
 <tr>
-<td><strong>4. Long-horizon closed-loop stability</strong></td>
+<td><strong>5. Long-horizon closed-loop stability</strong></td>
 <td><strong>U8</strong></td>
 <td>Whether latency, jitter, dropout, recalibration burden, and recovery time are tracked as separate metrics.</td>
 <td>Claiming week-to-month deployability on the basis of within-session success alone.</td>
 </tr>
 <tr>
-<td><strong>5. maintenance-state</strong></td>
+<td><strong>6. maintenance-state</strong></td>
 <td><strong>U3</strong></td>
 <td>Whether sleep-dependent homeostasis, transcriptional stabilization, post-transcriptional RNA control, phospho-signaling, local proteostasis / tag-capture balance, cargo-routing state, neuromodulatory class split, astrocyte multiday trace, myelin/metabolic support, and active maintenance have been dropped from the picture.</td>
 <td>Assuming that connectome plus cell type is already enough to close the long-run dynamical problem.</td>
 </tr>
 <tr>
-<td><strong>6. Physical grounding</strong></td>
+<td><strong>7. Physical grounding</strong></td>
 <td><strong>U10</strong></td>
 <td>Whether signal route, state definition, coarse-graining / timescale, estimator family, and physiology-side grounding are disclosed before dissipation, energy constraints, or effective cost are interpreted.</td>
 <td>Acting as if one irreversibility result already gives direct dissipation, a common thermodynamic scale, or a WBE gate.</td>
@@ -207,6 +215,12 @@ For technical reading, the first split is between <strong>destructive local stru
 </p>
 </div>
 <div class="note-box">
+<strong>Read same-subject / same-brain papers as bridge-limited evidence</strong>
+<p>
+The next overread to stop is to treat <strong>same-subject</strong> or <strong>same-brain</strong> as if those labels already solved <strong>same-state continuity</strong>. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> show that preservation route changes extracellular-space retention and downstream ultrastructure, <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a> show that correlative live-to-EM work is a landmark-based multistage bridge, <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> show that same-brain function plus EM remains a sequential local pipeline, and <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> show that even repeated live EEG can drift over a 10-hour window enough to motivate adaptive decoders. Therefore, on this page, specimen identity is read only as one bridge ingredient, not as same-state evidence by default.
+</p>
+</div>
+<div class="note-box">
 <strong>Read neuromodulatory papers as a route-family split</strong>
 <p>
 The literature route for U3 also needed one more correction. The current primary literature does not support reading all neuromodulatory papers as one human-state meter. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> is a <strong>mixed arousal proxy</strong>, <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">Lohani et al. (2022)</a> and <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> are <strong>local acetylcholine sensing routes</strong>, <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> and <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">Goulas et al. (2021)</a> are <strong>receptor / transporter atlas priors</strong>, <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a> is <strong>occupancy PET</strong>, and <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a> plus <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">Erritzoe et al. (2020)</a> are <strong>challenge-linked displacement / release-sensitive PET</strong>. Therefore, on this page, U3 now asks readers to name the <strong>inferential object</strong>, <strong>time window</strong>, <strong>spatial scope</strong>, and <strong>model / challenge burden</strong> before any neuromodulatory paper is read as evidence about the current whole-brain transmitter state.
@@ -227,7 +241,7 @@ On the core pages, thermodynamic claims already require a route card, but this e
 <div class="note-box">
 <strong>If you want paper-level anchors before the U map</strong>
 <p>
-The default route on this page is still organized by unresolved question. If you already know that you want only the 2025-2026 technology / natural-science frontier papers first, jump directly to the <a href="mind_uploading_papers.html#technical-shortlist-20260320">Paper Collection: 2025-2026 technical-only shortlist</a>. That table gives concrete anchor papers for EEG foundation-model governance, field-formation visibility, destructive ultrastructure audit, living-human observability, neuromodulatory route-family splits, maintenance-state boundary papers, direct source validation, closed-loop communication, and thermodynamic route-family splits before you return here to place them in U1/U7/U4/U13/U8/U3/U10.
+The default route on this page is still organized by unresolved question. If you already know that you want only the 2025-2026 technology / natural-science frontier papers first, jump directly to the <a href="mind_uploading_papers.html#technical-shortlist-20260320">Paper Collection: 2025-2026 technical-only shortlist</a>. That table gives concrete anchor papers for EEG foundation-model governance, field-formation visibility, destructive ultrastructure audit, living-human observability, <strong>state-continuity bridge limits</strong>, neuromodulatory route-family splits, maintenance-state boundary papers, direct source validation, closed-loop communication, and thermodynamic route-family splits before you return here to place them in U1/U7/U4/U13/U8/U3/U10.
 </p>
 </div>
 <div class="note-box">
@@ -355,7 +369,7 @@ This section is the "input acceptance log". The acceptance/rejection decision (U
 <div class="note-box">
 <strong>This is not the default entry point for technical and natural-science readers</strong>
 <p>
-This section is an intake queue, not a frontier-ranking page. If you want to follow the primary evidence in technology and the natural sciences, start instead from the <a href="#technical-priority-route-20260315">Technology and Natural Sciences priority route</a> above, or from <strong>U1 / U7 / U4 / U13 / U8 / U3 / U10</strong> in the main text.
+This section is an intake queue, not a frontier-ranking page. If you want to follow the primary evidence in technology and the natural sciences, start instead from the <a href="#technical-priority-route-20260315">Technology and Natural Sciences priority route</a> above, or from <strong>U1 / U7 first</strong>, then the <strong>state-continuity bridge between U7 and U8</strong>, and then <strong>U4 / U13 / U8 / U3 / U10</strong> in the main text.
 </p>
 </div>
 </section>
@@ -381,6 +395,11 @@ Here, <strong>ID</strong> is the name tag of the problem, <strong>Current status
 <td>I want to know the limits of EEG estimation, source imaging, and time synchronization</td>
 <td><strong>U1 / U7</strong></td>
 <td>This is because we need to know how far we can estimate from observations and how effective direct validation and synchronization rules are. </td>
+</tr>
+<tr>
+<td>I want to know whether same-subject / same-brain really means one state sample</td>
+<td><strong>U7 / U8</strong></td>
+<td>This is where acquisition order, live-to-fix delay, cross-day regime change, and bridge validation have to be named before same-state language is allowed. </td>
 </tr>
 <tr>
 <td>I want to read effective-connectivity claims without overpromoting them</td>
@@ -412,13 +431,13 @@ Here, <strong>ID</strong> is the name tag of the problem, <strong>Current status
 <div class="note-box">
 <strong>Default reading order for this table</strong>
 <p>
-For readers coming from technology and the natural sciences, the default route is <strong>U1 / U7 → U4 → U13 → U8 → U3 → U10</strong>. U11 is treated as a secondary route for experimental comparison, while U0 / U12 / U15 are treated as auxiliary routes that branch off and then return to the main line.
+For readers coming from technology and the natural sciences, the default route is <strong>U1 / U7 → bridge (U7 / U8) → U4 → U13 → U8 → U3 → U10</strong>. U11 is treated as a secondary route for experimental comparison, while U0 / U12 / U15 are treated as auxiliary routes that branch off and then return to the main line.
 </p>
 </div>
 <table class="data-table">
 <thead><tr><th>Big problems</th><th>Included U</th><th>Roughly what to look at</th></tr></thead><tbody>
 <tr><td><strong>Definition and evaluation</strong></td><td>U0 / U11 / U13 / U14</td><td>What is called "the same", how to distinguish between imitation and verification, and how to establish make-up exams. </td></tr>
-<tr><td><strong>Measurement and estimation</strong></td><td>U1 / U7</td><td>How much can we learn from observational data and how to align multiple modalities? </td></tr>
+<tr><td><strong>Measurement and estimation</strong></td><td>U1 / U7 (+ bridge to U8)</td><td>How much can we learn from observational data, how to align multiple modalities, and when sequential same-subject bridges still fail same-state continuity. </td></tr>
 <tr><td><strong>Causality and implementation stability</strong></td><td>U4 / U8 / U10</td><td>Whether interventions still match, whether the system stays stable in closed loop, and whether the physical cost remains within bounds. </td></tr>
 <tr><td><strong>Boundaries and identity</strong></td><td>U3 / U12</td><td>How much should be included to be considered a subject, and how should identity be handled after divergence? </td></tr>
 <tr><td><strong>System and public operation</strong></td><td>U15</td><td>Can it be operated not only in terms of technology but also in terms of suspension standards, disclosure standards, and how to place responsibilities? </td></tr>
