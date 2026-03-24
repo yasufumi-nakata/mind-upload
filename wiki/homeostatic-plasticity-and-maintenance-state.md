@@ -5,7 +5,7 @@ description: "Uses primary literature to organize the maintenance mechanisms tha
 article_type: Wiki
 subtitle: "Even with a wiring diagram and cell type labels, long-term dynamics are still not determined."
 author: Mind Uploading Research Project
-last_updated: "2026-03-22"
+last_updated: "2026-03-25"
 note: "Technical / natural science only"
 audience: "People who want to probe the limits of the connectome more deeply from the perspective of internal states and maintenance mechanisms."
 reading_time: "16-22 minutes"
@@ -26,6 +26,7 @@ accuracy_note: >
   long-term dynamics and memory maintenance. This does not mean sufficient conditions have been established.
 page_highlights:
   - "Maintenance-state includes not only intrinsic excitability, but also activity-dependent transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, AIS / ion-channel landscapes, sleep-dependent homeostasis, myelin / oligodendrocytes, thermal-state, ionic milieu / chloride homeostasis, local proteostasis / synaptic-tagging state, cargo-transport / cytoskeletal trafficking state, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, glial metabolism and astrocyte ensembles, and clearance / immune support."
+  - "Intrinsic-excitability evidence is not one class: engram allocation, AIS / channel-state plasticity, firing-rate set-point recovery, and living-human perturbation-conditioned proxies should not be compressed into one row."
   - "ECM / PNN evidence is not one class: plasticity-window reopening, receptor-mobility constraint, microglia-driven matrix remodeling, cell-type-specific memory support, age-linked rescue, and human ex vivo histology should be audited separately with a route card."
   - "Sleep replay evidence is not one class: stage label, scalp coupling proxy, intracranial ripple evidence, closed-loop intervention, and difficulty-selective TMR should be audited separately with a route card."
   - "Myelin evidence is not one class: learning-dependent oligodendrogenesis, conduction microgeometry / timing-state control, plasticity-brake effects, remyelination-to-function recovery, and human macro-myelin proxies should be audited separately with a route card."
@@ -463,6 +464,59 @@ The weakness that needed deeper treatment here was that if we write <strong>intr
 <strong>What can be said directly from this verse</strong>
 <p>
 When reading input-output rules for WBE or long-term BCI, do not collapse <strong>intrinsic excitability</strong> into one number or one “missing variable.” Relative excitability for allocation, AIS / channel state, and homeostatic recovery control should be audited separately, or at least given separate abstention reasons.
+</p>
+</div>
+<div class="note-box" id="intrinsic-excitability-route-card">
+<strong>2026-03-25 addendum: intrinsic excitability / homeostatic-set-point evidence now needs a route card</strong>
+<p>
+The remaining weakness on this page was that <strong>intrinsic-excitability evidence</strong> could still collapse several different inferential objects into one bucket. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuron.2014.07.017" target="_blank">Yiu et al. (2014)</a> and <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">Hadzibegovic et al. (2025)</a> are about <strong>allocation / early engram-excitability routes</strong>. <a href="https://doi.org/10.1038/nature09160" target="_blank">Grubb &amp; Burrone (2010)</a>, <a href="https://doi.org/10.1038/nature09087" target="_blank">Kuba et al. (2010)</a>, <a href="https://doi.org/10.1038/s41467-020-20232-x" target="_blank">Jamann et al. (2021)</a>, <a href="https://doi.org/10.1126/sciadv.adf3885" target="_blank">Fréal et al. (2023)</a>, and <a href="https://doi.org/10.1038/s41593-025-02152-5" target="_blank">Benoit et al. (2025)</a> are about <strong>AIS / ion-channel-state routes</strong>. <a href="https://doi.org/10.1016/j.neuron.2014.04.002" target="_blank">O'Leary et al. (2014)</a> and <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a> are about <strong>homeostatic set-point / recovery-control routes</strong>. <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>, <a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>, <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a>, and <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a> remain <strong>living-human perturbation-conditioned proxy routes</strong>. Therefore, this site now requires an <strong>intrinsic excitability / homeostatic-set-point route card</strong> before a claim is promoted beyond a narrow, explicitly named ceiling.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be fixed explicitly</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the paper is about <strong>allocation / engram-selection bias</strong>, <strong>AIS / ion-channel-state plasticity</strong>, <strong>homeostatic set-point / recovery control</strong>, or a <strong>living-human perturbation-conditioned proxy</strong>.</td>
+<td>Different inferential objects collapse into one phrase such as <code>excitability evidence supports memory and stability</code>.</td>
+</tr>
+<tr>
+<td><strong>Physiological locus</strong></td>
+<td>Name the cell class, region, and structural or assay locus actually constrained: for example <strong>engram neurons</strong>, <strong>AIS geometry / Na+ channel distribution</strong>, <strong>population firing-rate return</strong>, or <strong>TMS-evoked / PAS-conditioned human cortex</strong>.</td>
+<td>A local controller or cell-class-specific rule is silently promoted to a generic whole-brain excitability readout.</td>
+</tr>
+<tr>
+<td><strong>Direct observable</strong></td>
+<td>Write whether the paper directly measures spike threshold / gain, AIS position / length, channel distribution, firing-rate return trajectory, plasticity efficacy, or only a perturbation-conditioned behavioral / electrophysiological outcome.</td>
+<td>A proxy for response to perturbation is overread as direct measurement of the responsible controller.</td>
+</tr>
+<tr>
+<td><strong>Time axis / intervention window</strong></td>
+<td>Fix whether the claim concerns <strong>pre-learning allocation</strong>, <strong>minutes-to-hours AIS reconfiguration</strong>, <strong>hours-to-days homeostatic recovery</strong>, or a <strong>momentary wake / sleep / EEG-state-gated assay window</strong>.</td>
+<td>Fast permissive changes, slow return dynamics, and transient assay-state dependence are treated as one timescale.</td>
+</tr>
+<tr>
+<td><strong>Human proxy class</strong></td>
+<td>When human evidence is cited, state whether it is a <strong>sleep-history recalibration proxy</strong>, <strong>state-gated perturbation proxy</strong>, or another bounded assay, and say which controller remains latent.</td>
+<td>Living-human perturbation-conditioned evidence is silently promoted to direct AIS / channel or cell-specific recovery-controller readout.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Fix in one line what remains latent, especially cell-specific controller identity, branch- or ensemble-specific allocation rules, whole-brain in vivo AIS / channel readout, and cross-species bridge assumptions.</td>
+<td>The paper is overread as if current intrinsic-excitability state had been directly identified in a living human brain.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Why this route card is necessary here</strong>
+<p>
+<a href="https://doi.org/10.1038/s41593-025-02152-5" target="_blank">Benoit et al. (2025)</a> showed that AIS structure itself changes during associative fear learning, while <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">Hadzibegovic et al. (2025)</a> showed that early intrinsic-excitability plasticity in neocortical engram neurons regulates later memory formation and precision. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a> then showed that firing-rate homeostasis depends on sleep/wake regime rather than being a single static property, and <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> showed in humans that plasticity efficacy depends on ongoing EEG-defined state. Therefore, the word <strong>excitability</strong> does not yet tell us whether the paper constrained allocation bias, AIS microstructure, recovery control, or only a perturbation-conditioned human proxy.
 </p>
 </div>
 
