@@ -601,3 +601,23 @@ reading_time: "35-55分"
 
 - 本runの提出実務は `Dxx + DOI + データセット名 + access区分` を正本参照とし、数値IDは探索補助に限定します。
 - 既存の60RQ行、`A/B/C=17/25/18`、および `G1-G6` 運用キーは変更していません。
+
+## 2026-03-25 03:03 JST 再検証ログ（本run / 6RQディープバッチ追加）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` で `git pull --ff-only` を実行し、最新化を確認しました。
+- `| Ux-y<br>` 行を再計数し、`RQ_TOTAL=60`（欠損・重複 `0`）と `A/B/C=17/25/18` を再確認しました。
+- 本runは汎用横断要約を増やさず、直近バッチと重複しない `U0-1/U3-2/U7-4/U10-2/U12-1/U13-3` の6RQを深掘り対象として固定しました。
+
+| RQ | 判定 | 主データ（Dアンカー） | 第一/予備応募先 | 深掘りで固定した検証焦点 | 失敗条件（停止条件） | 最低成果物 |
+|---|---|---|---|---|---|---|
+| U0-1 | A | `D02`（補助 `D11/D23`） | `G2 / G3` | 観測一致と介入一致を二軸ROCで同時評価し、同一性判定の必要条件/十分条件を運用定義する。 | 介入条件を変えると一致率が閾値を下回り、二軸閾値がセッション間で安定しない。 | Identity KPI two-axis baseline card |
+| U3-2 | B | `D03`（補助 `D04/D24`） | `G2 / G6` | connectome完全性の直接主張を避け、EEG再現性proxyで外部連携要件を明示した比較設計に固定する。 | proxy指標の差が再現せず、外部モダリティ追加前提の境界を示せない。 | Boundary expansion evaluation report (single/integrated comparison) |
+| U7-4 | A | `D11`（補助 `D15/D23`） | `G1 / G3` | モダリティ間アライメント失敗時の再計測/除外ルールを判定木化し、運用契約へ直結させる。 | 再計測/除外判定の再現率が低く、同一条件で運用判断が分岐する。 | Reproducibility audit report (synchronization/QC/preprocessing difference) |
+| U10-2 | C | `D14`（補助 `D15/D18`） | `G2 / G6` | 非平衡熱力学指標と情報処理効率の対応は理論proxyに限定し、EEG単独主張の上限を先に固定する。 | proxy間の対応方向が条件で反転し、理論整合の再現が維持できない。 | Theory consistency memo and proxy correlation analysis |
+| U12-1 | C | `D02`（補助 `D10/D12`） | `G2 / G6` | 分岐後主体IDの付与を `branch_id/consent_state/lineage_hash` 監査鎖へ写像し、制度判断との分界を明示する。 | lineage追跡が一意化できず、同意状態との対応が監査ログで再現できない。 | System audit requirements table (technical log compatible) |
+| U13-3 | B | `D10`（補助 `D03/D09`） | `G1 / G4` | 同一出力で内部機構が異なるケースを、意味一致率と因果一致率の乖離ケースとして抽出・評価する。 | 乖離ケース抽出が不安定で、対照条件で再現しない。 | Mimic separation evaluation script and control condition table |
+
+補足:
+
+- 提出時のデータ参照は継続して `Dxx + DOI + データセット名 + access区分` を正本とし、数値IDは探索補助として扱います。
+- 既存の60RQ行、`A/B/C=17/25/18`、および `G1-G6` 運用キーは変更していません。

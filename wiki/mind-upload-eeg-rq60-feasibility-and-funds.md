@@ -913,3 +913,33 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 | U14-6 | A | `D01`（補助 `D08/D13`） | `G1 / G3` | コンテナ固定による再現率改善と計算コスト増分を同一KPI枠で監査し、許容上限を提出条件化。 |
 
 - 提出時のデータ参照は引き続き `Dxx + DOI + データセット名 + access区分` を正本とし、数値IDは探索補助として扱います。
+
+## 今回の深掘り実行パック（2026-03-25 03:03 JST, 2週間で初回結果まで）
+
+汎用横断の更新ではなく、今回は直近runと重複しない `6RQ` を固定し、`1RQ=1検証命題=1応募テーマ=1主データ` で深掘りします。
+
+| RQ | 選定理由（1件ずつ深掘りする理由） | 最初の実験KPI | 失敗条件（このrunでの停止条件） | 提出最低成果物 | 応募先（第一/予備） |
+|---|---|---|---|---|---|
+| U0-1 | 同一性判定の基礎で、二軸閾値を固定するとU0全体の判定基盤を再利用できる。 | `観測一致AUC` `介入一致率` `閾値安定性` | 介入条件変更で一致率が閾値未満になり、閾値がセッション間で再現しない。 | Identity KPI two-axis baseline card | `G2 / G3` |
+| U3-2 | EEG単独で言える境界を明示しつつ、外部連携が必要な理由を定量化できる。 | `統合条件対単体条件のΔAUC` `proxy再現率` | proxy差分が再現せず、外部依存境界を主張できない。 | Boundary expansion evaluation report (single/integrated comparison) | `G2 / G6` |
+| U7-4 | 再計測/除外ルールの判定木化は、再現運用契約へ直接転記しやすい。 | `判定木一致率` `再計測成功率` `除外妥当率` | 同条件で判定が分岐し、運用契約として固定できない。 | Reproducibility audit report (synchronization/QC/preprocessing difference) | `G1 / G3` |
+| U10-2 | 理論主張の過大化を防ぎ、proxy段階の提出境界を明確化できる。 | `理論proxy相関` `符号一致率` `条件間安定性` | proxy対応方向が反転し、理論整合の再現が維持できない。 | Theory consistency memo and proxy correlation analysis | `G2 / G6` |
+| U12-1 | 分岐主体IDの監査鎖を先に作ると、U12全体の制度接続設計に再利用できる。 | `lineage追跡率` `同意状態整合率` `監査欠損率` | lineage追跡が一意化できず、同意状態との対応が監査ログで再現できない。 | System audit requirements table (technical log compatible) | `G2 / G6` |
+| U13-3 | 出力一致だけでは判定できない問題を、乖離ケース抽出で具体化できる。 | `意味一致率` `因果一致率` `乖離ケース再現率` | 乖離ケース抽出が不安定で、対照条件で再現しない。 | Mimic separation evaluation script and control condition table | `G1 / G4` |
+
+実行順（本run固定）:
+
+1. `U0-1`
+2. `U7-4`
+3. `U3-2`
+4. `U13-3`
+5. `U10-2`
+6. `U12-1`
+
+## 今回の再検証ログ（2026-03-25 03:03 JST）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` の各 `main` で `git pull --ff-only` を実行し、最新化を確認しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` / `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` / `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `unique Ux-y` を再計数し、3ページとも `RQ_TOTAL=60`（欠損・重複 `0`）を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` を再確認し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持しました。
+- 本runは汎用横断要約ではなく、`U0-1/U3-2/U7-4/U10-2/U12-1/U13-3` の6RQだけを新規ディープバッチとして追加しました。
+- 提出時データ参照は引き続き `Dxx + DOI + データセット名 + access区分` を正本とし、数値IDは探索補助として扱います。
