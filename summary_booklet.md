@@ -166,7 +166,7 @@ body_class: "summary-booklet-page"
     <article class="booklet-card booklet-card-positive">
       <h3>比較的はっきりしていること</h3>
       <ul class="booklet-list">
-        <li>When public data, standards, benchmarks, and audit rules are in place, L0-L2 progress can accumulate in comparable form.</li><li>EEG and decoding research can create measurable progress when their claims stay within their conditions.</li><li>The same decode score is not a target-specific biomarker if it can be reproduced by subject / session fingerprint alone.</li><li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li><li>Recent rodent causal studies show that astrocyte-state can matter for recall, multiday stabilization, and fear-state representations, but this still does not provide a human whole-brain readout.</li>
+        <li>When public data, standards, benchmarks, and audit rules are in place, L0-L2 progress can accumulate in comparable form.</li><li>EEG and decoding research can create measurable progress when their claims stay within their conditions.</li><li>The same decode score is not a target-specific biomarker if it can be reproduced by subject / session fingerprint alone.</li><li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li><li>Recent primary literature requires intrinsic excitability to be read as several routes rather than one row: allocation bias, AIS / channel-state plasticity, recovery controller, and living-human perturbation-conditioned proxies do not answer the same question.</li>
       </ul>
     </article>
     <article class="booklet-card booklet-card-caution">

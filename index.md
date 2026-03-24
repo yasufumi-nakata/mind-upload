@@ -5,7 +5,7 @@ description: "A verification commons for turning mind uploading and WBE into a s
 article_type: Start Here
 subtitle: "Define success criteria, standards, benchmarks, and preregistration first"
 author: Mind Uploading Research Project
-last_updated: "2026-03-22"
+last_updated: "2026-03-25"
 note: "Human-friendly landing page"
 audience: "First-time visitors, readers who want only the big picture, and anyone who wants a clear reading order"
 reading_time: "5-10 min"
@@ -21,6 +21,7 @@ page_highlights:
   - "Clearance / immune evidence is not one class: drainage anatomy, microglia-related synaptic control, human CSF-mobility MRI, and model-based biomarker-efflux routes are kept separate."
   - "Bioenergetic evidence is not one class: presynaptic ATP-demand support, dendritic mitochondrial positioning / fission, synaptic ATP-synthase nano-organization, mitochondrial Ca2+-efflux tuning, and human macro energetic imaging are kept separate."
   - "Post-transcriptional RNA evidence is not one class: splice-isoform control, m6A-dependent translation, m6A-dependent degradation, RNA editing, and atlas ceilings are kept separate."
+  - "Intrinsic-excitability evidence is not one class: engram-allocation bias, AIS / channel-state plasticity, firing-rate set-point / recovery control, and living-human perturbation-conditioned proxies are kept separate."
   - "Ionic evidence is not one class: chloride-set-point / E_GABAA tuning, interstitial-ion state switching, perisynaptic K+ clearance, pathology routes, and macro human ionic proxies are kept separate."
   - "Neuromodulatory evidence is not one class: mixed arousal proxies, local transmitter sensors, receptor / transporter atlas priors, occupancy PET, and challenge-limited displacement PET are kept separate."
   - "Electrical-state evidence is not one class: gap-junction coupling, endogenous field effects, local inhibitory driving-force state, and human perturbation clues are kept separate."
@@ -40,6 +41,7 @@ known_points:
   - "EEG and decoding research can create measurable progress when their claims stay within their conditions."
   - "The same decode score is not a target-specific biomarker if it can be reproduced by subject / session fingerprint alone."
   - "Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately."
+  - "Recent primary literature requires intrinsic excitability to be read as several routes rather than one row: allocation bias, AIS / channel-state plasticity, recovery controller, and living-human perturbation-conditioned proxies do not answer the same question."
   - "Recent rodent causal studies show that astrocyte-state can matter for recall, multiday stabilization, and fear-state representations, but this still does not provide a human whole-brain readout."
   - "Current primary literature also treats clearance / immune support as a measurable multiday support-state, but current human CSF / glymphatic routes still stop at macro support-state proxy rather than local immune-controller readout."
   - "Current human astrocyte-related PET and clearance routes remain bounded proxy classes; they still do not identify which astrocyte, microglial controller, or synapse is responsible."
@@ -139,6 +141,13 @@ This site now blocks that shortcut too. <a href="https://doi.org/10.1038/s41467-
 <strong>If You Want To Know Which Human Routes Are Real Advances And Which Are Still Only Proxies</strong>
 <p>
 The front door was still too coarse if it only said that many hidden states remain. <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> now separates <strong>destructive local human nanoscale ultrastructure</strong> from <strong>living-human in vivo proxy routes</strong> such as regional synaptic-density PET, receptor / transporter atlas priors, selected occupancy / displacement PET routes for chosen neurotransmitter systems, perturbation-conditioned sleep-homeostasis / plasticity proxies, EEG-state-gated perturbation routes, and macro biochemical / energetic / ionic / thermal / myelin / clearance proxies. It also keeps visible the still-missing whole-brain in vivo routes for current transcription / chromatin state, ECM / PNN gate state, branch-local proteostasis, current chloride set point, and local mitochondrial positioning. In other words, <strong>"a human nanoscale paper exists"</strong> is not silently rephrased here as <strong>"living-human state-complete measurement is close and already field-ready."</strong>
+</p>
+</div>
+
+<div class="note-box">
+<strong>If You Are Treating Intrinsic Excitability As One Solved Row</strong>
+<p>
+This site now blocks that shortcut too. <a href="https://doi.org/10.1016/j.neuron.2014.07.017" target="_blank">Yiu et al. (2014)</a> constrains <strong>relative excitability as an allocation-bias route</strong>, <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">Hadzibegovic et al. (2025)</a> constrains <strong>early neocortical engram-excitability plasticity</strong>, <a href="https://doi.org/10.1038/s41593-025-02152-5" target="_blank">Benoit et al. (2025)</a> constrains <strong>axon-initial-segment dynamics during associative fear learning</strong>, <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a> constrains <strong>firing-rate set-point / recovery control across sleep and wake</strong>, and <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>, <a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a>, plus <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> remain <strong>living-human perturbation-conditioned proxy routes</strong> rather than direct whole-brain readouts of AIS geometry, ion-channel distribution, or cell-specific recovery controllers. Therefore, one excitability paper is not read here as if <strong>the current excitability landscape</strong> or <strong>the recovery controller</strong> had already been measured. The shortest route is <a href="wbe_101.html#state-completeness">WBE 101: hidden state at the entry point</a>, <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>, and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#intrinsic-excitability-route-card">Wiki: intrinsic excitability / homeostatic-set-point route card</a>.
 </p>
 </div>
 
