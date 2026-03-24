@@ -166,7 +166,7 @@ body_class: "summary-booklet-page"
     <article class="booklet-card booklet-card-positive">
       <h3>比較的はっきりしていること</h3>
       <ul class="booklet-list">
-        <li>When public data, standards, benchmarks, and audit rules are in place, L0-L2 progress can accumulate in comparable form.</li><li>EEG and decoding research can create measurable progress when their claims stay within their conditions.</li><li>The same decode score is not a target-specific biomarker if it can be reproduced by subject / session fingerprint alone.</li><li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li><li>Recent primary literature requires intrinsic excitability to be read as several routes rather than one row: allocation bias, AIS / channel-state plasticity, recovery controller, and living-human perturbation-conditioned proxies do not answer the same question.</li>
+        <li>When public data, standards, benchmarks, and audit rules are in place, L0-L2 progress can accumulate in comparable form.</li><li>EEG and decoding research can create measurable progress when their claims stay within their conditions.</li><li>The same decode score is not a target-specific biomarker if it can be reproduced by subject / session fingerprint alone.</li><li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li><li>Current primary literature also requires phospho-signaling to be read as a distinct hidden-state family: transcriptomics, proteomics, and nominal weights still do not fix phosphosite occupancy, kinase / phosphatase balance, or signaling nanodomains.</li>
       </ul>
     </article>
     <article class="booklet-card booklet-card-caution">
@@ -257,7 +257,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Start Here - Define success criteria, standards, benchmarks, and preregistration first / 5-10 min</p>
   <p>Mind-Upload is a site for breaking the large question, "Can a mind be reproduced on a computer?", into <strong>small, testable tasks</strong>. Instead of rushing to a final conclusion, it starts by defining <strong>what counts as progress</strong> and <strong>whether other people can verify the same result</strong>.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>The core of Mind-Upload is not bold conclusions but a verification commons that lets progress be measured.</li><li>If you are unsure where to start, read Verification -&gt; Roadmap -&gt; WBE/EEG 101.</li><li>Connectomes and cell types alone do not determine long-term dynamics; sleep/homeostasis, sleep architecture / replay-coupling, myelination, thermal-state, bioenergetic / mitochondrial state, astrocyte / glial-state, and clearance / immune support remain separate variables.</li>
+    <li>The core of Mind-Upload is not bold conclusions but a verification commons that lets progress be measured.</li><li>If you are unsure where to start, read Verification -&gt; Roadmap -&gt; WBE/EEG 101.</li><li>Connectomes and cell types alone do not determine long-term dynamics; sleep/homeostasis, sleep architecture / replay-coupling, phospho-signaling / second-messenger state, local proteostasis / cargo-routing state, myelination, thermal-state, bioenergetic / mitochondrial state, astrocyte / glial-state, and clearance / immune support remain separate variables.</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
