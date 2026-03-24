@@ -1596,6 +1596,76 @@ The Observability Budget fixes <strong>what was directly observed</strong>. The 
 </div>
 </section>
 
+<section class="section" id="neural-contribution-card">
+<h2 class="section-title">2026-03-25 addendum: attach a Neural Contribution Card to brain-to-text and speech-decode results</h2>
+<p>
+The remaining weakness after the <strong>Specificity &amp; Shortcut Card</strong> was that language-facing results could still be overread from output fluency alone. The primary literature does not support that shortcut. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a> showed subject-cooperative semantic reconstruction from <strong>within-subject fMRI</strong>, <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">Défossez et al. (2023)</a> showed <strong>3 s speech-segment identification</strong> from non-invasive M/EEG with predictions dominated by lexical and contextual representations, <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a> scaled <strong>known-word-onset decoding</strong> to <strong>723 participants</strong> and <strong>five million words</strong> while still finding <strong>MEG &gt; EEG</strong>, <strong>reading &gt; listening</strong>, and strong gains from more training data and test averaging, and <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Ye et al. (2025)</a> showed that prompt-conditioned fMRI-to-LLM generation beats a permuted-brain control while remaining strongly conditioned by <strong>prompt length</strong>, <strong>LLM scaffold</strong>, and the difficulty of no-prompt generation. Therefore, this site now requires a language-specific card before a text / speech output is read as neural reconstruction rather than a mixture of task structure, priors, and brain-derived contribution.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Neural Contribution Card field</th>
+<th>What must be written at minimum</th>
+<th>What goes wrong if it is omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>task regime / direct observable</strong></td>
+<td>Name whether the route is perceived speech, read words, imagined speech, silent-video semantics, attempted speech, or overt speech, and name the measurement stack plus directly observed quantity.</td>
+<td>Perception-heavy, production-heavy, and subject-cooperative semantic routes collapse into one fake category called "brain-to-text."</td>
+</tr>
+<tr>
+<td><strong>timing / segmentation regime</strong></td>
+<td>State whether evaluation used known word onset, fixed multi-second segments, TR-sized fMRI windows, prompted continuation windows, or free-running onset detection, together with the retrieval set or generation unit.</td>
+<td>Known-onset word decoding or segment retrieval is easily misread as unconstrained free-form language readout.</td>
+</tr>
+<tr>
+<td><strong>prior scaffold / prompt budget</strong></td>
+<td>Report the language model, pretrained speech / text representation, candidate set, beam search or retrieval bank, prompt length, vocabulary, and whether generation depended on external text context.</td>
+<td>Fluent output can be misread as brain-only content recovery when much of the structure came from the prompt, candidate bank, or pretrained language prior.</td>
+</tr>
+<tr>
+<td><strong>brain-minus-prior baselines</strong></td>
+<td>Report which of no-brain, permuted-brain, LM-only, prompt-only, candidate-only, time-shuffle, or no-text-prompt baselines were used and what changed under each.</td>
+<td>The reader cannot tell whether the brain signal added target-specific information or merely nudged an already strong prior.</td>
+</tr>
+<tr>
+<td><strong>subject route / cooperation / countermeasure</strong></td>
+<td>State whether the model is within-subject, cross-subject, multi-participant with subject-specific adaptation, or zero-shot to unseen participants, and disclose any cooperation requirement, resistance / countermeasure test, or calibration burden.</td>
+<td>Participant-specific or cooperation-dependent performance is too easily rephrased as general thought reading.</td>
+</tr>
+<tr>
+<td><strong>modality / protocol asymmetry</strong></td>
+<td>Disclose recording device, task format, onset certainty, training-data volume, per-subject depth, and any averaging at test time, especially when performance differs across MEG versus EEG or reading versus listening.</td>
+<td>A score looks like a property of "language decoding" rather than a property of one protocol with one measurement advantage.</td>
+</tr>
+<tr>
+<td><strong>online / abstention / latency route</strong></td>
+<td>State whether the result is offline reranking, batched generation, closed-loop streaming, or real-time synthesis, and report abstention / silence behavior, tail latency, and recalibration burden when relevant.</td>
+<td>An offline or short-horizon communication result is too easily misread as a deployable continuous interface.</td>
+</tr>
+<tr>
+<td><strong>stopped claim / residual ceiling</strong></td>
+<td>Write in one line which unresolved routes remain, such as prompt dependence, candidate-bank dependence, known-onset dependence, cooperation dependence, modality asymmetry, or lack of intervention validation, and state the highest claim ceiling allowed.</td>
+<td>"A sentence came out" is silently promoted to unrestricted thought reading, internal-state identification, or WBE-relevant reconstruction.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Open-vocabulary and generative are not one solved category</strong>
+<p>
+This site now separates at least four non-invasive language routes: <strong>within-subject semantic reconstruction</strong>, <strong>segment retrieval from a fixed candidate bank</strong>, <strong>known-onset word decoding</strong>, and <strong>prompt-conditioned generation</strong>. They improve different objects. Tang (2023) does not fix word-level timing. Défossez (2023) does not remove the candidate-segment structure. d'Ascoli (2025) does not remove known onsets or protocol asymmetry. Ye (2025) does not remove prompt / LLM dependence. Therefore, "open-vocabulary" or "generative" is not accepted here as a shortcut for unrestricted neural language readout.
+</p>
+</div>
+<div class="note-box">
+<strong>Minimum operating rules</strong>
+<p>
+If this card is missing, this site treats the result by default as <strong>task-conditioned language decode</strong>, <strong>prior-assisted reconstruction</strong>, or <strong>communication-subsystem evidence</strong>, not as unrestricted thought reading, unique internal-state identification, or WBE-relevant state capture. In particular, if <strong>timing / segmentation regime</strong>, <strong>prior scaffold / prompt budget</strong>, <strong>brain-minus-prior baselines</strong>, or <strong>subject route / cooperation / countermeasure</strong> is missing, this site stops the reader from rephrasing the result as "the brain content itself was read out."
+</p>
+</div>
+</section>
+
 <section class="section" id="pretraining-card">
 <h2 class="section-title">2026-03-20 addendum: attach a Pretraining Card to foundation / self-supervised EEG results</h2>
 <p>
@@ -2438,6 +2508,10 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Lee, N., Barmpas, K., Panagakis, Y., Adamos, D., Laskaris, N., &amp; Zafeiriou, S. (2025). Are Large Brainwave Foundation Models Capable Yet? Insights from Fine-Tuning. <a href="https://openreview.net/forum?id=J5SbLoq7Uv" target="_blank">ICML 2025 poster / OpenReview</a></li>
 <li>EEG Challenge (2025). Rules. <a href="https://eeg2025.github.io/rules/" target="_blank">official rules</a></li>
 <li>Xiong, W., Li, J., Li, J., Zhu, K., &amp; Jiang, C. (2025). EEG-FM-Bench: A Comprehensive Benchmark for the Systematic Evaluation of EEG Foundation Models. <a href="https://arxiv.org/abs/2508.17742" target="_blank">arXiv:2508.17742</a></li>
+<li>Tang, J., LeBel, A., Jain, S., et al. (2023). Semantic reconstruction of continuous language from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
+<li>Défossez, A., Caucheteux, C., Rapin, J., et al. (2023). Decoding speech perception from non-invasive brain recordings. <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">doi:10.1038/s42256-023-00714-5</a></li>
+<li>d'Ascoli, S., Bel, C., Rapin, J., et al. (2025). Towards decoding individual words from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">doi:10.1038/s41467-025-65499-0</a></li>
+<li>Ye, Z., Ai, Q., Liu, Y., de Rijke, M., Zhang, M., Lioma, C., &amp; Ruotsalo, T. (2025). Generative language reconstruction from brain recordings. <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">doi:10.1038/s42003-025-07731-7</a></li>
 <li>Nosek, B. A., et al. (2015). Promoting an open research culture. <a href="https://doi.org/10.1126/science.aab2374" target="_blank">doi:10.1126/science.aab2374</a></li>
 <li>Wilkinson, M. D., et al. (2016). The FAIR Guiding Principles. <a href="https://doi.org/10.1038/sdata.2016.18" target="_blank">doi:10.1038/sdata.2016.18</a></li>
 </ol>

@@ -5,7 +5,7 @@ description: "Short, precise answers to the questions that come up most often wh
 article_type: FAQ
 subtitle: "Prefer verifiable progress to flashy conclusions"
 author: Mind Uploading Research Project
-last_updated: "2026-03-22"
+last_updated: "2026-03-25"
 note: "Human-first"
 audience: "Readers who want to sort out questions and misconceptions first, and readers who want a quick overview through short Q&A"
 reading_time: "8-15 minutes"
@@ -233,7 +233,7 @@ A. It is a site for building a <strong>Verification Commons</strong> that turns 
 <section class="section" id="q1">
 <h2 class="section-title">Q. Can EEG read “thoughts”?</h2>
 <p>
-A. It is fair to say that some aspects can be read under constrained conditions, but it is not yet fair to say that free thought can be read as such. Tang et al. (2023) demonstrated semantic reconstruction of continuous language from non-invasive brain recordings, but this was an individual-subject reconstruction setup using fMRI. d'Ascoli et al. (2025) showed progress in word decoding from non-invasive M/EEG across 723 people and roughly five million words, but the result depended on known word onsets and task structure, and MEG with reading performed better than EEG with listening.
+A. It is fair to say that some aspects can be read under constrained conditions, but it is not yet fair to say that free thought can be read as such. The reason is that the strongest non-invasive papers do <strong>not</strong> all solve the same problem. Tang et al. (2023) demonstrated subject-cooperative semantic reconstruction from within-subject fMRI. Défossez et al. (2023) showed 3 s speech-segment identification from non-invasive M/EEG with predictions dominated by lexical and contextual representations. d'Ascoli et al. (2025) showed known-word-onset decoding across 723 people and roughly five million words, but performance still depended strongly on task structure, with MEG and reading outperforming EEG and listening. Ye et al. (2025) then showed prompt-conditioned fMRI-to-LLM generation that beat a permuted-brain control, but still depended heavily on prompt and LLM scaffold.
 </p>
 <p>
 It is also not the case that scalp signals uniquely determine the internal state. In Unnwongse et al. (2023), which used intracranial stimulation for direct validation, the mean ESI localization error ranged from 10.3 to 26.0 mm depending on source depth and skull conductivity. In Hao et al. (2025), using simultaneous HD-EEG and SEEG, ictal ESI outperformed interictal ESI, but the figures were still 14.07 ± 4.62 mm versus 17.38 ± 4.16 mm, and accuracy depended strongly on source depth and spike power.
@@ -262,13 +262,15 @@ The Mind-Upload position is not to deny ambitious readout work. It is to separat
 <section class="section" id="q1b">
 <h2 class="section-title" id="brain-to-text">Q. What is the minimum you should check in a brain-to-text demo?</h2>
 <p>
-A. At minimum, check the following six things.
+A. At minimum, check the following seven things.
 </p>
 <ul>
 <li><strong>Measurement method:</strong> scalp EEG, MEG, fMRI, ECoG, or intracortical array. Representative high-performance speech neuroprostheses are invasive.</li>
 <li><strong>Task:</strong> heard words, read words, speech articulation, recall, or free conversation. A constrained perceptual task is not the same as free thought.</li>
-<li><strong>Priors and baselines:</strong> fixed vocabulary, beam search, external corpora, LLMs, prompts, and how far <code>LM-only</code>, <code>no-brain</code>, or shuffle baselines were used. Fluency does not automatically reflect brain signal alone.</li>
+<li><strong>Timing and segmentation:</strong> known word onset, fixed multi-second segment, fMRI TR window, prompted continuation, or free-running onset detection. Known onset is not the same thing as unconstrained decoding.</li>
+<li><strong>Priors and baselines:</strong> fixed vocabulary, beam search, external corpora, LLMs, prompt length, and how far <code>LM-only</code>, <code>no-brain</code>, permuted-brain, no-text-prompt, or shuffle baselines were used. Fluency does not automatically reflect brain signal alone.</li>
 <li><strong>Validation:</strong> held-out conditions, counterfactual tests, adversarial controls, and whether failure cases are shown. Evaluation that stays too close to the training setup is not strong evidence.</li>
+<li><strong>Subject route:</strong> within-subject, cross-subject, adapted-to-subject, or zero-shot to unseen people, together with any cooperation requirement or countermeasure test.</li>
 <li><strong>Confidence handling:</strong> whether confidence is calibrated, and whether silence or abstention is returned at low confidence. A high-probability display alone is not safe interpretation.</li>
 <li><strong>Long-term operation:</strong> not just within-session speed, but also tail latency, cross-day stability, and recalibration burden. A fast demo is not the same as a deployable loop.</li>
 </ul>
@@ -618,7 +620,9 @@ The distinguishing strategy of Mind-Upload is <strong>to build the Verification 
 <h2 class="section-title">References (FAQ)</h2>
 <ol>
 <li>Tang, J., et al. (2023). Semantic reconstruction from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
+<li>Défossez, A., Caucheteux, C., Rapin, J., et al. (2023). Decoding speech perception from non-invasive brain recordings. <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">doi:10.1038/s42256-023-00714-5</a></li>
 <li>d'Ascoli, S., Bel, C., Rapin, J., et al. (2025). Towards decoding individual words from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">doi:10.1038/s41467-025-65499-0</a></li>
+<li>Ye, Z., Ai, Q., Liu, Y., de Rijke, M., Zhang, M., Lioma, C., &amp; Ruotsalo, T. (2025). Generative language reconstruction from brain recordings. <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">doi:10.1038/s42003-025-07731-7</a></li>
 <li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Validating EEG source imaging using intracranial electrical stimulation in focal epilepsy. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
 <li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
 <li>Mahjoory, K., Nikulin, V. V., Botrel, L., et al. (2017). Consistency of EEG source localization and connectivity estimates. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">doi:10.1016/j.neuroimage.2017.02.076</a></li>
