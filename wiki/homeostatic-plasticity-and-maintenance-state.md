@@ -122,7 +122,7 @@ Philosophy, legal systems, and copying issues are not discussed here. It address
 </div>
 
 <section class="section" id="ten-maintenance-classes">
-<h2 class="section-title">16 maintenance-states to fix first</h2>
+<h2 class="section-title">17 maintenance-states to fix first</h2>
 <table class="data-table">
 <thead>
 <tr>
