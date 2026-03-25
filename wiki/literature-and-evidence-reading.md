@@ -5,7 +5,7 @@ description: "This is a supplementary page that organizes the differences betwee
 article_type: Wiki
 subtitle: "Don't confuse 'many papers' with 'strong conclusions'"
 author: Mind Uploading Research Project
-last_updated: "2026-03-18"
+last_updated: "2026-03-26"
 note: "Reading guide"
 audience: "People who have difficulty understanding the difference between a collection of papers and a bibliographic map, or who are confused about which page to enter."
 reading_time: "8-12 minutes"
@@ -17,11 +17,13 @@ page_highlights:
   - "It tells you where to stop and how far to go back to the original text."
   - "When pursuing primary evidence in the technical and natural sciences, it is safer to go through the priority route within the collection rather than the chronological order."
   - "For technical reading, observability-class advances should be kept separate from demos, direct validators, and hidden-state boundary papers."
+  - "For living-human measurement papers, proxy-rich / same-subject / multimodal wording should be routed through proxy composition and common-driver checks before it is read as state closure."
 known_points:
   - "Separating pages with different roles makes it difficult to confuse volume with strength of conclusion."
   - "The purpose of reading the collection of papers, bibliography map, and proposal page is different."
   - "Important decisions should be made by going back to the original paper or page, not the summary."
   - "A human measurement paper often changes what is observable, not what is already solved."
+  - "A same-subject or multimodal human paper can still be a proxy-composition problem rather than a same-state result."
 unknown_points:
   - "Which paper will ultimately remain as the central basis may change in the future."
   - "States such as source_logged may be updated on subsequent scrutiny."
@@ -73,6 +75,13 @@ If you want to see not only the difference in roles but also where to go back to
 <strong>When you see a new human measurement paper</strong>
 <p>
 Ask first whether the paper is a <strong>demo</strong>, a <strong>direct validator</strong>, an <strong>observability-class advance</strong>, or a <strong>hidden-state boundary paper</strong>. That one question blocks a common scientific overread: <strong>"humans measured more, therefore hidden state is almost closed."</strong>
+</p>
+</div>
+
+<div class="note-box">
+<strong>When the paper sounds like living-human whole-brain state measurement</strong>
+<p>
+Do not stop at "same-subject", "multimodal", or "proxy-rich". Return next to <a href="human-proxy-composition.html">Wiki: Human Proxy Composition and Route Maturity</a> and <a href="measurement-stack-and-claim-ceiling.html">Wiki: Measurement-stack observability and claim ceilings</a>. On this site, the practical question is narrower: <strong>what did each row directly observe, what common-driver or vascular/autonomic route could still move with it, and what hidden-state family remains outside calibration?</strong>
 </p>
 </div>
 
@@ -141,7 +150,7 @@ Ask first whether the paper is a <strong>demo</strong>, a <strong>direct validat
 </section>
 
 <section class="section" id="three-rules">
-<h2 class="section-title">Four rules to prevent misreading</h2>
+<h2 class="section-title">Five rules to prevent misreading</h2>
 <div class="key-points">
 <h4>Rule</h4>
 <ul>
@@ -149,6 +158,7 @@ Ask first whether the paper is a <strong>demo</strong>, a <strong>direct validat
 <li><strong>Don't stop at the summary:</strong> Always go back to the DOI or original text when using it as evidence. </li>
 <li><strong>Do not misread status labels:</strong> source_logged, proposal accepted, and document reflected each have different meanings. </li>
 <li><strong>Do not collapse observability into sufficiency:</strong> A new human proxy or atlas can raise what is observable without proving state-complete measurement.</li>
+<li><strong>Do not collapse proxy-rich into state-closed:</strong> Same-subject or multimodal human rows still need proxy-class, calibrator-role, and common-driver checks.</li>
 </ul>
 </div>
 </section>
@@ -164,6 +174,9 @@ This page is a supplementary page that explains the role differences. If you wan
 <h2 class="section-title">Where to go back next</h2>
 <p>
 If you want to view a wide range of papers, please go back to <a href="../mind_uploading_papers.html">Paper Collection</a>, if you want to start with unsolved problems, go to <a href="../research_harvest_50.html">Literature Map</a>, and if you want to follow proposals and implementation policies, go back to <a href="../issue.html#proposal-integration">Technical Proposal</a>.
+</p>
+<p>
+If the paper is a living-human measurement paper that sounds close to whole-brain state measurement, go next to <a href="human-proxy-composition.html">Human Proxy Composition and Route Maturity</a> before promoting it in your head from "observability-class advance" to "state-identification evidence."
 </p>
 </section>
 

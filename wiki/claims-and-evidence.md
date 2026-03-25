@@ -5,7 +5,7 @@ description: A beginner guide for translating neuroscience and WBE headlines int
 article_type: Wiki
 subtitle: Strong language is cheap. Strong evidence is not.
 author: Mind Uploading Research Project
-last_updated: '2026-03-19'
+last_updated: '2026-03-26'
 note: Reading guide
 audience: People who do not want to overread neuroscience or WBE claims, and readers who want a stricter beginner route into L0-L5
 reading_time: 15-20 minutes
@@ -14,6 +14,7 @@ accuracy_note: This page stays on the technology and natural-science side. It do
 page_highlights:
 - L0-L5 should be read as claim strength, not as excitement level.
 - High decode accuracy is not target-specific evidence if subject/session fingerprint, acquisition-distribution shift, or language/task priors remain unresolved.
+- Proxy-rich human multimodal evidence is not same-subject state closure by default; direct observable by row, shared-vs-specific structure, common-driver audit, proxy class, operational maturity, and calibrator role must be disclosed.
 - A living-human tractography result is a macro pathway prior unless the tractography route card is disclosed.
 - An effective-connectivity graph remains model-conditioned unless candidate model space, recovery, validation, reliability, and abstention are disclosed.
 - Irreversibility papers do not all measure the same thermodynamic quantity; estimator family and null controls matter.
@@ -21,7 +22,8 @@ page_highlights:
 known_points:
 - Reproducible analysis, decoding, intervention prediction, and identity claims require different evidence floors.
 - The same score can arise from different causal stories, so direct observables and shortcut routes must be separated.
-- Recent primary literature supports stricter beginner reading rules for decode, tractography, effective connectivity, thermodynamic claims, and closed loops.
+- Same-subject or same-session human proxy bundles can still leave quantity-type mismatch, cohort-regime mismatch, and common-driver ambiguity unresolved.
+- Recent primary literature supports stricter beginner reading rules for decode, human proxy composition, tractography, effective connectivity, thermodynamic claims, and closed loops.
 unknown_points:
 - It remains unsettled which measurement stack would be sufficient for WBE-level internal-state capture.
 - It remains unresolved how far any future L4 continuity test would justify identity claims.
@@ -58,9 +60,9 @@ When a neuroscience or WBE headline sounds strong, do not ask first whether it s
 </div>
 
 <div class="note-box">
-<strong>2026-03-19 deepening: why this beginner page was rewritten</strong>
+<strong>2026-03-26 deepening: why this beginner page needed another rewrite</strong>
 <p>
-The older version correctly said that L0-L5 differ in strength, but it was still too easy to read <strong>high accuracy</strong>, <strong>one graph</strong>, or <strong>one real-time demo</strong> as if they were one kind of evidence. The recent public updates across this site now require route cards for tractography, effective connectivity, thermodynamic irreversibility, neural contribution, and body/environment boundary. This page now exposes those distinctions at the beginner entrance instead of only later in the technical pages.
+The 2026-03-19 rewrite fixed several major overreads, but one important beginner shortcut still remained: it was still too easy to read <strong>same-subject multimodal</strong> or <strong>living-human whole-brain measurement</strong> as if they already meant near-complete state access. The recent public updates across this site now require a <strong>Human Proxy Composition Card</strong> and a <strong>Fusion Card</strong> in addition to route cards for tractography, effective connectivity, thermodynamic irreversibility, neural contribution, and body/environment boundary. This page now exposes that human-proxy distinction at the entrance instead of leaving it to later technical pages.
 </p>
 </div>
 
@@ -138,6 +140,11 @@ The older version correctly said that L0-L5 differ in strength, but it was still
 <td>Were subjects and sessions disjoint, could metadata or subject fingerprint explain the score, and was performance checked across sites/devices/datasets?</td>
 </tr>
 <tr>
+<td><strong>"Measured the whole-brain state in living humans"</strong></td>
+<td>Usually a proxy-rich human or simultaneous multimodal result that constrains several bounded quantities under specific cohort, hardware, and model burdens.</td>
+<td>What did each row directly observe, were rows actually same-subject / same-session / same-perturbation, did shared-vs-specific decomposition and common-driver audit survive, and what calibrator role plus residual hidden-state ceiling remained?</td>
+</tr>
+<tr>
 <td><strong>"Mapped the connectome in living humans"</strong></td>
 <td>Usually a tractography-conditioned macro pathway estimate, not an edge-complete connectome.</td>
 <td>What were the direct observables, tractography priors/filtering choices, uncertainty handling, and same-brain or external validation route?</td>
@@ -172,28 +179,35 @@ This is the first place beginners are most often misled. <a href="https://www.na
 </div>
 
 <div class="note-box">
-<strong>2. "Connectome" still names different evidence classes</strong>
+<strong>2. Proxy-rich human multimodal evidence does not automatically become same-subject state closure</strong>
+<p>
+The beginner route also needed tightening because current human proxy papers are easy to list rhetorically as if they were already converging on one state-complete meter. The primary literature does not support that shortcut. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> provided a 33-participant SV2A atlas, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> defined a five-metabolite parcel-similarity graph in 51 adolescents with 13-person replication, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> reported 7 T dynamic DMRSI kinetic maps in five healthy participants, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> reported a specialized 7 T CSF-mobility route in healthy younger adults, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> inferred sleep-linked glymphatic clearance in a randomized crossover trial with 39 participants using an investigational device and a multicompartment model. These are real advances, but they are not one shared inferential object. In parallel, <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> showed both common and divergent structure across simultaneous modalities, <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed coupled global progression plus two distinct network patterns in simultaneous EEG-PET-MRI, <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> showed substantial autonomic coupling of a major global fMRI mode, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that approximately 40% of significant cortical ΔBOLD voxels can oppose oxygen-metabolism changes. Therefore, on this site, <strong>same-subject</strong>, <strong>multimodal</strong>, and <strong>proxy-rich</strong> do not by themselves justify whole-brain state language. They instead trigger proxy-class, calibrator-role, and common-driver audits.
+</p>
+</div>
+
+<div class="note-box">
+<strong>3. "Connectome" still names different evidence classes</strong>
 <p>
 The beginner route also needed tightening because the word <strong>connectome</strong> hides a large spread in evidence class. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4246325/" target="_blank">Thomas et al. (2014)</a> showed inherent limits in anatomical accuracy for diffusion-MRI tractography, <a href="https://www.nature.com/articles/s41467-017-01285-x" target="_blank">Maier-Hein et al. (2017)</a> exposed fundamental ambiguities and many invalid bundles in a community challenge, <a href="https://pubmed.ncbi.nlm.nih.gov/32816112/" target="_blank">Schilling et al. (2020)</a> showed that high anatomical accuracy depends on strong start/end/exclusion priors, and <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8475636/" target="_blank">Grisot et al. (2021)</a> localized recurring failure modes in the same brain. Therefore, a living-human tractography graph is not read here as connectome-complete by default. It stays at <strong>macro pathway prior</strong> unless the tractography route card is shown.
 </p>
 </div>
 
 <div class="note-box">
-<strong>3. Model-conditioned graphs are not discovered causal wiring</strong>
+<strong>4. Model-conditioned graphs are not discovered causal wiring</strong>
 <p>
 For effective connectivity, the problem is not that DCM or related models are useless. The problem is overreading them. <a href="https://www.sciencedirect.com/science/article/abs/pii/S1053811904001648" target="_blank">Penny et al. (2004)</a> made explicit that DCM inferences are contingent on model structure. <a href="https://pubmed.ncbi.nlm.nih.gov/22561579/" target="_blank">Rosa et al. (2012)</a> showed that very large candidate spaces can be searched efficiently from a full model, which is progress in tractability, not automatic identifiability. <a href="https://pubmed.ncbi.nlm.nih.gov/26611397/" target="_blank">Frässle et al. (2016)</a> showed that reliability itself must be checked, and <a href="https://pubmed.ncbi.nlm.nih.gov/33115664/" target="_blank">Frässle et al. (2021)</a> pushed directed-connectivity estimation to whole-brain human fMRI. Therefore, on this site, a dense effective-connectivity graph without model-space disclosure, recovery, validation, reliability, and abstention remains a <strong>model-conditioned causal hypothesis</strong>.
 </p>
 </div>
 
 <div class="note-box">
-<strong>4. Thermodynamic keywords still hide different measured objects</strong>
+<strong>5. Thermodynamic keywords still hide different measured objects</strong>
 <p>
 The older beginner wording was also too weak for thermodynamic claims. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8617485/" target="_blank">Lynn et al. (2021)</a> estimated entropy-production lower bounds from coarse-grained BOLD state transitions, <a href="https://academic.oup.com/cercor/article/33/5/1856/6577164" target="_blank">de la Fuente et al. (2023)</a> used temporal irreversibility decoding on ECoG, and <a href="https://www.nature.com/articles/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> estimated model-based entropy flow in a nonstationary state-space kinetic Ising model. Those are related, but not identical, objects. Therefore this site no longer allows the beginner reading that <strong>"thermodynamic paper"</strong> automatically means a common measurement of physical dissipation or WBE-relevant cost.
 </p>
 </div>
 
 <div class="note-box">
-<strong>5. Real-time loop success still needs a disclosed body/environment boundary</strong>
+<strong>6. Real-time loop success still needs a disclosed body/environment boundary</strong>
 <p>
 Finally, closed-loop headlines needed a stricter beginner rule. <a href="https://pubmed.ncbi.nlm.nih.gov/31551604/" target="_blank">Musall et al. (2019)</a> showed that richly varied movements dominate cortex-wide activity, <a href="https://www.nature.com/articles/nn.3567" target="_blank">Saleem et al. (2013)</a> showed that locomotion changes visual-cortex coding, and <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8715714/" target="_blank">Flesher et al. (2021)</a> showed that restoring tactile feedback improves robotic-arm control. The safe reading is therefore not <strong>"closed loop solved"</strong> but <strong>"a specific local loop worked under a specific retained/substituted boundary."</strong>
 </p>
@@ -201,13 +215,14 @@ Finally, closed-loop headlines needed a stricter beginner rule. <a href="https:/
 </section>
 
 <section class="section" id="checklist">
-<h2 class="section-title">Six questions before you believe the strong version of a headline</h2>
+<h2 class="section-title">Seven questions before you believe the strong version of a headline</h2>
 <div class="key-points">
 <h4>Checklist</h4>
 <ul>
 <li><strong>What was directly observed?</strong> Separate sensor output from inferred internal state.</li>
 <li><strong>What model space or prior was imposed?</strong> Candidate models, language priors, tractography filters, and neural-mass assumptions all matter.</li>
 <li><strong>Which shortcut could reproduce the score?</strong> Subject/session fingerprint, metadata leakage, device differences, and candidate-set structure must be checked explicitly.</li>
+<li><strong>If this is a human or multimodal bundle, what does each row directly observe?</strong> Proxy class, operational maturity, calibrator role, and possible common-driver routes must be named separately.</li>
 <li><strong>What external or held-out validation exists?</strong> Same-dataset fit is weaker than perturbation, stimulation, same-brain tracing, or external benchmark prediction.</li>
 <li><strong>What loops or state variables remain outside the measurement?</strong> Boundary and hidden-state omissions still set the claim ceiling.</li>
 <li><strong>Where does the paper abstain?</strong> A strong paper says which interpretations it does <em>not</em> support.</li>
@@ -230,6 +245,11 @@ Finally, closed-loop headlines needed a stricter beginner rule. <a href="https:/
 <td>Decode / biomarker / speech / EEG score</td>
 <td><a href="measurement-stack-and-claim-ceiling.html">Measurement-stack observability and claim ceilings</a></td>
 <td>It fixes what was directly observed and which shortcut routes remain open.</td>
+</tr>
+<tr>
+<td>Living-human multimodal / proxy-rich whole-brain claim</td>
+<td><a href="human-proxy-composition.html">Human Proxy Composition and Route Maturity</a></td>
+<td>It separates direct observable by row, proxy class, calibrator role, and common-driver audit before same-subject language is allowed.</td>
 </tr>
 <tr>
 <td>Connectome / tractography / structural prior</td>
@@ -263,6 +283,15 @@ Finally, closed-loop headlines needed a stricter beginner rule. <a href="https:/
 <li>Di, Y., An, X., Zhong, W., Liu, S., &amp; Ming, D. (2021). The time-robustness analysis of individual identification based on resting-state EEG. <em>Frontiers in Human Neuroscience</em>, 15, 672946. <a href="https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2021.672946/full" target="_blank">doi:10.3389/fnhum.2021.672946</a></li>
 <li>Tang, J., LeBel, A., Jain, S., &amp; Huth, A. G. (2023). Semantic reconstruction of continuous language from non-invasive brain recordings. <em>Nature Neuroscience</em>, 26, 858-866. <a href="https://www.nature.com/articles/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
 <li>Willett, F. R., Kunz, E. M., Fan, C., et al. (2023). A high-performance speech neuroprosthesis. <em>Nature</em>, 620, 1031-1036. <a href="https://www.nature.com/articles/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
+<li>Johansen, A., Bzdok, D., Veronese, M., et al. (2024). An in vivo high-resolution human brain atlas of synaptic density. <em>Journal of Neuroscience</em>. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
+<li>Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
+<li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
+<li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <em>PNAS Nexus</em>. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
+<li>Hirschler, L., Runderkamp, B. A. R., Decker, A., et al. (2025). Region-specific drivers of CSF mobility measured with MRI in humans. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
+<li>Chen, J. E., Lewis, L. D., Coursey, S. E., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
+<li>Bolt, T., Wang, S., Nomi, J. S., et al. (2025). Autonomic physiological coupling of the global fMRI signal. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">doi:10.1038/s41593-025-01945-y</a></li>
+<li>Epp, S. M., Castrillon, G., Yuan, B., et al. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
+<li>Dagum, P., Elbert, D. L., Giovangrandi, L., et al. (2026). The glymphatic system clears amyloid beta and tau from brain to plasma in humans. <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
 <li>Thomas, C., Ye, F. Q., Irfanoglu, M. O., et al. (2014). Anatomical accuracy of brain connections derived from diffusion MRI tractography is inherently limited. <em>PNAS</em>, 111(46), 16574-16579. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4246325/" target="_blank">doi:10.1073/pnas.1405672111</a></li>
 <li>Maier-Hein, K. H., Neher, P. F., Houde, J.-C., et al. (2017). The challenge of mapping the human connectome based on diffusion tractography. <em>Nature Communications</em>, 8, 1349. <a href="https://www.nature.com/articles/s41467-017-01285-x" target="_blank">doi:10.1038/s41467-017-01285-x</a></li>
 <li>Schilling, K. G., Petit, L., Rheault, F., et al. (2020). Brain connections derived from diffusion MRI tractography can be highly anatomically accurate if we know where white matter pathways start, where they end, and where they do not go. <em>Brain Structure and Function</em>, 225, 2387-2402. <a href="https://pubmed.ncbi.nlm.nih.gov/32816112/" target="_blank">doi:10.1007/s00429-020-02129-z</a></li>
@@ -289,6 +318,7 @@ Finally, closed-loop headlines needed a stricter beginner rule. <a href="https:/
 <li><a href="mind-upload-basics.html">WBE basics →</a></li>
 <li><a href="verification-basics.html">Basics of verification infrastructure →</a></li>
 <li><a href="observation-to-estimation.html">From observation to estimation →</a></li>
+<li><a href="human-proxy-composition.html">Human proxy composition →</a></li>
 <li><a href="measurement-stack-and-claim-ceiling.html">Observability and claim ceilings →</a></li>
 </ul>
 </div>
