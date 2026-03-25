@@ -4,7 +4,7 @@ title: "Technical Roadmap: Understanding WBE Through Measurement, Reconstruction
 description: "A learning roadmap for viewing mind uploading and WBE from the technical side, organized as a question tree from measurement to reconstruction, implementation, and verification."
 article_type: "Roadmap (Definition #1)"
 subtitle: "Break 'what counts as progress' into a question tree with reading order and minimum arrival conditions"
-last_updated: "2026-03-22"
+last_updated: "2026-03-25"
 note: "Provisional draft (updated continuously)"
 audience: "Readers who want the big picture, need a learning order, or want claim strength organized by level"
 reading_time: "20-30 min (5 min for the index only)"
@@ -16,6 +16,7 @@ page_highlights:
   - "Stronger claims are deliberately placed later so earlier levels are not skipped."
   - "R0 now separates structural scaffold, fast executable state, and maintenance-state families, so `connectome + state` is not treated as one knob."
   - "R3 / R5 separate latent-state and maintenance-state questions by evidence tier and timescale, so same-day fit and multiday maintenance do not collapse into one success."
+  - "R3 / R5 now force maintenance-relevant claims to name whether phospho-signaling, local proteostasis, and cargo-routing were measured, externally calibrated, model-estimated, or omitted, so a generic latent-state label is not treated as maintenance-complete evidence."
   - "M2 separates hardware latency from biological timing-state, so a fast device loop is not confused with timing-complete reconstruction."
   - "M1 / M5 keep neural state distinct from vascular transfer state, so a BOLD amplitude difference is not silently promoted to a neural difference."
   - "M1 / M3 now treat human in vivo evidence as a two-axis ladder, so local ultrastructure, SV2A PET, MRSI biochemical scaffolds, DMRSI rate imaging, myelin mapping, and clearance proxies are not collapsed into one observability score."
@@ -31,6 +32,7 @@ known_points:
   - "This page should be read as a dependency map, not as a checklist of solved items."
   - "A restoration target is not one dial; scaffold, fast state, and maintenance-state layers place different ceilings on what can be claimed."
   - "Even if connectome or local-activity evidence improves, latent-state and maintenance-state audits are still separate requirements."
+  - "A prediction-useful latent variable is not automatically a maintenance-complete state estimate; phospho-signaling, local proteostasis, and cargo-routing can still remain omitted families."
   - "For hemodynamic modalities, neural interpretation and vascular transfer / CVR audit are separate requirements."
   - "Closed-loop device timing and biological conduction timing are different audits; passing one does not auto-pass the other."
   - "A disclosed body / environment boundary is a separate audit from low latency or online accuracy."
@@ -904,8 +906,46 @@ Every R0 claim on this site must publish a small card that states <strong>(1) wh
 </summary>
 <div class="qa-body">
 <p><strong>Question:</strong>Can we separate observation noise from the true state and show that the state is “effective for prediction”? </p>
-<p><strong>False condition:</strong>The latent state only serves to compress data and does not contribute to intervention prediction (R4)</p>
-<p><strong>Next:</strong>Assess extrapolation in unlearned conditions and prediction error of intervention response</p>
+<p><strong>2026-03-25 addendum:</strong>The remaining weakness in this roadmap was that <strong>latent state</strong> still sounded too close to one compressed hidden variable. The rest of this site no longer supports that shortcut. <a href="https://doi.org/10.1016/S0092-8674(03)00122-3" target="_blank">Lee et al. (2003)</a>, <a href="https://doi.org/10.1523/JNEUROSCI.0248-16.2016" target="_blank">Havekes et al. (2016)</a>, <a href="https://doi.org/10.1038/s41467-023-40930-6" target="_blank">Vierra et al. (2023)</a>, and <a href="https://doi.org/10.1016/j.biopsych.2023.12.020" target="_blank">Altas et al. (2024)</a> show that <strong>phospho-signaling / second-messenger routing</strong> can change plasticity expression without collapsing to transcript or bulk protein abundance. <a href="https://doi.org/10.1038/385533a0" target="_blank">Frey &amp; Morris (1997)</a>, <a href="https://doi.org/10.1038/ncomms2250" target="_blank">Shires et al. (2012)</a>, <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">Govindarajan et al. (2011)</a>, <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">Pandey et al. (2021)</a>, and <a href="https://doi.org/10.1073/pnas.2315958121" target="_blank">Chang et al. (2024)</a> show that <strong>local proteostasis / tag-capture route</strong> is another state family with its own integrative unit and turnover window. <a href="https://doi.org/10.1038/nn2063" target="_blank">Correia et al. (2008)</a>, <a href="https://doi.org/10.1016/j.celrep.2021.109369" target="_blank">Swarnkar et al. (2021)</a>, <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">Aiken &amp; Holzbaur (2024)</a>, and <a href="https://doi.org/10.1038/s41467-025-57651-7" target="_blank">de Queiroz et al. (2025)</a> show that <strong>cargo-transport / cytoskeletal trafficking state</strong> is again a different route: what reaches the relevant spine, branch, bouton, or axon terminal can change plasticity and memory while the graph stays fixed. Therefore, on this page, a latent-state model is no longer accepted as a single unqualified object. It must say <strong>which family it is trying to recover</strong>, <strong>which family remained omitted</strong>, and <strong>what timescale the claimed state is supposed to govern</strong>.</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Latent-state family</th>
+<th>What it constrains relatively directly</th>
+<th>What still stays latent if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fast executable state</strong></td>
+<td>Immediate activity trajectory, momentary effective synaptic efficacy, and same-session intervention response.</td>
+<td>Why the same scaffold later stabilizes, forgets, or recovers differently across hours to days.</td>
+</tr>
+<tr>
+<td><strong>Phospho-signaling / second-messenger route</strong></td>
+<td>Compartment-specific gating, phosphosite occupancy logic, kinase/phosphatase balance, and local signaling nanodomains that modulate plasticity expression.</td>
+<td>A model can fit next-step activity while still missing the controller that decides which plastic change is permitted, blocked, or redirected.</td>
+</tr>
+<tr>
+<td><strong>Local proteostasis / tag-capture route</strong></td>
+<td>Which tagged synapse or branch captures plasticity-related proteins, and which late changes survive local turnover.</td>
+<td>Late stabilization, reconsolidation, and persistence remain underdetermined even if fast-state prediction improves.</td>
+</tr>
+<tr>
+<td><strong>Cargo-transport / cytoskeletal trafficking route</strong></td>
+<td>Which receptors, endosomes, RNA cargoes, and presynaptic components actually reach the required compartment in time.</td>
+<td>Compartment-specific maintenance and structural plasticity remain latent even when transcript abundance, ATP support, or weight estimates look adequate.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>State-family card required for maintenance-relevant R3 claims</strong>
+<p>
+If an R3 claim is used to support <strong>persistence</strong>, <strong>reconsolidation</strong>, <strong>remote memory</strong>, <strong>recovery after perturbation</strong>, or <strong>same-state language across days or acquisition regimes</strong>, the submission must publish at least <strong>(1) family name</strong>, <strong>(2) direct observable or perturbation route</strong>, <strong>(3) dominant timescale</strong>, <strong>(4) integrative unit</strong> (synapse / branch / neuron / region / whole-brain proxy), <strong>(5) whether that family was directly measured, externally calibrated, model-estimated, or omitted</strong>, and <strong>(6) the abstention boundary that follows</strong>. If regimes or days are bridged, attach the <a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a>; if persistence or forgetting is part of the claim, attach the <a href="verification.html#maintenance-state-error-budget">Maintenance-State Error Budget</a>. Without that bundle, this roadmap treats the result as a <strong>prediction-useful latent variable</strong> or <strong>same-session proxy model</strong>, not as a maintenance-complete state estimate.
+</p>
+</div>
+<p><strong>False condition:</strong>The latent state only serves to compress data, fails on held-out perturbations, or changes interpretation once omitted maintenance families such as phospho-signaling, local proteostasis, or cargo-routing are reintroduced.</p>
+<p><strong>Next:</strong>Compare connectome-only, fast-state, and maintenance-augmented models on the same held-out perturbation and longitudinal benchmarks, then publish the omitted-family list and the resulting claim ceiling.</p>
 </div>
 </details>
 
@@ -934,8 +974,40 @@ Every R0 claim on this site must publish a small card that states <strong>(1) wh
 </summary>
 <div class="qa-body">
 <p><strong>Question:</strong>If we are dealing with long-term identity (V5), we have to include learning (renewal). However, with updates, verification becomes difficult. </p>
-<p><strong>Branch (example):</strong>(A) Do not learn (fixed model) / (B) Learn with restrictions (safe update) / (C) Infer to learning rule</p>
-<p><strong>Next required:</strong>Drift monitoring (V4) when learning is included and safety measures (I8)</p>
+<p><strong>2026-03-25 addendum:</strong>The remaining weakness here was that <strong>plasticity</strong> still read too much like a yes/no switch: either learning is introduced or it is not. The primary literature does not support that simplification. <a href="https://doi.org/10.1038/385533a0" target="_blank">Frey &amp; Morris (1997)</a> and <a href="https://doi.org/10.1038/ncomms2250" target="_blank">Shires et al. (2012)</a> show <strong>tag / capture eligibility</strong>, <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">Govindarajan et al. (2011)</a> shows <strong>branch-level integration</strong>, <a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">Fonseca et al. (2006)</a>, <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">Pandey et al. (2021)</a>, <a href="https://doi.org/10.1073/pnas.2315958121" target="_blank">Chang et al. (2024)</a>, and <a href="https://doi.org/10.1111/acel.14492" target="_blank">Parker et al. (2025)</a> show distinct <strong>synthesis-degradation / autophagy / proteasome-capacity routes</strong>, and <a href="https://doi.org/10.1016/S0092-8674(03)00122-3" target="_blank">Lee et al. (2003)</a>, <a href="https://doi.org/10.1523/JNEUROSCI.0248-16.2016" target="_blank">Havekes et al. (2016)</a>, <a href="https://doi.org/10.1038/s41467-023-40930-6" target="_blank">Vierra et al. (2023)</a>, and <a href="https://doi.org/10.1523/JNEUROSCI.1619-24.2025" target="_blank">Rodriguez et al. (2025)</a> show that phospho-state can be a gate rather than a stable weight itself. In parallel, <a href="https://doi.org/10.1038/nn2063" target="_blank">Correia et al. (2008)</a>, <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">Aiken &amp; Holzbaur (2024)</a>, and <a href="https://doi.org/10.1038/s41467-025-57651-7" target="_blank">de Queiroz et al. (2025)</a> show that delivery routes and local RNA localization constrain what plasticity can actually be expressed. Therefore, R5 is no longer treated here as a yes/no choice. It is a <strong>claim-timescale audit</strong>.</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Route</th>
+<th>What it permits relatively safely</th>
+<th>Minimum deliverables</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>(A) fixed model / no plasticity claim</strong></td>
+<td>Same-session fit, bounded closed-loop control, or a narrow intervention result without persistence claims.</td>
+<td>Fixed decoder horizon, same-session hold-out, abstention on forgetting / reconsolidation / recovery, and an explicit statement that no maintenance-complete claim is being made.</td>
+</tr>
+<tr>
+<td><strong>(B) fixed fast-state model + maintenance disclosure</strong></td>
+<td>Cross-day or cross-regime comparison without claiming that the controller of persistence has been identified.</td>
+<td><a href="verification.html#temporal-validity-card">Temporal Validity Card</a>, state annotation, <a href="verification.html#maintenance-state-error-budget">Maintenance-State Error Budget</a>, fixed-decoder versus rescue-mode separation, and the relevant family route cards when phospho, proteostasis, cargo, or other maintenance controllers are cited.</td>
+</tr>
+<tr>
+<td><strong>(C) explicit plasticity / maintenance model</strong></td>
+<td>Named persistence, reconsolidation, recovery, or remote-memory claims with a declared controller family.</td>
+<td>Named plasticity rule, family-level ablations, held-out perturbation prediction, fixed-decoder durability plus recalibration burden, <a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> when acquisition regimes are bridged, and a failure / fallback policy if the controller assumptions break.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Site rule for plasticity claims</strong>
+<p>
+On this site, the words <strong>plasticity</strong>, <strong>adaptation</strong>, <strong>consolidation</strong>, <strong>recovery</strong>, and <strong>long-term stabilization</strong> are not treated as one achievement. If the claim reaches beyond same-session fit, attach the <a href="verification.html#temporal-validity-card">Temporal Validity Card</a>. If it bridges across acquisition regimes or days as if it were one state sample, attach the <a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a>. If the claim depends on maintenance families, attach the <a href="verification.html#maintenance-state-error-budget">Maintenance-State Error Budget</a> plus the relevant family route cards for phospho-signaling, local proteostasis, cargo-routing, or other cited controllers. Without that bundle, R5 stops at an <strong>adaptive or learning-capable model</strong>, not a verified continuity-preserving plasticity route.
+</p>
+</div>
+<p><strong>Next required:</strong>When learning is included, report fixed-decoder durability, rescue mode, recalibration burden, family-level ablations, and held-out perturbation response on the same benchmark; then disclose which timescale of plastic claim was actually passed.</p>
 </div>
 </details>
 
@@ -2165,6 +2237,22 @@ Below are the main documents directly related to the open questions of U0-U15. F
 <li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
+<li>Lee, H.-K., Barbarosie, M., Kameyama, K., Bear, M. F., &amp; Huganir, R. L. (2003). Regulation of distinct AMPA receptor phosphorylation sites during bidirectional synaptic plasticity. <a href="https://doi.org/10.1016/S0092-8674(03)00122-3" target="_blank">doi:10.1016/S0092-8674(03)00122-3</a></li>
+<li>Havekes, R., Park, A. J., Tolentino, R. E., et al. (2016). Compartmentalized PDE4A5 signaling impairs hippocampal synaptic plasticity and long-term memory. <a href="https://doi.org/10.1523/JNEUROSCI.0248-16.2016" target="_blank">doi:10.1523/JNEUROSCI.0248-16.2016</a></li>
+<li>Vierra, N. C., et al. (2023). Endoplasmic reticulum-plasma membrane junctions couple electrical activity to Ca2+-activated PKA signaling in neurons. <a href="https://doi.org/10.1038/s41467-023-40930-6" target="_blank">doi:10.1038/s41467-023-40930-6</a></li>
+<li>Altas, B., Tuffy, L. P., Patrizi, A., et al. (2024). Region-specific phosphorylation determines Neuroligin-3 localization to excitatory versus inhibitory synapses. <a href="https://doi.org/10.1016/j.biopsych.2023.12.020" target="_blank">doi:10.1016/j.biopsych.2023.12.020</a></li>
+<li>Rodriguez, A. C., Kram&aacute;r, E. A., Augustynski, A. S., et al. (2025). HDAC3 Serine 424 phospho-mimic and phospho-null mutants bidirectionally modulate long-term memory formation and synaptic plasticity in the adult and aging mouse brain. <a href="https://doi.org/10.1523/JNEUROSCI.1619-24.2025" target="_blank">doi:10.1523/JNEUROSCI.1619-24.2025</a></li>
+<li>Frey, U., &amp; Morris, R. G. M. (1997). Synaptic tagging and long-term potentiation. <a href="https://doi.org/10.1038/385533a0" target="_blank">doi:10.1038/385533a0</a></li>
+<li>Shires, K. L., Da Silva, B. M., Hawthorne, J. P., et al. (2012). Synaptic tagging and capture in the living rat. <a href="https://doi.org/10.1038/ncomms2250" target="_blank">doi:10.1038/ncomms2250</a></li>
+<li>Govindarajan, A., Israely, I., Huang, S.-Y., &amp; Tonegawa, S. (2011). The dendritic branch is the preferred integrative unit for protein synthesis-dependent LTP. <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">doi:10.1016/j.neuron.2010.12.008</a></li>
+<li>Fonseca, R., Vabulas, R. M., Hartl, F. U., Bonhoeffer, T., &amp; Nagerl, U. V. (2006). A balance of protein synthesis and proteasome-dependent degradation determines the maintenance of LTP. <a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">doi:10.1016/j.neuron.2006.08.015</a></li>
+<li>Pandey, K., Yu, X.-W., Steinmetz, A., &amp; Alberini, C. M. (2021). Autophagy coupled to translation is required for long-term memory. <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">doi:10.1080/15548627.2020.1775393</a></li>
+<li>Chang, Y. C., Gao, Y., Lee, J. Y., et al. (2024). Identification of secretory autophagy as a mechanism modulating activity-induced synaptic remodeling. <a href="https://doi.org/10.1073/pnas.2315958121" target="_blank">doi:10.1073/pnas.2315958121</a></li>
+<li>Parker, D., Davidson, K., Osmulski, P. A., et al. (2025). Proteasome augmentation mitigates age-related cognitive decline in mice. <a href="https://doi.org/10.1111/acel.14492" target="_blank">doi:10.1111/acel.14492</a></li>
+<li>Correia, S. S., Bassani, S., Brown, T. C., et al. (2008). Motor protein-dependent transport of AMPA receptors into spines during long-term potentiation. <a href="https://doi.org/10.1038/nn2063" target="_blank">doi:10.1038/nn2063</a></li>
+<li>Swarnkar, S., Avchalumov, Y., Espadas, I., et al. (2021). Molecular motor protein KIF5C mediates structural plasticity and long-term memory by constraining local translation. <a href="https://doi.org/10.1016/j.celrep.2021.109369" target="_blank">doi:10.1016/j.celrep.2021.109369</a></li>
+<li>Aiken, J., &amp; Holzbaur, E. L. F. (2024). Spastin locally amplifies microtubule dynamics to pattern the axon for presynaptic cargo delivery. <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">doi:10.1016/j.cub.2024.03.010</a></li>
+<li>de Queiroz, B. R., et al. (2025). Axonal RNA localization is essential for long-term memory. <a href="https://doi.org/10.1038/s41467-025-57651-7" target="_blank">doi:10.1038/s41467-025-57651-7</a></li>
 <li>Stringer, C., Pachitariu, M., Steinmetz, N., et al. (2019). Spontaneous behaviors drive multidimensional, brainwide activity. <a href="https://doi.org/10.1126/science.aav7893" target="_blank">doi:10.1126/science.aav7893</a></li>
 <li>Saleem, A. B., Ayaz, A., Jeffery, K. J., Harris, K. D., &amp; Carandini, M. (2013). Integration of visual motion and locomotion in mouse visual cortex. <a href="https://doi.org/10.1038/nn.3567" target="_blank">doi:10.1038/nn.3567</a></li>
 <li>Ravassard, P., Kees, A., Willers, B., et al. (2013). Multisensory control of hippocampal spatiotemporal selectivity. <a href="https://doi.org/10.1126/science.1232655" target="_blank">doi:10.1126/science.1232655</a></li>
