@@ -19,7 +19,7 @@ page_highlights:
   - "R3 / R5 now force maintenance-relevant claims to name whether phospho-signaling, local proteostasis, and cargo-routing were measured, externally calibrated, model-estimated, or omitted, so a generic latent-state label is not treated as maintenance-complete evidence."
   - "M2 separates hardware latency from biological timing-state, so a fast device loop is not confused with timing-complete reconstruction."
   - "M1 / M5 keep neural state distinct from vascular transfer state, so a BOLD amplitude difference is not silently promoted to a neural difference."
-  - "M1 / M3 now treat human in vivo evidence as a two-axis ladder, so local ultrastructure, SV2A PET, MRSI biochemical scaffolds, DMRSI rate imaging, myelin mapping, and clearance proxies are not collapsed into one observability score."
+  - "M1 / M3 now treat human in vivo evidence as a three-axis ladder, so proxy class, operational maturity, and calibrator role are kept separate instead of being collapsed into one observability score."
   - "M4 / I6 now treat the body / environment boundary as an explicit scientific audit item, so a fast local loop is not silently promoted to solved embodiment."
   - "M7 / V4 now separate state annotation, trait-like backbone, biological drift, interface / decoder drift, and recalibration burden, so same-day success and adaptive rescue do not collapse into one longitudinal claim."
   - "Wearable OPM-MEG is treated as movement-tolerant macro measurement only when shielding, field control, sensor calibration, and anatomy choice are disclosed."
@@ -37,6 +37,7 @@ known_points:
   - "Closed-loop device timing and biological conduction timing are different audits; passing one does not auto-pass the other."
   - "A disclosed body / environment boundary is a separate audit from low latency or online accuracy."
   - "Human-side advances reduce different error terms and remain differently deployment-limited; proxy-rich evidence is not yet same-subject, same-session, externally calibrated state identification."
+  - "Proxy class, operational maturity, and calibrator role are different questions; a real human route may still calibrate only one bounded hidden-state family."
   - "Longitudinal success is not one axis; within-day state fluctuation, trait-like backbone, biological drift, interface / decoder drift, and recalibration burden answer different questions."
   - "OPM-MEG motion tolerance still depends on magnetic shielding, active nulling, calibration, and source-model disclosure."
   - "The fact that personalization helps performance is not the same as showing a population-level neural signal; subject-fingerprint and acquisition-distribution audits are still required."
@@ -555,17 +556,41 @@ The updated measurement-stack wiki now makes explicit why EEG / MEG remain condi
 <td>Current synaptic efficiency, intrinsic excitability/homeostatic set point, neuromodulatory fields, glial/metabolic state, and longitudinal plastic history are still separate variables. </td>
 </tr>
 <tr>
-<td><strong>local transmitter / astrocyte imaging</strong></td>
-<td>Local transmitter dynamics and astrocyte network response. </td>
-<td>Allows better calibration of what a coarse proxy does and does not represent. </td>
-<td>Full integration between whole-brain coverage, receptor state, long-timescale maintenance-state, and stack remains. </td>
+<td><strong>local transmitter sensor / axon imaging</strong></td>
+<td>Local transmitter-linked fluorescence or cholinergic / neuromodulatory axon activity in a named region. </td>
+<td>Calibrates what mixed arousal proxies do and do not mean, and constrains region-specific chemical timing under an explicit local observable. </td>
+<td>Whole-brain transmitter field, unsampled receptor families, and same-subject human maintenance-state remain unresolved. </td>
+</tr>
+<tr>
+<td><strong>local astrocyte imaging / ensemble readout</strong></td>
+<td>Astrocyte Ca<sup>2+</sup> dynamics, network-state response, or labeled ensemble activity in a local preparation. </td>
+<td>Strengthens slow-state omission audits and local transmitter-to-astrocyte coupling claims without pretending that glia are background noise. </td>
+<td>Human whole-brain astrocyte-state, content-general controller identity, and cross-day maintenance completeness remain unresolved. </td>
+</tr>
+<tr>
+<td><strong>human receptor / transporter atlas + occupancy / displacement PET</strong></td>
+<td>Regional receptor / transporter density priors or ligand-specific occupancy / displacement signals. </td>
+<td>Constrains chemoarchitectural prior, selected target engagement, or challenge-limited release proxy for named receptor families. </td>
+<td>Instantaneous whole-brain transmitter field, unsampled receptor families, and cell-specific downstream effect remain unresolved. </td>
+</tr>
+<tr>
+<td><strong>human astrocyte PET / clearance-support proxy</strong></td>
+<td>Tracer-defined reactive-astrogliosis signal, CSF mobility, or biomarker-efflux proxy under named tracer, device, and model assumptions. </td>
+<td>Constrains macro support-state burden and blocks the omission of astrocyte / clearance routes from human arguments. </td>
+<td>Learning-associated astrocyte ensembles, local immune-controller identity, responsible synapse, and same-subject whole-brain maintenance-state remain unresolved. </td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
+<strong>2026-03-25 addendum: transmitter, astrocyte, receptor-PET, and clearance routes are not one stack</strong>
+<p>
+The remaining weakness at M1 was that one row still let <strong>local transmitter sensors</strong>, <strong>astrocyte-state readouts</strong>, <strong>human receptor / transporter PET routes</strong>, and <strong>human astrocyte / clearance proxies</strong> sound closer than they are. The primary literature does not support that compression. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> showed that pupil fluctuations track both adrenergic and cholinergic activity rather than one transmitter, <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> showed that local cortical acetylcholine depends on cholinergic axon activity and local clearance kinetics, <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> built a regional receptor / transporter atlas, <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a> and <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a> constrain occupancy and challenge-limited release, <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> showed minute-scale cortical astrocyte-network encoding, <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> provided a human reactive-astrogliosis PET proxy, and <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> plus <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> constrain human CSF mobility and sleep-linked biomarker efflux. These routes do not share the same direct observable, spatial scope, quantity type, or safe claim ceiling. On this roadmap, they therefore stay separated into <strong>local chemical calibration</strong>, <strong>local astrocyte-state readout</strong>, <strong>human neuromodulatory PET prior / engagement</strong>, and <strong>human support-state proxy</strong> rows.
+</p>
+</div>
+<div class="note-box">
 <strong>2026-03 Supplement: multimodal is not a synonym for "I could see everything"</strong>
 <p>
-Mikulan et al. (2020), Seeber et al. (2019), Unnwongse et al. (2023), and Hao et al. (2025) moved forward what can be audited by combining HD-EEG with intracranial ground truth. By contrast, Yao et al. (2023)'s whole-brain spatial atlas, the Patch-seq bridges of Gouwens et al. (2021) and Gamlin et al. (2025), the connectomics of Dorkenwald et al. (2024) and MICrONS Consortium et al. (2025), and the local state imaging of Neyhart et al. (2024) and Cahill et al. (2024) each strengthen different variables while leaving different latent states unresolved. Therefore, this page distinguishes clearly between <strong>increasing the number of observations</strong> and <strong>sufficiently identifying the state variables required for WBE</strong>. For the stack-by-stack layout, see <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: observability and claim ceiling for each measurement stack</a>.
+Mikulan et al. (2020), Seeber et al. (2019), Unnwongse et al. (2023), and Hao et al. (2025) moved forward what can be audited by combining HD-EEG with intracranial ground truth. By contrast, Yao et al. (2023)'s whole-brain spatial atlas, the Patch-seq bridges of Gouwens et al. (2021) and Gamlin et al. (2025), the connectomics of Dorkenwald et al. (2024) and MICrONS Consortium et al. (2025), local transmitter and astrocyte readouts such as Neyhart et al. (2024) and Cahill et al. (2024), and human proxy routes such as Hansen et al. (2022), Villemagne et al. (2022), Hirschler et al. (2025), and Dagum et al. (2026) each strengthen different variables while leaving different latent states unresolved. Therefore, this page distinguishes clearly between <strong>increasing the number of observations</strong> and <strong>sufficiently identifying the state variables required for WBE</strong>. For the stack-by-stack layout, see <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: observability and claim ceiling for each measurement stack</a>.
 </p>
 </div>
 <div class="note-box">
@@ -628,48 +653,88 @@ Therefore, in this roadmap, we first fix ``which loop class is handled and which
 <li><strong>Remaining latent states:</strong>Synaptic weight, receptor state, delay / timing-state, intrinsic excitability / homeostatic set point, neuromodulatory field, glial / metabolic state, and plastic history remain as separate variables. </li>
 </ul>
 <div class="note-box">
-<strong>2026-03-20 addendum: human in vivo evidence is a two-axis ladder, not one progress bar</strong>
+<strong>2026-03-25 addendum: human in vivo evidence is a three-axis ladder, not one progress bar</strong>
 <p>
-The remaining weakness in this roadmap was that M3 still let very different human-side advances sound like one generic increase in <strong>observability</strong>. The primary literature does not support that compression. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> reconstructed a cubic millimeter of surgically resected human temporal cortex at nanoscale resolution, which is a <strong>local ex vivo structural scaffold</strong>. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built an in vivo SV2A atlas in healthy humans (<strong>17F/16M</strong>) calibrated with postmortem autoradiography, which is a <strong>regional synaptic-density proxy</strong>. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derived a within-subject metabolic similarity matrix from <strong>five</strong> <sup>1</sup>H-MRSI metabolites in <strong>51 healthy participants</strong> with replication in <strong>13</strong>, which is a <strong>parcel-level biochemical scaffold</strong> rather than a flux map. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> used dynamic DMRSI plus a kinetic model at <strong>7 T</strong> across <strong>five healthy participants</strong> to estimate glucose transport and metabolic rates, while <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> demonstrated myelin-bilayer mapping in <strong>two healthy volunteers</strong> using specialized hardware. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> then advanced human-side CSF mobility and sleep-linked clearance routes, but still through <strong>specialized MRI</strong> or an <strong>investigational device plus multicompartment model</strong>. Therefore, this roadmap now asks readers to label both <strong>(1) which hidden-state family the route constrains</strong> and <strong>(2) how specialized, model-heavy, or deployment-limited that route still is</strong> before promoting any claim.
+The remaining weakness in this roadmap was that M3 still let very different human-side advances sound like one generic increase in <strong>observability</strong>. The primary literature does not support that compression. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> reconstructed a cubic millimeter of surgically resected human temporal cortex at nanoscale resolution, which is a <strong>local ex vivo structural scaffold</strong>. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built an in vivo SV2A atlas in healthy humans (<strong>17F/16M</strong>) calibrated with postmortem autoradiography, which is a <strong>regional synaptic-density proxy</strong>. <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> aggregated receptor / transporter PET into a <strong>regional chemoarchitectural prior</strong>, while <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a> and <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a> constrain <strong>selected occupancy / displacement routes</strong> rather than a free readout of the whole transmitter field. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derived a within-subject metabolic similarity matrix from <strong>five</strong> <sup>1</sup>H-MRSI metabolites in <strong>51 healthy participants</strong> with replication in <strong>13</strong>, which is a <strong>parcel-level biochemical scaffold</strong> rather than a flux map. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> used dynamic DMRSI plus a kinetic model at <strong>7 T</strong> across <strong>five healthy participants</strong> to estimate glucose transport and metabolic rates, while <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> demonstrated myelin-bilayer mapping in <strong>two healthy volunteers</strong> using specialized hardware. <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> added a <strong>reactive-astrogliosis PET proxy</strong>, and <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> plus <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> advanced human-side CSF mobility and sleep-linked clearance routes, but still through <strong>specialized MRI</strong> or an <strong>investigational device plus multicompartment model</strong>. Therefore, this roadmap now asks readers to label three separate things before promoting any human in vivo claim: <strong>(1) proxy class</strong>, <strong>(2) operational maturity / acquisition burden</strong>, and <strong>(3) safe calibrator role</strong>, meaning which hidden-state family the route can actually constrain on this site.
 </p>
 <table class="data-table">
 <thead>
 <tr>
 <th>Human route</th>
-<th>What it strengthens</th>
+<th>Proxy class</th>
+<th>Operational maturity / burden</th>
+<th>Safe calibrator role on this page</th>
 <th>Why the ceiling remains</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Local human ultrastructure</strong><br>Shapson-Coe et al. (2024)</td>
-<td>Local nanoscale structural scaffold</td>
+<td>Local ex vivo structural scaffold</td>
+<td>Destructive surgical-fragment route; not repeatable living-human acquisition</td>
+<td>Structural scaffold only</td>
 <td>Ex vivo fragment from one surgical sample, not living whole-brain current state</td>
 </tr>
 <tr>
 <td><strong>SV2A PET atlas</strong><br>Johansen et al. (2024)</td>
 <td>Regional synaptic-density proxy</td>
+<td>Healthy-cohort atlas; tracer and quantification dependent</td>
+<td>Bounded synaptic-density prior</td>
 <td>Tracer-defined atlas; not momentary synaptic efficacy or cell-specific plasticity state</td>
+</tr>
+<tr>
+<td><strong>Receptor / transporter atlas</strong><br>Hansen et al. (2022)</td>
+<td>Regional chemoarchitectural prior</td>
+<td>Aggregated PET atlas across many healthy individuals; receptor-family limited</td>
+<td>Bounded neuromodulatory-family prior</td>
+<td>Does not read out current transmitter release, occupancy, or whole-brain neuromodulatory state</td>
+</tr>
+<tr>
+<td><strong>Occupancy / displacement PET</strong><br>Wong et al. (2013); Koepp et al. (1998)</td>
+<td>Ligand- and challenge-limited target-engagement / release proxy</td>
+<td>Drug-, challenge-, receptor-, and window-specific design</td>
+<td>Selected engagement or bounded release proxy</td>
+<td>Does not recover the general transmitter field, unsampled receptor families, or cell-specific downstream effect</td>
 </tr>
 <tr>
 <td><strong><sup>1</sup>H-MRSI metabolic connectome</strong><br>Lucchetti et al. (2025)</td>
 <td>Parcel-level biochemical similarity scaffold</td>
+<td>51 healthy participants with 13-person replication; QC and parceling dependent</td>
+<td>Bounded biochemical scaffold</td>
 <td>Five-metabolite similarity matrix, not axonal wiring or kinetic rate imaging</td>
 </tr>
 <tr>
-<td><strong>Dynamic DMRSI / myelin bilayer MRI</strong><br>Li et al. (2025); Baadsvik et al. (2024)</td>
-<td>Macro energetic and macro myelin routes</td>
-<td>Specialized hardware and small cohorts; not branch-local energetic reserve or per-axon timing control</td>
+<td><strong>Dynamic DMRSI</strong><br>Li et al. (2025)</td>
+<td>Macro energetic-rate proxy</td>
+<td>7 T, five healthy participants, custom coils, kinetic model</td>
+<td>Bounded energetic-burden proxy</td>
+<td>Not branch-local ATP reserve, mitochondrial positioning, or cell-specific bioenergetic controller state</td>
+</tr>
+<tr>
+<td><strong>Myelin bilayer MRI</strong><br>Baadsvik et al. (2024)</td>
+<td>Macro myelin proxy</td>
+<td>Two healthy volunteers on specialized high-performance hardware</td>
+<td>Bounded myelin / timing-support proxy</td>
+<td>Not per-axon timing control, node-level regulation, or plasticity-complete restoration</td>
+</tr>
+<tr>
+<td><strong>Human astrocyte-related PET</strong><br>Villemagne et al. (2022)</td>
+<td>Reactive-astrogliosis proxy</td>
+<td>Tracer-specific PET with pathology-context ceiling</td>
+<td>Bounded astrocyte-related support-state proxy</td>
+<td>Not learning-associated astrocyte ensembles, recall-state astrocytes, or arbitrary memory content</td>
 </tr>
 <tr>
 <td><strong>CSF mobility / glymphatic clearance routes</strong><br>Hirschler et al. (2025); Dagum et al. (2026)</td>
 <td>Macro support-state proxy</td>
-<td>Model/device dependent and not direct readout of cell-specific maintenance control</td>
+<td>Specialized MRI or device- and model-heavy biomarker-efflux inference</td>
+<td>Bounded clearance-support proxy</td>
+<td>Not direct readout of cell-specific immune control, responsible synapse, or local maintenance controller</td>
 </tr>
 </tbody>
 </table>
 <p>
-If several rows are combined in one argument, this roadmap still asks for <strong>same-subject / same-session / same-perturbation</strong> acquisition plus <strong>external calibration</strong> before talking about state-complete human measurement. If the bridge is sequential across live and ex vivo or across separated state regimes, it also asks for a <a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> plus the longer background rule in <a href="wiki/state-continuity-bridge.html">Wiki: State-Continuity Bridge</a>. Otherwise the result stays at <strong>proxy-rich but ceiling-limited human evidence</strong>. The front-door table is in <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>, and the submission-side stop rule is <a href="verification.html#observability-budget">Verification: Observability Budget</a>.
+If several rows are combined in one argument, this roadmap still asks for <strong>same-subject / same-session / same-perturbation</strong> acquisition plus <strong>external calibration</strong> and a <a href="verification.html#human-proxy-composition-card">Human Proxy Composition Card</a> before talking about state-complete human measurement. If the bridge is sequential across live and ex vivo or across separated state regimes, it also asks for a <a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> plus the longer background rule in <a href="wiki/state-continuity-bridge.html">Wiki: State-Continuity Bridge</a>. Otherwise the result stays at <strong>proxy-rich but ceiling-limited human evidence</strong>, because proxy class, operational maturity, and calibrator role still remain mismatched. The front-door table is in <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>, the longer critique is in <a href="wiki/human-proxy-composition.html">Wiki: Human Proxy Composition and Route Maturity</a>, and the submission-side stop rule is <a href="verification.html#observability-budget">Verification: Observability Budget</a>.
 </p>
 </div>
 <div class="note-box">
