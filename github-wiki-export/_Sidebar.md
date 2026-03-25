@@ -43,7 +43,7 @@
 - [Wiki: 5 paths to follow after participation/collaboration page](https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes)
 - [Wiki: 5 paths to follow after the roadmap](https://github.com/yasufumi-nakata/mind-upload/wiki/roadmap-next-routes)
 - [Wiki: A straight path back from literature to implementation and participation](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-to-action-route)
-- [Wiki: Baseline/Pre-registration/Model Card](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards)
+- [Wiki: Baseline / Benchmark / Pre-registration / Model Card](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards)
 - [Wiki: Basics of event synchronization and observation logs](https://github.com/yasufumi-nakata/mind-upload/wiki/event-sync-and-measurement-logs)
 - [Wiki: Basics of multimodal integration](https://github.com/yasufumi-nakata/mind-upload/wiki/multimodal-integration-basics)
 - [Wiki: Basics of thermodynamic grounding](https://github.com/yasufumi-nakata/mind-upload/wiki/thermodynamic-grounding-basics)
