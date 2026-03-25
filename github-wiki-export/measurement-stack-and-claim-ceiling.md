@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-22 / 位置づけ: Technical / natural science only
+- 更新日: 2026-03-26 / 位置づけ: Technical / natural science only
 
 ## このページの役割
 This page is a wiki that fixes the ``upper claim limit for each measurement stack,'' which is often overlooked in WBE discussions. It's not enough to say that hidden state is important. Based on primary literature, we will explain what each of EEG/MEG/fMRI, spatial transcriptomics, Patch-seq, volume EM, same-brain functional connectomics, synaptic-density PET, mixed arousal proxy, local transmitter sensor, receptor atlas / PET, glia imaging, and human biochemical / energetic / ionic / thermal / myelin / clearance routes directly observes and what remains latent.
@@ -30,6 +30,8 @@ The ``claim ceiling'' column below is not the conclusion declared by each paper.
 - Patch-seq and same-brain connectomics reduce degeneracy, but the sufficiency of whole-brain coverage and long-term maintenance-state remains.
 - Local transmitter / glia imaging is effective for calibrating coarse proxies, but it does not directly provide whole-brain ground truth.
 - Human biochemical, energetic, ionic, thermal, myelin, and clearance routes reduce different latent-state error terms and should not be summarized as one direct path to maintenance-state completeness.
+- A real human proxy route may still calibrate only one bounded hidden-state family, so proxy class and operational maturity do not by themselves fix calibrator role.
+- Same-subject or same-brain wording can solve specimen identity while still leaving state continuity unresolved across time gaps, regime changes, and tissue transformation.
 
 ## まだ分かっていないこと
 - It cannot yet be determined which stack combination will most efficiently reduce degeneracy for WBE.
@@ -303,13 +305,15 @@ The same caution extends to glia. <a href="https://doi.org/10.1038/s41586-024-07
 
 <h2>7. Human maintenance-state routes also form a ladder</h2>
 <p>
-Another weakness that remained on this page was that it separated generic measurement stacks while still leaving recent <strong>human maintenance-state evidence</strong> too easy to compress into one sentence such as ``human in vivo observability is getting close.'' That is too weak. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> pushed up <strong>local human nanoscale ultrastructure</strong>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> pushed up a <strong>regional synaptic-density atlas</strong>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> pushed up a <strong>whole-brain biochemical scaffold</strong>, <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> pushed up <strong>macro energetic routes</strong>, <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a> and <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">Qian et al. (2025)</a> pushed up <strong>macro ionic routes</strong>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a> pushed up <strong>macro thermal routes</strong>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> pushed up <strong>macro myelin mapping</strong>, <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>, <a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a>, and <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> pushed up <strong>perturbation-conditioned human plasticity / state-gated routes</strong>, and <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> plus <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> pushed up <strong>macro CSF / glymphatic support-state routes</strong>. What follows directly is that <strong>human evidence is layered across proxy classes</strong>, not a single near-direct route to current whole-brain maintenance-state. A second correction is also required: those rows are not all equally mature, routine, or deployment-ready.
+Another weakness that remained on this page was that it separated generic measurement stacks while still leaving recent <strong>human maintenance-state evidence</strong> too easy to compress into one sentence such as ``human in vivo observability is getting close.'' That is too weak. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> pushed up <strong>local human nanoscale ultrastructure</strong>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> pushed up a <strong>regional synaptic-density atlas</strong>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> pushed up a <strong>whole-brain biochemical scaffold</strong>, <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> pushed up <strong>macro energetic routes</strong>, <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a> and <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">Qian et al. (2025)</a> pushed up <strong>macro ionic routes</strong>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a> pushed up <strong>macro thermal routes</strong>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> pushed up <strong>macro myelin mapping</strong>, <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>, <a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a>, and <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> pushed up <strong>perturbation-conditioned human plasticity / state-gated routes</strong>, and <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> plus <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> pushed up <strong>macro CSF / glymphatic support-state routes</strong>. What follows directly is that <strong>human evidence is layered across proxy classes</strong>, not a single near-direct route to current whole-brain maintenance-state. A second correction is also required: those rows are not all equally mature, routine, or deployment-ready, and they do not safely calibrate the same hidden-state family.
 </p>
 <table>
 <thead>
 <tr>
 <th>Human route</th>
-<th>What it directly advances</th>
+<th>Proxy class on this site</th>
+<th>Operational maturity / burden</th>
+<th>Safe calibrator role on this site</th>
 <th>What still remains latent</th>
 <th>Claim ceiling on this site</th>
 </tr>
@@ -317,81 +321,108 @@ Another weakness that remained on this page was that it separated generic measur
 <tbody>
 <tr>
 <td><strong>Local human nanoscale ultrastructure</strong><br>Shapson-Coe et al. (2024)</td>
-<td>A cubic-millimeter human cortical fragment reconstructed at nanoscale resolution with dense local cell, axon, glia, vascular, and synapse structure.</td>
+<td><strong>Local ex vivo structural scaffold</strong></td>
+<td>Destructive surgical-fragment route; not repeatable living-human acquisition.</td>
+<td>Structural scaffold only.</td>
 <td>Living whole-brain dynamics, current synaptic efficacy, ongoing maintenance-state, and cross-brain generalization.</td>
 <td><strong>Local human structural scaffold</strong>. We do not promote it to living whole-brain state capture.</td>
 </tr>
 <tr>
 <td><strong>Regional synaptic-density PET atlas</strong><br>Johansen et al. (2024)</td>
-<td>Atlas-level distribution of the synaptic marker SV2A across the living human brain, estimated through tracer-specific kinetic modeling or a validated simplified window.</td>
+<td><strong>Regional synaptic-density proxy</strong></td>
+<td>Healthy-cohort atlas; tracer- and quantification-dependent.</td>
+<td>Bounded synaptic-density prior.</td>
 <td>Current synaptic efficacy, release probability, task-evoked momentary state change, synaptic-tag capture, and branch-local plasticity state.</td>
 <td><strong>Regional synaptic-density proxy</strong>. We do not read it as a direct measurement of current synaptic function.</td>
 </tr>
 <tr>
 <td><strong>Whole-brain MRSI metabolic similarity scaffold</strong><br>Lucchetti et al. (2025)</td>
-<td>Parcel-level biochemical organization from whole-brain <sup>1</sup>H-MRSI metabolite profiles with within-subject metabolic similarity structure.</td>
+<td><strong>Parcel-level biochemical scaffold</strong></td>
+<td>Whole-brain cohort mapping with replication, but still a static similarity route.</td>
+<td>Bounded biochemical-organization scaffold.</td>
 <td>Current transcriptional controller, branch-local energetic reserve, cell-specific recovery logic, and local transmitter / glial microstate.</td>
 <td><strong>Macro biochemical scaffold</strong>. It is not a local maintenance-state snapshot.</td>
 </tr>
 <tr>
 <td><strong>Human energetic imaging (31P-MRS / dynamic DMRSI)</strong><br>Ren et al. (2015); Li et al. (2025)</td>
-<td>ATP synthesis / pH and whole-brain glucose transport and metabolic-rate mapping in living humans.</td>
+<td><strong>Macro energetic proxy</strong></td>
+<td>Ranges from specialized spectroscopy to high-burden 7 T kinetic imaging with custom hardware and model burden.</td>
+<td>Bounded energetic-burden proxy.</td>
 <td>Which dendritic branch lacks ATP reserve, where mitochondria are parked, which compartment is energetically fragile right now, and which fission / fusion state is active.</td>
 <td><strong>Macro energetic proxy</strong>. It does not become branch-local mitochondrial ground truth.</td>
 </tr>
 <tr>
 <td><strong>Human sodium MRI / ionic proxy</strong><br>Qian et al. (2012); Qian et al. (2025)</td>
-<td>mm-class tissue sodium mapping in vivo and emerging mono- / bi-T<sub>2</sub> sodium separation under specialized acquisition.</td>
+<td><strong>Macro ionic proxy</strong></td>
+<td>Specialized acquisition with emerging compartment-sensitive extensions rather than routine controller readout.</td>
+<td>Bounded ionic-burden proxy.</td>
 <td>Cell-specific chloride concentration, KCC2 / NKCC1 balance, extracellular K<sup>+</sup> / Ca<sup>2+</sup> / pH microdomains, local E<sub>GABA</sub>, and routine whole-brain intra- versus extracellular sodium partition.</td>
 <td><strong>Macro ionic proxy</strong>. It is not direct ground truth of current chloride homeostasis.</td>
 </tr>
 <tr>
 <td><strong>Human brain thermometry</strong><br>Rzechorzek et al. (2022)</td>
-<td>4D macro thermal maps and daily human brain-temperature rhythms.</td>
+<td><strong>Macro thermal proxy</strong></td>
+<td>Living-human macro mapping route, but not a local thermal-controller assay.</td>
+<td>Bounded thermal-burden proxy.</td>
 <td>Cell-specific microtemperature, synapse-level heating burden, and local thermal controller state.</td>
 <td><strong>Macro thermal proxy</strong>. It is not cell-specific thermal-state ground truth.</td>
 </tr>
 <tr>
 <td><strong>Human myelin bilayer mapping (specialized proof-of-principle)</strong><br>Baadsvik et al. (2024)</td>
-<td>Direct MRI access to the myelin bilayer at macro scale in living human brain.</td>
+<td><strong>Macro myelin proxy</strong></td>
+<td>Proof-of-principle in two healthy volunteers on specialized high-performance hardware.</td>
+<td>Bounded myelin / timing-support proxy.</td>
 <td>Per-axon conduction controller, node / internode microgeometry, and local timing-state recovery.</td>
 <td><strong>Macro myelin proxy</strong>. It is not full timing-state recovery.</td>
 </tr>
 <tr>
 <td><strong>Human sleep-homeostasis / plasticity proxy</strong><br>Huber et al. (2013); Kuhn et al. (2016); Fehér et al. (2026)</td>
-<td>Wake / sleep / nap manipulations that measurably shift TMS-EEG cortical excitability and PAS-like plasticity efficacy in living humans.</td>
+<td><strong>Perturbation-conditioned maintenance proxy</strong></td>
+<td>Intervention-backed human route, but still controller-indirect and regime-limited.</td>
+<td>Bounded excitability / plasticity-support proxy.</td>
 <td>Which cell type, AIS / channel change, synapse, glial controller, or recovery controller produced the effect.</td>
 <td><strong>Perturbation-conditioned maintenance proxy</strong>. It is not direct readout of the responsible excitability controller.</td>
 </tr>
 <tr>
 <td><strong>Human state-gated perturbation proxy</strong><br>Zrenner et al. (2018)</td>
-<td>State-conditioned causal evidence that EEG-defined excitability state changes the efficacy of TMS-induced plasticity.</td>
+<td><strong>State-gated perturbation proxy</strong></td>
+<td>Operationally real closed-loop human route, but still mechanism-indirect.</td>
+<td>Bounded state-gated excitability proxy.</td>
 <td>AIS geometry, channel distribution, cell-specific allocation state, and long-horizon recovery controller.</td>
 <td><strong>State-gated perturbation proxy</strong>. It is not direct measurement of the excitability mechanism itself.</td>
 </tr>
 <tr>
 <td><strong>Human CSF mobility / sleep-linked clearance proxy</strong><br>Hirschler et al. (2025); Dagum et al. (2026)</td>
-<td>In vivo CSF mobility mapping and sleep-related clearance evidence linking brain-to-plasma transport.</td>
+<td><strong>Macro support-state proxy</strong></td>
+<td>Specialized MRI or device- and model-heavy biomarker-efflux inference.</td>
+<td>Bounded clearance-support proxy.</td>
 <td>Cell-specific immune control, local synaptic maintenance, and moment-to-moment neural state.</td>
 <td><strong>Macro support-state proxy</strong>. It is not a direct readout of local maintenance control.</td>
 </tr>
 <tr>
 <td><strong>Still lacking a comparable in vivo whole-brain human route</strong></td>
-<td>Current transcription / chromatin state, ECM / PNN gate state, branch-local proteostasis / synaptic-tag capture, current chloride set point, and branch-local mitochondrial positioning remain important state classes.</td>
+<td><strong>Still explicitly latent</strong></td>
+<td>No comparable living-human whole-brain route in the reviewed stack bundle.</td>
+<td>No safe calibrator role yet.</td>
 <td>These layers still cannot be promoted from human evidence to comparable whole-brain in vivo ground truth on the basis of the reviewed measurement classes alone.</td>
 <td><strong>Keep them explicitly latent</strong> or externally calibrated; do not auto-fill them from the proxy rows above.</td>
 </tr>
 </tbody>
 </table>
 
-<strong>Proxy class and maturity have to be logged separately</strong>
+<strong>Proxy class, operational maturity, and calibrator role have to be logged separately</strong>
 <p>
-The key operational criticism is that the presence of a human proxy class does not by itself tell you how mature the route is. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built an atlas from <strong>33 healthy participants</strong> calibrated against postmortem autoradiography. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derived a metabolic similarity scaffold from <strong>51 healthy adolescents</strong> with an <strong>independent replication sample of 13</strong>, using five-metabolite <sup>1</sup>H-MRSI and a correlation-based construction. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> reported whole-brain metabolic-rate mapping in <strong>five healthy participants</strong> at <strong>7 T</strong> with custom dual-frequency coils and blood-input modeling. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> showed myelin-bilayer mapping in <strong>two healthy volunteers</strong> on high-performance hardware. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> introduced a specialized 7 T CSF-mobility sequence in <strong>24 healthy adults</strong>, while <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> relied on older-adult crossover cohorts, an <strong>investigational wearable</strong>, and a <strong>compartmental model</strong> with notable QC attrition. Therefore, this page now treats <strong>proxy class</strong> and <strong>operational maturity</strong> as separate metadata that both have to be stated before claim ceilings are interpreted.
+The key operational criticism is that a route can be real without being broad. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built an atlas from <strong>33 healthy participants</strong> calibrated against postmortem autoradiography, but that still calibrates a <strong>synaptic-density prior</strong> rather than task-time synaptic efficacy. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derived a metabolic similarity scaffold from <strong>51 healthy adolescents</strong> with an <strong>independent replication sample of 13</strong>, but that still calibrates a <strong>biochemical organization scaffold</strong> rather than a kinetic energetic controller. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> reported whole-brain metabolic-rate mapping in <strong>five healthy participants</strong> at <strong>7 T</strong> with custom dual-frequency coils and blood-input modeling, which is real but still high-burden and still calibrates only a <strong>bounded energetic-burden proxy</strong>. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> showed myelin-bilayer mapping in <strong>two healthy volunteers</strong> on specialized hardware, while <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> constrain <strong>support-state</strong> rather than cell-specific maintenance control. Therefore, this page now treats <strong>proxy class</strong>, <strong>operational maturity</strong>, and <strong>safe calibrator role</strong> as separate metadata that all have to be stated before claim ceilings are interpreted.
 </p>
 
 <strong>Site rule for human proxy classes</strong>
 <p>
-On this site, human-side summaries must name the <strong>proxy class</strong> explicitly. ``Human evidence exists'' is too coarse. The summary has to tell the reader whether the result is a <strong>local structural scaffold</strong>, <strong>regional synaptic-density proxy</strong>, <strong>macro biochemical scaffold</strong>, <strong>perturbation-conditioned maintenance / state-gated perturbation proxy</strong>, <strong>macro energetic / ionic / thermal / myelin proxy</strong>, or <strong>macro support-state proxy</strong>. When the route is still specialized, model-dependent, or small-cohort, that maturity limit must be stated alongside the proxy class rather than left implicit.
+On this site, human-side summaries must name the <strong>proxy class</strong> explicitly. ``Human evidence exists'' is too coarse. The summary has to tell the reader whether the result is a <strong>local structural scaffold</strong>, <strong>regional synaptic-density proxy</strong>, <strong>macro biochemical scaffold</strong>, <strong>perturbation-conditioned maintenance / state-gated perturbation proxy</strong>, <strong>macro energetic / ionic / thermal / myelin proxy</strong>, or <strong>macro support-state proxy</strong>. When the route is still specialized, model-dependent, or small-cohort, that maturity limit must be stated alongside the proxy class. And when the route calibrates only one bounded hidden-state family, that <strong>calibrator role</strong> must be written explicitly rather than inherited from the modality label.
+</p>
+
+<strong>Same-subject still does not solve the bridge by itself</strong>
+<p>
+One more shortcut remained too easy on this page: to read <strong>same subject</strong> or <strong>same brain</strong> as if several human rows had already become one state sample. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> showed that preservation route changes extracellular-space retention and native geometry, <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> remained a rapidly preserved local surgical fragment rather than a living whole-brain route, and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> remained a sequential same-brain pipeline rather than same-time capture. Therefore, if a human proxy bundle crosses live and ex vivo or separated physiological regimes, this site now asks for a <a href="https://mind-upload.com/verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> that names elapsed time, regime continuity, coordinate-transfer burden, and residual drift ceiling before same-state language is allowed.
 </p>
 
 <strong>Why this ladder matters operationally</strong>
@@ -401,7 +432,7 @@ The danger is not only philosophical overreach. If these rows are compressed int
 
 <h2>8. Proxy-rich human evidence still does not become state-complete by composition</h2>
 <p>
-A remaining weakness after separating <strong>proxy class</strong> and <strong>operational maturity</strong> was that a reader could still mentally add the strongest human rows together and conclude that the hidden-state problem is almost solved. The primary literature does not support that shortcut. The rows above live on different spatial units, time windows, and inference layers, and several of the strongest demonstrations are still specialized or model-heavy. The safe reading on this site is therefore not ``the proxies add up to completeness,'' but ``the proxies reduce different error terms and still leave a fusion problem.''
+A remaining weakness after separating <strong>proxy class</strong>, <strong>operational maturity</strong>, and <strong>calibrator role</strong> was that a reader could still mentally add the strongest human rows together and conclude that the hidden-state problem is almost solved. The primary literature does not support that shortcut. The rows above live on different spatial units, time windows, and inference layers, and several of the strongest demonstrations are still specialized or model-heavy. The safe reading on this site is therefore not ``the proxies add up to completeness,'' but ``the proxies reduce different error terms and still leave a fusion problem.''
 </p>
 <table>
 <thead>
@@ -437,12 +468,17 @@ A remaining weakness after separating <strong>proxy class</strong> and <strong>o
 <td><a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> is local ex vivo nanoscale human cortex, whereas <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> and <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> are small-cohort specialized in vivo macro routes. The cited papers do not demonstrate same-subject, same-time, whole-brain cross-stack state identification.</td>
 <td>Reserve stronger wording for studies that disclose <strong>same-subject co-registration</strong>, <strong>same-regime alignment</strong>, and <strong>externally validated cross-stack fusion</strong>.</td>
 </tr>
+<tr>
+<td><strong>``Same-subject sequential pipeline = same-state multistack sample''</strong></td>
+<td><a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> showed that preservation route changes geometry, <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> remained a local ex vivo fragment, and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> remained a sequential same-brain workflow rather than same-time capture. The cited papers do not show that specimen identity alone closes time, regime, or registration drift.</td>
+<td>Attach a <strong>State-Continuity Bridge Card</strong> that names elapsed time, regime continuity, coordinate transfer, and residual drift ceiling before promoting the bundle above proxy-rich evidence.</td>
+</tr>
 </tbody>
 </table>
 
 <strong>Composition rule on this site</strong>
 <p>
-This site now treats <strong>proxy-rich human evidence</strong> as a real advance over a single proxy class, but still below <strong>same-subject, cross-stack, externally calibrated state identification</strong>. To move upward, a paper or benchmark package has to disclose co-registration scope, perturbation alignment, clock / lag audit, quantification models, external calibration, and what latent states remain unmatched. On this site, that disclosure bundle is formalized as the <a href="https://mind-upload.com/verification.html#fusion-card">Fusion Card</a>. That ranking is an inference from the primary literature summarized above.
+This site now treats <strong>proxy-rich human evidence</strong> as a real advance over a single proxy class, but still below <strong>same-subject, cross-stack, externally calibrated state identification</strong>. To move upward, a paper or benchmark package has to disclose co-registration scope, perturbation alignment, clock / lag audit, quantification models, external calibration, and what latent states remain unmatched. If the bridge is sequential across live and ex vivo or across separated physiological regimes, it also has to disclose elapsed time, regime continuity, coordinate transfer, and residual drift ceiling through the <a href="https://mind-upload.com/verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a>. On this site, multimodal combination itself is formalized as the <a href="https://mind-upload.com/verification.html#fusion-card">Fusion Card</a>. That ranking is an inference from the primary literature summarized above.
 </p>
 
 <h2>Practical rules arising from this criticism</h2>
@@ -452,8 +488,9 @@ This site now treats <strong>proxy-rich human evidence</strong> as a real advanc
 <li><strong>Write the measurement stack in the augmentation claim:</strong>Instead of saying "added transcriptomic label", distinguish between whole-brain atlas, patch-seq bridge, or same-brain link. </li>
 <li><strong>Don't mix atlas / bridge / scaffold / local twin / proxy calibration:</strong>Fix which kind of advance is the same "advance". </li>
 <li><strong>Don't make multimodal a synonym for state-complete:</strong>Include in the text what latent state still remains. </li>
-<li><strong>In human-side summaries, name the proxy class:</strong>Do not compress local ultrastructure, synaptic-density PET, biochemical scaffold, perturbation-conditioned plasticity/state-gated perturbation routes, energetic / ionic / thermal / myelin / clearance routes into one direct route. </li>
+<li><strong>In human-side summaries, name proxy class, operational maturity, and calibrator role:</strong>Do not compress local ultrastructure, synaptic-density PET, biochemical scaffold, perturbation-conditioned plasticity/state-gated perturbation routes, energetic / ionic / thermal / myelin / clearance routes into one direct route. </li>
 <li><strong>Do not read proxy accumulation as automatic state-completeness:</strong>Cross-stack fusion still needs same-subject alignment, model disclosure, external calibration, and abstention boundaries.</li>
+<li><strong>Do not read same-subject wording as same-state when the bridge is sequential:</strong>Require elapsed time, regime continuity, coordinate transfer, and residual drift disclosure. </li>
 <li><strong>When filling in unobserved states, write ``estimated'': </strong>If threshold / gain / set point is auto-completed from cell type, write ``latent inference''. </li>
 <li><strong>Do not promote BOLD / fNIRS amplitude to neural difference without hemodynamic audit:</strong>Write vascular-state / CVR calibration route or abstention explicitly. </li>
 <li><strong>Prohibit expressions that exceed the claim ceiling:</strong>For example, do not write EM alone as emulation-complete, Patch-seq as whole-brain state-complete, pupil as transmitter ground truth, receptor atlas as current transmitter state, occupancy PET as whole-brain transmitter-state readout, or displacement PET as whole-brain neuromodulatory ground truth. </li>
@@ -495,8 +532,8 @@ This site now treats <strong>proxy-rich human evidence</strong> as a real advanc
 </tr>
 <tr>
 <td><strong>human maintenance-state proxies</strong></td>
-<td>class-labeled submission, external calibration route, cross-stack comparison, and abstention boundary. </td>
-<td>It becomes easier to separate local scaffold, synaptic-density proxy, biochemical scaffold, perturbation-conditioned plasticity proxy, energetic / ionic / thermal / myelin / clearance proxy, and still-missing human routes. </td>
+<td>class-labeled submission, calibrator-role disclosure, external calibration route, cross-stack comparison, and bridge disclosure when acquisition is sequential. </td>
+<td>It becomes easier to separate local scaffold, synaptic-density proxy, biochemical scaffold, perturbation-conditioned plasticity proxy, energetic / ionic / thermal / myelin / clearance proxy, the bounded hidden-state family each route safely calibrates, and still-missing human routes. </td>
 <td>Stop near-direct human maintenance-state and state-complete claims. </td>
 </tr>
 </tbody>

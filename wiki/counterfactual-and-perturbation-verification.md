@@ -1,65 +1,55 @@
 ---
 layout: default
-title: 'Wiki: Verification of counterfactuals, interventions, and perturbations'
-description: The differences between held-out accuracy, online manipulation, external
-  intervention, and near-counterfactual perturbation verification are summarized based
-  on primary literature.
+title: "Wiki: Verification of counterfactuals, interventions, and perturbations"
+description: "Primary-literature reading guide for separating held-out accuracy, online control, local intervention, temporal durability, bridge validity, and perturbation-structure tests."
 article_type: Wiki
-subtitle: High accuracy is one thing, correct response to changing conditions is another.
+subtitle: "A fast loop, a causal gain, and a durable same-state result are different claims."
 author: Mind Uploading Research Project
-last_updated: '2026-03-14'
-note: Learning guide
-audience: People who want to understand the difference between decode and emulate
-  more carefully, people who tend to stop at the beginning of causal verification
-reading_time: 12-18 minutes
-page_intro: This page is a wiki that separates the verification of held-out accuracy,
-  online human-in-the-loop, external intervention, and perturbation complexity along
-  the lines of primary literature. In addition to the concept words, list what papers
-  actually change and what they don't show yet.
-accuracy_note: The primary literature as of March 2026 strongly supports local subsystem
-  and task-specific causal evidence. This does not mean that the counterfactual equivalence
-  of whole-brain WBE has been demonstrated.
+last_updated: "2026-03-26"
+note: "Learning guide / evidence refresh"
+audience: "People who want to read causal-verification papers without collapsing online control, local intervention, cross-day durability, and same-state continuity into one result"
+reading_time: "14-22 minutes"
+page_intro: "This page is a wiki that separates held-out accuracy, online human-in-the-loop control, bidirectional or local intervention, state-dependent intervention, temporal durability, and perturbation-structure tests using primary literature. It also connects those evidence classes to the site's newer operating rules: the Temporal Validity Card, State-Continuity Bridge Card, Maintenance-State Error Budget, and Body / Environment Boundary Card."
+accuracy_note: "The primary literature as of March 2026 strongly supports local subsystem- and task-limited causal evidence plus real engineering progress in online control and deployment. It still does not demonstrate whole-brain counterfactual equivalence or state-complete WBE."
 page_highlights:
-- Offline decode, online control, external intervention, and long-term closed loop
-  are separate walls.
-- To call it a counterfactual, we need to fix the branching conditions, comparison
-  targets, and failure conditions in advance.
-- What is strong in the primary literature is the demonstration of local system/task
-  limitation, not the proof of whole-brain equivalence.
+  - "Offline decode, online control, local causal gain, cross-day durability, and branch-structure verification are separate walls."
+  - "Low latency and abstention in one session do not by themselves solve fixed-decoder durability, clinic-to-home deployment, or same-state continuity across days."
+  - "Same-subject wording is not accepted here as same-state evidence unless the bridge regime and elapsed time are disclosed explicitly."
+  - "Persistence, forgetting, recovery, and long-horizon claims require maintenance-state disclosure in addition to intervention logs."
+  - "What recent primary literature supports strongly is subsystem-limited causal evidence and deployment-specific engineering progress, not whole-brain counterfactual equivalence."
 known_points:
-- High held-out precision alone does not guarantee agreement in causal structure.
-- Bidirectional feedback and state-dependent stimulation strengthen causal evidence,
-  but their scope of application tends to be localized.
-- Logs of latency, recalibration, and abstention are essential in closed-loop systems.
+  - "High held-out accuracy alone does not guarantee agreement in causal structure."
+  - "Bidirectional feedback and state-dependent stimulation strengthen causal evidence, but their scope of application remains localized unless the omitted boundary is disclosed."
+  - "Recent speech BCI and adaptive DBS papers show that tail latency, recalibration burden, eligibility or programming burden, and clinic-to-home deployment are separate audit items."
+  - "Same-subject or same-brain wording can solve specimen identity while still leaving state continuity unresolved across days, regimes, or live-to-fix bridges."
+  - "When a claim extends to persistence, forgetting, or recovery after perturbation, intervention logs alone are insufficient without maintenance-state disclosure."
 unknown_points:
-- It is an open question which set of perturbations is sufficient to satisfy the generative
-  equivalence of WBE.
-- The extent to which counterfactual bifurcations can be benchmarked is still under
-  research in terms of both theory and engineering.
-- No public infrastructure exists yet to directly test branch-equivalence on a whole-brain
-  scale.
+  - "It remains open which perturbation set would be sufficient for whole-brain branch-equivalence."
+  - "The extent to which counterfactual branch structure can be benchmarked in a shareable public infrastructure is still unresolved."
+  - "No public benchmark yet joins perturbation response, temporal durability, bridge validity, and maintenance-state disclosure under one whole-brain standard."
 wiki_links:
-- label: 'Wiki: Decode and Emulate'
-  url: /wiki/decode-vs-emulate.html
-  description: First, it is for those who want to go back to the difference between
-    translation and generation.
-- label: 'Wiki: From observation to estimation'
-  url: /wiki/observation-to-estimation.html
-  description: It compensates for the difference between inferential models and causal
-    models.
-- label: 'Wiki: Closed loop, delay, jitter, safe stop'
-  url: /wiki/closed-loop-latency-jitter-and-safety-stops.html
-  description: Supplements practical indicators when reading causal verification online.
-- label: 'Wiki: Basics of verification infrastructure'
-  url: /wiki/verification-basics.html
-  description: It complements the role of Benchmark, Registry, and Model Card.
+  - label: "Wiki: Decode and Emulate"
+    url: "/wiki/decode-vs-emulate.html"
+    description: "Return here first if translation and generation are still being mixed together."
+  - label: "Wiki: From Observation to Estimation"
+    url: "/wiki/observation-to-estimation.html"
+    description: "Explains why observational fit and causal validation are different steps."
+  - label: "Wiki: State, Trait, and Drift"
+    url: "/wiki/state-trait-and-drift.html"
+    description: "Background for cross-day durability, recalibration burden, and transfer ceilings."
+  - label: "Wiki: State-Continuity Bridge"
+    url: "/wiki/state-continuity-bridge.html"
+    description: "Explains why same-subject or same-brain wording does not automatically give one same-state sample."
+  - label: "Wiki: Closed Loop, Delay, Jitter, Safe Stop"
+    url: "/wiki/closed-loop-latency-jitter-and-safety-stops.html"
+    description: "Detailed timing-side companion for online control and deployment logs."
 recommended_pages:
-- label: Introduction to WBE
-  url: /wbe_101.html
-- label: Verification platform
-  url: /verification.html
-- label: FAQ
-  url: /faq.html
+  - label: "Verification platform"
+    url: "/verification.html"
+  - label: "Technology roadmap"
+    url: "/tech_roadmap.html"
+  - label: "Introduction to WBE"
+    url: "/wbe_101.html"
 ---
 
 <main class="main-container">
@@ -68,58 +58,102 @@ recommended_pages:
 <div class="abstract-box">
 <h2>Shortest conclusion</h2>
 <p>
-High held-out accuracy is important, but it alone does not mean that the mechanisms inside are the same. Primary literature as of March 2026 shows that<strong>offline decode</strong>, <strong>online human-in-the-loop</strong>, <strong>external intervention</strong>, and <strong>long-term closed loop</strong> are separate walls.
+High held-out accuracy is important, but it alone does not mean that the mechanisms inside are the same. The current primary literature supports at least six separate walls: <strong>held-out decode</strong>, <strong>online human-in-the-loop control</strong>, <strong>bidirectional or local intervention</strong>, <strong>state-dependent intervention</strong>, <strong>temporal durability and deployment</strong>, and <strong>branch-structure or perturbation-pattern testing</strong>.
 </p>
 </div>
 
 <div class="note-box">
-<strong>Points fixed in this reorganization</strong>
+<strong>Main weakness this pass had to fix</strong>
 <p>
-The previous edition had a heavy emphasis on explaining intervention, counterfactual, and perturbation as conceptual terms, making it difficult to see which papers demonstrated what level of proof. On this page, we list <strong>what has actually changed</strong>, <strong>what has improved</strong>, and <strong>what cannot be said</strong> for each primary source.
+The older version correctly separated held-out accuracy from intervention, but it still let readers learn causal verification as if it were one monotonic ladder. The recent primary literature does not support that shortcut. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> demonstrated raw-neural closed-loop voice synthesis in less than <strong>10 ms</strong> with explicit silence outside speech, yet the same paper reported a noticeable decline in fixed-decoder performance after about <strong>15 days</strong>. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> then achieved <strong>one month</strong> of unsupervised closed-loop cursor control while showing, with recordings spanning <strong>five years</strong>, that pairwise recalibration and chained long-term use are different questions. <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">Oehrn et al. (2024)</a> pushed adaptive DBS into blinded randomized blocks in home life over <strong>one month per condition</strong>, while <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">Cascino et al. (2026)</a> showed that even after offering chronic adaptive DBS to <strong>20 consecutive</strong> Parkinson's disease patients, eligibility and programming constraints still narrowed who could actually continue. Therefore this page now separates <strong>same-session causal gain</strong>, <strong>temporal durability</strong>, <strong>bridge validity</strong>, and <strong>deployment burden</strong> instead of hiding them inside one phrase such as <strong>closed-loop success</strong>.
 </p>
 </div>
 
 <section class="section" id="ladder">
-<h2 class="section-title">First, classify the strength of causal evidence into five levels</h2>
+<h2 class="section-title">First, classify causal evidence into six levels</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>stage</th>
+<th>Stage</th>
 <th>What is actually changing</th>
-<th>Minimum desired log</th>
-<th>Things I can't say yet</th>
+<th>Minimum log wanted on this site</th>
+<th>What still cannot be said</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>1. held-out decode</strong></td>
-<td>See if it hits with untrained data. </td>
-<td>Division unit, leak test, calibration error, and uncertainty. </td>
-<td>It is not yet possible to say whether the response to condition changes or the causal structure matches. </td>
+<td><strong>1. Held-out decode</strong></td>
+<td>Check whether the model still predicts on unused data.</td>
+<td>Split unit, leakage audit, calibration error, uncertainty, and abstention if probabilities are output.</td>
+<td>It still does not show agreement under changed conditions or agreement in causal structure.</td>
 </tr>
 <tr>
-<td><strong>2. online human-in-the-loop</strong></td>
-<td>The subject performs continuous operations and conversations while viewing the output. </td>
-<td>End-to-end latency, jitter, dropout, and recalibration events. </td>
-<td>Even if it works online, it still cannot be said that it is compatible with external intervention. </td>
+<td><strong>2. Online human-in-the-loop control</strong></td>
+<td>A participant continuously operates while seeing or hearing the output.</td>
+<td>End-to-end latency distribution, jitter, dropout, abstention or silence policy, and recalibration events.</td>
+<td>Even if it works online, it still does not show compatibility with explicit perturbation, long-term durability, or same-state continuity.</td>
 </tr>
 <tr>
 <td><strong>3. Bidirectional feedback / local intervention</strong></td>
-<td>With haptic feedback or stimulation, create a loop where the output changes the next input. </td>
-<td>Stimulus timing, intensity, artifact window, and amount of behavioral change. </td>
-<td>Even if we can show local causal gain, we cannot show whole-brain generative equivalence. </td>
+<td>Feedback or stimulation changes the next biological input or behavior.</td>
+<td>Stimulus timing, intensity, artifact window, effect size, failure cases, and local safety conditions.</td>
+<td>Local causal gain still does not show whole-brain generative equivalence.</td>
 </tr>
 <tr>
-<td><strong>4. state-dependent intervention</strong></td>
-<td>Switches stimulation and control depending on the detected state. </td>
-<td>State estimation error, stimulus duty cycle, stop conditions, home operation log. </td>
-<td>Task-specific controller effectiveness, state completeness is another matter. </td>
+<td><strong>4. State-dependent intervention</strong></td>
+<td>Stimulation or control policy switches as a function of the detected state.</td>
+<td>State-estimation error, duty cycle, stop conditions, abstention or fallback policy, and real-life block structure when relevant.</td>
+<td>Task-specific controller effectiveness is still different from state completeness or branch-equivalence.</td>
 </tr>
 <tr>
-<td><strong>5. perturbation-structure test</strong></td>
-<td>Compare multiple condition branches and perturbation response structures. </td>
-<td>A set of branching conditions, comparison rules, failure conditions, and repeatable perturbations. </td>
-<td>Here too, identity and social implementation cannot be automatically determined. </td>
+<td><strong>5. Temporal durability / deployment</strong></td>
+<td>The controller is expected to survive days, weeks, or home deployment rather than a single research session.</td>
+<td>Fixed-decoder interval, supervised versus unsupervised recalibration route, performance-decay curve, recovery time, clinic versus home context, continuation or eligibility counts, and manual programming burden.</td>
+<td>Cross-day operation still does not by itself show same-state continuity or maintenance-consistent causal equivalence.</td>
+</tr>
+<tr>
+<td><strong>6. Perturbation-structure / branch test</strong></td>
+<td>Compare multiple branches or perturbation-response patterns under fixed comparison rules.</td>
+<td>Explicit branch variables, preregistered comparison rule, fixed failure criterion, repeatable perturbation set, temporal scope, and bridge status.</td>
+<td>Even here, whole-brain identity, complete maintenance-state coverage, and social deployment are not automatically determined.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="recent-stop-lines">
+<h2 class="section-title">Recent literature forces four extra stop lines</h2>
+<p>
+The site's newer cards are not editorial decoration. They are forced by concrete gaps that recent primary literature leaves visible. This page now treats them as part of causal-verification reading rather than as optional follow-up bureaucracy.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Stop line</th>
+<th>Why recent literature forces it</th>
+<th>What this site now requires</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Temporal Validity</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> shows that an impressive same-session voice loop can still lose fixed-decoder performance after about 15 days, while <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> shows that one month of unsupervised use must be read separately from pairwise recalibration.</td>
+<td>Attach the <a href="../verification.html#temporal-validity-card">Temporal Validity Card</a> whenever the claim reaches beyond same-session performance.</td>
+</tr>
+<tr>
+<td><strong>State-Continuity Bridge</strong></td>
+<td><a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> shows that preservation route and fixation schedule alter extracellular-space retention, <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> remains a sequential in vivo-to-EM local pipeline rather than simultaneous same-state capture, and <a href="https://doi.org/10.1038/nature14467" target="_blank">Attardo et al. (2015)</a> shows that adult CA1 spines themselves turn over on the scale of weeks.</td>
+<td>Attach the <a href="../verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> whenever a result is read as one same-state sample across days, regimes, or live-to-fix bridges.</td>
+</tr>
+<tr>
+<td><strong>Maintenance-State Error Budget</strong></td>
+<td><a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>, <a href="https://doi.org/10.1038/s41467-024-49572-8" target="_blank">Schreiner et al. (2024)</a>, and <a href="https://doi.org/10.1016/j.neuron.2025.03.020" target="_blank">Deng et al. (2025)</a> show that sleep history, replay coupling, and intracellular timing windows remain active controllers of persistence and recovery rather than background context.</td>
+<td>Attach the <a href="../verification.html#maintenance-state-error-budget">Maintenance-State Error Budget</a> whenever the claim concerns persistence, forgetting, reconsolidation, or recovery after perturbation.</td>
+</tr>
+<tr>
+<td><strong>Body / Environment Boundary</strong></td>
+<td><a href="https://doi.org/10.1126/science.abd0380" target="_blank">Flesher et al. (2021)</a> strengthens local bidirectional feedback, but the closed-loop literature more broadly still depends on retained or omitted tactile, proprioceptive, respiratory, arousal, and other organism-level routes.</td>
+<td>Attach the <a href="../verification.html#body-environment-boundary-card">Body / Environment Boundary Card</a> whenever a fast loop is being promoted toward naturalistic or embodied equivalence rather than local controller performance.</td>
 </tr>
 </tbody>
 </table>
@@ -133,55 +167,67 @@ The previous edition had a heavy emphasis on explaining intervention, counterfac
 <th>Papers</th>
 <th>What actually happened</th>
 <th>How to read on this site</th>
-<th>Things I can't say yet</th>
+<th>What still cannot be said</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Forenzo et al. (2024)</strong></td>
-<td>We evaluated the non-invasive EEG continuous tracking task online and compared the behavior of the deep learning decoder within the human loop. </td>
-<td>It is important to point out the online metric rather than the offline accuracy. Even though it is non-invasive, it can be read that there is a human-in-the-loop wall. </td>
-<td>This is a demonstration of continuous control, not counterfactual equivalence or whole-brain generation. </td>
+<td>A non-invasive EEG continuous-tracking task was run online with a deep-learning decoder inside the human loop.</td>
+<td>This is an online-control result. It is stronger than offline accuracy and should be read through online metrics.</td>
+<td>It is not counterfactual equivalence or whole-brain generative equivalence.</td>
+</tr>
+<tr>
+<td><strong>Littlejohn et al. (2025)</strong></td>
+<td>A speech neuroprosthesis streamed brain-to-voice updates in <strong>80-ms</strong> increments for naturalistic communication.</td>
+<td>This is a communication-subsystem online-control advance. It raises the bar for tail-latency and output-path logging.</td>
+<td>It still does not show same-state continuity, long-term fixed-decoder durability, or branch-equivalence.</td>
 </tr>
 <tr>
 <td><strong>Wairagkar et al. (2025)</strong></td>
-<td>We showed a voice loop that went from raw neural activity to speech synthesis within 10 ms, and returned silence in the non-speech section. </td>
-<td>It turns out that implementing low latency and abstention is an essential part of closed-loop evaluation. </td>
-<td>Fixed decoders show performance degradation after about 15 days, long-term stability is another issue. </td>
+<td>Raw neural activity was converted into synthesized voice in less than <strong>10 ms</strong>, with silence returned in non-speech segments.</td>
+<td>This is a strong same-session loop result and a strong abstention example.</td>
+<td>The same paper still leaves long-term durability open because fixed-decoder performance declines after about 15 days.</td>
+</tr>
+<tr>
+<td><strong>Wilson et al. (2025)</strong></td>
+<td>One month of unsupervised closed-loop cursor control was obtained, with offline characterization of neural nonstationarity across five years.</td>
+<td>This is the right reading model for <strong>Temporal Validity</strong> and recalibration burden.</td>
+<td>Cross-day usability still does not by itself show same-state continuity or maintenance-complete control.</td>
 </tr>
 <tr>
 <td><strong>Flesher et al. (2021)</strong></td>
-<td>Adding ICMS haptic feedback to the sensory cortex improved the trial time and grasp time of robotic arm control. </td>
-<td>This is a classic example of causal evidence that bidirectional feedback changes behavior. </td>
-<td>It is a local loop in the sensorimotor subsystem and is not a sufficient condition for whole-brain WBE. </td>
+<td>ICMS tactile feedback improved robotic-arm control behavior in a bidirectional BCI.</td>
+<td>This is a classic example that bidirectional feedback can causally improve a local sensorimotor loop.</td>
+<td>It remains a subsystem-limited causal gain rather than whole-brain WBE evidence.</td>
 </tr>
 <tr>
-<td><strong>Oehrn et al. (2024)</strong></td>
-<td>We compared chronic adaptive DBS and conventional DBS for Parkinson's disease in a blinded randomized block, and evaluated the results including the home environment. </td>
-<td>It turns out that if you insist on state-dependent intervention, you'll need real-life block comparisons. </td>
-<td>Controller demonstration of symptom control, not complete reconfiguration of internal state. </td>
+<td><strong>Oehrn et al. (2024), Cascino et al. (2026)</strong></td>
+<td>Adaptive DBS was pushed into blinded randomized home-life blocks, and later programming-principle work showed that eligibility and continuation remain practical constraints.</td>
+<td>This is the correct reading model for <strong>deployment burden</strong> rather than laboratory-only success.</td>
+<td>Symptom-control benefit still does not equal complete state reconfiguration or same-state equivalence.</td>
 </tr>
 <tr>
 <td><strong>Casali et al. (2013), Comolatti et al. (2019)</strong></td>
-<td>We demonstrated a method to quantify response complexity to TMS/intracranial stimulation. </td>
-<td>Although perturbation-based verification can be implemented, it can be read that comparisons cannot be made unless the stimulus conditions and artifact handling are fixed. </td>
-<td>A single indicator alone is not enough to determine pass/fail of WBE. </td>
+<td>Perturbation-complexity metrics were formalized for TMS or intracranial stimulation responses.</td>
+<td>Perturbation-based verification can be implemented, but only if stimulation conditions and artifact handling are fixed explicitly.</td>
+<td>A single complexity index is still not enough for WBE pass or fail.</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <div class="note-box">
-<strong>Increasing the speed of communication BCI is not directly causally equivalent</strong>
+<strong>Fast communication BCI is still not counterfactual equivalence</strong>
 <p>
-Willett et al. (2023) and Littlejohn et al. (2025) showed that speech neuroprosthesis can be fast and streaming. However, what was demonstrated here is<strong>online decoding / control</strong> of the communication subsystem, not branch-equivalence or whole-brain WBE.
+<a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> all move speech neuroprosthetics forward. However, what they establish is <strong>online decoding and closed-loop communication in a subsystem</strong>. On this site that is not upgraded to <strong>branch-equivalence</strong>, <strong>whole-brain causal equivalence</strong>, or <strong>same-state continuity</strong> without the extra card bundle above.
 </p>
 </div>
 
 <section class="section" id="counterfactual-label">
-<h2 class="section-title">What is called a "counterfactual" when it is satisfied</h2>
+<h2 class="section-title">What this site calls a counterfactual test</h2>
 <p>
-On this site, we do not call something a <strong>counterfactual</strong> simply by ``changing the conditions.'' If at least the following four conditions are not met, it is called an <strong>intervention response test</strong> or <strong>perturbation generalization test</strong>, which are weaker expressions.
+On this site, we do not call something a <strong>counterfactual</strong> merely because conditions were changed. If the bundle below is incomplete, the result stays at a weaker label such as <strong>intervention response test</strong>, <strong>state-dependent controller result</strong>, or <strong>perturbation generalization test</strong>.
 </p>
 <table class="data-table">
 <thead>
@@ -193,68 +239,121 @@ On this site, we do not call something a <strong>counterfactual</strong> simply 
 <tbody>
 <tr>
 <td><strong>Branch variables are explicit</strong></td>
-<td>If it is unclear what was changed, it is impossible to distinguish between comparing different conditions or just a noise difference. </td>
+<td>If it is unclear what was changed, it is impossible to distinguish branch comparison from noise or drift.</td>
 </tr>
 <tr>
 <td><strong>Comparison rules are pre-registered</strong></td>
-<td>If you choose only convenient branches later, it will look like a counterfactual. </td>
+<td>If convenient branches are chosen after seeing the result, the test only looks counterfactual in retrospect.</td>
 </tr>
 <tr>
 <td><strong>Artifact windows and safety conditions are published</strong></td>
-<td>It is necessary to determine whether the signal change after stimulation is a neural response or a device-induced change. </td>
+<td>Without this, stimulation-induced artifacts can be misread as neural response.</td>
 </tr>
 <tr>
-<td><strong>Fixed failure conditions</strong></td>
-<td>You must first decide how far the deviation should be before it is determined that the same branch cannot be reproduced. </td>
+<td><strong>Temporal scope is fixed explicitly</strong></td>
+<td>Readers need to know whether the test is same-trial, same-session, same-day, or cross-day, and whether the decoder was fixed or recalibrated.</td>
+</tr>
+<tr>
+<td><strong>Bridge status is disclosed when same-subject language is used</strong></td>
+<td>A same-subject claim still needs acquisition order, elapsed time, regime continuity, and omitted drift processes before it can be read as one same-state sample.</td>
+</tr>
+<tr>
+<td><strong>Failure conditions are fixed in advance</strong></td>
+<td>The result is only falsifiable when the threshold for branch mismatch is declared before the outcome is known.</td>
 </tr>
 </tbody>
 </table>
 </section>
 
-<section class="section" id="logs">
-<h2 class="section-title">The minimum log you want to keep</h2>
-<div class="key-points">
-<h4>Checklist</h4>
-<ul>
-<li><strong>Definition of intervention:</strong>Stimulation site, intensity, timing, duration, trial conditions. </li>
-<li><strong>Artifact processing:</strong>Exclusion window immediately after stimulus, interpolation, masking, trials not included. </li>
-<li><strong>online metrics:</strong>end-to-end latency distribution, dropout, recalibration events, abstention rate. </li>
-<li><strong>Effect size:</strong>Not only average improvement but also trial-level variation, failure cases, and recovery time. </li>
-<li><strong>Comparison rules:</strong>Which condition should be the main comparison and which result should be considered a fail. </li>
-</ul>
-</div>
+<section class="section" id="log-bundle">
+<h2 class="section-title">Minimum log bundle now required</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>Log family</th>
+<th>What to keep</th>
+<th>What overread it blocks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Intervention definition</strong></td>
+<td>Site, intensity, timing, duration, branch variable, task condition, and explicit control or sham policy.</td>
+<td>Blocks vague claims that "something was perturbed" without a reproducible branch definition.</td>
+</tr>
+<tr>
+<td><strong>Artifact and safety handling</strong></td>
+<td>Artifact window, interpolation or masking policy, excluded trials, stop conditions, and hard-stop versus soft-fallback behavior.</td>
+<td>Blocks device-induced changes from being misread as neural response.</td>
+</tr>
+<tr>
+<td><strong>Online timing and abstention</strong></td>
+<td>P50/P95/P99 latency, jitter, dropout, output-path delay, and abstention, silence, or hold-last-output policy.</td>
+<td>Blocks average latency alone from standing in for actual loop behavior.</td>
+</tr>
+<tr>
+<td><strong>Temporal validity</strong></td>
+<td>Fixed-decoder interval, supervised versus unsupervised recalibration route, performance-decay curve, recovery time, and clinic-versus-home block structure.</td>
+<td>Blocks same-session success from being silently promoted to cross-day durability.</td>
+</tr>
+<tr>
+<td><strong>Bridge status</strong></td>
+<td>Same-session or cross-day status, live-to-fix or live-to-live ordering, elapsed time, regime change, and coordinate-transfer burden.</td>
+<td>Blocks same-subject wording from being misread as one same-state sample.</td>
+</tr>
+<tr>
+<td><strong>Maintenance-state disclosure</strong></td>
+<td>If persistence, forgetting, reconsolidation, or recovery is claimed, name the relevant maintenance families or attach the Maintenance-State Error Budget.</td>
+<td>Blocks intervention response from being upgraded to long-horizon maintenance evidence.</td>
+</tr>
+<tr>
+<td><strong>Boundary disclosure</strong></td>
+<td>Retained, substituted, and omitted sensory, motor, interoceptive, and feedback routes.</td>
+<td>Blocks a fast local controller from being promoted to naturalistic or embodied equivalence.</td>
+</tr>
+</tbody>
+</table>
 </section>
 
 <section class="section" id="how-to-read">
-<h2 class="section-title">5 questions when reading causal verification papers</h2>
+<h2 class="section-title">Six questions when reading causal-verification papers</h2>
 <ol>
-<li><strong>Do you have online metrics instead of offline accuracy?</strong>For human-in-the-loop issues, offline alone is not enough. </li>
-<li><strong>Does it say what actually changed?</strong>Distinguish between stimulus, feedback, decoder updates, and task conditions. </li>
-<li><strong>Is artifact processing made clear?</strong>Especially in the stimulus system, if this is omitted, causal evidence will collapse. </li>
-<li><strong>Are there any hidden recalibrations and abandonments?</strong>Look for loops that aren't just about successful trials. </li>
-<li><strong>Aren't we making a leap from proving local subsystems to whole-brain equivalence?</strong>This is the most important point. </li>
+<li><strong>What was changed physically or computationally?</strong> Distinguish branch variable, decoder update, feedback path, and task manipulation.</li>
+<li><strong>Is the result same-session, cross-day, or home-life?</strong> Online success in one session is different from temporal durability.</li>
+<li><strong>Was the decoder fixed, supervised, or unsupervised?</strong> Hidden recalibration changes what the claimed causal evidence means.</li>
+<li><strong>If the paper says same-subject or same-brain, is it really one same-state sample?</strong> Check bridge order, elapsed time, and regime continuity.</li>
+<li><strong>If persistence or recovery is claimed, where is the maintenance-state disclosure?</strong> Intervention logs alone are not enough for long-horizon claims.</li>
+<li><strong>Are we jumping from subsystem-limited causal gain to whole-brain equivalence?</strong> This remains the main overread to block.</li>
 </ol>
 </section>
 
 <section class="section" id="sources">
 <h2 class="section-title">References</h2>
 <ol>
-<li>Forenzo D, Zhu H, Shanahan J, Lim J, He B. Continuous tracking using deep learning-based decoding for noninvasive brain-computer interface. PNAS Nexus. 2024. <a href="https://doi.org/10.1093/pnasnexus/pgae145" target="_blank">doi:10.1093/pnasnexus/pgae145</a></li>
-<li>Willett FR, Kunz EM, Fan C, et al. A high-performance speech neuroprosthesis. Nature. 2023. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
-<li>Littlejohn KT, Dabagia M, Ladwig A, et al. A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. Nat Neurosci. 2025. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
-<li>Wairagkar M, Moses DA, Metzger SL, et al. An instantaneous voice-synthesis neuroprosthesis. Nature. 2025. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
-<li>Flesher SN, Downey JE, Weiss JM, et al. A brain-computer interface that evokes tactile sensations improves robotic arm control. Science. 2021. <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
-<li>Oehrn CR, Roediger J, Diehl A, et al. Chronic adaptive deep brain stimulation versus conventional stimulation in Parkinson's disease: a blinded randomized feasibility trial. Nat Med. 2024. <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">doi:10.1038/s41591-024-03196-z</a></li>
-<li>Wilson GH, Bray N, Franken M, et al. Long-term unsupervised recalibration of intracortical brain-computer interfaces using a hidden Markov model. Nat Biomed Eng. 2025. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
-<li>Casali AG, Gosseries O, Rosanova M, et al. A theoretically based index of consciousness independent of sensory processing and behavior. Sci Transl Med. 2013. <a href="https://doi.org/10.1126/scitranslmed.3006294" target="_blank">doi:10.1126/scitranslmed.3006294</a></li>
-<li>Comolatti R, Pigorini A, Casarotto S, et al. A fast and general method to empirically estimate the complexity of brain responses to transcranial and intracranial stimulations. Brain Stimul. 2019. <a href="https://doi.org/10.1016/j.brs.2019.05.013" target="_blank">doi:10.1016/j.brs.2019.05.013</a></li>
+<li>Forenzo D, Zhu H, Shanahan J, Lim J, He B. Continuous tracking using deep learning-based decoding for noninvasive brain-computer interface. <em>PNAS Nexus</em>. 2024. <a href="https://doi.org/10.1093/pnasnexus/pgae145" target="_blank">doi:10.1093/pnasnexus/pgae145</a></li>
+<li>Willett FR, Kunz EM, Fan C, et al. A high-performance speech neuroprosthesis. <em>Nature</em>. 2023. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
+<li>Littlejohn KT, Dabagia M, Ladwig A, et al. A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <em>Nature Neuroscience</em>. 2025. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
+<li>Wairagkar M, Moses DA, Metzger SL, et al. An instantaneous voice-synthesis neuroprosthesis. <em>Nature</em>. 2025. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+<li>Flesher SN, Downey JE, Weiss JM, et al. A brain-computer interface that evokes tactile sensations improves robotic arm control. <em>Science</em>. 2021. <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
+<li>Wilson GH, Bray N, Franken M, et al. Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <em>Nature Biomedical Engineering</em>. 2025. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Oehrn CR, Roediger J, Diehl A, et al. Chronic adaptive deep brain stimulation versus conventional stimulation in Parkinson's disease: a blinded randomized feasibility trial. <em>Nature Medicine</em>. 2024. <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">doi:10.1038/s41591-024-03196-z</a></li>
+<li>Dixon S, Oehrn C, Remple M, et al. Movement-responsive deep brain stimulation for Parkinson's disease using a remotely optimized neural decoder. <em>Nature Biomedical Engineering</em>. 2026. <a href="https://doi.org/10.1038/s41551-025-01438-0" target="_blank">doi:10.1038/s41551-025-01438-0</a></li>
+<li>Cascino S, Roediger J, Oehrn C, et al. Chronic adaptive deep brain stimulation in Parkinson's disease: ADAPT-START findings and programming principles. <em>npj Parkinson's Disease</em>. 2026. <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">doi:10.1038/s41531-026-01269-z</a></li>
+<li>Lu Z, Chmielowiec J, Himes B, et al. Fixation-dependent changes in the preservation of extracellular space in the neuro-glio-vascular unit. <em>Cell Reports Methods</em>. 2023. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
+<li>MICrONS Consortium, et al. Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>. 2025. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
+<li>Attardo A, Fitzgerald JE, Schnitzer MJ. Impermanence of dendritic spines in live adult CA1 hippocampus. <em>Nature</em>. 2015. <a href="https://doi.org/10.1038/nature14467" target="_blank">doi:10.1038/nature14467</a></li>
+<li>Hengen KB, Torrado Pacheco A, McGregor JN, Van Hooser SD, Turrigiano GG. Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <em>Cell</em>. 2016. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
+<li>Schreiner T, Petzka M, Staudigl T, et al. Spindle-locked ripples mediate memory reactivation during human NREM sleep. <em>Nature Communications</em>. 2024. <a href="https://doi.org/10.1038/s41467-024-49572-8" target="_blank">doi:10.1038/s41467-024-49572-8</a></li>
+<li>Deng Z, Fei X, Zhang S, Xu M. A time window for memory consolidation during NREM sleep revealed by cAMP oscillation. <em>Neuron</em>. 2025. <a href="https://doi.org/10.1016/j.neuron.2025.03.020" target="_blank">doi:10.1016/j.neuron.2025.03.020</a></li>
+<li>Casali AG, Gosseries O, Rosanova M, et al. A theoretically based index of consciousness independent of sensory processing and behavior. <em>Science Translational Medicine</em>. 2013. <a href="https://doi.org/10.1126/scitranslmed.3006294" target="_blank">doi:10.1126/scitranslmed.3006294</a></li>
+<li>Comolatti R, Pigorini A, Casarotto S, et al. A fast and general method to empirically estimate the complexity of brain responses to transcranial and intracranial stimulations. <em>Brain Stimulation</em>. 2019. <a href="https://doi.org/10.1016/j.brs.2019.05.013" target="_blank">doi:10.1016/j.brs.2019.05.013</a></li>
 </ol>
 </section>
 
 <section class="section" id="return">
 <h2 class="section-title">Where to go back next</h2>
 <p>
-To return to the difference between translation and generation, please use <a href="../wbe_101.html">Introduction to WBE</a>, to return to verification design <a href="../verification.html">Verification infrastructure</a>, and to return to closed-loop practice please use <a href="closed-loop-latency-jitter-and-safety-stops.html">Wiki: Closed-loop, delay, jitter, and safety stops</a>.
+To return to the difference between translation and generation, use <a href="../wbe_101.html">Introduction to WBE</a>. To return to the site-wide rule bundle, use <a href="../verification.html">Verification platform</a>. To return to timing-side deployment detail, use <a href="closed-loop-latency-jitter-and-safety-stops.html">Wiki: Closed Loop, Delay, Jitter, Safe Stop</a>. To return to bridge validity itself, use <a href="state-continuity-bridge.html">Wiki: State-Continuity Bridge</a>.
 </p>
 </section>
 
@@ -266,16 +365,17 @@ To return to the difference between translation and generation, please use <a hr
 <ul>
 <li><a href="decode-vs-emulate.html">Decode and Emulate →</a></li>
 <li><a href="observation-to-estimation.html">From observation to estimation →</a></li>
-<li><a href="closed-loop-latency-jitter-and-safety-stops.html">Closed-loop/delay/jitter/safety stops →</a></li>
-<li><a href="verification-basics.html">Basics of verification infrastructure →</a></li>
+<li><a href="state-trait-and-drift.html">State, Trait, and Drift →</a></li>
+<li><a href="state-continuity-bridge.html">State-Continuity Bridge →</a></li>
+<li><a href="closed-loop-latency-jitter-and-safety-stops.html">Closed-loop / delay / jitter / safe stop →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
 <h4>Public page</h4>
 <ul>
+<li><a href="../verification.html">Verification platform →</a></li>
+<li><a href="../tech_roadmap.html">Technology roadmap →</a></li>
 <li><a href="../wbe_101.html">Introduction to WBE →</a></li>
-<li><a href="../verification.html">Verification infrastructure →</a></li>
-<li><a href="../faq.html">FAQ →</a></li>
 </ul>
 </div>
 </aside>
