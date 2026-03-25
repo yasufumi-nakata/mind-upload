@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-20 / 位置づけ: Technical / natural science only
+- 更新日: 2026-03-26 / 位置づけ: Technical / natural science only
 
 ## このページの役割
 This page is a wiki that organizes where to stop making claims and what to add to make them even stronger when estimating brain states and causal structures from observational signals such as EEG. Connect forward problems, inverse problems, ESI, DCM, SCM, and causal equivalence classes in the order of ``observation → estimation → intervention → validation.''
@@ -21,26 +21,32 @@ This is not a fixed recipe for which method to use. This page first fixes audit 
 - [Wiki: From measurement to modeling](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-and-modeling-terms) - You can return to the overall map of measurement, organization, estimation, and verification.
 - [Wiki: EEG pretreatment and QC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - In the first stage of estimation, we compensate for what changes the results.
 - [Wiki: Uncertainty, proofreading, abstaining](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention) - Instead of point estimation, we supplement the width and how to leave conditions for abstention.
+- [Wiki: Observability and claim ceiling by measurement stack](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling) - Use this when you first need to separate direct observables from latent state families before asking identifiability questions.
+- [Wiki: Multimodal integration basics](https://github.com/yasufumi-nakata/mind-upload/wiki/multimodal-integration-basics) - Use this when richer stacks could otherwise be misread as self-validating fusion.
+- [Wiki: State-Continuity Bridge](https://github.com/yasufumi-nakata/mind-upload/wiki/state-continuity-bridge) - Use this when same-subject or same-brain linkage is sequential across live, fixed, or cross-day stages.
 - [Wiki: Counterfactuals/Interventions/Perturbations](https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification) - It supplements the conditions for proceeding from observational adaptation to intervention validation.
 
 ## いま分かっていること
 - In principle, it is difficult to uniquely determine brain activity from scalp EEG, and estimation requires assumptions.
 - High-density EEG, individualized MRI, FEM/BEM, and empirical Bayesian estimation can improve conditions, but alone do not guarantee unique recovery.
 - More direct observables do not by themselves guarantee unique recovery; degeneracy can persist unless candidate space, recorded subset, and experiment design are exposed.
+- Simultaneous multimodal acquisition can still retain shared and modality-specific structure, so a richer stack does not by itself define one validated latent target.
 - For ESI, method/package/parameter choice can materially move the estimated source, so stability across standard pipelines is part of the claim.
+- Same-brain or same-subject linkage can still be a sequential bridge rather than same-state evidence.
 - The causal structure cannot be determined by observational fit alone; a set of candidate models and an intervention design are required.
 - Whole-brain or faster DCM improves tractability, but does not erase candidate-model dependence or observation-model assumptions.
 
 ## まだ分かっていないこと
 - It remains unclear which measurement/modeling combination is most effective for validating WBE.
 - Research is currently underway to determine how detailed the causal structure and state variables can be stably restored using non-invasive measurements alone.
+- How much same-session multimodal fusion, sequential same-brain linkage, and connectome-constrained prediction can jointly narrow the candidate set without recreating hidden-state ambiguity remains unresolved.
 - Which external validation ladders will be pinned to the site-wide benchmark is still being worked out.
 
 ---
 
 <h2>Conclusion</h2>
 <p>
-Even if a model that matches the observed signal is found, it cannot be said that the internal state has been uniquely determined or that the causal structure has been identified. Therefore, on this site, we audit four points, <strong>geometry, uncertainty, candidate model set, and external validation</strong>, before looking at the solver name or theory name.
+Even if a model that matches the observed signal is found, it cannot be said that the internal state has been uniquely determined or that the causal structure has been identified. Therefore, on this site, we now audit six points, <strong>geometry</strong>, <strong>observability budget</strong>, <strong>uncertainty</strong>, <strong>candidate model set</strong>, <strong>bridge / composition validity</strong>, and <strong>external validation</strong>, before looking at the solver name or theory name.
 </p>
 
 <strong>Scope of this page</strong>
@@ -48,7 +54,7 @@ Even if a model that matches the observed signal is found, it cannot be said tha
 I am not going to deal with philosophy or legal systems here. We will organize the boundaries between observation, estimation, and causal claims based on primary literature from only the aspects of technology and natural science.
 </p>
 
-<h2>Four audit gates to be fixed first</h2>
+<h2>Six audit gates to be fixed first</h2>
 <table>
 <thead>
 <tr>
@@ -64,17 +70,27 @@ I am not going to deal with philosophy or legal systems here. We will organize t
 <td>I cannot make strong anatomical source claims. </td>
 </tr>
 <tr>
-<td><strong>Gate 2: Visualizing uncertainty</strong></td>
+<td><strong>Gate 2: Observability budget</strong></td>
+<td>Named measurement stack, direct observable, what remained latent, and the strongest stack-specific ceiling. </td>
+<td>``More channels / modalities / same-brain registration'' cannot be rephrased as ``the target internal state was now directly seen.'' </td>
+</tr>
+<tr>
+<td><strong>Gate 3: Visualizing uncertainty</strong></td>
 <td>Posterior distribution, confidence interval, bootstrap/ensemble width, or solver/preprocessing sensitivity analysis. </td>
 <td>It is not possible to write it as the only solution using only point estimation. </td>
 </tr>
 <tr>
-<td><strong>Gate 3: Specifying candidate model set</strong></td>
+<td><strong>Gate 4: Specifying candidate model set</strong></td>
 <td>Compared model spaces, family comparisons, remaining equivalence classes, abstention conditions. </td>
 <td>Even if we use DCM or SCM, we cannot say that we have uniquely discovered cause and effect. </td>
 </tr>
 <tr>
-<td><strong>Gate 4: External validation/intervention</strong></td>
+<td><strong>Gate 5: Bridge / composition validity</strong></td>
+<td>Same-session relation, acquisition order, elapsed time, regime continuity, fusion model, shared-vs-specific disclosure, strongest-single-row gain, and bridge-validation rung. </td>
+<td>``same-subject cross-stack'' or ``same-brain sequential'' cannot be rephrased as fused ground truth or same-state evidence. </td>
+</tr>
+<tr>
+<td><strong>Gate 6: External validation/intervention</strong></td>
 <td>Named validation classes such as simulation, phantom, simultaneous invasive recording, intracranial stimulation, postsurgical outcome, and held-out prediction of stimulus/lesion/task perturbations. </td>
 <td> Observed fit cannot be promoted to causal validity or generalization performance. </td>
 </tr>
@@ -115,6 +131,44 @@ One remaining weakness in inverse-problem discussions is to let <strong>"more me
 <strong>2026-03-20 deepening: similar outputs do not prove similar internal states</strong>
 <p>
 This separation is not only a control-theory point. <a href="https://doi.org/10.1038/nn1352" target="_blank">Prinz et al. (2004)</a> showed that similar circuit activity can arise from disparate parameters, <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">Rasero et al. (2024)</a> showed that similar human activation patterns can still hide different macroscopic network states, and <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that even connectome-constrained recurrent networks remain degenerate until additional recordings are supplied. <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">Liu et al. (2025)</a> then showed that practical identifiability depends on data-collection policy, not only on the fitting method. On this site, that means <strong>observability</strong> and <strong>identifiability</strong> are audited separately.
+</p>
+
+<h2>Richer conditioning is not candidate-set closure</h2>
+<p>
+One remaining weakness was to let a richer setup sound too close to a closed candidate set. The recent primary literature does not support that shortcut. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> showed that simultaneous multimodal recordings retain both common and divergent structure. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed in simultaneous EEG-PET-MRI that tightly coupled temporal progression can coexist with distinct network patterns across wakefulness and NREM sleep. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> showed that preservation route changes extracellular-space retention, and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> explicitly describe a sequential in vivo-to-postmortem workflow rather than one simultaneous state sample. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> then showed that within-day EEG dynamics drift enough to motivate adaptive decoders. Therefore, on this site, richer conditioning is split into three separate audits instead of being read as one generic march toward uniqueness.
+</p>
+<table>
+<thead>
+<tr>
+<th>What got richer</th>
+<th>What the primary literature really strengthened</th>
+<th>What it still does not support</th>
+<th>Card or rule required on this site</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Same-session multimodal acquisition</strong></td>
+<td>Shared clock, cross-modal comparison, and a bounded decomposition of common versus modality-specific structure.</td>
+<td>One validated latent state, self-validating fusion, or state-complete measurement.</td>
+<td><strong>Fusion Card</strong> plus the stack-specific <strong>Observability Budget</strong>.</td>
+</tr>
+<tr>
+<td><strong>Same-brain or same-subject sequential linkage</strong></td>
+<td>Specimen linkage, local correlative workflow, or repeated-acquisition design with named bridge burden.</td>
+<td>Same-state evidence across live-to-fix transformation, cross-day drift, or separated physiological regimes.</td>
+<td><strong>State-Continuity Bridge Card</strong>, and <strong>Temporal Validity Card</strong> when live drift across hours or days matters.</td>
+</tr>
+<tr>
+<td><strong>Connectome-constrained prediction</strong></td>
+<td>A narrower conditional model family under a declared structural prior and recorded subset.</td>
+<td>Unique dynamics, solved omitted-mechanism risk, or in-principle internal-state recovery.</td>
+<td><strong>Connectome-Constrained Model Card</strong> together with the <strong>Identifiability Card</strong>.</td>
+</tr>
+</tbody>
+</table>
+<p>
+If these cards are missing, the ceiling stays at the strongest directly supported route: the strongest unimodal or prior-conditioned stack, the strongest directly supported bridge stage, or a conditional-model predictor rather than unique recovery.
 </p>
 
 <h2>Do not mix observation, estimation, and causal verification</h2>
@@ -374,6 +428,7 @@ DCM is useful for comparing neural circuit candidate generation models, and SCM 
 <h4>Rule</h4>
 <ul>
 <li><strong>Don't write solver names as standard:</strong>Bayesian solver, minimum norm, DCM, and SCM are candidates, and acceptance or rejection is determined by audit items. </li>
+<li><strong>Don't let richer conditioning stand in for closure:</strong>More modalities, same-brain linkage, and connectome constraints still need fusion, bridge, or identifiability disclosure. </li>
 <li><strong>Don't raise causal claims based on observed fit alone:</strong>In the absence of intervention or external validation, stay at the equivalence class or candidate model level. </li>
 <li><strong>Write with reservations for deep and fine-grained information:</strong>Do not confuse detectable with robust reconstruction. </li>
 <li><strong>Abstain when there is wide uncertainty:</strong>If the solutions overlap, do not force them to collapse into one, but make your reservations clear. </li>
@@ -405,4 +460,9 @@ DCM is useful for comparing neural circuit candidate generation models, and SCM 
 <li>Rasero, J., Betzel, R., Sentis, A. I., Kraynak, T. E., Gianaros, P. J., &amp; Verstynen, T. (2024). Similarity in evoked responses does not imply similarity in macroscopic network states. <em>Network Neuroscience</em>, 8(1), 335-354. <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">doi:10.1162/netn_a_00354</a></li>
 <li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <em>Nature Neuroscience</em>, 28, 2561-2574. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
 <li>Liu, X., Wanika, L., Chappell, M. J., &amp; Branke, J. (2025). Efficient data collection for establishing practical identifiability via active learning. <em>Computational and Structural Biotechnology Journal</em>, 27, 4992-5006. <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">doi:10.1016/j.csbj.2025.10.058</a></li>
+<li>Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <em>Nature Communications</em>, 15, 229. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
+<li>Chen, J. E., Lewis, L. D., Coursey, S. E., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <em>Nature Communications</em>, 16, 8887. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
+<li>Lu, X., Han, X., Meirovitch, Y., et al. (2023). Preserving extracellular space for high-quality optical and ultrastructural studies of whole mammalian brains. <em>Cell Reports Methods</em>, 3(7), 100520. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
+<li>MICrONS Consortium, Bae, J. A., et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>, 640, 435-447. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
+<li>Egger, J., Kostoglou, K., &amp; Müller-Putz, G. R. (2024). Chrono-EEG dynamics influencing hand gesture decoding: a 10-hour study. <em>Scientific Reports</em>, 14, 20247. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">doi:10.1038/s41598-024-70609-x</a></li>
 </ol>

@@ -6,7 +6,7 @@ description: We will explain EEG, QC, BIDS, inverse problems, ESI, DCM, SCM, etc
 article_type: Wiki
 subtitle: Don't memorize words by dots, connect them by flow.
 author: Mind Uploading Research Project
-last_updated: '2026-03-19'
+last_updated: '2026-03-26'
 note: Learning guide
 audience: People who see a mix of measurement words and model words, and people who
   want to understand a glossary in a flow.
@@ -24,6 +24,8 @@ page_highlights:
 - We will use audit items to isolate the reason why observation alone does not equate
   to reconstruction.
 - ESI, DCM, and SCM do not fail in the same way; each one needs a different stop rule.
+- More modalities, same-brain linkage, and connectome constraints do not bypass route
+  cards; fusion, bridge, and identifiability remain separate audits.
 - Reorder definitions in the glossary by working order and strength of evidence.
 known_points:
 - Measurement, preprocessing, estimation, and verification have different roles and
@@ -32,6 +34,8 @@ known_points:
   and candidate model dependence.
 - BIDS and QC are not an added bonus; they are the backbone of comparability.
 - Solver names do not determine claim strength; validation ladders and route cards do.
+- Same-session multimodal and same-brain language do not by themselves solve fusion
+  validity or state continuity.
 unknown_points:
 - The extent to which non-invasive measurements alone can restore sufficient internal
   state for WBE remains an open question.
@@ -71,6 +75,13 @@ The words on this site can be roughly divided into four levels. These are to <st
 <strong>2026-03 correction to the beginner route</strong>
 <p>
 The older beginner route on this site grouped ESI, DCM, and SCM together too loosely as "modeling words." That was too weak. On this site, <strong>ESI is read through a validation ladder</strong>, <strong>DCM through candidate-model disclosure and model recovery</strong>, and <strong>SCM through intervention conditions and equivalence-class narrowing</strong>.
+</p>
+</div>
+
+<div class="note-box">
+<strong>2026-03-26 correction to the beginner route</strong>
+<p>
+A second beginner overread also remained: more sensors, same-brain linkage, or a connectome prior can sound as if the candidate set were almost closed. On this site, that is still too strong. Same-session multimodal work needs a <a href="multimodal-integration-basics.html">Fusion Card</a>, sequential same-brain or cross-day claims need a <a href="state-continuity-bridge.html">State-Continuity Bridge Card</a>, and connectome-constrained predictors still need an <a href="observation-to-estimation.html#identifiability-card">Identifiability Card</a>. The detailed rule lives in <a href="observation-to-estimation.html">Wiki: From observation to estimation</a>.
 </p>
 </div>
 

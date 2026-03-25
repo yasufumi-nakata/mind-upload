@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-19 / 位置づけ: Learning guide
+- 更新日: 2026-03-26 / 位置づけ: Learning guide
 
 ## このページの役割
 This page is a wiki for understanding measurement terms such as EEG, model terms such as ESI and DCM, and operational terms such as BIDS and QC by connecting them in the flow of ``observation → organization → estimation → verification.'' Rather than memorizing individual words, the aim is to first distinguish which words to use and where to stop making an argument.
@@ -27,6 +27,7 @@ The flow shown here is organized for understanding. Although there are back-and-
 - The observed signal is not the brain state as it is, and estimation involves uncertainty and candidate model dependence.
 - BIDS and QC are not an added bonus; they are the backbone of comparability.
 - Solver names do not determine claim strength; validation ladders and route cards do.
+- Same-session multimodal and same-brain language do not by themselves solve fusion validity or state continuity.
 
 ## まだ分かっていないこと
 - The extent to which non-invasive measurements alone can restore sufficient internal state for WBE remains an open question.
@@ -43,6 +44,11 @@ The words on this site can be roughly divided into four levels. These are to <st
 <strong>2026-03 correction to the beginner route</strong>
 <p>
 The older beginner route on this site grouped ESI, DCM, and SCM together too loosely as "modeling words." That was too weak. On this site, <strong>ESI is read through a validation ladder</strong>, <strong>DCM through candidate-model disclosure and model recovery</strong>, and <strong>SCM through intervention conditions and equivalence-class narrowing</strong>.
+</p>
+
+<strong>2026-03-26 correction to the beginner route</strong>
+<p>
+A second beginner overread also remained: more sensors, same-brain linkage, or a connectome prior can sound as if the candidate set were almost closed. On this site, that is still too strong. Same-session multimodal work needs a <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/multimodal-integration-basics">Fusion Card</a>, sequential same-brain or cross-day claims need a <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/state-continuity-bridge">State-Continuity Bridge Card</a>, and connectome-constrained predictors still need an <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation#identifiability-card">Identifiability Card</a>. The detailed rule lives in <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation">Wiki: From observation to estimation</a>.
 </p>
 
 <h2>View in 4 levels</h2>

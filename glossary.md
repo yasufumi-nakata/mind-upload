@@ -5,7 +5,7 @@ description: "A practical glossary of the terms used most often in Mind-Upload, 
 article_type: Reference
 subtitle: "Start by keeping the words straight"
 author: Mind Uploading Research Project
-last_updated: "2026-03-22"
+last_updated: "2026-03-26"
 note: "Living document"
 audience: "Readers who do not want to get stuck on terminology and anyone trying to avoid category mistakes"
 reading_time: "3 to 10 minutes for only the necessary items"
@@ -14,14 +14,14 @@ accuracy_note: "The definitions here are deliberately short. For exact usage, re
 page_highlights:
   - "It gives short explanations of terms and points to where each concept matters."
   - "It now includes the front-door verification terms added in the March 2026 re-audit, such as claim ceiling, shortcut auditing, maintenance-state, and vascular-state / CVR audit."
-  - "It now also includes the human-observability and support-state terms needed after the March 2026 deepening pass, such as proxy class, route maturity / model burden, support-state proxy, and clearance / immune support."
+  - "It now also includes the human-observability and support-state terms needed after the March 2026 deepening pass, such as proxy class, route maturity / model burden, calibrator role, support-state proxy, and clearance / immune support."
   - "It now also defines the newer route-card semantics added in the late-March 2026 passes, such as field-formation wall, Fusion Card, Human Proxy Composition Card, shared-driver audit, strongest single row, and State-Continuity Bridge Card."
   - "It is especially careful about pairs that sound similar but should not be collapsed, such as observability / identifiability / direct validation and functional connectivity / effective connectivity / causal wiring."
   - "If a term blocks your reading, this page is meant to get you unstuck quickly and send you back to the main text."
 known_points:
   - "Many misunderstandings can be avoided simply by reducing terminology confusion."
   - "It is especially important to distinguish between decode/emulate, correlation/causation, functional connectivity/effective connectivity/causal wiring, observability/identifiability, model fit/direct validation, and brain signal/language prior."
-  - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, astrocyte-state, clearance / immune support, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, and route-maturity language."
+  - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, astrocyte-state, clearance / immune support, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, route-maturity, and calibrator-role language."
   - "The newer route-card names are not decorative labels; they each name a distinct failure mode such as upstream visibility loss, cross-stack shared-driver risk, or broken state continuity across a sequential bridge."
   - "This page serves as an entry point for short definitions and a way to return to the main text."
 unknown_points:
@@ -207,7 +207,7 @@ If words such as <strong>claim ceiling</strong>, <strong>hidden state</strong>, 
 <div class="note-box">
 <strong>When human-evidence terms start sounding like one thing</strong>
 <p>
-Words such as <strong>proxy class</strong>, <strong>route maturity / model burden</strong>, and <strong>support-state proxy</strong> are there to stop local ultrastructure, SV2A PET, MRSI biochemical scaffold, dynamic DMRSI, myelin mapping, CSF mobility, and glymphatic evidence from collapsing into one impression of “we can now see almost everything in humans.” If that distinction is what you need next, go to <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> and <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>.
+Words such as <strong>proxy class</strong>, <strong>route maturity / model burden</strong>, <strong>calibrator role</strong>, and <strong>support-state proxy</strong> are there to stop local ultrastructure, SV2A PET, MRSI biochemical scaffold, dynamic DMRSI, myelin mapping, CSF mobility, and glymphatic evidence from collapsing into one impression of “we can now see almost everything in humans.” If that distinction is what you need next, go to <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> and <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>.
 </p>
 </div>
 
@@ -351,8 +351,12 @@ If names such as <strong>field-formation wall</strong>, <strong>Fusion Card</str
 <td>A separate label for how specialized, small-cohort, hardware-limited, or model-dependent a route still is. It prevents a useful proxy from being misread as field-ready or routine just because the paper is technically strong.</td>
 </tr>
 <tr>
+<td><strong>Calibrator role</strong></td>
+<td>The bounded hidden-state family a route can safely calibrate on this site. A route can be real and technically strong while still calibrating only one hidden-state family rather than a whole human internal state.</td>
+</tr>
+<tr>
 <td><strong>Human observability ladder</strong></td>
-<td>A front-door rule that compares human measurement routes along two axes at once: <strong>proxy class</strong> and <strong>route maturity</strong>. It stops “human evidence exists” from being compressed into “state-complete human measurement is close.”</td>
+<td>A front-door rule that compares human measurement routes on three axes at once: <strong>proxy class</strong>, <strong>route maturity / model burden</strong>, and <strong>calibrator role</strong>. It stops “human evidence exists” from being compressed into “state-complete human measurement is close.”</td>
 </tr>
 <tr>
 <td><strong>Human Proxy Composition Card</strong></td>
