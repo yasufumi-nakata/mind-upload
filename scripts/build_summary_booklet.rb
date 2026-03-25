@@ -22,6 +22,71 @@ SOURCE_PATHS = %w[
   glossary.md
 ].freeze
 
+SCIENCE_STOPLINE_PATTERNS = [
+  [/connectome|wiring|cell type/i, 8],
+  [/hidden-state|maintenance-state|latent-state/i, 8],
+  [/proxy-rich|proxy class|proxy bundle|same-subject|same-brain|state closure|state-identification|calibrator|composition/i, 7],
+  [/bridge|drift|cross-day|temporal|same-state/i, 7],
+  [/measurement model|model burden|quantification|tracer|partial-volume|spectral QC|scan window|kinetic/i, 6],
+  [/shortcut|fingerprint|acquisition-distribution|specificity/i, 6],
+  [/SV2A|synaptic-density PET|MRSI|metabolic connectome|dynamic DMI|myelin|ionic|bioenergetic|astrocyte|clearance|sleep replay/i, 5]
+].freeze
+
+OBSERVABILITY_PATTERNS = [
+  [/connectome|wiring|cell type/i, 8],
+  [/hidden-state|maintenance-state|latent-state/i, 8],
+  [/human evidence is layered|proxy-rich|proxy class|current human|whole-brain/i, 7],
+  [/SV2A|synaptic-density PET|MRSI|metabolic connectome|myelin|ionic|bioenergetic|astrocyte|clearance/i, 6]
+].freeze
+
+AUDIT_PATTERNS = [
+  [/same-subject|same-brain|composition|calibrator|proxy bundle|state closure/i, 8],
+  [/bridge|drift|cross-day|temporal|same-state/i, 8],
+  [/measurement model|model burden|quantification|tracer|partial-volume|spectral QC|scan window|kinetic/i, 7],
+  [/shortcut|fingerprint|acquisition-distribution|specificity|pretraining|fusion card|temporal validity/i, 7]
+].freeze
+
+TECHNICAL_UNRESOLVED_PATTERNS = [
+  [/still|remain|missing|latent|unresolved|not yet|cannot|do not|insufficient|ceiling/i, 4],
+  [/noninvasive|whole-brain|same-subject|bridge|drift|proxy|human route/i, 4],
+  [/transcription|RNA|phospho|proteostasis|cargo|chloride|mitochondrial|ECM|myelin|astrocyte|clearance|synaptic efficacy/i, 5]
+].freeze
+
+NONTECHNICAL_PATTERNS = [
+  /identity|personhood|institutional|social deployment|philosoph|consciousness/i
+].freeze
+
+SUMMARY_REJECT_PATTERNS = (
+  NONTECHNICAL_PATTERNS + [
+    /route card/i,
+    /Observability Budget now requires/i,
+    /maintenance-state budget now requires/i
+  ]
+).freeze
+
+SUMMARY_PRIORITY_QUERIES = [
+  /Connectome-complete does not mean emulation-complete/i,
+  /human evidence is layered/i,
+  /same-subject or same-brain.*one state sample/i,
+  /Several living-human proxy rows are not promoted together/i,
+  /Temporal Validity Card/i,
+  /same decode score is not a target-specific biomarker/i
+].freeze
+
+OBSERVABILITY_PRIORITY_QUERIES = [
+  /Maintenance-state variables.*remain outside the wiring diagram/i,
+  /Connectome-complete does not mean emulation-complete/i,
+  /human evidence is layered/i,
+  /human whole-brain evidence remains layered and proxy-based/i
+].freeze
+
+AUDIT_PRIORITY_QUERIES = [
+  /same-subject or same-brain.*one state sample/i,
+  /Several living-human proxy rows are not promoted together/i,
+  /Temporal Validity Card/i,
+  /Specificity & Shortcut Card|same decode score is not a target-specific biomarker/i
+].freeze
+
 PageData = Struct.new(
   :path,
   :slug,
@@ -239,6 +304,32 @@ class SummaryBookletTemplate
 
       <section class="booklet-sheet booklet-page-break">
         <div class="booklet-section-header">
+          <p class="booklet-kicker">Technical Stop Lines</p>
+          <h2>入口で落としてはいけない技術的停止線</h2>
+        </div>
+
+        <div class="booklet-card-grid booklet-card-grid-2">
+          <article class="booklet-card booklet-card-positive">
+            <h3>観測の上限</h3>
+            <ul class="booklet-list">
+              <%= list_items(observability_stop_lines) %>
+            </ul>
+          </article>
+          <article class="booklet-card booklet-card-caution">
+            <h3>比較と解釈の上限</h3>
+            <ul class="booklet-list">
+              <%= list_items(audit_stop_lines) %>
+            </ul>
+          </article>
+        </div>
+
+        <div class="booklet-quote">
+          <p><%= h(shorten(summary_stop_lines.join(" / "), 260)) %></p>
+        </div>
+      </section>
+
+      <section class="booklet-sheet booklet-page-break">
+        <div class="booklet-section-header">
           <p class="booklet-kicker">Core Pages</p>
           <h2>主ページの役割分担</h2>
         </div>
@@ -400,7 +491,7 @@ class SummaryBookletTemplate
   def cover_band_html
     items = [
       ["更新基準日", latest_date],
-      ["現在の重点", verification_page.page_highlights.first],
+      ["現在の重点", summary_stop_lines.first || verification_page.page_highlights.first],
       ["最初の入口", "#{intro_page.title} / #{verification_page.title}"]
     ]
     items.map do |label, value|
@@ -416,7 +507,7 @@ class SummaryBookletTemplate
   def cover_cards_html
     cards = [
       ["このサイトが最初に作るもの", verification_page.abstract_html || h(verification_page.page_intro)],
-      ["すぐ断言しないもの", h(shorten((intro_page.unknown_points + perspective_page.unknown_points).uniq.first(3).join(" / "), 140))],
+      ["入口で止める過読", h(shorten(summary_stop_lines.first(3).join(" / "), 180))],
       ["いま読むべき主ページ", h(core_pages.map(&:title).join(" / "))]
     ]
     render_cards(cards)
@@ -437,7 +528,7 @@ class SummaryBookletTemplate
   def status_cards_html
     cards = [
       ["ひとことで言うと", intro_page.page_highlights.first, "booklet-status-card booklet-status-card-strong"],
-      ["読了後に持ち帰るもの", "全体像、現実的な作業範囲、読む順番、協力の入口", "booklet-status-card"]
+      ["読了後に持ち帰るもの", "全体像、実行可能範囲、hidden-state / proxy / drift の停止線", "booklet-status-card"]
     ]
     cards.map do |title, body, klass|
       <<~HTML
@@ -454,7 +545,7 @@ class SummaryBookletTemplate
   end
 
   def project_limits
-    (intro_page.unknown_points + perspective_page.unknown_points + eeg_page.unknown_points).uniq.first(4)
+    technical_unknown_points.first(4)
   end
 
   def overview_rows_html
@@ -476,11 +567,11 @@ class SummaryBookletTemplate
   end
 
   def known_points
-    (intro_page.known_points + verification_page.known_points + datasets_page.known_points).uniq.first(5)
+    summary_stop_lines.first(5)
   end
 
   def unknown_points
-    (intro_page.unknown_points + verification_page.unknown_points + perspective_page.unknown_points + eeg_page.unknown_points).uniq.first(5)
+    technical_unknown_points.first(5)
   end
 
   def timeline_cards_html
@@ -516,7 +607,7 @@ class SummaryBookletTemplate
 
   def brief_cards_html(pages)
     pages.map do |page_data|
-      bullets = (page_data.page_highlights + page_data.known_points).uniq.first(3)
+      bullets = prioritized_page_bullets(page_data)
       <<~HTML
         <article class="booklet-card booklet-page-card">
           <h3><a href="#{page_data.url}">#{h(page_data.title)}</a></h3>
@@ -587,6 +678,126 @@ class SummaryBookletTemplate
     @pages.map do |page_data|
       %(<li><a href="#{page_data.url}">#{h(page_data.title)}</a></li>)
     end.join
+  end
+
+  def summary_stop_lines
+    @summary_stop_lines ||= preferred_points(
+      technical_point_pool,
+      queries: SUMMARY_PRIORITY_QUERIES,
+      fallback_patterns: SCIENCE_STOPLINE_PATTERNS,
+      reject_patterns: SUMMARY_REJECT_PATTERNS,
+      limit: 6
+    )
+  end
+
+  def observability_stop_lines
+    @observability_stop_lines ||= preferred_points(
+      technical_point_pool,
+      queries: OBSERVABILITY_PRIORITY_QUERIES,
+      fallback_patterns: OBSERVABILITY_PATTERNS,
+      reject_patterns: SUMMARY_REJECT_PATTERNS,
+      limit: 4
+    )
+  end
+
+  def audit_stop_lines
+    @audit_stop_lines ||= preferred_points(
+      technical_point_pool,
+      queries: AUDIT_PRIORITY_QUERIES,
+      fallback_patterns: AUDIT_PATTERNS,
+      reject_patterns: SUMMARY_REJECT_PATTERNS,
+      limit: 4
+    )
+  end
+
+  def technical_unknown_points
+    @technical_unknown_points ||= begin
+      points = select_points(
+        technical_unknown_pool,
+        patterns: TECHNICAL_UNRESOLVED_PATTERNS,
+        reject_patterns: SUMMARY_REJECT_PATTERNS,
+        limit: 5
+      )
+      points.empty? ? summary_stop_lines.first(5) : points
+    end
+  end
+
+  def prioritized_page_bullets(page_data)
+    points = select_points(
+      page_data.page_highlights + page_data.known_points,
+      patterns: SCIENCE_STOPLINE_PATTERNS,
+      reject_patterns: SUMMARY_REJECT_PATTERNS,
+      limit: 3
+    )
+    points.empty? ? (page_data.page_highlights + page_data.known_points).uniq.first(3) : points
+  end
+
+  def technical_point_pool
+    @technical_point_pool ||= [
+      intro_page,
+      verification_page,
+      roadmap_page,
+      perspective_page,
+      datasets_page,
+      wbe_page,
+      eeg_page,
+      faq_page
+    ].flat_map { |page_data| page_data.page_highlights + page_data.known_points }.uniq
+  end
+
+  def technical_unknown_pool
+    @technical_unknown_pool ||= [
+      intro_page,
+      verification_page,
+      perspective_page,
+      datasets_page,
+      wbe_page,
+      eeg_page,
+      faq_page
+    ].flat_map { |page_data| page_data.unknown_points + page_data.known_points + page_data.page_highlights }.uniq
+  end
+
+  def select_points(points, patterns:, reject_patterns:, limit:)
+    ranked = Array(points).each_with_index.map do |point, index|
+      text = normalize_text(point)
+      next if text.empty?
+      next if reject_patterns.any? { |pattern| pattern.match?(text) }
+
+      score = patterns.sum { |pattern, weight| pattern.match?(text) ? weight : 0 }
+      next if score.zero?
+
+      [text, score, index]
+    end.compact
+
+    ranked
+      .sort_by { |text, score, index| [-score, index, text.length] }
+      .each_with_object([]) do |(text, _score, _index), selected|
+        selected << text unless selected.include?(text)
+        break selected if selected.length >= limit
+      end
+  end
+
+  def preferred_points(points, queries:, fallback_patterns:, reject_patterns:, limit:)
+    pool = Array(points).map { |point| normalize_text(point) }
+                        .reject(&:empty?)
+                        .reject { |text| reject_patterns.any? { |pattern| pattern.match?(text) } }
+                        .uniq
+
+    preferred = queries.each_with_object([]) do |query, selected|
+      match = pool.find { |text| query.match?(text) }
+      selected << match if match && !selected.include?(match)
+    end
+
+    return preferred.first(limit) if preferred.length >= limit
+
+    fallback = select_points(
+      pool,
+      patterns: fallback_patterns,
+      reject_patterns: reject_patterns,
+      limit: limit
+    )
+
+    (preferred + fallback).uniq.first(limit)
   end
 
   def page_role(page_data)

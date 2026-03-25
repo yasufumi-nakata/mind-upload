@@ -29,7 +29,7 @@ body_class: "summary-booklet-page"
 </div>
 <div>
   <span>現在の重点</span>
-  <strong>Standards, repositories, benchmarks, and audits must be b…</strong>
+  <strong>Connectome-complete does not mean emulation-complete; mis…</strong>
 </div>
 <div>
   <span>最初の入口</span>
@@ -44,8 +44,8 @@ body_class: "summary-booklet-page"
   <p>To keep mind uploading and WBE from remaining only a dream narrative, the first requirement is <strong>a shared rule set</strong>. Mind-Upload puts data layout, evaluation, failure judgment, and reproduction procedures in place first so anyone can check the same result against the same criteria.</p>
 </article>
 <article class="booklet-card">
-  <h3>すぐ断言しないもの</h3>
-  <p>There is still no cross-disciplinary agreement on what would count as sufficient evidence for L4 personal identity. / It remains unresolved…</p>
+  <h3>入口で止める過読</h3>
+  <p>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately. / Human evidence is layered: local ultrastructure, synaptic-d…</p>
 </article>
 <article class="booklet-card">
   <h3>いま読むべき主ページ</h3>
@@ -96,7 +96,7 @@ body_class: "summary-booklet-page"
 </div>
 <div class="booklet-status-card">
   <span>読了後に持ち帰るもの</span>
-  <strong>全体像、現実的な作業範囲、読む順番、協力の入口</strong>
+  <strong>全体像、実行可能範囲、hidden-state / proxy / drift の停止線</strong>
 </div>
 
   </div>
@@ -122,7 +122,7 @@ body_class: "summary-booklet-page"
     <div>
       <h3>入口で断言しないこと</h3>
       <ul class="booklet-list">
-        <li>There is still no cross-disciplinary agreement on what would count as sufficient evidence for L4 personal identity.</li><li>It remains unresolved whether noninvasive measurement alone can capture enough internal state for WBE.</li><li>The institutional design needed for L5 social deployment cannot be decided by technical requirements alone.</li><li>It remains unsettled which combination of theories, if any, will ultimately amount to a sufficient condition.</li>
+        <li>It remains unresolved whether noninvasive measurement alone can capture enough internal state for WBE.</li><li>Recent rodent causal studies show that astrocyte-state can matter for recall, multiday stabilization, and fear-state representations, but this still does not provide a human whole-brain readout.</li><li>Current primary literature also treats clearance / immune support as a measurable multiday support-state, but current human CSF / glymphatic routes still stop at macro support-state proxy rather than local immune-controller readout.</li><li>Current human astrocyte-related PET and clearance routes remain bounded proxy classes; they still do not identify which astrocyte, microglial controller, or synapse is responsible.</li>
       </ul>
     </div>
   </div>
@@ -166,13 +166,13 @@ body_class: "summary-booklet-page"
     <article class="booklet-card booklet-card-positive">
       <h3>比較的はっきりしていること</h3>
       <ul class="booklet-list">
-        <li>When public data, standards, benchmarks, and audit rules are in place, L0-L2 progress can accumulate in comparable form.</li><li>EEG and decoding research can create measurable progress when their claims stay within their conditions.</li><li>The same decode score is not a target-specific biomarker if it can be reproduced by subject / session fingerprint alone.</li><li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li><li>Current primary literature also requires phospho-signaling to be read as a distinct hidden-state family: transcriptomics, proteomics, and nominal weights still do not fix phosphosite occupancy, kinase / phosphatase balance, or signaling nanodomains.</li>
+        <li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li><li>Human evidence is layered: local ultrastructure, synaptic-density PET, and macro biochemical / energetic / ionic / thermal / myelin / clearance proxies are not one near-direct readout.</li><li>Same-subject or same-brain wording does not by itself make a live-to-fix, cross-regime, or cross-day workflow one state sample; bridge delay, regime continuity, coordinate transfer, and bridge validation still matter.</li><li>Several living-human proxy rows are not promoted together unless same-subject relation, model burden, and residual hidden-state ceilings are disclosed explicitly.</li><li>The Temporal Validity Card is now part of the public workflow so same-day success is not silently promoted to cross-day or long-term claims.</li>
       </ul>
     </article>
     <article class="booklet-card booklet-card-caution">
       <h3>まだ保留すべきこと</h3>
       <ul class="booklet-list">
-        <li>There is still no cross-disciplinary agreement on what would count as sufficient evidence for L4 personal identity.</li><li>It remains unresolved whether noninvasive measurement alone can capture enough internal state for WBE.</li><li>The institutional design needed for L5 social deployment cannot be decided by technical requirements alone.</li><li>There is still no settled answer on which causal-structure approximation would be sufficient for L4 personal identity.</li><li>A final success condition integrating thermodynamics, closed-loop behavior, and identity is still incomplete.</li>
+        <li>It remains unresolved whether noninvasive measurement alone can capture enough internal state for WBE.</li><li>Recent rodent causal studies show that astrocyte-state can matter for recall, multiday stabilization, and fear-state representations, but this still does not provide a human whole-brain readout.</li><li>Current primary literature also treats clearance / immune support as a measurable multiday support-state, but current human CSF / glymphatic routes still stop at macro support-state proxy rather than local immune-controller readout.</li><li>Current human astrocyte-related PET and clearance routes remain bounded proxy classes; they still do not identify which astrocyte, microglial controller, or synapse is responsible.</li><li>A connectome, cell type, and glial proxy do not by themselves fix local ATP reserve or mitochondrial positioning, so repeated-burst and dendritic-plasticity claims need a separate bioenergetic ceiling.</li>
       </ul>
     </article>
   </div>
@@ -199,6 +199,32 @@ body_class: "summary-booklet-page"
   <p>It is still unsettled which measurement granularity will ultimately be sufficient for WBE.</p>
 </div>
 
+  </div>
+</section>
+
+<section class="booklet-sheet booklet-page-break">
+  <div class="booklet-section-header">
+    <p class="booklet-kicker">Technical Stop Lines</p>
+    <h2>入口で落としてはいけない技術的停止線</h2>
+  </div>
+
+  <div class="booklet-card-grid booklet-card-grid-2">
+    <article class="booklet-card booklet-card-positive">
+      <h3>観測の上限</h3>
+      <ul class="booklet-list">
+        <li>Maintenance-state variables such as sleep/homeostasis, sleep architecture / replay-coupling, myelin, thermal-state, ionic milieu / chloride homeostasis, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local proteostasis / synaptic tagging, cargo-transport / cytoskeletal trafficking state, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, astrocyte / glial-state, and clearance / immune support remain outside the wiring diagram.</li><li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li><li>Human evidence is layered: local ultrastructure, synaptic-density PET, and macro biochemical / energetic / ionic / thermal / myelin / clearance proxies are not one near-direct readout.</li><li>Human whole-brain evidence remains layered and proxy-based; no current route directly fixes current transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local electrical-coupling / inhibitory-driving-force regime, ECM / PNN gate state, local proteostasis / synaptic-tag capture, cargo-routing state, neuromodulatory occupancy / release state, chloride set point, or branch-local mitochondrial positioning.</li>
+      </ul>
+    </article>
+    <article class="booklet-card booklet-card-caution">
+      <h3>比較と解釈の上限</h3>
+      <ul class="booklet-list">
+        <li>Same-subject or same-brain wording does not by itself make a live-to-fix, cross-regime, or cross-day workflow one state sample; bridge delay, regime continuity, coordinate transfer, and bridge validation still matter.</li><li>Several living-human proxy rows are not promoted together unless same-subject relation, model burden, and residual hidden-state ceilings are disclosed explicitly.</li><li>The Temporal Validity Card is now part of the public workflow so same-day success is not silently promoted to cross-day or long-term claims.</li><li>High decode / biomarker scores can rise from subject / session fingerprint alone, so the Specificity &amp; Shortcut Card audits that shortcut independently.</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="booklet-quote">
+    <p>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately. / Human evidence is layered: local ultrastructure, synaptic-density PET, and macro biochemical / energetic / ionic / thermal / myelin / clear…</p>
   </div>
 </section>
 
@@ -257,7 +283,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Start Here - Define success criteria, standards, benchmarks, and preregistration first / 5-10 min</p>
   <p>Mind-Upload is a site for breaking the large question, "Can a mind be reproduced on a computer?", into <strong>small, testable tasks</strong>. Instead of rushing to a final conclusion, it starts by defining <strong>what counts as progress</strong> and <strong>whether other people can verify the same result</strong>.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>The core of Mind-Upload is not bold conclusions but a verification commons that lets progress be measured.</li><li>If you are unsure where to start, read Verification -&gt; Roadmap -&gt; WBE/EEG 101.</li><li>Connectomes and cell types alone do not determine long-term dynamics; sleep/homeostasis, sleep architecture / replay-coupling, phospho-signaling / second-messenger state, local proteostasis / cargo-routing state, myelination, thermal-state, bioenergetic / mitochondrial state, astrocyte / glial-state, and clearance / immune support remain separate variables.</li>
+    <li>Several living-human proxy rows are not promoted together unless same-subject relation, model burden, and residual hidden-state ceilings are disclosed explicitly.</li><li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li><li>Human proxy class, operational maturity, and calibrator role are different questions; a real human route may still calibrate only one bounded hidden-state family.</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -270,7 +296,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Platform - Use the logic of PDB x BIDS x PhysioNet x OSF to define WBE success conditions and reproducible progress / 15-25 min</p>
   <p>To keep mind uploading and WBE from remaining only a dream narrative, the first requirement is <strong>a shared rule set</strong>. Mind-Upload puts data layout, evaluation, failure judgment, and reproduction procedures in place first so anyone can check the same result against the same criteria.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>Standards, repositories, benchmarks, and audits must be built as one package.</li><li>Claim levels and failure conditions are fixed up front so decoding is not confused with emulation.</li><li>For maintenance-state claims, local causal evidence and living-human proxy evidence are kept on separate axes, so bridge assumptions must be disclosed rather than silently fused.</li>
+    <li>A maintenance-state claim that combines rodent causal evidence with human proxy evidence still needs an explicit bridge statement naming the matched state family, proxy class, and remaining latent controller.</li><li>For living-human proxy bundles, the Human Proxy Composition Card fixes direct observable by row, same-subject relation, model burden, incremental evidence, and residual latent-state ceiling before several proxy routes may be promoted together.</li><li>For maintenance-state claims, local causal evidence and living-human proxy evidence are kept on separate axes, so bridge assumptions must be disclosed rather than silently fused.</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -283,7 +309,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Roadmap (Definition #1) - Break &#39;what counts as progress&#39; into a question tree with reading order and minimum arrival conditions / 20-30 min (5 min for the index only)</p>
   <p>This page is the map of mind-uploading research. Instead of jumping straight to conclusions, it organizes in sequence <strong>what to measure</strong>, <strong>what to reconstruct</strong>, <strong>how to run it</strong>, and <strong>how to verify it</strong>. In practice, it visualizes where the field currently stands across <strong>measurement -> reconstruction -> implementation -> verification -> social deployment</strong>.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>P0-P2 fix what counts as success before measurement or implementation work is discussed.</li><li>The index allows readers to jump directly to a specific question family.</li><li>Stronger claims are deliberately placed later so earlier levels are not skipped.</li>
+    <li>R0 now separates structural scaffold, fast executable state, and maintenance-state families, so `connectome + state` is not treated as one knob.</li><li>Even if connectome or local-activity evidence improves, latent-state and maintenance-state audits are still separate requirements.</li><li>R3 / R5 separate latent-state and maintenance-state questions by evidence tier and timescale, so same-day fit and multiday maintenance do not collapse into one success.</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -296,7 +322,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Perspective - Audit the hypothesis of reproducing brain information processing on another substrate through the barriers of measurability, identifiability, and maintenance state / 30-45 min</p>
   <p>This page is a long-form research note aimed at turning mind uploading (WBE) into something that can be evaluated as real research. It is organized in three stages: <strong>how to measure</strong>, <strong>how to infer</strong>, and <strong>how to implement</strong>. It treats recent results, failures, and limits with the same weight so that the boundary between what can and cannot be claimed remains explicit.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>It does not stop at introducing theories; it follows the constraints that appear when those theories are pushed toward implementation.</li><li>The page now separates local connectomics, human structural scaffold evidence, synaptic-density PET, receptor / transporter atlas priors, occupancy / displacement PET, biochemical scaffolds, energetic imaging, macro support-state proxies, and hemodynamic transfer audits instead of collapsing them into one &#39;multimodal&#39; advance.</li><li>The connectome-dynamics gap is now written as 17 maintenance-state families plus a separate shared electrical-state class, rather than a loose warning that wiring alone is not enough.</li>
+    <li>The connectome-dynamics gap is now written as 17 maintenance-state families plus a separate shared electrical-state class, rather than a loose warning that wiring alone is not enough.</li><li>Proxy-rich human evidence and deployment-ready measurement are different claims; sample size, model burden, hardware specialization, and fusion status remain separate ceilings.</li><li>Human proxy class and operational maturity are kept separate, so proxy-rich evidence is not silently read as field-ready state identification.</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -309,7 +335,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Resource - Connect ``what to use&#39;&#39; and ``how to reproduce&#39;&#39; in the shortest route without separating them. / 12-20 minutes</p>
   <p>This page is a practical list to help you decide which data to practice with first. First, we use public data to create a state in which we can reproduce the same results (L0), and then check to see if we can predict and withstand changes in conditions (L1-L2).</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>We look at the shared infrastructure first, then the starter datasets.</li><li>Starter data is a practice board for L0-L1, not the ground truth of EEG source imaging.</li><li>Even inside direct-validation data, stimulation ground truth, simultaneous invasive recording, and postsurgical outcome are different evidence classes.</li>
+    <li>Cross-session and adaptation labels are not yet temporal-validity claims; state annotation, fixed decoder interval, recalibration burden, and transfer ceiling still have to be disclosed separately.</li><li>Even when the score is numerically the same, you still have to separate the target neural variable from eye movement, EMG, behavior, feedback routes, subject / session fingerprint, and acquisition-distribution shortcuts such as site / device / reference / electrode layout.</li><li>The L0 artifact pack now follows this page&#39;s stricter site rule: event fidelity, label provenance, acquisition-distribution summary, derivative lineage, and a stopping claim are required alongside version/BIDS/QC/split/baseline.</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -384,7 +410,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Primer - To protect the dream, build the measuring stick first / 10-15 minutes</p>
   <p>If you want to move mind uploading forward seriously, the fastest route is to define in advance both the condition under which you can say “this worked” and the condition under which you must say “this failed.” Mind-Upload is building the verification infrastructure needed to make those checks comparable.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>It separates what can and cannot be said now, so the discussion does not overclaim.</li><li>It uses a claim ladder so L0 reproducible analysis is not confused with L4 identity claims.</li><li>Connectomes and cell types alone do not determine long-term dynamics; hidden-state auditing remains necessary.</li>
+    <li>For several maintenance-state families, the strongest causal evidence is still local and rodent while the best human routes remain perturbation-conditioned or macro proxy classes, so bridge assumptions must stay explicit.</li><li>Maintenance-state variables such as sleep/homeostasis, sleep architecture / replay-coupling, myelin, thermal-state, ionic milieu / chloride homeostasis, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local proteostasis / synaptic tagging, cargo-transport / cytoskeletal trafficking state, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, astrocyte / glial-state, and clearance / immune support remain outside the wiring diagram.</li><li>A human &#39;metabolic connectome&#39; from 1H-MRSI is a five-metabolite parcel-similarity graph, not axonal wiring or kinetic flux imaging.</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -397,7 +423,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Primer - A realistic guide that refuses to turn EEG into magical mind reading / 12-18 minutes</p>
   <p>EEG does not directly show the inside of the brain. It measures a mixed electrical pattern at the scalp. That gives EEG strong temporal resolution, but weak and blurry spatial localization. For that reason, Mind-Upload prioritizes data quality control (QC) and shared data-organization rules such as BIDS before anything else.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>EEG is strong at tracking temporal change, but weak at identifying spatial origin with high precision.</li><li>The questions &#39;there is information in the signal,&#39; &#39;the internal state is uniquely fixed,&#39; and &#39;the result survives long-term use&#39; require different audits.</li><li>Even when the score is the same, you still have to separate target-neural-variable signal from eye movement, EMG, uninstructed movement, feedback, subject / session fingerprint, and acquisition-distribution shortcuts such as site / device / reference / electrode layout.</li>
+    <li>EEG is strong at tracking temporal change, but weak at identifying spatial origin with high precision.</li><li>A high within-session score is not read here as cross-day robustness or deployability.</li><li>For cross-day or long-term claims, the Temporal Validity Card audits fixed decoder interval, state annotation, and recalibration burden separately.</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -410,7 +436,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">FAQ - Prefer verifiable progress to flashy conclusions / 8-15 minutes</p>
   <p>This page is designed to block common misunderstandings early. The stronger the claim, the more carefully you should check, in order, (1) the definition of terms, (2) the measurement scale, (3) the condition that would count as failure, and (4) the reproduction procedure.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>It quickly clears up first-order questions such as what this site is for and what EEG or brain-to-text work can and cannot support.</li><li>It now front-loads nine technical guardrails: connectome-complete is not state-complete, human proxy-rich evidence is not automatically near-direct whole-brain state readout, same-subject / same-brain wording does not by itself make a sequential workflow one state sample, a high score is not automatically a target-specific neural readout, EEG / MEG connectivity labels are not automatically leak-proof communication maps or causal circuits, BOLD / fNIRS differences need vascular-state / CVR audit, DCM / effective-connectivity labels do not by themselves identify true causal wiring, thermodynamic / irreversibility labels do not by themselves measure physical dissipation or WBE-ready cost, and low latency does not by itself solve the body / environment boundary.</li><li>A chemical connectome plus nominal inhibitory edges still does not fix gap-junction coupling, endogenous field effects, or local inhibitory driving force.</li>
+    <li>It now front-loads nine technical guardrails: connectome-complete is not state-complete, human proxy-rich evidence is not automatically near-direct whole-brain state readout, same-subject / same-brain wording does not by itself make a sequential workflow one state sample, a high score is not automatically a target-specific neural readout, EEG / MEG connectivity labels are not automatically leak-proof communication maps or causal circuits, BOLD / fNIRS differences need vascular-state / CVR audit, DCM / effective-connectivity labels do not by themselves identify true causal wiring, thermodynamic / irreversibility labels do not by themselves measure physical dissipation or WBE-ready cost, and low latency does not by itself solve the body / environment boundary.</li><li>Same-subject or same-brain wording does not by itself make a live-to-fix, cross-regime, or cross-day workflow one state sample; bridge delay, regime continuity, coordinate transfer, and bridge validation still matter.</li><li>Because wiring diagrams and cell types still leave excitability, timing-state, thermal-state, transcription/chromatin, post-transcriptional RNA-state, phospho-signaling / second-messenger state, proteostasis, cargo-transport / cytoskeletal trafficking state, ECM / PNN, ionic-homeostasis, bioenergetic / mitochondrial state, astrocyte / glial-state, clearance / immune support, and other maintenance-support variables unresolved, long-term dynamical claims require separate auditing.</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -423,7 +449,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Reference - Start by keeping the words straight / 3 to 10 minutes for only the necessary items</p>
   <p>This glossary is a quick reference for the meaning of terms. It starts with everyday-language explanations, moves to stricter definitions only when needed, and ties the discussion back to measurement, modeling, and verification.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>It gives short explanations of terms and points to where each concept matters.</li><li>It now includes the front-door verification terms added in the March 2026 re-audit, such as claim ceiling, shortcut auditing, maintenance-state, and vascular-state / CVR audit.</li><li>It now also includes the human-observability and support-state terms needed after the March 2026 deepening pass, such as proxy class, route maturity / model burden, support-state proxy, and clearance / immune support.</li>
+    <li>Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, astrocyte-state, clearance / immune support, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, and route-maturity language.</li><li>It now also includes the human-observability and support-state terms needed after the March 2026 deepening pass, such as proxy class, route maturity / model burden, support-state proxy, and clearance / immune support.</li><li>It now includes the front-door verification terms added in the March 2026 re-audit, such as claim ceiling, shortcut auditing, maintenance-state, and vascular-state / CVR audit.</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
