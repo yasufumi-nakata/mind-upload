@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Wiki: Human Proxy Composition and Route Maturity"
-description: "Explains why recent human PET, MRSI, myelin, clearance, and multimodal advances do not automatically compose into same-subject state-complete readout, and how to audit quantity type, spatial unit, timescale, cohort / regime, model burden, and deployment burden."
+description: "Explains why recent human PET, MRSI, myelin, clearance, and multimodal advances do not automatically compose into same-subject state-complete readout, and how to audit quantity type, spatial unit, timescale, cohort / regime, model burden, reproducibility, and deployment burden."
 article_type: Wiki
 subtitle: "Proxy-rich is not the same as same-subject state closure"
 author: Mind Uploading Research Project
@@ -9,13 +9,14 @@ last_updated: "2026-03-26"
 note: "Technical / natural science only"
 audience: "Readers who want a stricter technical reading of current human in vivo advances and why they still stop below state-complete language"
 reading_time: "12-18 minutes"
-page_intro: "This page explains how to read current human proxy routes without collapsing them into one generic progress bar. The question is not only whether a route is impressive, but what it directly measures, on what unit and timescale, in which cohort / physiological regime, with what model burden, and what hidden-state families still remain unresolved."
+page_intro: "This page explains how to read current human proxy routes without collapsing them into one generic progress bar. The question is not only whether a route is impressive, but what it directly measures, on what unit and timescale, in which cohort / physiological regime, with what model burden, with what repeatability / transfer window, and what hidden-state families still remain unresolved."
 accuracy_note: "The ceilings on this page are operational inferences drawn from primary literature. They are not the claims made by the original papers themselves."
 page_highlights:
   - "Human proxy routes differ not only in strength, but in quantity type: structural scaffold, density proxy, similarity scaffold, kinetic rate map, mobility map, and model-based efflux route are different objects."
   - "Spatial unit and time window are part of the evidence: a cubic-millimeter surgical fragment, parcel-level similarity matrix, 0.7 cc dynamic metabolic voxel, and overnight plasma-efflux inference cannot be treated as interchangeable."
   - "Cohort and physiological regime are part of the evidence: adolescent developmental cohorts, healthy younger adults, healthy older adults, and AD-continuum reactive-astrogliosis scans do not define one shared human baseline."
   - "Model burden is part of the object: tracer kinetics, partial-volume correction, blood input functions, multicompartment models, and synchronization choices all change what the measurement means."
+  - "A bundle can be well-typed and still fail operationally if one row is unstable, centre-bound, or available only in a narrow complete-case subset."
   - "Same-session multimodal acquisition reduces one mismatch, but it does not erase common physiological factors or modality-specific residuals by default."
   - "Same-subject or same-brain wording solves specimen identity, not state continuity; sequential bridges still need elapsed-time, regime-continuity, and deformation disclosure."
   - "Proxy class, operational maturity, and calibrator role are different axes: a route can be real and still calibrate only one bounded hidden-state family."
@@ -25,6 +26,7 @@ known_points:
   - "SV2A PET, MRSI similarity graphs, dynamic DMRSI, myelin bilayer MRI, and CSF / glymphatic routes all require route-specific interpretation."
   - "Proxy class and operational maturity still do not tell you what the route safely calibrates, so calibrator role has to be stated separately."
   - "Even when quantity type and model burden are logged, cross-row composition still requires age band, health/pathology regime, and transfer rationale."
+  - "Even when proxy class, maturity, and calibrator role are logged, composition still needs row-level repeatability, cross-centre transfer, and complete-case disclosure."
   - "Simultaneous multimodal acquisition can reveal both common and divergent structure across modalities."
   - "Global or shared multimodal factors can still include autonomic or vascular physiology, not only the target neural variable."
   - "A same-subject bridge can still fail to preserve state continuity when acquisition order, elapsed time, or deformation correction are left implicit."
@@ -78,6 +80,13 @@ The public pages already separate local human ultrastructure, SV2A PET, MRSI bio
 <strong>Scope</strong>
 <p>
 This page stays on the technology and natural-science side only. It does not discuss philosophy, law, personhood, or policy. The question here is narrower: <strong>what do current human routes directly observe, what do they infer through a model, and what do they still leave latent?</strong>
+</p>
+</div>
+
+<div class="note-box">
+<strong>Why robustness belongs inside the composition rule</strong>
+<p>
+The remaining weakness after the recent composition updates was operational. A bundle can now be typed correctly by <strong>proxy class</strong>, <strong>operational maturity</strong>, and <strong>calibrator role</strong>, yet still fail as evidence if one row is unstable, centre-bound, or only available in a narrow complete-case subset. The primary literature now makes that narrower reading necessary. <a href="https://doi.org/10.1177/0271678X17724947" target="_blank">Finnema et al. (2018)</a> showed that even a comparatively stable SV2A PET route still needs route-specific kinetic modeling and reached mean absolute test-retest reproducibility of <strong>3-9%</strong> for regional V<sub>T</sub>. <a href="https://doi.org/10.1371/journal.pone.0206583" target="_blank">Holiga et al. (2018)</a> showed that common task-fMRI and resting-fMRI measures range from <strong>poor to excellent</strong> in test-retest reliability. <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021)</a> showed that some simultaneous EEG-fMRI connectome relationships can reproduce across <strong>four centres</strong> spanning <strong>1.5T to 7T</strong>, so cross-centre robustness can be shown but must not be presumed. <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a> then showed in acute DoC that only <strong>63 of 87</strong> patients had both EEG and fMRI and that direct same-sample bundle comparisons used a <strong>48-patient complete-feature subset</strong>, while <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> validated multimodal models across centres with different acquisition parameters, reported gains with more modalities, and found higher <strong>inter-modality disagreement</strong> in minimally conscious or improving patients. Therefore, on this site, human-proxy composition now includes <strong>row-level repeatability</strong>, <strong>cross-centre transfer</strong>, and <strong>partial-availability slices</strong>.
 </p>
 </div>
 
@@ -383,6 +392,18 @@ If the claim depends on treating a sequential bridge as one latent-state sample,
 <td>Kinetic models, blood inputs, high-field hardware, investigational devices, and specialized sequences all change the practical meaning of the result.</td>
 </tr>
 <tr>
+<td><strong>Per-row repeatability / reproducibility window</strong></td>
+<td>Stops a bundle from leaning on a row whose stability was never shown under its actual tracer, reconstruction, field strength, or processing route.</td>
+</tr>
+<tr>
+<td><strong>Cross-center / cross-scanner transfer</strong></td>
+<td>Stops a same-lab bundle from being overread as portable human observability when the relation was never reproduced across centres, scanners, or protocol families.</td>
+</tr>
+<tr>
+<td><strong>Partial-availability / missing-row slice</strong></td>
+<td>Stops a full bundle from being treated as generally available when the decisive comparison depended on a narrow complete-case subset or collapses once one row is unavailable.</td>
+</tr>
+<tr>
 <td><strong>Operational maturity</strong></td>
 <td>Stops proof-of-principle, specialized high-field, and routine clinical-style routes from being silently treated as equally deployable or equally reproducible.</td>
 </tr>
@@ -412,7 +433,7 @@ If the claim depends on treating a sequential bridge as one latent-state sample,
 <div class="note-box">
 <strong>Operational rule on this site</strong>
 <p>
-If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich but ceiling-limited human evidence</strong>. It is not promoted to <strong>same-subject cross-stack state identification</strong>, <strong>unique internal-state recovery</strong>, or <strong>state-complete readout</strong>. In particular, row diversity without explicit <strong>proxy class</strong>, <strong>operational maturity</strong>, <strong>calibrator role</strong>, <strong>common-driver audit</strong>, and a clear <strong>increment over the strongest single row</strong> is not treated as real state closure. The public-facing implementation of that rule is the <a href="../verification.html#human-proxy-composition-card">Verification: Human Proxy Composition Card</a>.
+If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich but ceiling-limited human evidence</strong>. It is not promoted to <strong>same-subject cross-stack state identification</strong>, <strong>unique internal-state recovery</strong>, or <strong>state-complete readout</strong>. In particular, row diversity without explicit <strong>proxy class</strong>, <strong>operational maturity</strong>, <strong>calibrator role</strong>, <strong>row-level repeatability</strong>, <strong>cross-centre transfer</strong>, <strong>partial-availability disclosure</strong>, <strong>common-driver audit</strong>, and a clear <strong>increment over the strongest single row</strong> is not treated as real state closure. The public-facing implementation of that rule is the <a href="../verification.html#human-proxy-composition-card">Verification: Human Proxy Composition Card</a>.
 </p>
 </div>
 </section>
@@ -437,6 +458,11 @@ If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich b
 <li>Chen, J. E., Lewis, L. D., Coursey, S. E., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
 <li>Bolt, T. S., et al. (2025). Autonomic physiological coupling of the global fMRI signal. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">doi:10.1038/s41593-025-01945-y</a></li>
 <li>Epp, S. M., Castrillón, G., Yuan, B., et al. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
+<li>Finnema, S. J., Nabulsi, N. B., Mercier, J., et al. (2018). Kinetic evaluation and test-retest reproducibility of [<sup>11</sup>C]UCB-J, a novel radioligand for positron emission tomography imaging of synaptic vesicle glycoprotein 2A in humans. <a href="https://doi.org/10.1177/0271678X17724947" target="_blank">doi:10.1177/0271678X17724947</a></li>
+<li>Holiga, Š., Sambataro, F., Luzy, C., et al. (2018). Test-retest reliability of task-based and resting-state blood oxygen level dependence and cerebral blood flow measures. <a href="https://doi.org/10.1371/journal.pone.0206583" target="_blank">doi:10.1371/journal.pone.0206583</a></li>
+<li>Wirsich, J., Jorge, J., Iannotti, G. R., et al. (2021). The relationship between EEG and fMRI connectomes is reproducible across simultaneous EEG-fMRI studies from 1.5T to 7T. <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">doi:10.1016/j.neuroimage.2021.117864</a></li>
+<li>Amiri, M., Fisher, P. M., Raimondo, F., et al. (2023). Multimodal prediction of residual consciousness in the intensive care unit: the CONNECT-ME study. <a href="https://doi.org/10.1093/brain/awac335" target="_blank">doi:10.1093/brain/awac335</a></li>
+<li>Manasova, D., Belloli, L. M. L., Rosenfelder, M. J., et al. (2026). Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness. <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">doi:10.1093/brain/awaf412</a></li>
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Attardo, A., Fitzgerald, J. E., &amp; Schnitzer, M. J. (2015). Impermanence of dendritic spines in live adult CA1 hippocampus. <a href="https://doi.org/10.1038/nature14467" target="_blank">doi:10.1038/nature14467</a></li>
 </ol>

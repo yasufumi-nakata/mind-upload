@@ -5,7 +5,7 @@ description: "A blueprint of standards, benchmarks, registries, and audits for t
 article_type: Platform
 subtitle: "Use the logic of PDB x BIDS x PhysioNet x OSF to define WBE success conditions and reproducible progress"
 author: Mind Uploading Research Project
-last_updated: "2026-03-25"
+last_updated: "2026-03-26"
 note: "Operational Specification"
 audience: "Readers who want the site's core policy and anyone checking what must exist before progress can honestly be claimed"
 reading_time: "15-25 min"
@@ -20,7 +20,7 @@ page_highlights:
   - "For foundation / self-supervised EEG results, the Pretraining Card fixes corpus identity, overlap audit, setup diversity, harmonization, adaptation regime, benchmark provenance including split randomness / hidden grouping and inference-stage budget, and scale / efficiency before any transfer claim is read strongly."
   - "For brain-to-text and speech decode, the Neural Contribution Card fixes task constraint, language prior, candidate set, no-brain / no-LM / shuffle baselines, and subject cooperation."
   - "For multimodal or atlas-prior results, the Fusion Card is added on top of the Observability Budget so acquisition relation, synchronization, fusion model, vascular-state / CVR limits for hemodynamic stacks, and external validation are fixed explicitly."
-  - "For living-human proxy bundles, the Human Proxy Composition Card fixes direct observable by row, same-subject relation, model burden, incremental evidence, and residual latent-state ceiling before several proxy routes may be promoted together."
+  - "For living-human proxy bundles, the Human Proxy Composition Card fixes direct observable by row, same-subject relation, repeatability / transfer window, model burden, incremental evidence, and residual latent-state ceiling before several proxy routes may be promoted together."
   - "For living-human maintenance routes, submissions must separate proxy class, operational maturity, and calibrator role, because a real human proxy may still calibrate only one bounded hidden-state family."
   - "For sequential cross-regime claims that bridge live measurement to later fixation / ex vivo follow-up or cross-day reacquisition, the State-Continuity Bridge Card fixes acquisition order, elapsed time, regime continuity, coordinate transfer / deformation model, bridge validation rung, and residual drift ceiling before same-state language is allowed."
   - "For diffusion-MRI tractography connectomes, the Observability Budget now requires a tractography route card that names direct observables, endpoint assignment, graph-construction choices, uncertainty, and abstention."
@@ -73,7 +73,7 @@ known_points:
   - "The same decoding score is not target-specific evidence if eye movement, EMG, uninstructed movement, auditory feedback, subject / session fingerprint, or acquisition-distribution shortcuts remain unresolved."
   - "A foundation-model score without corpus-overlap, harmonization, adaptation, and benchmark-version disclosure, including split randomness / hidden grouping, remains qualified decoding evidence rather than portable transfer evidence."
   - "A multimodal result is not one thing; simultaneous acquisition, geometric fusion, invasive calibration, and atlas priors must be audited separately."
-  - "Several living-human proxy routes do not add automatically; without same-subject relation, model disclosure, and cross-row calibration, the bundle remains below state-identification language."
+  - "Several living-human proxy routes do not add automatically; without same-subject relation, repeatability / transfer disclosure, model disclosure, and cross-row calibration, the bundle remains below state-identification language."
   - "A same-subject or same-brain pipeline can still be sequential and bridge-limited; live-to-fix delay, regime mismatch, deformation correction, and state drift remain separate audit items."
   - "For ESI, passing one validation class does not auto-pass the others; stimulation error, simultaneous invasive concordance, and postsurgical outcome answer different questions."
   - "For ESI, inverse-family, package, parameter, and conductivity choices can materially shift the reconstructed source, so solver-disagreement and uncertainty width are themselves audit items."
@@ -849,6 +849,9 @@ If this card is missing, this site reads a multimodal or atlas-prior result at t
 <p>
 After adding the <strong>Observability Budget</strong> and the <strong>Fusion Card</strong>, one weak point still remained: several living-human proxy rows could still be listed side by side as if coverage automatically added up. The primary literature does not support that shortcut. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> provide a <strong>33-participant SV2A atlas</strong> calibrated to autoradiography, which is a cohort-level synaptic-density proxy. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> define a <strong>five-metabolite within-subject similarity graph</strong> in <strong>51 healthy adolescents</strong> with <strong>13-person site replication</strong>, not kinetic flux imaging. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> provide <strong>7 T dynamic DMRSI kinetic maps</strong> in <strong>five healthy participants</strong>. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> provide <strong>myelin-bilayer mapping</strong> in <strong>two healthy volunteers</strong> on specialized hardware. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> provide a specialized <strong>7 T CSF-mobility route</strong> whose whole-brain rest maps were shown in <strong>20 healthy younger individuals</strong>, with driver analyses reported in <strong>11 of 24 total healthy participants</strong>. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> infer sleep-linked glymphatic clearance through <strong>older-adult crossover cohorts</strong>, an <strong>investigational wearable</strong>, and a <strong>compartmental model</strong>. These routes differ in direct observable, <strong>quantity type</strong>, time window, spatial unit, model burden, deployment maturity, and even the likely nuisance sources that can make rows move together. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> showed both common and divergent organization across simultaneous Ca<sup>2+</sup> and BOLD, <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed tightly coupled global progressions alongside <strong>two distinct network patterns</strong> in simultaneous EEG-PET-MRI, <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> showed that a major global fMRI mode is substantially coupled to autonomic physiology, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that significant task BOLD changes can coexist with opposite oxygen-metabolism changes across many cortical voxels. Therefore, this site now requires a <strong>Human Proxy Composition Card</strong> whenever multiple living-human proxy rows are used together to raise a claim ceiling.
 </p>
+<p>
+A second correction follows from robustness rather than taxonomy alone. <a href="https://doi.org/10.1177/0271678X17724947" target="_blank">Finnema et al. (2018)</a> showed that even a comparatively stable SV2A PET route still needed route-specific kinetic modeling and yielded mean absolute test-retest reproducibility of <strong>3-9%</strong> for regional V<sub>T</sub>. <a href="https://doi.org/10.1371/journal.pone.0206583" target="_blank">Holiga et al. (2018)</a> showed that common task-fMRI and resting-fMRI measures span <strong>poor to excellent</strong> test-retest reliability rather than one uniform level. <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021)</a> then showed that some simultaneous EEG-fMRI connectome relationships can reproduce across <strong>four centres</strong>, <strong>1.5T to 7T</strong>, and different EEG layouts, which means cross-centre robustness can be demonstrated but should not be assumed. <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a> further showed in acute DoC that only <strong>63 of 87</strong> patients had both EEG and fMRI, while direct same-sample model comparison used <strong>48 complete-feature patients</strong>, so full bundles are not automatically acquisition-complete. <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> validated multimodal models across centres with different acquisition parameters, reported that performance improved with more modalities, and found higher <strong>inter-modality disagreement</strong> in minimally conscious or improving patients. Therefore, on this site, <strong>per-row repeatability</strong>, <strong>cross-centre transfer</strong>, and <strong>partial-bundle availability</strong> are part of composition rather than afterthoughts.
+</p>
 </div>
 <table class="data-table">
 <thead>
@@ -883,6 +886,21 @@ After adding the <strong>Observability Budget</strong> and the <strong>Fusion Ca
 <td><strong>Measurement-model and acquisition burden</strong></td>
 <td>Name the tracer / kinetic model / blood-input route, field strength, specialized hardware, scan burden, correction model, or compartment model that each row depends on, plus any small-cohort or proof-of-principle limitation.</td>
 <td>A specialized or model-heavy route is not read as field-ready generic observability.</td>
+</tr>
+<tr>
+<td><strong>Per-row repeatability / reproducibility window</strong></td>
+<td>For each row, report same-subject repeatability or test-retest error / ICC / stability window under the actual acquisition and quantification route, and say explicitly when no repeatability study exists.</td>
+<td>An unstable row is not treated as a reliable anchor inside a stronger bundle.</td>
+</tr>
+<tr>
+<td><strong>Cross-center / cross-scanner / protocol transfer</strong></td>
+<td>State whether the row or bundle was reproduced across centres, scanners, field strengths, electrode montages, site protocols, or reconstruction pipelines, and whether the result survives harmonization rather than one local setup only.</td>
+<td>A same-lab bundle is not promoted to portable or field-ready human observability.</td>
+</tr>
+<tr>
+<td><strong>Acquisition completeness / missing-row slice</strong></td>
+<td>Report how many subjects actually had every row, what same-sample subset underlies the full bundle, and what happens when one row is absent, degraded, or unavailable under realistic acquisition constraints.</td>
+<td>A full bundle is not treated as generally available or robust if its claim depends on a narrow complete-case subset.</td>
 </tr>
 <tr>
 <td><strong>Cross-row nuisance / independence audit</strong></td>
@@ -921,7 +939,7 @@ If this card is missing, this site reads a living-human proxy bundle at the ceil
 <div class="note-box">
 <strong>Promotion rule beyond row diversity</strong>
 <p>
-On this site, row diversity alone is not enough. A bundle is promoted only when the paper discloses whether the apparent agreement survives a <strong>shared-driver audit</strong> and what the bundle adds beyond the <strong>strongest single row</strong> under a matched-condition reading. Otherwise, the result remains <strong>proxy-rich but ceiling-limited</strong> rather than same-subject state identification.
+On this site, row diversity alone is not enough. A bundle is promoted only when the paper discloses whether the apparent agreement survives a <strong>shared-driver audit</strong>, whether the key rows remain <strong>repeatable and transferable</strong> outside one setup, and what the bundle adds beyond the <strong>strongest single row</strong> under a matched-condition reading. Otherwise, the result remains <strong>proxy-rich but ceiling-limited</strong> rather than same-subject state identification.
 </p>
 </div>
 <h3 class="section-title" id="state-continuity-bridge-card">State-Continuity Bridge Card for sequential cross-regime claims</h3>
@@ -2367,7 +2385,7 @@ In response to technical criticisms (Issue #257-#260) submitted in the latter ha
 <div class="key-points">
 <h4>Log with applicable conditions</h4>
 <ul>
-<li><strong>Human Proxy Composition Card:</strong>When several living-human proxy rows are used together, name the claimed latent variable, <strong>proxy class</strong> and <strong>direct observable</strong> by row, same-subject / same-session relation, <strong>operational maturity</strong>, <strong>calibrator role</strong>, model burden, common-driver / independence audit, incremental evidence over the strongest single row, cross-row calibration route, and residual latent-state ceiling. If this is missing, the bundle stays at the strongest single-row or proxy-rich ceiling rather than same-subject state identification. </li>
+<li><strong>Human Proxy Composition Card:</strong>When several living-human proxy rows are used together, name the claimed latent variable, <strong>proxy class</strong> and <strong>direct observable</strong> by row, same-subject / same-session relation, <strong>operational maturity</strong>, <strong>calibrator role</strong>, model burden, row-level repeatability / reproducibility window, cross-centre / cross-scanner transfer window, acquisition completeness / missing-row slice, common-driver / independence audit, incremental evidence over the strongest single row, cross-row calibration route, and residual latent-state ceiling. If this is missing, the bundle stays at the strongest single-row or proxy-rich ceiling rather than same-subject state identification. </li>
 <li><strong>Fusion Card:</strong>When reporting multimodal or atlas-prior results, name the acquisition relation, synchronization route and unresolved lag, geometry / co-registration scope, fusion model, hemodynamic vascular-state / CVR calibration when applicable, unimodal and prior-only baselines, external calibration route, and abstention boundary. If this is missing, the result stays at the strongest unimodal or atlas-conditioned ceiling rather than same-subject cross-stack state identification. </li>
 <li><strong>ESI/HBM logs:</strong>Only when making anatomical source claims, attach uncertainty maps from cranial conductivity, forward model sensitivity analysis, or hierarchical Bayesian estimation. </li>
 <li><strong>Inverse-Solver Agreement Log:</strong>When reporting an anatomical ESI/HBM result, name the inverse families / packages compared, parameter window, headline-location spread or overlap metric, and whether the displayed map is best-case, median, or ensemble. If this is missing, the result stays at the method-sensitive source-hypothesis level. </li>
