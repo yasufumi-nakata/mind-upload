@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-25 / 位置づけ: Per-RQ Deep Evaluation Cards
+- 更新日: 2026-03-26 / 位置づけ: Per-RQ Deep Evaluation Cards
 
 ---
 
@@ -12,7 +12,7 @@
 
 > 汎用横断の要約ではなく、60RQを1件ずつ深く読むための固定カード集。
 
-- 更新日: 2026-03-25
+- 更新日: 2026-03-26
 - 前提: `mind-upload-eeg-rq60-feasibility-and-funds` と `mind-upload-eeg-rq60-grant-dataset-playbook` の整合を取った統合版
 
 ## このページの使い方
@@ -632,3 +632,10 @@
 
 - 提出時参照は継続して `Dxx + DOI + データセット名 + access区分` を正本とし、数値IDは探索補助として扱います。
 - 既存60RQの件数、`A/B/C` 内訳、`G1-G6` 運用キーは変更していません。
+
+## 2026-03-26 14:20 JST 再検証ログ（本run / 深掘り優先キュー再固定）
+
+- 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull --rebase --autostash origin main` を実行し、`Already up to date` を確認しました。
+- 正本は `mind-upload/research_harvest_50.md` と `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` を維持し、`RQ_TOTAL=60` と `A/B/C=17/25/18` を再計数して一致を確認しました。
+- `1RQ=1検証命題=1応募テーマ=1主データ` の運用を継続し、今回runの深掘り優先キューを `U0-2 -> U1-2 -> U4-2 -> U8-3 -> U13-6 -> U15-2` に再固定しました。
+- `EEG-DATA` は信号生データ置き場ではなくメタデータカタログ（高信頼 `28,799` 件）である前提を明記し、提出時の根拠は `DOI + データセット名 + access区分` 併記を必須としました。
