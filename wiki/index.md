@@ -597,6 +597,8 @@ If you just want to know the big picture first, you can go to the public page. H
 <li><a href="closed-loop-latency-jitter-and-safety-stops.html">Closed-loop/delay/jitter/safety stops →</a></li>
 <li><a href="thermodynamic-grounding-basics.html">The basics of thermodynamic grounding →</a></li>
 <li><a href="mind-upload-rq60-deep-focus-notes.html">RQ60 Deep Focus Notes (EEG-DATA x Grant) →</a></li>
+<li><a href="mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60×EEG-DATA 検証可否と助成テーマ（深掘り版）→</a></li>
+<li><a href="mind-upload-eeg-rq60-grant-dataset-playbook.html">RQ60 応募プレイブック（RQ単位固定）→</a></li>
 <li><a href="mind-upload-rq60-deep-evaluation-cards.html">RQ60 Deep Evaluation Cards (EEG-DATA × auto-research-funds) →</a></li>
 <li><a href="mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ60 RQ-by-RQ Deep Dossiers (EEG-DATA × auto-research-funds) →</a></li>
 </ul>
