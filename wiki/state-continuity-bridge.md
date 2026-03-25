@@ -5,7 +5,7 @@ description: "Explains why same-subject or same-brain sequential workflows do no
 article_type: Wiki
 subtitle: "Same-subject solves specimen identity, not same-state continuity"
 author: Mind Uploading Research Project
-last_updated: "2026-03-21"
+last_updated: "2026-03-25"
 note: "Technical / natural science only"
 audience: "Readers who want to read live-to-fix, same-brain plus EM, and cross-day reacquisition claims without overpromoting specimen identity into state continuity"
 reading_time: "12-18 min"
@@ -16,12 +16,14 @@ page_highlights:
   - "Preservation and fixation are not neutral storage steps; they can change geometry, membrane integrity, and downstream observability."
   - "Correlative same-brain pipelines are scientifically valuable local workflows, but they are still sequential bridges rather than simultaneous whole-state capture."
   - "Cross-day reacquisition also needs a bridge audit, because spontaneous behavior, arousal, and day-night variation can move the observed state before long-term drift is even discussed."
+  - "Bridge burden is not one scalar: live-to-fix bridges are transformation-dominated, whereas same-day or overnight live bridges are drift-dominated and expose different hidden-state families."
   - "On this site, the State-Continuity Bridge Card is stacked with the Destructive-Structure Route Card, Human Proxy Composition Card, or Temporal Validity Card depending on the bridge."
 known_points:
   - "Preservation route and fixation protocol materially affect ultrastructural geometry and downstream staining or registration."
   - "Correlative live-to-EM workflows need explicit landmarks, targeted subvolumes, and bridge validation rather than a simple same-brain label."
   - "Adult synaptic structures and ongoing behavioral state can change over bridge windows that are relaxed or left implicit."
   - "Same-subject wording can support specimen identity while still failing same-state continuity."
+  - "Different bridge classes threaten different state families first, so elapsed time alone is not a sufficient bridge summary."
 unknown_points:
   - "There is still no general bridge protocol that yields field-ready same-state evidence across live, ex vivo, and destructive stages at whole-brain scale."
   - "Which hidden-state families are tolerable to bridge by calibration rather than direct measurement remains unresolved."
@@ -187,6 +189,55 @@ The site now reads bridge validation as graded rather than binary. These rungs a
 </table>
 </section>
 
+<section class="section" id="risk-matrix">
+<h2 class="section-title">Bridge risk is family-specific, not one scalar</h2>
+<p>
+One remaining weakness in the public bridge rule was that <strong>bridge burden</strong> could still sound like one generic time penalty. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> and <a href="https://doi.org/10.1523/ENEURO.0104-23.2023" target="_blank">Idziak et al. (2023)</a> show that live-to-fix bridges are already <strong>transformation-dominated</strong>, because preservation route, fixation duration, and membrane integrity can change geometry and observability before a long delay even appears. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a> and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> then show that same-brain function-plus-structure pipelines are landmark- and deformation-heavy <strong>local bridges</strong>. By contrast, <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a>, <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">Benisty et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> show that repeated live measurements can drift through movement, arousal, connectivity structure, and decoder-relevant EEG dynamics within hours. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a> and <a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a> further show that sleep/wake crossing changes homeostatic and computational regime rather than merely adding more elapsed time. Therefore, on this site, bridge audit starts by asking <strong>what kind of bridge this is</strong> and <strong>which hidden-state families it exposes first</strong>.
+</p>
+<div class="note-box">
+<strong>Site-level inference</strong>
+<p>
+The matrix below is an operational inference from the primary literature above plus the site's maintenance-state taxonomy. It is not a label used by the original papers themselves.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Bridge class</th>
+<th>What changes first</th>
+<th>Hidden-state families to name first</th>
+<th>Cards this site stacks by default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Live -&gt; fixation -&gt; ex vivo / EM</strong></td>
+<td>Preservation route, extracellular-space retention, membrane integrity, staining compatibility, deformation, and registration precision.</td>
+<td>Structural observability itself, omitted live physiology, and whatever state family the paper wants to carry across fixation.</td>
+<td><strong>State-Continuity Bridge Card</strong> plus <strong>Destructive-Structure Route Card</strong>.</td>
+</tr>
+<tr>
+<td><strong>Same-day repeated live measurement within waking</strong></td>
+<td>Movement pattern, arousal / neuromodulatory context, functional-connectivity structure, and decoder-relevant signal statistics.</td>
+<td>Behavior-linked state, neuromodulatory context, functional-coupling state, and task / decoder dependence.</td>
+<td><strong>State-Continuity Bridge Card</strong> plus <strong>Temporal Validity Card</strong>.</td>
+</tr>
+<tr>
+<td><strong>Sleep-crossing or overnight reacquisition</strong></td>
+<td>Firing-rate recovery controller, sleep-dependent renormalization, replay-coupling opportunity, and support-state restoration.</td>
+<td>Firing-rate set point, sleep / wake renormalization, sleep architecture / replay-coupling, and support-state families cited by the claim.</td>
+<td><strong>State-Continuity Bridge Card</strong> plus <strong>Temporal Validity Card</strong> plus <strong>Maintenance-State Error Budget</strong>.</td>
+</tr>
+<tr>
+<td><strong>Multi-day same-subject proxy bundle</strong></td>
+<td>Trait / state mixing, slow structural turnover, support-state drift, and cross-row quantity mismatch.</td>
+<td>Structural turnover, maintenance-state families named by the proxy bundle, and human proxy composition ceiling.</td>
+<td><strong>State-Continuity Bridge Card</strong> plus <strong>Human Proxy Composition Card</strong> plus <strong>Maintenance-State Error Budget</strong>.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
 <section class="section" id="card-stacking">
 <h2 class="section-title">Which other cards stack with the bridge card</h2>
 <table class="data-table">
@@ -269,6 +320,8 @@ The site now reads bridge validation as graded rather than binary. These rungs a
 <li>Musall S, Kaufman MT, Juavinett AL, Gluf S, Churchland AK. Single-trial neural dynamics are dominated by richly varied movements. <em>Nature Neuroscience</em>. 2019. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">doi:10.1038/s41593-019-0502-4</a></li>
 <li>Benisty H, Barson D, Moberly AH, et al. Rapid fluctuations in functional connectivity of cortical networks encode spontaneous behavior. <em>Nature Neuroscience</em>. 2024. <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">doi:10.1038/s41593-023-01498-y</a></li>
 <li>Egger A, Bayon C, d'Almeida J, et al. Chrono-EEG dynamics influencing hand gesture decoding: a 10-hour study. <em>Scientific Reports</em>. 2024. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">doi:10.1038/s41598-024-70609-x</a></li>
+<li>Hengen KB, Torrado Pacheco A, McGregor JN, Van Hooser SD, Turrigiano GG. Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <em>Cell</em>. 2016. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
+<li>Xu Y, Schneider A, Wessel R, Hengen KB. Sleep restores an optimal computational regime in cortical networks. <em>Nature Neuroscience</em>. 2024. <a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">doi:10.1038/s41593-023-01536-9</a></li>
 </ol>
 </section>
 

@@ -973,6 +973,48 @@ After adding the <strong>Fusion Card</strong>, the <strong>Human Proxy Compositi
 </tbody>
 </table>
 <div class="note-box">
+<strong>2026-03-25 addendum: bridge type and exposed state families must be named together</strong>
+<p>
+The remaining weakness was that the card could still be filled as if <strong>bridge risk</strong> were one generic scalar. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> and <a href="https://doi.org/10.1523/ENEURO.0104-23.2023" target="_blank">Idziak et al. (2023)</a> show transformation-dominated live-to-fix risk, <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a> and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> show landmark- and deformation-heavy local same-brain bridges, <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a>, <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">Benisty et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> show waking-state drift within hours, and <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a> plus <a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">Xu et al. (2024)</a> show that sleep/wake crossing changes homeostatic and computational regime. Therefore, bridge submissions on this site now have to name <strong>both</strong> the <strong>bridge class</strong> and the <strong>first exposed hidden-state families</strong>, rather than writing only elapsed time.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Bridge class</th>
+<th>State families to disclose first</th>
+<th>Minimum extra cards this site stacks</th>
+<th>Default ceiling if that bundle is missing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Live -&gt; fixation -&gt; ex vivo / EM</strong></td>
+<td>Preservation-sensitive geometry, omitted live physiology, and the claimed carried-over state family.</td>
+<td><strong>Destructive-Structure Route Card</strong></td>
+<td><strong>Sequential local scaffold</strong>, not native same-state capture.</td>
+</tr>
+<tr>
+<td><strong>Same-day repeated live measurement</strong></td>
+<td>Behavior / arousal / neuromodulatory context, functional-coupling drift, and decoder dependence.</td>
+<td><strong>Temporal Validity Card</strong></td>
+<td><strong>Matched-session continuity only</strong>, not same-state persistence.</td>
+</tr>
+<tr>
+<td><strong>Sleep-crossing or overnight reacquisition</strong></td>
+<td>Firing-rate set point, sleep-dependent renormalization, replay-coupling, and any cited support-state family.</td>
+<td><strong>Temporal Validity Card</strong> plus <strong>Maintenance-State Error Budget</strong></td>
+<td><strong>Overnight performance / persistence evidence</strong>, not maintenance-consistent same-state evidence.</td>
+</tr>
+<tr>
+<td><strong>Multi-day same-subject proxy bundle</strong></td>
+<td>Maintenance-state families named by the bundle, structural turnover risk, and cross-row quantity mismatch.</td>
+<td><strong>Human Proxy Composition Card</strong> plus <strong>Maintenance-State Error Budget</strong></td>
+<td><strong>Proxy-rich longitudinal evidence</strong>, not one latent-state snapshot.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
 <strong>Minimum operating rule</strong>
 <p>
 If this card is missing, this site reads a sequential cross-regime result at the ceiling of the <strong>strongest directly supported live or destructive stage</strong> plus, at most, an <strong>unvalidated bridge hypothesis</strong>. It is not promoted to <strong>same-state</strong>, <strong>same-time</strong>, or <strong>maintenance-consistent</strong> evidence.
