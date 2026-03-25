@@ -5,7 +5,7 @@ description: "Publishes prior research collected through 50 decomposed questions
 article_type: "Evidence Bank"
 subtitle: "U0-U15 decomposition, current-status map, and prior literature (heavily cited)"
 author: Mind Uploading Research Project
-last_updated: "2026-03-25"
+last_updated: "2026-03-26"
 note: "Compiled from 50 worker tasks (curated for relevance)"
 audience: "Readers who want to browse a large literature set by unresolved issue rather than by paper count alone"
 reading_time: "20-35 min (about 7 min if you only read the statistics and U-map)"
@@ -18,7 +18,7 @@ page_highlights:
   - "The default entry path for technical and natural-science readers is fixed as U1/U7 -> bridge (U7/U8) -> U4 -> U13 -> U8 -> U3 -> U10."
   - "A paper-level technical-only shortlist is now linked at the front door so readers can jump from U labels to concrete anchors without scanning mixed archive pages first."
   - "For technical readers, U1/U7 now separate field-formation visibility from inverse-solver uncertainty and direct-validation class, so scalp reachability is checked before source recovery language."
-  - "For technical readers, destructive local ultrastructure is kept separate from living-human in vivo observability, and proxy class is now read separately from route maturity."
+  - "For technical readers, destructive local ultrastructure is kept separate from living-human in vivo observability, and the living-human route is now read on three axes: proxy class, operational maturity, and safe calibrator role."
   - "For technical readers, same-subject / same-brain papers now sit on their own bridge rung, so preservation route, regime continuity, and bridge validation are checked before same-state language."
   - "For technical readers, bridge risk is now treated as bridge-type-specific and family-specific, so live-to-fix transformation, waking-state drift, and sleep-crossing regime change are not compressed into one time penalty."
   - "For technical readers, neuromodulatory evidence is now split into mixed arousal proxy, local transmitter sensing, regional atlas prior, occupancy PET, and challenge-linked displacement rather than one human-state meter."
@@ -32,6 +32,7 @@ known_points:
   - "Technical readers who want concrete paper anchors first can now jump directly to the paper archive's 2025-2026 technical-only shortlist."
   - "For U1/U7, a source-imaging paper still has to pass a field-formation visibility check before inverse-method or validation gains are read as broader recoverability."
   - "Destructive local ultrastructure and living-human in vivo proxy routes do not increase the same evidential axis, even when both are called human measurement advances."
+  - "A living-human proxy route can calibrate one bounded hidden-state family without becoming a deployable or state-complete human readout."
   - "Same-subject or same-brain wording can still hide a sequential bridge problem, so preservation route, elapsed time, regime continuity, and bridge-validation rung remain separate evidence fields."
   - "Bridge risk is not summarized by elapsed time alone; live-to-fix transformation, waking-state drift, sleep-crossing homeostatic change, and multi-day proxy composition expose different hidden-state families first."
   - "For U3, neuromodulatory papers do not constrain one shared inferential object; mixed arousal proxies, local sensors, atlas priors, occupancy PET, and displacement PET still need to be read separately."
@@ -213,8 +214,50 @@ The remaining weakness in the literature route was that <strong>source validatio
 <div class="note-box">
 <strong>Read human measurement papers as their own evidence class</strong>
 <p>
-For technical reading, the first split is between <strong>destructive local structure</strong> and <strong>living-human in vivo proxy routes</strong>. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a>, <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">Dorkenwald et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> belong to the destructive-route class because preservation, registration, throughput, and proofreading burden materially change what the structural result means. By contrast, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> raise different <strong>living-human observability classes</strong> and still leave explicit latent-state ceilings. On this page, the in vivo papers are read on two axes at once: <strong>what variable class the route constrains</strong> and <strong>how specialized or deployment-limited the route still is</strong>. Those ceilings still include <strong>current post-transcriptional RNA-state</strong>, <strong>current phospho-signaling / second-messenger state</strong>, <strong>branch-local proteostasis / tag-capture</strong>, <strong>branch- or bouton-specific cargo-routing</strong>, and other cell-specific maintenance controllers that current human in vivo routes do not yet close.
+For technical reading, the first split is between <strong>destructive local structure</strong> and <strong>living-human in vivo proxy routes</strong>. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a>, <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">Dorkenwald et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> belong to the destructive-route class because preservation, registration, throughput, and proofreading burden materially change what the structural result means. By contrast, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> raise different <strong>living-human observability classes</strong> and still leave explicit latent-state ceilings. On this page, the in vivo papers are therefore read on <strong>three axes at once</strong>: <strong>what variable class the route constrains</strong>, <strong>how specialized or deployment-limited the route still is</strong>, and <strong>what bounded hidden-state family the route can safely calibrate</strong>. A regional SV2A atlas calibrates a <strong>synaptic-density comparison family</strong>, a five-metabolite <sup>1</sup>H-MRSI connectome calibrates a <strong>macro biochemical scaffold family</strong>, dynamic deuterium MRSI calibrates a <strong>kinetic energetic-rate family</strong>, specialized macro myelin / thermal papers calibrate <strong>bounded support-state proxy classes</strong>, and CSF-mobility / sleep-linked clearance papers calibrate <strong>clearance-support physiology</strong>. None of those routes closes <strong>current post-transcriptional RNA-state</strong>, <strong>current phospho-signaling / second-messenger state</strong>, <strong>branch-local proteostasis / tag-capture</strong>, <strong>branch- or bouton-specific cargo-routing</strong>, <strong>chloride-set-point state</strong>, or other cell-specific maintenance controllers. That is why this page now treats calibrator role as a separate evidence field rather than hiding it inside generic route maturity.
 </p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Anchor route</th>
+<th>Direct observable</th>
+<th>Safe calibrator role</th>
+<th>Still not closed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a></td>
+<td>Regional SV2A PET atlas in healthy humans</td>
+<td>Healthy baseline for regional synaptic-density proxy comparisons</td>
+<td>Current synaptic efficacy, branch-local weights, tag state</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a></td>
+<td>Within-subject five-metabolite parcel-similarity graph</td>
+<td>Macro biochemical scaffold / similarity calibration</td>
+<td>Kinetic flux, cell-specific controller state, branch-local metabolism</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a></td>
+<td>Dynamic deuterium MRI / MRSI glucose transport and metabolism</td>
+<td>Macro energetic-rate calibration under a kinetic model</td>
+<td>Branch-local ATP reserve, mitochondrial positioning, phospho state</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> / <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a></td>
+<td>Specialized macro myelin bilayer / thermal physiology proxies</td>
+<td>Bounded support-state proxy calibration for myelin or thermal class</td>
+<td>Per-axon timing controller, local operating temperature, maintenance logic</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> / <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a></td>
+<td>CSF mobility and sleep-linked clearance / efflux physiology</td>
+<td>Bounded clearance-support calibration</td>
+<td>Cell-specific immune controller state, synapse-resolved clearance control</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="note-box">
 <strong>Read same-subject / same-brain papers as bridge-limited evidence</strong>
