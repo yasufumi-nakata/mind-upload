@@ -600,7 +600,7 @@ If names such as <strong>field-formation wall</strong>, <strong>Fusion Card</str
 </tr>
 <tr>
 <td><strong>Calibration</strong></td>
-<td>For example, a prediction with 80% confidence is true about 80% of the time over the long term. This is the task of aligning the size and correctness of the scores. </td>
+<td>For example, a prediction with 80% confidence is true about 80% of the time over the long term. This is the task of aligning the size and correctness of the scores. In language decoding, however, the statement remains conditional on the declared candidate set, onset rule, or prompt scaffold unless a broader output space was explicitly audited.</td>
 </tr>
 <tr>
 <td><strong>Abstention / Reject Option</strong></td>

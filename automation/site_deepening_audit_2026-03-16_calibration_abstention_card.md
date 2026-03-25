@@ -94,8 +94,8 @@
 
 - Ovadia Y, Fertig E, Ren J, et al. Can You Trust Your Model's Uncertainty? Evaluating Predictive Uncertainty Under Dataset Shift. NeurIPS. 2019.
   - https://papers.nips.cc/paper_files/paper/2019/hash/8558cb408c1d76621371888657d2eb1d-Abstract.html
-- Han J, Huang Y, Wang Y. Model Assessment and Selection under Temporal Distribution Shift. ICML / PMLR. 2024.
-  - https://proceedings.mlr.press/v235/han24d.html
+- Han E, Huang C, Wang K. Model Assessment and Selection under Temporal Distribution Shift. ICML / PMLR. 2024.
+  - https://proceedings.mlr.press/v235/han24b.html
 - Shafiezadeh S, Mento G, Testolin A. Methodological Issues in Evaluating Machine Learning Models for Patient-Independent Epileptic Seizure Prediction. Mathematics. 2023.
   - https://doi.org/10.3390/math11071650
 - Shafiezadeh S, Duma GM, Mento G, et al. Calibrating Deep Learning Classifiers for Patient-Independent Electroencephalogram Seizure Forecasting. Sensors. 2024.
