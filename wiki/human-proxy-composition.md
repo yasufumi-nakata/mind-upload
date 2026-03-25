@@ -5,7 +5,7 @@ description: "Explains why recent human PET, MRSI, myelin, clearance, and multim
 article_type: Wiki
 subtitle: "Proxy-rich is not the same as same-subject state closure"
 author: Mind Uploading Research Project
-last_updated: "2026-03-21"
+last_updated: "2026-03-25"
 note: "Technical / natural science only"
 audience: "Readers who want a stricter technical reading of current human in vivo advances and why they still stop below state-complete language"
 reading_time: "12-18 minutes"
@@ -17,10 +17,12 @@ page_highlights:
   - "Model burden is part of the object: tracer kinetics, partial-volume correction, blood input functions, multicompartment models, and synchronization choices all change what the measurement means."
   - "Same-session multimodal acquisition reduces one mismatch, but it does not erase common physiological factors or modality-specific residuals by default."
   - "Same-subject or same-brain wording solves specimen identity, not state continuity; sequential bridges still need elapsed-time, regime-continuity, and deformation disclosure."
-  - "On this site, a proxy bundle is promoted only after a Human Proxy Composition Card discloses direct observable, same-subject relation, model burden, and residual latent-state ceiling."
+  - "Proxy class, operational maturity, and calibrator role are different axes: a route can be real and still calibrate only one bounded hidden-state family."
+  - "On this site, a proxy bundle is promoted only after a Human Proxy Composition Card discloses proxy class, direct observable, same-subject relation, operational maturity, calibrator role, model burden, and residual latent-state ceiling."
 known_points:
   - "Recent human-side advances reduce different uncertainty terms and are scientifically meaningful, but they are not one common measurement class."
   - "SV2A PET, MRSI similarity graphs, dynamic DMRSI, myelin bilayer MRI, and CSF / glymphatic routes all require route-specific interpretation."
+  - "Proxy class and operational maturity still do not tell you what the route safely calibrates, so calibrator role has to be stated separately."
   - "Simultaneous multimodal acquisition can reveal both common and divergent structure across modalities."
   - "Global or shared multimodal factors can still include autonomic or vascular physiology, not only the target neural variable."
   - "A same-subject bridge can still fail to preserve state continuity when acquisition order, elapsed time, or deformation correction are left implicit."
@@ -196,7 +198,7 @@ This page stays on the technology and natural-science side only. It does not dis
 <div class="note-box">
 <strong>SV2A PET is not a generic activity meter</strong>
 <p>
-The safe reading of SV2A PET is narrower than “synapses were measured, therefore task-state was measured.” <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> showed that quantification depends on tracer kinetics, model choice, and scan window. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built a valuable atlas of regional synaptic density in 33 healthy participants. But <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> found that in 25 healthy adults, SV2A density related to task-switching activation and switch cost, yet not to the N-back task in the same study. On this site, that means density-activity relationships remain <strong>task- and design-conditioned</strong>, not a universal license to read SV2A PET as moment-to-moment neural activity.
+The safe reading of SV2A PET is narrower than “synapses were measured, therefore task-state was measured.” <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> showed that quantification depends on tracer kinetics, model choice, and scan window. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built a valuable atlas of regional synaptic density in 33 healthy participants. <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> then showed that visual stimulation increased tracer influx K<sub>1</sub> but left binding measures unchanged, while <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a> found no detectable overall SV2A change 24 h after ketamine despite antidepressant response. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> further found that in 25 healthy adults, SV2A density related to task-switching activation and switch cost, yet not to the N-back task in the same study. On this site, that means density-activity or density-intervention relationships remain <strong>task-, timescale-, and design-conditioned</strong>, not a universal license to read SV2A PET as moment-to-moment neural activity or rapid plasticity.
 </p>
 </div>
 
@@ -214,13 +216,74 @@ The distinction is explicit in the primary paper. <a href="https://doi.org/10.10
 </p>
 </div>
 
+<section class="section" id="three-axes">
+<h2 class="section-title">Proxy class, operational maturity, and calibrator role are different questions</h2>
+<p>
+The remaining weakness after separating quantity type, spatial unit, and model burden is subtler. Readers can still think that once a route has a recognizable <strong>proxy class</strong> and looks technically real, the route must already calibrate a broad hidden-state family. The current primary literature does not support that shortcut. On this site, each human route is therefore read along <strong>three separate axes</strong>: <strong>what kind of proxy it is</strong>, <strong>how operationally mature it is</strong>, and <strong>what hidden-state family it safely calibrates</strong>.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Human route</th>
+<th>Proxy class on this site</th>
+<th>Operational maturity on this site</th>
+<th>Safe calibrator role</th>
+<th>What still remains outside calibration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SV2A PET</strong><br><a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>; <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a>; <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a></td>
+<td><strong>Regional synaptic-density proxy</strong></td>
+<td>Useful atlas and disease-comparison route, but not a moment-to-moment state meter.</td>
+<td>Constrains relatively slow regional synaptic-density contrasts and selected between-condition comparisons.</td>
+<td>Current release probability, postsynaptic efficacy, rapid plasticity, and branch-local controller state.</td>
+</tr>
+<tr>
+<td><strong>Whole-brain <sup>1</sup>H-MRSI metabolic similarity</strong><br><a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a></td>
+<td><strong>Macro biochemical similarity scaffold</strong></td>
+<td>Cohort-level whole-brain mapping with replication, but still a static similarity route.</td>
+<td>Constrains parcel-level biochemical organization and cross-region metabolic similarity structure.</td>
+<td>Kinetic metabolic rate, energetic reserve, axonal wiring, and local maintenance-controller identity.</td>
+</tr>
+<tr>
+<td><strong>Dynamic DMRSI</strong><br><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a></td>
+<td><strong>Specialized macro metabolic-rate imaging</strong></td>
+<td>High-burden proof-of-principle route with custom 7 T hardware and blood-input modeling.</td>
+<td>Constrains macro glucose-transport and metabolic-rate maps under an explicit kinetic model.</td>
+<td>Branch-local mitochondrial positioning, ATP nano-organization, and synapse-specific energetic reserve.</td>
+</tr>
+<tr>
+<td><strong>CSF mobility MRI</strong><br><a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a></td>
+<td><strong>Macro support-state / mobility proxy</strong></td>
+<td>Specialized 7 T route with a CSF-specific sequence and region-specific driver analyses.</td>
+<td>Constrains region-specific CSF mobility and its candidate physiological drivers.</td>
+<td>Net clearance flux, cell-specific immune control, and synapse-level maintenance state.</td>
+</tr>
+<tr>
+<td><strong>Sleep-linked glymphatic efflux to plasma</strong><br><a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a></td>
+<td><strong>Model-based human biomarker-efflux route</strong></td>
+<td>Intervention-backed crossover design, but still device-dependent and model-heavy.</td>
+<td>Constrains the sleep-linked directionality of brain-to-plasma biomarker transport under a multicompartment model.</td>
+<td>Spatial localization, local clearance topology, and cell-specific synaptic-maintenance controller identity.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Operational rule on this site</strong>
+<p>
+The safe ceiling of a proxy bundle is not set by the most impressive hardware description or by the number of rows listed. It is set by the <strong>narrowest well-supported calibrator role</strong> that survives matched-condition comparison, common-driver audit, and external calibration. Without that separation, <strong>proxy-rich</strong> is too easy to misread as <strong>broad hidden-state calibration</strong>.
+</p>
+</div>
+</section>
+
 <section class="section" id="multimodal">
 <h2 class="section-title">Same-session multimodal does not erase the composition problem</h2>
 <p>
 It is tempting to think that if several modalities are acquired simultaneously, the composition problem disappears. The current primary literature does not support that shortcut. Simultaneous acquisition narrows one class of timing mismatch, but it still leaves open <strong>what is shared</strong>, <strong>what remains modality-specific</strong>, and <strong>what common factors may come from physiology rather than the target neural variable</strong>.
 </p>
 <p>
-<a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> used simultaneous wide-field Ca<sup>2+</sup> imaging and fMRI-BOLD in mice and found that the modalities reveal both <strong>common</strong> and <strong>divergent</strong> features of network organization. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> used simultaneous EEG-PET-MRI in humans and found tightly coupled global hemodynamic and metabolic progressions during descent into NREM sleep, while also identifying <strong>two distinct network patterns</strong> rather than one uniform multimodal state. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> further showed that a major low-frequency global fMRI mode is substantially coupled to <strong>autonomic arousal physiology</strong>. On this site, that means same-session multimodal acquisition still needs a <a href="../verification.html#fusion-card">Fusion Card</a> and does not auto-upgrade a result to same-subject state closure. It also means a proxy bundle still has to disclose whether the apparent agreement survives a <strong>common-driver audit</strong> and whether the bundle adds anything beyond the strongest single row.
+<a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> used simultaneous wide-field Ca<sup>2+</sup> imaging and fMRI-BOLD in mice and found that the modalities reveal both <strong>common</strong> and <strong>divergent</strong> features of network organization. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> used simultaneous EEG-PET-MRI in humans and found tightly coupled global hemodynamic and metabolic progressions during descent into NREM sleep, while also identifying <strong>two distinct network patterns</strong> rather than one uniform multimodal state. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> further showed that a major low-frequency global fMRI mode is substantially coupled to <strong>autonomic arousal physiology</strong>. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> then showed in same-session quantitative fMRI that approximately <strong>40%</strong> of gray-matter voxels with significant ΔBOLD exhibited <strong>opposing</strong> oxygen-metabolism changes. On this site, that means same-session multimodal acquisition still needs a <a href="../verification.html#fusion-card">Fusion Card</a> and does not auto-upgrade a result to same-subject state closure. It also means a proxy bundle still has to disclose whether the apparent agreement survives a <strong>common-driver audit</strong>, whether the quantity types remain commensurable, and whether the bundle adds anything beyond the strongest single row.
 </p>
 </section>
 
@@ -287,6 +350,10 @@ If the claim depends on treating a sequential bridge as one latent-state sample,
 <td>Without naming the target variable, routes that constrain different objects are silently mixed.</td>
 </tr>
 <tr>
+<td><strong>Proxy class of each row</strong></td>
+<td>Prevents structural scaffold, density proxy, similarity scaffold, kinetic rate imaging, mobility proxy, and model-based efflux from being treated as the same kind of evidence.</td>
+</tr>
+<tr>
 <td><strong>Direct observable of each stack</strong></td>
 <td>Prevents density, similarity, rate, mobility, and efflux from being treated as synonyms.</td>
 </tr>
@@ -299,8 +366,24 @@ If the claim depends on treating a sequential bridge as one latent-state sample,
 <td>Kinetic models, blood inputs, high-field hardware, investigational devices, and specialized sequences all change the practical meaning of the result.</td>
 </tr>
 <tr>
+<td><strong>Operational maturity</strong></td>
+<td>Stops proof-of-principle, specialized high-field, and routine clinical-style routes from being silently treated as equally deployable or equally reproducible.</td>
+</tr>
+<tr>
+<td><strong>Calibrator role</strong></td>
+<td>Stops a real human route from being overread as if it calibrated every hidden-state family, rather than one bounded family such as regional density, parcel similarity, macro energetic rate, or support-state mobility.</td>
+</tr>
+<tr>
 <td><strong>External calibration or perturbation route</strong></td>
 <td>Needed to separate a shared statistical factor from a validated biological variable.</td>
+</tr>
+<tr>
+<td><strong>Common-driver / independence audit</strong></td>
+<td>Prevents cross-row agreement from being read as one solved latent variable when the bundle may still be dominated by autonomic, vascular, motion-linked, or shared-preparation factors.</td>
+</tr>
+<tr>
+<td><strong>Increment over the strongest single row</strong></td>
+<td>Stops row diversity from being mistaken for state closure when the bundle has not been shown to add anything beyond the strongest single route under matched conditions.</td>
 </tr>
 <tr>
 <td><strong>Residual latent-state ceiling</strong></td>
@@ -312,7 +395,7 @@ If the claim depends on treating a sequential bridge as one latent-state sample,
 <div class="note-box">
 <strong>Operational rule on this site</strong>
 <p>
-If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich but ceiling-limited human evidence</strong>. It is not promoted to <strong>same-subject cross-stack state identification</strong>, <strong>unique internal-state recovery</strong>, or <strong>state-complete readout</strong>. In particular, row diversity without a <strong>common-driver audit</strong> and without a clear <strong>increment over the strongest single row</strong> is not treated as real state closure. The public-facing implementation of that rule is the <a href="../verification.html#human-proxy-composition-card">Verification: Human Proxy Composition Card</a>.
+If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich but ceiling-limited human evidence</strong>. It is not promoted to <strong>same-subject cross-stack state identification</strong>, <strong>unique internal-state recovery</strong>, or <strong>state-complete readout</strong>. In particular, row diversity without explicit <strong>proxy class</strong>, <strong>operational maturity</strong>, <strong>calibrator role</strong>, <strong>common-driver audit</strong>, and a clear <strong>increment over the strongest single row</strong> is not treated as real state closure. The public-facing implementation of that rule is the <a href="../verification.html#human-proxy-composition-card">Verification: Human Proxy Composition Card</a>.
 </p>
 </div>
 </section>
@@ -325,6 +408,8 @@ If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich b
 <li>Bosch, C., Pacureanu, A., Patiño, J., et al. (2022). Functional and multiscale 3D structural investigation of brain tissue through correlative in vivo physiology, synchrotron microtomography and volume electron microscopy. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">doi:10.1038/s41467-022-30199-6</a></li>
 <li>Naganawa, M., Li, S., Nabulsi, N., et al. (2021). First-in-human evaluation of <sup>18</sup>F-SynVesT-1, a radioligand for PET imaging of synaptic vesicle glycoprotein 2A. <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">doi:10.2967/jnumed.120.249144</a></li>
 <li>Johansen, A., Beliveau, V., Colliander, E., et al. (2024). An in vivo high-resolution human brain atlas of synaptic density. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
+<li>Smart, K., Liu, H., Matuskey, D., et al. (2021). Binding of the synaptic vesicle radiotracer [<sup>11</sup>C]UCB-J is unchanged during functional brain activation using a visual stimulation task. <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">doi:10.1177/0271678X20946198</a></li>
+<li>Holmes, S. E., Scheinost, D., Finnema, S. J., et al. (2022). Imaging the effect of ketamine on synaptic density (SV2A) in the living brain. <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">doi:10.1038/s41380-022-01465-2</a></li>
 <li>Shatalina, E., Onwordi, E. C., Whitehurst, T., et al. (2024). The relationship between SV2A levels, neural activity, and cognitive function in healthy humans: A [<sup>11</sup>C]UCB-J PET and fMRI study. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">doi:10.1162/imag_a_00190</a></li>
 <li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
 <li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
@@ -334,6 +419,7 @@ If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich b
 <li>Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
 <li>Chen, J. E., Lewis, L. D., Coursey, S. E., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
 <li>Bolt, T. S., et al. (2025). Autonomic physiological coupling of the global fMRI signal. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">doi:10.1038/s41593-025-01945-y</a></li>
+<li>Epp, S. M., Castrillón, G., Yuan, B., et al. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Attardo, A., Fitzgerald, J. E., &amp; Schnitzer, M. J. (2015). Impermanence of dendritic spines in live adult CA1 hippocampus. <a href="https://doi.org/10.1038/nature14467" target="_blank">doi:10.1038/nature14467</a></li>
 </ol>
