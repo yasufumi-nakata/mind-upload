@@ -1792,93 +1792,156 @@ The <a href="#observability-budget">Observability Budget</a> fixes <strong>what 
 <section class="section" id="state-completeness-gate">
 <h2 class="section-title">State variable integrity gate</h2>
 <p>
-In our March 2026 primary-literature audit, we reconfirmed that there are at least thirteen loose state classes between <strong>“having a wiring diagram”</strong> and <strong>“being able to behave generatively”</strong>. In addition to cell types, synapses, delays, neuromodulation, and glia, we now also treat <strong>activity-dependent transcription / chromatin state</strong>, <strong>post-transcriptional RNA-state</strong>, <strong>phospho-signaling / second-messenger state</strong>, <strong>intrinsic excitability / homeostatic set points</strong>, <strong>local proteostasis / synaptic-tagging state</strong>, <strong>perisynaptic ECM / PNN state</strong>, <strong>ionic milieu / chloride homeostasis</strong>, and <strong>shared extracellular / electrical state</strong> as independent classes. Therefore, on this site, we do not accept <strong>edge-list submissions alone</strong> as a condition for passing L2 or above.
+The remaining weakness in this gate was not the absence of latent-state language, but that the table still compressed families that the rest of this site already audits separately. The current public rule is narrower. After a wiring diagram, this site still separates <strong>cell-type label</strong>, <strong>current synaptic efficacy / short-term state</strong>, <strong>seventeen maintenance-state families</strong>, and a <strong>separate shared extracellular / electrical-state class</strong>. In particular, it no longer collapses <strong>relative excitability</strong> into <strong>firing-rate recovery</strong>, <strong>sleep / wake renormalization</strong> into <strong>sleep architecture / replay-coupling</strong>, <strong>myelin / oligodendrocyte timing support</strong> into one scalar delay, <strong>mixed arousal proxy</strong> into <strong>transmitter-specific state</strong>, or <strong>astrocyte-state</strong> into <strong>clearance / immune support</strong>. Therefore, on this site, <strong>edge-list submissions alone</strong> do not pass L2 or above, and any claim that depends on one of these families has to measure it, perturb it, externally calibrate it, or leave it explicitly latent.
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>State class</th>
-<th>Why wiring diagram alone is not enough</th>
-<th>Range that can be said in case of missing</th>
+<th>State family</th>
+<th>What remains variable</th>
+<th>Shortcut to block</th>
+<th>Ceiling if unmeasured</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Cell type label</strong></td>
-<td>Even with the same adjacency relationship, different transcript types have different binding motifs, synaptic properties, and myelination tendencies. </td>
-<td>Although useful as a structural atlas or candidate scaffold, it is not a sufficient condition for functional reproduction. </td>
+<td>Even on similar adjacency graphs, different transcriptomic classes can carry different binding motifs, synaptic properties, and myelination tendencies. </td>
+<td>If the graph is known, functional identity is almost fixed too. </td>
+<td>Structural atlas or candidate scaffold only; not a sufficient condition for functional reproduction. </td>
+</tr>
+<tr>
+<td><strong>Current synaptic efficacy / short-term state</strong></td>
+<td>Release probability, receptor state, short-term depression / facilitation, and recent activity history still vary on the same edge list. </td>
+<td>If an edge exists, the current synaptic state is already fixed. </td>
+<td>Static wiring or atlas language only; not intervention, phase, or stability-complete claims. </td>
+</tr>
+<tr>
+<td><strong>Relative excitability / allocation bias</strong></td>
+<td>Which neurons are more likely to win allocation or show memory-linked firing gain can still change on the same graph and cell-type background. </td>
+<td>If cell type matches, allocation bias is already fixed. </td>
+<td>Same-session fit only; allocation and engram-bias claims remain latent or species-limited. </td>
+</tr>
+<tr>
+<td><strong>AIS / ion-channel configuration</strong></td>
+<td>Threshold, gain, rebound, AIS geometry, and channel distribution remain variable even when graph and cell type are held fixed. </td>
+<td>A short activity record already fixes the same input-output rule. </td>
+<td>No direct response-law or perturbation-generalization claim without local assay or explicit abstention. </td>
+</tr>
+<tr>
+<td><strong>Firing-rate set point / recovery controller</strong></td>
+<td>Where activity returns after perturbation, with what time constant, and through which compensatory route remains another variable. </td>
+<td>If the average firing rate returned, the internal controller returned too. </td>
+<td>Cross-day, recovery, and long-horizon maintenance claims remain limited without a degradation / recovery log. </td>
 </tr>
 <tr>
 <td><strong>Activity-dependent transcription / chromatin / epigenetic state</strong></td>
-<td>Even with the same graph and cell type, allocation eligibility, late memory-stabilization programs, and locus-specific plasticity rules can still differ over hours to weeks. </td>
-<td>Static atlas labels or one-shot DEG lists stay as identity/context clues; memory-stabilization controller remains latent unless temporal or causal evidence is shown. </td>
+<td>Allocation eligibility, late stabilization programs, and locus-specific plasticity rules can still differ over hours to weeks on the same graph and cell-type background. </td>
+<td>A static atlas label or one-shot DEG list already fixes the current plasticity-competent program. </td>
+<td>Identity / context clue only; memory-stabilization controller remains latent unless temporal or causal evidence is shown. </td>
 </tr>
 <tr>
 <td><strong>Post-transcriptional RNA-state</strong></td>
-<td>Even with the same graph, cell type, and gene-level transcript counts, alternative splicing, m6A-dependent translation / degradation, and RNA-editing ratios can still change receptor composition, downstream transcriptional control, plasticity rules, and maintenance behavior. </td>
-<td>Stop treating gene-level abundance or DEG signatures as if isoform, m6A, and RNA-editing control were fixed; keep RNA-state explicit as latent, perturbed, externally calibrated, or isoform-resolved. </td>
+<td>Isoform choice, m6A-dependent translation / degradation, and RNA-editing ratios can still change receptor composition and maintenance behavior on the same gene-count background. </td>
+<td>Gene-level transcript abundance already fixes isoform, m6A, and RNA-editing control. </td>
+<td>Keep RNA-state explicit as latent, perturbed, externally calibrated, or isoform-resolved. </td>
 </tr>
 <tr>
 <td><strong>Phospho-signaling / second-messenger state</strong></td>
-<td>Even with the same graph, transcript state, and bulk protein abundance, phosphosite occupancy, kinase/phosphatase balance, and compartment-specific second-messenger nanodomains can still change plasticity expression and controller state. </td>
-<td>Stop treating transcriptomics, proteomics, or nominal weights as if the active phospho-controller were fixed; keep phospho-signaling explicit as latent, perturbed, externally calibrated, or phosphosite-resolved. </td>
+<td>Phosphosite occupancy, kinase/phosphatase balance, and compartment-specific signaling nanodomains can still change plasticity expression on the same transcript or bulk-protein background. </td>
+<td>Transcriptomics, proteomics, or nominal weights already fix the active phospho-controller. </td>
+<td>Keep phospho-signaling explicit as latent, perturbed, externally calibrated, or phosphosite-resolved. </td>
 </tr>
 <tr>
-<td><strong>Intrinsic excitability/homeostasis/maintenance state</strong></td>
-<td>Even with the same graph and cell type, the response to the same input and long-term recovery will differ if the threshold, gain, firing-rate return destination, sleep/wake-dependent renormalization, and compensation are different. </td>
-<td>Even if there is short-term activity matching, cross-day stability, long-term stability, and memory allocation remain in the latent state. </td>
+<td><strong>Sleep / wake renormalization</strong></td>
+<td>When synaptic, phospho, and network regimes are reset or accumulated across wake and sleep remains another maintenance variable. </td>
+<td>Similar wake activity or same-day decode means the next-day maintenance route was also matched. </td>
+<td>Cross-day stability remains unresolved if sleep-state and overnight recovery are unmeasured. </td>
 </tr>
 <tr>
-<td><strong>Synaptic efficiency/short-term state</strong></td>
-<td>Weight, emission probability, and plastic change cannot be determined solely by the presence or absence of edges. </td>
-<td>It is possible to describe static wiring, but it cannot claim L2 intervention prediction or L3 stability control. </td>
+<td><strong>Sleep architecture / replay-coupling state</strong></td>
+<td>Slow oscillation, spindle, ripple, and consolidation-permissive NREM alignment can still differ even when sleep occurred. </td>
+<td>A night of sleep or a delivered cue already fixes the consolidation mechanism. </td>
+<td>Overnight retention or TMR gain remains replay-blind or proxy-bounded if architecture and event timing are unmeasured. </td>
+</tr>
+<tr>
+<td><strong>Myelin / oligodendrocyte timing support</strong></td>
+<td>Conduction velocity, node / internode geometry, periaxonal structure, and axonal support can still alter phase and synchrony on the same graph. </td>
+<td>Delay can be absorbed into one scalar constant. </td>
+<td>Timing-sensitive and long-term recovery claims remain proxy-bounded without explicit timing-support audit. </td>
 </tr>
 <tr>
 <td><strong>Local proteostasis / synaptic-tagging state</strong></td>
-<td>Even with the same graph and current weights, late-LTP capture, branch-specific stabilization, and the balance of local translation/degradation/autophagy can still differ. </td>
-<td>Stop treating late stabilization, cross-event capture, or reconsolidation as closed, and keep the tag/proteostasis route explicit as latent or externally calibrated. </td>
+<td>Tagged branches can still differ in PRP capture, translation / degradation / autophagy balance, and late stabilization under turnover. </td>
+<td>Current weight or transcriptomic program already fixes the late-stabilization route. </td>
+<td>Late stabilization, reconsolidation, and cross-event capture remain latent without a tag / proteostasis route. </td>
 </tr>
 <tr>
 <td><strong>Cargo-transport / cytoskeletal trafficking state</strong></td>
-<td>Even with the same graph, current weights, and local translation capacity, the branch/spine/bouton-specific delivery and retention of receptors, endosomes, mRNA cargoes, mitochondria, and presynaptic components can still differ. </td>
-<td>Stop treating compartment-specific stabilization, receptor localization, or synaptogenesis as fixed, and keep cargo-transport state explicit as latent, perturbed, externally calibrated, or locally measured. </td>
+<td>Receptors, endosomes, RNA cargoes, mitochondria, and presynaptic components can still be delivered or retained differently across branches, spines, and boutons. </td>
+<td>Local translation or ATP support already implies correct compartmental delivery. </td>
+<td>Compartment-specific stabilization and synaptogenesis remain latent without explicit cargo-route evidence. </td>
 </tr>
 <tr>
 <td><strong>Perisynaptic ECM / PNN state</strong></td>
-<td>Even with the same synapse graph, extracellular matrix organization can change receptor mobility, inhibitory plasticity, memory-update resistance, and the opening or closing of adult plasticity windows. </td>
-<td>Stop treating adult plasticity, reconsolidation resistance, or inhibitory stabilization as closed, and keep ECM / PNN state explicit as latent or externally calibrated. </td>
+<td>Matrix organization can still change receptor mobility, inhibitory plasticity, memory-update resistance, and adult plasticity windows on the same synapse graph. </td>
+<td>Synapse count or weight already fixes the stabilization gate. </td>
+<td>Adult plasticity and stabilization claims remain limited if ECM / PNN state is left latent. </td>
 </tr>
 <tr>
 <td><strong>Ionic milieu / chloride homeostasis</strong></td>
-<td>Even with the same graph, cell type, and nominal weights, local chloride set point, transporter state, and extracellular ion composition can still change inhibitory sign, network gain, rhythm stability, and state transitions. </td>
-<td>Stop treating inhibition sign, rhythm stability, or state transitions as fixed, and keep ionic / chloride state explicit as latent, perturbed, externally calibrated, or only coarsely proxied. </td>
+<td>Local chloride set point, transporter state, and extracellular ion composition can still change inhibitory sign, gain, rhythm stability, and state transitions. </td>
+<td>Graph, cell type, and nominal weights already fix inhibitory polarity and rhythm regime. </td>
+<td>Inhibition-sign and state-transition claims remain limited unless ionic / chloride state is measured, perturbed, or externally calibrated. </td>
 </tr>
 <tr>
-<td><strong>Shared extracellular / electrical state</strong></td>
-<td>Even with the same chemical graph, gap-junction coupling, endogenous electric fields, and local inhibitory driving force can still change fast synchrony, oscillatory coordination, spike timing, and state-switch thresholds. </td>
-<td>Stop treating fast synchrony, oscillatory coordination, or electrical-state regime as fixed, and keep electrical coupling / field state explicit as latent, perturbed, externally calibrated, or locally measured. </td>
+<td><strong>Thermal-state / tissue operating temperature</strong></td>
+<td>Regional tissue temperature and local heating burden can still shift membrane kinetics, field-potential amplitude, and sequence timing without rewiring. </td>
+<td>Once graph and timing proxy are known, temperature is just fixed background. </td>
+<td>Field-potential, membrane-kinetic, and sequence-timing claims remain limited if thermal-state is unmeasured. </td>
 </tr>
 <tr>
-<td><strong>Delay / timing-state</strong></td>
-<td>Even with the same graph, different myelin thickness, node/internode geometry, periaxonal structure, or glial control can change conduction speed, synchrony, and phase. </td>
-<td>Stop claiming closed loops, phase consistency, or timing-complete reconstruction, and make timing-state uncertainty explicit. </td>
+<td><strong>Neuromodulatory specificity / transmitter context</strong></td>
+<td>Mixed arousal proxy, local transmitter signal, receptor-family prior, ligand occupancy, and challenge-limited release route are different inferential objects. </td>
+<td>Pupil, HRV, or one behavior-state covariate already fixes transmitter-specific internal state. </td>
+<td>Keep the result at covariate, regional prior, or ligand-limited proxy level rather than whole-brain neuromodulatory ground truth. </td>
 </tr>
 <tr>
-<td><strong>Neural modification field</strong></td>
-<td>The states of alertness and learning rate cannot be restored from static wiring, and pupil diameter and HRV remain as coarse proxies. </td>
-<td>We do not insist on transmitter-specific internal states, but treat them as covariates and stratification factors. </td>
+<td><strong>Bioenergetic / mitochondrial state</strong></td>
+<td>Local ATP supply, mitochondrial positioning, fission / fusion, ATP-synthase organization, and redox reserve remain another constraint layer. </td>
+<td>Generic metabolic or glial proxy already fixes local neuronal energy state. </td>
+<td>Repeated-burst reliability, dendritic plasticity, and energetic mechanism claims remain latent without explicit bioenergetic audit. </td>
 </tr>
 <tr>
 <td><strong>Astrocyte / glial-state</strong></td>
-<td>Astrocyte network and ensemble state can causally influence transmitter integration, memory retrieval, multiday stabilization, and fear-state representations, and therefore cannot be collapsed into generic metabolic background. </td>
-<td>Recall, reconsolidation, and long-horizon stability stay partial-model claims unless astrocyte-state is measured, perturbed, or explicitly left latent with a species-limited ceiling. </td>
+<td>Astrocyte network and ensemble state can causally influence local transmitter integration, recall, multiday stabilization, and fear-state representations. </td>
+<td>A neuronal engram fit already fixes the relevant slow glial support state. </td>
+<td>Recall, reconsolidation, and long-horizon stability stay partial-model claims unless astrocyte-state is measured, perturbed, or left explicit as latent. </td>
+</tr>
+<tr>
+<td><strong>Clearance / immune support</strong></td>
+<td>Meningeal lymphatic drainage, CSF-interstitial exchange, microglia-linked support, and protein / metabolite clearance remain another multiday support layer. </td>
+<td>Clearance is passive housekeeping unrelated to maintenance consistency. </td>
+<td>Human evidence stays macro support-state proxy; local immune-controller or synaptic-maintenance claims remain latent. </td>
+</tr>
+<tr>
+<td><strong>Shared extracellular / electrical state</strong></td>
+<td>Gap-junction coupling, endogenous electric fields, and local inhibitory driving force can still change fast synchrony, oscillatory coordination, and state-switch thresholds. </td>
+<td>Chemical connectome plus nominal inhibition already fixes the electrical regime. </td>
+<td>Fast synchrony and oscillatory-coordination claims remain limited unless electrical-state is measured, perturbed, or externally calibrated. </td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
 <strong>Practical rules here</strong>
 <p>
-connectome-complete does not mean<strong>emulation-complete</strong>. Detailed primary literature and the technical basis for which state variables should be included in the minimum submission are summarized in <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams alone are not enough</a>. The newly emphasized issues of <strong>activity-dependent transcription / chromatin state</strong>, <strong>post-transcriptional RNA-state</strong>, <strong>local proteostasis / synaptic-tagging state</strong>, <strong>cargo-transport / cytoskeletal trafficking state</strong>, <strong>astrocyte / glial-state</strong>, and <strong>intrinsic excitability/homeostasis/maintenance state</strong> are discussed in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.
+connectome-complete does not mean <strong>emulation-complete</strong>. This gate now mirrors the site's current public taxonomy: a connectome can be augmented by cell labels, synaptic snapshots, or one proxy route without closing the seventeen maintenance-state families or the separate shared electrical-state class. The detailed route-card rules for transcription, RNA, phospho-signaling, intrinsic excitability, sleep, myelin, ECM, ionic, thermal, neuromodulatory, bioenergetic, cargo, astrocyte, clearance, and proteostasis live in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>; the separate electrical-state rule lives in <a href="wiki/connectome-is-not-enough.html#electrical-state-route-card">Wiki: electrical-state route card</a>.
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-25 addendum: this gate now follows family-specific primary literature</strong>
+<p>
+The correction here is evidence-driven, not editorial. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a> distinguishes firing-rate recovery control from other excitability routes, <a href="https://doi.org/10.1038/s41467-021-23520-2" target="_blank">Schreiner et al. (2021)</a>, <a href="https://doi.org/10.1038/s41467-024-49572-8" target="_blank">Schreiner et al. (2024)</a>, and <a href="https://doi.org/10.1016/j.neuron.2025.03.020" target="_blank">Deng et al. (2025)</a> distinguish sleep architecture / replay-coupling from sleep duration alone, <a href="https://doi.org/10.1038/ncomms9073" target="_blank">Seidl et al. (2015)</a> and <a href="https://doi.org/10.1016/j.cell.2019.11.039" target="_blank">Cohen et al. (2020)</a> distinguish myelin / periaxonal timing support from one scalar delay, <a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> and <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> distinguish mixed arousal proxies from transmitter-specific priors, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a> keeps thermal-state separate from generic timing or vascular covariates, <a href="https://doi.org/10.1016/j.cell.2018.12.013" target="_blank">Rangaraju et al. (2019)</a> distinguishes local bioenergetic / mitochondrial support from generic glial background, and <a href="https://doi.org/10.1038/nature14432" target="_blank">Louveau et al. (2015)</a>, <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Kim et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> distinguish clearance / immune support from astrocyte-state and from direct local neural readout. Therefore, this page no longer compresses these families into umbrella rows such as <strong>intrinsic excitability/homeostasis/maintenance state</strong> or <strong>neural modification field</strong>.
 </p>
 </div>
 <div class="note-box">
@@ -1982,6 +2045,18 @@ The weakness found in this re-audit was that by simply listing the state variabl
 <td>A static atlas or one-shot DEG list remains identity/context annotation or a time-stamped clue, and does not become ground truth of current plasticity state. </td>
 </tr>
 <tr>
+<td><strong>+ sleep / wake renormalization audit</strong></td>
+<td>Compare the same baseline against a model or analysis that adds controlled sleep / wake history, deprivation or recovery status, and explicit overnight renormalization logging under the same held-out cross-day condition. </td>
+<td>You can state more narrowly how much cross-day stability or recovery prediction improves once sleep-dependent reset / accumulation is treated explicitly. </td>
+<td>Same-day fit remains same-day fit; it does not become next-day maintenance evidence. </td>
+</tr>
+<tr>
+<td><strong>+ sleep architecture / replay audit</strong></td>
+<td>Compare the same baseline against event-defined slow-oscillation / spindle / ripple or TMR timing features under the same held-out overnight consolidation condition, and disclose gains separately. </td>
+<td>You can state more narrowly how much replay-consistent retention or timing-specific consolidation is explained once architecture and replay-coupling are modeled explicitly. </td>
+<td>A night of sleep or average overnight gain remains a temporal outcome, not replay-consistent mechanism evidence. </td>
+</tr>
+<tr>
 <td><strong>+ local proteostasis / synaptic-tagging audit</strong></td>
 <td>Compare a synapse- or transcription-aware baseline against the same model with tag/PRP capture measurements, local translation/degradation/autophagy perturbation, or branch-local tag proxy under the same held-out stabilization or reconsolidation condition, and disclose gains separately. </td>
 <td>You can state more narrowly how much late stabilization, branch-local persistence, or cross-event capture improves once the local proteostasis route is treated explicitly. </td>
@@ -2012,16 +2087,34 @@ The weakness found in this re-audit was that by simply listing the state variabl
 <td>Human myelin maps or tract-speed estimates remain macro timing proxies; without external calibration they do not become per-axon timing ground truth. </td>
 </tr>
 <tr>
+<td><strong>+ thermal-state audit</strong></td>
+<td>Compare the same baseline against local temperature measurement, heating / cooling perturbation, device-heating control, or externally calibrated human thermometry under the same held-out timing or field-potential condition, and disclose gains separately. </td>
+<td>You can state more narrowly how much membrane-kinetic, sequence-timing, or field-potential prediction improves once thermal-state is treated explicitly. </td>
+<td>Temperature remains a hidden covariate or macro proxy; it does not become a fixed background constant. </td>
+</tr>
+<tr>
 <td><strong>+ neuromodulatory route audit</strong></td>
 <td>Compare the same baseline against mixed arousal proxy, local transmitter sensor, receptor / transporter atlas, occupancy PET, or release-sensitive displacement PET under the same held-out state transition, and report ligand / drug / challenge / dose / time-window plus abstention separately. </td>
 <td>You can state more narrowly how much a selected transmitter-linked covariate, regional receptor prior, or challenge-limited release proxy improved prediction or stratification. </td>
 <td>Mixed proxy remains a covariate, receptor atlas remains a regional prior, occupancy PET remains a ligand- and dose-limited target-engagement proxy, and displacement PET remains a receptor- and challenge-limited release proxy rather than whole-brain neuromodulatory ground truth. </td>
 </tr>
 <tr>
-<td><strong>+ glial / slow-state</strong></td>
-<td>Show gains in recovery, plasticity, and perturbation aftermath on the order of minutes, and include species differences and cell-type dependence. </td>
-<td>Some parts of slow network state and plasticity can be read as conditional models involving glia. </td>
-<td>Neuron-only approximations keep limited applicability and demote long-term stability claims. </td>
+<td><strong>+ bioenergetic / mitochondrial audit</strong></td>
+<td>Compare the same baseline against local ATP-linked measurements, mitochondrial-position or fission / fusion perturbation, or externally calibrated macro energetic imaging under the same held-out repeated-burst or plasticity condition. </td>
+<td>You can state more narrowly how much reliability, dendritic plasticity, or energetic constraint prediction improves once bioenergetic state is treated explicitly. </td>
+<td>Generic metabolic support remains a coarse proxy and does not become local mitochondrial ground truth. </td>
+</tr>
+<tr>
+<td><strong>+ astrocyte / glial-state audit</strong></td>
+<td>Compare the same baseline against astrocyte-network readout, astrocyte-specific perturbation, or a named human astrocyte proxy route under the same held-out recall, stabilization, or fear-state condition, and disclose gains separately. </td>
+<td>You can state more narrowly how much recall, reconsolidation, or multiday stabilization depends on astrocyte-state once it is modeled explicitly. </td>
+<td>Neuron-only or generic glial language remains a partial model and does not become astrocyte-state-complete evidence. </td>
+</tr>
+<tr>
+<td><strong>+ clearance / immune-support audit</strong></td>
+<td>Compare the same baseline against lymphatic / microglial perturbation, CSF-mobility or biomarker-efflux route, or another named clearance proxy under the same held-out recovery or maintenance condition, and disclose gains separately. </td>
+<td>You can state more narrowly how much multiday recovery or support-state prediction improves once clearance / immune support is treated explicitly. </td>
+<td>Human clearance evidence remains macro support-state proxy and does not become local immune-controller ground truth. </td>
 </tr>
 <tr>
 <td><strong>+ excitability / homeostatic recovery log</strong></td>
