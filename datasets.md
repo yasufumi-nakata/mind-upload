@@ -5,7 +5,7 @@ description: "From the selection of public data (mainly EEG) to the minimum loop
 article_type: Resource
 subtitle: "Connect ``what to use'' and ``how to reproduce'' in the shortest route without separating them."
 author: Mind Uploading Research Project
-last_updated: "2026-03-22"
+last_updated: "2026-03-25"
 note: "Curated List + L0 Practice"
 audience: "People who are wondering which public data to start with, people who are looking for an L0 practice board"
 reading_time: "12-20 minutes"
@@ -21,6 +21,7 @@ page_highlights:
   - "Cross-session and adaptation labels are not yet temporal-validity claims; state annotation, fixed decoder interval, recalibration burden, and transfer ceiling still have to be disclosed separately."
   - "Even when the score is numerically the same, you still have to separate the target neural variable from eye movement, EMG, behavior, feedback routes, subject / session fingerprint, and acquisition-distribution shortcuts such as site / device / reference / electrode layout."
   - "Even when foundation / self-supervised EEG models are used, pretraining-corpus and harmonization audits are still required."
+  - "Official challenge rules, submission constraints, and later postmortems can change what a benchmark score means, so benchmark provenance is part of the dataset / benchmark card rather than administrative detail."
   - "Reference system, channel map, electrode layout, and device protocol are not cosmetic metadata; they can move scores and belong in the dataset card."
   - "The ultimate goal is to make it possible for a third party to rerun the result under the same conditions."
   - "The L0 artifact pack now follows this page's stricter site rule: event fidelity, label provenance, acquisition-distribution summary, derivative lineage, and a stopping claim are required alongside version/BIDS/QC/split/baseline."
@@ -32,6 +33,7 @@ known_points:
   - "Cross-session accuracy and cross-session adaptation still do not say whether a fixed decoder survived, how much recalibration was needed, or what transfer ceiling remains."
   - "A same-day score may reflect movement / EOG / EMG / feedback routes, subject / session fingerprint, or acquisition-distribution shortcuts rather than the target signal."
   - "Foundation-model improvements are not comparable unless the pretraining corpus, channel-mismatch handling, acquisition-distribution summary, and adaptation regime are disclosed."
+  - "A benchmark name alone is not enough; version, split / randomization rule, hidden grouping, extra-data policy, pretrained-checkpoint policy, and inference-stage restrictions can all change what a score means."
   - "Reference system, device, electrode layout, and filter chain can change what looks like the same EEG benchmark."
   - "With only starter data and no individual MRI or invasive ground truth, we cannot make strong claims about improved ESI accuracy."
   - "At source-imaging stage C, named validation class still matters because stimulation ground truth, simultaneous SEEG, and clinical outcome do not answer the same error question."
@@ -62,6 +64,9 @@ wiki_links:
   - label: "Wiki: state/trait/drift"
     url: "/wiki/state-trait-and-drift.html"
     description: "Organize longitudinal reading to avoid confusing same-day score and cross-day stability."
+  - label: "Wiki: EEG foundation models and pretraining"
+    url: "/wiki/eeg-foundation-models.html"
+    description: "Use this page when benchmark rules, pretraining corpora, and leaderboard interpretation start to blur together."
   - label: "Wiki: Basics of multimodal integration"
     url: "/wiki/multimodal-integration-basics.html"
     description: "We will explain from the basics what can be supplemented by adding to EEG."
@@ -407,9 +412,16 @@ This site previously stopped more clearly at <strong>subject / session fingerpri
 </div>
 
 <div class="note-box">
+<strong>2026-03-25 addendum: benchmark governance is part of the benchmark</strong>
+<p>
+The next practical weakness on this page was that <strong>split / leak / harmonization</strong> were visible, while <strong>benchmark governance</strong> could still be treated as administrative detail. The current primary and official sources do not support that shortcut. The official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) homepage</a> states that the original challenge preprint became outdated during execution and that the website plus starter kit should be treated as current. The official <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a> require disclosure of <strong>additional pretraining datasets</strong>, <strong>pretrained models / fine-tuning method</strong>, <strong>code submission at inference stage</strong>, and a <strong>single-GPU 20 GB</strong> inference budget. The official <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> then disclosed that <strong>Challenge 2 samples had not been randomized</strong>, allowing contiguous-trial same-subject structure to affect what the ranking meant and forcing separate awards. That warning is aligned with benchmark-side primary sources: <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a> argued that inconsistent evaluation protocols make cross-model EEG-FM comparisons unreliable, and <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a> showed across <strong>12 open-source foundation models</strong> and <strong>13 datasets</strong> that ranking depends materially on transfer regime and benchmarking choices. Therefore, when this site reads a leaderboard, challenge result, or foundation-model benchmark, the card must also name <strong>benchmark version</strong>, <strong>split / randomization rule</strong>, <strong>hidden grouping structure</strong>, <strong>extra-data / pretrained-checkpoint policy</strong>, <strong>adaptation regime</strong>, <strong>inference-stage restrictions</strong>, and <strong>later organizer postmortems</strong>. If those fields are missing, we treat the result only as a qualified benchmark snapshot, not as a stable measure of portable EEG generalization.
+</p>
+</div>
+
+<div class="note-box">
 <strong>Site rule from this section</strong>
 <p>
-From this section onward, dataset cards and baseline results must report at least <strong>(1) evaluation family</strong>, <strong>(2) the independent hold-out unit</strong>, <strong>(3) raw-recording / window ancestry</strong>, <strong>(4) subject / session / site / device / reference-system / electrode-layout disjointness together with metadata-only baselines</strong>, <strong>(5) the channel-map / reference / sample-rate / filter harmonization log</strong>, <strong>(6) whether target-session, target-subject, or target-site data were used</strong>, <strong>(7) recalibration amount and timing</strong>, and <strong>(8) a stopping claim</strong>. If the claim spans more than one session or day, it must additionally disclose the site's <strong>Temporal Validity</strong> fields: <strong>state annotation</strong>, <strong>fixed decoder interval</strong>, <strong>recalibration burden</strong>, and <strong>transfer ceiling</strong>. Scores without this context will be treated as limited L1 decode results or fingerprint-unresolved / acquisition-distribution-unresolved classifiers, not evidence of long-term stability or deployability.
+From this section onward, dataset cards and baseline results must report at least <strong>(1) evaluation family</strong>, <strong>(2) the independent hold-out unit</strong>, <strong>(3) raw-recording / window ancestry</strong>, <strong>(4) subject / session / site / device / reference-system / electrode-layout disjointness together with metadata-only baselines</strong>, <strong>(5) the channel-map / reference / sample-rate / filter harmonization log</strong>, <strong>(6) whether target-session, target-subject, or target-site data were used</strong>, <strong>(7) recalibration amount and timing</strong>, <strong>(8) for leaderboard or challenge claims, benchmark provenance including version, split / randomization rule, hidden grouping, extra-data / checkpoint policy, inference-stage restrictions, and postmortem disclosures</strong>, and <strong>(9) a stopping claim</strong>. If the claim spans more than one session or day, it must additionally disclose the site's <strong>Temporal Validity</strong> fields: <strong>state annotation</strong>, <strong>fixed decoder interval</strong>, <strong>recalibration burden</strong>, and <strong>transfer ceiling</strong>. Scores without this context will be treated as limited L1 decode results, fingerprint-unresolved / acquisition-distribution-unresolved classifiers, or benchmark-governance-unresolved leaderboards rather than evidence of long-term stability or deployability.
 </p>
 </div>
 </section>
@@ -704,9 +716,17 @@ A public inverse-problem comparison on this site must now disclose at least <str
 <li><strong>Annotation provenance:</strong> Did you clearly indicate whether the label came from an annotation channel, manual scoring, or a report-derived rule?</li>
 <li><strong>QC:</strong>Are noise, defects, and artifacts quantified?</li>
 <li><strong>Comparison:</strong>Is there a baseline and can be compared using the same metrics as the evaluation family</li>
+<li><strong>Benchmark provenance:</strong>If the result comes from a challenge or leaderboard, are benchmark version, split / randomization, hidden grouping, extra-data policy, pretrained-checkpoint policy, inference-stage restrictions, and later postmortems fixed?</li>
 <li><strong>Inverse-problem governance:</strong>If source imaging is compared, are validation class, source regime, geometry/control sweep, and inter-method disagreement disclosed before declaring a winner?</li>
 <li><strong>Rebuttal evidence:</strong>Are there data leak tests, counterfactual tests, and records of failures</li>
 </ul>
+</div>
+
+<div class="note-box">
+<strong>Official benchmark postmortems are part of reproducibility, not footnotes</strong>
+<p>
+In practical work, a benchmark page, rules page, submission constraint, and final leaderboard can each fix a different part of what your score means. That is why this page now routes EEG foundation-model benchmarking not only through split / leakage hygiene but also through <strong>benchmark provenance</strong>. If the benchmark uses evolving challenge operations, continue directly to <a href="wiki/eeg-foundation-models.html">Wiki: EEG foundation models and pretraining</a> and <a href="verification.html#pretraining-card">Verification: Pretraining Card</a> before treating the ranking as portable generalization evidence.
+</p>
 </div>
 </section>
 
