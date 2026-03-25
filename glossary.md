@@ -400,11 +400,11 @@ If names such as <strong>field-formation wall</strong>, <strong>Fusion Card</str
 </tr>
 <tr>
 <td><strong>Vascular-state / CVR audit</strong></td>
-<td>A separate audit for hemodynamic modalities that asks whether baseline vascular state, cerebrovascular reactivity, or superficial/systemic contamination could explain the amplitude difference.</td>
+<td>A measurement-side audit for hemodynamic modalities that asks whether baseline vascular state, cerebrovascular reactivity, or superficial/systemic contamination could explain the amplitude difference. It is different from maintenance-side neurovascular-unit / BBB / pericyte state.</td>
 </tr>
 <tr>
 <td><strong>Maintenance-state</strong></td>
-<td>Slow controller and support variables, such as sleep / wake history, post-transcriptional RNA-state, phospho-signaling / second-messenger state, cargo-transport / cytoskeletal trafficking state, thermal-state, ionic state, bioenergetic / mitochondrial support, astrocyte / glial-state, and clearance-related support, that matter for long-horizon stability.</td>
+<td>Slow controller and support variables, such as sleep / wake history, post-transcriptional RNA-state, phospho-signaling / second-messenger state, cargo-transport / cytoskeletal trafficking state, thermal-state, ionic state, bioenergetic / mitochondrial support, neurovascular-unit / BBB / pericyte state, astrocyte / glial-state, and clearance-related support, that matter for long-horizon stability.</td>
 </tr>
 <tr>
 <td><strong>Post-transcriptional RNA-state</strong></td>
@@ -419,12 +419,16 @@ If names such as <strong>field-formation wall</strong>, <strong>Fusion Card</str
 <td>The minutes-to-days non-neuronal state that includes astrocyte network responses, learning-associated ensembles, lactate transport, and related glial variables that can change recall, multiday stabilization, or fear-state representations. It should not be collapsed into generic metabolic background.</td>
 </tr>
 <tr>
+<td><strong>Neurovascular-unit / BBB / pericyte state</strong></td>
+<td>The maintenance-side vascular support layer that includes capillary recruitment / tone, endothelial / pericyte barrier and transport regime, and BBB permeability-related state that can change plasticity support and long-horizon stability. It should not be collapsed either into measurement-side vascular-state / CVR audit or into clearance / immune support.</td>
+</tr>
+<tr>
 <td><strong>Clearance / immune support</strong></td>
 <td>The multiday support layer that includes meningeal lymphatic drainage, CSF-interstitial exchange, microglia-related support, and related clearance routes that can change synaptic physiology, recovery, and protein-clearance claims. It should not be collapsed either into astrocyte-state or into a generic cleanup metaphor.</td>
 </tr>
 <tr>
 <td><strong>Support-state proxy</strong></td>
-<td>A human route that constrains slow maintenance variables only at a coarse level, for example energetic, thermal, myelin, or CSF / glymphatic clearance state. It is stronger than saying “nothing is visible,” but weaker than local controller, astrocyte-ensemble state, cell-specific immune control, or other cell-specific ground truth.</td>
+<td>A human route that constrains slow maintenance variables only at a coarse level, for example energetic, thermal, myelin, BBB permeability, or CSF / glymphatic clearance state. It is stronger than saying “nothing is visible,” but weaker than local controller, astrocyte-ensemble state, cell-specific immune control, or other cell-specific ground truth.</td>
 </tr>
 <tr>
 <td><strong>Thermal-state</strong></td>

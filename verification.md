@@ -36,6 +36,7 @@ page_highlights:
   - "For ionic / chloride claims, the maintenance-state budget now requires a route card that names claim family, direct ionic observable, spatial regime, perturbation route, human proxy class, and abstention."
   - "For neuromodulatory claims, the maintenance-state budget now requires a route card that names claim family, transmitter axis, direct observable, challenge or administered-drug route, time window / model burden, and abstention."
   - "For clearance / immune claims, the maintenance-state budget now requires a route card that names claim family, direct observable, driver / perturbation route, human model burden, function target, and abstention."
+  - "For neurovascular-unit / BBB / pericyte claims, the maintenance-state budget now requires a route card that names claim family, biological locus, direct observable, driver / perturbation route, human proxy class / model burden, function target, and abstention."
   - "For bioenergetic / mitochondrial claims, the maintenance-state budget now requires a route card that names claim family, compartment, direct energetic observable, quantity type / model burden, function target, human proxy class, and abstention."
   - "For astrocyte / glial-state claims, the maintenance-state budget now requires a route card that names claim family, direct astrocyte observable, perturbation route, function target, human proxy class, and abstention."
   - "For phospho-signaling / second-messenger claims, the maintenance-state budget now requires a route card that names claim family, assay / direct observable, compartment scope, timing window, causal leverage, and abstention."
@@ -62,7 +63,7 @@ page_highlights:
   - "At L2 and above for intervention / closed-loop results, the Intervention Card fixes trigger rule, timing audit, control / sham, safe stop, and recalibration burden."
   - "At L3 and above for embodied-loop results, the Body / Environment Boundary Card fixes which sensory, motor, and interoceptive channels were preserved, substituted, or omitted."
   - "For cross-day or longitudinal claims, the Temporal Validity Card audits fixed decoder interval, state annotation, recalibration burden, and transfer ceiling independently."
-  - "For cross-day or remote-memory claims, the maintenance-state error budget reports controller state, sleep history, sleep architecture / replay-coupling state, and support-state proxies separately, so temporal success is not auto-promoted to a maintenance-consistent claim."
+  - "For cross-day or remote-memory claims, the maintenance-state error budget reports controller state, sleep history, sleep architecture / replay-coupling state, neurovascular support, and support-state proxies separately, so temporal success is not auto-promoted to a maintenance-consistent claim."
   - "For chronic invasive claims, signal-chain drift and implant tissue response are audited separately rather than being folded into unit-identity audit alone."
   - "For outputs that include probabilities, intervals, prediction sets, or abstention, the Calibration & Abstention Card fixes fit/calibration/test separation, evaluation family, coverage-risk, and fallback behavior."
 known_points:
@@ -1375,7 +1376,7 @@ SV2A PET now gets its own route-card logic on this site. <a href="https://doi.or
 <section class="section" id="maintenance-state-error-budget">
 <h2 class="section-title">Maintenance-state error budget</h2>
 <p>
-Cross-day and remote-memory claims fail for a different reason than same-session decoding claims. Even when short-term performance holds, the result may still leave the <strong>maintenance route</strong> almost completely latent. This site therefore asks cross-day, recovery, reconsolidation, or remote-memory submissions to disclose a <strong>maintenance-state error budget</strong> that keeps controller state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, sleep history, sleep architecture / replay-coupling state, timing support, thermal-state, bioenergetic / mitochondrial support, glial / astrocyte support, and other multiday support-state proxies separate.
+Cross-day and remote-memory claims fail for a different reason than same-session decoding claims. Even when short-term performance holds, the result may still leave the <strong>maintenance route</strong> almost completely latent. This site therefore asks cross-day, recovery, reconsolidation, or remote-memory submissions to disclose a <strong>maintenance-state error budget</strong> that keeps controller state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, sleep history, sleep architecture / replay-coupling state, timing support, thermal-state, bioenergetic / mitochondrial support, neurovascular-unit / BBB / pericyte support, glial / astrocyte support, and other multiday support-state proxies separate.
 </p>
 <table class="data-table">
 <thead>
@@ -1810,7 +1811,7 @@ The <a href="#observability-budget">Observability Budget</a> fixes <strong>what 
 <section class="section" id="state-completeness-gate">
 <h2 class="section-title">State variable integrity gate</h2>
 <p>
-The remaining weakness in this gate was not the absence of latent-state language, but that the table still compressed families that the rest of this site already audits separately. The current public rule is narrower. After a wiring diagram, this site still separates <strong>cell-type label</strong>, <strong>current synaptic efficacy / short-term state</strong>, <strong>seventeen maintenance-state families</strong>, and a <strong>separate shared extracellular / electrical-state class</strong>. In particular, it no longer collapses <strong>relative excitability</strong> into <strong>firing-rate recovery</strong>, <strong>sleep / wake renormalization</strong> into <strong>sleep architecture / replay-coupling</strong>, <strong>myelin / oligodendrocyte timing support</strong> into one scalar delay, <strong>mixed arousal proxy</strong> into <strong>transmitter-specific state</strong>, or <strong>astrocyte-state</strong> into <strong>clearance / immune support</strong>. Therefore, on this site, <strong>edge-list submissions alone</strong> do not pass L2 or above, and any claim that depends on one of these families has to measure it, perturb it, externally calibrate it, or leave it explicitly latent.
+The remaining weakness in this gate was not the absence of latent-state language, but that the table still compressed families that the rest of this site already audits separately. The current public rule is narrower. After a wiring diagram, this site still separates <strong>cell-type label</strong>, <strong>current synaptic efficacy / short-term state</strong>, <strong>eighteen maintenance-state families</strong>, and a <strong>separate shared extracellular / electrical-state class</strong>. In particular, it no longer collapses <strong>relative excitability</strong> into <strong>firing-rate recovery</strong>, <strong>sleep / wake renormalization</strong> into <strong>sleep architecture / replay-coupling</strong>, <strong>myelin / oligodendrocyte timing support</strong> into one scalar delay, <strong>mixed arousal proxy</strong> into <strong>transmitter-specific state</strong>, <strong>vascular-state / CVR audit</strong> into <strong>neurovascular-unit / BBB / pericyte state</strong>, or <strong>astrocyte-state</strong> into <strong>clearance / immune support</strong>. Therefore, on this site, <strong>edge-list submissions alone</strong> do not pass L2 or above, and any claim that depends on one of these families has to measure it, perturb it, externally calibrate it, or leave it explicitly latent.
 </p>
 <table class="data-table">
 <thead>
@@ -1931,6 +1932,12 @@ The remaining weakness in this gate was not the absence of latent-state language
 <td>Repeated-burst reliability, dendritic plasticity, and energetic mechanism claims remain latent without explicit bioenergetic audit. </td>
 </tr>
 <tr>
+<td><strong>Neurovascular-unit / BBB / pericyte state</strong></td>
+<td>Capillary recruitment / tone, BBB permeability / transport regime, and endothelial / pericyte controller state can still differ on the same graph and cell-type background.</td>
+<td>A vascular-state / CVR audit, resting perfusion covariate, or one hemodynamic nuisance check already fixes the biological controller.</td>
+<td>Human evidence stays at macro BBB permeability or transport-model proxy level; local pericyte / endothelial controller claims remain latent unless directly measured or perturbed.</td>
+</tr>
+<tr>
 <td><strong>Astrocyte / glial-state</strong></td>
 <td>Astrocyte network and ensemble state can causally influence local transmitter integration, recall, multiday stabilization, and fear-state representations. </td>
 <td>A neuronal engram fit already fixes the relevant slow glial support state. </td>
@@ -1953,7 +1960,13 @@ The remaining weakness in this gate was not the absence of latent-state language
 <div class="note-box">
 <strong>Practical rules here</strong>
 <p>
-connectome-complete does not mean <strong>emulation-complete</strong>. This gate now mirrors the site's current public taxonomy: a connectome can be augmented by cell labels, synaptic snapshots, or one proxy route without closing the seventeen maintenance-state families or the separate shared electrical-state class. The detailed route-card rules for transcription, RNA, phospho-signaling, intrinsic excitability, sleep, myelin, ECM, ionic, thermal, neuromodulatory, bioenergetic, cargo, astrocyte, clearance, and proteostasis live in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>; the separate electrical-state rule lives in <a href="wiki/connectome-is-not-enough.html#electrical-state-route-card">Wiki: electrical-state route card</a>.
+connectome-complete does not mean <strong>emulation-complete</strong>. This gate now mirrors the site's current public taxonomy: a connectome can be augmented by cell labels, synaptic snapshots, or one proxy route without closing the eighteen maintenance-state families or the separate shared electrical-state class. The detailed route-card rules for transcription, RNA, phospho-signaling, intrinsic excitability, sleep, myelin, ECM, ionic, thermal, neuromodulatory, bioenergetic, neurovascular / BBB, cargo, astrocyte, clearance, and proteostasis live in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>; the separate electrical-state rule lives in <a href="wiki/connectome-is-not-enough.html#electrical-state-route-card">Wiki: electrical-state route card</a>.
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-26 addendum: vascular transfer audit is not neurovascular support-state audit</strong>
+<p>
+The remaining weakness was that a clean hemodynamic nuisance audit could still be misread as if the biological support layer were solved too. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuron.2010.09.043" target="_blank">Bell et al. (2010)</a>, <a href="https://doi.org/10.3389/fncel.2020.00027" target="_blank">Kisler et al. (2020)</a>, <a href="https://doi.org/10.1016/j.neuron.2023.08.030" target="_blank">Pandey et al. (2023)</a>, <a href="https://doi.org/10.7554/eLife.89611" target="_blank">Swissa et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41467-025-61312-0" target="_blank">Mai-Morente et al. (2025)</a> separate pericyte / BBB controller biology from measurement-side vascular transfer, while <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> remain macro human BBB permeability routes. Therefore, this site now blocks the move from <strong>vascular-state / CVR audit passed</strong> to <strong>neurovascular support matched</strong> unless the biological route itself is named, measured, perturbed, or left explicitly latent.
 </p>
 </div>
 <div class="note-box">
@@ -2121,6 +2134,12 @@ The weakness found in this re-audit was that by simply listing the state variabl
 <td>Compare the same baseline against local ATP-linked measurements, mitochondrial-position or fission / fusion perturbation, or externally calibrated macro energetic imaging under the same held-out repeated-burst or plasticity condition. </td>
 <td>You can state more narrowly how much reliability, dendritic plasticity, or energetic constraint prediction improves once bioenergetic state is treated explicitly. </td>
 <td>Generic metabolic support remains a coarse proxy and does not become local mitochondrial ground truth. </td>
+</tr>
+<tr>
+<td><strong>+ neurovascular-unit / BBB audit</strong></td>
+<td>Compare the same baseline against capillary-diameter / BBB measurements, pericyte or endothelial perturbation, or a named human BBB permeability proxy route under the same held-out plasticity, recovery, or long-horizon stability condition, and disclose gains separately.</td>
+<td>You can state more narrowly how much support-state prediction or plasticity-consistent stability improves once neurovascular / BBB state is treated explicitly.</td>
+<td>Vascular nuisance audit or macro BBB proxy remains a partial route and does not become pericyte / endothelial controller ground truth.</td>
 </tr>
 <tr>
 <td><strong>+ astrocyte / glial-state audit</strong></td>
