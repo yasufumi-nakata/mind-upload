@@ -29,6 +29,7 @@ What I'm showing here is an arrangement of ``at least removing this will weaken 
 - Confusing coarse physiological proxies with ground truths makes it easy to overstate claims about internal states.
 - Even in a connectome-constrained model, dynamics can degenerate if unmeasured cell/synapse/modification parameters remain.
 - Dorkenwald et al. (2024), MICrONS Consortium et al. (2025), Thomas et al. (2014), Donahue et al. (2016), Schilling et al. (2020), Grisot et al. (2021), Lappalainen et al. (2024), and Beiran & Litwin-Kumar (2025) support different kinds of progress and should not be collapsed into one story that connectome is "almost enough."
+- A tractography-derived graph can still change at the cortical-endpoint and parcel-graph stage even when the underlying diffusion signal is the same.
 - Conditional predictions can be improved by adding same-brain function, transcriptomics, neuromodulatory dynamics, and glial slow state, but the improvement depends on the task, time constant, and external validation conditions.
 - Device latency audit and biological timing-state audit are different requirements; passing one does not automatically pass the other.
 
@@ -241,8 +242,40 @@ On this site, a diffusion-MRI-derived human connectome is read as an <strong>alg
 
 <h3>Tractography connectomes need a route card</h3>
 <p>
-The earlier wording on this site said "macro pathway prior," which was directionally correct, but still too permissive in practice. It left room for readers to treat any tractography-derived connectome as a stable graph once a modern pipeline had been applied. The newer primary literature argues against that shortcut. <a href="https://doi.org/10.1016/j.neuroimage.2023.120376" target="_blank">Sarwar et al. (2023)</a> showed that filtering improves simple tubular bundles much more than complex brain-like architectures, <a href="https://doi.org/10.1016/j.neuroimage.2024.120904" target="_blank">He et al. (2024)</a> showed that tractography filtering can significantly change laterality indices for more than 10% of connections, <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">McMaster et al. (2025)</a> showed that voxel resolution changes the resulting connectome and recommended resampling to 1 mm isotropic for robust comparisons, <a href="https://doi.org/10.1016/j.media.2025.103580" target="_blank">Manzano-Patrón et al. (2025)</a> showed that fibre-orientation uncertainty can be propagated into tractography rather than hidden, and <a href="https://doi.org/10.1016/j.media.2025.103498" target="_blank">Zhu et al. (2025)</a> improved whole-brain reconstruction by fusing MRI with microscopy. That combination of results means that on this site the phrase <strong>human tractography connectome</strong> is not one object. It is an <strong>acquisition- and reconstruction-conditioned estimate</strong>.
+The earlier wording on this site said "macro pathway prior," which was directionally correct, but still too permissive in practice. It left room for readers to treat any tractography-derived connectome as a stable graph once a modern pipeline had been applied. The newer primary literature argues against that shortcut at multiple stages. <a href="https://doi.org/10.1073/pnas.1418198112" target="_blank">Reveley et al. (2015)</a> showed that superficial white matter can block long-range tracking from roughly half of the cortical surface, and <a href="https://doi.org/10.1002/hbm.23936" target="_blank">Schilling et al. (2018)</a> showed that tractography endpoints are biased toward gyral crowns across deterministic and probabilistic algorithms, multiple diffusion models, and even very high-resolution data. <a href="https://doi.org/10.1016/j.neuroimage.2023.120376" target="_blank">Sarwar et al. (2023)</a> showed that filtering improves simple tubular bundles much more than complex brain-like architectures, <a href="https://doi.org/10.1016/j.neuroimage.2024.120904" target="_blank">He et al. (2024)</a> showed that tractography filtering can significantly change laterality indices for more than 10% of connections, <a href="https://doi.org/10.1162/netn_a_00324" target="_blank">Gajwani et al. (2023)</a> showed across <strong>40 pipelines</strong> and <strong>44</strong> group-representative reconstructions that hub location is highly variable and that hub connectivity correlates with regional surface area in <strong>69%</strong> of assessed pipelines, <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">McMaster et al. (2025)</a> showed that voxel resolution changes the resulting connectome and recommended resampling to <strong>1 mm isotropic</strong> for robust comparisons, <a href="https://doi.org/10.1016/j.media.2025.103580" target="_blank">Manzano-Patrón et al. (2025)</a> showed that fibre-orientation uncertainty can be propagated into tractography rather than hidden, and <a href="https://doi.org/10.1016/j.media.2025.103498" target="_blank">Zhu et al. (2025)</a> improved whole-brain reconstruction by fusing MRI with microscopy. That combination of results means that on this site the phrase <strong>human tractography connectome</strong> is not one object. It is an <strong>acquisition-, endpoint-, and graph-construction-conditioned estimate</strong>.
 </p>
+
+<strong>What the earlier wording still hid</strong>
+<p>
+The phrase <strong>macro pathway prior</strong> was correct, but it still compressed three different transformations into one label: <strong>(1) diffusion signal to local orientation estimate</strong>, <strong>(2) orientation estimate to cortical endpoint assignment</strong>, and <strong>(3) endpoints to parcel graph / hub map</strong>. The signal does not directly reveal synapses or direction, the endpoint assignment can still be biased by superficial-white-matter and gyral-entry effects, and the final graph can still move when parcellation, weighting, or thresholding changes. Therefore, two papers that both say <strong>tractography connectome</strong> may still be reporting different inferential objects.
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>What is added after the sensor</th>
+<th>Why this site still stops the claim</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Signal -&gt; orientation field</strong></td>
+<td>Shell / b-value choice, reconstruction model, and local fibre-orientation estimation.</td>
+<td>The direct observable remains diffusion signal, not synapse identity, direction, or weight.</td>
+</tr>
+<tr>
+<td><strong>Orientation field -&gt; cortical endpoints</strong></td>
+<td>Tracking rule, stopping rule, and white-matter / gray-matter boundary or surface-assignment procedure.</td>
+<td>Long-range cortical endpoints can still be hidden or over-assigned to gyral crowns.</td>
+</tr>
+<tr>
+<td><strong>Endpoints -&gt; parcel graph</strong></td>
+<td>Parcellation, edge definition, weighting, thresholding, and group-reconstruction scheme.</td>
+<td>Hub maps and graph metrics can still move across plausible graph-construction choices.</td>
+</tr>
+</tbody>
+</table>
 <table>
 <thead>
 <tr>
@@ -258,9 +291,19 @@ The earlier wording on this site said "macro pathway prior," which was direction
 <td>Otherwise a streamline graph is misread as if the edges themselves had been directly observed.</td>
 </tr>
 <tr>
+<td><strong>Cortical endpoint / surface-bias audit</strong></td>
+<td>Name the white-matter / gray-matter boundary or surface-assignment route, whether superficial-white-matter or gyral-bias checks were performed, and which cortical territory remained endpoint-limited.</td>
+<td>Otherwise cortical endpoint differences are misread as anatomical absence or edge specificity.</td>
+</tr>
+<tr>
 <td><strong>Priors and post-processing</strong></td>
 <td>Write seeding rule, deterministic / probabilistic mode, start / end / exclusion ROIs, atlas constraints, stopping rules, and filtering / weighting method.</td>
 <td>Otherwise prior-driven bundle recovery is silently rephrased as unbiased graph discovery.</td>
+</tr>
+<tr>
+<td><strong>Graph construction choices</strong></td>
+<td>Name the parcellation / surface atlas, edge definition and weighting, density or threshold rule, and whether the headline metric survives reasonable alternative graph constructions.</td>
+<td>Otherwise hub maps and graph metrics are read as anatomy when they may still be graph-construction artifacts.</td>
 </tr>
 <tr>
 <td><strong>Instability and uncertainty</strong></td>
@@ -433,21 +476,56 @@ The remaining weakness was that the site had become much better at separating <s
 Human evidence for this layer is still indirect. <a href="https://doi.org/10.1111/ejn.70401" target="_blank">Feld et al. (2026)</a> reported that mefloquine before sleep impaired declarative-memory retention and disrupted spindle-to-slow-oscillation coupling in healthy participants, which is useful perturbation evidence that electrical coupling can matter for systems-memory coordination. But the same paper also leaves off-target effects as a caveat, and it is not a direct readout of <strong>which cells were electrically coupled</strong> or <strong>what the local inhibitory driving force was</strong>. On this site, human evidence for shared electrical state is therefore read first as a <strong>perturbation-conditioned clue</strong>, not as ground truth of local electrical coupling in vivo.
 </p>
 
-#### Electrical-state evidence now needs a route card
-
+<h4>Electrical-state evidence now needs a route card</h4>
+<p>
 The critique here is not merely that <strong>electrical state exists</strong>, but that recent primary literature spans <strong>different inferential objects</strong>. Gap-junction topology, endogenous-field coupling, inhibitory-driving-force state, and activity-dependent electrical-synapse remodeling do not all answer the same question. A human sleep perturbation clue is different again. If a paper moves among those objects without naming the route, the reader can silently overread a local mechanistic result as if it had already fixed the broader electrical regime.
+</p>
+<table>
+<thead>
+<tr>
+<th>Route-card item</th>
+<th>What must be disclosed</th>
+<th>Why this site asks for it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the paper is about a <strong>gap-junction coupling network</strong>, an <strong>endogenous-field / ephaptic route</strong>, an <strong>inhibitory-driving-force regime</strong>, an <strong>activity-dependent electrical-synapse remodeling route</strong>, or only a <strong>human perturbation-conditioned clue</strong>.</td>
+<td>Otherwise the paper's object changes silently while the headline claim stays broad.</td>
+</tr>
+<tr>
+<td><strong>Direct electrical observable</strong></td>
+<td>Name the direct observable explicitly, such as paired-cell electrical coupling, extracellular field effect on spike timing, local inhibitory driving force, oscillation-coupling statistic, or only a downstream behavioral / sleep-coupling proxy.</td>
+<td>Otherwise a downstream phenotype is misread as if the electrical state itself had been observed.</td>
+</tr>
+<tr>
+<td><strong>Spatial regime</strong></td>
+<td>State whether the route is a paired-cell microcircuit, a local cortical population, a network oscillation preparation, or a macro human perturbation regime.</td>
+<td>Otherwise a narrow local mechanism is overread as if it already fixed a broader electrical regime.</td>
+</tr>
+<tr>
+<td><strong>Perturbation / calibration route</strong></td>
+<td>Name the perturbation or calibration route, such as connexin-linked coupling measurement, extracellular-field manipulation, ORCHID-style optical assay, pharmacological perturbation, or no direct calibration at all.</td>
+<td>Otherwise causal leverage and calibration burden disappear behind the word <strong>electrical</strong>.</td>
+</tr>
+<tr>
+<td><strong>Human evidence class</strong></td>
+<td>Write whether the strongest human-facing evidence is a <strong>direct local assay</strong>, a <strong>specialized optical / invasive route</strong>, a <strong>perturbation-conditioned clue</strong>, or <strong>no human route</strong>.</td>
+<td>Otherwise a human perturbation result is silently promoted toward local state identification.</td>
+</tr>
+<tr>
+<td><strong>Ceiling and abstention</strong></td>
+<td>Declare whether the claim stops at <strong>local electrical mechanism</strong>, <strong>narrow network-regime evidence</strong>, or <strong>human perturbation clue</strong>, and write what would trigger abstention.</td>
+<td>Otherwise the phrase <strong>electrical-state complete</strong> is allowed to outrun the actual evidence class.</td>
+</tr>
+</tbody>
+</table>
 
-| Route-card item | What must be disclosed | Why this site asks for it |
-| --- | --- | --- |
-| **Claim family** | State whether the paper is about a **gap-junction coupling network**, an **endogenous-field / ephaptic route**, an **inhibitory-driving-force regime**, an **activity-dependent electrical-synapse remodeling route**, or only a **human perturbation-conditioned clue**. | Otherwise the paper's object changes silently while the headline claim stays broad. |
-| **Direct electrical observable** | Name the direct observable explicitly, such as paired-cell electrical coupling, extracellular field effect on spike timing, local inhibitory driving force, oscillation-coupling statistic, or only a downstream behavioral / sleep-coupling proxy. | Otherwise a downstream phenotype is misread as if the electrical state itself had been observed. |
-| **Spatial regime** | State whether the route is a paired-cell microcircuit, a local cortical population, a network oscillation preparation, or a macro human perturbation regime. | Otherwise a narrow local mechanism is overread as if it already fixed a broader electrical regime. |
-| **Perturbation / calibration route** | Name the perturbation or calibration route, such as connexin-linked coupling measurement, extracellular-field manipulation, ORCHID-style optical assay, pharmacological perturbation, or no direct calibration at all. | Otherwise causal leverage and calibration burden disappear behind the word **electrical**. |
-| **Human evidence class** | Write whether the strongest human-facing evidence is a **direct local assay**, a **specialized optical / invasive route**, a **perturbation-conditioned clue**, or **no human route**. | Otherwise a human perturbation result is silently promoted toward local state identification. |
-| **Ceiling and abstention** | Declare whether the claim stops at **local electrical mechanism**, **narrow network-regime evidence**, or **human perturbation clue**, and write what would trigger abstention. | Otherwise the phrase **electrical-state complete** is allowed to outrun the actual evidence class. |
-
-> **Operational rule added in this pass**
-> If an electrical-state claim lacks this route card, this site keeps the result at **local mechanism**, **specialized assay**, or **human perturbation clue**. It is not promoted to chemical-connectome-complete state capture, whole-brain electrical-regime recovery, or maintenance-complete synchrony control.
+<strong>Operational rule added in this pass</strong>
+<p>
+If an electrical-state claim lacks this route card, this site keeps the result at <strong>local mechanism</strong>, <strong>specialized assay</strong>, or <strong>human perturbation clue</strong>. It is not promoted to chemical-connectome-complete state capture, whole-brain electrical-regime recovery, or maintenance-complete synchrony control.
+</p>
 
 <h3>10. Delay and myelin are part of timing</h3>
 <p>
@@ -634,11 +712,13 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li>Prinz, A. A., Bucher, D., &amp; Marder, E. (2004). Similar network activity from disparate circuit parameters. <em>Nature Neuroscience</em>, 7, 1345–1352. <a href="https://doi.org/10.1038/nn1352" target="_blank">doi:10.1038/nn1352</a></li>
 <li>Thomas, C., Ye, F. Q., Irfanoglu, M. O., Modi, P., Saleem, K. S., Leopold, D. A., &amp; Pierpaoli, C. (2014). Anatomical accuracy of brain connections derived from diffusion MRI tractography is inherently limited. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 111(46), 16574–16579. <a href="https://doi.org/10.1073/pnas.1405672111" target="_blank">doi:10.1073/pnas.1405672111</a></li>
 <li>Reveley, C., Seth, A. K., Pierpaoli, C., Silva, A. C., Yu, D., Saunders, R. C., Leopold, D. A., &amp; Ye, F. Q. (2015). Superficial white matter fiber systems impede detection of long-range cortical connections in diffusion MR tractography. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 112(21), E2820–E2828. <a href="https://doi.org/10.1073/pnas.1418198112" target="_blank">doi:10.1073/pnas.1418198112</a></li>
+<li>Schilling, K. G., Gao, Y., Janve, V., Stepniewska, I., Landman, B. A., &amp; Anderson, A. W. (2018). Confirmation of a gyral bias in diffusion MRI fiber tractography. <em>Human Brain Mapping</em>, 39(3), 1449–1466. <a href="https://doi.org/10.1002/hbm.23936" target="_blank">doi:10.1002/hbm.23936</a></li>
 <li>Donahue, C. J., Sotiropoulos, S. N., Jbabdi, S., Hernandez-Fernandez, M., Behrens, T. E., Dyrby, T. B., Coalson, T., Kennedy, H., Knoblauch, K., Van Essen, D. C., &amp; Glasser, M. F. (2016). Using diffusion tractography to predict cortical connection strength and distance: A quantitative comparison with tracers in the monkey. <em>Journal of Neuroscience</em>, 36(25), 6758–6770. <a href="https://doi.org/10.1523/JNEUROSCI.0493-16.2016" target="_blank">doi:10.1523/JNEUROSCI.0493-16.2016</a></li>
 <li>Maier-Hein, K. H., Neher, P. F., Houde, J.-C., Côté, M.-A., Garyfallidis, E., Zhong, J., Chamberland, M., et al. (2017). The challenge of mapping the human connectome based on diffusion tractography. <em>Nature Communications</em>, 8, 1349. <a href="https://doi.org/10.1038/s41467-017-01285-x" target="_blank">doi:10.1038/s41467-017-01285-x</a></li>
 <li>Schilling, K. G., Petit, L., Rheault, F., Remedios, S., Pierpaoli, C., Anderson, A. W., Landman, B. A., &amp; Descoteaux, M. (2020). Brain connections derived from diffusion MRI tractography can be highly anatomically accurate if we know where white matter pathways start, where they end, and where they do not go. <em>Brain Structure and Function</em>, 225(8), 2387–2402. <a href="https://doi.org/10.1007/s00429-020-02129-z" target="_blank">doi:10.1007/s00429-020-02129-z</a></li>
 <li>Grisot, G., Haber, S. N., Hawrylycz, M., Yendiki, A., et al. (2021). Diffusion MRI and anatomic tracing in the same brain reveal common failure modes of tractography. <em>NeuroImage</em>, 239, 118300. <a href="https://doi.org/10.1016/j.neuroimage.2021.118300" target="_blank">doi:10.1016/j.neuroimage.2021.118300</a></li>
 <li>Sarwar, T., Ramamohanarao, K., Daducci, A., Schiavi, S., Smith, R. E., &amp; Zalesky, A. (2023). Evaluation of tractogram filtering methods using human-like connectome phantoms. <em>NeuroImage</em>, 282, 120376. <a href="https://doi.org/10.1016/j.neuroimage.2023.120376" target="_blank">doi:10.1016/j.neuroimage.2023.120376</a></li>
+<li>Gajwani, M., Oldham, S., Pang, J. C., Arnatkevičiūtė, A., Tiego, J., Bellgrove, M. A., &amp; Fornito, A. (2023). Can hubs of the human connectome be identified consistently with diffusion MRI? <em>Network Neuroscience</em>, 7(4), 1326–1350. <a href="https://doi.org/10.1162/netn_a_00324" target="_blank">doi:10.1162/netn_a_00324</a></li>
 <li>He, Y., Hong, Y., Wu, Y., et al. (2024). Spherical-deconvolution informed filtering of tractograms changes laterality of structural connectome. <em>NeuroImage</em>, 303, 120904. <a href="https://doi.org/10.1016/j.neuroimage.2024.120904" target="_blank">doi:10.1016/j.neuroimage.2024.120904</a></li>
 <li>McMaster, E. M., Newlin, N. R., Rudravaram, G., et al. (2025). Harmonized connectome resampling for variance in voxel sizes. <em>Magnetic Resonance Imaging</em>, 121, 110424. <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">doi:10.1016/j.mri.2025.110424</a></li>
 <li>Manzano-Patrón, J. P., Deistler, M., Schröder, C., et al. (2025). Uncertainty mapping and probabilistic tractography using Simulation-based Inference in diffusion MRI: A comparison with classical Bayes. <em>Medical Image Analysis</em>, 103, 103580. <a href="https://doi.org/10.1016/j.media.2025.103580" target="_blank">doi:10.1016/j.media.2025.103580</a></li>

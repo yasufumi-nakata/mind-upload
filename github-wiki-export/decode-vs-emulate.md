@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-17 / 位置づけ: Technical / natural science only
+- 更新日: 2026-03-25 / 位置づけ: Technical / natural science only
 
 ## このページの役割
 This page is an auxiliary guide that organizes the difference between decode and emulate, one of the key distinctions in Mind-Upload, on the basis of primary literature. It separates a high-performance translator from a system that moves internal states by using observation, intervention, and closed-loop evidence.
@@ -126,15 +126,21 @@ One area where there was a lot of room for improvement with the current site was
 <td>Subject-cooperative task-limited semantic reconstruction. It will not be promoted to subject-free thought reader or unrestricted mental-state readout. </td>
 </tr>
 <tr>
+<td><strong>Défossez et al. (2023)</strong><br>speech-segment retrieval from M/EEG</td>
+<td>Identify the correct 3 s speech segment from non-invasive M/EEG recorded while participants passively listened to natural speech. </td>
+<td>The route decoded perceived speech segments from more than 1,000 possibilities with much stronger performance in MEG than EEG, and the model predictions primarily tracked lexical and contextual semantic representations. It still depended on a fixed candidate bank of speech segments at test time. </td>
+<td>Candidate-bank segment retrieval for perceived speech. It will not be promoted to free-form generation, production decode, or unrestricted thought reading. </td>
+</tr>
+<tr>
 <td><strong>d'Ascoli et al. (2025)</strong><br>open-vocabulary word decoding</td>
 <td>Estimating word identity under known word onset from M/EEG of 723 people and 5 million words. </td>
 <td>With the design using sentence-level context, performance was strongly dependent on additional training data, test averaging, MEG &gt; EEG, and reading &gt; listening. Therefore, even with "open-vocabulary", task structure and modality advantage remain. </td>
 <td>Open-vocabulary word decode with known-onset and perception-heavy conditions. I will not promote it to free thought reading or unrestricted language generation. </td>
 </tr>
 <tr>
-<td><strong>Wang et al. (2025)</strong><br>generative language reconstruction + LLM</td>
-<td>Put the fMRI-derived expressions together with prompt into a large language model to generate a text continuation with a vocabulary of 32,000. </td>
-<td>Top-1 improved with the larger model and longer context, and even with the best dataset, top-1 was 65.8%. Output fluency is strongly influenced by prompt and LLM scaffold. </td>
+<td><strong>Ye et al. (2025)</strong><br>generative language reconstruction + LLM</td>
+<td>Feed fMRI-derived representations and a text prompt into an autoregressive LLM to generate a continuation rather than rerank a fixed candidate list. </td>
+<td>BrainLLM beat a permuted-brain control across three fMRI datasets, but performance still depended on prompt length, LLM size, and data volume; no-prompt generation remained harder by language-similarity metrics even when brain input helped relative to the control. </td>
 <td>prompt-conditioned generative language reconstruction. It does not advance to brain-only text generation or hidden-state recovery. </td>
 </tr>
 <tr>
@@ -154,7 +160,7 @@ One area where there was a lot of room for improvement with the current site was
 
 <strong>Why do we need this table</strong>
 <p>
-Even if the "natural language output" looks the same, <strong>semantic reconstruction</strong>, <strong>known-onset word decode</strong>, <strong>prompt-conditioned continuation</strong>, <strong>attempted speech communication</strong>, and <strong>streaming voice synthesis</strong> are different routes. If we do a side-by-side comparison without separating these areas, it is easy to misinterpret deep single-subject fMRI, broad multi-subject M/EEG, participant-specific invasive BCI, and generation systems with LLM scaffold as evidence of the same strength. Therefore, on this site, when looking at natural sentence output, we first return <strong>task regime</strong>, <strong>training depth / subject route</strong>, <strong>prior scaffold</strong>, and <strong>fixed decoder horizon</strong>, and read it based on the type of evidence rather than the flashiness of the medium.
+Even if the "natural language output" looks the same, <strong>semantic reconstruction</strong>, <strong>candidate-bank segment retrieval</strong>, <strong>known-onset word decode</strong>, <strong>prompt-conditioned continuation</strong>, <strong>attempted speech communication</strong>, and <strong>streaming voice synthesis</strong> are different routes. If we do a side-by-side comparison without separating these areas, it is easy to misinterpret deep single-subject fMRI, broad multi-subject M/EEG, participant-specific invasive BCI, and generation systems with LLM scaffold as evidence of the same strength. Therefore, on this site, when looking at natural sentence output, we first return <strong>task regime</strong>, <strong>training depth / subject route</strong>, <strong>prior scaffold</strong>, and <strong>fixed decoder horizon</strong>, and read it based on the type of evidence rather than the flashiness of the medium.
 </p>
 
 <h2>2026-03-17 Addendum: chronic ceiling of invasive communication route</h2>
@@ -225,7 +231,7 @@ When promoting invasive speech BCI to a higher level, we will not only consider 
 </tr>
 <tr>
 <td><strong>LLM / prompt scaffold</strong></td>
-<td><a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Wang et al. (2025)</a> generated text continuations by inputting fMRI-derived expressions into a prompt and large language model. </td>
+<td><a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Ye et al. (2025)</a> generated text continuations by inputting fMRI-derived expressions into a prompt and large language model. </td>
 <td>Read as prompt-conditioned generative language reconstruction. </td>
 <td>Do not directly equate output fluency with brain-only reconstruction or hidden-state recovery. </td>
 </tr>
@@ -253,6 +259,11 @@ A common misinterpretation of current news and demonstrations is to interpret th
 <td>Subject cooperation is required for both learning and application, and translation of the observed semantic representation. We do not demonstrate internal causal structure or replication of intervention responses. </td>
 </tr>
 <tr>
+<td><strong>Défossez et al. (2023)</strong><br>non-invasive speech-segment retrieval</td>
+<td>Three-second speech segments were identified from non-invasive MEG/EEG while participants passively listened to natural speech, with much stronger performance in MEG than EEG. </td>
+<td>This is evidence for candidate-bank retrieval of perceived speech segments, not for unrestricted word-level or sentence-level generation without a fixed comparison bank. </td>
+</tr>
+<tr>
 <td><strong>d'Ascoli et al. (2025)</strong><br>open-vocabulary non-invasive word decoding</td>
 <td>We advanced individual word decoding from non-invasive recordings with 723 people and showed that the amount of training data, test averaging, modality, and task dependence greatly affect performance. </td>
 <td>Although this is an advance in open-vocabulary, dependence on word onset, task structure, and participant conditions remains. The progress here is in decoding the communication route, not in state-complete reconstruction. </td>
@@ -278,9 +289,9 @@ A common misinterpretation of current news and demonstrations is to interpret th
 <td>This is strong L2-L3 evidence of a communication subsystem, but not whole-brain emulation. In addition to speed, long-term deployability cannot be determined unless it also provides tail latency, dropout, silence/false speech, recalibration burden, and fixed decoder horizon. </td>
 </tr>
 <tr>
-<td><strong>Wang et al. (2025)</strong><br>generative language reconstruction + LLM</td>
-<td>We input the fMRI-derived brain representation and prompt into a large language model to generate a text continuation. </td>
-<td>This is an advance in generative language interfaces, but the fluency of the output is also highly dependent on the prompt and LLM scaffold. From here, you cannot immediately proceed to brain-only reconstruction or emulation. </td>
+<td><strong>Ye et al. (2025)</strong><br>generative language reconstruction + LLM</td>
+<td>fMRI-derived brain representations and text prompts were combined inside an autoregressive LLM to generate language continuations. </td>
+<td>This is an advance in generative language interfaces, but the fluency of the output still depends strongly on prompt and LLM scaffold, and no-prompt generation remains harder. From here, you cannot immediately proceed to brain-only reconstruction or emulation. </td>
 </tr>
 <tr>
 <td><strong>Flesher et al. (2021)</strong><br>bidirectional closed-loop BCI</td>
@@ -386,13 +397,14 @@ A common misinterpretation of current news and demonstrations is to interpret th
 <h2>References</h2>
 <ol>
 <li>Tang, J., LeBel, A., Jain, S., et al. (2023). Semantic reconstruction from non-invasive brain recordings. <em>Nature Neuroscience</em>, 26, 858–866. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
+<li>Défossez, A., Caucheteux, C., Rapin, J., et al. (2023). Decoding speech perception from non-invasive brain recordings. <em>Nature Machine Intelligence</em>, 5, 1097–1107. <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">doi:10.1038/s42256-023-00714-5</a></li>
 <li>d'Ascoli, S., Bel, C., Rapin, J., et al. (2025). Towards decoding individual words from non-invasive brain recordings. <em>Nature Communications</em>, 16, 10521. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">doi:10.1038/s41467-025-65499-0</a></li>
 <li>Chen, Z., Yao, D., Wang, M., et al. (2024). A neural speech decoding framework leveraging deep learning and speech synthesis. <em>Nature Machine Intelligence</em>, 6, 1816–1827. <a href="https://doi.org/10.1038/s42256-024-00837-5" target="_blank">doi:10.1038/s42256-024-00837-5</a></li>
 <li>Singh, V., Papangelou, A., Sharma, M., et al. (2025). Transfer learning via distributed brain recordings enables reliable speech decoding. <em>Nature Communications</em>, 16, 5364. <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">doi:10.1038/s41467-025-63825-0</a></li>
 <li>Willett, F. R., Kunz, E. M., Fan, C., et al. (2023). A high-performance speech neuroprosthesis. <em>Nature</em>, 620, 1031–1036. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
 <li>Littlejohn, K. T., Dabagia, M., Ladwig, A., et al. (2025). A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <em>Nature Neuroscience</em>, 28, 902–912. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
 <li>Wairagkar, M., Card, N. S., Singer-Clark, T., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <em>Nature</em>, 644, 145–152. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
-<li>Wang, Z., Huo, Y., Zhang, M., Li, Y., Ma, Y., Qu, D., &amp; Hu, X. (2025). Generative language reconstruction from brain recordings. <em>Communications Biology</em>, 8, 346. <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">doi:10.1038/s42003-025-07731-7</a></li>
+<li>Ye, Z., Ai, Q., Liu, Y., de Rijke, M., Zhang, M., Lioma, C., &amp; Ruotsalo, T. (2025). Generative language reconstruction from brain recordings. <em>Communications Biology</em>, 8, 346. <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">doi:10.1038/s42003-025-07731-7</a></li>
 <li>Wilson, G. H., Stein, E. A., Kamdar, F., et al. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <em>Nature Biomedical Engineering</em>. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
 <li>Pun, T. K., Khoshnevis, M., Hosman, T., et al. (2024). Measuring instability in chronic human intracortical neural recordings towards stable, long-term brain-computer interfaces. <em>Communications Biology</em>, 7, 1363. <a href="https://doi.org/10.1038/s42003-024-06784-4" target="_blank">doi:10.1038/s42003-024-06784-4</a></li>
 <li>Steinmetz, N. A., Aydin, C., Lebedeva, A., et al. (2021). Neuropixels 2.0: A miniaturized high-density probe for stable, long-term brain recordings. <em>Science</em>, 372(6539), eabf4588. <a href="https://doi.org/10.1126/science.abf4588" target="_blank">doi:10.1126/science.abf4588</a></li>

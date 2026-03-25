@@ -35,8 +35,8 @@
 ## その他
 - [Mind-upload RQ60 Application Playbook (RQ unit fixed)](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook)
 - [Mind-upload RQ60 Deep Evaluation Cards (EEG-DATA × auto-research-funds)](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards)
-- [Mind-upload RQ60 RQ-by-RQ Deep Dossiers (EEG-DATA × auto-research-funds)](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers)
 - [Mind-upload RQ60 Deep focus notes (EEG-DATA × Grant)](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes)
+- [Mind-upload RQ60 RQ-by-RQ Deep Dossiers (EEG-DATA × auto-research-funds)](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers)
 - [Mind-upload RQ60 × EEG-DATA 検証可否と助成テーマ（深掘り版）](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds)
 - [Wiki: 4 paths to follow after Verification](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-next-routes)
 - [Wiki: 4 routes to deepen the theory from introduction to WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/wbe-to-theory-route)
@@ -64,6 +64,7 @@
 - [Wiki: observability and claim ceiling by measurement stack](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling)
 - [Wiki: Standards/Location/Validator/Benchmark](https://github.com/yasufumi-nakata/mind-upload/wiki/standards-repositories-validators-and-benchmarks)
 - [Wiki: state, trait, and drift](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift)
+- [Wiki: State-Continuity Bridge](https://github.com/yasufumi-nakata/mind-upload/wiki/state-continuity-bridge)
 - [Wiki: Straight path from EEG to L0](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-to-l0-route)
 - [Wiki: Terminology guide from measurement to modeling](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-and-modeling-terms)
 - [Wiki: U Number Guide](https://github.com/yasufumi-nakata/mind-upload/wiki/u-number-guide)

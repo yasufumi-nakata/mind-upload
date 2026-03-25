@@ -4,13 +4,13 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-15 / 位置づけ: Practical guide
+- 更新日: 2026-03-25 / 位置づけ: Practical guide
 
 ## このページの役割
-This page is a wiki that explains from the beginning how to divide datasets and why data leaks are dangerous. In order to reduce accidents where data is highly accurate but cannot be trusted, we will at least organize where to look.
+This page is a wiki that explains from the beginning how to divide datasets and why data leaks are dangerous. The 2026-03 re-audit tightened one more point: a clean split is necessary, but it is still not enough if acquisition-distribution shortcuts or benchmark-governance failures remain hidden.
 
 ## 正確さの前提
-These are basic principles. The best partitioning method depends on the problem and the structure of the data, so there is no one-size-fits-all rule.
+These are operational rules, not one-size-fits-all formulas. The best split still depends on the task and data structure, and official challenge operations can materially change what a benchmark score means.
 
 ## 公開ページへ戻る
 - [Data & Bench](https://mind-upload.com/datasets.html)
@@ -19,6 +19,7 @@ These are basic principles. The best partitioning method depends on the problem 
 
 ## 関連 Wiki
 - [Wiki: EEG pretreatment and QC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - Compensates for where the preprocessing itself changes the result.
+- [Wiki: EEG foundation models and pretraining](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-foundation-models) - Use this page when benchmark rules, extra pretraining, and leaderboard interpretation start to blur together.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - See why leak prevention is 'part of operations'.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to the overall map of the learning page.
 
@@ -27,17 +28,25 @@ These are basic principles. The best partitioning method depends on the problem 
 - Apparent performance tends to improve when fragments from the same subject, same session, and near time are included on both sides.
 - In clinical EEG, report text and report-derived labels can also be leakage sources.
 - Preprocessing, normalization, and feature selection can also be a source of leaks if they are performed after looking at all the data.
+- Even after coarse split hygiene, metadata shortcuts such as site, amplifier, reference, and electrode layout can still dominate the score if disjointness and harmonization are not disclosed.
+- Leaderboard and challenge results are not stable objects unless benchmark provenance and later postmortems are carried together with the score.
 
 ## まだ分かっていないこと
 - Which division is closest to future actual operation depends on the task setting and usage situation.
 - A deep understanding and auditing of data structures is required to be able to claim that leaks have been completely eliminated.
 - How to standardize report-derived labels from signal-only benchmarks is still in the process of operational design.
+- Which benchmark-governance bundle should become the default reusable card for EEG leaderboards is still being refined.
 
 ---
 
 <h2>The shortest explanation</h2>
 <p>
 Data division is the process of ``determining how far you can look before comparing the answers.'' A data leak is when that boundary is inadvertently crossed and information that cannot be used in production is mixed into learning and adjustment.
+</p>
+
+<strong>2026-03 re-audit: split hygiene is necessary, not sufficient</strong>
+<p>
+The older version of this page was good at explaining <strong>subject / session / time split</strong>, but it still left two practical shortcuts too implicit. First, <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a>, <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)</a>, <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a>, and <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a> together show that <strong>identity and acquisition-distribution shortcuts</strong> can remain even when the coarse split sounds respectable. Second, the official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) homepage</a>, <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a>, <a href="https://eeg2025.github.io/submission/" target="_blank">submission page</a>, and <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> show that <strong>benchmark governance</strong> itself can move what a score means. Therefore this page now treats split hygiene, acquisition-distribution audit, and benchmark provenance as one operational bundle rather than three unrelated side notes.
 </p>
 
 <h2>Why partitioning matters so much</h2>
@@ -122,7 +131,7 @@ On school tests, if you practice the questions while looking at the answers, you
 </tbody>
 </table>
 
-<h2>5 common leak patterns</h2>
+<h2>7 common leak patterns</h2>
 <table>
 <thead>
 <tr>
@@ -151,8 +160,59 @@ On school tests, if you practice the questions while looking at the answers, you
 <td><strong>Miss duplicate or derived samples</strong></td>
 <td>Data originally cut from the same record is included on both sides, resulting in a comparison that is not an independent sample. </td>
 </tr>
+<tr>
+<td><strong>Hide site / device / reference / layout shortcuts</strong></td>
+<td>The model learns acquisition-distribution structure such as amplifier, montage, reference system, or electrode layout instead of the target neural variable. </td>
+</tr>
+<tr>
+<td><strong>Treat challenge operations as fixed when they changed</strong></td>
+<td>The benchmark name stays the same while randomization, hidden grouping, extra-data policy, inference restrictions, or organizer postmortems change what the ranking actually measures. </td>
+</tr>
 </tbody>
 </table>
+
+<h2>Split hygiene still leaves four shortcut families</h2>
+<table>
+<thead>
+<tr>
+<th>Shortcut family</th>
+<th>What can masquerade as progress</th>
+<th>What to publish instead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Subject / session fingerprint</strong></td>
+<td>A score can look like generalization while it mostly exploits stable subject-specific or session-specific structure. </td>
+<td>Disclose the independent hold-out unit, raw-window ancestry, and whether subject/session identifiers were fully disjoint. </td>
+</tr>
+<tr>
+<td><strong>Acquisition-distribution shortcut</strong></td>
+<td>A model can ride site, amplifier, cap, sampling rate, filter chain, reference system, or electrode-layout differences instead of the claimed neural variable. </td>
+<td>Publish site / device / reference / layout disjointness, the harmonization log, and a metadata-only or setup-only baseline whenever possible. </td>
+</tr>
+<tr>
+<td><strong>Report / metadata shortcut</strong></td>
+<td>A signal-only claim can inherit report-derived labels, triage context, or structured metadata that already sits close to the answer. </td>
+<td>State whether report text or derived metadata were used, and separate signal-only from multimodal / metadata-assisted scoreboards. </td>
+</tr>
+<tr>
+<td><strong>Benchmark-governance shortcut</strong></td>
+<td>A leaderboard can look stable even though hidden grouping, randomization, extra-data policy, checkpoint policy, or inference-stage rules changed what the benchmark measured. </td>
+<td>Publish benchmark version, split / randomization rule, hidden grouping, extra-data and pretrained-checkpoint policy, inference-stage restrictions, and later postmortems together with the score. </td>
+</tr>
+</tbody>
+</table>
+
+<strong>Benchmark governance is part of leakage control, not administrative detail</strong>
+<p>
+The official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) homepage</a> explicitly says the original preprint became outdated after execution-phase changes and that the website plus starter kit should be treated as current. The official <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a> require disclosure of additional pretraining datasets, pretrained models and fine-tuning method, code submission during the inference stage, and a <strong>single-GPU 20 GB</strong> inference budget. The official <a href="https://eeg2025.github.io/submission/" target="_blank">submission page</a> further fixes the event as an <strong>inference-only code competition</strong>. The final <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> then disclosed that Challenge 2 samples had not been randomized, allowing contiguous-trial same-subject structure to affect the ranking and forcing separate awards. On this site, that means benchmark governance now belongs on the same checklist as split hygiene rather than in a footnote after the score.
+</p>
+
+<strong>Metric semantics are also part of leak-resistant reporting</strong>
+<p>
+Even after split hygiene and benchmark provenance are disclosed, the reported number can still mislead if the task is rare-event or class-imbalanced. <a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">Saito &amp; Rehmsmeier (2015)</a> showed that precision-recall views are often more informative than ROC summaries under strong imbalance. In seizure tasks, <a href="https://doi.org/10.1016/j.ebiom.2021.103275" target="_blank">Roy et al. (2021)</a> and <a href="https://doi.org/10.1097/WNP.0000000000000709" target="_blank">Scheuer et al. (2021)</a> show that event sensitivity, overlap logic, and false alarms per hour or day matter together, while <a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">Segal et al. (2023)</a> shows that false-alarm control is itself a design target in seizure prediction. In sleep staging, <a href="https://doi.org/10.1093/sleep/zsx139" target="_blank">Sun et al. (2017)</a> and <a href="https://doi.org/10.7554/eLife.70092" target="_blank">Vallat &amp; Walker (2021)</a> show that pooled performance can still hide minority-stage failure. Therefore, this site now asks for a <strong>task-matched metric bundle</strong> in addition to split hygiene.
+</p>
 
 <h2>Leak warning specific to the dataset added this time</h2>
 <table>
@@ -186,14 +246,16 @@ On school tests, if you practice the questions while looking at the answers, you
 
 <h4>Report Items</h4>
 <ul>
-<li><strong>Divided by:</strong>Whether by subject, session, or time. </li>
-<li><strong>Split rule:</strong>How many items were placed in train/validation/test? </li>
-<li><strong>Independent ID: Which of the subject / case / night / session is considered an independent unit. </li>
-<li><strong>Report usage: signal-only or multimodal evaluation with report/metadata? </li>
-<li><strong>label manual: If there is a manual scoring or mapping rule, the standard. </li>
-<li><strong>Preprocessing boundaries:</strong> Did you fit normalization and feature selection using only train? </li>
-<li><strong>Baseline:</strong>What is the improvement compared to the simpler method? </li>
-<li><strong>Failure example:</strong>Under what conditions did it fail and what was the reason for its exclusion? </li>
+<li><strong>Evaluation family:</strong>Whether the result is within-session, cross-session, cross-subject, or temporal / longitudinal. </li>
+<li><strong>Split rule:</strong>How many items were placed in train / validation / calibration / test, and what was the independent hold-out unit? </li>
+<li><strong>Window ancestry:</strong>Which subject / case / night / session / file / record generated each split, and were near-adjacent windows kept apart? </li>
+<li><strong>Metric bundle:</strong>Was the task read through balanced / macro metrics, event sensitivity plus false alarms, or per-stage agreement rather than a single headline number? </li>
+<li><strong>Report usage flag:</strong>Was the claim signal-only, or were report text / metadata / multimodal fields also used? </li>
+<li><strong>Acquisition-distribution audit:</strong>Were site, device, reference system, channel map, electrode layout, and protocol distribution separated, harmonized, or left mixed? </li>
+<li><strong>Preprocessing boundaries:</strong>Were normalization, feature selection, and threshold tuning fit using only the allowed split? </li>
+<li><strong>Benchmark provenance:</strong>If this is a challenge or leaderboard result, what were the benchmark version, randomization rule, hidden grouping, extra-data / pretrained-checkpoint policy, inference-stage restrictions, and later postmortems? </li>
+<li><strong>Baseline:</strong>What is the improvement compared with a simpler model or a metadata-only / setup-only baseline? </li>
+<li><strong>Failure example + stopping claim:</strong>Under what conditions did it fail, what was excluded, and what stronger claim is explicitly not being made? </li>
 </ul>
 
 <h2>References</h2>
@@ -204,6 +266,20 @@ On school tests, if you practice the questions while looking at the answers, you
 <li><a href="https://doi.org/10.3389/fnins.2016.00196" target="_blank">Obeid &amp; Picone (2016), The Temple University Hospital EEG Data Corpus</a></li>
 <li><a href="https://doi.org/10.3389/fninf.2018.00083" target="_blank">Shah et al. (2018), The Temple University Hospital Seizure Detection Corpus</a></li>
 <li><a href="https://pubmed.ncbi.nlm.nih.gov/19238800/" target="_blank">Moser et al. (2009), Sleep classification according to AASM and Rechtschaffen &amp; Kales</a></li>
+<li><a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019), Detecting the impact of subject characteristics on machine learning-based diagnostic applications</a></li>
+<li><a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017), Systems, subjects, sessions: to what extent do these factors influence EEG data?</a></li>
+<li><a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020), Cross-dataset variability problem in EEG decoding with deep learning</a></li>
+<li><a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021), The Time-Robustness Analysis of Individual Identification Based on Resting-State EEG</a></li>
+<li><a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">Saito &amp; Rehmsmeier (2015), The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets</a></li>
+<li><a href="https://doi.org/10.1016/j.ebiom.2021.103275" target="_blank">Roy et al. (2021), Evaluation of artificial intelligence systems for assisting neurologists with fast and accurate annotations of scalp electroencephalography data</a></li>
+<li><a href="https://doi.org/10.1097/WNP.0000000000000709" target="_blank">Scheuer et al. (2021), Seizure Detection: Interreader Agreement and Detection Algorithm Assessments Using a Large Dataset</a></li>
+<li><a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">Segal et al. (2023), Utilizing risk-controlling prediction calibration to reduce false alarm rates in epileptic seizure prediction</a></li>
+<li><a href="https://doi.org/10.1093/sleep/zsx139" target="_blank">Sun et al. (2017), Large-Scale Automated Sleep Staging</a></li>
+<li><a href="https://doi.org/10.7554/eLife.70092" target="_blank">Vallat &amp; Walker (2021), An open-source, high-performance tool for automated sleep staging</a></li>
+<li><a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) official homepage</a></li>
+<li><a href="https://eeg2025.github.io/rules/" target="_blank">EEG Challenge (2025) official rules</a></li>
+<li><a href="https://eeg2025.github.io/submission/" target="_blank">EEG Challenge (2025) official submission page</a></li>
+<li><a href="https://eeg2025.github.io/leaderboard/" target="_blank">EEG Challenge (2025) official leaderboard / organizer postmortem</a></li>
 </ul>
 
 <h2>Safety measures if you get lost in the first book</h2>

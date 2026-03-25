@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-20 / 位置づけ: RQ-by-RQ Deep Focus
+- 更新日: 2026-03-22 / 位置づけ: RQ-by-RQ Deep Focus
 
 ## このページの役割
 This page is a practical note that fixes the core of mind-upload's 60 RQs, which can be confirmed directly with EEG-DATA, application themes for auto-research-funds, and necessary requirements outside of EEG.
@@ -252,6 +252,16 @@ Reasons for proceeding in this order:
 ## 2026-03-18 12:08 JST revalidation log (main run / deep-by-RQ enforcement)
 
 - Revalidated deep-focus operation with the same policy: avoid generic summaries and keep `1RQ = 1 verification proposition = 1 application theme = 1 main data`.
+
+## 2026-03-22 11:03 JST revalidation log (main run / one-by-one deep pack refresh)
+
+- Reconfirmed `RQ_TOTAL=60` and `A/B/C=17/25/18` against `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`.
+- Refreshed the fixed deep pack to a non-overlapping 6RQ set for this run:
+  `U0-1`, `U3-3`, `U4-2`, `U7-5`, `U11-3`, `U14-2`.
+- Re-fixed the operational policy: avoid broad summaries and enforce `1RQ = 1 verification proposition = 1 application theme = 1 main data`.
+- Updated synchronized map pages:
+  `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` and
+  `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`.
 - Rechecked RQ coverage on this page against `research_harvest_50.md` and related RQ60 pages (coverage maintained).
 - Revalidated grant keys `G1-G6` and source resolvability in `grant_queue`/`auto-research-funds`.
 - Confirmed EEG numeric IDs are present in latest `EEG-DATA` CSV but no longer reliable as fixed dataset identifiers after reindex/remap.
@@ -350,3 +360,17 @@ Reasons for proceeding in this order:
 - 3ページ（`mind-upload` 側2ページ + `auto-research-funds` 側1ページ）で参照されるEEG ID一意集合（`6, 11, 13, 16, 19, 29, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1972, 2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` の `ID/旧ID` と照合し、未解決ID `0` を確認しました。
 - 助成キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）を `grant_queue` と `auto-research-funds` 側で再照合し、全件実在を確認しました。
 - 方針は不変で、汎用横断要約ではなく「1件ずつ深く理解して書く」運用を継続します。
+
+## 2026-03-22 15:40 JST 実行カード更新ログ（本run / 6RQ追加バッチ）
+
+- `RQ_TOTAL=60`、`A/B/C=17/25/18` を維持したまま、既存6RQバッチとは重複しない新規6RQを追加し、実行順を固定しました。
+- 追加した6RQは `U0-2` `U1-3` `U4-4` `U11-1` `U14-5` `U15-4` で、`KPI` `失敗条件` `提出最低成果物` を明示しました。
+- `U15-4`（C判定）を含め、制度系RQでも技術監査ログとして2週間で到達できる入口を固定しました。
+- 運用ルールは継続して `1RQ=1検証命題=1応募テーマ=1主データ` を適用します。
+
+## 2026-03-22 09:01 JST revalidation log (main run / one-by-one deepening)
+
+- Updated the fixed deep-dive batch without broad summary expansion; selected only `U0-3/U1-2/U7-3/U8-4/U13-2/U15-2`.
+- Kept `RQ_TOTAL=60`, `A/B/C=17/25/18`, and the same `G1-G6` operating keys.
+- Locked the submission rule as `Dxx + DOI + dataset name + access class` (numeric ID is search-only legacy guidance).
+- Focused deliverable style remains: `1RQ = 1 verification proposition = 1 application theme = 1 primary dataset`.

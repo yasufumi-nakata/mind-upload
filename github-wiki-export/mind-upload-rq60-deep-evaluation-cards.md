@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-21 / 位置づけ: Per-RQ Deep Evaluation Cards
+- 更新日: 2026-03-25 / 位置づけ: Per-RQ Deep Evaluation Cards
 
 ---
 
@@ -12,7 +12,7 @@
 
 > 汎用横断の要約ではなく、60RQを1件ずつ深く読むための固定カード集。
 
-- 更新日: 2026-03-21
+- 更新日: 2026-03-25
 - 前提: `mind-upload-eeg-rq60-feasibility-and-funds` と `mind-upload-eeg-rq60-grant-dataset-playbook` の整合を取った統合版
 
 ## このページの使い方
@@ -381,3 +381,254 @@
 - 本カードの参照EEG ID一意集合（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
 - 助成キーは `G3-G6` を `auto-research-funds/wiki/cards/*.md` と `grant_eeg_dataset_match.csv` で再照合し欠落 `0`、`G1/G2` は `mind-upload/wiki` と `auto-research-funds/wiki` の固定運用キーとして再確認しました。
 - 方針は不変で、汎用横断要約ではなく「1件ずつ深く理解して書く」実行形で wiki 同期を維持しました。
+
+## 2026-03-21 21:02 JST 再検証ログ（本run / 依頼: RQを1件ずつ深掘りでwiki更新）
+
+- 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull --ff-only origin main` を実行し、`Already up to date` を確認しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` / `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` / `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `unique Ux-y` を再計数し、3ページとも `RQ_TOTAL=60`（欠損・重複 `0`）を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` を再確認し、全行で `1RQ=1検証命題=1応募テーマ=1主データ` が維持されていることを確認しました。
+- RQ行由来のEEG参照ID一意集合（`6,11,13,16,19,29,39,49,56,65,509,676,696,719,735,783,842,859,1011,1839,1972,2412,3419,4878`）を `EEG-DATA/eeg_dataset_summary_ja.csv` の `ID/旧ID` と照合し、未解決ID `0` を確認しました。
+- 方針は不変で、汎用横断要約ではなく「1件ずつ深く理解して書く」運用を継続します。
+
+## 2026-03-21 22:02 JST 再検証ログ（本run / 依頼: RQを1件ずつ深掘りでwiki更新）
+
+- 作業開始前に親リポジトリ `auto-startup` の `main` で `git pull --rebase --autostash origin main` を実行し、`Already up to date` を確認しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` の `| Ux-y<br>` 行を再計数し、`RQ_TOTAL=60`（欠損・重複 `0`）を確認しました。
+- 判定内訳 `A/B/C=17/25/18` を再確認し、全行で `1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用が維持されていることを確認しました。
+- `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` および `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` と突合し、同じ `RQ_TOTAL=60` / `A/B/C=17/25/18` を再確認しました。
+- `EEG-DATA` の数値ID再採番リスクを踏まえ、提出時参照は引き続き `DOI + dataset名 + access区分` を正とする運用を維持します。
+
+## 2026-03-21 23:26 JST 再検証ログ（本run / 深掘り4RQを固定）
+
+- `| Ux-y<br>` 行を機械再計数し、`RQ_TOTAL=60`（欠損・重複 `0`）を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` を再確認しました。
+- 本カード行で参照する主要EEG ID集合（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv`（`ID/旧ID`）に照合し、未解決ID `0` を確認しました。
+- `G3-G6` は `auto-research-funds/wiki/cards/*.md` で再照合し欠落 `0`、`G1/G2` は固定運用キーとして継続しました。
+
+### 本runで重点深掘りした4RQ（1件ずつの提出判断）
+
+| RQ | このrunで固定した焦点 | 最低成果物（このカードの提出単位） | 応募先（第一/予備） |
+|---|---|---|---|
+| U1-2 | 不確実性伝播の校正曲線を主成果に据えて、逆問題の再現境界を明示する。 | Inverse problem reproduction report (error/uncertainty) | `G1 / G4` |
+| U8-2 | 再較正頻度3条件で `性能維持率` と `運用コスト` の境界を可視化する。 | Closed loop safety KPI dashboard | `G2 / G5` |
+| U13-1 | 意味一致と因果一致の乖離を必須KPIにして、模倣過大評価を抑える。 | Intervention protocol and rebuttal condition definition | `G1 / G4` |
+| U15-2 | neurorights を技術監査項目へ写像し、EEGは補助証跡として扱う。 | System audit requirements table (technical log compatible) | `G2 / G6` |
+
+## 2026-03-22 JST 再検証ログ（本run / pull後の深掘りカード監査）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `EEG-DATA` / `auto-research-funds` の各 `main` で `git pull --ff-only origin main` を実行し、最新化してから監査しました。
+- 本カードの `| Ux-y<br>` 行を再計数し、`RQ_TOTAL=60`（`U0=4 U1=4 U3=6 U4=4 U7=6 U8=6 U10=4 U11=4 U12=6 U13=6 U14=6 U15=4`）を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` は維持されています。
+- ただし `EEG-DATA` 側の再採番により、数値IDは「同じ値でも別データセットを指す」ケースが発生するため、`主データ（ID）` と `補助データ（推奨ID）` は legacy 参照として扱います。
+- 実務正本は `mind-upload-eeg-rq60-feasibility-and-funds` 側の `D01-D24 + DOI + データセット名 + access区分` に固定し、当カードは `RQごとの主張境界・応募テーマ・最低成果物` の深掘り正本として運用します。
+
+## 2026-03-22 02:03 JST 再検証ログ（本run / ユーザー依頼: RQを1件ずつ深掘りでwiki更新）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` の `main` で `git pull --ff-only origin main` を実行し、最新化を確認しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` / `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md` / `auto-research-funds/wiki/Mind-Upload-RQ60-Deep-Evaluation-Cards.md` / `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md` の `unique Ux-y` を再計数し、4ページすべて `RQ_TOTAL=60`（欠損・重複 `0`）を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` を4ページで再計数し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用が維持されていることを確認しました。
+- `mind-upload` 側カードで参照しているEEG ID一意集合（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）を `EEG-DATA/eeg_dataset_summary_ja.csv` と突合し、未解決ID `0` を確認しました。
+- `C` 判定RQ（主に `U10/U12/U15` と `U3/U11` の一部）は、EEG単独では不可という境界を維持し、`G2/G6` を中心に制度・理論連携トラックへ接続する方針を再固定しました。
+- `A/B` 判定RQは、各行の `最低成果物`（監査レポート・リーク監査・閉ループKPI等）を提出単位として使う方針を維持し、汎用横断要約ではなくRQ単位での深掘り提出を継続します。
+
+## 2026-03-22 JST 追加ディープバッチ（RQを1件ずつ深く書く）
+
+本runでは、既存の60行表を維持したまま、汎用要約を増やさず `RQ単位の深掘り本文` を3件だけ追加する。
+
+対象:
+
+1. `U4-3`（反事実評価）
+2. `U11-1`（意識指標I/O仕様）
+3. `U15-2`（neurorights監査項目化）
+
+### U4-3 deep card（active inference/DCMの反事実評価接続）
+
+- 判定: `B`
+- 主張単位: 介入あり/なしで理論順位が保存されるかを、`反事実誤差(PEHE)` と `予測尤度差` の2軸で固定する。
+- 主データ: `旧ID 19`（DOIアンカーは `D05=10.21227/8snc-7h06`）
+- 補助データ: `旧ID 56, 676`（DOIアンカー `D08=10.21227/7may-9q56` ほか）
+- 第一/予備応募先: `G1 (GR-2026-013)` / `G4 (Drbm6vBRDJkn0NGJ)`
+- 最初の実験設計:
+  - 介入条件と非介入条件で同一前処理・同一分割を固定。
+  - 理論A/Bで `PEHE` と `log-likelihood` を同時評価。
+  - 分割リーク監査（被験者ID・時系列）を先に通す。
+- 失敗条件:
+  - 介入有無で理論順位が反転し続ける。
+  - `PEHE` 改善が再現しない（fold間で符号不一致）。
+- 提出最低成果物:
+  - `Intervention protocol and rebuttal condition definition`
+  - 反事実評価テーブル（理論別、fold別）
+
+### U11-1 deep card（意識指標の理論横断I/O固定）
+
+- 判定: `B`
+- 主張単位: `PCI近似 / LZ / 摂動応答` の順位保存率を同一I/O条件で比較し、採択閾値を明示する。
+- 主データ: `旧ID 735`（DOIアンカー `D12=10.21227/qqj2-r702`）
+- 補助データ: `旧ID 842, 859`（DOIアンカー `D14=10.21227/wrqm-dt87`, `D15=10.21227/7j9g-wb02`）
+- 第一/予備応募先: `G2 (GR-2026-014)` / `G4 (Drbm6vBRDJkn0NGJ)`
+- 最初の実験設計:
+  - 麻酔/睡眠/DoCで状態ラベルを正規化し、入力窓長を固定。
+  - 3指標の順位相関（Spearman）を算出。
+  - 失敗例（高複雑性だが臨床状態と不一致）を別テーブル化。
+- 失敗条件:
+  - 順位保存率が `80%` を下回る。
+  - 状態遷移の境界ケースで指標間の符号が不一致。
+- 提出最低成果物:
+  - `Awareness index comparison report (with failure condition)`
+  - 理論比較I/O仕様書（再現可能な窓定義つき）
+
+### U15-2 deep card（neurorightsを技術監査へ写像）
+
+- 判定: `C`
+- 主張単位: neurorights条項を `技術ログ項目` に落とし込むマッピング表を固定し、EEGは監査証跡として使う。
+- 主データ: `旧ID 49`（DOIアンカー `D07=10.21227/rnms-3h47`）
+- 補助データ: `旧ID 2412, 3419`（DOIアンカー `D20=10.21227/3h4c-mz89`, `D21=10.21227/2k8p-1f78`）
+- 第一/予備応募先: `G2 (GR-2026-014)` / `G6 (46z9VPE4wnkrvEJR)`
+- 最初の実験設計:
+  - neurorights項目（認知自由・精神プライバシー等）を監査イベントへ分解。
+  - `event_id / consent_state / override_actor / rollback_status / evidence_hash` を必須化。
+  - 閉ループ停止条件ログ（ID 2412）を最小実装として監査可能化。
+- 失敗条件:
+  - 条項→ログ項目の一意対応が作れない。
+  - 同意撤回イベントで権限剥奪ログが欠損する。
+- 提出最低成果物:
+  - `System audit requirements table (technical log compatible)`
+  - neurorights監査マッピングv1（制度レビュー用）
+
+## 2026-03-22 13:10 JST 反映ログ（本run）
+
+- 60RQの全行表は維持しつつ、`U4-3` `U11-1` `U15-2` の3RQについて「主張単位・実験設計・失敗条件・提出物」を本文で深掘り追記した。
+- データ参照は `旧ID` 併記に加え、提出時に固定すべき `DOIアンカー（Dxx）` を明示した。
+- 助成接続は `G1/G2/G4/G6` の実IDを明記し、RQ単位で第一/予備応募先を固定した。
+
+## 2026-03-22 06:02 JST 反映ログ（本run / 6RQディープバッチ）
+
+- `mind-upload/automation/rq_deepening_backlog_2026-03-01_enriched.csv` を基準に、当カードの `unique Ux-y` は `60`（欠損 `0` / 余剰 `0`）を再確認しました。
+- 判定内訳 `A/B/C=17/25/18`、および全行の `主張単位/判定境界/応募テーマ/主データ/最低成果物` 欠損 `0` を再確認しました。
+- 本runは汎用横断更新ではなく、`U0-2/U1-3/U8-6/U10-3/U12-4/U14-5` の6RQを追加で深掘り対象として固定しました。
+
+### 今回固定した6RQの実行優先順
+
+1. `U14-5`（否定例レジストリ運用）
+2. `U1-3`（逆解法乖離の採択規則）
+3. `U8-6`（再学習間隔の最適化）
+4. `U0-2`（同期ずれと状態表現固定）
+5. `U10-3`（理論式→観測設計のproxy化）
+6. `U12-4`（同意撤回イベント監査）
+
+補足:
+
+- 提出時のデータ参照は `Dxx + DOI + データセット名 + access区分` を正本にし、数値IDは探索補助に限定します。
+
+## 2026-03-22 12:02 JST 再検証ログ（本run / 6RQディープバッチ追加）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` の `main` で `git pull --ff-only origin main` を実行し、最新化を確認しました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` の `| Ux-y<br>` 行を再計数し、`RQ_TOTAL=60`（欠損・重複 `0`）を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` を再確認し、`1RQ=1検証命題=1応募テーマ=1主データ` の運用を維持しました。
+- 本runでは汎用横断要約を増やさず、未固定寄りの6RQ（`U3-6/U4-1/U7-5/U10-1/U12-5/U14-2`）のみを深掘り対象として固定しました。
+
+| RQ | 判定 | 主データ（Dアンカー） | 第一/予備応募先 | 今回固定した深掘りポイント |
+|---|---|---|---|---|
+| U3-6 | C | `D03`（補助 `D04/D24`） | `G2 / G6` | 免疫監視除外モデルの長期破綻を `ドメイン外劣化率` と `再同期不能率` で proxy 監査し、EEG単独主張の上限を明文化。 |
+| U4-1 | B | `D05`（補助 `D08/D19`） | `G1 / G4` | 観測相関と介入応答の乖離を `ΔAUC` と `介入符号一致率` で分離し、因果主張の採択境界を固定。 |
+| U7-5 | A | `D11`（補助 `D15/D23`） | `G1 / G3` | 前処理CIで `再現率低下-5pt` の release block を実運用し、誤ブロック率を併記して閾値妥当性を監査。 |
+| U10-1 | C | `D14`（補助 `D15/D18`） | `G2 / G6` | Landauer下限は理論主張に限定し、EEGでは `理論整合proxy` のみを成果物化する境界を明示。 |
+| U12-5 | C | `D02`（補助 `D10/D12`） | `G2 / G6` | 分岐主体の記憶編集/再同期イベントを `subject_branch_id/consent_state/relink_trace` で監査し、法的ID再編は外部依存へ分離。 |
+| U14-2 | A | `D01`（補助 `D08/D13`） | `G1 / G3` | 探索系と検証系の実験トラックを分離し、`split固定率` と `追試成功率` を同時KPIとして運用固定。 |
+
+補足:
+
+- 提出時のデータ参照は引き続き `Dxx + DOI + データセット名 + access区分` を正本とし、数値IDは探索補助として扱います。
+- 外部依存タスク（制度確定・法的主体再編判断・縦断臨床連携）は `C` 判定RQで明示分離し、今回runでは実行可能な監査項目定義までを更新しました。
+
+## 2026-03-25 02:03 JST 再検証ログ（本run / 6RQディープバッチ追加）
+
+- `RQ_TOTAL=60` と `A/B/C=17/25/18` を再確認し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を継続しました。
+- 本runでは汎用要約を増やさず、`U0-4/U1-4/U8-5/U11-4/U13-6/U15-3` を固定対象として追記します。
+
+| RQ | 判定 | 主データ（Dアンカー） | 第一/予備応募先 | 深掘りで固定した最低提出単位 |
+|---|---|---|---|---|
+| U0-4 | B | `D02`（補助 `D10/D12`） | `G2 / G3` | Identity determination two-axis report（branch/copy ケースの運用上限を明記） |
+| U1-4 | B | `D08`（補助 `D11/D19`） | `G1 / G4` | Inverse solution comparison table and uncertainty distribution chart（後方分布公開基準つき） |
+| U8-5 | B | `D21`（補助 `D20/D12`） | `G2 / G5` | Operational stability report（human override 誤作動率/回復時間/再発率） |
+| U11-4 | B | `D15`（補助 `D16/D17`） | `G2 / G4` | Awareness index comparison report（偽陽性/偽陰性の停止条件つき） |
+| U13-6 | B | `D10`（補助 `D03/D09`） | `G1 / G4` | Leak audit results and repartition trail（prompt誘導・リーク・shortcut分離） |
+| U15-3 | C | `D07`（補助 `D21/D22`） | `G2 / G6` | System audit requirements table（法域差比較の最小共通監査項目） |
+
+### U13-6 deep card（prompt誘導・リーク・shortcut分離）
+
+- 判定: `B`
+- 主張単位: 同一出力でも内部機構が異なるケースを、prompt誘導・データリーク・shortcut学習の3経路へ分解して検出する。
+- 主データ: `D10`（`10.18112/openneuro.ds006465.v2.0.0`）
+- 補助データ: `D03`（`10.21227/6106-6120`）, `D09`（`10.21227/r8fc-2y40`）
+- 第一/予備応募先: `G1 / G4`
+- 失敗条件: `リーク検出率` が fold 間で不安定、または shortcut疑いケースが対照条件で再現しない。
+- 最低成果物: `Leak audit results and repartition trail`
+
+### U11-4 deep card（意識指標の失敗条件を先宣言）
+
+- 判定: `B`
+- 主張単位: 指標精度ではなく、臨床/研究運用で許容できない `偽陽性/偽陰性` の閾値を先に固定する。
+- 主データ: `D15`（`10.21227/tswy-m550`）
+- 補助データ: `D16`（`10.5281/zenodo.16919070`）, `D17`（`10.5281/zenodo.6951439`）
+- 第一/予備応募先: `G2 / G4`
+- 失敗条件: 境界ケースで指標符号が反転し、閾値変更後に再現性が維持できない。
+- 最低成果物: `Awareness index comparison report (with failure condition)`
+
+## 2026-03-25 02:36 JST 再検証ログ（本run / 6RQディープバッチ追加）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` で `git pull --ff-only` を実行し、更新を確認しました。
+- `| Ux-y<br>` 行を再計数し、`RQ_TOTAL=60`（欠損・重複 `0`）および判定内訳 `A/B/C=17/25/18` を再確認しました。
+- 本runでは汎用横断要約を増やさず、直近バッチと重複しない `U3-5/U7-6/U10-4/U12-6/U13-5/U14-6` の6RQを深掘り対象として固定しました。
+
+| RQ | 判定 | 主データ（Dアンカー） | 第一/予備応募先 | 深掘りで固定した検証焦点 | 失敗条件（停止条件） | 最低成果物 |
+|---|---|---|---|---|---|---|
+| U3-5 | C | `D03`（補助 `D04/D24`） | `G2 / G6` | glymphatic/meningeal 要素の有無で、境界拡張 proxy（統合条件と単体条件の差）を固定比較する。 | 統合条件でも改善が再現せず、外部モダリティ依存を分離できない。 | Boundary expansion evaluation report (single/integrated comparison) |
+| U7-6 | A | `D11`（補助 `D15/D23`） | `G1 / G3` | EEG欠損・fMRI/fNIRS欠損を系統的に入れ、結論一致率と安全警告再現率で最小観測セットを決める。 | full-modality基準との一致率が下限未満、または欠損時に安全警告の見逃しが増える。 | Reproducibility audit report (synchronization/QC/preprocessing difference) |
+| U10-4 | C | `D14`（補助 `D15/D18`） | `G2 / G6` | 情報熱力学制約をWBE計算コスト評価へ接続する際の proxy 指標と適用境界を事前固定する。 | proxy 指標の方向性が条件間で反転し、理論整合の再現が維持できない。 | Theory consistency memo and proxy correlation analysis |
+| U12-6 | C | `D02`（補助 `D10/D12`） | `G2 / G6` | 同意撤回イベントを分岐主体へ伝播させる監査鎖（`branch_id/consent_state/evidence_hash`）を技術要件化する。 | 同意撤回の伝播遅延が閾値を超える、または剥奪証跡ログが欠損する。 | System audit requirements table (technical log compatible) |
+| U13-5 | B | `D03`（補助 `D10/D09`） | `G1 / G4` | 知覚と想起で同一デコーダを適用し、意味復元劣化の分岐点をセッション横断で固定する。 | 分岐点推定がセッション間で安定せず、効果量区間が0を跨ぐ。 | Mimic separation evaluation script and control condition table |
+| U14-6 | A | `D01`（補助 `D08/D13`） | `G1 / G3` | コンテナ固定（OS/依存/seed）で再現率向上と計算コスト増分を同時監査し、許容上限を決める。 | 再現率改善が小さい一方で計算コスト増分が許容域を超える。 | Fixed container reproduction procedure manual and cost measurement |
+
+補足:
+
+- 本runの提出実務は `Dxx + DOI + データセット名 + access区分` を正本参照とし、数値IDは探索補助に限定します。
+- 既存の60RQ行、`A/B/C=17/25/18`、および `G1-G6` 運用キーは変更していません。
+
+## 2026-03-25 03:03 JST 再検証ログ（本run / 6RQディープバッチ追加）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` で `git pull --ff-only` を実行し、最新化を確認しました。
+- `| Ux-y<br>` 行を再計数し、`RQ_TOTAL=60`（欠損・重複 `0`）と `A/B/C=17/25/18` を再確認しました。
+- 本runは汎用横断要約を増やさず、直近バッチと重複しない `U0-1/U3-2/U7-4/U10-2/U12-1/U13-3` の6RQを深掘り対象として固定しました。
+
+| RQ | 判定 | 主データ（Dアンカー） | 第一/予備応募先 | 深掘りで固定した検証焦点 | 失敗条件（停止条件） | 最低成果物 |
+|---|---|---|---|---|---|---|
+| U0-1 | A | `D02`（補助 `D11/D23`） | `G2 / G3` | 観測一致と介入一致を二軸ROCで同時評価し、同一性判定の必要条件/十分条件を運用定義する。 | 介入条件を変えると一致率が閾値を下回り、二軸閾値がセッション間で安定しない。 | Identity KPI two-axis baseline card |
+| U3-2 | B | `D03`（補助 `D04/D24`） | `G2 / G6` | connectome完全性の直接主張を避け、EEG再現性proxyで外部連携要件を明示した比較設計に固定する。 | proxy指標の差が再現せず、外部モダリティ追加前提の境界を示せない。 | Boundary expansion evaluation report (single/integrated comparison) |
+| U7-4 | A | `D11`（補助 `D15/D23`） | `G1 / G3` | モダリティ間アライメント失敗時の再計測/除外ルールを判定木化し、運用契約へ直結させる。 | 再計測/除外判定の再現率が低く、同一条件で運用判断が分岐する。 | Reproducibility audit report (synchronization/QC/preprocessing difference) |
+| U10-2 | C | `D14`（補助 `D15/D18`） | `G2 / G6` | 非平衡熱力学指標と情報処理効率の対応は理論proxyに限定し、EEG単独主張の上限を先に固定する。 | proxy間の対応方向が条件で反転し、理論整合の再現が維持できない。 | Theory consistency memo and proxy correlation analysis |
+| U12-1 | C | `D02`（補助 `D10/D12`） | `G2 / G6` | 分岐後主体IDの付与を `branch_id/consent_state/lineage_hash` 監査鎖へ写像し、制度判断との分界を明示する。 | lineage追跡が一意化できず、同意状態との対応が監査ログで再現できない。 | System audit requirements table (technical log compatible) |
+| U13-3 | B | `D10`（補助 `D03/D09`） | `G1 / G4` | 同一出力で内部機構が異なるケースを、意味一致率と因果一致率の乖離ケースとして抽出・評価する。 | 乖離ケース抽出が不安定で、対照条件で再現しない。 | Mimic separation evaluation script and control condition table |
+
+補足:
+
+- 提出時のデータ参照は継続して `Dxx + DOI + データセット名 + access区分` を正本とし、数値IDは探索補助として扱います。
+- 既存の60RQ行、`A/B/C=17/25/18`、および `G1-G6` 運用キーは変更していません。
+
+## 2026-03-25 04:02 JST 再検証ログ（本run / 6RQディープバッチ追加）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` で `git pull --ff-only` を実行し、最新化を確認しました。
+- `| Ux-y<br>` 行を再計数し、`RQ_TOTAL=60`（欠損・重複 `0`）と `A/B/C=17/25/18` を再確認しました。
+- 本runは汎用横断更新を行わず、直近バッチと重複しない `U0-3/U1-1/U8-1/U11-2/U12-2/U14-1` の6RQを深掘り対象として固定しました。
+
+| RQ | 判定 | 主データ（Dアンカー） | 第一/予備応募先 | 深掘りで固定した検証焦点 | 失敗条件（停止条件） | 最低成果物 |
+|---|---|---|---|---|---|---|
+| U0-3 | A | `D02`（補助 `D11/D23`） | `G2 / G3` | タスク別同一性閾値を固定し、セッション外性能で過学習モデル除外規則を確立する。 | セッション外で閾値が収束せず、除外規則がfold間で逆転する。 | Threshold search notebook and selection rationale table |
+| U1-1 | A | `D08`（補助 `D11/D19`） | `G1 / G4` | 事前分布ごとの逆解誤差と被覆率を比較し、不良設定性に対する採択規則を固定する。 | 事前分布間の誤差順位が再現せず、優位性が固定できない。 | Inverse solution comparison table and uncertainty distribution chart |
+| U8-1 | B | `D01`（補助 `D18/D20`） | `G2 / G5` | 遅延・位相ずれ条件で安定率/停止介入率/回復時間を同時評価し、閉ループ安全域を定義する。 | 遅延増加で安全域境界が再現せず、停止規則が過検知/過少検知に偏る。 | Closed loop safety KPI dashboard |
+| U11-2 | C | `D14`（補助 `D15/D16`） | `G2 / G4` | 計算予算制約下で `PCI近似/LZ/wSMI` の順位保存率を比較し、理論比較の主張上限を固定する。 | 予算制約下で順位が不安定化し、理論比較結果が条件依存で反転する。 | Theoretical comparison I/O specifications and calculation budget |
+| U12-2 | C | `D02`（補助 `D10/D12`） | `G2 / G6` | 責任・権利・同意継承を `branch_id/consent_state/lineage_hash` 監査鎖へ写像し、制度連携境界を固定する。 | 分岐ごとに同意状態の追跡が不能となり、監査鎖が一意対応しない。 | System audit requirements table (technical log compatible) |
+| U14-1 | A | `D01`（補助 `D08/D13`） | `G1 / G3` | データ/コード/評価環境の固定粒度を段階比較し、最小追試パックの要求水準を運用定義する。 | 固定粒度を上げても追試成功率が改善せず、コスト増分のみが残る。 | Supplementary test operation report (including negative cases) |
+
+- 提出時参照は継続して `Dxx + DOI + データセット名 + access区分` を正本とし、数値IDは探索補助として扱います。
+- 既存60RQの件数、`A/B/C` 内訳、`G1-G6` 運用キーは変更していません。

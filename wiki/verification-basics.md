@@ -1,27 +1,31 @@
 ---
 layout: default
 title: 'Wiki: Basics of verification infrastructure'
-description: A beginner explanation of why standards, benchmarks, preregistration, route cards, and audits are needed before strong WBE claims can be compared.
+description: A beginner explanation of why standards, benchmarks, preregistration, route cards, and audits are needed before strong WBE claims can be compared, including why proxy bundles and sequential bridges need their own cards.
 article_type: Wiki
 subtitle: Before celebrating a score, fix the ruler, the route card, and the failure log.
 author: Mind Uploading Research Project
-last_updated: '2026-03-19'
+last_updated: '2026-03-25'
 note: Beginner guide
 audience: People who want to understand the logic of the Verification Commons from the beginning
-reading_time: 12-15 minutes
-page_intro: This page explains from the beginning why Mind-Upload focuses on standards, benchmarks, preregistration, route cards, and audits. The goal is to show why technical progress becomes comparable only when the evidence pathway itself is disclosed.
+reading_time: 14-18 minutes
+page_intro: This page explains from the beginning why Mind-Upload focuses on standards, benchmarks, preregistration, route cards, and audits. The goal is to show why technical progress becomes comparable only when the benchmark object, evidence pathway, and any human proxy bundle or sequential bridge are disclosed rather than left implicit.
 accuracy_note: The analogies here are for orientation only. Always return to the public specification pages to see the actual operational rules.
 page_highlights:
 - Data alone does not become comparable progress.
+- Benchmark meaning still depends on split regime, metric bundle, and current benchmark rules rather than the task name alone.
 - Standards, benchmarks, preregistration, route cards, and audits each solve a different failure mode.
 - Modern neuroscience results often need claim-specific route cards, not only a generic score sheet.
-- The stricter the claim, the more explicit the measurement path and abstention boundary must be.
+- Proxy-rich human evidence still needs a Human Proxy Composition Card before it is read as same-subject state closure.
+- Same-subject or same-brain workflows still need a State-Continuity Bridge Card before they are read as same-state evidence.
 known_points:
 - Comparable progress requires aligned inputs, evaluation, rules, and records.
 - Without preregistration and auditing, it becomes too easy to promote only favorable conditions.
-- Recent primary literature shows that decode, tractography, effective-connectivity, thermodynamic, and closed-loop claims fail in different ways and therefore need different cards.
+- Recent primary literature shows that decode, tractography, effective-connectivity, thermodynamic, closed-loop, human-proxy-composition, and bridge claims fail in different ways and therefore need different cards.
+- Same-subject or same-brain wording can secure specimen identity while still leaving state continuity unresolved.
 unknown_points:
 - A complete WBE benchmark stack does not yet exist in finished public form.
+- Which combination of human proxy rows and bridge validations could ever support stronger same-subject continuity claims remains unresolved.
 - Which additional requirements would be sufficient for future L4 or L5 claims remains unresolved.
 wiki_links:
 - label: 'Wiki: How to read claims and evidence'
@@ -36,6 +40,12 @@ wiki_links:
 - label: 'Wiki: Measurement-stack observability and claim ceilings'
   url: /wiki/measurement-stack-and-claim-ceiling.html
   description: Shows why route-card logic is needed for different measurement classes.
+- label: 'Wiki: Human Proxy Composition and Route Maturity'
+  url: /wiki/human-proxy-composition.html
+  description: Explains why current human proxy rows do not automatically compose into same-subject state closure.
+- label: 'Wiki: State-Continuity Bridge'
+  url: /wiki/state-continuity-bridge.html
+  description: Explains why same-subject or same-brain sequential workflows still need bridge validation before same-state language is allowed.
 recommended_pages:
 - label: Verification platform
   url: /verification.html
@@ -51,7 +61,7 @@ recommended_pages:
 <div class="abstract-box">
 <h2>Why the ruler comes first</h2>
 <p>
-If two groups use different inputs, different split rules, different hidden assumptions, and different failure criteria, comparing their scores does not tell you who made more progress. The Verification Commons exists so that progress claims can survive comparison rather than only presentation.
+If two groups use different inputs, different split rules, different metric bundles, different hidden assumptions, different human proxy combinations, and different bridge assumptions, comparing their scores does not tell you who made more progress. The Verification Commons exists so that progress claims can survive comparison rather than only presentation.
 </p>
 </div>
 
@@ -59,6 +69,13 @@ If two groups use different inputs, different split rules, different hidden assu
 <strong>2026-03-19 beginner update: generic audits were no longer enough</strong>
 <p>
 The older beginner explanation correctly said that standards and audits matter, but it still sounded as if one generic score sheet could cover every kind of neuroscience result. That is no longer safe enough. Different claim families now need different route cards because they fail for different scientific reasons.
+</p>
+</div>
+
+<div class="note-box">
+<strong>2026-03-25 beginner tightening: proxy bundles and bridges are not side details</strong>
+<p>
+The current site had also become stricter in two ways that this beginner page still underplayed. First, several living-human proxy rows can all be real while still measuring different quantity types, spatial units, timescales, and model burdens. Second, <strong>same-subject</strong> or <strong>same-brain</strong> wording can still hide a sequential bridge across fixation, deformation, behavior, sleep/wake regime, or elapsed time. Those are scientific stop lines, not administrative add-ons.
 </p>
 </div>
 
@@ -80,7 +97,7 @@ The older beginner explanation correctly said that standards and audits matter, 
 </tr>
 <tr>
 <td><strong>Benchmark</strong></td>
-<td>Aligns the task, split rules, and evaluation family.</td>
+<td>Aligns the task, split rules, metric bundle, and benchmark governance.</td>
 <td>The same exam and scoring rubric.</td>
 </tr>
 <tr>
@@ -90,12 +107,12 @@ The older beginner explanation correctly said that standards and audits matter, 
 </tr>
 <tr>
 <td><strong>Route card</strong></td>
-<td>Discloses the evidence pathway, assumptions, omitted alternatives, and abstention boundary for a specific claim family.</td>
+<td>Discloses the evidence pathway, assumptions, omitted alternatives, and abstention boundary for a specific claim family or bridge class.</td>
 <td>The answer key that says which reasoning steps were allowed.</td>
 </tr>
 <tr>
 <td><strong>Audit / model card / log</strong></td>
-<td>Records weaknesses, drift, failures, recalibration, and unresolved limits.</td>
+<td>Records weaknesses, drift, failures, recalibration, benchmark postmortems, and unresolved limits.</td>
 <td>The report card plus the error log.</td>
 </tr>
 </tbody>
@@ -118,7 +135,7 @@ The older beginner explanation correctly said that standards and audits matter, 
 </tr>
 <tr>
 <td>Benchmark</td>
-<td>Different groups can claim victory on different tasks and different split regimes.</td>
+<td>Different groups can claim victory on different tasks, split regimes, metric bundles, or organizer-conditioned benchmark versions.</td>
 </tr>
 <tr>
 <td>Preregistration</td>
@@ -126,15 +143,22 @@ The older beginner explanation correctly said that standards and audits matter, 
 </tr>
 <tr>
 <td>Route card</td>
-<td>A result is overread beyond the evidence class that produced it.</td>
+<td>A result is overread beyond the evidence class or bridge class that produced it.</td>
 </tr>
 <tr>
 <td>Audit</td>
-<td>Weaknesses, drift, shortcuts, recalibration burden, and abstentions disappear behind one score.</td>
+<td>Weaknesses, drift, shortcuts, recalibration burden, benchmark revisions, and abstentions disappear behind one score.</td>
 </tr>
 </tbody>
 </table>
 </section>
+
+<div class="note-box">
+<strong>Two newer beginner stop lines this page now has to carry</strong>
+<p>
+The current site can no longer leave two failure modes to the deep pages only. One is <strong>composition failure</strong>: several living-human proxy rows can all be valid yet still fail to compose into one same-subject latent-state estimate. The other is <strong>bridge failure</strong>: the same subject or same brain can still be sampled under a changed preparation, coordinate frame, or physiological regime. A beginner page that omits those stop lines now understates the scientific uncertainty.
+</p>
+</div>
 
 <section class="section" id="claim-specific-cards">
 <h2 class="section-title">Why modern neuroscience needs claim-specific route cards</h2>
@@ -172,6 +196,16 @@ The older beginner explanation correctly said that standards and audits matter, 
 <td>Latency alone does not tell you which sensory, motor, and interoceptive loops were preserved or omitted.</td>
 <td>Intervention Card plus Body / Environment Boundary Card.</td>
 </tr>
+<tr>
+<td><strong>Living-human proxy bundle</strong></td>
+<td>SV2A PET, MRSI similarity, dynamic DMRSI, myelin MRI, and clearance routes measure different quantity types, spatial units, timescales, and model burdens; agreement can still reflect shared nuisance or the strongest single row.</td>
+<td>Human Proxy Composition Card.</td>
+</tr>
+<tr>
+<td><strong>Sequential same-subject / same-brain bridge</strong></td>
+<td>Specimen identity does not by itself fix state continuity across fixation, deformation, behavior, sleep/wake regime, or elapsed time.</td>
+<td>State-Continuity Bridge Card, plus Temporal Validity Card when the bridge crosses hours to days.</td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -185,7 +219,7 @@ WBE is especially vulnerable to level substitution. It is easy to describe an L1
 <div class="note-box">
 <strong>Representative primary-literature reasons</strong>
 <p>
-<a href="https://www.nature.com/articles/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a> and <a href="https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2021.672946/full" target="_blank">Di et al. (2021)</a> show why decode scores need shortcut audits. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4246325/" target="_blank">Thomas et al. (2014)</a> and <a href="https://www.nature.com/articles/s41467-017-01285-x" target="_blank">Maier-Hein et al. (2017)</a> show why tractography claims need route disclosure. <a href="https://www.sciencedirect.com/science/article/abs/pii/S1053811904001648" target="_blank">Penny et al. (2004)</a> and <a href="https://pubmed.ncbi.nlm.nih.gov/22561579/" target="_blank">Rosa et al. (2012)</a> show why effective-connectivity claims need candidate-model disclosure. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8617485/" target="_blank">Lynn et al. (2021)</a> and <a href="https://www.nature.com/articles/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> show why thermodynamic language hides multiple estimator families. <a href="https://pubmed.ncbi.nlm.nih.gov/31551604/" target="_blank">Musall et al. (2019)</a> and <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8715714/" target="_blank">Flesher et al. (2021)</a> show why closed-loop results need a boundary card rather than latency alone.
+<a href="https://www.nature.com/articles/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a> and <a href="https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2021.672946/full" target="_blank">Di et al. (2021)</a> show why decode scores need shortcut audits. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4246325/" target="_blank">Thomas et al. (2014)</a> and <a href="https://www.nature.com/articles/s41467-017-01285-x" target="_blank">Maier-Hein et al. (2017)</a> show why tractography claims need route disclosure. <a href="https://www.sciencedirect.com/science/article/abs/pii/S1053811904001648" target="_blank">Penny et al. (2004)</a> and <a href="https://pubmed.ncbi.nlm.nih.gov/22561579/" target="_blank">Rosa et al. (2012)</a> show why effective-connectivity claims need candidate-model disclosure. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8617485/" target="_blank">Lynn et al. (2021)</a> and <a href="https://www.nature.com/articles/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> show why thermodynamic language hides multiple estimator families. <a href="https://pubmed.ncbi.nlm.nih.gov/31551604/" target="_blank">Musall et al. (2019)</a> and <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8715714/" target="_blank">Flesher et al. (2021)</a> show why closed-loop results need a boundary card rather than latency alone. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> show why current living-human proxy rows do not all measure the same object. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a>, <a href="https://doi.org/10.1523/ENEURO.0104-23.2023" target="_blank">Idziak et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">Benisty et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> show why same-subject or same-brain sequencing still needs bridge validation.
 </p>
 </div>
 </section>
@@ -216,6 +250,16 @@ On Mind-Upload, the public <a href="../verification.html">Verification</a> page 
 <td>It shows what is directly observed and where each stack stops.</td>
 </tr>
 <tr>
+<td>Why proxy-rich human evidence still stops below same-subject state closure</td>
+<td><a href="human-proxy-composition.html">Human Proxy Composition and Route Maturity</a></td>
+<td>It separates quantity type, route maturity, calibrator role, and residual hidden-state ceiling.</td>
+</tr>
+<tr>
+<td>Why same-subject or same-brain wording still needs a bridge audit</td>
+<td><a href="state-continuity-bridge.html">State-Continuity Bridge</a></td>
+<td>It separates specimen identity from state continuity, coordinate continuity, and bridge validation.</td>
+</tr>
+<tr>
 <td>The full operational blueprint</td>
 <td><a href="../verification.html">Verification</a></td>
 <td>It defines the public rules, cards, and logs in full.</td>
@@ -243,6 +287,16 @@ On Mind-Upload, the public <a href="../verification.html">Verification</a> page 
 <li>Ishihara, K., &amp; Shimazaki, H. (2025). State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics. <em>Nature Communications</em>, 16, 10852. <a href="https://www.nature.com/articles/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
 <li>Musall, S., Kaufman, M. T., Juavinett, A. L., Gluf, S., &amp; Churchland, A. K. (2019). Single-trial neural dynamics are dominated by richly varied movements. <em>Nature Neuroscience</em>, 22, 1677-1686. <a href="https://pubmed.ncbi.nlm.nih.gov/31551604/" target="_blank">doi:10.1038/s41593-019-0502-4</a></li>
 <li>Flesher, S. N., Downey, J. E., Weiss, J. M., et al. (2021). A brain-computer interface that evokes tactile sensations improves robotic arm control. <em>Science</em>, 372(6544), 831-836. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8715714/" target="_blank">doi:10.1126/science.abd0380</a></li>
+<li>Lu, X., Han, X., Meirovitch, Y., et al. (2023). Preserving extracellular space for high-quality optical and ultrastructural studies of whole mammalian brains. <em>Cell Reports Methods</em>. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
+<li>Idziak, A., Inavalli, V. V. G. K., Bancelin, S., Arizono, M., &amp; Nagerl, U. V. (2023). The Impact of Chemical Fixation on the Microanatomy of Mouse Organotypic Hippocampal Slices. <em>eNeuro</em>. <a href="https://doi.org/10.1523/ENEURO.0104-23.2023" target="_blank">doi:10.1523/ENEURO.0104-23.2023</a></li>
+<li>Johansen, A., Beliveau, V., Colliander, E., et al. (2024). An in vivo high-resolution human brain atlas of synaptic density. <em>Journal of Neuroscience</em>. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
+<li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
+<li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <em>PNAS Nexus</em>. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
+<li>Baadsvik, E. L., Weiger, M., Froidevaux, R., et al. (2024). Myelin bilayer mapping in the human brain in vivo. <em>Magnetic Resonance in Medicine</em>. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">doi:10.1002/mrm.29998</a></li>
+<li>Hirschler, L., Runderkamp, B. A., Decker, A., et al. (2025). Region-specific drivers of CSF mobility measured with MRI in humans. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
+<li>Benisty, H., Barson, D., Moberly, A. H., et al. (2024). Rapid fluctuations in functional connectivity of cortical networks encode spontaneous behavior. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">doi:10.1038/s41593-023-01498-y</a></li>
+<li>Egger, A., Bayon, C., d'Almeida, J., et al. (2024). Chrono-EEG dynamics influencing hand gesture decoding: a 10-hour study. <em>Scientific Reports</em>, 14, 20247. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">doi:10.1038/s41598-024-70609-x</a></li>
+<li>Dagum, P., Elbert, D. L., Giovangrandi, L., et al. (2026). The glymphatic system clears amyloid beta and tau from brain to plasma in humans. <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
 </ol>
 </section>
 
@@ -256,6 +310,8 @@ On Mind-Upload, the public <a href="../verification.html">Verification</a> page 
 <li><a href="claims-and-evidence.html">How to read claims and evidence →</a></li>
 <li><a href="baselines-prereg-and-model-cards.html">Baselines, preregistration, and model cards →</a></li>
 <li><a href="measurement-stack-and-claim-ceiling.html">Observability and claim ceilings →</a></li>
+<li><a href="human-proxy-composition.html">Human proxy composition →</a></li>
+<li><a href="state-continuity-bridge.html">State-continuity bridge →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
