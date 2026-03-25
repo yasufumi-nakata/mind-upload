@@ -5,7 +5,7 @@ description: "Short, precise answers to the questions that come up most often wh
 article_type: FAQ
 subtitle: "Prefer verifiable progress to flashy conclusions"
 author: Mind Uploading Research Project
-last_updated: "2026-03-25"
+last_updated: "2026-03-26"
 note: "Human-first"
 audience: "Readers who want to sort out questions and misconceptions first, and readers who want a quick overview through short Q&A"
 reading_time: "8-15 minutes"
@@ -26,6 +26,7 @@ known_points:
   - "A chemical connectome plus nominal inhibitory edges still does not make fast synchrony, oscillatory coordination, or local electrotonic regime solved."
   - "For several maintenance-state families, local causal evidence and living-human observability remain misaligned, so a human proxy does not by itself mean the causal controller was measured."
   - "Rodent astrocyte causality plus human astrocyte / clearance proxies still do not identify the responsible human controller because the direct observables, spatial units, and model burdens differ."
+  - "Adolescent, healthy-younger, healthy-older, and AD-continuum proxy routes do not define one shared human baseline unless transfer conditions are stated explicitly."
   - "Destructive local ultrastructure and living-human in vivo proxy routes raise different measurement classes and different route burdens, so local ultrastructure, SV2A PET, MRSI biochemical scaffolds, kinetic DMRSI, myelin mapping, and clearance routes should not be compressed into one progress bar."
   - "Same-subject or same-brain wording does not by itself make a live-to-fix, cross-regime, or cross-day workflow one state sample; bridge delay, regime continuity, coordinate transfer, and bridge validation still matter."
   - "An EEG / MEG connectivity label does not by itself show leak-free inter-areal communication or causality; volume conduction, source leakage, ghost interactions, and pipeline dependence still matter."
@@ -434,13 +435,17 @@ At Mind-Upload, the safe reading is therefore two-dimensional: name <strong>whic
 A further tightening follows on this site: even if several rows are listed together, the bundle is not promoted unless the composition audit says whether the apparent agreement survives a <strong>shared-driver / independence check</strong> and what the bundle adds beyond the <strong>strongest single row</strong> under matched conditions.
 </p>
 <div class="note-box">
-<strong>Three extra checks for proxy bundles</strong>
+<strong>Four extra checks for proxy bundles</strong>
 <ul>
 <li><strong>Same quantity?</strong> <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> do not report one common object; they report density, similarity, rate, and support-state / efflux proxies.</li>
 <li><strong>Same driver?</strong> <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> found tightly coupled global progression plus distinct network patterns in simultaneous EEG-PET-MRI, and <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> showed that a major global fMRI mode is substantially coupled to autonomic physiology.</li>
 <li><strong>Same sign?</strong> <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that significant task BOLD changes can coexist with opposite oxygen-metabolism changes across many cortical voxels, so even same-session rows are not automatically one solved state variable.</li>
+<li><strong>Same cohort / regime?</strong> <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derive metabolic similarity mainly from adolescents aged 13-15 years with a 15-35-year replication cohort, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> map CSF mobility in healthy younger adults and a separate CAA cohort, <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> test healthy older adults aged 49-66 years under sleep deprivation, and <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> image reactive astrogliosis across the Alzheimer disease continuum. Cross-row agreement is therefore not one matched human baseline by default.</li>
 </ul>
 </div>
+<p>
+The same stop line matters even before multimodal fusion. If a bundle crosses developmental stage, aging regime, or pathology enrichment, this site asks for an explicit transfer argument rather than silently importing one cohort's baseline into another.
+</p>
 <p>
 One more correction is needed before overreading the same literature: the strongest maintenance-state <strong>causal</strong> papers and the strongest current <strong>human-observability</strong> papers are often on different ladders. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">Hadzibegovic et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2026)</a>, and <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> strengthen local causal relevance, while <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> strengthen human perturbation or proxy routes. That combination still does <strong>not</strong> mean that the responsible human controller was measured. The short crosswalk is in <a href="wbe_101.html#causal-observability-asymmetry">WBE 101: causal relevance vs human observability</a>.
 </p>

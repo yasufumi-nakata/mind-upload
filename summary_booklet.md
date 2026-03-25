@@ -5,7 +5,7 @@ description: "公開ページの要点を A4 冊子向けに自動生成した�
 article_type: "Briefing Booklet"
 subtitle: "公開ページの front matter と冒頭要約から再生成される A4 要約版"
 author: Mind Uploading Research Project
-last_updated: "2026-03-25"
+last_updated: "2026-03-26"
 note: "Auto-generated from public pages"
 body_class: "summary-booklet-page"
 ---
@@ -25,7 +25,7 @@ body_class: "summary-booklet-page"
   <div class="booklet-cover-band">
     <div>
   <span>更新基準日</span>
-  <strong>2026-03-25</strong>
+  <strong>2026-03-26</strong>
 </div>
 <div>
   <span>現在の重点</span>
@@ -449,7 +449,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Reference - Start by keeping the words straight / 3 to 10 minutes for only the necessary items</p>
   <p>This glossary is a quick reference for the meaning of terms. It starts with everyday-language explanations, moves to stricter definitions only when needed, and ties the discussion back to measurement, modeling, and verification.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, astrocyte-state, clearance / immune support, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, and route-maturity language.</li><li>It now also includes the human-observability and support-state terms needed after the March 2026 deepening pass, such as proxy class, route maturity / model burden, support-state proxy, and clearance / immune support.</li><li>It now includes the front-door verification terms added in the March 2026 re-audit, such as claim ceiling, shortcut auditing, maintenance-state, and vascular-state / CVR audit.</li>
+    <li>Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, astrocyte-state, clearance / immune support, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, route-maturity, and calibrator-role language.</li><li>It now also includes the human-observability and support-state terms needed after the March 2026 deepening pass, such as proxy class, route maturity / model burden, calibrator role, support-state proxy, and clearance / immune support.</li><li>It now includes the front-door verification terms added in the March 2026 re-audit, such as claim ceiling, shortcut auditing, maintenance-state, and vascular-state / CVR audit.</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">

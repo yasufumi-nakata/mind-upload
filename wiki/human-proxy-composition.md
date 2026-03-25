@@ -1,19 +1,20 @@
 ---
 layout: default
 title: "Wiki: Human Proxy Composition and Route Maturity"
-description: "Explains why recent human PET, MRSI, myelin, clearance, and multimodal advances do not automatically compose into same-subject state-complete readout, and how to audit quantity type, spatial unit, timescale, model burden, and deployment burden."
+description: "Explains why recent human PET, MRSI, myelin, clearance, and multimodal advances do not automatically compose into same-subject state-complete readout, and how to audit quantity type, spatial unit, timescale, cohort / regime, model burden, and deployment burden."
 article_type: Wiki
 subtitle: "Proxy-rich is not the same as same-subject state closure"
 author: Mind Uploading Research Project
-last_updated: "2026-03-25"
+last_updated: "2026-03-26"
 note: "Technical / natural science only"
 audience: "Readers who want a stricter technical reading of current human in vivo advances and why they still stop below state-complete language"
 reading_time: "12-18 minutes"
-page_intro: "This page explains how to read current human proxy routes without collapsing them into one generic progress bar. The question is not only whether a route is impressive, but what it directly measures, on what unit and timescale, with what model burden, and what hidden-state families still remain unresolved."
+page_intro: "This page explains how to read current human proxy routes without collapsing them into one generic progress bar. The question is not only whether a route is impressive, but what it directly measures, on what unit and timescale, in which cohort / physiological regime, with what model burden, and what hidden-state families still remain unresolved."
 accuracy_note: "The ceilings on this page are operational inferences drawn from primary literature. They are not the claims made by the original papers themselves."
 page_highlights:
   - "Human proxy routes differ not only in strength, but in quantity type: structural scaffold, density proxy, similarity scaffold, kinetic rate map, mobility map, and model-based efflux route are different objects."
   - "Spatial unit and time window are part of the evidence: a cubic-millimeter surgical fragment, parcel-level similarity matrix, 0.7 cc dynamic metabolic voxel, and overnight plasma-efflux inference cannot be treated as interchangeable."
+  - "Cohort and physiological regime are part of the evidence: adolescent developmental cohorts, healthy younger adults, healthy older adults, and AD-continuum reactive-astrogliosis scans do not define one shared human baseline."
   - "Model burden is part of the object: tracer kinetics, partial-volume correction, blood input functions, multicompartment models, and synchronization choices all change what the measurement means."
   - "Same-session multimodal acquisition reduces one mismatch, but it does not erase common physiological factors or modality-specific residuals by default."
   - "Same-subject or same-brain wording solves specimen identity, not state continuity; sequential bridges still need elapsed-time, regime-continuity, and deformation disclosure."
@@ -23,6 +24,7 @@ known_points:
   - "Recent human-side advances reduce different uncertainty terms and are scientifically meaningful, but they are not one common measurement class."
   - "SV2A PET, MRSI similarity graphs, dynamic DMRSI, myelin bilayer MRI, and CSF / glymphatic routes all require route-specific interpretation."
   - "Proxy class and operational maturity still do not tell you what the route safely calibrates, so calibrator role has to be stated separately."
+  - "Even when quantity type and model burden are logged, cross-row composition still requires age band, health/pathology regime, and transfer rationale."
   - "Simultaneous multimodal acquisition can reveal both common and divergent structure across modalities."
   - "Global or shared multimodal factors can still include autonomic or vascular physiology, not only the target neural variable."
   - "A same-subject bridge can still fail to preserve state continuity when acquisition order, elapsed time, or deformation correction are left implicit."
@@ -61,7 +63,7 @@ recommended_pages:
 <div class="abstract-box">
 <h2>Shortest conclusion</h2>
 <p>
-Recent human proxy advances are real, but they do not yet compose automatically into <strong>same-subject state-complete readout</strong>. The reason is not only missing modalities. It is also that current routes measure <strong>different quantity types</strong>, on <strong>different spatial and temporal units</strong>, with <strong>different model and hardware burdens</strong>.
+Recent human proxy advances are real, but they do not yet compose automatically into <strong>same-subject state-complete readout</strong>. The reason is not only missing modalities. It is also that current routes measure <strong>different quantity types</strong>, on <strong>different spatial and temporal units</strong>, in <strong>different cohort / physiological regimes</strong>, with <strong>different model and hardware burdens</strong>.
 </p>
 </div>
 
@@ -102,14 +104,14 @@ This page stays on the technology and natural-science side only. It does not dis
 <tr>
 <td><strong>SV2A PET</strong><br><a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a>; <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>; <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a></td>
 <td>Tracer-defined regional SV2A binding interpreted as a synaptic-density proxy.</td>
-<td>Regional scan-window average; atlas or task-linked interindividual comparison.</td>
+<td>Regional scan-window average in 33 healthy adults; atlas or task-linked interindividual comparison.</td>
 <td>Tracer choice, arterial-versus-reference quantification, kinetic model, scan window, partial-volume handling.</td>
 <td><strong>Regional synaptic-density proxy</strong>, not current synaptic efficacy or universal activity truth.</td>
 </tr>
 <tr>
 <td><strong>Whole-brain <sup>1</sup>H-MRSI metabolic similarity</strong><br><a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a></td>
 <td>Within-subject pairwise correlations among five metabolite profiles (tCr, tNAA, Glx, Ins, Cho) across gray-matter parcels.</td>
-<td>Parcel-level static similarity matrix in 51 healthy subjects, with independent replication in 13.</td>
+<td>Parcel-level static similarity matrix in 51 adolescents aged 13-15 years, with independent replication in 13 healthy controls aged 15-35 years.</td>
 <td>Spectral QC, partial-volume correction, parceling choice, z-scoring, similarity definition.</td>
 <td><strong>Macro biochemical similarity scaffold</strong>, not tractography, flux imaging, or controller-level state readout.</td>
 </tr>
@@ -137,7 +139,7 @@ This page stays on the technology and natural-science side only. It does not dis
 <tr>
 <td><strong>Sleep-linked glymphatic efflux to plasma</strong><br><a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a></td>
 <td>Overnight plasma biomarker changes interpreted through randomized crossover and a multicompartment brain-to-plasma model.</td>
-<td>Randomized crossover trial with 39 participants; overnight sleep versus sleep deprivation.</td>
+<td>Randomized crossover trial with 39 healthy older participants aged 49-66 years; overnight sleep versus sleep deprivation.</td>
 <td>Investigational device, plasma biomarker assays, multicompartment model, overnight physiology assumptions.</td>
 <td><strong>Model-based human biomarker-efflux route</strong>, not local synaptic-maintenance or segment-specific lymphatic ground truth.</td>
 </tr>
@@ -146,7 +148,7 @@ This page stays on the technology and natural-science side only. It does not dis
 </section>
 
 <section class="section" id="collapse-errors">
-<h2 class="section-title">Seven collapse errors to block</h2>
+<h2 class="section-title">Eight collapse errors to block</h2>
 <table class="data-table">
 <thead>
 <tr>
@@ -180,6 +182,11 @@ This page stays on the technology and natural-science side only. It does not dis
 <td><strong>Deployment-maturity collapse</strong><br><code>if a route exists, it is already field-ready</code></td>
 <td>Li used custom 7 T hardware in five participants; Baadsvik used two healthy volunteers with high-performance hardware; Hirschler used ultra-high-field MRI with a specialized sequence; Dagum used an investigational device. These are advances, but not routine whole-brain deployment.</td>
 <td>Name cohort size, hardware class, scan burden, device status, and whether the route is routine, specialized, or proof-of-principle.</td>
+</tr>
+<tr>
+<td><strong>Cohort-regime collapse</strong><br><code>adolescent cohort + healthy younger adults + healthy older adults + AD continuum = same human baseline</code></td>
+<td><a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derive their main metabolic-similarity route from adolescents aged 13-15 years, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> map CSF mobility in healthy younger adults and separately examine CAA, <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> test healthy older adults aged 49-66 years in a sleep-deprivation crossover, and <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> image reactive astrogliosis across the Alzheimer disease continuum. These rows are informative, but they do not share one developmental, aging, or pathology regime by default.</td>
+<td>Disclose age band, health/pathology regime, enrichment or exclusion criteria, and why transfer across cohorts is justified for the claimed latent variable.</td>
 </tr>
 <tr>
 <td><strong>Common-driver collapse</strong><br><code>if rows move together, they must be the same latent variable</code></td>
@@ -216,10 +223,20 @@ The distinction is explicit in the primary paper. <a href="https://doi.org/10.10
 </p>
 </div>
 
+<div class="note-box">
+<strong>Cohort and physiological regime are part of the measurement object</strong>
+<p>
+One remaining shortcut is to list human proxy rows together as if they came from one matched biological baseline. The primary papers themselves argue against that. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> provide a healthy-adult SV2A atlas, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derive metabolic similarity mainly from adolescents aged 13-15 years with a separate 15-35-year replication cohort, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> map CSF mobility in healthy younger adults and then test a separate CAA cohort, <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> study healthy older adults aged 49-66 years under sleep-versus-deprivation crossover, and <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> image reactive astrogliosis across the Alzheimer disease continuum in volunteers averaging 76 +/- 5.5 years. Therefore, on this site, proxy composition must also disclose <strong>developmental / aging regime</strong>, <strong>health versus pathology regime</strong>, and <strong>transfer claim</strong> before cross-row agreement is treated as more than cross-cohort analogy.
+</p>
+</div>
+
 <section class="section" id="three-axes">
 <h2 class="section-title">Proxy class, operational maturity, and calibrator role are different questions</h2>
 <p>
 The remaining weakness after separating quantity type, spatial unit, and model burden is subtler. Readers can still think that once a route has a recognizable <strong>proxy class</strong> and looks technically real, the route must already calibrate a broad hidden-state family. The current primary literature does not support that shortcut. On this site, each human route is therefore read along <strong>three separate axes</strong>: <strong>what kind of proxy it is</strong>, <strong>how operationally mature it is</strong>, and <strong>what hidden-state family it safely calibrates</strong>.
+</p>
+<p>
+Those three axes are defined <strong>per route</strong>. When several routes are combined, this site adds a separate <strong>cohort / regime compatibility</strong> audit so that developmental stage, aging band, and pathology enrichment are not silently treated as interchangeable background.
 </p>
 <table class="data-table">
 <thead>
