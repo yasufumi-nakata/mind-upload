@@ -18,6 +18,7 @@ page_highlights:
   - "A fair inverse-problem benchmark also has to separate focal versus extended-source targets, solver family, and geometry / conductivity sensitivity rather than naming only a winning method."
   - "Each starter dataset has different annotation provenance, time fidelity, and independent split units."
   - "Within-session / cross-session / cross-subject / adaptation are different evaluation families and should not be placed side by side under the same score."
+  - "Metric semantics are task-dependent: in imbalanced or rare-event tasks, accuracy or AUROC alone do not fix event sensitivity, false alarms, minority-class failure, or calibration."
   - "Cross-session and adaptation labels are not yet temporal-validity claims; state annotation, fixed decoder interval, recalibration burden, and transfer ceiling still have to be disclosed separately."
   - "Even when the score is numerically the same, you still have to separate the target neural variable from eye movement, EMG, behavior, feedback routes, subject / session fingerprint, and acquisition-distribution shortcuts such as site / device / reference / electrode layout."
   - "Even when foundation / self-supervised EEG models are used, pretraining-corpus and harmonization audits are still required."
@@ -30,6 +31,7 @@ known_points:
   - "When selecting data for the first time, you will move forward if you prioritize ease of retesting over difficulty."
   - "Cue-locked events, expert interval annotations, sleep hypnograms, and physician report-derived labels have different meanings even though they are the same 'public EEG data'."
   - "Even if the accuracy is the same, the strength of the argument that can be read will change depending on which generalization condition the score was obtained under."
+  - "For class-imbalanced or rare-event tasks, a task-matched metric bundle is required: event sensitivity plus false alarms for seizure tasks, and macro / per-stage agreement for sleep staging, rather than one headline number."
   - "Cross-session accuracy and cross-session adaptation still do not say whether a fixed decoder survived, how much recalibration was needed, or what transfer ceiling remains."
   - "A same-day score may reflect movement / EOG / EMG / feedback routes, subject / session fingerprint, or acquisition-distribution shortcuts rather than the target signal."
   - "Foundation-model improvements are not comparable unless the pretraining corpus, channel-mismatch handling, acquisition-distribution summary, and adaptation regime are disclosed."
@@ -424,6 +426,40 @@ The next practical weakness on this page was that <strong>split / leak / harmoni
 From this section onward, dataset cards and baseline results must report at least <strong>(1) evaluation family</strong>, <strong>(2) the independent hold-out unit</strong>, <strong>(3) raw-recording / window ancestry</strong>, <strong>(4) subject / session / site / device / reference-system / electrode-layout disjointness together with metadata-only baselines</strong>, <strong>(5) the channel-map / reference / sample-rate / filter harmonization log</strong>, <strong>(6) whether target-session, target-subject, or target-site data were used</strong>, <strong>(7) recalibration amount and timing</strong>, <strong>(8) for leaderboard or challenge claims, benchmark provenance including version, split / randomization rule, hidden grouping, extra-data / checkpoint policy, inference-stage restrictions, and postmortem disclosures</strong>, and <strong>(9) a stopping claim</strong>. If the claim spans more than one session or day, it must additionally disclose the site's <strong>Temporal Validity</strong> fields: <strong>state annotation</strong>, <strong>fixed decoder interval</strong>, <strong>recalibration burden</strong>, and <strong>transfer ceiling</strong>. Scores without this context will be treated as limited L1 decode results, fingerprint-unresolved / acquisition-distribution-unresolved classifiers, or benchmark-governance-unresolved leaderboards rather than evidence of long-term stability or deployability.
 </p>
 </div>
+
+<div class="note-box">
+<strong>2026-03-25 addendum: metric semantics are part of the benchmark</strong>
+<p>
+The next practical weakness on this page was that <strong>split / leak / harmonization</strong> and <strong>benchmark governance</strong> were visible, while <strong>metric semantics</strong> could still hide behind one headline number. The primary literature does not support that shortcut. <a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">Saito &amp; Rehmsmeier (2015)</a> showed why <strong>precision-recall</strong> views can be more informative than ROC summaries under strong class imbalance. In seizure tasks, <a href="https://doi.org/10.1016/j.ebiom.2021.103275" target="_blank">Roy et al. (2021)</a> and <a href="https://doi.org/10.1097/WNP.0000000000000709" target="_blank">Scheuer et al. (2021)</a> show that practical evaluation still turns on <strong>sensitivity</strong>, <strong>false alarms per hour or day</strong>, event-overlap logic, and latency rather than plain accuracy, while <a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">Segal et al. (2023)</a> show that <strong>false-alarm control</strong> is itself a design target in seizure prediction rather than an afterthought. In sleep staging, <a href="https://doi.org/10.1093/sleep/zsx139" target="_blank">Sun et al. (2017)</a> used <strong>Cohen's kappa</strong> and showed that imbalance in stage proportions changes performance estimates, while <a href="https://doi.org/10.7554/eLife.70092" target="_blank">Vallat &amp; Walker (2021)</a> show that pooled performance can still hide especially weak <strong>N1-stage</strong> agreement. Therefore, on this site, a dataset or benchmark card must now also disclose a <strong>task-matched metric bundle</strong>, not only a split and a score.
+</p>
+</div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>Task family</th>
+<th>Minimum metric bundle on this site</th>
+<th>Overread to block</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cue-locked classification / decoding</strong></td>
+<td>Balanced accuracy or macro-F1, confusion matrix, subject-wise aggregation, and calibration / abstention if probabilities are output.</td>
+<td>Do not let one accuracy number hide minority-class collapse or confidence miscalibration.</td>
+</tr>
+<tr>
+<td><strong>Seizure detection / forecasting</strong></td>
+<td>Event sensitivity or recall, false alarms per hour or per day, event-overlap rule, detection / warning latency when relevant, and calibration if thresholds or alarms are used.</td>
+<td>Do not let accuracy, AUROC, or one threshold-free summary stand in for clinically usable alarm behavior.</td>
+</tr>
+<tr>
+<td><strong>Sleep staging</strong></td>
+<td>Cohen's kappa or macro-F1, per-stage recall / F1, and a confusion matrix that keeps minority stages visible.</td>
+<td>Do not let pooled accuracy hide weak N1 or transition-stage performance.</td>
+</tr>
+</tbody>
+</table>
 </section>
 
 <section class="section" id="dataset-audit">
@@ -716,6 +752,7 @@ A public inverse-problem comparison on this site must now disclose at least <str
 <li><strong>Annotation provenance:</strong> Did you clearly indicate whether the label came from an annotation channel, manual scoring, or a report-derived rule?</li>
 <li><strong>QC:</strong>Are noise, defects, and artifacts quantified?</li>
 <li><strong>Comparison:</strong>Is there a baseline and can be compared using the same metrics as the evaluation family</li>
+<li><strong>Metric bundle:</strong>If the task is imbalanced or event-based, are event sensitivity, false alarms, per-stage agreement, or calibration disclosed rather than one headline number?</li>
 <li><strong>Benchmark provenance:</strong>If the result comes from a challenge or leaderboard, are benchmark version, split / randomization, hidden grouping, extra-data policy, pretrained-checkpoint policy, inference-stage restrictions, and later postmortems fixed?</li>
 <li><strong>Inverse-problem governance:</strong>If source imaging is compared, are validation class, source regime, geometry/control sweep, and inter-method disagreement disclosed before declaring a winner?</li>
 <li><strong>Rebuttal evidence:</strong>Are there data leak tests, counterfactual tests, and records of failures</li>
@@ -909,6 +946,12 @@ The shortest route to that end is to approach BIDS/EEG-BIDS.
 <li><a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025), Stabilizing brain-computer interfaces through alignment of latent dynamics</a></li>
 <li><a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025), Long-term unsupervised recalibration of cursor-based intracortical BCIs</a></li>
 <li><a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025), An instantaneous voice-synthesis neuroprosthesis</a></li>
+<li><a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">Saito &amp; Rehmsmeier (2015), The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets</a></li>
+<li><a href="https://doi.org/10.1016/j.ebiom.2021.103275" target="_blank">Roy et al. (2021), Evaluation of artificial intelligence systems for assisting neurologists with fast and accurate annotations of scalp electroencephalography data</a></li>
+<li><a href="https://doi.org/10.1097/WNP.0000000000000709" target="_blank">Scheuer et al. (2021), Seizure Detection: Interreader Agreement and Detection Algorithm Assessments Using a Large Dataset</a></li>
+<li><a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">Segal et al. (2023), Utilizing risk-controlling prediction calibration to reduce false alarm rates in epileptic seizure prediction</a></li>
+<li><a href="https://doi.org/10.1093/sleep/zsx139" target="_blank">Sun et al. (2017), Large-Scale Automated Sleep Staging</a></li>
+<li><a href="https://doi.org/10.7554/eLife.70092" target="_blank">Vallat &amp; Walker (2021), An open-source, high-performance tool for automated sleep staging</a></li>
 <li><a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">PhysioNet: EEG Motor Movement/Imagery Dataset</a></li>
 <li><a href="https://physionet.org/content/chbmit/1.0.0/" target="_blank">PhysioNet: CHB-MIT Scalp EEG Database</a></li>
 <li><a href="https://physionet.org/content/sleep-edfx/1.0.0/" target="_blank">PhysioNet: Sleep-EDF Database Expanded</a></li>

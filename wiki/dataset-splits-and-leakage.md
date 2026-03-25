@@ -241,6 +241,13 @@ The official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge 
 </p>
 </div>
 
+<div class="note-box">
+<strong>Metric semantics are also part of leak-resistant reporting</strong>
+<p>
+Even after split hygiene and benchmark provenance are disclosed, the reported number can still mislead if the task is rare-event or class-imbalanced. <a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">Saito &amp; Rehmsmeier (2015)</a> showed that precision-recall views are often more informative than ROC summaries under strong imbalance. In seizure tasks, <a href="https://doi.org/10.1016/j.ebiom.2021.103275" target="_blank">Roy et al. (2021)</a> and <a href="https://doi.org/10.1097/WNP.0000000000000709" target="_blank">Scheuer et al. (2021)</a> show that event sensitivity, overlap logic, and false alarms per hour or day matter together, while <a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">Segal et al. (2023)</a> shows that false-alarm control is itself a design target in seizure prediction. In sleep staging, <a href="https://doi.org/10.1093/sleep/zsx139" target="_blank">Sun et al. (2017)</a> and <a href="https://doi.org/10.7554/eLife.70092" target="_blank">Vallat &amp; Walker (2021)</a> show that pooled performance can still hide minority-stage failure. Therefore, this site now asks for a <strong>task-matched metric bundle</strong> in addition to split hygiene.
+</p>
+</div>
+
 <section class="section" id="dataset-specific-traps">
 <h2 class="section-title">Leak warning specific to the dataset added this time</h2>
 <table class="data-table">
@@ -279,6 +286,7 @@ The official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge 
 <li><strong>Evaluation family:</strong>Whether the result is within-session, cross-session, cross-subject, or temporal / longitudinal. </li>
 <li><strong>Split rule:</strong>How many items were placed in train / validation / calibration / test, and what was the independent hold-out unit? </li>
 <li><strong>Window ancestry:</strong>Which subject / case / night / session / file / record generated each split, and were near-adjacent windows kept apart? </li>
+<li><strong>Metric bundle:</strong>Was the task read through balanced / macro metrics, event sensitivity plus false alarms, or per-stage agreement rather than a single headline number? </li>
 <li><strong>Report usage flag:</strong>Was the claim signal-only, or were report text / metadata / multimodal fields also used? </li>
 <li><strong>Acquisition-distribution audit:</strong>Were site, device, reference system, channel map, electrode layout, and protocol distribution separated, harmonized, or left mixed? </li>
 <li><strong>Preprocessing boundaries:</strong>Were normalization, feature selection, and threshold tuning fit using only the allowed split? </li>
@@ -302,6 +310,12 @@ The official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge 
 <li><a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017), Systems, subjects, sessions: to what extent do these factors influence EEG data?</a></li>
 <li><a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020), Cross-dataset variability problem in EEG decoding with deep learning</a></li>
 <li><a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021), The Time-Robustness Analysis of Individual Identification Based on Resting-State EEG</a></li>
+<li><a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">Saito &amp; Rehmsmeier (2015), The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets</a></li>
+<li><a href="https://doi.org/10.1016/j.ebiom.2021.103275" target="_blank">Roy et al. (2021), Evaluation of artificial intelligence systems for assisting neurologists with fast and accurate annotations of scalp electroencephalography data</a></li>
+<li><a href="https://doi.org/10.1097/WNP.0000000000000709" target="_blank">Scheuer et al. (2021), Seizure Detection: Interreader Agreement and Detection Algorithm Assessments Using a Large Dataset</a></li>
+<li><a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">Segal et al. (2023), Utilizing risk-controlling prediction calibration to reduce false alarm rates in epileptic seizure prediction</a></li>
+<li><a href="https://doi.org/10.1093/sleep/zsx139" target="_blank">Sun et al. (2017), Large-Scale Automated Sleep Staging</a></li>
+<li><a href="https://doi.org/10.7554/eLife.70092" target="_blank">Vallat &amp; Walker (2021), An open-source, high-performance tool for automated sleep staging</a></li>
 <li><a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) official homepage</a></li>
 <li><a href="https://eeg2025.github.io/rules/" target="_blank">EEG Challenge (2025) official rules</a></li>
 <li><a href="https://eeg2025.github.io/submission/" target="_blank">EEG Challenge (2025) official submission page</a></li>
