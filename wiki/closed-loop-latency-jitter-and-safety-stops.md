@@ -1,32 +1,37 @@
 ---
 layout: default
 title: "Wiki: Closed Loop, Delay, Jitter, Safe Stop"
-description: "Delay, jitter, drift, safety stop, and the body/environment boundary are organized from primary literature for each type of closed loop."
+description: "Delay, jitter, tail latency, fixed-decoder durability, recalibration burden, deployment eligibility, and the body/environment boundary are organized from primary literature for each type of closed loop."
 article_type: Wiki
 subtitle: "Closed-loop time requirements are not a single number; they vary by loop type"
 author: Mind Uploading Research Project
-last_updated: "2026-03-19"
+last_updated: "2026-03-26"
 note: "Learning guide / evidence refresh"
 audience: "People who want to read about L3 closed-loop evaluation and real-time operation based on literature rather than general information"
 reading_time: "14-22 minutes"
-page_intro: "This page is a wiki that organizes the differences among delay, jitter, drift, safety stop, and body/environment boundary in Mind-Upload's L3 'closed loop' using primary literature. The purpose is to clarify that even when offline accuracy is high, the required timing budget depends on the loop band and actuator, and low latency alone does not tell you which sensory, motor, interoceptive, or reafferent loops were actually preserved."
-accuracy_note: "Here, we do not set a ``fixed threshold common to all loops.'' We also do not treat a fast loop as boundary-complete by default. Judgments are written on the premise that both end-to-end timing indicators and the retained/substituted body/environment routes are disclosed explicitly."
+page_intro: "This page is a wiki that organizes delay, jitter, drift, safety stop, body/environment boundary, and long-horizon deployability in Mind-Upload's L3 'closed loop' using primary literature. The purpose is to clarify that even when offline accuracy is high, the required timing budget depends on the loop band and actuator, and low latency alone does not tell you which sensory, motor, interoceptive, or reafferent loops were actually preserved, whether a fixed decoder survived across time, or how much rescue-mode programming was needed."
+accuracy_note: "Here, we do not set a ``fixed threshold common to all loops.'' We also do not treat a fast loop as boundary-complete, temporally durable, or chronically deployable by default. Judgments are written on the premise that end-to-end timing indicators, retained/substituted body/environment routes, fixed-decoder interval, rescue-mode adaptation burden, and deployment slices are disclosed explicitly."
 page_highlights:
   - "Closed-loop time requirements vary by loop type, not by a single ms value."
   - "Low latency is not the same as reproducing the relevant body/environment boundary."
+  - "A same-session fast loop, a fixed decoder that survives across days, an adaptively rescued loop, and a chronically deployable loop are different achievements."
   - "Even if the event marker is less than 1 ms, it is a different matter from guaranteeing end-to-end for the entire system."
-  - "Phase error is more important than ms for phase-targeting, burst detection delay and home programming burden are more important for adaptive DBS."
-  - "Streaming speech BCI needs to record not only average delay but also tail latency, silence/hold-last-output, and recalibration load in separate logs."
+  - "Phase error is more important than ms for phase-targeting, and for adaptive DBS the timing story now has to be separated from fixed-decoder durability, programming burden, and eligibility."
+  - "Streaming speech BCI needs to record not only average delay but also tail latency, output-path audit, silence/hold-last-output, and fixed-decoder horizon in separate logs."
+  - "Adaptive-DBS papers need to log rescue-mode optimization, clinic/home transfer, eligibility, and continuation separately from symptom benefit."
 known_points:
   - "Offline accuracy and closed-loop stability are separate claims and cannot be audited with the same score."
   - "Even a fast loop can remain boundary-incomplete if self-motion, predicted reafference, tactile feedback, respiration, arousal, or other subject-defining routes stay omitted or undisclosed."
   - "Latency and jitter tolerances vary for state feedback, ERP/command BCI, streaming communication, phase-locked stimulation, and burst-driven neuromodulation."
   - "Unless you actually measure input, processing, output, and return end-to-end, you won't know the timing of actual operation."
-  - "Speed-up within-session alone is not enough; it also leaves recalibration burden, clinic/home transition, and programming burden."
+  - "Fixed-decoder durability and rescue-mode recalibration are separate evidence objects; one can fail while the other still rescues behavior."
+  - "Speed-up within-session alone is not enough; it also leaves fixed-decoder horizon, recalibration burden, clinic/home transition, and programming burden."
+  - "Chronic adaptive-DBS symptom benefit, eligibility, and long-run continuation are different axes and should not be collapsed into one deployment verdict."
 unknown_points:
   - "It is unclear how far the closed-loop bandwidth required for WBE spans which loop types."
   - "It is not yet possible to generalize the precision required for phase-specific control to all tasks in non-invasive human experiments."
-  - "What is considered 'unstable' or 'impractical' in terms of drift, recalibration frequency, and programming burden during long-term operation depends on the task."
+  - "What counts as an acceptable fixed-decoder horizon before rescue-mode adaptation becomes a different operating regime still depends on task and modality."
+  - "What is considered 'unstable' or 'impractical' in terms of drift, recalibration frequency, eligibility, continuation, and programming burden during long-term operation depends on the task."
 wiki_links:
   - label: "Wiki: Event synchronization and observation log"
     url: "/wiki/event-sync-and-measurement-logs.html"
@@ -34,6 +39,9 @@ wiki_links:
   - label: "Wiki: Uncertainty, proofreading, abstaining"
     url: "/wiki/uncertainty-confidence-and-abstention.html"
     description: "Complements the design concept of 'not releasing' when reliability is low."
+  - label: "Wiki: State, trait, and drift"
+    url: "/wiki/state-trait-and-drift.html"
+    description: "Separates same-session success from cross-day durability and rescue-mode adaptation."
   - label: "Wiki: Update/branch/stop rules"
     url: "/wiki/update-branching-and-stop-rules.html"
     description: "Complements how to separate freeze and stop rules as operations."
@@ -70,6 +78,13 @@ On this page, instead of talking about "how fast is enough" in an abstract way, 
 <strong>Timing audit is not the whole loop audit</strong>
 <p>
 This page now keeps <strong>timing logs</strong> separate from <strong>body/environment boundary logs</strong>. A loop can be fast and still remain boundary-incomplete if the paper does not say which sensory, action, interoceptive, and self-generated-feedback routes were preserved, substituted, or omitted. On this site, low latency without that disclosure does not rise above a task-specific local controller or surrogate-body result.
+</p>
+</div>
+
+<div class="note-box">
+<strong>Three public cards are stacked here, not one timing score</strong>
+<p>
+On this site, once a closed-loop claim leaves the narrow same-session timing question, it has to stack the <a href="../verification.html#temporal-validity-card">Verification: Temporal Validity Card</a> with the <a href="../verification.html#body-environment-boundary-card">Verification: Body / Environment Boundary Card</a>, and add the <a href="../verification.html#calibration-abstention-card">Calibration &amp; Abstention Card</a> whenever silence, abstention, or fallback behavior matters. A fast loop without those companion cards stays a bounded local-controller result.
 </p>
 </div>
 
@@ -192,9 +207,9 @@ If the paper does not disclose which sensory, action, interoceptive, and self-ge
 </section>
 
 <section class="section" id="longitudinal-bottlenecks">
-<h2 class="section-title">2026-03 Literature audit: Three barriers that increase with long-term operation</h2>
+<h2 class="section-title">2026-03 literature audit: four barriers that appear after same-session success</h2>
 <p>
-The weakness of the previous version was that it too often categorized the closed loop as a <strong>same-session timing problem</strong>. Looking at the primary literature for 2024-2026, in addition to normal latency/jitter, speech BCI and chronic aDBS have other barriers such as tail latency and output path, recalibration burden, and natural deployment / programming burden. Therefore, this site does not raise L3 just because the loop "moves", but requests the following three axes in separate logs.
+The remaining weakness of the previous version was that it still let readers compress long-horizon closed-loop evidence into a <strong>same-session timing problem</strong>. Looking at the primary literature for 2024-2026, the scientific bottlenecks after a loop first "moves" are not one axis. Speech BCI and chronic aDBS now force at least <strong>(1) output-path timing</strong>, <strong>(2) fixed-decoder durability</strong>, <strong>(3) rescue-mode recalibration / remote optimization burden</strong>, and <strong>(4) eligibility / continuation / clinic-home transfer</strong> to be logged separately. Therefore, this site does not raise L3 just because the loop runs online; it asks for the following four barriers as distinct evidence objects.
 </p>
 <table class="data-table">
 <thead>
@@ -207,25 +222,76 @@ The weakness of the previous version was that it too often categorized the close
 <tbody>
 <tr>
 <td><strong>tail latency / output path</strong></td>
-<td>Littlejohn et al. (2025) showed streaming speech in 80 ms increments and separately published the delay distribution from go cue to actual speech. Wairagkar et al. (2025) demonstrated neural-to-voice synthesis of less than 10 ms, but also demonstrated that the audio driver is speed-dependent in closed-loop feedback. </td>
+<td>Littlejohn et al. (2025) showed streaming brain-to-voice in <strong>80 ms steps</strong> and reported cue-to-audio timing rather than just decoder timing. Wairagkar et al. (2025) demonstrated <strong>sub-10 ms</strong> neural-to-voice synthesis while returning <strong>silence for non-speech and overlapping speech</strong>, which means output-path latency and fallback policy are part of the loop rather than post-processing detail.</td>
 <td>The average latency of the reasoner is not enough, and we leave the behavior of module-wise latency, cue-to-output tail, audio playback path, and silence/abstention separately. </td>
 </tr>
 <tr>
-<td><strong>recalibration burden / drift</strong></td>
-<td>Wilson et al. (2025) found that frequent daily supervised recalibration is a major obstacle to daily use, and evaluated unsupervised recalibration that handles the drift of multiple timescales in a one-month closed-loop. </td>
-<td><code>time since last supervised calibration</code>, presence or absence of unsupervised adaptation, performance degradation curve, recovery time, and manual intervention time are raised to the main log. </td>
+<td><strong>fixed-decoder durability</strong></td>
+<td>Wilson et al. (2025) made explicit that accumulating neural changes create periods in which users cannot use a static intracortical BCI reliably, and evaluated one-month operation against fixed-decoder comparators rather than hiding every failure behind adaptive rescue. That means a same-session fast loop and a fixed decoder that still works days later are not the same achievement.</td>
+<td>Report the <strong>fixed decoder interval</strong>, time since last supervised calibration, degradation curve under no-update conditions, and when the claim ceiling has to drop from durable fixed-decoder evidence to rescue-mode evidence.</td>
 </tr>
 <tr>
-<td><strong>naturalistic deployment / programming burden</strong></td>
-<td>Oehrn et al. (2024) evaluated chronic aDBS in both in-clinic and at-home settings, and compared them even in a natural environment. Cascino et al. (2026) reported that 9 out of 20 consecutive cases of chronic cDBS were eligible for aDBS, with 5 continuing as of July 2025, indicating that technical/programming constraints affect deployability. </td>
-<td>Not only successes in the lab, but also clinic/home transition, eligibility, continuation, programming changes, and stimulation duty cycle are recorded as required logs on the deployment side. </td>
+<td><strong>rescue-mode recalibration / remote optimization burden</strong></td>
+<td>Wilson et al. (2025) also showed multi-timescale unsupervised recalibration, Dixon et al. (2026) reported a machine-learning pipeline capable of <strong>remotely optimizing</strong> movement-responsive aDBS parameters in a <strong>home setting</strong>, and Busch et al. (2025) documented biomarker-selection, threshold-definition, and artifact-related maladaptation as programming burdens. Rescue is therefore a separate operating regime, not a free extension of fixed-decoder success.</td>
+<td>Log whether rescue was <strong>manual, unsupervised, or remotely optimized</strong>, what data and staff time it required, which parameters changed, how long recovery took, and whether performance after rescue is being compared fairly against the pre-rescue fixed-decoder slice.</td>
+</tr>
+<tr>
+<td><strong>eligibility / continuation / naturalistic transfer</strong></td>
+<td>Oehrn et al. (2024) evaluated chronic adaptive DBS with both <strong>in-clinic and at-home</strong> recordings. Busch et al. (2025) reported that <strong>6 of 8</strong> patients chose to remain on adaptive DBS after two-week home evaluation, while Cascino et al. (2026) reported that only <strong>9 of 20</strong> consecutive chronic cDBS patients were eligible and <strong>5</strong> remained on chronic aDBS by July 2025. Eligibility and continuation therefore remain separate bottlenecks even after technical proof-of-principle.</td>
+<td>Not only lab success, but also <strong>screened n</strong>, exclusion reasons, clinic/home slice, continuation rate, programming visits, and stimulation-duty-cycle changes are recorded as required logs on the deployment side.</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
 <strong>Points of criticism here</strong>
 <p>
-Therefore, just because "the fast loop worked once" or "the adaptive controller reduced the symptoms a little" does not mean that it can be used for a long time. Only after <strong>tail latency</strong>, <strong>manual recalibration</strong>, and <strong>establishment at home</strong> are passed separately can we read that we are approaching a deployable closed loop.
+Therefore, just because "the fast loop worked once" or "the adaptive controller reduced the symptoms a little" does not mean that it can be used for a long time. A same-session fast loop is not yet a <strong>fixed decoder that still works tomorrow</strong>; a rescued loop is not yet an <strong>easy-to-program chronic controller</strong>; and a programmable chronic controller is not yet a <strong>broadly eligible and maintainable home-use route</strong>. Only after those barriers are passed separately can we read that we are approaching a deployable closed loop.
+</p>
+</div>
+</section>
+
+<section class="section" id="card-stack">
+<h2 class="section-title">Which public card gets stacked when the loop leaves same-session</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>Evidence slice</th>
+<th>What it safely supports</th>
+<th>What it still does not support</th>
+<th>Public card stack on this site</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>same-session fast local loop</strong></td>
+<td>That the declared subsystem can run online with measured timing and an explicit fallback policy.</td>
+<td>Cross-day durability, boundary completeness, easy clinical deployment.</td>
+<td>Timing log plus <a href="../verification.html#calibration-abstention-card">Calibration &amp; Abstention Card</a> when relevant.</td>
+</tr>
+<tr>
+<td><strong>cross-day fixed-decoder loop</strong></td>
+<td>That a decoder survives a declared no-update interval under declared state annotation and drift conditions.</td>
+<td>Adaptive rescue benefit, broad home-use scalability, solved embodiment.</td>
+<td><a href="../verification.html#temporal-validity-card">Temporal Validity Card</a> plus timing log.</td>
+</tr>
+<tr>
+<td><strong>rescued / adaptively maintained loop</strong></td>
+<td>That performance can be recovered under a declared update policy.</td>
+<td>That the original fixed decoder was durable, or that rescue burden is negligible.</td>
+<td><a href="../verification.html#temporal-validity-card">Temporal Validity Card</a> plus update / rescue log and <a href="../verification.html#calibration-abstention-card">Calibration &amp; Abstention Card</a>.</td>
+</tr>
+<tr>
+<td><strong>naturalistic chronic therapeutic loop</strong></td>
+<td>That the loop can remain useful under declared clinic/home and continuation constraints for the screened population.</td>
+<td>That the route is broadly eligible, easy to program, or body/environment complete by default.</td>
+<td><a href="../verification.html#temporal-validity-card">Temporal Validity Card</a> plus <a href="../verification.html#body-environment-boundary-card">Body / Environment Boundary Card</a> plus deployment-burden log.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Reading rule</strong>
+<p>
+This page now blocks a common shortcut: <strong>same-session online</strong> is not quietly promoted to <strong>durable</strong>, <strong>rescued</strong>, or <strong>deployable</strong>. Those are four different evidence slices with different public cards and different failure modes.
 </p>
 </div>
 </section>
@@ -359,15 +425,16 @@ Whether it's ``I didn't get it right so I won't output it'', ``I'm going to use 
 <li><strong>Additional metrics for phase/burst systems:</strong>Phase error distribution, missed trigger, burst detection delay, false positive/negative. </li>
 <li><strong>residual omitted loops / abstention boundary:</strong>State which body/environment routes remain absent and what stronger claim therefore remains forbidden. </li>
 <li><strong>Abstain/freeze/safety stop:</strong>Leave the number of activations, previous state, and return conditions. </li>
-<li><strong>Longitudinal burden: Record the elapsed time since the last supervised recalibration, presence or absence of unsupervised adaptation, and manpower/time required for recalibration. </li>
-<li><strong>naturalistic deployment: leave clinic/home performance difference, eligibility, continuation, programming change, duty cycle. </li>
+<li><strong>fixed decoder interval / training-free horizon:</strong>State how long the system was required to run before any supervised or unsupervised update was allowed. </li>
+<li><strong>rescue-mode policy:</strong>Record whether unsupervised adaptation, manual reprogramming, or remote optimization was used, which parameters changed, and what manpower/time was required. </li>
+<li><strong>eligibility / continuation / naturalistic deployment:</strong>Leave clinic/home performance difference, screened n, exclusion reasons, continuation, programming visits, and duty cycle. </li>
 <li><strong>Performance degradation curve:</strong> Leaves the point at which it collapses when artificially adding delay. </li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="how-to-read">
-<h2 class="section-title">9 questions when reading L3 arguments</h2>
+<h2 class="section-title">11 questions when reading L3 arguments</h2>
 <ol>
 <li><strong>Does it say which loop class it deals with?</strong> Check whether slow feedback, speech streaming, phase-locked, and aDBS are mentioned in the same table. </li>
 <li><strong>Does it declare which body/environment boundary it actually used?</strong> Check whether the paper fixes the target subsystem and names preserved, substituted, and omitted loops instead of only saying "closed loop."</li>
@@ -376,7 +443,9 @@ Whether it's ``I didn't get it right so I won't output it'', ``I'm going to use 
 <li><strong>Are there module-wise measurements, not just end-to-end?</strong> Don't just rely on software timestamps; check which of the input, inference, and output paths are rate-limiting. </li>
 <li><strong>For speech / streaming, are silence and output path displayed?</strong> Check whether false speech, audio driver, or hold-last-output are hidden. </li>
 <li><strong>Is delay mapped to phase error or burst time?</strong> Check whether the paper goes beyond a single ms value when phase or burst timing is what matters. </li>
-<li><strong>Are recalibration burden and clinic/home transfer shown separately?</strong> Check that deployability is not inferred from within-session success alone. </li>
+<li><strong>Does it separate fixed-decoder durability from adaptive rescue?</strong> Check whether the paper shows the no-update slice rather than reporting only the post-update result. </li>
+<li><strong>If rescue happened, is the rescue cost shown?</strong> Check whether staff time, parameter changes, remote optimization, or unsupervised adaptation are hidden. </li>
+<li><strong>Are eligibility, continuation, and clinic/home transfer shown separately from symptom benefit?</strong> Check that deployability is not inferred from a small set of successfully programmed cases alone. </li>
 <li><strong>Are abstentions, silence fallbacks, freezes, and safety stops separated?</strong> Confirm that danger-handling and low-confidence handling are not collapsed into one outage label. </li>
 </ol>
 </section>
@@ -408,6 +477,8 @@ Whether it's ``I didn't get it right so I won't output it'', ``I'm going to use 
 <li>Wilson GH, Stein EA, Kamdar F, et al. Long-term unsupervised recalibration of intracortical brain-computer interfaces using a hidden Markov model. <em>Nat Biomed Eng.</em> 2025. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
 <li>Oehrn CR, Roediger J, Diehl A, et al. Chronic adaptive deep brain stimulation versus conventional stimulation in Parkinson's disease: a blinded randomized feasibility trial. <em>Nat Med.</em> 2024. <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">doi:10.1038/s41591-024-03196-z</a></li>
 <li>Cascino S, Roediger J, Oehrn C, et al. Chronic adaptive deep brain stimulation in Parkinson's disease: ADAPT-START findings and programming principles. <em>npj Parkinsons Dis.</em> 2026. <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">doi:10.1038/s41531-026-01269-z</a></li>
+<li>Dixon TC, Strandquist G, Zeng A, et al. Movement-responsive deep brain stimulation for Parkinson’s disease using a remotely optimized neural decoder. <em>Nat Biomed Eng.</em> 2026;10:110-124. <a href="https://doi.org/10.1038/s41551-025-01438-0" target="_blank">doi:10.1038/s41551-025-01438-0</a></li>
+<li>Busch JL, Kaplan J, Behnke JK, et al. Chronic adaptive deep brain stimulation for Parkinson’s disease: clinical outcomes and programming strategies. <em>npj Parkinsons Dis.</em> 2025;11:264. <a href="https://doi.org/10.1038/s41531-025-01124-7" target="_blank">doi:10.1038/s41531-025-01124-7</a></li>
 </ol>
 </section>
 
