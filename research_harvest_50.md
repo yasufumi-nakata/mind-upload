@@ -1134,15 +1134,21 @@ The remaining weakness in U10 was that it still read too much like one bucket ab
 </ol>
 <h3>What has some traction now (areas with accumulated literature)</h3>
 <ul>
-<li>Semantic decoding/brain-to-text from non-invasive brain activity is progressing rapidly. </li>
+<li>Language-facing neural decoding is progressing across several distinct routes: within-subject semantic reconstruction, fixed-segment speech retrieval, known-onset word decoding, prompt-conditioned generation, and invasive communication subsystems. </li>
 <li>The methodology for LLM hallucination detection and self-consistency assessment is being expanded. </li>
 <li>The point that ``output matching alone does not guarantee internal identity'' is widely shared. </li>
 </ul>
-<p class="small"><strong>Representative references:</strong> <a href="https://doi.org/10.1126/sciadv.adw1464" target="_blank">Mind captioning</a>, <a href="https://doi.org/10.1088/1741-2552/adfab1" target="_blank">Brain-to-text decoding with context-aware neural representations and large language models</a>, <a href="https://doi.org/10.1101/2022.09.29.509744" target="_blank">Semantic reconstruction of continuous language from non-invasive brain recordings</a>, <a href="https://doi.org/10.1002/brx2.37" target="_blank">Advancements and implications of semantic reconstruction</a>.</p>
+<p class="small"><strong>Representative references:</strong> <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Semantic reconstruction of continuous language from non-invasive brain recordings</a>, <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">Decoding speech perception from non-invasive brain recordings</a>, <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">Towards decoding individual words from non-invasive brain recordings</a>, <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Generative language reconstruction from brain recordings</a>, <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">A high-performance speech neuroprosthesis</a>.</p>
+<div class="note-box">
+<strong>For technical reading, split language route before calling it imitation</strong>
+<p>
+This section becomes too coarse if all language-facing outputs are treated as one `brain-to-text` bucket. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a> constrain <strong>within-subject semantic reconstruction</strong>, <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">D&eacute;fossez et al. (2023)</a> constrain <strong>fixed-segment retrieval</strong>, <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a> constrain <strong>known-onset word decoding</strong>, <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Ye et al. (2025)</a> constrain <strong>prompt-conditioned generation</strong>, and <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>, plus <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> constrain <strong>communication subsystems</strong>. These routes do not answer the same question, so this site reads them through the <a href="verification.html#neural-contribution-card">Neural Contribution Card</a> before promoting any claim about mimic separation.
+</p>
+</div>
 <h3>What still needs research (unresolved)</h3>
 <ul>
 <li>There is a lack of a unified bench that can simultaneously evaluate imitation and causal preservation. </li>
-<li>Data leak/shortcut learning detection in neural decoding is insufficient. </li>
+<li>Data leak/shortcut learning detection in neural decoding is insufficient, and timing regime / prompt budget / candidate-bank disclosure is still not standardized across language papers. </li>
 <li>Standard procedures for causal evaluation, including intervention experiments, are not yet in place. </li>
 </ul>
 <p class="small"><strong>Representative references:</strong> <a href="https://doi.org/10.18653/v1/2025.emnlp-industry.139" target="_blank">Zero-knowledge LLM hallucination detection and mitigation</a>, <a href="https://doi.org/10.18653/v1/2025.findings-emnlp.527" target="_blank">Factuality Hallucination Type Detection via Belief State</a>, <a href="https://doi.org/10.1101/2024.03.19.585656" target="_blank">Decoding Continuous Character-based Language from Non-invasive Brain Recordings</a>.</p>

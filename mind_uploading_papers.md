@@ -54,6 +54,7 @@ page_highlights:
   - "Because chronology is not the same thing as evidence strength, primary evidence in technology and natural science is safer to enter from the priority route in the first half of the page."
   - "A compact 2025-2026 technical-only shortlist now gives a minimal reading path before the mixed year cards begin."
   - "In technology and natural science, it is safer to read not only badge and chronology, but also evidence class."
+  - "Language-facing papers are no longer treated as one brain-to-text bucket: within-subject semantic reconstruction, fixed-segment retrieval, known-onset word decoding, prompt-conditioned generation, and invasive communication subsystems remain separate routes."
   - "EEG foundation-model papers are now treated as a distinct technical route because corpus disclosure, adaptation regime, benchmark governance, and leaderboard postmortems materially change what a score means."
   - "ESI / source-imaging papers are now paired with a field-formation visibility route, because visibility failure is upstream of inverse-solver disagreement and direct validation."
   - "Recent human measurement papers are treated here as two linked but distinct classes: destructive local structure with explicit preservation / registration / proofreading burden, and living-human in vivo proxy routes that are then read on three axes: proxy class, operational maturity, and safe calibrator role."
@@ -177,18 +178,18 @@ The weakness of this page is that although it is useful as a <strong>chronologic
 </thead>
 <tbody>
 <tr>
-<td><strong>Non-invasive language decode</strong></td>
-<td><a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a>, <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">D&eacute;fossez et al. (2023)</a>, <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a></td>
-<td>Considerable progress has been made in semantic recovery, speech perception decoding, and word decoding. However, the influence of task structure, participant cooperation, candidate set, and modality differences is significant. </td>
-<td>It does not show open-ended thought reading, subject-independent stable decoding, or internal state reconstruction necessary for WBE. </td>
-<td><a href="perspective.html#brain-to-text-update">Perspective: brain-to-text section</a> / <a href="wiki/decode-vs-emulate.html">Decode and Emulate</a></td>
+<td><strong>Language decode / Neural Contribution Card</strong></td>
+<td><a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a>, <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">D&eacute;fossez et al. (2023)</a>, <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a>, <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Ye et al. (2025)</a></td>
+<td>Considerable progress has been made, but on <strong>different route types</strong>: Tang is within-subject semantic reconstruction from fMRI, D&eacute;fossez is fixed-segment speech retrieval from M/EEG, d'Ascoli is known-onset word decoding at scale, and Ye is prompt-conditioned generation with brain-derived inputs. What gets stronger directly here is <strong>neural contribution under an explicit scaffold</strong>, not one common solved brain-to-text capability.</td>
+<td>It does not show unrestricted thought reading, prompt-free open-ended decoding, subject-independent stable communication, or the internal-state reconstruction required for WBE. Timing regime, candidate bank, prompt budget, and subject route still remain part of the claim.</td>
+<td><a href="perspective.html#brain-to-text-update">Perspective: brain-to-text section</a> / <a href="verification.html#neural-contribution-card">Verification: Neural Contribution Card</a></td>
 </tr>
 <tr>
-<td><strong>Invasive speech neuroprosthesis</strong></td>
-<td><a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a></td>
-<td>Achieves high vocabulary text decoding, streaming brain-to-voice, and voice synthesis of approximately 10 ms, strongly pushing the L2 to L3 communication subsystem. </td>
-<td>Whole-brain emulation, identity, long-term drift tolerance, and zero recalibration load have not yet been demonstrated. </td>
-<td><a href="faq.html#brain-to-text">FAQ: how to read brain-to-text claims</a> / <a href="verification.html#causal-perturbation-suite">Verification</a></td>
+<td><strong>Invasive speech decoding / communication subsystem</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a>, <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh et al. (2025)</a></td>
+<td>Achieves high-vocabulary text decoding, streaming brain-to-voice, near-instant voice synthesis, and cross-subject transfer learning for phoneme decoding under distributed sEEG coverage. This strongly pushes the <strong>communication subsystem</strong> and <strong>decoder-initialization strategy</strong> frontier.</td>
+<td>Whole-brain emulation, identity preservation, subject-general everyday communication, long-term drift tolerance, and zero-recalibration autonomy have not yet been demonstrated.</td>
+<td><a href="faq.html#brain-to-text">FAQ: how to read brain-to-text claims</a> / <a href="verification.html#neural-contribution-card">Verification: Neural Contribution Card</a></td>
 </tr>
 <tr>
 <td><strong>ESI / source imaging with direct validation</strong></td>
@@ -275,6 +276,12 @@ Do not read EEG foundation-model papers through architecture name alone. <a href
 </p>
 </div>
 <div class="note-box">
+<strong>Read language-facing papers only after a Neural Contribution Card</strong>
+<p>
+This archive still becomes too easy to overread if a reader sees fluent text or speech output and silently treats every language-facing paper as the same `brain-to-text` capability. The primary literature does not support that shortcut. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a> showed <strong>within-subject semantic reconstruction</strong> from fMRI and explicitly reported that successful decoding required <strong>subject cooperation</strong>. <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">D&eacute;fossez et al. (2023)</a> showed <strong>3-second speech-segment identification</strong> from non-invasive M/EEG and found that predictions were driven primarily by <strong>lexical and contextual semantic representations</strong>. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a> scaled <strong>known-onset word decoding</strong> to <strong>723 participants</strong> and <strong>five million words</strong>, while still finding <strong>MEG &gt; EEG</strong>, <strong>reading &gt; listening</strong>, and strong gains from more training data and test-time averaging. <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Ye et al. (2025)</a> then showed <strong>prompt-conditioned generation</strong> that beat prompt-only and permuted-brain controls, but the route still depended on <strong>prompt length</strong>, <strong>LLM scaffold</strong>, and a beam-search generation budget. Finally, <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh et al. (2025)</a> showed that invasive phoneme decoding can benefit from <strong>cross-subject transfer learning</strong> under distributed sEEG coverage, but still within a <strong>speech-motor task</strong> rather than free conversation. Therefore, this archive now asks readers to separate <strong>timing / segmentation regime</strong>, <strong>prior scaffold / prompt budget</strong>, <strong>brain-minus-prior baselines</strong>, and <strong>subject route / cooperation / adaptation burden</strong> before any language paper is promoted beyond task-conditioned evidence.
+</p>
+</div>
+<div class="note-box">
 <strong>Read effective-connectivity papers as route-card claims</strong>
 <p>
 <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">Penny et al. (2004)</a>, <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">Rosa et al. (2012)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2020.116734" target="_blank">Jafarian et al. (2020)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">Fr&auml;ssle et al. (2021)</a>, <a href="https://doi.org/10.1002/hbm.26782" target="_blank">Jafarian et al. (2024)</a>, and <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">Wu et al. (2024)</a> together show why a DCM graph must be read through candidate model space, observation assumptions, validation, reliability window, and abstention boundary. On this site, whole-brain scale or faster inversion is read as stronger tractability, not as solved identifiability.
@@ -333,6 +340,12 @@ The remaining weakness after adding the broader priority route was speed. Techni
 <td>Do not read a top leaderboard rank or a larger model as if subject-invariant, site-robust EEG decoding were already solved.</td>
 </tr>
 <tr>
+<td><strong>Language-decode neural-contribution split</strong></td>
+<td><a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a>, <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">D&eacute;fossez et al. (2023)</a>, <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a>, <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Ye et al. (2025)</a></td>
+<td>The split becomes concrete between <strong>within-subject semantic reconstruction</strong>, <strong>fixed-segment retrieval</strong>, <strong>known-onset word decoding</strong>, and <strong>prompt-conditioned generation</strong>. The common gain is not one solved brain-to-text meter but a more explicit <strong>neural-contribution audit</strong> under different scaffolds.</td>
+<td>Do not collapse these papers into unrestricted thought reading, prompt-free language recovery, or subject-independent stable decoding.</td>
+</tr>
+<tr>
 <td><strong>Field-formation visibility wall</strong></td>
 <td><a href="https://doi.org/10.1007/s10548-010-0154-x" target="_blank">Ahlfors et al. (2010)</a>, <a href="https://doi.org/10.1002/hbm.20851" target="_blank">Ahlfors et al. (2010)</a>, <a href="https://doi.org/10.1002/hbm.20571" target="_blank">Goldenholz et al. (2009)</a>, <a href="https://doi.org/10.1002/hbm.25272" target="_blank">Piastra et al. (2021)</a></td>
 <td>These papers make the upstream constraint explicit: scalp observability already depends on source orientation, source extent, anatomy, cancellation, and head-model detail before any inverse solver is run.</td>
@@ -381,10 +394,10 @@ The remaining weakness after adding the broader priority route was speed. Techni
 <td>Do not promote these results to unique whole-brain internal-state recovery or solver-independent anatomical truth.</td>
 </tr>
 <tr>
-<td><strong>Closed-loop communication frontier</strong></td>
-<td><a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a></td>
-<td>Task-limited speech and communication subsystems can be pushed much farther than the older non-invasive decode literature suggested.</td>
-<td>Do not translate communication success into WBE, durable identity transfer, or low-recalibration long-term autonomy.</td>
+<td><strong>Invasive communication / transfer frontier</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a>, <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh et al. (2025)</a></td>
+<td>Task-limited speech and communication subsystems can be pushed much farther than the older non-invasive decode literature suggested, and cross-subject transfer can now improve phoneme decoding under sparse or variable coverage.</td>
+<td>Do not translate communication success or transfer-ready phoneme decoding into WBE, durable identity transfer, free conversation, or low-recalibration long-term autonomy.</td>
 </tr>
 <tr>
 <td><strong>Thermodynamic route-family split</strong></td>
@@ -442,9 +455,9 @@ The weakness that needed another correction was that it was still difficult to s
 </tr>
 <tr>
 <td><strong>task-limited system demonstration</strong></td>
-<td><a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang 2023</a>, <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli 2025</a>, <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett 2023</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn 2025</a>, <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar 2025</a></td>
-<td>Decode/closed-loop performance for specific tasks and communication subsystems. </td>
-<td>We do not directly promote whole-brain emulation or individuality. </td>
+<td><a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang 2023</a>, <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">D&eacute;fossez 2023</a>, <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli 2025</a>, <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Ye 2025</a>, <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett 2023</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn 2025</a>, <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar 2025</a>, <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh 2025</a></td>
+<td>Task-conditioned language decode, prompt-conditioned generation, phoneme-sequence decoding, or closed-loop communication performance for a specific scaffold and interface.</td>
+<td>It is not unrestricted thought reading, prompt-free internal-state recovery, whole-brain emulation, or identity continuity.</td>
 </tr>
 <tr>
 <td><strong>foundation model / pretraining / benchmark-governance</strong></td>
@@ -503,6 +516,12 @@ The weakness that needed another correction was that it was still difficult to s
 </tbody>
 </table>
 <div class="note-box">
+<strong>Language demos are not one evidence bucket</strong>
+<p>
+On this site, a language-facing demo is not promoted from fluent output alone. Tang, D&eacute;fossez, d'Ascoli, and Ye strengthen <strong>different non-invasive language routes</strong>, while Willett, Littlejohn, Wairagkar, and Singh strengthen <strong>different invasive communication or transfer routes</strong>. The safe reading always asks first which <strong>timing / segmentation regime</strong>, which <strong>prior scaffold</strong>, which <strong>brain-minus-prior baseline</strong>, and which <strong>subject route or adaptation burden</strong> produced the score. That is why the archive now sends language papers directly to the <a href="verification.html#neural-contribution-card">Verification: Neural Contribution Card</a> instead of letting `brain-to-text` stand as a sufficient summary.
+</p>
+</div>
+<div class="note-box">
 <strong>Reading order on this page</strong>
 <p>
 First decide on the <strong>evidence class</strong>, then decide on the <strong>technical route</strong>, and finally go down to the <strong>year-order card</strong>. In particular, if you see a <strong>task-limited demo</strong>, read one or more <strong>mechanistic boundary / hidden-state evidence</strong>s and one or more <strong>observability-class advances</strong> on the same issue. If you see an <strong>effective-connectivity paper</strong>, read the candidate model space, observation assumptions, validation, and reliability window before reading the graph itself. If you see a <strong>thermodynamic paper</strong>, first answer which route family it belongs to and whether physiology-side grounding was measured separately. That combination prevents the common misreading that a good output, plus some new human proxy, a dense directed graph, or an irreversibility score already closes the hidden state or causal mechanism. Although chronology is useful as a historical sketch, it is not a table that directly ranks technology frontiers.
@@ -557,7 +576,7 @@ First decide on the <strong>evidence class</strong>, then decide on the <strong>
 </tr>
 <tr>
 <td><strong>I want to see brain-to-text / language decode</strong></td>
-<td><a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang 2023</a>, <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">D&eacute;fossez 2023</a>, <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli 2025</a> as a starting point, please read the influence of language prior and candidate set separately. </td>
+<td>Start with <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang 2023</a>, <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">D&eacute;fossez 2023</a>, <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli 2025</a>, and <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Ye 2025</a>, then separate <strong>timing / segmentation regime</strong>, <strong>candidate bank or prompt budget</strong>, and <strong>brain-minus-prior baselines</strong> before reading any output as neural reconstruction. The shortest safety rule is the <a href="verification.html#neural-contribution-card">Neural Contribution Card</a>.</td>
 </tr>
 <tr>
 <td><strong>I want to read EEG foundation models / pretraining safely</strong></td>
@@ -565,7 +584,7 @@ First decide on the <strong>evidence class</strong>, then decide on the <strong>
 </tr>
 <tr>
 <td><strong>I want to see invasive closed loop communication</strong></td>
-<td><a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett 2023</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn 2025</a>, <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar 2025</a> first, please check latency, abstention, and recalibration burden. </td>
+<td>Start with <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett 2023</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn 2025</a>, <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar 2025</a>, and <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh 2025</a>, then check latency, abstention, recalibration burden, and whether the gain is <strong>streaming output</strong> or <strong>cross-subject transfer initialization</strong>. </td>
 </tr>
 <tr>
 <td><strong>I want to read effective connectivity / DCM safely</strong></td>
