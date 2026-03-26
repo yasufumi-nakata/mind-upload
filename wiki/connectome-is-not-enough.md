@@ -5,12 +5,14 @@ description: We will summarize the reasons why storing only the connectome in WB
   is insufficient, including the lack of state variables such as activity-dependent
   transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local proteostasis / synaptic tagging, cargo-transport
   / cytoskeletal trafficking state, perisynaptic extracellular matrix, ionic milieu
-  / chloride homeostasis, and shared extracellular / electrical state, as well as
-  the limitations of connectome-constrained estimation, based on primary literature.
+  / chloride homeostasis, shared extracellular / electrical state, thermal-state,
+  bioenergetic / mitochondrial state, neurovascular-unit / BBB / pericyte state,
+  astrocyte-state, and clearance / immune support, as well as the limitations of
+  connectome-constrained estimation, based on primary literature.
 article_type: Wiki
 subtitle: connectome-complete is not emulation-complete
 author: Mind Uploading Research Project
-last_updated: '2026-03-22'
+last_updated: '2026-03-26'
 note: Technical / natural science only
 audience: People who want to judge whether the wiring diagram is close to WBE based
   only on technology and natural science.
@@ -25,7 +27,7 @@ accuracy_note: What I'm showing here is an arrangement of ``at least removing th
   are included'', and does not mean that the final sufficient condition has been determined.
 page_highlights:
 - We will organize the points that cannot be solved by wiring diagrams alone into
-  14 state classes and 1 presumed wall.
+  18 state classes and 1 presumed wall.
 - Use only primary literature to separate missing state variables from parameter degeneracy.
 - We will also fix operational rules for how to read connectome-complete and connectome-constrained
   model on this site.
@@ -35,21 +37,27 @@ page_highlights:
   be added from connectome-only to read the predictive gain.
 - "Timing-state is treated as more than a single delay constant: node/internode geometry,
   periaxonal structure, astrocyte control, and human macro timing proxies are read separately."
+- "Thermal-state is treated as another missing layer, because membrane kinetics, synaptic reliability, field-potential amplitude, perturbation timing, and heating artifacts are not implied by graph, delay, or ATP alone."
 - "Post-transcriptional RNA-state is treated as another missing layer, because gene-level abundance does not by itself fix isoform choice, m6A-dependent translation / degradation, or RNA-editing ratio."
 - "Phospho-signaling / second-messenger state is treated as another missing layer, because transcript or bulk protein abundance does not by itself fix phosphosite occupancy, kinase/phosphatase balance, or signaling nanodomains."
 - "Cargo-transport / cytoskeletal trafficking is treated as another missing layer, because receptor, endosome, RNA, and presynaptic cargo delivery are not implied by graph, weight, or ATP alone."
 - "Ionic milieu / chloride homeostasis is treated as another missing layer, because inhibition sign and sleep/wake state can still shift with local chloride set point and interstitial ion composition even on the same graph."
 - "Chemical connectome is not electrical-state complete: gap junctions, endogenous field effects, and inhibitory-driving-force state remain separate variables, and electrical-state claims now need a route card."
+- "Bioenergetic / mitochondrial evidence is treated as another missing layer, because local ATP reserve, mitochondrial positioning/fission, ATP-synthase nano-organization, and Ca2+-efflux tuning are not implied by graph or macro energetic imaging alone."
+- "Neurovascular-unit / BBB / pericyte evidence is treated as another missing layer, because vascular transfer audit and human BBB proxy routes do not by themselves fix the local controller state."
+- "Astrocyte-state is treated as another missing layer, because lactate support, minute-scale network encoding, recall ensembles, and reactive-astrogliosis PET do not all answer the same question."
+- "Clearance / immune support is treated as another missing layer, because meningeal drainage anatomy, microglia-linked synaptic control, human CSF-mobility MRI, and model-based glymphatic proxy routes do not all answer the same question."
 - "A diffusion-MRI-derived human connectome is treated as an algorithm- and resolution-conditioned macro pathway prior or targeted bundle hypothesis route, not as a synapse-resolved edge list."
 - "Within tractography itself, cortical endpoint assignment and parcel-graph construction are separate walls, so tractography graphs and hub maps are not stable objects by default."
 known_points:
 - Great progress has been made in creating a whole-brain connectome, but this alone
   does not mean that dynamic reproduction is complete.
-- Synaptic efficiency, activity-dependent transcription / chromatin state, latency,
-  post-transcriptional RNA-state,
+- Synaptic efficiency, activity-dependent transcription / chromatin state, timing-state,
+  thermal-state, post-transcriptional RNA-state,
   phospho-signaling / second-messenger state,
   ionic milieu / chloride homeostasis, shared extracellular / electrical state,
-  neuromodification, glia, cell type labels,
+  neuromodulation, bioenergetic / mitochondrial state,
+  neurovascular-unit / BBB / pericyte state, astrocyte-state, clearance / immune support, cell type labels,
   intrinsic excitability/homeostasis set points, and local proteostasis / synaptic-tagging
   state are pieces of information that are likely to fall off a static edge list,
   cargo-transport / cytoskeletal trafficking state is another, and perisynaptic ECM / PNN state is another.
@@ -60,7 +68,7 @@ known_points:
 - Dorkenwald et al. (2024), MICrONS Consortium et al. (2025), Thomas et al. (2014), Donahue et al. (2016), Schilling et al. (2020), Grisot et al. (2021), Lappalainen et al. (2024), and Beiran & Litwin-Kumar (2025) support different kinds of progress and should not be collapsed into one story that connectome is "almost enough."
 - A tractography-derived graph can still change at the cortical-endpoint and parcel-graph stage even when the underlying diffusion signal is the same.
 - Conditional predictions can be improved by adding same-brain function, transcriptomics,
-  neuromodulatory dynamics, and glial slow state, but the improvement depends on the
+  neuromodulatory dynamics, thermal logs, energetic support, astrocyte-state, neurovascular support, and clearance support, but the improvement depends on the
   task, time constant, and external validation conditions.
 - Device latency audit and biological timing-state audit are different requirements; passing
   one does not automatically pass the other.
@@ -105,7 +113,7 @@ recommended_pages:
 <div class="abstract-box">
 <h2>Conclusion</h2>
 <p>
-Although wiring diagrams are an important foundation for WBE,<strong>alone are not the minimum requirement for dynamic reproduction</strong>. Even within the same adjacency relationship, differences in cell type labeling, activity-dependent transcription / chromatin program, post-transcriptional RNA-state, phospho-signaling / second-messenger state, intrinsic excitability, synaptic efficiency, local proteostasis / synaptic-tagging route, cargo-transport / cytoskeletal trafficking route, perisynaptic ECM / PNN organization, ionic milieu / chloride homeostasis, shared extracellular / electrical state, conduction delay, neuronal modification, and glial connectivity state can significantly alter learning, phase synchronization, arousal-dependent responses, inhibitory sign, and long-term stability. Furthermore, connectome-constrained modeling research in 2024-2025 showed that even with the inclusion of wiring constraints, degeneracy in dynamics remains due to unmeasured parameters and omitted mechanisms. Therefore, this site treats<strong>connectome-complete as a structural atlas/scaffold achievement</strong> and not as<strong>emulation-complete</strong>. Similarly, the fact that a<strong>connectome-constrained model reproduced some activities</strong> cannot be read as state-complete reconstruction. This warning becomes even stronger when the word <strong>connectome</strong> refers only to a diffusion-MRI-derived human tractography product, because current validation literature supports that object as a macro pathway prior rather than a synapse-resolved edge list.
+Although wiring diagrams are an important foundation for WBE,<strong>alone are not the minimum requirement for dynamic reproduction</strong>. Even within the same adjacency relationship, differences in cell type labeling, activity-dependent transcription / chromatin program, post-transcriptional RNA-state, phospho-signaling / second-messenger state, intrinsic excitability, synaptic efficiency, local proteostasis / synaptic-tagging route, cargo-transport / cytoskeletal trafficking route, perisynaptic ECM / PNN organization, ionic milieu / chloride homeostasis, shared extracellular / electrical state, conduction delay, thermal-state, neuromodulatory occupancy / release state, bioenergetic / mitochondrial support, neurovascular-unit / BBB / pericyte controller state, astrocyte-state, and clearance / immune support can significantly alter learning, phase synchronization, arousal-dependent responses, inhibitory sign, state transitions, and long-term stability. Furthermore, connectome-constrained modeling research in 2024-2025 showed that even with the inclusion of wiring constraints, degeneracy in dynamics remains due to unmeasured parameters and omitted mechanisms. Therefore, this site treats<strong>connectome-complete as a structural atlas/scaffold achievement</strong> and not as<strong>emulation-complete</strong>. Similarly, the fact that a<strong>connectome-constrained model reproduced some activities</strong> cannot be read as state-complete reconstruction. This warning becomes even stronger when the word <strong>connectome</strong> refers only to a diffusion-MRI-derived human tractography product, because current validation literature supports that object as a macro pathway prior rather than a synapse-resolved edge list.
 </p>
 </div>
 
@@ -117,7 +125,7 @@ I am not going to deal with philosophy or legal systems here. From only the aspe
 </div>
 
 <section class="section" id="bottom-line">
-<h2 class="section-title">14 state classes and 1 putative wall to fix first</h2>
+<h2 class="section-title">18 state classes and 1 putative wall to fix first</h2>
 <table class="data-table">
 <thead>
 <tr>
@@ -201,16 +209,40 @@ I am not going to deal with philosophy or legal systems here. From only the aspe
 <td>Demote phase, synchrony, and closed-loop claims unless timing-state is measured, externally calibrated, or explicitly left latent. </td>
 </tr>
 <tr>
-<td><strong>Neural modification field</strong></td>
+<td><strong>Thermal-state</strong></td>
+<td>Even with the same graph, timing-state, and ATP support, local tissue temperature can still change membrane kinetics, release probability, field-potential amplitude, and perturbation burden.</td>
+<td>If delay, ATP, or a generic heating note is present, the thermal operating point is already fixed.</td>
+<td>Demote operating-point, sequence-timing, and thermal-confound claims unless local temperature, heating burden, or thermal perturbation route is measured, externally calibrated, or explicitly left latent.</td>
+</tr>
+<tr>
+<td><strong>Neuromodulatory occupancy / release state</strong></td>
 <td>Arousal level, learning rate, and gain adjustment cannot be restored with static wiring alone, and pupil diameter and HRV remain as rough proxies. </td>
 <td>pupil / HRV or global arousal can be read as a single transmitter ground truth. </td>
 <td>It can be used for covariates and stratification in human data, but it is not written as transmitter-specific or region-specific ground truth. </td>
 </tr>
 <tr>
-<td><strong>Glial-metabolic coupling status</strong></td>
-<td>Astrocytes are causally involved in plasticity and memory retrieval, and are not just supporting tissues. </td>
-<td>Glia is support tissue, so it can be postponed. </td>
-<td>We weaken claims involving long-term plasticity and slow states, and clearly state what approximations should be discarded as the scope of applicability. </td>
+<td><strong>Bioenergetic / mitochondrial state</strong></td>
+<td>Even with the same graph and nominal activity fit, branch/bouton ATP reserve, mitochondrial positioning / fission, ATP-synthase nano-organization, and Ca<sup>2+</sup>-efflux tuning can still differ.</td>
+<td>If a macro energetic proxy or ATP-related sentence is present, the local energetic controller is already fixed.</td>
+<td>Demote high-demand plasticity, fatigue-resilience, and local metabolic-support claims unless energetic route, controller manipulation, or external calibration is measured and disclosed.</td>
+</tr>
+<tr>
+<td><strong>Neurovascular-unit / BBB / pericyte state</strong></td>
+<td>Even with the same graph and nominal neural state, capillary-diameter control, BBB permeability, neurovascular coupling, and pericyte / endothelial support logic can still differ.</td>
+<td>If vascular confounds are audited or a human BBB proxy exists, the relevant controller state is almost solved.</td>
+<td>Demote neurovascular-maintenance and BBB-controller claims unless controller-side biology, macro proxy class, and calibration ceiling are named separately.</td>
+</tr>
+<tr>
+<td><strong>Astrocyte-state</strong></td>
+<td>Even with the same graph, lactate-shuttle support, minute-scale network encoding, recall ensembles, and multiday stabilization ensembles can still differ.</td>
+<td>Generic glial support or a human reactive-astrogliosis proxy means the operative astrocyte state is already fixed.</td>
+<td>Demote astrocyte-dependent plasticity, recall, and slow-state claims unless the astrocyte observable, perturbation route, or proxy ceiling is disclosed.</td>
+</tr>
+<tr>
+<td><strong>Clearance / immune support</strong></td>
+<td>Even with the same graph and astrocyte support, meningeal drainage, CSF-interstitial exchange, and microglia-linked synaptic maintenance can still differ over multiday windows.</td>
+<td>Clearance is passive cleanup, or current human glymphatic / CSF routes already fix the local immune controller.</td>
+<td>Demote multiday maintenance, recovery, and local immune-controller claims unless clearance / immune route, proxy class, and calibration ceiling are disclosed separately.</td>
 </tr>
 <tr>
 <td><strong>Parameter degeneracy (estimated wall)</strong></td>
@@ -223,7 +255,7 @@ I am not going to deal with philosophy or legal systems here. From only the aspe
 <div class="note-box">
 <strong>Missing variables added this time</strong>
 <p>
-The March 2026 re-audits first split <strong>intrinsic excitability / homeostasis set point</strong> from cell-type labels and <strong>perisynaptic ECM / PNN state</strong> from synaptic state. This pass adds not only <strong>activity-dependent transcription / chromatin state</strong>, <strong>post-transcriptional RNA-state</strong>, <strong>phospho-signaling / second-messenger state</strong>, <strong>local proteostasis / synaptic-tagging state</strong>, and <strong>cargo-transport / cytoskeletal trafficking state</strong>, but also <strong>ionic milieu / chloride homeostasis</strong> as independent classes. The reason is that even if we have cell-type labels, synapse counts, connectomes, and a weight estimate, allocation eligibility, operative RNA controllers, active phospho-controllers, late memory-stabilization programs, compartment-specific cargo routes, and even inhibitory sign can still vary. A more detailed arrangement of these maintenance-side variables is collected in <a href="homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.
+The March 2026 re-audits first split <strong>intrinsic excitability / homeostasis set point</strong> from cell-type labels and <strong>perisynaptic ECM / PNN state</strong> from synaptic state. The later passes added <strong>activity-dependent transcription / chromatin state</strong>, <strong>post-transcriptional RNA-state</strong>, <strong>phospho-signaling / second-messenger state</strong>, <strong>local proteostasis / synaptic-tagging state</strong>, <strong>cargo-transport / cytoskeletal trafficking state</strong>, and <strong>ionic milieu / chloride homeostasis</strong>. This pass completes the maintenance-side family list on this page by adding <strong>thermal-state</strong>, <strong>bioenergetic / mitochondrial state</strong>, <strong>neurovascular-unit / BBB / pericyte state</strong>, <strong>astrocyte-state</strong>, and <strong>clearance / immune support</strong> as independent rows instead of letting them hide inside generic glia, vascular nuisance, or slow-support language. The reason is that even if we have cell-type labels, synapse counts, connectomes, and a weight estimate, membrane operating point, local ATP reserve, pericyte / BBB control, astrocyte ensemble state, and multiday clearance support can still vary. A more detailed arrangement of these maintenance-side variables is collected in <a href="homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.
 </p>
 </div>
 </section>
@@ -470,7 +502,7 @@ If a connectome-constrained predictor lacks this route card, this site keeps the
 </section>
 
 <section class="section" id="state-classes">
-<h2 class="section-title">Why are these 13 classes easy to skip</h2>
+<h2 class="section-title">Why these classes are easy to skip</h2>
 
 <h3>1. Cell type labels are not decorations for node IDs</h3>
 <p>
@@ -629,21 +661,71 @@ This matters for WBE because timing-sensitive circuits do not only depend on "wh
 </p>
 </div>
 
-<h3>11. Neuromodulation is not “one mood scalar”</h3>
+<h3>11. Thermal-state is not reducible to timing or recording nuisance</h3>
+<p>
+The remaining weakness after separating <strong>timing-state</strong> from a single delay constant was that the page still let readers compress <strong>thermal-state</strong> into either "part of timing" or "just a recording nuisance." That was too weak. <a href="https://doi.org/10.1111/j.1469-7793.1998.249bu.x" target="_blank">Hardingham &amp; Larkman (1998)</a> showed that excitatory synaptic reliability in rat visual cortex is temperature dependent, <a href="https://doi.org/10.1371/journal.pone.0232451" target="_blank">Van Hook (2020)</a> showed that warming shifts release probability, synaptic depression, membrane conductance, and spike output in the visual thalamus, and <a href="https://doi.org/10.1126/science.8446900" target="_blank">Moser et al. (1993)</a> showed that dentate field potentials track brain temperature closely enough to mask learning-related change. Furthermore, <a href="https://doi.org/10.1038/nature07448" target="_blank">Long &amp; Fee (2008)</a> and <a href="https://doi.org/10.1152/jn.00890.2009" target="_blank">Reig et al. (2010)</a> showed that local cooling / warming can act as a perturbation of sequence timing and cortical rhythms, whereas <a href="https://doi.org/10.1038/s41593-019-0422-3" target="_blank">Owen et al. (2019)</a> showed that optogenetic manipulations can themselves inject tissue heating artifacts. In other words, even if graph, weights, timing-state, and ATP support are held fixed, <strong>the local thermal operating point and heating burden can still remain latent</strong>.
+</p>
+<div class="note-box">
+<strong>Human observability ceiling for thermal-state</strong>
+<p>
+Human thermal evidence is still a macro proxy class. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a> showed a daily temperature rhythm across the human brain, and <a href="https://doi.org/10.1007/s00062-024-01467-3" target="_blank">Tan et al. (2025)</a> used <sup>1</sup>H-MRS thermometry to measure frontal-lobe temperature in healthy adults. Those routes are useful evidence that human brain temperature is measurable and variable, but they do not become ground truth of cell-specific microtemperature, local heating burden, or branch-specific thermal sensitivity. On this site, human thermal routes therefore remain <strong>macro thermal proxy</strong> rather than local thermal-state readout.
+</p>
+</div>
+
+<h3>12. Neuromodulatory occupancy / release state is not “one mood scalar”</h3>
 <p>
 Reimer et al. showed that pupil fluctuations track both adrenergic and cholinergic activity within the cortex. Conversely, this also means that<strong>pupil diameter does not uniquely represent one transmitter state or the other</strong>. Additionally, Neyhart et al. showed that while cortical ACh is highly predictable from cholinergic axon activity and behavioral state, it also has locality that depends on distance from neighboring axons and clearance kinetics. Therefore, although it is useful to use pupil diameter or HRV in humans, it is an overstatement to consider it as the ground truth of transmitter-specific and region-specific internal states. What is necessary is not only to say whether it is a good proxy or not, but also to specify what it is and what it is not.
 </p>
 
-<h3>12. Glia is not an afterthought auxiliary variable</h3>
+<h3>13. Bioenergetic / mitochondrial state is not implied by graph or macro energetic imaging</h3>
 <p>
-Adamsky et al. showed that astrocytic activation can produce de novo neuronal potentiation and memory enhancement. Cahill et al. reported that local, instantaneous neurotransmitter inputs are encoded into responses of a broad astrocyte network over minutes. Therefore, a model that ignores glia should be treated as a model that partially lacks plasticity and slow network state. What is important here is not to generalize that glia are also involved, but to clarify in the model specifications <strong>Which time constants and which state variables were discarded</strong>.
+The current site already treated energy as important, but it still left too much room to compress <strong>presynaptic ATP-demand support</strong>, <strong>dendritic mitochondrial positioning / fission</strong>, <strong>synaptic ATP-synthase nano-organization</strong>, and <strong>human macro energetic imaging</strong> into one energetic row. Primary literature is narrower. <a href="https://doi.org/10.1016/j.cell.2013.12.042" target="_blank">Rangaraju et al. (2014)</a> showed that activity-driven local ATP synthesis is required for synaptic function, <a href="https://doi.org/10.1016/j.neuron.2018.09.025" target="_blank">Divakaruni et al. (2018)</a> showed that LTP induction requires a rapid burst of dendritic mitochondrial fission, <a href="https://doi.org/10.1038/s41598-023-40877-0" target="_blank">Underwood et al. (2023)</a> showed that enhanced presynaptic mitochondrial energy production is required for memory formation, and <a href="https://doi.org/10.1038/s42003-025-08963-3" target="_blank">Hu et al. (2025)</a> showed learning-linked polarized ATP-synthase organization in synaptic mitochondria. More recently, <a href="https://doi.org/10.1038/s42255-026-01451-w" target="_blank">Vishwanath et al. (2026)</a> showed that mitochondrial Ca<sup>2+</sup> efflux tuning can control neuronal metabolism and long-term memory across species. Therefore, even if graph and nominal activity fit are known, <strong>the local energetic controller and mitochondrial operating regime can still remain latent</strong>.
 </p>
+<div class="note-box">
+<strong>Human observability ceiling for bioenergetic / mitochondrial state</strong>
+<p>
+Human energetic imaging is still a macro proxy class. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> used <sup>31</sup>P-MRS to estimate ATP-synthesis-related quantities, and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> used dynamic DMRSI to estimate whole-brain glucose-metabolic rates. Those routes are useful evidence that human energetic burden is measurable, but they do not become ground truth of branch-specific ATP reserve, mitochondrial residence time, or local Ca<sup>2+</sup>-efflux control. On this site, human energetic routes therefore remain <strong>macro energetic proxies</strong>.
+</p>
+</div>
+
+<h3>14. Neurovascular-unit / BBB / pericyte state is not just vascular transfer nuisance</h3>
+<p>
+Another weakness of the earlier page was that it let readers compress <strong>neurovascular support</strong> into either hemodynamic transfer audit or generic glial support. That is too weak. <a href="https://doi.org/10.1016/j.neuron.2010.09.043" target="_blank">Bell et al. (2010)</a> showed that pericytes control key neurovascular functions and neuronal phenotype, <a href="https://doi.org/10.3389/fncel.2020.00027" target="_blank">Kisler et al. (2020)</a> showed that acute cortical pericyte ablation rapidly uncouples neurovascular signaling, <a href="https://doi.org/10.1016/j.neuron.2023.08.030" target="_blank">Pandey et al. (2023)</a> showed that neuronal activity drives memory-relevant IGF2 expression from pericytes, and <a href="https://doi.org/10.1038/s41467-025-61312-0" target="_blank">Mai-Morente et al. (2025)</a> showed that pericyte pannexin1 controls capillary diameter and supports memory function. Therefore, even if graph, neural activity, and vascular confounds are audited, <strong>the neurovascular-unit / BBB / pericyte controller state can still remain latent</strong>.
+</p>
+<div class="note-box">
+<strong>Human observability ceiling for neurovascular-unit / BBB state</strong>
+<p>
+Human BBB routes are meaningful, but they are still macro proxy classes rather than local controller readouts. <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> used multi-echo ASL to estimate BBB water permeability across the adult lifespan, and <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> used PET and kinetic modeling to quantify molecular BBB permeability. Those routes do not directly identify which pericyte, endothelial controller, or local maintenance loop is active. On this site, human BBB routes therefore remain <strong>macro permeability / exchange proxies</strong>.
+</p>
+</div>
+
+<h3>15. Astrocyte-state is not generic glial background</h3>
+<p>
+The earlier wording that "glia matters" was directionally correct but still too coarse. Primary literature now supports a narrower astrocyte reading. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a> showed that astrocyte-neuron lactate transport is required for long-term memory formation, <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> showed that local neurotransmitter inputs are encoded into broad cortical astrocyte-network responses over minutes, and <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a> and <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a> showed that learning-associated astrocyte ensembles can regulate recall and multiday stabilization. Therefore, even if graph, synapses, and generic glial support are acknowledged, <strong>the operative astrocyte-state can still remain latent</strong>.
+</p>
+<div class="note-box">
+<strong>Human observability ceiling for astrocyte-state</strong>
+<p>
+Human astrocyte-related evidence is still proxy-class evidence. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a> characterized <sup>18</sup>F-SMBT-1 as a first-in-human MAO-B PET tracer for reactive astrogliosis. That is useful evidence that a human astrocyte-related route exists, but it does not become ground truth of learning-associated astrocyte ensembles, recall-state identity, or arbitrary content-related astrocyte coding. On this site, current human astrocyte PET therefore remains a <strong>reactive-astrogliosis proxy</strong>, not astrocyte-state closure.
+</p>
+</div>
+
+<h3>16. Clearance / immune support is not passive cleanup</h3>
+<p>
+The current site had already become stronger on maintenance-state language, but this page still let <strong>clearance / immune support</strong> hide inside generic support biology. That was too weak. <a href="https://doi.org/10.1038/nature14432" target="_blank">Louveau et al. (2015)</a> and <a href="https://doi.org/10.1038/s41586-019-1419-5" target="_blank">Ahn et al. (2019)</a> showed that CNS lymphatic drainage is a real anatomical and functional route, and <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Kim et al. (2025)</a> showed that a meningeal-lymphatics-microglia axis regulates synaptic physiology. Therefore, even if graph and astrocyte support are known, <strong>multiday clearance / immune-controller state can still remain latent</strong>.
+</p>
+<div class="note-box">
+<strong>Human observability ceiling for clearance / immune support</strong>
+<p>
+Human clearance evidence also remains a proxy class. <a href="https://doi.org/10.1093/brain/awaa443" target="_blank">Eide &amp; Ringstad (2021)</a> showed that sleep deprivation impairs molecular clearance from the human brain, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> reported a model-based route from brain to plasma for amyloid-beta and tau clearance in humans. Those results are important because they make human support-state observability more concrete, but they still do not become direct readouts of local microglial controller state, synapse-specific maintenance logic, or cell-resolved clearance routing. On this site, human clearance evidence therefore remains <strong>macro support-state proxy</strong>.
+</p>
+</div>
 </section>
 
 <section class="section" id="augmentation-ablation">
 <h2 class="section-title">Don't end with enumeration, compare with augmentation / ablation</h2>
 <p>
-The weakness of the current site was that even if it was possible to enumerate the missing state variables, it did not bring to the fore what additional information and which error terms could be reduced to advance to a stronger claim. Primary literature from 2024-2026 shows that when you add same-brain function, transcriptomic label, activity-dependent transcription / chromatin audit, post-transcriptional RNA-state audit, ECM / PNN state, ionic milieu / chloride-homeostasis audit, shared extracellular / electrical-state audit, local transmitter dynamics, glial slow state, and recovery log from the connectome-only baseline, the improvement is different. Therefore, on this site, instead of counting state variables as "present/absent," we will compare held-out predictive gain using augmentation/ablation.
+The weakness of the current site was that even if it was possible to enumerate the missing state variables, it did not bring to the fore what additional information and which error terms could be reduced to advance to a stronger claim. Primary literature from 2024-2026 shows that when you add same-brain function, transcriptomic label, activity-dependent transcription / chromatin audit, post-transcriptional RNA-state audit, ECM / PNN state, ionic milieu / chloride-homeostasis audit, shared extracellular / electrical-state audit, thermal-state, local transmitter dynamics, bioenergetic support, neurovascular support, astrocyte-state, clearance / immune support, and recovery log from the connectome-only baseline, the improvement is different. Therefore, on this site, instead of counting state variables as "present/absent," we will compare held-out predictive gain using augmentation/ablation.
 </p>
 <table class="data-table">
 <thead>
@@ -716,16 +798,46 @@ The weakness of the current site was that even if it was possible to enumerate t
 <td>Human myelin maps or tract-scale transmission-speed estimates remain macro proxies; without external calibration they do not become per-axon timing ground truth. </td>
 </tr>
 <tr>
+<td><strong>+ thermal-state audit</strong></td>
+<td>Compare a timing- or activity-aware baseline against the same model with local temperature logs, heating / cooling perturbation, or externally calibrated thermometry under the same held-out operating-point, sequence-timing, or readout-confound condition.</td>
+<td>Hardingham, Moser, Long, Reig, Owen, and Boorman together support that thermal-state can narrow operating-point, timing-perturbation, and heating-artifact claims when it is kept separate from timing-state and ATP support.</td>
+<td>Human MRS thermometry or daily temperature maps remain macro thermal proxies and do not become cell-specific thermal-state ground truth.</td>
+</tr>
+<tr>
 <td><strong>+ local transmitter dynamics</strong></td>
 <td>Local cholinergic axon activity or behavior-linked transmitter proxy. </td>
 <td>Neyhart et al. showed that while cortical ACh dynamics can be fairly predicted from cholinergic axon activity and behavioral state, locality changes with distance from neighboring axons and clearance kinetics. </td>
 <td>pupil / behavior / global arousal is still a coarse proxy and cannot be automatically promoted to transmitter-specific or region-specific ground truth. </td>
 </tr>
 <tr>
-<td><strong>+ glial / slow-state</strong></td>
-<td>Astrocyte network state, microglia / synaptic-density changes, slow response on the order of minutes. </td>
-<td>Cahill et al. showed that local transient neurotransmitter inputs are minute-long encoded in broad cortical astrocyte networks, and Vadisiute et al. showed that astrocyte, microglia, and synaptic densities change rapidly after acute chemogenetic manipulation. </td>
-<td>The contribution of the slow state depends on cell type, task, and species differences, and adding it up will not immediately lead to whole-brain emulation. </td>
+<td><strong>+ bioenergetic / mitochondrial audit</strong></td>
+<td>Compare an activity- or cargo-aware baseline against the same model with ATP-linked respiration, mitochondrial positioning / fission, ATP-synthase organization, or externally calibrated macro energetic proxy under the same held-out plasticity or fatigue condition.</td>
+<td>Rangaraju, Divakaruni, Underwood, Hu, and Vishwanath together support that local energetic support can narrow high-demand plasticity and memory claims when the mitochondrial controller is treated explicitly.</td>
+<td>Human 31P-MRS or dynamic DMRSI remains a macro energetic proxy and does not become branch- or bouton-specific mitochondrial-state ground truth.</td>
+</tr>
+<tr>
+<td><strong>+ neurovascular / BBB audit</strong></td>
+<td>Compare a neural-activity or vascular-transfer-aware baseline against the same model with pericyte / endothelial perturbation, BBB permeability route, or externally calibrated support-state proxy under the same held-out coupling or memory condition.</td>
+<td>Bell, Kisler, Pandey, Mai-Morente, Padrela, and Chung together support that neurovascular-unit / BBB state can narrow capillary-control and permeability claims once controller biology and macro proxy class are kept separate.</td>
+<td>Human BBB MRI / PET remains a macro permeability / exchange proxy and does not become local pericyte or endothelial-controller ground truth.</td>
+</tr>
+<tr>
+<td><strong>+ astrocyte-state audit</strong></td>
+<td>Compare a synapse- or energetic-aware baseline against the same model with lactate-support readout, astrocyte-network state, ensemble perturbation, or externally calibrated human astrocyte proxy under the same held-out recall or stabilization condition.</td>
+<td>Suzuki, Cahill, Williamson, and Dewa together support that astrocyte-state can narrow support, recall, and stabilization claims once ensemble state is treated explicitly.</td>
+<td>Human MAO-B / reactive-astrogliosis PET remains a proxy route and does not become ground truth of learning-associated astrocyte ensembles.</td>
+</tr>
+<tr>
+<td><strong>+ clearance / immune audit</strong></td>
+<td>Compare an astrocyte- or neurovascular-aware baseline against the same model with lymphatic / CSF routing, microglia-linked synaptic readout, or externally calibrated human clearance proxy under the same multiday recovery or support condition.</td>
+<td>Louveau, Ahn, Kim, Eide, and Dagum together support that clearance / immune support can narrow multiday maintenance claims once drainage anatomy, synaptic physiology, and human support-state proxy are not compressed into one row.</td>
+<td>Human CSF-mobility or glymphatic-model routes remain macro support-state proxies and do not become local immune-controller ground truth.</td>
+</tr>
+<tr>
+<td><strong>+ astrocyte / clearance recovery log</strong></td>
+<td>Record whether the model includes astrocyte-state, clearance / immune support, or both, and compare recovery / retention under the same elapsed-time and sleep-history condition.</td>
+<td>Adding this log makes it harder to silently promote a same-day fit into multiday maintenance readiness when astrocyte and clearance families were omitted.</td>
+<td>The exact contribution still depends on task, species, and external calibration; adding the log does not collapse the remaining hidden-state family.</td>
 </tr>
 <tr>
 <td><strong>+ perturbation / recovery of excitability-homeostasis</strong></td>
@@ -760,10 +872,15 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li><strong>ionic milieu / chloride homeostasis:</strong>Do not collapse inhibitory sign or state-transition regime into cell type, weight snapshot, or generic excitability. If not measured, write latent state. </li>
 <li><strong>shared extracellular / electrical state:</strong>Do not collapse gap junctions, endogenous field effects, or inhibitory driving force into the chemical connectome or a generic ionic proxy. If not measured, write latent state.</li>
 <li><strong>Delay is not one scalar:</strong>If timing matters, separate device latency, biological timing-state, and phase error; if the biological side is not measured, write timing-state as latent. </li>
+<li><strong>thermal-state:</strong>Do not collapse local temperature, heating burden, or thermal perturbation into timing-state, bioenergetics, or generic artifact language. If not measured, write latent state.</li>
 <li><strong>pupil / HRV:</strong> A useful state covariate for human data, but not a transmitter-specific ground truth. </li>
+<li><strong>bioenergetic / mitochondrial state:</strong>Do not collapse ATP-demand support, mitochondrial positioning, or Ca<sup>2+</sup>-efflux control into generic activity fit or macro energetic imaging. If not measured, write latent state.</li>
+<li><strong>neurovascular-unit / BBB / pericyte state:</strong>Do not collapse controller-side biology into vascular transfer audit or macro BBB permeability proxy. If not measured, write latent state.</li>
+<li><strong>astrocyte-state:</strong>Do not collapse lactate support, network encoding, recall ensembles, or reactive-astrogliosis PET into one generic glial sentence. If not measured, write latent state.</li>
+<li><strong>clearance / immune support:</strong>Do not collapse drainage anatomy, microglia-linked synaptic control, CSF mobility, or glymphatic-model routes into passive cleanup language. If not measured, write latent state.</li>
 <li><strong>When state variable is missing:</strong>If estimated, specify the error and abstention condition; if not, specify absent. </li>
 <li>When there are no weights / timing-state: phase, timing, intervention response, and closed-loop stability claims are demoted. </li>
-<li><strong>When dropping glia / neuromodulation:</strong>Write in the text what behavior was discarded in the approximation as the scope of application. </li>
+<li><strong>When dropping astrocyte / clearance / neurovascular support:</strong>Write in the text which plasticity, recovery, support-state, or multiday-maintenance behaviors were discarded as the scope of application. </li>
 <li>When multiple <strong>families remain:</strong>Rather than just confidence, expose family comparison, uncertainty, and abstention. </li>
 </ul>
 </div>
@@ -785,11 +902,11 @@ An added state variable can be described as ``effective'' if it shows a predicti
 </tr>
 <tr>
 <td><strong>Conditional dynamical claim</strong></td>
-<td>Include same-brain function or perturbation, list of missing state variables, proxy limits, family/uncertainty, and absence of intrinsic excitability/homeostatic set point plus post-transcriptional RNA-state and ionic / chloride state if not measured. </td>
+<td>Include same-brain function or perturbation, list of missing state variables, proxy limits, family/uncertainty, and explicit absence of intrinsic excitability/homeostatic set point, post-transcriptional RNA-state, ionic / chloride state, thermal-state, bioenergetic / mitochondrial state, neurovascular / BBB state, astrocyte-state, and clearance / immune support if not measured. </td>
 </tr>
 <tr>
 <td><strong>Intervention/Closed Loop claim</strong></td>
-<td>In addition to the above, we will also publish calibration routes for weights / timing-state / neuromodulation / excitability-homeostasis / ionic milieu, external validation, and abstention / stop conditions. </td>
+<td>In addition to the above, we will also publish calibration routes for weights / timing-state / thermal-state / neuromodulation / excitability-homeostasis / ionic milieu / bioenergetics / neurovascular support / astrocyte-state / clearance support, plus external validation and abstention / stop conditions. </td>
 </tr>
 </tbody>
 </table>
@@ -882,6 +999,37 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <em>Nature</em>, 629, 146–153. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Vadisiute, A., Meijer, E., Therpurakal, R. N., et al. (2024). Glial cells undergo rapid changes following acute chemogenetic manipulation of cortical layer 5 projection neurons. <em>Communications Biology</em>, 7, 1498. <a href="https://doi.org/10.1038/s42003-024-06994-w" target="_blank">doi:10.1038/s42003-024-06994-w</a></li>
 <li>Hadzibegovic, N., et al. (2026). Early intrinsic excitability plasticity of neocortical engram neurons defines memory formation and precision. <em>Nature Communications</em>, 17, 291. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">doi:10.1038/s41467-025-66975-3</a></li>
+<li>Hardingham, N. R., &amp; Larkman, A. U. (1998). The reliability of excitatory synaptic transmission in slices of rat visual cortex in vitro is temperature dependent. <em>The Journal of Physiology</em>, 507(1), 249–256. <a href="https://doi.org/10.1111/j.1469-7793.1998.249bu.x" target="_blank">doi:10.1111/j.1469-7793.1998.249bu.x</a></li>
+<li>Moser, E., Mathiesen, I., &amp; Andersen, P. (1993). Association between brain temperature and dentate field potentials in exploring and swimming rats. <em>Science</em>, 259(5099), 1324–1326. <a href="https://doi.org/10.1126/science.8446900" target="_blank">doi:10.1126/science.8446900</a></li>
+<li>Long, M. A., &amp; Fee, M. S. (2008). Using temperature to analyse temporal dynamics in the songbird motor pathway. <em>Nature</em>, 456, 189–194. <a href="https://doi.org/10.1038/nature07448" target="_blank">doi:10.1038/nature07448</a></li>
+<li>Reig, R., Mattia, M., Compte, A., Belmonte, C., &amp; Sanchez-Vives, M. V. (2010). Temperature modulation of slow and fast cortical rhythms. <em>Journal of Neurophysiology</em>, 103(3), 1253–1261. <a href="https://doi.org/10.1152/jn.00890.2009" target="_blank">doi:10.1152/jn.00890.2009</a></li>
+<li>Van Hook, M. J. (2020). Temperature effects on synaptic transmission and neuronal function in the visual thalamus. <em>PLoS One</em>, 15(4), e0232451. <a href="https://doi.org/10.1371/journal.pone.0232451" target="_blank">doi:10.1371/journal.pone.0232451</a></li>
+<li>Owen, S. F., Liu, M. H., &amp; Kreitzer, A. C. (2019). Thermal constraints on in vivo optogenetic manipulations. <em>Nature Neuroscience</em>, 22, 1061–1065. <a href="https://doi.org/10.1038/s41593-019-0422-3" target="_blank">doi:10.1038/s41593-019-0422-3</a></li>
+<li>Boorman, L. W., Harris, S. S., Shabir, O., et al. (2023). Bidirectional alterations in brain temperature profoundly modulate spatiotemporal neurovascular responses in-vivo. <em>Communications Biology</em>, 6, 185. <a href="https://doi.org/10.1038/s42003-023-04542-6" target="_blank">doi:10.1038/s42003-023-04542-6</a></li>
+<li>Rzechorzek, N. M., Thrippleton, M. J., Chappell, F. M., et al. (2022). A daily temperature rhythm in the human brain predicts survival after brain injury. <em>Brain</em>, 145(6), 2031–2048. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">doi:10.1093/brain/awab466</a></li>
+<li>Tan, Y., Liu, W., Li, Y., et al. (2025). Measurement of Healthy Adult Brain Temperature Using <sup>1</sup>H Magnetic Resonance Spectroscopy Thermometry. <em>Clinical Neuroradiology</em>, 35(1), 159–164. <a href="https://doi.org/10.1007/s00062-024-01467-3" target="_blank">doi:10.1007/s00062-024-01467-3</a></li>
+<li>Rangaraju, V., Calloway, N., &amp; Ryan, T. A. (2014). Activity-driven local ATP synthesis is required for synaptic function. <em>Cell</em>, 156(4), 825–835. <a href="https://doi.org/10.1016/j.cell.2013.12.042" target="_blank">doi:10.1016/j.cell.2013.12.042</a></li>
+<li>Divakaruni, S. S., Van Dyke, A. M., Chandra, R., et al. (2018). Long-term potentiation requires a rapid burst of dendritic mitochondrial fission during induction. <em>Neuron</em>, 100(4), 860–875.e7. <a href="https://doi.org/10.1016/j.neuron.2018.09.025" target="_blank">doi:10.1016/j.neuron.2018.09.025</a></li>
+<li>Underwood, E. L., Redell, J. B., Hood, K. N., et al. (2023). Enhanced presynaptic mitochondrial energy production is required for memory formation. <em>Scientific Reports</em>, 13, 14431. <a href="https://doi.org/10.1038/s41598-023-40877-0" target="_blank">doi:10.1038/s41598-023-40877-0</a></li>
+<li>Hu, H., Tang, J., Wu, Y., et al. (2025). Polarized ATP synthase in synaptic mitochondria induced by learning and plasticity signals. <em>Communications Biology</em>, 8, 166. <a href="https://doi.org/10.1038/s42003-025-08963-3" target="_blank">doi:10.1038/s42003-025-08963-3</a></li>
+<li>Vishwanath, A. A., Comyn, T., Mira, R. G., et al. (2026). Mitochondrial Ca<sup>2+</sup> efflux controls neuronal metabolism and long-term memory across species. <em>Nature Metabolism</em>, 8, 467–488. <a href="https://doi.org/10.1038/s42255-026-01451-w" target="_blank">doi:10.1038/s42255-026-01451-w</a></li>
+<li>Ren, J., Sherry, A. D., &amp; Malloy, C. R. (2015). <sup>31</sup>P-MRS of healthy human brain: ATP synthesis, metabolite concentrations, pH, and T1 relaxation times. <em>NMR in Biomedicine</em>, 28(11), 1455–1462. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">doi:10.1002/nbm.3384</a></li>
+<li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <em>PNAS Nexus</em>, 4(3), pgaf072. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
+<li>Bell, R. D., Winkler, E. A., Sagare, A. P., et al. (2010). Pericytes control key neurovascular functions and neuronal phenotype in the adult brain and during brain aging. <em>Neuron</em>, 68(3), 409–427. <a href="https://doi.org/10.1016/j.neuron.2010.09.043" target="_blank">doi:10.1016/j.neuron.2010.09.043</a></li>
+<li>Kisler, K., Nikolakopoulou, A. M., Sweeney, M. D., et al. (2020). Acute ablation of cortical pericytes leads to rapid neurovascular uncoupling. <em>Frontiers in Cellular Neuroscience</em>, 14, 27. <a href="https://doi.org/10.3389/fncel.2020.00027" target="_blank">doi:10.3389/fncel.2020.00027</a></li>
+<li>Pandey, K., Bessières, B., Sheng, S. L., et al. (2023). Neuronal activity drives IGF2 expression from pericytes to form long-term memory. <em>Neuron</em>, 111(23), 3819–3836.e8. <a href="https://doi.org/10.1016/j.neuron.2023.08.030" target="_blank">doi:10.1016/j.neuron.2023.08.030</a></li>
+<li>Mai-Morente, S., Razvan, M., Lechuga-Sancho, A. M., et al. (2025). Pericyte pannexin1 controls cerebral capillary diameter and supports memory function. <em>Nature Communications</em>, 16, 5912. <a href="https://doi.org/10.1038/s41467-025-61312-0" target="_blank">doi:10.1038/s41467-025-61312-0</a></li>
+<li>Padrela, B. E., Slivka, M., Sneve, M. H., et al. (2025). Blood-brain barrier water permeability across the adult lifespan: A multi-echo ASL study. <em>Neurobiology of Aging</em>, 147, 176–186. <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">doi:10.1016/j.neurobiolaging.2024.12.012</a></li>
+<li>Chung, K. J., Abdelhafez, Y. G., Spencer, B. A., et al. (2025). Quantitative PET imaging and modeling of molecular blood-brain barrier permeability. <em>Nature Communications</em>, 16, 3076. <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">doi:10.1038/s41467-025-58356-7</a></li>
+<li>Suzuki, A., Stern, S. A., Bozdagi, O., et al. (2011). Astrocyte-neuron lactate transport is required for long-term memory formation. <em>Cell</em>, 144(5), 810–823. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">doi:10.1016/j.cell.2011.02.018</a></li>
+<li>Villemagne, V. L., Harada, R., Dore, V., et al. (2022). First-in-Humans Evaluation of <sup>18</sup>F-SMBT-1, a Novel <sup>18</sup>F-Labeled Monoamine Oxidase-B PET Tracer for Imaging Reactive Astrogliosis. <em>Journal of Nuclear Medicine</em>, 63(10), 1551–1559. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">doi:10.2967/jnumed.121.263254</a></li>
+<li>Williamson, N. R., Ferreira, A. N., Watanabe, A. T., et al. (2025). Learning-associated astrocyte ensembles regulate memory recall. <em>Nature</em>, 636, 445–454. <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">doi:10.1038/s41586-024-08170-w</a></li>
+<li>Dewa, K., Kwon, O.-B., Zheng, X., et al. (2025). The astrocytic ensemble acts as a multiday trace to stabilize memory. <em>Nature</em>, 648, 99–107. <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">doi:10.1038/s41586-025-09619-2</a></li>
+<li>Louveau, A., Smirnov, I., Keyes, T. J., et al. (2015). Structural and functional features of central nervous system lymphatic vessels. <em>Nature</em>, 523, 337–341. <a href="https://doi.org/10.1038/nature14432" target="_blank">doi:10.1038/nature14432</a></li>
+<li>Ahn, J. H., Cho, H., Kim, J.-H., et al. (2019). Meningeal lymphatic vessels at the skull base drain cerebrospinal fluid. <em>Nature</em>, 572, 62–66. <a href="https://doi.org/10.1038/s41586-019-1419-5" target="_blank">doi:10.1038/s41586-019-1419-5</a></li>
+<li>Kim, J., et al. (2025). Meningeal lymphatics-microglia axis regulates synaptic physiology. <em>Cell</em>, 188(8), 2129–2148.e21. <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">doi:10.1016/j.cell.2025.02.022</a></li>
+<li>Eide, P. K., &amp; Ringstad, G. (2021). Sleep deprivation impairs molecular clearance from the human brain. <em>Brain</em>, 144(3), 863–874. <a href="https://doi.org/10.1093/brain/awaa443" target="_blank">doi:10.1093/brain/awaa443</a></li>
+<li>Dagum, P., Elbert, D. L., Giovangrandi, L., et al. (2026). The glymphatic system clears amyloid beta and tau from brain to plasma in humans. <em>Nature Communications</em>, 17, 715. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
 </ol>
 </section>
 
