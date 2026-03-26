@@ -733,17 +733,44 @@ href="#ref-28">[28]</a></sup>.</li>
 <!-- Reproducibility -->
 <section class="section" id="reproducibility">
 <h2 class="section-title">Substance and Reproducibility of the project</h2>
-<p>As the name "Mind-Upload" suggests, this research depends heavily on computational methods. However, the current GitHub repository is still centered on the website and does not yet present enough substance or reproducibility as a research project <strong>in a form that a third party can execute</strong>. To address that gap, this project adopts BIDS and EEG-BIDS extensions as data-organization conventions,<sup><a
-href="#ref-25">[25]</a></sup><sup><a href="#ref-26">[26]</a></sup> and is gradually building an analysis pipeline, data schema, and experimental-condition log that can support the site's claims in executable form.</p>
-<ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; line-height: 1.6;">
-<li style="margin-bottom: 8px;">
-<strong>Data processing pipeline:</strong> Publish minimum executable processing scripts aligned with BIDS / EEG-BIDS<sup><a href="#ref-25">[25]</a></sup><sup><a
-href="#ref-26">[26]</a></sup>, using Python / MNE-Python and wrappers for SPM, FieldTrip, and related tools.</li>
-<li style="margin-bottom: 8px;"><strong>Decoding model:</strong>Mind
-Captioning-like Transformer model definitions and training / inference code using dummy data will be published.</li>
-<li style="margin-bottom: 8px;">
-<strong>Expanding data schema:</strong> In addition to `dataset_description.json`, publish example `eeg.json` schemas that document EEG structure and measurement protocols, so the project moves from merely formal BIDS compliance toward substantive compliance.</li>
-</ul>
+<p>As of 2026-03, this repository is still <strong>documentation-first</strong>. That is useful for setting claim ceilings, route cards, and audit rules, but it is not yet a third-party executable EEG or multimodal benchmark package. The current public artifacts are mainly the site text, the wiki/export toolchain, schema examples such as <code>dataset_description.json</code>, and the audit contracts that explain what evidence must be shown. What is still missing for L0 is a <strong>fixed analysis environment</strong>, a <strong>named public dataset snapshot</strong>, <strong>machine-executable preprocessing / metric scripts</strong>, and <strong>expected outputs</strong> that another group can rerun without hidden manual steps. Therefore, this page now separates <strong>what is already public</strong> from <strong>what remains missing before L0 reproducibility</strong> instead of speaking as if one continuous executable pipeline already existed.<sup><a href="#ref-25">[25]</a></sup><sup><a href="#ref-26">[26]</a></sup></p>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>Public lane</th>
+<th>What is already public now</th>
+<th>What is still missing before L0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Documentation / audit rules</strong></td>
+<td>Claim ceilings, route cards, benchmark-reading rules, and validation ladders are already public on the site.</td>
+<td>A third party still cannot rerun a named EEG benchmark from raw inputs to expected outputs using this repository alone.</td>
+</tr>
+<tr>
+<td><strong>Data organization</strong></td>
+<td>BIDS / EEG-BIDS are already adopted as the target organizational language, and schema examples are being used to define what must be logged.<sup><a href="#ref-25">[25]</a></sup><sup><a href="#ref-26">[26]</a></sup></td>
+<td>A concrete public dataset snapshot, sidecars, validator output, and a complete reproduction manifest still need to be published together.</td>
+</tr>
+<tr>
+<td><strong>Tooling</strong></td>
+<td>The repository already contains public-content and wiki/export automation, which helps keep the documentation layer auditable.</td>
+<td>The executable analysis layer is still missing: preprocessing, metrics, baselines, and expected-result checks are not yet packaged as one public rerunnable bench.</td>
+</tr>
+<tr>
+<td><strong>Model / evaluation layer</strong></td>
+<td>The site now defines the negative controls, abstention rules, and validation classes that future decoding or source-imaging work must satisfy.</td>
+<td>The code that instantiates those rules on a named public dataset, with fixed environment and regression tests, remains to be published.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>What this means operationally</strong>
+<p>For now, the strongest safe public claim is that this repository publishes <strong>measurement / verification specifications</strong> and <strong>reading rules</strong>. It does <strong>not</strong> yet publish a completed EEG analysis package that a third party can execute end to end. On this site, the correct next step is therefore to turn the existing audit rules into a small public L0 benchmark bundle rather than to imply that the executable layer already exists.</p>
+</div>
 </section>
 
 <!-- Current Status -->
@@ -930,35 +957,78 @@ href="#ref-57">[57]</a></sup>.
 <section class="section" id="research-program">
 <h2 class="section-title">Research Program</h2>
 
-<p>A demonstration plan with publication in mind will comprehensively show each stage of measurement, deciphering, and implementation. The goal is to design and publish a ``personality maintenance'' evaluation system that integrates multimodal measurement and neural decoding. In addition, we will focus on EEG as a pillar of the measurement stage.<strong>Behavior-independent awareness index</strong>A roadmap of (complexity x perturbation response x criticality) is also specified.</p>
+<p>The weak point of the older version of this section was that it compressed several different evidence classes into one linear phase table: sharable measurement packages, source-imaging validation, multimodal fusion, local perturbation evidence, speech neuroprostheses, and WBE-relevant verification. The primary literature does not support that compression. Tang et al. required participant-specific cooperation for non-invasive semantic reconstruction.<sup><a href="#ref-30">[30]</a></sup> Willett et al., Littlejohn et al., and Wairagkar et al. demonstrated strong communication subsystems, not whole-brain equivalence.<sup><a href="#ref-108">[108]</a></sup><sup><a href="#ref-109">[109]</a></sup><sup><a href="#ref-110">[110]</a></sup> Hernandez-Pavon et al., Gogulski et al., and Biabani et al. showed that TMS-EEG interpretation still depends on stimulus conditions, target-specific reliability, and sensory contamination control.<sup><a href="#ref-100">[100]</a></sup><sup><a href="#ref-124">[124]</a></sup><sup><a href="#ref-125">[125]</a></sup> Rohaut et al. and Manasova et al. showed that multimodal gains are bundle-conditioned and modality-specific rather than one interchangeable meter.<sup><a href="#ref-128">[128]</a></sup><sup><a href="#ref-105">[105]</a></sup> Beiran and Litwin-Kumar further showed that connectome-constrained models remain dynamically degenerate until additional recordings collapse the compatible state space.<sup><a href="#ref-140">[140]</a></sup> Therefore, this section now separates <strong>repository-executable work</strong> from <strong>external-dependency experiments</strong> and keeps each lane at its own claim ceiling.</p>
 
-<!-- Table: Roadmap -->
+<h3>Repository-executable work</h3>
 <table class="data-table">
 <thead>
 <tr>
-<th>Phase</th>
-<th>Measurement/data</th>
-<th>Decoding/Analysis</th>
+<th>Lane</th>
+<th>Concrete output that this repository can publish now</th>
+<th>Safe claim ceiling</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>HD-EEG/fMRI simultaneous measurement setup, reproducibility data collection. Adoption of IHM and expansion of BIDS metadata.</td>
-<td>In the brain-to-text system,<strong>No brain / No LM / shuffle / OOD / drift / latency</strong>Fix the evaluation pack to simultaneously audit and separate linguistic priors and neural contributions.</td>
+<td><strong>L0 benchmark packaging</strong></td>
+<td>Publish a small public benchmark bundle that fixes dataset identity, split policy, QC log, metric bundle, and expected outputs for one EEG use case.</td>
+<td><strong>Third-party rerunnable analysis package</strong>, not yet causal or WBE-level evidence.</td>
 </tr>
 <tr>
-<td>2</td>
-<td>Fusion of ESI signal separation and MEG data. Validation of inverse problem constraints.</td>
-<td>Inter-site causal dynamics analysis and generative model identification using Dynamic Causal Modeling (DCM).</td>
+<td><strong>Language-decoding evaluation pack</strong></td>
+<td>For brain-to-text or speech decoding claims, publish fixed negative controls such as <code>no-brain</code>, <code>LM-only</code>, <code>time-shuffle</code>, held-out slices, drift slices, and latency / abstention logs.</td>
+<td><strong>Task-limited decoding audit</strong>, not evidence of subject-complete readout or WBE.</td>
 </tr>
 <tr>
-<td>3</td>
-<td>Operation verification with WBA integration framework. Modeling of non-neuronal cells (glia).</td>
-<td><strong>Neural Turing Test</strong>: Verifying the statistical identity of the "perturbation response (PCI)" of the original brain and the emulation.</td>
+<td><strong>Source / fusion audit package</strong></td>
+<td>Publish validation-class registries, uncertainty logs, and fusion cards that force source-imaging and multimodal claims to disclose geometry, conductivity, synchronization, missing-modality policy, and abstention.</td>
+<td><strong>Conditional source / fusion hypothesis audit</strong>, not automatic state identification.</td>
+</tr>
+<tr>
+<td><strong>Maintenance-state omission ledger</strong></td>
+<td>When reporting connectome-based or macro-measurement models, publish which fast-state and maintenance-state families remain omitted and what claim ceiling follows from those omissions.</td>
+<td><strong>Scoped model comparison</strong>, not state-complete reconstruction.</td>
 </tr>
 </tbody>
 </table>
+
+<h3>External-dependency tasks</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th>Task</th>
+<th>Why it is external dependency</th>
+<th>Safe wording on this site until completed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Simultaneous HD-EEG/fMRI or TMS-EEG acquisition</strong></td>
+<td>Requires IRB approval, specialized hardware, synchronization control, participants, and site operations.</td>
+<td><strong>Planned validation route</strong>, not current repository evidence.</td>
+</tr>
+<tr>
+<td><strong>Intracranial stimulation or simultaneous SEEG/ECoG validation</strong></td>
+<td>Requires clinical partnership, patient access, and a named external calibration protocol.</td>
+<td><strong>External calibration class</strong>, not a public benchmark already executed here.</td>
+</tr>
+<tr>
+<td><strong>Chronic speech neuroprosthesis or real-time voice synthesis</strong></td>
+<td>Requires implanted hardware, longitudinal participant operations, and real-time clinical/engineering support.</td>
+<td><strong>Local communication-subsystem evidence</strong>, not whole-brain verification.</td>
+</tr>
+<tr>
+<td><strong>WBE-relevant perturbation equivalence across long horizons</strong></td>
+<td>Requires stacked observability, intervention, longitudinal maintenance, and body/environment audits far beyond the current repository scope.</td>
+<td><strong>Long-range research target</strong>, not a scheduled near-term deliverable.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>Why the roadmap is split this way</strong>
+<p>The site can already publish benchmark rules, audit cards, and claim ceilings. It cannot honestly present simultaneous acquisition, intracranial validation, implanted speech BCIs, or WBE-grade perturbation equivalence as if they were in-repo deliverables. The correct scientific move is to publish the <strong>measurement and verification contract first</strong>, then attach external experiments only when they are actually executed and logged.</p>
+</div>
 </section>
 
 <!-- Brain-to-Text Update -->
@@ -1652,6 +1722,7 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <li id="ref-137" value="137">Iivanainen, J., Borna, A., Zetter, R., Carter, T. R., Stephen, J. M., McKay, J., Parkkonen, L., Taulu, S., &amp; Schwindt, P. D. D. (2022). Calibration and Localization of Optically Pumped Magnetometers Using Electromagnetic Coils. <em>Sensors</em>, 22(8), 3059. <a href="https://doi.org/10.3390/s22083059">doi:10.3390/s22083059</a></li>
 <li id="ref-138" value="138">Rhodes, N., Rier, L., Boto, E., Hill, R. M., &amp; Brookes, M. J. (2025). Source reconstruction without an MRI using optically pumped magnetometer-based magnetoencephalography. <em>Imaging Neuroscience</em>, 3, IMAG.a.8. <a href="https://doi.org/10.1162/IMAG.a.8">doi:10.1162/IMAG.a.8</a></li>
 <li id="ref-139" value="139">Wu, T., Xiao, W., Peng, X., Wu, T., &amp; Guo, H. (2025). Crosstalk reduction in optically pumped magnetometers arrays for biomagnetic measurement. <em>Review of Scientific Instruments</em>, 96(8), 085004. <a href="https://doi.org/10.1063/5.0273491">doi:10.1063/5.0273491</a></li>
+<li id="ref-140" value="140">Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <em>Nature Neuroscience</em>, 28, 2561–2574. <a href="https://doi.org/10.1038/s41593-025-02080-4">doi:10.1038/s41593-025-02080-4</a></li>
 </ol>
 </section>
 
