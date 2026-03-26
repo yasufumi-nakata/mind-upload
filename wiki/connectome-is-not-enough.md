@@ -45,7 +45,7 @@ page_highlights:
 - "Chemical connectome is not electrical-state complete: gap junctions, endogenous field effects, and inhibitory-driving-force state remain separate variables, and electrical-state claims now need a route card."
 - "Bioenergetic / mitochondrial evidence is treated as another missing layer, because local ATP reserve, mitochondrial positioning/fission, ATP-synthase nano-organization, and Ca2+-efflux tuning are not implied by graph or macro energetic imaging alone."
 - "Neurovascular-unit / BBB / pericyte evidence is treated as another missing layer, because vascular transfer audit and human BBB proxy routes do not by themselves fix the local controller state."
-- "Astrocyte-state is treated as another missing layer, because lactate support, minute-scale network encoding, recall ensembles, and reactive-astrogliosis PET do not all answer the same question."
+- "Astrocyte-state is treated as another missing layer, because lactate support, minute-scale network encoding, recall ensembles, and target-defined human MAO-B or I2BS astrocyte-related PET routes do not all answer the same question."
 - "Clearance / immune support is treated as another missing layer, because meningeal drainage anatomy, microglia-linked synaptic control, human CSF-mobility MRI, and model-based glymphatic proxy routes do not all answer the same question."
 - "A diffusion-MRI-derived human connectome is treated as an algorithm- and resolution-conditioned macro pathway prior or targeted bundle hypothesis route, not as a synapse-resolved edge list."
 - "Within tractography itself, cortical endpoint assignment and parcel-graph construction are separate walls, so tractography graphs and hub maps are not stable objects by default."
@@ -235,7 +235,7 @@ I am not going to deal with philosophy or legal systems here. From only the aspe
 <tr>
 <td><strong>Astrocyte-state</strong></td>
 <td>Even with the same graph, lactate-shuttle support, minute-scale network encoding, recall ensembles, and multiday stabilization ensembles can still differ.</td>
-<td>Generic glial support or a human reactive-astrogliosis proxy means the operative astrocyte state is already fixed.</td>
+<td>Generic glial support or a human MAO-B / I<sub>2</sub>BS astrocyte-related PET route means the operative astrocyte state is already fixed.</td>
 <td>Demote astrocyte-dependent plasticity, recall, and slow-state claims unless the astrocyte observable, perturbation route, or proxy ceiling is disclosed.</td>
 </tr>
 <tr>
@@ -758,7 +758,7 @@ The earlier wording that "glia matters" was directionally correct but still too 
 <div class="note-box">
 <strong>Human observability ceiling for astrocyte-state</strong>
 <p>
-Human astrocyte-related evidence is still proxy-class evidence. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a> characterized <sup>18</sup>F-SMBT-1 as a first-in-human MAO-B PET tracer for reactive astrogliosis. That is useful evidence that a human astrocyte-related route exists, but it does not become ground truth of learning-associated astrocyte ensembles, recall-state identity, or arbitrary content-related astrocyte coding. On this site, current human astrocyte PET therefore remains a <strong>reactive-astrogliosis proxy</strong>, not astrocyte-state closure.
+Human astrocyte-related evidence is still proxy-class evidence. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a> characterized <sup>18</sup>F-SMBT-1 as a first-in-human MAO-B PET tracer for reactive astrogliosis, <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. (2018)</a> showed that <sup>11</sup>C-BU99008 is an I<sub>2</sub>BS route rather than the same molecular target, <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">Livingston et al. (2022)</a> showed BU99008 uptake varies with region and impairment stage, and <a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">Jaisa-Aad et al. (2024)</a> showed cortical MAO-B varies across AD/ADRD classes. That is useful evidence that human astrocyte-related routes exist, but it does not become ground truth of learning-associated astrocyte ensembles, recall-state identity, or arbitrary content-related astrocyte coding. On this site, current human astrocyte PET therefore remains a <strong>target-defined astrocyte-related proxy class</strong>, not astrocyte-state closure.
 </p>
 </div>
 
@@ -877,7 +877,7 @@ The weakness of the current site was that even if it was possible to enumerate t
 <td><strong>+ astrocyte-state audit</strong></td>
 <td>Compare a synapse- or energetic-aware baseline against the same model with lactate-support readout, astrocyte-network state, ensemble perturbation, or externally calibrated human astrocyte proxy under the same held-out recall or stabilization condition.</td>
 <td>Suzuki, Cahill, Williamson, and Dewa together support that astrocyte-state can narrow support, recall, and stabilization claims once ensemble state is treated explicitly.</td>
-<td>Human MAO-B / reactive-astrogliosis PET remains a proxy route and does not become ground truth of learning-associated astrocyte ensembles.</td>
+<td>Human MAO-B or I<sub>2</sub>BS astrocyte-related PET remains a target-defined proxy route and does not become ground truth of learning-associated astrocyte ensembles.</td>
 </tr>
 <tr>
 <td><strong>+ clearance / immune audit</strong></td>
@@ -928,7 +928,7 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li><strong>pupil / HRV:</strong> A useful state covariate for human data, but not a transmitter-specific ground truth. </li>
 <li><strong>bioenergetic / mitochondrial state:</strong>Do not collapse ATP-demand support, mitochondrial positioning, or Ca<sup>2+</sup>-efflux control into generic activity fit or macro energetic imaging. If not measured, write latent state.</li>
 <li><strong>neurovascular-unit / BBB / pericyte state:</strong>Do not collapse controller-side biology into vascular transfer audit or macro BBB permeability proxy. If not measured, write latent state.</li>
-<li><strong>astrocyte-state:</strong>Do not collapse lactate support, network encoding, recall ensembles, or reactive-astrogliosis PET into one generic glial sentence. If not measured, write latent state.</li>
+<li><strong>astrocyte-state:</strong>Do not collapse lactate support, network encoding, recall ensembles, or human MAO-B / I<sub>2</sub>BS astrocyte-related PET into one generic glial sentence. If not measured, write latent state.</li>
 <li><strong>clearance / immune support:</strong>Do not collapse drainage anatomy, microglia-linked synaptic control, CSF mobility, or glymphatic-model routes into passive cleanup language. If not measured, write latent state.</li>
 <li><strong>When state variable is missing:</strong>If estimated, specify the error and abstention condition; if not, specify absent. </li>
 <li>When there are no weights / timing-state: phase, timing, intervention response, and closed-loop stability claims are demoted. </li>
@@ -1076,6 +1076,9 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li>Chung, K. J., Abdelhafez, Y. G., Spencer, B. A., et al. (2025). Quantitative PET imaging and modeling of molecular blood-brain barrier permeability. <em>Nature Communications</em>, 16, 3076. <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">doi:10.1038/s41467-025-58356-7</a></li>
 <li>Suzuki, A., Stern, S. A., Bozdagi, O., et al. (2011). Astrocyte-neuron lactate transport is required for long-term memory formation. <em>Cell</em>, 144(5), 810–823. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">doi:10.1016/j.cell.2011.02.018</a></li>
 <li>Villemagne, V. L., Harada, R., Dore, V., et al. (2022). First-in-Humans Evaluation of <sup>18</sup>F-SMBT-1, a Novel <sup>18</sup>F-Labeled Monoamine Oxidase-B PET Tracer for Imaging Reactive Astrogliosis. <em>Journal of Nuclear Medicine</em>, 63(10), 1551–1559. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">doi:10.2967/jnumed.121.263254</a></li>
+<li>Tyacke, R. J., Myers, J. F. M., Venkataraman, A., et al. (2018). Evaluation of <sup>11</sup>C-BU99008, a PET Ligand for the Imidazoline<sub>2</sub> Binding Site in Human Brain. <em>Journal of Nuclear Medicine</em>, 59(10), 1597–1602. <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">doi:10.2967/jnumed.118.208009</a></li>
+<li>Livingston, N. R., Calsolaro, V., Hinz, R., et al. (2022). Relationship between astrocyte reactivity, using novel <sup>11</sup>C-BU99008 PET, and glucose metabolism, grey matter volume and amyloid load in cognitively impaired individuals. <em>Molecular Psychiatry</em>, 27(4), 2019–2029. <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">doi:10.1038/s41380-021-01429-y</a></li>
+<li>Jaisa-Aad, M., Muñoz-Castro, C., Healey, M. A., Hyman, B. T., &amp; Serrano-Pozo, A. (2024). Characterization of monoamine oxidase-B (MAO-B) as a biomarker of reactive astrogliosis in Alzheimer's disease and related dementias. <em>Acta Neuropathologica</em>, 147(1), 66. <a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">doi:10.1007/s00401-024-02712-2</a></li>
 <li>Williamson, N. R., Ferreira, A. N., Watanabe, A. T., et al. (2025). Learning-associated astrocyte ensembles regulate memory recall. <em>Nature</em>, 636, 445–454. <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">doi:10.1038/s41586-024-08170-w</a></li>
 <li>Dewa, K., Kwon, O.-B., Zheng, X., et al. (2025). The astrocytic ensemble acts as a multiday trace to stabilize memory. <em>Nature</em>, 648, 99–107. <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">doi:10.1038/s41586-025-09619-2</a></li>
 <li>Louveau, A., Smirnov, I., Keyes, T. J., et al. (2015). Structural and functional features of central nervous system lymphatic vessels. <em>Nature</em>, 523, 337–341. <a href="https://doi.org/10.1038/nature14432" target="_blank">doi:10.1038/nature14432</a></li>

@@ -416,7 +416,7 @@ If names such as <strong>field-formation wall</strong>, <strong>Fusion Card</str
 </tr>
 <tr>
 <td><strong>Astrocyte / glial-state</strong></td>
-<td>The minutes-to-days non-neuronal state that includes astrocyte network responses, learning-associated ensembles, lactate transport, and related glial variables that can change recall, multiday stabilization, or fear-state representations. It should not be collapsed into generic metabolic background.</td>
+<td>The minutes-to-days non-neuronal state that includes astrocyte network responses, learning-associated ensembles, lactate transport, and related glial variables that can change recall, multiday stabilization, or fear-state representations. In humans, astrocyte PET still remains a target-defined proxy class such as MAO-B or I<sub>2</sub>BS rather than one generic astrocyte-state meter. It should not be collapsed into generic metabolic background.</td>
 </tr>
 <tr>
 <td><strong>Neurovascular-unit / BBB / pericyte state</strong></td>
