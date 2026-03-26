@@ -4,10 +4,10 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-26 / 位置づけ: Technical / natural science only
+- 更新日: 2026-03-27 / 位置づけ: Technical / natural science only
 
 ## このページの役割
-This page is a wiki that fixes the ``upper claim limit for each measurement stack,'' which is often overlooked in WBE discussions. It's not enough to say that hidden state is important. Based on primary literature, we will explain what each of EEG/MEG/fMRI, spatial transcriptomics, Patch-seq, volume EM, same-brain functional connectomics, synaptic-density PET, mixed arousal proxy, local transmitter sensor, receptor atlas / PET, glia imaging, and human biochemical / energetic / ionic / thermal / myelin / clearance routes directly observes and what remains latent.
+This page is a wiki that fixes the ``upper claim limit for each measurement stack,'' which is often overlooked in WBE discussions. It's not enough to say that hidden state is important. Based on primary literature, we will explain what each of EEG/MEG/fMRI, spatial transcriptomics, Patch-seq, volume EM, same-brain functional connectomics, synaptic-density PET, mixed arousal proxy, local transmitter sensor, receptor atlas / PET, glia imaging, and human 1H-MRSI biochemical-similarity / 31P energetic-balance / deuterium metabolite-rate / ionic / thermal / myelin / clearance routes directly observes and what remains latent.
 
 ## 正確さの前提
 The ``claim ceiling'' column below is not the conclusion declared by each paper. This is an operational inference drawn by this site from variables directly observed in primary literature and state variables that are still unobserved.
@@ -29,7 +29,7 @@ The ``claim ceiling'' column below is not the conclusion declared by each paper.
 - Whole-brain spatial transcriptomics provides a major advance in cell-type taxonomy and spatial location, but the sufficiency of dynamic states is another matter.
 - Patch-seq and same-brain connectomics reduce degeneracy, but the sufficiency of whole-brain coverage and long-term maintenance-state remains.
 - Local transmitter / glia imaging is effective for calibrating coarse proxies, but it does not directly provide whole-brain ground truth.
-- Human biochemical, energetic, ionic, thermal, myelin, and clearance routes reduce different latent-state error terms and should not be summarized as one direct path to maintenance-state completeness.
+- Human 1H-MRSI biochemical similarity, 31P energetic balance, deuterium metabolite / rate, ionic, thermal, myelin, and clearance routes reduce different latent-state error terms and should not be summarized as one direct path to maintenance-state completeness.
 - A real human proxy route may still calibrate only one bounded hidden-state family, so proxy class and operational maturity do not by themselves fix calibrator role.
 - Same-subject or same-brain wording can solve specimen identity while still leaving state continuity unresolved across time gaps, regime changes, and tissue transformation.
 
@@ -336,20 +336,28 @@ Another weakness that remained on this page was that it separated generic measur
 <td><strong>Regional synaptic-density proxy</strong>. We do not read it as a direct measurement of current synaptic function.</td>
 </tr>
 <tr>
-<td><strong>Whole-brain MRSI metabolic similarity scaffold</strong><br>Lucchetti et al. (2025)</td>
-<td><strong>Parcel-level biochemical scaffold</strong></td>
-<td>Whole-brain cohort mapping with replication, but still a static similarity route.</td>
-<td>Bounded biochemical-organization scaffold.</td>
+<td><strong>Whole-brain 1H-MRSI metabolic similarity scaffold</strong><br>Lucchetti et al. (2025)</td>
+<td><strong>Parcel-level 1H-MRSI biochemical similarity scaffold</strong></td>
+<td>Whole-brain cohort mapping with replication, but still a static five-metabolite similarity route.</td>
+<td>Bounded 1H-MRSI biochemical-organization scaffold.</td>
 <td>Current transcriptional controller, branch-local energetic reserve, cell-specific recovery logic, and local transmitter / glial microstate.</td>
-<td><strong>Macro biochemical scaffold</strong>. It is not a local maintenance-state snapshot.</td>
+<td><strong>Macro 1H-MRSI biochemical scaffold</strong>. It is not a local maintenance-state snapshot.</td>
 </tr>
 <tr>
-<td><strong>Human energetic imaging (31P-MRS / dynamic DMRSI)</strong><br>Ren et al. (2015); Li et al. (2025)</td>
-<td><strong>Macro energetic proxy</strong></td>
-<td>Ranges from specialized spectroscopy to high-burden 7 T kinetic imaging with custom hardware and model burden.</td>
-<td>Bounded energetic-burden proxy.</td>
+<td><strong>Human 31P-MRS energetic-balance route</strong><br>Ren et al. (2015)</td>
+<td><strong>Macro 31P energetic-balance proxy</strong></td>
+<td>Healthy resting cohort of 12 with ATP-synthesis, phosphorus-metabolite, pH, and relaxation estimates, but not a spatially fine compartment-control readout.</td>
+<td>Bounded phosphorus-energetic balance proxy.</td>
 <td>Which dendritic branch lacks ATP reserve, where mitochondria are parked, which compartment is energetically fragile right now, and which fission / fusion state is active.</td>
-<td><strong>Macro energetic proxy</strong>. It does not become branch-local mitochondrial ground truth.</td>
+<td><strong>Macro 31P energetic-balance proxy</strong>. It does not become branch-local mitochondrial ground truth.</td>
+</tr>
+<tr>
+<td><strong>Human deuterium metabolite / rate imaging</strong><br>Li et al. (2025); Karkouri et al. (2026)</td>
+<td><strong>Macro deuterium metabolite / kinetic-rate proxy</strong></td>
+<td>Specialized 7 T deuterium imaging with custom hardware or advanced modeling; current human evidence remains small-cohort and high-burden.</td>
+<td>Bounded deuterium metabolite / energetic-rate proxy.</td>
+<td>Which dendritic branch lacks ATP reserve, where mitochondria are parked, which compartment is energetically fragile right now, and which fission / fusion state is active.</td>
+<td><strong>Macro deuterium metabolite / rate proxy</strong>. It does not become branch-local mitochondrial ground truth.</td>
 </tr>
 <tr>
 <td><strong>Human sodium MRI / ionic proxy</strong><br>Qian et al. (2012); Qian et al. (2025)</td>
@@ -412,12 +420,17 @@ Another weakness that remained on this page was that it separated generic measur
 
 <strong>Proxy class, operational maturity, and calibrator role have to be logged separately</strong>
 <p>
-The key operational criticism is that a route can be real without being broad. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built an atlas from <strong>33 healthy participants</strong> calibrated against postmortem autoradiography, but that still calibrates a <strong>synaptic-density prior</strong> rather than task-time synaptic efficacy. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derived a metabolic similarity scaffold from <strong>51 healthy adolescents</strong> with an <strong>independent replication sample of 13</strong>, but that still calibrates a <strong>biochemical organization scaffold</strong> rather than a kinetic energetic controller. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> reported whole-brain metabolic-rate mapping in <strong>five healthy participants</strong> at <strong>7 T</strong> with custom dual-frequency coils and blood-input modeling, which is real but still high-burden and still calibrates only a <strong>bounded energetic-burden proxy</strong>. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> showed myelin-bilayer mapping in <strong>two healthy volunteers</strong> on specialized hardware, while <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> constrain <strong>support-state</strong> rather than cell-specific maintenance control. Therefore, this page now treats <strong>proxy class</strong>, <strong>operational maturity</strong>, and <strong>safe calibrator role</strong> as separate metadata that all have to be stated before claim ceilings are interpreted.
+The key operational criticism is that a route can be real without being broad. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built an atlas from <strong>33 healthy participants</strong> calibrated against postmortem autoradiography, but that still calibrates a <strong>synaptic-density prior</strong> rather than task-time synaptic efficacy. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derived a <strong>five-metabolite similarity scaffold</strong> from <strong>51 healthy adolescents</strong> with an <strong>independent replication sample of 13</strong>, but that still calibrates a <strong>biochemical organization scaffold</strong> rather than an energetic controller. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> measured <strong>ATP synthesis, phosphorus metabolites, and pH</strong> in <strong>12 healthy participants</strong>, which calibrates only a <strong>bounded energetic-balance proxy</strong>. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> and <a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a> reported deuterium metabolite / rate maps at <strong>7 T</strong> with small cohorts and high acquisition-model burden, which is real but still calibrates only a <strong>bounded deuterium energetic-rate proxy</strong>. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> showed myelin-bilayer mapping in <strong>two healthy volunteers</strong> on specialized hardware, while <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> constrain <strong>support-state</strong> rather than cell-specific maintenance control. Therefore, this page now treats <strong>proxy class</strong>, <strong>operational maturity</strong>, and <strong>safe calibrator role</strong> as separate metadata that all have to be stated before claim ceilings are interpreted.
+</p>
+
+<strong>Spectroscopy rows also split by quantity type and model burden</strong>
+<p>
+The spectroscopy rows cannot be read as one proxy family. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> constrained <strong>parcel-level correlation structure</strong> across five metabolites, <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> constrained <strong>ATP synthesis / phosphorus-metabolite balance / pH</strong>, and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> plus <a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a> constrained <strong>deuterated metabolite concentrations and kinetic rates</strong>. Even within <sup>1</sup>H-MRSI mapping, <a href="https://doi.org/10.1002/brb3.1852" target="_blank">Bhogal et al. (2020)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2022.119574" target="_blank">Wright et al. (2022)</a>, <a href="https://doi.org/10.1148/radiol.232401" target="_blank">Baboli et al. (2024)</a>, and <a href="https://doi.org/10.1109/TBME.2025.3572448" target="_blank">Guo et al. (2025)</a> show that lipid suppression, tissue-fraction correction, water / relaxation modeling, ghosting, aliasing, and low-SNR handling materially shape the inferred maps. Therefore, this site does not allow ``human spectroscopy evidence'' as a single proxy label. The quantity type, cohort burden, hardware burden, and model burden all have to be named before the claim ceiling is read.
 </p>
 
 <strong>Site rule for human proxy classes</strong>
 <p>
-On this site, human-side summaries must name the <strong>proxy class</strong> explicitly. ``Human evidence exists'' is too coarse. The summary has to tell the reader whether the result is a <strong>local structural scaffold</strong>, <strong>regional synaptic-density proxy</strong>, <strong>macro biochemical scaffold</strong>, <strong>perturbation-conditioned maintenance / state-gated perturbation proxy</strong>, <strong>macro energetic / ionic / thermal / myelin proxy</strong>, or <strong>macro support-state proxy</strong>. When the route is still specialized, model-dependent, or small-cohort, that maturity limit must be stated alongside the proxy class. And when the route calibrates only one bounded hidden-state family, that <strong>calibrator role</strong> must be written explicitly rather than inherited from the modality label.
+On this site, human-side summaries must name the <strong>proxy class</strong> explicitly. ``Human evidence exists'' is too coarse. The summary has to tell the reader whether the result is a <strong>local structural scaffold</strong>, <strong>regional synaptic-density proxy</strong>, <strong>macro 1H-MRSI biochemical similarity scaffold</strong>, <strong>macro 31P energetic-balance proxy</strong>, <strong>macro deuterium metabolite / rate proxy</strong>, <strong>perturbation-conditioned maintenance / state-gated perturbation proxy</strong>, <strong>quantity-defined macro ionic / thermal / myelin proxy family</strong>, or <strong>macro support-state proxy</strong>. When the route is still specialized, model-dependent, or small-cohort, that maturity limit must be stated alongside the proxy class. And when the route calibrates only one bounded hidden-state family, that <strong>calibrator role</strong> must be written explicitly rather than inherited from the modality label.
 </p>
 
 <strong>Same-subject still does not solve the bridge by itself</strong>
@@ -579,7 +592,12 @@ This site now treats <strong>proxy-rich human evidence</strong> as a real advanc
 <li>Chen, J. E., Lewis, L. D., Coursey, S. E., Catana, C., Polimeni, J. R., Fan, J., Droppa, K. S., Patel, R., Wey, H.-Y., Chang, C., Manoach, D. S., Price, J. C., Sander, C. Y., &amp; Rosen, B. R. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
 <li>Lucchetti, F., C&eacute;l&eacute;reau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <em>Nature Communications</em>, 16, 11344. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
 <li>Ren, J., Sherry, A. D., &amp; Malloy, C. R. (2015). <sup>31</sup>P-MRS of healthy human brain: ATP synthesis, metabolite concentrations, pH, and T1 relaxation times. <em>NMR in Biomedicine</em>, 28(11), 1455-1462. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">doi:10.1002/nbm.3384</a></li>
+<li>Bhogal, A. A., Broeders, T. A. A., Morsinkhof, L., et al. (2020). Lipid-suppressed and tissue-fraction corrected metabolic distributions in human central brain structures using 2D <sup>1</sup>H magnetic resonance spectroscopic imaging at 7 T. <em>Brain and Behavior</em>, 10(10), e01852. <a href="https://doi.org/10.1002/brb3.1852" target="_blank">doi:10.1002/brb3.1852</a></li>
+<li>Wright, A. M., Murali-Manohar, S., &amp; Henning, A. (2022). Quantitative T<sub>1</sub>-relaxation corrected metabolite mapping of 12 metabolites in the human brain at 9.4 T. <em>NeuroImage</em>, 261, 119574. <a href="https://doi.org/10.1016/j.neuroimage.2022.119574" target="_blank">doi:10.1016/j.neuroimage.2022.119574</a></li>
+<li>Baboli, M., Wang, F., Dong, Z., et al. (2024). Absolute Metabolite Quantification in Individuals with Glioma and Healthy Individuals Using Whole-Brain Three-dimensional MR Spectroscopic and Echo-planar Time-resolved Imaging. <em>Radiology</em>, 311(3), e232401. <a href="https://doi.org/10.1148/radiol.232401" target="_blank">doi:10.1148/radiol.232401</a></li>
 <li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <em>PNAS Nexus</em>, 4(3), pgaf072. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
+<li>Guo, R., Bogner, W., Heckova, E., et al. (2025). High-resolution whole-brain metabolic imaging using accelerated free induction decay MR spectroscopic imaging and a dual-branch super-resolution network. <em>IEEE Transactions on Biomedical Engineering</em>. <a href="https://doi.org/10.1109/TBME.2025.3572448" target="_blank">doi:10.1109/TBME.2025.3572448</a></li>
+<li>Karkouri, J., Deelchand, D. K., Van de Moortele, P.-F., et al. (2026). Quantification of deuterated metabolite concentrations and rates in the human brain from dynamic deuterium metabolic imaging at 7 T. <em>Magnetic Resonance in Medicine</em>. <a href="https://doi.org/10.1002/mrm.70308" target="_blank">doi:10.1002/mrm.70308</a></li>
 <li>Qian, Y., Zhao, T., Zheng, H., Weimer, J., &amp; Boada, F. E. (2012). High-resolution sodium imaging of human brain at 7 T. <em>Magnetic Resonance in Medicine</em>, 68(1), 227-233. <a href="https://doi.org/10.1002/mrm.23225" target="_blank">doi:10.1002/mrm.23225</a></li>
 <li>Qian, Y., Lin, Y. C., Chen, X., et al. (2025). Single-quantum sodium MRI at 3 T for separation of mono- and bi-T<sub>2</sub> sodium signals. <em>Scientific Reports</em>, 15, 27427. <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">doi:10.1038/s41598-025-07800-1</a></li>
 <li>Rzechorzek, N. M., Thrippleton, M. J., Chappell, F. M., et al. (2022). A daily temperature rhythm in the human brain predicts survival after brain injury. <em>Brain</em>, 145(6), 2031-2048. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">doi:10.1093/brain/awab466</a></li>
