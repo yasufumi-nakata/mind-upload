@@ -346,12 +346,18 @@ On this site, a diffusion-MRI-derived human connectome is read as an <strong>alg
 </div>
 <h3 id="tractography-route-card">Tractography connectomes need a route card</h3>
 <p>
-The earlier wording on this site said "macro pathway prior," which was directionally correct, but still too permissive in practice. It left room for readers to treat any tractography-derived connectome as a stable graph once a modern pipeline had been applied. The newer primary literature argues against that shortcut at multiple stages. <a href="https://doi.org/10.1073/pnas.1418198112" target="_blank">Reveley et al. (2015)</a> showed that superficial white matter can block long-range tracking from roughly half of the cortical surface, and <a href="https://doi.org/10.1002/hbm.23936" target="_blank">Schilling et al. (2018)</a> showed that tractography endpoints are biased toward gyral crowns across deterministic and probabilistic algorithms, multiple diffusion models, and even very high-resolution data. <a href="https://doi.org/10.1016/j.neuroimage.2023.120376" target="_blank">Sarwar et al. (2023)</a> showed that filtering improves simple tubular bundles much more than complex brain-like architectures, <a href="https://doi.org/10.1016/j.neuroimage.2024.120904" target="_blank">He et al. (2024)</a> showed that tractography filtering can significantly change laterality indices for more than 10% of connections, <a href="https://doi.org/10.1162/netn_a_00324" target="_blank">Gajwani et al. (2023)</a> showed across <strong>40 pipelines</strong> and <strong>44</strong> group-representative reconstructions that hub location is highly variable and that hub connectivity correlates with regional surface area in <strong>69%</strong> of assessed pipelines, <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">McMaster et al. (2025)</a> showed that voxel resolution changes the resulting connectome and recommended resampling to <strong>1 mm isotropic</strong> for robust comparisons, <a href="https://doi.org/10.1016/j.media.2025.103580" target="_blank">Manzano-Patrón et al. (2025)</a> showed that fibre-orientation uncertainty can be propagated into tractography rather than hidden, and <a href="https://doi.org/10.1016/j.media.2025.103498" target="_blank">Zhu et al. (2025)</a> improved whole-brain reconstruction by fusing MRI with microscopy. That combination of results means that on this site the phrase <strong>human tractography connectome</strong> is not one object. It is an <strong>acquisition-, endpoint-, and graph-construction-conditioned estimate</strong>.
+The earlier wording on this site said "macro pathway prior," which was directionally correct, but still too permissive in practice. It left room for readers to treat any tractography-derived connectome as a stable graph once a modern pipeline had been applied. The newer primary literature argues against that shortcut at multiple stages. <a href="https://doi.org/10.1073/pnas.1418198112" target="_blank">Reveley et al. (2015)</a> showed that superficial white matter can block long-range tracking from roughly half of the cortical surface, and <a href="https://doi.org/10.1002/hbm.23936" target="_blank">Schilling et al. (2018)</a> showed that tractography endpoints are biased toward gyral crowns across deterministic and probabilistic algorithms, multiple diffusion models, and even very high-resolution data. <a href="https://doi.org/10.1016/j.neuroimage.2023.120376" target="_blank">Sarwar et al. (2023)</a> showed that filtering improves simple tubular bundles much more than complex brain-like architectures, <a href="https://doi.org/10.1016/j.neuroimage.2024.120904" target="_blank">He et al. (2024)</a> showed that tractography filtering can significantly change laterality indices for more than 10% of connections, <a href="https://doi.org/10.1162/netn_a_00324" target="_blank">Gajwani et al. (2023)</a> showed across <strong>40 pipelines</strong> and <strong>44</strong> group-representative reconstructions that hub location is highly variable and that hub connectivity correlates with regional surface area in <strong>69%</strong> of assessed pipelines, <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">McMaster et al. (2025)</a> showed that voxel resolution changes the resulting connectome and recommended resampling to <strong>1 mm isotropic</strong> for robust comparisons, <a href="https://doi.org/10.3389/fnimg.2026.1670604" target="_blank">Bramati et al. (2026)</a> showed on a single <strong>3 T</strong> scanner with uniform processing that common diffusion-sampling schemes can still shift both voxel-wise metrics and tractography outputs, <a href="https://doi.org/10.1016/j.media.2025.103580" target="_blank">Manzano-Patrón et al. (2025)</a> showed that fibre-orientation uncertainty can be propagated into tractography rather than hidden, and <a href="https://doi.org/10.1016/j.media.2025.103498" target="_blank">Zhu et al. (2025)</a> improved whole-brain reconstruction by fusing MRI with microscopy. That combination of results means that on this site the phrase <strong>human tractography connectome</strong> is not one object. It is an <strong>acquisition-, endpoint-, graph-construction-, and calibration-conditioned estimate</strong>.
 </p>
 <div class="note-box">
 <strong>What the earlier wording still hid</strong>
 <p>
 The phrase <strong>macro pathway prior</strong> was correct, but it still compressed three different transformations into one label: <strong>(1) diffusion signal to local orientation estimate</strong>, <strong>(2) orientation estimate to cortical endpoint assignment</strong>, and <strong>(3) endpoints to parcel graph / hub map</strong>. The signal does not directly reveal synapses or direction, the endpoint assignment can still be biased by superficial-white-matter and gyral-entry effects, and the final graph can still move when parcellation, weighting, or thresholding changes. Therefore, two papers that both say <strong>tractography connectome</strong> may still be reporting different inferential objects.
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-26 addendum: acquisition-scheme variance is a separate failure mode</strong>
+<p>
+One remaining weakness in the older route card was that it mentioned shell / b-value scheme under <strong>direct observables</strong> but still did not make protocol harmonization a separate stop-rule. <a href="https://doi.org/10.3389/fnimg.2026.1670604" target="_blank">Bramati et al. (2026)</a> compared <strong>HARDI</strong>, <strong>clinical multi-shell</strong>, <strong>DSI</strong>, and <strong>HCP-style multi-shell</strong> acquisitions on the <strong>same 3 T scanner</strong> with uniform processing and still found systematic differences in both voxel-wise metrics and tractography outputs. Together with <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">McMaster et al. (2025)</a>, that means a tractography connectome can move not only because endpoints or graph construction changed, but because the <strong>q-space sampling scheme itself</strong> changed. Therefore, this site now treats <strong>acquisition / harmonization audit</strong> as a separate route-card item rather than a footnote under the modality label.
 </p>
 </div>
 <table class="data-table">
@@ -383,6 +389,47 @@ The phrase <strong>macro pathway prior</strong> was correct, but it still compre
 <table class="data-table">
 <thead>
 <tr>
+<th>Failure mode</th>
+<th>What the primary literature shows</th>
+<th>Safe claim that survives</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ground-truth gap</strong></td>
+<td><a href="https://doi.org/10.1073/pnas.1405672111" target="_blank">Thomas et al. (2014)</a> and <a href="https://doi.org/10.1038/s41467-017-01285-x" target="_blank">Maier-Hein et al. (2017)</a> show that tractography faces intrinsic ambiguity and many invalid bundles even under favorable conditions.</td>
+<td>At most a <strong>macro pathway prior</strong>, not an edge-complete connectome.</td>
+</tr>
+<tr>
+<td><strong>Endpoint invisibility / gyral bias</strong></td>
+<td><a href="https://doi.org/10.1073/pnas.1418198112" target="_blank">Reveley et al. (2015)</a> and <a href="https://doi.org/10.1002/hbm.23936" target="_blank">Schilling et al. (2018)</a> show that long-range cortical endpoints can be hidden or biased toward gyral crowns.</td>
+<td>An <strong>endpoint-limited bundle hypothesis</strong>, not cortical edge completeness.</td>
+</tr>
+<tr>
+<td><strong>Recovery depends on strong priors and still misses error classes</strong></td>
+<td><a href="https://doi.org/10.1523/JNEUROSCI.0493-16.2016" target="_blank">Donahue et al. (2016)</a>, <a href="https://doi.org/10.1007/s00429-020-02129-z" target="_blank">Schilling et al. (2020)</a>, and <a href="https://doi.org/10.1016/j.neuroimage.2021.118300" target="_blank">Grisot et al. (2021)</a> show useful tracer correspondence and better recovery only with strong start / end / exclusion priors, while same-brain failures at branching and turning remain.</td>
+<td>A <strong>prior-assisted bundle recovery</strong> or named error-term audit, not unbiased whole-brain discovery.</td>
+</tr>
+<tr>
+<td><strong>Graph metrics are pipeline-conditioned</strong></td>
+<td><a href="https://doi.org/10.1162/netn_a_00324" target="_blank">Gajwani et al. (2023)</a> and <a href="https://doi.org/10.1016/j.neuroimage.2024.120904" target="_blank">He et al. (2024)</a> show that hub topology and laterality can shift across plausible processing choices.</td>
+<td>A <strong>pipeline-conditioned graph metric</strong>, not anatomy by default.</td>
+</tr>
+<tr>
+<td><strong>Acquisition / harmonization instability</strong></td>
+<td><a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">McMaster et al. (2025)</a> and <a href="https://doi.org/10.3389/fnimg.2026.1670604" target="_blank">Bramati et al. (2026)</a> show that resolution and q-space protocol can systematically move connectome estimates even before endpoint and graph choices are interpreted.</td>
+<td>A <strong>protocol-scoped connectome estimate</strong>; cross-protocol comparison needs explicit harmonization.</td>
+</tr>
+<tr>
+<td><strong>Uncertainty and ex vivo calibration improve only part of the chain</strong></td>
+<td><a href="https://doi.org/10.1016/j.media.2025.103580" target="_blank">Manzano-Patrón et al. (2025)</a> show that posterior uncertainty can be mapped rather than hidden, and <a href="https://doi.org/10.1016/j.media.2025.103498" target="_blank">Zhu et al. (2025)</a> show that MRI plus microscopy can improve reconstruction in an ex vivo calibration setting.</td>
+<td>A <strong>calibrated bundle comparison</strong>, not living-human connectome completion.</td>
+</tr>
+</tbody>
+</table>
+<table class="data-table">
+<thead>
+<tr>
 <th>Route-card item</th>
 <th>What must be disclosed</th>
 <th>Why this site asks for it</th>
@@ -391,8 +438,13 @@ The phrase <strong>macro pathway prior</strong> was correct, but it still compre
 <tbody>
 <tr>
 <td><strong>Direct observables</strong></td>
-<td>Write voxel size, shell / b-value scheme, orientation model, and state explicitly that the direct observable is diffusion signal / local fibre-orientation estimate rather than synapse identity, direction, or weight.</td>
+<td>Write voxel size, shell / b-value scheme, direction count, orientation model, and state explicitly that the direct observable is diffusion signal / local fibre-orientation estimate rather than synapse identity, direction, or weight.</td>
 <td>Otherwise a streamline graph is misread as if the edges themselves had been directly observed.</td>
+</tr>
+<tr>
+<td><strong>Acquisition / harmonization audit</strong></td>
+<td>Name whether the comparison spans different scanners, resolutions, or q-space schemes; disclose any resampling / harmonization route; and say whether the headline result survives protocol variation or remains protocol-scoped.</td>
+<td>Otherwise a connectome change can be caused by acquisition design rather than anatomy.</td>
 </tr>
 <tr>
 <td><strong>Cortical endpoint / surface-bias audit</strong></td>
@@ -411,7 +463,7 @@ The phrase <strong>macro pathway prior</strong> was correct, but it still compre
 </tr>
 <tr>
 <td><strong>Instability and uncertainty</strong></td>
-<td>Report scan-rescan or ensemble stability, posterior / bootstrap uncertainty, and sensitivity to voxel size or filtering for the headline graph metric.</td>
+<td>Report scan-rescan or ensemble stability, posterior / bootstrap uncertainty, and sensitivity to voxel size, q-space scheme, or filtering for the headline graph metric.</td>
 <td>Otherwise a connectome difference may only reflect pipeline choice rather than anatomy.</td>
 </tr>
 <tr>
@@ -934,6 +986,7 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li>Gajwani, M., Oldham, S., Pang, J. C., Arnatkevičiūtė, A., Tiego, J., Bellgrove, M. A., &amp; Fornito, A. (2023). Can hubs of the human connectome be identified consistently with diffusion MRI? <em>Network Neuroscience</em>, 7(4), 1326–1350. <a href="https://doi.org/10.1162/netn_a_00324" target="_blank">doi:10.1162/netn_a_00324</a></li>
 <li>He, Y., Hong, Y., Wu, Y., et al. (2024). Spherical-deconvolution informed filtering of tractograms changes laterality of structural connectome. <em>NeuroImage</em>, 303, 120904. <a href="https://doi.org/10.1016/j.neuroimage.2024.120904" target="_blank">doi:10.1016/j.neuroimage.2024.120904</a></li>
 <li>McMaster, E. M., Newlin, N. R., Rudravaram, G., et al. (2025). Harmonized connectome resampling for variance in voxel sizes. <em>Magnetic Resonance Imaging</em>, 121, 110424. <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">doi:10.1016/j.mri.2025.110424</a></li>
+<li>Bramati, I. B., Szczupak, D., Carneiro Monteiro, M., Meireles, F., Menezes Guimarães, D., Dean, R. J., Paul, L. K., &amp; Tovar-Moll, F. (2026). Diffusion MRI sampling schemes bias diffusion metrics and tractography. <em>Frontiers in Neuroimaging</em>, 5, 1670604. <a href="https://doi.org/10.3389/fnimg.2026.1670604" target="_blank">doi:10.3389/fnimg.2026.1670604</a></li>
 <li>Manzano-Patrón, J. P., Deistler, M., Schröder, C., et al. (2025). Uncertainty mapping and probabilistic tractography using Simulation-based Inference in diffusion MRI: A comparison with classical Bayes. <em>Medical Image Analysis</em>, 103, 103580. <a href="https://doi.org/10.1016/j.media.2025.103580" target="_blank">doi:10.1016/j.media.2025.103580</a></li>
 <li>Zhu, S., Huszar, I. N., Cottaar, M., et al. (2025). Imaging the structural connectome with hybrid MRI-microscopy tractography. <em>Medical Image Analysis</em>, 102, 103498. <a href="https://doi.org/10.1016/j.media.2025.103498" target="_blank">doi:10.1016/j.media.2025.103498</a></li>
 <li>Galarreta, M., &amp; Hestrin, S. (1999). A network of fast-spiking cells in the neocortex connected by electrical synapses. <em>Nature</em>, 402, 72–75. <a href="https://doi.org/10.1038/47029" target="_blank">doi:10.1038/47029</a></li>
