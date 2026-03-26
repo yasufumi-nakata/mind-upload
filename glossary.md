@@ -428,7 +428,7 @@ If names such as <strong>field-formation wall</strong>, <strong>Fusion Card</str
 </tr>
 <tr>
 <td><strong>Support-state proxy</strong></td>
-<td>A human route that constrains slow maintenance variables only at a coarse level, for example energetic, thermal, myelin, BBB water-exchange or tracer-specific transport state, or CSF / glymphatic clearance state. It is stronger than saying “nothing is visible,” but weaker than local controller, astrocyte-ensemble state, cell-specific immune control, or other cell-specific ground truth.</td>
+<td>A human route that constrains slow maintenance variables only at a coarse level, for example energetic, thermal, quantity-defined myelin MRI routes such as myelin-water, MT-family, bilayer, or qT1-remyelination-sensitive readouts, BBB water-exchange or tracer-specific transport state, or CSF / glymphatic clearance state. It is stronger than saying “nothing is visible,” but weaker than local controller, astrocyte-ensemble state, cell-specific immune control, or other cell-specific ground truth.</td>
 </tr>
 <tr>
 <td><strong>Thermal-state</strong></td>
@@ -436,7 +436,7 @@ If names such as <strong>field-formation wall</strong>, <strong>Fusion Card</str
 </tr>
 <tr>
 <td><strong>Timing-state</strong></td>
-<td>Biological conduction-timing variables such as myelin, node / internode geometry, periaxonal coupling, and related support state. It is different from hardware latency.</td>
+<td>Biological conduction-timing variables such as myelin, node / internode geometry, periaxonal coupling, and related support state. It is different from hardware latency. When human MRI is used as a proxy here, the site still treats myelin-water, MT-family, bilayer, and qT1-remyelination-sensitive routes as different quantity types rather than one direct timing readout.</td>
 </tr>
 <tr>
 <td><strong>Cargo-transport / cytoskeletal trafficking state</strong></td>
