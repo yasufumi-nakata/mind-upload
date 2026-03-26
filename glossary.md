@@ -428,7 +428,7 @@ If names such as <strong>field-formation wall</strong>, <strong>Fusion Card</str
 </tr>
 <tr>
 <td><strong>Support-state proxy</strong></td>
-<td>A human route that constrains slow maintenance variables only at a coarse level, for example energetic, thermal, quantity-defined myelin MRI routes such as myelin-water, MT-family, bilayer, or qT1-remyelination-sensitive readouts, BBB water-exchange or tracer-specific transport state, or CSF / glymphatic clearance state. It is stronger than saying “nothing is visible,” but weaker than local controller, astrocyte-ensemble state, cell-specific immune control, or other cell-specific ground truth.</td>
+<td>A human route that constrains slow maintenance variables only at a coarse level, for example energetic, thermal, quantity-defined ionic routes such as tissue-sodium mapping, SQ+TQF-derived ISMF / ISC / ISVF, mono-/bi-T2 or short-component-sensitive sodium MRI, quantity-defined myelin MRI routes such as myelin-water, MT-family, bilayer, or qT1-remyelination-sensitive readouts, BBB water-exchange or tracer-specific transport state, or CSF / glymphatic clearance state. It is stronger than saying “nothing is visible,” but weaker than local controller, astrocyte-ensemble state, cell-specific immune control, or other cell-specific ground truth.</td>
 </tr>
 <tr>
 <td><strong>Thermal-state</strong></td>
