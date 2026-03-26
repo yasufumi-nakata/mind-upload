@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-19 / 位置づけ: Beginner guide
+- 更新日: 2026-03-26 / 位置づけ: Beginner guide
 
 ## このページの役割
 This page is a wiki that explains from the basics what EEG measures. Beyond complicated formulas, the goal is to understand ``what kind of signals are mixed together and where'' and ``why preprocessing and QC are important.''
@@ -22,6 +22,7 @@ We highlight the limitations of EEG so as not to overestimate it, but that doesn
 - [Wiki: EEG pretreatment and QC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - We will organize preprocessing and logging methods in a practical manner.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Understand why EEG also requires standards and QC.
 - [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - Use this page when you want the limits of ESI, DCM, and SCM organized together.
+- [Wiki: Basics of multimodal integration](https://github.com/yasufumi-nakata/mind-upload/wiki/multimodal-integration-basics) - Use this page when EEG starts to be combined with fMRI, PET, MEG, or invasive recording.
 
 ## いま分かっていること
 - EEG is good at looking at time changes in milliseconds.
@@ -29,6 +30,7 @@ We highlight the limitations of EEG so as not to overestimate it, but that doesn
 - Including individualized MRI and external references improves source imaging, but uncertainty remains for deep and weak sources.
 - Reference choice, recording setup, and channel layout can materially change ERP, connectivity, and decoding conclusions.
 - Artifact cleanup does not by itself solve source leakage or turn directed connectivity into causal proof.
+- Adding fMRI, PET, or other modalities can strengthen one audit layer while still leaving fusion validity, shared-factor specificity, and bundle robustness unresolved.
 - Public data provides plenty of practice with preprocessing and baseline comparisons.
 
 ## まだ分かっていないこと
@@ -51,6 +53,11 @@ With EEG, it is different to <strong>observe scalp signals</strong>, <strong>con
 <strong>2026-03 correction for the beginner route</strong>
 <p>
 The older beginner route on this site stopped at "EEG is mixed and source imaging is hard." That was too weak. For EEG, <strong>measurement condition itself</strong> matters: reference system, electrode layout, device chain, and protocol can change what the scalp signal even means. It was also necessary to say more clearly that a <strong>connectivity map or directed graph</strong> is a stronger claim than a sensor trace or even a source estimate.
+</p>
+
+<strong>Adding another modality does not make EEG a solved state meter</strong>
+<p>
+The next beginner shortcut to stop is the word <strong>multimodal</strong>. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025)</a> describe LSL as synchronization infrastructure rather than device-side delay truth, <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> show that simultaneous multimodal recordings retain both common and divergent organization, and <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> show that simultaneous EEG-PET-MRI can contain coupled global dynamics together with modality-specific structure. Therefore, even when EEG is combined with other stacks, the site still separates <strong>synchronized acquisition</strong>, <strong>shared statistical structure</strong>, and <strong>one externally calibrated biological variable</strong> rather than treating them as one achievement.
 </p>
 
 <h2>What EEG is good at</h2>
@@ -167,9 +174,19 @@ EEG is a measurement that is susceptible to noise, but the important correction 
 Xu et al. (2020) showed that cross-dataset deep-learning results move with environmental variability such as amplifier, cap, sampling rate, and filtering. That is why this site does not treat setup as a background nuisance. It is part of the observation model and has to be logged before the score is interpreted.
 </p>
 
+<strong>Shared multimodal factors can still be mixed physiology</strong>
+<p>
+Even when a paper reports one common EEG-fMRI or EEG-PET-MRI factor, that factor can still mix neural and non-neural contributions. <a href="https://doi.org/10.1162/imag_a_00287" target="_blank">Gold et al. (2024)</a> show that fMRI-autonomic covariance grows as vigilance decreases in simultaneous EEG-fMRI-autonomic recordings, <a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">Özbay et al. (2019)</a> show sympathetic contributions to the fMRI signal, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> show that BOLD changes can oppose oxygen-metabolism changes across a large fraction of cortex. On this site, a common factor is therefore not promoted automatically to the target neural variable.
+</p>
+
 <h2>How to connect with WBE</h2>
 <p>
 EEG is not a device that suddenly completes WBE. However, it is important for providing time information on state changes, baseline comparison, and reproducibility with public data. At Mind-Upload, we treat EEG not as a device that reads everything, but as an observation tool that provides macroscopic constraints. The practical consequence is that <strong>measurement condition, source-estimation validation class, and connectivity ceiling</strong> all have to be disclosed separately before an EEG result is promoted.
+</p>
+
+<strong>When multimodal bundles look stronger than they really are</strong>
+<p>
+More modalities can improve prediction while the bundle still remains fragile. <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">Rohaut et al. (2024)</a> show real multimodal prognostic gains, but <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a> and <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> show that same-sample analysis, missing-modality handling, cross-centre transfer, and inter-modality disagreement still matter. That is why this site routes EEG-plus-other-stack arguments through the <a href="https://mind-upload.com/verification.html#fusion-card">Fusion Card</a>, and when living-human proxy rows are mixed, also the <a href="https://mind-upload.com/verification.html#human-proxy-composition-card">Human Proxy Composition Card</a>.
 </p>
 
 <h4>Next</h4>
@@ -198,4 +215,13 @@ EEG is not a device that suddenly completes WBE. However, it is important for pr
 <li>Haufe, S., Nikulin, V. V., Müller, K.-R., &amp; Nolte, G. (2013). A critical assessment of connectivity measures for EEG data: a simulation study. <em>NeuroImage</em>, 64, 120-133. <a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">doi:10.1016/j.neuroimage.2012.09.036</a></li>
 <li>Palva, J. M., Wang, S. H., Palva, S., et al. (2018). Ghost interactions in MEG/EEG source space: a note of caution on inter-areal coupling measures. <em>NeuroImage</em>, 173, 632-643. <a href="https://doi.org/10.1016/j.neuroimage.2018.02.032" target="_blank">doi:10.1016/j.neuroimage.2018.02.032</a></li>
 <li>Miljevic, A., Murphy, O. W., Fitzgerald, P. B., &amp; Bailey, N. W. (2025). Estimating sensor-space EEG connectivity PART 1: Identifying best performing methods for functional connectivity in simulated data. <em>Clinical Neurophysiology</em>, 174, 73-83. <a href="https://doi.org/10.1016/j.clinph.2025.03.043" target="_blank">doi:10.1016/j.clinph.2025.03.043</a></li>
+<li>Kothe, C., Shirazi, S. Y., Stenner, T., et al. (2025). The lab streaming layer for synchronized multimodal recording. <em>Imaging Neuroscience</em>, 3, IMAG.a.136. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
+<li>Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <em>Nature Communications</em>, 15, 581. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
+<li>Chen, J. E., Lewis, L. D., Coursey, S. E., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <em>Nature Communications</em>, 16, 8887. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
+<li>Gold, B. P., Goodale, S. E., Zhao, C., et al. (2024). Functional MRI signals exhibit stronger covariation with peripheral autonomic measures as vigilance decreases. <em>Imaging Neuroscience</em>, 2, IMAG.a.00287. <a href="https://doi.org/10.1162/imag_a_00287" target="_blank">doi:10.1162/imag_a_00287</a></li>
+<li>Özbay, P. S., Chang, C., Picchioni, D., et al. (2019). Sympathetic activity contributes to the fMRI signal. <em>Communications Biology</em>, 2, 421. <a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">doi:10.1038/s42003-019-0659-0</a></li>
+<li>Epp, S. M., Castrillón, G., Yuan, B., et al. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
+<li>Rohaut, B., Hermann, B., Kaufmann, B. C., et al. (2024). Multimodal assessment improves neuroprognosis performance in clinically unresponsive critical-care patients with brain injury. <em>Nature Medicine</em>, 30, 2482-2491. <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">doi:10.1038/s41591-024-03019-1</a></li>
+<li>Amiri, M., Bødker Andersen, M., Jørgensen, S. H., et al. (2023). Multimodal prediction of residual consciousness in the intensive care unit: the CONNECT-ME study. <em>Brain</em>, 146(1), 50-64. <a href="https://doi.org/10.1093/brain/awac335" target="_blank">doi:10.1093/brain/awac335</a></li>
+<li>Manasova, D., Belloli, L. M. L., Rosenfelder, M. J., et al. (2026). Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness. <em>Brain</em>. <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">doi:10.1093/brain/awaf412</a></li>
 </ol>
