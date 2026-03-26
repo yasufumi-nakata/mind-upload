@@ -380,3 +380,19 @@ Reasons for proceeding in this order:
 - Kept `RQ_TOTAL=60`, `A/B/C=17/25/18`, and the same `G1-G6` operating keys.
 - Locked the submission rule as `Dxx + DOI + dataset name + access class` (numeric ID is search-only legacy guidance).
 - Focused deliverable style remains: `1RQ = 1 verification proposition = 1 application theme = 1 primary dataset`.
+
+## 2026-03-27 07:02 JST 再検証ログ（本run / 6RQ深掘り固定）
+
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` を正本として再突合し、`RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認しました。
+- 本runは汎用横断の追加を行わず、非重複6RQ（`U1-3/U3-5/U7-4/U8-5/U11-3/U15-1`）を `1RQ=1検証命題=1応募テーマ=1主データ` で固定しました。
+- 参照主データID（`56,13,676,6,735,49`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で実在（欠落 `0`）を確認しました。
+- 助成接続は `G1-G6` 実ID系（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）を維持しました。
+
+### 本runで優先して深掘りする6RQ
+
+1. `U7-4`（再計測/除外判定木を固定）
+2. `U1-3`（逆解法乖離の採択規則）
+3. `U8-5`（オーバーライド安全KPI）
+4. `U11-3`（理論比較I/O仕様）
+5. `U3-5`（境界拡張proxyと外部依存境界）
+6. `U15-1`（神経データ機微性の制度接続）
