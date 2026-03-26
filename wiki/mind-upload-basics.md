@@ -5,7 +5,7 @@ description: A beginner technical overview of mind uploading and WBE that separa
 article_type: Wiki
 subtitle: Divide the large dream into smaller questions that can be checked.
 author: Mind Uploading Research Project
-last_updated: '2026-03-21'
+last_updated: '2026-03-26'
 note: Beginner guide
 audience: People who have heard the term mind upload and want the technical big picture first
 reading_time: 12-15 minutes
@@ -15,13 +15,14 @@ page_highlights:
 - Mind upload and WBE are related, but the strength of the claim still depends on what "reproduced" means.
 - Similar output is not the same as similar internal mechanism, state, or causal organization.
 - Recent literature makes it unsafe to read strong-looking decode, tractography, effective-connectivity, thermodynamic, or closed-loop headlines without route cards.
-- Human evidence also has to be read as a two-axis ladder: proxy class and route maturity are different questions.
+- Human evidence now has to be read on three axes: proxy class, operational maturity, and safe calibrator role are different questions.
+- Same-subject proxy bundles and sequential bridges still need composition and state-continuity audits before they are read as one state sample.
 - This site therefore builds verification infrastructure first instead of jumping directly to final conclusions.
 known_points:
 - Some brain signals can already be measured and decoded for specific tasks under bounded conditions.
 - Without standards, audits, and explicit claim ceilings, progress cannot be compared honestly.
 - A strong-looking result can still be heavily conditioned on task structure, priors, candidate models, or omitted loops.
-- Recent human-side advances reduce different uncertainty terms, but local ultrastructure, synaptic-density PET, biochemical scaffold, macro energetic imaging, myelin mapping, and clearance MRI are not one near-direct readout.
+- Recent human-side advances reduce different uncertainty terms, but local ultrastructure, synaptic-density PET, biochemical scaffold, macro energetic imaging, myelin mapping, BBB permeability / exchange imaging, and clearance MRI are not one near-direct readout.
 unknown_points:
 - It remains unresolved whether functional reproduction would guarantee identity or phenomenal consciousness.
 - It is not yet determined which measurement set would be sufficient for WBE-level internal-state capture.
@@ -40,6 +41,9 @@ wiki_links:
 - label: 'Wiki: Human Proxy Composition and Route Maturity'
   url: /wiki/human-proxy-composition.html
   description: Explains why current human proxy bundles still stop below same-subject state-complete readout.
+- label: 'Wiki: State-Continuity Bridge'
+  url: /wiki/state-continuity-bridge.html
+  description: Explains why same-subject or same-brain sequencing still needs a bridge audit before same-state language is allowed.
 - label: 'Wiki: From observation to estimation'
   url: /wiki/observation-to-estimation.html
   description: Explains why inverse models and causal models are not direct observation.
@@ -83,9 +87,9 @@ The older beginner route was directionally correct, but it still left too much r
 </div>
 
 <div class="note-box">
-<strong>2026-03-20 technical correction: human evidence is not one progress bar</strong>
+<strong>2026-03-26 technical correction: human evidence is three axes plus bridge / composition stop lines</strong>
 <p>
-The beginner route also had to become stricter about human evidence itself. Local human ultrastructure, SV2A PET, whole-brain <sup>1</sup>H-MRSI, dynamic DMRSI, myelin-bilayer MRI, and CSF / glymphatic routes are all real advances, but they constrain different variable classes and they do not carry the same deployment maturity. On this site, the first beginner question is now <strong>what proxy class does this route constrain?</strong> and the second is <strong>how specialized, small-cohort, or model-heavy is the route still?</strong> The shortest follow-up is <a href="../wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>, <a href="human-proxy-composition.html">Wiki: Human Proxy Composition and Route Maturity</a>, and <a href="measurement-stack-and-claim-ceiling.html">Wiki: observability and claim ceiling by measurement stack</a>.
+The beginner route also had to become stricter about human evidence itself. Local human ultrastructure, SV2A PET, whole-brain <sup>1</sup>H-MRSI, dynamic DMRSI, myelin-bilayer MRI, BBB permeability / exchange imaging, and CSF / glymphatic routes are all real advances, but they constrain different variable classes, they do not carry the same deployment maturity, and they do not calibrate the same hidden-state family. On this site, the beginner questions are now <strong>what proxy class does this route constrain?</strong>, <strong>how specialized, small-cohort, or model-heavy is the route still?</strong>, and <strong>what bounded calibrator role can it safely play?</strong> Even after that, multimodal bundles and same-subject workflows still need composition and bridge audits before they are read as one state sample. The shortest follow-up is <a href="../wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>, <a href="human-proxy-composition.html">Wiki: Human Proxy Composition and Route Maturity</a>, <a href="state-continuity-bridge.html">Wiki: State-Continuity Bridge</a>, and <a href="measurement-stack-and-claim-ceiling.html">Wiki: observability and claim ceiling by measurement stack</a>.
 </p>
 </div>
 
@@ -144,50 +148,70 @@ The beginner route also had to become stricter about human evidence itself. Loca
 <section class="section" id="human-observability-ladder">
 <h2 class="section-title">Why even a beginner page now needs a human observability ladder</h2>
 <p>
-The older beginner summary was still too coarse because it let very different human-side advances sound like one generic increase in <strong>observability</strong>. The recent primary literature does not support that compression. The safer beginner reading is to ask two questions at once: <strong>which hidden-state family does the route constrain?</strong> and <strong>how specialized or model-heavy is the route still?</strong>
+The older beginner summary was still too coarse because it let very different human-side advances sound like one generic increase in <strong>observability</strong>. The recent primary literature does not support that compression. The safer beginner reading is to ask three questions at once: <strong>which proxy class and quantity type does the route constrain?</strong>, <strong>how specialized or model-heavy is the route still?</strong>, and <strong>what bounded hidden-state family can it safely calibrate?</strong>
 </p>
 <table class="data-table">
 <thead>
 <tr>
 <th>Human route</th>
-<th>What it actually constrains</th>
+<th>Proxy class / quantity type</th>
+<th>Operational maturity / burden</th>
+<th>Safe calibrator role</th>
 <th>What it still does not give you</th>
-<th>Safe beginner reading</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Local human ultrastructure</strong><br><a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a></td>
-<td>A cubic millimeter of human temporal cortex reconstructed at nanoscale resolution, giving a local structural scaffold.</td>
+<td>Local ex vivo structural scaffold at nanoscale resolution.</td>
+<td>Destructive, local, preservation- and registration-limited.</td>
+<td>Can calibrate a <strong>local structural scaffold</strong> route.</td>
 <td>Whole-brain in vivo coverage, current state, and longitudinal maintenance-state.</td>
-<td>Read as a major <strong>local ex vivo structural advance</strong>, not as whole-brain human state capture.</td>
 </tr>
 <tr>
 <td><strong>Regional synaptic-density PET atlas</strong><br><a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a></td>
-<td>An in vivo SV2A atlas in healthy humans (17F/16M), calibrated against postmortem autoradiography.</td>
+<td>Regional SV2A-density proxy atlas.</td>
+<td>Living-human in vivo route with tracer and quantification dependence.</td>
+<td>Can calibrate a <strong>regional synaptic-density comparison family</strong>.</td>
 <td>Moment-to-moment synaptic efficacy, receptor occupancy, transmitter release, and branch-local plasticity state.</td>
-<td>Read as a <strong>regional synaptic-density proxy</strong>, not as current synaptic state.</td>
 </tr>
 <tr>
 <td><strong>Whole-brain biochemical scaffold</strong><br><a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a></td>
-<td>A within-subject metabolic connectome built from correlations among five <sup>1</sup>H-MRSI metabolites in 51 healthy participants, with replication in 13 scanned at a different site.</td>
+<td>Parcel-level biochemical similarity scaffold from five-metabolite <sup>1</sup>H-MRSI.</td>
+<td>Living-human in vivo route with spectral QC, parceling, and similarity-definition burden.</td>
+<td>Can calibrate a <strong>macro biochemical scaffold family</strong>.</td>
 <td>Axonal wiring, kinetic flux, transmitter specificity, and local maintenance controller state.</td>
-<td>Read as a <strong>biochemical organization scaffold</strong>, not as tractography or direct metabolic-rate imaging.</td>
 </tr>
 <tr>
 <td><strong>Macro energetic and myelin routes</strong><br><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>; <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a></td>
-<td>Dynamic DMRSI at 7 T with 0.7 cc nominal voxels and kinetic modeling mapped glucose-related rates in five healthy participants; myelin-bilayer mapping was shown in two healthy volunteers using high-performance RF and gradient hardware.</td>
+<td>Macro energetic-rate imaging and macro myelin proxy classes.</td>
+<td>Specialized 7 T / high-performance-hardware routes with small cohorts and explicit kinetic / signal-model burden.</td>
+<td>Can calibrate <strong>bounded energetic-rate or myelin-proxy families</strong>.</td>
 <td>Branch-local mitochondrial positioning, cell-specific energetic reserve, node-level conduction control, and routine field-ready deployment.</td>
-<td>Read as <strong>specialized macro energetic / myelin proxies</strong>, not as a solved human maintenance-state route.</td>
+</tr>
+<tr>
+<td><strong>BBB permeability / exchange routes</strong><br><a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a>; <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a></td>
+<td>Macro BBB water-exchange or molecular-permeability proxy.</td>
+<td>ASL- or total-body PET-dependent route with explicit transport or kinetic-model burden.</td>
+<td>Can calibrate a <strong>macro BBB permeability / exchange proxy family</strong>.</td>
+<td>Cell-specific pericyte control, local BBB maintenance logic, and synapse-resolved neurovascular support.</td>
 </tr>
 <tr>
 <td><strong>CSF mobility and sleep-linked clearance</strong><br><a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>; <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a></td>
-<td>Noninvasive MRI measured region-specific CSF mobility in 20 healthy younger individuals, with region averages reported in 11, and a randomized crossover trial with 39 participants linked normal sleep to increased plasma Aβ / tau through an investigational device plus multicompartment model.</td>
+<td>Macro support-state / mobility proxy and model-based biomarker-efflux route.</td>
+<td>7 T or investigational-device route with regional or multicompartment modeling burden.</td>
+<td>Can calibrate a <strong>bounded clearance-support physiology family</strong>.</td>
 <td>Cell-specific immune control, local synaptic maintenance, and moment-to-moment neural state.</td>
-<td>Read as a <strong>macro support-state proxy</strong>, not as local clearance-controller ground truth.</td>
 </tr>
 </tbody>
 </table>
+
+<div class="note-box">
+<strong>More rows do not yet make one same-state sample</strong>
+<p>
+Even after the three-axis reading is made explicit, <strong>composition</strong> and <strong>bridge</strong> remain separate stop lines. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> showed that simultaneous multimodal recordings retain both common and divergent structure, and <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed that tightly coupled temporal progression can coexist with distinct network patterns in simultaneous EEG-PET-MRI. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> then showed that preservation route changes extracellular-space retention, while <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> showed that within-day EEG decoding conditions drift enough to motivate adaptive decoders. Therefore, <strong>same-subject</strong>, <strong>same-brain</strong>, or <strong>multimodal</strong> wording does not by itself convert several rows into one validated latent-state sample.
+</p>
+</div>
 
 <div class="note-box">
 <strong>What still remains outside these human routes</strong>
@@ -197,7 +221,7 @@ Even after those advances, several maintenance-state families still remain outsi
 </div>
 
 <p>
-The practical beginner rule is therefore not "human evidence is weak" or "human evidence is almost complete." It is that <strong>human evidence is layered</strong>. Each layer constrains a different part of the problem, and several of the newer layers are still specialized, small-cohort, or model-dependent. That is why this site now routes beginners from this page to <a href="../wbe_101.html#human-observability-ladder">WBE 101</a>, <a href="measurement-stack-and-claim-ceiling.html">measurement-stack claim ceilings</a>, and <a href="homeostatic-plasticity-and-maintenance-state.html">maintenance-state</a> rather than leaving "human evidence improved" as a single sentence.
+The practical beginner rule is therefore not "human evidence is weak" or "human evidence is almost complete." It is that <strong>human evidence is layered</strong>. Each layer constrains a different part of the problem, each route carries a different maturity burden, and each one calibrates only a bounded hidden-state family. After that, composition and bridge validity are still separate checks. That is why this site now routes beginners from this page to <a href="../wbe_101.html#human-observability-ladder">WBE 101</a>, <a href="measurement-stack-and-claim-ceiling.html">measurement-stack claim ceilings</a>, <a href="human-proxy-composition.html">Human Proxy Composition</a>, <a href="state-continuity-bridge.html">State-Continuity Bridge</a>, and <a href="homeostatic-plasticity-and-maintenance-state.html">maintenance-state</a> rather than leaving "human evidence improved" as a single sentence.
 </p>
 </section>
 
@@ -282,8 +306,14 @@ Mind-Upload is not itself the proof of WBE. It is a place for assembling the pub
 <li>Lucchetti, F., C&eacute;l&eacute;reau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <em>Nature Communications</em>, 16, 11344. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
 <li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <em>PNAS Nexus</em>, 4(3), pgaf072. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
 <li>Baadsvik, E. L., Weiger, M., Froidevaux, R., Schildknecht, C. M., Ineichen, B. V., &amp; Pruessmann, K. P. (2024). Myelin bilayer mapping in the human brain in vivo. <em>Magnetic Resonance in Medicine</em>, 91(6), 2332-2344. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">doi:10.1002/mrm.29998</a></li>
+<li>Padrela, B. E., Slivka, M., Sneve, M. H., et al. (2025). Blood-brain barrier water permeability across the adult lifespan: A multi-echo ASL study. <em>Neurobiology of Aging</em>, 147, 176-186. <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">doi:10.1016/j.neurobiolaging.2024.12.012</a></li>
+<li>Chung, K. J., Abdelhafez, Y. G., Spencer, B. A., et al. (2025). Quantitative PET imaging and modeling of molecular blood-brain barrier permeability. <em>Nature Communications</em>, 16, 3076. <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">doi:10.1038/s41467-025-58356-7</a></li>
 <li>Hirschler, L., Runderkamp, B. A. R., Decker, A., et al. (2025). Region-specific drivers of CSF mobility measured with MRI in humans. <em>Nature Neuroscience</em>, 28, 2392-2401. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
 <li>Dagum, P., Elbert, D. L., Giovangrandi, L., et al. (2026). The glymphatic system clears amyloid beta and tau from brain to plasma in humans. <em>Nature Communications</em>, 17, 715. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
+<li>Vafaii, H., Mandino, F., Desrosiers-Gr&eacute;goire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <em>Nature Communications</em>, 15, 229. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
+<li>Chen, J. E., Lewis, L. D., Coursey, S. E., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <em>Nature Communications</em>, 16, 8887. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
+<li>Lu, X., Han, X., Meirovitch, Y., et al. (2023). Preserving extracellular space for high-quality optical and ultrastructural studies of whole mammalian brains. <em>Cell Reports Methods</em>, 3(8), 100520. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
+<li>Egger, J., Kostoglou, K., &amp; M&uuml;ller-Putz, G. R. (2024). Chrono-EEG dynamics influencing hand gesture decoding: a 10-hour study. <em>Scientific Reports</em>, 14, 20449. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">doi:10.1038/s41598-024-70609-x</a></li>
 <li>Santoni, G., et al. (2024). Chromatin plasticity predetermines neuronal eligibility for memory trace formation. <em>Science</em>, 385(6705), eadg9982. <a href="https://doi.org/10.1126/science.adg9982" target="_blank">doi:10.1126/science.adg9982</a></li>
 <li>Terceros, A., Chen, C., Harada, Y., et al. (2026). Thalamocortical transcriptional gates coordinate memory stabilization. <em>Nature</em>, 649, 1254-1263. <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">doi:10.1038/s41586-025-09774-6</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <em>Nature</em>, 629, 146-153. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>

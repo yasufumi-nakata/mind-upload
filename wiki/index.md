@@ -5,7 +5,7 @@ description: "A wiki for learning Mind-Upload from the very beginning. It prepar
 article_type: Wiki
 subtitle: "Public pages are the gateway, and the wiki is the foundation for learning."
 author: Mind Uploading Research Project
-last_updated: "2026-03-21"
+last_updated: "2026-03-26"
 note: "Learning-first"
 audience: "People who want to learn from the basics, and people who want a foothold before entering the public pages."
 reading_time: "10-20 minutes"
@@ -20,10 +20,12 @@ page_highlights:
   - "The things most readers want to know first are arranged in separate reading routes so it is harder to get lost."
   - "The division of labor is to read the public pages for the main points and use the wiki to fill in the background."
   - "The explanations aim to be accessible even to junior-high-school readers, without weakening the strength or limits of the evidence."
+  - "The beginner route now treats human observability as three axes plus bridge / composition stop lines, so proxy-rich evidence is not silently read as one state sample."
 known_points:
   - "Current research already makes it possible to measure and reproducibly analyze part of the brain's signals."
   - "Mind-Upload becomes much easier to follow if progress is separated from what remains unresolved."
   - "Separating the roles of public pages and the wiki allows both an easy entry point and a deeper learning path."
+  - "Current human proxy rows differ by proxy class, operational maturity, and calibrator role, and same-subject wording can still remain bridge-limited."
 unknown_points:
   - "Research is still underway on the conditions under which WBE could count as established."
   - "Final judgments about identity and phenomenal consciousness cannot be made from introductory pages alone."
@@ -57,9 +59,16 @@ This wiki is a<strong>learning platform</strong> that you can return to before a
 </div>
 
 <div class="note-box">
-<strong>How to use</strong>
+  <strong>How to use</strong>
 <p>
 If you just want to know the big picture first, you can go to the public page. However, if you get stuck on a term or assumption along the way, please come back to this wiki. The basic idea is to use it as a training wheel so you don't get lost at the entrance.
+</p>
+</div>
+
+<div class="note-box">
+<strong>2026-03-26 route tightening: human observability is not one ladder</strong>
+<p>
+The learning portal now treats living-human evidence more strictly at the entrance. A reader now has to separate <strong>proxy class</strong>, <strong>operational maturity</strong>, and <strong>calibrator role</strong>, and then ask whether a bundle is still limited by <strong>composition</strong> or <strong>state continuity</strong>. This keeps beginner pages aligned with the stronger route-card rules already used on the core public pages.
 </p>
 </div>
 
@@ -93,9 +102,9 @@ If you just want to know the big picture first, you can go to the public page. H
 <td><a href="../verification.html#state-completeness-gate">State variable completeness gate</a> / <a href="../tech_roadmap.html#qa-m1">M1 observed variable</a></td>
 </tr>
 <tr>
-<td><strong>I want to know why current human proxy bundles still do not add up to state-complete readout</strong></td>
-<td><a href="human-proxy-composition.html">Human proxy composition and route maturity</a></td>
-<td><a href="../wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> / <a href="../verification.html#human-proxy-composition-card">Human Proxy Composition Card</a></td>
+<td><strong>I want to know why current human proxy bundles and same-subject links still do not add up to same-state readout</strong></td>
+<td><a href="human-proxy-composition.html">Human proxy composition and route maturity</a> / <a href="state-continuity-bridge.html">State-Continuity Bridge</a></td>
+<td><a href="../wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> / <a href="../verification.html#human-proxy-composition-card">Human Proxy Composition Card</a> / <a href="../verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a></td>
 </tr>
 <tr>
 <td><strong>Don't want to misread flashy claims</strong></td>
