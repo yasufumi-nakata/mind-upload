@@ -5,7 +5,7 @@ description: A beginner technical overview of mind uploading and WBE that separa
 article_type: Wiki
 subtitle: Divide the large dream into smaller questions that can be checked.
 author: Mind Uploading Research Project
-last_updated: '2026-03-26'
+last_updated: '2026-03-27'
 note: Beginner guide
 audience: People who have heard the term mind upload and want the technical big picture first
 reading_time: 12-15 minutes
@@ -16,13 +16,14 @@ page_highlights:
 - Similar output is not the same as similar internal mechanism, state, or causal organization.
 - Recent literature makes it unsafe to read strong-looking decode, tractography, effective-connectivity, thermodynamic, or closed-loop headlines without route cards.
 - Human evidence now has to be read on three axes: proxy class, operational maturity, and safe calibrator role are different questions.
+- On the human side, quantity type is part of the claim: myelin-water, MT-family, bilayer-sensitive MRI, BBB water-exchange MRI, tracer-specific BBB PET, MAO-B PET, and I2BS PET are not interchangeable routes.
 - Same-subject proxy bundles and sequential bridges still need composition and state-continuity audits before they are read as one state sample.
 - This site therefore builds verification infrastructure first instead of jumping directly to final conclusions.
 known_points:
 - Some brain signals can already be measured and decoded for specific tasks under bounded conditions.
 - Without standards, audits, and explicit claim ceilings, progress cannot be compared honestly.
 - A strong-looking result can still be heavily conditioned on task structure, priors, candidate models, or omitted loops.
-- Recent human-side advances reduce different uncertainty terms, but local ultrastructure, synaptic-density PET, biochemical scaffold, macro energetic imaging, myelin mapping, BBB permeability / exchange imaging, and clearance MRI are not one near-direct readout.
+- Recent human-side advances reduce different uncertainty terms, but local ultrastructure, synaptic-density PET, biochemical scaffold, macro energetic imaging, quantity-defined myelin MRI, BBB water-exchange MRI, tracer-specific BBB PET transport, target-defined astrocyte PET, and clearance MRI are not one near-direct readout.
 unknown_points:
 - It remains unresolved whether functional reproduction would guarantee identity or phenomenal consciousness.
 - It is not yet determined which measurement set would be sufficient for WBE-level internal-state capture.
@@ -87,9 +88,9 @@ The older beginner route was directionally correct, but it still left too much r
 </div>
 
 <div class="note-box">
-<strong>2026-03-26 technical correction: human evidence is three axes plus bridge / composition stop lines</strong>
+<strong>2026-03-27 technical correction: quantity type now belongs at the beginner front door</strong>
 <p>
-The beginner route also had to become stricter about human evidence itself. Local human ultrastructure, SV2A PET, whole-brain <sup>1</sup>H-MRSI, dynamic DMRSI, myelin-bilayer MRI, BBB permeability / exchange imaging, and CSF / glymphatic routes are all real advances, but they constrain different variable classes, they do not carry the same deployment maturity, and they do not calibrate the same hidden-state family. On this site, the beginner questions are now <strong>what proxy class does this route constrain?</strong>, <strong>how specialized, small-cohort, or model-heavy is the route still?</strong>, and <strong>what bounded calibrator role can it safely play?</strong> Even after that, multimodal bundles and same-subject workflows still need composition and bridge audits before they are read as one state sample. The shortest follow-up is <a href="../wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>, <a href="human-proxy-composition.html">Wiki: Human Proxy Composition and Route Maturity</a>, <a href="state-continuity-bridge.html">Wiki: State-Continuity Bridge</a>, and <a href="measurement-stack-and-claim-ceiling.html">Wiki: observability and claim ceiling by measurement stack</a>.
+The beginner route also had to become stricter about human evidence itself. Local human ultrastructure, SV2A PET, whole-brain <sup>1</sup>H-MRSI, dynamic DMRSI, myelin MRI, BBB MRI / PET, astrocyte-related PET, and CSF / glymphatic routes are all real advances, but the modality label is still too coarse. On this site, a beginner summary now has to say whether the route is <strong>myelin-water</strong>, <strong>MT-family</strong>, <strong>bilayer-sensitive</strong>, or <strong>qT1 remyelination-sensitive</strong>; <strong>BBB water-exchange</strong> or <strong>tracer-specific BBB transport</strong>; <strong>MAO-B</strong> or <strong>I2BS</strong> astrocyte-related PET. Those rows do not carry the same model burden, do not constrain the same molecular object, and do not calibrate the same hidden-state family. The beginner questions are therefore now <strong>what proxy class and quantity type does this route constrain?</strong>, <strong>how specialized, small-cohort, or model-heavy is the route still?</strong>, and <strong>what bounded calibrator role can it safely play?</strong> Even after that, multimodal bundles and same-subject workflows still need composition and bridge audits before they are read as one state sample. The shortest follow-up is <a href="../wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>, <a href="human-proxy-composition.html">Wiki: Human Proxy Composition and Route Maturity</a>, <a href="state-continuity-bridge.html">Wiki: State-Continuity Bridge</a>, and <a href="measurement-stack-and-claim-ceiling.html">Wiki: observability and claim ceiling by measurement stack</a>.
 </p>
 </div>
 
@@ -183,18 +184,32 @@ The older beginner summary was still too coarse because it let very different hu
 <td>Axonal wiring, kinetic flux, transmitter specificity, and local maintenance controller state.</td>
 </tr>
 <tr>
-<td><strong>Macro energetic and myelin routes</strong><br><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>; <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a></td>
-<td>Macro energetic-rate imaging and macro myelin proxy classes.</td>
-<td>Specialized 7 T / high-performance-hardware routes with small cohorts and explicit kinetic / signal-model burden.</td>
-<td>Can calibrate <strong>bounded energetic-rate or myelin-proxy families</strong>.</td>
-<td>Branch-local mitochondrial positioning, cell-specific energetic reserve, node-level conduction control, and routine field-ready deployment.</td>
+<td><strong>Macro energetic-rate imaging</strong><br><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a></td>
+<td>Kinetic glucose-rate imaging from dynamic deuterium MRSI.</td>
+<td>Specialized 7 T route with custom hardware, blood-input / kinetic-model burden, and a very small healthy cohort.</td>
+<td>Can calibrate a <strong>bounded energetic-rate proxy family</strong>.</td>
+<td>Branch-local mitochondrial positioning, cell-specific energetic reserve, and routine field-ready deployment.</td>
 </tr>
 <tr>
-<td><strong>BBB permeability / exchange routes</strong><br><a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a>; <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a></td>
-<td>Macro BBB water-exchange or molecular-permeability proxy.</td>
-<td>ASL- or total-body PET-dependent route with explicit transport or kinetic-model burden.</td>
-<td>Can calibrate a <strong>macro BBB permeability / exchange proxy family</strong>.</td>
-<td>Cell-specific pericyte control, local BBB maintenance logic, and synapse-resolved neurovascular support.</td>
+<td><strong>Human myelin MRI quantity-defined family</strong><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5342928/" target="_blank">Arshad et al. (2017)</a>; <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">Koshino et al. (2018)</a>; <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>; <a href="https://doi.org/10.1111/bpa.70010" target="_blank">Galbusera et al. (2025)</a></td>
+<td>Macro myelin proxy family whose quantity type may be myelin-water, MT-family macromolecular contrast, bilayer-sensitive mapping, or qT1 remyelination-sensitive contrast.</td>
+<td>Route-specific validity and signal-model burden; bilayer mapping currently needs high-performance hardware, while remyelination-sensitive contrasts are not interchangeable with healthy-white-matter myelin amount.</td>
+<td>Can calibrate a <strong>bounded, quantity-defined macro myelin proxy family</strong>.</td>
+<td>Per-axon timing-state, node / internode control, plasticity-ready conduction state, and routine field-ready whole-brain deployment.</td>
+</tr>
+<tr>
+<td><strong>BBB water-exchange MRI / tracer-specific transport PET</strong><br><a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a>; <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a>; <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a></td>
+<td>Macro BBB route whose quantity type is either water-exchange time / rate (Tex or Kw) or tracer-specific permeability-surface-area under a named PET transport model.</td>
+<td>ASL method dependence and fitting burden, or total-body / high-temporal-resolution PET plus kinetic-model burden; not a generic leakiness meter.</td>
+<td>Can calibrate a <strong>macro BBB water-exchange or tracer-specific transport proxy family</strong>.</td>
+<td>Cell-specific pericyte / endothelial controller identity, local capillary recruitment state, and synapse-resolved neurovascular support.</td>
+</tr>
+<tr>
+<td><strong>Target-defined astrocyte PET</strong><br><a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a>; <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. (2018)</a>; <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">Livingston et al. (2022)</a>; <a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">Jaisa-Aad et al. (2024)</a></td>
+<td>Human astrocyte-related PET proxy with different target classes such as MAO-B or I2BS.</td>
+<td>Tracer blockade / competition dependence, region- and disease-regime dependence, and quantification-model burden.</td>
+<td>Can calibrate a <strong>target-defined astrocyte-related proxy family</strong>.</td>
+<td>Astrocyte-ensemble identity, minute-scale astrocyte-network state, and a generic whole-brain astrocyte-state scalar.</td>
 </tr>
 <tr>
 <td><strong>CSF mobility and sleep-linked clearance</strong><br><a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>; <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a></td>
@@ -205,6 +220,13 @@ The older beginner summary was still too coarse because it let very different hu
 </tr>
 </tbody>
 </table>
+
+<div class="note-box">
+<strong>Quantity type is part of the claim, even in a beginner summary</strong>
+<p>
+Recent primary literature makes the compression problem concrete. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5342928/" target="_blank">Arshad et al. (2017)</a> showed that calibrated T<sub>1</sub>w/T<sub>2</sub>w can be reliable yet have low criterion validity against <strong>MWF</strong>, <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">Koshino et al. (2018)</a> showed stronger white-matter agreement between <strong>SyMRI</strong> and <strong>MT<sub>sat</sub></strong> than with T<sub>1</sub>w/T<sub>2</sub>w, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> mapped the <strong>myelin lipid-protein bilayer</strong> only in two healthy volunteers on high-performance hardware, and <a href="https://doi.org/10.1111/bpa.70010" target="_blank">Galbusera et al. (2025)</a> showed that <strong>qT1</strong>, but not MWF or MTR, separated cortical remyelination conditions in postmortem multiple-sclerosis tissue. On the BBB side, <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a> showed that <strong>DP-ASL</strong> and <strong>ME-ASL</strong> can yield substantially different Kw values in the same cohort, <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> used multi-echo ASL to estimate <strong>Tex</strong> in 194 healthy adults after QC, and <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> used high-temporal-resolution total-body PET plus kinetic modeling to estimate tracer-specific <strong>PS</strong> across three radiotracers while explicitly noting the current lack of human ground truth. On the astrocyte side, <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> showed more than 85% selegiline blockade of <strong><sup>18</sup>F-SMBT-1</strong> as an <strong>MAO-B</strong> route, <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. (2018)</a> showed that <strong><sup>11</sup>C-BU99008</strong> is reduced by <strong>idazoxan</strong> but not by isocarboxazid as an <strong>I2BS</strong> route, and <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">Livingston et al. (2022)</a> plus <a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">Jaisa-Aad et al. (2024)</a> showed that human astrocyte-related signals are region- and disease-regime dependent rather than one monotonic scalar. Therefore, this page no longer lets the beginner modality label alone carry the claim. It names target, quantity type, and model burden before the claim ceiling is read.
+</p>
+</div>
 
 <div class="note-box">
 <strong>More rows do not yet make one same-state sample</strong>
@@ -305,9 +327,17 @@ Mind-Upload is not itself the proof of WBE. It is a place for assembling the pub
 <li>Johansen, A., Beliveau, V., Colliander, E., et al. (2024). An in vivo high-resolution human brain atlas of synaptic density. <em>Journal of Neuroscience</em>, 44(33), e1750232024. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
 <li>Lucchetti, F., C&eacute;l&eacute;reau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <em>Nature Communications</em>, 16, 11344. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
 <li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <em>PNAS Nexus</em>, 4(3), pgaf072. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
+<li>Arshad, M., Stanley, J. A., &amp; Raz, N. (2017). Test-retest reliability and concurrent validity of in vivo myelin content indices: Myelin water fraction and calibrated T<sub>1</sub>w/T<sub>2</sub>w image ratio. <em>Human Brain Mapping</em>, 38(4), 1780-1790. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5342928/" target="_blank">PMC5342928</a></li>
+<li>Koshino, S., Hagiwara, A., Okuda, S., et al. (2018). Myelin Measurement: Comparison Between Simultaneous Tissue Relaxometry, Magnetization Transfer Saturation Index, and T<sub>1</sub>w/T<sub>2</sub>w Ratio Methods. <em>Scientific Reports</em>, 8, 10554. <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">doi:10.1038/s41598-018-28852-6</a></li>
 <li>Baadsvik, E. L., Weiger, M., Froidevaux, R., Schildknecht, C. M., Ineichen, B. V., &amp; Pruessmann, K. P. (2024). Myelin bilayer mapping in the human brain in vivo. <em>Magnetic Resonance in Medicine</em>, 91(6), 2332-2344. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">doi:10.1002/mrm.29998</a></li>
+<li>Galbusera, R., Weigel, M., Bahn, E., et al. (2025). Quantitative T1 is sensitive to cortical remyelination in multiple sclerosis: A postmortem MRI study. <em>Brain Pathology</em>, 35(5), e70010. <a href="https://doi.org/10.1111/bpa.70010" target="_blank">doi:10.1111/bpa.70010</a></li>
+<li>Morgan, C. A., Thomas, D. L., Shao, X., et al. (2024). Measurement of blood-brain barrier water exchange rate using diffusion-prepared and multi-echo arterial spin labelling: Comparison of quantitative values and age dependence. <em>NMR in Biomedicine</em>, 37(12), e5256. <a href="https://doi.org/10.1002/nbm.5256" target="_blank">doi:10.1002/nbm.5256</a></li>
 <li>Padrela, B. E., Slivka, M., Sneve, M. H., et al. (2025). Blood-brain barrier water permeability across the adult lifespan: A multi-echo ASL study. <em>Neurobiology of Aging</em>, 147, 176-186. <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">doi:10.1016/j.neurobiolaging.2024.12.012</a></li>
 <li>Chung, K. J., Abdelhafez, Y. G., Spencer, B. A., et al. (2025). Quantitative PET imaging and modeling of molecular blood-brain barrier permeability. <em>Nature Communications</em>, 16, 3076. <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">doi:10.1038/s41467-025-58356-7</a></li>
+<li>Villemagne, V. L., Harada, R., Dore, V., et al. (2022). First-in-Humans Evaluation of <sup>18</sup>F-SMBT-1, a Novel <sup>18</sup>F-Labeled Monoamine Oxidase-B PET Tracer for Imaging Reactive Astrogliosis. <em>Journal of Nuclear Medicine</em>, 63(10), 1551-1559. <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">doi:10.2967/jnumed.121.263255</a></li>
+<li>Tyacke, R. J., Myers, J. F. M., Venkataraman, A., et al. (2018). Evaluation of <sup>11</sup>C-BU99008, a PET Ligand for the Imidazoline<sub>2</sub> Binding Site in Human Brain. <em>Journal of Nuclear Medicine</em>, 59(10), 1597-1602. <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">doi:10.2967/jnumed.118.208009</a></li>
+<li>Livingston, N. R., Calsolaro, V., Hinz, R., et al. (2022). Relationship between astrocyte reactivity, using novel <sup>11</sup>C-BU99008 PET, and glucose metabolism, grey matter volume and amyloid load in cognitively impaired individuals. <em>Molecular Psychiatry</em>, 27(4), 2019-2029. <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">doi:10.1038/s41380-021-01429-y</a></li>
+<li>Jaisa-Aad, M., Mu&ntilde;oz-Castro, C., Healey, M. A., Hyman, B. T., &amp; Serrano-Pozo, A. (2024). Characterization of monoamine oxidase-B (MAO-B) as a biomarker of reactive astrogliosis in Alzheimer's disease and related dementias. <em>Acta Neuropathologica</em>, 147(1), 66. <a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">doi:10.1007/s00401-024-02712-2</a></li>
 <li>Hirschler, L., Runderkamp, B. A. R., Decker, A., et al. (2025). Region-specific drivers of CSF mobility measured with MRI in humans. <em>Nature Neuroscience</em>, 28, 2392-2401. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
 <li>Dagum, P., Elbert, D. L., Giovangrandi, L., et al. (2026). The glymphatic system clears amyloid beta and tau from brain to plasma in humans. <em>Nature Communications</em>, 17, 715. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
 <li>Vafaii, H., Mandino, F., Desrosiers-Gr&eacute;goire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <em>Nature Communications</em>, 15, 229. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
