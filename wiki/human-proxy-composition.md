@@ -17,6 +17,7 @@ page_highlights:
   - "Cohort and physiological regime are part of the evidence: adolescent developmental cohorts, healthy younger adults, healthy older adults, and AD-continuum reactive-astrogliosis scans do not define one shared human baseline."
   - "Model burden is part of the object: tracer kinetics, partial-volume correction, blood input functions, multicompartment models, and synchronization choices all change what the measurement means."
   - "A bundle can be well-typed and still fail operationally if one row is unstable, centre-bound, or available only in a narrow complete-case subset."
+  - "Promotion now runs through three gates: robustness, common-driver / quantity-bridge separation, and incremental value beyond the strongest single row."
   - "Same-session multimodal acquisition reduces one mismatch, but it does not erase common physiological factors or modality-specific residuals by default."
   - "Same-subject or same-brain wording solves specimen identity, not state continuity; sequential bridges still need elapsed-time, regime-continuity, and deformation disclosure."
   - "Proxy class, operational maturity, and calibrator role are different axes: a route can be real and still calibrate only one bounded hidden-state family."
@@ -87,6 +88,46 @@ This page stays on the technology and natural-science side only. It does not dis
 <strong>Why robustness belongs inside the composition rule</strong>
 <p>
 The remaining weakness after the recent composition updates was operational. A bundle can now be typed correctly by <strong>proxy class</strong>, <strong>operational maturity</strong>, and <strong>calibrator role</strong>, yet still fail as evidence if one row is unstable, centre-bound, or only available in a narrow complete-case subset. The primary literature now makes that narrower reading necessary. <a href="https://doi.org/10.1177/0271678X17724947" target="_blank">Finnema et al. (2018)</a> showed that even a comparatively stable SV2A PET route still needs route-specific kinetic modeling and reached mean absolute test-retest reproducibility of <strong>3-9%</strong> for regional V<sub>T</sub>. <a href="https://doi.org/10.1371/journal.pone.0206583" target="_blank">Holiga et al. (2018)</a> showed that common task-fMRI and resting-fMRI measures range from <strong>poor to excellent</strong> in test-retest reliability. <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021)</a> showed that some simultaneous EEG-fMRI connectome relationships can reproduce across <strong>four centres</strong> spanning <strong>1.5T to 7T</strong>, so cross-centre robustness can be shown but must not be presumed. <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a> then showed in acute DoC that only <strong>63 of 87</strong> patients had both EEG and fMRI and that direct same-sample bundle comparisons used a <strong>48-patient complete-feature subset</strong>, while <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> validated multimodal models across centres with different acquisition parameters, reported gains with more modalities, and found higher <strong>inter-modality disagreement</strong> in minimally conscious or improving patients. Therefore, on this site, human-proxy composition now includes <strong>row-level repeatability</strong>, <strong>cross-centre transfer</strong>, and <strong>partial-availability slices</strong>.
+</p>
+</div>
+
+<section class="section" id="promotion-gates">
+<h2 class="section-title">Three promotion gates before row diversity counts</h2>
+<p>
+The composition rule on this page can now be read as <strong>three gates</strong>. This is a compression of the longer route-card fields, not a weaker rule. A bundle does not rise because the rows look impressive in aggregate. It rises only if it survives <strong>robustness</strong>, <strong>common-driver / quantity-bridge separation</strong>, and <strong>increment over the strongest single row</strong>.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Promotion gate</th>
+<th>What must be shown</th>
+<th>Ceiling if the gate is missing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gate 1: Robustness</strong></td>
+<td>Show row-level repeatability at the actual operating point, distinguish <strong>within-setup repeatability</strong> from <strong>cross-centre / cross-protocol transfer</strong>, and disclose the actual complete-case slice. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> reported highly similar repeated dynamic DMRSI measurements when the <strong>procedure, setup, and acquisition parameters remained identical</strong>, which is useful route-local repeatability but not yet field transfer. <a href="https://doi.org/10.1177/0271678X17724947" target="_blank">Finnema et al. (2018)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021)</a>, and <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> show why those layers must stay separate.</td>
+<td>The bundle stays as <strong>setup-bound</strong>, <strong>centre-bound</strong>, or <strong>complete-case-bound</strong> evidence rather than portable human observability.</td>
+</tr>
+<tr>
+<td><strong>Gate 2: Common-driver and quantity-bridge separation</strong></td>
+<td>Show that the rows are not only synchronized, but also interpretable on an explicitly named biological axis after shared-driver audit. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> found <strong>common and divergent</strong> cross-modal organization, <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> found tightly coupled global progression plus <strong>distinct network patterns</strong> in simultaneous EEG-PET-MRI, <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> linked a major global fMRI mode to autonomic physiology, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that task BOLD and oxygen-metabolism changes can even move in opposite directions.</td>
+<td>Cross-row agreement remains <strong>shared-factor evidence</strong> or <strong>proxy-rich correlation</strong>, not one validated state variable.</td>
+</tr>
+<tr>
+<td><strong>Gate 3: Increment over the strongest single row</strong></td>
+<td>Show what the bundle adds beyond the best individual row under matched cohort, condition, and held-out evaluation when available. This can be narrower latent-state ceiling, better calibration, or better prediction, but it must be shown rather than assumed. <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> is informative precisely because it reports both <strong>performance gains with more modalities</strong> and <strong>higher inter-modality disagreement</strong> in clinically important groups.</td>
+<td>Row diversity is treated as <strong>richer description</strong>, not as automatic state closure or same-subject state identification.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<div class="note-box">
+<strong>Within-setup repeatability is not yet route portability</strong>
+<p>
+One remaining shortcut is to treat any reproducibility statement as if it solved deployment maturity. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> explicitly reported repeated dynamic DMRSI measurements on the <strong>same brain</strong> with the <strong>same setup and acquisition parameters</strong>, and the result is important because it shows that a highly specialized route can be stable at its own operating point. But that is still different from showing the same rate maps across centres, scanners, RF hardware, blood-input workflows, or reconstruction pipelines. On this site, repeatability therefore has to be split into <strong>route-local repeatability</strong> and <strong>cross-site transfer</strong> before a proxy bundle is allowed to rise.
 </p>
 </div>
 

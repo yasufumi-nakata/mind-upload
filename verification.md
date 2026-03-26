@@ -864,6 +864,12 @@ After adding the <strong>Observability Budget</strong> and the <strong>Fusion Ca
 A second correction follows from robustness rather than taxonomy alone. <a href="https://doi.org/10.1177/0271678X17724947" target="_blank">Finnema et al. (2018)</a> showed that even a comparatively stable SV2A PET route still needed route-specific kinetic modeling and yielded mean absolute test-retest reproducibility of <strong>3-9%</strong> for regional V<sub>T</sub>. <a href="https://doi.org/10.1371/journal.pone.0206583" target="_blank">Holiga et al. (2018)</a> showed that common task-fMRI and resting-fMRI measures span <strong>poor to excellent</strong> test-retest reliability rather than one uniform level. <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021)</a> then showed that some simultaneous EEG-fMRI connectome relationships can reproduce across <strong>four centres</strong>, <strong>1.5T to 7T</strong>, and different EEG layouts, which means cross-centre robustness can be demonstrated but should not be assumed. <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a> further showed in acute DoC that only <strong>63 of 87</strong> patients had both EEG and fMRI, while direct same-sample model comparison used <strong>48 complete-feature patients</strong>, so full bundles are not automatically acquisition-complete. <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> validated multimodal models across centres with different acquisition parameters, reported that performance improved with more modalities, and found higher <strong>inter-modality disagreement</strong> in minimally conscious or improving patients. Therefore, on this site, <strong>per-row repeatability</strong>, <strong>cross-centre transfer</strong>, and <strong>partial-bundle availability</strong> are part of composition rather than afterthoughts.
 </p>
 </div>
+<div class="note-box">
+<strong>2026-03-26 tightening: promotion now runs through three gates</strong>
+<p>
+For fast reading, this card now compresses to <strong>three promotion gates</strong>. First, the bundle must pass a <strong>robustness gate</strong>: row-level repeatability at the actual operating point, cross-centre / cross-protocol transfer where claimed, and disclosure of the real complete-case slice. Second, it must pass a <strong>common-driver / quantity-bridge gate</strong>: same-session agreement is not enough unless the paper shows that the rows survive shared-driver audit and can be read on an explicitly named biological axis. Third, it must pass an <strong>increment gate</strong>: the paper must show what the bundle adds beyond the strongest single row under a matched reading rule. Without all three, this site keeps the result at the strongest single-row or proxy-rich ceiling.
+</p>
+</div>
 <table class="data-table">
 <thead>
 <tr>
@@ -900,7 +906,7 @@ A second correction follows from robustness rather than taxonomy alone. <a href=
 </tr>
 <tr>
 <td><strong>Per-row repeatability / reproducibility window</strong></td>
-<td>For each row, report same-subject repeatability or test-retest error / ICC / stability window under the actual acquisition and quantification route, and say explicitly when no repeatability study exists.</td>
+<td>For each row, report same-subject repeatability or test-retest error / ICC / stability window under the actual acquisition and quantification route, distinguish <strong>route-local repeatability</strong> from <strong>cross-site portability</strong>, and say explicitly when no repeatability study exists.</td>
 <td>An unstable row is not treated as a reliable anchor inside a stronger bundle.</td>
 </tr>
 <tr>
@@ -950,7 +956,7 @@ If this card is missing, this site reads a living-human proxy bundle at the ceil
 <div class="note-box">
 <strong>Promotion rule beyond row diversity</strong>
 <p>
-On this site, row diversity alone is not enough. A bundle is promoted only when the paper discloses whether the apparent agreement survives a <strong>shared-driver audit</strong>, whether the key rows remain <strong>repeatable and transferable</strong> outside one setup, and what the bundle adds beyond the <strong>strongest single row</strong> under a matched-condition reading. Otherwise, the result remains <strong>proxy-rich but ceiling-limited</strong> rather than same-subject state identification.
+On this site, row diversity alone is not enough. A bundle is promoted only when the paper discloses whether the apparent agreement survives a <strong>shared-driver audit</strong>, whether the key rows remain <strong>repeatable and transferable</strong> outside one setup, and what the bundle adds beyond the <strong>strongest single row</strong> under a matched-condition reading. In short, the bundle must pass <strong>robustness</strong>, <strong>common-driver / quantity-bridge</strong>, and <strong>increment</strong> gates. Otherwise, the result remains <strong>proxy-rich but ceiling-limited</strong> rather than same-subject state identification.
 </p>
 </div>
 <h3 class="section-title" id="state-continuity-bridge-card">State-Continuity Bridge Card for sequential cross-regime claims</h3>

@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-18 / 位置づけ: Reading guide
+- 更新日: 2026-03-26 / 位置づけ: Reading guide
 
 ## このページの役割
 This page is an auxiliary page that organizes labels such as ``Scopus,'' ``arXiv,'' ``Review,'' ``Media,'' ``source_logged,'' ``curated,'' and evidence classes that appear in collections and bibliographic maps for beginners. The important thing here is to read these labels separately and understand what information each one represents.
@@ -27,6 +27,7 @@ Labels are a reading aid and do not automatically guarantee the correctness of t
 - Scopus is an index, arXiv is a preprint storage, and Review is a document type, and they do not have the same meaning.
 - source_logged and curated are labels that indicate how organized this site is.
 - A human PET/MRS/MRI paper can strengthen observability without closing hidden state or proving causal sufficiency.
+- A language demo can strengthen semantic reconstruction, fixed-segment retrieval, known-onset decoding, prompt-conditioned generation, or communication performance without becoming unrestricted thought reading.
 
 ## まだ分かっていないこと
 - The extent to which individual papers ultimately remain central evidence will depend on subsequent scrutiny.
@@ -145,9 +146,9 @@ For example, a document may be a <strong>review article on Scopus</strong>, a <s
 </tr>
 <tr>
 <td><strong>task-limited system demonstration</strong></td>
-<td>Decode or closed-loop performance on a specific task and interface.</td>
-<td>Tang (2023), Willett (2023), Littlejohn (2025), Wairagkar (2025)</td>
-<td>Whole-brain emulation, identity continuity, or hidden-state completeness.</td>
+<td>Task-conditioned language decode, prompt-conditioned generation, phoneme-sequence decoding, or closed-loop communication performance on a specific scaffold and interface.</td>
+<td>Tang (2023), D&eacute;fossez (2023), d'Ascoli (2025), Ye (2025), Willett (2023), Littlejohn (2025), Wairagkar (2025), Singh (2025)</td>
+<td>Whole-brain emulation, unrestricted thought reading, identity continuity, or hidden-state completeness.</td>
 </tr>
 <tr>
 <td><strong>dataset / benchmark / standard / toolchain</strong></td>
@@ -181,6 +182,11 @@ For example, a document may be a <strong>review article on Scopus</strong>, a <s
 </tr>
 </tbody>
 </table>
+
+<strong>Language-facing demos need one more split</strong>
+<p>
+On this site, `task-limited system demonstration` is still too broad if readers treat every language-facing result as one `brain-to-text` category. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a> constrain <strong>within-subject semantic reconstruction</strong>, <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">D&eacute;fossez et al. (2023)</a> constrain <strong>fixed-segment speech retrieval</strong>, <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a> constrain <strong>known-onset word decoding</strong>, <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Ye et al. (2025)</a> constrain <strong>prompt-conditioned generation</strong>, and <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> constrain different invasive speech-decoding or communication-subsystem routes. Therefore, when a paper emits fluent text or speech, this site asks for the <a href="https://mind-upload.com/verification.html#neural-contribution-card">Neural Contribution Card</a> before it is promoted beyond task-conditioned evidence.
+</p>
 
 <h2>How to read site status labels</h2>
 <table>
