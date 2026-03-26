@@ -5,7 +5,7 @@ description: "A verification commons for turning mind uploading and WBE into a s
 article_type: Start Here
 subtitle: "Define success criteria, standards, benchmarks, and preregistration first"
 author: Mind Uploading Research Project
-last_updated: "2026-03-26"
+last_updated: "2026-03-27"
 note: "Human-friendly landing page"
 audience: "First-time visitors, readers who want only the big picture, and anyone who wants a clear reading order"
 reading_time: "5-10 min"
@@ -19,7 +19,7 @@ page_highlights:
   - "Synaptic-density PET evidence is not one class: tracer / quantification route, healthy atlas, disease contrast, task / cognition association, and longitudinal intervention must not be compressed into current synaptic state."
   - "Human proxy class, operational maturity, and calibrator role are different questions; a real human route may still calibrate only one bounded hidden-state family."
   - "Clearance / immune evidence is not one class: drainage anatomy, microglia-related synaptic control, human CSF-mobility MRI, and model-based biomarker-efflux routes are kept separate."
-  - "Neurovascular / BBB evidence is not one class: pericyte loss / neurovascular uncoupling, pericyte-to-neuron memory signaling, activity-dependent BBB modulation, capillary-diameter controllers, and human BBB permeability routes are kept separate."
+  - "Neurovascular / BBB evidence is not one class: pericyte loss / neurovascular uncoupling, pericyte-to-neuron memory signaling, activity-dependent BBB modulation, capillary-diameter controllers, human BBB water-exchange MRI, and tracer-specific BBB PET transport routes are kept separate."
   - "Bioenergetic evidence is not one class: presynaptic ATP-demand support, dendritic mitochondrial positioning / fission, synaptic ATP-synthase nano-organization, mitochondrial Ca2+-efflux tuning, and human macro energetic imaging are kept separate."
   - "Transcription / chromatin evidence is not one class: allocation eligibility, time-windowed response maps, persistent stabilization cascades, and locus-specific causal editability are kept separate."
   - "Post-transcriptional RNA evidence is not one class: splice-isoform control, m6A-dependent translation, m6A-dependent degradation, RNA editing, and atlas ceilings are kept separate."
@@ -54,7 +54,7 @@ known_points:
   - "Recent primary literature requires intrinsic excitability to be read as several routes rather than one row: allocation bias, AIS / channel-state plasticity, recovery controller, and living-human perturbation-conditioned proxies do not answer the same question."
   - "Recent rodent causal studies show that astrocyte-state can matter for recall, multiday stabilization, and fear-state representations, but this still does not provide a human whole-brain readout."
   - "Current primary literature also treats clearance / immune support as a measurable multiday support-state, but current human CSF / glymphatic routes still stop at macro support-state proxy rather than local immune-controller readout."
-  - "Current primary literature also treats neurovascular-unit / BBB / pericyte state as a distinct maintenance-side layer, while current human BBB MRI / PET routes still stop at macro permeability proxy rather than pericyte/endothelial controller readout."
+  - "Current primary literature also treats neurovascular-unit / BBB / pericyte state as a distinct maintenance-side layer, while current human BBB MRI / PET routes still stop at macro water-exchange or tracer-specific transport proxy rather than pericyte/endothelial controller readout."
   - "Current human astrocyte-related PET and clearance routes remain bounded proxy classes; they still do not identify which astrocyte, microglial controller, or synapse is responsible."
   - "Current human evidence comes in layers; proxy-rich routes still do not yield comparable whole-brain in vivo ground truth for every hidden state."
   - "Several human proxy rows do not add automatically; without same-subject relation, measurement-model disclosure, and cross-row calibration, the bundle stays below state-identification language."
@@ -411,7 +411,7 @@ This site now blocks that shortcut too. <a href="https://doi.org/10.1038/s41586-
 <div class="note-box">
 <strong>If You Are Treating Vascular Audit As If It Solved Maintenance State</strong>
 <p>
-This site now blocks that shortcut as well. <a href="https://doi.org/10.1016/j.neuron.2010.09.043" target="_blank">Bell et al. (2010)</a>, <a href="https://doi.org/10.1016/j.neuron.2023.08.030" target="_blank">Pandey et al. (2023)</a>, <a href="https://doi.org/10.7554/eLife.89611" target="_blank">Swissa et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41467-025-61312-0" target="_blank">Mai-Morente et al. (2025)</a> show that pericyte / BBB biology can matter for capillary support, plasticity, and long-term memory. By contrast, human <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> are macro BBB permeability routes, while <a href="verification.html#specificity-shortcut-card">vascular-state / CVR audit</a> remains a measurement-side hemodynamic transfer check. Those rows do not answer the same question. Therefore, a clean BOLD / fNIRS nuisance audit is still not evidence that the relevant <strong>neurovascular-unit / BBB / pericyte state</strong> was matched.
+This site now blocks that shortcut as well. <a href="https://doi.org/10.1016/j.neuron.2010.09.043" target="_blank">Bell et al. (2010)</a>, <a href="https://doi.org/10.1016/j.neuron.2023.08.030" target="_blank">Pandey et al. (2023)</a>, <a href="https://doi.org/10.7554/eLife.89611" target="_blank">Swissa et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41467-025-61312-0" target="_blank">Mai-Morente et al. (2025)</a> show that pericyte / BBB biology can matter for capillary support, plasticity, and long-term memory. By contrast, human <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> is a multi-echo ASL <strong>water-exchange</strong> route, <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a> showed that DP-ASL and ME-ASL can return markedly different BBB water-exchange values and even inconsistent age dependence, and <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> is a <strong>tracer-specific</strong> dynamic PET permeability-surface-area route under kinetic-model assumptions. Those rows do not answer the same question, and they are also different from a measurement-side <a href="verification.html#specificity-shortcut-card">vascular-state / CVR audit</a>. Therefore, a clean BOLD / fNIRS nuisance audit is still not evidence that the relevant <strong>neurovascular-unit / BBB / pericyte state</strong> was matched, and even a human BBB proxy must disclose which quantity type it actually constrained.
 </p>
 </div>
 

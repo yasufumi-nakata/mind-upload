@@ -5,7 +5,7 @@ description: "A blueprint of standards, benchmarks, registries, and audits for t
 article_type: Platform
 subtitle: "Use the logic of PDB x BIDS x PhysioNet x OSF to define WBE success conditions and reproducible progress"
 author: Mind Uploading Research Project
-last_updated: "2026-03-26"
+last_updated: "2026-03-27"
 note: "Operational Specification"
 audience: "Readers who want the site's core policy and anyone checking what must exist before progress can honestly be claimed"
 reading_time: "15-25 min"
@@ -36,7 +36,7 @@ page_highlights:
   - "For ionic / chloride claims, the maintenance-state budget now requires a route card that names claim family, direct ionic observable, spatial regime, perturbation route, human proxy class, and abstention."
   - "For neuromodulatory claims, the maintenance-state budget now requires a route card that names claim family, transmitter axis, direct observable, challenge or administered-drug route, time window / model burden, and abstention."
   - "For clearance / immune claims, the maintenance-state budget now requires a route card that names claim family, direct observable, driver / perturbation route, human model burden, function target, and abstention."
-  - "For neurovascular-unit / BBB / pericyte claims, the maintenance-state budget now requires a route card that names claim family, biological locus, direct observable, driver / perturbation route, human proxy class / model burden, function target, and abstention."
+  - "For neurovascular-unit / BBB / pericyte claims, the maintenance-state budget now requires a route card that names claim family, biological locus, direct observable, driver / perturbation route, human quantity type / transport regime plus model burden, function target, and abstention."
   - "For bioenergetic / mitochondrial claims, the maintenance-state budget now requires a route card that names claim family, compartment, direct energetic observable, quantity type / model burden, function target, human proxy class, and abstention."
   - "For astrocyte / glial-state claims, the maintenance-state budget now requires a route card that names claim family, direct astrocyte observable, perturbation route, function target, human proxy class, and abstention."
   - "For phospho-signaling / second-messenger claims, the maintenance-state budget now requires a route card that names claim family, assay / direct observable, compartment scope, timing window, causal leverage, and abstention."
@@ -74,7 +74,7 @@ known_points:
   - "The same decoding score is not target-specific evidence if eye movement, EMG, uninstructed movement, auditory feedback, subject / session fingerprint, or acquisition-distribution shortcuts remain unresolved."
   - "A foundation-model score without corpus-overlap, harmonization, adaptation, and benchmark-version disclosure, including split randomness / hidden grouping, remains qualified decoding evidence rather than portable transfer evidence."
   - "A multimodal result is not one thing; simultaneous acquisition, geometric fusion, invasive calibration, and atlas priors must be audited separately."
-  - "Several living-human proxy routes do not add automatically; without same-subject relation, repeatability / transfer disclosure, model disclosure, and cross-row calibration, the bundle remains below state-identification language."
+  - "Several living-human proxy routes do not add automatically; without same-subject relation, repeatability / transfer disclosure, quantity-type disclosure, model disclosure, and cross-row calibration, the bundle remains below state-identification language."
   - "A same-subject or same-brain pipeline can still be sequential and bridge-limited; live-to-fix delay, regime mismatch, deformation correction, and state drift remain separate audit items."
   - "For ESI, passing one validation class does not auto-pass the others; stimulation error, simultaneous invasive concordance, and postsurgical outcome answer different questions."
   - "For ESI, inverse-family, package, parameter, and conductivity choices can materially shift the reconstructed source, so solver-disagreement and uncertainty width are themselves audit items."
@@ -1956,7 +1956,7 @@ The remaining weakness in this gate was not the absence of latent-state language
 <td><strong>Neurovascular-unit / BBB / pericyte state</strong></td>
 <td>Capillary recruitment / tone, BBB permeability / transport regime, and endothelial / pericyte controller state can still differ on the same graph and cell-type background.</td>
 <td>A vascular-state / CVR audit, resting perfusion covariate, or one hemodynamic nuisance check already fixes the biological controller.</td>
-<td>Human evidence stays at macro BBB permeability or transport-model proxy level; local pericyte / endothelial controller claims remain latent unless directly measured or perturbed.</td>
+<td>Human evidence stays at macro BBB water-exchange or tracer-specific transport-model proxy level; local pericyte / endothelial controller claims remain latent unless directly measured or perturbed.</td>
 </tr>
 <tr>
 <td><strong>Astrocyte / glial-state</strong></td>
@@ -1985,9 +1985,9 @@ connectome-complete does not mean <strong>emulation-complete</strong>. This gate
 </p>
 </div>
 <div class="note-box">
-<strong>2026-03-26 addendum: vascular transfer audit is not neurovascular support-state audit</strong>
+<strong>2026-03-27 addendum: vascular transfer audit is not neurovascular support-state audit</strong>
 <p>
-The remaining weakness was that a clean hemodynamic nuisance audit could still be misread as if the biological support layer were solved too. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuron.2010.09.043" target="_blank">Bell et al. (2010)</a>, <a href="https://doi.org/10.3389/fncel.2020.00027" target="_blank">Kisler et al. (2020)</a>, <a href="https://doi.org/10.1016/j.neuron.2023.08.030" target="_blank">Pandey et al. (2023)</a>, <a href="https://doi.org/10.7554/eLife.89611" target="_blank">Swissa et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41467-025-61312-0" target="_blank">Mai-Morente et al. (2025)</a> separate pericyte / BBB controller biology from measurement-side vascular transfer, while <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> remain macro human BBB permeability routes. Therefore, this site now blocks the move from <strong>vascular-state / CVR audit passed</strong> to <strong>neurovascular support matched</strong> unless the biological route itself is named, measured, perturbed, or left explicitly latent.
+The remaining weakness was that a clean hemodynamic nuisance audit could still be misread as if the biological support layer were solved too. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuron.2010.09.043" target="_blank">Bell et al. (2010)</a>, <a href="https://doi.org/10.3389/fncel.2020.00027" target="_blank">Kisler et al. (2020)</a>, <a href="https://doi.org/10.1016/j.neuron.2023.08.030" target="_blank">Pandey et al. (2023)</a>, <a href="https://doi.org/10.7554/eLife.89611" target="_blank">Swissa et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41467-025-61312-0" target="_blank">Mai-Morente et al. (2025)</a> separate pericyte / BBB controller biology from measurement-side vascular transfer, while the current human routes already split further: <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> is a multi-echo ASL <strong>water-exchange</strong> route, <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a> showed that DP-ASL and ME-ASL can yield substantially different BBB water-exchange values and inconsistent age dependence, and <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> is a <strong>tracer-specific</strong> PET permeability-surface-area route with no human ground-truth validation yet. Therefore, this site now blocks the move from <strong>vascular-state / CVR audit passed</strong> to <strong>neurovascular support matched</strong> unless the biological route itself is named, measured, perturbed, or left explicitly latent, and it also blocks the move from <strong>human BBB proxy exists</strong> to <strong>a generic BBB-permeability meter exists</strong> unless the quantity type and transport regime are named explicitly.
 </p>
 </div>
 <div class="note-box">

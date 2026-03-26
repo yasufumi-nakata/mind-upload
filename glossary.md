@@ -5,7 +5,7 @@ description: "A practical glossary of the terms used most often in Mind-Upload, 
 article_type: Reference
 subtitle: "Start by keeping the words straight"
 author: Mind Uploading Research Project
-last_updated: "2026-03-26"
+last_updated: "2026-03-27"
 note: "Living document"
 audience: "Readers who do not want to get stuck on terminology and anyone trying to avoid category mistakes"
 reading_time: "3 to 10 minutes for only the necessary items"
@@ -420,7 +420,7 @@ If names such as <strong>field-formation wall</strong>, <strong>Fusion Card</str
 </tr>
 <tr>
 <td><strong>Neurovascular-unit / BBB / pericyte state</strong></td>
-<td>The maintenance-side vascular support layer that includes capillary recruitment / tone, endothelial / pericyte barrier and transport regime, and BBB permeability-related state that can change plasticity support and long-horizon stability. It should not be collapsed either into measurement-side vascular-state / CVR audit or into clearance / immune support.</td>
+<td>The maintenance-side vascular support layer that includes capillary recruitment / tone, endothelial / pericyte barrier and transport regime, and BBB quantity types such as water exchange, tracer-specific transport, or leakage-related state that can change plasticity support and long-horizon stability. It should not be collapsed either into measurement-side vascular-state / CVR audit or into clearance / immune support.</td>
 </tr>
 <tr>
 <td><strong>Clearance / immune support</strong></td>
@@ -428,7 +428,7 @@ If names such as <strong>field-formation wall</strong>, <strong>Fusion Card</str
 </tr>
 <tr>
 <td><strong>Support-state proxy</strong></td>
-<td>A human route that constrains slow maintenance variables only at a coarse level, for example energetic, thermal, myelin, BBB permeability, or CSF / glymphatic clearance state. It is stronger than saying “nothing is visible,” but weaker than local controller, astrocyte-ensemble state, cell-specific immune control, or other cell-specific ground truth.</td>
+<td>A human route that constrains slow maintenance variables only at a coarse level, for example energetic, thermal, myelin, BBB water-exchange or tracer-specific transport state, or CSF / glymphatic clearance state. It is stronger than saying “nothing is visible,” but weaker than local controller, astrocyte-ensemble state, cell-specific immune control, or other cell-specific ground truth.</td>
 </tr>
 <tr>
 <td><strong>Thermal-state</strong></td>

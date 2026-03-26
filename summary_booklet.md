@@ -5,7 +5,7 @@ description: "公開ページの要点を A4 冊子向けに自動生成した�
 article_type: "Briefing Booklet"
 subtitle: "公開ページの front matter と冒頭要約から再生成される A4 要約版"
 author: Mind Uploading Research Project
-last_updated: "2026-03-26"
+last_updated: "2026-03-27"
 note: "Auto-generated from public pages"
 body_class: "summary-booklet-page"
 ---
@@ -25,7 +25,7 @@ body_class: "summary-booklet-page"
   <div class="booklet-cover-band">
     <div>
   <span>更新基準日</span>
-  <strong>2026-03-26</strong>
+  <strong>2026-03-27</strong>
 </div>
 <div>
   <span>現在の重点</span>
@@ -436,7 +436,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">FAQ - Prefer verifiable progress to flashy conclusions / 8-15 minutes</p>
   <p>This page is designed to block common misunderstandings early. The stronger the claim, the more carefully you should check, in order, (1) the definition of terms, (2) the measurement scale, (3) the condition that would count as failure, and (4) the reproduction procedure.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>It now front-loads nine technical guardrails: connectome-complete is not state-complete, human proxy-rich evidence is not automatically near-direct whole-brain state readout, same-subject / same-brain wording does not by itself make a sequential workflow one state sample, a high score is not automatically a target-specific neural readout, EEG / MEG connectivity labels are not automatically leak-proof communication maps or causal circuits, BOLD / fNIRS differences need vascular-state / CVR audit, DCM / effective-connectivity labels do not by themselves identify true causal wiring, thermodynamic / irreversibility labels do not by themselves measure physical dissipation or WBE-ready cost, and low latency does not by itself solve the body / environment boundary.</li><li>Same-subject or same-brain wording does not by itself make a live-to-fix, cross-regime, or cross-day workflow one state sample; bridge delay, regime continuity, coordinate transfer, and bridge validation still matter.</li><li>Because wiring diagrams and cell types still leave excitability, timing-state, thermal-state, transcription/chromatin, post-transcriptional RNA-state, phospho-signaling / second-messenger state, proteostasis, cargo-transport / cytoskeletal trafficking state, ECM / PNN, ionic-homeostasis, bioenergetic / mitochondrial state, astrocyte / glial-state, clearance / immune support, and other maintenance-support variables unresolved, long-term dynamical claims require separate auditing.</li>
+    <li>It now front-loads nine technical guardrails: connectome-complete is not state-complete, human proxy-rich evidence is not automatically near-direct whole-brain state readout, same-subject / same-brain wording does not by itself make a sequential workflow one state sample, a high score is not automatically a target-specific neural readout, EEG / MEG connectivity labels are not automatically leak-proof communication maps or causal circuits, BOLD / fNIRS differences need vascular-state / CVR audit, DCM / effective-connectivity labels do not by themselves identify true causal wiring, thermodynamic / irreversibility labels do not by themselves measure physical dissipation or WBE-ready cost, and low latency does not by itself solve the body / environment boundary.</li><li>Proxy class, operational maturity, and calibrator role are different questions; a real human route may still calibrate only one bounded hidden-state family.</li><li>Same-subject or same-brain wording does not by itself make a live-to-fix, cross-regime, or cross-day workflow one state sample; bridge delay, regime continuity, coordinate transfer, and bridge validation still matter.</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">

@@ -5,7 +5,7 @@ description: "Uses primary literature to organize the maintenance mechanisms tha
 article_type: Wiki
 subtitle: "Even with a wiring diagram and cell type labels, long-term dynamics are still not determined."
 author: Mind Uploading Research Project
-last_updated: "2026-03-26"
+last_updated: "2026-03-27"
 note: "Technical / natural science only"
 audience: "People who want to probe the limits of the connectome more deeply from the perspective of internal states and maintenance mechanisms."
 reading_time: "16-22 minutes"
@@ -1108,13 +1108,13 @@ The weak point that became clear here was that the site had become better at aud
 <div class="note-box">
 <strong>How this site reads current human BBB evidence</strong>
 <p>
-Current human evidence is narrower than the rodent causal literature. <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> used multi-echo ASL to estimate BBB water-exchange time across <strong>209 healthy adults</strong> and showed age-linked shifts in a macro BBB permeability proxy, while <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> developed a high-temporal-resolution dynamic PET method to estimate a tracer-specific BBB permeability-surface-area product and showed lower FDG BBB PS in healthy aging. These are stronger than saying no human BBB-related route exists, but they still do not directly identify <strong>which pericyte</strong>, <strong>which endothelial transport controller</strong>, or <strong>which local capillary recruitment state</strong> supported a specific memory or circuit. Therefore, on this site, current human BBB MRI / PET is read as a <strong>human BBB permeability-related proxy route</strong>, not as cell-specific neurovascular-unit ground truth.
+Current human evidence is narrower than the rodent causal literature, and even the human rung is not one quantity type. <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> used multi-echo ASL to estimate BBB <strong>water-exchange time</strong> across <strong>209 healthy adults</strong> and showed age-linked shifts in a macro water-transport proxy. <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a> then compared DP-ASL and ME-ASL in the same cohort and found significantly different BBB water-exchange values plus inconsistent age dependence, making it unsafe to treat ASL-derived <em>K</em><sub>w</sub> as one interchangeable permeability meter without naming the exact method and fitting route. By contrast, <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> developed a high-temporal-resolution dynamic PET method to estimate a <strong>tracer-specific</strong> BBB permeability-surface-area product and showed lower FDG BBB PS in healthy aging. These are stronger than saying no human BBB-related route exists, but they still do not directly identify <strong>which pericyte</strong>, <strong>which endothelial transport controller</strong>, or <strong>which local capillary recruitment state</strong> supported a specific memory or circuit. Therefore, on this site, current human BBB MRI / PET is read as a <strong>human BBB water-exchange or tracer-specific transport proxy route</strong>, not as cell-specific neurovascular-unit ground truth.
 </p>
 </div>
 <div class="note-box" id="neurovascular-bbb-route-card">
-<strong>2026-03-26 addendum: neurovascular / BBB evidence now needs a route card</strong>
+<strong>2026-03-27 addendum: human BBB quantity type now needs to be named explicitly</strong>
 <p>
-The remaining weakness on this page was that <strong>neurovascular / BBB evidence</strong> could still collapse several different inferential objects into one bucket. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuron.2010.09.043" target="_blank">Bell et al. (2010)</a> is about <strong>adult pericyte deficiency causing capillary hypoperfusion and BBB breakdown</strong>. <a href="https://doi.org/10.3389/fncel.2020.00027" target="_blank">Kisler et al. (2020)</a> is about <strong>acute neurovascular uncoupling after cortical pericyte ablation</strong>. <a href="https://doi.org/10.1016/j.neuron.2023.08.030" target="_blank">Pandey et al. (2023)</a> is about <strong>pericyte-to-neuron IGF2 signaling required for long-term memory</strong>. <a href="https://doi.org/10.7554/eLife.89611" target="_blank">Swissa et al. (2024)</a> is about <strong>activity-dependent BBB modulation associated with cortical plasticity</strong>. <a href="https://doi.org/10.1038/s41467-025-61312-0" target="_blank">Mai-Morente et al. (2025)</a> is about <strong>pericyte Panx1 as a capillary-diameter controller with memory consequences</strong>. <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> is a <strong>human BBB water-exchange MRI route</strong>. <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> is a <strong>human PET kinetic permeability route</strong>. Therefore, on this site, neurovascular / BBB claims now require a <strong>route card</strong> before they are promoted beyond a narrow, explicitly named ceiling.
+The remaining weakness on this page was subtler than the 2026-03-26 family split. Even after separating rodent controller biology from human proxy routes, <strong>human BBB evidence</strong> could still be read as if it were one generic permeability meter. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> is a <strong>human BBB water-exchange MRI route</strong>. <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a> showed that DP-ASL and ME-ASL can return markedly different BBB water-exchange values and inconsistent age dependence even within the same cohort, so <strong>ASL-derived water transport itself is not yet one settled quantity family</strong>. <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> is a <strong>human PET kinetic permeability route</strong> whose reported PS depends on the tracer-specific transport mechanism and kinetic model, not a generic BBB leakiness scalar. Therefore, on this site, neurovascular / BBB claims now require a <strong>route card</strong> that names the human quantity type explicitly before they are promoted beyond a narrow, explicitly named ceiling.
 </p>
 </div>
 <table class="data-table">
@@ -1138,8 +1138,8 @@ The remaining weakness on this page was that <strong>neurovascular / BBB evidenc
 </tr>
 <tr>
 <td><strong>Direct observable / route object</strong></td>
-<td>Write whether the direct observable is capillary diameter, CBF response, BBB leakage / permeability, tracer-specific transport rate, transcript / protein in vascular cells, or another explicitly measured object.</td>
-<td><code>neurovascular state changed</code> replaces the actual observable, and a macro permeability proxy is overread as if it had directly measured the responsible pericyte or endothelial controller.</td>
+<td>Write whether the direct observable is capillary diameter, CBF response, BBB water-exchange time / rate, tracer-specific permeability-surface-area product, leakage / contrast-agent escape, transcript / protein in vascular cells, or another explicitly measured object.</td>
+<td><code>neurovascular state changed</code> replaces the actual observable, and a macro water-exchange or transport proxy is overread as if it had directly measured the responsible pericyte or endothelial controller.</td>
 </tr>
 <tr>
 <td><strong>Driver / perturbation route</strong></td>
@@ -1147,9 +1147,14 @@ The remaining weakness on this page was that <strong>neurovascular / BBB evidenc
 <td>The site silently shifts from correlation or proxy language to controller-identification language without a disclosed intervention route.</td>
 </tr>
 <tr>
+<td><strong>Human quantity type / transport regime</strong></td>
+<td>For human evidence, disclose whether the route estimates ASL-derived water-exchange time / rate, tracer-specific PET PS under a named tracer and kinetic model, contrast-agent leakage, or another named transport quantity, and state whether the route is about water exchange, facilitated transport, free diffusion, or non-specific leakage.</td>
+<td>A human BBB paper is treated as if all BBB-related assays measured one interchangeable permeability scalar rather than different transport objects with different model assumptions.</td>
+</tr>
+<tr>
 <td><strong>Human measurement / model burden</strong></td>
-<td>For human evidence, disclose whether the route is water-exchange ASL, dynamic PET plus kinetic modeling, or another named permeability assay, together with acquisition burden and model assumptions.</td>
-<td>A human BBB paper is treated as if it had directly measured local pericyte/endothelial controller state without a proxy / model audit.</td>
+<td>Disclose field strength, acquisition family, fitting / kinetic model, validation status, and repeatability ceiling. <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a> makes this explicit for BBB water-exchange MRI by showing method-dependent <em>K</em><sub>w</sub> estimates, and <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> makes it explicit for PET by noting the current lack of human ground-truth PS values.</td>
+<td>A human BBB paper is treated as if it had directly measured local pericyte/endothelial controller state without a proxy / model audit or without separating route-local precision from biological meaning.</td>
 </tr>
 <tr>
 <td><strong>Functional target</strong></td>
@@ -1166,7 +1171,7 @@ The remaining weakness on this page was that <strong>neurovascular / BBB evidenc
 <div class="note-box">
 <strong>Why this route card is necessary here</strong>
 <p>
-The need is multi-axis. On the pericyte-deficiency side, <a href="https://doi.org/10.1016/j.neuron.2010.09.043" target="_blank">Bell et al. (2010)</a> and <a href="https://doi.org/10.3389/fncel.2020.00027" target="_blank">Kisler et al. (2020)</a> show that capillary support and neurovascular coupling can fail before one can claim a shared neuronal state failure. On the signaling side, <a href="https://doi.org/10.1016/j.neuron.2023.08.030" target="_blank">Pandey et al. (2023)</a> shows that a pericyte-derived molecular signal can matter for long-term memory, which is not the same inferential object as capillary perfusion. On the plasticity side, <a href="https://doi.org/10.7554/eLife.89611" target="_blank">Swissa et al. (2024)</a> links activity-dependent BBB modulation to cortical plasticity, which is not the same object as chronic BBB breakdown. On the controller side, <a href="https://doi.org/10.1038/s41467-025-61312-0" target="_blank">Mai-Morente et al. (2025)</a> isolates a pericyte Panx1 route for capillary-diameter control with memory consequences. On the human observability side, <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> measures <strong>water exchange</strong> and <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> estimates <strong>tracer-specific BBB permeability</strong> under kinetic-model assumptions. Therefore, this site does not let these rows inherit one another's claim ceiling, and it does not let any of them stand in for a direct human whole-brain pericyte / endothelial controller readout without a route-card audit.
+The need is multi-axis. On the pericyte-deficiency side, <a href="https://doi.org/10.1016/j.neuron.2010.09.043" target="_blank">Bell et al. (2010)</a> and <a href="https://doi.org/10.3389/fncel.2020.00027" target="_blank">Kisler et al. (2020)</a> show that capillary support and neurovascular coupling can fail before one can claim a shared neuronal state failure. On the signaling side, <a href="https://doi.org/10.1016/j.neuron.2023.08.030" target="_blank">Pandey et al. (2023)</a> shows that a pericyte-derived molecular signal can matter for long-term memory, which is not the same inferential object as capillary perfusion. On the plasticity side, <a href="https://doi.org/10.7554/eLife.89611" target="_blank">Swissa et al. (2024)</a> links activity-dependent BBB modulation to cortical plasticity, which is not the same object as chronic BBB breakdown. On the controller side, <a href="https://doi.org/10.1038/s41467-025-61312-0" target="_blank">Mai-Morente et al. (2025)</a> isolates a pericyte Panx1 route for capillary-diameter control with memory consequences. On the human observability side, <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> measures <strong>water exchange</strong>, <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a> shows that even ASL-derived water-exchange estimates are method-dependent and still need independent validation, and <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> estimates <strong>tracer-specific BBB permeability</strong> under kinetic-model assumptions. Therefore, this site does not let these rows inherit one another's claim ceiling, and it does not let any of them stand in for a direct human whole-brain pericyte / endothelial controller readout without a route-card audit.
 </p>
 </div>
 
@@ -1479,10 +1484,10 @@ The reason this section needed a second pass is that “human evidence is starti
 <td>Macro-myelin proxy, not per-axon timing-state ground truth.</td>
 </tr>
 <tr>
-<td><strong>human BBB permeability / water-exchange proxy</strong><br>Padrela et al., Chung et al.</td>
-<td>Macro BBB water-exchange or tracer-specific permeability-surface-area route under explicit ASL or dynamic PET kinetic models.</td>
+<td><strong>human BBB water-exchange / tracer-specific transport proxy</strong><br>Padrela et al., Morgan et al., Chung et al.</td>
+<td>Macro BBB water-exchange or tracer-specific permeability-surface-area route under explicit ASL or dynamic PET kinetic models, with method dependence still unresolved even within ASL-based <em>K</em><sub>w</sub> estimates.</td>
 <td>Cell-specific pericyte / endothelial controller identity, local capillary recruitment state, barrier-state at a tagged synapse, and arbitrary memory-content support.</td>
-<td>Macro BBB permeability / transport-model proxy, not direct neurovascular-unit controller ground truth.</td>
+<td>Macro BBB water-transport / tracer-transport proxy, not direct neurovascular-unit controller ground truth.</td>
 </tr>
 <tr>
 <td><strong>human clinical single-unit allocation route</strong><br>Tallman et al.</td>
@@ -1576,8 +1581,8 @@ The remaining weakness after adding route cards was subtler. This page already s
 <td>Per-axon conduction timing, nodal microgeometry, or plasticity-complete restoration of a specific circuit.</td>
 </tr>
 <tr>
-<td><strong>BBB permeability MRI / PET</strong><br>Padrela et al., Chung et al.</td>
-<td>Macro BBB permeability / transport-model route under named water-exchange MRI or kinetic PET assumptions.</td>
+<td><strong>BBB water-exchange MRI / tracer-specific PET</strong><br>Padrela et al., Morgan et al., Chung et al.</td>
+<td>Macro BBB water-exchange or tracer-specific transport-model route under named ASL or kinetic PET assumptions.</td>
 <td>Cell-specific pericyte / endothelial controller identity, local capillary recruitment, or plasticity-ready BBB gate state in a specific circuit.</td>
 </tr>
 <tr>
@@ -1981,6 +1986,7 @@ The need is multi-axis. On the measurement side, <a href="https://doi.org/10.296
 <li>Pandey, K., Bessières, B., Sheng, S. L., Taranda, J., Osten, P., Sandovici, I., Constancia, M., &amp; Alberini, C. M. (2023). Neuronal activity drives IGF2 expression from pericytes to form long-term memory. <em>Neuron</em>, 111(23), 3819-3836.e8. <a href="https://doi.org/10.1016/j.neuron.2023.08.030" target="_blank">doi:10.1016/j.neuron.2023.08.030</a></li>
 <li>Swissa, E., Monsonego, U., Yang, L. T., Schori, L., Kamintsky, L., Mirloo, S., Burger, I., Uzzan, S., Patel, R., Sudmant, P. H., Prager, O., Kaufer, D., &amp; Friedman, A. (2024). Cortical plasticity is associated with blood-brain barrier modulation. <em>eLife</em>, 12, RP89611. <a href="https://doi.org/10.7554/eLife.89611" target="_blank">doi:10.7554/eLife.89611</a></li>
 <li>Mai-Morente, S., Razvan, M., Lechuga-Sancho, A. M., Calvo-Flores Guzmán, B., Arrabal, S., Soria, B., &amp; Gutiérrez-Juárez, R. (2025). Pericyte pannexin1 controls cerebral capillary diameter and supports memory function. <em>Nature Communications</em>, 16, 5912. <a href="https://doi.org/10.1038/s41467-025-61312-0" target="_blank">doi:10.1038/s41467-025-61312-0</a></li>
+<li>Morgan, C. A., Thomas, D. L., Shao, X., Mahroo, A., Manson, T. J., Suresh, V., Jansson, D., Ohene, Y., Günther, M., Wang, D. J. J., Tippett, L. J., &amp; Dragunow, M. (2024). Measurement of blood-brain barrier water exchange rate using diffusion-prepared and multi-echo arterial spin labelling: Comparison of quantitative values and age dependence. <em>NMR in Biomedicine</em>, 37(12), e5256. <a href="https://doi.org/10.1002/nbm.5256" target="_blank">doi:10.1002/nbm.5256</a></li>
 <li>Padrela, B. E., Slivka, M., Sneve, M. H., Garrido, P. F., Dijsselhof, M. B. J., Hageman, T., Geier, O., Grydeland, H., Mahroo, A., Kuijer, J. P. A., Konstandin, S., Eickel, K., Barkhof, F., Günther, M., Walhovd, K. B., Fjell, A. M., Mutsaerts, H. J. M. M., &amp; Petr, J. (2025). Blood-brain barrier water permeability across the adult lifespan: A multi-echo ASL study. <em>Neurobiology of Aging</em>, 147, 176-186. <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">doi:10.1016/j.neurobiolaging.2024.12.012</a></li>
 <li>Chung, K. J., Abdelhafez, Y. G., Spencer, B. A., Jones, T., Tran, Q., Chen, M. S. Jr., Sarkar, S., Lyo, V., Nardo, L., Medici, V., Badawi, R. D., Cherry, S. R., &amp; Wang, G. (2025). Quantitative PET imaging and modeling of molecular blood-brain barrier permeability. <em>Nature Communications</em>, 16, 3076. <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">doi:10.1038/s41467-025-58356-7</a></li>
 <li>Suzuki, A., et al. (2011). Astrocyte-neuron lactate transport is required for long-term memory formation. <em>Cell</em>, 144(5), 810-823. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">doi:10.1016/j.cell.2011.02.018</a></li>
