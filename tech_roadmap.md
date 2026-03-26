@@ -4,7 +4,7 @@ title: "Technical Roadmap: Understanding WBE Through Measurement, Reconstruction
 description: "A learning roadmap for viewing mind uploading and WBE from the technical side, organized as a question tree from measurement to reconstruction, implementation, and verification."
 article_type: "Roadmap (Definition #1)"
 subtitle: "Break 'what counts as progress' into a question tree with reading order and minimum arrival conditions"
-last_updated: "2026-03-25"
+last_updated: "2026-03-26"
 note: "Provisional draft (updated continuously)"
 audience: "Readers who want the big picture, need a learning order, or want claim strength organized by level"
 reading_time: "20-30 min (5 min for the index only)"
@@ -20,6 +20,7 @@ page_highlights:
   - "M2 separates hardware latency from biological timing-state, so a fast device loop is not confused with timing-complete reconstruction."
   - "M1 / M5 keep neural state distinct from vascular transfer state, so a BOLD amplitude difference is not silently promoted to a neural difference."
   - "M1 / M3 now treat human in vivo evidence as a three-axis ladder, so proxy class, operational maturity, and calibrator role are kept separate instead of being collapsed into one observability score."
+  - "M3 now also keeps cohort / physiological regime compatibility and row robustness / availability separate from those three per-row axes, so a proxy-rich bundle is not silently treated as one matched human baseline or one stable stack."
   - "M4 / I6 now treat the body / environment boundary as an explicit scientific audit item, so a fast local loop is not silently promoted to solved embodiment."
   - "M7 / V4 now separate state annotation, trait-like backbone, biological drift, interface / decoder drift, and recalibration burden, so same-day success and adaptive rescue do not collapse into one longitudinal claim."
   - "Wearable OPM-MEG is treated as movement-tolerant macro measurement only when shielding, field control, sensor calibration, and anatomy choice are disclosed."
@@ -38,10 +39,11 @@ known_points:
   - "A disclosed body / environment boundary is a separate audit from low latency or online accuracy."
   - "Human-side advances reduce different error terms and remain differently deployment-limited; proxy-rich evidence is not yet same-subject, same-session, externally calibrated state identification."
   - "Proxy class, operational maturity, and calibrator role are different questions; a real human route may still calibrate only one bounded hidden-state family."
+  - "Even when human proxy rows look complementary, cohort / physiological regime mismatch, route-local repeatability, cross-centre transfer, and complete-case availability still remain separate gates."
   - "Longitudinal success is not one axis; within-day state fluctuation, trait-like backbone, biological drift, interface / decoder drift, and recalibration burden answer different questions."
   - "OPM-MEG motion tolerance still depends on magnetic shielding, active nulling, calibration, and source-model disclosure."
   - "The fact that personalization helps performance is not the same as showing a population-level neural signal; subject-fingerprint and acquisition-distribution audits are still required."
-  - "Richer observability and better fit do not by themselves collapse the compatible solution set; candidate-space and experiment-design audits remain separate."
+  - "Richer observability and better fit do not by themselves collapse the compatible solution set; candidate-space, bridge / composition validity, and experiment-design audits remain separate."
 unknown_points:
   - "It is still unsettled which measurement granularity will ultimately be sufficient for WBE."
   - "V5 identity questions and D-series social deployment conditions remain unresolved."
@@ -159,7 +161,7 @@ In the R-series, the branching point is not only the wiring diagram but also how
 <div class="note-box">
 <strong>If You Want The Current Human In Vivo Measurement Ladder First</strong>
 <p>
-This roadmap now distinguishes not only <strong>which variable class a human route constrains</strong> but also <strong>how specialized or model-heavy that route still is</strong>. For the front-door ladder, start with <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>; for stack-specific ceilings and stop rules, see <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: observability and claim ceiling by measurement stack</a> and <a href="verification.html#observability-budget">Verification: Observability Budget</a>. If the argument also bridges live measurement to later fixation / ex vivo follow-up or cross-day reacquisition, add the <a href="verification.html#state-continuity-bridge-card">Verification: State-Continuity Bridge Card</a> and <a href="wiki/state-continuity-bridge.html">Wiki: State-Continuity Bridge</a> instead of reading <strong>same-subject</strong> or <strong>same-brain</strong> as <strong>same-state</strong> by default.
+This roadmap now distinguishes not only <strong>which variable class a human route constrains</strong> but also <strong>how specialized or model-heavy that route still is</strong>. The site's current rule is stricter than a simple three-axis ladder: per-row <strong>proxy class / operational maturity / calibrator role</strong> still has to be combined with bundle-level checks on <strong>cohort / physiological regime compatibility</strong> and <strong>row robustness / availability disclosure</strong>. For the front-door ladder, start with <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>; for stack-specific ceilings and stop rules, see <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: observability and claim ceiling by measurement stack</a> and <a href="verification.html#observability-budget">Verification: Observability Budget</a>. If the argument also bridges live measurement to later fixation / ex vivo follow-up or cross-day reacquisition, add the <a href="verification.html#state-continuity-bridge-card">Verification: State-Continuity Bridge Card</a> and <a href="wiki/state-continuity-bridge.html">Wiki: State-Continuity Bridge</a> instead of reading <strong>same-subject</strong> or <strong>same-brain</strong> as <strong>same-state</strong> by default.
 </p>
 </div>
 <div class="note-box">
@@ -653,7 +655,7 @@ Therefore, in this roadmap, we first fix ``which loop class is handled and which
 <li><strong>Remaining latent states:</strong>Synaptic weight, receptor state, delay / timing-state, intrinsic excitability / homeostatic set point, neuromodulatory field, glial / metabolic state, and plastic history remain as separate variables. </li>
 </ul>
 <div class="note-box">
-<strong>2026-03-25 addendum: human in vivo evidence is a three-axis ladder, not one progress bar</strong>
+<strong>2026-03-26 addendum: three per-row axes are still not enough without cohort and robustness gates</strong>
 <p>
 The remaining weakness in this roadmap was that M3 still let very different human-side advances sound like one generic increase in <strong>observability</strong>. The primary literature does not support that compression. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> reconstructed a cubic millimeter of surgically resected human temporal cortex at nanoscale resolution, which is a <strong>local ex vivo structural scaffold</strong>. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built an in vivo SV2A atlas in healthy humans (<strong>17F/16M</strong>) calibrated with postmortem autoradiography, which is a <strong>regional synaptic-density proxy</strong>. <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> aggregated receptor / transporter PET into a <strong>regional chemoarchitectural prior</strong>, while <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a> and <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a> constrain <strong>selected occupancy / displacement routes</strong> rather than a free readout of the whole transmitter field. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derived a within-subject metabolic similarity matrix from <strong>five</strong> <sup>1</sup>H-MRSI metabolites in <strong>51 healthy participants</strong> with replication in <strong>13</strong>, which is a <strong>parcel-level biochemical scaffold</strong> rather than a flux map. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> used dynamic DMRSI plus a kinetic model at <strong>7 T</strong> across <strong>five healthy participants</strong> to estimate glucose transport and metabolic rates, while <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> demonstrated myelin-bilayer mapping in <strong>two healthy volunteers</strong> using specialized hardware. <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> added a <strong>reactive-astrogliosis PET proxy</strong>, and <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> plus <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> advanced human-side CSF mobility and sleep-linked clearance routes, but still through <strong>specialized MRI</strong> or an <strong>investigational device plus multicompartment model</strong>. Therefore, this roadmap now asks readers to label three separate things before promoting any human in vivo claim: <strong>(1) proxy class</strong>, <strong>(2) operational maturity / acquisition burden</strong>, and <strong>(3) safe calibrator role</strong>, meaning which hidden-state family the route can actually constrain on this site.
 </p>
@@ -734,7 +736,14 @@ The remaining weakness in this roadmap was that M3 still let very different huma
 </tbody>
 </table>
 <p>
-If several rows are combined in one argument, this roadmap still asks for <strong>same-subject / same-session / same-perturbation</strong> acquisition plus <strong>external calibration</strong> and a <a href="verification.html#human-proxy-composition-card">Human Proxy Composition Card</a> before talking about state-complete human measurement. If the bridge is sequential across live and ex vivo or across separated state regimes, it also asks for a <a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> plus the longer background rule in <a href="wiki/state-continuity-bridge.html">Wiki: State-Continuity Bridge</a>. Otherwise the result stays at <strong>proxy-rich but ceiling-limited human evidence</strong>, because proxy class, operational maturity, and calibrator role still remain mismatched. The front-door table is in <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>, the longer critique is in <a href="wiki/human-proxy-composition.html">Wiki: Human Proxy Composition and Route Maturity</a>, and the submission-side stop rule is <a href="verification.html#observability-budget">Verification: Observability Budget</a>.
+However, the three per-row axes are still not enough when several human rows are combined in one argument. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derive the main metabolic route from <strong>adolescents</strong> with a separate <strong>15-35-year</strong> replication cohort, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> report a <strong>7 T healthy-younger-adult</strong> CSF-mobility route, <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> study <strong>healthy older adults</strong> in a randomized sleep-deprivation crossover, and <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> remains a <strong>pathology-context reactive-astrogliosis</strong> PET route. Those are not one matched human baseline by default. In parallel, <a href="https://doi.org/10.1371/journal.pone.0206583" target="_blank">Holiga et al. (2018)</a> showed that MRI repeatability ranges from <strong>poor to excellent</strong> depending on the metric, <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021)</a> showed that cross-setup reproducibility has to be demonstrated rather than assumed, <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a> showed that same-sample multimodal comparison in CONNECT-ME depended on <strong>n = 48</strong> patients with all features and improved sensitivity despite a <strong>markedly decreased sample size</strong>, and <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> reported cross-centre multimodal prediction with missing values substituted by <strong>-1</strong> while pairwise disagreements rose in <strong>MCS</strong> and <strong>improved</strong> patients. Therefore, on this page, bundle promotion now also requires two bundle-level gates: <strong>(4) cohort / physiological regime compatibility</strong> and <strong>(5) row robustness / availability disclosure</strong>.
+</p>
+<ul>
+<li><strong>Cohort / physiological regime compatibility:</strong> name age band, health or pathology regime, and why transfer across cohorts is justified for the claimed latent variable.</li>
+<li><strong>Row robustness / availability disclosure:</strong> name route-local repeatability, cross-centre or cross-scanner transfer window if claimed, and whether the bundle depends on a complete-case subset or a missing-row policy.</li>
+</ul>
+<p>
+If several rows are combined in one argument, this roadmap now asks for <strong>same-subject / same-session / same-perturbation</strong> acquisition, <strong>cohort / regime compatibility</strong>, <strong>row-level repeatability or route-local reproducibility</strong>, <strong>availability / complete-case disclosure</strong>, <strong>external calibration</strong>, and a <a href="verification.html#human-proxy-composition-card">Human Proxy Composition Card</a> before talking about state-complete human measurement. If the bridge is sequential across live and ex vivo or across separated state regimes, it also asks for a <a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> plus the longer background rule in <a href="wiki/state-continuity-bridge.html">Wiki: State-Continuity Bridge</a>. Otherwise the result stays at <strong>proxy-rich but ceiling-limited human evidence</strong>, because proxy class, operational maturity, calibrator role, cohort compatibility, and robustness still remain mismatched. The front-door table is in <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>, the longer critique is in <a href="wiki/human-proxy-composition.html">Wiki: Human Proxy Composition and Route Maturity</a>, and the submission-side stop rule is <a href="verification.html#observability-budget">Verification: Observability Budget</a>.
 </p>
 </div>
 <div class="note-box">
@@ -1150,10 +1159,40 @@ The EEG literature with direct validation is rather revealing of its limitations
 </p>
 </div>
 <div class="note-box">
-<strong>2026-03-20 supplement: richer observables are not the same as a collapsed solution set</strong>
+<strong>2026-03-26 supplement: richer observables are not the same as a collapsed solution set</strong>
 <p>
-The remaining weak point here was that <strong>more measured variables</strong> could still sound too close to <strong>unique recovery</strong>. <a href="https://doi.org/10.1155/2019/8497093" target="_blank">Villaverde (2019)</a> reviewed that observability and structural identifiability are different questions, and <a href="https://doi.org/10.1098/rsif.2019.0043" target="_blank">Villaverde et al. (2019)</a> showed that unknown inputs, states, and parameters often have to be analysed jointly. In neuroscience, <a href="https://doi.org/10.1038/nn1352" target="_blank">Prinz et al. (2004)</a> showed that similar circuit activity can arise from disparate parameters, <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">Rasero et al. (2024)</a> showed that similar human activation patterns can still hide different macroscopic network states, and <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that connectome-constrained dynamics remain degenerate until additional recordings are supplied. Therefore, this roadmap now treats R7 as a three-step audit: <strong>(1) what the measurement stack makes observable</strong>, <strong>(2) what the declared model could identify in principle</strong>, and <strong>(3) what the actual dataset and perturbation design identify in practice</strong>.
+The remaining weak point here was that <strong>more measured variables</strong> could still sound too close to <strong>unique recovery</strong>. <a href="https://doi.org/10.1155/2019/8497093" target="_blank">Villaverde (2019)</a> reviewed that observability and structural identifiability are different questions, and <a href="https://doi.org/10.1098/rsif.2019.0043" target="_blank">Villaverde et al. (2019)</a> showed that unknown inputs, states, and parameters often have to be analysed jointly. In neuroscience, <a href="https://doi.org/10.1038/nn1352" target="_blank">Prinz et al. (2004)</a> showed that similar circuit activity can arise from disparate parameters, <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">Rasero et al. (2024)</a> showed that similar human activation patterns can still hide different macroscopic network states, and <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that connectome-constrained dynamics remain degenerate until additional recordings are supplied. A second weakness remained after that: <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> showed both <strong>common and divergent</strong> organization across simultaneous Ca<sup>2+</sup> and BOLD, <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed tightly coupled global progression plus <strong>two distinct network patterns</strong> in simultaneous EEG-PET-MRI, and <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a>, <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> show why same-brain or same-subject sequential pipelines still remain exposed to preservation change and state drift. Therefore, this roadmap now treats R7 as a five-step audit: <strong>(1) observability budget</strong>, <strong>(2) structural identifiability in the declared model space</strong>, <strong>(3) practical identifiability under the actual dataset and perturbation design</strong>, <strong>(4) bridge / composition validity when multimodal or sequential evidence is invoked</strong>, and <strong>(5) external validation plus abstention when candidate sets still overlap</strong>.
 </p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Evidence pattern</th>
+<th>What it can improve</th>
+<th>What it still does not close</th>
+<th>Required next audit on this page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Same-session multimodal bundle</strong></td>
+<td>Can tighten observability and expose complementary errors</td>
+<td>Does not by itself remove shared-driver risk, quantity mismatch, or latent-state multiplicity</td>
+<td><a href="verification.html#fusion-card">Fusion Card</a> plus the R7 candidate-space audit</td>
+</tr>
+<tr>
+<td><strong>Connectome-constrained predictor</strong></td>
+<td>Can restrict one family of candidate dynamics</td>
+<td>Does not by itself remove dynamical degeneracy or omitted-state families</td>
+<td><a href="verification.html#observability-budget">Observability Budget (Connectome-Constrained Model Card)</a> plus held-out recordings / perturbations</td>
+</tr>
+<tr>
+<td><strong>Same-brain or same-subject sequential pipeline</strong></td>
+<td>Can connect specimen identity across stages</td>
+<td>Does not by itself guarantee same-state continuity across fixation, delay, or regime shift</td>
+<td><a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> plus temporal-validity disclosure</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </details>
