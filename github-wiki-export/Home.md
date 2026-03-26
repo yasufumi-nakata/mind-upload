@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-21 / 位置づけ: Learning-first
+- 更新日: 2026-03-26 / 位置づけ: Learning-first
 
 ## このページの役割
 This page is a learning portal that makes the public pages of Mind-Upload easier to read. The public pages show what we know now, what we do not know yet, and what to read next, while the wiki teaches the basic explanations behind those pages in a deliberate order.
@@ -28,6 +28,7 @@ The wiki explains things in an accessible way, but it does not present unresolve
 - Current research already makes it possible to measure and reproducibly analyze part of the brain's signals.
 - Mind-Upload becomes much easier to follow if progress is separated from what remains unresolved.
 - Separating the roles of public pages and the wiki allows both an easy entry point and a deeper learning path.
+- Current human proxy rows differ by proxy class, operational maturity, and calibrator role, and same-subject wording can still remain bridge-limited.
 
 ## まだ分かっていないこと
 - Research is still underway on the conditions under which WBE could count as established.
@@ -40,9 +41,14 @@ The wiki explains things in an accessible way, but it does not present unresolve
 This wiki is a<strong>learning platform</strong> that you can return to before and after reading public pages. Public pages quickly tell you what you know now, what you don't know, and where you should read next. The wiki will explain the words, ideas, and reading methods behind each word.
 </p>
 
-<strong>How to use</strong>
+  <strong>How to use</strong>
 <p>
 If you just want to know the big picture first, you can go to the public page. However, if you get stuck on a term or assumption along the way, please come back to this wiki. The basic idea is to use it as a training wheel so you don't get lost at the entrance.
+</p>
+
+<strong>2026-03-26 route tightening: human observability is not one ladder</strong>
+<p>
+The learning portal now treats living-human evidence more strictly at the entrance. A reader now has to separate <strong>proxy class</strong>, <strong>operational maturity</strong>, and <strong>calibrator role</strong>, and then ask whether a bundle is still limited by <strong>composition</strong> or <strong>state continuity</strong>. This keeps beginner pages aligned with the stronger route-card rules already used on the core public pages.
 </p>
 
 <table>
@@ -75,9 +81,9 @@ If you just want to know the big picture first, you can go to the public page. H
 <td><a href="https://mind-upload.com/verification.html#state-completeness-gate">State variable completeness gate</a> / <a href="https://mind-upload.com/tech_roadmap.html#qa-m1">M1 observed variable</a></td>
 </tr>
 <tr>
-<td><strong>I want to know why current human proxy bundles still do not add up to state-complete readout</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/human-proxy-composition">Human proxy composition and route maturity</a></td>
-<td><a href="https://mind-upload.com/wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> / <a href="https://mind-upload.com/verification.html#human-proxy-composition-card">Human Proxy Composition Card</a></td>
+<td><strong>I want to know why current human proxy bundles and same-subject links still do not add up to same-state readout</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/human-proxy-composition">Human proxy composition and route maturity</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/state-continuity-bridge">State-Continuity Bridge</a></td>
+<td><a href="https://mind-upload.com/wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> / <a href="https://mind-upload.com/verification.html#human-proxy-composition-card">Human Proxy Composition Card</a> / <a href="https://mind-upload.com/verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a></td>
 </tr>
 <tr>
 <td><strong>Don't want to misread flashy claims</strong></td>

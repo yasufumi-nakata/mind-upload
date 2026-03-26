@@ -22,10 +22,10 @@ This page stays on the technology and natural-science side. Unresolved issues ar
 - [Wiki: Why wiring diagrams alone are not enough](https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough) - Explains what current structure-only routes still leave unresolved.
 - [Wiki: Observability and claim ceiling by measurement stack](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling) - Separates human proxy classes and measurement ceilings by what is directly observed.
 - [Wiki: Human Proxy Composition and Route Maturity](https://github.com/yasufumi-nakata/mind-upload/wiki/human-proxy-composition) - Explains why current human proxy bundles still stop below same-subject state-complete readout.
+- [Wiki: State-Continuity Bridge](https://github.com/yasufumi-nakata/mind-upload/wiki/state-continuity-bridge) - Explains why same-subject or same-brain sequencing still needs a bridge audit before same-state language is allowed.
 - [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - Explains why inverse models and causal models are not direct observation.
 - [Wiki: Homeostatic plasticity and maintenance state](https://github.com/yasufumi-nakata/mind-upload/wiki/homeostatic-plasticity-and-maintenance-state) - Organizes the slow hidden-state families that remain outside structure-only routes.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Shows why route cards, audits, and registries come before strong claims.
-- [Wiki: State-Continuity Bridge](https://github.com/yasufumi-nakata/mind-upload/wiki/state-continuity-bridge) - Explains why same-subject or same-brain sequencing still needs a bridge audit before same-state language is allowed.
 
 ## いま分かっていること
 - Some brain signals can already be measured and decoded for specific tasks under bounded conditions.
@@ -169,14 +169,14 @@ The older beginner summary was still too coarse because it let very different hu
 </tbody>
 </table>
 
-<strong>What still remains outside these human routes</strong>
-<p>
-Even after those advances, several maintenance-state families still remain outside comparable whole-brain human readout. <a href="https://doi.org/10.1126/science.adg9982" target="_blank">Santoni et al. (2024)</a> showed that chromatin plasticity can predetermine neuronal eligibility for memory-trace formation, <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2026)</a> showed causal, time-dependent thalamocortical transcriptional gates for memory stabilization, and <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> showed that local neurotransmitter inputs are encoded by broad astrocyte networks over minutes-long timescales. Those results justify keeping <strong>transcription / chromatin state</strong>, <strong>astrocyte-network state</strong>, and related maintenance controllers visible as separate hidden-state families rather than background noise.
-</p>
-
 <strong>More rows do not yet make one same-state sample</strong>
 <p>
 Even after the three-axis reading is made explicit, <strong>composition</strong> and <strong>bridge</strong> remain separate stop lines. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> showed that simultaneous multimodal recordings retain both common and divergent structure, and <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed that tightly coupled temporal progression can coexist with distinct network patterns in simultaneous EEG-PET-MRI. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> then showed that preservation route changes extracellular-space retention, while <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> showed that within-day EEG decoding conditions drift enough to motivate adaptive decoders. Therefore, <strong>same-subject</strong>, <strong>same-brain</strong>, or <strong>multimodal</strong> wording does not by itself convert several rows into one validated latent-state sample.
+</p>
+
+<strong>What still remains outside these human routes</strong>
+<p>
+Even after those advances, several maintenance-state families still remain outside comparable whole-brain human readout. <a href="https://doi.org/10.1126/science.adg9982" target="_blank">Santoni et al. (2024)</a> showed that chromatin plasticity can predetermine neuronal eligibility for memory-trace formation, <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2026)</a> showed causal, time-dependent thalamocortical transcriptional gates for memory stabilization, and <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> showed that local neurotransmitter inputs are encoded by broad astrocyte networks over minutes-long timescales. Those results justify keeping <strong>transcription / chromatin state</strong>, <strong>astrocyte-network state</strong>, and related maintenance controllers visible as separate hidden-state families rather than background noise.
 </p>
 
 <p>

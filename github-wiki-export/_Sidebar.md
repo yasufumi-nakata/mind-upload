@@ -62,7 +62,7 @@
 - [Wiki: Identity and copying issues](https://github.com/yasufumi-nakata/mind-upload/wiki/personhood-and-copy-problem)
 - [Wiki: Minimum artifact pack for L0](https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack)
 - [Wiki: observability and claim ceiling by measurement stack](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling)
-- [Wiki: Standards/Location/Validator/Benchmark](https://github.com/yasufumi-nakata/mind-upload/wiki/standards-repositories-validators-and-benchmarks)
+- [Wiki: Standards, Repositories, Validators, and Benchmarks](https://github.com/yasufumi-nakata/mind-upload/wiki/standards-repositories-validators-and-benchmarks)
 - [Wiki: state, trait, and drift](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift)
 - [Wiki: State-Continuity Bridge](https://github.com/yasufumi-nakata/mind-upload/wiki/state-continuity-bridge)
 - [Wiki: Straight path from EEG to L0](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-to-l0-route)
