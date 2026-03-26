@@ -5,7 +5,7 @@ description: A beginner explanation of why standards, benchmarks, preregistratio
 article_type: Wiki
 subtitle: Before celebrating a score, fix the ruler, the route card, and the failure log.
 author: Mind Uploading Research Project
-last_updated: '2026-03-25'
+last_updated: '2026-03-26'
 note: Beginner guide
 audience: People who want to understand the logic of the Verification Commons from the beginning
 reading_time: 14-18 minutes
@@ -17,11 +17,15 @@ page_highlights:
 - Standards, benchmarks, preregistration, route cards, and audits each solve a different failure mode.
 - Modern neuroscience results often need claim-specific route cards, not only a generic score sheet.
 - Proxy-rich human evidence still needs a Human Proxy Composition Card before it is read as same-subject state closure.
+- Human proxy bundles now need three axes first: proxy class, operational maturity, and calibrator role.
+- Even after those axes are logged, a bundle rises only if it passes robustness, common-driver / quantity-bridge, and increment gates.
 - Same-subject or same-brain workflows still need a State-Continuity Bridge Card before they are read as same-state evidence.
 known_points:
 - Comparable progress requires aligned inputs, evaluation, rules, and records.
 - Without preregistration and auditing, it becomes too easy to promote only favorable conditions.
 - Recent primary literature shows that decode, tractography, effective-connectivity, thermodynamic, closed-loop, human-proxy-composition, and bridge claims fail in different ways and therefore need different cards.
+- Proxy class, operational maturity, and calibrator role are different questions; a real human route may still calibrate only one bounded hidden-state family.
+- A proxy bundle still needs repeatability / transfer, shared-driver / quantity-bridge, and increment disclosure before it rises above the strongest single row.
 - Same-subject or same-brain wording can secure specimen identity while still leaving state continuity unresolved.
 unknown_points:
 - A complete WBE benchmark stack does not yet exist in finished public form.
@@ -76,6 +80,13 @@ The older beginner explanation correctly said that standards and audits matter, 
 <strong>2026-03-25 beginner tightening: proxy bundles and bridges are not side details</strong>
 <p>
 The current site had also become stricter in two ways that this beginner page still underplayed. First, several living-human proxy rows can all be real while still measuring different quantity types, spatial units, timescales, and model burdens. Second, <strong>same-subject</strong> or <strong>same-brain</strong> wording can still hide a sequential bridge across fixation, deformation, behavior, sleep/wake regime, or elapsed time. Those are scientific stop lines, not administrative add-ons.
+</p>
+</div>
+
+<div class="note-box">
+<strong>2026-03-26 beginner tightening: proxy bundles now need three axes and three gates</strong>
+<p>
+The remaining weakness was subtler. Even after telling readers that proxy bundles matter, this page still left too much room to think that listing several human rows side by side was already most of the work. The current site rule is stricter: a bundle must first disclose <strong>proxy class</strong>, <strong>operational maturity</strong>, and <strong>calibrator role</strong>, and then show that it passes <strong>robustness</strong>, <strong>common-driver / quantity-bridge</strong>, and <strong>increment</strong> gates. Without that, proxy-rich evidence remains scientifically meaningful but still below same-subject state closure.
 </p>
 </div>
 
@@ -160,6 +171,71 @@ The current site can no longer leave two failure modes to the deep pages only. O
 </p>
 </div>
 
+<section class="section" id="proxy-bundle-rules">
+<h2 class="section-title">Human proxy bundles now need three axes and three gates</h2>
+<p>
+The remaining beginner weakness was that saying <strong>proxy bundles matter</strong> still left too much room for readers to imagine that listing several living-human rows side by side was already most of the work. The current site rule is stricter. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> do not all measure the same quantity, do not run at the same burden, and do not safely calibrate the same hidden-state family. Therefore, a beginner page now has to separate <strong>what class of proxy the row is</strong>, <strong>how operationally mature the route is</strong>, and <strong>what bounded calibrator role it can safely play</strong>.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Axis</th>
+<th>What it asks</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Proxy class</strong></td>
+<td>What is directly observed: density proxy, biochemical similarity scaffold, kinetic rate map, myelin proxy, support-state proxy, or destructive local scaffold?</td>
+<td>Different quantity types are silently compressed into one progress bar.</td>
+</tr>
+<tr>
+<td><strong>Operational maturity</strong></td>
+<td>How specialized, small-cohort, model-heavy, or centre-bound is the route at its actual operating point?</td>
+<td>A proof-of-principle route can be mistaken for portable whole-brain measurement.</td>
+</tr>
+<tr>
+<td><strong>Calibrator role</strong></td>
+<td>Which hidden-state family does the route safely constrain, and what still remains latent?</td>
+<td>A real route can be overread as broadly calibrating maintenance-state completeness.</td>
+</tr>
+</tbody>
+</table>
+<p>
+Even that three-axis typing is still not enough. <a href="https://doi.org/10.1177/0271678X17724947" target="_blank">Finnema et al. (2018)</a> showed route-specific SV2A PET test-retest reproducibility of <strong>3-9%</strong> for regional V<sub>T</sub>, <a href="https://doi.org/10.1371/journal.pone.0206583" target="_blank">Holiga et al. (2018)</a> showed fMRI reliability ranging from <strong>poor to excellent</strong>, and <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021)</a> showed that some simultaneous EEG-fMRI connectome relationships can reproduce across <strong>72 subjects from four centres</strong> spanning <strong>1.5T to 7T</strong>. <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a> then showed that a multimodal acute-DoC dataset can shrink from <strong>87 enrolled patients</strong> to <strong>63 with both EEG and fMRI</strong> and <strong>48</strong> for direct same-feature comparison, while <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> showed that adding modalities can improve prediction while still increasing <strong>inter-modality disagreement</strong> in clinically important groups. Finally, <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> showed both <strong>common and divergent</strong> cross-modal organization, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that significant task BOLD changes can coexist with <strong>opposite oxygen-metabolism changes</strong>. Therefore, a human proxy bundle now rises only if it passes three separate gates.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Gate</th>
+<th>What must be shown</th>
+<th>Ceiling if it is missing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Robustness</strong></td>
+<td>Show row-level repeatability at the actual operating point, distinguish route-local repeatability from cross-centre transfer, and disclose the real complete-case slice.</td>
+<td>The bundle remains setup-bound, centre-bound, or complete-case-bound evidence.</td>
+</tr>
+<tr>
+<td><strong>Common-driver / quantity-bridge</strong></td>
+<td>Show that the rows are not only synchronized, but interpretable on an explicitly named biological axis after shared-driver audit.</td>
+<td>Cross-row agreement remains proxy-rich correlation or shared-factor evidence rather than one validated state variable.</td>
+</tr>
+<tr>
+<td><strong>Increment over the strongest single row</strong></td>
+<td>Show what the bundle adds beyond the best individual row under matched cohort, condition, and reading rule.</td>
+<td>Row diversity remains richer description, not same-subject state closure.</td>
+</tr>
+</tbody>
+</table>
+<p>
+If the bundle is sequential rather than same-session, the <a href="../verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> is added on top. <strong>Same-subject</strong> still solves specimen identity, not state continuity.
+</p>
+</section>
+
 <section class="section" id="claim-specific-cards">
 <h2 class="section-title">Why modern neuroscience needs claim-specific route cards</h2>
 <table class="data-table">
@@ -198,7 +274,7 @@ The current site can no longer leave two failure modes to the deep pages only. O
 </tr>
 <tr>
 <td><strong>Living-human proxy bundle</strong></td>
-<td>SV2A PET, MRSI similarity, dynamic DMRSI, myelin MRI, and clearance routes measure different quantity types, spatial units, timescales, and model burdens; agreement can still reflect shared nuisance or the strongest single row.</td>
+<td>SV2A PET, MRSI similarity, dynamic DMRSI, myelin MRI, and clearance routes measure different quantity types, spatial units, timescales, model burdens, and safe calibrator roles; even a well-typed bundle still needs robustness, shared-driver / quantity-bridge, and increment disclosure.</td>
 <td>Human Proxy Composition Card.</td>
 </tr>
 <tr>
@@ -219,7 +295,7 @@ WBE is especially vulnerable to level substitution. It is easy to describe an L1
 <div class="note-box">
 <strong>Representative primary-literature reasons</strong>
 <p>
-<a href="https://www.nature.com/articles/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a> and <a href="https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2021.672946/full" target="_blank">Di et al. (2021)</a> show why decode scores need shortcut audits. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4246325/" target="_blank">Thomas et al. (2014)</a> and <a href="https://www.nature.com/articles/s41467-017-01285-x" target="_blank">Maier-Hein et al. (2017)</a> show why tractography claims need route disclosure. <a href="https://www.sciencedirect.com/science/article/abs/pii/S1053811904001648" target="_blank">Penny et al. (2004)</a> and <a href="https://pubmed.ncbi.nlm.nih.gov/22561579/" target="_blank">Rosa et al. (2012)</a> show why effective-connectivity claims need candidate-model disclosure. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8617485/" target="_blank">Lynn et al. (2021)</a> and <a href="https://www.nature.com/articles/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> show why thermodynamic language hides multiple estimator families. <a href="https://pubmed.ncbi.nlm.nih.gov/31551604/" target="_blank">Musall et al. (2019)</a> and <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8715714/" target="_blank">Flesher et al. (2021)</a> show why closed-loop results need a boundary card rather than latency alone. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> show why current living-human proxy rows do not all measure the same object. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a>, <a href="https://doi.org/10.1523/ENEURO.0104-23.2023" target="_blank">Idziak et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">Benisty et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> show why same-subject or same-brain sequencing still needs bridge validation.
+<a href="https://www.nature.com/articles/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a> and <a href="https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2021.672946/full" target="_blank">Di et al. (2021)</a> show why decode scores need shortcut audits. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4246325/" target="_blank">Thomas et al. (2014)</a> and <a href="https://www.nature.com/articles/s41467-017-01285-x" target="_blank">Maier-Hein et al. (2017)</a> show why tractography claims need route disclosure. <a href="https://www.sciencedirect.com/science/article/abs/pii/S1053811904001648" target="_blank">Penny et al. (2004)</a> and <a href="https://pubmed.ncbi.nlm.nih.gov/22561579/" target="_blank">Rosa et al. (2012)</a> show why effective-connectivity claims need candidate-model disclosure. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8617485/" target="_blank">Lynn et al. (2021)</a> and <a href="https://www.nature.com/articles/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> show why thermodynamic language hides multiple estimator families. <a href="https://pubmed.ncbi.nlm.nih.gov/31551604/" target="_blank">Musall et al. (2019)</a> and <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8715714/" target="_blank">Flesher et al. (2021)</a> show why closed-loop results need a boundary card rather than latency alone. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1177/0271678X17724947" target="_blank">Finnema et al. (2018)</a>, <a href="https://doi.org/10.1371/journal.pone.0206583" target="_blank">Holiga et al. (2018)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021)</a>, <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a>, <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a>, <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a>, and <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> show why current living-human proxy rows do not all measure the same object, do not share one robustness level, and do not automatically add up to same-subject state closure. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a>, <a href="https://doi.org/10.1523/ENEURO.0104-23.2023" target="_blank">Idziak et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">Benisty et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> show why same-subject or same-brain sequencing still needs bridge validation.
 </p>
 </div>
 </section>
@@ -297,6 +373,13 @@ On Mind-Upload, the public <a href="../verification.html">Verification</a> page 
 <li>Benisty, H., Barson, D., Moberly, A. H., et al. (2024). Rapid fluctuations in functional connectivity of cortical networks encode spontaneous behavior. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">doi:10.1038/s41593-023-01498-y</a></li>
 <li>Egger, A., Bayon, C., d'Almeida, J., et al. (2024). Chrono-EEG dynamics influencing hand gesture decoding: a 10-hour study. <em>Scientific Reports</em>, 14, 20247. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">doi:10.1038/s41598-024-70609-x</a></li>
 <li>Dagum, P., Elbert, D. L., Giovangrandi, L., et al. (2026). The glymphatic system clears amyloid beta and tau from brain to plasma in humans. <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
+<li>Finnema, S. J., Nabulsi, N. B., Mercier, J., et al. (2018). Kinetic evaluation and test-retest reproducibility of [<sup>11</sup>C]UCB-J, a novel radioligand for positron emission tomography imaging of synaptic vesicle glycoprotein 2A in humans. <em>Journal of Cerebral Blood Flow &amp; Metabolism</em>, 38(11), 2041-2052. <a href="https://doi.org/10.1177/0271678X17724947" target="_blank">doi:10.1177/0271678X17724947</a></li>
+<li>Holiga, S., Sambataro, F., Luzy, C., et al. (2018). Test-retest reliability of task-based and resting-state blood oxygen level dependence and cerebral blood flow measures. <em>PLOS ONE</em>, 13(11), e0206583. <a href="https://doi.org/10.1371/journal.pone.0206583" target="_blank">doi:10.1371/journal.pone.0206583</a></li>
+<li>Wirsich, J., Jorge, J., Iannotti, G. R., et al. (2021). The relationship between EEG and fMRI connectomes is reproducible across simultaneous EEG-fMRI studies from 1.5T to 7T. <em>NeuroImage</em>, 231, 117864. <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">doi:10.1016/j.neuroimage.2021.117864</a></li>
+<li>Amiri, M., Fisher, P. M., Raimondo, F., et al. (2023). Multimodal prediction of residual consciousness in the intensive care unit: the CONNECT-ME study. <em>Brain</em>, 146(1), 50-64. <a href="https://doi.org/10.1093/brain/awac335" target="_blank">doi:10.1093/brain/awac335</a></li>
+<li>Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <em>Nature Communications</em>, 15, 229. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
+<li>Epp, S. M., Halani, S., Paquette, M., et al. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
+<li>Manasova, V., et al. (2026). Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness. <em>Brain</em>. <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">doi:10.1093/brain/awaf412</a></li>
 </ol>
 </section>
 
