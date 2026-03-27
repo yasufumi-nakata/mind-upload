@@ -28,6 +28,7 @@ The ceilings on this page are operational inferences drawn from primary literatu
 - Recent human-side advances reduce different uncertainty terms and are scientifically meaningful, but they are not one common measurement class.
 - SV2A PET, 1H-MRSI similarity, 31P-MRS energetic balance, deuterium metabolite / rate imaging, quantity-defined myelin MRI, BBB water-exchange MRI, tracer-specific BBB PET, target-defined astrocyte PET, and CSF / glymphatic routes all require route-specific interpretation.
 - Proxy class and operational maturity still do not tell you what the route safely calibrates, so calibrator role has to be stated separately.
+- A local rodent causal result plus a living-human proxy result still does not measure the same controller unless the bridge assumption is named explicitly.
 - Even when quantity type and model burden are logged, cross-row composition still requires age band, health/pathology regime, and transfer rationale.
 - Even when proxy class, maturity, and calibrator role are logged, composition still needs row-level repeatability, cross-centre transfer, and complete-case disclosure.
 - Simultaneous multimodal acquisition can reveal both common and divergent structure across modalities.
@@ -49,6 +50,11 @@ Recent human proxy advances are real, but they do not yet compose automatically 
 <strong>What this page fixes</strong>
 <p>
 The public pages had already become stricter about human proxy families, but this composition page was still lagging behind the site's newer taxonomy. It still let readers compress <strong>31P energetic balance</strong> into <strong>deuterium rate imaging</strong>, <strong>myelin-water / MT-family / bilayer / qT1 remyelination-sensitive</strong> routes into one myelin meter, <strong>BBB water-exchange MRI</strong> into <strong>tracer-specific BBB PET transport</strong>, and <strong>MAO-B</strong> into <strong>I2BS</strong> astrocyte PET. The current primary literature does not support those shortcuts. This page now fixes the composition rule at the same granularity as the rest of the site.
+</p>
+
+<strong>Another shortcut this page now blocks</strong>
+<p>
+A local causal paper and a living-human proxy paper do not automatically add up to measured human controller state. On this site, <strong>causal relevance</strong> and <strong>living-human observability</strong> are different axes, so the bridge has to be disclosed rather than implied.
 </p>
 
 <strong>Scope</strong>
@@ -189,7 +195,7 @@ One remaining shortcut is to treat any reproducibility statement as if it solved
 </tbody>
 </table>
 
-<h2>Eight collapse errors to block</h2>
+<h2>Nine collapse errors to block</h2>
 <table>
 <thead>
 <tr>
@@ -228,6 +234,11 @@ One remaining shortcut is to treat any reproducibility statement as if it solved
 <td><strong>Cohort-regime collapse</strong><br><code>adolescent cohort + healthy younger adults + healthy older adults + pathology-specific remyelination + AD continuum = same human baseline</code></td>
 <td><a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derive their main metabolic-similarity route from adolescents aged 13-15 years, <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> establish BBB water-exchange reference ranges across adulthood, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> map CSF mobility in healthy younger adults and separately examine CAA, <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> test healthy older adults aged 49-66 years, <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> image reactive astrogliosis across the Alzheimer disease continuum, and <a href="https://doi.org/10.1111/bpa.70010" target="_blank">Galbusera et al. (2025)</a> study postmortem MS cortex. These rows are informative, but they do not share one developmental, aging, or pathology regime by default.</td>
 <td>Disclose age band, health/pathology regime, enrichment or exclusion criteria, and why transfer across cohorts is justified for the claimed latent variable.</td>
+</tr>
+<tr>
+<td><strong>Causal-bridge collapse</strong><br><code>local rodent controller causality + human proxy observability = measured human controller</code></td>
+<td><a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> show local rodent astrocyte-causal control of recall, multiday stabilization, and fear-memory representations, whereas <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> and <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. (2018)</a> constrain target-defined human astrocyte-related PET, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> constrains CSF mobility, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> constrains model-based overnight biomarker efflux. These do not share the same species, spatial unit, direct observable, or controller identity.</td>
+<td>Name the state family made causally relevant, the human direct observable, the species / unit gap, the bridge assumption, and the local controller that remains latent.</td>
 </tr>
 <tr>
 <td><strong>Common-driver collapse</strong><br><code>if rows move together, they must be the same latent variable</code></td>
@@ -363,6 +374,45 @@ Those three axes are defined <strong>per route</strong>. When several routes are
 The safe ceiling of a proxy bundle is not set by the most impressive hardware description or by the number of rows listed. It is set by the <strong>narrowest well-supported calibrator role</strong> that survives matched-condition comparison, common-driver audit, and external calibration, after any <strong>family-internal quantity / target / transport split</strong> has also been made explicit. Without that separation, <strong>proxy-rich</strong> is too easy to misread as <strong>broad hidden-state calibration</strong>.
 </p>
 
+<h2>Causal relevance is not yet human controller measurement</h2>
+<p>
+One shortcut still remained even after quantity type, model burden, and calibrator role were separated. Readers could still place a strong local rodent causal paper beside a living-human proxy paper and let them sound additive, as if the responsible controller had now been measured in humans. The current primary literature does not support that jump.
+</p>
+<p>
+On the causal side, <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a> showed that learning-associated hippocampal astrocyte ensembles regulate recall, <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a> showed that emotional-memory-associated astrocytic ensembles contribute to multiday stabilization, and <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> showed that basolateral-amygdala astrocyte Ca<sup>2+</sup> signaling supports fear-memory retrieval / extinction representations. On the human side, <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. (2018)</a> established a first-in-human I<sub>2</sub>BS PET route with dose-dependent idazoxan blockade and no isocarboxazid block, <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> measured MAO-B-linked reactive-astrogliosis burden across the Alzheimer disease spectrum, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> measured region-specific CSF mobility, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> inferred overnight brain-to-plasma biomarker transport under a multicompartment model. Those human routes improve observability, but they do not directly reveal which astrocyte ensemble, clearance controller, or synapse-support mechanism generated the causal effect in the rodent studies.
+</p>
+<table>
+<thead>
+<tr>
+<th>Evidence layer</th>
+<th>What it directly supports</th>
+<th>What it still does not support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Local rodent causal controller papers</strong></td>
+<td>Show that a named support-state family can matter causally for recall, stabilization, or fear-memory dynamics in a specific circuit and preparation.</td>
+<td>Do not by themselves provide living-human whole-brain observability or a target-defined human readout.</td>
+</tr>
+<tr>
+<td><strong>Human target-defined astrocyte / clearance proxies</strong></td>
+<td>Show that a bounded human route can observe target-defined binding, CSF mobility, or model-based biomarker efflux under a stated tracer / sequence / model.</td>
+<td>Do not by themselves identify the local controller, cell ensemble, or causal mechanism that mattered in the animal studies.</td>
+</tr>
+<tr>
+<td><strong>Combined narrative without an explicit bridge</strong></td>
+<td>Supports at most that the state family is <strong>causally important somewhere</strong> and <strong>partly observable somewhere else</strong>.</td>
+<td>Does not justify the sentence <strong>"the responsible controller is now measured in humans"</strong>.</td>
+</tr>
+</tbody>
+</table>
+
+<strong>Operational rule on this site</strong>
+<p>
+If a proxy bundle mixes local causal evidence with living-human proxy evidence, this site now asks for a <strong>causal-bridge statement</strong>: name <strong>(1) the state family made causally relevant</strong>, <strong>(2) the human direct observable</strong>, <strong>(3) the species / spatial-unit / timescale gap</strong>, <strong>(4) the bridge assumption that would connect them</strong>, and <strong>(5) the controller that still remains latent in humans</strong>. Without that bridge statement, the bundle stays at <strong>causally relevant somewhere + human proxy somewhere</strong>, not <strong>measured human controller state</strong>.
+</p>
+
 <h2>Same-session multimodal does not erase the composition problem</h2>
 <p>
 It is tempting to think that if several modalities are acquired simultaneously, the composition problem disappears. The current primary literature does not support that shortcut. Simultaneous acquisition narrows one class of timing mismatch, but it still leaves open <strong>what is shared</strong>, <strong>what remains modality-specific</strong>, and <strong>what common factors may come from physiology rather than the target neural variable</strong>.
@@ -465,6 +515,10 @@ If the claim depends on treating a sequential bridge as one latent-state sample,
 <td>Stops a real human route from being overread as if it calibrated every hidden-state family, rather than one bounded family such as regional density, parcel similarity, macro energetic balance, deuterium rate, quantity-defined myelin, tracer-specific transport, target-defined astrocyte burden, or support-state mobility.</td>
 </tr>
 <tr>
+<td><strong>Causal-bridge statement when local animal causality and human proxy evidence are mixed</strong></td>
+<td>Stops “causally important somewhere + human proxy somewhere” from being rewritten as measured human controller state without naming the bridge assumption and residual latent controller.</td>
+</tr>
+<tr>
 <td><strong>External calibration or perturbation route</strong></td>
 <td>Needed to separate a shared statistical factor from a validated biological variable.</td>
 </tr>
@@ -485,7 +539,7 @@ If the claim depends on treating a sequential bridge as one latent-state sample,
 
 <strong>Operational rule on this site</strong>
 <p>
-If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich but ceiling-limited human evidence</strong>. It is not promoted to <strong>same-subject cross-stack state identification</strong>, <strong>unique internal-state recovery</strong>, or <strong>state-complete readout</strong>. In particular, row diversity without explicit <strong>proxy class</strong>, <strong>operational maturity</strong>, <strong>calibrator role</strong>, <strong>row-level repeatability</strong>, <strong>cross-centre transfer</strong>, <strong>partial-availability disclosure</strong>, <strong>common-driver audit</strong>, and a clear <strong>increment over the strongest single row</strong> is not treated as real state closure. The public-facing implementation of that rule is the <a href="https://mind-upload.com/verification.html#human-proxy-composition-card">Verification: Human Proxy Composition Card</a>.
+If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich but ceiling-limited human evidence</strong>. It is not promoted to <strong>same-subject cross-stack state identification</strong>, <strong>unique internal-state recovery</strong>, or <strong>state-complete readout</strong>. In particular, row diversity without explicit <strong>proxy class</strong>, <strong>operational maturity</strong>, <strong>calibrator role</strong>, <strong>causal-bridge statement when mixed-species causal evidence is used</strong>, <strong>row-level repeatability</strong>, <strong>cross-centre transfer</strong>, <strong>partial-availability disclosure</strong>, <strong>common-driver audit</strong>, and a clear <strong>increment over the strongest single row</strong> is not treated as real state closure. The public-facing implementation of that rule is the <a href="https://mind-upload.com/verification.html#human-proxy-composition-card">Verification: Human Proxy Composition Card</a>.
 </p>
 
 <h2>References (main)</h2>
@@ -515,6 +569,9 @@ If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich b
 <li>Jaisa-Aad, M., Muñoz-Castro, C., Healey, M. A., Hyman, B. T., &amp; Serrano-Pozo, A. (2024). Characterization of monoamine oxidase-B (MAO-B) as a biomarker of reactive astrogliosis in Alzheimer’s disease and related dementias. <a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">doi:10.1007/s00401-024-02712-2</a></li>
 <li>Hirschler, L., Runderkamp, B. A., Decker, A., et al. (2025). Region-specific drivers of CSF mobility measured with MRI in humans. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
 <li>Dagum, P., Elbert, D. L., Giovangrandi, L., et al. (2026). The glymphatic system clears amyloid beta and tau from brain to plasma in humans. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
+<li>Williamson, M. R., Kwon, W., Woo, J., et al. (2025). Learning-associated astrocyte ensembles regulate memory recall. <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">doi:10.1038/s41586-024-08170-w</a></li>
+<li>Dewa, K., Kaseda, K., Kuwahara, A., et al. (2025). The astrocytic ensemble acts as a multiday trace to stabilize memory. <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">doi:10.1038/s41586-025-09619-2</a></li>
+<li>Bukalo, O., et al. (2026). Astrocytes enable amygdala neural representations supporting memory. <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">doi:10.1038/s41586-025-10068-0</a></li>
 <li>Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
 <li>Chen, J. E., Lewis, L. D., Coursey, S. E., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
 <li>Bolt, T. S., et al. (2025). Autonomic physiological coupling of the global fMRI signal. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">doi:10.1038/s41593-025-01945-y</a></li>
