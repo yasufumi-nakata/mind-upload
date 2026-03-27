@@ -5,7 +5,7 @@ description: "A practical glossary of the terms used most often in Mind-Upload, 
 article_type: Reference
 subtitle: "Start by keeping the words straight"
 author: Mind Uploading Research Project
-last_updated: "2026-03-27"
+last_updated: "2026-03-28"
 note: "Living document"
 audience: "Readers who do not want to get stuck on terminology and anyone trying to avoid category mistakes"
 reading_time: "3 to 10 minutes for only the necessary items"
@@ -16,12 +16,14 @@ page_highlights:
   - "It now includes the front-door verification terms added in the March 2026 re-audit, such as claim ceiling, shortcut auditing, maintenance-state, and vascular-state / CVR audit."
   - "It now also includes the human-observability and support-state terms needed after the March 2026 deepening pass, such as proxy class, route maturity / model burden, calibrator role, support-state proxy, and clearance / immune support."
   - "It now also defines the newer route-card semantics added in the late-March 2026 passes, such as field-formation wall, Fusion Card, Human Proxy Composition Card, shared-driver audit, strongest single row, and State-Continuity Bridge Card."
+  - "It now also fixes tractography-specific stop-line terms such as macro pathway prior and tractography route card, so living-human connectome language is not overread."
   - "It is especially careful about pairs that sound similar but should not be collapsed, such as observability / identifiability / direct validation and functional connectivity / effective connectivity / causal wiring."
   - "If a term blocks your reading, this page is meant to get you unstuck quickly and send you back to the main text."
 known_points:
   - "Many misunderstandings can be avoided simply by reducing terminology confusion."
   - "It is especially important to distinguish between decode/emulate, correlation/causation, functional connectivity/effective connectivity/causal wiring, observability/identifiability, model fit/direct validation, and brain signal/language prior."
   - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, astrocyte-state, clearance / immune support, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, route-maturity, and calibrator-role language."
+  - "Readers also need a term-level stop line between connectome as structural scaffold and living-human tractography as an acquisition- and graph-conditioned macro pathway prior."
   - "The newer route-card names are not decorative labels; they each name a distinct failure mode such as upstream visibility loss, cross-stack shared-driver risk, or broken state continuity across a sequential bridge."
   - "This page serves as an entry point for short definitions and a way to return to the main text."
 unknown_points:
@@ -343,6 +345,10 @@ If names such as <strong>field-formation wall</strong>, <strong>Fusion Card</str
 <td>A site rule that separates what entered the sensor from what still had to be inferred. It prevents “multimodal” or “higher resolution” from being misread as state-complete.</td>
 </tr>
 <tr>
+<td><strong>Macro pathway prior</strong></td>
+<td>A tractography-derived human connectome or bundle estimate that constrains large-scale white-matter organization without becoming a synapse-resolved, direction-complete, or pipeline-invariant graph. Acquisition scheme, endpoint assignment, parcellation, filtering, and uncertainty handling can all change it.</td>
+</tr>
+<tr>
 <td><strong>Proxy class</strong></td>
 <td>The kind of variable a route actually constrains, such as structural scaffold, synaptic-density proxy, biochemical scaffold, macro energetic proxy, or clearance proxy. It says <strong>what object is being measured</strong>, not how mature the route is.</td>
 </tr>
@@ -373,6 +379,10 @@ If names such as <strong>field-formation wall</strong>, <strong>Fusion Card</str
 <tr>
 <td><strong>Fusion Card</strong></td>
 <td>The disclosure rule for multimodal or atlas-informed claims. It asks for acquisition relation, lag / synchronization audit, co-registration scope, fusion-model burden, shared-vs-specific component disclosure, external calibration, and abstention boundary before “multimodal” is read as stronger than the best unimodal route.</td>
+</tr>
+<tr>
+<td><strong>Tractography route card</strong></td>
+<td>The disclosure rule for tractography-derived connectome claims. It asks for direct observable, acquisition / harmonization scheme, cortical-endpoint assignment, graph-construction choices, uncertainty quantification, external calibration, and abstention boundary before a diffusion-MRI graph is read beyond the macro-pathway-prior ceiling.</td>
 </tr>
 <tr>
 <td><strong>State-Continuity Bridge Card</strong></td>
@@ -550,7 +560,11 @@ If names such as <strong>field-formation wall</strong>, <strong>Fusion Card</str
 </tr>
 <tr>
 <td><strong>Connectome</strong></td>
-<td>Complete map of neural connections in the brain. In Mind-Upload it counts as <strong>structural scaffold evidence</strong>, not as state-complete reconstruction, because excitability, timing-state, transcription/chromatin, proteostasis, ECM, ionic state, and maintenance support remain separate variables.</td>
+<td>Complete map of neural connections in the brain. In Mind-Upload it counts as <strong>structural scaffold evidence</strong>, not as state-complete reconstruction, because excitability, timing-state, transcription/chromatin, proteostasis, ECM, ionic state, and maintenance support remain separate variables. If the route is living-human diffusion-MRI tractography, the safe reading is lower still: it becomes an acquisition- and graph-conditioned <strong>macro pathway prior</strong> unless stronger calibration is named explicitly.</td>
+</tr>
+<tr>
+<td><strong>Human tractography connectome</strong></td>
+<td>A living-human diffusion-MRI-derived connectome estimate. It can support major-bundle hypotheses, parcel-level pathway likelihoods, or calibrated bundle comparisons, but it is still conditioned by q-space sampling, endpoint policy, parcellation, filtering, and uncertainty modeling rather than functioning as one stable edge-complete graph.</td>
 </tr>
 <tr>
 <td><strong>NMM（Neural Mass Model）</strong></td>
@@ -775,6 +789,15 @@ Although non-invasive decoding and ESI are making steady progress, a successful 
 <li>Ahlfors, S. P., Han, J., Belliveau, J. W., &amp; Hämäläinen, M. S. (2010). Sensitivity of MEG and EEG to source orientation. <a href="https://doi.org/10.1007/s10548-010-0154-x" target="_blank">doi:10.1007/s10548-010-0154-x</a></li>
 <li>Goldenholz, D. M., Ahlfors, S. P., Hämäläinen, M. S., Sharon, D., Ishitobi, M., Vaina, L. M., &amp; Stufflebeam, S. M. (2009). Mapping the signal-to-noise-ratios of cortical sources in magnetoencephalography and electroencephalography. <a href="https://doi.org/10.1002/hbm.20571" target="_blank">doi:10.1002/hbm.20571</a></li>
 <li>Piastra, M. C., Nüßing, A., Vorwerk, J., Clerc, M., Engwer, C., &amp; Wolters, C. H. (2021). A comprehensive study on electroencephalography and magnetoencephalography sensitivity to cortical and subcortical sources. <a href="https://doi.org/10.1002/hbm.25272" target="_blank">doi:10.1002/hbm.25272</a></li>
+<li>Thomas, C., Ye, F. Q., Irfanoglu, M. O., Modi, P., Saleem, K. S., Leopold, D. A., &amp; Pierpaoli, C. (2014). Anatomical accuracy of brain connections derived from diffusion MRI tractography is inherently limited. <a href="https://doi.org/10.1073/pnas.1405672111" target="_blank">doi:10.1073/pnas.1405672111</a></li>
+<li>Reveley, C., Seth, A. K., Pierpaoli, C., Silva, A. C., Yu, D., Saunders, R. C., Leopold, D. A., &amp; Ye, F. Q. (2015). Superficial white matter fiber systems impede detection of long-range cortical connections in diffusion MR tractography. <a href="https://doi.org/10.1073/pnas.1418198112" target="_blank">doi:10.1073/pnas.1418198112</a></li>
+<li>Schilling, K. G., Gao, Y., Janve, V., Stepniewska, I., Landman, B. A., &amp; Anderson, A. W. (2018). Confirmation of a gyral bias in diffusion MRI fiber tractography. <a href="https://doi.org/10.1002/hbm.23936" target="_blank">doi:10.1002/hbm.23936</a></li>
+<li>Gajwani, M., Oldham, S., Pang, J. C., Arnatkevičiūtė, A., Tiego, J., Bellgrove, M. A., &amp; Fornito, A. (2023). Can hubs of the human connectome be identified consistently with diffusion MRI? <a href="https://doi.org/10.1162/netn_a_00324" target="_blank">doi:10.1162/netn_a_00324</a></li>
+<li>He, Y., Hong, Y., Wu, Y., et al. (2024). Spherical-deconvolution informed filtering of tractograms changes laterality of structural connectome. <a href="https://doi.org/10.1016/j.neuroimage.2024.120904" target="_blank">doi:10.1016/j.neuroimage.2024.120904</a></li>
+<li>McMaster, E. M., Newlin, N. R., Rudravaram, G., et al. (2025). Harmonized connectome resampling for variance in voxel sizes. <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">doi:10.1016/j.mri.2025.110424</a></li>
+<li>Manzano-Patrón, J. P., Deistler, M., Schröder, C., et al. (2025). Uncertainty mapping and probabilistic tractography using Simulation-based Inference in diffusion MRI: A comparison with classical Bayes. <a href="https://doi.org/10.1016/j.media.2025.103580" target="_blank">doi:10.1016/j.media.2025.103580</a></li>
+<li>Zhu, S., Huszar, I. N., Cottaar, M., et al. (2025). Imaging the structural connectome with hybrid MRI-microscopy tractography. <a href="https://doi.org/10.1016/j.media.2025.103498" target="_blank">doi:10.1016/j.media.2025.103498</a></li>
+<li>Bramati, I. B., Szczupak, D., Carneiro Monteiro, M., Meireles, F., Menezes Guimarães, D., Dean, R. J., Paul, L. K., &amp; Tovar-Moll, F. (2026). Diffusion MRI sampling schemes bias diffusion metrics and tractography. <a href="https://doi.org/10.3389/fnimg.2026.1670604" target="_blank">doi:10.3389/fnimg.2026.1670604</a></li>
 <li>Kothe, C., Shirazi, S. Y., Stenner, T., Medine, D., Boulay, C., Grivich, M. I., Artoni, F., Mullen, T., Delorme, A., &amp; Makeig, S. (2025). The lab streaming layer for synchronized multimodal recording. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
 <li>Wei, H., Prasad, G., Ombao, H., &amp; Hajnal, J. V. (2020). Bayesian fusion and multimodal DCM for EEG and fMRI. <a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">doi:10.1016/j.neuroimage.2020.116595</a></li>
 <li>Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
