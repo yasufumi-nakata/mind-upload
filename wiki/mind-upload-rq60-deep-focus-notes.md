@@ -396,3 +396,19 @@ Reasons for proceeding in this order:
 4. `U11-3`（理論比較I/O仕様）
 5. `U3-5`（境界拡張proxyと外部依存境界）
 6. `U15-1`（神経データ機微性の制度接続）
+
+## 2026-03-27 13:02 JST 再検証ログ（本run / 6RQ深掘り固定）
+
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` を正本として再突合し、`RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認しました。
+- 本runは汎用横断の追加を行わず、非重複6RQ（`U0-1/U1-1/U4-3/U8-6/U12-3/U14-4`）を `1RQ=1検証命題=1応募テーマ=1主データ` で固定しました。
+- 参照主データID（`11,56,19,6`）は `EEG-DATA/eeg_dataset_summary_ja.csv` の `ID/旧ID` で実在（欠落 `0`）を確認しました。
+- 助成接続は `G1-G6` 実ID系（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）を維持しました。
+
+### 本runで優先して深掘りする6RQ
+
+1. `U1-1`（逆問題の事前分布比較と採択規則）
+2. `U0-1`（同一性KPIの観測一致/介入一致二軸化）
+3. `U14-4`（Model Card / Dataset Card の契約要件化）
+4. `U4-3`（反事実誤差による理論比較固定）
+5. `U8-6`（再学習頻度と安全余裕のトレードオフ固定）
+6. `U12-3`（心理的連続性監査ログの制度接続準備）
