@@ -34,6 +34,7 @@ page_highlights:
   - "Astrocyte evidence is not one class: lactate-shuttle support, minute-scale cortical network encoding, learning-associated recall ensembles, multiday stabilization ensembles, fear-state representations, and human MAO-B or I2BS astrocyte-related PET proxies are kept separate."
   - "Rodent astrocyte causality, human target-defined astrocyte PET, human CSF-mobility MRI, and model-based sleep-linked biomarker efflux do not compose automatically into one human maintenance-controller readout."
   - "Several living-human proxy rows are not promoted together unless same-subject relation, model burden, and residual hidden-state ceilings are disclosed explicitly."
+  - "A multimodal gain is not automatically a robust bundle: complete-case slice, missing-modality policy, centre transfer, and hard-regime disagreement remain separate audits."
   - "The next bottleneck is not modality count alone but experiment design that collapses competing internal-state solutions."
   - "A human tractography graph is not one stable object: superficial-white-matter access, gyral-endpoint bias, parcellation choice, and voxel resolution still change what the graph means."
   - "For hemodynamic modalities, BOLD or fNIRS amplitude is not read as neural difference unless vascular-state / CVR limits are audited separately."
@@ -60,6 +61,7 @@ known_points:
   - "Current human astrocyte-related PET and clearance routes remain target-defined, bounded proxy classes; they still do not identify which astrocyte, microglial controller, or synapse is responsible."
   - "Current human evidence comes in layers; proxy-rich routes still do not yield comparable whole-brain in vivo ground truth for every hidden state."
   - "Several human proxy rows do not add automatically; without same-subject relation, measurement-model disclosure, and cross-row calibration, the bundle stays below state-identification language."
+  - "A multimodal bundle can improve prediction under a declared protocol while still depending on a restricted complete-case slice, a missing-modality policy, or a centre-specific transfer window."
   - "Similar outputs can still arise from different parameters or macroscopic network states, so identifiability-driven experiment design remains a separate bottleneck from observability."
   - "A chemical connectome plus nominal inhibitory edges still does not fix gap-junction coupling, endogenous field effects, or local inhibitory driving force."
   - "A tractography-derived connectome can still change at the cortical-endpoint and parcel-graph stage even when the underlying diffusion signal is the same."
@@ -148,6 +150,13 @@ The measurement-stack wiki now pulls together the direct intracranial-validation
 <strong>If A Shared Multimodal Factor Sounds Like One Solved State Variable</strong>
 <p>
 This site now blocks that shortcut too. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> and <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed that simultaneous multimodal recordings keep both shared and modality-specific structure, while <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> and <a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">Özbay et al. (2019)</a> showed that low-frequency/global fMRI-linked components can also carry autonomic physiology. Therefore, a coupled common factor is not read here as the target neural variable unless the <a href="verification.html#fusion-card">Fusion Card</a> discloses shared-vs-specific decomposition and physiology-side calibration or abstention.
+</p>
+</div>
+
+<div class="note-box">
+<strong>If A Multimodal Gain Sounds Like A Robust State-Identified Bundle</strong>
+<p>
+This site blocks that shortcut too. <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">Rohaut et al. (2024)</a> showed that adding modalities in acute brain injury can reduce prognostic uncertainty and improve prediction, which is a real bundle-level gain. But <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a> showed that direct same-sample multimodal comparison can shrink to a <strong>48-patient complete-feature subset</strong>, and <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> showed that second-level multimodal classifiers can rely on <strong>missing-value substitution</strong> while still facing <strong>cross-centre transfer</strong> and higher <strong>inter-modality disagreement</strong> in minimally conscious or improving patients. Therefore, a multimodal gain is read here as <strong>bundle-performance evidence under a declared availability and transfer regime</strong>, not as automatic <strong>same-subject cross-stack state identification</strong>. The shortest route is <a href="wiki/multimodal-integration-basics.html">Wiki: multimodal integration basics</a>, then <a href="verification.html#fusion-card">Verification: Fusion Card</a> and <a href="verification.html#human-proxy-composition-card">Verification: Human Proxy Composition Card</a>.
 </p>
 </div>
 
