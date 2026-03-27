@@ -2290,7 +2290,7 @@ In the previous text, methods with different characteristics, such as ASR, ZapLi
 <section class="section" id="consciousness-readout-gate">
 <h2 class="section-title">2026-03 Addendum: Consciousness readout is accepted at 4 gates</h2>
 <p>
-The remaining weakness in this section was that simply sorting EEG / DoC / anesthesia papers into "no-report," "PCI," "resting-state," and "multimodal" still left the promotion rule too coarse. <a href="https://doi.org/10.1093/cercor/bhae415" target="_blank">Cohen et al. (2024)</a> and <a href="https://doi.org/10.7554/eLife.102335" target="_blank">Fahrenfort et al. (2025)</a> showed that post-perceptual / report confounds and criterion placement must be broken separately, so no-report design alone is not yet construct validity. <a href="https://doi.org/10.1093/cercor/bhae130" target="_blank">Gogulski et al. (2024)</a> showed that early/local dlPFC TMS-evoked responses vary markedly in reliability across targets and analysis windows, and <a href="https://doi.org/10.1162/imag_a_00349" target="_blank">Biabani et al. (2024)</a> showed that auditory and somatosensory inputs can materially contaminate TMS-evoked responses across prefrontal, premotor, and parietal stimulation. <a href="https://doi.org/10.7554/eLife.98920" target="_blank">Breyton et al. (2025)</a> then showed that spatiotemporal brain complexity can separate consciousness-related states outside perturbation paradigms, while <a href="https://doi.org/10.1111/ejn.16299" target="_blank">Casarotto et al. (2024)</a> showed that spontaneous EEG features and PCI can dissociate in minimally conscious patients, so resting-state markers still require same-cohort calibration rather than substitution for perturbational benchmarks. Finally, <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2022)</a>, <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">Rohaut et al. (2024)</a>, and <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> showed that multimodal panels can improve diagnosis / prognosis and cross-centre robustness, but only as bundles whose value must still be measured against behavior-only baselines, missing-modality slices, and site transfer. Therefore, this site accepts consciousness-related readouts at the following four gates.
+The remaining weakness in this section was that simply sorting EEG / DoC / anesthesia papers into "no-report," "PCI," "resting-state," and "multimodal" still left the promotion rule too coarse. <a href="https://doi.org/10.1038/s41586-025-08888-1" target="_blank">Ferrante et al. (2025)</a> showed that preregistered theory competition does not currently yield a single winner, so theory labels cannot be allowed to leak status into readout labels. <a href="https://doi.org/10.1093/cercor/bhae415" target="_blank">Cohen et al. (2024)</a>, <a href="https://doi.org/10.1016/j.cub.2025.10.026" target="_blank">Dellert et al. (2025)</a>, and <a href="https://doi.org/10.7554/eLife.102335" target="_blank">Fahrenfort et al. (2025)</a> showed that post-perceptual / report confounds and criterion placement must be broken separately, so no-report design alone is not yet construct validity. <a href="https://doi.org/10.1093/cercor/bhae130" target="_blank">Gogulski et al. (2024)</a> showed that early/local dlPFC TMS-evoked responses vary markedly in reliability across targets and analysis windows, and <a href="https://doi.org/10.1162/imag_a_00349" target="_blank">Biabani et al. (2024)</a> showed that auditory and somatosensory inputs can materially contaminate TMS-evoked responses across prefrontal, premotor, and parietal stimulation. <a href="https://doi.org/10.7554/eLife.98920" target="_blank">Breyton et al. (2025)</a> then showed that spatiotemporal brain complexity can separate consciousness-related states outside perturbation paradigms, while <a href="https://doi.org/10.1111/ejn.16299" target="_blank">Casarotto et al. (2024)</a> showed that spontaneous EEG features and PCI can dissociate in minimally conscious patients, so resting-state markers still require same-cohort calibration rather than substitution for perturbational benchmarks. Finally, <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a>, <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">Rohaut et al. (2024)</a>, and <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> showed that multimodal panels can improve diagnosis / prognosis and cross-centre robustness, but only as bundles whose value must still be measured against behavior-only baselines, missing-modality slices, and site transfer. Therefore, this site accepts consciousness-related readouts at the following four gates.
 </p>
 <table class="data-table">
 <thead>
@@ -2327,6 +2327,68 @@ The remaining weakness in this section was that simply sorting EEG / DoC / anest
 <strong>Minimum operating rules</strong>
 <p>
 No-report / criterion placement is treated as a <strong>construct-validity gate</strong>, PCI / PCI-ST is treated as a main benchmark candidate only after it passes a <strong>perturbational gate</strong>, resting-state complexity / criticality remains an auxiliary proxy until it passes a <strong>calibration gate</strong>, and a multimodal clinical panel remains exploratory until it passes an <strong>incremental / deployability gate</strong>. In other words, on this site, the same "awareness index" can have a different claim ceiling depending on which gate it has passed.
+</p>
+</div>
+<div class="note-box">
+<strong>What still had to be fixed after the 4-gate split</strong>
+<p>
+Even after the 4-gate split, one shortcut remained: a submission could still borrow authority from a familiar label such as <strong>IIT</strong>, <strong>PCI</strong>, <strong>criticality</strong>, or <strong>multimodal</strong> without exposing <strong>which gate was actually passed on which denominator</strong>. That shortcut is not supported by the primary literature. Therefore, this site now requires the following card whenever a result is promoted as a consciousness-related readout.
+</p>
+</div>
+<h3 class="section-title" id="consciousness-readout-card">Consciousness Readout Card</h3>
+<p>
+This card is deliberately narrower than a theory summary and stricter than a generic multimodal checklist. Its job is to stop theory names, proxy names, and bundle names from sounding like one common evidential ladder when they are not.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Card field</th>
+<th>What must be exposed</th>
+<th>Claim to stop when this field is missing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Readout family and claimed gate</strong></td>
+<td>Name whether the result is being used as a prediction family, construct-validity control, perturbation benchmark candidate, same-cohort proxy, or deployability bundle, and state explicitly which of the 4 gates it is claiming to have passed.</td>
+<td>Do not let a familiar label such as IIT, PCI, criticality, or multimodal stand in for the evidence level.</td>
+</tr>
+<tr>
+<td><strong>Construct-control log</strong></td>
+<td>Expose report / no-report relation, task relevance, criterion placement, failure conditions, stimulus matching, and whether the marker survived a design that suppresses post-perceptual alternatives.</td>
+<td>Do not promote late or frontal correlates to conscious-content markers by default.</td>
+</tr>
+<tr>
+<td><strong>Perturbation log</strong></td>
+<td>Expose stimulation site, intensity, control / sham, sensory suppression, artifact window, analysis window, trial count, and target-specific reliability.</td>
+<td>Do not call a PCI / PCI-ST-like value a portable state benchmark.</td>
+</tr>
+<tr>
+<td><strong>Same-cohort calibration denominator</strong></td>
+<td>Report how many cases contribute jointly to resting metrics, perturbation metrics, behavioral assessment, and outcomes; publish the evaluation-time threshold and abstention rule.</td>
+<td>Do not compare passive and perturbational markers as if they were calibrated when they were not observed on the same denominator.</td>
+</tr>
+<tr>
+<td><strong>Incremental baseline and availability slice</strong></td>
+<td>Report the behavior-only baseline, strongest single-modality baseline, complete-case denominator, missing-modality policy, and whether the bundle gain survives each slice.</td>
+<td>Do not write "multimodal outperformed baseline" if the denominator changed or if the gain disappears outside the complete-feature subset.</td>
+</tr>
+<tr>
+<td><strong>Transfer and disagreement window</strong></td>
+<td>Report cross-site / cross-scanner / cross-protocol validation, hard-group disagreement, calibration drift, and measurement burden.</td>
+<td>Do not describe the readout as deployable or portable across hospitals on internal validation alone.</td>
+</tr>
+<tr>
+<td><strong>Non-licensed claims</strong></td>
+<td>Write explicitly what the result does <strong>not</strong> determine yet, such as conscious content, personal identity, theory truth, or bedside portability.</td>
+<td>Do not let readers promote the result by implication after the table ends.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>How this card changes site behavior</strong>
+<p>
+If the card is missing, this site reads the submission at the <strong>lowest gate actually supported by the exposed evidence</strong>. A theory-associated metric remains a prediction-linked readout, not a theory verdict. A passive classifier remains a proxy, not a perturbation substitute. A multimodal gain remains bundle-performance evidence, not automatic clinical portability.
 </p>
 </div>
 </section>
@@ -2609,13 +2671,15 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Hartich, D., &amp; Godec, A. (2024). Comment on “Inferring broken detailed balance in the absence of observable currents”. <a href="https://doi.org/10.1038/s41467-024-52602-0" target="_blank">doi:10.1038/s41467-024-52602-0</a></li>
 <li>Martínez, I. A., Bisker, G., Horowitz, J. M., &amp; Parrondo, J. M. R. (2024). Reply to: Comment on “Inferring broken detailed balance in the absence of observable currents”. <a href="https://doi.org/10.1038/s41467-024-52603-z" target="_blank">doi:10.1038/s41467-024-52603-z</a></li>
 <li>Blom, K., Song, K., Vouga, E., Godec, A., &amp; Makarov, D. E. (2024). Milestoning estimators of dissipation in systems observed at a coarse resolution. <a href="https://doi.org/10.1073/pnas.2318333121" target="_blank">doi:10.1073/pnas.2318333121</a></li>
+<li>Ferrante, O., Gerber, E. M., Boly, M., Fahrenfort, J. J., et al. (2025). Adversarial testing of global neuronal workspace and integrated information theories of consciousness. <a href="https://doi.org/10.1038/s41586-025-08888-1" target="_blank">doi:10.1038/s41586-025-08888-1</a></li>
 <li>Cohen, M. A., et al. (2024). Neural signatures of visual awareness independent of postperceptual processing. <a href="https://doi.org/10.1093/cercor/bhae415" target="_blank">doi:10.1093/cercor/bhae415</a></li>
+<li>Dellert, T., Balster, M., Schlossmacher, I., Bruchmann, M., Moeck, R., Straube, T., &amp; Jacobsen, T. (2025). Neural correlates of consciousness in an auditory no-report fMRI study. <a href="https://doi.org/10.1016/j.cub.2025.10.026" target="_blank">doi:10.1016/j.cub.2025.10.026</a></li>
 <li>Fahrenfort, J. J., et al. (2025). Criterion placement threatens the construct validity of neural measures of consciousness. <a href="https://doi.org/10.7554/eLife.102335" target="_blank">doi:10.7554/eLife.102335</a></li>
 <li>Gogulski, J., et al. (2024). Reliability of the TMS-evoked potential in dorsolateral prefrontal cortex. <a href="https://doi.org/10.1093/cercor/bhae130" target="_blank">doi:10.1093/cercor/bhae130</a></li>
 <li>Biabani, M., et al. (2024). Characterising the contribution of auditory and somatosensory inputs to TMS-evoked potentials following stimulation of prefrontal, premotor, and parietal cortex. <a href="https://doi.org/10.1162/imag_a_00349" target="_blank">doi:10.1162/imag_a_00349</a></li>
 <li>Breyton, M., et al. (2025). Spatiotemporal brain complexity quantifies consciousness outside of perturbation paradigms. <a href="https://doi.org/10.7554/eLife.98920" target="_blank">doi:10.7554/eLife.98920</a></li>
 <li>Casarotto, S., et al. (2024). Dissociations between spontaneous electroencephalographic features and the perturbational complexity index in the minimally conscious state. <a href="https://doi.org/10.1111/ejn.16299" target="_blank">doi:10.1111/ejn.16299</a></li>
-<li>Amiri, A. M., et al. (2022). Multimodal prediction of residual consciousness in the intensive care unit: the CONNECT-ME study. <a href="https://doi.org/10.1093/brain/awac335" target="_blank">doi:10.1093/brain/awac335</a></li>
+<li>Amiri, A. M., et al. (2023). Multimodal prediction of residual consciousness in the intensive care unit: the CONNECT-ME study. <a href="https://doi.org/10.1093/brain/awac335" target="_blank">doi:10.1093/brain/awac335</a></li>
 <li>Rohaut, B., et al. (2024). Multimodal assessment improves neuroprognosis performance in clinically unresponsive critical-care patients with brain injury. <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">doi:10.1038/s41591-024-03019-1</a></li>
 <li>Manasova, D., et al. (2026). Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness. <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">doi:10.1093/brain/awaf412</a></li>
 <li>Murphy, K., Harris, A. D., &amp; Wise, R. G. (2011). Robustly measuring vascular reactivity differences with breath-hold: normalising stimulus-evoked and resting state BOLD fMRI data. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">doi:10.1016/j.neuroimage.2010.07.059</a></li>

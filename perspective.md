@@ -1231,6 +1231,10 @@ href="#ref-57">[57]</a></sup>.
 </tbody>
 </table>
 
+<p style="margin-top: 12px;">
+The remaining operational shortcut was that a familiar label such as <strong>IIT</strong>, <strong>PCI</strong>, <strong>criticality</strong>, or <strong>multimodal</strong> could still sound like one continuous evidential ladder. To stop that compression, the public operating artifact is now <a href="verification.html#consciousness-readout-card">Verification: Consciousness Readout Card</a>, which forces theory label, claimed gate, perturbation log, same-cohort denominator, and deployability denominator onto one line before the claim ceiling is raised.
+</p>
+
 <h3>Research priorities (A→C)</h3>
 <table class="data-table">
 <thead>
@@ -1739,7 +1743,7 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <li id="ref-124" value="124">Gogulski, J., Cline, C. C., Ross, J. M., Parmigiani, S., & Keller, C. J. (2024). Reliability of the TMS-evoked potential in dorsolateral prefrontal cortex. <em>Cerebral Cortex</em>, 34(4), bhae130. <a href="https://doi.org/10.1093/cercor/bhae130">doi:10.1093/cercor/bhae130</a></li>
 <li id="ref-125" value="125">Biabani, M., Perera, T., Zalesky, A., et al. (2024). Characterising the contribution of auditory and somatosensory inputs to TMS-evoked potentials following stimulation of prefrontal, premotor, and parietal cortex. <em>Imaging Neuroscience</em>, 2. <a href="https://doi.org/10.1162/imag_a_00349">doi:10.1162/imag_a_00349</a></li>
 <li id="ref-126" value="126">Breyton, M., Lado, M. J., Laureys, S., et al. (2025). Spatiotemporal brain complexity quantifies consciousness outside of perturbation paradigms. <em>eLife</em>, 13, RP98920. <a href="https://doi.org/10.7554/eLife.98920">doi:10.7554/eLife.98920</a></li>
-<li id="ref-127" value="127">Amiri, A. M., Fisher, D., Raimondo, F., et al. (2022). Multimodal prediction of residual consciousness in the intensive care unit: the CONNECT-ME study. <em>Brain</em>, 146, 50–64. <a href="https://doi.org/10.1093/brain/awac335">doi:10.1093/brain/awac335</a></li>
+<li id="ref-127" value="127">Amiri, A. M., Fisher, D., Raimondo, F., et al. (2023). Multimodal prediction of residual consciousness in the intensive care unit: the CONNECT-ME study. <em>Brain</em>, 146, 50–64. <a href="https://doi.org/10.1093/brain/awac335">doi:10.1093/brain/awac335</a></li>
 <li id="ref-128" value="128">Rohaut, B., Calligaris, M., Hermann, B., Perez, P., et al. (2024). Multimodal assessment improves neuroprognosis performance in clinically unresponsive critical-care patients with brain injury. <em>Nature Medicine</em>, 30, 2349–2355. <a href="https://doi.org/10.1038/s41591-024-03019-1">doi:10.1038/s41591-024-03019-1</a></li>
 <li id="ref-129" value="129">Haufe, S., Nikulin, V. V., Müller, K.-R., &amp; Nolte, G. (2013). A critical assessment of connectivity measures for EEG data: A simulation study. <em>NeuroImage</em>, 64, 120–133. <a href="https://doi.org/10.1016/j.neuroimage.2012.09.036">doi:10.1016/j.neuroimage.2012.09.036</a></li>
 <li id="ref-130" value="130">Palva, J. M., Wang, S. H., Palva, S., Zhigalov, A., Monto, S., Brookes, M. J., Schoffelen, J.-M., &amp; Jerbi, K. (2018). Ghost interactions in MEG/EEG source space: A note of caution on inter-areal coupling measures. <em>NeuroImage</em>, 173, 632–643. <a href="https://doi.org/10.1016/j.neuroimage.2018.02.032">doi:10.1016/j.neuroimage.2018.02.032</a></li>

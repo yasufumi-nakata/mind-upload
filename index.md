@@ -403,6 +403,12 @@ After the March 2026 audit, this site's answer is no longer "just add more modal
 </p>
 </div>
 <div class="note-box">
+<strong>If You Want To Stop One Consciousness Metric Name From Borrowing Another Metric's Status</strong>
+<p>
+The new <a href="verification.html#consciousness-readout-card">Verification: Consciousness Readout Card</a> forces each submission to disclose whether it actually passed construct-validity control, perturbation logging, same-cohort calibration, or deployability checks. That closes a remaining shortcut where labels such as <strong>IIT</strong>, <strong>PCI</strong>, <strong>criticality</strong>, or <strong>multimodal</strong> could sound stronger than the exposed evidence supports.
+</p>
+</div>
+<div class="note-box">
 <strong>If You Want To Stop Promoting Same-Day Success To Cross-Day Or Long-Term Claims</strong>
 <p>
 The <a href="verification.html#temporal-validity-card">Verification: Temporal Validity Card</a> was added so longitudinal claims are not overread. It separates <strong>fixed decoder interval</strong>, <strong>state annotation</strong>, <strong>interface / decoder drift</strong>, <strong>recalibration burden</strong>, and <strong>transfer ceiling</strong>, so a same-day fit is not silently extended to cross-day stability or long-term deployability. The background logic is summarized in <a href="wiki/state-trait-and-drift.html">Wiki: state, trait, and drift</a>.
