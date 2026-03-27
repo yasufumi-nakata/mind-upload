@@ -10,7 +10,7 @@ note: "Learning guide / evidence refresh"
 audience: "People who want to read about L3 closed-loop evaluation and real-time operation based on literature rather than general information"
 reading_time: "14-22 minutes"
 page_intro: "This page is a wiki that organizes delay, jitter, drift, safety stop, body/environment boundary, and long-horizon deployability in Mind-Upload's L3 'closed loop' using primary literature. The purpose is to clarify that even when offline accuracy is high, the required timing budget depends on the loop band and actuator, and low latency alone does not tell you which sensory, motor, interoceptive, or reafferent loops were actually preserved, whether a fixed decoder survived across time, or how much rescue-mode programming was needed."
-accuracy_note: "Here, we do not set a ``fixed threshold common to all loops.'' We also do not treat a fast loop as boundary-complete, temporally durable, or chronically deployable by default. Judgments are written on the premise that end-to-end timing indicators, retained/substituted body/environment routes, fixed-decoder interval, co-adaptation regime, rescue-mode adaptation burden, and deployment slices are disclosed explicitly."
+accuracy_note: "Here, we do not set a ``fixed threshold common to all loops.'' We also do not treat a fast loop as boundary-complete, temporally durable, or chronically deployable by default. Judgments are written on the premise that end-to-end timing indicators, retained/substituted body/environment routes, fixed-decoder interval, co-adaptation regime, rescue-mode adaptation burden, deployment slices, and, for phase-targeting loops, oscillation estimability plus causal-versus-post-hoc targeting benchmarks are disclosed explicitly."
 page_highlights:
   - "Closed-loop time requirements vary by loop type, not by a single ms value."
   - "Low latency is not the same as reproducing the relevant body/environment boundary."
@@ -18,6 +18,7 @@ page_highlights:
   - "Online improvement is not one object: user-side learning, decoder updates, and application-side shaping must be separated before gains are read as stability."
   - "Even if the event marker is less than 1 ms, it is a different matter from guaranteeing end-to-end for the entire system."
   - "Phase error is more important than ms for phase-targeting, and for adaptive DBS the timing story now has to be separated from fixed-decoder durability, programming burden, and eligibility."
+  - "For phase-targeted stimulation, low mean latency is still not enough: oscillation presence / power / SNR gate, causal estimator benchmark, circular targeting error, and no-stim / missed-trigger rates must be separated."
   - "Streaming speech BCI needs to record not only average delay but also tail latency, output-path audit, silence/hold-last-output, and fixed-decoder horizon in separate logs."
   - "Adaptive-DBS papers need to log rescue-mode optimization, clinic/home transfer, eligibility, and continuation separately from symptom benefit."
 known_points:
@@ -27,6 +28,7 @@ known_points:
   - "Unless you actually measure input, processing, output, and return end-to-end, you won't know the timing of actual operation."
   - "Closed-loop gains can come from co-adaptation of the user, decoder, and application rather than from a stable fixed decoder alone."
   - "Fixed-decoder durability and rescue-mode recalibration are separate evidence objects; one can fail while the other still rescues behavior."
+  - "Reliable phase locking is not the same as a reliable physiological or behavioral effect, and neither one fixes a stable optimal phase across sessions."
   - "Speed-up within-session alone is not enough; it also leaves fixed-decoder horizon, recalibration burden, clinic/home transition, and programming burden."
   - "Chronic adaptive-DBS symptom benefit, eligibility, and long-run continuation are different axes and should not be collapsed into one deployment verdict."
 unknown_points:
@@ -34,6 +36,7 @@ unknown_points:
   - "It is not yet possible to generalize the precision required for phase-specific control to all tasks in non-invasive human experiments."
   - "What counts as an acceptable fixed-decoder horizon before rescue-mode adaptation becomes a different operating regime still depends on task and modality."
   - "How fast or slow co-adaptation should be to help the user without hiding instability still depends on loop type, modality, and task."
+  - "How a phase-targeting protocol should adapt when the optimal phase drifts within-session or across sessions still depends on band, task, and subject."
   - "What is considered 'unstable' or 'impractical' in terms of drift, recalibration frequency, eligibility, continuation, and programming burden during long-term operation depends on the task."
 wiki_links:
   - label: "Wiki: Event synchronization and observation log"
@@ -95,6 +98,12 @@ On this site, once a closed-loop claim leaves the narrow same-session timing que
 <strong>2026-03-28 re-audit: co-adaptation is a separate evidence wall</strong>
 <p>
 The remaining blind spot was that the page could still let readers treat <strong>any online improvement</strong> as if it primarily reflected timing quality or long-horizon stability. The primary literature does not support that compression. <a href="https://doi.org/10.1016/j.neuron.2014.04.048" target="_blank">Orsborn et al. (2014)</a> showed that combined neural and decoder adaptation can itself shape neural representations. <a href="https://doi.org/10.1371/journal.pbio.2003787" target="_blank">Perdikis et al. (2018)</a> and <a href="https://doi.org/10.3389/fnhum.2019.00362" target="_blank">Abu-Rmileh et al. (2019)</a> showed that user learning and classifier adaptation evolve on different timescales in longitudinal EEG BCIs, and that adaptation that is too frequent can hinder subject learning. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> and <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> then showed that modern speech and cursor loops still rely on per-session retraining, blockwise decoder updates, and explicit open-loop probes to estimate performance without closed-loop correction. Therefore, this site now treats <strong>co-adaptation / credit assignment</strong> as a separate wall rather than hiding it inside latency or recalibration.
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-28 second re-audit: phase-targeting needs an estimability wall</strong>
+<p>
+One more shortcut remained. The page still allowed a reader to think that once a phase-targeted loop reports <strong>low latency</strong> and some <strong>phase error distribution</strong>, the main technical burden is already satisfied. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuroimage.2020.116761" target="_blank">Zrenner et al. (2020)</a> showed that meaningful phase estimation itself degrades when oscillatory amplitude and SNR are low. <a href="https://doi.org/10.3389/fnhum.2021.691821" target="_blank">Gordon et al. (2021)</a> then showed that prefrontal theta targeting required extra constraints to avoid low-amplitude and phase-reset epochs. <a href="https://doi.org/10.1111/ejn.14931" target="_blank">Vigué-Guix et al. (2022)</a> achieved reliable trial-to-trial alpha phase locking yet did not obtain a consistent behavioral benefit, which means targeting success and functional effect must be kept separate. <a href="https://doi.org/10.1523/ENEURO.0050-23.2023" target="_blank">Kim et al. (2023)</a> showed across 11 public datasets that higher power and SNR improve prediction accuracy and that waiting for eligible epochs matters more than forcing one cognitive state. Finally, <a href="https://doi.org/10.1016/j.brs.2025.09.019" target="_blank">Hougland et al. (2025)</a> showed within-session fluctuations and low test-retest reliability of the optimal mu-phase. Therefore, phase-targeted stimulation on this site is now read through an <strong>estimability / targeting / effect / stability stack</strong>, not one timing number.
 </p>
 </div>
 
@@ -203,8 +212,8 @@ If the paper does not disclose which sensory, action, interoceptive, and self-ge
 <tr>
 <td><strong>phase-locked stimulation</strong></td>
 <td>This is a system that delivers TMS/tES in accordance with the EEG phase. </td>
-<td>Mansouri et al. (2018) evaluated phase lag in theta/alpha, and Zrenner et al. (2018) demonstrated brain state dependence in millisecond-resolution EEG-triggered TMS. Here, phase error is more important than ms. </td>
-<td>Target frequency, phase error distribution, reliability of estimated phase, missed trigger, and fallback conditions in case of phase shift. </td>
+<td>Mansouri et al. (2018) and Zrenner et al. (2018) demonstrated real-time phase targeting, but Zrenner et al. (2020), Gordon et al. (2021), Kim et al. (2023), and Hougland et al. (2025) show that the real bottleneck is not latency alone but whether the oscillation is estimable now, how the causal estimate is benchmarked, and whether the optimal phase is stable. </td>
+<td>Target band and spatial filter, power/SNR gate, no-stim rate, causal-versus-post-hoc benchmark, mean phase offset / circular spread, missed trigger, and any fixed-versus-adaptive phase policy. </td>
 </tr>
 <tr>
 <td><strong>burst/state-triggered neuromodulation</strong></td>
@@ -214,6 +223,61 @@ If the paper does not disclose which sensory, action, interoceptive, and self-ge
 </tr>
 </tbody>
 </table>
+</section>
+
+<section class="section" id="phase-targeting-wall">
+<h2 class="section-title">Phase-targeting is estimability-limited, not latency-limited</h2>
+<p>
+The older wording on this page already separated <strong>phase error</strong> from plain milliseconds. That was necessary, but it was not yet sufficient. Current primary literature shows that a phase-targeted loop can fail for at least five different reasons: the target oscillation may not be estimable in the current epoch, the causal estimator may not match the post-hoc benchmark, the circular targeting precision may be too weak, the loop may phase-lock without producing a reliable physiological or behavioral effect, or the best phase may drift within and across sessions. Therefore, this site now reads phase-targeted stimulation through the following stack rather than a single timing figure.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Layer to separate</th>
+<th>What the primary literature supports</th>
+<th>What must be logged</th>
+<th>What it still does not prove</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oscillation gate / estimability</strong></td>
+<td><a href="https://doi.org/10.1016/j.neuroimage.2020.116761" target="_blank">Zrenner et al. (2020)</a> showed that phase estimability worsens when oscillatory amplitude and SNR are low, <a href="https://doi.org/10.3389/fnhum.2021.691821" target="_blank">Gordon et al. (2021)</a> improved prefrontal theta targeting by excluding low-theta and phase-reset epochs, and <a href="https://doi.org/10.1523/ENEURO.0050-23.2023" target="_blank">Kim et al. (2023)</a> showed across 11 public datasets that high power and SNR are the main practical conditions for better phase prediction.</td>
+<td>Target band, channel or spatial filter, spectral peak criterion, amplitude/SNR threshold, no-stim or wait rate, and any phase-reset rejection rule.</td>
+<td>That the loop really stimulated the intended phase in every eligible epoch, or that a functional effect followed.</td>
+</tr>
+<tr>
+<td><strong>causal estimator benchmark</strong></td>
+<td><a href="https://doi.org/10.3389/fnins.2018.00877" target="_blank">Mansouri et al. (2018)</a> and <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> made real-time phase-triggering feasible, while <a href="https://doi.org/10.1016/j.neuroimage.2020.116761" target="_blank">Zrenner et al. (2020)</a> and <a href="https://doi.org/10.3389/fnhum.2021.691821" target="_blank">Gordon et al. (2021)</a> showed why the causal estimate has to be benchmarked against a non-causal or post-hoc phase estimate under the same signal class.</td>
+<td>Causal algorithm family, training window, forecast horizon, artifact blanking rule, post-hoc benchmark procedure, and whether the benchmark was run on non-stimulated or artifact-free matched epochs.</td>
+<td>That the chosen causal estimator is uniquely best, or that the phase effect is biologically meaningful.</td>
+</tr>
+<tr>
+<td><strong>targeting precision</strong></td>
+<td><a href="https://doi.org/10.1016/j.jneumeth.2021.109288" target="_blank">Bruegger &amp; Abegg (2021)</a> compared methods using mean phase offset, circular standard deviation, and prediction latency, and <a href="https://doi.org/10.1523/JNEUROSCI.1913-18.2018" target="_blank">Holt et al. (2019)</a> showed that narrower phase bins and repeated phase-consistent pulses materially change effect size.</td>
+<td>Mean phase offset, circular spread or equivalent circular error metric, phase-locking statistic at trigger, missed-trigger rate, and any phase-bin width or consecutive-cycle rule.</td>
+<td>That the targeted phase is the most effective phase for the claimed physiological or behavioral endpoint.</td>
+</tr>
+<tr>
+<td><strong>functional effect versus targeting success</strong></td>
+<td><a href="https://doi.org/10.1111/ejn.14931" target="_blank">Vigué-Guix et al. (2022)</a> achieved reliable trial-to-trial alpha phase locking in a real-time BCI yet found no consistent reaction-time modulation, showing that accurate targeting and useful behavioral control are different evidence objects.</td>
+<td>Off-target or random-phase comparator, sham or surrogate comparator when available, effect-size distribution for the downstream endpoint, and the stopped claim if targeting succeeded but the endpoint did not.</td>
+<td>That a phase-targeted loop improves cognition, therapy, or plasticity simply because phase locking worked.</td>
+</tr>
+<tr>
+<td><strong>phase stability and adaptation policy</strong></td>
+<td><a href="https://doi.org/10.1016/j.brs.2025.09.019" target="_blank">Hougland et al. (2025)</a> showed within-session fluctuations and low test-retest reliability of the optimal mu-phase, which limits the generalizability of fixed-phase targeting across sessions.</td>
+<td>Whether the preferred phase was fixed or updated, within-session drift audit, across-session reliability, retuning trigger, and whether adaptation changes the claim from fixed-policy targeting to adaptive targeting.</td>
+<td>That one fixed phase generalizes across people, sessions, or task states without re-validation.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Revision rule on this site</strong>
+<p>
+If a phase-targeted loop reports only milliseconds or only a single average phase error, this page does not promote it to validated phase-specific control. The minimum readable object is a <strong>declared target band with an estimability gate</strong>, a <strong>causal-versus-post-hoc benchmark</strong>, <strong>circular targeting metrics</strong>, a <strong>functional comparator</strong>, and a <strong>fixed-versus-adaptive phase policy</strong>.
+</p>
+</div>
 </section>
 
 <section class="section" id="co-adaptation-wall">
@@ -488,7 +552,8 @@ Whether it's ``I didn't get it right so I won't output it'', ``I'm going to use 
 <li><strong>loop-removal / ablation test:</strong>Report what happened when tactile feedback, self-motion cues, predicted sensory consequences, or another decisive route was removed, scrambled, or delayed. </li>
 <li><strong>credit-assignment probe:</strong>Keep fixed-policy or open-loop probe blocks so gains can be compared with and without closed-loop correction or online updates.</li>
 <li><strong>Additional metrics for speech / streaming: </strong>Leave cue-to-output tail latency, audio driver latency, silence / hold-last-output rate, and false speech rate. </li>
-<li><strong>Additional metrics for phase/burst systems:</strong>Phase error distribution, missed trigger, burst detection delay, false positive/negative. </li>
+<li><strong>Additional metrics for phase-targeting systems:</strong>Target band and spatial filter, power/SNR gate, no-stim rate, causal-versus-post-hoc benchmark, mean phase offset, circular spread or equivalent circular metric, trigger-time phase-locking statistic, missed trigger, and any fixed-versus-adaptive phase policy. </li>
+<li><strong>Additional metrics for burst systems:</strong>Burst detection delay, false positive/negative, and the ramp-up/ramp-down policy. </li>
 <li><strong>residual omitted loops / abstention boundary:</strong>State which body/environment routes remain absent and what stronger claim therefore remains forbidden. </li>
 <li><strong>Abstain/freeze/safety stop:</strong>Leave the number of activations, previous state, and return conditions. </li>
 <li><strong>fixed decoder interval / training-free horizon:</strong>State how long the system was required to run before any supervised or unsupervised update was allowed. </li>
@@ -501,7 +566,7 @@ Whether it's ``I didn't get it right so I won't output it'', ``I'm going to use 
 </section>
 
 <section class="section" id="how-to-read">
-<h2 class="section-title">12 questions when reading L3 arguments</h2>
+<h2 class="section-title">14 questions when reading L3 arguments</h2>
 <ol>
 <li><strong>Does it say which loop class it deals with?</strong> Check whether slow feedback, speech streaming, phase-locked, and aDBS are mentioned in the same table. </li>
 <li><strong>Does it declare which body/environment boundary it actually used?</strong> Check whether the paper fixes the target subsystem and names preserved, substituted, and omitted loops instead of only saying "closed loop."</li>
@@ -510,6 +575,8 @@ Whether it's ``I didn't get it right so I won't output it'', ``I'm going to use 
 <li><strong>Are there module-wise measurements, not just end-to-end?</strong> Don't just rely on software timestamps; check which of the input, inference, and output paths are rate-limiting. </li>
 <li><strong>For speech / streaming, are silence and output path displayed?</strong> Check whether false speech, audio driver, or hold-last-output are hidden. </li>
 <li><strong>Is delay mapped to phase error or burst time?</strong> Check whether the paper goes beyond a single ms value when phase or burst timing is what matters. </li>
+<li><strong>For phase-targeted loops, does it show the oscillation was estimable before triggering?</strong> Check whether power/SNR thresholds, no-stim epochs, and phase-reset rejection were declared rather than assuming every band-passed epoch has meaningful phase.</li>
+<li><strong>For phase-targeted loops, does it separate targeting success from functional effect and from phase stability?</strong> Check whether the paper reports circular targeting precision, off-target or random-phase comparators, and whether the preferred phase was fixed or drifted across time. </li>
 <li><strong>Does it separate user learning, decoder updates, and interface redesign?</strong> Check whether the gain could come from co-adaptation rather than from a stable fixed decoder. </li>
 <li><strong>Does it separate fixed-decoder durability from adaptive rescue?</strong> Check whether the paper shows the no-update slice rather than reporting only the post-update result. </li>
 <li><strong>If rescue happened, is the rescue cost shown?</strong> Check whether staff time, parameter changes, remote optimization, or unsupervised adaptation are hidden. </li>
@@ -527,6 +594,13 @@ Whether it's ``I didn't get it right so I won't output it'', ``I'm going to use 
 <li>Belinskaia A, Smetanin N, Lebedev M, Ossadtchi A. Short-delay neurofeedback facilitates training of the parietal alpha rhythm. <em>J Neural Eng.</em> 2020;17(6):066012. <a href="https://doi.org/10.1088/1741-2552/abc8d7" target="_blank">doi:10.1088/1741-2552/abc8d7</a></li>
 <li>Mansouri F, Fettes P, Schulze L, et al. A Real-Time Phase-Locking System for Non-invasive Brain Stimulation. <em>Front Neurosci.</em> 2018;12:877. <a href="https://doi.org/10.3389/fnins.2018.00877" target="_blank">doi:10.3389/fnins.2018.00877</a></li>
 <li>Zrenner C, Desideri D, Belardinelli P, Ziemann U. Real-time EEG-defined excitability states determine efficacy of TMS-induced plasticity in human motor cortex. <em>Brain Stimul.</em> 2018;11(2):374-389. <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">doi:10.1016/j.brs.2017.11.016</a></li>
+<li>Holt AB, Kormann E, Gulberti A, et al. Phase-Dependent Suppression of Beta Oscillations in Parkinson's Disease Patients. <em>J Neurosci.</em> 2019;39(6):1119-1134. <a href="https://doi.org/10.1523/JNEUROSCI.1913-18.2018" target="_blank">doi:10.1523/JNEUROSCI.1913-18.2018</a></li>
+<li>Zrenner C, Galevska D, Nieminen JO, Baur D, Stefanou MI, Ziemann U. The shaky ground truth of real-time phase estimation. <em>Neuroimage.</em> 2020;214:116761. <a href="https://doi.org/10.1016/j.neuroimage.2020.116761" target="_blank">doi:10.1016/j.neuroimage.2020.116761</a></li>
+<li>Gordon PC, Dörre S, Belardinelli P, Stenroos M, Zrenner B, Ziemann U, Zrenner C. Prefrontal Theta-Phase Synchronized Brain Stimulation With Real-Time EEG-Triggered TMS. <em>Front Hum Neurosci.</em> 2021;15:691821. <a href="https://doi.org/10.3389/fnhum.2021.691821" target="_blank">doi:10.3389/fnhum.2021.691821</a></li>
+<li>Bruegger D, Abegg M. Prediction of cortical theta oscillations in humans for phase-locked visual stimulation. <em>J Neurosci Methods.</em> 2021;361:109288. <a href="https://doi.org/10.1016/j.jneumeth.2021.109288" target="_blank">doi:10.1016/j.jneumeth.2021.109288</a></li>
+<li>Vigué-Guix I, Morís Fernández L, Torralba Cuello M, Ruzzoli M, Soto-Faraco S. Can the occipital alpha-phase speed up visual detection through a real-time EEG-based brain-computer interface (BCI)? <em>Eur J Neurosci.</em> 2022;55(11-12):3224-3240. <a href="https://doi.org/10.1111/ejn.14931" target="_blank">doi:10.1111/ejn.14931</a></li>
+<li>Kim B, Erickson BA, Fernandez-Nunez G, Rich R, Mentzelopoulos G, Vitale F, Medaglia JD. EEG Phase Can Be Predicted with Similar Accuracy across Cognitive States after Accounting for Power and Signal-to-Noise Ratio. <em>eNeuro.</em> 2023;10(9):ENEURO.0050-23.2023. <a href="https://doi.org/10.1523/ENEURO.0050-23.2023" target="_blank">doi:10.1523/ENEURO.0050-23.2023</a></li>
+<li>Hougland JR, Kirchhoff M, Vetter DE, Ahola O, Jooß A, Humaidan D, Ziemann U. Fluctuations in the optimal sensorimotor mu-rhythm phase associated with high corticospinal excitability during TMS-EEG. <em>Brain Stimul.</em> 2025;18(6):1843-1851. <a href="https://doi.org/10.1016/j.brs.2025.09.019" target="_blank">doi:10.1016/j.brs.2025.09.019</a></li>
 <li>Little S, Pogosyan A, Neal S, et al. Adaptive deep brain stimulation in advanced Parkinson disease. <em>Ann Neurol.</em> 2013;74(3):449-457. <a href="https://doi.org/10.1002/ana.23951" target="_blank">doi:10.1002/ana.23951</a></li>
 <li>Tinkhauser G, Pogosyan A, Little S, et al. The modulatory effect of adaptive deep brain stimulation on beta bursts in Parkinson's disease. <em>Brain.</em> 2017;140(4):1053-1067. <a href="https://doi.org/10.1093/brain/awx010" target="_blank">doi:10.1093/brain/awx010</a></li>
 <li>Appelhoff S, Stenner T. In COM we trust: Feasibility of USB-based event marking. <em>Behav Res Methods.</em> 2021;53(6):2450-2455. <a href="https://doi.org/10.3758/s13428-021-01571-z" target="_blank">doi:10.3758/s13428-021-01571-z</a></li>
