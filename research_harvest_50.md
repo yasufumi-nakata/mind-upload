@@ -5,7 +5,7 @@ description: "Publishes prior research collected through 50 decomposed questions
 article_type: "Evidence Bank"
 subtitle: "U0-U15 decomposition, current-status map, and prior literature (heavily cited)"
 author: Mind Uploading Research Project
-last_updated: "2026-03-26"
+last_updated: "2026-03-27"
 note: "Compiled from 50 worker tasks (curated for relevance)"
 audience: "Readers who want to browse a large literature set by unresolved issue rather than by paper count alone"
 reading_time: "20-35 min (about 7 min if you only read the statistics and U-map)"
@@ -17,7 +17,7 @@ page_highlights:
   - "Even though this page is citation-heavy, the statistics and current-status map alone provide a usable overview."
   - "The default entry path for technical and natural-science readers is fixed as U1/U7 -> bridge (U7/U8) -> U4 -> U13 -> U8 -> U3 -> U10."
   - "A paper-level technical-only shortlist is now linked at the front door so readers can jump from U labels to concrete anchors without scanning mixed archive pages first."
-  - "For technical readers, U1/U7 now separate field-formation visibility from inverse-solver uncertainty and direct-validation class, so scalp reachability is checked before source recovery language."
+  - "For technical readers, U1/U7 now separate field-formation visibility, posterior/solver-family uncertainty, conductivity/forward-model sensitivity, and direct-validation class, so a focal benchmark winner is not read as a universal source-recovery solution."
   - "For technical readers, destructive local ultrastructure is kept separate from living-human in vivo observability, and the living-human route is now read on three axes: proxy class, operational maturity, and safe calibrator role."
   - "For technical readers, same-subject / same-brain papers now sit on their own bridge rung, so preservation route, regime continuity, and bridge validation are checked before same-state language."
   - "For technical readers, bridge risk is now treated as bridge-type-specific and family-specific, so live-to-fix transformation, waking-state drift, and sleep-crossing regime change are not compressed into one time penalty."
@@ -30,7 +30,7 @@ known_points:
   - "Citation count should be read as thickness of attention or relevance, not as closure of the question."
   - "For technical and natural-science readers, it is safer to start with measurement, direct validation, closed-loop stability, and maintenance-state before moving to intake logs or governance topics."
   - "Technical readers who want concrete paper anchors first can now jump directly to the paper archive's 2025-2026 technical-only shortlist."
-  - "For U1/U7, a source-imaging paper still has to pass a field-formation visibility check before inverse-method or validation gains are read as broader recoverability."
+  - "For U1/U7, a source-imaging paper still has to pass a field-formation visibility check, a source-regime split, and a named validation class before inverse-method gains are read as broader recoverability."
   - "Destructive local ultrastructure and living-human in vivo proxy routes do not increase the same evidential axis, even when both are called human measurement advances."
   - "A living-human proxy route can calibrate one bounded hidden-state family without becoming a deployable or state-complete human readout."
   - "Same-subject or same-brain wording can still hide a sequential bridge problem, so preservation route, elapsed time, regime continuity, and bridge-validation rung remain separate evidence fields."
@@ -739,43 +739,56 @@ The old <code>research_deepening_continue_guide_2026-03-01.md</code>, which prev
 <section class="section" id="u1">
 <h2 class="section-title">U1: Inverse problem identifiability</h2>
 <p><strong>Strict definition:</strong> When estimating potential source x from observation y, is it possible to simultaneously report the concentration, identification error boundary, and condition number of the posterior distribution p(x|y)? </p>
+<div class="note-box">
+<strong>2026-03-27 addendum: U1 is three coupled subroutes, not one progress bar</strong>
+<p>
+The weak point of this U1 summary was to place <strong>probabilistic inverse solvers</strong>, <strong>conductivity-sensitive forward models</strong>, and <strong>direct-validation benchmarks</strong> under one shared "inverse progress" label. The primary literature does not support that shortcut. <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a>, <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a>, and <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> improve how candidate sets, uncertainty maps, or debiased inference can be exposed inside a stated inverse family. <a href="https://doi.org/10.1016/j.neuroimage.2018.11.058" target="_blank">Rimpil&auml;inen et al. (2019)</a>, <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2025.121618" target="_blank">Vorwerk et al. (2025)</a>, and <a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk et al. (2026)</a> show that conductivity modelling and estimation materially move EEG and even MEG source results. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">Pascarella et al. (2023)</a>, <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>, and <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> provide focal-source and clinical validation routes, but they do not define one universal board for focal, sparse, extended, and spontaneous regimes. Therefore this page now reads U1 through three coupled questions: <strong>how the candidate set is represented</strong>, <strong>how forward-model uncertainty is propagated</strong>, and <strong>which validation class / source regime was actually tested</strong>.
+</p>
+</div>
+<table class="data-table">
+<thead><tr><th>U1 subroute</th><th>What it directly answers</th><th>Representative primary sources</th><th>What it still does not justify</th></tr></thead><tbody>
+<tr><td><strong>Posterior / solver-family route</strong></td><td>Whether the inverse family exposes multiple candidate solutions, uncertainty width, or debiased inference rather than only one polished map.</td><td><a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a>; <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a>; <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a></td><td>A posterior-aware method inside one inverse family is not yet a transfer guarantee across forward models, source regimes, or validation classes.</td></tr>
+<tr><td><strong>Forward-model / conductivity route</strong></td><td>How much skull / tissue uncertainty, conductivity estimation, and geometry assumptions move localization, magnitude, or orientation.</td><td><a href="https://doi.org/10.1016/j.neuroimage.2018.11.058" target="_blank">Rimpil&auml;inen et al. (2019)</a>; <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a>; <a href="https://doi.org/10.1016/j.neuroimage.2025.121618" target="_blank">Vorwerk et al. (2025)</a>; <a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk et al. (2026)</a></td><td>Reducing conductivity-driven spread does not by itself identify spontaneous or extended sources, and residual weakness remains for deep or brain-base regimes.</td></tr>
+<tr><td><strong>Validation-class / source-regime route</strong></td><td>Whether the method was tested on known stimulation sites, focal in-vivo boards, simultaneous SEEG/ECoG concordance, or another named benchmark regime.</td><td><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a>; <a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">Pascarella et al. (2023)</a>; <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>; <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a></td><td>Focal-source or epilepsy-board success is not a universal winner for extended-source reconstruction, spontaneous cognition, or generic human-state recovery.</td></tr>
+</tbody></table>
 <h3>Research question breakdown</h3>
 <ol>
 <li>Which prior distribution should be used to control ill-posedness in EEG/MEG inverse problems? </li>
 <li>How to propagate uncertainties in cranial conductivity, electrode placement, and noise structure to estimated uncertainties. </li>
-<li>How to set the decision rule when different inverse solution methods (MNE, beamformer, Champagne, etc.) differ for the same data. </li>
-<li>In addition to estimated values, should confidence intervals/backward distributions be included in the publication criteria? </li>
+<li>How should abstention or claim downgrading be triggered when different inverse families, regularization settings, or source regimes disagree on the same data? </li>
+<li>In addition to estimated values, should confidence intervals / posterior distributions be included in the publication criteria? </li>
 </ol>
 <h3>What has some traction now (areas with accumulated literature)</h3>
 <ul>
-<li>Inverse problem stabilization using Bayesian EEG/MEG source imaging and sparse prior has been established as a methodology. </li>
-<li>The fact that head conductivity uncertainty greatly influences inverse solution accuracy has been reproduced in numerous studies. </li>
-<li>Reports including evaluations of actual data have been accumulated regarding Champagne-based spatio-temporal SBL. </li>
+<li>Posterior-aware and debiased inverse families can now expose alternative source configurations, uncertainty width, or variance estimates instead of only one best map, although these gains remain model-family-conditional. </li>
+<li>Conductivity uncertainty propagation and individual conductivity estimation now have concrete routes that materially change EEG and combined EEG/MEG localization error, rather than staying a purely theoretical warning. </li>
+<li>Open focal-source and simultaneous invasive benchmarks now let researchers compare inverse methods against known stimulation sites or concurrent SEEG references, so direct validation is no longer only a generic future requirement. </li>
+<li>Recent primary literature also makes clear that focal-source, resting-state, simultaneous-SEEG, and extended-source reconstruction are different benchmark regimes rather than one shared leaderboard. </li>
 </ul>
-<p class="small"><strong>Representative references:</strong> <a href="https://doi.org/10.1007/978-3-319-14947-9_4" target="_blank">Sparse Bayesian (Champagne) Algorithm</a>, <a href="https://doi.org/10.1109/sampta64769.2025.11133512" target="_blank">Revisiting CHAMPAGNE</a>, <a href="https://doi.org/10.1109/JSEN.2024.3502917" target="_blank">Inverse Problem for M/EEG Source Localization: A Review</a>, <a href="https://arxiv.org/abs/1810.04410v2" target="_blank">Fast Approximation of EEG Forward Problem and Application to Tissue Conductivity Estimation</a>.</p>
+<p class="small"><strong>Representative references:</strong> <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">Pascarella et al. (2023)</a>, <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a>, <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a>, <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a>, <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a>, <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a>, <a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk et al. (2026)</a>.</p>
 <h3>What still needs research (unresolved)</h3>
 <ul>
-<li>Lack of generalization error bounds across inter-subject and inter-device uncertainties. </li>
-<li>There is a lack of a unified bench that compares the identifiability of inverse problems in a task-dependent manner. </li>
-<li>Quality indicators for inverse problems that can be connected to causal intervention evaluation are not yet developed. </li>
+<li>A common public board still does not compare focal, sparse, extended, and dynamic source regimes under one fixed geometry / conductivity sweep. </li>
+<li>There is still no accepted abstention rule for when cross-solver, cross-parameter, or cross-regime disagreement should stop a claim instead of crowning a winner. </li>
+<li>Direct validation remains concentrated in stimulation, epilepsy, or SEEG-guided settings rather than spontaneous cognition or general human-state recovery. </li>
+<li>Source localization and source-connectivity targets can prefer different regularization settings, so a single hyperparameter optimum still does not define a universal inverse answer. </li>
 </ul>
-<p class="small"><strong>Representative references:</strong> <a href="https://doi.org/10.1137/1.9781611977844.ch7" target="_blank">Parameter Identifiability and Influence</a>, <a href="https://doi.org/10.1007/978-3-030-74918-7" target="_blank">EEG/MEG Source Reconstruction</a>, <a href="https://arxiv.org/abs/2209.11233v2" target="_blank">Evaluating Latent Space Robustness and Uncertainty of EEG-ML Models</a>.</p>
-<h3>Major previous studies (14 re-examinations)</h3>
+<p class="small"><strong>Representative references:</strong> <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">Mahjoory et al. (2017)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">Pascarella et al. (2023)</a>, <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2024.120896" target="_blank">Leone et al. (2024)</a>, <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a>, <a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk et al. (2026)</a>.</p>
+<h3>Major previous studies (13 re-examinations)</h3>
 <ol>
-<li><strong>[IEEE Sensors Journal]</strong> <a href="https://doi.org/10.1109/JSEN.2024.3502917" target="_blank">Inverse Problem for M/EEG Source Localization: A Review</a> (2025)</li>
-<li><strong>[SampTA]</strong> <a href="https://doi.org/10.1109/SAMPTA64769.2025.11133512" target="_blank">Revisiting CHAMPAGNE: Sparse Bayesian Learning as Reweighted Sparse Coding</a> (2025)</li>
-<li><strong>[Springer]</strong> <a href="https://doi.org/10.1007/978-3-319-14947-9_4" target="_blank">Sparse Bayesian (Champagne) Algorithm</a> (2015)</li>
-<li><strong>[PubMed]</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/38545514/" target="_blank">SESAMEEG: probabilistic source localization</a> (PMID:38545514, 2024)</li>
-<li><strong>[PubMed]</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/38532791/" target="_blank">Global sensitivity of EEG source analysis to tissue conductivity uncertainties</a> (PMID:38532791, 2024)</li>
-<li><strong>[PubMed]</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/41308490/" target="_blank">Global sensitivity of MEG source analysis to tissue conductivity uncertainties</a> (PMID:41308490, 2025)</li>
-<li><strong>[PubMed]</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/39423516/" target="_blank">Standardized Kalman filtering for dynamical source localization</a> (PMID:39423516, 2024)</li>
-<li><strong>[Physiological Measurement]</strong> <a href="https://doi.org/10.1088/2057-1976/aca20b" target="_blank">Neural SDE as uncertainty quantification for EEG source localization</a> (2023)</li>
-<li><strong>[PubMed]</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/41411682/" target="_blank">Potential of EEG and EEG/MEG skull conductivity estimation</a> (PMID:41411682, 2026)</li>
-<li><strong>[Springer]</strong> <a href="https://doi.org/10.1007/978-3-030-74918-7_4" target="_blank">Source Models</a> (2022)</li>
-<li><strong>[Springer]</strong> <a href="https://doi.org/10.1007/978-3-030-74918-7" target="_blank">EEG/MEG Source Reconstruction</a> (2022)</li>
-<li><strong>[arXiv]</strong> <a href="https://arxiv.org/abs/1810.04410v2" target="_blank">Fast Approximation of EEG Forward Problem and Application to Tissue Conductivity Estimation</a> (2018)</li>
-<li><strong>[SIAM]</strong> <a href="https://doi.org/10.1137/1.9781611977844.ch7" target="_blank">Parameter Identifiability and Influence</a> (2024)</li>
-<li><strong>[OpenAlex]</strong> <a href="https://api.openalex.org/W2903531101" target="_blank">Improving EEG Source Localization Through Spatio-Temporal Sparse Bayesian Learning</a> (2018)</li>
+<li><strong>[NeuroImage]</strong> <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">Consistency of EEG source localization and connectivity estimates</a> (2017)</li>
+<li><strong>[NeuroImage]</strong> <a href="https://doi.org/10.1016/j.neuroimage.2018.11.058" target="_blank">Improved EEG source localization with Bayesian uncertainty modelling of unknown skull conductivity</a> (2019)</li>
+<li><strong>[Scientific Data]</strong> <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods</a> (2020)</li>
+<li><strong>[NeuroImage]</strong> <a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">An in-vivo validation of ESI methods with focal sources</a> (2023)</li>
+<li><strong>[Brain Communications]</strong> <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Validating EEG source imaging using intracranial electrical stimulation</a> (2023)</li>
+<li><strong>[Frontiers in Human Neuroscience]</strong> <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">The SESAMEEG package: a probabilistic tool for source localization and uncertainty quantification in M/EEG</a> (2024)</li>
+<li><strong>[Frontiers in Human Neuroscience]</strong> <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Global sensitivity of EEG source analysis to tissue conductivity uncertainties</a> (2024)</li>
+<li><strong>[NeuroImage]</strong> <a href="https://doi.org/10.1016/j.neuroimage.2024.120896" target="_blank">Investigating the impact of the regularization parameter on EEG resting-state source reconstruction and functional connectivity using real and simulated data</a> (2024)</li>
+<li><strong>[IEEE Transactions on Medical Imaging]</strong> <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Debiased Estimation and Inference for Spatial-Temporal EEG/MEG Source Imaging</a> (2025)</li>
+<li><strong>[IEEE Transactions on Medical Imaging]</strong> <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Block-Champagne: Imaging Extended E/MEG Source Activation with Empirical Bayesian Uncertainty Quantification</a> (2025)</li>
+<li><strong>[Epilepsia]</strong> <a href="https://doi.org/10.1111/epi.18552" target="_blank">HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy</a> (2025)</li>
+<li><strong>[NeuroImage]</strong> <a href="https://doi.org/10.1016/j.neuroimage.2025.121618" target="_blank">Global sensitivity of MEG source analysis to tissue conductivity uncertainties</a> (2025)</li>
+<li><strong>[Journal of Neural Engineering]</strong> <a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Potential of EEG and EEG/MEG skull conductivity estimation to improve source analysis in presurgical evaluation of epilepsy</a> (2026)</li>
 </ol>
 </section>
 
