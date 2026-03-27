@@ -5,17 +5,18 @@ description: "This page organizes how to read EEG foundation / self-supervised m
 article_type: Wiki
 subtitle: "Read advances in representation learning separately from claims that still need to be stopped"
 author: Mind Uploading Research Project
-last_updated: "2026-03-25"
+last_updated: "2026-03-28"
 note: "Technical / natural science only"
 audience: "Readers who want to assess EEG foundation models such as LaBraM, BIOT, EEGPT, and BENDR without overclaiming"
 reading_time: "10-15 min"
-page_intro: "This page is a learning wiki that organizes how to read EEG foundation / self-supervised models. Recent large-scale pretraining is clearly an advance, but to avoid jumping from that advance to claims such as 'generalization is solved' or 'we are one step closer to WBE,' we separate pretraining corpus, channel mismatch, adaptation regime, and evaluation family."
+page_intro: "This page is a learning wiki that organizes how to read EEG foundation / self-supervised models. Recent large-scale pretraining is clearly an advance, but to avoid jumping from that advance to claims such as 'generalization is solved' or 'we are one step closer to WBE,' we separate pretraining corpus, channel mismatch, adaptation regime, benchmark object / supervision unit, and evaluation family."
 accuracy_note: "This page covers only how to read the technical and natural-science evidence. It does not address overall WBE completion criteria or philosophical questions."
 page_highlights:
   - "Foundation models can improve EEG decoding, but they do not solve observability, identifiability, and deployability all at once."
   - "Recent primary papers themselves treat electrode mismatch, sampling-rate differences, missing channels, low SNR, and inter-subject variability as major open problems."
   - "Accepted papers, official challenge rules, and arXiv preprints / under-review manuscripts are not treated as the same evidence tier."
   - "Challenge and benchmark papers from 2025-2026 show that standardized cross-task / cross-subject evaluation is itself still unfinished."
+  - "Foundation-model benchmarks are not one object: window / trial classification, event detection, sequence labeling, subject-level regression, and retrieval-style tasks still need separate benchmark-object disclosure."
   - "The official EEG Challenge leaderboard later disclosed a split-construction error in Challenge 2, so benchmark provenance here includes sample randomization, hidden grouping, and inference-stage constraints rather than only benchmark name."
   - "A setup-agnostic foundation model or a very large pretraining corpus is not yet shortcut-resistant transfer; subject / site / reference / protocol shortcuts still need an explicit specificity audit."
   - "Larger models do not automatically win; rankings move with parameter efficiency, training time, and benchmark design."
@@ -27,12 +28,14 @@ known_points:
   - "The meaning of a downstream score changes across frozen, linear-probe, and fine-tuning regimes."
   - "Papers from 2025-2026 are beginning to show that model rankings can change even with benchmark split construction and preprocessing alone."
   - "Recent 2025-2026 model and benchmark papers show that 'works with any setup', 'wins under linear probing', and 'transfers under fine-tuning' are different claims that can reverse across evaluation regimes."
+  - "Benchmark name alone is still too coarse; the supervision unit can shift from windows or trials to epochs, events, or subjects, which changes what transfer means."
   - "Official challenge operations can themselves expose hidden subject-order shortcuts or score-definition changes, so benchmark postmortems are treated here as primary evidence about comparability rather than as afterthoughts."
   - "A successful foundation model cannot be read directly as source identifiability or WBE state-completeness."
 unknown_points:
   - "It is still unsettled which pretraining objective is the most stable across broad downstream families."
   - "There is still no default path that simultaneously satisfies cross-day, cross-device, cross-task, and longitudinal deployability."
   - "There is also no fixed common standard for auditing benchmark version, split rules, and checkpoint selection together."
+  - "There is still no fixed common standard for reporting benchmark object / supervision unit alongside benchmark provenance."
   - "It is not yet a settled law when targeted diversity beats indiscriminate scale."
   - "It also remains unresolved how to show that a pretrained EEG representation is resisting identity / setup shortcuts rather than merely tolerating them on one benchmark."
 wiki_links:
@@ -89,6 +92,13 @@ The sources on this page mix <strong>peer-reviewed journal / accepted conference
 <strong>"Adapting to any setup" is not yet shortcut-resistant transfer</strong>
 <p>
 This was the next weak point on this page. <a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025)</a> is important because it explicitly targets arbitrary length and electrode arrangement with pretraining on more than <strong>60,000 hours</strong> from <strong>92 datasets</strong>. But that is still not the same as proving that the learned representation stopped reading <strong>subject identity</strong>, <strong>reference / device / protocol structure</strong>, or other recording-distribution cues. <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> then showed that narrow-source versus diverse-source pretraining can trade places depending on whether the downstream regime is <strong>linear-probe</strong> or <strong>fine-tuning</strong>, while <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a> showed across <strong>12 open-source foundation models</strong> and <strong>13 datasets</strong> that linear probing is often insufficient, specialist models trained from scratch remain competitive, and larger models do not automatically generalize better. Those benchmark-side warnings line up with the shortcut literature already used elsewhere on this site: <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a>, <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a>, and <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a> show why identity confounding, acquisition variability, and time-robust fingerprints must be audited separately from headline transfer. Therefore, on this site, <strong>setup-agnostic pretraining</strong> is not read as <strong>shortcut-resistant neural representation</strong> unless the downstream claim also passes the <a href="../verification.html#specificity-shortcut-card">Specificity &amp; Shortcut Card</a>.
+</p>
+</div>
+
+<div class="note-box">
+<strong>Benchmark object and supervision unit are not one box either</strong>
+<p>
+This was the next remaining weakness on this page. The official <a href="https://eeg2025.github.io/data/" target="_blank">EEG Challenge data page</a> bundles <strong>six distinct cognitive tasks</strong> and also reports <strong>four psychopathology dimensions</strong> derived from parent-reported CBCL, so even one official benchmark family already mixes <strong>window / trial-level task decoding</strong> with <strong>subject-level factor prediction</strong>. <a href="https://openreview.net/forum?id=J5SbLoq7Uv" target="_blank">Lee et al. (2025)</a> then fine-tuned large brainwave foundation models across <strong>memory tasks</strong> and <strong>sleep stage classification</strong>, while <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a> integrated <strong>14 datasets across 10 paradigms</strong>. Those are not one benchmark object, one supervision unit, or one metric family. Therefore, on this site, benchmark name and split rule are still insufficient unless the paper also states whether the downstream object is <strong>window / trial classification</strong>, <strong>event detection</strong>, <strong>sequence labeling</strong>, <strong>subject-level regression / diagnosis</strong>, or another family, together with what counts as one independent prediction.
 </p>
 </div>
 
@@ -190,7 +200,7 @@ The biggest weakness that needed correction here was that <strong>accepted model
 </section>
 
 <section class="section" id="nine-gates">
-<h2 class="section-title">The 9 gates before reading a foundation model</h2>
+<h2 class="section-title">The 10 gates before reading a foundation model</h2>
 <table class="data-table">
 <thead>
 <tr>
@@ -226,22 +236,27 @@ The biggest weakness that needed correction here was that <strong>accepted model
 <td>Whether the regime is frozen, linear-probe, PEFT, full fine-tune, or TTT, plus target-data usage, label budget, and recalibration amount.</td>
 </tr>
 <tr>
-<td><strong>G5: benchmark provenance</strong></td>
+<td><strong>G5: benchmark object / supervision unit</strong></td>
+<td>Per-window classification, event detection, sequence labeling, subject-level regression, and retrieval / ranking do not test the same scientific object. Official foundation-model benchmarks already mix these families.</td>
+<td>The supervision unit, label provenance, output family, metric bundle, and what counts as one independent prediction.</td>
+</tr>
+<tr>
+<td><strong>G6: benchmark provenance</strong></td>
 <td>Benchmark papers from 2025-2026 show that rankings can move with split construction, checkpoint selection, segment length, and even hidden sample ordering. The official EEG Challenge postmortem made that point operationally explicit.</td>
 <td>Benchmark name, version, split rule, sample-randomization / hidden-grouping policy, checkpoint selection, segment length, normalization, how the external hold-out was built, and any inference-stage compute / training restrictions.</td>
 </tr>
 <tr>
-<td><strong>G6: shortcut-resistance / specificity bridge</strong></td>
+<td><strong>G7: shortcut-resistance / specificity bridge</strong></td>
 <td>A good transfer score can still come from subject identity, site / device / reference structure, or protocol distribution rather than the intended neural variable. Foundation-model headlines do not remove that risk.</td>
 <td>A task-matched nuisance audit, including participant / site / device / reference disjointness, metadata-only or identity baselines where applicable, shortcut slices, and the linked <a href="../verification.html#specificity-shortcut-card">Specificity &amp; Shortcut Card</a>.</td>
 </tr>
 <tr>
-<td><strong>G7: scale / efficiency</strong></td>
+<td><strong>G8: scale / efficiency</strong></td>
 <td>In EEG, "bigger is stronger" does not always hold. It is easy to misread results unless parameter count, data, compute, and trainable fraction are read together.</td>
 <td>Total parameter count, trainable parameter count, pretraining epochs / steps, corpus size, training time, and adapter size.</td>
 </tr>
 <tr>
-<td><strong>G8: claim ceiling</strong></td>
+<td><strong>G9: claim ceiling</strong></td>
 <td>Success for a foundation model is still an advance in macro decoding / representation learning.</td>
 <td>An explicit statement of what remains latent, and an explicit stop against source identifiability, direct validation, and WBE state-completeness claims.</td>
 </tr>
@@ -307,6 +322,11 @@ For foundation / self-supervised results, this site requires a <strong>Pretraini
 <td>You may misread ranking changes caused by benchmark design as differences in the model itself.</td>
 </tr>
 <tr>
+<td><strong>Benchmark Object / Supervision Unit</strong></td>
+<td>Whether the downstream object is window / trial classification, event detection, sequence labeling, subject-level regression / diagnosis, retrieval / ranking, or another family, together with label provenance, output family, metric bundle, and the independent prediction unit.</td>
+<td>You may collapse heterogeneous wins into one story about portable EEG generalization even though the model solved different objects with different error surfaces.</td>
+</tr>
+<tr>
 <td><strong>Shortcut-resistance / Specificity Bridge</strong></td>
 <td>For any downstream decode / biomarker / clinical claim, report participant / site / device / reference disjointness, metadata-only or subject-ID baselines where relevant, nuisance-route checks, shortcut slices, and the linked <a href="../verification.html#specificity-shortcut-card">Specificity &amp; Shortcut Card</a>.</td>
 <td>You may misread a representation that mainly preserves identity or recording-distribution cues as if it had become invariant to those shortcuts.</td>
@@ -340,6 +360,7 @@ For foundation / self-supervised results, this site requires a <strong>Pretraini
 <li><strong>We do not hide population / setup diversity:</strong> we report not just the number of datasets, but which recording distributions were actually included.</li>
 <li><strong>We do not hide format harmonization:</strong> channel / reference / sampling harmonization must always be reported.</li>
 <li><strong>We do not hide the amount of adaptation:</strong> linear probing, full fine-tuning, and TTT are not all listed as the same kind of "transfer success."</li>
+<li><strong>We do not hide benchmark object:</strong> window classification, event detection, sequence labeling, subject-level regression, and retrieval-like tasks are not compressed into one frontier score.</li>
 <li><strong>We do not hide benchmark provenance:</strong> because rankings move with split / checkpoint / preprocessing differences, benchmark specification is part of the result.</li>
 <li><strong>We do not treat "any setup" as shortcut-resistant by title alone:</strong> foundation-model transfer claims also need a shortcut-resistance bridge to the <a href="../verification.html#specificity-shortcut-card">Specificity &amp; Shortcut Card</a>.</li>
 <li><strong>Current competition rules are checked on the official site:</strong> proposal papers or companion preprints are background material; current rules / submission instructions / starter kits take priority for operations.</li>
@@ -361,6 +382,7 @@ For foundation / self-supervised results, this site requires a <strong>Pretraini
 <li>Wang, G., Liu, W., He, Y., Xu, C., Ma, L., &amp; Li, H. (2024). EEGPT: Pretrained Transformer for Universal and Reliable Representation of EEG Signals. <em>NeurIPS 2024</em>. <a href="https://neurips.cc/virtual/2024/poster/93793" target="_blank">poster / abstract</a></li>
 <li>Lee, N., Barmpas, K., Panagakis, Y., Adamos, D., Laskaris, N., &amp; Zafeiriou, S. (2025). Are Large Brainwave Foundation Models Capable Yet? Insights from Fine-Tuning. <em>ICML 2025 poster</em>. <a href="https://openreview.net/forum?id=J5SbLoq7Uv" target="_blank">OpenReview</a></li>
 <li>EEG Foundation Challenge (2025). From Cross-Task to Cross-Subject EEG Decoding. <em>NeurIPS 2025 competition</em>. <a href="https://eeg2025.github.io/" target="_blank">official website</a></li>
+<li>EEG Foundation Challenge (2025). Data. <a href="https://eeg2025.github.io/data/" target="_blank">official data page</a></li>
 <li>EEG Foundation Challenge (2025). Rules. <a href="https://eeg2025.github.io/rules/" target="_blank">official rules</a></li>
 <li>EEG Foundation Challenge (2025). Submission. <a href="https://eeg2025.github.io/submission/" target="_blank">submission page</a></li>
 <li>EEG Foundation Challenge (2025). Leaderboard. <a href="https://eeg2025.github.io/leaderboard/" target="_blank">official leaderboard / postmortem</a></li>
