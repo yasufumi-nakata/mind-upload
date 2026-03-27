@@ -769,7 +769,7 @@ The remaining weakness after adding the <strong>Observability Budget</strong> wa
 </tr>
 <tr>
 <td><strong>Experiment-design leverage</strong></td>
-<td>Disclose which perturbations, tasks, stimulus regimes, or active data-collection choices were intentionally used to collapse degeneracy, and say explicitly if the evidence is passive-observation only.</td>
+<td>Disclose which unresolved ambiguity the protocol was designed to break, which perturbations, regime shifts, or active data-collection choices were intentionally used to collapse it, and say explicitly if the evidence is passive-observation only.</td>
 <td>Passive fit is not promoted to solved identification just because prediction improved.</td>
 </tr>
 <tr>
@@ -786,6 +786,49 @@ The remaining weakness after adding the <strong>Observability Budget</strong> wa
 <td><strong>Abstention boundary</strong></td>
 <td>Name which uniqueness claim is <em>not</em> being made, and under which alternative assumptions the interpretation changes materially.</td>
 <td>The result is not promoted from predictive/localized/model-conditioned evidence to unique recovery language.</td>
+</tr>
+</tbody>
+</table>
+<h4 class="section-title" id="experiment-design-leverage">Experiment-design leverage must explain why the protocol is informative</h4>
+<div class="note-box">
+<strong>2026-03-27 addendum: richer protocol is not automatically informative protocol</strong>
+<p>
+The remaining weakness after adding an <strong>experiment-design leverage</strong> row was that authors could still write generic words such as <strong>multimodal</strong>, <strong>naturalistic</strong>, or <strong>closed-loop</strong> without stating why the chosen protocol should actually separate the surviving alternatives. The primary literature does not support that shortcut. <a href="https://doi.org/10.1109/CDC.1991.261405" target="_blank">Diop &amp; Fliess (1991)</a> made explicit that observability / identifiability depend on <strong>persistent trajectories</strong> rather than on outputs in the abstract. <a href="https://doi.org/10.1063/1.3528102" target="_blank">Raue et al. (2010)</a> then showed that identifiability / observability analysis can be used iteratively to design new experiments that enhance model predictiveness. In neurophysiology, <a href="https://doi.org/10.1162/neco.2008.08-07-594" target="_blank">Lewi et al. (2009)</a> showed that information-maximizing adaptive stimuli can speed convergence toward neural-response parameters by about <strong>one order of magnitude</strong> relative to random stimuli, and <a href="https://doi.org/10.1371/journal.pcbi.1011342" target="_blank">Gontier et al. (2023)</a> showed that efficient Bayesian active learning improves synaptic-parameter precision in synthetic data and whole-cell patch-clamp experiments. <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">Liu et al. (2025)</a> then showed in synthetic benchmarks that active learning can reach practical identifiability with up to <strong>50% fewer observations</strong>. Therefore, this site now requires experiment-design leverage to explain not only <strong>what extra protocol element was added</strong>, but <strong>which surviving ambiguity it is expected to break and why</strong>.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Experiment-design field</th>
+<th>Minimum disclosure</th>
+<th>What this site stops claiming if absent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Named ambiguity</strong></td>
+<td>State which surviving states, parameters, controllers, or model families remain confusable after the current fit, and which one the next protocol step is trying to separate.</td>
+<td>“We added another task or modality” is not read as targeted evidence.</td>
+</tr>
+<tr>
+<td><strong>Persistent trajectory / regime coverage</strong></td>
+<td>Name the stimulus range, task phases, initial conditions, state transitions, or perturbation timing chosen to excite hidden modes that were previously silent, co-linear, or weakly constrained.</td>
+<td>More samples from one narrow regime are not read as improved identifiability.</td>
+</tr>
+<tr>
+<td><strong>Perturbation contrast</strong></td>
+<td>State which intervention, exogenous drive, or operating-point change should make the surviving alternatives diverge, and what opposite or quantitatively different predictions were predeclared.</td>
+<td>An intervention is not read as discriminative merely because it was delivered.</td>
+</tr>
+<tr>
+<td><strong>Adaptive / sequential policy</strong></td>
+<td>State whether later trials, stimuli, or measurement windows were chosen adaptively from interim posterior / profile information or fixed in advance, and name the information criterion or heuristic used.</td>
+<td>“Active learning” is not read as achieved or reproducible by label alone.</td>
+</tr>
+<tr>
+<td><strong>Stop rule and residual overlap</strong></td>
+<td>Predefine the uncertainty, profile-overlap, or held-out-falsification threshold required to raise the claim, and report how much candidate overlap remained after the submitted data were collected.</td>
+<td>Extra data collection is not read as solved degeneracy if wide candidate overlap still remains.</td>
 </tr>
 </tbody>
 </table>
@@ -2628,6 +2671,10 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Villaverde, A. F. (2019). Observability and Structural Identifiability of Nonlinear Biological Systems. <em>Complexity</em>, 2019, 8497093. <a href="https://doi.org/10.1155/2019/8497093" target="_blank">doi:10.1155/2019/8497093</a></li>
 <li>Villaverde, A. F., Tsiantis, N., &amp; Banga, J. R. (2019). Full observability and estimation of unknown inputs, states and parameters of nonlinear biological models. <em>Journal of The Royal Society Interface</em>, 16(156), 20190043. <a href="https://doi.org/10.1098/rsif.2019.0043" target="_blank">doi:10.1098/rsif.2019.0043</a></li>
 <li>Rasero, J., Betzel, R., Sentis, A. I., Kraynak, T. E., Gianaros, P. J., &amp; Verstynen, T. (2024). Similarity in evoked responses does not imply similarity in macroscopic network states. <em>Network Neuroscience</em>, 8(1), 335-354. <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">doi:10.1162/netn_a_00354</a></li>
+<li>Diop, S., &amp; Fliess, M. (1991). Nonlinear observability, identifiability, and persistent trajectories. <em>Proceedings of the 30th IEEE Conference on Decision and Control</em>, 714-719. <a href="https://doi.org/10.1109/CDC.1991.261405" target="_blank">doi:10.1109/CDC.1991.261405</a></li>
+<li>Raue, A., Becker, V., Klingmüller, U., &amp; Timmer, J. (2010). Identifiability and observability analysis for experimental design in nonlinear dynamical models. <em>Chaos</em>, 20(4), 045105. <a href="https://doi.org/10.1063/1.3528102" target="_blank">doi:10.1063/1.3528102</a></li>
+<li>Lewi, J., Butera, R., &amp; Paninski, L. (2009). Sequential Optimal Design of Neurophysiology Experiments. <em>Neural Computation</em>, 21(3), 619-687. <a href="https://doi.org/10.1162/neco.2008.08-07-594" target="_blank">doi:10.1162/neco.2008.08-07-594</a></li>
+<li>Gontier, C., Surace, S. C., Delvendahl, I., Müller, M., &amp; Pfister, J.-P. (2023). Efficient sampling-based Bayesian Active Learning for synaptic characterization. <em>PLOS Computational Biology</em>, 19(8), e1011342. <a href="https://doi.org/10.1371/journal.pcbi.1011342" target="_blank">doi:10.1371/journal.pcbi.1011342</a></li>
 <li>Liu, X., Wanika, L., Chappell, M. J., &amp; Branke, J. (2025). Efficient data collection for establishing practical identifiability via active learning. <em>Computational and Structural Biotechnology Journal</em>, 27, 4992-5006. <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">doi:10.1016/j.csbj.2025.10.058</a></li>
 <li>Shiu, P.-K., et al. (2024). A Drosophila computational brain model reveals sensorimotor processing. <a href="https://doi.org/10.1038/s41586-024-07763-9" target="_blank">doi:10.1038/s41586-024-07763-9</a></li>
 <li>Pospisil, D. A., et al. (2024). The fly connectome reveals a path to the effectome. <a href="https://doi.org/10.1038/s41586-024-07982-0" target="_blank">doi:10.1038/s41586-024-07982-0</a></li>
