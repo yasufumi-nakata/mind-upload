@@ -34,6 +34,7 @@ page_highlights:
   - "Astrocyte evidence is not one class: lactate-shuttle support, minute-scale cortical network encoding, learning-associated recall ensembles, multiday stabilization ensembles, fear-state representations, and human MAO-B or I2BS astrocyte-related PET proxies are kept separate."
   - "Rodent astrocyte causality, human target-defined astrocyte PET, human CSF-mobility MRI, and model-based sleep-linked biomarker efflux do not compose automatically into one human maintenance-controller readout."
   - "Several living-human proxy rows are not promoted together unless same-subject relation, model burden, and residual hidden-state ceilings are disclosed explicitly."
+  - "The next bottleneck is not modality count alone but experiment design that collapses competing internal-state solutions."
   - "A human tractography graph is not one stable object: superficial-white-matter access, gyral-endpoint bias, parcellation choice, and voxel resolution still change what the graph means."
   - "For hemodynamic modalities, BOLD or fNIRS amplitude is not read as neural difference unless vascular-state / CVR limits are audited separately."
   - "For EEG / MEG connectivity, wPLI, source-space graphs, and information-flow labels are not read as leak-proof communication maps or causal circuits unless leakage, perturbation, and pipeline limits are disclosed separately."
@@ -59,6 +60,7 @@ known_points:
   - "Current human astrocyte-related PET and clearance routes remain target-defined, bounded proxy classes; they still do not identify which astrocyte, microglial controller, or synapse is responsible."
   - "Current human evidence comes in layers; proxy-rich routes still do not yield comparable whole-brain in vivo ground truth for every hidden state."
   - "Several human proxy rows do not add automatically; without same-subject relation, measurement-model disclosure, and cross-row calibration, the bundle stays below state-identification language."
+  - "Similar outputs can still arise from different parameters or macroscopic network states, so identifiability-driven experiment design remains a separate bottleneck from observability."
   - "A chemical connectome plus nominal inhibitory edges still does not fix gap-junction coupling, endogenous field effects, or local inhibitory driving force."
   - "A tractography-derived connectome can still change at the cortical-endpoint and parcel-graph stage even when the underlying diffusion signal is the same."
   - "For hemodynamic readouts, a group or longitudinal BOLD difference can still be dominated by vascular transfer state rather than neural change."
@@ -392,6 +394,12 @@ For an up-to-date external resource hub, see the <a href="https://carboncopies.o
 <strong>If You Want To See Which Unobserved States Still Dominate Error</strong>
 <p>
 After checking what is directly observed in the Observability Budget, move next to the <a href="verification.html#latent-state-error-budget">Verification: latent-state error budget</a>. That section fixes which still-unobserved states continue to dominate present error, including intrinsic excitability, current synaptic efficacy, delay / myelin, neuromodulatory specificity, glial / slow-state variables, and chronic unit identity. It also explains how to read the difference between a connectome-only baseline and an augmentation claim.
+</p>
+</div>
+<div class="note-box">
+<strong>If You Want The Next Technical Bottleneck In One Sentence</strong>
+<p>
+After the March 2026 audit, this site's answer is no longer "just add more modalities." The next bottleneck is <strong>experiment design that collapses competing internal-state solutions</strong>. <a href="https://doi.org/10.1155/2019/8497093" target="_blank">Villaverde (2019)</a> distinguished observability from identifiability, <a href="https://doi.org/10.1038/nn1352" target="_blank">Prinz et al. (2004)</a> showed that similar activity can arise from disparate parameters, <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">Rasero et al. (2024)</a> showed that similar human responses can still hide different macroscopic network states, <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that connectome-constrained networks remain degenerate until additional recordings are added, and <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">Liu et al. (2025)</a> showed that practical identifiability depends on the data-collection policy itself. Therefore, this site now treats <strong>which extra measurement or perturbation would rule out the remaining alternatives</strong> as a first-class design question, not a post hoc appendix. Start with <a href="verification.html#identifiability-card">Verification: Identifiability Card</a> and then return to <a href="wbe_101.html#what-to-do-next">WBE 101: what to build next</a>.
 </p>
 </div>
 <div class="note-box">

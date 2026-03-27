@@ -17,6 +17,7 @@ page_highlights:
   - "For maintenance-state claims, local causal evidence and living-human proxy evidence are kept on separate axes, so bridge assumptions must be disclosed rather than silently fused."
   - "For decode / biomarker scores, the Specificity & Shortcut Card separates the target neural variable from nuisance routes and audits subject / session fingerprint plus acquisition-distribution shortcuts independently."
   - "This page explains why collecting data alone is not the same as making progress."
+  - "The next bottleneck after observability is identifiability-driven experiment design: extra modalities do not count as progress unless they rule out competing internal-state solutions."
   - "For foundation / self-supervised EEG results, the Pretraining Card fixes corpus identity, overlap audit, setup diversity, harmonization, adaptation regime, benchmark provenance including split randomness / hidden grouping and inference-stage budget, and scale / efficiency before any transfer claim is read strongly."
   - "For brain-to-text and speech decode, the Neural Contribution Card fixes task constraint, language prior, candidate set, no-brain / no-LM / shuffle baselines, and subject cooperation."
   - "For multimodal or atlas-prior results, the Fusion Card is added on top of the Observability Budget so acquisition relation, synchronization, fusion model, availability / complete-case slice, vascular-state / CVR limits for hemodynamic stacks, transfer window, and external validation are fixed explicitly."
@@ -659,15 +660,22 @@ For scientific integrity, we state the current implementation status of each del
 <section class="section" id="gap-analysis">
 <h2 class="section-title">Scientific Gap Analysis</h2>
 <p>
-For the Verification Commons to contribute to science, it must recognize the following gaps and address them as priorities.
+For the Verification Commons to contribute to science, it must recognize the following gaps and address them as priorities. The March 2026 re-audit changed the ordering: the next technical bottleneck is not simply "more data" but <strong>more discriminative data under explicit claim ceilings</strong>.
 </p>
+<div class="note-box">
+<strong>The generic gap list was too weak after the identifiability audit</strong>
+<p>
+<a href="https://doi.org/10.1155/2019/8497093" target="_blank">Villaverde (2019)</a> and <a href="https://doi.org/10.1098/rsif.2019.0043" target="_blank">Villaverde et al. (2019)</a> separate <strong>observability</strong> from <strong>identifiability</strong>, <a href="https://doi.org/10.1038/nn1352" target="_blank">Prinz et al. (2004)</a> showed that similar circuit activity can arise from disparate parameters, <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">Rasero et al. (2024)</a> showed that similar human activation patterns can still hide different macroscopic network states, <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that connectome-constrained predictors remain degenerate until additional recordings collapse the compatible dynamics, and <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">Liu et al. (2025)</a> showed that practical identifiability depends on data-collection policy itself. Therefore, the central question for this site is no longer only whether a measurement stack is rich, but whether it actually rules out the main alternative explanations.
+</p>
+</div>
 <div class="key-points">
 <h4>Priority Gaps To Address</h4>
 <ul>
-<li><strong>Realizing L0:</strong> the first priority is a state in which third parties can assemble the code, data, and environment and reproduce the same result. At present, no repository contains the full set of components required for that.</li>
-<li><strong>Operationalizing counterfactual tests:</strong> "counterfactual" and "intervention prediction" are defined conceptually, but their concrete experimental test procedures remain unsettled.</li>
-<li><strong>Connecting to existing benchmarks:</strong> compatibility and differences relative to benchmarks such as the BCI Competition and MOABB must be made explicit to avoid reinventing the wheel.</li>
-<li><strong>Systematizing failure cases:</strong> the Commons design includes collecting and publishing negative results, but the incentive design for collecting them has not yet been built.</li>
+<li><strong>Identifiability-driven experiment design:</strong> define in advance which perturbations, state transitions, and extra measurements are expected to separate near-equivalent models before collecting a larger multimodal bundle.</li>
+<li><strong>Same-subject calibration for proxy bundles:</strong> when several living-human proxy rows are combined, require direct-observable disclosure, shared-driver audit, and an external calibrator so agreement is not mistaken for state closure.</li>
+<li><strong>Maintenance-state longitudinal logging:</strong> add cross-day, sleep / wake, recovery, and support-state logging so same-day fit is not promoted to maintenance-consistent recovery.</li>
+<li><strong>L0 benchmark with full route-card artifacts:</strong> publish one public benchmark that ships data, code, QC logs, calibration route, abstention rule, and route cards together, so the audit logic becomes executable rather than aspirational.</li>
+<li><strong>Negative-result and failure-mode publication:</strong> keep failure cases, abstentions, and route-card-triggered claim ceilings visible so the field does not relearn the same shortcuts in private.</li>
 </ul>
 </div>
 </section>
