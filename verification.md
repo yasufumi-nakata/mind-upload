@@ -63,6 +63,7 @@ page_highlights:
   - "At L2 and above, clearance / immune support is separated from astrocyte / glial-state when a claim depends on multiday recovery, protein clearance, or microglia-mediated synaptic maintenance."
   - "At L2 and above, delay is treated as timing-state rather than one scalar, so device latency, biological conduction timing, and human macro timing proxies are not collapsed into one number."
   - "At L2 and above for intervention / closed-loop results, the Intervention Card fixes trigger rule, timing audit, control / sham, safe stop, and recalibration burden."
+  - "For online human-in-the-loop results, a Co-Adaptation Log separates user learning, decoder updates, and application / autonomy changes before same-session gains are read as fixed-decoder stability."
   - "At L3 and above for embodied-loop results, the Body / Environment Boundary Card fixes which sensory, motor, and interoceptive channels were preserved, substituted, or omitted."
   - "For cross-day or longitudinal claims, the Temporal Validity Card audits fixed decoder interval, state annotation, recalibration burden, and transfer ceiling independently."
   - "For cross-day or remote-memory claims, the maintenance-state error budget reports controller state, sleep history, sleep architecture / replay-coupling state, neurovascular support, and support-state proxies separately, so temporal success is not auto-promoted to a maintenance-consistent claim."
@@ -2428,6 +2429,12 @@ A normal accuracy evaluation asks whether the system gives the same answer to th
 If you want an everyday-language explanation of the differences between held-out accuracy, intervention, counterfactual reasoning, and perturbation-based verification, read <a href="wiki/counterfactual-and-perturbation-verification.html">Wiki: Counterfactual and Perturbation Verification</a> first.
 </p>
 </div>
+<div class="note-box">
+<strong>2026-03-28 addendum: co-adaptation must be logged before online gains are interpreted</strong>
+<p>
+One remaining shortcut at the L3 entrance was that a paper could still say "online performance improved" without separating <strong>user-side learning</strong>, <strong>decoder updates</strong>, and <strong>application-side shaping</strong>. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuron.2014.04.048" target="_blank">Orsborn et al. (2014)</a> showed that decoder adaptation can itself shape neural plasticity during neuroprosthetic control. <a href="https://doi.org/10.1371/journal.pbio.2003787" target="_blank">Perdikis et al. (2018)</a> and <a href="https://doi.org/10.3389/fnhum.2019.00362" target="_blank">Abu-Rmileh et al. (2019)</a> showed that longitudinal BCI gains can depend on mutual learning and that adaptation rate can trade off against subject learning. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> and <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> then showed modern speech and cursor loops with session-to-session retraining, blockwise decoder updates, and explicit open-loop probes. Therefore, this site now requires a <strong>Co-Adaptation Log</strong> before same-session online gains are promoted to fixed-decoder or durable-loop language.
+</p>
+</div>
 <table class="data-table">
 <thead>
 <tr>
@@ -2440,9 +2447,9 @@ If you want an everyday-language explanation of the differences between held-out
 <tbody>
 <tr>
 <td><strong>Gate 1 / online decode</strong></td>
-<td>The subject performs continuous operations or conversations while viewing the output, and compares using online indicators instead of offline. </td>
+<td>The subject performs continuous operations or conversations while viewing the output, compares using online indicators instead of offline, and discloses whether decoder or interface policy was frozen or updated during the run. </td>
 <td>Forenzo et al. (2024), Willett et al. (2023), Littlejohn et al. (2025)</td>
-<td>This alone does not lead to causal structure matching or counterfactual equivalence. </td>
+<td>This alone does not lead to causal structure matching, counterfactual equivalence, or fixed-decoder durability. </td>
 </tr>
 <tr>
 <td><strong>Gate 2 / bidirectional perturbation</strong></td>
@@ -2574,6 +2581,7 @@ In response to technical criticisms (Issue #257-#260) submitted in the latter ha
 <li><strong>Effective Connectivity Route Card:</strong>When reporting DCM or related effective-connectivity results, name the node set and omitted competitors, neural-mass / HRF / prior assumptions, family comparison or model-recovery results, perturbation / external validation route, reliability window, and abstention boundary. If this is missing, the result stays at the model-conditioned hypothesis level. </li>
 <li><strong>Pretraining Card:</strong>When reporting a foundation / self-supervised EEG result, name corpus identity and overlap audit, setup diversity, harmonization policy, adaptation regime, benchmark provenance, scale / efficiency, and the stopped claim. If this is missing, the result stays at the qualified representation-learning / decoding level. </li>
 <li><strong>Body / Environment Boundary Card:</strong>For online human-in-the-loop or embodied tasks, name retained / substituted sensory, motor, and interoceptive channels, the surrogate body / environment contract, loop-removal tests, OOD environment slices, and the abstention boundary. If this is missing, the result stays at the local-controller level. </li>
+<li><strong>Co-Adaptation Log:</strong>For online human-in-the-loop results, name whether the decoder, thresholds, smoothing, prompt or control scaffold, and interface rules were frozen or updated, the trigger and cadence of each update, any fixed-policy or open-loop comparator blocks, practice dose and instruction changes, and whether the apparent gain is attributed to user learning, decoder adaptation, or mixed causes. If this is missing, the result stays at same-session local-controller or co-adaptive-package evidence rather than fixed-decoder stability. </li>
 <li><strong>Preprocessing Fidelity Log:</strong>Records before and after spectra, exclusion/interpolation rates, changes in key metrics, and at least one task-consistent signal preservation metric, with or without ASR. </li>
 <li><strong>Event Semantics Log:</strong> Attach HED to BIDS metadata and map to CogAtlas / CogPO / NIF / SCORE etc. as necessary. Fixing to a specific ontology is not a common requirement. </li>
 <li><strong>Perturbation log:</strong>If local interventions or stimulation were used, expose the stimulation site, intensity, artifact window, masking, safe stop conditions, and retry conditions. If not used, specify "No perturbation evidence." </li>
@@ -2677,6 +2685,10 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Wairagkar, M., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
 <li>Flesher, S. N., et al. (2021). A brain-computer interface that evokes tactile sensations improves robotic arm control. <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
 <li>Wilson, G. H., et al. (2025). Long-term unsupervised recalibration of intracortical brain-computer interfaces using a hidden Markov model. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Orsborn, A. L., Moorman, H. G., Overduin, S. A., Shanechi, M. M., Dimitrov, D. F., &amp; Carmena, J. M. (2014). Closed-loop decoder adaptation shapes neural plasticity for skillful neuroprosthetic control. <a href="https://doi.org/10.1016/j.neuron.2014.04.048" target="_blank">doi:10.1016/j.neuron.2014.04.048</a></li>
+<li>Perdikis, S., Tonin, L., Saeedi, S., Schneider, C., &amp; Millán, J. del R. (2018). The Cybathlon BCI race: successful longitudinal mutual learning with two tetraplegic users. <a href="https://doi.org/10.1371/journal.pbio.2003787" target="_blank">doi:10.1371/journal.pbio.2003787</a></li>
+<li>Abu-Rmileh, A., Zakkay, E., Shmuelof, L., &amp; Shriki, O. (2019). Co-adaptive training improves efficacy of a multi-day EEG-based motor imagery BCI training. <a href="https://doi.org/10.3389/fnhum.2019.00362" target="_blank">doi:10.3389/fnhum.2019.00362</a></li>
+<li>Lin, C.-Y., Lu, C.-F., Jao, C.-W., Wang, P.-S., &amp; Wu, Y.-T. (2023). Toward consistency between humans and classifiers: improved performance of a real-time brain-computer interface using a mutual learning system. <a href="https://doi.org/10.1016/j.eswa.2023.120205" target="_blank">doi:10.1016/j.eswa.2023.120205</a></li>
 <li>Oehrn, C. R., et al. (2024). Chronic adaptive deep brain stimulation versus conventional stimulation in Parkinson's disease: a blinded randomized feasibility trial. <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">doi:10.1038/s41591-024-03196-z</a></li>
 <li>Dixon, S., et al. (2026). Movement-responsive deep brain stimulation for Parkinson’s disease using a remotely optimized neural decoder. <a href="https://doi.org/10.1038/s41551-025-01592-5" target="_blank">doi:10.1038/s41551-025-01592-5</a></li>
 <li>Cascino, S., et al. (2026). Chronic adaptive deep brain stimulation in Parkinson’s disease: ADAPT-START findings and programming principles. <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">doi:10.1038/s41531-026-01269-z</a></li>
