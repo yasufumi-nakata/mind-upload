@@ -5,7 +5,7 @@ description: "A blueprint of standards, benchmarks, registries, and audits for t
 article_type: Platform
 subtitle: "Use the logic of PDB x BIDS x PhysioNet x OSF to define WBE success conditions and reproducible progress"
 author: Mind Uploading Research Project
-last_updated: "2026-03-27"
+last_updated: "2026-03-28"
 note: "Operational Specification"
 audience: "Readers who want the site's core policy and anyone checking what must exist before progress can honestly be claimed"
 reading_time: "15-25 min"
@@ -791,9 +791,9 @@ The remaining weakness after adding the <strong>Observability Budget</strong> wa
 </table>
 <h4 class="section-title" id="experiment-design-leverage">Experiment-design leverage must explain why the protocol is informative</h4>
 <div class="note-box">
-<strong>2026-03-27 addendum: richer protocol is not automatically informative protocol</strong>
+<strong>2026-03-28 addendum: informative protocol must target identifiability, stress model mismatch, and declare minimum sufficiency</strong>
 <p>
-The remaining weakness after adding an <strong>experiment-design leverage</strong> row was that authors could still write generic words such as <strong>multimodal</strong>, <strong>naturalistic</strong>, or <strong>closed-loop</strong> without stating why the chosen protocol should actually separate the surviving alternatives. The primary literature does not support that shortcut. <a href="https://doi.org/10.1109/CDC.1991.261405" target="_blank">Diop &amp; Fliess (1991)</a> made explicit that observability / identifiability depend on <strong>persistent trajectories</strong> rather than on outputs in the abstract. <a href="https://doi.org/10.1063/1.3528102" target="_blank">Raue et al. (2010)</a> then showed that identifiability / observability analysis can be used iteratively to design new experiments that enhance model predictiveness. In neurophysiology, <a href="https://doi.org/10.1162/neco.2008.08-07-594" target="_blank">Lewi et al. (2009)</a> showed that information-maximizing adaptive stimuli can speed convergence toward neural-response parameters by about <strong>one order of magnitude</strong> relative to random stimuli, and <a href="https://doi.org/10.1371/journal.pcbi.1011342" target="_blank">Gontier et al. (2023)</a> showed that efficient Bayesian active learning improves synaptic-parameter precision in synthetic data and whole-cell patch-clamp experiments. <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">Liu et al. (2025)</a> then showed in synthetic benchmarks that active learning can reach practical identifiability with up to <strong>50% fewer observations</strong>. Therefore, this site now requires experiment-design leverage to explain not only <strong>what extra protocol element was added</strong>, but <strong>which surviving ambiguity it is expected to break and why</strong>.
+The remaining weakness after adding an <strong>experiment-design leverage</strong> row was that authors could still write generic words such as <strong>multimodal</strong>, <strong>naturalistic</strong>, or <strong>closed-loop</strong> without stating why the chosen protocol should actually separate the surviving alternatives, which design objective selected it, or whether the new condition merely exposed model mismatch. The primary literature does not support that shortcut. <a href="https://doi.org/10.1109/CDC.1991.261405" target="_blank">Diop &amp; Fliess (1991)</a> made explicit that observability / identifiability depend on <strong>persistent trajectories</strong> rather than on outputs in the abstract, and <a href="https://doi.org/10.1063/1.3528102" target="_blank">Raue et al. (2010)</a> showed that identifiability / observability analysis can be used iteratively to design new experiments rather than only criticize old ones. <a href="https://doi.org/10.1016/j.mbs.2016.10.009" target="_blank">Chis et al. (2016)</a> then showed that <strong>sloppiness is not identifiability</strong> and that experiment design should optimize explicit identifiability criteria rather than proxy notions of being merely less sloppy. <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">White et al. (2016)</a> showed that complementary experiments can make previously omitted mechanisms relevant, so a design can tighten nominal parameter uncertainty while simultaneously creating large <strong>model discrepancy</strong>. In neuroscience, <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that recordings from a <strong>small targeted subset</strong> of neurons can remove degeneracy in connectome-constrained networks and even prioritize which neurons should be recorded next, while <a href="https://doi.org/10.1038/s41593-025-01869-7" target="_blank">Langdon &amp; Engel (2025)</a> showed that preserving <strong>causal interactions among task variables</strong> can recover behaviorally relevant computations that correlation-only reductions miss. <a href="https://doi.org/10.1038/s41540-023-00325-1" target="_blank">Gevertz &amp; Kareva (2024)</a> further showed that identifiability analysis can be used to derive a <strong>minimally sufficient</strong> measurement schedule, and <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">Liu et al. (2025)</a> showed that active learning can reach practical identifiability with markedly fewer observations. Therefore, this site now requires experiment-design leverage to explain not only <strong>what extra protocol element was added</strong>, but also <strong>which identifiability objective selected it</strong>, <strong>how omitted-mechanism stress was checked</strong>, and <strong>what minimum-sufficiency criterion stopped further data collection</strong>.
 </p>
 </div>
 <table class="data-table">
@@ -811,8 +811,13 @@ The remaining weakness after adding an <strong>experiment-design leverage</stron
 <td>“We added another task or modality” is not read as targeted evidence.</td>
 </tr>
 <tr>
+<td><strong>Design objective</strong></td>
+<td>State whether the next condition was chosen to optimize practical identifiability, model discrimination, posterior contraction, profile-likelihood width, or another declared criterion, and say explicitly if the choice was driven only by convenience, prediction score, or a sloppiness proxy.</td>
+<td>A richer protocol is not read as informative merely because a generic optimization score improved.</td>
+</tr>
+<tr>
 <td><strong>Persistent trajectory / regime coverage</strong></td>
-<td>Name the stimulus range, task phases, initial conditions, state transitions, or perturbation timing chosen to excite hidden modes that were previously silent, co-linear, or weakly constrained.</td>
+<td>Name the stimulus range, task phases, initial conditions, state transitions, targeted recordings, or perturbation timing chosen to excite hidden modes that were previously silent, co-linear, or weakly constrained, and say why this panel is expected to rotate or separate the competing solutions rather than merely resample one narrow regime.</td>
 <td>More samples from one narrow regime are not read as improved identifiability.</td>
 </tr>
 <tr>
@@ -821,14 +826,19 @@ The remaining weakness after adding an <strong>experiment-design leverage</stron
 <td>An intervention is not read as discriminative merely because it was delivered.</td>
 </tr>
 <tr>
+<td><strong>Model-discrepancy stress test</strong></td>
+<td>Report whether the new condition exposed systematic residuals, failed fits, or previously omitted mechanisms, what hierarchy of richer or alternative models was checked, and whether the protocol was revised after that stress test.</td>
+<td>Tighter nominal parameter estimates are not read as trustworthy if the added condition only forced hidden model error into view.</td>
+</tr>
+<tr>
 <td><strong>Adaptive / sequential policy</strong></td>
 <td>State whether later trials, stimuli, or measurement windows were chosen adaptively from interim posterior / profile information or fixed in advance, and name the information criterion or heuristic used.</td>
 <td>“Active learning” is not read as achieved or reproducible by label alone.</td>
 </tr>
 <tr>
-<td><strong>Stop rule and residual overlap</strong></td>
-<td>Predefine the uncertainty, profile-overlap, or held-out-falsification threshold required to raise the claim, and report how much candidate overlap remained after the submitted data were collected.</td>
-<td>Extra data collection is not read as solved degeneracy if wide candidate overlap still remains.</td>
+<td><strong>Minimum-sufficiency stop rule and residual overlap</strong></td>
+<td>Predefine the smallest condition/time-point/recording set required to raise the claim, the uncertainty, profile-overlap, or held-out-falsification threshold used to stop, and report how much candidate overlap remained once that minimum design was reached.</td>
+<td>Extra data collection is not read as solved degeneracy if the submission never shows what was minimally sufficient or how much overlap still remained.</td>
 </tr>
 </tbody>
 </table>
@@ -2732,13 +2742,17 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Aiken, J., &amp; Holzbaur, E. L. F. (2024). Spastin locally amplifies microtubule dynamics to pattern the axon for presynaptic cargo delivery. <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">doi:10.1016/j.cub.2024.03.010</a></li>
 <li>de Queiroz, B. R., Laghrissi, H., Rajeev, S., Blot, L., De Graeve, F., Dehecq, M., Keleman, K., Ule, J., Hubstenberger, A., &amp; Besse, F. (2025). Axonal RNA localization is essential for long-term memory. <a href="https://doi.org/10.1038/s41467-025-57651-7" target="_blank">doi:10.1038/s41467-025-57651-7</a></li>
 <li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
+<li>Langdon, C., &amp; Engel, T. A. (2025). Latent circuit inference from heterogeneous neural responses during cognitive tasks. <em>Nature Neuroscience</em>, 28, 665-675. <a href="https://doi.org/10.1038/s41593-025-01869-7" target="_blank">doi:10.1038/s41593-025-01869-7</a></li>
 <li>Villaverde, A. F. (2019). Observability and Structural Identifiability of Nonlinear Biological Systems. <em>Complexity</em>, 2019, 8497093. <a href="https://doi.org/10.1155/2019/8497093" target="_blank">doi:10.1155/2019/8497093</a></li>
 <li>Villaverde, A. F., Tsiantis, N., &amp; Banga, J. R. (2019). Full observability and estimation of unknown inputs, states and parameters of nonlinear biological models. <em>Journal of The Royal Society Interface</em>, 16(156), 20190043. <a href="https://doi.org/10.1098/rsif.2019.0043" target="_blank">doi:10.1098/rsif.2019.0043</a></li>
+<li>Chis, O.-T., Villaverde, A. F., Banga, J. R., &amp; Balsa-Canto, E. (2016). On the relationship between sloppiness and identifiability. <em>Mathematical Biosciences</em>, 282, 147-161. <a href="https://doi.org/10.1016/j.mbs.2016.10.009" target="_blank">doi:10.1016/j.mbs.2016.10.009</a></li>
 <li>Rasero, J., Betzel, R., Sentis, A. I., Kraynak, T. E., Gianaros, P. J., &amp; Verstynen, T. (2024). Similarity in evoked responses does not imply similarity in macroscopic network states. <em>Network Neuroscience</em>, 8(1), 335-354. <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">doi:10.1162/netn_a_00354</a></li>
 <li>Diop, S., &amp; Fliess, M. (1991). Nonlinear observability, identifiability, and persistent trajectories. <em>Proceedings of the 30th IEEE Conference on Decision and Control</em>, 714-719. <a href="https://doi.org/10.1109/CDC.1991.261405" target="_blank">doi:10.1109/CDC.1991.261405</a></li>
 <li>Raue, A., Becker, V., Klingmüller, U., &amp; Timmer, J. (2010). Identifiability and observability analysis for experimental design in nonlinear dynamical models. <em>Chaos</em>, 20(4), 045105. <a href="https://doi.org/10.1063/1.3528102" target="_blank">doi:10.1063/1.3528102</a></li>
 <li>Lewi, J., Butera, R., &amp; Paninski, L. (2009). Sequential Optimal Design of Neurophysiology Experiments. <em>Neural Computation</em>, 21(3), 619-687. <a href="https://doi.org/10.1162/neco.2008.08-07-594" target="_blank">doi:10.1162/neco.2008.08-07-594</a></li>
 <li>Gontier, C., Surace, S. C., Delvendahl, I., Müller, M., &amp; Pfister, J.-P. (2023). Efficient sampling-based Bayesian Active Learning for synaptic characterization. <em>PLOS Computational Biology</em>, 19(8), e1011342. <a href="https://doi.org/10.1371/journal.pcbi.1011342" target="_blank">doi:10.1371/journal.pcbi.1011342</a></li>
+<li>White, A., Tolman, M., Thames, H. D., Withers, H. R., Mason, K. A., &amp; Transtrum, M. K. (2016). The limitations of model-based experimental design and parameter estimation in sloppy systems. <em>PLOS Computational Biology</em>, 12(12), e1005227. <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">doi:10.1371/journal.pcbi.1005227</a></li>
+<li>Gevertz, J. L., &amp; Kareva, I. (2024). Minimally sufficient experimental design using identifiability analysis. <em>npj Systems Biology and Applications</em>, 10, 2. <a href="https://doi.org/10.1038/s41540-023-00325-1" target="_blank">doi:10.1038/s41540-023-00325-1</a></li>
 <li>Liu, X., Wanika, L., Chappell, M. J., &amp; Branke, J. (2025). Efficient data collection for establishing practical identifiability via active learning. <em>Computational and Structural Biotechnology Journal</em>, 27, 4992-5006. <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">doi:10.1016/j.csbj.2025.10.058</a></li>
 <li>Shiu, P.-K., et al. (2024). A Drosophila computational brain model reveals sensorimotor processing. <a href="https://doi.org/10.1038/s41586-024-07763-9" target="_blank">doi:10.1038/s41586-024-07763-9</a></li>
 <li>Pospisil, D. A., et al. (2024). The fly connectome reveals a path to the effectome. <a href="https://doi.org/10.1038/s41586-024-07982-0" target="_blank">doi:10.1038/s41586-024-07982-0</a></li>
