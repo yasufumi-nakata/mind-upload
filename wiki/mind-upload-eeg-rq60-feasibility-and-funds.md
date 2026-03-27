@@ -5,7 +5,7 @@ description: "research_harvest_50由来の60リサーチクエスチョンを1�
 article_type: Wiki
 subtitle: "RQごとに検証設計と応募テーマまで接続する"
 author: Mind Uploading Research Project
-last_updated: "2026-03-27"
+last_updated: "2026-03-28"
 note: "RQ-by-RQ Deep Dive"
 audience: "RQを実験計画・応募書類へ落とし込む研究者/実装者"
 reading_time: "25-40分"
@@ -1235,3 +1235,22 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - 参照ID（`6,11,13,16,29,39,49,56,509,676,696,1839,1972,2412,3419`）は `EEG-DATA/eeg_dataset_summary_ja.csv` の `ID/旧ID` で欠落 `0` を確認しました。
 - 助成キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）の参照整合を再確認しました。
 - 提出時の正本参照は継続して `Dxx + DOI + データセット名 + access区分` を使用し、数値IDは探索補助とします。
+
+## 今回の再検証ログ（2026-03-28 07:02 JST）
+
+- 作業開始時に `auto-startup` / `mind-upload` / `EEG-DATA` / `auto-research-funds` の各 `main` で `git pull --ff-only origin main` を実行し、最新化してから再検証しました。
+- `mind-upload/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.md` の `### Ux-y` 見出しを再計数し、`RQ_TOTAL=60`（欠損 `0` / 重複 `0`）を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` は不変で、`1RQ=1検証命題=1応募テーマ=1主データ` の運用を継続します。
+- 本runは汎用横断要約を増やさず、直近バッチ（`U0-4/U1-1/U3-3/U8-6/U12-4/U15-4`）と重複しない `U0-2/U1-4/U4-3/U7-1/U13-2/U14-5` の6RQを深掘り対象として固定しました。
+
+| RQ | 判定 | 主データ（Dアンカー） | 第一/予備応募先 | 今回固定した深掘りポイント |
+|---|---|---|---|---|
+| U0-2 | A | `D02`（補助 `D11/D23`） | `G2 / G3` | ms同期ずれを `offset/jitter` 分布で固定し、同一性判定で許容する時刻誤差上限を運用条件へ接続。 |
+| U1-4 | B | `D08`（補助 `D11/D19`） | `G1 / G4` | 逆問題で推定値のみ合格を禁止し、`後方分布公開` と `区間被覆率` を提出必須に固定。 |
+| U4-3 | B | `D05`（補助 `D08/D19`） | `G1 / G4` | active inference/DCM の理論予測を反事実誤差へ接続し、理論順位の反転条件を停止条件として先に宣言。 |
+| U7-1 | A | `D11`（補助 `D15/D23`） | `G1 / G3` | BIDS拡張で `clock offset/sampling drift/stimulus onset/QC fail code` を必須化し、欠落時は採択停止する監査運用を固定。 |
+| U13-2 | B | `D10`（補助 `D03/D09`） | `G1 / G4` | 模倣判定を `意味一致` と `因果一致` の二軸で評価し、片軸のみ高得点の過大主張を遮断。 |
+| U14-5 | B | `D01`（補助 `D08/D13`） | `G1 / G3` | 否定例レジストリを `failure_id/dataset_doi/split_hash/rerun_status` で固定し、再試行SLAを提出要件に組み込む。 |
+
+- 参照データの正本は継続して `Dxx + DOI + データセット名 + access区分` とし、数値IDは探索補助として扱います。
+- 助成キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）の参照整合を再確認しました。
