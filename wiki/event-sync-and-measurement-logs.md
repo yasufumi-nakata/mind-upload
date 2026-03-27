@@ -5,17 +5,18 @@ description: "Explain why raw EEG alone is not enough from the perspectives of e
 article_type: Wiki
 subtitle: "Comparisons break down if we don't leave behind the source of the label, not just the signal."
 author: Mind Uploading Research Project
-last_updated: "2026-03-15"
+last_updated: "2026-03-28"
 note: "Practical guide"
 audience: "People who have started working with EEG data and want to experience the bare minimum of BIDS and QC"
 reading_time: "12-18 minutes"
 page_intro: "This page is a wiki that explains why raw EEG waveforms alone are not reproducible in research from the perspectives of event markers, event semantics, time synchronization, manual scoring, and report-derived labels. The purpose is to prevent not only ``waveform files are available but cannot be compared,'' but also ``labels are available but provenance is ambiguous and cannot be compared,'' and ``time is available but clock domain is ambiguous and cannot be compared.''"
-accuracy_note: "What we are dealing with here is the minimum observation log and label provenance, but in the 2026-03 update, we also clarify the differences in the roles of BIDS event tables, HED semantics, LSL synchronization, and Motion-BIDS-type metadata. Although each issue requires additional metadata, the principle of keeping events, meanings, and clock systems separate remains the same."
+accuracy_note: "What we are dealing with here is the minimum observation log and label provenance, but in the 2026-03-28 update, we also clarify the differences in the roles of BIDS event tables, HED semantics, LSL synchronization, physical timing validation, and Motion-BIDS-type metadata. Although each issue requires additional metadata, the principle of keeping events, meanings, clock systems, and timing-validation classes separate remains the same."
 page_highlights:
   - "Raw EEG alone may not tell you the signal at the moment of what happened."
   - "Event markers, stimulation logs, and synchronization information may not be restored later."
   - "BIDS's `events.tsv` is a timestamp table, not event semantics by itself."
   - "LSL strengthens intra-LAN synchronization, but does not automatically provide the true value of intra-device delay or stimulus presentation delay."
+  - "Stored-data anchors, stream alignment, digital trigger capture, physical output onset, and uncontrolled-response timing are different timing-validation classes."
   - "Cue onset, expert interval, hypnogram, and report-derived label are different even though they are the same labeled data."
   - "Recording bad channels and bad segments is also part of the evidence."
 known_points:
@@ -23,6 +24,7 @@ known_points:
   - "If you don't record delays, jitter, and drift, your strengths in temporal resolution will be undermined."
   - "BIDS/EEG-BIDS provides a container for events and metadata, but machine-readable semantics like HED are useful for cross-study reuse."
   - "Even with LSL and trigger lines, time fidelity cannot be audited without specifying the clock domain and device-side delay."
+  - "A BIDS onset or sample index does not by itself prove physical display/audio onset, and a digital trigger does not by itself prove uncontrolled response timing."
   - "If you do not write annotation provenance, you may not be able to reuse the same label name."
   - "Recording bad channels/bad segments is directly linked to transparency of exclusions."
 unknown_points:
@@ -73,6 +75,13 @@ This page treats not only event logs but also <strong>label provenance</strong> 
 <strong>Main weakness this page needed to fix</strong>
 <p>
 Although the site already stated that events and synchronization matter, it still did not cleanly separate <strong>time anchors</strong>, <strong>event semantics</strong>, and <strong>clock alignment</strong>. BIDS task events provide a descriptive framework through <code>events.tsv</code> and JSON sidecars, but as Robbins et al. (2021) and Hermes et al. (2025) show, cross-study reuse also requires <strong>machine-readable semantics such as HED</strong>. Furthermore, as Kothe et al. (2025) show, LSL can strengthen network synchronization without automatically giving you device-internal delay or stimulus-presentation delay. That is why this site audits event fidelity in three tiers rather than treating it as a single checkbox.
+</p>
+</div>
+
+<div class="note-box">
+<strong>2026-03-28 re-audit: timing evidence still needed a ladder</strong>
+<p>
+The remaining weakness was that this page could still let a reader treat <strong>BIDS onset/sample fields</strong>, <strong>LSL alignment</strong>, <strong>TTL markers</strong>, <strong>photodiode traces</strong>, and <strong>microphone / loopback tests</strong> as if they were interchangeable proofs of timing. The current standards and primary literature do not support that compression. The BIDS specification defines <code>onset</code> relative to the <strong>first stored data point</strong>, not the physical onset at the screen or speaker. Hermes et al. (2025) shows that HED sharpens machine-actionable semantics, not hardware latency truth. Kothe et al. (2025) shows that LSL can compensate cross-device offsets and jitter, but residual setup offsets must still be tested on the actual instruments. Lepauvre et al. (2024) and Bridges et al. (2020) then show that physical stimulus onset and response timing need external validation because software package, operating system, and hardware combinations can materially shift delay and jitter. Therefore, this site now reads timing evidence as a <strong>validation ladder</strong> rather than one sync checkbox.
 </p>
 </div>
 
@@ -142,6 +151,55 @@ Even if there is only an event marker, if the content of the stimulus or the nam
 </table>
 <p>
 BIDS task events primarily provide the <strong>first layer</strong>, HED supplements the <strong>second-layer semantics</strong>, and LSL supports <strong>third-layer network synchronization</strong>. Therefore, this site does not treat these as interchangeable tools.
+</p>
+</section>
+
+<section class="section" id="timing-validation-ladder">
+<h2 class="section-title">Timing validation is a ladder, not one box</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>Validation class</th>
+<th>What it directly fixes</th>
+<th>What it still does not prove</th>
+<th>Typical artifact to keep</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Stored-data anchor</strong></td>
+<td>Fixes where an event sits in the saved data file by <code>onset</code>, <code>duration</code>, and optionally <code>sample</code>.</td>
+<td>Does not prove physical display/audio onset, device throughput delay, or participant response timing.</td>
+<td><code>events.tsv</code>, <code>events.json</code>, acquisition start definition, discarded-sample rule.</td>
+</tr>
+<tr>
+<td><strong>Stream alignment</strong></td>
+<td>Fixes cross-device clock offset, drift, and network-jitter handling across synchronized streams.</td>
+<td>Does not prove the true latency of displays, speakers, amplifiers, or buttons.</td>
+<td>LSL/XDF log, clock domain, offset / RTT summary, resync policy.</td>
+</tr>
+<tr>
+<td><strong>Acquisition-side digital marker capture</strong></td>
+<td>Fixes when a trigger pulse reached the acquisition system or DAQ input.</td>
+<td>Does not prove when the stimulus actually became visible/audible or when the participant actually responded.</td>
+<td>TTL or marker trace, DAQ channel, trigger wiring map, marker-to-stream relation.</td>
+</tr>
+<tr>
+<td><strong>Physical output onset</strong></td>
+<td>Fixes the real-world onset and duration of a visual or auditory event at the actuator.</td>
+<td>Does not prove subjective perception time, neural processing latency, or response-device timing.</td>
+<td>Photodiode trace, microphone trace, audio loopback, high-speed-camera or equivalent setup note.</td>
+</tr>
+<tr>
+<td><strong>Uncontrolled-response timing</strong></td>
+<td>Fixes the gap between the logged response timestamp and the actual button / key / actuator response.</td>
+<td>Does not prove stimulus onset timing or internal cognitive latency.</td>
+<td>Contact microphone, force sensor, loopback, response-box validation log.</td>
+</tr>
+</tbody>
+</table>
+<p>
+On this site, a submission has to name the <strong>highest rung actually tested</strong>. Saying “we used BIDS” fixes the stored-data anchor. Saying “we used LSL” fixes stream alignment. Saying “we sent TTL markers” fixes acquisition-side digital capture. Claims about <strong>physical stimulus onset</strong> or <strong>true response timing</strong> require an external measurement rung such as photodiode, microphone, or loopback.
 </p>
 </section>
 
@@ -358,7 +416,7 @@ It is normal to exclude channels with large noise or sections broken by body mov
 <section class="section" id="event-fidelity-card">
 <h2 class="section-title">Event Fidelity Card required on this site</h2>
 <p>
-As of the 2026-03 site rule, dataset cards and runbooks that contain events must include at least the following five items. The point is not to wait until everything is perfect, but to make missing pieces visible and define where claims must stop.
+As of the 2026-03-28 site rule, dataset cards and runbooks that contain events must include at least the following six items. The point is not to wait until everything is perfect, but to make missing pieces visible and define where claims must stop.
 </p>
 <table class="data-table">
 <thead>
@@ -377,15 +435,19 @@ As of the 2026-03 site rule, dataset cards and runbooks that contain events must
 <td><code>trial_type</code>, condition definitions, HED or an equivalent vocabulary, and whether semantics come from signal-only annotation or manual scoring / reports. </td>
 </tr>
 <tr>
-<td><strong>3. Sync evidence</strong></td>
-<td>Synchronization method such as LSL / TTL / photodiode / loopback, measured delay / jitter / drift, and how those values were measured. </td>
+<td><strong>3. Clock domain and stream alignment</strong></td>
+<td>Name the clock domain, synchronization middleware if any, offset / drift handling, and resynchronization policy. </td>
 </tr>
 <tr>
-<td><strong>4. Provenance</strong></td>
+<td><strong>4. Timing validation class</strong></td>
+<td>Name whether timing evidence comes from stored-data anchor only, digital marker capture, physical output onset, or uncontrolled-response testing, together with measured delay / jitter summary and the measurement method. </td>
+</tr>
+<tr>
+<td><strong>5. Provenance</strong></td>
 <td>Scorer ID, scoring manual, report-usage flag, and whether the label is signal-only or multimodal. </td>
 </tr>
 <tr>
-<td><strong>5. Geometry / multimodal metadata</strong></td>
+<td><strong>6. Geometry / multimodal metadata</strong></td>
 <td>Electrode coordinates, coordinate system, and the frame plus schema of any additional motion, video, or physiology streams. </td>
 </tr>
 </tbody>
@@ -400,6 +462,7 @@ If you do not record the following information, you will have to guess it later.
 <ul>
 <li><strong>Exact time of stimulus presentation:</strong>Rough order cannot be substituted. </li>
 <li><strong>Clock domain:</strong>If you do not state which clock a timestamp belongs to, you cannot interpret differences across multiple streams. </li>
+<li><strong>Timing validation class:</strong>If you do not say whether a number comes from stored-data anchor, TTL, photodiode, microphone, or loopback, sync evidence becomes impossible to interpret. </li>
 <li><strong>Actual delay and jitter:</strong> Sometimes equipment and software settings are not enough. </li>
 <li><strong>Device-side delay:</strong>Even if you use LSL or trigger, you need to measure the internal delay of the display, audio, and amplifier separately. </li>
 <li><strong>Reason for exclusion:</strong>Even if you look back on it, you won't know why you threw it away. </li>
@@ -415,12 +478,14 @@ If you do not record the following information, you will have to guess it later.
 <section class="section" id="references">
 <h2 class="section-title">References</h2>
 <ul>
-<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/events.html" target="_blank">BIDS Specification: Task events</a></li>
+<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/events.html" target="_blank">BIDS Specification: Events</a></li>
 <li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS Specification: Electroencephalography</a></li>
 <li><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019), EEG-BIDS</a></li>
 <li><a href="https://doi.org/10.1007/s12021-021-09513-7" target="_blank">Robbins et al. (2021), Building FAIR functionality: annotating events in time series data using HED</a></li>
 <li><a href="https://doi.org/10.1038/s41597-025-05791-2" target="_blank">Hermes et al. (2025), HED library schema for EEG data annotation</a></li>
 <li><a href="https://doi.org/10.1162/imag_a_00136" target="_blank">Kothe et al. (2025), The lab streaming layer for synchronized multimodal recording</a></li>
+<li><a href="https://doi.org/10.3758/s13428-024-02508-y" target="_blank">Lepauvre et al. (2024), A standardized framework to test event-based experiments</a></li>
+<li><a href="https://doi.org/10.7717/peerj.9414" target="_blank">Bridges et al. (2020), The timing mega-study: comparing a range of experiment generators, both lab-based and online</a></li>
 <li><a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Jeung et al. (2024), Motion-BIDS</a></li>
 <li><a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">PhysioNet: EEG Motor Movement/Imagery Dataset</a></li>
 <li><a href="https://physionet.org/content/chbmit/1.0.0/" target="_blank">PhysioNet: CHB-MIT Scalp EEG Database</a></li>

@@ -5,7 +5,7 @@ description: "From the selection of public data (mainly EEG) to the minimum loop
 article_type: Resource
 subtitle: "Connect ``what to use'' and ``how to reproduce'' in the shortest route without separating them."
 author: Mind Uploading Research Project
-last_updated: "2026-03-25"
+last_updated: "2026-03-28"
 note: "Curated List + L0 Practice"
 audience: "People who are wondering which public data to start with, people who are looking for an L0 practice board"
 reading_time: "12-20 minutes"
@@ -20,6 +20,7 @@ page_highlights:
   - "Within-session / cross-session / cross-subject / adaptation are different evaluation families and should not be placed side by side under the same score."
   - "Metric semantics are task-dependent: in imbalanced or rare-event tasks, accuracy or AUROC alone do not fix event sensitivity, false alarms, minority-class failure, or calibration."
   - "Cross-session and adaptation labels are not yet temporal-validity claims; state annotation, fixed decoder interval, recalibration burden, and transfer ceiling still have to be disclosed separately."
+  - "Clock domain, stream alignment, digital trigger capture, physical output onset, and uncontrolled-response timing are different timing-validation classes rather than one sync field."
   - "Even when the score is numerically the same, you still have to separate the target neural variable from eye movement, EMG, behavior, feedback routes, subject / session fingerprint, and acquisition-distribution shortcuts such as site / device / reference / electrode layout."
   - "Even when foundation / self-supervised EEG models are used, pretraining-corpus and harmonization audits are still required."
   - "Official challenge rules, submission constraints, and later postmortems can change what a benchmark score means, so benchmark provenance is part of the dataset / benchmark card rather than administrative detail."
@@ -33,6 +34,7 @@ known_points:
   - "Even if the accuracy is the same, the strength of the argument that can be read will change depending on which generalization condition the score was obtained under."
   - "For class-imbalanced or rare-event tasks, a task-matched metric bundle is required: event sensitivity plus false alarms for seizure tasks, and macro / per-stage agreement for sleep staging, rather than one headline number."
   - "Cross-session accuracy and cross-session adaptation still do not say whether a fixed decoder survived, how much recalibration was needed, or what transfer ceiling remains."
+  - "A dataset card that says only `events.tsv` or `LSL` still leaves open whether timing was checked at the stored-data, trigger, physical-output, or uncontrolled-response level."
   - "A same-day score may reflect movement / EOG / EMG / feedback routes, subject / session fingerprint, or acquisition-distribution shortcuts rather than the target signal."
   - "Foundation-model improvements are not comparable unless the pretraining corpus, channel-mismatch handling, acquisition-distribution summary, and adaptation regime are disclosed."
   - "A benchmark name alone is not enough; version, split / randomization rule, hidden grouping, extra-data policy, pretrained-checkpoint policy, and inference-stage restrictions can all change what a score means."
@@ -189,7 +191,7 @@ Even if the waveform file is published, if the <strong>event definition</strong>
 <div class="note-box">
 <strong>Event Fidelity Card now required</strong>
 <p>
-Future dataset cards must include at least <strong>(1) onset / duration / sample</strong>, <strong>(2) clock domain plus delay / jitter audit</strong>, <strong>(3) event semantics such as <code>trial_type</code>, HED, and scoring rules</strong>, <strong>(4) provenance / scorer / report-usage flag</strong>, <strong>(5) independent split units</strong>, and <strong>(6) a clear stopping claim</strong>. Cards without these fields are insufficient as reusable L0 guides.
+Future dataset cards must include at least <strong>(1) onset / duration / sample</strong>, <strong>(2) clock domain plus stream-alignment rule</strong>, <strong>(3) timing-validation class such as stored-data anchor / digital trigger / physical onset / uncontrolled-response test</strong>, <strong>(4) event semantics such as <code>trial_type</code>, HED, and scoring rules</strong>, <strong>(5) provenance / scorer / report-usage flag</strong>, <strong>(6) independent split units</strong>, and <strong>(7) a clear stopping claim</strong>. Cards without these fields are insufficient as reusable L0 guides.
 </p>
 </div>
 
@@ -557,7 +559,7 @@ The <strong>stopping claims</strong> and <strong>minimum operational rules</stro
 <div class="note-box">
 <strong>The most important site rule to add now</strong>
 <p>
-When introducing starter data, always include <strong>(1) label provenance</strong>, <strong>(2) time granularity</strong>, <strong>(3) clock domain and sync evidence</strong>, <strong>(4) event semantics</strong>, <strong>(5) independent split unit</strong>, <strong>(6) acquisition-distribution summary plus harmonization policy</strong>, and <strong>(7) stopping claim</strong>. A dataset card that does not include this will be considered insufficient as a practical guide for L0.
+When introducing starter data, always include <strong>(1) label provenance</strong>, <strong>(2) time granularity</strong>, <strong>(3) clock domain plus stream-alignment rule</strong>, <strong>(4) timing-validation class</strong>, <strong>(5) event semantics</strong>, <strong>(6) independent split unit</strong>, <strong>(7) acquisition-distribution summary plus harmonization policy</strong>, and <strong>(8) stopping claim</strong>. A dataset card that does not include this will be considered insufficient as a practical guide for L0.
 </p>
 </div>
 
@@ -748,7 +750,7 @@ A public inverse-problem comparison on this site must now disclose at least <str
 <ul>
 <li><strong>Version fixed:</strong>Does OpenNeuro snapshot, PhysioNet version, DOI, acquisition date remain?</li>
 <li><strong>Reproduction:</strong>Can you write the acquisition procedure, license, preprocessing conditions, random numbers, and environment</li>
-<li><strong>Metadata:</strong>Do you have sampling, reference, electrode placement, event definition, and synchronization information?</li>
+<li><strong>Metadata:</strong>Do you have sampling, reference, electrode placement, event definition, clock domain, and a named timing-validation class?</li>
 <li><strong>Annotation provenance:</strong> Did you clearly indicate whether the label came from an annotation channel, manual scoring, or a report-derived rule?</li>
 <li><strong>QC:</strong>Are noise, defects, and artifacts quantified?</li>
 <li><strong>Comparison:</strong>Is there a baseline and can be compared using the same metrics as the evaluation family</li>
@@ -778,7 +780,7 @@ The goal here is not to compete for high accuracy, but to create the smallest lo
 <ul>
 <li><strong>Version:</strong>OpenNeuro snapshot / PhysioNet version / DOI / leave acquisition date</li>
 <li><strong>Input:</strong>Create a format that can be placed in BIDS / EEG-BIDS (data + metadata + reference / channels / electrodes / events)</li>
-<li><strong>Event fidelity:</strong>Record onset / duration / sample, clock domain, delay / jitter evidence, and event semantics</li>
+<li><strong>Event fidelity:</strong>Record onset / duration / sample, clock domain, stream-alignment rule, timing-validation class, delay / jitter evidence, and event semantics</li>
 <li><strong>Label provenance:</strong>State whether the target comes from annotation channels, expert scoring, clinician reports, or other rules</li>
 <li><strong>Quality: </strong>Record missing, noise, artifact, and exclusion reasons in numerical form</li>
 <li><strong>Processing:</strong>Fix preprocessing conditions, random numbers, software version, and derivative lineage from raw to outputs</li>
