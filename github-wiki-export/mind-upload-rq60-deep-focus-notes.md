@@ -374,3 +374,50 @@ Reasons for proceeding in this order:
 - Kept `RQ_TOTAL=60`, `A/B/C=17/25/18`, and the same `G1-G6` operating keys.
 - Locked the submission rule as `Dxx + DOI + dataset name + access class` (numeric ID is search-only legacy guidance).
 - Focused deliverable style remains: `1RQ = 1 verification proposition = 1 application theme = 1 primary dataset`.
+
+## 2026-03-27 07:02 JST 再検証ログ（本run / 6RQ深掘り固定）
+
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` を正本として再突合し、`RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認しました。
+- 本runは汎用横断の追加を行わず、非重複6RQ（`U1-3/U3-5/U7-4/U8-5/U11-3/U15-1`）を `1RQ=1検証命題=1応募テーマ=1主データ` で固定しました。
+- 参照主データID（`56,13,676,6,735,49`）は `EEG-DATA/eeg_dataset_summary_ja.csv` で実在（欠落 `0`）を確認しました。
+- 助成接続は `G1-G6` 実ID系（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）を維持しました。
+
+### 本runで優先して深掘りする6RQ
+
+1. `U7-4`（再計測/除外判定木を固定）
+2. `U1-3`（逆解法乖離の採択規則）
+3. `U8-5`（オーバーライド安全KPI）
+4. `U11-3`（理論比較I/O仕様）
+5. `U3-5`（境界拡張proxyと外部依存境界）
+6. `U15-1`（神経データ機微性の制度接続）
+
+## 2026-03-27 13:02 JST 再検証ログ（本run / 6RQ深掘り固定）
+
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` を正本として再突合し、`RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認しました。
+- 本runは汎用横断の追加を行わず、非重複6RQ（`U0-1/U1-1/U4-3/U8-6/U12-3/U14-4`）を `1RQ=1検証命題=1応募テーマ=1主データ` で固定しました。
+- 参照主データID（`11,56,19,6`）は `EEG-DATA/eeg_dataset_summary_ja.csv` の `ID/旧ID` で実在（欠落 `0`）を確認しました。
+- 助成接続は `G1-G6` 実ID系（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）を維持しました。
+
+### 本runで優先して深掘りする6RQ
+
+1. `U1-1`（逆問題の事前分布比較と採択規則）
+2. `U0-1`（同一性KPIの観測一致/介入一致二軸化）
+3. `U14-4`（Model Card / Dataset Card の契約要件化）
+4. `U4-3`（反事実誤差による理論比較固定）
+5. `U8-6`（再学習頻度と安全余裕のトレードオフ固定）
+6. `U12-3`（心理的連続性監査ログの制度接続準備）
+
+## 2026-03-29 01:44 JST revalidation log (main run / solve-first six-RQ sync)
+
+- Synced this note to the existing 2026-03-29 solve-first pack already fixed in `docs/wiki/mind-upload_eeg_funding_verification_2026-03-29_0137-jst.md`, `mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds.md`, and `auto-research-funds/wiki/Mind-Upload-EEG-RQ-Grant-Map.md`.
+- Kept the same evidence rule: no broad sweep, no claim expansion, and no numeric-ID-only citation in submission documents.
+- Reconfirmed the execution criterion for this sync: prioritize RQs that are easiest to turn into both an initial EEG experiment and a grant-ready problem statement without relaxing the `1RQ = 1 verification proposition = 1 application theme = 1 primary dataset` rule.
+
+### Solve-first six-RQ pack synced in this run
+
+1. `U1-1` - prior-family benchmark with known stimulation ground truth
+2. `U4-2` - minimum causal claim fixed before analysis
+3. `U7-1` - BIDS extension contract for synchronization/QC/stimulus logs
+4. `U11-1` - rank-preserving theory comparison across anesthesia/sleep/DoC
+5. `U13-5` - perception-to-recall branch point for mimicry/mechanism separation
+6. `U14-4` - Model Card / Dataset Card wired into the reproducibility contract
