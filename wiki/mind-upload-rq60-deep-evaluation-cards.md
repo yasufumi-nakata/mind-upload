@@ -654,3 +654,24 @@ reading_time: "35-55分"
 - 正本は `mind-upload/research_harvest_50.md` と `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` を維持し、`RQ_TOTAL=60` と `A/B/C=17/25/18` を再計数して一致を確認しました。
 - `1RQ=1検証命題=1応募テーマ=1主データ` の運用を継続し、今回runの深掘り優先キューを `U0-2 -> U1-2 -> U4-2 -> U8-3 -> U13-6 -> U15-2` に再固定しました。
 - `EEG-DATA` は信号生データ置き場ではなくメタデータカタログ（高信頼 `28,799` 件）である前提を明記し、提出時の根拠は `DOI + データセット名 + access区分` 併記を必須としました。
+
+## 2026-03-28 19:02 JST 再検証ログ（本run / 非重複6RQの深掘り固定）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `EEG-DATA` / `auto-research-funds` の各 `main` で `git pull origin main` を実行し、最新化を確認しました。
+- `mind-upload/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.md` の `### Ux-y` 見出しを再計数し、`RQ_TOTAL=60`（欠損・重複 `0`）を再確認しました。
+- 判定内訳 `A/B/C=17/25/18` を維持し、方針 `1RQ=1検証命題=1応募テーマ=1主データ` を継続します。
+- 本runは汎用横断要約を増やさず、前run（`U0-2/U1-3/U4-3/U8-1/U13-4/U14-5`）と重複しない `U0-1/U1-2/U4-4/U8-2/U12-3/U15-1` を深掘り固定しました。
+
+| RQ | 判定 | 主データ（Dアンカー） | 第一/予備応募先 | 深掘りで固定した検証焦点 | 失敗条件（停止条件） | 最低成果物 |
+|---|---|---|---|---|---|---|
+| U0-1 | A | `D02`（補助 `D11/D23`） | `G2 / G3` | 同一性判定を `観測一致` と `介入一致` の二軸ROCで先に固定し、片軸合格を不採択にする。 | 介入条件変更で二軸のどちらかが連続2回で閾値未達。 | Identity KPI two-axis baseline card |
+| U1-2 | A | `D08`（補助 `D11/D19`） | `G1 / G4` | 導電率・電極欠損・ノイズ摂動で `区間被覆率` と `誤差増分` を同時計測し、逆問題主張の採択境界を固定する。 | 摂動条件で誤差順位が反転し、被覆率逸脱が継続。 | Inverse problem reproduction report (error/uncertainty) |
+| U4-4 | B | `D05`（補助 `D08/D19`） | `G1 / G4` | 反証閾値（`反事実誤差` `符号反転率`）を実験前に宣言し、因果同値主張の降格条件を先に定義する。 | 条件別に閾値が揺れて再現不能、または反証閾値超過率が上限超過。 | Causal verification report (minimum intervention claim) |
+| U8-2 | B | `D20`（補助 `D01/D21`） | `G2 / G5` | 再較正頻度を `性能維持率/回復時間/停止介入率` の3指標で運用し、閉ループ許容帯を固定する。 | 再較正コスト増に対して性能維持改善が再現しない。 | Operational stability report (safety shutdown/recovery time) |
+| U12-3 | C | `D02`（補助 `D10/D12`） | `G2 / G6` | 心理連続性proxyを `branch_id/continuity_score/evidence_hash` で監査可能化し、人格判断は制度トラックへ分離する。 | 連続性proxyと監査証跡の対応が一意化できない。 | System audit requirements table (technical log compatible) |
+| U15-1 | C | `D07`（補助 `D20/D21`） | `G2 / G6` | 神経データの機微性分類（個人情報/生体情報/人格情報）を監査ログ項目へ写像し、技術証跡の最低要件を先に固定する。 | 法概念の写像が法域ごとに矛盾し、単一監査様式へ統合できない。 | System integrated audit report (suspension/renewal conditions) |
+
+補足:
+
+- 提出時の正本参照は継続して `Dxx + DOI + データセット名 + access区分` とし、数値IDは探索補助として扱います。
+- `C` 判定RQは EEG 単独主張を行わず、制度・法務・他モダリティ接続を応募文面に明記します。
