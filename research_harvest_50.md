@@ -244,7 +244,7 @@ The remaining weakness in the literature route was that <strong>U7</strong> coul
 <div class="note-box">
 <strong>Read human measurement papers as their own evidence class</strong>
 <p>
-For technical reading, the first split is between <strong>destructive local structure</strong> and <strong>living-human in vivo proxy routes</strong>. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a>, <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">Dorkenwald et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> belong to the destructive-route class because preservation, registration, throughput, and proofreading burden materially change what the structural result means. By contrast, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>, <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a>, <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> raise different <strong>living-human observability classes</strong> and still leave explicit latent-state ceilings. On this page, the in vivo papers are therefore read on <strong>three axes at once</strong>: <strong>what variable class the route constrains</strong>, <strong>how specialized or deployment-limited the route still is</strong>, and <strong>what bounded hidden-state family the route can safely calibrate</strong>. A regional SV2A atlas calibrates a <strong>synaptic-density comparison family</strong>, a five-metabolite <sup>1</sup>H-MRSI connectome calibrates a <strong>macro biochemical scaffold family</strong>, dynamic deuterium MRSI calibrates a <strong>kinetic energetic-rate family</strong>, specialized macro myelin / thermal papers calibrate <strong>bounded support-state proxy classes</strong>, BBB permeability and exchange papers calibrate a <strong>macro neurovascular / BBB proxy family</strong>, and CSF-mobility / sleep-linked clearance papers calibrate <strong>clearance-support physiology</strong>. None of those routes closes <strong>current post-transcriptional RNA-state</strong>, <strong>current phospho-signaling / second-messenger state</strong>, <strong>branch-local proteostasis / tag-capture</strong>, <strong>branch- or bouton-specific cargo-routing</strong>, <strong>chloride-set-point state</strong>, <strong>cell-specific neurovascular-controller state</strong>, or other cell-specific maintenance controllers. That is why this page now treats calibrator role as a separate evidence field rather than hiding it inside generic route maturity.
+For technical reading, the first split is between <strong>destructive local structure</strong> and <strong>living-human in vivo proxy routes</strong>. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a>, <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">Dorkenwald et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> belong to the destructive-route class because preservation, registration, throughput, and proofreading burden materially change what the structural result means. By contrast, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a>, <a href="https://doi.org/10.1002/mrm.26560" target="_blank">Ren et al. (2017)</a>, <a href="https://doi.org/10.3389/fnins.2024.1389111" target="_blank">Guo et al. (2024)</a>, <a href="https://doi.org/10.1177/0271678X261415784" target="_blank">Kaiser et al. (2026)</a>, <a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>, <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a>, <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> raise different <strong>living-human observability classes</strong> and still leave explicit latent-state ceilings. On this page, the in vivo papers are therefore read on <strong>three axes at once</strong>: <strong>what variable class the route constrains</strong>, <strong>how specialized or deployment-limited the route still is</strong>, and <strong>what bounded hidden-state family the route can safely calibrate</strong>. A regional SV2A atlas calibrates a <strong>synaptic-density comparison family</strong>, a five-metabolite <sup>1</sup>H-MRSI connectome calibrates a <strong>macro biochemical scaffold family</strong>, resting <sup>31</sup>P balance calibrates a <strong>macro energetic-balance family</strong>, <sup>31</sup>P MT calibrates a <strong>model-conditioned exchange-flux family</strong>, whole-brain <sup>31</sup>P NAD mapping calibrates an <strong>intracellular NAD-content family</strong>, localized <sup>31</sup>P fMRS calibrates a <strong>task-evoked NAD-dynamics family</strong>, deuterium absolute quantification calibrates an <strong>absolute metabolite-distribution family</strong>, dynamic deuterium MRSI calibrates a <strong>kinetic energetic-rate family</strong>, specialized macro myelin / thermal papers calibrate <strong>bounded support-state proxy classes</strong>, BBB permeability and exchange papers calibrate a <strong>macro neurovascular / BBB proxy family</strong>, and CSF-mobility / sleep-linked clearance papers calibrate <strong>clearance-support physiology</strong>. None of those routes closes <strong>current post-transcriptional RNA-state</strong>, <strong>current phospho-signaling / second-messenger state</strong>, <strong>branch-local proteostasis / tag-capture</strong>, <strong>branch- or bouton-specific cargo-routing</strong>, <strong>chloride-set-point state</strong>, <strong>cell-specific neurovascular-controller state</strong>, or other cell-specific maintenance controllers. That is why this page now treats calibrator role as a separate evidence field rather than hiding it inside generic route maturity.
 </p>
 <table class="data-table">
 <thead>
@@ -269,9 +269,39 @@ For technical reading, the first split is between <strong>destructive local stru
 <td>Kinetic flux, cell-specific controller state, branch-local metabolism</td>
 </tr>
 <tr>
+<td><a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a></td>
+<td>Resting <sup>31</sup>P metabolite concentrations, ATP synthesis, and intra-/extracellular pH</td>
+<td>Macro energetic-balance calibration in resting human brain</td>
+<td>Exchange flux, localized NAD dynamics, branch-local ATP sufficiency</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1002/mrm.26560" target="_blank">Ren et al. (2017)</a></td>
+<td><sup>31</sup>P magnetization-transfer PCr&rarr;ATP and Pi&rarr;ATP exchange-flux estimates</td>
+<td>Model-conditioned macro exchange-flux calibration</td>
+<td>Cell-specific ATP routing, localized controller identity, same-subject maintenance closure</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.3389/fnins.2024.1389111" target="_blank">Guo et al. (2024)</a></td>
+<td>Whole-brain intracellular NAD-content map at 7 T</td>
+<td>Macro <sup>31</sup>P NAD-content calibration</td>
+<td>Task-locked local NAD dynamics, cell-specific redox control, controller identity</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1177/0271678X261415784" target="_blank">Kaiser et al. (2026)</a></td>
+<td>Functionally localized occipital-voxel <sup>31</sup>P-fMRS NAD<sup>+</sup> dynamics during visual stimulation</td>
+<td>Localized task-evoked NAD-dynamics calibration</td>
+<td>Whole-brain NAD map, resting energetic balance, branch-local mitochondrial state</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a></td>
+<td>Absolute deuterated HDO / Glc / Glx / Lac maps under explicit quantification</td>
+<td>Absolute deuterium metabolite-distribution calibration</td>
+<td>Kinetic-rate identifiability without model / input assumptions, branch-local ATP reserve</td>
+</tr>
+<tr>
 <td><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a></td>
-<td>Dynamic deuterium MRI / MRSI glucose transport and metabolism</td>
-<td>Macro energetic-rate calibration under a kinetic model</td>
+<td>Dynamic deuterium MRI / MRSI glucose transport and metabolic-rate maps under blood-input and kinetic modeling</td>
+<td>Macro energetic-rate calibration under an explicit kinetic model</td>
 <td>Branch-local ATP reserve, mitochondrial positioning, phospho state</td>
 </tr>
 <tr>
