@@ -1101,6 +1101,11 @@ After adding the <strong>Fusion Card</strong>, the <strong>Human Proxy Compositi
 <td>A multi-stage workflow is not read as one state object by default.</td>
 </tr>
 <tr>
+<td><strong>Carried object / bridge witness and tolerance rule</strong></td>
+<td>Name the object expected to survive the bridge, such as landmarks, targeted subvolumes, local response templates, latent manifolds, representational geometry, or a fingerprint feature family; say how it is measured on both sides, what tolerance defines success, and what negative control or failure test would have broken the bridge.</td>
+<td><strong>Same-subject</strong> is not read as if one unspecified state object had automatically been carried across stages.</td>
+</tr>
+<tr>
 <td><strong>Elapsed time and state window</strong></td>
 <td>Report the delay between acquisitions or between live physiology and fixation, whether the bridge stayed within one trial / session / day / sleep cycle or crossed days, and which hidden-state families could drift over that interval.</td>
 <td><strong>Same-subject</strong> is not read as <strong>same-time</strong> or <strong>same-state</strong>.</td>
@@ -1127,6 +1132,12 @@ After adding the <strong>Fusion Card</strong>, the <strong>Human Proxy Compositi
 </tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>2026-03-28 addendum: the bridge must declare what is supposed to survive</strong>
+<p>
+The remaining weakness after adding bridge class and hidden-state-family disclosure was that a submission could still leave the <strong>carried object</strong> implicit. The primary literature does not support that shortcut. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a> and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> show local landmark and correspondence objects rather than one global state object. <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">Gallego et al. (2020)</a>, <a href="https://doi.org/10.1038/s41467-023-40144-w" target="_blank">Roth &amp; Merriam (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01982-7" target="_blank">Noda et al. (2025)</a>, <a href="https://doi.org/10.1126/sciadv.abj0751" target="_blank">Van De Ville et al. (2021)</a>, and <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a> show that different population-level objects can remain stable even while raw units, amplitudes, or feature families change. <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a>, <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> further show that stable use across time can depend on alignment, recalibration, or a short fixed-decoder window. Therefore, this card now asks not only <strong>when</strong> the bridge happened, but also <strong>what object</strong> is claimed to have survived it and <strong>how failure would have been detected</strong>.
+</p>
+</div>
 <div class="note-box">
 <strong>2026-03-25 addendum: bridge type and exposed state families must be named together</strong>
 <p>
