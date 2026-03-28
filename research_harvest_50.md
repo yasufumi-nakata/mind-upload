@@ -5,7 +5,7 @@ description: "Publishes prior research collected through 50 decomposed questions
 article_type: "Evidence Bank"
 subtitle: "U0-U15 decomposition, current-status map, and prior literature (heavily cited)"
 author: Mind Uploading Research Project
-last_updated: "2026-03-27"
+last_updated: "2026-03-28"
 note: "Compiled from 50 worker tasks (curated for relevance)"
 audience: "Readers who want to browse a large literature set by unresolved issue rather than by paper count alone"
 reading_time: "20-35 min (about 7 min if you only read the statistics and U-map)"
@@ -17,6 +17,7 @@ page_highlights:
   - "Even though this page is citation-heavy, the statistics and current-status map alone provide a usable overview."
   - "The default entry path for technical and natural-science readers is fixed as U1/U7 -> bridge (U7/U8) -> U4 -> U13 -> U8 -> U3 -> U10."
   - "A paper-level technical-only shortlist is now linked at the front door so readers can jump from U labels to concrete anchors without scanning mixed archive pages first."
+  - "For technical readers, invasive language BCIs are now split into communication throughput, decoder initialization, fixed-decoder durability, and adaptive rescue, so one successful demo is not read as all four."
   - "For technical readers, U1/U7 now separate field-formation visibility, posterior/solver-family uncertainty, conductivity/forward-model sensitivity, and direct-validation class, so a focal benchmark winner is not read as a universal source-recovery solution."
   - "For technical readers, destructive local ultrastructure is kept separate from living-human in vivo observability, and the living-human route is now read on three axes: proxy class, operational maturity, and safe calibrator role."
   - "For technical readers, same-subject / same-brain papers now sit on their own bridge rung, so preservation route, regime continuity, and bridge validation are checked before same-state language."
@@ -30,6 +31,7 @@ known_points:
   - "Citation count should be read as thickness of attention or relevance, not as closure of the question."
   - "For technical and natural-science readers, it is safer to start with measurement, direct validation, closed-loop stability, and maintenance-state before moving to intake logs or governance topics."
   - "Technical readers who want concrete paper anchors first can now jump directly to the paper archive's 2025-2026 technical-only shortlist."
+  - "For U13/U8, invasive speech papers do not define one operational frontier: communication throughput, initialization route, fixed-decoder durability, and adaptive rescue remain different evidence slices."
   - "For U1/U7, a source-imaging paper still has to pass a field-formation visibility check, a source-regime split, and a named validation class before inverse-method gains are read as broader recoverability."
   - "Destructive local ultrastructure and living-human in vivo proxy routes do not increase the same evidential axis, even when both are called human measurement advances."
   - "A living-human proxy route can calibrate one bounded hidden-state family without becoming a deployable or state-complete human readout."
@@ -181,19 +183,25 @@ The weakness of this page used to be that the <strong>intake log</strong> and th
 <td>Calling brain-to-text or speech neuroprosthesis results direct proof of WBE.</td>
 </tr>
 <tr>
-<td><strong>5. Long-horizon closed-loop stability</strong></td>
+<td><strong>5. BCI initialization route</strong></td>
+<td><strong>U13 / U8</strong></td>
+<td>Whether the paper improved rapid same-subject calibration or transfer-assisted initialization, and whether that route is being overread as durable everyday use.</td>
+<td>Calling shorter warm-up or better transfer a solved durability or autonomy problem.</td>
+</tr>
+<tr>
+<td><strong>6. Long-horizon closed-loop stability</strong></td>
 <td><strong>U8</strong></td>
-<td>Whether latency, jitter, dropout, recalibration burden, and recovery time are tracked as separate metrics.</td>
+<td>Whether fixed-decoder interval, instability metrics, latency, jitter, dropout, recalibration burden, and recovery time are tracked as separate metrics.</td>
 <td>Claiming week-to-month deployability on the basis of within-session success alone.</td>
 </tr>
 <tr>
-<td><strong>6. maintenance-state family split</strong></td>
+<td><strong>7. maintenance-state family split</strong></td>
 <td><strong>U3</strong></td>
 <td>Whether intrinsic-excitability control, sleep-dependent homeostasis, transcriptional stabilization, post-transcriptional RNA control, phospho-signaling, local proteostasis / tag-capture balance, cargo-routing state, ionic / chloride regulation, bioenergetic / mitochondrial support, neurovascular-unit / BBB / pericyte support, clearance / immune support, neuromodulatory class split, astrocyte multiday trace, myelin/metabolic support, and active maintenance have been dropped from the picture.</td>
 <td>Assuming that connectome plus cell type is already enough to close the long-run dynamical problem.</td>
 </tr>
 <tr>
-<td><strong>7. Physical grounding</strong></td>
+<td><strong>8. Physical grounding</strong></td>
 <td><strong>U10</strong></td>
 <td>Whether signal route, state definition, coarse-graining / timescale, estimator family, and physiology-side grounding are disclosed before dissipation, energy constraints, or effective cost are interpreted.</td>
 <td>Acting as if one irreversibility result already gives direct dissipation, a common thermodynamic scale, or a WBE gate.</td>
@@ -1147,15 +1155,15 @@ The remaining weakness in U10 was that it still read too much like one bucket ab
 </ol>
 <h3>What has some traction now (areas with accumulated literature)</h3>
 <ul>
-<li>Language-facing neural decoding is progressing across several distinct routes: within-subject semantic reconstruction, fixed-segment speech retrieval, known-onset word decoding, prompt-conditioned generation, and invasive communication subsystems. </li>
+<li>Language-facing neural decoding is progressing across several distinct routes: within-subject semantic reconstruction, fixed-segment speech retrieval, known-onset word decoding, prompt-conditioned generation, invasive communication throughput, decoder initialization, fixed-decoder durability, and adaptive rescue. </li>
 <li>The methodology for LLM hallucination detection and self-consistency assessment is being expanded. </li>
 <li>The point that ``output matching alone does not guarantee internal identity'' is widely shared. </li>
 </ul>
-<p class="small"><strong>Representative references:</strong> <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Semantic reconstruction of continuous language from non-invasive brain recordings</a>, <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">Decoding speech perception from non-invasive brain recordings</a>, <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">Towards decoding individual words from non-invasive brain recordings</a>, <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Generative language reconstruction from brain recordings</a>, <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">A high-performance speech neuroprosthesis</a>.</p>
+<p class="small"><strong>Representative references:</strong> <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Semantic reconstruction of continuous language from non-invasive brain recordings</a>, <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">Decoding speech perception from non-invasive brain recordings</a>, <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">Towards decoding individual words from non-invasive brain recordings</a>, <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Generative language reconstruction from brain recordings</a>, <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">A high-performance speech neuroprosthesis</a>, <a href="https://doi.org/10.1056/NEJMoa2314132" target="_blank">An accurate and rapidly calibrating speech neuroprosthesis</a>, <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Transfer learning via distributed brain recordings enables reliable speech decoding</a>, <a href="https://doi.org/10.1038/s42003-024-06784-4" target="_blank">Measuring instability in chronic human intracortical neural recordings towards stable, long-term brain-computer interfaces</a>.</p>
 <div class="note-box">
 <strong>For technical reading, split language route before calling it imitation</strong>
 <p>
-This section becomes too coarse if all language-facing outputs are treated as one `brain-to-text` bucket. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a> constrain <strong>within-subject semantic reconstruction</strong>, <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">D&eacute;fossez et al. (2023)</a> constrain <strong>fixed-segment retrieval</strong>, <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a> constrain <strong>known-onset word decoding</strong>, <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Ye et al. (2025)</a> constrain <strong>prompt-conditioned generation</strong>, and <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>, plus <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> constrain <strong>communication subsystems</strong>. These routes do not answer the same question, so this site reads them through the <a href="verification.html#neural-contribution-card">Neural Contribution Card</a> before promoting any claim about mimic separation.
+This section becomes too coarse if all language-facing outputs are treated as one `brain-to-text` bucket. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a> constrain <strong>within-subject semantic reconstruction</strong>, <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">D&eacute;fossez et al. (2023)</a> constrain <strong>fixed-segment retrieval</strong>, <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a> constrain <strong>known-onset word decoding</strong>, <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Ye et al. (2025)</a> constrain <strong>prompt-conditioned generation</strong>, <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> constrain <strong>communication throughput</strong>, <a href="https://doi.org/10.1056/NEJMoa2314132" target="_blank">Card et al. (2024)</a> and <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh et al. (2025)</a> constrain <strong>decoder initialization</strong>, <a href="https://doi.org/10.1038/s42003-024-06784-4" target="_blank">Pun et al. (2024)</a> plus the fixed-decoder slice in <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> constrain <strong>fixed-decoder durability</strong>, and <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a> plus <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> constrain <strong>adaptive rescue</strong>. These routes do not answer the same question, so this site reads them through the <a href="verification.html#neural-contribution-card">Neural Contribution Card</a> before promoting any claim about mimic separation.
 </p>
 </div>
 <h3>What still needs research (unresolved)</h3>
