@@ -40,6 +40,7 @@ page_highlights:
   - "A human tractography graph is not one stable object: superficial-white-matter access, gyral-endpoint bias, parcellation choice, and voxel resolution still change what the graph means."
   - "For hemodynamic modalities, BOLD or fNIRS amplitude is not read as neural difference unless vascular-state / CVR limits are audited separately."
   - "For EEG / MEG connectivity, wPLI, source-space graphs, and information-flow labels are not read as leak-proof communication maps or causal circuits unless leakage, perturbation, and pipeline limits are disclosed separately."
+  - "For DCM / effective-connectivity results, candidate-model comparison alone is not enough; observed-subsystem closure, node-definition policy, latent-confound audit, and sampling / transformation sensitivity remain separate conditions before causal-wiring language is allowed."
   - "Thermodynamic or irreversibility papers are kept on an auxiliary track; arrow-of-time results are not read as direct physical-dissipation or WBE-readiness evidence without a route card that names coarse-graining, hidden-degree risk, and quantity type."
   - "Brain-to-text and speech demos are read through the Neural Contribution Card so neural contribution is not confused with task structure or language priors."
   - "High decode / biomarker scores can rise from subject / session fingerprint alone, so the Specificity & Shortcut Card audits that shortcut independently."
@@ -69,6 +70,7 @@ known_points:
   - "A tractography-derived connectome can still change at the cortical-endpoint and parcel-graph stage even when the underlying diffusion signal is the same."
   - "For hemodynamic readouts, a group or longitudinal BOLD difference can still be dominated by vascular transfer state rather than neural change."
   - "For EEG / MEG connectivity readouts, volume conduction, source leakage, ghost interactions, and pipeline dependence still stop the claim before communication or causality."
+  - "For DCM / effective-connectivity readouts, candidate-model competition does not erase latent confounders, ROI / node-definition error, or sampling / observation-transform failure modes."
   - "For thermodynamic claims, different estimator families still answer different questions, and partial observation can still hide dissipation, so irreversibility results stay auxiliary unless their route card is disclosed."
   - "Strong claims about identity or consciousness belong in downstream verification design, not on the landing page."
 unknown_points:
@@ -336,6 +338,13 @@ This site now treats <strong>vascular transfer state</strong> as a separate audi
 <strong>If You Read EEG / MEG Connectivity As Communication Or Causality Too Quickly</strong>
 <p>
 This site does not treat <strong>wPLI</strong>, <strong>source-space connectivity</strong>, <strong>Granger-style directed metrics</strong>, or <strong>transfer-entropy labels</strong> as leak-proof communication maps or causal circuits by name alone. Volume conduction, source leakage, ghost interactions, pipeline dependence, and observation-only limits remain separate audit items. The shortest route is <a href="faq.html#q1d2">FAQ: how to read connectivity claims</a>, then <a href="eeg_101.html">EEG 101</a> and <a href="wiki/observation-to-estimation.html">Wiki: from observation to estimation</a>.
+</p>
+</div>
+
+<div class="note-box">
+<strong>If A Directed Graph Sounds Like Discovered Causal Wiring</strong>
+<p>
+This site blocks that shortcut too. <a href="https://doi.org/10.1016/j.neuroimage.2010.08.063" target="_blank">Smith et al. (2011)</a> showed that lag-based fMRI methods perform poorly and that functionally inaccurate ROIs are extremely damaging to network estimation, <a href="https://doi.org/10.1016/j.jneumeth.2016.10.016" target="_blank">Barnett &amp; Seth (2017)</a> showed detectability black spots under subsampling, <a href="https://doi.org/10.1007/s10548-020-00757-6" target="_blank">Vink et al. (2020)</a> showed that resting-state EEG functional connectivity explains less than <strong>10%</strong> of TMS-evoked propagation variance, <a href="https://doi.org/10.1002/hbm.70285" target="_blank">Novelli et al. (2025)</a> showed that slow BOLD sampling can still induce spurious Granger-causal inference even when realistic HRF variability alone need not do so, and <a href="https://doi.org/10.1109/TPAMI.2026.3658839" target="_blank">Yan et al. (2026)</a> showed that latent confounders remain an active challenge in biological network reconstruction. Therefore, on this site, a DCM or effective-connectivity result is not promoted beyond a <strong>model-conditioned causal hypothesis</strong> unless it also discloses <strong>observed-subsystem closure / latent-confound audit</strong>, <strong>node-definition policy</strong>, <strong>sampling / transformation sensitivity</strong>, and <strong>perturbation or external validation</strong>. The shortest route is <a href="faq.html#q1e">FAQ: how to read DCM / effective-connectivity claims</a>, then <a href="wiki/observation-to-estimation.html#effective-connectivity-route-card">Wiki: effective-connectivity route card</a> and <a href="verification.html#observability-budget">Verification: Observability Budget</a>.
 </p>
 </div>
 
