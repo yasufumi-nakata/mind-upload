@@ -5,7 +5,7 @@ description: A beginner technical overview of mind uploading and WBE that separa
 article_type: Wiki
 subtitle: Divide the large dream into smaller questions that can be checked.
 author: Mind Uploading Research Project
-last_updated: '2026-03-28'
+last_updated: '2026-03-29'
 note: Beginner guide
 audience: People who have heard the term mind upload and want the technical big picture first
 reading_time: 12-15 minutes
@@ -17,7 +17,7 @@ page_highlights:
 - Recent literature makes it unsafe to read strong-looking decode, tractography, effective-connectivity, thermodynamic, or closed-loop headlines without route cards.
 - A human tractography connectome is not one stable beginner object either; acquisition, cortical endpoint assignment, graph construction, uncertainty, and external calibration can all change what the graph means.
 - Human evidence now has to be read on three axes: proxy class, operational maturity, and safe calibrator role are different questions.
-- On the human side, quantity type is part of the claim: five-metabolite 1H-MRSI similarity, 31P-MRS energetic balance, deuterium metabolite / rate imaging, myelin-water, MT-family, bilayer-sensitive MRI, BBB water-exchange MRI, tracer-specific BBB PET, MAO-B PET, and I2BS PET are not interchangeable routes.
+- On the human side, quantity type is part of the claim: five-metabolite 1H-MRSI similarity, 31P-MRS energetic balance, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, myelin-water, MT-family, bilayer-sensitive MRI, BBB water-exchange MRI, tracer-specific BBB PET, MAO-B PET, and I2BS PET are not interchangeable routes.
 - Same-subject proxy bundles and sequential bridges still need composition and state-continuity audits before they are read as one state sample.
 - This site therefore builds verification infrastructure first instead of jumping directly to final conclusions.
 known_points:
@@ -25,7 +25,7 @@ known_points:
 - Without standards, audits, and explicit claim ceilings, progress cannot be compared honestly.
 - A strong-looking result can still be heavily conditioned on task structure, priors, candidate models, or omitted loops.
 - A living-human tractography connectome is still an acquisition-, endpoint-, graph-, uncertainty-, and calibration-conditioned estimate rather than one stable graph that is merely coarse.
-- Recent human-side advances reduce different uncertainty terms, but local ultrastructure, synaptic-density PET, five-metabolite 1H-MRSI similarity scaffolds, 31P-MRS energetic-balance routes, deuterium metabolite / rate imaging, quantity-defined myelin MRI, BBB water-exchange MRI, tracer-specific BBB PET transport, target-defined astrocyte PET, and clearance MRI are not one near-direct readout.
+- Recent human-side advances reduce different uncertainty terms, but local ultrastructure, synaptic-density PET, five-metabolite 1H-MRSI similarity scaffolds, 31P-MRS energetic-balance routes, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, quantity-defined myelin MRI, BBB water-exchange MRI, tracer-specific BBB PET transport, target-defined astrocyte PET, and clearance MRI are not one near-direct readout.
 unknown_points:
 - It remains unresolved whether functional reproduction would guarantee identity or phenomenal consciousness.
 - It is not yet determined which measurement set would be sufficient for WBE-level internal-state capture.
@@ -99,7 +99,7 @@ The tractography route at the beginner front door also had to become stricter. <
 <div class="note-box">
 <strong>2026-03-27 technical correction: quantity type now belongs at the beginner front door</strong>
 <p>
-The beginner route also had to become stricter about human evidence itself. Local human ultrastructure, SV2A PET, whole-brain <sup>1</sup>H-MRSI, <sup>31</sup>P-MRS, deuterium metabolic imaging, myelin MRI, BBB MRI / PET, astrocyte-related PET, and CSF / glymphatic routes are all real advances, but the modality label is still too coarse. On this site, a beginner summary now has to say whether the route is a <strong>five-metabolite parcel-similarity scaffold</strong>, a <strong>31P energetic-balance route</strong>, or <strong>deuterium metabolite / kinetic-rate imaging</strong>; <strong>myelin-water</strong>, <strong>MT-family</strong>, <strong>bilayer-sensitive</strong>, or <strong>qT1 remyelination-sensitive</strong>; <strong>BBB water-exchange</strong> or <strong>tracer-specific BBB transport</strong>; <strong>MAO-B</strong> or <strong>I2BS</strong> astrocyte-related PET. Those rows do not carry the same model burden, do not constrain the same molecular object, and do not calibrate the same hidden-state family. The beginner questions are therefore now <strong>what proxy class and quantity type does this route constrain?</strong>, <strong>how specialized, small-cohort, or model-heavy is the route still?</strong>, and <strong>what bounded calibrator role can it safely play?</strong> Even after that, multimodal bundles and same-subject workflows still need composition and bridge audits before they are read as one state sample. The shortest follow-up is <a href="../wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>, <a href="human-proxy-composition.html">Wiki: Human Proxy Composition and Route Maturity</a>, <a href="state-continuity-bridge.html">Wiki: State-Continuity Bridge</a>, and <a href="measurement-stack-and-claim-ceiling.html">Wiki: observability and claim ceiling by measurement stack</a>.
+The beginner route also had to become stricter about human evidence itself. Local human ultrastructure, SV2A PET, whole-brain <sup>1</sup>H-MRSI, <sup>31</sup>P-MRS, deuterium metabolic imaging, myelin MRI, BBB MRI / PET, astrocyte-related PET, and CSF / glymphatic routes are all real advances, but the modality label is still too coarse. On this site, a beginner summary now has to say whether the route is a <strong>five-metabolite parcel-similarity scaffold</strong>, a <strong>31P energetic-balance route</strong>, a <strong>deuterium metabolite-mapping / absolute-quantification route</strong>, or <strong>deuterium kinetic-rate imaging</strong>; <strong>myelin-water</strong>, <strong>MT-family</strong>, <strong>bilayer-sensitive</strong>, or <strong>qT1 remyelination-sensitive</strong>; <strong>BBB water-exchange</strong> or <strong>tracer-specific BBB transport</strong>; <strong>MAO-B</strong> or <strong>I2BS</strong> astrocyte-related PET. Those rows do not carry the same model burden, do not constrain the same molecular object, and do not calibrate the same hidden-state family. The beginner questions are therefore now <strong>what proxy class and quantity type does this route constrain?</strong>, <strong>how specialized, small-cohort, or model-heavy is the route still?</strong>, and <strong>what bounded calibrator role can it safely play?</strong> Even after that, multimodal bundles and same-subject workflows still need composition and bridge audits before they are read as one state sample. The shortest follow-up is <a href="../wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>, <a href="human-proxy-composition.html">Wiki: Human Proxy Composition and Route Maturity</a>, <a href="state-continuity-bridge.html">Wiki: State-Continuity Bridge</a>, and <a href="measurement-stack-and-claim-ceiling.html">Wiki: observability and claim ceiling by measurement stack</a>.
 </p>
 </div>
 
@@ -200,10 +200,17 @@ The older beginner summary was still too coarse because it let very different hu
 <td>Branch-local energetic fragility, mitochondrial positioning, cell-specific reserve, and kinetic glucose-rate imaging.</td>
 </tr>
 <tr>
-<td><strong>Human deuterium metabolite / rate imaging</strong><br><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>; <a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a></td>
-<td>Absolute deuterated metabolite maps and kinetic glucose-rate imaging from specialized deuterium acquisition.</td>
-<td>Specialized 7 T route with custom hardware, calibration burden, and kinetic-model or absolute-quantification burden.</td>
-<td>Can calibrate a <strong>bounded deuterium metabolite / energetic-rate proxy family</strong>.</td>
+<td><strong>Human deuterium metabolite-mapping / absolute-quantification route</strong><br><a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a></td>
+<td>Absolute deuterated HDO / Glc / Glx / Lac metabolite maps from specialized deuterium acquisition.</td>
+<td>Specialized 7 T route with custom hardware and explicit calibration burden.</td>
+<td>Can calibrate a <strong>bounded deuterium metabolite-mapping / absolute-quantification proxy</strong>.</td>
+<td>Kinetic glucose-rate imaging unless explicitly modeled, branch-local mitochondrial positioning, cell-specific energetic reserve, and routine field-ready deployment.</td>
+</tr>
+<tr>
+<td><strong>Human deuterium kinetic-rate imaging</strong><br><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a></td>
+<td>Kinetic glucose-rate imaging from dynamic deuterium acquisition and explicit kinetic modeling.</td>
+<td>Specialized 7 T route with custom hardware, blood-input burden, and kinetic-model burden.</td>
+<td>Can calibrate a <strong>bounded deuterium kinetic-rate proxy</strong>.</td>
 <td>Branch-local mitochondrial positioning, cell-specific energetic reserve, and routine field-ready deployment.</td>
 </tr>
 <tr>

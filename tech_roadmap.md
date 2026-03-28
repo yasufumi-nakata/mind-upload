@@ -4,7 +4,7 @@ title: "Technical Roadmap: Understanding WBE Through Measurement, Reconstruction
 description: "A learning roadmap for viewing mind uploading and WBE from the technical side, organized as a question tree from measurement to reconstruction, implementation, and verification."
 article_type: "Roadmap (Definition #1)"
 subtitle: "Break 'what counts as progress' into a question tree with reading order and minimum arrival conditions"
-last_updated: "2026-03-28"
+last_updated: "2026-03-29"
 note: "Provisional draft (updated continuously)"
 audience: "Readers who want the big picture, need a learning order, or want claim strength organized by level"
 reading_time: "20-30 min (5 min for the index only)"
@@ -43,7 +43,7 @@ known_points:
   - "A disclosed body / environment boundary is a separate audit from low latency or online accuracy."
   - "Human-side advances reduce different error terms and remain differently deployment-limited; proxy-rich evidence is not yet same-subject, same-session, externally calibrated state identification."
   - "Proxy class, operational maturity, and calibrator role are different questions; a real human route may still calibrate only one bounded hidden-state family."
-  - "A human route family name is not yet one row; 1H-MRSI similarity, 31P energetic balance, deuterium metabolite / rate imaging, quantity-defined myelin MRI, BBB water-exchange, tracer-specific BBB PET transport, and target-defined astrocyte PET remain separate routes with different ceilings."
+  - "A human route family name is not yet one row; 1H-MRSI similarity, 31P energetic balance, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, quantity-defined myelin MRI, BBB water-exchange, tracer-specific BBB PET transport, and target-defined astrocyte PET remain separate routes with different ceilings."
   - "Even when human proxy rows look complementary, cohort / physiological regime mismatch, route-local repeatability, cross-centre transfer, and complete-case availability still remain separate gates."
   - "Longitudinal success is not one axis; within-day state fluctuation, trait-like backbone, biological drift, interface / decoder drift, and recalibration burden answer different questions."
   - "OPM-MEG motion tolerance still depends on magnetic shielding, active nulling, calibration, and source-model disclosure."
@@ -735,10 +735,17 @@ The remaining weakness in this roadmap was that M3 still let very different huma
 <td>ATP synthesis / phosphorus metabolite / pH balance, not branch-local mitochondrial controller state</td>
 </tr>
 <tr>
-<td><strong>Dynamic deuterium metabolite / rate imaging</strong><br>Li et al. (2025); Karkouri et al. (2026)</td>
-<td>Macro deuterium metabolite / rate proxy</td>
-<td>7 T, small-cohort, custom-coil or advanced-model route with high acquisition burden</td>
-<td>Bounded deuterium metabolite / rate proxy</td>
+<td><strong>Deuterium metabolite-mapping / absolute-quantification route</strong><br>Karkouri et al. (2026)</td>
+<td>Macro deuterium metabolite-mapping / absolute-quantification proxy</td>
+<td>7 T specialized route with absolute-quantification pipeline, dedicated hardware, and limited cohorts</td>
+<td>Bounded deuterium metabolite-mapping proxy</td>
+<td>Not kinetic-rate imaging, not branch-local ATP reserve, and not cell-specific bioenergetic controller state</td>
+</tr>
+<tr>
+<td><strong>Deuterium kinetic-rate imaging</strong><br>Li et al. (2025)</td>
+<td>Model-conditioned macro deuterium kinetic-rate proxy</td>
+<td>7 T dynamic DMRSI with blood-input and explicit kinetic model in a very small cohort</td>
+<td>Bounded deuterium kinetic-rate proxy</td>
 <td>Not one general biochemical meter, not branch-local ATP reserve, and not cell-specific bioenergetic controller state</td>
 </tr>
 <tr>

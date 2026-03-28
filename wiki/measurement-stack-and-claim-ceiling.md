@@ -5,12 +5,12 @@ description: We will organize from primary literature what EEG/MEG/fMRI, whole-b
   spatial atlas, Patch-seq, volume EM, diffusion-MRI tractography / structural connectome,
   same-brain functional connectomics, synaptic-density PET, mixed arousal proxies,
   transmitter sensors, receptor atlas / PET, glia imaging, and human 1H-MRSI biochemical-similarity
-  / 31P energetic-balance / deuterium metabolite-rate / ionic / thermal / myelin
+  / 31P energetic-balance / deuterium metabolite-mapping / deuterium kinetic-rate / ionic / thermal / myelin
   / clearance routes directly observe and where they hit the claimed upper limits.
 article_type: Wiki
 subtitle: multimodal is not a synonym for ``seen everything''
 author: Mind Uploading Research Project
-last_updated: '2026-03-28'
+last_updated: '2026-03-29'
 note: Technical / natural science only
 audience: People who want to sort out what modalities are directly visible and which
   claims are valid using only technology and natural science.
@@ -21,7 +21,7 @@ page_intro: This page is a wiki that fixes the ``upper claim limit for each meas
   of EEG/MEG/fMRI, spatial transcriptomics, Patch-seq, volume EM, diffusion-MRI tractography
   / structural connectome, same-brain functional connectomics, synaptic-density PET,
   mixed arousal proxy, local transmitter sensor, receptor atlas / PET, glia imaging,
-  and human 1H-MRSI biochemical-similarity / 31P energetic-balance / deuterium metabolite-rate
+  and human 1H-MRSI biochemical-similarity / 31P energetic-balance / deuterium metabolite-mapping / deuterium kinetic-rate
   / ionic / thermal / myelin / clearance routes directly observes and what remains
   latent.
 accuracy_note: The ``claim ceiling'' column below is not the conclusion declared by
@@ -54,8 +54,8 @@ page_highlights:
   atlas construction, disease contrast, task / cognition association, and intervention
   design now stay separated.
 - Human evidence is also separated into proxy classes, so local ultrastructure, synaptic-density
-  PET, 1H-MRSI biochemical similarity, 31P energetic balance, deuterium metabolite
-  / rate imaging, ionic / thermal / myelin / clearance routes are not compressed
+  PET, 1H-MRSI biochemical similarity, 31P energetic balance, deuterium metabolite-mapping
+  / absolute-quantification routes, deuterium kinetic-rate imaging, ionic / thermal / myelin / clearance routes are not compressed
   into one near-direct readout.
 - "Human maintenance-state routes are now read on three axes: proxy class, operational maturity, and calibrator role."
 - Same-subject or same-brain wording is not treated as same-state when the bridge
@@ -74,8 +74,8 @@ known_points:
   graph construction, and uncertainty handling.
 - Local transmitter / glia imaging is effective for calibrating coarse proxies, but
   it does not directly provide whole-brain ground truth.
-- Human 1H-MRSI biochemical similarity, 31P energetic balance, deuterium metabolite
-  / rate, ionic, thermal, myelin, and clearance routes reduce different latent-state
+- Human 1H-MRSI biochemical similarity, 31P energetic balance, deuterium metabolite-mapping
+  / absolute-quantification routes, deuterium kinetic-rate imaging, ionic, thermal, myelin, and clearance routes reduce different latent-state
   error terms and should not be summarized as one direct path to maintenance-state
   completeness.
 - A real human proxy route may still calibrate only one bounded hidden-state family,
@@ -494,12 +494,20 @@ Another weakness that remained on this page was that it separated generic measur
 <td><strong>Macro 31P energetic-balance proxy</strong>. It does not become branch-local mitochondrial ground truth.</td>
 </tr>
 <tr>
-<td><strong>Human deuterium metabolite / rate imaging</strong><br>Li et al. (2025); Karkouri et al. (2026)</td>
-<td><strong>Macro deuterium metabolite / kinetic-rate proxy</strong></td>
-<td>Specialized 7 T deuterium imaging with custom hardware or advanced modeling; current human evidence remains small-cohort and high-burden.</td>
-<td>Bounded deuterium metabolite / energetic-rate proxy.</td>
+<td><strong>Human deuterium metabolite-mapping / absolute-quantification route</strong><br>Karkouri et al. (2026)</td>
+<td><strong>Macro deuterium metabolite-mapping / absolute-quantification proxy</strong></td>
+<td>Specialized 7 T deuterium imaging with dedicated hardware and calibrated absolute-quantification pipeline; current human evidence remains limited-cohort and high-burden.</td>
+<td>Bounded deuterium metabolite-mapping proxy.</td>
+<td>Glucose-transport or metabolic-rate terms unless an explicit kinetic model is added, plus which dendritic branch lacks ATP reserve, where mitochondria are parked, which compartment is energetically fragile right now, and which fission / fusion state is active.</td>
+<td><strong>Macro deuterium metabolite-mapping / absolute-quantification proxy</strong>. It does not become branch-local mitochondrial ground truth or kinetic-rate truth by default.</td>
+</tr>
+<tr>
+<td><strong>Human deuterium kinetic-rate imaging</strong><br>Li et al. (2025)</td>
+<td><strong>Model-conditioned macro deuterium kinetic-rate proxy</strong></td>
+<td>Specialized 7 T dynamic DMRSI with custom hardware, blood-input acquisition, and explicit kinetic model; current human evidence remains very small-cohort and high-burden.</td>
+<td>Bounded deuterium kinetic-rate proxy.</td>
 <td>Which dendritic branch lacks ATP reserve, where mitochondria are parked, which compartment is energetically fragile right now, and which fission / fusion state is active.</td>
-<td><strong>Macro deuterium metabolite / rate proxy</strong>. It does not become branch-local mitochondrial ground truth.</td>
+<td><strong>Model-conditioned macro deuterium kinetic-rate proxy</strong>. It does not become branch-local mitochondrial ground truth or one generic deuterium map.</td>
 </tr>
 <tr>
 <td><strong>Human sodium MRI / ionic proxy</strong><br>Qian et al. (2012); Qian et al. (2025)</td>
@@ -562,7 +570,7 @@ Another weakness that remained on this page was that it separated generic measur
 <div class="note-box">
 <strong>Proxy class, operational maturity, and calibrator role have to be logged separately</strong>
 <p>
-The key operational criticism is that a route can be real without being broad. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built an atlas from <strong>33 healthy participants</strong> calibrated against postmortem autoradiography, but that still calibrates a <strong>synaptic-density prior</strong> rather than task-time synaptic efficacy. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derived a <strong>five-metabolite similarity scaffold</strong> from <strong>51 healthy adolescents</strong> with an <strong>independent replication sample of 13</strong>, but that still calibrates a <strong>biochemical organization scaffold</strong> rather than an energetic controller. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> measured <strong>ATP synthesis, phosphorus metabolites, and pH</strong> in <strong>12 healthy participants</strong>, which calibrates only a <strong>bounded energetic-balance proxy</strong>. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> and <a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a> reported deuterium metabolite / rate maps at <strong>7 T</strong> with small cohorts and high acquisition-model burden, which is real but still calibrates only a <strong>bounded deuterium energetic-rate proxy</strong>. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> showed myelin-bilayer mapping in <strong>two healthy volunteers</strong> on specialized hardware, while <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> constrain <strong>support-state</strong> rather than cell-specific maintenance control. Therefore, this page now treats <strong>proxy class</strong>, <strong>operational maturity</strong>, and <strong>safe calibrator role</strong> as separate metadata that all have to be stated before claim ceilings are interpreted.
+The key operational criticism is that a route can be real without being broad. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built an atlas from <strong>33 healthy participants</strong> calibrated against postmortem autoradiography, but that still calibrates a <strong>synaptic-density prior</strong> rather than task-time synaptic efficacy. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derived a <strong>five-metabolite similarity scaffold</strong> from <strong>51 healthy adolescents</strong> with an <strong>independent replication sample of 13</strong>, but that still calibrates a <strong>biochemical organization scaffold</strong> rather than an energetic controller. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> measured <strong>ATP synthesis, phosphorus metabolites, and pH</strong> in <strong>12 healthy participants</strong>, which calibrates only a <strong>bounded energetic-balance proxy</strong>. <a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a> reported <strong>absolute deuterated metabolite maps</strong> at <strong>7 T</strong> with a dedicated calibration pipeline, while <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> reported <strong>deuterium kinetic-rate maps</strong> under blood-input and explicit kinetic modeling in a <strong>five-participant</strong> cohort. Those are real routes, but they still calibrate only <strong>bounded deuterium metabolite-mapping</strong> or <strong>bounded deuterium kinetic-rate</strong> proxies. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> showed myelin-bilayer mapping in <strong>two healthy volunteers</strong> on specialized hardware, while <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> constrain <strong>support-state</strong> rather than cell-specific maintenance control. Therefore, this page now treats <strong>proxy class</strong>, <strong>operational maturity</strong>, and <strong>safe calibrator role</strong> as separate metadata that all have to be stated before claim ceilings are interpreted.
 </p>
 </div>
 <div class="note-box">
@@ -574,7 +582,7 @@ The spectroscopy rows cannot be read as one proxy family. <a href="https://doi.o
 <div class="note-box">
 <strong>Site rule for human proxy classes</strong>
 <p>
-On this site, human-side summaries must name the <strong>proxy class</strong> explicitly. ``Human evidence exists'' is too coarse. The summary has to tell the reader whether the result is a <strong>local structural scaffold</strong>, <strong>regional synaptic-density proxy</strong>, <strong>macro 1H-MRSI biochemical similarity scaffold</strong>, <strong>macro 31P energetic-balance proxy</strong>, <strong>macro deuterium metabolite / rate proxy</strong>, <strong>perturbation-conditioned maintenance / state-gated perturbation proxy</strong>, <strong>quantity-defined macro ionic / thermal / myelin proxy family</strong>, or <strong>macro support-state proxy</strong>. When the route is still specialized, model-dependent, or small-cohort, that maturity limit must be stated alongside the proxy class. And when the route calibrates only one bounded hidden-state family, that <strong>calibrator role</strong> must be written explicitly rather than inherited from the modality label.
+On this site, human-side summaries must name the <strong>proxy class</strong> explicitly. ``Human evidence exists'' is too coarse. The summary has to tell the reader whether the result is a <strong>local structural scaffold</strong>, <strong>regional synaptic-density proxy</strong>, <strong>macro 1H-MRSI biochemical similarity scaffold</strong>, <strong>macro 31P energetic-balance proxy</strong>, <strong>macro deuterium metabolite-mapping / absolute-quantification proxy</strong>, <strong>macro deuterium kinetic-rate proxy</strong>, <strong>perturbation-conditioned maintenance / state-gated perturbation proxy</strong>, <strong>quantity-defined macro ionic / thermal / myelin proxy family</strong>, or <strong>macro support-state proxy</strong>. When the route is still specialized, model-dependent, or small-cohort, that maturity limit must be stated alongside the proxy class. And when the route calibrates only one bounded hidden-state family, that <strong>calibrator role</strong> must be written explicitly rather than inherited from the modality label.
 </p>
 </div>
 <div class="note-box">
