@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-28 / 位置づけ: RQ-by-RQ Deep Dive
+- 更新日: 2026-03-29 / 位置づけ: RQ-by-RQ Deep Dive
 
 ---
 
@@ -14,7 +14,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-27 / 位置づけ: RQ-by-RQ Deep Dive
+- 更新日: 2026-03-29 / 位置づけ: RQ-by-RQ Deep Dive
 
 ## このページの役割
 このページは research_harvest_50 の60 RQを対象に、EEG-DATAで解ける範囲をA/B/Cで判定し、各RQごとの検証設計・応募テーマ・使うデータセットIDをまとめた実務版です。
@@ -46,6 +46,28 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `A`: 17件
 - `B`: 25件
 - `C`: 18件
+
+## 今回の深掘り実行パック（2026-03-29 01:37 JST, 可解性優先のA/B実装パック）
+
+今回は「全体をもう一度広く要約する」更新は行わず、`A/B` 判定の中でも EEG-DATA だけで最初の実験と応募テーマを切りやすい `6RQ` を固定いたしました。
+
+| RQ | 今回固定する最小命題 | 提出テーマ（そのまま応募見出しへ使う軸） | 第一/予備応募先 | 主データ（主/予備） | 初手KPI | 停止条件 |
+|---|---|---|---|---|---|---|
+| U1-1 | 既知刺激位置に対する `prior` 別逆解誤差の序列を固定する。 | 高密度EEG ground-truth を用いた逆問題 prior selection benchmark | `G1 / G4` | 主: `ID 56 Intracerebral stimulation + HD-EEG (ground-truth)` / 予備: `ID 676 Simultaneous EEG-fMRI XP1`, `ID 1839 CerebellarTMSEEGData` | `位置誤差` `被覆率` `手法順位一致率` | 誤差序列が再現せず、被覆率が継続逸脱する場合。 |
+| U4-2 | 最小介入で反証可能な因果主張までに限定して固定する。 | 刺激・撹乱入り最小 causal verification package | `G1 / G4` | 主: `ID 19 HiPi pinprick stimulation EEG` / 予備: `ID 56 Intracerebral stimulation + HD-EEG (ground-truth)`, `ID 1839 CerebellarTMSEEGData` | `介入あり/なし差` `符号一致率` `反事実誤差` | 介入差分が再現せず、符号一致率が基準未達のままの場合。 |
+| U7-1 | 同期/QC/刺激ログの必須項目欠損率を BIDS 拡張監査として固定する。 | BIDS拡張による同期・QC・刺激ログ監査基盤 | `G1 / G3` | 主: `ID 676 Simultaneous EEG-fMRI XP1` / 予備: `ID 783 Simultaneous EEG-fNIRS working memory`, `ID 4878 EEG+PPG+GSR rehabilitation fatigue` | `必須項目充足率` `欠損ログ率` `再解析成功率` | 必須項目を再構成できず、再解析成功率が継続的に下回る場合。 |
+| U11-1 | `PCI近似/LZ/wSMI` の順位保存を状態差ごとに比較し、理論横断I/Oを固定する。 | 麻酔・睡眠・DoCをまたぐ awareness proxy ranking study | `G2 / G4` | 主: `ID 735 PK-NMM propofol anesthesia EEG simulation` / 予備: `ID 842 AAUWSS wearable sleep study`, `ID 859 DoC EEG biomarker pilot` | `順位保存率` `偽陽性率` `状態遷移境界一致率` | 状態間で順位が安定せず、失敗条件を先に定義できない場合。 |
+| U13-5 | 同一デコーダで知覚条件と想起条件を比較し、分岐点だけを固定する。 | 知覚/想起分岐を使った mimicry-mechanism separation | `G1 / G4` | 主: `ID 13 Multimodal Fusion EEG + Eye-tracking` / 予備: `ID 509 3M-CPSEED overt/silent/imagined speech EEG`, `ID 65 VICODEV driving distraction multimodal` | `意味一致率` `機構差検出率` `知覚→想起劣化点` | 分岐点が安定せず、知覚/想起の差を対照条件で固定できない場合。 |
+| U14-4 | Model Card / Dataset Card を評価契約の必須項目へ統合し、追試可否を固定する。 | Model Card / Dataset Card integrated reproducibility contract | `G1 / G3` | 主: `ID 6 Acquisition delay of wireless EEG` / 予備: `ID 56 Intracerebral stimulation + HD-EEG (ground-truth)`, `ID 719 Ubiquitous P300 benchmark` | `カード必須項目充足率` `追試成功率` `リーク監査反映率` | カード整備を入れても追試成功率が改善せず、監査項目が運用へ落ちない場合。 |
+
+実行順（本run固定）:
+
+1. `U1-1`
+2. `U4-2`
+3. `U7-1`
+4. `U11-1`
+5. `U13-5`
+6. `U14-4`
 
 ## U別・助成テーマ×EEG-DATA実行マップ（全RQ再点検）
 
@@ -154,6 +176,27 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - EEG参照運用ID集合（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）は最新 `EEG-DATA/eeg_dataset_summary_ja.csv` で旧ID列（`旧ID`）に欠損 `0`。
 - 応募キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）の参照整合を再確認。
 - 方針は継続して `1RQ=1検証命題=1応募テーマ=1主データ` を維持。
+
+## 今回の再検証ログ（2026-03-29 01:37 JST）
+
+本runでは、`A/B` 判定の中でも EEG-DATA だけで最初の実験と応募テーマを切りやすい `6RQ` を優先いたしました。汎用横断へ戻さず、`U1-1/U4-2/U7-1/U11-1/U13-5/U14-4` を固定しています。
+
+更新したこと（RQ単位）:
+
+- `U1-1`: 既知刺激位置つき高密度EEGを使う `prior selection benchmark` として固定し、逆問題の初手を誤差序列へ限定しました。
+- `U4-2`: 最小介入で反証可能な causal verification へ主張を絞り、相関主張への後退を防ぐ停止条件を先に書きました。
+- `U7-1`: BIDS 拡張の必須ログ項目を成果物へ昇格し、再解析成功率を最小KPIに固定しました。
+- `U11-1`: 麻酔・睡眠・DoC をまたぐ順位保存率を前提にし、理論比較を `失敗条件付き` に限定しました。
+- `U13-5`: 知覚/想起で同一デコーダの分岐点のみを扱い、意味復元の過読を避ける運用に更新しました。
+- `U14-4`: Model Card / Dataset Card を再現性契約の必須項目として扱い、カードが追試成功率へ効くかで判定する形に固定しました。
+
+整合チェック（再実施）:
+
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` の `RQ_TOTAL=60`、`A/B/C=17/25/18` を再確認しました。
+- `mind-upload/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.md` の `### Ux-y` 見出し `60件` を再確認しました。
+- ディープ評価カードから抽出した旧ID `24件`（`6,11,13,16,19,29,39,49,56,65,509,676,696,719,735,783,842,859,1011,1839,1972,2412,3419,4878`）は、`EEG-DATA/eeg_dataset_summary_ja.csv` の `旧ID` 列で欠損 `0` でした。
+- 応募キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）の参照整合を再確認しました。
+- 方針は継続して `1RQ=1検証命題=1応募テーマ=1主データ` を維持いたします。
 
 ## 今回の再検証ログ（2026-03-27 22:01 JST）
 
@@ -1261,6 +1304,30 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 
 - 提出時の正本参照は継続して `Dxx + DOI + データセット名 + access区分` を使用し、数値IDは探索補助として扱います。
 - 助成キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）の参照整合を再確認しました。
+
+## 今回の再検証ログ（2026-03-28 16:02 JST）
+
+本runでは、既存の `RQ60` マップを汎用要約へ戻さず、各課題を1件ずつ深掘りする方針を維持したまま再検証しました。
+
+更新したこと（RQ単位の深掘り固定キュー）:
+
+- `U0-4`: 分岐/複製ケースの同一個体判定を、生体同定精度と責任帰属の分離条件で固定。
+- `U1-1`: 逆問題の事前分布比較を、既知刺激位置に対する逆解誤差と被覆率の同時監査へ固定。
+- `U3-3`: 身体・環境ループ除去時の性能低下を、EEG単独境界の明示を含む比較課題として固定。
+- `U8-4`: 異常検知遅延とフェイルセーフ発動時間を、運用停止判断に直結するKPIとして固定。
+- `U14-1`: データ/コード/環境固定の最小追試パックを、否定例付き運用で提出可能な形へ固定。
+- `U15-4`: 停止条件/更新条件のガバナンスを、技術ログ連携可能な制度監査項目へ固定。
+
+整合チェック（機械再計数）:
+
+- `mind-upload/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.md` の `### Ux-y` 見出しを再計数し、`RQ_TOTAL=60`（欠損・重複 `0`）を確認。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` の判定行を再計数し、`A/B/C=17/25/18` を確認。
+- 参照旧ID集合（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）は `EEG-DATA/eeg_dataset_summary_ja.csv` の `旧ID` 列で欠損 `0/17`。
+- 助成キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）の参照整合を維持。
+
+継続方針:
+
+- 汎用横断の浅い要約は増やさず、`1RQ=1検証命題=1応募テーマ=1主データ` を固定運用する。
 
 ## 今回の深掘り実行パック（2026-03-28 17:04 JST, 2週間で初回結果まで）
 
