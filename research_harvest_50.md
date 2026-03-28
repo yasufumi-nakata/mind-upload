@@ -19,6 +19,7 @@ page_highlights:
   - "A paper-level technical-only shortlist is now linked at the front door so readers can jump from U labels to concrete anchors without scanning mixed archive pages first."
   - "For technical readers, invasive language BCIs are now split into communication throughput, decoder initialization, fixed-decoder durability, and adaptive rescue, so one successful demo is not read as all four."
   - "For technical readers, U1/U7 now separate field-formation visibility, posterior/solver-family uncertainty, conductivity/forward-model sensitivity, and direct-validation class, so a focal benchmark winner is not read as a universal source-recovery solution."
+  - "For technical readers, U7 is no longer one synchronization bucket: synchronization infrastructure, shared-vs-specific component evidence, hemodynamic / metabolic quantity bridge, and bundle robustness under complete-case or cross-centre disagreement are separate evidence slices."
   - "For technical readers, destructive local ultrastructure is kept separate from living-human in vivo observability, and the living-human route is now read on three axes: proxy class, operational maturity, and safe calibrator role."
   - "For technical readers, same-subject / same-brain papers now sit on their own bridge rung, so preservation route, regime continuity, and bridge validation are checked before same-state language."
   - "For technical readers, bridge risk is now treated as bridge-type-specific and family-specific, so live-to-fix transformation, waking-state drift, and sleep-crossing regime change are not compressed into one time penalty."
@@ -33,6 +34,7 @@ known_points:
   - "Technical readers who want concrete paper anchors first can now jump directly to the paper archive's 2025-2026 technical-only shortlist."
   - "For U13/U8, invasive speech papers do not define one operational frontier: communication throughput, initialization route, fixed-decoder durability, and adaptive rescue remain different evidence slices."
   - "For U1/U7, a source-imaging paper still has to pass a field-formation visibility check, a source-regime split, and a named validation class before inverse-method gains are read as broader recoverability."
+  - "For U7, a multimodal paper can still advance only synchronized acquisition, only a shared-vs-specific component analysis, only a hemodynamic / metabolic quantity bridge, or only a bundle tuned to a narrow availability slice rather than a robust common state variable."
   - "Destructive local ultrastructure and living-human in vivo proxy routes do not increase the same evidential axis, even when both are called human measurement advances."
   - "A living-human proxy route can calibrate one bounded hidden-state family without becoming a deployable or state-complete human readout."
   - "Same-subject or same-brain wording can still hide a sequential bridge problem, so preservation route, elapsed time, regime continuity, and bridge-validation rung remain separate evidence fields."
@@ -161,8 +163,8 @@ The weakness of this page used to be that the <strong>intake log</strong> and th
 <tr>
 <td><strong>1. Measurement and human observability</strong></td>
 <td><strong>U1 / U7</strong></td>
-<td>Field-formation visibility, inverse-problem uncertainty, time synchronization, whether a paper advances a destructive local scaffold, a living-human proxy layer, or only metadata / standards, and whether the human route is still specialized or model-heavy.</td>
-<td>Reading an increase in observables or a new human proxy as if it already implied state-complete reconstruction.</td>
+<td>Field-formation visibility, inverse-problem uncertainty, time synchronization, whether a paper advances a destructive local scaffold, a living-human proxy layer, or only metadata / standards, whether the human route is still specialized or model-heavy, and for multimodal papers whether the advance is only synchronized acquisition, a shared-vs-specific component, a quantity bridge, or a bundle that survives complete-case / cross-centre disagreement audits.</td>
+<td>Reading an increase in observables, a new human proxy, or a simultaneous multimodal factor as if it already implied state-complete reconstruction or one solved biological state variable.</td>
 </tr>
 <tr>
 <td><strong>2. Sequential bridge validity</strong></td>
@@ -218,6 +220,12 @@ The site-wide route-card update already fixed DCM / effective-connectivity claim
 <strong>Read U1 / U7 through the field-formation wall first</strong>
 <p>
 The remaining weakness in the literature route was that <strong>source validation</strong> and <strong>inverse-solver comparison</strong> still sat too close to the hidden assumption that the target source class had already reached the sensors. The primary literature does not support that shortcut. <a href="https://doi.org/10.1007/s10548-010-0154-x" target="_blank">Ahlfors et al. (2010)</a> showed strong orientation dependence in EEG / MEG sensitivity, <a href="https://doi.org/10.1002/hbm.20851" target="_blank">Ahlfors et al. (2010)</a> showed that extended or distributed sources can cancel at the surface, <a href="https://doi.org/10.1002/hbm.20571" target="_blank">Goldenholz et al. (2009)</a> showed that source extent and anatomy materially change cortical SNR, and <a href="https://doi.org/10.1002/hbm.25272" target="_blank">Piastra et al. (2021)</a> showed that EEG / MEG sensitivity depends on head-model detail including the CSF compartment. Therefore, on this page, U1 / U7 now asks technical readers to separate <strong>field-formation visibility</strong>, <strong>inverse uncertainty</strong>, and <strong>validation class</strong> rather than reading `validated ESI` as a general route to internal-state recovery.
+</p>
+</div>
+<div class="note-box">
+<strong>Read U7 as more than synchronized clocks</strong>
+<p>
+The remaining weakness in the literature route was that <strong>U7</strong> could still be read as a synchronization bucket only. The current primary literature does not support that shortcut. <a href="https://doi.org/10.1162/imag.a.136" target="_blank">Kothe et al. (2025)</a> show that LSL can support millisecond-scale synchronized acquisition for most neurobehavioral research, but still cannot infer device-side delay by itself. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> show that simultaneous Ca<sup>2+</sup> and BOLD data contain both <strong>common</strong> and <strong>divergent</strong> network structure. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> show EEG-PET-MRI can recover coupled global dynamics together with distinct network patterns. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> show that a major global fMRI mode is substantially coupled to autonomic physiology, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> show that roughly <strong>40%</strong> of significant task-related BOLD voxels can change opposite to oxygen metabolism. <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a> further show that acute DoC EEG+fMRI same-sample models relied on a <strong>48-patient</strong> subset, whereas <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> show that pairwise multimodal disagreements are higher in minimally conscious and improving patients. Therefore, on this page, U7 now asks technical readers to separate <strong>synchronization infrastructure</strong>, <strong>shared-vs-specific component evidence</strong>, <strong>quantity bridge / physiology grounding</strong>, and <strong>bundle robustness under missing-modality or cross-centre stress</strong> rather than reading multimodal as one monotonic ladder.
 </p>
 </div>
 <div class="note-box">
@@ -915,19 +923,23 @@ The weak point here was not that the site already separated DCM from SCM on theo
 </ol>
 <h3>What has some traction now (areas with accumulated literature)</h3>
 <ul>
-<li>BIDS/EEG-BIDS allows data placement and basic metadata specifications to be shared. </li>
-<li>LSL and synchronized logging implementation practices are widely used in the community. </li>
-<li>Accumulated knowledge regarding standard pre-processing (ASR, etc.) for EEG quality control. </li>
+<li>BIDS/EEG-BIDS and related extensions allow data placement and core metadata specifications to be shared. </li>
+<li>LSL and synchronized logging practices provide a credible synchronization / metadata infrastructure, even though device-side delay truth still has to be measured separately. </li>
+<li>Simultaneous multimodal studies can now expose both shared and divergent cross-modal structure rather than only a common factor. </li>
+<li>Some clinical multimodal bundles improve prediction under declared same-sample or multicentre regimes. </li>
+<li>Accumulated knowledge regarding standard pre-processing (ASR, etc.) for EEG quality control remains useful. </li>
 </ul>
-<p class="small"><strong>Representative references:</strong> <a href="https://doi.org/10.1162/imag.a.136" target="_blank">The lab streaming layer for synchronized multimodal recording</a>, <a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Motion-BIDS</a>, <a href="https://doi.org/10.1101/2024.02.13.580071" target="_blank">The Lab Streaming Layer for Synchronized Multimodal Recording</a>, <a href="https://doi.org/10.1093/sleep/zsad241" target="_blank">Artifact subspace reconstruction in EEG studies</a>, <a href="https://doi.org/10.3389/fnhum.2019.00141" target="_blank">Riemannian Modification of Artifact Subspace Reconstruction</a>.</p>
+<p class="small"><strong>Representative references:</strong> <a href="https://doi.org/10.1162/imag.a.136" target="_blank">The lab streaming layer for synchronized multimodal recording</a>, <a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Motion-BIDS</a>, <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization</a>, <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep</a>, <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Multimodal prediction of residual consciousness in the intensive care unit</a>, <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness</a>.</p>
 <h3>What still needs research (unresolved)</h3>
 <ul>
-<li>There is a lack of common rules that define the tolerance range for synchronization errors for each task. </li>
+<li>There is a lack of common rules that define the tolerance range for synchronization errors and on-device delay disclosure for each task. </li>
+<li>A shared multimodal factor can still reflect autonomic physiology or opposite-signed quantity changes rather than one target neural variable. </li>
+<li>Multimodal gains can still depend on complete-case slices, missing-modality substitution, cross-centre transfer, and hard-regime disagreement. </li>
 <li>Insufficient auditing of output differences between different preprocessing pipelines. </li>
 <li>Public QC log operation including failure cases is limited. </li>
 </ul>
-<p class="small"><strong>Representative references:</strong> <a href="https://api.openalex.org/W4390079365" target="_blank">Two common issues in synchronized multimodal recordings with EEG: Jitter and latency</a>, <a href="https://doi.org/10.1109/bibm58861.2023.10385390" target="_blank">IMU-integrated Artifact Subspace Reconstruction for Wearable EEG Devices</a>, <a href="https://arxiv.org/abs/2403.09707v1" target="_blank">Understanding data analysis aspects of TMS-EEG in clinical study</a>.</p>
-<h3>Major previous studies (16 re-examinations)</h3>
+<p class="small"><strong>Representative references:</strong> <a href="https://api.openalex.org/W4390079365" target="_blank">Two common issues in synchronized multimodal recordings with EEG: Jitter and latency</a>, <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Autonomic physiological coupling of the global fMRI signal</a>, <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">BOLD signal changes can oppose oxygen metabolism across the human cortex</a>, <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness</a>, <a href="https://doi.org/10.1109/bibm58861.2023.10385390" target="_blank">IMU-integrated Artifact Subspace Reconstruction for Wearable EEG Devices</a>.</p>
+<h3>Major previous studies (22 re-examinations)</h3>
 <ol>
 <li><strong>[Imaging Neuroscience]</strong> <a href="https://doi.org/10.1162/imag.a.136" target="_blank">The lab streaming layer for synchronized multimodal recording</a> (2025)</li>
 <li><strong>[Scientific Data]</strong> <a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Motion-BIDS extension for reproducible motion data</a> (2024)</li>
@@ -945,6 +957,12 @@ The weak point here was not that the site already separated DCM from SCM on theo
 <li><strong>[Frontiers in Human Neuroscience]</strong> <a href="https://doi.org/10.3389/fnhum.2019.00141" target="_blank">A Riemannian modification of artifact subspace reconstruction</a> (2019)</li>
 <li><strong>[IEEE BIBM]</strong> <a href="https://doi.org/10.1109/bibm58861.2023.10385390" target="_blank">IMU-integrated artifact subspace reconstruction for wearable EEG</a> (2023)</li>
 <li><strong>[OpenAlex]</strong> <a href="https://api.openalex.org/W4390079365" target="_blank">Two common issues in synchronized multimodal EEG recordings: jitter and latency</a> (2023)</li>
+<li><strong>[Nature Communications]</strong> <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization</a> (2024)</li>
+<li><strong>[Nature Communications]</strong> <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep</a> (2025)</li>
+<li><strong>[Brain]</strong> <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Multimodal prediction of residual consciousness in the intensive care unit: the CONNECT-ME study</a> (2023)</li>
+<li><strong>[Brain]</strong> <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness</a> (2026)</li>
+<li><strong>[Nature Neuroscience]</strong> <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Autonomic physiological coupling of the global fMRI signal</a> (2025)</li>
+<li><strong>[Nature Neuroscience]</strong> <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">BOLD signal changes can oppose oxygen metabolism across the human cortex</a> (2025)</li>
 </ol>
 </section>
 
