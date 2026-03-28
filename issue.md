@@ -99,7 +99,7 @@ This page separates contribution routes and issue work. If what you really want 
 <div class="note-box">
 <strong>If you want the current six research questions being turned into EEG-ready work packages</strong>
 <p>
-The active public deepening batch is <code>U0-1</code>, <code>U1-2</code>, <code>U4-4</code>, <code>U7-1</code>, <code>U8-4</code>, and <code>U11-1</code>. These are not solved questions. They are the current bounded work packages where one claim, one dataset anchor, one KPI bundle, and one explicit external-dependency boundary are being fixed first. For the exact <code>Dxx + DOI</code> anchors, first-pass KPIs, and the external dependencies kept outside the EEG claim, start with the <a href="wiki/mind-upload-rq60-deep-focus-notes.html">deep focus notes</a> and the <a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG feasibility page</a>.
+The active public deepening batch is <code>U0-1</code>, <code>U1-2</code>, <code>U4-4</code>, <code>U7-1</code>, <code>U8-4</code>, and <code>U11-1</code>. These are not solved questions. They are the current bounded work packages where one claim, one dataset anchor, one KPI bundle, and one explicit external-dependency boundary are being fixed first. The public batch is changed only after the RQ-by-RQ deep dossiers, the EEG feasibility page, and the current funding shortlist agree on the same bounded route. For the exact <code>Dxx + DOI</code> anchors, first-pass KPIs, and the external dependencies kept outside the EEG claim, start with the <a href="wiki/mind-upload-rq60-deep-focus-notes.html">deep focus notes</a> and the <a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG feasibility page</a>.
 </p>
 </div>
 <div class="note-box">
