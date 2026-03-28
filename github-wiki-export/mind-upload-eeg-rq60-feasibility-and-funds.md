@@ -1261,3 +1261,37 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 
 - 提出時の正本参照は継続して `Dxx + DOI + データセット名 + access区分` を使用し、数値IDは探索補助として扱います。
 - 助成キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）の参照整合を再確認しました。
+
+## 今回の深掘り実行パック（2026-03-28 17:04 JST, 2週間で初回結果まで）
+
+汎用横断の更新ではなく、前runと重複しにくい `6RQ` を固定し、`1RQ=1検証命題=1応募テーマ=1主データ` で深掘りします。
+
+| RQ | 選定理由（1件ずつ深掘りする理由） | 最初の実験KPI | 失敗条件（このrunでの停止条件） | 提出最低成果物 | 応募先（第一/予備） |
+|---|---|---|---|---|---|
+| U0-2 | ms同期と状態表現の対応を固定しないと、同一性判定が計測誤差に引きずられるため。 | `clock offset p95` `状態特徴崩れ率` `再同期後の一致率` | offsetが収束せず、再同期後も一致率が基準未達。 | Time synchronization audit report (offset/jitter distribution) | `G2 / G3` |
+| U1-3 | 逆解法間の乖離を先に抑えないと、後続RQの因果比較が不安定化するため。 | `手法順位一致率` `逆解誤差` `被覆率` | 手法順位の反転が継続し、被覆率が逸脱。 | Inverse problem reproduction report (error/uncertainty) | `G1 / G4` |
+| U4-3 | 反事実誤差と尤度差を同時に見ないと、理論比較が事後解釈へ流れやすいため。 | `PEHE` `予測尤度差` `符号一致率` | PEHEが上限超過し、符号一致率が不安定。 | Intervention protocol and rebuttal condition definition | `G1 / G4` |
+| U8-1 | 閉ループ遅延の安全域を先に定義しないと、運用KPIが固定できないため。 | `安定率` `回復時間` `停止介入率` | 安定率が許容域未満で回復時間が長期化。 | Closed loop safety KPI dashboard | `G2 / G5` |
+| U13-4 | 模倣スコア偏重を抑えるため、因果整合との二重閾値を先に固定する必要があるため。 | `意味一致率` `因果一致率` `乖離ケース率` | 意味一致高/因果一致低の乖離を分離できない。 | Imitation separation evaluation report (meaning/mechanism) | `G1 / G4` |
+| U14-5 | 否定例レジストリを更新しないと、再現失敗の再試行運用が属人化しやすいため。 | `failure再現率` `rerun完了率` `否定例公開率` | rerun未完了が滞留し、失敗分類が再現不能。 | Negative Example Registry First Edition (CSV+Operating Rules) | `G1 / G3` |
+
+実行順（本run固定）:
+
+1. `U0-2`
+2. `U1-3`
+3. `U4-3`
+4. `U8-1`
+5. `U13-4`
+6. `U14-5`
+
+## 今回の再検証ログ（2026-03-28 17:04 JST）
+
+本runでは、`mind-upload`/`EEG-DATA`/`auto-research-funds` の最新 `main` 反映後に、RQ単位の深掘り監査を再実行しました。
+
+整合チェック（再実施）:
+
+- `RQ見出し=60件`（`### Ux-y`）を維持。
+- 判定内訳 `A/B/C=17/25/18` は不変。
+- EEG参照運用ID集合（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）は最新 `EEG-DATA/eeg_dataset_summary_ja.csv` の `旧ID` 列で欠損 `0`。
+- 応募キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）の参照整合を再確認。
+- 方針は継続して `1RQ=1検証命題=1応募テーマ=1主データ` を維持。
