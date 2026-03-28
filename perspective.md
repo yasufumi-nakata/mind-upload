@@ -5,8 +5,8 @@ description: "A research note that audits theories, measurement paths, and imple
 article_type: Perspective
 subtitle: "Audit the hypothesis of reproducing brain information processing on another substrate through the barriers of measurability, identifiability, and maintenance state"
 author: Mind Uploading Research Project
-last_updated: '2026-03-27'
-note: "Research note (updated with the March 2026 re-audit)"
+last_updated: '2026-03-29'
+note: "Research note (updated with the March 2026 re-audit and 2026-03-29 causal-model addendum)"
 audience: "Readers who want to follow theory all the way into implementation, including limits and objections"
 reading_time: "30-45 min"
 page_intro: "This page is a long research note that follows the theoretical, measurement, and implementation questions around mind uploading while keeping primary literature and hard limits side by side. It is written to separate what can reasonably be claimed now from what remains unresolved, rather than leaning into either pure optimism or pure pessimism."
@@ -18,6 +18,7 @@ page_highlights:
   - "The stronger the claim, the more explicitly it is checked against falsification criteria, alternative explanations, and abstention conditions."
   - "Human proxy class, operational maturity, and calibrator role are kept separate, so proxy-rich evidence is not silently read as field-ready or family-complete state identification."
   - "Living-human proxy bundles now stay behind an explicit composition rule: quantity type, calibrator role, model / hardware burden, common-driver audit, and gain beyond the strongest single row must be disclosed before state-identification language."
+  - "Directed-graph / DCM claims are now kept behind an explicit route card: observed-subsystem closure, node-definition policy, sampling / transformation sensitivity, perturbation validation, and abstention must be disclosed before causal-wiring language is allowed."
   - "Even though it is long, the introduction and framing notes alone should make the page's overall stance clear."
 known_points:
   - "No major theory has become a decisive standalone answer at this point."
@@ -27,6 +28,7 @@ known_points:
   - "Proxy-rich human evidence and deployment-ready measurement are different claims; sample size, model burden, hardware specialization, and fusion status remain separate ceilings."
   - "Several living-human proxy rows can move together while still constraining different quantities or shared autonomic / vascular drivers, so same-session agreement is not yet same-subject state closure."
   - "Hemodynamic modalities carry vascular transfer / CVR uncertainty in addition to neural-side uncertainty."
+  - "Whole-brain or faster effective-connectivity estimators improve tractability, not automatic causal discovery; latent confounders, node-definition policy, and sampling / transformation sensitivity remain separate failure modes."
   - "Strong claims that omit causal perturbation, reproducibility, and explicit exclusion of alternative explanations remain on shaky ground."
 unknown_points:
   - "It remains unsettled which combination of theories, if any, will ultimately amount to a sufficient condition."
@@ -48,6 +50,9 @@ wiki_links:
   - label: "Wiki: Observability and Claim Ceilings by Measurement Stack"
     url: "/wiki/measurement-stack-and-claim-ceiling.html"
     description: "Explains what each modality directly observes and where each one hits its claim ceiling."
+  - label: "Wiki: From Observation to Estimation"
+    url: "/wiki/observation-to-estimation.html"
+    description: "Explains why richer measurements and denser directed graphs still do not by themselves solve identifiability or causal discovery."
   - label: "Wiki: Homeostatic Plasticity and Maintenance State"
     url: "/wiki/homeostatic-plasticity-and-maintenance-state.html"
     description: "Adds background on maintenance-state variables such as sleep/wake dynamics, myelination, and glial metabolism."
@@ -612,6 +617,7 @@ style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; li
 <strong>Extension of the Turing test (causal perturbation protocol):</strong> Because static counterfactuals cannot be tested by observation alone, we use a "Causal Perturbation Protocol" that extends the Turing Test. The biological brain's response to physical perturbations such as TMS is compared with the response distribution to virtual perturbations in emulation, and PCI is treated as <strong>one external benchmark</strong>, not as ground truth itself.<sup><a href="#ref-90">[90]</a></sup><sup><a href="#ref-100">[100]</a></sup>.
 </li>
 </ul>
+<p><strong>2026-03-29 addendum:</strong> Candidate-model comparison is necessary, but it is still not enough to let a directed graph read as discovered causal wiring. <a href="https://doi.org/10.1016/j.neuroimage.2010.08.063" target="_blank">Smith et al. (2011)</a> showed that lag-based approaches perform poorly for fMRI and that functionally inaccurate ROIs are especially damaging to network estimation, <a href="https://doi.org/10.1016/j.jneumeth.2016.10.016" target="_blank">Barnett &amp; Seth (2017)</a> showed that subsampling can create detectability black spots for Granger-causal interactions, <a href="https://doi.org/10.1007/s10548-020-00757-6" target="_blank">Vink et al. (2020)</a> showed that resting-state EEG functional connectivity explains less than 10% of TMS-evoked propagation variance, <a href="https://doi.org/10.1002/hbm.70285" target="_blank">Novelli et al. (2025)</a> showed that slow BOLD sampling can still induce spurious Granger-causal inference even when HRF variability alone need not do so, and <a href="https://doi.org/10.1109/TPAMI.2026.3658839" target="_blank">Yan et al. (2026)</a> showed that latent confounders remain an active challenge for biological network reconstruction. Therefore, this page now requires <strong>observed-subsystem closure / latent-confound audit</strong>, <strong>node-definition policy</strong>, and <strong>sampling / transformation sensitivity</strong> in addition to model comparison, perturbation validation, and abstention.<sup><a href="#ref-141">[141]</a></sup><sup><a href="#ref-142">[142]</a></sup><sup><a href="#ref-143">[143]</a></sup><sup><a href="#ref-144">[144]</a></sup><sup><a href="#ref-146">[146]</a></sup></p>
 <div class="tag-list" style="margin-top: 12px;">
 <span class="tag">Model Competition</span>
 <span class="tag">OOD Generalization</span>
@@ -689,7 +695,7 @@ href="#ref-28">[28]</a></sup> Therefore, it is necessary to baseline how much br
 <li style="margin-bottom: 8px;">
 <strong>Many-to-one (different models explaining the same observation) problem:</strong>Just as EEG source estimation is an ill-posed problem,<sup><a
 href="#ref-5">[5]</a></sup>, there can be multiple explanations that fit the observed data. Definitional non-uniqueness is also discussed in IIT.<sup><a
-href="#ref-3">[3]</a></sup>. For WBE, <strong>intervention prediction, not observational agreement alone</strong>, is what narrows the model family.</li>
+href="#ref-3">[3]</a></sup>. For WBE, <strong>intervention prediction and partial-observation audit, not observational agreement alone</strong>, are what narrow the model family.</li>
 <li style="margin-bottom: 8px;">
 <strong>Verification of preservation of consciousness and identity:</strong>The position that views identity in terms of psychological continuity includes the copying problem (multiplicity).<sup><a
 href="#ref-4">[4]</a></sup><sup><a href="#ref-58">[58]</a></sup>. Even if one adopts the Slow Continuous Mind Uploading hypothesis<sup><a
@@ -700,8 +706,8 @@ href="#ref-47">[47]</a></sup>.
 
 <h3>Demonstration plan to fill the gap (minimum)</h3>
 <ol style="margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.6;">
-<li style="margin-bottom: 8px;"><strong>Make the generative model explicit:</strong>Using DCM etc., clarify what is a state and what is a parameter, and present it in a form that allows model comparison.<sup><a
-href="#ref-13">[13]</a></sup>.</li>
+<li style="margin-bottom: 8px;"><strong>Make the generative model explicit:</strong>Using DCM or related generative models, clarify what is a state and what is a parameter, publish the node-definition / parcellation policy, audit observed-subsystem closure and latent confounders, and present the result in a form that allows model comparison plus recovery checks.<sup><a
+href="#ref-13">[13]</a></sup><sup><a href="#ref-141">[141]</a></sup><sup><a href="#ref-145">[145]</a></sup><sup><a href="#ref-146">[146]</a></sup>.</li>
 <li style="margin-bottom: 8px;"><strong>Preregister intervention (perturbation) predictions:</strong>Incorporate the propagation and complexity of reactions to perturbations into the evaluation axis, like PCI/PCI-ST<sup><a
 href="#ref-47">[47]</a></sup><sup><a href="#ref-51">[51]</a></sup>.</li>
 <li style="margin-bottom: 8px;"><strong>Require a counterfactual baseline:</strong>Quantify the output produced by linguistic prior distribution alone by input shuffling, trial replacement, model temperature fixation, etc., and report it as an effect size.<sup><a
@@ -728,10 +734,10 @@ href="#ref-28">[28]</a></sup>.</li>
 <td>Instead of writing local connectomics, non-invasive ESI, and whole-brain WBE in the same breath, we first clarify the claim ceiling for each measurement stack.</td>
 </tr>
 <tr>
-<td><strong>Wall of identity</strong></td>
-<td>The EEG inverse problem can be improved considerably if the head model, conductivity assumptions, and model space comparisons are carefully handled.<sup><a href="#ref-5">[5]</a></sup><sup><a href="#ref-79">[79]</a></sup>. On the DCM side, Regression DCM and Causal Fingerprinting also advance candidate model family comparison and test-retest auditing.<sup><a href="#ref-96">[96]</a></sup>.</td>
-<td>However, improved predictability or localization does not guarantee general uniqueness recovery. As long as there are other model families or equivalence classes that fit the observed data, ``good accuracy'' cannot be written as ``the internal state was uniquely known.''</td>
-<td>This page prioritizes evidence chain over solver name and requires family comparison, sensitivity analysis, and abstention conditions.</td>
+<td><strong>Wall of identifiability</strong></td>
+<td>The EEG inverse problem can be improved considerably if the head model, conductivity assumptions, and model space comparisons are carefully handled.<sup><a href="#ref-5">[5]</a></sup><sup><a href="#ref-79">[79]</a></sup>. On the model side, Regression DCM and related large-scale estimators improve tractability, while systems-identification and network-reconstruction work make clear that unknown inputs, latent confounders, ROI policy, and sampling regime remain first-order conditions for inference.<sup><a href="#ref-96">[96]</a></sup><sup><a href="#ref-141">[141]</a></sup><sup><a href="#ref-142">[142]</a></sup><sup><a href="#ref-145">[145]</a></sup><sup><a href="#ref-146">[146]</a></sup>.</td>
+<td>However, improved predictability, denser graphs, or better localization do not guarantee uniqueness recovery. As long as other model families or equivalence classes still fit the observed data, or the observed subsystem is not closed, ``good accuracy'' cannot be written as ``the internal state or causal structure was uniquely known.''</td>
+<td>This page prioritizes evidence chain over solver name and now requires an explicit effective-connectivity route card: family comparison, observed-subsystem closure / latent-confound audit, node-definition policy, sampling / transformation sensitivity, perturbation validation, and abstention conditions.</td>
 </tr>
 <tr>
 <td><strong>Maintenance-state wall</strong></td>
@@ -755,12 +761,17 @@ href="#ref-28">[28]</a></sup>.</li>
 </table>
 
 <div class="note-box">
+<strong>2026-03-29 addendum: scalable directed graphs still need an audit trail</strong>
+<p>One remaining weakness in the older wording was that a larger or faster directed graph could still sound too close to a discovered causal object. The primary literature does not support that shortcut. <a href="https://doi.org/10.1098/rsif.2019.0043" target="_blank">Villaverde et al. (2019)</a> showed that unknown inputs, states, and parameters often have to be estimated jointly, not one by one. <a href="https://doi.org/10.1016/j.neuroimage.2010.08.063" target="_blank">Smith et al. (2011)</a> showed that functionally inaccurate ROIs are especially damaging to fMRI network estimation, <a href="https://doi.org/10.1016/j.jneumeth.2016.10.016" target="_blank">Barnett &amp; Seth (2017)</a> showed detectability black spots under subsampling, <a href="https://doi.org/10.1007/s10548-020-00757-6" target="_blank">Vink et al. (2020)</a> showed that resting-state EEG connectivity is a weak predictor of perturbation propagation, <a href="https://doi.org/10.1002/hbm.70285" target="_blank">Novelli et al. (2025)</a> showed that slow BOLD sampling can still generate spurious Granger-causal inference, and <a href="https://doi.org/10.1109/TPAMI.2026.3658839" target="_blank">Yan et al. (2026)</a> showed that latent confounders remain an unresolved practical challenge in biological network reconstruction. Therefore, on this page, a DCM graph, regression DCM estimate, or other effective-connectivity result is not promoted beyond a <strong>model-conditioned causal hypothesis</strong> unless the route card names <strong>what part of the system was actually observed</strong>, <strong>how nodes were defined</strong>, <strong>how temporal and observation transforms were stress-tested</strong>, and <strong>what perturbation or external falsification route was passed</strong>.</p>
+</div>
+
+<div class="note-box">
 <strong>Replacements prohibited in this section</strong>
 <p>Interpretations such as ``the human whole-brain state was achieved because of advances in local connectomics'', ``the internal state could be uniquely restored because the ESI was improved'', ``the identity of the person could be verified because the closed loop was activated'', and ``physical identity was guaranteed because of irreversibility'' are not supported by the current primary literature.</p>
 </div>
 
 <ol style="margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.6;">
-<li style="margin-bottom: 12px;"><strong>DCM and causal indicators are used with family-comparison assumptions:</strong> DCM, Effective Information, Causal Density, and Symbolic Transfer Entropy (STE)<sup><a href="#ref-99">[99]</a></sup> are useful as additional analyses, but they should not be used as stand-alone universal pass/fail criteria. Key judgments still require reporting equivalence classes and test-retest reliability.</li>
+<li style="margin-bottom: 12px;"><strong>DCM and causal indicators are used with route-card assumptions:</strong> DCM, Effective Information, Causal Density, and Symbolic Transfer Entropy (STE)<sup><a href="#ref-99">[99]</a></sup> are useful as additional analyses, but they should not be used as stand-alone universal pass/fail criteria. Key judgments still require reporting equivalence classes, observed-subsystem closure, node-definition policy, sampling / transformation sensitivity, perturbation validation, and test-retest reliability.</li>
 <li style="margin-bottom: 12px;"><strong>Fix the minimal evidence chain:</strong>For L2 and higher claims, the lowest line is (a) pre-registered hold-out/OOD conditions, (b) validation with perturbations or external criteria, (c) uncertainty and abstention conditions, (d) reporting of alternative models or equivalence classes, (e) maintenance-state logs including cross-days, and (f) separation of computational cost and hardware power.</li>
 </ol>
 
@@ -1763,6 +1774,12 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <li id="ref-138" value="138">Rhodes, N., Rier, L., Boto, E., Hill, R. M., &amp; Brookes, M. J. (2025). Source reconstruction without an MRI using optically pumped magnetometer-based magnetoencephalography. <em>Imaging Neuroscience</em>, 3, IMAG.a.8. <a href="https://doi.org/10.1162/IMAG.a.8">doi:10.1162/IMAG.a.8</a></li>
 <li id="ref-139" value="139">Wu, T., Xiao, W., Peng, X., Wu, T., &amp; Guo, H. (2025). Crosstalk reduction in optically pumped magnetometers arrays for biomagnetic measurement. <em>Review of Scientific Instruments</em>, 96(8), 085004. <a href="https://doi.org/10.1063/5.0273491">doi:10.1063/5.0273491</a></li>
 <li id="ref-140" value="140">Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <em>Nature Neuroscience</em>, 28, 2561–2574. <a href="https://doi.org/10.1038/s41593-025-02080-4">doi:10.1038/s41593-025-02080-4</a></li>
+<li id="ref-141" value="141">Smith, S. M., Miller, K. L., Salimi-Khorshidi, G., Webster, M., Beckmann, C. F., Nichols, T. E., Ramsey, J. D., &amp; Woolrich, M. W. (2011). Network modelling methods for FMRI. <em>NeuroImage</em>, 54(2), 875–891. <a href="https://doi.org/10.1016/j.neuroimage.2010.08.063">doi:10.1016/j.neuroimage.2010.08.063</a></li>
+<li id="ref-142" value="142">Barnett, L., &amp; Seth, A. K. (2017). Detectability of Granger causality for subsampled continuous-time neurophysiological processes. <em>Journal of Neuroscience Methods</em>, 275, 93–121. <a href="https://doi.org/10.1016/j.jneumeth.2016.10.016">doi:10.1016/j.jneumeth.2016.10.016</a></li>
+<li id="ref-143" value="143">Vink, J. J. T., Klooster, D. C. W., Ozdemir, R. A., Westover, M. B., Pascual-Leone, A., &amp; Shafi, M. M. (2020). EEG Functional Connectivity is a Weak Predictor of Causal Brain Interactions. <em>Brain Topography</em>, 33(2), 221–237. <a href="https://doi.org/10.1007/s10548-020-00757-6">doi:10.1007/s10548-020-00757-6</a></li>
+<li id="ref-144" value="144">Novelli, L., Barnett, L., Seth, A. K., &amp; Razi, A. (2025). Minimum-Phase Property of the Hemodynamic Response Function, and Implications for Granger Causality in fMRI. <em>Human Brain Mapping</em>, 46(10), e70285. <a href="https://doi.org/10.1002/hbm.70285">doi:10.1002/hbm.70285</a></li>
+<li id="ref-145" value="145">Villaverde, A. F., Tsiantis, N., &amp; Banga, J. R. (2019). Full observability and estimation of unknown inputs, states and parameters of nonlinear biological models. <em>Journal of The Royal Society Interface</em>, 16(156), 20190043. <a href="https://doi.org/10.1098/rsif.2019.0043">doi:10.1098/rsif.2019.0043</a></li>
+<li id="ref-146" value="146">Yan, J., Zhang, S.-W., Zhang, C., Huang, W., Shi, J., &amp; Chen, L. (2026). Dynamical Causality under Latent Confounders for Biological Network Reconstruction. <em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em>. <a href="https://doi.org/10.1109/TPAMI.2026.3658839">doi:10.1109/TPAMI.2026.3658839</a></li>
 </ol>
 </section>
 
