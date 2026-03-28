@@ -48,6 +48,33 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `B`: 25件
 - `C`: 18件
 
+## 今回の深掘り実行パック（2026-03-29 07:18 JST, mind-upload.com 優先6RQの再固定）
+
+本runでは、`mind-upload.com` 側で今そのまま不自然なく案内できる公開導線を先に固定し、そのうえで「今すぐ1件ずつ深く解く」6RQを `EEG-DATA` 実在面・現行助成面・Todoist登録状況まで含めて再固定いたしました。公開面では結論を強めず、`1RQ=1検証命題=1主Dアンカー=1外部依存境界` の粒度に留めます。
+
+| RQ | 今回固定する最小命題 | 主/予備Dアンカー | 現行助成レーン / 実制度の置き先 | 初手KPI | EEG単独でまだ主張しないこと |
+|---|---|---|---|---|---|
+| U0-1 | 観測一致 / 介入応答一致の二軸ROCで、本人性KPIの必要条件と十分条件の運用境界を切ります。 | 主: `D02` / 予備: `D11`, `D23` | `G2/G3` / `中谷財団 大学院生奨学金`, `樫の芽会 奨学金` | `session-out AUC` `observation-match rate` `intervention-response match rate` | 法的/哲学的な人格同一性の十分条件までは主張しません。 |
+| U1-2 | 導電率・電極欠損・ノイズ摂動で、逆問題の区間被覆率が崩れる境界を固定します。 | 主: `D08` / 予備: `D11`, `D19` | `G1/G4` / `ブレインサイエンス振興財団 研究助成`, `中谷財団 研究助成` | `interval coverage` `perturbation stability` `rank stability` | solver 優劣や recoverability の一般論までは主張しません。 |
+| U4-4 | 反証閾値（`ΔAUC` / `sign reversal rate`）を先宣言し、因果同値主張の降格条件を固定します。 | 主: `D05` / 予備: `D08`, `D19` | `G1/G4` / `ブレインサイエンス振興財団 研究助成`, `セコム科学技術振興財団 一般研究助成` | `PEHE` `ΔAUC` `sign reversal rate` | 介入系列なしの因果同値や理論勝敗までは主張しません。 |
+| U7-1 | `clock offset` `sampling drift` `stimulus onset` `QC fail code` の4項目を BIDS拡張の必須欄として固定します。 | 主: `D11` / 予備: `D15`, `D23` | `G1/G3` / `中谷財団 研究助成`, `くら基金 若手研究者奨励助成` | `required-field fill rate` `reanalysis success rate` `missing-log rate` | 組織導入完了や臨床標準化までは主張しません。 |
+| U8-4 | 異常検知遅延と fail-safe 発火 / 回復を単一の評価契約へ固定します。 | 主: `D20` / 予備: `D01`, `D21` | `G2/G5` / `中谷財団 研究助成`, `セコム科学技術振興財団 挑戦的研究助成` | `abnormal-detection latency p95` `fail-safe firing rate` `recovery time` | 現場運用の安全認証や chronic deployability までは主張しません。 |
+| U11-1 | `PCI近似 / LZ / wSMI` の順位保存を麻酔・睡眠・DoC 横断で比較可能にします。 | 主: `D14` / 予備: `D16`, `D17` | `G2/G4` / `ブレインサイエンス振興財団 研究助成`, `セコム科学技術振興財団 一般研究助成` | `rank-preservation rate` `boundary-state agreement` `same-cohort calibration gap` | 理論勝敗や意識本体の定義確定までは主張しません。 |
+
+補足:
+
+- `mind-upload.com/issue.html` の公開6RQは `U0-1/U1-2/U4-4/U7-1/U8-4/U11-1` へ同期いたしました。
+- 関連する主要制度の Todoist task は既に登録済みのため、本runでは新規 task 追加を行っておりません。
+
+実行順（本run固定）:
+
+1. `U7-1`
+2. `U1-2`
+3. `U4-4`
+4. `U0-1`
+5. `U8-4`
+6. `U11-1`
+
 ## 今回の深掘り実行パック（2026-03-29 05:55 JST, EEG-DATA実在面 + 現行助成面の再検証）
 
 本runでは、既存の `6RQ` 深掘りパックを維持したまま、`EEG-DATA` 側の実在 bucket と `auto-research-funds` 側の現行 card 実体を再固定いたしました。総論を増やさず、`1RQ=1検証命題=1主データ群=1助成レーン` の粒度をさらに厳密にいたします。

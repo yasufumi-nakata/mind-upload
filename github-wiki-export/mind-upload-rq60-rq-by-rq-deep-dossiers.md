@@ -16,6 +16,22 @@
 - 更新日: 2026-03-29
 - 出典: `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`（60行を再構成）
 
+## 今回の再検証ログ（2026-03-29 07:18 JST）
+
+本runでは、`mind-upload.com` 側でそのまま公開しても不自然になりにくい6RQを先に固定し、その6件だけを `EEG-DATA` 実在面・現行助成面・Todoist登録状況まで含めて再検証いたしました。汎用横断の総論は増やさず、今回も `1RQ=1検証命題=1応募テーマ=1主データ` を維持いたします。
+
+- 深掘り再固定6RQ（本run）: `U0-1` `U1-2` `U4-4` `U7-1` `U8-4` `U11-1`
+- `mind-upload.com/issue.html` の公開6RQも同じ並びへ同期いたしました。
+- 主アンカー固定:
+  - `U0-1`: `D02`
+  - `U1-2`: `D08`
+  - `U4-4`: `D05`
+  - `U7-1`: `D11`
+  - `U8-4`: `D20`
+  - `U11-1`: `D14`
+- Todoist判断:
+  - 関連する主要制度の task は既に登録済みであることを確認したため、本runでは新規 task 追加を行っておりません。
+
 ## 今回の再検証ログ（2026-03-29 05:55 JST）
 
 本runでは、既存の `6RQ` 深掘りキューを維持したまま、各RQを `EEG-DATA` の実在 bucket と `auto-research-funds` の現行 card 実体へ再固定いたしました。汎用横断の総論は増やさず、今回も `1RQ=1検証命題=1応募テーマ=1主データ` を維持いたします。
@@ -123,8 +139,10 @@
 - 主データ（ID）: `11`
 - 補助データ（推奨ID）: `ID 11, 29, 696`
 - 初期KPI（U0標準）: `セッション外AUC` `観測一致率` `介入応答一致率`
-- 停止条件: 主データ単独で再現しない場合は、前処理・分割・同期ログを固定して再試行し、それでも再現不能なら主張を下方修正する。
+- 停止条件: `interval coverage` が `80-100%` 帯を継続逸脱するか、導電率・電極欠損・ノイズ摂動後に `手法順位一致率 < 0.80` へ低下する場合は、主張を降格する。
 - 最低成果物: Intervention protocol and rebuttal condition definition
+- Run update (2026-03-29 07:18 JST): This section is now locked to `D02 CSTE` as the primary anchor, with `D11/D23` reserved only for cross-session and physiological side-channel robustness checks.
+- First-pass KPI fixed in this run: a public pass requires both `observation-match AUC` and `intervention-response match rate` to clear threshold; a single-axis pass is rejected by design.
 
 ### U0-2 時間同期（ms単位）と状態表現（行動・神経活動・生理）の対応をどう固定するか。
 
@@ -335,8 +353,11 @@
 - 主データ（ID）: `19`
 - 補助データ（推奨ID）: `ID 19, 56, 1839`
 - 初期KPI（U4標準）: `介入あり/なし差` `反事実誤差` `反証閾値超過率`
-- 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
+- 停止条件: `ΔAUC > 0.03` または `介入応答の符号反転率 > 10%` が再現するか、条件別に反証閾値が揺れて固定できない場合は、因果同値主張を降格する。
 - 最低成果物: Causal verification report (minimum intervention claim)
+- First-pass KPI fixed in this run: `delta-AUC` and `sign-reversal rate` are the public falsification metrics, and the proposal must declare them before reading the result.
+- Run update (2026-03-29 07:18 JST): This section is now locked to `D05 EEG cortical responses after HiPi` as the primary anchor, with `D08/D19` kept only for intervention-family cross-checks.
+- First-pass KPI fixed in this run: the falsification-first rule is public and explicit, so exceeding either preregistered `ΔAUC` or `sign reversal rate` immediately downgrades the claim.
 
 ### U7-1 BIDS拡張で同期・QC・刺激ログをどこまで必須化するか。
 
@@ -346,9 +367,12 @@
 - 第一応募先 / 予備応募先: G1 (GR-2026-013) / G3 (9Lx4dPK6a4k2gOb7)
 - 主データ（ID）: `676`
 - 補助データ（推奨ID）: `ID 676, 783, 4878`
-- 初期KPI（U7標準）: `再現率` `前処理差分感度` `同期監査異常率`
-- 停止条件: 主データ単独で再現しない場合は、前処理・分割・同期ログを固定して再試行し、それでも再現不能なら主張を下方修正する。
+- 初期KPI（U7標準）: `必須項目充足率` `欠損ログ率` `再解析成功率`
+- 停止条件: `clock offset` `sampling drift` `stimulus onset` `QC fail code` の4必須項目を再構成できないか、`再解析成功率 < 0.90` の条件が残る場合は、BIDS拡張必須化を降格する。
 - 最低成果物: Time synchronization audit report (offset/jitter distribution)
+- First-pass KPI fixed in this run: the four-field BIDS extension is the minimum public contract, and missing any one field blocks the claim.
+- Run update (2026-03-29 07:18 JST): This section is now locked to `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling`, with `D15/D23` used only to test whether the same audit rule survives a second modality family.
+- First-pass KPI fixed in this run: `required-field fill rate` and `reanalysis success rate` are the public pass/fail metrics, and missing any of `clock offset`, `sampling drift`, `stimulus onset`, or `QC fail code` blocks the claim.
 
 ### U7-2 LSL等の時刻同期誤差を検証可能な指標に落とせるか。
 
@@ -462,6 +486,7 @@
 - 最低成果物: Operational stability report (safety shutdown/recovery time)
 - Run update (2026-03-29): This section is now locked to `D20 Closed-loop auditory stimulation targeting REM oscillations` as the primary anchor, with `D01/D21` used only for device-delay and closed-loop controller cross-checks.
 - External dependency kept separate in this run: site shutdown ownership and operational safety procedure remain outside the EEG claim and must stay as external approval work.
+- Run update (2026-03-29 07:18 JST): This section remains in the current public six-RQ batch, and `abnormal-detection latency p95` stays paired with `fail-safe trigger rate` and `recovery time` as the public pass/fail bundle.
 
 ### U8-5 ヒューマンオーバーライドを導入したとき、誤作動率と回復時間をどうKPI化するか。
 
@@ -545,8 +570,11 @@
 - 主データ（ID）: `735`
 - 補助データ（推奨ID）: `ID 735, 842, 859`
 - 初期KPI（U11標準）: `理論間順位保存率` `境界症例符号一致率` `計算予算内完走率`
-- 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
+- 停止条件: `理論間順位保存率 < 0.80` となるか、境界状態で `符号一致率` が不安定な場合は、shared I/O 仕様を「暫定比較仕様」に降格する。
 - 最低成果物: Awareness index comparison report (with failure condition)
+- First-pass KPI fixed in this run: `rank-preservation rate under shared I/O` is the public comparison metric, and theory choice stays outside the EEG claim.
+- Run update (2026-03-29 07:18 JST): This section is now locked to `D14 PK-NMM EEG simulation during propofol anesthesia`, with `D16/D17` reserved only for sleep and DoC cross-state checks.
+- First-pass KPI fixed in this run: the public pass/fail metric is `rank-preservation rate` across shared I/O, and the claim must be downgraded when calibration cannot preserve ordering across anesthesia, sleep, and DoC.
 
 ### U11-2 PCIやIIT近似計算の計算量制約をどう扱うか。
 

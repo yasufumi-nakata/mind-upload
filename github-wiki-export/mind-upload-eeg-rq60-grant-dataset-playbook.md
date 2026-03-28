@@ -35,11 +35,13 @@ A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-f
 - `U7: G1/G3`, `U8: G2/G5`, `U10: G2/G6`, `U11: G2/G4`
 - `U12: G2/G6`, `U13: G1/G4`, `U14: G1/G3`, `U15: G2/G6`
 
-## Current funding reality (2026-03-29 05:55 JST)
+## Current funding reality (2026-03-29 07:18 JST)
 
 - `G1/G2` are routing keys used to keep the RQ-level application lanes stable. They are not current grant-card files.
 - Current grant-card entities are `G3-G6`, and the practical shortlist is now fixed in [AoyamaLab/auto-research-funds wiki: Mind-Upload-Current-Funding-Shortlist](https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md).
-- The six currently revalidated deep-focus RQs remain `U0-2`, `U1-4`, `U7-6`, `U8-6`, `U11-3`, and `U13-2`.
+- The six currently revalidated deep-focus RQs are `U0-1`, `U1-2`, `U4-4`, `U7-1`, `U8-4`, and `U11-1`.
+- The current public batch on `mind-upload.com` is synchronized to the same six RQs, but stronger dataset/KPI/stopping-rule details remain inside the wiki.
+- Relevant Todoist tasks for the practical shortlist already existed before this run, so no new task was created in this run.
 - For submission-ready references, prefer `Dxx + DOI + dataset name + access class` over numeric search IDs.
 
 ## Fixed table by RQ (60 items)
@@ -73,7 +75,7 @@ A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-f
 | U8-1 | B | G2 (GR-2026-014) | G5 (871pw3rLjNPKgqA0) | 6 | Closed-loop KPIs for delay/relearning/safety stop are easy to measure. | Closed loop safety KPI dashboard |
 | U8-2 | B | G2 (GR-2026-014) | G5 (871pw3rLjNPKgqA0) | 6 | Closed-loop KPIs for delay/relearning/safety stop are easy to measure. | Closed loop safety KPI dashboard |
 | U8-3 | B | G2 (GR-2026-014) | G5 (871pw3rLjNPKgqA0) | 6 | Closed-loop KPIs for delay/relearning/safety stop are easy to measure. | Operational stability report (safety shutdown/recovery time) |
-| U8-4 | B | G2 (GR-2026-014) | G5 (871pw3rLjNPKgqA0) | 6 | Closed-loop KPIs for delay/relearning/safety stop are easy to measure. | Operational stability report (safety shutdown/recovery time) |
+| U8-4 | B | G2 (GR-2026-014) | G5 (871pw3rLjNPKgqA0) | 2412 | Closed-loop abnormal-detection latency, fail-safe trigger, and recovery can be measured in the same contract. | Operational stability report (safety shutdown/recovery time) |
 | U8-5 | B | G2 (GR-2026-014) | G5 (871pw3rLjNPKgqA0) | 6 | Closed-loop KPIs for delay/relearning/safety stop are easy to measure. | Closed loop safety KPI dashboard |
 | U8-6 | B | G2 (GR-2026-014) | G5 (871pw3rLjNPKgqA0) | 6 | Closed-loop KPIs for delay/relearning/safety stop are easy to measure. | Closed loop safety KPI dashboard |
 | U10-1 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 735 | It is easy to verify the difference between theoretical consistency and physiological proxy step by step. | Theory consistency memo and proxy correlation analysis |

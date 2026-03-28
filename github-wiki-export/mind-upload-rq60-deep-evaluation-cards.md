@@ -27,6 +27,21 @@
 - `B`: 25
 - `C`: 18
 
+## 2026-03-29 07:18 JST 再検証ログ（本run / mind-upload.com 優先6RQの再固定）
+
+- 本runでは、`mind-upload.com` 側で不自然なく案内できる公開6RQを先に固定し、その6件を `EEG-DATA` 実在面・現行助成面・Todoist登録状況まで含めて再固定いたしました。
+- 公開面では強い結論を追加せず、wiki 側でのみ `Dxx + DOI + dataset名 + access区分`、初手KPI、停止条件を深掘りしております。
+- 主要な助成制度の Todoist task は既に登録済みであることを確認したため、本runでは新規 task 追加を行っておりません。
+
+| RQ | 判定 | 主データ（Dアンカー） | 第一/予備応募先 | 今回固定した深掘りポイント | Todoist判断 | 最低成果物 |
+|---|---|---|---|---|---|---|
+| U0-1 | A | `D02`（補助 `D11/D23`） | `G2 / G3` | `observation-match` と `intervention-response match` の二軸ROCを同時合格に固定。 | 既存 task あり | Intervention protocol and rebuttal condition definition |
+| U1-2 | A | `D08`（補助 `D11/D19`） | `G1 / G4` | 導電率・電極欠損・ノイズ摂動に対する `interval coverage` を公開 pass/fail へ固定。 | 既存 task あり | Inverse problem reproduction report (error/uncertainty) |
+| U4-4 | B | `D05`（補助 `D08/D19`） | `G1 / G4` | `ΔAUC` と `sign reversal rate` を事前登録し、因果同値主張の降格条件を先に固定。 | 既存 task あり | Causal verification report (minimum intervention claim) |
+| U7-1 | A | `D11`（補助 `D15/D23`） | `G1 / G3` | `clock offset / sampling drift / stimulus onset / QC fail code` の4項目を必須欄に固定。 | 既存 task あり | Time synchronization audit report (offset/jitter distribution) |
+| U8-4 | B | `D20`（補助 `D01/D21`） | `G2 / G5` | `abnormal-detection latency p95` と `fail-safe firing / recovery` を単一契約に固定。 | 既存 task あり | Operational stability report (safety shutdown/recovery time) |
+| U11-1 | B | `D14`（補助 `D16/D17`） | `G2 / G4` | `PCI近似 / LZ / wSMI` の順位保存を shared-I/O で比較し、理論勝敗の読み過ぎを抑制。 | 既存 task あり | Awareness index comparison report (with failure condition) |
+
 ## 2026-03-29 05:55 JST 再検証ログ（本run / EEG-DATA実在 bucket と現行助成面の再固定）
 
 - 本runでは、既存の `6RQ` 深掘りパックを維持したまま、各RQを `EEG-DATA` の実在 bucket と `auto-research-funds` の現行 card 実体へ再固定いたしました。
