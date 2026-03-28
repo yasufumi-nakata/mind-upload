@@ -162,6 +162,8 @@
 - 初期KPI（U0標準）: `セッション外AUC` `観測一致率` `介入応答一致率`
 - 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
 - 最低成果物: Identity determination two-axis report (observation match/intervention match)
+- Run update (2026-03-29): This section is now locked to `D02 CSTE` as the primary anchor, with `D10/D12` kept only as support datasets for cross-session and longitudinal stress tests.
+- External dependency kept separate in this run: legal personhood and responsibility allocation remain outside the EEG claim and must stay in the proposal as an `external dependency`.
 
 ### U1-1 EEG/MEG逆問題での不良設定性を、どの事前分布で制御するか。
 
@@ -186,6 +188,8 @@
 - 初期KPI（U1標準）: `逆解誤差` `不確実性被覆率` `手法順位一致率`
 - 停止条件: 主データ単独で再現しない場合は、前処理・分割・同期ログを固定して再試行し、それでも再現不能なら主張を下方修正する。
 - 最低成果物: Inverse problem reproduction report (error/uncertainty)
+- Run update (2026-03-29): This section is now locked to `D08 Simultaneous human intracerebral stimulation and HD-EEG` as the primary anchor, with `D11/D19` reserved for perturbation checks that do not replace the main ground-truth signal.
+- First-pass KPI fixed in this run: `interval coverage` is the public pass/fail metric, and the claim must be downgraded when repeated conductivity, missing-electrode, or noise perturbations break coverage stability.
 
 ### U1-3 同じデータで異なる逆解法（MNE, beamformer, Champagne 等）が乖離した場合の判定規則をどう置くか。
 
@@ -319,6 +323,8 @@
 - 初期KPI（U4標準）: `介入あり/なし差` `反事実誤差` `反証閾値超過率`
 - 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
 - 最低成果物: Intervention protocol and rebuttal condition definition
+- Run update (2026-03-29): This section is now locked to `D05 EEG cortical responses after HiPi` as the primary anchor, with `D08/D19` kept as support only for cross-checking the intervention family.
+- External dependency kept separate in this run: common I/O specifications and the intervention protocol remain outside the EEG claim and must be carried as explicit external deliverables.
 
 ### U4-4 同値判定の失敗条件（falsification）をどの水準で宣言するか。
 
@@ -367,6 +373,8 @@
 - 初期KPI（U7標準）: `再現率` `前処理差分感度` `同期監査異常率`
 - 停止条件: 基準パイプライン比で `再現率 -5pt` を超える設定が3条件以上発生した場合、当該前処理はデフォルト候補から除外する。
 - 最低成果物: Reproducibility audit report (synchronization/QC/preprocessing difference)
+- Run update (2026-03-29): This section is now locked to `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling`, with `D12/D24` used only to test whether the preprocessing rule survives a second protocol family.
+- First-pass KPI fixed in this run: `preprocessing-drift sensitivity` is the main audit number, and any configuration that breaks ranking stability across repeated runs is removed from the default pipeline.
 
 ### U7-4 モダリティ間アライメント失敗時の再計測/除外基準をどう固定するか。
 
@@ -452,6 +460,8 @@
 - 初期KPI（U8標準）: `異常検知遅延` `フェイルセーフ発火率` `回復時間`
 - 停止条件: `異常検知遅延` の95パーセンタイルが `250 ms` を超えるか、`回復時間` の中央値が `5 秒` を超える場合は、評価契約を「研究内安全手順」に留めて運用契約へ昇格しない。
 - 最低成果物: Operational stability report (safety shutdown/recovery time)
+- Run update (2026-03-29): This section is now locked to `D20 Closed-loop auditory stimulation targeting REM oscillations` as the primary anchor, with `D01/D21` used only for device-delay and closed-loop controller cross-checks.
+- External dependency kept separate in this run: site shutdown ownership and operational safety procedure remain outside the EEG claim and must stay as external approval work.
 
 ### U8-5 ヒューマンオーバーライドを導入したとき、誤作動率と回復時間をどうKPI化するか。
 
@@ -658,6 +668,8 @@
 - 初期KPI（U13標準）: `意味一致率` `因果一致率` `リーク検出率`
 - 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
 - 最低成果物: Intervention protocol and rebuttal condition definition
+- Run update (2026-03-29): This section is now locked to `D10 3M-CPSEED` as the primary anchor, with `D03/D09` reserved for multimodal and control-condition support only.
+- First-pass KPI fixed in this run: the public report must show `semantic-match rate`, `causal-match rate`, and their gap on a leak-free split, and an imitation-only pass is rejected by design.
 
 ### U13-2 LLMの幻覚・整合性検査を神経デコード評価へどう接続するか。
 

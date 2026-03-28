@@ -431,3 +431,29 @@ Reasons for proceeding in this order:
 4. `U11-1` - rank-preserving theory comparison across anesthesia/sleep/DoC
 5. `U13-5` - perception-to-recall branch point for mimicry/mechanism separation
 6. `U14-4` - Model Card / Dataset Card wired into the reproducibility contract
+
+## 2026-03-29 06:25 JST revalidation log (main run / mind-upload public six-RQ batch)
+
+- Pulled the latest `main` in `auto-startup`, `mind-upload`, `EEG-DATA`, and `auto-research-funds` before editing and reconfirmed `Already up to date`.
+- Kept `RQ_TOTAL=60`, `A/B/C=17/25/18`, and the submission evidence rule `Dxx + DOI + dataset name + access class`.
+- Chose only six RQs that directly tighten the public mind-upload program instead of widening the summary surface again.
+
+### Current public deepening batch
+
+| RQ | Why this is solve-first now | Primary D anchor | Grant lane | First KPI to lock now | External dependency kept separate |
+|---|---|---|---|---|---|
+| `U13-1` | brain-to-text claims fail first on imitation inflation, so meaning restoration and causal reproduction need to be separated before any broader claim is made. | `D10 3M-CPSEED` + support `D03/D09` | `G1 / G4` | `semantic-match rate - causal-match rate gap` | Behavioral-language evaluation contract and intervention protocol |
+| `U7-3` | preprocessing drift is a direct reproducibility blocker, and it can be audited with EEG-DATA before any new data collection. | `D11` + support `D12/D24` | `G1 / G3` | `preprocessing-drift sensitivity` | CI ownership and release governance |
+| `U0-4` | branching identity claims are central to mind-upload, but the public claim must stop at technical identity unless observation-match and intervention-match both survive. | `D02` + support `D10/D12` | `G2 / G3` | `observation-match AUC / intervention-match AUC` | Legal entity definition and responsibility allocation |
+| `U8-4` | a closed-loop program without explicit fail-safe latency metrics is not ready for a public safety claim. | `D20` + support `D01/D21` | `G2 / G5` | `abnormal-detection latency p95` | Site shutdown ownership and operational safety SOP |
+| `U1-2` | inverse-problem claims are not credible unless uncertainty propagation survives repeated perturbations. | `D08` + support `D11/D19` | `G1 / G4` | `interval coverage` | Head-model identification conditions |
+| `U4-3` | theory comparison drifts into post hoc interpretation unless counterfactual error is locked before reading the results. | `D05` + support `D08/D19` | `G1 / G4` | `PEHE + log-likelihood rank stability` | Common I/O specification and intervention protocol |
+
+### Execution order fixed in this run
+
+1. `U13-1`
+2. `U7-3`
+3. `U0-4`
+4. `U8-4`
+5. `U1-2`
+6. `U4-3`
