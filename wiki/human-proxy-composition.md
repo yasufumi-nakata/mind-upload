@@ -12,10 +12,10 @@ reading_time: "12-18 minutes"
 page_intro: "This page explains how to read current human proxy routes without collapsing them into one generic progress bar. The question is not only whether a route is impressive, but what exact quantity, target, or transport regime it constrains, on what unit and timescale, in which cohort / physiological regime, with what model burden, with what repeatability / transfer window, and what hidden-state families still remain unresolved."
 accuracy_note: "The ceilings on this page are operational inferences drawn from primary literature. They are not the claims made by the original papers themselves."
 page_highlights:
-  - "Human proxy routes differ not only in strength, but in quantity / target / transport type: structural scaffold, density proxy, similarity scaffold, energetic-balance route, kinetic-rate map, quantity-defined myelin route, BBB water-exchange route, tracer-specific BBB transport route, target-defined astrocyte PET, mobility map, and model-based efflux route are different objects."
+  - "Human proxy routes differ not only in strength, but in quantity / target / transport type: structural scaffold, density proxy, similarity scaffold, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content / functional dynamics, kinetic-rate map, quantity-defined myelin route, BBB water-exchange route, tracer-specific BBB transport route, target-defined astrocyte PET, mobility map, and model-based efflux route are different objects."
   - "Spatial unit and time window are part of the evidence: a cubic-millimeter surgical fragment, parcel-level similarity matrix, 0.7 cc dynamic metabolic voxel, and overnight plasma-efflux inference cannot be treated as interchangeable."
   - "Cohort and physiological regime are part of the evidence: adolescent developmental cohorts, healthy younger adults, healthy older adults, pathology-specific remyelination studies, and AD-continuum reactive-astrogliosis scans do not define one shared human baseline."
-  - "Model burden is part of the object: tracer kinetics, partial-volume correction, 31P spectral quantification, deuterium kinetic models, ASL fitting routes, multicompartment models, and synchronization choices all change what the measurement means."
+  - "Model burden is part of the object: tracer kinetics, 31P spectral quantification, 31P MT exchange modeling, 31P NAD fitting, deuterium kinetic models, ASL fitting routes, multicompartment models, partial-volume correction, and synchronization choices all change what the measurement means."
   - "A bundle can be well-typed and still fail operationally if one row is unstable, method-family-specific, centre-bound, available only in a narrow complete-case subset, or present mainly in a severity- or site-skewed subset."
   - "Promotion now runs through three gates: robustness, common-driver / quantity-bridge separation, and incremental value beyond the strongest single row."
   - "Local causal relevance and living-human observability are different ladders: rodent astrocyte-controller papers plus human MAO-B / I2BS / CSF / efflux routes do not by themselves identify the responsible human controller."
@@ -25,7 +25,7 @@ page_highlights:
   - "On this site, a proxy bundle is promoted only after a Human Proxy Composition Card discloses proxy class, direct observable, same-subject relation, operational maturity, calibrator role, model burden, and residual latent-state ceiling."
 known_points:
   - "Recent human-side advances reduce different uncertainty terms and are scientifically meaningful, but they are not one common measurement class."
-  - "SV2A PET, 1H-MRSI similarity, 31P-MRS energetic balance, deuterium metabolite / rate imaging, quantity-defined myelin MRI, BBB water-exchange MRI, tracer-specific BBB PET, target-defined astrocyte PET, and CSF / glymphatic routes all require route-specific interpretation."
+  - "SV2A PET, 1H-MRSI similarity, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content / functional routes, deuterium metabolite / rate imaging, quantity-defined myelin MRI, BBB water-exchange MRI, tracer-specific BBB PET, target-defined astrocyte PET, and CSF / glymphatic routes all require route-specific interpretation."
   - "Proxy class and operational maturity still do not tell you what the route safely calibrates, so calibrator role has to be stated separately."
   - "A local rodent causal result plus a living-human proxy result still does not measure the same controller unless the bridge assumption is named explicitly."
   - "Even when quantity type and model burden are logged, cross-row composition still requires age band, health/pathology regime, and transfer rationale."
@@ -75,7 +75,7 @@ Recent human proxy advances are real, but they do not yet compose automatically 
 <div class="note-box">
 <strong>What this page fixes</strong>
 <p>
-The public pages had already become stricter about human proxy families, but this composition page was still lagging behind the site's newer taxonomy. It still let readers compress <strong>31P energetic balance</strong> into <strong>deuterium rate imaging</strong>, <strong>myelin-water / MT-family / bilayer / qT1 remyelination-sensitive</strong> routes into one myelin meter, <strong>BBB water-exchange MRI</strong> into <strong>tracer-specific BBB PET transport</strong>, and <strong>MAO-B</strong> into <strong>I2BS</strong> astrocyte PET. The current primary literature does not support those shortcuts. This page now fixes the composition rule at the same granularity as the rest of the site.
+The public pages had already become stricter about human proxy families, but this composition page was still lagging behind the site's newer taxonomy. It still let readers compress <strong>31P metabolite / pH balance</strong>, <strong>31P MT exchange-flux</strong>, and <strong>31P NAD-content / functional routes</strong> into one row, <strong>deuterium rate imaging</strong> into that same energetic row, <strong>myelin-water / MT-family / bilayer / qT1 remyelination-sensitive</strong> routes into one myelin meter, <strong>BBB water-exchange MRI</strong> into <strong>tracer-specific BBB PET transport</strong>, and <strong>MAO-B</strong> into <strong>I2BS</strong> astrocyte PET. The current primary literature does not support those shortcuts. This page now fixes the composition rule at the same granularity as the rest of the site.
 </p>
 </div>
 
@@ -380,11 +380,25 @@ Those three axes are defined <strong>per route</strong>. When several routes are
 <td>Kinetic metabolic rate, energetic reserve, axonal wiring, and local maintenance-controller identity.</td>
 </tr>
 <tr>
-<td><strong>Human <sup>31</sup>P-MRS energetic-balance route</strong><br><a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a></td>
-<td><strong>Macro energetic-balance proxy</strong></td>
-<td>Established resting-brain spectroscopy route, but still a coarse energetic-balance readout rather than dynamic local kinetics.</td>
+<td><strong>Human <sup>31</sup>P-MRS metabolite-balance / pH route</strong><br><a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a></td>
+<td><strong>Macro 31P metabolite-balance / pH proxy</strong></td>
+<td>Established resting-brain spectroscopy route, but still a coarse balance readout rather than dynamic local kinetics.</td>
 <td>Constrains ATP synthesis, phosphorus metabolite balance, and pH under a specific spectral / exchange-model route.</td>
-<td>Glucose transport rates, branch-local mitochondrial positioning, ATP nano-organization, and cell-specific energetic reserve.</td>
+<td>Exchange-flux, NAD dynamics, glucose transport rates, branch-local mitochondrial positioning, ATP nano-organization, and cell-specific energetic reserve.</td>
+</tr>
+<tr>
+<td><strong>Human <sup>31</sup>P MT exchange-flux route</strong><br><a href="https://doi.org/10.1002/mrm.26560" target="_blank">Ren et al. (2017)</a></td>
+<td><strong>Model-conditioned macro 31P exchange-flux proxy</strong></td>
+<td>Specialized 7 T route with band-inversion / magnetization-transfer modeling rather than a routine resting-balance readout.</td>
+<td>Constrains PCr&rarr;&gamma;-ATP creatine-kinase exchange, Pi&rarr;&gamma;-ATP synthesis, and ATP intramolecular exchange under a 5-pool model.</td>
+<td>Cell-specific energetic reserve, branch-local mitochondrial positioning, task-evoked redox dynamics, and any claim that treats one flux estimate as a generic energetic scalar.</td>
+</tr>
+<tr>
+<td><strong>Human <sup>31</sup>P NAD-content / functional route</strong><br><a href="https://doi.org/10.3389/fnins.2024.1389111" target="_blank">Guo et al. (2024)</a>; <a href="https://doi.org/10.1177/0271678X261415784" target="_blank">Kaiser et al. (2026)</a></td>
+<td><strong>Macro 31P NAD map / task-dynamics proxy</strong></td>
+<td>Specialized 7 T routes with low-concentration fitting burden: one whole-brain map and one functionally localized task fMRS assay.</td>
+<td>Constrains intracellular NAD content or bounded task-evoked NAD<sup>+</sup> dynamics under explicit spectral fits.</td>
+<td>Whole-brain moment-to-moment redox control, branch-local mitochondrial residence, task-general controller identity, and local synaptic energetic reserve.</td>
 </tr>
 <tr>
 <td><strong>Dynamic deuterium metabolite / rate imaging</strong><br><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>; <a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a></td>
@@ -639,6 +653,9 @@ If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich b
 <li>Shatalina, E., Onwordi, E. C., Whitehurst, T., et al. (2024). The relationship between SV2A levels, neural activity, and cognitive function in healthy humans: A [<sup>11</sup>C]UCB-J PET and fMRI study. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">doi:10.1162/imag_a_00190</a></li>
 <li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
 <li>Ren, J., Sherry, A. D., &amp; Malloy, C. R. (2015). <sup>31</sup>P-MRS of healthy human brain: ATP synthesis, metabolite concentrations, pH, and T1 relaxation times. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">doi:10.1002/nbm.3384</a></li>
+<li>Ren, J., Sherry, A. D., &amp; Malloy, C. R. (2017). Efficient <sup>31</sup>P band inversion transfer approach for measuring creatine kinase activity, ATP synthesis, and molecular dynamics in the human brain at 7 T. <a href="https://doi.org/10.1002/mrm.26560" target="_blank">doi:10.1002/mrm.26560</a></li>
+<li>Guo, R., Yang, S., Wiesner, H. M., et al. (2024). Mapping intracellular NAD content in entire human brain using phosphorus-31 MR spectroscopic imaging at 7 Tesla. <a href="https://doi.org/10.3389/fnins.2024.1389111" target="_blank">doi:10.3389/fnins.2024.1389111</a></li>
+<li>Kaiser, A., Vind, F. A., Duarte, J. M. N., et al. (2026). Ultra-high field <sup>31</sup>P functional magnetic resonance spectroscopy reveals NAD<sup>+</sup> dynamics in brain energy metabolism during visual stimulation. <a href="https://doi.org/10.1177/0271678X261415784" target="_blank">doi:10.1177/0271678X261415784</a></li>
 <li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
 <li>Karkouri, J., Novoselova, M., Rodgers, C. T., et al. (2026). Absolute Quantification of Brain Deuterium Metabolic Imaging in Healthy Volunteers and Glioblastoma Patients at 7T. <a href="https://doi.org/10.1002/mrm.70308" target="_blank">doi:10.1002/mrm.70308</a></li>
 <li>Arshad, M., Stanley, J. A., &amp; Raz, N. (2017). Test-retest reliability and concurrent validity of in vivo myelin content indices: Myelin water fraction and calibrated T1w/T2w image ratio. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5342928/" target="_blank">PMCID:PMC5342928</a></li>
