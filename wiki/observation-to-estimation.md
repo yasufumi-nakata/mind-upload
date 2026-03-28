@@ -8,7 +8,7 @@ article_type: Wiki
 subtitle: Being consistent with observation, understanding internal states, and understanding
   cause and effect are different things.
 author: Mind Uploading Research Project
-last_updated: '2026-03-28'
+last_updated: '2026-03-29'
 note: Technical / natural science only
 audience: People who want to organize inverse problems and the limitations of causal
   models based on primary literature
@@ -34,8 +34,9 @@ page_highlights:
 - DCM is a candidate model comparison rather than an automatic detector, and SCM is
   a language that facilitates describing interventions.
 - Effective-connectivity claims now use a route card that names candidate model space,
-  observation assumptions, validation, reliability, and abstention before the claim
-  ceiling is raised.
+  observed-subsystem closure / latent-confound audit, node-definition policy, sampling
+  / transformation sensitivity, observation assumptions, validation, reliability,
+  and abstention before the claim ceiling is raised.
 - The key is to what extent we can narrow down the causal equivalence classes that
   remain based on observational data alone through intervention and calibration.
 known_points:
@@ -53,6 +54,9 @@ known_points:
   structure, so a richer stack does not by itself define one validated latent target.
 - For ESI, method/package/parameter choice can materially move the estimated source,
   so stability across standard pipelines is part of the claim.
+- In effective connectivity, hidden nodes/common drives, node-definition choices,
+  and sampling or observation transforms are separate failure modes; a winning model
+  comparison does not erase them.
 - Same-brain or same-subject linkage can still be a sequential bridge rather than
   same-state evidence.
 - The causal structure cannot be determined by observational fit alone; a set of candidate
@@ -425,6 +429,13 @@ The weak point here was not that it separated DCM from SCM, but that scaling adv
 </p>
 </div>
 
+<div class="note-box">
+<strong>2026-03-29 deepening: directed graphs still fail under partial observation, node policy, and sampling transforms</strong>
+<p>
+The remaining weakness after adding a route card was that <strong>candidate model space</strong> could still be read too narrowly, as if it already covered the practically important failure modes of a directed graph. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuroimage.2010.08.063" target="_blank">Smith et al. (2011)</a> showed in a large simulation benchmark that lag-based approaches perform poorly for fMRI and that <strong>functionally inaccurate ROIs</strong> are especially damaging to network estimation. <a href="https://doi.org/10.1016/j.jneumeth.2016.10.016" target="_blank">Barnett &amp; Seth (2017)</a> then showed that subsampling can create <strong>detectability black spots</strong> for Granger-causal interactions rather than a simple monotonic loss. <a href="https://doi.org/10.1007/s10548-020-00757-6" target="_blank">Vink et al. (2020)</a> showed in TMS-EEG that resting-state EEG functional connectivity explains <strong>less than 10% of the variance</strong> in evoked propagation and varies substantially across stimulation sites and participants. <a href="https://doi.org/10.1002/hbm.70285" target="_blank">Novelli et al. (2025)</a> refined the hemodynamic objection: if the HRF is minimum-phase, HRF variability alone need not create false positives across a wide range of plausible parameters, but <strong>slow BOLD sampling</strong> can still induce spurious Granger-causal inference. Most recently, <a href="https://doi.org/10.1109/TPAMI.2026.3658839" target="_blank">Yan et al. (2026)</a> showed that dynamical causal inference under <strong>latent confounders</strong> remains an active method-development problem in biological network reconstruction. Therefore, on this site, effective-connectivity claims must now separate <strong>observed-subsystem closure / latent-confound audit</strong>, <strong>node-definition policy</strong>, and <strong>sampling / transformation sensitivity</strong> from the older questions of model comparison and external validation.
+</p>
+</div>
+
 <section class="section" id="effective-connectivity-route-card">
 <h2 class="section-title">Effective-connectivity route card</h2>
 <table class="data-table">
@@ -442,9 +453,24 @@ The weak point here was not that it separated DCM from SCM, but that scaling adv
 <td>It blocks “the best compared model” from being rephrased as “the true circuit was found.”</td>
 </tr>
 <tr>
+<td><strong>Observed subsystem / latent-confound audit</strong></td>
+<td>Name which candidate hidden nodes, common drives, instantaneous interactions, or unmeasured exogenous inputs remain outside the observed subsystem, what sensitivity analysis or latent-confound method was used, and whether the reported directions survive that audit.</td>
+<td>It blocks a partial recording or atlas-defined subgraph from sounding like a causally closed system.</td>
+</tr>
+<tr>
+<td><strong>Node-definition policy</strong></td>
+<td>State how ROIs or nodes were defined, whether alternative parcellations / functional localizers / decompositions were tested, and whether edge directions or family ranking change materially across those alternatives.</td>
+<td>It blocks one directed graph from sounding node-invariant when the result actually depends on the chosen parcellation or ROI recipe.</td>
+</tr>
+<tr>
 <td><strong>Observation model and priors</strong></td>
 <td>Neural-mass assumptions, linearization, HRF choice, mean-field or independence assumptions, sparsity priors, and any structural constraints.</td>
 <td>It blocks “effective connectivity” from sounding as if the result were independent of hemodynamic and prior assumptions.</td>
+</tr>
+<tr>
+<td><strong>Sampling / transformation sensitivity</strong></td>
+<td>State the sampling interval relative to the neural delays of interest, filtering or deconvolution choices, HRF / observation-transform assumptions, and whether inferred directions survive plausible transform alternatives or only one time-resolution regime.</td>
+<td>It blocks directed-lag estimates from sounding biologically directional when they may still be shaped by sampling, filtering, or observation transforms.</td>
 </tr>
 <tr>
 <td><strong>Family comparison / model recovery</strong></td>
@@ -469,7 +495,7 @@ The weak point here was not that it separated DCM from SCM, but that scaling adv
 </tbody>
 </table>
 <p>
-If this card is missing, this site stops at <strong>model-conditioned causal hypothesis</strong>. A whole-brain DCM graph, a regression DCM estimate, or an activity-flow-compatible diagram is not promoted here to discovered wiring merely because it is dense, scalable, or predictive.
+If this card is missing, this site stops at <strong>model-conditioned causal hypothesis</strong>. A whole-brain DCM graph, an atlas-wide regression DCM estimate, or an activity-flow-compatible diagram is not promoted here to discovered wiring merely because it is dense, scalable, atlas-complete, or predictive.
 </p>
 </section>
 
@@ -623,6 +649,11 @@ DCM is useful for comparing neural circuit candidate generation models, and SCM 
 <li>Frässle, S., Manjaly, Z. M., Do, C. T., Kasper, L., Pruessmann, K. P., &amp; Stephan, K. E. (2021). Whole-brain estimates of directed connectivity for human connectomics. <em>NeuroImage</em>, 225, 117491. <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">doi:10.1016/j.neuroimage.2020.117491</a></li>
 <li>Wu, H., Hu, X., &amp; Zeng, Y. (2024). A fast dynamic causal modeling regression method for fMRI. <em>NeuroImage</em>, 304, 120954. <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">doi:10.1016/j.neuroimage.2024.120954</a></li>
 <li>Jafarian, A., Assem, M. K., Kocagoncu, E., et al. (2024). Reliability of dynamic causal modelling of resting-state magnetoencephalography. <em>Human Brain Mapping</em>. <a href="https://doi.org/10.1002/hbm.26782" target="_blank">doi:10.1002/hbm.26782</a></li>
+<li>Smith, S. M., Miller, K. L., Salimi-Khorshidi, G., Webster, M., Beckmann, C. F., Nichols, T. E., Ramsey, J. D., &amp; Woolrich, M. W. (2011). Network modelling methods for FMRI. <em>NeuroImage</em>, 54(2), 875-891. <a href="https://doi.org/10.1016/j.neuroimage.2010.08.063" target="_blank">doi:10.1016/j.neuroimage.2010.08.063</a></li>
+<li>Barnett, L., &amp; Seth, A. K. (2017). Detectability of Granger causality for subsampled continuous-time neurophysiological processes. <em>Journal of Neuroscience Methods</em>, 275, 93-121. <a href="https://doi.org/10.1016/j.jneumeth.2016.10.016" target="_blank">doi:10.1016/j.jneumeth.2016.10.016</a></li>
+<li>Vink, J. J. T., Klooster, D. C. W., Ozdemir, R. A., Westover, M. B., Pascual-Leone, A., &amp; Shafi, M. M. (2020). EEG Functional Connectivity is a Weak Predictor of Causal Brain Interactions. <em>Brain Topography</em>, 33(2), 221-237. <a href="https://doi.org/10.1007/s10548-020-00757-6" target="_blank">doi:10.1007/s10548-020-00757-6</a></li>
+<li>Novelli, L., Barnett, L., Seth, A. K., &amp; Razi, A. (2025). Minimum-Phase Property of the Hemodynamic Response Function, and Implications for Granger Causality in fMRI. <em>Human Brain Mapping</em>, 46(10), e70285. <a href="https://doi.org/10.1002/hbm.70285" target="_blank">doi:10.1002/hbm.70285</a></li>
+<li>Yan, J., Zhang, S.-W., Zhang, C., Huang, W., Shi, J., &amp; Chen, L. (2026). Dynamical Causality under Latent Confounders for Biological Network Reconstruction. <em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em>. <a href="https://doi.org/10.1109/TPAMI.2026.3658839" target="_blank">doi:10.1109/TPAMI.2026.3658839</a></li>
 <li>Hauser, A., &amp; Buhlmann, P. (2012). Characterization and greedy learning of interventional Markov equivalence classes of directed acyclic graphs. <em>Journal of Machine Learning Research</em>, 13, 2409-2464. <a href="https://jmlr.org/papers/v13/hauser12a.html" target="_blank">JMLR</a></li>
 <li>Vink, J. J., Ramos-Nuñez, A. I., Bellesi, A., et al. (2020). The brain's functional connectome is a poor predictor of the brain's causal activity flow. <em>PLOS Computational Biology</em>, 16(1), e1007866. <a href="https://doi.org/10.1371/journal.pcbi.1007866" target="_blank">doi:10.1371/journal.pcbi.1007866</a></li>
 <li>Villaverde, A. F. (2019). Observability and Structural Identifiability of Nonlinear Biological Systems. <em>Complexity</em>, 2019, 8497093. <a href="https://doi.org/10.1155/2019/8497093" target="_blank">doi:10.1155/2019/8497093</a></li>

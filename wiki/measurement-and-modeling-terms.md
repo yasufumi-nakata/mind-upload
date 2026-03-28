@@ -6,7 +6,7 @@ description: We will explain EEG, QC, BIDS, inverse problems, ESI, DCM, SCM, etc
 article_type: Wiki
 subtitle: Don't memorize words by dots, connect them by flow.
 author: Mind Uploading Research Project
-last_updated: '2026-03-28'
+last_updated: '2026-03-29'
 note: Learning guide
 audience: People who see a mix of measurement words and model words, and people who
   want to understand a glossary in a flow.
@@ -294,7 +294,7 @@ Michel &amp; Brunet (2019) summarize ESI as a multi-step pipeline rather than a 
 <div class="note-box">
 <strong>Read DCM by candidate-model rule, not causal wording</strong>
 <p>
-Penny et al. (2004) fixed that DCM inference is relative to the compared model set, Rosa et al. (2012) showed how post-hoc model-space search can be expanded, and Frässle et al. (2021) plus Wu et al. (2024) pushed whole-brain and faster estimation. Those are advances in <strong>tractability</strong>, not automatic solutions to identifiability. On this site, DCM therefore remains a <strong>model-conditioned causal hypothesis</strong> unless candidate space, recovery, reliability, and validation are disclosed.
+Penny et al. (2004) fixed that DCM inference is relative to the compared model set, Rosa et al. (2012) showed how post-hoc model-space search can be expanded, and Frässle et al. (2021) plus Wu et al. (2024) pushed whole-brain and faster estimation. Those are advances in <strong>tractability</strong>, not automatic solutions to identifiability. On this site, DCM therefore remains a <strong>model-conditioned causal hypothesis</strong> unless candidate space, observed-subsystem closure / latent-confound audit, node-definition policy, sampling / transformation sensitivity, recovery, reliability, and validation are disclosed.
 </p>
 </div>
 </section>
