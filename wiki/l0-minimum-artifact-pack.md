@@ -1,30 +1,34 @@
 ---
 layout: default
 title: "Wiki: Minimum artifact pack for L0"
-description: "Organize the minimum L0 deliverables such as dataset identity, EEG-BIDS skeleton, event fidelity, split rules, acquisition-distribution audit, derivative lineage, baselines, and replay steps."
+description: "Organize the minimum L0 deliverables such as dataset identity, EEG-BIDS skeleton, event fidelity, benchmark object and metric bundle, benchmark-governance snapshot, temporal-validity addendum, acquisition-distribution audit, derivative lineage, baselines, and replay steps."
 article_type: Wiki
-subtitle: "Do not call it reproducible until version, observability, evaluation, lineage, and replay are fixed together"
+subtitle: "Do not call it reproducible until version, observability, benchmark meaning, lineage, and replay are fixed together"
 author: Mind Uploading Research Project
-last_updated: "2026-03-20"
+last_updated: "2026-03-28"
 note: "Operational guide"
 audience: "People who have started creating L0, and people who want to check to what extent it can be called reproducible analysis."
-reading_time: "10-15 minutes"
-page_intro: "This page is an auxiliary page that fixes what must be bundled together before an L0 result can be called reproducible analysis on this site. It is not a procedure manual; it is a submission-shape check that asks whether a third party can reconstruct not only the score, but also what was actually observed, held out, harmonized, and omitted."
+reading_time: "12-18 minutes"
+page_intro: "This page is an auxiliary page that fixes what must be bundled together before an L0 result can be called reproducible analysis on this site. It is not a procedure manual; it is a submission-shape check that asks whether a third party can reconstruct not only the score, but also what was actually observed, which prediction object and metric bundle were used, which benchmark rules were in force, what was held out, and what remained outside scope."
 accuracy_note: "This page defines the current minimum for L0. It does not by itself justify causal or identity claims, but without these fields even L0 comparability remains too weak."
 page_highlights:
-  - "The L0 pack is no longer just version + BIDS + QC + split + baseline; it now also includes event fidelity, label provenance, acquisition-distribution audit, derivative lineage, and a stopping claim."
-  - "The pack is organized around five bundles: dataset identity, observability, evaluation, lineage, and replay."
-  - "BIDS / EEG-BIDS, MOABB evaluation family, and MNE-BIDS derivative handling are treated as evidence-bearing conditions, not afterthoughts."
-  - "This page is now synchronized with the stricter practical rule already used on Datasets."
+  - "The L0 pack is no longer just version + BIDS + QC + split + baseline; it now also includes benchmark object + metric bundle, benchmark provenance / governance, and a temporal-validity addendum when a claim spans more than one session, day, or adaptation stage."
+  - "The pack is still organized around five bundles, but the evaluation bundle now explicitly separates split family, prediction object, metric semantics, current benchmark rules, temporal scope, setup distribution, and baselines."
+  - "Challenge or leaderboard results are not reproducible artifacts on this site unless the current rules snapshot and later organizer corrections are frozen alongside the score."
+  - "Cross-session or adaptation naming is not yet temporal validity; fixed decoder interval, recalibration burden, and transfer ceiling still have to be disclosed."
+  - "This page is now synchronized with the stricter practical rule already used on Datasets and Verification."
 known_points:
   - "For L0, it is more important than high accuracy that a third party can rerun under the same conditions and still understand what the score is allowed to mean."
   - "BIDS / EEG-BIDS makes data traceable, but it does not by itself fix event fidelity, label provenance, or leak-free evaluation."
-  - "The same score changes meaning across within-session, cross-session, cross-subject, and adaptation settings."
+  - "The same score can change meaning not only across within-session, cross-session, cross-subject, and adaptation settings, but also across prediction objects and metric bundles."
+  - "Challenge, leaderboard, or benchmark names alone are still too coarse because rules snapshots, randomization policies, extra-data rules, and later postmortems can materially change what the score means."
+  - "Cross-session and unsupervised recalibration results still do not by themselves tell you the fixed decoder interval, recalibration burden, or operational transfer ceiling."
   - "Preloaded or modified recordings should be written as derivatives with explicit lineage rather than silently overwriting raw."
   - "Examples of failures, setup shortcuts, and stopping claims belong in the artifact pack, not only in side notes."
 unknown_points:
   - "Which QC metrics, nuisance-only baselines, and harmonization transforms should become defaults still depends on the task and dataset."
   - "How the L0 pack should expand into standard L1/L2 cards will depend on future benchmark design."
+  - "The best reusable format for benchmark-governance snapshots across rapidly changing challenge sites is still evolving."
   - "The best reusable format for acquisition-distribution summaries across multi-site datasets is still evolving."
 wiki_links:
   - label: "Wiki: Basics of verification infrastructure"
@@ -36,6 +40,12 @@ wiki_links:
   - label: "Wiki: Baseline/Pre-registration/Model Card"
     url: "/wiki/baselines-prereg-and-model-cards.html"
     description: "Compensates for the role differences between baseline and failure examples."
+  - label: "Wiki: State, trait, and drift"
+    url: "/wiki/state-trait-and-drift.html"
+    description: "Use this when cross-session or longitudinal results start to be read as durable operation."
+  - label: "Wiki: EEG foundation models and pretraining"
+    url: "/wiki/eeg-foundation-models.html"
+    description: "Use this when benchmark governance and prediction-object differences start to dominate leaderboard interpretation."
 recommended_pages:
   - label: "Hands-on"
     url: "/datasets.html#l0-practice"
@@ -62,8 +72,15 @@ This site's practical pages now require more than <strong>version + BIDS + QC + 
 </p>
 </div>
 
+<div class="note-box">
+<strong>2026-03-28 addendum: the 11-point pack was still under-specified</strong>
+<p>
+The remaining weakness on this page was subtler than the 2026-03-20 tightening. The current practical rule had already become stricter about <strong>event fidelity</strong>, <strong>label provenance</strong>, <strong>setup distribution</strong>, and <strong>lineage</strong>, but it still left three score-defining fields too implicit. First, the official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) homepage</a> now states that the proposal preprint became <strong>out of date during execution</strong> and that the current website plus Starter Kit should be treated as authoritative. Second, the same official benchmark family still mixes different prediction objects, from <strong>per-trial response-time regression</strong> to <strong>subject-level psychopathology regression</strong>, and even its current <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a> and <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> record later execution changes and organizer corrections. Third, <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> and <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> show that <strong>cross-session</strong>, <strong>adaptation</strong>, and <strong>long-term use</strong> still hide different temporal burdens, while <a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">Saito &amp; Rehmsmeier (2015)</a> and <a href="https://doi.org/10.7554/eLife.70092" target="_blank">Vallat &amp; Walker (2021)</a> show that one headline metric can still hide task-specific failure. Therefore, the L0 pack on this site now adds <strong>benchmark object + metric bundle</strong>, <strong>benchmark provenance / governance</strong>, and a conditional <strong>Temporal-Validity addendum</strong>.
+</p>
+</div>
+
 <section class="section" id="artifact-pack">
-<h2 class="section-title">Minimum 11 items now required in the L0 pack</h2>
+<h2 class="section-title">Minimum 14 items now required in the L0 pack</h2>
 <table class="data-table">
 <thead>
 <tr>
@@ -104,27 +121,42 @@ This site's practical pages now require more than <strong>version + BIDS + QC + 
 <td>The score becomes uninterpretable because train/test independence is unclear.</td>
 </tr>
 <tr>
-<td><strong>7. Acquisition-distribution summary</strong></td>
+<td><strong>7. Benchmark object + metric bundle</strong></td>
+<td>Task family, independent prediction unit, output family, and the task-matched metric bundle that makes the score interpretable.</td>
+<td>A headline number hides whether the benchmark was cue-locked classification, event detection, sleep staging, trial-wise regression, or subject-level regression, and whether the metric actually matches the task.</td>
+</tr>
+<tr>
+<td><strong>8. Benchmark provenance + governance</strong></td>
+<td>Benchmark or leaderboard name, version, current rules snapshot, split / randomization policy, hidden grouping, extra-data or pretrained-checkpoint policy, inference-stage restrictions, and postmortem / correction status.</td>
+<td>The same challenge or benchmark name can silently point to different score objects after execution changes or organizer corrections.</td>
+</tr>
+<tr>
+<td><strong>9. Temporal-Validity addendum</strong><br><em>Required when the claim spans &gt;1 session/day or uses adaptation</em></td>
+<td>State annotation, fixed decoder interval, recalibration amount and timing, and transfer ceiling.</td>
+<td>Cross-session or adaptation labels get overread as fixed-decoder durability or low-burden operation.</td>
+</tr>
+<tr>
+<td><strong>10. Acquisition-distribution summary</strong></td>
 <td>Site / device / reference / channel map / electrode layout / protocol distribution, plus the harmonization policy and any metadata-only baseline.</td>
 <td>Signal differences and setup differences get collapsed into one accuracy number.</td>
 </tr>
 <tr>
-<td><strong>8. QC / exclusion log</strong></td>
+<td><strong>11. QC / exclusion log</strong></td>
 <td>Missingness, bad channels, bad segments, artifacts, exclusions, and thresholds in numerical form.</td>
 <td>No one can tell which recordings were removed or why.</td>
 </tr>
 <tr>
-<td><strong>9. Baseline + shortcut checks</strong></td>
+<td><strong>12. Baseline + shortcut checks</strong></td>
 <td>At least one simple baseline, plus any nuisance-only or metadata-only comparison needed to keep shortcut routes visible.</td>
 <td>Apparent improvement may come from identity, setup, or label shortcuts rather than the intended signal.</td>
 </tr>
 <tr>
-<td><strong>10. Derivative lineage + replay steps</strong></td>
+<td><strong>13. Derivative lineage + replay steps</strong></td>
 <td>Commands, environment, random seeds, preprocessing boundaries, and explicit raw-to-derivative lineage.</td>
 <td>Preprocessed data can be mistaken for raw, and other people cannot rerun the same flow.</td>
 </tr>
 <tr>
-<td><strong>11. Failure examples + stopping claim</strong></td>
+<td><strong>14. Failure examples + stopping claim</strong></td>
 <td>Known failure modes, exclusions, pending conditions, and the strongest claim the result is still allowed to stop at.</td>
 <td>Only successes remain and later readers overread L0 as if it already implied stronger evidence.</td>
 </tr>
@@ -154,6 +186,21 @@ This site's practical pages now require more than <strong>version + BIDS + QC + 
 <td>Add <strong>evaluation family</strong>, <strong>independent hold-out unit</strong>, and <strong>window ancestry</strong>.</td>
 </tr>
 <tr>
+<td><strong>Benchmark family without prediction object or metric bundle</strong></td>
+<td>Per-trial response-time regression, subject-level factor prediction, seizure alarm behaviour, and sleep-stage scoring do not test the same scientific object even when all are reported as EEG decoding.</td>
+<td>Add <strong>benchmark object</strong>, <strong>independent prediction unit</strong>, and a <strong>task-matched metric bundle</strong>.</td>
+</tr>
+<tr>
+<td><strong>Challenge or leaderboard name without governance snapshot</strong></td>
+<td>The official EEG Challenge site now says the proposal preprint is outdated during execution, the current website plus Starter Kit are authoritative, and the later leaderboard note revised what the rankings meant after a sample-randomization error.</td>
+<td>Add the current <strong>benchmark provenance / governance snapshot</strong> instead of treating it as an administrative footnote.</td>
+</tr>
+<tr>
+<td><strong>Cross-session or adaptation label without temporal-validity fields</strong></td>
+<td>Daily drift, recalibration burden, and fixed-decoder durability remain different questions, so cross-session and adaptation labels still underdescribe what survived across time.</td>
+<td>Add a conditional <strong>Temporal-Validity addendum</strong> with state annotation, fixed decoder interval, recalibration amount, and transfer ceiling.</td>
+</tr>
+<tr>
 <td><strong>Replay steps without lineage or setup summary</strong></td>
 <td>Preloaded / modified data can silently become derivatives, and setup differences such as site, device, reference, and electrode layout can still dominate the result.</td>
 <td>Add <strong>acquisition-distribution summary</strong>, <strong>harmonization log</strong>, and <strong>derivative lineage</strong>.</td>
@@ -169,7 +216,7 @@ This site's practical pages now require more than <strong>version + BIDS + QC + 
 <ul>
 <li><strong>Identity:</strong> freeze snapshot, version, DOI, retrieval date, and license.</li>
 <li><strong>Observability:</strong> fix BIDS / EEG-BIDS shape, event fidelity, and label provenance.</li>
-<li><strong>Evaluation:</strong> fix evaluation family, hold-out ancestry, setup distribution, harmonization, and baselines.</li>
+<li><strong>Evaluation:</strong> fix evaluation family, hold-out ancestry, benchmark object, metric bundle, current benchmark rules, temporal scope when needed, setup distribution, harmonization, and baselines.</li>
 <li><strong>Lineage:</strong> keep raw-to-derivative boundaries explicit instead of silently rewriting modified data as raw.</li>
 <li><strong>Replay:</strong> keep commands, environment, failures, and the stopping claim together.</li>
 </ul>
@@ -196,7 +243,15 @@ This site's practical pages now require more than <strong>version + BIDS + QC + 
 </tr>
 <tr>
 <td><strong>Accuracy is there</strong></td>
-<td>Evaluation family, independent hold-out unit, leak check, harmonization log, or baseline may still be absent.</td>
+<td>Evaluation family, independent hold-out unit, benchmark object, metric bundle, harmonization log, or stopping claim may still be absent.</td>
+</tr>
+<tr>
+<td><strong>There is a leaderboard or challenge name</strong></td>
+<td>The current rules snapshot, randomization policy, extra-data policy, inference-stage restriction, or later organizer correction may still be absent.</td>
+</tr>
+<tr>
+<td><strong>There is a cross-session or adaptation result</strong></td>
+<td>State annotation, fixed decoder interval, recalibration burden, and transfer ceiling may still be absent.</td>
 </tr>
 <tr>
 <td><strong>There is a code</strong></td>
@@ -232,9 +287,24 @@ This site's practical pages now require more than <strong>version + BIDS + QC + 
 <td>Fix events, annotation rules, and label provenance before trusting the score.</td>
 </tr>
 <tr>
-<td>Can they explain what the score means?</td>
-<td>Evaluation family, hold-out ancestry, setup summary, harmonization policy, and baselines are fixed.</td>
-<td>Fix train/test logic, metadata shortcuts, and baselines first.</td>
+<td>Can they explain what one prediction and one score mean?</td>
+<td>Evaluation family, hold-out ancestry, benchmark object, independent prediction unit, and task-matched metric bundle are fixed.</td>
+<td>Fix the prediction object and metric semantics before trusting the headline score.</td>
+</tr>
+<tr>
+<td>Can they explain which benchmark rules were in force?</td>
+<td>Benchmark provenance, current rules snapshot, hidden grouping / randomization policy, extra-data rules, and any later corrections are fixed.</td>
+<td>Freeze the governance snapshot before comparing yourself to a challenge or leaderboard.</td>
+</tr>
+<tr>
+<td>If the claim spans more than one session or uses adaptation, is the temporal scope explicit?</td>
+<td>State annotation, fixed decoder interval, recalibration amount, and transfer ceiling are written.</td>
+<td>Add the Temporal-Validity fields before treating the result as durability evidence.</td>
+</tr>
+<tr>
+<td>Can they tell whether setup distribution still dominates?</td>
+<td>Acquisition-distribution summary, harmonization policy, and shortcut-aware baselines are fixed.</td>
+<td>Fix setup distribution, nuisance baselines, and harmonization before trusting generalization claims.</td>
 </tr>
 <tr>
 <td>Can someone else replay the same derivatives?</td>
@@ -253,7 +323,7 @@ This site's practical pages now require more than <strong>version + BIDS + QC + 
 <div class="note-box">
 <strong>What this page still does not do</strong>
 <p>
-Here we do not decide which model is strongest or which metric is ultimately best. The first objective of L0 is still to create a comparable starting point. The change on this page is only that the starting point is now defined more strictly.
+This page still does not decide which model is strongest or which metric bundle is universally best. The first objective of L0 is still to create a comparable starting point. The change on this page is only that the starting point is now defined more strictly, including the rule that benchmark meaning and temporal scope are part of the artifact rather than optional commentary.
 </p>
 </div>
 
@@ -261,6 +331,7 @@ Here we do not decide which model is strongest or which metric is ultimately bes
 <h2 class="section-title">References</h2>
 <ul>
 <li><a href="https://bids.neuroimaging.io/getting_started/tutorials/annotation.html" target="_blank">BIDS Website: Annotating a BIDS dataset</a></li>
+<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/events.html" target="_blank">BIDS Specification 1.11.1: Events</a></li>
 <li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS Specification 1.11.1: Electroencephalography</a></li>
 <li><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019), EEG-BIDS</a></li>
 <li><a href="https://mne.tools/mne-bids/stable/generated/mne_bids.write_raw_bids.html" target="_blank">MNE-BIDS Docs: write_raw_bids</a></li>
@@ -272,6 +343,14 @@ Here we do not decide which model is strongest or which metric is ultimately bes
 <li><a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019), identity confounding in machine learning-based disease diagnosis</a></li>
 <li><a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017), Systems, subjects, sessions</a></li>
 <li><a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020), Cross-dataset deep learning for EEG</a></li>
+<li><a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025): Homepage</a></li>
+<li><a href="https://eeg2025.github.io/rules/" target="_blank">EEG Challenge (2025): Rules</a></li>
+<li><a href="https://eeg2025.github.io/leaderboard/" target="_blank">EEG Challenge (2025): Leaderboard</a></li>
+<li><a href="https://eeg2025.github.io/faq/" target="_blank">EEG Challenge (2025): FAQ</a></li>
+<li><a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024), Chrono-EEG dynamics influencing hand gesture decoding: a 10-hour study</a></li>
+<li><a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025), Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model</a></li>
+<li><a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">Saito &amp; Rehmsmeier (2015), The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets</a></li>
+<li><a href="https://doi.org/10.7554/eLife.70092" target="_blank">Vallat &amp; Walker (2021), An open-source, high-performance tool for automated sleep staging</a></li>
 <li><a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">PhysioNet: EEG Motor Movement/Imagery Dataset</a></li>
 <li><a href="https://physionet.org/content/chbmit/1.0.0/" target="_blank">PhysioNet: CHB-MIT Scalp EEG Database</a></li>
 <li><a href="https://physionet.org/content/sleep-edfx/1.0.0/" target="_blank">PhysioNet: Sleep-EDF Database Expanded</a></li>
