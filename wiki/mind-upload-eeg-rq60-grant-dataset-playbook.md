@@ -5,7 +5,7 @@ description: "An operation page with fixed application ID, main EEG data, select
 article_type: Wiki
 subtitle: "Fix submission decisions based on RQ, not general abstracts"
 author: Mind Uploading Research Project
-last_updated: "2026-03-18"
+last_updated: "2026-03-29"
 note: "Per-RQ Grant and Dataset Playbook"
 audience: "People who want to apply for funding and decide on the first experiment for each RQ at the same time"
 reading_time: "20-30 minutes"
@@ -87,7 +87,7 @@ recommended_pages:
 | U12-2 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 11 | It is technically easy to maintain audit logs to be passed to system issues. | System audit requirements table (technical log compatible) |
 | U12-3 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 11 | It is technically easy to maintain audit logs to be passed to system issues. | System audit requirements table (technical log compatible) |
 | U12-4 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 11 | It is technically easy to maintain audit logs to be passed to system issues. | Branch-based audit log design document |
-| U12-5 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 11 | It is technically easy to maintain audit logs to be passed to system issues. | Time synchronization audit report (offset/jitter distribution) |
+| U12-5 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 11 | It is technically easy to maintain audit logs that support branch relinking and subject-ID reorganization decisions. | Branch-based audit log design document |
 | U12-6 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 11 | It is technically easy to maintain audit logs to be passed to system issues. | System audit requirements table (technical log compatible) |
 | U13-1 | B | G1 (GR-2026-013) | G4 (Drbm6vBRDJkn0NGJ) | 509 | It is easy to separate semantic restoration and mechanistic difference using control conditions. | Intervention protocol and rebuttal condition definition |
 | U13-2 | B | G1 (GR-2026-013) | G4 (Drbm6vBRDJkn0NGJ) | 509 | It is easy to separate semantic restoration and mechanistic difference using control conditions. | Mimic separation evaluation script and control condition table |

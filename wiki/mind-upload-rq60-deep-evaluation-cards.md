@@ -5,7 +5,7 @@ description: "RQごとに主張単位・判定境界・応募テーマ・主デ�
 article_type: Wiki
 subtitle: "1RQ=1検証命題=1応募テーマ=1主データを実行可能な形で固定"
 author: Mind Uploading Research Project
-last_updated: "2026-03-27"
+last_updated: "2026-03-29"
 note: "Per-RQ Deep Evaluation Cards"
 audience: "RQを個別に深掘りしながら応募計画へ落とし込みたい研究者"
 reading_time: "35-55分"
@@ -99,7 +99,7 @@ reading_time: "35-55分"
 | U12-2<br>責任・権利・同意の継承ルールをどの時点で分岐させるか。 | 責任・権利・同意の継承規則は制度設計課題であり、EEG-DATAは検証補助のみ。 | C（EEG-DATA単独では不可（制度・他モダリティ必須））<br>制度・法務・他モダリティが主対象で、EEGは補助証拠に限定。 | 制度・倫理系研究助成（技術監査接続） | G2 (GR-2026-014) / G6 (46z9VPE4wnkrvEJR) | 11 | ID 11, 509, 696 | System audit requirements table (technical log compatible) |
 | U12-3<br>心理的連続性基準と法的個体基準の不一致をどう扱うか。 | 心理的連続性と法的個体の不一致はデータだけでは裁定できず、規範設計が主対象。 | C（EEG-DATA単独では不可（制度・他モダリティ必須））<br>制度・法務・他モダリティが主対象で、EEGは補助証拠に限定。 | 制度・倫理系研究助成（技術監査接続） | G2 (GR-2026-014) / G6 (46z9VPE4wnkrvEJR) | 11 | ID 11, 509, 696 | System audit requirements table (technical log compatible) |
 | U12-4<br>技術評価（性能）と人格評価（帰属）をどう接続するか。 | 性能KPIと人格帰属KPIの接続は法務要件が主で、EEGは監査ログ項目の補助。 | C（EEG-DATA単独では不可（制度・他モダリティ必須））<br>制度・法務・他モダリティが主対象で、EEGは補助証拠に限定。 | 制度・倫理系研究助成（技術監査接続） | G2 (GR-2026-014) / G6 (46z9VPE4wnkrvEJR) | 11 | ID 11, 509, 696 | Branch-based audit log design document |
-| U12-5<br>分岐主体間で記憶編集・再同期が起きた場合、法的主体IDを再編する基準は何か。 | 記憶編集・再同期時のID再編ルールはEEGデータでは直接検証不可。 | C（EEG-DATA単独では不可（制度・他モダリティ必須））<br>制度・法務・他モダリティが主対象で、EEGは補助証拠に限定。 | 制度・倫理系研究助成（技術監査接続） | G2 (GR-2026-014) / G6 (46z9VPE4wnkrvEJR) | 11 | ID 11, 509, 696 | Time synchronization audit report (offset/jitter distribution) |
+| U12-5<br>分岐主体間で記憶編集・再同期が起きた場合、法的主体IDを再編する基準は何か。 | 記憶編集・再同期時のID再編ルールはEEGデータでは直接検証不可。 | C（EEG-DATA単独では不可（制度・他モダリティ必須））<br>制度・法務・他モダリティが主対象で、EEGは補助証拠に限定。 | 制度・倫理系研究助成（技術監査接続） | G2 (GR-2026-014) / G6 (46z9VPE4wnkrvEJR) | 11 | ID 11, 509, 696 | Branch-based audit log design document |
 | U12-6<br>同意撤回が発生したとき、複数分岐主体への権限剥奪を技術的にどう実装・監査するか。 | 同意撤回の権限剥奪監査はシステム設計課題で、EEG-DATAは模擬ログ検証まで。 | C（EEG-DATA単独では不可（制度・他モダリティ必須））<br>制度・法務・他モダリティが主対象で、EEGは補助証拠に限定。 | 制度・倫理系研究助成（技術監査接続） | G2 (GR-2026-014) / G6 (46z9VPE4wnkrvEJR) | 11 | ID 11, 509, 696 | System audit requirements table (technical log compatible) |
 | U13-1<br>brain-to-text成功を『意味復元』と『因果再現』へ分解できるか。 | ID 509でovert/imaginedを比較し、意味一致と因果一致の乖離を測る。 | B（部分検証（外部データ併用で成立））<br>EEG主解析は可能だが、外部データまたは制度情報の併用が必須。 | 研究助成（模倣分離） | G1 (GR-2026-013) / G4 (Drbm6vBRDJkn0NGJ) | 509 | ID 509, 13, 65 | Intervention protocol and rebuttal condition definition |
 | U13-2<br>LLMの幻覚・整合性検査を神経デコード評価へどう接続するか。 | ID 13/65で行動整合と内部状態差を分離し、幻覚検査の接続点を作る。 | B（部分検証（外部データ併用で成立））<br>EEG主解析は可能だが、外部データまたは制度情報の併用が必須。 | 若手研究助成（幻覚/内部状態差） | G1 (GR-2026-013) / G4 (Drbm6vBRDJkn0NGJ) | 509 | ID 509, 13, 65 | Mimic separation evaluation script and control condition table |
@@ -478,8 +478,8 @@ reading_time: "35-55分"
 
 - 判定: `B`
 - 主張単位: `PCI近似 / LZ / 摂動応答` の順位保存率を同一I/O条件で比較し、採択閾値を明示する。
-- 主データ: `旧ID 735`（DOIアンカー `D12=10.21227/qqj2-r702`）
-- 補助データ: `旧ID 842, 859`（DOIアンカー `D14=10.21227/wrqm-dt87`, `D15=10.21227/7j9g-wb02`）
+- 主データ: `旧ID 735`（DOIアンカー `D14=10.6084/m9.figshare.1485719`）
+- 補助データ: `旧ID 842, 859`（DOIアンカー `D16=10.5281/zenodo.16919070`, `D17=10.5281/zenodo.6951439`）
 - 第一/予備応募先: `G2 (GR-2026-014)` / `G4 (Drbm6vBRDJkn0NGJ)`
 - 最初の実験設計:
   - 麻酔/睡眠/DoCで状態ラベルを正規化し、入力窓長を固定。

@@ -413,27 +413,15 @@ Reasons for proceeding in this order:
 5. `U8-6`（再学習頻度と安全余裕のトレードオフ固定）
 6. `U12-3`（心理的連続性監査ログの制度接続準備）
 
-## 2026-03-29 01:37 JST revalidation log (main run / one-by-one deep pack refresh)
+## 2026-03-29 01:37 JST correction log (main run / anchor and deliverable drift fix)
 
 - Pulled the latest `main` in `auto-startup`, `mind-upload`, `EEG-DATA`, and `auto-research-funds` before editing (`0 0`, `Already up to date` in every repo).
 - Recounted `### Ux-y` headings in `mind-upload/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.md` and reconfirmed `RQ_TOTAL=60` (`missing=0`, `duplicate=0`).
 - Recomputed the judgment split from `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` and reconfirmed `A/B/C=17/25/18`.
-- Rechecked the referenced legacy ID set (`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`) in `EEG-DATA/eeg_dataset_summary_ja.csv` (`旧ID`, `missing=0`, `rows=28846`).
+- Rechecked the referenced legacy ID set (`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`) in `EEG-DATA/eeg_dataset_summary_ja.csv` (`旧ID`, `missing=0`).
 - Corrected the `U11-1` anchor drift: the stale `D12=10.21227/qqj2-r702` reference was invalid and is now aligned to `D14 (10.6084/m9.figshare.1485719)` with `D16/D17` as support anchors.
 - Corrected the `U12-5` minimum deliverable drift: this RQ now consistently points to `Branch-based audit log design document` instead of a synchronization-only report.
-
-### Fixed deep pack for this run
-
-| RQ | Why this RQ now | Primary anchor (canonical) | First KPI | Stop condition | Grant lane |
-|---|---|---|---|---|---|
-| `U7-3` | Preprocessing drift still decides whether later reproducibility claims are defensible. | `D11` + support `D15/D23` | `reproducibility gap`, `preprocessing sensitivity`, `QC abnormal rate` | More than three settings keep `reproducibility -5pt` or worse relative to the baseline pipeline. | `G1 / G3` |
-| `U8-3` | Long-horizon stability must separate within-subject drift from between-subject variance before any safety claim. | `D01` + support `D12/D20/D21` | `stability rate`, `manual stop rate`, `recovery time` | Variance decomposition flips across sessions and the safety margin cannot be fixed. | `G2 / G5` |
-| `U11-1` | Theory comparison is still too easy to over-read unless the rank-preservation threshold is fixed first. | `D14` + support `D16/D17` | `rank preservation`, `boundary-state sign agreement`, `runtime completion rate` | Rank preservation falls below `80%` or sign disagreement persists at boundary states. | `G2 / G4` |
-| `U12-5` | Identity relinking after memory editing/resynchronization needs a concrete audit schema before any legal claim. | `D02` + support `D10/D12` | `branch consistency`, `audit missing rate`, `consent propagation latency` | `subject_branch_id`, `consent_state`, or `relink_trace` cannot be reconstructed end to end. | `G2 / G6` |
-| `U13-5` | Perception-to-recall transfer is a direct place where semantic success and mechanism drift can split. | `D03` + support `D10/D09` | `semantic match`, `branch-point estimate`, `leak detection rate` | The branch-point estimate is unstable and the effect interval crosses `0`. | `G1 / G4` |
-| `U14-6` | Container fixation should be accepted only if reproducibility gains justify the full runtime and cost overhead. | `D01` + support `D08/D13` | `rerun success`, `runtime delta`, `compute-cost delta` | Reproducibility barely improves while runtime or cost exceeds the operational ceiling. | `G1 / G3` |
-
-- Execution policy remains unchanged: avoid broad summaries and keep `1RQ = 1 verification proposition = 1 application theme = 1 primary dataset`.
+- This correction pass did not replace the solve-first execution pack. The active 2026-03-29 pack remains the synced six-RQ set below.
 
 ## 2026-03-29 01:44 JST revalidation log (main run / solve-first six-RQ sync)
 

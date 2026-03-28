@@ -624,7 +624,7 @@ reading_time: "55-80分"
 - 補助データ（推奨ID）: `ID 11, 509, 696`
 - 初期KPI（U12標準）: `分岐時整合率` `監査証跡欠損率` `同意伝播遅延`
 - 停止条件: EEG補助証拠のみで制度/理論主張を確定しない。外部モダリティまたは制度根拠が揃うまで確定主張を保留する。
-- 最低成果物: Time synchronization audit report (offset/jitter distribution)
+- 最低成果物: Branch-based audit log design document
 
 
 ### U12-6 同意撤回が発生したとき、複数分岐主体への権限剥奪を技術的にどう実装・監査するか。
