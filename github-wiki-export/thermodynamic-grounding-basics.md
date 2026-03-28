@@ -4,7 +4,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-21 / 位置づけ: Learning guide
+- 更新日: 2026-03-28 / 位置づけ: Learning guide
 
 ## このページの役割
 This page is a wiki that explains why topics on thermodynamics come up in Mind-Upload from the perspective of Landauer, dissipation, non-equilibrium steady state (NESS), and entropy production rate (EPR). It is used as an entry point for people who stop reading on the theory page when they suddenly see the topic of physics.
@@ -27,6 +27,7 @@ What we show here is the beginning of thermodynamic grounding. It has not been d
 - Logical calculation costs and physical dissipation costs must be considered separately.
 - There are ideas for incorporating thermodynamic indicators into the validation process, but measurement and interpretation remain difficult.
 - Thermodynamic route cards are needed because signal route, coarse-graining, estimator family, dynamical assumptions, and quantity type change what a result can mean.
+- A clean null or shuffle control does not by itself show that entropy production was estimable; sparse or unobserved reverse transitions remain a separate support-coverage problem.
 - Partial observation can hide dissipative cycles and introduce memory, so a weak estimate is not automatically evidence that dissipation is absent.
 
 ## まだ分かっていないこと
@@ -134,6 +135,9 @@ A second shortcut also had to be blocked. If an article uses irreversibility lan
 </p>
 <p>
 A third weakness remained even after that fix: the page still let the reader treat the observed trajectory as if it were thermodynamically sufficient by default. The current thermodynamics literature does not support that shortcut. <a href="https://doi.org/10.1038/s41467-019-11051-w" target="_blank">Martínez et al. (2019)</a> showed that waiting-time asymmetry can reveal hidden dissipation even when observable current vanishes. <a href="https://doi.org/10.1038/s41467-024-52602-0" target="_blank">Hartich &amp; Godec (2024)</a> then showed that this reading can fail when coarse-graining and time reversal do not commute, and <a href="https://doi.org/10.1038/s41467-024-52603-z" target="_blank">Martínez et al. (2024)</a> replied by limiting the original claim to coarse-grainings that are local in time and, where needed, second-order semi-Markov constructions. <a href="https://doi.org/10.1073/pnas.2318333121" target="_blank">Blom et al. (2024)</a> further showed that lumped observations can hide dissipative cycles, acquire memory, and strongly underestimate entropy production when the coarse trajectory is naively treated as Markov. Therefore, on this site, the route card now has to expose <strong>observed-state closure, hidden-degree risk, and memory order</strong>, not only coarse-graining geometry and estimator family.
+</p>
+<p>
+A fourth weakness remained after adding closure and estimator-family audits. The page still let readers treat <strong>surrogate success</strong> and <strong>estimator support coverage</strong> as if they were one checkmark. The current primary literature does not support that shortcut either. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn et al. (2021)</a> already displayed finite-data confidence intervals around flux estimates, <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> used trial-shuffled controls to separate coupling-related entropy flow from firing-rate dynamics and sampling error, and <a href="https://doi.org/10.1038/s42005-024-01742-2" target="_blank">Baiesi et al. (2024)</a> showed that when backward transitions are rare or unobserved, direct entropy-production estimation can fail and lower-bound strategies become preferable. Therefore, on this site, <strong>null / surrogate control</strong> and <strong>reverse-transition support / finite-data support</strong> now have to be logged as separate route-card fields rather than one merged note.
 </p>
 
 <h2>"Irreversibility" is not one estimator family</h2>
@@ -268,7 +272,7 @@ Logical computational complexity, such as FLOPs, is an indicator of how much com
 
 <h2>Irreversibility route card</h2>
 <p>
-The reason this site now asks for a route card is simple: thermodynamic language alone does not tell you what quantity was computed or how fragile it is. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn et al. (2021)</a> checked that fluxes vanish after temporal shuffling, <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> used trial-shuffled data to isolate coupling-related contributions from firing-rate dynamics and sampling error, and <a href="https://doi.org/10.1038/s42005-024-01742-2" target="_blank">Baiesi et al. (2024)</a> showed that rare or unobserved reverse transitions materially affect entropy-production estimation in data-poor regimes. Therefore, a modality label alone is not enough.
+The reason this site now asks for a route card is simple: thermodynamic language alone does not tell you what quantity was computed or how fragile it is. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn et al. (2021)</a> checked that fluxes vanish after temporal shuffling and reported finite-data confidence intervals, <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> used trial-shuffled data to isolate coupling-related contributions from firing-rate dynamics and sampling error, and <a href="https://doi.org/10.1038/s42005-024-01742-2" target="_blank">Baiesi et al. (2024)</a> showed that rare or unobserved reverse transitions materially affect entropy-production estimation in data-poor regimes. Therefore, a modality label alone is not enough, and a clean surrogate does not by itself guarantee that reverse-transition support was adequate.
 </p>
 <table>
 <thead>
@@ -300,9 +304,14 @@ The reason this site now asks for a route card is simple: thermodynamic language
 <td>It blocks all irreversibility papers from being collapsed into one common "EPR measurement," and blocks model-conditioned summaries from sounding like model-free physiology.</td>
 </tr>
 <tr>
-<td><strong>Null / surrogate control and finite-data handling</strong></td>
-<td>Write time-reversal baseline, temporal shuffle, label shuffle, trial shuffle, motion control, rare-transition treatment, and the noise-floor or bootstrap method used when reverse transitions are sparse or unobserved.</td>
-<td>It blocks pipeline artifacts, firing-rate changes, and short-trajectory artifacts from being silently rephrased as nonequilibrium structure.</td>
+<td><strong>Null / surrogate control</strong></td>
+<td>Write time-reversal baseline, temporal shuffle, label shuffle, trial shuffle, and motion or nuisance controls used to test whether the apparent effect survives artifact-sensitive or rate-only alternatives.</td>
+<td>It blocks pipeline artifacts, nuisance structure, and firing-rate-only changes from being silently rephrased as nonequilibrium structure.</td>
+</tr>
+<tr>
+<td><strong>Reverse-transition support / finite-data support</strong></td>
+<td>Write transition-count support, whether reverse transitions were observed for the reported state pairs, how zero or rare reverse counts were handled, and the noise-floor, bootstrap, Bayesian prior, or lower-bound strategy used in sparse-data regimes.</td>
+<td>It blocks a clean surrogate test from being misread as proof that entropy production was estimable when the relevant reverse transitions were too sparse or absent.</td>
 </tr>
 <tr>
 <td><strong>Quantity type</strong></td>
@@ -359,8 +368,8 @@ On this site, strengthening a thermodynamic interpretation does <strong>not</str
 <td>It still does not recover the total microscopic entropy production by itself.</td>
 </tr>
 <tr>
-<td><strong>Finite-data disclosure</strong></td>
-<td>Shows whether rare or unobserved reverse transitions are driving the estimate and whether the claimed irreversibility survives a realistic sampling audit.</td>
+<td><strong>Reverse-transition support / finite-data disclosure</strong></td>
+<td>Shows whether the key forward and reverse transitions were actually observed often enough, whether zero-count handling or lower-bound substitution was needed, and whether the claimed irreversibility survives a realistic support-coverage audit.</td>
 <td>It still does not solve hidden-variable bias by itself.</td>
 </tr>
 <tr>
@@ -380,17 +389,19 @@ On this site, strengthening a thermodynamic interpretation does <strong>not</str
 <li><strong>Distinguish information entropy production and physical dissipation:</strong>Do not write the lower bound estimation from coarse-grained neural data as physical dissipation itself. </li>
 <li><strong>Name coarse-graining and timescale explicitly:</strong>Parcelization, clustering, PCA rank, source model, window length, and temporal binning are part of the claim, not implementation footnotes. </li>
 <li><strong>Do not assume the observed trajectory is thermodynamically closed:</strong>Write hidden-degree risk, local-in-time coarse-graining assumption, and effective memory order explicitly when waiting-time or semi-Markov arguments are used. </li>
+<li><strong>Separate null controls from reverse-transition support:</strong>Shuffle or surrogate success and adequate forward/reverse transition support are different checks; both must be disclosed. </li>
 <li><strong>Name estimator family, dynamical assumptions, and finite-data treatment:</strong>Transition-based lower bounds, time-shifted correlations, inversion classifiers, visibility graphs, and state-space Ising models are not interchangeable, and steady-state / pairwise / rare-transition assumptions are part of the claim. </li>
 <li><strong>Do not infer metabolism without a physiology-side route:</strong>If the text uses energetic or metabolic language, disclose calibrated CMRO<sub>2</sub>, FDG-PET, <sup>31</sup>P-MRS, or abstain. </li>
 <li><strong>Thermodynamic indicators are not used in place of auxiliary logs:</strong>OOD generalization, perturbation, validation, uncertainty, and abstention conditions. </li>
 <li><strong>Clarify modality dependence:</strong> Do not interchange fMRI, ECoG, EEG, and spiking with the same meaning. </li>
 </ul>
 
-<h2>6 questions when reading thermodynamic claims</h2>
+<h2>7 questions when reading thermodynamic claims</h2>
 <ol>
 <li><strong>Are we talking about lower bounds or actual measurements?</strong>It is important not to confuse theoretical lower bounds such as Landauer's with actual consumption or dissipation. </li>
 <li><strong>How was the state space built, and what hidden-state / memory risk remains?</strong>Check parcelization, clustering, PCA rank, source reconstruction, window length, temporal binning, whether the observed process is treated as Markov or semi-Markov, and whether hidden cycles or nonlocal coarse-graining could still carry the dissipation. </li>
 <li><strong>Which estimator family, dynamical assumptions, and null control were used?</strong>Check whether this is a transition-flux lower bound, time-shifted asymmetry score, visibility-graph index, or model-based spike-train estimate, together with steady-state / pairwise assumptions and shuffle / surrogate tests. </li>
+<li><strong>Were the relevant reverse transitions actually supported by the data?</strong>Check whether reverse transitions were observed often enough, whether zero-count handling or lower-bound substitution was needed, and whether the reported result survives a finite-data audit rather than only a surrogate test. </li>
 <li><strong>If the paper says "energy" or "metabolism," where is the physiology-side route?</strong>Check whether CMRO<sub>2</sub>, FDG-PET, <sup>31</sup>P-MRS, or another direct route was actually measured, rather than inferred from the irreversibility metric alone. </li>
 <li><strong>Are you separating logical and physical costs?</strong>Are you combining FLOPs and dissipation into one number? </li>
 <li><strong>What do you mean by this metric alone?</strong>Check whether EPR or NESS is being used alone to prove identity or consciousness. </li>
