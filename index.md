@@ -123,6 +123,13 @@ Mind-Upload is a site for breaking the large question, "Can a mind be reproduced
 </div>
 
 <div class="note-box">
+<strong>If You Already Know Which Unresolved Question You Care About</strong>
+<p>
+The public pages stay at the orientation level. The current one-question-at-a-time deepening route, with bounded EEG claims and fixed dataset anchors, is kept in the wiki so the front page does not overstate progress. Start from <a href="verification.html">Verification</a> here, then move to the wiki only when you need the active deep-dive route.
+</p>
+</div>
+
+<div class="note-box">
 <strong>Misreading To Block At The Entrance</strong>
 <p>
 After the March 2026 re-audit of primary literature, this site no longer accepts the reading that <strong>"if we have the wiring diagram and cell types, the rest is almost filled in."</strong> Sleep/wake-dependent renormalization, myelination and oligodendrocyte support, local bioenergetic / mitochondrial state, neurovascular-unit / BBB / pericyte state, glial metabolism, and active maintenance under molecular turnover remain separate variables. Accordingly, this site does not treat <strong>connectome-complete</strong> as equivalent to <strong>emulation-complete</strong>. It also keeps <strong>measurement-side vascular-state / CVR audit</strong> separate from <strong>maintenance-side neurovascular / BBB state</strong>. For a short explanation, see the hidden-state section in <a href="wbe_101.html#state-completeness">WBE 101</a>; for the evidence structure, see <a href="wiki/connectome-is-not-enough.html">Wiki: Why a Connectome Is Not Enough</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic Plasticity and Maintenance State</a>.
