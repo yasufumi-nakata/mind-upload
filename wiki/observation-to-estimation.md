@@ -27,6 +27,7 @@ page_highlights:
   so one best map is not accepted here as the whole answer.
 - This page now separates observability, structural identifiability, and practical
   identifiability so richer measurements are not overread as uniqueness.
+- "Different ambiguity classes need different remedies: symmetry-breaking observables, regime design, model-discrepancy stress tests, and task-interaction perturbations are not interchangeable."
 - Same-session multimodal acquisition, same-brain sequential linkage, and connectome
   constraints do not collapse the candidate set by themselves; fusion, bridge, and
   conditional-model audits remain separate gates.
@@ -45,6 +46,9 @@ known_points:
 - More direct observables do not by themselves guarantee unique recovery; degeneracy
   can persist unless candidate space, recorded subset, and experiment design are
   exposed.
+- Ambiguity is not one scalar; symmetry / reparameterization, narrow-regime degeneracy,
+  omitted-mechanism discrepancy, and representation ambiguity require different
+  fixes.
 - Simultaneous multimodal acquisition can still retain shared and modality-specific
   structure, so a richer stack does not by itself define one validated latent target.
 - For ESI, method/package/parameter choice can materially move the estimated source,
@@ -204,6 +208,52 @@ One remaining weakness in inverse-problem discussions is to let <strong>"more me
 This separation is not only a control-theory point. <a href="https://doi.org/10.1038/nn1352" target="_blank">Prinz et al. (2004)</a> showed that similar circuit activity can arise from disparate parameters, <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">Rasero et al. (2024)</a> showed that similar human activation patterns can still hide different macroscopic network states, and <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that even connectome-constrained recurrent networks remain degenerate until additional recordings are supplied. <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">Liu et al. (2025)</a> then showed that practical identifiability depends on data-collection policy, not only on the fitting method. On this site, that means <strong>observability</strong> and <strong>identifiability</strong> are audited separately.
 </p>
 </div>
+
+<section class="section" id="ambiguity-classes">
+<h2 class="section-title">Name the ambiguity class before saying more data will help</h2>
+<p>
+One remaining weakness was to describe all non-uniqueness as if it were one scalar problem of simply needing <strong>more data</strong>. The primary literature does not support that shortcut. <a href="https://doi.org/10.3390/sym12030469" target="_blank">Massonis &amp; Villaverde (2020)</a> showed that structural unidentifiability can come from <strong>symmetry</strong> and may require symmetry-breaking observables or reformulation. <a href="https://doi.org/10.1038/nn1352" target="_blank">Prinz et al. (2004)</a> and <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that different parameters can still generate near-equivalent dynamics even when connectivity is fixed. <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">White et al. (2016)</a> showed that complementary experiments can mainly expose <strong>omitted mechanisms</strong> rather than identify the intended parameters. <a href="https://doi.org/10.1038/s41593-025-01869-7" target="_blank">Langdon &amp; Engel (2025)</a> showed that preserving <strong>causal interactions among task variables</strong> can recover behaviorally relevant computations that correlation-only reductions miss. On this site, a stronger protocol therefore has to name <strong>which ambiguity class</strong> survives first.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Ambiguity class</th>
+<th>How it fools the reader</th>
+<th>What would actually raise the claim ceiling</th>
+<th>What this site still refuses to count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Symmetry / reparameterization ambiguity</strong></td>
+<td>Several parameter or state transformations produce the same declared outputs, so a good fit looks unique when it is not.</td>
+<td>Add a symmetry-breaking observable, a known input / initial condition, or a reformulation that removes the hidden transformation.</td>
+<td>More fitting time, more random restarts, or more repeats of the same uninformative protocol.</td>
+</tr>
+<tr>
+<td><strong>Regime-restricted degeneracy</strong></td>
+<td>Different internal states or parameter sets agree inside one narrow operating regime and only diverge outside it.</td>
+<td>Use state transitions, persistent excitation, targeted recordings, or perturbation contrasts that make the surviving candidates separate.</td>
+<td>More passive samples from the same regime when the alternatives remain co-linear.</td>
+</tr>
+<tr>
+<td><strong>Model-family / omitted-mechanism ambiguity</strong></td>
+<td>An approximate model appears well identified until a complementary condition reveals systematic residuals or missing mechanisms.</td>
+<td>Run a discrepancy stress test, compare richer / alternative model families, and require held-out falsification rather than post hoc explanation.</td>
+<td>Narrower intervals inside one misspecified family or one headline accuracy gain.</td>
+</tr>
+<tr>
+<td><strong>Task-variable interaction / representation ambiguity</strong></td>
+<td>A latent factor or reduced representation predicts correlations but misses the interaction structure that actually drives behavior.</td>
+<td>Preserve or perturb the task-variable interaction, and compare the intervention-side predictions of the competing representations.</td>
+<td>Correlation-only dimensionality reduction, generic multimodal fusion, or interpretability language without perturbation.</td>
+</tr>
+</tbody>
+</table>
+<p>
+If the apparent ambiguity mainly comes from shared modality drivers or physiology-linked common factors, this site routes the claim to the <a href="../verification.html#fusion-card">Fusion Card</a> instead of calling it solved identification.
+</p>
+</section>
 
 <section class="section" id="conditioning-is-not-closure">
 <h2 class="section-title">Richer conditioning is not candidate-set closure</h2>

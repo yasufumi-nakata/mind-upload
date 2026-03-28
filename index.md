@@ -35,6 +35,7 @@ page_highlights:
   - "Rodent astrocyte causality, human target-defined astrocyte PET, human CSF-mobility MRI, and model-based sleep-linked biomarker efflux do not compose automatically into one human maintenance-controller readout."
   - "Several living-human proxy rows are not promoted together unless same-subject relation, model burden, and residual hidden-state ceilings are disclosed explicitly."
   - "A multimodal gain is not automatically a robust bundle: complete-case slice, missing-modality policy, centre transfer, and hard-regime disagreement remain separate audits."
+  - "More sensors do not by themselves collapse the candidate set; symmetry/reparameterization, narrow-regime degeneracy, and omitted-mechanism error remain separate ambiguity classes."
   - "The next bottleneck is not modality count alone but experiment design that collapses competing internal-state solutions."
   - "A human tractography graph is not one stable object: superficial-white-matter access, gyral-endpoint bias, parcellation choice, and voxel resolution still change what the graph means."
   - "For hemodynamic modalities, BOLD or fNIRS amplitude is not read as neural difference unless vascular-state / CVR limits are audited separately."
@@ -62,6 +63,7 @@ known_points:
   - "Current human evidence comes in layers; proxy-rich routes still do not yield comparable whole-brain in vivo ground truth for every hidden state."
   - "Several human proxy rows do not add automatically; without same-subject relation, measurement-model disclosure, and cross-row calibration, the bundle stays below state-identification language."
   - "A multimodal bundle can improve prediction under a declared protocol while still depending on a restricted complete-case slice, a missing-modality policy, or a centre-specific transfer window."
+  - "A richer stack can still fail for different reasons: symmetry/reparameterization, narrow-regime degeneracy, and omitted-mechanism error are not one generic uncertainty term."
   - "Similar outputs can still arise from different parameters or macroscopic network states, so identifiability-driven experiment design remains a separate bottleneck from observability."
   - "A chemical connectome plus nominal inhibitory edges still does not fix gap-junction coupling, endogenous field effects, or local inhibitory driving force."
   - "A tractography-derived connectome can still change at the cortical-endpoint and parcel-graph stage even when the underlying diffusion signal is the same."
@@ -136,6 +138,13 @@ This site now blocks that shortcut too. <a href="https://doi.org/10.1073/pnas.14
 <strong>If You Want To Check What Is Directly Observable First</strong>
 <p>
 The March 2026 update added <a href="verification.html#observability-budget">Verification's Observability Budget</a> so claim ceilings can be enforced in normal page operations. For the table that prevents "multimodal" from being misread as "state-complete," see <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceilings by Measurement Stack</a>.
+</p>
+</div>
+
+<div class="note-box">
+<strong>If More Sensors Sound Like Almost-Solved Uniqueness</strong>
+<p>
+This site now blocks that shortcut too. <a href="https://doi.org/10.3390/sym12030469" target="_blank">Massonis &amp; Villaverde (2020)</a> showed that structural unidentifiability can arise from <strong>symmetry</strong> and may require a <strong>symmetry-breaking observable or reformulation</strong>, not just more fitting. <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">White et al. (2016)</a> showed that seemingly optimal extra experiments can instead expose <strong>omitted mechanisms</strong> and increase model discrepancy, while <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that even connectome-constrained recurrent networks remain degenerate until a <strong>small targeted recording set</strong> is added. Therefore, a richer stack is not read here as near-unique internal-state recovery unless the <a href="verification.html#identifiability-card">Identifiability Card</a> names <strong>which ambiguity class</strong> survived and why the next condition should actually break it. The longer explanation is in <a href="wiki/observation-to-estimation.html#ambiguity-classes">Wiki: From observation to estimation</a>.
 </p>
 </div>
 
