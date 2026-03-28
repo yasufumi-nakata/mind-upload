@@ -49,21 +49,21 @@ write_fixture() {
   cat <<'EOF' > "$SRC_DIR/index.md"
 ---
 title: Start Here
-subtitle: 入口の整理
-page_intro: このページは入口の役割を持ちます。
-accuracy_note: 正確さを優先して読みます。
+subtitle: Entry-point overview
+page_intro: This page serves as the entry point.
+accuracy_note: Read with accuracy first.
 recommended_pages:
   - label: Datasets
     url: /datasets.html
-    description: 公開ページへ戻ります。
+    description: Return to the public pages.
 wiki_links:
   - label: Guide
     url: ./guide.html
-    description: Wiki の補助ページです。
+    description: Supporting wiki page.
 known_points:
-  - 既知の論点があります。
+  - There are known issues.
 unknown_points:
-  - 未解決の論点があります。
+  - There are unresolved issues.
 ---
 <main class="main-container">
   <article class="content-column">
@@ -133,13 +133,13 @@ assert_output() {
   assert_file "$DEST_DIR/generated/demo/demo.csv"
 
   assert_contains "$DEST_DIR/Home.md" "# Start Here"
-  assert_contains "$DEST_DIR/Home.md" "> 入口の整理"
-  assert_contains "$DEST_DIR/Home.md" "## このページの役割"
-  assert_contains "$DEST_DIR/Home.md" "## 正確さの前提"
-  assert_contains "$DEST_DIR/Home.md" "## 公開ページへ戻る"
-  assert_contains "$DEST_DIR/Home.md" "## 関連 Wiki"
-  assert_contains "$DEST_DIR/Home.md" "## いま分かっていること"
-  assert_contains "$DEST_DIR/Home.md" "## まだ分かっていないこと"
+  assert_contains "$DEST_DIR/Home.md" "> Entry-point overview"
+  assert_contains "$DEST_DIR/Home.md" "## Role Of This Page"
+  assert_contains "$DEST_DIR/Home.md" "## Accuracy Notes"
+  assert_contains "$DEST_DIR/Home.md" "## Back To Public Pages"
+  assert_contains "$DEST_DIR/Home.md" "## Related Wiki Pages"
+  assert_contains "$DEST_DIR/Home.md" "## What Is Currently Known"
+  assert_contains "$DEST_DIR/Home.md" "## What Is Still Unknown"
   assert_contains "$DEST_DIR/Home.md" "[Guide](${GITHUB_WIKI}/guide)"
   assert_contains "$DEST_DIR/Home.md" "[Wiki Home](${GITHUB_WIKI})"
   assert_contains "$DEST_DIR/Home.md" "[Datasets](${PUBLIC_SITE}/datasets.html)"
@@ -153,15 +153,15 @@ assert_output() {
   assert_not_contains "$DEST_DIR/Home.md" "hidden"
   assert_not_contains "$DEST_DIR/Home.md" "<!--"
 
-  assert_contains "$DEST_DIR/_Sidebar.md" "## 入口と読み方"
+  assert_contains "$DEST_DIR/_Sidebar.md" "## Start and Navigation"
   assert_contains "$DEST_DIR/_Sidebar.md" "[Start Here](${GITHUB_WIKI})"
-  assert_contains "$DEST_DIR/_Sidebar.md" "## その他"
+  assert_contains "$DEST_DIR/_Sidebar.md" "## Other"
   assert_contains "$DEST_DIR/_Sidebar.md" "[Guide](${GITHUB_WIKI}/guide)"
   assert_contains "$DEST_DIR/_Sidebar.md" "[Notes](${GITHUB_WIKI}/notes)"
   assert_contains "$DEST_DIR/_Sidebar.md" "[Ungrouped Page](${GITHUB_WIKI}/ungrouped)"
   assert_not_contains "$DEST_DIR/_Sidebar.md" "mind-upload-basics"
 
-  assert_contains "$DEST_DIR/_Footer.md" "公開ポータル"
+  assert_contains "$DEST_DIR/_Footer.md" "Public portal"
   [[ ! -e "$DEST_DIR/generated/demo/.DS_Store" ]] || fail "Noise file copied into export: .DS_Store"
   [[ ! -e "$DEST_DIR/generated/demo/._demo.csv" ]] || fail "Noise file copied into export: ._demo.csv"
 }

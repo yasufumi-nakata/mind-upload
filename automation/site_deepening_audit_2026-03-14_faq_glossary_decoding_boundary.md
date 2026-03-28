@@ -1,70 +1,70 @@
 # Site Deepening Audit (2026-03-14, FAQ / Glossary / Decoding Boundary)
 
-## 対象
+## Scope
 
-- 主対象: `faq.md`
-- 副対象: `glossary.md`
+- Main target: `faq.md`
+- Secondary target: `glossary.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- 2026-03-14 の既存監査で、`verification`、`tech_roadmap`、`wbe_101`、`perspective`、各種 wiki はかなり深く更新されていました。
-- 一方で、公開サイトの入口層である `faq.md` と用語層である `glossary.md` は、2025 年までの non-invasive language decoding と ESI 直接妥当化の進展を十分に反映していませんでした。
-- 入口層が弱いままだと、深いページで丁寧に分けた `decode` / `identifiability` / `direct validation` の境界が、最初の数ページで再び混ざります。
+- In the existing audit on 2026-03-14, `verification`, `tech_roadmap`, `wbe_101`, `perspective`, and various wikis were updated quite deeply.
+- On the other hand, the entrance layer `faq.md` and the terminology layer `glossary.md` of the public site did not fully reflect the progress of non-invasive language decoding and ESI direct validation until 2025.
+- If the entrance layer remains weak, the `decode` / `identifiability` / `direct validation` boundaries that were carefully separated on deep pages will mix again in the first few pages.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. `faq.md` の Q1 は、fMRI ベースの semantic reconstruction と EEG の話を近接させることで、cross-modal のすり替えを起こしやすかった
+### 1. Q1 of `faq.md` was likely to cause cross-modal switching due to the proximity of fMRI-based semantic reconstruction and EEG.
 
-- 問題:
-  - 既存の Q1 は「EEGで“思考”は読める？」という問いに対し、方向性としては正しかった一方、どの成果が scalp EEG の話で、どの成果が fMRI や侵襲系の話かを本文中で十分に分けていませんでした。
-  - そのため、Tang et al. (2023) の non-invasive semantic reconstruction を、そのまま scalp EEG の一般到達点として誤読する余地が残っていました。
-  - 2025 年の d'Ascoli et al. は large-scale M/EEG から単語 decoding の前進を示しましたが、既知の word onset、reading/listening 課題、MEG 優位、学習データ量依存という条件が明確にあります。ここを入口で固定しないと、「任意の思考が自由に読める」という読み替えが起きます。
-- 修正:
-  - Q1 を `限定条件つき decoding` と `内部状態の同定` に明示的に分離しました。
-  - Tang (2023) は fMRI 系、d'Ascoli (2025) は M/EEG の constrained decoding 系と書き分けました。
+- Issue:
+- While the existing Q1 was correct in terms of direction in response to the question "Can EEG read 'thoughts'?", it did not sufficiently separate in the text which results were about scalp EEG and which were about fMRI and invasive systems.
+- Therefore, there was still room to misinterpret Tang et al.'s (2023) non-invasive semantic reconstruction as the general goal of scalp EEG.
+- d'Ascoli et al. in 2025 showed progress in word decoding from large-scale M/EEG, but there are clear conditions such as known word onset, reading/listening tasks, MEG dominance, and dependence on the amount of training data. If this is not fixed at the entrance, it will be read as ``any thought can be read freely.''
+- Revision:
+- Explicitly separated Q1 into `qualified decoding` and `identification of internal state`.
+- Tang (2023) called it the fMRI system, and d'Ascoli (2025) called it the M/EEG constrained decoding system.
 
-### 2. `faq.md` は、brain-to-text の見た目の強さと ground truth の強さを分ける入口が不足していた
+### 2. `faq.md` lacked an entry point to separate the apparent strength of brain-to-text from the strength of ground truth.
 
-- 問題:
-  - 現行 FAQ には、「どのデモでも最低限どこを見るべきか」を固定する短いチェックリストがありませんでした。
-  - その結果、侵襲 speech neuroprosthesis の高性能値が、scalp EEG や一般的 non-invasive BCI にそのまま継承できるかのように読まれる余地がありました。
-  - Metzger et al. (2023) と Card et al. (2024) は確かに大きな前進ですが、いずれも cortical surface electrodes または intracortical arrays を用いた侵襲系です。
-- 修正:
-  - 新設した Q1b に、`計測法 / 課題 / prior / 検証 / 信頼度運用` の 5 点チェックを追加しました。
-  - Q5b にも、閉ループ性能を読むときは侵襲性・再校正時間・日跨ぎ安定性を分けるべきだと追記しました。
+- Issue:
+- The current FAQ didn't have a short checklist fixing "at least what you should look at in every demo."
+- As a result, the high performance values ​​of invasive speech neuroprosthesis could be read as if they could be inherited directly from scalp EEG or general non-invasive BCI.
+- Metzger et al. (2023) and Card et al. (2024) are certainly great advances, but both are invasive systems using cortical surface electrodes or intracortical arrays.
+- Revision:
+- Added `Measurement method / Issues / Prior / Verification / Reliability operation` 5-point check to newly created Q1b.
+- Also added to Q5b that when reading closed-loop performance, invasiveness, recalibration time, and daily stability should be separated.
 
-### 3. `glossary.md` は、2026-03 時点で最も危ない用語対をまだ持っていなかった
+### 3. `glossary.md` did not yet have the most dangerous term pair as of 2026-03
 
-- 問題:
-  - 既存 glossary は `decode / emulate`、`相関 / 因果` までは置けていましたが、`observability / identifiability`、`モデル適合 / direct validation`、`brain signal / language prior` が欠落していました。
-  - これは site-wide で最も危険な欠落です。なぜなら、decoder が文字列を出した瞬間に「内部状態が分かった」と読まれ、source imaging が source を出した瞬間に「十分に localize できた」と読まれるからです。
-  - Unnwongse et al. (2023) の direct validation では mean localization error が 10.3-26.0 mm に達し、Hao et al. (2025) でも 14.07 ± 4.62 mm 対 17.38 ± 4.16 mm の誤差が残り、source depth と spike power に依存しました。これは `detectable` と `uniquely identified` が別だと示す十分な根拠です。
-- 修正:
-  - `よく混同する言葉` に 3 組の用語対を追加しました。
-  - `モデル化` 節に `観測可能性 / 同定可能性 / 直接妥当化 / Language Prior / 校正 / 棄権` を追加しました。
+- Issue:
+- The existing glossary had up to `decode / emulate` and `correlation / causation`, but `observability / identifiability`, `model fit / direct validation`, and `brain signal / language prior` were missing.
+- This is the most dangerous omission in site-wide. This is because the moment the decoder outputs a string, it is read as ``the internal state is known,'' and the moment source imaging outputs the source, it is read as ``We were able to sufficiently localize.''
+- In the direct validation of Unnwongse et al. (2023), the mean localization error reached 10.3-26.0 mm, and in Hao et al. (2025), the error remained 14.07 ± 4.62 mm vs. 17.38 ± 4.16 mm, depending on source depth and spike power. This is sufficient evidence to show that `detectable` and `uniquely identified` are different.
+- Revision:
+- Added three term pairs to `words that are often confused`.
+- Added `Observability / Identifiability / Direct Validation / Language Prior / Calibration / Abstention` to `Modeling` clause.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `faq.md`
-  - Q1 を quantitative な ceiling 付きの説明へ更新
-  - `Q1の読み替え禁止` 注記を追加
-  - 新設 Q1b で brain-to-text 読解の 5 点チェックを追加
-  - Q5b に侵襲系 closed-loop 実績と non-invasive への読み替え禁止を追加
-  - 参考文献に d'Ascoli (2025)、Unnwongse (2023)、Hao (2025)、Metzger (2023)、Card (2024)、Guo (2017)、Geifman & El-Yaniv (2017) を追加
+- Updated Q1 to quantitative ceiling description
+- `No replacement of Q1` Added note
+- Added 5-point brain-to-text comprehension check in new Q1b
+- Added invasive closed-loop achievement and prohibition of conversion to non-invasive to Q5b
+- Added d'Ascoli (2025), Unnwongse (2023), Hao (2025), Metzger (2023), Card (2024), Guo (2017), Geifman & El-Yaniv (2017) to references.
 - `glossary.md`
-  - `observability / identifiability` ほか混同しやすい用語対を追加
-  - `モデル化` 節に `直接妥当化`、`Language Prior`、`校正`、`棄権` を追加
-  - `2026-03 の補足` 注記で、non-invasive decoding の読み方を固定
-  - 参考文献に Seeber (2019)、Unnwongse (2023)、Hao (2025)、Tang (2023)、d'Ascoli (2025)、Pernet (2020)、Guo (2017)、Geifman & El-Yaniv (2017) を追加
+- Added `observability / identifiability` and other pairs of terms that are easy to confuse.
+- Added `direct validation`, `Language Prior`, `proofreading`, `abstention` to `modeling` clause.
+- Fixed reading of non-invasive decoding in `2026-03 supplement` note.
+- Added Seeber (2019), Unnwongse (2023), Hao (2025), Tang (2023), d'Ascoli (2025), Pernet (2020), Guo (2017), Geifman & El-Yaniv (2017) to references.
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- public benchmarks を用いた site-wide `language prior` 表示の統一
-  - 担当者: AI / maintainer
-  - 前提条件: brain-to-text / source imaging 関連ページすべての prior 表示棚卸し
-  - 完了条件: public page 上の decoder 系主張すべてに、モダリティ・課題・prior・validation の4要素が明示されること
+- Unified site-wide `language prior` display using public benchmarks
+- Person in charge: AI / maintainer
+- Prerequisite: prior display inventory of all brain-to-text / source imaging related pages
+- Completion condition: The four elements of modality, issue, priority, and validation must be clearly stated in all decoder-related claims on the public page.
 
-## 参考文献
+## References
 
 - Tang J, LeBel A, Jain S, Huth AG. Semantic reconstruction of continuous language from non-invasive brain recordings. Nat Neurosci. 2023.
   - https://doi.org/10.1038/s41593-023-01304-9

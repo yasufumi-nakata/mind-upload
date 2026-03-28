@@ -1,91 +1,91 @@
 # Site Deepening Audit (2026-03-14, Verification Causality / Closed Loop)
 
-## 対象
+## Scope
 
-- 主対象: `verification.md`
-- 副対象: `wiki/counterfactual-and-perturbation-verification.md`
-- 副対象: `wiki/closed-loop-latency-jitter-and-safety-stops.md`
+- Main target: `verification.md`
+- Secondary target: `wiki/counterfactual-and-perturbation-verification.md`
+- Secondary target: `wiki/closed-loop-latency-jitter-and-safety-stops.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- 公開サイトの中核主張は `Verification Commons` にありますが、2026-03-14 時点の本文は、`因果摂動` と `閉ループ` を重要だと述べる一方で、どの一次文献がどこまで到達しているかを十分に切り分けていませんでした。
-- その結果、`offline で高精度`、`online で動く`、`外部介入で挙動が変わる`、`長期に安定運用できる` が、同じ強さの証拠として読まれる余地が残っていました。
-- これは技術・自然科学の観点では重大です。なぜなら、現在の BCI / adaptive stimulation 文献が示しているのは主として局所サブシステム・課題限定の causal evidence であり、全脳WBEの branch-equivalence ではないからです。
+- The core claim of the public site is `Verification Commons`, but as of 2026-03-14, the main text states that `Causal perturbation` and `Closed loop` are important, but does not sufficiently distinguish which primary literature has reached how far.
+- This left room for `High accuracy in offline`, `Works in online`, `Behavior changes with external intervention`, `Long-term stable operation` to be read as evidence of equal strength.
+- This is important from a technical and natural science perspective. This is because the current BCI/adaptive stimulation literature primarily provides causal evidence limited to local subsystems and tasks, rather than branch-equivalence of whole-brain WBE.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. `verification.md` は「因果摂動」を掲げつつ、証拠段階を分け切れていませんでした
+### 1. `verification.md` advocated "causal perturbation" but did not separate the stages of evidence.
 
-- 問題:
-  - 旧版は `Stage A/B/C` を示していましたが、`online human-in-the-loop`、`bidirectional feedback`、`state-dependent intervention`、`longitudinal stability` の差が表の形で固定されていませんでした。
-  - そのため、offline 成績の改善を、L2/L3 に近い進歩として過大に読める構造が残っていました。
-- 根拠:
-  - Forenzo et al. (2024) は non-invasive BCI の online continuous tracking を示しましたが、これは online decode の実証であり、反事実同値ではありません。
-  - Flesher et al. (2021) は tactile feedback による双方向 loop が行動を改善することを示しましたが、感覚運動サブシステムの局所 causal gain に留まります。
-  - Oehrn et al. (2024) と Dixon et al. (2026) は adaptive DBS の在宅・実生活 block 評価を示し、短いラボデモと deployable controller の間に追加の壁があることを示しました。
-  - Wairagkar et al. (2025) と Wilson et al. (2025) は、低遅延 loop を実装しても decoder drift / recalibration burden が別問題として残ることを示しました。
-- 修正:
-  - `verification.md` の `因果的摂動スイート` を `4ゲート制` へ再編しました。
-  - `online decode`、`bidirectional perturbation`、`state-dependent intervention`、`longitudinal stability` を別行で明示し、それぞれに代表的な一次文献と「まだ言えないこと」を付けました。
-  - 合否指標も `effect size` だけでなく、`P50/P95/P99 latency`、`jitter`、`dropout`、`recalibration burden`、`recovery time` まで引き上げました。
+- Issue:
+- The old version showed `Stage A/B/C`, but the differences between `online human-in-the-loop`, `bidirectional feedback`, `state-dependent intervention`, `longitudinal stability` were not fixed in the form of a table.
+- Therefore, there remained a structure in which the improvement in offline performance could be interpreted as an overstatement of progress closer to L2/L3.
+- Basis:
+- Forenzo et al. (2024) showed online continuous tracking of non-invasive BCI, but this is a demonstration of online decoding and is not a counterfactual equivalence.
+- Flesher et al. (2021) showed that a bidirectional loop with tactile feedback improves behavior, but it remains a local causal gain in the sensorimotor subsystem.
+- Oehrn et al. (2024) and Dixon et al. (2026) presented at-home/real-life block evaluations of adaptive DBS, showing an additional barrier between short lab demos and deployable controllers.
+- Wairagkar et al. (2025) and Wilson et al. (2025) showed that even if a low-latency loop is implemented, decoder drift / recalibration burden remains another problem.
+- Revision:
+- Reorganized `causal perturbation suite` of `verification.md` to `4-gated`.
+- `online decode`, `bidirectional perturbation`, `state-dependent intervention`, `longitudinal stability` are clearly indicated on separate lines, and representative primary literature and "things that cannot be said yet" are attached to each.
+- The pass/fail index has been raised not only to `effect size` but also to `P50/P95/P99 latency`, `jitter`, `dropout`, `recalibration burden`, `recovery time`.
 
-### 2. `wiki/counterfactual-and-perturbation-verification.md` は概念整理に偏り、境界事例が弱すぎました
+### 2. `wiki/counterfactual-and-perturbation-verification.md` was biased toward conceptual organization and borderline cases were too weak.
 
-- 問題:
-  - 旧版は `介入`、`反事実`、`摂動` を日常語で説明していましたが、読者が「では現実の一次文献では何がどこまで実証されたのか」を判断しにくい構造でした。
-  - 特に `反事実` という語を、branch variable や比較規則の事前固定なしで使えるように読めてしまう点が弱点でした。
-- 根拠:
-  - Wairagkar et al. (2025) は low-latency voice loop を示しましたが、約 15 日で fixed decoder の性能が落ちており、長期安定性を別問題として扱う必要があります。
-  - Casali et al. (2013) と Comolatti et al. (2019) は perturbation-based metric を実装可能にしましたが、刺激条件とアーチファクト処理を固定しなければ比較不能です。
-  - Willett et al. (2023) と Littlejohn et al. (2025) は speech neuroprosthesis を前進させましたが、通信サブシステムの online decode / control を示したのであって、branch-equivalence ではありません。
-- 修正:
-  - 本文を `5段階の因果証拠ラダー` と `一次文献で見る境界事例` に再構成しました。
-  - `反事実` の使用条件として、`分岐変数`、`比較規則`、`アーチファクト窓`、`失敗条件` の 4 条件を固定しました。
-  - `介入応答テスト` と `摂動一般化テスト` を、より弱いが誤解の少ない表現として導入しました。
+- Issue:
+- The previous edition explained `intervention`, `counterfactual`, and `perturbation` in everyday language, but the structure made it difficult for readers to determine what and to what extent it had been proven in actual primary literature.
+- In particular, the weakness was that the word `counterfactual` could be read as being usable without prefixing branch variables or comparison rules.
+- Basis:
+- Wairagkar et al. (2025) demonstrated a low-latency voice loop, but the performance of the fixed decoder deteriorated after about 15 days, so long-term stability must be treated as a separate issue.
+- Casali et al. (2013) and Comolatti et al. (2019) made it possible to implement perturbation-based metrics, but they are not comparable without fixing stimulus conditions and artifact handling.
+- Willett et al. (2023) and Littlejohn et al. (2025) advanced speech neuroprosthesis, but demonstrated online decode/control of communication subsystems, not branch-equivalence.
+- Revision:
+- Reorganized the text into `Five-step causal evidence ladder` and `Borderline cases in primary literature`.
+- The following four conditions have been fixed as the usage conditions for `counterfactual`: `branching variable`, `comparison rule`, `artifact window`, and `failure condition`.
+- Introduced `Intervention Response Test` and `Perturbation Generalization Test` as weaker but less misleading expressions.
 
-### 3. `wiki/closed-loop-latency-jitter-and-safety-stops.md` は、遅延の定義はあっても運用指標が足りませんでした
+### 3. `wiki/closed-loop-latency-jitter-and-safety-stops.md` had a delay definition but lacked operational indicators
 
-- 問題:
-  - 旧版は `遅延 / ジッタ / ドリフト / 棄権 / 安全停止` の区別としては正しかった一方、実際に何をログとして残すべきかが抽象的でした。
-  - これでは、平均 latency だけ示して `L3 達成` と読む誤解を止めきれません。
-- 根拠:
-  - Littlejohn et al. (2025) は naturalistic communication で数秒単位の遅れが破綻要因になることを明示し、speech 系では tail latency が重要であることを示しました。
-  - Wairagkar et al. (2025) は raw-to-speech を 10 ms 未満で回しつつ non-speech 区間で silence を返しました。これは latency だけでなく abstention 実装が必須だと示しています。
-  - Wilson et al. (2025) は frequent recalibration 自体が neural bypass の大きな障害だと述べ、recalibration burden を性能から切り離せないことを示しました。
-  - 2026年2月25日公開の Cascino et al. (2026) は、20 連続症例中 9 例が aDBS 候補、2025年7月時点で 5 例継続と報告し、deployability と programming burden を実装成績から分離できないことを示しました。
-- 修正:
-  - `一次文献が示す現実` 節を新設し、speech BCI、bidirectional BCI、adaptive DBS、長期 recalibration の文献を並べました。
-  - `L3 を主張するなら最低限ほしい指標` として、`P50/P95/P99 latency`、`jitter`、`dropout`、`recalibration burden`、`abstention / hold-last-output`、`recovery time`、`stimulation duty cycle` を明示しました。
-  - `棄権`、`hold-last-output`、`freeze`、`hard stop` を分離し、停止回数そのものを性能指標として扱うルールを追加しました。
+- Issue:
+- While the old version was correct in distinguishing between `delay/jitter/drift/abandon/safety stop`, it was abstract about what should actually be logged.
+- This does not stop the misunderstanding of showing only the average latency and reading it as `L3 achievement`.
+- Basis:
+- Littlejohn et al. (2025) clearly demonstrated that a delay of several seconds can be a cause for failure in naturalistic communication, and showed that tail latency is important in speech systems.
+- Wairagkar et al. (2025) returned silence in the non-speech section while running raw-to-speech in less than 10 ms. This shows that not only latency but also abstention implementation is required.
+- Wilson et al. (2025) stated that frequent recalibration itself is a major obstacle to neural bypass, and showed that recalibration burden cannot be separated from performance.
+- Cascino et al. (2026), published on February 25, 2026, reported that 9 out of 20 consecutive cases were aDBS candidates, and 5 cases continued as of July 2025, indicating that deployability and programming burden cannot be separated from implementation results.
+- Revision:
+- Added a new `Reality shown by primary literature` section and listed the literature on speech BCI, bidirectional BCI, adaptive DBS, and long-term recalibration.
+- Clarified `P50/P95/P99 latency`, `jitter`, `dropout`, `recalibration burden`, `abstention / hold-last-output`, `recovery time`, `stimulation duty cycle` as `minimum desired indicators if you insist on L3`.
+- Added a rule to separate `abstain`, `hold-last-output`, `freeze`, `hard stop` and treat the number of stops itself as a performance indicator.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `verification.md`
-  - `因果的摂動スイート` を `4ゲート制` へ改稿
-  - `反事実` を使う条件を明示
-  - 2023-2026 の BCI / adaptive stimulation 一次文献を参考文献へ追加
-  - `Unnwongse et al.` の年表記を 2023 に修正
+- Revised `Causal Perturbation Suite` to `4-Gated`
+- Explicit conditions for using `counterfactual`
+- Added BCI / adaptive stimulation primary literature from 2023-2026 to the bibliography
+- Corrected the year notation of `Unnwongse et al.` to 2023.
 - `wiki/counterfactual-and-perturbation-verification.md`
-  - front matter を更新し、一次文献ベースのページへ再設計
-  - `5段階ラダー`、`境界事例`、`反事実の使用条件`、`最低限ログ` を追加
-  - 参考文献を primary papers 中心で新設
+- Updated the front matter and redesigned the page to be based on primary literature.
+- Added `5-step ladder`, `boundary case`, `conditions for use of counterfactuals`, `minimum log`
+- New reference bibliography centered on primary papers
 - `wiki/closed-loop-latency-jitter-and-safety-stops.md`
-  - front matter を更新し、`実務指標` 中心のページへ再設計
-  - speech neuroprosthesis / tactile BCI / adaptive DBS / recalibration の一次文献を追加
-  - `L3 最低提出物パック` と `停止種別の分離` を追加
+- Updated front matter and redesigned `Practical indicators` centered page
+- Added primary literature for speech neuroprosthesis / tactile BCI / adaptive DBS / recalibration
+- Added `L3 minimum deliverables pack` and `Separation of stop types`
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- 実被験者介入を含む `Stage C` benchmark の実装
-  - 担当者: AI / maintainer / 実験系共同研究者
-  - 前提条件: IRB、機材、被験者運用、刺激安全プロトコル
-  - 完了条件: 刺激条件、アーチファクト窓、停止条件、失敗条件を事前固定したうえで、査読可能な公開ログを伴う実験が走ること
-- 長期閉ループの site-wide benchmark 化
-  - 担当者: AI / maintainer
-  - 前提条件: 公開可能な longitudinal BCI / adaptive stimulation データセットまたは運用ログの確保
-  - 完了条件: `verification.md` の `Gate 4` を公開ベンチとして再現実装できること
+- Implementation of `Stage C` benchmark including real subject intervention
+- Person in charge: AI / maintainer / experimental joint researcher
+- Prerequisites: IRB, equipment, subject operations, stimulation safety protocols
+- Completion condition: The experiment is run with stimulus conditions, artifact windows, stopping conditions, and failure conditions fixed in advance, and with a public log that can be peer reviewed.
+- Long-term closed loop site-wide benchmark
+- Person in charge: AI / maintainer
+- Prerequisite: Securing publicly available longitudinal BCI / adaptive stimulation datasets or operational logs
+- Completion condition: be able to reproduce and implement `Gate 4` of `verification.md` as a public bench.
 
-## 参考文献
+## References
 
 - Forenzo D, Zhu H, Shanahan J, Lim J, He B. Continuous tracking using deep learning-based decoding for noninvasive brain-computer interface. PNAS Nexus. 2024.
   - https://doi.org/10.1093/pnasnexus/pgae145

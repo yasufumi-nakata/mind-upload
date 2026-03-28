@@ -1,72 +1,72 @@
 # Site Deepening Audit (2026-03-15, Paper Collection / Technical Reading Route)
 
-## 対象
+## Scope
 
-- 主対象: `mind_uploading_papers.md`
-- 副対象: `wiki/literature-and-evidence-reading.md`
+- Main target: `mind_uploading_papers.md`
+- Secondary target: `wiki/literature-and-evidence-reading.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- `mind_uploading_papers.md` は broad archive としては有用ですが、2026-03-15 時点では技術・自然科学の一次証拠へ最短到達する構造が不足していました。
-- 実際、2025 年の先頭表示には法学・形而上学・VR 作品論が並び、non-invasive language decode、侵襲 speech neuroprosthesis、ESI direct validation、maintenance-state といった実験フロンティアが埋もれやすい状態でした。
-- これは技術・自然科学の観点で弱点です。なぜなら、年順アーカイブの先頭を「いま最も強い証拠」と誤読すると、サイト全体の evidence gate が崩れるからです。
+- `mind_uploading_papers.md` is useful as a broad archive, but as of 2026-03-15, it lacked a structure to reach primary evidence in technology and natural science in the shortest possible time.
+- In fact, law, metaphysics, and VR works were listed at the top of the list in 2025, and experimental frontiers such as non-invasive language decoding, invasive speech neuroprosthesis, ESI direct validation, and maintenance-state were easily obscured.
+- This is a weakness from a technical/natural science perspective. This is because if you misread the beginning of the chronological archive as "currently the strongest evidence," the evidence gate for the entire site will collapse.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. 旧ページは broad archive と evidence-ranked reading route を分離していませんでした
+### 1. The old page did not separate broad archive and evidence-ranked reading route
 
-- 問題:
-  - `mind_uploading_papers.md` は年別整理としては整っていましたが、`何を先に読むと技術フロンティアへ最短で届くか` が固定されていませんでした。
-  - そのため、最新年の先頭にある非実験系文献を、実験 frontier の代表と誤読しうる構造が残っていました。
-- 根拠:
-  - Tang et al. (2023)、D&eacute;fossez et al. (2023)、d'Ascoli et al. (2025) は、非侵襲 language decode の一次文献として直接の到達点を与えます。
-  - Willett et al. (2023)、Littlejohn et al. (2025)、Wairagkar et al. (2025) は、侵襲 speech neuroprosthesis の closed-loop / streaming front を押し上げています。
-  - Mikulan et al. (2020)、Unnwongse et al. (2023)、Hao et al. (2025) は、ESI を direct validation で監査する系です。
-  - Xu et al. (2024)、Looser et al. (2024)、Lee et al. (2022) は、connectome 外の maintenance-state を示します。
-- 修正:
-  - `mind_uploading_papers.md` に `技術・自然科学の優先ルート` を新設しました。
-  - 年順アーカイブは維持しつつ、技術読者は年順の先頭から入らない site rule を本文へ明記しました。
+- Issue:
+- `mind_uploading_papers.md` was organized by year, but `What should I read first to reach the technological frontier in the shortest time?` was not fixed.
+- As a result, there remained a structure in which the non-experimental literature at the beginning of the latest year could be mistakenly interpreted as representative of the experimental frontier.
+- Basis:
+- Tang et al. (2023), Défossez et al. (2023), d'Ascoli et al. (2025) provide direct access as the primary literature on non-invasive language decoding.
+- Willett et al. (2023), Littlejohn et al. (2025), Wairagkar et al. (2025) push the closed-loop/streaming front of invasive speech neuroprosthesis.
+- Mikulan et al. (2020), Unnwongse et al. (2023), and Hao et al. (2025) are systems that audit ESI using direct validation.
+- Xu et al. (2024), Looser et al. (2024), Lee et al. (2022) indicate maintenance-state outside the connectome.
+- Revision:
+- Added `Technology/Natural Science Priority Route` to `mind_uploading_papers.md`.
+- While maintaining the chronological archive, we have clearly stated in the main text the site rule that technical readers cannot enter from the beginning of the chronological order.
 
-### 2. 旧ページは「技術系で何を先に読むべきか」の単位が粗すぎました
+### 2. The old page had too coarse units of information on "What to read first in technology"
 
-- 問題:
-  - 旧版のテーマ案内は `技術や計測に近い論文を見たい` 程度の粒度で、decode、closed loop、ESI、maintenance-state の区別が弱い状態でした。
-  - これでは、decode 成功と emulation claim、local communication subsystem と whole-brain route、structural scaffold と hidden state を混同しやすくなります。
-- 根拠:
-  - d'Ascoli et al. (2025) は word decoding の前進を示しますが、subject-independent open-ended thought reading ではありません。
-  - Wairagkar et al. (2025) は超低遅延 voice synthesis を示しますが、全脳 WBE ではありません。
-  - Hao et al. (2025) は simultaneous HD-EEG/SEEG で ictal/interictal ESI の誤差監査を与えますが、一般的一意復元を与えません。
-  - Xu et al. (2024) と Looser et al. (2024) は sleep-dependent renormalization と myelin/metabolic coupling を示し、connectome-complete を emulation-complete と読めないことを補強します。
-- 修正:
-  - `mind_uploading_papers.md` の案内表を、`非侵襲 language decode`、`侵襲 speech neuroprosthesis`、`直接妥当化つき ESI`、`maintenance-state / hidden variable` の 4 ルートへ再編しました。
+- Issue:
+- The previous version of the theme guide had a granularity of ``I want to see papers that are close to technology and measurement,'' and the distinction between decode, closed loop, ESI, and maintenance-state was weak.
+- This makes it easy to confuse decode success with emulation claims, local communication subsystems with whole-brain routes, and structural scaffolds with hidden state.
+- Basis:
+- d'Ascoli et al. (2025) represents an advance in word decoding, but not subject-independent open-ended thought reading.
+- Wairagkar et al. (2025) shows ultra-low latency voice synthesis but not whole-brain WBE.
+- Hao et al. (2025) gives an error audit of ictal/interictal ESI in simultaneous HD-EEG/SEEG, but does not give a general unique recovery.
+- Xu et al. (2024) and Looser et al. (2024) demonstrate sleep-dependent renormalization and myelin/metabolic coupling, reinforcing that connectome-complete cannot be read as emulation-complete.
+- Revision:
+- The `mind_uploading_papers.md` guide table has been reorganized into four routes: `non-invasive language decode`, `invasive speech neuroprosthesis`, `ESI with direct validation`, and `maintenance-state / hidden variable`.
 
-### 3. 旧 wiki は「論文集は broad archive」という説明に留まり、技術読者の入り口を指定していませんでした
+### 3. The old wiki only explained that "a collection of papers is a broad archive" and did not specify the entry point for technical readers.
 
-- 問題:
-  - `wiki/literature-and-evidence-reading.md` は文献系ページの役割差を正しく説明していましたが、技術・自然科学の一次証拠だけを追いたい読者に対して、論文集内のどこから入るべきかを具体化していませんでした。
-- 修正:
-  - `wiki/literature-and-evidence-reading.md` に、技術読者は論文集の `技術・自然科学の優先ルート` から入るべきことを追記しました。
+- Issue:
+- `wiki/literature-and-evidence-reading.md` correctly explained the different roles of bibliographic pages, but did not specify where in the collection of papers they should enter for readers who only want to follow primary evidence in technology and natural sciences.
+- Revision:
+- Added information to `wiki/literature-and-evidence-reading.md` that technical readers should access from `Technology and Natural Sciences Preferred Route` in the collection of papers.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `mind_uploading_papers.md`
-  - `last_updated` を 2026-03-15 に更新
-  - `年順 ≠ 証拠強度順` を front matter へ明記
-  - `技術・自然科学の優先ルート` を追加
-  - テーマ別の案内表を、decode / neuroprosthesis / ESI / maintenance-state の 4 ルートへ差し替え
+- `last_updated` updated to 2026-03-15
+- Specify `By year ≠ By strength of evidence` in front matter
+- Added `Technology/Natural Science Priority Route`
+- Replaced the theme-based information table with 4 routes: decode / neuroprosthesis / ESI / maintenance-state
 - `wiki/literature-and-evidence-reading.md`
-  - `last_updated` を 2026-03-15 に更新
-  - 技術読者向けの読み方注記を追加
-  - 論文集の役割説明へ `優先ルートから入る` ことを追記
+- `last_updated` updated to 2026-03-15
+- Added reading notes for technical readers
+- Added `Enter from the priority route` to the role explanation of the collection of papers
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- broad archive 全カードへの系統タグ付け
-  - 担当者: AI / maintainer
-  - 前提条件: 既存カード 100 件を `tech-primary / review / philosophy-law / culture-media` などへ再分類する運用基準を決めること
-  - 完了条件: 年別カード全件が evidence-track と source-type の両方で絞り込めること
+- Broad archive Lineage tagging for all cards
+- Person in charge: AI / maintainer
+- Prerequisite: Determine the operational criteria for reclassifying 100 existing cards to `tech-primary / review / philosophy-law / culture-media` etc.
+- Completion condition: All yearly cards can be filtered by both evidence-track and source-type.
 
-## 参考文献
+## References
 
 - Tang J, LeBel A, Jain S, et al. Semantic reconstruction of continuous language from non-invasive brain recordings. *Nat Neurosci*. 2023.
   - https://doi.org/10.1038/s41593-023-01304-9

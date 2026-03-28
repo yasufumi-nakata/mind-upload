@@ -1,83 +1,83 @@
 # Site Deepening Audit (2026-03-14, State / Trait / Drift)
 
-## 対象
+## Scope
 
-- 主対象: `wiki/state-trait-and-drift.md`
-- 副対象: `wiki/index.md`
-- 副対象: `verification.md`
-- 副対象: `eeg_101.md`
+- Main target: `wiki/state-trait-and-drift.md`
+- Secondary target: `wiki/index.md`
+- Secondary target: `verification.md`
+- Secondary target: `eeg_101.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- 本日までに `uncertainty`、`closed-loop`、`verification`、`decode/emulate` 周辺はかなり更新されましたが、それらの前提になる `state・trait・drift` の補助ページは 2026-03-06 版のままでした。
-- 現行ページは概念の入口としては有用でしたが、技術・自然科学の観点では、`その場の状態変動`、`比較的安定な骨格`、`生体側の representational drift`、`interface / decoder drift` を同じ箱に入れていました。
-- この混線は、最近追加した `recalibration burden`、`abstention/silence`、`population-level stability` の議論を弱くします。特に、fixed decoder 劣化を脳の本質的変化と読み違える余地が残っていました。
+- As of today, the areas surrounding `uncertainty`, `closed-loop`, `verification`, and `decode/emulate` have been updated considerably, but the auxiliary page for `state・trait・drift`, which is the premise for them, remained at the 2026-03-06 version.
+- The current page was useful as a conceptual introduction, but from a technical/natural science perspective, it put `in-situ state fluctuations', `relatively stable skeletons', `representational drift on the biological side', and `interface / decoder drift` into the same box.
+- This crosstalk weakens the discussion of recently added `recalibration burden`, `abstention/silence`, `population-level stability`. In particular, there remained room to misread fixed decoder deterioration as an essential change in the brain.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. 旧版は drift を 1 種類として扱いすぎていました
+### 1. The old version treated drift too much as one type.
 
-- 問題:
-  - 旧版では drift を「時間とともに起きる変化」とだけ説明しており、生体側の表現ドリフトと、電極・前処理・decoder の nonstationarity が分離されていませんでした。
-  - しかし BCI の長期運用では、この 2 つを混ぜると原因同定ができません。
-- 根拠:
-  - Wilson et al. (2025) は intracortical cursor BCI が accumulating neural nonstationarities により frequent recalibration を要することを示しました。
-  - Wairagkar et al. (2025) は brain-to-voice decoder の fixed 運用性能が約 15 日で目立って低下することを示しました。
-- 修正:
-  - `biological drift` と `interface / decoder drift` を独立行として追加しました。
-  - fixed decoder interval、recalibration burden、recovery time を最低提出物へ入れました。
+- Issue:
+- In the previous version, drift was only explained as ``changes that occur over time,'' and expression drift on the biological side and nonstationarity of electrodes, preprocessing, and decoders were not separated.
+- However, in long-term BCI operation, if these two are mixed, the cause cannot be identified.
+- Basis:
+- Wilson et al. (2025) showed that intracortical cursor BCI requires frequent recalibration due to accumulating neural nonstationarities.
+- Wairagkar et al. (2025) showed that the fixed operational performance of a brain-to-voice decoder noticeably deteriorates after about 15 days.
+- Revision:
+- Added `biological drift` and `interface / decoder drift` as separate lines.
+- Added fixed decoder interval, recalibration burden, and recovery time to minimum submission.
 
-### 2. 旧版は trait を verbal な「長く安定する特徴」としか書いておらず、何を安定骨格とみなすかが弱すぎました
+### 2. The old version only described trait as a verbal "characteristic that is stable for a long time," and was too weak in defining what was considered a stable skeleton.
 
-- 問題:
-  - 旧版は trait を説明していましたが、単一 neuron / voxel の不変性と誤読されうる構造でした。
-  - しかし一次文献が示すのは、しばしば個々のユニットは動く一方、latent dynamics や representational geometry の方がより安定である、という構図です。
-- 根拠:
-  - Gallego et al. (2020) は neuron turnover があっても low-dimensional latent dynamics が安定し、aligned latent dynamics に基づく decoding は長期間維持できると示しました。
-  - Finn et al. (2015) は functional connectivity profile が cross-session かつ task/rest をまたいでも個人識別に使えることを示しました。
-  - Noda et al. (2025) は single-neuron tuning volatility があっても population-level representational map が保たれることを示しました。
-- 修正:
-  - trait を `trait-like backbone` として再定義し、latent dynamics、representational geometry、functional fingerprint を例示しました。
-  - `trait は単一 unit の静止画ではない` という site rule を明文化しました。
+- Issue:
+- The previous version explained trait, but it was a structure that could be misinterpreted as the immutability of a single neuron/voxel.
+- However, primary literature shows that while individual units often move, latent dynamics and representational geometry are more stable.
+- Basis:
+- Gallego et al. (2020) showed that low-dimensional latent dynamics are stable even in the presence of neuron turnover, and decoding based on aligned latent dynamics can be maintained for a long period of time.
+- Finn et al. (2015) showed that functional connectivity profiles can be used to identify individuals across cross-sessions and tasks/rests.
+- Noda et al. (2025) showed that the population-level representational map is maintained even in the presence of single-neuron tuning volatility.
+- Revision:
+- Redefined trait as `trait-like backbone` to illustrate latent dynamics, representational geometry, and functional fingerprint.
+- The site rule `trait is not a still image of a single unit` has been clarified.
 
-### 3. 旧版は state fluctuation を「短期の揺れ」としか書かず、実際には何がどれだけ効くかを示していませんでした
+### 3. The previous version only referred to state fluctuations as "short-term fluctuations" and did not actually indicate what was effective and how much.
 
-- 問題:
-  - 旧版は疲労や集中を例示するだけで、state fluctuation が neural variance の本体になりうることを示していませんでした。
-- 根拠:
-  - Musall et al. (2019) は uninstructed movements が cortex-wide activity を強く規定することを示しました。
-  - Benisty et al. (2024) は spontaneous behavior が magnitude だけでなく functional connectivity の correlational structure を高速に変えることを示しました。
-- 修正:
-  - `state fluctuation` を単なるノイズではなく、within-session で監査すべき層として独立させました。
-  - 行動・生理の同時計測と state 別性能差を最低限の評価へ入れました。
+- Issue:
+- The previous version only gave examples of fatigue and concentration, but did not show that state fluctuation could be the main source of neural variance.
+- Basis:
+- Musall et al. (2019) showed that uninstructed movements strongly regulate cortex-wide activity.
+- Benisty et al. (2024) showed that spontaneous behavior rapidly changes not only the magnitude but also the correlational structure of functional connectivity.
+- Revision:
+- Made `state fluctuation` not just noise, but an independent layer that should be audited within-session.
+- Simultaneous measurement of behavior and physiology and performance differences by state have been included in the minimum evaluation.
 
-### 4. 旧版には一次文献も longitudinal benchmark もありませんでした
+### 4. Previous edition had no primary literature or longitudinal benchmark
 
-- 問題:
-  - 参考文献節が無く、読者が何を根拠に state / trait / drift を分けるのかを追えませんでした。
-  - また、どんなログがあれば縦断評価を読めるのかが固定されていませんでした。
-- 修正:
-  - state fluctuation、trait-like backbone、representational drift、decoder drift を支える一次文献を 8 本追加しました。
-  - `state sensitivity / fixed-model stability / population backbone / recalibration burden` の 4 監査項目を表で固定しました。
+- Issue:
+- There was no bibliography section, so I couldn't follow the basis on which readers differentiate between state/trait/drift.
+- Also, it was not fixed what kind of logs were needed to read the longitudinal evaluation.
+- Revision:
+- Added 8 primary documents supporting state fluctuation, trait-like backbone, representational drift, and decoder drift.
+- Fixed the 4 audit items of `state sensitivity / fixed-model stability / population backbone / recalibration burden` as a table.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `wiki/state-trait-and-drift.md`
-  - front matter を技術・自然科学中心へ更新
-  - `4 つの層`、`旧来の 3 分類だけでは足りない理由`、`一次文献が示す現実`、`最低限分けて残すもの`、`降格ルール`、`参考文献` を新設
-  - trait を `trait-like backbone` として再定義
-  - fixed decoder interval と recalibration burden を明示
+- Updated front matter to focus on technology and natural sciences
+- Newly added `Four layers`, `Why the traditional three classifications are not enough`, `Reality shown by primary documents`, `At least what should be kept separate`, `Demotion rules`, `References`
+- Redefine trait as `trait-like backbone`
+- Explicit fixed decoder interval and recalibration burden
 - site-wide label consistency
-  - `不確実性・信頼区間・棄権` の旧リンク文言を、改題済みの `不確実性・校正・棄権` へ合わせて更新
+- Updated the old link text for `Uncertainty, Confidence Intervals and Abstentions` to match the retitled `Uncertainty, Calibration and Abstentions`
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- cross-modal longitudinal benchmark の実装
-  - 担当者: AI / maintainer / 実験系 collaborators
-  - 前提条件: 同一被験者で state 操作、長期再計測、fixed decoder hold、recalibration log を含む公開データ
-  - 完了条件: EEG / 侵襲 BCI / fMRI の少なくとも 2 系統で、同一 schema の `state sensitivity / trait backbone / drift / recalibration burden` 比較が可能になること
+- Implementation of cross-modal longitudinal benchmark
+- Person in charge: AI / maintainer / experimental collaborators
+- Prerequisites: Public data including state manipulation, long-term remeasurement, fixed decoder hold, and recalibration log for the same subject
+- Completion condition: `state sensitivity / trait backbone / drift / recalibration burden` comparison of the same schema is possible in at least two EEG/invasive BCI/fMRI systems.
 
-## 参考文献
+## References
 
 - Musall S, Kaufman MT, Juavinett AL, Gluf S, Churchland AK. Single-trial neural dynamics are dominated by richly varied movements. Nat Neurosci. 2019.
   - https://doi.org/10.1038/s41593-019-0502-4

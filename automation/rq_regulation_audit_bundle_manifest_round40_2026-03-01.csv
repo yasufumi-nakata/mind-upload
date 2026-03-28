@@ -1,11 +1,11 @@
 uid,rq_index,rq_text,bundle_component_1_ja,bundle_component_2_ja,bundle_component_3_ja,bundle_component_4_ja,min_bundle_count,bundle_ready_condition_ja,generated_at_utc
-U12,1,分岐後主体の識別子を何に基づいて付与するか。,確認URLログ,改訂日記録,見出し抽出結果,判定理由メモ,4,4要素が同一時刻帯で揃う,2026-03-01T17:49:30Z
-U12,2,責任・権利・同意の継承ルールをどの時点で分岐させるか。,時点語対照表,確認URLログ,条項見出し結果,判定理由メモ,4,時点語と見出しが一致して4要素揃う,2026-03-01T17:49:30Z
-U12,3,心理的連続性基準と法的個体基準の不一致をどう扱うか。,公式条項抽出ログ,確認URLログ,改訂日記録,保留理由または更新理由,4,条項差分有無を説明できる4要素が揃う,2026-03-01T17:49:30Z
-U12,4,技術評価（性能）と人格評価（帰属）をどう接続するか。,接続語一覧,監査語一覧,確認URLログ,判定理由メモ,4,接続語と監査語の整合が取れた4要素が揃う,2026-03-01T17:49:30Z
-U12,5,分岐主体間で記憶編集・再同期が起きた場合、法的主体IDを再編する基準は何か。,同義語正規化表,確認URLログ,改訂日記録,判定差分メモ,4,正規化後判定が固定された4要素が揃う,2026-03-01T17:49:30Z
-U12,6,同意撤回が発生したとき、複数分岐主体への権限剥奪を技術的にどう実装・監査するか。,新旧表記対照,証跡項目一覧,確認URLログ,判定理由メモ,4,表記世代一致を説明できる4要素が揃う,2026-03-01T17:49:30Z
-U15,1,神経データの機微性をどの法概念で扱うか（個人情報・生体情報・人格情報）。,法文定義行,確認URLログ,改訂日記録,差分注記,4,法文優先判定を再現できる4要素が揃う,2026-03-01T17:49:30Z
-U15,2,neurorightsを技術監査項目へどう写像するか。,写像語一覧,監査項目一覧,更新日比較ログ,判定理由メモ,4,粒度対応を説明できる4要素が揃う,2026-03-01T17:49:30Z
-U15,3,法域差（EU/US/JP等）を跨ぐ最小共通運用をどう定義するか。,法域別要件表,共通三要件表,確認URLログ,保留理由または更新理由,4,三要件有無を説明できる4要素が揃う,2026-03-01T17:49:30Z
-U15,4,技術進展に応じた停止条件・更新条件をどうガバナンス化するか。,停止条件行,周期語抽出ログ,確認URLログ,判定理由メモ,4,停止語と周期語の整合を示す4要素が揃う,2026-03-01T17:49:30Z
+U12,1,On what basis should identifiers be assigned to post-branch entities?,Confirmation URL log,Revision date record,Heading extraction results,Judgment reason memo,4,4 elements are aligned at the same time,2026-03-01T17:49:30Z
+U12,2,"At what point should the inheritance rules for responsibilities, rights, and consent diverge?",Time word comparison table,Confirmation URL log,Clause Heading Results,Judgment reason memo,4,The current word and the heading match and the 4 elements are complete.,2026-03-01T17:49:30Z
+U12,3,How should mismatches between the psychological continuity criterion and the legal individual criterion be handled?,Official clause extraction log,Confirmation URL log,Revision date record,Hold or update reason,4,There are four elements that can explain the presence or absence of clause differences.,2026-03-01T17:49:30Z
+U12,4,How should technical evaluation (performance) be connected to personhood evaluation (attribution)?,Conjunction word list,Audit word list,Confirmation URL log,Judgment reason memo,4,The four elements are aligned with the conjunctive word and the audit word.,2026-03-01T17:49:30Z
+U12,5,"If memory editing or resynchronization occurs between branched entities, what criteria should trigger reorganization of the legal entity ID?",Synonym normalization table,Confirmation URL log,Revision date record,Judgment difference memo,4,"After normalization, 4 elements with fixed judgments are available",2026-03-01T17:49:30Z
+U12,6,"When consent is withdrawn, how should revocation of permissions across multiple branched entities be implemented and audited technically?",Contrast old and new notation,Trail item list,Confirmation URL log,Judgment reason memo,4,There are four elements that can explain the notation generation agreement.,2026-03-01T17:49:30Z
+U15,1,"Under which legal concept should the sensitivity of neural data be handled (personal data, biometric data, or personhood-related data)?",Law text definition line,Confirmation URL log,Revision date record,Difference notes,4,There are four elements that can reproduce legal text priority judgment.,2026-03-01T17:49:30Z
+U15,2,How should neurorights be mapped onto technical audit items?,Mapping word list,Audit item list,Update date comparison log,Judgment reason memo,4,There are four elements that can explain granularity correspondence.,2026-03-01T17:49:30Z
+U15,3,"How should the minimum common operating model across jurisdictions (EU/US/JP, etc.) be defined?",Jurisdictional Requirements Table,Common three requirements table,Confirmation URL log,Hold or update reason,4,There are four elements that can explain the presence or absence of the three requirements.,2026-03-01T17:49:30Z
+U15,4,How should stop conditions and update conditions be governed as technology evolves?,Stop condition line,Periodic word extraction log,Confirmation URL log,Judgment reason memo,4,The four elements that indicate the consistency of the stop word and the periodic word are present.,2026-03-01T17:49:30Z

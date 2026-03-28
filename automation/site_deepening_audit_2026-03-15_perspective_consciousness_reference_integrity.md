@@ -1,90 +1,90 @@
 # Site Deepening Audit (2026-03-15, Perspective / Consciousness Metrics Reference Integrity and Construct Validity)
 
-## 対象
+## Scope
 
-- 主対象: `perspective.md`
-- 副対象: `automation/site_deepening_audit_2026-03-14_perspective_consciousness_markers.md`
+- Main target: `perspective.md`
+- Secondary target: `automation/site_deepening_audit_2026-03-14_perspective_consciousness_markers.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- `tech_roadmap.md` 側の consciousness metrics は 2026-03-15 時点でかなり整理されていましたが、`perspective.md` の `EEGで意識を測る` 節にはまだ 2 種類の弱点が残っていました。
-- 第1に、参考文献 103-105 の DOI / 書誌情報が実際の一次文献と一致していませんでした。これは単なる表記ゆれではなく、第三者が根拠をたどれないため、検証可能性そのものを壊します。
-- 第2に、本文は no-report を confound control と位置づけ直していた一方で、2025年の criterion placement 論文が示した `construct validity` の問題をまだ前面化できていませんでした。
-- したがって今回は、`内容の厳密化` と `参考文献の整合性回復` を同時に行うのが最も効くと判断しました。
+- Although consciousness metrics on the `tech_roadmap.md` side were pretty well organized as of 2026-03-15, two types of weaknesses still remained in the `Measuring consciousness with EEG` section of `perspective.md`.
+- First, the DOI/bibliographic information for references 103-105 did not match the actual primary literature. This is not just a typographical error; it also destroys verifiability because a third party cannot trace the evidence.
+- Second, while the main text repositioned no-report as confound control, it still failed to bring to the fore the problem of `construct validity` that the 2025 criterion placement paper showed.
+- Therefore, this time, I decided that it would be most effective to do ``rigorize content'' and ``restore consistency of bibliography'' at the same time.
 
-## 確認方法
+## How to check
 
-- DOI content negotiation と Crossref metadata で、`perspective.md` の 103-105 番参照先が実在の一次文献タイトルと一致するかを照合しました。
-- その後、Current Biology、European Journal of Neuroscience、Brain、eLife、Nature の一次文献メタデータを基準に、本文の主張強度と参考文献の対応を見直しました。
+- Checked whether references 103-105 of `perspective.md` match actual primary document titles using DOI content negotiation and Crossref metadata.
+- We then reviewed the correspondence between the strength of the main text's claims and the references based on primary literature metadata from Current Biology, European Journal of Neuroscience, Brain, eLife, and Nature.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. 参考文献 103-105 の誤同定は、本文以前に検証可能性を損ねていました
+### 1. Misidentification of references 103-105 compromised verifiability prior to the main text
 
-- 問題:
-  - 旧 `perspective.md` の ref-103 は `10.1016/j.cub.2025.03.031` を `Neural correlates of auditory awareness under no-report conditions` として参照していましたが、この DOI はその論文ではありませんでした。
-  - ref-104 の `10.1093/brain/awaf332` と ref-105 の `10.1093/brain/awaf287` も、本文で述べている consciousness / DoC 論文とは一致しませんでした。
-- なぜ重大か:
-  - この節は site-wide の立場表明として何度も参照される箇所です。ここで DOI がずれていると、読者は `どの論文が本当に根拠なのか` を確認できません。
-  - 科学ページでは、主張の強さ以前に `参照先が追えること` が最低条件です。
-- 修正:
-  - ref-103 を Dellert et al. (2025) `Neural correlates of consciousness in an auditory no-report fMRI study` へ差し替えました。
-  - ref-104 を Casarotto et al. (2024) `Dissociations between spontaneous electroencephalographic features and the perturbational complexity index in the minimally conscious state` へ差し替えました。
-  - ref-105 を Manasova et al. (2026) `Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness` へ差し替えました。
+- Issue:
+- The old `perspective.md` ref-103 referred to `10.1016/j.cub.2025.03.031` as `Neural correlates of auditory awareness under no-report conditions`, but this DOI was not that paper.
+- `10.1093/brain/awaf332` in ref-104 and `10.1093/brain/awaf287` in ref-105 also did not match the consciousness / DoC paper mentioned in the main text.
+- Why it's important:
+- This section is often referenced as a site-wide position statement. If the DOI is off here, the reader will not be able to see ``Which paper is really the basis?''.
+- For scientific pages, `Being able to follow the reference' is the minimum requirement before strength of argument.
+- Revision:
+- Replaced ref-103 with Dellert et al. (2025) `Neural correlates of consciousness in an auditory no-report fMRI study`.
+- Replaced ref-104 with Casarotto et al. (2024) `Dissociations between spontaneous electroencephalographic features and the perturbational complexity index in the minimally conscious state`.
+- Replaced ref-105 with Manasova et al. (2026) `Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness`.
 
-### 2. no-report を書くだけでは足りず、criterion placement を別監査にしないと construct validity が崩れます
+### 2. Writing no-report is not enough; construct validity will be broken if criterion placement is not audited separately.
 
-- 問題:
-  - 旧版は `no-report = confound control` までは書けていましたが、response criterion の揺れが neural marker の解釈を壊す点を独立した条件として固定していませんでした。
-- 根拠:
-  - Fahrenfort et al. (2025) は、criterion placement の違いだけで conscious content marker の construct validity が脅かされることを示しました。
-  - したがって、`報告させない` だけでは不十分で、`どういう基準で yes/no を置かせたか` も別ログで残す必要があります。
-- 修正:
-  - `この節で先に固定する4条件` を `5条件` に拡張し、criterion placement を独立条件として追加しました。
-  - site rule も `no-report / criterion placement = confound control` へ更新しました。
+- Issue:
+- In the old version, it was possible to write up to `no-report = confound control`, but the point where the fluctuation of the response criterion broke the interpretation of the neural marker was not fixed as an independent condition.
+- Basis:
+- Fahrenfort et al. (2025) showed that the construct validity of conscious content markers is threatened simply by differences in criterion placement.
+- Therefore, `Do not report` alone is not sufficient, and `What criteria did you use to decide yes/no` must also be recorded in a separate log.
+- Revision:
+- Extended `4 conditions fixed first in this section` to `5 conditions` and added criterion placement as an independent condition.
+- Site rule has also been updated to `no-report / criterion placement = confound control`.
 
-### 3. auditory no-report の証拠は、EEG benchmark の根拠ではなく confound-control の根拠です
+### 3. The evidence of auditory no-report is the basis of confound-control, not the basis of EEG benchmark
 
-- 問題:
-  - 旧版は auditory no-report の論文を、読者によっては `EEGで意識を測る` 主張の直接根拠のように読める構造でした。
-- 根拠:
-  - Dellert et al. (2025) の論文は auditory no-report **fMRI** study です。
-  - この論文が支持するのは、auditory domain でも no-report 設計が post-perceptual confound を切り分ける、という点であって、EEG 単独の bedside deployability ではありません。
-- 修正:
-  - `construct validity を別監査にします` という note-box を追加し、modality をまたぐ no-report evidence は `confound control の根拠としてのみ使う` と明記しました。
+- Issue:
+- The structure of the previous edition was such that some readers could read the auditory no-report paper as if it were the direct basis for a `measuring consciousness with EEG` claim.
+- Basis:
+- The paper by Dellert et al. (2025) is an auditory no-report **fMRI** study.
+- This paper supports the point that a no-report design separates post-perceptual confounds even in the auditory domain, not the bedside deployability of EEG alone.
+- Revision:
+- Added note-box `construct validity as a separate audit` and specified no-report evidence across modalities as `confound control`.
 
-### 4. multimodal validation の中身を具体化しないと、「multimodal」という言葉だけが独り歩きします
+### 4. Unless you specify the contents of multimodal validation, the word "multimodal" will take on a life of its own.
 
-- 問題:
-  - 旧版の `multimodal clinical panel` 行は概ね正しい方向でしたが、どの modality が何に効いているのかが曖昧でした。
-- 根拠:
-  - Manasova et al. (2026) は、DoC の診断 / 予後を multimodal・multisite で評価し、単一指標ではなく行動評価、HD-EEG、MRI、PET、臨床変数の束として読む必要を強めました。
-- 修正:
-  - 表現を `行動評価・HD-EEG・MRI・PET・臨床変数を束ねた multisite panel` へ変更し、multimodal を具体化しました。
+- Issue:
+- The `multimodal clinical panel` line in the old version was generally in the correct direction, but it was unclear which modality was effective for what.
+- Basis:
+- Manasova et al. (2026) reinforced the need to evaluate the diagnosis/prognosis of DoC in a multimodal/multisite manner and read it as a bundle of behavioral evaluation, HD-EEG, MRI, PET, and clinical variables rather than a single indicator.
+- Revision:
+- Changed the expression to `multisite panel that bundles behavioral evaluation, HD-EEG, MRI, PET, and clinical variables` to make multimodal more concrete.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `perspective.md`
-  - `EEGで意識を測る` 節の冒頭文を、`no-report + criterion placement + resting-state calibration + multisite validation` が読める形へ更新
-  - site rule を `no-report / criterion placement = confound control` へ更新
-  - `construct validity を別監査にします` の note-box を追加
-  - `この節で先に固定する4条件` を `5条件` へ更新
-  - phase 0 / ToDo に criterion placement 監査を追加
-  - phase 2 の spontaneous-vs-evoked 解離文献を Casarotto et al. (2024) へ訂正
-  - multimodal panel と concluding paragraph の文献を Manasova et al. (2026) へ訂正
-  - ref-103 / ref-104 / ref-105 を一次文献メタデータに合わせて修正
-  - ref-113 として Fahrenfort et al. (2025) を追加
+- Updated the opening sentence of the `Measuring consciousness with EEG` section to read `no-report + criterion placement + resting-state calibration + multisite validation`
+- Updated site rule to `no-report / criterion placement = confound control`
+- Added note-box for `construct validity as a separate audit`
+- Update `4 conditions fixed first in this section` to `5 conditions`
+- Added criterion placement audit to phase 0 / ToDo
+- Corrected phase 2 spontaneous-vs-evoked dissociation literature to Casarotto et al. (2024)
+- Corrected multimodal panel and concluding paragraph to Manasova et al. (2026)
+- Modified ref-103 / ref-104 / ref-105 to match primary literature metadata
+- Added Fahrenfort et al. (2025) as ref-113
 - `automation/site_deepening_audit_2026-03-14_perspective_consciousness_markers.md`
-  - 監査メモ内の誤った書誌情報を訂正
+- Corrected incorrect bibliographic information in audit memo
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- 同一 cohort での no-report / criterion placement / perturbation / multimodal validation の公開ベンチ実装
-  - 担当者: AI / maintainer / 実験系共同研究者
-  - 前提条件: 課題実装、臨床協力、TMS-EEG ないし代替 perturbation、行動評価との同時計測
-  - 完了条件: no-report 条件、criterion placement、PCI 系指標、outcome 予測を同一 schema で比較できる公開ログがそろうこと
+- Public bench implementation of no-report / criterion placement / perturbation / multimodal validation in the same cohort
+- Person in charge: AI / maintainer / experimental joint researcher
+- Prerequisites: task implementation, clinical collaboration, TMS-EEG or alternative perturbation, simultaneous measurement with behavioral assessment
+- Completion condition: There must be a public log that allows comparison of no-report conditions, criterion placement, PCI-based indicators, and outcome predictions using the same schema.
 
-## 参考文献
+## References
 
 - Ferrante O, et al. Adversarial testing of global neuronal workspace and integrated information theories of consciousness. *Nature*. 2025.
   - https://doi.org/10.1038/s41586-025-08888-1

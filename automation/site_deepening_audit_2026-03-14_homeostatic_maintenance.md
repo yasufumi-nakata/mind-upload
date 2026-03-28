@@ -1,89 +1,89 @@
 # Site Deepening Audit (2026-03-14, Homeostatic Maintenance States)
 
-## 対象
+## Scope
 
-- 主対象: `wiki/homeostatic-plasticity-and-maintenance-state.md`
-- 副対象: `wiki/connectome-is-not-enough.md`
-- 副対象: `verification.md`
-- 副対象: `wbe_101.md`
-- 副対象: `tech_roadmap.md`
-- 副対象: `perspective.md`
-- 副対象: `wiki/index.md`
+- Main target: `wiki/homeostatic-plasticity-and-maintenance-state.md`
+- Secondary target: `wiki/connectome-is-not-enough.md`
+- Secondary target: `verification.md`
+- Secondary target: `wbe_101.md`
+- Secondary target: `tech_roadmap.md`
+- Secondary target: `perspective.md`
+- Secondary target: `wiki/index.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- 本日の自動深掘りでは、`connectome は scaffold であって state-complete ではない` という大枠はすでに強化されていました。
-- しかし現行サイトの主な state-completeness 議論は、`細胞型 / シナプス / 遅延 / 神経修飾 / グリア` を中心にしており、`内在興奮性 / firing-rate set point / 分子ターンオーバー下の維持機構` が独立クラスとして前面に出ていませんでした。
-- この欠落は、`同じ connectome + 同じ cell type なら長期ダイナミクスもかなり決まる` という誤読を許します。技術・自然科学の観点では、これはまだ過大主張です。
+- In today's automatic deep digging, the general framework `connectome is scaffold, not state-complete` has already been strengthened.
+- However, the main state-completeness discussion on the current site is centered around `Cell type / synapse / delay / neuromodification / glia`, and `Intrinsic excitability / firing-rate set point / maintenance mechanism under molecular turnover` has not come to the fore as an independent class.
+- This omission allows for the misreading as `The same connectome + the same cell type will determine the long-term dynamics to a large extent.' From a technical and natural science perspective, this is still an exaggeration.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. 旧版は `cell type` を立てた後の `内在興奮性` を過小評価していました
+### 1. The old version underestimated `intrinsic excitability` after setting `cell type`
 
-- 問題:
-  - 旧版は transcriptomic type や same-brain function を重視していましたが、同じ type の内部にも morpho-electric phenotype と ion-channel expression の幅が残る点を、独立の不足変数として扱っていませんでした。
-  - そのため、`cell-type ラベルを付ければ threshold / gain / recovery もだいたい決まる` という誤読が残っていました。
-- 根拠:
-  - Gouwens et al. (2021) は、mouse cortex の transcriptomic type が morpho-electric space で連続的な変動を持つことを示しました。
-  - Schulz et al. (2006) は、同定済みニューロンでも ion-channel mRNA と電流量に大きな個体差があることを示しました。
-- 修正:
-  - `wiki/connectome-is-not-enough.md` と `verification.md` の state-completeness 記述を `5 クラス` から `6 クラス` へ更新しました。
-  - 新たに `内在興奮性・恒常性 set point` 行を追加しました。
+- Issue:
+- The previous version emphasized transcriptomic type and same-brain function, but did not treat the fact that even within the same type there was a range of morpho-electric phenotype and ion-channel expression as independent missing variables.
+-Therefore, the mispronunciation of `cell-type labeling roughly determines threshold / gain / recovery` remained.
+- Basis:
+- Gouwens et al. (2021) showed that the transcriptomic type of mouse cortex has continuous fluctuations in morpho-electric space.
+- Schulz et al. (2006) showed that there are large individual differences in ion-channel mRNA and current levels even among identified neurons.
+- Revision:
+- Updated the state-completeness description for `wiki/connectome-is-not-enough.md` and `verification.md` from `5 class` to `6 class`.
+- Added a new `Intrinsic excitability/homeostasis set point` line.
 
-### 2. 旧版は `今の活動値` と `どこへ戻るか` を分けていませんでした
+### 2. The old version did not separate `Current activity value` and `Where to go back`
 
-- 問題:
-  - 旧版は short-term state と synaptic state を論じていましたが、homeostatic controller と firing-rate set point を独立の技術論点として扱っていませんでした。
-  - その結果、`短時間の活動一致` と `長期安定性` が近いものとして読めてしまいました。
-- 根拠:
-  - Turrigiano et al. (1998) は homeostatic synaptic scaling を示しました。
-  - O'Leary et al. (2014) は activity-dependent channel expression から set point と compensation が生まれることを示しました。
-  - Hengen et al. (2016) は in vivo で individual neuron の precise firing-rate set point を示しました。
-- 修正:
-  - 新設した wiki で `発火率 set point / homeostatic controller` を独立の maintenance-state として整理しました。
-  - `verification.md`、`tech_roadmap.md`、`perspective.md` にも long-term claim を弱める条件として反映しました。
+- Issue:
+- Previous editions discussed short-term state and synaptic state, but did not treat homeostatic controllers and firing-rate set points as separate technical issues.
+- As a result, `short-term activity matching` and `long-term stability` were read as being close.
+- Basis:
+- Turrigiano et al. (1998) demonstrated homeostatic synaptic scaling.
+- O'Leary et al. (2014) showed that set points and compensations are generated from activity-dependent channel expressions.
+- Hengen et al. (2016) demonstrated precise firing-rate set points for individual neurons in vivo.
+- Revision:
+- Organized `firing rate set point / homeostatic controller` as an independent maintenance-state in the newly created wiki.
+- Also reflected in `verification.md`, `tech_roadmap.md`, `perspective.md` as a condition to weaken the long-term claim.
 
-### 3. 旧版は `記憶が残る` ことを `静的な保存で十分` と読み違えうる構造でした
+### 3. The old version had a structure where `memory remains` could be misread as `static storage is sufficient`
 
-- 問題:
-  - 旧版は可塑性やシナプス状態を扱っていましたが、分子ターンオーバーをまたいで記憶が維持されるとき、それが active maintenance を意味する点が正面から出ていませんでした。
-- 根拠:
-  - Yiu et al. (2014) は relative excitability が memory allocation を左右することを示しました。
-  - Lee et al. (2022) は synaptic memory が molecular turnover の下でも active な state transfer により維持されうることを示しました。
-- 修正:
-  - 新規 wiki で `分子ターンオーバー下の維持機構` を第3の maintenance-state として追加しました。
-  - `memory persistence = static molecular storage` と読まない rule を明記しました。
+- Issue:
+- The previous edition dealt with plasticity and synaptic states, but did not clearly point out that when memory is maintained across molecular turnover, this means active maintenance.
+- Basis:
+- Yiu et al. (2014) showed that relative excitability affects memory allocation.
+- Lee et al. (2022) showed that synaptic memory can be maintained by active state transfer even under molecular turnover.
+- Revision:
+- Added `Maintenance mechanism under molecular turnover` as a third maintenance-state in the new wiki.
+- Clarified the rule not to read it as `memory persistence = static molecular storage`.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `wiki/homeostatic-plasticity-and-maintenance-state.md`
-  - 新規追加
-  - `内在興奮性 / ion-channel 構成`、`発火率 set point / homeostatic controller`、`分子ターンオーバー下の維持機構` を 3 つの maintenance-state として整理
-  - 一次文献 8 本を付け、危険な誤読と site rule を明文化
+- New addition
+- Organize `intrinsic excitability / ion-channel configuration`, `firing rate set point / homeostatic controller`, `maintenance mechanism under molecular turnover` into three maintenance-states.
+- Includes 8 primary sources and clearly states dangerous misreadings and site rules.
 - `wiki/connectome-is-not-enough.md`
-  - `5 クラス` を `6 クラス` へ更新
-  - `内在興奮性・恒常性 set point` を独立行として追加
-  - 詳細説明と新 wiki への導線を追加
+- Update `5 class` to `6 class`
+- Add `Intrinsic excitability/homeostasis set point` as a separate line
+- Added detailed explanation and link to new wiki
 - `verification.md`
-  - 状態変数の完全性ゲートを `6 クラス` へ更新
-  - 新規 wiki への導線を追加
+- Updated state variable integrity gate to `6 class`
+- Added lead to new wiki
 - `wbe_101.md`
-  - 入門ページから新規 wiki への導線を追加
+- Added a link from the introductory page to the new wiki
 - `tech_roadmap.md`
-  - R 系列と M3 に `intrinsic excitability / homeostatic set point` を追加
+- Added `intrinsic excitability / homeostatic set point` to R series and M3
 - `perspective.md`
-  - 中核説明の `5 状態クラス` を `6 状態クラス` へ更新
+- Updated `5 State Class` to `6 State Class` in core description
 - `wiki/index.md`
-  - 新規 wiki の導線を追加
+- Added new wiki leads
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- human での直接的な excitability-homeostasis benchmark
-  - 担当者: 実験系 collaborators / maintainer
-  - 前提条件: 長期反復計測、perturbation、細胞内または侵襲系 ground truth、cross-day 追跡
-  - 完了条件: connectome / cell type / excitability / recovery を同一 schema で比較できる benchmark が公開されること
+- Direct human excitability-homeostasis benchmark
+- Person in charge: Experimental collaborators / maintainer
+- Prerequisites: long-term repeated measurements, perturbation, intracellular or invasive ground truth, cross-day tracking
+- Completion condition: A benchmark that can compare connectome / cell type / excitability / recovery with the same schema will be published.
 
-## 参考文献
+## References
 
 - Gouwens NW, et al. Phenotypic variation of transcriptomic cell types in mouse motor cortex. Nature. 2021.
   - https://doi.org/10.1038/s41586-020-2907-3

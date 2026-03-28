@@ -44,8 +44,8 @@ run_missing_remote_failure() {
   fi
 
   printf '%s\n' "$output"
-  [[ "$output" == *"GitHub Wiki の git リポジトリがまだ初期化されていません。"* ]] || fail "Missing remote failure message was not emitted."
-  [[ "$output" == *"想定 remote: $MISSING_REMOTE"* ]] || fail "Missing remote path was not reported."
+  [[ "$output" == *"The GitHub Wiki git repository has not been initialized yet."* ]] || fail "Missing remote failure message was not emitted."
+  [[ "$output" == *"Expected remote: $MISSING_REMOTE"* ]] || fail "Missing remote path was not reported."
   require_clean_work_root
 }
 
@@ -56,8 +56,8 @@ run_missing_remote_skip() {
   output="$(run_publish_with_env GITHUB_WIKI_REMOTE_BASE="$MISSING_REMOTE" WIKI_PUBLISH_ALLOW_SKIP=1 2>&1)" || fail "Missing remote with WIKI_PUBLISH_ALLOW_SKIP=1 should not fail."
 
   printf '%s\n' "$output"
-  [[ "$output" == *"GitHub Wiki の git リポジトリがまだ初期化されていません。"* ]] || fail "Missing remote skip message was not emitted."
-  [[ "$output" == *"WIKI_PUBLISH_ALLOW_SKIP=1 のため、失敗扱いにはしません。"* ]] || fail "Skip success message was not emitted."
+  [[ "$output" == *"The GitHub Wiki git repository has not been initialized yet."* ]] || fail "Missing remote skip message was not emitted."
+  [[ "$output" == *"Because WIKI_PUBLISH_ALLOW_SKIP=1, this will not be treated as a failure."* ]] || fail "Skip success message was not emitted."
   require_clean_work_root
 }
 
@@ -92,7 +92,7 @@ cmp "$EXPORT_DIR/_Sidebar.md" "$VERIFY_REPO/_Sidebar.md" >/dev/null || fail "Pub
 log "second-publish"
 second_output="$(run_publish_success 2>&1)"
 printf '%s\n' "$second_output"
-[[ "$second_output" == *"GitHub Wiki に反映すべき差分はありません。"* ]] || fail "Second publish did not report no diff."
+[[ "$second_output" == *"There are no GitHub Wiki changes to publish."* ]] || fail "Second publish did not report no diff."
 require_clean_work_root
 
 log "ok"

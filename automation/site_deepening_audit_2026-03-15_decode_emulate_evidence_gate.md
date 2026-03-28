@@ -1,84 +1,84 @@
 # Site Deepening Audit (2026-03-15, Decode / Emulate Evidence Gate)
 
-## 対象
+## Scope
 
-- 主対象: `wiki/decode-vs-emulate.md`
-- 副対象: `faq.md`
+- Main target: `wiki/decode-vs-emulate.md`
+- Secondary target: `faq.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- `Wiki: Decode と Emulate` はサイトの核となる境界ページですが、2026-03-15 時点では 2023 年中心の例示で止まっており、2025 年の一次文献が押し上げた `open-vocabulary non-invasive decode`、`streaming / voice-synthesis neuroprosthesis`、`long-term recalibration burden`、`connectome-constrained prediction` を site rule に落とし切れていませんでした。
-- これは技術・自然科学の観点で改善優先度が高いです。なぜなら、現状の strongest evidence は「decode がどこまで進んだか」「local subsystem の closed loop がどこまで進んだか」「connectome 制約でどこまで predictive gain が出るか」に分かれており、それらを一括で `emulation に近い` と読むと evidence gate が崩れるからです。
+- `Wiki: Decode and Emulate` is the core boundary page of the site, but as of 2026-03-15, it was stuck with examples centered on 2023, and `open-vocabulary non-invasive decode`, `streaming / voice-synthesis neuroprosthesis`, `long-term recalibration burden`, and `connectome-constrained prediction`, which were pushed up by primary literature in 2025, had not been included in the site rules.
+- This is a high priority improvement from a technical/natural science perspective. This is because the current strongest evidence is divided into "how far decoding has progressed," "how far the local subsystem's closed loop has progressed," and "how far the predictive gain can be achieved with the connectome constraint." If you read them all together as `close to emulation`, the evidence gate will collapse.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. 旧ページは 2025 年の decode frontier を取り込めておらず、非侵襲 decode の ceiling を古い粒度でしか止められていませんでした
+### 1. The old page did not incorporate the 2025 decode frontier, and the non-invasive decode ceiling could only be stopped at the old granularity.
 
-- 問題:
-  - 旧版は Tang (2023) を中心に non-invasive decode を説明していましたが、d'Ascoli et al. (2025) の 723 人規模 single-word decoding を踏まえた `open-vocabulary progress と boundary` を明示していませんでした。
-  - そのため、読者が `単語 decode が進んだ` を `自由思考の一般的読解` や `内部状態 reconstruction` へ読み替えやすい構造が残っていました。
-- 根拠:
-  - Tang et al. (2023) は semantic reconstruction の大きな前進ですが、participant cooperation を必要とする participant-specific system です。
-  - d'Ascoli et al. (2025) は open-vocabulary non-invasive word decoding の前進を示す一方、モダリティ、課題、データ量で性能が大きく変わることも示しました。
-- 修正:
-  - `wiki/decode-vs-emulate.md` に d'Ascoli (2025) を追加し、`language prior / candidate set / participant cooperation` を decode/emulate 境界の必須監査項目へ昇格しました。
-  - `faq.md` の `brain-to-text` 節も、`LM-only / no-brain / shuffle baseline` を最低確認項目へ追加しました。
+- Issue:
+- The previous edition mainly explained non-invasive decoding based on Tang (2023), but did not explicitly mention `open-vocabulary progress and boundary` based on d'Ascoli et al.'s (2025) 723-person single-word decoding.
+-Therefore, there remained a structure that made it easy for readers to read `word decoding advanced` as `free thinking general reading` or `internal state reconstruction`.
+- Basis:
+- Tang et al. (2023) is a major step forward in semantic reconstruction, but it is a participant-specific system that requires participant cooperation.
+- d'Ascoli et al. (2025) showed progress in open-vocabulary non-invasive word decoding, but also showed that performance varies greatly depending on modality, task, and amount of data.
+- Revision:
+- Added d'Ascoli (2025) to `wiki/decode-vs-emulate.md` and promoted `language prior / candidate set / participant cooperation` to mandatory audit item in decode/emulate boundary.
+- Added `LM-only / no-brain / shuffle baseline` to the `brain-to-text` section of `faq.md` to the minimum confirmation items.
 
-### 2. 旧ページは streaming speech neuroprosthesis を `高性能 decode` としか扱っておらず、deployment burden を十分に切り出せていませんでした
+### 2. The old page only dealt with streaming speech neuroprosthesis as `high-performance decode` and did not sufficiently isolate the deployment burden.
 
-- 問題:
-  - 旧版の `decode vs emulate` 境界は、offline accuracy と局所 closed loop を主に見ていました。
-  - しかし 2025 年の strongest evidence は `どれだけ速いか` だけでなく、`tail latency`、`silence / abstention`、`recalibration burden`、`cross-day deployment` を別ログとして残すべきことを示しています。
-- 根拠:
-  - Littlejohn et al. (2025) は 80 ms ごとの streaming brain-to-voice を示しました。
-  - Wairagkar et al. (2025) は 10 ms 未満の neural-to-voice synthesis と silence fallback を示しました。
-  - Wilson et al. (2025) は long-term unsupervised recalibration を扱い、daily supervised recalibration 自体が実運用の壁であることを明示しました。
-- 修正:
-  - `wiki/decode-vs-emulate.md` の evidence ladder を更新し、speech neuroprosthesis を `communication subsystem の L2〜L3` と明示しました。
-  - `5 つのゲート` に `閉ループと長期運用で安定か` を追加し、`P50/P95/P99 latency`、`silence / abstention`、`recalibration burden`、`recovery time` を必須ログへ加えました。
-  - `faq.md` でも、within-session の速さと deployable closed loop を分けて読むよう改稿しました。
+- Issue:
+- The `decode vs emulate` bound in the previous version mainly looked at offline accuracy and local closed loops.
+- However, the strongest evidence in 2025 indicates that not only `how fast` but also `tail latency`, `silence / abstention`, `recalibration burden`, and `cross-day deployment` should be logged separately.
+- Basis:
+- Littlejohn et al. (2025) showed streaming brain-to-voice every 80 ms.
+- Wairagkar et al. (2025) demonstrated neural-to-voice synthesis and silence fallback of less than 10 ms.
+- Wilson et al. (2025) dealt with long-term unsupervised recalibration and clarified that daily supervised recalibration itself is a barrier to actual operation.
+- Revision:
+- Updated evidence ladder for `wiki/decode-vs-emulate.md` to clarify speech neuroprosthesis as `communication subsystem L2~L3`.
+- Added `Stable in closed loop and long term operation` to `5 gates`, and added `P50/P95/P99 latency`, `silence / abstention`, `recalibration burden`, `recovery time` to required logs.
+- `faq.md` has also been revised to read within-session speed and deployable closed loop separately.
 
-### 3. 旧ページは connectome-constrained model を `emulate に近い方向の基盤` と述べるに留まり、縮退の壁を 2025 年水準で具体化していませんでした
+### 3. The old page only stated the connectome-constrained model as `emulate near-base` and did not specify the wall of degeneration at the 2025 level.
 
-- 問題:
-  - 旧版は MICrONS と Billeh を使って `digital twin に近い` 方向を示していましたが、connectome 制約を入れてもなぜ唯一解にならないかを、2025 年の一次文献で具体化できていませんでした。
-- 根拠:
-  - MICrONS Consortium et al. (2025) は same-brain function + connectomics の貴重な足場を与えました。
-  - Beiran & Litwin-Kumar (2025) は connectome-constrained recurrent networks でも、unrecorded neurons や未測定 biophysical parameter が残ると teacher dynamics の回復が一意にならないことを示しました。
-  - Prinz et al. (2004) は古典的に、似た network activity が異なる circuit parameter から出ることを示しています。
-- 修正:
-  - `wiki/decode-vs-emulate.md` に `connectome-constrained prediction → unique internal mechanism` を禁止する表を追加しました。
-  - 併せて、`connectome-only baseline と augmentation 比較`、`family comparison`、`latent state 監査` を G5 として固定しました。
+- Issue:
+- The previous version used MICrONS and Billeh to indicate the `close to digital twin` direction, but the primary literature in 2025 did not specify why it was not the only solution even with the connectome constraint.
+- Basis:
+- MICrONS Consortium et al. (2025) provided valuable scaffolding for same-brain function + connectomics.
+- Beiran & Litwin-Kumar (2025) showed that even with connectome-constrained recurrent networks, the recovery of teacher dynamics is not unique if unrecorded neurons and unmeasured biophysical parameters remain.
+- Prinz et al. (2004) classically shows that similar network activities arise from different circuit parameters.
+- Revision:
+- Added a table that prohibits `connectome-constrained prediction → unique internal mechanism` to `wiki/decode-vs-emulate.md`.
+- In addition, `connectome-only baseline and augmentation comparison`, `family comparison`, and `latent state audit` have been fixed as G5.
 
-### 4. FAQ の短い答えが、最新の evidence gate を十分に圧縮できていませんでした
+### 4. Short answer in FAQ didn't compress the latest evidence gate enough
 
-- 問題:
-  - FAQ は入口として有用ですが、`brain-to-text のデモを見るとき` と `decode / emulate の違い` の答えは、2025 年の strongest evidence を読むには少し短すぎました。
-- 修正:
-  - `faq.md` の Q1b、Q2、Q5b を更新し、prior baseline、silence / abstention、recalibration burden、cross-day 劣化を短い形で追加しました。
+- Issue:
+- The FAQ is a useful starting point, but the answers for `When watching the brain-to-text demo` and `The difference between decode / emulate` were a little too short to read the strongest evidence in 2025.
+- Revision:
+- Updated Q1b, Q2, Q5b of `faq.md` and added prior baseline, silence/abstention, recalibration burden, and cross-day degradation in short form.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `wiki/decode-vs-emulate.md`
-  - `last_updated` を 2026-03-15 に更新
-  - 2025 年文献を反映して front matter を更新
-  - evidence ladder を `d'Ascoli / Tang / Willett / Littlejohn / Wairagkar / Flesher / MICrONS / Beiran` ベースへ改稿
-  - `2026-03 文献監査：ここで禁止する 3 つの読み替え` を追加
-  - `decode を emulate と読み替える前の 5 つのゲート` へ更新
-  - site rule を `prior 超過 / cross-day / intervention / deployment / state completeness` の 5 軸へ改めた
+- `last_updated` updated to 2026-03-15
+- Updated front matter to reflect 2025 literature.
+- Revised evidence ladder to `d'Ascoli / Tang / Willett / Littlejohn / Wairagkar / Flesher / MICrONS / Beiran` base
+- Added `2026-03 Literature Audit: Three Replacements Prohibited Here`
+- Updated to `5 gates before replacing decode with emulate`
+- Changed site rule to 5 axes of `prior excess / cross-day / intervention / deployment / state completeness`
 - `faq.md`
-  - Q1b に `LM-only / no-brain / shuffle baseline`、`silence / abstention`、`長期運用` を追加
-  - Q2 を、2025 年 decode / subsystem closed-loop を踏まえた読み替え禁止へ更新
-  - Q5b を、Littlejohn / Wairagkar / Wilson ベースの long-term closed-loop 読みへ更新
+- Added `LM-only / no-brain / shuffle baseline`, `silence / abstention`, `long-term operation` to Q1b.
+- Updated Q2 to prohibit replacement based on 2025 decode / subsystem closed-loop
+- Updated Q5b to long-term closed-loop reading based on Littlejohn / Wairagkar / Wilson
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- decode / emulate を横断する公開 benchmark の実データ整備
-  - 担当者: AI / maintainer / 実験系 collaborators
-  - 前提条件: `LM-only`、`no-brain`、`shuffle`、`OOD`、`cross-day`、`silence / abstention`、`recalibration burden`、`state-variable augmentation` を同一 schema で比較できる公開ログがあること
-  - 完了条件: `見た目の出力が良い`、`communication subsystem が良い`、`state-complete emulate に近い` を同じ score に潰さず、別の評価軸として公開比較できること
+- Real data preparation of public benchmarks that cross decode / emulate
+- Person in charge: AI / maintainer / experimental collaborators
+- Prerequisite: There is a public log that can compare `LM-only`, `no-brain`, `shuffle`, `OOD`, `cross-day`, `silence / abstention`, `recalibration burden`, `state-variable augmentation` with the same schema.
+- Completion condition: `good visual output`, `good communication subsystem`, `close to state-complete emulate` can be compared publicly as separate evaluation axes without collapsing them into the same score.
 
-## 参考文献
+## References
 
 - Tang J, LeBel A, Jain S, et al. Semantic reconstruction of continuous language from non-invasive brain recordings. *Nat Neurosci*. 2023.
   - https://doi.org/10.1038/s41593-023-01304-9

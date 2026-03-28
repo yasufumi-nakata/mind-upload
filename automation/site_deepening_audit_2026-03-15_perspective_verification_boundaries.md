@@ -1,84 +1,84 @@
 # Site Deepening Audit (2026-03-15, Perspective / Verification Boundaries)
 
-## 対象
+## Scope
 
-- 主対象: `perspective.md`
+- Main target: `perspective.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- `perspective.md` はサイト内でもっとも立場表明として参照されやすい長文ページです。
-- 2026-03-15 時点で、各論の更新は進んでいましたが、`Decoding → Emulation` 節ではなお `局所 connectomics`、`非侵襲 source imaging`、`sleep 依存の maintenance-state`、`closed-loop intervention`、`thermodynamic readout` が一つの「難しさ」に見えやすい構造が残っていました。
-- これは技術・自然科学の観点で改善優先度が高いです。なぜなら、別種類の前進を同列に読むと、`局所 digital twin` を `human whole-brain state-complete` に、`良い decode / localization` を `一意復元` に、`局所 causal gain` を `WBE 検証` に過大評価しやすいからです。
+- `perspective.md` is a long page that is most easily referenced as a position statement on the site.
+- As of 2026-03-15, each theory has been updated, but in the `Decoding → Emulation` section, there still remained a structure where `local connectomics`, `non-invasive source imaging`, `sleep-dependent maintenance-state`, `closed-loop intervention`, and `thermodynamic readout` were seen easily as one "difficulty".
+- This is a high priority improvement from a technical/natural science perspective. This is because if we read different types of advances in the same way, we tend to overestimate `local digital twin` to `human whole-brain state-complete`, `good decode / localization` to `unique restoration`, and `local causal gain` to `WBE validation`.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. Observability と identifiability が混ざっていました
+### 1. Observability and identifiability were mixed
 
-- 問題:
-  - 旧版は `計測の前進` と `内部状態の一意復元` の境界を、箇条書きでは示していても表として固定していませんでした。
-  - そのため、局所 connectomics や source imaging の改善を、そのまま `全脳状態がかなり見えた` と誤読する余地がありました。
-- 根拠:
-  - Dorkenwald et al. (2024) は成体ショウジョウバエ全脳の wiring diagram を示しました。
-  - MICrONS Consortium et al. (2025) は単一マウス 1 mm³ 皮質で same-brain function / connectomics の対応を前進させましたが、human whole-brain ではありません。
-  - Michel & Brunet (2019) と Aydin et al. (2019) は、EEG inverse problem がなお head model と導電率仮定に依存することを整理しています。
-  - Frässle et al. (2021) は model-family comparison を前進させましたが、一般的一意復元を保証したわけではありません。
-- 修正:
-  - `observability` と `identifiability` を別行にした表を追加しました。
-  - `local digital twin / ESI / whole-brain WBE` を同列に書かない site rule を本文へ明記しました。
+- Issue:
+- In the previous version, the boundary between `Measurement advancement` and `Unique restoration of internal state` was not fixed as a table even though it was indicated in bullet points.
+-Therefore, there was room to misread improvements in local connectomics and source imaging as `whole brain status was much more visible`.
+- Basis:
+- Dorkenwald et al. (2024) showed a wiring diagram of the adult Drosophila whole brain.
+- MICrONS Consortium et al. (2025) advanced same-brain function / connectomics correspondence in a single mouse 1 mm³ cortex, but not in a human whole-brain.
+- Michel & Brunet (2019) and Aydin et al. (2019) clarify that the EEG inverse problem still depends on the head model and conductivity assumption.
+- Frässle et al. (2021) advanced model-family comparison, but did not guarantee general uniqueness recovery.
+- Revision:
+- Added a table with `observability` and `identifiability` on separate lines.
+- Added a site rule to the text that does not allow `local digital twin / ESI / whole-brain WBE` to be written in the same line.
 
-### 2. maintenance-state の壁が `connectome は足りない` の一言で圧縮されすぎていました
+### 2. The maintenance-state wall was too compressed with the word `connectome is missing`
 
-- 問題:
-  - 旧版でも hidden state は触れていましたが、sleep / wake、髄鞘、glial / metabolic support が `cross-day claim を止める独立の壁` としては固定されていませんでした。
-  - そのため、same-day の activity match や decode 成績が、overnight maintenance や timing-sensitive stability の証拠に近いように見える余地が残っていました。
-- 根拠:
-  - Hengen et al. (2016)、Torrado Pacheco et al. (2021)、Xu et al. (2024) は sleep / wake に依存した homeostatic recovery を示しました。
-  - Looser et al. (2024) は oligodendrocyte-axon metabolic coupling を示しました。
-  - Cahill et al. (2024) と Lee et al. (2022) は glial / active maintenance を強めました。
-- 修正:
-  - `maintenance-state の壁` を独立行として追加しました。
-  - `cross-day claim では maintenance-state の縦断ログが必要` と本文へ明記しました。
+- Issue:
+- Hidden state was mentioned in the previous version, but sleep/wake, myelin sheath, and glial/metabolic support were not fixed as `an independent wall to stop cross-day claims`.
+- This left room for the same-day activity match and decode results to appear more like evidence of overnight maintenance and timing-sensitive stability.
+- Basis:
+- Hengen et al. (2016), Torrado Pacheco et al. (2021), and Xu et al. (2024) showed sleep/wake-dependent homeostatic recovery.
+- Looser et al. (2024) demonstrated oligodendrocyte-axon metabolic coupling.
+- Cahill et al. (2024) and Lee et al. (2022) strengthened glial / active maintenance.
+- Revision:
+- Added `maintenance-state wall` as a separate line.
+- Added `cross-day claim requires maintenance-state longitudinal log` to the text.
 
-### 3. intervention evidence の局所性が弱く、closed-loop 成功を上位主張へ読み替えやすい構造でした
+### 3. The locality of the intervention evidence was weak, and the structure made it easy to interpret closed-loop success as a higher-level claim.
 
-- 問題:
-  - 旧版は causal evidence の重要性は強調していましたが、どの介入が `局所 subsystem evidence` で、どこから先が未支持かが表で固定されていませんでした。
-- 根拠:
-  - Hernandez-Pavon et al. (2023) は TMS-EEG の比較可能性に必要な刺激条件・マスキング・artifact 管理を整理しました。
-  - Flesher et al. (2021) は双方向 BCI による局所 causal gain を示しました。
-  - Oehrn et al. (2024) は adaptive DBS の臨床 feasibility を前進させましたが、疾患条件つきの local loop です。
-- 修正:
-  - `intervention の壁` を独立行として追加しました。
-  - `受動観測 / held-out perturbation / online loop / 長期適応運用` を段階証拠として分けて読む方針へ改めました。
+- Issue:
+- The previous version emphasized the importance of causal evidence, but it was not fixed in the table which interventions were `local subsystem evidence` and which were unsupported.
+- Basis:
+- Hernandez-Pavon et al. (2023) organized the stimulus conditions, masking, and artifact management necessary for TMS-EEG comparability.
+- Flesher et al. (2021) showed local causal gain with bidirectional BCI.
+- Oehrn et al. (2024) advanced the clinical feasibility of adaptive DBS, but in a local loop with disease conditions.
+- Revision:
+- Added `intervention wall` as a separate line.
+- Changed the policy to read `passive observation / held-out perturbation / online loop / long-term adaptive operation` as separately staged evidence.
 
-### 4. thermodynamic readout が補助ログであることは書かれていましたが、他の壁との相対位置が曖昧でした
+### 4. It was written that the thermodynamic readout was an auxiliary log, but its relative position to other walls was ambiguous.
 
-- 問題:
-  - 旧版は thermodynamic caution 自体は正しかったものの、observability / intervention と並べた相対位置が弱く、読者が `物理制約に触れたから一段強い` と感じやすい構造でした。
-- 根拠:
-  - Lynn et al. (2021) と de la Fuente et al. (2022) が示したのは coarse-grained neural dynamics の irreversibility シグネチャです。
-  - Ishihara & Shimazaki (2025) は spiking から arrow of time を安定に推定する難しさを残しています。
-- 修正:
-  - `thermodynamic readout の壁` を表へ明示し、補助ログである位置づけを他の壁と並べて固定しました。
+- Issue:
+- In the previous version, although thermodynamic caution itself was correct, its relative position alongside observability/intervention was weak, and the structure made it easy for readers to feel that it was ``stronger due to exposure to physical constraints.''
+- Basis:
+- What Lynn et al. (2021) and de la Fuente et al. (2022) showed is the irreversibility signature of coarse-grained neural dynamics.
+- Ishihara & Shimazaki (2025) remains difficult to stably estimate arrow of time from spiking.
+- Revision:
+- `thermodynamic readout wall` has been clearly displayed in the table, and its position as an auxiliary log has been fixed alongside other walls.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `perspective.md`
-  - `last_updated` を 2026-03-15 に更新
-  - `page_highlights` / `known_points` / `wiki_links` を、verification boundary を読みやすい方向へ更新
-  - `Decoding → Emulation` 節に `5つの壁` の表を追加
-  - `この節で禁止する読み替え` を note-box で追加
-  - `最低限の証拠鎖` に `cross-day を含む maintenance-state ログ` を追加
-  - `Limitations` の工学的限界を `observability / identifiability / maintenance-state / intervention scope` の4本柱へ再編
+- `last_updated` updated to 2026-03-15
+- Updated `page_highlights` / `known_points` / `wiki_links` to make the verification boundary easier to read.
+- Added `5 walls` table to `Decoding → Emulation` section
+- Added `Replacement prohibited in this section` in note-box
+- Add `maintenance-state logs including cross-day` to `minimum evidence chain`
+- Reorganized the engineering limits of `Limitations` into the four pillars of `observability / identifiability / maintenance-state / intervention scope`
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- cross-day maintenance-state benchmark の公開データ整備
-  - 担当者: AI / maintainer / 実験系共同研究者
-  - 前提条件: sleep state、recovery、myelin / glial proxy、intervention log を同一個体で追える公開データ
-  - 完了条件: same-day fit、cross-day stability、online perturbation を同一 schema で比較できること
+- Public data preparation for cross-day maintenance-state benchmark
+- Person in charge: AI / maintainer / experimental joint researcher
+- Prerequisite: Public data that can track sleep state, recovery, myelin / glial proxy, and intervention log in the same individual
+- Completion condition: same-day fit, cross-day stability, and online perturbation can be compared using the same schema.
 
-## 参考文献
+## References
 
 - Dorkenwald S, et al. Neuronal wiring diagram of an adult brain. *Nature*. 2024.
   - https://doi.org/10.1038/s41586-024-07558-y

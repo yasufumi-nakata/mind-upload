@@ -1,11 +1,11 @@
 uid,rq_index,rq_text,review_basis_ja,trigger_match,threshold_exceeded,raise_candidate,review_comment_ja,next_review_utc,generated_at_utc
-U12,1,分岐後主体の識別子を何に基づいて付与するか。,high監視レビュー,no,no,no,差分未検出のためkeep_watch,2026-03-08T14:38:23Z,2026-03-01T20:46:55Z
-U12,2,責任・権利・同意の継承ルールをどの時点で分岐させるか。,定期監視レビュー,no,no,no,更新未検出のためkeep_watch,2026-03-08T14:38:23Z,2026-03-01T20:46:55Z
-U12,3,心理的連続性基準と法的個体基準の不一致をどう扱うか。,high監視レビュー,no,no,no,条件語変化なしのためkeep_watch,2026-03-08T14:38:23Z,2026-03-01T20:46:55Z
-U12,4,技術評価（性能）と人格評価（帰属）をどう接続するか。,定期監視レビュー,no,no,no,監査語追加なしのためkeep_watch,2026-03-08T14:38:23Z,2026-03-01T20:46:55Z
-U12,5,分岐主体間で記憶編集・再同期が起きた場合、法的主体IDを再編する基準は何か。,定期監視レビュー,no,no,no,同義語追加なしのためkeep_watch,2026-03-08T14:38:23Z,2026-03-01T20:46:55Z
-U12,6,同意撤回が発生したとき、複数分岐主体への権限剥奪を技術的にどう実装・監査するか。,定期監視レビュー,no,no,no,表記更新なしのためkeep_watch,2026-03-08T14:38:23Z,2026-03-01T20:46:55Z
-U15,1,神経データの機微性をどの法概念で扱うか（個人情報・生体情報・人格情報）。,high監視レビュー,no,no,no,法文改訂なしのためkeep_watch,2026-03-08T14:38:23Z,2026-03-01T20:46:55Z
-U15,2,neurorightsを技術監査項目へどう写像するか。,定期監視レビュー,no,no,no,粒度更新なしのためkeep_watch,2026-03-08T14:38:23Z,2026-03-01T20:46:55Z
-U15,3,法域差（EU/US/JP等）を跨ぐ最小共通運用をどう定義するか。,high監視レビュー,no,no,no,三要件変化なしのためkeep_watch,2026-03-08T14:38:23Z,2026-03-01T20:46:55Z
-U15,4,技術進展に応じた停止条件・更新条件をどうガバナンス化するか。,定期監視レビュー,no,no,no,周期語追記なしのためkeep_watch,2026-03-08T14:38:23Z,2026-03-01T20:46:55Z
+U12,1,On what basis should identifiers be assigned to post-branch entities?,high surveillance review,no,no,no,keep_watch because difference not detected,2026-03-08T14:38:23Z,2026-03-01T20:46:55Z
+U12,2,"At what point should the inheritance rules for responsibilities, rights, and consent diverge?",Regular monitoring review,no,no,no,keep_watch because no update detected,2026-03-08T14:38:23Z,2026-03-01T20:46:55Z
+U12,3,How should mismatches between the psychological continuity criterion and the legal individual criterion be handled?,high surveillance review,no,no,no,keep_watch because there is no conditional change,2026-03-08T14:38:23Z,2026-03-01T20:46:55Z
+U12,4,How should technical evaluation (performance) be connected to personhood evaluation (attribution)?,Regular monitoring review,no,no,no,keep_watch because no audit word is added,2026-03-08T14:38:23Z,2026-03-01T20:46:55Z
+U12,5,"If memory editing or resynchronization occurs between branched entities, what criteria should trigger reorganization of the legal entity ID?",Regular monitoring review,no,no,no,keep_watch because no synonyms added,2026-03-08T14:38:23Z,2026-03-01T20:46:55Z
+U12,6,"When consent is withdrawn, how should revocation of permissions across multiple branched entities be implemented and audited technically?",Regular monitoring review,no,no,no,keep_watch because the notation has not been updated,2026-03-08T14:38:23Z,2026-03-01T20:46:55Z
+U15,1,"Under which legal concept should the sensitivity of neural data be handled (personal data, biometric data, or personhood-related data)?",high surveillance review,no,no,no,keep_watch because there is no revision of the legal text,2026-03-08T14:38:23Z,2026-03-01T20:46:55Z
+U15,2,How should neurorights be mapped onto technical audit items?,Regular monitoring review,no,no,no,keep_watch due to no granularity updates,2026-03-08T14:38:23Z,2026-03-01T20:46:55Z
+U15,3,"How should the minimum common operating model across jurisdictions (EU/US/JP, etc.) be defined?",high surveillance review,no,no,no,keep_watch because three requirements do not change,2026-03-08T14:38:23Z,2026-03-01T20:46:55Z
+U15,4,How should stop conditions and update conditions be governed as technology evolves?,Regular monitoring review,no,no,no,keep_watch because periodic words are not added,2026-03-08T14:38:23Z,2026-03-01T20:46:55Z

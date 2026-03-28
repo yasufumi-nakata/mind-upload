@@ -1,91 +1,91 @@
 # Site Deepening Audit (2026-03-15, Event Fidelity / Semantics / Synchronization)
 
-## 対象
+## Scope
 
-- 主対象: `wiki/event-sync-and-measurement-logs.md`
-- 副対象: `datasets.md`
-- 補助対象: `wiki/standards-repositories-validators-and-benchmarks.md`
+- Main target: `wiki/event-sync-and-measurement-logs.md`
+- Secondary target: `datasets.md`
+- Subsidy target: `wiki/standards-repositories-validators-and-benchmarks.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- 技術・自然科学の観点で、現行サイトの次の弱点は `event sync / annotation fidelity` だと判断しました。
-- 理由は、現行本文が「イベントと同期が重要」とは正しく述べていても、`時刻の器`、`イベント意味論`、`clock alignment`、`device-side delay` をまだ十分に分離できていなかったためです。
-- この弱点は入口実務に直結します。波形とラベルが公開されていても、イベント意味論と時計系が曖昧なら、EEG の強みである時間忠実度そのものが崩れるからです。
+- From a technical/natural science perspective, we have determined that the next weakness of the current site is `event sync / annotation fidelity`.
+- The reason is that even though the current text correctly states that "events and synchronization are important," it has not yet sufficiently separated `timestamp tables`, `event semantics`, `clock alignment`, and `device-side delay`.
+- This weakness is directly related to entrance practices. Even if the waveforms and labels are made public, if the event semantics and clock system are ambiguous, the time fidelity that is the strength of EEG will collapse.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. 旧ページは `events.tsv` を event fidelity 全体と近いものとして読ませる余地がありました
+### 1. The old page had room to read `events.tsv` as something close to the whole event fidelity
 
-- 問題:
-  - 現行の `wiki/event-sync-and-measurement-logs.md` は event marker と label provenance の重要性を正しく述べていましたが、`BIDS task events` が与えるのは主に時刻と列の器であり、cross-study 比較に必要な意味論そのものではないことを十分に前面化できていませんでした。
-  - そのため、`events.tsv` があるだけで event semantics まで固定されたと誤読する余地が残っていました。
-- 根拠:
-  - BIDS の task events 仕様は `events.tsv` と sidecar JSON による記述枠を与えます。
-  - Robbins et al. (2021) は、既存の時系列データ標準だけでは event description に重要な details が欠けやすく、HED が FAIR な event annotation を補うと示しました。
-  - Hermes et al. (2025) は、HED library schema により EEG data annotation を machine-actionable に整理できることを示しました。
-- 修正:
-  - `wiki/event-sync-and-measurement-logs.md` に `イベント忠実度は 3 層で監査します` 節を追加し、`時間アンカー / イベント意味論 / 同期と輸送` を分離しました。
-  - 同ページの EEG-BIDS 節に `events.json と HED` を追加しました。
+- Issue:
+- The current `wiki/event-sync-and-measurement-logs.md` correctly stated the importance of event markers and label provenance, but it did not fully emphasize that `BIDS task events` mainly provides time and column instruments, and not the semantics itself necessary for cross-study comparisons.
+- Therefore, there was still room for misinterpretation that the event semantics were fixed just by having `events.tsv`.
+- Basis:
+- The BIDS task events specification provides a description frame with `events.tsv` and sidecar JSON.
+- Robbins et al. (2021) showed that existing time series data standards tend to lack important details in event descriptions, and HED supplements FAIR event annotation.
+- Hermes et al. (2025) showed that EEG data annotation can be organized in a machine-actionable manner using the HED library schema.
+- Revision:
+- Added `Event fidelity audits in three layers` clause to `wiki/event-sync-and-measurement-logs.md` and separated `Temporal Anchors / Event Semantics / Synchronization and Transport`.
+- Added `events.json and HED` to the EEG-BIDS section on the same page.
 
-### 2. 旧ページは LSL の有効範囲を十分に切り分けていませんでした
+### 2. The old page did not sufficiently isolate the scope of LSL
 
-- 問題:
-  - 現行ページは遅延・ジッタ・ドリフトを説明していましたが、LSL のような同期ミドルウェアが何を解決し、何を解決しないかが十分に書かれていませんでした。
-  - そのため、LSL や trigger があるだけで hardware delay まで ground-truth 化されたように読める構造が残っていました。
-- 根拠:
-  - Kothe et al. (2025) は、LSL がネットワーク遅延・ジッタを扱い millisecond precision の recording を支える一方、input device の throughput delay や on-device processing delay は software timestamps だけでは推定・補正できないことを明記しました。
-- 修正:
-  - `wiki/event-sync-and-measurement-logs.md` に `LSL は有力ですが、hardware ground truth ではありません` 節を追加しました。
-  - `timestamp domain`、`device-side delay`、`drift / resync policy`、`validation method` を別ログとして残す site rule を明記しました。
-  - `wiki/standards-repositories-validators-and-benchmarks.md` にも、LSL は同期ミドルウェアであって BIDS や benchmark の代替ではないことを追加しました。
+- Issue:
+- The current page explained latency, jitter, and drift, but it didn't say enough about what synchronization middleware like LSL does and doesn't solve.
+- Therefore, there remained a structure that could be read as if the hardware delay had been converted into ground-truth just by having LSL and trigger.
+- Basis:
+- Kothe et al. (2025) clearly stated that while LSL handles network delay and jitter and supports recording with millisecond precision, input device throughput delay and on-device processing delay cannot be estimated and corrected using software timestamps alone.
+- Revision:
+- Added `LSL is valid, but not hardware ground truth` clause to `wiki/event-sync-and-measurement-logs.md`.
+- Specified site rule to leave `timestamp domain`, `device-side delay`, `drift / resync policy`, and `validation method` as separate logs.
+- Also added to `wiki/standards-repositories-validators-and-benchmarks.md` that LSL is a synchronization middleware and not a replacement for BIDS or benchmark.
 
-### 3. 旧 datasets 導線は annotation provenance を重視していましたが、event semantics と sync evidence を dataset card の必須欄として固定していませんでした
+### 3. The old datasets path emphasized annotation provenance, but did not fix event semantics and sync evidence as required fields in the dataset card.
 
-- 問題:
-  - `datasets.md` はラベル provenance と時間粒度をかなり明確にしていましたが、dataset card の最小提出物として `clock domain`、`delay / jitter audit`、`event semantics` をまだ必須欄にしていませんでした。
-  - これでは、dataset 名とラベル由来だけを揃えても、時間忠実度の監査が抜ける余地がありました。
-- 根拠:
-  - BIDS EEG と EEG-BIDS は共有可能な metadata の床を与えますが、event semantics と clock audit を追加しなければ time-aligned benchmark には不十分です。
-  - Motion-BIDS (Jeung et al., 2024) は、追加モダリティでは metadata と coordinate frame が解釈の中核であることを示しました。
-- 修正:
-  - `datasets.md` に `Event Fidelity Card` 注記を追加しました。
-  - dataset card の site rule を `provenance / time grain / clock domain と sync evidence / event semantics / split unit / stop claim` の 6 項目へ拡張しました。
+- Issue:
+- `datasets.md` made the label provenance and time granularity fairly clear, but did not yet make `clock domain`, `delay / jitter audit`, and `event semantics` required fields as the minimum submission for the dataset card.
+- In this case, even if only the dataset name and label origin were aligned, there was a possibility that the time fidelity audit could be missed.
+- Basis:
+- BIDS EEG and EEG-BIDS provide a floor of shareable metadata, but are insufficient for time-aligned benchmarks without adding event semantics and clock audit.
+- Motion-BIDS (Jeung et al., 2024) showed that in additional modalities, metadata and coordinate frame are the core of interpretation.
+- Revision:
+- Added `Event Fidelity Card` note to `datasets.md`.
+- Expanded the site rule of dataset card to 6 items of `provenance / time grain / clock domain and sync evidence / event semantics / split unit / stop claim`.
 
-### 4. 旧 standards ページは BIDS・repository・validator・benchmark の区別はできていましたが、`event semantics` と `synchronization middleware` の層が抜けていました
+### 4. The old standards page was able to distinguish between BIDS, repository, validator, and benchmark, but the `event semantics` and `synchronization middleware` layers were missing.
 
-- 問題:
-  - `wiki/standards-repositories-validators-and-benchmarks.md` は 5 層整理として有用でしたが、2026-03 時点の実務では、BIDS の器、HED / Motion-BIDS の意味論、LSL の同期を別層として扱う必要があります。
-- 修正:
-  - 同ページの operational stack を 7 層へ更新しました。
-  - `HED / Motion-BIDS` を `イベント意味論 / 拡張 schema`、`LSL` を `同期ミドルウェア` として追加しました。
-  - `ありがちな混同` 表へ、`events.tsv があるので semantics まで固定された` と `LSL を使ったので hardware 遅延まで解決した` を追記しました。
+- Issue:
+- `wiki/standards-repositories-validators-and-benchmarks.md` was useful as a five-layer arrangement, but in practice as of 2026-03, it is necessary to treat BIDS vessels, HED / Motion-BIDS semantics, and LSL synchronization as separate layers.
+- Revision:
+- The operational stack on the same page has been updated to 7 layers.
+- Added `HED/Motion-BIDS` as `Event Semantics/Extension schema` and `LSL` as `Synchronization Middleware`.
+- Added ``Events.tsv'' has fixed semantics and ``Since LSL was used, hardware delay has been resolved.'' to the ``Common confusions'' table.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `wiki/event-sync-and-measurement-logs.md`
-  - イベント忠実度を 3 層に分ける節を追加
-  - LSL の有効範囲と限界を説明する節を追加
-  - EEG-BIDS 節に `events.json + HED`、`clock / sync log`、`*_coordsystem.json` を追加
-  - `Event Fidelity Card` を site rule として追加
-  - 参考文献を BIDS / HED / LSL / Motion-BIDS まで拡張
+- Added a section that divides event fidelity into three tiers.
+- Added section explaining scope and limitations of LSL
+- Added `events.json + HED`, `clock / sync log`, `*_coordsystem.json` to EEG-BIDS clause.
+- Added `Event Fidelity Card` as site rule
+- Expanded references to BIDS / HED / LSL / Motion-BIDS
 - `datasets.md`
-  - `raw EEG があるだけでは足りない` 節を更新
-  - `Event Fidelity Card` 注記を追加
-  - dataset card の必須欄を 6 項目へ拡張
-  - 参考文献に BIDS task events、HED、LSL、Motion-BIDS を追加
+- Updated `Just having raw EEG is not enough` section
+- `Event Fidelity Card` Added note
+- Expanded required fields of dataset card to 6 items
+- Added BIDS task events, HED, LSL, Motion-BIDS to references
 - `wiki/standards-repositories-validators-and-benchmarks.md`
-  - 5 層整理を 7 層整理へ更新
-  - HED / Motion-BIDS / LSL を別層として追加
-  - ありがちな混同表へ 2 行を追加
+- Updated 5-layer organization to 7-layer organization
+- Added HED / Motion-BIDS / LSL as separate layer
+- Added 2 rows to common confusion table
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- hardware delay を含む site-wide event fidelity template の実測運用
-  - 担当者: AI / maintainer / 実験系共同研究者
-  - 前提条件: photodiode、loopback、TTL などの測定経路を実機で運用できること
-  - 完了条件: EEG + stimulus + motion の各実験 run について、clock domain、device-side delay、validation method を同一テンプレートで残せること
+- Actual measurement of site-wide event fidelity template including hardware delay
+- Person in charge: AI / maintainer / experimental joint researcher
+- Prerequisite: Ability to operate measurement paths such as photodiode, loopback, and TTL on actual equipment.
+- Completion condition: Clock domain, device-side delay, and validation method must be the same template for each EEG + stimulus + motion experiment run.
 
-## 参考文献
+## References
 
 - BIDS Specification. Task events.
   - https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/events.html

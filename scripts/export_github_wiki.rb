@@ -14,7 +14,7 @@ IGNORED_NOISE_FILES = [".DS_Store"].freeze
 IGNORED_NOISE_PREFIXES = ["._"].freeze
 
 SIDEBAR_GROUPS = {
-  "入口と読み方" => %w[
+  "Start and Navigation" => %w[
     Home
     public-page-reading-guide
     page-header-reading-guide
@@ -22,7 +22,7 @@ SIDEBAR_GROUPS = {
     first-30-minutes-by-goal
     claim-level-reading-routes
   ],
-  "基礎" => %w[
+  "Foundations" => %w[
     mind-upload-basics
     claims-and-evidence
     eeg-basics
@@ -30,7 +30,7 @@ SIDEBAR_GROUPS = {
     known-unknown-and-status-reading
     facts-hypotheses-proposals-and-tasks
   ],
-  "理論・検証" => %w[
+  "Theory and Verification" => %w[
     roadmap-reading-guide
     theory-pages-reading-guide
     practical-pages-reading-guide
@@ -38,7 +38,7 @@ SIDEBAR_GROUPS = {
     counterfactual-and-perturbation-verification
     identity-and-continuity-tests
   ],
-  "文献・参加" => %w[
+  "Literature and Participation" => %w[
     literature-and-evidence-reading
     paper-source-types-and-evidence-status
     proposal-status-reading
@@ -172,47 +172,47 @@ def render_page(front_matter, body, slug)
   lines << ""
   lines << "> #{front_matter["subtitle"]}" if front_matter["subtitle"]
   lines << ">"
-  lines << "> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](#{PUBLIC_SITE}) 側で管理しています。"
+  lines << "> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](#{PUBLIC_SITE})."
   lines << ""
 
   meta = []
-  meta << "更新日: #{front_matter["last_updated"]}" if front_matter["last_updated"]
-  meta << "位置づけ: #{front_matter["note"]}" if front_matter["note"]
+  meta << "Updated: #{front_matter["last_updated"]}" if front_matter["last_updated"]
+  meta << "Role: #{front_matter["note"]}" if front_matter["note"]
   lines << "- #{meta.join(" / ")}" unless meta.empty?
   lines << ""
 
   if front_matter["page_intro"]
-    lines << "## このページの役割"
+    lines << "## Role Of This Page"
     lines << front_matter["page_intro"].to_s
     lines << ""
   end
 
   if front_matter["accuracy_note"]
-    lines << "## 正確さの前提"
+    lines << "## Accuracy Notes"
     lines << front_matter["accuracy_note"].to_s
     lines << ""
   end
 
   if front_matter["recommended_pages"]
-    lines << "## 公開ページへ戻る"
+    lines << "## Back To Public Pages"
     lines.concat(render_link_list(front_matter["recommended_pages"]))
     lines << ""
   end
 
   if front_matter["wiki_links"]
-    lines << "## 関連 Wiki"
+    lines << "## Related Wiki Pages"
     lines.concat(render_link_list(front_matter["wiki_links"]))
     lines << ""
   end
 
   if front_matter["known_points"]
-    lines << "## いま分かっていること"
+    lines << "## What Is Currently Known"
     Array(front_matter["known_points"]).each { |item| lines << "- #{item}" }
     lines << ""
   end
 
   if front_matter["unknown_points"]
-    lines << "## まだ分かっていないこと"
+    lines << "## What Is Still Unknown"
     Array(front_matter["unknown_points"]).each { |item| lines << "- #{item}" }
     lines << ""
   end
@@ -246,7 +246,7 @@ def build_sidebar(front_matters)
   end
 
   unless remaining.empty?
-    lines << "## その他"
+    lines << "## Other"
     remaining.each do |slug|
       title = front_matters.fetch(slug, {})["title"] || slug
       url = slug == "Home" ? GITHUB_WIKI : github_wiki_url(slug)
@@ -255,10 +255,10 @@ def build_sidebar(front_matters)
     lines << ""
   end
 
-  lines << "## 公開サイト"
-  lines << "- [スタートページ](#{PUBLIC_SITE}/index.html)"
-  lines << "- [検証基盤](#{PUBLIC_SITE}/verification.html)"
-  lines << "- [公開コンテンツ統合ハブ](#{PUBLIC_SITE}/content_hub.html)"
+  lines << "## Public Site"
+  lines << "- [Start Page](#{PUBLIC_SITE}/index.html)"
+  lines << "- [Verification Commons](#{PUBLIC_SITE}/verification.html)"
+  lines << "- [Public Content Integration Hub](#{PUBLIC_SITE}/content_hub.html)"
   lines.join("\n").strip + "\n"
 end
 
@@ -266,11 +266,11 @@ def build_footer
   <<~FOOTER
   ---
 
-  学習用 Wiki の元ソースはリポジトリの `wiki/` 配下で管理しています。
+  The source files for this learning wiki are managed under `wiki/` in the repository.
 
-  - 公開ポータル: [mind-upload.com](#{PUBLIC_SITE})
-  - 統合先の判断: [公開コンテンツ統合ハブ](#{PUBLIC_SITE}/content_hub.html)
-  - 誤り報告・改善提案: [GitHub Issues](https://github.com/yasufumi-nakata/mind-upload/issues)
+  - Public portal: [mind-upload.com](#{PUBLIC_SITE})
+  - Integration routing: [Public Content Integration Hub](#{PUBLIC_SITE}/content_hub.html)
+  - Error reports and improvement proposals: [GitHub Issues](https://github.com/yasufumi-nakata/mind-upload/issues)
   FOOTER
 end
 

@@ -1,76 +1,76 @@
 # Site Deepening Audit (2026-03-15, Entry Pages / Maintenance-State Propagation)
 
-## 対象
+## Scope
 
-- 主対象: `index.md`
-- 副対象: `wbe_101.md`
-- 副対象: `faq.md`
+- Main target: `index.md`
+- Secondary target: `wbe_101.md`
+- Secondary target: `faq.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- 個別 wiki と `verification.md` では、connectome だけでは足りないことと maintenance-state の広がりがかなり明確になっていました。
-- しかし公開入口ページ群では、その論点が `関連 wiki へのリンク` に圧縮されすぎており、最初に読む読者ほど `配線図 + cell type が取れれば、残りは微調整` と誤読しやすい構造が残っていました。
-- 入口ページは site-wide の読み方を決めるため、ここが粗いと、その後の `connectome-complete は scaffold である` という慎重な立場が十分に伝わりません。
+- In the individual wiki and `verification.md`, it became quite clear that the connectome alone was not enough and the spread of the maintenance-state.
+- However, in the public entry pages, the points of discussion were too compressed into `Links to related wikis`, and the structure remained that readers who read it for the first time could easily misread it as `Once you get the wiring diagram + cell type, the rest is fine-tuning`.
+- The entrance page determines how the site-wide is read, so if it is rough, the careful position of `connectome-complete is scaffold` that follows will not be fully conveyed.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. 入口ページは maintenance-state を「存在するらしい追加情報」程度に見せていました
+### 1. The entry page showed maintenance-state as "additional information that seems to exist"
 
-- 問題:
-  - `index.md` と `wbe_101.md` は connectome 不足へ触れていましたが、sleep / wake 依存の再正規化、髄鞘 / oligodendrocyte support、glial / metabolic support が何を壊すのかを入口で固定できていませんでした。
-  - その結果、`same-day の活動一致` と `cross-day の維持機構一致` が別問題であることが前景化していませんでした。
-- 根拠:
-  - Hengen et al. (2016)、Torrado Pacheco et al. (2021)、Xu et al. (2024) は、sleep / wake cycle が firing-rate homeostasis と network regime recovery に関わることを示しました。
-  - Gibson et al. (2014)、McKenzie et al. (2014)、Looser et al. (2024) は、髄鞘 / oligodendrocyte support が timing と axonal health に関わることを示しました。
-  - Suzuki et al. (2011)、Cahill et al. (2024)、Lee et al. (2022) は、glial / metabolic support と turnover 下の active maintenance が memory consolidation や slow state に関わることを示しました。
-- 修正:
-  - `index.md` に、入口で先に防ぐ誤読として `connectome-complete ≠ emulation-complete` を明示しました。
-  - `wbe_101.md` に `入口で外せない hidden state` 節を新設し、4 クラスへ要約しました。
+- Issue:
+- `index.md` and `wbe_101.md` touched on connectome deficiency, but they did not fix at the entrance what sleep/wake-dependent renormalization, myelin sheath/oligodendrocyte support, and glial/metabolic support destroy.
+- As a result, it was not brought to the foreground that `same-day activity matching` and `cross-day maintenance mechanism matching` are different issues.
+- Basis:
+- Hengen et al. (2016), Torrado Pacheco et al. (2021), and Xu et al. (2024) showed that sleep/wake cycles are involved in firing-rate homeostasis and network regime recovery.
+- Gibson et al. (2014), McKenzie et al. (2014), and Looser et al. (2024) showed that myelin/oligodendrocyte support is involved in timing and axonal health.
+- Suzuki et al. (2011), Cahill et al. (2024), and Lee et al. (2022) showed that glial/metabolic support and active maintenance under turnover are involved in memory consolidation and slow state.
+- Revision:
+- `connectome-complete ≠ emulation-complete` was specified as `connectome-complete ≠ emulation-complete` to prevent misreading at the entrance.
+- Added `hidden state that cannot be removed at the entrance` section to `wbe_101.md` and summarized it into 4 classes.
 
-### 2. 入口ページには「どこまでなら言えるか」の境界が不足していました
+### 2. The entrance page lacked boundaries for "how much you can say"
 
-- 問題:
-  - 既存の導線は深い wiki へ誘導する点で有用でしたが、入口自身は `何がまだ言えないか` を短く固定していませんでした。
-  - これにより、読者が `connectome-complete` や `digital twin` を、そのまま state-complete reconstruction と混同する余地がありました。
-- 根拠:
-  - Gouwens et al. (2021) は、同じ transcriptomic type の内部にも morpho-electric phenotype の連続性が残ることを示しました。
-  - 上記の sleep / myelin / glia 系一次文献はいずれも、長期ダイナミクスを支える状態変数が配線図の外に残ることを示します。
-- 修正:
-  - `wbe_101.md` に、`connectome-complete は structural scaffold の前進であり、emulation-complete の宣言ではない` と明記しました。
-  - この判断は、上記一次文献が maintenance-state を別変数として残している点からの **推論** であることも本文に残しました。
+- Issue:
+- The existing conductor was useful in guiding deep into the wiki, but the entrance itself did not keep short and fixed.
+- This left room for readers to confuse `connectome-complete` and `digital twin` with state-complete reconstruction.
+- Basis:
+- Gouwens et al. (2021) showed that continuity of morpho-electric phenotype remains even within the same transcriptomic type.
+- All of the above sleep/myelin/glia primary literature indicates that the state variables that support long-term dynamics remain outside the wiring diagram.
+- Revision:
+- `wbe_101.md` has been specified as `connectome-complete is an advance of the structural scaffold, not a declaration of emulation-complete`.
+- The text also states that this judgment is an **inference** based on the fact that the above primary literature leaves maintenance-state as a separate variable.
 
-### 3. FAQ には、この誤解へ直接答える項目がありませんでした
+### 3. There was no section in the FAQ that directly answered this misconception
 
-- 問題:
-  - FAQ は入口として優秀ですが、`コネクトームと cell type が分かれば十分か` という自然な疑問へ直接答える節がありませんでした。
-  - そのため、重要論点なのに読者が深い wiki へ進まないと答えに到達しない構造でした。
-- 修正:
-  - `faq.md` に `Q. コネクトームと cell type が分かれば、残りはほぼ埋まる？` を追加しました。
-  - 入口の早い段階で、sleep / myelin / glia を短く列挙し、詳細ページへ戻る導線を追加しました。
+- Issue:
+- The FAQ is an excellent starting point, but there was no section that directly answered the natural question ``Is it enough to know the connectome and cell type?''
+- Therefore, even though it was an important issue, the reader had to go deeper into the wiki to reach the answer.
+- Revision:
+- Added `Q. If we know the connectome and cell type, will most of the rest be filled in? ` to `faq.md`.
+- Added a short list of sleep / myelin / glia early in the entrance and a link back to the details page.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `index.md`
-  - `last_updated` を 2026-03-15 に更新
-  - `page_highlights` / `known_points` に maintenance-state の不足を追加
-  - `入口で先に防ぐ誤読` の注記を新設
+- `last_updated` updated to 2026-03-15
+- Added missing maintenance-state to `page_highlights` / `known_points`
+- Added a new note for `Prevent misreading at the entrance`
 - `wbe_101.md`
-  - `last_updated` を 2026-03-15 に更新
-  - `入口で外せない hidden state` 節を新設
-  - 参考文献へ sleep / myelin / glia / maintenance-state 系の一次文献を追加
+- `last_updated` updated to 2026-03-15
+- Added `hidden state that cannot be removed at the entrance` section
+- Add primary literature on sleep / myelin / glia / maintenance-state to references
 - `faq.md`
-  - `last_updated` を 2026-03-15 に更新
-  - `Q2c` を追加
-  - 入口案内テーブルと参考文献を更新
+- `last_updated` updated to 2026-03-15
+- Added `Q2c`
+- Updated entrance information table and references
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- maintenance-state artifact pack の共通 schema 化
-  - 担当者: AI / maintainer / 実験系共同研究者
-  - 前提条件: sleep history、overnight recovery、conduction / myelin proxy、glial / metabolic proxy を同じ benchmark で比較できること
-  - 完了条件: `same-day fit`、`cross-day recovery`、`timing-sensitive stability`、`active maintenance` を同一 schema で提出できること
+- Common schema for maintenance-state artifact pack
+- Person in charge: AI / maintainer / experimental joint researcher
+- Prerequisite: be able to compare sleep history, overnight recovery, conduction / myelin proxy, and glial / metabolic proxy using the same benchmark
+- Completion condition: `same-day fit`, `cross-day recovery`, `timing-sensitive stability`, `active maintenance` can be submitted in the same schema.
 
-## 参考文献
+## References
 
 - Gouwens NW, et al. Integrated morphoelectric and transcriptomic classification of cortical GABAergic cells. Nature. 2021.
   - https://doi.org/10.1038/s41586-020-2907-3

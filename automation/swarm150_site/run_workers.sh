@@ -5,7 +5,7 @@ ROOT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 PROMPT_DIR="$ROOT_DIR/prompts"
 OUT_DIR="$ROOT_DIR/out"
 LOG_DIR="$ROOT_DIR/logs"
-REPO_DIR="${REPO_DIR:-/Users/yasufumi/Documents/GitHub/eegflow}"
+REPO_DIR="${REPO_DIR:-$(cd -- "$ROOT_DIR/../.." && pwd)}"
 
 mkdir -p "$OUT_DIR" "$LOG_DIR"
 

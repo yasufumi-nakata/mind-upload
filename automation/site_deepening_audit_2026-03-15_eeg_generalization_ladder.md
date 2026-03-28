@@ -1,89 +1,89 @@
 # Site Deepening Audit (2026-03-15, EEG Generalization Ladder / Recalibration Burden)
 
-## 対象
+## Scope
 
-- 主対象: `datasets.md`
-- 副対象: `eeg_101.md`
+- Main target: `datasets.md`
+- Secondary target: `eeg_101.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- 公開サイトは 2026-03-15 時点で、annotation provenance、split unit、QC、observability ceiling まではかなり整理できていました。
-- その一方で、公開ページの入口ではなお `高い score` が `どの汎化条件で出た score なのか` を読み分ける導線が弱く、`within-session の成功` が `cross-day robustness` や `deployable loop` に見えてしまう余地が残っていました。
-- この弱点は技術・自然科学の観点で重大です。なぜなら、EEG/BCI の現実の壁は、単純な分類能だけではなく、state fluctuation、session drift、subject variability、recalibration burden が別々に効くことだからです。
+- As of 2026-03-15, the public site was quite organized with annotation provenance, split unit, QC, and observability ceiling.
+- On the other hand, at the entrance to the public page, there was still a weak guideline to distinguish `high score` from `under what generalization conditions did the score come out`, and there was still room for `within-session success` to appear as `cross-day robustness` or `deployable loop`.
+- This weakness is significant from a technical/natural science perspective. This is because the real barrier to EEG/BCI is not just simple classification ability, but also the separate effects of state fluctuation, session drift, subject variability, and recalibration burden.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. 旧 `datasets.md` は split unit を説明していたが、evaluation family を読解ルールとして前面化できていませんでした
+### 1. The old `datasets.md` explained split unit, but failed to bring evaluation family to the forefront as a reading rule.
 
-- 問題:
-  - 旧版には `within-session / cross-session / cross-subject` という語はありました。
-  - しかし、それぞれが `別の科学的問い` であり、同じ accuracy として横並びにできないことが、本文の主節として固定されていませんでした。
-- 根拠:
-  - MOABB の公式 docs は `WithinSessionEvaluation`、`CrossSessionEvaluation`、`CrossSubjectEvaluation` を別クラスとして実装しています。
-  - `WithinSessionEvaluation` は同一 session 内の k-fold です。
-  - `CrossSessionEvaluation` は同一 subject の別 session をまたぐ評価です。
-  - `CrossSubjectEvaluation` は 1 subject を hold-out し、残りの subject で学習する評価です。
-- 修正:
-  - `datasets.md` に `2.5) 同じ score でも、汎化の階段が違えば意味が変わります` を追加しました。
-  - `evaluation family / hold-out 単位 / 言えること / 止める誤読` の 4 列で表を新設し、score 単独の誤読を止める形にしました。
+- Issue:
+- The previous version had the word `within-session / cross-session / cross-subject`.
+- However, the fact that each is `a different scientific question` and cannot be placed side by side with the same accuracy was not fixed as the main clause of the text.
+- Basis:
+- MOABB's official docs implements `WithinSessionEvaluation`, `CrossSessionEvaluation`, and `CrossSubjectEvaluation` as separate classes.
+- `WithinSessionEvaluation` is k-fold within the same session.
+- `CrossSessionEvaluation` is an evaluation across different sessions of the same subject.
+- `CrossSubjectEvaluation` is an assessment that holds-out one subject and learns from the remaining subjects.
+- Revision:
+- Added `2.5) Even if the score is the same, the meaning changes if the generalization steps are different` to `datasets.md`.
+- Created a new table with 4 columns of `evaluation family / hold-out unit / what to say / stop misreading` to prevent misreading of score alone.
 
-### 2. 旧サイトは same-day score と cross-day 劣化の距離を、一次文献の数字で示していませんでした
+### 2. The old site did not show the same-day score and cross-day degradation distance using numbers from the primary literature.
 
-- 問題:
-  - 旧版では `cross-session は難しい` という方向性は出ていましたが、どの程度落ちるのかが入口ページでは定量化されていませんでした。
-- 根拠:
-  - Ma et al. (2022) は、5 日間・25 subject の motor imagery dataset で、subject-specific の平均 accuracy が `within-session 68.8%` から `cross-session 53.7%` へ落ちることを示しました。
-  - 同論文では、少量の target-session data を使う cross-session adaptation で `78.9%` まで回復することも示しています。
-  - ここから直接言えるのは、`same-day separation`、`別日耐性`、`再較正込みの運用` は別の評価である、ということです。
-- 修正:
-  - `datasets.md` と `eeg_101.md` に上記の数値を追加し、`高 score` を見る際に `hold-out 条件` と `adaptation の有無` を同時に読む site rule を明文化しました。
+- Issue:
+- In the previous version, there was a direction of `cross-session is difficult`, but the extent of the drop was not quantified on the entrance page.
+- Basis:
+- Ma et al. (2022) showed that the average subject-specific accuracy drops from `within-session 68.8%` to `cross-session 53.7%` in a 5-day, 25-subject motor imagery dataset.
+- The same paper also shows that cross-session adaptation using a small amount of target-session data can recover up to `78.9%`.
+- What we can say directly from this is that `same-day separation`, `separate-day tolerance`, and `operation with recalibration` are different evaluations.
+- Revision:
+- Added the above values ​​to `datasets.md` and `eeg_101.md`, and clarified the site rule to read `hold-out condition` and `adaptation presence` at the same time when viewing `high score`.
 
-### 3. 旧 `eeg_101.md` は artifact と inverse problem を丁寧に扱っていたが、state confound と long-term nonstationarity を入口では弱くしか扱っていませんでした
+### 3. The old `eeg_101.md` handled artifacts and inverse problems carefully, but only weakly handled state confound and long-term nonstationarity at the entrance.
 
-- 問題:
-  - 旧版は source imaging ceiling と preprocessing gate をかなり厳密に扱っていました。
-  - しかし、same-day score がその日の state や movement を拾っている可能性、あるいは別日で崩れる可能性を、独立節として前面化していませんでした。
-- 根拠:
-  - Musall et al. (2019) は、cortex-wide activity が uninstructed movements に強く支配されうることを示しました。
-  - Wilson et al. (2025) は、intracortical BCI において accumulated neural nonstationarity のため frequent recalibration が必要になることを示しました。
-  - modality は違っても、`same-day decoding success` と `long-term operational stability` が別問題である点は、EEG を読む側にも重要な lesson です。
-- 修正:
-  - `eeg_101.md` に `同じ decoding score でも、読んでよい範囲は違います` 節を追加しました。
-  - `within-session / cross-session / cross-subject / longitudinal closed-loop` を 4 行の表で固定し、各行に `ここで主に見ているもの` と `まだ言えないこと` を明示しました。
+- Issue:
+- The previous version dealt with source imaging ceiling and preprocessing gate quite strictly.
+- However, the possibility that the same-day score picks up the state and movement of that day, or the possibility that it collapses on a different day, was not brought to the fore as an independent clause.
+- Basis:
+- Musall et al. (2019) showed that cortex-wide activity can be strongly controlled by uninstructed movements.
+- Wilson et al. (2025) showed that intracortical BCI requires frequent recalibration due to accumulated neural nonstationarity.
+- Even though the modalities are different, `same-day decoding success` and `long-term operational stability` are different issues, which is an important lesson for EEG readers.
+- Revision:
+- Added `Even if the decoding score is the same, the range that can be read is different` clause to `eeg_101.md`.
+- Fixed `within-session / cross-session / cross-subject / longitudinal closed-loop` in a 4-row table, with `What we are mainly looking at here` and `What we cannot say yet` clearly marked in each row.
 
-### 4. 旧公開ページは recalibration を「改善策」としては示していたが、「性能の一部」としては十分固定していませんでした
+### 4. The old publication page indicated recalibration as an "improvement", but it was not fixed enough as a "part of performance"
 
-- 問題:
-  - 旧版には drift や recalibration burden の論点が wiki や FAQ にはありましたが、EEG 入口ページと datasets 入口ページでは補助的な位置づけに留まっていました。
-- 根拠:
-  - Wilson et al. (2025) は、frequent recalibration が必要になること自体が運用上の壁であることを示しました。
-  - したがって `adaptation で戻る` は朗報である一方、`最初から stable だった` ことは意味しません。
-- 修正:
-  - `datasets.md` では `cross-session adaptation` を独立行として追加し、`target session の少量データを使ったか` を最低報告項目へ昇格しました。
-  - `eeg_101.md` では、`fixed decoder を何日 hold したか` と `recalibration burden` を確認項目へ追加しました。
+- Issue:
+- In the previous version, drift and recalibration burden were discussed in the wiki and FAQ, but they remained in a supporting role on the EEG entry page and the datasets entry page.
+- Basis:
+- Wilson et al. (2025) showed that the need for frequent recalibration is itself an operational barrier.
+- So while `returning with adaptation` is good news, `it was stable from the beginning` does not mean.
+- Revision:
+- `datasets.md` added `cross-session adaptation` as an independent line and promoted `target session` to the lowest reporting item.
+- For `eeg_101.md`, `How many days did you hold the fixed decoder` and `recalibration burden` have been added to the confirmation items.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `datasets.md`
-  - front matter の highlights / known points / wiki links を更新
-  - `同じ score でも、汎化条件が違えば意味は変わります` の note を追加
-  - `2.5) 同じ score でも、汎化の階段が違えば意味が変わります` 節を新設
-  - MOABB docs、Ma et al. (2022)、Musall et al. (2019)、Wilson et al. (2025) を参考文献へ追加
+- Updated front matter highlights / known points / wiki links
+- Added note for `Even if the score is the same, the meaning will change if the generalization conditions are different`
+- Added `2.5) The same score has different meanings if the generalization steps are different` section
+- Added MOABB docs, Ma et al. (2022), Musall et al. (2019), Wilson et al. (2025) to references
 - `eeg_101.md`
-  - front matter の highlights / known / unknown / wiki links を更新
-  - `高い score を見たとき、まず何を hold-out したかを見たいとき` の note を追加
-  - `同じ decoding score でも、読んでよい範囲は違います` 節を新設
-  - `よくある誤解` に `高い accuracy が出たので、別日や別人でも十分だ` を追加
-  - MOABB docs、Ma et al. (2022)、Musall et al. (2019)、Wilson et al. (2025) を参考文献へ追加
+- Updated front matter highlights / known / unknown / wiki links
+- Added note for `When you see a high score, you want to see what you hold-out first`
+- Added `Even if the decoding score is the same, the range that can be read is different` section
+- Add `Since the accuracy was high, it is enough to use another day or another person` to `Common misconception`
+- Added MOABB docs, Ma et al. (2022), Musall et al. (2019), Wilson et al. (2025) to references
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- site-wide な score card schema の統一
-  - 担当者: AI / maintainer
-  - 前提条件: `evaluation family`、`hold-out unit`、`adaptation budget`、`recalibration burden` を datasets / verification / papers / FAQ で共通属性にすること
-  - 完了条件: score が公開される全ページで、少なくとも上記 4 属性が必ず併記されること
+- Unification of site-wide score card schema
+- Person in charge: AI / maintainer
+- Prerequisite: `evaluation family`, `hold-out unit`, `adaptation budget`, `recalibration burden` must be common attributes in datasets / verification / papers / FAQ
+- Completion condition: At least the above four attributes must be included on all pages where the score is published.
 
-## 参考文献
+## References
 
 - Jayaram V, Barachant A. MOABB: trustworthy algorithm benchmarking for BCIs. *Journal of Neural Engineering*. 2018.
   - https://doi.org/10.1088/1741-2552/aadea0

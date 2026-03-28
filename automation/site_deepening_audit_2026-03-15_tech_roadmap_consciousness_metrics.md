@@ -1,100 +1,100 @@
 # Site Deepening Audit (2026-03-15, Tech Roadmap / Consciousness Metrics and Benchmark Layers)
 
-## 対象
+## Scope
 
-- 主対象: `tech_roadmap.md`
-- 副対象: `wiki/consciousness-theory-map.md`
+- Main target: `tech_roadmap.md`
+- Secondary target: `wiki/consciousness-theory-map.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- 2026-03-15 時点で、入口ページ群と verification 系ページでは、measurement ceiling、perturbation、maintenance-state の整理がかなり進んでいました。
-- その一方で、`tech_roadmap.md` の V6 / V10 / V11 と `wiki/consciousness-theory-map.md` には、なお `IIT / GNWT / FEP / PCI / criticality / TDA` を工学指標として近い重みで読める箇所が残っていました。
-- これは技術・自然科学の観点で弱点です。なぜなら、2024-2025 の一次文献が比較的強く支持するのは、`単一理論の勝者` ではなく `prediction competition`、`単一意識メータ` ではなく `perturbation benchmark + spontaneous proxy + confound control` の分離だからです。
+- As of 2026-03-15, the measurement ceiling, perturbation, and maintenance-state of the entrance pages and verification pages were well organized.
+- On the other hand, there were still parts in V6 / V10 / V11 and `wiki/consciousness-theory-map.md` of `tech_roadmap.md` that could be read with a similar weight to `IIT / GNWT / FEP / PCI / criticality / TDA` as an engineering index.
+- This is a weakness from a technical/natural science perspective. This is because the primary literature in 2024-2025 relatively strongly supports the separation of `prediction competition` rather than `single theory winner`, and `perturbation benchmark + spontaneous proxy + confound control` rather than `single consciousness meter`.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. 旧 `tech_roadmap.md` は、理論 family と benchmark layer をまだ十分に分け切れていませんでした
+### 1. The old `tech_roadmap.md` did not sufficiently separate the theory family and benchmark layer.
 
-- 問題:
-  - V6 は理論依存予測の検証を扱う節でしたが、旧版では `IIT近似`、`PCI`、`最小分岐セット`、`マルコフブランケット境界条件` が同一レベルの engineering route のように並んでいました。
-  - この構造では、理論そのもの、摂動 benchmark、spontaneous proxy、数理補助解析の差が埋まり、読者が `理論名 = 合否指標` と誤読しやすくなります。
-- 根拠:
-  - Ferrante et al. (2025) は、IIT / GNWT / RPT の主要予測が部分的に支持されつつ鍵予測のいくつかが反証され、単一理論を勝者にしないことを示しました。
-  - Casali et al. (2013) と Comolatti et al. (2019) は PCI / PCI-ST を perturbation benchmark として押し上げましたが、universal meter を与えたわけではありません。
-  - Maschke et al. (2024) は spontaneous criticality と PCI の関連を示した一方、Casarotto et al. (2024) は minimally conscious state で spontaneous EEG feature と PCI の解離を示しました。
-- 修正:
-  - V6 を `prediction family`、`perturbation benchmark`、`spontaneous calibration track`、`confound control` の 4 本柱へ再編しました。
-  - `理論名を pass/fail 指標にしない`、`PCI を benchmark 候補として扱う`、`criticality を proxy として較正する` という site rule を本文に埋め込みました。
+- Issue:
+- V6 was a section dealing with the verification of theory-dependent predictions, but in the previous version, `IIT approximation`, `PCI`, `Minimum Branch Set`, and `Markov Blanket Boundary Conditions` were arranged like engineering routes at the same level.
+- This structure closes the gap between the theory itself, perturbation benchmark, spontaneous proxy, and mathematical auxiliary analysis, making it easy for readers to misread it as `theory name = pass/fail indicator`.
+- Basis:
+- Ferrante et al. (2025) showed that the main predictions of IIT/GNWT/RPT were partially supported while some of the key predictions were disproved, making no single theory a winner.
+- Casali et al. (2013) and Comolatti et al. (2019) promoted PCI/PCI-ST as a perturbation benchmark, but did not give it a universal meter.
+- Maschke et al. (2024) showed an association between spontaneous criticality and PCI, while Casarotto et al. (2024) showed a dissociation between spontaneous EEG features and PCI in a minimally conscious state.
+- Revision:
+- V6 has been reorganized into four pillars: `prediction family`, `perturbation benchmark`, `spontaneous calibration track`, and `confound control`.
+- The site rules `Do not use theory names as pass/fail indicators`, `Treat PCI as a benchmark candidate`, `Calibrate criticality as a proxy` were embedded in the text.
 
-### 2. 旧サイトは report / criterion confound を benchmark 設計の中心に置けていませんでした
+### 2. The old site did not put report / criterion confound at the center of benchmark design
 
-- 問題:
-  - `wiki/consciousness-theory-map.md` は初学者向けとして読みやすい一方、理論差より先に `post-perceptual processing` や `criterion placement` を統制すべきことが前面に出ていませんでした。
-  - そのため、GNWT 系マーカーや report-dependent marker を、そのまま consciousness marker と読む余地が残っていました。
-- 根拠:
-  - Cohen et al. (2024) は visual awareness の neural signature を post-perceptual processing から切り分けました。
-  - Fahrenfort et al. (2025) は criterion placement が conscious content marker の construct validity を脅かすことを示しました。
-- 修正:
-  - `wiki/consciousness-theory-map.md` を全面改稿し、`report / criterion confound` を独立した監査論点として表に入れました。
-  - `no-report / criterion placement を先に固定する` を page rule として追記しました。
+- Issue:
+- While `wiki/consciousness-theory-map.md` is easy to read for beginners, it did not emphasize that `post-perceptual processing` and `criterion placement` should be controlled before theoretical differences.
+- Therefore, there was still room to read GNWT-based markers and report-dependent markers as consciousness markers.
+- Basis:
+- Cohen et al. (2024) separated the neural signature of visual awareness from post-perceptual processing.
+- Fahrenfort et al. (2025) showed that criterion placement threatens the construct validity of conscious content markers.
+- Revision:
+- Completely revised `wiki/consciousness-theory-map.md` and included `report / criterion confound` as an independent audit issue.
+- Added `fix no-report / criterion placement first` as a page rule.
 
-### 3. 旧 `V10` は Fisher 情報量を標準距離のように読ませていました
+### 3. Old `V10` read Fisher information like standard distance
 
-- 問題:
-  - 旧版 V10 は Fisher Information Metric を事実上の既定 metric として採用していました。
-  - しかし、2026-03 時点で本サイトが参照する一次文献群は、WBE の pass/fail を FIM 1 本で規定する実証 benchmark を与えていません。
-- 根拠:
-  - 現実に強い外部基準として積み上がっているのは、perturbation 応答、OOD 劣化、recovery、calibration のような observable behavior です。
-  - これは上記の PCI / spontaneous marker / causal validation 文献群からの **推論** です。すなわち、現在の強い evidence は scalar geometry より external benchmark にあります。
-- 修正:
-  - V10 を `単一 metric を採用しない` 方針へ変更しました。
-  - FIM、representation distance、manifold separation は候補群に下げ、`V2 / V3 / V4 の外部基準とどれだけ整合するか` を比較条件にしました。
+- Issue:
+- Previous version V10 adopted Fisher Information Metric as the de facto default metric.
+- However, as of 2026-03, the primary literature referenced by this site does not provide an empirical benchmark that specifies WBE pass/fail with a single FIM.
+- Basis:
+- Observable behaviors such as perturbation response, OOD degradation, recovery, and calibration have accumulated as strong external standards in reality.
+- This is **inference** from the above PCI / spontaneous marker / causal validation literature. That is, there is currently stronger evidence for external benchmarks than for scalar geometry.
+- Revision:
+- Changed V10 to `not adopt a single metric` policy.
+- FIM, representation distance, and manifold separation have been reduced to candidate groups, and `how well they align with external standards for V2/V3/V4` has been made a comparison condition.
 
-### 4. 旧 `V11` は topology を「保証」に近く書きすぎていました
+### 4. The old `V11` wrote topology too close to "guarantee"
 
-- 問題:
-  - 旧版 V11 は TDA / persistent homology を導入し、神経活動多様体のトポロジー比較で `動的アトラクタ構造の同一性を幾何学的に保証する` と読める書き方でした。
-  - これは一次文献の強さより一段強い表現です。
-- 根拠:
-  - Yoon et al. (2024) は cross-population topology comparison の数学的基盤を与えましたが、一般的な WBE pass/fail 指標を与えたわけではありません。
-  - iScience 2024 の mouse V1 circular manifold 研究は、truthful topology の回収に sampling 障害があることを示しました。
-- 修正:
-  - V11 を `supplementary descriptor` へ降格しました。
-  - `sampling / embedding / preprocessing / session drift / perturbation responsiveness` の sensitivity analysis を通った場合だけ補助指標として報告する、という運用へ改めました。
+- Issue:
+- The previous version, V11, introduced TDA/persistent homology, which could be read as `geometrically guaranteeing the identity of dynamic attractor structures` when comparing the topology of neural activity variants.
+- This is a stronger expression than the strength of the primary literature.
+- Basis:
+- Yoon et al. (2024) provided a mathematical basis for cross-population topology comparison, but did not provide a general WBE pass/fail indicator.
+- iScience 2024's mouse V1 circular manifold study showed sampling failures in retrieving truthful topology.
+- Revision:
+- Demoted V11 to `supplementary descriptor`.
+- We have changed the operation to report as a supplementary indicator only if it passes `sampling / embedding / preprocessing / session drift / perturbation responsiveness`'s sensitivity analysis.
 
-### 5. 旧 `wiki/consciousness-theory-map.md` は FEP を実装原理寄りに置きすぎていました
+### 5. The old `wiki/consciousness-theory-map.md` placed FEP too close to the implementation principle.
 
-- 問題:
-  - 旧版は `FEP = 実装原理寄り` としていましたが、読者には default engineering route のように映りえました。
-- 根拠:
-  - Ferrante et al. (2025) は単一理論 winner を支持していません。
-  - したがって、FEP を engineering default と置くより、DCM / state-space / SCM を含む候補 family の 1 つとして扱う方が、現在の証拠強度に整合的です。これは一次文献群からの **推論** です。
-- 修正:
-  - `wiki/consciousness-theory-map.md` で FEP / Active Inference を `候補実装族` へ位置づけ直しました。
-  - `theory family / benchmark / proxy / supplementary geometry` の 4 レイヤーに再編しました。
+- Issue:
+- In the previous version, it was called `FEP = implementation principle-oriented`, but it appeared to readers as default engineering route.
+- Basis:
+- Ferrante et al. (2025) does not support a single theory winner.
+- Therefore, rather than treating FEP as an engineering default, it is more consistent with the current strength of evidence to treat it as one of the candidate families that include DCM / state-space / SCM. This is an **inference** from the primary literature.
+- Revision:
+- Repositioned FEP / Active Inference in `wiki/consciousness-theory-map.md` to `Candidate Implementation Family`.
+- Reorganized into 4 layers of `theory family / benchmark / proxy / supplementary geometry`.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `tech_roadmap.md`
-  - V6 を `prediction family / perturbation benchmark / spontaneous proxy / confound control` へ再編
-  - V10 を `単一 metric 採用` から `候補距離の benchmark 比較` へ変更
-  - V11 を `保証` 表現から `補助解析` 表現へ変更
-  - U11 を `IIT近似` から `proxy 較正` 問題へ変更
-  - 参考文献へ 2024-2025 の一次文献を追記
+- Reorganized V6 to `prediction family / perturbation benchmark / spontaneous proxy / confound control`
+- Changed V10 from `single metric adoption` to `benchmark comparison of candidate distances`
+- Changed V11 from `guarantee` expression to `auxiliary analysis` expression
+- Changed U11 from `IIT approximation` to `proxy calibration` problem
+- Added primary literature for 2024-2025 to references
 - `wiki/consciousness-theory-map.md`
-  - front matter を技術・自然科学中心に更新
-  - ページ全体を全面改稿
-  - `theory family / perturbation benchmark / spontaneous proxy / supplementary geometry` の役割表を追加
-  - `一次文献が切る境界` 表と参考文献節を新設
+- Updated front matter with focus on technology and natural sciences
+- Completely revised the entire page
+- Added role table for `theory family / perturbation benchmark / spontaneous proxy / supplementary geometry`
+- `Boundary cut by primary literature` New table and references section
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- 同一 cohort での perturbation / spontaneous / geometry 指標の比較ベンチ実装
-  - 担当者: AI / maintainer / 実験系共同研究者
-  - 前提条件: TMS-EEG または intracranial stimulation、no-report 課題、cohort-level follow-up の整備
-  - 完了条件: PCI / spontaneous complexity / geometry descriptor を同じ cohort・同じ preprocessing rule・同じ failure mode で比較できる公開 benchmark が走ること
+- Comparison bench implementation of perturbation / spontaneous / geometry indicators in the same cohort
+- Person in charge: AI / maintainer / experimental joint researcher
+- Prerequisites: TMS-EEG or intracranial stimulation, no-report assignment, cohort-level follow-up in place
+- Completion condition: Running a public benchmark that can compare PCI / spontaneous complexity / geometry descriptors in the same cohort, same preprocessing rule, and same failure mode.
 
-## 参考文献
+## References
 
 - Ferrante O, et al. Adversarial testing of global neuronal workspace and integrated information theories of consciousness. *Nature*. 2025.
   - https://doi.org/10.1038/s41586-025-08888-1

@@ -8,7 +8,7 @@ This folder contains an automated flow that fetches open GitHub issues, asks an 
 - `.env.example`: configuration template (copy to `.env`)
 - `logs/`: runtime logs (ignored by git)
 - `EegflowResolver.app/`: optional app bundle (ignored by git)
-- `swarm150_site/out/worker_suggestions.jsonl`: 150-worker提案の集約結果（`worker*.md` 個別ファイルは冗長のため廃止）
+- `swarm150_site/out/worker_suggestions.jsonl`: aggregated output from the 150-worker run (`worker*.md` per-worker files were retired as redundant)
 
 ## Setup
 1. Copy `.env.example` to `.env`.

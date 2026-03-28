@@ -1,11 +1,11 @@
 uid,rq_index,rq_text,reopen_trigger_ja,watch_priority,reopen_check_window_hours,required_new_evidence_ja,temporary_status_ja,reopen_decision_owner,generated_at_utc
-U12,1,分岐後主体の識別子を何に基づいて付与するか。,定義語に新規改訂行が追加,high,24,改訂行差分と見出し差分,closed_watch,U12_monitor_owner,2026-03-01T17:49:30Z
-U12,2,責任・権利・同意の継承ルールをどの時点で分岐させるか。,時点語版が更新され開始分岐対応が変化,high,24,時点語対照表新版と条項見出し差分,closed_watch,U12_monitor_owner,2026-03-01T17:49:30Z
-U12,3,心理的連続性基準と法的個体基準の不一致をどう扱うか。,条項抽出で新規条件語を検出,high,12,公式条項差分と条件語差分ログ,hold_watch,U12_monitor_owner,2026-03-01T17:49:30Z
-U12,4,技術評価（性能）と人格評価（帰属）をどう接続するか。,監査語追加または接続語定義変更,medium,24,接続語一覧新版と監査語差分,closed_watch,U12_monitor_owner,2026-03-01T17:49:30Z
-U12,5,分岐主体間で記憶編集・再同期が起きた場合、法的主体IDを再編する基準は何か。,同義語正規化表に採用語追加,medium,24,同義語表新版と判定差分,closed_watch,U12_monitor_owner,2026-03-01T17:49:30Z
-U12,6,同意撤回が発生したとき、複数分岐主体への権限剥奪を技術的にどう実装・監査するか。,表記世代が更新され旧語が廃止,medium,24,新旧表記対照新版と証跡更新ログ,closed_watch,U12_monitor_owner,2026-03-01T17:49:30Z
-U15,1,神経データの機微性をどの法概念で扱うか（個人情報・生体情報・人格情報）。,法文定義行の改訂,low,48,法文定義差分と改訂日更新,closed_watch,U15_monitor_owner,2026-03-01T17:49:30Z
-U15,2,neurorightsを技術監査項目へどう写像するか。,写像語粒度ルールの更新,medium,24,粒度対応表新版と更新日比較,closed_watch,U15_monitor_owner,2026-03-01T17:49:30Z
-U15,3,法域差（EU/US/JP等）を跨ぐ最小共通運用をどう定義するか。,共通三要件抽出が成立に変化,high,12,法域別要件新版と三要件表差分,hold_watch,U15_monitor_owner,2026-03-01T17:49:30Z
-U15,4,技術進展に応じた停止条件・更新条件をどうガバナンス化するか。,周期語が公式側で新規追記,medium,24,周期語抽出新版と停止条件差分,closed_watch,U15_monitor_owner,2026-03-01T17:49:30Z
+U12,1,On what basis should identifiers be assigned to post-branch entities?,New revision line added to definition word,high,24,Revised line difference and heading difference,closed_watch,U12_monitor_owner,2026-03-01T17:49:30Z
+U12,2,"At what point should the inheritance rules for responsibilities, rights, and consent diverge?",The current language version has been updated and the starting branch correspondence has changed.,high,24,New version of current word comparison table and clause heading differences,closed_watch,U12_monitor_owner,2026-03-01T17:49:30Z
+U12,3,How should mismatches between the psychological continuity criterion and the legal individual criterion be handled?,Detect new condition words with clause extraction,high,12,Official clause difference and conditional difference log,hold_watch,U12_monitor_owner,2026-03-01T17:49:30Z
+U12,4,How should technical evaluation (performance) be connected to personhood evaluation (attribution)?,Add audit word or change connective word definition,medium,24,Conjunction word list new edition and audit word difference,closed_watch,U12_monitor_owner,2026-03-01T17:49:30Z
+U12,5,"If memory editing or resynchronization occurs between branched entities, what criteria should trigger reorganization of the legal entity ID?",Add adopted words to synonym normalization table,medium,24,New version of synonym table and judgment differences,closed_watch,U12_monitor_owner,2026-03-01T17:49:30Z
+U12,6,"When consent is withdrawn, how should revocation of permissions across multiple branched entities be implemented and audited technically?",The notation generation has been updated and old words have been abolished.,medium,24,New version comparing old and new notation and trail update log,closed_watch,U12_monitor_owner,2026-03-01T17:49:30Z
+U15,1,"Under which legal concept should the sensitivity of neural data be handled (personal data, biometric data, or personhood-related data)?",Revised legal text definition line,low,48,Legal text definition differences and revision date updated,closed_watch,U15_monitor_owner,2026-03-01T17:49:30Z
+U15,2,How should neurorights be mapped onto technical audit items?,Update of map word granularity rules,medium,24,Particle size correspondence table new edition and update date comparison,closed_watch,U15_monitor_owner,2026-03-01T17:49:30Z
+U15,3,"How should the minimum common operating model across jurisdictions (EU/US/JP, etc.) be defined?",Extraction of three common requirements changed to establishment,high,12,New version of requirements by jurisdiction and differences in three requirements tables,hold_watch,U15_monitor_owner,2026-03-01T17:49:30Z
+U15,4,How should stop conditions and update conditions be governed as technology evolves?,Periodic words are newly added on the official side,medium,24,New version of periodic word extraction and difference in stopping conditions,closed_watch,U15_monitor_owner,2026-03-01T17:49:30Z

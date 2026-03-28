@@ -1,151 +1,151 @@
 worker_id,file,lens
-1,index.md,初心者が最短で理解できる導入改善
-2,index.md,主張の検証可能性（達成条件/反証条件）の明確化
-3,index.md,曖昧語の削減と定義の明確化
-4,index.md,冗長表現の削減と可読性向上
-5,index.md,次に読むべきページへの導線強化
-6,index.md,実務的な次アクションの具体化
-7,index.md,外部依存事項の切り分けの明確化
-8,index.md,誤解されやすい点の先回り説明
-9,index.md,段落構造の整理（1段落1メッセージ）
-10,index.md,トーン統一（過度な断定を避けた敬体）
-11,verification.md,初心者が最短で理解できる導入改善
-12,verification.md,主張の検証可能性（達成条件/反証条件）の明確化
-13,verification.md,曖昧語の削減と定義の明確化
-14,verification.md,冗長表現の削減と可読性向上
-15,verification.md,次に読むべきページへの導線強化
-16,verification.md,実務的な次アクションの具体化
-17,verification.md,外部依存事項の切り分けの明確化
-18,verification.md,誤解されやすい点の先回り説明
-19,verification.md,段落構造の整理（1段落1メッセージ）
-20,verification.md,トーン統一（過度な断定を避けた敬体）
-21,datasets.md,初心者が最短で理解できる導入改善
-22,datasets.md,主張の検証可能性（達成条件/反証条件）の明確化
-23,datasets.md,曖昧語の削減と定義の明確化
-24,datasets.md,冗長表現の削減と可読性向上
-25,datasets.md,次に読むべきページへの導線強化
-26,datasets.md,実務的な次アクションの具体化
-27,datasets.md,外部依存事項の切り分けの明確化
-28,datasets.md,誤解されやすい点の先回り説明
-29,datasets.md,段落構造の整理（1段落1メッセージ）
-30,datasets.md,トーン統一（過度な断定を避けた敬体）
-31,hands_on.md,初心者が最短で理解できる導入改善
-32,hands_on.md,主張の検証可能性（達成条件/反証条件）の明確化
-33,hands_on.md,曖昧語の削減と定義の明確化
-34,hands_on.md,冗長表現の削減と可読性向上
-35,hands_on.md,次に読むべきページへの導線強化
-36,hands_on.md,実務的な次アクションの具体化
-37,hands_on.md,外部依存事項の切り分けの明確化
-38,hands_on.md,誤解されやすい点の先回り説明
-39,hands_on.md,段落構造の整理（1段落1メッセージ）
-40,hands_on.md,トーン統一（過度な断定を避けた敬体）
-41,faq.md,初心者が最短で理解できる導入改善
-42,faq.md,主張の検証可能性（達成条件/反証条件）の明確化
-43,faq.md,曖昧語の削減と定義の明確化
-44,faq.md,冗長表現の削減と可読性向上
-45,faq.md,次に読むべきページへの導線強化
-46,faq.md,実務的な次アクションの具体化
-47,faq.md,外部依存事項の切り分けの明確化
-48,faq.md,誤解されやすい点の先回り説明
-49,faq.md,段落構造の整理（1段落1メッセージ）
-50,faq.md,トーン統一（過度な断定を避けた敬体）
-51,issue.md,初心者が最短で理解できる導入改善
-52,issue.md,主張の検証可能性（達成条件/反証条件）の明確化
-53,issue.md,曖昧語の削減と定義の明確化
-54,issue.md,冗長表現の削減と可読性向上
-55,issue.md,次に読むべきページへの導線強化
-56,issue.md,実務的な次アクションの具体化
-57,issue.md,外部依存事項の切り分けの明確化
-58,issue.md,誤解されやすい点の先回り説明
-59,issue.md,段落構造の整理（1段落1メッセージ）
-60,issue.md,トーン統一（過度な断定を避けた敬体）
-61,wbe_101.md,初心者が最短で理解できる導入改善
-62,wbe_101.md,主張の検証可能性（達成条件/反証条件）の明確化
-63,wbe_101.md,曖昧語の削減と定義の明確化
-64,wbe_101.md,冗長表現の削減と可読性向上
-65,wbe_101.md,次に読むべきページへの導線強化
-66,wbe_101.md,実務的な次アクションの具体化
-67,wbe_101.md,外部依存事項の切り分けの明確化
-68,wbe_101.md,誤解されやすい点の先回り説明
-69,wbe_101.md,段落構造の整理（1段落1メッセージ）
-70,wbe_101.md,トーン統一（過度な断定を避けた敬体）
-71,eeg_101.md,初心者が最短で理解できる導入改善
-72,eeg_101.md,主張の検証可能性（達成条件/反証条件）の明確化
-73,eeg_101.md,曖昧語の削減と定義の明確化
-74,eeg_101.md,冗長表現の削減と可読性向上
-75,eeg_101.md,次に読むべきページへの導線強化
-76,eeg_101.md,実務的な次アクションの具体化
-77,eeg_101.md,外部依存事項の切り分けの明確化
-78,eeg_101.md,誤解されやすい点の先回り説明
-79,eeg_101.md,段落構造の整理（1段落1メッセージ）
-80,eeg_101.md,トーン統一（過度な断定を避けた敬体）
-81,glossary.md,初心者が最短で理解できる導入改善
-82,glossary.md,主張の検証可能性（達成条件/反証条件）の明確化
-83,glossary.md,曖昧語の削減と定義の明確化
-84,glossary.md,冗長表現の削減と可読性向上
-85,glossary.md,次に読むべきページへの導線強化
-86,glossary.md,実務的な次アクションの具体化
-87,glossary.md,外部依存事項の切り分けの明確化
-88,glossary.md,誤解されやすい点の先回り説明
-89,glossary.md,段落構造の整理（1段落1メッセージ）
-90,glossary.md,トーン統一（過度な断定を避けた敬体）
-91,casework.md,初心者が最短で理解できる導入改善
-92,casework.md,主張の検証可能性（達成条件/反証条件）の明確化
-93,casework.md,曖昧語の削減と定義の明確化
-94,casework.md,冗長表現の削減と可読性向上
-95,casework.md,次に読むべきページへの導線強化
-96,casework.md,実務的な次アクションの具体化
-97,casework.md,外部依存事項の切り分けの明確化
-98,casework.md,誤解されやすい点の先回り説明
-99,casework.md,段落構造の整理（1段落1メッセージ）
-100,casework.md,トーン統一（過度な断定を避けた敬体）
-101,idea.md,初心者が最短で理解できる導入改善
-102,idea.md,主張の検証可能性（達成条件/反証条件）の明確化
-103,idea.md,曖昧語の削減と定義の明確化
-104,idea.md,冗長表現の削減と可読性向上
-105,idea.md,次に読むべきページへの導線強化
-106,idea.md,実務的な次アクションの具体化
-107,idea.md,外部依存事項の切り分けの明確化
-108,idea.md,誤解されやすい点の先回り説明
-109,idea.md,段落構造の整理（1段落1メッセージ）
-110,idea.md,トーン統一（過度な断定を避けた敬体）
-111,proposals.md,初心者が最短で理解できる導入改善
-112,proposals.md,主張の検証可能性（達成条件/反証条件）の明確化
-113,proposals.md,曖昧語の削減と定義の明確化
-114,proposals.md,冗長表現の削減と可読性向上
-115,proposals.md,次に読むべきページへの導線強化
-116,proposals.md,実務的な次アクションの具体化
-117,proposals.md,外部依存事項の切り分けの明確化
-118,proposals.md,誤解されやすい点の先回り説明
-119,proposals.md,段落構造の整理（1段落1メッセージ）
-120,proposals.md,トーン統一（過度な断定を避けた敬体）
-121,technical_proposal_46.md,初心者が最短で理解できる導入改善
-122,technical_proposal_46.md,主張の検証可能性（達成条件/反証条件）の明確化
-123,technical_proposal_46.md,曖昧語の削減と定義の明確化
-124,technical_proposal_46.md,冗長表現の削減と可読性向上
-125,technical_proposal_46.md,次に読むべきページへの導線強化
-126,technical_proposal_46.md,実務的な次アクションの具体化
-127,technical_proposal_46.md,外部依存事項の切り分けの明確化
-128,technical_proposal_46.md,誤解されやすい点の先回り説明
-129,technical_proposal_46.md,段落構造の整理（1段落1メッセージ）
-130,technical_proposal_46.md,トーン統一（過度な断定を避けた敬体）
-131,technical_proposal_48.md,初心者が最短で理解できる導入改善
-132,technical_proposal_48.md,主張の検証可能性（達成条件/反証条件）の明確化
-133,technical_proposal_48.md,曖昧語の削減と定義の明確化
-134,technical_proposal_48.md,冗長表現の削減と可読性向上
-135,technical_proposal_48.md,次に読むべきページへの導線強化
-136,technical_proposal_48.md,実務的な次アクションの具体化
-137,technical_proposal_48.md,外部依存事項の切り分けの明確化
-138,technical_proposal_48.md,誤解されやすい点の先回り説明
-139,technical_proposal_48.md,段落構造の整理（1段落1メッセージ）
-140,technical_proposal_48.md,トーン統一（過度な断定を避けた敬体）
-141,technical_proposal_61.md,初心者が最短で理解できる導入改善
-142,technical_proposal_61.md,主張の検証可能性（達成条件/反証条件）の明確化
-143,technical_proposal_61.md,曖昧語の削減と定義の明確化
-144,technical_proposal_61.md,冗長表現の削減と可読性向上
-145,technical_proposal_61.md,次に読むべきページへの導線強化
-146,technical_proposal_61.md,実務的な次アクションの具体化
-147,technical_proposal_61.md,外部依存事項の切り分けの明確化
-148,technical_proposal_61.md,誤解されやすい点の先回り説明
-149,technical_proposal_61.md,段落構造の整理（1段落1メッセージ）
-150,technical_proposal_61.md,トーン統一（過度な断定を避けた敬体）
+1,index.md,Improve the introduction for first-time readers
+2,index.md,Clarify testable claims and pass/fail conditions
+3,index.md,Reduce ambiguity and define terms more clearly
+4,index.md,Cut redundancy and improve readability
+5,index.md,Strengthen guidance to the next page to read
+6,index.md,Make the next practical action more concrete
+7,index.md,Separate external dependencies more clearly
+8,index.md,Preempt likely misunderstandings
+9,index.md,Tighten paragraph structure (one message per paragraph)
+10,index.md,"Unify tone (polite, without overclaiming)"
+11,verification.md,Improve the introduction for first-time readers
+12,verification.md,Clarify testable claims and pass/fail conditions
+13,verification.md,Reduce ambiguity and define terms more clearly
+14,verification.md,Cut redundancy and improve readability
+15,verification.md,Strengthen guidance to the next page to read
+16,verification.md,Make the next practical action more concrete
+17,verification.md,Separate external dependencies more clearly
+18,verification.md,Preempt likely misunderstandings
+19,verification.md,Tighten paragraph structure (one message per paragraph)
+20,verification.md,"Unify tone (polite, without overclaiming)"
+21,datasets.md,Improve the introduction for first-time readers
+22,datasets.md,Clarify testable claims and pass/fail conditions
+23,datasets.md,Reduce ambiguity and define terms more clearly
+24,datasets.md,Cut redundancy and improve readability
+25,datasets.md,Strengthen guidance to the next page to read
+26,datasets.md,Make the next practical action more concrete
+27,datasets.md,Separate external dependencies more clearly
+28,datasets.md,Preempt likely misunderstandings
+29,datasets.md,Tighten paragraph structure (one message per paragraph)
+30,datasets.md,"Unify tone (polite, without overclaiming)"
+31,hands_on.md,Improve the introduction for first-time readers
+32,hands_on.md,Clarify testable claims and pass/fail conditions
+33,hands_on.md,Reduce ambiguity and define terms more clearly
+34,hands_on.md,Cut redundancy and improve readability
+35,hands_on.md,Strengthen guidance to the next page to read
+36,hands_on.md,Make the next practical action more concrete
+37,hands_on.md,Separate external dependencies more clearly
+38,hands_on.md,Preempt likely misunderstandings
+39,hands_on.md,Tighten paragraph structure (one message per paragraph)
+40,hands_on.md,"Unify tone (polite, without overclaiming)"
+41,faq.md,Improve the introduction for first-time readers
+42,faq.md,Clarify testable claims and pass/fail conditions
+43,faq.md,Reduce ambiguity and define terms more clearly
+44,faq.md,Cut redundancy and improve readability
+45,faq.md,Strengthen guidance to the next page to read
+46,faq.md,Make the next practical action more concrete
+47,faq.md,Separate external dependencies more clearly
+48,faq.md,Preempt likely misunderstandings
+49,faq.md,Tighten paragraph structure (one message per paragraph)
+50,faq.md,"Unify tone (polite, without overclaiming)"
+51,issue.md,Improve the introduction for first-time readers
+52,issue.md,Clarify testable claims and pass/fail conditions
+53,issue.md,Reduce ambiguity and define terms more clearly
+54,issue.md,Cut redundancy and improve readability
+55,issue.md,Strengthen guidance to the next page to read
+56,issue.md,Make the next practical action more concrete
+57,issue.md,Separate external dependencies more clearly
+58,issue.md,Preempt likely misunderstandings
+59,issue.md,Tighten paragraph structure (one message per paragraph)
+60,issue.md,"Unify tone (polite, without overclaiming)"
+61,wbe_101.md,Improve the introduction for first-time readers
+62,wbe_101.md,Clarify testable claims and pass/fail conditions
+63,wbe_101.md,Reduce ambiguity and define terms more clearly
+64,wbe_101.md,Cut redundancy and improve readability
+65,wbe_101.md,Strengthen guidance to the next page to read
+66,wbe_101.md,Make the next practical action more concrete
+67,wbe_101.md,Separate external dependencies more clearly
+68,wbe_101.md,Preempt likely misunderstandings
+69,wbe_101.md,Tighten paragraph structure (one message per paragraph)
+70,wbe_101.md,"Unify tone (polite, without overclaiming)"
+71,eeg_101.md,Improve the introduction for first-time readers
+72,eeg_101.md,Clarify testable claims and pass/fail conditions
+73,eeg_101.md,Reduce ambiguity and define terms more clearly
+74,eeg_101.md,Cut redundancy and improve readability
+75,eeg_101.md,Strengthen guidance to the next page to read
+76,eeg_101.md,Make the next practical action more concrete
+77,eeg_101.md,Separate external dependencies more clearly
+78,eeg_101.md,Preempt likely misunderstandings
+79,eeg_101.md,Tighten paragraph structure (one message per paragraph)
+80,eeg_101.md,"Unify tone (polite, without overclaiming)"
+81,glossary.md,Improve the introduction for first-time readers
+82,glossary.md,Clarify testable claims and pass/fail conditions
+83,glossary.md,Reduce ambiguity and define terms more clearly
+84,glossary.md,Cut redundancy and improve readability
+85,glossary.md,Strengthen guidance to the next page to read
+86,glossary.md,Make the next practical action more concrete
+87,glossary.md,Separate external dependencies more clearly
+88,glossary.md,Preempt likely misunderstandings
+89,glossary.md,Tighten paragraph structure (one message per paragraph)
+90,glossary.md,"Unify tone (polite, without overclaiming)"
+91,casework.md,Improve the introduction for first-time readers
+92,casework.md,Clarify testable claims and pass/fail conditions
+93,casework.md,Reduce ambiguity and define terms more clearly
+94,casework.md,Cut redundancy and improve readability
+95,casework.md,Strengthen guidance to the next page to read
+96,casework.md,Make the next practical action more concrete
+97,casework.md,Separate external dependencies more clearly
+98,casework.md,Preempt likely misunderstandings
+99,casework.md,Tighten paragraph structure (one message per paragraph)
+100,casework.md,"Unify tone (polite, without overclaiming)"
+101,idea.md,Improve the introduction for first-time readers
+102,idea.md,Clarify testable claims and pass/fail conditions
+103,idea.md,Reduce ambiguity and define terms more clearly
+104,idea.md,Cut redundancy and improve readability
+105,idea.md,Strengthen guidance to the next page to read
+106,idea.md,Make the next practical action more concrete
+107,idea.md,Separate external dependencies more clearly
+108,idea.md,Preempt likely misunderstandings
+109,idea.md,Tighten paragraph structure (one message per paragraph)
+110,idea.md,"Unify tone (polite, without overclaiming)"
+111,proposals.md,Improve the introduction for first-time readers
+112,proposals.md,Clarify testable claims and pass/fail conditions
+113,proposals.md,Reduce ambiguity and define terms more clearly
+114,proposals.md,Cut redundancy and improve readability
+115,proposals.md,Strengthen guidance to the next page to read
+116,proposals.md,Make the next practical action more concrete
+117,proposals.md,Separate external dependencies more clearly
+118,proposals.md,Preempt likely misunderstandings
+119,proposals.md,Tighten paragraph structure (one message per paragraph)
+120,proposals.md,"Unify tone (polite, without overclaiming)"
+121,technical_proposal_46.md,Improve the introduction for first-time readers
+122,technical_proposal_46.md,Clarify testable claims and pass/fail conditions
+123,technical_proposal_46.md,Reduce ambiguity and define terms more clearly
+124,technical_proposal_46.md,Cut redundancy and improve readability
+125,technical_proposal_46.md,Strengthen guidance to the next page to read
+126,technical_proposal_46.md,Make the next practical action more concrete
+127,technical_proposal_46.md,Separate external dependencies more clearly
+128,technical_proposal_46.md,Preempt likely misunderstandings
+129,technical_proposal_46.md,Tighten paragraph structure (one message per paragraph)
+130,technical_proposal_46.md,"Unify tone (polite, without overclaiming)"
+131,technical_proposal_48.md,Improve the introduction for first-time readers
+132,technical_proposal_48.md,Clarify testable claims and pass/fail conditions
+133,technical_proposal_48.md,Reduce ambiguity and define terms more clearly
+134,technical_proposal_48.md,Cut redundancy and improve readability
+135,technical_proposal_48.md,Strengthen guidance to the next page to read
+136,technical_proposal_48.md,Make the next practical action more concrete
+137,technical_proposal_48.md,Separate external dependencies more clearly
+138,technical_proposal_48.md,Preempt likely misunderstandings
+139,technical_proposal_48.md,Tighten paragraph structure (one message per paragraph)
+140,technical_proposal_48.md,"Unify tone (polite, without overclaiming)"
+141,technical_proposal_61.md,Improve the introduction for first-time readers
+142,technical_proposal_61.md,Clarify testable claims and pass/fail conditions
+143,technical_proposal_61.md,Reduce ambiguity and define terms more clearly
+144,technical_proposal_61.md,Cut redundancy and improve readability
+145,technical_proposal_61.md,Strengthen guidance to the next page to read
+146,technical_proposal_61.md,Make the next practical action more concrete
+147,technical_proposal_61.md,Separate external dependencies more clearly
+148,technical_proposal_61.md,Preempt likely misunderstandings
+149,technical_proposal_61.md,Tighten paragraph structure (one message per paragraph)
+150,technical_proposal_61.md,"Unify tone (polite, without overclaiming)"

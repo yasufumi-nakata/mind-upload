@@ -71,7 +71,7 @@ const SCRIPT_PATH = RAW_SCRIPT_PATH
 let isRunning = false;
 let pendingTriggers = new Set();
 
-// 実行ロジックを関数化
+// Keep the run logic in one place so manual and scheduled triggers behave identically.
 const runAutomation = (trigger) => {
     if (isRunning) {
         if (QUEUE_ON_BUSY) {
@@ -85,7 +85,7 @@ const runAutomation = (trigger) => {
     console.log(`[${new Date().toISOString()}] Starting ${trigger} automation task...`);
 
     if (!fs.existsSync(SCRIPT_PATH)) {
-        console.error('resolve-issues.sh が見つかりません。');
+        console.error('resolve-issues.sh was not found.');
         return 'skipped';
     }
 
@@ -156,7 +156,7 @@ const scheduleHourlyRun = (minute, label) => {
     scheduleNext();
 };
 
-// 毎時 SCHEDULE_MINUTE 分に実行
+// Run once per hour at SCHEDULE_MINUTE.
 if (cron) {
     const cronExpr = `${SCHEDULE_MINUTE} * * * *`;
     cron.schedule(cronExpr, () => runAutomation('scheduled-hourly'));
@@ -174,13 +174,13 @@ const server = http.createServer((req, res) => {
 
         if (status === 'started') {
             res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
-            res.end('自動実行スクリプトをトリガーしました。\n');
+            res.end('Triggered the automation script.\n');
         } else if (status === 'queued') {
             res.writeHead(202, { 'Content-Type': 'text/plain; charset=utf-8' });
-            res.end('実行中のため、次回の実行としてキューに入れました。\n');
+            res.end('Automation is already running, so this request was queued.\n');
         } else {
             res.writeHead(409, { 'Content-Type': 'text/plain; charset=utf-8' });
-            res.end('既に実行中です。\n');
+            res.end('Automation is already running.\n');
         }
     } else {
         res.writeHead(404);
@@ -192,5 +192,5 @@ server.listen(PORT, HOST, () => {
     console.log(`Automation server is running on http://${HOST}:${PORT}`);
     console.log(`Endpoint: http://${HOST}:${PORT}/resolve`);
     console.log('---');
-    console.log('このターミナルを開いたままにしておくと、定時実行が正常に動作します。');
+    console.log('Keep this terminal open if you want scheduled runs to continue normally.');
 });

@@ -1,85 +1,85 @@
 # Site Deepening Audit (2026-03-15, Maintenance State / Sleep / Myelin / Metabolic Support)
 
-## 対象
+## Scope
 
-- 主対象: `wiki/homeostatic-plasticity-and-maintenance-state.md`
-- 副対象: `verification.md`
+- Main target: `wiki/homeostatic-plasticity-and-maintenance-state.md`
+- Secondary target: `verification.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- 2026-03-14 時点で公開サイトは、connectome と cell type だけでは不十分であることをかなり明確にしていました。
-- ただし、`Wiki: 恒常性可塑性と維持状態` はなお `内在興奮性 / 発火率 set point / 分子ターンオーバー` の 3 点に重心があり、睡眠依存の再正規化、髄鞘 / オリゴデンドロサイト、グリア代謝支援を maintenance-state の本体として十分に固定していませんでした。
-- これは技術・自然科学の観点で弱点です。なぜなら、長期ダイナミクス、cross-day stability、学習後の再平衡、timing-sensitive closed loop を読む際に、`昼間の活動が似た` ことを `維持機構まで同じ` と誤読しやすい構造だったからです。
+- As of 2026-03-14, the public site was pretty clear that connectome and cell type are not enough.
+- However, `Wiki: Homeostatic plasticity and the maintenance state` still had its center of gravity at three points, `intrinsic excitability/firing rate set point/molecular turnover`, and did not sufficiently fix sleep-dependent renormalization, myelin sheath/oligodendrocytes, and glial metabolic support as the main body of the maintenance-state.
+- This is a weakness from a technical/natural science perspective. This is because when reading long-term dynamics, cross-day stability, rebalance after learning, and timing-sensitive closed loop, it was easy to misread as ``the maintenance mechanisms are similar.''
 
-## 主要な批判点
+## Main Critiques
 
-### 1. 現行ページは maintenance-state を狭く取りすぎており、sleep を controller の時間軸として扱えていませんでした
+### 1. The current page defined maintenance-state too narrowly and could not treat sleep as the controller's time axis.
 
-- 問題:
-  - 旧版は firing-rate set point と molecular turnover を押さえていましたが、sleep / wake cycle 自体が synaptic scaling と homeostatic recovery の実行相であることを前面に出していませんでした。
-  - そのため、same-day の活動一致や短期 decode 成績が、cross-day stability や長期維持に近い証拠であるかのように読める余地が残っていました。
-- 根拠:
-  - Hengen et al. (2016) は firing-rate homeostasis が sleep / wake で非対称に進むことを示しました。
-  - Torrado Pacheco et al. (2021) は sleep が downward firing-rate homeostasis を進めることを示しました。
-  - de Vivo et al. (2017)、Diering et al. (2017)、Noya et al. (2019)、Xu et al. (2024) は、sleep 中に ultrastructure、synaptic scaling、proteome、network regime が系統的に更新されることを示しました。
-- 修正:
-  - `wiki/homeostatic-plasticity-and-maintenance-state.md` を `3 つ` から `6 つ` の maintenance-state へ再編しました。
-  - `sleep / wake 依存の再正規化` を独立クラスとして追加し、same-day fit と overnight maintenance を分離しました。
+- Issue:
+- The previous version covered the firing-rate set point and molecular turnover, but did not emphasize that the sleep / wake cycle itself is the execution phase of synaptic scaling and homeostatic recovery.
+- Therefore, there remained room for same-day activity matching and short-term decoding results to be interpreted as evidence of cross-day stability or long-term maintenance.
+- Basis:
+- Hengen et al. (2016) showed that firing-rate homeostasis progresses asymmetrically during sleep/wake.
+- Torrado Pacheco et al. (2021) showed that sleep promotes downward downward-rate homeostasis.
+- de Vivo et al. (2017), Diering et al. (2017), Noya et al. (2019), and Xu et al. (2024) showed that ultrastructure, synaptic modeling, proteome, and network regime are systematically updated during sleep.
+- Revision:
+- Reorganized `wiki/homeostatic-plasticity-and-maintenance-state.md` from `3` to `6` maintenance-state.
+- Added `sleep / wake dependent renormalization` as an independent class to separate same-day fit and overnight maintenance.
 
-### 2. 旧版は myelin / oligodendrocyte state を maintenance-state に十分に含めていませんでした
+### 2. Previous version did not include myelin / oligodendrocyte state sufficiently in maintenance-state
 
-- 問題:
-  - 旧版は遅延や髄鞘の話を他ページ側へ逃がしており、このページ単体では `維持状態` が neuron-centric に見えました。
-  - しかし timing-sensitive claim では、myelin は単なる固定遅延ではなく、activity-dependent に変化する状態変数です。
-- 根拠:
-  - Gibson et al. (2014) は neuronal activity が oligodendrogenesis と adaptive myelination を促進することを示しました。
-  - McKenzie et al. (2014) は motor skill learning に active central myelination が必要であることを示しました。
-  - Looser et al. (2024) は oligodendrocyte-axon metabolic coupling が axonal health の維持に関わることを示しました。
-- 修正:
-  - `髄鞘 / オリゴデンドロサイト support` を独立クラスとして追加しました。
-  - delay を固定定数で吸収した場合は、それで何を捨てたかを本文に残す運用ルールへ更新しました。
+- Issue:
+- In the old version, the story about delay and myelin sheath was moved to another page, and `Keep State` looked neuro-centric on this page alone.
+- But in timing-sensitive claims, myelin is not just a fixed delay, but an activity-dependent variable of state.
+- Basis:
+- Gibson et al. (2014) showed that neuronal activity promotes oligodendrogenesis and adaptive myelination.
+- McKenzie et al. (2014) showed that active central myelination is necessary for motor skill learning.
+- Looser et al. (2024) showed that oligodendrocyte-axon metabolic coupling is involved in maintaining axonal health.
+- Revision:
+- Added `myelin sheath / oligodendrocyte support` as an independent class.
+- Updated the operation rule to record what was discarded in the main text when delay is absorbed with a fixed constant.
 
-### 3. 旧版は glial / metabolic support を `分子ターンオーバーの背景` に近く扱っており、記憶固定化の主変数として弱かった
+### 3. The old version treated glial / metabolic support close to `molecular turnover background` and was weak as a main variable for memory consolidation.
 
-- 問題:
-  - 旧版は active maintenance を分子状態の持続として述べていましたが、astrocyte-neuron lactate transport や astrocyte network state のような support mechanism を十分に分離していませんでした。
-  - その結果、memory persistence が `神経側の内部状態だけ` の問題として読める構造が残っていました。
-- 根拠:
-  - Suzuki et al. (2011) は astrocyte-neuron lactate transport が long-term memory formation に必要であることを示しました。
-  - Cahill et al. (2024) は local neurotransmitter input が astrocyte network state に minutes-long に符号化されることを示しました。
-  - Lee et al. (2022) は molecular turnover の下でも記憶が active maintenance で残りうることを示しました。
-- 修正:
-  - `グリア代謝 / substrate routing` と `分子ターンオーバー下の再固定化` を分離しました。
-  - 記憶維持を `static storage` ではなく `再正規化と再固定化の連鎖` として読む文面へ改稿しました。
+- Issue:
+- The previous version described active maintenance as the persistence of a molecular state, but did not sufficiently separate support mechanisms such as astrocyte-neuron lactate transport and astrocyte network state.
+- As a result, there remained a structure where memory persistence could be read as a problem with `only the internal state on the neural side`.
+- Basis:
+- Suzuki et al. (2011) showed that astrocyte-neuron lactate transport is required for long-term memory formation.
+- Cahill et al. (2024) showed that local neurotransmitter input is encoded into astrocyte network state minute-long.
+- Lee et al. (2022) showed that memory can remain through active maintenance even under molecular turnover.
+- Revision:
+- Separated `glial metabolism / substrate routing` and `reimmobilization under molecular turnover`.
+- Revised text to read memory maintenance as `renormalization and resolidification chain` instead of `static storage`.
 
-### 4. Verification 側の state-completeness gate も、maintenance-state の広がりをまだ十分に反映していませんでした
+### 4. The state-completeness gate on the verification side also did not sufficiently reflect the spread of maintenance-state.
 
-- 問題:
-  - `verification.md` の表は有用ですが、`内在興奮性・恒常性 set point` の説明が excitability に寄りすぎており、sleep-dependent renormalization や recovery controller を明示していませんでした。
-- 修正:
-  - `verification.md` の該当行を更新し、sleep / wake に依存した renormalization と recovery controller を含む表現に改めました。
-  - 実務ルールの注記も `恒常性 / 維持状態` として言い換えました。
+- Issue:
+- The table for `verification.md` is useful, but the explanation for `Intrinsic excitability/homeostasis set point` was too focused on excitability and did not explicitly mention sleep-dependent renormalization or recovery controller.
+- Revision:
+- Updated the relevant line of `verification.md` to include renormalization and recovery controller depending on sleep/wake.
+- Notes on practical rules have also been rephrased as `homeostasis/maintenance state`.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `wiki/homeostatic-plasticity-and-maintenance-state.md`
-  - front matter と要約を更新
-  - `6 つの maintenance-state` 表へ全面改稿
-  - sleep-dependent renormalization、adaptive myelination、oligodendrocyte metabolic coupling、astrocyte metabolic support の節を追加
-  - 誤読テーブルと実務ルールを、cross-day / overnight / timing-sensitive claim へ対応させて更新
-  - 参考文献を 18 本へ拡張
+- Updated front matter and summary
+- `6 maintenance-state` Completely revised table
+- Added sections on sleep-dependent renormalization, adaptive myelination, oligodendrocyte metabolic coupling, and astrocyte metabolic support.
+- Updated misreading table and practical rules to accommodate cross-day / overnight / timing-sensitive claims.
+- Expanded references to 18 books
 - `verification.md`
-  - `状態変数の完全性ゲート` の `内在興奮性・恒常性 set point` 行を更新
-  - 注記の `恒常性 / 維持状態` 表現へ同期
+- Update `Intrinsic excitability/homeostasis set point` line in `State variable integrity gate`
+- Sync to `homeostasis/maintenance state` representation of notes
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- sleep / myelin / glial maintenance を含む公開 benchmark の整備
-  - 担当者: AI / maintainer / 実験系共同研究者
-  - 前提条件: sleep state、cross-day recovery、myelin proxy、glial / metabolic proxy を同一個体で追える公開データ
-  - 完了条件: `same-day fit`、`overnight recovery`、`timing-sensitive stability` を同一 schema で比較できる benchmark を site-wide に再利用できること
+- Maintenance of public benchmarks including sleep / myelin / glial maintenance
+- Person in charge: AI / maintainer / experimental joint researcher
+- Prerequisite: Public data that can track sleep state, cross-day recovery, myelin proxy, and glial/metabolic proxy in the same individual.
+- Completion condition: A benchmark that can compare `same-day fit`, `overnight recovery`, and `timing-sensitive stability` with the same schema can be reused site-wide.
 
-## 参考文献
+## References
 
 - Hengen KB, Torrado Pacheco A, McGregor JN, Van Hooser SD, Turrigiano GG. Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. Cell. 2016.
   - https://doi.org/10.1016/j.cell.2016.01.046

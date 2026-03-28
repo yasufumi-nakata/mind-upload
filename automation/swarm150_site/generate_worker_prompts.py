@@ -2,9 +2,10 @@
 from pathlib import Path
 import csv
 
-ROOT = Path('/Users/yasufumi/Documents/GitHub/eegflow/automation/swarm150_site')
+ROOT = Path(__file__).resolve().parent
 PROMPTS = ROOT / 'prompts'
 PROMPTS.mkdir(parents=True, exist_ok=True)
+REPO_ROOT = ROOT.parent.parent
 
 pages = [
     'index.md',
@@ -25,16 +26,16 @@ pages = [
 ]
 
 lenses = [
-    '初心者が最短で理解できる導入改善',
-    '主張の検証可能性（達成条件/反証条件）の明確化',
-    '曖昧語の削減と定義の明確化',
-    '冗長表現の削減と可読性向上',
-    '次に読むべきページへの導線強化',
-    '実務的な次アクションの具体化',
-    '外部依存事項の切り分けの明確化',
-    '誤解されやすい点の先回り説明',
-    '段落構造の整理（1段落1メッセージ）',
-    'トーン統一（過度な断定を避けた敬体）',
+    'Improve the introduction for first-time readers',
+    'Clarify testable claims and pass/fail conditions',
+    'Reduce ambiguity and define terms more clearly',
+    'Cut redundancy and improve readability',
+    'Strengthen guidance to the next page to read',
+    'Make the next practical action more concrete',
+    'Separate external dependencies more clearly',
+    'Preempt likely misunderstandings',
+    'Tighten paragraph structure (one message per paragraph)',
+    'Unify tone (polite, without overclaiming)',
 ]
 
 assert len(pages) * len(lenses) == 150
@@ -43,52 +44,52 @@ meta_rows = []
 worker_id = 1
 for page in pages:
     for lens in lenses:
-        prompt = f'''あなたはWebコンテンツ改善ワーカー {worker_id}/150 です。
+        prompt = f'''You are web-content improvement worker {worker_id}/150.
 
-対象リポジトリ: /Users/yasufumi/Documents/GitHub/eegflow
-対象ファイル: {page}
-改善観点: {lens}
+Target repository: {REPO_ROOT}
+Target file: {page}
+Improvement lens: {lens}
 
-タスク:
-1. 対象ファイルを読み、改善余地がある箇所を1つだけ選んでください。
-2. 実際に差し替え可能な短い文章改善案を1件だけ作ってください。
+Task:
+1. Read the target file and choose exactly one place with clear room for improvement.
+2. Produce exactly one short replacement-ready text improvement.
 
-必須出力形式（JSONのみ。前後の説明文は禁止）:
+Required output format (JSON only; no extra explanation before or after):
 {{
   "worker_id": {worker_id},
   "file": "{page}",
   "lens": "{lens}",
-  "section_hint": "どの節かを短く",
-  "problem": "問題点を1文で",
-  "before_excerpt": "対象箇所の短い抜粋（40〜160字）",
-  "after_text": "置換後の文案（80〜220字）",
-  "reason": "改善理由を1〜2文で",
+  "section_hint": "Short section label",
+  "problem": "One-sentence description of the problem",
+  "before_excerpt": "Short excerpt of the target text (40-160 characters)",
+  "after_text": "Replacement draft (80-220 characters)",
+  "reason": "1-2 sentence reason for the change",
   "priority": "high"
 }}
 
-制約:
-- 事実関係が不明な新情報を追加しないでください。
-- 既存ページの方針（検証可能性・再現性重視）を保ってください。
-- HTMLタグは書かず、本文テキストのみ提案してください。
-- JSON以外の文字は出力しないでください。
+Constraints:
+- Do not add new factual claims if the facts are uncertain.
+- Preserve the existing page policy, especially its focus on testability and reproducibility.
+- Do not write HTML tags; propose plain body text only.
+- Output JSON only.
 '''
         (PROMPTS / f'worker{worker_id}.txt').write_text(prompt, encoding='utf-8')
         meta_rows.append((worker_id, page, lens))
         worker_id += 1
 
-merge_prompt = '''あなたは統合ワーカーです。
-下記の worker 出力 JSON を統合し、ページごとに「採用候補トップ3」をまとめてください。
+merge_prompt = '''You are the merge worker.
+Merge the worker output JSON items below and summarize the top three adoption candidates for each page.
 
-出力形式（Markdown）:
+Output format (Markdown):
 # Swarm Summary
 ## by page
 ### <page>
-- 採用候補1: ...
-- 採用候補2: ...
-- 採用候補3: ...
+- Top candidate 1: ...
+- Top candidate 2: ...
+- Top candidate 3: ...
 
 ## global priorities
-- 全体で優先度が高い改善を10件
+- 10 highest-priority improvements overall
 '''
 (PROMPTS / 'merge.txt').write_text(merge_prompt, encoding='utf-8')
 

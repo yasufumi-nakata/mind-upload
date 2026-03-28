@@ -1,76 +1,76 @@
 # Site Deepening Audit (2026-03-14, Closed-Loop Timing / Safety)
 
-## 対象
+## Scope
 
-- 主対象: `wiki/closed-loop-latency-jitter-and-safety-stops.md`
-- 副対象: `tech_roadmap.md`
+- Main target: `wiki/closed-loop-latency-jitter-and-safety-stops.md`
+- Secondary target: `tech_roadmap.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- 前回監査で EEG・decode/emulate・multimodal integration はかなり具体化されましたが、`閉ループ` 周辺はまだ一般論と強い閾値主張が混在していました。
-- 特に `tech_roadmap.md` の M2 節は、ガンマ同期から `1 ms 以下` や `microsecond 級同期` をほぼ共通要件のように読める構造でした。
-- しかし、2026-03 時点の一次文献が支持するのは、`閉ループの時間要件はループ種別ごとに異なる` という整理であり、単一閾値の site-wide 適用ではありません。
+- In the previous audit, EEG, decode/emulate, and multimodal integration were made quite concrete, but there was still a mixture of generalizations and strong threshold claims around `closed loop`.
+- In particular, the M2 clause of `tech_roadmap.md` has a structure that allows `1 ms or less` and `microsecond class synchronization` to be read as almost common requirements from gamma synchronization.
+- However, the primary literature as of 2026-03 supports the `Closed-loop time requirements vary by loop type` arrangement, not site-wide application of a single threshold.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. 現行 Roadmap は「単一の timing 閾値」で閉ループ全体を語っていました
+### 1. The current Roadmap talks about the entire closed loop with a “single timing threshold”
 
-- 問題:
-  - `tech_roadmap.md` は、phase synchronization の難しさから `1 ms 以下のジッタ許容` と `microsecond 単位の計測同期` を強く打ち出していました。
-  - しかし、それは phase-targeted loop の一部では重要でも、slow neurofeedback や adaptive DBS にそのまま一般化できません。
-- 根拠:
-  - Wilson et al. (2010) は、BCI timing を input / processing / output で分けて hardware 実測する必要を示しました。
-  - Belinskaia et al. (2020) は、alpha neurofeedback で追加 250 / 500 ms 遅延が学習を悪化させることを示しました。ここで重要なのは `短い方がよい` であって、site-wide に `1 ms` を要求することではありません。
-  - Mansouri et al. (2018) と Zrenner et al. (2018) は、phase-targeting 系では delay を `位相誤差` に写像して評価すべきことを示しました。
-  - Little et al. (2013) と Tinkhauser et al. (2017) の adaptive DBS 文脈では、支配時定数は beta burst であり、phase-locked stimulation より遅い帯域です。
-- 修正:
-  - M2 の note を全面差し替え、`loop class ごとに end-to-end 実測を残す` 形へ変更しました。
-  - I1 も `state feedback / ERP-command / phase-locked / burst-driven` の 4 区分で読む構造へ修正しました。
+- Issue:
+- `tech_roadmap.md` strongly promoted `jitter tolerance below 1 ms` and `microsecond measurement synchronization` due to the difficulty of phase synchronization.
+- However, while it is important as part of a phase-targeted loop, it cannot be directly generalized to slow neurofeedback or adaptive DBS.
+- Basis:
+- Wilson et al. (2010) showed the need to measure BCI timing by dividing it into input/processing/output hardware.
+- Belinskaia et al. (2020) showed that an additional 250/500 ms delay in alpha neurofeedback worsens learning. The important thing here is `shorter is better`, not requiring `1 ms` site-wide.
+- Mansouri et al. (2018) and Zrenner et al. (2018) showed that in a phase-targeting system, delay should be evaluated by mapping it to `phase error`.
+- In the adaptive DBS context of Little et al. (2013) and Tinkhauser et al. (2017), the dominant time constant is beta burst, a slower band than phase-locked stimulation.
+- Revision:
+- Completely replaced the M2 note and changed it to `leave end-to-end measurements for each loop class` form.
+- I1 has also been modified to read in four sections: `state feedback / ERP-command / phase-locked / burst-driven`.
 
-### 2. 現行 wiki は概念説明としては正しいが、一次文献と監査項目が不足していました
+### 2. The current wiki is correct in explaining the concept, but lacks primary literature and audit items
 
-- 問題:
-  - 旧 `wiki/closed-loop-latency-jitter-and-safety-stops.md` は「遅延」「ジッタ」「ドリフト」「安全停止」の用語整理としては有用でした。
-  - ただし、`なぜ固定閾値が危険か`、`どの loop class で何を測るべきか`、`marker と end-to-end をどう分けるか` が一次文献で支えられていませんでした。
-- 根拠:
-  - Thompson et al. (2013) と Mowla et al. (2017) は、ERP 系 BCI で latency jitter が性能に効くことを示しました。
-  - Appelhoff & Stenner (2021) は USB marker で sub-ms event marking を示しましたが、これは marker path の精度であって loop 全体の保証ではありません。
-  - Kothe et al. (2025) は LSL の synchronized multimodal recording を整理しましたが、software-based synchronization と physical actuation onset は分けて扱う必要があります。
-- 修正:
-  - wiki を `4 つの loop class` と `4 つの監査層`（end-to-end、marker/sync、phase/burst 指標、停止規則）で全面改稿しました。
-  - 参考文献を一次文献中心で追加しました。
+- Issue:
+- The old `wiki/closed-loop-latency-jitter-and-safety-stops.md` was useful for organizing terms such as "delay," "jitter," "drift," and "safety stop."
+- However, `Why fixed thresholds are dangerous`, `Which loop class should measure what`, and `How to distinguish between marker and end-to-end` were not supported by primary literature.
+- Basis:
+- Thompson et al. (2013) and Mowla et al. (2017) showed that latency jitter is effective for performance in ERP-based BCI.
+- Appelhoff & Stenner (2021) showed sub-ms event marking with USB markers, but this is the accuracy of the marker path and not the guarantee of the entire loop.
+- Kothe et al. (2025) organized LSL's synchronized multimodal recording, but software-based synchronization and physical actuation onset need to be treated separately.
+- Revision:
+- Completely revised the wiki with `4 loop classes` and `4 audit layers` (end-to-end, marker/sync, phase/burst indicators, stopping rules).
+- Added references, mainly primary documents.
 
-### 3. 現行記述は「同期」と「出力実測」と「安全停止」を混ぜていました
+### 3. The current description mixed "synchronization", "actual output measurement", and "safety stop"
 
-- 問題:
-  - LSL、TTL marker、photodiode、phase estimator、安全停止は、似て見えて別の層です。
-  - 旧ページではこの差が十分に明示されておらず、`LSL があるから timing は十分` と誤読される余地がありました。
-- 根拠:
-  - Kothe et al. (2025) は LSL を software-based synchronization として示しています。
-  - Wilson et al. (2010) は output path を別に測る必要を示しています。
-  - Appelhoff & Stenner (2021) は marker path の高速化を示していますが、display/stimulator path とは別問題です。
-- 修正:
-  - `LSL が保証すること / しないこと` を独立節に分離しました。
-  - `棄権 / freeze / 安全停止` を trigger と log の違いまで表で固定しました。
+- Issue:
+- LSL, TTL marker, photodiode, phase estimator, and safety stop look similar but are separate layers.
+- This difference was not made clear enough on the old page, and there was room for it to be misread as `timing is sufficient because of LSL`.
+- Basis:
+- Kothe et al. (2025) describes LSL as software-based synchronization.
+- Wilson et al. (2010) indicates the need to measure output path separately.
+- Appelhoff & Stenner (2021) shows that marker paths are faster, but display/stimulator paths are a different matter.
+- Revision:
+- Separated `What LSL guarantees/does not guarantee` into an independent clause.
+- Fixed `abstain / freeze / safety stop` as a table to the difference between trigger and log.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `wiki/closed-loop-latency-jitter-and-safety-stops.md`
-  - 2026-03-06 版の一般説明を、一次文献ベースの evidence refresh 版へ全面改稿
-  - `固定閾値が危険な理由`、`4つの loop class`、`LSL と marker の役割差`、`最低限残すログ`、`参考文献` を追加
+- Completely revised the general explanation of the 2026-03-06 version to an evidence refresh version based on primary literature.
+- Added `Why fixed thresholds are dangerous`, `Four loop classes`, `Difference in role between LSL and marker`, `Minimum logs to leave`, `References`
 - `tech_roadmap.md`
-  - M2 の `1 ms / microsecond` 前提を撤回し、loop class ごとの監査へ差し替え
-  - I1 の `閉ループ` を loop class と end-to-end 指標で再定義
-  - timing/synchronization 文献の参照セットを更新
+- Withdraw M2's `1 ms / microsecond` assumption and replace it with auditing for each loop class.
+- Redefine `closed loop` in I1 with loop class and end-to-end indicator
+- Updated timing/synchronization literature reference set.
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- ヒトでの phase-specific stimulation と adaptive DBS を同一ベンチへ入れる共通評価系の構築
-  - 担当者: AI / maintainer / 実験系 collaborators
-  - 前提条件: IRB、刺激機材、closed-loop 実験環境
-  - 完了条件: 共通の end-to-end latency / phase error / stop-rule schema で比較できる実験系が整うこと
+- Establishment of a common evaluation system that combines phase-specific stimulation and adaptive DBS in humans on the same bench
+- Person in charge: AI / maintainer / experimental collaborators
+- Prerequisites: IRB, stimulation equipment, closed-loop experimental environment
+- Completion condition: An experimental system that can be compared using a common end-to-end latency / phase error / stop-rule schema is in place.
 
-## 参考文献
+## References
 
 - Wilson JA, Mellinger J, Schalk G, Williams JC. A procedure for measuring latencies in brain-computer interfaces. IEEE Trans Biomed Eng. 2010.
   - https://doi.org/10.1109/TBME.2010.2047259

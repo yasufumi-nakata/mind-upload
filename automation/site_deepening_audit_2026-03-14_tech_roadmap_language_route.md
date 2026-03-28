@@ -1,71 +1,71 @@
 # Site Deepening Audit (2026-03-14, Tech Roadmap / Brain-to-Text Evidence Gate)
 
-## 対象
+## Scope
 
-- 主対象: `tech_roadmap.md`
+- Main target: `tech_roadmap.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- `tech_roadmap.md` は公開サイトの主要導線であり、ここでの比較軸が甘いと `Perspective` や `Verification` で整えた厳密さが入口で薄まります。
-- 2026-03-14 時点の `V8` は抽象度が高く、`LLM/模倣との区別` を述べながら、実際には何を baseline として並べるべきかが十分に固定されていませんでした。
-- さらに `先行研究マップ` と `参考文献 E` は、generic LLM 論文を含む古い束ね方のままで、brain-to-text / speech BCI の一次文献ベースの読み方に追いついていませんでした。
+- `tech_roadmap.md` is the main conductor of the public site, and if the comparison axis here is lax, the rigor established by `Perspective` and `Verification` will be weakened at the entrance.
+- `V8` as of 2026-03-14 has a high level of abstraction, and while it states `LLM/imitation distinction`, what should actually be arranged as baseline was not sufficiently fixed.
+- In addition, `Previous research map` and `References E` were still in the old bundling style, including generic LLM papers, and had not kept up with the primary literature-based reading style of brain-to-text/speech BCI.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. `V8` は「模倣との区別」を抽象的に述べるだけで、一次文献が示す証拠階層を分けていませんでした
+### 1. `V8` only abstractly stated the "distinction from imitation" and did not separate the layers of evidence shown by the primary literature
 
-- 問題:
-  - 旧版は「介入応答・閉ループ・内部状態の整合が必要」と書いていましたが、非侵襲 semantic decode、非侵襲 word / speech decode、侵襲 streaming speech BCI が別々の達成であることが見えませんでした。
-  - そのため、読者が `brain-to-text` の前進をそのまま `WBE` や `emulation` の前進として読める余地が残っていました。
-- 根拠:
-  - Tang et al. (2023) は、non-invasive fMRI から連続言語の意味再構成を示しつつ、subject cooperation が学習時にも適用時にも必要であると示しました。
-  - D&eacute;fossez et al. (2023) は、MEG/EEG から speech perception の decode を示しましたが、healthy volunteers の受動聴取課題であり、speech production や open-ended generation ではありません。
-  - d'Ascoli et al. (2025) は、MEG と reading task が EEG と listening より有利で、データ量が decode 性能を大きく左右すると示しました。
-  - Willett et al. (2023), Littlejohn et al. (2025), Wairagkar et al. (2025) は、speech neuroprosthesis の性能上限を押し上げましたが、communication subsystem の局所的前進です。
-- 修正:
-  - `V8` を evidence gate として再設計し、`非侵襲 semantic / caption decoding`、`非侵襲 word / speech decoding`、`侵襲 streaming speech neuroprosthesis` を表で分離しました。
-  - 各トラックに対して「今言えること」と「まだ言えないこと」を固定しました。
+- Issue:
+- The previous version wrote that "intervention response, closed loop, and internal state alignment are required," but it did not seem that non-invasive semantic decoding, non-invasive word/speech decoding, and invasive streaming speech BCI were separate achievements.
+- Therefore, there was still room for readers to read the progress of `brain-to-text` as the progress of `WBE` or `emulation`.
+- Basis:
+- Tang et al. (2023) demonstrated semantic reconstruction of continuous language using non-invasive fMRI, and showed that subject cooperation is necessary both during learning and application.
+- Défossez et al. (2023) showed decoding of speech perception from MEG/EEG, but in a passive listening task with healthy volunteers, not speech production or open-ended generation.
+- d'Ascoli et al. (2025) showed that MEG and reading tasks are more advantageous than EEG and listening, and that the amount of data greatly affects decoding performance.
+- Willett et al. (2023), Littlejohn et al. (2025), Wairagkar et al. (2025) have pushed the performance limits of speech neuroprosthesis, but are local advances in the communication subsystem.
+- Revision:
+- Redesigned `V8` as an evidence gate and separated `non-invasive semantic / caption decoding`, `non-invasive word / speech decoding`, and `invasive streaming speech neuroprosthesis` in a table.
+- Fixed "What can be said now" and "What can't be said yet" for each track.
 
-### 2. 言語事前分布の混入を監査する評価パックが Roadmap 側に不足していました
+### 2. Roadmap was missing an evaluation pack to audit language prior contamination
 
-- 問題:
-  - 旧版には `LM-only`、`no-LM`、`time-shuffle`、`trial-shuffle`、candidate set size、cross-day、latency、abstention、recalibration burden といった監査項目が明示されていませんでした。
-  - そのため、language prior の寄与と neural contribution を分ける site rule が、長文ノート側にしか存在しない状態でした。
-- 根拠:
-  - Tang et al. (2023) は subject cooperation requirement を明示し、decode 成功が計測条件に強く依存することを示しました。
-  - d'Ascoli et al. (2025) は device、task、training data amount が decode 性能を強く動かすことを示しました。
-  - Littlejohn et al. (2025) は 80 ms increments の streaming synthesis を示し、Wairagkar et al. (2025) は instantaneous closed-loop audio feedback を示しました。ここでは accuracy だけでなく latency / silence / abstention が中心指標になります。
-  - Wilson et al. (2025) は、long-term unsupervised recalibration を別問題として切り出し、drift を無視した fixed-decoder 主張が危ういことを示しました。
-- 修正:
-  - `V8` に `最低限ほしい評価パック` を追加し、neural contribution、generalization boundary、streaming metrics、claim downgrade rule を明文化しました。
+- Issue:
+- The previous version did not clearly specify audit items such as `LM-only`, `no-LM`, `time-shuffle`, `trial-shuffle`, candidate set size, cross-day, latency, abstention, and recalibration burden.
+- As a result, the site rule that separates the language prior contribution from the neural contribution only existed on the long note side.
+- Basis:
+- Tang et al. (2023) clarified the subject cooperation requirement and showed that decoding success strongly depends on measurement conditions.
+- d'Ascoli et al. (2025) showed that device, task, and training data amount strongly influence decoding performance.
+- Littlejohn et al. (2025) demonstrated streaming synthesis with 80 ms increments, and Wairagkar et al. (2025) demonstrated instantaneous closed-loop audio feedback. Here, not only accuracy but also latency / silence / abstention are the central metrics.
+- Wilson et al. (2025) treated long-term unsupervised recalibration as a separate issue and showed that the fixed-decoder argument that ignores drift is dangerous.
+- Revision:
+- Added `minimum evaluation pack` to `V8` and clarified neural contribution, generalization boundary, streaming metrics, and claim downgrade rule.
 
-### 3. `先行研究マップ` と `参考文献 E` が、公開サイトの現在の厳密さに比べて弱い文献束のままでした
+### 3. `Previous research map` and `References E` remained weak literature bundles compared to the current rigor of the public site
 
-- 問題:
-  - 旧版は `Ji et al. (2023)` や `Manakul et al. (2023)` のような generic LLM reliability 論文を、brain decoding の主要先行研究と同列に置いていました。
-  - 一方で、D&eacute;fossez et al. (2023)、d'Ascoli et al. (2025)、Littlejohn et al. (2025)、Wairagkar et al. (2025)、Wilson et al. (2025) など、今回の技術論点を直接支える一次文献が抜けていました。
-  - また d'Ascoli らの 2025 論文は、公開サイト内の別監査メモでは DOI が `10.1038/s41467-025-56165-8` と記録されていましたが、Nature Communications の正式記事は `10.1038/s41467-025-65499-0` でした。
-- 修正:
-  - `先行研究マップ` のデコーディング行を、`Huth / Tang / D&eacute;fossez / Horikawa / d'Ascoli / Willett / Littlejohn / Wairagkar / Wilson` の一次文献セットへ更新しました。
-  - `参考文献 E` を、generic LLM 論文ではなく、brain-to-text / speech BCI の primary papers と DOI へ全面差し替えました。
-  - d'Ascoli らの DOI は `10.1038/s41467-025-65499-0` で統一しました。
+- Issue:
+- Previous editions placed generic LLM reliability papers such as `Ji et al. (2023)` and `Manakul et al. (2023)` on the same level as major previous research in brain decoding.
+- On the other hand, primary literature that directly supports this technical issue was missing, such as Défossez et al. (2023), d'Ascoli et al. (2025), Littlejohn et al. (2025), Wairagkar et al. (2025), and Wilson et al. (2025).
+- Also, the DOI of d'Ascoli et al.'s 2025 paper was recorded as `10.1038/s41467-025-56165-8` in a separate audit memo on the public site, but the official article in Nature Communications was `10.1038/s41467-025-65499-0`.
+- Revision:
+- Updated the decoding line for `Previous research map` to the primary literature set for `Huth / Tang / Défossez / Horikawa / d'Ascoli / Willett / Littlejohn / Wairagkar / Wilson`.
+- Completely replaced `Reference E` with brain-to-text / speech BCI primary papers and DOI instead of generic LLM papers.
+- The DOI of d'Ascoli et al. has been unified as `10.1038/s41467-025-65499-0`.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `tech_roadmap.md`
-  - `V8` を abstract な模倣論から、brain-to-text の evidence gate へ改稿
-  - `最低限ほしい評価パック` を追加
-  - `先行研究マップ` のデコーディング行を一次文献ベースへ更新
-  - `参考文献 E` を primary papers + DOI へ全面更新
+- Rewritten `V8` from abstract imitation theory to brain-to-text evidence gate.
+- Added `Minimum desired evaluation pack`
+- Updated the decoding line of `Previous research map` to the primary literature base.
+- Full update of `References E` to primary papers + DOI
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- `LM-only / shuffle / OOD / cross-day / latency / abstention / recalibration` を同一 schema で比較できる公開 benchmark の整備
-  - 担当者: AI / maintainer / 実験系共同研究者
-  - 前提条件: 公開可能な brain-to-text / speech BCI ログ、または同等の再現用ベンチ
-  - 完了条件: communication route の前進と WBE 主張を同じ評価表で切り分けられること
+- Develop a public benchmark that allows you to compare `LM-only / shuffle / OOD / cross-day / latency / abstention / recalibration` with the same schema.
+- Person in charge: AI / maintainer / experimental joint researcher
+- Prerequisite: Publishable brain-to-text / speech BCI logs or equivalent reproduction bench
+- Completion condition: Communication route progress and WBE claims can be separated using the same evaluation table.
 
-## 参考文献
+## References
 
 - Huth AG, de Heer WA, Griffiths TL, Theunissen FE, Gallant JL. Natural speech reveals the semantic maps that tile human cerebral cortex. Nature. 2016.
   - https://doi.org/10.1038/nature17637

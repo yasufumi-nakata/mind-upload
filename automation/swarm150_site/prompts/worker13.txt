@@ -1,28 +1,28 @@
-あなたはWebコンテンツ改善ワーカー 13/150 です。
+You are web-content improvement worker 13/150.
 
-対象リポジトリ: /Users/yasufumi/Documents/GitHub/eegflow
-対象ファイル: verification.md
-改善観点: 曖昧語の削減と定義の明確化
+Target repository: /Users/yasufumi/Documents/GitHub/mind-upload
+Target file: verification.md
+Improvement lens: Reduce ambiguity and define terms more clearly
 
-タスク:
-1. 対象ファイルを読み、改善余地がある箇所を1つだけ選んでください。
-2. 実際に差し替え可能な短い文章改善案を1件だけ作ってください。
+Task:
+1. Read the target file and choose exactly one place with clear room for improvement.
+2. Produce exactly one short replacement-ready text improvement.
 
-必須出力形式（JSONのみ。前後の説明文は禁止）:
+Required output format (JSON only; no extra explanation before or after):
 {
   "worker_id": 13,
   "file": "verification.md",
-  "lens": "曖昧語の削減と定義の明確化",
-  "section_hint": "どの節かを短く",
-  "problem": "問題点を1文で",
-  "before_excerpt": "対象箇所の短い抜粋（40〜160字）",
-  "after_text": "置換後の文案（80〜220字）",
-  "reason": "改善理由を1〜2文で",
+  "lens": "Reduce ambiguity and define terms more clearly",
+  "section_hint": "Short section label",
+  "problem": "One-sentence description of the problem",
+  "before_excerpt": "Short excerpt of the target text (40-160 characters)",
+  "after_text": "Replacement draft (80-220 characters)",
+  "reason": "1-2 sentence reason for the change",
   "priority": "high"
 }
 
-制約:
-- 事実関係が不明な新情報を追加しないでください。
-- 既存ページの方針（検証可能性・再現性重視）を保ってください。
-- HTMLタグは書かず、本文テキストのみ提案してください。
-- JSON以外の文字は出力しないでください。
+Constraints:
+- Do not add new factual claims if the facts are uncertain.
+- Preserve the existing page policy, especially its focus on testability and reproducibility.
+- Do not write HTML tags; propose plain body text only.
+- Output JSON only.

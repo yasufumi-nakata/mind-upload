@@ -63,7 +63,7 @@ required_publish_snippets = [
   'git clone "$REMOTE_URL" "$WORK_DIR"',
   'rsync -a --delete --exclude ".git/" --exclude ".DS_Store" "$EXPORT_DIR"/ "$WORK_DIR"/',
   'find "$WORK_DIR" -name ".DS_Store" -delete',
-  'GitHub Wiki の作業先はリポジトリ内に固定しています'
+  'The GitHub Wiki working directory must stay inside the repository'
 ]
 
 required_publish_snippets.each do |snippet|
@@ -421,7 +421,7 @@ required_exporter_selftest_snippets = [
   'GITHUB_WIKI_EXPORT_SRC_DIR="$SRC_DIR"',
   'GITHUB_WIKI_EXPORT_DEST_DIR="$DEST_DIR"',
   'assert_contains "$DEST_DIR/Home.md" "[Guide](${GITHUB_WIKI}/guide)"',
-  'assert_contains "$DEST_DIR/_Sidebar.md" "## その他"',
+  'assert_contains "$DEST_DIR/_Sidebar.md" "## Other"',
   'assert_not_contains "$DEST_DIR/_Sidebar.md" "mind-upload-basics"',
   '[[ ! -e "$DEST_DIR/generated/demo/.DS_Store" ]] || fail "Noise file copied into export: .DS_Store"'
 ]
@@ -467,9 +467,9 @@ required_publish_selftest_snippets = [
   'run_missing_remote_skip() {',
   'GITHUB_WIKI_REMOTE_BASE="$MISSING_REMOTE"',
   'WIKI_PUBLISH_ALLOW_SKIP=1',
-  'GitHub Wiki の git リポジトリがまだ初期化されていません。',
-  '想定 remote: $MISSING_REMOTE',
-  'WIKI_PUBLISH_ALLOW_SKIP=1 のため、失敗扱いにはしません。',
+  'The GitHub Wiki git repository has not been initialized yet.',
+  'Expected remote: $MISSING_REMOTE',
+  'Because WIKI_PUBLISH_ALLOW_SKIP=1, this will not be treated as a failure.',
   'git init --bare --initial-branch=master "$REMOTE_BARE" >/dev/null',
   'git init --initial-branch=master "$SEED_REPO" >/dev/null',
   'run_publish_success() {',
@@ -477,7 +477,7 @@ required_publish_selftest_snippets = [
   'env "$@" "$LOCK_SCRIPT" "$PUBLISH_SCRIPT"',
   'cmp "$EXPORT_DIR/Home.md" "$VERIFY_REPO/Home.md" >/dev/null',
   'cmp "$EXPORT_DIR/_Sidebar.md" "$VERIFY_REPO/_Sidebar.md" >/dev/null',
-  'GitHub Wiki に反映すべき差分はありません。',
+  'There are no GitHub Wiki changes to publish.',
   'run_missing_remote_failure',
   'run_missing_remote_skip'
 ]
@@ -492,7 +492,7 @@ required_export_script_snippets = [
   'DEST_DIR = File.expand_path(ENV.fetch("GITHUB_WIKI_EXPORT_DEST_DIR", File.join(ROOT, "github-wiki-export")))',
   'available_slugs = slugs.select { |slug| front_matters.key?(slug) }',
   'next if available_slugs.empty?',
-  'lines << "## その他"'
+  'lines << "## Other"'
 ]
 
 required_export_script_snippets.each do |snippet|

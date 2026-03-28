@@ -1,80 +1,80 @@
 # Site Deepening Audit (2026-03-15, Thermodynamic Grounding)
 
-## 対象
+## Scope
 
-- 主対象: `tech_roadmap.md`
-- 副対象: `wiki/thermodynamic-grounding-basics.md`
+- Main target: `tech_roadmap.md`
+- Secondary target: `wiki/thermodynamic-grounding-basics.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- 公開サイトの熱力学まわりは、`verification.md` と `wiki/thermodynamic-grounding-basics.md` ではかなり慎重に書かれていましたが、`tech_roadmap.md` の `I9` は依然として強すぎる記述が残っていました。
-- とくに旧 `I9` は、`Landauer 下限`、`生体脳の代謝予算`、`粗視化 neural dynamics の time irreversibility`、`model-based entropy flow` を 1 本の必須条件として束ねており、一次文献の到達点を越えて読める状態でした。
-- これはサイト全体に効く問題でございます。`tech_roadmap.md` は学習者が「どの問題を解けたら前進か」を読む基準ページであり、ここで探索的補助ログを必須ゲートのように見せると、他ページの慎重な記述まで弱く読まれてしまいます。
+- Thermodynamics on the public site was written very carefully in `verification.md` and `wiki/thermodynamic-grounding-basics.md`, but `I9` in `tech_roadmap.md` was still written too strongly.
+- In particular, the old `I9` bundled `Landauer lower bound`, `metabolic budget of the living brain`, `time irreversibility of coarse-grained neural dynamics`, and `model-based entropy flow` into one essential book, making it readable beyond the reach of primary literature.
+- This is a site-wide issue. `tech_roadmap.md` is a standard page where learners read ``Which problems must be solved to move forward?'' If the exploratory support log is made to look like a required gate here, even the careful descriptions on other pages will be weakly read.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. 旧 `I9` は、異なる測定層を 1 つの工学要件に混ぜていました
+### 1. Old `I9` mixed different measurement layers into one engineering requirement
 
-- 問題:
-  - 旧版は `Landauer`、`EPR > 0`、`20W`、`通信:計算比`、`Virtual Dissipation Protocol` を一続きの設計条件として提示していました。
-  - しかし、これらは同じ層の量ではありません。
-- 根拠:
-  - Bérut et al. (2012) が実証したのは、`logically irreversible` な 1-bit erasure に対する最小散逸下限であり、デジタル脳全体の wall-power や NESS 再現条件ではありません。
-  - Lynn et al. (2021) は、coarse-grained fMRI state dynamics から broken detailed balance と entropy production を推定しましたが、同論文自体が coarse graining により nonequilibrium degrees of freedom を平均化しうることを明示しています。
-  - Nartallo-Kaluarachchi et al. (2025) も、観測 multivariate time-series の irreversibility は EPR の lower bound であると明示しています。
-  - Ishihara & Shimazaki (2025) は、entropy flow 推定が state-space kinetic Ising model、pairwise coupling、mean-field approximation に依存する model-based quantity であることを示しています。
-- 修正:
-  - `wiki/thermodynamic-grounding-basics.md` に `4つの測定層` を追加しました。
-  - `Landauer 下限`、`組織レベルのエネルギー予算`、`粗視化 neural dynamics の不可逆性`、`model-based entropy flow` を別物として表に分解しました。
+- Issue:
+- The previous version presented `Landauer`, `EPR > 0`, `20W`, `Communication: Computation Ratio`, `Virtual Dissipation Protocol` as a series of design conditions.
+- But these are not the same amount of layers.
+- Basis:
+- Bérut et al. (2012) demonstrated a minimum dissipation lower bound for `logically irreversible` 1-bit erasure, not wall-power or NESS reproduction conditions for the entire digital brain.
+- Lynn et al. (2021) estimated broken detailed balance and entropy production from coarse-grained fMRI state dynamics, but the paper itself clearly states that coarse graining can average out nonequilibrium degrees of freedom.
+- Nartallo-Kaluarachchi et al. (2025) also clearly states that the irreversibility of observed multivariate time-series is the lower bound of EPR.
+- Ishihara & Shimazaki (2025) show that entropy flow estimation is a model-based quantity that depends on the state-space kinetic ising model, pairwise coupling, and mean-field approximation.
+- Revision:
+- Added `4 measurement layers` to `wiki/thermodynamic-grounding-basics.md`.
+- `Landauer lower bound`, `organizational-level energy budget`, `irreversibility of coarse-grained neural dynamics`, `model-based entropy flow` were separated into tables as separate items.
 
-### 2. 旧 `I9` は、一次文献がまだ支持していない必須ゲートを置いていました
+### 2. Old `I9` placed mandatory gates that primary literature does not yet support
 
-- 問題:
-  - `EPR > 0 を維持しつつ論理計算を行うアルゴリズムの定式化`
+- Issue:
+- `Formulation of an algorithm that performs logical calculations while maintaining EPR > 0`
   - `Virtual Dissipation Protocol`
-  - `生体脳 20W と同等`
-  - `通信:計算のエネルギー消費比率が同等`
-  - これらが、あたかも現時点の受理条件のように並んでいました。
-- 根拠:
-  - Bérut et al. (2012)、Lynn et al. (2021)、de la Fuente et al. (2022)、Nartallo-Kaluarachchi et al. (2025)、Ishihara & Shimazaki (2025) のいずれも、WBE の acceptance gate として上記条件を導出していません。
-  - Attwell & Laughlin (2001) は rodent gray matter における signaling budget の分解を与えていますが、これは biological tissue の descriptive budget であり、digital emulation の合否基準ではありません。
-- 修正:
-  - 旧 `I9` の必須条件を撤回し、熱力学指標は `補助ログ` と明記しました。
-  - 以下の判断は、上記一次文献が WBE の必須ゲートを導出していない点からの **推論** です:
-    - `EPR > 0` 維持を受理条件にしない
-    - `20W` や `通信:計算比` を site-wide KPI にしない
-    - `Virtual Dissipation Protocol` を設計既定路線にしない
+- `Equivalent to biological brain 20W`
+- `Communication: Calculation energy consumption ratio is the same`
+- These were listed as if they were the current acceptance conditions.
+- Basis:
+- None of Bérut et al. (2012), Lynn et al. (2021), de la Fuente et al. (2022), Nartallo-Kaluarachchi et al. (2025), and Ishihara & Shimazaki (2025) derive the above conditions as an acceptance gate for WBE.
+- Attwell & Laughlin (2001) give a decomposition of the signaling budget in rodent gray matter, but this is a descriptive budget for biological tissue and is not a pass/fail criterion for digital emulation.
+- Revision:
+- The old `I9` requirement has been withdrawn, and the thermodynamic index has been specified as `auxiliary log`.
+- The following judgment is **inference** based on the fact that the above primary literature does not derive the essential gates of WBE:
+- `EPR > 0` Do not make maintenance a condition for acceptance.
+- Do not make `20W` or `Communication:Calculation ratio` site-wide KPIs.
+- Do not make `Virtual Dissipation Protocol` the design default route
 
-### 3. 旧 `I9` は、理論依存の主張を熱力学の工学要件へ持ち込みすぎていました
+### 3. The old `I9` brought too many theory-dependent claims into the engineering requirements of thermodynamics.
 
-- 問題:
-  - 旧版は `IIT 4.0` や `Unfolding Argument` を前面に出しつつ、そこから substrate requirement や thermodynamic guarantee を導く構造でした。
-  - しかし、熱力学の一次文献が直接支えているのは、`論理的不可逆性の下限` と `粗視化 neural dynamics の time asymmetry` までです。
-- 修正:
-  - `tech_roadmap.md` の `I9` を、理論採択の節ではなく `どこまでを measurement / logging question として扱うか` の節に差し替えました。
-  - 工学的に今やることを、`wall-plug power`、`FLOPs`、`time irreversibility`、`model-based entropy flow` の分離ログへ限定しました。
+- Issue:
+- The previous version had a structure that put `IIT 4.0` and `Unfolding Argument` at the forefront and derived substrate requirement and thermodynamic guarantee from there.
+- However, only `lower bound of logical irreversibility` and `time asymmetry of coarse-grained neural dynamics` are directly supported by the primary literature on thermodynamics.
+- Revision:
+- Replaced `I9` in `tech_roadmap.md` with the `How far should we treat it as a measurement / logging question?` clause instead of the theory adoption clause.
+- From an engineering standpoint, I have limited what I am doing now to the separate logs of `wall-plug power`, `FLOPs`, `time irreversibility`, and `model-based entropy flow`.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `tech_roadmap.md`
-  - `last_updated` を 2026-03-15 に更新
-  - `I9` を全面改稿し、`Virtual Dissipation Protocol` / `EPR > 0` / `20W KPI` / `通信:計算比 KPI` を撤回
-  - 熱力学指標を `補助ログ` とし、最低限残すべきログ schema を追加
-  - 参考文献の thermodynamics 節を、実在する一次文献ベースへ差し替え
+- `last_updated` updated to 2026-03-15
+- Completely revised `I9` and withdrawn `Virtual Dissipation Protocol` / `EPR > 0` / `20W KPI` / `Communication: Calculation ratio KPI`
+- Set the thermodynamic index to `auxiliary log` and add the minimum log schema that should be kept.
+- Replaced the thermodynamics section of the bibliography with the existing primary literature base.
 - `wiki/thermodynamic-grounding-basics.md`
-  - `last_updated` を 2026-03-15 に更新
-  - `4つの測定層` を追加
-  - `20W や signaling budget を必須閾値にしない` ことを本文へ明記
-  - 参考文献へ Bérut et al. (2012) と Attwell & Laughlin (2001) を追加
+- `last_updated` updated to 2026-03-15
+- Added `4 measurement layers`
+- `Do not make 20W or signaling budget mandatory thresholds` clearly stated in the text
+- Added Bérut et al. (2012) and Attwell & Laughlin (2001) to references
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- cross-modal irreversibility benchmark の整備
-  - 担当者: AI / maintainer / 実験系共同研究者
-  - 前提条件: 同一タスクについて、EEG / ECoG / fMRI / MEG の少なくとも一部で比較可能な公開データと、共有前処理条件があること
-  - 完了条件: `粗視化条件` `推定器` `lower bound / model-based quantity` `wall-power / FLOPs` を同一 schema で比較できる公開 benchmark が整うこと
+- Establishment of cross-modal irreversibility benchmark
+- Person in charge: AI / maintainer / experimental joint researcher
+- Prerequisites: Comparable public data on at least some EEG/ECoG/fMRI/MEG for the same task and shared pre-processing conditions.
+- Completion condition: A public benchmark is in place to compare `coarse-grained condition` `estimator` `lower bound / model-based quantity` `wall-power / FLOPs` with the same schema.
 
-## 参考文献
+## References
 
 - Bérut A, Arakelyan A, Petrosyan A, et al. Experimental verification of Landauer’s principle linking information and thermodynamics. Nature. 2012.
   - https://doi.org/10.1038/nature10872

@@ -1,79 +1,79 @@
 # Site Deepening Audit (2026-03-14, Dataset Toolchain / Benchmark Reproducibility)
 
-## 対象
+## Scope
 
-- 主対象: `datasets.md`
-- 副対象: `wiki/standards-repositories-validators-and-benchmarks.md`
-- 副対象: `wiki/l0-minimum-artifact-pack.md`
+- Main target: `datasets.md`
+- Secondary target: `wiki/standards-repositories-validators-and-benchmarks.md`
+- Secondary target: `wiki/l0-minimum-artifact-pack.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- 公開サイトはすでに `BIDS は規格、OpenNeuro は置き場、Benchmark は比較ルール` という大枠までは整理できていました。
-- しかし、2026-03-14 時点の実務導線には、`同じ dataset 名でも別 snapshot / version なら別入力になる` こと、`MNE-BIDS のようなローダ / 変換器` と `MOABB のような benchmark harness` が別物であることが十分に固定されていませんでした。
-- この欠落は技術・自然科学の観点で弱点です。なぜなら、L0 の再現可能解析では高性能モデル以前に `どの版の入力を、どの評価族で比べたか` を固定しない限り、比較可能性そのものが成立しないからです。
+- The public site has already been organized to the general outline of ``BIDS is the standard, OpenNeuro is the place to be, Benchmark is the comparison rule``.
+- However, as of 2026-03-14, it was not sufficiently established in the practical guidance that `Even if the dataset name is the same, different snapshots/versions are different inputs`, `loader/transformer like MNE-BIDS` and `benchmark harness like MOABB` are different things.
+- This lack is a weakness from a technical/natural science perspective. This is because in reproducible analysis of L0, comparability itself does not hold unless `which version of the input was compared with which evaluation family` is fixed before the high-performance model.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. 現行サイトは `規格 / 置き場 / benchmark` を概念的に分けていたが、`版固定` が不足していました
+### 1. The current site conceptually separated `Standard / Place / benchmark`, but `Version fixed` was missing.
 
-- 問題:
-  - 旧版は `OpenNeuro` や `PhysioNet` を置き場として紹介していましたが、dataset 名だけで同一入力を特定したかのように読める余地がありました。
-  - しかし、公開 repository 上では同じ dataset 名でも snapshot / version が変わりえます。
-- 根拠:
-  - OpenNeuro の公式 docs は、snapshot を semantic version の git tag として扱うことを明示しています。
-  - PhysioNet の project pages と citation guidance は、resource ごとに version を示し、その版を引用する運用を取っています。
-- 修正:
-  - `datasets.md` と `wiki/l0-minimum-artifact-pack.md` に、dataset 名ではなく `snapshot / version / DOI / 取得日` を最低成果物へ含める site rule を追加しました。
-  - `wiki/standards-repositories-validators-and-benchmarks.md` に `Input ID` として版固定を独立論点化しました。
+- Issue:
+- The previous version introduced `OpenNeuro` and `PhysioNet` as locations, but there was room for it to be read as if the same input was specified just by the dataset name.
+- However, the snapshot / version can change even with the same dataset name on a public repository.
+- Basis:
+- OpenNeuro's official docs clearly states that snapshots are treated as semantic version git tags.
+- PhysioNet's project pages and citation guidance indicate the version for each resource and cite that version.
+- Revision:
+- Added site rule to `datasets.md` and `wiki/l0-minimum-artifact-pack.md` to include `snapshot / version / DOI / retrieved date` instead of the dataset name in the minimum deliverables.
+- Version fixation has been made an independent issue as `Input ID` in `wiki/standards-repositories-validators-and-benchmarks.md`.
 
-### 2. 現行サイトは `読めること` と `公平比較できること` を十分に分離していませんでした
+### 2. The current site did not separate `readable` and `fairly comparable` enough
 
-- 問題:
-  - 旧版では `BIDS に揃える`, `Validator を通す`, `Benchmark で比べる` までは書かれていましたが、その中間にある `MNE-BIDS のような入出力経路` と `MOABB のような evaluation engine` が抜けていました。
-  - その結果、読者が `MNE-BIDS で読めた = benchmark まで済んだ` と誤読しうる構造が残っていました。
-- 根拠:
-  - Appelhoff et al. (2019) の MNE-BIDS は、BIDS datasets の整理・metadata 抽出・MNE への読込経路を提供するソフトウェアです。
-  - MNE-BIDS の current docs は、`write_raw_bids()` について `BIDS was originally designed for unprocessed or minimally processed data` と注意し、modified/preloaded data の書き戻しを例外的扱いにしています。
-  - Jayaram & Barachant (2018) の MOABB は、EEG-based BCI に対する trustworthy algorithm benchmarking を目的とし、paradigm と evaluation を固定する枠組みです。
-  - MOABB の公式 docs も、within-session / cross-session / cross-subject を別 evaluation family として整理しています。
-- 修正:
-  - `wiki/standards-repositories-validators-and-benchmarks.md` に `5 層` の表を追加し、規格、公開版、変換・読込、benchmark harness、学習器を分離しました。
-  - `datasets.md` に `置き場の次に固定する実行鎖` と `Step 2.5: loader と benchmark を分けて固定する` を追加しました。
+- Issue:
+- In the old version, `Align to BIDS`, `Pass through Validator`, `Compare with Benchmark` were written, but `I/O path like MNE-BIDS` and `evaluation engine like MOABB` in between were missing.
+- As a result, a structure remained that could be misread by readers as `Readable by MNE-BIDS = reached benchmark`.
+- Basis:
+- MNE-BIDS by Appelhoff et al. (2019) is software that provides a path for organizing BIDS datasets, extracting metadata, and loading them into MNE.
+- The current docs of MNE-BIDS notes `BIDS was originally designed for unprocessed or minimally processed data` about `write_raw_bids()`, and treats writing back modified/preloaded data as an exception.
+- MOABB by Jayaram & Barachant (2018) is a framework that fixes paradigm and evaluation for the purpose of trustworthy algorithm benchmarking for EEG-based BCI.
+- MOABB's official docs also organizes within-session / cross-session / cross-subject as a separate evaluation family.
+- Revision:
+- Added `5 layers` table to `wiki/standards-repositories-validators-and-benchmarks.md` and separated standards, public version, conversion/reading, benchmark harness, and learning device.
+- Added `Execution chain to be fixed after storage` and `Step 2.5: Fix loader and benchmark separately` to `datasets.md`.
 
-### 3. 現行 L0 成果物パックには `evaluation family` と `dataset version` が明示されていませんでした
+### 3. `evaluation family` and `dataset version` were not explicitly specified in the current L0 artifact pack
 
-- 問題:
-  - 旧 `wiki/l0-minimum-artifact-pack.md` は、BIDS、QC、分割、ベースライン、実行手順、失敗例を挙げていましたが、`どの版のデータか` と `within-session / cross-session / cross-subject のどれか` を独立成果物として扱っていませんでした。
-  - これでは、同じ score でも意味が変わるケースを防ぎきれません。
-- 根拠:
-  - MOABB docs は paradigm と evaluation family を独立に定義しており、同じ pipeline でも評価族が変われば比較意味が変わります。
-  - OpenNeuro / PhysioNet は dataset versioning を明示しており、dataset 名だけでは不十分です。
-- 修正:
-  - `wiki/l0-minimum-artifact-pack.md` を `7 点` から `8 点` へ更新し、先頭に `データ版` を追加しました。
-  - 分割ルールにも evaluation family を明記し、`他の人が同じ版の入力を持てますか` を最初の完了判定に変更しました。
+- Issue:
+- The old `wiki/l0-minimum-artifact-pack.md` listed BIDS, QC, splits, baselines, execution steps, and failure examples, but did not treat `Which edition of the data` and `Within-session / cross-session / cross-subject` as independent artifacts.
+- This cannot prevent cases where the same score has different meanings.
+- Basis:
+- MOABB docs defines paradigm and evaluation family independently, and even if the same pipeline has a different evaluation family, the comparison meaning will change.
+- OpenNeuro / PhysioNet makes dataset versioning explicit, and the dataset name alone is not sufficient.
+- Revision:
+- Updated `wiki/l0-minimum-artifact-pack.md` from `7 points` to `8 points` and added `data version` at the beginning.
+- Clarified evaluation family in the split rule and changed `Can others have the same version of input` to the first completion judgment.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `datasets.md`
-  - repository / BIDS / loader / benchmark の実務鎖を追加
-  - `version pin` と `evaluation family` を L0 checklist と確認表に追加
-  - OpenNeuro、PhysioNet、MNE-BIDS、MOABB の一次ソースを参考文献へ追加
+- Added repository / BIDS / loader / benchmark practical chain
+- Added `version pin` and `evaluation family` to L0 checklist and confirmation table.
+- Added primary sources for OpenNeuro, PhysioNet, MNE-BIDS, MOABB to bibliography
 - `wiki/standards-repositories-validators-and-benchmarks.md`
-  - `4 つ` の概念説明を、`5 層` の運用表へ拡張
-  - `dataset 名だけでは足りない`, `MNE-BIDS ≠ benchmark`, `MOABB score は evaluation family 依存` を明文化
-  - `4 つの ID` と `5 問` を追加
+- Expanded the concept explanation of `4 layers` to the operation table of `5 layers`
+- Clarify `dataset name alone is not enough`, `MNE-BIDS ≠ benchmark`, `MOABB score depends on evaluation family`
+- Added `4 IDs` and `5 questions`
 - `wiki/l0-minimum-artifact-pack.md`
-  - `7 点` を `8 点` に更新し、`データ版` を追加
-  - 完了判定を `同じ版の入力` 基準へ更新
+- Updated `7 points` to `8 points` and added `Data version`
+- Updated completion judgment to `same version input` standard
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- site-wide な benchmark schema の統一
-  - 担当者: AI / maintainer
-  - 前提条件: `within-session / cross-session / cross-subject` を公開ページ全体でどこまで標準語として使うかを決めること
-  - 完了条件: `datasets.md`、`verification.md`、関連 wiki の間で evaluation family 名と最低提出物が一貫すること
+- Unification of site-wide benchmark schema
+- Person in charge: AI / maintainer
+- Prerequisite: Decide how much `within-session / cross-session / cross-subject` should be used as standard language throughout the public page.
+- Completion condition: `datasets.md`, `verification.md`, evaluation family name and minimum submissions must be consistent between related wikis.
 
-## 参考文献
+## References
 
 - BIDS Specification: Electroencephalography
   - https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html

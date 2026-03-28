@@ -1,11 +1,11 @@
 uid,rq_index,rq_text,previous_drift_score,rechecked_drift_score,drift_threshold,delta_score,escalation_status,next_step_ja,generated_at_utc
-U12,1,分岐後主体の識別子を何に基づいて付与するか。,18,19,40,+1,keep_watch,定義語改訂行の次窓確認を継続,2026-03-01T19:45:10Z
-U12,2,責任・権利・同意の継承ルールをどの時点で分岐させるか。,14,15,40,+1,keep_watch,時点語版更新有無の定期確認を継続,2026-03-01T19:45:10Z
-U12,3,心理的連続性基準と法的個体基準の不一致をどう扱うか。,26,27,40,+1,keep_watch,条件語変化の先行確認を継続,2026-03-01T19:45:10Z
-U12,4,技術評価（性能）と人格評価（帰属）をどう接続するか。,16,16,40,0,keep_watch,監査語追加有無の定期確認を継続,2026-03-01T19:45:10Z
-U12,5,分岐主体間で記憶編集・再同期が起きた場合、法的主体IDを再編する基準は何か。,22,23,40,+1,keep_watch,同義語追加有無の定期確認を継続,2026-03-01T19:45:10Z
-U12,6,同意撤回が発生したとき、複数分岐主体への権限剥奪を技術的にどう実装・監査するか。,20,20,40,0,keep_watch,表記世代更新有無の定期確認を継続,2026-03-01T19:45:10Z
-U15,1,神経データの機微性をどの法概念で扱うか（個人情報・生体情報・人格情報）。,24,25,40,+1,keep_watch,法文定義改訂の先行確認を継続,2026-03-01T19:45:10Z
-U15,2,neurorightsを技術監査項目へどう写像するか。,19,19,40,0,keep_watch,写像語粒度更新の定期確認を継続,2026-03-01T19:45:10Z
-U15,3,法域差（EU/US/JP等）を跨ぐ最小共通運用をどう定義するか。,28,29,40,+1,keep_watch,共通三要件変化の先行確認を継続,2026-03-01T19:45:10Z
-U15,4,技術進展に応じた停止条件・更新条件をどうガバナンス化するか。,17,18,40,+1,keep_watch,周期語公式追記の定期確認を継続,2026-03-01T19:45:10Z
+U12,1,On what basis should identifiers be assigned to post-branch entities?,18,19,40,+1,keep_watch,Continue checking the definition word revision line in the next window,2026-03-01T19:45:10Z
+U12,2,"At what point should the inheritance rules for responsibilities, rights, and consent diverge?",14,15,40,+1,keep_watch,Continue to regularly check whether the current language version has been updated.,2026-03-01T19:45:10Z
+U12,3,How should mismatches between the psychological continuity criterion and the legal individual criterion be handled?,26,27,40,+1,keep_watch,Continuing advance confirmation of conditional word changes,2026-03-01T19:45:10Z
+U12,4,How should technical evaluation (performance) be connected to personhood evaluation (attribution)?,16,16,40,0,keep_watch,Continue to regularly check whether audit terms have been added.,2026-03-01T19:45:10Z
+U12,5,"If memory editing or resynchronization occurs between branched entities, what criteria should trigger reorganization of the legal entity ID?",22,23,40,+1,keep_watch,Continue to regularly check whether synonyms have been added.,2026-03-01T19:45:10Z
+U12,6,"When consent is withdrawn, how should revocation of permissions across multiple branched entities be implemented and audited technically?",20,20,40,0,keep_watch,Continue to regularly check whether the indicated generation has been updated.,2026-03-01T19:45:10Z
+U15,1,"Under which legal concept should the sensitivity of neural data be handled (personal data, biometric data, or personhood-related data)?",24,25,40,+1,keep_watch,Continuing advance confirmation of legal definition revisions,2026-03-01T19:45:10Z
+U15,2,How should neurorights be mapped onto technical audit items?,19,19,40,0,keep_watch,Continue to regularly check map word granularity updates,2026-03-01T19:45:10Z
+U15,3,"How should the minimum common operating model across jurisdictions (EU/US/JP, etc.) be defined?",28,29,40,+1,keep_watch,Continuing advance confirmation of changes in the three common requirements,2026-03-01T19:45:10Z
+U15,4,How should stop conditions and update conditions be governed as technology evolves?,17,18,40,+1,keep_watch,Continued regular confirmation of periodic word official additions.,2026-03-01T19:45:10Z

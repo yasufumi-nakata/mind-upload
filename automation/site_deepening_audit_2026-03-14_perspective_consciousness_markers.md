@@ -1,78 +1,78 @@
 # Site Deepening Audit (2026-03-14, Perspective / Consciousness Markers)
 
-## 対象
+## Scope
 
-- 主対象: `perspective.md`
+- Main target: `perspective.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- 2026-03-14 時点で、`Perspective` の `EEGで意識を測る` 節は、サイト全体の中でもっとも読者に将来像を強く印象づける箇所でした。
-- しかし、`PCI / PCI-ST`、`no-report paradigms`、`安静時複雑性`、`臨界性`、`multimodal clinical validation` が、証拠強度の差を十分に見せないまま並んでいました。
-- その結果、一次文献がまだ支持していない `単独の意識メータ`、`臨界性からの統一説明`、`単一路線への収束` を読者が期待しやすい構造が残っていました。
+- As of 2026-03-14, the `Measuring consciousness with EEG` section of `Perspective` was the part of the entire site that gave readers the strongest impression of the future vision.
+- However, `PCI/PCI-ST`, `no-report paradigms`, `rest-state complexity`, `criticality`, and `multimodal clinical validation` were lined up without sufficiently showing the difference in evidence strength.
+- As a result, there remained a structure in which readers were more likely to expect ``a single consciousness meter,'' ``a unified explanation from criticality,'' and ``a convergence to a single path.'' that were not yet supported by the primary literature.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. Cogitate / adversarial collaboration の読み方が強すぎました
+### 1. I read Cogitate / adversarial collaboration too strongly
 
-- 問題:
-  - 旧版は、2025年の adversarial collaboration を、`IIT/GNWT 統合の撤回` と `FEP/予測符号化への転換` にほぼ直結させていました。
-  - しかし Ferrante et al. (2025) が示したのは、単一理論の勝利ではなく、複数理論の主要予測が部分的に支持されつつ、鍵予測のいくつかが反証された、という結果です。
-  - また同論文は、意識内容候補マーカーと task relevance / report requirement のマーカーが分かれることも示しており、理論移行より先に confound control を固定すべきことを示しています。
-- 修正:
-  - `理論を採択する` 書き方をやめ、`理論を事前登録された予測集合として競わせる` 立場へ改めました。
-  - FEP / 予測符号化も `既定路線` ではなく `候補モデル族` へ下げました。
+- Issue:
+- In the previous version, adversarial collaboration in 2025 was almost directly connected to `withdrawal of IIT/GNWT integration` and `conversion to FEP/predictive coding`.
+- But instead of a victory for a single theory, Ferrante et al. (2025) showed that the main predictions of multiple theories were partially supported, while some key predictions were disproved.
+- The same paper also shows that conscious content candidate markers and task relevance / report requirement markers are separated, indicating that confound control should be fixed before theory transfer.
+- Revision:
+- I stopped writing `Adopt the theory` and changed my position to `Let the theory compete as a pre-registered set of predictions`.
+- FEP/Predictive encoding has also been lowered to `candidate model family` instead of `default route`.
 
-### 2. `no-report` と `PCI` と `resting-state metrics` が同列に見えていました
+### 2. `no-report`, `PCI` and `resting-state metrics` looked the same
 
-- 問題:
-  - 旧版は、`行動非依存の意識指標` として PCI、no-report、臨界性をほぼ同格に読める構造でした。
-  - しかし技術的には、no-report は readout ではなく confound control、PCI/PCI-ST は perturbation benchmark、安静時複雑性・臨界性は補助 proxy 候補です。
-  - この差を曖昧にすると、`安静時 EEG だけで十分` という誤読を誘発します。
-- 根拠:
-  - Tsuchiya et al. (2015) は no-report paradigms を NCC 抽出の設計として整理しています。
-  - Cohen et al. (2024) は visual awareness で、Dellert et al. (2025) は auditory no-report fMRI で、no-report 条件が post-perceptual processing の切り分けに有効であることを示しました。
-  - Casali et al. (2013) と Comolatti et al. (2019) は PCI / PCI-ST を state-level benchmark として前進させましたが、Hernandez-Pavon et al. (2023) は TMS-EEG の刺激条件・マスキング・アーチファクト管理が比較可能性の前提だと明示しています。
-- 修正:
-  - `site rule` として、`no-report = confound control`、`PCI/PCI-ST = 主 benchmark 候補`、`安静時複雑性・臨界性 = 補助 / 探索トラック` を明記しました。
-  - `証拠強度の違う4トラック` 表を追加し、読者が強さの差を表で読めるようにしました。
+- Issue:
+- The previous version had a structure where PCI, no-report, and criticality could be read almost equivalently as `behavior-independent awareness index`.
+- Technically, however, no-report is not readout but confound control, PCI/PCI-ST is perturbation benchmark, and resting complexity/criticality is an auxiliary proxy candidate.
+- If this difference is made ambiguous, it will lead to the misreading as `Resting EEG alone is sufficient`.
+- Basis:
+- Tsuchiya et al. (2015) organizes no-report paradigms as a design for NCC extraction.
+- Cohen et al. (2024) showed in visual awareness, and Dellert et al. (2025) in auditory no-report fMRI that the no-report condition is effective in isolating post-perceptual processing.
+- Casali et al. (2013) and Comolatti et al. (2019) advanced PCI/PCI-ST as a state-level benchmark, while Hernandez-Pavon et al. (2023) explicitly state that TMS-EEG stimulation conditions, masking, and artifact control are prerequisites for comparability.
+- Revision:
+- Clarified `no-report = confound control`, `PCI/PCI-ST = primary benchmark candidate`, and `resting complexity/criticality = auxiliary/exploratory track` as `site rule`.
+- `4 tracks with different strength of evidence` Added table so readers can read the difference in strength in the table.
 
-### 3. `臨界性からの統一説明` は、一次文献の強さより一段先へ進みすぎていました
+### 3. `Unified explanation from criticality` was one step too far beyond the strength of the primary literature
 
-- 問題:
-  - 旧版は、安静時 EEG の臨界性指標から `侵襲なしの意識評価` や `統一説明` へ比較的滑らかにつなげていました。
-  - しかし、Maschke et al. (2024) が示すのは麻酔誘導下の cohort での関連であり、広範な病態・装置・施設をまたぐ一般解ではありません。
-  - さらに Casarotto et al. (2024) は、MCS で spontaneous EEG marker と evoked EEG marker が解離しうることを示しており、安静時 proxy を PCI 代替とみなすのは危険です。
-- 修正:
-  - フェーズ2を `安静時 proxy の較正` へ変更し、`摂動なしで十分` という読みを止めました。
-  - `proxy としてどこまで使えるかを外部較正する` という目的へ縮退させました。
+- Issue:
+- The previous version had a relatively smooth connection from the resting EEG criticality index to `Non-invasive Consciousness Assessment` and `Unified Explanation`.
+- However, what Maschke et al. (2024) shows is an association in a cohort under anesthesia induction, and is not a general solution across a wide range of pathological conditions, devices, and facilities.
+- Furthermore, Casarotto et al. (2024) showed that spontaneous EEG markers and evoked EEG markers can dissociate in MCS, so it is dangerous to consider resting proxies as a substitute for PCI.
+- Revision:
+- Changed Phase 2 to `Calibration of proxy at rest` and stopped reading it as `No perturbation is sufficient`.
+- Degenerated to the purpose of `External calibration to determine how far it can be used as a proxy`.
 
-### 4. 終盤のインパクト記述が科学ページとして過大でした
+### 4. The impact description at the end was excessive for a scientific page.
 
-- 問題:
-  - 旧版には `ノーベル級のインパクト`、`世界標準の意識指標` という表現がありました。
-  - これは研究計画の気概としては理解できても、一次文献の強さを伝える科学ページとしては過大で、読者の期待を誤誘導します。
-- 根拠:
-  - Ferreiro et al. (2025) は、DoC の診断 / 予後は multimodal・multicentre の統合で前進しうることを示していますが、単独で universal standard となる 1 指標を提示したわけではありません。
-- 修正:
-  - `単独意識メータ` の宣言を撤回し、`事前登録・外部妥当化・校正・棄権を含む公開 benchmark を積み上げる` という到達目標へ変更しました。
+- Issue:
+- The old version had the expressions `Nobel-level impact`, `world-standard awareness index`.
+- Although this is understandable as the spirit of the research plan, it is excessive for a scientific page that conveys the strength of primary literature, and it misleads readers' expectations.
+- Basis:
+- Ferreiro et al. (2025) indicate that the diagnosis/prognosis of DoC can be advanced through multimodal/multicentre integration, but they have not presented a single index that can serve as a universal standard on its own.
+- Revision:
+- The declaration of ``Single Awareness Meter'' has been withdrawn and the goal has been changed to ``Build up a public benchmark that includes pre-registration, external validation, proofreading, and abstention.''
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `perspective.md`
-  - `Adversarial Collaboration` の解釈を、`理論の勝敗` から `prediction competition` へ修正
-  - `FEP / 予測符号化` の位置づけを `候補モデル族` へ変更
-  - `EEGで意識を測る` 節を全面改稿し、`PCI / no-report / resting-state metrics / multimodal validation` の証拠強度を分離
-  - `臨界性からの統一説明` と `世界標準 / ノーベル級` の誇張表現を撤回
-  - 2024-2025 の一次文献 4 本を参考文献へ追加
+- Corrected the interpretation of `Adversarial Collaboration` from `Theory Victory` to `prediction competition`
+- Changed the position of `FEP / Predictive Coding` to `Candidate Model Family`
+- Completely revised the `Measuring consciousness with EEG` section and separated the strength of evidence for `PCI / no-report / resting-state metrics / multimodal validation`
+- Removed exaggeration of `Unified explanation from criticality` and `World standard / Nobel class`
+- Added 4 primary documents from 2024-2025 to references
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- TMS-EEG / no-report / multimodal validation を同一 cohort で回す実験系の実装
-  - 担当者: AI / maintainer / 実験系共同研究者
-  - 前提条件: IRB、TMS-EEG 機材、no-report 課題実装、臨床協力体制
-  - 完了条件: 同一 cohort で perturbation benchmark と spontaneous proxy を比較できる公開ログがそろうこと
+- Implementation of an experimental system that runs TMS-EEG / no-report / multimodal validation in the same cohort
+- Person in charge: AI / maintainer / experimental joint researcher
+- Prerequisites: IRB, TMS-EEG equipment, no-report assignment implementation, clinical collaboration system
+- Completion condition: There must be public logs that allow comparison of perturbation benchmark and spontaneous proxy in the same cohort.
 
-## 参考文献
+## References
 
 - Ferrante O, et al. Adversarial testing of global neuronal workspace and integrated information theories of consciousness. Nature. 2025.
   - https://doi.org/10.1038/s41586-025-08888-1

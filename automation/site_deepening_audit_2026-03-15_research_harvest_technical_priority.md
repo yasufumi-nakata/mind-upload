@@ -1,75 +1,75 @@
 # Site Deepening Audit (2026-03-15, Research Harvest / Technical-Natural-Science Priority Route)
 
-## 対象
+## Scope
 
-- 主対象: `research_harvest_50.md`
-- 副対象: `wiki/u-number-guide.md`
+- Main target: `research_harvest_50.md`
+- Secondary target: `wiki/u-number-guide.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- `research_harvest_50.md` は未解決問題ごとの地図として有用ですが、2026-03-15 時点では、技術・自然科学の読者が最初に辿るべき導線が入口で固定されていませんでした。
-- 実際、ページ前半には `source_logged` の受理ログや、U0/U12/U15 のような形而上学・制度寄りの群が近い位置に並び、計測・直接妥当化・長期閉ループ安定性・maintenance-state より先に目へ入りやすい構造が残っていました。
-- これは技術・自然科学の観点で弱点です。なぜなら、現在の一次証拠が比較的厚い front は、本人性や制度論ではなく、`何が測れるか`、`どこまで直接妥当化できるか`、`decode と emulation をどう分けるか`、`長期運用で何が壊れるか` にあるからです。
+- `research_harvest_50.md` is useful as a map of each unresolved problem, but as of 2026-03-15, the route that technology and natural science readers should follow first was not fixed at the entrance.
+- In fact, in the first half of the page, the acceptance log of `source_logged` and metaphysical/system-oriented groups such as U0/U12/U15 were lined up close together, and there remained a structure that was easier to see than measurement, direct validation, long-term closed-loop stability, and maintenance-state.
+- This is a weakness from a technical/natural science perspective. This is because the current relatively thick front of primary evidence lies in `what can be measured', `how far can it be directly justified', `how to distinguish between decode and emulation', `what will break down in long-term operation', not in identity or institutional theory.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. 旧入口は intake queue と evidence frontier を視覚的に近づけすぎていました
+### 1. The old entrance placed the intake queue and evidence frontier visually too close together.
 
-- 問題:
-  - `最新追加入力` は運用上必要ですが、Media / Review / arXiv の `source_logged` 項目が入口前半にあるため、技術読者が「いま最も重要な一次証拠群」と誤読する余地がありました。
-  - とくに decode、speech neuroprosthesis、HD-EEG direct validation、maintenance-state の front を探したい読者に対し、既定の読む順序が固定されていませんでした。
-- 根拠:
-  - Tang et al. (2023) と d'Ascoli et al. (2025) は、非侵襲 decode がどこまで進んだかを直接示す一次文献です。
-  - Willett et al. (2023)、Littlejohn et al. (2025)、Wairagkar et al. (2025) は、侵襲 speech neuroprosthesis の front を示します。
-  - Unnwongse et al. (2023) と Hao et al. (2025) は、EEG source imaging を intracranial / SEEG で直接妥当化する系です。
-- 修正:
-  - `research_harvest_50.md` に `2026-03 技術・自然科学の優先ルート` を新設しました。
-  - `最新追加入力` 節には、frontier ranking ではなく intake queue であることを明記しました。
+- Issue:
+- `Latest additions` is necessary for operation, but since the `source_logged` item in Media / Review / arXiv is in the first half of the entry, there was room for technical readers to misread it as "the most important group of primary evidence right now."
+- The default reading order was not fixed, especially for readers who wanted to find the front of decode, speech neuroprosthesis, HD-EEG direct validation, and maintenance-state.
+- Basis:
+- Tang et al. (2023) and d'Ascoli et al. (2025) are primary references that directly demonstrate how far non-invasive decoding has come.
+- Willett et al. (2023), Littlejohn et al. (2025), Wairagkar et al. (2025) demonstrate the front of invasive speech neuroprosthesis.
+- Unnwongse et al. (2023) and Hao et al. (2025) are systems that directly validate EEG source imaging with intracranial / SEEG.
+- Revision:
+- Added `2026-03 Technology/Natural Science Priority Route` to `research_harvest_50.md`.
+- In the `Latest Additions` section, we clarified that it is intake queue instead of frontier ranking.
 
-### 2. 旧 U 導線は、技術読者が先に見るべき U 群を十分に絞れていませんでした
+### 2. The old U conductor did not sufficiently narrow down the U groups that technical readers should look at first.
 
-- 問題:
-  - 既存の入口表は一般向けには有用でしたが、U11、U0/U12、U14/U15 が早い段階で並ぶため、技術・自然科学の既定ルートとしては焦点が広すぎました。
-  - これでは `decode の成功`、`閉ループの局所成功`、`connectome の前進` を、WBE の核心条件へ読み替えやすい構造が残ります。
-- 根拠:
-  - Littlejohn et al. (2025) と Wilson et al. (2025) は、長期運用では streaming success と recalibration burden を分けて扱う必要があることを示しました。
-  - Xu et al. (2024)、Looser et al. (2024)、Lee et al. (2022)、Gouwens et al. (2021) は、connectome と cell type の外に maintenance-state が残ることを支持します。
-  - LSL 論文 (Kothe et al., 2025) と Motion-BIDS (2024) は、時刻同期と multimodal metadata を固定しないと比較不能になることを示します。
-- 修正:
-  - `research_harvest_50.md` の関心別入口を、`U1/U7 → U4/U13 → U8 → U3 → U10` の技術優先順へ差し替えました。
-  - `wiki/u-number-guide.md` にも同じ技術ルートを追加しました。
+- Issue:
+- The existing entrance table was useful for the general public, but with U11, U0/U12, and U14/U15 lining up early, it was too broad in focus to be the default route for technology and natural sciences.
+- This leaves a structure that makes it easy to read `decode success`, `closed-loop local success`, `connectome advancement` into the core conditions of WBE.
+- Basis:
+- Littlejohn et al. (2025) and Wilson et al. (2025) showed that streaming success and recalibration burden need to be treated separately in long-term operations.
+- Xu et al. (2024), Looser et al. (2024), Lee et al. (2022), and Gouwens et al. (2021) support that maintenance-state remains outside of connectome and cell type.
+- The LSL paper (Kothe et al., 2025) and Motion-BIDS (2024) show that without fixing time synchronization and multimodal metadata, they become incomparable.
+- Revision:
+- Replaced `research_harvest_50.md` entry by interest with `U1/U7 → U4/U13 → U8 → U3 → U10` technical priority.
+- Added the same technical route to `wiki/u-number-guide.md`.
 
-### 3. 旧導線は「今回は主導線に置かない群」を明示していませんでした
+### 3. The old lead line did not specify "groups that will not be placed on the lead line this time"
 
-- 問題:
-  - U0/U12/U15 は重要ですが、今回のユーザ要求どおり技術・自然科学だけに焦点を絞るなら、既定入口から意図的に外す必要があります。
-  - これを明示しないと、「重要だから先に読む」と「重要だが今回の主導線ではない」が混ざります。
-- 修正:
-  - `research_harvest_50.md` と `wiki/u-number-guide.md` の両方に、`U0 / U12 / U15 は主導線から外す` 注記を追加しました。
-  - 理由は、哲学・法学ではなく、まず計測・直接妥当化・長期安定・hidden state を固定すべきだからだと本文へ明記しました。
+- Issue:
+- U0/U12/U15 are important, but if you want to focus only on technology and natural sciences as requested by this user, you will need to intentionally remove them from the default entrances.
+- If you don't make this clear, "read it first because it's important" and "it's important, but it's not the main focus of this time" will be mixed up.
+- Revision:
+- Added `U0 / U12 / U15 are removed from the lead line` note to both `research_harvest_50.md` and `wiki/u-number-guide.md`.
+- I have specified in the text that the reason is not philosophy or law, but that measurement, direct validation, long-term stability, and hidden state should be fixed first.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `research_harvest_50.md`
-  - `last_updated` を 2026-03-15 に更新
-  - front matter に技術・自然科学の既定入口を追加
-  - `2026-03 技術・自然科学の優先ルート` 節を新設
-  - `最新追加入力` が frontier ranking ではないことを追記
-  - U 導線を `U1/U7 → U4/U13 → U8 → U3 → U10` の順へ更新
+- `last_updated` updated to 2026-03-15
+- Added default entrance for technology/natural science to front matter
+- Added `2026-03 Priority route for technology and natural sciences` section
+- Added that `Latest added input` is not frontier ranking
+- Update U conductor to `U1/U7 → U4/U13 → U8 → U3 → U10` order
 - `wiki/u-number-guide.md`
-  - `last_updated` を 2026-03-15 に更新
-  - front matter に技術ルートを追記
-  - `技術・自然科学で先に見る順` 節を新設
-  - `U0 / U12 / U15` を主導線から外す理由を追記
+- `last_updated` updated to 2026-03-15
+- Added technical route to front matter
+- Added `Order of viewing first in technology/natural sciences` section
+- Added the reason for removing `U0 / U12 / U15` from the lead line.
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- 文献地図全引用の evidence-rank タグ再付与
-  - 担当者: AI / maintainer
-  - 前提条件: `primary-experimental / primary-dataset / review / media / philosophy-law / operations` の分類規約を決めること
-  - 完了条件: 文献地図の全引用が `状態` だけでなく `証拠型` と `優先度` でも絞り込めること
+- Re-tag evidence-rank for all citations in the bibliographic map
+- Person in charge: AI / maintainer
+- Prerequisite: Deciding on the classification rules for `primary-experimental / primary-dataset / review / media / philosophy-law / operations`
+- Completion condition: All citations in the bibliographic map can be narrowed down not only by `state` but also by `evidence type` and `priority`
 
-## 参考文献
+## References
 
 - Tang J, LeBel A, Jain S, et al. Semantic reconstruction of continuous language from non-invasive brain recordings. *Nat Neurosci*. 2023.
   - https://doi.org/10.1038/s41593-023-01304-9

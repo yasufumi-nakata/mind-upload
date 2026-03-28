@@ -1,75 +1,75 @@
 # Site Deepening Audit (2026-03-14, Connectome / Augmentation Ladder)
 
-## 対象
+## Scope
 
-- 主対象: `wiki/connectome-is-not-enough.md`
-- 副対象: `verification.md`
+- Main target: `wiki/connectome-is-not-enough.md`
+- Secondary target: `verification.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- 2026-03-14 時点の公開サイトは、`connectome-complete ≠ emulation-complete` という批判自体はかなり整理できていました。
-- しかし、現状の説明はなお `欠ける状態変数の列挙` に寄っており、読者が「では何を足したら、一段強い予測 claim に進めるのか」を比較可能な形で読み取りにくい状態でした。
-- この欠落は技術・自然科学の側面で弱点です。なぜなら、state variable を無限に追加列挙するだけでは、研究設計が `何を取るべきか` ではなく `何でも足りない` に見えてしまい、実証可能性が落ちるからです。
+- On the public site as of 2026-03-14, the `connectome-complete ≠ emulation-complete` criticism itself was pretty well organized.
+- However, the current explanation still leans toward `enumeration of missing state variables`, making it difficult for readers to understand in a way that they can compare and understand, ``What should I add to advance to a predicted stronger claim?''
+- This lack is a weakness in the technical and natural science aspects. This is because simply enumerating an infinite number of state variables will make the research design look like ``Not enough of anything'' instead of ``What to take'', reducing demonstrability.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. 現行サイトは `何が足りないか` を言えていたが、`何を足すと何が改善したと読めるか` が前面に出ていませんでした
+### 1. The current site could say ``What's missing?'', but ``What should we add to see it as an improvement?'' was not in the foreground.
 
-- 問題:
-  - `wiki/connectome-is-not-enough.md` は、細胞型、内在興奮性、シナプス、遅延、神経修飾、グリアが欠けることを一次文献で示していました。
-  - しかし、state variable の増分価値を `augmentation / ablation` として比較する表が無く、読者が「どの追加測定がどの誤差項を減らすのか」を追いにくい構造でした。
-- 根拠:
-  - Lappalainen et al. (2024) は connectome-constrained network で広い活動予測を示しましたが、electrical synapses、nonlinear chemical synapses、neuromodulation などを説明外に置いています。
-  - Beiran & Litwin-Kumar (2025) は、connectome を与えても未測定 biophysical parameter が違うと recurrent dynamics が大きく縮退しうることを示しました。
-  - MICrONS Consortium et al. (2025) は、同一個体で dense neural activity、EM connectome、pupil diameter、locomotion を結び、`same-brain structure + function + behavior` の増分価値を具体化しました。
-- 修正:
-  - `wiki/connectome-is-not-enough.md` に `augmentation / ablation` 節を追加しました。
-  - `connectome-only baseline`、`+ same-brain function / behavior`、`+ transcriptomic / cell-type label`、`+ local transmitter dynamics`、`+ glial / slow-state`、`+ perturbation / recovery of excitability-homeostasis` を段階表で固定しました。
+- Issue:
+- `wiki/connectome-is-not-enough.md` was shown in the primary literature to lack cell types, intrinsic excitability, synapses, delays, neuromodification, and glia.
+- However, there was no table to compare the incremental value of state variables as `augmentation / ablation`, and the structure made it difficult for readers to follow "which additional measurement reduces which error term."
+- Basis:
+- Lappalainen et al. (2024) showed broad activity predictions in connectome-constrained networks, but excluded electrical synapses, nonlinear chemical synapses, neuromodulation, etc.
+- Beiran & Litwin-Kumar (2025) showed that even if a connectome is given, recurrent dynamics can be significantly degenerate if unmeasured biophysical parameters are different.
+- MICrONS Consortium et al. (2025) connected dense neural activity, EM connectome, pupil diameter, and locomotion in the same individual, embodying the incremental value of `same-brain structure + function + behavior`.
+- Revision:
+- Added `augmentation / ablation` clause to `wiki/connectome-is-not-enough.md`.
+- Fixed `connectome-only baseline`, `+ same-brain function / behavior`, `+ transcriptomic / cell-type label`, `+ local transmitter dynamics`, `+ glial / slow-state`, `+ perturbation / recovery of excitability-homeostasis` in the stage table.
 
-### 2. 神経修飾とグリアについて、`重要である` 以上の運用ルールが弱かった
+### 2. Regarding neuromodulation and glia, the operational rules above were weak.
 
-- 問題:
-  - 既存サイトは `pupil / HRV は coarse proxy`、`glia は support tissue ではない` までは言えていました。
-  - ただし、どの条件で `covariate` から `predictive gain を与えた state variable` へ昇格させるかが曖昧でした。
-- 根拠:
-  - Neyhart et al. (2024) は cortical ACh dynamics が cholinergic axon activity と behavioral state からかなり予測できる一方、距離と clearance kinetics に依存する局所性が残ることを示しました。
-  - Cahill et al. (2024) は local, transient neurotransmitter inputs が broad cortical astrocyte network に minutes-long に符号化されることを示しました。
-  - Vadisiute et al. (2024) は acute chemogenetic manipulation 後に astrocyte、microglia、synaptic density が急速に変化することを示しました。
-- 修正:
-  - `connectome-only baseline を置かずに、追加した state variable が効いたとは書かない` という site rule を追加しました。
-  - `proxy specificity`、`family / uncertainty`、`abstention` を同時提出物へ含める運用へ更新しました。
+- Issue:
+- The existing site could say up to `pupil / HRV is coarse proxy` and `glia is not support tissue`.
+- However, it was unclear under what conditions to promote from `covariate` to `state variable that gave predictive gain`.
+- Basis:
+- Neyhart et al. (2024) showed that while cortical ACh dynamics can be fairly predicted from cholinergic axon activity and behavioral state, locality remains dependent on distance and clearance kinetics.
+- Cahill et al. (2024) showed that local, transient neurotransmitter inputs are encoded minute-long into the broad cortical astrocyte network.
+- Vadisiute et al. (2024) showed that astrocytes, microglia, and synaptic density rapidly change after acute chemogenetic manipulation.
+- Revision:
+- Added site rule `Do not write that the added state variable was effective without placing a connectome-only baseline`.
+- Updated to include `proxy specificity`, `family / uncertainty`, and `abstention` in simultaneous submissions.
 
-### 3. 状態変数の完全性ゲートが、Verification 側ではなお `欠測リスト` 寄りでした
+### 3. The state variable integrity gate was still closer to `missing list` on the Verification side.
 
-- 問題:
-  - `verification.md` の `状態変数の完全性ゲート` は、何が欠けるかを示す表としては有用でしたが、研究者が次に出すべき提出物が一覧しにくい構造でした。
-  - そのため、読者が `状態変数が足りない` を理解しても、`何を baseline に何と比較するのか` が読み取りにくい状態でした。
-- 根拠:
-  - MICrONS、Gamlin、Neyhart、Cahill、Hadzibegovic らの一次文献は、追加情報の価値が `どの状態変化・回復・課題条件で効くか` を分解して読むべきことを示しています。
-- 修正:
-  - `verification.md` に `augmentation claim` の比較表を追加しました。
-  - `+ same-brain function / behavior`、`+ transcriptomic / cell-type label`、`+ neuromodulatory proxy`、`+ glial / slow-state`、`+ excitability / homeostatic recovery log` について、最低限ほしい比較と不合格時の読み替えを固定しました。
+- Issue:
+- `State Variable Integrity Gate` in `verification.md` was useful as a table showing what was missing, but the structure made it difficult for researchers to list the next submissions.
+-Therefore, even if the reader understood `missing state variables`, it was difficult to read `what to compare to the baseline`.
+- Basis:
+- Primary literature from MICrONS, Gamlin, Neyhart, Cahill, Hadzibegovic et al. indicates the value of additional information should be read apart from ``Under what state change/recovery/task conditions does it work?''.
+- Revision:
+- Added comparison table for `augmentation claim` to `verification.md`.
+- For `+ same-brain function / behavior`, `+ transcriptomic / cell-type label`, `+ neuromodulatory proxy`, `+ glial / slow-state`, `+ excitability / homeostatic recovery log`, we have fixed the minimum desired comparison and the replacement in case of failure.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `wiki/connectome-is-not-enough.md`
-  - `augmentation / ablation` 節を追加
-  - `connectome-only baseline` を明示
-  - `state-variable augmentation claim` の最低提出物を表へ追加
-  - Vadisiute (2024)、Hadzibegovic (2026) を参考文献へ追加
+- Added `augmentation / ablation` clause
+- Explicit `connectome-only baseline`
+- Added `state-variable augmentation claim` minimum submissions to table
+- Added Vadisiute (2024) and Hadzibegovic (2026) to references
 - `verification.md`
-  - `状態変数の完全性ゲート` に augmentation claim の比較表を追加
-  - connectome / same-brain function / transcriptomic label / neuromodulatory proxy / glial state / recovery log を比較可能な提出物へ変換
-  - 関連する primary papers を参考文献へ追加
+- Added comparison table of augmentation claims to `state variable integrity gate`
+- Convert connectome / same-brain function / transcriptomic label / neuromodulatory proxy / glial state / recovery log into comparable submissions
+- Add related primary papers to references
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- same-brain augmentation benchmark の実データ整備
-  - 担当者: AI / maintainer / 実験系共同研究者
-  - 前提条件: connectome-only baseline と augmentation 条件を同一 split で比較できる公開データ
-  - 完了条件: cross-state / cross-day / perturbation / recovery を含む predictive gain を site-wide に再利用できる schema で公開すること
+- Preparation of real data for same-brain augmentation benchmark
+- Person in charge: AI / maintainer / experimental joint researcher
+- Prerequisite: Public data that allows you to compare connectome-only baseline and augmentation conditions using the same split.
+- Completion condition: Publish predictive gains including cross-state / cross-day / perturbation / recovery in a schema that can be reused site-wide.
 
-## 参考文献
+## References
 
 - Lappalainen JK, Tschopp FD, Prakhya S, et al. Connectome-constrained networks predict neural activity across the fly visual system. Nature. 2024.
   - https://doi.org/10.1038/s41586-024-07939-3

@@ -1,11 +1,11 @@
 uid,rq_index,rq_text,trigger_signal_ja,drift_score_0_to_100,drift_threshold,threshold_exceeded,drift_basis_ja,next_monitor_window_utc,generated_at_utc
-U12,1,分岐後主体の識別子を何に基づいて付与するか。,定義語改訂行,18,40,no,改訂行追加なしのため低ドリフト,2026-03-08T14:38:23Z,2026-03-01T19:31:15Z
-U12,2,責任・権利・同意の継承ルールをどの時点で分岐させるか。,時点語版更新,14,40,no,時点語版の新規更新なし,2026-03-08T14:38:23Z,2026-03-01T19:31:15Z
-U12,3,心理的連続性基準と法的個体基準の不一致をどう扱うか。,条項抽出条件語,26,40,no,条件語変化検出なしで中低ドリフト,2026-03-08T14:38:23Z,2026-03-01T19:31:15Z
-U12,4,技術評価（性能）と人格評価（帰属）をどう接続するか。,監査語追加,16,40,no,監査語追加なしで低ドリフト,2026-03-08T14:38:23Z,2026-03-01T19:31:15Z
-U12,5,分岐主体間で記憶編集・再同期が起きた場合、法的主体IDを再編する基準は何か。,同義語追加,22,40,no,同義語表の変化なしで中低ドリフト,2026-03-08T14:38:23Z,2026-03-01T19:31:15Z
-U12,6,同意撤回が発生したとき、複数分岐主体への権限剥奪を技術的にどう実装・監査するか。,表記世代更新,20,40,no,表記世代の更新なしで低ドリフト,2026-03-08T14:38:23Z,2026-03-01T19:31:15Z
-U15,1,神経データの機微性をどの法概念で扱うか（個人情報・生体情報・人格情報）。,法文定義改訂,24,40,no,法文改訂行の追加なしで中低ドリフト,2026-03-08T14:38:23Z,2026-03-01T19:31:15Z
-U15,2,neurorightsを技術監査項目へどう写像するか。,写像語粒度更新,19,40,no,粒度ルール更新なしで低ドリフト,2026-03-08T14:38:23Z,2026-03-01T19:31:15Z
-U15,3,法域差（EU/US/JP等）を跨ぐ最小共通運用をどう定義するか。,共通三要件変化,28,40,no,三要件変化なしで中低ドリフト,2026-03-08T14:38:23Z,2026-03-01T19:31:15Z
-U15,4,技術進展に応じた停止条件・更新条件をどうガバナンス化するか。,周期語公式追記,17,40,no,周期語追記なしで低ドリフト,2026-03-08T14:38:23Z,2026-03-01T19:31:15Z
+U12,1,On what basis should identifiers be assigned to post-branch entities?,Definition word revision line,18,40,no,Low drift due to no addition of revised lines,2026-03-08T14:38:23Z,2026-03-01T19:31:15Z
+U12,2,"At what point should the inheritance rules for responsibilities, rights, and consent diverge?",Current language version updated,14,40,no,No new language updates available at this time,2026-03-08T14:38:23Z,2026-03-01T19:31:15Z
+U12,3,How should mismatches between the psychological continuity criterion and the legal individual criterion be handled?,Clause extraction condition word,26,40,no,Medium-low drift without conditional word change detection,2026-03-08T14:38:23Z,2026-03-01T19:31:15Z
+U12,4,How should technical evaluation (performance) be connected to personhood evaluation (attribution)?,Add audit word,16,40,no,Low drift without adding audit words,2026-03-08T14:38:23Z,2026-03-01T19:31:15Z
+U12,5,"If memory editing or resynchronization occurs between branched entities, what criteria should trigger reorganization of the legal entity ID?",Add synonym,22,40,no,Medium-low drift without change in synonym table,2026-03-08T14:38:23Z,2026-03-01T19:31:15Z
+U12,6,"When consent is withdrawn, how should revocation of permissions across multiple branched entities be implemented and audited technically?",Notation generation updated,20,40,no,Low drift without updating the notation generation,2026-03-08T14:38:23Z,2026-03-01T19:31:15Z
+U15,1,"Under which legal concept should the sensitivity of neural data be handled (personal data, biometric data, or personhood-related data)?",Revised legal definition,24,40,no,Medium-low drift without adding legal text revision lines,2026-03-08T14:38:23Z,2026-03-01T19:31:15Z
+U15,2,How should neurorights be mapped onto technical audit items?,Map word granularity update,19,40,no,Low drift without granularity rule updates,2026-03-08T14:38:23Z,2026-03-01T19:31:15Z
+U15,3,"How should the minimum common operating model across jurisdictions (EU/US/JP, etc.) be defined?",Changes in the three common requirements,28,40,no,Medium and low drift without three requirements change,2026-03-08T14:38:23Z,2026-03-01T19:31:15Z
+U15,4,How should stop conditions and update conditions be governed as technology evolves?,Periodic word official addition,17,40,no,Low drift without adding periodic words,2026-03-08T14:38:23Z,2026-03-01T19:31:15Z

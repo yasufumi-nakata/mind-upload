@@ -47,8 +47,8 @@ ABSTRACT_HEADINGS = {
     "résumé",
     "resume",
     "zusammenfassung",
-    "摘要",
-    "要旨",
+    "\u6458\u8981",
+    "\u8981\u65e8",
 }
 META_PATTERNS = {
     "citation_abstract": re.compile(
@@ -75,7 +75,7 @@ META_PATTERNS = {
 SECTION_PATTERNS = {
     "section_abstract": re.compile(
         r'<section[^>]+data-title=["\'](?:Abstract|Summary|Resumo|Résumé|'
-        r'Zusammenfassung|摘要|要旨)["\'][^>]*>(.*?)</section>',
+        r'Zusammenfassung|\u6458\u8981|\u8981\u65e8)["\'][^>]*>(.*?)</section>',
         re.I | re.S,
     ),
     "abs_content": re.compile(r'id=["\']Abs\d+-content["\'][^>]*>(.*?)</div>', re.I | re.S),
@@ -423,14 +423,14 @@ def write_markdown(rows: list[dict[str, str]]) -> None:
     lines = [
         f"# Abstract Presence Audit ({TODAY})",
         "",
-        f"- 対象: `mind_uploading_papers.md` の「2. アブストラクトなし」にある `{total}` 件",
-        "- 判定層: DOI / 出版社ページ HTML, Crossref, OpenAlex",
-        f"- abstract が確認できた: `{len(present)}` 件",
-        f"- メタデータ上の要旨相当あり: `{len(metadata_only)}` 件",
-        f"- 現時点で確認できず: `{len(absent)}` 件",
-        f"- 詳細 CSV: `{CSV_PATH.relative_to(ROOT)}`",
+        f"- Scope: `{total}` papers listed in section `2. Without Abstracts` of `mind_uploading_papers.md`",
+        "- Evidence layers: DOI / publisher-page HTML, Crossref, OpenAlex",
+        f"- Explicit abstract found: `{len(present)}`",
+        f"- Abstract-like metadata found: `{len(metadata_only)}`",
+        f"- Still not confirmed: `{len(absent)}`",
+        f"- Detailed CSV: `{CSV_PATH.relative_to(ROOT)}`",
         "",
-        "## abstract が確認できた",
+        "## Explicit abstract found",
         "",
     ]
     if present:
@@ -438,12 +438,12 @@ def write_markdown(rows: list[dict[str, str]]) -> None:
             source = row["publisher_url"] or (f"https://doi.org/{row['resolved_doi']}" if row["resolved_doi"] else row["title"])
             lines.append(f"- {row['index']}. {row['title']} [{row['html_evidence_kind'] or 'crossref'}] {source}")
     else:
-        lines.append("- 該当なし")
+        lines.append("- None")
 
     lines.extend(
         [
             "",
-            "## メタデータ上の要旨相当あり",
+            "## Abstract-like metadata found",
             "",
         ]
     )
@@ -452,12 +452,12 @@ def write_markdown(rows: list[dict[str, str]]) -> None:
             source = row["publisher_url"] or (f"https://doi.org/{row['resolved_doi']}" if row["resolved_doi"] else row["title"])
             lines.append(f"- {row['index']}. {row['title']} [{row['html_evidence_kind'] or 'openalex'}] {source}")
     else:
-        lines.append("- 該当なし")
+        lines.append("- None")
 
     lines.extend(
         [
             "",
-            "## 現時点で確認できず",
+            "## Still not confirmed",
             "",
         ]
     )
@@ -466,7 +466,7 @@ def write_markdown(rows: list[dict[str, str]]) -> None:
             note = f" ({row['notes']})" if row["notes"] else ""
             lines.append(f"- {row['index']}. {row['title']}{note}")
     else:
-        lines.append("- 該当なし")
+        lines.append("- None")
 
     MD_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")
 

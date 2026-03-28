@@ -1,11 +1,11 @@
 uid,rq_index,rq_text,candidate_close_state,evidence_bundle_status,blocking_issue_ja,reopen_watch_required,report_reflection_ja,decision_owner,generated_at_utc
-U12,1,分岐後主体の識別子を何に基づいて付与するか。,closed_final,complete,重大阻害なし,yes,最終報告反映済み扱いで要約更新,U12_monitor_owner,2026-03-01T18:54:10Z
-U12,2,責任・権利・同意の継承ルールをどの時点で分岐させるか。,ready_to_close,complete,重大阻害なし,no,最終報告テンプレへ転記準備完了,U12_monitor_owner,2026-03-01T18:54:10Z
-U12,3,心理的連続性基準と法的個体基準の不一致をどう扱うか。,ready_to_close,complete,保留解除後の最終転記のみ残件,yes,保留解除メモ付きで転記準備完了,U12_monitor_owner,2026-03-01T18:54:10Z
-U12,4,技術評価（性能）と人格評価（帰属）をどう接続するか。,ready_to_close,complete,重大阻害なし,no,最終報告テンプレへ転記準備完了,U12_monitor_owner,2026-03-01T18:54:10Z
-U12,5,分岐主体間で記憶編集・再同期が起きた場合、法的主体IDを再編する基準は何か。,ready_to_close,complete,重大阻害なし,no,最終報告テンプレへ転記準備完了,U12_monitor_owner,2026-03-01T18:54:10Z
-U12,6,同意撤回が発生したとき、複数分岐主体への権限剥奪を技術的にどう実装・監査するか。,ready_to_close,complete,重大阻害なし,no,最終報告テンプレへ転記準備完了,U12_monitor_owner,2026-03-01T18:54:10Z
-U15,1,神経データの機微性をどの法概念で扱うか（個人情報・生体情報・人格情報）。,closed_final,complete,重大阻害なし,yes,最終報告反映済み扱いで要約更新,U15_monitor_owner,2026-03-01T18:54:10Z
-U15,2,neurorightsを技術監査項目へどう写像するか。,ready_to_close,complete,重大阻害なし,no,最終報告テンプレへ転記準備完了,U15_monitor_owner,2026-03-01T18:54:10Z
-U15,3,法域差（EU/US/JP等）を跨ぐ最小共通運用をどう定義するか。,ready_to_close,complete,保留解除後の最終転記のみ残件,yes,保留解除メモ付きで転記準備完了,U15_monitor_owner,2026-03-01T18:54:10Z
-U15,4,技術進展に応じた停止条件・更新条件をどうガバナンス化するか。,ready_to_close,complete,重大阻害なし,no,最終報告テンプレへ転記準備完了,U15_monitor_owner,2026-03-01T18:54:10Z
+U12,1,On what basis should identifiers be assigned to post-branch entities?,closed_final,complete,No significant inhibition,yes,Summary updated with final report reflected,U12_monitor_owner,2026-03-01T18:54:10Z
+U12,2,"At what point should the inheritance rules for responsibilities, rights, and consent diverge?",ready_to_close,complete,No significant inhibition,no,Ready to post to final report template,U12_monitor_owner,2026-03-01T18:54:10Z
+U12,3,How should mismatches between the psychological continuity criterion and the legal individual criterion be handled?,ready_to_close,complete,Only the last posting after release of hold remains.,yes,Ready for posting with hold release memo,U12_monitor_owner,2026-03-01T18:54:10Z
+U12,4,How should technical evaluation (performance) be connected to personhood evaluation (attribution)?,ready_to_close,complete,No significant inhibition,no,Ready to post to final report template,U12_monitor_owner,2026-03-01T18:54:10Z
+U12,5,"If memory editing or resynchronization occurs between branched entities, what criteria should trigger reorganization of the legal entity ID?",ready_to_close,complete,No significant inhibition,no,Ready to post to final report template,U12_monitor_owner,2026-03-01T18:54:10Z
+U12,6,"When consent is withdrawn, how should revocation of permissions across multiple branched entities be implemented and audited technically?",ready_to_close,complete,No significant inhibition,no,Ready to post to final report template,U12_monitor_owner,2026-03-01T18:54:10Z
+U15,1,"Under which legal concept should the sensitivity of neural data be handled (personal data, biometric data, or personhood-related data)?",closed_final,complete,No significant inhibition,yes,Summary updated with final report reflected,U15_monitor_owner,2026-03-01T18:54:10Z
+U15,2,How should neurorights be mapped onto technical audit items?,ready_to_close,complete,No significant inhibition,no,Ready to post to final report template,U15_monitor_owner,2026-03-01T18:54:10Z
+U15,3,"How should the minimum common operating model across jurisdictions (EU/US/JP, etc.) be defined?",ready_to_close,complete,Only the last posting after release of hold remains.,yes,Ready for posting with hold release memo,U15_monitor_owner,2026-03-01T18:54:10Z
+U15,4,How should stop conditions and update conditions be governed as technology evolves?,ready_to_close,complete,No significant inhibition,no,Ready to post to final report template,U15_monitor_owner,2026-03-01T18:54:10Z

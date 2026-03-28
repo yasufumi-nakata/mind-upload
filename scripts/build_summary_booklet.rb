@@ -193,9 +193,9 @@ class SummaryBookletTemplate
       ---
       layout: default
       title: "Mind-Upload Summary Booklet"
-      description: "公開ページの要点を A4 冊子向けに自動生成した要約ページ。"
+      description: "An auto-generated A4-style briefing page built from the site's public pages."
       article_type: "Briefing Booklet"
-      subtitle: "公開ページの front matter と冒頭要約から再生成される A4 要約版"
+      subtitle: "An A4 briefing regenerated from public-page front matter and lead summaries"
       author: Mind Uploading Research Project
       last_updated: "<%= latest_date %>"
       note: "Auto-generated from public pages"
@@ -209,7 +209,7 @@ class SummaryBookletTemplate
 
       <section class="booklet-sheet booklet-cover">
         <p class="booklet-kicker">Mind-Upload Commons</p>
-        <h2 class="booklet-cover-title">公開ページ要約冊子</h2>
+        <h2 class="booklet-cover-title">Public Page Summary Booklet</h2>
         <p class="booklet-cover-lead">
           <%= intro_page.page_intro %>
         </p>
@@ -226,7 +226,7 @@ class SummaryBookletTemplate
       <section class="booklet-sheet booklet-page-break">
         <div class="booklet-section-header">
           <p class="booklet-kicker">Contents</p>
-          <h2>この冊子の見取り図</h2>
+          <h2>Booklet Overview</h2>
         </div>
 
         <div class="booklet-card-grid booklet-card-grid-2">
@@ -241,7 +241,7 @@ class SummaryBookletTemplate
       <section class="booklet-sheet booklet-page-break">
         <div class="booklet-section-header">
           <p class="booklet-kicker">Project Scope</p>
-          <h2>何を目指すサイトか</h2>
+          <h2>What This Site Is Trying To Build</h2>
         </div>
 
         <div class="booklet-quote">
@@ -250,13 +250,13 @@ class SummaryBookletTemplate
 
         <div class="booklet-two-column">
           <div>
-            <h3>先に固定すること</h3>
+            <h3>What We Fix First</h3>
             <ul class="booklet-list">
               <%= list_items(project_scope_points) %>
             </ul>
           </div>
           <div>
-            <h3>入口で断言しないこと</h3>
+            <h3>What We Do Not Claim Up Front</h3>
             <ul class="booklet-list">
               <%= list_items(project_limits) %>
             </ul>
@@ -266,8 +266,8 @@ class SummaryBookletTemplate
         <table class="data-table booklet-table">
           <thead>
             <tr>
-              <th>観点</th>
-              <th>いま読むべき説明</th>
+              <th>Lens</th>
+              <th>What To Read Now</th>
             </tr>
           </thead>
           <tbody>
@@ -279,18 +279,18 @@ class SummaryBookletTemplate
       <section class="booklet-sheet booklet-page-break">
         <div class="booklet-section-header">
           <p class="booklet-kicker">Known vs Unknown</p>
-          <h2>何が既知で、何が未解決か</h2>
+          <h2>What Is Known and What Remains Open</h2>
         </div>
 
         <div class="booklet-card-grid booklet-card-grid-2">
           <article class="booklet-card booklet-card-positive">
-            <h3>比較的はっきりしていること</h3>
+            <h3>Relatively Well Supported</h3>
             <ul class="booklet-list">
               <%= list_items(known_points) %>
             </ul>
           </article>
           <article class="booklet-card booklet-card-caution">
-            <h3>まだ保留すべきこと</h3>
+            <h3>Still Open or Conditional</h3>
             <ul class="booklet-list">
               <%= list_items(unknown_points) %>
             </ul>
@@ -331,15 +331,15 @@ class SummaryBookletTemplate
       <section class="booklet-sheet booklet-page-break">
         <div class="booklet-section-header">
           <p class="booklet-kicker">Core Pages</p>
-          <h2>主ページの役割分担</h2>
+          <h2>Role of the Core Pages</h2>
         </div>
 
         <table class="data-table booklet-table">
           <thead>
             <tr>
-              <th>ページ</th>
-              <th>役割</th>
-              <th>要約</th>
+              <th>Page</th>
+              <th>Role</th>
+              <th>Summary</th>
             </tr>
           </thead>
           <tbody>
@@ -355,15 +355,15 @@ class SummaryBookletTemplate
       <section class="booklet-sheet booklet-page-break">
         <div class="booklet-section-header">
           <p class="booklet-kicker">Support Pages</p>
-          <h2>補助ページと実務導線</h2>
+          <h2>Support Pages and Practical Routes</h2>
         </div>
 
         <table class="data-table booklet-table">
           <thead>
             <tr>
-              <th>ページ</th>
-              <th>役割</th>
-              <th>要約</th>
+              <th>Page</th>
+              <th>Role</th>
+              <th>Summary</th>
             </tr>
           </thead>
           <tbody>
@@ -379,7 +379,7 @@ class SummaryBookletTemplate
       <section class="booklet-sheet booklet-page-break">
         <div class="booklet-section-header">
           <p class="booklet-kicker">Next Actions</p>
-          <h2>次に何をすればよいか</h2>
+          <h2>What To Do Next</h2>
         </div>
 
         <div class="booklet-card-grid booklet-card-grid-3">
@@ -390,14 +390,14 @@ class SummaryBookletTemplate
           <%= final_status_cards_html %>
         </div>
 
-        <h3>元ページ一覧</h3>
+        <h3>Source Pages</h3>
         <ul class="booklet-link-list">
           <%= source_links_html %>
         </ul>
 
         <div class="booklet-quote">
           <p>
-            この冊子は公開ページから自動生成される入口版でございます。各ページの <strong>page_intro</strong>、<strong>page_highlights</strong>、<strong>known / unknown</strong>、冒頭要約の更新が、そのまま冊子と PDF に反映されます。
+            This booklet is an auto-generated entry layer built from the site's public pages. Updates to each page's <strong>page_intro</strong>, <strong>page_highlights</strong>, <strong>known / unknown</strong>, and opening summary flow directly into the booklet and PDF output.
           </p>
         </div>
       </section>
@@ -490,9 +490,9 @@ class SummaryBookletTemplate
 
   def cover_band_html
     items = [
-      ["更新基準日", latest_date],
-      ["現在の重点", summary_stop_lines.first || verification_page.page_highlights.first],
-      ["最初の入口", "#{intro_page.title} / #{verification_page.title}"]
+      ["Reference Date", latest_date],
+      ["Current Focus", summary_stop_lines.first || verification_page.page_highlights.first],
+      ["Primary Entry", "#{intro_page.title} / #{verification_page.title}"]
     ]
     items.map do |label, value|
       <<~HTML
@@ -505,30 +505,32 @@ class SummaryBookletTemplate
   end
 
   def cover_cards_html
+    entry_stop_lines = (summary_stop_lines + intro_page.unknown_points + perspective_page.unknown_points).uniq.first(3)
+
     cards = [
-      ["このサイトが最初に作るもの", verification_page.abstract_html || h(verification_page.page_intro)],
-      ["入口で止める過読", h(shorten(summary_stop_lines.first(3).join(" / "), 180))],
-      ["いま読むべき主ページ", h(core_pages.map(&:title).join(" / "))]
+      ["What This Site Builds First", verification_page.abstract_html || h(verification_page.page_intro)],
+      ["What It Does Not Claim Yet", h(shorten(entry_stop_lines.join(" / "), 180))],
+      ["Core Pages To Read Now", h(core_pages.map(&:title).join(" / "))]
     ]
     render_cards(cards)
   end
 
   def contents_cards_html
     cards = [
-      ["1. 何を目指すサイトか", intro_page.page_intro],
-      ["2. 何が既知で何が未解決か", verification_page.accuracy_note],
-      ["3. 主ページの役割分担", roadmap_page.page_intro],
-      ["4. 補助ページと導線", content_hub_page.page_intro],
-      ["5. 次のアクション", issue_page.page_intro],
-      ["6. 元ページ一覧", "詳細確認へ戻るための公開ページ導線を最後に集約します。"]
+      ["1. Site Scope", intro_page.page_intro],
+      ["2. Known vs Unknown", verification_page.accuracy_note],
+      ["3. Core Page Roles", roadmap_page.page_intro],
+      ["4. Support Routes", content_hub_page.page_intro],
+      ["5. Next Actions", issue_page.page_intro],
+      ["6. Source Pages", "The booklet closes with a compact route back to the detailed public pages."]
     ]
     render_cards(cards.map { |title, body| [title, h(shorten(body, 120))] })
   end
 
   def status_cards_html
     cards = [
-      ["ひとことで言うと", intro_page.page_highlights.first, "booklet-status-card booklet-status-card-strong"],
-      ["読了後に持ち帰るもの", "全体像、実行可能範囲、hidden-state / proxy / drift の停止線", "booklet-status-card"]
+      ["In One Sentence", intro_page.page_highlights.first, "booklet-status-card booklet-status-card-strong"],
+      ["Main Takeaway", "The project scope, realistic work range, reading order, and the stop lines around hidden-state / proxy / drift claims", "booklet-status-card"]
     ]
     cards.map do |title, body, klass|
       <<~HTML
@@ -545,15 +547,15 @@ class SummaryBookletTemplate
   end
 
   def project_limits
-    technical_unknown_points.first(4)
+    (technical_unknown_points + intro_page.unknown_points + perspective_page.unknown_points + eeg_page.unknown_points).uniq.first(4)
   end
 
   def overview_rows_html
     rows = [
-      ["入口", intro_page],
-      ["検証基盤", verification_page],
-      ["技術地図", roadmap_page],
-      ["理論整理", perspective_page]
+      ["Entry", intro_page],
+      ["Verification Commons", verification_page],
+      ["Technical Map", roadmap_page],
+      ["Theory Framing", perspective_page]
     ]
 
     rows.map do |label, page_data|
@@ -567,19 +569,19 @@ class SummaryBookletTemplate
   end
 
   def known_points
-    summary_stop_lines.first(5)
+    (summary_stop_lines + intro_page.known_points + verification_page.known_points + datasets_page.known_points).uniq.first(5)
   end
 
   def unknown_points
-    technical_unknown_points.first(5)
+    (technical_unknown_points + intro_page.unknown_points + verification_page.unknown_points + perspective_page.unknown_points + eeg_page.unknown_points).uniq.first(5)
   end
 
   def timeline_cards_html
     items = [
-      ["Step 1", "入口", intro_page.page_highlights.first || intro_page.page_intro],
+      ["Step 1", "Entry", intro_page.page_highlights.first || intro_page.page_intro],
       ["Step 2", "L0", datasets_page.page_highlights.first || datasets_page.page_intro],
       ["Step 3", "L1-L2", verification_page.page_highlights[1] || verification_page.page_intro],
-      ["Later", "上位主張", roadmap_page.unknown_points.first || perspective_page.unknown_points.first]
+      ["Later", "Higher-Level Claims", roadmap_page.unknown_points.first || perspective_page.unknown_points.first]
     ]
 
     items.map do |label, title, body|
@@ -607,7 +609,7 @@ class SummaryBookletTemplate
 
   def brief_cards_html(pages)
     pages.map do |page_data|
-      bullets = prioritized_page_bullets(page_data)
+      bullets = (prioritized_page_bullets(page_data) + page_data.page_highlights + page_data.known_points).uniq.first(3)
       <<~HTML
         <article class="booklet-card booklet-page-card">
           <h3><a href="#{page_data.url}">#{h(page_data.title)}</a></h3>
@@ -630,7 +632,7 @@ class SummaryBookletTemplate
     end.join
 
     <<~HTML
-      <p class="booklet-page-meta">次に読む</p>
+      <p class="booklet-page-meta">Read next</p>
       <ul class="booklet-link-list booklet-page-link-list">
         #{items}
       </ul>
@@ -639,9 +641,9 @@ class SummaryBookletTemplate
 
   def next_action_cards_html
     cards = [
-      ["全体像を掴む", "#{intro_page.title} -> #{verification_page.title} -> #{roadmap_page.title}", intro_page.recommended_pages],
-      ["初歩から学ぶ", "#{wbe_page.title} -> #{eeg_page.title} -> #{faq_page.title}", wbe_page.recommended_pages],
-      ["参加と統合", "#{issue_page.title} / #{content_hub_page.title}", issue_page.recommended_pages]
+      ["Get the Overview", "#{intro_page.title} -> #{verification_page.title} -> #{roadmap_page.title}", intro_page.recommended_pages],
+      ["Start from Basics", "#{wbe_page.title} -> #{eeg_page.title} -> #{faq_page.title}", wbe_page.recommended_pages],
+      ["Participate and Integrate", "#{issue_page.title} / #{content_hub_page.title}", issue_page.recommended_pages]
     ]
 
     cards.map do |title, body, links|
@@ -660,8 +662,8 @@ class SummaryBookletTemplate
 
   def final_status_cards_html
     cards = [
-      ["実務上の原則", issue_page.page_highlights.first || issue_page.page_intro, "booklet-status-card booklet-status-card-strong"],
-      ["更新ルール", "公開ページが変わるたびに deploy / PDF workflow 内で booklet を再生成いたします。", "booklet-status-card"]
+      ["Working Principle", issue_page.page_highlights.first || issue_page.page_intro, "booklet-status-card booklet-status-card-strong"],
+      ["Update Rule", "Whenever a public page changes, the deploy/PDF workflow regenerates the booklet.", "booklet-status-card"]
     ]
 
     cards.map do |title, body, klass|

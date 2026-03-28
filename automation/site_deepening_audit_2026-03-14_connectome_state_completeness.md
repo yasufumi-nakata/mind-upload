@@ -1,75 +1,75 @@
 # Site Deepening Audit (2026-03-14, Connectome / State Completeness)
 
-## 対象
+## Scope
 
-- 主対象: `wiki/connectome-is-not-enough.md`
+- Main target: `wiki/connectome-is-not-enough.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- 公開サイトにはすでに `connectome-complete は emulation-complete ではない` という正しい方向性がありましたが、2026-03-14 時点の本文は主として `欠ける状態変数の列挙` に留まっていました。
-- しかし、2024-2025 の一次文献が示している重要点は 2 段あります。
-  1. 配線図から落ちる state variable が複数あること。
-  2. たとえ connectome-constrained にしても、未測定の細胞・シナプス・修飾パラメータが残ると dynamics 自体が縮退しうること。
-- 旧版は前者は押さえていましたが、後者の `identifiability wall` が弱く、読者が `connectome + 少し activity が合う = 内部状態がかなり分かった` と誤読する余地がありました。
+- The public site already had the correct direction `connectome-complete is not emulation-complete`, but as of 2026-03-14, the main text was still `enumeration of missing state variables`.
+- However, there are two important points that the primary literature for 2024-2025 shows.
+1. There are multiple state variables missing from the wiring diagram.
+2. Even if connectome-constrained, the dynamics itself can degenerate if unmeasured cell/synapse/modification parameters remain.
+- The former version was correct in the previous version, but the `identifiability wall` was weak, and there was latter room for readers to misread it as `connectome + a little activity = the internal state was pretty clear`.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. 旧版は「欠ける state variable」を説明していたが、「connectome-constrained でも残る縮退」を独立論点として扱っていませんでした
+### 1. The previous version explained "missing state variables" but did not treat "degeneracy that remains even in connectome-constrained" as an independent issue.
 
-- 問題:
-  - 旧版は `細胞型 / シナプス / 遅延 / 神経修飾 / グリア` を正しく挙げていました。
-  - しかし、connectome を既知にしても内部 dynamics がしばしば一意にならない、という推定論上の壁を本文で明示していませんでした。
-- 根拠:
-  - Beiran & Litwin-Kumar (2025) は、connectome-constrained recurrent network でも biophysical parameter の違いで未観測ニューロンの dynamics が大きく変わりうることを示しました。
-  - Lappalainen et al. (2024) は fly visual system で connectome-constrained model を前進させましたが、著者自身が electrical synapses、nonlinear chemical synapses、neuromodulation を reductionist model の説明外に置いています。
-- 修正:
-  - `5 つの状態クラス` に加えて `1 つの推定上の壁（パラメータ縮退）` を追加しました。
-  - `connectome-constrained model` を unique internal state ではなく `hypothesis engine / conditional model` として読む site rule を明記しました。
+- Issue:
+- The previous version correctly listed `Cell type / Synapse / Delay / Neuromodification / Glial`.
+- However, the main text did not clearly state that the internal dynamics are often not unique even if the connectome is known.
+- Basis:
+- Beiran & Litwin-Kumar (2025) showed that even in connectome-constrained recurrent networks, the dynamics of unobserved neurons can change significantly due to differences in biophysical parameters.
+- Lappalainen et al. (2024) advanced the connectome-constrained model with a fly visual system, but the authors themselves put electrical synapses, nonlinear chemical synapses, and neuromodulation outside the explanation of the reductionist model.
+- Revision:
+- Added `1 putative wall (parameter degeneracy)` in addition to `5 state classes`.
+- Specified site rule to read `connectome-constrained model` as `hypothesis engine / conditional model` instead of unique internal state.
 
-### 2. 旧版は state class ごとの「危険な誤読」と「claim downgrade」を固定していませんでした
+### 2. The old version did not fix "dangerous misreading" and "claim downgrade" for each state class
 
-- 問題:
-  - 旧版は各 state class を紹介していましたが、`何を過大主張とみなすか`、`欠けたままならどの claim を止めるべきか` が表で固定されていませんでした。
-  - このため、unlabeled graph、edge count、pupil/HRV などを、読者がそのまま機能的十分条件や transmitter ground truth と誤読しうる構造でした。
-- 根拠:
-  - MICrONS Consortium (2025) は、哺乳類皮質では同じ cell type 内にも異なる tuning preference をもつニューロンがあり、same-brain connectivity と function を結んで読む必要があることを示しました。
-  - Gamlin et al. (2025) は、予測された Sst transcriptomic types ごとに結合・シナプス特性・髄鞘化が異なることを示しました。
-  - Holler et al. (2021) と Matsuzaki et al. (2004) は、synapse が binary edge ではなく ultrastructure / weight / plastic history を持つことを示しました。
-  - Vardalaki et al. (2022) は、成体新皮質でも filopodia が silent synapse の構造基盤になりうることを示しました。
-  - Reimer et al. (2016) と Neyhart et al. (2024) は、瞳孔や行動状態が cholinergic / adrenergic dynamics を反映しても、局所 release / clearance や transmitter specificity を置き換えないことを示しました。
-- 修正:
-  - 冒頭表を `何が欠けるか / 危険な誤読 / 現時点での扱い` の 4 列へ再構成しました。
-  - `weights / delays が無いときは位相・介入・閉ループ claim を降格する` など、site-wide に使える運用ルールを明文化しました。
+- Issue:
+- The previous version introduced each state class, but `What should be considered an overstatement` and `Which claims should be stopped if they remain missing` were not fixed in the table.
+- For this reason, the structure was such that readers could misread unlabeled graph, edge count, pupil/HRV, etc. as functionally sufficient conditions or transmitter ground truth.
+- Basis:
+- MICrONS Consortium (2025) showed that in the mammalian cortex, there are neurons with different tuning preferences even within the same cell type, and it is necessary to connect same-brain connectivity and function.
+- Gamlin et al. (2025) showed that different predicted Sst transcriptomic types have different binding, synaptic properties, and myelination.
+- Holler et al. (2021) and Matsuzaki et al. (2004) showed that synapses have ultrastructure / weight / plastic history rather than binary edges.
+- Vardalaki et al. (2022) showed that filopodia can serve as the structural basis for silent synapse even in the adult neocortex.
+- Reimer et al. (2016) and Neyhart et al. (2024) showed that even though pupils and behavioral states reflect cholinergic/adrenergic dynamics, they do not replace local release/clearance or transmitter specificity.
+- Revision:
+- Reorganized the opening table into 4 columns of `What's missing / Dangerous misreading / Current treatment`.
+- Clarified operation rules that can be used site-wide, such as `demote phase/intervention/closed-loop claims in the absence of weights/delays`.
 
-### 3. 旧版は「この議論から何を提出物として要求するか」が弱く、実務へ落ちにくかった
+### 3. The previous version was weak in ``what to request as a submission from this discussion'' and was difficult to put into practical use.
 
-- 問題:
-  - 旧版は概念としては妥当でしたが、読者や将来の編集者が `では何を出せば L1 / L2 / L3 に近い claim をしてよいのか` を判断しにくい構造でした。
-- 根拠:
-  - state completeness の議論は、単なる caution note で終わると運用に効きません。
-  - 実際には、構造 atlas、条件付き dynamical claim、介入・閉ループ claim で必要提出物が異なります。
-- 修正:
-  - `このサイトで採用する読み替えルールと最低提出物` 節を新設しました。
-  - `構造 atlas / scaffold`、`条件付き dynamical claim`、`介入・閉ループ claim` の 3 段で最低提出物を表にしました。
+- Issue:
+- The previous version was conceptually sound, but the structure made it difficult for readers and future editors to determine ``So what should I make to make a claim close to L1 / L2 / L3?''.
+- Basis:
+- A discussion of state completeness will not be effective if it ends up as a mere caution note.
+- Actually, the required submissions are different for structural atlas, conditional dynamical claim, and intervention/closed loop claim.
+- Revision:
+- Added `Replacement rules and minimum submissions adopted by this site` section.
+- The minimum submissions are listed in three columns: `structural atlas / scaffold`, `conditional dynamical claim`, `intervention/closed-loop claim`.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `wiki/connectome-is-not-enough.md`
-  - front matter を `state variable の欠落 + connectome-constrained 推定の限界` へ更新
-  - 冒頭表を `5 state classes + 1 inferential wall` へ拡張
-  - `見落としやすい第0の問題：配線が分かっても dynamics はまだ縮退します` 節を追加
-  - `危険な誤読` と `現時点での扱い` を表で固定
-  - `最低提出物` の表を追加
-  - 2022-2025 の一次文献を追加
+- Updated front matter to `missing state variable + limit of connectome-constrained estimation`
+- Expand opening table to `5 state classes + 1 inferential wall`
+- Added `0th problem that is easy to overlook: Even if the wiring is known, the dynamics are still degenerate` clause
+- Fixed `dangerous misreading` and `Currently handling` as tables
+- Added `Minimum submissions` table
+- Added primary literature from 2022-2025
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- same-brain multimodal / perturbation を用いた `state completeness benchmark` の実装
-  - 担当者: AI / maintainer / 実験系共同研究者
-  - 前提条件: 公開可能な connectomics + same-brain physiology + perturbation データ、またはそれに準じる benchmark
-  - 完了条件: `欠測 state variable` と `残存 family` を同じ schema で比較できる公開評価系が整うこと
+- Implementation of `state completeness benchmark` using same-brain multimodal / perturbation
+- Person in charge: AI / maintainer / experimental joint researcher
+- Prerequisites: publicly available connectomics + same-brain physiology + perturbation data or equivalent benchmark
+- Completion condition: A public evaluation system is in place that allows comparison of `missing state variable` and `remaining family` using the same schema.
 
-## 参考文献
+## References
 
 - Dorkenwald S, McKellar CE, Macrina T, et al. Neuronal wiring diagram of an adult brain. Nature. 2024.
   - https://doi.org/10.1038/s41586-024-07558-y

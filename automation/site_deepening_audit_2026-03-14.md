@@ -1,67 +1,67 @@
 # Site Deepening Audit (2026-03-14)
 
-## 対象
+## Scope
 
-- 主対象: `eeg_101.md`
-- 副対象: `datasets.md`
+- Main target: `eeg_101.md`
+- Secondary target: `datasets.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- この2ページは、公開サイト内で「EEG が WBE にどこまで寄与できるか」を読む際の基準点でございます。
-- ここが曖昧だと、他ページの `decode vs emulate`、`verification`、`roadmap` の主張も甘く読まれやすくなります。
-- 既存説明は大筋で正しい一方、`必須要件`、`有望な候補手法`、`将来の拡張` が一部混在しており、source imaging を過大評価しやすい構造が残っていました。
+- These two pages are reference points when reading "How much can EEG contribute to WBE" on the public site.
+- If this is ambiguous, the claims of `decode vs emulate`, `verification`, and `roadmap` on other pages will also be easily misunderstood.
+- While the existing explanation is generally correct, there was a mix of ``essential requirements,'' ``promising candidate methods,'' and ``future extensions,'' and a structure remained that made it easy to overestimate source imaging.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. `eeg_101.md` は手法名を先に出しすぎていた
+### 1. `eeg_101.md` put the method name too early
 
-- 問題:
-  - 既存の ESI 節では、Champagne、HBM、ASR、ZapLine-plus などが、あたかも現在の標準解であるかのように読める箇所がありました。
-  - しかし、Michel & Brunet (2019) は個体別 MRI、実測電極位置、conductivity 仮定、visual inspection を重視しており、固定レシピを標準化していません。
-  - COBIDAS-MEEG も、まず重視するのは透明な報告と再現可能な記録であり、特定アルゴリズムの採択そのものではありません。
-- 修正:
-  - `報告の床 / 幾何の床 / 妥当化の床` という3段の証拠鎖へ再編しました。
-  - `必須` と `有望だが候補` を分離し、手法名より benchmark と誤差報告を先に置く構成へ変更しました。
+- Issue:
+- In the existing ESI sections, there were places where Champagne, HBM, ASR, ZapLine-plus, etc. could be read as if they were the current standard solutions.
+- However, Michel & Brunet (2019) emphasizes individual MRI, measured electrode positions, conductivity assumptions, and visual inspection, and does not standardize fixed recipes.
+- COBIDAS-MEEG also emphasizes transparent reporting and reproducible records, not the adoption of a specific algorithm itself.
+- Revision:
+- Reorganized into a three-tier evidence chain: `Reporting floor / Geometry floor / Validation floor`.
+- Separated `required` and `promising but candidate`, and changed the structure to put the benchmark and error report before the method name.
 
-### 2. 深部 source に関する説明は、成立条件をもっと明示すべきだった
+### 2. The explanation regarding the deep source should have made the conditions for establishment more explicit.
 
-- 問題:
-  - 既存ページは「深部はまったく不可能ではない」と正しく補足していましたが、その一方で、どの程度 task-specific で、どの程度誤差が残るかの記述が薄めでした。
-  - Seeber et al. (2019) は 256ch HD-EEG と同時 DBS 記録で深部検出の可能性を示しましたが、一般的な一意復元を示した研究ではありません。
-  - Unnwongse et al. (2023) は、頭蓋内刺激を ground truth にした直接妥当化で、平均 localization error が 14.4–23.4 mm に達し、source depth と skull conductivity に強く依存することを示しています。
-  - Mouthaan et al. (2019) の systematic review でも、presurgical epilepsy における source imaging は summary sensitivity 82%、specificity 53% で、全研究にバイアスが残っていました。
-- 修正:
-  - `実測エビデンスが示す上限` 節を追加し、「detectable」と「general reconstruction」は別だと明記しました。
-  - 臨床・直接妥当化の結果を benchmark の上限として紹介し、WBE へ直結させない表現へ改めました。
+- Issue:
+- The existing page correctly added that "the deep part is not impossible at all," but on the other hand, the description of how task-specific it is and how much error remains was weak.
+- Seeber et al. (2019) showed potential for deep detection with 256ch HD-EEG and simultaneous DBS recording, but not a study that showed general unique recovery.
+- Unnwongse et al. (2023) showed that in direct validation using intracranial stimulation as ground truth, the average localization error reached 14.4–23.4 mm and was strongly dependent on source depth and skull conductivity.
+- Even in the systematic review by Mouthaan et al. (2019), source imaging for presurgical epilepsy had a summary sensitivity of 82% and specificity of 53%, and bias remained in all studies.
+- Revision:
+- Added `Upper limit indicated by actual measurement evidence` section to clarify that "detectable" and "general reconstruction" are different.
+- The results of clinical/direct validation were introduced as the upper limit of the benchmark, and the expression was changed to not directly link to WBE.
 
-### 3. `datasets.md` は「スターターデータの限界」は書いていたが、次の段階が弱かった
+### 3. `datasets.md` wrote about the "limitations of starter data," but the next step was weak.
 
-- 問題:
-  - 既存ページは EEGMMI / CHB-MIT / Sleep-EDF / TUH EEG を適切に L0〜L1 の練習台として位置づけていました。
-  - ただし、「では source imaging を深掘りしたいとき、何のデータへ進むべきか」が十分に固定されていませんでした。
-  - その結果、読者が A 段階のスターターデータの延長で ESI 改善を主張できるかのように誤読する余地がありました。
-- 修正:
-  - `A: 練習台 / B: 解剖制約つき再構成 / C: 直接妥当化` の3段階データ階段を追加しました。
-  - C 段階の具体例として、Localize-MI、頭蓋内刺激、同時 HD-EEG/SEEG、術後転帰つき cohort を明示しました。
+- Issue:
+- The existing page appropriately positioned EEGMMI / CHB-MIT / Sleep-EDF / TUH EEG as a practice platform for L0-L1.
+- However, the question of ``what data should I go to when I want to dig deeper into source imaging?'' was not sufficiently fixed.
+- As a result, there was room for readers to misread the data as if they could claim ESI improvement by extending the A-stage starter data.
+- Revision:
+- Added 3-level data staircase for `A: practice bench / B: reconstruction with anatomical constraints / C: direct validation`.
+- Specific examples of stage C include Localize-MI, intracranial stimulation, simultaneous HD-EEG/SEEG, and cohort with postoperative outcomes.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `eeg_101.md`
-  - ESI 節を全面的に書き換え
-  - multimodal integration 節を「利点」中心から「利点 + 追加監査負荷」へ修正
-  - 参考文献に COBIDAS-MEEG、Mouthaan et al. (2019)、Jorge et al. (2015)、Aydin et al. (2014)、Boto et al. (2018) を追加
+- Completely rewritten ESI section
+- Modified the multimodal integration section from focusing on "benefits" to "benefits + additional audit load"
+- Added COBIDAS-MEEG, Mouthaan et al. (2019), Jorge et al. (2015), Aydin et al. (2014), Boto et al. (2018) to references.
 - `datasets.md`
-  - `source imaging を深掘りするなら、データを3段階に分ける` 節を新設
-  - Localize-MI、Hao et al. (2025)、Mouthaan et al. (2019) を参考文献へ追加
+- Added `If you want to dig deeper into source imaging, divide the data into three stages` section
+- Localize-MI, Hao et al. (2025), Mouthaan et al. (2019) added to references
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- 公開サイト全体で future-looking な reference を再監査する作業
-  - 担当者: AI / maintainer
-  - 前提条件: 全ページ参照リンクの棚卸し
-  - 完了条件: DOI または一次ソース未確認の引用が site-wide でゼロ
+- Re-auditing future-looking references across public sites
+- Person in charge: AI / maintainer
+- Prerequisite: Inventory of all page reference links
+- Completion condition: zero site-wide citations with unconfirmed DOI or primary source
 
-## 参考文献
+## References
 
 - Michel CM, Brunet D. EEG source imaging: a practical review of the analysis steps. Front Neurol. 2019.
   - https://doi.org/10.3389/fneur.2019.00325

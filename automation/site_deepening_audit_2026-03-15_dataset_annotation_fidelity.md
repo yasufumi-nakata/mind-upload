@@ -1,94 +1,94 @@
 # Site Deepening Audit (2026-03-15, Dataset Annotation Fidelity / Leakage Units)
 
-## 対象
+## Scope
 
-- 主対象: `datasets.md`
-- 副対象: `wiki/event-sync-and-measurement-logs.md`
-- 副対象: `wiki/dataset-splits-and-leakage.md`
+- Main target: `datasets.md`
+- Secondary target: `wiki/event-sync-and-measurement-logs.md`
+- Secondary target: `wiki/dataset-splits-and-leakage.md`
 
-## 今回の選定理由
+## Why This Page Was Selected
 
-- `datasets.md` は 2026-03-14 時点で、version pin、BIDS、loader、benchmark harness の分離まではかなり整理できていました。
-- しかし、スターターデータ 4 件の説明はなお `使いやすさ` と `一般的な注意点` に重心があり、`ラベルがどこから来たか`、`どの時間粒度で付いたか`、`何を独立な split 単位とみなすべきか` が十分に固定されていませんでした。
-- この弱点は技術・自然科学の観点で重大です。なぜなら、同じ `EEG dataset` でも、cue-locked event、expert interval annotation、manual hypnogram、report-derived label は情報論的に別物であり、ここを曖昧にしたまま score を比べると benchmark の意味が壊れるからです。
+- `datasets.md` was pretty well organized as of 2026-03-14 until the version pin, BIDS, loader, and benchmark harness were separated.
+- However, the explanations for the four starter data items still had the center of gravity at `ease of use` and `general notes`, and `where the labels came from`, `at what time granularity', and `what should be considered independent split units` were not sufficiently fixed.
+- This weakness is significant from a technical/natural science perspective. This is because even though they are all the same `EEG dataset`, cue-locked event, expert interval annotation, manual hypnogram, and report-derived label are different information-based things, and if you compare scores while leaving this ambiguous, the meaning of benchmark will be lost.
 
-## 主要な批判点
+## Main Critiques
 
-### 1. 旧 `datasets.md` は dataset 名を並べていましたが、annotation provenance を実務の主軸に置けていませんでした
+### 1. The old `datasets.md` listed dataset names, but did not focus on annotation provenance.
 
-- 問題:
-  - 旧版は `EEG Motor Movement/Imagery`、`CHB-MIT`、`Sleep-EDF`、`TUH EEG` の向き不向きは説明していました。
-  - しかし、`cue-locked annotation channel`、`expert seizure interval`、`manual hypnogram`、`report-derived clinical label` の違いが表で固定されていませんでした。
-- 根拠:
-  - EEG Motor Movement/Imagery は、annotation channel / `.event` に T0/T1/T2 を持つ cue-locked task です。
-  - CHB-MIT は、summary / `.seizure` による long-recording seizure annotation を持ち、さらに `chb21` が `chb01` と同一被験者です。
-  - Sleep-EDF Expanded は、well-trained technicians による Rechtschaffen & Kales hypnogram と 1 Hz event marker を持ちます。
-  - TUH EEG Corpus は patient / session hierarchy と de-identified clinician report `.txt` を持ち、TUSZ は report keyword search と algorithmic triage を用いた selection を含みます。
-- 修正:
-  - `datasets.md` に `ラベル / イベントの出どころ` と `時間忠実度` を独立列に持つ表を追加しました。
-  - 併せて、各行に `ここで止める主張` と `最低限の運用ルール` を付け、本サイトの claim ceiling を固定しました。
+- Issue:
+- The old version explained the suitability of `EEG Motor Movement/Imagery`, `CHB-MIT`, `Sleep-EDF`, and `TUH EEG`.
+- However, the difference between `cue-locked annotation channel`, `expert seizure interval`, `manual hypnogram`, and `report-derived clinical label` was not fixed in the table.
+- Basis:
+- EEG Motor Movement/Imagery is a cue-locked task with T0/T1/T2 in annotation channel / `.event`.
+- CHB-MIT has a long-recording seizure annotation with summary / `.seizure`, and `chb21` is the same subject as `chb01`.
+- Sleep-EDF Expanded has Rechtschaffen & Kales hypnogram and 1 Hz event marker by well-trained technicians.
+- TUH EEG Corpus has patient / session hierarchy and de-identified clinician report `.txt`, and TUSZ includes report keyword search and selection using algorithmic triage.
+- Revision:
+- Added a table with `Label/Event Origin` and `Temporal Fidelity` as independent columns to `datasets.md`.
+- In addition, we added `Claim that stops here` and `Minimum operating rules` to each line to fix the claim ceiling of this site.
 
-### 2. 旧サイトは `観測ログ` を event marker や timing に寄せすぎており、label provenance を log として扱っていませんでした
+### 2. The old site placed `observation log` too much in event marker and timing, and did not treat label provenance as log.
 
-- 問題:
-  - `wiki/event-sync-and-measurement-logs.md` は raw EEG だけでは足りないことを説明していましたが、主として marker / sync / bad segment の話でした。
-  - そのため、`manual scoring` や `report-derived label` を、後から復元不能な観測ログとして扱えていませんでした。
-- 根拠:
-  - Sleep-EDF では sleep stage 自体が manual hypnogram であり、scoring manual を失うと label の意味が変わります。
-  - TUH / TUSZ では report text と report-derived triage が付属し、signal-only benchmark と multimodal benchmark を分離しなければ leakage risk が残ります。
-- 修正:
-  - `wiki/event-sync-and-measurement-logs.md` に `ラベルの出どころは 4 種類に分けて読む` 節を追加しました。
-  - `annotation channel / expert interval / manual hypnogram / report-derived label` を並べ、それぞれに必要な補助ログを対応づけました。
+- Issue:
+- `wiki/event-sync-and-measurement-logs.md` explained that raw EEG alone is not enough, but was mainly talking about marker / sync / bad segment.
+- Therefore, `manual scoring` and `report-derived label` could not be treated as observation logs that could not be restored later.
+- Basis:
+- In Sleep-EDF, the sleep stage itself is a manual hypnogram, and when the scoring manual is lost, the meaning of the label changes.
+- TUH / TUSZ comes with report text and report-derived triage, and there will be a leakage risk if the signal-only benchmark and multimodal benchmark are not separated.
+- Revision:
+- Added `Read the source of the label in four different ways` clause to `wiki/event-sync-and-measurement-logs.md`.
+- `annotation channel / expert interval / manual hypnogram / report-derived label` are arranged and the necessary auxiliary logs are associated with each one.
 
-### 3. 旧 `dataset-splits-and-leakage` は一般論としては正しいが、dataset 固有の独立単位を固定できていませんでした
+### 3. The old `dataset-splits-and-leakage` was correct in general terms, but it did not fix the dataset-specific independent unit.
 
-- 問題:
-  - 旧版は subject / session / time split の原則を説明していましたが、各スターターデータで `本当の独立単位` が何かを明示していませんでした。
-  - このため、例えば `CHB-MIT は file 単位で十分`、`Sleep-EDF は epoch をシャッフルしてよい`、`TUH は segment split でよい` と読める余地が残っていました。
-- 根拠:
-  - CHB-MIT は `chb21` = `chb01` の同一被験者という例外を含みます。
-  - Sleep-EDF は subject-night 構造を持ち、same-night hypnogram continuity が強い情報を持ちます。
-  - TUH EEG / TUSZ は patient / session hierarchy を持ち、report text が session-level covariate になりえます。
-- 修正:
-  - `wiki/dataset-splits-and-leakage.md` に、4 datasets の `独立単位`、`ありがちな誤分割`、`なぜ漏れるか`、`安全側の分け方` を追加しました。
-  - 併せて、`独立 ID`、`report 使用`、`label manual` を最低報告項目へ追加しました。
+- Issue:
+- The old version explained the principle of subject / session / time split, but did not specify what `true independent units` was in each starter data.
+- This left room to read, for example, `CHB-MIT is sufficient for file units`, `Sleep-EDF may shuffle epochs`, `TUH may be segment split`.
+- Basis:
+- CHB-MIT includes the exception that `chb21` = `chb01` same subject.
+- Sleep-EDF has a subject-night structure and has strong information about same-night hypnogram continuity.
+- TUH EEG / TUSZ has patient / session hierarchy and report text can be session-level covariate.
+- Revision:
+- Added 4 datasets `Independent unit`, `Common mis-splits`, `Why are they leaked`, `Safe way of splitting` to `wiki/dataset-splits-and-leakage.md`.
+- In addition, `Independent ID`, `report usage`, and `label manual` have been added to the minimum reporting items.
 
-### 4. Sleep-EDF の manual scoring を、現代の sleep benchmark と同列に読める余地がありました
+### 4. There was room to read Sleep-EDF's manual scoring on the same level as modern sleep benchmarks.
 
-- 問題:
-  - 旧版は Sleep-EDF を状態遷移学習の良い入口として紹介していましたが、R&K scoring と AASM scoring の差を運用上の gate にしていませんでした。
-- 根拠:
-  - Sleep-EDF Expanded は R&K に基づく manual scoring です。
-  - Moser et al. (2009) は、AASM と R&K の sleep classification が一致しない部分を示しました。
-- 修正:
-  - `datasets.md` と 2 本の wiki に、`R&K -> AASM mapping rule を書かずに cross-dataset 比較しない` site rule を追加しました。
+- Issue:
+- The previous version introduced Sleep-EDF as a good gateway to state transition learning, but did not use the difference between R&K scoring and AASM scoring as an operational gate.
+- Basis:
+- Sleep-EDF Expanded is manual scoring based on R&K.
+- Moser et al. (2009) showed the areas where AASM and R&K sleep classification do not match.
+- Revision:
+- Added `R&K -> Do not compare cross-datasets without writing AASM mapping rule` site rule to `datasets.md` and two wikis.
 
-## 今回実行した変更
+## Changes Made This Round
 
 - `datasets.md`
-  - `last_updated` を 2026-03-15 に更新
-  - `annotation provenance` を front matter と本文へ追加
-  - `ラベル / イベントの出どころ`、`時間忠実度`、`止める主張`、`最低限の運用ルール` の表を追加
-  - checklist に `注釈 provenance` を追加
+- `last_updated` updated to 2026-03-15
+- Add `annotation provenance` to front matter and body
+- Added tables for `Label/Event Origin`, `Time Fidelity`, `Stopping Claims`, `Minimum Operational Rules`
+- Added `Annotation provenance` to checklist
 - `wiki/event-sync-and-measurement-logs.md`
-  - `last_updated` と front matter を更新
-  - `label provenance` を event log と同格に扱う方針へ改稿
-  - 4 種の label type とスターターデータ別 logging rule を追加
-  - 参考文献節を追加
+- Updated `last_updated` and front matter
+- Revised the policy to treat `label provenance` on the same level as event log.
+- Added logging rules for 4 label types and starter data
+- Added references section
 - `wiki/dataset-splits-and-leakage.md`
-  - `last_updated` と front matter を更新
-  - dataset 固有の独立単位表を追加
-  - `report usage` と `label manual` を最低報告項目へ追加
-  - 参考文献節を追加
+- Updated `last_updated` and front matter
+- Add dataset-specific independent unit table
+- Added `report usage` and `label manual` to minimum reporting items.
+- Added references section
 
-## 外部依存で保留
+## Deferred External-Dependency Tasks
 
-- site-wide な dataset card schema の統一
-  - 担当者: AI / maintainer
-  - 前提条件: ほかの dataset / benchmark ページでも `annotation provenance` `time fidelity` `split unit` `claim ceiling` を共通属性として扱うこと
-  - 完了条件: 公開データ紹介ページで、dataset 名だけでなく上記 4 属性が常に前面に出ること
+- Unification of site-wide dataset card schema
+- Person in charge: AI / maintainer
+- Prerequisite: Other dataset/benchmark pages also treat `annotation provenance` `time fidelity` `split unit` `claim ceiling` as a common attribute.
+- Completion condition: On the public data introduction page, not only the dataset name but also the above four attributes are always displayed at the front.
 
-## 参考文献
+## References
 
 - PhysioNet: EEG Motor Movement/Imagery Dataset
   - https://physionet.org/content/eegmmidb/1.0.0/
