@@ -15,7 +15,7 @@ reading_time: "35-55分"
 
 > 汎用横断の要約ではなく、60RQを1件ずつ深く読むための固定カード集。
 
-- 更新日: 2026-03-27
+- 更新日: 2026-03-29
 - 前提: `mind-upload-eeg-rq60-feasibility-and-funds` と `mind-upload-eeg-rq60-grant-dataset-playbook` の整合を取った統合版
 
 ## このページの使い方
@@ -29,6 +29,26 @@ reading_time: "35-55分"
 - `A`: 17
 - `B`: 25
 - `C`: 18
+
+## 2026-03-29 02:04 JST 再検証ログ（本run / 現行site audit反映の6RQディープバッチ）
+
+- 作業開始前に `auto-startup` / `mind-upload` / `EEG-DATA` / `auto-research-funds` の各 `main` で `git pull --ff-only origin main` を実行し、いずれも `Already up to date` を確認いたしました。
+- `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` の正本テーブルを再計数し、`RQ_TOTAL=60` と `A/B/C=17/25/18` を再確認いたしました。
+- 本runでは、現行 `mind-upload` 側の site deepening audit で更新が大きかった論点だけを `6RQ` に絞って反映し、汎用横断の要約は増やしておりません。
+
+| RQ | 判定 | 主データ（Dアンカー） | 第一/予備応募先 | 今回固定した深掘りポイント | 停止条件 | 最低成果物 |
+|---|---|---|---|---|---|---|
+| U0-2 | A | `D02`（補助 `D11/D23`） | `G2 / G3` | `clock offset + jitter p95 + state-feature collapse rate` の3指標で、同期ずれが同一性判定へ与える崩れを固定いたします。 | 再同期後も `state-feature collapse rate` が収束せず、同一性判定の改善が再現しない場合。 | Time synchronization audit report (offset/jitter distribution) |
+| U1-4 | B | `D08`（補助 `D11/D19`） | `G1 / G4` | inverse route を `field visibility / conductivity / solver uncertainty / validation class` の4ゲートで読み直し、後方分布公開基準を `interval coverage + reanalysis agreement` で固定いたします。 | 区間被覆率が継続逸脱し、後方分布公開で手法順位が不安定化する場合。 | Inverse solution comparison table and uncertainty distribution chart |
+| U7-6 | A | `D11`（補助 `D15/D23`） | `G1 / G3` | missing-modality policy を独立欄に昇格し、結論一致率と安全警告再現率で最小観測セットを固定いたします。 | full-modality 基準との一致率下限を満たさず、欠損条件で安全警告の見逃しが増える場合。 | Reproducibility audit report (synchronization/QC/preprocessing difference) |
+| U8-6 | B | `D12`（補助 `D20/D21`） | `G2 / G5` | 再学習間隔の評価を `fixed-decoder durability` と `rescue-mode recalibration burden` に分け、閉ループ運用の許容帯を固定いたします。 | 再学習コスト増に対して性能維持と安全余裕の改善が再現しない場合。 | Closed loop safety KPI dashboard |
+| U11-3 | B | `D17`（補助 `D14/D16`） | `G2 / G4` | 理論対立点を単一計画へ落とす前に、`construct / perturbation / same-cohort calibration / incremental validity` の4ゲート通過を必須条件として固定いたします。 | 指標乖離が理論予測と整合せず、same-cohort calibration を固定できない場合。 | Awareness index comparison report (with failure condition) |
+| U13-2 | B | `D10`（補助 `D03/D09`） | `G1 / G4` | `brain-to-text` を一括りにせず、`brain-minus-prior baseline` を含む hallucination/整合監査として模倣分離へ接続いたします。 | prompt 依存の寄与を分離できず、神経由来の差分が再現しない場合。 | Mimic separation evaluation script and control condition table |
+
+補足:
+
+- 参照データは数値IDではなく `Dxx + DOI + dataset名 + access区分` を正本として扱います。
+- 根拠にした現行site論点は、`temporal_validity_state_trait_drift`、`measurement_modeling_inverse_gate_sync`、`multimodal_bundle_robustness`、`closed_loop_temporal_deployability_split`、`consciousness_theory_map_gate_sync`、`literature_brain_decode_route_split` です。
 
 ## 本run固定: 1件ずつ深掘りする6RQ（2026-03-20）
 

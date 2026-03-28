@@ -50,6 +50,28 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `B`: 25件
 - `C`: 18件
 
+## 今回の深掘り実行パック（2026-03-29 02:04 JST, 現行site audit反映パック）
+
+本runでは、直前の「可解性優先パック」を崩さず、その上で現行 `mind-upload` の site deepening audit が強く更新した論点を `6RQ` に限定して反映いたしました。汎用横断へ戻さず、`1RQ=1検証命題=1応募テーマ=1主データ` を維持いたします。
+
+| RQ | 今回固定する最小命題 | 提出テーマ（そのまま応募見出しへ使う軸） | 第一/予備応募先 | 主データ（主/予備） | 反映した現行site論点 | 初手KPI | 停止条件 |
+|---|---|---|---|---|---|---|---|
+| U0-2 | 同期ずれを `clock offset + jitter p95 + state-feature collapse rate` の3指標で固定し、同一性評価が計測誤差へ引きずられる境界を先に切ります。 | Temporal-validity-aware identity synchronization audit | `G2 / G3` | 主: `D02 CSTE: A Dataset for Cross-Sessions and Cross-Tasks EEG Biometrics` / 予備: `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling`, `D23 EEG, PPG, GSR signals for rehabilitation fatigue detection` | `Temporal Validity Card` と `state annotation` の分離 | `clock offset p95` `state-feature collapse rate` `resync recovery rate` | 再同期後も `state-feature collapse rate` が収束せず、同一性判定の改善が再現しない場合。 |
+| U1-4 | 逆問題の公開基準を点推定ではなく `posterior interval + reanalysis agreement` へ固定し、solver 改善と不確実性公開を分離します。 | Posterior-aware inverse benchmark and disclosure standard | `G1 / G4` | 主: `D08 Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods` / 予備: `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling`, `D19 CerebellarTMSEEGData` | inverse route の4ゲート読解 | `interval coverage` `posterior-width stability` `reanalysis agreement` | 区間被覆率が継続逸脱し、後方分布公開で手法順位が不安定化する場合。 |
+| U7-6 | 欠損モダリティ下でも結論を維持できる最小観測セットを `conclusion agreement + warning recall + complete-case bias` で固定します。 | Missing-modality robust multimodal audit package | `G1 / G3` | 主: `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` / 予備: `D15 A simultaneous EEG-fNIRS dataset for investigating working memory load`, `D23 EEG, PPG, GSR signals for rehabilitation fatigue detection` | `bundle robustness gate` と `missing-modality policy` の独立開示 | `conclusion agreement rate` `warning recall` `complete-case bias` | full-modality 基準との一致率下限を満たさず、欠損条件で安全警告の見逃しが増える場合。 |
+| U8-6 | 閉ループの再学習間隔を `fixed-decoder durability` と `rescue-mode recalibration burden` に分けて固定します。 | Longitudinal recalibration scheduling for closed-loop safety | `G2 / G5` | 主: `D12 Longitudinal MI-BCI training with transcutaneous spinal stimulation` / 予備: `D20 Closed-loop auditory stimulation targeting REM oscillations`, `D21 NeuroSimo: closed-loop EEG/EMG-guided TMS` | `same-session fast` と `deployable chronic loop` の分離 | `performance decay rate` `safety margin` `retraining cost` | 再学習コスト増に対して性能維持と安全余裕の改善が再現しない場合。 |
+| U11-3 | 理論対立点を単一計画へ落とす際、`construct validity / perturbational validity / same-cohort calibration / incremental validity` の4ゲートを必須にします。 | 4-gate consciousness proxy conflict test | `G2 / G4` | 主: `D17 DoC EEG biomarker pilot (preliminary ML outcome detection)` / 予備: `D14 PK-NMM EEG simulation during propofol anesthesia`, `D16 Aalborg University Wearable Sleep Study (AAUWSS)` | consciousness theory map の 4-gate 読み | `same-cohort calibration gap` `indicator divergence width` `incremental validity` | 指標乖離が理論予測と整合せず、same-cohort calibration を固定できない場合。 |
+| U13-2 | 言語デコードを一括りにせず、`brain-minus-prior baseline` を含む hallucination/整合監査へ分解して固定します。 | Neural-hallucination alignment audit for mimic separation | `G1 / G4` | 主: `D10 3M-CPSEED: EEG dataset for overt/silent/imagined speech` / 予備: `D03 Multimodal Fusion System for Cognitive Load Assessment`, `D09 VICODEV dataset` | language route split と `Neural Contribution Card` | `semantic alignment` `brain-minus-prior gap` `misalignment rate` | prompt 依存の寄与を分離できず、神経由来の差分が再現しない場合。 |
+
+実行順（本run固定）:
+
+1. `U0-2`
+2. `U1-4`
+3. `U7-6`
+4. `U8-6`
+5. `U11-3`
+6. `U13-2`
+
 ## 今回の深掘り実行パック（2026-03-29 01:37 JST, 可解性優先のA/B実装パック）
 
 今回は「全体をもう一度広く要約する」更新は行わず、`A/B` 判定の中でも EEG-DATA だけで最初の実験と応募テーマを切りやすい `6RQ` を固定いたしました。

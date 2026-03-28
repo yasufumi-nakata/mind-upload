@@ -19,6 +19,36 @@ reading_time: "55-80分"
 - 更新日: 2026-03-29
 - 出典: `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`（60行を再構成）
 
+## 今回の再検証ログ（2026-03-29 02:04 JST）
+
+本runでは、現行 `mind-upload` の site deepening audit を強く反映する `6RQ` だけを追加で固定いたしました。汎用横断の要約は増やさず、`1RQ=1検証命題=1応募テーマ=1主データ` を維持いたします。
+
+- 深掘り固定6RQ（本run）: `U0-2` `U1-4` `U7-6` `U8-6` `U11-3` `U13-2`
+- 意図:
+  - `U0-2` は `Temporal Validity Card` と `state annotation` の分離を、同一性RQへ直結させるためです。
+  - `U1-4` は inverse route を `field visibility / conductivity / solver uncertainty / validation class` の4ゲートで読み直すためです。
+  - `U7-6` は multimodal gain と bundle robustness を混同しないよう、missing-modality policy を主張単位へ昇格させるためです。
+  - `U8-6` は `same-session fast` と `fixed-decoder durability`、さらに `rescue-mode recalibration` を分けて読む必要があるためです。
+  - `U11-3` は理論比較を 4-gate で通さない限り、意識proxyの過読が残るためです。
+  - `U13-2` は language-facing route を一括りにせず、`brain-minus-prior baseline` を含む模倣分離へ戻すためです。
+- 主データ固定:
+  - `U0-2`: `D02`
+  - `U1-4`: `D08`
+  - `U7-6`: `D11`
+  - `U8-6`: `D12`
+  - `U11-3`: `D17`
+  - `U13-2`: `D10`
+- 根拠にした現行site論点:
+  - `site_deepening_audit_2026-03-21_temporal_validity_state_trait_drift`
+  - `site_deepening_audit_2026-03-27_measurement_modeling_inverse_gate_sync`
+  - `site_deepening_audit_2026-03-26_multimodal_bundle_robustness`
+  - `site_deepening_audit_2026-03-26_closed_loop_temporal_deployability_split`
+  - `site_deepening_audit_2026-03-27_consciousness_theory_map_gate_sync`
+  - `site_deepening_audit_2026-03-26_literature_brain_decode_route_split`
+- 再計数: `RQ見出し=60`、判定内訳 `A/B/C=17/25/18` を維持いたしました。
+- 参照データ運用: 提出時は数値IDではなく `Dxx + DOI + dataset名 + access区分` を正本として扱います。
+- 助成キー運用: `G1-G6` の固定レーンは維持し、今回は `G1/G4` と `G2/G3/G5` を中心に、実装しやすい `A/B` を優先いたします。
+
 ## 今回の再検証ログ（2026-03-29 01:37 JST）
 
 本runでは、`A/B` 判定の中でも「今の EEG-DATA で最初の実験と助成テーマを切りやすいもの」を優先し、可解性優先パックとして 6RQ を固定いたしました。汎用横断の要約は増やさず、`1RQ=1検証命題=1応募テーマ=1主データ` を継続しています。
@@ -80,14 +110,14 @@ reading_time: "55-80分"
 
 ### U0-2 時間同期（ms単位）と状態表現（行動・神経活動・生理）の対応をどう固定するか。
 
-- 検証命題: ID 676/4878で時刻同期ずれと状態特徴量の崩れを同時に計測し、固定ルールを定義する。
+- 検証命題: ID 676を主に、ID 4878とID 11を補助として時刻同期ずれが状態特徴量と同一性AUCへ伝播する許容帯を固定する。
 - EEG-DATA判定境界: A（直接検証可能）<br>EEG-DATA単独で主要仮説まで検証可能（外部依存なし）。
-- auto-research-funds応募テーマ: 研究奨励金（縦断同一性）
+- auto-research-funds応募テーマ: 博士課程研究助成（状態同期つき同一性監査）
 - 第一応募先 / 予備応募先: G2 (GR-2026-014) / G3 (9Lx4dPK6a4k2gOb7)
-- 主データ（ID）: `11`
-- 補助データ（推奨ID）: `ID 11, 29, 696`
-- 初期KPI（U0標準）: `セッション外AUC` `観測一致率` `介入応答一致率`
-- 停止条件: 主データ単独で再現しない場合は、前処理・分割・同期ログを固定して再試行し、それでも再現不能なら主張を下方修正する。
+- 主データ（ID）: `676`
+- 補助データ（推奨ID）: `ID 676, 4878, 11`
+- 初期KPI（U0標準）: `同期ずれ中央値` `状態特徴相関維持率` `セッション外AUC`
+- 停止条件: 同期補正後も `offset/jitter` の95パーセンタイルが `20 ms` を超え、`状態特徴相関維持率 < 0.90` に留まる場合は、同一性主張を「同期依存の部分成立」に降格する。
 - 最低成果物: Time synchronization audit report (offset/jitter distribution)
 
 
@@ -158,14 +188,14 @@ reading_time: "55-80分"
 
 ### U1-4 推定値だけでなく、信頼区間/後方分布を公開基準に含めるか。
 
-- 検証命題: 逆問題の信頼区間公開可否を、ID 56での後方分布再現性で評価する。
+- 検証命題: ID 56を主に、ID 676/1839を補助として `95%信用区間` と `後方分布幅` の公開が再現性を損なわないかを評価する。
 - EEG-DATA判定境界: B（部分検証（外部データ併用で成立））<br>EEG主解析は可能だが、外部データまたは制度情報の併用が必須。
-- auto-research-funds応募テーマ: 博士課程研究助成（後方分布公開）
+- auto-research-funds応募テーマ: 研究助成（逆問題の不確実性公開基準）
 - 第一応募先 / 予備応募先: G1 (GR-2026-013) / G4 (Drbm6vBRDJkn0NGJ)
 - 主データ（ID）: `56`
 - 補助データ（推奨ID）: `ID 56, 676, 1839`
-- 初期KPI（U1標準）: `逆解誤差` `不確実性被覆率` `手法順位一致率`
-- 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
+- 初期KPI（U1標準）: `95%被覆率` `後方分布幅` `手法順位一致率`
+- 停止条件: `95%被覆率` が `80-100%` 帯を継続逸脱するか、区間公開を入れた後に `手法順位一致率 < 0.80` へ低下する場合は、公開基準を「点推定 + 限定区間」に降格する。
 - 最低成果物: Inverse solution comparison table and uncertainty distribution chart
 
 
@@ -315,14 +345,14 @@ reading_time: "55-80分"
 
 ### U7-2 LSL等の時刻同期誤差を検証可能な指標に落とせるか。
 
-- 検証命題: ID 6/676でジッタ/遅延の基準値を算出し、閾値超過を自動警告する。
+- 検証命題: ID 676を主に、ID 6/4878を補助として `offset/jitter` を `ERP peak shift` と `再解析一致率` に写像し、release block 可能な同期誤差指標へ落とし込む。
 - EEG-DATA判定境界: A（直接検証可能）<br>EEG-DATA単独で主要仮説まで検証可能（外部依存なし）。
-- auto-research-funds応募テーマ: 若手研究助成（同期監査）
+- auto-research-funds応募テーマ: 研究助成（同期誤差メトリクス標準）
 - 第一応募先 / 予備応募先: G1 (GR-2026-013) / G3 (9Lx4dPK6a4k2gOb7)
 - 主データ（ID）: `676`
-- 補助データ（推奨ID）: `ID 676, 783, 4878`
-- 初期KPI（U7標準）: `再現率` `前処理差分感度` `同期監査異常率`
-- 停止条件: 主データ単独で再現しない場合は、前処理・分割・同期ログを固定して再試行し、それでも再現不能なら主張を下方修正する。
+- 補助データ（推奨ID）: `ID 676, 6, 4878`
+- 初期KPI（U7標準）: `offset中央値` `jitter p95` `peak-latency drift`
+- 停止条件: 補正後の `event-alignment` 誤差95パーセンタイルが `15 ms` を超えるか、`再解析一致率 < 0.90` の条件が残る場合は、同期監査を「警告のみ」に留めて release block へ昇格しない。
 - 最低成果物: Time synchronization audit report (offset/jitter distribution)
 
 
@@ -421,14 +451,14 @@ reading_time: "55-80分"
 
 ### U8-4 異常検知とフェイルセーフを評価契約へどう組み込むか。
 
-- 検証命題: ID 2412/1972で異常検知遅延とフェイルセーフ発動時間を測る。
+- 検証命題: ID 2412を主に、ID 1972/696を補助として異常検知遅延と `fail-safe` 発火/回復を同一契約で固定する。
 - EEG-DATA判定境界: B（部分検証（外部データ併用で成立））<br>EEG主解析は可能だが、外部データまたは制度情報の併用が必須。
-- auto-research-funds応募テーマ: 共同研究助成（フェイルセーフ）
+- auto-research-funds応募テーマ: 共同研究助成（閉ループ異常検知とフェイルセーフ契約）
 - 第一応募先 / 予備応募先: G2 (GR-2026-014) / G5 (871pw3rLjNPKgqA0)
-- 主データ（ID）: `6`
-- 補助データ（推奨ID）: `ID 6, 1972, 2412, 696`
-- 初期KPI（U8標準）: `安定率` `停止介入率` `回復時間`
-- 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
+- 主データ（ID）: `2412`
+- 補助データ（推奨ID）: `ID 2412, 1972, 696`
+- 初期KPI（U8標準）: `異常検知遅延` `フェイルセーフ発火率` `回復時間`
+- 停止条件: `異常検知遅延` の95パーセンタイルが `250 ms` を超えるか、`回復時間` の中央値が `5 秒` を超える場合は、評価契約を「研究内安全手順」に留めて運用契約へ昇格しない。
 - 最低成果物: Operational stability report (safety shutdown/recovery time)
 
 
@@ -655,14 +685,14 @@ reading_time: "55-80分"
 
 ### U13-2 LLMの幻覚・整合性検査を神経デコード評価へどう接続するか。
 
-- 検証命題: ID 13/65で行動整合と内部状態差を分離し、幻覚検査の接続点を作る。
+- 検証命題: ID 509を主に、ID 13/65を補助として `hallucination label` と `neural inconsistency` を同時監査し、意味一致だけの合格を禁止する。
 - EEG-DATA判定境界: B（部分検証（外部データ併用で成立））<br>EEG主解析は可能だが、外部データまたは制度情報の併用が必須。
-- auto-research-funds応募テーマ: 若手研究助成（幻覚/内部状態差）
+- auto-research-funds応募テーマ: 若手研究助成（brain-to-text hallucination audit）
 - 第一応募先 / 予備応募先: G1 (GR-2026-013) / G4 (Drbm6vBRDJkn0NGJ)
 - 主データ（ID）: `509`
 - 補助データ（推奨ID）: `ID 509, 13, 65`
-- 初期KPI（U13標準）: `意味一致率` `因果一致率` `リーク検出率`
-- 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
+- 初期KPI（U13標準）: `意味一致率` `内部状態差検出率` `幻覚率`
+- 停止条件: `内部状態差検出率 < 0.60` または `幻覚率` と `neural inconsistency` の相関区間が `0` を跨ぐ場合は、「意味一致のみ」の主張へ下方修正する。
 - 最低成果物: Mimic separation evaluation script and control condition table
 
 
@@ -747,14 +777,14 @@ reading_time: "55-80分"
 
 ### U14-3 leaderboardでのリーク・過適合・報告バイアスをどう監査するか。
 
-- 検証命題: ID 719でleaderboardリーク監査（被験者分割・時系列リーク）を定期化する。
+- 検証命題: ID 719を主に、ID 6/56を補助として `leak challenge` を再現し、`split` 固定前後の順位変動を監査する。
 - EEG-DATA判定境界: A（直接検証可能）<br>EEG-DATA単独で主要仮説まで検証可能（外部依存なし）。
-- auto-research-funds応募テーマ: 若手研究助成（リーク監査）
+- auto-research-funds応募テーマ: 研究助成（leaderboard leak audit benchmark）
 - 第一応募先 / 予備応募先: G1 (GR-2026-013) / G3 (9Lx4dPK6a4k2gOb7)
-- 主データ（ID）: `6`
-- 補助データ（推奨ID）: `ID 6, 56, 719`
-- 初期KPI（U14標準）: `追試成功率` `リーク検出率` `再実行コスト`
-- 停止条件: 主データ単独で再現しない場合は、前処理・分割・同期ログを固定して再試行し、それでも再現不能なら主張を下方修正する。
+- 主データ（ID）: `719`
+- 補助データ（推奨ID）: `ID 719, 6, 56`
+- 初期KPI（U14標準）: `リーク検出率` `split再現率` `順位変動幅`
+- 停止条件: `リーク注入条件` の検出率が `0.80` 未満、または `split` 固定後も `順位変動幅 > 3` が残る場合は leaderboard 契約を見送り、内部監査トラックへ留める。
 - 最低成果物: Leak audit results and repartition trail
 
 
