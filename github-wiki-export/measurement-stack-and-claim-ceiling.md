@@ -4,10 +4,10 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-27 / 位置づけ: Technical / natural science only
+- 更新日: 2026-03-28 / 位置づけ: Technical / natural science only
 
 ## このページの役割
-This page is a wiki that fixes the ``upper claim limit for each measurement stack,'' which is often overlooked in WBE discussions. It's not enough to say that hidden state is important. Based on primary literature, we will explain what each of EEG/MEG/fMRI, spatial transcriptomics, Patch-seq, volume EM, same-brain functional connectomics, synaptic-density PET, mixed arousal proxy, local transmitter sensor, receptor atlas / PET, glia imaging, and human 1H-MRSI biochemical-similarity / 31P energetic-balance / deuterium metabolite-rate / ionic / thermal / myelin / clearance routes directly observes and what remains latent.
+This page is a wiki that fixes the ``upper claim limit for each measurement stack,'' which is often overlooked in WBE discussions. It's not enough to say that hidden state is important. Based on primary literature, we will explain what each of EEG/MEG/fMRI, spatial transcriptomics, Patch-seq, volume EM, diffusion-MRI tractography / structural connectome, same-brain functional connectomics, synaptic-density PET, mixed arousal proxy, local transmitter sensor, receptor atlas / PET, glia imaging, and human 1H-MRSI biochemical-similarity / 31P energetic-balance / deuterium metabolite-rate / ionic / thermal / myelin / clearance routes directly observes and what remains latent.
 
 ## 正確さの前提
 The ``claim ceiling'' column below is not the conclusion declared by each paper. This is an operational inference drawn by this site from variables directly observed in primary literature and state variables that are still unobserved.
@@ -28,6 +28,7 @@ The ``claim ceiling'' column below is not the conclusion declared by each paper.
 - In hemodynamic modalities, vascular transfer state such as baseline perfusion, CVR, and superficial/systemic contamination can also dominate amplitude differences.
 - Whole-brain spatial transcriptomics provides a major advance in cell-type taxonomy and spatial location, but the sufficiency of dynamic states is another matter.
 - Patch-seq and same-brain connectomics reduce degeneracy, but the sufficiency of whole-brain coverage and long-term maintenance-state remains.
+- A diffusion-MRI-derived human connectome is not one stable object; hub maps, laterality, and bundle recovery remain conditioned by acquisition scheme, endpoint assignment, graph construction, and uncertainty handling.
 - Local transmitter / glia imaging is effective for calibrating coarse proxies, but it does not directly provide whole-brain ground truth.
 - Human 1H-MRSI biochemical similarity, 31P energetic balance, deuterium metabolite / rate, ionic, thermal, myelin, and clearance routes reduce different latent-state error terms and should not be summarized as one direct path to maintenance-state completeness.
 - A real human proxy route may still calibrate only one bounded hidden-state family, so proxy class and operational maturity do not by themselves fix calibrator role.
@@ -42,7 +43,7 @@ The ``claim ceiling'' column below is not the conclusion declared by each paper.
 
 <h2>The shortest conclusion</h2>
 <p>
-The weakness of the current site is that even though it was possible to enumerate important hidden states, it did not highlight which measurement stack directly observes what and where it hits the claim limit. Based on the primary literature, EEG/MEG/fMRI strengthens macro state tracking, whole-brain spatial atlas strengthens cell-type and spatial arrangement, Patch-seq bridges cell-type and morpho-electric phenotype, volume EM strengthens structural scaffolding, same-brain functional connectomics strengthens local conditional prediction, and local transmitter/astrocyte imaging strengthens coarse proxy calibration. However,<strong>no stack alone provides state-complete reconstruction</strong>. Therefore, on this site, we clearly specify the claim ceiling for each measurement stack, and prohibit expressions that exceed that.
+The weakness of the current site is that even though it was possible to enumerate important hidden states, it did not highlight which measurement stack directly observes what and where it hits the claim limit. Based on the primary literature, EEG/MEG/fMRI strengthens macro state tracking, whole-brain spatial atlas strengthens cell-type and spatial arrangement, Patch-seq bridges cell-type and morpho-electric phenotype, volume EM strengthens structural scaffolding, diffusion-MRI tractography strengthens living-human macro pathway priors, same-brain functional connectomics strengthens local conditional prediction, and local transmitter/astrocyte imaging strengthens coarse proxy calibration. However,<strong>no stack alone provides state-complete reconstruction</strong>. Therefore, on this site, we clearly specify the claim ceiling for each measurement stack, and prohibit expressions that exceed that.
 </p>
 
 <strong>Scope of this page</strong>
@@ -52,7 +53,7 @@ Philosophy, legal systems, and individuality are not covered here. What we are d
 
 <h2>Weaknesses to be explored in depth</h2>
 <p>
-Conventional public pages already knew that connectome alone was not enough, maintenance-state remained, and comparisons should be made using augmentation/ablation. However, this alone leaves room for readers to overinterpret when they see the words <strong>multimodal</strong>, <strong>atlas</strong>, and <strong>same-brain</strong>, saying, ``I see pretty much everything.'' The weakness is that the discussion of<strong>state variables</strong> and<strong>measurement stack</strong>s have not yet been fully integrated.
+Conventional public pages already knew that connectome alone was not enough, maintenance-state remained, and comparisons should be made using augmentation/ablation. However, this alone leaves room for readers to overinterpret when they see the words <strong>multimodal</strong>, <strong>atlas</strong>, <strong>connectome</strong>, and <strong>same-brain</strong>, saying, ``I see pretty much everything.'' The weakness is that the discussion of<strong>state variables</strong> and<strong>measurement stack</strong>s have not yet been fully integrated.
 </p>
 <p>
 Therefore, on this page, we will integrate the direct observables of each stack, what can be said a little more strongly, what will still remain in latent state, and the <strong>claim ceiling</strong> allowed by this site into one table.
@@ -117,6 +118,13 @@ The last column of the table below is not a summary of each paper, but the opera
 <td>Like MICrONS, local circuits can further strengthen structure-function links, state-dependent response prediction, and cell-type dependent wiring rules. </td>
 <td>Whole-brain coverage, whole-state generalization, sufficiency of current synaptic efficacy, homeostatic controller, and glial/metabolic maintenance-state remain. </td>
 <td><strong>Up to local conditional prediction and local functional twin</strong>. We do not promote whole-brain WBE or state-complete reconstruction. </td>
+</tr>
+<tr>
+<td><strong>diffusion MRI tractography / structural connectome</strong></td>
+<td>Diffusion-weighted signal plus model-derived local orientation estimates; bundle, endpoint, and parcel-graph claims appear only after tracking, endpoint assignment, and graph construction.</td>
+<td>Macro white-matter pathway priors, named bundle hypotheses, and protocol-scoped parcel-connectivity comparisons can be strengthened when acquisition, endpoint policy, and graph-construction route are disclosed.</td>
+<td>Synapse identity, direction, current weight, cortical endpoint completeness, stable hub / laterality metrics independent of filtering or parcellation, and protocol-invariant graph meaning remain unresolved; uncertainty and ex vivo calibration still sit downstream.</td>
+<td><strong>Up to an acquisition-, endpoint-, graph-, and calibration-conditioned macro pathway prior</strong>. We do not read it as an edge-complete human connectome or one stable graph by default.</td>
 </tr>
 <tr>
 <td><strong>SV2A PET / synaptic-density PET</strong></td>
@@ -228,7 +236,48 @@ Another weakness that remained on this page was that <strong>volume EM</strong>,
 On this site, a destructive ultrastructure result is read first as a <strong>structural scaffold</strong> or <strong>local ex vivo scaffold</strong> unless it also discloses preservation route, live-to-fix window, registration scope, section-loss / alignment risk, segmentation / proofreading status, and omitted live-state families. That disclosure bundle is formalized in <a href="https://mind-upload.com/verification.html#destructive-structure-card">Verification: Destructive-Structure Route Card</a>.
 </p>
 
-<h3>4.6. EEG / MEG still face a visibility / inverse / validation wall</h3>
+<h3>4.6. Human diffusion MRI tractography is a route-conditioned macro pathway prior, not one stable graph</h3>
+<p>
+Another weakness that remained on this page was that <strong>connectome</strong>, <strong>dMRI</strong>, or <strong>tractography graph</strong> could still be overread as if a living-human structural stack already produced one stable object. That is too weak. <a href="https://doi.org/10.1073/pnas.1418198112" target="_blank">Reveley et al. (2015)</a> showed that superficial white matter can impede detection of long-range cortical connections, and <a href="https://doi.org/10.1002/hbm.23936" target="_blank">Schilling et al. (2018)</a> showed that tractography endpoints remain biased toward gyral crowns across algorithms and diffusion models. The newer literature then shows that even after tracking, the graph itself still moves. <a href="https://doi.org/10.1162/netn_a_00324" target="_blank">Gajwani et al. (2023)</a> showed across <strong>40 pipelines</strong> and <strong>44</strong> group-representative reconstructions that hub location is highly variable, and <a href="https://doi.org/10.1016/j.neuroimage.2024.120904" target="_blank">He et al. (2024)</a> showed that tractogram filtering can significantly change connectome laterality. Upstream of that, <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">McMaster et al. (2025)</a> showed that voxel-size variance changes the resulting connectome and recommended harmonized resampling, while <a href="https://doi.org/10.3389/fnimg.2026.1670604" target="_blank">Bramati et al. (2026)</a> showed on the same <strong>3 T</strong> scanner with uniform processing that common diffusion-sampling schemes can still shift voxel-wise metrics and tractography outputs. Downstream, <a href="https://doi.org/10.1016/j.media.2025.103580" target="_blank">Manzano-Patrón et al. (2025)</a> showed that fibre-orientation uncertainty can be propagated into tractography rather than hidden, and <a href="https://doi.org/10.1016/j.media.2025.103498" target="_blank">Zhu et al. (2025)</a> showed that MRI plus microscopy can improve reconstruction in a hybrid calibration setting. What follows directly is that <strong>a diffusion-MRI-derived human connectome is not one stable graph by default</strong>; it is an <strong>acquisition-, endpoint-, graph-construction-, and calibration-conditioned estimate</strong>.
+</p>
+<table>
+<thead>
+<tr>
+<th>Wall</th>
+<th>What the primary literature now supports</th>
+<th>Site rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Endpoint / surface-assignment wall</strong></td>
+<td>Long-range cortical endpoints can still be hidden by superficial white matter or over-assigned toward gyral crowns, so cortical edge coverage is not a direct observable of the diffusion signal.</td>
+<td>Do not read a tractography endpoint map as cortical edge completeness without naming the surface-assignment route and remaining endpoint-limited territory.</td>
+</tr>
+<tr>
+<td><strong>Graph-construction wall</strong></td>
+<td>Hub topology, laterality, and other parcel-graph metrics can move across plausible filtering, weighting, thresholding, or group-reconstruction choices.</td>
+<td>Do not read a tractography graph metric as anatomy by default; disclose the graph-construction route and whether the result survives plausible pipeline variation.</td>
+</tr>
+<tr>
+<td><strong>Acquisition / harmonization wall</strong></td>
+<td>Voxel resolution and q-space sampling scheme can systematically move connectome estimates even before endpoint policy and graph construction are interpreted.</td>
+<td>Do not compare headline tractography results across scanners, voxel sizes, or sampling schemes without an explicit harmonization route and a statement of whether the result is protocol-scoped.</td>
+</tr>
+<tr>
+<td><strong>Uncertainty / calibration wall</strong></td>
+<td>Posterior uncertainty can be mapped rather than hidden, and ex vivo MRI-microscopy fusion can improve reconstruction, but neither step turns living-human tractography into a finished connectome.</td>
+<td>Do not treat uncertainty-aware tractography or hybrid calibration as edge-complete human connectome recovery; they are narrower improvements on named error terms.</td>
+</tr>
+</tbody>
+</table>
+
+<strong>Operating rule for diffusion-MRI tractography</strong>
+<p>
+On this site, a living-human tractography result is read first as a <strong>macro pathway prior</strong> or <strong>bundle-level hypothesis route</strong> unless it also discloses acquisition / harmonization, cortical endpoint assignment, parcel-graph construction, stability under plausible pipelines, and how uncertainty or external calibration was handled. That disclosure bundle is aligned here with the deeper <a href="https://mind-upload.com/wiki/connectome-is-not-enough.html#tractography-route-card">tractography route card</a>.
+</p>
+
+<h3>4.7. EEG / MEG still face a visibility / inverse / validation wall</h3>
 <p>
 Another weakness that remained on this page was that <strong>source-localized</strong>, <strong>deep-source detectable</strong>, or <strong>intracranially validated</strong> could still be overread as if non-invasive field recordings had already crossed from macro observables into general internal-state recovery. That is too weak. Before any inverse solver runs, there is already a <strong>field-formation wall</strong>. <a href="https://doi.org/10.1007/s10548-010-0154-x" target="_blank">Ahlfors et al. (2010)</a> quantified source-orientation sensitivity with realistic tissue boundaries and found that the median ratio between the least and most sensitive orientations was <strong>0.63 for EEG</strong> but only <strong>0.06 for MEG</strong>. <a href="https://doi.org/10.1002/hbm.20851" target="_blank">Ahlfors et al. (2010)</a> then showed that extended and distributed sources can cancel substantially at the surface. <a href="https://doi.org/10.1002/hbm.20571" target="_blank">Goldenholz et al. (2009)</a> showed that source extent and anatomy strongly change detectability, with mesial temporal source patches of about <strong>3 cm<sup>2</sup></strong> versus <strong>8 cm<sup>2</sup></strong> differing by roughly <strong>10 dB</strong> in SNR. <a href="https://doi.org/10.1002/hbm.25272" target="_blank">Piastra et al. (2021)</a> further showed that ignoring the <strong>CSF compartment</strong> overestimates EEG SNR and that cortical / subcortical sensitivity depends jointly on depth and orientation. Only after that upstream filter do benchmark papers become readable. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a> created the first open human ground-truth benchmark by combining <strong>256-channel HD-EEG</strong> with precisely known intracerebral stimulation sites, but they also stated explicitly that stimulation artifacts are <strong>non-physiological</strong> and that spatial sampling remains anatomically clustered. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> then evaluated <strong>3,619</strong> known stimulation locations in <strong>11 patients</strong> with simultaneous SEEG and scalp EEG and found mean localization errors ranging from <strong>10.3 to 26 mm</strong>, worsening with source depth and lower skull conductivity. <a href="https://doi.org/10.1016/j.jneumeth.2024.110193" target="_blank">Zauli et al. (2024)</a> showed that hidden interictal discharges not visible on single-trial scalp HD-EEG can be uncovered with simultaneous SEEG-triggered averaging, but the resulting ESI still remained <strong>method- and parameter-dependent</strong> with localization accuracy of only about <strong>2 cm</strong>. <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> reported that simultaneous HD-EEG/SEEG ictal ESI localizes better than interictal ESI, yet still at <strong>14.07 ± 4.62 mm</strong> versus <strong>17.38 ± 4.16 mm</strong>, with accuracy strongly influenced by source depth and spike power. Finally, <a href="https://doi.org/10.1038/s41467-019-08665-5" target="_blank">Pizzo et al. (2019)</a> showed that MEG can detect direct hippocampal or amygdalar contributions under simultaneous intracranial validation, but only after blind source separation because the deep contribution reaching the surface was <strong>small but significant</strong> rather than dominating the sensor signal. What follows directly is that <strong>EEG / MEG can gain conditional access to some deeper generators, but they still do not collapse field formation, the inverse problem, or general deep-state observability</strong>.
 </p>
