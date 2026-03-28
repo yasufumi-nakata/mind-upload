@@ -2,9 +2,9 @@
 
 > RQごとに検証設計と応募テーマまで接続する
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-29 / 位置づけ: RQ-by-RQ Deep Dive
+- Updated: 2026-03-29 / Role: RQ-by-RQ Deep Dive
 
 ---
 
@@ -46,6 +46,47 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `A`: 17件
 - `B`: 25件
 - `C`: 18件
+
+## 今回の深掘り実行パック（2026-03-29 05:55 JST, EEG-DATA実在面 + 現行助成面の再検証）
+
+本runでは、既存の `6RQ` 深掘りパックを維持したまま、`EEG-DATA` 側の実在 bucket と `auto-research-funds` 側の現行 card 実体を再固定いたしました。総論を増やさず、`1RQ=1検証命題=1主データ群=1助成レーン` の粒度をさらに厳密にいたします。
+
+| RQ | EEG-DATA bucket（今回の主アンカー） | 主/予備Dアンカー | 実データ条件（最低限） | 現行助成レーン | EEG単独でまだ主張しないこと |
+|---|---|---|---|---|---|
+| U0-2 | biometric authentication / cross-session transfer (`D02`) | 主: `D02` / 予備: `D11`, `D23` | repeated sessions, same-subject labels, task variation, timestamp/QC, device metadata | レーン: `G2/G3` / 実card: `G3=9Lx4dPK6a4k2gOb7` | 同一性の哲学的十分条件までは主張しない。同期妥当性つき識別KPIに限定。 |
+| U1-4 | source localization / direct validation (`D08`) | 主: `D08` / 予備: `D11`, `D19` | high-density EEG, intervention ground-truth, head-model or iEEG disclosure, rerunnable pipeline | レーン: `G1/G4` / 実card: `G4=Drbm6vBRDJkn0NGJ` | solver 優劣を一般脳状態の完全回復へ直結させない。 |
+| U7-6 | simultaneous EEG-fMRI / EEG-fNIRS / missing-modality robustness (`D11`) | 主: `D11` / 予備: `D15`, `D23` | same-trial synchronization, BIDS-sidecar provenance, missing-modality policy, subject-session count | レーン: `G1/G3` / 実card: `G3=9Lx4dPK6a4k2gOb7` | multimodal bundle 成功を「共通状態変数の解決」とは呼ばない。 |
+| U8-6 | longitudinal / closed-loop online adaptation (`D12`) | 主: `D12` / 予備: `D20`, `D21` | online labels, latency-jitter log, fixed-vs-recalibrated decoder disclosure, failure registry | レーン: `G2/G5` / 実card: `G5=871pw3rLjNPKgqA0` | same-session 成功だけで週〜月運用の耐久性を主張しない。 |
+| U11-3 | sleep-consciousness / anesthesia-sedation / DoC biomarkers (`D17`) | 主: `D17` / 予備: `D14`, `D16` | same-cohort calibration, continuous recordings, hypnogram or sedation-stage labels, pharmacology or perturbation log | レーン: `G2/G4` / 実card: `G4=Drbm6vBRDJkn0NGJ` | 理論勝敗や意識の本質指標の確定までは主張しない。 |
+| U13-2 | speech production / reconstruction-decoding (`D10`) | 主: `D10` / 予備: `D03`, `D09` | stimulus/audio/transcript alignment, overt-vs-covert control, leak-free split, BIDS or equivalent provenance | レーン: `G1/G4` / 実card: `G4=Drbm6vBRDJkn0NGJ` | brain-to-text 成功を模倣分離や保存成功の証拠とは呼ばない。 |
+
+補足:
+
+- `G1/G2` は固定レーンであり、現行の助成 card 実体ではありません。
+- 現行の card 実体は `G3-G6` です。
+- 現行 card の一覧正本は `auto-research-funds/wiki/Mind-Upload-Current-Funding-Shortlist.md` として固定いたしました。
+
+## 今回の深掘り実行パック（2026-03-29 02:04 JST, 現行site audit反映パック）
+
+本runでは、直前の「可解性優先パック」を崩さず、その上で現行 `mind-upload` の site deepening audit が強く更新した論点を `6RQ` に限定して反映いたしました。汎用横断へ戻さず、`1RQ=1検証命題=1応募テーマ=1主データ` を維持いたします。
+
+| RQ | 今回固定する最小命題 | 提出テーマ（そのまま応募見出しへ使う軸） | 第一/予備応募先 | 主データ（主/予備） | 反映した現行site論点 | 初手KPI | 停止条件 |
+|---|---|---|---|---|---|---|---|
+| U0-2 | 同期ずれを `clock offset + jitter p95 + state-feature collapse rate` の3指標で固定し、同一性評価が計測誤差へ引きずられる境界を先に切ります。 | Temporal-validity-aware identity synchronization audit | `G2 / G3` | 主: `D02 CSTE: A Dataset for Cross-Sessions and Cross-Tasks EEG Biometrics` / 予備: `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling`, `D23 EEG, PPG, GSR signals for rehabilitation fatigue detection` | `Temporal Validity Card` と `state annotation` の分離 | `clock offset p95` `state-feature collapse rate` `resync recovery rate` | 再同期後も `state-feature collapse rate` が収束せず、同一性判定の改善が再現しない場合。 |
+| U1-4 | 逆問題の公開基準を点推定ではなく `posterior interval + reanalysis agreement` へ固定し、solver 改善と不確実性公開を分離します。 | Posterior-aware inverse benchmark and disclosure standard | `G1 / G4` | 主: `D08 Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods` / 予備: `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling`, `D19 CerebellarTMSEEGData` | inverse route の4ゲート読解 | `interval coverage` `posterior-width stability` `reanalysis agreement` | 区間被覆率が継続逸脱し、後方分布公開で手法順位が不安定化する場合。 |
+| U7-6 | 欠損モダリティ下でも結論を維持できる最小観測セットを `conclusion agreement + warning recall + complete-case bias` で固定します。 | Missing-modality robust multimodal audit package | `G1 / G3` | 主: `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` / 予備: `D15 A simultaneous EEG-fNIRS dataset for investigating working memory load`, `D23 EEG, PPG, GSR signals for rehabilitation fatigue detection` | `bundle robustness gate` と `missing-modality policy` の独立開示 | `conclusion agreement rate` `warning recall` `complete-case bias` | full-modality 基準との一致率下限を満たさず、欠損条件で安全警告の見逃しが増える場合。 |
+| U8-6 | 閉ループの再学習間隔を `fixed-decoder durability` と `rescue-mode recalibration burden` に分けて固定します。 | Longitudinal recalibration scheduling for closed-loop safety | `G2 / G5` | 主: `D12 Longitudinal MI-BCI training with transcutaneous spinal stimulation` / 予備: `D20 Closed-loop auditory stimulation targeting REM oscillations`, `D21 NeuroSimo: closed-loop EEG/EMG-guided TMS` | `same-session fast` と `deployable chronic loop` の分離 | `performance decay rate` `safety margin` `retraining cost` | 再学習コスト増に対して性能維持と安全余裕の改善が再現しない場合。 |
+| U11-3 | 理論対立点を単一計画へ落とす際、`construct validity / perturbational validity / same-cohort calibration / incremental validity` の4ゲートを必須にします。 | 4-gate consciousness proxy conflict test | `G2 / G4` | 主: `D17 DoC EEG biomarker pilot (preliminary ML outcome detection)` / 予備: `D14 PK-NMM EEG simulation during propofol anesthesia`, `D16 Aalborg University Wearable Sleep Study (AAUWSS)` | consciousness theory map の 4-gate 読み | `same-cohort calibration gap` `indicator divergence width` `incremental validity` | 指標乖離が理論予測と整合せず、same-cohort calibration を固定できない場合。 |
+| U13-2 | 言語デコードを一括りにせず、`brain-minus-prior baseline` を含む hallucination/整合監査へ分解して固定します。 | Neural-hallucination alignment audit for mimic separation | `G1 / G4` | 主: `D10 3M-CPSEED: EEG dataset for overt/silent/imagined speech` / 予備: `D03 Multimodal Fusion System for Cognitive Load Assessment`, `D09 VICODEV dataset` | language route split と `Neural Contribution Card` | `semantic alignment` `brain-minus-prior gap` `misalignment rate` | prompt 依存の寄与を分離できず、神経由来の差分が再現しない場合。 |
+
+実行順（本run固定）:
+
+1. `U0-2`
+2. `U1-4`
+3. `U7-6`
+4. `U8-6`
+5. `U11-3`
+6. `U13-2`
 
 ## 今回の深掘り実行パック（2026-03-29 01:37 JST, 可解性優先のA/B実装パック）
 
@@ -1014,7 +1055,7 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 | RQ | 判定 | 第一/予備応募先 | 主データ（Dアンカー） | 今回固定した深掘りポイント |
 |---|---|---|---|---|
 | U4-3 | B | `G1 / G4` | `D05`（補助 `D08`） | 介入あり/なしで `PEHE + log-likelihood` の二軸比較を固定し、理論順位の反転を停止条件に設定。 |
-| U11-1 | B | `G2 / G4` | `D12`（補助 `D14/D15`） | PCI近似/LZ/摂動応答の順位保存率を同一I/O条件で比較し、`80%` を運用閾値化。 |
+| U11-1 | B | `G2 / G4` | `D14`（補助 `D16/D17`） | PCI近似/LZ/摂動応答の順位保存率を同一I/O条件で比較し、`80%` を運用閾値化。 |
 | U15-2 | C | `G2 / G6` | `D07`（補助 `D20/D21`） | neurorights条項を監査ログ項目へ写像し、同意撤回時の権限剥奪ログ欠損を停止条件に設定。 |
 
 補足:

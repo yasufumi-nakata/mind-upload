@@ -2,32 +2,32 @@
 
 > Aligning the boundaries between assertion and reservation to read as an information portal
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-14 / 位置づけ: Reading status and scope
+- Updated: 2026-03-14 / Role: Reading status and scope
 
-## このページの役割
+## Role Of This Page
 This page is an auxiliary guide to help you avoid misreading the ``What we know now'', ``What we don't know yet'', and ``What we can/can't say on this page'' on the Mind-Upload public page. As an information portal, the public page first indicates what can be asserted and what should be reserved. It is used to read the meanings.
 
-## 正確さの前提
+## Accuracy Notes
 This article deals with how to read public pages. To check the authenticity of individual theories and techniques, be sure to return to the original page text and evidence.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Start page](https://mind-upload.com)
 - [Verification platform](https://mind-upload.com/verification.html)
 - [Public content integration hub](https://mind-upload.com/content_hub.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Guide to reading public pages](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - This is for people who want to decide in advance which public page to read from.
 - [Wiki: How to read partial solution/exploration stage/undeveloped](https://github.com/yasufumi-nakata/mind-upload/wiki/progress-labels-and-open-problem-status) - This is for people who want to see the meaning of progress labels in more detail.
 - [Wiki: What to do first in-house and external dependencies](https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies) - This is for people who want to take a closer look at separating external dependencies from changes that can be made now.
 
-## いま分かっていること
+## What Is Currently Known
 - The public page is designed as an information portal that indicates the strength of your assertions and the extent of your reservations.
 - ``What we know now'' refers to what can be said relatively strongly within the scope of that page.
 - By separating ``things we don't know yet'' and ``external dependencies,'' we can reduce excessive expectations and misinterpretations.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - The extent to which issues can be moved to ``known'' in the future will depend on the progress of research and development.
 - Strong claims like L4 and L5 continue to have many unresolved issues.
 

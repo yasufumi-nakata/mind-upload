@@ -19,6 +19,29 @@ reading_time: "55-80分"
 - 更新日: 2026-03-29
 - 出典: `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`（60行を再構成）
 
+## 今回の再検証ログ（2026-03-29 05:55 JST）
+
+本runでは、既存の `6RQ` 深掘りキューを維持したまま、各RQを `EEG-DATA` の実在 bucket と `auto-research-funds` の現行 card 実体へ再固定いたしました。汎用横断の総論は増やさず、今回も `1RQ=1検証命題=1応募テーマ=1主データ` を維持いたします。
+
+- 深掘り再固定6RQ（本run）: `U0-2` `U1-4` `U7-6` `U8-6` `U11-3` `U13-2`
+- 主アンカー固定:
+  - `U0-2`: `D02`
+  - `U1-4`: `D08`
+  - `U7-6`: `D11`
+  - `U8-6`: `D12`
+  - `U11-3`: `D17`
+  - `U13-2`: `D10`
+- 現行助成面の固定:
+  - `G1/G2` は routing key として維持いたします。
+  - 実体参照は `G3-G6` に戻し、正本一覧は `auto-research-funds/wiki/Mind-Upload-Current-Funding-Shortlist.md` といたしました。
+- 再固定した実データ条件:
+  - `U0-2`: repeated sessions / same-subject labels / task variation / timestamp-QC / device metadata
+  - `U1-4`: high-density EEG / intervention ground-truth / head-model or iEEG disclosure / rerunnable pipeline
+  - `U7-6`: same-trial synchronization / BIDS-sidecar provenance / missing-modality policy / subject-session count
+  - `U8-6`: online labels / latency-jitter log / fixed-vs-recalibrated decoder disclosure / failure registry
+  - `U11-3`: same-cohort calibration / continuous recordings / hypnogram or sedation-stage labels / pharmacology or perturbation log
+  - `U13-2`: stimulus-audio-transcript alignment / overt-vs-covert control / leak-free split / BIDS or equivalent provenance
+
 ## 今回の再検証ログ（2026-03-29 02:04 JST）
 
 本runでは、現行 `mind-upload` の site deepening audit を強く反映する `6RQ` だけを追加で固定いたしました。汎用横断の要約は増やさず、`1RQ=1検証命題=1応募テーマ=1主データ` を維持いたします。
@@ -116,6 +139,7 @@ reading_time: "55-80分"
 - 第一応募先 / 予備応募先: G2 (GR-2026-014) / G3 (9Lx4dPK6a4k2gOb7)
 - 主データ（ID）: `676`
 - 補助データ（推奨ID）: `ID 676, 4878, 11`
+- 実データ条件: 今回の主アンカーは `D02 CSTE` とし、`repeated sessions` `same-subject labels` `task variation` `timestamp/QC` `device metadata` を最低条件に固定いたします。
 - 初期KPI（U0標準）: `同期ずれ中央値` `状態特徴相関維持率` `セッション外AUC`
 - 停止条件: 同期補正後も `offset/jitter` の95パーセンタイルが `20 ms` を超え、`状態特徴相関維持率 < 0.90` に留まる場合は、同一性主張を「同期依存の部分成立」に降格する。
 - 最低成果物: Time synchronization audit report (offset/jitter distribution)
@@ -194,6 +218,7 @@ reading_time: "55-80分"
 - 第一応募先 / 予備応募先: G1 (GR-2026-013) / G4 (Drbm6vBRDJkn0NGJ)
 - 主データ（ID）: `56`
 - 補助データ（推奨ID）: `ID 56, 676, 1839`
+- 実データ条件: 今回の主アンカーは `D08 simultaneous intracerebral stimulation + HD-EEG` とし、`high-density EEG` `intervention ground-truth` `head-model or iEEG disclosure` `rerunnable pipeline` を必須条件にいたします。
 - 初期KPI（U1標準）: `95%被覆率` `後方分布幅` `手法順位一致率`
 - 停止条件: `95%被覆率` が `80-100%` 帯を継続逸脱するか、区間公開を入れた後に `手法順位一致率 < 0.80` へ低下する場合は、公開基準を「点推定 + 限定区間」に降格する。
 - 最低成果物: Inverse solution comparison table and uncertainty distribution chart
@@ -404,8 +429,9 @@ reading_time: "55-80分"
 - 第一応募先 / 予備応募先: G1 (GR-2026-013) / G3 (9Lx4dPK6a4k2gOb7)
 - 主データ（ID）: `676`
 - 補助データ（推奨ID）: `ID 676, 783, 4878`
+- 実データ条件: 今回の主アンカーは `D11 multi-session simultaneous EEG-fMRI with online experience sampling` とし、`same-trial synchronization` `BIDS-sidecar provenance` `missing-modality policy` `subject-session count` を最低限開示いたします。
 - 初期KPI（U7標準）: `再現率` `前処理差分感度` `同期監査異常率`
-- 停止条件: 主データ単独で再現しない場合は、前処理・分割・同期ログを固定して再試行し、それでも再現不能なら主張を下方修正する。
+- 停止条件: 主データ単独で再現しない場合は、前処理・分割・同期ログを固定して再試行し、それでも再現不能なら主張を下方修正する。加えて `missing-modality policy` と `complete-case bias` を分離できない場合は、「complete-case 限定の部分成立」までに降格いたします。
 - 最低成果物: Reproducibility audit report (synchronization/QC/preprocessing difference)
 
 
@@ -483,8 +509,9 @@ reading_time: "55-80分"
 - 第一応募先 / 予備応募先: G2 (GR-2026-014) / G5 (871pw3rLjNPKgqA0)
 - 主データ（ID）: `6`
 - 補助データ（推奨ID）: `ID 6, 1972, 2412, 696`
+- 実データ条件: 今回の主アンカーは `D12 longitudinal MI-BCI + spinal stimulation` とし、`online labels` `latency-jitter log` `fixed-vs-recalibrated decoder disclosure` `failure registry` を必須条件にいたします。
 - 初期KPI（U8標準）: `安定率` `停止介入率` `回復時間`
-- 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
+- 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。さらに `credit assignment probe` がなく、`user learning` `decoder update` `interface shaping` を分離できない場合は、「co-adaptive partial success」に降格いたします。
 - 最低成果物: Closed loop safety KPI dashboard
 
 
@@ -574,8 +601,9 @@ reading_time: "55-80分"
 - 第一応募先 / 予備応募先: G2 (GR-2026-014) / G4 (Drbm6vBRDJkn0NGJ)
 - 主データ（ID）: `735`
 - 補助データ（推奨ID）: `ID 735, 842, 859`
+- 実データ条件: 今回の主アンカーは `D17 DoC EEG biomarker pilot` とし、`same-cohort calibration` `continuous recordings` `hypnogram or sedation-stage labels` `pharmacology or perturbation log` を必須条件にいたします。
 - 初期KPI（U11標準）: `理論間順位保存率` `境界症例符号一致率` `計算予算内完走率`
-- 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
+- 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。加えて `same-cohort calibration` が取れない、または `construct / perturbation / calibration / incremental` の4ゲート分解ができない場合は、「proxy comparison memo」に降格いたします。
 - 最低成果物: Awareness index comparison report (with failure condition)
 
 
@@ -691,6 +719,7 @@ reading_time: "55-80分"
 - 第一応募先 / 予備応募先: G1 (GR-2026-013) / G4 (Drbm6vBRDJkn0NGJ)
 - 主データ（ID）: `509`
 - 補助データ（推奨ID）: `ID 509, 13, 65`
+- 実データ条件: 今回の主アンカーは `D10 3M-CPSEED` とし、`stimulus/audio/transcript alignment` `overt-vs-covert control` `leak-free split` `BIDS or equivalent provenance` を必須条件にいたします。
 - 初期KPI（U13標準）: `意味一致率` `内部状態差検出率` `幻覚率`
 - 停止条件: `内部状態差検出率 < 0.60` または `幻覚率` と `neural inconsistency` の相関区間が `0` を跨ぐ場合は、「意味一致のみ」の主張へ下方修正する。
 - 最低成果物: Mimic separation evaluation script and control condition table

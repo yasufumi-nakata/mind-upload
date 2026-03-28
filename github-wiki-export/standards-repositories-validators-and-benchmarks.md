@@ -2,28 +2,28 @@
 
 > Separate standards, repositories, validators, benchmark harnesses, and benchmark provenance
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-26 / 位置づけ: Operational guide
+- Updated: 2026-03-26 / Role: Operational guide
 
-## このページの役割
+## Role Of This Page
 This page organizes the roles of ``Standards,'' ``Repositories,'' ``Validators,'' ``Benchmarks,'' and the newer site rule of ``benchmark provenance / governance,'' together with version freezing, event semantics, synchronization middleware, and loader / benchmark tooling. The goal is not to memorize product names but to understand where reproducibility actually breaks.
 
-## 正確さの前提
+## Accuracy Notes
 What I will explain here is a basic organization of roles. BIDS vessels, HED semantics, and LSL synchronization are complementary, and the final validity of any one is not guaranteed.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Data & Bench](https://mind-upload.com/datasets.html)
 - [Verification base](https://mind-upload.com/verification.html)
 - [Casework](https://mind-upload.com/verification.html#casework)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Return to the larger map of Standards, Bench, Registration, and Audit.
 - [Wiki: Baseline/Pre-registration/Model Card](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - Compensates for differences in operational language beyond Benchmark.
 - [Wiki: Event synchronization and observation log](https://github.com/yasufumi-nakata/mind-upload/wiki/event-sync-and-measurement-logs) - Add specific examples of log information you want to include in the standard.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other auxiliary pages.
 
-## いま分かっていること
+## What Is Currently Known
 - To make research comparable, it is necessary to separate the data format, publication destination, testing methods, and evaluation rules.
 - BIDS and EEG-BIDS are standards for 'how to place' them, not scoring rules themselves.
 - Event semantics like HED have the role of supplementing the meaning of events listed in BIDS in a machine-readable manner.
@@ -34,7 +34,7 @@ What I will explain here is a basic organization of roles. BIDS vessels, HED sem
 - A benchmark title alone is still insufficient: benchmark meaning can move with current rule snapshot, split construction, hidden grouping, extra-data / pretrained-model policy, inference-stage budget, and organizer postmortems.
 - MOABB fixes evaluation families such as within-session / cross-session / cross-subject, but challenge operations can add additional constraints that are not visible in the harness name alone.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - It is unclear what granularity the final common benchmark for WBE should be.
 - Which validators and audit items will become the final standard will depend on future operational design.
 

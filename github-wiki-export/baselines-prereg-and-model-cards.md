@@ -2,35 +2,35 @@
 
 > From score reporting to the artifact stack required by the claim
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-25 / 位置づけ: Learning guide
+- Updated: 2026-03-25 / Role: Learning guide
 
-## このページの役割
+## Role Of This Page
 This page explains the operational difference among baseline, benchmark, pre-registration, model card, and the additional cards that become necessary when a result depends on multimodal fusion, large-scale pretraining, shortcut resistance, living-human proxy bundles, or sequential same-subject bridges.
 
-## 正確さの前提
+## Accuracy Notes
 This page is a learning guide to the artifact stack. The authoritative card fields and stop rules still live on the public Verification page.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Verification](https://mind-upload.com/verification.html)
 - [Datasets / L0 Practice](https://mind-upload.com/datasets.html#l0-practice)
 - [Verification Casework](https://mind-upload.com/verification.html#casework)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Verification Basics](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - A wider map of why standards, benchmarks, registries, and audits are needed.
 - [Wiki: Dataset Splits and Leakage](https://github.com/yasufumi-nakata/mind-upload/wiki/dataset-splits-and-leakage) - Explains split hygiene, acquisition-distribution shortcuts, and benchmark provenance.
 - [Wiki: EEG Foundation Models](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-foundation-models) - Explains why pretraining claims need more than a generic model card.
 - [Wiki: Human Proxy Composition](https://github.com/yasufumi-nakata/mind-upload/wiki/human-proxy-composition) - Explains when several living-human proxy rows may or may not be promoted together.
 - [Wiki: State-Continuity Bridge](https://github.com/yasufumi-nakata/mind-upload/wiki/state-continuity-bridge) - Explains why same-subject or same-brain wording does not automatically mean same-state evidence.
 
-## いま分かっていること
+## What Is Currently Known
 - Comparable progress requires a baseline, a benchmark object, preregistered stopping rules, a result report, and explicit failure disclosure.
 - Benchmark meaning depends not only on the dataset and score, but also on split randomness, metric bundle, extra-data policy, operational constraints, and postmortems.
 - Observability Budget, Specificity & Shortcut Card, Fusion Card, Pretraining Card, Human Proxy Composition Card, and State-Continuity Bridge Card answer different failure modes.
 - A higher score can still be scientifically weak if the artifact stack does not match the claim being made.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - Which subsets of this artifact stack will become field-wide defaults beyond this site is still unsettled.
 - The exact minimum disclosure expected for negative results and failure examples will continue to evolve.
 

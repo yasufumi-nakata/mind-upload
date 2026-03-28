@@ -2,21 +2,21 @@
 
 > Fix the issues for each RQ instead of a general summary
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-22 / 位置づけ: RQ-by-RQ Deep Focus
+- Updated: 2026-03-29 / Role: RQ-by-RQ Deep Focus
 
-## このページの役割
+## Role Of This Page
 This page is a practical note that fixes the core of mind-upload's 60 RQs, which can be confirmed directly with EEG-DATA, application themes for auto-research-funds, and necessary requirements outside of EEG.
 
-## 正確さの前提
+## Accuracy Notes
 A/B/C judgment is the same as mind-upload-eeg-rq60-feasibility-and-funds. C means 'not complete with EEG alone' rather than 'not important'.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Literature map](https://mind-upload.com/research_harvest_50.html)
 - [Data & Bench](https://mind-upload.com/datasets.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: RQ60 EEG verification availability and subsidy theme](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds) - The original version of the judgment and data candidates.
 - [Wiki: RQ60 Application Playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - Fixed table of applicant ID and minimum deliverables.
 
@@ -406,6 +406,16 @@ Reasons for proceeding in this order:
 4. `U4-3`（反事実誤差による理論比較固定）
 5. `U8-6`（再学習頻度と安全余裕のトレードオフ固定）
 6. `U12-3`（心理的連続性監査ログの制度接続準備）
+
+## 2026-03-29 01:37 JST correction log (main run / anchor and deliverable drift fix)
+
+- Pulled the latest `main` in `auto-startup`, `mind-upload`, `EEG-DATA`, and `auto-research-funds` before editing (`0 0`, `Already up to date` in every repo).
+- Recounted `### Ux-y` headings in `mind-upload/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.md` and reconfirmed `RQ_TOTAL=60` (`missing=0`, `duplicate=0`).
+- Recomputed the judgment split from `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` and reconfirmed `A/B/C=17/25/18`.
+- Rechecked the referenced legacy ID set (`6, 11, 13, 16, 19, 29, 39, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 1011, 1839, 1972, 2412, 3419, 4878`) in `EEG-DATA/eeg_dataset_summary_ja.csv` (`旧ID`, `missing=0`).
+- Corrected the `U11-1` anchor drift: the stale `D12=10.21227/qqj2-r702` reference was invalid and is now aligned to `D14 (10.6084/m9.figshare.1485719)` with `D16/D17` as support anchors.
+- Corrected the `U12-5` minimum deliverable drift: this RQ now consistently points to `Branch-based audit log design document` instead of a synchronization-only report.
+- This correction pass did not replace the solve-first execution pack. The active 2026-03-29 pack remains the synced six-RQ set below.
 
 ## 2026-03-29 01:44 JST revalidation log (main run / solve-first six-RQ sync)
 

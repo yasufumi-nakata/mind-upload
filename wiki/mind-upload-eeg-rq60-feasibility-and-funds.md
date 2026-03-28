@@ -50,6 +50,25 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `B`: 25件
 - `C`: 18件
 
+## 今回の深掘り実行パック（2026-03-29 05:55 JST, EEG-DATA実在面 + 現行助成面の再検証）
+
+本runでは、既存の `6RQ` 深掘りパックを維持したまま、`EEG-DATA` 側の実在 bucket と `auto-research-funds` 側の現行 card 実体を再固定いたしました。総論を増やさず、`1RQ=1検証命題=1主データ群=1助成レーン` の粒度をさらに厳密にいたします。
+
+| RQ | EEG-DATA bucket（今回の主アンカー） | 主/予備Dアンカー | 実データ条件（最低限） | 現行助成レーン | EEG単独でまだ主張しないこと |
+|---|---|---|---|---|---|
+| U0-2 | biometric authentication / cross-session transfer (`D02`) | 主: `D02` / 予備: `D11`, `D23` | repeated sessions, same-subject labels, task variation, timestamp/QC, device metadata | レーン: `G2/G3` / 実card: `G3=9Lx4dPK6a4k2gOb7` | 同一性の哲学的十分条件までは主張しない。同期妥当性つき識別KPIに限定。 |
+| U1-4 | source localization / direct validation (`D08`) | 主: `D08` / 予備: `D11`, `D19` | high-density EEG, intervention ground-truth, head-model or iEEG disclosure, rerunnable pipeline | レーン: `G1/G4` / 実card: `G4=Drbm6vBRDJkn0NGJ` | solver 優劣を一般脳状態の完全回復へ直結させない。 |
+| U7-6 | simultaneous EEG-fMRI / EEG-fNIRS / missing-modality robustness (`D11`) | 主: `D11` / 予備: `D15`, `D23` | same-trial synchronization, BIDS-sidecar provenance, missing-modality policy, subject-session count | レーン: `G1/G3` / 実card: `G3=9Lx4dPK6a4k2gOb7` | multimodal bundle 成功を「共通状態変数の解決」とは呼ばない。 |
+| U8-6 | longitudinal / closed-loop online adaptation (`D12`) | 主: `D12` / 予備: `D20`, `D21` | online labels, latency-jitter log, fixed-vs-recalibrated decoder disclosure, failure registry | レーン: `G2/G5` / 実card: `G5=871pw3rLjNPKgqA0` | same-session 成功だけで週〜月運用の耐久性を主張しない。 |
+| U11-3 | sleep-consciousness / anesthesia-sedation / DoC biomarkers (`D17`) | 主: `D17` / 予備: `D14`, `D16` | same-cohort calibration, continuous recordings, hypnogram or sedation-stage labels, pharmacology or perturbation log | レーン: `G2/G4` / 実card: `G4=Drbm6vBRDJkn0NGJ` | 理論勝敗や意識の本質指標の確定までは主張しない。 |
+| U13-2 | speech production / reconstruction-decoding (`D10`) | 主: `D10` / 予備: `D03`, `D09` | stimulus/audio/transcript alignment, overt-vs-covert control, leak-free split, BIDS or equivalent provenance | レーン: `G1/G4` / 実card: `G4=Drbm6vBRDJkn0NGJ` | brain-to-text 成功を模倣分離や保存成功の証拠とは呼ばない。 |
+
+補足:
+
+- `G1/G2` は固定レーンであり、現行の助成 card 実体ではありません。
+- 現行の card 実体は `G3-G6` です。
+- 現行 card の一覧正本は `auto-research-funds/wiki/Mind-Upload-Current-Funding-Shortlist.md` として固定いたしました。
+
 ## 今回の深掘り実行パック（2026-03-29 02:04 JST, 現行site audit反映パック）
 
 本runでは、直前の「可解性優先パック」を崩さず、その上で現行 `mind-upload` の site deepening audit が強く更新した論点を `6RQ` に限定して反映いたしました。汎用横断へ戻さず、`1RQ=1検証命題=1応募テーマ=1主データ` を維持いたします。

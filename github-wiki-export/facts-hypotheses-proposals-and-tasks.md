@@ -2,32 +2,32 @@
 
 > Organize page roles by facts, hypotheses, proposals, and tasks
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-14 / 位置づけ: Reading roles of claims
+- Updated: 2026-03-14 / Role: Reading roles of claims
 
-## このページの役割
+## Role Of This Page
 This page is an auxiliary guide to help you understand that each page of Mind-Upload is not the same type of argument. Observations, literature organization, theoretical working hypotheses, proposals, tasks performed in this repository, and coordination of external dependencies all have different roles and weights of evidence. Use this page to read these differences together.
 
-## 正確さの前提
+## Accuracy Notes
 What we're dealing with here is the difference in the roles of pages. Be sure to go back to the main text and evidence of each page to check the validity of individual theories and proposals.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Research Notes](https://mind-upload.com/perspective.html)
 - [Theoretical Frame](https://mind-upload.com/perspective.html#design-principles)
 - [Technical proposal](https://mind-upload.com/issue.html#proposal-integration)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Guide to reading public pages](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - This is for people who want to see the role differences across pages first.
 - [Wiki: How to read suggestions and state labels](https://github.com/yasufumi-nakata/mind-upload/wiki/proposal-status-reading) - For those who want a more detailed look at the status labels on suggestion pages.
 - [Wiki: How to write your first issue](https://github.com/yasufumi-nakata/mind-upload/wiki/issue-writing-basics) - Complements how to write down to execution task.
 
-## いま分かっていること
+## What Is Currently Known
 - Each page is divided into observations, theoretical hypotheses, proposals, implementation tasks, and external dependencies.
 - Acceptance of a proposal or reflection of a document does not automatically mean completion of implementation or completion of external agreement.
 - A viable change only becomes concrete once it's an issue or hands-on.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - Which hypothesis or proposal will ultimately remain as the center line will change with future verification.
 - The extent to which talk of external dependence progresses to actual cooperation depends on the other party and the conditions.
 

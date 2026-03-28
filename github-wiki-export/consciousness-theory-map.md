@@ -1,43 +1,51 @@
 # Wiki: Consciousness theory map
 
-> Before the theory name, separate the prediction family and benchmark layer.
+> Before naming a theory winner, separate prediction families from the four gates that change claim strength.
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-15 / 位置づけ: Technical / natural science only
+- Updated: 2026-03-27 / Role: Technical / natural science only
 
-## このページの役割
-This page is a supplementary page that organizes the theories of consciousness and consciousness indicators that repeatedly appear in Mind-Upload from the perspective of technology and natural science. Rather than deciding which is true, we first separate what is a prediction family, what is a perturbation benchmark, and what is a spontaneous proxy or auxiliary analysis.
+## Role Of This Page
+This page is a technical map for consciousness-related theories and readouts that recur across Mind-Upload. It does not ask which theory sounds most attractive. It asks what role each item actually plays: prediction family, confound-control design, perturbation benchmark, spontaneous proxy, deployability panel, or auxiliary geometry analysis.
 
-## 正確さの前提
-The usage shown here is not the conclusion that each paper declares as is. The primary literature as of 2026-03 supports this relatively strongly, and this site is an operational arrangement based on the remaining unconfirmed parts.
+## Accuracy Notes
+The site-wide reading rule used here is synchronized to the March 27, 2026 re-audit: claim strength depends not only on which metric is named, but also on which verification gate it has passed.
 
-## 公開ページへ戻る
-- [research notes](https://mind-upload.com/perspective.html)
-- [technology roadmap](https://mind-upload.com/tech_roadmap.html)
-- [Verification platform](https://mind-upload.com/verification.html)
+## Back To Public Pages
+- [Perspective](https://mind-upload.com/perspective.html)
+- [Roadmap](https://mind-upload.com/tech_roadmap.html)
+- [Verification](https://mind-upload.com/verification.html)
 
-## 関連 Wiki
-- [Wiki: Counterfactuals/Interventions/Perturbations](https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification) - We will organize the conditions for dropping the theoretical marker into the intervention benchmark.
-- [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - This page is to avoid confusing observational fit and causal identification.
-- [Wiki: How to read the literature and evidence page](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading) - We will clarify the role differences between theoretical papers and primary experimental papers.
+## Related Wiki Pages
+- [Wiki: Counterfactual, intervention, and perturbation verification](https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification) - Use this page when you want the technical difference between observational agreement and changed-condition verification.
+- [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - Use this page when model fit and causal identification start to blur together.
+- [Wiki: Literature and evidence reading](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading) - Use this page to keep theory papers, benchmark papers, and operations papers at different evidence strengths.
 
-## いま分かっていること
-- If you mix theory names and measurement indicators, you will not know what is a hypothesis and what is a verification indicator.
-- If we remove the no-report/task-relevance/criterion placement controls, the construct validity of the theoretical markers collapses.
-- Perturbation indicators and spontaneous indicators are often related, but they can be dissociated even within the same cohort, so they cannot be treated as a substitution relationship.
-- Manifold/topology analysis is promising, but is sensitive to sampling and preprocessing and is not a stand-alone pass/fail indicator.
+## What Is Currently Known
+- Ferrante et al. (2025) did not produce a single winning theory of consciousness.
+- Post-perceptual processing and criterion placement can materially shift neural markers, so construct validity must be audited separately.
+- PCI / PCI-ST is a serious perturbation benchmark candidate, but sensory contamination and target-specific reliability remain explicit failure modes.
+- Resting-state complexity / criticality remains a same-cohort calibration track rather than a direct replacement for perturbation benchmarks.
+- Multimodal diagnosis / prognosis panels can outperform behavior-only baselines, but portability still depends on external-site generalization and missing-modality robustness.
+- Manifold / topology results remain auxiliary because sampling and preprocessing sensitivity still change the readout.
 
-## まだ分かっていないこと
-- It is unclear which theory family will ultimately be close to the sufficient condition for WBE.
-- It is also unclear which perturbation benchmark most consistently straddles altered states and disorders of consciousness.
-- It is unresolved under what conditions spontaneous proxy and geometry descriptor can be promoted to major indicators.
+## What Is Still Unknown
+- It remains unresolved which theory family, if any, will supply a sufficient condition for WBE-relevant consciousness claims.
+- It remains unresolved whether any spontaneous metric will become a stable substitute for perturbation benchmarks across altered states and disorders of consciousness.
+- It remains unresolved which multimodal bundle is strong enough to travel across centres without recreating hidden calibration drift.
+- It remains unresolved whether geometry descriptors will become robust clinical indicators rather than auxiliary summaries.
 
 ---
 
-<h2>Short conclusion for 2026-03</h2>
+<h2>Short conclusion for 2026-03-27</h2>
 <p>
-What the current primary literature relatively strongly supports is not<strong>to adopt a theory as is</strong>, but<strong>to pre-register predictions for each theory and have them compete</strong>. Ferrante et al.'s adversarial collaboration did not make any one of IIT/GNWT/RPT a winner. At the same time, PCI/PCI-ST is a strong perturbation benchmark candidate but not a universal meter, resting-state complexity/criticality is a proxy that requires cohort-by-cohort calibration, and manifold/topology analysis remains an auxiliary descriptor. Therefore, on this site, we do not use theory names as pass/fail indicators, but operate <strong>prediction family</strong>, <strong>perturbation benchmark</strong>, <strong>spontaneous proxy</strong>, and <strong>supplementary geometry</strong> separately.
+The current primary literature does <strong>not</strong> support naming a single winner among IIT, GNWT, FEP, PCI, criticality, or multimodal clinical panels. What it supports more strongly is a separation of roles. Theory names are <strong>prediction families</strong>. No-report and criterion placement are <strong>construct-validity controls</strong>. PCI / PCI-ST is a <strong>perturbation benchmark candidate</strong>. Resting-state complexity / criticality is a <strong>same-cohort calibration track</strong>. Multimodal clinical bundles are an <strong>incremental-validity / deployability track</strong>. Geometry and topology remain <strong>auxiliary analysis</strong>. On this site, those roles are not interchangeable.
+</p>
+
+<strong>2026-03-27 re-audit: what this page had to stop doing</strong>
+<p>
+The previous version already separated theory names from benchmarks, but it still left one important compression in place: <strong>construct validity</strong>, <strong>perturbational validity</strong>, <strong>same-cohort calibration</strong>, and <strong>incremental validity</strong> were too easy to read as one single ladder. That compression is not supported by the primary literature. The page also contained reference drift, including an incorrect DOI for the criterion-placement paper and an incorrect DOI for the spontaneous-versus-perturbational dissociation paper. This revision fixes both the conceptual compression and the citation integrity problem.
 </p>
 
 <h2>First, divide by role</h2>
@@ -45,114 +53,172 @@ What the current primary literature relatively strongly supports is not<strong>t
 <thead>
 <tr>
 <th>Item</th>
-<th>something</th>
-<th>What I can say relatively strongly now</th>
-<th>Handling on this site</th>
+<th>Role</th>
+<th>What the current primary literature supports</th>
+<th>How this site reads it</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>IIT</strong></td>
-<td>prediction family / consciousness theory. </td>
-<td>It gives predictions about integration and causal structure, but is not itself an engineering benchmark. </td>
-It is treated as a <td><strong>prediction generator</strong> and not as a standalone pass/fail indicator. </td>
+<td>Theory family / prediction generator</td>
+<td>It gives predictions about integration and causal structure, but it is not itself a clinical or engineering benchmark.</td>
+<td>Treated as a <strong>prediction family</strong>, never as a standalone pass/fail meter.</td>
 </tr>
 <tr>
 <td><strong>GNWT</strong></td>
-<td>prediction family / consciousness theory. </td>
-<td>Gives predictions about global sharing and task relevance, but is strongly influenced by report confound. </td>
-Treat it as a <td><strong>prediction generator</strong> and require no-report / criterion placement controls. </td>
+<td>Theory family / prediction generator</td>
+<td>It gives predictions about global availability and task relevance, but its markers are sensitive to report and post-perceptual confounds.</td>
+<td>Treated as a <strong>prediction family</strong> that must pass <strong>no-report / criterion-placement control</strong> before its markers are read strongly.</td>
 </tr>
 <tr>
 <td><strong>FEP / Active Inference</strong></td>
-<td>Wide model family / control framework. </td>
-<td>Generative models and controls can be written in a unified manner, but this alone does not make it a winner of the human consciousness benchmark. </td>
-Treat it as <td><strong>candidate implementation family</strong> and assume same-bench comparison with DCM / state-space / SCM. </td>
+<td>Generative-model / control family</td>
+<td>It offers a broad modeling framework for perception, action, and uncertainty, but it is not by itself a winning consciousness benchmark.</td>
+<td>Treated as a <strong>candidate implementation family</strong> that must still compete under shared verification conditions.</td>
+</tr>
+<tr>
+<td><strong>No-report / criterion placement</strong></td>
+<td>Construct-validity design condition</td>
+<td>It helps separate conscious content from post-report or response-strategy effects, but it does not become a bedside meter on its own.</td>
+<td>Treated as the <strong>construct-validity gate</strong>, not as a consciousness readout.</td>
 </tr>
 <tr>
 <td><strong>PCI / PCI-ST</strong></td>
-<td>Perturbation benchmark. </td>
-<td>Response complexity to TMS-EEG and intracranial stimulation can be measured relatively consistently. </td>
-Treat it as a <td><strong>primary benchmark candidate</strong>, but require stimulus conditions and artifact control. </td>
+<td>Perturbation benchmark candidate</td>
+<td>Response complexity after perturbation remains one of the strongest benchmark candidates across altered states and disorders of consciousness.</td>
+<td>Treated as the <strong>main benchmark candidate</strong> only when perturbation logs, sensory control, artifact windows, and reliability logs are exposed.</td>
 </tr>
 <tr>
-<td><strong>resting-state complexity / criticality</strong></td>
-<td>Spontaneous proxy. </td>
-<td>Although it is correlated with PCI and state of consciousness in altered states and some cohorts, it can also be dissociated even within the same cohort. </td>
-Treat as <td><strong>calibration track</strong> and not as a replacement for PCI or behavioral evaluation. </td>
+<td><strong>Resting-state complexity / criticality</strong></td>
+<td>Spontaneous proxy / calibration track</td>
+<td>It can track altered states and sometimes align with PCI, but dissociations within the same cohort remain real.</td>
+<td>Treated as a <strong>same-cohort calibration track</strong>, not as a drop-in replacement for perturbation benchmarks.</td>
 </tr>
 <tr>
-<td><strong>manifold / topology / geometry</strong></td>
-<td>Supplementary descriptor. </td>
-<td>Scalar indicators can help detect falling structural differences, but are sensitive to sampling, embedding, and preprocessing. </td>
-<td>It is treated as <strong>auxiliary analysis</strong> and is not used for independent pass/fail. </td>
+<td><strong>Multimodal clinical panel</strong></td>
+<td>Incremental-validity / deployability track</td>
+<td>Panels combining behavior, EEG, MRI, PET, and clinical variables can improve diagnosis or prognosis beyond behavior alone.</td>
+<td>Treated as a <strong>deployability track</strong> that must beat the behavior-only baseline, survive missing-modality slices, and generalize across sites.</td>
+</tr>
+<tr>
+<td><strong>Manifold / topology / geometry</strong></td>
+<td>Auxiliary descriptor</td>
+<td>These analyses can summarize structure missed by scalar metrics, but their output is sensitive to sampling, embedding, and preprocessing choices.</td>
+<td>Treated as <strong>auxiliary analysis</strong> rather than an independent pass/fail indicator.</td>
 </tr>
 </tbody>
 </table>
 
-<h2>Boundaries cut by primary literature</h2>
+<h2>What the primary literature cuts apart</h2>
 <table>
 <thead>
 <tr>
-<th>Issues</th>
-<th>Relatively strongly supported by primary literature</th>
-<th>Things I can't say yet</th>
+<th>Question</th>
+<th>What the current primary literature supports relatively strongly</th>
+<th>What it still does not justify</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Winning or losing theory</strong></td>
-<td>Ferrante et al. (2025) showed that the main predictions of IIT/GNWT/RPT are partially supported, while some of the key predictions are disproved. </td>
-<td>A single theory cannot be promoted to engineering default. </td>
+<td><strong>Theory competition</strong></td>
+<td>Ferrante et al. (2025) showed partial support and partial falsification across IIT, GNWT, and RPT predictions rather than a single winner.</td>
+<td>No theory family can yet be promoted to the default engineering truth condition for WBE.</td>
 </tr>
 <tr>
-<td><strong>report / criterion confound</strong></td>
-<td>Cohen et al. (2024) and Fahrenfort et al. (2025) showed that post-perceptual processing and criterion placement can significantly move neural markers. </td>
-<td>A report-dependent marker cannot be directly equated with a consciousness marker. </td>
+<td><strong>Construct validity</strong></td>
+<td>Cohen et al. (2024), Fahrenfort et al. (2025), and Dellert et al. (2025) show that post-perceptual processing, response criterion, and modality-general no-report design all materially change how a marker should be read.</td>
+<td>No-report or report-independent design alone does not become a bedside consciousness meter.</td>
 </tr>
 <tr>
-<td><strong>PCI / PCI-ST</strong></td>
-<td>Casali et al. (2013) and Comolatti et al. (2019) provided a benchmark for comparing perturbation response complexity across altered states. </td>
-<td>PCI without stimulus conditions/artifact handling cannot be treated like a universal meter. </td>
+<td><strong>Perturbational validity</strong></td>
+<td>Casali et al. (2013) and Comolatti et al. (2019) support PCI-family metrics as serious perturbation benchmarks, while Hernandez-Pavon et al. (2023), Gogulski et al. (2024), and Biabani et al. (2024) show why stimulation conditions, sensory contamination, and target-specific reliability must be exposed.</td>
+<td>A PCI-like value without perturbation logs, sensory controls, artifact windows, and reliability evidence cannot be treated as a universal state meter.</td>
 </tr>
 <tr>
-<td><strong>spontaneous complexity / criticality</strong></td>
-<td>Maschke et al. (2024) showed an association between spontaneous criticality and PCI under anesthesia, and Casarotto et al. (2024) showed a dissociation between spontaneous features and PCI in a minimally conscious state. </td>
-<td>The resting-state proxy cannot be fixed as a PCI replacement index. </td>
+<td><strong>Same-cohort calibration</strong></td>
+<td>Maschke et al. (2024) linked spontaneous criticality with perturbational complexity during anesthesia, Casarotto et al. (2024) showed spontaneous-versus-perturbational dissociation in MCS, and Breyton et al. (2025) extended spatiotemporal complexity outside perturbation paradigms.</td>
+<td>Resting-state or passive metrics still cannot replace perturbation benchmarks without same-cohort calibration against PCI, behavior, and outcomes.</td>
 </tr>
 <tr>
-<td><strong>manifold / topology</strong></td>
-<td>Yoon et al. (2024) provided a mathematical foundation for comparing topologies in cross-populations, and iScience 2024's V1 circular manifold study showed that there are sampling obstacles to retrieving truthful topologies. </td>
-<td>Topology distance cannot be directly added to the consciousness structure guarantee or WBE pass/fail index. </td>
+<td><strong>Incremental validity / deployability</strong></td>
+<td>Rohaut et al. (2024) and Manasova et al. (2026) show that multimodal panels can improve diagnosis / prognosis and multicentre robustness when compared against behavior-only baselines.</td>
+<td>A multimodal panel is not yet portable clinical infrastructure on average accuracy alone; missing-modality robustness and site transfer still matter.</td>
+</tr>
+<tr>
+<td><strong>Geometry / topology</strong></td>
+<td>Yoon et al. (2024) and recent mouse-visual-cortex topology work show that manifold and topology methods can summarize population structure and cross-population relationships.</td>
+<td>Those descriptors do not by themselves guarantee conscious-state validity, deployability, or WBE-relevant sufficiency.</td>
 </tr>
 </tbody>
 </table>
 
-<h2>How to use with Mind-Upload</h2>
+<h2>The 4 gates that change claim strength on this site</h2>
+<table>
+<thead>
+<tr>
+<th>Gate</th>
+<th>Minimum requirement</th>
+<th>Claim that must stop if the gate is missing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Construct validity</strong></td>
+<td>Separate no-report from report, log criterion placement separately, and predefine failure conditions.</td>
+<td>Do not claim that a neural marker directly reads conscious content.</td>
+</tr>
+<tr>
+<td><strong>Perturbational validity</strong></td>
+<td>Expose perturbation site, intensity, sham or control, sensory suppression route, artifact window, analysis window, and target-specific reliability.</td>
+<td>Do not call a PCI / PCI-ST-style value alone a stable state-level benchmark.</td>
+</tr>
+<tr>
+<td><strong>Same-cohort calibration</strong></td>
+<td>Calibrate spontaneous metrics against PCI, behavior, clinical outcomes, and pipeline sensitivity inside the same cohort.</td>
+<td>Do not present resting-state complexity / criticality as a standalone bedside meter.</td>
+</tr>
+<tr>
+<td><strong>Incremental validity</strong></td>
+<td>Show gain beyond the behavior-only baseline, site transfer, robustness under missing-modality conditions, and calibration error.</td>
+<td>Do not present a multimodal panel as deployable or portable on a headline accuracy alone.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Operating rules in Mind-Upload</h2>
 
 <h4>Rule</h4>
 <ul>
-<li><strong>Don't make the theory name pass/fail:</strong>IIT / GNWT / FEP will compete as prediction family. </li>
-<li><strong>PCI specifies perturbation benchmark:</strong>If it does not include stimulus conditions, masking, artifact window, or cohort, it will not be used for strong claims. </li>
-<li><strong>Spontaneous indicators should be calibrated before use:</strong>Criticality, Lempel-Ziv, wSMI, etc. require external calibration with PCI and behavioral assessments. </li>
-<li><strong>geometry is an auxiliary analysis:</strong>TDA and manifold distance are only reported auxiliary if they pass the sampling/preprocessing sensitivity analysis. </li>
-<li><strong>Fix no-report and criterion placement first:</strong>Without this control, there remains a possibility that you are looking at task/report confound rather than theoretical difference. </li>
+<li><strong>Theory names do not pass or fail by themselves:</strong> IIT, GNWT, and FEP stay at the prediction-family level.</li>
+<li><strong>No-report and criterion placement are design controls, not meters:</strong> they raise or lower construct validity, not clinical deployability.</li>
+<li><strong>PCI requires a perturbation log:</strong> if stimulation, sensory control, artifact window, or reliability is hidden, claim strength stops early.</li>
+<li><strong>Spontaneous indicators must be calibrated, not substituted:</strong> alignment with PCI in one context does not erase dissociation in another.</li>
+<li><strong>Multimodal panels must beat behavior on the right slice:</strong> gain, calibration, site transfer, and missing-modality robustness are all part of the evidence.</li>
+<li><strong>Geometry remains auxiliary:</strong> manifold and topology analyses can enrich interpretation, but they do not independently settle consciousness claims.</li>
 </ul>
 
-<strong>Replacement when returning to technical page</strong>
+<strong>How this page connects back to the public pages</strong>
 <p>
-<a href="https://mind-upload.com/tech_roadmap.html">Technology roadmap</a> reads V6 as a problem of theory competition and benchmark hierarchy, while <a href="https://mind-upload.com/verification.html">verification infrastructure</a> looks at perturbation benchmarks, OOD, long-run stability, and abstention in bunches. In other words, this page is a map for arranging ``which type of evidence to use and with what strength'' rather than to decide ``which theory is correct.''
+<a href="https://mind-upload.com/perspective.html">Perspective</a> uses these distinctions to explain why consciousness-related evidence must move through different gates before the wording is allowed to rise. <a href="https://mind-upload.com/verification.html#consciousness-readout-gate">Verification</a> turns the same logic into an explicit checklist. <a href="https://mind-upload.com/tech_roadmap.html">Roadmap</a> then places those gates inside the larger dependency tree of WBE measurement and verification. This page is the role map that stops those layers from collapsing into one vague idea of “better consciousness science.”
 </p>
 
 <h2>References</h2>
 <ol>
 <li>Ferrante O, et al. Adversarial testing of global neuronal workspace and integrated information theories of consciousness. <em>Nature</em>. 2025. <a href="https://doi.org/10.1038/s41586-025-08888-1" target="_blank">doi:10.1038/s41586-025-08888-1</a></li>
 <li>Cohen MA, et al. Neural signatures of visual awareness independent of postperceptual processing. <em>Cerebral Cortex</em>. 2024. <a href="https://doi.org/10.1093/cercor/bhae415" target="_blank">doi:10.1093/cercor/bhae415</a></li>
-<li>Fahrenfort JJ, et al. Criterion placement threatens the construct validity of neural measures of conscious contents. <em>Nature Neuroscience</em>. 2025. <a href="https://doi.org/10.1038/s41593-025-02009-x" target="_blank">doi:10.1038/s41593-025-02009-x</a></li>
+<li>Fahrenfort JJ, et al. Criterion placement threatens the construct validity of neural measures of consciousness. <em>eLife</em>. 2025. <a href="https://doi.org/10.7554/eLife.102335" target="_blank">doi:10.7554/eLife.102335</a></li>
+<li>Dellert T, et al. Neural correlates of consciousness in an auditory no-report fMRI study. <em>Current Biology</em>. 2025. <a href="https://doi.org/10.1016/j.cub.2025.10.026" target="_blank">doi:10.1016/j.cub.2025.10.026</a></li>
 <li>Casali AG, et al. A theoretically based index of consciousness independent of sensory processing and behavior. <em>Science Translational Medicine</em>. 2013. <a href="https://doi.org/10.1126/scitranslmed.3006294" target="_blank">doi:10.1126/scitranslmed.3006294</a></li>
 <li>Comolatti R, et al. A fast and general method to empirically estimate the complexity of brain responses to transcranial and intracranial stimulations. <em>Brain Stimulation</em>. 2019. <a href="https://doi.org/10.1016/j.brs.2019.05.013" target="_blank">doi:10.1016/j.brs.2019.05.013</a></li>
+<li>Hernandez-Pavon JC, et al. TMS combined with EEG: Recommendations and open issues for data collection and analysis. <em>Brain Stimulation</em>. 2023. <a href="https://doi.org/10.1016/j.brs.2023.02.009" target="_blank">doi:10.1016/j.brs.2023.02.009</a></li>
+<li>Gogulski J, et al. Reliability of the TMS-evoked potential in dorsolateral prefrontal cortex. <em>Cerebral Cortex</em>. 2024. <a href="https://doi.org/10.1093/cercor/bhae130" target="_blank">doi:10.1093/cercor/bhae130</a></li>
+<li>Biabani M, et al. Characterising the contribution of auditory and somatosensory inputs to TMS-evoked potentials following stimulation of prefrontal, premotor, and parietal cortex. <em>Imaging Neuroscience</em>. 2024. <a href="https://doi.org/10.1162/imag_a_00349" target="_blank">doi:10.1162/imag_a_00349</a></li>
 <li>Maschke C, et al. Critical dynamics in spontaneous EEG predict anesthetic-induced loss of consciousness and perturbational complexity. <em>Communications Biology</em>. 2024. <a href="https://doi.org/10.1038/s42003-024-06613-8" target="_blank">doi:10.1038/s42003-024-06613-8</a></li>
-<li>Casarotto S, et al. Dissociations between spontaneous electroencephalographic features and perturbational complexity index in the minimally conscious state. <em>Brain</em>. 2024. <a href="https://doi.org/10.1093/brain/awae227" target="_blank">doi:10.1093/brain/awae227</a></li>
+<li>Casarotto S, et al. Dissociations between spontaneous electroencephalographic features and the perturbational complexity index in the minimally conscious state. <em>European Journal of Neuroscience</em>. 2024. <a href="https://doi.org/10.1111/ejn.16299" target="_blank">doi:10.1111/ejn.16299</a></li>
+<li>Breyton M, et al. Spatiotemporal brain complexity quantifies consciousness outside of perturbation paradigms. <em>eLife</em>. 2025. <a href="https://doi.org/10.7554/eLife.98920" target="_blank">doi:10.7554/eLife.98920</a></li>
+<li>Rohaut B, et al. Multimodal assessment improves neuroprognosis performance in clinically unresponsive critical-care patients with brain injury. <em>Nature Medicine</em>. 2024. <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">doi:10.1038/s41591-024-03019-1</a></li>
+<li>Manasova D, et al. Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness. <em>Brain</em>. 2026. <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">doi:10.1093/brain/awaf412</a></li>
 <li>Yoon B, Miolane N, Osting B, Linderman SW. Tracking the topology of neural manifolds across populations. <em>PNAS</em>. 2024. <a href="https://doi.org/10.1073/pnas.2402628121" target="_blank">doi:10.1073/pnas.2402628121</a></li>
 <li>The topological structure of population activity in mouse visual cortex encodes visual stimuli. <em>iScience</em>. 2024. <a href="https://doi.org/10.1016/j.isci.2024.111613" target="_blank">doi:10.1016/j.isci.2024.111613</a></li>
 </ol>

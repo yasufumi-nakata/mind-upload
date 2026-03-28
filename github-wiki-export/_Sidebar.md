@@ -1,6 +1,6 @@
 # Sidebar
 
-## 入口と読み方
+## Start and Navigation
 - [Wiki: Learning Portal From The Basics](https://github.com/yasufumi-nakata/mind-upload/wiki)
 - [Wiki: Public Page Reading Guide](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide)
 - [Wiki: How to Read the Opening Blocks of Public Pages](https://github.com/yasufumi-nakata/mind-upload/wiki/page-header-reading-guide)
@@ -8,7 +8,7 @@
 - [Wiki: First 30 Minutes by Goal](https://github.com/yasufumi-nakata/mind-upload/wiki/first-30-minutes-by-goal)
 - [Wiki: How to read each L0 to L5](https://github.com/yasufumi-nakata/mind-upload/wiki/claim-level-reading-routes)
 
-## 基礎
+## Foundations
 - [Wiki: Mind Upload / WBE Basics](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics)
 - [Wiki: How to read claims and evidence](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence)
 - [Wiki: Basics of EEG](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-basics)
@@ -16,7 +16,7 @@
 - [Wiki: How to read “What we know / What we don’t know”](https://github.com/yasufumi-nakata/mind-upload/wiki/known-unknown-and-status-reading)
 - [Wiki: Differences between facts, hypotheses, proposals, and execution tasks](https://github.com/yasufumi-nakata/mind-upload/wiki/facts-hypotheses-proposals-and-tasks)
 
-## 理論・検証
+## Theory and Verification
 - [Wiki: How to read the roadmap](https://github.com/yasufumi-nakata/mind-upload/wiki/roadmap-reading-guide)
 - [Wiki: Guide to reading theoretical pages](https://github.com/yasufumi-nakata/mind-upload/wiki/theory-pages-reading-guide)
 - [Wiki: Guide to reading practical pages](https://github.com/yasufumi-nakata/mind-upload/wiki/practical-pages-reading-guide)
@@ -24,7 +24,7 @@
 - [Wiki: Verification of counterfactuals, interventions, and perturbations](https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification)
 - [Wiki: Identity assessment and continuity test](https://github.com/yasufumi-nakata/mind-upload/wiki/identity-and-continuity-tests)
 
-## 文献・参加
+## Literature and Participation
 - [Wiki: How to read the literature and evidence page](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading)
 - [Wiki: How to read source types, status labels, and evidence classes](https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status)
 - [Wiki: How to read suggestions and status labels](https://github.com/yasufumi-nakata/mind-upload/wiki/proposal-status-reading)
@@ -32,7 +32,7 @@
 - [Wiki: Basics of deciding where to put new information](https://github.com/yasufumi-nakata/mind-upload/wiki/content-placement-basics)
 - [Wiki: Flow of connecting what you read to change](https://github.com/yasufumi-nakata/mind-upload/wiki/reading-to-change-workflow)
 
-## その他
+## Other
 - [Mind-upload RQ60 Application Playbook (RQ unit fixed)](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook)
 - [Mind-upload RQ60 Deep Evaluation Cards (EEG-DATA × auto-research-funds)](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards)
 - [Mind-upload RQ60 Deep focus notes (EEG-DATA × Grant)](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes)
@@ -73,7 +73,7 @@
 - [Wiki: Verification example walkthrough](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-example-walkthrough)
 - [Wiki: Why wiring diagrams alone are not enough](https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough)
 
-## 公開サイト
-- [スタートページ](https://mind-upload.com/index.html)
-- [検証基盤](https://mind-upload.com/verification.html)
-- [公開コンテンツ統合ハブ](https://mind-upload.com/content_hub.html)
+## Public Site
+- [Start Page](https://mind-upload.com/index.html)
+- [Verification Commons](https://mind-upload.com/verification.html)
+- [Public Content Integration Hub](https://mind-upload.com/content_hub.html)

@@ -30,6 +30,21 @@ reading_time: "35-55分"
 - `B`: 25
 - `C`: 18
 
+## 2026-03-29 05:55 JST 再検証ログ（本run / EEG-DATA実在 bucket と現行助成面の再固定）
+
+- 本runでは、既存の `6RQ` 深掘りパックを維持したまま、各RQを `EEG-DATA` の実在 bucket と `auto-research-funds` の現行 card 実体へ再固定いたしました。
+- 助成レーンの読み方も更新し、`G1/G2` は routing key、`G3-G6` は現行 card entity として区別いたしました。
+- 現行 card の正本一覧は `auto-research-funds/wiki/Mind-Upload-Current-Funding-Shortlist.md` へ集約いたしました。
+
+| RQ | 主bucket / 主アンカー | 実データ条件 | 助成レーン / 実card | 今回の非主張境界 |
+|---|---|---|---|---|
+| U0-2 | biometric authentication / `D02` | repeated sessions, same-subject labels, task variation, timestamp/QC, device metadata | `G2/G3` / `G3=9Lx4dPK6a4k2gOb7` | 同期妥当性つき識別KPIまで。人格同一性の十分条件は非主張。 |
+| U1-4 | source localization / `D08` | high-density EEG, intervention ground-truth, head-model or iEEG disclosure, rerunnable pipeline | `G1/G4` / `G4=Drbm6vBRDJkn0NGJ` | inverse benchmark の勝者を普遍的 recoverability としては非主張。 |
+| U7-6 | multimodal robustness / `D11` | same-trial synchronization, BIDS-sidecar provenance, missing-modality policy, subject-session count | `G1/G3` / `G3=9Lx4dPK6a4k2gOb7` | narrow bundle 成功を共通状態変数の確立とは非主張。 |
+| U8-6 | closed-loop longitudinal adaptation / `D12` | online labels, latency-jitter log, fixed-vs-recalibrated decoder disclosure, failure registry | `G2/G5` / `G5=871pw3rLjNPKgqA0` | same-session 成功を chronic deployability としては非主張。 |
+| U11-3 | consciousness proxy conflict / `D17` | same-cohort calibration, continuous recordings, hypnogram or sedation-stage labels, pharmacology or perturbation log | `G2/G4` / `G4=Drbm6vBRDJkn0NGJ` | proxy 指標差を理論勝敗や意識本体の決着とは非主張。 |
+| U13-2 | speech decoding / `D10` | stimulus/audio/transcript alignment, overt-vs-covert control, leak-free split, BIDS or equivalent provenance | `G1/G4` / `G4=Drbm6vBRDJkn0NGJ` | decode 成功を mimic separation 完了とは非主張。 |
+
 ## 2026-03-29 02:04 JST 再検証ログ（本run / 現行site audit反映の6RQディープバッチ）
 
 - 作業開始前に `auto-startup` / `mind-upload` / `EEG-DATA` / `auto-research-funds` の各 `main` で `git pull --ff-only origin main` を実行し、いずれも `Already up to date` を確認いたしました。

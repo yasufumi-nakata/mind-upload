@@ -2,32 +2,32 @@
 
 > Before deciding what to write, the basics of deciding where to put it
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-14 / 位置づけ: Content placement basics
+- Updated: 2026-03-14 / Role: Content placement basics
 
-## このページの役割
+## Role Of This Page
 This page is a supplementary material that helps you organize from the beginning where to put new information when adding it to Mind-Upload. Public pages are information portals, wikis are detailed explanations for learning, Issues are changes to be made, Collaborations are for organizing external dependencies, and operations areas are intermediate results. You can check the role differences with examples.
 
-## 正確さの前提
+## Accuracy Notes
 What is shown here is the basics of placement. Please be sure to return to the main text and basis of the original page to judge the correctness or rejection of individual claims.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Public Content Integration Hub](https://mind-upload.com/content_hub.html)
 - [Contribution Guide](https://mind-upload.com/issue.html)
 - [Collaboration candidate](https://mind-upload.com/issue.html#external-collaboration)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Guide to reading public pages](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - This is for people who want to see the role differences between public pages first.
 - [Wiki: 5 paths to follow after participation/collaboration page](https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes) - This is for people who want to move on to the next task after determining the location.
 - [Wiki: How to write your first issue](https://github.com/yasufumi-nakata/mind-upload/wiki/issue-writing-basics) - Additional information on how to write when the location becomes an issue.
 
-## いま分かっていること
+## What Is Currently Known
 - Determining the location first reduces duplication of information and dissipation of leads.
 - Separating the public page and the wiki makes it easier to both make the entrance more visible and provide more detailed explanations.
 - Externally dependent tasks should be managed separately from changes made here and now.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - Which issues will become independent pages in the future will change depending on the amount of content and reader demand.
 - Some topics span multiple pages, so the final destination will continue to be adjusted.
 

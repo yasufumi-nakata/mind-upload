@@ -2,31 +2,31 @@
 
 > Proxy-rich is not the same as same-subject state closure
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-27 / 位置づけ: Technical / natural science only
+- Updated: 2026-03-29 / Role: Technical / natural science only
 
-## このページの役割
+## Role Of This Page
 This page explains how to read current human proxy routes without collapsing them into one generic progress bar. The question is not only whether a route is impressive, but what exact quantity, target, or transport regime it constrains, on what unit and timescale, in which cohort / physiological regime, with what model burden, with what repeatability / transfer window, and what hidden-state families still remain unresolved.
 
-## 正確さの前提
+## Accuracy Notes
 The ceilings on this page are operational inferences drawn from primary literature. They are not the claims made by the original papers themselves.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [WBE 101](https://mind-upload.com/wbe_101.html)
 - [Verification](https://mind-upload.com/verification.html)
 - [FAQ](https://mind-upload.com/faq.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Observability and claim ceiling by measurement stack](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling) - Places this page inside the broader modality-by-modality ceiling table.
 - [Wiki: Multimodal integration basics](https://github.com/yasufumi-nakata/mind-upload/wiki/multimodal-integration-basics) - Explains why simultaneous acquisition still needs a fusion audit.
 - [Wiki: State-Continuity Bridge](https://github.com/yasufumi-nakata/mind-upload/wiki/state-continuity-bridge) - Explains why same-subject or same-brain sequential workflows still need a bridge audit before same-state language is allowed.
 - [Wiki: Homeostatic plasticity and maintenance state](https://github.com/yasufumi-nakata/mind-upload/wiki/homeostatic-plasticity-and-maintenance-state) - Organizes the hidden-state families that current human routes still leave unresolved.
 - [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - Explains why observability and identifiability are separate questions.
 
-## いま分かっていること
+## What Is Currently Known
 - Recent human-side advances reduce different uncertainty terms and are scientifically meaningful, but they are not one common measurement class.
-- SV2A PET, 1H-MRSI similarity, 31P-MRS energetic balance, deuterium metabolite / rate imaging, quantity-defined myelin MRI, BBB water-exchange MRI, tracer-specific BBB PET, target-defined astrocyte PET, and CSF / glymphatic routes all require route-specific interpretation.
+- SV2A PET, 1H-MRSI similarity, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, 31P functional NAD-dynamics routes, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, quantity-defined myelin MRI, BBB water-exchange MRI, tracer-specific BBB PET, target-defined astrocyte PET, and CSF / glymphatic routes all require route-specific interpretation.
 - Proxy class and operational maturity still do not tell you what the route safely calibrates, so calibrator role has to be stated separately.
 - A local rodent causal result plus a living-human proxy result still does not measure the same controller unless the bridge assumption is named explicitly.
 - Even when quantity type and model burden are logged, cross-row composition still requires age band, health/pathology regime, and transfer rationale.
@@ -35,7 +35,7 @@ The ceilings on this page are operational inferences drawn from primary literatu
 - Global or shared multimodal factors can still include autonomic or vascular physiology, not only the target neural variable.
 - A same-subject bridge can still fail to preserve state continuity when acquisition order, elapsed time, or deformation correction are left implicit.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - There is still no settled recipe for fusing current human proxy rows into same-subject, externally calibrated state identification.
 - It remains unresolved which latent-state families must be measured directly, which can be externally calibrated, and which can remain explicit abstentions for stronger WBE claims.
 - Current human routes do not yet provide comparable whole-brain in vivo readouts for transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling nanodomains, branch-local proteostasis, current chloride set point, or branch-local mitochondrial positioning.
@@ -49,7 +49,7 @@ Recent human proxy advances are real, but they do not yet compose automatically 
 
 <strong>What this page fixes</strong>
 <p>
-The public pages had already become stricter about human proxy families, but this composition page was still lagging behind the site's newer taxonomy. It still let readers compress <strong>31P energetic balance</strong> into <strong>deuterium rate imaging</strong>, <strong>myelin-water / MT-family / bilayer / qT1 remyelination-sensitive</strong> routes into one myelin meter, <strong>BBB water-exchange MRI</strong> into <strong>tracer-specific BBB PET transport</strong>, and <strong>MAO-B</strong> into <strong>I2BS</strong> astrocyte PET. The current primary literature does not support those shortcuts. This page now fixes the composition rule at the same granularity as the rest of the site.
+The public pages had already become stricter about human proxy families, but this composition page was still lagging behind the site's newer taxonomy. It still let readers compress <strong>31P metabolite / pH balance</strong>, <strong>31P MT exchange-flux</strong>, <strong>31P NAD-content mapping</strong>, and <strong>31P functional NAD-dynamics</strong> into one row, <strong>deuterium metabolite-mapping / absolute quantification</strong> into <strong>deuterium kinetic-rate imaging</strong> and then back into the same energetic row, <strong>myelin-water / MT-family / bilayer / qT1 remyelination-sensitive</strong> routes into one myelin meter, <strong>BBB water-exchange MRI</strong> into <strong>tracer-specific BBB PET transport</strong>, and <strong>MAO-B</strong> into <strong>I2BS</strong> astrocyte PET. The current primary literature does not support those shortcuts. This page now fixes the composition rule at the same granularity as the rest of the site.
 </p>
 
 <strong>Another shortcut this page now blocks</strong>
@@ -70,6 +70,11 @@ The remaining weakness after the recent composition updates was operational. A b
 <strong>Nominally similar quantities can still be method-non-equivalent</strong>
 <p>
 Another shortcut still had to be blocked. A shared quantity label does not guarantee that two routes are already interchangeable. <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a> measured BBB water exchange in the <strong>same cohort</strong> with <strong>DP-ASL</strong> and <strong>ME-ASL</strong> and obtained significantly different Kw values with even a <strong>negative cross-participant correlation</strong>. <a href="https://doi.org/10.1186/s41747-024-00426-4" target="_blank">Bøgh et al. (2024)</a> showed that a clinical 3 T DMI protocol can be repeatable at its own operating point, but that same result does not erase the protocol dependence of field strength, coil, timing, spatial resolution, or processing. Therefore, on this site, a Human Proxy Composition Card must disclose <strong>method-family non-equivalence</strong> whenever nominally similar rows depend on different acquisition, fitting, input-function, or reconstruction routes. Otherwise, the bundle can still collapse because <strong>"same named quantity"</strong> is being mistaken for <strong>"same validated row."</strong>
+</p>
+
+<strong>Availability geometry is part of the evidence</strong>
+<p>
+One more shortcut still had to be blocked. A paper can look richly multimodal while different rows were actually measured in very different subsets. <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a> already showed that a direct EEG+fMRI comparison in acute DoC shrank to <strong>48 complete-feature patients</strong> out of <strong>87</strong> enrolled. <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> then made the geometry even clearer in a larger multicentre study: in the main French dataset, <strong>EEG-LG</strong> was available in <strong>290</strong> patients, <strong>dMRI</strong> in <strong>151</strong>, <strong>aMRI</strong> in <strong>101</strong>, <strong>FDG-PET</strong> in <strong>53</strong>, and <strong>fMRI-RS</strong> in only <strong>44</strong>, while pairwise disagreement rose in <strong>MCS</strong> and <strong>improved</strong> patients. Therefore, on this site, a bundle must disclose not only the complete-case count but also the <strong>row-overlap geometry</strong> and whether missingness itself tracks site, severity, tolerance, or protocol. Otherwise, the apparent bundle gain can still be driven by a changing patient subset rather than by cleaner same-subject state constraint.
 </p>
 
 <h2>Three promotion gates before row diversity counts</h2>
@@ -149,14 +154,21 @@ One remaining shortcut is to treat any reproducibility statement as if it solved
 <td><strong>Macro energetic-balance proxy</strong>, not branch-local mitochondrial positioning or synapse-specific ATP reserve.</td>
 </tr>
 <tr>
-<td><strong>Dynamic deuterium metabolite / rate imaging</strong><br><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>; <a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a></td>
-<td>Deuterated metabolite distributions and, under explicit kinetic models, glucose-transport and metabolic-rate maps.</td>
-<td>0.7 cc nominal voxels and 2.5 min/image whole-brain 7 T acquisition in five healthy participants, plus absolute 7 T maps in 12 healthy volunteers and 5 glioblastoma patients.</td>
-<td>7 T hardware, dedicated deuterium / proton coils, oral tracer timing, blood-input or absolute-quantification pipeline, and kinetic model choice.</td>
-<td><strong>Specialized macro deuterium metabolite / rate route</strong>, not branch-local mitochondrial or ATP nano-organization ground truth.</td>
+<td><strong>Deuterium metabolite-mapping / absolute-quantification route</strong><br><a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a></td>
+<td>Deuterated HDO / Glc / Glx / Lac metabolite distributions under an explicit absolute-quantification pipeline.</td>
+<td>12 healthy volunteers and 5 glioblastoma patients in a specialized 7 T workflow.</td>
+<td>7 T hardware, dedicated deuterium / proton coils, oral tracer timing, B<sub>1</sub>-calibrated absolute quantification, and spectral fitting.</td>
+<td><strong>Specialized macro deuterium metabolite-mapping / absolute-quantification route</strong>, not kinetic-rate imaging, branch-local mitochondrial positioning, or ATP nano-organization ground truth.</td>
 </tr>
 <tr>
-<td><strong>Quantity-defined myelin MRI family</strong><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5342928/" target="_blank">Arshad et al. (2017)</a>; <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">Koshino et al. (2018)</a>; <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>; <a href="https://doi.org/10.1111/bpa.70010" target="_blank">Galbusera et al. (2025)</a></td>
+<td><strong>Deuterium kinetic-rate imaging</strong><br><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a></td>
+<td>Glucose-transport and metabolic-rate maps under an explicit kinetic model.</td>
+<td>0.7 cc nominal voxels and 2.5 min/image whole-brain 7 T acquisition in five healthy participants.</td>
+<td>7 T hardware, dedicated deuterium / proton coils, oral tracer timing, blood-input function, and kinetic model choice.</td>
+<td><strong>Specialized model-conditioned deuterium kinetic-rate route</strong>, not branch-local mitochondrial or ATP nano-organization ground truth.</td>
+</tr>
+<tr>
+<td><strong>Quantity-defined myelin MRI family</strong><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5342928/" target="_blank">Arshad et al. (2017)</a>; <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">Hagiwara et al. (2018)</a>; <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>; <a href="https://doi.org/10.1111/bpa.70010" target="_blank">Galbusera et al. (2025)</a></td>
 <td>Depending on route, myelin-water fraction, MT-family macromolecular contrast, bilayer-sensitive mapping, or qT1 remyelination-sensitive contrast.</td>
 <td>Cross-metric healthy-adult comparisons, 1.4 mm bilayer maps in two healthy volunteers, and postmortem MS-cortex remyelination imaging in six whole brains.</td>
 <td>Signal-component separation, calibration route, hardware burden, pathology regime, and route-specific validity ceiling.</td>
@@ -177,7 +189,7 @@ One remaining shortcut is to treat any reproducibility statement as if it solved
 <td><strong>Tracer-specific BBB transport proxy</strong>, not a generic BBB leakiness scalar and not direct molecular-controller readout.</td>
 </tr>
 <tr>
-<td><strong>Target-defined astrocyte PET routes</strong><br><a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a>; <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. (2018)</a>; <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">Livingston et al. (2022)</a>; <a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">Jaisa-Aad et al. (2024)</a></td>
+<td><strong>Target-defined astrocyte PET routes</strong><br><a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a>; <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a>; <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. (2018)</a>; <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">Livingston et al. (2022)</a>; <a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">Jaisa-Aad et al. (2024)</a></td>
 <td>Tracer binding for explicitly named astrocyte-related targets such as MAO-B or I<sub>2</sub>BS, with disease-regime dependence.</td>
 <td>77 volunteers across the AD continuum for <sup>18</sup>F-SMBT-1, 14 healthy male volunteers for first-in-human <sup>11</sup>C-BU99008 pharmacology, and 20-subject multimodal cognitive-impairment imaging.</td>
 <td>Tracer target, blockade / competition evidence, quantification route, disease regime, and cross-target non-equivalence.</td>
@@ -270,12 +282,12 @@ The safe reading of SV2A PET is narrower than “synapses were measured, therefo
 
 <strong>Spectroscopy is not one route</strong>
 <p>
-The phrase <strong>human spectroscopy</strong> is especially easy to overread. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> define a within-subject parcel-similarity graph from five metabolites and show that it aligns only <strong>weakly</strong> with tractography-based structural connectivity. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> constrain <strong>ATP synthesis, phosphorus metabolites, and pH balance</strong> in resting human brain. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> and <a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a> constrain <strong>deuterated metabolite distributions and kinetic-rate maps</strong> at 7 T. On this site, similarity, energetic balance, and deuterium rate imaging therefore remain separate rows and do not inherit one another's claim ceiling.
+The phrase <strong>human spectroscopy</strong> is especially easy to overread. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> define a within-subject parcel-similarity graph from five metabolites and show that it aligns only <strong>weakly</strong> with tractography-based structural connectivity. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> constrain <strong>ATP synthesis, phosphorus metabolites, and pH balance</strong> in resting human brain. <a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a> constrain <strong>deuterated metabolite distributions</strong> under an absolute-quantification pipeline, while <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> constrain <strong>glucose-transport and kinetic-rate maps</strong> at 7 T under a blood-input model. On this site, similarity, energetic balance, deuterium metabolite mapping, and deuterium kinetic-rate imaging therefore remain separate rows and do not inherit one another's claim ceiling.
 </p>
 
 <strong>Myelin, BBB, and astrocyte are still family names, not single meters</strong>
 <p>
-Within-family compression still breaks composition. <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">Koshino et al. (2018)</a> showed that SyMRI and MT<sub>sat</sub> correlate strongly in white matter whereas T1w/T2w is weaker, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> added a bilayer-sensitive route in two healthy volunteers, and <a href="https://doi.org/10.1111/bpa.70010" target="_blank">Galbusera et al. (2025)</a> showed that qT1, but not MWF or MTR, was sensitive to cortical remyelination in postmortem multiple-sclerosis cortex. <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a> and <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> constrain BBB <strong>water exchange</strong>, whereas <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> constrains <strong>tracer-specific transport-model permeability</strong>. <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> constrain a <strong>MAO-B</strong> route, whereas <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. (2018)</a> constrain an <strong>I<sub>2</sub>BS</strong> route with dose-dependent idazoxan blockade and no isocarboxazid block. On this site, those rows therefore stay <strong>quantity-defined</strong>, <strong>transport-defined</strong>, or <strong>target-defined</strong>; they are not interchangeable family labels.
+Within-family compression still breaks composition. <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">Hagiwara et al. (2018)</a> showed that SyMRI and MT<sub>sat</sub> correlate strongly in white matter whereas T1w/T2w is weaker, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> added a bilayer-sensitive route in two healthy volunteers, and <a href="https://doi.org/10.1111/bpa.70010" target="_blank">Galbusera et al. (2025)</a> showed that qT1, but not MWF or MTR, was sensitive to cortical remyelination in postmortem multiple-sclerosis cortex. <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a> and <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> constrain BBB <strong>water exchange</strong>, whereas <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> constrains <strong>tracer-specific transport-model permeability</strong>. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a> first constrained a <strong>MAO-B</strong> route with pharmacological blockade, and <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> plus <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. (2018)</a> showed that MAO-B and <strong>I<sub>2</sub>BS</strong> remain different target classes. On this site, those rows therefore stay <strong>quantity-defined</strong>, <strong>transport-defined</strong>, or <strong>target-defined</strong>; they are not interchangeable family labels.
 </p>
 
 <strong>CSF mobility is not net clearance flux</strong>
@@ -321,21 +333,49 @@ Those three axes are defined <strong>per route</strong>. When several routes are
 <td>Kinetic metabolic rate, energetic reserve, axonal wiring, and local maintenance-controller identity.</td>
 </tr>
 <tr>
-<td><strong>Human <sup>31</sup>P-MRS energetic-balance route</strong><br><a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a></td>
-<td><strong>Macro energetic-balance proxy</strong></td>
-<td>Established resting-brain spectroscopy route, but still a coarse energetic-balance readout rather than dynamic local kinetics.</td>
+<td><strong>Human <sup>31</sup>P-MRS metabolite-balance / pH route</strong><br><a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a></td>
+<td><strong>Macro 31P metabolite-balance / pH proxy</strong></td>
+<td>Established resting-brain spectroscopy route, but still a coarse balance readout rather than dynamic local kinetics.</td>
 <td>Constrains ATP synthesis, phosphorus metabolite balance, and pH under a specific spectral / exchange-model route.</td>
-<td>Glucose transport rates, branch-local mitochondrial positioning, ATP nano-organization, and cell-specific energetic reserve.</td>
+<td>Exchange-flux, NAD dynamics, glucose transport rates, branch-local mitochondrial positioning, ATP nano-organization, and cell-specific energetic reserve.</td>
 </tr>
 <tr>
-<td><strong>Dynamic deuterium metabolite / rate imaging</strong><br><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>; <a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a></td>
-<td><strong>Specialized macro deuterium metabolite / rate route</strong></td>
-<td>High-burden 7 T route with dedicated hardware, specialized quantification, and limited healthy / patient cohorts.</td>
-<td>Constrains deuterated metabolite distributions and macro glucose-transport / metabolic-rate maps under explicit models.</td>
+<td><strong>Human <sup>31</sup>P MT exchange-flux route</strong><br><a href="https://doi.org/10.1002/mrm.26560" target="_blank">Ren et al. (2017)</a></td>
+<td><strong>Model-conditioned macro 31P exchange-flux proxy</strong></td>
+<td>Specialized 7 T route with band-inversion / magnetization-transfer modeling rather than a routine resting-balance readout.</td>
+<td>Constrains PCr&rarr;&gamma;-ATP creatine-kinase exchange, Pi&rarr;&gamma;-ATP synthesis, and ATP intramolecular exchange under a 5-pool model.</td>
+<td>Cell-specific energetic reserve, branch-local mitochondrial positioning, task-evoked redox dynamics, and any claim that treats one flux estimate as a generic energetic scalar.</td>
+</tr>
+<tr>
+<td><strong>Human <sup>31</sup>P NAD-content mapping route</strong><br><a href="https://doi.org/10.3389/fnins.2024.1389111" target="_blank">Guo et al. (2024)</a></td>
+<td><strong>Macro 31P NAD-content map proxy</strong></td>
+<td>Specialized 7 T whole-brain route with low-concentration fitting, subspace denoising, and long acquisition burden.</td>
+<td>Constrains whole-brain intracellular NAD content under explicit spectral fitting.</td>
+<td>Task-evoked local NAD dynamics, whole-brain moment-to-moment redox control, branch-local mitochondrial residence, and task-general controller identity.</td>
+</tr>
+<tr>
+<td><strong>Human <sup>31</sup>P functional NAD-dynamics route</strong><br><a href="https://doi.org/10.1177/0271678X261415784" target="_blank">Kaiser et al. (2026)</a></td>
+<td><strong>Localized functional 31P NAD-dynamics proxy</strong></td>
+<td>Specialized 7 T task fMRS route with prior fMRI localization and one occipital voxel rather than a whole-brain map.</td>
+<td>Constrains bounded task-evoked NAD<sup>+</sup> dynamics under explicit spectral fitting and named task blocks.</td>
+<td>Whole-brain NAD-content mapping, task-general energetic-controller identity, branch-local mitochondrial residence, and whole-brain moment-to-moment redox control.</td>
+</tr>
+<tr>
+<td><strong>Deuterium metabolite-mapping / absolute-quantification route</strong><br><a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a></td>
+<td><strong>Specialized macro deuterium metabolite-mapping / absolute-quantification route</strong></td>
+<td>High-burden 7 T route with dedicated hardware, calibrated quantification, and limited healthy / patient cohorts.</td>
+<td>Constrains deuterated metabolite distributions under explicit absolute quantification.</td>
+<td>Glucose-transport terms unless explicitly modeled, branch-local mitochondrial positioning, ATP nano-organization, and synapse-specific energetic reserve.</td>
+</tr>
+<tr>
+<td><strong>Deuterium kinetic-rate imaging</strong><br><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a></td>
+<td><strong>Specialized model-conditioned deuterium kinetic-rate route</strong></td>
+<td>High-burden 7 T route with dedicated hardware, blood-input acquisition, and very small healthy cohorts.</td>
+<td>Constrains macro glucose-transport / metabolic-rate maps under explicit kinetic models.</td>
 <td>Branch-local mitochondrial positioning, ATP nano-organization, and synapse-specific energetic reserve.</td>
 </tr>
 <tr>
-<td><strong>Quantity-defined myelin MRI family</strong><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5342928/" target="_blank">Arshad et al. (2017)</a>; <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">Koshino et al. (2018)</a>; <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>; <a href="https://doi.org/10.1111/bpa.70010" target="_blank">Galbusera et al. (2025)</a></td>
+<td><strong>Quantity-defined myelin MRI family</strong><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5342928/" target="_blank">Arshad et al. (2017)</a>; <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">Hagiwara et al. (2018)</a>; <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>; <a href="https://doi.org/10.1111/bpa.70010" target="_blank">Galbusera et al. (2025)</a></td>
 <td><strong>Bounded, quantity-defined macro myelin family</strong></td>
 <td>Mixed family: some routes are routine-ish comparisons, others are high-burden proof-of-principle or postmortem pathology-sensitive readouts.</td>
 <td>Constrains only the named quantity type such as myelin-water, MT-family contrast, bilayer-sensitive mapping, or qT1 remyelination-sensitive contrast.</td>
@@ -549,7 +589,7 @@ If the claim depends on treating a sequential bridge as one latent-state sample,
 
 <strong>Operational rule on this site</strong>
 <p>
-If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich but ceiling-limited human evidence</strong>. It is not promoted to <strong>same-subject cross-stack state identification</strong>, <strong>unique internal-state recovery</strong>, or <strong>state-complete readout</strong>. In particular, row diversity without explicit <strong>proxy class</strong>, <strong>operational maturity</strong>, <strong>calibrator role</strong>, <strong>causal-bridge statement when mixed-species causal evidence is used</strong>, <strong>row-level repeatability</strong>, <strong>method-family non-equivalence</strong>, <strong>cross-centre transfer</strong>, <strong>partial-availability disclosure</strong>, <strong>common-driver audit</strong>, and a clear <strong>increment over the strongest single row</strong> is not treated as real state closure. The public-facing implementation of that rule is the <a href="https://mind-upload.com/verification.html#human-proxy-composition-card">Verification: Human Proxy Composition Card</a>.
+If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich but ceiling-limited human evidence</strong>. It is not promoted to <strong>same-subject cross-stack state identification</strong>, <strong>unique internal-state recovery</strong>, or <strong>state-complete readout</strong>. In particular, row diversity without explicit <strong>proxy class</strong>, <strong>operational maturity</strong>, <strong>calibrator role</strong>, <strong>causal-bridge statement when mixed-species causal evidence is used</strong>, <strong>row-level repeatability</strong>, <strong>cross-centre transfer</strong>, <strong>partial-availability disclosure</strong>, <strong>common-driver audit</strong>, and a clear <strong>increment over the strongest single row</strong> is not treated as real state closure. The public-facing implementation of that rule is the <a href="https://mind-upload.com/verification.html#human-proxy-composition-card">Verification: Human Proxy Composition Card</a>.
 </p>
 
 <h2>References (main)</h2>
@@ -564,15 +604,19 @@ If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich b
 <li>Shatalina, E., Onwordi, E. C., Whitehurst, T., et al. (2024). The relationship between SV2A levels, neural activity, and cognitive function in healthy humans: A [<sup>11</sup>C]UCB-J PET and fMRI study. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">doi:10.1162/imag_a_00190</a></li>
 <li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
 <li>Ren, J., Sherry, A. D., &amp; Malloy, C. R. (2015). <sup>31</sup>P-MRS of healthy human brain: ATP synthesis, metabolite concentrations, pH, and T1 relaxation times. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">doi:10.1002/nbm.3384</a></li>
+<li>Ren, J., Sherry, A. D., &amp; Malloy, C. R. (2017). Efficient <sup>31</sup>P band inversion transfer approach for measuring creatine kinase activity, ATP synthesis, and molecular dynamics in the human brain at 7 T. <a href="https://doi.org/10.1002/mrm.26560" target="_blank">doi:10.1002/mrm.26560</a></li>
+<li>Guo, R., Yang, S., Wiesner, H. M., et al. (2024). Mapping intracellular NAD content in entire human brain using phosphorus-31 MR spectroscopic imaging at 7 Tesla. <a href="https://doi.org/10.3389/fnins.2024.1389111" target="_blank">doi:10.3389/fnins.2024.1389111</a></li>
+<li>Kaiser, A., Vind, F. A., Duarte, J. M. N., et al. (2026). Ultra-high field <sup>31</sup>P functional magnetic resonance spectroscopy reveals NAD<sup>+</sup> dynamics in brain energy metabolism during visual stimulation. <a href="https://doi.org/10.1177/0271678X261415784" target="_blank">doi:10.1177/0271678X261415784</a></li>
 <li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
 <li>Karkouri, J., Novoselova, M., Rodgers, C. T., et al. (2026). Absolute Quantification of Brain Deuterium Metabolic Imaging in Healthy Volunteers and Glioblastoma Patients at 7T. <a href="https://doi.org/10.1002/mrm.70308" target="_blank">doi:10.1002/mrm.70308</a></li>
 <li>Arshad, M., Stanley, J. A., &amp; Raz, N. (2017). Test-retest reliability and concurrent validity of in vivo myelin content indices: Myelin water fraction and calibrated T1w/T2w image ratio. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5342928/" target="_blank">PMCID:PMC5342928</a></li>
-<li>Koshino, S., Hagiwara, A., Okuda, S., et al. (2018). Myelin Measurement: Comparison Between Simultaneous Tissue Relaxometry, Magnetization Transfer Saturation Index, and T1w/T2w Ratio Methods. <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">doi:10.1038/s41598-018-28852-6</a></li>
+<li>Hagiwara, A., Hori, M., Kamagata, K., et al. (2018). Myelin Measurement: Comparison Between Simultaneous Tissue Relaxometry, Magnetization Transfer Saturation Index, and T1w/T2w Ratio Methods. <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">doi:10.1038/s41598-018-28852-6</a></li>
 <li>Baadsvik, E. L., Weiger, M., Froidevaux, R., et al. (2024). Myelin bilayer mapping in the human brain in vivo. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">doi:10.1002/mrm.29998</a></li>
 <li>Galbusera, R., Weigel, M., Bahn, E., et al. (2025). Quantitative T1 is sensitive to cortical remyelination in multiple sclerosis: A postmortem MRI study. <a href="https://doi.org/10.1111/bpa.70010" target="_blank">doi:10.1111/bpa.70010</a></li>
 <li>Morgan, C. A., Thomas, D. L., Shao, X., et al. (2024). Measurement of blood-brain barrier water exchange rate using diffusion-prepared and multi-echo arterial spin labelling: Comparison of quantitative values and age dependence. <a href="https://doi.org/10.1002/nbm.5256" target="_blank">doi:10.1002/nbm.5256</a></li>
 <li>Padrela, B. E., Slivka, M., Sneve, M. H., et al. (2025). Blood-brain barrier water permeability across the adult lifespan: A multi-echo ASL study. <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">doi:10.1016/j.neurobiolaging.2024.12.012</a></li>
 <li>Chung, K. J., Abdelhafez, Y. G., Spencer, B. A., et al. (2025). Quantitative PET imaging and modeling of molecular blood-brain barrier permeability. <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">doi:10.1038/s41467-025-58356-7</a></li>
+<li>Villemagne, V. L., Harada, R., Dore, V., et al. (2022). First-in-Humans Evaluation of <sup>18</sup>F-SMBT-1, a Novel <sup>18</sup>F-Labeled Monoamine Oxidase-B PET Tracer for Imaging Reactive Astrogliosis. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">doi:10.2967/jnumed.121.263254</a></li>
 <li>Villemagne, V. L., Harada, R., Dore, V., et al. (2022). Assessing reactive astrogliosis with <sup>18</sup>F-SMBT-1 across the Alzheimer disease spectrum. <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">doi:10.2967/jnumed.121.263255</a></li>
 <li>Tyacke, R. J., Myers, J. F. M., Venkataraman, A., et al. (2018). Evaluation of <sup>11</sup>C-BU99008, a PET ligand for the imidazoline<sub>2</sub> binding site in human brain. <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">doi:10.2967/jnumed.118.208009</a></li>
 <li>Livingston, N. R., Calsolaro, V., Hinz, R., et al. (2022). Relationship between astrocyte reactivity, using novel <sup>11</sup>C-BU99008 PET, and glucose metabolism, grey matter volume and amyloid load in cognitively impaired individuals. <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">doi:10.1038/s41380-021-01429-y</a></li>

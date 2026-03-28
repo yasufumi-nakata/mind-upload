@@ -2,34 +2,34 @@
 
 > Do not turn same-day success, algorithmic rescue, and long-term stability into the same claim
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-28 / 位置づけ: Technical / natural science only
+- Updated: 2026-03-28 / Role: Technical / natural science only
 
-## このページの役割
+## Role Of This Page
 This page explains how Mind-Upload reads state, trait, and drift when a result spans hours, days, weeks, or months. The point is not only that signals change over time, but that several different time problems coexist: state fluctuation, trait-like backbone, biological drift, interface / decoder drift, and the operational burden of keeping a system usable.
 
-## 正確さの前提
+## Accuracy Notes
 This page treats state / trait / drift only as technology and natural-science audit items. It does not address philosophical identity or legal rights.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Verification: Temporal Validity Card](https://mind-upload.com/verification.html#temporal-validity-card)
 - [Datasets: generalization families](https://mind-upload.com/datasets.html#generalization-families)
 - [EEG 101](https://mind-upload.com/eeg_101.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Uncertainty, calibration, and abstention](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention) - Use this page when temporal claims also need confidence, coverage, and fallback logic.
 - [Wiki: Closed loops, latency, jitter, and safe stops](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - Use this page when temporal validity intersects with online operation.
 - [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - Use this page when state or backbone claims depend on latent inference rather than direct observation.
 
-## いま分かっていること
+## What Is Currently Known
 - Behavioral state, arousal, uninstructed movement, and spontaneous behavior can dominate apparent same-day neural variance.
 - Population-level structure can remain more stable than individual units, so unit drift and backbone stability must not be collapsed.
 - Longitudinal identifiability can be carried by different objects such as dynamic functional-connectivity windows, EEG spectral profiles, aperiodic components, or nonlinear avalanche dynamics.
 - Fixed-decoder horizon, recalibration burden, and stabilization strategy answer different questions.
 - Current speech and cursor BCI papers support important communication and control advances, but they still need an explicit transfer ceiling.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - There is still no site-wide default benchmark that compares state annotation, fixed-decoder durability, recalibration burden, and transfer ceiling across EEG and invasive BCI under one schema.
 - It remains unsettled which backbone object should be the default trait target for WBE-relevant longitudinal claims.
 - It also remains unsettled which fingerprint carriers survive cross-state transfer rather than only same-regime reacquisition.

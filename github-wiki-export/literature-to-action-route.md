@@ -2,33 +2,33 @@
 
 > Next page guide to fix 'what to use after reading the literature'
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-14 / 位置づけ: Literature route
+- Updated: 2026-03-14 / Role: Literature route
 
-## このページの役割
+## Role Of This Page
 This page is an auxiliary guide that helps you organize where to return and use the documents after reading a collection of papers or a document map. The next page changes depending on whether you return to the map of unresolved problems, connect to a proposal, submit to an issue, or turn into a preparation for a collaboration candidate.
 
-## 正確さの前提
+## Accuracy Notes
 This is the next entry point after reading the literature. Please be sure to return to the original page and the original paper to check the evaluation and acceptance/rejection of individual papers.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Literature map](https://mind-upload.com/research_harvest_50.html)
 - [Technical proposal](https://mind-upload.com/issue.html#proposal-integration)
 - [Contribution Guide](https://mind-upload.com/issue.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: How to read the literature and evidence page](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading) - For those who want to return to the role differences across literature pages.
 - [Wiki: U number guide](https://github.com/yasufumi-nakata/mind-upload/wiki/u-number-guide) - For those who are confused about which U to use when returning to unsolved problems.
 - [Wiki: How to read suggestions and state labels](https://github.com/yasufumi-nakata/mind-upload/wiki/proposal-status-reading) - You can organize the status labels when returning to the suggestion page.
 - [Wiki: What to do first in-house and external dependencies](https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies) - When returning to an issue or collaboration candidate, you can separate the preparations you can make now.
 
-## いま分かっていること
+## What Is Currently Known
 - If you decide what to return to after reading the literature, information will be less scattered.
 - Research Harvest, Papers, Proposals, Issues, and Collaborations use literature differently.
 - You need to decide where to return not only by the number and interest of the literature, but also by which unresolved problems and proposals it will be effective against.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - Which documents will ultimately remain as the central basis may change in the future.
 - It is unclear how far the proposal and connections to potential collaborations will go in the future.
 

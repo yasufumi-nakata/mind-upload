@@ -2,35 +2,35 @@
 
 > Freeze benchmark object, temporal regime, and observation logs before touching the model
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-26 / 位置づけ: Practical route / technical refresh
+- Updated: 2026-03-26 / Role: Practical route / technical refresh
 
-## このページの役割
+## Role Of This Page
 This page is a practical route from EEG basics to a reproducible L0 artifact pack. The 2026-03 rebuild fixes one weakness in the old route: choosing a dataset and running a model still sounded too simple because benchmark object, temporal regime, event semantics, and verification gates were not kept separate enough.
 
-## 正確さの前提
+## Accuracy Notes
 This page does not claim that passing L0 solves identity, WBE, or higher-level state recovery. It is an entry point for reproducible analysis only. The stronger public rules still live on Verification.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Introduction to EEG](https://mind-upload.com/eeg_101.html)
 - [Data & Bench](https://mind-upload.com/datasets.html)
 - [Verification](https://mind-upload.com/verification.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Basics of EEG](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-basics) - Return here when the measurement ceiling of EEG itself is still unclear.
 - [Wiki: Data partitioning and data leakage](https://github.com/yasufumi-nakata/mind-upload/wiki/dataset-splits-and-leakage) - Use this when split hygiene, benchmark provenance, or acquisition shortcuts become the main issue.
 - [Wiki: Basics of event synchronization and observation logs](https://github.com/yasufumi-nakata/mind-upload/wiki/event-sync-and-measurement-logs) - Use this when events, semantics, timestamps, and clock domains start to blur together.
 - [Wiki: State, trait, and drift](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - Use this when same-session and cross-day claims start to blur together.
 - [Wiki: Baseline / Benchmark / Pre-registration / Model Card](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - Use this when a dataset name and one score start to sound like the whole benchmark object.
 
-## いま分かっていること
+## What Is Currently Known
 - L0 is about reproducible input, logs, preprocessing, baselines, and failure disclosure rather than high headline accuracy.
 - A starter dataset is not enough by itself; the independent hold-out unit, metric bundle, and benchmark-governance status also change what the score means.
 - Observation logs, derivative lineage, and temporal-validity fields are separate artifacts.
 - Current literature supports careful separation of subject/session shortcuts, acquisition-distribution shortcuts, clock-domain logs, and cross-day validity.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - Which starter route best prepares later L1-L2 work still depends on task family and target variable.
 - The field still lacks one universally accepted default card bundle for all EEG benchmarks.
 - How much temporal-validity disclosure will become standard across EEG benchmarks remains unsettled.

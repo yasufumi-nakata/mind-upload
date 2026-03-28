@@ -2,34 +2,34 @@
 
 > Returning to philosophy and test design with reservation conditions
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-06 / 位置づけ: Learning guide
+- Updated: 2026-03-06 / Role: Learning guide
 
-## このページの役割
+## Role Of This Page
 This page is a wiki that organizes Mind-Upload's L4 ``Individuality Assertion'' from the perspective of ``What do you want to test and how?'' rather than introducing philosophical terms. We will explain from the beginning how to reduce memory, values, learning, longitudinal stability, and handling of divergences to pre-registered continuity tests.
 
-## 正確さの前提
+## Accuracy Notes
 What is described here is the beginning of evaluation design. It is still unresolved under what conditions we can finally determine that the two persons are the same person, and this page does not provide that conclusion.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Introduction to WBE](https://mind-upload.com/wbe_101.html)
 - [Verification platform](https://mind-upload.com/verification.html)
 - [technology roadmap](https://mind-upload.com/tech_roadmap.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Identity and copying issues](https://github.com/yasufumi-nakata/mind-upload/wiki/personhood-and-copy-problem) - First of all, it is for those who want to return to the philosophical foundations.
 - [Wiki: How to read claims and evidence](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - It makes up for how strong a claim L4 is.
 - [Wiki: Counterfactuals/Interventions/Perturbations](https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification) - This will explain why you want to see reactions to changes in conditions.
 - [Wiki: state/trait/drift](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - Supplement how to distinguish between short-term conditions and long-term characteristics in longitudinal evaluation.
 - [Wiki: Update/branch/stop rules](https://github.com/yasufumi-nakata/mind-upload/wiki/update-branching-and-stop-rules) - Supplements the basics of branch logs, version management, and stop conditions.
 
-## いま分かっていること
+## What Is Currently Known
 - The assertion of identity is stronger than L0-L3, and mere output matching is not enough.
 - We need to look at memories, values, learning history, and reactions to changing conditions separately.
 - Bifurcations and long-term drift make claims of identity even more difficult.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - It is still unresolved which combination of tests must be met to constitute a sufficient condition.
 - It remains to be proven that continuous transitions may be sufficient to protect one's identity.
 

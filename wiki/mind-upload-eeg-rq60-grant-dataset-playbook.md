@@ -41,6 +41,13 @@ recommended_pages:
 - `U7: G1/G3`, `U8: G2/G5`, `U10: G2/G6`, `U11: G2/G4`
 - `U12: G2/G6`, `U13: G1/G4`, `U14: G1/G3`, `U15: G2/G6`
 
+## Current funding reality (2026-03-29 05:55 JST)
+
+- `G1/G2` are routing keys used to keep the RQ-level application lanes stable. They are not current grant-card files.
+- Current grant-card entities are `G3-G6`, and the practical shortlist is now fixed in [AoyamaLab/auto-research-funds wiki: Mind-Upload-Current-Funding-Shortlist](https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md).
+- The six currently revalidated deep-focus RQs remain `U0-2`, `U1-4`, `U7-6`, `U8-6`, `U11-3`, and `U13-2`.
+- For submission-ready references, prefer `Dxx + DOI + dataset name + access class` over numeric search IDs.
+
 ## Fixed table by RQ (60 items)
 
 | RQ | Judgment | First applicant | Preliminary applicant | Main EEG-DATA | Reason for selecting main data | Minimum deliverables |

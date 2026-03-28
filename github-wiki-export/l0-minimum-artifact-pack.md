@@ -2,29 +2,29 @@
 
 > Do not call it reproducible until version, observability, benchmark meaning, lineage, and replay are fixed together
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-28 / 位置づけ: Operational guide
+- Updated: 2026-03-28 / Role: Operational guide
 
-## このページの役割
+## Role Of This Page
 This page is an auxiliary page that fixes what must be bundled together before an L0 result can be called reproducible analysis on this site. It is not a procedure manual; it is a submission-shape check that asks whether a third party can reconstruct not only the score, but also what was actually observed, which prediction object and metric bundle were used, which benchmark rules were in force, what was held out, and what remained outside scope.
 
-## 正確さの前提
+## Accuracy Notes
 This page defines the current minimum for L0. It does not by itself justify causal or identity claims, but without these fields even L0 comparability remains too weak.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Hands-on](https://mind-upload.com/datasets.html#l0-practice)
 - [Data & Bench](https://mind-upload.com/datasets.html)
 - [Verification base](https://mind-upload.com/verification.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - You can see from the beginning why artifacts are fixed first.
 - [Wiki: Data partitioning and leaks](https://github.com/yasufumi-nakata/mind-upload/wiki/dataset-splits-and-leakage) - Supplements the reason why splitting rules go into artifacts.
 - [Wiki: Baseline/Pre-registration/Model Card](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - Compensates for the role differences between baseline and failure examples.
 - [Wiki: State, trait, and drift](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - Use this when cross-session or longitudinal results start to be read as durable operation.
 - [Wiki: EEG foundation models and pretraining](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-foundation-models) - Use this when benchmark governance and prediction-object differences start to dominate leaderboard interpretation.
 
-## いま分かっていること
+## What Is Currently Known
 - For L0, it is more important than high accuracy that a third party can rerun under the same conditions and still understand what the score is allowed to mean.
 - BIDS / EEG-BIDS makes data traceable, but it does not by itself fix event fidelity, label provenance, or leak-free evaluation.
 - The same score can change meaning not only across within-session, cross-session, cross-subject, and adaptation settings, but also across prediction objects and metric bundles.
@@ -33,7 +33,7 @@ This page defines the current minimum for L0. It does not by itself justify caus
 - Preloaded or modified recordings should be written as derivatives with explicit lineage rather than silently overwriting raw.
 - Examples of failures, setup shortcuts, and stopping claims belong in the artifact pack, not only in side notes.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - Which QC metrics, nuisance-only baselines, and harmonization transforms should become defaults still depends on the task and dataset.
 - How the L0 pack should expand into standard L1/L2 cards will depend on future benchmark design.
 - The best reusable format for benchmark-governance snapshots across rapidly changing challenge sites is still evolving.

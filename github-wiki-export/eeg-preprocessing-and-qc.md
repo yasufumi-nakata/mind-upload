@@ -2,29 +2,29 @@
 
 > Pre-processing is not a pretense, it is a condition for acceptance of a claim
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-26 / 位置づけ: Technical / practical guide
+- Updated: 2026-03-26 / Role: Technical / practical guide
 
-## このページの役割
+## Role Of This Page
 This page is a wiki that organizes EEG preprocessing and QC not as ``the process of adjusting the waveform at the end,'' but as ``an auditing process that determines which signals should be kept, which derived files can be reused, and which claims should be accepted.''
 
-## 正確さの前提
+## Accuracy Notes
 We do not provide a one-size-fits-all procedure. From the primary literature and official specifications, we sort out what should be fixed at the bare minimum and what should not be stated yet.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Introduction to EEG](https://mind-upload.com/eeg_101.html)
 - [Hands-on](https://mind-upload.com/datasets.html#l0-practice)
 - [Data & Bench](https://mind-upload.com/datasets.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Basics of EEG](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-basics) - Click here if you want to return from the nature of the signal itself.
 - [Wiki: Event synchronization and observation log](https://github.com/yasufumi-nakata/mind-upload/wiki/event-sync-and-measurement-logs) - Supplements the time synchronization, event, and bad segment recording required before preprocessing.
 - [Wiki: Dataset splits and leakage](https://github.com/yasufumi-nakata/mind-upload/wiki/dataset-splits-and-leakage) - Use this when you need the split unit and hold-out ancestry itself clarified.
 - [Wiki: Uncertainty, proofreading, abstaining](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention) - It supplements the idea of estimation width and abstention using preprocessing differences.
 - [Wiki: Standards/Location/Validator/Benchmark](https://github.com/yasufumi-nakata/mind-upload/wiki/standards-repositories-validators-and-benchmarks) - Compensates for the role differences between BIDS, derivatives, public version, loader, and benchmark.
 
-## いま分かっていること
+## What Is Currently Known
 - Preprocessing is not a small implementation difference, but a choice that determines which signals are considered neural.
 - Preprocessing and split design are coupled; fitting ICA, autoreject, normalization, feature selection, or learned denoisers before hold-out can leak test information.
 - EEG-BIDS, COBIDAS-MEEG, and BIDS Derivatives provide a concrete floor for reproducible EEG reporting and derivative reuse.
@@ -33,7 +33,7 @@ We do not provide a one-size-fits-all procedure. From the primary literature and
 - Artifact suppression and signal preservation are different; accuracy alone does not determine the quality of preprocessing.
 - A cleaner waveform does not automatically justify a stronger connectivity or causality claim.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - It has not yet been decided which split-locked preprocessing bundle is optimal for each EEG problem.
 - To determine how much of the high-frequency components can be treated as neural, it is necessary to audit myoelectricity, body movement, and task dependence.
 - Which sensitivity-analysis and transform-lineage bundle should become the site-wide standard is still a bench-governance issue.

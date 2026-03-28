@@ -2,32 +2,32 @@
 
 > The summary is the entry point, and the decision is to return to the original source.
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-14 / 位置づけ: Summary vs source
+- Updated: 2026-03-14 / Role: Summary vs source
 
-## このページの役割
+## Role Of This Page
 This page is an auxiliary guide that organizes how to use Mind-Upload's public page and wiki as an 'entrance for summaries.' There are times when a summary is enough to get an overall picture, but when you need to use it as evidence, make a judgment, revise it, or refute it, you need to go back to the original text, DOI, issue history, and primary research. This page is for reading while aligning those boundaries.
 
-## 正確さの前提
+## Accuracy Notes
 We are dealing with reading rules here. When evaluating individual papers or proposals, be sure to check the original page or source.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Literature map](https://mind-upload.com/research_harvest_50.html)
 - [Collection of papers](https://mind-upload.com/mind_uploading_papers.html)
 - [Technical proposal](https://mind-upload.com/issue.html#proposal-integration)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: How to read the literature and evidence page](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading) - This is for people who want to see the role differences between literature pages first.
 - [Wiki: Document source type and status label](https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status) - Which source type will guide you back to primary research?
 - [Wiki: How to read suggestions and state labels](https://github.com/yasufumi-nakata/mind-upload/wiki/proposal-status-reading) - Organize the relationship between proposal pages and issue history.
 
-## いま分かっていること
+## What Is Currently Known
 - Many public pages and wikis are useful as a summary entry point to get the big picture first.
 - You must return to the original source when using it as evidence, citing it, or making corrections.
 - The original source to go back to is different for literature archive, literature map, proposal organizer, and issue history.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - Future scrutiny will determine which documents and proposals ultimately remain as central evidence.
 - Some summaries will be updated further in the future, and there may be more original sources to return to.
 

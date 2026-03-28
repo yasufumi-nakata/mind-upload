@@ -2,36 +2,36 @@
 
 > A fast loop, a causal gain, and a durable same-state result are different claims.
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-26 / 位置づけ: Learning guide / evidence refresh
+- Updated: 2026-03-26 / Role: Learning guide / evidence refresh
 
-## このページの役割
+## Role Of This Page
 This page is a wiki that separates held-out accuracy, online human-in-the-loop control, bidirectional or local intervention, state-dependent intervention, temporal durability, and perturbation-structure tests using primary literature. It also connects those evidence classes to the site's newer operating rules: the Temporal Validity Card, State-Continuity Bridge Card, Maintenance-State Error Budget, and Body / Environment Boundary Card.
 
-## 正確さの前提
+## Accuracy Notes
 The primary literature as of March 2026 strongly supports local subsystem- and task-limited causal evidence plus real engineering progress in online control and deployment. It still does not demonstrate whole-brain counterfactual equivalence or state-complete WBE.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Verification platform](https://mind-upload.com/verification.html)
 - [Technology roadmap](https://mind-upload.com/tech_roadmap.html)
 - [Introduction to WBE](https://mind-upload.com/wbe_101.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Decode and Emulate](https://github.com/yasufumi-nakata/mind-upload/wiki/decode-vs-emulate) - Return here first if translation and generation are still being mixed together.
 - [Wiki: From Observation to Estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - Explains why observational fit and causal validation are different steps.
 - [Wiki: State, Trait, and Drift](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - Background for cross-day durability, recalibration burden, and transfer ceilings.
 - [Wiki: State-Continuity Bridge](https://github.com/yasufumi-nakata/mind-upload/wiki/state-continuity-bridge) - Explains why same-subject or same-brain wording does not automatically give one same-state sample.
 - [Wiki: Closed Loop, Delay, Jitter, Safe Stop](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - Detailed timing-side companion for online control and deployment logs.
 
-## いま分かっていること
+## What Is Currently Known
 - High held-out accuracy alone does not guarantee agreement in causal structure.
 - Bidirectional feedback and state-dependent stimulation strengthen causal evidence, but their scope of application remains localized unless the omitted boundary is disclosed.
 - Recent speech BCI and adaptive DBS papers show that tail latency, recalibration burden, eligibility or programming burden, and clinic-to-home deployment are separate audit items.
 - Same-subject or same-brain wording can solve specimen identity while still leaving state continuity unresolved across days, regimes, or live-to-fix bridges.
 - When a claim extends to persistence, forgetting, or recovery after perturbation, intervention logs alone are insufficient without maintenance-state disclosure.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - It remains open which perturbation set would be sufficient for whole-brain branch-equivalence.
 - The extent to which counterfactual branch structure can be benchmarked in a shareable public infrastructure is still unresolved.
 - No public benchmark yet joins perturbation response, temporal durability, bridge validity, and maintenance-state disclosure under one whole-brain standard.

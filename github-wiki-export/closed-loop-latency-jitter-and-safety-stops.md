@@ -2,29 +2,29 @@
 
 > Closed-loop time requirements are not a single number; they vary by loop type
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-28 / 位置づけ: Learning guide / evidence refresh
+- Updated: 2026-03-28 / Role: Learning guide / evidence refresh
 
-## このページの役割
+## Role Of This Page
 This page is a wiki that organizes delay, jitter, drift, safety stop, body/environment boundary, and long-horizon deployability in Mind-Upload's L3 'closed loop' using primary literature. The purpose is to clarify that even when offline accuracy is high, the required timing budget depends on the loop band and actuator, and low latency alone does not tell you which sensory, motor, interoceptive, or reafferent loops were actually preserved, whether a fixed decoder survived across time, or how much rescue-mode programming was needed.
 
-## 正確さの前提
+## Accuracy Notes
 Here, we do not set a ``fixed threshold common to all loops.'' We also do not treat a fast loop as boundary-complete, temporally durable, or chronically deployable by default. Judgments are written on the premise that end-to-end timing indicators, retained/substituted body/environment routes, fixed-decoder interval, co-adaptation regime, rescue-mode adaptation burden, deployment slices, and, for phase-targeting loops, oscillation estimability plus causal-versus-post-hoc targeting benchmarks are disclosed explicitly.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Verification base](https://mind-upload.com/verification.html)
 - [Introduction to EEG](https://mind-upload.com/eeg_101.html)
 - [Technology Roadmap](https://mind-upload.com/tech_roadmap.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Event synchronization and observation log](https://github.com/yasufumi-nakata/mind-upload/wiki/event-sync-and-measurement-logs) - Compensates for delay, jitter, and drift.
 - [Wiki: Uncertainty, proofreading, abstaining](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention) - Complements the design concept of 'not releasing' when reliability is low.
 - [Wiki: State, trait, and drift](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - Separates same-session success from cross-day durability and rescue-mode adaptation.
 - [Wiki: Update/branch/stop rules](https://github.com/yasufumi-nakata/mind-upload/wiki/update-branching-and-stop-rules) - Complements how to separate freeze and stop rules as operations.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other auxiliary pages.
 
-## いま分かっていること
+## What Is Currently Known
 - Offline accuracy and closed-loop stability are separate claims and cannot be audited with the same score.
 - Even a fast loop can remain boundary-incomplete if self-motion, predicted reafference, tactile feedback, respiration, arousal, or other subject-defining routes stay omitted or undisclosed.
 - Latency and jitter tolerances vary for state feedback, ERP/command BCI, streaming communication, phase-locked stimulation, and burst-driven neuromodulation.
@@ -35,7 +35,7 @@ Here, we do not set a ``fixed threshold common to all loops.'' We also do not tr
 - Speed-up within-session alone is not enough; it also leaves fixed-decoder horizon, recalibration burden, clinic/home transition, and programming burden.
 - Chronic adaptive-DBS symptom benefit, eligibility, and long-run continuation are different axes and should not be collapsed into one deployment verdict.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - It is unclear how far the closed-loop bandwidth required for WBE spans which loop types.
 - It is not yet possible to generalize the precision required for phase-specific control to all tasks in non-invasive human experiments.
 - What counts as an acceptable fixed-decoder horizon before rescue-mode adaptation becomes a different operating regime still depends on task and modality.
@@ -67,8 +67,9 @@ On this site, once a closed-loop claim leaves the narrow same-session timing que
 
 <strong>2026-03-28 re-audit: co-adaptation is a separate evidence wall</strong>
 <p>
-The remaining blind spot was that the page could still let readers treat <strong>any online improvement</strong> as if it primarily reflected timing quality or long-horizon stability. The primary literature does not support that compression. <a href="https://doi.org/10.1016/j.neuron.2014.04.048" target="_blank">Orsborn et al. (2014)</a> showed that combined neural and decoder adaptation can itself shape neural representations. <a href="https://doi.org/10.1371/journal.pbio.2003787" target="_blank">Perdikis et al. (2018)</a> and <a href="https://doi.org/10.3389/fnhum.2019.00362" target="_blank">Abu-Rmileh et al. (2019)</a> showed that user learning and classifier adaptation evolve on different timescales in longitudinal EEG BCIs, and that adaptation that is too frequent can hinder subject learning. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> and <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> then showed that modern speech and cursor loops still rely on per-session retraining, blockwise decoder updates, and explicit open-loop probes to estimate performance without closed-loop correction. Therefore, this page now treats <strong>co-adaptation / credit assignment</strong> as a separate wall rather than hiding it inside latency or recalibration.
+The remaining blind spot was that the page could still let readers treat <strong>any online improvement</strong> as if it primarily reflected timing quality or long-horizon stability. The primary literature does not support that compression. <a href="https://doi.org/10.1016/j.neuron.2014.04.048" target="_blank">Orsborn et al. (2014)</a> showed that combined neural and decoder adaptation can itself shape neural representations. <a href="https://doi.org/10.1371/journal.pbio.2003787" target="_blank">Perdikis et al. (2018)</a> and <a href="https://doi.org/10.3389/fnhum.2019.00362" target="_blank">Abu-Rmileh et al. (2019)</a> showed that user learning and classifier adaptation evolve on different timescales in longitudinal EEG BCIs, and that adaptation that is too frequent can hinder subject learning. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> and <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> then showed that modern speech and cursor loops still rely on per-session retraining, blockwise decoder updates, and explicit open-loop probes to estimate performance without closed-loop correction. Therefore, this site now treats <strong>co-adaptation / credit assignment</strong> as a separate wall rather than hiding it inside latency or recalibration.
 </p>
+
 <strong>2026-03-28 second re-audit: phase-targeting needs an estimability wall</strong>
 <p>
 One more shortcut remained. The page still allowed a reader to think that once a phase-targeted loop reports <strong>low latency</strong> and some <strong>phase error distribution</strong>, the main technical burden is already satisfied. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuroimage.2020.116761" target="_blank">Zrenner et al. (2020)</a> showed that meaningful phase estimation itself degrades when oscillatory amplitude and SNR are low. <a href="https://doi.org/10.3389/fnhum.2021.691821" target="_blank">Gordon et al. (2021)</a> then showed that prefrontal theta targeting required extra constraints to avoid low-amplitude and phase-reset epochs. <a href="https://doi.org/10.1111/ejn.14931" target="_blank">Vigué-Guix et al. (2022)</a> achieved reliable trial-to-trial alpha phase locking yet did not obtain a consistent behavioral benefit, which means targeting success and functional effect must be kept separate. <a href="https://doi.org/10.1523/ENEURO.0050-23.2023" target="_blank">Kim et al. (2023)</a> showed across 11 public datasets that higher power and SNR improve prediction accuracy and that waiting for eligible epochs matters more than forcing one cognitive state. Finally, <a href="https://doi.org/10.1016/j.brs.2025.09.019" target="_blank">Hougland et al. (2025)</a> showed within-session fluctuations and low test-retest reliability of the optimal mu-phase. Therefore, phase-targeted stimulation on this site is now read through an <strong>estimability / targeting / effect / stability stack</strong>, not one timing number.
@@ -273,7 +274,7 @@ A remaining weakness at the L3 entry point was that "online performance improved
 
 <strong>Revision rule on this site</strong>
 <p>
-A same-session online result must now name whether it is a <strong>fixed-policy loop</strong> or a <strong>co-adaptive loop</strong>. If the paper mixes user learning, decoder updates, and interface redesign without a frozen comparator or open-loop probe, this page does not promote the gain to fixed-decoder durability or portable deployment evidence.
+A same-session online result must now name whether it is a <strong>fixed-policy loop</strong> or a <strong>co-adaptive loop</strong>. If the paper mixes user learning, decoder updates, and interface redesign without a frozen comparator or open-loop probe, this site does not promote the gain to fixed-decoder durability or portable deployment evidence.
 </p>
 
 <h2>2026-03 literature audit: five barriers that appear once a loop first works online</h2>

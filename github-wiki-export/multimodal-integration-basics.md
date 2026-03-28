@@ -2,22 +2,22 @@
 
 > Rather than adding everything, it is designed to increase synchronization, geometry, and external validation.
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-26 / 位置づけ: Technical / natural science only
+- Updated: 2026-03-26 / Role: Technical / natural science only
 
-## このページの役割
+## Role Of This Page
 This page is a wiki that organizes what really improves when combining EEG, MEG, fMRI, invasive recording, and MRI based on primary literature. Rather than focusing on philosophy or legal systems, we focus only on synchronization, coordinate alignment, forward models, external validation, state coverage, and bundle robustness.
 
-## 正確さの前提
+## Accuracy Notes
 What I'm trying to show here is not that ``if you integrate everything, you can figure it out.'' It's about sorting out what can be said a little more strongly when certain conditions are met, and what can't be said yet.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Introduction to EEG](https://mind-upload.com/eeg_101.html)
 - [Verification base](https://mind-upload.com/verification.html)
 - [Technology Roadmap](https://mind-upload.com/tech_roadmap.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Basics of EEG](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-basics) - Click here if you want to return to the limits of EEG alone.
 - [Wiki: observability and claim ceiling by measurement stack](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling) - Use this page when you want the cross-stack ceiling table next.
 - [Wiki: Human Proxy Composition and Route Maturity](https://github.com/yasufumi-nakata/mind-upload/wiki/human-proxy-composition) - Use this when the multimodal bundle also mixes living-human proxy classes such as PET, MRSI, or support-state routes.
@@ -26,7 +26,7 @@ What I'm trying to show here is not that ``if you integrate everything, you can 
 - [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - An entry point to avoid confusing observed values and estimated values.
 - [Wiki: Baselines, preregistration, and model cards](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - Use this page when multimodal results need the Fusion Card workflow.
 
-## いま分かっていること
+## What Is Currently Known
 - By combining multiple modalities, some aspects of time, space, and locality can be complemented.
 - However, the amount of improvement is highly dependent on the shared clock, individual anatomy, electrode/sensor location, conductivity assumptions, and the presence or absence of an external reference.
 - Simultaneous acquisition, atlas-informed interpretation, and externally calibrated fusion are different claim levels.
@@ -36,7 +36,7 @@ What I'm trying to show here is not that ``if you integrate everything, you can 
 - OPM-MEG can tolerate much more movement than SQUID-MEG, but it still depends on shielding, active field control, sensor calibration, and source-model disclosure.
 - Invasive recording is a strong calibration route, but suffers from coverage bias and patient bias.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - It is not yet certain which integration set is most effective for which stage of WBE.
 - Even with the integration of multiple modalities, the sufficiency of cells, synapses, neuromodifications, and glial states remain unresolved.
 - How to propagate and report post-integration uncertainties remains a research topic.

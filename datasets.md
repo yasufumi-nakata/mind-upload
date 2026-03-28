@@ -5,7 +5,7 @@ description: "From the selection of public data (mainly EEG) to the minimum loop
 article_type: Resource
 subtitle: "Connect ``what to use'' and ``how to reproduce'' in the shortest route without separating them."
 author: Mind Uploading Research Project
-last_updated: "2026-03-28"
+last_updated: "2026-03-29"
 note: "Curated List + L0 Practice"
 audience: "People who are wondering which public data to start with, people who are looking for an L0 practice board"
 reading_time: "12-20 minutes"
@@ -113,6 +113,12 @@ This page is the practical entry point for deciding where to start and how to co
 <strong>When you want to complete with just this page</strong>
 <p>
 The minimal loop procedure from the old <code>hands_on.md</code> has been integrated into this page. Therefore, you can read straight through to the L0 skeleton, QC, baseline, and completion conditions without having to go to another page after data selection.
+</p>
+</div>
+<div class="note-box">
+<strong>If you want the RQ-by-RQ route from datasets back to mind-upload questions</strong>
+<p>
+This page is the practical data portal, not the full research-question map. If you want to move from a dataset bucket here to a specific mind-upload research question, a fixed EEG-ready claim, and a grant-ready theme, use the <a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG feasibility page</a>, the <a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ-by-RQ deep dossiers</a>, and the <a href="wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html">grant and dataset playbook</a>.
 </p>
 </div>
 

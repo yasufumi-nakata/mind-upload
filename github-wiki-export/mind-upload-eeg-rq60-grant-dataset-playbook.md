@@ -2,21 +2,21 @@
 
 > Fix submission decisions based on RQ, not general abstracts
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-18 / 位置づけ: Per-RQ Grant and Dataset Playbook
+- Updated: 2026-03-29 / Role: Per-RQ Grant and Dataset Playbook
 
-## このページの役割
+## Role Of This Page
 This page is a practical playbook that targets each of mind-upload's 60 research questions and fixes the primary application destination/preliminary application destination, main EEG-DATA, reason for hiring, and submitted deliverables.
 
-## 正確さの前提
+## Accuracy Notes
 A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-funds.md`.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Literature map](https://mind-upload.com/research_harvest_50.html)
 - [Data & Bench](https://mind-upload.com/datasets.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: RQ60 EEG verification availability and subsidy theme](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds) - Original copy of judgment basis, U-specific background, and RQ table.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Criteria for converting artifacts into verification specifications.
 
@@ -34,6 +34,13 @@ A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-f
 - `U0: G2/G3`, `U1: G1/G4`, `U3: G2/G6`, `U4: G1/G4`
 - `U7: G1/G3`, `U8: G2/G5`, `U10: G2/G6`, `U11: G2/G4`
 - `U12: G2/G6`, `U13: G1/G4`, `U14: G1/G3`, `U15: G2/G6`
+
+## Current funding reality (2026-03-29 05:55 JST)
+
+- `G1/G2` are routing keys used to keep the RQ-level application lanes stable. They are not current grant-card files.
+- Current grant-card entities are `G3-G6`, and the practical shortlist is now fixed in [AoyamaLab/auto-research-funds wiki: Mind-Upload-Current-Funding-Shortlist](https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md).
+- The six currently revalidated deep-focus RQs remain `U0-2`, `U1-4`, `U7-6`, `U8-6`, `U11-3`, and `U13-2`.
+- For submission-ready references, prefer `Dxx + DOI + dataset name + access class` over numeric search IDs.
 
 ## Fixed table by RQ (60 items)
 
@@ -81,7 +88,7 @@ A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-f
 | U12-2 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 11 | It is technically easy to maintain audit logs to be passed to system issues. | System audit requirements table (technical log compatible) |
 | U12-3 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 11 | It is technically easy to maintain audit logs to be passed to system issues. | System audit requirements table (technical log compatible) |
 | U12-4 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 11 | It is technically easy to maintain audit logs to be passed to system issues. | Branch-based audit log design document |
-| U12-5 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 11 | It is technically easy to maintain audit logs to be passed to system issues. | Time synchronization audit report (offset/jitter distribution) |
+| U12-5 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 11 | It is technically easy to maintain audit logs that support branch relinking and subject-ID reorganization decisions. | Branch-based audit log design document |
 | U12-6 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 11 | It is technically easy to maintain audit logs to be passed to system issues. | System audit requirements table (technical log compatible) |
 | U13-1 | B | G1 (GR-2026-013) | G4 (Drbm6vBRDJkn0NGJ) | 509 | It is easy to separate semantic restoration and mechanistic difference using control conditions. | Intervention protocol and rebuttal condition definition |
 | U13-2 | B | G1 (GR-2026-013) | G4 (Drbm6vBRDJkn0NGJ) | 509 | It is easy to separate semantic restoration and mechanistic difference using control conditions. | Mimic separation evaluation script and control condition table |

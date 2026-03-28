@@ -5,7 +5,7 @@ description: "How to participate in the Mind-Upload project, read issue status, 
 article_type: Guide
 subtitle: "Join the research workflow and read the issue tracker"
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
+last_updated: "2026-03-29"
 note: "Contribution + Issue tracker"
 audience: "People who are joining for the first time, want to check the issue status, and want to start making viable contributions."
 reading_time: "10-20 minutes"
@@ -88,6 +88,12 @@ It is safer to first understand the basics of WBE and verification infrastructur
 <strong>When you want to see how to write an issue from the beginning</strong>
 <p>
 If you want to see how to turn "I do not know" into a useful issue, and how to set achievement conditions plus falsification conditions, see <a href="wiki/issue-writing-basics.html">Wiki: How to write your first issue</a>.
+</p>
+</div>
+<div class="note-box">
+<strong>If you are here specifically for RQ-by-RQ grant planning</strong>
+<p>
+This page separates contribution routes and issue work. If what you really want is the current one-question-at-a-time route from a mind-upload research question to a fundable theme and a fixed EEG dataset anchor, use the <a href="wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html">grant and dataset playbook</a>, the <a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ-by-RQ deep dossiers</a>, and the <a href="https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md">current funding shortlist</a>.
 </p>
 </div>
 <div class="note-box">

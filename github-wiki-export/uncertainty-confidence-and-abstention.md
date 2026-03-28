@@ -2,38 +2,38 @@
 
 > Confidence is not the same thing as reliability. Calibration and coverage must be read separately.
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-26 / 位置づけ: Technical / natural science only
+- Updated: 2026-03-26 / Role: Technical / natural science only
 
-## このページの役割
+## Role Of This Page
 This page organizes uncertainty, confidence intervals, calibration, and abstention in EEG source imaging, EEG classification, language decoding, and closed-loop BCI using primary literature. It is not only about how much to trust a number when it appears, but also about which output space was fixed in advance and when output should stop.
 
 
-## 正確さの前提
+## Accuracy Notes
 This page prioritizes technical and natural-science audit items over textbook completeness in statistics. Some strict definitions are compressed, but the core points remain explicit: confidence and calibration are different, risk can be lowered by lowering coverage, and recalibration burden is itself a performance metric in online systems.
 
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [EEG Basics](https://mind-upload.com/eeg_101.html)
 - [Verification](https://mind-upload.com/verification.html)
 - [Technology Roadmap](https://mind-upload.com/tech_roadmap.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - Returns to the point where an argument stops by using inverse problems and causal inference.
 - [Wiki: Baselines / pre-registration / model cards](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - Places Calibration & Abstention Cards alongside the rest of the submission set.
 - [Wiki: state / trait / drift](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - Separates day-scale variation, longitudinal change, and decoder drift.
 - [Wiki: Counterfactuals / interventions / perturbations](https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification) - Explains how to incorporate uncertainty into interventions and held-out conditions.
 - [Wiki: Closed loop, delay, jitter, safe stop](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - Adds guidance for separating abstention, freeze, and stop behavior in online systems.
 
-## いま分かっていること
+## What Is Currently Known
 - Head geometry, conductivity, subject shift, session drift, and decoder drift all strongly affect estimated width and real-world performance.
 - If fit / calibration / test separation is ambiguous, the meaning of confidence and thresholds collapses.
 - Even with high accuracy, poor calibration can still produce overconfident wrong answers under low-confidence conditions.
 - In language-facing outputs, top-k success or confidence from a fixed candidate bank, known-onset protocol, or prompt scaffold should not be read as open-world uncertainty.
 - Online BCI requires not only latency, but also abstention rate, dropout, recalibration burden, and recovery time.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - The Calibration & Abstention Card is fixed as a minimum site-wide submission, but pass/fail thresholds for each task are not finalized yet.
 - It is not yet fixed which coverage / abstention thresholds should become the common pass/fail rule for L2 and L3.
 - Task-specific pass/fail rules for candidate-conditioned confidence in speech / brain-to-text decode are not finalized yet.

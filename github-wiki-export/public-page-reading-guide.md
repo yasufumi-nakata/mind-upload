@@ -2,33 +2,33 @@
 
 > A map for deciding which page to enter from based on your goal
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-14 / 位置づけ: Reading guide
+- Updated: 2026-03-14 / Role: Reading guide
 
-## このページの役割
+## Role Of This Page
 This page is a companion guide that explains how Mind-Upload's public pages differ from one another. They are not all repeating the same explanation. Their roles are split across orientation, platform design, practical work, literature, and participation routes.
 
-## 正確さの前提
+## Accuracy Notes
 What we will be dealing with here is the use of pages. Please be sure to return to the main text of each page to check the individual theories and technical conditions.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Start Page](https://mind-upload.com)
 - [Verification base](https://mind-upload.com/verification.html)
 - [Public Content Integration Hub](https://mind-upload.com/content_hub.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - Returns to the entrance to the entire learning wiki.
 - [Wiki: How to read the first block of a public page](https://github.com/yasufumi-nakata/mind-upload/wiki/page-header-reading-guide) - We will organize how to read the information block that appears at the top of each public page.
 - [Wiki: How to read the literature and evidence page](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading) - The differences between the literature pages will be covered in detail on a separate page.
 - [Wiki: How to read suggestions and state labels](https://github.com/yasufumi-nakata/mind-upload/wiki/proposal-status-reading) - Issue and proposal integration section status labels will be organized on separate pages.
 
-## いま分かっていること
+## What Is Currently Known
 - The public page is divided into roles as an information portal that shows key points, known/unknown, and next directions.
 - Verification, Roadmap, and Perspective may look similar, but their roles are quite different.
 - WBE 101 and EEG 101 are effective reading as a stepping stone before entering the long text pages.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - Which public pages will be expanded independently in the future will change depending on the amount of information and reader demand.
 - For some themes, there is room for further supplementary lectures to be added to the wiki in the future.
 

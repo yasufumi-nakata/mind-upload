@@ -2,35 +2,35 @@
 
 > Public pages are the gateway, and the wiki is the foundation for learning.
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-26 / 位置づけ: Learning-first
+- Updated: 2026-03-26 / Role: Learning-first
 
-## このページの役割
+## Role Of This Page
 This page is a learning portal that makes the public pages of Mind-Upload easier to read. The public pages show what we know now, what we do not know yet, and what to read next, while the wiki teaches the basic explanations behind those pages in a deliberate order.
 
 
-## 正確さの前提
+## Accuracy Notes
 The wiki explains things in an accessible way, but it does not present unresolved issues as solved. Difficult points remain difficult, and that is stated explicitly.
 
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Start Page](https://mind-upload.com)
 - [WBE Basics](https://mind-upload.com/wbe_101.html)
 - [EEG Basics](https://mind-upload.com/eeg_101.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Basics of WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - The first page to understand what the project is talking about.
 - [Wiki: How to read claims and evidence](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - Practice distinguishing the strength of claims in news and research announcements.
 - [Wiki: Basics of EEG](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-basics) - Explains from first principles what EEG measures.
 
-## いま分かっていること
+## What Is Currently Known
 - Current research already makes it possible to measure and reproducibly analyze part of the brain's signals.
 - Mind-Upload becomes much easier to follow if progress is separated from what remains unresolved.
 - Separating the roles of public pages and the wiki allows both an easy entry point and a deeper learning path.
 - Current human proxy rows differ by proxy class, operational maturity, and calibrator role, and same-subject wording can still remain bridge-limited.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - Research is still underway on the conditions under which WBE could count as established.
 - Final judgments about identity and phenomenal consciousness cannot be made from introductory pages alone.
 

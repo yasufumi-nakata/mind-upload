@@ -2,27 +2,27 @@
 
 > It's an entry point to see not only how information circulates, but also what kind of physical cost it takes to circulate information.
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-28 / 位置づけ: Learning guide
+- Updated: 2026-03-28 / Role: Learning guide
 
-## このページの役割
+## Role Of This Page
 This page is a wiki that explains why topics on thermodynamics come up in Mind-Upload from the perspective of Landauer, dissipation, non-equilibrium steady state (NESS), and entropy production rate (EPR). It is used as an entry point for people who stop reading on the theory page when they suddenly see the topic of physics.
 
-## 正確さの前提
+## Accuracy Notes
 What we show here is the beginning of thermodynamic grounding. It has not been determined that thermodynamic indicators are a sufficient condition for consciousness or identity, and this is treated as an unresolved problem on this site.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Theoretical Frame](https://mind-upload.com/perspective.html#design-principles)
 - [Research Notes](https://mind-upload.com/perspective.html)
 - [Verification base](https://mind-upload.com/verification.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Theory of Consciousness Map](https://github.com/yasufumi-nakata/mind-upload/wiki/consciousness-theory-map) - Go back to the theory of role differences.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Complements the positioning of thermodynamic indicators in evaluation.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other auxiliary pages.
 
-## いま分かっていること
+## What Is Currently Known
 - The biological brain is a system that has a continuous flow of energy, not static data.
 - Logical calculation costs and physical dissipation costs must be considered separately.
 - There are ideas for incorporating thermodynamic indicators into the validation process, but measurement and interpretation remain difficult.
@@ -30,7 +30,7 @@ What we show here is the beginning of thermodynamic grounding. It has not been d
 - A clean null or shuffle control does not by itself show that entropy production was estimable; sparse or unobserved reverse transitions remain a separate support-coverage problem.
 - Partial observation can hide dissipative cycles and introduce memory, so a weak estimate is not automatically evidence that dissipation is absent.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - It is unclear which thermodynamic indicators affect which aspects of consciousness and identity.
 - The extent to which EPR and dissipation proxy indicators can be stably estimated from neural data remains an open question.
 - Cross-estimator convergence and physiology-side calibration for energetic interpretations are still unresolved.

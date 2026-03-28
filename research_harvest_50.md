@@ -121,6 +121,12 @@ If you want a one-page workflow that connects literature triage, theory notes, p
 </p>
 </div>
 <div class="note-box">
+<strong>If you want to turn one unresolved question into an EEG-ready or grant-ready work package</strong>
+<p>
+This public literature map stays at the routing level. If you want the current one-question-at-a-time route from an unresolved question to an EEG-feasible test, a fundable theme, and a fixed dataset anchor, go to the <a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG feasibility page</a>, the <a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ-by-RQ deep dossiers</a>, and the <a href="wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html">grant and dataset playbook</a>.
+</p>
+</div>
+<div class="note-box">
 <strong>If you want to separate summary-level reading from source-level reading</strong>
 <p>
 The U-by-U summaries and representative references on this page are useful entry points, but whenever a claim is used as evidence you still need to go back to the DOI or original paper. For a one-page guide to choosing between summaries, source texts, and issue history, see the <a href="wiki/summary-vs-source-reading.html">Wiki: Summary vs. Source Reading</a>.

@@ -2,28 +2,28 @@
 
 > connectome-complete is not emulation-complete
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-26 / 位置づけ: Technical / natural science only
+- Updated: 2026-03-26 / Role: Technical / natural science only
 
-## このページの役割
+## Role Of This Page
 This page is a page to analyze the intuition that ``If we can obtain the connectome, it would be sufficient to reproduce the brain'' based on primary literature. Rather than focusing on philosophy or legal systems, I will focus on what state variables can't be said if they are missing, and what putative barriers remain even in connectome-constrained.
 
-## 正確さの前提
+## Accuracy Notes
 What I'm showing here is an arrangement of ``at least removing this will weaken the argument'' and ``degeneracy that remains even if wiring constraints are included'', and does not mean that the final sufficient condition has been determined.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Introduction to WBE](https://mind-upload.com/wbe_101.html)
 - [Verification platform](https://mind-upload.com/verification.html)
 - [technology roadmap](https://mind-upload.com/tech_roadmap.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Basics of WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - Let's organize the overall picture that forms the premise of this argument from the beginning.
 - [Wiki: Homeostatic plasticity and maintenance state](https://github.com/yasufumi-nakata/mind-upload/wiki/homeostatic-plasticity-and-maintenance-state) - We take a deep dive into why intrinsic excitability, sleep-homeostasis, and myelin/metabolic maintenance are separate variables.
 - [Wiki: Decode and Emulate](https://github.com/yasufumi-nakata/mind-upload/wiki/decode-vs-emulate) - Sort out the differences between output translation and internal generation.
 - [Wiki: How to read claims and evidence](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - You can check how much evidence and how strong a claim is allowed.
 
-## いま分かっていること
+## What Is Currently Known
 - Great progress has been made in creating a whole-brain connectome, but this alone does not mean that dynamic reproduction is complete.
 - Synaptic efficiency, activity-dependent transcription / chromatin state, timing-state, thermal-state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, ionic milieu / chloride homeostasis, shared extracellular / electrical state, neuromodulation, bioenergetic / mitochondrial state, neurovascular-unit / BBB / pericyte state, astrocyte-state, clearance / immune support, cell type labels, intrinsic excitability/homeostasis set points, and local proteostasis / synaptic-tagging state are pieces of information that are likely to fall off a static edge list, cargo-transport / cytoskeletal trafficking state is another, and perisynaptic ECM / PNN state is another.
 - Confusing coarse physiological proxies with ground truths makes it easy to overstate claims about internal states.
@@ -33,7 +33,7 @@ What I'm showing here is an arrangement of ``at least removing this will weaken 
 - Conditional predictions can be improved by adding same-brain function, transcriptomics, neuromodulatory dynamics, thermal logs, energetic support, astrocyte-state, neurovascular support, and clearance support, but the improvement depends on the task, time constant, and external validation conditions.
 - Device latency audit and biological timing-state audit are different requirements; passing one does not automatically pass the other.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - It is unclear which state class and resolution should be taken to approach the sufficient condition for WBE.
 - The extent to which missing state variables can be compensated for by estimation or coarse-graining is an issue for future verification.
 - It is not yet fixed which animal/invasive system should be used to calibrate conditions that cannot be directly obtained in humans, including cell-specific timing-state.

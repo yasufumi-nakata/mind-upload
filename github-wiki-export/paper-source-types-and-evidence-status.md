@@ -2,34 +2,34 @@
 
 > Auxiliary page to avoid confusing badge, source, status, and what a paper directly strengthens
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-26 / 位置づけ: Reading guide
+- Updated: 2026-03-26 / Role: Reading guide
 
-## このページの役割
+## Role Of This Page
 This page is an auxiliary page that organizes labels such as ``Scopus,'' ``arXiv,'' ``Review,'' ``Media,'' ``source_logged,'' ``curated,'' and evidence classes that appear in collections and bibliographic maps for beginners. The important thing here is to read these labels separately and understand what information each one represents.
 
-## 正確さの前提
+## Accuracy Notes
 Labels are a reading aid and do not automatically guarantee the correctness of the article content. When using them as evidence, always refer back to the DOI, main text, and primary research.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Collection of papers](https://mind-upload.com/mind_uploading_papers.html)
 - [Literature map](https://mind-upload.com/research_harvest_50.html)
 - [Casework](https://mind-upload.com/verification.html#casework)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: How to read the literature and evidence page](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading) - First, we will clarify the differences in the roles of collections of papers, bibliographic maps, and proposal pages.
 - [Wiki: How to read claims and evidence](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - It helps you understand how to read the 'strength of claim' on the label.
 - [Wiki: U number guide](https://github.com/yasufumi-nakata/mind-upload/wiki/u-number-guide) - This is an auxiliary page to see which open questions are related to the bibliographic map.
 
-## いま分かっていること
+## What Is Currently Known
 - Even for the same document, publication source, document type, site status, and evidence class must be viewed separately.
 - Scopus is an index, arXiv is a preprint storage, and Review is a document type, and they do not have the same meaning.
 - source_logged and curated are labels that indicate how organized this site is.
 - A human PET/MRS/MRI paper can strengthen observability without closing hidden state or proving causal sufficiency.
 - A language demo can strengthen semantic reconstruction, fixed-segment retrieval, known-onset decoding, prompt-conditioned generation, or communication performance without becoming unrestricted thought reading.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - The extent to which individual papers ultimately remain central evidence will depend on subsequent scrutiny.
 - Top stories traced from reviews and news may weaken when returned to primary research.
 

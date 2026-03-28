@@ -2,33 +2,33 @@
 
 > 'Recruited' and 'finished' are two different things
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-14 / 位置づけ: Reading guide
+- Updated: 2026-03-14 / Role: Reading guide
 
-## このページの役割
+## Role Of This Page
 This page is an auxiliary page to help you avoid misreading the status labels that appear on Mind-Upload's proposal and issue pages. There is a difference between a proposal being accepted and implementation and external agreement completed, so we will explain the difference in everyday language.
 
-## 正確さの前提
+## Accuracy Notes
 The explanations here are a reading aid. Be sure to return to the proposal page and issue history for the latest status of individual proposals.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Technical proposal](https://mind-upload.com/issue.html#proposal-integration)
 - [Contribution Guide](https://mind-upload.com/issue.html)
 - [Verification base](https://mind-upload.com/verification.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: How to read the literature and evidence page](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading) - Compensate for how proposal pages differ from literature pages.
 - [Wiki: What to do first in-house and external dependencies](https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies) - This book is for people who want to break down external dependencies into the preparation work that can be done now.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - You can see why achievement conditions and disconfirmation conditions are placed first.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other basic pages.
 
-## いま分かっていること
+## What Is Currently Known
 - Acceptance of the proposal or reflection of the document does not automatically mean completion of the code or collaborative research.
 - For externally dependent tasks, you need to read the preparation on your side and the agreement on the other side separately.
 - Status labels indicate the location of implementation and publication, not scientific certainty per se.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - The extent to which each proposal is ultimately implemented may change as we proceed.
 - The completion timing and conditions of externally dependent tasks cannot be guaranteed by labels alone.
 

@@ -2,28 +2,28 @@
 
 > Even if the accuracy is high, the evaluation will be corrupted if the classification is lax
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-25 / 位置づけ: Practical guide
+- Updated: 2026-03-25 / Role: Practical guide
 
-## このページの役割
+## Role Of This Page
 This page is a wiki that explains from the beginning how to divide datasets and why data leaks are dangerous. The 2026-03 re-audit tightened one more point: a clean split is necessary, but it is still not enough if acquisition-distribution shortcuts or benchmark-governance failures remain hidden.
 
-## 正確さの前提
+## Accuracy Notes
 These are operational rules, not one-size-fits-all formulas. The best split still depends on the task and data structure, and official challenge operations can materially change what a benchmark score means.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Data & Bench](https://mind-upload.com/datasets.html)
 - [Hands-on](https://mind-upload.com/datasets.html#l0-practice)
 - [Verification base](https://mind-upload.com/verification.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: EEG pretreatment and QC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - Compensates for where the preprocessing itself changes the result.
 - [Wiki: EEG foundation models and pretraining](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-foundation-models) - Use this page when benchmark rules, extra pretraining, and leaderboard interpretation start to blur together.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - See why leak prevention is 'part of operations'.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to the overall map of the learning page.
 
-## いま分かっていること
+## What Is Currently Known
 - Accuracy can easily be overestimated if the train/test separation is loose.
 - Apparent performance tends to improve when fragments from the same subject, same session, and near time are included on both sides.
 - In clinical EEG, report text and report-derived labels can also be leakage sources.
@@ -31,7 +31,7 @@ These are operational rules, not one-size-fits-all formulas. The best split stil
 - Even after coarse split hygiene, metadata shortcuts such as site, amplifier, reference, and electrode layout can still dominate the score if disjointness and harmonization are not disclosed.
 - Leaderboard and challenge results are not stable objects unless benchmark provenance and later postmortems are carried together with the score.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - Which division is closest to future actual operation depends on the task setting and usage situation.
 - A deep understanding and auditing of data structures is required to be able to claim that leaks have been completely eliminated.
 - How to standardize report-derived labels from signal-only benchmarks is still in the process of operational design.

@@ -2,32 +2,32 @@
 
 > A short guide for fixing what to look at first for each goal
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-14 / 位置づけ: Reading route
+- Updated: 2026-03-14 / Role: Reading route
 
-## このページの役割
+## Role Of This Page
 This page is a companion guide that explains how to read Mind-Upload in the first 30 minutes depending on your goal. The best first page differs for readers who want the big picture, theory, practical work, literature, or contribution routes.
 
-## 正確さの前提
+## Accuracy Notes
 This page gives short entry routes only. For detailed conditions and exceptions, return to the relevant main pages.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Start Page](https://mind-upload.com)
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki)
 - [Verification base](https://mind-upload.com/verification.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Guide to reading public pages](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - This is for people who want to see the role differences of the entire public page first.
 - [Wiki: Guide to reading theory pages](https://github.com/yasufumi-nakata/mind-upload/wiki/theory-pages-reading-guide) - This is for people who want to read only theory-oriented pages.
 - [Wiki: Guide to reading practical pages](https://github.com/yasufumi-nakata/mind-upload/wiki/practical-pages-reading-guide) - This is for people who want to focus on reading only the pages that involve moving their hands.
 
-## いま分かっていること
+## What Is Currently Known
 - If you just fix your purpose first, you will be much less confused about the order of reading.
 - The first entrance is different for those who want to enter from theory and those who want to enter from practical.
 - In the first 30 minutes, it is important to grasp the ``next direction'' rather than reading everything.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - Which route is ultimately the most efficient depends somewhat on the reader's background knowledge.
 - If the page structure increases in the future, the shortest route may be fine-tuned.
 

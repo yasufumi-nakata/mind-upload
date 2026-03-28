@@ -2,34 +2,34 @@
 
 > Strong language is cheap. Strong evidence is not.
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-26 / 位置づけ: Reading guide
+- Updated: 2026-03-26 / Role: Reading guide
 
-## このページの役割
+## Role Of This Page
 This page turns flashy neuroscience and WBE wording back into claim strength, evidence class, and the minimum route cards needed before the claim can be read strongly. The goal is not to dampen progress, but to stop score inflation and evidence-class collapse at the entrance.
 
-## 正確さの前提
+## Accuracy Notes
 This page stays on the technology and natural-science side. It does not treat a headline, a high score, or one modeling framework as a substitute for disclosed measurement conditions, external validation, or abstention.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Introduction to WBE](https://mind-upload.com/wbe_101.html)
 - [Verification platform](https://mind-upload.com/verification.html)
 - [FAQ](https://mind-upload.com/faq.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Basics of WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - Sets the overall technical picture before claim reading.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Explains why route cards, audits, and preregistration matter operationally.
 - [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - Explains why ESI, DCM, and SCM do not all support the same kind of claim.
 - [Wiki: Measurement-stack observability and claim ceilings](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling) - Shows what each modality directly observes and where the claim ceiling appears.
 
-## いま分かっていること
+## What Is Currently Known
 - Reproducible analysis, decoding, intervention prediction, and identity claims require different evidence floors.
 - The same score can arise from different causal stories, so direct observables and shortcut routes must be separated.
 - Same-subject or same-session human proxy bundles can still leave quantity-type mismatch, cohort-regime mismatch, and common-driver ambiguity unresolved.
 - Recent primary literature supports stricter beginner reading rules for decode, human proxy composition, tractography, effective connectivity, thermodynamic claims, and closed loops.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - It remains unsettled which measurement stack would be sufficient for WBE-level internal-state capture.
 - It remains unresolved how far any future L4 continuity test would justify identity claims.
 

@@ -2,22 +2,22 @@
 
 > Being consistent with observation, understanding internal states, and understanding cause and effect are different things.
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-26 / 位置づけ: Technical / natural science only
+- Updated: 2026-03-29 / Role: Technical / natural science only
 
-## このページの役割
+## Role Of This Page
 This page is a wiki that organizes where to stop making claims and what to add to make them even stronger when estimating brain states and causal structures from observational signals such as EEG. Connect forward problems, inverse problems, ESI, DCM, SCM, and causal equivalence classes in the order of ``observation → estimation → intervention → validation.''
 
-## 正確さの前提
+## Accuracy Notes
 This is not a fixed recipe for which method to use. This page first fixes audit items that cannot be avoided no matter what method you use.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Introduction to EEG](https://mind-upload.com/eeg_101.html)
 - [Verification platform](https://mind-upload.com/verification.html)
 - [technology roadmap](https://mind-upload.com/tech_roadmap.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: From measurement to modeling](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-and-modeling-terms) - You can return to the overall map of measurement, organization, estimation, and verification.
 - [Wiki: EEG pretreatment and QC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - In the first stage of estimation, we compensate for what changes the results.
 - [Wiki: Uncertainty, proofreading, abstaining](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention) - Instead of point estimation, we supplement the width and how to leave conditions for abstention.
@@ -26,17 +26,19 @@ This is not a fixed recipe for which method to use. This page first fixes audit 
 - [Wiki: State-Continuity Bridge](https://github.com/yasufumi-nakata/mind-upload/wiki/state-continuity-bridge) - Use this when same-subject or same-brain linkage is sequential across live, fixed, or cross-day stages.
 - [Wiki: Counterfactuals/Interventions/Perturbations](https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification) - It supplements the conditions for proceeding from observational adaptation to intervention validation.
 
-## いま分かっていること
+## What Is Currently Known
 - In principle, it is difficult to uniquely determine brain activity from scalp EEG, and estimation requires assumptions.
 - High-density EEG, individualized MRI, FEM/BEM, and empirical Bayesian estimation can improve conditions, but alone do not guarantee unique recovery.
 - More direct observables do not by themselves guarantee unique recovery; degeneracy can persist unless candidate space, recorded subset, and experiment design are exposed.
+- Ambiguity is not one scalar; symmetry / reparameterization, narrow-regime degeneracy, omitted-mechanism discrepancy, and representation ambiguity require different fixes.
 - Simultaneous multimodal acquisition can still retain shared and modality-specific structure, so a richer stack does not by itself define one validated latent target.
 - For ESI, method/package/parameter choice can materially move the estimated source, so stability across standard pipelines is part of the claim.
+- In effective connectivity, hidden nodes/common drives, node-definition choices, and sampling or observation transforms are separate failure modes; a winning model comparison does not erase them.
 - Same-brain or same-subject linkage can still be a sequential bridge rather than same-state evidence.
 - The causal structure cannot be determined by observational fit alone; a set of candidate models and an intervention design are required.
 - Whole-brain or faster DCM improves tractability, but does not erase candidate-model dependence or observation-model assumptions.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - It remains unclear which measurement/modeling combination is most effective for validating WBE.
 - Research is currently underway to determine how detailed the causal structure and state variables can be stably restored using non-invasive measurements alone.
 - How much same-session multimodal fusion, sequential same-brain linkage, and connectome-constrained prediction can jointly narrow the candidate set without recreating hidden-state ambiguity remains unresolved.
@@ -131,6 +133,50 @@ One remaining weakness in inverse-problem discussions is to let <strong>"more me
 <strong>2026-03-20 deepening: similar outputs do not prove similar internal states</strong>
 <p>
 This separation is not only a control-theory point. <a href="https://doi.org/10.1038/nn1352" target="_blank">Prinz et al. (2004)</a> showed that similar circuit activity can arise from disparate parameters, <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">Rasero et al. (2024)</a> showed that similar human activation patterns can still hide different macroscopic network states, and <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that even connectome-constrained recurrent networks remain degenerate until additional recordings are supplied. <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">Liu et al. (2025)</a> then showed that practical identifiability depends on data-collection policy, not only on the fitting method. On this site, that means <strong>observability</strong> and <strong>identifiability</strong> are audited separately.
+</p>
+
+<h2>Name the ambiguity class before saying more data will help</h2>
+<p>
+One remaining weakness was to describe all non-uniqueness as if it were one scalar problem of simply needing <strong>more data</strong>. The primary literature does not support that shortcut. <a href="https://doi.org/10.3390/sym12030469" target="_blank">Massonis &amp; Villaverde (2020)</a> showed that structural unidentifiability can come from <strong>symmetry</strong> and may require symmetry-breaking observables or reformulation. <a href="https://doi.org/10.1038/nn1352" target="_blank">Prinz et al. (2004)</a> and <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that different parameters can still generate near-equivalent dynamics even when connectivity is fixed. <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">White et al. (2016)</a> showed that complementary experiments can mainly expose <strong>omitted mechanisms</strong> rather than identify the intended parameters. <a href="https://doi.org/10.1038/s41593-025-01869-7" target="_blank">Langdon &amp; Engel (2025)</a> showed that preserving <strong>causal interactions among task variables</strong> can recover behaviorally relevant computations that correlation-only reductions miss. On this site, a stronger protocol therefore has to name <strong>which ambiguity class</strong> survives first.
+</p>
+<table>
+<thead>
+<tr>
+<th>Ambiguity class</th>
+<th>How it fools the reader</th>
+<th>What would actually raise the claim ceiling</th>
+<th>What this site still refuses to count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Symmetry / reparameterization ambiguity</strong></td>
+<td>Several parameter or state transformations produce the same declared outputs, so a good fit looks unique when it is not.</td>
+<td>Add a symmetry-breaking observable, a known input / initial condition, or a reformulation that removes the hidden transformation.</td>
+<td>More fitting time, more random restarts, or more repeats of the same uninformative protocol.</td>
+</tr>
+<tr>
+<td><strong>Regime-restricted degeneracy</strong></td>
+<td>Different internal states or parameter sets agree inside one narrow operating regime and only diverge outside it.</td>
+<td>Use state transitions, persistent excitation, targeted recordings, or perturbation contrasts that make the surviving candidates separate.</td>
+<td>More passive samples from the same regime when the alternatives remain co-linear.</td>
+</tr>
+<tr>
+<td><strong>Model-family / omitted-mechanism ambiguity</strong></td>
+<td>An approximate model appears well identified until a complementary condition reveals systematic residuals or missing mechanisms.</td>
+<td>Run a discrepancy stress test, compare richer / alternative model families, and require held-out falsification rather than post hoc explanation.</td>
+<td>Narrower intervals inside one misspecified family or one headline accuracy gain.</td>
+</tr>
+<tr>
+<td><strong>Task-variable interaction / representation ambiguity</strong></td>
+<td>A latent factor or reduced representation predicts correlations but misses the interaction structure that actually drives behavior.</td>
+<td>Preserve or perturb the task-variable interaction, and compare the intervention-side predictions of the competing representations.</td>
+<td>Correlation-only dimensionality reduction, generic multimodal fusion, or interpretability language without perturbation.</td>
+</tr>
+</tbody>
+</table>
+<p>
+If the apparent ambiguity mainly comes from shared modality drivers or physiology-linked common factors, this site routes the claim to the <a href="https://mind-upload.com/verification.html#fusion-card">Fusion Card</a> instead of calling it solved identification.
 </p>
 
 <h2>Richer conditioning is not candidate-set closure</h2>
@@ -288,6 +334,11 @@ DCM is a framework that specifies candidate generative models and compares them 
 The weak point here was not that it separated DCM from SCM, but that scaling advances could still be overread as if they had solved identifiability. <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">Rosa et al. (2012)</a> showed that DCM can search a potentially huge model space quickly from one full model, <a href="https://doi.org/10.1002/hbm.23061" target="_blank">Frässle et al. (2016)</a> showed that reliability itself must be checked rather than assumed, <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">Frässle et al. (2021)</a> pushed directed-connectivity estimation to whole-brain human fMRI, and <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">Wu et al. (2024)</a> reduced computation time further. Those are real advances in tractability, but they still operate inside explicit choices about node set, priors, hemodynamics, and omitted competitors. Therefore, on this site, scaling is read as <strong>better searchability of candidate models</strong>, not as automatic causal discovery.
 </p>
 
+<strong>2026-03-29 deepening: directed graphs still fail under partial observation, node policy, and sampling transforms</strong>
+<p>
+The remaining weakness after adding a route card was that <strong>candidate model space</strong> could still be read too narrowly, as if it already covered the practically important failure modes of a directed graph. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuroimage.2010.08.063" target="_blank">Smith et al. (2011)</a> showed in a large simulation benchmark that lag-based approaches perform poorly for fMRI and that <strong>functionally inaccurate ROIs</strong> are especially damaging to network estimation. <a href="https://doi.org/10.1016/j.jneumeth.2016.10.016" target="_blank">Barnett &amp; Seth (2017)</a> then showed that subsampling can create <strong>detectability black spots</strong> for Granger-causal interactions rather than a simple monotonic loss. <a href="https://doi.org/10.1007/s10548-020-00757-6" target="_blank">Vink et al. (2020)</a> showed in TMS-EEG that resting-state EEG functional connectivity explains <strong>less than 10% of the variance</strong> in evoked propagation and varies substantially across stimulation sites and participants. <a href="https://doi.org/10.1002/hbm.70285" target="_blank">Novelli et al. (2025)</a> refined the hemodynamic objection: if the HRF is minimum-phase, HRF variability alone need not create false positives across a wide range of plausible parameters, but <strong>slow BOLD sampling</strong> can still induce spurious Granger-causal inference. Most recently, <a href="https://doi.org/10.1109/TPAMI.2026.3658839" target="_blank">Yan et al. (2026)</a> showed that dynamical causal inference under <strong>latent confounders</strong> remains an active method-development problem in biological network reconstruction. Therefore, on this site, effective-connectivity claims must now separate <strong>observed-subsystem closure / latent-confound audit</strong>, <strong>node-definition policy</strong>, and <strong>sampling / transformation sensitivity</strong> from the older questions of model comparison and external validation.
+</p>
+
 <h2>Effective-connectivity route card</h2>
 <table>
 <thead>
@@ -304,9 +355,24 @@ The weak point here was not that it separated DCM from SCM, but that scaling adv
 <td>It blocks “the best compared model” from being rephrased as “the true circuit was found.”</td>
 </tr>
 <tr>
+<td><strong>Observed subsystem / latent-confound audit</strong></td>
+<td>Name which candidate hidden nodes, common drives, instantaneous interactions, or unmeasured exogenous inputs remain outside the observed subsystem, what sensitivity analysis or latent-confound method was used, and whether the reported directions survive that audit.</td>
+<td>It blocks a partial recording or atlas-defined subgraph from sounding like a causally closed system.</td>
+</tr>
+<tr>
+<td><strong>Node-definition policy</strong></td>
+<td>State how ROIs or nodes were defined, whether alternative parcellations / functional localizers / decompositions were tested, and whether edge directions or family ranking change materially across those alternatives.</td>
+<td>It blocks one directed graph from sounding node-invariant when the result actually depends on the chosen parcellation or ROI recipe.</td>
+</tr>
+<tr>
 <td><strong>Observation model and priors</strong></td>
 <td>Neural-mass assumptions, linearization, HRF choice, mean-field or independence assumptions, sparsity priors, and any structural constraints.</td>
 <td>It blocks “effective connectivity” from sounding as if the result were independent of hemodynamic and prior assumptions.</td>
+</tr>
+<tr>
+<td><strong>Sampling / transformation sensitivity</strong></td>
+<td>State the sampling interval relative to the neural delays of interest, filtering or deconvolution choices, HRF / observation-transform assumptions, and whether inferred directions survive plausible transform alternatives or only one time-resolution regime.</td>
+<td>It blocks directed-lag estimates from sounding biologically directional when they may still be shaped by sampling, filtering, or observation transforms.</td>
 </tr>
 <tr>
 <td><strong>Family comparison / model recovery</strong></td>
@@ -331,7 +397,7 @@ The weak point here was not that it separated DCM from SCM, but that scaling adv
 </tbody>
 </table>
 <p>
-If this card is missing, this site stops at <strong>model-conditioned causal hypothesis</strong>. A whole-brain DCM graph, a regression DCM estimate, or an activity-flow-compatible diagram is not promoted here to discovered wiring merely because it is dense, scalable, or predictive.
+If this card is missing, this site stops at <strong>model-conditioned causal hypothesis</strong>. A whole-brain DCM graph, an atlas-wide regression DCM estimate, or an activity-flow-compatible diagram is not promoted here to discovered wiring merely because it is dense, scalable, atlas-complete, or predictive.
 </p>
 
 <h2>Identifiability card for inverse and model-based claims</h2>
@@ -365,9 +431,24 @@ If this card is missing, this site stops at <strong>model-conditioned causal hyp
 <td>It blocks one good fit from sounding like the only explanation.</td>
 </tr>
 <tr>
+<td><strong>Design objective</strong></td>
+<td>Name whether the next condition was chosen to optimize practical identifiability, model discrimination, posterior contraction, profile-likelihood width, or another declared criterion, and say explicitly if the choice was driven only by convenience, prediction score, or a sloppiness proxy.</td>
+<td>It blocks a richer protocol from sounding informative merely because some generic score improved.</td>
+</tr>
+<tr>
 <td><strong>Experiment-design leverage</strong></td>
-<td>Name which perturbations, tasks, or active data-collection choices were used to reduce degeneracy, and say explicitly if the evidence is passive only.</td>
+<td>Name which unresolved ambiguity the protocol targeted, which orthogonal perturbations, regime shifts, targeted recordings, or active data-collection choices were used to reduce it, which identifiability objective selected them, and say explicitly if the evidence is passive only.</td>
 <td>It blocks "better prediction" from being rephrased as "solved identification."</td>
+</tr>
+<tr>
+<td><strong>Model-discrepancy stress test</strong></td>
+<td>Report whether the new condition exposed systematic residuals, failed fits, or omitted mechanisms, what hierarchy of richer or alternative models was checked, and whether the protocol was revised after that stress test.</td>
+<td>It blocks tighter nominal parameter estimates from being overread when the design only forced hidden model error into view.</td>
+</tr>
+<tr>
+<td><strong>Minimum-sufficiency stop rule</strong></td>
+<td>State the smallest condition/time-point/recording set required to raise the claim, the stopping threshold on uncertainty or overlap, and how much ambiguity remained once that minimum design was reached.</td>
+<td>It blocks endless data collection from sounding like solved identifiability.</td>
 </tr>
 <tr>
 <td><strong>Recorded subset and abstention</strong></td>
@@ -376,6 +457,12 @@ If this card is missing, this site stops at <strong>model-conditioned causal hyp
 </tr>
 </tbody>
 </table>
+
+<strong>2026-03-28 deepening: informative experiments must optimize identifiability, stress omitted mechanisms, and declare minimum sufficiency</strong>
+<p>
+This card needed one more tightening step. <a href="https://doi.org/10.1109/CDC.1991.261405" target="_blank">Diop &amp; Fliess (1991)</a> made persistent trajectories explicit, and <a href="https://doi.org/10.1063/1.3528102" target="_blank">Raue et al. (2010)</a> showed that identifiability analysis can guide new experiments rather than only criticize old ones. <a href="https://doi.org/10.1016/j.mbs.2016.10.009" target="_blank">Chis et al. (2016)</a> then showed that <strong>sloppiness is not identifiability</strong> and that design should optimize explicit identifiability criteria rather than proxy notions of being merely less sloppy. <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">White et al. (2016)</a> showed that complementary experiments can make previously omitted mechanisms relevant, so a nominally more informative design can simultaneously create large <strong>model discrepancy</strong>. In neurophysiology, <a href="https://doi.org/10.1162/neco.2008.08-07-594" target="_blank">Lewi et al. (2009)</a> showed that adaptive information-maximizing stimuli can accelerate parameter learning, and <a href="https://doi.org/10.1371/journal.pcbi.1011342" target="_blank">Gontier et al. (2023)</a> brought that logic to synaptic characterization. In current systems neuroscience, <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that a <strong>small targeted recording set</strong> can remove degeneracy in connectome-constrained networks and even prioritize which neurons should be recorded next, while <a href="https://doi.org/10.1038/s41593-025-01869-7" target="_blank">Langdon &amp; Engel (2025)</a> showed that preserving <strong>causal interactions among task variables</strong> can recover behaviorally relevant computation that correlation-only reductions miss. <a href="https://doi.org/10.1038/s41540-023-00325-1" target="_blank">Gevertz &amp; Kareva (2024)</a> then showed that identifiability analysis can derive a <strong>minimally sufficient</strong> schedule, and <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">Liu et al. (2025)</a> showed that active learning can reduce the observations needed to reach practical identifiability. Therefore, on this site, a stronger ambiguity-breaking design now has to answer four extra questions: <strong>Which identifiability objective chose the next condition?</strong> <strong>Why is the added regime or recording panel orthogonal enough to separate the survivors?</strong> <strong>Did the new condition expose omitted-mechanism error?</strong> and <strong>What minimum-sufficiency design would have been enough to stop?</strong> The submission-side operational version is <a href="https://mind-upload.com/verification.html#experiment-design-leverage">Verification: experiment-design leverage</a>.
+</p>
+
 <p>
 If this card is missing, this site stays at <strong>observed-fit / candidate-model</strong> level. The submission-side operational version is <a href="https://mind-upload.com/verification.html#identifiability-card">Verification: Identifiability Card</a>.
 </p>
@@ -452,6 +539,11 @@ DCM is useful for comparing neural circuit candidate generation models, and SCM 
 <li>Frässle, S., Manjaly, Z. M., Do, C. T., Kasper, L., Pruessmann, K. P., &amp; Stephan, K. E. (2021). Whole-brain estimates of directed connectivity for human connectomics. <em>NeuroImage</em>, 225, 117491. <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">doi:10.1016/j.neuroimage.2020.117491</a></li>
 <li>Wu, H., Hu, X., &amp; Zeng, Y. (2024). A fast dynamic causal modeling regression method for fMRI. <em>NeuroImage</em>, 304, 120954. <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">doi:10.1016/j.neuroimage.2024.120954</a></li>
 <li>Jafarian, A., Assem, M. K., Kocagoncu, E., et al. (2024). Reliability of dynamic causal modelling of resting-state magnetoencephalography. <em>Human Brain Mapping</em>. <a href="https://doi.org/10.1002/hbm.26782" target="_blank">doi:10.1002/hbm.26782</a></li>
+<li>Smith, S. M., Miller, K. L., Salimi-Khorshidi, G., Webster, M., Beckmann, C. F., Nichols, T. E., Ramsey, J. D., &amp; Woolrich, M. W. (2011). Network modelling methods for FMRI. <em>NeuroImage</em>, 54(2), 875-891. <a href="https://doi.org/10.1016/j.neuroimage.2010.08.063" target="_blank">doi:10.1016/j.neuroimage.2010.08.063</a></li>
+<li>Barnett, L., &amp; Seth, A. K. (2017). Detectability of Granger causality for subsampled continuous-time neurophysiological processes. <em>Journal of Neuroscience Methods</em>, 275, 93-121. <a href="https://doi.org/10.1016/j.jneumeth.2016.10.016" target="_blank">doi:10.1016/j.jneumeth.2016.10.016</a></li>
+<li>Vink, J. J. T., Klooster, D. C. W., Ozdemir, R. A., Westover, M. B., Pascual-Leone, A., &amp; Shafi, M. M. (2020). EEG Functional Connectivity is a Weak Predictor of Causal Brain Interactions. <em>Brain Topography</em>, 33(2), 221-237. <a href="https://doi.org/10.1007/s10548-020-00757-6" target="_blank">doi:10.1007/s10548-020-00757-6</a></li>
+<li>Novelli, L., Barnett, L., Seth, A. K., &amp; Razi, A. (2025). Minimum-Phase Property of the Hemodynamic Response Function, and Implications for Granger Causality in fMRI. <em>Human Brain Mapping</em>, 46(10), e70285. <a href="https://doi.org/10.1002/hbm.70285" target="_blank">doi:10.1002/hbm.70285</a></li>
+<li>Yan, J., Zhang, S.-W., Zhang, C., Huang, W., Shi, J., &amp; Chen, L. (2026). Dynamical Causality under Latent Confounders for Biological Network Reconstruction. <em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em>. <a href="https://doi.org/10.1109/TPAMI.2026.3658839" target="_blank">doi:10.1109/TPAMI.2026.3658839</a></li>
 <li>Hauser, A., &amp; Buhlmann, P. (2012). Characterization and greedy learning of interventional Markov equivalence classes of directed acyclic graphs. <em>Journal of Machine Learning Research</em>, 13, 2409-2464. <a href="https://jmlr.org/papers/v13/hauser12a.html" target="_blank">JMLR</a></li>
 <li>Vink, J. J., Ramos-Nuñez, A. I., Bellesi, A., et al. (2020). The brain's functional connectome is a poor predictor of the brain's causal activity flow. <em>PLOS Computational Biology</em>, 16(1), e1007866. <a href="https://doi.org/10.1371/journal.pcbi.1007866" target="_blank">doi:10.1371/journal.pcbi.1007866</a></li>
 <li>Villaverde, A. F. (2019). Observability and Structural Identifiability of Nonlinear Biological Systems. <em>Complexity</em>, 2019, 8497093. <a href="https://doi.org/10.1155/2019/8497093" target="_blank">doi:10.1155/2019/8497093</a></li>
@@ -459,6 +551,14 @@ DCM is useful for comparing neural circuit candidate generation models, and SCM 
 <li>Prinz, A. A., Bucher, D., &amp; Marder, E. (2004). Similar network activity from disparate circuit parameters. <em>Nature Neuroscience</em>, 7, 1345-1352. <a href="https://doi.org/10.1038/nn1352" target="_blank">doi:10.1038/nn1352</a></li>
 <li>Rasero, J., Betzel, R., Sentis, A. I., Kraynak, T. E., Gianaros, P. J., &amp; Verstynen, T. (2024). Similarity in evoked responses does not imply similarity in macroscopic network states. <em>Network Neuroscience</em>, 8(1), 335-354. <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">doi:10.1162/netn_a_00354</a></li>
 <li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <em>Nature Neuroscience</em>, 28, 2561-2574. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
+<li>Langdon, C., &amp; Engel, T. A. (2025). Latent circuit inference from heterogeneous neural responses during cognitive tasks. <em>Nature Neuroscience</em>, 28, 665-675. <a href="https://doi.org/10.1038/s41593-025-01869-7" target="_blank">doi:10.1038/s41593-025-01869-7</a></li>
+<li>Diop, S., &amp; Fliess, M. (1991). Nonlinear observability, identifiability, and persistent trajectories. <em>Proceedings of the 30th IEEE Conference on Decision and Control</em>, 714-719. <a href="https://doi.org/10.1109/CDC.1991.261405" target="_blank">doi:10.1109/CDC.1991.261405</a></li>
+<li>Raue, A., Becker, V., Klingmüller, U., &amp; Timmer, J. (2010). Identifiability and observability analysis for experimental design in nonlinear dynamical models. <em>Chaos</em>, 20(4), 045105. <a href="https://doi.org/10.1063/1.3528102" target="_blank">doi:10.1063/1.3528102</a></li>
+<li>Chis, O.-T., Villaverde, A. F., Banga, J. R., &amp; Balsa-Canto, E. (2016). On the relationship between sloppiness and identifiability. <em>Mathematical Biosciences</em>, 282, 147-161. <a href="https://doi.org/10.1016/j.mbs.2016.10.009" target="_blank">doi:10.1016/j.mbs.2016.10.009</a></li>
+<li>Lewi, J., Butera, R., &amp; Paninski, L. (2009). Sequential Optimal Design of Neurophysiology Experiments. <em>Neural Computation</em>, 21(3), 619-687. <a href="https://doi.org/10.1162/neco.2008.08-07-594" target="_blank">doi:10.1162/neco.2008.08-07-594</a></li>
+<li>Gontier, C., Surace, S. C., Delvendahl, I., Müller, M., &amp; Pfister, J.-P. (2023). Efficient sampling-based Bayesian Active Learning for synaptic characterization. <em>PLOS Computational Biology</em>, 19(8), e1011342. <a href="https://doi.org/10.1371/journal.pcbi.1011342" target="_blank">doi:10.1371/journal.pcbi.1011342</a></li>
+<li>White, A., Tolman, M., Thames, H. D., Withers, H. R., Mason, K. A., &amp; Transtrum, M. K. (2016). The limitations of model-based experimental design and parameter estimation in sloppy systems. <em>PLOS Computational Biology</em>, 12(12), e1005227. <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">doi:10.1371/journal.pcbi.1005227</a></li>
+<li>Gevertz, J. L., &amp; Kareva, I. (2024). Minimally sufficient experimental design using identifiability analysis. <em>npj Systems Biology and Applications</em>, 10, 2. <a href="https://doi.org/10.1038/s41540-023-00325-1" target="_blank">doi:10.1038/s41540-023-00325-1</a></li>
 <li>Liu, X., Wanika, L., Chappell, M. J., &amp; Branke, J. (2025). Efficient data collection for establishing practical identifiability via active learning. <em>Computational and Structural Biotechnology Journal</em>, 27, 4992-5006. <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">doi:10.1016/j.csbj.2025.10.058</a></li>
 <li>Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <em>Nature Communications</em>, 15, 229. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
 <li>Chen, J. E., Lewis, L. D., Coursey, S. E., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <em>Nature Communications</em>, 16, 8887. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>

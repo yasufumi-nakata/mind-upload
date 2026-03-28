@@ -2,32 +2,32 @@
 
 > Next page guide to avoid mixing argument strength, design principles, long notes, and dependency maps
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-14 / 位置づけ: Theory route
+- Updated: 2026-03-14 / Role: Theory route
 
-## このページの役割
+## Role Of This Page
 This page is an auxiliary guide to help you decide which direction to dig deeper into theory after reading WBE 101. The next page will change depending on whether you want to avoid misreading the news, know the design principles, follow the supporting points and limitations of the main theory in a long text, or find out which technical problem the theory falls into.
 
-## 正確さの前提
+## Accuracy Notes
 What is shown here is the next entrance to WBE 101. Please be sure to check the main text of the original page for each theory and design conditions themselves.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Introduction to WBE](https://mind-upload.com/wbe_101.html)
 - [Research Notes](https://mind-upload.com/perspective.html)
 - [Theoretical Frame](https://mind-upload.com/perspective.html#design-principles)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Guide to reading theory pages](https://github.com/yasufumi-nakata/mind-upload/wiki/theory-pages-reading-guide) - For those who want to return to the role differences across the theory pages.
 - [Wiki: Theory of Consciousness Map](https://github.com/yasufumi-nakata/mind-upload/wiki/consciousness-theory-map) - This is for people who are stopped by the difference between IIT, GNWT, FEP, and PCI.
 - [Wiki: Identity and copying issues](https://github.com/yasufumi-nakata/mind-upload/wiki/personhood-and-copy-problem) - This is for people who are stopped due to identity issues or copying issues.
 
-## いま分かっていること
+## What Is Currently Known
 - The theory page you should read next after WBE 101 will change depending on what you want to know.
 - FAQ is a list of misconceptions, Idea is a design principle, Perspective is a long note, and Roadmap is a map of dependencies.
 - Even when digging deeply into theory, if you fix the role differences between pages first, you will reduce misreadings.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - Which combination of theories will ultimately be a sufficient condition is still undetermined.
 - Which theory pages will be expanded independently in the future will change depending on the accumulation of points.
 

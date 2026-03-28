@@ -2,32 +2,32 @@
 
 > A guide to using the page intro, known/unknown, wiki links, and overview as an entry point
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-06 / 位置づけ: Reading guide
+- Updated: 2026-03-06 / Role: Reading guide
 
-## このページの役割
+## Role Of This Page
 This page is a companion wiki that explains how to read the guidance blocks that commonly appear at the top of public pages. Before entering the main text, it helps you align the role of the page, the boundaries of its claims, and the route back to the learning wiki.
 
-## 正確さの前提
+## Accuracy Notes
 This page explains reading rules. For the facts and technical conditions behind any specific point, always return to the main text of the relevant public page.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Start Page](https://mind-upload.com)
 - [Verification base](https://mind-upload.com/verification.html)
 - [Public Content Integration Hub](https://mind-upload.com/content_hub.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Guide to reading public pages](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - Click here if you want to know the differences in the roles of pages.
 - [Wiki: How to read 'What we know/what we don't know'](https://github.com/yasufumi-nakata/mind-upload/wiki/known-unknown-and-status-reading) - You can find out more about the meaning of known / unknown.
 - [Wiki: 3 ways to use this site](https://github.com/yasufumi-nakata/mind-upload/wiki/site-usage-modes) - We will organize how to use this site as a whole: entry, learning, and participation.
 
-## いま分かっていること
+## What Is Currently Known
 - Public pages begin with a common format for the page's role, intended audience, accuracy assumptions, known/unknown, and wiki navigation.
 - By simply reading the opening block before entering the main text, you can decide whether to use the page as an entry point or return to the wiki first.
 - Even if the page is long, if you use the guide and floor plan at the beginning, it will be easier to avoid the situation where you have to read the entire page to understand.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - It is not possible to make a final judgment on individual points just by looking at the opening block.
 - The contents of wiki links and recommended pages are not fixed because the depth required for each page is different.
 

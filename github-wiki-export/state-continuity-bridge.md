@@ -2,38 +2,40 @@
 
 > Same-subject solves specimen identity, not same-state continuity
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-25 / 位置づけ: Technical / natural science only
+- Updated: 2026-03-28 / Role: Technical / natural science only
 
-## このページの役割
+## Role Of This Page
 This page explains why a result can be same-subject or same-brain and still fail to be one state sample. The bridge problem appears whenever a claim depends on linking measurements acquired at different times, under different regimes, or after tissue transformation.
 
-## 正確さの前提
+## Accuracy Notes
 The bridge ceilings on this page are site-level inferences drawn from primary literature about preservation, correlative registration, spontaneous state fluctuation, and biological turnover.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Verification](https://mind-upload.com/verification.html)
 - [WBE 101](https://mind-upload.com/wbe_101.html)
 - [Technical Roadmap](https://mind-upload.com/tech_roadmap.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Human Proxy Composition and Route Maturity](https://github.com/yasufumi-nakata/mind-upload/wiki/human-proxy-composition) - Use this when several living-human proxy rows are combined and the bridge problem is one part of a larger composition problem.
 - [Wiki: State, Trait, And Drift](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - Use this when the bridge crosses hours to days and temporal validity rather than specimen transformation becomes the main problem.
 - [Wiki: Observability And Claim Ceiling By Measurement Stack](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling) - Places bridge-limited claims inside the broader modality ceiling table.
 - [Wiki: Homeostatic Plasticity And Maintenance State](https://github.com/yasufumi-nakata/mind-upload/wiki/homeostatic-plasticity-and-maintenance-state) - Lists the hidden-state families that can drift across a bridge window.
 
-## いま分かっていること
+## What Is Currently Known
 - Preservation route and fixation protocol materially affect ultrastructural geometry and downstream staining or registration.
 - Correlative live-to-EM workflows need explicit landmarks, targeted subvolumes, and bridge validation rather than a simple same-brain label.
 - Adult synaptic structures and ongoing behavioral state can change over bridge windows that are relaxed or left implicit.
 - Same-subject wording can support specimen identity while still failing same-state continuity.
 - Different bridge classes threaten different state families first, so elapsed time alone is not a sufficient bridge summary.
+- Stable scores can be carried by different objects such as landmarks, latent manifolds, representational geometry, or feature fingerprints, so the carried object has to be named before a bridge is read strongly.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - There is still no general bridge protocol that yields field-ready same-state evidence across live, ex vivo, and destructive stages at whole-brain scale.
 - Which hidden-state families are tolerable to bridge by calibration rather than direct measurement remains unresolved.
 - The strongest bridge-validation rung achievable in living humans is still limited and route-dependent.
+- Which carried objects and tolerance rules are strongest for cross-regime bridge validation remains unresolved.
 
 ---
 
@@ -58,6 +60,11 @@ The operational submission rule lives in <a href="https://mind-upload.com/verifi
 <strong>What this page does not do</strong>
 <p>
 This page does not discuss personal identity, law, or ethics. The question here is narrower: <strong>when is a sequential bridge scientifically strong enough to support same-state language, and when is it not?</strong>
+</p>
+
+<strong>2026-03-28 addendum: a bridge needs a carried object and a tolerance budget</strong>
+<p>
+The remaining weakness after the earlier bridge tightening was that the page still let readers talk about <strong>bridge burden</strong> mainly through elapsed time and regime shift, while leaving the <strong>carried object</strong> too implicit. The primary literature does not support that shortcut. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a> and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> show that correlative same-brain workflows carry explicit <strong>landmarks</strong>, <strong>targeted subvolumes</strong>, or local structure-function correspondences rather than one global state object. <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">Gallego et al. (2020)</a> show that a <strong>latent manifold</strong> can remain stable despite turnover in recorded neurons, <a href="https://doi.org/10.1038/s41467-023-40144-w" target="_blank">Roth &amp; Merriam (2023)</a> show that <strong>representational geometry</strong> can stay more stable than response amplitude, and <a href="https://doi.org/10.1038/s41593-025-01982-7" target="_blank">Noda et al. (2025)</a> show that a population-level <strong>representational map</strong> can recover after selective neuron loss. <a href="https://doi.org/10.1126/sciadv.abj0751" target="_blank">Van De Ville et al. (2021)</a> and <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a> further show that <strong>fingerprint-like identifiability</strong> depends on timescale and feature family. Finally, <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a>, <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> show that stable use across time can depend on alignment, recalibration, or a short fixed-decoder horizon. Therefore, on this site, a bridge now has to name the <strong>carried object / witness</strong> and the <strong>tolerance / failure rule</strong> that decide whether the bridge still held.
 </p>
 
 <h2>One bridge, four different continuity claims</h2>
@@ -95,6 +102,52 @@ The core overread is to collapse several continuity questions into one label suc
 </tr>
 </tbody>
 </table>
+
+<h2>A bridge must name what is supposed to survive</h2>
+<p>
+One remaining weakness in public same-subject or same-brain language is that it can still sound as if the bridge automatically carries <strong>the whole state</strong>. The primary literature instead points to several different candidate objects, each with its own failure mode. Therefore, on this site, bridge critique starts by asking <strong>what exact object is claimed to survive the bridge</strong>, not only <strong>how long the bridge lasted</strong>.
+</p>
+<table>
+<thead>
+<tr>
+<th>Carried object / witness</th>
+<th>What it can support if explicitly validated</th>
+<th>What it still does not support by itself</th>
+<th>Representative literature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Landmarks / targeted subvolume / local correspondence</strong></td>
+<td>Local cross-stage linkage of the same vessel field, targeted cells, probe site, or subvolume.</td>
+<td>Whole-brain same-state capture, deformation-free global identity, or maintenance-complete continuity.</td>
+<td><a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a>; <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a></td>
+</tr>
+<tr>
+<td><strong>Latent manifold / low-dimensional dynamics</strong></td>
+<td>Stable control or decoding through a preserved low-dimensional population object even when the recorded units change.</td>
+<td>Raw-unit continuity, unchanged interface, or proof that the whole biological state stayed fixed.</td>
+<td><a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">Gallego et al. (2020)</a>; <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a></td>
+</tr>
+<tr>
+<td><strong>Representational geometry / map</strong></td>
+<td>Population-level relation among stimuli or task conditions can stay organized even while some amplitudes or individual units drift.</td>
+<td>Unchanged voxel amplitudes, unchanged single cells, or one universal latent state.</td>
+<td><a href="https://doi.org/10.1038/s41467-023-40144-w" target="_blank">Roth &amp; Merriam (2023)</a>; <a href="https://doi.org/10.1038/s41593-025-01982-7" target="_blank">Noda et al. (2025)</a></td>
+</tr>
+<tr>
+<td><strong>Fingerprint feature family</strong></td>
+<td>Same-person identifiability within a declared regime and timescale.</td>
+<td>One state-invariant backbone object, same-state continuity across regimes, or equivalence of different feature families.</td>
+<td><a href="https://doi.org/10.1126/sciadv.abj0751" target="_blank">Van De Ville et al. (2021)</a>; <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a></td>
+</tr>
+</tbody>
+</table>
+
+<strong>Performance rescue is not the same thing as raw continuity</strong>
+<p>
+The carried object also has to be separated from the <strong>rescue route</strong>. <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a> stabilized decoding by aligning recordings to a consistent latent-dynamics object. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> maintained long-term cursor control through unsupervised recalibration under accumulating neural changes, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> reported a noticeable decline in a fixed brain-to-voice decoder after about <strong>15 days</strong>. Therefore, on this site, a bridge cannot claim continuity from a stable score alone. It also has to say whether the result depended on <strong>alignment</strong>, <strong>retraining / recalibration</strong>, or only a short <strong>fixed-decoder horizon</strong>.
+</p>
 
 <h2>What the primary literature now supports</h2>
 
@@ -155,6 +208,42 @@ The site now reads bridge validation as graded rather than binary. These rungs a
 <td><strong>Rung 4: correspondence plus matched perturbation or repeated validation</strong></td>
 <td>The bridge is checked not only anatomically but also against a repeated or perturbation-linked relation that would fail if the bridge drifted too far.</td>
 <td>Strongest currently plausible <strong>local</strong> same-bridge evidence, still below whole-brain or maintenance-complete continuity.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>A bridge needs a tolerance and failure rule, not only a workflow label</h2>
+<p>
+After naming the carried object, the next scientific burden is to say <strong>how much mismatch is still allowed</strong> before the bridge fails. Without that tolerance budget, even a sophisticated workflow can become a narrative bridge rather than a validated one.
+</p>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>What must be disclosed</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>What is the carried object?</strong></td>
+<td>Name whether the bridge carries landmarks, a targeted subvolume, a local response template, a latent manifold, representational geometry, a fingerprint feature family, or another explicit object.</td>
+<td><strong>Same-subject</strong> language silently expands into one unspecified state object.</td>
+</tr>
+<tr>
+<td><strong>How close is close enough?</strong></td>
+<td>State the matching tolerance in the units relevant to the object, such as spatial mismatch, temporal offset, latent-distance threshold, correlation floor, or reproducibility interval.</td>
+<td>A bridge can drift materially while still sounding successful through vague correspondence language.</td>
+</tr>
+<tr>
+<td><strong>What would have broken the bridge?</strong></td>
+<td>State the negative control, perturbation-linked check, sham, or repeated-validation comparison that would have failed if the bridge no longer held.</td>
+<td>Workflow sophistication is mistaken for actual bridge validation.</td>
+</tr>
+<tr>
+<td><strong>Was continuity raw or rescued?</strong></td>
+<td>State whether the bridge depended on alignment, recalibration, subspace matching, manual relabeling, or other rescue steps.</td>
+<td>Adaptive salvage is misread as proof that the original state or readout was preserved.</td>
 </tr>
 </tbody>
 </table>
@@ -269,6 +358,11 @@ The matrix below is an operational inference from the primary literature above p
 <td>Behavior, arousal, day-night context, and adaptive decoding can hide regime change or rescue drift.</td>
 <td>Route through the <a href="https://mind-upload.com/verification.html#temporal-validity-card">Temporal Validity Card</a> as well as the bridge audit.</td>
 </tr>
+<tr>
+<td><strong>A stable score or fingerprint after the bridge means the same neural object persisted.</strong></td>
+<td>Different objects can preserve performance or identifiability, such as landmarks, latent manifolds, representational geometry, or feature fingerprints, and adaptive rescue can further separate score stability from raw continuity.</td>
+<td>Name the carried object, tolerance rule, and rescue mode first; otherwise read the result only at the ceiling of that explicit object.</td>
+</tr>
 </tbody>
 </table>
 
@@ -285,4 +379,12 @@ The matrix below is an operational inference from the primary literature above p
 <li>Egger A, Bayon C, d'Almeida J, et al. Chrono-EEG dynamics influencing hand gesture decoding: a 10-hour study. <em>Scientific Reports</em>. 2024. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">doi:10.1038/s41598-024-70609-x</a></li>
 <li>Hengen KB, Torrado Pacheco A, McGregor JN, Van Hooser SD, Turrigiano GG. Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <em>Cell</em>. 2016. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
 <li>Xu Y, Schneider A, Wessel R, Hengen KB. Sleep restores an optimal computational regime in cortical networks. <em>Nature Neuroscience</em>. 2024. <a href="https://doi.org/10.1038/s41593-023-01536-9" target="_blank">doi:10.1038/s41593-023-01536-9</a></li>
+<li>Gallego JA, Perich MG, Chowdhury RH, et al. Long-term stability of cortical population dynamics underlying consistent behavior. <em>Nature Neuroscience</em>. 2020. <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">doi:10.1038/s41593-019-0555-4</a></li>
+<li>Roth ZN, Merriam EP. Representations in human primary visual cortex drift over time. <em>Nature Communications</em>. 2023. <a href="https://doi.org/10.1038/s41467-023-40144-w" target="_blank">doi:10.1038/s41467-023-40144-w</a></li>
+<li>Noda T, Hattori R, Yamanaka A, et al. Homeostasis of a representational map in the neocortex. <em>Nature Neuroscience</em>. 2025. <a href="https://doi.org/10.1038/s41593-025-01982-7" target="_blank">doi:10.1038/s41593-025-01982-7</a></li>
+<li>Van De Ville D, Farouj Y, Preti MG, Liégeois R, Amico E. When makes you unique: Temporality of the human brain fingerprint. <em>Science Advances</em>. 2021. <a href="https://doi.org/10.1126/sciadv.abj0751" target="_blank">doi:10.1126/sciadv.abj0751</a></li>
+<li>Di Y, An X, Zhong W, Liu S, Ming D. The Time-Robustness Analysis of Individual Identification Based on Resting-State EEG. <em>Frontiers in Human Neuroscience</em>. 2021. <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">doi:10.3389/fnhum.2021.672946</a></li>
+<li>Karpowicz BM, O'Shea DJ, Wyche S, et al. Stabilizing brain-computer interfaces through alignment of latent dynamics. <em>Nature Communications</em>. 2025. <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">doi:10.1038/s41467-025-59652-y</a></li>
+<li>Wilson GH, Stein EA, Kamdar F, et al. Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <em>Nature Biomedical Engineering</em>. 2025. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Wairagkar M, Card NS, Singer-Clark T, et al. An instantaneous voice-synthesis neuroprosthesis. <em>Nature</em>. 2025. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
 </ol>

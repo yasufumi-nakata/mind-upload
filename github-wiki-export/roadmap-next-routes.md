@@ -2,32 +2,32 @@
 
 > A guide to help you decide on the next page after looking at the dependency map
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-14 / 位置づけ: Roadmap route
+- Updated: 2026-03-14 / Role: Roadmap route
 
-## このページの役割
+## Role Of This Page
 This page is an auxiliary guide that helps you organize what points to discuss next after reading the technology roadmap. The next page will change depending on whether you go back to measurement, go to reconstruction and causal estimation, go down to implementation, go back to verification conditions, or look at systems and collaboration.
 
-## 正確さの前提
+## Accuracy Notes
 What is shown here is the entry point after reading the roadmap. Please be sure to check the official points and achievement conditions for each node in the main text of the roadmap.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Technology Roadmap](https://mind-upload.com/tech_roadmap.html)
 - [Verification base](https://mind-upload.com/verification.html)
 - [Introduction to EEG](https://mind-upload.com/eeg_101.html)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: How to read the roadmap](https://github.com/yasufumi-nakata/mind-upload/wiki/roadmap-reading-guide) - For those who want to get back to reading the Roadmap itself.
 - [Wiki: How to read each L0 to L5](https://github.com/yasufumi-nakata/mind-upload/wiki/claim-level-reading-routes) - For those who want to see the lead from the assertion level.
 - [Wiki: 4 paths after Verification](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-next-routes) - This is for people who want to further refine their skills after moving on to the V series.
 
-## いま分かっていること
+## What Is Currently Known
 - The technology roadmap is an overall map, so the next page is too wide as it is.
 - The page to return to is different for measurement, reconfiguration, implementation, verification, and social implementation.
 - After reading the Roadmap, narrowing down to one route will make it easier to understand and proceed.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - Which route is the shortest and most effective may change based on future data and bench development.
 - The final conditions for V and D still have many unresolved parts.
 

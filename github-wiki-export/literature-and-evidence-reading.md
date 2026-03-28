@@ -2,35 +2,35 @@
 
 > Don't confuse 'many papers' with 'strong conclusions'
 >
-> このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- 更新日: 2026-03-26 / 位置づけ: Reading guide
+- Updated: 2026-03-26 / Role: Reading guide
 
-## このページの役割
+## Role Of This Page
 This page is an auxiliary page that organizes the roles of the literature pages on Mind-Upload. The more papers there are on a page, the more difficult it is to read if the roles are mixed up, so this guide first explains ``what the page does'' and ``to what extent it should not be treated as definitive.''
 
-## 正確さの前提
+## Accuracy Notes
 This page is a reading aid. Please be sure to return to the original page and original paper to check the evaluation of individual papers and individual proposals.
 
-## 公開ページへ戻る
+## Back To Public Pages
 - [Literature map](https://mind-upload.com/research_harvest_50.html)
 - [Collection of papers](https://mind-upload.com/mind_uploading_papers.html)
 - [Technical proposal](https://mind-upload.com/issue.html#proposal-integration)
 
-## 関連 Wiki
+## Related Wiki Pages
 - [Wiki: Source types, status labels, and evidence classes](https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status) - Organize the meaning of Scopus, arXiv, Review, Media, source_logged, and evidence classes.
 - [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Compensate with assumptions about the strength of evidence and what to look for.
 - [Wiki: Basics of WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - Each paper or proposal corresponds to an overall issue.
 - [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other basic pages.
 
-## いま分かっていること
+## What Is Currently Known
 - Separating pages with different roles makes it difficult to confuse volume with strength of conclusion.
 - The purpose of reading the collection of papers, bibliography map, and proposal page is different.
 - Important decisions should be made by going back to the original paper or page, not the summary.
 - A human measurement paper often changes what is observable, not what is already solved.
 - A same-subject or multimodal human paper can still be a proxy-composition problem rather than a same-state result.
 
-## まだ分かっていないこと
+## What Is Still Unknown
 - Which paper will ultimately remain as the central basis may change in the future.
 - States such as source_logged may be updated on subsequent scrutiny.
 
