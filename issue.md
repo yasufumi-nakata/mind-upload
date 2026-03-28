@@ -97,6 +97,12 @@ This page separates contribution routes and issue work. If what you really want 
 </p>
 </div>
 <div class="note-box">
+<strong>If you want the current six research questions being turned into EEG-ready work packages</strong>
+<p>
+The active public deepening batch is <code>U13-1</code>, <code>U7-3</code>, <code>U0-4</code>, <code>U8-4</code>, <code>U1-2</code>, and <code>U4-3</code>. For the exact <code>Dxx + DOI</code> anchors, first-pass KPIs, and the external dependencies kept outside the EEG claim, start with the <a href="wiki/mind-upload-rq60-deep-focus-notes.html">deep focus notes</a> and the <a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG feasibility page</a>.
+</p>
+</div>
+<div class="note-box">
 <strong>When you understand but are unsure whether to start working on it</strong>
 <p>
 If you want a step-by-step guide to the difference between understanding the topic, checking the source and conditions, and being ready to make a change, see <a href="wiki/understanding-vs-action-readiness.html">Wiki: The difference between understanding and being ready to act</a>.

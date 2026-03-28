@@ -29,6 +29,7 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - [文献地図](https://mind-upload.com/research_harvest_50.html)
 - [データ&ベンチ](https://mind-upload.com/datasets.html)
 - [RQ60 申請プレイブック](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook)
+- [Current funding shortlist](https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md)
 - [Issue](https://mind-upload.com/issue.html)
 
 ## 関連 Wiki
@@ -1415,3 +1416,17 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - EEG参照運用ID集合（`6,11,13,16,19,49,56,65,509,676,696,719,735,783,842,859,2412`）は最新 `EEG-DATA/eeg_dataset_summary_ja.csv` の `旧ID` 列で欠損 `0`。
 - 応募キー `G1-G6`（`GR-2026-013`, `GR-2026-014`, `9Lx4dPK6a4k2gOb7`, `Drbm6vBRDJkn0NGJ`, `871pw3rLjNPKgqA0`, `46z9VPE4wnkrvEJR`）の参照整合を再確認。
 - 方針は継続して `1RQ=1検証命題=1応募テーマ=1主データ` を維持。
+
+## 2026-03-29 06:25 JST revalidation log (main run / six-RQ funding and dataset anchor pass)
+
+- This pass does not widen the summary. It fixes the six RQs that most directly change the public mind-upload program when translated into EEG-ready and grant-ready work packages.
+- The canonical evidence rule remains unchanged: use `Dxx + DOI + dataset name + access class` in submissions, and keep numeric legacy IDs as search-only guidance.
+
+| RQ | Judgment | Primary D anchor | Grant lane | What was fixed in this run | Stop condition |
+|---|---|---|---|---|---|
+| `U13-1` | `B` | `D10` + support `D03/D09` | `G1 / G4` | Separated semantic restoration from causal reproduction and prohibited imitation-only pass decisions. | Downgrade the claim if the semantic/causal gap does not stay visible on a leak-free split. |
+| `U7-3` | `A` | `D11` + support `D12/D24` | `G1 / G3` | Fixed preprocessing-drift audit as a first-class reproducibility deliverable rather than a side note. | Remove any configuration that breaks ranking stability across repeated runs. |
+| `U0-4` | `B` | `D02` + support `D10/D12` | `G2 / G3` | Locked branching identity to a two-axis technical criterion: observation match and intervention match. | Keep the result partial if either axis fails or only one axis survives. |
+| `U8-4` | `B` | `D20` + support `D01/D21` | `G2 / G5` | Fixed abnormal-detection latency and fail-safe activation as the minimum closed-loop safety pair. | Keep the work inside research-only safety procedures if latency or recovery thresholds fail. |
+| `U1-2` | `A` | `D08` + support `D11/D19` | `G1 / G4` | Locked uncertainty propagation to perturbation-tested interval coverage instead of point-estimate accuracy alone. | Downgrade the claim if repeated perturbations break coverage stability. |
+| `U4-3` | `B` | `D05` + support `D08/D19` | `G1 / G4` | Fixed counterfactual theory comparison to `PEHE + log-likelihood` before analysis. | Downgrade the claim if the theory ranking flips across repeated intervention settings. |
