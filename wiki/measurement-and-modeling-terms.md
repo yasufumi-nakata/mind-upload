@@ -6,7 +6,7 @@ description: We will explain EEG, QC, BIDS, inverse problems, ESI, DCM, SCM, etc
 article_type: Wiki
 subtitle: Don't memorize words by dots, connect them by flow.
 author: Mind Uploading Research Project
-last_updated: '2026-03-27'
+last_updated: '2026-03-28'
 note: Learning guide
 audience: People who see a mix of measurement words and model words, and people who
   want to understand a glossary in a flow.
@@ -29,6 +29,9 @@ page_highlights:
 - ESI, DCM, and SCM do not fail in the same way; each one needs a different stop rule.
 - More modalities, same-brain linkage, and connectome constraints do not bypass route
   cards; fusion, bridge, and identifiability remain separate audits.
+- A stronger design is not just ``more data''; the route now also asks which identifiability
+  objective chose the next condition, whether omitted-mechanism error was exposed,
+  and what minimum-sufficiency stop rule would have been enough.
 - Reorder definitions in the glossary by working order and strength of evidence.
 known_points:
 - Measurement, preprocessing, estimation, and verification have different roles and
@@ -40,6 +43,8 @@ known_points:
 - For inverse problems, field visibility, conductivity sensitivity, solver uncertainty,
   and validation class are different questions; progress in one does not erase the
   others.
+- More data is not automatically a stronger design; identifiability objective, omitted-mechanism
+  stress, and minimum-sufficiency stop rules answer different questions.
 - Same-session multimodal and same-brain language do not by themselves solve fusion
   validity or state continuity.
 unknown_points:
@@ -97,6 +102,13 @@ A second beginner overread also remained: more sensors, same-brain linkage, or a
 <strong>2026-03-27 correction to the inverse-problem route</strong>
 <p>
 One more beginner overread still remained: <strong>inverse-problem progress</strong> could still sound like one continuous bar. The primary literature does not support that shortcut. <a href="https://doi.org/10.1007/s10548-010-0154-x" target="_blank">Ahlfors et al. (2010)</a>, <a href="https://doi.org/10.1002/hbm.20571" target="_blank">Goldenholz et al. (2009)</a>, and <a href="https://doi.org/10.1002/hbm.25272" target="_blank">Piastra et al. (2021)</a> show that <strong>field formation and head-model detail</strong> already limit what reaches the sensors. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a> and <a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk et al. (2026)</a> show that <strong>conductivity uncertainty and estimation</strong> still materially move the result. <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a>, <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a>, and <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> improve how <strong>candidate sets and uncertainty</strong> are exposed inside a stated inverse family. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">Pascarella et al. (2023)</a>, <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>, and <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> then validate different <strong>source regimes and error questions</strong>. Therefore, on this site, inverse papers are no longer read as one ladder.
+</p>
+</div>
+
+<div class="note-box">
+<strong>2026-03-28 correction to the beginner route</strong>
+<p>
+One more technical overread still remained: after naming an ambiguity, readers could still think the next step is simply to add <strong>more data</strong> or <strong>one more modality</strong>. The primary literature does not support that shortcut. <a href="https://doi.org/10.1049/iet-syb.2010.0061" target="_blank">Raue et al. (2011)</a> showed that non-identifiability is resolved by <strong>experimental design under suitable conditions</strong> or by <strong>model reduction matched to the information content of the data</strong>. <a href="https://doi.org/10.1016/j.mbs.2016.10.009" target="_blank">Chis et al. (2016)</a> then showed that <strong>sloppiness is not identifiability</strong>, so design should optimize identifiability criteria rather than only compress one proxy uncertainty score. <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">White et al. (2016)</a> showed that apparently complementary experiments can instead make <strong>omitted mechanisms</strong> relevant and increase model discrepancy. <a href="https://doi.org/10.1038/s41540-023-00325-1" target="_blank">Gevertz &amp; Kareva (2024)</a> and <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">Liu et al. (2025)</a> then showed that identifiability analysis and active learning can derive a <strong>minimally sufficient</strong> schedule rather than an open-ended collection plan. In neuroscience, <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that a <strong>small targeted recording set</strong> can remove degeneracy in connectome-constrained networks, and <a href="https://doi.org/10.1038/s41593-025-01869-7" target="_blank">Langdon &amp; Engel (2025)</a> showed that preserving <strong>causal interactions among task variables</strong> can recover behaviorally relevant computation that correlation-only reductions miss. Therefore, on this site, the safer beginner rule is not "collect more" but "name the surviving ambiguity, state which identifiability objective chose the next condition, test whether the new condition exposed omitted-mechanism error, and say what minimum-sufficiency stop rule would end collection." The longer rule lives in <a href="observation-to-estimation.html#identifiability-card">Wiki: From observation to estimation</a> and <a href="../verification.html#experiment-design-leverage">Verification: experiment-design leverage</a>.
 </p>
 </div>
 
@@ -317,11 +329,22 @@ The final question is, "Can other people confirm this estimation or model under 
 <td>In addition to the score, we will also publish weaknesses, failure examples, leak countermeasures, and calculation conditions. </td>
 </tr>
 <tr>
+<td><strong>Experiment-design leverage</strong></td>
+<td>Name which surviving ambiguity the next measurement or perturbation targets, why it was chosen by the stated identifiability objective, and what minimum-sufficiency stop rule would end further collection. </td>
+</tr>
+<tr>
 <td><strong>Route card</strong></td>
 <td>When ESI, connectivity, or DCM is used, we disclose the assumptions, validation class, abstention boundary, and what the result still does not identify. </td>
 </tr>
 </tbody>
 </table>
+
+<div class="note-box">
+<strong>Verification now asks why the next condition was chosen</strong>
+<p>
+On this site, verification is no longer only a place to list <strong>what was measured</strong>. When ambiguity remains, the stronger workflow must also explain <strong>which ambiguity class survived</strong>, <strong>which identifiability objective selected the next condition</strong>, <strong>whether the new condition exposed omitted-mechanism error</strong>, and <strong>what minimum-sufficiency design would have been enough</strong>. Otherwise, even a careful benchmark can still look like open-ended data accumulation rather than an ambiguity-breaking design.
+</p>
+</div>
 </section>
 
 <section class="section" id="references">
@@ -346,6 +369,13 @@ The final question is, "Can other people confirm this estimation or model under 
 <li>Frässle, S., Paulus, F. M., Krach, S., &amp; Jansen, A. (2016). Test-retest reliability of effective connectivity in the face perception network. <em>Human Brain Mapping</em>, 37(2), 730-744. <a href="https://doi.org/10.1002/hbm.23061" target="_blank">doi:10.1002/hbm.23061</a></li>
 <li>Frässle, S., Manjaly, Z. M., Do, C. T., Kasper, L., Pruessmann, K. P., &amp; Stephan, K. E. (2021). Whole-brain estimates of directed connectivity for human connectomics. <em>NeuroImage</em>, 225, 117491. <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">doi:10.1016/j.neuroimage.2020.117491</a></li>
 <li>Wu, H., Hu, X., &amp; Zeng, Y. (2024). A fast dynamic causal modeling regression method for fMRI. <em>NeuroImage</em>, 304, 120954. <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">doi:10.1016/j.neuroimage.2024.120954</a></li>
+<li>Raue, A., Kreutz, C., Maiwald, T., Klingm&uuml;ller, U., &amp; Timmer, J. (2011). Addressing parameter identifiability by model-based experimentation. <em>IET Systems Biology</em>, 5(2), 120-130. <a href="https://doi.org/10.1049/iet-syb.2010.0061" target="_blank">doi:10.1049/iet-syb.2010.0061</a></li>
+<li>Chis, O.-T., Villaverde, A. F., Banga, J. R., &amp; Balsa-Canto, E. (2016). On the relationship between sloppiness and identifiability. <em>Mathematical Biosciences</em>, 282, 147-161. <a href="https://doi.org/10.1016/j.mbs.2016.10.009" target="_blank">doi:10.1016/j.mbs.2016.10.009</a></li>
+<li>White, A., Tolman, M., Thames, H. D., Withers, H. R., Mason, K. A., &amp; Transtrum, M. K. (2016). The Limitations of Model-Based Experimental Design and Parameter Estimation in Sloppy Systems. <em>PLoS Computational Biology</em>, 12(12), e1005227. <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">doi:10.1371/journal.pcbi.1005227</a></li>
+<li>Gevertz, J. L., &amp; Kareva, I. (2024). Minimally sufficient experimental design using identifiability analysis. <em>npj Systems Biology and Applications</em>, 10(1), 2. <a href="https://doi.org/10.1038/s41540-023-00325-1" target="_blank">doi:10.1038/s41540-023-00325-1</a></li>
+<li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <em>Nature Neuroscience</em>, 28, 2561-2574. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
+<li>Langdon, C., &amp; Engel, T. A. (2025). Latent circuit inference from heterogeneous neural responses during cognitive tasks. <em>Nature Neuroscience</em>, 28, 665-675. <a href="https://doi.org/10.1038/s41593-025-01869-7" target="_blank">doi:10.1038/s41593-025-01869-7</a></li>
+<li>Liu, X., Wanika, L., Chappell, M. J., &amp; Branke, J. (2025). Efficient data collection for establishing practical identifiability via active learning. <em>Computational and Structural Biotechnology Journal</em>, 27, 4992-5006. <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">doi:10.1016/j.csbj.2025.10.058</a></li>
 </ol>
 </section>
 
