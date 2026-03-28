@@ -13,6 +13,7 @@ page_intro: "This page is a Q&A for the questions many readers hit first when re
 accuracy_note: "This page gives short answers. Please do not quote the conclusion alone; return to the linked pages and references when you need the full basis."
 page_highlights:
   - "It quickly clears up first-order questions such as what this site is for and what EEG or brain-to-text work can and cannot support."
+  - "At the front door, invasive language BCIs are now split into same-session communication throughput, cross-subject transfer / initialization, fixed-decoder durability slices, and adaptive rescue routes instead of one `speech BCI success` label."
   - "It now front-loads nine technical guardrails: connectome-complete is not state-complete, human proxy-rich evidence is not automatically near-direct whole-brain state readout, same-subject / same-brain wording does not by itself make a sequential workflow one state sample, a high score is not automatically a target-specific neural readout, EEG / MEG connectivity labels are not automatically leak-proof communication maps or causal circuits, BOLD / fNIRS differences need vascular-state / CVR audit, DCM / effective-connectivity labels do not by themselves identify true causal wiring, thermodynamic / irreversibility labels do not by themselves measure physical dissipation or WBE-ready cost, and low latency does not by itself solve the body / environment boundary."
   - "Human proxy bundles are now read on three axes first: proxy class, operational maturity, and calibrator role, and the route name is no longer accepted without quantity type, target class, or transport regime."
   - "A chemical connectome plus nominal inhibitory edges still does not fix gap-junction coupling, endogenous field effects, or local inhibitory driving force."
@@ -25,6 +26,7 @@ page_highlights:
 known_points:
   - "Even short Q&A becomes much safer when strong claims are decomposed into weaker, more testable claims."
   - "The impressive appearance of EEG or LLM outputs must be separated from strong WBE claims, and the contributions of language priors, nuisance routes, and brain-derived information must also be separated."
+  - "For invasive language BCIs, same-session throughput, transfer-assisted initialization, fixed-decoder durability, and adaptive rescue are different operational claims."
   - "Because wiring diagrams and cell types still leave excitability, timing-state, thermal-state, transcription/chromatin, post-transcriptional RNA-state, phospho-signaling / second-messenger state, proteostasis, cargo-transport / cytoskeletal trafficking state, ECM / PNN, ionic-homeostasis, bioenergetic / mitochondrial state, astrocyte / glial-state, clearance / immune support, and other maintenance-support variables unresolved, long-term dynamical claims require separate auditing."
   - "A chemical connectome plus nominal inhibitory edges still does not make fast synchrony, oscillatory coordination, or local electrotonic regime solved."
   - "For several maintenance-state families, local causal evidence and living-human observability remain misaligned, so a human proxy does not by itself mean the causal controller was measured."
@@ -269,7 +271,7 @@ The Mind-Upload position is not to deny ambitious readout work. It is to separat
 <section class="section" id="q1b">
 <h2 class="section-title" id="brain-to-text">Q. What is the minimum you should check in a brain-to-text demo?</h2>
 <p>
-A. At minimum, check the following seven things.
+A. At minimum, check the following nine things.
 </p>
 <ul>
 <li><strong>Measurement method:</strong> scalp EEG, MEG, fMRI, ECoG, or intracortical array. Representative high-performance speech neuroprostheses are invasive.</li>
@@ -278,11 +280,12 @@ A. At minimum, check the following seven things.
 <li><strong>Priors and baselines:</strong> fixed vocabulary, beam search, external corpora, LLMs, prompt length, and how far <code>LM-only</code>, <code>no-brain</code>, permuted-brain, no-text-prompt, or shuffle baselines were used. Fluency does not automatically reflect brain signal alone.</li>
 <li><strong>Validation:</strong> held-out conditions, counterfactual tests, adversarial controls, and whether failure cases are shown. Evaluation that stays too close to the training setup is not strong evidence.</li>
 <li><strong>Subject route:</strong> within-subject, cross-subject, adapted-to-subject, or zero-shot to unseen people, together with any cooperation requirement or countermeasure test.</li>
+<li><strong>Operational route:</strong> same-session throughput / expressivity, transfer-assisted initialization, fixed-decoder durability, and adaptive rescue answer different questions. Do not collapse them into one `speech BCI` score.</li>
 <li><strong>Confidence handling:</strong> whether confidence is calibrated, and whether silence or abstention is returned at low confidence. A high-probability display alone is not safe interpretation.</li>
 <li><strong>Long-term operation:</strong> not just within-session speed, but also tail latency, cross-day stability, and recalibration burden. A fast demo is not the same as a deployable loop.</li>
 </ul>
 <p>
-Littlejohn et al. (2025) showed streaming brain-to-voice output every 80 ms, and Wairagkar et al. (2025) showed neural-to-voice synthesis under 10 ms with silence fallback, but both are invasive communication routes. Wilson et al. (2025) further showed the importance of long-term unsupervised recalibration, making it clear that daily supervised recalibration is itself another barrier. For that reason, general scalp EEG or ordinary non-invasive BCI cannot claim the same level without the same conditions.
+The front door was still too coarse when it let invasive language BCIs sound like one continuous success story. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a> strengthened the <strong>same-session throughput</strong> route and also showed a bounded <strong>no-new-day-training slice</strong> (30% word error rate offline without new-day retraining), but the authors still said clinically viable multi-day adaptation remained unfinished. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a> strengthened <strong>streaming throughput / expressivity</strong>. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> strengthened <strong>instantaneous voice synthesis with silence fallback</strong>, but even its session-1 decoder used same-day training. <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh et al. (2025)</a> instead strengthened a <strong>cross-subject transfer / initialization</strong> route, and <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a> plus <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> strengthened <strong>adaptive stabilization / unsupervised rescue</strong>. Those are different operational achievements, so general scalp EEG or ordinary non-invasive BCI cannot claim the same level without naming which route actually improved.
 </p>
 </section>
 
@@ -683,6 +686,8 @@ The distinguishing strategy of Mind-Upload is <strong>to build the Verification 
 <li>Willett, F. R., Kunz, E. M., Fan, C., et al. (2023). A high-performance speech neuroprosthesis. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
 <li>Littlejohn, K. T., Dabagia, M., Ladwig, A., et al. (2025). A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
 <li>Wairagkar, M., Card, N. S., Singer-Clark, T., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+<li>Singh, A., Wu, E., Ramsey, N. F., et al. (2025). Transfer learning via distributed brain recordings enables reliable speech decoding. <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">doi:10.1038/s41467-025-63825-0</a></li>
+<li>Karpowicz, B. M., Ali, Y. H., Wimalasena, L. N., et al. (2025). Stabilizing brain-computer interfaces through alignment of latent dynamics. <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">doi:10.1038/s41467-025-59652-y</a></li>
 <li>Wilson, G. H., Stein, E. A., Kamdar, F., et al. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
 <li>Penny, W. D., Stephan, K. E., Mechelli, A., &amp; Friston, K. J. (2004). Comparing dynamic causal models. <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">doi:10.1016/j.neuroimage.2004.03.026</a></li>
 <li>Rosa, M. J., Friston, K., &amp; Penny, W. (2012). Post-hoc selection of dynamic causal models. <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">doi:10.1016/j.jneumeth.2012.04.013</a></li>

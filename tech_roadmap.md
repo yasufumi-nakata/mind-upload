@@ -14,6 +14,7 @@ page_highlights:
   - "P0-P2 fix what counts as success before measurement or implementation work is discussed."
   - "The index allows readers to jump directly to a specific question family."
   - "Stronger claims are deliberately placed later so earlier levels are not skipped."
+  - "V8 now splits invasive language BCIs into throughput / expressivity, transfer-assisted initialization, fixed-decoder durability slices, and adaptive rescue, so one speech-BCI result is not silently promoted to all four."
   - "R0 now separates structural scaffold, fast executable state, and maintenance-state families, so `connectome + state` is not treated as one knob."
   - "R3 / R5 separate latent-state and maintenance-state questions by evidence tier and timescale, so same-day fit and multiday maintenance do not collapse into one success."
   - "R3 / R5 now force maintenance-relevant claims to name whether phospho-signaling, local proteostasis, and cargo-routing were measured, externally calibrated, model-estimated, or omitted, so a generic latent-state label is not treated as maintenance-complete evidence."
@@ -32,6 +33,7 @@ known_points:
   - "Splitting the problem into P/M/R/I/V/D makes it easier to see which questions are foundational and which sit higher up."
   - "The dependency structure that prevents strong claims from skipping earlier layers is fairly clear."
   - "This page should be read as a dependency map, not as a checklist of solved items."
+  - "Invasive language BCI progress is multi-route: throughput, transfer initialization, fixed-decoder durability, and adaptive rescue need separate labels."
   - "A restoration target is not one dial; scaffold, fast state, and maintenance-state layers place different ceilings on what can be claimed."
   - "Even if connectome or local-activity evidence improves, latent-state and maintenance-state audits are still separate requirements."
   - "A prediction-useful latent variable is not automatically a maintenance-complete state estimate; phospho-signaling, local proteostasis, and cargo-routing can still remain omitted families."
@@ -1601,17 +1603,40 @@ Extending Parfit's psychological theory, the condition for identity is that the 
 </tr>
 <tr>
 <td><strong>Invasive streaming speech neuroprosthesis</strong></td>
-<td>Willett, Littlejohn, and Wairagkar made significant advances in speech BCI as a local communication subsystem. Large vocabulary, fast decode, 80 ms updates, and closed-loop own-voice synthesis are important achievements. </td>
-<td>What is shown here is local progress in communication routes, not whole-brain emulation or identity preservation. Furthermore, as shown by Wilson et al., long-term drift and recalibration burden remain another barrier. </td>
+<td>Willett, Littlejohn, and Wairagkar made significant advances in speech BCI as a local communication subsystem. Large vocabulary, streaming throughput, and closed-loop own-voice synthesis are important achievements. </td>
+<td>What is shown here is local progress in communication routes, not whole-brain emulation or identity preservation. Throughput also does not by itself determine transferability, fixed-decoder durability, or rescue burden. </td>
+</tr>
+<tr>
+<td><strong>Transfer-assisted speech-decoder initialization</strong></td>
+<td>Singh et al. showed that distributed intracranial recordings can support a group-derived decoder that outperforms models trained on individual data alone, enabling a transfer-learning route for individual initialization. </td>
+<td>This is evidence for <strong>cross-subject initialization</strong> and shared latent structure, not for subject-independent final deployment or for durable fixed-decoder operation after initialization. </td>
+</tr>
+<tr>
+<td><strong>Fixed-decoder durability slice</strong></td>
+<td>Willett et al. reported a bounded no-new-day-training slice, and Wairagkar et al. made it impossible to ignore the distinction between fast voice synthesis and the time horizon over which a decoder remains usable without rescue. </td>
+<td>This still does not show that fixed decoders remain adequate over long horizons, across changing tasks, or across body / environment regime changes. </td>
+</tr>
+<tr>
+<td><strong>Adaptive stabilization / rescue</strong></td>
+<td>Karpowicz et al. and Wilson et al. showed that latent-dynamics alignment and unsupervised recalibration can stabilize iBCI performance when recording conditions drift. </td>
+<td>This is a <strong>rescue route</strong>, not proof that the original decoder stayed stable on its own. It therefore cannot be collapsed into fixed-decoder durability or subject-independent deployment. </td>
 </tr>
 </tbody>
 </table>
+
+<div class="note-box">
+<strong>2026-03-28 addendum: invasive language BCIs need an operational split</strong>
+<p>
+The older front-door wording was still too coarse because it let readers compress several different achievements into one `speech BCI success` bucket. The primary literature does not support that. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a> strengthened same-session throughput and also exposed a bounded fixed-decoder slice, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a> strengthened streaming throughput / expressivity, <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> strengthened instantaneous voice synthesis with silence fallback, <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh et al. (2025)</a> strengthened transfer-assisted initialization, and <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a> plus <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> strengthened adaptive stabilization. Those papers do not all answer the same operational question, so this roadmap no longer places them on one row.
+</p>
+</div>
 
 <div class="note-box">
 <strong>Minimum evaluation pack</strong>
 <ul>
 <li><strong>Isolation of neural contribution:</strong> Report <code>no brain</code>, <code>time-shuffle</code>, <code>trial-shuffle</code>, <code>LM-only</code>, and <code>no-LM</code>; if decoding is search-based, also publish candidate-set size. </li>
 <li><strong>Bounds of generalization: </strong>Report held-out stories, held-out vocabulary, cross-day, cross-task, and cross-subject separately and do not hide the need for subject cooperation or individual adaptation. </li>
+<li><strong>Operational route label:</strong> State whether the result is same-session throughput, transfer-assisted initialization, fixed-decoder durability, or adaptive rescue after alignment / recalibration. </li>
 <li><strong>Streaming metrics:</strong> Report not only words per minute but also <code>P50/P95/P99 latency</code>, silence / abstention, dropout, recalibration burden, and recovery time. </li>
 <li><strong>Do not over-promote:</strong> Do not elevate decoding success, embedding similarity, or conversational naturalness into claims about emulation, WBE, or identity preservation. </li>
 </ul>
@@ -2347,6 +2372,7 @@ Below are the main documents directly related to the open questions of U0-U15. F
 <li>Willett, F. R., Kunz, E. M., Fan, C., et al. (2023). A high-performance speech neuroprosthesis. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
 <li>Littlejohn, K. T., Dabagia, M., Ladwig, A., et al. (2025). A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
 <li>Wairagkar, M., Card, N. S., Singer-Clark, T., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+<li>Singh, A., Wu, E., Ramsey, N. F., et al. (2025). Transfer learning via distributed brain recordings enables reliable speech decoding. <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">doi:10.1038/s41467-025-63825-0</a></li>
 <li>Wilson, G. H., Stein, E. A., Kamdar, F., et al. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain&ndash;computer interfaces using a hidden Markov model. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
 </ol>
 
