@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-29 / Role: RQ-by-RQ Deep Dossier
+- Updated: 2026-03-30 / Role: RQ-by-RQ Deep Dossier
 
 ---
 
@@ -13,8 +13,31 @@
 > 本ページは、`60RQ` を1件ずつ深掘りするための固定ドシエ集です。  
 > 汎用横断サマリは最小化し、各RQで `検証命題` `境界` `応募テーマ` `主データ` `KPI` `停止条件` を先に固定します。
 
-- 更新日: 2026-03-29
+- 更新日: 2026-03-30
 - 出典: `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`（60行を再構成）
+
+## 今回の再検証ログ（2026-03-30 02:05 JST, one-RQ closure gates）
+
+本runでは、current public 6RQ の batch 自体は変えずに、「今この6件で何を閉じたら public-safe に進捗と呼べるか」を `RQ` ごとに明文化いたしました。ここで固定するのは solved claim ではなく、`1RQ=1最初の成果物=1非主張境界` の closure gate です。
+
+- current public 6RQ と solve-first 順は維持:
+  - `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`
+- official / Todoist 判断も据え置き:
+  - `くら基金=2026-04-17 17:00`
+  - `中谷財団 大学院生奨学金=2026-04-01 - 2026-05-25 15:00`
+  - `樫の芽会=2026-04-09`
+  - `セコム一般研究助成=2026-03-31 12:00`
+  - `中谷財団 研究助成=next-cycle watch`
+  - current route / watch route を支える Todoist task は既存で足りているため、新規追加なし。
+
+| RQ | 今回の closure gate | この gate を先に閉じる理由 | 主アンカー | claim ceiling を上げる前に次に要るもの |
+|---|---|---|---|---|
+| `U13-2` | `brain-minus-prior` control table と mimic-separation note | language decoder を一括りにせず、neural contribution の最小監査を先に閉じる必要があるため。 | `D10` | external language-evaluation layer と control-condition audit |
+| `U13-5` | perception-to-recall degradation note と transfer-gap table | branch point を先に固定しないと mimicry / mechanism の過読が残るため。 | `D03` | recall-label validity と adjunct speech/control benchmark |
+| `U0-2` | offset/jitter distribution と state-feature collapse audit | identity-like wording へ measurement error が混入する境界を先に切る必要があるため。 | `D02` | stronger longitudinal adjunct benchmark |
+| `U0-3` | threshold-stability note と overfit-exclusion rule | 閾値の外的妥当性を閉じないと本人性ドリフト読解が静的一致へ戻りやすいため。 | `D02` | session-external rerun pack と cohort extension |
+| `U14-4` | filled Model Card / Dataset Card examples | rerun contract を実物で埋めない限り disclosure claim が抽象論のまま残るため。 | `D01` | adjunct rerun benchmark と leak-audit exemplars |
+| `U14-2` | fixed-split rerun contract と negative-case trail | exploration / confirmation split を運用文書へ落とさないと reproducibility claim が曖昧なままだからです。 | `D01` | multi-benchmark rerun trail と split-violation examples |
 
 ## 今回の再検証ログ（2026-03-29 19:07 JST）
 

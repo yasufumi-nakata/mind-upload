@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-29 / Role: RQ-by-RQ Deep Dive
+- Updated: 2026-03-30 / Role: RQ-by-RQ Deep Dive
 
 ---
 
@@ -14,7 +14,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-29 / 位置づけ: RQ-by-RQ Deep Dive
+- 更新日: 2026-03-30 / 位置づけ: RQ-by-RQ Deep Dive
 
 ## このページの役割
 このページは research_harvest_50 の60 RQを対象に、EEG-DATAで解ける範囲をA/B/Cで判定し、各RQごとの検証設計・応募テーマ・使うデータセットIDをまとめた実務版です。
@@ -47,6 +47,28 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `A`: 17件
 - `B`: 25件
 - `C`: 18件
+
+## 今回の深掘り実行パック（2026-03-30 02:05 JST, one-RQ closure gates + canonical source recheck）
+
+本runでは、current public 6RQ の batch 自体は据え置いたまま、「今この6件で public-safe に前進と呼べる最初の成果物」を `RQ` ごとに固定し直しました。総論や solved claim を増やすのではなく、`1RQ=1主アンカー=1最初の成果物=1非主張境界` をさらに狭く明文化する更新です。
+
+- current public batch と solve-first 順は維持: `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`
+- official source の再確認:
+  - `くら基金`: current PDF / page で `2026-04-17 17:00` まで open
+  - `中谷財団 大学院生奨学金`: current detail page で `2026-04-01 - 2026-05-25 15:00`
+  - `樫の芽会`: current `recruit` page で `2026-04-09` まで
+  - `セコム一般研究助成`: current page で `2026-03-31 12:00` まで
+  - `中谷財団 研究助成`: `next-cycle watch`
+- Todoist 実 API の read-only 再確認でも、current route / watch route を支える既存 task は足りていたため、本runでも新規追加は行っておりません。
+
+| RQ | 今回閉じる最初の成果物 | 主Dアンカー | そのアンカーで今閉じられる範囲 | EEG単独でまだ主張しないこと |
+|---|---|---|---|---|
+| `U13-2` | `brain-minus-prior` control table と mimic-separation note | `D10` | overt / silent-intended / imagined speech の分離を使い、hallucination / inconsistency audit を bounded に固定する。 | decoder 成功を mind preservation や preserved internal state の証拠へ読み替えません。 |
+| `U13-5` | perception-to-recall degradation note と transfer-gap table | `D03` | EEG + gaze の paired stream を使い、知覚/想起の branch point を narrow に固定する。 | shared decoder を shared mechanism の証拠へ昇格しません。 |
+| `U0-2` | offset/jitter distribution と state-feature collapse audit | `D02` | repeated sessions / cross-task labels を使い、同期誤差が identity-like wording へ混入する境界を先に切る。 | 技術的同期安定性を法的・哲学的同一性へ直結しません。 |
+| `U0-3` | threshold-stability note と overfit-exclusion rule | `D02` | `U0-2` と同じ cross-session / cross-task 床で、閾値選択を narrow benchmark として閉じる。 | 安定閾値を personhood continuity の十分条件と扱いません。 |
+| `U14-4` | filled Model Card / Dataset Card examples | `D01` | latency-first な narrow rerun route に必要な disclosure field を checklist 化する。 | card 記述だけで field-wide reproducibility や組織導入完了を主張しません。 |
+| `U14-2` | fixed-split rerun contract と negative-case trail | `D01` | exploration / confirmation split を運用契約として定義し、rerun boundary を固定する。 | exploratory output を confirmatory claim と混同しません。 |
 
 ## 今回の深掘り実行パック（2026-03-29 19:07 JST, current route sufficiency / Todoist duplication audit）
 
