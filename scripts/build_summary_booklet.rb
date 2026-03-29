@@ -305,18 +305,18 @@ class SummaryBookletTemplate
       <section class="booklet-sheet booklet-page-break">
         <div class="booklet-section-header">
           <p class="booklet-kicker">Technical Stop Lines</p>
-          <h2>入口で落としてはいけない技術的停止線</h2>
+          <h2>Technical Stop Lines At The Front Door</h2>
         </div>
 
         <div class="booklet-card-grid booklet-card-grid-2">
           <article class="booklet-card booklet-card-positive">
-            <h3>観測の上限</h3>
+            <h3>Observation Ceiling</h3>
             <ul class="booklet-list">
               <%= list_items(observability_stop_lines) %>
             </ul>
           </article>
           <article class="booklet-card booklet-card-caution">
-            <h3>比較と解釈の上限</h3>
+            <h3>Interpretation Ceiling</h3>
             <ul class="booklet-list">
               <%= list_items(audit_stop_lines) %>
             </ul>
