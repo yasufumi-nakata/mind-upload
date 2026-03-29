@@ -81,6 +81,14 @@ The order below is intentionally sequential. Each row closes a blocker for the n
 - Funding-window recheck in this run: `Kura Fund` stayed open, the `Nakatani Foundation graduate scholarship` stayed the main student-facing bridge, the `Kashinome Scholarship` stayed a runway-only side route, and the `Nakatani Foundation research grant` stayed in watch mode.
 - Todoist recheck in this run: the start/deadline tasks for these routes already existed, so no duplicate task was added.
 
+## Post-pull hold after the route-taxonomy update (2026-03-29 17:10 JST)
+
+- This run pulled the latest upstream route-taxonomy update and rechecked whether it changes the current public six-question batch. It does not. The public route remains `U13-2/U13-5/U14-4/U0-2/U0-3/U14-2`, and the solve-first order remains `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
+- The practical reason for holding the batch is unchanged: the cleanest current bridge from `mind-upload.com` questions to bounded EEG-ready work still runs through `inner-speech decoding + identity drift + reproducibility auditing`, not through a broader thematic spread.
+- Anchor strength also remains unchanged after the pull. `D10` and `D02` stay the strong primary anchors for first-pass artifacts, while `D03` and `D01` remain bounded-support anchors whose outputs should keep a narrower claim ceiling.
+- The upstream route-taxonomy tightening is still useful, but its immediate effect is internal rather than public-facing. It sharpens backlog translation and claim ceilings around uncovered roadmap families; it does not justify a new public batch switch or stronger solved-claim wording.
+- Funding and task routing also stay conservative in this run. `Kura Fund` and the `Nakatani Foundation graduate scholarship` remain the practical first routes, `Kashinome Scholarship` stays runway-only support, `Nakatani Foundation research grant` stays next-cycle watch, and no new Todoist task is needed because the current practical routes are already covered by existing tasks.
+
 ## Next internal six-question queue (2026-03-29 11:10 JST)
 
 The public batch above does not change in this run. This section only records the next bounded queue once the current public six have stable audit artifacts.
