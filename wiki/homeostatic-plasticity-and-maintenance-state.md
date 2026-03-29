@@ -145,9 +145,9 @@ Philosophy, legal systems, and copying issues are not discussed here. It address
 </tr>
 <tr>
 <td><strong>Activity-dependent transcription / chromatin / epigenetic state</strong></td>
-<td>Which neurons are primed for allocation, which late-response programs stabilize memory, and which locus-specific plasticity rules are open over hours to weeks. </td>
-<td>If there is a cell-type atlas or a one-shot DEG list, the current plasticity-competent program is almost fixed too. </td>
-<td>Treat static transcriptomic labels as identity priors only; leave memory-stabilization programs as latent unless a time-stamped or causal route is shown. </td>
+<td>Which neurons are primed for allocation, which late-response programs stabilize memory, which locus-specific plasticity rules are open over hours to weeks, and whether the measured object was accessibility, histone chemistry, DNA-methylation control, higher-order looping, or locus-specific editing rather than one generic epigenetic row. </td>
+<td>If there is a cell-type atlas, a one-shot DEG list, or one epigenetic assay, the current plasticity-competent program is almost fixed too. </td>
+<td>Treat static transcriptomic labels or single-object epigenetic assays as identity / object priors only; leave memory-stabilization programs as latent unless a time-stamped or causal route is shown. </td>
 </tr>
 <tr>
 <td><strong>Post-transcriptional RNA-state</strong></td>
@@ -267,6 +267,12 @@ The weak point that became clearer in this pass was that the site had become goo
 <a href="https://doi.org/10.1038/s41586-023-07011-6" target="_blank">Sun et al. (2024)</a> provided a strong spatial-transcriptomic clue for long-term memory, but <a href="https://doi.org/10.1038/s41586-025-08988-y" target="_blank">Mukamel &amp; Yu (2025)</a> argued that some memory-related DEG claims are sensitive to animal-level dependence correction, and <a href="https://doi.org/10.1038/s41586-025-08989-x" target="_blank">Sun et al. (2025)</a> replied that the analysis target differs. Therefore, on this site, a memory-related transcriptomic signature is treated as <strong>time-stamped clue / hypothesis-generating evidence</strong> unless temporal calibration, locus specificity, or causal perturbation is also shown.
 </p>
 </div>
+<div class="note-box">
+<strong>Accessibility, chemical marks, methylation, looping, and editing are not the same object</strong>
+<p>
+The next correction sits inside the route itself. <a href="https://doi.org/10.1038/s41467-025-63029-6" target="_blank">Traunmüller et al. (2025)</a> is an <strong>accessibility-plus-expression map</strong>, <a href="https://doi.org/10.1038/nature07925" target="_blank">Guan et al. (2009)</a> is a <strong>histone-acetylation / HDAC control route</strong>, <a href="https://doi.org/10.1038/s41467-020-14498-4" target="_blank">Gulmez Karaca et al. (2020)</a> is an <strong>engram-specific DNA-methylation stabilization route</strong>, <a href="https://doi.org/10.1016/j.neuron.2014.10.032" target="_blank">Bharadwaj et al. (2014)</a> is a <strong>higher-order looping route</strong>, and <a href="https://doi.org/10.1038/s41588-025-02368-y" target="_blank">Coda et al. (2025)</a> is a <strong>locus-specific editing route</strong>. These papers do not share one direct observable, one persistence timescale, or one causal move. Therefore, on this site, saying only <strong>epigenetic evidence exists</strong> is still too coarse unless the molecular object itself is named.
+</p>
+</div>
 <div class="note-box" id="transcription-route-card">
 <strong>2026-03-19 addendum: transcription / chromatin claims now need a route card</strong>
 <p>
@@ -303,6 +309,11 @@ The remaining weakness was that the site still let at least four different infer
 <td>Cell identity, current transcription, chromatin openness, and causal control are treated as if they were the same measurement.</td>
 </tr>
 <tr>
+<td><strong>Molecular object / persistence mode</strong></td>
+<td>Name whether the paper directly constrained <strong>chromatin accessibility</strong>, <strong>histone-acetylation / histone-methylation state</strong>, <strong>DNA-methylation program</strong>, <strong>higher-order looping / topology</strong>, or <strong>locus-specific editing</strong>, and state whether the claimed persistence is acute, hours-to-days, or weeks-long.</td>
+<td><code>Epigenetic evidence</code> becomes a catch-all label, and accessibility, chemical marks, methylome rewrites, and loop topology are overread as interchangeable proofs of the same controller.</td>
+</tr>
+<tr>
 <td><strong>Experimental unit / dependence control</strong></td>
 <td>Report animal-level <em>n</em>, batch structure, whether cells from the same animal were treated as subsamples, and how pseudoreplication or animal-level dependence was handled.</td>
 <td>False-positive differential signals can be mistaken for memory-specific programs.</td>
@@ -319,6 +330,12 @@ The remaining weakness was that the site still let at least four different infer
 </tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>Human observability ceiling for transcription / chromatin state</strong>
+<p>
+Current human routes on this site do not provide a comparable <strong>in vivo whole-brain readout</strong> of current chromatin accessibility, histone-mark state, DNA-methylation program, or higher-order chromatin topology. The strongest cited routes remain mouse in vivo allocation or stabilization work, destructive single-nucleus multiomics, postmortem tissue, or locus-specific perturbations in defined circuits such as <a href="https://doi.org/10.1126/science.adg9982" target="_blank">Santoni et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-63029-6" target="_blank">Traunmüller et al. (2025)</a>, <a href="https://doi.org/10.1016/j.neuron.2014.10.032" target="_blank">Bharadwaj et al. (2014)</a>, <a href="https://doi.org/10.1038/s41588-025-02368-y" target="_blank">Coda et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2026)</a>. Therefore, on this site, transcription / chromatin state remains a <strong>local hidden state</strong> in living humans unless it is externally calibrated or causally perturbed in a narrower preparation.
+</p>
+</div>
 
 <h3 id="post-transcriptional-rna-state">3. Post-transcriptional RNA-state is not the same as gene-level transcript abundance</h3>
 <p>
@@ -1929,7 +1946,10 @@ The need is multi-axis. On the measurement side, <a href="https://doi.org/10.296
 <li>Gouwens, N. W., et al. (2021). Phenotypic variation of transcriptomic cell types in mouse motor cortex. <em>Nature</em>, 598, 144-150. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
 <li>Schulz, D. J., Goaillard, J.-M., &amp; Marder, E. (2006). Variable channel expression in identified single and electrically coupled neurons in different animals. <em>Nature Neuroscience</em>, 9(3), 356-362. <a href="https://doi.org/10.1038/nn1639" target="_blank">doi:10.1038/nn1639</a></li>
 <li>Santoni, G., et al. (2024). Chromatin plasticity predetermines neuronal eligibility for memory trace formation. <em>Science</em>, 385(6716), eadg9982. <a href="https://doi.org/10.1126/science.adg9982" target="_blank">doi:10.1126/science.adg9982</a></li>
-<li>Traunmüller, L., et al. (2025). Novel environment exposure drives temporally defined and region-specific chromatin accessibility and gene expression changes in the hippocampus. <em>Nature Communications</em>, 16, 2613. <a href="https://doi.org/10.1038/s41467-025-63029-6" target="_blank">doi:10.1038/s41467-025-63029-6</a></li>
+<li>Traunmüller, L., et al. (2025). Novel environment exposure drives temporally defined and region-specific chromatin accessibility and gene expression changes in the hippocampus. <em>Nature Communications</em>, 16, 7787. <a href="https://doi.org/10.1038/s41467-025-63029-6" target="_blank">doi:10.1038/s41467-025-63029-6</a></li>
+<li>Guan, J. S., Haggarty, S. J., Giacometti, E., et al. (2009). HDAC2 negatively regulates memory formation and synaptic plasticity. <em>Nature</em>, 459(7243), 55-60. <a href="https://doi.org/10.1038/nature07925" target="_blank">doi:10.1038/nature07925</a></li>
+<li>Gulmez Karaca, K., Kupke, J., Brito, D. V. C., et al. (2020). Neuronal ensemble-specific DNA methylation strengthens engram stability. <em>Nature Communications</em>, 11, 639. <a href="https://doi.org/10.1038/s41467-020-14498-4" target="_blank">doi:10.1038/s41467-020-14498-4</a></li>
+<li>Bharadwaj, R., Peter, C. J., Jiang, Y., et al. (2014). Conserved higher-order chromatin regulates NMDA receptor gene expression and cognition. <em>Neuron</em>, 84(5), 997-1008. <a href="https://doi.org/10.1016/j.neuron.2014.10.032" target="_blank">doi:10.1016/j.neuron.2014.10.032</a></li>
 <li>Coda, D. M., Watt, L., Glauser, L., et al. (2025). Cell-type- and locus-specific epigenetic editing of memory expression. <em>Nature Genetics</em>, 57, 2661-2668. <a href="https://doi.org/10.1038/s41588-025-02368-y" target="_blank">doi:10.1038/s41588-025-02368-y</a></li>
 <li>Terceros, A., Chen, C., Harada, Y., et al. (2026). Thalamocortical transcriptional gates coordinate memory stabilization. <em>Nature</em>, 649, 1254-1263. <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">doi:10.1038/s41586-025-09774-6</a></li>
 <li>Wang, J., Telese, F., Tan, Y., et al. (2015). LSD1n is an H4K20 demethylase regulating memory formation via transcriptional elongation control. <em>Nature Neuroscience</em>, 18(9), 1256-1264. <a href="https://doi.org/10.1038/nn.4069" target="_blank">doi:10.1038/nn.4069</a></li>

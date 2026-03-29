@@ -144,9 +144,9 @@ I am not going to deal with philosophy or legal systems here. From only the aspe
 </tr>
 <tr>
 <td><strong>Activity-dependent transcription / chromatin state</strong></td>
-<td>Even with the same graph and cell-type label, allocation eligibility, late memory-stabilization programs, and locus-specific plasticity rules can still change over hours to weeks. </td>
-<td>A cell atlas or one-shot DEG list means that the current plasticity-competent program is already fixed. </td>
-<td>Treat static transcriptomic labels as identity priors; keep memory-stabilization controller explicit as latent unless temporal or causal evidence is shown. </td>
+<td>Even with the same graph and cell-type label, allocation eligibility, late memory-stabilization programs, and locus-specific plasticity rules can still change over hours to weeks, and the measured object may be accessibility, histone chemistry, DNA-methylation control, higher-order looping, or locus-specific editing rather than one generic epigenetic row. </td>
+<td>A cell atlas, one-shot DEG list, or one epigenetic assay means that the current plasticity-competent program is already fixed. </td>
+<td>Treat static transcriptomic labels or single-object epigenetic assays as identity / object priors; keep memory-stabilization controller explicit as latent unless temporal or causal evidence is shown. </td>
 </tr>
 <tr>
 <td><strong>Post-transcriptional RNA-state</strong></td>
@@ -568,7 +568,7 @@ The weak point that became clearer in this pass was that the site was already se
 <div class="note-box">
 <strong>Reading rule for transcriptomic evidence</strong>
 <p>
-On this site, a static atlas or one-shot memory-related DEG list is treated as <strong>identity prior or time-stamped clue</strong>, not as a ground truth of the current plasticity-competent state. Unless temporal calibration, locus specificity, or causal perturbation is shown, transcriptomic evidence stays below current-state completion. The detailed operating rule is now collected in <a href="homeostatic-plasticity-and-maintenance-state.html#transcription-route-card">Wiki: transcription / chromatin route card</a>.
+On this site, a static atlas, one-shot memory-related DEG list, or one epigenetic assay is treated as an <strong>identity prior, object-specific clue, or time-stamped clue</strong>, not as a ground truth of the current plasticity-competent state. Unless temporal calibration, locus specificity, molecular-object disclosure, or causal perturbation is shown, transcriptomic evidence stays below current-state completion. The detailed operating rule is now collected in <a href="homeostatic-plasticity-and-maintenance-state.html#transcription-route-card">Wiki: transcription / chromatin route card</a>.
 </p>
 </div>
 
@@ -996,7 +996,7 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li>Feld, G. B., Niethard, N., Liu, J., et al. (2026). Electrical synapses contribute to sleep-dependent declarative memory retention. <em>European Journal of Neuroscience</em>, 63(2), e70401. <a href="https://doi.org/10.1111/ejn.70401" target="_blank">doi:10.1111/ejn.70401</a></li>
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <em>Nature</em>, 640, 497–505. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
 <li>Santoni, G., et al. (2024). Chromatin plasticity predetermines neuronal eligibility for memory trace formation. <em>Science</em>, 385(6716), eadg9982. <a href="https://doi.org/10.1126/science.adg9982" target="_blank">doi:10.1126/science.adg9982</a></li>
-<li>Traunmüller, L., et al. (2025). Novel environment exposure drives temporally defined and region-specific chromatin accessibility and gene expression changes in the hippocampus. <em>Nature Communications</em>, 16, 2613. <a href="https://doi.org/10.1038/s41467-025-63029-6" target="_blank">doi:10.1038/s41467-025-63029-6</a></li>
+<li>Traunmüller, L., et al. (2025). Novel environment exposure drives temporally defined and region-specific chromatin accessibility and gene expression changes in the hippocampus. <em>Nature Communications</em>, 16, 7787. <a href="https://doi.org/10.1038/s41467-025-63029-6" target="_blank">doi:10.1038/s41467-025-63029-6</a></li>
 <li>Coda, D. M., Watt, L., Glauser, L., et al. (2025). Cell-type- and locus-specific epigenetic editing of memory expression. <em>Nature Genetics</em>, 57, 2661–2668. <a href="https://doi.org/10.1038/s41588-025-02368-y" target="_blank">doi:10.1038/s41588-025-02368-y</a></li>
 <li>Terceros, A., Chen, C., Harada, Y., et al. (2026). Thalamocortical transcriptional gates coordinate memory stabilization. <em>Nature</em>, 649, 1254–1263. <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">doi:10.1038/s41586-025-09774-6</a></li>
 <li>Wang, J., Telese, F., Tan, Y., et al. (2015). LSD1n is an H4K20 demethylase regulating memory formation via transcriptional elongation control. <em>Nature Neuroscience</em>, 18(9), 1256–1264. <a href="https://doi.org/10.1038/nn.4069" target="_blank">doi:10.1038/nn.4069</a></li>

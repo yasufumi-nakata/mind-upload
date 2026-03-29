@@ -1451,7 +1451,7 @@ The <strong>Observability Budget</strong> fixes what entered the sensor and what
 </tr>
 <tr>
 <td><strong>Activity-dependent transcription / chromatin state</strong></td>
-<td>Disclose whether current transcriptional / chromatin state was time-stamped, causally perturbed, externally calibrated, or replaced by a static atlas / DEG clue.</td>
+<td>Disclose whether current transcriptional / chromatin state was time-stamped, causally perturbed, externally calibrated, or replaced by a static atlas / DEG clue, and name whether the direct object was accessibility, histone-mark state, DNA-methylation program, higher-order looping, or locus-specific editing.</td>
 <td>Allocation eligibility, late stabilization, and locus-specific plasticity-control claims remain latent.</td>
 </tr>
 <tr>
@@ -2030,9 +2030,9 @@ The remaining weakness in this gate was not the absence of latent-state language
 </tr>
 <tr>
 <td><strong>Activity-dependent transcription / chromatin / epigenetic state</strong></td>
-<td>Allocation eligibility, late stabilization programs, and locus-specific plasticity rules can still differ over hours to weeks on the same graph and cell-type background. </td>
-<td>A static atlas label or one-shot DEG list already fixes the current plasticity-competent program. </td>
-<td>Identity / context clue only; memory-stabilization controller remains latent unless temporal or causal evidence is shown. </td>
+<td>Allocation eligibility, late stabilization programs, and locus-specific plasticity rules can still differ over hours to weeks on the same graph and cell-type background, and the measured object may be accessibility, histone chemistry, DNA-methylation control, higher-order looping, or locus editing rather than one generic epigenetic row. </td>
+<td>A static atlas label, one-shot DEG list, or one epigenetic assay already fixes the current plasticity-competent program. </td>
+<td>Identity / context or single-object clue only; memory-stabilization controller remains latent unless temporal or causal evidence is shown. </td>
 </tr>
 <tr>
 <td><strong>Post-transcriptional RNA-state</strong></td>
@@ -2165,7 +2165,7 @@ The remaining weakness was that <strong>allocation / engram-excitability papers<
 <div class="note-box">
 <strong>2026-03-19 addendum: transcription / chromatin evidence also needs a route card</strong>
 <p>
-The remaining weakness was that <strong>allocation eligibility</strong>, <strong>time-resolved response map</strong>, <strong>persistent stabilization cascade</strong>, and <strong>locus-specific causal editability</strong> could still be compressed into one bucket called <strong>transcriptomic evidence</strong>. The primary literature does not support that shortcut. On this site, such claims now have to disclose <strong>claim family</strong>, <strong>species / region / task</strong>, <strong>sampling windows</strong>, <strong>assay and direct observable</strong>, <strong>animal-level independence / pseudoreplication handling</strong>, <strong>causal perturbation status</strong>, and <strong>abstention boundary</strong>. The full operating rule is in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#transcription-route-card">Wiki: transcription / chromatin route card</a>.
+The remaining weakness was that <strong>allocation eligibility</strong>, <strong>time-resolved response map</strong>, <strong>persistent stabilization cascade</strong>, and <strong>locus-specific causal editability</strong> could still be compressed into one bucket called <strong>transcriptomic evidence</strong>, while <strong>chromatin accessibility</strong>, <strong>histone-acetylation / histone-methylation control</strong>, <strong>DNA-methylation stabilization</strong>, <strong>higher-order looping</strong>, and <strong>locus-specific editing</strong> could still be compressed into one bucket called <strong>epigenetic evidence</strong>. The primary literature does not support either shortcut. <a href="https://doi.org/10.1126/science.adg9982" target="_blank">Santoni et al. (2024)</a>, <a href="https://doi.org/10.1038/nature07925" target="_blank">Guan et al. (2009)</a>, <a href="https://doi.org/10.1038/s41467-020-14498-4" target="_blank">Gulmez Karaca et al. (2020)</a>, <a href="https://doi.org/10.1016/j.neuron.2014.10.032" target="_blank">Bharadwaj et al. (2014)</a>, <a href="https://doi.org/10.1038/s41588-025-02368-y" target="_blank">Coda et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2026)</a> constrain different objects again. On this site, such claims now have to disclose <strong>claim family</strong>, <strong>molecular object family</strong>, <strong>species / region / task</strong>, <strong>sampling windows</strong>, <strong>assay and direct observable</strong>, <strong>animal-level independence / pseudoreplication handling</strong>, <strong>human observability ceiling</strong>, <strong>causal perturbation status</strong>, and <strong>abstention boundary</strong>. The full operating rule is in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#transcription-route-card">Wiki: transcription / chromatin route card</a>.
 </p>
 </div>
 <div class="note-box">
@@ -2806,6 +2806,9 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
 <li>Santoni, G., et al. (2024). Chromatin plasticity predetermines neuronal eligibility for memory trace formation. <a href="https://doi.org/10.1126/science.adg9982" target="_blank">doi:10.1126/science.adg9982</a></li>
 <li>Traunmüller, L., et al. (2025). Novel environment exposure drives temporally defined and region-specific chromatin accessibility and gene expression changes in the hippocampus. <a href="https://doi.org/10.1038/s41467-025-63029-6" target="_blank">doi:10.1038/s41467-025-63029-6</a></li>
+<li>Guan, J. S., Haggarty, S. J., Giacometti, E., et al. (2009). HDAC2 negatively regulates memory formation and synaptic plasticity. <a href="https://doi.org/10.1038/nature07925" target="_blank">doi:10.1038/nature07925</a></li>
+<li>Gulmez Karaca, K., Kupke, J., Brito, D. V. C., et al. (2020). Neuronal ensemble-specific DNA methylation strengthens engram stability. <a href="https://doi.org/10.1038/s41467-020-14498-4" target="_blank">doi:10.1038/s41467-020-14498-4</a></li>
+<li>Bharadwaj, R., Peter, C. J., Jiang, Y., et al. (2014). Conserved higher-order chromatin regulates NMDA receptor gene expression and cognition. <a href="https://doi.org/10.1016/j.neuron.2014.10.032" target="_blank">doi:10.1016/j.neuron.2014.10.032</a></li>
 <li>Coda, D. M., Watt, L., Glauser, L., et al. (2025). Cell-type- and locus-specific epigenetic editing of memory expression. <a href="https://doi.org/10.1038/s41588-025-02368-y" target="_blank">doi:10.1038/s41588-025-02368-y</a></li>
 <li>Terceros, A., Chen, C., Harada, Y., et al. (2026). Thalamocortical transcriptional gates coordinate memory stabilization. <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">doi:10.1038/s41586-025-09774-6</a></li>
 <li>Wang, J., Telese, F., Tan, Y., et al. (2015). LSD1n is an H4K20 demethylase regulating memory formation via transcriptional elongation control. <a href="https://doi.org/10.1038/nn.4069" target="_blank">doi:10.1038/nn.4069</a></li>
