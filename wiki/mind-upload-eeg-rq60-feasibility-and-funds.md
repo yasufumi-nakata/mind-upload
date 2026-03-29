@@ -59,15 +59,16 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 |---|---|---|---|---|---|
 | U13-2 | `brain-minus-prior` を含む imagined speech hallucination / neural inconsistency audit | `D10` | `G1/G4` / `くら基金 若手研究者奨励助成`, `中谷財団 大学院生奨学金` | `semantic alignment` `brain-minus-prior gap` `misalignment rate` | decoder 成功を mind-preservation claim へ読み替えません。 |
 | U13-5 | 知覚→想起の分岐点で mimicry と mechanism を切り分ける transfer bench | `D03` | `G1/G4` / `くら基金 若手研究者奨励助成`, `中谷財団 大学院生奨学金` | `perception-to-recall degradation point` `transfer gap` `control-condition stability` | shared decoder を shared mechanism の証拠にしません。 |
-| U14-4 | Model Card / Dataset Card を rerun contract の必須欄へ接続する reproducibility audit | `D01` | `G1/G3` / `中谷財団 研究助成`, `くら基金 若手研究者奨励助成` | `required-card fill rate` `rerun success rate` `leak-audit coverage` | card 記述だけで field-wide reproducibility を主張しません。 |
+| U14-4 | Model Card / Dataset Card を rerun contract の必須欄へ接続する reproducibility audit | `D01` | `G1/G3` / `くら基金 若手研究者奨励助成`, `中谷財団 研究助成（next-cycle watch）` | `required-card fill rate` `rerun success rate` `leak-audit coverage` | card 記述だけで field-wide reproducibility を主張しません。 |
 | U0-2 | `clock offset + jitter + state-feature collapse` の本人性ドリフト監査 | `D02` | `G2/G3` / `中谷財団 大学院生奨学金`, `樫の芽会 奨学金（runway 補助のみ）` | `clock-offset p95` `state-feature collapse rate` `resync recovery rate` | 技術的同期安定性を法的・哲学的同一性へ直結しません。 |
 | U0-3 | task別 threshold stability と overfit exclusion を先に固定する本人性ドリフトベンチ | `D02` | `G2/G3` / `中谷財団 大学院生奨学金`, `樫の芽会 奨学金（runway 補助のみ）` | `session-out AUC` `threshold stability` `overfit exclusion rate` | 安定閾値を personhood continuity の十分条件にしません。 |
-| U14-2 | exploration / confirmation split を rerun contract の運用境界へ落とす reproducibility split | `D01` | `G1/G3` / `中谷財団 研究助成`, `くら基金 若手研究者奨励助成` | `fixed-split rate` `rerun success rate` `explore-to-confirm carryover gap` | exploratory output を confirmatory claim と混同しません。 |
+| U14-2 | exploration / confirmation split を rerun contract の運用境界へ落とす reproducibility split | `D01` | `G1/G3` / `くら基金 若手研究者奨励助成`, `中谷財団 研究助成（next-cycle watch）` | `fixed-split rate` `rerun success rate` `explore-to-confirm carryover gap` | exploratory output を confirmatory claim と混同しません。 |
 
 補足:
 
 - live `mind-upload.com/issue.html` はこの 6RQ を既に自然な public route として出していたため、本runで public source page の追加差し替えは行っておりません。
 - Todoist は実 API でも既存 task の存在を再確認できたため、本runでは新規 task を追加しておりません。
+- 公式制度の再確認では、`中谷財団 研究助成` は `2026年度研究助成の募集を終了しました（募集期間: 2025-06-01 - 2025-07-07）` と明記されていたため、`U14-4/U14-2` の immediate route は `くら基金`、同助成は `next-cycle watch` として扱います。
 - 07:18 の `U0-1/U1-2/U4-4/U7-1/U8-4/U11-1` ブロックは earlier internal candidate として残し、current public route は本節の 6RQ を正本といたします。
 
 ## 今回の深掘り実行パック（2026-03-29 07:18 JST, mind-upload.com 優先6RQの再固定）
