@@ -256,6 +256,11 @@ The learning portal now treats living-human evidence more strictly at the entran
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards">RQ60 Deep Evaluation Cards</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds">RQ60 feasibility original</a></td>
 </tr>
 <tr>
+<td><strong>I want the shortest public-safe entry into the six RQs currently being deepened</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief">Mind-upload Current Public Six: EEG Route Brief</a></td>
+<td><a href="https://mind-upload.com/issue.html">Contribution guide</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers">RQ60 RQ-by-RQ Deep Dossiers</a></td>
+</tr>
+<tr>
 <td><strong>Stops at the difference between partial solution, exploration stage, and undeveloped</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/progress-labels-and-open-problem-status">How to read partial solution/exploration stage/undeveloped</a></td>
 <td><a href="https://mind-upload.com/research_harvest_50.html">Literature map</a> / <a href="https://mind-upload.com/tech_roadmap.html">Technology roadmap</a></td>

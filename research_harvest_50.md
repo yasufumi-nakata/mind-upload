@@ -129,13 +129,13 @@ If you want a one-page workflow that connects literature triage, theory notes, p
 <div class="note-box">
 <strong>If you want to turn one unresolved question into an EEG-ready or grant-ready work package</strong>
 <p>
-This public literature map stays at the routing level. If you want the current one-question-at-a-time route from an unresolved question to an EEG-feasible test, a fundable theme, and a fixed dataset anchor, go to the <a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG feasibility page</a>, the <a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ-by-RQ deep dossiers</a>, the <a href="wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html">grant and dataset playbook</a>, and the <a href="https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md">current funding shortlist</a>.
+This public literature map stays at the routing level. If you want the current one-question-at-a-time route from an unresolved question to an EEG-feasible test, a fundable theme, and a fixed dataset anchor, go to the <a href="wiki/mind-upload-current-public-six-rq-brief.html">current public six-RQ brief</a>, the <a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG feasibility page</a>, the <a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ-by-RQ deep dossiers</a>, the <a href="wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html">grant and dataset playbook</a>, and the <a href="https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md">current funding shortlist</a>.
 </p>
 </div>
 <div class="note-box">
 <strong>If you want to read the current working style correctly</strong>
 <p>
-The active route is no longer broad thematic summarization. We now deepen one unresolved question at a time, fix one bounded claim, one dataset anchor, and one stopping rule, and keep stronger or externally dependent claims outside the EEG result. If you want the current deepening queue rather than the literature map, use the <a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ-by-RQ deep dossiers</a> and the <a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG feasibility page</a>.
+The active route is no longer broad thematic summarization. We now deepen one unresolved question at a time, fix one bounded claim, one dataset anchor, and one stopping rule, and keep stronger or externally dependent claims outside the EEG result. If you want the current deepening queue rather than the literature map, start with the <a href="wiki/mind-upload-current-public-six-rq-brief.html">current public six-RQ brief</a>, then use the <a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ-by-RQ deep dossiers</a> and the <a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG feasibility page</a>.
 </p>
 </div>
 <div class="note-box">
