@@ -50,6 +50,23 @@ recommended_pages:
 - Funding-window recheck in this run: `Kura Fund` remains open through `2026-04-17 17:00`, the `Nakatani Foundation graduate scholarship` opens `2026-04-01` and closes `2026-05-25 15:00`, the `Kashinome Scholarship` remains open through `2026-04-09`, the `Secom General Research Grant` remains an urgency watch route through `2026-03-31 12:00`, and the `Nakatani Foundation research grant` remains `next-cycle watch`.
 - Large social-deployment programs such as `AI for Aging-Society Problem Solving` remain outside this current EEG-first route, because their required output is a scaled public deployment program rather than a `one-RQ / one-anchor / one-first-artifact` EEG result.
 
+## Public-safe closure gates for the current batch (2026-03-30 02:05 JST)
+
+- This run rechecked the live public page, the current official funding windows, and Todoist in read-only mode. The batch itself still does not change.
+- What does change here is the wording of `what counts as real progress right now`: not a stronger claim, but a narrower `first artifact` for each of the six current public RQs.
+
+| RQ | What can honestly move forward now | Why the current anchor is enough for that next step | First artifact to close next | Keep outside the public claim |
+|---|---|---|---|---|
+| `U13-2` | Fix the `brain-minus-prior` control family before any stronger decoder wording. | `D10 3M-CPSEED` already gives overt / silent-intended / imagined speech, repeated sessions, and transcript-aligned phases, so it is sufficient for a bounded hallucination / inconsistency audit. | `Brain-minus-prior control table and mimic-separation note` | Do not treat decoder success as preserved internal state or mind preservation. |
+| `U13-5` | Freeze only the perception-to-recall branch point, not a general mechanism claim. | `D03 Multimodal Fusion EEG + Eye-Tracking` is enough to keep the transfer-gap interpretation bounded because the shared EEG + gaze streams let the branch stay tied to a concrete perception/recall shift. | `Perception-to-recall degradation note and transfer-gap table` | Do not present a shared decoder as evidence of preserved internal mechanism. |
+| `U0-2` | Close the timing budget that prevents identity-like wording from absorbing measurement error. | `D02 CSTE` already has repeated sessions, cross-task labels, and timestamp/QC structure, so it is enough to lock `clock offset + jitter + state-feature collapse` into one narrow audit. | `Offset/jitter distribution and state-feature collapse audit` | Do not elevate synchronization stability into legal or philosophical identity continuity. |
+| `U0-3` | Fix the threshold-selection rule only after the timing route is bounded. | The same `D02 CSTE` anchor lets threshold stability and overfit exclusion stay on the same cross-session / cross-task identity-drift floor as `U0-2`. | `Threshold-stability note and overfit-exclusion rule` | Do not treat a stable biometric threshold as a sufficient condition for personhood continuity. |
+| `U14-4` | Freeze the disclosure fields that the current batch actually needs for reruns. | `D01 Acquisition delay of wireless EEG` is narrow enough to turn Model Card / Dataset Card items into a rerun checklist without overclaiming field-wide standardization. | `Filled Model Card / Dataset Card examples for the current public batch` | Do not claim organizational adoption or community-wide standardization yet. |
+| `U14-2` | Make the exploration/confirmation split operational rather than aspirational. | The same `D01` latency-first route is enough to define a fixed split plus rerun boundary, even though it is still too narrow for broader reproducibility claims. | `Fixed-split rerun contract and negative-case trail` | Do not present exploratory outputs as confirmatory evidence after the split boundary is crossed. |
+
+- Official-window recheck in this run stayed conservative: `Kura Fund` remains open through `2026-04-17 17:00`, the `Nakatani Foundation graduate scholarship` detail page still shows `2026-04-01 - 2026-05-25 15:00`, the `Kashinome Scholarship` remains open through `2026-04-09`, and `Secom General Research Grant` remains a watch route through `2026-03-31 12:00`.
+- Todoist read-only recheck found the current route already covered by existing tasks, including `Kura Fund`, `Nakatani Foundation graduate scholarship`, `Kashinome Scholarship`, `Nakatani Foundation research grant`, and `Secom`. No new task was added in this run.
+
 ## Current public six-question batch (2026-03-29 10:09 JST)
 
 This run changes the active public batch to `U13-2`, `U13-5`, `U14-4`, `U0-2`, `U0-3`, and `U14-2`.
