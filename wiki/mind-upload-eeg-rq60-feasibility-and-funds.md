@@ -51,6 +51,25 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `B`: 25件
 - `C`: 18件
 
+## 今回の深掘り実行パック（2026-03-29 12:06 JST, post-pull public batch sync）
+
+本runでは、pull 後に live `mind-upload.com/issue.html` を再確認し、公開中の 6RQ を `U13-2/U13-5/U14-4/U0-2/U0-3/U14-2` として内部 wiki 側へ同期し直しました。総論へ戻さず、今回も `1RQ=1検証命題=1主Dアンカー=1第一資金ルート=1非主張境界` の粒度で固定いたします。
+
+| RQ | 今回固定する最小命題 | 主Dアンカー | 現行助成レーン / 実制度の置き先 | 初手KPI | EEG単独でまだ主張しないこと |
+|---|---|---|---|---|---|
+| U13-2 | `brain-minus-prior` を含む imagined speech hallucination / neural inconsistency audit | `D10` | `G1/G4` / `くら基金 若手研究者奨励助成`, `中谷財団 大学院生奨学金` | `semantic alignment` `brain-minus-prior gap` `misalignment rate` | decoder 成功を mind-preservation claim へ読み替えません。 |
+| U13-5 | 知覚→想起の分岐点で mimicry と mechanism を切り分ける transfer bench | `D03` | `G1/G4` / `くら基金 若手研究者奨励助成`, `中谷財団 大学院生奨学金` | `perception-to-recall degradation point` `transfer gap` `control-condition stability` | shared decoder を shared mechanism の証拠にしません。 |
+| U14-4 | Model Card / Dataset Card を rerun contract の必須欄へ接続する reproducibility audit | `D01` | `G1/G3` / `中谷財団 研究助成`, `くら基金 若手研究者奨励助成` | `required-card fill rate` `rerun success rate` `leak-audit coverage` | card 記述だけで field-wide reproducibility を主張しません。 |
+| U0-2 | `clock offset + jitter + state-feature collapse` の本人性ドリフト監査 | `D02` | `G2/G3` / `中谷財団 大学院生奨学金`, `樫の芽会 奨学金（runway 補助のみ）` | `clock-offset p95` `state-feature collapse rate` `resync recovery rate` | 技術的同期安定性を法的・哲学的同一性へ直結しません。 |
+| U0-3 | task別 threshold stability と overfit exclusion を先に固定する本人性ドリフトベンチ | `D02` | `G2/G3` / `中谷財団 大学院生奨学金`, `樫の芽会 奨学金（runway 補助のみ）` | `session-out AUC` `threshold stability` `overfit exclusion rate` | 安定閾値を personhood continuity の十分条件にしません。 |
+| U14-2 | exploration / confirmation split を rerun contract の運用境界へ落とす reproducibility split | `D01` | `G1/G3` / `中谷財団 研究助成`, `くら基金 若手研究者奨励助成` | `fixed-split rate` `rerun success rate` `explore-to-confirm carryover gap` | exploratory output を confirmatory claim と混同しません。 |
+
+補足:
+
+- live `mind-upload.com/issue.html` はこの 6RQ を既に自然な public route として出していたため、本runで public source page の追加差し替えは行っておりません。
+- Todoist は実 API でも既存 task の存在を再確認できたため、本runでは新規 task を追加しておりません。
+- 07:18 の `U0-1/U1-2/U4-4/U7-1/U8-4/U11-1` ブロックは earlier internal candidate として残し、current public route は本節の 6RQ を正本といたします。
+
 ## 今回の深掘り実行パック（2026-03-29 07:18 JST, mind-upload.com 優先6RQの再固定）
 
 本runでは、`mind-upload.com` 側で今そのまま不自然なく案内できる公開導線を先に固定し、そのうえで「今すぐ1件ずつ深く解く」6RQを `EEG-DATA` 実在面・現行助成面・Todoist登録状況まで含めて再固定いたしました。公開面では結論を強めず、`1RQ=1検証命題=1主Dアンカー=1外部依存境界` の粒度に留めます。
@@ -66,7 +85,7 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 
 補足:
 
-- `mind-upload.com/issue.html` の公開6RQは `U0-1/U1-2/U4-4/U7-1/U8-4/U11-1` へ同期いたしました。
+- この 07:18 候補は、12:06 の live 再確認で current public batch が `U13-2/U13-5/U14-4/U0-2/U0-3/U14-2` であることを確認したため、historical candidate として扱います。
 - 関連する主要制度の Todoist task は既に登録済みのため、本runでは新規 task 追加を行っておりません。
 
 実行順（本run固定）:

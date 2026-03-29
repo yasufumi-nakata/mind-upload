@@ -30,6 +30,21 @@ reading_time: "35-55分"
 - `B`: 25
 - `C`: 18
 
+## 2026-03-29 12:06 JST 再検証ログ（post-pull public batch sync）
+
+- pull 後に live `mind-upload.com/issue.html` を再確認し、current public batch は `U13-2/U13-5/U14-4/U0-2/U0-3/U14-2` であることを確認いたしました。
+- この run では public route を巻き戻さず、内部カード側を `D10/D03/D01/D02` の conservative anchor family へ同期し直しております。
+- 主要な助成制度の Todoist task は実 API でも既存確認できたため、本runでは新規 task 追加を行っておりません。
+
+| RQ | 判定 | 主データ（Dアンカー） | 第一/予備応募先 | 今回固定した深掘りポイント | Todoist判断 | 最低成果物 |
+|---|---|---|---|---|---|---|
+| U13-2 | B | `D10` | `くら基金 / 中谷財団 大学院生奨学金` | `brain-minus-prior` を含む hallucination / inconsistency audit を public pass/fail の最小束へ固定。 | 既存 task あり | Mimic separation evaluation script and control condition table |
+| U13-5 | B | `D03` | `くら基金 / 中谷財団 大学院生奨学金` | 知覚→想起の degradation point を mimicry/mechanism split の入口として固定。 | 既存 task あり | Mimic separation evaluation script and control condition table |
+| U14-4 | A | `D01` | `中谷財団 研究助成 / くら基金` | Model Card / Dataset Card を rerun contract の required fields へ固定。 | 既存 task あり | Model/Dataset Card template and filled-in examples |
+| U0-2 | A | `D02` | `中谷財団 大学院生奨学金 / 樫の芽会（runway 補助のみ）` | `clock offset + jitter + state-feature collapse` の drift audit を public ceiling に固定。 | 既存 task あり | Time synchronization audit report (offset/jitter distribution) |
+| U0-3 | A | `D02` | `中谷財団 大学院生奨学金 / 樫の芽会（runway 補助のみ）` | threshold stability と overfit exclusion を先に通す biometric bench として固定。 | 既存 task あり | Threshold search notebook and selection rationale table |
+| U14-2 | A | `D01` | `中谷財団 研究助成 / くら基金` | exploration / confirmation split を rerun contract の運用境界へ固定。 | 既存 task あり | Supplementary test operation report (including negative cases) |
+
 ## 2026-03-29 07:18 JST 再検証ログ（本run / mind-upload.com 優先6RQの再固定）
 
 - 本runでは、`mind-upload.com` 側で不自然なく案内できる公開6RQを先に固定し、その6件を `EEG-DATA` 実在面・現行助成面・Todoist登録状況まで含めて再固定いたしました。
