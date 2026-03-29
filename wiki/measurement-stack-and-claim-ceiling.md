@@ -10,7 +10,7 @@ description: We will organize from primary literature what EEG/MEG/fMRI, whole-b
 article_type: Wiki
 subtitle: multimodal is not a synonym for ``seen everything''
 author: Mind Uploading Research Project
-last_updated: '2026-03-29'
+last_updated: '2026-03-30'
 note: Technical / natural science only
 audience: People who want to sort out what modalities are directly visible and which
   claims are valid using only technology and natural science.
@@ -43,6 +43,9 @@ page_highlights:
 - Same-session multimodal acquisition is not treated as self-validating fusion; the
   site now requires a Fusion Card before the ceiling is raised above the strongest
   unimodal route.
+- Same-brain functional connectomics is now split into sequential bridge, label-transfer,
+  synaptic-state, and dynamics-identifiability walls, so ``same-brain'' is not
+  overread as one solved route.
 - Destructive ultrastructure routes are now read through preservation, registration,
   and proofreading burden rather than through resolution language alone.
 - Human diffusion-MRI tractography / structural-connectome rows are now read as acquisition-,
@@ -69,6 +72,9 @@ known_points:
   and spatial location, but the sufficiency of dynamic states is another matter.
 - Patch-seq and same-brain connectomics reduce degeneracy, but the sufficiency of
   whole-brain coverage and long-term maintenance-state remains.
+- Same-brain functional connectomics can strengthen local structure-function links
+  while still relying on morphology-bridged labels and leaving current synaptic
+  state and unique dynamics unresolved.
 - A diffusion-MRI-derived human connectome is not one stable object; hub maps, laterality,
   and bundle recovery remain conditioned by acquisition scheme, endpoint assignment,
   graph construction, and uncertainty handling.
@@ -197,10 +203,10 @@ The last column of the table below is not a summary of each paper, but the opera
 </tr>
 <tr>
 <td><strong>same-brain functional connectomics</strong></td>
-<td>Correspondence between co-registered dense activity and EM connectome in the same brain. </td>
-<td>Like MICrONS, local circuits can further strengthen structure-function links, state-dependent response prediction, and cell-type dependent wiring rules. </td>
-<td>Whole-brain coverage, whole-state generalization, sufficiency of current synaptic efficacy, homeostatic controller, and glial/metabolic maintenance-state remain. </td>
-<td><strong>Up to local conditional prediction and local functional twin</strong>. We do not promote whole-brain WBE or state-complete reconstruction. </td>
+<td>Co-registered in vivo activity measurements and a later reconstructed local EM connectome in a named same-brain pipeline. </td>
+<td>Like MICrONS and linked analyses, sampled local circuits can strengthen structure-function correspondences, local connection rules, and connectome-constrained conditional prediction within the measured region / task / state. </td>
+<td>Same-time whole-brain state, current synaptic efficacy / release state, direct transcriptomic identity unless separately measured, unique dynamical parameterization, and long-horizon maintenance-state remain unresolved. </td>
+<td><strong>Up to a sequential local structure-function scaffold and local conditional prediction</strong>. We do not promote it to current synaptic-state readout, direct cell-type truth, unique dynamics, or a whole-brain twin. </td>
 </tr>
 <tr>
 <td><strong>diffusion MRI tractography / structural connectome</strong></td>
@@ -280,12 +286,54 @@ Gouwens et al. showed that morpho-electric variation remains continuously within
 Dorkenwald et al.'s adult fly whole-brain connectome is a huge step forward, reorganizing approximately 5 × 10<sup>7</sup> chemical synapses and 139,255 neurons. However, EM is strong because it is a structural scaffold, and it is not a method that directly measures current weight, release probability, neuromodulatory context, and glial/metabolic background. The criticism that follows from this is simple: we must not equate knowing the wiring with knowing the generative state of the moment.
 </p>
 
-<h3>4. Adding same-brain function reduces degeneration, but does not reach whole-brain state-complete</h3>
+<h3>4. Adding same-brain function reduces degeneration, but does not by itself fix labels, current synaptic state, or unique dynamics</h3>
 <p>
-MICrONS combines dense calcium imaging, behavioral states, and the EM connectome in the same brain, presenting multi-area functional connectomics of the mouse visual cortex. This is even stronger than connectome-only, and provides a basis for discussing <strong>structure-function links in the same brain. However, the paper itself deals with specific regions, specific tasks, and specific states of the visual cortex, and it is not possible to make a leap from there to the human whole-brain or all-state completeness. Therefore, the ceiling of this stack is <strong>local functional twin</strong>.
+MICrONS combines dense calcium imaging, behavioral states, and a later EM connectome in the same brain, and the linked analyses show that same-brain local circuits can support stronger structure-function correspondences and connectome-constrained conditional prediction. This is a real advance over connectome-only. However, the measurable object is still a <strong>sequential, local, and regime-bounded bridge</strong>, not a same-time whole-brain state sample. It is therefore too weak to treat the label <strong>same-brain functional connectomics</strong> as one solved class. The remaining walls are not only whole-brain coverage and maintenance-state, but also whether transcriptomic labels were <strong>directly measured or morphology-bridged</strong>, whether the result constrains <strong>current synaptic efficacy / release state</strong>, and whether the resulting dynamical explanation is <strong>unique rather than one member of a still-degenerate family</strong>. Therefore, the ceiling of this stack on this site is a <strong>sequential local structure-function scaffold</strong> or <strong>local conditional-prediction route</strong>, not current synaptic-state or a whole-brain twin.
 </p>
 
-<h3 id="destructive-ultrastructure-wall">4.5. Destructive ultrastructure still faces a preservation / registration / throughput wall</h3>
+<h3 id="same-brain-functional-connectomics-wall">4.5. Same-brain functional connectomics is a sequential local scaffold, not current synaptic-state or a unique whole-brain twin</h3>
+<p>
+Another weakness that remained on this page was that <strong>same-brain functional connectomics</strong> could still be overread as if one frontier stack had already solved specimen identity, direct cell typing, current synaptic state, and dynamical identifiability in one move. That is too weak. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a> showed a strong correlative workflow from in vivo physiology to synchrotron microtomography and volume EM, but through a multistage landmark-based route. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> then showed a same-brain local pipeline that can support rich structure-function analysis, and <a href="https://doi.org/10.1038/s41586-025-08840-3" target="_blank">Ding et al. (2025)</a> showed that same-brain functional connectomics can reveal a generalized local wiring rule. But <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">Gamlin et al. (2025)</a> still mapped <strong>predicted</strong> transcriptomic types through morphology-based classification rather than direct transcriptomic readout inside the EM volume. And the remaining latent state is not trivial: <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">Holler et al. (2021)</a>, <a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">D&uuml;rst et al. (2022)</a>, and <a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">Mittermaier et al. (2024)</a> show that current synaptic efficacy, release probability, and membrane-state-gated consolidation are not exhausted by structure-function correspondence, while <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> show that connectome-constrained recurrent networks can still remain dynamically degenerate until extra recordings collapse the solution space. What follows directly is that <strong>same-brain functional connectomics is a strong local scaffold, but not a solved route to current synaptic-state, direct transcriptomic truth, or unique whole-brain dynamics</strong>.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Wall</th>
+<th>What the primary literature now supports</th>
+<th>Site rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sequential bridge wall</strong></td>
+<td>Same-brain correlative pipelines can carry landmarks, targeted subvolumes, and local structure-function correspondence across stages, but they are still sequential rather than same-time whole-brain state capture.</td>
+<td>Do not read <strong>same-brain</strong> as <strong>same-time complete state</strong>; disclose acquisition order, regime continuity, and local scope first.</td>
+</tr>
+<tr>
+<td><strong>Label-transfer wall</strong></td>
+<td>Same-brain connectomics can support morphology-linked transfer to transcriptomic classes, but that is different from direct transcriptomic measurement inside the reconstructed volume.</td>
+<td>Do not read <strong>predicted transcriptomic type</strong> as <strong>direct cell-type truth</strong> unless the assay route is named explicitly.</td>
+</tr>
+<tr>
+<td><strong>Synaptic-state wall</strong></td>
+<td>Structure-function correspondence, synapse size, and identified connectivity strengthen priors on function, but current efficacy, release probability, and membrane-state-gated consolidation still depend on additional state variables.</td>
+<td>Do not read <strong>same-brain functional connectomics</strong> as <strong>current synaptic-state readout</strong> without a direct synaptic-state assay.</td>
+</tr>
+<tr>
+<td><strong>Dynamics-identifiability wall</strong></td>
+<td>Even when connectivity is fixed, recurrent networks with different biophysical parameters can generate compatible activity until additional recordings constrain the solution space.</td>
+<td>Do not read <strong>connectome-constrained prediction</strong> as <strong>unique recovered dynamics</strong> unless the extra-recording / perturbation route that removes degeneracy is disclosed.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Operating rule for same-brain functional connectomics</strong>
+<p>
+On this site, same-brain functional connectomics is read first as a <strong>sequential local structure-function scaffold</strong> or <strong>local conditional-prediction route</strong>. To argue above that ceiling, a submission now has to disclose the bridge class, whether labels were directly measured or transferred, whether any route directly probed current synaptic state, and what extra recordings or perturbations were required to narrow the dynamical solution space.
+</p>
+</div>
+
+<h3 id="destructive-ultrastructure-wall">4.6. Destructive ultrastructure still faces a preservation / registration / throughput wall</h3>
 <p>
 Another weakness that remained on this page was that <strong>volume EM</strong>, <strong>petascale</strong>, or <strong>same-brain</strong> could still be overread as if destructive ultrastructure had already solved native-state preservation, whole-brain scaling, and reconstruction quality in one move. That is too weak. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> showed that conventional aldehyde fixation collapses extracellular space, that the fixation time course itself is not instantaneous, and that high-pressure freezing preserves extracellular space only in samples thinner than roughly <strong>200 μm</strong>. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> then showed that a rapidly preserved human sample can yield a remarkable nanoscale reconstruction, but still as a <strong>1.05 mm<sup>3</sup></strong> surgical fragment with <strong>1.8 PB</strong> raw data and <strong>326 days</strong> of imaging. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> showed that same-brain function plus EM is a sequential local pipeline rather than simultaneous state capture, and <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">Dorkenwald et al. (2024)</a> showed that even the adult fly whole-brain frontier still depended on proofreading, thresholding, and substantial manual correction effort. What follows directly is that <strong>resolution alone does not erase preservation artifacts, local registration limits, or reconstruction burden</strong>.
 </p>
@@ -322,7 +370,7 @@ On this site, a destructive ultrastructure result is read first as a <strong>str
 </p>
 </div>
 
-<h3 id="tractography-route-conditioned-wall">4.6. Human diffusion MRI tractography is a route-conditioned macro pathway prior, not one stable graph</h3>
+<h3 id="tractography-route-conditioned-wall">4.7. Human diffusion MRI tractography is a route-conditioned macro pathway prior, not one stable graph</h3>
 <p>
 Another weakness that remained on this page was that <strong>connectome</strong>, <strong>dMRI</strong>, or <strong>tractography graph</strong> could still be overread as if a living-human structural stack already produced one stable object. That is too weak. <a href="https://doi.org/10.1073/pnas.1418198112" target="_blank">Reveley et al. (2015)</a> showed that superficial white matter can impede detection of long-range cortical connections, and <a href="https://doi.org/10.1002/hbm.23936" target="_blank">Schilling et al. (2018)</a> showed that tractography endpoints remain biased toward gyral crowns across algorithms and diffusion models. The newer literature then shows that even after tracking, the graph itself still moves. <a href="https://doi.org/10.1162/netn_a_00324" target="_blank">Gajwani et al. (2023)</a> showed across <strong>40 pipelines</strong> and <strong>44</strong> group-representative reconstructions that hub location is highly variable, and <a href="https://doi.org/10.1016/j.neuroimage.2024.120904" target="_blank">He et al. (2024)</a> showed that tractogram filtering can significantly change connectome laterality. Upstream of that, <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">McMaster et al. (2025)</a> showed that voxel-size variance changes the resulting connectome and recommended harmonized resampling, while <a href="https://doi.org/10.3389/fnimg.2026.1670604" target="_blank">Bramati et al. (2026)</a> showed on the same <strong>3 T</strong> scanner with uniform processing that common diffusion-sampling schemes can still shift voxel-wise metrics and tractography outputs. Downstream, <a href="https://doi.org/10.1016/j.media.2025.103580" target="_blank">Manzano-Patrón et al. (2025)</a> showed that fibre-orientation uncertainty can be propagated into tractography rather than hidden, and <a href="https://doi.org/10.1016/j.media.2025.103498" target="_blank">Zhu et al. (2025)</a> showed that MRI plus microscopy can improve reconstruction in a hybrid calibration setting. What follows directly is that <strong>a diffusion-MRI-derived human connectome is not one stable graph by default</strong>; it is an <strong>acquisition-, endpoint-, graph-construction-, and calibration-conditioned estimate</strong>.
 </p>
@@ -364,7 +412,7 @@ On this site, a living-human tractography result is read first as a <strong>macr
 </p>
 </div>
 
-<h3 id="eeg-meg-validation-wall">4.7. EEG / MEG still face a visibility / inverse / validation wall</h3>
+<h3 id="eeg-meg-validation-wall">4.8. EEG / MEG still face a visibility / inverse / validation wall</h3>
 <p>
 Another weakness that remained on this page was that <strong>source-localized</strong>, <strong>deep-source detectable</strong>, or <strong>intracranially validated</strong> could still be overread as if non-invasive field recordings had already crossed from macro observables into general internal-state recovery. That is too weak. Before any inverse solver runs, there is already a <strong>field-formation wall</strong>. <a href="https://doi.org/10.1007/s10548-010-0154-x" target="_blank">Ahlfors et al. (2010)</a> quantified source-orientation sensitivity with realistic tissue boundaries and found that the median ratio between the least and most sensitive orientations was <strong>0.63 for EEG</strong> but only <strong>0.06 for MEG</strong>. <a href="https://doi.org/10.1002/hbm.20851" target="_blank">Ahlfors et al. (2010)</a> then showed that extended and distributed sources can cancel substantially at the surface. <a href="https://doi.org/10.1002/hbm.20571" target="_blank">Goldenholz et al. (2009)</a> showed that source extent and anatomy strongly change detectability, with mesial temporal source patches of about <strong>3 cm<sup>2</sup></strong> versus <strong>8 cm<sup>2</sup></strong> differing by roughly <strong>10 dB</strong> in SNR. <a href="https://doi.org/10.1002/hbm.25272" target="_blank">Piastra et al. (2021)</a> further showed that ignoring the <strong>CSF compartment</strong> overestimates EEG SNR and that cortical / subcortical sensitivity depends jointly on depth and orientation. Only after that upstream filter do benchmark papers become readable. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a> created the first open human ground-truth benchmark by combining <strong>256-channel HD-EEG</strong> with precisely known intracerebral stimulation sites, but they also stated explicitly that stimulation artifacts are <strong>non-physiological</strong> and that spatial sampling remains anatomically clustered. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> then evaluated <strong>3,619</strong> known stimulation locations in <strong>11 patients</strong> with simultaneous SEEG and scalp EEG and found mean localization errors ranging from <strong>10.3 to 26 mm</strong>, worsening with source depth and lower skull conductivity. <a href="https://doi.org/10.1016/j.jneumeth.2024.110193" target="_blank">Zauli et al. (2024)</a> showed that hidden interictal discharges not visible on single-trial scalp HD-EEG can be uncovered with simultaneous SEEG-triggered averaging, but the resulting ESI still remained <strong>method- and parameter-dependent</strong> with localization accuracy of only about <strong>2 cm</strong>. <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> reported that simultaneous HD-EEG/SEEG ictal ESI localizes better than interictal ESI, yet still at <strong>14.07 ± 4.62 mm</strong> versus <strong>17.38 ± 4.16 mm</strong>, with accuracy strongly influenced by source depth and spike power. Finally, <a href="https://doi.org/10.1038/s41467-019-08665-5" target="_blank">Pizzo et al. (2019)</a> showed that MEG can detect direct hippocampal or amygdalar contributions under simultaneous intracranial validation, but only after blind source separation because the deep contribution reaching the surface was <strong>small but significant</strong> rather than dominating the sensor signal. What follows directly is that <strong>EEG / MEG can gain conditional access to some deeper generators, but they still do not collapse field formation, the inverse problem, or general deep-state observability</strong>.
 </p>
@@ -749,6 +797,7 @@ This site now treats <strong>proxy-rich human evidence</strong> as a real advanc
 <li><strong>Write the measurement stack in the augmentation claim:</strong>Instead of saying "added transcriptomic label", distinguish between whole-brain atlas, patch-seq bridge, or same-brain link. </li>
 <li><strong>Don't mix atlas / bridge / scaffold / local twin / proxy calibration:</strong>Fix which kind of advance is the same "advance". </li>
 <li><strong>Don't make multimodal a synonym for state-complete:</strong>Include in the text what latent state still remains. </li>
+<li><strong>Do not compress same-brain functional connectomics into one solved route:</strong>Name the sequential bridge, label source, synaptic-state evidence class, and whether extra recordings or perturbations were needed to reduce dynamical degeneracy. </li>
 <li><strong>In human-side summaries, name proxy class, operational maturity, and calibrator role:</strong>Do not compress local ultrastructure, synaptic-density PET, biochemical scaffold, perturbation-conditioned plasticity/state-gated perturbation routes, energetic / ionic / thermal / myelin, BBB, astrocyte, or clearance routes into one direct route. </li>
 <li><strong>Do not read proxy accumulation as automatic state-completeness:</strong>Cross-stack fusion still needs same-subject alignment, model disclosure, external calibration, and abstention boundaries.</li>
 <li><strong>Do not read same-subject wording as same-state when the bridge is sequential:</strong>Require elapsed time, regime continuity, coordinate transfer, and residual drift disclosure. </li>
@@ -786,6 +835,12 @@ This site now treats <strong>proxy-rich human evidence</strong> as a real advanc
 <td>Stop rephrasing connectome-complete as emulation-complete. </td>
 </tr>
 <tr>
+<td><strong>same-brain functional connectomics</strong></td>
+<td>Direct label assay or explicit label-transfer route, current synaptic-state assay, extra recordings / perturbations, and bridge disclosure. </td>
+<td>It becomes easier to separate local structure-function scaffold, morphology-bridged label transfer, current synaptic-state evidence, and identifiable dynamics. </td>
+<td>Stop whole-brain twin, current synaptic-state, direct transcriptomic-truth, and unique-dynamics claims from the modality label alone. </td>
+</tr>
+<tr>
 <td><strong>mixed proxy / transmitter sensor / receptor atlas / occupancy PET / displacement PET</strong></td>
 <td>cross-stack calibration, ligand / drug / challenge / dose disclosure, cross-state validation, and abstention boundary. </td>
 <td>It becomes easier to distinguish coarse arousal covariate, local calibration, regional prior, exogenous target engagement, and challenge-limited release proxy. </td>
@@ -810,6 +865,12 @@ This site now treats <strong>proxy-rich human evidence</strong> as a real advanc
 <li>Gouwens, N. W., et al. (2021). Phenotypic variation of transcriptomic cell types in mouse motor cortex. <em>Nature</em>, 598, 144-150. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>, 640, 435-447. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <em>Nature</em>, 640, 497-505. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
+<li>Bosch, C., Pacureanu, A., Patino, J., et al. (2022). Functional and multiscale 3D structural investigation of brain tissue through correlative in vivo physiology, synchrotron microtomography and volume electron microscopy. <em>Nature Communications</em>, 13, 2923. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">doi:10.1038/s41467-022-30199-6</a></li>
+<li>Ding, Z., et al. (2025). Functional connectomics reveals a general wiring rule in mouse visual cortex. <em>Nature</em>, 640, 459-469. <a href="https://doi.org/10.1038/s41586-025-08840-3" target="_blank">doi:10.1038/s41586-025-08840-3</a></li>
+<li>Holler, S., et al. (2021). Structure and function of a neocortical synapse. <em>Nature</em>, 591, 111-116. <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">doi:10.1038/s41586-020-03134-2</a></li>
+<li>D&uuml;rst, C. D., Wiegert, J. S., Schulze, C., et al. (2022). Vesicular release probability sets the strength of individual Schaffer collateral synapses. <em>Nature Communications</em>, 13, 6126. <a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">doi:10.1038/s41467-022-33565-6</a></li>
+<li>Mittermaier, V., Kononenko, N. L., Jin, Y., et al. (2024). Membrane potential states gate synaptic consolidation in human neocortical tissue. <em>Nature Communications</em>, 15, 10340. <a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">doi:10.1038/s41467-024-53901-2</a></li>
+<li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <em>Nature Neuroscience</em>, 28, 2561-2574. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
 <li>Ahlfors, S. P., Han, J., Belliveau, J. W., &amp; H&auml;m&auml;l&auml;inen, M. S. (2010). Sensitivity of MEG and EEG to source orientation. <em>Brain Topography</em>, 23(3), 227-232. <a href="https://doi.org/10.1007/s10548-010-0154-x" target="_blank">doi:10.1007/s10548-010-0154-x</a></li>
 <li>Ahlfors, S. P., Han, J., Lin, F.-H., Witzel, T., Belliveau, J. W., H&auml;m&auml;l&auml;inen, M. S., &amp; Halgren, E. (2010). Cancellation of EEG and MEG signals generated by extended and distributed sources. <em>Human Brain Mapping</em>, 31(1), 140-149. <a href="https://doi.org/10.1002/hbm.20851" target="_blank">doi:10.1002/hbm.20851</a></li>
 <li>Goldenholz, D. M., Ahlfors, S. P., H&auml;m&auml;l&auml;inen, M. S., Sharon, D., Ishitobi, M., Vaina, L. M., &amp; Stufflebeam, S. M. (2009). Mapping the signal-to-noise-ratios of cortical sources in magnetoencephalography and electroencephalography. <em>Human Brain Mapping</em>, 30(4), 1077-1086. <a href="https://doi.org/10.1002/hbm.20571" target="_blank">doi:10.1002/hbm.20571</a></li>
