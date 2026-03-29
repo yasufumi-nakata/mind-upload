@@ -67,14 +67,14 @@ known_points:
   - "Ionic evidence already spans chloride-set-point mechanisms, transporter-state regulation, interstitial-ion state switching, perisynaptic K+ clearance, sleep-wake-history-dependent E_GABAA shifts, human pathology, and macro human proxy routes, so one ionic paper does not settle inhibitory-state observability."
   - "Post-transcriptional RNA evidence already spans isoform-dependent downstream transcriptional control, transsynaptic receptor-balance control, m6A-dependent translation, m6A-dependent degradation, RNA-editing-dependent homeostatic scaling, and atlas / ex vivo observability ceilings, so one RNA paper does not settle current RNA-state."
   - "Proteostasis evidence already spans tag/capture, branch-level integration, synthesis/degradation balance, autophagy-linked remodeling, turnover-resistant persistence, and proteasome-capacity intervention, so one proteostasis paper does not settle late-stabilization completeness."
-  - "Bioenergetic evidence already spans presynaptic ATP-linked respiration, dendritic positioning / fission, synaptic ATP-synthase nano-organization, conserved mitochondrial Ca2+-efflux tuning, and human 31P metabolite / pH, 31P exchange-flux, 31P NAD, plus deuterium metabolite-mapping / absolute-quantification and kinetic-rate proxy routes, so one energetic paper does not settle local mitochondrial state."
+  - "Bioenergetic evidence already spans presynaptic ATP-linked respiration, dendritic positioning / fission, synaptic ATP-synthase nano-organization, conserved mitochondrial Ca2+-efflux tuning, human 31P metabolite / pH balance, human 31P MT exchange-flux, human 31P NAD-content mapping, human 31P functional NAD-dynamics, and human deuterium metabolite-mapping / absolute-quantification plus kinetic-rate proxy routes, so one energetic paper does not settle local mitochondrial state."
   - "Neurovascular / BBB evidence already spans adult pericyte-deficiency hypoperfusion, acute neurovascular uncoupling, pericyte-to-neuron memory signaling, activity-dependent BBB modulation, capillary-diameter controllers, and human BBB water-exchange or tracer-specific transport routes, so one vascular paper does not settle neurovascular-state observability."
   - "Cargo evidence already spans postsynaptic receptor delivery, learning-phase microtubule-state gating, local vesicle confinement, axonal RNA localization, and presynaptic cargo retention, so one trafficking paper does not settle compartment-delivery completeness."
   - "Thermal evidence already spans cellular / synaptic operating-point effects, rhythm / sequence perturbation, field-potential confound, device- or preparation-linked heating artifacts, brain-state proxy routes, and human macro thermometry, so one thermal paper does not settle thermal-state observability."
   - "Neuromodulatory evidence already spans mixed arousal proxies, local transmitter sensing, receptor / transporter atlas priors, occupancy PET, and challenge-limited displacement PET, so one neuromodulatory paper does not settle transmitter-state observability."
   - "Astrocyte evidence already spans lactate-shuttle support, minute-scale cortical network encoding, learning-associated recall ensembles, multiday stabilization, fear-state representation, and human MAO-B or I2BS astrocyte-related PET proxy routes, so one astrocyte paper does not settle astrocyte-state observability."
   - "An MRSI-derived metabolic-connectome label still needs metabolite-set, parceling, correction-model, and QC disclosure before it can be interpreted safely."
-  - "Current human routes already imply a calibrator-role matrix: SV2A PET constrains regional synaptic-density proxy space, 1H-MRSI constrains parcel-level biochemical similarity, 31P metabolite / pH balance constrains macro energetic balance, 31P MT exchange-flux constrains model-conditioned energetic turnover, 31P NAD routes constrain macro redox-related burden or task dynamics, deuterium metabolite-mapping / absolute-quantification routes constrain whole-brain deuterated metabolite burden, deuterium kinetic-rate routes constrain model-conditioned whole-brain glucose-rate terms, myelin MRI constrains quantity-defined macro myelin burden, BBB water-exchange MRI / tracer-specific PET transport constrain quantity-defined macro neurovascular support-state, astrocyte PET constrains target-defined MAO-B or I2BS astrocyte-related routes, and CSF mobility / glymphatic routes constrain macro support-state rather than local controller identity."
+  - "Current human routes already imply a calibrator-role matrix: SV2A PET constrains regional synaptic-density proxy space, 1H-MRSI constrains parcel-level biochemical similarity, 31P metabolite / pH balance constrains macro energetic balance, 31P MT exchange-flux constrains model-conditioned energetic turnover, 31P NAD-content mapping constrains macro intracellular NAD burden, 31P functional NAD-dynamics constrains localized task-linked NAD shifts, deuterium metabolite-mapping / absolute-quantification routes constrain whole-brain deuterated metabolite burden, deuterium kinetic-rate routes constrain model-conditioned whole-brain glucose-transport / rate terms, myelin MRI constrains quantity-defined macro myelin burden, BBB water-exchange MRI / tracer-specific PET transport constrain quantity-defined macro neurovascular support-state, astrocyte PET constrains target-defined MAO-B or I2BS astrocyte-related routes, and CSF mobility / glymphatic routes constrain macro support-state rather than local controller identity."
 unknown_points:
   - "It is unclear at what granularity excitability, thermal-state, ionic milieu / chloride homeostasis, sleep homeostasis, local proteostasis / synaptic tagging, ECM / PNN state, bioenergetic support, metabolic support, and clearance support must be measured to approach sufficient conditions for WBE."
   - "It is not yet fixed how time-resolved transcription / chromatin audit should be submitted so that cell identity, current plasticity program, and memory-stabilization controller are not mixed."
@@ -83,7 +83,7 @@ unknown_points:
   - "It is not yet fixed which same-subject or human-compatible external calibrators could raise neuromodulatory claims beyond mixed arousal covariates, local transmitter sensors, receptor / transporter atlas priors, and ligand-limited PET routes."
   - "It is not yet fixed which same-subject or human-compatible external calibrators could raise bioenergetic / mitochondrial claims beyond macro energetic proxy evidence."
   - "It is not yet fixed which same-subject or human-compatible external calibrators could raise neurovascular-unit / BBB claims beyond macro BBB water-exchange or tracer-specific transport proxy evidence."
-  - "It has not been fixed which external standards among SV2A PET, MRSI, MRS thermometry, 31P metabolite / pH, 31P MT exchange-flux, 31P NAD routes, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate routes, sodium MRI, quantity-defined myelin MRI routes, BBB water-exchange MRI / tracer-specific PET transport, TMS-EEG, sleep-plasticity proxies, and CSF-glymphatic proxies should calibrate maintenance-states that cannot be measured directly in humans."
+  - "It has not been fixed which external standards among SV2A PET, MRSI, MRS thermometry, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, 31P functional NAD-dynamics, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate routes, sodium MRI, quantity-defined myelin MRI routes, BBB water-exchange MRI / tracer-specific PET transport, TMS-EEG, sleep-plasticity proxies, and CSF-glymphatic proxies should calibrate maintenance-states that cannot be measured directly in humans."
   - "It is not yet fixed which same-subject acquisition stacks and perturbation regimes could externally calibrate the calibrator-role matrix itself, rather than only showing several proxy rows side by side."
   - "It is not yet fixed which submission fields should be mandatory when several human proxy rows are used together to claim one latent maintenance-state family, especially when proxy class, operational maturity, and calibrator role diverge."
   - "It is not yet fixed which sleep-history, sleep-architecture, myelin, thermal, ECM, bioenergetic, metabolic, and clearance indicators will become standard submissions for long-term closed-loop claims."
@@ -1475,10 +1475,40 @@ The reason this section needed a second pass is that “human evidence is starti
 <td>Macro-biochemical similarity scaffold or covariate, not local maintenance-state ground truth.</td>
 </tr>
 <tr>
-<td><strong>human energetic imaging</strong><br>Ren et al., Li et al.</td>
-<td>A macro energetic proxy for ATP/PCr/pH by 31P-MRS, deuterated-metabolite burden by deuterium mapping / absolute quantification, and whole-brain glucose turnover by kinetic DMI. </td>
-<td>Cell-specific ATP reserves, branch-specific mitochondrial positioning, synapse-specific fatigue risk, and energetic mechanisms of dendritic plasticity.</td>
-<td>Macro energetic proxy, not direct readout of local mitochondrial state.</td>
+<td><strong>human 31P metabolite / pH balance</strong><br>Ren et al.</td>
+<td>Resting ATP synthesis, phosphorus-metabolite concentrations, and intra- / extracellular pH under <sup>31</sup>P-MRS.</td>
+<td>Branch-specific ATP reserve, task-evoked metabolic switching, cell-specific mitochondrial positioning, and synapse-specific fatigue risk.</td>
+<td>Macro metabolite / pH proxy, not local mitochondrial-state ground truth.</td>
+</tr>
+<tr>
+<td><strong>human 31P MT exchange-flux</strong><br>Ren et al.</td>
+<td>Model-conditioned PCr&rarr;ATP and Pi&rarr;ATP exchange-flux estimates under band-inversion / magnetization-transfer spectroscopy.</td>
+<td>Route-free ATP-turnover truth, cell-specific energetic routing, local redox reserve, and branch-specific mitochondrial control.</td>
+<td>Model-conditioned macro exchange-flux proxy, not direct local controller readout.</td>
+</tr>
+<tr>
+<td><strong>human 31P NAD-content mapping</strong><br>Guo et al.</td>
+<td>Whole-brain intracellular NAD-content mapping at macro resolution under specialized <sup>31</sup>P-MRSI processing.</td>
+<td>Task-locked local NAD dynamics, branch-specific mitochondrial status, and cell-specific redox-controller identity.</td>
+<td>Macro NAD-content proxy, not a dynamic or local mitochondrial-state readout.</td>
+</tr>
+<tr>
+<td><strong>human localized functional 31P NAD-dynamics</strong><br>Kaiser et al.</td>
+<td>Task-evoked NAD<sup>+</sup> changes in a functionally localized spectroscopy voxel under prior localization and block design.</td>
+<td>Whole-brain NAD distribution, task-general energetic state, route-free controller identity, and branch-specific mitochondrial positioning.</td>
+<td>Localized task-linked NAD-dynamics proxy, not whole-brain or route-general energetic ground truth.</td>
+</tr>
+<tr>
+<td><strong>human deuterium metabolite-mapping / absolute quantification</strong><br>Karkouri et al.</td>
+<td>Absolute deuterated-metabolite concentrations plus calibration-dependent companion rate estimates under a dedicated deuterium acquisition and quantification pipeline.</td>
+<td>Route-free kinetic-rate truth, generic dose invariance, branch-local mitochondrial reserve, and synapse-specific fatigue risk.</td>
+<td>Macro deuterated-metabolite burden proxy, not route-free kinetic or local mitochondrial ground truth.</td>
+</tr>
+<tr>
+<td><strong>human deuterium kinetic-rate imaging</strong><br>Li et al.</td>
+<td>Blood-input and kinetic-model-dependent glucose-transport / metabolic-rate maps from dynamic deuterium MRSI.</td>
+<td>Absolute route-free metabolite burden, generic dose invariance, branch-specific mitochondrial positioning, and local controller identity.</td>
+<td>Model-conditioned macro kinetic-rate proxy, not local mitochondrial-state ground truth.</td>
 </tr>
 <tr>
 <td><strong>human sodium MRI / ionic proxy</strong><br>Qian et al.</td>
@@ -1812,9 +1842,9 @@ The need is multi-axis. On the measurement side, <a href="https://doi.org/10.296
 <td>In the timing-sensitive claim, the fact that myelin / conduction is not measured is clearly stated in the text. </td>
 </tr>
 <tr>
-<td><strong>With human energetic imaging, we could directly see the local mitochondrial status</strong></td>
-<td>31P-MRS, deuterium metabolite mapping, and kinetic DMI are macro proxies for ATP/glucose turnover, but they do not tell in which branch or synapse the ATP reserve is insufficient or where the mitochondria are stopped. </td>
-<td>Human energetic imaging is written as a macro energetic proxy and is not elevated to the ground truth of cell-specific bioenergetic / mitochondrial state. </td>
+<td><strong>If human 31P or deuterium imaging exists, we could directly see the local mitochondrial status</strong></td>
+<td>31P metabolite / pH balance, 31P MT exchange-flux, whole-brain 31P NAD-content mapping, localized functional 31P NAD-dynamics, deuterium metabolite-mapping / absolute quantification, and deuterium kinetic-rate imaging are route-specific macro or localized proxies. They still do not tell in which branch or synapse the ATP reserve is insufficient or where mitochondria are positioned. </td>
+<td>Human energetic routes are written as separate proxy classes with named quantity type and route burden, and none is elevated to the ground truth of cell-specific bioenergetic / mitochondrial state. </td>
 </tr>
 <tr>
 <td><strong>If the engrams and spike trains on the neuron side are similar, recall and stabilization after several days will be the same.</strong></td>
@@ -1851,7 +1881,7 @@ The need is multi-axis. On the measurement side, <a href="https://doi.org/10.296
 <li><strong>Don't replace memory persistence with static storage: Leave open the possibility of reconsolidation and support mechanisms across</strong>turnovers. </li>
 <li><strong>Focus on post-perturbation recovery:</strong>Keep a log of not only what happened, but also where you return and how you return across sleep. </li>
 <li><strong>Write the limitations of proxy first:</strong>Do not write that maintenance-state is uniquely determined only by EEG / pupil / behavior. </li>
-<li><strong>Do not mix human proxy classes:</strong>Do not collapse EM fragments, whole-brain MRSI, 31P-MRS / deuterium metabolite mapping / kinetic DMI / sodium MRI, myelin bilayer map, sleep / TMS proxy into the same "human-seen" word. </li>
+<li><strong>Do not mix human proxy classes:</strong>Do not collapse EM fragments, whole-brain MRSI, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, localized functional 31P NAD-dynamics, deuterium metabolite-mapping / absolute quantification, deuterium kinetic-rate imaging, sodium MRI, myelin bilayer map, and sleep / TMS proxy into the same "human-seen" word. </li>
 <li><strong>Do not misinterpret human MRSI as local ground truth:</strong>Write macro-biochemical scaffold and cell-specific maintenance-state separately. </li>
 <li><strong>Do not misread human CSF / glymphatic proxy as local controller:</strong>Write macro support-state proxy and cell-specific immune / clearance state separately. </li>
 <li><strong>Does not complement glia omission from neuron-only success:</strong>Recall, restabilization, and fear-state representation leave the astrocyte state separate. </li>
@@ -1883,7 +1913,7 @@ The need is multi-axis. On the measurement side, <a href="https://doi.org/10.296
 </tr>
 <tr>
 <td><strong>energetic-mechanism claim</strong></td>
-<td>Energetic proxy such as 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD route, deuterium metabolite mapping / absolute quantification, or deuterium kinetic DMI, fatigue / repeated-burst failure log if possible, bioenergetic state set to fixed background, unmeasured mitochondrial positioning / redox reserve. </td>
+<td>Energetic proxy such as 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, localized functional 31P NAD-dynamics, deuterium metabolite-mapping / absolute quantification, or deuterium kinetic-rate imaging, fatigue / repeated-burst failure log if possible, bioenergetic state set to fixed background, unmeasured mitochondrial positioning / redox reserve. </td>
 </tr>
 <tr>
 <td><strong>Claim close to state-complete reconstruction</strong></td>
