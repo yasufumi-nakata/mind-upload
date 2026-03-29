@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-26 / Role: Technical / natural science only
+- Updated: 2026-03-29 / Role: Technical / natural science only
 
 ## Role Of This Page
 This page organizes uncertainty, confidence intervals, calibration, and abstention in EEG source imaging, EEG classification, language decoding, and closed-loop BCI using primary literature. It is not only about how much to trust a number when it appears, but also about which output space was fixed in advance and when output should stop.
@@ -31,12 +31,13 @@ This page prioritizes technical and natural-science audit items over textbook co
 - If fit / calibration / test separation is ambiguous, the meaning of confidence and thresholds collapses.
 - Even with high accuracy, poor calibration can still produce overconfident wrong answers under low-confidence conditions.
 - In language-facing outputs, top-k success or confidence from a fixed candidate bank, known-onset protocol, or prompt scaffold should not be read as open-world uncertainty.
+- Structural pass/fail rules for language-facing confidence are route-specific even when the numeric thresholds remain task-dependent.
 - Online BCI requires not only latency, but also abstention rate, dropout, recalibration burden, and recovery time.
 
 ## What Is Still Unknown
-- The Calibration & Abstention Card is fixed as a minimum site-wide submission, but pass/fail thresholds for each task are not finalized yet.
+- The Calibration & Abstention Card is fixed as a minimum site-wide submission, but numeric pass/fail thresholds for each task are not finalized yet.
 - It is not yet fixed which coverage / abstention thresholds should become the common pass/fail rule for L2 and L3.
-- Task-specific pass/fail rules for candidate-conditioned confidence in speech / brain-to-text decode are not finalized yet.
+- The structural pass/fail bundle for candidate-conditioned confidence in language-facing decode is fixed here, but the numeric threshold values remain route-dependent.
 - A unified uncertainty-accounting scheme across source imaging, language decoding, and online BCI is still in progress.
 
 ---
@@ -341,7 +342,7 @@ The important thing is not to talk about uncertainty in one box. Source imaging 
 </tr>
 <tr>
 <td><strong>Speech / brain-to-text decode</strong></td>
-<td>Neural Contribution Card fields, candidate bank or retrieval-set size, prompt / LM scaffold, onset regime, no-brain / no-LM / shuffle controls, calibration / abstention slices, and Temporal Validity Card when the claim leaves same-session.</td>
+<td>Neural Contribution Card fields, cue regime, output family, candidate bank or retrieval-set size, prompt / LM scaffold, onset regime or caption scaffold, no-brain / no-LM / shuffle controls, calibration / abstention slices, and Temporal Validity Card when the claim leaves same-session.</td>
 <td>Fluent output or top-k success can be carried by the scaffold more than by the neural contribution if the task constraints are left implicit.</td>
 </tr>
 <tr>
@@ -372,6 +373,53 @@ Vorwerk et al. showed that uncertainty in head tissue conductivity greatly affec
 <h3>3. In language decoding, confidence must be read through the scaffold</h3>
 <p>
 Language-decoding papers make the same lesson concrete in a different form: the uncertainty object changes when the output scaffold changes. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a> used subject-specific fMRI together with autoregressive context, and their ablations show that removing fMRI drops performance while isolated scoring still compares the actual word to distractors. <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">Défossez et al. (2023)</a> reported top-10 segment retrieval for fixed 3 s speech windows. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a> scaled known-word-onset decoding to 723 participants, but still reported top-10 accuracy with a retrieval set of 250 words and found strong protocol effects such as <strong>MEG &gt; EEG</strong> and <strong>reading &gt; listening</strong>. <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Ye et al. (2025)</a> directly concatenated brain and text prompt embeddings for LLM generation and outperformed prompt-only or permuted-brain controls. Therefore, on this site, apparently fluent text output is not accepted as a generic uncertainty object: it must declare the candidate bank, prompt scaffold, onset rule, and neural-contribution controls first.
+</p>
+
+<h3>3A. 2026-03-29 addendum: structural pass/fail bundle for language-facing confidence</h3>
+<table>
+<thead>
+<tr>
+<th>Route family</th>
+<th>Minimum disclosure before the score is read</th>
+<th>Minimum pass condition on this site</th>
+<th>Claim still blocked</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fixed-bank retrieval</strong></td>
+<td>Bank contents, segment definition, bank size, cue policy, and whether cue-presentation data entered train / validation / test.</td>
+<td>It can count only as retrieval-conditioned evidence if calibration and accuracy are reported on held-out trials under the same bank and cue policy, with no-brain, time-shuffle, or cue-separated comparison.</td>
+<td>Open-world semantic access or free-choice communication.</td>
+</tr>
+<tr>
+<td><strong>Known-onset word decoding</strong></td>
+<td>Word-onset source, retrieval-set size, vocabulary policy, averaging rule, and whether the decoder uses only causal information around the onset.</td>
+<td>It can count only as onset-conditioned word-decoding evidence if top-k or calibration is reported within the declared retrieval set and onset regime together with Neural Contribution Card controls.</td>
+<td>Free-running continuous speech or unrestricted language readout.</td>
+</tr>
+<tr>
+<td><strong>Prompt-conditioned generation</strong></td>
+<td>Prompt tokens, prompt length, prompt-only and permuted-brain controls, LLM family, decoding strategy, and output-length rule.</td>
+<td>It can count only as prompt-conditioned generative evidence if the paper shows what changes when the brain input is removed or permuted under the same prompt scaffold.</td>
+<td>Brain-only generative likelihood or prior-free semantic reconstruction.</td>
+</tr>
+<tr>
+<td><strong>Viewed/recalled content captioning</strong></td>
+<td>Stimulus family, semantic feature extractor, candidate-initialization policy, cue or recall prompt route, and whether caption optimization started from noninformative or content-bearing seeds.</td>
+<td>It can count only as captioning of bounded viewed/recalled content if identification or discriminability and caption quality are reported under the declared caption scaffold and compared against scaffold-preserving controls such as word-order shuffle or feature-mismatch baselines.</td>
+<td>General inner-speech decoding or unrestricted thought reading.</td>
+</tr>
+<tr>
+<td><strong>Streaming speech neuroprosthesis</strong></td>
+<td>Latency quantiles, silence or abstention rule, same-day training versus fixed-decoder interval, recalibration burden, and durability slice.</td>
+<td>It can count only as communication-subsystem evidence if online performance is reported together with abstention or silence behavior and the time window over which the decoder was kept fixed.</td>
+<td>Long-term general communication ability, emulate, or WBE-relevant state recovery.</td>
+</tr>
+</tbody>
+</table>
+<p>
+The point of this bundle is not to assign one universal numeric threshold. It is to stop readers from comparing unlike uncertainty objects as if they were one probability scale. <a href="https://doi.org/10.1038/s41598-024-79309-y" target="_blank">Ryb&aacute;r et al. (2024)</a> showed that cue-presentation data can grossly overestimate semantic BCI performance. <a href="https://doi.org/10.1126/sciadv.adw1464" target="_blank">Horikawa (2025)</a> added a viewed/recalled content-captioning route built from decoded semantic features and iterative text optimization. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a> remained subject-cooperative autoregressive semantic reconstruction. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a> remained known-onset top-10 retrieval over a fixed vocabulary. <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Ye et al. (2025)</a> remained prompt-conditioned LLM generation. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a> and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> remained invasive communication-subsystem routes. The confidence object changes before the score changes.
 </p>
 
 <h3>4. Conformal / risk-controlling routes are effective, but the assumptions and set size need to be stated separately</h3>
@@ -418,6 +466,9 @@ Wairagkar et al.'s instantaneous voice-synthesis neuroprosthesis showed a low-la
 <li>Défossez, A., Caucheteux, C., Rapin, J., Kabeli, O., &amp; King, J.-R. (2023). Decoding speech perception from non-invasive brain recordings. <em>Nature Machine Intelligence</em>, 5, 1097-1107. <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">doi:10.1038/s42256-023-00714-5</a></li>
 <li>d'Ascoli, S., Bel, C., Rapin, J., Banville, H., Benchetrit, Y., Pallier, C., &amp; King, J.-R. (2025). Towards decoding individual words from non-invasive brain recordings. <em>Nature Communications</em>, 16, 10521. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">doi:10.1038/s41467-025-65499-0</a></li>
 <li>Ye, X., Liu, X., Wang, Y., Jiang, F., Geng, J., Ye, Q., &amp; Wang, J. (2025). Generative language reconstruction from brain recordings. <em>Communications Biology</em>, 8, 285. <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">doi:10.1038/s42003-025-07731-7</a></li>
+<li>Ryb&aacute;r, M., Poli, R., &amp; Daly, I. (2024). Using data from cue presentations results in grossly overestimating semantic BCI performance. <em>Scientific Reports</em>, 14, 28003. <a href="https://doi.org/10.1038/s41598-024-79309-y" target="_blank">doi:10.1038/s41598-024-79309-y</a></li>
+<li>Horikawa, T. (2025). Mind captioning: Evolving descriptive text of mental content from human brain activity. <em>Science Advances</em>, 11(45), eadw1464. <a href="https://doi.org/10.1126/sciadv.adw1464" target="_blank">doi:10.1126/sciadv.adw1464</a></li>
+<li>Littlejohn, K. T., Cho, C. J., Liu, J. R., et al. (2025). A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <em>Nature Neuroscience</em>, 28, 902-912. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
 <li>Duan, T., Wang, Z., Liu, S., Yin, Y., &amp; Srihari, S. N. (2023). UNCER: A framework for uncertainty estimation and reduction in neural decoding of EEG signals. <em>Neurocomputing</em>, 538, 126210. <a href="https://doi.org/10.1016/j.neucom.2023.03.071" target="_blank">doi:10.1016/j.neucom.2023.03.071</a></li>
 <li>Hu, J., Ur Rahman, M. M., Al-Naffouri, T., &amp; Laleg-Kirati, T.-M. (2024). Uncertainty Estimation and Model Calibration in EEG Signal Classification for Epileptic Seizures Detection. In <em>2024 46th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)</em> (pp. 1-5). <a href="https://doi.org/10.1109/EMBC53108.2024.10782858" target="_blank">doi:10.1109/EMBC53108.2024.10782858</a></li>
 <li>Shafiezadeh, S., Mento, G., &amp; Testolin, A. (2023). Methodological Issues in Evaluating Machine Learning Models for Patient-Independent Epileptic Seizure Prediction. <em>Mathematics</em>, 11(7), 1650. <a href="https://doi.org/10.3390/math11071650" target="_blank">doi:10.3390/math11071650</a></li>
