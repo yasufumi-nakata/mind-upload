@@ -6,7 +6,7 @@ article_type: Perspective
 subtitle: "Audit the hypothesis of reproducing brain information processing on another substrate through the barriers of measurability, identifiability, and maintenance state"
 author: Mind Uploading Research Project
 last_updated: '2026-03-29'
-note: "Research note (updated with the March 2026 re-audit and 2026-03-29 causal-model addendum)"
+note: "Research note (updated with the March 2026 re-audit, the 2026-03-29 causal-model addendum, and the 2026-03-29 thermodynamic-route sync)"
 audience: "Readers who want to follow theory all the way into implementation, including limits and objections"
 reading_time: "30-45 min"
 page_intro: "This page is a long research note that follows the theoretical, measurement, and implementation questions around mind uploading while keeping primary literature and hard limits side by side. It is written to separate what can reasonably be claimed now from what remains unresolved, rather than leaning into either pure optimism or pure pessimism."
@@ -19,6 +19,7 @@ page_highlights:
   - "Human proxy class, operational maturity, and calibrator role are kept separate, so proxy-rich evidence is not silently read as field-ready or family-complete state identification."
   - "Living-human proxy bundles now stay behind an explicit composition rule: quantity type, calibrator role, model / hardware burden, common-driver audit, and gain beyond the strongest single row must be disclosed before state-identification language."
   - "Directed-graph / DCM claims are now kept behind an explicit route card: observed-subsystem closure, node-definition policy, sampling / transformation sensitivity, perturbation validation, and abstention must be disclosed before causal-wiring language is allowed."
+  - "Thermodynamic / irreversibility claims are now also kept behind an explicit route card: signal route, state definition, coarse-graining, observed-state closure / memory order / reverse-transition support, physiology-side grounding, cost isolation, and abstention must be disclosed before energetic language is allowed."
   - "Even though it is long, the introduction and framing notes alone should make the page's overall stance clear."
 known_points:
   - "No major theory has become a decisive standalone answer at this point."
@@ -29,6 +30,7 @@ known_points:
   - "Several living-human proxy rows can move together while still constraining different quantities or shared autonomic / vascular drivers, so same-session agreement is not yet same-subject state closure."
   - "Hemodynamic modalities carry vascular transfer / CVR uncertainty in addition to neural-side uncertainty."
   - "Whole-brain or faster effective-connectivity estimators improve tractability, not automatic causal discovery; latent confounders, node-definition policy, and sampling / transformation sensitivity remain separate failure modes."
+  - "Irreversibility labels, wall-plug power, and computational complexity are different objects; coarse-grained neural asymmetry is not automatically microscopic dissipation or WBE-ready implementation cost."
   - "Strong claims that omit causal perturbation, reproducibility, and explicit exclusion of alternative explanations remain on shaky ground."
 unknown_points:
   - "It remains unsettled which combination of theories, if any, will ultimately amount to a sufficient condition."
@@ -782,12 +784,17 @@ href="#ref-28">[28]</a></sup>.</li>
 </tr>
 <tr>
 <td><strong>Thermodynamic readout wall</strong></td>
-<td><a href="https://doi.org/10.1073/pnas.2109889118">Lynn et al. (2021)</a> and <a href="https://doi.org/10.1093/cercor/bhac177">de la Fuente et al. (2022)</a> showed that time-irreversibility signatures appear in coarse-grained neural dynamics.</td>
-<td>However, what is measured here is a lower bound on information-entropy production derived from coarse-grained neural data, not microscopic physical dissipation itself. <a href="https://doi.org/10.1038/s41467-025-66669-w">Ishihara &amp; Shimazaki (2025)</a> also show that stable measurement of the arrow of time from spiking remains difficult.</td>
-<td>EPR/irreversibility is lowered to the auxiliary log, and the main judgment is made with a bundle of OOD, perturbation, external validation, and abstention conditions.</td>
+<td><a href="https://doi.org/10.1073/pnas.2109889118">Lynn et al. (2021)</a> and <a href="https://doi.org/10.1093/cercor/bhac177">de la Fuente et al. (2023)</a> showed that time-irreversibility signatures can appear in coarse-grained neural dynamics, while <a href="https://doi.org/10.1038/s41467-025-66669-w">Ishihara &amp; Shimazaki (2025)</a> estimated task-dependent entropy flow only under an explicit state-space kinetic Ising model.</td>
+<td>However, these routes do not directly measure microscopic physical dissipation or a WBE-ready energy budget. <a href="https://doi.org/10.1073/pnas.2318333121">Blom et al. (2024)</a> showed that coarse observations can hide dissipative cycles and acquire memory, and <a href="https://doi.org/10.1038/s41593-025-02132-9">Epp et al. (2025)</a> showed that significant BOLD changes can oppose oxygen-metabolism changes across the cortex.</td>
+<td>Thermodynamic claims therefore stay behind an irreversibility route card: signal route and state definition, coarse-graining / timescale, observed-state closure / memory order / reverse-transition support, estimator family and dynamical assumptions, physiology-side grounding, cost isolation, and abstention must be disclosed before any energetic language is raised. Without that card, the result remains an auxiliary log beside OOD, perturbation, external validation, and abstention conditions.</td>
 </tr>
 </tbody>
 </table>
+
+<div class="note-box">
+<strong>2026-03-29 addendum: thermodynamic labels still need state-definition, closure, and energy-grounding audits</strong>
+<p>One remaining weakness in the older wording was that <strong>irreversibility</strong>, <strong>EPR</strong>, and <strong>energy cost</strong> could still sound like one continuous evidential object. The current primary literature does not support that shortcut. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn et al. (2021)</a> estimated entropy-production lower bounds only after coarse-graining BOLD dynamics into macrostates, <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">de la Fuente et al. (2023)</a> showed that reversibility detection in ECoG depends on principal-component choice, feature set, and model complexity, <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> estimated task-dependent entropy flow only under an explicit state-space kinetic Ising model, <a href="https://doi.org/10.1073/pnas.2318333121" target="_blank">Blom et al. (2024)</a> showed that coarse observations can hide dissipative cycles and acquire memory, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that significant BOLD changes can oppose oxygen-metabolism changes across the cortex. Therefore, on this page, a thermodynamic claim is not promoted beyond an <strong>exploratory auxiliary analysis</strong> unless it names <strong>signal route and state definition</strong>, <strong>coarse-graining / timescale</strong>, <strong>observed-state closure / memory order / reverse-transition support</strong>, <strong>estimator family and dynamical assumptions</strong>, <strong>physiology-side grounding when energetic language is used</strong>, <strong>cost isolation</strong>, and <strong>abstention boundary</strong>.</p>
+</div>
 
 <div class="note-box">
 <strong>2026-03-29 addendum: scalable directed graphs still need an audit trail</strong>
@@ -1471,11 +1478,11 @@ style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 13px; li
 <div class="stage-item" id="proposal-58">
 <div class="stage-number">58</div>
 <div class="stage-body">
-<h4>Addressing gaps in thermodynamics, causality, and IIT computational complexity</h4>
-<p>"Logical costs" alone are not enough; computational costs and physical costs must be audited separately. However, Irreversibility and EPR will remain as exploratory supplementary logs for now, and IIT and EPR will not be made common required KPIs. The main decision is made using a bundle of perturbation, OOD, validation, and abstention conditions.</p>
+<h4>Keep irreversibility logs separate from cost and theory-selection claims</h4>
+<p>Logical complexity, wall-plug power, and irreversibility-derived quantities are different objects and must be logged separately. On this site, irreversibility remains an exploratory auxiliary lane unless its route card exposes the state definition, closure assumptions, reverse-transition support, and physiology-side grounding. Main promotion still depends on perturbation, OOD, external validation, and abstention conditions.</p>
 <ul>
-<li>Entropy production in non-equilibrium systems has been established as a quantitative indicator of irreversibility.<sup><a href="#ref-92">[92]</a></sup></li>
-<li>IIT's MIP search has an exponential cost relative to the system size, so approximations and calculation strategies are required.<sup><a href="#ref-93">[93]</a></sup></li>
+<li><a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn et al. (2021)</a> and <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> support route-dependent nonequilibrium summaries, not direct microscopic dissipation or WBE-ready energy cost.</li>
+<li>IIT-related MIP search remains an engineering tractability problem rather than evidence that a thermodynamic KPI was measured.<sup><a href="#ref-93">[93]</a></sup></li>
 </ul>
 <p><a href="issue.html#proposal-integration">→ To organize the proposal status and external dependencies, please refer to the contribution guide.</a></p>
 </div>
@@ -1484,8 +1491,8 @@ style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 13px; li
 <div class="stage-item" id="proposal-61">
 <div class="stage-number">61</div>
 <div class="stage-body">
-<h4>Reinforcing the logic gap in causality and thermodynamics</h4>
-<p>The main focus is auditing of causal structure preservation, and irreversibility logs are supplemented only when necessary. EPR<sup><a href="#ref-92">[92]</a></sup>are treated as exploratory signals of coarse-grained neural dynamics and are not elevated to identity requirements.</p>
+<h4>Causal preservation and thermodynamic readouts answer different questions</h4>
+<p>Causal claims ask whether interventions and counterfactual structure are preserved; thermodynamic logs ask whether a chosen observable shows nonequilibrium signatures under stated assumptions. Because these objects fail differently, this page does not let an irreversibility result stand in for causal preservation, and it does not let a causal benchmark stand in for energetic grounding.</p>
 <p><a href="issue.html#proposal-integration">→ To organize the proposal status and external dependencies, please refer to the contribution guide.</a></p>
 </div>
 </div>
@@ -1493,8 +1500,8 @@ style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 13px; li
 <div class="stage-item" id="proposal-62">
 <div class="stage-number">62</div>
 <div class="stage-body">
-<h4>Strengthening thermodynamic and causal validity</h4>
-<p>PCI<sup><a href="#ref-90">[90]</a></sup>and SCM<sup><a href="#ref-91">[91]</a></sup>The main focus is the irreversible log and the power/communication log, if necessary. Although we maintain the idea of ​​looking at both counterfactual and dissipation, EPR<sup><a href="#ref-92">[92]</a></sup>is not used as a standalone pass/fail indicator.</p>
+<h4>Raise claims only after causal and thermodynamic route cards are explicit</h4>
+<p>When PCI<sup><a href="#ref-90">[90]</a></sup>, SCM / counterfactual arguments<sup><a href="#ref-91">[91]</a></sup>, and irreversibility logs appear in the same proposal, each keeps its own ceiling. PCI remains one perturbation benchmark under explicit TMS-EEG conditions, model-based causal claims remain conditional on their observation and validation assumptions, and irreversibility remains auxiliary unless signal route, state definition, closure, physiology-side grounding, and cost isolation are disclosed. None of the three is treated here as a standalone pass/fail indicator.</p>
 <p><a href="issue.html#proposal-integration">→ To organize the proposal status and external dependencies, please refer to the contribution guide.</a></p>
 </div>
 </div>
