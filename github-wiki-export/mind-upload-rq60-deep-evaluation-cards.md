@@ -27,6 +27,14 @@
 - `B`: 25
 - `C`: 18
 
+## 2026-03-29 13:03 JST 再検証ログ（upstream post-pull / official window / Todoist audit）
+
+- `mind-upload@12d3d42` `EEG-DATA@8d3d7db889a` `auto-research-funds@eaa5633d0` まで pull 後に、live `mind-upload.com/issue.html` を再確認し、current public batch は `U13-2/U13-5/U14-4/U0-2/U0-3/U14-2` のままと判断いたしました。
+- この run では public route を巻き戻さず、内部カード側の conservative anchor family も `D10/D03/D01/D02` のまま維持しております。
+- 主要制度の公式募集ページを 13:03-13:08 JST に spot check し、`くら基金=open`、`中谷財団 大学院生奨学金=ページ公開済み / top current-open list は空`、`セコム一般研究助成=open`、`樫の芽会=open`、`中谷財団 研究助成=next-cycle watch` を再確認いたしました。
+- `くら基金` `中谷財団 大学院生奨学金` `樫の芽会` `中谷財団 研究助成` の `募集開始確認/応募締切` 8 task は 13:03-13:05 JST の Todoist 実 API でも既存確認できたため、本runでは新規 task を行っておりません。
+- live public source page は今回の bounded route を既に自然に保持していたため、`mind-upload.com` 側の source page 本文は更新せず、内部カード監査のみ更新いたします。
+
 ## 2026-03-29 12:06 JST 再検証ログ（post-pull public batch sync）
 
 - pull 後に live `mind-upload.com/issue.html` を再確認し、current public batch は `U13-2/U13-5/U14-4/U0-2/U0-3/U14-2` であることを確認いたしました。

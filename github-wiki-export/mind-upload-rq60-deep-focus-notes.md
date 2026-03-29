@@ -54,6 +54,25 @@ This is a route-setting update, not a solved-claim update. The public batch is n
 - Relevant Todoist tasks already existed before this run, so no new task was needed for the current practical shortlist.
 - Funding-window spot check (2026-03-29): `Kura Fund` remains open in the current cycle, the `Nakatani Foundation graduate scholarship` remains the main student-facing bridge for this batch, the `Kashinome Scholarship` stays only as a student-runway side route rather than a core EEG research-funding anchor, and the `Nakatani Foundation research grant` plus broader neuroscience routes stay in watch mode.
 
+## Solve-first order after the post-pull revalidation (2026-03-29 14:06 JST)
+
+This run does not change the public six-question batch. It only fixes the execution order more explicitly, so the work can proceed as `one-RQ / one-anchor / one-first-artifact` instead of drifting back into a broad summary.
+
+The order below is intentionally sequential. Each row closes a blocker for the next row rather than treating the six questions as one blended benchmark.
+
+| Order | RQ | Why this comes before the next one | Main anchor / access | First artifact to finish | Practical route now |
+|---|---|---|---|---|---|
+| `1` | `U13-2` | It is the shortest route to test whether the neural signal adds anything beyond the language prior. If this fails, stronger speech-decoder wording stays blocked. | `D10` / `10.18112/openneuro.ds006465.v2.0.0` / `immediate` | `Mimic separation evaluation script and brain-minus-prior control table` | `Kura Fund` / `Nakatani Foundation graduate scholarship` |
+| `2` | `U13-5` | It becomes meaningful only after `U13-2` fixes the control family. Then the perception-to-recall branch point can be read as a bounded mechanism split rather than a generic decoder score. | `D03` / `10.21227/6106-6120` / `immediate` | `Perception-to-recall degradation note and transfer-gap table` | `Kura Fund` / `Nakatani Foundation graduate scholarship` |
+| `3` | `U0-2` | Identity-like wording remains unsafe until synchronization drift is audited at the millisecond level. This is the first hard ceiling for the continuity route. | `D02` / `10.21227/j162-nh61` / `immediate` | `Offset/jitter distribution and state-feature collapse audit` | `Nakatani Foundation graduate scholarship` / `Kashinome Scholarship (student-runway only)` |
+| `4` | `U0-3` | Threshold stability only becomes interpretable after `U0-2` fixes the timing budget. Otherwise the threshold can absorb synchronization error. | `D02` / `10.21227/j162-nh61` / `immediate` | `Threshold search notebook and overfit-exclusion rule` | `Nakatani Foundation graduate scholarship` / `Kashinome Scholarship (student-runway only)` |
+| `5` | `U14-4` | Card requirements should be frozen only after the speech and identity rows stabilize what must actually be disclosed. | `D01` / `10.21227/dv1p-vq18` / `immediate` | `Filled Model Card / Dataset Card examples for the current public batch` | `Kura Fund` / `Nakatani Foundation research grant (watch)` |
+| `6` | `U14-2` | The exploration/confirmation split is the last step because it depends on the artifact family above being stable enough to rerun without ad hoc reinterpretation. | `D01` / `10.21227/dv1p-vq18` / `immediate` | `Fixed-split rerun contract and negative-case trail` | `Kura Fund` / `Nakatani Foundation research grant (watch)` |
+
+- Live public check in this run: `mind-upload.com/issue.html` still presents the same six RQs and still labels them as a `route-setting update`, so the public source page itself does not need a new batch switch.
+- Funding-window recheck in this run: `Kura Fund` stayed open, the `Nakatani Foundation graduate scholarship` stayed the main student-facing bridge, the `Kashinome Scholarship` stayed a runway-only side route, and the `Nakatani Foundation research grant` stayed in watch mode.
+- Todoist recheck in this run: the start/deadline tasks for these routes already existed, so no duplicate task was added.
+
 ## Next internal six-question queue (2026-03-29 11:10 JST)
 
 The public batch above does not change in this run. This section only records the next bounded queue once the current public six have stable audit artifacts.
