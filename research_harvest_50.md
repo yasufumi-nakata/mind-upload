@@ -5,7 +5,7 @@ description: "Publishes prior research collected through 50 decomposed questions
 article_type: "Evidence Bank"
 subtitle: "U0-U15 decomposition, current-status map, and prior literature (heavily cited)"
 author: Mind Uploading Research Project
-last_updated: "2026-03-29"
+last_updated: "2026-03-30"
 note: "Compiled from 50 worker tasks (curated for relevance)"
 audience: "Readers who want to browse a large literature set by unresolved issue rather than by paper count alone"
 reading_time: "20-35 min (about 7 min if you only read the statistics and U-map)"
@@ -23,7 +23,9 @@ page_highlights:
   - "For technical readers, U7 is no longer one synchronization bucket: synchronization infrastructure, shared-vs-specific component evidence, hemodynamic / metabolic quantity bridge, and bundle robustness under complete-case or cross-centre disagreement are separate evidence slices."
   - "For technical readers, destructive local ultrastructure is kept separate from living-human in vivo observability, and the living-human route is now read on three axes: proxy class, operational maturity, and safe calibrator role."
   - "For technical readers, same-subject / same-brain papers now sit on their own bridge rung, so preservation route, regime continuity, and bridge validation are checked before same-state language."
+  - "For technical readers, same-brain functional connectomics is now split into sequential bridge class, label source, current synaptic-state ceiling, and dynamics-identifiability burden."
   - "For technical readers, bridge risk is now treated as bridge-type-specific and family-specific, so live-to-fix transformation, waking-state drift, and sleep-crossing regime change are not compressed into one time penalty."
+  - "For technical readers, U8 closed-loop reading now requires slow internal-milieu disclosure in addition to latency, instability, and recalibration metrics."
   - "For technical readers, neuromodulatory evidence is now split into mixed arousal proxy, local transmitter sensing, regional atlas prior, occupancy PET, and challenge-linked displacement rather than one human-state meter."
   - "For technical readers, maintenance-state papers now include intrinsic-excitability control, transcriptional stabilization, post-transcriptional RNA control, phospho-signaling, local proteostasis, cargo-routing, ionic / chloride regulation, bioenergetic / mitochondrial support, neurovascular-unit / BBB / pericyte support, clearance / immune support, and astrocyte-state evidence rather than only generic support-variable papers."
   - "For technical readers, local-causal maintenance-state papers and living-human observability papers do not move the same ladder, so chronology and citation-year conventions must not fuse them."
@@ -41,7 +43,9 @@ known_points:
   - "Destructive local ultrastructure and living-human in vivo proxy routes do not increase the same evidential axis, even when both are called human measurement advances."
   - "A living-human proxy route can calibrate one bounded hidden-state family without becoming a deployable or state-complete human readout."
   - "Same-subject or same-brain wording can still hide a sequential bridge problem, so preservation route, elapsed time, regime continuity, and bridge-validation rung remain separate evidence fields."
+  - "Same-brain functional connectomics strengthens a sequential local scaffold or task-bounded conditional predictor, not direct transcriptomic truth, current synaptic-state readout, or one solved local twin."
   - "Bridge risk is not summarized by elapsed time alone; live-to-fix transformation, waking-state drift, sleep-crossing homeostatic change, and multi-day proxy composition expose different hidden-state families first."
+  - "For U8, fast timing, drift, and recalibration do not by themselves solve deployability when slow internal-milieu routes remain uncontrolled or undisclosed."
   - "For U3, neuromodulatory papers do not constrain one shared inferential object; mixed arousal proxies, local sensors, atlas priors, occupancy PET, and displacement PET still need to be read separately."
   - "For U3, neurovascular / BBB / pericyte papers also need a route-card split: controller-side pericyte / BBB biology and human BBB permeability proxies do not constrain the same inferential object."
   - "Maintenance-state papers on intrinsic-excitability control, transcriptional stabilization, post-transcriptional RNA control, phospho-signaling, local proteostasis, cargo-routing, ionic / chloride regulation, bioenergetic / mitochondrial support, neurovascular-unit / BBB / pericyte support, clearance / immune support, and astrocyte multiday trace change what remains latent, not what is already directly measured."
@@ -190,7 +194,7 @@ This evidence bank uses the core site's <strong>issue-year citation rule</strong
 <tr>
 <td><strong>2. Sequential bridge validity</strong></td>
 <td><strong>U7 / U8</strong></td>
-<td>Acquisition order, live-to-fix or cross-day delay, regime continuity, deformation / coordinate transfer, and bridge-validation rung before same-subject or same-brain language is promoted.</td>
+<td>Acquisition order, live-to-fix or cross-day delay, regime continuity, deformation / coordinate transfer, bridge-validation rung, and what object was actually carried across the bridge before same-subject or same-brain language is promoted.</td>
 <td>Reading specimen identity, landmark-based correlative workflow, or repeated-live reacquisition as if they already sampled one latent state.</td>
 </tr>
 <tr>
@@ -214,8 +218,8 @@ This evidence bank uses the core site's <strong>issue-year citation rule</strong
 <tr>
 <td><strong>6. Long-horizon closed-loop stability</strong></td>
 <td><strong>U8</strong></td>
-<td>Whether fixed-decoder interval, instability metrics, latency, jitter, dropout, recalibration burden, and recovery time are tracked as separate metrics.</td>
-<td>Claiming week-to-month deployability on the basis of within-session success alone.</td>
+<td>Whether fixed-decoder interval, instability metrics, latency, jitter, dropout, recalibration burden, recovery time, and slow internal-milieu disclosure are tracked as separate metrics.</td>
+<td>Claiming week-to-month deployability or boundary-complete embodiment on the basis of within-session success, fast timing, or short-horizon decoder survival alone.</td>
 </tr>
 <tr>
 <td><strong>7. maintenance-state family split</strong></td>
@@ -231,6 +235,18 @@ This evidence bank uses the core site's <strong>issue-year citation rule</strong
 </tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>Read same-brain functional connectomics as scaffold, not as a solved local twin</strong>
+<p>
+One remaining compression at the literature front door was inside the same-brain lane itself. The primary literature does not support reading <strong>same-brain functional connectomics</strong> as one solved class. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a> showed that live physiology to EM correlation is a <strong>multistage landmark-based bridge</strong>, <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> showed that same-brain structure-function linkage remains a <strong>sequential local pipeline</strong>, <a href="https://doi.org/10.1038/s41586-025-08840-3" target="_blank">Ding et al. (2025)</a> added a <strong>validated stimulus-conditioned response model</strong>, and <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">Gamlin et al. (2025)</a> still transferred transcriptomic identity through <strong>morphology-based prediction</strong>. At the remaining latent-state level, <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">Holler et al. (2021)</a>, <a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">D&uuml;rst et al. (2022)</a>, and <a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">Mittermaier et al. (2024)</a> show that current synaptic efficacy, release probability, and membrane-state-gated consolidation are not closed by structure-function correspondence, while <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> show that connectome-constrained dynamics can remain degenerate until extra recordings narrow the solution space. Therefore, the safe U7/U8 reading is <strong>sequential scaffold plus task-bounded conditional prediction</strong>, not direct transcriptomic truth, current synaptic-state readout, or one solved local twin.
+</p>
+</div>
+<div class="note-box">
+<strong>Read U8 closed-loop stability as more than fast timing</strong>
+<p>
+The U8 route also needed one more stop line. <a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998)</a> and <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007)</a> showed that glucocorticoid state can impair retrieval and reduce human hippocampal / prefrontal retrieval activity. <a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">McCauley et al. (2020)</a>, <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone et al. (2023)</a>, and <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">Birnie et al. (2023)</a> showed that circadian and corticosteroid timing alter hippocampal plasticity machinery, while <a href="https://doi.org/10.3233/JAD-2008-13309" target="_blank">Reger et al. (2008)</a> and <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">Sherman et al. (2015)</a> show that insulin signaling and circadian-rhythm consistency can shift human memory or hippocampal activity. Therefore, U8 papers are no longer read here from <strong>latency</strong>, <strong>jitter</strong>, <strong>decoder survival</strong>, or <strong>recalibration burden</strong> alone. The route now also asks whether <strong>slow internal-milieu variables</strong> such as circadian phase, glucocorticoid state, and insulin / metabolic regime were controlled, measured, perturbed, or left latent.
+</p>
+</div>
 <div class="note-box">
 <strong>Why U4 now sits on its own rung</strong>
 <p>
