@@ -60,6 +60,13 @@ This is a route-setting update, not a solved-claim update. The public batch is n
 - Relevant Todoist tasks already existed before this run, so no new task was needed for the current practical shortlist.
 - Funding-window spot check (2026-03-29): `Kura Fund` remains open in the current cycle, the `Nakatani Foundation graduate scholarship` remains the main student-facing bridge for this batch, the `Kashinome Scholarship` stays only as a student-runway side route rather than a core EEG research-funding anchor, and the `Nakatani Foundation research grant` plus broader neuroscience routes stay in watch mode.
 
+## Anchor strength and uncovered roadmap families (2026-03-29 15:15 JST)
+
+- The current six-question batch does not change here. What changes is the explicit reading order for the anchors: `D10` and `D02` are the strongest current primary anchors, while `D03` and `D01` stay in the batch as bounded route-setting anchors with narrower claim ceilings.
+- Practical consequence: `U13-2/U0-2/U0-3` can carry stronger first-pass artifacts inside EEG-DATA alone, while `U13-5/U14-4/U14-2` should remain attached to narrower artifacts until either the DOI-based source package is exercised more deeply or an adjunct benchmark is added.
+- Submission and reproducibility references remain fixed to `Dxx + DOI + dataset name + access class`. Numeric IDs stay search-only because the local mirror keeps re-ranking and remapping those IDs.
+- There is also a structural backlog outside this six-question batch: `U2/U5/U6/U9` exist in `tech_roadmap.md`, but they are not yet translated into the current `RQ60` practical pages. They should be treated as the next internal translation queue rather than as an already-covered part of the public six.
+
 ## Solve-first order after the post-pull revalidation (2026-03-29 14:06 JST)
 
 This run does not change the public six-question batch. It only fixes the execution order more explicitly, so the work can proceed as `one-RQ / one-anchor / one-first-artifact` instead of drifting back into a broad summary.

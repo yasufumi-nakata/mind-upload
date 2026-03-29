@@ -19,6 +19,20 @@ reading_time: "55-80分"
 - 更新日: 2026-03-29
 - 出典: `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`（60行を再構成）
 
+## 今回の再検証ログ（2026-03-29 15:15 JST）
+
+本runでは、current public 6RQ を据え置いたまま、`anchor strength` と `roadmap-only gap` をドシエ入口へ明示いたしました。総論を増やすのではなく、「どの RQ が今の EEG-DATA で最も深く前に進みやすいか」をさらに明確にするための補足です。
+
+- solve-first 順は維持: `U13-2` `U13-5` `U0-2` `U0-3` `U14-4` `U14-2`
+- anchor の強弱:
+  - `strong primary`: `D10 3M-CPSEED`, `D02 CSTE`
+  - `bounded support`: `D03 Multimodal Fusion EEG + Eye-Tracking`, `D01 Acquisition delay of wireless EEG`
+- 実務含意:
+  - `U13-2/U0-2/U0-3` は現行 EEG-DATA だけでも first artifact が比較的閉じやすい行です。
+  - `U13-5/U14-4/U14-2` は public route には残しますが、`D03/D01` のまま claim ceiling を上げすぎず、`DOI + dataset name + access class` を正本にして narrow artifact から進めます。
+- roadmap gap:
+  - `tech_roadmap.md` 上の `U2/U5/U6/U9` は、まだこの `RQ60` practical dossier 層に翻訳されておりません。current public batch の差し替え対象ではなく、次に増やす internal translation backlog として扱います。
+
 ## 今回の再検証ログ（2026-03-29 13:03 JST）
 
 本runでは、`mind-upload@12d3d42` `EEG-DATA@8d3d7db889a` `auto-research-funds@eaa5633d0` まで pull 後に、live `mind-upload.com/issue.html`、主要制度の公式募集ページ、Todoist 実 API を再確認し、current public batch を据え置く判断を明文化いたしました。

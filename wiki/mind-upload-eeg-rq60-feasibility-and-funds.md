@@ -51,6 +51,16 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `B`: 25件
 - `C`: 18件
 
+## 今回の深掘り実行パック（2026-03-29 15:15 JST, anchor strength + roadmap gap audit）
+
+本runでは、current public 6RQ を巻き戻さず、`EEG-DATA` 側の anchor 強度と `tech_roadmap.md` 側の未 practical 化領域だけを追加監査いたしました。方針は総論拡張ではなく、引き続き `1RQ=1検証命題=1主アンカー=1第一資金ルート=1非主張境界` です。
+
+- current public batch と solve-first 順は維持: `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`
+- 現時点で最も強い主アンカーは `D10 3M-CPSEED` と `D02 CSTE` です。speech / identity 側の first artifact はこの 2 本を基準床として扱います。
+- `D03 Multimodal Fusion EEG + Eye-Tracking` と `D01 Acquisition delay of wireless EEG` は current route 上では有効ですが、metadata の厚みと主張の広げやすさは `D10/D02` より弱いため、`bounded support anchor` として扱います。`U13-5/U14-4/U14-2` は public でも引き続き narrow claim に留め、最小成果物が詰まった場合は `D10/D02` 側の補強か adjunct benchmark を優先いたします。
+- 提出・再現ログの正本キーは今回も `Dxx + DOI + dataset name + access class` です。数値IDは探索補助に限定し、再採番ドリフトの影響を避けます。
+- `tech_roadmap.md` にある `U2/U5/U6/U9` は、今回の `RQ60` 実務層にはまだ落ち切っていません。これは current public batch の欠落ではなく、`research_harvest_50` 由来の RQ practicalization を次に増やす internal backlog として扱います。
+
 ## 今回の深掘り実行パック（2026-03-29 13:03 JST, upstream post-pull / official window / Todoist audit）
 
 本runでは、`mind-upload@12d3d42` `EEG-DATA@8d3d7db889a` `auto-research-funds@eaa5633d0` まで pull 後に、live `mind-upload.com/issue.html`、主要制度の公式募集ページ、Todoist 実 API を再確認いたしました。結論は巻き戻さず、current public batch は `U13-2/U13-5/U14-4/U0-2/U0-3/U14-2` のまま維持いたします。
