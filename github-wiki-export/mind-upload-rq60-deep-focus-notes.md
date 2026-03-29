@@ -70,6 +70,7 @@ The order below is intentionally sequential. Each row closes a blocker for the n
 | `6` | `U14-2` | The exploration/confirmation split is the last step because it depends on the artifact family above being stable enough to rerun without ad hoc reinterpretation. | `D01` / `10.21227/dv1p-vq18` / `immediate` | `Fixed-split rerun contract and negative-case trail` | `Kura Fund` / `Nakatani Foundation research grant (watch)` |
 
 - Live public check in this run: `mind-upload.com/issue.html` still presents the same six RQs and still labels them as a `route-setting update`, so the public source page itself does not need a new batch switch.
+- Anchor reality recheck in this run: `D10 = 3M-CPSEED` (`10.18112/openneuro.ds006465.v2.0.0`, `immediate`), `D03 = Data of Multimodal Fusion System for Cognitive Load Assessment in Psychological Experiments: An EEG and Eye-Tracking Study` (`10.21227/6106-6120`, `immediate`), `D01 = Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`, `immediate`), and `D02 = CSTE` (`10.21227/j162-nh61`, `immediate`). These four anchors remain the current public execution floor for the batch.
 - Funding-window recheck in this run: `Kura Fund` stayed open, the `Nakatani Foundation graduate scholarship` stayed the main student-facing bridge, the `Kashinome Scholarship` stayed a runway-only side route, and the `Nakatani Foundation research grant` stayed in watch mode.
 - Todoist recheck in this run: the start/deadline tasks for these routes already existed, so no duplicate task was added.
 
