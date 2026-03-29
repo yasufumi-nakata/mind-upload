@@ -16,6 +16,26 @@
 - 更新日: 2026-03-29
 - 出典: `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`（60行を再構成）
 
+## 今回の再検証ログ（2026-03-29 19:07 JST）
+
+本runでは、pull 後の current public 6RQ を再度据え置いたまま、official funding window と Todoist 実 API の「重複なく足りているか」を確認し、さらに broader funding watch が既存 task とどこまで接続済みかを整理いたしました。方針は今回も総論追加ではなく、`1RQ=1検証命題=1主アンカー=1第一資金ルート=1非主張境界` を崩さないことです。
+
+- current public 6RQ と solve-first 順は維持:
+  - `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`
+- official funding window の再確認:
+  - `くら基金`: `2026-04-17 17:00` まで open
+  - `中谷財団 大学院生奨学金`: detail page で `2026-04-01 - 2026-05-25 15:00`
+  - `樫の芽会`: `2026-04-09` まで open
+  - `中谷財団 研究助成`: `2026年度募集は終了済み（2025-06-01 - 2025-07-07）`
+- Todoist 判断:
+  - current route に必要な task は今回も既存で、新規 task は追加しておりません。
+  - 実 API では current route 周辺で `11` task がヒットしましたが、これは `中谷財団 大学院生奨学金 / 大学院生奨学金給付` と `中谷財団 研究助成` 周辺に重複系の watch があるためです。現行 public 6RQ に必要な最小 task は既に足りているため、今回の正しい処理は `追加しない` ことでした。
+- broader funding watch の扱い:
+  - `ブレインサイエンス振興財団` `島津科学技術振興財団` `精密測定技術振興財団` `服部報公会` `リカケンホールディングス` は、Todoist 側に既存 watch があることを確認いたしました。
+  - `高齢社会課題解決研究(AI)` は今回の API 再確認では task 未登録でしたが、current public 6RQ の immediate route ではなく、しかもこの run では 2026 サイクルの official recurrence を独立再確認していないため、新規追加は見送りました。
+- public 反映:
+  - live `mind-upload.com/issue.html` は引き続き current public 6RQ と solve-first order を自然な英語で保持していたため、本runでも公開ページ本文の差し替えは行っておりません。
+
 ## 今回の再検証ログ（2026-03-29 15:15 JST）
 
 本runでは、current public 6RQ を据え置いたまま、`anchor strength` と `roadmap-only gap` をドシエ入口へ明示いたしました。総論を増やすのではなく、「どの RQ が今の EEG-DATA で最も深く前に進みやすいか」をさらに明確にするための補足です。

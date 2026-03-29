@@ -48,6 +48,20 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `B`: 25件
 - `C`: 18件
 
+## 今回の深掘り実行パック（2026-03-29 19:07 JST, current route sufficiency / Todoist duplication audit）
+
+本runでは、current public 6RQ の practical route を変えずに、official funding window と Todoist の「今の route に対して足りているか」を再監査いたしました。総論を増やすのではなく、`current 6RQ を今そのまま深く閉じられるか` だけをさらに明確化する補助です。
+
+- current public batch と solve-first 順は維持: `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`
+- official funding window の再確認:
+  - `くら基金`: `2026-04-17 17:00` まで open
+  - `中谷財団 大学院生奨学金`: detail page で `2026-04-01 - 2026-05-25 15:00`
+  - `樫の芽会`: `2026-04-09` まで open
+  - `中谷財団 研究助成`: `2026年度募集は終了済み（2025-06-01 - 2025-07-07）`
+- Todoist 実 API では、current route 周辺で `11` task がヒットしました。これは `中谷財団 大学院生奨学金 / 大学院生奨学金給付` と `中谷財団 研究助成` に重複 watch があるためで、current 6RQ に必要な task が不足していることは意味しません。したがって本runでも新規 task は追加しておりません。
+- broader funding watch では、`ブレインサイエンス振興財団` `島津科学技術振興財団` `精密測定技術振興財団` `服部報公会` `リカケンホールディングス` の Todoist task 既存を確認できました。いっぽう `高齢社会課題解決研究(AI)` は task 未登録でしたが、current public 6RQ の immediate route ではなく、今回の run では 2026 recurrence を独立再確認していないため追加を見送りました。
+- `mind-upload.com` 側は current public 6RQ を既に public-safe に案内できているため、本runで公開本文の差し替えは行っておりません。
+
 ## 今回の深掘り実行パック（2026-03-29 15:15 JST, anchor strength + roadmap gap audit）
 
 本runでは、current public 6RQ を巻き戻さず、`EEG-DATA` 側の anchor 強度と `tech_roadmap.md` 側の未 practical 化領域だけを追加監査いたしました。方針は総論拡張ではなく、引き続き `1RQ=1検証命題=1主アンカー=1第一資金ルート=1非主張境界` です。
