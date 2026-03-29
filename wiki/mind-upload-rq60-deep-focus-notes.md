@@ -41,6 +41,24 @@ recommended_pages:
 - `B`: EEG main analysis is possible. Requires additional external modality/design.
 - `C`: Mainly system/legal/theoretical integration. EEG is an audit log or supporting evidence.
 
+## Current public six-question batch (2026-03-29 10:09 JST)
+
+This run changes the active public batch to `U13-2`, `U13-5`, `U14-4`, `U0-2`, `U0-3`, and `U14-2`.
+
+This is a route-setting update, not a solved-claim update. The public batch is now intentionally concentrated on `inner-speech decoding + identity drift + reproducibility auditing`, because these six RQs are the cleanest current bridge from `mind-upload.com` research questions to bounded EEG-ready and fundable work packages.
+
+| RQ | What is fixed first | Main `Dxx + DOI` anchor | Practical first / backup route | First-pass KPI | Keep outside the EEG claim |
+|---|---|---|---|---|---|
+| `U13-2` | A `brain-minus-prior` hallucination audit for overt/silent/imagined speech. | `D10` / `10.18112/openneuro.ds006465.v2.0.0` | `Kura Fund` / `Nakatani Foundation graduate scholarship` | `semantic alignment` `brain-minus-prior gap` `misalignment rate` | Do not treat language-decoder success as a mind-preservation claim. |
+| `U13-5` | A perception-to-recall branch analysis for mimicry/mechanism separation. | `D03` / `10.21227/6106-6120` | `Kura Fund` / `Nakatani Foundation graduate scholarship` | `perception-to-recall degradation point` `transfer gap` `control-condition stability` | Do not treat a shared decoder as evidence of preserved internal mechanism. |
+| `U14-4` | Model Card / Dataset Card fields are wired into the reproducibility contract. | `D01` / `10.21227/dv1p-vq18` | `Nakatani Foundation research grant` / `Kura Fund` | `required-card fill rate` `rerun success rate` `leak-audit coverage` | Do not claim organizational adoption or field-wide standardization yet. |
+| `U0-2` | The identity route is limited to `clock offset + jitter + state-feature collapse` auditing. | `D02` / `10.21227/j162-nh61` | `Nakatani Foundation graduate scholarship` / `Kashinome Scholarship` | `clock-offset p95` `state-feature collapse rate` `resync recovery rate` | Do not elevate technical synchronization stability to legal or philosophical identity. |
+| `U0-3` | Task-specific threshold stability and overfit exclusion are fixed before any stronger identity reading. | `D02` / `10.21227/j162-nh61` | `Nakatani Foundation graduate scholarship` / `Kashinome Scholarship` | `session-out AUC` `threshold stability` `overfit exclusion rate` | Do not treat a stable biometric threshold as a sufficient condition for personhood continuity. |
+| `U14-2` | Exploratory and confirmatory tracks are separated inside the rerun contract. | `D01` / `10.21227/dv1p-vq18` | `Nakatani Foundation research grant` / `Kura Fund` | `fixed-split rate` `rerun success rate` `explore-to-confirm carryover gap` | Do not present exploration outputs as confirmatory evidence after the split boundary is crossed. |
+
+- Practical funding alignment in this run is intentionally narrow: `Nakatani Foundation graduate scholarship`, `Kura Fund`, `Kashinome Scholarship`, and `Nakatani Foundation research grant` already provide active routes or watch routes for this cluster.
+- Relevant Todoist tasks already existed before this run, so no new task was needed for the current practical shortlist.
+
 ## U0 (identity)
 
 | RQ | Judgment | Core to be directly verified with EEG | Application theme (grant key) | Main EEG-DATA | Required outside of EEG |
