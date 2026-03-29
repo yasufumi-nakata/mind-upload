@@ -32,6 +32,7 @@ page_highlights:
 - We will also fix operational rules for how to read connectome-complete and connectome-constrained
   model on this site.
 - "Flagship connectome results are split into five evidence classes here: wiring atlas, same-brain local scaffold, human macro pathway prior / tractography connectome, connectome-constrained conditional predictor, and identifiability audit."
+- "Same-brain functional connectomics is now kept behind a sequential-bridge / label-transfer / current-synaptic-state / dynamical-identifiability split, so digital-twin wording is not read as a solved local twin."
 - "Connectome-constrained predictors now need a conditional-model route card that names the structural prior, fitted degrees of freedom, task/state regime, omitted mechanisms, validation route, and abstention boundary."
 - Rather than ending with enumeration, we use augmentation/ablation to fix what should
   be added from connectome-only to read the predictive gain.
@@ -66,6 +67,7 @@ known_points:
 - Even in a connectome-constrained model, dynamics can degenerate if unmeasured cell/synapse/modification
   parameters remain.
 - Dorkenwald et al. (2024), MICrONS Consortium et al. (2025), Thomas et al. (2014), Donahue et al. (2016), Schilling et al. (2020), Grisot et al. (2021), Lappalainen et al. (2024), and Beiran & Litwin-Kumar (2025) support different kinds of progress and should not be collapsed into one story that connectome is "almost enough."
+- Same-brain functional connectomics strengthens specimen identity and local structure-function correspondence more than atlas priors do, but it still remains a sequential bridge and local conditional-prediction route rather than direct transcriptomic truth, current synaptic-state readout, or unique local dynamics.
 - A tractography-derived graph can still change at the cortical-endpoint and parcel-graph stage even when the underlying diffusion signal is the same.
 - Conditional predictions can be improved by adding same-brain function, transcriptomics,
   neuromodulatory dynamics, thermal logs, energetic support, astrocyte-state, neurovascular support, and clearance support, but the improvement depends on the
@@ -294,10 +296,10 @@ On this site, connectome-related progress is now separated into five evidence cl
 </tr>
 <tr>
 <td><strong>Same-brain local structure-function scaffold</strong></td>
-<td>MICrONS Consortium et al. (2025)</td>
-<td>Dense calcium imaging of about 75,000 neurons in multiple mouse visual areas co-registered with an EM reconstruction of more than 200,000 cells and 0.5 billion synapses in the same awake mouse.</td>
-<td>Whole-brain or all-state coverage, general human observability, or proof that local co-registration exhausts hidden-state variables.</td>
-<td>Read as a <strong>same-brain local digital-twin scaffold</strong> for visual-cortex questions, not as a state-complete whole-brain template.</td>
+<td>Bosch et al. (2022); MICrONS Consortium et al. (2025); Ding et al. (2025)</td>
+<td>Sequential same-brain bridges between in vivo activity and later ultrastructure, local structure-function correspondences, and validated stimulus-conditioned response models within the measured region / task.</td>
+<td>Same-time whole-brain or all-state capture, direct transcriptomic truth inside the EM volume, current synaptic efficacy / release state, unique dynamical parameterization, or general human observability.</td>
+<td>Read as a <strong>sequential same-brain local scaffold plus task-bounded conditional predictor</strong>, not as a solved local twin or state-complete template.</td>
 </tr>
 <tr>
 <td><strong>Human macro pathway prior / tractography connectome</strong></td>
@@ -319,6 +321,43 @@ On this site, connectome-related progress is now separated into five evidence cl
 <td>A formal result that even networks sharing the same synaptic weights can diverge strongly in dynamics when biophysical parameters differ, while a small subset of activity recordings can reduce the degeneracy.</td>
 <td>A claim that connectome-only is sufficient, or conversely that connectome is useless once recordings are added.</td>
 <td>Read as the reason <strong>connectome-constrained is not unique by default</strong>; additional recordings, family comparison, and abstention rules remain necessary.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>2026-03-30 addendum: same-brain functional connectomics is a sequential scaffold, not a solved local twin</strong>
+<p>
+This page still left one practical shortcut too open. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a> showed that bridging in vivo physiology to targeted volume EM requires a correlative multistage workflow that links scales rather than freezing one simultaneous state object. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> then advanced that route with dense calcium imaging of about <strong>75,000 neurons</strong> co-registered to a later EM reconstruction containing more than <strong>200,000 cells</strong> and <strong>0.5 billion synapses</strong> in one awake mouse. <a href="https://doi.org/10.1038/s41586-025-08840-3" target="_blank">Ding et al. (2025)</a> built on the same dataset with a validated stimulus-conditioned response model, but explicitly warned that model internals still need cautious interpretation. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">Gamlin et al. (2025)</a> further improved the cell-type bridge, yet did so through morphology-based prediction of transcriptomic Sst types rather than by direct transcriptomic assay inside the EM volume. On the synaptic side, <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">Holler et al. (2021)</a> described unresolved synaptic-strength structure as a key limitation for inferring brain function from wiring diagrams, <a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">Dürst et al. (2022)</a> showed that vesicular release probability strongly determines synaptic strength, and <a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">Mittermaier et al. (2024)</a> showed that membrane-potential state gates synaptic consolidation in human neocortical tissue. Finally, <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that connectome-constrained recurrent networks can remain dynamically degenerate until extra activity recordings reduce the compatible family. Therefore, the safe ceiling here is <strong>sequential same-brain scaffold plus task-bounded conditional prediction</strong>, not direct transcriptomic truth, current synaptic-state readout, or a unique local twin.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Wall</th>
+<th>What the primary literature now supports</th>
+<th>Safe reading on this site</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sequential bridge wall</strong></td>
+<td>Bosch and MICrONS support a powerful same-brain bridge from live physiology to later ultrastructure, but that bridge still carries landmarks, targeted subvolumes, and ordered transformations.</td>
+<td>A <strong>sequential same-brain scaffold</strong>, not a simultaneous whole-state sample.</td>
+</tr>
+<tr>
+<td><strong>Label-transfer wall</strong></td>
+<td>Gamlin supports morphology-linked prediction of transcriptomic Sst types inside a large EM volume.</td>
+<td>A <strong>cell-type bridge with predicted labels</strong>, not direct transcriptomic truth by default.</td>
+</tr>
+<tr>
+<td><strong>Current-synaptic-state wall</strong></td>
+<td>Holler, Dürst, and Mittermaier together show that structure-function correspondence still leaves release probability and membrane-state-gated consolidation unresolved.</td>
+<td>A <strong>structure-function correspondence route</strong>, not current efficacy or release-state readout.</td>
+</tr>
+<tr>
+<td><strong>Dynamical-identifiability wall</strong></td>
+<td>Ding supports validated stimulus-conditioned prediction, while Beiran &amp; Litwin-Kumar show that connectome-constrained dynamics can still remain non-unique.</td>
+<td>A <strong>task-bounded conditional predictor</strong>, not one solved local dynamic twin.</td>
 </tr>
 </tbody>
 </table>
@@ -807,14 +846,14 @@ The weakness of the current site was that even if it was possible to enumerate t
 <tr>
 <td><strong>+ same-brain function / behavior</strong></td>
 <td>Co-registered functional measurements and behavioral states in the same individual. </td>
-<td>MICrONS connects dense neural activity, EM connectome, pupil diameter, and locomotion in the same mouse, creating a scaffold that allows comparison of structure and state-dependent function within the same brain. </td>
-<td>This is an advancement in a specific task or specific state of the mouse visual cortex, and does not guarantee generalization to the whole brain or all states or the sufficiency of the hidden state. </td>
+<td>Bosch and MICrONS show that same-brain activity plus later ultrastructure can build a sequential local scaffold for comparing structure and state-dependent function within one preparation, while Ding shows that validated stimulus-conditioned predictors can exploit that scaffold. </td>
+<td>The bridge remains local and sequential, and it does not by itself guarantee same-time whole-state capture, current synaptic efficacy, direct transcriptomic truth, unique dynamics, or whole-brain generalization. </td>
 </tr>
 <tr>
 <td><strong>+ transcriptomic / cell-type label</strong></td>
-<td>transcriptomic type and target specificity with same-brain or proximity conditions. </td>
-<td>Gamlin et al. demonstrated that connectivity motifs, synaptic properties, and myelination differ systematically among predicted Sst transcriptomic types, embodying the incremental value of node labels. </td>
-<td>Within-type heterogeneity and morpho-electric variability remain, so even if you add cell-type label, threshold / gain / set point will still be latent. </td>
+<td>Predicted or directly measured transcriptomic type and target specificity with same-brain or proximity conditions. </td>
+<td>Gamlin et al. demonstrated that connectivity motifs, synaptic properties, and myelination differ systematically among <strong>predicted</strong> Sst transcriptomic types, embodying the incremental value of node labels while keeping the morphology-to-transcriptomics bridge explicit. </td>
+<td>Within-type heterogeneity and morpho-electric variability remain, and morphology-linked predicted labels are still not the same as direct transcriptomic assay in the EM volume, so threshold / gain / set point will still be latent. </td>
 </tr>
 <tr>
 <td><strong>+ activity-dependent transcription / chromatin audit</strong></td>
@@ -923,6 +962,7 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <ul>
 <li><strong>connectome-complete:</strong> Treat as a structural atlas, candidate scaffold, and starting point for compaction. It is not written as achieving L2/L3 emulation. </li>
 <li><strong>connectome-constrained model:</strong> First of all, it is treated as a hypothesis engine / conditional model. It is not written as the unique solution of the internal state. </li>
+<li><strong>same-brain functional connectomics:</strong>Do not collapse sequential bridge, morphology-linked predicted labels, current synaptic-state caveats, and dynamical-identifiability burden into one local twin. If those four ceilings are not separately disclosed, keep the claim at scaffold plus task-bounded conditional prediction.</li>
 <li><strong>augmentation / ablation:</strong>You can't write that "the added state variable worked" without putting a connectome-only baseline. </li>
 <li><strong>transcriptomic atlas is not current chromatin state:</strong>Do not auto-complete memory-stabilization controller from cell identity or one-shot DEG evidence. </li>
 <li><strong>gene-level abundance is not post-transcriptional RNA-state:</strong>Do not auto-complete isoform choice, m6A-dependent translation / degradation, or RNA-editing controller from transcript counts alone. </li>
@@ -962,6 +1002,10 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <td>Connectome-only baseline, predictive gain under the same split/held-out conditions, ablation results, proxy specificity, family/uncertainty, and abstention are also listed. </td>
 </tr>
 <tr>
+<td><strong>same-brain functional-connectomics claim</strong></td>
+<td>Declare bridge order, carried witness, local coverage, direct assay versus predicted label-transfer route, current-synaptic-state ceiling, and dynamical uncertainty / abstention before using digital-twin or same-state language. </td>
+</tr>
+<tr>
 <td><strong>Conditional dynamical claim</strong></td>
 <td>Include same-brain function or perturbation, list of missing state variables, proxy limits, family/uncertainty, and explicit absence of intrinsic excitability/homeostatic set point, post-transcriptional RNA-state, ionic / chloride state, thermal-state, bioenergetic / mitochondrial state, neurovascular / BBB state, astrocyte-state, and clearance / immune support if not measured. </td>
 </tr>
@@ -978,7 +1022,9 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <ol>
 <li>Dorkenwald, S., et al. (2024). Neuronal wiring diagram of an adult brain. <em>Nature</em>, 634, 124–138. <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">doi:10.1038/s41586-024-07558-y</a></li>
 <li>Schlegel, P., et al. (2024). Whole-brain annotation and multi-connectome cell typing of Drosophila. <em>Nature</em>, 634, 139–150. <a href="https://doi.org/10.1038/s41586-024-07686-5" target="_blank">doi:10.1038/s41586-024-07686-5</a></li>
+<li>Bosch, C., Pacureanu, A., Patino, J., et al. (2022). Functional and multiscale 3D structural investigation of brain tissue through correlative in vivo physiology, synchrotron microtomography and volume electron microscopy. <em>Nature Communications</em>, 13, 2923. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">doi:10.1038/s41467-022-30199-6</a></li>
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>, 640, 435–447. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
+<li>Ding, Z., et al. (2025). Functional connectomics reveals a general wiring rule in mouse visual cortex. <em>Nature</em>, 640, 459–469. <a href="https://doi.org/10.1038/s41586-025-08840-3" target="_blank">doi:10.1038/s41586-025-08840-3</a></li>
 <li>Lappalainen, J. K., Tschopp, F. D., Prakhya, S., et al. (2024). Connectome-constrained networks predict neural activity across the fly visual system. <em>Nature</em>, 634, 1132–1140. <a href="https://doi.org/10.1038/s41586-024-07939-3" target="_blank">doi:10.1038/s41586-024-07939-3</a></li>
 <li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <em>Nature Neuroscience</em>, 28, 2561–2574. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
 <li>Shiu, P.-K., et al. (2024). A Drosophila computational brain model reveals sensorimotor processing. <em>Nature</em>, 634, 210–219. <a href="https://doi.org/10.1038/s41586-024-07763-9" target="_blank">doi:10.1038/s41586-024-07763-9</a></li>
@@ -1039,6 +1085,8 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li>Swarnkar, S., Avchalumov, Y., Espadas, I., Grinman, E., Liu, X.-A., Raveendra, B. L., Zucca, A., Mediouni, S., Sadhu, A., Valente, S., Page, D., Miller, K., &amp; Puthanveettil, S. V. (2021). Molecular motor protein KIF5C mediates structural plasticity and long-term memory by constraining local translation. <em>Cell Reports</em>, 36(2), 109369. <a href="https://doi.org/10.1016/j.celrep.2021.109369" target="_blank">doi:10.1016/j.celrep.2021.109369</a></li>
 <li>Aiken, J., &amp; Holzbaur, E. L. F. (2024). Spastin locally amplifies microtubule dynamics to pattern the axon for presynaptic cargo delivery. <em>Current Biology</em>, 34(8), 1687-1704.e8. <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">doi:10.1016/j.cub.2024.03.010</a></li>
 <li>Holler, S., et al. (2021). Structure and function of a neocortical synapse. <em>Nature</em>, 591, 111–116. <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">doi:10.1038/s41586-020-03134-2</a></li>
+<li>Dürst, C. D., Wiegert, J. S., Schulze, C., et al. (2022). Vesicular release probability sets the strength of individual Schaffer collateral synapses. <em>Nature Communications</em>, 13, 6126. <a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">doi:10.1038/s41467-022-33565-6</a></li>
+<li>Mittermaier, F. X., Kalbhenn, T., Xu, R., et al. (2024). Membrane potential states gate synaptic consolidation in human neocortical tissue. <em>Nature Communications</em>, 15, 10340. <a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">doi:10.1038/s41467-024-53901-2</a></li>
 <li>Matsuzaki, M., Honkura, N., Ellis-Davies, G. C. R., & Kasai, H. (2004). Structural basis of long-term potentiation in single dendritic spines. <em>Nature</em>, 429, 761–766. <a href="https://doi.org/10.1038/nature02617" target="_blank">doi:10.1038/nature02617</a></li>
 <li>Vardalaki, D., Chung, K., &amp; Harnett, M. T. (2022). Filopodia are a structural substrate for silent synapses in adult neocortex. <em>Nature</em>, 612, 323–327. <a href="https://doi.org/10.1038/s41586-022-05483-6" target="_blank">doi:10.1038/s41586-022-05483-6</a></li>
 <li>Pizzorusso, T., Medini, P., Berardi, N., Chierzi, S., Fawcett, J. W., &amp; Maffei, L. (2002). Reactivation of ocular dominance plasticity in the adult visual cortex. <em>Science</em>, 298(5596), 1248–1251. <a href="https://doi.org/10.1126/science.1072699" target="_blank">doi:10.1126/science.1072699</a></li>
