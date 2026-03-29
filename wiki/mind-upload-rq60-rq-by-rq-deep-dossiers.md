@@ -19,6 +19,27 @@ reading_time: "55-80分"
 - 更新日: 2026-03-29
 - 出典: `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`（60行を再構成）
 
+## 今回の再検証ログ（2026-03-29 13:03 JST）
+
+本runでは、`mind-upload@12d3d42` `EEG-DATA@8d3d7db889a` `auto-research-funds@eaa5633d0` まで pull 後に、live `mind-upload.com/issue.html`、主要制度の公式募集ページ、Todoist 実 API を再確認し、current public batch を据え置く判断を明文化いたしました。
+
+- current public 6RQ（本run正本）: `U13-2` `U13-5` `U14-4` `U0-2` `U0-3` `U14-2`
+- 主アンカー固定は維持:
+  - `U13-2`: `D10`
+  - `U13-5`: `D03`
+  - `U14-4`: `D01`
+  - `U0-2`: `D02`
+  - `U0-3`: `D02`
+  - `U14-2`: `D01`
+- funding route の再確認:
+  - `U13-2/U13-5`: `くら基金` / `中谷財団 大学院生奨学金`
+  - `U14-4/U14-2`: `くら基金` / `中谷財団 研究助成（next-cycle watch）`
+  - `U0-2/U0-3`: `中谷財団 大学院生奨学金` / `樫の芽会（runway 補助のみ）`
+- Todoist判断:
+  - `くら基金` `中谷財団 大学院生奨学金` `樫の芽会` `中谷財団 研究助成` の `募集開始確認/応募締切` 8 task は 13:03-13:05 JST の実 API 再確認でも既存でした。本runでは新規 task を追加しておりません。
+- 補足:
+  - live public route と source page の文面は今回の bounded 6RQ と一致していたため、本runでは `mind-upload.com` 側の public source page を更新しておりません。
+
 ## 今回の再検証ログ（2026-03-29 12:06 JST）
 
 本runでは、pull 後に live `mind-upload.com/issue.html` を再確認し、current public batch を `U13-2/U13-5/U14-4/U0-2/U0-3/U14-2` として内部ドシエの入口を同期し直しました。汎用横断の総論は増やさず、ここでも `1RQ=1検証命題=1応募テーマ=1主データ` を維持いたします。

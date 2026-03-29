@@ -51,6 +51,15 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `B`: 25件
 - `C`: 18件
 
+## 今回の深掘り実行パック（2026-03-29 13:03 JST, upstream post-pull / official window / Todoist audit）
+
+本runでは、`mind-upload@12d3d42` `EEG-DATA@8d3d7db889a` `auto-research-funds@eaa5633d0` まで pull 後に、live `mind-upload.com/issue.html`、主要制度の公式募集ページ、Todoist 実 API を再確認いたしました。結論は巻き戻さず、current public batch は `U13-2/U13-5/U14-4/U0-2/U0-3/U14-2` のまま維持いたします。
+
+- live `mind-upload.com/issue.html` は引き続き `inner-speech decoding + identity drift + reproducibility auditing` を current public route として出しており、主アンカー族も `D10/D03/D01/D02` のままでした。
+- 公式募集ページの 13:03-13:08 JST spot check では、`くら基金` は `2026-04-17 17:00` まで募集中、`中谷財団 大学院生奨学金` は個別ページで `2026-04-01 - 2026-05-25 15:00` を案内しつつトップの current-open list は空、`セコム一般研究助成` は `2026-03-31 12:00` まで open、`樫の芽会` は `2026-04-09` まで open、`中谷財団 研究助成` は `next-cycle watch` のままという整理を維持いたします。
+- Todoist 実 API では `くら基金` `中谷財団 大学院生奨学金` `樫の芽会` `中谷財団 研究助成` の `募集開始確認/応募締切` 8 task を 13:03-13:05 JST に再確認できたため、本runでも新規 task は追加しておりません。
+- `mind-upload.com` の public source page は今回の bounded route を既に自然な文面で保持していたため、本runでは公開ページ本文の差し替えは行わず、内部 wiki 側の監査ログだけを更新いたします。
+
 ## 今回の深掘り実行パック（2026-03-29 12:06 JST, post-pull public batch sync）
 
 本runでは、pull 後に live `mind-upload.com/issue.html` を再確認し、公開中の 6RQ を `U13-2/U13-5/U14-4/U0-2/U0-3/U14-2` として内部 wiki 側へ同期し直しました。総論へ戻さず、今回も `1RQ=1検証命題=1主Dアンカー=1第一資金ルート=1非主張境界` の粒度で固定いたします。
