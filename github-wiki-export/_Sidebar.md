@@ -33,7 +33,6 @@
 - [Wiki: Flow of connecting what you read to change](https://github.com/yasufumi-nakata/mind-upload/wiki/reading-to-change-workflow)
 
 ## Other
-- [Mind-upload Current Public Six: EEG Route Brief](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief)
 - [Mind-upload RQ60 Application Playbook (RQ unit fixed)](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook)
 - [Mind-upload RQ60 Deep Evaluation Cards (EEG-DATA × auto-research-funds)](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards)
 - [Mind-upload RQ60 Deep focus notes (EEG-DATA × Grant)](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes)
