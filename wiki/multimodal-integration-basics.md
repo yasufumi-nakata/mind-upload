@@ -5,17 +5,18 @@ description: "We will organize based on primary literature how EEG, MEG, fMRI, i
 article_type: Wiki
 subtitle: "Rather than adding everything, it is designed to increase synchronization, geometry, and external validation."
 author: Mind Uploading Research Project
-last_updated: "2026-03-26"
-note: "Technical / natural science only"
+last_updated: "2026-03-29"
+note: "Technical / natural science only (updated with the 2026-03-29 quantity-bridge addendum)"
 audience: "People who want to judge how to compensate for the limitations of EEG alone from only the technical and natural science aspects"
 reading_time: "12-18 minutes"
 page_intro: "This page is a wiki that organizes what really improves when combining EEG, MEG, fMRI, invasive recording, and MRI based on primary literature. Rather than focusing on philosophy or legal systems, we focus only on synchronization, coordinate alignment, forward models, external validation, state coverage, and bundle robustness."
 accuracy_note: "What I'm trying to show here is not that ``if you integrate everything, you can figure it out.'' It's about sorting out what can be said a little more strongly when certain conditions are met, and what can't be said yet."
 page_highlights:
-  - "Read multimodal integration with 9 audit gates."
+  - "Read multimodal integration with 10 audit gates."
   - "Compare the differences between EEG+fMRI, EEG+MEG, and EEG+invasive recordings with primary literature."
   - "Same-session multimodal acquisition is not treated as self-validating fusion; a Fusion Card is required before the claim ceiling rises above the strongest unimodal route."
   - "Shared timestamps, shared cross-modal components, and the target biological variable are audited as separate objects rather than one shortcut."
+  - "Shared-vs-specific decomposition and quantity bridge / physiology grounding are separate audits, so a coupled trajectory is not automatically one solved biological quantity."
   - "More modalities can improve bundle performance without making the bundle availability-agnostic; complete-case subset, missing-modality handling, and cross-centre transfer remain separate audits."
   - "Hemodynamic routes now separate neural interpretation from vascular-state / CVR and superficial/systemic confounds."
   - "Recent tri-modal EEG-PET-MRI work strengthens sleep/wake physiology reading, but still as model-bearing fusion rather than state-complete ground truth."
@@ -27,6 +28,7 @@ known_points:
   - "However, the amount of improvement is highly dependent on the shared clock, individual anatomy, electrode/sensor location, conductivity assumptions, and the presence or absence of an external reference."
   - "Simultaneous acquisition, atlas-informed interpretation, and externally calibrated fusion are different claim levels."
   - "A shared low-frequency or global multimodal factor can still mix neural, autonomic, and vascular contributions, so common structure is not yet target-variable specificity."
+  - "A coupled multimodal trajectory can still sit on a mismatched biological axis, so shared time courses are not yet a quantity bridge by default."
   - "A multimodal gain can still depend on which subjects or trials actually carried all modalities, how missing rows were handled, and whether the bundle survives site transfer."
   - "For EEG+fMRI or EEG+fNIRS, alignment alone is not enough; vascular transfer state must be audited separately from neural interpretation."
   - "OPM-MEG can tolerate much more movement than SQUID-MEG, but it still depends on shielding, active field control, sensor calibration, and source-model disclosure."
@@ -36,6 +38,7 @@ unknown_points:
   - "Even with the integration of multiple modalities, the sufficiency of cells, synapses, neuromodifications, and glial states remain unresolved."
   - "How to propagate and report post-integration uncertainties remains a research topic."
   - "How shared-vs-specific decompositions should be benchmarked across human multimodal stacks remains unsettled."
+  - "Which quantity bridges can be externally calibrated across electrophysiological, hemodynamic, metabolic, and autonomic stacks remains unsettled."
   - "How to compare multimodal bundles fairly when modality availability, centre mix, or hard-subgroup disagreement differ remains unsettled."
 wiki_links:
   - label: "Wiki: Basics of EEG"
@@ -93,6 +96,13 @@ The next shortcut to block is subtler. A paper may show <strong>shared</strong> 
 </div>
 
 <div class="note-box">
+<strong>A coupled trajectory is not yet a quantity bridge</strong>
+<p>
+One more gap remained after separating <strong>shared</strong> and <strong>specific</strong> components. The page still left too much room to slide from "these modalities covary" to "these modalities now read the same biological quantity." The primary literature does not support that shortcut. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed tightly coupled global hemodynamic and metabolic progression during the descent into NREM sleep while also identifying <strong>two distinct network patterns</strong>. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> showed that a major low-frequency global fMRI mode is substantially coupled to <strong>autonomic physiology</strong> as well as EEG. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> then showed that significant task BOLD changes can coexist with <strong>opposite oxygen-metabolism changes</strong> across many cortical voxels. Therefore, on this site, a multimodal paper must say whether it established only a <strong>shared trajectory</strong>, a <strong>physiology-linked common driver</strong>, or an explicit <strong>quantity bridge on a named biological axis</strong>. Without that bridge, coupled dynamics do not yet define one solved neural quantity.
+</p>
+</div>
+
+<div class="note-box">
 <strong>More modalities do not make the bundle availability-agnostic</strong>
 <p>
 One more shortcut remained after tightening synchronization and shared-vs-specific logic. A paper can honestly show that using more modalities improves prediction, yet that still does not mean the multimodal bundle is already acquisition-complete, transfer-stable, or coherent in the hardest regimes. <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">Rohaut et al. (2024)</a> showed that adding modalities in acute brain injury decreased prognostic uncertainty and improved accuracy, which is a real bundle-performance gain. But <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a> showed that direct same-sample multimodal comparison relied on <strong>48 complete-feature patients</strong>, while <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> used missing-value substitution, tested generalization across <strong>different centres and acquisition parameters</strong>, and found higher <strong>inter-modality disagreement</strong> in minimally conscious or improving patients. Therefore, on this site, a multimodal gain is read first as <strong>bundle-performance evidence under a declared availability and transfer regime</strong>, not as automatic proof that the bundle is already robust, complete, or state-identified.
@@ -121,7 +131,7 @@ Here we will only deal with the technical and natural science aspects. It does n
 </div>
 
 <section class="section" id="gates">
-<h2 class="section-title">Nine audit gates to fix first</h2>
+<h2 class="section-title">Ten audit gates to fix first</h2>
 <table class="data-table">
 <thead>
 <tr>
@@ -167,12 +177,17 @@ Here we will only deal with the technical and natural science aspects. It does n
 <td>A synchronized common factor is not promoted to the target biological variable when shared physiology, residual mismatch, or modality-specific structure remain unresolved.</td>
 </tr>
 <tr>
+<td><strong>Quantity-bridge / physiology-grounding gate</strong></td>
+<td>The paper names the biological axis on which modalities are being compared and shows why the quantities are commensurate, for example by disclosing whether the bridge is electrophysiology-linked arousal, vascular transfer, metabolic rate, or another explicitly bounded physiology route.</td>
+<td>A coupled trajectory or positive cross-modal correlation is not promoted to one solved neural quantity when the bridge between electrophysiological, hemodynamic, metabolic, or autonomic quantities remains unresolved.</td>
+</tr>
+<tr>
 <td><strong>Bundle robustness gate</strong></td>
 <td>The paper discloses which samples actually carried all required modalities, how missing modalities were handled, whether the gain survives cross-centre / cross-scanner transfer, and whether disagreement concentrates in hard subgroups or nuisance regimes.</td>
 <td>It is too strong to read ``more modalities improved performance'' as if the bundle were already acquisition-complete, centre-robust, or equally coherent in the hardest cases.</td>
 </tr>
 <tr>
-<td><strong>state coverage gate</strong></td>
+<td><strong>State coverage gate</strong></td>
 <td>This integration can limit which of time, space, and locality will be compensated for and which state variables will still be missing. </td>
 <td>It can be read that just by integrating it, it became sufficient observation for WBE. </td>
 </tr>
@@ -182,7 +197,7 @@ Here we will only deal with the technical and natural science aspects. It does n
 <div class="note-box">
 <strong>Minimum fusion package on this site</strong>
 <p>
-For multimodal or atlas-prior routes, this page now follows the same disclosure bundle used in <a href="../verification.html#fusion-card">Verification: Fusion Card</a>: <strong>acquisition relation</strong>, <strong>clock / lag audit</strong>, <strong>geometry / co-registration scope</strong>, <strong>fusion object and model burden</strong>, <strong>shared-vs-specific component disclosure</strong>, <strong>incremental evidence over unimodal / prior-only baselines</strong>, <strong>availability / complete-case slice</strong>, <strong>missing-modality policy</strong>, <strong>cross-centre / cross-scanner transfer window</strong>, and <strong>external calibration plus abstention boundary</strong>. If those fields are missing, the result stays at the ceiling of the strongest individually supported stack rather than becoming same-subject cross-stack state identification. If the bundle also mixes living-human proxy classes, this site adds the <a href="../verification.html#human-proxy-composition-card">Human Proxy Composition Card</a> instead of treating the Fusion Card as sufficient.
+For multimodal or atlas-prior routes, this page now follows the same disclosure bundle used in <a href="../verification.html#fusion-card">Verification: Fusion Card</a>: <strong>acquisition relation</strong>, <strong>clock / lag audit</strong>, <strong>geometry / co-registration scope</strong>, <strong>fusion object and model burden</strong>, <strong>shared-vs-specific component disclosure</strong>, <strong>quantity bridge / physiology grounding</strong>, <strong>incremental evidence over unimodal / prior-only baselines</strong>, <strong>availability / complete-case slice</strong>, <strong>missing-modality policy</strong>, <strong>cross-centre / cross-scanner transfer window</strong>, and <strong>external calibration plus abstention boundary</strong>. If those fields are missing, the result stays at the ceiling of the strongest individually supported stack rather than becoming same-subject cross-stack state identification. If the bundle also mixes living-human proxy classes, this site adds the <a href="../verification.html#human-proxy-composition-card">Human Proxy Composition Card</a> instead of treating the Fusion Card as sufficient.
 </p>
 </div>
 
@@ -223,7 +238,7 @@ On this site, <strong>synchronized streams</strong>, <strong>a shared cross-moda
 <tr>
 <td><strong>Simultaneous EEG + PET + MRI</strong></td>
 <td><a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed temporally coupled global hemodynamic and metabolic progression across wakefulness and NREM sleep while resolving distinct network patterns inside the same tri-modal session.</td>
-<td>The route still depends on PET quantification model, hemodynamic / metabolic interpretation, co-registration, physiology-side interpretation of low-frequency shared factors, a disclosed fusion baseline, and, when reused as a predictive bundle, explicit disclosure of modality availability / complete-case slices and transfer across centres or protocol shifts; it does not by itself identify one externally validated latent brain state or solve hidden-state completeness.</td>
+<td>The route still depends on PET quantification model, hemodynamic / metabolic interpretation, an explicit quantity bridge / physiology-grounding rule, co-registration, physiology-side interpretation of low-frequency shared factors, a disclosed fusion baseline, and, when reused as a predictive bundle, explicit disclosure of modality availability / complete-case slices and transfer across centres or protocol shifts; it does not by itself identify one externally validated latent brain state or solve hidden-state completeness.</td>
 </tr>
 <tr>
 <td><strong>EEG + invasive recording (ECoG/SEEG/DBS)</strong></td>
@@ -268,7 +283,7 @@ If the hemodynamic side is fNIRS rather than fMRI, the same caution remains. <a 
 The newest route that needed to be fixed here is tri-modal EEG-PET-MRI. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed that simultaneous EEG-PET-MRI can reveal tightly coupled global hemodynamic and metabolic progression together with distinct network structure across wakefulness and NREM sleep. That is a real advance because one protocol can now compare electrophysiological arousal, hemodynamic fluctuations, and metabolic decline under the same experimental window. But the safe reading still stops well short of fused ground truth: PET quantification remains model-bearing, the hemodynamic side still carries vascular interpretation, and the fusion step itself still needs a disclosed baseline over each unimodal route. On this site, tri-modal results therefore still require a <a href="../verification.html#fusion-card">Fusion Card</a> rather than being treated as automatic cross-stack state identification.
 </p>
 <p>
-The deeper correction added in this pass is that even a <strong>shared</strong> tri-modal factor is not automatically the target neural variable. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> showed that low-frequency global fMRI fluctuations covary with EEG and multiple autonomic signals as part of a distributed arousal response, and <a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">Özbay et al. (2019)</a> showed that sympathetic activity can contribute to fMRI signal changes during EEG-marked arousal events. Therefore, when a multimodal paper reports a coupled global trajectory, this site now asks whether the claimed factor is <strong>shared neural candidate</strong>, <strong>mixed arousal physiology</strong>, or only a <strong>common low-frequency mode with unresolved specificity</strong>.
+The deeper correction added in this pass is that even a <strong>shared</strong> tri-modal factor is not automatically the target neural variable, and not yet a quantity bridge. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> showed that low-frequency global fMRI fluctuations covary with EEG and multiple autonomic signals as part of a distributed arousal response, <a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">Özbay et al. (2019)</a> showed that sympathetic activity can contribute to fMRI signal changes during EEG-marked arousal events, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that significant task BOLD changes can oppose oxygen-metabolism changes across many cortical voxels. Therefore, when a multimodal paper reports a coupled global trajectory, this site now asks whether the claimed factor is <strong>shared neural candidate</strong>, <strong>mixed arousal physiology</strong>, or only a <strong>common low-frequency mode with unresolved specificity</strong>, and whether the paper has actually exposed a named <strong>quantity bridge / physiology-grounding rule</strong> rather than only a correlation.
 </p>
 
 <h3>5. More modalities can help without making the bundle stable by default</h3>
