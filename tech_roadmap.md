@@ -666,7 +666,7 @@ Therefore, in this roadmap, we first fix ``which loop class is handled and which
 <p><strong>Primary literature strongly supports:</strong> Human EEG / MEG / fMRI obtained non-invasively are basically <strong>macro proxies</strong>. EEG / MEG capture globally synchronized current fields, while fMRI captures hemodynamics, so they do not directly observe the state of each neuron or synapse. Conversely, Dorkenwald et al. (2024) and MICrONS Consortium et al. (2025) strengthen the link between high-density connectomics and same-brain function in model organisms and local cortex, but they do not justify claims of “state-complete measurement of the whole human brain.” </p>
 <ul>
 <li><strong>Upper limit of non-invasive human measurement: </strong>Tracking of region-to-network level state transitions, relatively global timing constraints, and condition differences. </li>
-<li><strong>Upper bound on the connectomics front:</strong>This is an audit of structural scaffolds, local functional twins, and cell-type dependent connections, not a complete observation of current synaptic efficiency and neuromodulation fields. </li>
+<li><strong>Upper bound on the connectomics front:</strong>This is an audit of structural scaffolds, sequential same-brain local scaffolds, stimulus-conditioned conditional predictors, and cell-type dependent connections, not a complete observation of current synaptic efficiency and neuromodulation fields. </li>
 <li><strong>Remaining latent states:</strong>Synaptic weight, receptor state, delay / timing-state, intrinsic excitability / homeostatic set point, neuromodulatory field, glial / metabolic state, and plastic history remain as separate variables. </li>
 </ul>
 <div class="note-box">
