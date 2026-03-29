@@ -120,7 +120,7 @@ The minimal loop procedure from the old <code>hands_on.md</code> has been integr
 <div class="note-box">
 <strong>If you want the RQ-by-RQ route from datasets back to mind-upload questions</strong>
 <p>
-This page is the practical data portal, not the full research-question map. If you want to move from a dataset bucket here to a specific mind-upload research question, a fixed EEG-ready claim, and a grant-ready theme, use the <a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG feasibility page</a>, the <a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ-by-RQ deep dossiers</a>, the <a href="wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html">grant and dataset playbook</a>, and the <a href="https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md">current funding shortlist</a>.
+This page is the practical data portal, not the full research-question map. If you want to move from a dataset bucket here to a specific mind-upload research question, a fixed EEG-ready claim, and a grant-ready theme, start with the <a href="wiki/mind-upload-current-public-six-rq-brief.html">current public six-RQ brief</a>, then use the <a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG feasibility page</a>, the <a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ-by-RQ deep dossiers</a>, the <a href="wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html">grant and dataset playbook</a>, and the <a href="https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md">current funding shortlist</a>.
 </p>
 </div>
 
@@ -160,7 +160,7 @@ The starter dataset is not intended to solve all WBE problems at once. The first
 <div class="note-box">
 <strong>Keep the public dataset route conservative</strong>
 <p>
-This public page stays at the entry level. When one unresolved question is actively being turned into an EEG-ready work package, stronger routing details such as fixed <code>Dxx + DOI</code> anchors, first-pass KPIs, and stopping rules are kept in the wiki rather than promoted here as a public conclusion. Use the <a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG feasibility page</a> and the <a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ-by-RQ deep dossiers</a> when you need the current one-question-at-a-time packages.
+This public page stays at the entry level. When one unresolved question is actively being turned into an EEG-ready work package, stronger routing details such as fixed <code>Dxx + DOI</code> anchors, first-pass KPIs, and stopping rules are kept in the wiki rather than promoted here as a public conclusion. Use the <a href="wiki/mind-upload-current-public-six-rq-brief.html">current public six-RQ brief</a>, the <a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG feasibility page</a>, and the <a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ-by-RQ deep dossiers</a> when you need the current one-question-at-a-time packages.
 </p>
 </div>
 

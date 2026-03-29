@@ -5,7 +5,7 @@ description: "A wiki for learning Mind-Upload from the very beginning. It prepar
 article_type: Wiki
 subtitle: "Public pages are the gateway, and the wiki is the foundation for learning."
 author: Mind Uploading Research Project
-last_updated: "2026-03-26"
+last_updated: "2026-03-30"
 note: "Learning-first"
 audience: "People who want to learn from the basics, and people who want a foothold before entering the public pages."
 reading_time: "10-20 minutes"
@@ -255,6 +255,11 @@ The learning portal now treats living-human evidence more strictly at the entran
 <td><strong>I don't know what the U number refers to</strong></td>
 <td><a href="u-number-guide.html">U number guide</a></td>
 <td><a href="../research_harvest_50.html">Bibliography map</a></td>
+</tr>
+<tr>
+<td><strong>I want the shortest public-safe entry into the six RQs currently being deepened</strong></td>
+<td><a href="mind-upload-current-public-six-rq-brief.html">Mind-upload Current Public Six: EEG Route Brief</a></td>
+<td><a href="../issue.html">Contribution Guide</a> / <a href="../datasets.html">Data & Bench</a> / <a href="../research_harvest_50.html">Bibliography Map</a></td>
 </tr>
 <tr>
 <td><strong>I want to see at once whether each RQ can be solved with EEG and the funding theme</strong></td>
