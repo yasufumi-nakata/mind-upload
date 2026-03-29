@@ -5,7 +5,7 @@ description: We will organize from primary literature what EEG/MEG/fMRI, whole-b
   spatial atlas, Patch-seq, volume EM, diffusion-MRI tractography / structural connectome,
   same-brain functional connectomics, synaptic-density PET, mixed arousal proxies,
   transmitter sensors, receptor atlas / PET, glia imaging, and human 1H-MRSI biochemical-similarity
-  / 31P energetic-balance / 31P NAD-content mapping / 31P functional NAD-dynamics / deuterium metabolite-mapping / deuterium kinetic-rate / ionic / thermal / myelin
+  / 31P metabolite-pH-balance / 31P MT exchange-flux / 31P NAD-content mapping / 31P functional NAD-dynamics / deuterium metabolite-mapping-absolute-quantification / deuterium kinetic-rate / ionic / thermal / myelin
   / clearance routes directly observe and where they hit the claimed upper limits.
 article_type: Wiki
 subtitle: multimodal is not a synonym for ``seen everything''
@@ -21,7 +21,7 @@ page_intro: This page is a wiki that fixes the ``upper claim limit for each meas
   of EEG/MEG/fMRI, spatial transcriptomics, Patch-seq, volume EM, diffusion-MRI tractography
   / structural connectome, same-brain functional connectomics, synaptic-density PET,
   mixed arousal proxy, local transmitter sensor, receptor atlas / PET, glia imaging,
-  and human 1H-MRSI biochemical-similarity / 31P energetic-balance / 31P NAD-content mapping / 31P functional NAD-dynamics / deuterium metabolite-mapping / deuterium kinetic-rate
+  and human 1H-MRSI biochemical-similarity / 31P metabolite-pH-balance / 31P MT exchange-flux / 31P NAD-content mapping / 31P functional NAD-dynamics / deuterium metabolite-mapping-absolute-quantification / deuterium kinetic-rate
   / ionic / thermal / myelin / clearance routes directly observes and what remains
   latent.
 accuracy_note: The ``claim ceiling'' column below is not the conclusion declared by
@@ -54,8 +54,8 @@ page_highlights:
   atlas construction, disease contrast, task / cognition association, and intervention
   design now stay separated.
 - Human evidence is also separated into proxy classes, so local ultrastructure, synaptic-density
-  PET, 1H-MRSI biochemical similarity, 31P energetic balance, deuterium metabolite-mapping
-  / absolute-quantification routes, deuterium kinetic-rate imaging, ionic / thermal / myelin / clearance routes are not compressed
+  PET, 1H-MRSI biochemical similarity, 31P metabolite / pH balance, 31P MT exchange-flux,
+  deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, ionic / thermal / myelin / clearance routes are not compressed
   into one near-direct readout.
 - "Human maintenance-state routes are now read on three axes: proxy class, operational maturity, and calibrator role."
 - Same-subject or same-brain wording is not treated as same-state when the bridge
@@ -74,7 +74,7 @@ known_points:
   graph construction, and uncertainty handling.
 - Local transmitter / glia imaging is effective for calibrating coarse proxies, but
   it does not directly provide whole-brain ground truth.
-- Human 1H-MRSI biochemical similarity, 31P energetic balance, deuterium metabolite-mapping
+- Human 1H-MRSI biochemical similarity, 31P metabolite / pH balance, 31P MT exchange-flux, deuterium metabolite-mapping
   / absolute-quantification routes, deuterium kinetic-rate imaging, ionic, thermal, myelin, and clearance routes reduce different latent-state
   error terms and should not be summarized as one direct path to maintenance-state
   completeness.
@@ -486,12 +486,20 @@ Another weakness that remained on this page was that it separated generic measur
 <td><strong>Macro 1H-MRSI biochemical scaffold</strong>. It is not a local maintenance-state snapshot.</td>
 </tr>
 <tr>
-<td><strong>Human 31P-MRS energetic-balance route</strong><br>Ren et al. (2015)</td>
-<td><strong>Macro 31P energetic-balance proxy</strong></td>
+<td><strong>Human 31P-MRS metabolite / pH balance route</strong><br>Ren et al. (2015)</td>
+<td><strong>Macro 31P metabolite / pH balance proxy</strong></td>
 <td>Healthy resting cohort of 12 with ATP-synthesis, phosphorus-metabolite, pH, and relaxation estimates, but not a spatially fine compartment-control readout.</td>
-<td>Bounded phosphorus-energetic balance proxy.</td>
+<td>Bounded phosphorus metabolite / pH balance proxy.</td>
 <td>Which dendritic branch lacks ATP reserve, where mitochondria are parked, which compartment is energetically fragile right now, and which fission / fusion state is active.</td>
-<td><strong>Macro 31P energetic-balance proxy</strong>. It does not become branch-local mitochondrial ground truth.</td>
+<td><strong>Macro 31P metabolite / pH balance proxy</strong>. It does not become branch-local mitochondrial ground truth.</td>
+</tr>
+<tr>
+<td><strong>Human 31P MT exchange-flux route</strong><br>Ren et al. (2017)</td>
+<td><strong>Model-conditioned macro 31P MT exchange-flux proxy</strong></td>
+<td>Specialized 7 T route with a five-pool magnetization-transfer model rather than a route-free energetic snapshot.</td>
+<td>Bounded model-conditioned exchange-flux proxy.</td>
+<td>Route-independent metabolite / pH balance, whole-brain NAD content, task-evoked local NAD dynamics, branch-local mitochondrial residence, and direct controller identity.</td>
+<td><strong>Model-conditioned macro 31P MT exchange-flux proxy</strong>. It does not become route-free energetic ground truth or branch-local mitochondrial ground truth.</td>
 </tr>
 <tr>
 <td><strong>Human 31P NAD-content mapping route</strong><br>Guo et al. (2024)</td>

@@ -147,11 +147,11 @@ One remaining shortcut is to treat any reproducibility statement as if it solved
 <td><strong>Macro biochemical similarity scaffold</strong>, not tractography, flux imaging, or controller-level state readout.</td>
 </tr>
 <tr>
-<td><strong>Human <sup>31</sup>P-MRS energetic-balance route</strong><br><a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a></td>
+<td><strong>Human <sup>31</sup>P-MRS metabolite / pH balance route</strong><br><a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a></td>
 <td>ATP synthesis, phosphorus metabolite concentrations, and intra-/extracellular pH balance from <sup>31</sup>P spectra.</td>
 <td>Resting-brain spectroscopy in 12 healthy participants; scan-window biochemical balance rather than dynamic local kinetics.</td>
 <td><sup>31</sup>P hardware, spectral quantification, and exchange-model assumptions such as EBIT versus saturation-transfer framing.</td>
-<td><strong>Macro energetic-balance proxy</strong>, not branch-local mitochondrial positioning or synapse-specific ATP reserve.</td>
+<td><strong>Macro metabolite / pH balance proxy</strong>, not branch-local mitochondrial positioning or synapse-specific ATP reserve.</td>
 </tr>
 <tr>
 <td><strong>Deuterium metabolite-mapping / absolute-quantification route</strong><br><a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a></td>
@@ -223,9 +223,9 @@ One remaining shortcut is to treat any reproducibility statement as if it solved
 </thead>
 <tbody>
 <tr>
-<td><strong>Quantity / target / transport collapse</strong><br><code>density + similarity + energetic balance + rate + water exchange + transport + target-defined binding + mobility + efflux = same state variable</code></td>
-<td>Johansen measures regional SV2A density proxy, Lucchetti measures parcel-level similarity, Ren measures energetic balance, Li and Karkouri measure deuterated metabolite / rate routes, Morgan and Padrela measure BBB water exchange, Chung measures tracer-specific BBB transport, Villemagne and Tyacke measure target-defined astrocyte PET, Hirschler measures CSF mobility, and Dagum models overnight biomarker efflux. Those are different inferential objects.</td>
-<td>Name the exact object: <strong>density</strong>, <strong>similarity</strong>, <strong>energetic balance</strong>, <strong>absolute metabolite map</strong>, <strong>kinetic rate</strong>, <strong>water exchange</strong>, <strong>tracer-specific transport</strong>, <strong>target-defined binding</strong>, <strong>mobility</strong>, or <strong>model-based efflux</strong>.</td>
+<td><strong>Quantity / target / transport collapse</strong><br><code>density + similarity + metabolite / pH balance + exchange flux + NAD map / dynamics + absolute metabolite map + kinetic rate + water exchange + transport + target-defined binding + mobility + efflux = same state variable</code></td>
+<td>Johansen measures regional SV2A density proxy, Lucchetti measures parcel-level similarity, Ren (2015) measures metabolite / pH balance, Ren (2017) measures exchange flux, Guo and Kaiser measure NAD content or localized dynamics, Li and Karkouri measure deuterated metabolite-mapping versus kinetic-rate routes, Morgan and Padrela measure BBB water exchange, Chung measures tracer-specific BBB transport, Villemagne and Tyacke measure target-defined astrocyte PET, Hirschler measures CSF mobility, and Dagum models overnight biomarker efflux. Those are different inferential objects.</td>
+<td>Name the exact object: <strong>density</strong>, <strong>similarity</strong>, <strong>metabolite / pH balance</strong>, <strong>exchange flux</strong>, <strong>NAD content or dynamics</strong>, <strong>absolute metabolite map</strong>, <strong>kinetic rate</strong>, <strong>water exchange</strong>, <strong>tracer-specific transport</strong>, <strong>target-defined binding</strong>, <strong>mobility</strong>, or <strong>model-based efflux</strong>.</td>
 </tr>
 <tr>
 <td><strong>Spatial-unit collapse</strong><br><code>local fragment + regional atlas + parcel graph + macro voxel = same resolution ladder</code></td>
@@ -234,7 +234,7 @@ One remaining shortcut is to treat any reproducibility statement as if it solved
 </tr>
 <tr>
 <td><strong>Timescale collapse</strong><br><code>static scaffold + scan average + resting balance + minutes-long kinetics + overnight physiology = one current state</code></td>
-<td>Naganawa and Johansen operate over PET scan windows, Lucchetti is a static similarity scaffold, Ren is a resting energetic-balance route, Li resolves minutes-long deuterium dynamics, and Dagum is an overnight sleep manipulation. They do not all answer <strong>what is true right now</strong> at the same timescale.</td>
+<td>Naganawa and Johansen operate over PET scan windows, Lucchetti is a static similarity scaffold, Ren (2015) is a resting metabolite / pH balance route, Ren (2017) is a model-conditioned exchange-flux route, Li resolves minutes-long deuterium dynamics, and Dagum is an overnight sleep manipulation. They do not all answer <strong>what is true right now</strong> at the same timescale.</td>
 <td>Name the time window explicitly: <strong>structural snapshot</strong>, <strong>scan-window average</strong>, <strong>resting biochemical balance</strong>, <strong>minutes-long kinetics</strong>, or <strong>overnight state transition</strong>.</td>
 </tr>
 <tr>
@@ -530,7 +530,7 @@ If the claim depends on treating a sequential bridge as one latent-state sample,
 </tr>
 <tr>
 <td><strong>Proxy class of each row</strong></td>
-<td>Prevents structural scaffold, density proxy, similarity scaffold, energetic-balance route, kinetic-rate imaging, quantity-defined myelin family, BBB water-exchange route, tracer-specific BBB transport route, target-defined astrocyte PET, mobility proxy, and model-based efflux from being treated as the same kind of evidence.</td>
+<td>Prevents structural scaffold, density proxy, similarity scaffold, metabolite / pH balance route, exchange-flux route, NAD-content / dynamics routes, absolute-metabolite mapping, kinetic-rate imaging, quantity-defined myelin family, BBB water-exchange route, tracer-specific BBB transport route, target-defined astrocyte PET, mobility proxy, and model-based efflux from being treated as the same kind of evidence.</td>
 </tr>
 <tr>
 <td><strong>Direct observable of each stack</strong></td>

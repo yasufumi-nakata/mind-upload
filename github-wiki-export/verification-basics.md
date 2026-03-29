@@ -63,7 +63,7 @@ The remaining weakness was subtler. Even after telling readers that proxy bundle
 
 <strong>2026-03-27 correction: route-family names were still too coarse</strong>
 <p>
-This beginner page also had to become stricter inside the human-bundle example itself. On the current site, <strong>1H-MRSI similarity</strong>, <strong>31P energetic balance</strong>, and <strong>deuterium metabolite / rate imaging</strong> are different spectroscopy rows; <strong>myelin-water / MT-family / bilayer / qT1 remyelination-sensitive</strong> routes are not one myelin meter; <strong>BBB water-exchange MRI</strong> is not <strong>tracer-specific BBB PET transport</strong>; and <strong>MAO-B</strong> astrocyte PET is not <strong>I<sub>2</sub>BS</strong> astrocyte PET. If those splits are hidden, the bundle looks much closer to one state meter than the primary literature allows.
+This beginner page also had to become stricter inside the human-bundle example itself. On the current site, <strong>1H-MRSI similarity</strong>, <strong>31P metabolite / pH balance</strong>, <strong>31P MT exchange-flux</strong>, <strong>31P NAD-content mapping</strong>, <strong>localized functional 31P NAD-dynamics</strong>, <strong>deuterium metabolite-mapping / absolute-quantification</strong>, and <strong>deuterium kinetic-rate imaging</strong> are different spectroscopy rows; <strong>myelin-water / MT-family / bilayer / qT1 remyelination-sensitive</strong> routes are not one myelin meter; <strong>BBB water-exchange MRI</strong> is not <strong>tracer-specific BBB PET transport</strong>; and <strong>MAO-B</strong> astrocyte PET is not <strong>I<sub>2</sub>BS</strong> astrocyte PET. If those splits are hidden, the bundle looks much closer to one state meter than the primary literature allows.
 </p>
 
 <strong>2026-03-28 correction: tractography route cards are about object typing, not only caution</strong>
@@ -161,7 +161,7 @@ The remaining beginner weakness was that saying <strong>proxy bundles matter</st
 <tbody>
 <tr>
 <td><strong>Proxy class</strong></td>
-<td>What is directly observed: density proxy, biochemical similarity scaffold, energetic-balance route, deuterium metabolite / rate route, quantity-defined myelin route, BBB water-exchange route, tracer-specific BBB transport route, target-defined astrocyte PET, support-state / mobility proxy, model-based efflux route, or destructive local scaffold?</td>
+<td>What is directly observed: density proxy, biochemical similarity scaffold, 31P metabolite / pH balance route, 31P MT exchange-flux route, 31P NAD-content map, localized functional 31P NAD-dynamics route, deuterium metabolite-mapping / absolute-quantification route, deuterium kinetic-rate route, quantity-defined myelin route, BBB water-exchange route, tracer-specific BBB transport route, target-defined astrocyte PET, support-state / mobility proxy, model-based efflux route, or destructive local scaffold?</td>
 <td>Different quantity types are silently compressed into one progress bar.</td>
 </tr>
 <tr>
@@ -246,7 +246,7 @@ If the bundle is sequential rather than same-session, the <a href="https://mind-
 </tr>
 <tr>
 <td><strong>Living-human proxy bundle</strong></td>
-<td>SV2A PET, 1H-MRSI similarity, 31P energetic balance, deuterium metabolite / rate imaging, quantity-defined myelin MRI, BBB water-exchange MRI, tracer-specific BBB PET, target-defined astrocyte PET, and clearance routes measure different quantity / target / transport types, spatial units, timescales, model burdens, and safe calibrator roles; even a well-typed bundle still needs robustness, shared-driver / quantity-bridge, and increment disclosure.</td>
+<td>SV2A PET, 1H-MRSI similarity, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, localized functional 31P NAD-dynamics, deuterium metabolite-mapping / absolute-quantification, deuterium kinetic-rate imaging, quantity-defined myelin MRI, BBB water-exchange MRI, tracer-specific BBB PET, target-defined astrocyte PET, and clearance routes measure different quantity / target / transport types, spatial units, timescales, model burdens, and safe calibrator roles; even a well-typed bundle still needs robustness, shared-driver / quantity-bridge, and increment disclosure.</td>
 <td>Human Proxy Composition Card.</td>
 </tr>
 <tr>

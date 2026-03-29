@@ -297,8 +297,8 @@ The 2026-03-22 recheck tightened one more point at the front door: <strong>proxy
 </tr>
 <tr>
 <td><strong>Ren et al. (2015)</strong><br>31P-MRS</td>
-<td>An energetic-balance route for ATP synthesis, phosphorus metabolites, and intra-/extracellular pH in 12 resting human participants.</td>
-<td>Energetic balance is not parcel-similarity, not deuterium kinetic-rate imaging, and not branch-local mitochondrial-state ground truth.</td>
+<td>A metabolite / pH balance route for ATP synthesis, phosphorus metabolites, and intra-/extracellular pH in 12 resting human participants.</td>
+<td>Metabolite / pH balance is not parcel-similarity, not deuterium kinetic-rate imaging, and not branch-local mitochondrial-state ground truth.</td>
 </tr>
 <tr>
 <td><strong>Li et al. (2025)</strong><br>dynamic DMRSI</td>
