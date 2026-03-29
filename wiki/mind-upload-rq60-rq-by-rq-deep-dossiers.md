@@ -228,27 +228,27 @@ reading_time: "55-80分"
 
 ### U0-2 時間同期（ms単位）と状態表現（行動・神経活動・生理）の対応をどう固定するか。
 
-- 検証命題: ID 676を主に、ID 4878とID 11を補助として時刻同期ずれが状態特徴量と同一性AUCへ伝播する許容帯を固定する。
+- 検証命題: `D02 CSTE (10.21227/j162-nh61 / immediate)` を主に、`D11` と `D23` を補助として、時刻同期ずれが状態特徴量と同一性AUCへ伝播する許容帯を固定する。
 - EEG-DATA判定境界: A（直接検証可能）<br>EEG-DATA単独で主要仮説まで検証可能（外部依存なし）。
-- auto-research-funds応募テーマ: 博士課程研究助成（状態同期つき同一性監査）
-- 第一応募先 / 予備応募先: G2 (GR-2026-014) / G3 (9Lx4dPK6a4k2gOb7)
-- 主データ（ID）: `676`
-- 補助データ（推奨ID）: `ID 676, 4878, 11`
-- 実データ条件: 今回の主アンカーは `D02 CSTE` とし、`repeated sessions` `same-subject labels` `task variation` `timestamp/QC` `device metadata` を最低条件に固定いたします。
-- 初期KPI（U0標準）: `同期ずれ中央値` `状態特徴相関維持率` `セッション外AUC`
+- auto-research-funds応募テーマ: 博士進学を前提にした mind-upload 向け EEG 本人性ドリフト評価
+- 第一応募先 / 予備応募先: `中谷財団 大学院生奨学金` / `樫の芽会 奨学金（runway 補助のみ）`
+- 主データ: `D02 CSTE: A Dataset for Cross-Sessions and Cross-Tasks EEG Biometrics`
+- 補助データ（推奨）: `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling`, `D23 EEG, PPG, GSR signals for rehabilitation fatigue detection`
+- 実データ条件: `repeated sessions` `same-subject labels` `task variation` `timestamp/QC` `device metadata` を最低条件に固定いたします。
+- 初期KPI（U0標準）: `clock offset p95` `state-feature collapse rate` `resync recovery rate`
 - 停止条件: 同期補正後も `offset/jitter` の95パーセンタイルが `20 ms` を超え、`状態特徴相関維持率 < 0.90` に留まる場合は、同一性主張を「同期依存の部分成立」に降格する。
 - 最低成果物: Time synchronization audit report (offset/jitter distribution)
 
 
 ### U0-3 同一性判定の閾値をタスク別にどう設定し、過学習モデルをどう除外するか。
 
-- 検証命題: ID 11/696でタスク別に同一性閾値を推定し、過学習モデルはセッション外性能で除外する。
+- 検証命題: `D02 CSTE (10.21227/j162-nh61 / immediate)` を主に、`D11` と `D23` を補助として、タスク別に同一性閾値を推定し、過学習モデルはセッション外性能で除外する。
 - EEG-DATA判定境界: A（直接検証可能）<br>EEG-DATA単独で主要仮説まで検証可能（外部依存なし）。
-- auto-research-funds応募テーマ: 博士課程研究助成（個体同定）
-- 第一応募先 / 予備応募先: G2 (GR-2026-014) / G3 (9Lx4dPK6a4k2gOb7)
-- 主データ（ID）: `11`
-- 補助データ（推奨ID）: `ID 11, 29, 696`
-- 初期KPI（U0標準）: `セッション外AUC` `観測一致率` `介入応答一致率`
+- auto-research-funds応募テーマ: 博士進学を前提にした mind-upload 向け EEG 本人性ドリフト評価
+- 第一応募先 / 予備応募先: `中谷財団 大学院生奨学金` / `樫の芽会 奨学金（runway 補助のみ）`
+- 主データ: `D02 CSTE: A Dataset for Cross-Sessions and Cross-Tasks EEG Biometrics`
+- 補助データ（推奨）: `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling`, `D23 EEG, PPG, GSR signals for rehabilitation fatigue detection`
+- 初期KPI（U0標準）: `session-out AUC` `threshold stability` `overfit exclusion rate`
 - 停止条件: 主データ単独で再現しない場合は、前処理・分割・同期ログを固定して再試行し、それでも再現不能なら主張を下方修正する。
 - 最低成果物: Threshold search notebook and selection rationale table
 
@@ -830,14 +830,14 @@ reading_time: "55-80分"
 
 ### U13-2 LLMの幻覚・整合性検査を神経デコード評価へどう接続するか。
 
-- 検証命題: ID 509を主に、ID 13/65を補助として `hallucination label` と `neural inconsistency` を同時監査し、意味一致だけの合格を禁止する。
+- 検証命題: `D10 3M-CPSEED (10.18112/openneuro.ds006465.v2.0.0 / immediate)` を主に、`D03` と `D09` を補助として `hallucination label` と `neural inconsistency` を同時監査し、意味一致だけの合格を禁止する。
 - EEG-DATA判定境界: B（部分検証（外部データ併用で成立））<br>EEG主解析は可能だが、外部データまたは制度情報の併用が必須。
-- auto-research-funds応募テーマ: 若手研究助成（brain-to-text hallucination audit）
-- 第一応募先 / 予備応募先: G1 (GR-2026-013) / G4 (Drbm6vBRDJkn0NGJ)
-- 主データ（ID）: `509`
-- 補助データ（推奨ID）: `ID 509, 13, 65`
+- auto-research-funds応募テーマ: mind-upload 仮説の国際共同検証に向けた EEG brain-to-text 模倣分離ベンチ立ち上げ
+- 第一応募先 / 予備応募先: `くら基金 若手研究者奨励助成` / `中谷財団 大学院生奨学金`
+- 主データ: `D10 3M-CPSEED: An EEG-based Dataset for Chinese Pinyin Production in Overt, Silent-intended, and Imagined Speech`
+- 補助データ（推奨）: `D03 Multimodal Fusion EEG + Eye-Tracking`, `D09 VICODEV`
 - 実データ条件: 今回の主アンカーは `D10 3M-CPSEED` とし、`stimulus/audio/transcript alignment` `overt-vs-covert control` `leak-free split` `BIDS or equivalent provenance` を必須条件にいたします。
-- 初期KPI（U13標準）: `意味一致率` `内部状態差検出率` `幻覚率`
+- 初期KPI（U13標準）: `semantic alignment` `brain-minus-prior gap` `misalignment rate`
 - 停止条件: `内部状態差検出率 < 0.60` または `幻覚率` と `neural inconsistency` の相関区間が `0` を跨ぐ場合は、「意味一致のみ」の主張へ下方修正する。
 - 最低成果物: Mimic separation evaluation script and control condition table
 
@@ -870,13 +870,13 @@ reading_time: "55-80分"
 
 ### U13-5 視覚知覚と視覚想起で同一デコーダを使ったとき、意味復元精度の劣化パターンはどこで分岐するか。
 
-- 検証命題: ID 13（4-class code-VEP）を主データに、知覚条件で学習した同一デコーダを想起条件へ転送し、`意味一致率` の分岐点を時間窓別に特定する。
+- 検証命題: `D03 Multimodal Fusion EEG + Eye-Tracking (10.21227/6106-6120 / immediate)` を主に、`D10` と `D09` を補助として、知覚条件で学習した同一デコーダを想起条件へ転送し、分岐点を時間窓別に特定する。
 - EEG-DATA判定境界: B（部分検証（外部データ併用で成立））<br>デコーダ劣化の定量化は可能だが、想起内容の主観ラベル妥当性には外部行動/報告系が必要。
-- auto-research-funds応募テーマ: 博士課程研究助成（知覚/想起分岐）
-- 第一応募先 / 予備応募先: G1 (GR-2026-013) / G4 (Drbm6vBRDJkn0NGJ)
-- 主データ（ID）: `13`
-- 補助データ（推奨ID）: `ID 13, 65, 509`
-- 初期KPI（U13標準）: `意味一致率` `因果一致率` `リーク検出率`
+- auto-research-funds応募テーマ: mind-upload 仮説の国際共同検証に向けた EEG brain-to-text 模倣分離ベンチ立ち上げ
+- 第一応募先 / 予備応募先: `くら基金 若手研究者奨励助成` / `中谷財団 大学院生奨学金`
+- 主データ: `D03 Data of Multimodal Fusion System for Cognitive Load Assessment in Psychological Experiments: An EEG and Eye-Tracking Study`
+- 補助データ（推奨）: `D10 3M-CPSEED`, `D09 VICODEV`
+- 初期KPI（U13標準）: `perception-to-recall degradation point` `transfer gap` `control-condition stability`
 - 停止条件: 想起条件で `意味一致率` が知覚条件比で一貫してチャンス水準近傍となる場合、同一デコーダ主張を撤回し分離学習へ切り替える。
 - 最低成果物: Mimic separation evaluation script and control condition table
 
@@ -910,13 +910,13 @@ reading_time: "55-80分"
 
 ### U14-2 探索研究と検証研究を運用上どう分離するか。
 
-- 検証命題: ID 56で探索/検証の分離運用を行い、同一条件再実行の再現率を示す。
+- 検証命題: `D01 Acquisition delay of wireless EEG (10.21227/dv1p-vq18 / immediate)` を主に、`D08` と `D13` を補助として、探索/検証の分離運用を行い、同一条件再実行の再現率を示す。
 - EEG-DATA判定境界: A（直接検証可能）<br>EEG-DATA単独で主要仮説まで検証可能（外部依存なし）。
-- auto-research-funds応募テーマ: 研究奨励金（探索/検証分離）
-- 第一応募先 / 予備応募先: G1 (GR-2026-013) / G3 (9Lx4dPK6a4k2gOb7)
-- 主データ（ID）: `6`
-- 補助データ（推奨ID）: `ID 6, 56, 719`
-- 初期KPI（U14標準）: `追試成功率` `リーク検出率` `再実行コスト`
+- auto-research-funds応募テーマ: EEG 再現契約監査パックとしての exploration / confirmation split 固定
+- 第一応募先 / 予備応募先: `くら基金 若手研究者奨励助成` / `中谷財団 研究助成（next-cycle watch）`
+- 主データ: `D01 Acquisition delay of wireless EEG`
+- 補助データ（推奨）: `D08 Simultaneous human intracerebral stimulation and HD-EEG`, `D13 recalibration-free-p300-eeg`
+- 初期KPI（U14標準）: `fixed-split rate` `rerun success rate` `explore-to-confirm carryover gap`
 - 停止条件: 主データ単独で再現しない場合は、前処理・分割・同期ログを固定して再試行し、それでも再現不能なら主張を下方修正する。
 - 最低成果物: Supplementary test operation report (including negative cases)
 
@@ -936,13 +936,13 @@ reading_time: "55-80分"
 
 ### U14-4 Model Card / Dataset Card を評価契約へどう統合するか。
 
-- 検証命題: ID 719/56にModel Card・Dataset Card必須化を接続し監査項目化する。
+- 検証命題: `D01 Acquisition delay of wireless EEG (10.21227/dv1p-vq18 / immediate)` を主に、`D08` と `D13` を補助として、Model Card・Dataset Card 必須化を rerun contract へ接続し監査項目化する。
 - EEG-DATA判定境界: A（直接検証可能）<br>EEG-DATA単独で主要仮説まで検証可能（外部依存なし）。
-- auto-research-funds応募テーマ: 研究助成（カード統合）
-- 第一応募先 / 予備応募先: G1 (GR-2026-013) / G3 (9Lx4dPK6a4k2gOb7)
-- 主データ（ID）: `6`
-- 補助データ（推奨ID）: `ID 6, 56, 719`
-- 初期KPI（U14標準）: `追試成功率` `リーク検出率` `再実行コスト`
+- auto-research-funds応募テーマ: EEG 再現契約監査パックとしての card-integrated reproducibility contract
+- 第一応募先 / 予備応募先: `くら基金 若手研究者奨励助成` / `中谷財団 研究助成（next-cycle watch）`
+- 主データ: `D01 Acquisition delay of wireless EEG`
+- 補助データ（推奨）: `D08 Simultaneous human intracerebral stimulation and HD-EEG`, `D13 recalibration-free-p300-eeg`
+- 初期KPI（U14標準）: `required-card fill rate` `rerun success rate` `leak-audit coverage`
 - 停止条件: 主データ単独で再現しない場合は、前処理・分割・同期ログを固定して再試行し、それでも再現不能なら主張を下方修正する。
 - 最低成果物: Model/Dataset Card template and filled-in examples
 

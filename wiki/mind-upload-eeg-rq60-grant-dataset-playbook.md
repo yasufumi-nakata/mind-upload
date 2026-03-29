@@ -5,7 +5,7 @@ description: "An operation page with fixed application ID, main EEG data, select
 article_type: Wiki
 subtitle: "Fix submission decisions based on RQ, not general abstracts"
 author: Mind Uploading Research Project
-last_updated: "2026-03-29"
+last_updated: "2026-03-30"
 note: "Per-RQ Grant and Dataset Playbook"
 audience: "People who want to apply for funding and decide on the first experiment for each RQ at the same time"
 reading_time: "20-30 minutes"
@@ -41,7 +41,7 @@ recommended_pages:
 - `U7: G1/G3`, `U8: G2/G5`, `U10: G2/G6`, `U11: G2/G4`
 - `U12: G2/G6`, `U13: G1/G4`, `U14: G1/G3`, `U15: G2/G6`
 
-## Current funding reality (2026-03-29 10:09 JST)
+## Current funding reality (2026-03-30 01:08 JST)
 
 - `G1/G2` are routing keys used to keep the RQ-level application lanes stable. They are not current grant-card files.
 - Current grant-card entities are `G3-G6`, and the practical shortlist is now fixed in [AoyamaLab/auto-research-funds wiki: Mind-Upload-Current-Funding-Shortlist](https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md).
@@ -51,6 +51,7 @@ recommended_pages:
 - The practical funding bridge for this batch is led by `Nakatani Foundation graduate scholarship` and `Kura Fund`; the `Kashinome Scholarship` stays only as a student-runway side route, and the `Nakatani Foundation research grant` remains a watch-mode route rather than a current open call.
 - Relevant Todoist tasks for the practical shortlist already existed before this run, so no new task was created in this run.
 - For submission-ready references, prefer `Dxx + DOI + dataset name + access class` over numeric search IDs.
+- The six current public rows below are now synchronized to `Dxx + DOI + dataset name + access class`, so the playbook no longer needs numeric search IDs for `U13-2/U13-5/U14-4/U0-2/U0-3/U14-2`.
 - `tech_roadmap.md` also contains `U2/U5/U6/U9`, but those roadmap families are not yet translated into this playbook's current `RQ60` practical layer.
 
 ## Fixed table by RQ (60 items)
@@ -58,8 +59,8 @@ recommended_pages:
 | RQ | Judgment | First applicant | Preliminary applicant | Main EEG-DATA | Reason for selecting main data | Minimum deliverables |
 |---|---|---|---|---:|---|---|
 | U0-1 | A | G2 (GR-2026-014) | G3 (9Lx4dPK6a4k2gOb7) | 11 | It is easy to track identity changes across sessions in the same framework. | Intervention protocol and rebuttal condition definition |
-| U0-2 | A | G2 (GR-2026-014) | G3 (9Lx4dPK6a4k2gOb7) | 11 | It is easy to track identity changes across sessions in the same framework. | Time synchronization audit report (offset/jitter distribution) |
-| U0-3 | A | G2 (GR-2026-014) | G3 (9Lx4dPK6a4k2gOb7) | 11 | It is easy to track identity changes across sessions in the same framework. | Threshold search notebook and selection rationale table |
+| U0-2 | A | G2 (GR-2026-014) | G3 (9Lx4dPK6a4k2gOb7) | D02 CSTE (10.21227/j162-nh61 / immediate) | Repeated sessions, cross-task identity labels, and timestamp/QC metadata make it the cleanest current anchor for `clock offset + jitter + state-feature collapse` auditing. | Time synchronization audit report (offset/jitter distribution) |
+| U0-3 | A | G2 (GR-2026-014) | G3 (9Lx4dPK6a4k2gOb7) | D02 CSTE (10.21227/j162-nh61 / immediate) | Repeated sessions and cross-task splits let the threshold-stability and overfit-exclusion route stay on the same identity-drift anchor as `U0-2`. | Threshold search notebook and selection rationale table |
 | U0-4 | B | G2 (GR-2026-014) | G3 (9Lx4dPK6a4k2gOb7) | 11 | It is easy to track identity changes across sessions in the same framework. | Identity determination two-axis report (observation match/intervention match) |
 | U1-1 | A | G1 (GR-2026-013) | G4 (Drbm6vBRDJkn0NGJ) | 56 | Easy to measure errors and uncertainties of inverse problems under known intervention/high density conditions. | Inverse solution comparison table and uncertainty distribution chart |
 | U1-2 | A | G1 (GR-2026-013) | G4 (Drbm6vBRDJkn0NGJ) | 56 | Easy to measure errors and uncertainties of inverse problems under known intervention/high density conditions. | Inverse problem reproduction report (error/uncertainty) |
@@ -102,15 +103,15 @@ recommended_pages:
 | U12-5 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 11 | It is technically easy to maintain audit logs that support branch relinking and subject-ID reorganization decisions. | Branch-based audit log design document |
 | U12-6 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 11 | It is technically easy to maintain audit logs to be passed to system issues. | System audit requirements table (technical log compatible) |
 | U13-1 | B | G1 (GR-2026-013) | G4 (Drbm6vBRDJkn0NGJ) | 509 | It is easy to separate semantic restoration and mechanistic difference using control conditions. | Intervention protocol and rebuttal condition definition |
-| U13-2 | B | G1 (GR-2026-013) | G4 (Drbm6vBRDJkn0NGJ) | 509 | It is easy to separate semantic restoration and mechanistic difference using control conditions. | Mimic separation evaluation script and control condition table |
+| U13-2 | B | G1 (GR-2026-013) | G4 (Drbm6vBRDJkn0NGJ) | D10 3M-CPSEED (10.18112/openneuro.ds006465.v2.0.0 / immediate) | Overt/silent/imagined speech plus transcript-aligned phases make it the strongest current `brain-minus-prior` anchor for hallucination and neural-inconsistency auditing. | Mimic separation evaluation script and control condition table |
 | U13-3 | B | G1 (GR-2026-013) | G4 (Drbm6vBRDJkn0NGJ) | 509 | It is easy to separate semantic restoration and mechanistic difference using control conditions. | Imitation separation evaluation report (meaning/mechanism) |
 | U13-4 | B | G1 (GR-2026-013) | G4 (Drbm6vBRDJkn0NGJ) | 509 | Semantic restoration and mechanistic difference are easy to separate under control conditions. | Intervention protocol and rebuttal condition definition |
-| U13-5 | B | G1 (GR-2026-013) | G4 (Drbm6vBRDJkn0NGJ) | 13 | It is easy to separate semantic restoration and mechanistic difference under control conditions. | Mimic separation evaluation script and control condition table |
+| U13-5 | B | G1 (GR-2026-013) | G4 (Drbm6vBRDJkn0NGJ) | D03 Multimodal Fusion EEG + Eye-Tracking (10.21227/6106-6120 / immediate) | Shared EEG plus gaze streams keep the perception-to-recall branch analysis bounded and make decoder-transfer failure easier to interpret without overstating mechanism preservation. | Mimic separation evaluation script and control condition table |
 | U13-6 | B | G1 (GR-2026-013) | G4 (Drbm6vBRDJkn0NGJ) | 509 | It is easy to separate semantic restoration and mechanistic difference using control conditions. | Leak audit results and repartition trail |
 | U14-1 | A | G1 (GR-2026-013) | G3 (9Lx4dPK6a4k2gOb7) | 6 | It is easy to fix the operation of supplementary exam contracts, leak audits, and disclosure of negative cases. | Supplementary test operation report (including negative cases) |
-| U14-2 | A | G1 (GR-2026-013) | G3 (9Lx4dPK6a4k2gOb7) | 6 | It is easy to fix the operation of supplementary exam contracts, leak audits, and disclosure of negative cases. | Supplementary test operation report (including negative cases) |
+| U14-2 | A | G1 (GR-2026-013) | G3 (9Lx4dPK6a4k2gOb7) | D01 Acquisition delay of wireless EEG (10.21227/dv1p-vq18 / immediate) | A latency-first measurement package is sufficient to keep the exploration/confirmation split and rerun contract narrow, measurable, and public-safe. | Supplementary test operation report (including negative cases) |
 | U14-3 | A | G1 (GR-2026-013) | G3 (9Lx4dPK6a4k2gOb7) | 6 | It is easy to fix the operation of supplementary exam contracts, leak audits, and disclosure of negative cases. | Leak audit results and repartition trail |
-| U14-4 | A | G1 (GR-2026-013) | G3 (9Lx4dPK6a4k2gOb7) | 6 | It is easy to fix the operation of supplementary exam contracts, leak audits, and disclosure of negative cases. | Model/Dataset Card template and filled-in examples |
+| U14-4 | A | G1 (GR-2026-013) | G3 (9Lx4dPK6a4k2gOb7) | D01 Acquisition delay of wireless EEG (10.21227/dv1p-vq18 / immediate) | The same latency/measurement anchor is enough to wire Model Card and Dataset Card fields into the rerun contract without claiming field-wide standardization. | Model/Dataset Card template and filled-in examples |
 | U14-5 | B | G1 (GR-2026-013) | G3 (9Lx4dPK6a4k2gOb7) | 6 | It is easy to fix the operation of supplementary exam contracts, leak audits, and disclosure of negative cases. | Negative Example Registry First Edition (CSV+Operating Rules) |
 | U14-6 | A | G1 (GR-2026-013) | G3 (9Lx4dPK6a4k2gOb7) | 6 | It is easy to fix the operation of supplementary exam contracts, leak audits, and disclosure of negative cases. | Fixed container reproduction procedure manual and cost measurement |
 | U15-1 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 49 | Easy to connect to system audit indicators for safe shutdown and authority management. | System integrated audit report (suspension/renewal conditions) |
