@@ -5,7 +5,7 @@ description: "An auto-generated A4-style briefing page built from the site's pub
 article_type: "Briefing Booklet"
 subtitle: "An A4 briefing regenerated from public-page front matter and lead summaries"
 author: Mind Uploading Research Project
-last_updated: "2026-03-29"
+last_updated: "2026-03-30"
 note: "Auto-generated from public pages"
 body_class: "summary-booklet-page"
 ---
@@ -25,7 +25,7 @@ body_class: "summary-booklet-page"
   <div class="booklet-cover-band">
     <div>
   <span>Reference Date</span>
-  <strong>2026-03-29</strong>
+  <strong>2026-03-30</strong>
 </div>
 <div>
   <span>Current Focus</span>
@@ -322,7 +322,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Perspective - Audit the hypothesis of reproducing brain information processing on another substrate through the barriers of measurability, identifiability, and maintenance state / 30-45 min</p>
   <p>This page is a long-form research note aimed at turning mind uploading (WBE) into something that can be evaluated as real research. It is organized in three stages: <strong>how to measure</strong>, <strong>how to infer</strong>, and <strong>how to implement</strong>. It treats recent results, failures, and limits with the same weight so that the boundary between what can and cannot be claimed remains explicit.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>The connectome-dynamics gap is now written as 18 maintenance-state families plus a separate shared electrical-state class, rather than a loose warning that wiring alone is not enough.</li><li>Proxy-rich human evidence and deployment-ready measurement are different claims; sample size, model burden, hardware specialization, and fusion status remain separate ceilings.</li><li>The page now separates local connectomics, human structural scaffold evidence, synaptic-density PET, receptor / transporter atlas priors, occupancy PET target-engagement routes, challenge-linked displacement / release PET routes, biochemical similarity scaffolds, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, localized functional 31P NAD-dynamics, deuterium metabolite-mapping / absolute-quantification, deuterium kinetic-rate imaging, quantity-defined ionic / thermal / myelin routes, BBB water-exchange and tracer-specific transport routes, target-defined astrocyte PET, clearance support-state proxies, and hemodynamic transfer audits instead of collapsing them into one &#39;multimodal&#39; advance.</li>
+    <li>The connectome-dynamics gap is now written as 18 maintenance-state families plus a separate shared electrical-state class, rather than a loose warning that wiring alone is not enough.</li><li>Same-brain functional connectomics and digital-twin language are now split into sequential bridge, label-transfer, current-synaptic-state, and dynamical-identifiability ceilings rather than being read as one local twin.</li><li>Proxy-rich human evidence and deployment-ready measurement are different claims; sample size, model burden, hardware specialization, and fusion status remain separate ceilings.</li>
   </ul>
   <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -397,8 +397,8 @@ body_class: "summary-booklet-page"
 </tr>
 <tr>
   <td><a href="/content_hub.html">Public Content Integration Hub</a></td>
-  <td>Navigation - A single routing layer to prevent content sprawl</td>
-  <td>This page is the operations hub for fixing where public content should go so material does not scatter across the site. Before writing anything new, use this page to check the existing inte…</td>
+  <td>Navigation - A single routing layer to prevent content sprawl and literature-route compression</td>
+  <td>This page is the operations hub for fixing where public content should go so material does not scatter across the site. It now also gives a technical fast path so literature updates are not…</td>
 </tr>
 
     </tbody>
@@ -459,14 +459,14 @@ body_class: "summary-booklet-page"
 </article>
 <article class="booklet-card booklet-page-card">
   <h3><a href="/content_hub.html">Public Content Integration Hub</a></h3>
-  <p class="booklet-page-meta">Navigation - A single routing layer to prevent content sprawl / 5-10 min</p>
+  <p class="booklet-page-meta">Navigation - A single routing layer to prevent content sprawl and literature-route compression / 5-10 min</p>
   <p>This page is the hub for deciding the <strong>integration target</strong> and <strong>update destination</strong> of public content. Before adding new information, check the mapping tables here and prefer merging into an existing page.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>Each domain has a fixed main page and supporting pages.</li><li>Before creating a new page, the default is to check whether the material can be merged into an existing one.</li><li>Public navigation and operations references are visible in one place.</li>
+    <li>Technical readers are now told to split local causal maintenance-state papers, bounded living-human observability papers, and bridge-limited same-subject / same-brain papers before year order is allowed to shape judgment.</li><li>For technical and natural-science reading, chronology is not enough: route family, bridge burden, and observability ceiling have to be named before a literature update is merged.</li><li>Each domain has a fixed main page and supporting pages.</li>
   </ul>
   <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/index.html">Start</a></li><li><a href="/verification.html">Verification</a></li><li><a href="/issue.html">Contribution Guide</a></li>
+  <li><a href="/index.html">Start</a></li><li><a href="/mind_uploading_papers.html">Paper Collection</a></li><li><a href="/research_harvest_50.html">Research Harvest</a></li>
 </ul>
 
 </article>

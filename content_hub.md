@@ -1,24 +1,27 @@
 ---
 layout: default
 title: "Public Content Integration Hub"
-description: "An operations hub that centralizes the roles, integration targets, and update destinations of public pages."
+description: "An operations hub that centralizes the roles, integration targets, and update destinations of public pages, with an explicit fast path for technical literature."
 article_type: "Navigation"
-subtitle: "A single routing layer to prevent content sprawl"
+subtitle: "A single routing layer to prevent content sprawl and literature-route compression"
 author: Mind Uploading Research Project
-last_updated: "2026-03-14"
-note: "Single source of truth for public pages"
+last_updated: "2026-03-30"
+note: "Single source of truth for public pages and technical literature routing"
 audience: "Anyone checking where public content belongs and anyone who wants to avoid guessing where new material should be merged"
 reading_time: "5-10 min"
-page_intro: "This page is the operations hub for fixing where public content should go so material does not scatter across the site. Before writing anything new, use this page to check the existing integration target first."
+page_intro: "This page is the operations hub for fixing where public content should go so material does not scatter across the site. It now also gives a technical fast path so literature updates are not misrouted by year order alone."
 accuracy_note: "This is an operations hub, not a main content page for adding new claims. Its purpose is to decide where material should be integrated."
 page_highlights:
   - "Each domain has a fixed main page and supporting pages."
   - "Before creating a new page, the default is to check whether the material can be merged into an existing one."
   - "Public navigation and operations references are visible in one place."
+  - "The site now separates `mind_uploading_papers` from `research_harvest_50`: one is the paper-level frontier archive, the other is the unresolved-question evidence map."
+  - "Technical readers are now told to split local causal maintenance-state papers, bounded living-human observability papers, and bridge-limited same-subject / same-brain papers before year order is allowed to shape judgment."
 known_points:
   - "Public pages are meant to function as portals: key points, current status, known/unknown boundaries, and next routes."
   - "Detailed background explanations are usually better concentrated in the wiki so entry pages stay usable."
   - "New information should first be classified as belonging either on an existing public page or in the wiki."
+  - "For technical and natural-science reading, chronology is not enough: route family, bridge burden, and observability ceiling have to be named before a literature update is merged."
 unknown_points:
   - "Which topics will eventually deserve their own standalone pages is still judged case by case."
   - "Some boundaries between main content and wiki content are still rough and will continue to be cleaned up."
@@ -35,13 +38,22 @@ wiki_links:
   - label: "Wiki: EEG Basics"
     url: "/wiki/eeg-basics.html"
     description: "A basic page for understanding EEG without treating it as magic."
+  - label: "Wiki: Human Proxy Composition"
+    url: "/wiki/human-proxy-composition.html"
+    description: "Explains why living-human proxy rows stay split by direct observable, route burden, and calibrator role."
+  - label: "Wiki: State-Continuity Bridge"
+    url: "/wiki/state-continuity-bridge.html"
+    description: "Explains why same-subject or same-brain evidence still needs a bridge audit before same-state language is allowed."
+  - label: "Wiki: Literature And Evidence Reading"
+    url: "/wiki/literature-and-evidence-reading.html"
+    description: "Explains how to move between the paper archive, the unresolved-question map, and the core technical pages."
 recommended_pages:
   - label: "Start"
     url: "/index.html"
-  - label: "Verification"
-    url: "/verification.html"
-  - label: "Contribution Guide"
-    url: "/issue.html"
+  - label: "Paper Collection"
+    url: "/mind_uploading_papers.html"
+  - label: "Research Harvest"
+    url: "/research_harvest_50.html"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
 
@@ -59,6 +71,24 @@ This page is the hub for deciding the <strong>integration target</strong> and <s
 <strong>What Gets Decided Here</strong>
 <p>
 The goal here is not "what to write" but "where it should live." To prevent duplication and fragmented navigation, the public entry points and merge destinations are fixed here first.
+</p>
+</div>
+<div class="note-box">
+<strong>If You Want Only Technology / Natural Science First</strong>
+<p>
+Do not start from mixed year cards. For paper-level frontier anchors, start with <a href="mind_uploading_papers.html#technical-fast-lane">Paper Collection: the technical fast lane</a>. For the unresolved-question map and literature placement by U-number, move next to <a href="research_harvest_50.html">Research Harvest</a>. For the human in vivo side, keep <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> open in parallel so route family, route burden, and calibrator role stay separate.
+</p>
+</div>
+<div class="note-box">
+<strong>Why The Technical Split Is Now Operationally Required</strong>
+<p>
+Recent primary papers do not support one compressed <code>2025-2026 frontier</code>. <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2026)</a>, <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> sharpen <strong>local causal maintenance-state dependence</strong>, whereas <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> sharpen <strong>bounded living-human observability</strong>. Those papers differ in species, direct observable, and spatial unit. Therefore, this page now routes technical updates by <strong>inferential object first</strong>, not by year order first.
+</p>
+</div>
+<div class="note-box">
+<strong>If A Paper Says "Same-Subject" Or "Same-Brain"</strong>
+<p>
+Do not route it automatically to the human-observability lane. First check whether the result is mainly a <strong>bridge-limited carry-over claim</strong>. If preservation route, elapsed time, regime continuity, registration scope, or cross-day drift are central to the claim, route the public rule to <a href="verification.html#state-continuity-bridge-card">Verification: State-Continuity Bridge Card</a> and the learning support to <a href="wiki/state-continuity-bridge.html">Wiki: State-Continuity Bridge</a> before using the result as a human-state argument elsewhere.
 </p>
 </div>
 <div class="note-box">
@@ -154,6 +184,11 @@ If you want a single route showing whether something you read should flow back i
 <td>Because it already has problem-specific buckets and can accumulate material tied to existing question IDs.</td>
 </tr>
 <tr>
+<td>Paper-level frontier anchors, chronology policy, and route-family reading order</td>
+<td><a href="mind_uploading_papers.html">mind_uploading_papers.html</a></td>
+<td>Because it is the page that fixes how technical readers should enter the archive without letting mixed year order silently fuse distinct inferential ladders.</td>
+</tr>
+<tr>
 <td>Entry guidance for what to read first</td>
 <td><a href="index.html">index.html</a></td>
 <td>Because it keeps the first navigation path unified and prevents the same guidance from being duplicated across multiple pages.</td>
@@ -177,6 +212,46 @@ If you want a single route showing whether something you read should flow back i
 <td>Practical procedures, the minimum loop, and the order of hands-on work</td>
 <td><a href="datasets.html#l0-practice">datasets.html#l0-practice</a></td>
 <td>Because it is the page that turns reading into reproducible practical work.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="technical-fast-path">
+<h2 class="section-title">Technical / Natural-Science Fast Path</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>What You Need To Sort Out</th>
+<th>First Page</th>
+<th>Why That Page Comes First</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I need concrete anchor papers for the current technical frontier.</td>
+<td><a href="mind_uploading_papers.html#technical-fast-lane">mind_uploading_papers.html#technical-fast-lane</a></td>
+<td>That page fixes paper-level route families and the chronology policy before the mixed year archive begins.</td>
+</tr>
+<tr>
+<td>I need the unresolved-question map rather than paper cards.</td>
+<td><a href="research_harvest_50.html">research_harvest_50.html</a></td>
+<td>That page places literature under U-numbers so readers can see what remains unresolved instead of only what is recent.</td>
+</tr>
+<tr>
+<td>I need to know whether a paper moved human observability or only a bounded proxy class.</td>
+<td><a href="wbe_101.html#human-observability-ladder">wbe_101.html#human-observability-ladder</a></td>
+<td>That page is the front door for separating destructive structure, living-human proxy class, route maturity, and safe calibrator role.</td>
+</tr>
+<tr>
+<td>I need to know whether a same-subject or same-brain paper is still only a bridge.</td>
+<td><a href="verification.html#state-continuity-bridge-card">verification.html#state-continuity-bridge-card</a></td>
+<td>That card fixes preservation route, elapsed time, regime continuity, coordinate transfer, and bridge validation before same-state language is allowed.</td>
+</tr>
+<tr>
+<td>I need to place a new result that mixes several living-human proxy rows.</td>
+<td><a href="verification.html#human-proxy-composition-card">verification.html#human-proxy-composition-card</a></td>
+<td>That card is where same-subject relation, model burden, incremental gain, and residual hidden-state ceiling are exposed explicitly.</td>
 </tr>
 </tbody>
 </table>
@@ -261,7 +336,10 @@ Before creating a new page, check whether the content can naturally fit as a sec
 <tr><td>Verification commons</td><td><a href="verification.html">verification.html</a></td><td>Success conditions, falsification conditions, audit contracts, reproducibility criteria</td><td><a href="datasets.html#l0-practice">datasets.html#l0-practice</a></td></tr>
 <tr><td>Technical roadmap</td><td><a href="tech_roadmap.html">tech_roadmap.html</a></td><td>Problem decomposition, arrival conditions, implementation order</td><td><a href="issue.html#proposal-integration">issue.html#proposal-integration</a></td></tr>
 <tr><td>Research questions</td><td><a href="perspective.html">perspective.html</a></td><td>Theory organization, criticisms, literature evidence</td><td><a href="perspective.html#design-principles">perspective.html#design-principles</a></td></tr>
-<tr><td>Open problems x literature</td><td><a href="research_harvest_50.html">research_harvest_50.html</a></td><td>U-specific research questions, literature audits, duplicate cleanup</td><td><a href="datasets.html">datasets.html</a></td></tr>
+<tr><td>Open problems x literature</td><td><a href="research_harvest_50.html">research_harvest_50.html</a></td><td>U-specific research questions, literature audits, duplicate cleanup, and unresolved-question placement</td><td><a href="datasets.html">datasets.html</a></td></tr>
+<tr><td>Paper archive x technical fast lane</td><td><a href="mind_uploading_papers.html">mind_uploading_papers.html</a></td><td>Paper-level anchors, chronology policy, route-family splits, and technical entry before mixed year cards</td><td><a href="research_harvest_50.html">research_harvest_50.html</a></td></tr>
+<tr><td>Bridge-limited same-subject / same-brain evidence</td><td><a href="verification.html#state-continuity-bridge-card">verification.html#state-continuity-bridge-card</a></td><td>Bridge burden, coordinate transfer, regime continuity, and residual drift ceiling</td><td><a href="wiki/state-continuity-bridge.html">wiki/state-continuity-bridge.html</a></td></tr>
+<tr><td>Human proxy composition and living-human route ceilings</td><td><a href="verification.html#human-proxy-composition-card">verification.html#human-proxy-composition-card</a></td><td>Same-subject relation, model burden, incremental gain, and residual hidden-state ceiling across proxy rows</td><td><a href="wiki/human-proxy-composition.html">wiki/human-proxy-composition.html</a></td></tr>
 <tr><td>Participation routing</td><td><a href="issue.html">issue.html</a></td><td>Issue workflow, response status, separation of external dependency tasks</td><td><a href="issue.html#external-collaboration">issue.html#external-collaboration</a></td></tr>
 <tr><td>Primer routing</td><td><a href="index.html">index.html</a></td><td>Reading order, entry points to major pages</td><td><a href="wbe_101.html">wbe_101.html</a> / <a href="eeg_101.html">eeg_101.html</a></td></tr>
 <tr><td>Foundational learning</td><td><a href="wiki/">wiki/</a></td><td>Beginner explanations, background knowledge, reading support materials</td><td><a href="glossary.html">glossary.html</a> / <a href="faq.html">faq.html</a></td></tr>
@@ -275,6 +353,7 @@ Before creating a new page, check whether the content can naturally fit as a sec
 <li>Temporary drafts and intermediate results should be kept in operations directories such as `automation/`, not wired directly into public pages.</li>
 <li>Public navigation should stay concentrated in `index.html` and this page, rather than adding duplicate routes everywhere.</li>
 <li>When issue work adds content, always name the destination page and the evidence link.</li>
+<li>Do not let year adjacency fuse <strong>local causal maintenance-state papers</strong>, <strong>bounded living-human observability papers</strong>, and <strong>bridge-limited same-subject / same-brain papers</strong> into one frontier lane.</li>
 </ol>
 </section>
 
@@ -296,6 +375,7 @@ Before creating a new page, check whether the content can naturally fit as a sec
 <ul>
 <li><a href="research_harvest_50.html">research_harvest_50.html</a></li>
 <li><a href="mind_uploading_papers.html">mind_uploading_papers.html</a></li>
+<li><a href="summary_booklet.html">summary_booklet.html</a></li>
 <li><a href="datasets.html">datasets.html</a></li>
 <li><a href="glossary.html">glossary.html</a></li>
 <li><a href="faq.html">faq.html</a></li>
@@ -361,6 +441,8 @@ Before creating a new page, check whether the content can naturally fit as a sec
 <li><a href="wiki/counterfactual-and-perturbation-verification.html">wiki/counterfactual-and-perturbation-verification.html</a></li>
 <li><a href="wiki/uncertainty-confidence-and-abstention.html">wiki/uncertainty-confidence-and-abstention.html</a></li>
 <li><a href="wiki/multimodal-integration-basics.html">wiki/multimodal-integration-basics.html</a></li>
+<li><a href="wiki/human-proxy-composition.html">wiki/human-proxy-composition.html</a></li>
+<li><a href="wiki/state-continuity-bridge.html">wiki/state-continuity-bridge.html</a></li>
 <li><a href="wiki/identity-and-continuity-tests.html">wiki/identity-and-continuity-tests.html</a></li>
 <li><a href="wiki/baselines-prereg-and-model-cards.html">wiki/baselines-prereg-and-model-cards.html</a></li>
 <li><a href="wiki/state-trait-and-drift.html">wiki/state-trait-and-drift.html</a></li>
