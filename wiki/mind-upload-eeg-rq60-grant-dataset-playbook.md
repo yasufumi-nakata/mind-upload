@@ -47,7 +47,7 @@ recommended_pages:
 - Current grant-card entities are `G3-G6`, and the practical shortlist is now fixed in [AoyamaLab/auto-research-funds wiki: Mind-Upload-Current-Funding-Shortlist](https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md).
 - The six currently revalidated deep-focus RQs are `U13-2`, `U13-5`, `U14-4`, `U0-2`, `U0-3`, and `U14-2`.
 - The public route is now intentionally concentrated on `inner-speech decoding + identity drift + reproducibility auditing`, with `D10/D03/D01/D02` used as the conservative anchor family.
-- The practical funding bridge for this batch is led by `Nakatani Foundation graduate scholarship`, `Kura Fund`, `Kashinome Scholarship`, and `Nakatani Foundation research grant`.
+- The practical funding bridge for this batch is led by `Nakatani Foundation graduate scholarship` and `Kura Fund`; the `Kashinome Scholarship` stays only as a student-runway side route, and the `Nakatani Foundation research grant` remains a watch-mode route rather than a current open call.
 - Relevant Todoist tasks for the practical shortlist already existed before this run, so no new task was created in this run.
 - For submission-ready references, prefer `Dxx + DOI + dataset name + access class` over numeric search IDs.
 
