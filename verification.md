@@ -5,7 +5,7 @@ description: "A blueprint of standards, benchmarks, registries, and audits for t
 article_type: Platform
 subtitle: "Use the logic of PDB x BIDS x PhysioNet x OSF to define WBE success conditions and reproducible progress"
 author: Mind Uploading Research Project
-last_updated: "2026-03-29"
+last_updated: "2026-03-30"
 note: "Operational Specification"
 audience: "Readers who want the site's core policy and anyone checking what must exist before progress can honestly be claimed"
 reading_time: "15-25 min"
@@ -66,7 +66,7 @@ page_highlights:
   - "At L2 and above, delay is treated as timing-state rather than one scalar, so device latency, biological conduction timing, and human macro timing proxies are not collapsed into one number."
   - "At L2 and above for intervention / closed-loop results, the Intervention Card fixes trigger rule, timing audit, control / sham, safe stop, and recalibration burden."
   - "For online human-in-the-loop results, a Co-Adaptation Log separates user learning, decoder updates, and application / autonomy changes before same-session gains are read as fixed-decoder stability."
-  - "At L3 and above for embodied-loop results, the Body / Environment Boundary Card fixes which sensory, motor, and interoceptive channels were preserved, substituted, or omitted."
+  - "At L3 and above for embodied-loop results, the Body / Environment Boundary Card fixes which sensory, motor, and interoceptive channels were preserved, substituted, or omitted, and now also asks which slow internal-milieu routes such as circadian phase, glucocorticoid state, and insulin / metabolic regime were matched or left latent."
   - "For cross-day or longitudinal claims, the Temporal Validity Card audits fixed decoder interval, state annotation, recalibration burden, and transfer ceiling independently."
   - "For cross-day or remote-memory claims, the maintenance-state error budget reports controller state, sleep history, sleep architecture / replay-coupling state, neurovascular support, and support-state proxies separately, so temporal success is not auto-promoted to a maintenance-consistent claim."
   - "For chronic invasive claims, signal-chain drift and implant tissue response are audited separately rather than being folded into unit-identity audit alone."
@@ -105,7 +105,7 @@ known_points:
   - "A glial proxy or generic metabolic note does not by itself fix astrocyte network / ensemble state, so recall, reconsolidation, and multiday-stabilization claims need a separate astrocyte-state ceiling."
   - "A CSF-mobility or glymphatic result without cell-specific immune / synaptic-maintenance disclosure remains a macro support-state proxy rather than local clearance-controller evidence."
   - "Passing a hardware latency audit is not the same as recovering biological timing-state; claims that depend on phase or synchrony need both sides separated."
-  - "Passing a latency audit is not the same as fixing the body / environment boundary; L3 claims still need retained/substituted loop disclosure."
+  - "Passing a latency audit is not the same as fixing the body / environment boundary; L3 claims still need retained/substituted loop disclosure plus slow internal-milieu disclosure."
   - "In chronic invasive recording, unit-matching uncertainty and tissue response around the implant are separate audit items."
 unknown_points:
   - "There is still no settled answer on which causal-structure approximation would be sufficient for L4 personal identity."
@@ -2572,7 +2572,7 @@ If the branching conditions, comparison rules, failure conditions, and stimulus 
 <section class="section" id="body-environment-boundary-card">
 <h2 class="section-title">2026-03-19 addendum: attach a Body / Environment Boundary Card to L3 results</h2>
 <p>
-The weakness exposed in this pass was that latency, jitter, and safe-stop logs can show whether a loop is fast and stable, but not <strong>which subject boundary the loop actually preserved</strong>. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> and <a href="https://doi.org/10.1126/science.aav7893" target="_blank">Stringer et al. (2019)</a> showed that ongoing behavior explains a large fraction of cortical activity, <a href="https://doi.org/10.1038/nn.3567" target="_blank">Saleem et al. (2013)</a> and <a href="https://doi.org/10.1126/science.1232655" target="_blank">Ravassard et al. (2013)</a> showed that locomotion, optic flow, vestibular, and other sensory cues reshape cortical and hippocampal codes, <a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">Zelano et al. (2016)</a> and <a href="https://doi.org/10.1038/s41586-025-09544-4" target="_blank">Raut et al. (2025)</a> showed that breathing and arousal link brain dynamics to organism-wide physiological state, and <a href="https://doi.org/10.1126/science.abd0380" target="_blank">Flesher et al. (2021)</a> showed that restoring tactile feedback improves a local bidirectional BCI. Therefore, a loop result cannot be read here as “embodiment solved” unless it names which sensory, motor, interoceptive, and surrogate-body channels were preserved, substituted, or omitted.
+The weakness exposed in this pass was that latency, jitter, and safe-stop logs can show whether a loop is fast and stable, but not <strong>which subject boundary the loop actually preserved</strong> or whether the <strong>slow internal milieu</strong> remained matched. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> and <a href="https://doi.org/10.1126/science.aav7893" target="_blank">Stringer et al. (2019)</a> showed that ongoing behavior explains a large fraction of cortical activity, <a href="https://doi.org/10.1038/nn.3567" target="_blank">Saleem et al. (2013)</a> and <a href="https://doi.org/10.1126/science.1232655" target="_blank">Ravassard et al. (2013)</a> showed that locomotion, optic flow, vestibular, and other sensory cues reshape cortical and hippocampal codes, <a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">Zelano et al. (2016)</a> and <a href="https://doi.org/10.1038/s41586-025-09544-4" target="_blank">Raut et al. (2025)</a> showed that breathing and arousal link brain dynamics to organism-wide physiological state, and <a href="https://doi.org/10.1126/science.abd0380" target="_blank">Flesher et al. (2021)</a> showed that restoring tactile feedback improves a local bidirectional BCI. But that still leaves a slower class undernamed. <a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998)</a> showed that glucocorticoids can impair memory retrieval, <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007)</a> showed that hydrocortisone decreases hippocampal and prefrontal retrieval activity in humans, <a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">McCauley et al. (2020)</a>, <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone et al. (2023)</a>, and <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">Birnie et al. (2023)</a> showed that circadian timing and corticosteroid rhythm alter hippocampal plasticity machinery, and <a href="https://doi.org/10.1016/j.psyneuen.2004.04.003" target="_blank">Benedict et al. (2004)</a>, <a href="https://doi.org/10.3233/JAD-2008-13309" target="_blank">Reger et al. (2008)</a>, and <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">Sherman et al. (2015)</a> showed that insulin delivery or circadian-rhythm consistency can shift human memory or hippocampal activity. Therefore, a loop result cannot be read here as “embodiment solved” unless it names which sensory, motor, interoceptive, surrogate-body, and slow internal-milieu routes were preserved, substituted, matched, perturbed, or omitted.
 </p>
 <table class="data-table">
 <thead>
@@ -2604,6 +2604,11 @@ The weakness exposed in this pass was that latency, jitter, and safe-stop logs c
 <td>Arousal- or body-state-driven gains can be misread as stable neural equivalence of the target subsystem.</td>
 </tr>
 <tr>
+<td><strong>slow internal-milieu / circadian / endocrine-metabolic routes</strong></td>
+<td>State whether circadian phase or clock time, recent sleep-wake schedule, cortisol / glucocorticoid assay or steroid treatment, feeding / fasting or glucose-insulin regime, and similar slow body-state variables were controlled, measured, perturbed, or left latent. When available, name the assay type and sampling window.</td>
+<td>A stable-looking local loop can be overread as state-equivalent even though memory retrieval, plasticity, or gain regime changed with slow body-state variables that were never matched.</td>
+</tr>
+<tr>
 <td><strong>surrogate body / environment contract</strong></td>
 <td>Describe the surrogate body or environment, including latency, noise, saturation, sensory remapping, and whether the environment was fixed, simulated, or interactive.</td>
 <td>A local engineering convenience can be mistaken for a biologically comparable sensorimotor world.</td>
@@ -2629,6 +2634,12 @@ The weakness exposed in this pass was that latency, jitter, and safe-stop logs c
 <strong>Minimum operating rules</strong>
 <p>
 If this card is missing, this site treats the result by default as a <strong>task-specific local controller</strong>, <strong>local subsystem loop</strong>, or <strong>surrogate-body demonstration</strong>. It does not promote the result to solved embodiment, subject-complete closed loop, or WBE-relevant body / environment equivalence.
+</p>
+</div>
+<div class="note-box">
+<strong>Fast routes and slow milieu are different audits</strong>
+<p>
+Respiration, pupil, HR / HRV, tactile contact, self-motion, and dialogue context are not the same inferential object as circadian phase, corticosteroid exposure, or feeding / insulin regime. This site therefore logs <strong>fast loop routes</strong> and <strong>slow internal-milieu routes</strong> separately rather than assuming one disclosure covers both.
 </p>
 </div>
 <div class="note-box">

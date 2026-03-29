@@ -5,7 +5,7 @@ description: "Short, precise answers to the questions that come up most often wh
 article_type: FAQ
 subtitle: "Prefer verifiable progress to flashy conclusions"
 author: Mind Uploading Research Project
-last_updated: "2026-03-29"
+last_updated: "2026-03-30"
 note: "Human-first"
 audience: "Readers who want to sort out questions and misconceptions first, and readers who want a quick overview through short Q&A"
 reading_time: "8-15 minutes"
@@ -43,7 +43,7 @@ known_points:
   - "A BOLD or fNIRS amplitude difference without vascular-state / CVR or short-separation auditing is still not a clean neural difference."
   - "A DCM or effective-connectivity label does not by itself discover the one true causal circuit; candidate model space, observed-subsystem closure / latent-confound audit, node-definition policy, sampling / transformation sensitivity, validation, and reliability remain separate requirements."
   - "An irreversibility / entropy-production label does not by itself tell you the coarse-graining, hidden-degree risk, timescale, estimator family, or dynamical assumptions behind the number, and it is not automatically a metabolic-cost readout."
-  - "A closed-loop demo without a disclosed body / environment boundary remains a local controller or subsystem-loop result rather than evidence that embodiment is solved."
+  - "A closed-loop demo without a disclosed body / environment boundary, including slow internal-milieu disclosure, remains a local controller or subsystem-loop result rather than evidence that embodiment is solved."
   - "FAQ works well as an entry point for avoiding the wrong direction."
 unknown_points:
   - "Short answers alone cannot settle theory choice or identity questions."
@@ -672,7 +672,7 @@ At Mind-Upload, offline accuracy and L3 closed-loop stability are read separatel
 A. No. Low latency only tells you that one loop is fast enough; it does not tell you that the relevant <strong>subject boundary</strong> has been reproduced. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> and <a href="https://doi.org/10.1126/science.aav7893" target="_blank">Stringer et al. (2019)</a> showed that ongoing behavior shapes a large fraction of cortical activity, <a href="https://doi.org/10.1038/nn.3567" target="_blank">Saleem et al. (2013)</a> and <a href="https://doi.org/10.1126/science.1232655" target="_blank">Ravassard et al. (2013)</a> showed that locomotion, optic flow, vestibular, and other sensory cues reshape cortical and hippocampal codes, <a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">Zelano et al. (2016)</a> showed that nasal respiration entrains human limbic activity and modulates memory, and <a href="https://doi.org/10.1126/science.abd0380" target="_blank">Flesher et al. (2021)</a> showed that adding tactile feedback improves a local bidirectional BCI loop.
 </p>
 <p>
-At Mind-Upload, a closed-loop paper that does not disclose <strong>which sensory, motor, and interoceptive channels were preserved, substituted, or omitted</strong>, plus what happened when those loops were removed or altered, stays a <strong>local controller</strong> or <strong>local subsystem-loop</strong> result. The shortest follow-up is <a href="verification.html#body-environment-boundary-card">Verification: Body / Environment Boundary Card</a> together with <a href="wiki/closed-loop-latency-jitter-and-safety-stops.html#boundary-before-latency">Wiki: before milliseconds, fix which loop boundary was actually preserved</a>, <a href="tech_roadmap.html#qa-m4">Roadmap M4</a>, and <a href="tech_roadmap.html#qa-i6">Roadmap I6</a>.
+That fast-loop disclosure is still not enough by itself. <a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998)</a> and <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007)</a> showed that glucocorticoid state can impair retrieval and reduce hippocampal / prefrontal retrieval activity, while <a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">McCauley et al. (2020)</a>, <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone et al. (2023)</a>, and <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">Birnie et al. (2023)</a> showed that circadian timing and corticosteroid rhythm alter hippocampal plasticity. At Mind-Upload, a closed-loop paper that does not disclose <strong>which sensory, motor, interoceptive, and slow internal-milieu routes were preserved, substituted, matched, perturbed, or omitted</strong>, plus what happened when those loops were removed or altered, stays a <strong>local controller</strong> or <strong>local subsystem-loop</strong> result. The shortest follow-up is <a href="verification.html#body-environment-boundary-card">Verification: Body / Environment Boundary Card</a> together with <a href="wiki/closed-loop-latency-jitter-and-safety-stops.html#boundary-before-latency">Wiki: before milliseconds, fix which loop boundary was actually preserved</a>, <a href="tech_roadmap.html#qa-m4">Roadmap M4</a>, and <a href="tech_roadmap.html#qa-i6">Roadmap I6</a>.
 </p>
 </section>
 

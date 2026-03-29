@@ -4,13 +4,13 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-28 / Role: Learning guide / evidence refresh
+- Updated: 2026-03-30 / Role: Learning guide / evidence refresh
 
 ## Role Of This Page
-This page is a wiki that organizes delay, jitter, drift, safety stop, body/environment boundary, and long-horizon deployability in Mind-Upload's L3 'closed loop' using primary literature. The purpose is to clarify that even when offline accuracy is high, the required timing budget depends on the loop band and actuator, and low latency alone does not tell you which sensory, motor, interoceptive, or reafferent loops were actually preserved, whether a fixed decoder survived across time, or how much rescue-mode programming was needed.
+This page is a wiki that organizes delay, jitter, drift, safety stop, body/environment boundary, and long-horizon deployability in Mind-Upload's L3 'closed loop' using primary literature. The purpose is to clarify that even when offline accuracy is high, the required timing budget depends on the loop band and actuator, and low latency alone does not tell you which sensory, motor, interoceptive, reafferent, or slow internal-milieu routes were actually preserved, whether a fixed decoder survived across time, or how much rescue-mode programming was needed.
 
 ## Accuracy Notes
-Here, we do not set a ``fixed threshold common to all loops.'' We also do not treat a fast loop as boundary-complete, temporally durable, or chronically deployable by default. Judgments are written on the premise that end-to-end timing indicators, retained/substituted body/environment routes, fixed-decoder interval, co-adaptation regime, rescue-mode adaptation burden, deployment slices, and, for phase-targeting loops, oscillation estimability plus causal-versus-post-hoc targeting benchmarks are disclosed explicitly.
+Here, we do not set a ``fixed threshold common to all loops.'' We also do not treat a fast loop as boundary-complete, temporally durable, or chronically deployable by default. Judgments are written on the premise that end-to-end timing indicators, retained/substituted body/environment routes, slow internal-milieu routes, fixed-decoder interval, co-adaptation regime, rescue-mode adaptation burden, deployment slices, and, for phase-targeting loops, oscillation estimability plus causal-versus-post-hoc targeting benchmarks are disclosed explicitly.
 
 ## Back To Public Pages
 - [Verification base](https://mind-upload.com/verification.html)
@@ -26,7 +26,7 @@ Here, we do not set a ``fixed threshold common to all loops.'' We also do not tr
 
 ## What Is Currently Known
 - Offline accuracy and closed-loop stability are separate claims and cannot be audited with the same score.
-- Even a fast loop can remain boundary-incomplete if self-motion, predicted reafference, tactile feedback, respiration, arousal, or other subject-defining routes stay omitted or undisclosed.
+- Even a fast loop can remain boundary-incomplete if self-motion, predicted reafference, tactile feedback, respiration, arousal, circadian phase, glucocorticoid state, insulin / metabolic regime, or other subject-defining routes stay omitted or undisclosed.
 - Latency and jitter tolerances vary for state feedback, ERP/command BCI, streaming communication, phase-locked stimulation, and burst-driven neuromodulation.
 - Unless you actually measure input, processing, output, and return end-to-end, you won't know the timing of actual operation.
 - Closed-loop gains can come from co-adaptation of the user, decoder, and application rather than from a stable fixed decoder alone.
@@ -57,7 +57,7 @@ On this page, instead of talking about "how fast is enough" in an abstract way, 
 
 <strong>Timing audit is not the whole loop audit</strong>
 <p>
-This page now keeps <strong>timing logs</strong> separate from <strong>body/environment boundary logs</strong>. A loop can be fast and still remain boundary-incomplete if the paper does not say which sensory, action, interoceptive, and self-generated-feedback routes were preserved, substituted, or omitted. On this site, low latency without that disclosure does not rise above a task-specific local controller or surrogate-body result.
+This page now keeps <strong>timing logs</strong> separate from <strong>body/environment boundary logs</strong>. A loop can be fast and still remain boundary-incomplete if the paper does not say which sensory, action, interoceptive, self-generated-feedback, and slow internal-milieu routes were preserved, substituted, matched, perturbed, or omitted. On this site, low latency without that disclosure does not rise above a task-specific local controller or surrogate-body result.
 </p>
 
 <strong>Three public cards are stacked here, not one timing score</strong>
@@ -87,7 +87,7 @@ Wilson et al. (2010) showed that for relatively slow BCI indicators such as mu r
 
 <h2>Before milliseconds, fix which loop boundary was actually preserved</h2>
 <p>
-The weakness of the older timing-only reading was that it could still let a reader say, <strong>"the loop was fast, therefore the closed-loop problem is close to solved."</strong> That is too weak. Primary literature shows that sensory cortex and higher-order dynamics are continuously reshaped by self-motion, predicted sensory consequences, multisensory navigation cues, respiration, arousal, and tactile feedback. Therefore, a low-latency controller is not automatically a boundary-complete controller.
+The weakness of the older timing-only reading was that it could still let a reader say, <strong>"the loop was fast, therefore the closed-loop problem is close to solved."</strong> That is too weak. Primary literature shows that sensory cortex and higher-order dynamics are continuously reshaped by self-motion, predicted sensory consequences, multisensory navigation cues, respiration, arousal, tactile feedback, circadian timing, glucocorticoid exposure, and metabolic state. Therefore, a low-latency controller is not automatically a boundary-complete controller.
 </p>
 <table>
 <thead>
@@ -124,6 +124,11 @@ The weakness of the older timing-only reading was that it could still let a read
 <td>A brain-only fast controller can still omit organism-wide state variables that co-organize the loop in vivo.</td>
 </tr>
 <tr>
+<td><strong>slow endocrine / circadian / metabolic milieu</strong></td>
+<td><a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998)</a> showed glucocorticoid-dependent memory-retrieval impairment, <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007)</a> showed hydrocortisone-linked decreases in human hippocampal and prefrontal retrieval activity, <a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">McCauley et al. (2020)</a> plus <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone et al. (2023)</a> showed circadian gating of hippocampal plasticity, and <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">Birnie et al. (2023)</a>, <a href="https://doi.org/10.1016/j.psyneuen.2004.04.003" target="_blank">Benedict et al. (2004)</a>, <a href="https://doi.org/10.3233/JAD-2008-13309" target="_blank">Reger et al. (2008)</a>, and <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">Sherman et al. (2015)</a> showed that corticosteroid rhythm, insulin signaling, and circadian-rhythm consistency can shift hippocampal plasticity, human memory, or hippocampal activity.</td>
+<td>The same visible input-output loop can still be a different biological loop class if clock phase, steroid state, or feeding / insulin regime were unmatched or left latent.</td>
+</tr>
+<tr>
 <td><strong>tactile contact feedback</strong></td>
 <td><a href="https://doi.org/10.1126/science.abd0380" target="_blank">Flesher et al. (2021)</a> showed that adding tactile feedback improves robotic-arm control in a bidirectional BCI.</td>
 <td>The main issue is not only whether the loop is fast, but which feedback channels were restored and which still remained absent.</td>
@@ -138,7 +143,7 @@ The weakness of the older timing-only reading was that it could still let a read
 
 <strong>Operating rule on this site</strong>
 <p>
-If the paper does not disclose which sensory, action, interoceptive, and self-generated-feedback routes were retained, substituted, or omitted, this site does not promote the result from <strong>fast local loop</strong> to <strong>boundary-complete L3 evidence</strong>. The formal public rule is the <a href="https://mind-upload.com/verification.html#body-environment-boundary-card">Verification: Body / Environment Boundary Card</a>; this wiki supplies the timing-side companion logic.
+If the paper does not disclose which sensory, action, interoceptive, self-generated-feedback, and slow internal-milieu routes were retained, substituted, matched, perturbed, or omitted, this site does not promote the result from <strong>fast local loop</strong> to <strong>boundary-complete L3 evidence</strong>. The formal public rule is the <a href="https://mind-upload.com/verification.html#body-environment-boundary-card">Verification: Body / Environment Boundary Card</a>; this wiki supplies the timing-side companion logic.
 </p>
 
 <h2>First, divide into 5 loop types</h2>
@@ -482,6 +487,7 @@ Whether it's ``I didn't get it right so I won't output it'', ``I'm going to use 
 <li><strong>retained / substituted sensory and self-generated-feedback routes:</strong>List which visual, tactile, auditory, proprioceptive, vestibular, respiration-linked, or predicted reafferent cues were present, simulated, or omitted. </li>
 <li><strong>retained / substituted action channels:</strong>Name the actual plant or actuator, such as cursor, robotic hand, speech synthesizer, avatar, or stimulator, together with its controllable degrees of freedom. </li>
 <li><strong>interoceptive / arousal logs:</strong>Record whether respiration, pupil, HR / HRV, effort, fatigue, or similar organism-wide covariates were logged, manipulated, or left latent. </li>
+<li><strong>slow internal-milieu logs:</strong>Record whether circadian phase or clock time, recent sleep-wake schedule, cortisol / glucocorticoid assay or steroid treatment, feeding / fasting or glucose-insulin regime, and similar slow body-state covariates were controlled, measured, perturbed, or left latent. </li>
 <li><strong>end-to-end latency:</strong>Leave median, P95, P99, worst-case separate. </li>
 <li><strong>Module-wise latency:</strong> Separate input, inference, output, and recursive input, leaving what is rate-limiting. </li>
 <li><strong>Definition of jitter:</strong>Specify SD, IQR, or peak-to-peak. </li>
@@ -505,7 +511,7 @@ Whether it's ``I didn't get it right so I won't output it'', ``I'm going to use 
 <ol>
 <li><strong>Does it say which loop class it deals with?</strong> Check whether slow feedback, speech streaming, phase-locked, and aDBS are mentioned in the same table. </li>
 <li><strong>Does it declare which body/environment boundary it actually used?</strong> Check whether the paper fixes the target subsystem and names preserved, substituted, and omitted loops instead of only saying "closed loop."</li>
-<li><strong>Are sensory, action, and interoceptive routes disclosed?</strong> Look for tactile, proprioceptive, vestibular, respiration-linked, and arousal-linked channels, not only the main output stream. </li>
+<li><strong>Are sensory, action, interoceptive, and slow internal-milieu routes disclosed?</strong> Look for tactile, proprioceptive, vestibular, respiration-linked, arousal-linked, circadian, glucocorticoid, and metabolic-state channels, not only the main output stream. </li>
 <li><strong>Was any decisive loop component removed or scrambled?</strong> Check whether feedback-removal or sensory-ablation tests were run, rather than assuming robustness. </li>
 <li><strong>Are there module-wise measurements, not just end-to-end?</strong> Don't just rely on software timestamps; check which of the input, inference, and output paths are rate-limiting. </li>
 <li><strong>For speech / streaming, are silence and output path displayed?</strong> Check whether false speech, audio driver, or hold-last-output are hidden. </li>
