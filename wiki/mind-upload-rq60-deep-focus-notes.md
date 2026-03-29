@@ -59,6 +59,24 @@ This is a route-setting update, not a solved-claim update. The public batch is n
 - Practical funding alignment in this run is intentionally narrow: `Nakatani Foundation graduate scholarship`, `Kura Fund`, `Kashinome Scholarship`, and `Nakatani Foundation research grant` already provide active routes or watch routes for this cluster.
 - Relevant Todoist tasks already existed before this run, so no new task was needed for the current practical shortlist.
 
+## Next internal six-question queue (2026-03-29 11:10 JST)
+
+The public batch above does not change in this run. This section only records the next bounded queue once the current public six have stable audit artifacts.
+
+The rule stays the same: no broad thematic expansion, and no solved-claim wording. Each row below is a `one-RQ / one-anchor / one-minimum-deliverable` continuation that stays close to the current `inner-speech decoding + identity drift + reproducibility auditing` bundle.
+
+| RQ | Why it is next | Main `Dxx + DOI` anchor | Minimum deliverable | Keep outside the EEG claim |
+|---|---|---|---|---|
+| `U13-1` | It is the nearest unresolved split after `U13-2/U13-5`: `semantic restoration` must be separated from `causal restoration`. | `D10` / `10.18112/openneuro.ds006465.v2.0.0` | `Intervention protocol and rebuttal condition definition` | Do not read semantic-match success as preserved internal mechanism. |
+| `U13-3` | It extends the same inner-speech cluster to the `same output / different mechanism` failure mode. | `D10` / `10.18112/openneuro.ds006465.v2.0.0` | `Imitation separation evaluation report (meaning/mechanism)` | Do not treat output equivalence as causal equivalence. |
+| `U14-3` | It is the cleanest next reproducibility step after `U14-2/U14-4`: leaderboard leak and report-bias auditing. | `D719` / leaderboard leak benchmark anchor used in the RQ dossier | `Leak audit results and repartition trail` | Do not present internal leaderboard robustness as field-wide validation. |
+| `U7-3` | It fixes when preprocessing drift becomes release-block relevant instead of a mere implementation detail. | `D11` / `10.18112/openneuro.ds007216.v1.0.0` | `Reproducibility audit report (synchronization/QC/preprocessing difference)` | Do not generalize one preprocessing audit rule beyond its tested protocol family. |
+| `U1-2` | It is the next strongest `A` candidate near the same verification stack: uncertainty calibration for inverse estimates. | `D08` / `10.21227/7may-9q56` | `Inverse problem reproduction report (error/uncertainty)` | Do not promote interval coverage stability into a blanket guarantee across all head models. |
+| `U14-1` | It turns rerun requirements into an executable contract before broader standardization claims. | `D01` / `10.21227/dv1p-vq18` | `Supplementary test operation report (including negative cases)` | Do not claim community-wide agreement on the required rerun pack. |
+
+- Funding-wise, the next internal queue splits into two states on purpose: `U7/U14` already have concrete reproducibility-facing watch routes, while `U13/U1` still lean on `G4`-style neuroscience watch routes where the near-term public call signal is weaker.
+- Todoist-wise, no new task is required just because a row appears here. A task is only added when an actual `watch / start-date / deadline` route is concrete enough to avoid duplication.
+
 ## U0 (identity)
 
 | RQ | Judgment | Core to be directly verified with EEG | Application theme (grant key) | Main EEG-DATA | Required outside of EEG |

@@ -35,6 +35,42 @@ A/B/C judgment is the same as mind-upload-eeg-rq60-feasibility-and-funds. C mean
 - `B`: EEG main analysis is possible. Requires additional external modality/design.
 - `C`: Mainly system/legal/theoretical integration. EEG is an audit log or supporting evidence.
 
+## Current public six-question batch (2026-03-29 10:09 JST)
+
+This run changes the active public batch to `U13-2`, `U13-5`, `U14-4`, `U0-2`, `U0-3`, and `U14-2`.
+
+This is a route-setting update, not a solved-claim update. The public batch is now intentionally concentrated on `inner-speech decoding + identity drift + reproducibility auditing`, because these six RQs are the cleanest current bridge from `mind-upload.com` research questions to bounded EEG-ready and fundable work packages.
+
+| RQ | What is fixed first | Main `Dxx + DOI` anchor | Practical first / backup route | First-pass KPI | Keep outside the EEG claim |
+|---|---|---|---|---|---|
+| `U13-2` | A `brain-minus-prior` hallucination audit for overt/silent/imagined speech. | `D10` / `10.18112/openneuro.ds006465.v2.0.0` | `Kura Fund` / `Nakatani Foundation graduate scholarship` | `semantic alignment` `brain-minus-prior gap` `misalignment rate` | Do not treat language-decoder success as a mind-preservation claim. |
+| `U13-5` | A perception-to-recall branch analysis for mimicry/mechanism separation. | `D03` / `10.21227/6106-6120` | `Kura Fund` / `Nakatani Foundation graduate scholarship` | `perception-to-recall degradation point` `transfer gap` `control-condition stability` | Do not treat a shared decoder as evidence of preserved internal mechanism. |
+| `U14-4` | Model Card / Dataset Card fields are wired into the reproducibility contract. | `D01` / `10.21227/dv1p-vq18` | `Nakatani Foundation research grant` / `Kura Fund` | `required-card fill rate` `rerun success rate` `leak-audit coverage` | Do not claim organizational adoption or field-wide standardization yet. |
+| `U0-2` | The identity route is limited to `clock offset + jitter + state-feature collapse` auditing. | `D02` / `10.21227/j162-nh61` | `Nakatani Foundation graduate scholarship` / `Kashinome Scholarship` | `clock-offset p95` `state-feature collapse rate` `resync recovery rate` | Do not elevate technical synchronization stability to legal or philosophical identity. |
+| `U0-3` | Task-specific threshold stability and overfit exclusion are fixed before any stronger identity reading. | `D02` / `10.21227/j162-nh61` | `Nakatani Foundation graduate scholarship` / `Kashinome Scholarship` | `session-out AUC` `threshold stability` `overfit exclusion rate` | Do not treat a stable biometric threshold as a sufficient condition for personhood continuity. |
+| `U14-2` | Exploratory and confirmatory tracks are separated inside the rerun contract. | `D01` / `10.21227/dv1p-vq18` | `Nakatani Foundation research grant` / `Kura Fund` | `fixed-split rate` `rerun success rate` `explore-to-confirm carryover gap` | Do not present exploration outputs as confirmatory evidence after the split boundary is crossed. |
+
+- Practical funding alignment in this run is intentionally narrow: `Nakatani Foundation graduate scholarship`, `Kura Fund`, `Kashinome Scholarship`, and `Nakatani Foundation research grant` already provide active routes or watch routes for this cluster.
+- Relevant Todoist tasks already existed before this run, so no new task was needed for the current practical shortlist.
+
+## Next internal six-question queue (2026-03-29 11:10 JST)
+
+The public batch above does not change in this run. This section only records the next bounded queue once the current public six have stable audit artifacts.
+
+The rule stays the same: no broad thematic expansion, and no solved-claim wording. Each row below is a `one-RQ / one-anchor / one-minimum-deliverable` continuation that stays close to the current `inner-speech decoding + identity drift + reproducibility auditing` bundle.
+
+| RQ | Why it is next | Main `Dxx + DOI` anchor | Minimum deliverable | Keep outside the EEG claim |
+|---|---|---|---|---|
+| `U13-1` | It is the nearest unresolved split after `U13-2/U13-5`: `semantic restoration` must be separated from `causal restoration`. | `D10` / `10.18112/openneuro.ds006465.v2.0.0` | `Intervention protocol and rebuttal condition definition` | Do not read semantic-match success as preserved internal mechanism. |
+| `U13-3` | It extends the same inner-speech cluster to the `same output / different mechanism` failure mode. | `D10` / `10.18112/openneuro.ds006465.v2.0.0` | `Imitation separation evaluation report (meaning/mechanism)` | Do not treat output equivalence as causal equivalence. |
+| `U14-3` | It is the cleanest next reproducibility step after `U14-2/U14-4`: leaderboard leak and report-bias auditing. | `D719` / leaderboard leak benchmark anchor used in the RQ dossier | `Leak audit results and repartition trail` | Do not present internal leaderboard robustness as field-wide validation. |
+| `U7-3` | It fixes when preprocessing drift becomes release-block relevant instead of a mere implementation detail. | `D11` / `10.18112/openneuro.ds007216.v1.0.0` | `Reproducibility audit report (synchronization/QC/preprocessing difference)` | Do not generalize one preprocessing audit rule beyond its tested protocol family. |
+| `U1-2` | It is the next strongest `A` candidate near the same verification stack: uncertainty calibration for inverse estimates. | `D08` / `10.21227/7may-9q56` | `Inverse problem reproduction report (error/uncertainty)` | Do not promote interval coverage stability into a blanket guarantee across all head models. |
+| `U14-1` | It turns rerun requirements into an executable contract before broader standardization claims. | `D01` / `10.21227/dv1p-vq18` | `Supplementary test operation report (including negative cases)` | Do not claim community-wide agreement on the required rerun pack. |
+
+- Funding-wise, the next internal queue splits into two states on purpose: `U7/U14` already have concrete reproducibility-facing watch routes, while `U13/U1` still lean on `G4`-style neuroscience watch routes where the near-term public call signal is weaker.
+- Todoist-wise, no new task is required just because a row appears here. A task is only added when an actual `watch / start-date / deadline` route is concrete enough to avoid duplication.
+
 ## U0 (identity)
 
 | RQ | Judgment | Core to be directly verified with EEG | Application theme (grant key) | Main EEG-DATA | Required outside of EEG |
@@ -458,3 +494,12 @@ Reasons for proceeding in this order:
 4. `U0-1`
 5. `U8-4`
 6. `U11-1`
+
+## 2026-03-29 09:06 JST revalidation log (main run / repo-level anchor audit)
+
+- Pulled the latest `main` in `auto-startup`, `mind-upload`, `EEG-DATA`, and `auto-research-funds`, plus `master` in `auto-startup.wiki`, and reconfirmed `Already up to date` in every target repo.
+- Rechecked the active public six-RQ anchors against the local `EEG-DATA/wiki/datasets` cards instead of relying only on routing tables.
+- `D11` is currently the strongest anchor in the local mirror because its card exposes `BIDS 1.7.0`, `CC0`, `47 sessions`, `186 EEG runs`, `31 EEG + 5 misc`, `5000 Hz`, and even the `README=24 / participants.tsv=25` mismatch that still has to stay visible in any serious audit.
+- `D02` remains a valid cross-session identity anchor, but the current local card only fixes a conservative minimum set (`10 participants`, `BrainVision / BrainAmp / actiCHamp`, motor-imagery framing, cross-session transfer route). It is not yet a substitute for a richer intervention log or a theory-level identity dossier.
+- `D05`, `D08`, `D14`, and `D20` remain valid route anchors in the current mirror, but their autogenerated local cards are still sparse enough that public claims should stay at the level of `what family of test this anchor supports` plus `which logs are still required`, not at the level of a complete protocol/QC dossier.
+- Practical consequence for the public batch: keep the current six-RQ selection unchanged, but treat `required logs` as first-class deliverables before strengthening the claim language around causal equivalence, inverse-problem coverage, closed-loop safety, or awareness-index comparison.
