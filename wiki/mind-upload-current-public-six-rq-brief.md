@@ -23,6 +23,9 @@ wiki_links:
   - label: "Wiki: U13-5 route packet"
     url: "/wiki/u13-5-perception-to-recall-route.html"
     description: "Why D03 stays primary for U13-5, why the support anchors stay secondary, and what the transfer-gap artifact can honestly close."
+  - label: "Wiki: U0-2 route packet"
+    url: "/wiki/u0-2-temporal-validity-route.html"
+    description: "Why D02 stays primary for U0-2, why the support anchors stay secondary, and what the timing-floor artifact can honestly close."
 recommended_pages:
   - label: "Issue page"
     url: "/issue.html"
@@ -112,6 +115,7 @@ The route is unchanged, but each active row now also carries one submission-read
 - Submission wording that stays honest: `Temporal-validity-aware identity-drift audit`.
 - What still needs outside support: longer-horizon timing logs and larger cohorts before the row can be read as anything more than a bounded drift benchmark.
 - What still stays outside the claim: legal, philosophical, or normative continuity claims.
+- If you need the row-specific anchor-choice rationale, read the [U0-2 route packet](/wiki/u0-2-temporal-validity-route.html).
 
 ### `U0-3`
 

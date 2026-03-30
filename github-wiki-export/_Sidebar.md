@@ -69,6 +69,7 @@
 - [Wiki: Terminology guide from measurement to modeling](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-and-modeling-terms)
 - [Wiki: Thermodynamic Grounding Basics](https://github.com/yasufumi-nakata/mind-upload/wiki/thermodynamic-grounding-basics)
 - [Wiki: U Number Guide](https://github.com/yasufumi-nakata/mind-upload/wiki/u-number-guide)
+- [Wiki: U0-2 temporal-validity route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u0-2-temporal-validity-route)
 - [Wiki: U13-2 brain-minus-prior route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u13-2-brain-minus-prior-route)
 - [Wiki: U13-5 perception-to-recall route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u13-5-perception-to-recall-route)
 - [Wiki: Uncertainty, Calibration, and Abstention](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention)
