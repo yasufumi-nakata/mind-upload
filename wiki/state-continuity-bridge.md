@@ -1,11 +1,11 @@
 ---
 layout: default
 title: "Wiki: State-Continuity Bridge"
-description: "Explains why same-subject or same-brain sequential workflows do not automatically become same-state evidence, and how Mind-Upload audits acquisition order, bridge delay, regime continuity, deformation, validation, and residual drift."
+description: "Explains why same-subject or same-brain sequential workflows do not automatically become same-state evidence, and how Mind-Upload audits acquisition order, bridge delay, regime continuity including slow internal milieu, deformation, validation, and residual drift."
 article_type: Wiki
 subtitle: "Same-subject solves specimen identity, not same-state continuity"
 author: Mind Uploading Research Project
-last_updated: "2026-03-28"
+last_updated: "2026-03-30"
 note: "Technical / natural science only"
 audience: "Readers who want to read live-to-fix, same-brain plus EM, and cross-day reacquisition claims without overpromoting specimen identity into state continuity"
 reading_time: "12-18 min"
@@ -16,6 +16,7 @@ page_highlights:
   - "Preservation and fixation are not neutral storage steps; they can change geometry, membrane integrity, and downstream observability."
   - "Correlative same-brain pipelines are scientifically valuable local workflows, but they are still sequential bridges rather than simultaneous whole-state capture."
   - "Cross-day reacquisition also needs a bridge audit, because spontaneous behavior, arousal, and day-night variation can move the observed state before long-term drift is even discussed."
+  - "Regime continuity now also has to name slow internal-milieu variables such as circadian phase, corticosteroid exposure, and insulin / metabolic regime rather than treating them as background."
   - "Bridge burden is not one scalar: live-to-fix bridges are transformation-dominated, whereas same-day or overnight live bridges are drift-dominated and expose different hidden-state families."
   - "A bridge now has to name its carried object / witness and tolerance budget, because landmarks, latent manifolds, representational geometry, and fingerprint features do not survive the same failures."
   - "On this site, the State-Continuity Bridge Card is stacked with the Destructive-Structure Route Card, Human Proxy Composition Card, or Temporal Validity Card depending on the bridge."
@@ -23,6 +24,7 @@ known_points:
   - "Preservation route and fixation protocol materially affect ultrastructural geometry and downstream staining or registration."
   - "Correlative live-to-EM workflows need explicit landmarks, targeted subvolumes, and bridge validation rather than a simple same-brain label."
   - "Adult synaptic structures and ongoing behavioral state can change over bridge windows that are relaxed or left implicit."
+  - "A bridge can also fail regime continuity through circadian, corticosteroid, or insulin-metabolic mismatch even when the visible fast loop stayed similar."
   - "Same-subject wording can support specimen identity while still failing same-state continuity."
   - "Different bridge classes threaten different state families first, so elapsed time alone is not a sufficient bridge summary."
   - "Stable scores can be carried by different objects such as landmarks, latent manifolds, representational geometry, or feature fingerprints, so the carried object has to be named before a bridge is read strongly."
@@ -94,6 +96,13 @@ The remaining weakness after the earlier bridge tightening was that the page sti
 </p>
 </div>
 
+<div class="note-box">
+<strong>2026-03-30 addendum: the same live stack can still cross a different slow internal milieu</strong>
+<p>
+The remaining weakness after the carried-object update was that <strong>regime continuity</strong> could still sound too close to task, arousal, and day-night labels alone. The primary literature does not support that shortcut. <a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998)</a> showed glucocorticoid-dependent retrieval impairment, <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007)</a> showed hydrocortisone-linked decreases in human hippocampal and prefrontal retrieval activity, <a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">McCauley et al. (2020)</a>, <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone et al. (2023)</a>, and <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">Birnie et al. (2023)</a> showed circadian and corticosteroid-rhythm control of hippocampal plasticity, and <a href="https://doi.org/10.1016/j.psyneuen.2004.04.003" target="_blank">Benedict et al. (2004)</a>, <a href="https://doi.org/10.3233/JAD-2008-13309" target="_blank">Reger et al. (2008)</a>, and <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">Sherman et al. (2015)</a> showed that insulin delivery or circadian-rhythm consistency can shift human memory or hippocampal activity. Therefore, on this site, the same subject, same task, and even the same visible fast loop do not establish regime continuity unless <strong>slow internal-milieu disclosure</strong> is also present.
+</p>
+</div>
+
 <section class="section" id="continuity-dimensions">
 <h2 class="section-title">One bridge, four different continuity claims</h2>
 <p>
@@ -120,7 +129,7 @@ The core overread is to collapse several continuity questions into one label suc
 </tr>
 <tr>
 <td><strong>Regime continuity</strong></td>
-<td>Task, arousal, sleep pressure, anesthesia, pharmacology, recovery status, and perturbation regime were matched or explicitly shifted.</td>
+<td>Task, arousal, sleep pressure, circadian phase, glucocorticoid or steroid exposure, feeding / insulin-metabolic regime, anesthesia, pharmacology, recovery status, and perturbation regime were matched or explicitly shifted.</td>
 <td>The same specimen may still be measured under biologically different states.</td>
 </tr>
 <tr>
@@ -200,9 +209,12 @@ The second reason is that powerful same-brain pipelines are still sequential. <a
 The third reason is biological turnover. <a href="https://doi.org/10.1038/nature14467" target="_blank">Attardo et al. (2015)</a> showed that adult CA1 spine dynamics are compatible with mean lifetimes on the order of <strong>1-2 weeks</strong>, implying near-complete turnover over a few multiples of that interval. The exact numbers are not the point here; the point is that a bridge window cannot be treated as biologically silent unless the relevant state family is named and bounded. A live measurement plus a later fixation, or one session plus a later reacquisition, can cross windows in which structure or support-state has genuinely changed.
 </p>
 
-<h3>4. Cross-day reacquisition is also a bridge problem</h3>
+<h3>4. Cross-day or within-day reacquisition is also a bridge problem, and slow internal milieu is one reason why</h3>
 <p>
-The bridge problem is not limited to destructive follow-up. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> showed that richly varied movements dominate much of single-trial cortical variance during task performance. <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">Benisty et al. (2024)</a> showed that spontaneous behavior changes not only signal magnitude but also functional-connectivity structure. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> then showed 10-hour EEG dynamics that materially affect decoding and motivate adaptive decoders. Therefore, even when the measurement stack itself stays live and non-destructive, a cross-day or within-day bridge still needs state annotation and regime disclosure before it is promoted to trait or same-state language.
+The bridge problem is not limited to destructive follow-up. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> showed that richly varied movements dominate much of single-trial cortical variance during task performance. <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">Benisty et al. (2024)</a> showed that spontaneous behavior changes not only signal magnitude but also functional-connectivity structure. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> then showed 10-hour EEG dynamics that materially affect decoding and motivate adaptive decoders.
+</p>
+<p>
+But the same live stack can also cross a slower body-state regime even if the visible fast loop looks similar. <a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998)</a> and <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007)</a> showed that glucocorticoid state can shift retrieval itself, <a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">McCauley et al. (2020)</a>, <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone et al. (2023)</a>, and <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">Birnie et al. (2023)</a> showed that circadian and corticosteroid-rhythm disruption changes hippocampal plasticity machinery, and <a href="https://doi.org/10.1016/j.psyneuen.2004.04.003" target="_blank">Benedict et al. (2004)</a>, <a href="https://doi.org/10.3233/JAD-2008-13309" target="_blank">Reger et al. (2008)</a>, and <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">Sherman et al. (2015)</a> showed that insulin delivery or circadian-rhythm consistency can shift human memory or hippocampal activity. Therefore, even when the measurement stack itself stays live and non-destructive, a cross-day or within-day bridge still needs state annotation and regime disclosure that split <strong>fast behavioral labels</strong> from <strong>slow internal-milieu variables</strong> before it is promoted to trait or same-state language.
 </p>
 </section>
 
@@ -316,20 +328,20 @@ The matrix below is an operational inference from the primary literature above p
 </tr>
 <tr>
 <td><strong>Same-day repeated live measurement within waking</strong></td>
-<td>Movement pattern, arousal / neuromodulatory context, functional-connectivity structure, and decoder-relevant signal statistics.</td>
-<td>Behavior-linked state, neuromodulatory context, functional-coupling state, and task / decoder dependence.</td>
+<td>Movement pattern, arousal / neuromodulatory context, circadian phase, glucocorticoid exposure, feeding / insulin-metabolic regime, functional-connectivity structure, and decoder-relevant signal statistics.</td>
+<td>Behavior-linked state, neuromodulatory context, slow internal milieu, functional-coupling state, and task / decoder dependence.</td>
 <td><strong>State-Continuity Bridge Card</strong> plus <strong>Temporal Validity Card</strong>.</td>
 </tr>
 <tr>
 <td><strong>Sleep-crossing or overnight reacquisition</strong></td>
-<td>Firing-rate recovery controller, sleep-dependent renormalization, replay-coupling opportunity, and support-state restoration.</td>
-<td>Firing-rate set point, sleep / wake renormalization, sleep architecture / replay-coupling, and support-state families cited by the claim.</td>
+<td>Firing-rate recovery controller, sleep-dependent renormalization, replay-coupling opportunity, support-state restoration, circadian phase shift, and corticosteroid / metabolic-regime change.</td>
+<td>Firing-rate set point, sleep / wake renormalization, sleep architecture / replay-coupling, slow internal milieu, and support-state families cited by the claim.</td>
 <td><strong>State-Continuity Bridge Card</strong> plus <strong>Temporal Validity Card</strong> plus <strong>Maintenance-State Error Budget</strong>.</td>
 </tr>
 <tr>
 <td><strong>Multi-day same-subject proxy bundle</strong></td>
-<td>Trait / state mixing, slow structural turnover, support-state drift, and cross-row quantity mismatch.</td>
-<td>Structural turnover, maintenance-state families named by the proxy bundle, and human proxy composition ceiling.</td>
+<td>Trait / state mixing, slow structural turnover, support-state drift, circadian or endocrine-metabolic mismatch, and cross-row quantity mismatch.</td>
+<td>Structural turnover, slow internal milieu, maintenance-state families named by the proxy bundle, and human proxy composition ceiling.</td>
 <td><strong>State-Continuity Bridge Card</strong> plus <strong>Human Proxy Composition Card</strong> plus <strong>Maintenance-State Error Budget</strong>.</td>
 </tr>
 </tbody>
@@ -359,7 +371,7 @@ The matrix below is an operational inference from the primary literature above p
 </tr>
 <tr>
 <td><strong>Cross-day or day-night reacquisition with the same live stack</strong></td>
-<td>Behavioral state and decoder or interface drift can move the observed object before any destructive step appears.</td>
+<td>Behavioral state, slow internal milieu, and decoder or interface drift can move the observed object before any destructive step appears.</td>
 <td><strong>State-Continuity Bridge Card</strong> plus <strong>Temporal Validity Card</strong>.</td>
 </tr>
 <tr>
@@ -399,7 +411,7 @@ The matrix below is an operational inference from the primary literature above p
 </tr>
 <tr>
 <td><strong>A cross-day reacquisition that still decodes well means the same state persisted.</strong></td>
-<td>Behavior, arousal, day-night context, and adaptive decoding can hide regime change or rescue drift.</td>
+<td>Behavior, arousal, circadian phase, endocrine-metabolic regime, and adaptive decoding can hide regime change or rescue drift.</td>
 <td>Route through the <a href="../verification.html#temporal-validity-card">Temporal Validity Card</a> as well as the bridge audit.</td>
 </tr>
 <tr>
@@ -433,6 +445,14 @@ The matrix below is an operational inference from the primary literature above p
 <li>Karpowicz BM, O'Shea DJ, Wyche S, et al. Stabilizing brain-computer interfaces through alignment of latent dynamics. <em>Nature Communications</em>. 2025. <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">doi:10.1038/s41467-025-59652-y</a></li>
 <li>Wilson GH, Stein EA, Kamdar F, et al. Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <em>Nature Biomedical Engineering</em>. 2025. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
 <li>Wairagkar M, Card NS, Singer-Clark T, et al. An instantaneous voice-synthesis neuroprosthesis. <em>Nature</em>. 2025. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+<li>de Quervain DJF, Roozendaal B, McGaugh JL. Stress and glucocorticoids impair retrieval of long-term spatial memory. <em>Nature</em>. 1998. <a href="https://doi.org/10.1038/29542" target="_blank">doi:10.1038/29542</a></li>
+<li>Oei NYL, Elzinga BM, Wolf OT, de Ruiter MB, Damoiseaux JS, Kuijer JPA, Veltman DJ, Scheltens P, Rombouts SARB. Glucocorticoids decrease hippocampal and prefrontal activation during declarative memory retrieval in young men. <em>Brain Imaging and Behavior</em>. 2007;1:31-41. <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">doi:10.1007/s11682-007-9003-2</a></li>
+<li>McCauley JP, Petroccione MA, D'Brant LY, et al. Circadian modulation of neurons and astrocytes controls synaptic plasticity in hippocampal area CA1. <em>Cell Reports</em>. 2020;33:108255. <a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">doi:10.1016/j.celrep.2020.108255</a></li>
+<li>Barone I, Gillette NM, Hawks-Mayer H, et al. Synaptic BMAL1 phosphorylation controls circadian hippocampal plasticity. <em>Science Advances</em>. 2023;9:eadj1010. <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">doi:10.1126/sciadv.adj1010</a></li>
+<li>Birnie MT, Begum G, Sugden D, et al. Circadian regulation of hippocampal function is disrupted with corticosteroid treatment. <em>Proceedings of the National Academy of Sciences of the United States of America</em>. 2023;120:e2211996120. <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">doi:10.1073/pnas.2211996120</a></li>
+<li>Benedict C, Hallschmid M, Hatke A, et al. Intranasal insulin improves memory in humans. <em>Psychoneuroendocrinology</em>. 2004;29:1326-1334. <a href="https://doi.org/10.1016/j.psyneuen.2004.04.003" target="_blank">doi:10.1016/j.psyneuen.2004.04.003</a></li>
+<li>Reger MA, Watson GS, Green PS, et al. Intranasal insulin administration dose-dependently modulates verbal memory and plasma amyloid-beta in memory-impaired older adults. <em>Journal of Alzheimer's Disease</em>. 2008;13:323-331. <a href="https://doi.org/10.3233/JAD-2008-13309" target="_blank">doi:10.3233/JAD-2008-13309</a></li>
+<li>Sherman SM, Mumford JA, Schnyer DM. Hippocampal activity mediates the relationship between circadian activity rhythms and memory in older adults. <em>Neuropsychologia</em>. 2015;75:617-625. <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">doi:10.1016/j.neuropsychologia.2015.07.020</a></li>
 </ol>
 </section>
 

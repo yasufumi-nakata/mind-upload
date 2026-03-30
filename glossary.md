@@ -5,7 +5,7 @@ description: "A practical glossary of the terms used most often in Mind-Upload, 
 article_type: Reference
 subtitle: "Start by keeping the words straight"
 author: Mind Uploading Research Project
-last_updated: "2026-03-28"
+last_updated: "2026-03-30"
 note: "Living document"
 audience: "Readers who do not want to get stuck on terminology and anyone trying to avoid category mistakes"
 reading_time: "3 to 10 minutes for only the necessary items"
@@ -16,6 +16,7 @@ page_highlights:
   - "It now includes the front-door verification terms added in the March 2026 re-audit, such as claim ceiling, shortcut auditing, maintenance-state, and vascular-state / CVR audit."
   - "It now also includes the human-observability and support-state terms needed after the March 2026 deepening pass, such as proxy class, route maturity / model burden, calibrator role, support-state proxy, and clearance / immune support."
   - "It now also defines the newer route-card semantics added in the late-March 2026 passes, such as field-formation wall, Fusion Card, Human Proxy Composition Card, shared-driver audit, strongest single row, and State-Continuity Bridge Card."
+  - "It now also includes the temporal-bridge stop line added in the 2026-03-30 sync, namely the split between fast state labels and slow internal milieu."
   - "It now also fixes tractography-specific stop-line terms such as macro pathway prior and tractography route card, so living-human connectome language is not overread."
   - "It is especially careful about pairs that sound similar but should not be collapsed, such as observability / identifiability / direct validation and functional connectivity / effective connectivity / causal wiring."
   - "If a term blocks your reading, this page is meant to get you unstuck quickly and send you back to the main text."
@@ -23,6 +24,7 @@ known_points:
   - "Many misunderstandings can be avoided simply by reducing terminology confusion."
   - "It is especially important to distinguish between decode/emulate, correlation/causation, functional connectivity/effective connectivity/causal wiring, observability/identifiability, model fit/direct validation, and brain signal/language prior."
   - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, astrocyte-state, clearance / immune support, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, route-maturity, and calibrator-role language."
+  - "Readers also need a term-level split between fast state labels such as movement / arousal and slow internal milieu such as circadian phase, glucocorticoid exposure, and insulin / metabolic regime."
   - "Readers also need a term-level stop line between connectome as structural scaffold and living-human tractography as an acquisition- and graph-conditioned macro pathway prior."
   - "The newer route-card names are not decorative labels; they each name a distinct failure mode such as upstream visibility loss, cross-stack shared-driver risk, or broken state continuity across a sequential bridge."
   - "This page serves as an entry point for short definitions and a way to return to the main text."
@@ -220,6 +222,13 @@ If names such as <strong>field-formation wall</strong>, <strong>Fusion Card</str
 </p>
 </div>
 
+<div class="note-box">
+<strong>When time-validity words start sounding too similar</strong>
+<p>
+If <strong>state annotation</strong>, <strong>state continuity</strong>, <strong>day-night context</strong>, and <strong>slow internal milieu</strong> start sounding like one thing, return to <a href="wiki/state-trait-and-drift.html">Wiki: state, trait, and drift</a> and <a href="wiki/state-continuity-bridge.html">Wiki: State-Continuity Bridge</a>. On this site, fast labels such as movement or arousal do not automatically cover circadian phase, glucocorticoid exposure, or insulin / metabolic regime.
+</p>
+</div>
+
 <section class="section" id="core">
 <h2 class="section-title">Core concepts</h2>
 <table class="data-table">
@@ -386,11 +395,15 @@ If names such as <strong>field-formation wall</strong>, <strong>Fusion Card</str
 </tr>
 <tr>
 <td><strong>State-Continuity Bridge Card</strong></td>
-<td>The disclosure rule for claims that bridge across live measurement, later fixation, ex vivo follow-up, or cross-day reacquisition. It asks for acquisition order, elapsed time, regime continuity, coordinate transfer, bridge validation, and residual drift ceiling before specimen linkage is promoted to one state sample.</td>
+<td>The disclosure rule for claims that bridge across live measurement, later fixation, ex vivo follow-up, or cross-day reacquisition. It asks for acquisition order, elapsed time, regime continuity including slow internal milieu, coordinate transfer, bridge validation, and residual drift ceiling before specimen linkage is promoted to one state sample.</td>
 </tr>
 <tr>
 <td><strong>Same-state evidence</strong></td>
 <td>Evidence that supports not only <strong>same subject</strong> or <strong>same brain</strong>, but also continuity of the relevant latent state across the bridge being claimed. It is stronger than specimen identity alone and usually requires an explicit bridge audit.</td>
+</tr>
+<tr>
+<td><strong>Slow internal milieu</strong></td>
+<td>The hours-to-days body-state layer that includes circadian phase, recent sleep-wake schedule, glucocorticoid / steroid exposure, and feeding / insulin-metabolic regime. It can shift hippocampal plasticity, memory retrieval, or decoder-relevant neural state even when the visible fast sensory-motor loop looks unchanged. It should not be collapsed either into fast-loop state labels such as movement or arousal, or into the longer-horizon maintenance-state families.</td>
 </tr>
 <tr>
 <td><strong>Specificity &amp; Shortcut Card</strong></td>
@@ -414,7 +427,7 @@ If names such as <strong>field-formation wall</strong>, <strong>Fusion Card</str
 </tr>
 <tr>
 <td><strong>Maintenance-state</strong></td>
-<td>Slow controller and support variables, such as sleep / wake history, post-transcriptional RNA-state, phospho-signaling / second-messenger state, cargo-transport / cytoskeletal trafficking state, thermal-state, ionic state, bioenergetic / mitochondrial support, neurovascular-unit / BBB / pericyte state, astrocyte / glial-state, and clearance-related support, that matter for long-horizon stability.</td>
+<td>Slow controller and support variables, such as sleep / wake history, post-transcriptional RNA-state, phospho-signaling / second-messenger state, cargo-transport / cytoskeletal trafficking state, thermal-state, ionic state, bioenergetic / mitochondrial support, neurovascular-unit / BBB / pericyte state, astrocyte / glial-state, and clearance-related support, that matter for long-horizon stability. It is broader than fast loop state labels, but it is also different from the narrower slow internal milieu of circadian / glucocorticoid / insulin-metabolic regime disclosure.</td>
 </tr>
 <tr>
 <td><strong>Post-transcriptional RNA-state</strong></td>
@@ -811,6 +824,14 @@ Although non-invasive decoding and ESI are making steady progress, a successful 
 <li>Epp, S. M., Castrillón, G., Yuan, B., et al. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
 <li>Lu, X., Han, X., Meirovitch, Y., Sjöstedt, E., Schalek, R. L., &amp; Lichtman, J. W. (2023). Preserving extracellular space for high-quality optical and ultrastructural studies of whole mammalian brains. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
 <li>MICrONS Consortium, Bae, J. A., Bak, J. H., et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
+<li>de Quervain, D. J. F., Roozendaal, B., &amp; McGaugh, J. L. (1998). Stress and glucocorticoids impair retrieval of long-term spatial memory. <a href="https://doi.org/10.1038/29542" target="_blank">doi:10.1038/29542</a></li>
+<li>Oei, N. Y. L., Elzinga, B. M., Wolf, O. T., de Ruiter, M. B., Damoiseaux, J. S., Kuijer, J. P. A., Veltman, D. J., Scheltens, P., &amp; Rombouts, S. A. R. B. (2007). Glucocorticoids decrease hippocampal and prefrontal activation during declarative memory retrieval in young men. <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">doi:10.1007/s11682-007-9003-2</a></li>
+<li>McCauley, J. P., Petroccione, M. A., D'Brant, L. Y., et al. (2020). Circadian modulation of neurons and astrocytes controls synaptic plasticity in hippocampal area CA1. <a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">doi:10.1016/j.celrep.2020.108255</a></li>
+<li>Barone, I., Gillette, N. M., Hawks-Mayer, H., et al. (2023). Synaptic BMAL1 phosphorylation controls circadian hippocampal plasticity. <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">doi:10.1126/sciadv.adj1010</a></li>
+<li>Birnie, M. T., Begum, G., Sugden, D., et al. (2023). Circadian regulation of hippocampal function is disrupted with corticosteroid treatment. <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">doi:10.1073/pnas.2211996120</a></li>
+<li>Benedict, C., Hallschmid, M., Hatke, A., et al. (2004). Intranasal insulin improves memory in humans. <a href="https://doi.org/10.1016/j.psyneuen.2004.04.003" target="_blank">doi:10.1016/j.psyneuen.2004.04.003</a></li>
+<li>Reger, M. A., Watson, G. S., Green, P. S., et al. (2008). Intranasal insulin administration dose-dependently modulates verbal memory and plasma amyloid-beta in memory-impaired older adults. <a href="https://doi.org/10.3233/JAD-2008-13309" target="_blank">doi:10.3233/JAD-2008-13309</a></li>
+<li>Sherman, S. M., Mumford, J. A., &amp; Schnyer, D. M. (2015). Hippocampal activity mediates the relationship between circadian activity rhythms and memory in older adults. <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">doi:10.1016/j.neuropsychologia.2015.07.020</a></li>
 <li>Bérut, A., Arakelyan, A., Petrosyan, A., et al. (2012). Experimental verification of Landauer&rsquo;s principle linking information and thermodynamics. <a href="https://doi.org/10.1038/nature10872" target="_blank">doi:10.1038/nature10872</a></li>
 <li>Attwell, D., &amp; Laughlin, S. B. (2001). An energy budget for signaling in the grey matter of the brain. <a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">doi:10.1097/00004647-200110000-00001</a></li>
 <li>Lynn, C. W., et al. (2021). Broken detailed balance and entropy production in the human brain. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>

@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-28 / Role: Technical / natural science only
+- Updated: 2026-03-30 / Role: Technical / natural science only
 
 ## Role Of This Page
 This page explains how Mind-Upload reads state, trait, and drift when a result spans hours, days, weeks, or months. The point is not only that signals change over time, but that several different time problems coexist: state fluctuation, trait-like backbone, biological drift, interface / decoder drift, and the operational burden of keeping a system usable.
@@ -24,6 +24,7 @@ This page treats state / trait / drift only as technology and natural-science au
 
 ## What Is Currently Known
 - Behavioral state, arousal, uninstructed movement, and spontaneous behavior can dominate apparent same-day neural variance.
+- Circadian phase, glucocorticoid exposure, and insulin / metabolic regime can also move memory or hippocampal plasticity without any change in the recording interface.
 - Population-level structure can remain more stable than individual units, so unit drift and backbone stability must not be collapsed.
 - Longitudinal identifiability can be carried by different objects such as dynamic functional-connectivity windows, EEG spectral profiles, aperiodic components, or nonlinear avalanche dynamics.
 - Fixed-decoder horizon, recalibration burden, and stabilization strategy answer different questions.
@@ -34,6 +35,7 @@ This page treats state / trait / drift only as technology and natural-science au
 - It remains unsettled which backbone object should be the default trait target for WBE-relevant longitudinal claims.
 - It also remains unsettled which fingerprint carriers survive cross-state transfer rather than only same-regime reacquisition.
 - It is also unsettled how far algorithmic stabilization can be extended before changing the claim from fixed-decoder durability to adaptive operation.
+- A shared default logging schema for slow internal-milieu variables across EEG, invasive BCI, and human memory studies is still incomplete.
 
 ---
 
@@ -57,6 +59,11 @@ The core public rule is the <a href="https://mind-upload.com/verification.html#t
 <strong>2026-03-28 addendum: fingerprint success is not yet one backbone object</strong>
 <p>
 The remaining weakness on this page was subtler than simple drift. It already said that <strong>trait</strong> must name a backbone object, but it still left readers too much room to treat any strong person-identification result as if it had measured one universal, state-invariant trait. The newer primary literature does not support that shortcut. <a href="https://doi.org/10.1126/sciadv.abj0751" target="_blank">Van De Ville et al. (2021)</a> showed that functional-connectivity fingerprints depend on timescale and that different network families dominate at different windows. <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a> showed that resting-state EEG individuality can stay robust over runs separated by weeks, but that result is still tied to a named PSD/coherence feature family and recording regime. <a href="https://doi.org/10.1016/j.neuroimage.2023.120260" target="_blank">Sorrentino et al. (2023)</a> then showed that the non-linear, intermittent part of MEG activity can carry more subject-specific information than stationary correlation structure. Finally, <a href="https://doi.org/10.1038/s41598-025-34509-y" target="_blank">Kyllönen et al. (2026)</a> showed across two-night sleep EEG from two sites that robust individual signatures can persist even when across-participant insomnia classification drops to chance. Therefore, on this site, <strong>trait-like backbone</strong> claims now need not only a temporal horizon but also an explicit <strong>backbone / fingerprint object</strong> and the <strong>state regime</strong> in which that object stayed stable.
+</p>
+
+<strong>2026-03-30 addendum: slow internal milieu is part of state annotation, not background noise</strong>
+<p>
+The remaining weakness after the fingerprint update was that this page could still make <strong>state annotation</strong> sound too close to movement, arousal, and day-night labels alone. The primary literature does not support that shortcut. <a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998)</a> showed glucocorticoid-dependent retrieval impairment, <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007)</a> showed hydrocortisone-linked decreases in human hippocampal and prefrontal retrieval activity, <a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">McCauley et al. (2020)</a>, <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone et al. (2023)</a>, and <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">Birnie et al. (2023)</a> showed circadian and corticosteroid-rhythm control of hippocampal plasticity, and <a href="https://doi.org/10.1016/j.psyneuen.2004.04.003" target="_blank">Benedict et al. (2004)</a>, <a href="https://doi.org/10.3233/JAD-2008-13309" target="_blank">Reger et al. (2008)</a>, and <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">Sherman et al. (2015)</a> showed that insulin delivery or circadian-rhythm consistency can shift human memory or hippocampal activity. Therefore, on this site, the same task, same latency, or same decoder window does not imply the same hippocampal operating regime unless <strong>fast labels</strong> and <strong>slow internal-milieu labels</strong> were both disclosed.
 </p>
 
 <strong>When a score looks good but you do not know what time claim it supports</strong>
@@ -84,7 +91,7 @@ The main weakness of the older page was that it separated <strong>state</strong>
 </tr>
 <tr>
 <td><strong>state annotation</strong></td>
-<td>Arousal, spontaneous behavior, movement, task mode, day/night or within-day context, medication or stimulation state, and any other state labels that can move performance.</td>
+<td>Arousal, spontaneous behavior, movement, task mode, day/night or within-day context, circadian phase, recent sleep-wake schedule, glucocorticoid or steroid exposure, feeding / fasting or glucose-insulin regime, medication or stimulation state, and any other state labels that can move performance.</td>
 <td>Do not read uncontrolled day-to-day variation as trait instability if the state itself was left unlogged.</td>
 </tr>
 <tr>
@@ -110,6 +117,11 @@ The main weakness of the older page was that it separated <strong>state</strong>
 The five temporal-validity fields remain necessary, but they are not sufficient when a result is described as a <strong>trait</strong>, <strong>backbone</strong>, or <strong>fingerprint</strong>. In those cases, this site additionally asks which feature family actually carries the longitudinal identity signal, such as dynamic functional connectivity, spectral profile, aperiodic component, avalanche-transition dynamics, or representational geometry, and whether that object was tested only within one regime or across a declared state change.
 </p>
 
+<strong>Fast labels and slow internal milieu are different audits</strong>
+<p>
+Movement, arousal, task mode, and setup explain one family of temporal failures. Circadian phase, steroid exposure, and feeding / insulin-metabolic regime explain another. On this site, both have to be logged when a result is promoted beyond a narrow same-task timing claim.
+</p>
+
 <h2>Why the old three-way split is not enough</h2>
 <p>
 If we say only “state is short-term, trait is stable, drift is change over time,” we still hide the crucial difference between <strong>what changed in the organism</strong> and <strong>what changed in the interface or decoder</strong>. We also hide the difference between a <strong>fixed decoder surviving</strong> and a <strong>system being kept alive by adaptation</strong>. The site therefore reads longitudinal results through four layers first, and then attaches the five temporal-validity fields above.
@@ -126,7 +138,7 @@ If we say only “state is short-term, trait is stable, drift is change over tim
 <tbody>
 <tr>
 <td><strong>state fluctuation</strong></td>
-<td>The momentary condition: arousal, spontaneous behavior, movement, task engagement, sleep pressure, pharmacological state, or time-of-day effects.</td>
+<td>The momentary or short-horizon condition: arousal, spontaneous behavior, movement, task engagement, sleep pressure, circadian phase, glucocorticoid or steroid exposure, feeding / insulin-metabolic state, pharmacological state, or time-of-day effects.</td>
 <td>Seconds to hours, sometimes within one day.</td>
 <td>State labels plus performance or neural-structure differences by state.</td>
 </tr>
@@ -155,7 +167,10 @@ If we say only “state is short-term, trait is stable, drift is change over tim
 
 <h3>1. State annotation is not optional</h3>
 <p>
-It is too weak to treat same-day fluctuation as mere nuisance. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> showed that cortex-wide neural activity during task performance is strongly shaped by uninstructed movements, and <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">Benisty et al. (2024)</a> showed that spontaneous behavior rapidly changes not only activity magnitude but also functional-connectivity structure. More specifically for EEG control, <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> showed that movement-related EEG dynamics vary across a 10-hour day/night window and that robust decoding therefore requires adaptive decoders. On this site, that means <strong>state annotation</strong> is an independent field, not background prose.
+It is too weak to treat same-day fluctuation as mere nuisance or to reduce state annotation to movement and arousal alone. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> showed that cortex-wide neural activity during task performance is strongly shaped by uninstructed movements, and <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">Benisty et al. (2024)</a> showed that spontaneous behavior rapidly changes not only activity magnitude but also functional-connectivity structure. More specifically for EEG control, <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> showed that movement-related EEG dynamics vary across a 10-hour day/night window and that robust decoding therefore requires adaptive decoders.
+</p>
+<p>
+But the same visible fast loop can also cross a slower body-state regime. <a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998)</a> showed glucocorticoid-dependent retrieval impairment, <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007)</a> showed hydrocortisone-linked decreases in human hippocampal and prefrontal retrieval activity, <a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">McCauley et al. (2020)</a>, <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone et al. (2023)</a>, and <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">Birnie et al. (2023)</a> showed circadian and corticosteroid-rhythm control of hippocampal plasticity, and <a href="https://doi.org/10.1016/j.psyneuen.2004.04.003" target="_blank">Benedict et al. (2004)</a>, <a href="https://doi.org/10.3233/JAD-2008-13309" target="_blank">Reger et al. (2008)</a>, and <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">Sherman et al. (2015)</a> showed that insulin delivery or circadian-rhythm consistency can shift human memory or hippocampal activity. On this site, that means <strong>state annotation</strong> has to split <strong>fast labels</strong> from <strong>slow internal-milieu disclosure</strong>; otherwise a same-task result can still hide a different operating regime.
 </p>
 
 <h3>2. Trait-like backbone sits above unit-level immutability</h3>
@@ -188,7 +203,7 @@ Communication-route papers are important, but their time claims still need a sto
 <tbody>
 <tr>
 <td><strong>state annotation</strong></td>
-<td>Arousal / behavior / movement / task-mode labels, and when relevant, time-of-day or sleep-pressure context.</td>
+<td>Arousal / behavior / movement / task-mode labels, and when relevant, time-of-day or sleep-pressure context plus circadian phase, recent sleep-wake schedule, glucocorticoid or steroid exposure, and feeding / fasting or glucose-insulin regime.</td>
 <td>Same-day or cross-day differences cannot be read cleanly as trait or drift.</td>
 </tr>
 <tr>
@@ -231,7 +246,7 @@ Communication-route papers are important, but their time claims still need a sto
 <tbody>
 <tr>
 <td><strong>"The score matched on the same day, so the trait is stable."</strong></td>
-<td>Without state annotation, same-day success can still ride on momentary behavior, arousal, or setup conditions.</td>
+<td>Without state annotation, same-day success can still ride on momentary behavior, arousal, setup conditions, or a different circadian / endocrine-metabolic regime.</td>
 <td>Read as state-level evidence only.</td>
 </tr>
 <tr>
@@ -255,6 +270,11 @@ Communication-route papers are important, but their time claims still need a sto
 <td>Do not promote to long-term deployability without all three fields.</td>
 </tr>
 <tr>
+<td><strong>"The task and fast loop matched, so the biological regime matched."</strong></td>
+<td>Circadian phase, glucocorticoid exposure, and insulin / metabolic regime can shift hippocampal retrieval or plasticity even when the visible loop looks unchanged.</td>
+<td>Read as fast-loop or same-task evidence only unless slow internal-milieu disclosure is present.</td>
+</tr>
+<tr>
 <td><strong>"Participant-specific longitudinal success means generic transfer."</strong></td>
 <td>One-participant success does not close cross-person, cross-site, or cross-task transfer.</td>
 <td>Attach an explicit transfer ceiling.</td>
@@ -272,6 +292,7 @@ Communication-route papers are important, but their time claims still need a sto
 <h4>Rule</h4>
 <ul>
 <li><strong>Do not report time validity in one number:</strong> fixed decoder interval, state annotation, recalibration burden, and transfer ceiling stay separate.</li>
+<li><strong>State annotation must split fast labels from slow internal milieu:</strong> movement, arousal, and task mode do not cover circadian phase, glucocorticoid exposure, or insulin-metabolic regime.</li>
 <li><strong>Trait must name its backbone and fingerprint object:</strong> latent dynamics, representational geometry, functional-connectivity fingerprint, spectral profile, aperiodic component, avalanche-transition dynamics, or another explicit object.</li>
 <li><strong>Person-identification is not enough by itself:</strong> say which object carried the identity signal, over which timescale, and whether it survived a declared state change or only same-regime repeats.</li>
 <li><strong>Adaptive rescue must be visible:</strong> if alignment or recalibration was used, say so and report the cost.</li>
@@ -297,4 +318,12 @@ Communication-route papers are important, but their time claims still need a sto
 <li>Wilson GH, Stein EA, Kamdar F, et al. Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <em>Nature Biomedical Engineering</em>. 2025. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
 <li>Littlejohn KT, Cho CJ, Liu JR, et al. A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <em>Nature Neuroscience</em>. 2025;28:1318-1328. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
 <li>Wairagkar M, Card NS, Singer-Clark T, et al. An instantaneous voice-synthesis neuroprosthesis. <em>Nature</em>. 2025;644:145-152. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+<li>de Quervain DJF, Roozendaal B, McGaugh JL. Stress and glucocorticoids impair retrieval of long-term spatial memory. <em>Nature</em>. 1998;394:787-790. <a href="https://doi.org/10.1038/29542" target="_blank">doi:10.1038/29542</a></li>
+<li>Oei NYL, Elzinga BM, Wolf OT, de Ruiter MB, Damoiseaux JS, Kuijer JPA, Veltman DJ, Scheltens P, Rombouts SARB. Glucocorticoids decrease hippocampal and prefrontal activation during declarative memory retrieval in young men. <em>Brain Imaging and Behavior</em>. 2007;1:31-41. <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">doi:10.1007/s11682-007-9003-2</a></li>
+<li>McCauley JP, Petroccione MA, D'Brant LY, et al. Circadian modulation of neurons and astrocytes controls synaptic plasticity in hippocampal area CA1. <em>Cell Reports</em>. 2020;33:108255. <a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">doi:10.1016/j.celrep.2020.108255</a></li>
+<li>Barone I, Gillette NM, Hawks-Mayer H, et al. Synaptic BMAL1 phosphorylation controls circadian hippocampal plasticity. <em>Science Advances</em>. 2023;9:eadj1010. <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">doi:10.1126/sciadv.adj1010</a></li>
+<li>Birnie MT, Begum G, Sugden D, et al. Circadian regulation of hippocampal function is disrupted with corticosteroid treatment. <em>Proceedings of the National Academy of Sciences of the United States of America</em>. 2023;120:e2211996120. <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">doi:10.1073/pnas.2211996120</a></li>
+<li>Benedict C, Hallschmid M, Hatke A, et al. Intranasal insulin improves memory in humans. <em>Psychoneuroendocrinology</em>. 2004;29:1326-1334. <a href="https://doi.org/10.1016/j.psyneuen.2004.04.003" target="_blank">doi:10.1016/j.psyneuen.2004.04.003</a></li>
+<li>Reger MA, Watson GS, Green PS, et al. Intranasal insulin administration dose-dependently modulates verbal memory and plasma amyloid-beta in memory-impaired older adults. <em>Journal of Alzheimer's Disease</em>. 2008;13:323-331. <a href="https://doi.org/10.3233/JAD-2008-13309" target="_blank">doi:10.3233/JAD-2008-13309</a></li>
+<li>Sherman SM, Mumford JA, Schnyer DM. Hippocampal activity mediates the relationship between circadian activity rhythms and memory in older adults. <em>Neuropsychologia</em>. 2015;75:617-625. <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">doi:10.1016/j.neuropsychologia.2015.07.020</a></li>
 </ol>
