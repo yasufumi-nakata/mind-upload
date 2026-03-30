@@ -8,7 +8,7 @@ article_type: Wiki
 subtitle: Being consistent with observation, understanding internal states, and understanding
   cause and effect are different things.
 author: Mind Uploading Research Project
-last_updated: '2026-03-30'
+last_updated: '2026-03-31'
 note: Technical / natural science only
 audience: People who want to organize inverse problems and the limitations of causal
   models based on primary literature
@@ -24,7 +24,8 @@ page_highlights:
 - Inverse problems are not evaluated solely by the solver name, but are also audited
   for geometry, conductivity, uncertainty, and external validation.
 - For ESI, cross-solver / cross-parameter disagreement is itself evidence about uncertainty,
-  so one best map is not accepted here as the whole answer.
+  but probabilistic, debiased, and extent-aware inverse families still expose different
+  uncertainty objects rather than one interchangeable answer.
 - This page now separates observability, structural identifiability, and practical
   identifiability so richer measurements are not overread as uniqueness.
 - "Different ambiguity classes need different remedies: symmetry-breaking observables, regime design, model-discrepancy stress tests, and task-interaction perturbations are not interchangeable."
@@ -54,7 +55,8 @@ known_points:
 - Simultaneous multimodal acquisition can still retain shared and modality-specific
   structure, so a richer stack does not by itself define one validated latent target.
 - For ESI, method/package/parameter choice can materially move the estimated source,
-  so stability across standard pipelines is part of the claim.
+  and probabilistic / debiased / extent-aware inverse families do not report the same
+  claim object by default.
 - In effective connectivity, hidden nodes/common drives, node-definition choices,
   and sampling or observation transforms are separate failure modes; a winning model
   comparison does not erase them.
@@ -405,6 +407,53 @@ Bayesian / empirical Bayes / sparse Bayesian learning is a good candidate for<st
 The weak point here was to separate solver name from audit items, but still leave room for a reader to overtrust one polished map. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">Mahjoory et al. (2017)</a> showed that inverse-method and software-package choice induces considerable variability and explicitly encouraged verifying results with more than one source-imaging procedure. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a> then showed on intracranial-stimulation ground truth that only a small fraction of tested solutions reached the session-wise optimum. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a> further showed that skull/skin conductivity uncertainty can move reconstructed depth and localization. Therefore, on this site, one best inverse map is read only as a <strong>candidate solution</strong> unless the paper also exposes <strong>cross-solver / cross-parameter spread</strong> or a <strong>posterior / ensemble width</strong>.
 </p>
 </div>
+<div class="note-box">
+<strong>2026-03-31 deepening: inverse-family labels still hide different source regimes and uncertainty objects</strong>
+<p>
+The remaining weakness was to ask for <strong>cross-solver spread</strong> as if every inverse family were estimating the same scientific object. Current primary literature does not support that shortcut. <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a> expose posterior support and alternative configurations for focal-source hypotheses, <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a> target sparse spatial-temporal source imaging with debiased estimation and inference, and <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> target extended-source reconstruction with empirical-Bayesian uncertainty maps. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a> further showed that conductivity uncertainty shifts localization differently across source geometry and depth regimes. Therefore, on this site, inverse families are not read on one generic leaderboard: before an anatomical claim is raised, the paper must disclose <strong>source regime and target object</strong>, <strong>uncertainty object</strong>, <strong>forward-model uncertainty route</strong>, <strong>validation board / operating regime</strong>, and <strong>abstention boundary</strong>. If those are missing, cross-family disagreement is not collapsed into a winner.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Inverse-family route-card field</th>
+<th>What must be named</th>
+<th>What misreading it blocks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Source regime and target object</strong></td>
+<td>Whether the method is targeting focal support, a sparse spatial-temporal set, an extended source extent, or another named source regime.</td>
+<td>A solver that is strong for focal recovery is not silently promoted to a generic winner for extended or spontaneous sources.</td>
+</tr>
+<tr>
+<td><strong>Uncertainty object</strong></td>
+<td>State whether the paper reports posterior support, ensemble width, debiased intervals / tests, extent-overlap maps, or only headline location spread.</td>
+<td>Different uncertainty outputs are not collapsed into one interchangeable ``confidence'' number.</td>
+</tr>
+<tr>
+<td><strong>Forward-model uncertainty route</strong></td>
+<td>Report how conductivity, head-model, CSF, electrode-coordinate, and orientation sensitivity were stress-tested or propagated into the displayed map.</td>
+<td>A polished inverse map is not overread as if upstream physics were already fixed.</td>
+</tr>
+<tr>
+<td><strong>Validation board / operating regime</strong></td>
+<td>Name whether the evidence comes from known-site stimulation, focal in-vivo benchmark, simultaneous invasive concordance, extended-source simulation, or another explicit board.</td>
+<td>Success in one board is not transferred automatically to another source regime.</td>
+</tr>
+<tr>
+<td><strong>Cross-family comparison rule</strong></td>
+<td>Compare inverse families only after matching the source regime, uncertainty object, and parameter window; then report overlap, spread, or disagreement instead of a generic winner.</td>
+<td>Method comparison is not mistaken for universal source recovery.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Name when disagreement across inverse families or conductivity sweeps is large enough that the claim stays at the method-conditioned source-hypothesis level.</td>
+<td>Readers are not pushed toward anatomical certainty when the compatible solution set is still wide.</td>
+</tr>
+</tbody>
+</table>
 </section>
 
 <section class="section" id="dcm">
@@ -652,7 +701,9 @@ DCM is useful for comparing neural circuit candidate generation models, and SCM 
 <li>Mikulan, E., Russo, S., Bares, M., et al. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <em>Scientific Data</em>, 7, 127. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
 <li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Direct validation of EEG source imaging by intracranial electric stimulation in human patients. <em>Brain Communications</em>, 5(1), fcad023. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
 <li>Vorwerk, J., Wolters, C. H., &amp; Baumgarten, D. (2024). Global sensitivity of EEG source analysis to tissue conductivity uncertainties. <em>Frontiers in Human Neuroscience</em>, 18, 1335212. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">doi:10.3389/fnhum.2024.1335212</a></li>
+<li>Luria, G., Viani, S., Pascarella, A., et al. (2024). The SESAMEEG package: a probabilistic tool for source localization and uncertainty quantification in M/EEG. <em>Frontiers in Human Neuroscience</em>, 18, 1359753. <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">doi:10.3389/fnhum.2024.1359753</a></li>
 <li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <em>Epilepsia</em>, 66(11), 4451-4464. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
+<li>Tong, P. F., Yang, H., Ding, X., et al. (2025). Debiased estimation and inference for spatial-temporal EEG/MEG source imaging. <em>IEEE Transactions on Medical Imaging</em>. <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">doi:10.1109/TMI.2024.3506596</a></li>
 <li>Feng, Z., Mishne, G., Hashemi, A., et al. (2025). Block-Champagne: Imaging extended E/MEG source activation with empirical Bayesian uncertainty quantification. <em>IEEE Transactions on Medical Imaging</em>. <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">doi:10.1109/TMI.2025.3642620</a></li>
 <li>Friston, K. J., Harrison, L., &amp; Penny, W. (2003). Dynamic causal modelling. <em>NeuroImage</em>, 19(4), 1273-1302. <a href="https://doi.org/10.1016/S1053-8119(03)00202-7" target="_blank">doi:10.1016/S1053-8119(03)00202-7</a></li>
 <li>Penny, W. D., Stephan, K. E., Mechelli, A., &amp; Friston, K. J. (2004). Comparing dynamic causal models. <em>NeuroImage</em>, 22(3), 1157-1172. <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">doi:10.1016/j.neuroimage.2004.03.026</a></li>
