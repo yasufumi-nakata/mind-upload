@@ -4,10 +4,10 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-29 / Role: Technical / natural science only
+- Updated: 2026-03-31 / Role: Technical / natural science only
 
 ## Role Of This Page
-This page organizes uncertainty, confidence intervals, calibration, and abstention in EEG source imaging, EEG classification, language decoding, and closed-loop BCI using primary literature. It is not only about how much to trust a number when it appears, but also about which output space was fixed in advance and when output should stop.
+This page organizes uncertainty, confidence intervals, calibration, and abstention in EEG source imaging, EEG classification, language decoding, and closed-loop BCI using primary literature. It is not only about how much to trust a number when it appears, but also about which output space was fixed in advance, which uncertainty object is actually being reported, and when output should stop.
 
 
 ## Accuracy Notes
@@ -30,6 +30,7 @@ This page prioritizes technical and natural-science audit items over textbook co
 - Head geometry, conductivity, subject shift, session drift, and decoder drift all strongly affect estimated width and real-world performance.
 - If fit / calibration / test separation is ambiguous, the meaning of confidence and thresholds collapses.
 - Even with high accuracy, poor calibration can still produce overconfident wrong answers under low-confidence conditions.
+- In EEG source imaging, inverse family, target object, uncertainty object, forward-model uncertainty, and validation board are separate burdens; one width or one validator is not enough.
 - In language-facing outputs, top-k success or confidence from a fixed candidate bank, known-onset protocol, or prompt scaffold should not be read as open-world uncertainty.
 - Structural pass/fail rules for language-facing confidence are route-specific even when the numeric thresholds remain task-dependent.
 - Online BCI requires not only latency, but also abstention rate, dropout, recalibration burden, and recovery time.
@@ -44,7 +45,7 @@ This page prioritizes technical and natural-science audit items over textbook co
 
 <h2>Conclusion</h2>
 <p>
-This site does not treat <strong>point estimates only</strong>, <strong>uncalibrated confidence only</strong>, or <strong>output without abstention conditions</strong> as strong evidence. The four points to be audited first are <strong>where does the uncertainty come from</strong>, <strong>which split and evaluation family was used to calibrate the probability/interval/prediction set</strong>, <strong>where to stop when reliability is low</strong>, and <strong>how to record the recalibration load in the case of an online system</strong>. In the re-audit in March 2026, we did not end this with an auxiliary explanation, but connected it to <a href="https://mind-upload.com/verification.html#calibration-abstention-card">Verification's Calibration &amp; Abstention Card</a>.
+This site does not treat <strong>point estimates only</strong>, <strong>uncalibrated confidence only</strong>, <strong>untyped source-imaging widths</strong>, or <strong>output without abstention conditions</strong> as strong evidence. The four points to be audited first are <strong>where does the uncertainty come from</strong>, <strong>which split and evaluation family was used to calibrate the probability/interval/prediction set</strong>, <strong>where to stop when reliability is low</strong>, and <strong>how to record the recalibration load in the case of an online system</strong>. In the re-audit in March 2026, we did not end this with an auxiliary explanation, but connected it to <a href="https://mind-upload.com/verification.html#calibration-abstention-card">Verification's Calibration &amp; Abstention Card</a>.
 </p>
 
 <strong>Scope of this page</strong>
@@ -55,6 +56,11 @@ I am not going to deal with philosophy or legal systems here. We sort out uncert
 <strong>2026-03 Weaknesses revealed in re-audit</strong>
 <p>
 The previous version was useful as a support page for teaching <strong>confidence ≠ calibration</strong>, but it had not yet become a <strong>reusable submission specification</strong> like the Observability Budget or Temporal Validity Card. Looking at the primary literature, it is dangerous to directly extrapolate within-session calibration to cross-day / cross-subject / temporal shift, and if you touch the threshold without separating fit / calibration / test, the evidence gate itself will collapse. In addition, the earlier page still let language-facing outputs sound too generic: a retrieval score from a fixed bank, a top-k score at known word onsets, and a prompt-conditioned LLM output were still too easy to misread as if they all expressed the same kind of uncertainty. Therefore, on this page, split, slice, candidate scaffold, coverage-risk, and fallback policy are fixed together as <strong>Calibration &amp; Abstention Card</strong>, and language-facing outputs are explicitly stacked with the <a href="https://mind-upload.com/verification.html#neural-contribution-card">Neural Contribution Card</a>.
+</p>
+
+<strong>2026-03-31 correction: source-imaging uncertainty is not one generic width</strong>
+<p>
+This page still lagged behind the site's newer source-imaging rule. It was already correct to say that <strong>point estimates are too weak</strong>, but it still left too much room to read <strong>posterior band</strong>, <strong>solver spread</strong>, <strong>conductivity sensitivity</strong>, and <strong>external-validator distance</strong> as if they were interchangeable uncertainty objects. The current primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">Mahjoory et al. (2017)</a> showed large pipeline-conditioned variability across inverse methods and toolboxes, <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a> showed strong conductivity-driven localization and depth error, <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a> described posterior support over focal-source configurations, <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a> derived variance and hypothesis tests for a sparse debiased estimator, and <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> targeted extended-source location-plus-extent reconstruction with empirical-Bayesian uncertainty quantification. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a> and <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> then show that external validators themselves answer different error questions. This page now types the uncertainty object before it allows confidence language.
 </p>
 
 <h2>Four audit gates to be fixed first</h2>
@@ -74,8 +80,8 @@ The previous version was useful as a support page for teaching <strong>confidenc
 </tr>
 <tr>
 <td><strong>Gate 2: Proofreading</strong></td>
-<td>Separation of fit/calibration/test, coverage of intervals and sets, ECE/Brier/NLL, posterior width, slice-wise calibration audit, and declared output scaffold when the task is language-facing. </td>
-<td>confidence and posterior cannot be read as usable probabilities or confidence levels. </td>
+<td>Separation of fit/calibration/test, coverage of intervals and sets, ECE/Brier/NLL, named uncertainty object (such as posterior support, debiased interval, extent uncertainty, or cross-pipeline spread), slice-wise calibration audit, and declared output scaffold when the task is language-facing. </td>
+<td>confidence, posterior, or interval width cannot be read as usable probabilities, calibrated coverage, or one generic uncertainty scale. </td>
 </tr>
 <tr>
 <td><strong>Gate 3: Abstain</strong></td>
@@ -332,8 +338,8 @@ The important thing is not to talk about uncertainty in one box. Source imaging 
 <tbody>
 <tr>
 <td><strong>EEG source imaging</strong></td>
-<td>Posterior / interval width, cranial conductivity sensitivity, solver comparison, empirical coverage for external validator. </td>
-<td>This is because multiple source configurations can explain the same scalp signal. </td>
+<td>Inverse family / target object, uncertainty object, forward-model uncertainty route, cross-family comparison rule, named validation board / operating regime, and abstention boundary.</td>
+<td>The same scalp data can support different focal, sparse, or extent-aware uncertainty objects, so one width is not a generic confidence scale.</td>
 </tr>
 <tr>
 <td><strong>Offline EEG classification</strong></td>
@@ -360,9 +366,57 @@ The important thing is not to talk about uncertainty in one box. Source imaging 
 
 <h2>What the primary literature actually shows</h2>
 
-<h3>1. For source imaging, estimation without width is too much reading</h3>
+<h3>1. For source imaging, width without a typed uncertainty object is still too much reading</h3>
 <p>
-Vorwerk et al. showed that uncertainty in head tissue conductivity greatly affects dipole reconstruction, and Rimpiläinen et al. included uncertainty in source localization itself in estimation by treating unknown skull conductivity in a Bayesian manner. In Feng et al.'s Block-Champagne, the important thing is not the solver name itself, but the fact that it is accompanied by empirical Bayesian uncertainty quantification. Therefore, on this site, we first check ``which width and external validation was shown'' rather than ``which solver''.
+The current source-imaging literature no longer supports the shortcut that any reported <strong>width</strong> or <strong>posterior</strong> can be treated as one common confidence object. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">Mahjoory et al. (2017)</a> showed substantial cross-pipeline variability across forward models, inverse methods, and software implementations. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a> showed that tissue-conductivity uncertainty can drive localization and depth errors, especially for quasi-tangential sources on sulcal walls. <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a> describe a Bayesian focal-source route that returns posterior support over alternative source configurations. <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a> derive variance and hypothesis testing for a sparse debiased estimator, while <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> target the locations and spatial extents of extended sources with empirical-Bayesian uncertainty quantification. These are not one interchangeable width. In parallel, <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a> and <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> show that external validators themselves answer different error questions. Therefore, on this site, source-imaging uncertainty is not accepted unless the <strong>inverse family</strong>, <strong>target object</strong>, <strong>uncertainty object</strong>, <strong>forward-model uncertainty route</strong>, and <strong>named validation board</strong> are all declared.
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Uncertainty object</th>
+<th>Representative literature</th>
+<th>What it actually describes</th>
+<th>What it must not be treated as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cross-pipeline spread</strong></td>
+<td><a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">Mahjoory et al. (2017)</a></td>
+<td>Variability across forward models, inverse methods, templates, and software implementations on the same data.</td>
+<td>A calibrated posterior or a confidence interval for one fixed inverse family.</td>
+</tr>
+<tr>
+<td><strong>Forward-model / conductivity sensitivity</strong></td>
+<td><a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a>; <a href="https://doi.org/10.1016/j.neuroimage.2018.11.058" target="_blank">Rimpil&auml;inen et al. (2019)</a></td>
+<td>How geometry and tissue-conductivity uncertainty move localization, depth, or magnitude.</td>
+<td>Solver-internal uncertainty about source support when upstream physics is treated as fixed.</td>
+</tr>
+<tr>
+<td><strong>Posterior support over focal-source configurations</strong></td>
+<td><a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a></td>
+<td>Probability mass over candidate focal-source number and configuration under a Bayesian focal-source model.</td>
+<td>A debiased interval for sparse amplitudes or an extent-aware uncertainty map for spatially extended sources.</td>
+</tr>
+<tr>
+<td><strong>Debiased interval / test uncertainty for sparse activity</strong></td>
+<td><a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a></td>
+<td>Variance-aware inference for sparse source amplitude, orientation, and depth after debiasing regularized estimates.</td>
+<td>A posterior over alternative source configurations or an uncertainty map for arbitrary spatial extent.</td>
+</tr>
+<tr>
+<td><strong>Extent-aware empirical-Bayesian uncertainty</strong></td>
+<td><a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a></td>
+<td>Uncertainty tied to the locations and spatial extents of extended sources.</td>
+<td>Peak-only confidence for focal solutions or one generic ``better uncertainty'' label.</td>
+</tr>
+</tbody>
+</table>
+
+<strong>External validation is also not one generic coverage claim</strong>
+<p>
+<a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a> provide a precisely known stimulation-site board for focal localization under simultaneous intracerebral stimulation and HD-EEG, whereas <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> use simultaneous HD-EEG and SEEG in drug-resistant epilepsy and show regime-dependent accuracy tied to source depth and spike power. On this site, those do not collapse into one generic ``external validator'' field. A named board is required because different boards answer different error questions.
 </p>
 
 <h3>2. In EEG classification, calibration without fixing split and shift is reading too much</h3>
@@ -445,7 +499,7 @@ Wairagkar et al.'s instantaneous voice-synthesis neuroprosthesis showed a low-la
 <li><strong>Separate fit/calibration/test:</strong>Temperature scaling, threshold tuning, and conformal score are managed as independent splits, and they are not readjusted by looking at the test. </li>
 <li><strong>Calibration is issued for each evaluation family:</strong>Do not read within-session ECE or coverage as cross-day / cross-subject / temporal shift reliability. </li>
 <li><strong>Language-facing scores must disclose their scaffold:</strong>Fixed candidate banks, known onsets, prompt tokens, beam search, and language-model priors are reported before score or fluency is read as neural uncertainty. </li>
-<li><strong>Source imaging requires breadth and sensitivity analysis:</strong>If the solutions overlap due to differences in cranial conductivity, head model, and solver family, do not force them to collapse into one point. </li>
+<li><strong>Source imaging requires typed uncertainty objects, not one generic width:</strong>Separate cross-pipeline spread, forward-model sensitivity, focal posterior support, sparse debiased intervals, extent-aware uncertainty, and the named validation board before reading confidence strongly. </li>
 <li><strong>EEG classification gives coverage-risk:</strong>Do not pass with accuracy alone, include ECE/Brier/NLL, slice-wise calibration, and coverage after abstention. </li>
 <li><strong>Set-valued / conformal results also reveal assumptions:</strong>Do not hide marginal / conditional / temporal validity, set size, or exchangeability / time-order rule. </li>
 <li><strong>Manage false alarms separately for seizure prediction and rare events:</strong>In addition to sensitivity, include false alarm cost and threshold control as key metrics. </li>
@@ -457,9 +511,14 @@ Wairagkar et al.'s instantaneous voice-synthesis neuroprosthesis showed a low-la
 
 <h2>References</h2>
 <ol>
-<li>Vorwerk, J., Aydin, U., Wolters, C. H., &amp; Butson, C. R. (2019). Influence of Head Tissue Conductivity Uncertainties on EEG Dipole Reconstruction. <em>Frontiers in Neuroscience</em>, 13, 531. <a href="https://doi.org/10.3389/fnins.2019.00531" target="_blank">doi:10.3389/fnins.2019.00531</a></li>
+<li>Mahjoory, K., Nikulin, V. V., Botrel, L., Linkenkaer-Hansen, K., Fato, M. M., &amp; Haufe, S. (2017). Consistency of EEG source localization and connectivity estimates. <em>NeuroImage</em>, 152, 590-601. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">doi:10.1016/j.neuroimage.2017.02.076</a></li>
+<li>Vorwerk, J., Wolters, C. H., &amp; Baumgarten, D. (2024). Global sensitivity of EEG source analysis to tissue conductivity uncertainties. <em>Frontiers in Human Neuroscience</em>, 18, 1335212. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">doi:10.3389/fnhum.2024.1335212</a></li>
 <li>Rimpiläinen, I., Solis-Lemus, J. A., &amp; Särkkä, S. (2019). Improved EEG source localization with Bayesian uncertainty modelling of unknown skull conductivity. <em>NeuroImage</em>, 184, 52-60. <a href="https://doi.org/10.1016/j.neuroimage.2018.11.058" target="_blank">doi:10.1016/j.neuroimage.2018.11.058</a></li>
+<li>Luria, G., Viani, A., Pascarella, A., Bornfleth, H., Sommariva, S., &amp; Sorrentino, A. (2024). The SESAMEEG package: a probabilistic tool for source localization and uncertainty quantification in M/EEG. <em>Frontiers in Human Neuroscience</em>, 18, 1359753. <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">doi:10.3389/fnhum.2024.1359753</a></li>
+<li>Tong, P. F., Yang, H., Ding, X., Ding, Y., Geng, X., An, S., Wang, G., &amp; Chen, S. X. (2025). Debiased Estimation and Inference for Spatial-Temporal EEG/MEG Source Imaging. <em>IEEE Transactions on Medical Imaging</em>, 44(3), 1480-1493. <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">doi:10.1109/TMI.2024.3506596</a></li>
 <li>Feng, Z., Guan, C., &amp; Sun, Y. (2025). Block-Champagne: A Novel Bayesian Framework for Imaging Extended E/MEG Source. <em>IEEE Transactions on Medical Imaging</em>. <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">doi:10.1109/TMI.2025.3642620</a></li>
+<li>Mikulan, E., Russo, S., Parmigiani, S., Sarasso, S., Zauli, F. M., Rubino, A., Avanzini, P., Cattani, A., Sorrentino, A., Gibbs, S., Cardinale, F., Sartori, I., Nobili, L., Massimini, M., &amp; Pigorini, A. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <em>Scientific Data</em>, 7, 127. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
+<li>Hao, S., Zhao, H., Feng, Z., Liu, W., Zhang, C., Ping, H., Zhou, Q., Sun, B., Zhan, S., &amp; Cao, C. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <em>Epilepsia</em>, 66(11), 4451-4464. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
 <li>Ovadia, Y., Fertig, E., Ren, J., Nado, Z., Sculley, D., Nowozin, S., Dillon, J. V., Lakshminarayanan, B., &amp; Snoek, J. (2019). Can You Trust Your Model's Uncertainty? Evaluating Predictive Uncertainty Under Dataset Shift. <a href="https://papers.nips.cc/paper_files/paper/2019/hash/8558cb408c1d76621371888657d2eb1d-Abstract.html" target="_blank">NeurIPS 2019</a></li>
 <li>Han, E., Huang, C., &amp; Wang, K. (2024). Model Assessment and Selection under Temporal Distribution Shift. <em>Proceedings of Machine Learning Research</em>, 235. <a href="https://proceedings.mlr.press/v235/han24b.html" target="_blank">PMLR 235</a></li>
 <li>Tang, J., LeBel, A., Jain, S., &amp; Huth, A. G. (2023). Semantic reconstruction of continuous language from non-invasive brain recordings. <em>Nature Neuroscience</em>, 26, 858-866. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
