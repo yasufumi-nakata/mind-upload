@@ -5,8 +5,8 @@ description: "A research note that audits theories, measurement paths, and imple
 article_type: Perspective
 subtitle: "Audit the hypothesis of reproducing brain information processing on another substrate through the barriers of measurability, identifiability, and maintenance state"
 author: Mind Uploading Research Project
-last_updated: '2026-03-30'
-note: "Research note (updated with the March 2026 re-audit, the 2026-03-29 causal-model addendum, the 2026-03-29 thermodynamic-route sync, the 2026-03-29 deuterium-route split, and the 2026-03-30 same-brain-connectomics ceiling sync)"
+last_updated: '2026-03-31'
+note: "Research note (updated with the March 2026 re-audit, the 2026-03-29 causal-model addendum, the 2026-03-29 thermodynamic-route sync, the 2026-03-29 deuterium-route split, the 2026-03-30 same-brain-connectomics ceiling sync, and the 2026-03-31 electrical-state family split)"
 audience: "Readers who want to follow theory all the way into implementation, including limits and objections"
 reading_time: "30-45 min"
 page_intro: "This page is a long research note that follows the theoretical, measurement, and implementation questions around mind uploading while keeping primary literature and hard limits side by side. It is written to separate what can reasonably be claimed now from what remains unresolved, rather than leaning into either pure optimism or pure pessimism."
@@ -15,6 +15,7 @@ page_highlights:
   - "It does not stop at introducing theories; it follows the constraints that appear when those theories are pushed toward implementation."
   - "The page now separates local connectomics, human structural scaffold evidence, synaptic-density PET, receptor / transporter atlas priors, occupancy PET target-engagement routes, challenge-linked displacement / release PET routes, biochemical similarity scaffolds, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, localized functional 31P NAD-dynamics, deuterium metabolite-mapping / absolute-quantification, deuterium kinetic-rate imaging, quantity-defined ionic / thermal / myelin routes, BBB water-exchange and tracer-specific transport routes, target-defined astrocyte PET, clearance support-state proxies, and hemodynamic transfer audits instead of collapsing them into one 'multimodal' advance."
   - "The connectome-dynamics gap is now written as 18 maintenance-state families plus a separate shared electrical-state class, rather than a loose warning that wiring alone is not enough."
+  - "Shared extracellular / electrical-state evidence is now also split inside that class: gap-junction networks, endogenous-field / ephaptic routes, extracellular-space geometry / osmotic routes, inhibitory-driving-force routes, and bounded human clues are not read as one inferential object."
   - "The stronger the claim, the more explicitly it is checked against falsification criteria, alternative explanations, and abstention conditions."
   - "Human proxy class, operational maturity, and calibrator role are kept separate, so proxy-rich evidence is not silently read as field-ready or family-complete state identification."
   - "Living-human proxy bundles now stay behind an explicit composition rule: quantity type, calibrator role, model / hardware burden, common-driver audit, and gain beyond the strongest single row must be disclosed before state-identification language."
@@ -26,7 +27,8 @@ known_points:
   - "No major theory has become a decisive standalone answer at this point."
   - "EEG alone is constrained by inverse-problem uncertainty and spatial resolution limits, so it is insufficient as the sole basis for strong claims."
   - "Progress in local connectomics or source imaging does not imply state-complete observation of the human whole brain."
-  - "Human whole-brain evidence remains layered and proxy-based; no current route directly fixes current transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local electrical-coupling / inhibitory-driving-force regime, ECM / PNN gate state, local proteostasis / synaptic-tag capture, cargo-routing state, neuromodulatory occupancy / release state, chloride set point, neurovascular-unit / BBB / pericyte controller state, or branch-local mitochondrial positioning."
+  - "Human whole-brain evidence remains layered and proxy-based; no current route directly fixes current transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local electrical-coupling / extracellular-geometry / inhibitory-driving-force regime, ECM / PNN gate state, local proteostasis / synaptic-tag capture, cargo-routing state, neuromodulatory occupancy / release state, chloride set point, neurovascular-unit / BBB / pericyte controller state, or branch-local mitochondrial positioning."
+  - "Current human evidence for shared extracellular / electrical state remains bounded to proxy or perturbation clues; it does not directly reveal coupling topology, extracellular-volume geometry, or local inhibitory-driving-force regime across the living whole brain."
   - "Proxy-rich human evidence and deployment-ready measurement are different claims; sample size, model burden, hardware specialization, and fusion status remain separate ceilings."
   - "Several living-human proxy rows can move together while still constraining different quantities or shared autonomic / vascular drivers, so same-session agreement is not yet same-subject state closure."
   - "Hemodynamic modalities carry vascular transfer / CVR uncertainty in addition to neural-side uncertainty."
@@ -880,6 +882,48 @@ href="#ref-28">[28]</a></sup>.</li>
 <p><a href="https://doi.org/10.1038/47029">Galarreta &amp; Hestrin (1999)</a>, <a href="https://doi.org/10.1038/nn.2727">Anastassiou et al. (2011)</a>, <a href="https://doi.org/10.1016/j.neuron.2023.08.005">Burman et al. (2023)</a>, <a href="https://doi.org/10.1073/pnas.2313042121">Yang et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41467-024-53074-y">Selfe et al. (2024)</a> show that shared extracellular / electrical state can alter synchrony outside the chemical synapse graph, while <a href="https://doi.org/10.1038/ncomms13289">Reimer et al. (2016)</a>, <a href="https://doi.org/10.1038/s41593-022-01186-3">Hansen et al. (2022)</a>, and <a href="https://doi.org/10.1016/j.celrep.2024.114808">Neyhart et al. (2024)</a> show that neuromodulatory specificity is not one mood scalar but a split among mixed arousal proxies, receptor / transporter priors, and local transmitter routes. <a href="https://doi.org/10.1016/j.cell.2013.12.042">Rangaraju et al. (2014)</a>, <a href="https://doi.org/10.1016/j.cell.2018.12.013">Rangaraju et al. (2019)</a>, <a href="https://doi.org/10.1016/j.neuron.2018.09.025">Divakaruni et al. (2018)</a>, <a href="https://doi.org/10.1038/s41467-023-44233-8">Bapat et al. (2024)</a>, and <a href="https://doi.org/10.1038/s42003-025-08963-3">Hu et al. (2025)</a> show that branch-local bioenergetic / mitochondrial support remains consequential. Separately, <a href="https://doi.org/10.1016/j.neuron.2010.09.043">Bell et al. (2010)</a>, <a href="https://doi.org/10.1016/j.neuron.2023.08.030">Pandey et al. (2023)</a>, <a href="https://doi.org/10.7554/eLife.89611">Swissa et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41467-025-61312-0">Mai-Morente et al. (2025)</a> show that neurovascular-unit / BBB / pericyte state is not only a measurement-side vascular confound but another maintenance-side controller, while <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012">Padrela et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-025-58356-7">Chung et al. (2025)</a> still remain macro permeability routes rather than cell-specific controller readouts. <a href="https://doi.org/10.1016/j.cell.2011.02.018">Suzuki et al. (2011)</a>, <a href="https://doi.org/10.1038/s41586-024-07311-5">Cahill et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-08170-w">Williamson et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09619-2">Dewa et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-10068-0">Bukalo et al. (2026)</a> show that astrocyte-state is part of active maintenance rather than generic background, and <a href="https://doi.org/10.1038/nature14432">Louveau et al. (2015)</a>, <a href="https://doi.org/10.1038/s41586-019-1419-5">Ahn et al. (2019)</a>, <a href="https://doi.org/10.1093/brain/awaa443">Eide &amp; Ringstad (2021)</a>, <a href="https://doi.org/10.1016/j.cell.2025.02.022">Kim et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8">Dagum et al. (2026)</a> show that clearance / immune support is another measurable but still coarse support-state layer.</p>
 
 <div class="note-box">
+<strong>2026-03-31 correction: shared extracellular / electrical state is not one inferential object</strong>
+<p>The remaining weakness on this central page was that even after separating <strong>shared extracellular / electrical state</strong> from the <strong>eighteen maintenance-state families</strong>, the electrical row could still be read as one hidden-state bucket. The primary literature does not support that compression. <a href="https://doi.org/10.1038/47029">Galarreta &amp; Hestrin (1999)</a> is about <strong>gap-junction network topology</strong>. <a href="https://doi.org/10.1038/nn.2727">Anastassiou et al. (2011)</a> is about <strong>endogenous-field / ephaptic spike-timing bias</strong>. <a href="https://doi.org/10.1523/JNEUROSCI.4493-13.2014">Graydon et al. (2014)</a>, <a href="https://doi.org/10.1002/jnr.20871">Kilb et al. (2006)</a>, <a href="https://doi.org/10.1177/1759091415605115">Lauderdale et al. (2015)</a>, and <a href="https://doi.org/10.1126/science.1241224">Xie et al. (2013)</a> constrain <strong>extracellular-space geometry / dilution / osmotic regime</strong> rather than electrical-synapse topology. <a href="https://doi.org/10.1016/j.neuron.2023.08.005">Burman et al. (2023)</a> and <a href="https://doi.org/10.1038/s41467-024-53074-y">Selfe et al. (2024)</a> constrain <strong>inhibitory driving-force regime</strong>, with the latter using a specialized direct optical assay rather than a field-ready whole-brain route. <a href="https://doi.org/10.1073/pnas.2313042121">Yang et al. (2024)</a> then shows <strong>activity-dependent electrical-synapse remodeling</strong>, which is again not the same object as a fixed gap-junction graph. On the human side, <a href="https://doi.org/10.1016/j.neuroimage.2020.116682">Voldsbekk et al. (2020)</a> remains a <strong>diffusion-MRI clue</strong> about wakefulness-related extracellular-space change, while <a href="https://doi.org/10.1111/ejn.70401">Feld et al. (2026)</a> remains a <strong>sleep-perturbation clue</strong> that electrical synapses matter for declarative-memory retention. Therefore, this page no longer permits `electrical-state evidence exists` to be translated into `the shared extracellular / electrical regime was measured` unless the claim also says <strong>which family</strong>, <strong>which direct observable</strong>, <strong>which spatial regime</strong>, and <strong>which human ceiling</strong> apply.</p>
+</div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>shared extracellular / electrical family</th>
+<th>what the cited papers directly constrain</th>
+<th>safe ceiling on this page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>gap-junction network routes</strong><br><a href="https://doi.org/10.1038/47029">Galarreta &amp; Hestrin (1999)</a>; <a href="https://doi.org/10.1073/pnas.2313042121">Yang et al. (2024)</a></td>
+<td>Electrical coupling topology between named cells and activity-dependent engagement / disengagement of those junctional routes in local preparations.</td>
+<td><strong>Local electrical-coupling route</strong>, not proof that a chemical connectome or nominal inhibitory edge list already fixes the electrical regime.</td>
+</tr>
+<tr>
+<td><strong>endogenous-field / ephaptic routes</strong><br><a href="https://doi.org/10.1038/nn.2727">Anastassiou et al. (2011)</a></td>
+<td>Field-driven spike-timing bias under local endogenous electric-field geometry.</td>
+<td><strong>Local ephaptic clue</strong>, not a generic certificate that field effects matched across preparations or scales.</td>
+</tr>
+<tr>
+<td><strong>extracellular-space geometry / osmotic routes</strong><br><a href="https://doi.org/10.1523/JNEUROSCI.4493-13.2014">Graydon et al. (2014)</a>; <a href="https://doi.org/10.1002/jnr.20871">Kilb et al. (2006)</a>; <a href="https://doi.org/10.1177/1759091415605115">Lauderdale et al. (2015)</a>; <a href="https://doi.org/10.1126/science.1241224">Xie et al. (2013)</a></td>
+<td>Extracellular-volume geometry, neurotransmitter dilution, osmotic contraction / edema-linked excitability, and sleep-linked interstitial-space expansion.</td>
+<td><strong>Extracellular-space route family</strong>, not direct whole-brain proof that the same graph implies the same spillover, dilution, or state-switch regime.</td>
+</tr>
+<tr>
+<td><strong>inhibitory driving-force routes</strong><br><a href="https://doi.org/10.1016/j.neuron.2023.08.005">Burman et al. (2023)</a>; <a href="https://doi.org/10.1038/s41467-024-53074-y">Selfe et al. (2024)</a></td>
+<td>State-dependent shunting versus driving inhibition in active cortex and direct optical reporting of inhibitory receptor driving force in specialized preparations.</td>
+<td><strong>Local inhibitory-regime route</strong>, not a routine whole-brain readout of local E<sub>GABA</sub> or electrotonic state.</td>
+</tr>
+<tr>
+<td><strong>human clue layer</strong><br><a href="https://doi.org/10.1016/j.neuroimage.2020.116682">Voldsbekk et al. (2020)</a>; <a href="https://doi.org/10.1111/ejn.70401">Feld et al. (2026)</a></td>
+<td>Wakefulness-related diffusion-MRI evidence consistent with extracellular-space change in white matter and a pharmacological sleep-perturbation clue that electrical synapses contribute to declarative-memory retention.</td>
+<td><strong>Bounded human clue class</strong>, not direct ground truth of coupling topology, extracellular-space geometry, or local inhibitory-driving-force regime in the living whole brain.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
 <strong>How this page now counts the latent-state burden</strong>
 <p>
 On this page, the maintenance-side taxonomy follows the site's current rule of <strong>18 maintenance-state families</strong> in <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic Plasticity and Maintenance State</a>, while <strong>shared extracellular / electrical state</strong> remains a separate class linked to the <a href="wiki/connectome-is-not-enough.html#electrical-state-route-card">Wiki: electrical-state route card</a>. This keeps maintenance mechanisms and electrical-regime claims from being silently collapsed into one generic hidden-state bucket.
@@ -962,8 +1006,8 @@ On this page, the maintenance-side taxonomy follows the site's current rule of <
 </tr>
 <tr>
 <td><strong>Shared extracellular / electrical state</strong></td>
-<td>Gap-junction coupling, endogenous field effects, and local inhibitory driving force can still shift fast synchrony and spike timing outside the chemical synapse graph.</td>
-<td>Do not treat a chemical connectome as proof that the local electrotonic regime also matched.</td>
+<td>Gap-junction coupling, endogenous field effects, extracellular-space geometry / diffusion barriers / osmotic regime, and local inhibitory driving force can still shift fast synchrony and spike timing outside the chemical synapse graph.</td>
+<td>Do not treat a chemical connectome, a nominal inhibitory edge list, or a bounded human perturbation clue as proof that the local electrotonic regime also matched.</td>
 </tr>
 <tr>
 <td><strong>Neuromodulatory specificity / transmitter context</strong></td>
@@ -1828,6 +1872,17 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <li id="ref-144" value="144">Novelli, L., Barnett, L., Seth, A. K., &amp; Razi, A. (2025). Minimum-Phase Property of the Hemodynamic Response Function, and Implications for Granger Causality in fMRI. <em>Human Brain Mapping</em>, 46(10), e70285. <a href="https://doi.org/10.1002/hbm.70285">doi:10.1002/hbm.70285</a></li>
 <li id="ref-145" value="145">Villaverde, A. F., Tsiantis, N., &amp; Banga, J. R. (2019). Full observability and estimation of unknown inputs, states and parameters of nonlinear biological models. <em>Journal of The Royal Society Interface</em>, 16(156), 20190043. <a href="https://doi.org/10.1098/rsif.2019.0043">doi:10.1098/rsif.2019.0043</a></li>
 <li id="ref-146" value="146">Yan, J., Zhang, S.-W., Zhang, C., Huang, W., Shi, J., &amp; Chen, L. (2026). Dynamical Causality under Latent Confounders for Biological Network Reconstruction. <em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em>. <a href="https://doi.org/10.1109/TPAMI.2026.3658839">doi:10.1109/TPAMI.2026.3658839</a></li>
+<li id="ref-147" value="147">Galarreta, M., &amp; Hestrin, S. (1999). A network of fast-spiking cells in the neocortex connected by electrical synapses. <em>Nature</em>, 402, 72–75. <a href="https://doi.org/10.1038/47029">doi:10.1038/47029</a></li>
+<li id="ref-148" value="148">Anastassiou, C. A., Perin, R., Markram, H., &amp; Koch, C. (2011). Ephaptic coupling of cortical neurons. <em>Nature Neuroscience</em>, 14, 217–223. <a href="https://doi.org/10.1038/nn.2727">doi:10.1038/nn.2727</a></li>
+<li id="ref-149" value="149">Graydon, C. W., Cho, S., Diamond, J. S., Kachar, B., von Gersdorff, H., &amp; Grimes, W. N. (2014). Specialized postsynaptic morphology enhances neurotransmitter dilution and high-frequency signaling at an auditory synapse. <em>Journal of Neuroscience</em>, 34(23), 7871–7885. <a href="https://doi.org/10.1523/JNEUROSCI.4493-13.2014">doi:10.1523/JNEUROSCI.4493-13.2014</a></li>
+<li id="ref-150" value="150">Kilb, W., Dierkes, P. W., Syková, E., Vargová, L., &amp; Luhmann, H. J. (2006). Hypoosmolar conditions reduce extracellular volume fraction and enhance epileptiform activity in the CA3 region of the immature rat hippocampus. <em>Journal of Neuroscience Research</em>, 84(2), 361–371. <a href="https://doi.org/10.1002/jnr.20871">doi:10.1002/jnr.20871</a></li>
+<li id="ref-151" value="151">Lauderdale, K., Murphy, T., Tung, T., Davila, D., Binder, D. K., &amp; Fiacco, T. A. (2015). Osmotic edema rapidly increases neuronal excitability through activation of NMDA receptor-dependent slow inward currents in juvenile and adult hippocampus. <em>ASN Neuro</em>, 7(5). <a href="https://doi.org/10.1177/1759091415605115">doi:10.1177/1759091415605115</a></li>
+<li id="ref-152" value="152">Xie, L., Kang, H., Xu, Q., Chen, M. J., Liao, Y., Thiyagarajan, M., O'Donnell, J., Christensen, D. J., Nicholson, C., Iliff, J. J., Takano, T., Deane, R., &amp; Nedergaard, M. (2013). Sleep drives metabolite clearance from the adult brain. <em>Science</em>, 342(6156), 373–377. <a href="https://doi.org/10.1126/science.1241224">doi:10.1126/science.1241224</a></li>
+<li id="ref-153" value="153">Burman, R. J., Brodersen, P. J. N., Raimondo, J. V., Sen, A., &amp; Akerman, C. J. (2023). Active cortical networks promote shunting fast synaptic inhibition <em>in vivo</em>. <em>Neuron</em>, 111(22), 3545–3560.e6. <a href="https://doi.org/10.1016/j.neuron.2023.08.005">doi:10.1016/j.neuron.2023.08.005</a></li>
+<li id="ref-154" value="154">Yang, Y.-C., Wang, G.-H., Chou, P., Hsueh, S.-W., Lai, Y.-C., &amp; Kuo, C.-C. (2024). Dynamic electrical synapses rewire brain networks for persistent oscillations and epileptogenesis. <em>Proceedings of the National Academy of Sciences</em>, 121(8), e2313042121. <a href="https://doi.org/10.1073/pnas.2313042121">doi:10.1073/pnas.2313042121</a></li>
+<li id="ref-155" value="155">Selfe, J. S., Steyn, T. J. S., Shorer, E. F., Burman, R. J., Düsterwald, K. M., Kraitzick, A. Z., Ju, C., Goldman, P. S., Ibrahim, B. A., Syed, P., Li, L., Akerman, C. J., Kullmann, D. M., Raimondo, J. V., &amp; Baker, C. A. (2024). All-optical reporting of inhibitory receptor driving force in the nervous system. <em>Nature Communications</em>, 15, 9752. <a href="https://doi.org/10.1038/s41467-024-53074-y">doi:10.1038/s41467-024-53074-y</a></li>
+<li id="ref-156" value="156">Voldsbekk, I., Maximov, I. I., Zak, N., Roelfs, D., Geier, O., Due-Tønnessen, P., Elvsåshagen, T., Strømstad, M., Bjørnerud, A., &amp; Groote, I. (2020). Evidence for wakefulness-related changes to extracellular space in human brain white matter from diffusion-weighted MRI. <em>NeuroImage</em>, 212, 116682. <a href="https://doi.org/10.1016/j.neuroimage.2020.116682">doi:10.1016/j.neuroimage.2020.116682</a></li>
+<li id="ref-157" value="157">Feld, G. B., Niethard, N., Liu, J., Gebhardt, S., Kleist, L., Brugger, K., &amp; Born, J. (2026). Electrical synapses contribute to sleep-dependent declarative memory retention. <em>European Journal of Neuroscience</em>. <a href="https://doi.org/10.1111/ejn.70401">doi:10.1111/ejn.70401</a></li>
 </ol>
 </section>
 
