@@ -33,11 +33,11 @@ recommended_pages:
 
 # U0-2 temporal-validity route packet
 
-This page does not change the current public six-question batch. It makes only the third active row more explicit, so readers can see why `U0-2` stays next after `U13-5`, why `D02 CSTE` remains primary, and what the next public-safe artifact can honestly close.
+This page does not change the current public six-question batch. It makes only the third active row more explicit, so readers can see why `U0-2` stays next after `U13-5`, why `D02 CSTE` now stays only as a gated support anchor, and what the next public-safe artifact can honestly close.
 
 ## What was rechecked for this row
 
-- `D02 CSTE` still gives an immediate DOI route with `10 participants`, explicit `cross-session / cross-task` EEG biometrics wording, and `BrainVision / BrainAmp / actiCHamp` equipment metadata.
+- `D02 CSTE` still fixes the intended `10 participants` cross-session / cross-task EEG biometrics route, but the current IEEE DataPort page is subscription-gated, so it can no longer be described here as an immediate public route.
 - The current funding bridge remains narrow and unchanged: `Nakatani Foundation graduate scholarship` stays first and `Kashinome Scholarship` stays second as a runway-support route.
 - The public six-question batch also stays unchanged: `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
 
@@ -47,11 +47,11 @@ This page does not change the current public six-question batch. It makes only t
 - If this row fails, stronger threshold-stability wording should stay blocked because the timing floor itself would still be unbounded.
 - The row can audit measurement error before identity-like wording expands into a broader continuity claim.
 
-## Why `D02` is primary and other candidates stay secondary
+## Why `D02` stays in scope only as a gated support anchor
 
 | Candidate | What it helps with | Why it is not the first public anchor |
 |---|---|---|
-| `D02 CSTE` (`10.21227/j162-nh61`, immediate) | It keeps an explicit `cross-session / cross-task` biometric route with `10 participants`, which is the cleanest present floor for a bounded `offset / jitter + state-feature collapse` audit. | It stays the primary anchor in this run. |
+| `D02 CSTE` (`10.21227/j162-nh61`, subscription-gated support) | It still fixes the intended `cross-session / cross-task` biometric floor with `10 participants`, which keeps the bounded `offset / jitter + state-feature collapse` question in scope if access is available. | The current IEEE DataPort page is subscription-gated, so it no longer counts as an immediate public anchor in this run. |
 | `A test-retest resting and cognitive state EEG dataset` (`10.18112/openneuro.ds004148.v1.0.1`, immediate) | It gives a richer test-retest state ladder and a larger cohort that may help later stress-test timing-validity assumptions. | It is not framed as a direct cross-task EEG biometrics route, so it stays a support anchor rather than the first public anchor for `U0-2`. |
 | `A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`, immediate) | It gives denser multi-session logging and a strong secondary route for synchronization and state-label auditing. | It is multimodal and experience-sampling oriented rather than a clean EEG biometrics floor, so it should not replace `D02` as the first public anchor for `U0-2`. |
 

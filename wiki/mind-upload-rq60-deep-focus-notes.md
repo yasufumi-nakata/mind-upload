@@ -45,8 +45,9 @@ recommended_pages:
 
 - This run rechecked the live public route, the current official funding windows, and a Todoist full-item audit after the latest `EEG-DATA` upstream additions.
 - The current public six-question batch still stays `U13-2/U13-5/U14-4/U0-2/U0-3/U14-2`, and the solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
-- The newest upstream `EEG-DATA` additions remain outside the current speech / identity / reproducibility anchor family, so they do not replace `D10/D02` as the stronger primary anchors and do not widen the claim ceiling of `D03/D01`.
+- The newest upstream `EEG-DATA` additions remain outside the current speech / identity / reproducibility anchor family, so they do not replace `D10` as the only clearly public-open primary anchor and do not turn `D03/D02/D01` into immediate public routes.
 - Funding-window recheck in this run still supports the same narrow route: `Kura Fund` remains open through `2026-04-17 17:00`, the `Nakatani Foundation graduate scholarship` still runs `2026-04-01 - 2026-05-25 15:00`, the `Kashinome Scholarship` remains open through `2026-04-09`, and `Secom General Research Grant` remains a watch route through `2026-03-31 12:00`.
+- A March 31 access audit at `2026-03-31 00:20 JST` also means earlier March 30 notes that called `D03/D02/D01` immediate public anchors should now be read as superseded. Those three stay only as subscription-gated support anchors on the public route.
 - Todoist still did not need a new item in this run. The full-item audit continues to show the relevant family coverage already present (`Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom family=3`, `AI for Aging-Society Problem Solving=0`).
 
 ## Post-pull revalidation hold (2026-03-30 00:11 JST)

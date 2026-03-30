@@ -33,11 +33,11 @@ recommended_pages:
 
 # U13-5 perception-to-recall route packet
 
-This page does not change the current public six-question batch. It makes only the second active row more explicit, so readers can see why `U13-5` still stays next after `U13-2`, why `D03` remains primary for the present branch-point question, and what the next public-safe artifact can honestly close.
+This page does not change the current public six-question batch. It makes only the second active row more explicit, so readers can see why `U13-5` still stays next after `U13-2`, why `D03` now stays only as a gated support anchor for the present branch-point question, and what the next public-safe artifact can honestly close.
 
 ## What was rechecked for this row
 
-- `D03 Multimodal Fusion EEG + Eye-Tracking` still gives an immediate DOI route with paired EEG, gaze, and related physiological streams, which is enough to keep the perception-to-recall branch point bounded.
+- `D03 Multimodal Fusion EEG + Eye-Tracking` still fixes the intended paired EEG + gaze route for this row, but the current IEEE DataPort page is subscription-gated, so it can no longer be described here as an immediate public route.
 - The current funding bridge remains narrow and unchanged: `Kura Fund` stays the first route and `Nakatani Foundation graduate scholarship` stays second.
 - The public six-question batch also stays unchanged: `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
 
@@ -47,11 +47,11 @@ This page does not change the current public six-question batch. It makes only t
 - The row can test where a shared decoder begins to fail when the route moves from perception to recall without pretending that shared decoder structure already proves shared mechanism.
 - If this row fails, stronger mimicry / mechanism wording should stay blocked for the current public route.
 
-## Why `D03` is primary and other candidates stay secondary
+## Why `D03` stays in scope only as a gated support anchor
 
 | Candidate | What it helps with | Why it is not the first public anchor |
 |---|---|---|
-| `D03 Multimodal Fusion EEG + Eye-Tracking` (`10.21227/6106-6120`, immediate) | It keeps paired EEG and gaze in one immediately accessible package, which is enough to freeze a bounded perception-to-recall branch point. | It stays the primary anchor in this run. |
+| `D03 Multimodal Fusion EEG + Eye-Tracking` (`10.21227/6106-6120`, subscription-gated support) | It still fixes the intended paired EEG + gaze target, which is enough to keep the bounded perception-to-recall branch-point question in scope if access is available. | The current IEEE DataPort page is subscription-gated, so it no longer counts as an immediate public anchor in this run. |
 | `D10 3M-CPSEED` (`10.18112/openneuro.ds006465.v2.0.0`, immediate) | It gives a richer speech-side control family with overt, silent-intended, and imagined speech, and it remains the strongest nearby support anchor. | It is better for neural-contribution control than for a paired perception-to-recall branch-point reading, so it stays support rather than primary for `U13-5`. |
 | `D09 VICODEV` (`10.21227/r8fc-2y40`, account required) | It adds multimodal distraction and control-condition structure that may help later failure-mode design. | It is access-gated and centered on a driving-distraction scenario rather than the present recall-transfer question, so it should not be the first public anchor for `U13-5`. |
 | `CuBiAAD` (`10.21227/18vd-6870`, account required) | It is a stronger speech-side adjunct candidate because it combines mixed-speech auditory attention with EEG and released audio materials. | It is still access-gated and is not the current public route's first bounded anchor for a perception-to-recall packet. |

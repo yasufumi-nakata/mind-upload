@@ -18,12 +18,13 @@
 
 ## 2026-03-31 00:04 JST overnight route-hold note
 
-This run still does not change the current public six-question batch. The added value is not a new batch switch but a stronger reason for the hold: the latest `EEG-DATA` upstream additions remain outside the current speech / identity / reproducibility anchor family, so they do not replace `D10/D02` as the stronger primary anchors and do not justify broader wording for `D03/D01`.
+This run still does not change the current public six-question batch. The added value is not a new batch switch but a stronger reason for the hold: the latest `EEG-DATA` upstream additions remain outside the current speech / identity / reproducibility anchor family, `D10` remains the only clearly public-open primary anchor, and `D03/D02/D01` now have to be read only as subscription-gated support anchors rather than immediate public anchors.
 
 - The public six still stay `U13-2 / U13-5 / U14-4 / U0-2 / U0-3 / U14-2`.
 - The solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
 - Official-window recheck at `2026-03-31 00:04 JST` still supports the same narrow funding bridge: `Kura Fund = 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome = 2026-04-09`, and `Secom General Research Grant = 2026-03-31 12:00`.
 - Todoist action still stays conservative in this run. The full-item audit continues to show the current route already covered (`Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom family=3`), so no new task was added.
+- Earlier March 30 notes on this page that called `D03/D02/D01` immediate public anchors should now be read as superseded by the March 31 access audit.
 
 ## 2026-03-30 live evidence note for the current public six
 

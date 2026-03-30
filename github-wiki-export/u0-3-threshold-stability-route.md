@@ -25,11 +25,11 @@ This page does not claim personhood continuity or branch-identity resolution. It
 
 # U0-3 threshold-stability route packet
 
-This page does not change the current public six-question batch. It makes only the fourth active row more explicit, so readers can see why `U0-3` stays next after `U0-2`, why `D02 CSTE` remains primary, and what the next public-safe artifact can honestly close.
+This page does not change the current public six-question batch. It makes only the fourth active row more explicit, so readers can see why `U0-3` stays next after `U0-2`, why `D02 CSTE` now stays only as a gated support anchor, and what the next public-safe artifact can honestly close.
 
 ## What was rechecked for this row
 
-- `D02 CSTE` still gives an immediate DOI route with repeated sessions, explicit `cross-session / cross-task` EEG biometrics wording, and a clean identity-drift floor that matches `U0-2`.
+- `D02 CSTE` still fixes the intended repeated-session, cross-session / cross-task identity-drift floor that matches `U0-2`, but the current IEEE DataPort page is subscription-gated, so it can no longer be described here as an immediate public route.
 - The current funding bridge remains narrow and unchanged: `Nakatani Foundation graduate scholarship` stays first and `Kashinome Scholarship` stays second as a runway-support route.
 - The public six-question batch also stays unchanged: `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
 
@@ -39,11 +39,11 @@ This page does not change the current public six-question batch. It makes only t
 - If this row fails, stronger threshold-stability wording should stay blocked because the route would still be unable to separate bounded identity drift from split-specific overfit.
 - The row can keep threshold selection narrow and benchmark-like before any broader continuity language is attempted.
 
-## Why `D02` is primary and other candidates stay secondary
+## Why `D02` stays in scope only as a gated support anchor
 
 | Candidate | What it helps with | Why it is not the first public anchor |
 |---|---|---|
-| `D02 CSTE` (`10.21227/j162-nh61`, immediate) | It keeps repeated sessions and cross-task biometric splits on the same floor as `U0-2`, which is the cleanest current route for `threshold stability + overfit exclusion`. | It stays the primary anchor in this run. |
+| `D02 CSTE` (`10.21227/j162-nh61`, subscription-gated support) | It still fixes the intended repeated-session and cross-task floor shared with `U0-2`, which keeps the `threshold stability + overfit exclusion` question in scope if access is available. | The current IEEE DataPort page is subscription-gated, so it no longer counts as an immediate public anchor in this run. |
 | `A test-retest resting and cognitive state EEG dataset` (`10.18112/openneuro.ds004148.v1.0.1`, immediate) | It gives a richer session-external retest ladder that may later stress-test how stable the threshold rule remains outside the present biometric framing. | It is useful as a retest adjunct, but it is not the cleanest direct identity-drift floor for the first public threshold packet. |
 | `A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`, immediate) | It gives denser multi-session state labels and richer logging that may later support threshold-stability stress tests under stronger state drift. | It is multimodal and experience-sampling oriented rather than the narrowest current EEG-only threshold floor, so it stays a support anchor. |
 

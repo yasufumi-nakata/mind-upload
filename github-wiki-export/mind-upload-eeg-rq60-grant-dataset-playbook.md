@@ -41,9 +41,9 @@ A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-f
 - Current grant-card entities are `G3-G6`, and the practical shortlist is now fixed in [AoyamaLab/auto-research-funds wiki: Mind-Upload-Current-Funding-Shortlist](https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md).
 - The six currently revalidated deep-focus RQs are `U13-2`, `U13-5`, `U14-4`, `U0-2`, `U0-3`, and `U14-2`.
 - The public route is now intentionally concentrated on `inner-speech decoding + identity drift + reproducibility auditing`, with `D10/D03/D01/D02` used as the conservative anchor family.
-- Inside that anchor family, `D10/D02` are the strongest current primary anchors. `D03/D01` stay useful for the public route, but they should be read as bounded route-setting anchors until the first artifacts and logs are denser.
+- A March 31 access audit at `2026-03-31 00:20 JST` narrows the current reading: `D10` is the only clearly public-open primary anchor in this family. `D03`, `D02`, and `D01` currently resolve to IEEE DataPort pages that show `LOGIN TO ACCESS DATASET FILES` and `Subscription Required`, so public wording should treat them only as subscription-gated support anchors.
 - The practical funding bridge for this batch is led by `Nakatani Foundation graduate scholarship` and `Kura Fund`; the `Kashinome Scholarship` stays only as a student-runway side route, and the `Nakatani Foundation research grant` remains a watch-mode route rather than a current open call.
-- The overnight March 31 recheck still leaves the route unchanged after the latest `EEG-DATA` upstream additions, because those additions do not replace the current `D10/D02` primary anchors or raise the claim ceiling of `D03/D01`.
+- The overnight March 31 recheck still leaves the route unchanged after the latest `EEG-DATA` upstream additions, because those additions do not replace `D10` as the public-open anchor and do not turn `D03/D02/D01` into immediate public routes.
 - Relevant Todoist tasks for the practical shortlist already existed before this run, and the full-item audit still shows `Kura=2`, `Nakatani family=11`, `Kashinome=2`, and `Secom family=3`, so no new task was created in this run.
 - For submission-ready references, prefer `Dxx + DOI + dataset name + access class` over numeric search IDs.
 - The six current public rows below are now synchronized to `Dxx + DOI + dataset name + access class`, so the playbook no longer needs numeric search IDs for `U13-2/U13-5/U14-4/U0-2/U0-3/U14-2`.
@@ -51,7 +51,7 @@ A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-f
 
 ## Anchor-strength recheck (2026-03-30 05:07 JST)
 
-This run keeps the same public six-RQ batch and the same practical submission routes. What changed is the reading discipline for the current anchors after a post-pull `EEG-DATA` reread, a live-site check, an official-window recheck, and a read-only Todoist recheck. `D10` and `D02` remain the stronger primary anchors for first artifacts. `D03` and `D01` remain useful, but they should still be treated as bounded support anchors until a richer speech-side or benchmark-style adjunct is added.
+This run keeps the same public six-RQ batch and the same practical submission routes. What changed is the access reading for the current anchors after a post-pull `EEG-DATA` reread, a live-site check, an official-window recheck, and a read-only Todoist recheck. `D10` remains the only clearly public-open primary anchor for first artifacts. `D03`, `D02`, and `D01` remain useful only as subscription-gated support anchors, and earlier March 30 notes that called them immediate public routes should now be read as superseded by the March 31 access audit.
 
 | RQ | Current anchor class | Funding route to keep now | Why this route still fits | Adjunct before stronger proposal wording |
 |---|---|---|---|---|

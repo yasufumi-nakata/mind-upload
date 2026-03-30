@@ -53,12 +53,13 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 
 ## Current six-RQ route after the March 31 overnight recheck
 
-This run still does not change the current public batch or the solve-first order. What changed is the confidence of the hold: the latest `EEG-DATA` upstream additions remain outside the current six-row anchor family, so they do not replace `D10/D02` as the stronger primary anchors and do not widen the claim ceiling of `D03/D01`.
+This run still does not change the current public batch or the solve-first order. What changed is the access reading of the hold: the latest `EEG-DATA` upstream additions remain outside the current six-row anchor family, `D10` remains the only clearly public-open primary anchor, and `D03/D02/D01` now need to be read only as subscription-gated support anchors on the public route.
 
 - The batch still stays `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
 - The order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
 - Official-window recheck at `2026-03-31 00:04 JST` still keeps the same practical route: `Kura Fund = 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome = 2026-04-09`, `Secom General Research Grant = 2026-03-31 12:00`.
 - Todoist still did not need a new item in this run because the full-item audit keeps the route families already covered (`Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom family=3`, `AI for Aging-Society Problem Solving=0`).
+- Earlier March 30 notes on this page that called `D03/D02/D01` immediate public routes should now be read as superseded by the March 31 access audit.
 
 ## Current six-RQ route after the March 30 live recheck
 

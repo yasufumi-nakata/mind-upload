@@ -33,11 +33,11 @@ recommended_pages:
 
 # U14-2 fixed-split route packet
 
-This page does not change the current public six-question batch. It makes only the sixth active row more explicit, so readers can see why `U14-2` stays after `U14-4`, why `D01 Acquisition delay of wireless EEG` remains the present bounded entry point, and what the next public-safe artifact can honestly close.
+This page does not change the current public six-question batch. It makes only the sixth active row more explicit, so readers can see why `U14-2` stays after `U14-4`, why `D01 Acquisition delay of wireless EEG` now stays only as a gated support entry point, and what the next public-safe artifact can honestly close.
 
 ## What was rechecked for this row
 
-- `D01 Acquisition delay of wireless EEG` still gives an immediate DOI route for a latency-first measurement package, which is enough to keep an exploration-versus-confirmation split operational and measurable at a narrow rerun-contract level.
+- `D01 Acquisition delay of wireless EEG` still fixes the intended latency-first measurement route, but the current IEEE DataPort page is subscription-gated, so it can no longer be described here as an immediate public route.
 - The current funding bridge remains narrow and unchanged: `Kura Fund` stays first, `Nakatani Foundation research grant` stays next-cycle watch, and `Secom General Research Grant` stays an urgency-watch route only.
 - The public six-question batch also stays unchanged: `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
 
@@ -47,11 +47,11 @@ This page does not change the current public six-question batch. It makes only t
 - If this row fails, broader confirmatory-readiness wording should stay blocked because the route would still be missing a measurable split boundary.
 - The row can close a narrow contract artifact with EEG alone before any stronger rerun-robustness language is attempted.
 
-## Why `D01` is primary and other candidates stay secondary
+## Why `D01` stays in scope only as a gated support anchor
 
 | Candidate | What it helps with | Why it is not the first public anchor |
 |---|---|---|
-| `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`, immediate) | It keeps the split rule close to a latency-first measurement contract, which is enough to make `exploration vs confirmation` operational before richer benchmark diversity is added. | It stays the primary anchor in this run. |
+| `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`, subscription-gated support) | It still fixes the intended latency-first split boundary, which is enough to keep the `exploration vs confirmation` question in scope if access is available. | The current IEEE DataPort page is subscription-gated, so it no longer counts as an immediate public anchor in this run. |
 | `D13 A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications` (`10.17632/vyczny2r4w`, immediate) | It is the strongest nearby public adjunct for richer split-violation examples and a broader rerun family once the first contract has been fixed. | It is better as a richer rerun adjunct than as the first bounded split anchor, so it stays secondary. |
 | `D08 Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods` (`10.21227/7may-9q56`, immediate) | It gives a stronger validation-style benchmark that may later support more explicit negative-case and rerun-audit examples. | It is too validation-heavy and not as direct a split-governance entry point as the current latency route, so it stays support rather than primary for `U14-2`. |
 
