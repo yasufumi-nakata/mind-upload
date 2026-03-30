@@ -1,31 +1,23 @@
----
-layout: default
-title: "Mind-upload Current Public Six: EEG Route Brief"
-description: "A public-safe row-by-row brief for the six mind-upload research questions currently being translated into bounded EEG-ready work packages."
-article_type: Wiki
-subtitle: "A narrow route brief, not a solved-claim update"
-author: Mind Uploading Research Project
-last_updated: "2026-03-30"
-note: "Current public six"
-audience: "Readers who want the present one-question-at-a-time EEG route without overreading the claim"
-reading_time: "8-12 minutes"
-page_intro: "This page fixes the current public six-question route at the level of one RQ, one bounded anchor, one first artifact, and one funding sentence."
-wiki_links:
-  - label: "Wiki: RQ-by-RQ deep dossiers"
-    url: "/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html"
-    description: "The longer working dossier for the current public six and the wider 60RQ map."
-  - label: "Wiki: Grant and dataset playbook"
-    url: "/wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html"
-    description: "The route from each RQ to the current bounded funding lane and EEG anchor."
-recommended_pages:
-  - label: "Issue page"
-    url: "/issue.html"
-  - label: "Deep focus notes"
-    url: "/wiki/mind-upload-rq60-deep-focus-notes.html"
----
+# Mind-upload Current Public Six: EEG Route Brief
 
-<main class="main-container">
-<article class="content-column">
+> A narrow route brief, not a solved-claim update
+>
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+
+- Updated: 2026-03-30 / Role: Current public six
+
+## Role Of This Page
+This page fixes the current public six-question route at the level of one RQ, one bounded anchor, one first artifact, and one funding sentence.
+
+## Back To Public Pages
+- [Issue page](https://mind-upload.com/issue.html)
+- [Deep focus notes](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes)
+
+## Related Wiki Pages
+- [Wiki: RQ-by-RQ deep dossiers](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers) - The longer working dossier for the current public six and the wider 60RQ map.
+- [Wiki: Grant and dataset playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - The route from each RQ to the current bounded funding lane and EEG anchor.
+
+---
 
 # Mind-upload Current Public Six: EEG Route Brief
 
@@ -101,6 +93,3 @@ It does **not** announce solved claims. It only states what the current public r
 - It does not replace the wider `60RQ` map.
 - It does not expand the public batch beyond the current six.
 - It does not move theory, law, neurorights, or full identity questions into an EEG-only solved state.
-
-</article>
-</main>

@@ -48,6 +48,22 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `B`: 25件
 - `C`: 18件
 
+## Current six-RQ route after the March 30 live recheck
+
+This run does not change the current public batch or the solve-first order. What it adds is a stricter reading rule for the active six rows: `D10` and `D02` stay the strong primary anchors, while `D03` and `D01` stay useful but bounded support anchors. The public route therefore remains narrow on purpose.
+
+| RQ | Current EEG-DATA anchor | Why this anchor still works as the first bridge | Immediate funding route kept in place | Keep outside the EEG claim |
+|---|---|---|---|---|
+| `U13-2` | `D10 3M-CPSEED` | The local EEG-DATA mirror still preserves an immediate-access OpenNeuro route with overt, silent-intended, and imagined speech across `20 participants x 4 sessions`, which is the cleanest current floor for a `brain-minus-prior` audit. | `Kura Fund` first, `Nakatani Foundation graduate scholarship` second. | Do not treat decoder success as preserved internal mechanism or mind preservation. |
+| `U13-5` | `D03 Multimodal Fusion EEG + Eye-Tracking` | The current mirror still exposes paired EEG and gaze streams under an immediate DOI route, which is enough to keep the perception-to-recall branch analysis bounded. | `Kura Fund` first, `Nakatani Foundation graduate scholarship` second. | Do not treat a shared decoder across perception and recall as evidence of a shared internal mechanism. |
+| `U0-2` | `D02 CSTE` | The current mirror still tags `CSTE` as an immediate-access `cross-session / cross-task` biometric benchmark with `10 participants`, making it the clearest current floor for `offset / jitter / state-feature collapse` auditing. | `Nakatani Foundation graduate scholarship` first, `Kashinome Scholarship` as student-runway support only. | Do not elevate synchronization stability into legal or philosophical identity continuity. |
+| `U0-3` | `D02 CSTE` | The same `D02` floor keeps threshold stability and overfit exclusion on the same cross-session identity-drift bed as `U0-2`, instead of letting the threshold absorb timing error. | `Nakatani Foundation graduate scholarship` first, `Kashinome Scholarship` as student-runway support only. | Do not treat a stable biometric threshold as a sufficient condition for personhood continuity. |
+| `U14-4` | `D01 Acquisition delay of wireless EEG` | The current mirror still gives an immediate DOI route for a latency-first measurement package, which is enough for a bounded disclosure and rerun-contract entry point. | `Kura Fund` first, `Nakatani Foundation research grant` as next-cycle watch only. | Do not claim field-wide standardization or organizational adoption from a narrow latency-first benchmark. |
+| `U14-2` | `D01 Acquisition delay of wireless EEG` | The same `D01` anchor is still sufficient to define an exploration-vs-confirmation split as an operational rerun rule before stronger reproducibility wording is allowed. | `Kura Fund` first, `Nakatani Foundation research grant` as next-cycle watch only. | Do not present exploratory outputs as confirmatory evidence after the split boundary is crossed. |
+
+- Official-window recheck in this run stayed consistent with the existing practical route: `Kura Fund` remains open through `2026-04-17 17:00`, the `Nakatani Foundation graduate scholarship` detail page remains at `2026-04-01 - 2026-05-25 15:00`, `Kashinome` remains an early-April student-runway route, and `Secom General Research Grant` remains a short-window watch route through `2026-03-31 12:00`.
+- Todoist did not need a new item in this run. A fresh read-only API recheck still found the existing `Kura`, `Nakatani graduate scholarship`, `Kashinome`, `Nakatani research grant`, and `Secom` tasks already in place, so duplication would have made the route noisier rather than more actionable.
+
 ## 今回の深掘り実行パック（2026-03-30 02:05 JST, one-RQ closure gates + canonical source recheck）
 
 本runでは、current public 6RQ の batch 自体は据え置いたまま、「今この6件で public-safe に前進と呼べる最初の成果物」を `RQ` ごとに固定し直しました。総論や solved claim を増やすのではなく、`1RQ=1主アンカー=1最初の成果物=1非主張境界` をさらに狭く明文化する更新です。
