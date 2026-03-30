@@ -523,7 +523,7 @@ A. Not yet. The first split is between <strong>destructive local ex vivo structu
 </tr>
 <tr>
 <td><strong>Target-defined astrocyte-related PET routes</strong><br>Villemagne et al. (2022); Tyacke et al. (2018); Livingston et al. (2022)</td>
-<td>MAO-B or I<sub>2</sub>BS tracer-defined astrocyte-related PET signals in living humans.</td>
+<td>MAO-B or I<sub>2</sub>BS tracer-defined astrocyte-related PET signals in living humans, whose reading still depends on named quantification route and cohort / covariate regime.</td>
 <td>A generic astrocyte-state meter, content-specific astrocyte-ensemble identity, or the responsible local memory-support controller.</td>
 </tr>
 <tr>
@@ -533,6 +533,12 @@ A. Not yet. The first split is between <strong>destructive local ex vivo structu
 </tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>Human astrocyte PET needs a second split inside the tracer label</strong>
+<p>
+Separating <strong>MAO-B</strong> from <strong>I<sub>2</sub>BS</strong> is necessary, but it is no longer sufficient. <a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al. (2025)</a> showed that <sup>18</sup>F-SMBT-1 MAO-B PET quantification depends on a named scan window and reference-region choice relative to kinetic modeling, while <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">Best et al. (2026)</a> showed that human MAO-B binding in AUD was not elevated overall and shifted with AUD severity and daily cigarette use. Therefore, saying only <code>MAO-B PET</code> is still too coarse: this site now asks for the <strong>target</strong>, the <strong>quantification route</strong>, and the <strong>cohort / covariate regime</strong>.
+</p>
+</div>
 <p>
 At Mind-Upload, the safe reading is now <strong>three-axis</strong>: name <strong>which proxy class and quantity type the route constrains</strong>, separately name <strong>how specialized, small-cohort, regime-locked, or model-heavy the route still is</strong>, and then state <strong>what bounded calibrator role the route safely plays</strong>. If you skip that third step, you can silently turn <strong>"real human route"</strong> into <strong>"broad hidden-state calibration"</strong>. If you skip the second, you can silently turn <strong>"human evidence got richer"</strong> into <strong>"human state-complete measurement is close"</strong>. If you skip the first, you can silently turn <strong>"human MRI or PET exists"</strong> into <strong>"one common latent state is already being measured"</strong>. The current primary literature does not support any of those jumps.
 </p>
@@ -589,7 +595,7 @@ What follows directly is that <strong>route maturity is not just sample size</st
 <div class="note-box">
 <strong>Route name alone is too coarse</strong>
 <p>
-On this site, saying only <code>MRI</code>, <code>PET</code>, or even <code>human proxy route</code> is no longer enough. The FAQ now asks one more question before the claim ceiling rises: is the paper reporting <strong>similarity</strong>, <strong>31P metabolite / pH balance</strong>, <strong>31P MT exchange-flux</strong>, <strong>31P NAD-content mapping</strong>, <strong>localized functional 31P NAD dynamics</strong>, <strong>deuterium absolute metabolite mapping / quantification</strong>, <strong>deuterium kinetic-rate imaging</strong>, <strong>bilayer-sensitive myelin contrast</strong>, <strong>BBB water exchange</strong>, <strong>tracer-specific BBB transport</strong>, <strong>MAO-B PET</strong>, or <strong>I<sub>2</sub>BS PET</strong>, or <strong>CSF-mobility / biomarker-efflux</strong>? If that label is missing, the route stays too coarse to support same-subject state-complete language.
+On this site, saying only <code>MRI</code>, <code>PET</code>, or even <code>human proxy route</code> is no longer enough. The FAQ now asks one more question before the claim ceiling rises: is the paper reporting <strong>similarity</strong>, <strong>31P metabolite / pH balance</strong>, <strong>31P MT exchange-flux</strong>, <strong>31P NAD-content mapping</strong>, <strong>localized functional 31P NAD dynamics</strong>, <strong>deuterium absolute metabolite mapping / quantification</strong>, <strong>deuterium kinetic-rate imaging</strong>, <strong>bilayer-sensitive myelin contrast</strong>, <strong>BBB water exchange</strong>, <strong>tracer-specific BBB transport</strong>, <strong>MAO-B PET with a named quantification route</strong>, <strong>I<sub>2</sub>BS PET</strong>, or <strong>CSF-mobility / biomarker-efflux</strong>? If that label is missing, the route stays too coarse to support same-subject state-complete language.
 </p>
 </div>
 <div class="note-box">
@@ -636,7 +642,7 @@ One more correction is needed before overreading the same literature: the strong
 </tr>
 <tr>
 <td><strong>Human astrocyte-related PET routes</strong><br>Villemagne et al. (2022); Tyacke et al. (2018); Livingston et al. (2022)</td>
-<td>Tracer-defined MAO-B or I<sub>2</sub>BS astrocyte-related PET routes in living humans.</td>
+<td>Tracer-defined MAO-B or I<sub>2</sub>BS astrocyte-related PET routes in living humans, still conditioned on the named quantification route and cohort / covariate regime.</td>
 <td>These target-defined proxy routes are not one generic astrocyte-state meter and not a content-specific astrocyte-ensemble readout.</td>
 </tr>
 <tr>
@@ -900,8 +906,10 @@ The distinguishing strategy of Mind-Upload is <strong>to build the Verification 
 <li>Williamson, N. R., et al. (2025). Learning-associated astrocyte ensembles regulate memory recall. <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">doi:10.1038/s41586-024-08170-w</a></li>
 <li>Dewa, K., et al. (2025). The astrocytic ensemble acts as a multiday trace to stabilize memory. <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">doi:10.1038/s41586-025-09619-2</a></li>
 <li>Villemagne, V. L., Harada, R., Dore, V., et al. (2022). First-in-Humans Evaluation of <sup>18</sup>F-SMBT-1, a Novel <sup>18</sup>F-Labeled Monoamine Oxidase-B PET Tracer for Imaging Reactive Astrogliosis. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">doi:10.2967/jnumed.121.263254</a></li>
+<li>Hiraoka, K., Mesfin, B., Wu, Y., et al. (2025). Kinetic and quantitative analysis of [<sup>18</sup>F]SMBT-1 PET imaging for monoamine oxidase B. <a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">doi:10.1007/s12149-025-02083-y</a></li>
 <li>Tyacke, R. J., Myers, J. F. M., Venkataraman, A., et al. (2018). Evaluation of <sup>11</sup>C-BU99008, a PET Ligand for the Imidazoline<sub>2</sub> Binding Site in Human Brain. <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">doi:10.2967/jnumed.118.208009</a></li>
 <li>Livingston, N. R., Calsolaro, V., Hinz, R., et al. (2022). Relationship between astrocyte reactivity, using novel <sup>11</sup>C-BU99008 PET, and glucose metabolism, grey matter volume and amyloid load in cognitively impaired individuals. <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">doi:10.1038/s41380-021-01429-y</a></li>
+<li>Best, L. M., Truong, J., McCluskey, T., et al. (2026). MAO-B status in alcohol use disorder: a [<sup>11</sup>C]SL25.1188 PET imaging study of putative astrogliosis. <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">doi:10.1038/s41380-025-03355-9</a></li>
 <li>Jaisa-Aad, M., Muñoz-Castro, C., Healey, M. A., Hyman, B. T., &amp; Serrano-Pozo, A. (2024). Characterization of monoamine oxidase-B (MAO-B) as a biomarker of reactive astrogliosis in Alzheimer's disease and related dementias. <a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">doi:10.1007/s00401-024-02712-2</a></li>
 <li>Bukalo, O., et al. (2026). Astrocytes enable amygdala neural representations supporting memory. <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">doi:10.1038/s41586-025-10068-0</a></li>
 <li>Lee, J.-C., Wang, C.-Y., Lin, C.-L., &amp; Lu, H.-C. (2022). Synaptic memory survives molecular turnover. <a href="https://doi.org/10.1073/pnas.2211572119" target="_blank">doi:10.1073/pnas.2211572119</a></li>
