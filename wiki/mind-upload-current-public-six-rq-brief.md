@@ -20,6 +20,9 @@ wiki_links:
   - label: "Wiki: U13-2 route packet"
     url: "/wiki/u13-2-brain-minus-prior-route.html"
     description: "Why D10 stays first for U13-2, why the other speech candidates stay secondary, and what the first artifact can honestly close."
+  - label: "Wiki: U13-5 route packet"
+    url: "/wiki/u13-5-perception-to-recall-route.html"
+    description: "Why D03 stays primary for U13-5, why the support anchors stay secondary, and what the transfer-gap artifact can honestly close."
 recommended_pages:
   - label: "Issue page"
     url: "/issue.html"
@@ -99,6 +102,7 @@ The route is unchanged, but each active row now also carries one submission-read
 - Submission wording that stays honest: `Perception-to-recall transfer-gap benchmark for mimic separation`.
 - What still needs outside support: richer recall-label validity and a speech-richer adjunct benchmark before any shared-mechanism reading is attempted.
 - What still stays outside the claim: any statement that a shared decoder demonstrates a shared preserved internal mechanism.
+- If you need the row-specific anchor-choice rationale, read the [U13-5 route packet](/wiki/u13-5-perception-to-recall-route.html).
 
 ### `U0-2`
 
