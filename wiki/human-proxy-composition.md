@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Wiki: Human Proxy Composition and Route Maturity"
-description: "Explains why recent human PET, MRSI, BBB, astrocyte, myelin, and clearance advances do not automatically compose into same-subject state-complete readout, and how to audit quantity type, target class, transport regime, effective time window, cohort / regime, model burden, reproducibility, deployment burden, calibrator role, and disagreement topology."
+description: "Explains why recent human PET, MRSI, BBB, astrocyte, myelin, and clearance advances do not automatically compose into same-subject state-complete readout, including why family-internal rows such as SV2A quantification, atlas, disease / risk contrast, task association, activation-null, and intervention-response routes must stay separate inside a proxy bundle."
 article_type: Wiki
 subtitle: "Proxy-rich is not the same as same-subject state closure"
 author: Mind Uploading Research Project
@@ -17,6 +17,7 @@ page_highlights:
   - "Cohort and physiological regime are part of the evidence: adolescent developmental cohorts, healthy younger adults, healthy older adults, pathology-specific remyelination studies, and AD-continuum reactive-astrogliosis scans do not define one shared human baseline."
   - "Model burden is part of the object: tracer kinetics, 31P spectral quantification, 31P MT exchange modeling, 31P NAD fitting, deuterium absolute-quantification pipelines, deuterium kinetic models, ASL fitting routes, multicompartment models, partial-volume correction, and synchronization choices all change what the measurement means."
   - "A bundle can be well-typed and still fail operationally if one row is unstable, method-family-specific, centre-bound, available only in a narrow complete-case subset, or present mainly in a severity- or site-skewed subset."
+  - "A named modality family can still contain several different bundle rows: within SV2A PET, quantification route, healthy atlas, disease / risk contrast, task / cognition association, activation-null, and intervention-response papers do not justify the same bundle role."
   - "Promotion now runs through three gates: robustness, effective-window / regime-aware common-driver and quantity-bridge separation, and incremental value beyond the strongest single row."
   - "A bundle now also has to disclose where modalities disagree and whether discordant cases were abstained, adjudicated, or silently absorbed into one summary score."
   - "Local causal relevance and living-human observability are different ladders: rodent astrocyte-controller papers plus human MAO-B / I2BS / CSF / efflux routes do not by themselves identify the responsible human controller."
@@ -32,6 +33,7 @@ known_points:
   - "A local rodent causal result plus a living-human proxy result still does not measure the same controller unless the bridge assumption is named explicitly."
   - "Even when quantity type and model burden are logged, cross-row composition still requires age band, health/pathology regime, and transfer rationale."
   - "Even when same-subject relation is logged, composition still requires explicit effective time-window / state-axis disclosure and physiological / perturbation regime compatibility."
+  - "Even when a family label such as `SV2A PET` is logged, composition still requires the family-internal comparison type to be named before the bundle role is interpreted."
   - "Even when proxy class, maturity, and calibrator role are logged, composition still needs route-local repeatability, method-family non-equivalence, cross-centre transfer, complete-case disclosure, and overlap / missingness disclosure."
   - "Overall bundle gain can coexist with higher pairwise disagreement in clinically difficult subgroups, so discordance topology and its resolution policy have to be disclosed rather than left implicit."
   - "Simultaneous multimodal acquisition can reveal both common and divergent structure across modalities."
@@ -79,7 +81,7 @@ Recent human proxy advances are real, but they do not yet compose automatically 
 <div class="note-box">
 <strong>What this page fixes</strong>
 <p>
-The public pages had already become stricter about human proxy families, but this composition page was still lagging behind the site's newer taxonomy. It still let readers compress <strong>31P metabolite / pH balance</strong>, <strong>31P MT exchange-flux</strong>, <strong>31P NAD-content mapping</strong>, and <strong>31P functional NAD-dynamics</strong> into one row, <strong>deuterium metabolite-mapping / absolute quantification</strong> into <strong>deuterium kinetic-rate imaging</strong> and then back into the same energetic row, <strong>myelin-water / MT-family / bilayer / qT1 remyelination-sensitive</strong> routes into one myelin meter, <strong>BBB water-exchange MRI</strong> into <strong>tracer-specific BBB PET transport</strong>, and <strong>MAO-B</strong> into <strong>I2BS</strong> astrocyte PET. The current primary literature does not support those shortcuts. This page now fixes the composition rule at the same granularity as the rest of the site.
+The public pages had already become stricter about human proxy families, but this composition page was still lagging behind the site's newer taxonomy. It still let readers compress <strong>31P metabolite / pH balance</strong>, <strong>31P MT exchange-flux</strong>, <strong>31P NAD-content mapping</strong>, and <strong>31P functional NAD-dynamics</strong> into one row, <strong>deuterium metabolite-mapping / absolute quantification</strong> into <strong>deuterium kinetic-rate imaging</strong> and then back into the same energetic row, <strong>myelin-water / MT-family / bilayer / qT1 remyelination-sensitive</strong> routes into one myelin meter, <strong>BBB water-exchange MRI</strong> into <strong>tracer-specific BBB PET transport</strong>, <strong>MAO-B</strong> into <strong>I2BS</strong> astrocyte PET, and still left too much room to read <strong>SV2A PET</strong> as one generic synaptic-density row. The current primary literature does not support those shortcuts. This page now fixes the composition rule at the same granularity as the rest of the site.
 </p>
 </div>
 
@@ -94,6 +96,13 @@ A local causal paper and a living-human proxy paper do not automatically add up 
 <strong>Scope</strong>
 <p>
 This page stays on the technology and natural-science side only. It does not discuss philosophy, law, personhood, or policy. The question here is narrower: <strong>what do current human routes directly observe, what do they infer through a model, and what do they still leave latent?</strong>
+</p>
+</div>
+
+<div class="note-box">
+<strong>2026-03-31 correction: SV2A family-internal split belongs inside bundle composition</strong>
+<p>
+One remaining shortcut was still too permissive for the current site rule. A proxy bundle could still cite <strong>SV2A PET</strong> as if that label already fixed one reusable human row. The primary literature does not support that compression. <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> constrain the <strong>quantification route</strong> itself, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> constrain a <strong>healthy-human atlas / baseline route</strong>, <a href="https://doi.org/10.1002/alz.14327" target="_blank">Snellman et al. (2024)</a> constrain a <strong>disease / risk-contrast route</strong>, <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> constrain a <strong>task / cognition association route</strong>, <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> constrain an <strong>activation-null timescale boundary</strong>, and <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a> constrain an <strong>intervention-response null at 24 h</strong>. Those papers do not share the same comparison family, time window, or safe bundle role. On this site, <code>SV2A PET</code> therefore has to be split internally before bundle composition is judged at all.
 </p>
 </div>
 
@@ -191,11 +200,32 @@ One remaining shortcut is to treat any reproducibility statement as if it solved
 <td><strong>Destructive local structural scaffold</strong>, not living whole-brain state readout.</td>
 </tr>
 <tr>
-<td><strong>SV2A PET</strong><br><a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a>; <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>; <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a></td>
-<td>Tracer-defined regional SV2A binding interpreted as a synaptic-density proxy.</td>
-<td>Regional scan-window average in 33 healthy adults; atlas or task-linked interindividual comparison.</td>
-<td>Tracer choice, arterial-versus-reference quantification, kinetic model, scan window, partial-volume handling.</td>
-<td><strong>Regional synaptic-density proxy</strong>, not current synaptic efficacy or universal activity truth.</td>
+<td><strong>SV2A PET quantification route</strong><br><a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a></td>
+<td>Tracer-defined regional SV2A binding under an explicitly named quantification route.</td>
+<td>Dynamic PET scan-window average in healthy humans; route-setting study rather than an atlas, disease contrast, or task-state result.</td>
+<td>Tracer choice, arterial-versus-reference quantification, compartment model, scan window, and partial-volume handling.</td>
+<td><strong>Named synaptic-density quantification route</strong>, not a generic synaptic-state meter.</td>
+</tr>
+<tr>
+<td><strong>SV2A PET healthy atlas route</strong><br><a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a></td>
+<td>Regional SV2A distribution aggregated into a healthy-human atlas calibrated to autoradiography.</td>
+<td>33 healthy adults; cohort-level regional baseline rather than same-subject state tracking.</td>
+<td>Atlas aggregation, PET-to-postmortem calibration logic, regional quantification route, and anatomy handling.</td>
+<td><strong>Healthy-human regional baseline / atlas route</strong>, not moment-to-moment synaptic efficacy or a universal bundle anchor.</td>
+</tr>
+<tr>
+<td><strong>SV2A PET disease / risk-contrast route</strong><br><a href="https://doi.org/10.1002/alz.14327" target="_blank">Snellman et al. (2024)</a></td>
+<td>Group contrast in hippocampal [<sup>11</sup>C]UCB-J SUVR across APOE-risk strata in cognitively unimpaired older adults.</td>
+<td>46 participants across APOE ε4/ε4, ε3/ε4, and ε3/ε3 groups; risk-stratified contrast rather than task or intervention tracking.</td>
+<td>Reference-region SUVR route, group comparison design, hippocampal ROI definition, and risk-cohort interpretation.</td>
+<td><strong>Bounded disease / risk-contrast route</strong>, not a direct cognition meter or a same-subject current-state readout.</td>
+</tr>
+<tr>
+<td><strong>SV2A PET task / activation / intervention route family</strong><br><a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a>; <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a>; <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a></td>
+<td>Task-linked association between regional SV2A binding and cognition or neural activity, plus bounded null results under brief activation or 24 h intervention designs.</td>
+<td>25 healthy adults for PET-fMRI task / cognition coupling, brief visual activation for K<sub>1</sub>-versus-binding dissociation, and a 24 h ketamine-response design rather than chronic state tracking.</td>
+<td>Task design, time window, regional hypothesis choice, tracer-binding versus influx separation, and intervention timing.</td>
+<td><strong>Design- and timescale-conditioned association / null route family</strong>, not a universal activity meter or rapid-plasticity readout.</td>
 </tr>
 <tr>
 <td><strong>Whole-brain <sup>1</sup>H-MRSI metabolic similarity</strong><br><a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a></td>
@@ -288,6 +318,11 @@ One remaining shortcut is to treat any reproducibility statement as if it solved
 <td>Name the exact object: <strong>density</strong>, <strong>similarity</strong>, <strong>metabolite / pH balance</strong>, <strong>exchange flux</strong>, <strong>NAD content or dynamics</strong>, <strong>absolute metabolite map</strong>, <strong>kinetic rate</strong>, <strong>water exchange</strong>, <strong>tracer-specific transport</strong>, <strong>target-defined binding</strong>, <strong>mobility</strong>, or <strong>model-based efflux</strong>.</td>
 </tr>
 <tr>
+<td><strong>Family-internal route collapse</strong><br><code>one PET family name = one reusable bundle row</code></td>
+<td><a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> fix an SV2A <strong>quantification route</strong>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> fix a <strong>healthy atlas / baseline route</strong>, <a href="https://doi.org/10.1002/alz.14327" target="_blank">Snellman et al. (2024)</a> fix a <strong>disease / risk-contrast route</strong>, <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> fix a <strong>task / cognition association route</strong>, <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> fix an <strong>activation-null timescale boundary</strong>, and <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a> fix an <strong>intervention-response null at 24 h</strong>. Those are not one interchangeable bundle row.</td>
+<td>Name the family-internal comparison type explicitly: <strong>quantification route</strong>, <strong>healthy atlas / baseline</strong>, <strong>disease / risk contrast</strong>, <strong>task / cognition association</strong>, <strong>activation-null</strong>, or <strong>intervention-response</strong>, then state the time window and design burden that go with that row.</td>
+</tr>
+<tr>
 <td><strong>Spatial-unit collapse</strong><br><code>local fragment + regional atlas + parcel graph + macro voxel = same resolution ladder</code></td>
 <td>Shapson-Coe is a local surgical fragment, Johansen is regional atlas-level PET, Lucchetti is gray-matter parcel similarity, Ren is large-volume biochemical spectroscopy, Li is 0.7 cc voxelwise kinetic imaging, Baadsvik is 1.4 mm macro myelin mapping, and Dagum is overnight plasma-level efflux inference. These do not resolve the same biological unit.</td>
 <td>Name the biological unit actually constrained: <strong>fragment</strong>, <strong>region</strong>, <strong>parcel</strong>, <strong>large spectroscopy voxel</strong>, <strong>macro voxel</strong>, or <strong>whole-body efflux trend</strong>.</td>
@@ -342,9 +377,9 @@ One remaining shortcut is to treat any reproducibility statement as if it solved
 </section>
 
 <div class="note-box">
-<strong>SV2A PET is not a generic activity meter</strong>
+<strong>SV2A PET is not one reusable bundle row</strong>
 <p>
-The safe reading of SV2A PET is narrower than “synapses were measured, therefore task-state was measured.” <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> showed that quantification depends on tracer kinetics, model choice, and scan window. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built a valuable atlas of regional synaptic density in 33 healthy participants. <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> then showed that visual stimulation increased tracer influx K<sub>1</sub> but left binding measures unchanged, while <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a> found no detectable overall SV2A change 24 h after ketamine despite antidepressant response. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> further found that in 25 healthy adults, SV2A density related to task-switching activation and switch cost, yet not to the N-back task in the same study. On this site, that means density-activity or density-intervention relationships remain <strong>task-, timescale-, and design-conditioned</strong>, not a universal license to read SV2A PET as moment-to-moment neural activity or rapid plasticity.
+The safe reading of SV2A PET is narrower than “synapses were measured, therefore this bundle now contains one human synaptic-state row.” <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> showed that quantification depends on tracer kinetics, model choice, and scan window. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built a healthy-human regional atlas. <a href="https://doi.org/10.1002/alz.14327" target="_blank">Snellman et al. (2024)</a> then showed lower hippocampal [<sup>11</sup>C]UCB-J signal in cognitively unimpaired APOE ε4/ε4 carriers than in APOE ε3/ε3, while also reporting no significant relation to cognitive scores in that risk cohort. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> further found a positive association with task-switching activation and switch cost in healthy adults, yet not with the N-back task in the same study. <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> showed that visual stimulation increased tracer influx K<sub>1</sub> but left binding measures unchanged, and <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a> found no detectable overall SV2A change 24 h after ketamine despite antidepressant response. On this site, that means <code>SV2A PET</code> has to be split by <strong>comparison family</strong> before bundle promotion is judged at all: <strong>quantification</strong>, <strong>healthy atlas</strong>, <strong>risk contrast</strong>, <strong>task / cognition association</strong>, <strong>activation-null</strong>, and <strong>intervention-response</strong> do not share one automatic bundle role.
 </p>
 </div>
 
@@ -372,7 +407,7 @@ The distinction is explicit in the primary paper. <a href="https://doi.org/10.10
 <div class="note-box">
 <strong>Cohort and physiological regime are part of the measurement object</strong>
 <p>
-One remaining shortcut is to list human proxy rows together as if they came from one matched biological baseline. The primary papers themselves argue against that. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> provide a healthy-adult SV2A atlas, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derive metabolic similarity mainly from adolescents aged 13-15 years with a separate 15-35-year replication cohort, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> map CSF mobility in healthy younger adults and then test a separate CAA cohort, <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> study healthy older adults aged 49-66 years under sleep-versus-deprivation crossover, <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a> studies healthy volunteers for first-in-human SMBT-1 target validation, and <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> images reactive astrogliosis across the Alzheimer disease continuum in volunteers averaging 76 +/- 5.5 years. Therefore, on this site, proxy composition must also disclose <strong>developmental / aging regime</strong>, <strong>health versus pathology regime</strong>, and <strong>transfer claim</strong> before cross-row agreement is treated as more than cross-cohort analogy.
+One remaining shortcut is to list human proxy rows together as if they came from one matched biological baseline. The primary papers themselves argue against that. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> provide a healthy-adult SV2A atlas, <a href="https://doi.org/10.1002/alz.14327" target="_blank">Snellman et al. (2024)</a> probe cognitively unimpaired but genetically high-risk older adults, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derive metabolic similarity mainly from adolescents aged 13-15 years with a separate 15-35-year replication cohort, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> map CSF mobility in healthy younger adults and then test a separate CAA cohort, <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> study healthy older adults aged 49-66 years under sleep-versus-deprivation crossover, <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a> studies healthy volunteers for first-in-human SMBT-1 target validation, and <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> images reactive astrogliosis across the Alzheimer disease continuum in volunteers averaging 76 +/- 5.5 years. Therefore, on this site, proxy composition must also disclose <strong>developmental / aging regime</strong>, <strong>health versus pathology regime</strong>, and <strong>transfer claim</strong> before cross-row agreement is treated as more than cross-cohort analogy.
 </p>
 </div>
 
@@ -396,11 +431,11 @@ Those three axes are defined <strong>per route</strong>. When several routes are
 </thead>
 <tbody>
 <tr>
-<td><strong>SV2A PET</strong><br><a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>; <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a>; <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a></td>
-<td><strong>Regional synaptic-density proxy</strong></td>
-<td>Useful atlas and disease-comparison route, but not a moment-to-moment state meter.</td>
-<td>Constrains relatively slow regional synaptic-density contrasts and selected between-condition comparisons.</td>
-<td>Current release probability, postsynaptic efficacy, rapid plasticity, and branch-local controller state.</td>
+<td><strong>SV2A PET family</strong><br><a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>; <a href="https://doi.org/10.1002/alz.14327" target="_blank">Snellman et al. (2024)</a>; <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a>; <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a>; <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a></td>
+<td><strong>Family-split regional synaptic-density proxy</strong></td>
+<td>Real human PET route, but different papers answer healthy-baseline, disease / risk-contrast, task-association, activation-null, or intervention-response questions rather than one generic state-meter question.</td>
+<td>After family-internal typing, constrains bounded regional density contrasts or design-conditioned associations.</td>
+<td>Current release probability, postsynaptic efficacy, rapid plasticity, branch-local controller state, and any claim that ignores the family-internal split.</td>
 </tr>
 <tr>
 <td><strong>Whole-brain <sup>1</sup>H-MRSI metabolic similarity</strong><br><a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a></td>
@@ -707,6 +742,7 @@ If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich b
 <li>Smart, K., Liu, H., Matuskey, D., et al. (2021). Binding of the synaptic vesicle radiotracer [<sup>11</sup>C]UCB-J is unchanged during functional brain activation using a visual stimulation task. <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">doi:10.1177/0271678X20946198</a></li>
 <li>Holmes, S. E., Scheinost, D., Finnema, S. J., et al. (2022). Imaging the effect of ketamine on synaptic density (SV2A) in the living brain. <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">doi:10.1038/s41380-022-01465-2</a></li>
 <li>Shatalina, E., Onwordi, E. C., Whitehurst, T., et al. (2024). The relationship between SV2A levels, neural activity, and cognitive function in healthy humans: A [<sup>11</sup>C]UCB-J PET and fMRI study. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">doi:10.1162/imag_a_00190</a></li>
+<li>Snellman, A., Tuisku, J., Koivumäki, M., et al. (2024). SV2A PET shows hippocampal synaptic loss in cognitively unimpaired APOE ε4/ε4 homozygotes. <a href="https://doi.org/10.1002/alz.14327" target="_blank">doi:10.1002/alz.14327</a></li>
 <li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
 <li>Ren, J., Sherry, A. D., &amp; Malloy, C. R. (2015). <sup>31</sup>P-MRS of healthy human brain: ATP synthesis, metabolite concentrations, pH, and T1 relaxation times. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">doi:10.1002/nbm.3384</a></li>
 <li>Ren, J., Sherry, A. D., &amp; Malloy, C. R. (2017). Efficient <sup>31</sup>P band inversion transfer approach for measuring creatine kinase activity, ATP synthesis, and molecular dynamics in the human brain at 7 T. <a href="https://doi.org/10.1002/mrm.26560" target="_blank">doi:10.1002/mrm.26560</a></li>
