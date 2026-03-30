@@ -5,7 +5,7 @@ description: "research_harvest_50由来の60リサーチクエスチョンを1�
 article_type: Wiki
 subtitle: "RQごとに検証設計と応募テーマまで接続する"
 author: Mind Uploading Research Project
-last_updated: "2026-03-30"
+last_updated: "2026-03-31"
 note: "RQ-by-RQ Deep Dive"
 audience: "RQを実験計画・応募書類へ落とし込む研究者/実装者"
 reading_time: "25-40分"
@@ -17,7 +17,7 @@ reading_time: "25-40分"
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-30 / 位置づけ: RQ-by-RQ Deep Dive
+- 更新日: 2026-03-31 / 位置づけ: RQ-by-RQ Deep Dive
 
 ## このページの役割
 このページは research_harvest_50 の60 RQを対象に、EEG-DATAで解ける範囲をA/B/Cで判定し、各RQごとの検証設計・応募テーマ・使うデータセットIDをまとめた実務版です。
@@ -50,6 +50,15 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `A`: 17件
 - `B`: 25件
 - `C`: 18件
+
+## Current six-RQ route after the March 31 overnight recheck
+
+This run still does not change the current public batch or the solve-first order. What changed is the confidence of the hold: the latest `EEG-DATA` upstream additions remain outside the current six-row anchor family, so they do not replace `D10/D02` as the stronger primary anchors and do not widen the claim ceiling of `D03/D01`.
+
+- The batch still stays `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
+- The order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
+- Official-window recheck at `2026-03-31 00:04 JST` still keeps the same practical route: `Kura Fund = 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome = 2026-04-09`, `Secom General Research Grant = 2026-03-31 12:00`.
+- Todoist still did not need a new item in this run because the full-item audit keeps the route families already covered (`Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom family=3`, `AI for Aging-Society Problem Solving=0`).
 
 ## Current six-RQ route after the March 30 live recheck
 

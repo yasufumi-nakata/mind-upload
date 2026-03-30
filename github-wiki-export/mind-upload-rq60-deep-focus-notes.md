@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-30 / Role: RQ-by-RQ Deep Focus
+- Updated: 2026-03-31 / Role: RQ-by-RQ Deep Focus
 
 ## Role Of This Page
 This page is a practical note that fixes the core of mind-upload's 60 RQs, which can be confirmed directly with EEG-DATA, application themes for auto-research-funds, and necessary requirements outside of EEG.
@@ -34,6 +34,14 @@ A/B/C judgment is the same as mind-upload-eeg-rq60-feasibility-and-funds. C mean
 - `A`: Main claims can be verified with EEG-DATA only.
 - `B`: EEG main analysis is possible. Requires additional external modality/design.
 - `C`: Mainly system/legal/theoretical integration. EEG is an audit log or supporting evidence.
+
+## Overnight revalidation hold (2026-03-31 00:04 JST)
+
+- This run rechecked the live public route, the current official funding windows, and a Todoist full-item audit after the latest `EEG-DATA` upstream additions.
+- The current public six-question batch still stays `U13-2/U13-5/U14-4/U0-2/U0-3/U14-2`, and the solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
+- The newest upstream `EEG-DATA` additions remain outside the current speech / identity / reproducibility anchor family, so they do not replace `D10/D02` as the stronger primary anchors and do not widen the claim ceiling of `D03/D01`.
+- Funding-window recheck in this run still supports the same narrow route: `Kura Fund` remains open through `2026-04-17 17:00`, the `Nakatani Foundation graduate scholarship` still runs `2026-04-01 - 2026-05-25 15:00`, the `Kashinome Scholarship` remains open through `2026-04-09`, and `Secom General Research Grant` remains a watch route through `2026-03-31 12:00`.
+- Todoist still did not need a new item in this run. The full-item audit continues to show the relevant family coverage already present (`Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom family=3`, `AI for Aging-Society Problem Solving=0`).
 
 ## Post-pull revalidation hold (2026-03-30 00:11 JST)
 

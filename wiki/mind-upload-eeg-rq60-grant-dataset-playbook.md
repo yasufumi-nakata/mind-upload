@@ -5,7 +5,7 @@ description: "An operation page with fixed application ID, main EEG data, select
 article_type: Wiki
 subtitle: "Fix submission decisions based on RQ, not general abstracts"
 author: Mind Uploading Research Project
-last_updated: "2026-03-30"
+last_updated: "2026-03-31"
 note: "Per-RQ Grant and Dataset Playbook"
 audience: "People who want to apply for funding and decide on the first experiment for each RQ at the same time"
 reading_time: "20-30 minutes"
@@ -41,7 +41,7 @@ recommended_pages:
 - `U7: G1/G3`, `U8: G2/G5`, `U10: G2/G6`, `U11: G2/G4`
 - `U12: G2/G6`, `U13: G1/G4`, `U14: G1/G3`, `U15: G2/G6`
 
-## Current funding reality (2026-03-30 01:08 JST)
+## Current funding reality (2026-03-31 00:04 JST)
 
 - `G1/G2` are routing keys used to keep the RQ-level application lanes stable. They are not current grant-card files.
 - Current grant-card entities are `G3-G6`, and the practical shortlist is now fixed in [AoyamaLab/auto-research-funds wiki: Mind-Upload-Current-Funding-Shortlist](https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md).
@@ -49,7 +49,8 @@ recommended_pages:
 - The public route is now intentionally concentrated on `inner-speech decoding + identity drift + reproducibility auditing`, with `D10/D03/D01/D02` used as the conservative anchor family.
 - Inside that anchor family, `D10/D02` are the strongest current primary anchors. `D03/D01` stay useful for the public route, but they should be read as bounded route-setting anchors until the first artifacts and logs are denser.
 - The practical funding bridge for this batch is led by `Nakatani Foundation graduate scholarship` and `Kura Fund`; the `Kashinome Scholarship` stays only as a student-runway side route, and the `Nakatani Foundation research grant` remains a watch-mode route rather than a current open call.
-- Relevant Todoist tasks for the practical shortlist already existed before this run, so no new task was created in this run.
+- The overnight March 31 recheck still leaves the route unchanged after the latest `EEG-DATA` upstream additions, because those additions do not replace the current `D10/D02` primary anchors or raise the claim ceiling of `D03/D01`.
+- Relevant Todoist tasks for the practical shortlist already existed before this run, and the full-item audit still shows `Kura=2`, `Nakatani family=11`, `Kashinome=2`, and `Secom family=3`, so no new task was created in this run.
 - For submission-ready references, prefer `Dxx + DOI + dataset name + access class` over numeric search IDs.
 - The six current public rows below are now synchronized to `Dxx + DOI + dataset name + access class`, so the playbook no longer needs numeric search IDs for `U13-2/U13-5/U14-4/U0-2/U0-3/U14-2`.
 - `tech_roadmap.md` also contains `U2/U5/U6/U9`, but those roadmap families are not yet translated into this playbook's current `RQ60` practical layer.

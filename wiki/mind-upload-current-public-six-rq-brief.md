@@ -5,7 +5,7 @@ description: "A public-safe row-by-row brief for the six mind-upload research qu
 article_type: Wiki
 subtitle: "A narrow route brief, not a solved-claim update"
 author: Mind Uploading Research Project
-last_updated: "2026-03-30"
+last_updated: "2026-03-31"
 note: "Current public six"
 audience: "Readers who want the present one-question-at-a-time EEG route without overreading the claim"
 reading_time: "8-12 minutes"
@@ -51,7 +51,13 @@ This page keeps the current public six-question batch readable at the level of `
 
 It does **not** announce solved claims. It only states what the current public route is narrow enough to support after a post-pull review of `mind-upload`, `EEG-DATA`, `auto-research-funds`, the live public page, the current official funding windows, and a read-only Todoist recheck.
 
-## What stays fixed on March 30, 2026
+## What stays fixed on March 31, 2026
+
+- At `2026-03-31 00:04 JST`, an overnight recheck still leaves the public batch and the solve-first order unchanged.
+- The latest `EEG-DATA` upstream additions are still outside the current six-row anchor family, so they do not replace `D10/D02` as the stronger primary anchors or raise the claim ceiling of `D03/D01`.
+- `D10 3M-CPSEED` and `D02 CSTE` remain the stronger primary anchors, while `D03 Multimodal Fusion EEG + Eye-Tracking` and `D01 Acquisition delay of wireless EEG` remain bounded-support anchors with lower claim ceilings.
+- `Kura Fund` remains open through April 17, 2026 at 17:00, `Nakatani Foundation graduate scholarship` runs April 1, 2026 through May 25, 2026 at 15:00, `Kashinome Scholarship` remains open through April 9, 2026, and `Secom General Research Grant` remains only an urgency watch route through March 31, 2026 at 12:00 at this run time.
+- A Todoist full-item audit still shows the current route already covered (`Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom family=3`), so no new task was added in this run.
 
 - The public batch stays `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
 - The execution order stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.

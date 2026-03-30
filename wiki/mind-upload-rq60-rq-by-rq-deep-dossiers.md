@@ -5,7 +5,7 @@ description: "60RQを1件ずつ深掘りし、検証命題・可否境界・応�
 article_type: Wiki
 subtitle: "汎用要約ではなく、RQ単位で実装可能な深掘り"
 author: Mind Uploading Research Project
-last_updated: "2026-03-30"
+last_updated: "2026-03-31"
 note: "RQ-by-RQ Deep Dossier"
 audience: "60RQを個別理解して応募計画へ落とし込みたい研究者"
 reading_time: "55-80分"
@@ -16,8 +16,17 @@ reading_time: "55-80分"
 > 本ページは、`60RQ` を1件ずつ深掘りするための固定ドシエ集です。  
 > 汎用横断サマリは最小化し、各RQで `検証命題` `境界` `応募テーマ` `主データ` `KPI` `停止条件` を先に固定します。
 
-- 更新日: 2026-03-30
+- 更新日: 2026-03-31
 - 出典: `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`（60行を再構成）
+
+## 2026-03-31 00:04 JST overnight route-hold note
+
+This run still does not change the current public six-question batch. The added value is not a new batch switch but a stronger reason for the hold: the latest `EEG-DATA` upstream additions remain outside the current speech / identity / reproducibility anchor family, so they do not replace `D10/D02` as the stronger primary anchors and do not justify broader wording for `D03/D01`.
+
+- The public six still stay `U13-2 / U13-5 / U14-4 / U0-2 / U0-3 / U14-2`.
+- The solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
+- Official-window recheck at `2026-03-31 00:04 JST` still supports the same narrow funding bridge: `Kura Fund = 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome = 2026-04-09`, and `Secom General Research Grant = 2026-03-31 12:00`.
+- Todoist action still stays conservative in this run. The full-item audit continues to show the current route already covered (`Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom family=3`), so no new task was added.
 
 ## 2026-03-30 live evidence note for the current public six
 
