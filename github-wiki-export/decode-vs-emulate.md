@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-25 / Role: Technical / natural science only
+- Updated: 2026-03-30 / Role: Technical / natural science only
 
 ## Role Of This Page
 This page is an auxiliary guide that organizes the difference between decode and emulate, one of the key distinctions in Mind-Upload, on the basis of primary literature. It separates a high-performance translator from a system that moves internal states by using observation, intervention, and closed-loop evidence.
@@ -299,9 +299,9 @@ A common misinterpretation of current news and demonstrations is to interpret th
 <td>This is a locally closed loop demonstration that is even stronger than decode, but it targets the sensorimotor subsystem. Rather than whole-brain emulation, it is appropriate to read this as <strong>evidence close to L3 in local circuits</strong>. </td>
 </tr>
 <tr>
-<td><strong>MICrONS (2025) / Billeh et al. (2020) / Beiran &amp; Litwin-Kumar (2025)</strong><br>digital twin / connectome-constrained model</td>
-<td>The same-brain function + connectomics dataset and multi-scale model have been published, advancing the predictive power of connectome-constrained recurrent networks. </td>
-<td>This is an important foundation in a direction similar to emulate, but the areas, individuals, and issues are limited. Furthermore, as Beiran &amp; Litwin-Kumar (2025) and Prinz et al. (2004) show, output matching alone cannot be said to be faithful reproduction or the only solution because degeneracy remains, including unmeasured parameters and unrecorded neurons. </td>
+<td><strong>MICrONS (2025) / Billeh et al. (2020) / Beiran &amp; Litwin-Kumar (2025)</strong><br>stimulus-conditioned digital twin / connectome-constrained model</td>
+<td>Sequential same-brain connectomics datasets, multiscale models, and connectome-constrained recurrent networks have advanced local conditional prediction under named tasks and recordings. </td>
+<td>This is an important foundation in a direction similar to emulate, but the scope remains local and regime-bounded. Furthermore, as MICrONS (2025), Beiran &amp; Litwin-Kumar (2025), and Prinz et al. (2004) show, output matching alone cannot be said to be faithful reproduction or the only solution because degeneracy remains, including unmeasured parameters, unrecorded neurons, and omitted state families. </td>
 </tr>
 </tbody>
 </table>
@@ -391,7 +391,7 @@ A common misinterpretation of current news and demonstrations is to interpret th
 <li><strong>Conditions for writing local emulation:</strong>When a local circuit shows both a closed loop and a causal intervention, and what is replaced is specified in a limited manner. </li>
 <li><strong>Conditions for writing close to WBE:</strong>Only when six points are met: exceedance of prior, causal deployment guard, OOD/cross-day generalization, perturbation matching, closed-loop long-term stability, and integrity audit of state variables. </li>
 <li><strong>When only matching output:</strong> Use expressions such as avatar, behavioral clone, decoder, and language interface, not emulate. </li>
-<li><strong>Treatment of connectome-constrained success: Predictive gain and digital twin are positioned as advancements in structural/functional scaffolds, and are not described as the only solution or state-complete reconstruction. </li>
+<li><strong>Treatment of connectome-constrained success: Predictive gain, stimulus-conditioned digital-twin models, and connectome-constrained success are positioned as advancements in structural/functional scaffolds, and are not described as the only solution or state-complete reconstruction. </li>
 </ul>
 
 <h2>References</h2>
@@ -419,7 +419,7 @@ A common misinterpretation of current news and demonstrations is to interpret th
 
 <h2>Why is this distinction important</h2>
 <p>
-Without this distinction, individual advances such as ``we were able to produce sentences from brain signals,'' ``a little bit better with closed loop,'' and ``the digital twin worked'' would be mistakenly interpreted as an overall achievement of WBE. At Mind-Upload, in order to avoid this leap forward, we put the complaint ladder and verification foundation first.
+Without this distinction, individual advances such as ``we were able to produce sentences from brain signals,'' ``a little bit better with closed loop,'' and ``the stimulus-conditioned digital twin worked'' would be mistakenly interpreted as an overall achievement of WBE. At Mind-Upload, in order to avoid this leap forward, we put the complaint ladder and verification foundation first.
 </p>
 
 <h4>Next</h4>

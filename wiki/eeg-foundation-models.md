@@ -5,7 +5,7 @@ description: "This page organizes how to read EEG foundation / self-supervised m
 article_type: Wiki
 subtitle: "Read advances in representation learning separately from claims that still need to be stopped"
 author: Mind Uploading Research Project
-last_updated: "2026-03-28"
+last_updated: "2026-03-30"
 note: "Technical / natural science only"
 audience: "Readers who want to assess EEG foundation models such as LaBraM, BIOT, EEGPT, and BENDR without overclaiming"
 reading_time: "10-15 min"
@@ -17,6 +17,7 @@ page_highlights:
   - "Accepted papers, official challenge rules, and arXiv preprints / under-review manuscripts are not treated as the same evidence tier."
   - "Challenge and benchmark papers from 2025-2026 show that standardized cross-task / cross-subject evaluation is itself still unfinished."
   - "Foundation-model benchmarks are not one object: window / trial classification, event detection, sequence labeling, subject-level regression, and retrieval-style tasks still need separate benchmark-object disclosure."
+  - "Benchmark object, independent prediction unit, grouped hold-out unit, and inference-stage budget are separate fields; one leaderboard name does not fix all four."
   - "The official EEG Challenge leaderboard later disclosed a split-construction error in Challenge 2, so benchmark provenance here includes sample randomization, hidden grouping, and inference-stage constraints rather than only benchmark name."
   - "A setup-agnostic foundation model or a very large pretraining corpus is not yet shortcut-resistant transfer; subject / site / reference / protocol shortcuts still need an explicit specificity audit."
   - "Larger models do not automatically win; rankings move with parameter efficiency, training time, and benchmark design."
@@ -29,6 +30,7 @@ known_points:
   - "Papers from 2025-2026 are beginning to show that model rankings can change even with benchmark split construction and preprocessing alone."
   - "Recent 2025-2026 model and benchmark papers show that 'works with any setup', 'wins under linear probing', and 'transfers under fine-tuning' are different claims that can reverse across evaluation regimes."
   - "Benchmark name alone is still too coarse; the supervision unit can shift from windows or trials to epochs, events, or subjects, which changes what transfer means."
+  - "Benchmark object, independent prediction unit, grouped hold-out unit, and inference-stage budget can all change the meaning of the same leaderboard entry."
   - "Official challenge operations can themselves expose hidden subject-order shortcuts or score-definition changes, so benchmark postmortems are treated here as primary evidence about comparability rather than as afterthoughts."
   - "A successful foundation model cannot be read directly as source identifiability or WBE state-completeness."
 unknown_points:
@@ -36,6 +38,7 @@ unknown_points:
   - "There is still no default path that simultaneously satisfies cross-day, cross-device, cross-task, and longitudinal deployability."
   - "There is also no fixed common standard for auditing benchmark version, split rules, and checkpoint selection together."
   - "There is still no fixed common standard for reporting benchmark object / supervision unit alongside benchmark provenance."
+  - "There is still no fixed common standard for reporting raw-recording ancestry or grouped hold-out unit together with the benchmark object."
   - "It is not yet a settled law when targeted diversity beats indiscriminate scale."
   - "It also remains unresolved how to show that a pretrained EEG representation is resisting identity / setup shortcuts rather than merely tolerating them on one benchmark."
 wiki_links:
@@ -96,11 +99,60 @@ This was the next weak point on this page. <a href="https://arxiv.org/abs/2510.2
 </div>
 
 <div class="note-box">
-<strong>Benchmark object and supervision unit are not one box either</strong>
+<strong>Benchmark object, independent unit, and hold-out unit are separate axes</strong>
 <p>
-This was the next remaining weakness on this page. The official <a href="https://eeg2025.github.io/data/" target="_blank">EEG Challenge data page</a> bundles <strong>six distinct cognitive tasks</strong> and also reports <strong>four psychopathology dimensions</strong> derived from parent-reported CBCL, so even one official benchmark family already mixes <strong>window / trial-level task decoding</strong> with <strong>subject-level factor prediction</strong>. <a href="https://openreview.net/forum?id=J5SbLoq7Uv" target="_blank">Lee et al. (2025)</a> then fine-tuned large brainwave foundation models across <strong>memory tasks</strong> and <strong>sleep stage classification</strong>, while <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a> integrated <strong>14 datasets across 10 paradigms</strong>. Those are not one benchmark object, one supervision unit, or one metric family. Therefore, on this site, benchmark name and split rule are still insufficient unless the paper also states whether the downstream object is <strong>window / trial classification</strong>, <strong>event detection</strong>, <strong>sequence labeling</strong>, <strong>subject-level regression / diagnosis</strong>, or another family, together with what counts as one independent prediction.
+This was the next remaining weakness on this page. The official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge homepage</a> states that <strong>Challenge 1</strong> predicts <strong>response time from CCD trials</strong>, whereas <strong>Challenge 2</strong> predicts <strong>externalizing scores from EEG across multiple paradigms</strong>. The official <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a> then add that Challenge 1 is scored <strong>per trial</strong>, submissions are <strong>inference-only</strong>, and models must run on a <strong>single GPU with 20 GB memory</strong>. <a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">Lee et al. (2025)</a> fine-tuned large brainwave foundation models across <strong>memory tasks</strong> and <strong>sleep stage classification</strong>, <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a> explicitly compared <strong>leave-one-subject-out cross-subject evaluation</strong> with <strong>within-subject few-shot calibration</strong>, and <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> showed that <strong>six benchmark inconsistencies</strong> can reverse rankings on identical datasets by up to <strong>24 percentage points</strong>. Therefore, on this site, benchmark name, predicted object, independent prediction unit, grouped hold-out unit, and operations budget are separate disclosure fields rather than one merged "benchmark provenance" box.
 </p>
 </div>
+
+<section class="section" id="object-matrix">
+<h2 class="section-title">2026-03-30 correction: benchmark object still needs an explicit matrix</h2>
+<p>
+The older wording on this page already required benchmark-object disclosure, but it still left one practical shortcut open: a reader could talk as if <strong>benchmark object</strong>, <strong>independent prediction unit</strong>, <strong>hold-out unit</strong>, and <strong>challenge operations budget</strong> were all fixed by the benchmark name alone. The current primary and official sources do not support that shortcut. On this site, those fields now have to be read separately.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Case</th>
+<th>What is predicted</th>
+<th>What unit must still be named separately</th>
+<th>Safe ceiling on this site</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EEG Challenge 1</strong><br>official homepage + rules</td>
+<td><strong>Trial-level</strong> response-time regression from the CCD task.</td>
+<td>The <strong>trial</strong> is the scoring unit, but grouped subject structure and the <strong>inference-only single-GPU 20 GB</strong> operations budget still have to be disclosed separately.</td>
+<td>A named cross-task-transfer benchmark under a fixed operations budget, not a general decoder verdict.</td>
+</tr>
+<tr>
+<td><strong>EEG Challenge 2</strong><br>official homepage + leaderboard</td>
+<td><strong>Subject-level</strong> externalizing-factor prediction from EEG across multiple paradigms.</td>
+<td>The <strong>subject</strong> is the natural independent unit, and the leaderboard postmortem shows that hidden contiguous-trial grouping can still change what the benchmark measured.</td>
+<td>A subject-invariant benchmark attempt whose interpretation remains contingent on grouping policy, not proof that subject invariance is solved.</td>
+</tr>
+<tr>
+<td><strong>Lee et al. (2025)</strong><br>ICML proceedings</td>
+<td>Fine-tuning results across <strong>memory tasks</strong> and <strong>sleep stage classification</strong>.</td>
+<td>The task family, label granularity, adaptation regime, and metric family still have to be named because sleep-stage labels and memory-task outputs are not one prediction object.</td>
+<td>A fine-tuning / PEFT audit across named tasks, not a universal frontier ranking for EEG foundation models.</td>
+</tr>
+<tr>
+<td><strong>Liu et al. (2026)</strong><br>benchmarking preprint</td>
+<td>Cross-model comparison across <strong>13 EEG datasets</strong> and <strong>nine paradigms</strong>.</td>
+<td>The paper explicitly separates <strong>leave-one-subject-out</strong> evaluation from <strong>within-subject few-shot</strong> calibration, so the hold-out unit cannot be collapsed into one transfer score.</td>
+<td>A benchmark matrix for transfer-regime tradeoffs, not a settled answer to which model generalizes best.</td>
+</tr>
+<tr>
+<td><strong>Lahiri et al. (2026)</strong><br>PRISM</td>
+<td>Clinical differential diagnosis from interictal EEG, including epilepsy versus mimickers.</td>
+<td>The clinically interesting object is subject-level diagnosis, but the paper also shows that split construction, checkpoint selection, segment length, and normalization can dominate comparison.</td>
+<td>Evidence that protocol differences can dominate rankings, not an accepted law of clinical transfer.</td>
+</tr>
+</tbody>
+</table>
+</section>
 
 <section class="section" id="paper-boundaries">
 <h2 class="section-title">Read primary sources by evidence tier</h2>
@@ -236,13 +288,13 @@ The biggest weakness that needed correction here was that <strong>accepted model
 <td>Whether the regime is frozen, linear-probe, PEFT, full fine-tune, or TTT, plus target-data usage, label budget, and recalibration amount.</td>
 </tr>
 <tr>
-<td><strong>G5: benchmark object / supervision unit</strong></td>
+<td><strong>G5: benchmark object / supervision unit / independent prediction unit</strong></td>
 <td>Per-window classification, event detection, sequence labeling, subject-level regression, and retrieval / ranking do not test the same scientific object. Official foundation-model benchmarks already mix these families.</td>
-<td>The supervision unit, label provenance, output family, metric bundle, and what counts as one independent prediction.</td>
+<td>The supervision unit, label provenance, output family, metric bundle, what counts as one independent prediction, and whether that unit inherits raw-recording or subject grouping.</td>
 </tr>
 <tr>
-<td><strong>G6: benchmark provenance</strong></td>
-<td>Benchmark papers from 2025-2026 show that rankings can move with split construction, checkpoint selection, segment length, and even hidden sample ordering. The official EEG Challenge postmortem made that point operationally explicit.</td>
+<td><strong>G6: benchmark provenance / operations budget</strong></td>
+<td>Benchmark papers from 2025-2026 show that rankings can move with split construction, checkpoint selection, segment length, hidden sample ordering, and challenge-stage compute restrictions. The official EEG Challenge postmortem made that point operationally explicit.</td>
 <td>Benchmark name, version, split rule, sample-randomization / hidden-grouping policy, checkpoint selection, segment length, normalization, how the external hold-out was built, and any inference-stage compute / training restrictions.</td>
 </tr>
 <tr>
@@ -317,13 +369,13 @@ For foundation / self-supervised results, this site requires a <strong>Pretraini
 <td>You may conflate "a general representation transferred well" with "the model was strongly adapted to the target."</td>
 </tr>
 <tr>
-<td><strong>Benchmark</strong></td>
-<td>Benchmark name, version, split rule, checkpoint selection, segment length, and normalization.</td>
+<td><strong>Benchmark Provenance / Operations</strong></td>
+<td>Benchmark name, version, split rule, checkpoint selection, segment length, normalization, and any inference-stage compute or no-training restriction.</td>
 <td>You may misread ranking changes caused by benchmark design as differences in the model itself.</td>
 </tr>
 <tr>
 <td><strong>Benchmark Object / Supervision Unit</strong></td>
-<td>Whether the downstream object is window / trial classification, event detection, sequence labeling, subject-level regression / diagnosis, retrieval / ranking, or another family, together with label provenance, output family, metric bundle, and the independent prediction unit.</td>
+<td>Whether the downstream object is window / trial classification, event detection, sequence labeling, subject-level regression / diagnosis, retrieval / ranking, or another family, together with label provenance, output family, metric bundle, the independent prediction unit, and whether grouped ancestry from the same recording or subject remains.</td>
 <td>You may collapse heterogeneous wins into one story about portable EEG generalization even though the model solved different objects with different error surfaces.</td>
 </tr>
 <tr>
@@ -361,7 +413,9 @@ For foundation / self-supervised results, this site requires a <strong>Pretraini
 <li><strong>We do not hide format harmonization:</strong> channel / reference / sampling harmonization must always be reported.</li>
 <li><strong>We do not hide the amount of adaptation:</strong> linear probing, full fine-tuning, and TTT are not all listed as the same kind of "transfer success."</li>
 <li><strong>We do not hide benchmark object:</strong> window classification, event detection, sequence labeling, subject-level regression, and retrieval-like tasks are not compressed into one frontier score.</li>
+<li><strong>We do not hide independent units or grouped hold-outs:</strong> trial, epoch, recording, and subject are different prediction objects and need separate disclosure.</li>
 <li><strong>We do not hide benchmark provenance:</strong> because rankings move with split / checkpoint / preprocessing differences, benchmark specification is part of the result.</li>
+<li><strong>We do not hide challenge operations budgets:</strong> inference-only settings, no-training rules, and memory limits are part of what the leaderboard score means.</li>
 <li><strong>We do not treat "any setup" as shortcut-resistant by title alone:</strong> foundation-model transfer claims also need a shortcut-resistance bridge to the <a href="../verification.html#specificity-shortcut-card">Specificity &amp; Shortcut Card</a>.</li>
 <li><strong>Current competition rules are checked on the official site:</strong> proposal papers or companion preprints are background material; current rules / submission instructions / starter kits take priority for operations.</li>
 <li><strong>We do not hide benchmark postmortems:</strong> if organizers later disclose split flaws, sample-order shortcuts, or scoring changes, that disclosure changes how we read the leaderboard.</li>
@@ -380,7 +434,7 @@ For foundation / self-supervised results, this site requires a <strong>Pretraini
 <li>Wang, H., Lu, C., Xie, B., et al. (2023). BIOT: Biosignal Transformer for Cross-data Learning in the Wild. <em>NeurIPS 2023</em>. <a href="https://papers.nips.cc/paper_files/paper/2023/file/f6b30f3e2dd9cb53bbf2024402d02295-Paper-Conference.pdf" target="_blank">paper</a></li>
 <li>Jiang, W.-B., Zhao, L., &amp; Lu, B.-L. (2024). Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI. <em>ICLR 2024</em>. <a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/47393e8594c82ce8fd83adc672cf9872-Abstract-Conference.html" target="_blank">proceedings</a></li>
 <li>Wang, G., Liu, W., He, Y., Xu, C., Ma, L., &amp; Li, H. (2024). EEGPT: Pretrained Transformer for Universal and Reliable Representation of EEG Signals. <em>NeurIPS 2024</em>. <a href="https://neurips.cc/virtual/2024/poster/93793" target="_blank">poster / abstract</a></li>
-<li>Lee, N., Barmpas, K., Panagakis, Y., Adamos, D., Laskaris, N., &amp; Zafeiriou, S. (2025). Are Large Brainwave Foundation Models Capable Yet? Insights from Fine-Tuning. <em>ICML 2025 poster</em>. <a href="https://openreview.net/forum?id=J5SbLoq7Uv" target="_blank">OpenReview</a></li>
+<li>Lee, N., Barmpas, K., Panagakis, Y., Adamos, D., Laskaris, N., &amp; Zafeiriou, S. (2025). Are Large Brainwave Foundation Models Capable Yet? Insights from Fine-Tuning. <em>Proceedings of the 42nd International Conference on Machine Learning</em>, PMLR 267, 32878-32888. <a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">PMLR</a></li>
 <li>EEG Foundation Challenge (2025). From Cross-Task to Cross-Subject EEG Decoding. <em>NeurIPS 2025 competition</em>. <a href="https://eeg2025.github.io/" target="_blank">official website</a></li>
 <li>EEG Foundation Challenge (2025). Data. <a href="https://eeg2025.github.io/data/" target="_blank">official data page</a></li>
 <li>EEG Foundation Challenge (2025). Rules. <a href="https://eeg2025.github.io/rules/" target="_blank">official rules</a></li>
