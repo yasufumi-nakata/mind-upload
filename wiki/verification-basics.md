@@ -5,7 +5,7 @@ description: A beginner explanation of why standards, benchmarks, preregistratio
 article_type: Wiki
 subtitle: Before celebrating a score, fix the ruler, the route card, and the failure log.
 author: Mind Uploading Research Project
-last_updated: '2026-03-30'
+last_updated: '2026-03-31'
 note: Beginner guide
 audience: People who want to understand the logic of the Verification Commons from the beginning
 reading_time: 14-18 minutes
@@ -16,7 +16,7 @@ page_highlights:
   - 'Benchmark meaning still depends on split regime, metric bundle, and current benchmark rules rather than the task name alone.'
   - 'Standards, benchmarks, preregistration, route cards, and audits each solve a different failure mode.'
   - 'Modern neuroscience results often need claim-specific route cards, not only a generic score sheet.'
-  - 'For EEG source imaging, the route card now also has to separate validation class, source regime, montage / coverage policy, and focal-centre versus source-extent benchmark object rather than stopping at one localization score.'
+  - 'For EEG source imaging, the route card now also has to separate validation class, source regime, inverse family / uncertainty object, montage / coverage policy, and focal-centre versus source-extent benchmark object rather than stopping at one localization score.'
   - 'For tractography, the route card now has to type acquisition / harmonization, cortical endpoint assignment, graph construction, uncertainty, and external calibration rather than only the modality name.'
   - 'For effective connectivity, the route card now also has to disclose observed-subsystem closure / latent-confound audit, node-definition policy, and sampling / transformation sensitivity rather than stopping at candidate-model family.'
   - 'Proxy-rich human evidence still needs a Human Proxy Composition Card before it is read as same-subject state closure.'
@@ -27,7 +27,7 @@ known_points:
 - Comparable progress requires aligned inputs, evaluation, rules, and records.
 - Without preregistration and auditing, it becomes too easy to promote only favorable conditions.
 - Recent primary literature shows that decode, tractography, effective-connectivity, thermodynamic, closed-loop, human-proxy-composition, and bridge claims fail in different ways and therefore need different cards.
-- ESI claims still need named validation class, source regime, montage / coverage policy, and target object disclosed separately; a focal-centre result does not automatically settle source extent or propagation-rich reconstruction.
+- ESI claims still need named validation class, source regime, inverse family / uncertainty object, montage / coverage policy, and target object disclosed separately; a focal-centre result does not automatically settle source extent or propagation-rich reconstruction.
 - A tractography-derived connectome can still move with endpoint bias, graph construction, voxel size, q-space scheme, uncertainty routing, and calibration route, so comparison requires object typing before interpretation.
 - Effective-connectivity claims still need observed-subsystem closure / latent-confound audit, node-definition policy, and sampling / transformation sensitivity logged separately from model comparison and validation.
 - Proxy class, operational maturity, and calibrator role are different questions; a real human route may still calibrate only one bounded hidden-state family.
@@ -122,6 +122,13 @@ The remaining weakness in this beginner verification page was that its effective
 <strong>2026-03-30 correction: ESI route cards also need validation-class, montage, and target-object disclosure</strong>
 <p>
 This beginner page still had one technical gap after the recent site-wide ESI updates. It still left too much room to think that <strong>improved source imaging</strong> could be summarized by one localization score or one density label. The current primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.clinph.2023.08.009" target="_blank">Horrillo-Maysonnial et al. (2023)</a> showed that a <strong>targeted 33-36 electrode montage</strong> can reach <strong>54/58 sublobar concordance</strong> against an <strong>83-electrode</strong> HD montage while still degrading for <strong>tangential generators</strong>. <a href="https://doi.org/10.1016/j.clinph.2025.04.009" target="_blank">Rong et al. (2025)</a> showed that DeepSIF can remain comparatively stable from <strong>75 to 16 electrodes</strong>, but that does not erase route dependence. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> and <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> showed that direct validation still depends on <strong>coverage geometry</strong>, <strong>conductivity assumptions</strong>, <strong>source depth</strong>, and <strong>source power</strong>. <a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">Pascarella et al. (2023)</a> compared ten ESI methods on an in-vivo focal benchmark and showed that method ranking still depends on <strong>input parameters</strong>, while <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> targeted <strong>extended-source reconstruction</strong>, which is not the same benchmark object as focal-centre localization. Therefore, on this site, an ESI route card now has to name <strong>validation class</strong>, <strong>source regime</strong>, <strong>same-geometry controls including montage / coverage policy</strong>, and whether the benchmark scores <strong>centre</strong>, <strong>extent</strong>, <strong>overlap</strong>, or <strong>propagation</strong>.
+</p>
+</div>
+
+<div class="note-box">
+<strong>2026-03-31 correction: ESI route cards also need inverse-family and uncertainty-object disclosure</strong>
+<p>
+One more beginner shortcut still remained after the target-object update. The current literature does <strong>not</strong> support reading all inverse methods as if they were estimating one common hidden object with one generic uncertainty term. <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a> describe a <strong>probabilistic focal-support family</strong>, <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a> describe a <strong>sparse debiased-inference family</strong>, and <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> target <strong>extended-source reconstruction with uncertainty quantification</strong>. Those routes do not return the same target object or the same uncertainty object. At the same time, <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a> and <a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk et al. (2026)</a> show that forward-model uncertainty remains a separate audit, while <a href="https://doi.org/10.1016/j.compbiomed.2026.111449" target="_blank">Jahromi et al. (2026)</a> add a <strong>deep-source pediatric phantom board</strong> rather than one more interchangeable validation checkbox. Therefore, on this site, an ESI route card now also has to name the <strong>inverse family</strong>, the <strong>target object</strong>, the <strong>uncertainty object</strong>, the <strong>forward-model uncertainty route</strong>, and the <strong>named validation board</strong> before a comparison is treated as reusable progress.
 </p>
 </div>
 
@@ -289,7 +296,7 @@ If the bundle is sequential rather than same-session, the <a href="../verificati
 </tr>
 <tr>
 <td><strong>EEG source imaging / inverse reconstruction</strong></td>
-<td>A single localization score is too weak because field formation, validation class, source regime, montage / coverage policy, and focal-centre versus source-extent benchmark object can all change what the result means.</td>
+<td>A single localization score is too weak because field formation, validation class, source regime, inverse family / uncertainty object, montage / coverage policy, and focal-centre versus source-extent benchmark object can all change what the result means.</td>
 <td>Observability Budget plus Inverse-Solver Agreement Log.</td>
 </tr>
 <tr>
@@ -406,6 +413,11 @@ On Mind-Upload, the public <a href="../verification.html">Verification</a> page 
 <li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <em>Epilepsia</em>, 66(11), 4451-4464. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
 <li>Pascarella, A., Mikulan, E., Sciacchitano, F., et al. (2023). An in-vivo validation of ESI methods with focal sources. <em>NeuroImage</em>, 277, 120219. <a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">doi:10.1016/j.neuroimage.2023.120219</a></li>
 <li>Feng, Z., Guan, C., &amp; Sun, Y. (2025). Block-Champagne: A novel Bayesian framework for imaging extended E/MEG source. <em>IEEE Transactions on Medical Imaging</em>. <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">doi:10.1109/TMI.2025.3642620</a></li>
+<li>Vorwerk, J., Wolters, C. H., &amp; Baumgarten, D. (2024). Global sensitivity of EEG source analysis to tissue conductivity uncertainties. <em>Frontiers in Human Neuroscience</em>, 18, 1335212. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">doi:10.3389/fnhum.2024.1335212</a></li>
+<li>Luria, G., Viani, S., Pascarella, A., et al. (2024). The SESAMEEG package: a probabilistic tool for source localization and uncertainty quantification in M/EEG. <em>Frontiers in Human Neuroscience</em>, 18, 1359753. <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">doi:10.3389/fnhum.2024.1359753</a></li>
+<li>Tong, P. F., Yang, H., Ding, X., et al. (2025). Debiased estimation and inference for spatial-temporal EEG/MEG source imaging. <em>IEEE Transactions on Medical Imaging</em>. <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">doi:10.1109/TMI.2024.3506596</a></li>
+<li>Vorwerk, J., Rampp, S., Wolters, C. H., &amp; Baumgarten, D. (2026). Potential of EEG and EEG/MEG skull conductivity estimation to improve source analysis in presurgical evaluation of epilepsy. <em>Journal of Neural Engineering</em>, 23(1). <a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">doi:10.1088/1741-2552/ae2f01</a></li>
+<li>Jahromi, S., Sdoukopoulou, G., Chikara, R. K., et al. (2026). 3D printed pediatric head phantom for assessing deep epileptic sources localization. <em>Computers in Biology and Medicine</em>, 182, 111449. <a href="https://doi.org/10.1016/j.compbiomed.2026.111449" target="_blank">doi:10.1016/j.compbiomed.2026.111449</a></li>
 <li>Thomas, C., Ye, F. Q., Irfanoglu, M. O., et al. (2014). Anatomical accuracy of brain connections derived from diffusion MRI tractography is inherently limited. <em>PNAS</em>, 111(46), 16574-16579. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4246325/" target="_blank">doi:10.1073/pnas.1405672111</a></li>
 <li>Maier-Hein, K. H., Neher, P. F., Houde, J.-C., et al. (2017). The challenge of mapping the human connectome based on diffusion tractography. <em>Nature Communications</em>, 8, 1349. <a href="https://www.nature.com/articles/s41467-017-01285-x" target="_blank">doi:10.1038/s41467-017-01285-x</a></li>
 <li>Gajwani, M., Oldham, S., Pang, J. C., Arnatkevi&#269;i&#363;t&#279;, A., Tiego, J., Bellgrove, M. A., &amp; Fornito, A. (2023). Can hubs of the human connectome be identified consistently with diffusion MRI? <em>Network Neuroscience</em>, 7(4), 1277-1304. <a href="https://doi.org/10.1162/netn_a_00324" target="_blank">doi:10.1162/netn_a_00324</a></li>

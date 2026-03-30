@@ -5,7 +5,7 @@ description: "From the selection of public data (mainly EEG) to the minimum loop
 article_type: Resource
 subtitle: "Connect ``what to use'' and ``how to reproduce'' in the shortest route without separating them."
 author: Mind Uploading Research Project
-last_updated: "2026-03-30"
+last_updated: "2026-03-31"
 note: "Curated List + L0 Practice"
 audience: "People who are wondering which public data to start with, people who are looking for an L0 practice board"
 reading_time: "12-20 minutes"
@@ -15,7 +15,7 @@ page_highlights:
   - "We look at the shared infrastructure first, then the starter datasets."
   - "Starter data is a practice board for L0-L1, not the ground truth of EEG source imaging."
   - "Even inside direct-validation data, stimulation ground truth, simultaneous invasive recording, and postsurgical outcome are different evidence classes."
-  - "A fair inverse-problem benchmark also has to separate focal-centre versus source-extent targets, solver family, montage / coverage policy, and geometry / conductivity sensitivity rather than naming only a winning method."
+  - "A fair inverse-problem benchmark also has to separate focal-centre versus source-extent targets, inverse family, uncertainty object, montage / coverage policy, and geometry / conductivity sensitivity rather than naming only a winning method."
   - "High density is not the only meaningful route: targeted-density and DeepSIF-like low-density ESI can work in bounded regimes, but the gain is still solver-, geometry-, and source-regime-conditioned."
   - "Each starter dataset has different annotation provenance, time fidelity, and independent split units."
   - "Within-session / cross-session / cross-subject / adaptation are different evaluation families and should not be placed side by side under the same score."
@@ -43,7 +43,7 @@ known_points:
   - "With only starter data and no individual MRI or invasive ground truth, we cannot make strong claims about improved ESI accuracy."
   - "At source-imaging stage C, named validation class still matters because stimulation ground truth, simultaneous SEEG, and clinical outcome do not answer the same error question."
   - "Low-density or targeted-density ESI can be scientifically meaningful in bounded regimes, but montage design, generator depth/orientation, and validation class still have to be declared before the result is compared with HD-EEG or treated as portable."
-  - "For inverse-problem claims, same raw data is still not enough; same head model, same preprocessing, same source regime, and a sensitivity report are also required before comparing solver families."
+  - "For inverse-problem claims, same raw data is still not enough; same head model, same preprocessing, same source regime, same inverse family / target object, and a sensitivity report are also required before comparing solver families."
   - "At L0, a reusable artifact pack now also requires event fidelity, label provenance, hold-out ancestry, acquisition-distribution summary, derivative lineage, and a stopping claim rather than only version/BIDS/QC/split/baseline."
 unknown_points:
   - "Starter datasets alone cannot solve all the issues of WBE."
@@ -650,14 +650,14 @@ On this site, you should still write which C-stage validation class you used:
 <div class="note-box">
 <strong>The most important thing now is the C stage public benchmark</strong>
 <p>
-Localize-MI by Mikulan et al. (2020) is a rare data resource that exposes intracerebral stimulation with 256ch scalp EEG and stereo-EEG, allowing source imaging to be directly audited against “known stimulation locations.” Hao et al. (2025) reported average localization errors of 14.07 mm for ictal ESI and 17.38 mm for interictal ESI in 29 simultaneous HD-EEG/SEEG cases, indicating that source power and source depth greatly affect accuracy. Therefore, if you want to improve your source imaging, you need not only a C-level benchmark, but also a named C-stage validation class rather than an A-level starter dataset alone.
+Localize-MI by Mikulan et al. (2020) is a rare data resource that exposes intracerebral stimulation with 256ch scalp EEG and stereo-EEG, allowing source imaging to be directly audited against “known stimulation locations.” Hao et al. (2025) reported average localization errors of 14.07 mm for ictal ESI and 17.38 mm for interictal ESI in 29 simultaneous HD-EEG/SEEG cases, indicating that source power and source depth greatly affect accuracy. Jahromi et al. (2026) then added a <strong>3D-printed pediatric deep-source phantom</strong>, showing that even phantom validation is not one universal board once <strong>deep epileptic source class</strong> and <strong>geometry</strong> are changed. Therefore, if you want to improve your source imaging, you need not only a C-level benchmark, but also a named C-stage validation class rather than an A-level starter dataset alone.
 </p>
 </div>
 
 <div class="note-box">
 <strong>High density is no longer the only credible route, but it is still not a solver-free shortcut</strong>
 <p>
-One remaining simplification on this page was to make the entrance sound too close to <strong>HD-EEG is the serious route and low-density EEG is the weak route</strong>. The current primary literature is narrower than that. <a href="https://doi.org/10.1016/j.clinph.2023.08.009" target="_blank">Horrillo-Maysonnial et al. (2023)</a> showed that a targeted <strong>33-36-electrode</strong> montage reached <strong>54/58 sublobar concordance (93%)</strong> against an <strong>83-electrode</strong> HD montage, but still showed larger peak-vertex distance for <strong>tangential generators</strong>. <a href="https://doi.org/10.1016/j.clinph.2025.04.009" target="_blank">Rong et al. (2025)</a> then showed that a DeepSIF-based approach stayed comparatively stable from <strong>75 to 16 electrodes</strong>, with average spatial dispersions of <strong>7.9/9.0 mm</strong> versus <strong>21.9/28.1 mm</strong> for sLORETA and <strong>20.0/28.9 mm</strong> for LCMV. But these papers do not erase the direct-validation ceiling. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> showed that coverage geometry and conductivity assumptions still move localization error in direct validation, and <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> showed that ictal and interictal ESI differed (<strong>14.07 ± 4.62 mm</strong> versus <strong>17.38 ± 4.16 mm</strong>) and that <strong>source depth</strong> and <strong>spike power</strong> still matter. Therefore, this site no longer treats <strong>high density</strong> versus <strong>low density</strong> as the right first split. The safer split is <strong>named montage / coverage policy + solver family + source regime + validation class</strong>.
+One remaining simplification on this page was to make the entrance sound too close to <strong>HD-EEG is the serious route and low-density EEG is the weak route</strong>. The current primary literature is narrower than that. <a href="https://doi.org/10.1016/j.clinph.2023.08.009" target="_blank">Horrillo-Maysonnial et al. (2023)</a> showed that a targeted <strong>33-36-electrode</strong> montage reached <strong>54/58 sublobar concordance (93%)</strong> against an <strong>83-electrode</strong> HD montage, but still showed larger peak-vertex distance for <strong>tangential generators</strong>. <a href="https://doi.org/10.1016/j.clinph.2025.04.009" target="_blank">Rong et al. (2025)</a> then showed that a DeepSIF-based approach stayed comparatively stable from <strong>75 to 16 electrodes</strong>, with average spatial dispersions of <strong>7.9/9.0 mm</strong> versus <strong>21.9/28.1 mm</strong> for sLORETA and <strong>20.0/28.9 mm</strong> for LCMV. But these papers do not erase the direct-validation ceiling. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> showed that coverage geometry and conductivity assumptions still move localization error in direct validation, and <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> showed that ictal and interictal ESI differed (<strong>14.07 ± 4.62 mm</strong> versus <strong>17.38 ± 4.16 mm</strong>) and that <strong>source depth</strong> and <strong>spike power</strong> still matter. Therefore, this site no longer treats <strong>high density</strong> versus <strong>low density</strong> as the right first split. The safer split is <strong>named montage / coverage policy + inverse family + source regime + validation class</strong>.
 </p>
 </div>
 
@@ -679,8 +679,15 @@ The first question when selecting data is not ``what is interesting?'' but <stro
 <section class="section" id="inverse-benchmark-board">
 <h2 class="section-title">4.5) Inverse-problem benchmark board: compare error questions, not solver names</h2>
 <p>
-The weakness of this page after the 2026-03-18 validation-class update was that it could still let a reader jump from ``we used C-stage data'' to ``solver X won.'' That is too weak. <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">Michel &amp; Brunet (2019)</a> describe ESI as a pipeline rather than a single algorithm. <a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">Pascarella et al. (2023)</a> then showed on an in-vivo focal-source benchmark that ten methods differ not only in best localization error but also in sensitivity to regularization and montage density, while <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> showed that skull conductivity and source depth still move localization error in direct validation. At the same time, <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> target extended-source reconstruction, which is not the same benchmark question as focal-source localization. Therefore, this site now treats solver comparison as a board with four fixed axes: <strong>validation class</strong>, <strong>source regime</strong>, <strong>same-geometry controls</strong>, and <strong>sensitivity sweep</strong>.
+The weakness of this page after the 2026-03-18 validation-class update was that it could still let a reader jump from ``we used C-stage data'' to ``solver X won.'' That is too weak. <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">Michel &amp; Brunet (2019)</a> describe ESI as a pipeline rather than a single algorithm, but the current literature is stricter still. <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a> expose a <strong>probabilistic focal-support family</strong>, <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a> expose a <strong>sparse debiased-inference family</strong>, and <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> target <strong>extended-source reconstruction</strong>. Those papers do not return the same target object or the same uncertainty object. <a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">Pascarella et al. (2023)</a> then showed on an in-vivo focal-source benchmark that ten methods differ not only in best localization error but also in sensitivity to regularization and montage density, while <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>, <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a>, and <a href="https://doi.org/10.1016/j.compbiomed.2026.111449" target="_blank">Jahromi et al. (2026)</a> show that direct-validation boards themselves differ by stimulation class, simultaneous invasive reference, and deep-source phantom geometry. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a> and <a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk et al. (2026)</a> further show that forward-model uncertainty is a separate audit rather than a property inherited from a nicer inverse map. Therefore, this site now treats inverse-problem comparison as a board with five fixed axes: <strong>validation class</strong>, <strong>source regime / target object</strong>, <strong>inverse family / uncertainty object</strong>, <strong>same-geometry controls</strong>, and <strong>sensitivity sweep</strong>.
 </p>
+
+<div class="note-box">
+<strong>Inverse family is not just a solver style label</strong>
+<p>
+This page now has to stop another shortcut explicitly. A <strong>posterior-support map</strong>, a <strong>debiased sparse interval</strong>, and an <strong>extended-source overlap estimate</strong> are not three visualizations of one identical hidden object. <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a> return posterior support for focal alternatives, <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a> return debiased estimation / inference for sparse spatial-temporal sources, and <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> return uncertainty-aware <strong>extended-source</strong> reconstructions. Therefore, a benchmark on this site must name not only the board, but also which <strong>inverse family</strong> was used, what <strong>target object</strong> it aimed to recover, and what <strong>uncertainty object</strong> it actually returned.
+</p>
+</div>
 
 <div class="note-box">
 <strong>Centre error and source extent are different benchmark objects</strong>
@@ -723,6 +730,12 @@ Another shortcut still had to be blocked here. A benchmark can be “directly va
 <td>Extent overlap or reconstruction error for distributed sources, plus the gain from the added prior.</td>
 <td>Do not compare an extended-source method only on a focal-source leaderboard and call it inferior in general.</td>
 </tr>
+<tr>
+<td><strong>Inverse-family comparison under one named board</strong></td>
+<td>Same validation class, same raw data, same geometry, same source regime, and an explicit statement of whether each method returns posterior support, sparse debiased intervals, focal centres, or source extent / overlap.</td>
+<td>Family-typed result table: target object, uncertainty object, primary board metric, and the spread induced by conductivity / hyperparameter sweeps.</td>
+<td>Do not collapse a probabilistic focal family, a sparse debiased family, and an extended-source family into one shared winner or one generic “better ESI” claim.</td>
+</tr>
 </tbody>
 </table>
 
@@ -760,13 +773,18 @@ Another shortcut still had to be blocked here. A benchmark can be “directly va
 <td>Keep separate leaderboards for focal, sparse, and extended-source tasks.</td>
 <td>Source-regime-specific strength, not a contradiction that can be collapsed into one number.</td>
 </tr>
+<tr>
+<td>Probabilistic focal support, sparse debiased inference, and extent-aware reconstruction return different uncertainty objects.</td>
+<td>Publish the family label, target object, and uncertainty object beside the main score instead of hiding them in Methods.</td>
+<td>Board-specific, family-specific evidence only; do not read disagreement as generic noise around one common truth object.</td>
+</tr>
 </tbody>
 </table>
 
 <div class="note-box">
 <strong>Site rule from this section</strong>
 <p>
-A public inverse-problem comparison on this site must now disclose at least <strong>(1) validation class</strong>, <strong>(2) source regime and target object (focal-centre / sparse / extended / propagation-aware)</strong>, <strong>(3) same-geometry controls including montage / coverage policy</strong>, <strong>(4) sensitivity sweep over conductivity and key hyperparameters</strong>, <strong>(5) inter-method disagreement summary</strong>, and <strong>(6) the claim that must stop here</strong>. Without these fields, a result will be treated as a method illustration or lab-specific pipeline note, not as a reusable benchmark.
+A public inverse-problem comparison on this site must now disclose at least <strong>(1) validation class</strong>, <strong>(2) source regime and target object (focal-centre / sparse / extended / propagation-aware)</strong>, <strong>(3) inverse family plus the uncertainty object it returns</strong>, <strong>(4) same-geometry controls including montage / coverage policy</strong>, <strong>(5) sensitivity sweep over conductivity and key hyperparameters</strong>, <strong>(6) inter-method disagreement summary</strong>, and <strong>(7) the claim that must stop here</strong>. Without these fields, a result will be treated as a method illustration or lab-specific pipeline note, not as a reusable benchmark.
 </p>
 </div>
 </section>
@@ -784,7 +802,7 @@ A public inverse-problem comparison on this site must now disclose at least <str
 <li><strong>Comparison:</strong>Is there a baseline and can be compared using the same metrics as the evaluation family</li>
 <li><strong>Metric bundle:</strong>If the task is imbalanced or event-based, are event sensitivity, false alarms, per-stage agreement, or calibration disclosed rather than one headline number?</li>
 <li><strong>Benchmark provenance:</strong>If the result comes from a challenge or leaderboard, are benchmark version, split / randomization, hidden grouping, extra-data policy, pretrained-checkpoint policy, inference-stage restrictions, and later postmortems fixed?</li>
-<li><strong>Inverse-problem governance:</strong>If source imaging is compared, are validation class, source regime, geometry/control sweep, and inter-method disagreement disclosed before declaring a winner?</li>
+<li><strong>Inverse-problem governance:</strong>If source imaging is compared, are validation class, source regime, inverse family / uncertainty object, geometry/control sweep, and inter-method disagreement disclosed before declaring a winner?</li>
 <li><strong>Rebuttal evidence:</strong>Are there data leak tests, counterfactual tests, and records of failures</li>
 </ul>
 </div>
@@ -1000,7 +1018,12 @@ The shortest route to that end is to approach BIDS/EEG-BIDS.
 <li><a href="https://doi.org/10.1016/j.clinph.2018.12.016" target="_blank">Mouthaan et al. (2019), E-PILEPSY systematic review</a></li>
 <li><a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023), Validating EEG source imaging using intracranial electrical stimulation</a></li>
 <li><a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">Seeber et al. (2019), Subcortical electrophysiological activity is detectable with high-density EEG source imaging</a></li>
+<li><a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024), Global sensitivity of EEG source analysis to tissue conductivity uncertainties</a></li>
+<li><a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024), The SESAMEEG package: a probabilistic tool for source localization and uncertainty quantification in M/EEG</a></li>
+<li><a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025), Debiased estimation and inference for spatial-temporal EEG/MEG source imaging</a></li>
 <li><a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025), Block-Champagne for extended E/MEG source imaging</a></li>
+<li><a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk et al. (2026), Potential of EEG and EEG/MEG skull conductivity estimation to improve source analysis in presurgical evaluation of epilepsy</a></li>
+<li><a href="https://doi.org/10.1016/j.compbiomed.2026.111449" target="_blank">Jahromi et al. (2026), 3D printed pediatric head phantom for assessing deep epileptic sources localization</a></li>
 </ul>
 </section>
 
