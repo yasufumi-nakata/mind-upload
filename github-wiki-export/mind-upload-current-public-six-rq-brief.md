@@ -39,6 +39,7 @@ It does **not** announce solved claims. It only states what the current public r
 - `Kura Fund` remains open through April 17, 2026 at 17:00, `Nakatani Foundation graduate scholarship` runs April 1, 2026 through May 25, 2026 at 15:00, `Kashinome Scholarship` remains open through April 9, 2026, and `Secom General Research Grant` remains only an urgency watch route through March 31, 2026 at 12:00 at this run time.
 - A Todoist full-item audit still shows the current route already covered (`Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom family=3`), so no new task was added in this run.
 - Earlier March 30 notes on this page that treated `D03/D02/D01` as immediate public routes should now be read as superseded by the March 31 access audit.
+- A March 31 cross-repo synthesis also rechecked public-open alternative EEG families for the current six. Those alternatives remain useful as secondary support, but they still do not displace the current `D10/D03/D02/D01` route family or raise the public claim ceiling.
 
 - The public batch stays `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
 - The execution order stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
