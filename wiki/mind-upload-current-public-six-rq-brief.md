@@ -26,6 +26,15 @@ wiki_links:
   - label: "Wiki: U0-2 route packet"
     url: "/wiki/u0-2-temporal-validity-route.html"
     description: "Why D02 stays primary for U0-2, why the support anchors stay secondary, and what the timing-floor artifact can honestly close."
+  - label: "Wiki: U0-3 route packet"
+    url: "/wiki/u0-3-threshold-stability-route.html"
+    description: "Why D02 stays primary for U0-3, why the support anchors stay secondary, and what the threshold-governance artifact can honestly close."
+  - label: "Wiki: U14-4 route packet"
+    url: "/wiki/u14-4-card-contract-route.html"
+    description: "Why D01 stays primary for U14-4, why richer rerun benchmarks stay secondary, and what the card-contract artifact can honestly close."
+  - label: "Wiki: U14-2 route packet"
+    url: "/wiki/u14-2-fixed-split-route.html"
+    description: "Why D01 stays primary for U14-2, why richer rerun benchmarks stay secondary, and what the fixed-split artifact can honestly close."
 recommended_pages:
   - label: "Issue page"
     url: "/issue.html"
@@ -125,6 +134,7 @@ The route is unchanged, but each active row now also carries one submission-read
 - Submission wording that stays honest: `Task-specific identity-threshold stability study`.
 - What still needs outside support: a session-external rerun pack and cohort extension before this row can carry anything stronger than a bounded biometric threshold claim.
 - What still stays outside the claim: treating a stable threshold as sufficient for personhood continuity or branch-identity resolution.
+- If you need the row-specific anchor-choice rationale, read the [U0-3 route packet](/wiki/u0-3-threshold-stability-route.html).
 
 ### `U14-4`
 
@@ -134,6 +144,7 @@ The route is unchanged, but each active row now also carries one submission-read
 - Submission wording that stays honest: `Disclosure-first reproducibility contract package`.
 - What still needs outside support: richer rerun benchmarks and leak-audit exemplars before any broader reproducibility claim is made.
 - What still stays outside the claim: organizational adoption, field-wide standards uptake, or a broad reproducibility victory statement.
+- If you need the row-specific anchor-choice rationale, read the [U14-4 route packet](/wiki/u14-4-card-contract-route.html).
 
 ### `U14-2`
 
@@ -143,6 +154,7 @@ The route is unchanged, but each active row now also carries one submission-read
 - Submission wording that stays honest: `Exploration-confirmation split contract for reruns`.
 - What still needs outside support: split-violation examples across richer public benchmarks before the row can be read as broader confirmatory readiness.
 - What still stays outside the claim: broader rerun robustness claims or confirmatory wording for exploratory outputs.
+- If you need the row-specific anchor-choice rationale, read the [U14-2 route packet](/wiki/u14-2-fixed-split-route.html).
 
 ## What this page does not do
 

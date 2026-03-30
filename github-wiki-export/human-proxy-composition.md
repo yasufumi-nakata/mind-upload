@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-29 / Role: Technical / natural science only
+- Updated: 2026-03-30 / Role: Technical / natural science only
 
 ## Role Of This Page
 This page explains how to read current human proxy routes without collapsing them into one generic progress bar. The question is not only whether a route is impressive, but what exact quantity, target, or transport regime it constrains, on what unit and timescale, in which cohort / physiological regime, with what model burden, with what repeatability / transfer window, and what hidden-state families still remain unresolved.
@@ -30,6 +30,7 @@ The ceilings on this page are operational inferences drawn from primary literatu
 - Proxy class and operational maturity still do not tell you what the route safely calibrates, so calibrator role has to be stated separately.
 - A local rodent causal result plus a living-human proxy result still does not measure the same controller unless the bridge assumption is named explicitly.
 - Even when quantity type and model burden are logged, cross-row composition still requires age band, health/pathology regime, and transfer rationale.
+- Even when same-subject relation is logged, composition still requires explicit effective time-window / state-axis disclosure and physiological / perturbation regime compatibility.
 - Even when proxy class, maturity, and calibrator role are logged, composition still needs route-local repeatability, method-family non-equivalence, cross-centre transfer, complete-case disclosure, and overlap / missingness disclosure.
 - Simultaneous multimodal acquisition can reveal both common and divergent structure across modalities.
 - Global or shared multimodal factors can still include autonomic or vascular physiology, not only the target neural variable.
@@ -79,7 +80,7 @@ One more shortcut still had to be blocked. A paper can look richly multimodal wh
 
 <h2>Three promotion gates before row diversity counts</h2>
 <p>
-The composition rule on this page can now be read as <strong>three gates</strong>. This is a compression of the longer route-card fields, not a weaker rule. A bundle does not rise because the rows look impressive in aggregate. It rises only if it survives <strong>robustness</strong>, <strong>common-driver / quantity-bridge separation</strong>, and <strong>increment over the strongest single row</strong>.
+The composition rule on this page can now be read as <strong>three gates</strong>. This is a compression of the longer route-card fields, not a weaker rule. A bundle does not rise because the rows look impressive in aggregate. It rises only if it survives <strong>robustness</strong>, <strong>effective-window / regime-aware common-driver and quantity-bridge separation</strong>, and <strong>increment over the strongest single row</strong>.
 </p>
 <table>
 <thead>
@@ -97,7 +98,7 @@ The composition rule on this page can now be read as <strong>three gates</strong
 </tr>
 <tr>
 <td><strong>Gate 2: Common-driver and quantity-bridge separation</strong></td>
-<td>Show that the rows are not only synchronized, but also interpretable on an explicitly named biological axis after shared-driver audit. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> found <strong>common and divergent</strong> cross-modal organization, <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> found tightly coupled global progression plus <strong>distinct network patterns</strong> in simultaneous EEG-PET-MRI, <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> linked a major global fMRI mode to autonomic physiology, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that task BOLD and oxygen-metabolism changes can even move in opposite directions.</td>
+<td>Show that the rows are not only synchronized, but also <strong>temporally and physiologically compatible enough</strong> to be read on an explicitly named biological axis after shared-driver audit. A bundle that mixes a static similarity scaffold, a scan-window average, a task-evoked local-dynamics route, a minutes-long kinetic map, and an overnight perturbation does not define one state object by default. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.3389/fnins.2024.1389111" target="_blank">Guo et al. (2024)</a>, <a href="https://doi.org/10.1177/0271678X261415784" target="_blank">Kaiser et al. (2026)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> already span different temporal objects. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> found <strong>common and divergent</strong> cross-modal organization, <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> found tightly coupled global progression plus <strong>distinct network patterns</strong> in simultaneous EEG-PET-MRI, <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> linked a major global fMRI mode to autonomic physiology, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that task BOLD and oxygen-metabolism changes can even move in opposite directions.</td>
 <td>Cross-row agreement remains <strong>shared-factor evidence</strong> or <strong>proxy-rich correlation</strong>, not one validated state variable.</td>
 </tr>
 <tr>
@@ -107,6 +108,11 @@ The composition rule on this page can now be read as <strong>three gates</strong
 </tr>
 </tbody>
 </table>
+
+<strong>Same session is not yet the same effective window</strong>
+<p>
+One remaining shortcut is to treat <strong>same-session</strong> as if it solved temporal compatibility. The primary literature does not support that compression. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> is a <strong>static parcel-similarity scaffold</strong>, <a href="https://doi.org/10.3389/fnins.2024.1389111" target="_blank">Guo et al. (2024)</a> is a <strong>whole-brain NAD-content map</strong>, <a href="https://doi.org/10.1177/0271678X261415784" target="_blank">Kaiser et al. (2026)</a> is a <strong>task-evoked localized NAD-dynamics route</strong>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> is a <strong>minutes-long kinetic mapping route</strong>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> is an <strong>overnight perturbation-and-efflux route</strong>. Even before any fusion model is discussed, those rows do not all answer the question <strong>what is true right now in one matched state sample?</strong> On this site, the card therefore now asks for <strong>effective time window / state-axis compatibility</strong> and <strong>physiological / perturbation regime compatibility</strong> in addition to same-session or same-subject wording.
+</p>
 
 <strong>Within-setup repeatability is not yet route portability</strong>
 <p>
@@ -541,6 +547,14 @@ If the claim depends on treating a sequential bridge as one latent-state sample,
 <td>Stops cross-cohort or cross-paper evidence from being rephrased as if it were one joint measurement in one person.</td>
 </tr>
 <tr>
+<td><strong>Effective time window / state-axis compatibility</strong></td>
+<td>Stops static scaffolds, scan-window averages, task-evoked local dynamics, minutes-long kinetics, and overnight perturbation routes from being silently compressed into one current state sample.</td>
+</tr>
+<tr>
+<td><strong>Physiological / perturbation regime compatibility</strong></td>
+<td>Stops rest, task, sleep stage, sleep deprivation, pharmacological challenge, and severity-specific rows from being treated as the same biological condition without an explicit bridge.</td>
+</tr>
+<tr>
 <td><strong>Model burden and acquisition burden</strong></td>
 <td>Kinetic models, blood inputs, high-field hardware, investigational devices, and specialized sequences all change the practical meaning of the result.</td>
 </tr>
@@ -589,7 +603,7 @@ If the claim depends on treating a sequential bridge as one latent-state sample,
 
 <strong>Operational rule on this site</strong>
 <p>
-If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich but ceiling-limited human evidence</strong>. It is not promoted to <strong>same-subject cross-stack state identification</strong>, <strong>unique internal-state recovery</strong>, or <strong>state-complete readout</strong>. In particular, row diversity without explicit <strong>proxy class</strong>, <strong>operational maturity</strong>, <strong>calibrator role</strong>, <strong>causal-bridge statement when mixed-species causal evidence is used</strong>, <strong>row-level repeatability</strong>, <strong>cross-centre transfer</strong>, <strong>partial-availability disclosure</strong>, <strong>common-driver audit</strong>, and a clear <strong>increment over the strongest single row</strong> is not treated as real state closure. The public-facing implementation of that rule is the <a href="https://mind-upload.com/verification.html#human-proxy-composition-card">Verification: Human Proxy Composition Card</a>.
+If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich but ceiling-limited human evidence</strong>. It is not promoted to <strong>same-subject cross-stack state identification</strong>, <strong>unique internal-state recovery</strong>, or <strong>state-complete readout</strong>. In particular, row diversity without explicit <strong>proxy class</strong>, <strong>effective time window / state-axis compatibility</strong>, <strong>physiological / perturbation regime compatibility</strong>, <strong>operational maturity</strong>, <strong>calibrator role</strong>, <strong>causal-bridge statement when mixed-species causal evidence is used</strong>, <strong>row-level repeatability</strong>, <strong>cross-centre transfer</strong>, <strong>partial-availability disclosure</strong>, <strong>common-driver audit</strong>, and a clear <strong>increment over the strongest single row</strong> is not treated as real state closure. The public-facing implementation of that rule is the <a href="https://mind-upload.com/verification.html#human-proxy-composition-card">Verification: Human Proxy Composition Card</a>.
 </p>
 
 <h2>References (main)</h2>
