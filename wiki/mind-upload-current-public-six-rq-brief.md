@@ -17,6 +17,9 @@ wiki_links:
   - label: "Wiki: Grant and dataset playbook"
     url: "/wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html"
     description: "The route from each RQ to the current bounded funding lane and EEG anchor."
+  - label: "Wiki: U13-2 route packet"
+    url: "/wiki/u13-2-brain-minus-prior-route.html"
+    description: "Why D10 stays first for U13-2, why the other speech candidates stay secondary, and what the first artifact can honestly close."
 recommended_pages:
   - label: "Issue page"
     url: "/issue.html"
@@ -86,6 +89,7 @@ The route is unchanged, but each active row now also carries one submission-read
 - Submission wording that stays honest: `Neural-contribution audit for imagined speech with a brain-minus-prior control`.
 - What still needs outside support: an external language-evaluation layer and a broader leak-control family before any stronger mechanism wording is allowed.
 - What still stays outside the claim: preserved internal mechanism, preserved identity, and any stronger mind-upload wording.
+- If you need the row-specific anchor-choice rationale, read the [U13-2 route packet](/wiki/u13-2-brain-minus-prior-route.html).
 
 ### `U13-5`
 

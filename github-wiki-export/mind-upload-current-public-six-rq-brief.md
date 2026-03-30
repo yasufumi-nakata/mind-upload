@@ -16,6 +16,7 @@ This page fixes the current public six-question route at the level of one RQ, on
 ## Related Wiki Pages
 - [Wiki: RQ-by-RQ deep dossiers](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers) - The longer working dossier for the current public six and the wider 60RQ map.
 - [Wiki: Grant and dataset playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - The route from each RQ to the current bounded funding lane and EEG anchor.
+- [Wiki: U13-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u13-2-brain-minus-prior-route) - Why `D10` stays first for `U13-2`, why the other speech candidates stay secondary, and what the first artifact can honestly close.
 
 ---
 
@@ -78,6 +79,7 @@ The route is unchanged, but each active row now also carries one submission-read
 - Submission wording that stays honest: `Neural-contribution audit for imagined speech with a brain-minus-prior control`.
 - What still needs outside support: an external language-evaluation layer and a broader leak-control family before any stronger mechanism wording is allowed.
 - What still stays outside the claim: preserved internal mechanism, preserved identity, and any stronger mind-upload wording.
+- If you need the row-specific anchor-choice rationale, read the [U13-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u13-2-brain-minus-prior-route).
 
 ### `U13-5`
 
