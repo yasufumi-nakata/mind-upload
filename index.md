@@ -5,7 +5,7 @@ description: "A verification commons for turning mind uploading and WBE into a s
 article_type: Start Here
 subtitle: "Define success criteria, standards, benchmarks, and preregistration first"
 author: Mind Uploading Research Project
-last_updated: "2026-03-30"
+last_updated: "2026-03-31"
 note: "Human-friendly landing page"
 audience: "First-time visitors, readers who want only the big picture, and anyone who wants a clear reading order"
 reading_time: "5-10 min"
@@ -41,6 +41,7 @@ page_highlights:
   - "A human tractography graph is not one stable object: superficial-white-matter access, gyral-endpoint bias, parcellation choice, and voxel resolution still change what the graph means."
   - "For hemodynamic modalities, BOLD or fNIRS amplitude is not read as neural difference unless vascular-state / CVR limits are audited separately."
   - "For EEG / MEG connectivity, wPLI, source-space graphs, and information-flow labels are not read as leak-proof communication maps or causal circuits unless leakage, perturbation, and pipeline limits are disclosed separately."
+  - "For ESI / source-imaging results, probabilistic focal-posterior families, sparse debiased families, and extended-source families do not estimate one interchangeable object; source regime, uncertainty object, forward-model uncertainty, and validation board remain separate conditions."
   - "For DCM / effective-connectivity results, candidate-model comparison alone is not enough; observed-subsystem closure, node-definition policy, latent-confound audit, and sampling / transformation sensitivity remain separate conditions before causal-wiring language is allowed."
   - "Thermodynamic or irreversibility papers are kept on an auxiliary track; arrow-of-time results are not read as direct physical-dissipation or WBE-readiness evidence without a route card that names coarse-graining, hidden-degree risk, and quantity type."
   - "Brain-to-text and speech demos are read through the Neural Contribution Card so neural contribution is not confused with task structure or language priors."
@@ -75,6 +76,7 @@ known_points:
   - "A tractography-derived connectome can still change at the cortical-endpoint and parcel-graph stage even when the underlying diffusion signal is the same."
   - "For hemodynamic readouts, a group or longitudinal BOLD difference can still be dominated by vascular transfer state rather than neural change."
   - "For EEG / MEG connectivity readouts, volume conduction, source leakage, ghost interactions, and pipeline dependence still stop the claim before communication or causality."
+  - "For ESI / source imaging, focal posterior support, sparse debiased inference, extended-source extent maps, conductivity calibration, and direct-validation boards answer different questions rather than one shared inverse-progress score."
   - "For DCM / effective-connectivity readouts, candidate-model competition does not erase latent confounders, ROI / node-definition error, or sampling / observation-transform failure modes."
   - "For thermodynamic claims, different estimator families still answer different questions, and partial observation can still hide dissipation, so irreversibility results stay auxiliary unless their route card is disclosed."
   - "Strong claims about identity or consciousness belong in downstream verification design, not on the landing page."
@@ -357,6 +359,13 @@ This site now treats <strong>vascular transfer state</strong> as a separate audi
 <strong>If You Read EEG / MEG Connectivity As Communication Or Causality Too Quickly</strong>
 <p>
 This site does not treat <strong>wPLI</strong>, <strong>source-space connectivity</strong>, <strong>Granger-style directed metrics</strong>, or <strong>transfer-entropy labels</strong> as leak-proof communication maps or causal circuits by name alone. Volume conduction, source leakage, ghost interactions, pipeline dependence, and observation-only limits remain separate audit items. The shortest route is <a href="faq.html#q1d2">FAQ: how to read connectivity claims</a>, then <a href="eeg_101.html">EEG 101</a> and <a href="wiki/observation-to-estimation.html">Wiki: from observation to estimation</a>.
+</p>
+</div>
+
+<div class="note-box">
+<strong>If A Better ESI Solver Sounds Like One Shared Progress Bar</strong>
+<p>
+This site blocks that shortcut too. <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a> expose posterior support and alternative configurations for <strong>focal-source hypotheses</strong>, <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a> expose debiased estimation and inference for <strong>sparse spatial-temporal sources</strong>, and <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> expose empirical-Bayesian uncertainty for <strong>extended-source extent</strong>. Upstream physics remains separate: <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a> showed that EEG localization shifts with tissue-conductivity uncertainty, and <a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk et al. (2026)</a> showed that conductivity estimation can reduce uncertainty for many epilepsy-style source-analysis cases without erasing source-location exceptions at the brain base. Validation boards remain split as well: <a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">Pascarella et al. (2023)</a>, <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>, and <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> validate focal or clinical operating regimes, not one universal board for focal, sparse, extended, and spontaneous sources. Therefore, this site does not read <strong>new inverse method</strong> as one generic truth upgrade. Before an anatomical source claim is raised, the paper must disclose <strong>source regime / target object</strong>, <strong>uncertainty object</strong>, <strong>forward-model uncertainty route</strong>, and <strong>named validation board / operating regime</strong>. The shortest route is <a href="wiki/observation-to-estimation.html#esi">Wiki: from observation to estimation</a> and <a href="verification.html#observability-budget">Verification: Observability Budget</a>.
 </p>
 </div>
 

@@ -4,7 +4,7 @@ title: "Technical Roadmap: Understanding WBE Through Measurement, Reconstruction
 description: "A learning roadmap for viewing mind uploading and WBE from the technical side, organized as a question tree from measurement to reconstruction, implementation, and verification."
 article_type: "Roadmap (Definition #1)"
 subtitle: "Break 'what counts as progress' into a question tree with reading order and minimum arrival conditions"
-last_updated: "2026-03-30"
+last_updated: "2026-03-31"
 note: "Provisional draft (updated continuously)"
 audience: "Readers who want the big picture, need a learning order, or want claim strength organized by level"
 reading_time: "20-30 min (5 min for the index only)"
@@ -27,6 +27,7 @@ page_highlights:
   - "M7 / V4 now separate state annotation, trait-like backbone, biological drift, interface / decoder drift, and recalibration burden, so same-day success and adaptive rescue do not collapse into one longitudinal claim."
   - "Wearable OPM-MEG is treated as movement-tolerant macro measurement only when shielding, field control, sensor calibration, and anatomy choice are disclosed."
   - "R6 treats personalization not as a pure performance trick, but as a verification problem that must separate target signal from subject fingerprint and setup shortcuts."
+  - "R1 / R2 now separate focal posterior-support, sparse debiased inference, extended-source extent reconstruction, forward-model uncertainty, and validation board, so a newer inverse family is not silently treated as one generic truth upgrade."
   - "R4 now treats DCM / effective-connectivity outputs as route-card claims that must disclose model space, observed-subsystem closure / latent-confound audit, node-definition policy, sampling / transformation sensitivity, observation assumptions, validation, reliability, and abstention."
   - "R7 now separates observability, structural identifiability, and practical identifiability, so richer proxies are not silently promoted to uniqueness."
 known_points:
@@ -48,6 +49,7 @@ known_points:
   - "Longitudinal success is not one axis; within-day state fluctuation, trait-like backbone, biological drift, interface / decoder drift, and recalibration burden answer different questions."
   - "OPM-MEG motion tolerance still depends on magnetic shielding, active nulling, calibration, and source-model disclosure."
   - "The fact that personalization helps performance is not the same as showing a population-level neural signal; subject-fingerprint and acquisition-distribution audits are still required."
+  - "For ESI, source regime / target object, uncertainty object, forward-model uncertainty route, and validation board remain separate requirements; a stronger inverse family is not one universal answer type."
   - "Richer observability and better fit do not by themselves collapse the compatible solution set; candidate-space, bridge / composition validity, and experiment-design audits remain separate."
 unknown_points:
   - "It is still unsettled which measurement granularity will ultimately be sufficient for WBE."
@@ -1024,7 +1026,39 @@ Every R0 claim on this site must publish a small card that states <strong>(1) wh
 </summary>
 <div class="qa-body">
 <p><strong>Question:</strong> An inverse problem such as EEG source estimation is “ill-posed,” meaning the solution is not uniquely determined. Therefore, it is more important to audit <strong>how stable the conclusion remains when geometry, conductivity, electrode coordinates, and prior assumptions change</strong> than to ask <strong>which solver was chosen</strong>. </p>
-<p><strong>Policy:</strong> In this project, no specific solver is fixed as the standard solution. Acceptance requires (1) an explicit uncertainty expression such as a posterior distribution, confidence interval, or bootstrap / ensemble range, (2) sensitivity analysis for individual MRI, FEM / BEM, conductivity assumptions, and electrode geometry, and (3) external validation using simulation, phantoms, simultaneous invasive recording, or intracranial stimulation. Bayesian or empirical-Bayes approaches are good candidates, but auditability matters more than the method name. </p>
+<p><strong>Policy:</strong> In this project, no specific solver is fixed as the standard solution. Acceptance requires (1) an explicit uncertainty expression such as a posterior distribution, confidence interval, or bootstrap / ensemble range, (2) sensitivity analysis for individual MRI, FEM / BEM, conductivity assumptions, and electrode geometry, (3) external validation using simulation, phantoms, simultaneous invasive recording, or intracranial stimulation, and now also (4) a named <strong>source regime / target object</strong>, <strong>uncertainty object</strong>, and <strong>validation board / operating regime</strong>. Bayesian or empirical-Bayes approaches are good candidates, but auditability matters more than the method name. </p>
+<p><strong>2026-03-31 addendum:</strong>The remaining weakness in this roadmap was to let <strong>inverse-family progress</strong> sound closer than it is to one shared truth scale. The current primary literature does not support that shortcut. <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a> sample posterior support for <strong>focal-source hypotheses</strong>, <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a> target <strong>sparse spatial-temporal source imaging</strong> with debiased estimation and inference, and <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> target <strong>extended-source extent</strong> with empirical-Bayesian uncertainty maps. Upstream uncertainty remains separate: <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a> showed that tissue-conductivity uncertainty materially shifts EEG source analysis, and <a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk et al. (2026)</a> showed that conductivity estimation can reduce source-localization uncertainty in many presurgical epilepsy scenarios without erasing all depth / location exceptions. Therefore, this roadmap no longer reads <strong>new inverse family</strong> as one generic upgrade. It asks what object is being estimated, which uncertainty object is returned, and which physics and validation regime remain attached.</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>R1 inverse-audit field</th>
+<th>What this roadmap now asks for</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Source regime / target object</strong></td>
+<td>Name whether the paper is estimating focal support, a sparse spatial-temporal source set, extended-source extent, or another declared object.</td>
+<td>Different inverse families are not automatically estimating the same scientific target.</td>
+</tr>
+<tr>
+<td><strong>Uncertainty object</strong></td>
+<td>Name whether the method returns posterior support, debiased intervals / tests, extent-overlap maps, or only location spread.</td>
+<td>Uncertainty is not one scalar if the returned object changes with the inverse family.</td>
+</tr>
+<tr>
+<td><strong>Forward-model uncertainty route</strong></td>
+<td>State whether conductivity, head-model, and electrode-geometry uncertainty were propagated, fixed, or calibrated.</td>
+<td>A sharper posterior does not erase uncertainty that still sits upstream in the physics.</td>
+</tr>
+<tr>
+<td><strong>Validation board / operating regime</strong></td>
+<td>Name whether the evidence comes from simulation, phantom, DBS / stimulation ground truth, simultaneous invasive recording, or another board.</td>
+<td>Success on one board does not automatically transfer to all source classes and clinical / experimental regimes.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Next, we need:</strong> In R2 and R7, isolate how much source depth, cranial conductivity, and candidate model space dominate the error, and disclose abstention conditions rather than forcibly collapsing overlapping solutions into one. </p>
 </div>
 </details>
@@ -1039,6 +1073,33 @@ Every R0 claim on this site must publish a small card that states <strong>(1) wh
 <p><strong>Question:</strong> EEG source estimation is easy to obtain an expression of "area x time", but neurons/synapses cannot be directly seen. Select the expression according to the restoration target (R0). </p>
 <p><strong>Issue:</strong>In the past, "high-density EEG (128 channels)" was recommended, but recent research has shown that ill-posedness cannot be solved by the number of channels alone. In particular, point estimation methods such as dSPM ignore uncertainty. </p>
 <p><strong>Stricter policy:</strong>Estimation with uncertainty such as the Block-Champagne system, <strong>high-density EEG</strong>, and <strong>FEM/BEM forward model based on individual MRI</strong> are effective means to improve estimation conditions. However, these do not guarantee the accuracy of<strong>deep brain activity</strong>. The hiring condition is not that it can be said to be able to see deeply, but rather that it is able to audit which error sources have been reduced and to what extent. Therefore, submissions must include (1) posterior distributions or confidence intervals, (2) sensitivity analysis of conductivity, electrode coordinates, and head model, (3) validation against external criteria such as simulations/phantoms/concurrent invasive recordings/intracranial stimulation, and (4) conditions for withholding claims regarding deep sources. </p>
+<p><strong>2026-03-31 addendum:</strong>The older wording still made <strong>better source imaging</strong> sound too much like one shared representation goal. The current primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">Pascarella et al. (2023)</a> compare focal-source validation routes, <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> show depth- and skull-conductivity-dependent localization error across <strong>3,619 stimulation locations</strong> in <strong>11 patients</strong>, and <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> show simultaneous <strong>HD-EEG / SEEG</strong> concordance in a drug-resistant-epilepsy operating regime. Those boards do not yet define one universal scoreboard for focal, sparse, extended, and spontaneous sources. Therefore, R2 now asks the restoration target to say whether it wants <strong>focal support</strong>, <strong>sparse spatial-temporal source activity</strong>, <strong>extended-source extent</strong>, or another declared object before methods are compared.</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>R2 representation family</th>
+<th>What it can return relatively directly</th>
+<th>What this roadmap still refuses to infer automatically</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Probabilistic focal-source family</strong></td>
+<td>Posterior support and alternative configurations for a small-number focal-source hypothesis.</td>
+<td>It is not promoted automatically to sparse spatial-temporal inference or extended-source extent recovery.</td>
+</tr>
+<tr>
+<td><strong>Sparse spatial-temporal family</strong></td>
+<td>Bias-corrected amplitudes, orientations, depths, and inference for sparse source sets over time.</td>
+<td>It is not promoted automatically to focal-board optimum across all priors or to extended-source validation.</td>
+</tr>
+<tr>
+<td><strong>Extended-source family</strong></td>
+<td>Estimated location-plus-extent with uncertainty for spatially extended activation.</td>
+<td>It is not promoted automatically to focal-source best case or to a universal benchmark win across source regimes.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Next:</strong>Firstly, fix <strong>source imaging verification specifications</strong> and <strong>benchmarks with external standards</strong> without making it unclear whether or not they are publicly implemented. The implementation will then be made public in a form that allows for reproduction, including posterior distribution, sensitivity analysis, and failure examples. </p>
 </div>
 </details>
