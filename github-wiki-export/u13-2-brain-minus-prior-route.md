@@ -1,4 +1,4 @@
-# U13-2 brain-minus-prior route packet
+# Wiki: U13-2 brain-minus-prior route packet
 
 > A row-specific packet for the first active public RQ
 >
@@ -7,15 +7,19 @@
 - Updated: 2026-03-30 / Role: U13-2 route packet
 
 ## Role Of This Page
-This page fixes the current public route for `U13-2` at the level of one question, one primary dataset anchor, one bounded first artifact, and one funding bridge.
+This page fixes the current public route for U13-2 at the level of one question, one primary dataset anchor, one bounded first artifact, and one funding bridge.
+
+## Accuracy Notes
+This page does not claim preserved mechanism, preserved identity, or successful mind preservation. It only records what the present EEG route can honestly close first.
 
 ## Back To Public Pages
-- [Current public six route brief](https://mind-upload.com/wiki/mind-upload-current-public-six-rq-brief.html)
 - [Issue page](https://mind-upload.com/issue.html)
+- [Data & Bench](https://mind-upload.com/datasets.html)
 
 ## Related Wiki Pages
-- [Deep focus notes](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes) - The wider six-row working note.
-- [Grant and dataset playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - The fixed funding and anchor map.
+- [Wiki: Current public six route brief](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief) - The compact six-row public route.
+- [Wiki: Deep focus notes](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes) - The wider six-row working note.
+- [Wiki: Grant and dataset playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - The fixed funding and anchor map.
 
 ---
 
@@ -23,19 +27,19 @@ This page fixes the current public route for `U13-2` at the level of one questio
 
 This page does not change the current public six-question batch. It makes only the first active row more explicit, so readers can see why `U13-2` still comes first, why `D10 3M-CPSEED` stays primary, and what the next public-safe artifact can honestly close.
 
-## What Was Rechecked For This Row
+## What was rechecked for this row
 
 - `D10 3M-CPSEED` still gives a public OpenNeuro route with `20 participants x 4 sessions`, overt / silent-intended / imagined speech, raw BIDS, and phase-split derivatives inside one release.
 - The current funding bridge remains narrow and unchanged: `Kura Fund` stays the first route, `Nakatani Foundation graduate scholarship` stays second, and `Secom General Research Grant` stays only as an urgency-watch route.
 - The public six-question batch also stays unchanged: `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
 
-## Why `U13-2` Still Stays First
+## Why `U13-2` still stays first
 
 - It is the shortest current route to test whether the neural signal adds anything beyond the language prior.
 - If this row fails, stronger speech-decoder wording should stay blocked for the current public route.
 - The row can close a bounded first artifact with EEG alone before any stronger mechanism or identity language is attempted.
 
-## Why `D10` Is Primary And Other Candidates Stay Secondary
+## Why `D10` is primary and other candidates stay secondary
 
 | Candidate | What it helps with | Why it is not the first public anchor |
 |---|---|---|
@@ -45,7 +49,7 @@ This page does not change the current public six-question batch. It makes only t
 | `EEG data recorded during spoken and imagined speech interaction with a simulated robot` (`10.5281/zenodo.14645652`, immediate) | It gives public overt-plus-imagined speech with a larger command count and a control task. | It does not keep the same overt / silent-intended / imagined ladder as `D10`, so the `brain-minus-prior` family is less clean for the present row. |
 | `DAIS` (`10.1109/ICASSP49357.2023.10096145`, uncertain public) | It may become useful as an adjunct speech benchmark later. | Public status and operational metadata still remain too uncertain for the first bounded public route. |
 
-## What The First Artifact Can Honestly Close Now
+## What the first artifact can honestly close now
 
 | Artifact piece | What it closes now | What still stays outside the claim |
 |---|---|---|
@@ -53,7 +57,7 @@ This page does not change the current public six-question batch. It makes only t
 | `Mimic-separation note` | A public-safe report of `semantic alignment`, `brain-minus-prior gap`, and `misalignment rate`. | Any statement that the row demonstrates successful mind preservation. |
 | `Bounded inconsistency audit` | A row-level failure report for prior-only shortcuts and imitation-only passes. | Any theory-level conclusion that goes beyond the present EEG artifact. |
 
-## Funding Wording That Still Fits
+## Funding wording that still fits
 
 | Route | Submission wording that stays honest | Why it still fits this row |
 |---|---|---|
@@ -61,13 +65,13 @@ This page does not change the current public six-question batch. It makes only t
 | `Nakatani Foundation graduate scholarship` | `Doctoral-track EEG inner-speech decoding and identity-drift evaluation for the mind-upload route` | The row stays compatible with a doctoral continuity narrative when kept narrow and benchmark-first. |
 | `Secom General Research Grant` (`watch only`) | `EEG inner-speech decoding and identity-drift auditing under bounded public claims` | The route remains plausible only as an urgency-watch submission and should not become the main planning lane. |
 
-## External Dependency Tasks That Stay Outside This Session
+## External dependency tasks that stay outside this session
 
 - An external language-evaluation layer is still needed before stronger wording about mechanism can be justified.
 - A broader leak-control family is still needed before this row can be read as more than a bounded benchmark artifact.
 - Any claim about preserved mechanism, preserved identity, or successful mind preservation remains outside the present EEG-only route.
 
-## What Changed In This Run
+## What changed in this run
 
 - The public batch did not change.
 - The main change is that `U13-2` now has a row-specific public packet that records the anchor-choice rationale instead of leaving it implicit.

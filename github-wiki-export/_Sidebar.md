@@ -69,6 +69,7 @@
 - [Wiki: Terminology guide from measurement to modeling](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-and-modeling-terms)
 - [Wiki: Thermodynamic Grounding Basics](https://github.com/yasufumi-nakata/mind-upload/wiki/thermodynamic-grounding-basics)
 - [Wiki: U Number Guide](https://github.com/yasufumi-nakata/mind-upload/wiki/u-number-guide)
+- [Wiki: U13-2 brain-minus-prior route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u13-2-brain-minus-prior-route)
 - [Wiki: Uncertainty, Calibration, and Abstention](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention)
 - [Wiki: Update/branch/stop rules](https://github.com/yasufumi-nakata/mind-upload/wiki/update-branching-and-stop-rules)
 - [Wiki: Verification example walkthrough](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-example-walkthrough)
