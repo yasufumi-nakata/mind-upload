@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-29 / Role: Technical / natural science only
+- Updated: 2026-03-30 / Role: Technical / natural science only
 
 ## Role Of This Page
 This page is a wiki that organizes where to stop making claims and what to add to make them even stronger when estimating brain states and causal structures from observational signals such as EEG. Connect forward problems, inverse problems, ESI, DCM, SCM, and causal equivalence classes in the order of ``observation → estimation → intervention → validation.''
@@ -36,7 +36,7 @@ This is not a fixed recipe for which method to use. This page first fixes audit 
 - In effective connectivity, hidden nodes/common drives, node-definition choices, and sampling or observation transforms are separate failure modes; a winning model comparison does not erase them.
 - Same-brain or same-subject linkage can still be a sequential bridge rather than same-state evidence.
 - The causal structure cannot be determined by observational fit alone; a set of candidate models and an intervention design are required.
-- Whole-brain or faster DCM improves tractability, but does not erase candidate-model dependence or observation-model assumptions.
+- Whole-brain or faster DCM improves tractability, but does not erase candidate-model dependence, processing-policy sensitivity, or observation-model assumptions.
 
 ## What Is Still Unknown
 - It remains unclear which measurement/modeling combination is most effective for validating WBE.
@@ -339,6 +339,11 @@ The weak point here was not that it separated DCM from SCM, but that scaling adv
 The remaining weakness after adding a route card was that <strong>candidate model space</strong> could still be read too narrowly, as if it already covered the practically important failure modes of a directed graph. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuroimage.2010.08.063" target="_blank">Smith et al. (2011)</a> showed in a large simulation benchmark that lag-based approaches perform poorly for fMRI and that <strong>functionally inaccurate ROIs</strong> are especially damaging to network estimation. <a href="https://doi.org/10.1016/j.jneumeth.2016.10.016" target="_blank">Barnett &amp; Seth (2017)</a> then showed that subsampling can create <strong>detectability black spots</strong> for Granger-causal interactions rather than a simple monotonic loss. <a href="https://doi.org/10.1007/s10548-020-00757-6" target="_blank">Vink et al. (2020)</a> showed in TMS-EEG that resting-state EEG functional connectivity explains <strong>less than 10% of the variance</strong> in evoked propagation and varies substantially across stimulation sites and participants. <a href="https://doi.org/10.1002/hbm.70285" target="_blank">Novelli et al. (2025)</a> refined the hemodynamic objection: if the HRF is minimum-phase, HRF variability alone need not create false positives across a wide range of plausible parameters, but <strong>slow BOLD sampling</strong> can still induce spurious Granger-causal inference. Most recently, <a href="https://doi.org/10.1109/TPAMI.2026.3658839" target="_blank">Yan et al. (2026)</a> showed that dynamical causal inference under <strong>latent confounders</strong> remains an active method-development problem in biological network reconstruction. Therefore, on this site, effective-connectivity claims must now separate <strong>observed-subsystem closure / latent-confound audit</strong>, <strong>node-definition policy</strong>, and <strong>sampling / transformation sensitivity</strong> from the older questions of model comparison and external validation.
 </p>
 
+<strong>2026-03-30 deepening: reasonable processing policy can also move directed edges and parameter certainty</strong>
+<p>
+The next weak point was to let directed-graph caution stop at <strong>candidate models</strong>, <strong>node policy</strong>, and <strong>sampling</strong>, as if preprocessing were only housekeeping. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuroimage.2019.116435" target="_blank">Almgren et al. (2020)</a> already showed that <strong>global signal regression</strong> changes DCM estimates of noise and effective connectivity in resting-state fMRI. <a href="https://doi.org/10.1002/hbm.26751" target="_blank">Zhang et al. (2024)</a> then showed that reasonable task-fMRI choices such as <strong>GLM design</strong> and <strong>activation contrast</strong> can materially alter group-averaged effective-connectivity patterns and parameter certainty, while <strong>GSR</strong> and significance-thresholding choices still remain named processing conditions rather than ignorable details. <a href="https://doi.org/10.1016/j.neuroimage.2024.120604" target="_blank">Ma et al. (2024)</a> further showed that even when DCM reliability is promising, it still depends on <strong>scan duration</strong> and <strong>sample size</strong>. Therefore, on this site, effective-connectivity claims must now separate <strong>processing / first-level design policy</strong> from both <strong>candidate model space</strong> and later <strong>external validation</strong>: a graph that survives only one reasonable pipeline is not yet a preprocessing-robust causal claim.
+</p>
+
 <h2>Effective-connectivity route card</h2>
 <table>
 <thead>
@@ -370,8 +375,13 @@ The remaining weakness after adding a route card was that <strong>candidate mode
 <td>It blocks “effective connectivity” from sounding as if the result were independent of hemodynamic and prior assumptions.</td>
 </tr>
 <tr>
+<td><strong>Processing / first-level design policy</strong></td>
+<td>State the preprocessing and first-level choices that can move the inferred edges, such as nuisance-regression / GSR policy, task GLM design, contrast definition, thresholding or ROI-extraction policy, and whether parallel analyses were used to check convergence across reasonable pipelines.</td>
+<td>It blocks one reasonable analysis recipe from sounding preprocessing-invariant when directed edges or parameter certainty actually depend on the chosen pipeline.</td>
+</tr>
+<tr>
 <td><strong>Sampling / transformation sensitivity</strong></td>
-<td>State the sampling interval relative to the neural delays of interest, filtering or deconvolution choices, HRF / observation-transform assumptions, and whether inferred directions survive plausible transform alternatives or only one time-resolution regime.</td>
+<td>State the sampling interval relative to the neural delays of interest, any downsampling, filtering or deconvolution choices, HRF / observation-transform assumptions, and whether inferred directions survive plausible transform alternatives or only one time-resolution regime.</td>
 <td>It blocks directed-lag estimates from sounding biologically directional when they may still be shaped by sampling, filtering, or observation transforms.</td>
 </tr>
 <tr>
@@ -397,7 +407,7 @@ The remaining weakness after adding a route card was that <strong>candidate mode
 </tbody>
 </table>
 <p>
-If this card is missing, this site stops at <strong>model-conditioned causal hypothesis</strong>. A whole-brain DCM graph, an atlas-wide regression DCM estimate, or an activity-flow-compatible diagram is not promoted here to discovered wiring merely because it is dense, scalable, atlas-complete, or predictive.
+If this card is missing, this site stops at <strong>model-conditioned causal hypothesis</strong>. A whole-brain DCM graph, an atlas-wide regression DCM estimate, or an activity-flow-compatible diagram is not promoted here to discovered wiring merely because it is dense, scalable, atlas-complete, predictive, or reported only under one preprocessing recipe.
 </p>
 
 <h2>Identifiability card for inverse and model-based claims</h2>
@@ -538,6 +548,9 @@ DCM is useful for comparing neural circuit candidate generation models, and SCM 
 <li>Frässle, S., Paulus, F. M., Krach, S., &amp; Jansen, A. (2016). Test-retest reliability of effective connectivity in the face perception network. <em>Human Brain Mapping</em>, 37(2), 730-744. <a href="https://doi.org/10.1002/hbm.23061" target="_blank">doi:10.1002/hbm.23061</a></li>
 <li>Frässle, S., Manjaly, Z. M., Do, C. T., Kasper, L., Pruessmann, K. P., &amp; Stephan, K. E. (2021). Whole-brain estimates of directed connectivity for human connectomics. <em>NeuroImage</em>, 225, 117491. <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">doi:10.1016/j.neuroimage.2020.117491</a></li>
 <li>Wu, H., Hu, X., &amp; Zeng, Y. (2024). A fast dynamic causal modeling regression method for fMRI. <em>NeuroImage</em>, 304, 120954. <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">doi:10.1016/j.neuroimage.2024.120954</a></li>
+<li>Almgren, H., Van de Steen, F., Razi, A., Friston, K., &amp; Marinazzo, D. (2020). The effect of global signal regression on DCM estimates of noise and effective connectivity from resting state fMRI. <em>NeuroImage</em>, 208, 116435. <a href="https://doi.org/10.1016/j.neuroimage.2019.116435" target="_blank">doi:10.1016/j.neuroimage.2019.116435</a></li>
+<li>Zhang, S., Jung, K., Langner, R., Florin, E., Eickhoff, S. B., &amp; Popovych, O. V. (2024). Impact of data processing varieties on DCM estimates of effective connectivity from task-fMRI. <em>Human Brain Mapping</em>, 45(8), e26751. <a href="https://doi.org/10.1002/hbm.26751" target="_blank">doi:10.1002/hbm.26751</a></li>
+<li>Ma, L., Braun, S. E., Steinberg, J. L., Bjork, J. M., Martin, C. E., Keen II, L. D., &amp; Moeller, F. G. (2024). Effect of scanning duration and sample size on reliability in resting state fMRI dynamic causal modeling analysis. <em>NeuroImage</em>, 292, 120604. <a href="https://doi.org/10.1016/j.neuroimage.2024.120604" target="_blank">doi:10.1016/j.neuroimage.2024.120604</a></li>
 <li>Jafarian, A., Assem, M. K., Kocagoncu, E., et al. (2024). Reliability of dynamic causal modelling of resting-state magnetoencephalography. <em>Human Brain Mapping</em>. <a href="https://doi.org/10.1002/hbm.26782" target="_blank">doi:10.1002/hbm.26782</a></li>
 <li>Smith, S. M., Miller, K. L., Salimi-Khorshidi, G., Webster, M., Beckmann, C. F., Nichols, T. E., Ramsey, J. D., &amp; Woolrich, M. W. (2011). Network modelling methods for FMRI. <em>NeuroImage</em>, 54(2), 875-891. <a href="https://doi.org/10.1016/j.neuroimage.2010.08.063" target="_blank">doi:10.1016/j.neuroimage.2010.08.063</a></li>
 <li>Barnett, L., &amp; Seth, A. K. (2017). Detectability of Granger causality for subsampled continuous-time neurophysiological processes. <em>Journal of Neuroscience Methods</em>, 275, 93-121. <a href="https://doi.org/10.1016/j.jneumeth.2016.10.016" target="_blank">doi:10.1016/j.jneumeth.2016.10.016</a></li>
