@@ -1,11 +1,11 @@
 ---
 layout: default
 title: "Wiki: Human Proxy Composition and Route Maturity"
-description: "Explains why recent human PET, MRSI, BBB, astrocyte, myelin, and clearance advances do not automatically compose into same-subject state-complete readout, and how to audit quantity type, target class, transport regime, effective time window, cohort / regime, model burden, reproducibility, deployment burden, and calibrator role."
+description: "Explains why recent human PET, MRSI, BBB, astrocyte, myelin, and clearance advances do not automatically compose into same-subject state-complete readout, and how to audit quantity type, target class, transport regime, effective time window, cohort / regime, model burden, reproducibility, deployment burden, calibrator role, and disagreement topology."
 article_type: Wiki
 subtitle: "Proxy-rich is not the same as same-subject state closure"
 author: Mind Uploading Research Project
-last_updated: "2026-03-30"
+last_updated: "2026-03-31"
 note: "Technical / natural science only"
 audience: "Readers who want a stricter technical reading of current human in vivo advances and why they still stop below state-complete language"
 reading_time: "12-18 minutes"
@@ -18,6 +18,7 @@ page_highlights:
   - "Model burden is part of the object: tracer kinetics, 31P spectral quantification, 31P MT exchange modeling, 31P NAD fitting, deuterium absolute-quantification pipelines, deuterium kinetic models, ASL fitting routes, multicompartment models, partial-volume correction, and synchronization choices all change what the measurement means."
   - "A bundle can be well-typed and still fail operationally if one row is unstable, method-family-specific, centre-bound, available only in a narrow complete-case subset, or present mainly in a severity- or site-skewed subset."
   - "Promotion now runs through three gates: robustness, effective-window / regime-aware common-driver and quantity-bridge separation, and incremental value beyond the strongest single row."
+  - "A bundle now also has to disclose where modalities disagree and whether discordant cases were abstained, adjudicated, or silently absorbed into one summary score."
   - "Local causal relevance and living-human observability are different ladders: rodent astrocyte-controller papers plus human MAO-B / I2BS / CSF / efflux routes do not by themselves identify the responsible human controller."
   - "Same-session multimodal acquisition reduces one mismatch, but it does not erase common physiological factors or modality-specific residuals by default."
   - "Same-subject or same-brain wording solves specimen identity, not state continuity; sequential bridges still need elapsed-time, regime-continuity, and deformation disclosure."
@@ -32,6 +33,7 @@ known_points:
   - "Even when quantity type and model burden are logged, cross-row composition still requires age band, health/pathology regime, and transfer rationale."
   - "Even when same-subject relation is logged, composition still requires explicit effective time-window / state-axis disclosure and physiological / perturbation regime compatibility."
   - "Even when proxy class, maturity, and calibrator role are logged, composition still needs route-local repeatability, method-family non-equivalence, cross-centre transfer, complete-case disclosure, and overlap / missingness disclosure."
+  - "Overall bundle gain can coexist with higher pairwise disagreement in clinically difficult subgroups, so discordance topology and its resolution policy have to be disclosed rather than left implicit."
   - "Simultaneous multimodal acquisition can reveal both common and divergent structure across modalities."
   - "Global or shared multimodal factors can still include autonomic or vascular physiology, not only the target neural variable."
   - "A same-subject bridge can still fail to preserve state continuity when acquisition order, elapsed time, or deformation correction are left implicit."
@@ -114,10 +116,17 @@ One more shortcut still had to be blocked. A paper can look richly multimodal wh
 </p>
 </div>
 
+<div class="note-box">
+<strong>Discordance topology is evidence, not housekeeping</strong>
+<p>
+One more shortcut still had to be blocked. A bundle can show a net gain while hiding that its rows disagree most in the biologically or clinically difficult cases. <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">Rohaut et al. (2024)</a> showed that multimodal assessment can reduce prognostic uncertainty overall, while also noting that multimodal approaches increase the odds of <strong>discrepancies across markers</strong> that can create <strong>choice paralysis</strong> or <strong>biased decisions</strong>. <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> then showed that <strong>pairwise disagreements</strong> across modalities were higher in <strong>MCS</strong> than in <strong>UWS</strong> patients and also higher in <strong>improved</strong> than in <strong>not improved</strong> patients. Therefore, on this site, a Human Proxy Composition Card must now disclose the <strong>agreement / disagreement topology</strong> across modalities and key subgroups, together with the <strong>resolution policy</strong>: whether discordant cases trigger <strong>abstention</strong>, <strong>human adjudication</strong>, <strong>subgroup-specific follow-up</strong>, or are simply absorbed into one summary score.
+</p>
+</div>
+
 <section class="section" id="promotion-gates">
 <h2 class="section-title">Three promotion gates before row diversity counts</h2>
 <p>
-The composition rule on this page can now be read as <strong>three gates</strong>. This is a compression of the longer route-card fields, not a weaker rule. A bundle does not rise because the rows look impressive in aggregate. It rises only if it survives <strong>robustness</strong>, <strong>effective-window / regime-aware common-driver and quantity-bridge separation</strong>, and <strong>increment over the strongest single row</strong>.
+The composition rule on this page can now be read as <strong>three gates</strong>. This is a compression of the longer route-card fields, not a weaker rule. A bundle does not rise because the rows look impressive in aggregate. It rises only if it survives <strong>robustness</strong>, <strong>effective-window / regime-aware common-driver and quantity-bridge separation</strong>, and <strong>increment over the strongest single row</strong>. A passing bundle must also disclose <strong>where disagreement concentrates</strong> and <strong>how discordant cases were handled</strong>.
 </p>
 <table class="data-table">
 <thead>
@@ -140,7 +149,7 @@ The composition rule on this page can now be read as <strong>three gates</strong
 </tr>
 <tr>
 <td><strong>Gate 3: Increment over the strongest single row</strong></td>
-<td>Show what the bundle adds beyond the best individual row under matched cohort, condition, and held-out evaluation when available. This can be narrower latent-state ceiling, better calibration, or better prediction, but it must be shown rather than assumed. <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> is informative precisely because it reports both <strong>performance gains with more modalities</strong> and <strong>higher inter-modality disagreement</strong> in clinically important groups.</td>
+<td>Show what the bundle adds beyond the best individual row under matched cohort, condition, and held-out evaluation when available. This can be narrower latent-state ceiling, better calibration, or better prediction, but it must be shown rather than assumed. In the same step, report where pairwise or higher-order disagreements remain, especially in clinically or biologically important subgroups, and state the <strong>resolution policy</strong> for those cases. <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">Rohaut et al. (2024)</a> is informative because overall multimodal gain can still coexist with marker discrepancies, and <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> is informative precisely because it reports both <strong>performance gains with more modalities</strong> and <strong>higher inter-modality disagreement</strong> in clinically important groups.</td>
 <td>Row diversity is treated as <strong>richer description</strong>, not as automatic state closure or same-subject state identification.</td>
 </tr>
 </tbody>
@@ -317,6 +326,11 @@ One remaining shortcut is to treat any reproducibility statement as if it solved
 <td><strong>Common-driver collapse</strong><br><code>if rows move together, they must be the same latent variable</code></td>
 <td><a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> found both common and divergent cross-modal structure, <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> found coupled global progression plus two distinct network patterns in simultaneous EEG-PET-MRI, and <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> showed that a major global fMRI mode is substantially coupled to autonomic physiology. Agreement can therefore reflect shared nuisance or shared global state rather than one solved target variable.</td>
 <td>Disclose shared-vs-specific decomposition, nuisance calibration, matched perturbation, and what still remains vulnerable to autonomic / vascular / motion-linked common drivers.</td>
+</tr>
+<tr>
+<td><strong>Discordance-collapse</strong><br><code>if the overall bundle score improved, disagreement no longer matters</code></td>
+<td><a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">Rohaut et al. (2024)</a> showed that multimodal assessment can reduce uncertainty while also warning that <strong>discrepancies across markers</strong> can create <strong>choice paralysis</strong> or <strong>biased decisions</strong>. <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> then showed that <strong>pairwise disagreements</strong> were higher in <strong>MCS</strong> and <strong>improved</strong> patients, meaning discordance can concentrate exactly where interpretation is hardest.</td>
+<td>Disclose the pairwise / subgroup-conditioned disagreement topology and the resolution policy: <strong>abstain</strong>, <strong>adjudicate</strong>, <strong>collect extra rows</strong>, or explicitly accept that the final score silently absorbed the conflict.</td>
 </tr>
 <tr>
 <td><strong>Increment-collapse</strong><br><code>more rows listed = more state closure</code></td>
@@ -660,6 +674,10 @@ If the claim depends on treating a sequential bridge as one latent-state sample,
 <td>Prevents cross-row agreement from being read as one solved latent variable when the bundle may still be dominated by autonomic, vascular, motion-linked, or shared-preparation factors.</td>
 </tr>
 <tr>
+<td><strong>Agreement / disagreement topology and resolution policy</strong></td>
+<td>Stops an overall bundle gain from hiding that modalities disagree most in the hard strata, and forces the paper to say whether discordant cases were abstained, adjudicated, followed up, or silently absorbed into one final score.</td>
+</tr>
+<tr>
 <td><strong>Increment over the strongest single row</strong></td>
 <td>Stops row diversity from being mistaken for state closure when the bundle has not been shown to add anything beyond the strongest single route under matched conditions.</td>
 </tr>
@@ -673,7 +691,7 @@ If the claim depends on treating a sequential bridge as one latent-state sample,
 <div class="note-box">
 <strong>Operational rule on this site</strong>
 <p>
-If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich but ceiling-limited human evidence</strong>. It is not promoted to <strong>same-subject cross-stack state identification</strong>, <strong>unique internal-state recovery</strong>, or <strong>state-complete readout</strong>. In particular, row diversity without explicit <strong>proxy class</strong>, <strong>effective time window / state-axis compatibility</strong>, <strong>physiological / perturbation regime compatibility</strong>, <strong>operational maturity</strong>, <strong>calibrator role</strong>, <strong>causal-bridge statement when mixed-species causal evidence is used</strong>, <strong>row-level repeatability</strong>, <strong>cross-centre transfer</strong>, <strong>partial-availability disclosure</strong>, <strong>common-driver audit</strong>, and a clear <strong>increment over the strongest single row</strong> is not treated as real state closure. The public-facing implementation of that rule is the <a href="../verification.html#human-proxy-composition-card">Verification: Human Proxy Composition Card</a>.
+If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich but ceiling-limited human evidence</strong>. It is not promoted to <strong>same-subject cross-stack state identification</strong>, <strong>unique internal-state recovery</strong>, or <strong>state-complete readout</strong>. In particular, row diversity without explicit <strong>proxy class</strong>, <strong>effective time window / state-axis compatibility</strong>, <strong>physiological / perturbation regime compatibility</strong>, <strong>operational maturity</strong>, <strong>calibrator role</strong>, <strong>causal-bridge statement when mixed-species causal evidence is used</strong>, <strong>row-level repeatability</strong>, <strong>cross-centre transfer</strong>, <strong>partial-availability disclosure</strong>, <strong>common-driver audit</strong>, <strong>agreement / disagreement topology plus resolution policy</strong>, and a clear <strong>increment over the strongest single row</strong> is not treated as real state closure. The public-facing implementation of that rule is the <a href="../verification.html#human-proxy-composition-card">Verification: Human Proxy Composition Card</a>.
 </p>
 </div>
 </section>
@@ -724,6 +742,7 @@ If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich b
 <li>Holiga, Š., Sambataro, F., Luzy, C., et al. (2018). Test-retest reliability of task-based and resting-state blood oxygen level dependence and cerebral blood flow measures. <a href="https://doi.org/10.1371/journal.pone.0206583" target="_blank">doi:10.1371/journal.pone.0206583</a></li>
 <li>Wirsich, J., Jorge, J., Iannotti, G. R., et al. (2021). The relationship between EEG and fMRI connectomes is reproducible across simultaneous EEG-fMRI studies from 1.5T to 7T. <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">doi:10.1016/j.neuroimage.2021.117864</a></li>
 <li>Amiri, M., Fisher, P. M., Raimondo, F., et al. (2023). Multimodal prediction of residual consciousness in the intensive care unit: the CONNECT-ME study. <a href="https://doi.org/10.1093/brain/awac335" target="_blank">doi:10.1093/brain/awac335</a></li>
+<li>Rohaut, B., et al. (2024). Multimodal assessment improves neuroprognosis performance in clinically unresponsive critical-care patients with brain injury. <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">doi:10.1038/s41591-024-03019-1</a></li>
 <li>Manasova, D., Belloli, L. M. L., Rosenfelder, M. J., et al. (2026). Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness. <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">doi:10.1093/brain/awaf412</a></li>
 <li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Attardo, A., Fitzgerald, J. E., &amp; Schnitzer, M. J. (2015). Impermanence of dendritic spines in live adult CA1 hippocampus. <a href="https://doi.org/10.1038/nature14467" target="_blank">doi:10.1038/nature14467</a></li>
