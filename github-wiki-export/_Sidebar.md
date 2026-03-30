@@ -71,6 +71,7 @@
 - [Wiki: U Number Guide](https://github.com/yasufumi-nakata/mind-upload/wiki/u-number-guide)
 - [Wiki: U0-2 temporal-validity route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u0-2-temporal-validity-route)
 - [Wiki: U0-3 threshold-stability route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u0-3-threshold-stability-route)
+- [Wiki: U7-1 synchronization-contract route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u7-1-synchronization-contract-route)
 - [Wiki: U13-2 brain-minus-prior route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u13-2-brain-minus-prior-route)
 - [Wiki: U13-5 perception-to-recall route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u13-5-perception-to-recall-route)
 - [Wiki: U14-2 fixed-split route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u14-2-fixed-split-route)
