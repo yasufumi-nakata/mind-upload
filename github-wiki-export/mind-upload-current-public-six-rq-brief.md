@@ -17,11 +17,11 @@ This page fixes the current public six-question route at the level of one RQ, on
 - [Wiki: RQ-by-RQ deep dossiers](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers) - The longer working dossier for the current public six and the wider 60RQ map.
 - [Wiki: Grant and dataset playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - The route from each RQ to the current bounded funding lane and EEG anchor.
 - [Wiki: U13-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u13-2-brain-minus-prior-route) - Why D10 stays first for U13-2, why the other speech candidates stay secondary, and what the first artifact can honestly close.
-- [Wiki: U13-5 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u13-5-perception-to-recall-route) - Why D03 stays primary for U13-5, why the support anchors stay secondary, and what the transfer-gap artifact can honestly close.
-- [Wiki: U0-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u0-2-temporal-validity-route) - Why D02 stays primary for U0-2, why the support anchors stay secondary, and what the timing-floor artifact can honestly close.
-- [Wiki: U0-3 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u0-3-threshold-stability-route) - Why D02 stays primary for U0-3, why the support anchors stay secondary, and what the threshold-governance artifact can honestly close.
-- [Wiki: U14-4 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u14-4-card-contract-route) - Why D01 stays primary for U14-4, why richer rerun benchmarks stay secondary, and what the card-contract artifact can honestly close.
-- [Wiki: U14-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u14-2-fixed-split-route) - Why D01 stays primary for U14-2, why richer rerun benchmarks stay secondary, and what the fixed-split artifact can honestly close.
+- [Wiki: U13-5 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u13-5-perception-to-recall-route) - Why D03 stays the intended gated-support anchor for U13-5, why the support anchors stay secondary, and what the transfer-gap artifact can honestly close.
+- [Wiki: U0-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u0-2-temporal-validity-route) - Why D02 stays the intended gated-support anchor for U0-2, why the support anchors stay secondary, and what the timing-floor artifact can honestly close.
+- [Wiki: U0-3 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u0-3-threshold-stability-route) - Why D02 stays the intended gated-support anchor for U0-3, why the support anchors stay secondary, and what the threshold-governance artifact can honestly close.
+- [Wiki: U14-4 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u14-4-card-contract-route) - Why D01 stays the intended gated-support anchor for U14-4, why richer rerun benchmarks stay secondary, and what the card-contract artifact can honestly close.
+- [Wiki: U14-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u14-2-fixed-split-route) - Why D01 stays the intended gated-support anchor for U14-2, why richer rerun benchmarks stay secondary, and what the fixed-split artifact can honestly close.
 
 ---
 

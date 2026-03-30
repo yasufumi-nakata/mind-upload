@@ -4,10 +4,10 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-30 / Role: U14-4 route packet
+- Updated: 2026-03-31 / Role: U14-4 route packet
 
 ## Role Of This Page
-This page fixes the current public route for U14-4 at the level of one question, one primary dataset anchor, one bounded first artifact, and one funding bridge.
+This page fixes the current public route for U14-4 at the level of one question, one intended EEG route anchor, one bounded first artifact, and one funding bridge.
 
 ## Accuracy Notes
 This page does not claim field-wide reproducibility, deployment readiness, or standards adoption. It only records what the present EEG route can honestly close first.

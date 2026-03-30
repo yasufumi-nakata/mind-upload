@@ -1,15 +1,15 @@
 ---
 layout: default
 title: "Wiki: U13-5 perception-to-recall route packet"
-description: "Why U13-5 stays second in the current public six, why D03 is the primary bounded EEG anchor, and what the first artifact can honestly close."
+description: "Why U13-5 stays second in the current public six, why D03 stays the intended gated-support EEG anchor, and what the first artifact can honestly close."
 article_type: Wiki
 subtitle: "A row-specific packet for the second active public RQ"
 author: Mind Uploading Research Project
-last_updated: "2026-03-30"
+last_updated: "2026-03-31"
 note: "U13-5 route packet"
 audience: "Readers who want the dataset-choice rationale and the honest claim ceiling for the current perception-to-recall row"
 reading_time: "8-12 minutes"
-page_intro: "This page fixes the current public route for U13-5 at the level of one question, one primary dataset anchor, one bounded first artifact, and one funding bridge."
+page_intro: "This page fixes the current public route for U13-5 at the level of one question, one intended EEG route anchor, one bounded first artifact, and one funding bridge."
 accuracy_note: "This page does not claim shared internal mechanism across perception and recall. It only records what the present EEG route can honestly close first."
 wiki_links:
   - label: "Wiki: Current public six route brief"

@@ -1,15 +1,15 @@
 ---
 layout: default
 title: "Wiki: U14-4 card-contract route packet"
-description: "Why U14-4 stays fifth in the current public six, why D01 remains the primary bounded EEG anchor, and what the first artifact can honestly close."
+description: "Why U14-4 stays fifth in the current public six, why D01 stays the intended gated-support EEG anchor, and what the first artifact can honestly close."
 article_type: Wiki
 subtitle: "A row-specific packet for the disclosure-first reproducibility row"
 author: Mind Uploading Research Project
-last_updated: "2026-03-30"
+last_updated: "2026-03-31"
 note: "U14-4 route packet"
 audience: "Readers who want the dataset-choice rationale and the honest claim ceiling for the current card-integration row"
 reading_time: "8-12 minutes"
-page_intro: "This page fixes the current public route for U14-4 at the level of one question, one primary dataset anchor, one bounded first artifact, and one funding bridge."
+page_intro: "This page fixes the current public route for U14-4 at the level of one question, one intended EEG route anchor, one bounded first artifact, and one funding bridge."
 accuracy_note: "This page does not claim field-wide reproducibility, deployment readiness, or standards adoption. It only records what the present EEG route can honestly close first."
 wiki_links:
   - label: "Wiki: Current public six route brief"

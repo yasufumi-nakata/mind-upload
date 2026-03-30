@@ -153,8 +153,8 @@ The rule stays the same: no broad thematic expansion, and no solved-claim wordin
 | RQ | Judgment | Core to be directly verified with EEG | Application theme (grant key) | Main EEG-DATA | Required outside of EEG |
 |---|---|---|---|---|---|
 | U0-1 | A | Two-axis ROC that separates observation matching and intervention response matching | Necessary/sufficient condition design for identity KPI (G2/G3) | 11, 29, 696 | Normative definition of personality identity |
-| U0-2 | A | Correspondence coefficient between ms synchronization deviation and state representation collapse | Standardization of time synchronization audit criteria (G2/G3) | 11, 29, 696 | Inter-sensor clock calibration regular agreement |
-| U0-3 | A | External verification difference between task-specific thresholds and overfitting exclusion | Individual identification method with generalized threshold (G2/G3) | 11, 29, 696 | Screening rules for threshold selection |
+| U0-2 | A | Correspondence coefficient between ms synchronization deviation and state representation collapse | Standardization of time synchronization audit criteria (G2/G3) | D02 CSTE (`10.21227/j162-nh61`, subscription-gated support); adjunct: ds004148, ds007216 | Inter-sensor clock calibration regular agreement |
+| U0-3 | A | External verification difference between task-specific thresholds and overfitting exclusion | Individual identification method with generalized threshold (G2/G3) | D02 CSTE (`10.21227/j162-nh61`, subscription-gated support); adjunct: ds004148, ds007216 | Screening rules for threshold selection |
 | U0-4 | B | Lower limit evaluation of technical ID stability after branching | Procedure for determining identity of branching entity (G2/G3) | 11, 29, 696 | Legal entity definition/responsibility allocation |
 
 ## U1 (inverse problem)
@@ -242,10 +242,10 @@ The rule stays the same: no broad thematic expansion, and no solved-claim wordin
 | RQ | Judgment | Core to be directly verified with EEG | Application theme (grant key) | Main EEG-DATA | Required outside of EEG |
 |---|---|---|---|---|---|
 | U13-1 | B | Discrepancy between semantic matching rate and causal matching rate | Separate evaluation of meaning restoration/causal reproduction (G1/G4) | 509, 13, 65 | External behavior/language evaluation system |
-| U13-2 | B | Correlation between hallucination test results and neural state differences | Neural decoding connections for hallucination tests (G1/G4) | 509, 13, 65 | LLM evaluation platform collaboration |
+| U13-2 | B | Correlation between hallucination test results and neural state differences | Neural decoding connections for hallucination tests (G1/G4) | D10 3M-CPSEED (`10.18112/openneuro.ds006465.v2.0.0`, immediate); adjunct: D03, D09 | LLM evaluation platform collaboration |
 | U13-3 | B | Identification rate of the same output and different internal mechanisms | Shortcut detection bench (G1/G4) | 509, 13, 65 | Model internal visualization platform |
 | U13-4 | B | Effect of prohibiting passing based on imitation score alone | Imitation evaluation with causal consistency (G1/G4) | 509, 13, 65 | Causal intervention design |
-| U13-5 | B | Degradation branch point estimation from perception to recall | Perception/recall decoder branch analysis (G1/G4) | 509, 13, 65 | Unification of task design |
+| U13-5 | B | Degradation branch point estimation from perception to recall | Perception/recall decoder branch analysis (G1/G4) | D03 Multimodal Fusion EEG + Eye-Tracking (`10.21227/6106-6120`, subscription-gated support); adjunct: D10, D09 | Unification of task design |
 | U13-6 | B | Prompt induction/leak/shortcut separation rate | Leak audit with controlled experiment (G1/G4) | 509, 13, 65 | Data management governance |
 
 ## U14 (Operation/Audit)
@@ -253,9 +253,9 @@ The rule stays the same: no broad thematic expansion, and no solved-claim wordin
 | RQ | Judgment | Core to be directly verified with EEG | Application theme (grant key) | Main EEG-DATA | Required outside of EEG |
 |---|---|---|---|---|---|
 | U14-1 | A | Follow-up success rate for each fixed granularity | Minimum granularity definition for reproduction contract (G1/G3) | 6, 56, 719 | Contract document template |
-| U14-2 | A | Recall rate difference when separating exploration/verification | Operational separation of exploration and verification (G1/G3) | 6, 56, 719 | Research management process |
+| U14-2 | A | Recall rate difference when separating exploration/verification | Operational separation of exploration and verification (G1/G3) | D01 Acquisition delay of wireless EEG (`10.21227/dv1p-vq18`, subscription-gated support); adjunct: D08, D13 | Research management process |
 | U14-3 | A | Subject/time series leak detection rate | leaderboard audit operation (G1/G3) | 6, 56, 719 | Enforcement of publication rules |
-| U14-4 | A | Differences in ease of auditing with and without Card description | Model/Dataset Card contracting (G1/G3) | 6, 56, 719 | Legal preparation for evaluation contracts |
+| U14-4 | A | Differences in ease of auditing with and without Card description | Model/Dataset Card contracting (G1/G3) | D01 Acquisition delay of wireless EEG (`10.21227/dv1p-vq18`, subscription-gated support); adjunct: D08, D13 | Legal preparation for evaluation contracts |
 | U14-5 | B | Retry improvement rate with negative example registry | Negative example disclosure and retry cycle (G1/G3) | 6, 56, 719 | Disclosure consent/anonymization operation |
 | U14-6 | A | Cost increase due to container fixation | Setting the maximum allowable reproduction cost (G1/G3) | 6, 56, 719 | Computing resource procurement plan |
 
@@ -594,7 +594,7 @@ Reasons for proceeding in this order:
 
 - Rechecked the same six public RQs against the live `https://mind-upload.com/issue.html` wording, the local `EEG-DATA` dataset cards, the official funding pages, and the live Todoist task inventory before changing any public-facing text.
 - The public six-RQ batch stays unchanged: `U13-2`, `U13-5`, `U14-4`, `U0-2`, `U0-3`, and `U14-2` still form the narrow `inner-speech decoding + identity drift + reproducibility auditing` route, and the public page still presents them as a `route-setting update` rather than a solved-claim update.
-- The current conservative anchor proof in the local mirror is now fixed more explicitly as `D10 -> 000016 3M-CPSEED (OpenNeuro ds006465 v2.0.0, immediate)`, `D03 -> 011012 Data of Multimodal Fusion System for Cognitive Load Assessment in Psychological Experiments: An EEG and Eye-Tracking Study (DOI route, immediate)`, `D01 -> 016105 Acquisition delay of wireless EEG (DOI route, immediate)`, and `D02 -> 005558 CSTE (DOI route, immediate)`.
-- `D03` and `D01` still have parallel `ieee-dataport.org` copies in the local mirror marked as `uncertain-public`, so the public route remains attached to the DOI-based `immediate` entries instead of those secondary mirrors.
+- The current conservative anchor proof in the local mirror is now fixed more explicitly as `D10 -> 000016 3M-CPSEED (OpenNeuro ds006465 v2.0.0, immediate)`, `D03 -> 011012 Data of Multimodal Fusion System for Cognitive Load Assessment in Psychological Experiments: An EEG and Eye-Tracking Study (DOI route, subscription-gated support)`, `D01 -> 016105 Acquisition delay of wireless EEG (DOI route, subscription-gated support)`, and `D02 -> 005558 CSTE (DOI route, subscription-gated support)`.
+- `D03`, `D01`, and `D02` still have IEEE DataPort-backed routes in the local mirror that now need to be read as `subscription-gated support`, so the public route no longer treats them as immediate public anchors.
 - Funding and task handling also stay conservative in this run: `Kura Fund` remains the practical first route for `U13/U14`, the `Nakatani Foundation graduate scholarship` remains the main student-facing bridge for `U13/U0`, the `Kashinome Scholarship` stays a runway-only side route, the `Nakatani Foundation research grant` stays in watch mode, and no new Todoist task is added because the required start/deadline tasks already exist.
 - Practical consequence for this run: keep the batch unchanged, keep the current solve-first order, and treat the next public-facing progress threshold as `finished minimum artifacts + required logs`, not as a stronger claim ceiling.

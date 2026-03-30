@@ -1,15 +1,15 @@
 ---
 layout: default
 title: "Wiki: U0-2 temporal-validity route packet"
-description: "Why U0-2 stays third in the current public six, why D02 CSTE is the primary EEG anchor, and what the first artifact can honestly close."
+description: "Why U0-2 stays third in the current public six, why D02 CSTE stays the intended gated-support EEG anchor, and what the first artifact can honestly close."
 article_type: Wiki
 subtitle: "A row-specific packet for the first active identity-drift RQ"
 author: Mind Uploading Research Project
-last_updated: "2026-03-30"
+last_updated: "2026-03-31"
 note: "U0-2 route packet"
 audience: "Readers who want the dataset-choice rationale and the honest claim ceiling for the current temporal-validity row"
 reading_time: "8-12 minutes"
-page_intro: "This page fixes the current public route for U0-2 at the level of one question, one primary dataset anchor, one bounded first artifact, and one funding bridge."
+page_intro: "This page fixes the current public route for U0-2 at the level of one question, one intended EEG route anchor, one bounded first artifact, and one funding bridge."
 accuracy_note: "This page does not claim legal, philosophical, or normative continuity. It only records what the present EEG route can honestly close first."
 wiki_links:
   - label: "Wiki: Current public six route brief"
