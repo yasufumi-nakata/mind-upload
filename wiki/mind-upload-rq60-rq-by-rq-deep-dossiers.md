@@ -19,6 +19,15 @@ reading_time: "55-80分"
 - 更新日: 2026-03-31
 - 出典: `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`（60行を再構成）
 
+## 2026-03-31 16:05 JST latest post-pull route-hold note
+
+This run still does not change the current public six-question batch. The latest pulled deltas were reread before writing this note: `mind-upload@a11240d38415` tightened the connectome / timing-state route cards, `EEG-DATA@f318ac8ce42d` added an `OSF eucqf` deep-dive refresh, and `auto-research-funds@c95cc61fdfc9` added new `Takeda / Nohken` funding-card material. None of those changes replace the current `D10 / D03 / D02 / D01` anchor family or the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1`.
+
+- The public six still stay `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
+- The solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
+- Browser-level live checks in this run still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, so this run adds no new public-site prose.
+- The Todoist full-item audit still showed enough coverage (`items=205`, `Kura=2`, `Nakatani family=13`, `Kashinome=2`, `Secom family=3`), so no new task was added.
+
 ## 2026-03-31 00:04 JST overnight route-hold note
 
 This run still does not change the current public six-question batch. The added value is not a new batch switch but a stronger reason for the hold: the latest `EEG-DATA` upstream additions remain outside the current speech / identity / reproducibility anchor family, `D10` remains the only clearly public-open primary anchor, and `D03/D02/D01` now have to be read only as subscription-gated support anchors rather than immediate public anchors.

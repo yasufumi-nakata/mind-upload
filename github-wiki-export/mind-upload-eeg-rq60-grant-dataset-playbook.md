@@ -49,6 +49,13 @@ A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-f
 - The six current public rows below are now synchronized to `Dxx + DOI + dataset name + access class`, so the playbook no longer needs numeric search IDs for `U13-2/U13-5/U14-4/U0-2/U0-3/U14-2`.
 - `tech_roadmap.md` also contains `U2/U5/U6/U9`, but those roadmap families are not yet translated into this playbook's current `RQ60` practical layer.
 
+## Latest post-pull addendum (2026-03-31 16:05 JST)
+
+- A latest pull reread after `mind-upload@a11240d38415`, `EEG-DATA@f318ac8ce42d`, and `auto-research-funds@c95cc61fdfc9` still leaves this playbook's practical reading unchanged.
+- The newest deltas widen the support map rather than the current route: `mind-upload` tightened the connectome / timing-state route cards, `EEG-DATA` added an `OSF eucqf` deep-dive refresh, and `auto-research-funds` added new `Takeda / Nohken` funding-card material, but none of those changes displace the current `D10 / D03 / D02 / D01` family or the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1`.
+- Browser-level live checks still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, so this run adds no new public-site prose.
+- A fresh Todoist full-item audit still showed enough route coverage (`items=205`, `Kura=2`, `Nakatani family=13`, `Kashinome=2`, `Secom family=3`), so no new task was added in this run.
+
 ## Anchor-strength recheck (2026-03-30 05:07 JST)
 
 This run keeps the same public six-RQ batch and the same practical submission routes. What changed is the access reading for the current anchors after a post-pull `EEG-DATA` reread, a live-site check, an official-window recheck, and a read-only Todoist recheck. `D10` remains the only clearly public-open primary anchor for first artifacts. `D03`, `D02`, and `D01` remain useful only as subscription-gated support anchors, and earlier March 30 notes that called them immediate public routes should now be read as superseded by the March 31 access audit.

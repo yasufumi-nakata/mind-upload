@@ -48,6 +48,14 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `B`: 25件
 - `C`: 18件
 
+## Latest post-pull revalidation after 16:05 JST on March 31, 2026
+
+This run still does not change the current public batch or the `A/B/C` breakdown. The latest pulled deltas were reread before freezing this note: `mind-upload@a11240d38415` tightened the connectome / timing-state route cards, `EEG-DATA@f318ac8ce42d` added an `OSF eucqf` deep-dive refresh, and `auto-research-funds@c95cc61fdfc9` added new `Takeda / Nohken` funding-card material. Those changes widen the supporting map, but they still do not replace the current `D10 / D03 / D02 / D01` family or the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1`.
+
+- The current batch still stays `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
+- Browser-level live checks in this run still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, so there was no public-site text to update in this run.
+- The Todoist full-item audit still showed enough route coverage (`items=205`, `Kura=2`, `Nakatani family=13`, `Kashinome=2`, `Secom family=3`, `AI for Aging-Society Problem Solving=0`), so no new task was added.
+
 ## Current six-RQ route after the March 31 overnight recheck
 
 This run still does not change the current public batch or the solve-first order. What changed is the access reading of the hold: the latest `EEG-DATA` upstream additions remain outside the current six-row anchor family, `D10` remains the only clearly public-open primary anchor, and `D03/D02/D01` now need to be read only as subscription-gated support anchors on the public route.
