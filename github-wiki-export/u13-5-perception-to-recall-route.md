@@ -48,6 +48,8 @@ This page does not change the current public six-question batch. It makes only t
 | `D09 VICODEV` (`10.21227/r8fc-2y40`, account required) | It adds multimodal distraction and control-condition structure that may help later failure-mode design. | It is access-gated and centered on a driving-distraction scenario rather than the present recall-transfer question, so it should not be the first public anchor for `U13-5`. |
 | `CuBiAAD` (`10.21227/18vd-6870`, account required) | It is a stronger speech-side adjunct candidate because it combines mixed-speech auditory attention with EEG and released audio materials. | It is still access-gated and is not the current public route's first bounded anchor for a perception-to-recall packet. |
 
+If a reader insists on a public-open-only inspection path, the least-distorting backup still stays `D10 3M-CPSEED`, with the spoken-plus-imagined robot-speech EEG family kept only as a speech-side adjunct. Those public-open backups remain useful for decoder-side failure inspection, but they still do not recreate the paired `EEG + gaze` branch-point structure that keeps `D03` primary in planning.
+
 ## What the first artifact can honestly close now
 
 | Artifact piece | What it closes now | What still stays outside the claim |

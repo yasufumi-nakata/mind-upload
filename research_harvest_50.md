@@ -5,7 +5,7 @@ description: "Publishes prior research collected through 50 decomposed questions
 article_type: "Evidence Bank"
 subtitle: "U0-U15 decomposition, current-status map, and prior literature (heavily cited)"
 author: Mind Uploading Research Project
-last_updated: "2026-03-30"
+last_updated: "2026-03-31"
 note: "Compiled from 50 worker tasks (curated for relevance)"
 audience: "Readers who want to browse a large literature set by unresolved issue rather than by paper count alone"
 reading_time: "20-35 min (about 7 min if you only read the statistics and U-map)"
@@ -133,7 +133,7 @@ If you want a one-page workflow that connects literature triage, theory notes, p
 <div class="note-box">
 <strong>If you want to turn one unresolved question into an EEG-ready or grant-ready work package</strong>
 <p>
-This public literature map stays at the routing level. If you want the current one-question-at-a-time route from an unresolved question to an EEG-feasible test, a fundable theme, and a fixed dataset anchor, start with the <a href="wiki/mind-upload-current-public-six-rq-brief.html">current public six-RQ brief</a>, then go to the <a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG feasibility page</a>, the <a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ-by-RQ deep dossiers</a>, the <a href="wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html">grant and dataset playbook</a>, and the <a href="https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md">current funding shortlist</a>.
+This public literature map stays at the routing level. If you want the current one-question-at-a-time route from an unresolved question to an EEG-feasible test, a fundable theme, and a fixed dataset anchor, start with the <a href="wiki/mind-upload-rq-solvability-bridge.html">RQ solvability bridge</a>, then go to the <a href="wiki/mind-upload-current-public-six-rq-brief.html">current public six-RQ brief</a>, the <a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG feasibility page</a>, the <a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ-by-RQ deep dossiers</a>, the <a href="wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html">grant and dataset playbook</a>, and the <a href="https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md">current funding shortlist</a>.
 </p>
 </div>
 <div class="note-box">

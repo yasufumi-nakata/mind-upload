@@ -47,6 +47,8 @@ This page does not change the current public six-question batch. It makes only t
 | `A test-retest resting and cognitive state EEG dataset` (`10.18112/openneuro.ds004148.v1.0.1`, immediate) | It gives a richer test-retest state ladder and a larger cohort that may help later stress-test timing-validity assumptions. | It is not framed as a direct cross-task EEG biometrics route, so it stays a support anchor rather than the first public anchor for `U0-2`. |
 | `A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`, immediate) | It gives denser multi-session logging and a strong secondary route for synchronization and state-label auditing. | It is multimodal and experience-sampling oriented rather than a clean EEG biometrics floor, so it should not replace `D02` as the first public anchor for `U0-2`. |
 
+Among public-open backups, `ds004148` still stays the cleanest retest ladder and `ds007216` still stays the cleanest multi-session provenance ladder. They are strong stress-test families, but they still do not replace the direct `cross-session / cross-task biometrics` framing that keeps `D02` primary in planning.
+
 ## What the first artifact can honestly close now
 
 | Artifact piece | What it closes now | What still stays outside the claim |

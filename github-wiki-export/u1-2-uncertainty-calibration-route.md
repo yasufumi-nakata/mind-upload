@@ -32,6 +32,7 @@ This page does not change the current public six-question batch. It records one 
 
 - `D08 Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods` still remains the strongest current `ground-truth + intervention + inverse-validation` floor for `U1-2`.
 - `10.21227/7may-9q56` still resolves to the IEEE DataPort canonical page for `D08`. That page body still points readers to the public DOI route `10.25493/NXN2-05W`, while the same IEEE surface also shows subscription/access UI. Public wording therefore keeps the emphasis on the uncertainty-calibration artifact rather than on a stronger access-class claim.
+- When the `EEG-DATA` catalog auto-label and the live access surface disagree, this packet follows the live DOI handoff plus the artifact value of `ground-truth + intervention` rather than the catalog label alone. The public-safe point here is still the uncertainty-calibration artifact, not a stronger access-class claim.
 - `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` remains a useful public-open support family for repeating perturbation checks under richer multi-session provenance.
 - `D19 CerebellarTMSEEGData` remains a useful public-open support family for perturbation-family cross-checks once the `D08` ground-truth floor is fixed.
 - The current public six-question batch still stays unchanged: `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.

@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-30 / Role: Learning-first
+- Updated: 2026-03-31 / Role: Learning-first
 
 ## Role Of This Page
 This page is a learning portal that makes the public pages of Mind-Upload easier to read. The public pages show what we know now, what we do not know yet, and what to read next, while the wiki teaches the basic explanations behind those pages in a deliberate order.
@@ -239,6 +239,11 @@ The learning portal now treats living-human evidence more strictly at the entran
 <td><strong>I want the shortest public-safe entry into the six RQs currently being deepened</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief">Mind-upload Current Public Six: EEG Route Brief</a></td>
 <td><a href="https://mind-upload.com/issue.html">Contribution Guide</a> / <a href="https://mind-upload.com/datasets.html">Data & Bench</a> / <a href="https://mind-upload.com/research_harvest_50.html">Bibliography Map</a></td>
+</tr>
+<tr>
+<td><strong>I want one page that says what EEG can close now, what still needs outside support, and which funding lane still fits</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq-solvability-bridge">Mind-upload RQ Solvability Bridge</a></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief">Current Public Six</a> / <a href="https://mind-upload.com/issue.html">Contribution Guide</a> / <a href="https://mind-upload.com/datasets.html">Data & Bench</a></td>
 </tr>
 <tr>
 <td><strong>I want to see at once whether each RQ can be solved with EEG and the funding theme</strong></td>

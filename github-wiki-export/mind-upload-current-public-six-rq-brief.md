@@ -14,6 +14,7 @@ This page fixes the current public six-question route at the level of one RQ, on
 - [Deep focus notes](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes)
 
 ## Related Wiki Pages
+- [Wiki: RQ solvability bridge](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq-solvability-bridge) - One page for what EEG can close now, what still needs outside support, and which funding lane still fits.
 - [Wiki: RQ-by-RQ deep dossiers](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers) - The longer working dossier for the current public six and the wider 60RQ map.
 - [Wiki: Grant and dataset playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - The route from each RQ to the current bounded funding lane and EEG anchor.
 - [Wiki: U13-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u13-2-brain-minus-prior-route) - Why D10 stays first for U13-2, why the other speech candidates stay secondary, and what the first artifact can honestly close.
@@ -39,6 +40,7 @@ It does **not** announce solved claims. It only states what the current public r
 - At `2026-03-31 00:04 JST`, an overnight recheck still leaves the public batch and the solve-first order unchanged.
 - A March 31 access audit at `2026-03-31 00:20 JST` still leaves the batch unchanged, but it narrows the anchor reading: `D10 3M-CPSEED` remains the only clearly public-open primary anchor in the current six.
 - `D03 Multimodal Fusion EEG + Eye-Tracking`, `D02 CSTE`, and `D01 Acquisition delay of wireless EEG` currently resolve to IEEE DataPort pages that show `LOGIN TO ACCESS DATASET FILES` and `Subscription Required`, so public wording now keeps them only as subscription-gated support anchors rather than immediate public anchors.
+- When the live access audit and the catalog auto-label disagree, this page follows the live access audit for public-safe wording and keeps the catalog label only as a planning hint.
 - `Kura Fund` remains open through April 17, 2026 at 17:00, `Nakatani Foundation graduate scholarship` runs April 1, 2026 through May 25, 2026 at 15:00, `Kashinome Scholarship` remains open through April 9, 2026, and `Secom General Research Grant` remains only an urgency watch route through March 31, 2026 at 12:00 at this run time.
 - A March 31 `09:04 JST` Todoist full-item audit still shows the current route already covered (`Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom family=3`), so no new task was added in this run.
 - Earlier March 30 notes on this page that treated `D03/D02/D01` as immediate public routes should now be read as superseded by the March 31 access audit.
@@ -84,6 +86,18 @@ The route is unchanged, but each active row now also carries one submission-read
 | `U0-3` | The same `D02` route still fixes the intended threshold-governance floor, but the current IEEE DataPort page is subscription-gated, so public wording keeps it only as a gated support anchor. | A threshold-stability note and an overfit-exclusion rule. | A session-external rerun pack, cohort extension, and any personhood-continuity reading. | `Task-specific identity-threshold stability study` |
 | `U14-4` | `D01` still marks the intended latency-first disclosure route, but the current IEEE DataPort page is subscription-gated, so the row now stays only as a gated support route. | Filled Model Card / Dataset Card examples for the current batch. | Richer rerun benchmarks, leak-audit exemplars, and any field-wide reproducibility or standards-adoption wording. | `Disclosure-first reproducibility contract package` |
 | `U14-2` | The same `D01` latency-first route still marks the intended split boundary, but the current IEEE DataPort page is subscription-gated, so the row now stays only as a gated support route. | A fixed-split rerun contract and a negative-case trail. | Split-violation examples across richer public benchmarks and any stronger confirmatory-readiness claim. | `Exploration-confirmation split contract for reruns` |
+
+## Best public-open support family when the main anchor is gated
+
+These support families do not replace the current gated-support planning anchors. They only show the cleanest public-open backup family for readers who want to inspect what can still be stress-tested without access-gated datasets.
+
+| RQ | Best public-open support family | Why it helps | Why it still does not replace the current planning anchor |
+|---|---|---|---|
+| `U13-5` | `D10 3M-CPSEED`, with `spoken + imagined robot-speech EEG` as a speech-side adjunct | They keep the decoder-side failure analysis public-open and make speech-condition collapse easier to inspect. | They do not recreate the paired `EEG + gaze` branch-point structure that keeps `D03` primary in planning. |
+| `U0-2` | `A test-retest resting and cognitive state EEG dataset`, then `A multi-session simultaneous EEG-fMRI dataset with online experience sampling` | They give the strongest public-open retest ladder and the strongest public-open multi-session provenance ladder. | They are strong stress-test families, but they do not replace the direct `cross-session / cross-task biometrics` framing that keeps `D02` primary in planning. |
+| `U0-3` | `A test-retest resting and cognitive state EEG dataset`, then `A multi-session simultaneous EEG-fMRI dataset with online experience sampling` | They give the cleanest public-open rerun ladder for checking whether the threshold rule survives outside one session or one preprocessing path. | They still do not match the intended identity-drift floor as directly as `D02`, so they remain support rather than replacement. |
+| `U14-4` | `D13 A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications`, then `D08 Simultaneous human intracerebral stimulation and HD-EEG` | `D13` is the clearest public-open rerun-example family, and `D08` is the clearest grounded validation-field family. | They are useful only after the first card contract is already fixed; neither is the narrowest latency-first disclosure anchor. |
+| `U14-2` | `D13 A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications`, then `D08 Simultaneous human intracerebral stimulation and HD-EEG` | `D13` is the clearest public-open split-violation example family, and `D08` gives a stronger validation-style failure family. | They help widen rerun examples later, but they do not replace the latency-first split boundary that keeps `D01` primary in planning. |
 
 ## Row-by-row brief
 
