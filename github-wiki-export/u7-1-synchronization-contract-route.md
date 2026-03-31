@@ -7,7 +7,7 @@
 - Updated: 2026-03-31 / Role: U7-1 route packet
 
 ## Role Of This Page
-This page records one narrow route outside the current public six at the level of one question, one public-open EEG anchor, one bounded first artifact, and one funding bridge.
+This page records one narrow next-watch route outside the current public six at the level of one question, one public-open EEG anchor, one bounded first artifact, and one funding bridge.
 
 ## Accuracy Notes
 This page does not change the active public six-question batch. It only records what the present U7-1 synchronization route can honestly close first.
