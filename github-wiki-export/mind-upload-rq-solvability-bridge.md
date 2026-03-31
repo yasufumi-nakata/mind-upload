@@ -22,6 +22,10 @@ This is not a solved-claim update. It records only bounded artifacts that can ho
 - [Wiki: RQ60 EEG feasibility page](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds) - The wider 60RQ judgment page.
 - [Wiki: Grant and dataset playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - The row-by-row route from RQ to dataset anchor and funding lane.
 - [Wiki: RQ-by-RQ deep dossiers](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers) - The longer working dossiers for one-RQ-at-a-time execution.
+- [Wiki: U7-1 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u7-1-synchronization-contract-route) - The cleanest public-open A-tier synchronization packet outside the current six.
+- [Wiki: U1-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u1-2-uncertainty-calibration-route) - The next narrow inverse-estimation uncertainty packet outside the current six.
+- [Wiki: U4-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u4-2-minimal-causal-route) - The current minimal causal-intervention packet outside the current six.
+- [Wiki: U8-1 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u8-1-closed-loop-delay-tolerance-route) - The current bounded closed-loop delay-tolerance packet outside the current six.
 
 ---
 
@@ -75,6 +79,7 @@ It does **not** try to re-scan all `60RQ` items at once. The working style on th
 
 - The current public six-question batch still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
 - The next-watch queue still stays `U7-1 -> U1-2 -> U4-2 -> U8-1`.
+- If you want the exact next-watch row packets, continue with the [U7-1 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u7-1-synchronization-contract-route), the [U1-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u1-2-uncertainty-calibration-route), the [U4-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u4-2-minimal-causal-route), and the [U8-1 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u8-1-closed-loop-delay-tolerance-route).
 - Inside the current public six, `D10 3M-CPSEED` remains the only clearly public-open primary anchor.
 - `D03 Multimodal Fusion EEG + Eye-Tracking`, `D02 CSTE`, and `D01 Acquisition delay of wireless EEG` still remain subscription-gated support anchors on the public route.
 - No new Todoist task was needed in this run because the current practical lanes and watch lanes were already covered by existing tasks in the funding workflow.
