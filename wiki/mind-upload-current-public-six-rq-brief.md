@@ -5,7 +5,7 @@ description: "A public-safe row-by-row brief for the six mind-upload research qu
 article_type: Wiki
 subtitle: "A narrow route brief, not a solved-claim update"
 author: Mind Uploading Research Project
-last_updated: "2026-03-31"
+last_updated: "2026-04-01"
 note: "Current public six"
 audience: "Readers who want the present one-question-at-a-time EEG route without overreading the claim"
 reading_time: "8-12 minutes"
@@ -53,6 +53,14 @@ recommended_pages:
 This page keeps the current public six-question batch readable at the level of `one RQ -> one bounded EEG anchor -> one first artifact -> one funding bridge`.
 
 It does **not** announce solved claims. It only states what the current public route is narrow enough to support after a post-pull review of `mind-upload`, `EEG-DATA`, `auto-research-funds`, the live public page, the current official funding windows, and a read-only Todoist recheck.
+
+## What still stays fixed after the 00:12 JST actual-pull reread on April 1, 2026
+
+- A latest actual-pull recheck at `2026-04-01 00:12 JST` after `mind-upload@e53a50b1256d`, `EEG-DATA@48f4814db5da`, and `auto-research-funds@76145d0e3f4c` still leaves the public batch and the solve-first order unchanged.
+- The current `EEG-DATA` head still supports the same bounded route rather than replacing it: the current-six family `D10 / D03 / D02 / D01` and the outside-current-six family `D11 / D08 / D05 / D20` are all still present in the repo, but public-safe wording continues to keep `D10` as the only clear public-open primary while `D03 / D02 / D01` stay gated-support anchors because the live-access read still remains stricter than the catalog label.
+- Browser-level live checks at `2026-04-01 00:15 JST` still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, so this run keeps the public batch fixed and adds only a short reread note to the supporting route pages.
+- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, while `Nakatani Foundation research grant`, `Secom General Research Grant`, and `Brain Science Foundation research grant` remain watch-or-closed outside the current-cycle lane.
+- A fresh paginated Todoist `api/v1/tasks` full audit still showed enough route coverage (`active tasks=204`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`), so no new task was added in this session.
 
 ## What still stays fixed after the 21:09 JST post-pull reread on March 31, 2026
 

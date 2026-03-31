@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-31 / Role: Current RQ-to-EEG-and-funding bridge
+- Updated: 2026-04-01 / Role: Current RQ-to-EEG-and-funding bridge
 
 ## Role Of This Page
 This page fixes the current deepening queue and the next-watch queue at the level of one research question, one EEG-DATA anchor family, one honest funding theme, and one explicit external-dependency boundary.
@@ -34,6 +34,14 @@ This is not a solved-claim update. It records only bounded artifacts that can ho
 This page answers one narrow question: for the rows that are actually worth deepening now, what can `EEG-DATA` honestly close, what still needs outside support, and what funding theme still fits without overstating the claim.
 
 It does **not** try to re-scan all `60RQ` items at once. The working style on this site is now `deepen one row at a time`, not `summarize everything at the same depth`.
+
+## What still stays fixed after the 00:12 JST actual-pull reread on April 1, 2026
+
+- A latest actual-pull recheck at `2026-04-01 00:12 JST` after `mind-upload@e53a50b1256d`, `EEG-DATA@48f4814db5da`, and `auto-research-funds@76145d0e3f4c` still leaves both the current public six and the next-watch queue unchanged.
+- The current `EEG-DATA` head still supports the same narrow anchor families rather than replacing them: the current-six family `D10 / D03 / D02 / D01` and the next-watch family `D11 / D08 / D05 / D20` are all still present in the repo, but public-safe wording continues to keep `D10` as the only clear public-open primary while `D03 / D02 / D01` remain gated-support planning anchors because the live-access read and mirror state still stay mixed.
+- Browser-level live checks at `2026-04-01 00:15 JST` still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, so this run keeps the public batch fixed and adds only a bounded reread note to the supporting route pages.
+- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, while `Nakatani Foundation research grant`, `Secom General Research Grant`, and `Brain Science Foundation research grant` remain watch-or-closed outside the current-cycle lane.
+- A fresh paginated Todoist `api/v1/tasks` full audit still showed enough route coverage (`active tasks=204`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`), so no new task was added in this session.
 
 ## How to read "solvable with EEG" on this page
 
