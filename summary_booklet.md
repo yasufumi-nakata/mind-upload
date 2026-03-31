@@ -5,7 +5,7 @@ description: "An auto-generated A4-style briefing page built from the site's pub
 article_type: "Briefing Booklet"
 subtitle: "An A4 briefing regenerated from public-page front matter and lead summaries"
 author: Mind Uploading Research Project
-last_updated: "2026-03-31"
+last_updated: "2026-04-01"
 note: "Auto-generated from public pages"
 body_class: "summary-booklet-page"
 ---
@@ -25,7 +25,7 @@ body_class: "summary-booklet-page"
   <div class="booklet-cover-band">
     <div>
   <span>Reference Date</span>
-  <strong>2026-03-31</strong>
+  <strong>2026-04-01</strong>
 </div>
 <div>
   <span>Current Focus</span>
@@ -335,7 +335,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Resource - Connect ``what to use&#39;&#39; and ``how to reproduce&#39;&#39; in the shortest route without separating them. / 12-20 minutes</p>
   <p>This page is a practical list to help you decide which data to practice with first. First, we use public data to create a state in which we can reproduce the same results (L0), and then check to see if we can predict and withstand changes in conditions (L1-L2).</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>Cross-session and adaptation labels are not yet temporal-validity claims; state annotation, fixed decoder interval, recalibration burden, and transfer ceiling still have to be disclosed separately.</li><li>Even when the score is numerically the same, you still have to separate the target neural variable from eye movement, EMG, behavior, feedback routes, subject / session fingerprint, and acquisition-distribution shortcuts such as site / device / reference / electrode layout.</li><li>The L0 artifact pack now follows this page&#39;s stricter site rule: event fidelity, label provenance, acquisition-distribution summary, derivative lineage, and a stopping claim are required alongside version/BIDS/QC/split/baseline.</li>
+    <li>The page now also fixes a component-addition / ablation ladder for maintenance-state routes, so astrocyte, neurovascular / BBB, and clearance augmentations are compared against a named neuron-first baseline instead of being piled into one multimodal boost.</li><li>Starter EEG datasets are still neuron-first baselines; maintenance-state claims need paired support-state data or aligned proxy logs, one-family-at-a-time augmentation, and strongest-single-row versus bundle comparison.</li><li>Cross-session and adaptation labels are not yet temporal-validity claims; state annotation, fixed decoder interval, recalibration burden, and transfer ceiling still have to be disclosed separately.</li>
   </ul>
   <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">

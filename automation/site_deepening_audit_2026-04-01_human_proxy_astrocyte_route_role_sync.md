@@ -18,19 +18,19 @@
 
 - Problem:
   - The public site had already started to separate astrocyte PET by target class and route role elsewhere.
-  - But the central composition and claim-ceiling pages still allowed readers to treat `SMBT-1 first-in-human target validation`, `SMBT-1 AD-spectrum disease contrast`, `SMBT-1 brain quantification`, and `SMBT-1 whole-body dosimetry` as one common MAO-B line.
+  - But the central composition and claim-ceiling pages still allowed readers to treat `SMBT-1 first-in-human target validation`, `SMBT-1 AD-spectrum disease contrast`, `SMBT-1 brain quantification`, and `SMBT-1 whole-body biodistribution` as one common MAO-B line.
 - Why this is technically weak:
   - These papers do not answer the same question.
   - One paper establishes that a tracer binds the intended target in humans.
   - Another tests disease-context contrast.
   - Another tests brain-side quantification choices.
-  - Another fixes whole-body biodistribution and dosimetry burden.
+  - Another fixes whole-body biodistribution burden.
   - Treating them as one line silently promotes the route beyond what the literature supports.
 - Primary evidence:
   - Villemagne et al. (2022, DOI `10.2967/jnumed.121.263254`) establish first-in-human SMBT-1 MAO-B target validation.
   - Villemagne et al. (2022, DOI `10.2967/jnumed.121.263255`) establish Alzheimer-spectrum disease-context contrast.
   - Hiraoka et al. (2025, DOI `10.1007/s12149-025-02083-y`) establish the brain-quantification problem.
-  - Mesfin et al. (2026, DOI `10.1007/s12149-025-02144-2`) establish the separate whole-body biodistribution / dosimetry burden.
+  - Mesfin et al. (2026, DOI `10.1007/s12149-025-02144-2`) establish the separate whole-body biodistribution burden.
 
 ### 2. The site's central tables were still too coarse for family-internal comparison logic
 
@@ -69,20 +69,20 @@
 
 - `wiki/human-proxy-composition.md`
   - Updated front matter and summary bullets so astrocyte PET is treated as a `target / route-role split` rather than one family label.
-  - Added a new 2026-04-01 correction note explaining why first-in-human validation, AD-context contrast, brain quantification, whole-body dosimetry, and I2BS imaging cannot share one bundle row.
+  - Added a new 2026-04-01 correction note explaining why first-in-human validation, AD-context contrast, brain quantification, whole-body biodistribution, and I2BS imaging cannot share one bundle row.
   - Replaced the old single astrocyte row in the route matrix with five rows:
     - SMBT-1 first-in-human MAO-B target validation
     - SMBT-1 AD-spectrum disease context
     - SMBT-1 brain quantification
-    - SMBT-1 whole-body biodistribution / dosimetry
+    - SMBT-1 whole-body biodistribution
     - I2BS astrocyte PET
   - Expanded the family-internal-collapse rule so astrocyte PET is treated in the same way as SV2A, myelin, and clearance families.
   - Updated the three-axis table and causal-bridge paragraph so the same route-role split survives into calibrator-role and bridge logic.
 - `wiki/measurement-stack-and-claim-ceiling.md`
   - Updated `last_updated` and page highlights so astrocyte PET is explicitly named as a non-collapsible audit family.
-  - Rewrote the section-7 maintenance-state paragraph so SMBT-1 target validation, disease-context contrast, brain quantification, and whole-body dosimetry are no longer compressed into one MAO-B row.
+  - Rewrote the section-7 maintenance-state paragraph so SMBT-1 target validation, disease-context contrast, brain quantification, and whole-body biodistribution are no longer compressed into one MAO-B row.
   - Replaced the old two-row astrocyte block with five rows at the claim-ceiling table.
-  - Updated the proxy-class / operational-maturity / calibrator-role note and the site rule so `MAO-B target-validation / disease-context / brain-quantification / tracer-burden-dosimetry` now remain distinct proxy classes.
+  - Updated the proxy-class / operational-maturity / calibrator-role note and the site rule so `MAO-B target-validation / disease-context / brain-quantification / whole-body-biodistribution` now remain distinct proxy classes.
 
 ## External Dependency Tasks
 

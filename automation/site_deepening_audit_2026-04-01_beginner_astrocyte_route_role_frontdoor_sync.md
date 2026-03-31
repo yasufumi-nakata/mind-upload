@@ -17,7 +17,7 @@
   - `SMBT-1 first-in-human MAO-B target validation`
   - `SMBT-1 AD-spectrum disease-context`
   - `SMBT-1 brain quantification`
-  - `SMBT-1 whole-body biodistribution / dosimetry`
+  - `SMBT-1 whole-body biodistribution`
   - `I2BS route`
   に分けて読ませる規則が整っておりました。
 - しかし beginner front door である `wiki/mind-upload-basics.md` は、なお
@@ -49,7 +49,7 @@
 - [Villemagne et al. (2022, `10.2967/jnumed.121.263254`)](https://doi.org/10.2967/jnumed.121.263254) は、healthy humans における `SMBT-1 first-in-human MAO-B target validation` でございます。
 - [Villemagne et al. (2022, `10.2967/jnumed.121.263255`)](https://doi.org/10.2967/jnumed.121.263255) は、`77 volunteers` を対象にした `AD-spectrum disease-context route` でございます。
 - [Hiraoka et al. (2025, `10.1007/s12149-025-02083-y`)](https://doi.org/10.1007/s12149-025-02083-y) は、arterial input と model comparison を伴う `brain-quantification route` でございます。
-- [Mesfin et al. (2026, `10.1007/s12149-025-02144-2`)](https://doi.org/10.1007/s12149-025-02144-2) は、`six healthy volunteers`、`5.5 h` の `whole-body biodistribution / dosimetry route` でございます。
+- [Mesfin et al. (2026, `10.1007/s12149-025-02144-2`)](https://doi.org/10.1007/s12149-025-02144-2) は、`six healthy volunteers`、`5.5 h` の `whole-body biodistribution route` でございます。
 
 批判:
 
@@ -80,7 +80,7 @@
 
 - `wiki/mind-upload-basics.md`
   - `last_updated` を `2026-04-01` に更新しました。
-  - front matter の `page_highlights` と `known_points` を、`SMBT-1 target-validation / AD-spectrum / brain-quantification / whole-body-dosimetry / I2BS` の split が見える文言へ更新しました。
+  - front matter の `page_highlights` と `known_points` を、`SMBT-1 target-validation / AD-spectrum / brain-quantification / whole-body-biodistribution / I2BS` の split が見える文言へ更新しました。
   - `2026-04-01 technical correction: astrocyte PET also splits by route role` note-box を追加しました。
   - human observability ladder の astrocyte block を 2 行から 5 行へ分解しました。
   - beginner summary の `quantity type` note を、`route role` まで明示する文言へ更新しました。

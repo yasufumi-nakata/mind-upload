@@ -9,8 +9,8 @@
 
 - The site was already stronger than average at separating destructive ultrastructure from living-human proxy routes and at splitting astrocyte PET by target class (`MAO-B` versus `I2BS`).
 - However, the public wording still remained too coarse inside the human `SMBT-1 / MAO-B` family itself.
-- That gap matters technically because the current literature does not support treating `first-in-human target validation`, `AD-spectrum disease contrast`, `brain quantification`, and `whole-body biodistribution / dosimetry` as one interchangeable line of evidence.
-- The resulting compression risk was visible on the public pages: readers could still overread one astrocyte PET citation as if it simultaneously settled target validity, disease-context relevance, quantification regime, and tracer-burden / dosimetry burden.
+- That gap matters technically because the current literature does not support treating `first-in-human target validation`, `AD-spectrum disease contrast`, `brain quantification`, and `whole-body biodistribution` as one interchangeable line of evidence.
+- The resulting compression risk was visible on the public pages: readers could still overread one astrocyte PET citation as if it simultaneously settled target validity, disease-context relevance, quantification regime, and tracer-burden burden.
 
 ## Evidence-Based Critique
 
@@ -21,13 +21,13 @@
   - But the human `SMBT-1` line could still be read as one common route.
 - Why this is technically weak:
   - `first-in-human tracer validation` answers a different question from `disease-context contrast`.
-  - `brain quantification` answers a different question from `whole-body biodistribution / dosimetry`.
+  - `brain quantification` answers a different question from `whole-body biodistribution`.
   - Without this split, a reader can silently move from `target binds in humans` to `therefore the route is ready as a stable disease or maintenance-state calibrator`, which the literature does not justify.
 - Primary evidence:
   - Villemagne et al. (2022, DOI `10.2967/jnumed.121.263254`) validated the first-in-human SMBT-1 MAO-B route.
   - Villemagne et al. (2022, DOI `10.2967/jnumed.121.263255`) studied reactive astrogliosis along the Alzheimer disease continuum.
   - Hiraoka et al. (2025) showed that SMBT-1 still requires explicit brain-side quantification choices.
-  - Mesfin et al. (2026) added the separate whole-body biodistribution / dosimetry burden in healthy humans.
+  - Mesfin et al. (2026) added the separate whole-body biodistribution burden in healthy humans.
 
 ### 2. One factual public citation mapping was wrong
 
@@ -40,14 +40,14 @@
   - The disease-context slot now cites DOI `10.2967/jnumed.121.263255`.
   - DOI `10.2967/jnumed.121.263254` is retained, but only for the first-in-human target-validation role.
 
-### 3. The public pages undernamed tracer-burden / dosimetry as its own route burden
+### 3. The public pages undernamed whole-body biodistribution / tracer burden as its own route burden
 
 - Problem:
   - The public pages already named brain-side proxy families carefully.
-  - But they did not yet make `whole-body biodistribution / dosimetry` explicit inside the astrocyte PET lane.
+  - But they did not yet make `whole-body biodistribution` explicit inside the astrocyte PET lane.
 - Why this is technically weak:
-  - Human PET routes are constrained not only by target and disease contrast, but also by scan regime, tissue distribution, excretion profile, and radiation burden.
-  - If dosimetry is left implicit, the route can look more deployment-ready than the evidence supports.
+  - Human PET routes are constrained not only by target and disease contrast, but also by scan regime, tissue distribution, and excretion profile.
+  - If the whole-body biodistribution role is left implicit, the route can look more deployment-ready than the evidence supports.
 - Primary evidence:
   - Mesfin et al. (2026) reported six healthy participants under a 5.5-hour dynamic whole-body PET protocol and identified strong hepatobiliary / intestinal burden, which is a different evidential object from brain quantification or AD-context contrast.
 
@@ -64,14 +64,14 @@
 ## Changes Executed In This Session
 
 - `faq.md`
-  - Split the old astrocyte PET row into `Brain astrocyte-related PET routes` and `Whole-body SMBT-1 biodistribution / dosimetry`.
+  - Split the old astrocyte PET row into `Brain astrocyte-related PET routes` and `Whole-body SMBT-1 biodistribution`.
   - Corrected the disease-context citation from DOI `10.2967/jnumed.121.263254` to DOI `10.2967/jnumed.121.263255`.
-  - Updated the front-door notes so `route name alone is too coarse` now explicitly includes first-in-human validation, AD-context, brain quantification, and whole-body dosimetry as separate route roles.
+  - Updated the front-door notes so `route name alone is too coarse` now explicitly includes first-in-human validation, AD-context, brain quantification, and whole-body biodistribution as separate route roles.
 - `wiki/homeostatic-plasticity-and-maintenance-state.md`
   - Updated the astrocyte-related route card so human evidence is read by `target`, `route role`, `quantity type`, `brain quantification regime`, and `whole-body tracer-burden regime`.
-  - Added a separate `Whole-body SMBT-1 biodistribution / dosimetry` calibrator-role row.
+  - Added a separate `Whole-body SMBT-1 biodistribution` calibrator-role row.
 - `verification.md`
-  - Rewrote the astrocyte route-card addendum so it now states explicitly which paper occupies the first-in-human, AD-spectrum, brain-quantification, and whole-body-dosimetry roles.
+  - Rewrote the astrocyte route-card addendum so it now states explicitly which paper occupies the first-in-human, AD-spectrum, brain-quantification, and whole-body-biodistribution roles.
 - `wbe_101.md`
   - Strengthened the front-door human observability wording so astrocyte PET is no longer read as one generic proxy row.
 - `mind_uploading_papers.md`
@@ -90,8 +90,8 @@
    - https://doi.org/10.2967/jnumed.121.263255
 3. Hiraoka K, Furumoto S, Fodero-Tavoletti MT, et al. Quantification of 18F-SMBT-1 PET in the Human Brain. *Annals of Nuclear Medicine*. 2025.
    - https://doi.org/10.1007/s12149-025-02083-y
-4. Mesfin T, Feng H, Seki C, et al. Human Whole-Body Biodistribution and Radiation Dosimetry of 18F-SMBT-1, a Monoamine Oxidase B PET Ligand. *Annals of Nuclear Medicine*. 2026.
-   - https://pubmed.ncbi.nlm.nih.gov/41498918/
+4. Mesfin B, Ishioka Y, Ichinose Y, et al. Whole-body biodistribution of [^18F]SMBT-1: a novel PET tracer for monoamine oxidase B imaging in healthy humans. *Annals of Nuclear Medicine*. 2026.
+   - https://doi.org/10.1007/s12149-025-02144-2
 5. Tyacke RJ, Myers JFM, Venkataraman A, et al. Evaluation of ^11C-BU99008, a PET Ligand for the Imidazoline2 Binding Site in Human Brain. *Journal of Nuclear Medicine*. 2018;59(10):1597-1602.
    - https://doi.org/10.2967/jnumed.118.208009
 6. Livingston NR, Vasdev N, Gao Y, et al. PET Imaging of Monoamine Oxidase B in Alcohol Use Disorder. *Molecular Psychiatry*. 2022;27:1664-1672.
