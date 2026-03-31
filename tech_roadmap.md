@@ -29,7 +29,7 @@ page_highlights:
   - "R6 treats personalization not as a pure performance trick, but as a verification problem that must separate target signal from subject fingerprint and setup shortcuts."
   - "R1 / R2 now separate focal posterior-support, sparse debiased inference, extended-source extent reconstruction, forward-model uncertainty, and validation board, so a newer inverse family is not silently treated as one generic truth upgrade."
   - "R4 now treats DCM / effective-connectivity outputs as route-card claims that must disclose model space, observed-subsystem closure / latent-confound audit, node-definition policy, sampling / transformation sensitivity, observation assumptions, validation, reliability, and abstention."
-  - "R7 now separates observability, structural identifiability, and practical identifiability, so richer proxies are not silently promoted to uniqueness."
+  - "R7 now separates observability, structural identifiability, practical identifiability, ambiguity class, and minimum-sufficiency stop rules, so richer proxies or more modalities are not silently promoted to uniqueness."
 known_points:
   - "Splitting the problem into P/M/R/I/V/D makes it easier to see which questions are foundational and which sit higher up."
   - "The dependency structure that prevents strong claims from skipping earlier layers is fairly clear."
@@ -50,7 +50,7 @@ known_points:
   - "OPM-MEG motion tolerance still depends on magnetic shielding, active nulling, calibration, and source-model disclosure."
   - "The fact that personalization helps performance is not the same as showing a population-level neural signal; subject-fingerprint and acquisition-distribution audits are still required."
   - "For ESI, source regime / target object, uncertainty object, forward-model uncertainty route, and validation board remain separate requirements; a stronger inverse family is not one universal answer type."
-  - "Richer observability and better fit do not by themselves collapse the compatible solution set; candidate-space, bridge / composition validity, and experiment-design audits remain separate."
+  - "Richer observability and better fit do not by themselves collapse the compatible solution set; ambiguity class, candidate-space, bridge / composition validity, experiment-design leverage, and minimum-sufficiency stop rules remain separate."
 unknown_points:
   - "It is still unsettled which measurement granularity will ultimately be sufficient for WBE."
   - "V5 identity questions and D-series social deployment conditions remain unresolved."
@@ -1298,6 +1298,42 @@ The remaining weak point here was that <strong>more measured variables</strong> 
 <table class="data-table">
 <thead>
 <tr>
+<th>Ambiguity class</th>
+<th>How it fools the reader</th>
+<th>What would actually raise the claim ceiling</th>
+<th>What this roadmap still refuses to count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Symmetry / reparameterization ambiguity</strong></td>
+<td>Several parameter or state transformations still produce the same declared outputs, so a good fit looks unique when it is not.</td>
+<td>Add a symmetry-breaking observable, known input / initial condition, or an explicit reformulation that removes the hidden transformation.</td>
+<td>More optimizer restarts, longer fitting, or more repeats of the same uninformative protocol.</td>
+</tr>
+<tr>
+<td><strong>Regime-restricted degeneracy</strong></td>
+<td>Different internal states or parameter sets agree inside one narrow task, state, or operating regime and only diverge outside it.</td>
+<td>Use state transitions, persistent excitation, targeted recordings, or perturbation contrasts that make the surviving alternatives separate.</td>
+<td>More passive samples from the same narrow regime when the alternatives remain co-linear.</td>
+</tr>
+<tr>
+<td><strong>Model-family / omitted-mechanism ambiguity</strong></td>
+<td>An approximate family looks well identified until a complementary condition reveals systematic residuals or missing mechanisms.</td>
+<td>Run a discrepancy stress test, compare richer / alternative model families, and require held-out falsification instead of post hoc explanation.</td>
+<td>Narrower intervals inside one misspecified family or one headline fit improvement.</td>
+</tr>
+<tr>
+<td><strong>Task-variable interaction / representation ambiguity</strong></td>
+<td>A reduced representation predicts correlations while missing the interaction structure that actually drives behavior.</td>
+<td>Preserve or perturb the task-variable interaction and compare intervention-side predictions of the competing representations.</td>
+<td>Correlation-only dimensionality reduction, generic multimodal fusion, or interpretability language without perturbation.</td>
+</tr>
+</tbody>
+</table>
+<table class="data-table">
+<thead>
+<tr>
 <th>Evidence pattern</th>
 <th>What it can improve</th>
 <th>What it still does not close</th>
@@ -1325,6 +1361,48 @@ The remaining weak point here was that <strong>more measured variables</strong> 
 </tr>
 </tbody>
 </table>
+<div class="note-box">
+<strong>2026-03-31 supplement: informative protocols must target ambiguity, stress omitted mechanisms, and declare minimum sufficiency</strong>
+<p>
+The remaining weakness after splitting observability from identifiability was that a protocol could still be described with generic words such as <strong>multimodal</strong>, <strong>naturalistic</strong>, or <strong>closed-loop</strong> without saying why that design should actually separate the survivors. The primary literature does not support that shortcut. <a href="https://doi.org/10.1109/CDC.1991.261405" target="_blank">Diop &amp; Fliess (1991)</a> made persistent trajectories explicit, and <a href="https://doi.org/10.1063/1.3528102" target="_blank">Raue et al. (2010)</a> showed that identifiability analysis can guide new experiments rather than only criticize old ones. <a href="https://doi.org/10.1016/j.mbs.2016.10.009" target="_blank">Chis et al. (2016)</a> then showed that <strong>sloppiness is not identifiability</strong> and that design should optimize explicit identifiability criteria rather than proxy uncertainty scores. <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">White et al. (2016)</a> showed that complementary experiments can expose <strong>omitted mechanisms</strong> rather than solve them. In current neuroscience, <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that a <strong>small targeted recording set</strong> can remove degeneracy in connectome-constrained networks, and <a href="https://doi.org/10.1038/s41593-025-01869-7" target="_blank">Langdon &amp; Engel (2025)</a> showed that preserving <strong>causal interactions among task variables</strong> can recover behaviorally relevant computation that correlation-only reductions miss. <a href="https://doi.org/10.1038/s41540-023-00325-1" target="_blank">Gevertz &amp; Kareva (2024)</a> then showed that identifiability analysis can derive a <strong>minimally sufficient</strong> schedule, and <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">Liu et al. (2025)</a> showed that active learning can reduce the observations needed to reach practical identifiability. Therefore, this roadmap now asks not only whether a protocol is richer, but <strong>which ambiguity it targeted</strong>, <strong>which identifiability objective chose it</strong>, <strong>whether it exposed omitted-mechanism error</strong>, and <strong>what minimum-sufficiency stop rule would have been enough</strong>.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Design-side audit field</th>
+<th>What R7 now asks for</th>
+<th>What this stops you from overreading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Named ambiguity</strong></td>
+<td>State which surviving states, parameters, controllers, or model families remain confusable after the current fit, and which one the next protocol step is trying to separate.</td>
+<td><code>We added another task or modality</code> is not read as targeted ambiguity reduction.</td>
+</tr>
+<tr>
+<td><strong>Identifiability objective</strong></td>
+<td>Name whether the next condition was chosen to optimize practical identifiability, model discrimination, posterior contraction, profile-likelihood width, or another declared criterion.</td>
+<td>A richer protocol is not read as informative merely because a generic optimization score improved.</td>
+</tr>
+<tr>
+<td><strong>Orthogonal regime / targeted recording leverage</strong></td>
+<td>Disclose the stimulus range, state transitions, perturbation timing, or targeted recording subset that should rotate the surviving candidates apart rather than merely resample one narrow regime.</td>
+<td>More samples from the same operating slice are not read as collapsed degeneracy.</td>
+</tr>
+<tr>
+<td><strong>Model-discrepancy stress</strong></td>
+<td>Report whether the new condition exposed systematic residuals, failed fits, or omitted mechanisms, and what hierarchy of richer or alternative models was checked afterwards.</td>
+<td>Tighter nominal uncertainty is not read as trustworthy when the design only forced hidden model error into view.</td>
+</tr>
+<tr>
+<td><strong>Minimum-sufficiency stop rule</strong></td>
+<td>Predefine the smallest condition / time-point / recording set required to raise the claim, the uncertainty or overlap threshold used to stop, and how much candidate overlap remained once that minimum design was reached.</td>
+<td>Open-ended data accumulation is not read as solved identifiability if the stopping logic was never declared.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Operational link:</strong> When this design-side disclosure is missing, this roadmap stops at <strong>predictive fit</strong>, <strong>localized source hypothesis</strong>, or <strong>model-conditioned mechanism</strong>. The submission-side operational version remains <a href="verification.html#experiment-design-leverage">Verification: experiment-design leverage</a>.</p>
 </div>
 </div>
 </details>
@@ -2496,7 +2574,15 @@ Below are the main documents directly related to the open questions of U0-U15. F
 <li>Vink, J. J., Ramos-Nu&ntilde;ez, A. I., Bellesi, A., et al. (2020). The brain's functional connectome is a poor predictor of the brain's causal activity flow. <a href="https://doi.org/10.1371/journal.pcbi.1007866" target="_blank">doi:10.1371/journal.pcbi.1007866</a></li>
 <li>Villaverde, A. F. (2019). Observability and Structural Identifiability of Nonlinear Biological Systems. <a href="https://doi.org/10.1155/2019/8497093" target="_blank">doi:10.1155/2019/8497093</a></li>
 <li>Villaverde, A. F., Tsiantis, N., &amp; Banga, J. R. (2019). Full observability and estimation of unknown inputs, states and parameters of nonlinear biological models. <a href="https://doi.org/10.1098/rsif.2019.0043" target="_blank">doi:10.1098/rsif.2019.0043</a></li>
+<li>Massonis, G., &amp; Villaverde, A. F. (2020). Finding and breaking Lie symmetries: implications for structural identifiability and observability in biological modelling. <em>Symmetry</em>, 12(3), 469. <a href="https://doi.org/10.3390/sym12030469" target="_blank">doi:10.3390/sym12030469</a></li>
+<li>Diop, S., &amp; Fliess, M. (1991). Nonlinear observability, identifiability, and persistent trajectories. <em>Proceedings of the 30th IEEE Conference on Decision and Control</em>, 714-719. <a href="https://doi.org/10.1109/CDC.1991.261405" target="_blank">doi:10.1109/CDC.1991.261405</a></li>
+<li>Raue, A., Becker, V., Klingmüller, U., &amp; Timmer, J. (2010). Identifiability and observability analysis for experimental design in nonlinear dynamical models. <em>Chaos</em>, 20(4), 045105. <a href="https://doi.org/10.1063/1.3528102" target="_blank">doi:10.1063/1.3528102</a></li>
+<li>Chis, O.-T., Villaverde, A. F., Banga, J. R., &amp; Balsa-Canto, E. (2016). On the relationship between sloppiness and identifiability. <em>Mathematical Biosciences</em>, 282, 147-161. <a href="https://doi.org/10.1016/j.mbs.2016.10.009" target="_blank">doi:10.1016/j.mbs.2016.10.009</a></li>
+<li>White, A., Tolman, M., Thames, H. D., Withers, H. R., Mason, K. A., &amp; Transtrum, M. K. (2016). The limitations of model-based experimental design and parameter estimation in sloppy systems. <em>PLOS Computational Biology</em>, 12(12), e1005227. <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">doi:10.1371/journal.pcbi.1005227</a></li>
+<li>Gevertz, J. L., &amp; Kareva, I. (2024). Minimally sufficient experimental design using identifiability analysis. <em>npj Systems Biology and Applications</em>, 10, 2. <a href="https://doi.org/10.1038/s41540-023-00325-1" target="_blank">doi:10.1038/s41540-023-00325-1</a></li>
+<li>Liu, X., Wanika, L., Chappell, M. J., &amp; Branke, J. (2025). Efficient data collection for establishing practical identifiability via active learning. <em>Computational and Structural Biotechnology Journal</em>, 27, 4992-5006. <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">doi:10.1016/j.csbj.2025.10.058</a></li>
 <li>Rasero, J., Betzel, R., Sentis, A. I., Kraynak, T. E., Gianaros, P. J., &amp; Verstynen, T. (2024). Similarity in evoked responses does not imply similarity in macroscopic network states. <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">doi:10.1162/netn_a_00354</a></li>
+<li>Langdon, C., &amp; Engel, T. A. (2025). Latent circuit inference from heterogeneous neural responses during cognitive tasks. <em>Nature Neuroscience</em>, 28, 665-675. <a href="https://doi.org/10.1038/s41593-025-01869-7" target="_blank">doi:10.1038/s41593-025-01869-7</a></li>
 <li>Laukkonen, R., Friston, K., &amp; Chandaria, S. (2025). A beautiful loop.</li>
 <li>Correa, J. D., Lee, S., &amp; Bareinboim, E. (2021). Nested counterfactual identification.</li>
 </ol>
