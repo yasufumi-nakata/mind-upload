@@ -48,6 +48,15 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `B`: 25件
 - `C`: 18件
 
+## Latest post-pull revalidation after 20:07 JST on March 31, 2026
+
+This run still does not change the current public batch or the `A/B/C` breakdown. The latest pulled deltas were reread before freezing this note: `mind-upload@c912fc5ebd4a`, `EEG-DATA@9bdf3b16bfb4`, and `auto-research-funds@4f071fcd98fd` still leave the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
+
+- The newest `EEG-DATA` additions still widen the support map rather than the current route: the current README summary now reports `merged_unique=30,861`, `high_confidence=28,824`, and `access_counts_high.immediate=24,843`, but those gains still do not displace the current six-row anchor family.
+- Recounting the `### Ux-y` headings in the RQ-by-RQ dossiers still returns `60`, the grant/dataset playbook still keeps `60` unique `Ux-y` rows, and the `A/B/C` breakdown still stays `17 / 25 / 18`.
+- Browser-level live checks with a browser user agent still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`.
+- The practical funding reading still stays narrow: `Kura Fund`, `Nakatani Foundation graduate scholarship`, and `Kashinome Scholarship` remain the active bridge for the current six; `Secom General Research Grant` is already closed for the current cycle (`March 31, 2026 at 12:00 JST`); `Nakatani Foundation research grant` stays next-cycle watch; and no new Todoist item was created in this session.
+
 ## Latest post-pull revalidation after 16:05 JST on March 31, 2026
 
 This run still does not change the current public batch or the `A/B/C` breakdown. The latest pulled deltas were reread before freezing this note: `mind-upload@a11240d38415` tightened the connectome / timing-state route cards, `EEG-DATA@f318ac8ce42d` added an `OSF eucqf` deep-dive refresh, and `auto-research-funds@c95cc61fdfc9` added new `Takeda / Nohken` funding-card material. Those changes widen the supporting map, but they still do not replace the current `D10 / D03 / D02 / D01` family or the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1`.

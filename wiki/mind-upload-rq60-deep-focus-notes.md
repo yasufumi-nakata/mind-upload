@@ -41,6 +41,14 @@ recommended_pages:
 - `B`: EEG main analysis is possible. Requires additional external modality/design.
 - `C`: Mainly system/legal/theoretical integration. EEG is an audit log or supporting evidence.
 
+## Latest post-pull hold (2026-03-31 20:07 JST)
+
+- A latest pull reread after `mind-upload@c912fc5ebd4a`, `EEG-DATA@9bdf3b16bfb4`, and `auto-research-funds@4f071fcd98fd` still leaves the current public six-question batch, the solve-first order, and the `A/B/C` breakdown unchanged.
+- The newest `EEG-DATA` additions still widen the support map rather than the current practical batch: the current README summary now reports `merged_unique=30,861`, `high_confidence=28,824`, and `access_counts_high.immediate=24,843`, but those gains still do not replace the current `D10 / D03 / D02 / D01` family.
+- Recounting the `### Ux-y` headings in the RQ-by-RQ dossiers still returns `60`, the grant/dataset playbook still keeps `60` unique `Ux-y` rows, and the `A/B/C` split still stays `17 / 25 / 18`.
+- Browser-level live checks with a browser user agent still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`.
+- The practical funding reading still stays narrow: `Kura Fund`, `Nakatani Foundation graduate scholarship`, and `Kashinome Scholarship` remain the active bridge for the current six; `Secom General Research Grant` is already closed for the current cycle (`March 31, 2026 at 12:00 JST`); `Nakatani Foundation research grant` stays next-cycle watch; and no new Todoist item was created in this session.
+
 ## Latest post-pull hold (2026-03-31 16:05 JST)
 
 - A latest pull reread after `mind-upload@a11240d38415`, `EEG-DATA@f318ac8ce42d`, and `auto-research-funds@c95cc61fdfc9` still leaves the current public six-question batch and the solve-first order unchanged.
