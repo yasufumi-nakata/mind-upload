@@ -6,7 +6,7 @@ description: We will explain EEG, QC, BIDS, inverse problems, ESI, DCM, SCM, etc
 article_type: Wiki
 subtitle: Don't memorize words by dots, connect them by flow.
 author: Mind Uploading Research Project
-last_updated: '2026-03-29'
+last_updated: '2026-04-01'
 note: Learning guide
 audience: People who see a mix of measurement words and model words, and people who
   want to understand a glossary in a flow.
@@ -27,6 +27,8 @@ page_highlights:
   or conductivity burden, solver-family uncertainty, and validation class, so ``better
   ESI'' is not read as one progress bar.
 - ESI, DCM, and SCM do not fail in the same way; each one needs a different stop rule.
+- DCM is not one progress bar either; candidate-model comparison, scalable search,
+  processing sensitivity, and reliability windows are different audit axes.
 - More modalities, same-brain linkage, and connectome constraints do not bypass route
   cards; fusion, bridge, and identifiability remain separate audits.
 - A stronger design is not just ``more data''; the route now also asks which identifiability
@@ -43,6 +45,9 @@ known_points:
 - For inverse problems, field visibility, conductivity sensitivity, solver uncertainty,
   and validation class are different questions; progress in one does not erase the
   others.
+- Whole-brain or faster DCM improves tractability, but does not erase candidate-model
+  dependence, processing sensitivity, or reliability limits set by priors, scan duration,
+  and sample size.
 - More data is not automatically a stronger design; identifiability objective, omitted-mechanism
   stress, and minimum-sufficiency stop rules answer different questions.
 - Same-session multimodal and same-brain language do not by themselves solve fusion
@@ -53,6 +58,8 @@ unknown_points:
 - Which modeling combinations will ultimately be most effective is still being studied.
 - The extent to which causality can be identified using observational data alone varies
   greatly depending on the intervention design.
+- Which DCM route-card bundle should become the site's default benchmark across task
+  fMRI, resting-state fMRI, and MEG remains unsettled.
 - Which inverse-problem route or validation ladder generalizes beyond focal or clinical
   benchmark regimes remains unresolved.
 wiki_links:
@@ -109,6 +116,13 @@ One more beginner overread still remained: <strong>inverse-problem progress</str
 <strong>2026-03-28 correction to the beginner route</strong>
 <p>
 One more technical overread still remained: after naming an ambiguity, readers could still think the next step is simply to add <strong>more data</strong> or <strong>one more modality</strong>. The primary literature does not support that shortcut. <a href="https://doi.org/10.1049/iet-syb.2010.0061" target="_blank">Raue et al. (2011)</a> showed that non-identifiability is resolved by <strong>experimental design under suitable conditions</strong> or by <strong>model reduction matched to the information content of the data</strong>. <a href="https://doi.org/10.1016/j.mbs.2016.10.009" target="_blank">Chis et al. (2016)</a> then showed that <strong>sloppiness is not identifiability</strong>, so design should optimize identifiability criteria rather than only compress one proxy uncertainty score. <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">White et al. (2016)</a> showed that apparently complementary experiments can instead make <strong>omitted mechanisms</strong> relevant and increase model discrepancy. <a href="https://doi.org/10.1038/s41540-023-00325-1" target="_blank">Gevertz &amp; Kareva (2024)</a> and <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">Liu et al. (2025)</a> then showed that identifiability analysis and active learning can derive a <strong>minimally sufficient</strong> schedule rather than an open-ended collection plan. In neuroscience, <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that a <strong>small targeted recording set</strong> can remove degeneracy in connectome-constrained networks, and <a href="https://doi.org/10.1038/s41593-025-01869-7" target="_blank">Langdon &amp; Engel (2025)</a> showed that preserving <strong>causal interactions among task variables</strong> can recover behaviorally relevant computation that correlation-only reductions miss. Therefore, on this site, the safer beginner rule is not "collect more" but "name the surviving ambiguity, state which identifiability objective chose the next condition, test whether the new condition exposed omitted-mechanism error, and say what minimum-sufficiency stop rule would end collection." The longer rule lives in <a href="observation-to-estimation.html#identifiability-card">Wiki: From observation to estimation</a> and <a href="../verification.html#experiment-design-leverage">Verification: experiment-design leverage</a>.
+</p>
+</div>
+
+<div class="note-box">
+<strong>2026-04-01 correction to the beginner route</strong>
+<p>
+The remaining beginner weakness was subtler: this page already stopped readers from treating <strong>DCM</strong> as generic causal wording, but it still left room to read recent DCM papers as if they formed one monotonic ladder of causal strength. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">Penny et al. (2004)</a> and <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">Rosa et al. (2012)</a> strengthen <strong>candidate-model comparison and family search</strong>. <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">Frässle et al. (2021)</a> and <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">Wu et al. (2024)</a> strengthen <strong>tractability and scaling</strong>. But <a href="https://doi.org/10.1002/hbm.23061" target="_blank">Fr&auml;ssle et al. (2016)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2019.116435" target="_blank">Almgren et al. (2020)</a>, <a href="https://doi.org/10.1002/hbm.26751" target="_blank">Zhang et al. (2024)</a>, and <a href="https://doi.org/10.1016/j.neuroimage.2024.120604" target="_blank">Ma et al. (2024)</a> show that <strong>reliability, priors, processing policy, scan duration, and sample size</strong> still materially move the result. Therefore, on this site, DCM advances are read by <strong>axis</strong>, not as one progress bar.
 </p>
 </div>
 
@@ -297,6 +311,43 @@ Michel &amp; Brunet (2019) summarize ESI as a multi-step pipeline rather than a 
 Penny et al. (2004) fixed that DCM inference is relative to the compared model set, Rosa et al. (2012) showed how post-hoc model-space search can be expanded, and Frässle et al. (2021) plus Wu et al. (2024) pushed whole-brain and faster estimation. Those are advances in <strong>tractability</strong>, not automatic solutions to identifiability. On this site, DCM therefore remains a <strong>model-conditioned causal hypothesis</strong> unless candidate space, observed-subsystem closure / latent-confound audit, node-definition policy, sampling / transformation sensitivity, recovery, reliability, and validation are disclosed.
 </p>
 </div>
+<table class="data-table">
+<thead>
+<tr>
+<th>DCM axis</th>
+<th>What it actually strengthens</th>
+<th>What it still does not close</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Candidate-model comparison / family search</strong></td>
+<td><a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">Penny et al. (2004)</a>; <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">Rosa et al. (2012)</a>. Stronger comparison among explicitly declared competitors.</td>
+<td>It does not prove that omitted nodes, edges, priors, or model families were absent or irrelevant.</td>
+</tr>
+<tr>
+<td><strong>Scaling / tractability</strong></td>
+<td><a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">Frässle et al. (2021)</a>; <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">Wu et al. (2024)</a>. Larger or faster search within a declared DCM family.</td>
+<td>It does not turn the graph into preprocessing-invariant, node-invariant, or competitor-complete causal truth.</td>
+</tr>
+<tr>
+<td><strong>Processing / first-level design robustness</strong></td>
+<td><a href="https://doi.org/10.1016/j.neuroimage.2019.116435" target="_blank">Almgren et al. (2020)</a>; <a href="https://doi.org/10.1002/hbm.26751" target="_blank">Zhang et al. (2024)</a>. Stronger disclosure of how GSR, GLM design, contrast definition, and thresholding change the inferred edges and parameter certainty.</td>
+<td>It does not let one reasonable pipeline stand in for pipeline-robust effective connectivity.</td>
+</tr>
+<tr>
+<td><strong>Reliability window</strong></td>
+<td><a href="https://doi.org/10.1002/hbm.23061" target="_blank">Fr&auml;ssle et al. (2016)</a>; <a href="https://doi.org/10.1016/j.neuroimage.2024.120604" target="_blank">Ma et al. (2024)</a>. A bounded statement about how stable the result remains under named priors, session structure, scan duration, and sample size.</td>
+<td>It does not show that the same graph will survive different sites, longer horizons, weaker scans, or changed processing policies.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Where the full rule lives</strong>
+<p>
+This page is the beginner map. If you need the full DCM / effective-connectivity submission rule, including latent-confound audit, node-definition policy, and abstention boundary, continue to <a href="observation-to-estimation.html#effective-connectivity-route-card">Wiki: From observation to estimation</a>.
+</p>
+</div>
 </section>
 
 <section class="section" id="verification">
@@ -369,6 +420,9 @@ On this site, verification is no longer only a place to list <strong>what was me
 <li>Frässle, S., Paulus, F. M., Krach, S., &amp; Jansen, A. (2016). Test-retest reliability of effective connectivity in the face perception network. <em>Human Brain Mapping</em>, 37(2), 730-744. <a href="https://doi.org/10.1002/hbm.23061" target="_blank">doi:10.1002/hbm.23061</a></li>
 <li>Frässle, S., Manjaly, Z. M., Do, C. T., Kasper, L., Pruessmann, K. P., &amp; Stephan, K. E. (2021). Whole-brain estimates of directed connectivity for human connectomics. <em>NeuroImage</em>, 225, 117491. <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">doi:10.1016/j.neuroimage.2020.117491</a></li>
 <li>Wu, H., Hu, X., &amp; Zeng, Y. (2024). A fast dynamic causal modeling regression method for fMRI. <em>NeuroImage</em>, 304, 120954. <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">doi:10.1016/j.neuroimage.2024.120954</a></li>
+<li>Almgren, H., Van de Steen, F., Razi, A., Friston, K., &amp; Marinazzo, D. (2020). The effect of global signal regression on DCM estimates of noise and effective connectivity from resting state fMRI. <em>NeuroImage</em>, 208, 116435. <a href="https://doi.org/10.1016/j.neuroimage.2019.116435" target="_blank">doi:10.1016/j.neuroimage.2019.116435</a></li>
+<li>Zhang, S., Jung, K., Langner, R., Florin, E., Eickhoff, S. B., &amp; Popovych, O. V. (2024). Impact of data processing varieties on DCM estimates of effective connectivity from task-fMRI. <em>Human Brain Mapping</em>, 45(8), e26751. <a href="https://doi.org/10.1002/hbm.26751" target="_blank">doi:10.1002/hbm.26751</a></li>
+<li>Ma, L., Braun, S. E., Steinberg, J. L., Bjork, J. M., Martin, C. E., Keen II, L. D., &amp; Moeller, F. G. (2024). Effect of scanning duration and sample size on reliability in resting state fMRI dynamic causal modeling analysis. <em>NeuroImage</em>, 292, 120604. <a href="https://doi.org/10.1016/j.neuroimage.2024.120604" target="_blank">doi:10.1016/j.neuroimage.2024.120604</a></li>
 <li>Raue, A., Kreutz, C., Maiwald, T., Klingm&uuml;ller, U., &amp; Timmer, J. (2011). Addressing parameter identifiability by model-based experimentation. <em>IET Systems Biology</em>, 5(2), 120-130. <a href="https://doi.org/10.1049/iet-syb.2010.0061" target="_blank">doi:10.1049/iet-syb.2010.0061</a></li>
 <li>Chis, O.-T., Villaverde, A. F., Banga, J. R., &amp; Balsa-Canto, E. (2016). On the relationship between sloppiness and identifiability. <em>Mathematical Biosciences</em>, 282, 147-161. <a href="https://doi.org/10.1016/j.mbs.2016.10.009" target="_blank">doi:10.1016/j.mbs.2016.10.009</a></li>
 <li>White, A., Tolman, M., Thames, H. D., Withers, H. R., Mason, K. A., &amp; Transtrum, M. K. (2016). The Limitations of Model-Based Experimental Design and Parameter Estimation in Sloppy Systems. <em>PLoS Computational Biology</em>, 12(12), e1005227. <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">doi:10.1371/journal.pcbi.1005227</a></li>
