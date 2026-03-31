@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-31 / Role: RQ-by-RQ Deep Dossier
+- Updated: 2026-04-01 / Role: RQ-by-RQ Deep Dossier
 
 ---
 
@@ -13,8 +13,19 @@
 > 本ページは、`60RQ` を1件ずつ深掘りするための固定ドシエ集です。  
 > 汎用横断サマリは最小化し、各RQで `検証命題` `境界` `応募テーマ` `主データ` `KPI` `停止条件` を先に固定します。
 
-- 更新日: 2026-03-31
+- 更新日: 2026-04-01
 - 出典: `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`（60行を再構成）
+
+## 2026-04-01 03:09 JST latest post-pull route-hold note
+
+This run still does not change the current public six-question batch. The latest pulled deltas were reread before writing this note: `mind-upload@31835fcd8daa`, `EEG-DATA@12eef8ca4ef0`, and `auto-research-funds@040e5b8798fd` still leave the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
+
+- `mind-upload` split temporal routes for invasive language BCIs outside the current public six, `EEG-DATA` added a semantic-text-relevance deep dive that widens language-related backup coverage without replacing the current route family, and `auto-research-funds` refreshed `Obayashi / Yokogaku` cards without changing the practical shortlist.
+- Recounting the `### Ux-y` headings on this page still returns `60`, so this run keeps the one-row-at-a-time dossier structure intact.
+- The public six still stay `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
+- The solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
+- Browser-level live checks at `2026-04-01 03:09 JST` still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, so the current public-facing route stays aligned.
+- The funding bridge still stays narrow: `Kura Fund`, `Nakatani Foundation graduate scholarship`, and `Kashinome Scholarship` remain the active near-term lanes, `Nakatani Foundation research grant`, `Secom General Research Grant`, and `Brain Science Foundation research grant` remain outside the current-cycle lane, and a fresh Todoist `api/v1/sync(items)` audit (`items=203`) still did not require a new task.
 
 ## 2026-03-31 21:09 JST latest post-pull route-hold note
 

@@ -54,6 +54,14 @@ This page keeps the current public six-question batch readable at the level of `
 
 It does **not** announce solved claims. It only states what the current public route is narrow enough to support after a post-pull review of `mind-upload`, `EEG-DATA`, `auto-research-funds`, the live public page, the current official funding windows, and a read-only Todoist recheck.
 
+## What still stays fixed after the 03:09 JST actual-pull reread on April 1, 2026
+
+- A latest actual-pull recheck at `2026-04-01 03:09 JST` after `mind-upload@31835fcd8daa`, `EEG-DATA@12eef8ca4ef0`, and `auto-research-funds@040e5b8798fd` still leaves the public batch and the solve-first order unchanged.
+- The newest pulled deltas still widen route support rather than the current claim surface: `mind-upload` split temporal routes for invasive language BCIs outside the current public-six packet, `EEG-DATA` added a semantic-text-relevance deep dive that widens language-related backup coverage without displacing `D10 / D03 / D02 / D01`, and `auto-research-funds` refreshed `Obayashi / Yokogaku` cards without changing the practical current shortlist.
+- Browser-level live checks at `2026-04-01 03:09 JST` still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, and the live `issue.html` paragraph still names the same six in the same order.
+- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, while `Nakatani Foundation research grant` and `Secom General Research Grant` remain closed/watch outside the current-cycle lane.
+- A fresh read-only Todoist `api/v1/sync(items)` full-item audit still showed enough route coverage (`items=203`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
+
 ## What still stays fixed after the 01:06 JST live-source recheck on April 1, 2026
 
 - A second no-op actual-pull recheck at `2026-04-01 01:06 JST` after nested `mind-upload@8da02e2e48e0`, `EEG-DATA@e6013384fa01`, and `auto-research-funds@c6a383f07a7b` still leaves the public batch and the solve-first order unchanged.
