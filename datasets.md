@@ -14,6 +14,7 @@ accuracy_note: "The datasets listed here are entry candidates. They are listed f
 page_highlights:
   - "We look at the shared infrastructure first, then the starter datasets."
   - "Starter data is a practice board for L0-L1, not the ground truth of EEG source imaging."
+  - "The page now also fixes a component-addition / ablation ladder for maintenance-state routes, so astrocyte, neurovascular / BBB, and clearance augmentations are compared against a named neuron-first baseline instead of being piled into one multimodal boost."
   - "Even inside direct-validation data, stimulation ground truth, simultaneous invasive recording, and postsurgical outcome are different evidence classes."
   - "A fair inverse-problem benchmark also has to separate focal-centre versus source-extent targets, inverse family, uncertainty object, montage / coverage policy, and geometry / conductivity sensitivity rather than naming only a winning method."
   - "High density is not the only meaningful route: targeted-density and DeepSIF-like low-density ESI can work in bounded regimes, but the gain is still solver-, geometry-, and source-regime-conditioned."
@@ -32,6 +33,7 @@ page_highlights:
 known_points:
   - "Public EEG data is useful for L0 recall analysis and L1 baseline practice."
   - "When selecting data for the first time, you will move forward if you prioritize ease of retesting over difficulty."
+  - "Starter EEG datasets are still neuron-first baselines; maintenance-state claims need paired support-state data or aligned proxy logs, one-family-at-a-time augmentation, and strongest-single-row versus bundle comparison."
   - "Cue-locked events, expert interval annotations, sleep hypnograms, and physician report-derived labels have different meanings even though they are the same 'public EEG data'."
   - "Even if the accuracy is the same, the strength of the argument that can be read will change depending on which generalization condition the score was obtained under."
   - "The same benchmark name can still hide different predicted objects, independent units, grouped hold-out units, adaptation regimes, and inference budgets."
@@ -53,6 +55,7 @@ unknown_points:
   - "We have not decided yet which public data will be the default route for the annotation fidelity benchmark."
   - "We have not determined yet which public benchmark board should become the default for comparing focal-centre and source-extent inverse methods under the same montage / geometry controls and uncertainty sweep."
   - "We still do not have a default public EEG benchmark that logs state annotation, fixed decoder interval, recalibration burden, and transfer ceiling under one shared temporal-validity schema."
+  - "We still do not have a default public dataset bundle that jointly fixes a neuron-first baseline, family-split support-state augmentation, and strongest-single-row versus bundle comparison under one shared missingness and common-driver audit."
 wiki_links:
   - label: "Wiki: Basics of EEG"
     url: "/wiki/eeg-basics.html"
@@ -222,6 +225,68 @@ BIDS is a standard, OpenNeuro and PhysioNet are storage areas, Validator is a fo
 <strong>Plan for future expansion</strong>
 <p>
 EEG-based starter datasets are enough to begin, but later you may want to add spatial or structural information. If you want to map out what can be added to EEG first, please see <a href="wiki/multimodal-integration-basics.html">Wiki: Multimodal integration basics</a>.
+</p>
+</div>
+
+<div class="note-box">
+<strong>If you want to test whether adding glial or clearance variables really changes the result</strong>
+<p>
+This page had one practical weakness: it explained how to build a reproducible neuron-first EEG baseline, but it still lacked a public rule for testing whether adding <strong>maintenance-state / support-state</strong> variables changes prediction, stability, or explanation. The current primary literature does not support one compressed <code>support-variable</code> bucket. <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> sharpen different astrocyte-dependent memory routes; <a href="https://doi.org/10.1038/s41467-025-61312-0" target="_blank">Mai-Morente et al. (2025)</a> sharpens a pericyte / capillary-support route; <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Kim et al. (2025)</a> sharpens a meningeal-lymphatics / microglia route for synaptic physiology; <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> sharpen bounded human clearance-side observables; and <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> raises tracer-specific BBB transport quantification while explicitly leaving human ground truth and test-retest for future work. Therefore, this page now fixes a <strong>component-addition / ablation ladder</strong> instead of letting readers pile these routes into one multimodal boost.
+</p>
+</div>
+
+<section class="section" id="maintenance-component-ablation">
+<h2 class="section-title">A practical component-addition / ablation ladder for maintenance-state routes</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>Family added on top of the neuron-first baseline</th>
+<th>Minimum paired data requirement</th>
+<th>What you may say if the gain survives</th>
+<th>What still must stop here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Astrocyte / glial route</strong></td>
+<td>Same-subject neural and behavioral target, plus a named astrocyte observable or perturbation aligned to the same task or memory window.</td>
+<td>A named astrocyte family improved prediction, recall, or stabilization in that declared window.</td>
+<td>That the responsible whole-brain astrocyte controller was identified, or that one glial effect generalizes across all timescales and tasks.</td>
+</tr>
+<tr>
+<td><strong>Neurovascular / BBB / pericyte support route</strong></td>
+<td>Same-subject neural and behavioral target, plus a named capillary, BBB-exchange, or BBB-transport observable with shared arousal / vascular-driver logging.</td>
+<td>A declared vascular-support family reduced one error term or improved one prediction slice under the named physiological regime.</td>
+<td>That a generic BBB state was measured, or that the added row directly read out the neuronal variable of interest.</td>
+</tr>
+<tr>
+<td><strong>Clearance / immune / lymphatic route</strong></td>
+<td>Same-subject neural or biomarker target, plus a named CSF-mobility, tracer-transport, or sleep-linked efflux route with sleep / time-of-day handling fixed.</td>
+<td>A declared transport-side or immune-side route explained incremental variance or changed a bounded physiological readout.</td>
+<td>That local microglial control, route-free whole-brain clearance truth, or one universal maintenance controller was identified.</td>
+</tr>
+<tr>
+<td><strong>Bundle comparison rule</strong></td>
+<td>Compare the neuron-only baseline, each single added family, and the full bundle under the same subjects, split rule, missingness policy, and common-driver audit.</td>
+<td>The bundle improved the declared task under a named availability and regime constraint, beyond the strongest single added row.</td>
+<td>That the full bundle proves the minimum required biological configuration or closes U3 by itself.</td>
+</tr>
+</tbody>
+</table>
+
+<ol>
+<li>Freeze the <strong>neuron-first baseline</strong>, target object, split unit, and metric bundle before adding any maintenance-state row.</li>
+<li>Add <strong>one family at a time</strong> under the same subjects, same sessions, same missingness rule, and same evaluation family.</li>
+<li>Name the <strong>direct observable</strong>, <strong>time window</strong>, <strong>spatial unit</strong>, and <strong>route class</strong> for every added family, because local causal perturbation and bounded human proxy do not carry the same claim.</li>
+<li>Report the <strong>strongest single added row</strong>, the <strong>full bundle</strong>, and their disagreement / missing-modality behavior under the same split.</li>
+<li>Stop the claim at <strong>incremental predictive, stability, or physiological gain</strong> unless the result also survives common-driver controls, out-of-regime checks, and a named abstention boundary.</li>
+</ol>
+</section>
+
+<div class="note-box">
+<strong>Starter EEG datasets are still only the baseline arm of this ladder</strong>
+<p>
+EEG Motor Movement/Imagery, CHB-MIT, Sleep-EDF, and TUH help you fix the neuron-first baseline, split unit, QC discipline, and leakage checks. By themselves they do not close astrocyte-state, pericyte / BBB support, clearance transport, or other maintenance-state families. Any public maintenance-state claim on this site therefore needs paired support-state data, aligned proxy logs, or a named perturbation route, and it must be compared against the strongest single added family rather than only against the all-in bundle.
 </p>
 </div>
 
@@ -1070,6 +1135,14 @@ The shortest route to that end is to approach BIDS/EEG-BIDS.
 <li><a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025), Block-Champagne for extended E/MEG source imaging</a></li>
 <li><a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk et al. (2026), Potential of EEG and EEG/MEG skull conductivity estimation to improve source analysis in presurgical evaluation of epilepsy</a></li>
 <li><a href="https://doi.org/10.1016/j.compbiomed.2026.111449" target="_blank">Jahromi et al. (2026), 3D printed pediatric head phantom for assessing deep epileptic sources localization</a></li>
+<li><a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025), Learning-associated astrocyte ensembles regulate memory recall</a></li>
+<li><a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025), The astrocytic ensemble acts as a multiday trace to stabilize memory</a></li>
+<li><a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026), Astrocytes enable amygdala neural representations supporting memory</a></li>
+<li><a href="https://doi.org/10.1038/s41467-025-61312-0" target="_blank">Mai-Morente et al. (2025), Pericyte pannexin1 controls cerebral capillary diameter and supports memory function</a></li>
+<li><a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Kim et al. (2025), Meningeal lymphatics-microglia axis regulates synaptic physiology</a></li>
+<li><a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025), Region-specific drivers of CSF mobility measured with MRI in humans</a></li>
+<li><a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025), Quantitative PET imaging and modeling of molecular blood-brain barrier permeability</a></li>
+<li><a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026), The glymphatic system clears amyloid beta and tau from brain to plasma in humans</a></li>
 </ul>
 </section>
 
