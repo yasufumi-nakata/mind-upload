@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Wiki: Human Proxy Composition and Route Maturity"
-description: "Explains why recent human PET, MRSI, BBB, astrocyte, myelin, and clearance advances do not automatically compose into same-subject state-complete readout, including why family-internal rows such as SV2A quantification, atlas, disease / risk contrast, task association, activation-null, and intervention-response routes must stay separate inside a proxy bundle."
+description: "Explains why recent human PET, MRSI, BBB, astrocyte, myelin, and clearance advances do not automatically compose into same-subject state-complete readout, including why family-internal rows such as SV2A quantification / atlas / risk-contrast routes and myelin MWF / relaxometry-MTsat / bilayer / qT1-remyelination routes must stay separate inside a proxy bundle."
 article_type: Wiki
 subtitle: "Proxy-rich is not the same as same-subject state closure"
 author: Mind Uploading Research Project
@@ -17,7 +17,7 @@ page_highlights:
   - "Cohort and physiological regime are part of the evidence: adolescent developmental cohorts, healthy younger adults, healthy older adults, pathology-specific remyelination studies, and AD-continuum reactive-astrogliosis scans do not define one shared human baseline."
   - "Model burden is part of the object: tracer kinetics, 31P spectral quantification, 31P MT exchange modeling, 31P NAD fitting, deuterium absolute-quantification pipelines, deuterium kinetic models, ASL fitting routes, multicompartment models, partial-volume correction, and synchronization choices all change what the measurement means."
   - "A bundle can be well-typed and still fail operationally if one row is unstable, method-family-specific, centre-bound, available only in a narrow complete-case subset, or present mainly in a severity- or site-skewed subset."
-  - "A named modality family can still contain several different bundle rows: within SV2A PET, quantification route, healthy atlas, disease / risk contrast, task / cognition association, activation-null, and intervention-response papers do not justify the same bundle role."
+  - "A named modality family can still contain several different bundle rows: within SV2A PET, quantification route, healthy atlas, disease / risk contrast, task / cognition association, activation-null, and intervention-response papers do not justify the same bundle role, and within human myelin MRI, MWF-versus-calibrated-T1w/T2w, relaxometry / MTsat comparison, bilayer-sensitive mapping, and qT1 remyelination-sensitive pathology routes do not justify the same bundle role either."
   - "Promotion now runs through three gates: robustness, effective-window / regime-aware common-driver and quantity-bridge separation, and incremental value beyond the strongest single row."
   - "A bundle now also has to disclose where modalities disagree and whether discordant cases were abstained, adjudicated, or silently absorbed into one summary score."
   - "Local causal relevance and living-human observability are different ladders: rodent astrocyte-controller papers plus human MAO-B / I2BS / CSF / efflux routes do not by themselves identify the responsible human controller."
@@ -33,7 +33,7 @@ known_points:
   - "A local rodent causal result plus a living-human proxy result still does not measure the same controller unless the bridge assumption is named explicitly."
   - "Even when quantity type and model burden are logged, cross-row composition still requires age band, health/pathology regime, and transfer rationale."
   - "Even when same-subject relation is logged, composition still requires explicit effective time-window / state-axis disclosure and physiological / perturbation regime compatibility."
-  - "Even when a family label such as `SV2A PET` is logged, composition still requires the family-internal comparison type to be named before the bundle role is interpreted."
+  - "Even when a family label such as `SV2A PET` or `myelin MRI` is logged, composition still requires the family-internal comparison type to be named before the bundle role is interpreted."
   - "Even when proxy class, maturity, and calibrator role are logged, composition still needs route-local repeatability, method-family non-equivalence, cross-centre transfer, complete-case disclosure, and overlap / missingness disclosure."
   - "Overall bundle gain can coexist with higher pairwise disagreement in clinically difficult subgroups, so discordance topology and its resolution policy have to be disclosed rather than left implicit."
   - "Simultaneous multimodal acquisition can reveal both common and divergent structure across modalities."
@@ -256,11 +256,32 @@ One remaining shortcut is to treat any reproducibility statement as if it solved
 <td><strong>Specialized model-conditioned deuterium kinetic-rate route</strong>, not branch-local mitochondrial or ATP nano-organization ground truth.</td>
 </tr>
 <tr>
-<td><strong>Quantity-defined myelin MRI family</strong><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5342928/" target="_blank">Arshad et al. (2017)</a>; <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">Hagiwara et al. (2018)</a>; <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>; <a href="https://doi.org/10.1111/bpa.70010" target="_blank">Galbusera et al. (2025)</a></td>
-<td>Depending on route, myelin-water fraction, MT-family macromolecular contrast, bilayer-sensitive mapping, or qT1 remyelination-sensitive contrast.</td>
-<td>Cross-metric healthy-adult comparisons, 1.4 mm bilayer maps in two healthy volunteers, and postmortem MS-cortex remyelination imaging in six whole brains.</td>
-<td>Signal-component separation, calibration route, hardware burden, pathology regime, and route-specific validity ceiling.</td>
-<td><strong>Bounded, quantity-defined macro myelin family</strong>, not per-axon timing support, node geometry, or one interchangeable myelin meter.</td>
+<td><strong>Human myelin-water / calibrated T1w/T2w comparison route</strong><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5342928/" target="_blank">Arshad et al. (2017)</a></td>
+<td>ROI-level myelin-water fraction versus calibrated T1w/T2w ratio under repeat-scan reliability and concurrent-validity testing.</td>
+<td>Healthy-adult white-matter ROI comparisons with back-to-back and repositioned scans; 20 adults for multi-echo T2 and 17 adults for calibrated T1w/T2w after exclusions.</td>
+<td>Multi-echo T2 acquisition, image calibration, white-matter ROI sampling, and repeat-scan design.</td>
+<td><strong>Route-local comparison of MWF versus calibrated T1w/T2w</strong>, not a generic myelin truth and not an interchangeable bundle row for all human myelin claims.</td>
+</tr>
+<tr>
+<td><strong>Human relaxometry / MTsat myelin-comparison route</strong><br><a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">Hagiwara et al. (2018)</a></td>
+<td>SyMRI-derived relaxometry myelin maps, MT<sub>sat</sub> macromolecular contrast, and T1w/T2w ratio compared within the same healthy-adult brains.</td>
+<td>20 healthy adults with whole-brain white- and gray-matter comparison rather than remyelination or bilayer-specific imaging.</td>
+<td>Simultaneous relaxometry, MT<sub>sat</sub> acquisition, map calibration, and cross-method ROI analysis.</td>
+<td><strong>Cross-method white-matter myelin-comparison route</strong>, not the same object as MWF reference-style comparison, bilayer mapping, or remyelination-sensitive pathology readout.</td>
+</tr>
+<tr>
+<td><strong>Human myelin bilayer mapping route</strong><br><a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a></td>
+<td>Bilayer-sensitive macro myelin mapping in living human brain.</td>
+<td>1.4 mm mapping in two healthy volunteers under a proof-of-principle protocol.</td>
+<td>Specialized high-performance hardware, non-routine acquisition, and route-specific bilayer sensitivity.</td>
+<td><strong>Specialized bilayer-sensitive macro myelin route</strong>, not a routine whole-brain myelin meter and not per-axon timing-state ground truth.</td>
+</tr>
+<tr>
+<td><strong>qT1 remyelination-sensitive pathology route</strong><br><a href="https://doi.org/10.1111/bpa.70010" target="_blank">Galbusera et al. (2025)</a></td>
+<td>qT1 sensitivity to cortical demyelination versus remyelination in postmortem multiple-sclerosis cortex.</td>
+<td>Six whole postmortem human brains with cortical lesion classes rather than living-human same-subject monitoring.</td>
+<td>Postmortem MRI-histology alignment, pathology-specific lesion typing, and route-specific sensitivity to remyelination rather than general myelin abundance.</td>
+<td><strong>Pathology-conditioned remyelination-sensitive route</strong>, not a living-human routine row and not interchangeable with MWF, MT-family, or bilayer-sensitive routes.</td>
 </tr>
 <tr>
 <td><strong>Human BBB water-exchange MRI</strong><br><a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a>; <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a></td>
@@ -318,9 +339,9 @@ One remaining shortcut is to treat any reproducibility statement as if it solved
 <td>Name the exact object: <strong>density</strong>, <strong>similarity</strong>, <strong>metabolite / pH balance</strong>, <strong>exchange flux</strong>, <strong>NAD content or dynamics</strong>, <strong>absolute metabolite map</strong>, <strong>kinetic rate</strong>, <strong>water exchange</strong>, <strong>tracer-specific transport</strong>, <strong>target-defined binding</strong>, <strong>mobility</strong>, or <strong>model-based efflux</strong>.</td>
 </tr>
 <tr>
-<td><strong>Family-internal route collapse</strong><br><code>one PET family name = one reusable bundle row</code></td>
-<td><a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> fix an SV2A <strong>quantification route</strong>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> fix a <strong>healthy atlas / baseline route</strong>, <a href="https://doi.org/10.1002/alz.14327" target="_blank">Snellman et al. (2024)</a> fix a <strong>disease / risk-contrast route</strong>, <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> fix a <strong>task / cognition association route</strong>, <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> fix an <strong>activation-null timescale boundary</strong>, and <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a> fix an <strong>intervention-response null at 24 h</strong>. Those are not one interchangeable bundle row.</td>
-<td>Name the family-internal comparison type explicitly: <strong>quantification route</strong>, <strong>healthy atlas / baseline</strong>, <strong>disease / risk contrast</strong>, <strong>task / cognition association</strong>, <strong>activation-null</strong>, or <strong>intervention-response</strong>, then state the time window and design burden that go with that row.</td>
+<td><strong>Family-internal route collapse</strong><br><code>one family name = one reusable bundle row</code></td>
+<td><a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> fix an SV2A <strong>quantification route</strong>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> fix a <strong>healthy atlas / baseline route</strong>, <a href="https://doi.org/10.1002/alz.14327" target="_blank">Snellman et al. (2024)</a> fix a <strong>disease / risk-contrast route</strong>, <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> fix a <strong>task / cognition association route</strong>, <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> fix an <strong>activation-null timescale boundary</strong>, and <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a> fix an <strong>intervention-response null at 24 h</strong>. The same problem appears inside human myelin MRI: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5342928/" target="_blank">Arshad et al. (2017)</a> fix an <strong>MWF / calibrated T1w:T2w comparison route</strong>, <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">Hagiwara et al. (2018)</a> fix a <strong>relaxometry / MTsat comparison route</strong>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> fix a <strong>bilayer-sensitive mapping route</strong>, and <a href="https://doi.org/10.1111/bpa.70010" target="_blank">Galbusera et al. (2025)</a> fix a <strong>qT1 remyelination-sensitive pathology route</strong>. Those are not interchangeable bundle rows either.</td>
+<td>Name the family-internal comparison type explicitly: for example, <strong>quantification route</strong>, <strong>healthy atlas / baseline</strong>, <strong>disease / risk contrast</strong>, <strong>task / cognition association</strong>, <strong>activation-null</strong>, or <strong>intervention-response</strong> for SV2A, and <strong>MWF / calibrated T1w:T2w comparison</strong>, <strong>relaxometry / MTsat comparison</strong>, <strong>bilayer-sensitive mapping</strong>, or <strong>qT1 remyelination-sensitive pathology</strong> for human myelin MRI, then state the time window and design burden that go with that row.</td>
 </tr>
 <tr>
 <td><strong>Spatial-unit collapse</strong><br><code>local fragment + regional atlas + parcel graph + macro voxel = same resolution ladder</code></td>
@@ -339,7 +360,7 @@ One remaining shortcut is to treat any reproducibility statement as if it solved
 </tr>
 <tr>
 <td><strong>Method-family collapse</strong><br><code>same quantity label = same validated row</code></td>
-<td><a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a> showed that <strong>DP-ASL</strong> and <strong>ME-ASL</strong> can return materially different BBB water-exchange estimates with inconsistent age dependence inside one cohort, while <a href="https://doi.org/10.1186/s41747-024-00426-4" target="_blank">Bøgh et al. (2024)</a> showed that a 3 T DMI repeatability result is an operating-point property of a stated protocol rather than a generic guarantee for all deuterium imaging routes. A quantity label alone therefore does not fix row equivalence.</td>
+<td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5342928/" target="_blank">Arshad et al. (2017)</a> showed that calibrated T1w/T2w and <strong>MWF</strong> can both look usable while still failing to become one criterion-valid myelin row, and <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">Hagiwara et al. (2018)</a> showed stronger white-matter agreement between <strong>SyMRI</strong> and <strong>MT<sub>sat</sub></strong> than with <strong>T1w/T2w</strong>. <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a> then showed that <strong>DP-ASL</strong> and <strong>ME-ASL</strong> can return materially different BBB water-exchange estimates with inconsistent age dependence inside one cohort, while <a href="https://doi.org/10.1186/s41747-024-00426-4" target="_blank">Bøgh et al. (2024)</a> showed that a 3 T DMI repeatability result is an operating-point property of a stated protocol rather than a generic guarantee for all deuterium imaging routes. A quantity label alone therefore does not fix row equivalence.</td>
 <td>Name the exact acquisition family, fitting route, correction path, and whether cross-method agreement was actually shown rather than assumed.</td>
 </tr>
 <tr>
@@ -391,9 +412,16 @@ The phrase <strong>human spectroscopy</strong> is especially easy to overread. <
 </div>
 
 <div class="note-box">
-<strong>Myelin, BBB, and astrocyte are still family names, not single meters</strong>
+<strong>Human myelin MRI is not one reusable bundle row</strong>
 <p>
-Within-family compression still breaks composition. <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">Hagiwara et al. (2018)</a> showed that SyMRI and MT<sub>sat</sub> correlate strongly in white matter whereas T1w/T2w is weaker, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> added a bilayer-sensitive route in two healthy volunteers, and <a href="https://doi.org/10.1111/bpa.70010" target="_blank">Galbusera et al. (2025)</a> showed that qT1, but not MWF or MTR, was sensitive to cortical remyelination in postmortem multiple-sclerosis cortex. <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a> and <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> constrain BBB <strong>water exchange</strong>, whereas <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> constrains <strong>tracer-specific transport-model permeability</strong>. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a> first constrained a <strong>MAO-B</strong> route with pharmacological blockade, <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> then showed that the same tracer family acquires a different ceiling in an AD-spectrum pathology context, <a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al. (2025)</a> showed that even SMBT-1 still splits by quantification route, <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. (2018)</a> showed that <strong>I<sub>2</sub>BS</strong> is a different target class, and <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">Best et al. (2026)</a> showed that MAO-B binding can shift with cohort severity and smoking regime. On this site, those rows therefore stay <strong>quantity-defined</strong>, <strong>transport-defined</strong>, or <strong>target-defined</strong>; they are not interchangeable family labels.
+Within-family compression still breaks composition here as well. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5342928/" target="_blank">Arshad et al. (2017)</a> showed that calibrated T1w/T2w can remain reasonably reliable while still giving only limited concurrent validity against <strong>MWF</strong>. <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">Hagiwara et al. (2018)</a> then showed that <strong>SyMRI</strong> and <strong>MT<sub>sat</sub></strong> align more strongly in white matter than either does with <strong>T1w/T2w</strong>. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> added a bilayer-sensitive route in only <strong>two healthy volunteers</strong>, and <a href="https://doi.org/10.1111/bpa.70010" target="_blank">Galbusera et al. (2025)</a> showed that <strong>qT1</strong>, but not <strong>MWF</strong> or <strong>MTR</strong>, separated demyelinated from remyelinated cortical lesions in postmortem multiple-sclerosis cortex. On this site, that means <code>myelin MRI</code> has to be split by <strong>comparison family</strong> before bundle promotion is judged at all: <strong>MWF versus calibrated T1w/T2w comparison</strong>, <strong>relaxometry / MT<sub>sat</sub> comparison</strong>, <strong>bilayer-sensitive mapping</strong>, and <strong>qT1 remyelination-sensitive pathology route</strong> do not share one automatic bundle role.
+</p>
+</div>
+
+<div class="note-box">
+<strong>BBB and astrocyte are still family names, not single meters</strong>
+<p>
+<a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a> and <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> constrain BBB <strong>water exchange</strong>, whereas <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> constrains <strong>tracer-specific transport-model permeability</strong>. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a> first constrained a <strong>MAO-B</strong> route with pharmacological blockade, <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> then showed that the same tracer family acquires a different ceiling in an AD-spectrum pathology context, <a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al. (2025)</a> showed that even SMBT-1 still splits by quantification route, <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. (2018)</a> showed that <strong>I<sub>2</sub>BS</strong> is a different target class, and <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">Best et al. (2026)</a> showed that MAO-B binding can shift with cohort severity and smoking regime. On this site, those rows therefore stay <strong>transport-defined</strong> or <strong>target-defined</strong>; they are not interchangeable family labels.
 </p>
 </div>
 
@@ -487,11 +515,32 @@ Those three axes are defined <strong>per route</strong>. When several routes are
 <td>Branch-local mitochondrial positioning, ATP nano-organization, and synapse-specific energetic reserve.</td>
 </tr>
 <tr>
-<td><strong>Quantity-defined myelin MRI family</strong><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5342928/" target="_blank">Arshad et al. (2017)</a>; <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">Hagiwara et al. (2018)</a>; <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>; <a href="https://doi.org/10.1111/bpa.70010" target="_blank">Galbusera et al. (2025)</a></td>
-<td><strong>Bounded, quantity-defined macro myelin family</strong></td>
-<td>Mixed family: some routes are routine-ish comparisons, others are high-burden proof-of-principle or postmortem pathology-sensitive readouts.</td>
-<td>Constrains only the named quantity type such as myelin-water, MT-family contrast, bilayer-sensitive mapping, or qT1 remyelination-sensitive contrast.</td>
-<td>Per-axon timing support, nodal geometry, and any claim that treats all myelin-family routes as one interchangeable meter.</td>
+<td><strong>Human myelin-water / calibrated T1w/T2w comparison route</strong><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5342928/" target="_blank">Arshad et al. (2017)</a></td>
+<td><strong>Quantity-defined macro myelin comparison route</strong></td>
+<td>Healthy-adult repeat-scan comparison route with ROI-level validity and reliability limits.</td>
+<td>Constrains the relation between <strong>MWF</strong> and <strong>calibrated T1w/T2w</strong> in named white-matter ROIs under the stated acquisition route.</td>
+<td>Relaxometry / MT<sub>sat</sub> comparison, bilayer-sensitive mapping, remyelination-sensitive pathology readout, and per-axon timing support.</td>
+</tr>
+<tr>
+<td><strong>Human relaxometry / MTsat myelin-comparison route</strong><br><a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">Hagiwara et al. (2018)</a></td>
+<td><strong>Quantity-defined white-matter myelin-comparison route</strong></td>
+<td>Healthy-adult cross-method comparison route rather than living-human remyelination tracking.</td>
+<td>Constrains the relation among <strong>SyMRI</strong>, <strong>MT<sub>sat</sub></strong>, and <strong>T1w/T2w</strong> under one acquisition and ROI-analysis policy.</td>
+<td>MWF reference-style comparison, bilayer-sensitive mapping, remyelination-sensitive pathology readout, and per-axon timing support.</td>
+</tr>
+<tr>
+<td><strong>Human myelin bilayer mapping route</strong><br><a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a></td>
+<td><strong>Bilayer-sensitive macro myelin proxy</strong></td>
+<td>Specialized proof-of-principle route in two healthy volunteers.</td>
+<td>Constrains bilayer-sensitive macro myelin mapping under the named high-burden acquisition route.</td>
+<td>Routine deployment, remyelination-sensitive pathology inference, per-axon timing support, and generic myelin-family equivalence.</td>
+</tr>
+<tr>
+<td><strong>qT1 remyelination-sensitive pathology route</strong><br><a href="https://doi.org/10.1111/bpa.70010" target="_blank">Galbusera et al. (2025)</a></td>
+<td><strong>Pathology-conditioned remyelination-sensitive proxy</strong></td>
+<td>Postmortem multiple-sclerosis-cortex validation route rather than living-human same-subject imaging.</td>
+<td>Constrains cortical demyelination-versus-remyelination sensitivity for <strong>qT1</strong> under pathology-specific MRI-histology alignment.</td>
+<td>Living-human routine myelin mapping, bilayer-sensitive mapping, MWF / T1w:T2w equivalence, and per-axon timing support.</td>
 </tr>
 <tr>
 <td><strong>Human BBB water-exchange MRI</strong><br><a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a>; <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a></td>
