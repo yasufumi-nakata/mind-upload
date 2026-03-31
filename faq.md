@@ -748,6 +748,9 @@ Recent speech neuroprosthesis work made major progress in real-time text, audio,
 <p>
 At Mind-Upload, offline accuracy and L3 closed-loop stability are read separately. In particular, if the work does not report <strong>P50/P95/P99 latency</strong>, <strong>silence or abstention behavior</strong>, <strong>recalibration burden</strong>, and <strong>cross-day degradation</strong> apart from accuracy, we do not read it as a deployable closed loop. For a beginner-friendly version of that distinction, see <a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: Closed loop, latency, jitter, and safe stops</a>.
 </p>
+<p>
+The same front-door caution now applies to <strong>adaptive DBS</strong> and other <strong>burst- or state-triggered neuromodulation</strong>. Recent primary literature does not support reading them as one generic `adaptive` success. Beta-guided bradykinesia control, gamma-linked dyskinesia or prokinetic routes, and decoder-based movement-responsive control are different controller families, and movement state, medication state, sensing compatibility, comparator policy, and programming burden can all change what the result means. So on this site, a positive symptom result is not read as generic proof that state-dependent control has been solved unless those controller details are visible.
+</p>
 </section>
 
 <section class="section" id="q5c">
