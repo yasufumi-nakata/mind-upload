@@ -5,7 +5,7 @@ description: "Publishes prior research collected through 50 decomposed questions
 article_type: "Evidence Bank"
 subtitle: "U0-U15 decomposition, current-status map, and prior literature (heavily cited)"
 author: Mind Uploading Research Project
-last_updated: "2026-03-31"
+last_updated: "2026-04-01"
 note: "Compiled from 50 worker tasks (curated for relevance)"
 audience: "Readers who want to browse a large literature set by unresolved issue rather than by paper count alone"
 reading_time: "20-35 min (about 7 min if you only read the statistics and U-map)"
@@ -14,6 +14,7 @@ accuracy_note: "A larger citation count does not automatically mean a stronger c
 page_highlights:
   - "For each of U0-U15, it separates what is partially resolved from what remains open."
   - "It keeps intake logs separate from academically integrated evidence and makes the anti-contamination procedure explicit."
+  - "Issue leads now preserve source class explicitly: review and secondary/media leads are routing metadata, while integrated evidence is keyed to primary sources once verified."
   - "Even though this page is citation-heavy, the statistics and current-status map alone provide a usable overview."
   - "The default entry path for technical and natural-science readers is fixed as U1/U7 -> bridge (U7/U8) -> U4 -> U13 -> U8 -> U3 -> U10."
   - "A paper-level technical-only shortlist is now linked at the front door so readers can jump from U labels to concrete anchors without scanning mixed archive pages first."
@@ -35,6 +36,7 @@ page_highlights:
 known_points:
   - "Breaking the literature into U0-U15 makes it easier not to confuse paper volume with conclusion strength."
   - "Separating source_logged, curated, and noise_excluded prevents intake logging from being confused with academic integration."
+  - "Issue leads are not displayed here as if they were evidence classes once a primary DOI or a review-level route map has been verified."
   - "Citation count should be read as thickness of attention or relevance, not as closure of the question."
   - "For technical and natural-science readers, it is safer to start with measurement, direct validation, closed-loop stability, and maintenance-state before moving to intake logs or governance topics."
   - "Technical readers who want concrete paper anchors first can now jump directly to the paper archive's 2025-2026 technical-only shortlist."
@@ -717,22 +719,29 @@ A <strong>partial solution</strong> indicates that some foundation is present, a
 </section>
 
 <section class="section" id="issue-rq-audit-20260224">
-<h2 class="section-title">Issue integration and RQ audit (2026-02-24)</h2>
-<p>We imported GitHub Issue #264/#265 and checked the number and diversity of research questions in each U section. In areas where overlap is likely to occur (U3/U7/U8/U12/U13/U14), evaluation axes are separated and questions are expanded. </p>
+<h2 class="section-title">Issue-lead routing and RQ audit (2026-02-24)</h2>
+<p>We reviewed GitHub issue leads #264/#265 and checked the number and diversity of research questions in each U section. The evidence rule on this page is now explicit: once a primary DOI or a review-level route map is verified, the issue lead is retained only as routing metadata and is no longer displayed as if it were itself an evidence class. In overlap-heavy sections (U3/U7/U8/U12/U13/U14), evaluation axes were separated and questions were expanded. </p>
 
-<h3>Issue intake (completed)</h3>
+<h3>Issue-lead routing (completed)</h3>
 <table class="data-table">
-<thead><tr><th>Issue</th><th>Input source</th><th>Destination</th><th>Status</th></tr></thead><tbody>
-<tr><td>#264</td><td>Neuron URL (PII: S0896-6273(25)00843-8)</td><td>U3 Main Previous Research (DOI: 10.1016/j.neuron.2025.10.036)</td><td>Reflected</td></tr>
-<tr><td>#265</td><td>Neuroscience News URL</td><td>U13 Main prior research (primary research DOI: 10.1126/sciadv.adw1464 is also included)</td><td>Reflected</td></tr>
+<thead><tr><th>Issue lead</th><th>Verified source class</th><th>Evidence routing decision</th><th>Status</th></tr></thead><tbody>
+<tr><td>#264</td><td><a href="https://doi.org/10.1016/j.neuron.2025.10.036" target="_blank">Kipnis et al. (2025)</a> as a <strong>review / route-mapping source</strong>, not a controller-side primary anchor</td><td>Used only to route the U3 background map; controller-side and human-proxy claims in the main U3 section remain anchored to primary papers rather than to the review itself.</td><td>Reflected with source class preserved</td></tr>
+<tr><td>#265</td><td>Secondary-news lead resolved to the primary paper <a href="https://doi.org/10.1126/sciadv.adw1464" target="_blank">Horikawa (2025)</a></td><td>Routed to U13 only after replacing the news-level intake with the primary <em>Science Advances</em> paper in the integrated evidence list.</td><td>Reflected with primary DOI</td></tr>
 </tbody></table>
+
+<div class="note-box">
+<strong>Why this provenance correction matters</strong>
+<p>
+This evidence bank does not let a <strong>review article</strong> inherit the status of a controller-side primary result, and it does not let a <strong>news URL</strong> remain visible as if it were an evidence class once the primary paper is known. Review papers can map route families, and secondary coverage can flag a lead, but integrated evidence on this page is keyed to the verified source class named in the cited row.
+</p>
+</div>
 
 <h3>RQ count and diversity assessment</h3>
 <table class="data-table">
 <thead><tr><th>U</th><th>Number of RQs before update</th><th>Number of RQs after update</th><th>Diversity evaluation</th></tr></thead><tbody>
 <tr><td>U0</td><td>4</td><td>4</td><td>High (separate definition, threshold, and branch)</td></tr>
 <tr><td>U1</td><td>4</td><td>4</td><td>Medium (estimated uncertainty center)</td></tr>
-<tr><td>U3</td><td>4</td><td>6</td><td>Medium (axis extension to structure/humor/immunity)</td></tr>
+<tr><td>U3</td><td>4</td><td>6</td><td>Medium (axis extension to structure / humoral / immune support)</td></tr>
 <tr><td>U4</td><td>4</td><td>4</td><td>High (separate identification, intervention, and refutation)</td></tr>
 <tr><td>U7</td><td>4</td><td>6</td><td>Medium (extended to synchronization, QC, and loss tolerance)</td></tr>
 <tr><td>U8</td><td>4</td><td>6</td><td>High (separate stability, safety, and operational recovery)</td></tr>
@@ -740,7 +749,7 @@ A <strong>partial solution</strong> indicates that some foundation is present, a
 <tr><td>U11</td><td>4</td><td>4</td><td>High (separate theoretical comparison, calculation amount, and failure conditions)</td></tr>
 <tr><td>U12</td><td>4</td><td>6</td><td>High (add legal attribution/consent operation)</td></tr>
 <tr><td>U13</td><td>4</td><td>6</td><td>Medium (adds restoration accuracy/leak detection axis)</td></tr>
-<tr><td>U14</td><td>4</td><td>6</td><td>during (add negative example publication/reproduction cost axis)</td></tr>
+<tr><td>U14</td><td>4</td><td>6</td><td>Medium (add negative example publication/reproduction cost axis)</td></tr>
 <tr><td>U15</td><td>4</td><td>4</td><td>High (separates legal concepts, auditing, and suspension criteria)</td></tr>
 <tr><td><strong>Total</strong></td><td><strong>48</strong></td><td><strong>60</strong></td><td>Duplicate clusters distributed</td></tr>
 </tbody></table>
