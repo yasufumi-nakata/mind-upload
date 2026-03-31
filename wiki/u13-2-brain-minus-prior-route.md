@@ -5,7 +5,7 @@ description: "Why U13-2 stays first in the current public six, why D10 3M-CPSEED
 article_type: Wiki
 subtitle: "A row-specific packet for the first active public RQ"
 author: Mind Uploading Research Project
-last_updated: "2026-03-30"
+last_updated: "2026-03-31"
 note: "U13-2 route packet"
 audience: "Readers who want the dataset-choice rationale and the honest claim ceiling for the first active speech row"
 reading_time: "8-12 minutes"
@@ -65,13 +65,20 @@ This page does not change the current public six-question batch. It makes only t
 | `Mimic-separation note` | A public-safe report of `semantic alignment`, `brain-minus-prior gap`, and `misalignment rate`. | Any statement that the row demonstrates successful mind preservation. |
 | `Bounded inconsistency audit` | A row-level failure report for prior-only shortcuts and imitation-only passes. | Any theory-level conclusion that goes beyond the present EEG artifact. |
 
+## First-pass KPI bundle and stop rule
+
+| Item | Current row-level fixation |
+|---|---|
+| `First-pass KPI bundle` | `semantic alignment`, `brain-minus-prior gap`, `misalignment rate` |
+| `Stop rule` | Do not widen this row if the `brain-minus-prior gap` collapses toward a prior-only baseline or if `misalignment rate` stays unstable across sessions. |
+
 ## Funding wording that still fits
 
 | Route | Submission wording that stays honest | Why it still fits this row |
 |---|---|---|
 | `Kura Fund` | `An EEG brain-to-text mimic-separation benchmark for a bounded verification route toward the mind-upload hypothesis` | The row is still a narrow benchmark and young-researcher route, not a solved-claim route. |
 | `Nakatani Foundation graduate scholarship` | `Doctoral-track EEG inner-speech decoding and identity-drift evaluation for the mind-upload route` | The row stays compatible with a doctoral continuity narrative when kept narrow and benchmark-first. |
-| `Secom General Research Grant` (`watch only`) | `EEG inner-speech decoding and identity-drift auditing under bounded public claims` | The route remains plausible only as an urgency-watch submission and should not become the main planning lane. |
+| `Secom General Research Grant` (`next-cycle watch only`) | `EEG inner-speech decoding and identity-drift auditing under bounded public claims` | The March 31, 2026 `12:00 JST` deadline has already passed in this run, so the route remains useful only as a carried-forward watch note rather than a live planning lane. |
 
 ## External dependency tasks that stay outside this session
 
@@ -82,7 +89,7 @@ This page does not change the current public six-question batch. It makes only t
 ## What changed in this run
 
 - The public batch did not change.
-- The main change is that `U13-2` now has a row-specific public packet that records the anchor-choice rationale instead of leaving it implicit.
+- The main change is that `U13-2` now records the anchor-choice rationale, one compact first-pass KPI bundle, and one explicit stop rule instead of leaving them implicit.
 - This is still a route-setting update, not a solved-claim update.
 
 </article>

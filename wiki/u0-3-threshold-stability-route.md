@@ -65,6 +65,13 @@ Among public-open backups, `ds004148` still stays the cleanest retest ladder and
 | `Overfit-exclusion rule` | A narrow rule for rejecting models that only look stable under split-specific or single-session conditions. | Any claim that one accepted threshold already proves a broader continuity benchmark. |
 | `Selection-rationale table` | A public-safe record of why one threshold survives cross-session reading better than nearby alternatives. | Any theory-level conclusion that goes beyond the present EEG artifact. |
 
+## First-pass KPI bundle and stop rule
+
+| Item | Current row-level fixation |
+|---|---|
+| `First-pass KPI bundle` | `session-out AUC`, `threshold stability`, `overfit-exclusion rate` |
+| `Stop rule` | Do not widen this row if the threshold order flips across sessions or if accepted models remain split-specific after the overfit screen is applied. |
+
 ## Funding wording that still fits
 
 | Route | Submission wording that stays honest | Why it still fits this row |
@@ -81,7 +88,7 @@ Among public-open backups, `ds004148` still stays the cleanest retest ladder and
 ## What changed in this run
 
 - The public batch did not change.
-- The main change is that `U0-3` now has a row-specific public packet that records the anchor-choice rationale instead of leaving it implicit.
+- The main change is that `U0-3` now records the anchor-choice rationale, one compact first-pass KPI bundle, and one explicit stop rule instead of leaving them implicit.
 - This is still a route-setting update, not a solved-claim update.
 
 </article>

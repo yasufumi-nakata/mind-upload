@@ -66,6 +66,13 @@ If a reader insists on a public-open-only inspection path, the least-distorting 
 | `Transfer-gap table` | A narrow comparison of perception and recall conditions under one decoder and one explicit control family. | Any statement that the row demonstrates preserved mechanism or successful mind preservation. |
 | `Control-condition stability note` | A public-safe failure report when the branch point collapses toward chance or loses condition stability. | Any theory-level conclusion that goes beyond the present EEG artifact. |
 
+## First-pass KPI bundle and stop rule
+
+| Item | Current row-level fixation |
+|---|---|
+| `First-pass KPI bundle` | `perception-to-recall degradation point`, `transfer gap`, `control-condition stability` |
+| `Stop rule` | Do not widen this row if the degradation point and the `transfer gap` fail to stay ordered after the control-family rerun. |
+
 ## Funding wording that still fits
 
 | Route | Submission wording that stays honest | Why it still fits this row |
@@ -82,7 +89,7 @@ If a reader insists on a public-open-only inspection path, the least-distorting 
 ## What changed in this run
 
 - The public batch did not change.
-- The main change is that `U13-5` now has a row-specific public packet that records the anchor-choice rationale instead of leaving it implicit.
+- The main change is that `U13-5` now records the anchor-choice rationale, one compact first-pass KPI bundle, and one explicit stop rule instead of leaving them implicit.
 - This is still a route-setting update, not a solved-claim update.
 
 </article>

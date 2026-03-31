@@ -41,20 +41,22 @@ It does **not** announce solved claims. It only states what the current public r
 - A March 31 access audit at `2026-03-31 00:20 JST` still leaves the batch unchanged, but it narrows the anchor reading: `D10 3M-CPSEED` remains the only clearly public-open primary anchor in the current six.
 - `D03 Multimodal Fusion EEG + Eye-Tracking`, `D02 CSTE`, and `D01 Acquisition delay of wireless EEG` currently resolve to IEEE DataPort pages that show `LOGIN TO ACCESS DATASET FILES` and `Subscription Required`, so public wording now keeps them only as subscription-gated support anchors rather than immediate public anchors.
 - When the live access audit and the catalog auto-label disagree, this page follows the live access audit for public-safe wording and keeps the catalog label only as a planning hint.
-- `Kura Fund` remains open through April 17, 2026 at 17:00, `Nakatani Foundation graduate scholarship` runs April 1, 2026 through May 25, 2026 at 15:00, `Kashinome Scholarship` remains open through April 9, 2026, and `Secom General Research Grant` remains only an urgency watch route through March 31, 2026 at 12:00 at this run time.
-- A March 31 `09:04 JST` Todoist full-item audit still shows the current route already covered (`Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom family=3`), so no new task was added in this run.
+- `Kura Fund` remains open through April 17, 2026 at 17:00, `Nakatani Foundation graduate scholarship` runs April 1, 2026 through May 25, 2026 at 15:00, and `Kashinome Scholarship` remains open through April 9, 2026.
+- A March 31 official-window recheck at `2026-03-31 14:07 JST` leaves the practical lanes unchanged, but it does move one clock-sensitive item: the `Secom General Research Grant` is no longer a same-day watch in this run because the March 31, 2026 `12:00 JST` deadline has already passed, so it now stays only as a next-cycle watch record.
+- A March 31 `14:07 JST` Todoist full-item audit via `api/v1/sync` still shows the current route already covered (`items=205`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom family=3`), so no new task was added in this run.
 - Earlier March 30 notes on this page that treated `D03/D02/D01` as immediate public routes should now be read as superseded by the March 31 access audit.
 - A March 31 cross-repo synthesis also rechecked public-open alternative EEG families for the current six. Those alternatives remain useful as secondary support, but they still do not displace the current `D10/D03/D02/D01` route family or raise the public claim ceiling.
+- The current row packets now also expose one compact `first-pass KPI bundle + stop rule` per row, so readers can see what would stop the route before the claim widens.
 
 - The public batch stays `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
 - The execution order stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
 - `D10 3M-CPSEED` remains the only clearly public-open primary anchor.
 - `D03 Multimodal Fusion EEG + Eye-Tracking`, `D02 CSTE`, and `D01 Acquisition delay of wireless EEG` remain in scope only as subscription-gated support anchors.
-- `Kura Fund` remains open through April 17, 2026, `Nakatani Foundation graduate scholarship` runs April 1, 2026 through May 25, 2026 at 15:00, `Kashinome Scholarship` remains open through April 9, 2026, and `Secom General Research Grant` remains only an urgency watch route through March 31, 2026 at 12:00.
+- `Kura Fund` remains open through April 17, 2026, `Nakatani Foundation graduate scholarship` runs April 1, 2026 through May 25, 2026 at 15:00, `Kashinome Scholarship` remains open through April 9, 2026, and `Secom General Research Grant` is already closed for the current cycle (`deadline: March 31, 2026 at 12:00 JST`) so it stays only as a next-cycle watch record.
 
 ## Row packets after the March 30 post-pull reread
 
-The route is unchanged, but each active row now also carries one submission-ready title, one explicit reason why the present EEG anchor is enough for a first artifact, and one explicit sentence about why the claim still stays narrow.
+The route is unchanged, but each active row now also carries one submission-ready title, one explicit reason why the present EEG anchor is enough for a first artifact, one compact KPI bundle, and one explicit stop rule that keeps the claim narrow.
 
 | RQ | Submission-ready title | Why the current EEG anchor is enough now | Funding bridge that still fits | Why the public claim still stays narrow |
 |---|---|---|---|---|
@@ -75,6 +77,19 @@ The route is unchanged, but each active row now also carries one submission-read
 | `U0-3` | Fix threshold stability only after the timing floor is bounded. | `D02 CSTE` (`10.21227/j162-nh61`, subscription-gated support) | Threshold-stability note and overfit-exclusion rule | `Nakatani Foundation graduate scholarship`, then `Kashinome Scholarship` | Treating a stable threshold as sufficient for personhood continuity |
 | `U14-4` | Turn card fields into a concrete rerun checklist. | `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`, subscription-gated support) | Filled Model Card / Dataset Card examples | `Kura Fund`; `Nakatani Foundation research grant` as next-cycle watch | Field-wide reproducibility, deployment readiness, or standards adoption |
 | `U14-2` | Make the exploration / confirmation split operational. | `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`, subscription-gated support) | Fixed-split rerun contract and negative-case trail | `Kura Fund`; `Nakatani Foundation research grant` as next-cycle watch | Presenting exploratory outputs as confirmatory evidence |
+
+## First-pass KPI bundle and stop rule sync
+
+This run does not widen the batch. It only makes the current public six explicit enough that each active row now has one KPI bundle and one stop rule before the route is widened or moved into stronger wording.
+
+| RQ | First-pass KPI bundle | Stop rule before the row can widen |
+|---|---|---|
+| `U13-2` | `semantic alignment`, `brain-minus-prior gap`, `misalignment rate` | Stop if the `brain-minus-prior gap` collapses toward a prior-only baseline or if `misalignment rate` stays unstable across sessions. |
+| `U13-5` | `perception-to-recall degradation point`, `transfer gap`, `control-condition stability` | Stop if the degradation point and the `transfer gap` fail to stay ordered after the control-family rerun. |
+| `U0-2` | `clock-offset p95`, `jitter p95`, `state-feature collapse rate` | Stop if re-synchronization does not shrink the drift floor or if `state-feature collapse rate` remains above the bounded ceiling across sessions. |
+| `U0-3` | `session-out AUC`, `threshold stability`, `overfit-exclusion rate` | Stop if the threshold order flips across sessions or if accepted models remain split-specific after the overfit screen is applied. |
+| `U14-4` | `required-card fill rate`, `rerun success rate`, `leak-audit coverage` | Stop if fuller cards do not improve rerun traceability or if leak-audit fields remain missing in negative-case examples. |
+| `U14-2` | `fixed-split compliance rate`, `rerun success rate`, `explore-to-confirm carryover gap` | Stop if split violations remain necessary to preserve the result or if the `explore-to-confirm carryover gap` collapses on rerun. |
 
 ## What each row can and cannot solve with EEG right now
 

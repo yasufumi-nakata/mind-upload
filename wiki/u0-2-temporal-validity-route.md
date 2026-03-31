@@ -65,6 +65,13 @@ Among public-open backups, `ds004148` still stays the cleanest retest ladder and
 | `State-feature collapse audit` | A narrow audit of how identity-like features fail once timing drift grows beyond the chosen floor. | Any claim that a partial drift-resistant feature set proves preserved identity. |
 | `Timing-floor note` | A public-safe stop rule for whether `U0-3` threshold work should proceed on the current anchor. | Any theory-level conclusion that goes beyond the present EEG artifact. |
 
+## First-pass KPI bundle and stop rule
+
+| Item | Current row-level fixation |
+|---|---|
+| `First-pass KPI bundle` | `clock-offset p95`, `jitter p95`, `state-feature collapse rate` |
+| `Stop rule` | Do not widen this row if re-synchronization does not shrink the drift floor or if the `state-feature collapse rate` remains above the bounded ceiling across sessions. |
+
 ## Funding wording that still fits
 
 | Route | Submission wording that stays honest | Why it still fits this row |
@@ -81,7 +88,7 @@ Among public-open backups, `ds004148` still stays the cleanest retest ladder and
 ## What changed in this run
 
 - The public batch did not change.
-- The main change is that `U0-2` now has a row-specific public packet that records the anchor-choice rationale instead of leaving it implicit.
+- The main change is that `U0-2` now records the anchor-choice rationale, one compact first-pass KPI bundle, and one explicit stop rule instead of leaving them implicit.
 - This is still a route-setting update, not a solved-claim update.
 
 </article>

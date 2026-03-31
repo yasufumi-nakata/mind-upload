@@ -65,13 +65,20 @@ The public-open rerun family and the validation-heavy family should not be read 
 | `Disclosure-first rerun checklist` | A narrow operational checklist that links card fields to a rerun contract instead of leaving them as passive metadata. | Any claim that the checklist already functions as a broadly adopted standard. |
 | `Latency-field mapping note` | A public-safe explanation of why latency and measurement provenance must appear as concrete contract fields. | Any theory-level conclusion that goes beyond the present EEG artifact. |
 
+## First-pass KPI bundle and stop rule
+
+| Item | Current row-level fixation |
+|---|---|
+| `First-pass KPI bundle` | `required-card fill rate`, `rerun success rate`, `leak-audit coverage` |
+| `Stop rule` | Do not widen this row if fuller cards do not improve rerun traceability or if leak-audit fields remain missing in negative-case examples. |
+
 ## Funding wording that still fits
 
 | Route | Submission wording that stays honest | Why it still fits this row |
 |---|---|---|
 | `Kura Fund` | `A disclosure-first reproducibility contract package for a bounded EEG verification route toward the mind-upload hypothesis` | The row still reads as a young-researcher disclosure package rather than a solved reproducibility claim. |
 | `Nakatani Foundation research grant` (`next-cycle watch`) | `Card-integrated rerun documentation for a bounded EEG verification route` | The row remains plausible only as a later-cycle reproducibility package once the current closed cycle reopens. |
-| `Secom General Research Grant` (`watch only`) | `Latency-aware disclosure and rerun-contract audit for EEG verification artifacts` | The route stays plausible only as an urgency-watch submission and should not replace the main planning lane. |
+| `Secom General Research Grant` (`next-cycle watch only`) | `Latency-aware disclosure and rerun-contract audit for EEG verification artifacts` | The March 31, 2026 `12:00 JST` deadline has already passed in this run, so the route remains useful only as a carried-forward watch note rather than a live planning lane. |
 
 ## External dependency tasks that stay outside this session
 
@@ -82,7 +89,7 @@ The public-open rerun family and the validation-heavy family should not be read 
 ## What changed in this run
 
 - The public batch did not change.
-- The main change is that `U14-4` now has a row-specific public packet that records the anchor-choice rationale instead of leaving it implicit.
+- The main change is that `U14-4` now records the anchor-choice rationale, one compact first-pass KPI bundle, and one explicit stop rule instead of leaving them implicit.
 - This is still a route-setting update, not a solved-claim update.
 
 </article>
