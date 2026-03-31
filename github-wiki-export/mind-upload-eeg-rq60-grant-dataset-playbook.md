@@ -57,13 +57,21 @@ A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-f
 - Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, while `Nakatani Foundation research grant`, `Secom General Research Grant`, and `Brain Science Foundation research grant` remain outside the current-cycle lane.
 - A fresh read-only Todoist `api/v1/sync(items)` full-item audit still showed enough route coverage (`items=203`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this run.
 
+## Latest live-source addendum (2026-04-01 01:06 JST)
+
+- A second no-op actual-pull reread after nested `mind-upload@8da02e2e48e0`, `EEG-DATA@e6013384fa01`, and `auto-research-funds@c6a383f07a7b` still leaves this playbook's practical reading unchanged.
+- The current route still stays fixed on `D10 / D03 / D02 / D01` for the public six and `U7-1 -> U1-2 -> U4-2 -> U8-1` for the outside-current-six queue; the latest upstream deltas do not displace those anchors or reorder that queue.
+- Browser-level live checks at `2026-04-01 01:06 JST` still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `u8-1-closed-loop-delay-tolerance-route.html`, and `mind-upload-rq-solvability-bridge.html`.
+- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, while `Nakatani Foundation research grant`, `Secom General Research Grant`, and `Brain Science Foundation research grant` remain outside the current-cycle lane.
+- A fresh read-only Todoist `api/v1/sync` full-item audit still showed enough route coverage (`items=204`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`), so no new task was added in this run.
+
 ## Latest post-pull addendum (2026-03-31 21:09 JST)
 
 - A latest pull reread after `mind-upload@ed6f8203e46d`, `EEG-DATA@20fbbad9959f`, and `auto-research-funds@77f189662745` still leaves this playbook's practical reading unchanged.
 - The newest pulled deltas still widen support rather than the current route: `mind-upload` tightened dataset-benchmark object rules and clarified the FAQ RNA route split, `EEG-DATA` added request-gated `HBUED` emotion-recognition coverage plus a continuous-pursuit online BCI metadata deep dive, and `auto-research-funds` added `Teraura Sayoko outbound scholarship`, `Gakusho scholarship`, and README-stat refreshes, but none of those changes displace the current `D10 / D03 / D02 / D01` family or the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1`.
 - Browser-level live checks at `2026-03-31 21:09 JST` still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, and the live `issue.html` paragraph still names the current six in the same order.
 - Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, while `Nakatani Foundation research grant`, `Secom General Research Grant`, and `Brain Science Foundation research grant` remain outside the current-cycle lane.
-- A fresh paginated Todoist `api/v1/tasks` full audit still showed enough route coverage (`active tasks=205`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`), so no new task was added in this run.
+- A fresh read-only Todoist `api/v1/sync` full-item audit still showed enough route coverage (`items=205`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`), so no new task was added in this run.
 
 ## Latest post-pull addendum (2026-03-31 19:07 JST)
 
