@@ -35,7 +35,7 @@ page_highlights:
   - "Shared extracellular / electrical-state evidence is not one class: gap-junction coupling, endogenous field effects, extracellular-space geometry / diffusion barriers / osmotic regime, local inhibitory driving-force state, and human perturbation or diffusion-MRI clues are kept separate."
   - "Astrocyte evidence is not one class: lactate-shuttle support, minute-scale cortical network encoding, learning-associated recall ensembles, multiday stabilization ensembles, fear-state representations, and human MAO-B or I2BS astrocyte-related PET proxies are kept separate."
   - "Rodent astrocyte causality, human target-defined astrocyte PET, human CSF-mobility MRI, and model-based sleep-linked biomarker efflux do not compose automatically into one human maintenance-controller readout."
-  - "Several living-human proxy rows are not promoted together unless same-subject relation, model burden, and residual hidden-state ceilings are disclosed explicitly."
+  - "Several living-human proxy rows are not promoted together unless same-subject relation, effective time window / physiological-regime compatibility, route-local repeatability versus transfer, disagreement handling, model burden, and residual hidden-state ceilings are disclosed explicitly."
   - "A multimodal gain is not automatically a robust bundle: complete-case slice, missing-modality policy, centre transfer, and hard-regime disagreement remain separate audits."
   - "More sensors do not by themselves collapse the candidate set; symmetry/reparameterization, narrow-regime degeneracy, and omitted-mechanism error remain separate ambiguity classes."
   - "The next bottleneck is not modality count alone but experiment design that collapses competing internal-state solutions."
@@ -67,7 +67,7 @@ known_points:
   - "Current primary literature also treats neurovascular-unit / BBB / pericyte state as a distinct maintenance-side layer, while current human BBB MRI / PET routes still stop at macro water-exchange or tracer-specific transport proxy rather than pericyte/endothelial controller readout."
   - "Current human astrocyte-related PET and clearance routes remain target-defined, bounded proxy classes; they still do not identify which astrocyte, microglial controller, or synapse is responsible."
   - "Current human evidence comes in layers; proxy-rich routes still do not yield comparable whole-brain in vivo ground truth for every hidden state."
-  - "Several human proxy rows do not add automatically; without same-subject relation, measurement-model disclosure, cross-row calibration, and a named bridge witness, the bundle stays below state-identification language."
+  - "Several human proxy rows do not add automatically; without same-subject relation, effective time window / regime compatibility, route-local repeatability versus transfer, disagreement topology, measurement-model disclosure, and cross-row calibration, the bundle stays below state-identification language."
   - "Same-brain functional connectomics can strengthen a sequential local structure-function scaffold or task-bounded conditional predictor without directly fixing transcriptomic truth, current synaptic efficacy, or unique local dynamics."
   - "Stable bridge performance can still be carried by landmarks, latent manifolds, representational geometry, or fingerprint features, and it can still depend on alignment, recalibration, or a short fixed-decoder horizon."
   - "A multimodal bundle can improve prediction under a declared protocol while still depending on a restricted complete-case slice, a missing-modality policy, or a centre-specific transfer window."
@@ -293,7 +293,7 @@ This site now blocks that shortcut too. <a href="https://doi.org/10.1038/47029" 
 <div class="note-box">
 <strong>If You Want To Know When Several Human Proxy Rows May Be Combined</strong>
 <p>
-The 2026-03-22 recheck tightened one more point at the front door: <strong>proxy-rich</strong> is not the same as <strong>same-subject state identification</strong>. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> is a <strong>33-person SV2A atlas</strong>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> is a <strong>51-adolescent five-metabolite similarity graph with 13-person site replication</strong>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> is a <strong>7 T dynamic kinetic route in five healthy participants</strong>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> is a <strong>two-volunteer myelin proof-of-principle</strong>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> is a <strong>7 T CSF-mobility route with 20-person whole-brain rest maps</strong>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> is a <strong>39-participant randomized crossover trial interpreted through a compartmental model</strong>. These are not interchangeable pieces of one already field-ready whole-brain state meter. This site therefore requires a <a href="verification.html#human-proxy-composition-card">Human Proxy Composition Card</a> before several living-human proxy rows may be promoted together, including separate disclosure of <strong>proxy class</strong>, <strong>operational maturity</strong>, and <strong>calibrator role</strong>, plus a check on whether the apparent agreement survives a <strong>shared-driver audit</strong> and what the bundle adds beyond the <strong>strongest single row</strong>. The shortest explanations are in <a href="wbe_101.html#human-proxy-composition-rule">WBE 101: human-proxy composition rule</a> and <a href="wiki/human-proxy-composition.html">Wiki: Human Proxy Composition and Route Maturity</a>.
+The 2026-03-31 recheck tightened one more point at the front door: <strong>proxy-rich</strong> is not the same as <strong>same-subject state identification</strong>. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> is a <strong>33-person SV2A atlas</strong>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> is a <strong>51-adolescent five-metabolite similarity graph with 13-person site replication</strong>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> is a <strong>7 T dynamic kinetic route in five healthy participants</strong>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> is a <strong>two-volunteer myelin proof-of-principle</strong>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> is a <strong>7 T CSF-mobility route with 20-person whole-brain rest maps</strong>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> is a <strong>39-participant randomized crossover trial interpreted through a compartmental model</strong>. These are not interchangeable pieces of one already field-ready whole-brain state meter. The current primary literature also forces a sharper operational rule. <a href="https://doi.org/10.1186/s41747-024-00426-4" target="_blank">Bøgh et al. (2024)</a>, <a href="https://doi.org/10.1177/0271678X17724947" target="_blank">Finnema et al. (2018)</a>, and <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021)</a> show why <strong>route-local repeatability</strong> and <strong>cross-centre portability</strong> are different questions. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> show why even same-session rows can still mix <strong>common and divergent structure</strong>, <strong>autonomic coupling</strong>, and even <strong>opposite signs</strong>. <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">Rohaut et al. (2024)</a> and <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> then show why average multimodal gain can coexist with <strong>marker discrepancies</strong> or <strong>higher pairwise disagreement in harder groups</strong>. This site therefore requires a <a href="verification.html#human-proxy-composition-card">Human Proxy Composition Card</a> before several living-human proxy rows may be promoted together, including separate disclosure of <strong>proxy class</strong>, <strong>operational maturity</strong>, and <strong>calibrator role</strong>, plus a <strong>robustness gate</strong>, a <strong>shared-driver / effective-window gate</strong>, and an <strong>increment-plus-disagreement gate</strong>. The shortest explanations are in <a href="wbe_101.html#human-proxy-composition-rule">WBE 101: human-proxy composition rule</a> and <a href="wiki/human-proxy-composition.html">Wiki: Human Proxy Composition and Route Maturity</a>.
 </p>
 </div>
 <table class="data-table">
@@ -339,6 +339,32 @@ The 2026-03-22 recheck tightened one more point at the front door: <strong>proxy
 <td><strong>Chen et al. (2025)</strong><br>simultaneous EEG-PET-MRI</td>
 <td>A same-session tri-modal comparison showing coupled global progression plus two distinct network patterns.</td>
 <td>Even simultaneous acquisition keeps shared and modality-specific structure, so agreement alone is not a solved common state axis.</td>
+</tr>
+</tbody>
+</table>
+<table class="data-table">
+<thead>
+<tr>
+<th>Front-door gate</th>
+<th>What must be shown before several rows rise together</th>
+<th>Why the gate exists</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Robustness gate</strong></td>
+<td>State <strong>route-local repeatability</strong>, <strong>cross-centre / cross-protocol transfer</strong>, and the real <strong>complete-case / missing-row slice</strong>.</td>
+<td>A repeated route in one setup is not yet portable evidence, and a bundle can quietly collapse to a narrow overlap subset.</td>
+</tr>
+<tr>
+<td><strong>Shared-driver / effective-window gate</strong></td>
+<td>State <strong>effective time window / state axis</strong>, <strong>physiological or perturbation regime compatibility</strong>, and whether agreement survives a <strong>shared-driver audit</strong>.</td>
+<td>Even same-session rows can still reflect different temporal objects, autonomic physiology, or opposite signs across modalities.</td>
+</tr>
+<tr>
+<td><strong>Increment-plus-disagreement gate</strong></td>
+<td>Show what the bundle adds beyond the <strong>strongest single row</strong> and where <strong>disagreement concentrates</strong>, together with the <strong>resolution policy</strong>.</td>
+<td>Average multimodal gain can still coexist with marker discrepancies and higher pairwise disagreement in biologically or clinically difficult groups.</td>
 </tr>
 </tbody>
 </table>
