@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-30 / Role: Technical / natural science only
+- Updated: 2026-03-31 / Role: Technical / natural science only
 
 ## Role Of This Page
 This page is a page to analyze the intuition that ``If we can obtain the connectome, it would be sufficient to reproduce the brain'' based on primary literature. Rather than focusing on philosophy or legal systems, I will focus on what state variables can't be said if they are missing, and what putative barriers remain even in connectome-constrained.
@@ -33,6 +33,7 @@ What I'm showing here is an arrangement of ``at least removing this will weaken 
 - A tractography-derived graph can still change at the cortical-endpoint and parcel-graph stage even when the underlying diffusion signal is the same.
 - Conditional predictions can be improved by adding same-brain function, transcriptomics, neuromodulatory dynamics, thermal logs, energetic support, astrocyte-state, neurovascular support, and clearance support, but the improvement depends on the task, time constant, and external validation conditions.
 - Device latency audit and biological timing-state audit are different requirements; passing one does not automatically pass the other.
+- Timing-state claims now require claim-family, structural-unit, recovery-boundary, and human quantity-type disclosure; a tract-speed or myelin MRI row still remains a macro proxy unless externally calibrated.
 
 ## What Is Still Unknown
 - It is unclear which state class and resolution should be taken to approach the sufficient condition for WBE.
@@ -45,7 +46,7 @@ What I'm showing here is an arrangement of ``at least removing this will weaken 
 
 <h2>Conclusion</h2>
 <p>
-Although wiring diagrams are an important foundation for WBE,<strong>alone are not the minimum requirement for dynamic reproduction</strong>. Even within the same adjacency relationship, differences in cell type labeling, activity-dependent transcription / chromatin program, post-transcriptional RNA-state, phospho-signaling / second-messenger state, intrinsic excitability, synaptic efficiency, local proteostasis / synaptic-tagging route, cargo-transport / cytoskeletal trafficking route, perisynaptic ECM / PNN organization, ionic milieu / chloride homeostasis, shared extracellular / electrical state, conduction delay, thermal-state, neuromodulatory occupancy / release state, bioenergetic / mitochondrial support, neurovascular-unit / BBB / pericyte controller state, astrocyte-state, and clearance / immune support can significantly alter learning, phase synchronization, arousal-dependent responses, inhibitory sign, state transitions, and long-term stability. Furthermore, connectome-constrained modeling research in 2024-2025 showed that even with the inclusion of wiring constraints, degeneracy in dynamics remains due to unmeasured parameters and omitted mechanisms. Therefore, this site treats<strong>connectome-complete as a structural atlas/scaffold achievement</strong> and not as<strong>emulation-complete</strong>. Similarly, the fact that a<strong>connectome-constrained model reproduced some activities</strong> cannot be read as state-complete reconstruction. This warning becomes even stronger when the word <strong>connectome</strong> refers only to a diffusion-MRI-derived human tractography product, because current validation literature supports that object as a macro pathway prior rather than a synapse-resolved edge list.
+Although wiring diagrams are an important foundation for WBE,<strong>alone are not the minimum requirement for dynamic reproduction</strong>. Even within the same adjacency relationship, differences in cell type labeling, activity-dependent transcription / chromatin program, post-transcriptional RNA-state, phospho-signaling / second-messenger state, intrinsic excitability, synaptic efficiency, local proteostasis / synaptic-tagging route, cargo-transport / cytoskeletal trafficking route, perisynaptic ECM / PNN organization, ionic milieu / chloride homeostasis, shared extracellular / electrical state, timing-state / conduction support, thermal-state, neuromodulatory occupancy / release state, bioenergetic / mitochondrial support, neurovascular-unit / BBB / pericyte controller state, astrocyte-state, and clearance / immune support can significantly alter learning, phase synchronization, arousal-dependent responses, inhibitory sign, state transitions, and long-term stability. Furthermore, connectome-constrained modeling research in 2024-2025 showed that even with the inclusion of wiring constraints, degeneracy in dynamics remains due to unmeasured parameters and omitted mechanisms. Therefore, this site treats<strong>connectome-complete as a structural atlas/scaffold achievement</strong> and not as<strong>emulation-complete</strong>. Similarly, the fact that a<strong>connectome-constrained model reproduced some activities</strong> cannot be read as state-complete reconstruction. This warning becomes even stronger when the word <strong>connectome</strong> refers only to a diffusion-MRI-derived human tractography product, because current validation literature supports that object as a macro pathway prior rather than a synapse-resolved edge list.
 </p>
 
 <strong>Scope of this page</strong>
@@ -131,10 +132,10 @@ I am not going to deal with philosophy or legal systems here. From only the aspe
 <td>Demote fast-synchrony, oscillatory-coordination, and electrical-state claims unless electrical coupling / field state is measured, perturbed, externally calibrated, or explicitly left latent.</td>
 </tr>
 <tr>
-<td><strong>Delay / timing-state</strong></td>
-<td>Even with the same graph, differences in myelin thickness, node/internode geometry, or periaxonal structure can change conduction speed and spike-arrival timing. </td>
-<td>If the graph is the same, timing can be absorbed into a single constant. </td>
-<td>Demote phase, synchrony, and closed-loop claims unless timing-state is measured, externally calibrated, or explicitly left latent. </td>
+<td><strong>Timing-state / conduction support</strong></td>
+<td>Even with the same graph, differences in activity-dependent oligodendrogenesis, node/internode geometry, periaxonal nanocircuit state, plasticity-brake state, or remyelination state can change conduction speed, spike-arrival timing, synchrony, and recovery. </td>
+<td>If the graph is the same, timing can be absorbed into one scalar delay, and any human myelin or tract-speed paper is already close to per-axon timing ground truth. </td>
+<td>Demote phase, synchrony, plasticity-window, and recovery-sensitive claims unless timing-state is typed, measured, externally calibrated, or explicitly left latent. </td>
 </tr>
 <tr>
 <td><strong>Thermal-state</strong></td>
@@ -649,18 +650,70 @@ On this site, that warning now also applies to <strong>extracellular-space geome
 If a shared extracellular / electrical-state claim lacks this route card, this site keeps the result at <strong>local mechanism</strong>, <strong>specialized assay</strong>, <strong>human diffusion-MRI proxy clue</strong>, or <strong>human perturbation clue</strong>. It is not promoted to chemical-connectome-complete state capture, whole-brain extracellular / electrical-regime recovery, or maintenance-complete synchrony control.
 </p>
 
-<h3>10. Delay and myelin are part of timing</h3>
+<h3>10. Timing-state is not one scalar delay term</h3>
 <p>
 <a href="https://doi.org/10.1126/science.1252304" target="_blank">Gibson et al. (2014)</a> showed that neuronal activity promotes oligodendrogenesis and adaptive myelination, and <a href="https://doi.org/10.1126/science.1254960" target="_blank">McKenzie et al. (2014)</a> showed that active central myelination is required for motor-skill learning. But the weakness of the earlier page was that it still allowed the reader to compress this into the slogan "more myelin, faster signal." Primary literature now supports a stronger statement: <a href="https://doi.org/10.1038/ncomms9073" target="_blank">Seidl et al. (2015)</a> showed that node and internode geometry is tuned along auditory axons to adjust action-potential timing, <a href="https://doi.org/10.1073/pnas.1811013115" target="_blank">Dutta et al. (2018)</a> showed that perinodal astrocytes can reversibly alter nodal gap length and myelin structure to change conduction velocity and spike arrival, and <a href="https://doi.org/10.1016/j.cell.2019.11.039" target="_blank">Cohen et al. (2020)</a> showed that saltatory conduction depends on a conductive periaxonal nanocircuit rather than on a single scalar delay term.
 </p>
 <p>
-This matters for WBE because timing-sensitive circuits do not only depend on "who connects to whom," but also on <strong>when inhibition, synchrony, and phase-locked drive arrive</strong>. <a href="https://doi.org/10.1093/cercor/bhab018" target="_blank">Micheva et al. (2021)</a> showed that even locally projecting PV interneurons gain physiologically relevant conduction-speed differences with axonal myelination, and <a href="https://doi.org/10.7554/eLife.73827" target="_blank">Dubey et al. (2022)</a> linked loss of PV-axon myelination to weakened fast inhibition and failure of gamma synchronization. Therefore, if timing matters, the missing variable is better described as <strong>timing-state</strong> rather than simply "delay."
+This matters for WBE because timing-sensitive circuits do not only depend on "who connects to whom," but also on <strong>when inhibition, synchrony, and phase-locked drive arrive</strong>. <a href="https://doi.org/10.1093/cercor/bhab018" target="_blank">Micheva et al. (2021)</a> showed that even locally projecting PV interneurons gain physiologically relevant conduction-speed differences with axonal myelination, <a href="https://doi.org/10.7554/eLife.73827" target="_blank">Dubey et al. (2022)</a> linked loss of PV-axon myelination to weakened fast inhibition and failure of gamma synchronization, <a href="https://doi.org/10.1038/s41586-024-07853-8" target="_blank">Xin et al. (2024)</a> showed that adolescent oligodendrogenesis can act as a brake on adult visual-cortex plasticity, and <a href="https://doi.org/10.1038/s41467-025-56092-6" target="_blank">Della-Flora Nunes et al. (2025)</a> showed that neuronal recovery after demyelination can return before healthy myelin levels are completely restored. Therefore, if timing matters, the missing variable is better described as <strong>timing-state</strong> rather than simply "delay," and the site has to keep <strong>learning</strong>, <strong>microgeometry</strong>, <strong>plasticity brake</strong>, <strong>recovery boundary</strong>, and <strong>human proxy class</strong> on separate rows.
+</p>
+
+<strong>Do not compress timing-state into one evidence row</strong>
+<p>
+On this site, timing-state evidence is no longer read as one interchangeable ladder. <strong>Activity-dependent oligodendrogenesis / learning</strong>, <strong>node-internode-periaxonal timing control</strong>, <strong>plasticity-brake function</strong>, <strong>remyelination-to-function recovery</strong>, and <strong>human tract-speed or quantity-defined myelin proxy routes</strong> answer different questions and stop at different ceilings. Therefore, a positive human myelin paper does not inherit the causal force of the animal timing-microgeometry papers, and a functional rescue result does not inherit proof that healthy myelin-state was fully restored.
 </p>
 
 <strong>Human observability ceiling for timing-state</strong>
 <p>
-<a href="https://doi.org/10.1038/s41593-023-01272-0" target="_blank">van Blooijs et al. (2023)</a> showed that transmission speed in the human brain follows a developmental trajectory, which is useful evidence that conduction timing is biologically variable at the tract scale. But this is still a macro timing proxy, not a cell-specific readout of node length, periaxonal space, oligodendrocyte state, or local inhibitory arrival time. On this site, human myelin or tract-speed readouts are therefore treated as macro support for timing-state, not as ground truth of per-axon conduction state.
+Human timing-side evidence is also not one route. <a href="https://doi.org/10.1038/s41593-023-01272-0" target="_blank">van Blooijs et al. (2023)</a> showed that transmission speed in the human brain follows a developmental trajectory, which is useful evidence that conduction timing is biologically variable at the tract scale. But tract-speed estimation is still not the same inferential object as quantity-defined myelin MRI. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5342928/" target="_blank">Arshad et al. (2017)</a> showed that reliability does not guarantee myelin validity for calibrated T<sub>1</sub>w/T<sub>2</sub>w relative to <strong>MWF</strong>, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6043493/" target="_blank">Hagiwara et al. (2018)</a> showed stronger agreement between <strong>SyMRI</strong> and <strong>MT<sub>sat</sub></strong> than with T<sub>1</sub>w/T<sub>2</sub>w, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> demonstrated bilayer-sensitive mapping only in <strong>two healthy volunteers</strong>, <a href="https://doi.org/10.1016/j.neuroimage.2025.121456" target="_blank">Chen et al. (2025)</a> showed that conventional quantitative MT keeps an orientation-dependent route variable, <a href="https://doi.org/10.1111/bpa.70010" target="_blank">Galbusera et al. (2025)</a> showed that <strong>qT1</strong>, but not <strong>MWF</strong> or <strong>MTR</strong>, separated cortical remyelination states in a histology-linked design, and <a href="https://doi.org/10.1038/s41467-025-58604-w" target="_blank">Genc et al. (2025)</a> still required ex vivo gene-expression alignment and histopathological confirmation when linking developmental cortical microstructure to oligodendrocyte biology. On this site, human tract-speed or myelin readouts are therefore treated as <strong>typed macro timing proxies</strong>, not as ground truth of per-axon conduction state, node length, periaxonal spacing, or local inhibitory arrival time.
 </p>
+
+<strong>2026-03-31 addendum: timing-state evidence also needs a route card on this page</strong>
+<p>
+The remaining weakness on this central page was that <strong>timing-state evidence</strong> could still compress <strong>activity-dependent oligodendrogenesis / learning</strong>, <strong>node / internode / periaxonal timing control</strong>, <strong>plasticity-brake function</strong>, <strong>remyelination-to-function recovery</strong>, and <strong>human tract-speed or myelin-proxy routes</strong> into one bucket. The primary literature does not support that shortcut. Therefore, this page now also requires a <strong>timing-state / myelin route card</strong> before a connectome argument is promoted beyond a narrow, explicitly named ceiling.
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Route-card field</th>
+<th>What must be fixed explicitly</th>
+<th>What goes wrong if omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claim family</strong></td>
+<td>State whether the paper is about <strong>activity-dependent oligodendrogenesis / learning</strong>, <strong>node-internode-periaxonal timing control</strong>, <strong>plasticity-brake function</strong>, <strong>remyelination-to-function recovery</strong>, or a <strong>human macro timing / myelin proxy</strong>.</td>
+<td>Learning, microgeometry, recovery, and human proxy papers collapse into one phrase such as <code>myelin evidence supports timing</code>.</td>
+</tr>
+<tr>
+<td><strong>Direct structural unit / observable</strong></td>
+<td>Name the actual object: new oligodendrocyte generation, myelin sheath or bilayer contrast, nodal gap length, internode geometry, periaxonal space, PV-axon myelination, tract-scale transmission speed, or another explicitly measured unit.</td>
+<td><code>Timing changed</code> replaces the actual scale of evidence, and macro proxy rows are overread as if they already measured the timing controller itself.</td>
+</tr>
+<tr>
+<td><strong>Functional target</strong></td>
+<td>Write whether the claim is about skill learning, deprived-eye or visual-cortex plasticity, phase / synchrony precision, spike-arrival timing, gamma support, VEP latency, or another named target.</td>
+<td>The site silently shifts from one dependent variable to another, for example from a learning result to timing-complete reconstruction.</td>
+</tr>
+<tr>
+<td><strong>Recovery / completeness boundary</strong></td>
+<td>State whether the paper shows prevention, compensation, partial remyelination with functional rescue, or complete restoration of healthy myelin-state.</td>
+<td>Any recovery result is overread as proof that the healthy timing-state or myelin-state was fully reconstructed.</td>
+</tr>
+<tr>
+<td><strong>Human quantity type / proxy class</strong></td>
+<td>For human evidence, disclose whether the route is tract-speed estimation, <strong>MWF</strong>, <strong>MT / MT<sub>sat</sub> / qMT / MPF-family contrast</strong>, <strong>bilayer-sensitive ultrashort-T<sub>2</sub> mapping</strong>, <strong>qT1 remyelination-sensitive readout</strong>, developmental diffusion-microstructure modelling with ex vivo alignment, or another named proxy class, together with hardware burden and model assumptions.</td>
+<td>A human myelin paper is treated as if it had directly measured one interchangeable timing object, per-axon delay, or oligodendrocyte support state.</td>
+</tr>
+<tr>
+<td><strong>Abstention boundary</strong></td>
+<td>Fix in one line what remains latent, especially per-axon conduction delay, node / internode / periaxonal microgeometry in humans, oligodendrocyte-axon metabolic support, local plasticity gating, and same-subject whole-brain timing-controller identification.</td>
+<td>Macro proxy or partial-recovery evidence is promoted to timing-complete, plasticity-complete, or maintenance-complete language.</td>
+</tr>
+</tbody>
+</table>
 
 <h3>11. Thermal-state is not reducible to timing or recording nuisance</h3>
 <p>
@@ -787,9 +840,9 @@ The weakness of the current site was that even if it was possible to enumerate t
 </tr>
 <tr>
 <td><strong>+ timing-state / conduction audit</strong></td>
-<td>Compare a fixed-delay baseline against a model or analysis that adds measured or externally calibrated timing variables under the same held-out conditions. </td>
-<td>Seidl, Dutta, Cohen, Micheva, and Dubey together support that timing-sensitive prediction can improve when node/internode structure, periaxonal coupling, or myelination-linked local speed are treated explicitly. </td>
-<td>Human myelin maps or tract-scale transmission-speed estimates remain macro proxies; without external calibration they do not become per-axon timing ground truth. </td>
+<td>Compare a fixed-delay baseline against the same model or analysis after naming the <strong>timing claim family</strong>, adding measured or externally calibrated node / internode / periaxonal / myelin variables, and keeping recovery boundary plus human quantity type explicit under the same held-out phase, synchrony, plasticity, or recovery condition. </td>
+<td>Gibson, McKenzie, Seidl, Dutta, Cohen, Micheva, Dubey, Xin, and Della-Flora Nunes together support that timing-sensitive prediction can improve when learning-linked oligodendrogenesis, node / internode / periaxonal structure, myelination-linked local speed, plasticity-brake state, and incomplete-versus-complete remyelination are kept on separate rows. </td>
+<td>Human tract-speed, MWF, MT-family, bilayer-sensitive, developmental dMRI, or qT1 remyelination-sensitive routes remain typed macro proxies; without external calibration they do not become per-axon timing ground truth or proof that healthy timing-state was fully restored. </td>
 </tr>
 <tr>
 <td><strong>+ thermal-state audit</strong></td>
@@ -996,7 +1049,15 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li>Cohen, C. C. H., Popovic, M. A., Klooster, J., et al. (2020). Saltatory conduction along myelinated axons involves a periaxonal nanocircuit. <em>Cell</em>, 180(2), 311–322.e15. <a href="https://doi.org/10.1016/j.cell.2019.11.039" target="_blank">doi:10.1016/j.cell.2019.11.039</a></li>
 <li>Micheva, K. D., Kiraly, M., Perez, M. M., & Madison, D. V. (2021). Conduction Velocity Along the Local Axons of Parvalbumin Interneurons Correlates With the Degree of Axonal Myelination. <em>Cerebral Cortex</em>, 31(7), 3374–3392. <a href="https://doi.org/10.1093/cercor/bhab018" target="_blank">doi:10.1093/cercor/bhab018</a></li>
 <li>Dubey, S., Kuschmitz, S., Mezey, S. E., et al. (2022). Myelination synchronizes cortical oscillations by consolidating parvalbumin-mediated phasic inhibition. <em>eLife</em>, 11, e73827. <a href="https://doi.org/10.7554/eLife.73827" target="_blank">doi:10.7554/eLife.73827</a></li>
+<li>Xin, W., Kaneko, M., Roth, R. H., Zhang, A., Nocera, S., Ding, J. B., Stryker, M. P., &amp; Chan, J. R. (2024). Oligodendrocytes and myelin limit neuronal plasticity in visual cortex. <em>Nature</em>, 633, 856–863. <a href="https://doi.org/10.1038/s41586-024-07853-8" target="_blank">doi:10.1038/s41586-024-07853-8</a></li>
+<li>Della-Flora Nunes, G., Osso, L. A., Haynes, J. A., et al. (2025). Incomplete remyelination via therapeutically enhanced oligodendrogenesis is sufficient to recover visual cortical function. <em>Nature Communications</em>, 16, 732. <a href="https://doi.org/10.1038/s41467-025-56092-6" target="_blank">doi:10.1038/s41467-025-56092-6</a></li>
 <li>van Blooijs, D., de Haan, A. M., Renaud, S., et al. (2023). Developmental trajectory of transmission speed in the human brain. <em>Nature Neuroscience</em>, 26, 828–838. <a href="https://doi.org/10.1038/s41593-023-01272-0" target="_blank">doi:10.1038/s41593-023-01272-0</a></li>
+<li>Arshad, M., Stanley, J. A., &amp; Raz, N. (2017). Test-retest reliability and concurrent validity of in vivo myelin content indices: Myelin water fraction and calibrated T<sub>1</sub>w/T<sub>2</sub>w image ratio. <em>Human Brain Mapping</em>, 38(4), 1780–1790. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5342928/" target="_blank">PMC5342928</a></li>
+<li>Hagiwara, A., Hori, M., Kamagata, K., Warntjes, M., Matsuyoshi, D., Nakazawa, M., Ueda, R., Andica, C., Horiuchi, K., Fujita, S., Maekawa, T., Irie, R., Kumamaru, K. K., Abe, O., Aoki, S. (2018). Myelin measurement: Comparison between simultaneous tissue relaxometry, magnetization transfer saturation index, and T1w/T2w ratio methods. <em>Scientific Reports</em>, 8, 10554. <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">doi:10.1038/s41598-018-28852-6</a></li>
+<li>Baadsvik, E. L., Weiger, M., Froidevaux, R., et al. (2024). Myelin bilayer mapping in the human brain in vivo. <em>Magnetic Resonance in Medicine</em>, 92(1), 260–273. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">doi:10.1002/mrm.29998</a></li>
+<li>Chen, M., Tang, S., Chen, H., Zhou, Z., Rong, P., Lu, H., &amp; Chen, W. (2025). Orientation-independent magnetization transfer imaging of brain white matter. <em>NeuroImage</em>, 309, 121456. <a href="https://doi.org/10.1016/j.neuroimage.2025.121456" target="_blank">doi:10.1016/j.neuroimage.2025.121456</a></li>
+<li>Galbusera, R., Weigel, M., Bahn, E., Schaedelin, S., Cagol, A., Lu, P.-J., et al. (2025). Quantitative T1 is sensitive to cortical remyelination in multiple sclerosis: A postmortem MRI study. <em>Brain Pathology</em>, 35(5), e70010. <a href="https://doi.org/10.1111/bpa.70010" target="_blank">doi:10.1111/bpa.70010</a></li>
+<li>Genc, S., Ball, G., Chamberland, M., et al. (2025). MRI signatures of cortical microstructure in human development align with oligodendrocyte cell-type expression. <em>Nature Communications</em>, 16, 3317. <a href="https://doi.org/10.1038/s41467-025-58604-w" target="_blank">doi:10.1038/s41467-025-58604-w</a></li>
 <li>Qian, Y., Zhao, T., Zheng, H., Weimer, J., &amp; Boada, F. E. (2012). High-resolution sodium imaging of human brain at 7 T. <em>Magnetic Resonance in Medicine</em>, 68(1), 227–233. <a href="https://doi.org/10.1002/mrm.23225" target="_blank">doi:10.1002/mrm.23225</a></li>
 <li>Reimer, J., et al. (2016). Pupil fluctuations track rapid changes in adrenergic and cholinergic activity in cortex. <em>Nature Communications</em>, 7, 13289. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">doi:10.1038/ncomms13289</a></li>
 <li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <em>Cell Reports</em>, 43(10), 114808. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>

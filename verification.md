@@ -1518,7 +1518,7 @@ The <strong>Observability Budget</strong> fixes what entered the sensor and what
 </tr>
 <tr>
 <td><strong>Timing-state / conduction support</strong></td>
-<td>Separate device latency from biological timing-state, and disclose whether timing variables were measured, externally calibrated, absorbed into a constant, or left latent.</td>
+<td>Attach a timing-state / myelin route card that states the <strong>claim family</strong> (activity-dependent oligodendrogenesis / learning, node-internode-periaxonal timing control, plasticity-brake function, remyelination-to-function recovery, or human macro timing / myelin proxy), the <strong>direct structural unit / observable</strong>, the <strong>functional target</strong>, the <strong>recovery / completeness boundary</strong>, and, for human evidence, the <strong>quantity type / proxy class</strong> (for example tract-speed estimation, MWF, MT / MT<sub>sat</sub> / qMT / MPF-family contrast, bilayer-sensitive mapping, qT1 remyelination-sensitive readout, or developmental diffusion-microstructure modelling with ex vivo alignment), together with whether timing variables were measured, externally calibrated, absorbed into a constant, or left latent.</td>
 <td>Phase, synchrony, and timing-complete reconstruction claims are demoted to hardware-fast or macro-timing proxy claims.</td>
 </tr>
 <tr>
