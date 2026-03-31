@@ -5,7 +5,7 @@ description: "This page organizes same-day state fluctuation, slow internal mili
 article_type: Wiki
 subtitle: "Do not turn same-day success, algorithmic rescue, and long-term stability into the same claim"
 author: Mind Uploading Research Project
-last_updated: "2026-03-30"
+last_updated: "2026-04-01"
 note: "Technical / natural science only"
 audience: "Readers who need a careful way to read longitudinal EEG, fMRI, chronic BCI, and speech-neuroprosthesis results"
 reading_time: "12-18 min"
@@ -13,6 +13,7 @@ page_intro: "This page explains how Mind-Upload reads state, trait, and drift wh
 accuracy_note: "This page treats state / trait / drift only as technology and natural-science audit items. It does not address philosophical identity or legal rights."
 page_highlights:
   - "This page now mirrors the site's Temporal Validity Card: fixed decoder interval, state annotation, interface / decoder drift, recalibration burden, and transfer ceiling are logged separately."
+  - "Invasive language BCIs are now route-typed on this page: throughput / expressivity, transfer initialization, bounded fixed-decoder slices, and adaptive rescue are different temporal claims."
   - "Algorithmic stabilization is not evidence that drift disappeared; it is evidence that some drift can be compensated under named conditions."
   - "Trait-like backbone is read at the level of latent dynamics, representational geometry, or functional fingerprint, not as one unchanged neuron, voxel, or electrode."
   - "Stable person-identification is not yet one universal trait object; the fingerprint carrier can change with timescale, feature family, and state regime."
@@ -25,6 +26,7 @@ known_points:
   - "Population-level structure can remain more stable than individual units, so unit drift and backbone stability must not be collapsed."
   - "Longitudinal identifiability can be carried by different objects such as dynamic functional-connectivity windows, EEG spectral profiles, aperiodic components, or nonlinear avalanche dynamics."
   - "Fixed-decoder horizon, recalibration burden, and stabilization strategy answer different questions."
+  - "In invasive language BCIs, cross-subject transfer initialization, bounded fixed-decoder use, and adaptive rescue are different achievements rather than one longitudinal ladder."
   - "Current speech and cursor BCI papers support important communication and control advances, but they still need an explicit transfer ceiling."
 unknown_points:
   - "There is still no site-wide default benchmark that compares state annotation, fixed-decoder durability, recalibration burden, and transfer ceiling across EEG and invasive BCI under one schema."
@@ -74,6 +76,13 @@ On this site, <strong>state</strong>, <strong>trait</strong>, and <strong>drift<
 <strong>How this page fits the site</strong>
 <p>
 The core public rule is the <a href="../verification.html#temporal-validity-card">Verification: Temporal Validity Card</a>. This wiki is the technical background page for that card. If you want the operational submission fields, read Verification; if you want the underlying logic for why those fields are separated, read this page.
+</p>
+</div>
+
+<div class="note-box">
+<strong>2026-04-01 correction: invasive language BCIs are not one temporal-validity route</strong>
+<p>
+The remaining weakness on this page was that it already separated <strong>fixed-decoder durability</strong> from <strong>recalibration burden</strong>, but it still left too much room to read modern invasive language BCI papers as if they formed one monotonic time-stability ladder. The current primary literature does not support that shortcut. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> support different <strong>communication throughput / expressivity</strong> routes. <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh et al. (2025)</a> supports a separate <strong>cross-subject transfer-initialization</strong> route. <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a> and <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> support <strong>alignment-based rescue / unsupervised recalibration</strong> routes. On this site, those are no longer read as one interchangeable story about drift, stability, and deployability.
 </p>
 </div>
 
@@ -220,10 +229,46 @@ However, the phrase <strong>functional fingerprint</strong> still hides an impor
 Recent BCI papers sharpen this distinction. <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a> showed that aligning latent dynamics can stabilize BCI decoding across long recordings, but that is still an <strong>alignment-based rescue strategy</strong>, not evidence that no drift occurred. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> then showed that long-term cursor BCI control can be maintained with unsupervised hidden-Markov-model recalibration, while also showing that the burden of recalibration and the choice of stabilization strategy matter. The site therefore now separates <strong>fixed decoder interval</strong> from <strong>recalibration burden</strong> and refuses to let “the system stayed usable” silently replace “the original decoder stayed valid.”
 </p>
 
-<h3>4. Speech and communication BCIs still need an explicit transfer ceiling</h3>
+<h3>4. Invasive language BCIs split into four temporal routes</h3>
 <p>
-Communication-route papers are important, but their time claims still need a stop line. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a> showed a streaming brain-to-voice neuroprosthesis with implicit speech detection and low-latency synthesis, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> showed an instantaneous voice-synthesis neuroprosthesis that kept silence during non-speech and quantified degradation of a fixed decoder over time. These are strong advances in online communication. But on this site they still do <strong>not</strong> establish broad cross-person transfer, multi-site portability, or indefinite fixed-decoder validity. That remaining ceiling must be written explicitly.
+Communication-route papers are important, but their temporal claims are no longer one object. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> strengthen <strong>same-session throughput / expressivity</strong> under different output contracts. <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh et al. (2025)</a> strengthens <strong>cross-subject transfer initialization</strong> from distributed brain recordings, which is useful for bootstrapping but still different from proving participant-invariant decoding or long-horizon no-update use. <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a> and <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> instead strengthen <strong>adaptive rescue</strong> and <strong>unsupervised recalibration</strong> under accumulating neural change. On this site, a temporal-validity claim for invasive language BCIs therefore has to say which route it belongs to before the reader can decide whether the result supports throughput, initialization, bounded fixed-decoder use, or adaptive operation.
 </p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Route type</th>
+<th>Representative literature</th>
+<th>What it supports</th>
+<th>What it still does not support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Throughput / expressivity</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>; <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>; <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a></td>
+<td>High-rate or low-latency communication under a declared output contract, vocabulary, and abstention / silence policy.</td>
+<td>Cross-person portability, indefinite fixed-decoder validity, or participant-invariant language manifolds.</td>
+</tr>
+<tr>
+<td><strong>Transfer initialization</strong></td>
+<td><a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh et al. (2025)</a></td>
+<td>Bootstrapping a subject-specific decoder from distributed recordings rather than training from scratch on one participant alone.</td>
+<td>Longitudinal durability without later updates, zero-calibration use, or a state-invariant backbone proven across participants.</td>
+</tr>
+<tr>
+<td><strong>Bounded fixed-decoder slice</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>; <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a></td>
+<td>A declared interval over which performance can be checked without new supervised retraining.</td>
+<td>Indefinite decoder durability, cross-site portability, or solved neural drift.</td>
+</tr>
+<tr>
+<td><strong>Adaptive rescue / recalibration</strong></td>
+<td><a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a>; <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a></td>
+<td>Maintaining usable control by latent alignment or unsupervised updates under named drift conditions.</td>
+<td>Evidence that the original decoder remained valid or that drift disappeared biologically.</td>
+</tr>
+</tbody>
+</table>
 </section>
 
 <section class="section" id="minimum-submission">
@@ -251,6 +296,11 @@ Communication-route papers are important, but their time claims still need a sto
 <td><strong>fixed decoder interval</strong></td>
 <td>The exact days or sessions over which the same decoder was held without retraining.</td>
 <td>No claim of fixed-decoder durability or stable backbone may be made.</td>
+</tr>
+<tr>
+<td><strong>communication route type</strong></td>
+<td>For invasive language or speech BCIs, state whether the result is same-session throughput / expressivity, transfer initialization, a bounded fixed-decoder slice, or adaptive rescue, and name any no-new-day-training, open-loop, or baseline-from-scratch comparator that defines that route.</td>
+<td>A communication result cannot be promoted to generic transfer or long-horizon durability by default.</td>
 </tr>
 <tr>
 <td><strong>stabilization / rescue mode</strong></td>
@@ -308,6 +358,11 @@ Communication-route papers are important, but their time claims still need a sto
 <td>Do not promote to long-term deployability without all three fields.</td>
 </tr>
 <tr>
+<td><strong>"Cross-subject transfer initialization means the decoder is participant-invariant or already durable."</strong></td>
+<td>Initialization from other participants' data can lower the startup burden while still requiring subject-specific adaptation, later recalibration, or a bounded fixed-decoder interval.</td>
+<td>Read as initialization evidence only unless later fixed-decoder or rescue evidence is shown explicitly.</td>
+</tr>
+<tr>
 <td><strong>"The task and fast loop matched, so the biological regime matched."</strong></td>
 <td>Circadian phase, glucocorticoid exposure, and insulin / metabolic regime can shift hippocampal retrieval or plasticity even when the visible loop looks unchanged.</td>
 <td>Read as fast-loop or same-task evidence only unless slow internal-milieu disclosure is present.</td>
@@ -336,6 +391,7 @@ Communication-route papers are important, but their time claims still need a sto
 <li><strong>Trait must name its backbone and fingerprint object:</strong> latent dynamics, representational geometry, functional-connectivity fingerprint, spectral profile, aperiodic component, avalanche-transition dynamics, or another explicit object.</li>
 <li><strong>Person-identification is not enough by itself:</strong> say which object carried the identity signal, over which timescale, and whether it survived a declared state change or only same-regime repeats.</li>
 <li><strong>Adaptive rescue must be visible:</strong> if alignment or recalibration was used, say so and report the cost.</li>
+<li><strong>For invasive language BCIs, temporal route type must be named:</strong> throughput / expressivity, transfer initialization, bounded fixed-decoder slices, and adaptive rescue do not license the same claim.</li>
 <li><strong>Biological drift and interface drift are different failure modes:</strong> do not collapse them into one “nonstationarity” line.</li>
 <li><strong>Session dates and intervals are required:</strong> intraday, daily, weekly, and monthly claims must be distinguishable.</li>
 <li><strong>Every longitudinal result needs a stop line:</strong> say what still cannot be inferred from the reported horizon.</li>
@@ -359,8 +415,10 @@ Communication-route papers are important, but their time claims still need a sto
 <li>Kyllönen M, Cox R, Makkonen T, et al. Trait-like individual signatures dominate sleep EEG over insomnia-specific features. <em>Scientific Reports</em>. 2026;16:4408. <a href="https://doi.org/10.1038/s41598-025-34509-y" target="_blank">doi:10.1038/s41598-025-34509-y</a></li>
 <li>Karpowicz BM, O'Shea DJ, Wyche S, et al. Stabilizing brain-computer interfaces through alignment of latent dynamics. <em>Nature Communications</em>. 2025;16:3500. <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">doi:10.1038/s41467-025-59652-y</a></li>
 <li>Wilson GH, Stein EA, Kamdar F, et al. Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <em>Nature Biomedical Engineering</em>. 2025. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Willett FR, Avansino DT, Hochberg LR, Henderson JM, Shenoy KV. A high-performance speech neuroprosthesis. <em>Nature</em>. 2023;620:1031-1036. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
 <li>Littlejohn KT, Cho CJ, Liu JR, et al. A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <em>Nature Neuroscience</em>. 2025;28:1318-1328. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
 <li>Wairagkar M, Card NS, Singer-Clark T, et al. An instantaneous voice-synthesis neuroprosthesis. <em>Nature</em>. 2025;644:145-152. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+<li>Singh A, Thomas T, Li J, et al. Transfer learning via distributed brain recordings enables reliable speech decoding. <em>Nature Communications</em>. 2025;16:8749. <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">doi:10.1038/s41467-025-63825-0</a></li>
 <li>de Quervain DJF, Roozendaal B, McGaugh JL. Stress and glucocorticoids impair retrieval of long-term spatial memory. <em>Nature</em>. 1998;394:787-790. <a href="https://doi.org/10.1038/29542" target="_blank">doi:10.1038/29542</a></li>
 <li>Oei NYL, Elzinga BM, Wolf OT, de Ruiter MB, Damoiseaux JS, Kuijer JPA, Veltman DJ, Scheltens P, Rombouts SARB. Glucocorticoids decrease hippocampal and prefrontal activation during declarative memory retrieval in young men. <em>Brain Imaging and Behavior</em>. 2007;1:31-41. <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">doi:10.1007/s11682-007-9003-2</a></li>
 <li>McCauley JP, Petroccione MA, D'Brant LY, et al. Circadian modulation of neurons and astrocytes controls synaptic plasticity in hippocampal area CA1. <em>Cell Reports</em>. 2020;33:108255. <a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">doi:10.1016/j.celrep.2020.108255</a></li>

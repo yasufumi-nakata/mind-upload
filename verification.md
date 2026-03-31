@@ -5,7 +5,7 @@ description: "A blueprint of standards, benchmarks, registries, and audits for t
 article_type: Platform
 subtitle: "Use the logic of PDB x BIDS x PhysioNet x OSF to define WBE success conditions and reproducible progress"
 author: Mind Uploading Research Project
-last_updated: "2026-03-31"
+last_updated: "2026-04-01"
 note: "Operational Specification"
 audience: "Readers who want the site's core policy and anyone checking what must exist before progress can honestly be claimed"
 reading_time: "15-25 min"
@@ -20,6 +20,7 @@ page_highlights:
   - "The next bottleneck after observability is identifiability-driven experiment design: extra modalities do not count as progress unless they rule out competing internal-state solutions."
   - "For foundation / self-supervised EEG results, the Pretraining Card fixes corpus identity, overlap audit, setup diversity, harmonization, adaptation regime, benchmark object / supervision unit, benchmark provenance including split randomness / hidden grouping and inference-stage budget, and scale / efficiency before any transfer claim is read strongly."
   - "For brain-to-text and speech decode, the Neural Contribution Card fixes task constraint, language prior, candidate set, no-brain / no-LM / shuffle baselines, and subject cooperation."
+  - "For invasive language BCIs, communication claims are now also route-typed as throughput / expressivity, transfer initialization, bounded fixed-decoder slices, or adaptive rescue before any durability claim is read strongly."
   - "For multimodal or atlas-prior results, the Fusion Card is added on top of the Observability Budget so acquisition relation, synchronization, fusion model, availability / complete-case slice, vascular-state / CVR limits for hemodynamic stacks, transfer window, and external validation are fixed explicitly."
   - "For living-human proxy bundles, the Human Proxy Composition Card fixes direct observable by row, same-subject relation, effective time window / state axis, physiological / perturbation regime compatibility, repeatability / transfer window, model burden, incremental evidence, and residual latent-state ceiling before several proxy routes may be promoted together."
   - "For living-human proxy bundles, the card now also requires agreement / disagreement topology plus a resolution policy, because bundle gains can coexist with concentrated discordance in hard subgroups."
@@ -1912,6 +1913,11 @@ The remaining weakness after the <strong>Specificity &amp; Shortcut Card</strong
 <td>An offline or short-horizon communication result is too easily misread as a deployable continuous interface.</td>
 </tr>
 <tr>
+<td><strong>communication route type / temporal claim</strong></td>
+<td>For invasive language or speech BCIs, state whether the paper supports same-session throughput / expressivity, cross-subject transfer initialization, a bounded fixed-decoder slice, or adaptive rescue; report any no-new-day-training comparator, subject-specific fine-tuning, and time since last supervised calibration that defines that route.</td>
+<td>Communication-route papers collapse into one fake ladder from output quality to participant-invariant durable decoding.</td>
+</tr>
+<tr>
 <td><strong>stopped claim / residual ceiling</strong></td>
 <td>Write in one line which unresolved routes remain, such as prompt dependence, candidate-bank dependence, known-onset dependence, cooperation dependence, modality asymmetry, or lack of intervention validation, and state the highest claim ceiling allowed.</td>
 <td>"A sentence came out" is silently promoted to unrestricted thought reading, internal-state identification, or WBE-relevant reconstruction.</td>
@@ -1922,6 +1928,12 @@ The remaining weakness after the <strong>Specificity &amp; Shortcut Card</strong
 <strong>Open-vocabulary and generative are not one solved category</strong>
 <p>
 This site now separates at least four non-invasive language routes: <strong>within-subject semantic reconstruction</strong>, <strong>segment retrieval from a fixed candidate bank</strong>, <strong>known-onset word decoding</strong>, and <strong>prompt-conditioned generation</strong>. They improve different objects. Tang (2023) does not fix word-level timing. Défossez (2023) does not remove the candidate-segment structure. d'Ascoli (2025) does not remove known onsets or protocol asymmetry. Ye (2025) does not remove prompt / LLM dependence. Therefore, "open-vocabulary" or "generative" is not accepted here as a shortcut for unrestricted neural language readout.
+</p>
+</div>
+<div class="note-box">
+<strong>Invasive language BCIs are not one temporal-validity route either</strong>
+<p>
+The same caution now applies to invasive communication papers. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> support different <strong>throughput / expressivity</strong> routes under bounded output contracts. <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh et al. (2025)</a> supports a separate <strong>cross-subject transfer-initialization</strong> route. <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a> and <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> support <strong>adaptive rescue / recalibration</strong> under accumulating neural change. On this site, those papers do not share one durability claim by default.
 </p>
 </div>
 <div class="note-box">
@@ -2703,7 +2715,7 @@ In response to technical criticisms (Issue #257-#260) submitted in the latter ha
 <li><strong>Effective Connectivity Route Card:</strong>When reporting DCM or related effective-connectivity results, name the node set and omitted competitors, observed-subsystem closure / latent-confound audit, node-definition policy, processing / first-level design policy, neural-mass / HRF / prior assumptions plus sampling / transformation sensitivity, family comparison or model-recovery results, perturbation / external validation route, reliability window, and abstention boundary. If this is missing, the result stays at the model-conditioned hypothesis level. </li>
 <li><strong>Pretraining Card:</strong>When reporting a foundation / self-supervised EEG result, name corpus identity and overlap audit, setup diversity, harmonization policy, adaptation regime, benchmark object / supervision unit, benchmark provenance, scale / efficiency, and the stopped claim. If this is missing, the result stays at the qualified representation-learning / decoding level. </li>
 <li><strong>Body / Environment Boundary Card:</strong>For online human-in-the-loop or embodied tasks, name retained / substituted sensory, motor, and interoceptive channels, the surrogate body / environment contract, loop-removal tests, OOD environment slices, and the abstention boundary. If this is missing, the result stays at the local-controller level. </li>
-<li><strong>Co-Adaptation Log:</strong>For online human-in-the-loop results, name whether the decoder, thresholds, smoothing, prompt or control scaffold, and interface rules were frozen or updated, the trigger and cadence of each update, any fixed-policy or open-loop comparator blocks, practice dose and instruction changes, and whether the apparent gain is attributed to user learning, decoder adaptation, or mixed causes. If this is missing, the result stays at same-session local-controller or co-adaptive-package evidence rather than fixed-decoder stability. </li>
+<li><strong>Co-Adaptation Log:</strong>For online human-in-the-loop results, name whether the decoder, thresholds, smoothing, prompt or control scaffold, and interface rules were frozen or updated, the trigger and cadence of each update, any fixed-policy or open-loop comparator blocks, practice dose and instruction changes, and whether the apparent gain is attributed to user learning, decoder adaptation, or mixed causes. For invasive language or speech BCIs, also state whether the result is being read as same-session throughput / expressivity, transfer initialization, a bounded fixed-decoder slice, or adaptive rescue. If this is missing, the result stays at same-session local-controller or co-adaptive-package evidence rather than fixed-decoder stability. </li>
 <li><strong>Phase-Targeting Log:</strong>For phase-locked stimulation or phase-triggered observation, name the target band and channel / spatial filter, oscillation gate (power, SNR, phase-reset rejection, no-stim rate), causal estimator family and post-hoc benchmark, trigger-time circular targeting metric, off-target or random-phase comparator, and whether the preferred phase was fixed or adaptively updated across sessions. If this is missing, the result stays at exploratory state-dependent timing evidence rather than validated phase-specific control. </li>
 <li><strong>Burst-Controller Log:</strong>For burst-driven neuromodulation or adaptive DBS, name the biomarker family and symptom target, sensing contacts / signal-to-noise / artifact exclusions, controller family (single threshold, dual threshold, proportional, inverse, or decoder-based), movement / medication / rest regime, floor / ceiling amplitude, update interval / onset duration / ramp policy, biomarker-linked comparator and any TEED or duty-cycle matching rule, and rescue or programming burden. If this is missing, the result stays at exploratory burst-trigger timing evidence or personalized-controller feasibility rather than validated symptom-linked control. </li>
 <li><strong>Preprocessing Fidelity Log:</strong>Records before and after spectra, exclusion/interpolation rates, changes in key metrics, and at least one task-consistent signal preservation metric, with or without ASR. </li>
@@ -2811,6 +2823,8 @@ In this repository, we do not make thermodynamic indicators a "required submissi
 <li>Willett, F. R., et al. (2023). A high-performance speech neuroprosthesis. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
 <li>Littlejohn, K. T., et al. (2025). A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
 <li>Wairagkar, M., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+<li>Singh, A., Thomas, T., Li, J., et al. (2025). Transfer learning via distributed brain recordings enables reliable speech decoding. <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">doi:10.1038/s41467-025-63825-0</a></li>
+<li>Karpowicz, B. M., O'Shea, D. J., Wyche, S., et al. (2025). Stabilizing brain-computer interfaces through alignment of latent dynamics. <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">doi:10.1038/s41467-025-59652-y</a></li>
 <li>Flesher, S. N., et al. (2021). A brain-computer interface that evokes tactile sensations improves robotic arm control. <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
 <li>Wilson, G. H., et al. (2025). Long-term unsupervised recalibration of intracortical brain-computer interfaces using a hidden Markov model. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
 <li>Orsborn, A. L., Moorman, H. G., Overduin, S. A., Shanechi, M. M., Dimitrov, D. F., &amp; Carmena, J. M. (2014). Closed-loop decoder adaptation shapes neural plasticity for skillful neuroprosthetic control. <a href="https://doi.org/10.1016/j.neuron.2014.04.048" target="_blank">doi:10.1016/j.neuron.2014.04.048</a></li>
