@@ -1,16 +1,16 @@
 ---
 layout: default
 title: "Wiki: Closed Loop, Delay, Jitter, Safe Stop"
-description: "Delay, jitter, tail latency, fixed-decoder durability, recalibration burden, deployment eligibility, and the body/environment boundary are organized from primary literature for each type of closed loop."
+description: "Delay, jitter, biomarker/controller family, fixed-decoder durability, recalibration burden, deployment eligibility, and the body/environment boundary are organized from primary literature for each type of closed loop."
 article_type: Wiki
 subtitle: "Closed-loop time requirements are not a single number; they vary by loop type"
 author: Mind Uploading Research Project
-last_updated: "2026-03-30"
+last_updated: "2026-03-31"
 note: "Learning guide / evidence refresh"
 audience: "People who want to read about L3 closed-loop evaluation and real-time operation based on literature rather than general information"
 reading_time: "14-22 minutes"
-page_intro: "This page is a wiki that organizes delay, jitter, drift, safety stop, body/environment boundary, and long-horizon deployability in Mind-Upload's L3 'closed loop' using primary literature. The purpose is to clarify that even when offline accuracy is high, the required timing budget depends on the loop band and actuator, and low latency alone does not tell you which sensory, motor, interoceptive, reafferent, or slow internal-milieu routes were actually preserved, whether a fixed decoder survived across time, or how much rescue-mode programming was needed."
-accuracy_note: "Here, we do not set a ``fixed threshold common to all loops.'' We also do not treat a fast loop as boundary-complete, temporally durable, or chronically deployable by default. Judgments are written on the premise that end-to-end timing indicators, retained/substituted body/environment routes, slow internal-milieu routes, fixed-decoder interval, co-adaptation regime, rescue-mode adaptation burden, deployment slices, and, for phase-targeting loops, oscillation estimability plus causal-versus-post-hoc targeting benchmarks are disclosed explicitly."
+page_intro: "This page is a wiki that organizes delay, jitter, drift, safety stop, body/environment boundary, and long-horizon deployability in Mind-Upload's L3 'closed loop' using primary literature. The purpose is to clarify that even when offline accuracy is high, the required timing budget depends on the loop band and actuator, and low latency alone does not tell you which sensory, motor, interoceptive, reafferent, or slow internal-milieu routes were actually preserved, whether a fixed decoder survived across time, how much rescue-mode programming was needed, or, for burst-driven neuromodulation, which biomarker and controller were actually operating."
+accuracy_note: "Here, we do not set a ``fixed threshold common to all loops.'' We also do not treat a fast loop as boundary-complete, temporally durable, or chronically deployable by default. Judgments are written on the premise that end-to-end timing indicators, retained/substituted body/environment routes, slow internal-milieu routes, fixed-decoder interval, co-adaptation regime, rescue-mode adaptation burden, deployment slices, and, for phase-targeting loops, oscillation estimability plus causal-versus-post-hoc targeting benchmarks, and, for burst-driven loops, biomarker family plus controller policy are disclosed explicitly."
 page_highlights:
   - "Closed-loop time requirements vary by loop type, not by a single ms value."
   - "Low latency is not the same as reproducing the relevant body/environment boundary, because the fast loop and the slow internal milieu are different audits."
@@ -19,8 +19,9 @@ page_highlights:
   - "Even if the event marker is less than 1 ms, it is a different matter from guaranteeing end-to-end for the entire system."
   - "Phase error is more important than ms for phase-targeting, and for adaptive DBS the timing story now has to be separated from fixed-decoder durability, programming burden, and eligibility."
   - "For phase-targeted stimulation, low mean latency is still not enough: oscillation presence / power / SNR gate, causal estimator benchmark, circular targeting error, and no-stim / missed-trigger rates must be separated."
+  - "For burst-driven neuromodulation, the main question is no longer burst timing alone: biomarker family, controller mode, movement / medication state, sensing compatibility, and biomarker-linked comparator have to be separated."
   - "Streaming speech BCI needs to record not only average delay but also tail latency, output-path audit, silence/hold-last-output, and fixed-decoder horizon in separate logs."
-  - "Adaptive-DBS papers need to log rescue-mode optimization, clinic/home transfer, eligibility, and continuation separately from symptom benefit."
+  - "Adaptive-DBS papers need to log rescue-mode optimization, clinic/home transfer, eligibility, continuation, and biomarker/controller choice separately from symptom benefit."
 known_points:
   - "Offline accuracy and closed-loop stability are separate claims and cannot be audited with the same score."
   - "Even a fast loop can remain boundary-incomplete if self-motion, predicted reafference, tactile feedback, respiration, arousal, circadian phase, glucocorticoid state, insulin / metabolic regime, or other subject-defining routes stay omitted or undisclosed."
@@ -29,14 +30,18 @@ known_points:
   - "Closed-loop gains can come from co-adaptation of the user, decoder, and application rather than from a stable fixed decoder alone."
   - "Fixed-decoder durability and rescue-mode recalibration are separate evidence objects; one can fail while the other still rescues behavior."
   - "Reliable phase locking is not the same as a reliable physiological or behavioral effect, and neither one fixes a stable optimal phase across sessions."
+  - "Burst-driven neuromodulation is not one controller family: beta power, beta burst duration, entrained gamma, dyskinesia-linked narrowband gamma, and movement-responsive decoder policies do not constrain the same symptom axis or operate on the same timescale."
+  - "Subthalamic beta is modulated by movement, dopaminergic medication, and stimulation itself, so a beta feedback signal tuned in one regime is not automatically valid in another."
   - "Speed-up within-session alone is not enough; it also leaves fixed-decoder horizon, recalibration burden, clinic/home transition, and programming burden."
   - "Chronic adaptive-DBS symptom benefit, eligibility, and long-run continuation are different axes and should not be collapsed into one deployment verdict."
 unknown_points:
   - "It is unclear how far the closed-loop bandwidth required for WBE spans which loop types."
   - "It is not yet possible to generalize the precision required for phase-specific control to all tasks in non-invasive human experiments."
+  - "It is not yet fixed which biomarker/controller pairing best generalizes across bradykinesia, gait impairment, dyskinesia control, and chronic home use in adaptive DBS."
   - "What counts as an acceptable fixed-decoder horizon before rescue-mode adaptation becomes a different operating regime still depends on task and modality."
   - "How fast or slow co-adaptation should be to help the user without hiding instability still depends on loop type, modality, and task."
   - "How a phase-targeting protocol should adapt when the optimal phase drifts within-session or across sessions still depends on band, task, and subject."
+  - "How burst-driven loops should adapt when biomarker controllability changes with movement, medication cycle, contact choice, or artifact remains unsettled."
   - "What is considered 'unstable' or 'impractical' in terms of drift, recalibration frequency, eligibility, continuation, and programming burden during long-term operation depends on the task."
 wiki_links:
   - label: "Wiki: Event synchronization and observation log"
@@ -104,6 +109,12 @@ The remaining blind spot was that the page could still let readers treat <strong
 <strong>2026-03-28 second re-audit: phase-targeting needs an estimability wall</strong>
 <p>
 One more shortcut remained. The page still allowed a reader to think that once a phase-targeted loop reports <strong>low latency</strong> and some <strong>phase error distribution</strong>, the main technical burden is already satisfied. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuroimage.2020.116761" target="_blank">Zrenner et al. (2020)</a> showed that meaningful phase estimation itself degrades when oscillatory amplitude and SNR are low. <a href="https://doi.org/10.3389/fnhum.2021.691821" target="_blank">Gordon et al. (2021)</a> then showed that prefrontal theta targeting required extra constraints to avoid low-amplitude and phase-reset epochs. <a href="https://doi.org/10.1111/ejn.14931" target="_blank">Vigué-Guix et al. (2022)</a> achieved reliable trial-to-trial alpha phase locking yet did not obtain a consistent behavioral benefit, which means targeting success and functional effect must be kept separate. <a href="https://doi.org/10.1523/ENEURO.0050-23.2023" target="_blank">Kim et al. (2023)</a> showed across 11 public datasets that higher power and SNR improve prediction accuracy and that waiting for eligible epochs matters more than forcing one cognitive state. Finally, <a href="https://doi.org/10.1016/j.brs.2025.09.019" target="_blank">Hougland et al. (2025)</a> showed within-session fluctuations and low test-retest reliability of the optimal mu-phase. Therefore, phase-targeted stimulation on this site is now read through an <strong>estimability / targeting / effect / stability stack</strong>, not one timing number.
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-31 re-audit: burst-driven neuromodulation needs a controller wall too</strong>
+<p>
+Another shortcut remained on the adaptive-DBS side. The page still let a reader treat <strong>burst timing</strong> or <strong>beta-trigger latency</strong> as if that were the main technical burden once phase-targeting had already been split more carefully. The newer primary literature does not support that shortcut. <a href="https://doi.org/10.1038/s41531-024-00693-3" target="_blank">Mathiopoulou et al. (2024)</a> showed that subthalamic beta is modulated differently by movement, medication, and stimulation. <a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">Stanslaski et al. (2024)</a> showed that single-threshold and dual-threshold aDBS are different control modes with different timescales and therapeutic goals. <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">Oehrn et al. (2024)</a>, <a href="https://doi.org/10.1093/brain/awae004" target="_blank">Olaru et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41467-025-58132-7" target="_blank">Mathiopoulou et al. (2025)</a> then showed that <strong>entrained gamma</strong>, <strong>dyskinesia-linked narrowband gamma</strong>, and <strong>personalized high-versus-low dopaminergic-state markers</strong> do not constrain the same symptom axis. <a href="https://doi.org/10.1038/s41531-025-01124-7" target="_blank">Busch et al. (2025)</a> and <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">Cascino et al. (2026)</a> further showed that sensing compatibility, threshold setting, signal artifacts, and patient eligibility remain concrete bottlenecks. Therefore, burst-driven neuromodulation on this site is now read through a <strong>biomarker / controller / delivery / effect / deployability stack</strong>, not one burst-timing story.
 </p>
 </div>
 
@@ -223,8 +234,8 @@ If the paper does not disclose which sensory, action, interoceptive, self-genera
 <tr>
 <td><strong>burst/state-triggered neuromodulation</strong></td>
 <td>Adaptive DBS using beta burst. </td>
-<td>Little et al. (2013) demonstrated the proof-of-principle of using pathological beta for feedback, and Tinkhauser et al. (2017) showed that adaptive DBS changes the distribution of short bursts of <strong>100–600 ms</strong> and long bursts of >600 ms. Domination time is slower than phase-locking. </td>
-<td>biomarker detection delay, burst false positive/false negative, ramp-up/ramp-down, number of stops. </td>
+<td>Little et al. (2013) and Tinkhauser et al. (2017) established beta-based feedback, but Mathiopoulou et al. (2024), Stanslaski et al. (2024), Oehrn et al. (2024), Olaru et al. (2024), Busch et al. (2025), Mathiopoulou et al. (2025), and Cascino et al. (2026) show that the main burden is no longer burst timing alone but <strong>which biomarker is being controlled</strong>, <strong>which controller mode is used</strong>, and <strong>whether sensing and programming remain viable</strong>. </td>
+<td>biomarker family / symptom target, sensing contacts / signal-to-noise, controller mode, update interval / onset duration / ramp policy, false positive/negative, artifact-triggered resets, comparator condition, and rescue/programming burden. </td>
 </tr>
 </tbody>
 </table>
@@ -281,6 +292,67 @@ The older wording on this page already separated <strong>phase error</strong> fr
 <strong>Revision rule on this site</strong>
 <p>
 If a phase-targeted loop reports only milliseconds or only a single average phase error, this page does not promote it to validated phase-specific control. The minimum readable object is a <strong>declared target band with an estimability gate</strong>, a <strong>causal-versus-post-hoc benchmark</strong>, <strong>circular targeting metrics</strong>, a <strong>functional comparator</strong>, and a <strong>fixed-versus-adaptive phase policy</strong>.
+</p>
+</div>
+</section>
+
+<section class="section" id="burst-controller-wall">
+<h2 class="section-title">Burst-driven neuromodulation is controller-limited, not just burst-timed</h2>
+<p>
+The older wording on this page already said that burst-triggered neuromodulation is slower than phase-locking. That was directionally correct, but it was still too coarse. Current primary literature shows that an adaptive-DBS loop can fail or change meaning for at least five different reasons: the chosen biomarker may track a different symptom axis, the biomarker may be modulated by movement / medication / stimulation state, the controller law may operate on a different timescale, sensing contacts and artifacts may constrain whether the loop can even run, and a biomarker-linked control signal may still fail to show unique clinical superiority over an energy-matched comparator. Therefore, this site now reads burst-driven neuromodulation through the following stack rather than a single burst-timing figure.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Layer to separate</th>
+<th>What the primary literature supports</th>
+<th>What must be logged</th>
+<th>What it still does not prove</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>biomarker family / symptom target</strong></td>
+<td><a href="https://doi.org/10.1002/ana.23951" target="_blank">Little et al. (2013)</a> and <a href="https://doi.org/10.1093/brain/awx010" target="_blank">Tinkhauser et al. (2017)</a> constrain a <strong>beta-burst antikinetic route</strong>, <a href="https://doi.org/10.1093/brain/awae004" target="_blank">Olaru et al. (2024)</a> constrains a <strong>dyskinesia-linked narrowband-gamma route</strong>, <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">Oehrn et al. (2024)</a> used <strong>personalized high-versus-low dopaminergic-state markers</strong>, and <a href="https://doi.org/10.1038/s41467-025-58132-7" target="_blank">Mathiopoulou et al. (2025)</a> constrains <strong>entrained gamma as a prokinetic biomarker candidate</strong>. Those are not the same control object.</td>
+<td>Signal family, frequency band, anatomical source, intended symptom axis, and whether the signal is read as antikinetic beta, dyskinesia-linked gamma, entrained prokinetic gamma, or another personalized state marker.</td>
+<td>That one adaptive-DBS signal generalizes across bradykinesia, gait impairment, dyskinesia, and medication-state control.</td>
+</tr>
+<tr>
+<td><strong>state dependence / controllability</strong></td>
+<td><a href="https://doi.org/10.1038/s41531-024-00693-3" target="_blank">Mathiopoulou et al. (2024)</a> showed that movement, dopaminergic medication, and DBS each modulate subthalamic beta differently, while <a href="https://doi.org/10.1038/s41531-025-01124-7" target="_blank">Busch et al. (2025)</a> documented that useful beta-threshold setting depends on patient-specific long-term modulation and can be misread by in-clinic snapshots alone.</td>
+<td>Medication state, rest versus movement slices, controllability test of the candidate signal, band-width or peak-selection rule, and whether thresholds were derived from clinic-only or chronic home data.</td>
+<td>That a signal tuned at rest or in one medication state stays equally informative during naturalistic behavior.</td>
+</tr>
+<tr>
+<td><strong>controller mode / timescale</strong></td>
+<td><a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">Stanslaski et al. (2024)</a> showed that ADAPT-PD uses <strong>single-threshold</strong> control with <strong>250 ms</strong> amplitude changes and <strong>dual-threshold</strong> control with <strong>2.5 min up / 5 min down</strong> adjustment plus a programmable <strong>1.2–2 s onset</strong>, while <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12268161/" target="_blank">Wilkins et al. (2025)</a> used a <strong>beta-burst-duration controller</strong> with a therapeutic floor, ceiling, and slow ramp policy for gait / freezing-of-gait.</td>
+<td>Controller family, single- versus dual-threshold or other policy class, update interval, onset duration, floor/ceiling amplitude, ramp rate, and whether one or both hemispheres drive the control law.</td>
+<td>That two aDBS papers used the same control strategy simply because both were called adaptive or beta-based.</td>
+</tr>
+<tr>
+<td><strong>sensing compatibility / artifact burden</strong></td>
+<td><a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">Stanslaski et al. (2024)</a> reported that participants could exit ADAPT-PD because of <strong>signal artifact</strong>, inadequate LFP signal, or no acceptable aDBS mode, and <a href="https://doi.org/10.1038/s41531-025-01124-7" target="_blank">Busch et al. (2025)</a> showed no visible beta peak in <strong>3/16 hemispheres</strong>, unilateral sensing in <strong>4/8 patients</strong>, threshold drift, and outlier distortion during setup. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12268161/" target="_blank">Wilkins et al. (2025)</a> likewise required sense-friendly configurations and slower ramps to reduce stimulation artefacts.</td>
+<td>Sensing contacts, signal-to-noise, unilateral versus bilateral sensing, excluded hemispheres, artifact-detection rule, threshold reset events, and whether the signal remained usable during movement and stimulation.</td>
+<td>That the controller would have been available under ordinary contact settings or chronic use without extra debugging and exclusions.</td>
+</tr>
+<tr>
+<td><strong>biomarker-linked control versus clinical effect</strong></td>
+<td><a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">Oehrn et al. (2024)</a> showed improved motor symptoms and quality of life with personalized adaptive DBS in a four-patient pilot, but <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12268161/" target="_blank">Wilkins et al. (2025)</a> found that a <strong>randomly adapting</strong> DBS control with matched therapeutic window and TEED still performed similarly to cDBS and aDBS at group level on several acute metrics, which means biomarker linkage and clinical superiority are separate evidence objects.</td>
+<td>cDBS comparator, random / inverted / surrogate comparator when available, TEED or duty-cycle matching rule, chosen symptom endpoint, and the stopped claim when the biomarker tracks a state but does not show unique clinical benefit.</td>
+<td>That better biomarker tracking or a cleaner controller trace automatically produced unique symptom-level superiority.</td>
+</tr>
+<tr>
+<td><strong>deployability / programming burden</strong></td>
+<td><a href="https://doi.org/10.1038/s41531-025-01124-7" target="_blank">Busch et al. (2025)</a>, <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">Cascino et al. (2026)</a>, and <a href="https://doi.org/10.1038/s41551-025-01438-0" target="_blank">Dixon et al. (2026)</a> show that home use still depends on programming workflow, remote or manual rescue, eligibility, and continuation. In ADAPT-START, only <strong>9 of 20</strong> consecutive chronic cDBS patients were eligible and <strong>5</strong> remained on chronic aDBS by July 2025.</td>
+<td>Screened n, exclusion reasons, programming visits, remote or manual optimization route, home slice, continuation, and the manpower / time burden of maintaining the controller.</td>
+<td>That a controller with an interesting biomarker is already routine, broadly eligible, or low-burden clinical care.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Revision rule on this site</strong>
+<p>
+If a burst-driven loop reports only burst duration or only one average timing number, this page does not promote it to validated symptom-linked adaptive control. The minimum readable object is a <strong>named biomarker family and symptom target</strong>, a <strong>state-dependence / controllability audit</strong>, a <strong>declared controller mode with timescale</strong>, a <strong>sensing / artifact burden audit</strong>, a <strong>biomarker-linked comparator</strong>, and a <strong>deployment slice</strong>.
 </p>
 </div>
 </section>
@@ -559,7 +631,7 @@ Whether it's ``I didn't get it right so I won't output it'', ``I'm going to use 
 <li><strong>credit-assignment probe:</strong>Keep fixed-policy or open-loop probe blocks so gains can be compared with and without closed-loop correction or online updates.</li>
 <li><strong>Additional metrics for speech / streaming: </strong>Leave cue-to-output tail latency, audio driver latency, silence / hold-last-output rate, and false speech rate. </li>
 <li><strong>Additional metrics for phase-targeting systems:</strong>Target band and spatial filter, power/SNR gate, no-stim rate, causal-versus-post-hoc benchmark, mean phase offset, circular spread or equivalent circular metric, trigger-time phase-locking statistic, missed trigger, and any fixed-versus-adaptive phase policy. </li>
-<li><strong>Additional metrics for burst systems:</strong>Burst detection delay, false positive/negative, and the ramp-up/ramp-down policy. </li>
+<li><strong>Additional metrics for burst systems:</strong>Name biomarker family and symptom target, sensing contacts and signal-to-noise, controller mode, medication / movement state, floor/ceiling amplitude, update interval / onset duration / ramp policy, false positive/negative, artifact-triggered resets, comparator condition, and any TEED / duty-cycle matching rule. </li>
 <li><strong>residual omitted loops / abstention boundary:</strong>State which body/environment routes remain absent and what stronger claim therefore remains forbidden. </li>
 <li><strong>Abstain/freeze/safety stop:</strong>Leave the number of activations, previous state, and return conditions. </li>
 <li><strong>fixed decoder interval / training-free horizon:</strong>State how long the system was required to run before any supervised or unsupervised update was allowed. </li>
@@ -572,7 +644,7 @@ Whether it's ``I didn't get it right so I won't output it'', ``I'm going to use 
 </section>
 
 <section class="section" id="how-to-read">
-<h2 class="section-title">14 questions when reading L3 arguments</h2>
+<h2 class="section-title">16 questions when reading L3 arguments</h2>
 <ol>
 <li><strong>Does it say which loop class it deals with?</strong> Check whether slow feedback, speech streaming, phase-locked, and aDBS are mentioned in the same table. </li>
 <li><strong>Does it declare which body/environment boundary it actually used?</strong> Check whether the paper fixes the target subsystem and names preserved, substituted, and omitted loops instead of only saying "closed loop."</li>
@@ -580,9 +652,11 @@ Whether it's ``I didn't get it right so I won't output it'', ``I'm going to use 
 <li><strong>Was any decisive loop component removed or scrambled?</strong> Check whether feedback-removal or sensory-ablation tests were run, rather than assuming robustness. </li>
 <li><strong>Are there module-wise measurements, not just end-to-end?</strong> Don't just rely on software timestamps; check which of the input, inference, and output paths are rate-limiting. </li>
 <li><strong>For speech / streaming, are silence and output path displayed?</strong> Check whether false speech, audio driver, or hold-last-output are hidden. </li>
-<li><strong>Is delay mapped to phase error or burst time?</strong> Check whether the paper goes beyond a single ms value when phase or burst timing is what matters. </li>
+<li><strong>Is delay mapped to phase error, burst timing, or controller-update timescale?</strong> Check whether the paper goes beyond a single ms value when phase targeting or adaptive stimulation policy is what matters. </li>
 <li><strong>For phase-targeted loops, does it show the oscillation was estimable before triggering?</strong> Check whether power/SNR thresholds, no-stim epochs, and phase-reset rejection were declared rather than assuming every band-passed epoch has meaningful phase.</li>
 <li><strong>For phase-targeted loops, does it separate targeting success from functional effect and from phase stability?</strong> Check whether the paper reports circular targeting precision, off-target or random-phase comparators, and whether the preferred phase was fixed or drifted across time. </li>
+<li><strong>For burst-driven loops, does it name the biomarker family and symptom target?</strong> Check whether the paper distinguishes beta, beta-burst duration, entrained gamma, dyskinesia-linked gamma, or another personalized marker rather than saying only "adaptive DBS."</li>
+<li><strong>For burst-driven loops, does it disclose controller mode, state dependence, and comparator?</strong> Check whether medication / movement dependence, single versus dual threshold or other policy, artifact burden, and cDBS or random / surrogate comparators are shown rather than only burst-trigger timing. </li>
 <li><strong>Does it separate user learning, decoder updates, and interface redesign?</strong> Check whether the gain could come from co-adaptation rather than from a stable fixed decoder. </li>
 <li><strong>Does it separate fixed-decoder durability from adaptive rescue?</strong> Check whether the paper shows the no-update slice rather than reporting only the post-update result. </li>
 <li><strong>If rescue happened, is the rescue cost shown?</strong> Check whether staff time, parameter changes, remote optimization, or unsupervised adaptation are hidden. </li>
@@ -609,6 +683,9 @@ Whether it's ``I didn't get it right so I won't output it'', ``I'm going to use 
 <li>Hougland JR, Kirchhoff M, Vetter DE, Ahola O, Jooß A, Humaidan D, Ziemann U. Fluctuations in the optimal sensorimotor mu-rhythm phase associated with high corticospinal excitability during TMS-EEG. <em>Brain Stimul.</em> 2025;18(6):1843-1851. <a href="https://doi.org/10.1016/j.brs.2025.09.019" target="_blank">doi:10.1016/j.brs.2025.09.019</a></li>
 <li>Little S, Pogosyan A, Neal S, et al. Adaptive deep brain stimulation in advanced Parkinson disease. <em>Ann Neurol.</em> 2013;74(3):449-457. <a href="https://doi.org/10.1002/ana.23951" target="_blank">doi:10.1002/ana.23951</a></li>
 <li>Tinkhauser G, Pogosyan A, Little S, et al. The modulatory effect of adaptive deep brain stimulation on beta bursts in Parkinson's disease. <em>Brain.</em> 2017;140(4):1053-1067. <a href="https://doi.org/10.1093/brain/awx010" target="_blank">doi:10.1093/brain/awx010</a></li>
+<li>Mathiopoulou V, Lofredi R, Feldmann LK, et al. Modulation of subthalamic beta oscillations by movement, dopamine, and deep brain stimulation in Parkinson's disease. <em>npj Parkinsons Dis.</em> 2024;10:77. <a href="https://doi.org/10.1038/s41531-024-00693-3" target="_blank">doi:10.1038/s41531-024-00693-3</a></li>
+<li>Stanslaski S, Summers RLS, Tonder L, et al. Sensing data and methodology from the Adaptive DBS Algorithm for Personalized Therapy in Parkinson's Disease (ADAPT-PD) clinical trial. <em>npj Parkinsons Dis.</em> 2024;10:174. <a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">doi:10.1038/s41531-024-00772-5</a></li>
+<li>Olaru M, et al. Motor network gamma oscillations in chronic home recordings predict dyskinesia in Parkinson's disease. <em>Brain.</em> 2024;147:2038-2052. <a href="https://doi.org/10.1093/brain/awae004" target="_blank">doi:10.1093/brain/awae004</a></li>
 <li>Appelhoff S, Stenner T. In COM we trust: Feasibility of USB-based event marking. <em>Behav Res Methods.</em> 2021;53(6):2450-2455. <a href="https://doi.org/10.3758/s13428-021-01571-z" target="_blank">doi:10.3758/s13428-021-01571-z</a></li>
 <li>Kothe C, Shirazi SY, Stenner T, et al. The lab streaming layer for synchronized multimodal recording. <em>Imaging Neurosci.</em> 2025;3:IMAG.a.136. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
 <li>Keller GB, Bonhoeffer T, Hubener M. Sensorimotor mismatch signals in primary visual cortex of the behaving mouse. <em>Neuron.</em> 2012;74(5):809-815. <a href="https://doi.org/10.1016/j.neuron.2012.03.040" target="_blank">doi:10.1016/j.neuron.2012.03.040</a></li>
@@ -622,6 +699,8 @@ Whether it's ``I didn't get it right so I won't output it'', ``I'm going to use 
 <li>Raut RV, Rosenthal ZP, Wang X, et al. Arousal as a universal embedding for spatiotemporal brain dynamics. <em>Nature.</em> 2025;647:454-461. <a href="https://doi.org/10.1038/s41586-025-09544-4" target="_blank">doi:10.1038/s41586-025-09544-4</a></li>
 <li>Littlejohn KT, Dabagia M, Ladwig A, et al. A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <em>Nat Neurosci.</em> 2025. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
 <li>Wairagkar M, Card NS, Singer-Clark T, et al. An instantaneous voice-synthesis neuroprosthesis. <em>Nature.</em> 2025. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+<li>Mathiopoulou V, Habets J, Feldmann LK, et al. Gamma entrainment induced by deep brain stimulation as a biomarker for motor improvement with neuromodulation. <em>Nat Commun.</em> 2025;16:2956. <a href="https://doi.org/10.1038/s41467-025-58132-7" target="_blank">doi:10.1038/s41467-025-58132-7</a></li>
+<li>Wilkins KB, Melbourne JA, Akella P, et al. Beta burst-driven adaptive deep brain stimulation for gait impairment and freezing of gait in Parkinson's disease. <em>Brain Commun.</em> 2025. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12268161/" target="_blank">PMCID: PMC12268161</a></li>
 <li>Wilson GH, Stein EA, Kamdar F, et al. Long-term unsupervised recalibration of intracortical brain-computer interfaces using a hidden Markov model. <em>Nat Biomed Eng.</em> 2025. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
 <li>Oehrn CR, Roediger J, Diehl A, et al. Chronic adaptive deep brain stimulation versus conventional stimulation in Parkinson's disease: a blinded randomized feasibility trial. <em>Nat Med.</em> 2024. <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">doi:10.1038/s41591-024-03196-z</a></li>
 <li>Cascino S, Roediger J, Oehrn C, et al. Chronic adaptive deep brain stimulation in Parkinson's disease: ADAPT-START findings and programming principles. <em>npj Parkinsons Dis.</em> 2026. <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">doi:10.1038/s41531-026-01269-z</a></li>
