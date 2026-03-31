@@ -39,14 +39,14 @@ A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-f
 
 - `G1/G2` are routing keys used to keep the RQ-level application lanes stable. They are not current grant-card files.
 - Current grant-card entities are `G3-G6`, and the practical shortlist is now fixed in [AoyamaLab/auto-research-funds wiki: Mind-Upload-Current-Funding-Shortlist](https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md).
-- The six currently revalidated deep-focus RQs are `U13-2`, `U13-5`, `U14-4`, `U0-2`, `U0-3`, and `U14-2`.
+- The six currently revalidated deep-focus RQs are `U13-2`, `U13-5`, `U0-2`, `U0-3`, `U14-4`, and `U14-2`.
 - The public route is now intentionally concentrated on `inner-speech decoding + identity drift + reproducibility auditing`, with `D10/D03/D01/D02` used as the conservative anchor family.
 - A March 31 access audit at `2026-03-31 00:20 JST` narrows the current reading: `D10` is the only clearly public-open primary anchor in this family. `D03`, `D02`, and `D01` currently resolve to IEEE DataPort pages that show `LOGIN TO ACCESS DATASET FILES` and `Subscription Required`, so public wording should treat them only as subscription-gated support anchors.
 - The practical funding bridge for this batch is led by `Nakatani Foundation graduate scholarship` and `Kura Fund`; the `Kashinome Scholarship` stays only as a student-runway side route, and the `Nakatani Foundation research grant` remains a watch-mode route rather than a current open call.
 - The overnight March 31 recheck still leaves the route unchanged after the latest `EEG-DATA` upstream additions, because those additions do not replace `D10` as the public-open anchor and do not turn `D03/D02/D01` into immediate public routes.
 - Relevant Todoist tasks for the practical shortlist already existed before this run, and the full-item audit still shows `Kura=2`, `Nakatani family=11`, `Kashinome=2`, and `Secom family=3`, so no new task was created in this run.
 - For submission-ready references, prefer `Dxx + DOI + dataset name + access class` over numeric search IDs.
-- The six current public rows below are now synchronized to `Dxx + DOI + dataset name + access class`, so the playbook no longer needs numeric search IDs for `U13-2/U13-5/U14-4/U0-2/U0-3/U14-2`.
+- The six current public rows below are now synchronized to `Dxx + DOI + dataset name + access class`, so the playbook no longer needs numeric search IDs for `U13-2/U13-5/U0-2/U0-3/U14-4/U14-2`.
 - `tech_roadmap.md` also contains `U2/U5/U6/U9`, but those roadmap families are not yet translated into this playbook's current `RQ60` practical layer.
 
 ## Latest post-pull addendum (2026-03-31 16:05 JST)

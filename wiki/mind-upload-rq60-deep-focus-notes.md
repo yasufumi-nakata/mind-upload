@@ -51,7 +51,7 @@ recommended_pages:
 ## Overnight revalidation hold (2026-03-31 00:04 JST)
 
 - This run rechecked the live public route, the current official funding windows, and a Todoist full-item audit after the latest `EEG-DATA` upstream additions.
-- The current public six-question batch still stays `U13-2/U13-5/U14-4/U0-2/U0-3/U14-2`, and the solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
+- The current public six-question batch still stays `U13-2/U13-5/U0-2/U0-3/U14-4/U14-2`, and the solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
 - The newest upstream `EEG-DATA` additions remain outside the current speech / identity / reproducibility anchor family, so they do not replace `D10` as the only clearly public-open primary anchor and do not turn `D03/D02/D01` into immediate public routes.
 - Funding-window recheck in this run still supports the same narrow route: `Kura Fund` remains open through `2026-04-17 17:00`, the `Nakatani Foundation graduate scholarship` still runs `2026-04-01 - 2026-05-25 15:00`, the `Kashinome Scholarship` remains open through `2026-04-09`, and `Secom General Research Grant` remains a watch route through `2026-03-31 12:00`.
 - A March 31 access audit at `2026-03-31 00:20 JST` also means earlier March 30 notes that called `D03/D02/D01` immediate public anchors should now be read as superseded. Those three stay only as subscription-gated support anchors on the public route.
@@ -68,7 +68,7 @@ recommended_pages:
 ## Post-pull revalidation hold (2026-03-30 00:11 JST)
 
 - This run pulled `mind-upload@836d4db`, `EEG-DATA@25f065735da`, and `auto-research-funds@7619c14a2`, then rechecked the live public page plus the current official funding windows.
-- The current public six-question batch still stays `U13-2/U13-5/U14-4/U0-2/U0-3/U14-2`, and the solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
+- The current public six-question batch still stays `U13-2/U13-5/U0-2/U0-3/U14-4/U14-2`, and the solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
 - The practical reason for holding the batch is unchanged: the narrowest current bridge from `mind-upload.com` RQs to bounded EEG-ready and fundable work still runs through `inner-speech decoding + identity drift + reproducibility auditing`, not through a broader thematic spread.
 - Anchor strength also stays conservative after the pull. `D10 3M-CPSEED` and `D02 CSTE` remain the strong primary anchors, while `D03 Multimodal Fusion EEG + Eye-Tracking` and `D01 Acquisition delay of wireless EEG` remain bounded-support anchors with lower claim ceilings.
 - Funding-window recheck in this run: `Kura Fund` remains open through `2026-04-17 17:00`, the `Nakatani Foundation graduate scholarship` opens `2026-04-01` and closes `2026-05-25 15:00`, the `Kashinome Scholarship` remains open through `2026-04-09`, the `Secom General Research Grant` remains an urgency watch route through `2026-03-31 12:00`, and the `Nakatani Foundation research grant` remains `next-cycle watch`.
@@ -93,7 +93,7 @@ recommended_pages:
 
 ## Current public six-question batch (2026-03-29 10:09 JST)
 
-This run changes the active public batch to `U13-2`, `U13-5`, `U14-4`, `U0-2`, `U0-3`, and `U14-2`.
+This run changes the active public batch to `U13-2`, `U13-5`, `U0-2`, `U0-3`, `U14-4`, and `U14-2`.
 
 This is a route-setting update, not a solved-claim update. The public batch is now intentionally concentrated on `inner-speech decoding + identity drift + reproducibility auditing`, because these six RQs are the cleanest current bridge from `mind-upload.com` research questions to bounded EEG-ready and fundable work packages.
 
@@ -139,7 +139,7 @@ The order below is intentionally sequential. Each row closes a blocker for the n
 
 ## Post-pull hold after the route-taxonomy update (2026-03-29 17:10 JST)
 
-- This run pulled the latest upstream route-taxonomy update and rechecked whether it changes the current public six-question batch. It does not. The public route remains `U13-2/U13-5/U14-4/U0-2/U0-3/U14-2`, and the solve-first order remains `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
+- This run pulled the latest upstream route-taxonomy update and rechecked whether it changes the current public six-question batch. It does not. The public route remains `U13-2/U13-5/U0-2/U0-3/U14-4/U14-2`, and the solve-first order remains `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
 - The practical reason for holding the batch is unchanged: the cleanest current bridge from `mind-upload.com` questions to bounded EEG-ready work still runs through `inner-speech decoding + identity drift + reproducibility auditing`, not through a broader thematic spread.
 - Anchor strength also remains unchanged after the pull. `D10` and `D02` stay the strong primary anchors for first-pass artifacts, while `D03` and `D01` remain bounded-support anchors whose outputs should keep a narrower claim ceiling.
 - The upstream route-taxonomy tightening is still useful, but its immediate effect is internal rather than public-facing. It sharpens backlog translation and claim ceilings around uncovered roadmap families; it does not justify a new public batch switch or stronger solved-claim wording.
@@ -608,7 +608,7 @@ Reasons for proceeding in this order:
 ## 2026-03-29 15:32 JST revalidation log (main run / public-six anchor proof)
 
 - Rechecked the same six public RQs against the live `https://mind-upload.com/issue.html` wording, the local `EEG-DATA` dataset cards, the official funding pages, and the live Todoist task inventory before changing any public-facing text.
-- The public six-RQ batch stays unchanged: `U13-2`, `U13-5`, `U14-4`, `U0-2`, `U0-3`, and `U14-2` still form the narrow `inner-speech decoding + identity drift + reproducibility auditing` route, and the public page still presents them as a `route-setting update` rather than a solved-claim update.
+- The public six-RQ batch stays unchanged: `U13-2`, `U13-5`, `U0-2`, `U0-3`, `U14-4`, and `U14-2` still form the narrow `inner-speech decoding + identity drift + reproducibility auditing` route, and the public page still presents them as a `route-setting update` rather than a solved-claim update.
 - The current conservative anchor proof in the local mirror is now fixed more explicitly as `D10 -> 000016 3M-CPSEED (OpenNeuro ds006465 v2.0.0, immediate)`, `D03 -> 011012 Data of Multimodal Fusion System for Cognitive Load Assessment in Psychological Experiments: An EEG and Eye-Tracking Study (DOI route, subscription-gated support)`, `D01 -> 016105 Acquisition delay of wireless EEG (DOI route, subscription-gated support)`, and `D02 -> 005558 CSTE (DOI route, subscription-gated support)`.
 - `D03`, `D01`, and `D02` still have IEEE DataPort-backed routes in the local mirror that now need to be read as `subscription-gated support`, so the public route no longer treats them as immediate public anchors.
 - Funding and task handling also stay conservative in this run: `Kura Fund` remains the practical first route for `U13/U14`, the `Nakatani Foundation graduate scholarship` remains the main student-facing bridge for `U13/U0`, the `Kashinome Scholarship` stays a runway-only side route, the `Nakatani Foundation research grant` stays in watch mode, and no new Todoist task is added because the required start/deadline tasks already exist.
