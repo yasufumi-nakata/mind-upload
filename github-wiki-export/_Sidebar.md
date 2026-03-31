@@ -78,6 +78,7 @@
 - [Wiki: U14-4 card-contract route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u14-4-card-contract-route)
 - [Wiki: U4-2 minimal-causal route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u4-2-minimal-causal-route)
 - [Wiki: U7-1 synchronization-contract route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u7-1-synchronization-contract-route)
+- [Wiki: U8-1 closed-loop delay-tolerance route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u8-1-closed-loop-delay-tolerance-route)
 - [Wiki: Uncertainty, Calibration, and Abstention](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention)
 - [Wiki: Update/branch/stop rules](https://github.com/yasufumi-nakata/mind-upload/wiki/update-branching-and-stop-rules)
 - [Wiki: Verification example walkthrough](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-example-walkthrough)

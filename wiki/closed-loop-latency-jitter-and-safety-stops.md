@@ -129,6 +129,12 @@ Wilson et al. (2010) showed that for relatively slow BCI indicators such as mu r
 "Low latency is good" is generally correct, but it cannot immediately be said that "microsecond-level delay is required for all loops" or "1 ms or less is required for all loops." The correct question is<strong>in what loop band, what error breaks what</strong>.
 </p>
 </div>
+<div class="note-box">
+<strong>If you want the row-level route</strong>
+<p>
+If you want the one-row operational packet that turns this principle into a public-safe route, continue with the <a href="u8-1-closed-loop-delay-tolerance-route.html">U8-1 closed-loop delay-tolerance route packet</a>. That packet keeps the question at the level of one named loop class, one KPI bundle, and one downgrade rule rather than a universal latency threshold.
+</p>
+</div>
 </section>
 
 <section class="section" id="boundary-before-latency">

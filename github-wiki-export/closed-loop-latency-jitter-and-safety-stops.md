@@ -94,6 +94,11 @@ Wilson et al. (2010) showed that for relatively slow BCI indicators such as mu r
 "Low latency is good" is generally correct, but it cannot immediately be said that "microsecond-level delay is required for all loops" or "1 ms or less is required for all loops." The correct question is<strong>in what loop band, what error breaks what</strong>.
 </p>
 
+<strong>If you want the row-level route</strong>
+<p>
+If you want the one-row operational packet that turns this principle into a public-safe route, continue with the <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/u8-1-closed-loop-delay-tolerance-route">U8-1 closed-loop delay-tolerance route packet</a>. That packet keeps the question at the level of one named loop class, one KPI bundle, and one downgrade rule rather than a universal latency threshold.
+</p>
+
 <h2>Before milliseconds, fix which loop boundary was actually preserved</h2>
 <p>
 The weakness of the older timing-only reading was that it could still let a reader say, <strong>"the loop was fast, therefore the closed-loop problem is close to solved."</strong> That is too weak. Primary literature shows that sensory cortex and higher-order dynamics are continuously reshaped by self-motion, predicted sensory consequences, multisensory navigation cues, respiration, arousal, tactile feedback, circadian timing, glucocorticoid exposure, and metabolic state. Therefore, a low-latency controller is not automatically a boundary-complete controller.
