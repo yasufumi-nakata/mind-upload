@@ -55,6 +55,8 @@ This page does not change the current public six-question batch. It makes only t
 | `A test-retest resting and cognitive state EEG dataset` (`10.18112/openneuro.ds004148.v1.0.1`, immediate) | It gives a richer session-external retest ladder that may later stress-test how stable the threshold rule remains outside the present biometric framing. | It is useful as a retest adjunct, but it is not the cleanest direct identity-drift floor for the first public threshold packet. |
 | `A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`, immediate) | It gives denser multi-session state labels and richer logging that may later support threshold-stability stress tests under stronger state drift. | It is multimodal and experience-sampling oriented rather than the narrowest current EEG-only threshold floor, so it stays a support anchor. |
 
+Among public-open backups, `ds004148` still stays the cleanest retest ladder and `ds007216` still stays the cleanest multi-session provenance ladder. They are strong threshold stress-test families, but they still do not replace the intended identity-drift floor that keeps `D02` primary in planning.
+
 ## What the first artifact can honestly close now
 
 | Artifact piece | What it closes now | What still stays outside the claim |

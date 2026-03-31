@@ -55,6 +55,8 @@ This page does not change the current public six-question batch. It makes only t
 | `D13 A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications` (`10.17632/vyczny2r4w`, immediate) | It is the strongest nearby public adjunct for richer rerun examples once the first card fields have been fixed on a narrower latency route. | It is better as a richer rerun adjunct than as the first bounded disclosure anchor, so it stays secondary. |
 | `D08 Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods` (`10.21227/7may-9q56`, immediate) | It gives a stronger measurement-grounding example that may later help leak-audit or validation-field design. | It is too validation-heavy and not as direct a disclosure-first entry point as the current latency route, so it stays support rather than primary for `U14-4`. |
 
+The public-open rerun family and the validation-heavy family should not be read as interchangeable. `D13` is the clearest rerun-example adjunct, while `D08` is better kept for grounded validation-field examples after the first card contract is already fixed.
+
 ## What the first artifact can honestly close now
 
 | Artifact piece | What it closes now | What still stays outside the claim |

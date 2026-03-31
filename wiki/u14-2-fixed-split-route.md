@@ -55,6 +55,8 @@ This page does not change the current public six-question batch. It makes only t
 | `D13 A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications` (`10.17632/vyczny2r4w`, immediate) | It is the strongest nearby public adjunct for richer split-violation examples and a broader rerun family once the first contract has been fixed. | It is better as a richer rerun adjunct than as the first bounded split anchor, so it stays secondary. |
 | `D08 Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods` (`10.21227/7may-9q56`, immediate) | It gives a stronger validation-style benchmark that may later support more explicit negative-case and rerun-audit examples. | It is too validation-heavy and not as direct a split-governance entry point as the current latency route, so it stays support rather than primary for `U14-2`. |
 
+The public-open rerun family and the validation-heavy family should not be read as interchangeable here either. `D13` is the clearest split-violation example family, while `D08` is better kept for stronger validation-style failure trails after the first fixed-split contract is already frozen.
+
 ## What the first artifact can honestly close now
 
 | Artifact piece | What it closes now | What still stays outside the claim |
