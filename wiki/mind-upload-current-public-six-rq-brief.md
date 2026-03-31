@@ -59,7 +59,7 @@ It does **not** announce solved claims. It only states what the current public r
 - A latest pull recheck at `2026-03-31 16:05 JST` after `mind-upload@a11240d38415`, `EEG-DATA@f318ac8ce42d`, and `auto-research-funds@c95cc61fdfc9` still leaves the public batch and the solve-first order unchanged.
 - The newest pulled deltas still do not widen the current public claim surface: `mind-upload` tightened the connectome / timing-state route cards, `EEG-DATA` added an `OSF eucqf` deep-dive refresh, and `auto-research-funds` added new `Takeda / Nohken` card material, but none of those changes replace the current `D10 / D03 / D02 / D01` family or the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1`.
 - Browser-level live checks in this run still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, so this run does not add new prose to the public site.
-- A fresh Todoist `api/v1/sync(items)` full-item audit still shows the route families already covered (`items=205`, `Kura=2`, `Nakatani family=13`, `Kashinome=2`, `Secom family=3`), so no new task was added in this run.
+- A fresh Todoist `api/v1/sync(items)` full-item audit still shows the route families already covered (`items=205`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom family=3`), so no new task was added in this run.
 - The practical reading therefore stays unchanged: `Kura Fund`, `Nakatani Foundation graduate scholarship`, and `Kashinome Scholarship` remain the active narrow bridge for the current six, while `Secom General Research Grant` and `Nakatani Foundation research grant` stay next-cycle watch routes only.
 
 ## What stays fixed on March 31, 2026

@@ -54,7 +54,7 @@ A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-f
 - A latest pull reread after `mind-upload@a11240d38415`, `EEG-DATA@f318ac8ce42d`, and `auto-research-funds@c95cc61fdfc9` still leaves this playbook's practical reading unchanged.
 - The newest deltas widen the support map rather than the current route: `mind-upload` tightened the connectome / timing-state route cards, `EEG-DATA` added an `OSF eucqf` deep-dive refresh, and `auto-research-funds` added new `Takeda / Nohken` funding-card material, but none of those changes displace the current `D10 / D03 / D02 / D01` family or the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1`.
 - Browser-level live checks still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, so this run adds no new public-site prose.
-- A fresh Todoist full-item audit still showed enough route coverage (`items=205`, `Kura=2`, `Nakatani family=13`, `Kashinome=2`, `Secom family=3`), so no new task was added in this run.
+- A fresh Todoist full-item audit still showed enough route coverage (`items=205`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom family=3`), so no new task was added in this run.
 
 ## Anchor-strength recheck (2026-03-30 05:07 JST)
 

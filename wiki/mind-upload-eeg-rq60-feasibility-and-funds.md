@@ -57,7 +57,7 @@ This run still does not change the current public batch or the `A/B/C` breakdown
 
 - The current batch still stays `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
 - Browser-level live checks in this run still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, so there was no public-site text to update in this run.
-- The Todoist full-item audit still showed enough route coverage (`items=205`, `Kura=2`, `Nakatani family=13`, `Kashinome=2`, `Secom family=3`, `AI for Aging-Society Problem Solving=0`), so no new task was added.
+- The Todoist full-item audit still showed enough route coverage (`items=205`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom family=3`, `AI for Aging-Society Problem Solving=0`), so no new task was added.
 
 ## Current six-RQ route after the March 31 overnight recheck
 

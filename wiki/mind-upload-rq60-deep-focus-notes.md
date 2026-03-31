@@ -46,7 +46,7 @@ recommended_pages:
 - A latest pull reread after `mind-upload@a11240d38415`, `EEG-DATA@f318ac8ce42d`, and `auto-research-funds@c95cc61fdfc9` still leaves the current public six-question batch and the solve-first order unchanged.
 - The newest deltas widen the support map, not the current practical batch: `mind-upload` tightened the connectome / timing-state route cards, `EEG-DATA` added an `OSF eucqf` deep-dive refresh, and `auto-research-funds` added new `Takeda / Nohken` funding-card material, but none of those changes replace the current `D10 / D03 / D02 / D01` family or the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1`.
 - Browser-level live checks still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, so this run does not add new public prose.
-- The Todoist full-item audit still showed enough family coverage (`items=205`, `Kura=2`, `Nakatani family=13`, `Kashinome=2`, `Secom family=3`, `AI for Aging-Society Problem Solving=0`), so no new task was added.
+- The Todoist full-item audit still showed enough family coverage (`items=205`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom family=3`, `AI for Aging-Society Problem Solving=0`), so no new task was added.
 
 ## Overnight revalidation hold (2026-03-31 00:04 JST)
 
