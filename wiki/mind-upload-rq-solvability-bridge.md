@@ -50,6 +50,14 @@ It does **not** try to re-scan all `60RQ` items at once. The working style on th
 - `External dependency` means a requirement that still needs theory work, language evaluation, legal judgment, clinical transfer, hardware validation, or broader community adoption outside this repository.
 - `Funding theme` means wording that still matches the present artifact level. It is not a promise that the larger mind-upload question is solved.
 
+## What still stays fixed after the 16:32 JST metadata carry-forward reread on March 31, 2026
+
+- A latest pull reread after `mind-upload@a11240d38415`, `EEG-DATA@3e7a53d9ca84`, and `auto-research-funds@c95cc61fdfc9` still leaves both the current public six and the next-watch queue unchanged.
+- `EEG-DATA`'s newest head is a metadata-deepening carry-forward rather than a route swap: the refreshed catalog now reports `merged_unique=30858`, `high_confidence=28821`, and `access_counts_high.immediate=24469`, which widens the backup-family search space but still does not replace the current `D10 / D03 / D02 / D01` family for the active route.
+- The practical access reading also stays conservative. The refreshed catalog still exposes `D01` through the DOI route as immediate and still keeps `D02` in the immediate/planning bucket, but the live public route continues to follow the stricter access audit and therefore keeps `D03 / D02 / D01` only as subscription-gated support anchors.
+- Browser-level live checks in this run still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, so no extra public-front-page prose was added.
+- A fresh Todoist `api/v1/sync(items)` audit still showed enough coverage (`items=205`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this run.
+
 ## What stays fixed on March 31, 2026
 
 - The current public six-question batch still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.

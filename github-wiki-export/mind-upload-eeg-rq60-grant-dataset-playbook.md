@@ -56,6 +56,14 @@ A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-f
 - Browser-level live checks still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, so this run adds no new public-site prose.
 - A fresh Todoist full-item audit still showed enough route coverage (`items=205`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom family=3`), so no new task was added in this run.
 
+## Metadata carry-forward addendum (2026-03-31 16:32 JST)
+
+- A second post-pull reread after `EEG-DATA@3e7a53d9ca84` still leaves this playbook's practical reading unchanged.
+- The newest `EEG-DATA` head is a catalog-strengthening carry-forward (`chore: deep-dive NTU and OpenNeuro EEG metadata`) rather than a row-selection change. The refreshed summary now reports `merged_unique=30858`, `high_confidence=28821`, and `access_counts_high.immediate=24469`, which improves the search space for backup families without displacing the active `D10 / D03 / D02 / D01` route family.
+- The access nuance remains important for submission wording. The refreshed catalog still exposes `D01` through the DOI route as immediate and still keeps `D02` in the immediate/planning bucket, but public-safe wording in this playbook continues to follow the stricter live access audit and therefore keeps `D03 / D02 / D01` as subscription-gated support anchors.
+- Browser-level live checks in this run still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, so there is still no need to widen the public site prose.
+- A fresh Todoist full-item audit still showed enough route coverage (`items=205`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this run.
+
 ## Anchor-strength recheck (2026-03-30 05:07 JST)
 
 This run keeps the same public six-RQ batch and the same practical submission routes. What changed is the access reading for the current anchors after a post-pull `EEG-DATA` reread, a live-site check, an official-window recheck, and a read-only Todoist recheck. `D10` remains the only clearly public-open primary anchor for first artifacts. `D03`, `D02`, and `D01` remain useful only as subscription-gated support anchors, and earlier March 30 notes that called them immediate public routes should now be read as superseded by the March 31 access audit.
