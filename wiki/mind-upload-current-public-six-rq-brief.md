@@ -53,11 +53,14 @@ It does **not** announce solved claims. It only states what the current public r
 
 ## What stays fixed on March 31, 2026
 
+- A March 31 post-pull recheck at `2026-03-31 09:04 JST` after `mind-upload@8cc3379`, `EEG-DATA@715ecdf`, and `auto-research-funds@6166f60` still leaves the public batch and the solve-first order unchanged.
+- The newest pulled deltas widen the map but do not widen the current public claim surface: the astrocyte / SV2A route refinements, the `U1-2` funding-sync packet, and the `Zenodo HEP ERP` deep-dive additions do not replace `D10` or turn `D03/D02/D01` into immediate public anchors.
+- The outside-current-six next-watch pair also stays unchanged: `U7-1` remains the cleanest public-open `A-tier` follow-up and `U1-2` remains the next narrow inverse-estimation packet, but neither changes the current six-row batch.
 - At `2026-03-31 00:04 JST`, an overnight recheck still leaves the public batch and the solve-first order unchanged.
 - A March 31 access audit at `2026-03-31 00:20 JST` still leaves the batch unchanged, but it narrows the anchor reading: `D10 3M-CPSEED` remains the only clearly public-open primary anchor in the current six.
 - `D03 Multimodal Fusion EEG + Eye-Tracking`, `D02 CSTE`, and `D01 Acquisition delay of wireless EEG` currently resolve to IEEE DataPort pages that show `LOGIN TO ACCESS DATASET FILES` and `Subscription Required`, so public wording now keeps them only as subscription-gated support anchors rather than immediate public anchors.
 - `Kura Fund` remains open through April 17, 2026 at 17:00, `Nakatani Foundation graduate scholarship` runs April 1, 2026 through May 25, 2026 at 15:00, `Kashinome Scholarship` remains open through April 9, 2026, and `Secom General Research Grant` remains only an urgency watch route through March 31, 2026 at 12:00 at this run time.
-- A Todoist full-item audit still shows the current route already covered (`Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom family=3`), so no new task was added in this run.
+- A March 31 `09:04 JST` Todoist full-item audit still shows the current route already covered (`Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom family=3`), so no new task was added in this run.
 - Earlier March 30 notes on this page that treated `D03/D02/D01` as immediate public routes should now be read as superseded by the March 31 access audit.
 - A March 31 cross-repo synthesis also rechecked public-open alternative EEG families for the current six. Those alternatives remain useful as secondary support, but they still do not displace the current `D10/D03/D02/D01` route family or raise the public claim ceiling.
 
