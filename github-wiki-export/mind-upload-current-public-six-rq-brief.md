@@ -32,6 +32,22 @@ This page keeps the current public six-question batch readable at the level of `
 
 It does **not** announce solved claims. It only states what the current public route is narrow enough to support after a post-pull review of `mind-upload`, `EEG-DATA`, `auto-research-funds`, the live public page, the current official funding windows, and a read-only Todoist recheck.
 
+## What still stays fixed after the 19:07 JST post-pull reread on March 31, 2026
+
+- A latest pull recheck at `2026-03-31 19:07 JST` after `mind-upload@b7b6c0498ae1`, `EEG-DATA@24e85cc20f09`, and `auto-research-funds@0fddd53bd03c` still leaves the public batch and the solve-first order unchanged.
+- The newest pulled deltas still widen support rather than the current public claim surface: `mind-upload` strengthened the front-door human-proxy split, `EEG-DATA` refreshed the catalog to `merged_unique=30860`, `high_confidence=28823`, and `access_counts_high.immediate=24471`, and `auto-research-funds` refreshed Kioxia/Takayanagi funding records, but none of those changes replace the current `D10 / D03 / D02 / D01` family or the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1`.
+- Browser-level live checks at `2026-03-31 19:09 JST` still returned `200` for `issue.html` and `mind-upload-current-public-six-rq-brief.html`, and the live `issue.html` paragraph still names the current six in the same order.
+- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, while `Nakatani Foundation research grant` and `Secom General Research Grant` are already closed for the current cycle.
+- A fresh read-only Todoist full-item audit still showed enough route coverage (`items=205`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`), so no new task was added in this session.
+
+## What still stays fixed after the 17:06 JST post-pull reread on March 31, 2026
+
+- A latest pull recheck at `2026-03-31 17:06 JST` after `mind-upload@4731680627ff`, `EEG-DATA@3e7a53d9ca8`, and `auto-research-funds@ef2924014a65` still leaves the public batch and the solve-first order unchanged.
+- The newest `EEG-DATA` additions widen the support map rather than the current route: the NTU Dataverse adult-to-infant unidirectional neural-coupling raw/preprocessed releases are immediately downloadable and useful for future social-learning or paired-observer rows, while OpenNeuro `ds007146` adds a large auditory MEG/EEG/Ear-EEG record that still stays `uncertain_public` because the visible public object tree does not yet verify the claimed raw EEG / Ear-EEG coverage.
+- Recounting the `### Ux-y` headings in the RQ-by-RQ dossiers still returns `60`, so this run does not widen the queue by collapsing rows together.
+- Browser-level live checks with a browser user agent still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`.
+- The practical reading therefore still stays narrow: `Kura Fund`, `Nakatani Foundation graduate scholarship`, and `Kashinome Scholarship` remain the active bridge for the current six, `Secom General Research Grant` is already closed for the current cycle (`March 31, 2026 at 12:00 JST`) and stays only as a carried-forward watch record, and no new Todoist item was created in this session.
+
 ## What still stays fixed after the 16:05 JST post-pull reread on March 31, 2026
 
 - A latest pull recheck at `2026-03-31 16:05 JST` after `mind-upload@a11240d38415`, `EEG-DATA@f318ac8ce42d`, and `auto-research-funds@c95cc61fdfc9` still leaves the public batch and the solve-first order unchanged.
