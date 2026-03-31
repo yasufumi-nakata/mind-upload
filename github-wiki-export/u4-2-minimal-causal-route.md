@@ -1,38 +1,28 @@
----
-layout: default
-title: "Wiki: U4-2 minimal-causal route packet"
-description: "Why U4-2 is the next narrow causal-intervention route after U1-2, why D05 stays the main anchor, and what the first artifact can honestly close."
-article_type: Wiki
-subtitle: "A next-watch causal packet outside the current public six"
-author: Mind Uploading Research Project
-last_updated: "2026-03-31"
-note: "U4-2 route packet"
-audience: "Readers who want one narrow causal-intervention route outside the current public six without widening the public claim surface"
-reading_time: "8-12 minutes"
-page_intro: "This page records one narrow next-watch route outside the current public six at the level of one question, one intervention anchor family, one bounded first artifact, and one funding bridge."
-accuracy_note: "This page does not change the active public six-question batch. It only records what the present U4-2 minimal-causal route can honestly close first."
-wiki_links:
-  - label: "Wiki: Current public six route brief"
-    url: "/wiki/mind-upload-current-public-six-rq-brief.html"
-    description: "The compact six-row public route that still stays unchanged."
-  - label: "Wiki: U1-2 uncertainty-calibration route packet"
-    url: "/wiki/u1-2-uncertainty-calibration-route.html"
-    description: "The inverse-estimation packet that now sits directly before this route."
-  - label: "Wiki: Deep focus notes"
-    url: "/wiki/mind-upload-rq60-deep-focus-notes.html"
-    description: "The wider working note for all current practical rows."
-  - label: "Wiki: Grant and dataset playbook"
-    url: "/wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html"
-    description: "The fixed funding and anchor map."
-recommended_pages:
-  - label: "Issue page"
-    url: "/issue.html"
-  - label: "Data & Bench"
-    url: "/datasets.html"
----
+# Wiki: U4-2 minimal-causal route packet
 
-<main class="main-container">
-<article class="content-column">
+> A next-watch causal packet outside the current public six
+>
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+
+- Updated: 2026-03-31 / Role: U4-2 route packet
+
+## Role Of This Page
+This page records one narrow next-watch route outside the current public six at the level of one question, one intervention anchor family, one bounded first artifact, and one funding bridge.
+
+## Accuracy Notes
+This page does not change the active public six-question batch. It only records what the present U4-2 minimal-causal route can honestly close first.
+
+## Back To Public Pages
+- [Issue page](https://mind-upload.com/issue.html)
+- [Data & Bench](https://mind-upload.com/datasets.html)
+
+## Related Wiki Pages
+- [Wiki: Current public six route brief](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief) - The compact six-row public route that still stays unchanged.
+- [Wiki: U1-2 uncertainty-calibration route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u1-2-uncertainty-calibration-route) - The inverse-estimation packet that now sits directly before this route.
+- [Wiki: Deep focus notes](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes) - The wider working note for all current practical rows.
+- [Wiki: Grant and dataset playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - The fixed funding and anchor map.
+
+---
 
 # U4-2 minimal-causal route packet
 
@@ -86,6 +76,3 @@ This page does not change the current public six-question batch. It records one 
 - The public batch did not change.
 - The main change is that `U4-2` now has a public packet that records the narrowest intervention anchor, the first artifact, and the watch-level funding bridge after `U1-2`.
 - This remains a route-setting update, not a solved-claim update.
-
-</article>
-</main>
