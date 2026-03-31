@@ -6,7 +6,7 @@ article_type: Perspective
 subtitle: "Audit the hypothesis of reproducing brain information processing on another substrate through the barriers of measurability, identifiability, and maintenance state"
 author: Mind Uploading Research Project
 last_updated: '2026-03-31'
-note: "Research note (updated with the March 2026 re-audit, the 2026-03-29 causal-model addendum, the 2026-03-29 thermodynamic-route sync, the 2026-03-29 deuterium-route split, the 2026-03-30 same-brain-connectomics ceiling sync, and the 2026-03-31 electrical-state family split)"
+note: "Research note (updated with the March 2026 re-audit, the 2026-03-29 causal-model addendum, the 2026-03-29 thermodynamic-route sync, the 2026-03-29 deuterium-route split, the 2026-03-30 same-brain-connectomics ceiling sync, the 2026-03-31 electrical-state family split, and the 2026-03-31 invasive-language-BCI route split)"
 audience: "Readers who want to follow theory all the way into implementation, including limits and objections"
 reading_time: "30-45 min"
 page_intro: "This page is a long research note that follows the theoretical, measurement, and implementation questions around mind uploading while keeping primary literature and hard limits side by side. It is written to separate what can reasonably be claimed now from what remains unresolved, rather than leaning into either pure optimism or pure pessimism."
@@ -22,6 +22,7 @@ page_highlights:
   - "Directed-graph / DCM claims are now kept behind an explicit route card: observed-subsystem closure, node-definition policy, sampling / transformation sensitivity, perturbation validation, and abstention must be disclosed before causal-wiring language is allowed."
   - "Thermodynamic / irreversibility claims are now also kept behind an explicit route card: signal route, state definition, coarse-graining, observed-state closure / memory order / reverse-transition support, physiology-side grounding, cost isolation, and abstention must be disclosed before energetic language is allowed."
   - "Same-brain functional connectomics and digital-twin language are now split into sequential bridge, label-transfer, current-synaptic-state, and dynamical-identifiability ceilings rather than being read as one local twin."
+  - "Invasive language BCI results are now also split on this page into throughput / expressivity, transfer initialization, bounded fixed-decoder slices, and adaptive rescue rather than one speech-BCI row."
   - "Even though it is long, the introduction and framing notes alone should make the page's overall stance clear."
 known_points:
   - "No major theory has become a decisive standalone answer at this point."
@@ -32,6 +33,7 @@ known_points:
   - "Proxy-rich human evidence and deployment-ready measurement are different claims; sample size, model burden, hardware specialization, and fusion status remain separate ceilings."
   - "Several living-human proxy rows can move together while still constraining different quantities or shared autonomic / vascular drivers, so same-session agreement is not yet same-subject state closure."
   - "Hemodynamic modalities carry vascular transfer / CVR uncertainty in addition to neural-side uncertainty."
+  - "Invasive language-BCI advances answer different operational questions: communication throughput, transfer initialization, fixed-decoder durability, and adaptive rescue are not one evidence object."
   - "Whole-brain or faster effective-connectivity estimators improve tractability, not automatic causal discovery; latent confounders, node-definition policy, and sampling / transformation sensitivity remain separate failure modes."
   - "Irreversibility labels, wall-plug power, and computational complexity are different objects; coarse-grained neural asymmetry is not automatically microscopic dissipation or WBE-ready implementation cost."
   - "Strong claims that omit causal perturbation, reproducibility, and explicit exclusion of alternative explanations remain on shaky ground."
@@ -1173,7 +1175,7 @@ href="#ref-57">[57]</a></sup>.
 <!-- Brain-to-Text Update -->
 <section class="section" id="llm-research-update">
 <h2 class="section-title" id="brain-to-text-update">Brain-to-Text update: language priors, streaming, evidence gate</h2>
-<p>As of 2026-03, the primary literature does not show that a "general-purpose LLM operating theory" is the core of brain decoding. What matters is separating <strong>which modality</strong>, <strong>which task</strong>, <strong>which generalization condition</strong>, and <strong>whether a neural contribution beyond the language-prior distribution was actually confirmed</strong>. Tang et al.'s non-invasive semantic reconstruction required participant cooperation during both training and application.<sup><a href="#ref-30">[30]</a></sup> Horikawa et al.'s Mind Captioning advanced the generation of descriptions for visual content,<sup><a href="#ref-11">[11]</a></sup> but the question remains how much meaning can be restored through the communication subsystem alone. Non-invasive speech-perception decoding by Defossez et al.,<sup><a href="#ref-106">[106]</a></sup> word decoding by d'Ascoli et al.,<sup><a href="#ref-107">[107]</a></sup> and invasive speech neuroprostheses by Willett et al., Littlejohn et al., and Wairagkar et al.<sup><a href="#ref-108">[108]</a></sup><sup><a href="#ref-109">[109]</a></sup><sup><a href="#ref-110">[110]</a></sup> have all advanced the language and communication route. They do not, however, amount to WBE or self-model reproduction.</p>
+<p>As of 2026-03, the primary literature does not show that a "general-purpose LLM operating theory" is the core of brain decoding. What matters is separating <strong>which modality</strong>, <strong>which task</strong>, <strong>which generalization condition</strong>, and <strong>whether a neural contribution beyond the language-prior distribution was actually confirmed</strong>. Tang et al.'s non-invasive semantic reconstruction required participant cooperation during both training and application.<sup><a href="#ref-30">[30]</a></sup> Horikawa et al.'s Mind Captioning advanced the generation of descriptions for visual content,<sup><a href="#ref-11">[11]</a></sup> but the question remains how much meaning can be restored through the communication subsystem alone. Non-invasive speech-perception decoding by Defossez et al.<sup><a href="#ref-106">[106]</a></sup> and word decoding by d'Ascoli et al.<sup><a href="#ref-107">[107]</a></sup> strengthen different non-invasive routes. On the invasive side, the current literature is no longer one row either: Willett et al., Littlejohn et al., and Wairagkar et al. strengthen <strong>throughput / expressivity</strong>, Singh et al. strengthens <strong>cross-subject transfer initialization</strong>, and Karpowicz et al. plus Wilson et al. strengthen <strong>alignment-based rescue / unsupervised recalibration</strong>.<sup><a href="#ref-108">[108]</a></sup><sup><a href="#ref-109">[109]</a></sup><sup><a href="#ref-110">[110]</a></sup><sup><a href="#ref-158">[158]</a></sup><sup><a href="#ref-159">[159]</a></sup><sup><a href="#ref-160">[160]</a></sup> They do not, however, amount to WBE or self-model reproduction.</p>
 
 <div class="note-box">
 <strong>Site rule for 2026-03</strong>
@@ -1204,10 +1206,10 @@ href="#ref-57">[57]</a></sup>.
 <td><strong>L1 enhancement candidates</strong></td>
 </tr>
 <tr>
-<td><strong>invasive streaming speech neuroprosthesis</strong></td>
-<td>Willett et al. demonstrated high-performance speech BCI with a vocabulary of 125,000 words, Littlejohn et al. demonstrated streaming brain-to-voice at 48 words per minute, and Wairagkar et al. demonstrated near-instant voice synthesis at roughly 10 ms latency.<sup><a href="#ref-108">[108]</a></sup><sup><a href="#ref-109">[109]</a></sup><sup><a href="#ref-110">[110]</a></sup>.</td>
-<td>Whole-brain WBE, branch-equivalence, and long-term stable operation without the need for recalibration are not demonstrated. What was demonstrated here is a closed loop communication subsystem.</td>
-<td><strong>Local benchmark for L2~L3</strong></td>
+<td><strong>Invasive language-BCI route family</strong></td>
+<td>Willett et al. strengthened high-throughput speech-to-text from intracortical microelectrodes, Littlejohn et al. strengthened streaming brain-to-voice synthesis in <strong>80-ms increments</strong>, Wairagkar et al. strengthened instantaneous voice synthesis with paralinguistic control and silence fallback, Singh et al. strengthened cross-subject transfer initialization from distributed intracranial recordings, and Karpowicz et al. plus Wilson et al. strengthened alignment-based rescue and unsupervised recalibration under accumulating neural change.<sup><a href="#ref-108">[108]</a></sup><sup><a href="#ref-109">[109]</a></sup><sup><a href="#ref-110">[110]</a></sup><sup><a href="#ref-158">[158]</a></sup><sup><a href="#ref-159">[159]</a></sup><sup><a href="#ref-160">[160]</a></sup>.</td>
+<td>These papers do not yet add up to one solved route for generic transfer, long fixed-decoder durability, low-burden chronic deployment, or whole-brain WBE. They answer different operational questions.</td>
+<td><strong>Split L2~L3 route family</strong></td>
 </tr>
 <tr>
 <td><strong>Neural encoding with LLM embedding</strong></td>
@@ -1218,11 +1220,43 @@ href="#ref-57">[57]</a></sup>.
 </tbody>
 </table>
 
+<div class="note-box">
+<strong>2026-03-31 correction: invasive language BCIs are not one operational route on this page either</strong><br>The remaining weakness in this section was that it still let <strong>speech BCI</strong> sound too much like one monotonic ladder. The current primary literature does not support that shortcut. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> support <strong>communication throughput / expressivity</strong>. <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh et al. (2025)</a> supports <strong>cross-subject transfer initialization</strong> from distributed intracranial recordings. <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a> and <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> support <strong>alignment-based rescue / unsupervised recalibration</strong> under accumulating neural change. Therefore, this page no longer reads those papers as one interchangeable route to chronic deployability or fixed-decoder stability.
+</div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>Operational slice</th>
+<th>What the cited papers support</th>
+<th>What this page still refuses to merge automatically</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Throughput / expressivity</strong></td>
+<td>Large-vocabulary speech decoding, near-real-time voice synthesis, silence fallback, and paralinguistic control in bounded closed-loop communication settings.</td>
+<td>These gains are not merged automatically into generic transfer, low-burden chronic deployment, or WBE-like state recovery.</td>
+</tr>
+<tr>
+<td><strong>Transfer initialization</strong></td>
+<td>Shared latent manifolds or grouped decoders can improve initialization when cortical coverage is sparse, heterogeneous, or clinically constrained.</td>
+<td>Transfer initialization is not treated as proof that the resulting decoder is stable for long horizons without later rescue or recalibration.</td>
+</tr>
+<tr>
+<td><strong>Adaptive rescue / recalibration</strong></td>
+<td>Alignment or hidden-target inference can restore performance over weeks to months under accumulating neural change.</td>
+<td>Adaptive rescue is not treated as fixed-decoder durability, zero-maintenance operation, or stable-neuron truth by default.</td>
+</tr>
+</tbody>
+</table>
+
 <h3>Minimum required evaluation pack</h3>
 <ul style="margin: 0; padding-left: 20px; list-style-type: disc; font-size: 14px; line-height: 1.6;">
 <li style="margin-bottom: 8px;"><strong>Isolation of neural contribution:</strong><code>no-brain</code>, <code>time-shuffle</code>, <code>trial-shuffle</code>, <code>LM-only</code>, and <code>no-LM</code>. When searching from a candidate set, specify the candidate set size.</li>
 <li style="margin-bottom: 8px;"><strong>Boundary of generalization:</strong> Report held-out sentences, held-out stories, held-out vocabulary, cross-day, cross-task, and cross-subject separately, and state openly if participant cooperation or individual adaptation is required.<sup><a href="#ref-30">[30]</a></sup><sup><a href="#ref-107">[107]</a></sup>.</li>
 <li style="margin-bottom: 8px;"><strong>Real-time metrics:</strong> If you claim streaming performance, do not report words per minute alone. Also report <strong>P50 / P95 / P99 latency</strong>, silence / abstention rate, dropout, recalibration burden, and recovery time.<sup><a href="#ref-109">[109]</a></sup><sup><a href="#ref-110">[110]</a></sup>.</li>
+<li style="margin-bottom: 8px;"><strong>Longitudinal operation split:</strong> State whether the paper is claiming <strong>same-session throughput</strong>, <strong>transfer initialization</strong>, a <strong>bounded fixed-decoder interval</strong>, or <strong>adaptive rescue</strong>. Report <code>time since last supervised calibration</code>, the stabilization / alignment strategy, and if chronic microelectrode decoding is central, a unit-identity or channel-stability audit.<sup><a href="#ref-158">[158]</a></sup><sup><a href="#ref-159">[159]</a></sup><sup><a href="#ref-160">[160]</a></sup>.</li>
 <li style="margin-bottom: 8px;"><strong>Reproduction log:</strong>The brain encoder, language model, vocoder, context window, beam width, external corpus, prompt, and calibration procedure are fixed, and if the model update crosses evaluation, it will be treated as a separate run.</li>
 </ul>
 
@@ -1230,7 +1264,8 @@ href="#ref-57">[57]</a></sup>.
 <ol style="margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.6;">
 <li style="margin-bottom: 8px;"><strong>Conditions for claiming L1:</strong>Show a neural contribution that exceeds the LM-only/shuffle baseline and do not hide candidate sets or evaluation conditions.</li>
 <li style="margin-bottom: 8px;"><strong>Conditions for claiming L2:</strong>Include held-out conditions, cross-day or cross-task generalizations, and abstinence when confidence is low.</li>
-<li style="margin-bottom: 8px;"><strong>Conditions for claiming L3:</strong>Submit streaming log, tail latency, silence/freeze, recalibration burden, and disclose closed-loop failure mode.</li>
+<li style="margin-bottom: 8px;"><strong>Route typing for invasive language BCIs:</strong>State explicitly whether the evidence is <strong>throughput / expressivity</strong>, <strong>transfer initialization</strong>, a <strong>bounded fixed-decoder slice</strong>, or <strong>adaptive rescue</strong>. This page does not let rescue results silently stand in for fixed-decoder stability.<sup><a href="#ref-158">[158]</a></sup><sup><a href="#ref-159">[159]</a></sup><sup><a href="#ref-160">[160]</a></sup>.</li>
+<li style="margin-bottom: 8px;"><strong>Conditions for claiming L3:</strong>Submit streaming log, tail latency, silence/freeze, fixed decoder interval, time since last supervised calibration, recalibration burden, and disclose closed-loop failure mode.</li>
 <li style="margin-bottom: 8px;"><strong>Prohibitions for higher claims:</strong>Success in decoding, resemblance in embedding, and naturalness of conversation cannot be interpreted as emulate/WBE/preservation of identity.</li>
 </ol>
 
@@ -1834,7 +1869,7 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <li id="ref-106" value="106">Défossez, A., Caucheteux, C., Rapin, J., Kabeli, O., & King, J.-R. (2023). Decoding speech perception from non-invasive brain recordings. <em>Nature Machine Intelligence</em>, 5, 1097–1107. <a href="https://doi.org/10.1038/s42256-023-00714-5">doi:10.1038/s42256-023-00714-5</a></li>
 <li id="ref-107" value="107">d'Ascoli, S., Ferrante, O., et al. (2025). Towards decoding individual words from non-invasive brain recordings. <em>Nature Communications</em>, 16, 10521. <a href="https://doi.org/10.1038/s41467-025-65499-0">doi:10.1038/s41467-025-65499-0</a></li>
 <li id="ref-108" value="108">Willett, F. R., Kunz, E. M., Fan, C., et al. (2023). A high-performance speech neuroprosthesis. <em>Nature</em>, 620, 1031–1036. <a href="https://doi.org/10.1038/s41586-023-06377-x">doi:10.1038/s41586-023-06377-x</a></li>
-<li id="ref-109" value="109">Littlejohn, K. T., Dabagia, M., Ladwig, A., et al. (2025). A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <em>Nature Neuroscience</em>, 28, 1711–1719. <a href="https://doi.org/10.1038/s41593-025-01905-6">doi:10.1038/s41593-025-01905-6</a></li>
+<li id="ref-109" value="109">Littlejohn, K. T., Cho, C. J., Liu, J. R., et al. (2025). A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <em>Nature Neuroscience</em>, 28, 902–912. <a href="https://doi.org/10.1038/s41593-025-01905-6">doi:10.1038/s41593-025-01905-6</a></li>
 <li id="ref-110" value="110">Wairagkar, M., Card, N. S., Singer-Clark, T., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <em>Nature</em>, 644, 145–152. <a href="https://doi.org/10.1038/s41586-025-09127-3">doi:10.1038/s41586-025-09127-3</a></li>
 <li id="ref-111" value="111">Zada, Z., Goldstein, A., et al. (2024). Contextual embeddings from deep language models predict fMRI responses to naturalistic language. <em>Neuron</em>, 112(22), 3725–3740.e9. <a href="https://doi.org/10.1016/j.neuron.2024.09.018">doi:10.1016/j.neuron.2024.09.018</a></li>
 <li id="ref-112" value="112">Goldstein, A., Bar, A., et al. (2025). Connecting concepts in the brain by mapping cortical representations of semantic relations. <em>Nature Neuroscience</em>, 28, 1841–1848. <a href="https://doi.org/10.1038/s41593-025-01903-8">doi:10.1038/s41593-025-01903-8</a></li>
@@ -1883,6 +1918,9 @@ href="https://arxiv.org/abs/2303.08896">arXiv</a></li>
 <li id="ref-155" value="155">Selfe, J. S., Steyn, T. J. S., Shorer, E. F., Burman, R. J., Düsterwald, K. M., Kraitzick, A. Z., Ju, C., Goldman, P. S., Ibrahim, B. A., Syed, P., Li, L., Akerman, C. J., Kullmann, D. M., Raimondo, J. V., &amp; Baker, C. A. (2024). All-optical reporting of inhibitory receptor driving force in the nervous system. <em>Nature Communications</em>, 15, 9752. <a href="https://doi.org/10.1038/s41467-024-53074-y">doi:10.1038/s41467-024-53074-y</a></li>
 <li id="ref-156" value="156">Voldsbekk, I., Maximov, I. I., Zak, N., Roelfs, D., Geier, O., Due-Tønnessen, P., Elvsåshagen, T., Strømstad, M., Bjørnerud, A., &amp; Groote, I. (2020). Evidence for wakefulness-related changes to extracellular space in human brain white matter from diffusion-weighted MRI. <em>NeuroImage</em>, 212, 116682. <a href="https://doi.org/10.1016/j.neuroimage.2020.116682">doi:10.1016/j.neuroimage.2020.116682</a></li>
 <li id="ref-157" value="157">Feld, G. B., Niethard, N., Liu, J., Gebhardt, S., Kleist, L., Brugger, K., &amp; Born, J. (2026). Electrical synapses contribute to sleep-dependent declarative memory retention. <em>European Journal of Neuroscience</em>. <a href="https://doi.org/10.1111/ejn.70401">doi:10.1111/ejn.70401</a></li>
+<li id="ref-158" value="158">Singh, A., Thomas, T., Li, J., et al. (2025). Transfer learning via distributed brain recordings enables reliable speech decoding. <em>Nature Communications</em>, 16, 8749. <a href="https://doi.org/10.1038/s41467-025-63825-0">doi:10.1038/s41467-025-63825-0</a></li>
+<li id="ref-159" value="159">Karpowicz, B. M., Ali, Y. H., Wimalasena, L. N., et al. (2025). Stabilizing brain-computer interfaces through alignment of latent dynamics. <em>Nature Communications</em>, 16, 4662. <a href="https://doi.org/10.1038/s41467-025-59652-y">doi:10.1038/s41467-025-59652-y</a></li>
+<li id="ref-160" value="160">Wilson, G. H., Stein, E. A., Kamdar, F., et al. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <em>Nature Biomedical Engineering</em>. <a href="https://doi.org/10.1038/s41551-025-01536-z">doi:10.1038/s41551-025-01536-z</a></li>
 </ol>
 </section>
 
