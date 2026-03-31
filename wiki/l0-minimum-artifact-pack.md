@@ -5,7 +5,7 @@ description: "Organize the minimum L0 deliverables such as dataset identity, EEG
 article_type: Wiki
 subtitle: "Do not call it reproducible until version, observability, benchmark meaning, lineage, and replay are fixed together"
 author: Mind Uploading Research Project
-last_updated: "2026-03-28"
+last_updated: "2026-03-31"
 note: "Operational guide"
 audience: "People who have started creating L0, and people who want to check to what extent it can be called reproducible analysis."
 reading_time: "12-18 minutes"
@@ -14,6 +14,7 @@ accuracy_note: "This page defines the current minimum for L0. It does not by its
 page_highlights:
   - "The L0 pack is no longer just version + BIDS + QC + split + baseline; it now also includes benchmark object + metric bundle, benchmark provenance / governance, and a temporal-validity addendum when a claim spans more than one session, day, or adaptation stage."
   - "The pack is still organized around five bundles, but the evaluation bundle now explicitly separates split family, prediction object, metric semantics, current benchmark rules, temporal scope, setup distribution, and baselines."
+  - "Benchmark name is still too coarse unless predicted object, independent prediction unit, grouped hold-out unit, and operations budget are frozen alongside governance."
   - "Challenge or leaderboard results are not reproducible artifacts on this site unless the current rules snapshot and later organizer corrections are frozen alongside the score."
   - "Cross-session or adaptation naming is not yet temporal validity; fixed decoder interval, recalibration burden, and transfer ceiling still have to be disclosed."
   - "This page is now synchronized with the stricter practical rule already used on Datasets and Verification."
@@ -21,6 +22,7 @@ known_points:
   - "For L0, it is more important than high accuracy that a third party can rerun under the same conditions and still understand what the score is allowed to mean."
   - "BIDS / EEG-BIDS makes data traceable, but it does not by itself fix event fidelity, label provenance, or leak-free evaluation."
   - "The same score can change meaning not only across within-session, cross-session, cross-subject, and adaptation settings, but also across prediction objects and metric bundles."
+  - "The same benchmark name can still hide different predicted objects, grouped hold-out units, and inference budgets unless those fields are frozen explicitly."
   - "Challenge, leaderboard, or benchmark names alone are still too coarse because rules snapshots, randomization policies, extra-data rules, and later postmortems can materially change what the score means."
   - "Cross-session and unsupervised recalibration results still do not by themselves tell you the fixed decoder interval, recalibration burden, or operational transfer ceiling."
   - "Preloaded or modified recordings should be written as derivatives with explicit lineage rather than silently overwriting raw."
@@ -79,6 +81,13 @@ The remaining weakness on this page was subtler than the 2026-03-20 tightening. 
 </p>
 </div>
 
+<div class="note-box">
+<strong>2026-03-31 addendum: benchmark name is not yet the benchmark object</strong>
+<p>
+One more ambiguity remained inside items 7 and 8. Even when benchmark governance is logged, the benchmark name alone still does not fix the <strong>predicted object</strong>, <strong>independent prediction unit</strong>, <strong>grouped hold-out unit</strong>, <strong>adaptation regime</strong>, or <strong>operations budget</strong>. The official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) homepage</a> separates trial-level response-time regression from subject-level externalizing prediction, the official <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a> and <a href="https://eeg2025.github.io/submission/" target="_blank">submission page</a> impose an <strong>inference-only code-submission workflow</strong> under a <strong>single-GPU 20 GB</strong> budget, <a href="https://doi.org/10.1038/s41597-022-01647-1" target="_blank">Ma et al. (2022)</a> use one motor-imagery dataset to separate <strong>within-session</strong>, <strong>cross-session</strong>, and <strong>cross-session adaptation</strong>, <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a> separate <strong>leave-one-subject-out</strong> transfer from <strong>within-subject few-shot calibration</strong>, and <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> show that <strong>six benchmark inconsistencies</strong> can reverse rankings on identical datasets by up to <strong>24 percentage points</strong>. Therefore items 7 and 8 on this page are now read together as an <strong>object / unit / budget disclosure</strong>, not as a benchmark name plus an administrative appendix.
+</p>
+</div>
+
 <section class="section" id="artifact-pack">
 <h2 class="section-title">Minimum 14 items now required in the L0 pack</h2>
 <table class="data-table">
@@ -122,12 +131,12 @@ The remaining weakness on this page was subtler than the 2026-03-20 tightening. 
 </tr>
 <tr>
 <td><strong>7. Benchmark object + metric bundle</strong></td>
-<td>Task family, independent prediction unit, output family, and the task-matched metric bundle that makes the score interpretable.</td>
+<td>Task family, predicted object, independent prediction unit, grouped hold-out unit when different, output family, and the task-matched metric bundle that makes the score interpretable.</td>
 <td>A headline number hides whether the benchmark was cue-locked classification, event detection, sleep staging, trial-wise regression, or subject-level regression, and whether the metric actually matches the task.</td>
 </tr>
 <tr>
 <td><strong>8. Benchmark provenance + governance</strong></td>
-<td>Benchmark or leaderboard name, version, current rules snapshot, split / randomization policy, hidden grouping, extra-data or pretrained-checkpoint policy, inference-stage restrictions, and postmortem / correction status.</td>
+<td>Benchmark or leaderboard name, version, current rules snapshot, split / randomization policy, hidden grouping, extra-data or pretrained-checkpoint policy, inference-stage restrictions / operations budget, and postmortem / correction status.</td>
 <td>The same challenge or benchmark name can silently point to different score objects after execution changes or organizer corrections.</td>
 </tr>
 <tr>

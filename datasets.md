@@ -19,6 +19,7 @@ page_highlights:
   - "High density is not the only meaningful route: targeted-density and DeepSIF-like low-density ESI can work in bounded regimes, but the gain is still solver-, geometry-, and source-regime-conditioned."
   - "Each starter dataset has different annotation provenance, time fidelity, and independent split units."
   - "Within-session / cross-session / cross-subject / adaptation are different evaluation families and should not be placed side by side under the same score."
+  - "Benchmark name is still too coarse: predicted object, independent prediction unit, hold-out unit, adaptation regime, and operations budget can all change what the same score means."
   - "Metric semantics are task-dependent: in imbalanced or rare-event tasks, accuracy or AUROC alone do not fix event sensitivity, false alarms, minority-class failure, or calibration."
   - "Cross-session and adaptation labels are not yet temporal-validity claims; state annotation, fixed decoder interval, recalibration burden, and transfer ceiling still have to be disclosed separately."
   - "Clock domain, stream alignment, digital trigger capture, physical output onset, and uncontrolled-response timing are different timing-validation classes rather than one sync field."
@@ -33,6 +34,7 @@ known_points:
   - "When selecting data for the first time, you will move forward if you prioritize ease of retesting over difficulty."
   - "Cue-locked events, expert interval annotations, sleep hypnograms, and physician report-derived labels have different meanings even though they are the same 'public EEG data'."
   - "Even if the accuracy is the same, the strength of the argument that can be read will change depending on which generalization condition the score was obtained under."
+  - "The same benchmark name can still hide different predicted objects, independent units, grouped hold-out units, adaptation regimes, and inference budgets."
   - "For class-imbalanced or rare-event tasks, a task-matched metric bundle is required: event sensitivity plus false alarms for seizure tasks, and macro / per-stage agreement for sleep staging, rather than one headline number."
   - "Cross-session accuracy and cross-session adaptation still do not say whether a fixed decoder survived, how much recalibration was needed, or what transfer ceiling remains."
   - "A dataset card that says only `events.tsv` or `LSL` still leaves open whether timing was checked at the stored-data, trigger, physical-output, or uncontrolled-response level."
@@ -437,9 +439,53 @@ The next practical weakness on this page was that <strong>split / leak / harmoni
 </div>
 
 <div class="note-box">
+<strong>2026-03-31 addendum: benchmark name is not yet the benchmark object</strong>
+<p>
+The next practical weakness was narrower. Even after benchmark governance became visible, a reader could still talk as if the benchmark name fixed the <strong>predicted object</strong>, <strong>independent prediction unit</strong>, <strong>grouped hold-out unit</strong>, <strong>adaptation regime</strong>, and <strong>operations budget</strong>. The current primary and official sources do not support that shortcut. The official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) homepage</a> separates <strong>Challenge 1</strong> response-time regression from <strong>Challenge 2</strong> subject-level externalizing prediction, the official <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a> and <a href="https://eeg2025.github.io/submission/" target="_blank">submission page</a> add an <strong>inference-only code-submission workflow</strong> under a <strong>single-GPU 20 GB</strong> budget, <a href="https://doi.org/10.1038/s41597-022-01647-1" target="_blank">Ma et al. (2022)</a> use one five-session motor-imagery dataset to separate <strong>within-session</strong>, <strong>cross-session</strong>, and <strong>cross-session adaptation</strong>, <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a> separate <strong>leave-one-subject-out cross-subject evaluation</strong> from <strong>within-subject few-shot calibration</strong>, and <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> show that <strong>six benchmark inconsistencies</strong> can reverse rankings on identical datasets by up to <strong>24 percentage points</strong>. Therefore, on this site, a dataset or leaderboard name is still too coarse until the object / unit / budget matrix is disclosed explicitly.
+</p>
+</div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>Case</th>
+<th>What the named benchmark or dataset actually predicts</th>
+<th>What still has to be frozen separately</th>
+<th>Safe ceiling on this site</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EEG Challenge 1</strong><br>official homepage + rules</td>
+<td><strong>Trial-level</strong> response-time regression from the CCD task.</td>
+<td>The <strong>trial</strong> is the scoring unit, but grouped subject structure and the <strong>inference-only single-GPU 20 GB</strong> budget still have to be disclosed separately.</td>
+<td>A named transfer benchmark under a fixed operations budget, not a general EEG decoder verdict.</td>
+</tr>
+<tr>
+<td><strong>EEG Challenge 2</strong><br>official homepage + leaderboard</td>
+<td><strong>Subject-level</strong> externalizing-factor prediction from EEG across multiple paradigms.</td>
+<td>The <strong>subject</strong> is the natural independent unit, and the organizer postmortem shows that hidden contiguous-trial grouping can still change what the benchmark measured.</td>
+<td>A subject-invariance benchmark attempt whose meaning remains contingent on grouping policy, not proof that subject invariance is solved.</td>
+</tr>
+<tr>
+<td><strong>Ma et al. (2022)</strong><br>five-session motor-imagery dataset</td>
+<td>The same raw dataset supports <strong>within-session</strong>, <strong>cross-session</strong>, and <strong>cross-session adaptation</strong> evaluation families.</td>
+<td>The dataset name alone does not tell you whether <strong>target-session data</strong> were used, when recalibration happened, or what the <strong>pre-adaptation score</strong> was.</td>
+<td>A useful session-shift practice board, not automatic fixed-decoder durability.</td>
+</tr>
+<tr>
+<td><strong>Liu et al. (2026)</strong><br>foundation-model benchmark matrix</td>
+<td>Cross-model comparison across <strong>13 EEG datasets</strong> and <strong>nine paradigms</strong> under multiple transfer settings.</td>
+<td>The paper explicitly separates <strong>leave-one-subject-out</strong> transfer from <strong>within-subject few-shot calibration</strong>, so hold-out unit and adaptation regime still have to be named separately.</td>
+<td>A transfer-regime comparison board, not one portable score of EEG generalization.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
 <strong>Site rule from this section</strong>
 <p>
-From this section onward, dataset cards and baseline results must report at least <strong>(1) evaluation family</strong>, <strong>(2) the independent hold-out unit</strong>, <strong>(3) raw-recording / window ancestry</strong>, <strong>(4) subject / session / site / device / reference-system / electrode-layout disjointness together with metadata-only baselines</strong>, <strong>(5) the channel-map / reference / sample-rate / filter harmonization log</strong>, <strong>(6) whether target-session, target-subject, or target-site data were used</strong>, <strong>(7) recalibration amount and timing</strong>, <strong>(8) for leaderboard or challenge claims, benchmark provenance including version, split / randomization rule, hidden grouping, extra-data / checkpoint policy, inference-stage restrictions, and postmortem disclosures</strong>, and <strong>(9) a stopping claim</strong>. If the claim spans more than one session or day, it must additionally disclose the site's <strong>Temporal Validity</strong> fields: <strong>state annotation</strong>, <strong>fixed decoder interval</strong>, <strong>recalibration burden</strong>, and <strong>transfer ceiling</strong>. Scores without this context will be treated as limited L1 decode results, fingerprint-unresolved / acquisition-distribution-unresolved classifiers, or benchmark-governance-unresolved leaderboards rather than evidence of long-term stability or deployability.
+From this section onward, dataset cards and baseline results must report at least <strong>(1) evaluation family</strong>, <strong>(2) benchmark object plus independent prediction unit</strong>, <strong>(3) the independent hold-out unit</strong>, <strong>(4) raw-recording / window ancestry</strong>, <strong>(5) subject / session / site / device / reference-system / electrode-layout disjointness together with metadata-only baselines</strong>, <strong>(6) the channel-map / reference / sample-rate / filter harmonization log</strong>, <strong>(7) whether target-session, target-subject, or target-site data were used</strong>, <strong>(8) recalibration amount and timing</strong>, <strong>(9) for leaderboard or challenge claims, benchmark provenance including version, split / randomization rule, hidden grouping, extra-data / checkpoint policy, inference-stage restrictions or operations budget, and postmortem disclosures</strong>, and <strong>(10) a stopping claim</strong>. If the claim spans more than one session or day, it must additionally disclose the site's <strong>Temporal Validity</strong> fields: <strong>state annotation</strong>, <strong>fixed decoder interval</strong>, <strong>recalibration burden</strong>, and <strong>transfer ceiling</strong>. Scores without this context will be treated as limited L1 decode results, fingerprint-unresolved / acquisition-distribution-unresolved classifiers, or benchmark-object-unresolved / benchmark-governance-unresolved leaderboards rather than evidence of long-term stability or deployability.
 </p>
 </div>
 
