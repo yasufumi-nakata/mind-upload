@@ -19,6 +19,17 @@ reading_time: "55-80分"
 - 更新日: 2026-03-31
 - 出典: `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`（60行を再構成）
 
+## 2026-03-31 21:09 JST latest post-pull route-hold note
+
+This run still does not change the current public six-question batch. The latest pulled deltas were reread before writing this note: `mind-upload@ed6f8203e46d`, `EEG-DATA@20fbbad9959f`, and `auto-research-funds@77f189662745` still leave the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
+
+- `mind-upload` tightened dataset-benchmark object rules and clarified the FAQ RNA route split, `EEG-DATA` added request-gated `HBUED` emotion-recognition coverage plus a continuous-pursuit online BCI metadata deep dive, and `auto-research-funds` added `Teraura Sayoko outbound scholarship`, `Gakusho scholarship`, and README-stat refreshes, but none of those changes replace the current route family.
+- Recounting the `### Ux-y` headings on this page still returns `60`, so this run keeps the one-row-at-a-time dossier structure intact.
+- The public six still stay `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
+- The solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
+- Browser-level live checks at `2026-03-31 21:09 JST` still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, so the current public-facing route stays aligned.
+- The funding bridge still stays narrow: `Kura Fund`, `Nakatani Foundation graduate scholarship`, and `Kashinome Scholarship` remain the active near-term lanes, `Nakatani Foundation research grant`, `Secom General Research Grant`, and `Brain Science Foundation research grant` remain outside the current-cycle lane, and no new Todoist item was created in this session.
+
 ## 2026-03-31 19:07 JST latest post-pull route-hold note
 
 This run still does not change the current public six-question batch. The latest pulled deltas were reread before writing this note: `mind-upload@b7b6c0498ae1`, `EEG-DATA@24e85cc20f09`, and `auto-research-funds@0fddd53bd03c` still leave the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
@@ -392,14 +403,14 @@ This run does not change the current public six-question batch. It only tightens
 
 ### U1-2 頭蓋導電率・電極配置・ノイズ構造の不確実性を、推定不確実性へどう伝播させるか。
 
-- 検証命題: ID 56/1839で電極欠損・ノイズ注入を行い、不確実性伝播の校正曲線を作る。
+- 検証命題: `D08` で頭蓋導電率・電極欠損・ノイズ摂動を与え、`interval coverage` `error increment` `rank stability` の校正曲線を固定する。
 - EEG-DATA判定境界: A（直接検証可能）<br>EEG-DATA単独で主要仮説まで検証可能（外部依存なし）。
-- auto-research-funds応募テーマ: 若手研究助成（不確実性推定）
+- auto-research-funds応募テーマ: 研究助成（逆問題の不確実性伝播校正）
 - 第一応募先 / 予備応募先: G1 (GR-2026-013) / G4 (Drbm6vBRDJkn0NGJ)
-- 主データ（ID）: `56`
-- 補助データ（推奨ID）: `ID 56, 676, 1839`
-- 初期KPI（U1標準）: `逆解誤差` `不確実性被覆率` `手法順位一致率`
-- 停止条件: 主データ単独で再現しない場合は、前処理・分割・同期ログを固定して再試行し、それでも再現不能なら主張を下方修正する。
+- 主データ（ID）: `D08 Simultaneous human intracerebral stimulation and HD-EEG`
+- 補助データ（推奨ID）: `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling`, `D19 CerebellarTMSEEGData`
+- 初期KPI（U1標準）: `interval coverage` `error increment` `rank stability`
+- 停止条件: 導電率・電極欠損・ノイズ摂動を繰り返したときに `interval coverage` が崩れるか、`rank stability` が反転する場合は、不確実性主張を `bounded benchmark` まで降格する。
 - 最低成果物: Inverse problem reproduction report (error/uncertainty)
 - Run update (2026-03-29): This section is now locked to `D08 Simultaneous human intracerebral stimulation and HD-EEG` as the primary anchor, with `D11/D19` reserved for perturbation checks that do not replace the main ground-truth signal.
 - First-pass KPI fixed in this run: `interval coverage` is the public pass/fail metric, and the claim must be downgraded when repeated conductivity, missing-electrode, or noise perturbations break coverage stability.
@@ -525,15 +536,17 @@ This run does not change the current public six-question batch. It only tightens
 
 ### U4-2 介入実験（刺激・抑制・入力撹乱）で検証可能な最小因果主張は何か。
 
-- 検証命題: ID 56（multimodal speech-production）を主データに、介入有無で `最小因果主張=介入方向の符号一致` を事前登録し、ID 19で再現確認する。
+- 検証命題: `D05` を主データに、`intervention-versus-control difference` と `sign agreement` を最小因果主張として事前登録し、`D08/D19` で cross-check する。
 - EEG-DATA判定境界: A（直接検証可能）<br>刺激条件と非刺激条件の比較をEEG-DATA内で完結できるため、最小主張はEEG単独で検証可能。
-- auto-research-funds応募テーマ: 若手研究助成（ground-truth介入）
+- auto-research-funds応募テーマ: 研究助成（最小介入 causal verification）
 - 第一応募先 / 予備応募先: G1 (GR-2026-013) / G4 (Drbm6vBRDJkn0NGJ)
-- 主データ（ID）: `56`
-- 補助データ（推奨ID）: `ID 19, 56, 1839`
-- 初期KPI（U4標準）: `介入あり/なし差` `PEHE` `符号反転率`
-- 停止条件: `符号反転率 > 10%` または `介入あり/なし差` の95%CIが0をまたぐ場合は、因果主張を「探索」に降格する。
+- 主データ（ID）: `D05 EEG cortical responses after HiPi`
+- 補助データ（推奨ID）: `D08 Simultaneous human intracerebral stimulation and HD-EEG`, `D19 CerebellarTMSEEGData`
+- 初期KPI（U4標準）: `介入あり/なし差` `符号一致率` `反事実誤差`
+- 停止条件: `sign agreement` が崩れるか、`intervention-versus-control difference` の95%CIが0をまたぐ場合は、因果主張を `exploration only` へ降格する。
 - 最低成果物: Intervention protocol and rebuttal condition definition
+- Run update (2026-03-31): This section is now locked to `D05 EEG cortical responses after HiPi` as the primary anchor, with `D08/D19` kept only as support for cross-checking the same intervention family.
+- First-pass KPI fixed in this run: `intervention-versus-control difference`, `sign agreement`, and `counterfactual error` are the public audit numbers, and persistent sign reversal immediately downgrades the claim.
 
 
 
@@ -655,15 +668,17 @@ This run does not change the current public six-question batch. It only tightens
 
 ### U8-1 閉ループBCIの遅延許容域を制御理論的にどう同定するか。
 
-- 検証命題: ID 6/1972で遅延・位相ずれに対する `安定率` `停止介入率` `回復時間` を測り、許容域を3指標で定義する。
+- 検証命題: `D20` で遅延・位相ずれに対する `stability rate` `stop-intervention rate` `recovery time` を測り、bounded delay-tolerance band を定義する。
 - EEG-DATA判定境界: B（部分検証（外部データ併用で成立））<br>EEG主解析は可能だが、外部データまたは制度情報の併用が必須。
-- auto-research-funds応募テーマ: 若手研究助成（閉ループ安定化）
+- auto-research-funds応募テーマ: 研究助成（閉ループ遅延許容域と safety-stop）
 - 第一応募先 / 予備応募先: G2 (GR-2026-014) / G5 (871pw3rLjNPKgqA0)
-- 主データ（ID）: `6`
-- 補助データ（推奨ID）: `ID 6, 1972, 2412, 696`
-- 初期KPI（U8標準）: `安定率` `停止介入率` `回復時間`
-- 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
+- 主データ（ID）: `D20 Closed-loop auditory stimulation targeting REM oscillations`
+- 補助データ（推奨ID）: `D21 NeuroSimo: closed-loop EEG/EMG-guided TMS`, `D12 Longitudinal MI-BCI training with transcutaneous spinal stimulation`
+- 初期KPI（U8標準）: `stability rate` `stop-intervention rate` `recovery time`
+- 停止条件: `stability rate` が事前宣言した floor を下回るか、`recovery time` が operating band を継続逸脱する場合は、主張を `local-controller result` まで降格する。
 - 最低成果物: Closed loop safety KPI dashboard
+- Run update (2026-03-31): This section is now locked to `D20 Closed-loop auditory stimulation targeting REM oscillations` as the primary anchor, with `D21/D12` kept only as support for trigger-stop-recovery cross-checks.
+- First-pass KPI fixed in this run: `stability rate`, `stop-intervention rate`, and `recovery time` are the public safety numbers, and drifting beyond the declared operating band immediately downgrades the claim.
 
 
 ### U8-2 オンライン較正と概念ドリフト対策をどう組み込むか。

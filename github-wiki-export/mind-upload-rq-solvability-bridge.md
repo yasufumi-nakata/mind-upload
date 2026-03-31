@@ -39,6 +39,14 @@ It does **not** try to re-scan all `60RQ` items at once. The working style on th
 - `External dependency` means a requirement that still needs theory work, language evaluation, legal judgment, clinical transfer, hardware validation, or broader community adoption outside this repository.
 - `Funding theme` means wording that still matches the present artifact level. It is not a promise that the larger mind-upload question is solved.
 
+## What still stays fixed after the 21:09 JST post-pull reread on March 31, 2026
+
+- A latest pull recheck at `2026-03-31 21:09 JST` after `mind-upload@ed6f8203e46d`, `EEG-DATA@20fbbad9959f`, and `auto-research-funds@77f189662745` still leaves both the current public six and the next-watch queue unchanged.
+- The newest pulled deltas still widen support rather than the present bridge: `mind-upload` tightened dataset-benchmark object rules and clarified the FAQ RNA route split, `EEG-DATA` added request-gated `HBUED` emotion-recognition coverage plus a continuous-pursuit online BCI metadata deep dive, and `auto-research-funds` added `Teraura Sayoko outbound scholarship`, `Gakusho scholarship`, and README-stat refreshes, but none of those changes replace the current `D10 / D03 / D02 / D01` family or the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1`.
+- Browser-level live checks at `2026-03-31 21:09 JST` still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, and the live `issue.html` paragraph still names the current six in the same order.
+- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, while `Nakatani Foundation research grant`, `Secom General Research Grant`, and `Brain Science Foundation research grant` remain outside the current-cycle lane.
+- A fresh paginated Todoist `api/v1/tasks` full audit still showed enough route coverage (`active tasks=205`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`), so no new task was added in this session.
+
 ## What still stays fixed after the 19:07 JST post-pull reread on March 31, 2026
 
 - A latest pull recheck at `2026-03-31 19:07 JST` after `mind-upload@b7b6c0498ae1`, `EEG-DATA@24e85cc20f09`, and `auto-research-funds@0fddd53bd03c` still leaves both the current public six and the next-watch queue unchanged.
