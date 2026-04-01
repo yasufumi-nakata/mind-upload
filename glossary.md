@@ -14,7 +14,7 @@ accuracy_note: "The definitions here are deliberately short. For exact usage, re
 page_highlights:
   - "It gives short explanations of terms and points to where each concept matters."
   - "It now includes the front-door verification terms added in the March 2026 re-audit, such as claim ceiling, shortcut auditing, maintenance-state, and vascular-state / CVR audit."
-  - "It now also includes the human-observability and support-state terms needed after the late-March and early-April 2026 deepening passes, such as proxy class, route maturity / model burden, route role, calibrator role, support-state proxy, target-defined astrocyte-related proxy, and macro clearance-transport proxy family."
+  - "It now also includes the human-observability and support-state terms needed after the late-March and early-April 2026 deepening passes, such as proxy class, route maturity / model burden, route role, calibrator role, support-state proxy, glial substrate-routing, target-defined astrocyte-related proxy, and macro clearance-transport proxy family."
   - "It now also defines the newer route-card semantics added in the late-March 2026 passes, such as field-formation wall, Fusion Card, Human Proxy Composition Card, shared-driver audit, strongest single row, and State-Continuity Bridge Card."
   - "It now also includes the temporal-bridge stop line added in the 2026-03-30 sync, namely the split between fast state labels and slow internal milieu."
   - "It now also fixes tractography-specific stop-line terms such as macro pathway prior and tractography route card, so living-human connectome language is not overread."
@@ -23,7 +23,7 @@ page_highlights:
 known_points:
   - "Many misunderstandings can be avoided simply by reducing terminology confusion."
   - "It is especially important to distinguish between decode/emulate, correlation/causation, functional connectivity/effective connectivity/causal wiring, observability/identifiability, model fit/direct validation, and brain signal/language prior."
-  - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, astrocyte-state, target-defined astrocyte-related proxy, clearance / immune support, macro clearance-transport proxy family, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, route-role, route-maturity, and calibrator-role language."
+  - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, glial substrate-routing, astrocyte-state, target-defined astrocyte-related proxy, clearance / immune support, macro clearance-transport proxy family, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, route-role, route-maturity, and calibrator-role language."
   - "Support-state proxy is still too coarse unless quantity type or route role is also named explicitly."
   - "Readers also need a term-level split between fast state labels such as movement / arousal and slow internal milieu such as circadian phase, glucocorticoid exposure, and insulin / metabolic regime."
   - "Readers also need a term-level stop line between connectome as structural scaffold and living-human tractography as an acquisition- and graph-conditioned macro pathway prior."
@@ -212,7 +212,14 @@ If words such as <strong>claim ceiling</strong>, <strong>hidden state</strong>, 
 <div class="note-box">
 <strong>When human-evidence terms start sounding like one thing</strong>
 <p>
-Words such as <strong>proxy class</strong>, <strong>route maturity / model burden</strong>, <strong>route role</strong>, <strong>calibrator role</strong>, <strong>support-state proxy</strong>, <strong>target-defined astrocyte-related proxy</strong>, and <strong>macro clearance-transport proxy family</strong> are there to stop local ultrastructure, SV2A PET, MRSI biochemical scaffold, dynamic DMRSI, myelin mapping, BBB water exchange, MAO-B / I<sub>2</sub>BS astrocyte PET, CSF mobility, respiration-conditioned net-flow MRI, exercise-conditioned contrast-influx, and model-based biomarker-efflux evidence from collapsing into one impression of “we can now see almost everything in humans.” If that distinction is what you need next, go to <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> and <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>.
+Words such as <strong>proxy class</strong>, <strong>route maturity / model burden</strong>, <strong>route role</strong>, <strong>calibrator role</strong>, <strong>support-state proxy</strong>, <strong>glial substrate-routing</strong>, <strong>target-defined astrocyte-related proxy</strong>, and <strong>macro clearance-transport proxy family</strong> are there to stop local ultrastructure, SV2A PET, MRSI biochemical scaffold, dynamic DMRSI, myelin mapping, BBB water exchange, MAO-B / I<sub>2</sub>BS astrocyte PET, CSF mobility, respiration-conditioned net-flow MRI, exercise-conditioned contrast-influx, and model-based biomarker-efflux evidence from collapsing into one impression of “we can now see almost everything in humans.” If that distinction is what you need next, go to <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> and <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>.
+</p>
+</div>
+
+<div class="note-box">
+<strong>When astrocyte-state and glial fuel support start sounding identical</strong>
+<p>
+On this site, those are different terms. <strong>Glial substrate-routing</strong> is about who supplied which fuel or carrier to which neuronal sink under which regime. <strong>Astrocyte-state</strong> is about astrocyte network or ensemble state that can shape recall, stabilization, or fear-state representation. Current human energetic imaging or astrocyte-related PET does not directly identify living-human glia-to-neuron fuel-routing state. If that distinction is what you need next, go to <a href="wbe_101.html#state-completeness">WBE 101: hidden state at the entry point</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#glial-substrate-route-card">Wiki: glial substrate-routing route card</a>.
 </p>
 </div>
 
@@ -432,7 +439,7 @@ If <strong>state annotation</strong>, <strong>state continuity</strong>, <strong
 </tr>
 <tr>
 <td><strong>Maintenance-state</strong></td>
-<td>Slow controller and support variables, such as sleep / wake history, post-transcriptional RNA-state, phospho-signaling / second-messenger state, cargo-transport / cytoskeletal trafficking state, thermal-state, ionic state, bioenergetic / mitochondrial support, neurovascular-unit / BBB / pericyte state, astrocyte / glial-state, and clearance-related support, that matter for long-horizon stability. It is broader than fast loop state labels, but it is also different from the narrower slow internal milieu of circadian / glucocorticoid / insulin-metabolic regime disclosure.</td>
+<td>Slow controller and support variables, such as sleep / wake history, post-transcriptional RNA-state, phospho-signaling / second-messenger state, cargo-transport / cytoskeletal trafficking state, thermal-state, ionic state, bioenergetic / mitochondrial support, neurovascular-unit / BBB / pericyte state, glial substrate-routing, astrocyte-state, and clearance-related support, that matter for long-horizon stability. It is broader than fast loop state labels, but it is also different from the narrower slow internal milieu of circadian / glucocorticoid / insulin-metabolic regime disclosure.</td>
 </tr>
 <tr>
 <td><strong>Post-transcriptional RNA-state</strong></td>
@@ -443,8 +450,12 @@ If <strong>state annotation</strong>, <strong>state continuity</strong>, <strong
 <td>The fast controller layer between protein presence and current pathway activity that includes phosphosite occupancy, kinase/phosphatase balance, and compartment-specific cAMP/Ca<sup>2+</sup>/PKA signaling nanodomains. It should not be collapsed into either transcript abundance, bulk proteomics, or nominal synaptic weight.</td>
 </tr>
 <tr>
-<td><strong>Astrocyte / glial-state</strong></td>
-<td>The minutes-to-days non-neuronal state that includes astrocyte network responses, learning-associated ensembles, lactate transport, and related glial variables that can change recall, multiday stabilization, or fear-state representations. On this site, the human side does not directly read out astrocyte-state; it is carried only by target-defined astrocyte-related proxies. MAO-B first-in-human target validation, disease-context contrast, brain quantification / biodistribution, and I<sub>2</sub>BS routes are different route roles rather than one interchangeable astrocyte row. It should not be collapsed into generic metabolic background or into clearance / immune support.</td>
+<td><strong>Glial substrate-routing</strong></td>
+<td>The maintenance-side fuel-routing layer that asks which glial supplier delivered which substrate or carrier to which neuronal sink, under which regime and through which transport route. On this site, lactate-shuttle support, glial ketone-body routing under starvation, intensive-learning glia-to-neuron fatty-acid flux, and apoE / sortilin-dependent lipid delivery are different claim families rather than one generic glial-support row. Current living-human energetic imaging or astrocyte-related PET does not directly read out this routing state, so it should not be collapsed into astrocyte-state, neuronal mitochondrial control, or one generic human energetic proxy.</td>
+</tr>
+<tr>
+<td><strong>Astrocyte-state</strong></td>
+<td>The minutes-to-days astrocyte network or ensemble state that can change recall, multiday stabilization, or fear-state representations through astrocyte-specific signaling and population dynamics. On this site, the human side does not directly read out astrocyte-state; it is carried only by target-defined astrocyte-related proxies. MAO-B first-in-human target validation, disease-context contrast, brain quantification / biodistribution, and I<sub>2</sub>BS routes are different route roles rather than one interchangeable astrocyte row. Astrocyte-state should not be collapsed into glial substrate-routing, generic metabolic background, or clearance / immune support.</td>
 </tr>
 <tr>
 <td><strong>Target-defined astrocyte-related proxy</strong></td>
@@ -464,7 +475,7 @@ If <strong>state annotation</strong>, <strong>state continuity</strong>, <strong
 </tr>
 <tr>
 <td><strong>Support-state proxy</strong></td>
-<td>A human route that constrains slow maintenance variables only at a coarse level. Its meaning still depends on quantity type or route role: energetic balance vs exchange flux vs NAD dynamics; quantity-defined ionic or myelin routes; BBB water-exchange vs tracer-specific transport; target-defined astrocyte-related proxies; or macro clearance-transport routes such as CSF mobility, net-flow, contrast-influx, intrathecal clearance, and model-based efflux. It is stronger than saying “nothing is visible,” but weaker than local controller, astrocyte-ensemble state, cell-specific immune control, or other cell-specific ground truth.</td>
+<td>A human route that constrains slow maintenance variables only at a coarse level. Its meaning still depends on quantity type or route role: energetic balance vs exchange flux vs NAD dynamics; quantity-defined ionic or myelin routes; BBB water-exchange vs tracer-specific transport; target-defined astrocyte-related proxies; or macro clearance-transport routes such as CSF mobility, net-flow, contrast-influx, intrathecal clearance, and model-based efflux. It is stronger than saying “nothing is visible,” but weaker than local controller, glial substrate-routing identity, astrocyte-ensemble state, cell-specific immune control, or other cell-specific ground truth.</td>
 </tr>
 <tr>
 <td><strong>Thermal-state</strong></td>
@@ -803,6 +814,9 @@ Although non-invasive decoding and ESI are making steady progress, a successful 
 <li>Glykys, J., Dzhala, V., Egawa, K., et al. (2014). Local impermeant anions establish the neuronal chloride concentration. <a href="https://doi.org/10.1126/science.1245423" target="_blank">doi:10.1126/science.1245423</a></li>
 <li>Seidl, A. H., Rubel, E. W., &amp; Barria, A. (2015). Tuning of Ranvier node and internode properties in myelinated axons to adjust action potential timing. <a href="https://doi.org/10.1038/ncomms9073" target="_blank">doi:10.1038/ncomms9073</a></li>
 <li>Suzuki, A., et al. (2011). Astrocyte-neuron lactate transport is required for long-term memory formation. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">doi:10.1016/j.cell.2011.02.018</a></li>
+<li>Silva, B., et al. (2022). Glial ketogenesis regulates memory maintenance during starvation. <a href="https://doi.org/10.1038/s42255-022-00528-6" target="_blank">doi:10.1038/s42255-022-00528-6</a></li>
+<li>Pavlowsky, A., et al. (2025). Neuronal fatty acid oxidation fuels memory after intensive learning in Drosophila. <a href="https://doi.org/10.1038/s42255-025-01416-5" target="_blank">doi:10.1038/s42255-025-01416-5</a></li>
+<li>Greda, A. K., et al. (2025). Interaction of sortilin with apolipoprotein E3 enables neurons to use long-chain fatty acids as alternative metabolic fuel. <a href="https://doi.org/10.1038/s42255-025-01389-5" target="_blank">doi:10.1038/s42255-025-01389-5</a></li>
 <li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
 <li>Williamson, N. R., et al. (2025). Learning-associated astrocyte ensembles regulate memory recall. <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">doi:10.1038/s41586-024-08170-w</a></li>
 <li>Dewa, K., et al. (2025). The astrocytic ensemble acts as a multiday trace to stabilize memory. <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">doi:10.1038/s41586-025-09619-2</a></li>
