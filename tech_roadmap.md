@@ -44,7 +44,7 @@ known_points:
   - "A disclosed body / environment boundary, including slow internal-milieu disclosure, is a separate audit from low latency or online accuracy."
   - "Human-side advances reduce different error terms and remain differently deployment-limited; proxy-rich evidence is not yet same-subject, same-session, externally calibrated state identification."
   - "Proxy class, operational maturity, and calibrator role are different questions; a real human route may still calibrate only one bounded hidden-state family."
-  - "A human route family name is not yet one row; 1H-MRSI similarity, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, localized functional 31P NAD-dynamics, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, quantity-defined myelin MRI, BBB water-exchange, tracer-specific BBB PET transport, and target-defined astrocyte PET remain separate routes with different ceilings."
+  - "A human route family name is not yet one row; 1H-MRSI similarity, high-resolution 1H-MRSI metabolite-distribution mapping, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, localized functional 31P NAD-dynamics, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, quantity-defined myelin MRI, BBB water-exchange, tracer-specific BBB PET transport, and target-defined astrocyte PET remain separate routes with different ceilings."
   - "Even when human proxy rows look complementary, cohort / physiological regime mismatch, route-local repeatability, cross-centre transfer, and complete-case availability still remain separate gates."
   - "Longitudinal success is not one axis; within-day state fluctuation, trait-like backbone, biological drift, interface / decoder drift, and recalibration burden answer different questions."
   - "OPM-MEG motion tolerance still depends on magnetic shielding, active nulling, calibration, and source-model disclosure."
@@ -727,7 +727,7 @@ The remaining weakness in this roadmap was that M3 still let very different huma
 <td>Parcel-level biochemical similarity scaffold</td>
 <td>51 healthy participants with 13-person replication; QC and parceling dependent</td>
 <td>Bounded biochemical scaffold</td>
-<td>Five-metabolite similarity matrix, not energetic balance, absolute metabolite distribution, or kinetic rate imaging</td>
+<td>Five-metabolite similarity matrix, not high-resolution metabolite distribution, not energetic balance, and not kinetic rate imaging</td>
 </tr>
 <tr>
 <td><strong>Human <sup>31</sup>P-MRS energetic balance</strong><br>Ren et al. (2015)</td>

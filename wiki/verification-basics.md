@@ -321,7 +321,7 @@ If the bundle is sequential rather than same-session, the <a href="../verificati
 </tr>
 <tr>
 <td><strong>Living-human proxy bundle</strong></td>
-<td>SV2A PET, 1H-MRSI similarity, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, localized functional 31P NAD-dynamics, deuterium metabolite-mapping / absolute-quantification, deuterium kinetic-rate imaging, quantity-defined myelin MRI, BBB water-exchange MRI, tracer-specific BBB PET, target-defined astrocyte PET, and clearance routes measure different quantity / target / transport types, spatial units, timescales, model burdens, and safe calibrator roles; even a well-typed bundle still needs robustness, shared-driver / quantity-bridge, and increment disclosure.</td>
+<td>SV2A PET, 1H-MRSI similarity, high-resolution 1H-MRSI metabolite-distribution mapping, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, localized functional 31P NAD-dynamics, deuterium metabolite-mapping / absolute-quantification, deuterium kinetic-rate imaging, quantity-defined myelin MRI, BBB water-exchange MRI, tracer-specific BBB PET, target-defined astrocyte PET, and clearance routes measure different quantity / target / transport types, spatial units, timescales, model burdens, and safe calibrator roles; even a well-typed bundle still needs robustness, shared-driver / quantity-bridge, and increment disclosure.</td>
 <td>Human Proxy Composition Card.</td>
 </tr>
 <tr>
