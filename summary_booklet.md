@@ -29,11 +29,11 @@ body_class: "summary-booklet-page"
 </div>
 <div>
   <span>Current Focus</span>
-  <strong>Connectome-complete does not mean emulation-complete; mis…</strong>
+  <strong>Connectome-complete is not emulation-complete.</strong>
 </div>
 <div>
   <span>Primary Entry</span>
-  <strong>Mind-Upload / Verification: Mind Uploading Verification C…</strong>
+  <strong>Mind-Upload -&gt; Verification Commons</strong>
 </div>
 
   </div>
@@ -45,7 +45,10 @@ body_class: "summary-booklet-page"
 </article>
 <article class="booklet-card">
   <h3>What It Does Not Claim Yet</h3>
-  <p>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately. / Human evidence is layered: local ultrastructure, synaptic-d…</p>
+  <ul class="booklet-list">
+  <li>Connectome-complete is not emulation-complete.</li><li>Human evidence remains layered and proxy-based.</li><li>Same-subject wording does not make one state sample.</li><li>Proxy bundles need compatibility, repeatability, and disagreement audits.</li>
+</ul>
+
 </article>
 <article class="booklet-card">
   <h3>Core Pages To Read Now</h3>
@@ -64,7 +67,7 @@ body_class: "summary-booklet-page"
   <div class="booklet-card-grid booklet-card-grid-2">
     <article class="booklet-card">
   <h3>1. Site Scope</h3>
-  <p>This page is the main entry point to Mind-Upload. It is designed to show, as quickly as possible, what this site is try…</p>
+  <p>This page is the main entry point to Mind-Upload.</p>
 </article>
 <article class="booklet-card">
   <h3>2. Known vs Unknown</h3>
@@ -72,15 +75,15 @@ body_class: "summary-booklet-page"
 </article>
 <article class="booklet-card">
   <h3>3. Core Page Roles</h3>
-  <p>This page is a map of WBE questions arranged under measurement, reconstruction, implementation, verification, and socia…</p>
+  <p>This page is a map of WBE questions arranged under measurement, reconstruction, implementation, verification, and…</p>
 </article>
 <article class="booklet-card">
   <h3>4. Support Routes</h3>
-  <p>This page is the operations hub for fixing where public content should go so material does not scatter across the site.…</p>
+  <p>This page is the operations hub for fixing where public content should go so material does not scatter across the site.</p>
 </article>
 <article class="booklet-card">
   <h3>5. Next Actions</h3>
-  <p>This page explains how to participate in Mind-Upload, how to read issue status, and how to separate changes that can be…</p>
+  <p>This page explains how to participate in Mind-Upload, how to read issue status, and how to separate changes that can…</p>
 </article>
 <article class="booklet-card">
   <h3>6. Source Pages</h3>
@@ -141,15 +144,15 @@ body_class: "summary-booklet-page"
 </tr>
 <tr>
   <td>Verification Commons</td>
-  <td><strong><a href="/verification.html">Verification: Mind Uploading Verification Commons</a></strong><br>This page is the core blueprint of Mind-Upload. It explains how to define progress in advance rather than retroactively by aligning data, evaluation, failure conditions, and reproduction pr…</td>
+  <td><strong><a href="/verification.html">Verification: Mind Uploading Verification Commons</a></strong><br>This page is the core blueprint of Mind-Upload.</td>
 </tr>
 <tr>
   <td>Technical Map</td>
-  <td><strong><a href="/tech_roadmap.html">Technical Roadmap: Understanding WBE Through Measurement, Reconstruction, and Implementation</a></strong><br>This page is a map of WBE questions arranged under measurement, reconstruction, implementation, verification, and social deployment. Its purpose is to keep the reader from losing track of w…</td>
+  <td><strong><a href="/tech_roadmap.html">Technical Roadmap: Understanding WBE Through Measurement, Reconstruction, and Implementation</a></strong><br>This page is a map of WBE questions arranged under measurement, reconstruction, implementation, verification, and social deployment.</td>
 </tr>
 <tr>
   <td>Theory Framing</td>
-  <td><strong><a href="/perspective.html">Toward Mind Uploading: An Integrated Technical and Theoretical Approach</a></strong><br>This page is a long research note that follows the theoretical, measurement, and implementation questions around mind uploading while keeping primary literature and hard limits side by side…</td>
+  <td><strong><a href="/perspective.html">Toward Mind Uploading: An Integrated Technical and Theoretical Approach</a></strong><br>This page is a long research note that follows the theoretical, measurement, and implementation questions around mind uploading while keeping primary literature and hard limits side by side.</td>
 </tr>
 
     </tbody>
@@ -224,7 +227,7 @@ body_class: "summary-booklet-page"
   </div>
 
   <div class="booklet-quote">
-    <p>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately. / Human evidence is layered: local ultrastructure, synaptic-density PET, receptor / transporter atlas priors, selected occupancy PET routes,…</p>
+    <p>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</p>
   </div>
 </section>
 
@@ -251,22 +254,22 @@ body_class: "summary-booklet-page"
 <tr>
   <td><a href="/verification.html">Verification: Mind Uploading Verification Commons</a></td>
   <td>Platform - Use the logic of PDB x BIDS x PhysioNet x OSF to define WBE success conditions and reproducible progress</td>
-  <td>This page is the core blueprint of Mind-Upload. It explains how to define progress in advance rather than retroactively by aligning data, evaluation, failure conditions, and reproduction pr…</td>
+  <td>This page is the core blueprint of Mind-Upload.</td>
 </tr>
 <tr>
   <td><a href="/tech_roadmap.html">Technical Roadmap: Understanding WBE Through Measurement, Reconstruction, and Implementation</a></td>
   <td>Roadmap (Definition #1) - Break &#39;what counts as progress&#39; into a question tree with reading order and minimum arrival conditions</td>
-  <td>This page is a map of WBE questions arranged under measurement, reconstruction, implementation, verification, and social deployment. Its purpose is to keep the reader from losing track of w…</td>
+  <td>This page is a map of WBE questions arranged under measurement, reconstruction, implementation, verification, and social deployment.</td>
 </tr>
 <tr>
   <td><a href="/perspective.html">Toward Mind Uploading: An Integrated Technical and Theoretical Approach</a></td>
   <td>Perspective - Audit the hypothesis of reproducing brain information processing on another substrate through the barriers of measurability, identifiability, and maintenance state</td>
-  <td>This page is a long research note that follows the theoretical, measurement, and implementation questions around mind uploading while keeping primary literature and hard limits side by side…</td>
+  <td>This page is a long research note that follows the theoretical, measurement, and implementation questions around mind uploading while keeping primary literature and hard limits side by side.</td>
 </tr>
 <tr>
   <td><a href="/datasets.html">Data &amp; Hands-on: Where to start and how to get to L0</a></td>
   <td>Resource - Connect ``what to use&#39;&#39; and ``how to reproduce&#39;&#39; in the shortest route without separating them.</td>
-  <td>This page is a practical guide that answers both ``Which public data should I start validation with first?&#39;&#39; and ``How do I proceed to L0 reproducible analysis?&#39;&#39; in one place. It does not…</td>
+  <td>This page is a practical guide that answers both ``Which public data should I start validation with first?&#39;&#39; and ``How do I proceed to L0 reproducible analysis?&#39;&#39; in one place.</td>
 </tr>
 <tr>
   <td><a href="/issue.html">Contribution Guide</a></td>
@@ -378,12 +381,12 @@ body_class: "summary-booklet-page"
       <tr>
   <td><a href="/wbe_101.html">Introduction: Making Mind Uploading / WBE a Measurable Problem</a></td>
   <td>Primer - To protect the dream, build the measuring stick first</td>
-  <td>This page is an introduction to mind uploading and WBE for readers who do not want to leave the topic at the level of a dream or a slogan. Its goal is to sort out what can be said now, what…</td>
+  <td>This page is an introduction to mind uploading and WBE for readers who do not want to leave the topic at the level of a dream or a slogan.</td>
 </tr>
 <tr>
   <td><a href="/eeg_101.html">Introduction: What EEG Measures, What It Can Do, and What It Cannot Do</a></td>
   <td>Primer - A realistic guide that refuses to turn EEG into magical mind reading</td>
-  <td>This page is an introduction that sorts out what EEG measures, what it is good at, and what it is bad at. It is designed to avoid the misreading that EEG can simply read the mind, while exp…</td>
+  <td>This page is an introduction that sorts out what EEG measures, what it is good at, and what it is bad at.</td>
 </tr>
 <tr>
   <td><a href="/faq.html">FAQ: Common Questions and Common Failure Modes</a></td>
@@ -398,7 +401,7 @@ body_class: "summary-booklet-page"
 <tr>
   <td><a href="/content_hub.html">Public Content Integration Hub</a></td>
   <td>Navigation - A single routing layer to prevent content sprawl and literature-route compression</td>
-  <td>This page is the operations hub for fixing where public content should go so material does not scatter across the site. It now also gives a technical fast path so literature updates are not…</td>
+  <td>This page is the operations hub for fixing where public content should go so material does not scatter across the site.</td>
 </tr>
 
     </tbody>

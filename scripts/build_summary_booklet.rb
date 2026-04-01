@@ -91,6 +91,29 @@ AUDIT_PRIORITY_QUERIES = [
   /Specificity & Shortcut Card|same decode score is not a target-specific biomarker/i
 ].freeze
 
+COMPACT_STOPLINE_RULES = [
+  [/Connectome-complete does not mean emulation-complete/i, "Connectome-complete is not emulation-complete."],
+  [/human evidence is layered/i, "Human evidence remains layered and proxy-based."],
+  [/Several living-human proxy rows are not promoted together/i, "Proxy bundles need compatibility, repeatability, and disagreement audits."],
+  [/same-subject or same-brain.*one state sample/i, "Same-subject wording does not make one state sample."],
+  [/same decode score is not a target-specific biomarker/i, "High decode scores can still be shortcut-driven."],
+  [/Temporal Validity Card/i, "Same-day success is not a cross-day or long-term claim."]
+].freeze
+
+COMPACT_TITLE_MAP = {
+  "index" => "Mind-Upload",
+  "verification" => "Verification Commons",
+  "tech_roadmap" => "Technical Roadmap",
+  "perspective" => "Perspective",
+  "datasets" => "Datasets & L0",
+  "issue" => "Contribution Guide",
+  "content_hub" => "Content Hub",
+  "wbe_101" => "WBE 101",
+  "eeg_101" => "EEG 101",
+  "faq" => "FAQ",
+  "glossary" => "Glossary"
+}.freeze
+
 PageData = Struct.new(
   :path,
   :slug,
@@ -495,8 +518,8 @@ class SummaryBookletTemplate
   def cover_band_html
     items = [
       ["Reference Date", latest_date],
-      ["Current Focus", summary_stop_lines.first || verification_page.page_highlights.first],
-      ["Primary Entry", "#{intro_page.title} / #{verification_page.title}"]
+      ["Current Focus", compact_stop_line(summary_stop_lines.first || verification_page.page_highlights.first)],
+      ["Primary Entry", "#{compact_title(intro_page)} -> #{compact_title(verification_page)}"]
     ]
     items.map do |label, value|
       <<~HTML
@@ -509,11 +532,9 @@ class SummaryBookletTemplate
   end
 
   def cover_cards_html
-    entry_stop_lines = (summary_stop_lines + intro_page.unknown_points + perspective_page.unknown_points).uniq.first(3)
-
     cards = [
       ["What This Site Builds First", verification_page.abstract_html || h(verification_page.page_intro)],
-      ["What It Does Not Claim Yet", h(shorten(entry_stop_lines.join(" / "), 180))],
+      ["What It Does Not Claim Yet", bullet_list_html(cover_stop_lines)],
       ["Core Pages To Read Now", h(core_pages.map(&:title).join(" / "))]
     ]
     render_cards(cards)
@@ -700,6 +721,17 @@ class SummaryBookletTemplate
     )
   end
 
+  def cover_stop_lines
+    preferred = summary_stop_lines.map { |line| compact_stop_line(line) }.uniq
+    fallback = [
+      "Connectome-complete is not emulation-complete.",
+      "Human evidence remains layered and proxy-based.",
+      "Same-subject wording does not make one state sample.",
+      "Proxy bundles need compatibility, repeatability, and disagreement audits."
+    ]
+    (preferred + fallback).uniq.first(4)
+  end
+
   def observability_stop_lines
     @observability_stop_lines ||= preferred_points(
       technical_point_pool,
@@ -816,10 +848,11 @@ class SummaryBookletTemplate
 
   def render_cards(cards)
     cards.map do |title, body|
+      rendered_body = body.to_s.lstrip.start_with?("<") ? body : "<p>#{body}</p>"
       <<~HTML
         <article class="booklet-card">
           <h3>#{h(title)}</h3>
-          <p>#{body}</p>
+          #{rendered_body}
         </article>
       HTML
     end.join
@@ -829,11 +862,37 @@ class SummaryBookletTemplate
     Array(items).map { |item| "<li>#{h(item)}</li>" }.join
   end
 
+  def bullet_list_html(items)
+    <<~HTML
+      <ul class="booklet-list">
+        #{list_items(items)}
+      </ul>
+    HTML
+  end
+
+  def compact_title(page_data)
+    COMPACT_TITLE_MAP.fetch(page_data.slug, page_data.title)
+  end
+
+  def compact_stop_line(text)
+    plain = normalize_text(text)
+    rule = COMPACT_STOPLINE_RULES.find { |pattern, _replacement| pattern.match?(plain) }
+    return rule[1] if rule
+
+    shorten(plain, 72)
+  end
+
   def shorten(text, max)
     plain = normalize_text(text)
     return plain if plain.length <= max
 
-    "#{plain[0, max - 1].rstrip}…"
+    sentence = plain.match(/\A(.{1,#{max}}?[.!?])(?:\s|$)/)
+    return sentence[1].rstrip if sentence
+
+    snippet = plain[0, max - 1].rstrip
+    cut = snippet.rindex(/\s/)
+    snippet = snippet[0...cut].rstrip if cut && cut >= (max / 2)
+    "#{snippet}…"
   end
 
   def h(text)
