@@ -5,7 +5,7 @@ description: "A practical glossary of the terms used most often in Mind-Upload, 
 article_type: Reference
 subtitle: "Start by keeping the words straight"
 author: Mind Uploading Research Project
-last_updated: "2026-03-30"
+last_updated: "2026-04-02"
 note: "Living document"
 audience: "Readers who do not want to get stuck on terminology and anyone trying to avoid category mistakes"
 reading_time: "3 to 10 minutes for only the necessary items"
@@ -14,7 +14,7 @@ accuracy_note: "The definitions here are deliberately short. For exact usage, re
 page_highlights:
   - "It gives short explanations of terms and points to where each concept matters."
   - "It now includes the front-door verification terms added in the March 2026 re-audit, such as claim ceiling, shortcut auditing, maintenance-state, and vascular-state / CVR audit."
-  - "It now also includes the human-observability and support-state terms needed after the March 2026 deepening pass, such as proxy class, route maturity / model burden, calibrator role, support-state proxy, and clearance / immune support."
+  - "It now also includes the human-observability and support-state terms needed after the late-March and early-April 2026 deepening passes, such as proxy class, route maturity / model burden, route role, calibrator role, support-state proxy, target-defined astrocyte-related proxy, and macro clearance-transport proxy family."
   - "It now also defines the newer route-card semantics added in the late-March 2026 passes, such as field-formation wall, Fusion Card, Human Proxy Composition Card, shared-driver audit, strongest single row, and State-Continuity Bridge Card."
   - "It now also includes the temporal-bridge stop line added in the 2026-03-30 sync, namely the split between fast state labels and slow internal milieu."
   - "It now also fixes tractography-specific stop-line terms such as macro pathway prior and tractography route card, so living-human connectome language is not overread."
@@ -23,7 +23,8 @@ page_highlights:
 known_points:
   - "Many misunderstandings can be avoided simply by reducing terminology confusion."
   - "It is especially important to distinguish between decode/emulate, correlation/causation, functional connectivity/effective connectivity/causal wiring, observability/identifiability, model fit/direct validation, and brain signal/language prior."
-  - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, astrocyte-state, clearance / immune support, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, route-maturity, and calibrator-role language."
+  - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, astrocyte-state, target-defined astrocyte-related proxy, clearance / immune support, macro clearance-transport proxy family, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, route-role, route-maturity, and calibrator-role language."
+  - "Support-state proxy is still too coarse unless quantity type or route role is also named explicitly."
   - "Readers also need a term-level split between fast state labels such as movement / arousal and slow internal milieu such as circadian phase, glucocorticoid exposure, and insulin / metabolic regime."
   - "Readers also need a term-level stop line between connectome as structural scaffold and living-human tractography as an acquisition- and graph-conditioned macro pathway prior."
   - "The newer route-card names are not decorative labels; they each name a distinct failure mode such as upstream visibility loss, cross-stack shared-driver risk, or broken state continuity across a sequential bridge."
@@ -211,7 +212,7 @@ If words such as <strong>claim ceiling</strong>, <strong>hidden state</strong>, 
 <div class="note-box">
 <strong>When human-evidence terms start sounding like one thing</strong>
 <p>
-Words such as <strong>proxy class</strong>, <strong>route maturity / model burden</strong>, <strong>calibrator role</strong>, and <strong>support-state proxy</strong> are there to stop local ultrastructure, SV2A PET, MRSI biochemical scaffold, dynamic DMRSI, myelin mapping, CSF mobility, and glymphatic evidence from collapsing into one impression of “we can now see almost everything in humans.” If that distinction is what you need next, go to <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> and <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>.
+Words such as <strong>proxy class</strong>, <strong>route maturity / model burden</strong>, <strong>route role</strong>, <strong>calibrator role</strong>, <strong>support-state proxy</strong>, <strong>target-defined astrocyte-related proxy</strong>, and <strong>macro clearance-transport proxy family</strong> are there to stop local ultrastructure, SV2A PET, MRSI biochemical scaffold, dynamic DMRSI, myelin mapping, BBB water exchange, MAO-B / I<sub>2</sub>BS astrocyte PET, CSF mobility, respiration-conditioned net-flow MRI, exercise-conditioned contrast-influx, and model-based biomarker-efflux evidence from collapsing into one impression of “we can now see almost everything in humans.” If that distinction is what you need next, go to <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> and <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>.
 </p>
 </div>
 
@@ -359,11 +360,15 @@ If <strong>state annotation</strong>, <strong>state continuity</strong>, <strong
 </tr>
 <tr>
 <td><strong>Proxy class</strong></td>
-<td>The kind of variable a route actually constrains, such as structural scaffold, synaptic-density proxy, biochemical scaffold, macro energetic proxy, or clearance proxy. It says <strong>what object is being measured</strong>, not how mature the route is.</td>
+<td>The kind of variable a route actually constrains, such as structural scaffold, synaptic-density proxy, biochemical scaffold, macro energetic proxy, or clearance proxy. It says <strong>what object is being measured</strong>, not which route role the paper plays or how mature the route is.</td>
 </tr>
 <tr>
 <td><strong>Route maturity / model burden</strong></td>
 <td>A separate label for how specialized, small-cohort, hardware-limited, or model-dependent a route still is. It prevents a useful proxy from being misread as field-ready or routine just because the paper is technically strong.</td>
+</tr>
+<tr>
+<td><strong>Route role</strong></td>
+<td>The specific job a paper plays inside one route family, such as first-in-human target validation, disease-context contrast, named quantification, whole-body biodistribution, challenge-linked release, or model-based biomarker efflux. It is different from proxy class, route maturity, and calibrator role, and it stops one family name from sounding like one interchangeable row.</td>
 </tr>
 <tr>
 <td><strong>Calibrator role</strong></td>
@@ -439,7 +444,11 @@ If <strong>state annotation</strong>, <strong>state continuity</strong>, <strong
 </tr>
 <tr>
 <td><strong>Astrocyte / glial-state</strong></td>
-<td>The minutes-to-days non-neuronal state that includes astrocyte network responses, learning-associated ensembles, lactate transport, and related glial variables that can change recall, multiday stabilization, or fear-state representations. In humans, astrocyte PET still remains a target-defined proxy class such as MAO-B or I<sub>2</sub>BS rather than one generic astrocyte-state meter. It should not be collapsed into generic metabolic background.</td>
+<td>The minutes-to-days non-neuronal state that includes astrocyte network responses, learning-associated ensembles, lactate transport, and related glial variables that can change recall, multiday stabilization, or fear-state representations. On this site, the human side does not directly read out astrocyte-state; it is carried only by target-defined astrocyte-related proxies. MAO-B first-in-human target validation, disease-context contrast, brain quantification / biodistribution, and I<sub>2</sub>BS routes are different route roles rather than one interchangeable astrocyte row. It should not be collapsed into generic metabolic background or into clearance / immune support.</td>
+</tr>
+<tr>
+<td><strong>Target-defined astrocyte-related proxy</strong></td>
+<td>A living-human proxy family such as MAO-B or I<sub>2</sub>BS PET that constrains tracer-defined astrocyte-related signal rather than route-free astrocyte-state ground truth. Its safe reading still depends on route role: first-in-human target validation, disease-context contrast, named quantification, whole-body biodistribution, or cohort / covariate regime are different papers with different ceilings.</td>
 </tr>
 <tr>
 <td><strong>Neurovascular-unit / BBB / pericyte state</strong></td>
@@ -447,11 +456,15 @@ If <strong>state annotation</strong>, <strong>state continuity</strong>, <strong
 </tr>
 <tr>
 <td><strong>Clearance / immune support</strong></td>
-<td>The multiday support layer that includes meningeal lymphatic drainage, CSF-interstitial exchange, microglia-related support, and related clearance routes that can change synaptic physiology, recovery, and protein-clearance claims. It should not be collapsed either into astrocyte-state or into a generic cleanup metaphor.</td>
+<td>The multiday support layer that includes drainage anatomy, microglia-related synaptic support, CSF-interstitial exchange, and related clearance routes that can change synaptic physiology, recovery, and protein-clearance claims. On the human side, the transport proxy family already splits into macroscopic CSF oscillation, parenchyma-CSF water exchange, respiration-conditioned net-flow, exercise-conditioned contrast influx / meningeal-lymphatic flow, intrathecal tracer / CSF-to-blood clearance, CSF mobility, and model-based biomarker efflux. It should not be collapsed either into astrocyte-state, into a generic glymphatic cleanup metaphor, or into direct local immune-controller identity.</td>
+</tr>
+<tr>
+<td><strong>Macro clearance-transport proxy family</strong></td>
+<td>A living-human support-state proxy family that measures transport-side objects such as macroscopic CSF oscillation, parenchyma-CSF water exchange, respiration-conditioned net-flow, exercise-conditioned contrast influx / parasagittal meningeal-lymphatic flow, intrathecal tracer / CSF-to-blood clearance, CSF mobility, or model-based biomarker efflux. These rows differ by direct observable, crossed boundary, intervention regime, carrier / analyte class, and model burden, so they do not form one generic glymphatic meter or local immune-controller readout.</td>
 </tr>
 <tr>
 <td><strong>Support-state proxy</strong></td>
-<td>A human route that constrains slow maintenance variables only at a coarse level, for example energetic, thermal, quantity-defined ionic routes such as tissue-sodium mapping, SQ+TQF-derived ISMF / ISC / ISVF, mono-/bi-T2 or short-component-sensitive sodium MRI, quantity-defined myelin MRI routes such as myelin-water, MT-family, bilayer, or qT1-remyelination-sensitive readouts, BBB water-exchange or tracer-specific transport state, or CSF / glymphatic clearance state. It is stronger than saying “nothing is visible,” but weaker than local controller, astrocyte-ensemble state, cell-specific immune control, or other cell-specific ground truth.</td>
+<td>A human route that constrains slow maintenance variables only at a coarse level. Its meaning still depends on quantity type or route role: energetic balance vs exchange flux vs NAD dynamics; quantity-defined ionic or myelin routes; BBB water-exchange vs tracer-specific transport; target-defined astrocyte-related proxies; or macro clearance-transport routes such as CSF mobility, net-flow, contrast-influx, intrathecal clearance, and model-based efflux. It is stronger than saying “nothing is visible,” but weaker than local controller, astrocyte-ensemble state, cell-specific immune control, or other cell-specific ground truth.</td>
 </tr>
 <tr>
 <td><strong>Thermal-state</strong></td>
@@ -794,6 +807,12 @@ Although non-invasive decoding and ESI are making steady progress, a successful 
 <li>Williamson, N. R., et al. (2025). Learning-associated astrocyte ensembles regulate memory recall. <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">doi:10.1038/s41586-024-08170-w</a></li>
 <li>Dewa, K., et al. (2025). The astrocytic ensemble acts as a multiday trace to stabilize memory. <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">doi:10.1038/s41586-025-09619-2</a></li>
 <li>Bukalo, O., et al. (2026). Astrocytes enable amygdala neural representations supporting memory. <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">doi:10.1038/s41586-025-10068-0</a></li>
+<li>Villemagne, V. L., Harada, R., Dore, V., et al. (2022). First-in-Humans Evaluation of <sup>18</sup>F-SMBT-1, a Novel <sup>18</sup>F-Labeled Monoamine Oxidase-B PET Tracer for Imaging Reactive Astrogliosis. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">doi:10.2967/jnumed.121.263254</a></li>
+<li>Hiraoka, K., Mesfin, B., Wu, Y., et al. (2025). Kinetic and quantitative analysis of [<sup>18</sup>F]SMBT-1 PET imaging for monoamine oxidase B. <a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">doi:10.1007/s12149-025-02083-y</a></li>
+<li>Mesfin, B., Ishioka, Y., Ichinose, Y., et al. (2026). Whole-body biodistribution of [<sup>18</sup>F]SMBT-1: a novel PET tracer for monoamine oxidase B imaging in healthy humans. <a href="https://doi.org/10.1007/s12149-025-02144-2" target="_blank">doi:10.1007/s12149-025-02144-2</a></li>
+<li>Tyacke, R. J., Myers, J. F. M., Venkataraman, A., et al. (2018). Evaluation of <sup>11</sup>C-BU99008, a PET Ligand for the Imidazoline<sub>2</sub> Binding Site in Human Brain. <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">doi:10.2967/jnumed.118.208009</a></li>
+<li>Livingston, N. R., Calsolaro, V., Hinz, R., et al. (2022). Relationship between astrocyte reactivity, using novel <sup>11</sup>C-BU99008 PET, and glucose metabolism, grey matter volume and amyloid load in cognitively impaired individuals. <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">doi:10.1038/s41380-021-01429-y</a></li>
+<li>Best, L. M., Truong, J., McCluskey, T., et al. (2026). MAO-B status in alcohol use disorder: a [<sup>11</sup>C]SL25.1188 PET imaging study of putative astrogliosis. <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">doi:10.1038/s41380-025-03355-9</a></li>
 <li>Musall, S., Kaufman, M. T., Juavinett, A. L., Gluf, S., &amp; Churchland, A. K. (2019). Single-trial neural dynamics are dominated by richly varied movements. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">doi:10.1038/s41593-019-0502-4</a></li>
 <li>Chaibub Neto, E., Pratap, A., Perumal, T. M., et al. (2019). Identity confounding in machine learning can be controlled by design. <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">doi:10.1038/s41746-019-0178-x</a></li>
 <li>Murphy, K., Harris, A. D., &amp; Wise, R. G. (2011). Robustly measuring vascular reactivity differences with breath-hold: normalising stimulus-evoked and resting state BOLD fMRI data. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">doi:10.1016/j.neuroimage.2010.07.059</a></li>
@@ -817,7 +836,13 @@ Although non-invasive decoding and ESI are making steady progress, a successful 
 <li>Johansen, A., Beliveau, V., Colliander, E., et al. (2024). An In Vivo High-Resolution Human Brain Atlas of Synaptic Density. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
 <li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
 <li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
-<li>Hirschler, L., et al. (2025). Whole-brain mapping of cerebrospinal fluid mobility in humans. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
+<li>Kim, J., et al. (2025). Meningeal lymphatics-microglia axis regulates synaptic physiology. <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">doi:10.1016/j.cell.2025.02.022</a></li>
+<li>Fultz, N. E., Bonmassar, G., Setsompop, K., et al. (2019). Coupled electrophysiological, hemodynamic, and cerebrospinal fluid oscillations in human sleep. <a href="https://doi.org/10.1126/science.aax5440" target="_blank">doi:10.1126/science.aax5440</a></li>
+<li>Kim, D., Huang, Y., &amp; Liu, J. (2025). Non-invasive MRI measurements of age-dependent in vivo human glymphatic exchange using magnetization transfer spin labeling. <a href="https://doi.org/10.1016/j.neuroimage.2025.121142" target="_blank">doi:10.1016/j.neuroimage.2025.121142</a></li>
+<li>Eide, P. K., Pripp, A. H., Valnes, L. M., et al. (2023). Intrathecal cerebrospinal fluid tracer clearance to blood is associated with CSF-to-blood clearance capacity and plasma biomarkers. <a href="https://doi.org/10.1038/s41467-023-37685-5" target="_blank">doi:10.1038/s41467-023-37685-5</a></li>
+<li>Hirschler, L., et al. (2025). Region-specific drivers of cerebrospinal fluid mobility measured with MRI in humans. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
+<li>Lim, C., Chen, C., Zhang, C., et al. (2025). Human cerebrospinal fluid net flow enhanced by respiration during the awake state. <a href="https://doi.org/10.1038/s41467-025-66548-4" target="_blank">doi:10.1038/s41467-025-66548-4</a></li>
+<li>Yoo, R.-E., Kim, J.-H., Moon, H. Y., et al. (2025). Long-term physical exercise facilitates putative glymphatic and meningeal lymphatic vessel flow in humans. <a href="https://doi.org/10.1038/s41467-025-58726-1" target="_blank">doi:10.1038/s41467-025-58726-1</a></li>
 <li>Dagum, P., et al. (2026). The glymphatic system clears amyloid beta and tau from brain to plasma in humans. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
 <li>Chen, J. E., Lewis, L. D., Coursey, S. E., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
 <li>Bolt, T., Falahpour, M., Nalci, A., et al. (2025). Autonomic physiological coupling of the global fMRI signal. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">doi:10.1038/s41593-025-01945-y</a></li>
