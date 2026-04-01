@@ -135,6 +135,12 @@ Another shortcut still had to be blocked. A shared quantity label does not guara
 </p>
 </div>
 <div class="note-box">
+<strong>Deuterium route names still hide operating-point dependence</strong>
+<p>
+One more shortcut still had to be blocked. Saying only <strong>deuterium imaging</strong> still leaves too much hidden. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> reported repeated dynamic DMRSI measurements only when the <strong>same brain</strong>, <strong>same setup</strong>, and <strong>same acquisition parameters</strong> were kept fixed. <a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a> mixed <strong>12 healthy volunteers</strong> with <strong>5 glioblastoma patients</strong> and reported only <strong>two healthy post-glucose scans</strong> in the abstracted protocol. <a href="https://doi.org/10.1002/jmri.29532" target="_blank">Ahmadian et al. (2025)</a> showed that <strong>[6,6'-<sup>2</sup>H<sub>2</sub>]glucose dose</strong> materially changes downstream metabolite visibility, and <a href="https://doi.org/10.1186/s41747-024-00426-4" target="_blank">Bøgh et al. (2024)</a> showed that the best whole-brain repeatability in a clinical 3 T DMI workflow appeared at the named <strong>120-min</strong> time point rather than as a route-free constant. Therefore, a Human Proxy Composition Card now has to disclose whether the deuterium row is <strong>absolute quantification</strong> or <strong>kinetic-rate imaging</strong>, plus the <strong>dose</strong>, <strong>timing window</strong>, <strong>field strength / coil route</strong>, and whether repeatability was shown only within the <strong>same operating point</strong> or across protocols.
+</p>
+</div>
+<div class="note-box">
 <strong>Availability geometry is part of the evidence</strong>
 <p>
 One more shortcut still had to be blocked. A paper can look richly multimodal while different rows were actually measured in very different subsets. <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a> already showed that a direct EEG+fMRI comparison in acute DoC shrank to <strong>48 complete-feature patients</strong> out of <strong>87</strong> enrolled. <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> then made the geometry even clearer in a larger multicentre study: in the main French dataset, <strong>EEG-LG</strong> was available in <strong>290</strong> patients, <strong>dMRI</strong> in <strong>151</strong>, <strong>aMRI</strong> in <strong>101</strong>, <strong>FDG-PET</strong> in <strong>53</strong>, and <strong>fMRI-RS</strong> in only <strong>44</strong>, while pairwise disagreement rose in <strong>MCS</strong> and <strong>improved</strong> patients. Therefore, on this site, a bundle must disclose not only the complete-case count but also the <strong>row-overlap geometry</strong> and whether missingness itself tracks site, severity, tolerance, or protocol. Otherwise, the apparent bundle gain can still be driven by a changing patient subset rather than by cleaner same-subject state constraint.
@@ -267,16 +273,16 @@ One remaining shortcut is to treat any reproducibility statement as if it solved
 <tr>
 <td><strong>Deuterium metabolite-mapping / absolute-quantification route</strong><br><a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a></td>
 <td>Deuterated HDO / Glc / Glx / Lac metabolite distributions under an explicit absolute-quantification pipeline.</td>
-<td>12 healthy volunteers and 5 glioblastoma patients in a specialized 7 T workflow.</td>
-<td>7 T hardware, dedicated deuterium / proton coils, oral tracer timing, B<sub>1</sub>-calibrated absolute quantification, and spectral fitting.</td>
-<td><strong>Specialized macro deuterium metabolite-mapping / absolute-quantification route</strong>, not kinetic-rate imaging, branch-local mitochondrial positioning, or ATP nano-organization ground truth.</td>
+<td>12 healthy volunteers and 5 glioblastoma patients in a specialized 7 T workflow; only two healthy volunteers were scanned post-glucose in the abstracted protocol.</td>
+<td>7 T hardware, dedicated deuterium / proton coils, oral tracer timing, dose choice, B<sub>1</sub>-calibrated absolute quantification, and spectral fitting.</td>
+<td><strong>Specialized mixed-cohort macro deuterium metabolite-mapping / absolute-quantification route</strong>, not kinetic-rate imaging, branch-local mitochondrial positioning, or ATP nano-organization ground truth.</td>
 </tr>
 <tr>
 <td><strong>Deuterium kinetic-rate imaging</strong><br><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a></td>
 <td>Glucose-transport and metabolic-rate maps under an explicit kinetic model.</td>
-<td>0.7 cc nominal voxels and 2.5 min/image whole-brain 7 T acquisition in five healthy participants.</td>
-<td>7 T hardware, dedicated deuterium / proton coils, oral tracer timing, blood-input function, and kinetic model choice.</td>
-<td><strong>Specialized model-conditioned deuterium kinetic-rate route</strong>, not branch-local mitochondrial or ATP nano-organization ground truth.</td>
+<td>0.7 cc nominal voxels and 2.5 min/image whole-brain 7 T acquisition in five healthy participants, with repeat scans reported only at the same operating point.</td>
+<td>7 T hardware, dedicated deuterium / proton coils, oral tracer timing, blood-input function, kinetic model choice, and same-setup repeatability burden.</td>
+<td><strong>Specialized model-conditioned deuterium kinetic-rate route</strong>, not branch-local mitochondrial or ATP nano-organization ground truth and not a protocol-free portability claim.</td>
 </tr>
 <tr>
 <td><strong>Human myelin-water / calibrated T1w/T2w comparison route</strong><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5342928/" target="_blank">Arshad et al. (2017)</a></td>
@@ -992,6 +998,7 @@ If these disclosures are missing, a proxy bundle remains at <strong>proxy-rich b
 <li>Kaiser, A., Vind, F. A., Duarte, J. M. N., et al. (2026). Ultra-high field <sup>31</sup>P functional magnetic resonance spectroscopy reveals NAD<sup>+</sup> dynamics in brain energy metabolism during visual stimulation. <a href="https://doi.org/10.1177/0271678X261415784" target="_blank">doi:10.1177/0271678X261415784</a></li>
 <li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
 <li>Karkouri, J., Novoselova, M., Rodgers, C. T., et al. (2026). Absolute Quantification of Brain Deuterium Metabolic Imaging in Healthy Volunteers and Glioblastoma Patients at 7T. <a href="https://doi.org/10.1002/mrm.70308" target="_blank">doi:10.1002/mrm.70308</a></li>
+<li>Ahmadian, N., Karkouri, J., Deelchand, D. K., et al. (2025). Human Brain Deuterium Metabolic Imaging at 7 T: Impact of Different [6,6'-2H2]Glucose Doses. <a href="https://doi.org/10.1002/jmri.29532" target="_blank">doi:10.1002/jmri.29532</a></li>
 <li>Arshad, M., Stanley, J. A., &amp; Raz, N. (2017). Test-retest reliability and concurrent validity of in vivo myelin content indices: Myelin water fraction and calibrated T1w/T2w image ratio. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5342928/" target="_blank">PMCID:PMC5342928</a></li>
 <li>Hagiwara, A., Hori, M., Kamagata, K., et al. (2018). Myelin Measurement: Comparison Between Simultaneous Tissue Relaxometry, Magnetization Transfer Saturation Index, and T1w/T2w Ratio Methods. <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">doi:10.1038/s41598-018-28852-6</a></li>
 <li>Baadsvik, E. L., Weiger, M., Froidevaux, R., et al. (2024). Myelin bilayer mapping in the human brain in vivo. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">doi:10.1002/mrm.29998</a></li>
