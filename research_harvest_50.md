@@ -6,7 +6,7 @@ article_type: "Evidence Bank"
 subtitle: "U0-U15 decomposition, current-status map, and prior literature (heavily cited)"
 author: Mind Uploading Research Project
 last_updated: "2026-04-02"
-note: "Compiled from 50 worker tasks (curated for relevance; updated with the 2026-04-02 ECM / PNN and human-clearance literature-route splits)"
+note: "Compiled from 50 worker tasks (curated for relevance; updated with the 2026-04-02 route-family and presynaptic-release-machinery ceiling sync)"
 audience: "Readers who want to browse a large literature set by unresolved issue rather than by paper count alone"
 reading_time: "20-35 min (about 7 min if you only read the statistics and U-map)"
 page_intro: "This page is an evidence bank that takes scattered literature and rearranges it by unresolved question. The goal is not to overwhelm readers with volume, but to make it visible up front which parts have some traction and which parts are still unresolved."
@@ -26,6 +26,7 @@ page_highlights:
   - "For technical readers, U7 is no longer one synchronization bucket: synchronization infrastructure, shared-vs-specific component evidence, hemodynamic / metabolic quantity bridge, and bundle robustness under complete-case or cross-centre disagreement are separate evidence slices."
   - "For technical readers, destructive local ultrastructure is kept separate from living-human in vivo observability, and the living-human route is now read on three axes: proxy class, operational maturity, and safe calibrator role."
   - "For technical readers, SV2A / synaptic-density PET is no longer one U7 row: quantification route, healthy atlas, disease contrast, task / cognition association, activation null, and intervention response are separate slices."
+  - "For technical readers, same-brain scaffold papers and regional SV2A proxies stay below the presynaptic release-machinery ceiling, so release-site number, docked-vesicle architecture, active-zone nanostructure / priming-site assembly, and current release competence remain separate audit objects."
   - "For technical readers, same-subject / same-brain papers now sit on their own bridge rung, so preservation route, regime continuity, and bridge validation are checked before same-state language."
   - "For technical readers, same-brain functional connectomics is now split into sequential bridge class, label source, current synaptic-state ceiling, and dynamics-identifiability burden."
   - "For technical readers, bridge risk is now treated as bridge-type-specific and family-specific, so live-to-fix transformation, waking-state drift, and sleep-crossing regime change are not compressed into one time penalty."
@@ -49,6 +50,7 @@ known_points:
   - "For U1/U7, a tractography-derived human connectome is not one stable graph either; endpoint access, bundle priors, graph-construction choices, and protocol/calibration dependence can each move what the structural result means."
   - "For U7, a multimodal paper can still advance only synchronized acquisition, only a shared-vs-specific component analysis, only a hemodynamic / metabolic quantity bridge, or only a bundle tuned to a narrow availability slice rather than a robust common state variable."
   - "For U7, SV2A / synaptic-density PET is not one inferential object either: quantification route, healthy atlas, disease contrast, task association, activation null, and intervention response remain separate before current-state language is allowed."
+  - "For U7, same-brain scaffold papers and regional SV2A proxies still do not identify release-site number, docked-vesicle architecture, active-zone nanostructure / priming-site assembly, or current release competence."
   - "Destructive local ultrastructure and living-human in vivo proxy routes do not increase the same evidential axis, even when both are called human measurement advances."
   - "A living-human proxy route can calibrate one bounded hidden-state family without becoming a deployable or state-complete human readout."
   - "Same-subject or same-brain wording can still hide a sequential bridge problem, so preservation route, elapsed time, regime continuity, and bridge-validation rung remain separate evidence fields."
@@ -254,7 +256,7 @@ One remaining compression at the literature front door was that <strong>connecto
 <div class="note-box">
 <strong>Read same-brain functional connectomics as scaffold, not as a solved local twin</strong>
 <p>
-One remaining compression at the literature front door was inside the same-brain lane itself. The primary literature does not support reading <strong>same-brain functional connectomics</strong> as one solved class. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a> showed that live physiology to EM correlation is a <strong>multistage landmark-based bridge</strong>, <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> showed that same-brain structure-function linkage remains a <strong>sequential local pipeline</strong>, <a href="https://doi.org/10.1038/s41586-025-08840-3" target="_blank">Ding et al. (2025)</a> added a <strong>validated stimulus-conditioned response model</strong>, and <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">Gamlin et al. (2025)</a> still transferred transcriptomic identity through <strong>morphology-based prediction</strong>. At the remaining latent-state level, <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">Holler et al. (2021)</a>, <a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">D&uuml;rst et al. (2022)</a>, and <a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">Mittermaier et al. (2024)</a> show that current synaptic efficacy, release probability, and membrane-state-gated consolidation are not closed by structure-function correspondence, while <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> show that connectome-constrained dynamics can remain degenerate until extra recordings narrow the solution space. Therefore, the safe U7/U8 reading is <strong>sequential scaffold plus task-bounded conditional prediction</strong>, not direct transcriptomic truth, current synaptic-state readout, or one solved local twin.
+One remaining compression at the literature front door was inside the same-brain lane itself. The primary literature does not support reading <strong>same-brain functional connectomics</strong> as one solved class. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a> showed that live physiology to EM correlation is a <strong>multistage landmark-based bridge</strong>, <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> showed that same-brain structure-function linkage remains a <strong>sequential local pipeline</strong>, <a href="https://doi.org/10.1038/s41586-025-08840-3" target="_blank">Ding et al. (2025)</a> added a <strong>validated stimulus-conditioned response model</strong>, and <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">Gamlin et al. (2025)</a> still transferred transcriptomic identity through <strong>morphology-based prediction</strong>. At the remaining latent-state level, <a href="https://doi.org/10.7554/eLife.18167" target="_blank">Moln&aacute;r et al. (2016)</a>, <a href="https://doi.org/10.1038/s41593-017-0041-9" target="_blank">Sakamoto et al. (2018)</a>, <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">Holler et al. (2021)</a>, <a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">D&uuml;rst et al. (2022)</a>, <a href="https://doi.org/10.1038/s41593-024-01720-5" target="_blank">Emperador-Melero et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">Mittermaier et al. (2024)</a> show that current synaptic efficacy, release-site number, active-zone nanostructure / priming-site assembly, release probability, and membrane-state-gated consolidation are not closed by structure-function correspondence, while <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> show that connectome-constrained dynamics can remain degenerate until extra recordings narrow the solution space. Therefore, the safe U7/U8 reading is <strong>sequential scaffold plus task-bounded conditional prediction</strong>, not direct transcriptomic truth, presynaptic release-machinery truth, current synaptic-state readout, or one solved local twin.
 </p>
 </div>
 <div class="note-box">
@@ -307,6 +309,9 @@ For technical reading, the first split is between <strong>destructive local stru
 <p>
 One more compression still remained inside the U7 human-observability lane. The primary literature does not support reading <strong>SV2A / synaptic-density PET</strong> as one solved row. <a href="https://doi.org/10.1007/s00259-024-06885-6" target="_blank">Naganawa et al. (2024)</a> constrained a <strong>tracer-specific quantification route</strong> for <sup>18</sup>F-SynVesT-1, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built a <strong>healthy-human atlas</strong>, <a href="https://doi.org/10.1038/s41380-024-02776-2" target="_blank">Matuskey et al. (2025)</a> provided a <strong>disease contrast</strong> in autistic adults, <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> linked [<sup>11</sup>C]UCB-J to <strong>task switching and switch cost</strong> in healthy adults, <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> showed that <strong>brief visual activation changes delivery but not binding</strong>, and <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a> found <strong>no measurable overall SV2A change 24 h after ketamine</strong> despite symptom reduction. Those are different inferential slices. Therefore, on this page, <code>SV2A PET</code> now means only the named slice that the paper actually strengthens, not a direct readout of current synaptic efficacy or momentary synaptic state.
 </p>
+<p>
+One more ceiling still had to stay explicit across the same-brain and U7 rows. The current primary literature does not support reading <strong>same-brain structure-function linkage</strong> or <strong>regional SV2A density</strong> as if they already fixed <strong>release-site number</strong>, <strong>docked-vesicle architecture</strong>, <strong>active-zone nanostructure / priming-site assembly</strong>, or <strong>current release competence</strong>. <a href="https://doi.org/10.7554/eLife.18167" target="_blank">Moln&aacute;r et al. (2016)</a> showed multiple docked vesicles and multi-vesicular release in human synapses, <a href="https://doi.org/10.1038/s41593-017-0041-9" target="_blank">Sakamoto et al. (2018)</a> showed that Munc13-1 assemblies set independent release sites, <a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">D&uuml;rst et al. (2022)</a> showed that vesicular release probability sets individual synaptic strength, and <a href="https://doi.org/10.1038/s41593-024-01720-5" target="_blank">Emperador-Melero et al. (2024)</a> showed that CaV2 clustering and vesicle priming are mediated by distinct active-zone machineries. <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">Holler et al. (2021)</a> and <a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">Mittermaier et al. (2024)</a> strengthen same-brain scaffold and membrane-state gating, not a direct active-zone readout, while <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> show that brief activation changes delivery without changing [<sup>11</sup>C]UCB-J binding. Therefore, U7 uses same-brain scaffold and SV2A only as bounded calibrator classes unless a paper directly measures the presynaptic release machinery itself.
+</p>
 <table class="data-table">
 <thead>
 <tr>
@@ -321,25 +326,37 @@ One more compression still remained inside the U7 human-observability lane. The 
 <td><a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a></td>
 <td>Regional SV2A PET atlas in healthy humans</td>
 <td>Healthy baseline for regional synaptic-density proxy comparisons</td>
-<td>Current synaptic efficacy, branch-local weights, tag state</td>
+<td>Current synaptic efficacy, release-site number, active-zone nanostructure / priming-site assembly, branch-local weights, tag state</td>
 </tr>
 <tr>
 <td><a href="https://doi.org/10.1007/s00259-024-06885-6" target="_blank">Naganawa et al. (2024)</a></td>
 <td>Tracer-specific noninvasive quantification of <sup>18</sup>F-SynVesT-1 against a 1TC reference standard</td>
 <td>Quantification-route calibration for an SV2A tracer family</td>
-<td>Healthy atlas truth, disease contrast, current synaptic efficacy, task-linked state readout</td>
+<td>Healthy atlas truth, disease contrast, release-site number, active-zone nanostructure / priming-site assembly, current release competence, task-linked state readout</td>
 </tr>
 <tr>
 <td><a href="https://doi.org/10.1038/s41380-024-02776-2" target="_blank">Matuskey et al. (2025)</a></td>
 <td>Case-control cortical [<sup>11</sup>C]UCB-J disease contrast in autistic adults</td>
 <td>Disease-linked regional synaptic-density comparison slice</td>
-<td>Universal baseline, momentary synaptic state, intervention-sensitive restoration truth</td>
+<td>Universal baseline, momentary synaptic state, release-site number, current release competence, intervention-sensitive restoration truth</td>
 </tr>
 <tr>
 <td><a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a></td>
 <td>[<sup>11</sup>C]UCB-J association with task-switching activity and switch cost in healthy adults</td>
 <td>Task / cognition association slice for selected executive functions</td>
-<td>All-task cognition meter, current synaptic efficacy, momentary activation truth</td>
+<td>All-task cognition meter, current synaptic efficacy, release-site number, active-zone nanostructure / priming-site assembly, momentary activation truth</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a></td>
+<td>Brief visual activation changes tracer delivery without changing [<sup>11</sup>C]UCB-J binding</td>
+<td>Activation-timescale ceiling for SV2A interpretation</td>
+<td>Momentary release competence, release-site number, active-zone nanostructure / priming-site assembly, fast synaptic-efficacy readout</td>
+</tr>
+<tr>
+<td><a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a></td>
+<td>No measurable overall SV2A change 24 h after ketamine despite symptom reduction</td>
+<td>Intervention-response ceiling for whole-brain SV2A interpretation</td>
+<td>Rapid treatment-efficacy meter, release-site number, active-zone nanostructure / priming-site assembly, current release competence</td>
 </tr>
 <tr>
 <td><a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a></td>
