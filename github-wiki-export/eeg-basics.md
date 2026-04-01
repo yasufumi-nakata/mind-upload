@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-30 / Role: Beginner guide
+- Updated: 2026-04-01 / Role: Beginner guide
 
 ## Role Of This Page
 This page is a wiki that explains from the basics what EEG measures. Beyond complicated formulas, the goal is to understand ``what kind of signals are mixed together and where'' and ``why preprocessing and QC are important.''
@@ -32,12 +32,14 @@ We highlight the limitations of EEG so as not to overestimate it, but that doesn
 - Reference choice, recording setup, and channel layout can materially change ERP, connectivity, and decoding conclusions.
 - Artifact cleanup does not by itself solve source leakage or turn directed connectivity into causal proof.
 - Adding fMRI, PET, or other modalities can strengthen one audit layer while still leaving fusion validity, shared-factor specificity, and bundle robustness unresolved.
+- Wearable OPM-MEG strengthens movement-tolerant macro electrophysiology only under named shielding, field-control, calibration, anatomy, crosstalk, and task-regime conditions.
 - Public data provides plenty of practice with preprocessing and baseline comparisons.
 
 ## What Is Still Unknown
 - It remains unresolved whether non-invasive EEG alone is sufficient to reconstruct detailed causal structures within the brain.
 - The choice of preprocessing does not uniformly change the conclusion for each task.
 - It is not yet fixed which external benchmark will be the standard validation set for source imaging.
+- How far wearable OPM-MEG generalizes beyond shielded proof-of-concept and narrow task regimes remains unresolved.
 
 ---
 
@@ -59,6 +61,11 @@ The older beginner route on this site stopped at "EEG is mixed and source imagin
 <strong>Adding another modality does not make EEG a solved state meter</strong>
 <p>
 The next beginner shortcut to stop is the word <strong>multimodal</strong>. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025)</a> describe LSL as synchronization infrastructure rather than device-side delay truth, <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> show that simultaneous multimodal recordings retain both common and divergent organization, and <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> show that simultaneous EEG-PET-MRI can contain coupled global dynamics together with modality-specific structure. Therefore, even when EEG is combined with other stacks, the site still separates <strong>synchronized acquisition</strong>, <strong>shared statistical structure</strong>, and <strong>one externally calibrated biological variable</strong> rather than treating them as one achievement.
+</p>
+
+<strong>2026-04-01 correction: wearable OPM-MEG is not a portable free pass</strong>
+<p>
+The beginner route still had one coarse object left: <strong>wearable MEG</strong>. The current primary literature does <strong>not</strong> support treating OPM-MEG as if movement tolerance automatically removed shielding, field-control, anatomy, and calibration burden. <a href="https://doi.org/10.1038/nature26147" target="_blank">Boto et al. (2018)</a> established wearable feasibility but also showed saturation risk without background-field control. <a href="https://doi.org/10.1016/j.neuroimage.2021.118401" target="_blank">Rea et al. (2021)</a> and <a href="https://doi.org/10.1109/TBME.2021.3100770" target="_blank">Mellor et al. (2022)</a> show that precision field modeling and nulling are part of the route, <a href="https://doi.org/10.1109/TBME.2024.3465654" target="_blank">Holmes et al. (2025)</a> show that lightly shielded operation still depends on active compensation plus tSSS, <a href="https://doi.org/10.1162/IMAG.a.8" target="_blank">Rhodes et al. (2025)</a> show that pseudo-MRI is useful but does not replace individual MRI as the gold standard, <a href="https://doi.org/10.1063/5.0273491" target="_blank">Wu et al. (2025)</a> show that crosstalk remains an array-level burden, and <a href="https://doi.org/10.3390/s25134160" target="_blank">Spedden et al. (2025)</a> show whole-body stepping feasibility in only three healthy adults under a narrow sensorimotor beta task. Therefore, even on this beginner page, the minimum safe question is whether a paper strengthens <strong>field control</strong>, <strong>lighter-shield deployment</strong>, <strong>MRI-light anatomy substitution</strong>, <strong>array engineering</strong>, or only a <strong>narrow task proof-of-concept</strong>. Without that split, <strong>wearable OPM-MEG</strong> is too coarse an object.
 </p>
 
 <h2>What EEG is good at</h2>
@@ -273,4 +280,11 @@ More modalities can improve prediction while the bundle still remains fragile. <
 <li>Rohaut, B., Hermann, B., Kaufmann, B. C., et al. (2024). Multimodal assessment improves neuroprognosis performance in clinically unresponsive critical-care patients with brain injury. <em>Nature Medicine</em>, 30, 2482-2491. <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">doi:10.1038/s41591-024-03019-1</a></li>
 <li>Amiri, M., Bødker Andersen, M., Jørgensen, S. H., et al. (2023). Multimodal prediction of residual consciousness in the intensive care unit: the CONNECT-ME study. <em>Brain</em>, 146(1), 50-64. <a href="https://doi.org/10.1093/brain/awac335" target="_blank">doi:10.1093/brain/awac335</a></li>
 <li>Manasova, D., Belloli, L. M. L., Rosenfelder, M. J., et al. (2026). Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness. <em>Brain</em>. <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">doi:10.1093/brain/awaf412</a></li>
+<li>Boto, E., Holmes, N., Leggett, J., et al. (2018). Moving magnetoencephalography towards real-world applications with a wearable system. <em>Nature</em>, 555, 657-661. <a href="https://doi.org/10.1038/nature26147" target="_blank">doi:10.1038/nature26147</a></li>
+<li>Rea, M., Holmes, N., Hill, R. M., et al. (2021). Precision magnetic field modelling and control for wearable magnetoencephalography. <em>NeuroImage</em>, 241, 118401. <a href="https://doi.org/10.1016/j.neuroimage.2021.118401" target="_blank">doi:10.1016/j.neuroimage.2021.118401</a></li>
+<li>Mellor, S. J., Tierney, T. M., O'Neill, G. C., et al. (2022). Magnetic field mapping and correction for moving OP-MEG. <em>IEEE Transactions on Biomedical Engineering</em>, 69(2), 528-536. <a href="https://doi.org/10.1109/TBME.2021.3100770" target="_blank">doi:10.1109/TBME.2021.3100770</a></li>
+<li>Holmes, N., Leggett, J., Hill, R. M., et al. (2025). Wearable magnetoencephalography in a lightly shielded environment. <em>IEEE Transactions on Biomedical Engineering</em>, 72(2), 609-618. <a href="https://doi.org/10.1109/TBME.2024.3465654" target="_blank">doi:10.1109/TBME.2024.3465654</a></li>
+<li>Rhodes, N., Rier, L., Boto, E., Hill, R. M., &amp; Brookes, M. J. (2025). Source reconstruction without an MRI using optically pumped magnetometer-based magnetoencephalography. <em>Imaging Neuroscience</em>, 3, IMAG.a.8. <a href="https://doi.org/10.1162/IMAG.a.8" target="_blank">doi:10.1162/IMAG.a.8</a></li>
+<li>Wu, T., Xiao, W., Peng, X., Wu, T., &amp; Guo, H. (2025). Crosstalk reduction in optically pumped magnetometers arrays for biomagnetic measurement. <em>Review of Scientific Instruments</em>, 96(8), 085004. <a href="https://doi.org/10.1063/5.0273491" target="_blank">doi:10.1063/5.0273491</a></li>
+<li>Spedden, M. E., O'Neill, G. C., West, T. O., et al. (2025). Using wearable MEG to study the neural control of human stepping. <em>Sensors</em>, 25(13), 4160. <a href="https://doi.org/10.3390/s25134160" target="_blank">doi:10.3390/s25134160</a></li>
 </ol>

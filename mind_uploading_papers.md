@@ -15,6 +15,7 @@ known_points:
   - "Foundation-model / pretraining papers do not only say something about model scale; official challenge rules and leaderboard postmortems also say something about what the benchmark itself was measuring."
   - "Source-imaging papers do not begin at the inverse solver; field-formation visibility remains an upstream route that determines which source classes can reach the sensors at all."
   - "Inverse-family source-imaging papers do not constrain one shared object either: focal posterior support, sparse debiased inference, extended-source uncertainty, forward-model / conductivity sensitivity, and named validation boards remain separate reading routes."
+  - "Wearable OPM-MEG is not one portability route either; shielding class, field nulling, calibration / coregistration, anatomy route, crosstalk, and task regime remain separate reading burdens."
   - "Human diffusion-MRI tractography now sits on its own reading route as an acquisition-, endpoint-, graph-construction-, and calibration-conditioned macro pathway prior or targeted bundle-hypothesis route; endpoint bias, bundle priors, hub instability, and protocol dependence still have to be separated before a `connectome` paper is read strongly."
   - "Destructive human ultrastructure and living-human in vivo proxy routes strengthen different observability layers and should not be compressed into one progress bar."
   - "Living-human in vivo routes must be read on three axes at once only after route family is fixed: regional synaptic-density PET, 1H-MRSI similarity, high-resolution 1H-MRSI metabolite-distribution mapping, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, localized functional 31P NAD-dynamics, deuterium metabolite-mapping / absolute quantification, deuterium kinetic-rate imaging, quantity-defined myelin routes, BBB water-exchange MRI, tracer-specific BBB PET transport, target-defined astrocyte PET, macroscopic CSF oscillation, parenchyma-CSF water exchange, intrathecal tracer retention / CSF-to-blood clearance, human CSF-mobility MRI, and model-based biomarker efflux do not constrain one common object."
@@ -47,7 +48,7 @@ wiki_links:
     url: "/wiki/verification-basics.html"
     description: "Helps frame what should count as stronger or weaker evidence when reading a paper."
 last_updated: "2026-04-01"
-note: "Curated archive (updated with the 2026-04-01 tractography route-conditioned macro-prior split)"
+note: "Curated archive (updated with the 2026-04-01 tractography and wearable OPM-MEG route splits)"
 audience: "People who want a broad view of related papers, a quick sense of yearly trends, or an entry point back to the original literature."
 reading_time: "5 minutes to check the table of contents; detailed reading only for the papers you need"
 page_intro: >
@@ -70,6 +71,7 @@ page_highlights:
   - "EEG foundation-model papers are now treated as a distinct technical route because corpus disclosure, adaptation regime, benchmark governance, and leaderboard postmortems materially change what a score means."
   - "ESI / source-imaging papers are now paired with a field-formation visibility route, because visibility failure is upstream of inverse-solver disagreement and direct validation."
   - "Inverse-family source-imaging papers are now read on separate routes as well: focal posterior support, sparse debiased inference, extended-source uncertainty, forward-model / conductivity sensitivity, and named validation boards are not one generic `better ESI` line."
+  - "Wearable OPM-MEG is now read as a route-conditioned movement-tolerant measurement extension: shielding class, field control, calibration / coregistration, anatomy route, crosstalk, and task regime are not collapsed into one `portable MEG` label."
   - "Human tractography papers are now read as route-conditioned macro pathway priors or targeted bundle-hypothesis routes, because endpoint access, anatomical priors, graph construction, protocol choice, and external calibration remain separate burdens."
   - "Recent human measurement papers are treated here as two linked but distinct classes: destructive local structure with explicit preservation / registration / proofreading burden, and living-human in vivo proxy routes whose route family has to be fixed before proxy class, operational maturity, and safe calibrator role are read."
   - "Regional synaptic-density PET is not one route even inside the living-human lane: tracer / quantification route, healthy atlas construction, disease contrast, task / cognition association, activation null, and intervention response answer different questions."
@@ -267,6 +269,13 @@ The literature front door also needed one slower boundary. <a href="https://doi.
 <td>Direct validation using known stimulus locations and simultaneous SEEG allows for significant auditing of the effects of localization error, source depth, and conductivity assumptions. </td>
 <td>It is not possible to support the claim that general uniqueness restoration can be obtained even if the head model is changed. </td>
 <td><a href="datasets.html#validation-ladder">Datasets: validation ladder</a> / <a href="wiki/observation-to-estimation.html">From observation to estimation</a></td>
+</tr>
+<tr>
+<td><strong>Wearable OPM-MEG / movement-tolerant macro electrophysiology</strong></td>
+<td><a href="https://doi.org/10.1038/nature26147" target="_blank">Boto et al. (2018)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2021.118401" target="_blank">Rea et al. (2021)</a>, <a href="https://doi.org/10.1109/TBME.2021.3100770" target="_blank">Mellor et al. (2022)</a>, <a href="https://doi.org/10.1109/TBME.2024.3465654" target="_blank">Holmes et al. (2025)</a>, <a href="https://doi.org/10.1162/IMAG.a.8" target="_blank">Rhodes et al. (2025)</a>, <a href="https://doi.org/10.1063/5.0273491" target="_blank">Wu et al. (2025)</a>, <a href="https://doi.org/10.3390/s25134160" target="_blank">Spedden et al. (2025)</a></td>
+<td>Wearable OPM-MEG now supports motion-tolerant macro electrophysiology under explicitly engineered magnetic environments, including standing/mobile, lightly shielded, MRI-light source-model, and narrow whole-body-movement demonstrations. What gets stronger directly is <strong>movement-tolerant acquisition under a disclosed field-control and anatomy route</strong>, not one generic portability upgrade.</td>
+<td>It still does not show shield-free ordinary-room measurement, calibration-free source truth, anatomy-free source reconstruction, broad naturalistic coverage, or a stronger claim ceiling than the EEG / MEG visibility / inverse / validation wall. Field nulling, crosstalk, and task regime remain part of the claim.</td>
+<td><a href="wiki/multimodal-integration-basics.html">Wiki: multimodal integration basics</a> / <a href="wiki/measurement-stack-and-claim-ceiling.html#eeg-meg-validation-wall">Wiki: EEG / MEG validation wall</a></td>
 </tr>
 <tr>
 <td><strong>EEG foundation models / pretraining governance</strong></td>
