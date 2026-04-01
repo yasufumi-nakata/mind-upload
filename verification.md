@@ -31,7 +31,7 @@ page_highlights:
   - "For tractography connectomes, cortical endpoint assignment and graph-construction choices are separate audit items; a graph metric without them remains pipeline-conditioned."
   - "For MRSI-derived metabolic-connectome claims, the Observability Budget now requires a metabolic-similarity route card that names the metabolite set, parceling, correction model, spectral QC, and whether the object is static similarity, high-resolution metabolite-distribution mapping, or kinetic rate imaging."
   - "For spectroscopy-derived human maintenance routes, the budget now separates five-metabolite 1H-MRSI similarity scaffolds, high-resolution 1H-MRSI metabolite-distribution mapping, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, 31P functional NAD-dynamics routes, deuterium metabolite-mapping / absolute-quantification routes, and deuterium kinetic-rate imaging, because they constrain different inferential objects and carry different cohort, hardware, and model burdens."
-  - "For SV2A / synaptic-density PET claims, the maintenance-state budget now requires a route card that names tracer / quantification route, comparison family, functional target, and abstention before regional density is overread as current synaptic state."
+  - "For SV2A / synaptic-density PET claims, the maintenance-state budget now requires a route card that names tracer / quantification route, comparison family, functional target, and abstention before regional density is overread as current synaptic state or presynaptic release machinery."
   - "For destructive ultrastructure claims, the Observability Budget now requires a destructive-structure route card that names preservation route, live-to-fix delay, registration scope, section-loss / segmentation QA, throughput scale, and omitted live-state families."
   - "For connectome-constrained predictors, the Observability Budget now requires a conditional-model route card that names the structural prior, fitted degrees of freedom, task/state regime, omitted mechanisms, validation class, and abstention boundary."
   - "For inverse and model-based claims, the Identifiability Card now separates observability, structural identifiability, and practical identifiability, and requires candidate-space, experiment-design, and abstention disclosure before uniqueness language is allowed."
@@ -1489,7 +1489,7 @@ The <strong>Observability Budget</strong> fixes what entered the sensor and what
 <tbody>
 <tr>
 <td><strong>Current synaptic efficacy / short-term state</strong></td>
-<td>Write whether current weights, release probability, receptor occupancy, or short-term state were directly measured, externally calibrated, modeled from proxy, or left latent.</td>
+<td>Write whether current weights, release probability, release-site number, active-zone nanostructure / priming-site assembly, receptor occupancy, or short-term state were directly measured, externally calibrated, modeled from proxy, or left latent.</td>
 <td>Mechanistic intervention prediction, closed-loop stability, and timing-sensitive reconstruction are demoted back toward structural or correlational claims.</td>
 </tr>
 <tr>
@@ -1586,6 +1586,12 @@ For PET-based routes, naming the modality is still too coarse. <a href="https://
 <strong>2026-03-21 addendum: synaptic-density PET is not one audit item</strong>
 <p>
 SV2A PET now gets its own route-card logic on this site. <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> fixes tracer and quantification burden, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> is a healthy-human atlas, <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> is a task / cognition association study, <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> shows that brief activation does not produce a momentary SV2A state readout, and <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a> shows that rapid ketamine response need not imply measurable SV2A change at 24 h. Therefore, submissions that cite synaptic-density PET must state whether the paper is an <strong>atlas</strong>, <strong>disease / risk contrast</strong>, <strong>task / cognition association</strong>, <strong>intervention / target-engagement design</strong>, or something narrower, and must disclose tracer, quantification route, anatomy / partial-volume handling, and abstention boundary before the claim ceiling is raised. The longer route is <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#sv2a-route-card">Wiki: SV2A / synaptic-density PET route card</a>.
+</p>
+</div>
+<div class="note-box">
+<strong>2026-04-01 addendum: synaptic-density is not presynaptic release-machinery evidence</strong>
+<p>
+Another shortcut needed to be blocked here. <a href="https://doi.org/10.7554/eLife.18167" target="_blank">Moln&aacute;r et al. (2016)</a>, <a href="https://doi.org/10.1038/s41593-017-0041-9" target="_blank">Sakamoto et al. (2018)</a>, <a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">D&uuml;rst et al. (2022)</a>, and <a href="https://doi.org/10.1038/s41593-024-01720-5" target="_blank">Emperador-Melero et al. (2024)</a> together show that release-site number, docked-vesicle organization, active-zone nanostructure, and current release competence are not exhausted by synapse count or regional SV2A density. Therefore, this budget now keeps <strong>regional synaptic-density proxy</strong> and <strong>presynaptic release machinery</strong> as separate audit objects. The longer public argument is in <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams alone are not enough</a>.
 </p>
 </div>
 </section>
@@ -2081,7 +2087,7 @@ The remaining weakness in this gate was not the absence of latent-state language
 </tr>
 <tr>
 <td><strong>Current synaptic efficacy / short-term state</strong></td>
-<td>Release probability, receptor state, short-term depression / facilitation, and recent activity history still vary on the same edge list. </td>
+<td>Release probability, release-site number, active-zone nanostructure / priming-site assembly, receptor state, short-term depression / facilitation, and recent activity history still vary on the same edge list. </td>
 <td>If an edge exists, the current synaptic state is already fixed. </td>
 <td>Static wiring or atlas language only; not intervention, phase, or stability-complete claims. </td>
 </tr>

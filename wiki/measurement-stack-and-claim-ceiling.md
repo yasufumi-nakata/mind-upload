@@ -63,6 +63,7 @@ page_highlights:
   deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, ionic / thermal / myelin, BBB, astrocyte target / route-role split, and clearance routes are not compressed
   into one near-direct readout.
 - "Human maintenance-state routes are now read on three axes: proxy class, operational maturity, and calibrator role."
+- "Regional synaptic-density PET and same-brain functional connectomics are not promoted to presynaptic release-machinery readouts; release-site number and active-zone nanostructure stay separate audit items."
 - Same-subject or same-brain wording is not treated as same-state when the bridge
   is sequential across live / ex vivo or separated physiological regimes.
 known_points:
@@ -76,7 +77,8 @@ known_points:
   whole-brain coverage and long-term maintenance-state remains.
 - Same-brain functional connectomics can strengthen local structure-function links
   while still relying on morphology-bridged labels and leaving current synaptic
-  state and unique dynamics unresolved.
+  state, presynaptic release machinery / active-zone nanostructure, and unique
+  dynamics unresolved.
 - A diffusion-MRI-derived human connectome is not one stable object; hub maps, laterality,
   and bundle recovery remain conditioned by acquisition scheme, endpoint assignment,
   graph construction, and uncertainty handling.
@@ -207,8 +209,8 @@ The last column of the table below is not a summary of each paper, but the opera
 <td><strong>same-brain functional connectomics</strong></td>
 <td>Co-registered in vivo activity measurements and a later reconstructed local EM connectome in a named same-brain pipeline. </td>
 <td>Like MICrONS and linked analyses, sampled local circuits can strengthen structure-function correspondences, local connection rules, and connectome-constrained conditional prediction within the measured region / task / state. </td>
-<td>Same-time whole-brain state, current synaptic efficacy / release state, direct transcriptomic identity unless separately measured, unique dynamical parameterization, and long-horizon maintenance-state remain unresolved. </td>
-<td><strong>Up to a sequential local structure-function scaffold and local conditional prediction</strong>. We do not promote it to current synaptic-state readout, direct cell-type truth, unique dynamics, or a whole-brain twin. </td>
+<td>Same-time whole-brain state, current synaptic efficacy / release state / active-zone architecture, direct transcriptomic identity unless separately measured, unique dynamical parameterization, and long-horizon maintenance-state remain unresolved. </td>
+<td><strong>Up to a sequential local structure-function scaffold and local conditional prediction</strong>. We do not promote it to current synaptic-state or presynaptic release-machinery readout, direct cell-type truth, unique dynamics, or a whole-brain twin. </td>
 </tr>
 <tr>
 <td><strong>diffusion MRI tractography / structural connectome</strong></td>
@@ -221,8 +223,8 @@ The last column of the table below is not a summary of each paper, but the opera
 <td><strong>SV2A PET / synaptic-density PET</strong></td>
 <td>Tracer-defined regional SV2A binding interpreted through kinetic modeling or a validated simplified scan window. </td>
 <td>You can strengthen human in vivo regional synaptic-density gradients, atlas construction, and disease-linked density comparisons. </td>
-<td>Current release probability, postsynaptic receptor occupancy, task-evoked momentary synaptic efficacy, and branch-local plasticity state remain unresolved, and anatomy/partial-volume handling can still matter for interpretation. </td>
-<td><strong>Up to regional synaptic-density proxy</strong>. We do not read it as current synaptic efficacy or momentary synaptic state. </td>
+<td>Current release probability, release-site number, active-zone nanostructure / priming-site assembly, postsynaptic receptor occupancy, task-evoked momentary synaptic efficacy, and branch-local plasticity state remain unresolved, and anatomy/partial-volume handling can still matter for interpretation. </td>
+<td><strong>Up to regional synaptic-density proxy</strong>. We do not read it as current synaptic efficacy, presynaptic release machinery, or momentary synaptic state. </td>
 </tr>
 <tr>
 <td><strong>mixed arousal proxy (pupil / HRV / locomotion / facial motion)</strong></td>
@@ -290,12 +292,12 @@ Dorkenwald et al.'s adult fly whole-brain connectome is a huge step forward, reo
 
 <h3>4. Adding same-brain function reduces degeneration, but does not by itself fix labels, current synaptic state, or unique dynamics</h3>
 <p>
-MICrONS combines dense calcium imaging, behavioral states, and a later EM connectome in the same brain, and the linked analyses show that same-brain local circuits can support stronger structure-function correspondences and connectome-constrained conditional prediction. This is a real advance over connectome-only. However, the measurable object is still a <strong>sequential, local, and regime-bounded bridge</strong>, not a same-time whole-brain state sample. It is therefore too weak to treat the label <strong>same-brain functional connectomics</strong> as one solved class. The remaining walls are not only whole-brain coverage and maintenance-state, but also whether transcriptomic labels were <strong>directly measured or morphology-bridged</strong>, whether the result constrains <strong>current synaptic efficacy / release state</strong>, and whether the resulting dynamical explanation is <strong>unique rather than one member of a still-degenerate family</strong>. Therefore, the ceiling of this stack on this site is a <strong>sequential local structure-function scaffold</strong> or <strong>local conditional-prediction route</strong>, not current synaptic-state or a whole-brain twin.
+MICrONS combines dense calcium imaging, behavioral states, and a later EM connectome in the same brain, and the linked analyses show that same-brain local circuits can support stronger structure-function correspondences and connectome-constrained conditional prediction. This is a real advance over connectome-only. However, the measurable object is still a <strong>sequential, local, and regime-bounded bridge</strong>, not a same-time whole-brain state sample. It is therefore too weak to treat the label <strong>same-brain functional connectomics</strong> as one solved class. The remaining walls are not only whole-brain coverage and maintenance-state, but also whether transcriptomic labels were <strong>directly measured or morphology-bridged</strong>, whether the result constrains <strong>current synaptic efficacy / release state / active-zone architecture</strong>, and whether the resulting dynamical explanation is <strong>unique rather than one member of a still-degenerate family</strong>. Therefore, the ceiling of this stack on this site is a <strong>sequential local structure-function scaffold</strong> or <strong>local conditional-prediction route</strong>, not current synaptic-state, presynaptic release-machinery readout, or a whole-brain twin.
 </p>
 
 <h3 id="same-brain-functional-connectomics-wall">4.5. Same-brain functional connectomics is a sequential local scaffold, not current synaptic-state or a unique whole-brain twin</h3>
 <p>
-Another weakness that remained on this page was that <strong>same-brain functional connectomics</strong> could still be overread as if one frontier stack had already solved specimen identity, direct cell typing, current synaptic state, and dynamical identifiability in one move. That is too weak. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a> showed a strong correlative workflow from in vivo physiology to synchrotron microtomography and volume EM, but through a multistage landmark-based route. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> then showed a same-brain local pipeline that can support rich structure-function analysis, and <a href="https://doi.org/10.1038/s41586-025-08840-3" target="_blank">Ding et al. (2025)</a> showed that same-brain functional connectomics can reveal a generalized local wiring rule. But <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">Gamlin et al. (2025)</a> still mapped <strong>predicted</strong> transcriptomic types through morphology-based classification rather than direct transcriptomic readout inside the EM volume. And the remaining latent state is not trivial: <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">Holler et al. (2021)</a>, <a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">D&uuml;rst et al. (2022)</a>, and <a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">Mittermaier et al. (2024)</a> show that current synaptic efficacy, release probability, and membrane-state-gated consolidation are not exhausted by structure-function correspondence, while <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> show that connectome-constrained recurrent networks can still remain dynamically degenerate until extra recordings collapse the solution space. What follows directly is that <strong>same-brain functional connectomics is a strong local scaffold, but not a solved route to current synaptic-state, direct transcriptomic truth, or unique whole-brain dynamics</strong>.
+Another weakness that remained on this page was that <strong>same-brain functional connectomics</strong> could still be overread as if one frontier stack had already solved specimen identity, direct cell typing, current synaptic state, presynaptic release machinery, and dynamical identifiability in one move. That is too weak. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a> showed a strong correlative workflow from in vivo physiology to synchrotron microtomography and volume EM, but through a multistage landmark-based route. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> then showed a same-brain local pipeline that can support rich structure-function analysis, and <a href="https://doi.org/10.1038/s41586-025-08840-3" target="_blank">Ding et al. (2025)</a> showed that same-brain functional connectomics can reveal a generalized local wiring rule. But <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">Gamlin et al. (2025)</a> still mapped <strong>predicted</strong> transcriptomic types through morphology-based classification rather than direct transcriptomic readout inside the EM volume. And the remaining latent state is not trivial: <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">Holler et al. (2021)</a>, <a href="https://doi.org/10.7554/eLife.18167" target="_blank">Moln&aacute;r et al. (2016)</a>, <a href="https://doi.org/10.1038/s41593-017-0041-9" target="_blank">Sakamoto et al. (2018)</a>, <a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">D&uuml;rst et al. (2022)</a>, <a href="https://doi.org/10.1038/s41593-024-01720-5" target="_blank">Emperador-Melero et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">Mittermaier et al. (2024)</a> show that current synaptic efficacy, release probability, active-zone architecture, and membrane-state-gated consolidation are not exhausted by structure-function correspondence, while <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> show that connectome-constrained recurrent networks can still remain dynamically degenerate until extra recordings collapse the solution space. What follows directly is that <strong>same-brain functional connectomics is a strong local scaffold, but not a solved route to current synaptic-state, presynaptic release-machinery truth, direct transcriptomic truth, or unique whole-brain dynamics</strong>.
 </p>
 <table class="data-table">
 <thead>
@@ -318,8 +320,8 @@ Another weakness that remained on this page was that <strong>same-brain function
 </tr>
 <tr>
 <td><strong>Synaptic-state wall</strong></td>
-<td>Structure-function correspondence, synapse size, and identified connectivity strengthen priors on function, but current efficacy, release probability, and membrane-state-gated consolidation still depend on additional state variables.</td>
-<td>Do not read <strong>same-brain functional connectomics</strong> as <strong>current synaptic-state readout</strong> without a direct synaptic-state assay.</td>
+<td>Structure-function correspondence, synapse size, and identified connectivity strengthen priors on function, but current efficacy, release probability, active-zone architecture, and membrane-state-gated consolidation still depend on additional state variables.</td>
+<td>Do not read <strong>same-brain functional connectomics</strong> as <strong>current synaptic-state or presynaptic release-machinery readout</strong> without a direct synaptic-state assay.</td>
 </tr>
 <tr>
 <td><strong>Dynamics-identifiability wall</strong></td>
@@ -331,7 +333,7 @@ Another weakness that remained on this page was that <strong>same-brain function
 <div class="note-box">
 <strong>Operating rule for same-brain functional connectomics</strong>
 <p>
-On this site, same-brain functional connectomics is read first as a <strong>sequential local structure-function scaffold</strong> or <strong>local conditional-prediction route</strong>. To argue above that ceiling, a submission now has to disclose the bridge class, whether labels were directly measured or transferred, whether any route directly probed current synaptic state, and what extra recordings or perturbations were required to narrow the dynamical solution space.
+On this site, same-brain functional connectomics is read first as a <strong>sequential local structure-function scaffold</strong> or <strong>local conditional-prediction route</strong>. To argue above that ceiling, a submission now has to disclose the bridge class, whether labels were directly measured or transferred, whether any route directly probed current synaptic state or presynaptic release machinery, and what extra recordings or perturbations were required to narrow the dynamical solution space.
 </p>
 </div>
 

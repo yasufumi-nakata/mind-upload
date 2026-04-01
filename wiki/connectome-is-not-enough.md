@@ -3,16 +3,17 @@ layout: default
 title: 'Wiki: Why wiring diagrams alone are not enough'
 description: We will summarize the reasons why storing only the connectome in WBE
   is insufficient, including the lack of state variables such as activity-dependent
-  transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local proteostasis / synaptic tagging, cargo-transport
-  / cytoskeletal trafficking state, perisynaptic extracellular matrix, ionic milieu
-  / chloride homeostasis, shared extracellular / electrical state, thermal-state,
-  bioenergetic / mitochondrial state, neurovascular-unit / BBB / pericyte state,
-  astrocyte-state, and clearance / immune support, as well as the limitations of
-  connectome-constrained estimation, based on primary literature.
+  transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local proteostasis / synaptic tagging, presynaptic
+  release-machinery / active-zone nanostructure state, cargo-transport / cytoskeletal
+  trafficking state, perisynaptic extracellular matrix, ionic milieu / chloride
+  homeostasis, shared extracellular / electrical state, thermal-state, bioenergetic
+  / mitochondrial state, neurovascular-unit / BBB / pericyte state, astrocyte-state,
+  and clearance / immune support, as well as the limitations of connectome-constrained
+  estimation, based on primary literature.
 article_type: Wiki
 subtitle: connectome-complete is not emulation-complete
 author: Mind Uploading Research Project
-last_updated: '2026-03-31'
+last_updated: '2026-04-01'
 note: Technical / natural science only
 audience: People who want to judge whether the wiring diagram is close to WBE based
   only on technology and natural science.
@@ -28,6 +29,7 @@ accuracy_note: What I'm showing here is an arrangement of ``at least removing th
 page_highlights:
 - We will organize the points that cannot be solved by wiring diagrams alone into
   18 state classes and 1 presumed wall.
+- "Current synaptic-state is not treated as one scalar here: synapse count, regional synaptic-density proxy, release-site number, active-zone nanostructure / priming-site assembly, docked-vesicle architecture, and current release competence are kept separate."
 - Use only primary literature to separate missing state variables from parameter degeneracy.
 - We will also fix operational rules for how to read connectome-complete and connectome-constrained
   model on this site.
@@ -52,6 +54,9 @@ page_highlights:
 known_points:
 - Great progress has been made in creating a whole-brain connectome, but this alone
   does not mean that dynamic reproduction is complete.
+- Synapse count and regional SV2A density still do not directly fix release-site
+  number, active-zone nanostructure / priming-site assembly, docked-vesicle architecture,
+  or current release competence.
 - Synaptic efficiency, activity-dependent transcription / chromatin state, timing-state,
   thermal-state, post-transcriptional RNA-state,
   phospho-signaling / second-messenger state,
@@ -115,7 +120,7 @@ recommended_pages:
 <div class="abstract-box">
 <h2>Conclusion</h2>
 <p>
-Although wiring diagrams are an important foundation for WBE,<strong>alone are not the minimum requirement for dynamic reproduction</strong>. Even within the same adjacency relationship, differences in cell type labeling, activity-dependent transcription / chromatin program, post-transcriptional RNA-state, phospho-signaling / second-messenger state, intrinsic excitability, synaptic efficiency, local proteostasis / synaptic-tagging route, cargo-transport / cytoskeletal trafficking route, perisynaptic ECM / PNN organization, ionic milieu / chloride homeostasis, shared extracellular / electrical state, timing-state / conduction support, thermal-state, neuromodulatory occupancy / release state, bioenergetic / mitochondrial support, neurovascular-unit / BBB / pericyte controller state, astrocyte-state, and clearance / immune support can significantly alter learning, phase synchronization, arousal-dependent responses, inhibitory sign, state transitions, and long-term stability. Furthermore, connectome-constrained modeling research in 2024-2025 showed that even with the inclusion of wiring constraints, degeneracy in dynamics remains due to unmeasured parameters and omitted mechanisms. Therefore, this site treats<strong>connectome-complete as a structural atlas/scaffold achievement</strong> and not as<strong>emulation-complete</strong>. Similarly, the fact that a<strong>connectome-constrained model reproduced some activities</strong> cannot be read as state-complete reconstruction. This warning becomes even stronger when the word <strong>connectome</strong> refers only to a diffusion-MRI-derived human tractography product, because current validation literature supports that object as a macro pathway prior rather than a synapse-resolved edge list.
+Although wiring diagrams are an important foundation for WBE,<strong>alone are not the minimum requirement for dynamic reproduction</strong>. Even within the same adjacency relationship, differences in cell type labeling, activity-dependent transcription / chromatin program, post-transcriptional RNA-state, phospho-signaling / second-messenger state, intrinsic excitability, synaptic efficiency, presynaptic release-machinery / active-zone nanostructure state, local proteostasis / synaptic-tagging route, cargo-transport / cytoskeletal trafficking route, perisynaptic ECM / PNN organization, ionic milieu / chloride homeostasis, shared extracellular / electrical state, timing-state / conduction support, thermal-state, neuromodulatory occupancy / release state, bioenergetic / mitochondrial support, neurovascular-unit / BBB / pericyte controller state, astrocyte-state, and clearance / immune support can significantly alter learning, phase synchronization, arousal-dependent responses, inhibitory sign, state transitions, and long-term stability. Furthermore, connectome-constrained modeling research in 2024-2025 showed that even with the inclusion of wiring constraints, degeneracy in dynamics remains due to unmeasured parameters and omitted mechanisms. Therefore, this site treats<strong>connectome-complete as a structural atlas/scaffold achievement</strong> and not as<strong>emulation-complete</strong>. Similarly, the fact that a<strong>connectome-constrained model reproduced some activities</strong> cannot be read as state-complete reconstruction. This warning becomes even stronger when the word <strong>connectome</strong> refers only to a diffusion-MRI-derived human tractography product, because current validation literature supports that object as a macro pathway prior rather than a synapse-resolved edge list.
 </p>
 </div>
 
@@ -170,9 +175,9 @@ I am not going to deal with philosophy or legal systems here. From only the aspe
 </tr>
 <tr>
 <td><strong>Synaptic efficiency/short-term state</strong></td>
-<td>The presence or absence of edges alone cannot determine weights, release probability, short-term plasticity, and LTP/LTD history. </td>
-<td>Edge count and synapse count can be read as effective weight. </td>
-<td>Although it is possible to describe static wiring, it does not claim L2 intervention prediction or L3 closed-loop stability. </td>
+<td>The presence or absence of edges alone cannot determine weights, release probability, release-site number, active-zone nanostructure / priming-site assembly, short-term plasticity, and LTP/LTD history. </td>
+<td>Edge count, synapse count, or a regional synaptic-density proxy can be read as current release competence. </td>
+<td>Although it is possible to describe static wiring, it does not claim current presynaptic release machinery, L2 intervention prediction, or L3 closed-loop stability. </td>
 </tr>
 <tr>
 <td><strong>Local proteostasis / synaptic-tagging state</strong></td>
@@ -330,6 +335,12 @@ On this site, connectome-related progress is now separated into five evidence cl
 This page still left one practical shortcut too open. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a> showed that bridging in vivo physiology to targeted volume EM requires a correlative multistage workflow that links scales rather than freezing one simultaneous state object. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> then advanced that route with dense calcium imaging of about <strong>75,000 neurons</strong> co-registered to a later EM reconstruction containing more than <strong>200,000 cells</strong> and <strong>0.5 billion synapses</strong> in one awake mouse. <a href="https://doi.org/10.1038/s41586-025-08840-3" target="_blank">Ding et al. (2025)</a> built on the same dataset with a validated stimulus-conditioned response model, but explicitly warned that model internals still need cautious interpretation. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">Gamlin et al. (2025)</a> further improved the cell-type bridge, yet did so through morphology-based prediction of transcriptomic Sst types rather than by direct transcriptomic assay inside the EM volume. On the synaptic side, <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">Holler et al. (2021)</a> described unresolved synaptic-strength structure as a key limitation for inferring brain function from wiring diagrams, <a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">Dürst et al. (2022)</a> showed that vesicular release probability strongly determines synaptic strength, and <a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">Mittermaier et al. (2024)</a> showed that membrane-potential state gates synaptic consolidation in human neocortical tissue. Finally, <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that connectome-constrained recurrent networks can remain dynamically degenerate until extra activity recordings reduce the compatible family. Therefore, the safe ceiling here is <strong>sequential same-brain scaffold plus task-bounded conditional prediction</strong>, not direct transcriptomic truth, current synaptic-state readout, or a unique local twin.
 </p>
 </div>
+<div class="note-box">
+<strong>2026-04-01 addendum: presynaptic release machinery is not reducible to synapse count or one release-probability scalar</strong>
+<p>
+Another practical shortcut still remained: readers could mentally collapse <strong>synapse count</strong>, <strong>regional SV2A density</strong>, <strong>release probability</strong>, and <strong>presynaptic release machinery</strong> into one interchangeable object. That is too weak. <a href="https://doi.org/10.7554/eLife.18167" target="_blank">Moln&aacute;r et al. (2016)</a> showed in human pyramidal-to-interneuron synapses that multi-vesicular release and multiple docked vesicles can coexist at one synaptic contact. <a href="https://doi.org/10.1038/s41593-017-0041-9" target="_blank">Sakamoto et al. (2018)</a> showed that presynaptic weight can be set by multiple Munc13-1 supramolecular assemblies that act as independent release sites. <a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">D&uuml;rst et al. (2022)</a> showed that vesicular release probability sets the strength of individual synapses, and <a href="https://doi.org/10.1038/s41593-024-01720-5" target="_blank">Emperador-Melero et al. (2024)</a> showed that CaV2 channel clustering and vesicle priming are mediated by distinct active-zone machineries. Therefore, a connectome row, a synapse count, or a regional synaptic-density PET value does <strong>not</strong> directly reveal <strong>release-site number</strong>, <strong>docked-vesicle architecture</strong>, <strong>active-zone nanostructure / priming-site assembly</strong>, or <strong>current release competence</strong>. On this site, those variables remain explicit latent state unless a route directly assays them.
+</p>
+</div>
 <table class="data-table">
 <thead>
 <tr>
@@ -351,8 +362,8 @@ This page still left one practical shortcut too open. <a href="https://doi.org/1
 </tr>
 <tr>
 <td><strong>Current-synaptic-state wall</strong></td>
-<td>Holler, Dürst, and Mittermaier together show that structure-function correspondence still leaves release probability and membrane-state-gated consolidation unresolved.</td>
-<td>A <strong>structure-function correspondence route</strong>, not current efficacy or release-state readout.</td>
+<td>Holler, Moln&aacute;r, Sakamoto, D&uuml;rst, Emperador-Melero, and Mittermaier together show that structure-function correspondence still leaves release-site architecture, release probability, and membrane-state-gated consolidation unresolved.</td>
+<td>A <strong>structure-function correspondence route</strong>, not current efficacy, release-machinery, or release-state readout.</td>
 </tr>
 <tr>
 <td><strong>Dynamical-identifiability wall</strong></td>
@@ -1138,7 +1149,10 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li>Swarnkar, S., Avchalumov, Y., Espadas, I., Grinman, E., Liu, X.-A., Raveendra, B. L., Zucca, A., Mediouni, S., Sadhu, A., Valente, S., Page, D., Miller, K., &amp; Puthanveettil, S. V. (2021). Molecular motor protein KIF5C mediates structural plasticity and long-term memory by constraining local translation. <em>Cell Reports</em>, 36(2), 109369. <a href="https://doi.org/10.1016/j.celrep.2021.109369" target="_blank">doi:10.1016/j.celrep.2021.109369</a></li>
 <li>Aiken, J., &amp; Holzbaur, E. L. F. (2024). Spastin locally amplifies microtubule dynamics to pattern the axon for presynaptic cargo delivery. <em>Current Biology</em>, 34(8), 1687-1704.e8. <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">doi:10.1016/j.cub.2024.03.010</a></li>
 <li>Holler, S., et al. (2021). Structure and function of a neocortical synapse. <em>Nature</em>, 591, 111–116. <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">doi:10.1038/s41586-020-03134-2</a></li>
+<li>Moln&aacute;r, G., R&oacute;zsa, M., Baka, J., Holderith, N., Barz&oacute;, P., Nusser, Z., &amp; Tam&aacute;s, G. (2016). Human pyramidal to interneuron synapses are mediated by multi-vesicular release and multiple docked vesicles. <em>eLife</em>, 5, e18167. <a href="https://doi.org/10.7554/eLife.18167" target="_blank">doi:10.7554/eLife.18167</a></li>
+<li>Sakamoto, H., Ariyoshi, T., Kimpara, N., Sugao, K., Taiko, I., Takikawa, K., Asanuma, D., Namiki, S., &amp; Hirose, K. (2018). Synaptic weight set by Munc13-1 supramolecular assemblies. <em>Nature Neuroscience</em>, 21(1), 41–49. <a href="https://doi.org/10.1038/s41593-017-0041-9" target="_blank">doi:10.1038/s41593-017-0041-9</a></li>
 <li>Dürst, C. D., Wiegert, J. S., Schulze, C., et al. (2022). Vesicular release probability sets the strength of individual Schaffer collateral synapses. <em>Nature Communications</em>, 13, 6126. <a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">doi:10.1038/s41467-022-33565-6</a></li>
+<li>Emperador-Melero, J., Andersen, J. W., Metzbower, S. R., et al. (2024). Distinct active zone protein machineries mediate Ca<sup>2+</sup> channel clustering and vesicle priming at hippocampal synapses. <em>Nature Neuroscience</em>, 27, 1680–1694. <a href="https://doi.org/10.1038/s41593-024-01720-5" target="_blank">doi:10.1038/s41593-024-01720-5</a></li>
 <li>Mittermaier, F. X., Kalbhenn, T., Xu, R., et al. (2024). Membrane potential states gate synaptic consolidation in human neocortical tissue. <em>Nature Communications</em>, 15, 10340. <a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">doi:10.1038/s41467-024-53901-2</a></li>
 <li>Matsuzaki, M., Honkura, N., Ellis-Davies, G. C. R., & Kasai, H. (2004). Structural basis of long-term potentiation in single dendritic spines. <em>Nature</em>, 429, 761–766. <a href="https://doi.org/10.1038/nature02617" target="_blank">doi:10.1038/nature02617</a></li>
 <li>Vardalaki, D., Chung, K., &amp; Harnett, M. T. (2022). Filopodia are a structural substrate for silent synapses in adult neocortex. <em>Nature</em>, 612, 323–327. <a href="https://doi.org/10.1038/s41586-022-05483-6" target="_blank">doi:10.1038/s41586-022-05483-6</a></li>
