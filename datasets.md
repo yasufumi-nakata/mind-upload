@@ -5,7 +5,7 @@ description: "From the selection of public data (mainly EEG) to the minimum loop
 article_type: Resource
 subtitle: "Connect ``what to use'' and ``how to reproduce'' in the shortest route without separating them."
 author: Mind Uploading Research Project
-last_updated: "2026-04-01"
+last_updated: "2026-04-02"
 note: "Curated List + L0 Practice"
 audience: "People who are wondering which public data to start with, people who are looking for an L0 practice board"
 reading_time: "12-20 minutes"
@@ -14,7 +14,7 @@ accuracy_note: "The datasets listed here are entry candidates. They are listed f
 page_highlights:
   - "We look at the shared infrastructure first, then the starter datasets."
   - "Starter data is a practice board for L0-L1, not the ground truth of EEG source imaging."
-  - "The page now also fixes a component-addition / ablation ladder for maintenance-state routes, so astrocyte, neurovascular / BBB, and clearance augmentations are compared against a named neuron-first baseline instead of being piled into one multimodal boost."
+  - "The page now also fixes a component-addition / ablation ladder for maintenance-state routes, so glial substrate-routing, astrocyte-state, neurovascular / BBB, and clearance augmentations are compared against a named neuron-first baseline instead of being piled into one multimodal boost."
   - "A same-subject support-state bundle is no longer treated as self-interpreting; route class, effective window, quantity bridge, common-driver audit, missingness policy, disagreement topology, repeatability, transfer window, and abstention are now fixed as practical fields."
   - "Even inside direct-validation data, stimulation ground truth, simultaneous invasive recording, and postsurgical outcome are different evidence classes."
   - "A fair inverse-problem benchmark also has to separate focal-centre versus source-extent targets, inverse family, uncertainty object, montage / coverage policy, and geometry / conductivity sensitivity rather than naming only a winning method."
@@ -35,6 +35,7 @@ known_points:
   - "Public EEG data is useful for L0 recall analysis and L1 baseline practice."
   - "When selecting data for the first time, you will move forward if you prioritize ease of retesting over difficulty."
   - "Starter EEG datasets are still neuron-first baselines; maintenance-state claims need paired support-state data or aligned proxy logs, one-family-at-a-time augmentation, and strongest-single-row versus bundle comparison."
+  - "Glial substrate-routing and astrocyte-state are different augmentation families: a named astrocyte observable does not fix supplier cell / neuronal sink / fuel object, and a glial fuel-support route does not by itself identify astrocyte ensembles."
   - "A same-subject support-state bundle can still mix common drivers, smaller complete-case slices, and opposite-sign rows, so family-split augmentation is not read strongly on this site without its own augmentation card."
   - "Cue-locked events, expert interval annotations, sleep hypnograms, and physician report-derived labels have different meanings even though they are the same 'public EEG data'."
   - "Even if the accuracy is the same, the strength of the argument that can be read will change depending on which generalization condition the score was obtained under."
@@ -231,9 +232,9 @@ EEG-based starter datasets are enough to begin, but later you may want to add sp
 </div>
 
 <div class="note-box">
-<strong>If you want to test whether adding glial or clearance variables really changes the result</strong>
+<strong>If you want to test whether adding glial, astrocyte, or clearance variables really changes the result</strong>
 <p>
-This page had one practical weakness: it explained how to build a reproducible neuron-first EEG baseline, but it still lacked a public rule for testing whether adding <strong>maintenance-state / support-state</strong> variables changes prediction, stability, or explanation. The current primary literature does not support one compressed <code>support-variable</code> bucket. <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> sharpen different astrocyte-dependent memory routes; <a href="https://doi.org/10.1038/s41467-025-61312-0" target="_blank">Mai-Morente et al. (2025)</a> sharpens a pericyte / capillary-support route; <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Kim et al. (2025)</a> sharpens a meningeal-lymphatics / microglia route for synaptic physiology; <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> sharpen bounded human clearance-side observables; and <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> raises tracer-specific BBB transport quantification while explicitly leaving human ground truth and test-retest for future work. Therefore, this page now fixes a <strong>component-addition / ablation ladder</strong> instead of letting readers pile these routes into one multimodal boost.
+This page had one practical weakness: it explained how to build a reproducible neuron-first EEG baseline, but it still lacked a public rule for testing whether adding <strong>maintenance-state / support-state</strong> variables changes prediction, stability, or explanation. The current primary literature does not support one compressed <code>support-variable</code> bucket. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> sharpen distinct <strong>astrocyte-state</strong> routes across minute-scale network encoding, recall, multiday stabilization, and fear-state support. By contrast, <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a>, <a href="https://doi.org/10.1038/s42255-022-00528-6" target="_blank">Silva et al. (2022)</a>, <a href="https://doi.org/10.1038/s42255-025-01416-5" target="_blank">Pavlowsky et al. (2025)</a>, and <a href="https://doi.org/10.1038/s42255-025-01389-5" target="_blank">Greda et al. (2025)</a> sharpen distinct <strong>glial substrate-routing</strong> routes across lactate support, ketone-body support under starvation, learning-linked fatty-acid routing, and apoE / sortilin-dependent lipid delivery under limited glucose. <a href="https://doi.org/10.1038/s41467-025-61312-0" target="_blank">Mai-Morente et al. (2025)</a> sharpens a pericyte / capillary-support route; <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Kim et al. (2025)</a> sharpens a meningeal-lymphatics / microglia route for synaptic physiology; <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> sharpen bounded human clearance-side observables; and <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> raises tracer-specific BBB transport quantification while explicitly leaving human ground truth and test-retest for future work. Therefore, this page now fixes a <strong>component-addition / ablation ladder</strong> that separates <strong>glial substrate-routing</strong> from <strong>astrocyte-state</strong> instead of letting readers pile both into one multimodal boost.
 </p>
 </div>
 
@@ -250,10 +251,16 @@ This page had one practical weakness: it explained how to build a reproducible n
 </thead>
 <tbody>
 <tr>
-<td><strong>Astrocyte / glial route</strong></td>
-<td>Same-subject neural and behavioral target, plus a named astrocyte observable or perturbation aligned to the same task or memory window.</td>
-<td>A named astrocyte family improved prediction, recall, or stabilization in that declared window.</td>
-<td>That the responsible whole-brain astrocyte controller was identified, or that one glial effect generalizes across all timescales and tasks.</td>
+<td><strong>Glial substrate-routing route</strong></td>
+<td>Same-subject neural and behavioral target, plus a named glia-to-neuron fuel-support observable or perturbation with supplier cell, neuronal sink, fuel object / carrier, and nutrient or learning regime fixed.</td>
+<td>A declared glial substrate-routing family improved prediction, recall, or a bounded memory-support readout in that named nutrient or learning regime.</td>
+<td>That astrocyte ensemble state was identified, or that one glial fuel route generalizes across lactate, ketone-body, fatty-acid, and apoE / sortilin-dependent lipid delivery.</td>
+</tr>
+<tr>
+<td><strong>Astrocyte-state route</strong></td>
+<td>Same-subject neural and behavioral target, plus a named astrocyte-state observable or perturbation aligned to the same recall, stabilization, or fear-state window.</td>
+<td>A named astrocyte-state family improved prediction, recall, stabilization, or fear-state decoding in that declared window.</td>
+<td>That the responsible whole-brain astrocyte controller was identified, or that astrocyte-state evidence fixed glial fuel routing, clearance control, or one general support state across all tasks and timescales.</td>
 </tr>
 <tr>
 <td><strong>Neurovascular / BBB / pericyte support route</strong></td>
@@ -288,7 +295,7 @@ This page had one practical weakness: it explained how to build a reproducible n
 <div class="note-box">
 <strong>Starter EEG datasets are still only the baseline arm of this ladder</strong>
 <p>
-EEG Motor Movement/Imagery, CHB-MIT, Sleep-EDF, and TUH help you fix the neuron-first baseline, split unit, QC discipline, and leakage checks. By themselves they do not close astrocyte-state, pericyte / BBB support, clearance transport, or other maintenance-state families. Any public maintenance-state claim on this site therefore needs paired support-state data, aligned proxy logs, or a named perturbation route, and it must be compared against the strongest single added family rather than only against the all-in bundle.
+EEG Motor Movement/Imagery, CHB-MIT, Sleep-EDF, and TUH help you fix the neuron-first baseline, split unit, QC discipline, and leakage checks. By themselves they do not close glial substrate-routing, astrocyte-state, pericyte / BBB support, clearance transport, or other maintenance-state families. Any public maintenance-state claim on this site therefore needs paired support-state data, aligned proxy logs, or a named perturbation route, and it must be compared against the strongest single added family rather than only against the all-in bundle.
 </p>
 </div>
 
@@ -1206,6 +1213,11 @@ The shortest route to that end is to approach BIDS/EEG-BIDS.
 <li><a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025), Block-Champagne for extended E/MEG source imaging</a></li>
 <li><a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk et al. (2026), Potential of EEG and EEG/MEG skull conductivity estimation to improve source analysis in presurgical evaluation of epilepsy</a></li>
 <li><a href="https://doi.org/10.1016/j.compbiomed.2026.111449" target="_blank">Jahromi et al. (2026), 3D printed pediatric head phantom for assessing deep epileptic sources localization</a></li>
+<li><a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024), Network-level encoding of local neurotransmitters in cortical astrocytes</a></li>
+<li><a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011), Astrocyte-neuron lactate transport is required for long-term memory formation</a></li>
+<li><a href="https://doi.org/10.1038/s42255-022-00528-6" target="_blank">Silva et al. (2022), Glial ketogenesis regulates memory maintenance during starvation</a></li>
+<li><a href="https://doi.org/10.1038/s42255-025-01416-5" target="_blank">Pavlowsky et al. (2025), Neuronal fatty acid oxidation fuels memory after intensive learning in Drosophila</a></li>
+<li><a href="https://doi.org/10.1038/s42255-025-01389-5" target="_blank">Greda et al. (2025), Interaction of sortilin with apolipoprotein E3 enables neurons to use long-chain fatty acids as alternative metabolic fuel</a></li>
 <li><a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025), Learning-associated astrocyte ensembles regulate memory recall</a></li>
 <li><a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025), The astrocytic ensemble acts as a multiday trace to stabilize memory</a></li>
 <li><a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026), Astrocytes enable amygdala neural representations supporting memory</a></li>
