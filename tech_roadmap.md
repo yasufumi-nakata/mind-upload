@@ -854,11 +854,11 @@ The remaining weakness in this roadmap was that M3 still let very different huma
 <td>Different target class from MAO-B, not drop-in comparable with MAO-B tracer families, and not a generic astrocyte-state meter</td>
 </tr>
 <tr>
-<td><strong>CSF mobility / glymphatic clearance routes</strong><br>Hirschler et al. (2025); Dagum et al. (2026)</td>
+<td><strong>CSF mobility / model-based biomarker-efflux routes</strong><br>Hirschler et al. (2025); Dagum et al. (2026)</td>
 <td>Macro support-state proxy</td>
-<td>Specialized MRI or device- and model-heavy biomarker-efflux inference</td>
+<td>Specialized MRI or device- and model-heavy overnight biomarker-efflux inference</td>
 <td>Bounded clearance-support proxy</td>
-<td>Not direct readout of cell-specific immune control, responsible synapse, or local maintenance controller</td>
+<td>CSF mobility and model-based biomarker efflux are different clearance-transport rows, not a route-free glymphatic meter or direct readout of cell-specific immune control, responsible synapse, or local maintenance controller</td>
 </tr>
 </tbody>
 </table>

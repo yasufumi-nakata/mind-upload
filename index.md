@@ -343,9 +343,9 @@ The 2026-03-31 recheck tightened one more point at the front door: <strong>proxy
 <td>Mobility is not net clearance flux, and it is not a local immune-controller or synapse-specific readout.</td>
 </tr>
 <tr>
-<td><strong>Dagum et al. (2026)</strong><br>sleep-linked glymphatic clearance</td>
-<td>A randomized crossover, model-based efflux route in 39 participants.</td>
-<td>Model-derived sleep-linked efflux is still not a direct local maintenance-state meter.</td>
+<td><strong>Dagum et al. (2026)</strong><br>model-based overnight biomarker efflux</td>
+<td>A randomized crossover, sleep-linked brain-to-plasma biomarker-efflux route in 39 participants under a multicompartment model.</td>
+<td>Model-derived overnight biomarker efflux is still not a direct local maintenance-state meter.</td>
 </tr>
 <tr>
 <td><strong>Chen et al. (2025)</strong><br>simultaneous EEG-PET-MRI</td>
