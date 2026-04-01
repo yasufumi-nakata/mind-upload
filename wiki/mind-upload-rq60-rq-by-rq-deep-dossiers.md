@@ -19,6 +19,17 @@ reading_time: "55-80分"
 - 更新日: 2026-04-01
 - 出典: `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`（60行を再構成）
 
+## 2026-04-01 11:06 JST latest post-pull route-hold note
+
+This run still does not change the current public six-question batch. The latest pulled deltas were reread before writing this note: `mind-upload@aa21ab9855c1`, `EEG-DATA@cccd137a3468`, and `auto-research-funds@3a691196cb9f` still leave the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
+
+- The newest `EEG-DATA` additions still deepen metadata rather than replace the current route family: the refreshed summary now reports `merged_unique=30866`, `high_confidence=28829`, and `access_counts_high.immediate=24479`.
+- Recounting the `### Ux-y` headings on this page still returns `60`, so this run keeps the one-row-at-a-time dossier structure intact.
+- The public six still stay `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
+- The solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
+- Browser-level live checks still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; `Last-Modified` advanced to `Wed, 01 Apr 2026 01:21:12 GMT` for `issue.html` / `u8-1` and `Wed, 01 Apr 2026 01:21:13 GMT` for the two bridge pages, so the current public-facing route stays aligned.
+- The funding bridge still stays narrow: `Kura Fund`, `Nakatani Foundation graduate scholarship`, and `Kashinome Scholarship` remain the active near-term lanes, `Nakatani Foundation research grant`, `Secom General Research Grant`, and `Brain Science Foundation research grant` remain outside the current-cycle lane, and a fresh Todoist `api/v1/sync(items)` audit (`items=203`) still did not require a new task.
+
 ## 2026-04-01 03:09 JST latest post-pull route-hold note
 
 This run still does not change the current public six-question batch. The latest pulled deltas were reread before writing this note: `mind-upload@31835fcd8daa`, `EEG-DATA@12eef8ca4ef0`, and `auto-research-funds@040e5b8798fd` still leave the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.

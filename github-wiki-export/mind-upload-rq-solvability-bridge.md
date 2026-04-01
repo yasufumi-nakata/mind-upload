@@ -35,6 +35,15 @@ This page answers one narrow question: for the rows that are actually worth deep
 
 It does **not** try to re-scan all `60RQ` items at once. The working style on this site is now `deepen one row at a time`, not `summarize everything at the same depth`.
 
+## What still stays fixed after the 11:06 JST actual-pull reread on April 1, 2026
+
+- A latest actual-pull recheck at `2026-04-01 11:06 JST` after `mind-upload@aa21ab9855c1`, `EEG-DATA@cccd137a3468`, and `auto-research-funds@3a691196cb9f` still leaves both the current public six and the next-watch queue unchanged.
+- The newest pulled deltas still deepen support rather than the present bridge: `mind-upload` already keeps the route-hold wording public-safe, `EEG-DATA` deepens repository-wide metadata and now reports `merged_unique=30866`, `high_confidence=28829`, and `access_counts_high.immediate=24479`, and `auto-research-funds` refreshes repo-level stats without changing the practical shortlist.
+- Route-safe access wording also stays unchanged: `D10` remains the only clear public-open primary anchor in the current six, while `D03 / D02 / D01` remain gated-support planning anchors because the live-access read is still narrower than the catalog-side identifier surface.
+- Browser-level live checks still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; `Last-Modified` advanced to `Wed, 01 Apr 2026 01:21:12 GMT` for `issue.html` / `u8-1` and `Wed, 01 Apr 2026 01:21:13 GMT` for the two bridge pages, and the live `issue.html` paragraph still names the same six in the same order.
+- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, while `Nakatani Foundation research grant`, `Secom General Research Grant`, and `Brain Science Foundation research grant` remain watch-or-closed outside the current-cycle lane.
+- A fresh read-only Todoist `api/v1/sync(items)` full-item audit still showed enough route coverage (`items=203`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
+
 ## What still stays fixed after the 03:09 JST actual-pull reread on April 1, 2026
 
 - A latest actual-pull recheck at `2026-04-01 03:09 JST` after `mind-upload@31835fcd8daa`, `EEG-DATA@12eef8ca4ef0`, and `auto-research-funds@040e5b8798fd` still leaves both the current public six and the next-watch queue unchanged.
