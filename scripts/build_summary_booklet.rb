@@ -26,6 +26,7 @@ SCIENCE_STOPLINE_PATTERNS = [
   [/connectome|wiring|cell type/i, 8],
   [/hidden-state|maintenance-state|latent-state/i, 8],
   [/proxy-rich|proxy class|proxy bundle|same-subject|same-brain|state closure|state-identification|calibrator|composition/i, 7],
+  [/same named quantity|method-family non-equivalence|interchangeable/i, 7],
   [/bridge|drift|cross-day|temporal|same-state/i, 7],
   [/measurement model|model burden|quantification|tracer|partial-volume|spectral QC|scan window|kinetic/i, 6],
   [/shortcut|fingerprint|acquisition-distribution|specificity/i, 6],
@@ -41,6 +42,7 @@ OBSERVABILITY_PATTERNS = [
 
 AUDIT_PATTERNS = [
   [/same-subject|same-brain|composition|calibrator|proxy bundle|state closure/i, 8],
+  [/same named quantity|method-family non-equivalence|interchangeable/i, 8],
   [/bridge|drift|cross-day|temporal|same-state/i, 8],
   [/measurement model|model burden|quantification|tracer|partial-volume|spectral QC|scan window|kinetic/i, 7],
   [/shortcut|fingerprint|acquisition-distribution|specificity|pretraining|fusion card|temporal validity/i, 7]
@@ -69,6 +71,7 @@ SUMMARY_PRIORITY_QUERIES = [
   /human evidence is layered/i,
   /same-subject or same-brain.*one state sample/i,
   /Several living-human proxy rows are not promoted together/i,
+  /same named quantity.*validated row/i,
   /Temporal Validity Card/i,
   /same decode score is not a target-specific biomarker/i
 ].freeze
@@ -83,6 +86,7 @@ OBSERVABILITY_PRIORITY_QUERIES = [
 AUDIT_PRIORITY_QUERIES = [
   /same-subject or same-brain.*one state sample/i,
   /Several living-human proxy rows are not promoted together/i,
+  /same named quantity.*validated row/i,
   /Temporal Validity Card/i,
   /Specificity & Shortcut Card|same decode score is not a target-specific biomarker/i
 ].freeze
@@ -642,12 +646,16 @@ class SummaryBookletTemplate
   def next_action_cards_html
     cards = [
       ["Get the Overview", "#{intro_page.title} -> #{verification_page.title} -> #{roadmap_page.title}", intro_page.recommended_pages],
-      ["Start from Basics", "#{wbe_page.title} -> #{eeg_page.title} -> #{faq_page.title}", wbe_page.recommended_pages],
+      ["Audit Human Proxy Bundles", "#{wbe_page.title} -> Human Proxy Composition -> Measurement Stack", [
+        { "label" => "WBE 101", "url" => wbe_page.url },
+        { "label" => "Human Proxy Composition", "url" => "/wiki/human-proxy-composition.html" },
+        { "label" => "Measurement Stack", "url" => "/wiki/measurement-stack-and-claim-ceiling.html" }
+      ]],
       ["Participate and Integrate", "#{issue_page.title} / #{content_hub_page.title}", issue_page.recommended_pages]
     ]
 
     cards.map do |title, body, links|
-      extra_links = links.first(2).map { |item| %(<li><a href="#{item.fetch("url")}">#{h(item.fetch("label"))}</a></li>) }.join
+      extra_links = links.first(3).map { |item| %(<li><a href="#{item.fetch("url")}">#{h(item.fetch("label"))}</a></li>) }.join
       <<~HTML
         <article class="booklet-card">
           <h3>#{h(title)}</h3>

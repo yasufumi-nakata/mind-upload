@@ -296,7 +296,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Platform - Use the logic of PDB x BIDS x PhysioNet x OSF to define WBE success conditions and reproducible progress / 15-25 min</p>
   <p>To keep mind uploading and WBE from remaining only a dream narrative, the first requirement is <strong>a shared rule set</strong>. Mind-Upload puts data layout, evaluation, failure judgment, and reproduction procedures in place first so anyone can check the same result against the same criteria.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>A maintenance-state claim that combines rodent causal evidence with human proxy evidence still needs an explicit bridge statement naming the matched state family, proxy class, and remaining latent controller.</li><li>For living-human proxy bundles, the Human Proxy Composition Card fixes direct observable by row, same-subject relation, effective time window / state axis, physiological / perturbation regime compatibility, repeatability / transfer window, model burden, incremental evidence, and residual latent-state ceiling before several proxy routes may be promoted together.</li><li>For clearance / immune routes, the maintenance-state budget now separates macroscopic CSF oscillation, parenchyma-CSF water exchange, respiration-conditioned CSF net-flow MRI, exercise-conditioned contrast influx, CSF mobility, intrathecal tracer retention / CSF-to-blood clearance, and model-based brain-to-plasma biomarker efflux, and it also requires carrier class, crossed boundary, intervention regime, and validation ceiling before any human glymphatic claim is read strongly.</li>
+    <li>A spectroscopy label without quantity-type disclosure remains too coarse; 1H-MRSI similarity, high-resolution 1H-MRSI metabolite-distribution mapping, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, 31P functional NAD-dynamics routes, deuterium metabolite-mapping / absolute-quantification routes, and deuterium kinetic-rate imaging are not interchangeable proxy classes.</li><li>A maintenance-state claim that combines rodent causal evidence with human proxy evidence still needs an explicit bridge statement naming the matched state family, proxy class, and remaining latent controller.</li><li>For living-human proxy bundles, the Human Proxy Composition Card fixes direct observable by row, same-subject relation, effective time window / state axis, physiological / perturbation regime compatibility, repeatability / transfer window, model burden, incremental evidence, and residual latent-state ceiling before several proxy routes may be promoted together.</li>
   </ul>
   <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -309,7 +309,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Roadmap (Definition #1) - Break &#39;what counts as progress&#39; into a question tree with reading order and minimum arrival conditions / 20-30 min (5 min for the index only)</p>
   <p>This page is the map of mind-uploading research. Instead of jumping straight to conclusions, it organizes in sequence <strong>what to measure</strong>, <strong>what to reconstruct</strong>, <strong>how to run it</strong>, and <strong>how to verify it</strong>. In practice, it visualizes where the field currently stands across <strong>measurement -> reconstruction -> implementation -> verification -> social deployment</strong>.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>R0 now separates structural scaffold, fast executable state, and maintenance-state families, so `connectome + state` is not treated as one knob.</li><li>Even if connectome or local-activity evidence improves, latent-state and maintenance-state audits are still separate requirements.</li><li>Proxy class, operational maturity, and calibrator role are different questions; a real human route may still calibrate only one bounded hidden-state family.</li>
+    <li>M1 / M3 now also split human astrocyte-related PET by target class, tracer family, route role, and covariate ceiling, so `astrocyte PET` is not treated as one interchangeable human row.</li><li>R0 now separates structural scaffold, fast executable state, and maintenance-state families, so `connectome + state` is not treated as one knob.</li><li>Even if connectome or local-activity evidence improves, latent-state and maintenance-state audits are still separate requirements.</li>
   </ul>
   <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -485,21 +485,21 @@ body_class: "summary-booklet-page"
   <h3>Get the Overview</h3>
   <p>Mind-Upload -&gt; Verification: Mind Uploading Verification Commons -&gt; Technical Roadmap: Understanding WBE Through Measurement, Reconstruction, and Implementation</p>
   <ul class="booklet-link-list booklet-page-link-list">
-    <li><a href="/verification.html">Verification</a></li><li><a href="/wbe_101.html">WBE 101</a></li>
+    <li><a href="/verification.html">Verification</a></li><li><a href="/wbe_101.html">WBE 101</a></li><li><a href="/faq.html">FAQ</a></li>
   </ul>
 </article>
 <article class="booklet-card">
-  <h3>Start from Basics</h3>
-  <p>Introduction: Making Mind Uploading / WBE a Measurable Problem -&gt; Introduction: What EEG Measures, What It Can Do, and What It Cannot Do -&gt; FAQ: Common Questions and Common Failure Modes</p>
+  <h3>Audit Human Proxy Bundles</h3>
+  <p>Introduction: Making Mind Uploading / WBE a Measurable Problem -&gt; Human Proxy Composition -&gt; Measurement Stack</p>
   <ul class="booklet-link-list booklet-page-link-list">
-    <li><a href="/verification.html">Verification</a></li><li><a href="/tech_roadmap.html">Technical Roadmap</a></li>
+    <li><a href="/wbe_101.html">WBE 101</a></li><li><a href="/wiki/human-proxy-composition.html">Human Proxy Composition</a></li><li><a href="/wiki/measurement-stack-and-claim-ceiling.html">Measurement Stack</a></li>
   </ul>
 </article>
 <article class="booklet-card">
   <h3>Participate and Integrate</h3>
   <p>Contribution Guide / Public Content Integration Hub</p>
   <ul class="booklet-link-list booklet-page-link-list">
-    <li><a href="/index.html">Start Page</a></li><li><a href="/verification.html">Verification</a></li>
+    <li><a href="/index.html">Start Page</a></li><li><a href="/verification.html">Verification</a></li><li><a href="/glossary.html">Glossary</a></li>
   </ul>
 </article>
 
