@@ -19,6 +19,18 @@ reading_time: "55-80分"
 - 更新日: 2026-04-01
 - 出典: `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`（60行を再構成）
 
+## 2026-04-01 17:06 JST latest post-pull route-hold note
+
+This run still does not change the current public six-question batch. An actual-pull reread after `mind-upload@c5a0550`, `EEG-DATA@82893f6ca6e`, and `auto-research-funds@ec6f7d068` still leaves the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
+
+- The newest pulled deltas still deepen metadata rather than replacing the current route family: `mind-upload` deepens astrocyte PET route splits outside the current six, `EEG-DATA` now reports `merged_unique=30871`, `high_confidence=28834`, and `access_counts_high.immediate=24484`, its experiment-metadata report still covers `18,312 / 28,832` rows with at least one experiment-facing field (`63.51%` coverage), and `auto-research-funds` adds the `Megachips 2026 scholarship` snapshot plus a README-stat refresh without changing the practical shortlist.
+- Recounting the `### Ux-y` headings on this page still returns `60`, so this run keeps the one-row-at-a-time dossier structure intact.
+- The public six still stay `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
+- The solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
+- The route-safe access reading stays narrow in one important way: the refreshed local `EEG-DATA` catalog still renders `D03 / D02` as catalog-side immediate rows and `D01` as a mixed immediate/check-needed pair, but the live-access read remains stricter, so `D10` stays the only clear public-open primary anchor while `D03 / D02 / D01` still stay gated support anchors in public wording.
+- Browser-level live checks with a browser user agent still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; the current `Last-Modified` header is `Wed, 01 Apr 2026 07:16:09 GMT` on those public surfaces.
+- The funding bridge still stays narrow: `Kura Fund`, `Nakatani Foundation graduate scholarship`, and `Kashinome Scholarship` remain the active near-term lanes, `Secom General Research Grant` remains closed for the current cycle, and a fresh Todoist `api/v1/sync(items)` audit (`items=203`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`) still did not justify a new task.
+
 ## 2026-04-01 14:08 JST latest post-pull route-hold note
 
 This run still does not change the current public six-question batch. An actual-pull reread after `mind-upload@ccef40f`, `EEG-DATA@deefd5f95c6`, and `auto-research-funds@f5f76c485` still leaves the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.

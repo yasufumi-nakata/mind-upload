@@ -35,6 +35,16 @@ A/B/C judgment is the same as mind-upload-eeg-rq60-feasibility-and-funds. C mean
 - `B`: EEG main analysis is possible. Requires additional external modality/design.
 - `C`: Mainly system/legal/theoretical integration. EEG is an audit log or supporting evidence.
 
+## Latest post-pull hold (2026-04-01 17:06 JST)
+
+- An actual-pull reread after `mind-upload@c5a0550`, `EEG-DATA@82893f6ca6e`, and `auto-research-funds@ec6f7d068` still leaves the current public six-question batch, the solve-first order, and the `A/B/C` reading unchanged.
+- The newest pulled deltas still widen the support map rather than the current practical batch: `mind-upload` deepens astrocyte PET route splits outside the current six, `EEG-DATA` now reports `merged_unique=30871`, `high_confidence=28834`, and `access_counts_high.immediate=24484`, and its experiment-metadata report still covers `18,312 / 28,832` rows with at least one experiment-facing field (`63.51%` coverage), but those gains still do not replace `D10 / D03 / D02 / D01`.
+- Recounting the `### Ux-y` headings in the RQ-by-RQ dossiers still returns `60`, the grant/dataset playbook still keeps `60` unique `Ux-y` rows, and the present practical reading still stays `deepen one row at a time`.
+- The route-safe access read also stays narrow in one specific way: the refreshed local `EEG-DATA` catalog still shows `D03 / D02` as catalog-side immediate rows and `D01` as a mixed immediate/check-needed pair, but the live-access read remains stricter, so `D10` stays the only clear public-open primary anchor while `D03 / D02 / D01` still stay gated-support anchors in public wording.
+- Browser-level live checks at `2026-04-01 17:06 JST` still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, and those public surfaces now share `Last-Modified: Wed, 01 Apr 2026 07:16:09 GMT`.
+- Official window spot checks still keep the same practical bridge: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, while `Nakatani Foundation research grant`, `Secom General Research Grant`, and `Brain Science Foundation research grant` remain outside the current-cycle lane.
+- A fresh read-only Todoist `api/v1/sync(items)` full-item audit still showed enough route coverage (`items=203`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
+
 ## Latest post-pull hold (2026-04-01 14:08 JST)
 
 - An actual-pull reread after `mind-upload@ccef40f`, `EEG-DATA@deefd5f95c6`, and `auto-research-funds@f5f76c485` still leaves the current public six-question batch, the solve-first order, and the `A/B/C` reading unchanged.
