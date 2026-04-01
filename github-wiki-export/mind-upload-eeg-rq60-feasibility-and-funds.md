@@ -48,6 +48,17 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `B`: 25件
 - `C`: 18件
 
+## Latest post-pull revalidation after 14:08 JST on April 1, 2026
+
+This run still does not change the current public batch or the `A/B/C` reading. An actual-pull reread after `mind-upload@ccef40f`, `EEG-DATA@deefd5f95c6`, and `auto-research-funds@f5f76c485` still leaves the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
+
+- The newest `EEG-DATA` additions still deepen metadata rather than replace the current route: the refreshed summary now reports `merged_unique=30869`, `high_confidence=28832`, and `access_counts_high.immediate=24482`, while the new experiment-metadata report covers `18,312 / 28,832` rows with at least one experiment-facing field (`63.51%` coverage).
+- Recounting the `### Ux-y` headings in the RQ-by-RQ dossiers still returns `60`, and recounting the row packets in the grant/dataset playbook still returns `60`, so this run still keeps the `one-RQ-at-a-time` reading rather than flattening the map.
+- The route-safe access reading also stays deliberately stricter than the catalog-side label: the refreshed local `EEG-DATA` catalog still renders `D03 / D02` as catalog-side immediate rows and `D01` as a mixed immediate/check-needed pair, but the live-access read remains narrower, so `D10` stays the only clear public-open primary anchor while `D03 / D02 / D01` still stay gated-support anchors in public wording.
+- Browser-level live checks with a browser user agent still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; the current `Last-Modified` header is `Wed, 01 Apr 2026 04:20:02 GMT` on those public surfaces.
+- Official-window spot checks still keep the same practical route: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, and `Secom General Research Grant` remains closed for the current cycle.
+- A fresh read-only Todoist `api/v1/sync(items)` full-item audit still showed enough route coverage (`items=203`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
+
 ## Latest post-pull revalidation after 12:06 JST on April 1, 2026
 
 This run still does not change the current public batch or the `A/B/C` reading. The latest pulled deltas were reread before freezing this note: `mind-upload@9f4bc8e760b1`, `EEG-DATA@1324f9e1ae2b`, and `auto-research-funds@6548b1650535` still leave the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
