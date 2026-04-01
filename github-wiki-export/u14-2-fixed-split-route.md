@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-31 / Role: U14-2 route packet
+- Updated: 2026-04-01 / Role: U14-2 route packet
 
 ## Role Of This Page
 This page fixes the current public route for U14-2 at the level of one question, one intended EEG route anchor, one bounded first artifact, and one funding bridge.
@@ -29,7 +29,7 @@ This page does not change the current public six-question batch. It makes only t
 
 ## What was rechecked for this row
 
-- `D01 Acquisition delay of wireless EEG` still fixes the intended latency-first measurement route, but the current IEEE DataPort page is subscription-gated, so it can no longer be described here as an immediate public route.
+- `D01 Acquisition delay of wireless EEG` still fixes the intended latency-first measurement route, but the current IEEE DataPort page is subscription-gated and its visible package is still a delay/synchronization dataset with `README_en` plus device/run `.mat` files rather than a rerun family by itself.
 - The current funding bridge remains narrow and unchanged: `Kura Fund` stays first, `Nakatani Foundation research grant` stays next-cycle watch, and `Secom General Research Grant` stays an urgency-watch route only.
 - The public six-question batch also stays unchanged: `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
 
@@ -43,11 +43,11 @@ This page does not change the current public six-question batch. It makes only t
 
 | Candidate | What it helps with | Why it is not the first public anchor |
 |---|---|---|
-| `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`, subscription-gated support) | It still fixes the intended latency-first split boundary, which is enough to keep the `exploration vs confirmation` question in scope if access is available. | The current IEEE DataPort page is subscription-gated, so it no longer counts as an immediate public anchor in this run. |
-| `D13 A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications` (`10.17632/vyczny2r4w`, immediate) | It is the strongest nearby public adjunct for richer split-violation examples and a broader rerun family once the first contract has been fixed. | It is better as a richer rerun adjunct than as the first bounded split anchor, so it stays secondary. |
+| `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`, subscription-gated support) | It still fixes the intended latency-first split boundary, which is enough to keep the `exploration vs confirmation` question in scope if access is available. | The current IEEE DataPort page is subscription-gated, and the visible package is still a latency floor rather than a rerun family, so it no longer counts as an immediate public anchor in this run. |
+| `D13 A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications` (`10.17632/vyczny2r4w`, immediate) | It is the first required public-open support family for richer split-violation examples and a broader rerun family once the first contract has been fixed. | It is better as a rerun support family than as the first bounded split anchor, so it stays secondary. |
 | `D08 Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods` (`10.21227/7may-9q56`, immediate) | It gives a stronger validation-style benchmark that may later support more explicit negative-case and rerun-audit examples. | It is too validation-heavy and not as direct a split-governance entry point as the current latency route, so it stays support rather than primary for `U14-2`. |
 
-The public-open rerun family and the validation-heavy family should not be read as interchangeable here either. `D13` is the clearest split-violation example family, while `D08` is better kept for stronger validation-style failure trails after the first fixed-split contract is already frozen.
+The public-open rerun family and the validation-heavy family should not be read as interchangeable here either. `D13` is the first split-violation example family this row would need next, while `D08` is better kept for stronger validation-style failure trails after the first fixed-split contract is already frozen.
 
 ## What the first artifact can honestly close now
 
@@ -74,7 +74,7 @@ The public-open rerun family and the validation-heavy family should not be read 
 
 ## External dependency tasks that stay outside this session
 
-- Split-violation examples across richer public benchmarks are still needed before the row can support broader rerun wording.
+- `D13`-backed split-violation examples across richer public benchmarks are still needed before the row can support broader rerun wording.
 - A broader rerun family is still needed before the route can claim stronger confirmatory readiness.
 - Any broad rerun-robustness or confirmatory-readiness interpretation remains outside the present EEG-only route.
 

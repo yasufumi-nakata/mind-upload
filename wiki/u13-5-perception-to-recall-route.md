@@ -5,7 +5,7 @@ description: "Why U13-5 stays second in the current public six, why D03 stays th
 article_type: Wiki
 subtitle: "A row-specific packet for the second active public RQ"
 author: Mind Uploading Research Project
-last_updated: "2026-03-31"
+last_updated: "2026-04-01"
 note: "U13-5 route packet"
 audience: "Readers who want the dataset-choice rationale and the honest claim ceiling for the current perception-to-recall row"
 reading_time: "8-12 minutes"
@@ -37,7 +37,7 @@ This page does not change the current public six-question batch. It makes only t
 
 ## What was rechecked for this row
 
-- `D03 Multimodal Fusion EEG + Eye-Tracking` still fixes the intended paired EEG + gaze route for this row, but the current IEEE DataPort page is subscription-gated, so it can no longer be described here as an immediate public route.
+- `D03 Multimodal Fusion EEG + Eye-Tracking` still fixes the intended paired EEG + gaze route for this row, but the current IEEE DataPort page is subscription-gated and its visible metadata is still a `55`-student cognitive-load package with Chinese column guidance and no recall-specific label exposed on the public page.
 - The current funding bridge remains narrow and unchanged: `Kura Fund` stays the first route and `Nakatani Foundation graduate scholarship` stays second.
 - The public six-question batch also stays unchanged: `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
 
@@ -51,12 +51,12 @@ This page does not change the current public six-question batch. It makes only t
 
 | Candidate | What it helps with | Why it is not the first public anchor |
 |---|---|---|
-| `D03 Multimodal Fusion EEG + Eye-Tracking` (`10.21227/6106-6120`, subscription-gated support) | It still fixes the intended paired EEG + gaze target, which is enough to keep the bounded perception-to-recall branch-point question in scope if access is available. | The current IEEE DataPort page is subscription-gated, so it no longer counts as an immediate public anchor in this run. |
+| `D03 Multimodal Fusion EEG + Eye-Tracking` (`10.21227/6106-6120`, subscription-gated support) | It still fixes the intended paired EEG + gaze target, which is enough to keep the bounded perception-to-recall branch-point question in scope if access is available. | The current IEEE DataPort page is subscription-gated, and the visible public metadata still does not expose a recall-specific label, so it no longer counts as an immediate public anchor in this run. |
 | `D10 3M-CPSEED` (`10.18112/openneuro.ds006465.v2.0.0`, immediate) | It gives a richer speech-side control family with overt, silent-intended, and imagined speech, and it remains the strongest nearby support anchor. | It is better for neural-contribution control than for a paired perception-to-recall branch-point reading, so it stays support rather than primary for `U13-5`. |
-| `D09 VICODEV` (`10.21227/r8fc-2y40`, account required) | It adds multimodal distraction and control-condition structure that may help later failure-mode design. | It is access-gated and centered on a driving-distraction scenario rather than the present recall-transfer question, so it should not be the first public anchor for `U13-5`. |
-| `CuBiAAD` (`10.21227/18vd-6870`, account required) | It is a stronger speech-side adjunct candidate because it combines mixed-speech auditory attention with EEG and released audio materials. | It is still access-gated and is not the current public route's first bounded anchor for a perception-to-recall packet. |
+| `ZuCo 2.0` (`https://osf.io/2urht`, immediate) | It restores a public EEG+ET paired-stream family that can be inspected without the gated DataPort page. | It is a natural-reading dataset and still does not expose the recall-labeled branch point this row would need. |
+| `EEG data recorded during spoken and imagined speech interaction with a simulated robot` (`10.5281/zenodo.14645652`, immediate) | It keeps public overt/imagination speech transfer stress tests on deck even when the main paired-stream page is gated. | It is speech-first and public, but it still does not recreate the paired `EEG + gaze` route or a recall-labeled branch point. |
 
-If a reader insists on a public-open-only inspection path, the least-distorting backup still stays `D10 3M-CPSEED`, with the spoken-plus-imagined robot-speech EEG family kept only as a speech-side adjunct. Those public-open backups remain useful for decoder-side failure inspection, but they still do not recreate the paired `EEG + gaze` branch-point structure that keeps `D03` primary in planning.
+If a reader insists on a public-open-only inspection path, the least-distorting backup now stays `D10 3M-CPSEED`, with `ZuCo 2.0` and the spoken-plus-imagined robot-speech EEG family kept nearby. Those public-open backups remain useful for decoder-side failure inspection and paired EEG+ET inspection, but they still do not expose the recall-labeled branch point that keeps `D03` primary in planning.
 
 ## What the first artifact can honestly close now
 
@@ -82,8 +82,8 @@ If a reader insists on a public-open-only inspection path, the least-distorting 
 
 ## External dependency tasks that stay outside this session
 
-- Richer recall-label validity is still needed before stronger wording about mechanism can be justified.
-- A speech-richer adjunct benchmark is still needed before this row can carry a broader transfer claim.
+- An external recall-validity layer is still needed before stronger wording about mechanism can be justified.
+- A public-open EEG+ET backup family is now in place, but it still does not replace the missing recall-labeled branch-point evidence.
 - Any claim that shared decoder structure implies shared internal mechanism remains outside the present EEG-only route.
 
 ## What changed in this run

@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-31 / Role: U13-2 route packet
+- Updated: 2026-04-01 / Role: U13-2 route packet
 
 ## Role Of This Page
 This page fixes the current public route for U13-2 at the level of one question, one primary dataset anchor, one bounded first artifact, and one funding bridge.
@@ -44,9 +44,9 @@ This page does not change the current public six-question batch. It makes only t
 | Candidate | What it helps with | Why it is not the first public anchor |
 |---|---|---|
 | `D10 3M-CPSEED` (`10.18112/openneuro.ds006465.v2.0.0`, immediate) | It keeps overt, silent-intended, and imagined speech in one public release, with repeated sessions plus raw BIDS and phase-split derivatives. This is the cleanest current floor for a bounded `brain-minus-prior` control family. | It stays the primary anchor in this run. |
-| `D03 Multimodal Fusion EEG + Eye-Tracking` (`10.21227/6106-6120`, subscription-gated support) | It is useful for transfer and branch-point reading because it still fixes an EEG-plus-gaze target if access is available. | The current IEEE DataPort page is subscription-gated, and it is not speech-first, so it stays a bounded support anchor rather than the first speech-side anchor. |
+| `EEG data recorded during spoken and imagined speech interaction with a simulated robot` (`10.5281/zenodo.14645652`, immediate) | It gives public overt-plus-imagined speech with a larger command count and a control task, so it is the first public-open support family to keep nearby. | It does not keep the same overt / silent-intended / imagined ladder as `D10`, so the `brain-minus-prior` family is still less clean for the present row. |
+| `D03 Multimodal Fusion EEG + Eye-Tracking` (`10.21227/6106-6120`, subscription-gated support) | It is useful later as a gated multimodal comparator because it still fixes an EEG-plus-gaze target if access is available. | The current IEEE DataPort page is subscription-gated, and it is not speech-first, so it stays a bounded support anchor rather than the first speech-side anchor. |
 | `D09 VICODEV` (`10.21227/r8fc-2y40`, account required) | It gives multimodal control conditions and a richer distraction setting that may help later control-family design. | It is access-gated and centered on a driving-distraction scenario rather than a direct inner-speech route, so it should not be the first public anchor for `U13-2`. |
-| `EEG data recorded during spoken and imagined speech interaction with a simulated robot` (`10.5281/zenodo.14645652`, immediate) | It gives public overt-plus-imagined speech with a larger command count and a control task. | It does not keep the same overt / silent-intended / imagined ladder as `D10`, so the `brain-minus-prior` family is less clean for the present row. |
 | `DAIS` (`10.1109/ICASSP49357.2023.10096145`, uncertain public) | It may become useful as an adjunct speech benchmark later. | Public status and operational metadata still remain too uncertain for the first bounded public route. |
 
 ## What the first artifact can honestly close now

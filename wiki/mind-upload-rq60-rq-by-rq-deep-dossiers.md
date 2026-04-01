@@ -123,11 +123,11 @@ This run keeps the current public batch unchanged. The new contribution is row-l
 | RQ | EEG-DATA reason that still justifies the row | First artifact that can be closed now | Funding sentence that still fits | No-go boundary that stays explicit |
 |---|---|---|---|---|
 | `U13-2` | `D10 3M-CPSEED` remains the strongest current speech anchor because the local mirror still exposes an immediate OpenNeuro route with overt, silent-intended, and imagined speech across `20 participants x 4 sessions`, plus raw BIDS and phase-split derivatives. | `Brain-minus-prior` control table and mimic-separation note. | Keep `Kura Fund` first and `Nakatani Foundation graduate scholarship` second, because the row still reads naturally as a bounded young-researcher / doctoral-track speech-decoding benchmark rather than a solved mind-upload claim. | Do not translate this row into evidence of preserved internal mechanism, preserved identity, or successful mind preservation. |
-| `U13-5` | `D03 Multimodal Fusion EEG + Eye-Tracking` remains acceptable because the intended paired EEG and gaze route still bounds the perception-to-recall branch point, even though the current DataPort page is subscription-gated. | Perception-to-recall degradation note and transfer-gap table. | Keep `Kura Fund` first and `Nakatani Foundation graduate scholarship` second, because the row is still a decoder-transfer benchmark with a clear failure mode rather than a broader mechanism claim. | Do not write this as evidence that shared decoder structure implies shared internal mechanism across perception and recall. |
+| `U13-5` | `D03 Multimodal Fusion EEG + Eye-Tracking` remains only a gated planning anchor because the intended paired EEG and gaze route is still useful, but the visible DataPort metadata centers a `55`-student cognitive-load dataset and does not expose a recall-specific label on the public page. | Perception-to-recall degradation note and transfer-gap table. | Keep `Kura Fund` first and `Nakatani Foundation graduate scholarship` second, because the row is still a decoder-transfer benchmark with a clear failure mode rather than a broader mechanism claim. | Do not write this as evidence that shared decoder structure implies shared internal mechanism across perception and recall. |
 | `U0-2` | `D02 CSTE` remains the cleanest intended identity-drift floor because the local mirror still places it in `Biometric / Authentication` and `Cross-session / Transfer / Domain adaptation`, with `10 participants`, even though the current DataPort page is subscription-gated. | Offset/jitter distribution and state-feature collapse audit. | Keep `Nakatani Foundation graduate scholarship` first and `Kashinome Scholarship` second, because the row still fits a student-facing continuity / drift audit better than a broad systems proposal. | Do not elevate timing stability or re-identification robustness into legal, philosophical, or normative identity continuity. |
 | `U0-3` | The same `D02` anchor remains correct because threshold stability only becomes interpretable after the identity row stays on a cross-session / cross-task biometric floor instead of a single-session score. | Threshold-stability note and overfit-exclusion rule. | Keep `Nakatani Foundation graduate scholarship` first and `Kashinome Scholarship` second, because the row still reads as a doctoral-track identity-drift benchmark with bounded operational claims. | Do not present a stable threshold as a sufficient condition for personhood continuity or branch-identity resolution. |
-| `U14-4` | `D01 Acquisition delay of wireless EEG` remains acceptable only as a bounded entry point, because the local mirror still gives an immediate DOI route for a latency-first measurement package in a wearable / ambulatory setting. | Filled Model Card / Dataset Card examples for the current batch. | Keep `Kura Fund` first and `Nakatani Foundation research grant` as next-cycle watch, because the row is still strongest as a reproducibility/disclosure package rather than a current open BME result claim. | Do not turn card completeness into field-wide reproducibility, deployment readiness, or standards adoption. |
-| `U14-2` | The same `D01` anchor remains enough to freeze the split boundary because a latency-first rerun floor is sufficient for an operational `exploration vs confirmation` contract even before broader benchmark diversity is added. | Fixed-split rerun contract and negative-case trail. | Keep `Kura Fund` first and `Nakatani Foundation research grant` as next-cycle watch, because the row still functions as a bounded reproducibility-contract artifact. | Do not present exploration outputs as confirmatory evidence or imply broader reproducibility than the current anchor can support. |
+| `U14-4` | `D01 Acquisition delay of wireless EEG` remains acceptable only as a bounded entry point, because the visible package is a latency/synchronization dataset with `README_en` plus device/run `.mat` files rather than a rerun benchmark by itself. | Filled Model Card / Dataset Card examples for the current batch. | Keep `Kura Fund` first and `Nakatani Foundation research grant` as next-cycle watch, because the row is still strongest as a reproducibility/disclosure package rather than a current open BME result claim. | Do not turn card completeness into field-wide reproducibility, deployment readiness, or standards adoption. |
+| `U14-2` | The same `D01` anchor remains enough to freeze the split boundary only as a latency-first floor; broader split or rerun wording still needs `D13` as the first public-open support family. | Fixed-split rerun contract and negative-case trail. | Keep `Kura Fund` first and `Nakatani Foundation research grant` as next-cycle watch, because the row still functions as a bounded reproducibility-contract artifact. | Do not present exploration outputs as confirmatory evidence or imply broader reproducibility than the current anchor can support. |
 
 - Todoist action stayed intentionally conservative in this run. A fresh read-only API recheck still found the existing `Kura`, `Nakatani graduate scholarship`, `Kashinome`, `Nakatani research grant`, and `Secom` tasks already present, so the correct action was to avoid duplication rather than add another reminder layer.
 
@@ -138,11 +138,11 @@ The current public batch still does not change. What changes in this addendum is
 | RQ | Submission-ready title | Current first artifact | Why the present anchor is enough now | Funding bridge that still fits | What still blocks stronger wording |
 |---|---|---|---|---|---|
 | `U13-2` | `Neural-contribution audit for imagined speech with a brain-minus-prior control` | `Brain-minus-prior` control table and mimic-separation note | `D10 3M-CPSEED` still keeps overt, silent-intended, and imagined speech inside one public release, so the first artifact can compare a neural contribution against a prior-only shortcut instead of collapsing into a generic decoder score. | `Kura Fund`, then `Nakatani Foundation graduate scholarship` | The row still does not preserve internal mechanism, preserved identity, or successful mind preservation. |
-| `U13-5` | `Perception-to-recall transfer-gap benchmark for mimic separation` | Perception-to-recall degradation note and transfer-gap table | `D03 Multimodal Fusion EEG + Eye-Tracking` still provides the intended paired EEG + gaze route, but the current DataPort page is subscription-gated, so it only freezes a bounded branch point rather than an immediate public anchor. | `Kura Fund`, then `Nakatani Foundation graduate scholarship` | The row still cannot support a stronger preserved-mechanism reading without a richer adjunct benchmark. |
+| `U13-5` | `Perception-to-recall transfer-gap benchmark for mimic separation` | Perception-to-recall degradation note and transfer-gap table | `D03 Multimodal Fusion EEG + Eye-Tracking` still provides the intended paired EEG + gaze route, but the visible DataPort metadata is still a cognitive-load package and does not expose a recall-specific label on the public page, so it only freezes a bounded planning branch point rather than an immediate public anchor. | `Kura Fund`, then `Nakatani Foundation graduate scholarship` | The row still cannot support a stronger preserved-mechanism reading without an external recall-validity layer and a richer public-open adjunct benchmark. |
 | `U0-2` | `Temporal-validity-aware identity drift audit with offset, jitter, and state-feature collapse` | Offset/jitter distribution and state-feature collapse audit | `D02 CSTE` remains cross-session, cross-task, and biometric, but the current DataPort page is subscription-gated, so identity-like wording can first be reduced only to a bounded timing-and-feature audit. | `Nakatani Foundation graduate scholarship`, then `Kashinome Scholarship` | The row still cannot cross the line into legal, philosophical, or normative identity continuity. |
 | `U0-3` | `Task-specific threshold stability and overfit-exclusion benchmark for identity drift` | Threshold-stability note and overfit-exclusion rule | The same `D02` anchor keeps threshold movement on the same cross-session / cross-task floor as `U0-2`, which is the minimum condition for interpreting threshold stability at all. | `Nakatani Foundation graduate scholarship`, then `Kashinome Scholarship` | The row still cannot treat a stable threshold as sufficient for personhood continuity or branch-identity resolution. |
-| `U14-4` | `Card-integrated reproducibility contract for the current public batch` | Filled Model Card / Dataset Card examples | `D01 Acquisition delay of wireless EEG` is narrow, but it is still enough to force latency and measurement fields into concrete card examples that a rerun contract can actually reference. | `Kura Fund`; `Nakatani Foundation research grant` as next-cycle watch | The row still cannot justify field-wide reproducibility, deployment readiness, or standards uptake wording. |
-| `U14-2` | `Fixed-split rerun contract for exploration versus confirmation` | Fixed-split rerun contract and negative-case trail | The same `D01` route is still sufficient to make an exploration / confirmation split operational before a broader benchmark family is added. | `Kura Fund`; `Nakatani Foundation research grant` as next-cycle watch | The row still cannot support broad rerun-robustness wording or confirmatory language for exploratory outputs. |
+| `U14-4` | `Card-integrated reproducibility contract for the current public batch` | Filled Model Card / Dataset Card examples | `D01 Acquisition delay of wireless EEG` is narrow, but it is still enough to force latency and measurement fields into concrete card examples that a rerun contract can actually reference; stronger public wording would still need `D13` as the first public-open rerun family. | `Kura Fund`; `Nakatani Foundation research grant` as next-cycle watch | The row still cannot justify field-wide reproducibility, deployment readiness, or standards uptake wording. |
+| `U14-2` | `Fixed-split rerun contract for exploration versus confirmation` | Fixed-split rerun contract and negative-case trail | The same `D01` route is still sufficient to make an exploration / confirmation split operational as a narrow latency floor, but stronger rerun wording would still need `D13` as the first public-open rerun family. | `Kura Fund`; `Nakatani Foundation research grant` as next-cycle watch | The row still cannot support broad rerun-robustness wording or confirmatory language for exploratory outputs. |
 
 ## 今回の再検証ログ（2026-03-30 02:05 JST, one-RQ closure gates）
 
@@ -174,11 +174,11 @@ This run does not change the current public six-question batch. It only tightens
 | RQ | Why this anchor still stays in the current batch | What the current anchor is good enough to close now | What must still stay outside the claim | Best next adjunct before stronger wording |
 |---|---|---|---|---|
 | `U13-2` | `D10 3M-CPSEED` stays the strongest current speech-side anchor because it is public, BIDS-structured, and exposes overt, silent-intended, and imagined speech inside the same release. | A `brain-minus-prior` control route and a narrow mimic-separation note. | Preserved internal mechanism or any mind-preservation wording. | An external language-evaluation layer plus a richer control family. |
-| `U13-5` | `D03` stays acceptable only as a bounded multimodal support anchor because it combines EEG with eye-tracking and related physiology in a subscription-gated release. | A perception-to-transfer branch note that stays narrow and public-safe. | Any stronger mechanism-preservation reading. | `CuBiAAD` or another speech-richer adjunct benchmark; the most obvious local candidate remains access-gated. |
+| `U13-5` | `D03` stays acceptable only as a bounded multimodal support anchor because it combines EEG with eye-tracking and related physiology in a subscription-gated release whose visible metadata still does not expose a recall-specific label. | A perception-to-transfer branch note that stays narrow and public-safe. | Any stronger mechanism-preservation reading. | `ZuCo 2.0` plus the public robot-speech family, with `CuBiAAD` kept only as a later access-gated adjunct. |
 | `U0-2` | `D02 CSTE` remains the cleanest current identity-drift floor because it is explicitly cross-session and cross-task with a biometric framing, even though the current DataPort page is subscription-gated. | A `state-feature collapse` audit plus bounded subject-stability failure analysis. | Philosophical or legal continuity claims, and stronger timing language than the dataset actually supports. | A longer-horizon adjunct benchmark with more explicit timing and synchronization logs. |
 | `U0-3` | The same `D02` anchor keeps the threshold rule on the same cross-session / cross-task identity-drift floor as `U0-2`. | Threshold stability and overfit-exclusion as a bounded benchmark artifact. | Treating a stable threshold as a sufficient condition for personhood continuity. | A session-external rerun pack and a larger cohort extension. |
-| `U14-4` | `D01` remains a narrow but useful disclosure anchor because a wireless-delay dataset is enough to force concrete latency and measurement fields into a Model Card / Dataset Card example. | A disclosure-first rerun checklist with concrete latency fields. | Any field-wide reproducibility or organizational-adoption wording. | `A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications` for richer rerun examples. |
-| `U14-2` | The same `D01` route is still enough to keep the exploration/confirmation split operational and measurable at the latency-contract level. | A fixed-split rerun contract plus a negative-case trail that stays narrow. | Broader rerun robustness claims. | The same public P300 benchmark-style adjunct, plus explicit split-violation examples. |
+| `U14-4` | `D01` remains a narrow but useful disclosure anchor because a wireless-delay dataset is enough to force concrete latency and measurement fields into a Model Card / Dataset Card example. | A disclosure-first rerun checklist with concrete latency fields. | Any field-wide reproducibility or organizational-adoption wording. | `A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications` as the first required public-open rerun family, then `D08` for grounded validation examples. |
+| `U14-2` | The same `D01` route is still enough to keep the exploration/confirmation split operational and measurable at the latency-contract level. | A fixed-split rerun contract plus a negative-case trail that stays narrow. | Broader rerun robustness claims. | The same public P300 benchmark-style family as the first required support, plus `D08` for stronger split-violation grounding. |
 
 - Funding-route judgment did not widen in this run: `Kura Fund` and the `Nakatani Foundation graduate scholarship` still carry the immediate bridge, `Kashinome Scholarship` stays runway-only support, and the `Nakatani Foundation research grant` plus `Secom General Research Grant` stay watch routes.
 - The read-only Todoist recheck still found existing task coverage for the current practical routes, so this run added no new task.
@@ -210,11 +210,12 @@ This run does not change the current public six-question batch. It only tightens
 
 - solve-first 順は維持: `U13-2` `U13-5` `U0-2` `U0-3` `U14-4` `U14-2`
 - anchor の強弱:
-  - `strong primary`: `D10 3M-CPSEED`, `D02 CSTE`
+  - `clear public-open primary`: `D10 3M-CPSEED`
+  - `gated planning primary for identity rows`: `D02 CSTE`
   - `bounded support`: `D03 Multimodal Fusion EEG + Eye-Tracking`, `D01 Acquisition delay of wireless EEG`
 - 実務含意:
   - `U13-2/U0-2/U0-3` は現行 EEG-DATA だけでも first artifact が比較的閉じやすい行です。
-  - `U13-5/U14-4/U14-2` は public route には残しますが、`D03/D01` のまま claim ceiling を上げすぎず、`DOI + dataset name + access class` を正本にして narrow artifact から進めます。
+  - `U13-5/U14-4/U14-2` は public route には残しますが、`D03/D01` のまま claim ceiling を上げすぎず、`DOI + dataset name + access class` を正本にして narrow artifact から進めます。`U13-5` は recall-validity layer、`U14-4/U14-2` は `D13` が次の必須 support です。
 - roadmap gap:
   - `tech_roadmap.md` 上の `U2/U5/U6/U9` は、まだこの `RQ60` practical dossier 層に翻訳されておりません。current public batch の差し替え対象ではなく、次に増やす internal translation backlog として扱います。
 
@@ -999,12 +1000,12 @@ This run does not change the current public six-question batch. It only tightens
 
 ### U13-2 LLMの幻覚・整合性検査を神経デコード評価へどう接続するか。
 
-- 検証命題: `D10 3M-CPSEED (10.18112/openneuro.ds006465.v2.0.0 / immediate)` を主に、`D03` と `D09` を補助として `hallucination label` と `neural inconsistency` を同時監査し、意味一致だけの合格を禁止する。
+- 検証命題: `D10 3M-CPSEED (10.18112/openneuro.ds006465.v2.0.0 / immediate)` を主に、`EEG data recorded during spoken and imagined speech interaction with a simulated robot (10.5281/zenodo.14645652 / immediate)` を第一補助、`D03` を gated multimodal comparator として `hallucination label` と `neural inconsistency` を同時監査し、意味一致だけの合格を禁止する。
 - EEG-DATA判定境界: B（部分検証（外部データ併用で成立））<br>EEG主解析は可能だが、外部データまたは制度情報の併用が必須。
 - auto-research-funds応募テーマ: mind-upload 仮説の国際共同検証に向けた EEG brain-to-text 模倣分離ベンチ立ち上げ
 - 第一応募先 / 予備応募先: `くら基金 若手研究者奨励助成` / `中谷財団 大学院生奨学金`
 - 主データ: `D10 3M-CPSEED: An EEG-based Dataset for Chinese Pinyin Production in Overt, Silent-intended, and Imagined Speech`
-- 補助データ（推奨）: `D03 Multimodal Fusion EEG + Eye-Tracking`, `D09 VICODEV`
+- 補助データ（推奨）: `EEG data recorded during spoken and imagined speech interaction with a simulated robot`, `D03 Multimodal Fusion EEG + Eye-Tracking`
 - 実データ条件: 今回の主アンカーは `D10 3M-CPSEED` とし、`stimulus/audio/transcript alignment` `overt-vs-covert control` `leak-free split` `BIDS or equivalent provenance` を必須条件にいたします。
 - 初期KPI（U13標準）: `semantic alignment` `brain-minus-prior gap` `misalignment rate`
 - 停止条件: `内部状態差検出率 < 0.60` または `幻覚率` と `neural inconsistency` の相関区間が `0` を跨ぐ場合は、「意味一致のみ」の主張へ下方修正する。
@@ -1039,14 +1040,14 @@ This run does not change the current public six-question batch. It only tightens
 
 ### U13-5 視覚知覚と視覚想起で同一デコーダを使ったとき、意味復元精度の劣化パターンはどこで分岐するか。
 
-- 検証命題: `D03 Multimodal Fusion EEG + Eye-Tracking (10.21227/6106-6120 / subscription-gated support)` を主に、`D10` と `D09` を補助として、知覚条件で学習した同一デコーダを想起条件へ転送し、分岐点を時間窓別に特定する。
+- 検証命題: `D03 Multimodal Fusion EEG + Eye-Tracking (10.21227/6106-6120 / subscription-gated support)` を gated planning anchor とし、`D10`、`ZuCo 2.0`、`EEG data recorded during spoken and imagined speech interaction with a simulated robot` を public-open support として、知覚条件で学習した同一デコーダを想起条件へ転送し、分岐点を時間窓別に特定する。ただし公開 metadata 上は recall-specific label が見えていないため、想起妥当性は外部 layer を必須とする。
 - EEG-DATA判定境界: B（部分検証（外部データ併用で成立））<br>デコーダ劣化の定量化は可能だが、想起内容の主観ラベル妥当性には外部行動/報告系が必要。
 - auto-research-funds応募テーマ: mind-upload 仮説の国際共同検証に向けた EEG brain-to-text 模倣分離ベンチ立ち上げ
 - 第一応募先 / 予備応募先: `くら基金 若手研究者奨励助成` / `中谷財団 大学院生奨学金`
 - 主データ: `D03 Data of Multimodal Fusion System for Cognitive Load Assessment in Psychological Experiments: An EEG and Eye-Tracking Study`
-- 補助データ（推奨）: `D10 3M-CPSEED`, `D09 VICODEV`
+- 補助データ（推奨）: `D10 3M-CPSEED`, `ZuCo 2.0`, `EEG data recorded during spoken and imagined speech interaction with a simulated robot`
 - 初期KPI（U13標準）: `perception-to-recall degradation point` `transfer gap` `control-condition stability`
-- 停止条件: 想起条件で `意味一致率` が知覚条件比で一貫してチャンス水準近傍となる場合、同一デコーダ主張を撤回し分離学習へ切り替える。
+- 停止条件: 想起条件で `意味一致率` が知覚条件比で一貫してチャンス水準近傍となる場合、または recall-validity layer が接続できない場合、同一デコーダ主張を撤回し分離学習または planning note へ切り替える。
 - 最低成果物: Mimic separation evaluation script and control condition table
 
 
@@ -1079,14 +1080,14 @@ This run does not change the current public six-question batch. It only tightens
 
 ### U14-2 探索研究と検証研究を運用上どう分離するか。
 
-- 検証命題: `D01 Acquisition delay of wireless EEG (10.21227/dv1p-vq18 / subscription-gated support)` を主に、`D08` と `D13` を補助として、探索/検証の分離運用を行い、同一条件再実行の再現率を示す。
+- 検証命題: `D01 Acquisition delay of wireless EEG (10.21227/dv1p-vq18 / subscription-gated support)` を latency/disclosure floor とし、`D13` を必須 public-open support、`D08` を grounded support として、探索/検証の分離運用を行い、同一条件再実行の再現率を示す。
 - EEG-DATA判定境界: A（直接検証可能）<br>EEG-DATA単独で主要仮説まで検証可能（外部依存なし）。
 - auto-research-funds応募テーマ: EEG 再現契約監査パックとしての exploration / confirmation split 固定
 - 第一応募先 / 予備応募先: `くら基金 若手研究者奨励助成` / `中谷財団 研究助成（next-cycle watch）`
 - 主データ: `D01 Acquisition delay of wireless EEG`
-- 補助データ（推奨）: `D08 Simultaneous human intracerebral stimulation and HD-EEG`, `D13 recalibration-free-p300-eeg`
+- 補助データ（推奨）: `D13 recalibration-free-p300-eeg`, `D08 Simultaneous human intracerebral stimulation and HD-EEG`
 - 初期KPI（U14標準）: `fixed-split rate` `rerun success rate` `explore-to-confirm carryover gap`
-- 停止条件: 主データ単独で再現しない場合は、前処理・分割・同期ログを固定して再試行し、それでも再現不能なら主張を下方修正する。
+- 停止条件: `D01` 単独の latency floor から `D13` 支援の rerun trail へ接続できない場合、または split 違反例が `D13` 上でも安定しない場合、主張を latency-floor note へ下方修正する。
 - 最低成果物: Supplementary test operation report (including negative cases)
 
 
@@ -1105,14 +1106,14 @@ This run does not change the current public six-question batch. It only tightens
 
 ### U14-4 Model Card / Dataset Card を評価契約へどう統合するか。
 
-- 検証命題: `D01 Acquisition delay of wireless EEG (10.21227/dv1p-vq18 / subscription-gated support)` を主に、`D08` と `D13` を補助として、Model Card・Dataset Card 必須化を rerun contract へ接続し監査項目化する。
+- 検証命題: `D01 Acquisition delay of wireless EEG (10.21227/dv1p-vq18 / subscription-gated support)` を latency/disclosure floor とし、`D13` を必須 public-open support、`D08` を grounded support として、Model Card・Dataset Card 必須化を rerun contract へ接続し監査項目化する。
 - EEG-DATA判定境界: A（直接検証可能）<br>EEG-DATA単独で主要仮説まで検証可能（外部依存なし）。
 - auto-research-funds応募テーマ: EEG 再現契約監査パックとしての card-integrated reproducibility contract
 - 第一応募先 / 予備応募先: `くら基金 若手研究者奨励助成` / `中谷財団 研究助成（next-cycle watch）`
 - 主データ: `D01 Acquisition delay of wireless EEG`
-- 補助データ（推奨）: `D08 Simultaneous human intracerebral stimulation and HD-EEG`, `D13 recalibration-free-p300-eeg`
+- 補助データ（推奨）: `D13 recalibration-free-p300-eeg`, `D08 Simultaneous human intracerebral stimulation and HD-EEG`
 - 初期KPI（U14標準）: `required-card fill rate` `rerun success rate` `leak-audit coverage`
-- 停止条件: 主データ単独で再現しない場合は、前処理・分割・同期ログを固定して再試行し、それでも再現不能なら主張を下方修正する。
+- 停止条件: `D01` 単独の disclosure floor から `D13` 支援の rerun examples へ接続できない場合、または card 欄の追加が traceability を改善しない場合、主張を disclosure-floor note へ下方修正する。
 - 最低成果物: Model/Dataset Card template and filled-in examples
 
 
