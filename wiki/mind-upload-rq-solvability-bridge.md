@@ -226,6 +226,16 @@ It does **not** try to re-scan all `60RQ` items at once. The working style on th
 | `U14-4` | `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`, subscription-gated support) | Filled Model Card and Dataset Card examples for one bounded latency/disclosure floor, to be widened only with `D13`-backed rerun examples. | Field-wide reproducibility, standards adoption, or deployment readiness. | `Card-integrated reproducibility contract for the current public batch` | `Kura Fund`; `Nakatani Foundation research grant` as next-cycle watch | Existing tasks already cover the lane. No new item was added. |
 | `U14-2` | `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`, subscription-gated support) | A fixed-split rerun contract and negative-case trail for exploration-versus-confirmation discipline, to be widened only with `D13`-backed rerun examples. | Presenting exploratory outputs as confirmatory evidence or claiming broad rerun robustness. | `Fixed-split rerun contract for exploration versus confirmation` | `Kura Fund`; `Nakatani Foundation research grant` as next-cycle watch | Existing tasks already cover the lane. No new item was added. |
 
+## Solve-first stacks inside the current public six
+
+| Stack | Current order | Why this stack stays narrow now | Main anchor family and first public-open support |
+|---|---|---|---|
+| Speech-side contribution stack | `U13-2 -> U13-5` | First keep neural contribution separate from the language prior, then ask where decoder transfer breaks when the route moves from perception to recall. | `D10` stays the first public-open floor; `D03` stays the paired-stream planning anchor; public-open backup remains `D10` plus `ZuCo 2.0` and the spoken/imagination robot-speech EEG family. |
+| Identity-drift floor | `U0-2 -> U0-3` | First bound timing drift and state-feature collapse, then ask whether the threshold rule survives once the timing floor is fixed. | `D02` stays the planning floor; the cleanest public-open stress tests remain `ds004148` and `ds007216`. |
+| Disclosure-to-rerun contract | `U14-4 -> U14-2` | First turn disclosure fields into filled card examples, then freeze the exploration-versus-confirmation split under one rerun contract. | `D01` stays the planning floor; `D13` remains the first public-open rerun family those two rows would need next, with `D08` kept for grounded validation-field examples. |
+
+The cleanest public-open support underneath those three stacks still stays outside the batch itself: `U7-1 -> U1-2` keeps the synchronization and inverse-uncertainty floor readable without forcing a batch switch.
+
 ## Public-open backup families for the current public six
 
 These backup families do not replace the current planning anchors. They only record the least-distorting public-open inspection path when the main planning anchor is gated.

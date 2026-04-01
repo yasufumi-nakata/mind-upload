@@ -229,6 +229,13 @@ The route is unchanged, but each active row now also carries one submission-read
 | `U14-4` | Turn card fields into a concrete rerun checklist. | `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`, subscription-gated support) | Filled Model Card / Dataset Card examples | `Kura Fund`; `Nakatani Foundation research grant` as next-cycle watch | Field-wide reproducibility, deployment readiness, or standards adoption |
 | `U14-2` | Make the exploration / confirmation split operational. | `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`, subscription-gated support) | Fixed-split rerun contract and negative-case trail | `Kura Fund`; `Nakatani Foundation research grant` as next-cycle watch | Presenting exploratory outputs as confirmatory evidence |
 
+## How to deepen this batch without flattening it
+
+- `U13-2 -> U13-5` is still the speech-side contribution stack: first keep `brain-minus-prior` honest on `D10`, then ask where the transfer route breaks when the row moves from perception to recall.
+- `U0-2 -> U0-3` is still the identity-drift floor: first bound timing error on the `D02` route, then ask whether the threshold survives once the timing floor is fixed. The least-distorting public-open stress tests remain `ds004148` and `ds007216`, but they still stay backup-only.
+- `U14-4 -> U14-2` is still the reproducibility-contract stack: first turn disclosure fields into filled cards on the `D01` floor, then freeze the exploration-versus-confirmation split. `D13` remains the first public-open rerun family those two rows would need next.
+- `U7-1 -> U1-2` still sits just outside the batch as the public-open infrastructure floor: `D11` keeps the synchronization contract readable in public, and `D08` keeps the inverse-uncertainty route grounded without forcing a batch switch.
+
 ## First-pass KPI bundle and stop rule sync
 
 This run does not widen the batch. It only makes the current public six explicit enough that each active row now has one KPI bundle and one stop rule before the route is widened or moved into stronger wording.
