@@ -55,6 +55,15 @@ recommended_pages:
 - The six current public rows below are now synchronized to `Dxx + DOI + dataset name + access class`, so the playbook no longer needs numeric search IDs for `U13-2/U13-5/U0-2/U0-3/U14-4/U14-2`.
 - `tech_roadmap.md` also contains `U2/U5/U6/U9`, but those roadmap families are not yet translated into this playbook's current `RQ60` practical layer.
 
+## Latest live-source addendum (2026-04-01 20:09 JST)
+
+- An actual-pull reread after `mind-upload@da9644095ba6`, `EEG-DATA@1ecc5cdc0131`, and `auto-research-funds@b5cd37febbbb` still leaves this playbook's practical reading unchanged.
+- The current route still stays fixed on `D10 / D03 / D02 / D01` for the public six and `U7-1 -> U1-2 -> U4-2 -> U8-1` for the outside-current-six queue; the newest `mind-upload` head tightens human-proxy composition evidence roles outside the current six, `EEG-DATA` adds an Iowa Gambling EEG family deep dive but still reports `merged_unique=30873`, `high_confidence=28836`, and `access_counts_high.immediate=24486`, and `auto-research-funds` adds a Nagahisa research-grant snapshot plus repo-stat refresh without displacing the current practical shortlist.
+- Route-safe access wording still stays narrow: `D10` remains the only clear public-open primary anchor, while `D03 / D02 / D01` remain gated-support planning anchors because the live-access read is still stricter than the catalog-side identifier surface.
+- Browser-level live checks at `2026-04-01 20:09 JST` still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `mind-upload-rq-solvability-bridge.html`; the current `Last-Modified` header was `Wed, 01 Apr 2026 10:21:50 GMT` on those public surfaces, and the live `issue.html` paragraph still named the same six in the same order.
+- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, and `Secom General Research Grant = 2026-03-13 - 2026-03-31 12:00 (closed)`.
+- A fresh read-only Todoist `api/v1/sync(items)` audit still showed enough route coverage (`items=203`, `Kura=2`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`), so no new task was added in this run.
+
 ## Latest live-source addendum (2026-04-01 12:06 JST)
 
 - A second actual-pull reread after `mind-upload@9f4bc8e760b1`, `EEG-DATA@1324f9e1ae2b`, and `auto-research-funds@6548b1650535` still leaves this playbook's practical reading unchanged.
@@ -144,7 +153,7 @@ This run keeps the same public six-RQ batch and the same practical submission ro
 | RQ | Current anchor class | Funding route to keep now | Why this route still fits | Adjunct before stronger proposal wording |
 |---|---|---|---|---|
 | `U13-2` | Strong primary (`D10 3M-CPSEED`) | `Kura Fund` / `Nakatani Foundation graduate scholarship` | Public BIDS speech phases make it the shortest route to a `brain-minus-prior` control story. | Add an external language-evaluation layer and a broader control family. |
-| `U13-5` | Gated support (`D03`) | `Kura Fund` / `Nakatani Foundation graduate scholarship` | The intended paired EEG + eye-tracking route still bounds a narrow perception-to-transfer branch note, but the current DataPort page is subscription-gated. | Add `CuBiAAD` or another speech-richer adjunct before stronger mechanism language. |
+| `U13-5` | Gated support (`D03`) | `Kura Fund` / `Nakatani Foundation graduate scholarship` | The intended paired EEG + eye-tracking route still bounds a narrow perception-to-transfer branch note, but the current DataPort page is subscription-gated. | Add `D10`, `ZuCo 2.0`, or the public robot-speech EEG family before stronger mechanism language. |
 | `U0-2` | Gated support (`D02 CSTE`) | `Nakatani Foundation graduate scholarship` / `Kashinome Scholarship` | Cross-session and cross-task biometric structure still makes it the cleanest intended identity-drift floor, but the current DataPort page is subscription-gated. | Add a longer-horizon adjunct with more explicit timing and synchronization logs. |
 | `U0-3` | Gated support (`D02 CSTE`) | `Nakatani Foundation graduate scholarship` / `Kashinome Scholarship` | The same identity-drift floor still keeps threshold stability and overfit exclusion on one bounded route, but the current DataPort page is subscription-gated. | Add a session-external rerun pack and a larger cohort extension. |
 | `U14-4` | Gated support (`D01`) | `Kura Fund` / `Nakatani Foundation research grant (watch)` | A latency-first wireless-delay dataset is still enough to force concrete disclosure fields into the rerun contract, but the current DataPort page is subscription-gated. | Add `A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications` for richer rerun examples. |
