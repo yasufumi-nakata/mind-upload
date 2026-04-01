@@ -38,8 +38,9 @@ page_highlights:
 - EEG / MEG rows now also separate the upstream field-formation wall from downstream
   inverse uncertainty, so channel count or a cleaner map is not misread as newly
   created observability.
-- Hemodynamic stacks are now separated into neural-side and vascular-transfer-side
-  uncertainty, so BOLD or fNIRS amplitude is not overread as neural truth.
+- Hemodynamic stacks are now split into uncalibrated amplitude, transfer-audited
+  amplitude, and model-conditioned oxygen-metabolism routes, so passing one route
+  is not overread as solving the others.
 - Same-session multimodal acquisition is not treated as self-validating fusion; the
   site now requires a Fusion Card before the ceiling is raised above the strongest
   unimodal route.
@@ -69,8 +70,10 @@ page_highlights:
 known_points:
 - EEG/MEG/fMRI provides macroscopic proxies, but not directly for cell types, synaptic
   efficiency, neuromodulatory fields, and glial status.
-- In hemodynamic modalities, vascular transfer state such as baseline perfusion, CVR,
-  and superficial/systemic contamination can also dominate amplitude differences.
+- In hemodynamic modalities, uncalibrated BOLD / HbO / HbR amplitude, transfer-audited
+  amplitude, and model-conditioned oxygen-metabolism routes are different inferential
+  objects, and vascular transfer state such as baseline perfusion, CVR, and superficial/systemic
+  contamination can still dominate the simpler rows.
 - Whole-brain spatial transcriptomics provides a major advance in cell-type taxonomy
   and spatial location, but the sufficiency of dynamic states is another matter.
 - Patch-seq and same-brain connectomics reduce degeneracy, but the sufficiency of
@@ -178,11 +181,25 @@ The last column of the table below is not a summary of each paper, but the opera
 <td><strong>Macro state tracking and weak L2</strong>. It does not raise to cell/synapse granularity or state-complete claims. </td>
 </tr>
 <tr>
-<td><strong>fMRI / hemodynamic modalities</strong></td>
-<td>BOLD / HbO / HbR proxy and slow regional scale network state. </td>
-<td>Wide coverage, recruitment patterns, relatively slow state occupancy, and coarse task-state differences can be tracked within the same individual. </td>
-<td>ms timing, excitation/inhibition separation, local transmitter dynamics, current synaptic efficacy, and separation of neural state from vascular transfer state / CVR remain unresolved. </td>
-<td><strong>Wide-area hemodynamic state atlas and coarse dynamical constraints</strong>. Without vascular-state / CVR audit, amplitude differences remain hemodynamic-limited rather than clean neural differences. </td>
+<td><strong>BOLD / HbO / HbR amplitude (uncalibrated hemodynamic route)</strong></td>
+<td>BOLD / HbO / HbR amplitude and slow regional cofluctuation. </td>
+<td>Wide coverage, recruitment patterns, and coarse within-subject state occupancy can be tracked as hemodynamic-limited differences. </td>
+<td>ms timing, excitation/inhibition separation, local transmitter dynamics, current synaptic efficacy, and separation of neural change from vascular transfer state / superficial or autonomic contamination remain unresolved. </td>
+<td><strong>Up to wide-area hemodynamic-limited difference</strong>. Without transfer-side calibration, this row is not promoted to a clean neural difference. </td>
+</tr>
+<tr>
+<td><strong>Vascular-calibrated hemodynamic route (CVR / baseline-perfusion / short-separation audit)</strong></td>
+<td>BOLD / HbO / HbR amplitude plus named vascular-state covariates, short-channel signals, or baseline-perfusion calibration used to audit transfer-side variation. </td>
+<td>Protocol-scoped group or longitudinal comparisons can be strengthened after declared transfer-side calibration, and superficial / systemic confounds can be reduced rather than ignored. </td>
+<td>Neural quantity type, oxygen metabolism, cell-specific activity, and maintenance-side neurovascular / BBB controller state remain unresolved. </td>
+<td><strong>Up to transfer-audited hemodynamic comparison</strong>. Passing this row does not by itself create a neural-quantity or neurovascular-support readout. </td>
+</tr>
+<tr>
+<td><strong>Model-conditioned oxygen-metabolism route (qBOLD / OEF / CMRO2 family)</strong></td>
+<td>Multi-contrast hemodynamic observables combined with an explicit physiology model to estimate OEF / CMRO2 or related macro metabolic quantities. </td>
+<td>A named oxygen-metabolism quantity can be compared to plain BOLD / HbO / HbR and can reveal agreement or sign dissociation under the declared model. </td>
+<td>Model-free neural drive, cell-type-specific energy use, transmitter-specific coupling, and direct controller identity remain unresolved; quantity estimates still depend on calibration and model assumptions. </td>
+<td><strong>Up to a model-conditioned macro oxygen-metabolism route</strong>. It is not promoted to direct neural-state ground truth or to a generic hemodynamic truth meter. </td>
 </tr>
 <tr>
 <td><strong>whole-brain spatial transcriptomics / cell atlas</strong></td>
@@ -460,14 +477,56 @@ On this site, EEG / MEG are read first as <strong>macro field observables</stron
 
 <h3 id="hemodynamic-transfer-wall">5. Hemodynamic stacks also observe through a vascular transfer state</h3>
 <p>
-The weak point that needed another pass was that this page already called fMRI a <strong>hemodynamic proxy</strong>, but still left too much room for the reader to translate a BOLD amplitude difference directly into a neural difference. That was too weak. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">Murphy et al. (2011)</a> showed that inter-subject differences in CBF and CBV contribute to BOLD reactivity and that breath-hold-derived vascular-reactivity covariates improve group analyses. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">Williams et al. (2023)</a> showed that task BOLD magnitude corresponds strongly to hypercapnia-based CVR across multiple cortical regions. <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">Wu et al. (2023)</a> showed that baseline CBF partly explains age-related components of multiple-demand-network BOLD responses. <a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">Özbay et al. (2019)</a> showed that widespread fMRI changes can co-occur with EEG K-complexes and sympathetic-linked vascular-tone changes, and <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> showed across multiple datasets that a major low-frequency global fMRI mode cofluctuates with EEG and multiple autonomic signals. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> then showed that about <strong>40%</strong> of task-responsive voxels can display oxygen-metabolism changes opposite in sign to the BOLD response. What follows directly from this is that <strong>hemodynamic stacks are limited not only by unobserved neural state, but also by unobserved vascular transfer state and autonomic-body coupling</strong>.
+The weak point that needed another pass was not only that BOLD amplitude could be overread as a neural difference, but that improved hemodynamic papers could still be collapsed into one stronger modality row. That was too weak. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">Murphy et al. (2011)</a>, <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">Williams et al. (2023)</a>, and <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">Wu et al. (2023)</a> constrain the <strong>transfer-side calibration problem</strong>: baseline perfusion and CVR move the amplitude. <a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">Özbay et al. (2019)</a> and <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> constrain a distinct <strong>autonomic / body-coupling route</strong> in which large-scale fMRI fluctuations co-vary with physiology rather than transparently reporting neural drive. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> then showed that about <strong>40%</strong> of task-responsive voxels can display oxygen-metabolism changes opposite in sign to the BOLD response, while <a href="https://doi.org/10.1002/nbm.70120" target="_blank">Jaroszynski et al. (2025)</a> showed that an oxygen-metabolism route itself already depends on an explicit <strong>constrained qBOLD + pCASL model stack</strong>. What follows directly is that <strong>hemodynamic work must now be split into at least three route families on this site: uncalibrated amplitude, transfer-audited amplitude, and model-conditioned oxygen-metabolism estimation</strong>.
 </p>
 <div class="note-box">
 <strong>fNIRS belongs to the same caution family</strong>
 <p>
-The same logic applies to cortical hemodynamic modalities beyond fMRI. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">Yucel et al. (2015)</a> showed that short-separation regression improves both significance and localization for fNIRS tasks with differing autonomic responses. Therefore, on this site, fNIRS without <strong>short-separation / superficial diagnostic</strong> is not treated as a direct neural-difference readout either.
+The same logic applies to cortical hemodynamic modalities beyond fMRI. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">Yucel et al. (2015)</a> showed that short-separation regression improves both significance and localization for fNIRS tasks with differing autonomic responses, and <a href="https://doi.org/10.1117/1.NPh.12.3.035009" target="_blank">An et al. (2025)</a> showed that short-channel regression still improves validity and sensitivity even in a working-memory paradigm with minimal motor requirements. Therefore, on this site, fNIRS without <strong>short-separation / superficial diagnostic</strong> is not treated as a direct neural-difference readout, and short-channel-corrected fNIRS is still read as a <strong>transfer-audited hemodynamic route</strong> rather than a neural meter.
 </p>
 </div>
+<div class="note-box">
+<strong>CVR audit is not the same as a quantity bridge</strong>
+<p>
+On this site, <strong>passing a vascular-state / CVR audit</strong> and <strong>estimating an oxygen-metabolism quantity</strong> are different achievements. The first can reduce transfer-side ambiguity in BOLD / HbO / HbR amplitude. The second still needs a named physiology model, calibration route, and quantity definition such as OEF or CMRO2. Therefore, a CVR-corrected amplitude result is not promoted here to an oxygen-metabolism result, and a quantitative OEF / CMRO2 paper is still read as a <strong>model-conditioned macro metabolic route</strong> rather than a direct neural-state meter.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Hemodynamic route family</th>
+<th>What it tightens</th>
+<th>What still stays separate</th>
+<th>Site rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Uncalibrated BOLD / HbO / HbR amplitude</strong></td>
+<td>Wide-area recruitment, slow state occupancy, and protocol-scoped hemodynamic differences.</td>
+<td>Baseline perfusion, CVR, superficial/systemic contamination, autonomic-body coupling, and oxygen-metabolism relation.</td>
+<td>Read as a <strong>hemodynamic-limited difference</strong>, not a clean neural difference.</td>
+</tr>
+<tr>
+<td><strong>Transfer-audited amplitude</strong><br>CVR / baseline-perfusion / short-separation route</td>
+<td>Whether the observed amplitude difference survives named transfer-side calibration.</td>
+<td>Neural quantity type, oxygen metabolism, and maintenance-side neurovascular / BBB controller state.</td>
+<td>Read as a <strong>transfer-audited hemodynamic comparison</strong>, not as neural or support-state ground truth.</td>
+</tr>
+<tr>
+<td><strong>Autonomic / body-coupled global mode</strong></td>
+<td>Whether part of the hemodynamic variance is better read as shared physiology-linked fluctuation than as task-specific neural signal.</td>
+<td>Regional neural drive and transmitter-specific interpretation.</td>
+<td>Do not fold a physiology-linked global mode back into a generic neural gain without an explicit grounding rule.</td>
+</tr>
+<tr>
+<td><strong>Model-conditioned oxygen-metabolism route</strong><br>qBOLD / OEF / CMRO2 family</td>
+<td>A named macro metabolic quantity under a declared model, which can agree with or diverge from BOLD amplitude.</td>
+<td>Model-free neural state, cell-specific energetic allocation, and direct controller identity.</td>
+<td>Read as a <strong>model-conditioned macro metabolic route</strong>, not as the default truth layer for all hemodynamic papers.</td>
+</tr>
+</tbody>
+</table>
 
 <h3 id="neuromodulatory-proxy-ladder">6. Neuromodulatory routes form a ladder, not one stack</h3>
 <p>
@@ -921,8 +980,10 @@ This site now treats <strong>proxy-rich human evidence</strong> as a real advanc
 <li>Wu, S., Tyler, L. K., Henson, R. N. A., Rowe, J. B., Cam-CAN, &amp; Tsvetanov, K. A. (2023). Cerebral blood flow predicts multiple demand network activity and fluid intelligence across the adult lifespan. <em>Neurobiology of Aging</em>, 121, 1-14. <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">doi:10.1016/j.neurobiolaging.2022.09.006</a></li>
 <li>Özbay, P. S., Chang, C., Picchioni, D., et al. (2019). Sympathetic activity contributes to the fMRI signal. <em>Communications Biology</em>, 2, 421. <a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">doi:10.1038/s42003-019-0659-0</a></li>
 <li>Yucel, M. A. Y., Selb, J., Aasted, C. M. A., Petkov, M. P., Becerra, L., Borsook, D., &amp; Boas, D. A. (2015). Short separation regression improves statistical significance and better localizes the hemodynamic response obtained by near-infrared spectroscopy for tasks with differing autonomic responses. <em>Neurophotonics</em>, 2(3), 035005. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">doi:10.1117/1.NPh.2.3.035005</a></li>
+<li>An, J., Goyal, P., Luft, A. R., &amp; Schönhammer, J. G. (2025). Functional near-infrared spectroscopy short-channel regression improves cortical activation estimates of working memory load. <em>Neurophotonics</em>, 12(3), 035009. <a href="https://doi.org/10.1117/1.NPh.12.3.035009" target="_blank">doi:10.1117/1.NPh.12.3.035009</a></li>
 <li>Bolt, T., Wang, S., Nomi, J. S., et al. (2025). Autonomic physiological coupling of the global fMRI signal. <em>Nature Neuroscience</em>, 28, 1327-1335. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">doi:10.1038/s41593-025-01945-y</a></li>
 <li>Epp, S. M., Castrillon, G., Yuan, B., Andrews-Hanna, J., Preibisch, C., &amp; Riedl, V. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
+<li>Jaroszynski, K. M., Lee, H., Langham, M. C., &amp; Wehrli, F. W. (2025). Comparison of brain oxygen metabolic parameters between constrained qBOLD and whole-brain oximetric methods at baseline and in response to a physiologic stimulus. <em>NMR in Biomedicine</em>, 38(9), e70120. <a href="https://doi.org/10.1002/nbm.70120" target="_blank">doi:10.1002/nbm.70120</a></li>
 <li>Reimer, J., McGinley, M. J., Liu, Y., et al. (2016). Pupil fluctuations track rapid changes in adrenergic and cholinergic activity in cortex. <em>Nature Communications</em>, 7, 13289. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">doi:10.1038/ncomms13289</a></li>
 <li>Lohani, S., Moberly, A. H., Benisty, H., et al. (2022). Spatiotemporally heterogeneous coordination of cholinergic and neocortical activity. <em>Nature Neuroscience</em>, 25(12), 1706-1713. <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">doi:10.1038/s41593-022-01202-6</a></li>
 <li>Hansen, J. Y., Shafiei, G., Markello, R. D., et al. (2022). Mapping neurotransmitter systems to the structural and functional organization of the human neocortex. <em>Nature Neuroscience</em>, 25(11), 1569-1581. <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">doi:10.1038/s41593-022-01186-3</a></li>
