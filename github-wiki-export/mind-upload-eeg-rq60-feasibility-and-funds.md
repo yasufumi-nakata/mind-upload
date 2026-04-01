@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-04-01 / Role: RQ-by-RQ Deep Dive
+- Updated: 2026-04-02 / Role: RQ-by-RQ Deep Dive
 
 ---
 
@@ -14,7 +14,7 @@
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-04-01 / 位置づけ: RQ-by-RQ Deep Dive
+- 更新日: 2026-04-02 / 位置づけ: RQ-by-RQ Deep Dive
 
 ## このページの役割
 このページは research_harvest_50 の60 RQを対象に、EEG-DATAで解ける範囲をA/B/Cで判定し、各RQごとの検証設計・応募テーマ・使うデータセットIDをまとめた実務版です。
@@ -47,6 +47,17 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `A`: 17件
 - `B`: 25件
 - `C`: 18件
+
+## Latest post-pull revalidation after 04:09 JST on April 2, 2026
+
+This run still does not change the current public batch or the `A/B/C` reading. An actual-pull reread after `mind-upload@92d1547bfeb9`, `EEG-DATA@2e3799a174d9`, and `auto-research-funds@f5f55bcbf724` still leaves the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
+
+- The newest pulled deltas still deepen support rather than replace the current route: `mind-upload` splits the beginner molecular-maintenance family outside the current six, `EEG-DATA` now reports `merged_unique=30877`, `high_confidence=28840`, and `access_counts_high.immediate=24492`, and `auto-research-funds` carries forward the large April 2 funding refresh without displacing the practical shortlist.
+- Recounting `rq_deepening_backlog_2026-03-01_enriched.csv` still returns `60` rows, so this run still keeps the `one-RQ-at-a-time` reading rather than flattening the map.
+- The route-safe access reading also stays deliberately narrow: `D10` remains the only clear public-open primary anchor, while `D03 / D02 / D01` still stay gated-support anchors in public wording.
+- Browser-level live checks with a browser user agent still returned `200` for `issue.html`, `wiki/mind-upload-current-public-six-rq-brief.html`, `wiki/mind-upload-rq-solvability-bridge.html`, and `wiki/u8-1-closed-loop-delay-tolerance-route.html`; the current `Last-Modified` header is `Wed, 01 Apr 2026 18:24:31 GMT` on those public surfaces.
+- Official-window spot checks keep the same practical bridge: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Nakatani Foundation research grant = closed / next-cycle watch`, `Secom General Research Grant = closed`, and `Kashinome Scholarship = support-only / repo-side current card keeps 2026-04-09`.
+- A fresh read-only Todoist `api/v1/sync(items, projects)` full-item audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
 
 ## Latest post-pull revalidation after 17:06 JST on April 1, 2026
 

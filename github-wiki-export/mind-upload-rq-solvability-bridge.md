@@ -35,6 +35,16 @@ This page answers one narrow question: for the rows that are actually worth deep
 
 It does **not** try to re-scan all `60RQ` items at once. The working style on this site is now `deepen one row at a time`, not `summarize everything at the same depth`.
 
+## What still stays fixed after the 03:08 JST actual-pull reread on April 2, 2026
+
+- An actual-pull recheck at `2026-04-02 03:08 JST` after `mind-upload@d391dbede29e`, `EEG-DATA@f9df9ba85a6`, and `auto-research-funds@95f804055809` still leaves both the current public six and the next-watch queue unchanged.
+- The newest pulled deltas still deepen support rather than the present bridge: `mind-upload` splits ECM / PNN literature routes outside the current six, `EEG-DATA` adds two immediate-access deep-dive candidates (`10.48804/NV4RGL` and `10.7281/T1/B660D2`) without replacing the current `D10 / D03 / D02 / D01` family or the next-watch `D11 / D08 / D05 / D20` family, and `auto-research-funds` adds Gakusho / NII funding merges plus a README-stat refresh without changing the practical shortlist.
+- Route-safe access wording also stays unchanged: `D10` remains the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors.
+- Browser-level live checks before this source sync still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; the checked pages also returned `Last-Modified: Wed, 01 Apr 2026 17:27:08 GMT`, and the live route order still named the same six in the same order.
+- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, and `Secom General Research Grant` remains closed for the current cycle (`March 31, 2026 at 12:00 JST`).
+- A fresh read-only Todoist `api/v1/sync(items, projects)` full-item audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
+- This source sync only refreshes the route-hold wording on the public entry pages. It does not widen the current queue or claim surface.
+
 ## What still stays fixed after the 00:03 JST actual-pull reread on April 2, 2026
 
 - An actual-pull recheck at `2026-04-02 00:03 JST` after `mind-upload@cff3abab58e8`, `EEG-DATA@a885ef3f029d`, and `auto-research-funds@0f60872538dc` still leaves both the current public six and the next-watch queue unchanged.
