@@ -17,7 +17,7 @@ reading_time: "25-40分"
 >
 > このページは GitHub Wiki 用に生成した学習ページです。公開ポータルは [mind-upload.com](https://mind-upload.com) 側で管理しています。
 
-- 更新日: 2026-03-31 / 位置づけ: RQ-by-RQ Deep Dive
+- 更新日: 2026-04-01 / 位置づけ: RQ-by-RQ Deep Dive
 
 ## このページの役割
 このページは research_harvest_50 の60 RQを対象に、EEG-DATAで解ける範囲をA/B/Cで判定し、各RQごとの検証設計・応募テーマ・使うデータセットIDをまとめた実務版です。
