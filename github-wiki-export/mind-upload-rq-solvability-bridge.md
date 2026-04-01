@@ -35,6 +35,15 @@ This page answers one narrow question: for the rows that are actually worth deep
 
 It does **not** try to re-scan all `60RQ` items at once. The working style on this site is now `deepen one row at a time`, not `summarize everything at the same depth`.
 
+## What still stays fixed after the 18:05 JST actual-pull reread on April 1, 2026
+
+- An actual-pull recheck at `2026-04-01 18:05 JST` after `mind-upload@9984d0b`, `EEG-DATA@5fc1df00f07`, and `auto-research-funds@d7092c8e9` still leaves both the current public six and the next-watch queue unchanged.
+- The newest pulled deltas still deepen support rather than the present bridge: `mind-upload` deepens wearable `OPM / MEG` route synchronization and measurement-stack clarification outside the current six, `EEG-DATA` adds a continuous-pursuit EEG BCI deep dive and now reports `merged_unique=30873`, `high_confidence=28836`, and `access_counts_high.immediate=24486`, its experiment-metadata report still covers `18,312 / 28,832` rows with at least one experiment-facing field (`63.51%` coverage), and `auto-research-funds` keeps the same practical shortlist after the recent carry-forward scholarship refresh.
+- Route-safe access wording also stays unchanged: the refreshed local `EEG-DATA` catalog keeps widening, but the live-access read remains stricter, so `D10` remains the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors.
+- Browser-level live checks with a browser user agent still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; the current `Last-Modified` header is `Wed, 01 Apr 2026 08:22:51 GMT` on those public surfaces, and the live `issue.html` paragraph still names the same six in the same order before this run's new addendum.
+- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, and `Secom General Research Grant` remains closed for the current cycle (`March 31, 2026 at 12:00 JST`).
+- A fresh read-only Todoist `api/v1/sync(items)` full-item audit still showed enough route coverage (`items=203`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
+
 ## What still stays fixed after the 17:06 JST actual-pull reread on April 1, 2026
 
 - An actual-pull recheck at `2026-04-01 17:06 JST` after `mind-upload@c5a0550`, `EEG-DATA@82893f6ca6e`, and `auto-research-funds@ec6f7d068` still leaves both the current public six and the next-watch queue unchanged.

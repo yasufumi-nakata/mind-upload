@@ -9,7 +9,7 @@ last_updated: "2026-04-01"
 note: "Technical / natural science only"
 audience: "Readers who want a stricter technical reading of current human in vivo advances and why they still stop below state-complete language"
 reading_time: "12-18 minutes"
-page_intro: "This page explains how to read current human proxy routes without collapsing them into one generic progress bar. The question is not only whether a route is impressive, but what exact quantity, target, carrier, or transport regime it constrains, on what unit and timescale, in which cohort / physiological regime, with what model burden, with what repeatability / transfer window, and what hidden-state families still remain unresolved."
+page_intro: "This page explains how to read current human proxy routes without collapsing them into one generic progress bar. The question is not only whether a route is impressive, but what exact quantity, target, carrier, or transport regime it constrains, what evidence role it is actually allowed to play, on what unit and timescale, in which cohort / physiological regime, with what model burden, with what repeatability / transfer window, and what hidden-state families still remain unresolved."
 accuracy_note: "The ceilings on this page are operational inferences drawn from primary literature. They are not the claims made by the original papers themselves."
 page_highlights:
   - "Human proxy routes differ not only in strength, but in quantity / target / transport type: structural scaffold, density proxy, similarity scaffold, high-resolution metabolite-distribution route, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, 31P functional NAD-dynamics, deuterium metabolite-mapping / absolute-quantification route, deuterium kinetic-rate map, quantity-defined myelin route, BBB water-exchange route, tracer-specific BBB transport route, astrocyte PET target / route-role split, mobility map, and model-based efflux route are different objects."
@@ -24,8 +24,9 @@ page_highlights:
   - "Same-session multimodal acquisition reduces one mismatch, but it does not erase common physiological factors or modality-specific residuals by default."
   - "Same-subject or same-brain wording solves specimen identity, not state continuity; sequential bridges still need elapsed-time, regime-continuity, and deformation disclosure."
   - "Proxy class, operational maturity, and calibrator role are different axes: a route can be real and still calibrate only one bounded hidden-state family."
+  - "Evidence role is another separate axis: a normative atlas, cross-sectional contrast, same-subject baseline, within-subject change witness, and perturbation-response witness are not interchangeable proxy roles."
   - "Same-session acquisition does not erase effective-window mismatch: static similarity, scan-window averages, task-evoked local dynamics, minutes-long kinetics, and overnight perturbation routes still need explicit state-axis disclosure before they are read together."
-  - "On this site, a proxy bundle is promoted only after a Human Proxy Composition Card discloses proxy class, direct observable, same-subject relation, effective time window / state axis, physiological / perturbation regime compatibility, operational maturity, calibrator role, model burden, and residual latent-state ceiling."
+  - "On this site, a proxy bundle is promoted only after a Human Proxy Composition Card discloses proxy class, direct observable, evidence role, same-subject relation, effective time window / state axis, physiological / perturbation regime compatibility, operational maturity, calibrator role, model burden, and residual latent-state ceiling."
 known_points:
   - "Recent human-side advances reduce different uncertainty terms and are scientifically meaningful, but they are not one common measurement class."
   - "SV2A PET, 1H-MRSI similarity, high-resolution 1H-MRSI metabolite-distribution mapping, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, 31P functional NAD-dynamics routes, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, quantity-defined myelin MRI, BBB water-exchange MRI, tracer-specific BBB PET, astrocyte PET target / route-role split, and CSF / glymphatic routes all require route-specific interpretation."
@@ -34,6 +35,7 @@ known_points:
   - "Even when quantity type and model burden are logged, cross-row composition still requires age band, health/pathology regime, and transfer rationale."
   - "Even when same-subject relation is logged, composition still requires explicit effective time-window / state-axis disclosure and physiological / perturbation regime compatibility."
   - "Even when a family label such as `SV2A PET`, `astrocyte PET`, `myelin MRI`, or `clearance / immune support` is logged, composition still requires the family-internal comparison type to be named before the bundle role is interpreted."
+  - "Even after family-internal typing, composition still requires the evidence role of each row to be named explicitly, because an atlas, a cross-sectional contrast, a baseline anchor, a change witness, and a perturbation-response witness are not the same bundle job."
   - "Even when proxy class, maturity, and calibrator role are logged, composition still needs route-local repeatability, method-family non-equivalence, cross-centre transfer, complete-case disclosure, and overlap / missingness disclosure."
   - "Overall bundle gain can coexist with higher pairwise disagreement in clinically difficult subgroups, so discordance topology and its resolution policy have to be disclosed rather than left implicit."
   - "Simultaneous multimodal acquisition can reveal both common and divergent structure across modalities."
@@ -524,13 +526,49 @@ One remaining shortcut is to list human proxy rows together as if they came from
 </div>
 
 <section class="section" id="three-axes">
-<h2 class="section-title">Proxy class, operational maturity, and calibrator role are different questions</h2>
+<h2 class="section-title">Proxy class, evidence role, operational maturity, and calibrator role are different questions</h2>
 <p>
-The remaining weakness after separating quantity type, spatial unit, and model burden is subtler. Readers can still think that once a route has a recognizable <strong>proxy class</strong> and looks technically real, the route must already calibrate a broad hidden-state family. The current primary literature does not support that shortcut. On this site, each human route is therefore read along <strong>three separate axes</strong>: <strong>what kind of proxy it is</strong>, <strong>how operationally mature it is</strong>, and <strong>what hidden-state family it safely calibrates</strong>.
+The remaining weakness after separating quantity type, spatial unit, and model burden is subtler. Readers can still think that once a route has a recognizable <strong>proxy class</strong> and looks technically real, the route must already calibrate a broad hidden-state family and already be usable for any bundle job. The current primary literature does not support that shortcut. On this site, each human route is therefore read along <strong>four separate axes</strong>: <strong>what kind of proxy it is</strong>, <strong>what evidence role it safely serves</strong>, <strong>how operationally mature it is</strong>, and <strong>what hidden-state family it safely calibrates</strong>.
 </p>
 <p>
-Those three axes are defined <strong>per route</strong>. When several routes are combined, this site adds a separate <strong>cohort / regime compatibility</strong> audit so that developmental stage, aging band, and pathology enrichment are not silently treated as interchangeable background.
+Those four axes are defined <strong>per route</strong>. When several routes are combined, this site adds a separate <strong>cohort / regime compatibility</strong> audit so that developmental stage, aging band, and pathology enrichment are not silently treated as interchangeable background.
 </p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Evidence role on this site</th>
+<th>What it can support</th>
+<th>What it cannot silently become</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Normative atlas / cohort prior</strong><br><a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a></td>
+<td>A healthy or reference distribution that anchors where a quantity typically sits across a cohort.</td>
+<td>A same-subject change tracker, perturbation-response witness, or generic current-state meter.</td>
+</tr>
+<tr>
+<td><strong>Cross-sectional contrast</strong><br><a href="https://doi.org/10.1002/alz.14327" target="_blank">Snellman et al. (2024)</a></td>
+<td>A bounded risk-, disease-, or group-difference statement under a named cohort design.</td>
+<td>A same-subject baseline anchor or within-subject intervention tracker.</td>
+</tr>
+<tr>
+<td><strong>Same-subject baseline readout</strong><br><a href="https://doi.org/10.1177/0271678X17724947" target="_blank">Finnema et al. (2018)</a>; <a href="https://doi.org/10.1186/s41747-024-00426-4" target="_blank">Bøgh et al. (2024)</a></td>
+<td>A route-local baseline anchor whose repeatability is characterized at the stated operating point.</td>
+<td>A validated change witness outside that route and window, or a portable cross-centre bundle anchor without separate transfer evidence.</td>
+</tr>
+<tr>
+<td><strong>Within-subject change witness</strong><br><a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a>; <a href="https://doi.org/10.1177/0271678X261415784" target="_blank">Kaiser et al. (2026)</a></td>
+<td>A bounded same-subject change statement under a named task, activation, or localized dynamic design.</td>
+<td>A generic current-state meter, chronic tracker, or broad maintenance-state readout.</td>
+</tr>
+<tr>
+<td><strong>Perturbation-response witness</strong><br><a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a>; <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a></td>
+<td>A bounded response or response-null statement under a named intervention, challenge, or sleep-manipulation regime.</td>
+<td>A stable baseline atlas, a general state-complete meter, or a chronic same-subject tracker across unmatched regimes.</td>
+</tr>
+</tbody>
+</table>
 <table class="data-table">
 <thead>
 <tr>
