@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-04-01 / Role: Current RQ-to-EEG-and-funding bridge
+- Updated: 2026-04-02 / Role: Current RQ-to-EEG-and-funding bridge
 
 ## Role Of This Page
 This page fixes the current deepening queue and the next-watch queue at the level of one research question, one EEG-DATA anchor family, one honest funding theme, and one explicit external-dependency boundary.
@@ -34,6 +34,15 @@ This is not a solved-claim update. It records only bounded artifacts that can ho
 This page answers one narrow question: for the rows that are actually worth deepening now, what can `EEG-DATA` honestly close, what still needs outside support, and what funding theme still fits without overstating the claim.
 
 It does **not** try to re-scan all `60RQ` items at once. The working style on this site is now `deepen one row at a time`, not `summarize everything at the same depth`.
+
+## What still stays fixed after the 00:03 JST actual-pull reread on April 2, 2026
+
+- An actual-pull recheck at `2026-04-02 00:03 JST` after `mind-upload@cff3abab58e8`, `EEG-DATA@a885ef3f029d`, and `auto-research-funds@0f60872538dc` still leaves both the current public six and the next-watch queue unchanged.
+- The newest pulled deltas still deepen support rather than the present bridge: `mind-upload` tightens deuterium operating-point wording outside the current six, `EEG-DATA` adds the `DANDI 001187` deep dive and now reports `merged_unique=30875`, `high_confidence=28838`, and `access_counts_high.immediate=24492`, and `auto-research-funds` carries forward the `Isono / Okabe` scholarship refresh without changing the practical shortlist.
+- Route-safe access wording also stays unchanged: `D10` remains the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors.
+- Browser-level live checks before this source sync still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; the checked pages also returned `Last-Modified: Wed, 01 Apr 2026 14:17:54 GMT`, and the live route order still named the same six in the same order.
+- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, and `Secom General Research Grant` remains closed for the current cycle (`March 31, 2026 at 12:00 JST`).
+- A fresh read-only Todoist `api/v1/sync(items, projects)` full-item audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
 
 ## What still stays fixed after the 22:05 JST actual-pull reread on April 1, 2026
 
