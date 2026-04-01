@@ -55,6 +55,15 @@ recommended_pages:
 - The six current public rows below are now synchronized to `Dxx + DOI + dataset name + access class`, so the playbook no longer needs numeric search IDs for `U13-2/U13-5/U0-2/U0-3/U14-4/U14-2`.
 - `tech_roadmap.md` also contains `U2/U5/U6/U9`, but those roadmap families are not yet translated into this playbook's current `RQ60` practical layer.
 
+## Latest live-source addendum (2026-04-01 12:06 JST)
+
+- A second actual-pull reread after `mind-upload@9f4bc8e760b1`, `EEG-DATA@1324f9e1ae2b`, and `auto-research-funds@6548b1650535` still leaves this playbook's practical reading unchanged.
+- The current route still stays fixed on `D10 / D03 / D02 / D01` for the public six and `U7-1 -> U1-2 -> U4-2 -> U8-1` for the outside-current-six queue; the newest `EEG-DATA` head now reports `merged_unique=30867`, `high_confidence=28830`, and `access_counts_high.immediate=24480`, but that remains a metadata-deepening carry-forward rather than an anchor replacement.
+- Route-safe access wording still stays narrow: `D10` remains the only clear public-open primary anchor, while `D03 / D02 / D01` remain gated-support planning anchors because the live-access read is still narrower than the catalog-side identifier surface.
+- Browser-level live checks with a browser user agent still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; the current `Last-Modified` header is `Wed, 01 Apr 2026 02:26:28 GMT` on those public surfaces, and the live `issue.html` paragraph still names the same six in the same order.
+- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, and `Secom General Research Grant` remains closed for the current cycle.
+- No new Todoist route was introduced in this reread. The latest canonical funding-shortlist audit still already covers the current practical lanes, and the official recheck did not surface a new current-cycle funder.
+
 ## Latest live-source addendum (2026-04-01 11:06 JST)
 
 - A latest actual-pull reread after `mind-upload@aa21ab9855c1`, `EEG-DATA@cccd137a3468`, and `auto-research-funds@3a691196cb9f` still leaves this playbook's practical reading unchanged.

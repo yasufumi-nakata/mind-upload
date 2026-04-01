@@ -32,6 +32,15 @@ This page keeps the current public six-question batch readable at the level of `
 
 It does **not** announce solved claims. It only states what the current public route is narrow enough to support after a post-pull review of `mind-upload`, `EEG-DATA`, `auto-research-funds`, the live public page, the current official funding windows, and a read-only Todoist recheck.
 
+## What still stays fixed after the 12:06 JST actual-pull reread on April 1, 2026
+
+- A second actual-pull recheck at `2026-04-01 12:06 JST` after `mind-upload@9f4bc8e760b1`, `EEG-DATA@1324f9e1ae2b`, and `auto-research-funds@6548b1650535` still leaves the public batch and the solve-first order unchanged.
+- The newest pulled deltas still deepen route support rather than the current claim surface: `mind-upload` already keeps the route-hold wording public-safe, `EEG-DATA` now reports `merged_unique=30867`, `high_confidence=28830`, and `access_counts_high.immediate=24480`, and `auto-research-funds` refreshes funding reread documentation without changing the practical shortlist.
+- The route-safe access reading still stays narrow: `D10` remains the only clear public-open primary anchor, while `D03 / D02 / D01` still stay gated-support anchors because the live-access read remains stricter than the catalog label.
+- Browser-level live checks with a browser user agent still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; the current `Last-Modified` header is `Wed, 01 Apr 2026 02:26:28 GMT` on those public surfaces, and the live `issue.html` paragraph still names the same six in the same order.
+- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, and `Secom General Research Grant` remains closed for the current cycle.
+- No new Todoist route was introduced in this reread. The latest canonical funding-shortlist audit still already covers the current practical lanes, and the official recheck did not surface a new current-cycle funder.
+
 ## What still stays fixed after the 11:06 JST actual-pull reread on April 1, 2026
 
 - A latest actual-pull recheck at `2026-04-01 11:06 JST` after `mind-upload@aa21ab9855c1`, `EEG-DATA@cccd137a3468`, and `auto-research-funds@3a691196cb9f` still leaves the public batch and the solve-first order unchanged.

@@ -19,6 +19,17 @@ reading_time: "55-80分"
 - 更新日: 2026-04-01
 - 出典: `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`（60行を再構成）
 
+## 2026-04-01 12:06 JST latest post-pull route-hold note
+
+This run still does not change the current public six-question batch. The latest pulled deltas were reread before writing this note: `mind-upload@9f4bc8e760b1`, `EEG-DATA@1324f9e1ae2b`, and `auto-research-funds@6548b1650535` still leave the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
+
+- The newest `EEG-DATA` additions still deepen metadata rather than replace the current route family: the refreshed summary now reports `merged_unique=30867`, `high_confidence=28830`, and `access_counts_high.immediate=24480`.
+- Recounting the `### Ux-y` headings on this page still returns `60`, so this run keeps the one-row-at-a-time dossier structure intact.
+- The public six still stay `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
+- The solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
+- Browser-level live checks with a browser user agent still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; the current `Last-Modified` header is `Wed, 01 Apr 2026 02:26:28 GMT` on those public surfaces.
+- The funding bridge still stays narrow: `Kura Fund`, `Nakatani Foundation graduate scholarship`, and `Kashinome Scholarship` remain the active near-term lanes, `Secom General Research Grant` remains closed for the current cycle, and the latest canonical funding-shortlist audit still did not justify a new Todoist route.
+
 ## 2026-04-01 11:06 JST latest post-pull route-hold note
 
 This run still does not change the current public six-question batch. The latest pulled deltas were reread before writing this note: `mind-upload@aa21ab9855c1`, `EEG-DATA@cccd137a3468`, and `auto-research-funds@3a691196cb9f` still leave the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.

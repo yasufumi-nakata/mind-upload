@@ -109,6 +109,12 @@ A post-pull reread at <code>2026-04-01 11:06 JST</code> after <code>mind-upload@
 </p>
 </div>
 <div class="note-box">
+<strong>Latest route hold on April 1, 2026 (12:06 JST)</strong>
+<p>
+A second no-op actual-pull reread at <code>2026-04-01 12:06 JST</code> after <code>mind-upload@9f4bc8e760b1</code>, <code>EEG-DATA@1324f9e1ae2b</code>, and <code>auto-research-funds@6548b1650535</code> still keeps the same public six and the same execution order. The newest <code>EEG-DATA</code> head now reports <code>merged_unique=30867</code>, <code>high_confidence=28830</code>, and <code>access_counts_high.immediate=24480</code>, but this is still metadata deepening rather than an anchor replacement, so the current public family remains <code>D10 / D03 / D02 / D01</code> and the next-watch order remains <code>U7-1 / U1-2 / U4-2 / U8-1</code>. A live browser-level recheck still returned <code>200</code> for <code>issue.html</code>, the public-six brief, the solvability bridge, and the <code>U8-1</code> route page, with <code>Last-Modified: Wed, 01 Apr 2026 02:26:28 GMT</code> on those public surfaces. The official funding pages still keep the same narrow bridge open or fixed in watch status: <code>Kura Fund = 2026-02-02 - 2026-04-17 17:00</code>, <code>Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00</code>, <code>Kashinome Scholarship = 2026-01-14 - 2026-04-09</code>, and <code>Secom General Research Grant</code> remains closed for the current cycle. This reread therefore adds no solved claim and no batch switch. It only keeps the current route public-safe and current.
+</p>
+</div>
+<div class="note-box">
 <strong>When you understand but are unsure whether to start working on it</strong>
 <p>
 If you want a step-by-step guide to the difference between understanding the topic, checking the source and conditions, and being ready to make a change, see <a href="wiki/understanding-vs-action-readiness.html">Wiki: The difference between understanding and being ready to act</a>.
