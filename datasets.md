@@ -5,7 +5,7 @@ description: "From the selection of public data (mainly EEG) to the minimum loop
 article_type: Resource
 subtitle: "Connect ``what to use'' and ``how to reproduce'' in the shortest route without separating them."
 author: Mind Uploading Research Project
-last_updated: "2026-03-31"
+last_updated: "2026-04-01"
 note: "Curated List + L0 Practice"
 audience: "People who are wondering which public data to start with, people who are looking for an L0 practice board"
 reading_time: "12-20 minutes"
@@ -15,6 +15,7 @@ page_highlights:
   - "We look at the shared infrastructure first, then the starter datasets."
   - "Starter data is a practice board for L0-L1, not the ground truth of EEG source imaging."
   - "The page now also fixes a component-addition / ablation ladder for maintenance-state routes, so astrocyte, neurovascular / BBB, and clearance augmentations are compared against a named neuron-first baseline instead of being piled into one multimodal boost."
+  - "A same-subject support-state bundle is no longer treated as self-interpreting; route class, effective window, quantity bridge, common-driver audit, missingness policy, disagreement topology, repeatability, transfer window, and abstention are now fixed as practical fields."
   - "Even inside direct-validation data, stimulation ground truth, simultaneous invasive recording, and postsurgical outcome are different evidence classes."
   - "A fair inverse-problem benchmark also has to separate focal-centre versus source-extent targets, inverse family, uncertainty object, montage / coverage policy, and geometry / conductivity sensitivity rather than naming only a winning method."
   - "High density is not the only meaningful route: targeted-density and DeepSIF-like low-density ESI can work in bounded regimes, but the gain is still solver-, geometry-, and source-regime-conditioned."
@@ -34,6 +35,7 @@ known_points:
   - "Public EEG data is useful for L0 recall analysis and L1 baseline practice."
   - "When selecting data for the first time, you will move forward if you prioritize ease of retesting over difficulty."
   - "Starter EEG datasets are still neuron-first baselines; maintenance-state claims need paired support-state data or aligned proxy logs, one-family-at-a-time augmentation, and strongest-single-row versus bundle comparison."
+  - "A same-subject support-state bundle can still mix common drivers, smaller complete-case slices, and opposite-sign rows, so family-split augmentation is not read strongly on this site without its own augmentation card."
   - "Cue-locked events, expert interval annotations, sleep hypnograms, and physician report-derived labels have different meanings even though they are the same 'public EEG data'."
   - "Even if the accuracy is the same, the strength of the argument that can be read will change depending on which generalization condition the score was obtained under."
   - "The same benchmark name can still hide different predicted objects, independent units, grouped hold-out units, adaptation regimes, and inference budgets."
@@ -289,6 +291,75 @@ This page had one practical weakness: it explained how to build a reproducible n
 EEG Motor Movement/Imagery, CHB-MIT, Sleep-EDF, and TUH help you fix the neuron-first baseline, split unit, QC discipline, and leakage checks. By themselves they do not close astrocyte-state, pericyte / BBB support, clearance transport, or other maintenance-state families. Any public maintenance-state claim on this site therefore needs paired support-state data, aligned proxy logs, or a named perturbation route, and it must be compared against the strongest single added family rather than only against the all-in bundle.
 </p>
 </div>
+
+<div class="note-box">
+<strong>A same-subject support-state bundle still needs its own augmentation card</strong>
+<p>
+The page still had one practical weakness after the family split: it could leave the impression that once several support-state rows are collected in the same subject, the bundle itself is already close to one aligned biological variable. The current primary literature does not support that shortcut. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> showed that spontaneous multimodal measures contain both <strong>common</strong> and <strong>divergent</strong> cortical structure. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed that simultaneous EEG-PET-MRI can display tightly coupled temporal evolution while still preserving <strong>spatially distinct hemodynamic and metabolic patterns</strong>. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> showed that a major low-frequency global fMRI pattern is substantially coupled to <strong>autonomic physiology</strong>, while <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that about <strong>40%</strong> of gray-matter voxels with significant task BOLD changes exhibited <strong>opposing oxygen-metabolism changes</strong>. Bundle-level gain is real but still conditional: <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">Rohaut et al. (2024)</a> showed that adding markers can reduce prognostic uncertainty, <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a> showed that direct same-sample comparison shrank to <strong>48 patients</strong> with all EEG and fMRI features, and <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> showed higher <strong>inter-modality disagreement</strong> in minimally conscious or improving patients even as performance improved with more modalities. Row-local stability is separate again: <a href="https://doi.org/10.1186/s41747-024-00426-4" target="_blank">B&oslash;gh et al. (2024)</a> fixed a named repeatability window for a 3 T deuterium route, and <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021)</a> showed reproducible EEG-fMRI connectome relations only under explicitly harmonized simultaneous acquisition. Therefore, this page now requires a <strong>practical support-state augmentation card</strong> before a same-subject bundle is read as more than row addition.
+</p>
+</div>
+
+<section class="section" id="support-state-augmentation-card">
+<h2 class="section-title">A practical support-state augmentation card for dataset bundles</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>Field to log before reading a same-subject bundle strongly</th>
+<th>Why this field is necessary</th>
+<th>What overread it blocks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Route class and bridge type</strong></td>
+<td>State whether a row is a same-subject human proxy, a same-subject perturbation, a sequential bridge, or a mixed-species causal support row.</td>
+<td>Do not read rodent causal support and bounded human proxy rows as interchangeable evidence just because they concern the same family label.</td>
+</tr>
+<tr>
+<td><strong>Effective time window and physiological regime</strong></td>
+<td>Log whether rows target the same trial epoch, sleep stage, arousal window, pharmacological state, or multiday stabilization regime.</td>
+<td>Do not read co-acquisition or same-session wording as if one support-state sample had been aligned automatically.</td>
+</tr>
+<tr>
+<td><strong>Direct observable and quantity type</strong></td>
+<td>Name whether the added row is density, transport, exchange, mobility, flux, metabolism, or an indirect classifier / score.</td>
+<td>Do not collapse tracer transport, glucose uptake, BOLD fluctuation, and bounded biomarker efflux into one solved maintenance variable.</td>
+</tr>
+<tr>
+<td><strong>Shared-driver / quantity-bridge audit</strong></td>
+<td>Disclose vascular, respiratory, autonomic, motion, drug, and time-of-day covariates, and say whether the bundle established a shared trajectory, a common driver, or a true quantity bridge.</td>
+<td>Do not read correlated rows as one biological quantity when the coupling may be driven by arousal or another shared nuisance source.</td>
+</tr>
+<tr>
+<td><strong>Availability slice and missing-modality policy</strong></td>
+<td>Report the exact complete-case subset, any imputation or substitution rule, and whether the comparison is same-sample or maximum-available-data.</td>
+<td>Do not hide that the bundle result may depend on a much smaller or specially filtered subgroup than the headline cohort.</td>
+</tr>
+<tr>
+<td><strong>Strongest single row and disagreement topology</strong></td>
+<td>Compare the best single added family against the full bundle and state where modalities agree, diverge, or change sign.</td>
+<td>Do not promote the full bundle if it only repackages the strongest single row or if disagreement is concentrated in the hardest regime.</td>
+</tr>
+<tr>
+<td><strong>Row-local repeatability and transfer window</strong></td>
+<td>Name the hardware, sequence, preprocessing, centre, and acquisition window under which each added row is repeatable or portable.</td>
+<td>Do not treat one named proxy route as field-ready or cross-centre stable just because it worked once in one harmonized setup.</td>
+</tr>
+<tr>
+<td><strong>Abstention and stopping claim</strong></td>
+<td>State what remains latent after the gain, such as controller identity, cell specificity, or out-of-regime failure.</td>
+<td>Do not turn bundle improvement into a minimum-biological-configuration claim or a U3 closure claim by default.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>What this card changes in practice</strong>
+<p>
+On this page, a support-state addition now stays at <strong>family-split augmentation evidence</strong> unless the dataset card logs the fields above and then compares <strong>neuron-first baseline</strong>, <strong>strongest single added row</strong>, and <strong>full bundle</strong> under the same split, availability slice, and abstention rule. If the bundle mixes living-human proxy classes, use the <a href="verification.html#human-proxy-composition-card">Verification: Human Proxy Composition Card</a> alongside the <a href="verification.html#fusion-card">Verification: Fusion Card</a> instead of treating co-acquisition as sufficient.
+</p>
+</div>
+</section>
 
 <section class="section" id="platforms">
 <h2 class="section-title">1) Shared infrastructure to establish first</h2>
@@ -1143,6 +1214,15 @@ The shortest route to that end is to approach BIDS/EEG-BIDS.
 <li><a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025), Region-specific drivers of CSF mobility measured with MRI in humans</a></li>
 <li><a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025), Quantitative PET imaging and modeling of molecular blood-brain barrier permeability</a></li>
 <li><a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026), The glymphatic system clears amyloid beta and tau from brain to plasma in humans</a></li>
+<li><a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024), Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization</a></li>
+<li><a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025), Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep</a></li>
+<li><a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025), Autonomic physiological coupling of the global fMRI signal</a></li>
+<li><a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025), BOLD signal changes can oppose oxygen metabolism across the human cortex</a></li>
+<li><a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">Rohaut et al. (2024), Multimodal assessment improves neuroprognosis performance in clinically unresponsive critical-care patients with brain injury</a></li>
+<li><a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023), Multimodal prediction of residual consciousness in the intensive care unit: the CONNECT-ME study</a></li>
+<li><a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026), Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness</a></li>
+<li><a href="https://doi.org/10.1186/s41747-024-00426-4" target="_blank">B&oslash;gh et al. (2024), Repeatability of deuterium metabolic imaging in healthy volunteers at 3 T</a></li>
+<li><a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021), The relationship between EEG and fMRI connectomes is reproducible across simultaneous EEG-fMRI studies from 1.5 T to 7T</a></li>
 </ul>
 </section>
 
