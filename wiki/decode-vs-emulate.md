@@ -5,7 +5,7 @@ description: "Explains the difference between decoding, which translates observa
 article_type: Wiki
 subtitle: "Output matching is only the entrance; intervention matching and closed-loop stability are another wall."
 author: Mind Uploading Research Project
-last_updated: "2026-03-30"
+last_updated: "2026-04-01"
 note: "Technical / natural science only"
 audience: "People who want to distinguish decode from emulate using only technical and natural-science evidence."
 reading_time: "10-15 minutes"
@@ -23,6 +23,7 @@ page_highlights:
   - "Littlejohn 2025 and Wairagkar 2025 are major advances in streaming and voice-synthesis neuroprostheses, but they are L2-L3 evidence for the communication subsystem, not whole-brain emulation."
   - "As Chen 2024 showed, offline gain mixed with non-causal decoders and post-onset auditory feedback should not be interpreted as real-time deployability."
   - "Same-session streaming success and chronic deployability are separate evidence classes, and they require separate logging of fixed decoder intervals, recalibration burden, and same-neuron audits."
+  - "Merk 2025 and Zhu 2026 show that therapeutic invasive decoding is a separate route: connectomics-informed across-patient symptom decoding and physiological-state guards are not one generic adaptive decoder."
   - "Connectome-constrained prediction is important, but as Beiran & Litwin-Kumar 2025 shows, parameter degeneracy and unmeasured conditions remain."
   - "Same-brain functional connectomics and digital-twin language are now split into sequential local scaffolds, stimulus-conditioned predictors, and dynamical-degeneracy audits rather than one solved local twin."
 known_points:
@@ -31,11 +32,13 @@ known_points:
   - "Non-invasive decoding is easy to overestimate unless language priors, candidate sets, and subject cooperation are separated."
   - "With speech decoding, if causal versus non-causal paths, look-ahead windows, and auditory-feedback contamination are not separated, offline scores are easy to misread as deployable loops."
   - "Tail latency, silence/abstention, and recalibration burden are separate axes from offline accuracy and are required logs for closed-loop claims."
+  - "Therapeutic invasive decoders also need their own split: connectomics-informed across-patient symptom decoding, controller family, and physiological-state guards are separate from communication throughput."
   - "In microelectrode systems, the same neuron across days is not an observed fact, but an estimate built from motion correction, sorting, and probabilistic matching."
 unknown_points:
   - "It is unclear how much intervention matching and state-variable completeness is required to count as sufficiently emulated."
   - "There is still no public benchmark for extrapolating from local-circuit successes to whole-brain emulation."
   - "It is unclear how much same-brain function and maintenance-state must be added to connectome-constrained models to constrain degeneracy sufficiently."
+  - "It remains unclear how far across-patient therapeutic decoding survives changes in implant coverage, symptom family, and everyday physiological context."
 wiki_links:
   - label: "Wiki: How to read claims and evidence"
     url: "/wiki/claims-and-evidence.html"
@@ -79,6 +82,13 @@ I am not going to deal with philosophy or legal systems here. From only the aspe
 <strong>2026-03 Points revised in literature audit</strong>
 <p>
 The weakness of the previous version is that while the principle difference between decode and emulate was correct, it did not reach the level of <strong>site rule</strong> to stop <strong>open-vocabulary non-invasive decode</strong>, <strong>streaming / voice-synthesis neuroprosthesis</strong>, and <strong>connectome-constrained prediction</strong>, which were promoted in the primary literature of 2025. This update promotes <strong>language prior</strong>, <strong>tail latency / silence / recalibration burden</strong>, <strong>fixed decoder interval</strong>, <strong>same-neuron tracking audit</strong>, and <strong>parameter degeneracy</strong> to mandatory audit items at the decode/emulate boundary.
+</p>
+</div>
+
+<div class="note-box">
+<strong>2026-04-01 correction: therapeutic invasive decoding is not the communication route</strong>
+<p>
+The previous page split non-invasive language decode, speech neuroprosthesis, and connectome-constrained prediction, but it still left one invasive route too implicit: <strong>connectomics-informed therapeutic decoding</strong>. <a href="https://doi.org/10.1038/s41551-025-01467-9" target="_blank">Merk et al. (2025)</a> showed across-patient movement decoding without patient individual training in <strong>56 implanted patients</strong> and <strong>1,480 ECoG channels</strong>, and extended the same platform to emotion and seizure-related use cases with connectomics-informed channel selection. That is an important step toward symptom-linked therapeutic control, but it is not the same as subject-free universal decoding or state-complete reconstruction. <a href="https://doi.org/10.1038/s41531-026-01273-3" target="_blank">Zhu et al. (2026)</a> then showed in <strong>18 Parkinson's disease</strong> and <strong>18 dystonia</strong> patients that eyes-closed physiology can shift basal-ganglia theta/alpha feedback signals enough that a fixed threshold risks treating benign state change as pathology. Therefore, this site now separates <strong>communication throughput</strong>, <strong>transfer-assisted initialization</strong>, <strong>connectomics-informed across-patient therapeutic decoding</strong>, <strong>physiological-state guard</strong>, and <strong>adaptive rescue</strong> rather than treating them as one invasive decode ladder.
 </p>
 </div>
 
@@ -235,6 +245,46 @@ When promoting invasive speech BCI to a higher level, we will not only consider 
 </div>
 </section>
 
+<section class="section" id="therapeutic-decoding-ceiling">
+<h2 class="section-title">2026-04-01 Addendum: therapeutic invasive decoding has a different ceiling</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>Wall</th>
+<th>What the primary literature now supports</th>
+<th>How to read this page</th>
+<th>Claims not raised yet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>across-patient network-prior ceiling</strong></td>
+<td><a href="https://doi.org/10.1038/s41551-025-01467-9" target="_blank">Merk et al. (2025)</a> used <strong>56 patients</strong> and <strong>1,480 ECoG channels</strong> across four cohorts to decode movement without patient individual training, and extended the platform to emotion and seizure-related use cases with connectomics-based channel selection.</td>
+<td>Read as <strong>connectomics-informed symptom-linked invasive decoding</strong> for therapeutic control or decoder initialization.</td>
+<td>Do not raise this to subject-free universal decoding, unrestricted internal-state readout, or WBE-level state completeness.</td>
+</tr>
+<tr>
+<td><strong>personalized-controller ceiling</strong></td>
+<td><a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">Oehrn et al. (2024)</a> identified stimulation-entrained gamma markers of high versus low dopaminergic states in four patients with Parkinson's disease and used those data-driven markers to drive adaptive DBS.</td>
+<td>Read as <strong>personalized biomarker / controller selection</strong> within one disorder and one implant/control regime.</td>
+<td>Do not treat one successful adaptive controller as a generic therapeutic decoder law across symptom families, implant targets, or daily contexts.</td>
+</tr>
+<tr>
+<td><strong>physiological-state guard ceiling</strong></td>
+<td><a href="https://doi.org/10.1038/s41531-026-01273-3" target="_blank">Zhu et al. (2026)</a> showed in <strong>18 Parkinson's disease</strong> and <strong>18 dystonia</strong> patients that eyes-closed physiology can shift basal-ganglia theta/alpha biomarkers enough that fixed thresholds risk mistaking benign state changes for pathology.</td>
+<td>Read adaptive control only after the paper discloses a <strong>state-recognition / contextual guard</strong>, not from one oscillatory threshold alone.</td>
+<td>Do not write one band-limited biomarker as a stable disease-state meter across vigilance or everyday physiological context.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>Why this extra split is necessary</strong>
+<p>
+The important progress here is real: therapeutic decoding may need less patient-specific training, and symptom-linked adaptive control is becoming more data-driven. But the object is still <strong>named symptom/state decoding under declared implant coverage, network prior, and controller policy</strong>. That is much narrower than universal invasive decode, and much narrower again than emulate.
+</p>
+</div>
+</section>
+
 <section class="section" id="speech-decode-scaffolds">
 <h2 class="section-title">2026-03-17 Addendum: 4 scaffolds that make it easy to expand speech decode</h2>
 <table class="data-table">
@@ -338,6 +388,11 @@ A common misinterpretation of current news and demonstrations is to interpret th
 <td>This is a locally closed loop demonstration that is even stronger than decode, but it targets the sensorimotor subsystem. Rather than whole-brain emulation, it is appropriate to read this as <strong>evidence close to L3 in local circuits</strong>. </td>
 </tr>
 <tr>
+<td><strong>Merk et al. (2025) / Zhu et al. (2026)</strong><br>connectomics-informed therapeutic decoding</td>
+<td>Across-patient invasive decoding without patient individual training was shown for movement, while physiological-state decoding was shown for adaptive-DBS feedback guards under named disease and implant regimes. </td>
+<td>This is strong progress in <strong>symptom- and state-conditioned therapeutic decoding</strong>, but it remains implant-target-, label-, and controller-conditioned. It does not show a universal invasive decoder, unrestricted internal-state readout, or emulation of causal brain dynamics. </td>
+</tr>
+<tr>
 <td><strong>MICrONS (2025) / Billeh et al. (2020) / Beiran &amp; Litwin-Kumar (2025)</strong><br>stimulus-conditioned digital twin / connectome-constrained model</td>
 <td>Sequential same-brain connectomics datasets, multiscale models, and connectome-constrained recurrent networks have advanced local conditional prediction under named tasks and recordings. </td>
 <td>This is an important foundation in a direction similar to emulate, but the scope remains local and regime-bounded. Furthermore, as MICrONS (2025), Beiran &amp; Litwin-Kumar (2025), and Prinz et al. (2004) show, output matching alone cannot be said to be faithful reproduction or the only solution because degeneracy remains, including unmeasured parameters, unrecorded neurons, and omitted state families. </td>
@@ -415,7 +470,7 @@ A common misinterpretation of current news and demonstrations is to interpret th
 <tr>
 <td><strong>G5: Is it stable with closed loop and long-term operation?</strong></td>
 <td>If the output changes the next input, offline accuracy no longer applies. Furthermore, within-session speed and long-term deployability are another issue. </td>
-<td>end-to-end latency at <code>P50/P95/P99</code>, tail latency, silence / abstention, dropout, <strong>fixed decoder interval</strong>, <code>time since last supervised calibration</code>, recalibration burden, and recovery time.</td>
+<td>end-to-end latency at <code>P50/P95/P99</code>, tail latency, silence / abstention, dropout, <strong>fixed decoder interval</strong>, <code>time since last supervised calibration</code>, recalibration burden, recovery time, and, for therapeutic decoding, the <strong>controller family</strong> plus any <strong>physiological-state guard</strong>.</td>
 </tr>
 <tr>
 <td><strong>G6: Are there enough state variables and have you audited degeneracy?</strong></td>
@@ -433,6 +488,7 @@ A common misinterpretation of current news and demonstrations is to interpret th
 <ul>
 <li>Conditions for writing <strong>decode:</strong>This is when the demonstration focuses on predicting meanings, stimuli, actions, and sentences from observed signals, and even if a neural contribution that exceeds <code>LM-only</code> or shuffle baseline is shown, intervention matching or causal real-time path is not shown. </li>
 <li><strong>Conditions written as L2 to L3 of communication subsystem: Even if a local loop is established such as speech BCI or tactile BCI, clearly state that the target is a limited subsystem, include causal decoder path, latency / silence / <strong>fixed decoder interval</strong> / recalibration burden, and if it is a microelectrode system, also include unit identity audit. </li>
+<li><strong>Conditions written as therapeutic invasive decoding:</strong>If the paper aims at symptom-linked adaptive stimulation or therapeutic state recognition, name the symptom/state label, implant target / coverage, whether the model works without patient individual training or only after warm-up, any connectomics / network prior, the controller family, and any physiological-state guard before raising the claim ceiling. </li>
 <li><strong>Conditions for writing local emulation:</strong>When a local circuit shows both a closed loop and a causal intervention, and what is replaced is specified in a limited manner. </li>
 <li><strong>Conditions for writing close to WBE:</strong>Only when six points are met: exceedance of prior, causal deployment guard, OOD/cross-day generalization, perturbation matching, closed-loop long-term stability, and integrity audit of state variables. </li>
 <li><strong>When only matching output:</strong> Use expressions such as avatar, behavioral clone, decoder, and language interface, not emulate. </li>
@@ -453,6 +509,9 @@ A common misinterpretation of current news and demonstrations is to interpret th
 <li>Littlejohn, K. T., Dabagia, M., Ladwig, A., et al. (2025). A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <em>Nature Neuroscience</em>, 28, 902–912. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
 <li>Wairagkar, M., Card, N. S., Singer-Clark, T., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <em>Nature</em>, 644, 145–152. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
 <li>Ye, Z., Ai, Q., Liu, Y., de Rijke, M., Zhang, M., Lioma, C., &amp; Ruotsalo, T. (2025). Generative language reconstruction from brain recordings. <em>Communications Biology</em>, 8, 346. <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">doi:10.1038/s42003-025-07731-7</a></li>
+<li>Merk, T., Li, N.-F., Butenko, K., et al. (2025). Invasive neurophysiology and whole brain connectomics for neural decoding in patients with brain implants. <em>Nature Biomedical Engineering</em>. <a href="https://doi.org/10.1038/s41551-025-01467-9" target="_blank">doi:10.1038/s41551-025-01467-9</a></li>
+<li>Oehrn, C. R., Roediger, J., Diehl, A., et al. (2024). Chronic adaptive deep brain stimulation versus conventional stimulation in Parkinson's disease: a blinded randomized feasibility trial. <em>Nature Medicine</em>, 30, 2613–2622. <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">doi:10.1038/s41591-024-03196-z</a></li>
+<li>Zhu, G.-Y., Merk, T., Butenko, K., et al. (2026). Decoding the impact of visual states on adaptive deep brain stimulation feedback signals in movement disorders. <em>npj Parkinson's Disease</em>, 12, 61. <a href="https://doi.org/10.1038/s41531-026-01273-3" target="_blank">doi:10.1038/s41531-026-01273-3</a></li>
 <li>Wilson, G. H., Stein, E. A., Kamdar, F., et al. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <em>Nature Biomedical Engineering</em>. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
 <li>Pun, T. K., Khoshnevis, M., Hosman, T., et al. (2024). Measuring instability in chronic human intracortical neural recordings towards stable, long-term brain-computer interfaces. <em>Communications Biology</em>, 7, 1363. <a href="https://doi.org/10.1038/s42003-024-06784-4" target="_blank">doi:10.1038/s42003-024-06784-4</a></li>
 <li>Steinmetz, N. A., Aydin, C., Lebedeva, A., et al. (2021). Neuropixels 2.0: A miniaturized high-density probe for stable, long-term brain recordings. <em>Science</em>, 372(6539), eabf4588. <a href="https://doi.org/10.1126/science.abf4588" target="_blank">doi:10.1126/science.abf4588</a></li>
