@@ -5,16 +5,17 @@ description: "We will organize based on primary literature how EEG, MEG, fMRI, i
 article_type: Wiki
 subtitle: "Rather than adding everything, it is designed to increase synchronization, geometry, and external validation."
 author: Mind Uploading Research Project
-last_updated: "2026-03-29"
-note: "Technical / natural science only (updated with the 2026-03-29 quantity-bridge addendum)"
+last_updated: "2026-04-01"
+note: "Technical / natural science only (updated with the 2026-04-01 effective-window addendum)"
 audience: "People who want to judge how to compensate for the limitations of EEG alone from only the technical and natural science aspects"
 reading_time: "12-18 minutes"
 page_intro: "This page is a wiki that organizes what really improves when combining EEG, MEG, fMRI, invasive recording, and MRI based on primary literature. Rather than focusing on philosophy or legal systems, we focus only on synchronization, coordinate alignment, forward models, external validation, state coverage, and bundle robustness."
 accuracy_note: "What I'm trying to show here is not that ``if you integrate everything, you can figure it out.'' It's about sorting out what can be said a little more strongly when certain conditions are met, and what can't be said yet."
 page_highlights:
-  - "Read multimodal integration with 10 audit gates."
+  - "Read multimodal integration with 11 audit gates."
   - "Compare the differences between EEG+fMRI, EEG+MEG, and EEG+invasive recordings with primary literature."
   - "Same-session multimodal acquisition is not treated as self-validating fusion; a Fusion Card is required before the claim ceiling rises above the strongest unimodal route."
+  - "Same-session acquisition does not erase temporal-kernel mismatch; event-locked EEG, hemodynamic response windows, and minute-scale PET routes still need an effective-window audit."
   - "Shared timestamps, shared cross-modal components, and the target biological variable are audited as separate objects rather than one shortcut."
   - "Shared-vs-specific decomposition and quantity bridge / physiology grounding are separate audits, so a coupled trajectory is not automatically one solved biological quantity."
   - "More modalities can improve bundle performance without making the bundle availability-agnostic; complete-case subset, missing-modality handling, and cross-centre transfer remain separate audits."
@@ -27,6 +28,7 @@ known_points:
   - "By combining multiple modalities, some aspects of time, space, and locality can be complemented."
   - "However, the amount of improvement is highly dependent on the shared clock, individual anatomy, electrode/sensor location, conductivity assumptions, and the presence or absence of an external reference."
   - "Simultaneous acquisition, atlas-informed interpretation, and externally calibrated fusion are different claim levels."
+  - "Same-session acquisition can still mix event-locked electrophysiology, hemodynamic response windows, and scan-window or kinetic metabolic measures, so synchronized clocks do not yet define one temporal object."
   - "A shared low-frequency or global multimodal factor can still mix neural, autonomic, and vascular contributions, so common structure is not yet target-variable specificity."
   - "A coupled multimodal trajectory can still sit on a mismatched biological axis, so shared time courses are not yet a quantity bridge by default."
   - "A multimodal gain can still depend on which subjects or trials actually carried all modalities, how missing rows were handled, and whether the bundle survives site transfer."
@@ -38,6 +40,7 @@ unknown_points:
   - "Even with the integration of multiple modalities, the sufficiency of cells, synapses, neuromodifications, and glial states remain unresolved."
   - "How to propagate and report post-integration uncertainties remains a research topic."
   - "How shared-vs-specific decompositions should be benchmarked across human multimodal stacks remains unsettled."
+  - "How effective-window / temporal-kernel compatibility should be benchmarked across simultaneous human multimodal stacks remains unsettled."
   - "Which quantity bridges can be externally calibrated across electrophysiological, hemodynamic, metabolic, and autonomic stacks remains unsettled."
   - "How to compare multimodal bundles fairly when modality availability, centre mix, or hard-subgroup disagreement differ remains unsettled."
 wiki_links:
@@ -89,6 +92,13 @@ The remaining weakness on this page was that <strong>simultaneous</strong>, <str
 </div>
 
 <div class="note-box">
+<strong>Same session is not yet the same effective window</strong>
+<p>
+One remaining shortcut is to treat <strong>simultaneous acquisition</strong> as if it had already aligned the temporal object itself. The primary literature does not support that shortcut. <a href="https://doi.org/10.1155/2016/4182483" target="_blank">Nguyen et al. (2016)</a> explicitly noted that the <strong>temporal mismatch between EEG and fMRI still persists</strong> even in spatiotemporally constrained EEG-fMRI source imaging. <a href="https://doi.org/10.1016/j.neuroimage.2021.118131" target="_blank">Ripp et al. (2021)</a> then showed that simultaneous FDG-PET/fMRI working-memory data still rely on PET <strong>scan-window averages</strong>, reconstructing baseline uptake from <strong>44-60 min</strong> and task uptake from <strong>63-71 min</strong> post-injection under an assumed steady state. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> finally made the multi-timescale point concrete by linking sleep-stage electrophysiology to hemodynamic and metabolic progression in the same EEG-PET-MRI session. Therefore, on this site, a same-session multimodal paper must disclose the <strong>effective-window / temporal-kernel relation</strong> of each stack and say whether the claim is about one matched state sample, one shared transition, or only coordinated dynamics across different temporal kernels.
+</p>
+</div>
+
+<div class="note-box">
 <strong>A shared multimodal factor is not automatically the target biological variable</strong>
 <p>
 The next shortcut to block is subtler. A paper may show <strong>shared</strong> or <strong>coupled</strong> dynamics across modalities without showing that the shared factor already equals the biological variable you care about. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> explicitly separated common and divergent cortical organization across modalities, <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> reported coupled global dynamics together with modality- and network-specific structure, <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> showed that low-frequency global fMRI fluctuations covary with EEG and autonomic signals as part of an arousal response, and <a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">Özbay et al. (2019)</a> showed that sympathetic activity can contribute to the fMRI signal during EEG-marked arousal changes. Therefore, on this site, a common factor still has to be labeled as <strong>shared neural candidate</strong>, <strong>modality-specific residual</strong>, <strong>physiology-linked global factor</strong>, or <strong>mixed / unresolved</strong> rather than being promoted automatically to one solved state variable.
@@ -131,7 +141,7 @@ Here we will only deal with the technical and natural science aspects. It does n
 </div>
 
 <section class="section" id="gates">
-<h2 class="section-title">Ten audit gates to fix first</h2>
+<h2 class="section-title">Eleven audit gates to fix first</h2>
 <table class="data-table">
 <thead>
 <tr>
@@ -172,6 +182,11 @@ Here we will only deal with the technical and natural science aspects. It does n
 <td>It is too strong to read same-session, atlas-informed, or tri-modal wording as if one biological state variable had already been jointly identified.</td>
 </tr>
 <tr>
+<td><strong>Effective-window / temporal-kernel gate</strong></td>
+<td>The paper names whether each stack contributes event-locked activity, a hemodynamic response window, a scan-window average, or a minutes-long kinetic route, and says whether the claim concerns one matched state sample, one shared transition, or only coordinated multi-timescale dynamics.</td>
+<td>Same-session acquisition is not promoted to one synchronous latent-state object when the modalities still average over different temporal windows or kernels.</td>
+</tr>
+<tr>
 <td><strong>Shared-vs-specific component gate</strong></td>
 <td>The paper says whether the claimed effect lives in a shared cross-modal component, a modality-specific residual, or a physiology-linked/global factor, and which decomposition or comparison supports that reading.</td>
 <td>A synchronized common factor is not promoted to the target biological variable when shared physiology, residual mismatch, or modality-specific structure remain unresolved.</td>
@@ -197,7 +212,7 @@ Here we will only deal with the technical and natural science aspects. It does n
 <div class="note-box">
 <strong>Minimum fusion package on this site</strong>
 <p>
-For multimodal or atlas-prior routes, this page now follows the same disclosure bundle used in <a href="../verification.html#fusion-card">Verification: Fusion Card</a>: <strong>acquisition relation</strong>, <strong>clock / lag audit</strong>, <strong>geometry / co-registration scope</strong>, <strong>fusion object and model burden</strong>, <strong>shared-vs-specific component disclosure</strong>, <strong>quantity bridge / physiology grounding</strong>, <strong>incremental evidence over unimodal / prior-only baselines</strong>, <strong>availability / complete-case slice</strong>, <strong>missing-modality policy</strong>, <strong>cross-centre / cross-scanner transfer window</strong>, and <strong>external calibration plus abstention boundary</strong>. If those fields are missing, the result stays at the ceiling of the strongest individually supported stack rather than becoming same-subject cross-stack state identification. If the bundle also mixes living-human proxy classes, this site adds the <a href="../verification.html#human-proxy-composition-card">Human Proxy Composition Card</a> instead of treating the Fusion Card as sufficient.
+For multimodal or atlas-prior routes, this page now follows the same disclosure bundle used in <a href="../verification.html#fusion-card">Verification: Fusion Card</a>: <strong>acquisition relation</strong>, <strong>clock / lag audit</strong>, <strong>effective-window / temporal-kernel relation</strong>, <strong>geometry / co-registration scope</strong>, <strong>fusion object and model burden</strong>, <strong>shared-vs-specific component disclosure</strong>, <strong>quantity bridge / physiology grounding</strong>, <strong>incremental evidence over unimodal / prior-only baselines</strong>, <strong>availability / complete-case slice</strong>, <strong>missing-modality policy</strong>, <strong>cross-centre / cross-scanner transfer window</strong>, and <strong>external calibration plus abstention boundary</strong>. If those fields are missing, the result stays at the ceiling of the strongest individually supported stack rather than becoming same-subject cross-stack state identification. If the bundle also mixes living-human proxy classes, this site adds the <a href="../verification.html#human-proxy-composition-card">Human Proxy Composition Card</a> instead of treating the Fusion Card as sufficient.
 </p>
 </div>
 
@@ -233,12 +248,12 @@ On this site, <strong>synchronized streams</strong>, <strong>a shared cross-moda
 <tr>
 <td><strong>Simultaneous measurement EEG + fMRI</strong></td>
 <td>Two 2015 papers by Jorge et al. and Wirsich et al. (2021) showed that simultaneous measurements are possible even at 1.5T to 7T, and with an appropriate setup, it is possible to proceed to reproducible connectivity analysis. </td>
-<td>Artifact and safety control tend to deteriorate with magnetic field strength, leaving asymmetry in time resolution, poor EEG quality, and a remaining vascular-state / CVR interpretation ceiling on the hemodynamic side. Same-session acquisition also still needs a disclosed fusion model, shared-vs-specific decomposition, and unimodal / prior-only baselines. </td>
+<td>Artifact and safety control tend to deteriorate with magnetic field strength, leaving asymmetry in time resolution, poor EEG quality, and a remaining vascular-state / CVR interpretation ceiling on the hemodynamic side. Same-session acquisition also still needs a disclosed fusion model, <strong>effective-window relation between event-locked EEG and hemodynamic response windows</strong>, shared-vs-specific decomposition, and unimodal / prior-only baselines. </td>
 </tr>
 <tr>
 <td><strong>Simultaneous EEG + PET + MRI</strong></td>
 <td><a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed temporally coupled global hemodynamic and metabolic progression across wakefulness and NREM sleep while resolving distinct network patterns inside the same tri-modal session.</td>
-<td>The route still depends on PET quantification model, hemodynamic / metabolic interpretation, an explicit quantity bridge / physiology-grounding rule, co-registration, physiology-side interpretation of low-frequency shared factors, a disclosed fusion baseline, and, when reused as a predictive bundle, explicit disclosure of modality availability / complete-case slices and transfer across centres or protocol shifts; it does not by itself identify one externally validated latent brain state or solve hidden-state completeness.</td>
+<td>The route still depends on PET quantification model, hemodynamic / metabolic interpretation, an explicit quantity bridge / physiology-grounding rule, <strong>effective-window disclosure across second-scale electrophysiology, hemodynamic response windows, and minute-scale PET routes</strong>, co-registration, physiology-side interpretation of low-frequency shared factors, a disclosed fusion baseline, and, when reused as a predictive bundle, explicit disclosure of modality availability / complete-case slices and transfer across centres or protocol shifts; it does not by itself identify one externally validated latent brain state or solve hidden-state completeness.</td>
 </tr>
 <tr>
 <td><strong>EEG + invasive recording (ECoG/SEEG/DBS)</strong></td>
@@ -271,6 +286,9 @@ Integration makes sense because EEG and MEG have different sensitivities to volu
 <p>
 Simultaneous EEG-fMRI is attractive, but as the magnetic field strength increases, artifacts and setup dependence also increase, as shown in two 2015 papers by Jorge et al. Wirsich et al. (2021) showed reproducible connectome analysis over 1.5T to 7T, but this also means that this can only be achieved by incorporating appropriate hardware, cabling, and artifact control. The deeper correction is that even after synchronization is solved, the hemodynamic side still carries a <strong>vascular transfer state</strong>. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">Murphy et al. (2011)</a> showed that inter-subject CBF / CBV differences contribute to BOLD reactivity and that breath-hold-derived vascular-reactivity covariates improve group analyses. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">Williams et al. (2023)</a> showed that task BOLD magnitude corresponds strongly to CVR across multiple cortical regions, <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">Wu et al. (2023)</a> showed that baseline CBF partly explains age-related components of BOLD responses, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that significant task BOLD changes can oppose oxygen-metabolism changes across a large fraction of cortex. Therefore, it is not just a matter of adding spatial resolution: EEG+fMRI still needs a <strong>vascular-state / CVR calibration route</strong> or explicit abstention.
 </p>
+<p>
+The temporal object also remains split. <a href="https://doi.org/10.1155/2016/4182483" target="_blank">Nguyen et al. (2016)</a> explicitly stated that temporal mismatch persists in EEG-fMRI source imaging even when fMRI priors are made time-variant. On this site, simultaneous EEG-fMRI is therefore read as <strong>shared acquisition plus a declared cross-kernel relation</strong>, not as automatic alignment between event-scale electrophysiology and the hemodynamic response itself.
+</p>
 <div class="note-box">
 <strong>Apply the same rule to fNIRS</strong>
 <p>
@@ -281,6 +299,9 @@ If the hemodynamic side is fNIRS rather than fMRI, the same caution remains. <a 
 <h3>4. EEG + PET + MRI adds arousal-state fusion, not fused ground truth</h3>
 <p>
 The newest route that needed to be fixed here is tri-modal EEG-PET-MRI. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed that simultaneous EEG-PET-MRI can reveal tightly coupled global hemodynamic and metabolic progression together with distinct network structure across wakefulness and NREM sleep. That is a real advance because one protocol can now compare electrophysiological arousal, hemodynamic fluctuations, and metabolic decline under the same experimental window. But the safe reading still stops well short of fused ground truth: PET quantification remains model-bearing, the hemodynamic side still carries vascular interpretation, and the fusion step itself still needs a disclosed baseline over each unimodal route. On this site, tri-modal results therefore still require a <a href="../verification.html#fusion-card">Fusion Card</a> rather than being treated as automatic cross-stack state identification.
+</p>
+<p>
+The temporal object is also split inside the same session. <a href="https://doi.org/10.1016/j.neuroimage.2021.118131" target="_blank">Ripp et al. (2021)</a> showed in simultaneous FDG-PET/fMRI working-memory data that PET still had to be interpreted through <strong>scan-window averages</strong> rather than event-scale timing, and <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> used EEG-PET-MRI to follow sleep-stage electrophysiology together with slower hemodynamic and metabolic progression. Therefore, on this site, tri-modal synchrony is read as <strong>coordinated multi-timescale evidence</strong> unless the paper explicitly shows how second-scale electrophysiology, hemodynamic response windows, and PET kernels are being compared.
 </p>
 <p>
 The deeper correction added in this pass is that even a <strong>shared</strong> tri-modal factor is not automatically the target neural variable, and not yet a quantity bridge. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> showed that low-frequency global fMRI fluctuations covary with EEG and multiple autonomic signals as part of a distributed arousal response, <a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">Özbay et al. (2019)</a> showed that sympathetic activity can contribute to fMRI signal changes during EEG-marked arousal events, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that significant task BOLD changes can oppose oxygen-metabolism changes across many cortical voxels. Therefore, when a multimodal paper reports a coupled global trajectory, this site now asks whether the claimed factor is <strong>shared neural candidate</strong>, <strong>mixed arousal physiology</strong>, or only a <strong>common low-frequency mode with unresolved specificity</strong>, and whether the paper has actually exposed a named <strong>quantity bridge / physiology-grounding rule</strong> rather than only a correlation.
@@ -324,11 +345,11 @@ Even when OP-MEG looks much closer to daily behavior, the public claim still has
 <h4>Rule</h4>
 <ul>
 <li><strong>multimodal:</strong>Read as "which audit gate was passed through" instead of "multiple modalities were added." </li>
-<li><strong>same-session / atlas-informed:</strong>Do not read this as one validated biological state variable unless a <a href="../verification.html#fusion-card">Fusion Card</a> discloses acquisition relation, lag audit, co-registration scope, shared-vs-specific component logic, unimodal / prior-only baselines, availability / complete-case slice, and external calibration.</li>
+<li><strong>same-session / atlas-informed:</strong>Do not read this as one validated biological state variable unless a <a href="../verification.html#fusion-card">Fusion Card</a> discloses acquisition relation, lag audit, <strong>effective-window / temporal-kernel relation</strong>, co-registration scope, shared-vs-specific component logic, unimodal / prior-only baselines, availability / complete-case slice, and external calibration.</li>
 <li><strong>multimodal gain:</strong>Do not read ``more modalities improved performance'' as availability-agnostic or centre-robust unless the page discloses missing-modality handling, transfer across sites / scanners / protocol shifts, and whether disagreement rises in the hardest subgroups.</li>
 <li><strong>EEG + MRI:</strong>Even if individual anatomy is included, if there is no external validation, the source claim will be limited. </li>
 <li><strong>EEG + fMRI:</strong>It is useful as a complement to spatial information, but requires auditing of artifacts, safety, time series alignment, and vascular-state / CVR limits before a BOLD difference is read as a neural difference. </li>
-<li><strong>EEG + PET + MRI:</strong>Read as a stronger shared acquisition window for electrophysiology, hemodynamics, and metabolism, not as fused latent-state truth; if a shared factor is claimed, write whether it is shared neural candidate, modality-specific residual, or physiology-linked global factor, and if the argument raises a living-human claim ceiling also attach a <a href="../verification.html#human-proxy-composition-card">Human Proxy Composition Card</a>.</li>
+<li><strong>EEG + PET + MRI:</strong>Read as a stronger shared acquisition window for electrophysiology, hemodynamics, and metabolism, not as fused latent-state truth; also state whether the comparison is across <strong>event-scale electrophysiology</strong>, a <strong>hemodynamic response window</strong>, or a <strong>scan-window / kinetic PET route</strong>. If a shared factor is claimed, write whether it is shared neural candidate, modality-specific residual, or physiology-linked global factor, and if the argument raises a living-human claim ceiling also attach a <a href="../verification.html#human-proxy-composition-card">Human Proxy Composition Card</a>.</li>
 <li><strong>EEG + fNIRS:</strong>Short-separation / superficial diagnostic is required before HbO / HbR differences are treated as neural differences. </li>
 <li><strong>EEG + invasive recording:</strong>Treated as a coverage-limited calibration/validation route, not a gold standard. </li>
 <li><strong>OPM-MEG:</strong>Wearable and motion-tolerant does not waive shielding, field nulling, co-registration, anatomy, or crosstalk audit. </li>
@@ -344,6 +365,8 @@ Even when OP-MEG looks much closer to daily behavior, the public claim still has
 <li>Pernet, C., Garrido, M. I., Gramfort, A., et al. (2020). Issues and recommendations from the OHBM COBIDAS MEEG committee for reproducible EEG and MEG research. <em>Nature Neuroscience</em>, 23, 1473-1483. <a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">doi:10.1038/s41593-020-00709-0</a></li>
 <li>Kothe, C., Shirazi, S. Y., Stenner, T., Medine, D., Boulay, C., Grivich, M. I., Artoni, F., Mullen, T., Delorme, A., &amp; Makeig, S. (2025). The lab streaming layer for synchronized multimodal recording. <em>Imaging Neuroscience</em>, 3, IMAG.a.136. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
 <li>Wei, H., Jafarian, A., Zeidman, P., Litvak, V., Razi, A., Garrido, M., Friston, K., &amp; Daunizeau, J. (2020). Bayesian fusion and multimodal DCM for EEG and fMRI. <em>NeuroImage</em>, 211, 116595. <a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">doi:10.1016/j.neuroimage.2020.116595</a></li>
+<li>Nguyen, T., Potter, T., Nguyen, T., Karmonik, C., Grossman, R., &amp; Zhang, Y. (2016). EEG Source Imaging Guided by Spatiotemporal Specific fMRI: Toward an Understanding of Dynamic Cognitive Processes. <em>Neural Plasticity</em>, 2016, 4182483. <a href="https://doi.org/10.1155/2016/4182483" target="_blank">doi:10.1155/2016/4182483</a></li>
+<li>Ripp, I., Wallenwein, L. A., Wu, Q., Emch, M., Koch, K., Cumming, P., &amp; Yakushev, I. (2021). Working memory task induced neural activation: A simultaneous PET/fMRI study. <em>NeuroImage</em>, 237, 118131. <a href="https://doi.org/10.1016/j.neuroimage.2021.118131" target="_blank">doi:10.1016/j.neuroimage.2021.118131</a></li>
 <li>Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., O'Connor, D., Markicevic, M., Shen, X., Ge, X., Herman, P., Hyder, F., Papademetris, X., Chakravarty, M., Crair, M. C., Constable, R. T., Lake, E. M. R., &amp; Pessoa, L. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <em>Nature Communications</em>, 15, 229. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
 <li>Chen, J. E., Lewis, L. D., Coursey, S. E., Catana, C., Polimeni, J. R., Fan, J., Droppa, K. S., Patel, R., Wey, H.-Y., Chang, C., Manoach, D. S., Price, J. C., Sander, C. Y., &amp; Rosen, B. R. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <em>Nature Communications</em>, 16, 8887. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
 <li>Bolt, T. S., van den Brink, R. L., Song, C., et al. (2025). Autonomic physiological coupling of the global fMRI signal. <em>Nature Neuroscience</em>, 28, 1266-1278. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">doi:10.1038/s41593-025-01945-y</a></li>
