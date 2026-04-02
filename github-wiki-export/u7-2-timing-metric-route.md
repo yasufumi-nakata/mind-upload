@@ -1,3 +1,29 @@
+# Wiki: U7-2 timing-metric route packet
+
+> An adjacent synchronization packet outside the current public six
+>
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+
+- Updated: 2026-04-02 / Role: U7-2 route packet
+
+## Role Of This Page
+This page records one narrow row just outside the current public six at the level of one question, one public-open EEG anchor, one bounded first artifact, and one funding bridge.
+
+## Accuracy Notes
+This page does not change the active public six-question batch. It only records what the present U7-2 timing-metric route can honestly close first.
+
+## Back To Public Pages
+- [Issue page](https://mind-upload.com/issue.html)
+- [Data & Bench](https://mind-upload.com/datasets.html)
+
+## Related Wiki Pages
+- [Wiki: Current public six route brief](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief) - The compact six-row public route that still stays unchanged.
+- [Wiki: U7-1 synchronization-contract route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u7-1-synchronization-contract-route) - The contract-first row that sits immediately next to this metric-first packet.
+- [Wiki: Event synchronization and measurement logs](https://github.com/yasufumi-nakata/mind-upload/wiki/event-sync-and-measurement-logs) - The timing-log page that keeps this row grounded in observable fields.
+- [Wiki: Grant and dataset playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - The fixed funding and anchor map.
+
+---
+
 # U7-2 timing-metric route packet
 
 This page does not change the current public six-question batch. It records one narrow row just outside that batch, so readers can see why `U7-2` is the cleanest adjacent packet after `U7-1`, why `D11` stays the strongest public-open anchor for this row, and what the first release-block timing artifact can honestly close.
