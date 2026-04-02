@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-31 / Role: Operational guide
+- Updated: 2026-04-02 / Role: Operational guide
 
 ## Role Of This Page
 This page is an auxiliary page that fixes what must be bundled together before an L0 result can be called reproducible analysis on this site. It is not a procedure manual; it is a submission-shape check that asks whether a third party can reconstruct not only the score, but also what was actually observed, which prediction object and metric bundle were used, which benchmark rules were in force, what was held out, and what remained outside scope.
@@ -32,6 +32,7 @@ This page defines the current minimum for L0. It does not by itself justify caus
 - Challenge, leaderboard, or benchmark names alone are still too coarse because rules snapshots, randomization policies, extra-data rules, and later postmortems can materially change what the score means.
 - Cross-session and unsupervised recalibration results still do not by themselves tell you the fixed decoder interval, recalibration burden, or operational transfer ceiling.
 - Preloaded or modified recordings should be written as derivatives with explicit lineage rather than silently overwriting raw.
+- Derivative lineage and workflow provenance are separate: the run still needs config, software / container version, and replayable commands.
 - Examples of failures, setup shortcuts, and stopping claims belong in the artifact pack, not only in side notes.
 
 ## What Is Still Unknown
@@ -60,6 +61,11 @@ The remaining weakness on this page was subtler than the 2026-03-20 tightening. 
 <strong>2026-03-31 addendum: benchmark name is not yet the benchmark object</strong>
 <p>
 One more ambiguity remained inside items 7 and 8. Even when benchmark governance is logged, the benchmark name alone still does not fix the <strong>predicted object</strong>, <strong>independent prediction unit</strong>, <strong>grouped hold-out unit</strong>, <strong>adaptation regime</strong>, or <strong>operations budget</strong>. The official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) homepage</a> separates trial-level response-time regression from subject-level externalizing prediction, the official <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a> and <a href="https://eeg2025.github.io/submission/" target="_blank">submission page</a> impose an <strong>inference-only code-submission workflow</strong> under a <strong>single-GPU 20 GB</strong> budget, <a href="https://doi.org/10.1038/s41597-022-01647-1" target="_blank">Ma et al. (2022)</a> use one motor-imagery dataset to separate <strong>within-session</strong>, <strong>cross-session</strong>, and <strong>cross-session adaptation</strong>, <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a> separate <strong>leave-one-subject-out</strong> transfer from <strong>within-subject few-shot calibration</strong>, and <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> show that <strong>six benchmark inconsistencies</strong> can reverse rankings on identical datasets by up to <strong>24 percentage points</strong>. Therefore items 7 and 8 on this page are now read together as an <strong>object / unit / budget disclosure</strong>, not as a benchmark name plus an administrative appendix.
+</p>
+
+<strong>2026-04-02 addendum: derivative lineage is not yet workflow provenance</strong>
+<p>
+One more L0 shortcut remained. BIDS Derivatives make it possible to say <strong>which outputs came from which sources</strong>, but that still does not freeze <strong>which recipe produced them</strong>. The current BIDS specification requires derived datasets to record <strong>GeneratedBy</strong> and supports <strong>SourceDatasets</strong>; <a href="https://doi.org/10.1371/journal.pcbi.1005209" target="_blank">Gorgolewski et al. (2017)</a> showed that BIDS Apps improve software portability; and <a href="https://mne.tools/mne-bids-pipeline/stable/" target="_blank">MNE-BIDS-Pipeline</a> explicitly exposes a text configuration file, cached steps, and summary reports. Therefore, on this site, the L0 pack now treats <strong>lineage</strong>, <strong>workflow recipe</strong>, and <strong>runtime pin</strong> as separate fields that must travel together.
 </p>
 
 <h2>Minimum 14 items now required in the L0 pack</h2>
@@ -133,8 +139,8 @@ One more ambiguity remained inside items 7 and 8. Even when benchmark governance
 <td>Apparent improvement may come from identity, setup, or label shortcuts rather than the intended signal.</td>
 </tr>
 <tr>
-<td><strong>13. Derivative lineage + replay steps</strong></td>
-<td>Commands, environment, random seeds, preprocessing boundaries, and explicit raw-to-derivative lineage.</td>
+<td><strong>13. Derivative lineage + workflow provenance + replay steps</strong></td>
+<td><code>GeneratedBy</code> / <code>SourceDatasets</code> or equivalent lineage, commands, config or model recipe, container or lockfile, environment, random seeds, preprocessing boundaries, and explicit raw-to-derivative lineage.</td>
 <td>Preprocessed data can be mistaken for raw, and other people cannot rerun the same flow.</td>
 </tr>
 <tr>
@@ -181,9 +187,9 @@ One more ambiguity remained inside items 7 and 8. Even when benchmark governance
 <td>Add a conditional <strong>Temporal-Validity addendum</strong> with state annotation, fixed decoder interval, recalibration amount, and transfer ceiling.</td>
 </tr>
 <tr>
-<td><strong>Replay steps without lineage or setup summary</strong></td>
-<td>Preloaded / modified data can silently become derivatives, and setup differences such as site, device, reference, and electrode layout can still dominate the result.</td>
-<td>Add <strong>acquisition-distribution summary</strong>, <strong>harmonization log</strong>, and <strong>derivative lineage</strong>.</td>
+<td><strong>Replay steps without lineage, workflow recipe, or setup summary</strong></td>
+<td>Preloaded / modified data can silently become derivatives, setup differences such as site, device, reference, and electrode layout can still dominate the result, and the same pipeline name can still hide a different config.</td>
+<td>Add <strong>acquisition-distribution summary</strong>, <strong>harmonization log</strong>, <strong>derivative lineage</strong>, and a <strong>workflow / runtime pin</strong>.</td>
 </tr>
 </tbody>
 </table>
@@ -196,7 +202,7 @@ One more ambiguity remained inside items 7 and 8. Even when benchmark governance
 <li><strong>Observability:</strong> fix BIDS / EEG-BIDS shape, event fidelity, and label provenance.</li>
 <li><strong>Evaluation:</strong> fix evaluation family, hold-out ancestry, benchmark object, metric bundle, current benchmark rules, temporal scope when needed, setup distribution, harmonization, and baselines.</li>
 <li><strong>Lineage:</strong> keep raw-to-derivative boundaries explicit instead of silently rewriting modified data as raw.</li>
-<li><strong>Replay:</strong> keep commands, environment, failures, and the stopping claim together.</li>
+<li><strong>Replay:</strong> keep commands, config, environment, failures, and the stopping claim together.</li>
 </ul>
 
 <h2>Common omissions</h2>

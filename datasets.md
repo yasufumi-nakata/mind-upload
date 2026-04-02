@@ -28,6 +28,7 @@ page_highlights:
   - "Even when the score is numerically the same, you still have to separate the target neural variable from eye movement, EMG, behavior, feedback routes, subject / session fingerprint, and acquisition-distribution shortcuts such as site / device / reference / electrode layout."
   - "Even when foundation / self-supervised EEG models are used, pretraining-corpus, coordinate-route / reference-family, omitted-channel, and label-budget audits are still required."
   - "Official challenge rules, submission constraints, and later postmortems can change what a benchmark score means, so benchmark provenance is part of the dataset / benchmark card rather than administrative detail."
+  - "BIDS raw layout, BIDS derivatives / lineage, workflow recipe, benchmark harness, benchmark-governance snapshot, and runtime pin are different reproducibility layers; naming only the dataset and tool remains too coarse."
   - "Reference system, channel map, electrode layout, and device protocol are not cosmetic metadata; they can move scores and belong in the dataset card."
   - "The ultimate goal is to make it possible for a third party to rerun the result under the same conditions."
   - "The L0 artifact pack now follows this page's stricter site rule: event fidelity, label provenance, acquisition-distribution summary, derivative lineage, and a stopping claim are required alongside version/BIDS/QC/split/baseline."
@@ -46,6 +47,7 @@ known_points:
   - "A same-day score may reflect movement / EOG / EMG / feedback routes, subject / session fingerprint, or acquisition-distribution shortcuts rather than the target signal."
   - "Foundation-model improvements are not comparable unless the pretraining corpus, channel-mismatch handling, acquisition-distribution summary, and adaptation regime are disclosed."
   - "A benchmark name alone is not enough; version, split / randomization rule, hidden grouping, extra-data policy, pretrained-checkpoint policy, and inference-stage restrictions can all change what a score means."
+  - "A dataset or pipeline name alone is still not enough; raw layout, derivative lineage, workflow recipe, and runtime pin can each move what the result means."
   - "Reference system, device, electrode layout, and filter chain can change what looks like the same EEG benchmark."
   - "With only starter data and no individual MRI or invasive ground truth, we cannot make strong claims about improved ESI accuracy."
   - "At source-imaging stage C, named validation class still matters because stimulation ground truth, simultaneous SEEG, and clinical outcome do not answer the same error question."
@@ -218,9 +220,9 @@ Future dataset cards must include at least <strong>(1) onset / duration / sample
 </div>
 
 <div class="note-box">
-<strong>BIDS, OpenNeuro and Benchmark are not the same</strong>
+<strong>BIDS, Derivatives, Pipeline, OpenNeuro, and Benchmark are not the same</strong>
 <p>
-BIDS is a standard, OpenNeuro and PhysioNet are storage areas, Validator is a formal check, and Benchmark is a comparison rule. If you want to sort out this role difference from the beginning, please use <a href="wiki/standards-repositories-validators-and-benchmarks.html">Wiki: Standards/Repositories/Validators/Benchmarks</a>.
+BIDS is a raw-data standard, BIDS Derivatives keeps processed-output lineage explicit, OpenNeuro and PhysioNet are storage areas, Validator is a formal check, MNE-BIDS is a loader, MNE-BIDS-Pipeline or a BIDS App is a workflow recipe, and Benchmark is a comparison rule. If you want to sort out this role difference from the beginning, please use <a href="wiki/standards-repositories-validators-and-benchmarks.html">Wiki: Standards/Repositories/Validators/Benchmarks</a>.
 </p>
 </div>
 

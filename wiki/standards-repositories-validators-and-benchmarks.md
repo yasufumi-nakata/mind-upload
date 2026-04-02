@@ -1,38 +1,44 @@
 ---
 layout: default
 title: "Wiki: Standards, Repositories, Validators, and Benchmarks"
-description: "Separates BIDS, OpenNeuro/PhysioNet, HED, LSL, MNE-BIDS, MOABB, and benchmark-governance artifacts so reproducibility failures are not hidden inside one label."
+description: "Separates BIDS, OpenNeuro/PhysioNet, HED, LSL, BIDS Derivatives, MNE-BIDS, workflow / pipeline recipes, MOABB, and benchmark-governance artifacts so reproducibility failures are not hidden inside one label."
 article_type: Wiki
-subtitle: "Separate standards, repositories, validators, benchmark harnesses, and benchmark provenance"
+subtitle: "Separate standards, repositories, derivatives, workflow recipes, validators, benchmark harnesses, and benchmark provenance"
 author: Mind Uploading Research Project
-last_updated: "2026-03-26"
+last_updated: "2026-04-02"
 note: "Operational guide"
-audience: "People who see BIDS, OpenNeuro, PhysioNet, MNE-BIDS, and MOABB as the same kind of thing"
+audience: "People who see BIDS, OpenNeuro, PhysioNet, MNE-BIDS, MNE-BIDS-Pipeline, and MOABB as the same kind of thing"
 reading_time: "10-15 minutes"
-page_intro: "This page organizes the roles of ``Standards,'' ``Repositories,'' ``Validators,'' ``Benchmarks,'' and the newer site rule of ``benchmark provenance / governance,'' together with version freezing, event semantics, synchronization middleware, and loader / benchmark tooling. The goal is not to memorize product names but to understand where reproducibility actually breaks."
+page_intro: "This page organizes the roles of ``Standards,'' ``Repositories,'' ``Validators,'' ``Derivatives,'' ``Workflow / model recipes,'' ``Benchmarks,'' and ``benchmark provenance / governance,'' together with version freezing, event semantics, synchronization middleware, and loader / benchmark tooling. The goal is not to memorize product names but to understand where reproducibility actually breaks."
 accuracy_note: "What I will explain here is a basic organization of roles. BIDS vessels, HED semantics, and LSL synchronization are complementary, and the final validity of any one is not guaranteed."
 page_highlights:
   - "BIDS is a standard, OpenNeuro and PhysioNet are storage areas, Validator is a mechanical inspection, and Benchmark is a comparison rule."
+  - "BIDS Derivatives and result provenance are separate from raw-data layout: processed outputs need their own lineage and pipeline description."
   - "If you do not fix the OpenNeuro snapshot or the PhysioNet version, you will not be able to reproduce the same data name."
   - "HED and Motion-BIDS are extensions to BIDS that carry machine-readable semantics and additional metadata."
   - "LSL is a synchronization middleware and is not a replacement for BIDS or benchmark."
   - "BIDS/HED/LSL do not by themselves validate multimodal biological fusion; that requires a separate Fusion Card."
-  - "A loader/transformer like MNE-BIDS and a benchmark harness like MOABB have different roles."
+  - "A loader like MNE-BIDS, a workflow like MNE-BIDS-Pipeline or BIDS Apps, a model recipe like BIDS Stats Models, and a benchmark harness like MOABB have different roles."
   - "Benchmark harness and benchmark provenance are different objects: official rules, split/randomization, extra-data policy, pretrained-checkpoint policy, inference-stage restrictions, and later organizer postmortems can all change what the score means."
   - "Official challenge homepages, rules pages, submission constraints, and leaderboard corrections count as part of the benchmark object rather than as administrative footnotes."
+  - "A pipeline name alone is still too coarse: derivative lineage, config, skipped steps, software version, and runtime container remain separate reproducibility fields."
 known_points:
-  - "To make research comparable, it is necessary to separate the data format, publication destination, testing methods, and evaluation rules."
+  - "To make research comparable, it is necessary to separate the data format, publication destination, derivative lineage, workflow recipe, testing methods, and evaluation rules."
   - "BIDS and EEG-BIDS are standards for 'how to place' them, not scoring rules themselves."
   - "Event semantics like HED have the role of supplementing the meaning of events listed in BIDS in a machine-readable manner."
   - "LSL helps with clock alignment between streams, but is not the ground truth for hardware delays."
   - "Even if clocks are aligned and metadata are standardized, multimodal claims still need a separate audit of fusion model, co-registration, and calibration."
   - "OpenNeuro and PhysioNet are public platforms, but they do not automatically guarantee all input formats and evaluation procedures."
+  - "Raw BIDS and BIDS derivatives are separate layers; processed data should carry explicit lineage rather than silently replacing raw."
+  - "A workflow name alone is not a frozen recipe: config files, skipped stages, model graph, and software / container versions can all change outputs."
   - "Even if the dataset name is the same, it cannot be compared if the snapshot / version and evaluation family are different."
   - "A benchmark title alone is still insufficient: benchmark meaning can move with current rule snapshot, split construction, hidden grouping, extra-data / pretrained-model policy, inference-stage budget, and organizer postmortems."
   - "MOABB fixes evaluation families such as within-session / cross-session / cross-subject, but challenge operations can add additional constraints that are not visible in the harness name alone."
+  - "Containerized execution helps software portability, but it does not by itself freeze benchmark meaning or full result provenance."
 unknown_points:
   - "It is unclear what granularity the final common benchmark for WBE should be."
   - "Which validators and audit items will become the final standard will depend on future operational design."
+  - "The best common schema for workflow provenance across decoding, source imaging, and multimodal pipelines is still evolving."
 wiki_links:
   - label: "Wiki: Basics of verification infrastructure"
     url: "/wiki/verification-basics.html"
@@ -61,7 +67,7 @@ recommended_pages:
 <div class="abstract-box">
 <h2>The shortest distinction</h2>
 <p>
-<strong>Standards</strong> are the rules for ``how to arrange them,'' <strong>repositories</strong> are ``where to publish them,'' <strong>validators</strong> are tools that mechanically check schema compliance, <strong>benchmark harnesses</strong> fix comparison procedures, and <strong>benchmark provenance / governance</strong> fixes which exact rules, constraints, and corrections were in force when the score was produced. Even though they all look like ``research infrastructure,'' their roles are different.
+<strong>Standards</strong> fix raw-data layout, <strong>repositories</strong> fix where a versioned dataset is published, <strong>validators</strong> check schema compliance, <strong>derivative specifications</strong> fix how processed outputs stay linked to their sources, <strong>workflow / model recipes</strong> fix how outputs are produced, and <strong>benchmark harnesses</strong> plus <strong>benchmark provenance / governance</strong> fix what the score means. Even though they all look like ``research infrastructure,'' their roles are different.
 </p>
 </div>
 
@@ -72,10 +78,17 @@ The old version of this page still let <strong>benchmark</strong> sound like a s
 </p>
 </div>
 
+<div class="note-box">
+<strong>2026-04-02 correction: BIDS plus a benchmark name still do not fix derivatives, workflow recipe, or result provenance</strong>
+<p>
+The remaining weakness on this page was subtler. It still let <strong>BIDS + repository + benchmark name</strong> sound almost sufficient for reproducibility. Current official and primary sources do not support that reading. <a href="https://doi.org/10.7554/eLife.71774" target="_blank">Markiewicz et al. (2021)</a> show that OpenNeuro plus BIDS helps freeze a shareable, versioned raw input. But the BIDS specification separately requires derived datasets to carry <strong>GeneratedBy</strong> and <strong>SourceDatasets</strong>, and derivative files to keep explicit <strong>Sources</strong>. <a href="https://doi.org/10.1371/journal.pcbi.1005209" target="_blank">Gorgolewski et al. (2017)</a> show that BIDS Apps solve deployment and interface portability, not automatic benchmark meaning; <a href="https://mne.tools/mne-bids-pipeline/stable/" target="_blank">MNE-BIDS-Pipeline</a> explicitly exposes a text-file configuration, cached intermediate steps, and summary reports; <a href="https://bids-standard.github.io/stats-models/index.html" target="_blank">BIDS Stats Models</a> defines a separate machine-readable model recipe; and <a href="https://doi.org/10.1038/sdata.2016.102" target="_blank">Maumet et al. (2016)</a> show that result provenance itself can be packaged as a separate standardized object. Therefore, on this site, <strong>derivative specification</strong>, <strong>workflow / model recipe</strong>, and <strong>execution / result provenance</strong> are now treated as distinct layers rather than as details hidden inside ``BIDS'' or ``benchmark.''
+</p>
+</div>
+
 <section class="section" id="why-separate">
 <h2 class="section-title">Why consider separately</h2>
 <p>
-If you confuse these five things, you'll get the wrong impression, such as, ``There's a benchmark because you uploaded it to OpenNeuro,'' ``Because it's BIDS, you've already done the comparison,'' or ``Because MOABB was named, the benchmark meaning is already fixed.'' In reality, the task of aligning data, the task of defining comparison rules, and the task of freezing the exact benchmark governance are different things.
+If you confuse these layers, you'll get the wrong impression, such as, ``There's a benchmark because you uploaded it to OpenNeuro,'' ``Because it's BIDS, the processed outputs are already traceable,'' ``Because the pipeline name was given, the recipe is already frozen,'' or ``Because MOABB was named, the benchmark meaning is already fixed.'' In reality, the tasks of aligning raw data, naming derivative lineage, freezing workflow and model recipes, defining comparison rules, and freezing the exact benchmark governance are different things.
 </p>
 </section>
 
@@ -91,7 +104,7 @@ If you confuse these five things, you'll get the wrong impression, such as, ``Th
 </thead>
 <tbody>
 <tr>
-<td><strong>standard</strong></td>
+<td><strong>standard (raw layout)</strong></td>
 <td>The way to place the file, name it, and write the metadata will be the same. </td>
 <td>BIDS, EEG-BIDS. </td>
 </tr>
@@ -106,7 +119,27 @@ If you confuse these five things, you'll get the wrong impression, such as, ``Th
 <td>BIDS Validator. </td>
 </tr>
 <tr>
-<td><strong>benchmark</strong></td>
+<td><strong>derivative specification / lineage</strong></td>
+<td>Keep processed outputs separate from raw and link them back to their direct sources and generating pipeline. </td>
+<td>BIDS Derivatives, <code>GeneratedBy</code>, <code>SourceDatasets</code>, <code>Sources</code>. </td>
+</tr>
+<tr>
+<td><strong>loader / converter</strong></td>
+<td>Read or write datasets in a standardized way and bridge them into the analysis library. </td>
+<td>MNE-BIDS. </td>
+</tr>
+<tr>
+<td><strong>workflow / model recipe</strong></td>
+<td>Fix the ordered steps, config values, optional branches, grouping logic, and analysis graph that generate the outputs. </td>
+<td>MNE-BIDS-Pipeline config, BIDS Apps CLI, BIDS Stats Models JSON. </td>
+</tr>
+<tr>
+<td><strong>execution / result provenance</strong></td>
+<td>Record which software, version, container, code, and activity actually produced the reported outputs and reports. </td>
+<td>NIDM-Results, pipeline reports, DataLad / BABS audit trail. </td>
+</tr>
+<tr>
+<td><strong>benchmark harness</strong></td>
 <td>Fix issues, divisions, indicators, and prohibitions to make them comparable. </td>
 <td>MOABB, MLPerf, ImageNet type operation. </td>
 </tr>
@@ -120,7 +153,7 @@ If you confuse these five things, you'll get the wrong impression, such as, ``Th
 </section>
 
 <section class="section" id="operational-stack">
-<h2 class="section-title">In practice, 4 labels are not enough, so we look at 8 layers</h2>
+<h2 class="section-title">In practice, the short labels are not enough, so we look at 11 layers</h2>
 <table class="data-table">
 <thead>
 <tr>
@@ -156,28 +189,46 @@ If you confuse these five things, you'll get the wrong impression, such as, ``Th
 <td>We do not guarantee the true value of device-side delay or stimulus presentation delay. </td>
 </tr>
 <tr>
-<td><strong>5. Conversion/Reading</strong></td>
+<td><strong>5. Derivative specification / lineage</strong></td>
+<td>BIDS Derivatives, <code>GeneratedBy</code>, <code>SourceDatasets</code>, <code>Sources</code></td>
+<td>Keep processed outputs separate from raw and make source ancestry plus generating pipeline explicit. </td>
+<td>A clean or epoched file can still be overread as self-explanatory if lineage is missing. </td>
+</tr>
+<tr>
+<td><strong>6. Conversion/Reading</strong></td>
 <td>MNE-BIDS</td>
 <td>BIDSPath, metadata extraction, reading path to MNE, format conversion when necessary. </td>
 <td>Comparison indicators and evaluation families are not fixed. </td>
 </tr>
 <tr>
-<td><strong>6. Benchmark harness</strong></td>
+<td><strong>7. Workflow / model recipe</strong></td>
+<td>MNE-BIDS-Pipeline config, BIDS Apps CLI, BIDS Stats Models JSON</td>
+<td>Fix step order, skipped or optional stages, model graph, and config values that determine derived outputs. </td>
+<td>The same raw input can still produce different derivatives when the recipe changes. </td>
+</tr>
+<tr>
+<td><strong>8. Execution / result provenance</strong></td>
+<td>NIDM-Results, pipeline reports, DataLad / BABS run records</td>
+<td>Record which software, version, container, commands, and activities actually produced the outputs being reported. </td>
+<td>A figure or score table can still be detached from the software state that created it. </td>
+</tr>
+<tr>
+<td><strong>9. Benchmark harness</strong></td>
 <td>MOABB</td>
 <td>paradigm, evaluation family, statistical comparison, cross-sectional evaluation of the same pipeline. </td>
 <td>Current rule snapshot, hidden grouping, extra-data policy, and execution constraints are not fixed unless governance documents are also frozen. </td>
 </tr>
 <tr>
-<td><strong>7. Benchmark provenance / governance</strong></td>
+<td><strong>10. Benchmark provenance / governance</strong></td>
 <td>Official homepage, rules page, submission page, leaderboard / postmortem</td>
 <td>Current benchmark version, split / randomization, hidden grouping, extra-data and pretrained-model policy, inference-stage restrictions, and later corrections. </td>
 <td>This still does not prove target-signal specificity, source-imaging truth, or operational safety outside the stated benchmark. </td>
 </tr>
 <tr>
-<td><strong>8. Learner</strong></td>
-<td>Linear classifier, Riemannian pipeline, deep model</td>
-<td>Which model was run with which preprocessing, random numbers, and hyperparameters. </td>
-<td>If 1-7 above are not fixed, it will not be a fair comparison. </td>
+<td><strong>11. Learner / runtime environment</strong></td>
+<td>Linear classifier, Riemannian pipeline, deep model, container image, lockfile</td>
+<td>Which estimator was run with which preprocessing, random numbers, runtime image, and hyperparameters. </td>
+<td>If 1-10 above are not fixed, it will not be a fair comparison. </td>
 </tr>
 </tbody>
 </table>
@@ -185,7 +236,7 @@ If you confuse these five things, you'll get the wrong impression, such as, ``Th
 <div class="note-box">
 <strong>2026-03 site rule</strong>
 <p>
-OpenNeuro treats the snapshot as a git tag of the semantic version, and PhysioNet also explicitly cites the version for each project. Therefore, on this site, we include not only the dataset name but also the <strong>snapshot / version / DOI or persistent URL</strong> in the artifact. Additionally, BIDS is a container, HED/Motion-BIDS is semantics and additional metadata, LSL is synchronization, MNE-BIDS is an input/output path, and MOABB is a comparison rule. Please don't mix these up and read that ``Since I used BIDS, I was able to get past the benchmark'' or ``Since I installed LSL, I was able to solve the hardware delay.''
+OpenNeuro treats the snapshot as a git tag of the semantic version, and PhysioNet also explicitly cites the version for each project. Therefore, on this site, we include not only the dataset name but also the <strong>snapshot / version / DOI or persistent URL</strong> in the artifact. Additionally, BIDS is a raw-data container, BIDS Derivatives is the processed-data layer, HED/Motion-BIDS is semantics and additional metadata, LSL is synchronization, MNE-BIDS is an input/output path, MNE-BIDS-Pipeline or a BIDS App is a workflow recipe, BIDS Stats Models is a model recipe, NIDM-Results is result provenance packaging, and MOABB is a comparison rule. Please don't mix these up and read that ``Since I used BIDS, I was able to get past the benchmark'' or ``Since I installed LSL, I was able to solve the hardware delay.''
 </p>
 </div>
 <div class="note-box">
@@ -276,19 +327,31 @@ The practical weakness on this page was to stop at <strong>benchmark harness</st
 <td>Put it on a shared platform like OpenNeuro or PhysioNet so it can be retrieved by third parties. </td>
 </tr>
 <tr>
-<td><strong>6. Compare with benchmarks</strong></td>
+<td><strong>6. Freeze derivative lineage</strong></td>
+<td>Keep preprocessed outputs, epochs, features, and reports as derivatives with explicit source ancestry. </td>
+</tr>
+<tr>
+<td><strong>7. Freeze workflow / model recipe</strong></td>
+<td>Record the pipeline config, optional branches, model graph, and software settings that generated the outputs. </td>
+</tr>
+<tr>
+<td><strong>8. Compare with benchmarks</strong></td>
 <td>Compare models with the same train/test split, the same metrics, and the same baseline. </td>
 </tr>
 <tr>
-<td><strong>7. Freeze benchmark provenance</strong></td>
+<td><strong>9. Freeze benchmark provenance</strong></td>
 <td>Record the active rules page, split/randomization policy, extra-data / pretrained-model policy, inference-stage restrictions, and postmortem status together with the score. </td>
+</tr>
+<tr>
+<td><strong>10. Freeze runtime / result provenance</strong></td>
+<td>Record software versions, container or lockfile, commands, reports, and result bundles so the published figure or score can be traced back to the run that made it. </td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
 <strong>This is important</strong>
 <p>
-Just by aligning to the standard, there is still no "rule for comparison." On the other hand, even if there is a benchmark, if the input shapes are different, the comparison will be broken. Both are required.
+Just by aligning to the standard, there is still no "rule for comparison." But even if there is a benchmark, the comparison can still break if derivative lineage, workflow recipe, or runtime provenance are left implicit. All of those layers matter.
 </p>
 </div>
 </section>
@@ -314,6 +377,18 @@ Just by aligning to the standard, there is still no "rule for comparison." On th
 <tr>
 <td><strong>Validator</strong></td>
 <td>Notice of violation of standards is delayed, and accidents occur immediately before sharing or during reanalysis. </td>
+</tr>
+<tr>
+<td><strong>Derivative specification / lineage</strong></td>
+<td>Processed outputs can be mistaken for raw or for each other, and later readers cannot tell which source files or branches generated them. </td>
+</tr>
+<tr>
+<td><strong>Workflow / model recipe</strong></td>
+<td>The same pipeline name can hide different optional steps, configs, and model graphs, so the rerun does not actually reproduce the same analysis. </td>
+</tr>
+<tr>
+<td><strong>Execution / result provenance</strong></td>
+<td>A figure, table, or derivative can no longer be traced back to the exact software, version, container, and commands that created it. </td>
 </tr>
 <tr>
 <td><strong>Benchmark</strong></td>
@@ -375,6 +450,18 @@ Being "publicly available" and being "comparable" are two different things. Publ
 <td>MNE-BIDS is a reading/conversion aid; fixing evaluation families and comparison statistics is a separate task. </td>
 </tr>
 <tr>
+<td>"Because the data are in BIDS, the processed outputs are already self-explanatory"</td>
+<td>Raw BIDS and BIDS derivatives are separate layers, and processed outputs still need explicit lineage and source ancestry. </td>
+</tr>
+<tr>
+<td>"Naming MNE-BIDS-Pipeline or a BIDS App already freezes the workflow"</td>
+<td>The pipeline name alone is still too coarse; config values, skipped stages, model recipe, and software version have to be frozen as well. </td>
+</tr>
+<tr>
+<td>"A containerized run already captures what the score means"</td>
+<td>Container and runtime pin help software portability, but benchmark harness and benchmark governance still remain separate objects. </td>
+</tr>
+<tr>
 <td>“Event semantics are fixed because there is `events.tsv`”</td>
 <td><code>events.tsv</code> is a container for time and columns, and condition meanings and scorer rules must be fixed separately in <code>events.json</code>, HED, and auxiliary logs. </td>
 </tr>
@@ -403,7 +490,7 @@ Being "publicly available" and being "comparable" are two different things. Publ
 </section>
 
 <section class="section" id="freeze-ids">
-<h2 class="section-title">Minimum 5 IDs that you want to fix</h2>
+<h2 class="section-title">Minimum 7 IDs that you want to fix</h2>
 <table class="data-table">
 <thead>
 <tr>
@@ -424,53 +511,74 @@ Being "publicly available" and being "comparable" are two different things. Publ
 <td>It is not possible to distinguish between standard differences and implementation differences. </td>
 </tr>
 <tr>
+<td><strong>Derivative ID</strong></td>
+<td>Derived dataset name, <code>GeneratedBy</code>, <code>SourceDatasets</code>, and direct <code>Sources</code> lineage. </td>
+<td>Preprocessed outputs can be confused with raw or with another derivative branch. </td>
+</tr>
+<tr>
+<td><strong>Workflow ID</strong></td>
+<td>MNE-BIDS-Pipeline / BIDS App / config file / model-graph version and settings. </td>
+<td>Even with the same input version, a different recipe can still generate a different result. </td>
+</tr>
+<tr>
 <td><strong>Evaluation ID</strong></td>
 <td>Within-session / cross-session / cross-subject, indicators, split seed, and prohibitions. </td>
 <td>The meaning of score will be different and fair comparison will be broken. </td>
-</tr>
-<tr>
-<td><strong>Pipeline ID</strong></td>
-<td>MNE-BIDS / MOABB / learning device / environment version, commit, and settings. </td>
-<td>Even if you input the same version, you will get different results when you rerun it. </td>
 </tr>
 <tr>
 <td><strong>Benchmark Governance ID</strong></td>
 <td>Rules URL or archived snapshot, split / randomization policy, hidden grouping note, extra-data / pretrained-model policy, inference-stage restrictions, and postmortem status. </td>
 <td>The benchmark title will stay too coarse, and the same leaderboard name may hide different scientific meanings. </td>
 </tr>
+<tr>
+<td><strong>Runtime / Result Provenance ID</strong></td>
+<td>Software version, container or lockfile, command log, and result bundle or report identifier. </td>
+<td>The published figure or score cannot be traced back to the exact run that created it. </td>
+</tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="how-to-read">
-<h2 class="section-title">7 questions when reading strong arguments</h2>
+<h2 class="section-title">9 questions when reading strong arguments</h2>
 <ol>
 <li><strong>What is the input standard?</strong> Check to see if the format is consistent using BIDS, etc. </li>
 <li><strong>What version was used:</strong>See if the snapshot, version, DOI, and acquisition date are fixed. </li>
 <li><strong>What are the event semantics and clock domain: </strong>Look at <code>trial_type</code>, HED, scorer rule, LSL/TTL/photodiode, delay/jitter audits. </li>
+<li><strong>Did they separate raw and derivative?</strong>See if processed outputs remain explicit derivatives with followable lineage. </li>
 <li><strong>What was used to read/write:</strong>Look at the loader/transformer and see if its version is specified. </li>
+<li><strong>What workflow or model recipe generated the outputs?</strong>Look for config files, optional branches, model graph, and software settings. </li>
+<li><strong>What runtime or result-provenance record exists?</strong>Check container / lockfile, command logs, reports, or result bundles. </li>
 <li><strong>What benchmark harness was used?</strong>See if evaluation family, metrics, and comparison statistics are fixed. </li>
 <li><strong>What benchmark provenance was in force?</strong>Check the active rules snapshot, split/randomization, extra-data / checkpoint policy, inference-stage restrictions, and postmortem status. </li>
-<li><strong>Did you separate raw and derivative?</strong>See if you can follow the lineage of preprocessed data. </li>
 </ol>
 </section>
 
 <section class="section" id="references">
 <h2 class="section-title">References and official pages</h2>
 <ul>
+<li><a href="https://doi.org/10.1038/sdata.2016.44" target="_blank">Gorgolewski et al. (2016), BIDS</a></li>
 <li><a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/events.html" target="_blank">BIDS Specification: Task events</a></li>
 <li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS Specification: Electroencephalography</a></li>
+<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/dataset-description.html" target="_blank">BIDS Specification: dataset_description, GeneratedBy, and SourceDatasets</a></li>
+<li><a href="https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html" target="_blank">BIDS Derivatives: common data types and lineage metadata</a></li>
+<li><a href="https://bids-standard.github.io/stats-models/index.html" target="_blank">BIDS Stats Models Specification</a></li>
 <li><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019), EEG-BIDS</a></li>
 <li><a href="https://doi.org/10.1007/s12021-021-09513-7" target="_blank">Robbins et al. (2021), HED for FAIR event annotation</a></li>
 <li><a href="https://doi.org/10.1038/s41597-025-05791-2" target="_blank">Hermes et al. (2025), HED library schema for EEG data annotation</a></li>
 <li><a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025), The lab streaming layer for synchronized multimodal recording</a></li>
 <li><a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Jeung et al. (2024), Motion-BIDS</a></li>
+<li><a href="https://doi.org/10.7554/eLife.71774" target="_blank">Markiewicz et al. (2021), OpenNeuro</a></li>
 <li><a href="https://docs.openneuro.org/git.html" target="_blank">OpenNeuro Docs: Git access and snapshots</a></li>
 <li><a href="https://docs.openneuro.org/user_guide.html" target="_blank">OpenNeuro Docs: Dataset landing page and snapshot metadata</a></li>
 <li><a href="https://physionet.org/about/" target="_blank">PhysioNet: About and citation policy</a></li>
 <li><a href="https://physionet.org/about/content/" target="_blank">PhysioNet: Resources and citation guidance</a></li>
 <li><a href="https://doi.org/10.21105/joss.01896" target="_blank">Appelhoff et al. (2019), MNE-BIDS</a></li>
 <li><a href="https://mne.tools/mne-bids/stable/generated/mne_bids.write_raw_bids.html" target="_blank">MNE-BIDS Docs: write_raw_bids</a></li>
+<li><a href="https://mne.tools/mne-bids-pipeline/stable/" target="_blank">MNE-BIDS-Pipeline Docs</a></li>
+<li><a href="https://doi.org/10.1371/journal.pcbi.1005209" target="_blank">Gorgolewski et al. (2017), BIDS Apps</a></li>
+<li><a href="https://doi.org/10.1162/imag_a_00074" target="_blank">Zhao et al. (2024), BABS and large-scale BIDS-App audit trails</a></li>
+<li><a href="https://doi.org/10.1038/sdata.2016.102" target="_blank">Maumet et al. (2016), NIDM-Results</a></li>
 <li><a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant (2018), MOABB</a></li>
 <li><a href="https://moabb.neurotechx.com/docs/index.html" target="_blank">MOABB Docs</a></li>
 <li><a href="https://moabb.neurotechx.com/docs/auto_examples/paradigm_examples/index.html" target="_blank">MOABB Docs: paradigm and evaluation examples</a></li>
