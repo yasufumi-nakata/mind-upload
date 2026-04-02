@@ -5,7 +5,7 @@ description: "A practical glossary of the terms used most often in Mind-Upload, 
 article_type: Reference
 subtitle: "Start by keeping the words straight"
 author: Mind Uploading Research Project
-last_updated: "2026-04-02"
+last_updated: "2026-04-03"
 note: "Living document"
 audience: "Readers who do not want to get stuck on terminology and anyone trying to avoid category mistakes"
 reading_time: "3 to 10 minutes for only the necessary items"
@@ -19,6 +19,7 @@ page_highlights:
   - "It now also makes the effective-connectivity stop line explicit at the front door: effective-connectivity route card, observed-subsystem closure / latent-confound audit, node-definition policy, processing / first-level design policy, sampling / transformation sensitivity, reliability window, and model recovery / family comparison are no longer left implicit."
   - "It now also includes the temporal-bridge stop line added in the 2026-03-30 sync, namely the split between fast state labels and slow internal milieu."
   - "It now also fixes tractography-specific stop-line terms such as macro pathway prior and tractography route card, so living-human connectome language is not overread."
+  - "It now also includes the electrical-state stop-line terms needed after the 2026-04-03 human-clue split, such as shared extracellular / electrical state, human ECS proxy clue, and human perturbation-conditioned clue."
   - "It is especially careful about pairs that sound similar but should not be collapsed, such as observability / identifiability / direct validation and functional connectivity / effective connectivity / causal wiring."
   - "If a term blocks your reading, this page is meant to get you unstuck quickly and send you back to the main text."
 known_points:
@@ -29,6 +30,7 @@ known_points:
   - "Support-state proxy is still too coarse unless quantity type or route role is also named explicitly."
   - "Readers also need a term-level split between fast state labels such as movement / arousal and slow internal milieu such as circadian phase, glucocorticoid exposure, and insulin / metabolic regime."
   - "Readers also need a term-level stop line between connectome as structural scaffold and living-human tractography as an acquisition- and graph-conditioned macro pathway prior."
+  - "Readers now also need a term-level split between shared extracellular / electrical state itself, human diffusion-MRI ECS clues, and human perturbation-conditioned clues, because those do not raise the claim ceiling in the same way."
   - "The newer route-card names are not decorative labels; they each name a distinct failure mode such as upstream visibility loss, cross-stack shared-driver risk, or broken state continuity across a sequential bridge."
   - "This page serves as an entry point for short definitions and a way to return to the main text."
 unknown_points:
@@ -485,6 +487,18 @@ If <strong>state annotation</strong>, <strong>state continuity</strong>, <strong
 <tr>
 <td><strong>Support-state proxy</strong></td>
 <td>A human route that constrains slow maintenance variables only at a coarse level. Its meaning still depends on quantity type or route role: energetic balance vs exchange flux vs NAD dynamics; quantity-defined ionic or myelin routes; BBB water-exchange vs tracer-specific transport; target-defined astrocyte-related proxies; or macro clearance-transport routes such as CSF mobility, net-flow, contrast-influx, intrathecal clearance, and model-based efflux. It is stronger than saying “nothing is visible,” but weaker than local controller, glial substrate-routing identity, astrocyte-ensemble state, cell-specific immune control, or other cell-specific ground truth.</td>
+</tr>
+<tr>
+<td><strong>Shared extracellular / electrical state</strong></td>
+<td>The non-chemical coordination layer that includes gap-junction coupling, endogenous field effects, extracellular-space geometry / diffusion barriers / osmotic regime, and inhibitory-driving-force state. It should not be collapsed into the chemical connectome, into generic ionic state, or into one generic synchrony variable.</td>
+</tr>
+<tr>
+<td><strong>Human ECS proxy clue</strong></td>
+<td>A bounded human diffusion-MRI clue that is compatible with changes in extra-axonal / extracellular volume or sleep-linked interstitial-fluid / glymphatic-like state, but is not a direct local readout of synapse-adjacent extracellular geometry. On this site, wakefulness-related diffusion clues and sleep-conditioned higher-order diffusion clues are different route classes rather than one interchangeable human ECS row.</td>
+</tr>
+<tr>
+<td><strong>Human perturbation-conditioned clue</strong></td>
+<td>A human study in which a perturbation changes behavior or oscillation coupling in a way consistent with a hidden mechanism, while still not directly identifying which cells or local state variable changed. It is stronger than having no human evidence, but weaker than a direct local assay or route-free state identification.</td>
 </tr>
 <tr>
 <td><strong>Thermal-state</strong></td>
