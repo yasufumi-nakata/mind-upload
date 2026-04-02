@@ -19,16 +19,16 @@ reading_time: "55-80分"
 - 更新日: 2026-04-02
 - 出典: `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`（60行を再構成）
 
-## 2026-04-02 11:05 JST latest actual-pull route-hold note
+## 2026-04-02 18:06 JST latest actual-pull route-hold note
 
-This run still does not change the current public six-question batch. An actual-pull reread after `mind-upload@208e59e2180c`, `EEG-DATA@00d85380f3fd`, and `auto-research-funds@f4ba35518400` still leaves the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
+This run still does not change the current public six-question batch. An actual-pull reread after `mind-upload@85b6603b569b`, `EEG-DATA@a7f9390492fd`, and `auto-research-funds@b6c0d0f4eeb7` still leaves the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
 
-- The newest pulled deltas still deepen metadata and support pages rather than replacing the current route family: `mind-upload` refreshes the 10:07 route-hold packets, `EEG-DATA` deep-dives the maintained `ChineseEEG-2` release plus the public `auditory-eeg` family while still reporting `30,887` merged-unique rows, `28,850` high-confidence rows, and `24,875` immediately usable rows, and `auto-research-funds` keeps the same practical shortlist.
+- The newest pulled deltas still deepen metadata and support pages rather than replacing the current route family: `mind-upload` only syncs `U7-2` public bridge wording, `EEG-DATA` deep-dives `OSF gazx2` confidence EEG metadata and `OpenNeuro ds007081` while now reporting `30,892` merged-unique rows, `28,855` high-confidence rows, and `24,880` directly usable rows in the current README snapshot, and `auto-research-funds` refreshes its README summary to `8,590` aid IDs, `4,301` rows, and `3,951` official-source rows without changing the practical shortlist.
 - Recounting the `### Ux-y` headings on this page still returns `60`, so this run keeps the one-row-at-a-time dossier structure intact.
 - The public six still stay `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
 - The solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
-- The route-safe access reading stays narrow in one important way: the speech-side public-open backup ladder is now easier to justify row-by-row, but `D10` still stays the only clear public-open primary anchor while `D03 / D02 / D01` still stay gated-support planning anchors.
-- Browser-level live checks with a browser user agent still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `mind-upload-rq-solvability-bridge.html`; the current `Last-Modified` header was `Thu, 02 Apr 2026 01:22:44 GMT` on those public surfaces.
+- The route-safe access reading stays narrow in one important way: `D10` still stays the only clear public-open primary anchor while `D03 / D02 / D01` still stay gated-support planning anchors, and none of the latest repo-wide carry-forward closes the recall-validity gap under `U13-5` or the rerun-support gap under `U14-4 / U14-2`.
+- Browser-level live checks with a browser user agent still returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `mind-upload-rq-solvability-bridge.html`; the current `Last-Modified` header was `Thu, 02 Apr 2026 08:22:50 GMT` on those public surfaces.
 - The funding bridge still stays narrow: `Kura Fund`, `Nakatani Foundation graduate scholarship`, and `Kashinome Scholarship` remain the active near-term lanes, `Nakatani Foundation research grant` remains next-cycle watch, `Secom General Research Grant` remains closed for the current cycle, and a fresh Todoist `api/v1/sync(items, projects)` audit (`items=203`, `projects=2`, `Kura=2`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`) still did not justify a new task.
 
 ## 2026-04-02 11:09 JST latest actual-pull route-hold note
