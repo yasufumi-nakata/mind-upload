@@ -5,7 +5,7 @@ description: "This page organizes how to read EEG foundation / self-supervised m
 article_type: Wiki
 subtitle: "Read advances in representation learning separately from claims that still need to be stopped"
 author: Mind Uploading Research Project
-last_updated: "2026-03-30"
+last_updated: "2026-04-02"
 note: "Technical / natural science only"
 audience: "Readers who want to assess EEG foundation models such as LaBraM, BIOT, EEGPT, and BENDR without overclaiming"
 reading_time: "10-15 min"
@@ -20,6 +20,7 @@ page_highlights:
   - "Benchmark object, independent prediction unit, grouped hold-out unit, and inference-stage budget are separate fields; one leaderboard name does not fix all four."
   - "The official EEG Challenge leaderboard later disclosed a split-construction error in Challenge 2, so benchmark provenance here includes sample randomization, hidden grouping, and inference-stage constraints rather than only benchmark name."
   - "A setup-agnostic foundation model or a very large pretraining corpus is not yet shortcut-resistant transfer; subject / site / reference / protocol shortcuts still need an explicit specificity audit."
+  - "A unified spatial embedding or channel-permutation-equivariant backbone is still not a shared physiological coordinate system; coordinate route, reference family, and omitted-channel policy remain separate evidence fields."
   - "Larger models do not automatically win; rankings move with parameter efficiency, training time, and benchmark design."
   - "To preserve comparability, a standard model card is not enough; a Pretraining Card is also required."
   - "A pretraining corpus is also a dataset, so results without an overlap audit cannot be read safely."
@@ -33,6 +34,7 @@ known_points:
   - "Benchmark object, independent prediction unit, grouped hold-out unit, and inference-stage budget can all change the meaning of the same leaderboard entry."
   - "Official challenge operations can themselves expose hidden subject-order shortcuts or score-definition changes, so benchmark postmortems are treated here as primary evidence about comparability rather than as afterthoughts."
   - "A successful foundation model cannot be read directly as source identifiability or WBE state-completeness."
+  - "Recent heterogeneous-device papers show that layout compatibility itself is still an active model-design target, which means geometry-route equivalence should not be silently assumed."
 unknown_points:
   - "It is still unsettled which pretraining objective is the most stable across broad downstream families."
   - "There is still no default path that simultaneously satisfies cross-day, cross-device, cross-task, and longitudinal deployability."
@@ -41,6 +43,7 @@ unknown_points:
   - "There is still no fixed common standard for reporting raw-recording ancestry or grouped hold-out unit together with the benchmark object."
   - "It is not yet a settled law when targeted diversity beats indiscriminate scale."
   - "It also remains unresolved how to show that a pretrained EEG representation is resisting identity / setup shortcuts rather than merely tolerating them on one benchmark."
+  - "It also remains unresolved how far reference-family shifts, coordinate-route mismatch, and label-limited clinical adaptation can be handled without heavy downstream rescue."
 wiki_links:
   - label: "Wiki: Baselines, preregistration, and model cards"
     url: "/wiki/baselines-prereg-and-model-cards.html"
@@ -99,6 +102,13 @@ This was the next weak point on this page. <a href="https://arxiv.org/abs/2510.2
 </div>
 
 <div class="note-box">
+<strong>A unified spatial embedding is not yet a common physiological coordinate system</strong>
+<p>
+This was the next remaining compression on this page. <a href="https://arxiv.org/abs/2507.14141" target="_blank">Han et al. (2025)</a> targeted <strong>channel-permutation equivariance</strong> so arbitrary electrode configurations could be handled more robustly, <a href="https://arxiv.org/abs/2510.12515" target="_blank">Chen et al. (2025)</a> introduced a <strong>coordinate-based spatial embedding</strong> for more than <strong>150 electrode layouts</strong>, and <a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025)</a> pushed further toward <strong>any-setup pretraining</strong>. Those are real advances in <strong>recording-frame compatibility</strong>. But they still do not prove that different montages, coordinate routes, and reference families have become one shared <strong>physiology-preserving coordinate system</strong>. <a href="https://arxiv.org/abs/2602.17251" target="_blank">Ma et al. (2026)</a> then showed that even strong EEG foundation models can generalize poorly when <strong>subject-level supervision is limited</strong> unless extra adaptation structure is added, while <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> showed that split construction, checkpoint selection, segment length, and normalization can still dominate comparison. Therefore, on this site, <strong>layout support</strong>, <strong>reference-family robustness</strong>, <strong>coordinate-route disclosure</strong>, and <strong>label-limited adaptation burden</strong> remain separate fields rather than being collapsed into one word such as <code>generalization</code>.
+</p>
+</div>
+
+<div class="note-box">
 <strong>Benchmark object, independent unit, and hold-out unit are separate axes</strong>
 <p>
 This was the next remaining weakness on this page. The official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge homepage</a> states that <strong>Challenge 1</strong> predicts <strong>response time from CCD trials</strong>, whereas <strong>Challenge 2</strong> predicts <strong>externalizing scores from EEG across multiple paradigms</strong>. The official <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a> then add that Challenge 1 is scored <strong>per trial</strong>, submissions are <strong>inference-only</strong>, and models must run on a <strong>single GPU with 20 GB memory</strong>. <a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">Lee et al. (2025)</a> fine-tuned large brainwave foundation models across <strong>memory tasks</strong> and <strong>sleep stage classification</strong>, <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a> explicitly compared <strong>leave-one-subject-out cross-subject evaluation</strong> with <strong>within-subject few-shot calibration</strong>, and <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> showed that <strong>six benchmark inconsistencies</strong> can reverse rankings on identical datasets by up to <strong>24 percentage points</strong>. Therefore, on this site, benchmark name, predicted object, independent prediction unit, grouped hold-out unit, and operations budget are separate disclosure fields rather than one merged "benchmark provenance" box.
@@ -149,6 +159,49 @@ The older wording on this page already required benchmark-object disclosure, but
 <td>Clinical differential diagnosis from interictal EEG, including epilepsy versus mimickers.</td>
 <td>The clinically interesting object is subject-level diagnosis, but the paper also shows that split construction, checkpoint selection, segment length, and normalization can dominate comparison.</td>
 <td>Evidence that protocol differences can dominate rankings, not an accepted law of clinical transfer.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="setup-equivalence">
+<h2 class="section-title">2026-04-02 correction: setup compatibility is not physiological equivalence</h2>
+<p>
+The older wording on this page already warned against shortcut-resistant overclaims, but one practical shortcut was still left open. A reader could still move from <strong>heterogeneous-device support</strong> to <strong>a shared physiology-preserving representation</strong> without naming which part of the cross-setup gap had actually been closed. The current 2025-2026 model literature does not support that shortcut. On this site, recording-frame compatibility and physiology-side equivalence are now kept separate explicitly.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Case</th>
+<th>What the paper directly advances</th>
+<th>What still must be disclosed separately on this site</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DIVER-0 (2025)</strong><br>workshop / arXiv</td>
+<td>Channel-permutation-equivariant modeling and robust adaptation to <strong>arbitrary electrode configurations unseen during pretraining</strong>.</td>
+<td>Coordinate route, reference family, omitted-channel policy, downstream adaptation regime, and whether the target variable stayed identifiable rather than merely layout-tolerant.</td>
+</tr>
+<tr>
+<td><strong>HEAR (2025)</strong><br>arXiv</td>
+<td>A coordinate-based embedding that supports <strong>heterogeneous EEG devices</strong>, <strong>varying electrode counts</strong>, and more than <strong>150 layouts</strong>.</td>
+<td>Whether the geometry route is subject-specific or template-based, whether reference mismatch was neutralized or only absorbed, and what claim ceiling remains for cross-montage physiology.</td>
+</tr>
+<tr>
+<td><strong>REVE (2025)</strong><br>accepted poster / arXiv</td>
+<td>Large-scale setup-agnostic pretraining across <strong>92 datasets</strong> and more than <strong>60,000 hours</strong>.</td>
+<td>Overlap audit, covered reference-system distribution, coordinate-route disclosure, and whether a downstream gain survived shortcut slices rather than only mixed-corpus transfer.</td>
+</tr>
+<tr>
+<td><strong>SCOPE (2026)</strong><br>arXiv</td>
+<td>A structured adaptation route for <strong>label-limited cross-subject settings</strong> where EEG foundation models otherwise generalize poorly.</td>
+<td>The label budget, pseudo-label / prototype burden, and whether the result is a property of the pretrained representation or of extra downstream rescue.</td>
+</tr>
+<tr>
+<td><strong>PRISM (2026)</strong><br>arXiv</td>
+<td>Clinical-transfer evidence plus a warning that <strong>split construction</strong>, <strong>checkpoint selection</strong>, <strong>segment length</strong>, and <strong>normalization</strong> can dominate rankings.</td>
+<td>Benchmark provenance, independent hold-out unit, preprocessing path, and the exact comparison regime before any statement about portable clinical generalization.</td>
 </tr>
 </tbody>
 </table>
@@ -278,9 +331,9 @@ The biggest weakness that needed correction here was that <strong>accepted model
 <td>The covered population, device types, clinical vs. lab setting, electrode schema, and the distribution of reference systems.</td>
 </tr>
 <tr>
-<td><strong>G3: harmonization</strong></td>
-<td>EEG differs greatly in channel count, reference, sample rate, and window length, and performance can move purely because of formatting choices.</td>
-<td>Channel map, reference, resampling, token length, and the policy for missing channels / missing segments.</td>
+<td><strong>G3: harmonization / geometry route</strong></td>
+<td>EEG differs greatly in channel count, electrode geometry, reference family, sample rate, and window length, and even a layout-tolerant model does not automatically erase those differences.</td>
+<td>Channel map, electrode-coordinate route or template, reference family, resampling, token length, and the policy for missing, omitted, or interpolated channels / segments.</td>
 </tr>
 <tr>
 <td><strong>G4: adaptation regime</strong></td>
@@ -349,9 +402,9 @@ For foundation / self-supervised results, this site requires a <strong>Pretraini
 <td>You may misread the number of datasets as recording diversity itself.</td>
 </tr>
 <tr>
-<td><strong>Harmonization</strong></td>
-<td>Channel schema, reference, sample rate, tokenization, normalization, and missing-value policy.</td>
-<td>You may misread preprocessing differences as model-capability differences.</td>
+<td><strong>Harmonization / Geometry Route</strong></td>
+<td>Channel schema, electrode-coordinate route or template, reference family, sample rate, tokenization, normalization, and missing / omitted / interpolated-channel policy.</td>
+<td>You may misread recording-frame translation as physiology-preserving model capability.</td>
 </tr>
 <tr>
 <td><strong>Objective</strong></td>
@@ -411,6 +464,7 @@ For foundation / self-supervised results, this site requires a <strong>Pretraini
 <li><strong>Foundation-model results are not exempt from split auditing:</strong> independence must be checked including the pretraining corpus.</li>
 <li><strong>We do not hide population / setup diversity:</strong> we report not just the number of datasets, but which recording distributions were actually included.</li>
 <li><strong>We do not hide format harmonization:</strong> channel / reference / sampling harmonization must always be reported.</li>
+<li><strong>We do not read heterogeneous-device support as physiology equivalence:</strong> coordinate route, reference family, and omitted-channel policy stay visible even when a model accepts arbitrary layouts.</li>
 <li><strong>We do not hide the amount of adaptation:</strong> linear probing, full fine-tuning, and TTT are not all listed as the same kind of "transfer success."</li>
 <li><strong>We do not hide benchmark object:</strong> window classification, event detection, sequence labeling, subject-level regression, and retrieval-like tasks are not compressed into one frontier score.</li>
 <li><strong>We do not hide independent units or grouped hold-outs:</strong> trial, epoch, recording, and subject are different prediction objects and need separate disclosure.</li>
@@ -442,8 +496,11 @@ For foundation / self-supervised results, this site requires a <strong>Pretraini
 <li>EEG Foundation Challenge (2025). Leaderboard. <a href="https://eeg2025.github.io/leaderboard/" target="_blank">official leaderboard / postmortem</a></li>
 <li>Xiong, W., Li, J., Li, J., &amp; Zhu, K. (2025). EEG-FM-Bench: A Comprehensive Benchmark for the Systematic Evaluation of EEG Foundation Models. <em>arXiv</em>. <a href="https://arxiv.org/abs/2508.17742" target="_blank">arXiv:2508.17742</a></li>
 <li>El Ouahidi, Y., Lys, J., Thölke, P., Farrugia, N., Pasdeloup, B., Gripon, V., Jerbi, K., &amp; Lioi, G. (2025). REVE: A Foundation Model for EEG -- Adapting to Any Setup with Large-Scale Pretraining on 25,000 Subjects. <em>accepted poster / arXiv manuscript</em>. <a href="https://arxiv.org/abs/2510.21585" target="_blank">arXiv:2510.21585</a></li>
+<li>Han, D. D., Lee, A. L., Lee, T., Gwon, Y., Lee, S., Lee, S., Park, D. K., Yoo, S., Cha, J., &amp; Chung, C. K. (2025). DIVER-0: A Fully Channel Equivariant EEG Foundation Model. <em>ICML 2025 Workshop on GenBio / arXiv manuscript</em>. <a href="https://arxiv.org/abs/2507.14141" target="_blank">arXiv:2507.14141</a></li>
+<li>Chen, Z., Qin, C., You, W., Liu, R., Chu, C., Yang, R., Tan, K. C., &amp; Wu, J. (2025). HEAR: An EEG Foundation Model with Heterogeneous Electrode Adaptive Representation. <em>arXiv preprint</em>. <a href="https://arxiv.org/abs/2510.12515" target="_blank">arXiv:2510.12515</a></li>
 <li>Han, D. D., Gwon, Y., Lee, A. L., et al. (2025). DIVER-1: Deep Integration of Vast Electrophysiological Recordings at Scale. <em>under-review / arXiv manuscript</em>. <a href="https://arxiv.org/abs/2512.19097" target="_blank">arXiv:2512.19097</a></li>
 <li>Wang, S., Deng, Y., Bao, Z., Zhan, X., &amp; Duan, Y. (2025). NeuroTTT: Bridging Pretraining-Downstream Task Misalignment in EEG Foundation Models via Test-Time Training. <em>arXiv preprint</em>. <a href="https://arxiv.org/abs/2509.26301" target="_blank">arXiv:2509.26301</a></li>
+<li>Ma, J., Wu, F., Xing, Y., Lin, Q., Liu, T., Liu, C., Jia, Z., &amp; Feng, M. (2026). Structured Prototype-Guided Adaptation for EEG Foundation Models. <em>arXiv preprint</em>. <a href="https://arxiv.org/abs/2602.17251" target="_blank">arXiv:2602.17251</a></li>
 <li>Lahiri, J. B., Runwal, P., Kulkarni, A., Jain, M., Mishra, A. R., Panwar, S., &amp; Singh, S. (2026). PRISM: Exploring Heterogeneous Pretrained EEG Foundation Model Transfer to Clinical Differential Diagnosis. <em>arXiv preprint</em>. <a href="https://arxiv.org/abs/2603.02268" target="_blank">arXiv:2603.02268</a></li>
 <li>Liu, D., Chen, Y., Chen, Z., Cui, Z., Wen, Y., An, J., Luo, J., &amp; Wu, D. (2026). EEG Foundation Models: Progresses, Benchmarking, and Open Problems. <em>arXiv preprint</em>. <a href="https://arxiv.org/abs/2601.17883" target="_blank">arXiv:2601.17883</a></li>
 <li>Chaibub Neto, E., Pratap, A., Perumal, T. M., et al. (2019). Detecting the impact of subject characteristics on machine learning-based diagnostic applications. <em>npj Digital Medicine</em>, 2, 99. <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">doi:10.1038/s41746-019-0178-x</a></li>

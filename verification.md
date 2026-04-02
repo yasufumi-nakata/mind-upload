@@ -5,7 +5,7 @@ description: "A blueprint of standards, benchmarks, registries, and audits for t
 article_type: Platform
 subtitle: "Use the logic of PDB x BIDS x PhysioNet x OSF to define WBE success conditions and reproducible progress"
 author: Mind Uploading Research Project
-last_updated: "2026-04-01"
+last_updated: "2026-04-02"
 note: "Operational Specification"
 audience: "Readers who want the site's core policy and anyone checking what must exist before progress can honestly be claimed"
 reading_time: "15-25 min"
@@ -18,7 +18,7 @@ page_highlights:
   - "For decode / biomarker scores, the Specificity & Shortcut Card separates the target neural variable from nuisance routes and audits subject / session fingerprint plus acquisition-distribution shortcuts independently."
   - "This page explains why collecting data alone is not the same as making progress."
   - "The next bottleneck after observability is identifiability-driven experiment design: extra modalities do not count as progress unless they rule out competing internal-state solutions."
-  - "For foundation / self-supervised EEG results, the Pretraining Card fixes corpus identity, overlap audit, setup diversity, harmonization, adaptation regime, benchmark object / supervision unit, benchmark provenance including split randomness / hidden grouping and inference-stage budget, and scale / efficiency before any transfer claim is read strongly."
+  - "For foundation / self-supervised EEG results, the Pretraining Card fixes corpus identity, overlap audit, setup diversity, harmonization including geometry route / reference family / omitted-channel policy, adaptation regime, benchmark object / supervision unit, benchmark provenance including split randomness / hidden grouping and inference-stage budget, and scale / efficiency before any transfer claim is read strongly."
   - "For brain-to-text and speech decode, the Neural Contribution Card fixes task constraint, language prior, candidate set, no-brain / no-LM / shuffle baselines, and subject cooperation."
   - "For invasive language BCIs, communication claims are now also route-typed as throughput / expressivity, transfer initialization, bounded fixed-decoder slices, or adaptive rescue before any durability claim is read strongly."
   - "For multimodal or atlas-prior results, the Fusion Card is added on top of the Observability Budget so acquisition relation, synchronization, effective-window / temporal-kernel relation, fusion model, availability / complete-case slice, hemodynamic route family including vascular-state / CVR audit versus quantity bridge, transfer window, and external validation are fixed explicitly."
@@ -2025,8 +2025,8 @@ The remaining weakness after adding the <strong>Observability Budget</strong> an
 </tr>
 <tr>
 <td><strong>harmonization policy</strong></td>
-<td>Report channel mapping, reference handling, sample-rate conversion, token length, normalization, and missing-channel / missing-segment policy.</td>
-<td>Formatting choices can be misread as model-capability differences.</td>
+<td>Report channel mapping, electrode-coordinate route or template, reference family, sample-rate conversion, token length, normalization, and missing / omitted / interpolated-channel or segment policy.</td>
+<td>Recording-frame translation can be misread as physiology-preserving model capability.</td>
 </tr>
 <tr>
 <td><strong>objective / inductive bias</strong></td>
