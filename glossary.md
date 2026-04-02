@@ -16,6 +16,7 @@ page_highlights:
   - "It now includes the front-door verification terms added in the March 2026 re-audit, such as claim ceiling, shortcut auditing, maintenance-state, and vascular-state / CVR audit."
   - "It now also includes the human-observability and support-state terms needed after the late-March and early-April 2026 deepening passes, such as proxy class, route maturity / model burden, route role, calibrator role, support-state proxy, glial substrate-routing, target-defined astrocyte-related proxy, and macro clearance-transport proxy family."
   - "It now also defines the newer route-card semantics added in the late-March 2026 passes, such as field-formation wall, Fusion Card, Human Proxy Composition Card, shared-driver audit, strongest single row, and State-Continuity Bridge Card."
+  - "It now also makes the effective-connectivity stop line explicit at the front door: effective-connectivity route card, observed-subsystem closure / latent-confound audit, node-definition policy, processing / first-level design policy, sampling / transformation sensitivity, reliability window, and model recovery / family comparison are no longer left implicit."
   - "It now also includes the temporal-bridge stop line added in the 2026-03-30 sync, namely the split between fast state labels and slow internal milieu."
   - "It now also fixes tractography-specific stop-line terms such as macro pathway prior and tractography route card, so living-human connectome language is not overread."
   - "It is especially careful about pairs that sound similar but should not be collapsed, such as observability / identifiability / direct validation and functional connectivity / effective connectivity / causal wiring."
@@ -24,6 +25,7 @@ known_points:
   - "Many misunderstandings can be avoided simply by reducing terminology confusion."
   - "It is especially important to distinguish between decode/emulate, correlation/causation, functional connectivity/effective connectivity/causal wiring, observability/identifiability, model fit/direct validation, and brain signal/language prior."
   - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, glial substrate-routing, astrocyte-state, target-defined astrocyte-related proxy, clearance / immune support, macro clearance-transport proxy family, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, route-role, route-maturity, and calibrator-role language."
+  - "For effective connectivity, candidate model space alone is still too coarse; observed-subsystem closure, node-definition policy, processing / first-level design policy, sampling / transformation sensitivity, model recovery, reliability window, and abstention each carry a different failure mode."
   - "Support-state proxy is still too coarse unless quantity type or route role is also named explicitly."
   - "Readers also need a term-level split between fast state labels such as movement / arousal and slow internal milieu such as circadian phase, glucocorticoid exposure, and insulin / metabolic regime."
   - "Readers also need a term-level stop line between connectome as structural scaffold and living-human tractography as an acquisition- and graph-conditioned macro pathway prior."
@@ -227,6 +229,13 @@ On this site, those are different terms. <strong>Glial substrate-routing</strong
 <strong>When the newer card names start piling up</strong>
 <p>
 If names such as <strong>field-formation wall</strong>, <strong>Fusion Card</strong>, <strong>Human Proxy Composition Card</strong>, <strong>shared-driver audit</strong>, <strong>strongest single row</strong>, or <strong>State-Continuity Bridge Card</strong> start appearing faster than they can be digested, use this glossary to keep the failure modes separate. These terms are not just site jargon: they mark different reasons why <strong>same-session</strong>, <strong>multimodal</strong>, <strong>same-subject</strong>, or <strong>proxy-rich</strong> still may fail to raise the claim ceiling.
+</p>
+</div>
+
+<div class="note-box">
+<strong>When effective-connectivity words start sounding too close to discovered wiring</strong>
+<p>
+If terms such as <strong>effective-connectivity route card</strong>, <strong>observed-subsystem closure / latent-confound audit</strong>, <strong>node-definition policy</strong>, <strong>processing / first-level design policy</strong>, <strong>sampling / transformation sensitivity</strong>, <strong>reliability window</strong>, or <strong>model recovery / family comparison</strong> start appearing faster than they can be digested, that is a sign the site is trying to stop a real overread. On this site, a directed graph is not promoted beyond a <strong>model-conditioned causal hypothesis</strong> until those terms are disclosed. If that distinction is what you need next, go to <a href="wiki/observation-to-estimation.html#effective-connectivity-route-card">Wiki: effective-connectivity route card</a>, <a href="faq.html">FAQ</a>, and <a href="verification.html#observability-budget">Verification: Observability Budget</a>.
 </p>
 </div>
 
@@ -667,7 +676,35 @@ If <strong>state annotation</strong>, <strong>state continuity</strong>, <strong
 </tr>
 <tr>
 <td><strong>Effective connectivity</strong></td>
-<td>A model-conditioned claim about directed influence among named nodes. It is stronger than undirected dependence, but it still depends on candidate model space, observation assumptions, and validation.</td>
+<td>A model-conditioned claim about directed influence among named nodes. It is stronger than undirected dependence, but candidate model space alone is not enough: observed-subsystem closure / latent-confound audit, node-definition policy, processing / first-level design policy, sampling / transformation sensitivity, validation, reliability window, and abstention still shape the safe claim ceiling.</td>
+</tr>
+<tr>
+<td><strong>Effective-connectivity route card</strong></td>
+<td>The disclosure rule for directed-graph claims. It asks for candidate model space, observed-subsystem closure / latent-confound audit, node-definition policy, processing / first-level design policy, sampling / transformation sensitivity, family comparison or model recovery, held-out perturbation / external validation, reliability window, and abstention boundary before a graph is read as more than a model-conditioned causal hypothesis.</td>
+</tr>
+<tr>
+<td><strong>Observed-subsystem closure / latent-confound audit</strong></td>
+<td>A check on whether the recorded nodes and declared inputs are enough for the causal claim being made, or whether hidden nodes, common drives, or unknown inputs could still generate the same directed pattern. It stops a graph fit from being overread as if the observed subsystem were automatically closed.</td>
+</tr>
+<tr>
+<td><strong>Node-definition policy</strong></td>
+<td>The rule for how graph nodes were chosen and represented, such as atlas parcels, functionally localized ROIs, source-space regions, or latent-state variables. Because directed estimates can move when node boundaries or functional accuracy change, this policy is part of the claim rather than an implementation detail.</td>
+</tr>
+<tr>
+<td><strong>Processing / first-level design policy</strong></td>
+<td>The declared preprocessing and first-level modeling choices that shape the input to the effective-connectivity estimator, such as GLM design, activation contrast, nuisance regression, filtering, deconvolution, or ROI-extraction policy. On this site, those choices are not silent defaults because reasonable processing changes can materially alter connectivity strength and parameter certainty.</td>
+</tr>
+<tr>
+<td><strong>Sampling / transformation sensitivity</strong></td>
+<td>The audit of how much the directed result depends on sampling rate, hemodynamic transform, temporal aggregation, source leakage handling, or other observation-model transformations. It is there because a plausible graph under one sampling / transformation regime may fail or reverse under another.</td>
+</tr>
+<tr>
+<td><strong>Model recovery / family comparison</strong></td>
+<td>The check on whether the estimation workflow can recover the intended model family, or at least distinguish it from named alternatives, under matched simulation or held-out conditions. This is stronger than reporting only a winning model score inside one declared family.</td>
+</tr>
+<tr>
+<td><strong>Reliability window</strong></td>
+<td>The acquisition regime over which an effective-connectivity estimate remains stable enough to support reuse, such as tightly matched task conditions, scan duration, hardware setup, and session interval. Reliability is therefore not a route-free property of the method alone.</td>
 </tr>
 <tr>
 <td><strong>wPLI</strong></td>
@@ -679,7 +716,7 @@ If <strong>state annotation</strong>, <strong>state continuity</strong>, <strong
 </tr>
 <tr>
 <td><strong>DCM</strong></td>
-<td>A dynamic-causal-modeling framework that compares explicit generative circuit models. On this site it is read through candidate model space, validation, reliability, and abstention rather than as automatic discovery of true wiring.</td>
+<td>A dynamic-causal-modeling framework that compares explicit generative circuit models. On this site it remains a route-card claim: larger model spaces, faster solvers, or whole-brain variants can improve tractability, but they do not remove the need to disclose node definition, processing policy, observed-subsystem closure, validation, reliability window, and abstention before any stronger causal-wiring language is allowed.</td>
 </tr>
 <tr>
 <td><strong>SCM (Structural Causal Model)</strong></td>
