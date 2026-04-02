@@ -1,26 +1,32 @@
-# Mind-upload RQ60 Application Playbook (RQ unit fixed)
-
-> Fix submission decisions based on RQ, not general abstracts
->
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
-
-- Updated: 2026-04-02 / Role: Per-RQ Grant and Dataset Playbook
-
-## Role Of This Page
-This page is a practical playbook that targets each of mind-upload's 60 research questions and fixes the primary application destination/preliminary application destination, main EEG-DATA, reason for hiring, and submitted deliverables.
-
-## Accuracy Notes
-A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-funds.md`.
-
-## Back To Public Pages
-- [Literature map](https://mind-upload.com/research_harvest_50.html)
-- [Data & Bench](https://mind-upload.com/datasets.html)
-
-## Related Wiki Pages
-- [Wiki: RQ60 EEG verification availability and subsidy theme](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds) - Original copy of judgment basis, U-specific background, and RQ table.
-- [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Criteria for converting artifacts into verification specifications.
-
 ---
+layout: default
+title: "Mind-upload RQ60 Application Playbook (RQ unit fixed)"
+description: "An operation page with fixed application ID, main EEG data, selection reason, and minimum deliverables for each 60 RQ."
+article_type: Wiki
+subtitle: "Fix submission decisions based on RQ, not general abstracts"
+author: Mind Uploading Research Project
+last_updated: "2026-04-03"
+note: "Per-RQ Grant and Dataset Playbook"
+audience: "People who want to apply for funding and decide on the first experiment for each RQ at the same time"
+reading_time: "20-30 minutes"
+page_intro: "This page is a practical playbook that targets each of mind-upload's 60 research questions and fixes the primary application destination/preliminary application destination, main EEG-DATA, reason for hiring, and submitted deliverables."
+accuracy_note: "A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-funds.md`."
+wiki_links:
+  - label: "Wiki: RQ60 EEG verification availability and subsidy theme"
+    url: "/wiki/mind-upload-eeg-rq60-feasibility-and-funds.html"
+    description: "Original copy of judgment basis, U-specific background, and RQ table."
+  - label: "Wiki: Basics of verification infrastructure"
+    url: "/wiki/verification-basics.html"
+    description: "Criteria for converting artifacts into verification specifications."
+recommended_pages:
+  - label: "Literature map"
+    url: "/research_harvest_50.html"
+  - label: "Data & Bench"
+    url: "/datasets.html"
+---
+
+<main class="main-container">
+<article class="content-column">
 
 ## How to use
 
@@ -48,6 +54,15 @@ A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-f
 - For submission-ready references, prefer `Dxx + DOI + dataset name + access class` over numeric search IDs.
 - The six current public rows below are now synchronized to `Dxx + DOI + dataset name + access class`, so the playbook no longer needs numeric search IDs for `U13-2/U13-5/U0-2/U0-3/U14-4/U14-2`.
 - `tech_roadmap.md` also contains `U2/U5/U6/U9`, but those roadmap families are not yet translated into this playbook's current `RQ60` practical layer.
+
+## Latest live-source addendum (2026-04-03 04:06 JST)
+
+- An actual-pull reread after `mind-upload@f5e13ebdc4748ce683d905c37cabfdb3c53036bb`, `EEG-DATA@53f5c8166faf0d5fcebfb5c39741d4992eb82a39`, and `auto-research-funds@1f190fec93a9180a27443b1fe2b31f9488dfbf74` still leaves this playbook's practical reading unchanged.
+- The current route still stays fixed on `D10 / D03 / D02 / D01` for the public six and `U7-1 -> U1-2 -> U4-2 -> U8-1` for the outside-current-six queue; the newest `mind-upload` head carries forward a `BCSFB / human-proxy composition` literature sync outside the active batch, `EEG-DATA` keeps `30,900` merged-unique rows, `28,863` high-confidence rows, and `24,885` directly usable rows after a catalog refresh that does not replace any current anchor family, and `auto-research-funds` refreshes current-card and registry layers around `Itoh domestic scholarship` while now reporting `8,593` aid IDs, `4,306` rows, and `3,956` official-source rows without displacing the current practical shortlist.
+- Route-safe access wording still stays narrow: `D10` remains the only clear public-open primary anchor, while `D03 / D02 / D01` remain gated-support planning anchors because no newest pulled head turns those three routes into immediate public anchors.
+- Browser-level live checks at `2026-04-03 04:06 JST` returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u13-2-brain-minus-prior-route.html`; the current `Last-Modified` header was `Thu, 02 Apr 2026 18:14:39 GMT` on those public surfaces.
+- Official window spot checks in this run still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09 (must arrive)`, `Nakatani Foundation research grant = closed / next-cycle watch`, and `Secom General Research Grant = closed (2026-03-31 12:00 JST)`.
+- A fresh read-only Todoist `api/v1/sync(items, projects)` audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this run.
 
 ## Latest live-source addendum (2026-04-02 23:08 JST)
 
@@ -280,6 +295,7 @@ This run keeps the same public batch and the same funding routes. The only new l
 | U15-2 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 49 | Easy to connect to system audit indicators for safe shutdown and authority management. | System audit requirements table (technical log compatible) |
 | U15-3 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 49 | Easy to connect to system audit indicators for safe shutdown and authority management. | System audit requirements table (technical log compatible) |
 | U15-4 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 49 | Easy to connect to system audit indicators for safe shutdown and authority management. | System audit requirements table (technical log compatible) |
+
 
 ## Additional information
 

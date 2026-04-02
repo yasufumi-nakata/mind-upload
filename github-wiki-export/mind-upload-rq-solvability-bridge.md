@@ -1,40 +1,71 @@
-# Mind-upload RQ Solvability Bridge
-
-> One question, one anchor family, one funding lane, one stop line
->
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
-
-- Updated: 2026-04-02 / Role: Current RQ-to-EEG-and-funding bridge
-
-## Role Of This Page
-This page fixes the current deepening queue and the next-watch queue at the level of one research question, one EEG-DATA anchor family, one honest funding theme, and one explicit external-dependency boundary.
-
-## Accuracy Notes
-This is not a solved-claim update. It records only bounded artifacts that can honestly be closed now under current public-open or gated-support anchors.
-
-## Back To Public Pages
-- [Contribution Guide](https://mind-upload.com/issue.html)
-- [Data & Bench](https://mind-upload.com/datasets.html)
-- [Research Harvest](https://mind-upload.com/research_harvest_50.html)
-
-## Related Wiki Pages
-- [Wiki: Current public six route brief](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief) - The compact public-facing route for the six rows currently being deepened.
-- [Wiki: RQ60 EEG feasibility page](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds) - The wider 60RQ judgment page.
-- [Wiki: Grant and dataset playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - The row-by-row route from RQ to dataset anchor and funding lane.
-- [Wiki: RQ-by-RQ deep dossiers](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers) - The longer working dossiers for one-RQ-at-a-time execution.
-- [Wiki: U7-1 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u7-1-synchronization-contract-route) - The cleanest public-open A-tier synchronization packet outside the current six.
-- [Wiki: U7-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u7-2-timing-metric-route) - The adjacent timing-metric packet that turns the same synchronization family into explicit release-block thresholds without changing the headline queue.
-- [Wiki: U1-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u1-2-uncertainty-calibration-route) - The next narrow inverse-estimation uncertainty packet outside the current six.
-- [Wiki: U4-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u4-2-minimal-causal-route) - The current minimal causal-intervention packet outside the current six.
-- [Wiki: U8-1 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u8-1-closed-loop-delay-tolerance-route) - The current bounded closed-loop delay-tolerance packet outside the current six.
-
 ---
+layout: default
+title: "Mind-upload RQ Solvability Bridge"
+description: "A public-safe bridge from the current mind-upload research questions to bounded EEG-DATA anchors, honest funding themes, and explicit external-dependency boundaries."
+article_type: Wiki
+subtitle: "One question, one anchor family, one funding lane, one stop line"
+author: Mind Uploading Research Project
+last_updated: "2026-04-03"
+note: "Current RQ-to-EEG-and-funding bridge"
+audience: "Readers who want to see what EEG can close now, what still stays outside the claim, and which funding lane still fits."
+reading_time: "10-15 minutes"
+page_intro: "This page fixes the current deepening queue and the next-watch queue at the level of one research question, one EEG-DATA anchor family, one honest funding theme, and one explicit external-dependency boundary."
+accuracy_note: "This is not a solved-claim update. It records only bounded artifacts that can honestly be closed now under current public-open or gated-support anchors."
+wiki_links:
+  - label: "Wiki: Current public six route brief"
+    url: "/wiki/mind-upload-current-public-six-rq-brief.html"
+    description: "The compact public-facing route for the six rows currently being deepened."
+  - label: "Wiki: RQ60 EEG feasibility page"
+    url: "/wiki/mind-upload-eeg-rq60-feasibility-and-funds.html"
+    description: "The wider 60RQ judgment page."
+  - label: "Wiki: Grant and dataset playbook"
+    url: "/wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html"
+    description: "The row-by-row route from RQ to dataset anchor and funding lane."
+  - label: "Wiki: RQ-by-RQ deep dossiers"
+    url: "/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html"
+    description: "The longer working dossiers for one-RQ-at-a-time execution."
+  - label: "Wiki: U7-1 route packet"
+    url: "/wiki/u7-1-synchronization-contract-route.html"
+    description: "The cleanest public-open A-tier synchronization packet outside the current six."
+  - label: "Wiki: U7-2 route packet"
+    url: "/wiki/u7-2-timing-metric-route.html"
+    description: "The adjacent timing-metric packet that turns the same synchronization family into explicit release-block thresholds without changing the headline queue."
+  - label: "Wiki: U1-2 route packet"
+    url: "/wiki/u1-2-uncertainty-calibration-route.html"
+    description: "The next narrow inverse-estimation uncertainty packet outside the current six."
+  - label: "Wiki: U4-2 route packet"
+    url: "/wiki/u4-2-minimal-causal-route.html"
+    description: "The current minimal causal-intervention packet outside the current six."
+  - label: "Wiki: U8-1 route packet"
+    url: "/wiki/u8-1-closed-loop-delay-tolerance-route.html"
+    description: "The current bounded closed-loop delay-tolerance packet outside the current six."
+recommended_pages:
+  - label: "Contribution Guide"
+    url: "/issue.html"
+  - label: "Data & Bench"
+    url: "/datasets.html"
+  - label: "Research Harvest"
+    url: "/research_harvest_50.html"
+---
+
+<main class="main-container">
+<article class="content-column">
 
 # Mind-upload RQ Solvability Bridge
 
 This page answers one narrow question: for the rows that are actually worth deepening now, what can `EEG-DATA` honestly close, what still needs outside support, and what funding theme still fits without overstating the claim.
 
 It does **not** try to re-scan all `60RQ` items at once. The working style on this site is now `deepen one row at a time`, not `summarize everything at the same depth`.
+
+## What still stays fixed after the 04:06 JST actual-pull reread on April 3, 2026
+
+- An actual-pull recheck at `2026-04-03 04:06 JST` after `mind-upload@f5e13ebdc4748ce683d905c37cabfdb3c53036bb`, `EEG-DATA@53f5c8166faf0d5fcebfb5c39741d4992eb82a39`, and `auto-research-funds@1f190fec93a9180a27443b1fe2b31f9488dfbf74` still leaves both the current public six and the headline next-watch queue unchanged.
+- The newest pulled deltas still tighten support space rather than widen the present bridge: `mind-upload` carries forward the `BCSFB / human-proxy composition` literature sync outside the current six, `EEG-DATA` keeps `30,900` merged-unique rows, `28,863` high-confidence rows, and `24,885` directly usable rows after a catalog refresh that does not replace any current anchor family, and `auto-research-funds` refreshes current-card and registry layers around `Itoh domestic scholarship` while now reporting `8,593` aid IDs, `4,306` rows, and `3,956` official-source rows without replacing the current `D10 / D03 / D02 / D01` family or the headline next-watch `D11 / D08 / D05 / D20` family.
+- Route-safe access wording therefore still stays unchanged: no newest pulled head turns `D03 / D02 / D01` into immediate public anchors, so public-safe wording still keeps `D10` as the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors.
+- Browser-level live checks in this run returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u13-2-brain-minus-prior-route.html`; the checked headers now return `Last-Modified: Thu, 02 Apr 2026 18:14:39 GMT`.
+- Official window spot checks in this run still keep the practical bridge narrow: `Kura Fund` remains open (`2026-02-02 - 2026-04-17 17:00`), `Nakatani Foundation graduate scholarship` remains open (`2026-04-01 - 2026-05-25 15:00`), `Kashinome Scholarship` stays a student-runway side route (`2026-01-14 - 2026-04-09 must arrive`), `Nakatani Foundation research grant` remains closed / next-cycle watch (`募集を終了しました` on the current public page), and `Secom General Research Grant` remains closed for the current cycle (`2026-03-31 12:00 JST`).
+- A fresh read-only Todoist `api/v1/sync(items, projects)` audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
+- This source sync does **not** widen the current queue or claim surface. It only carries forward the same queue onto the latest pulled heads, live public headers, official windows, and Todoist sufficiency check.
 
 ## What still stays fixed after the 23:08 JST actual-pull reread on April 2, 2026
 
@@ -45,6 +76,16 @@ It does **not** try to re-scan all `60RQ` items at once. The working style on th
 - Official window spot checks in this run still keep the practical bridge narrow: `Kura Fund` remains open (`2026-02-02 - 2026-04-17 17:00`), `Nakatani Foundation graduate scholarship` remains open (`2026-04-01 - 2026-05-25 15:00`), `Nakatani Foundation research grant` remains closed / next-cycle watch (`募集期間 2025-06-01 - 2025-07-07`), and `Secom General Research Grant` remains closed for the current cycle (`2026-03-31 12:00 JST`).
 - A fresh read-only Todoist `api/v1/sync(items, projects)` audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
 - This source sync does **not** widen the current queue or claim surface. It only carries forward the same queue onto the latest pulled heads, live public headers, official windows, and Todoist sufficiency check.
+
+## What still stays fixed after the 19:03 JST actual-pull reread on April 2, 2026
+
+- An actual-pull recheck at `2026-04-02 19:03 JST` after `mind-upload@e1a7e7e2f22c`, `EEG-DATA@a7f9390492fd`, and `auto-research-funds@00cdbaa9a122` still leaves both the current public six and the headline next-watch queue unchanged.
+- The newest pulled deltas still deepen support rather than widen the present bridge: `mind-upload` now deepens the `blood-CSF barrier / choroid-plexus` route split on human neurovascular pages outside the current six, `EEG-DATA` still reports `30,892` merged-unique rows, `28,855` high-confidence rows, and `24,880` directly usable rows in the current README snapshot, and `auto-research-funds` still keeps its latest summary at `8,590` aid IDs, `4,301` rows, and `3,951` official-source rows without replacing the current `D10 / D03 / D02 / D01` family or the headline next-watch `D11 / D08 / D05 / D20` family.
+- Route-safe access wording also stays unchanged: `D10` remains the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors because a direct live-access reread still shows `Subscription Required` plus `LOGIN TO ACCESS DATASET FILES` on the current `IEEE DataPort` pages for those three support anchors.
+- Browser-level live checks before this source sync returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u7-2-timing-metric-route.html`; those checked pages returned `Last-Modified: Thu, 02 Apr 2026 09:37:54 GMT`, but their route-facing body wording still surfaced the earlier `18:06 JST` hold note.
+- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09 (must arrive)`, `Secom General Research Grant = closed (March 31, 2026 at 12:00 JST)`, and `Nakatani Foundation research grant = closed / next-cycle watch`.
+- A fresh read-only Todoist `api/v1/sync(items, projects)` full-item audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
+- This source sync does **not** widen the current queue or claim surface. It only carries forward the same queue onto the latest repo heads, live public headers, official windows, and Todoist sufficiency check while updating the route-hold wording to the latest pulled heads.
 
 ## What still stays fixed after the 18:06 JST actual-pull reread on April 2, 2026
 
@@ -249,7 +290,7 @@ It does **not** try to re-scan all `60RQ` items at once. The working style on th
 
 - The current public six-question batch still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
 - The next-watch queue still stays `U7-1 -> U1-2 -> U4-2 -> U8-1`.
-- If you want the exact next-watch row packets, continue with the [U7-1 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u7-1-synchronization-contract-route), the [U1-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u1-2-uncertainty-calibration-route), the [U4-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u4-2-minimal-causal-route), and the [U8-1 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u8-1-closed-loop-delay-tolerance-route).
+- If you want the exact next-watch row packets, continue with the [U7-1 route packet](/wiki/u7-1-synchronization-contract-route.html), the [U1-2 route packet](/wiki/u1-2-uncertainty-calibration-route.html), the [U4-2 route packet](/wiki/u4-2-minimal-causal-route.html), and the [U8-1 route packet](/wiki/u8-1-closed-loop-delay-tolerance-route.html).
 - Inside the current public six, `D10 3M-CPSEED` remains the only clearly public-open primary anchor.
 - `D03 Multimodal Fusion EEG + Eye-Tracking`, `D02 CSTE`, and `D01 Acquisition delay of wireless EEG` still remain subscription-gated support anchors on the public route.
 - No new Todoist task was needed in this run because the current practical lanes and watch lanes were already covered by existing tasks in the funding workflow.
@@ -342,3 +383,6 @@ The headline next-watch queue still stays `U7-1 / U1-2 / U4-2 / U8-1`. `U7-2` is
 - It does not turn the wider `60RQ` map into a same-depth execution queue.
 - It does not raise the public claim ceiling above bounded benchmark, audit, and disclosure artifacts.
 - It does not move theory, law, neurorights, chronic deployment, or full identity questions into an EEG-only solved state.
+
+</article>
+</main>

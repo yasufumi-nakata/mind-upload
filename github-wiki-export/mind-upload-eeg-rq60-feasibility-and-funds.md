@@ -1,11 +1,14 @@
-# Mind-upload RQ60 × EEG-DATA 検証可否と助成テーマ（深掘り版）
-
-> RQごとに検証設計と応募テーマまで接続する
->
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
-
-- Updated: 2026-04-02 / Role: RQ-by-RQ Deep Dive
-
+---
+layout: default
+title: "Mind-upload RQ60 × EEG-DATA 検証可否と助成テーマ（深掘り版）"
+description: "research_harvest_50由来の60リサーチクエスチョンを1問ずつ、EEG-DATAでの検証可否・auto-research-funds向け応募テーマ・使用データを実務運用向けに整理したページ。"
+article_type: Wiki
+subtitle: "RQごとに検証設計と応募テーマまで接続する"
+author: Mind Uploading Research Project
+last_updated: "2026-04-03"
+note: "RQ-by-RQ Deep Dive"
+audience: "RQを実験計画・応募書類へ落とし込む研究者/実装者"
+reading_time: "25-40分"
 ---
 
 # Mind-upload RQ60 × EEG-DATA 検証可否と助成テーマ（深掘り版）
@@ -48,16 +51,16 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `B`: 25件
 - `C`: 18件
 
-## Latest post-pull revalidation after 23:08 JST on April 2, 2026
+## Latest post-pull revalidation after 04:06 JST on April 3, 2026
 
-This run still does not change the current public batch or the `A/B/C` reading. An actual-pull reread after `mind-upload@f5d1d1dd1683`, `EEG-DATA@ee1463d28288`, and `auto-research-funds@ec24a355abbc` still leaves the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
+This run still does not change the current public batch or the `A/B/C` reading. An actual-pull reread after `mind-upload@f5e13ebdc4748ce683d905c37cabfdb3c53036bb`, `EEG-DATA@53f5c8166faf0d5fcebfb5c39741d4992eb82a39`, and `auto-research-funds@1f190fec93a9180a27443b1fe2b31f9488dfbf74` still leaves the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
 
-- The newest pulled deltas still deepen support rather than replace the current route: `mind-upload` clarifies the causal-versus-human-proxy bridge and local-route/proxy boundaries outside the current six, `EEG-DATA` refines candidate curation and adds `OpenNeuro ds007615` while now reporting `30,896` merged-unique rows, `28,859` high-confidence rows, and `24,882` directly usable rows in the current README snapshot, and `auto-research-funds` adds `Geo-Kagaku` current cards plus a README-stat refresh without changing the practical shortlist.
+- The newest pulled deltas still deepen support rather than replace the current route: `mind-upload` carries forward a `BCSFB / human-proxy composition` literature sync outside the current six, `EEG-DATA` keeps `30,900` merged-unique rows, `28,863` high-confidence rows, and `24,885` directly usable rows after a catalog refresh that does not replace any current anchor family, and `auto-research-funds` refreshes current-card and registry layers around `Itoh domestic scholarship` while now reporting `8,593` aid IDs, `4,306` rows, and `3,956` official-source rows without changing the practical shortlist.
 - Recounting `rq_deepening_backlog_2026-03-01_enriched.csv` still returns `60` rows, so this run still keeps the `one-RQ-at-a-time` reading rather than flattening the map.
 - The route-safe access reading also stays deliberately narrow: `D10` remains the only clear public-open primary anchor, while `D03 / D02 / D01` still stay gated-support anchors in public wording because no newest pulled head turns those three routes into immediate public anchors.
 - The newest repo-wide carry-forward still does not create a stronger row-level replacement: the support space is wider, but nothing in the latest pulled heads repairs the recall-validity gap under `U13-5` or replaces the cross-session identity-drift floor under `U0-2 / U0-3`.
-- Browser-level live checks with a browser user agent still returned `HTTP/2 200` for `issue.html`, `wiki/mind-upload-current-public-six-rq-brief.html`, `wiki/mind-upload-rq-solvability-bridge.html`, and `wiki/u13-2-brain-minus-prior-route.html`; the current `Last-Modified` header is `Thu, 02 Apr 2026 13:12:21 GMT` on those public surfaces.
-- Official-window spot checks keep the same practical bridge: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Nakatani Foundation research grant = closed / next-cycle watch (募集期間 2025-06-01 - 2025-07-07)`, and `Secom General Research Grant = current cycle closed`.
+- Browser-level live checks with a browser user agent still returned `HTTP/2 200` for `issue.html`, `wiki/mind-upload-current-public-six-rq-brief.html`, `wiki/mind-upload-rq-solvability-bridge.html`, and `wiki/u13-2-brain-minus-prior-route.html`; the current `Last-Modified` header is `Thu, 02 Apr 2026 18:14:39 GMT` on those public surfaces.
+- Official-window spot checks keep the same practical bridge: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Nakatani Foundation research grant = closed / next-cycle watch`, and `Secom General Research Grant = current cycle closed`.
 - A fresh read-only Todoist `api/v1/sync(items, projects)` full-item audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session because the current route and watch route were already covered and the aging-society lane still stays outside the present EEG-first route.
 
 ## Latest post-pull revalidation after 18:06 JST on April 2, 2026
@@ -577,6 +580,7 @@ This run does not change the current public batch or the solve-first order. What
 - データ参照運用は `DOI + dataset名 + access区分` を正本とする方針を継続。
 - 応募キー `G1-G6` の参照整合は維持。
 
+
 ## 今回の再検証ログ（2026-03-26 22:03 JST）
 
 本runは「汎用要約ではなく、1問ずつ深掘りする」を維持するため、まず `60RQ` の整合監査を実施したうえで、深掘り対象を6件に固定しました。
@@ -604,6 +608,7 @@ This run does not change the current public batch or the solve-first order. What
 - 提出時のデータ参照は `DOI + dataset名 + access区分` を必須化
 
 ## 今回の再検証ログ（2026-03-25 04:02 JST）
+
 
 本ページは、`mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` の60行を1行ずつ読み、各RQについて下記4点が埋まっていることを再確認した上で更新しています。
 
@@ -923,6 +928,8 @@ This run does not change the current public batch or the solve-first order. What
 - 方針は引き続き `1RQ=1検証命題=1応募テーマ=1主データ` を固定し、汎用横断要約ではなくRQ単位での深掘りを正本運用としました。
 - wiki反映先は `mind-upload/wiki` / `mind-upload/github-wiki-export` / `auto-research-funds/wiki` の3面同期を維持しました。
 
+
+
 ## 2026-03-18 15:12 JST 再検証ログ（本run / 依頼の再実行）
 
 - 作業開始前に `auto-startup` の `main` で `git pull --ff-only origin main` を実行し、最新化済み（Already up to date）を確認しました。
@@ -1032,6 +1039,8 @@ This run does not change the current public batch or the solve-first order. What
 - `mind-upload` と `auto-research-funds` の対象wikiページで `RQ` 行を再計数し、いずれも `60` 件で一致することを確認しました。
 - 判定内訳 `A/B/C=17/25/18` を再計数し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持していることを確認しました。
 - 主要EEG参照ID（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）を最新 `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
+
+
 
 ## 2026-03-19 13:02 JST 再検証ログ（本run / EEG-DATA更新後の深掘り再監査）
 
@@ -1206,6 +1215,7 @@ This run does not change the current public batch or the solve-first order. What
 - 助成キーは `G3-G6` を `auto-research-funds/wiki/cards/*.md` と `grant_eeg_dataset_match.csv` で照合し欠落 `0`、`G1/G2` は `mind-upload/wiki` と `auto-research-funds/wiki` の固定運用キーとして再確認しました。
 - 方針は不変で、汎用横断要約ではなく「1件ずつ深く理解して書く」実行形で wiki 同期を維持しました。
 
+
 ## 2026-03-21 09:20 JST 再検証ログ（本run / EEG-DATA再採番対応）
 
 - 作業開始前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` の `main` で `git pull --ff-only origin main` を実行し、最新化した上で検証しました。
@@ -1243,6 +1253,7 @@ This run does not change the current public batch or the solve-first order. What
 | D24 | LLaMAC multimodal affective computing dataset（MAD運用代替） | `10.6084/m9.figshare.28748696` | 4010 | 旧ID `39` の現行代替。 |
 
 - 実務ルール: 応募書類・再現ログでは `Dxx + DOI + データセット名 + access区分` を正とし、`現在ID` は探索補助に限定します。
+
 
 ## 2026-03-21 10:04 JST 再検証ログ（本run / 依頼: RQを1件ずつ深掘りしwiki固定）
 
@@ -1498,6 +1509,7 @@ This run does not change the current public batch or the solve-first order. What
   - 中谷財団 交流助成（直近観測）: `2025-04-30` / `2025-08-29` / `2025-09-16` / `2025-12-26`
   - SCAT研究奨励金（直近観測）: `2025-08-01` 〜 `2025-11-28`（`2026-11-29` は予測値として区別）
 - 方針は継続で、汎用要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` を維持し、`C` 判定RQは制度・法務依存を明示して過剰主張を避けます。
+
 
 ## 2026-03-26 12:03 JST 再検証ログ（本run / RQ単位深掘りの整合監査）
 
