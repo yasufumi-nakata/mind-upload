@@ -1,55 +1,31 @@
----
-layout: default
-title: "Mind-upload Current Public Six: EEG Route Brief"
-description: "A public-safe row-by-row brief for the six mind-upload research questions currently being translated into bounded EEG-ready work packages."
-article_type: Wiki
-subtitle: "A narrow route brief, not a solved-claim update"
-author: Mind Uploading Research Project
-last_updated: "2026-04-03"
-note: "Current public six"
-audience: "Readers who want the present one-question-at-a-time EEG route without overreading the claim"
-reading_time: "8-12 minutes"
-page_intro: "This page fixes the current public six-question route at the level of one RQ, one bounded anchor, one first artifact, and one funding sentence."
-wiki_links:
-  - label: "Wiki: RQ solvability bridge"
-    url: "/wiki/mind-upload-rq-solvability-bridge.html"
-    description: "One page for what EEG can close now, what still needs outside support, and which funding lane still fits."
-  - label: "Wiki: RQ-by-RQ deep dossiers"
-    url: "/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html"
-    description: "The longer working dossier for the current public six and the wider 60RQ map."
-  - label: "Wiki: Grant and dataset playbook"
-    url: "/wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html"
-    description: "The route from each RQ to the current bounded funding lane and EEG anchor."
-  - label: "Wiki: U13-2 route packet"
-    url: "/wiki/u13-2-brain-minus-prior-route.html"
-    description: "Why D10 stays first for U13-2, why the other speech candidates stay secondary, and what the first artifact can honestly close."
-  - label: "Wiki: U13-5 route packet"
-    url: "/wiki/u13-5-perception-to-recall-route.html"
-    description: "Why D03 stays the intended gated-support anchor for U13-5, why the support anchors stay secondary, and what the transfer-gap artifact can honestly close."
-  - label: "Wiki: U0-2 route packet"
-    url: "/wiki/u0-2-temporal-validity-route.html"
-    description: "Why D02 stays the intended gated-support anchor for U0-2, why the support anchors stay secondary, and what the timing-floor artifact can honestly close."
-  - label: "Wiki: U0-3 route packet"
-    url: "/wiki/u0-3-threshold-stability-route.html"
-    description: "Why D02 stays the intended gated-support anchor for U0-3, why the support anchors stay secondary, and what the threshold-governance artifact can honestly close."
-  - label: "Wiki: U14-4 route packet"
-    url: "/wiki/u14-4-card-contract-route.html"
-    description: "Why D01 stays the intended gated-support anchor for U14-4, why richer rerun benchmarks stay secondary, and what the card-contract artifact can honestly close."
-  - label: "Wiki: U14-2 route packet"
-    url: "/wiki/u14-2-fixed-split-route.html"
-    description: "Why D01 stays the intended gated-support anchor for U14-2, why richer rerun benchmarks stay secondary, and what the fixed-split artifact can honestly close."
-  - label: "Wiki: U7-2 route packet"
-    url: "/wiki/u7-2-timing-metric-route.html"
-    description: "The adjacent timing-metric packet that keeps the same D11 synchronization family readable without changing the current public six."
-recommended_pages:
-  - label: "Issue page"
-    url: "/issue.html"
-  - label: "Deep focus notes"
-    url: "/wiki/mind-upload-rq60-deep-focus-notes.html"
----
+# Mind-upload Current Public Six: EEG Route Brief
 
-<main class="main-container">
-<article class="content-column">
+> A narrow route brief, not a solved-claim update
+>
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+
+- Updated: 2026-04-03 / Role: Current public six
+
+## Role Of This Page
+This page fixes the current public six-question route at the level of one RQ, one bounded anchor, one first artifact, and one funding sentence.
+
+## Back To Public Pages
+- [Issue page](https://mind-upload.com/issue.html)
+- [Deep focus notes](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes)
+
+## Related Wiki Pages
+- [Wiki: RQ solvability bridge](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq-solvability-bridge) - One page for what EEG can close now, what still needs outside support, and which funding lane still fits.
+- [Wiki: RQ-by-RQ deep dossiers](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers) - The longer working dossier for the current public six and the wider 60RQ map.
+- [Wiki: Grant and dataset playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - The route from each RQ to the current bounded funding lane and EEG anchor.
+- [Wiki: U13-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u13-2-brain-minus-prior-route) - Why D10 stays first for U13-2, why the other speech candidates stay secondary, and what the first artifact can honestly close.
+- [Wiki: U13-5 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u13-5-perception-to-recall-route) - Why D03 stays the intended gated-support anchor for U13-5, why the support anchors stay secondary, and what the transfer-gap artifact can honestly close.
+- [Wiki: U0-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u0-2-temporal-validity-route) - Why D02 stays the intended gated-support anchor for U0-2, why the support anchors stay secondary, and what the timing-floor artifact can honestly close.
+- [Wiki: U0-3 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u0-3-threshold-stability-route) - Why D02 stays the intended gated-support anchor for U0-3, why the support anchors stay secondary, and what the threshold-governance artifact can honestly close.
+- [Wiki: U14-4 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u14-4-card-contract-route) - Why D01 stays the intended gated-support anchor for U14-4, why richer rerun benchmarks stay secondary, and what the card-contract artifact can honestly close.
+- [Wiki: U14-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u14-2-fixed-split-route) - Why D01 stays the intended gated-support anchor for U14-2, why richer rerun benchmarks stay secondary, and what the fixed-split artifact can honestly close.
+- [Wiki: U7-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u7-2-timing-metric-route) - The adjacent timing-metric packet that keeps the same D11 synchronization family readable without changing the current public six.
+
+---
 
 # Mind-upload Current Public Six: EEG Route Brief
 
@@ -272,7 +248,7 @@ It does **not** announce solved claims. It only states what the current public r
 
 - A March 31 post-pull recheck at `2026-03-31 09:04 JST` after `mind-upload@8cc3379`, `EEG-DATA@715ecdf`, and `auto-research-funds@6166f60` still leaves the public batch and the solve-first order unchanged.
 - The newest pulled deltas widen the map but do not widen the current public claim surface: the astrocyte / SV2A route refinements, the `U1-2` funding-sync packet, and the `Zenodo HEP ERP` deep-dive additions do not replace `D10` or turn `D03/D02/D01` into immediate public anchors.
-- The outside-current-six headline queue of four also stays unchanged: `U7-1` remains the cleanest public-open `A-tier` follow-up, `U1-2` remains the next narrow inverse-estimation packet, `U4-2` remains the minimal causal-intervention packet, and `U8-1` remains the bounded closed-loop delay-tolerance packet. `U7-2` now sits explicitly beside `U7-1` as the adjacent timing-metric support packet rather than as a headline-queue replacement. If you want the exact row packets, continue with the [U7-1 route packet](/wiki/u7-1-synchronization-contract-route.html), the [U7-2 route packet](/wiki/u7-2-timing-metric-route.html), the [U1-2 route packet](/wiki/u1-2-uncertainty-calibration-route.html), the [U4-2 route packet](/wiki/u4-2-minimal-causal-route.html), and the [U8-1 route packet](/wiki/u8-1-closed-loop-delay-tolerance-route.html).
+- The outside-current-six headline queue of four also stays unchanged: `U7-1` remains the cleanest public-open `A-tier` follow-up, `U1-2` remains the next narrow inverse-estimation packet, `U4-2` remains the minimal causal-intervention packet, and `U8-1` remains the bounded closed-loop delay-tolerance packet. `U7-2` now sits explicitly beside `U7-1` as the adjacent timing-metric support packet rather than as a headline-queue replacement. If you want the exact row packets, continue with the [U7-1 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u7-1-synchronization-contract-route), the [U7-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u7-2-timing-metric-route), the [U1-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u1-2-uncertainty-calibration-route), the [U4-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u4-2-minimal-causal-route), and the [U8-1 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u8-1-closed-loop-delay-tolerance-route).
 - At `2026-03-31 00:04 JST`, an overnight recheck still leaves the public batch and the solve-first order unchanged.
 - A March 31 access audit at `2026-03-31 00:20 JST` still leaves the batch unchanged, but it narrows the anchor reading: `D10 3M-CPSEED` remains the only clearly public-open primary anchor in the current six.
 - `D03 Multimodal Fusion EEG + Eye-Tracking`, `D02 CSTE`, and `D01 Acquisition delay of wireless EEG` currently resolve to IEEE DataPort pages that show `LOGIN TO ACCESS DATASET FILES` and `Subscription Required`, so public wording now keeps them only as subscription-gated support anchors rather than immediate public anchors.
@@ -367,7 +343,7 @@ These support families do not replace the current gated-support planning anchors
 - Submission wording that stays honest: `Neural-contribution audit for imagined speech with a brain-minus-prior control`.
 - What still needs outside support: an external language-evaluation layer and a broader leak-control family before any stronger mechanism wording is allowed.
 - What still stays outside the claim: preserved internal mechanism, preserved identity, and any stronger mind-upload wording.
-- If you need the row-specific anchor-choice rationale, read the [U13-2 route packet](/wiki/u13-2-brain-minus-prior-route.html).
+- If you need the row-specific anchor-choice rationale, read the [U13-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u13-2-brain-minus-prior-route).
 
 ### `U13-5`
 
@@ -377,7 +353,7 @@ These support families do not replace the current gated-support planning anchors
 - Submission wording that stays honest: `Perception-to-recall transfer-gap benchmark for mimic separation`.
 - What still needs outside support: an external recall-validity layer and a public-open speech/EEG+ET backup family before any shared-mechanism reading is attempted.
 - What still stays outside the claim: any statement that a shared decoder demonstrates a shared preserved internal mechanism.
-- If you need the row-specific anchor-choice rationale, read the [U13-5 route packet](/wiki/u13-5-perception-to-recall-route.html).
+- If you need the row-specific anchor-choice rationale, read the [U13-5 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u13-5-perception-to-recall-route).
 
 ### `U0-2`
 
@@ -387,7 +363,7 @@ These support families do not replace the current gated-support planning anchors
 - Submission wording that stays honest: `Temporal-validity-aware identity-drift audit`.
 - What still needs outside support: longer-horizon timing logs and larger cohorts before the row can be read as anything more than a bounded drift benchmark.
 - What still stays outside the claim: legal, philosophical, or normative continuity claims.
-- If you need the row-specific anchor-choice rationale, read the [U0-2 route packet](/wiki/u0-2-temporal-validity-route.html).
+- If you need the row-specific anchor-choice rationale, read the [U0-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u0-2-temporal-validity-route).
 
 ### `U0-3`
 
@@ -397,7 +373,7 @@ These support families do not replace the current gated-support planning anchors
 - Submission wording that stays honest: `Task-specific identity-threshold stability study`.
 - What still needs outside support: a session-external rerun pack and cohort extension before this row can carry anything stronger than a bounded biometric threshold claim.
 - What still stays outside the claim: treating a stable threshold as sufficient for personhood continuity or branch-identity resolution.
-- If you need the row-specific anchor-choice rationale, read the [U0-3 route packet](/wiki/u0-3-threshold-stability-route.html).
+- If you need the row-specific anchor-choice rationale, read the [U0-3 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u0-3-threshold-stability-route).
 
 ### `U14-4`
 
@@ -407,7 +383,7 @@ These support families do not replace the current gated-support planning anchors
 - Submission wording that stays honest: `Disclosure-first reproducibility contract package`.
 - What still needs outside support: `D13`-backed rerun benchmarks and leak-audit exemplars before any broader reproducibility claim is made.
 - What still stays outside the claim: organizational adoption, field-wide standards uptake, or a broad reproducibility victory statement.
-- If you need the row-specific anchor-choice rationale, read the [U14-4 route packet](/wiki/u14-4-card-contract-route.html).
+- If you need the row-specific anchor-choice rationale, read the [U14-4 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u14-4-card-contract-route).
 
 ### `U14-2`
 
@@ -417,13 +393,10 @@ These support families do not replace the current gated-support planning anchors
 - Submission wording that stays honest: `Exploration-confirmation split contract for reruns`.
 - What still needs outside support: `D13`-backed split-violation examples across richer public benchmarks before the row can be read as broader confirmatory readiness.
 - What still stays outside the claim: broader rerun robustness claims or confirmatory wording for exploratory outputs.
-- If you need the row-specific anchor-choice rationale, read the [U14-2 route packet](/wiki/u14-2-fixed-split-route.html).
+- If you need the row-specific anchor-choice rationale, read the [U14-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u14-2-fixed-split-route).
 
 ## What this page does not do
 
 - It does not replace the wider `60RQ` map.
 - It does not expand the public batch beyond the current six.
 - It does not move theory, law, neurorights, or full identity questions into an EEG-only solved state.
-
-</article>
-</main>

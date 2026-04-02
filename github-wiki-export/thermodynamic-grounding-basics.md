@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-30 / Role: Technical / natural science only
+- Updated: 2026-04-02 / Role: Technical / natural science only
 
 ## Role Of This Page
 This page explains why thermodynamic language appears on Mind-Upload, what current neural-data papers actually compute, and where the interpretation ceiling still sits.
@@ -61,6 +61,11 @@ This page stays on the technology and natural-science side only. It does not use
 <strong>2026-03-30 correction: the real danger is silent translation</strong>
 <p>
 The main weakness of the older page was not that it mentioned the wrong literature. The weakness was that it still let readers move too quickly across four translations: from <strong>signal asymmetry</strong> to <strong>nonequilibrium inference</strong>, from <strong>coarse-grained inference</strong> to <strong>energetic interpretation</strong>, from <strong>observed trajectory</strong> to <strong>thermodynamic closure</strong>, and from <strong>auxiliary physics signal</strong> to <strong>WBE relevance</strong>. The current primary literature does not support those jumps unless each one is disclosed separately.
+</p>
+
+<strong>2026-04-02 correction: estimator meaning is not the same as operational stability</strong>
+<p>
+The next weakness was subtler. Even after separating estimator family, hidden-degree risk, and physiology-side grounding, the page still let one more shortcut survive: it was still too easy to read a mathematically interpretable metric as if it were already <strong>operationally stable</strong> or <strong>bridge-ready</strong>. The current primary literature does not support that shortcut either. <a href="https://doi.org/10.1007/s12021-024-09652-y" target="_blank">Poudel et al. (2024)</a> showed that small motion can materially alter visibility-graph structure and that only a low-motion subset reached moderate-to-high test-retest reliability for selected graph metrics. <a href="https://doi.org/10.1002/hbm.26778" target="_blank">Metzen et al. (2024)</a> showed that variability and complexity measures in BOLD fMRI have markedly different reliability profiles, with some functional-connectivity complexity measures remaining in the unacceptable-to-moderate range. <a href="https://doi.org/10.1016/j.neuroimage.2021.117760" target="_blank">Omidvarnia et al. (2021)</a> showed reproducible multiscale-entropy structure for resting-state fMRI, but that result is specific to that estimator family and acquisition setting rather than a blanket license for all irreversibility metrics. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> then showed with simultaneous EEG-PET-MRI that temporal coupling across electrophysiology, hemodynamics, and metabolism can be strong while the spatial organization and state trajectories remain distinct rather than interchangeable. Therefore, on this site, <strong>stability / nuisance sensitivity</strong>, <strong>cross-estimator concordance</strong>, and <strong>physiology-bridge quality</strong> are now treated as separate reporting burdens rather than as footnotes under the estimator label.
 </p>
 
 <h2>Why thermodynamics appears on Mind-Upload at all</h2>
@@ -261,9 +266,19 @@ The purpose of the route card is simple: thermodynamic language alone does not t
 <td>It blocks asymmetry scores or lower bounds from being misread as direct microscopic dissipation.</td>
 </tr>
 <tr>
+<td><strong>Cross-estimator concordance</strong></td>
+<td>State whether the qualitative conclusion survives more than one reasonable estimator family, feature construction, or state-space definition, or whether it remains explicitly estimator-specific.</td>
+<td>It blocks one metric family from sounding like a universal thermodynamic structure of the brain.</td>
+</tr>
+<tr>
 <td><strong>Null / surrogate control</strong></td>
 <td>State what shuffle, time reversal, label randomization, or surrogate was used and what failure it was designed to catch.</td>
 <td>It blocks a clean null test from sounding like a full thermodynamic validation.</td>
+</tr>
+<tr>
+<td><strong>Stability / nuisance sensitivity</strong></td>
+<td>Report motion sensitivity, denoising / preprocessing sensitivity, split-half or test-retest reliability, session interval, and whether the result is single-site or protocol-scoped.</td>
+<td>It blocks one clean run from sounding like a stable operational signal.</td>
 </tr>
 <tr>
 <td><strong>Reverse-transition support / finite-data handling</strong></td>
@@ -274,6 +289,11 @@ The purpose of the route card is simple: thermodynamic language alone does not t
 <td><strong>Physiology-side grounding</strong></td>
 <td>If energetic or metabolic language is used, state whether a direct route such as calibrated CMRO<sub>2</sub>, FDG-PET, or <sup>31</sup>P-MRS was actually measured, or explicitly state that it was not.</td>
 <td>It blocks signal-side irreversibility from being silently upgraded to metabolic cost or physical dissipation.</td>
+</tr>
+<tr>
+<td><strong>Physiology-bridge quality</strong></td>
+<td>If a physiology-side route is invoked, state whether it was same-session, same-state-window, spatially coregistered, lag-aware, and whether agreement or disagreement across modalities was quantified explicitly.</td>
+<td>It blocks “paired modalities exist” from sounding like energetic grounding has already been solved.</td>
 </tr>
 <tr>
 <td><strong>Cost isolation</strong></td>
@@ -312,9 +332,19 @@ If this card is missing, this site keeps the result at <strong>exploratory auxil
 <td>It still does not identify a unique neural mechanism.</td>
 </tr>
 <tr>
+<td><strong>Cross-estimator concordance audit</strong></td>
+<td>Shows whether the sign, ordering, or state separation survives more than one reasonable estimator family instead of depending on one mathematical construction.</td>
+<td>It still does not make different estimators equivalent or erase hidden-state risk.</td>
+</tr>
+<tr>
 <td><strong>Observed-state closure / hidden-degree audit</strong></td>
 <td>Shows whether hidden cycles, latent variables, or nonlocal coarse graining could still carry the dissipation that the observed path misses.</td>
 <td>It still does not recover total microscopic entropy production by itself.</td>
+</tr>
+<tr>
+<td><strong>Within-modality stability / nuisance audit</strong></td>
+<td>Shows whether the effect survives motion handling, denoising choices, split-half or test-retest checks, and declared protocol changes.</td>
+<td>It still does not convert an observation-side metric into a universal gate or a cross-site standard.</td>
 </tr>
 <tr>
 <td><strong>Reverse-transition support / sparse-data disclosure</strong></td>
@@ -326,16 +356,23 @@ If this card is missing, this site keeps the result at <strong>exploratory auxil
 <td>Separates observation-side arrow-of-time analysis from actual metabolism-side measurement.</td>
 <td>It still does not establish identity, consciousness, or a universal thermodynamic acceptance criterion.</td>
 </tr>
+<tr>
+<td><strong>Same-session physiology bridge with disagreement handling</strong></td>
+<td>Shows whether electrophysiology, hemodynamics, and metabolism were aligned in the same acquisition window and whether partial agreement or spatial dissociation was reported rather than hidden.</td>
+<td>It still does not prove that a neural irreversibility metric is a direct energetic readout.</td>
+</tr>
 </tbody>
 </table>
 
-<h2>Seven questions when reading thermodynamic claims</h2>
+<h2>Nine questions when reading thermodynamic claims</h2>
 <ol>
 <li><strong>Are we looking at a lower bound, an asymmetry score, a graph index, or a model-based entropy-flow estimate?</strong></li>
 <li><strong>How was the state space built?</strong> Check parcelization, clustering, PCA rank, source model, temporal bins, and frequency range.</li>
 <li><strong>What hidden-state or memory risk remains?</strong> Ask whether the observed trajectory is plausibly Markov, semi-Markov, or under-closed.</li>
 <li><strong>Did the paper separate null controls from support coverage?</strong> A clean shuffle does not guarantee adequate reverse-transition counts.</li>
-<li><strong>If the paper says "energy" or "metabolism," where is the physiology-side route?</strong></li>
+<li><strong>Does the qualitative result survive reasonable estimator changes?</strong> If not, read it as estimator-specific rather than as a general thermodynamic fact.</li>
+<li><strong>Does it survive motion, denoising, and scan-rescan checks?</strong></li>
+<li><strong>If the paper says "energy" or "metabolism," where is the physiology-side route, and was it aligned in the same session / state window?</strong></li>
 <li><strong>Are logical and physical costs still separated?</strong> Do not merge FLOPs, wall-power, and signal-side nonequilibrium into one scalar.</li>
 <li><strong>What does the metric explicitly abstain from claiming?</strong> If that line is missing, the ceiling should be read conservatively.</li>
 </ol>
@@ -358,4 +395,8 @@ If this card is missing, this site keeps the result at <strong>exploratory auxil
 <li>Cocconi, L., Salbreux, G., &amp; Pruessner, G. (2022). Scaling of entropy production under coarse graining in active disordered media. <em>Physical Review E</em>, 105(4), L042601. <a href="https://doi.org/10.1103/PhysRevE.105.L042601" target="_blank">doi:10.1103/PhysRevE.105.L042601</a></li>
 <li>Baiesi, M., Nishiyama, T., &amp; Falasco, G. (2024). Effective estimation of entropy production with lacking data. <em>Communications Physics</em>, 7, 264. <a href="https://doi.org/10.1038/s42005-024-01742-2" target="_blank">doi:10.1038/s42005-024-01742-2</a></li>
 <li>Epp, S. M., Castrill&oacute;n, G., Yuan, B., et al. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
+<li>Poudel, G. R., Egan, G. F., &amp; McIntosh, A. R. (2024). Network representation of fMRI data using visibility graphs: The impact of motion and test-retest reliability. <em>Neuroinformatics</em>, 22, 265-284. <a href="https://doi.org/10.1007/s12021-024-09652-y" target="_blank">doi:10.1007/s12021-024-09652-y</a></li>
+<li>Metzen, D., Fellner, M.-C., Labrenz, F., &amp; Waschke, L. (2024). Reliability of variability and complexity measures for task and task-free BOLD fMRI. <em>Human Brain Mapping</em>, 45(10), e26778. <a href="https://doi.org/10.1002/hbm.26778" target="_blank">doi:10.1002/hbm.26778</a></li>
+<li>Omidvarnia, A., Pedersen, M., Walz, J. M., et al. (2021). Temporal complexity of fMRI is reproducible and correlates with higher order cognition. <em>NeuroImage</em>, 230, 117760. <a href="https://doi.org/10.1016/j.neuroimage.2021.117760" target="_blank">doi:10.1016/j.neuroimage.2021.117760</a></li>
+<li>Chen, J. E., Lewis, L. D., Coursey, S. E., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <em>Nature Communications</em>, 16, 8887. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
 </ol>

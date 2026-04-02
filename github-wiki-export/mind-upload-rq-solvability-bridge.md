@@ -1,55 +1,34 @@
----
-layout: default
-title: "Mind-upload RQ Solvability Bridge"
-description: "A public-safe bridge from the current mind-upload research questions to bounded EEG-DATA anchors, honest funding themes, and explicit external-dependency boundaries."
-article_type: Wiki
-subtitle: "One question, one anchor family, one funding lane, one stop line"
-author: Mind Uploading Research Project
-last_updated: "2026-04-03"
-note: "Current RQ-to-EEG-and-funding bridge"
-audience: "Readers who want to see what EEG can close now, what still stays outside the claim, and which funding lane still fits."
-reading_time: "10-15 minutes"
-page_intro: "This page fixes the current deepening queue and the next-watch queue at the level of one research question, one EEG-DATA anchor family, one honest funding theme, and one explicit external-dependency boundary."
-accuracy_note: "This is not a solved-claim update. It records only bounded artifacts that can honestly be closed now under current public-open or gated-support anchors."
-wiki_links:
-  - label: "Wiki: Current public six route brief"
-    url: "/wiki/mind-upload-current-public-six-rq-brief.html"
-    description: "The compact public-facing route for the six rows currently being deepened."
-  - label: "Wiki: RQ60 EEG feasibility page"
-    url: "/wiki/mind-upload-eeg-rq60-feasibility-and-funds.html"
-    description: "The wider 60RQ judgment page."
-  - label: "Wiki: Grant and dataset playbook"
-    url: "/wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html"
-    description: "The row-by-row route from RQ to dataset anchor and funding lane."
-  - label: "Wiki: RQ-by-RQ deep dossiers"
-    url: "/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html"
-    description: "The longer working dossiers for one-RQ-at-a-time execution."
-  - label: "Wiki: U7-1 route packet"
-    url: "/wiki/u7-1-synchronization-contract-route.html"
-    description: "The cleanest public-open A-tier synchronization packet outside the current six."
-  - label: "Wiki: U7-2 route packet"
-    url: "/wiki/u7-2-timing-metric-route.html"
-    description: "The adjacent timing-metric packet that turns the same synchronization family into explicit release-block thresholds without changing the headline queue."
-  - label: "Wiki: U1-2 route packet"
-    url: "/wiki/u1-2-uncertainty-calibration-route.html"
-    description: "The next narrow inverse-estimation uncertainty packet outside the current six."
-  - label: "Wiki: U4-2 route packet"
-    url: "/wiki/u4-2-minimal-causal-route.html"
-    description: "The current minimal causal-intervention packet outside the current six."
-  - label: "Wiki: U8-1 route packet"
-    url: "/wiki/u8-1-closed-loop-delay-tolerance-route.html"
-    description: "The current bounded closed-loop delay-tolerance packet outside the current six."
-recommended_pages:
-  - label: "Contribution Guide"
-    url: "/issue.html"
-  - label: "Data & Bench"
-    url: "/datasets.html"
-  - label: "Research Harvest"
-    url: "/research_harvest_50.html"
----
+# Mind-upload RQ Solvability Bridge
 
-<main class="main-container">
-<article class="content-column">
+> One question, one anchor family, one funding lane, one stop line
+>
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+
+- Updated: 2026-04-03 / Role: Current RQ-to-EEG-and-funding bridge
+
+## Role Of This Page
+This page fixes the current deepening queue and the next-watch queue at the level of one research question, one EEG-DATA anchor family, one honest funding theme, and one explicit external-dependency boundary.
+
+## Accuracy Notes
+This is not a solved-claim update. It records only bounded artifacts that can honestly be closed now under current public-open or gated-support anchors.
+
+## Back To Public Pages
+- [Contribution Guide](https://mind-upload.com/issue.html)
+- [Data & Bench](https://mind-upload.com/datasets.html)
+- [Research Harvest](https://mind-upload.com/research_harvest_50.html)
+
+## Related Wiki Pages
+- [Wiki: Current public six route brief](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief) - The compact public-facing route for the six rows currently being deepened.
+- [Wiki: RQ60 EEG feasibility page](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds) - The wider 60RQ judgment page.
+- [Wiki: Grant and dataset playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - The row-by-row route from RQ to dataset anchor and funding lane.
+- [Wiki: RQ-by-RQ deep dossiers](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers) - The longer working dossiers for one-RQ-at-a-time execution.
+- [Wiki: U7-1 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u7-1-synchronization-contract-route) - The cleanest public-open A-tier synchronization packet outside the current six.
+- [Wiki: U7-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u7-2-timing-metric-route) - The adjacent timing-metric packet that turns the same synchronization family into explicit release-block thresholds without changing the headline queue.
+- [Wiki: U1-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u1-2-uncertainty-calibration-route) - The next narrow inverse-estimation uncertainty packet outside the current six.
+- [Wiki: U4-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u4-2-minimal-causal-route) - The current minimal causal-intervention packet outside the current six.
+- [Wiki: U8-1 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u8-1-closed-loop-delay-tolerance-route) - The current bounded closed-loop delay-tolerance packet outside the current six.
+
+---
 
 # Mind-upload RQ Solvability Bridge
 
@@ -290,7 +269,7 @@ It does **not** try to re-scan all `60RQ` items at once. The working style on th
 
 - The current public six-question batch still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
 - The next-watch queue still stays `U7-1 -> U1-2 -> U4-2 -> U8-1`.
-- If you want the exact next-watch row packets, continue with the [U7-1 route packet](/wiki/u7-1-synchronization-contract-route.html), the [U1-2 route packet](/wiki/u1-2-uncertainty-calibration-route.html), the [U4-2 route packet](/wiki/u4-2-minimal-causal-route.html), and the [U8-1 route packet](/wiki/u8-1-closed-loop-delay-tolerance-route.html).
+- If you want the exact next-watch row packets, continue with the [U7-1 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u7-1-synchronization-contract-route), the [U1-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u1-2-uncertainty-calibration-route), the [U4-2 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u4-2-minimal-causal-route), and the [U8-1 route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u8-1-closed-loop-delay-tolerance-route).
 - Inside the current public six, `D10 3M-CPSEED` remains the only clearly public-open primary anchor.
 - `D03 Multimodal Fusion EEG + Eye-Tracking`, `D02 CSTE`, and `D01 Acquisition delay of wireless EEG` still remain subscription-gated support anchors on the public route.
 - No new Todoist task was needed in this run because the current practical lanes and watch lanes were already covered by existing tasks in the funding workflow.
@@ -383,6 +362,3 @@ The headline next-watch queue still stays `U7-1 / U1-2 / U4-2 / U8-1`. `U7-2` is
 - It does not turn the wider `60RQ` map into a same-depth execution queue.
 - It does not raise the public claim ceiling above bounded benchmark, audit, and disclosure artifacts.
 - It does not move theory, law, neurorights, chronic deployment, or full identity questions into an EEG-only solved state.
-
-</article>
-</main>

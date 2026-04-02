@@ -1,14 +1,11 @@
----
-layout: default
-title: "Mind-upload RQ60 × EEG-DATA 検証可否と助成テーマ（深掘り版）"
-description: "research_harvest_50由来の60リサーチクエスチョンを1問ずつ、EEG-DATAでの検証可否・auto-research-funds向け応募テーマ・使用データを実務運用向けに整理したページ。"
-article_type: Wiki
-subtitle: "RQごとに検証設計と応募テーマまで接続する"
-author: Mind Uploading Research Project
-last_updated: "2026-04-03"
-note: "RQ-by-RQ Deep Dive"
-audience: "RQを実験計画・応募書類へ落とし込む研究者/実装者"
-reading_time: "25-40分"
+# Mind-upload RQ60 × EEG-DATA 検証可否と助成テーマ（深掘り版）
+
+> RQごとに検証設計と応募テーマまで接続する
+>
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+
+- Updated: 2026-04-03 / Role: RQ-by-RQ Deep Dive
+
 ---
 
 # Mind-upload RQ60 × EEG-DATA 検証可否と助成テーマ（深掘り版）
@@ -580,7 +577,6 @@ This run does not change the current public batch or the solve-first order. What
 - データ参照運用は `DOI + dataset名 + access区分` を正本とする方針を継続。
 - 応募キー `G1-G6` の参照整合は維持。
 
-
 ## 今回の再検証ログ（2026-03-26 22:03 JST）
 
 本runは「汎用要約ではなく、1問ずつ深掘りする」を維持するため、まず `60RQ` の整合監査を実施したうえで、深掘り対象を6件に固定しました。
@@ -608,7 +604,6 @@ This run does not change the current public batch or the solve-first order. What
 - 提出時のデータ参照は `DOI + dataset名 + access区分` を必須化
 
 ## 今回の再検証ログ（2026-03-25 04:02 JST）
-
 
 本ページは、`mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md` の60行を1行ずつ読み、各RQについて下記4点が埋まっていることを再確認した上で更新しています。
 
@@ -928,8 +923,6 @@ This run does not change the current public batch or the solve-first order. What
 - 方針は引き続き `1RQ=1検証命題=1応募テーマ=1主データ` を固定し、汎用横断要約ではなくRQ単位での深掘りを正本運用としました。
 - wiki反映先は `mind-upload/wiki` / `mind-upload/github-wiki-export` / `auto-research-funds/wiki` の3面同期を維持しました。
 
-
-
 ## 2026-03-18 15:12 JST 再検証ログ（本run / 依頼の再実行）
 
 - 作業開始前に `auto-startup` の `main` で `git pull --ff-only origin main` を実行し、最新化済み（Already up to date）を確認しました。
@@ -1039,8 +1032,6 @@ This run does not change the current public batch or the solve-first order. What
 - `mind-upload` と `auto-research-funds` の対象wikiページで `RQ` 行を再計数し、いずれも `60` 件で一致することを確認しました。
 - 判定内訳 `A/B/C=17/25/18` を再計数し、`1RQ=1検証命題=1応募テーマ=1主データ` の深掘り運用を維持していることを確認しました。
 - 主要EEG参照ID（`6, 11, 13, 16, 19, 49, 56, 65, 509, 676, 696, 719, 735, 783, 842, 859, 2412`）を最新 `EEG-DATA/eeg_dataset_summary_ja.csv` と照合し、未解決ID `0` を確認しました。
-
-
 
 ## 2026-03-19 13:02 JST 再検証ログ（本run / EEG-DATA更新後の深掘り再監査）
 
@@ -1215,7 +1206,6 @@ This run does not change the current public batch or the solve-first order. What
 - 助成キーは `G3-G6` を `auto-research-funds/wiki/cards/*.md` と `grant_eeg_dataset_match.csv` で照合し欠落 `0`、`G1/G2` は `mind-upload/wiki` と `auto-research-funds/wiki` の固定運用キーとして再確認しました。
 - 方針は不変で、汎用横断要約ではなく「1件ずつ深く理解して書く」実行形で wiki 同期を維持しました。
 
-
 ## 2026-03-21 09:20 JST 再検証ログ（本run / EEG-DATA再採番対応）
 
 - 作業開始前に `auto-startup` / `mind-upload` / `auto-research-funds` / `EEG-DATA` の `main` で `git pull --ff-only origin main` を実行し、最新化した上で検証しました。
@@ -1253,7 +1243,6 @@ This run does not change the current public batch or the solve-first order. What
 | D24 | LLaMAC multimodal affective computing dataset（MAD運用代替） | `10.6084/m9.figshare.28748696` | 4010 | 旧ID `39` の現行代替。 |
 
 - 実務ルール: 応募書類・再現ログでは `Dxx + DOI + データセット名 + access区分` を正とし、`現在ID` は探索補助に限定します。
-
 
 ## 2026-03-21 10:04 JST 再検証ログ（本run / 依頼: RQを1件ずつ深掘りしwiki固定）
 
@@ -1509,7 +1498,6 @@ This run does not change the current public batch or the solve-first order. What
   - 中谷財団 交流助成（直近観測）: `2025-04-30` / `2025-08-29` / `2025-09-16` / `2025-12-26`
   - SCAT研究奨励金（直近観測）: `2025-08-01` 〜 `2025-11-28`（`2026-11-29` は予測値として区別）
 - 方針は継続で、汎用要約ではなく `1RQ=1検証命題=1応募テーマ=1主データ` を維持し、`C` 判定RQは制度・法務依存を明示して過剰主張を避けます。
-
 
 ## 2026-03-26 12:03 JST 再検証ログ（本run / RQ単位深掘りの整合監査）
 

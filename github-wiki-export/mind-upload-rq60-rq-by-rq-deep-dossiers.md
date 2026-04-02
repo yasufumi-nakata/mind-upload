@@ -1,14 +1,11 @@
----
-layout: default
-title: "Mind-upload RQ60 RQ-by-RQ Deep Dossiers (EEG-DATA × auto-research-funds)"
-description: "60RQを1件ずつ深掘りし、検証命題・可否境界・応募テーマ・使用データ・KPI・停止条件を固定した実行ドシエ。"
-article_type: Wiki
-subtitle: "汎用要約ではなく、RQ単位で実装可能な深掘り"
-author: Mind Uploading Research Project
-last_updated: "2026-04-02"
-note: "RQ-by-RQ Deep Dossier"
-audience: "60RQを個別理解して応募計画へ落とし込みたい研究者"
-reading_time: "55-80分"
+# Mind-upload RQ60 RQ-by-RQ Deep Dossiers (EEG-DATA × auto-research-funds)
+
+> 汎用要約ではなく、RQ単位で実装可能な深掘り
+>
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+
+- Updated: 2026-04-02 / Role: RQ-by-RQ Deep Dossier
+
 ---
 
 # Mind-upload RQ60 RQ-by-RQ Deep Dossiers (EEG-DATA × auto-research-funds)
@@ -450,7 +447,6 @@ This run does not change the current public six-question batch. It only tightens
 
 ## RQ-by-RQ Deep Dossiers（60件）
 
-
 ### U0-1 同一性判定を『観測一致』と『介入応答一致』に分離したとき、どちらを必要条件・十分条件に置くか。
 
 - 検証命題: 観測一致（EEG特徴量）と介入一致（刺激/課題変更時の応答）を分離して二軸ROCを作る。
@@ -465,7 +461,6 @@ This run does not change the current public six-question batch. It only tightens
 - Run update (2026-03-29 07:18 JST): This section is now locked to `D02 CSTE` as the primary anchor, with `D11/D23` reserved only for cross-session and physiological side-channel robustness checks.
 - First-pass KPI fixed in this run: a public pass requires both `observation-match AUC` and `intervention-response match rate` to clear threshold; a single-axis pass is rejected by design.
 
-
 ### U0-2 時間同期（ms単位）と状態表現（行動・神経活動・生理）の対応をどう固定するか。
 
 - 検証命題: `D02 CSTE (10.21227/j162-nh61 / subscription-gated support)` を主に、`D11` と `D23` を補助として、時刻同期ずれが状態特徴量と同一性AUCへ伝播する許容帯を固定する。
@@ -479,7 +474,6 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: 同期補正後も `offset/jitter` の95パーセンタイルが `20 ms` を超え、`状態特徴相関維持率 < 0.90` に留まる場合は、同一性主張を「同期依存の部分成立」に降格する。
 - 最低成果物: Time synchronization audit report (offset/jitter distribution)
 
-
 ### U0-3 同一性判定の閾値をタスク別にどう設定し、過学習モデルをどう除外するか。
 
 - 検証命題: `D02 CSTE (10.21227/j162-nh61 / subscription-gated support)` を主に、`D11` と `D23` を補助として、タスク別に同一性閾値を推定し、過学習モデルはセッション外性能で除外する。
@@ -491,7 +485,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U0標準）: `session-out AUC` `threshold stability` `overfit exclusion rate`
 - 停止条件: 主データ単独で再現しない場合は、前処理・分割・同期ログを固定して再試行し、それでも再現不能なら主張を下方修正する。
 - 最低成果物: Threshold search notebook and selection rationale table
-
 
 ### U0-4 分岐/複製ケースでの『同一個体』定義をどの評価軸に帰着させるか。
 
@@ -507,7 +500,6 @@ This run does not change the current public six-question batch. It only tightens
 - Run update (2026-03-29): This section is now locked to `D02 CSTE` as the primary anchor, with `D10/D12` kept only as support datasets for cross-session and longitudinal stress tests.
 - External dependency kept separate in this run: legal personhood and responsibility allocation remain outside the EEG claim and must stay in the proposal as an `external dependency`.
 
-
 ### U1-1 EEG/MEG逆問題での不良設定性を、どの事前分布で制御するか。
 
 - 検証命題: ID 56の既知刺激位置を使って、事前分布ごとの逆解誤差を比較する。
@@ -519,7 +511,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U1標準）: `逆解誤差` `不確実性被覆率` `手法順位一致率`
 - 停止条件: 主データ単独で再現しない場合は、前処理・分割・同期ログを固定して再試行し、それでも再現不能なら主張を下方修正する。
 - 最低成果物: Inverse solution comparison table and uncertainty distribution chart
-
 
 ### U1-2 頭蓋導電率・電極配置・ノイズ構造の不確実性を、推定不確実性へどう伝播させるか。
 
@@ -535,7 +526,6 @@ This run does not change the current public six-question batch. It only tightens
 - Run update (2026-03-29): This section is now locked to `D08 Simultaneous human intracerebral stimulation and HD-EEG` as the primary anchor, with `D11/D19` reserved for perturbation checks that do not replace the main ground-truth signal.
 - First-pass KPI fixed in this run: `interval coverage` is the public pass/fail metric, and the claim must be downgraded when repeated conductivity, missing-electrode, or noise perturbations break coverage stability.
 
-
 ### U1-3 同じデータで異なる逆解法（MNE, beamformer, Champagne 等）が乖離した場合の判定規則をどう置くか。
 
 - 検証命題: ID 56/676でMNE/beamformer/Champagneの乖離率をタスク別に比較する。
@@ -547,7 +537,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U1標準）: `逆解誤差` `不確実性被覆率` `手法順位一致率`
 - 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
 - 最低成果物: Inverse problem reproduction report (error/uncertainty)
-
 
 ### U1-4 推定値だけでなく、信頼区間/後方分布を公開基準に含めるか。
 
@@ -562,7 +551,6 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: `95%被覆率` が `80-100%` 帯を継続逸脱するか、区間公開を入れた後に `手法順位一致率 < 0.80` へ低下する場合は、公開基準を「点推定 + 限定区間」に降格する。
 - 最低成果物: Inverse solution comparison table and uncertainty distribution chart
 
-
 ### U3-1 ニューロン中心モデルに対して、グリア/体液性調節を追加した際の予測改善量をどう測るか。
 
 - 検証命題: ID 13/39でEEG単独 vs マルチモーダルの性能差を測り、境界拡張の必要量を推定する。
@@ -574,7 +562,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U3標準）: `統合条件での性能差` `境界拡張時の再現率` `外部依存の残差`
 - 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
 - 最低成果物: Boundary expansion evaluation report (single/integrated comparison)
-
 
 ### U3-2 connectome完全性と機能予測性能の関係を、種横断でどう比較するか。
 
@@ -588,7 +575,6 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
 - 最低成果物: Boundary expansion evaluation report (single/integrated comparison)
 
-
 ### U3-3 身体・環境結合を除去したモデルで失われる機能をどう定量化するか。
 
 - 検証命題: ID 16/39で身体・環境ループを含む条件差を比較し、除去時の性能低下を測る。
@@ -600,7 +586,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U3標準）: `統合条件での性能差` `境界拡張時の再現率` `外部依存の残差`
 - 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
 - 最低成果物: Boundary expansion evaluation report (single/integrated comparison)
-
 
 ### U3-4 『必要最小構成』の判定を理論的主張ではなくデータでどう固定するか。
 
@@ -614,7 +599,6 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: EEG補助証拠のみで制度/理論主張を確定しない。外部モダリティまたは制度根拠が揃うまで確定主張を保留する。
 - 最低成果物: Boundary expansion evaluation report (single/integrated comparison)
 
-
 ### U3-5 glymphatic/meningeal lymphatic 系を含むとき、予測精度と説明可能性はどの程度改善するか。
 
 - 検証命題: glymphatic/meningeal系はEEG-DATAに直接計測がなく、同時代謝データ併用前提の探索扱い。
@@ -626,7 +610,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U3標準）: `統合条件での性能差` `境界拡張時の再現率` `外部依存の残差`
 - 停止条件: EEG補助証拠のみで制度/理論主張を確定しない。外部モダリティまたは制度根拠が揃うまで確定主張を保留する。
 - 最低成果物: Boundary expansion evaluation report (single/integrated comparison)
-
 
 ### U3-6 免疫監視（髄膜免疫・炎症性シグナル）を除外したモデルは、どの時点で長期予測が破綻するか。
 
@@ -640,7 +623,6 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: EEG補助証拠のみで制度/理論主張を確定しない。外部モダリティまたは制度根拠が揃うまで確定主張を保留する。
 - 最低成果物: Boundary expansion evaluation report (single/integrated comparison)
 
-
 ### U4-1 観測データ由来の相関を因果グラフへ持ち上げる識別条件は何か。
 
 - 検証命題: ID 19/1839で入力操作に対する応答差を計測し、観測相関との差を分離する。
@@ -652,7 +634,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U4標準）: `介入あり/なし差` `反事実誤差` `反証閾値超過率`
 - 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
 - 最低成果物: Intervention protocol and rebuttal condition definition
-
 
 ### U4-2 介入実験（刺激・抑制・入力撹乱）で検証可能な最小因果主張は何か。
 
@@ -668,8 +649,6 @@ This run does not change the current public six-question batch. It only tightens
 - Run update (2026-03-31): This section is now locked to `D05 EEG cortical responses after HiPi` as the primary anchor, with `D08/D19` kept only as support for cross-checking the same intervention family.
 - First-pass KPI fixed in this run: `intervention-versus-control difference`, `sign agreement`, and `counterfactual error` are the public audit numbers, and persistent sign reversal immediately downgrades the claim.
 
-
-
 ### U4-3 active inferenceやDCMの理論予測を、反事実評価にどう接続するか。
 
 - 検証命題: ID 676を主に、介入あり/なしで反事実誤差（PEHE）と予測尤度差を比較し、理論順位を固定する。
@@ -683,7 +662,6 @@ This run does not change the current public six-question batch. It only tightens
 - 最低成果物: Intervention protocol and rebuttal condition definition
 - Run update (2026-03-29): This section is now locked to `D05 EEG cortical responses after HiPi` as the primary anchor, with `D08/D19` kept as support only for cross-checking the intervention family.
 - External dependency kept separate in this run: common I/O specifications and the intervention protocol remain outside the EEG claim and must be carried as explicit external deliverables.
-
 
 ### U4-4 同値判定の失敗条件（falsification）をどの水準で宣言するか。
 
@@ -700,7 +678,6 @@ This run does not change the current public six-question batch. It only tightens
 - Run update (2026-03-29 07:18 JST): This section is now locked to `D05 EEG cortical responses after HiPi` as the primary anchor, with `D08/D19` kept only for intervention-family cross-checks.
 - First-pass KPI fixed in this run: the falsification-first rule is public and explicit, so exceeding either preregistered `ΔAUC` or `sign reversal rate` immediately downgrades the claim.
 
-
 ### U7-1 BIDS拡張で同期・QC・刺激ログをどこまで必須化するか。
 
 - 検証命題: ID 676/783で `clock offset` `sampling drift` `stimulus onset` `QC fail code` の4項目を必須化し、欠落時は不採択にする。
@@ -716,7 +693,6 @@ This run does not change the current public six-question batch. It only tightens
 - Run update (2026-03-29 07:18 JST): This section is now locked to `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling`, with `D15/D23` used only to test whether the same audit rule survives a second modality family.
 - First-pass KPI fixed in this run: `required-field fill rate` and `reanalysis success rate` are the public pass/fail metrics, and missing any of `clock offset`, `sampling drift`, `stimulus onset`, or `QC fail code` blocks the claim.
 
-
 ### U7-2 LSL等の時刻同期誤差を検証可能な指標に落とせるか。
 
 - 検証命題: ID 676を主に、ID 6/4878を補助として `offset/jitter` を `ERP peak shift` と `再解析一致率` に写像し、release block 可能な同期誤差指標へ落とし込む。
@@ -728,7 +704,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U7標準）: `offset中央値` `jitter p95` `peak-latency drift`
 - 停止条件: 補正後の `event-alignment` 誤差95パーセンタイルが `15 ms` を超えるか、`再解析一致率 < 0.90` の条件が残る場合は、同期監査を「警告のみ」に留めて release block へ昇格しない。
 - 最低成果物: Time synchronization audit report (offset/jitter distribution)
-
 
 ### U7-3 アーチファクト除去（ASR, ZapLine等）の設定差が結果へ与える影響をどう監査するか。
 
@@ -744,8 +719,6 @@ This run does not change the current public six-question batch. It only tightens
 - Run update (2026-03-29): This section is now locked to `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling`, with `D12/D24` used only to test whether the preprocessing rule survives a second protocol family.
 - First-pass KPI fixed in this run: `preprocessing-drift sensitivity` is the main audit number, and any configuration that breaks ranking stability across repeated runs is removed from the default pipeline.
 
-
-
 ### U7-4 モダリティ間アライメント失敗時の再計測/除外基準をどう固定するか。
 
 - 検証命題: ID 676/783でアライメント失敗時の再計測/除外条件を判定木化する。
@@ -757,7 +730,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U7標準）: `再現率` `前処理差分感度` `同期監査異常率`
 - 停止条件: 主データ単独で再現しない場合は、前処理・分割・同期ログを固定して再試行し、それでも再現不能なら主張を下方修正する。
 - 最低成果物: Reproducibility audit report (synchronization/QC/preprocessing difference)
-
 
 ### U7-5 前処理差分をCIで自動比較する場合、どの再現率低下をリリースブロック閾値にするか。
 
@@ -771,7 +743,6 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: 主データ単独で再現しない場合は、前処理・分割・同期ログを固定して再試行し、それでも再現不能なら主張を下方修正する。
 - 最低成果物: Threshold search notebook and selection rationale table
 
-
 ### U7-6 モダリティ欠損（EEG欠損・fMRI欠損）条件でも同等結論を保てる最小観測セットは何か。
 
 - 検証命題: ID 676/783でEEG欠損・fMRI/fNIRS欠損をシミュレートし最小観測セットを求める。
@@ -784,7 +755,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U7標準）: `再現率` `前処理差分感度` `同期監査異常率`
 - 停止条件: 主データ単独で再現しない場合は、前処理・分割・同期ログを固定して再試行し、それでも再現不能なら主張を下方修正する。加えて `missing-modality policy` と `complete-case bias` を分離できない場合は、「complete-case 限定の部分成立」までに降格いたします。
 - 最低成果物: Reproducibility audit report (synchronization/QC/preprocessing difference)
-
 
 ### U8-1 閉ループBCIの遅延許容域を制御理論的にどう同定するか。
 
@@ -800,7 +770,6 @@ This run does not change the current public six-question batch. It only tightens
 - Run update (2026-03-31): This section is now locked to `D20 Closed-loop auditory stimulation targeting REM oscillations` as the primary anchor, with `D21/D12` kept only as support for trigger-stop-recovery cross-checks.
 - First-pass KPI fixed in this run: `stability rate`, `stop-intervention rate`, and `recovery time` are the public safety numbers, and drifting beyond the declared operating band immediately downgrades the claim.
 
-
 ### U8-2 オンライン較正と概念ドリフト対策をどう組み込むか。
 
 - 検証命題: ID 2412（real-time BCI）を主に、ID 696で被験者内変動を補完し、再較正間隔（セッションごと/日次/週次）ごとの安定性と運用コストの境界を推定する。
@@ -813,8 +782,6 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: 週次較正で `停止介入率` が日次較正比で20%以上悪化し、かつ `回復時間` が閾値を超える場合は週次運用案を棄却する。
 - 最低成果物: Closed loop safety KPI dashboard
 
-
-
 ### U8-3 個体差と日内変動をまたぐ安定性をどの指標で評価するか。
 
 - 検証命題: ID 696で個体内・個体間分散を分けて長期安定性KPIを設計する。
@@ -826,7 +793,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U8標準）: `安定率` `停止介入率` `回復時間`
 - 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
 - 最低成果物: Operational stability report (safety shutdown/recovery time)
-
 
 ### U8-4 異常検知とフェイルセーフを評価契約へどう組み込むか。
 
@@ -843,7 +809,6 @@ This run does not change the current public six-question batch. It only tightens
 - External dependency kept separate in this run: site shutdown ownership and operational safety procedure remain outside the EEG claim and must stay as external approval work.
 - Run update (2026-03-29 07:18 JST): This section remains in the current public six-RQ batch, and `abnormal-detection latency p95` stays paired with `fail-safe trigger rate` and `recovery time` as the public pass/fail bundle.
 
-
 ### U8-5 ヒューマンオーバーライドを導入したとき、誤作動率と回復時間をどうKPI化するか。
 
 - 検証命題: ID 2412で手動オーバーライド時の誤作動率と回復時間をKPI化する。
@@ -855,7 +820,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U8標準）: `安定率` `停止介入率` `回復時間`
 - 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
 - 最低成果物: Closed loop safety KPI dashboard
-
 
 ### U8-6 週〜月スケール運用での再学習頻度を、性能劣化と安全余裕のトレードオフでどう最適化するか。
 
@@ -870,7 +834,6 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。さらに `credit assignment probe` がなく、`user learning` `decoder update` `interface shaping` を分離できない場合は、「co-adaptive partial success」に降格いたします。
 - 最低成果物: Closed loop safety KPI dashboard
 
-
 ### U10-1 Landauer下限を神経計算でどう適用/解釈するか。
 
 - 検証命題: Landauer下限の直接検証はEEG-DATA単独では不可。ID 735を理論整合の事前検証に使う。
@@ -882,7 +845,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U10標準）: `理論整合チェック完了率` `proxy妥当性` `外部計測依存率`
 - 停止条件: EEG補助証拠のみで制度/理論主張を確定しない。外部モダリティまたは制度根拠が揃うまで確定主張を保留する。
 - 最低成果物: Theory consistency memo and proxy correlation analysis
-
 
 ### U10-2 非平衡熱力学指標と神経情報処理効率の対応をどう定義するか。
 
@@ -896,7 +858,6 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: EEG補助証拠のみで制度/理論主張を確定しない。外部モダリティまたは制度根拠が揃うまで確定主張を保留する。
 - 最低成果物: Theory consistency memo and proxy correlation analysis
 
-
 ### U10-3 理論式を実データ（神経活動・代謝）へ落とし込む観測設計をどう作るか。
 
 - 検証命題: 神経活動+代謝同時計測はID 783で部分検証可能だが、熱散逸実測は外部計測が必要。
@@ -909,7 +870,6 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: EEG補助証拠のみで制度/理論主張を確定しない。外部モダリティまたは制度根拠が揃うまで確定主張を保留する。
 - 最低成果物: Theory consistency report (thermodynamic proxy)
 
-
 ### U10-4 WBE計算コスト評価に熱力学制約をどう統合するか。
 
 - 検証命題: WBE計算コストへ熱制約を統合する実証はEEG-DATA外。ID 735でモデル妥当性確認まで。
@@ -921,7 +881,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U10標準）: `理論整合チェック完了率` `proxy妥当性` `外部計測依存率`
 - 停止条件: EEG補助証拠のみで制度/理論主張を確定しない。外部モダリティまたは制度根拠が揃うまで確定主張を保留する。
 - 最低成果物: Theory consistency memo and proxy correlation analysis
-
 
 ### U11-1 理論間で比較可能な入出力仕様をどう定義するか。
 
@@ -938,7 +897,6 @@ This run does not change the current public six-question batch. It only tightens
 - Run update (2026-03-29 07:18 JST): This section is now locked to `D14 PK-NMM EEG simulation during propofol anesthesia`, with `D16/D17` reserved only for sleep and DoC cross-state checks.
 - First-pass KPI fixed in this run: the public pass/fail metric is `rank-preservation rate` across shared I/O, and the claim must be downgraded when calibration cannot preserve ordering across anesthesia, sleep, and DoC.
 
-
 ### U11-2 PCIやIIT近似計算の計算量制約をどう扱うか。
 
 - 検証命題: IIT厳密計算は除外し、ID 735/842で `PCI近似` `LZ` `wSMI` を計算予算（1症例あたりGPU 2時間以内）付きで比較する。
@@ -950,7 +908,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U11標準）: `理論間順位保存率` `境界症例符号一致率` `計算予算内完走率`
 - 停止条件: EEG補助証拠のみで制度/理論主張を確定しない。外部モダリティまたは制度根拠が揃うまで確定主張を保留する。
 - 最低成果物: Theoretical comparison I/O specifications and calculation budget
-
 
 ### U11-3 理論予測の対立点を単一実験計画へどう落とすか。
 
@@ -965,7 +922,6 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。加えて `same-cohort calibration` が取れない、または `construct / perturbation / calibration / incremental` の4ゲート分解ができない場合は、「proxy comparison memo」に降格いたします。
 - 最低成果物: Awareness index comparison report (with failure condition)
 
-
 ### U11-4 意識指標を臨床/研究で運用する際の失敗条件をどう明示するか。
 
 - 検証命題: ID 859で偽陽性/偽陰性を含む臨床失敗条件の閾値を先に定義する。
@@ -977,7 +933,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U11標準）: `理論間順位保存率` `境界症例符号一致率` `計算予算内完走率`
 - 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
 - 最低成果物: Theoretical comparison I/O specifications and calculation budget
-
 
 ### U12-1 分岐後主体の識別子を何に基づいて付与するか。
 
@@ -991,7 +946,6 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: EEG補助証拠のみで制度/理論主張を確定しない。外部モダリティまたは制度根拠が揃うまで確定主張を保留する。
 - 最低成果物: Branch-based audit log design document
 
-
 ### U12-2 責任・権利・同意の継承ルールをどの時点で分岐させるか。
 
 - 検証命題: 責任・権利・同意の継承規則は制度設計課題であり、EEG-DATAは検証補助のみ。
@@ -1003,7 +957,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U12標準）: `分岐時整合率` `監査証跡欠損率` `同意伝播遅延`
 - 停止条件: EEG補助証拠のみで制度/理論主張を確定しない。外部モダリティまたは制度根拠が揃うまで確定主張を保留する。
 - 最低成果物: System audit requirements table (technical log compatible)
-
 
 ### U12-3 心理的連続性基準と法的個体基準の不一致をどう扱うか。
 
@@ -1017,7 +970,6 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: EEG補助証拠のみで制度/理論主張を確定しない。外部モダリティまたは制度根拠が揃うまで確定主張を保留する。
 - 最低成果物: System audit requirements table (technical log compatible)
 
-
 ### U12-4 技術評価（性能）と人格評価（帰属）をどう接続するか。
 
 - 検証命題: 性能KPIと人格帰属KPIの接続は法務要件が主で、EEGは監査ログ項目の補助。
@@ -1029,7 +981,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U12標準）: `分岐時整合率` `監査証跡欠損率` `同意伝播遅延`
 - 停止条件: EEG補助証拠のみで制度/理論主張を確定しない。外部モダリティまたは制度根拠が揃うまで確定主張を保留する。
 - 最低成果物: Branch-based audit log design document
-
 
 ### U12-5 分岐主体間で記憶編集・再同期が起きた場合、法的主体IDを再編する基準は何か。
 
@@ -1043,7 +994,6 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: EEG補助証拠のみで制度/理論主張を確定しない。外部モダリティまたは制度根拠が揃うまで確定主張を保留する。
 - 最低成果物: Branch-based audit log design document
 
-
 ### U12-6 同意撤回が発生したとき、複数分岐主体への権限剥奪を技術的にどう実装・監査するか。
 
 - 検証命題: 同意撤回の権限剥奪監査はシステム設計課題で、EEG-DATAは模擬ログ検証まで。
@@ -1055,7 +1005,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U12標準）: `分岐時整合率` `監査証跡欠損率` `同意伝播遅延`
 - 停止条件: EEG補助証拠のみで制度/理論主張を確定しない。外部モダリティまたは制度根拠が揃うまで確定主張を保留する。
 - 最低成果物: System audit requirements table (technical log compatible)
-
 
 ### U13-1 brain-to-text成功を『意味復元』と『因果再現』へ分解できるか。
 
@@ -1071,7 +1020,6 @@ This run does not change the current public six-question batch. It only tightens
 - Run update (2026-03-29): This section is now locked to `D10 3M-CPSEED` as the primary anchor, with `D03/D09` reserved for multimodal and control-condition support only.
 - First-pass KPI fixed in this run: the public report must show `semantic-match rate`, `causal-match rate`, and their gap on a leak-free split, and an imitation-only pass is rejected by design.
 
-
 ### U13-2 LLMの幻覚・整合性検査を神経デコード評価へどう接続するか。
 
 - 検証命題: `D10 3M-CPSEED (10.18112/openneuro.ds006465.v2.0.0 / immediate)` を主に、`EEG data recorded during spoken and imagined speech interaction with a simulated robot (10.5281/zenodo.14645652 / immediate)` と `ChineseEEG-2 (10.57760/sciencedb.CHNNeuro.00001 / immediate)` を公開補助、`D03` を gated multimodal comparator として `hallucination label` と `neural inconsistency` を同時監査し、意味一致だけの合格を禁止する。
@@ -1085,7 +1033,6 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: `内部状態差検出率 < 0.60` または `幻覚率` と `neural inconsistency` の相関区間が `0` を跨ぐ場合は、「意味一致のみ」の主張へ下方修正する。
 - 最低成果物: Mimic separation evaluation script and control condition table
 
-
 ### U13-3 同一出力でも内部機構が異なるケースをどう検出するか。
 
 - 検証命題: ID 65/509で同一出力・異内部状態ケースを抽出する判定器を設計する。
@@ -1097,7 +1044,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U13標準）: `意味一致率` `因果一致率` `リーク検出率`
 - 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
 - 最低成果物: Imitation separation evaluation report (meaning/mechanism)
-
 
 ### U13-4 模倣性能の上限を因果評価でどこまで抑制できるか。
 
@@ -1111,7 +1057,6 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
 - 最低成果物: Intervention protocol and rebuttal condition definition
 
-
 ### U13-5 視覚知覚と視覚想起で同一デコーダを使ったとき、意味復元精度の劣化パターンはどこで分岐するか。
 
 - 検証命題: `D03 Multimodal Fusion EEG + Eye-Tracking (10.21227/6106-6120 / subscription-gated support)` を gated planning anchor とし、`D10`、`ChineseEEG-2`、`ZuCo 2.0`、`SparrKULee`、`EEG data recorded during spoken and imagined speech interaction with a simulated robot` を public-open support として、知覚条件で学習した同一デコーダを想起条件へ転送し、分岐点を時間窓別に特定する。ただし公開 metadata 上は recall-specific label が見えていないため、想起妥当性は外部 layer を必須とする。
@@ -1123,8 +1068,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U13標準）: `perception-to-recall degradation point` `transfer gap` `control-condition stability`
 - 停止条件: 想起条件で `意味一致率` が知覚条件比で一貫してチャンス水準近傍となる場合、または recall-validity layer が接続できない場合、同一デコーダ主張を撤回し分離学習または planning note へ切り替える。
 - 最低成果物: Mimic separation evaluation script and control condition table
-
-
 
 ### U13-6 プロンプト誘導・データリーク・shortcut学習を分離検出する対照実験をどう設計するか。
 
@@ -1138,7 +1081,6 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: EEG側で主要KPIが成立しても、外部依存の根拠が接続できない場合は「部分成立」に止めて応募文面を分割する。
 - 最低成果物: Leak audit results and repartition trail
 
-
 ### U14-1 データ/コード/評価環境の固定粒度をどこまで要求するか。
 
 - 検証命題: ID 6で測定遅延再現試験を自動化し、最小追試パックの基礎にする。
@@ -1150,7 +1092,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U14標準）: `追試成功率` `リーク検出率` `再実行コスト`
 - 停止条件: 主データ単独で再現しない場合は、前処理・分割・同期ログを固定して再試行し、それでも再現不能なら主張を下方修正する。
 - 最低成果物: Supplementary test operation report (including negative cases)
-
 
 ### U14-2 探索研究と検証研究を運用上どう分離するか。
 
@@ -1164,7 +1105,6 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: `D01` 単独の latency floor から `D13` 支援の rerun trail へ接続できない場合、または split 違反例が `D13` 上でも安定しない場合、主張を latency-floor note へ下方修正する。
 - 最低成果物: Supplementary test operation report (including negative cases)
 
-
 ### U14-3 leaderboardでのリーク・過適合・報告バイアスをどう監査するか。
 
 - 検証命題: ID 719を主に、ID 6/56を補助として `leak challenge` を再現し、`split` 固定前後の順位変動を監査する。
@@ -1176,7 +1116,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U14標準）: `リーク検出率` `split再現率` `順位変動幅`
 - 停止条件: `リーク注入条件` の検出率が `0.80` 未満、または `split` 固定後も `順位変動幅 > 3` が残る場合は leaderboard 契約を見送り、内部監査トラックへ留める。
 - 最低成果物: Leak audit results and repartition trail
-
 
 ### U14-4 Model Card / Dataset Card を評価契約へどう統合するか。
 
@@ -1190,7 +1129,6 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: `D01` 単独の disclosure floor から `D13` 支援の rerun examples へ接続できない場合、または card 欄の追加が traceability を改善しない場合、主張を disclosure-floor note へ下方修正する。
 - 最低成果物: Model/Dataset Card template and filled-in examples
 
-
 ### U14-5 再現失敗ケースを否定例レジストリとして公開し、再試行サイクルをどう運用するか。
 
 - 検証命題: ID 6/56/719で再現失敗ケースを `failure_id` `dataset_doi` `split_hash` `failure_type` `rerun_window` `owner` で管理し、否定例の再試行SLAを固定する。
@@ -1202,8 +1140,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U14標準）: `追試成功率` `リーク検出率` `再実行コスト`
 - 停止条件: 連続2サイクルで `rerun_window` 超過率が30%を超えた場合、公開運用を一時停止しワークフロー再設計を優先する。
 - 最低成果物: Negative Example Registry First Edition (CSV+Operating Rules)
-
-
 
 ### U14-6 コンテナ固定（OS・依存ライブラリ・乱数種）を必須化した場合、再現コスト増分をどこまで許容するか。
 
@@ -1217,7 +1153,6 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: 主データ単独で再現しない場合は、前処理・分割・同期ログを固定して再試行し、それでも再現不能なら主張を下方修正する。
 - 最低成果物: Fixed container reproduction procedure manual and cost measurement
 
-
 ### U15-1 神経データの機微性をどの法概念で扱うか（個人情報・生体情報・人格情報）。
 
 - 検証命題: 神経データ機微性の法概念マッピングは法務課題で、EEG-DATA単独検証は不可。
@@ -1229,7 +1164,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U15標準）: `制度要件被覆率` `監査項目実装率` `停止/更新条件明確度`
 - 停止条件: EEG補助証拠のみで制度/理論主張を確定しない。外部モダリティまたは制度根拠が揃うまで確定主張を保留する。
 - 最低成果物: System integrated audit report (suspension/renewal conditions)
-
 
 ### U15-2 neurorightsを技術監査項目へどう写像するか。
 
@@ -1243,7 +1177,6 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: EEG補助証拠のみで制度/理論主張を確定しない。外部モダリティまたは制度根拠が揃うまで確定主張を保留する。
 - 最低成果物: System audit requirements table (technical log compatible)
 
-
 ### U15-3 法域差（EU/US/JP等）を跨ぐ最小共通運用をどう定義するか。
 
 - 検証命題: 法域差を跨ぐ最小運用はデータでは確定できず、規制比較テーブル整備が必要。
@@ -1255,7 +1188,6 @@ This run does not change the current public six-question batch. It only tightens
 - 初期KPI（U15標準）: `制度要件被覆率` `監査項目実装率` `停止/更新条件明確度`
 - 停止条件: EEG補助証拠のみで制度/理論主張を確定しない。外部モダリティまたは制度根拠が揃うまで確定主張を保留する。
 - 最低成果物: System audit requirements table (technical log compatible)
-
 
 ### U15-4 技術進展に応じた停止条件・更新条件をどうガバナンス化するか。
 
@@ -1269,14 +1201,11 @@ This run does not change the current public six-question batch. It only tightens
 - 停止条件: 監査責任の不在または例外承認ログ欠落が確認された時点で、制度トラック応募を停止し規約更新を先行する。
 - 最低成果物: System integrated audit report (suspension/renewal conditions)
 
-
-
 ## 運用メモ
 
 - `C` 判定RQは、EEGを補助証拠として扱い、制度・法務・他モダリティの成立前に確定主張しない。  
 - データセットID再採番に備え、提出時は `DOI + データセット名 + access区分` を併記する。  
 - 次runでは、本ページから `6RQ` を選び、各RQの成果物を実ファイルとして残す。
-
 
 ## 2026-03-26 12:03 JST 再検証ログ（本run / 1RQずつ深掘りキュー再固定）
 

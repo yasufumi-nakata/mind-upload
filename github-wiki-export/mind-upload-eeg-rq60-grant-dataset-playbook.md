@@ -1,32 +1,26 @@
----
-layout: default
-title: "Mind-upload RQ60 Application Playbook (RQ unit fixed)"
-description: "An operation page with fixed application ID, main EEG data, selection reason, and minimum deliverables for each 60 RQ."
-article_type: Wiki
-subtitle: "Fix submission decisions based on RQ, not general abstracts"
-author: Mind Uploading Research Project
-last_updated: "2026-04-03"
-note: "Per-RQ Grant and Dataset Playbook"
-audience: "People who want to apply for funding and decide on the first experiment for each RQ at the same time"
-reading_time: "20-30 minutes"
-page_intro: "This page is a practical playbook that targets each of mind-upload's 60 research questions and fixes the primary application destination/preliminary application destination, main EEG-DATA, reason for hiring, and submitted deliverables."
-accuracy_note: "A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-funds.md`."
-wiki_links:
-  - label: "Wiki: RQ60 EEG verification availability and subsidy theme"
-    url: "/wiki/mind-upload-eeg-rq60-feasibility-and-funds.html"
-    description: "Original copy of judgment basis, U-specific background, and RQ table."
-  - label: "Wiki: Basics of verification infrastructure"
-    url: "/wiki/verification-basics.html"
-    description: "Criteria for converting artifacts into verification specifications."
-recommended_pages:
-  - label: "Literature map"
-    url: "/research_harvest_50.html"
-  - label: "Data & Bench"
-    url: "/datasets.html"
----
+# Mind-upload RQ60 Application Playbook (RQ unit fixed)
 
-<main class="main-container">
-<article class="content-column">
+> Fix submission decisions based on RQ, not general abstracts
+>
+> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+
+- Updated: 2026-04-03 / Role: Per-RQ Grant and Dataset Playbook
+
+## Role Of This Page
+This page is a practical playbook that targets each of mind-upload's 60 research questions and fixes the primary application destination/preliminary application destination, main EEG-DATA, reason for hiring, and submitted deliverables.
+
+## Accuracy Notes
+A/B/C judgment uses the same criteria as `mind-upload-eeg-rq60-feasibility-and-funds.md`.
+
+## Back To Public Pages
+- [Literature map](https://mind-upload.com/research_harvest_50.html)
+- [Data & Bench](https://mind-upload.com/datasets.html)
+
+## Related Wiki Pages
+- [Wiki: RQ60 EEG verification availability and subsidy theme](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-feasibility-and-funds) - Original copy of judgment basis, U-specific background, and RQ table.
+- [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Criteria for converting artifacts into verification specifications.
+
+---
 
 ## How to use
 
@@ -295,7 +289,6 @@ This run keeps the same public batch and the same funding routes. The only new l
 | U15-2 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 49 | Easy to connect to system audit indicators for safe shutdown and authority management. | System audit requirements table (technical log compatible) |
 | U15-3 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 49 | Easy to connect to system audit indicators for safe shutdown and authority management. | System audit requirements table (technical log compatible) |
 | U15-4 | C | G2 (GR-2026-014) | G6 (46z9VPE4wnkrvEJR) | 49 | Easy to connect to system audit indicators for safe shutdown and authority management. | System audit requirements table (technical log compatible) |
-
 
 ## Additional information
 
