@@ -35,6 +35,13 @@ recommended_pages:
 
 This page does not change the current public six-question batch. It makes only the third active row more explicit, so readers can see why `U0-2` stays next after `U13-5`, why `D02 CSTE` now stays only as a gated support anchor, and what the next public-safe artifact can honestly close.
 
+## What still stays fixed after the 23:08 JST actual-pull reread on April 2, 2026
+
+- An actual-pull recheck at `2026-04-02 23:08 JST` after `mind-upload@f5d1d1dd1683`, `EEG-DATA@ee1463d28288`, and `auto-research-funds@ec24a355abbc` still keeps `U0-2` third and still keeps `D02` only as the planned gated-support anchor for the present timing-floor question.
+- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` clarifies the causal-versus-human-proxy bridge outside the current six, `EEG-DATA` now reports `30,896` merged-unique rows, `28,859` high-confidence rows, and `24,882` directly usable rows after candidate-curation refinement plus the `OpenNeuro ds007615` deep dive, and `auto-research-funds` adds `Geo-Kagaku` current cards without changing the practical shortlist.
+- None of those additions replaces the intended identity-drift floor. The latest public-open carry-forwards still do not supply the `cross-session / cross-task` human biometrics framing that keeps `D02` primary in planning, and `ds004148` plus `ds007216` still stay the best public-open stress-test ladders nearby.
+- Browser-level live checks still returned `HTTP/2 200` for the current public entry pages with `Last-Modified: Thu, 02 Apr 2026 13:12:21 GMT`, and a fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient, so this page only refreshes the row-specific route-hold wording.
+
 ## What still stays fixed after the 12:04 JST actual-pull reread on April 2, 2026
 
 - An actual-pull recheck at `2026-04-02 12:04 JST` after `mind-upload@dceb8bc`, `EEG-DATA@04b7fda167e`, and `auto-research-funds@4442e348a` still keeps `U0-2` third and still keeps `D02` only as the planned gated-support anchor for the present timing-floor question.

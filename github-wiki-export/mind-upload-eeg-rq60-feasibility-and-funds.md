@@ -48,6 +48,18 @@ U10/U12/U15の一部RQはEEG単独で解決できないため、不可と判定�
 - `B`: 25件
 - `C`: 18件
 
+## Latest post-pull revalidation after 23:08 JST on April 2, 2026
+
+This run still does not change the current public batch or the `A/B/C` reading. An actual-pull reread after `mind-upload@f5d1d1dd1683`, `EEG-DATA@ee1463d28288`, and `auto-research-funds@ec24a355abbc` still leaves the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
+
+- The newest pulled deltas still deepen support rather than replace the current route: `mind-upload` clarifies the causal-versus-human-proxy bridge and local-route/proxy boundaries outside the current six, `EEG-DATA` refines candidate curation and adds `OpenNeuro ds007615` while now reporting `30,896` merged-unique rows, `28,859` high-confidence rows, and `24,882` directly usable rows in the current README snapshot, and `auto-research-funds` adds `Geo-Kagaku` current cards plus a README-stat refresh without changing the practical shortlist.
+- Recounting `rq_deepening_backlog_2026-03-01_enriched.csv` still returns `60` rows, so this run still keeps the `one-RQ-at-a-time` reading rather than flattening the map.
+- The route-safe access reading also stays deliberately narrow: `D10` remains the only clear public-open primary anchor, while `D03 / D02 / D01` still stay gated-support anchors in public wording because no newest pulled head turns those three routes into immediate public anchors.
+- The newest repo-wide carry-forward still does not create a stronger row-level replacement: the support space is wider, but nothing in the latest pulled heads repairs the recall-validity gap under `U13-5` or replaces the cross-session identity-drift floor under `U0-2 / U0-3`.
+- Browser-level live checks with a browser user agent still returned `HTTP/2 200` for `issue.html`, `wiki/mind-upload-current-public-six-rq-brief.html`, `wiki/mind-upload-rq-solvability-bridge.html`, and `wiki/u13-2-brain-minus-prior-route.html`; the current `Last-Modified` header is `Thu, 02 Apr 2026 13:12:21 GMT` on those public surfaces.
+- Official-window spot checks keep the same practical bridge: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Nakatani Foundation research grant = closed / next-cycle watch (募集期間 2025-06-01 - 2025-07-07)`, and `Secom General Research Grant = current cycle closed`.
+- A fresh read-only Todoist `api/v1/sync(items, projects)` full-item audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session because the current route and watch route were already covered and the aging-society lane still stays outside the present EEG-first route.
+
 ## Latest post-pull revalidation after 18:06 JST on April 2, 2026
 
 This run still does not change the current public batch or the `A/B/C` reading. An actual-pull reread after `mind-upload@85b6603b569b`, `EEG-DATA@a7f9390492fd`, and `auto-research-funds@b6c0d0f4eeb7` still leaves the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.

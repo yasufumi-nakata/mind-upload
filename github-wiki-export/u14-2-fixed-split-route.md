@@ -27,6 +27,13 @@ This page does not claim broad rerun robustness or confirmatory readiness. It on
 
 This page does not change the current public six-question batch. It makes only the sixth active row more explicit, so readers can see why `U14-2` stays after `U14-4`, why `D01 Acquisition delay of wireless EEG` now stays only as a gated support entry point, and what the next public-safe artifact can honestly close.
 
+## What still stays fixed after the 23:08 JST actual-pull reread on April 2, 2026
+
+- An actual-pull recheck at `2026-04-02 23:08 JST` after `mind-upload@f5d1d1dd1683`, `EEG-DATA@ee1463d28288`, and `auto-research-funds@ec24a355abbc` still keeps `U14-2` sixth and still keeps `D01` only as the planned gated-support split-governance floor for this row.
+- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` clarifies the causal-versus-human-proxy bridge outside the current six, `EEG-DATA` now reports `30,896` merged-unique rows, `28,859` high-confidence rows, and `24,882` directly usable rows after candidate-curation refinement plus the `OpenNeuro ds007615` deep dive, and `auto-research-funds` adds `Geo-Kagaku` current cards without changing the practical shortlist.
+- None of those additions replaces the present rerun-entry structure. The latest carry-forwards do not change the fact that `D01` still sets only the latency / split-boundary floor, `D13` still stays the first public-open rerun support family, and `D08` still stays the validation-heavy support family kept one step later.
+- Browser-level live checks still returned `HTTP/2 200` for the current public entry pages with `Last-Modified: Thu, 02 Apr 2026 13:12:21 GMT`, and a fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient, so this page only refreshes the row-specific route-hold wording.
+
 ## What still stays fixed after the 12:04 JST actual-pull reread on April 2, 2026
 
 - An actual-pull recheck at `2026-04-02 12:04 JST` after `mind-upload@dceb8bc`, `EEG-DATA@04b7fda167e`, and `auto-research-funds@4442e348a` still keeps `U14-2` sixth and still keeps `D01` only as the planned gated-support split-governance floor for this row.
