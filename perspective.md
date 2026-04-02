@@ -1,20 +1,21 @@
 ---
 layout: default
 title: "Toward Mind Uploading: An Integrated Technical and Theoretical Approach"
-description: "A research note that audits theories, measurement paths, and implementation routes for mind uploading/WBE against primary literature and known limits."
+description: "A research note that audits measurement routes, latent-state burdens, and implementation constraints for mind uploading/WBE against primary literature and known limits."
 article_type: Perspective
 subtitle: "Audit the hypothesis of reproducing brain information processing on another substrate through the barriers of measurability, identifiability, and maintenance state"
 author: Mind Uploading Research Project
-last_updated: '2026-04-01'
-note: "Research note (updated with the March 2026 re-audit, the 2026-03-29 causal-model addendum, the 2026-03-29 thermodynamic-route sync, the 2026-03-29 deuterium-route split, the 2026-03-30 same-brain-connectomics ceiling sync, the 2026-03-31 electrical-state family split, the 2026-03-31 invasive-language-BCI route split, the 2026-04-01 glial-substrate-routing split, and the 2026-04-01 clearance-route-role split)"
-audience: "Readers who want to follow theory all the way into implementation, including limits and objections"
+last_updated: '2026-04-02'
+note: "Research note (updated with the March 2026 re-audit, the 2026-03-29 causal-model addendum, the 2026-03-29 thermodynamic-route sync, the 2026-03-29 deuterium-route split, the 2026-03-30 same-brain-connectomics ceiling sync, the 2026-03-31 electrical-state family split, the 2026-03-31 invasive-language-BCI route split, the 2026-04-01 glial-substrate-routing split, the 2026-04-01 clearance-route-role split, and the 2026-04-02 technical-front-door framing reset)"
+audience: "Readers who want a technical and natural-science synthesis from measurement limits to implementation"
 reading_time: "30-45 min"
-page_intro: "This page is a long research note that follows the theoretical, measurement, and implementation questions around mind uploading while keeping primary literature and hard limits side by side. It is written to separate what can reasonably be claimed now from what remains unresolved, rather than leaning into either pure optimism or pure pessimism."
-accuracy_note: "This page does not assume that any specific theory of consciousness has already been proven correct. Supportive evidence and unresolved points are treated separately."
+page_intro: "This page is a long research note that starts from observability, identifiability, and maintenance-state burdens, and only then asks what kinds of theoretical interpretation survive those limits. It keeps primary literature, hidden-state gaps, and implementation constraints on one page so overclaiming becomes harder."
+accuracy_note: "Theory labels are treated as secondary organizers. This page gives priority to direct observables, latent-state error, perturbation evidence, and implementation ceilings."
 page_highlights:
-  - "It does not stop at introducing theories; it follows the constraints that appear when those theories are pushed toward implementation."
+  - "The page now opens from state-space closure: what is directly observable, what remains latent, and what still has to be perturbed, calibrated, or maintained."
   - "The page now separates local connectomics, human structural scaffold evidence, synaptic-density PET, receptor / transporter atlas priors, occupancy PET target-engagement routes, challenge-linked displacement / release PET routes, biochemical similarity scaffolds, high-resolution 1H-MRSI metabolite-distribution routes, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, localized functional 31P NAD-dynamics, deuterium metabolite-mapping / absolute-quantification, deuterium kinetic-rate imaging, quantity-defined ionic / thermal / myelin routes, BBB water-exchange and tracer-specific transport routes, target-defined astrocyte PET, clearance support-state proxies, and hemodynamic transfer audits instead of collapsing them into one 'multimodal' advance."
   - "The connectome-dynamics gap is now written as 19 maintenance-state families plus a separate shared electrical-state class, rather than a loose warning that wiring alone is not enough."
+  - "The top-level framing now treats structural atlas progress, dynamic maintenance-state dependence, and bounded living-human observability as three different scientific objects."
   - "Shared extracellular / electrical-state evidence is now also split inside that class: gap-junction networks, endogenous-field / ephaptic routes, extracellular-space geometry / osmotic routes, inhibitory-driving-force routes, and bounded human clues are not read as one inferential object."
   - "Clearance-support routes are now also split on this page: macroscopic CSF oscillation, parenchyma-CSF water exchange, respiration-conditioned net flow, exercise-conditioned contrast influx / meningeal-lymphatic flow, intrathecal tracer / CSF-to-blood clearance, CSF mobility, and model-based biomarker efflux are not one row."
   - "The stronger the claim, the more explicitly it is checked against falsification criteria, alternative explanations, and abstention conditions."
@@ -26,9 +27,9 @@ page_highlights:
   - "Invasive language BCI results are now also split on this page into throughput / expressivity, transfer initialization, bounded fixed-decoder slices, and adaptive rescue rather than one speech-BCI row."
   - "Even though it is long, the introduction and framing notes alone should make the page's overall stance clear."
 known_points:
-  - "No major theory has become a decisive standalone answer at this point."
+  - "Recent structural, transcriptomic, and connectomic atlases improve scaffolds, but they do not by themselves deliver state-complete observation of the living whole brain."
   - "EEG alone is constrained by inverse-problem uncertainty and spatial resolution limits, so it is insufficient as the sole basis for strong claims."
-  - "Progress in local connectomics or source imaging does not imply state-complete observation of the human whole brain."
+  - "Memory-relevant variables extend beyond wiring into transcriptional, glial, vascular, extracellular, and metabolic maintenance-state families."
   - "Human whole-brain evidence remains layered and proxy-based; no current route directly fixes current transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local electrical-coupling / extracellular-geometry / inhibitory-driving-force regime, ECM / PNN gate state, local proteostasis / synaptic-tag capture, cargo-routing state, neuromodulatory occupancy / release state, chloride set point, neurovascular-unit / BBB / pericyte controller state, or branch-local mitochondrial positioning."
   - "Current human evidence for shared extracellular / electrical state remains bounded to proxy or perturbation clues; it does not directly reveal coupling topology, extracellular-volume geometry, or local inhibitory-driving-force regime across the living whole brain."
   - "Proxy-rich human evidence and deployment-ready measurement are different claims; sample size, model burden, hardware specialization, and fusion status remain separate ceilings."
@@ -39,22 +40,19 @@ known_points:
   - "Irreversibility labels, wall-plug power, and computational complexity are different objects; coarse-grained neural asymmetry is not automatically microscopic dissipation or WBE-ready implementation cost."
   - "Strong claims that omit causal perturbation, reproducibility, and explicit exclusion of alternative explanations remain on shaky ground."
 unknown_points:
-  - "It remains unsettled which combination of theories, if any, will ultimately amount to a sufficient condition."
-  - "Which combination of measurement classes could eventually reduce enough latent-state error for stronger WBE claims is still unsettled."
-  - "How to connect final judgments about personhood and phenomenal consciousness to engineering criteria is unresolved."
+  - "Which minimal variable families and time-resolution targets are sufficient for falsifiable emulation benchmarks remains unsettled."
+  - "Which combinations of living-human proxy routes can be jointly calibrated without shared-driver or model-burden confounding is still unsettled."
+  - "How far structural scaffold gains can reduce latent-state uncertainty before perturbation benchmarks become the dominant gate is unresolved."
 wiki_links:
-  - label: "Wiki: Consciousness Theory Map"
-    url: "/wiki/consciousness-theory-map.html"
-    description: "Explains the differences and roles of IIT, GNWT, FEP, and PCI from first principles."
   - label: "Wiki: Reading Partial Progress, Exploratory Stages, and Gaps"
     url: "/wiki/progress-labels-and-open-problem-status.html"
     description: "Clarifies how to read labels such as insufficient, uncertain, and unresolved on this page."
-  - label: "Wiki: Personhood and the Copy Problem"
-    url: "/wiki/personhood-and-copy-problem.html"
-    description: "Explains the more philosophical issues that appear on this page in plain language."
   - label: "Wiki: EEG Preprocessing and QC"
     url: "/wiki/eeg-preprocessing-and-qc.html"
     description: "Shows where EEG's limits come from by walking through the processing pipeline."
+  - label: "Wiki: Measurement and Modeling Terms"
+    url: "/wiki/measurement-and-modeling-terms.html"
+    description: "Defines the bridge terms that connect sensors, latent variables, and models."
   - label: "Wiki: Observability and Claim Ceilings by Measurement Stack"
     url: "/wiki/measurement-stack-and-claim-ceiling.html"
     description: "Explains what each modality directly observes and where each one hits its claim ceiling."
@@ -67,9 +65,9 @@ wiki_links:
   - label: "Wiki: Human Proxy Composition and Route Maturity"
     url: "/wiki/human-proxy-composition.html"
     description: "Explains why recent human PET, MRSI, myelin, and clearance rows still do not compose automatically into same-subject state closure."
-  - label: "Wiki: How to Read Claims and Evidence"
-    url: "/wiki/claims-and-evidence.html"
-    description: "A helper page for reading theoretical discussion through the lens of claim strength."
+  - label: "Wiki: State, Trait, and Drift"
+    url: "/wiki/state-trait-and-drift.html"
+    description: "Explains why longitudinal stability and retest design are separate from one-shot decoding success."
   - label: "Wiki: Closed Loops, Latency, Jitter, and Safety Stops"
     url: "/wiki/closed-loop-latency-jitter-and-safety-stops.html"
     description: "Adds the basics of latency, jitter, and safety-stop design in closed-loop implementations."
@@ -92,7 +90,7 @@ recommended_pages:
 <!-- Abstract -->
 <div class="abstract-box">
 <h2>Abstract</h2>
-<p>This page is a long-form research note aimed at turning mind uploading (WBE) into something that can be evaluated as real research. It is organized in three stages: <strong>how to measure</strong>, <strong>how to infer</strong>, and <strong>how to implement</strong>. It treats recent results, failures, and limits with the same weight so that the boundary between what can and cannot be claimed remains explicit.</p>
+<p>This page is a long-form research note aimed at turning mind uploading (WBE) into something that can be evaluated as real research. It is organized around four technical questions: <strong>what can be observed directly</strong>, <strong>what remains latent</strong>, <strong>what can be perturbed or calibrated</strong>, and <strong>what has to stay stable during implementation</strong>. It treats recent results, failures, and limits with the same weight so that the boundary between scaffold progress and state-complete claims remains explicit.</p>
 </div>
 
 <div class="cta-box">
@@ -108,11 +106,11 @@ recommended_pages:
 
 <div class="note-box">
 <strong>If you need background first</strong>
-<p>If you get stuck on the differences between major theories, start with the <a href="wiki/consciousness-theory-map.html">Wiki: Consciousness Theory Map</a>. If the copy problem or personhood questions are the blocker, use the <a href="wiki/personhood-and-copy-problem.html">Wiki: Personhood and the Copy Problem</a>. If the limits of EEG are the issue, go to the <a href="wiki/eeg-preprocessing-and-qc.html">Wiki: EEG Preprocessing and QC</a>. For the bridge from measurement terms to modeling terms, use the <a href="wiki/measurement-and-modeling-terms.html">Wiki: Measurement and Modeling Terms</a>. For uncertainty and abstention, use the <a href="wiki/uncertainty-confidence-and-abstention.html">Wiki: Uncertainty, Calibration, and Abstention</a>. For multimodal integration, use the <a href="wiki/multimodal-integration-basics.html">Wiki: Multimodal Integration Basics</a>. For longitudinal evaluation and drift, use the <a href="wiki/state-trait-and-drift.html">Wiki: State, Trait, and Drift</a>. For closed-loop latency and safety stops, use the <a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: Closed Loops, Latency, Jitter, and Safety Stops</a>. For thermodynamics and dissipation, use the <a href="wiki/thermodynamic-grounding-basics.html">Wiki: Thermodynamic Grounding Basics</a>.</p>
+<p>If you want only the technology and natural-science side first, start with <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceilings by Measurement Stack</a>, <a href="wiki/observation-to-estimation.html">Wiki: From Observation to Estimation</a>, and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic Plasticity and Maintenance State</a>. If the limits of EEG are the issue, go to <a href="wiki/eeg-preprocessing-and-qc.html">Wiki: EEG Preprocessing and QC</a>. For the bridge from measurement terms to modeling terms, use <a href="wiki/measurement-and-modeling-terms.html">Wiki: Measurement and Modeling Terms</a>. For multimodal integration, go next to <a href="wiki/human-proxy-composition.html">Wiki: Human Proxy Composition and Route Maturity</a> and <a href="wiki/state-trait-and-drift.html">Wiki: State, Trait, and Drift</a>. For implementation burdens, use <a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: Closed Loops, Latency, Jitter, and Safety Stops</a> and <a href="wiki/thermodynamic-grounding-basics.html">Wiki: Thermodynamic Grounding Basics</a>.</p>
 </div>
 <div class="note-box">
-<strong>When you are confused about the different roles of theory pages</strong>
-<p>Perspective is a long notebook that brings together theories, measurements, counterarguments, limitations, and the design principles adopted on this site. If you want to align claim levels first, start with <a href="wbe_101.html">WBE 101</a>. If you want the dependency map, use the <a href="tech_roadmap.html">technology roadmap</a>. If you want a one-page guide to the theory section, see <a href="wiki/theory-pages-reading-guide.html">Wiki: Guide to reading theory pages</a>.</p>
+<strong>When you are confused about the roles of the synthesis pages</strong>
+<p>Perspective is the long technical notebook that keeps structural scaffold gains, hidden maintenance-state burdens, human observability ceilings, and implementation objections on one axis. If you want to align claim levels first, start with <a href="wbe_101.html">WBE 101</a>. If you want the dependency map, use the <a href="tech_roadmap.html">technology roadmap</a>. If you want a one-page guide to the remaining theory-specific routes, see <a href="wiki/theory-pages-reading-guide.html">Wiki: Guide to reading theory pages</a>.</p>
 </div>
 <div class="note-box">
 <strong>When you are confused between research notes, theoretical frames, proposals, and issues</strong>
@@ -131,14 +129,14 @@ recommended_pages:
 <h4>Things to check before reading</h4>
 <ul>
 <li><strong>Role of this page:</strong> This page does not simply list favorable positions; it tracks evidence and limitations at the same time.</li>
-<li><strong>What you can say on this page:</strong> You can sort out what the major theories explain and where the main difficulties remain.</li>
-<li><strong>Things that can't be said on this page alone:</strong> We have not reached the final conclusion that ``this completely explains consciousness.''</li>
+<li><strong>What you can say on this page:</strong> You can sort out which measurements, latent states, and implementation ceilings are the current technical bottlenecks.</li>
+<li><strong>Things that can't be said on this page alone:</strong> This page does not justify state-complete observation, route-free controller identity, or a sufficient-condition claim for WBE.</li>
 </ul>
 </div>
 
 <div class="note-box">
 <strong>Reading order when lost</strong>
-<p>First confirm the overall position in the introduction, then read the <a href="#design-principles">design principles</a> section on thinking in terms of migration rather than copying, and only after that move into the measurement, modeling, and implementation sections. If you get stuck on a philosophical issue, it is often easier to step out to the <a href="faq.html">FAQ</a> and then return.</p>
+<p>First read the <a href="#design-principles">design principles</a> section on state-space closure, then move into the introduction, measurement, modeling, and implementation sections. If the terminology becomes the blocker, step out briefly to the <a href="glossary.html">Glossary</a> or <a href="wiki/measurement-and-modeling-terms.html">Wiki: Measurement and Modeling Terms</a> and then return.</p>
 </div>
 
 <table class="data-table">
@@ -151,9 +149,9 @@ recommended_pages:
 </thead>
 <tbody>
 <tr>
-<td>I want to know where the main theory is failing.</td>
-<td><a href="#introduction">Introduction</a></td>
-<td>Be the first to see how we are repositioning IIT, GNWT, and FEP.</td>
+<td>I want to know which technical bottleneck bites first.</td>
+<td><a href="#design-principles">Design Principles</a></td>
+<td>You can see why structural progress, hidden maintenance state, and human observability are not the same claim.</td>
 </tr>
 <tr>
 <td>I want to see the overall design from measurement to implementation.</td>
@@ -168,12 +166,12 @@ recommended_pages:
 <tr>
 <td>I want to know what kind of research plan I will fall into.</td>
 <td><a href="#research-program">Research Program</a> / <a href="#eeg-consciousness-roadmap">EEG Consciousness Roadmap</a></td>
-<td>You can check what you will actually accumulate as a research plan.</td>
+<td>You can check what artifact classes, validations, and stop rules the site expects you to accumulate.</td>
 </tr>
 <tr>
 <td>I want to know the limitations of this page first.</td>
 <td><a href="#limitations">Limitations</a></td>
-<td>You can separate and read the theoretical limits, engineering limits, and operational limits.</td>
+<td>You can separate and read the observability limits, engineering limits, and operational limits.</td>
 </tr>
 </tbody>
 </table>
@@ -187,12 +185,16 @@ recommended_pages:
 </thead>
 <tbody>
 <tr>
-<td>None of the major theories is single-handedly definitive at this point.</td>
-<td>It is unclear which combination of theories will ultimately be a sufficient condition for WBE.</td>
+<td>Structural atlas progress is real, but it is not route-free current-state readout.</td>
+<td>Which structural scaffold gains actually shrink latent-state uncertainty enough for stronger emulation benchmarks is still unresolved.</td>
 </tr>
 <tr>
 <td>EEG alone has fundamental limitations in inverse problems and spatial resolution.</td>
 <td>The extent to which this limitation can be overcome by integrating other modalities is still a research topic.</td>
+</tr>
+<tr>
+<td>Living-human evidence remains proxy-based even when several routes are combined.</td>
+<td>Which multimodal bundles can be composed without shared-driver or model-burden confounding is still unresolved.</td>
 </tr>
 <tr>
 <td>Strong claims that exclude causal perturbations, retestability, and thermodynamic constraints are dangerous.</td>
@@ -202,15 +204,16 @@ recommended_pages:
 </table>
 
 <section class="section" id="design-principles">
-<h2 class="section-title">Design Principles: Design as a migration, not a copy</h2>
-<p>This section integrates the theoretical frames that were once separated in the old <code>idea.md</code> into the design principles of this research note. The goal is not to multiply philosophical positions, but to make it clear <strong>which assumptions should actually be built into the design conditions</strong> without separating them from the main text.</p>
+<h2 class="section-title">Design Principles: Start from state-space closure</h2>
+<p>This section is the technical front door of the page. The question it asks is not which label sounds deepest, but which variables can be observed directly, which remain latent, which can be causally perturbed, and which must stay stable over time for any stronger emulation claim to survive. Theory still appears later on this page, but only after those empirical gates are fixed.</p>
 
 <div class="key-points">
 <h4>Design principles adopted</h4>
 <ul>
-<li><strong>Dynamic migration instead of static copy:</strong>The question is how to continue the process of not only storing information in the brain but also continuously updating it.</li>
-<li><strong>Use theories as working hypotheses:</strong>IIT, FEP, and predictive coding are not truth declarations, but are treated as auxiliary lines to the requirements definition.</li>
-<li><strong>Returning identity to design conditions:</strong>The copy problem does not stop at abstractions, but is broken down into continuity tests, intervention responses, causal conservation, and thermodynamic constraints.</li>
+<li><strong>Structural scaffold is necessary but not sufficient:</strong> Better atlases and connectomes improve priors, not route-free current-state readout.</li>
+<li><strong>Hidden maintenance variables are first-class causal objects:</strong> Transcriptional, glial, vascular, extracellular, and metabolic state cannot be treated as optional residuals.</li>
+<li><strong>Human proxy bundles need explicit composition rules:</strong> Shared-driver audit, calibrator role, time window, and model burden must stay visible before claims are strengthened.</li>
+<li><strong>Benchmarks must test perturbation, drift, and energetic burden:</strong> Decode accuracy alone is not an implementation criterion.</li>
 </ul>
 </div>
 
@@ -224,31 +227,41 @@ recommended_pages:
 </thead>
 <tbody>
 <tr>
-<td><strong>identity</strong></td>
-<td>We place more emphasis on whether the process of updating is continuous, rather than whether the data is the same.</td>
-<td>It is unclear which continuity measure should be considered a sufficient condition.</td>
+<td><strong>Structural scaffold</strong></td>
+<td>Local ultrastructure, transcriptomic atlases, and connectomics should be read as scaffold gains that tighten priors and registration, not as complete access to current whole-brain state.</td>
+<td>How much those scaffold gains reduce latent-state uncertainty before perturbation becomes the dominant gate remains unsettled.</td>
 </tr>
 <tr>
-<td><strong>How to use consciousness theory</strong></td>
-<td>Rather than making IIT, GNWT, and FEP compete, we convert them into measurement/perturbation/integration indicators and use them.</td>
-<td>There is still a lack of common specifications that can be stably used across theories.</td>
+<td><strong>Maintenance controllers</strong></td>
+<td>Transcriptional programs, astrocyte state, vascular and clearance controllers, extracellular geometry, and metabolic support have to be treated as causal variables when memory stability or adaptive function is claimed.</td>
+<td>Which variable families and time-resolution targets are minimally sufficient for falsifiable emulation benchmarks remains unsettled.</td>
 </tr>
 <tr>
-<td><strong>thermodynamics</strong></td>
-<td>If a dynamic process is maintained, not only logical costs but also dissipation and non-equilibrium should be audited.</td>
-<td>It remains an open question which thermodynamic KPIs are directly linked to the quality of identity and consciousness.</td>
+<td><strong>Human observability</strong></td>
+<td>Living-human PET, MRI, MRSI, EEG, and clearance routes stay split by direct observable, calibrator role, spatial unit, and physiology-side burden; they are not automatically one state meter.</td>
+<td>Which multimodal bundles can be calibrated in the same subject without shared-driver or model-burden confounding is still unresolved.</td>
+</tr>
+<tr>
+<td><strong>Implementation gates</strong></td>
+<td>Closed-loop and emulation claims must carry perturbation response, retest stability, drift monitoring, and energetic-cost audits alongside decoding performance.</td>
+<td>Which benchmark thresholds should count as a meaningful failure or success condition remains a bench-design problem.</td>
 </tr>
 </tbody>
 </table>
 
 <div class="note-box">
+<strong>Why this page now starts here</strong>
+<p>Recent primary papers sharpen three different frontiers rather than one unified ladder. Whole-brain cell-type atlas work (<a href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank">Yao et al. (2023)</a>), local human nanoscale reconstruction (<a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a>), and morphology-linked predicted transcriptomic connectomics (<a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">Gamlin et al. (2025)</a>) improve structural scaffolds. But causal work on thalamocortical transcriptional programs (<a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2026)</a>), multiday astrocyte traces (<a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Ito et al. (2025)</a>), and astrocyte-supported amygdala representations (<a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a>) show that stabilization and retrieval depend on dynamic non-neuronal and transcriptional state. On the living-human side, CSF mobility and biomarker-efflux work (<a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>; <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a>) tighten bounded observability, not route-free maintenance-controller identity. That is why this page now puts state-space closure ahead of theory labels.</p>
+</div>
+
+<div class="note-box">
 <strong>In everyday language</strong>
-<p>Saving a single photo is a different matter than transferring a video with the same movements. If Mind-Upload is to be treated as something closer to the latter than the former, what is needed is not only ``replication of structure'' but also ``continuous transition,'' ``response to intervention,'' and ``maintenance cost.''</p>
+<p>A wiring diagram helps you locate parts of a machine, but it does not tell you the current buffer occupancy, controller setting, or heat load. WBE faces the same problem. Structure matters, but the stronger failure mode is hidden dynamic state.</p>
 </div>
 
 <div class="note-box">
 <strong>Where this position falls into implementation</strong>
-<p>Measurements will require BIDS, synchronization, QC, and perturbation logging, modeling will require ESI/DCM/SCM uncertainty management, and implementation will require closed-loop stability and thermodynamic constraints. Therefore, the correct way to use this clause is to read it not as an abstract declaration, but as an entry point for binding the requirements of subsequent clauses.</p>
+<p>Measurements will require BIDS, synchronization, QC, perturbation logs, and route-specific calibrators. Modeling will require explicit uncertainty management for inverse problems, latent confounders, and non-equivalent multimodal rows. Implementation will require closed-loop stability, drift checks, and thermodynamic-cost audits. The correct way to use this section is therefore not as a slogan, but as the gate that binds the requirements of the later sections.</p>
 </div>
 </section>
 

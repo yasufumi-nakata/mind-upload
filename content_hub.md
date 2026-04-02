@@ -5,8 +5,8 @@ description: "An operations hub that centralizes the roles, integration targets,
 article_type: "Navigation"
 subtitle: "A single routing layer to prevent content sprawl and literature-route compression"
 author: Mind Uploading Research Project
-last_updated: "2026-03-30"
-note: "Single source of truth for public pages and technical literature routing"
+last_updated: "2026-04-02"
+note: "Single source of truth for public pages and technical literature routing (updated with the Perspective technical-front-door sync)"
 audience: "Anyone checking where public content belongs and anyone who wants to avoid guessing where new material should be merged"
 reading_time: "5-10 min"
 page_intro: "This page is the operations hub for fixing where public content should go so material does not scatter across the site. It now also gives a technical fast path so literature updates are not misrouted by year order alone."
@@ -92,9 +92,9 @@ Do not route it automatically to the human-observability lane. First check wheth
 </p>
 </div>
 <div class="note-box">
-<strong>If You Are Unsure About Theory Page Order</strong>
+<strong>If You Are Unsure About Perspective's Role</strong>
 <p>
-If you want only the theory-side distinction among WBE 101, Perspective, the framework section inside Perspective, and Roadmap, see <a href="wiki/theory-pages-reading-guide.html">Wiki: Theory Page Reading Guide</a>. This page covers public-page roles at a high level; the wiki handles theory-specific detail.
+Treat <a href="perspective.html">Perspective</a> as the long technical synthesis page where structural-scaffold gains, hidden-state burdens, human observability ceilings, and implementation objections are kept on one axis. Use <a href="wbe_101.html">WBE 101</a> to align claim levels first, <a href="tech_roadmap.html">Roadmap</a> for dependency order, and <a href="wiki/theory-pages-reading-guide.html">Wiki: Theory Page Reading Guide</a> only when you need the remaining theory-specific map.
 </p>
 </div>
 <div class="note-box">
@@ -174,9 +174,9 @@ If you want a single route showing whether something you read should flow back i
 <td>Because it fixes problem decomposition and arrival conditions, keeping sequence discussions from scattering.</td>
 </tr>
 <tr>
-<td>Theory comparison, criticisms, and philosophical assumptions</td>
+<td>Measurement-model-implementation synthesis, scientific objections, and state-space-closure limits</td>
 <td><a href="perspective.html">perspective.html</a></td>
-<td>Because it is where differences among theoretical positions are read in relation to verifiability.</td>
+<td>Because it is where structural scaffold gains, hidden-state burdens, and implementation ceilings are read together on one technical and natural-science axis.</td>
 </tr>
 <tr>
 <td>Paper summaries and literature organization by open problem</td>
