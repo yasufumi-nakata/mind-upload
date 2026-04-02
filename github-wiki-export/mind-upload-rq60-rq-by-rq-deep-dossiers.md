@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-04-02 / Role: RQ-by-RQ Deep Dossier
+- Updated: 2026-04-03 / Role: RQ-by-RQ Deep Dossier
 
 ---
 
@@ -13,8 +13,20 @@
 > 本ページは、`60RQ` を1件ずつ深掘りするための固定ドシエ集です。  
 > 汎用横断サマリは最小化し、各RQで `検証命題` `境界` `応募テーマ` `主データ` `KPI` `停止条件` を先に固定します。
 
-- 更新日: 2026-04-02
+- 更新日: 2026-04-03
 - 出典: `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`（60行を再構成）
+
+## 2026-04-03 05:12 JST latest actual-pull route-hold note
+
+This run still does not change the current public six-question batch. An actual-pull reread after `mind-upload@a9fc5d1cb691f3669c40803604e78cf87fab4eed`, `EEG-DATA@8c3ace28bad0b3bac259caa440994e5d05bfc7d1`, and `auto-research-funds@35756f8381c47daa24bb70bb7a1ff88d1dcf76bc` still leaves the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
+
+- The newest pulled deltas still deepen route discipline and support pages rather than replacing the current route family: `mind-upload` is now at a `docs: sync github wiki export` head that keeps the exported route mirrors aligned without changing the active queue, `EEG-DATA` carries forward a `VR navigation dataset` output refresh on top of a recent `EESM17` metadata deepening while still keeping `30,900` merged-unique rows, `28,863` high-confidence rows, and `24,885` directly usable rows, and `auto-research-funds` adds `JSPS overseas fellow` current-card snapshots on top of a recent `JSSF research publication` refresh while now reporting `8,594` aid IDs, `4,307` rows, and `3,957` official-source rows without changing the practical shortlist.
+- Recounting the `### Ux-y` headings on this page still returns `60`, so this run keeps the one-row-at-a-time dossier structure intact.
+- The public six still stay `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
+- The solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
+- The route-safe access reading stays narrow in one important way: `D10` still stays the only clear public-open primary anchor while `D03 / D02 / D01` still stay gated-support planning anchors, and none of the newest repo-wide carry-forward closes the recall-validity gap under `U13-5` or the rerun-support gap under `U14-4 / U14-2`.
+- Browser-level live checks with a browser user agent still returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `mind-upload-rq-solvability-bridge.html`; the current `Last-Modified` header was `Thu, 02 Apr 2026 19:17:56 GMT` on those public surfaces, while the checked bodies still surfaced the earlier `04:05/04:06 JST` hold note before this source sync.
+- The funding bridge still stays narrow: `Kura Fund` and `Nakatani Foundation graduate scholarship` remain the active near-term lanes, `Kashinome Scholarship` remains the student-runway side lane, `Nakatani Foundation research grant` remains next-cycle watch, `Secom General Research Grant` remains closed for the current cycle, and a fresh Todoist `api/v1/sync(items, projects)` audit (`items=203`, `projects=2`, `Kura=2`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`) still did not justify a new task.
 
 ## 2026-04-03 04:06 JST latest actual-pull route-hold note
 
