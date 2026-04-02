@@ -22,6 +22,7 @@ page_highlights:
   - "For phase-targeted closed loops, M2 / I1 now separate oscillation estimability, causal-versus-post-hoc targeting benchmark, circular targeting precision, downstream effect, and phase stability, so phase error alone is not treated as sufficient evidence."
   - "M1 / M5 keep neural state distinct from vascular transfer state, so a BOLD amplitude difference is not silently promoted to a neural difference."
   - "M1 / M3 now treat human in vivo evidence as a split ladder, so proxy class, operational maturity, calibrator role, and family-internal quantity / target / transport differences are kept separate instead of being collapsed into one observability score."
+  - "M1 / M3 now also keep human barrier-side evidence split inside the blood-CSF-barrier lane itself, so choroid-plexus perfusion, blood-to-CSF transport, water cycling, and apparent BCSFB exchange are not silently merged into BBB water-exchange or tracer-specific BBB transport."
   - "M1 / M3 now also separate human local clinical-unit allocation from noninvasive perturbation-conditioned excitability routes, so `human excitability evidence` is not treated as one row."
   - "M1 / M3 now also split human astrocyte-related PET into SMBT-1 MAO-B target-validation / disease-context / quantification / biodistribution routes, SL25.1188 MAO-B quantification / severity-conditioned routes, and I2BS routes, so `astrocyte PET` is not treated as one interchangeable human row."
   - "M3 now also keeps cohort / physiological regime compatibility and row robustness / availability separate from those three per-row axes, so a proxy-rich bundle is not silently treated as one matched human baseline or one stable stack."
@@ -46,7 +47,7 @@ known_points:
   - "A disclosed body / environment boundary, including slow internal-milieu disclosure, is a separate audit from low latency or online accuracy."
   - "Human-side advances reduce different error terms and remain differently deployment-limited; proxy-rich evidence is not yet same-subject, same-session, externally calibrated state identification."
   - "Proxy class, operational maturity, and calibrator role are different questions; a real human route may still calibrate only one bounded hidden-state family."
-  - "A human route family name is not yet one row; 1H-MRSI similarity, high-resolution 1H-MRSI metabolite-distribution mapping, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, localized functional 31P NAD-dynamics, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, quantity-defined myelin MRI / tissue-health-sensitive ratios, BBB water-exchange, tracer-specific BBB PET transport, SMBT-1 MAO-B target-validation / disease-context / quantification / biodistribution routes, SL25.1188 MAO-B quantification / severity-conditioned routes, and I2BS routes remain separate routes with different ceilings."
+  - "A human route family name is not yet one row; 1H-MRSI similarity, high-resolution 1H-MRSI metabolite-distribution mapping, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, localized functional 31P NAD-dynamics, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, quantity-defined myelin MRI / tissue-health-sensitive ratios, BBB water-exchange, tracer-specific BBB PET transport, blood-CSF barrier / choroid-plexus perfusion / blood-to-CSF transport / water-cycling / apparent-exchange routes, SMBT-1 MAO-B target-validation / disease-context / quantification / biodistribution routes, SL25.1188 MAO-B quantification / severity-conditioned routes, and I2BS routes remain separate routes with different ceilings."
   - "Human clinical single-unit allocation, sleep-homeostasis / plasticity recalibration, and state-gated perturbation are also separate human routes with different direct observables and different ceilings."
   - "A named astrocyte-related PET paper is not yet one route family; MAO-B target validation, MAO-B disease-context contrast, MAO-B quantification / biodistribution burden, SL25.1188 covariate ceilings, and I2BS routes remain separate questions."
   - "Even when human proxy rows look complementary, cohort / physiological regime mismatch, route-local repeatability, cross-centre transfer, and complete-case availability still remain separate gates."
@@ -843,6 +844,13 @@ One more split is necessary inside the human maintenance-state family. <a href="
 <td>High-temporal-resolution dynamic PET plus kinetic modeling across three radiotracers</td>
 <td>Bounded tracer-specific BBB transport proxy</td>
 <td>Named tracer PS estimate, not one generic BBB permeability scalar or local controller readout</td>
+</tr>
+<tr>
+<td><strong>Human blood-CSF barrier / choroid-plexus perfusion / transport family</strong><br>Zhao et al. (2020); Sun et al. (2024); Petitclerc et al. (2021, 2026); Anderson et al. (2022); Wu et al. (2026)</td>
+<td>Choroid-plexus perfusion, blood-to-CSF water transport, choroid-plexus water cycling, apparent BCSFB exchange, or joint BBB-versus-BCSFB ASL exchange</td>
+<td>ASL / ultra-long-TE ASL / DCE-MRI / REXI route family with route-specific model burden, validation ceiling, and small-cohort dependence outside the HCP-Aging perfusion analysis</td>
+<td>Bounded BCSFB / choroid-plexus support-state proxy family</td>
+<td>Perfusion is not blood-to-CSF transport, water cycling is not apparent exchange, and none of these rows identify a generic BBB scalar, a generic clearance truth, or choroid-plexus epithelial controller identity</td>
 </tr>
 <tr>
 <td><strong>Human MAO-B PET: SMBT-1 first-in-human target validation</strong><br>Villemagne et al. (2022)</td>
