@@ -888,11 +888,11 @@ One more split is necessary inside the human maintenance-state family. <a href="
 <td>Different target class from MAO-B, not drop-in comparable with MAO-B tracer families, and not a generic astrocyte-state meter</td>
 </tr>
 <tr>
-<td><strong>CSF mobility / model-based biomarker-efflux routes</strong><br>Hirschler et al. (2025); Dagum et al. (2026)</td>
-<td>Macro support-state proxy</td>
-<td>Specialized MRI or device- and model-heavy overnight biomarker-efflux inference</td>
-<td>Bounded clearance-support proxy</td>
-<td>CSF mobility and model-based biomarker efflux are different clearance-transport rows, not a route-free glymphatic meter or direct readout of cell-specific immune control, responsible synapse, or local maintenance controller</td>
+<td><strong>Human clearance-support route families</strong><br>Fultz et al. (2019); Kim, Huang, &amp; Liu (2025); Lim et al. (2025); Yoo et al. (2025); Eide et al. (2023); Hirschler et al. (2025); Dagum et al. (2026)</td>
+<td>Macro support-state proxy family</td>
+<td>Sleep-linked CSF oscillation, parenchyma-CSF water exchange, respiration-conditioned net flow, exercise-conditioned contrast influx / meningeal-lymphatic flow, intrathecal tracer / CSF-to-blood clearance, specialized CSF-mobility MRI, or device- and model-heavy overnight biomarker-efflux inference</td>
+<td>Bounded clearance-support proxy family</td>
+<td>These are different clearance-transport rows with different observables, intervention regimes, crossed boundaries, and model burdens, not a route-free glymphatic meter or direct readout of cell-specific immune control, responsible synapse, or local maintenance controller</td>
 </tr>
 </tbody>
 </table>
