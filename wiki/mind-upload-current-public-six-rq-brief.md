@@ -38,6 +38,9 @@ wiki_links:
   - label: "Wiki: U14-2 route packet"
     url: "/wiki/u14-2-fixed-split-route.html"
     description: "Why D01 stays the intended gated-support anchor for U14-2, why richer rerun benchmarks stay secondary, and what the fixed-split artifact can honestly close."
+  - label: "Wiki: U7-2 route packet"
+    url: "/wiki/u7-2-timing-metric-route.html"
+    description: "The adjacent timing-metric packet that keeps the same D11 synchronization family readable without changing the current public six."
 recommended_pages:
   - label: "Issue page"
     url: "/issue.html"
@@ -53,6 +56,16 @@ recommended_pages:
 This page keeps the current public six-question batch readable at the level of `one RQ -> one bounded EEG anchor -> one first artifact -> one funding bridge`.
 
 It does **not** announce solved claims. It only states what the current public route is narrow enough to support after a post-pull review of `mind-upload`, `EEG-DATA`, `auto-research-funds`, the live public page, the current official funding windows, and a read-only Todoist recheck.
+
+## What still stays fixed after the 17:08 JST actual-pull reread on April 2, 2026
+
+- An actual-pull recheck at `2026-04-02 17:08 JST` after `mind-upload@04ff74247cfa`, `EEG-DATA@0dec61962a5`, and `auto-research-funds@613d26e7d` still leaves the public batch and the solve-first order unchanged.
+- The newest pulled deltas still deepen route support rather than the current claim surface: `mind-upload` already keeps the `U7-2` packet live and this source sync only makes the compact brief and the bridge point to it more explicitly, `EEG-DATA` now reports `30,892` unique merged records, `28,855` high-confidence records, and `24,510` high-confidence immediate-access records in the current methodology snapshot, and `auto-research-funds` keeps the same practical shortlist without replacing the current `D10 / D03 / D02 / D01` family.
+- The route-safe access reading still stays narrow: `D10` remains the only clear public-open primary anchor while `D03 / D02 / D01` still stay gated-support anchors in public wording. A direct live-access reread still shows `Subscription Required` plus `LOGIN TO ACCESS DATASET FILES` on the current `IEEE DataPort` pages for those three support anchors.
+- Browser-level live checks before this source sync returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u7-2-timing-metric-route.html`; the checked pages returned `Last-Modified: Thu, 02 Apr 2026 07:24:08 GMT`.
+- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, `Secom General Research Grant = closed (March 31, 2026 at 12:00 JST)`, `Nakatani Foundation research grant = next-cycle watch`, and the `Okawa Foundation` official page returned `HTTP 403` in this run so that lane still stays watch-only.
+- A fresh read-only Todoist `api/v1/sync(items, projects)` full-item audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
+- This source sync still does **not** widen the current public six. It only makes the adjacent `U7-2` synchronization-metric packet explicit underneath the same outside-current-six infrastructure floor.
 
 ## What still stays fixed after the 11:05 JST actual-pull reread on April 2, 2026
 
@@ -229,7 +242,7 @@ It does **not** announce solved claims. It only states what the current public r
 
 - A March 31 post-pull recheck at `2026-03-31 09:04 JST` after `mind-upload@8cc3379`, `EEG-DATA@715ecdf`, and `auto-research-funds@6166f60` still leaves the public batch and the solve-first order unchanged.
 - The newest pulled deltas widen the map but do not widen the current public claim surface: the astrocyte / SV2A route refinements, the `U1-2` funding-sync packet, and the `Zenodo HEP ERP` deep-dive additions do not replace `D10` or turn `D03/D02/D01` into immediate public anchors.
-- The outside-current-six next-watch queue of four also stays unchanged: `U7-1` remains the cleanest public-open `A-tier` follow-up, `U1-2` remains the next narrow inverse-estimation packet, `U4-2` remains the minimal causal-intervention packet, and `U8-1` remains the bounded closed-loop delay-tolerance packet. If you want the exact row packets, continue with the [U7-1 route packet](/wiki/u7-1-synchronization-contract-route.html), the [U1-2 route packet](/wiki/u1-2-uncertainty-calibration-route.html), the [U4-2 route packet](/wiki/u4-2-minimal-causal-route.html), and the [U8-1 route packet](/wiki/u8-1-closed-loop-delay-tolerance-route.html).
+- The outside-current-six headline queue of four also stays unchanged: `U7-1` remains the cleanest public-open `A-tier` follow-up, `U1-2` remains the next narrow inverse-estimation packet, `U4-2` remains the minimal causal-intervention packet, and `U8-1` remains the bounded closed-loop delay-tolerance packet. `U7-2` now sits explicitly beside `U7-1` as the adjacent timing-metric support packet rather than as a headline-queue replacement. If you want the exact row packets, continue with the [U7-1 route packet](/wiki/u7-1-synchronization-contract-route.html), the [U7-2 route packet](/wiki/u7-2-timing-metric-route.html), the [U1-2 route packet](/wiki/u1-2-uncertainty-calibration-route.html), the [U4-2 route packet](/wiki/u4-2-minimal-causal-route.html), and the [U8-1 route packet](/wiki/u8-1-closed-loop-delay-tolerance-route.html).
 - At `2026-03-31 00:04 JST`, an overnight recheck still leaves the public batch and the solve-first order unchanged.
 - A March 31 access audit at `2026-03-31 00:20 JST` still leaves the batch unchanged, but it narrows the anchor reading: `D10 3M-CPSEED` remains the only clearly public-open primary anchor in the current six.
 - `D03 Multimodal Fusion EEG + Eye-Tracking`, `D02 CSTE`, and `D01 Acquisition delay of wireless EEG` currently resolve to IEEE DataPort pages that show `LOGIN TO ACCESS DATASET FILES` and `Subscription Required`, so public wording now keeps them only as subscription-gated support anchors rather than immediate public anchors.
@@ -276,7 +289,7 @@ The route is unchanged, but each active row now also carries one submission-read
 - `U13-2 -> U13-5` is still the speech-side contribution stack: first keep `brain-minus-prior` honest on `D10`, then ask where the transfer route breaks when the row moves from perception to recall.
 - `U0-2 -> U0-3` is still the identity-drift floor: first bound timing error on the `D02` route, then ask whether the threshold survives once the timing floor is fixed. The least-distorting public-open stress tests remain `ds004148` and `ds007216`, but they still stay backup-only.
 - `U14-4 -> U14-2` is still the reproducibility-contract stack: first turn disclosure fields into filled cards on the `D01` floor, then freeze the exploration-versus-confirmation split. `D13` remains the first public-open rerun family those two rows would need next.
-- `U7-1 -> U1-2` still sits just outside the batch as the public-open infrastructure floor: `D11` keeps the synchronization contract readable in public, and `D08` keeps the inverse-uncertainty route grounded without forcing a batch switch.
+- `U7-1 -> U7-2 -> U1-2` now sits just outside the batch as the public-open infrastructure floor: `D11` keeps the synchronization contract readable in public, the adjacent `U7-2` packet fixes which timing errors become release-block metrics on that same `D11` family, and `D08` keeps the inverse-uncertainty route grounded without forcing a batch switch.
 
 ## First-pass KPI bundle and stop rule sync
 
