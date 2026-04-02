@@ -5,7 +5,7 @@ description: "60RQを1件ずつ深掘りし、検証命題・可否境界・応�
 article_type: Wiki
 subtitle: "汎用要約ではなく、RQ単位で実装可能な深掘り"
 author: Mind Uploading Research Project
-last_updated: "2026-04-01"
+last_updated: "2026-04-02"
 note: "RQ-by-RQ Deep Dossier"
 audience: "60RQを個別理解して応募計画へ落とし込みたい研究者"
 reading_time: "55-80分"
@@ -16,8 +16,21 @@ reading_time: "55-80分"
 > 本ページは、`60RQ` を1件ずつ深掘りするための固定ドシエ集です。  
 > 汎用横断サマリは最小化し、各RQで `検証命題` `境界` `応募テーマ` `主データ` `KPI` `停止条件` を先に固定します。
 
-- 更新日: 2026-04-01
+- 更新日: 2026-04-02
 - 出典: `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`（60行を再構成）
+
+## 2026-04-02 10:07 JST latest actual-pull route-hold note
+
+This run still does not change the current public six-question batch. An actual-pull reread after `mind-upload@be507c810b11`, `EEG-DATA@3f20f48cca6e`, and `auto-research-funds@fb32c05163f4` still leaves the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
+
+- The newest pulled deltas still deepen metadata and support pages rather than replacing the current route family: `mind-upload` refines EEG foundation setup-equivalence boundaries outside the current six, `EEG-DATA` deep-dives the HBN EEG release 11 route while now reporting `30,887` merged-unique rows, `28,850` high-confidence rows, and `24,871` directly usable rows, and `auto-research-funds` keeps the same practical shortlist while its repository stats still read `8,585` aid IDs, `4,293` rows, and `3,943` official-source rows.
+- Recounting the `### Ux-y` headings on this page still returns `60`, so this run keeps the one-row-at-a-time dossier structure intact.
+- The public six still stay `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
+- The solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
+- The route-safe access reading stays narrow in one important way: the refreshed local `EEG-DATA` catalog keeps widening, but the live-access read still leaves `D10` as the only clear public-open primary anchor while `D03 / D02 / D01` still stay gated support anchors in public wording.
+- In this run, the funding-facing copy is also re-synchronized to this file's `Dxx + DOI + dataset name + access class` wording, so the public-side and funding-side `RQ-by-RQ` dossiers now point to the same canonical row packets again.
+- Browser-level live checks with a browser user agent still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `mind-upload-rq-solvability-bridge.html`; the current `Last-Modified` header was `Thu, 02 Apr 2026 00:15:06 GMT` on those public surfaces.
+- The funding bridge still stays narrow: `Kura Fund`, `Nakatani Foundation graduate scholarship`, and `Kashinome Scholarship` remain the active near-term lanes, `Secom General Research Grant` remains closed for the current cycle, and a fresh Todoist `api/v1/sync(items, projects)` audit (`items=203`, `Kura=2`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`) still did not justify a new task.
 
 ## 2026-04-01 20:09 JST latest post-pull route-hold note
 
@@ -383,9 +396,9 @@ This run does not change the current public six-question batch. It only tightens
 
 ## 使い方（1RQずつ深掘りする運用）
 
-1. 対象RQの `検証命題` と `判定境界` を先に固定する。  
-2. `主データ` で最小再現実験を実施し、`初期KPI` を埋める。  
-3. `停止条件` に抵触したら主張を下方修正し、応募テーマを分割する。  
+1. 対象RQの `検証命題` と `判定境界` を先に固定する。
+2. `主データ` で最小再現実験を実施し、`初期KPI` を埋める。
+3. `停止条件` に抵触したら主張を下方修正し、応募テーマを分割する。
 4. `最低成果物` を完成させてから次RQへ進む。
 
 ## 今回の再検証ログ（2026-03-28 09:02 JST）

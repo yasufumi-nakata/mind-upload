@@ -54,6 +54,18 @@ This page answers one narrow question: for the rows that are actually worth deep
 
 It does **not** try to re-scan all `60RQ` items at once. The working style on this site is now `deepen one row at a time`, not `summarize everything at the same depth`.
 
+## What still stays fixed after the 10:07 JST actual-pull reread on April 2, 2026
+
+- An actual-pull recheck at `2026-04-02 10:07 JST` after `mind-upload@be507c810b11`, `EEG-DATA@3f20f48cca6e`, and `auto-research-funds@fb32c05163f4` still leaves both the current public six and the next-watch queue unchanged.
+- The newest pulled deltas still deepen support rather than the present bridge: `mind-upload` refines EEG foundation setup-equivalence boundaries outside the current six, `EEG-DATA` deep-dives the HBN EEG release 11 route and now reports `30,887` merged-unique rows, `28,850` high-confidence rows, and `24,871` directly usable rows, and `auto-research-funds` keeps the same practical shortlist while its repository stats still read `8,585` aid IDs, `4,293` rows, and `3,943` official-source rows without replacing the current `D10 / D03 / D02 / D01` family or the next-watch `D11 / D08 / D05 / D20` family.
+- Route-safe access wording also stays unchanged: `D10` remains the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors because a direct live-access reread still shows `IEEE DataPort` login and subscription gates on those three routes.
+- The row-level bridge reading only tightens inside that unchanged queue: `U13-5` still keeps an explicit recall-validity caveat because the visible `D03` metadata still does not expose a recall-specific label, and `U14-4 / U14-2` still keep `D13` as the first public-open rerun support family beyond the current `D01` disclosure floor.
+- Browser-level live checks before this source sync still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; the checked pages also returned `Last-Modified: Thu, 02 Apr 2026 00:15:06 GMT`.
+- This source sync also re-aligns the public-side row wording and the funding-facing `60RQ` dossier wording to the same `Dxx + DOI + dataset name + access class` standard, so the bridge page, the deep dossiers, and the funding repo now point to the same canonical row packets again.
+- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, the `Kashinome Scholarship` official page still reads as the annual `mid-January to early-April` window, and `Secom General Research Grant` still shows the current cycle closed (`March 31, 2026 at 12:00 JST`).
+- A fresh read-only Todoist `api/v1/sync(items, projects)` full-item audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
+- This source sync only refreshes the route-hold wording on the public entry pages and the canonical row packets. It does not widen the current queue or claim surface.
+
 ## What still stays fixed after the 09:05 JST actual-pull reread on April 2, 2026
 
 - An actual-pull recheck at `2026-04-02 09:05 JST` after `mind-upload@d7f30648fc40`, `EEG-DATA@ac8cc6fc8e74`, and `auto-research-funds@31ec17305f6a` still leaves both the current public six and the next-watch queue unchanged.
