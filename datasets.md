@@ -769,6 +769,22 @@ The <strong>stopping claims</strong> and <strong>minimum operational rules</stro
 </table>
 
 <div class="note-box">
+<strong>Why these stop-lines are evidence-backed rather than site style</strong>
+<p>
+The official <a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">EEG Motor Movement/Imagery dataset description</a> itself fixes the ceiling: <strong>109 volunteers</strong>, <strong>64 channels</strong>, <strong>14 cue-driven runs</strong>, <strong>160 Hz</strong>, and <strong>T0/T1/T2</strong> onset codes copied into both the annotation channel and <code>.event</code> files. That is enough to audit cue-locked decoding, preprocessing, and subject-split hygiene, but it is also why this site requires a separate audit of <strong>visual-cue</strong>, <strong>overt-movement</strong>, and <strong>myoelectric / ocular</strong> contributions before any stronger readout wording is allowed.
+</p>
+<p>
+The official <a href="https://doi.org/10.13026/C2K01R" target="_blank">CHB-MIT description</a> fixes a different ceiling: <strong>22 pediatric subjects organized into 23 cases</strong>, <strong>case chb21 being the same subject as chb01</strong>, <strong>gaps between consecutively numbered EDF files</strong>, and seizure boundaries carried by <code>.seizure</code> files together with case summaries. Therefore file-level randomization overstates independence unless <strong>subject identity</strong> and <strong>case chronology</strong> remain explicit.
+</p>
+<p>
+The official <a href="https://doi.org/10.13026/C2X676" target="_blank">Sleep-EDF description</a> likewise constrains the interpretation: the PSG uses only <strong>Fpz-Cz / Pz-Oz EEG</strong> together with EOG and chin EMG, while the event marker and some auxiliary channels are sampled at <strong>1 Hz</strong>, and the hypnograms are <strong>manual Rechtschaffen &amp; Kales scores</strong>. <a href="https://doi.org/10.5664/jcsm.2350" target="_blank">Rosenberg &amp; Van Hout (2013)</a> then showed that even modern sleep-stage scoring reaches only about <strong>82.6% overall inter-scorer agreement</strong>, with weaker agreement for <strong>N1</strong> and <strong>N3</strong>. That is why this site stops a Sleep-EDF result at staged-state practice unless label mapping, scoring regime, and time granularity are disclosed explicitly.
+</p>
+<p>
+For <strong>TUH / TUSZ</strong>, <a href="https://doi.org/10.3389/fnins.2016.00196" target="_blank">Obeid &amp; Picone (2016)</a> explain that the clinical corpus pairs EDF recordings with <strong>clinician reports</strong>, while <a href="https://doi.org/10.3389/fninf.2018.00083" target="_blank">Shah et al. (2018)</a> describe seizure-rich triage using <strong>report keyword search</strong> and <strong>automatic detectors</strong>. Later corpus-maintenance notes documented that an early Neureka 2020 release had <strong>non-exclusive subjects across train / dev / blind evaluation</strong> and <strong>high-frequency seizure annotation problems</strong>. Therefore <strong>report-usage flags</strong>, <strong>patient/session ancestry</strong>, and <strong>benchmark postmortems</strong> are treated on this site as part of the result rather than footnotes.
+</p>
+</div>
+
+<div class="note-box">
 <strong>The most important site rule to add now</strong>
 <p>
 When introducing starter data, always include <strong>(1) label provenance</strong>, <strong>(2) time granularity</strong>, <strong>(3) clock domain plus stream-alignment rule</strong>, <strong>(4) timing-validation class</strong>, <strong>(5) event semantics</strong>, <strong>(6) independent split unit</strong>, <strong>(7) acquisition-distribution summary plus harmonization policy</strong>, and <strong>(8) stopping claim</strong>. A dataset card that does not include this will be considered insufficient as a practical guide for L0.
@@ -995,20 +1011,20 @@ A public inverse-problem comparison on this site must now disclose at least <str
 <li><strong>Version fixed:</strong>Does OpenNeuro snapshot, PhysioNet version, DOI, acquisition date remain?</li>
 <li><strong>Reproduction:</strong>Can you write the acquisition procedure, license, preprocessing conditions, random numbers, and environment</li>
 <li><strong>Metadata:</strong>Do you have sampling, reference, electrode placement, event definition, clock domain, and a named timing-validation class?</li>
-<li><strong>Annotation provenance:</strong> Did you clearly indicate whether the label came from an annotation channel, manual scoring, or a report-derived rule?</li>
+<li><strong>Annotation provenance:</strong>Did you clearly indicate whether the label came from an annotation channel, manual scoring, or a report-derived rule, and whether a known scorer-agreement or report-derived ceiling still limits interpretation?</li>
 <li><strong>QC:</strong>Are noise, defects, and artifacts quantified?</li>
 <li><strong>Comparison:</strong>Is there a baseline and can be compared using the same metrics as the evaluation family</li>
 <li><strong>Metric bundle:</strong>If the task is imbalanced or event-based, are event sensitivity, false alarms, per-stage agreement, or calibration disclosed rather than one headline number?</li>
-<li><strong>Benchmark provenance:</strong>If the result comes from a challenge or leaderboard, are benchmark version, split / randomization, hidden grouping, extra-data policy, pretrained-checkpoint policy, inference-stage restrictions, and later postmortems fixed?</li>
+<li><strong>Benchmark provenance:</strong>If the result comes from a challenge or leaderboard, are benchmark version, split / randomization, hidden grouping, subject exclusivity, extra-data policy, pretrained-checkpoint policy, inference-stage restrictions, and later postmortems fixed?</li>
 <li><strong>Inverse-problem governance:</strong>If source imaging is compared, are validation class, source regime, inverse family / uncertainty object, geometry/control sweep, and inter-method disagreement disclosed before declaring a winner?</li>
-<li><strong>Rebuttal evidence:</strong>Are there data leak tests, counterfactual tests, and records of failures</li>
+<li><strong>Rebuttal evidence:</strong>Are there data leak tests, segment/window ancestry checks, counterfactual tests, and records of failures</li>
 </ul>
 </div>
 
 <div class="note-box">
 <strong>Official benchmark postmortems are part of reproducibility, not footnotes</strong>
 <p>
-In practical work, a benchmark page, rules page, submission constraint, and final leaderboard can each fix a different part of what your score means. That is why this page now routes EEG foundation-model benchmarking not only through split / leakage hygiene but also through <strong>benchmark provenance</strong>. If the benchmark uses evolving challenge operations, continue directly to <a href="wiki/eeg-foundation-models.html">Wiki: EEG foundation models and pretraining</a> and <a href="verification.html#pretraining-card">Verification: Pretraining Card</a> before treating the ranking as portable generalization evidence.
+In practical work, a benchmark page, rules page, submission constraint, and final leaderboard can each fix a different part of what your score means. <a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">Brookshire et al. (2024)</a> show that segment-based cross-validation in translational EEG can leak subject information between training and test sets and inflate headline performance. The later TUH/TUSZ maintenance record also documented a public-release case where <strong>subject exclusivity</strong> and <strong>annotation quality</strong> had to be repaired after downstream use had already begun. That is why this page now routes EEG foundation-model benchmarking not only through split / leakage hygiene but also through <strong>benchmark provenance</strong>. If the benchmark uses evolving challenge operations, continue directly to <a href="wiki/eeg-foundation-models.html">Wiki: EEG foundation models and pretraining</a> and <a href="verification.html#pretraining-card">Verification: Pretraining Card</a> before treating the ranking as portable generalization evidence.
 </p>
 </div>
 </section>
@@ -1215,6 +1231,9 @@ The shortest route to that end is to approach BIDS/EEG-BIDS.
 <li><a href="https://physionet.org/content/sleep-edfx/1.0.0/" target="_blank">PhysioNet: Sleep-EDF Database Expanded</a></li>
 <li><a href="https://doi.org/10.3389/fnins.2016.00196" target="_blank">Obeid &amp; Picone (2016), TUH EEG Corpus</a></li>
 <li><a href="https://doi.org/10.3389/fninf.2018.00083" target="_blank">Shah et al. (2018), TUH Seizure Detection Corpus</a></li>
+<li><a href="https://par.nsf.gov/servlets/purl/10311411" target="_blank">Hamid et al. (2021), Recent advances in the TUH EEG Corpus: improving the interrater agreement for artifacts and epileptiform events</a></li>
+<li><a href="https://doi.org/10.5664/jcsm.2350" target="_blank">Rosenberg &amp; Van Hout (2013), The American Academy of Sleep Medicine inter-scorer reliability program: sleep stage scoring</a></li>
+<li><a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">Brookshire et al. (2024), Data leakage in deep learning studies of translational EEG</a></li>
 <li><a href="https://pubmed.ncbi.nlm.nih.gov/19238800/" target="_blank">Moser et al. (2009), Sleep classification difference between AASM and Rechtschaffen &amp; Kales</a></li>
 <li><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020), Localize-MI</a></li>
 <li><a href="https://doi.org/10.1088/0031-9155/46/1/306" target="_blank">Baillet et al. (2001), Evaluation of inverse methods and head models using a human skull phantom</a></li>
