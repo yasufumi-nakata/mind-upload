@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-04-01 / Role: RQ-by-RQ Deep Focus
+- Updated: 2026-04-02 / Role: RQ-by-RQ Deep Focus
 
 ## Role Of This Page
 This page is a practical note that fixes the core of mind-upload's 60 RQs, which can be confirmed directly with EEG-DATA, application themes for auto-research-funds, and necessary requirements outside of EEG.
@@ -34,6 +34,16 @@ A/B/C judgment is the same as mind-upload-eeg-rq60-feasibility-and-funds. C mean
 - `A`: Main claims can be verified with EEG-DATA only.
 - `B`: EEG main analysis is possible. Requires additional external modality/design.
 - `C`: Mainly system/legal/theoretical integration. EEG is an audit log or supporting evidence.
+
+## Latest post-pull hold (2026-04-02 11:05 JST)
+
+- An actual-pull reread after `mind-upload@208e59e2180c`, `EEG-DATA@00d85380f3fd`, and `auto-research-funds@f4ba35518400` still leaves the current public six-question batch, the solve-first order, and the `A/B/C` reading unchanged.
+- The newest pulled deltas still widen support rather than the current practical batch: `mind-upload` refreshes the 10:07 route-hold packets, `EEG-DATA` deep-dives the maintained `ChineseEEG-2` release plus the public `auditory-eeg` family while now reporting `merged_unique=30887`, `high_confidence=28850`, and `access_counts_high.immediate=24875`, and `auto-research-funds` keeps the same practical shortlist after dossier resync.
+- Recounting the `### Ux-y` headings in the RQ-by-RQ dossiers still returns `60`, the grant/dataset playbook still keeps `60` unique `Ux-y` rows, and the present practical reading still stays `deepen one row at a time`.
+- The route-safe access read still stays narrow in one specific way: the refreshed local `EEG-DATA` catalog keeps widening, but the live-access read still leaves `D10` as the only clear public-open primary anchor while `D03 / D02 / D01` remain gated-support anchors in public wording.
+- Browser-level live checks at `2026-04-02 11:05 JST` still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; those public surfaces reported `Last-Modified: Thu, 02 Apr 2026 01:22:44 GMT`.
+- Official window spot checks still keep the same practical bridge: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, while `Nakatani Foundation research grant`, `Secom General Research Grant`, and `Brain Science Foundation research grant` remain outside the current-cycle lane.
+- A fresh read-only Todoist `api/v1/sync(items, projects)` audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
 
 ## Latest post-pull hold (2026-04-01 20:09 JST)
 

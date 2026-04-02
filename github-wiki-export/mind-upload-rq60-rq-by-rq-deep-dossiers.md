@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-04-01 / Role: RQ-by-RQ Deep Dossier
+- Updated: 2026-04-02 / Role: RQ-by-RQ Deep Dossier
 
 ---
 
@@ -13,8 +13,46 @@
 > 本ページは、`60RQ` を1件ずつ深掘りするための固定ドシエ集です。  
 > 汎用横断サマリは最小化し、各RQで `検証命題` `境界` `応募テーマ` `主データ` `KPI` `停止条件` を先に固定します。
 
-- 更新日: 2026-04-01
+- 更新日: 2026-04-02
 - 出典: `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`（60行を再構成）
+
+## 2026-04-02 11:05 JST latest actual-pull route-hold note
+
+This run still does not change the current public six-question batch. An actual-pull reread after `mind-upload@208e59e2180c`, `EEG-DATA@00d85380f3fd`, and `auto-research-funds@f4ba35518400` still leaves the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
+
+- The newest pulled deltas still deepen metadata and support pages rather than replacing the current route family: `mind-upload` refreshes the 10:07 route-hold packets, `EEG-DATA` deep-dives the maintained `ChineseEEG-2` release plus the public `auditory-eeg` family while still reporting `30,887` merged-unique rows, `28,850` high-confidence rows, and `24,875` immediately usable rows, and `auto-research-funds` keeps the same practical shortlist.
+- Recounting the `### Ux-y` headings on this page still returns `60`, so this run keeps the one-row-at-a-time dossier structure intact.
+- The public six still stay `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
+- The solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
+- The route-safe access reading stays narrow in one important way: the speech-side public-open backup ladder is now easier to justify row-by-row, but `D10` still stays the only clear public-open primary anchor while `D03 / D02 / D01` still stay gated-support planning anchors.
+- Browser-level live checks with a browser user agent still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `mind-upload-rq-solvability-bridge.html`; the current `Last-Modified` header was `Thu, 02 Apr 2026 01:22:44 GMT` on those public surfaces.
+- The funding bridge still stays narrow: `Kura Fund`, `Nakatani Foundation graduate scholarship`, and `Kashinome Scholarship` remain the active near-term lanes, `Nakatani Foundation research grant` remains next-cycle watch, `Secom General Research Grant` remains closed for the current cycle, and a fresh Todoist `api/v1/sync(items, projects)` audit (`items=203`, `projects=2`, `Kura=2`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`) still did not justify a new task.
+
+## 2026-04-02 11:09 JST latest actual-pull route-hold note
+
+This run still does not change the current public six-question batch. An actual-pull reread after `mind-upload@208e59e2180c`, `EEG-DATA@00d85380f3f`, and `auto-research-funds@f4ba35518400` still leaves the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
+
+- The current `mind-upload` head is the earlier 10:07 route-hold packet refresh itself, while the newest upstream movement is on `EEG-DATA`: `chore: deep-dive ChineseEEG-2 and PhysioNet auditory EEG`. The refreshed summary still reports `30,887` merged-unique rows, `28,850` high-confidence rows, and `24,875` directly usable rows, and `auto-research-funds` keeps the same practical shortlist while its repository stats still read `8,585` aid IDs, `4,293` rows, and `3,943` official-source rows.
+- Recounting the `### Ux-y` headings on this page still returns `60`, so this run keeps the one-row-at-a-time dossier structure intact.
+- The public six still stay `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
+- The solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
+- The route-safe access reading stays narrow in one important way: `D10` remains the only clear public-open primary anchor while `D03 / D02 / D01` still stay gated support anchors in public wording.
+- The newest public-open adjuncts only tighten row-specific backup coverage rather than replace the current route family: `ds007591` and `ds007602` strengthen speech-side backup options for `U13-2` but still expose only three released participants each, `ChineseEEG-2` strengthens public reading/listening alignment coverage for `U13-5` but still does not expose the intended recall-labeled branch, and PhysioNet `auditory-eeg` is clearly public-open but remains single-day 4-channel coverage rather than a replacement for `D02` in `U0-2 / U0-3`.
+- Browser-level live checks with a browser user agent still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `mind-upload-rq-solvability-bridge.html`; the current `Last-Modified` header was `Thu, 02 Apr 2026 01:22:44 GMT` on those public surfaces.
+- The funding bridge still stays narrow: `Kura Fund`, `Nakatani Foundation graduate scholarship`, and `Kashinome Scholarship` remain the active near-term lanes, `Secom General Research Grant` remains closed for the current cycle, and a fresh Todoist `api/v1/sync(items, projects)` audit (`items=203`, `Kura=2`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`) still did not justify a new task.
+
+## 2026-04-02 10:07 JST latest actual-pull route-hold note
+
+This run still does not change the current public six-question batch. An actual-pull reread after `mind-upload@be507c810b11`, `EEG-DATA@3f20f48cca6e`, and `auto-research-funds@fb32c05163f4` still leaves the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
+
+- The newest pulled deltas still deepen metadata and support pages rather than replacing the current route family: `mind-upload` refines EEG foundation setup-equivalence boundaries outside the current six, `EEG-DATA` deep-dives the HBN EEG release 11 route while now reporting `30,887` merged-unique rows, `28,850` high-confidence rows, and `24,871` directly usable rows, and `auto-research-funds` keeps the same practical shortlist while its repository stats still read `8,585` aid IDs, `4,293` rows, and `3,943` official-source rows.
+- Recounting the `### Ux-y` headings on this page still returns `60`, so this run keeps the one-row-at-a-time dossier structure intact.
+- The public six still stay `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
+- The solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
+- The route-safe access reading stays narrow in one important way: the refreshed local `EEG-DATA` catalog keeps widening, but the live-access read still leaves `D10` as the only clear public-open primary anchor while `D03 / D02 / D01` still stay gated support anchors in public wording.
+- In this run, the funding-facing copy is also re-synchronized to this file's `Dxx + DOI + dataset name + access class` wording, so the public-side and funding-side `RQ-by-RQ` dossiers now point to the same canonical row packets again.
+- Browser-level live checks with a browser user agent still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `mind-upload-rq-solvability-bridge.html`; the current `Last-Modified` header was `Thu, 02 Apr 2026 00:15:06 GMT` on those public surfaces.
+- The funding bridge still stays narrow: `Kura Fund`, `Nakatani Foundation graduate scholarship`, and `Kashinome Scholarship` remain the active near-term lanes, `Secom General Research Grant` remains closed for the current cycle, and a fresh Todoist `api/v1/sync(items, projects)` audit (`items=203`, `Kura=2`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`) still did not justify a new task.
 
 ## 2026-04-01 20:09 JST latest post-pull route-hold note
 
@@ -195,7 +233,7 @@ This run does not change the current public six-question batch. It only tightens
 | RQ | Why this anchor still stays in the current batch | What the current anchor is good enough to close now | What must still stay outside the claim | Best next adjunct before stronger wording |
 |---|---|---|---|---|
 | `U13-2` | `D10 3M-CPSEED` stays the strongest current speech-side anchor because it is public, BIDS-structured, and exposes overt, silent-intended, and imagined speech inside the same release. | A `brain-minus-prior` control route and a narrow mimic-separation note. | Preserved internal mechanism or any mind-preservation wording. | An external language-evaluation layer plus a richer control family. |
-| `U13-5` | `D03` stays acceptable only as a bounded multimodal support anchor because it combines EEG with eye-tracking and related physiology in a subscription-gated release whose visible metadata still does not expose a recall-specific label. | A perception-to-transfer branch note that stays narrow and public-safe. | Any stronger mechanism-preservation reading. | `ZuCo 2.0` plus the public robot-speech family, with `CuBiAAD` kept only as a later access-gated adjunct. |
+| `U13-5` | `D03` stays acceptable only as a bounded multimodal support anchor because it combines EEG with eye-tracking and related physiology in a subscription-gated release whose visible metadata still does not expose a recall-specific label. | A perception-to-transfer branch note that stays narrow and public-safe. | Any stronger mechanism-preservation reading. | `ChineseEEG-2` plus `ZuCo 2.0` and the public robot-speech family, with `SparrKULee` kept as the larger auditory-only stress-test and `CuBiAAD` only as a later access-gated adjunct. |
 | `U0-2` | `D02 CSTE` remains the cleanest current identity-drift floor because it is explicitly cross-session and cross-task with a biometric framing, even though the current DataPort page is subscription-gated. | A `state-feature collapse` audit plus bounded subject-stability failure analysis. | Philosophical or legal continuity claims, and stronger timing language than the dataset actually supports. | A longer-horizon adjunct benchmark with more explicit timing and synchronization logs. |
 | `U0-3` | The same `D02` anchor keeps the threshold rule on the same cross-session / cross-task identity-drift floor as `U0-2`. | Threshold stability and overfit-exclusion as a bounded benchmark artifact. | Treating a stable threshold as a sufficient condition for personhood continuity. | A session-external rerun pack and a larger cohort extension. |
 | `U14-4` | `D01` remains a narrow but useful disclosure anchor because a wireless-delay dataset is enough to force concrete latency and measurement fields into a Model Card / Dataset Card example. | A disclosure-first rerun checklist with concrete latency fields. | Any field-wide reproducibility or organizational-adoption wording. | `A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications` as the first required public-open rerun family, then `D08` for grounded validation examples. |
@@ -380,9 +418,9 @@ This run does not change the current public six-question batch. It only tightens
 
 ## 使い方（1RQずつ深掘りする運用）
 
-1. 対象RQの `検証命題` と `判定境界` を先に固定する。  
-2. `主データ` で最小再現実験を実施し、`初期KPI` を埋める。  
-3. `停止条件` に抵触したら主張を下方修正し、応募テーマを分割する。  
+1. 対象RQの `検証命題` と `判定境界` を先に固定する。
+2. `主データ` で最小再現実験を実施し、`初期KPI` を埋める。
+3. `停止条件` に抵触したら主張を下方修正し、応募テーマを分割する。
 4. `最低成果物` を完成させてから次RQへ進む。
 
 ## 今回の再検証ログ（2026-03-28 09:02 JST）
@@ -972,12 +1010,12 @@ This run does not change the current public six-question batch. It only tightens
 
 ### U13-2 LLMの幻覚・整合性検査を神経デコード評価へどう接続するか。
 
-- 検証命題: `D10 3M-CPSEED (10.18112/openneuro.ds006465.v2.0.0 / immediate)` を主に、`EEG data recorded during spoken and imagined speech interaction with a simulated robot (10.5281/zenodo.14645652 / immediate)` を第一補助、`D03` を gated multimodal comparator として `hallucination label` と `neural inconsistency` を同時監査し、意味一致だけの合格を禁止する。
+- 検証命題: `D10 3M-CPSEED (10.18112/openneuro.ds006465.v2.0.0 / immediate)` を主に、`EEG data recorded during spoken and imagined speech interaction with a simulated robot (10.5281/zenodo.14645652 / immediate)` と `ChineseEEG-2 (10.57760/sciencedb.CHNNeuro.00001 / immediate)` を公開補助、`D03` を gated multimodal comparator として `hallucination label` と `neural inconsistency` を同時監査し、意味一致だけの合格を禁止する。
 - EEG-DATA判定境界: B（部分検証（外部データ併用で成立））<br>EEG主解析は可能だが、外部データまたは制度情報の併用が必須。
 - auto-research-funds応募テーマ: mind-upload 仮説の国際共同検証に向けた EEG brain-to-text 模倣分離ベンチ立ち上げ
 - 第一応募先 / 予備応募先: `くら基金 若手研究者奨励助成` / `中谷財団 大学院生奨学金`
 - 主データ: `D10 3M-CPSEED: An EEG-based Dataset for Chinese Pinyin Production in Overt, Silent-intended, and Imagined Speech`
-- 補助データ（推奨）: `EEG data recorded during spoken and imagined speech interaction with a simulated robot`, `D03 Multimodal Fusion EEG + Eye-Tracking`
+- 補助データ（推奨）: `EEG data recorded during spoken and imagined speech interaction with a simulated robot`, `ChineseEEG-2`, `D03 Multimodal Fusion EEG + Eye-Tracking`
 - 実データ条件: 今回の主アンカーは `D10 3M-CPSEED` とし、`stimulus/audio/transcript alignment` `overt-vs-covert control` `leak-free split` `BIDS or equivalent provenance` を必須条件にいたします。
 - 初期KPI（U13標準）: `semantic alignment` `brain-minus-prior gap` `misalignment rate`
 - 停止条件: `内部状態差検出率 < 0.60` または `幻覚率` と `neural inconsistency` の相関区間が `0` を跨ぐ場合は、「意味一致のみ」の主張へ下方修正する。
@@ -1009,12 +1047,12 @@ This run does not change the current public six-question batch. It only tightens
 
 ### U13-5 視覚知覚と視覚想起で同一デコーダを使ったとき、意味復元精度の劣化パターンはどこで分岐するか。
 
-- 検証命題: `D03 Multimodal Fusion EEG + Eye-Tracking (10.21227/6106-6120 / subscription-gated support)` を gated planning anchor とし、`D10`、`ZuCo 2.0`、`EEG data recorded during spoken and imagined speech interaction with a simulated robot` を public-open support として、知覚条件で学習した同一デコーダを想起条件へ転送し、分岐点を時間窓別に特定する。ただし公開 metadata 上は recall-specific label が見えていないため、想起妥当性は外部 layer を必須とする。
+- 検証命題: `D03 Multimodal Fusion EEG + Eye-Tracking (10.21227/6106-6120 / subscription-gated support)` を gated planning anchor とし、`D10`、`ChineseEEG-2`、`ZuCo 2.0`、`SparrKULee`、`EEG data recorded during spoken and imagined speech interaction with a simulated robot` を public-open support として、知覚条件で学習した同一デコーダを想起条件へ転送し、分岐点を時間窓別に特定する。ただし公開 metadata 上は recall-specific label が見えていないため、想起妥当性は外部 layer を必須とする。
 - EEG-DATA判定境界: B（部分検証（外部データ併用で成立））<br>デコーダ劣化の定量化は可能だが、想起内容の主観ラベル妥当性には外部行動/報告系が必要。
 - auto-research-funds応募テーマ: mind-upload 仮説の国際共同検証に向けた EEG brain-to-text 模倣分離ベンチ立ち上げ
 - 第一応募先 / 予備応募先: `くら基金 若手研究者奨励助成` / `中谷財団 大学院生奨学金`
 - 主データ: `D03 Data of Multimodal Fusion System for Cognitive Load Assessment in Psychological Experiments: An EEG and Eye-Tracking Study`
-- 補助データ（推奨）: `D10 3M-CPSEED`, `ZuCo 2.0`, `EEG data recorded during spoken and imagined speech interaction with a simulated robot`
+- 補助データ（推奨）: `D10 3M-CPSEED`, `ChineseEEG-2`, `ZuCo 2.0`, `SparrKULee`, `EEG data recorded during spoken and imagined speech interaction with a simulated robot`
 - 初期KPI（U13標準）: `perception-to-recall degradation point` `transfer gap` `control-condition stability`
 - 停止条件: 想起条件で `意味一致率` が知覚条件比で一貫してチャンス水準近傍となる場合、または recall-validity layer が接続できない場合、同一デコーダ主張を撤回し分離学習または planning note へ切り替える。
 - 最低成果物: Mimic separation evaluation script and control condition table

@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-04-01 / Role: U14-4 route packet
+- Updated: 2026-04-02 / Role: U14-4 route packet
 
 ## Role Of This Page
 This page fixes the current public route for U14-4 at the level of one question, one intended EEG route anchor, one bounded first artifact, and one funding bridge.
@@ -26,6 +26,13 @@ This page does not claim field-wide reproducibility, deployment readiness, or st
 # U14-4 card-contract route packet
 
 This page does not change the current public six-question batch. It makes only the fifth active row more explicit, so readers can see why `U14-4` still stays before `U14-2`, why `D01 Acquisition delay of wireless EEG` now stays only as a gated support entry point, and what the next public-safe artifact can honestly close.
+
+## What still stays fixed after the 12:04 JST actual-pull reread on April 2, 2026
+
+- An actual-pull recheck at `2026-04-02 12:04 JST` after `mind-upload@dceb8bc`, `EEG-DATA@04b7fda167e`, and `auto-research-funds@4442e348a` still keeps `U14-4` fifth and still keeps `D01` only as the planned gated-support disclosure floor for this row.
+- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` syncs a spectroscopy front door outside the current six, `EEG-DATA` now reports `30,888` merged-unique rows, `28,851` high-confidence rows, and `24,506` immediate rows after `THINGS-EEG`, an OSF orientation route, and a rat ECoG deep dive, and `auto-research-funds` only refreshes repository stats.
+- None of those additions replaces the present rerun-entry structure. The newest visual, auditory, and animal carry-forwards do not change the fact that `D01` still sets only the latency / measurement floor, `D13` still stays the first public-open rerun support family, and `D08` still stays the validation-heavy support family kept one step later.
+- Browser-level live checks still returned `200` for the current public entry pages with `Last-Modified: Thu, 02 Apr 2026 02:37:04 GMT`, and a fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient, so this page only refreshes the row-specific route-hold wording.
 
 ## What was rechecked for this row
 
