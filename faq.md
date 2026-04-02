@@ -5,7 +5,7 @@ description: "Short, precise answers to the questions that come up most often wh
 article_type: FAQ
 subtitle: "Prefer verifiable progress to flashy conclusions"
 author: Mind Uploading Research Project
-last_updated: "2026-04-02"
+last_updated: "2026-04-03"
 note: "Human-first"
 audience: "Readers who want to sort out questions and misconceptions first, and readers who want a quick overview through short Q&A"
 reading_time: "8-15 minutes"
@@ -20,7 +20,7 @@ page_highlights:
   - "Post-transcriptional RNA evidence is not one class at the FAQ front door either: splice-isoform control, m6A-dependent translation, m6A-dependent degradation, RNA editing, and atlas ceilings are not one inferential object."
   - "A chemical connectome plus nominal inhibitory edges still does not fix gap-junction coupling, endogenous field effects, extracellular-space geometry / diffusion barriers / osmotic regime, or local inhibitory driving force."
   - "It also keeps one extra asymmetry visible: the strongest maintenance-state causal papers and the best current human-observability papers are often different ladders."
-  - "It now makes one asymmetry concrete at the front door: rodent astrocyte / lymphatic causality, human SMBT-1 MAO-B target-validation / AD-context / brain-quantification / whole-body-biodistribution routes, human I2BS PET, macroscopic CSF oscillation, parenchyma-CSF water exchange, intrathecal tracer / CSF-to-blood clearance, CSF mobility, and model-based biomarker efflux are kept on separate rows rather than one progress bar."
+  - "It now makes one asymmetry concrete at the front door: rodent astrocyte / lymphatic causality, human SMBT-1 MAO-B target-validation / AD-context / brain-quantification / whole-body-biodistribution routes, human SL25.1188 MAO-B disease / severity routes, human I2BS PET, macroscopic CSF oscillation, parenchyma-CSF water exchange, intrathecal tracer / CSF-to-blood clearance, CSF mobility, and model-based biomarker efflux are kept on separate rows rather than one progress bar."
   - "It also keeps measurement-side vascular-state / CVR audit separate from maintenance-side neurovascular-unit / BBB / pericyte state, so a clean hemodynamic nuisance audit is not promoted to solved support biology."
   - "If a connectome claim is diffusion-MRI-derived, acquisition scheme, endpoint assignment, graph construction, and uncertainty route all change what the object means; this FAQ now stops that overread at the front door."
   - "It avoids dramatic overstatement and states what remains unresolved at the same time."
@@ -549,8 +549,13 @@ A. Not yet. The first split is between <strong>destructive local ex vivo structu
 <td>A route-free disease readout, whole-body tracer burden, or a generic astrocyte-state meter.</td>
 </tr>
 <tr>
-<td><strong>I<sub>2</sub>BS brain astrocyte PET route</strong><br>Tyacke et al. (2018); Livingston et al. (2022); Best et al. (2026)</td>
-<td>A different target class for astrocyte-related PET whose disease-context interpretation can vary with region, impairment stage, severity, and smoking exposure.</td>
+<td><strong>SL25.1188 MAO-B disease / severity routes</strong><br>Matsuoka et al. (2026); Best et al. (2026)</td>
+<td>A separate MAO-B tracer family whose reading depends on simplified-versus-kinetic quantification in AD or on severity and smoking covariates in AUD.</td>
+<td>An SMBT-1-equivalent route family, an I<sub>2</sub>BS route, a route-free astrocyte scalar, or a direct local astrocyte-controller readout.</td>
+</tr>
+<tr>
+<td><strong>I<sub>2</sub>BS brain astrocyte PET route</strong><br>Tyacke et al. (2018); Livingston et al. (2022)</td>
+<td>A different target class for astrocyte-related PET whose disease-context interpretation can vary with region and impairment stage.</td>
 <td>An MAO-B-equivalent tracer family, a route-free astrocyte scalar, or a direct local astrocyte-controller readout.</td>
 </tr>
 <tr>
@@ -588,7 +593,7 @@ A. Not yet. The first split is between <strong>destructive local ex vivo structu
 <div class="note-box">
 <strong>Human astrocyte PET needs a route-role split inside the tracer family</strong>
 <p>
-Separating <strong>MAO-B</strong> from <strong>I<sub>2</sub>BS</strong> is necessary, but it is no longer sufficient. Within the SMBT-1 MAO-B family alone, <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a> is a <strong>first-in-human target-validation</strong> paper, <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> is an <strong>AD-spectrum disease-context</strong> paper, <a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al. (2025)</a> is a <strong>brain quantification</strong> paper, <a href="https://doi.org/10.1007/s12149-025-02144-2" target="_blank">Mesfin et al. (2026)</a> is a <strong>whole-body biodistribution</strong> paper, and <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">Best et al. (2026)</a> showed that MAO-B binding can move with AUD severity and daily cigarette use in another disease regime. Therefore, saying only <code>MAO-B PET</code> is still too coarse: this site now asks for the <strong>target</strong>, the <strong>route role</strong>, the <strong>quantification route</strong>, and the <strong>cohort / covariate regime</strong>.
+Separating <strong>MAO-B</strong> from <strong>I<sub>2</sub>BS</strong> is necessary, but it is no longer sufficient. Within the SMBT-1 MAO-B family alone, <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a> is a <strong>first-in-human target-validation</strong> paper, <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> is an <strong>AD-spectrum disease-context</strong> paper, <a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al. (2025)</a> is a <strong>brain quantification</strong> paper, and <a href="https://doi.org/10.1007/s12149-025-02144-2" target="_blank">Mesfin et al. (2026)</a> is a <strong>whole-body biodistribution</strong> paper. Within the separate <strong>SL25.1188</strong> MAO-B family, <a href="https://doi.org/10.1007/s00259-025-07542-2" target="_blank">Matsuoka et al. (2026)</a> is a <strong>simplified / arterial-free AD quantification</strong> paper and <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">Best et al. (2026)</a> is an <strong>AUD severity / smoking-conditioned disease</strong> paper. Therefore, saying only <code>MAO-B PET</code> is still too coarse: this site now asks for the <strong>target</strong>, the <strong>tracer family</strong>, the <strong>route role</strong>, the <strong>quantification route</strong>, and the <strong>cohort / covariate regime</strong>.
 </p>
 </div>
 <div class="note-box">
@@ -658,7 +663,7 @@ What follows directly is that <strong>route maturity is not just sample size</st
 <div class="note-box">
 <strong>Route name alone is too coarse</strong>
 <p>
-On this site, saying only <code>MRI</code>, <code>PET</code>, or even <code>human proxy route</code> is no longer enough. The FAQ now asks one more question before the claim ceiling rises: is the paper reporting <strong>similarity</strong>, <strong>high-resolution 1H-MRSI metabolite distribution</strong>, <strong>31P metabolite / pH balance</strong>, <strong>31P MT exchange-flux</strong>, <strong>31P NAD-content mapping</strong>, <strong>localized functional 31P NAD dynamics</strong>, <strong>deuterium absolute metabolite mapping / quantification</strong>, <strong>deuterium kinetic-rate imaging</strong>, <strong>bilayer-sensitive myelin contrast</strong>, <strong>BBB water exchange</strong>, <strong>tracer-specific BBB transport</strong>, <strong>SMBT-1 MAO-B target validation</strong>, <strong>SMBT-1 AD-spectrum disease context</strong>, <strong>SMBT-1 brain quantification</strong>, <strong>whole-body SMBT-1 biodistribution</strong>, <strong>I<sub>2</sub>BS PET</strong>, <strong>macroscopic CSF oscillation</strong>, <strong>parenchyma-CSF water exchange</strong>, <strong>intrathecal tracer / CSF-to-blood clearance</strong>, <strong>CSF mobility</strong>, or <strong>biomarker efflux</strong>? If that label is missing, the route stays too coarse to support same-subject state-complete language.
+On this site, saying only <code>MRI</code>, <code>PET</code>, or even <code>human proxy route</code> is no longer enough. The FAQ now asks one more question before the claim ceiling rises: is the paper reporting <strong>similarity</strong>, <strong>high-resolution 1H-MRSI metabolite distribution</strong>, <strong>31P metabolite / pH balance</strong>, <strong>31P MT exchange-flux</strong>, <strong>31P NAD-content mapping</strong>, <strong>localized functional 31P NAD dynamics</strong>, <strong>deuterium absolute metabolite mapping / quantification</strong>, <strong>deuterium kinetic-rate imaging</strong>, <strong>bilayer-sensitive myelin contrast</strong>, <strong>BBB water exchange</strong>, <strong>tracer-specific BBB transport</strong>, <strong>SMBT-1 MAO-B target validation</strong>, <strong>SMBT-1 AD-spectrum disease context</strong>, <strong>SMBT-1 brain quantification</strong>, <strong>whole-body SMBT-1 biodistribution</strong>, <strong>SL25.1188 MAO-B disease / severity route</strong>, <strong>I<sub>2</sub>BS PET</strong>, <strong>macroscopic CSF oscillation</strong>, <strong>parenchyma-CSF water exchange</strong>, <strong>intrathecal tracer / CSF-to-blood clearance</strong>, <strong>CSF mobility</strong>, or <strong>biomarker efflux</strong>? If that label is missing, the route stays too coarse to support same-subject state-complete language.
 </p>
 </div>
 <div class="note-box">
@@ -709,8 +714,13 @@ One more correction is needed before overreading the same literature: the strong
 <td>They are still not one generic astrocyte-state meter, one route-free brain baseline, or a content-specific astrocyte-ensemble readout.</td>
 </tr>
 <tr>
-<td><strong>I<sub>2</sub>BS brain astrocyte PET route</strong><br>Tyacke et al. (2018); Livingston et al. (2022); Best et al. (2026)</td>
-<td>A different target class whose disease-context reading varies with region, impairment stage, severity, and smoking exposure.</td>
+<td><strong>SL25.1188 MAO-B disease / severity routes</strong><br>Matsuoka et al. (2026); Best et al. (2026)</td>
+<td>A second MAO-B tracer family whose AD or AUD reading depends on simplified-versus-kinetic quantification and on cohort covariates such as severity and smoking.</td>
+<td>It is still not an SMBT-1-equivalent family, not an I<sub>2</sub>BS route, not a route-free astrocyte scalar, and not a local controller readout.</td>
+</tr>
+<tr>
+<td><strong>I<sub>2</sub>BS brain astrocyte PET route</strong><br>Tyacke et al. (2018); Livingston et al. (2022)</td>
+<td>A different target class whose disease-context reading varies with region and impairment stage.</td>
 <td>It is still not an MAO-B-equivalent family, not a route-free astrocyte scalar, and not a local controller readout.</td>
 </tr>
 <tr>

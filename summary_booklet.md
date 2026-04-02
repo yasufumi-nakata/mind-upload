@@ -5,7 +5,7 @@ description: "An auto-generated A4-style briefing page built from the site's pub
 article_type: "Briefing Booklet"
 subtitle: "An A4 briefing regenerated from public-page front matter and lead summaries"
 author: Mind Uploading Research Project
-last_updated: "2026-04-02"
+last_updated: "2026-04-03"
 note: "Auto-generated from public pages"
 body_class: "summary-booklet-page"
 ---
@@ -25,7 +25,7 @@ body_class: "summary-booklet-page"
   <div class="booklet-cover-band">
     <div>
   <span>Reference Date</span>
-  <strong>2026-04-02</strong>
+  <strong>2026-04-03</strong>
 </div>
 <div>
   <span>Current Focus</span>
@@ -152,7 +152,7 @@ body_class: "summary-booklet-page"
 </tr>
 <tr>
   <td>Theory Framing</td>
-  <td><strong><a href="/perspective.html">Toward Mind Uploading: An Integrated Technical and Theoretical Approach</a></strong><br>This page is a long research note that follows the theoretical, measurement, and implementation questions around mind uploading while keeping primary literature and hard limits side by side.</td>
+  <td><strong><a href="/perspective.html">Toward Mind Uploading: An Integrated Technical and Theoretical Approach</a></strong><br>This page is a long research note that starts from observability, identifiability, and maintenance-state burdens, and only then asks what kinds of theoretical interpretation survive those…</td>
 </tr>
 
     </tbody>
@@ -169,7 +169,7 @@ body_class: "summary-booklet-page"
     <article class="booklet-card booklet-card-positive">
       <h3>Relatively Well Supported</h3>
       <ul class="booklet-list">
-        <li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li><li>Human evidence is layered: local ultrastructure, synaptic-density PET, receptor / transporter atlas priors, selected occupancy PET routes, challenge-limited displacement / release PET routes, five-metabolite 1H-MRSI similarity scaffolds, high-resolution 1H-MRSI metabolite-distribution routes, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, 31P functional NAD-dynamics routes, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, quantity-defined ionic / myelin proxy families, macro thermal proxies, BBB water-exchange or tracer-specific transport proxies, target-defined astrocyte PET, and clearance-transport proxies are not one near-direct readout.</li><li>Same-subject or same-brain wording does not by itself make a live-to-fix, cross-regime, or cross-day workflow one state sample; bridge delay, regime continuity, coordinate transfer, and bridge validation still matter.</li><li>Several living-human proxy rows are not promoted together unless same-subject relation, effective time window / physiological-regime compatibility, route-local repeatability versus transfer, disagreement handling, model burden, and residual hidden-state ceilings are disclosed explicitly.</li><li>The Temporal Validity Card is now part of the public workflow so same-day success is not silently promoted to cross-day or long-term claims.</li>
+        <li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li><li>Human evidence is layered: local ultrastructure, synaptic-density PET, receptor / transporter atlas priors, selected occupancy PET routes, challenge-limited displacement / release PET routes, five-metabolite 1H-MRSI similarity scaffolds, high-resolution 1H-MRSI metabolite-distribution routes, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, 31P functional NAD-dynamics routes, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, quantity-defined ionic / myelin / tissue-health-sensitive ratio families, macro thermal proxies, BBB water-exchange or tracer-specific transport proxies, target-defined astrocyte PET, and clearance-transport proxies are not one near-direct readout.</li><li>Same-subject or same-brain wording does not by itself make a live-to-fix, cross-regime, or cross-day workflow one state sample; bridge delay, regime continuity, coordinate transfer, and bridge validation still matter.</li><li>Several living-human proxy rows are not promoted together unless same-subject relation, effective time window / physiological-regime compatibility, route-local repeatability versus transfer, disagreement handling, model burden, and residual hidden-state ceilings are disclosed explicitly.</li><li>The Temporal Validity Card is now part of the public workflow so same-day success is not silently promoted to cross-day or long-term claims.</li>
       </ul>
     </article>
     <article class="booklet-card booklet-card-caution">
@@ -215,7 +215,7 @@ body_class: "summary-booklet-page"
     <article class="booklet-card booklet-card-positive">
       <h3>Observation Ceiling</h3>
       <ul class="booklet-list">
-        <li>Maintenance-state variables such as sleep/homeostasis, sleep architecture / replay-coupling, myelin, thermal-state, ionic milieu / chloride homeostasis, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local proteostasis / synaptic tagging, cargo-transport / cytoskeletal trafficking state, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, neurovascular-unit / BBB / pericyte state, glial substrate-routing, astrocyte-state, and clearance / immune support remain outside the wiring diagram.</li><li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li><li>Human evidence is layered: local ultrastructure, synaptic-density PET, receptor / transporter atlas priors, selected occupancy PET routes, challenge-limited displacement / release PET routes, five-metabolite 1H-MRSI similarity scaffolds, high-resolution 1H-MRSI metabolite-distribution routes, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, 31P functional NAD-dynamics routes, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, quantity-defined ionic / myelin proxy families, macro thermal proxies, BBB water-exchange or tracer-specific transport proxies, target-defined astrocyte PET, and clearance-transport proxies are not one near-direct readout.</li><li>Human whole-brain evidence remains layered and proxy-based; no current route directly fixes current transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local electrical-coupling / extracellular-geometry / inhibitory-driving-force regime, ECM / PNN gate state, local proteostasis / synaptic-tag capture, cargo-routing state, neuromodulatory occupancy / release state, chloride set point, neurovascular-unit / BBB / pericyte controller state, or branch-local mitochondrial positioning.</li>
+        <li>Maintenance-state variables such as sleep/homeostasis, sleep architecture / replay-coupling, myelin, thermal-state, ionic milieu / chloride homeostasis, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local proteostasis / synaptic tagging, cargo-transport / cytoskeletal trafficking state, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, neurovascular-unit / BBB / pericyte state, glial substrate-routing, astrocyte-state, and clearance / immune support remain outside the wiring diagram.</li><li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li><li>Human evidence is layered: local ultrastructure, synaptic-density PET, receptor / transporter atlas priors, selected occupancy PET routes, challenge-limited displacement / release PET routes, five-metabolite 1H-MRSI similarity scaffolds, high-resolution 1H-MRSI metabolite-distribution routes, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, 31P functional NAD-dynamics routes, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, quantity-defined ionic / myelin / tissue-health-sensitive ratio families, macro thermal proxies, BBB water-exchange or tracer-specific transport proxies, target-defined astrocyte PET, and clearance-transport proxies are not one near-direct readout.</li><li>Human whole-brain evidence remains layered and proxy-based; no current route directly fixes current transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local electrical-coupling / extracellular-geometry / inhibitory-driving-force regime, ECM / PNN gate state, local proteostasis / synaptic-tag capture, cargo-routing state, neuromodulatory occupancy / release state, chloride set point, neurovascular-unit / BBB / pericyte controller state, or branch-local mitochondrial positioning.</li>
       </ul>
     </article>
     <article class="booklet-card booklet-card-caution">
@@ -264,7 +264,7 @@ body_class: "summary-booklet-page"
 <tr>
   <td><a href="/perspective.html">Toward Mind Uploading: An Integrated Technical and Theoretical Approach</a></td>
   <td>Perspective - Audit the hypothesis of reproducing brain information processing on another substrate through the barriers of measurability, identifiability, and maintenance state</td>
-  <td>This page is a long research note that follows the theoretical, measurement, and implementation questions around mind uploading while keeping primary literature and hard limits side by side.</td>
+  <td>This page is a long research note that starts from observability, identifiability, and maintenance-state burdens, and only then asks what kinds of theoretical interpretation survive those…</td>
 </tr>
 <tr>
   <td><a href="/datasets.html">Data &amp; Hands-on: Where to start and how to get to L0</a></td>
@@ -323,9 +323,9 @@ body_class: "summary-booklet-page"
 <article class="booklet-card booklet-page-card">
   <h3><a href="/perspective.html">Toward Mind Uploading: An Integrated Technical and Theoretical Approach</a></h3>
   <p class="booklet-page-meta">Perspective - Audit the hypothesis of reproducing brain information processing on another substrate through the barriers of measurability, identifiability, and maintenance state / 30-45 min</p>
-  <p>This page is a long-form research note aimed at turning mind uploading (WBE) into something that can be evaluated as real research. It is organized in three stages: <strong>how to measure</strong>, <strong>how to infer</strong>, and <strong>how to implement</strong>. It treats recent results, failures, and limits with the same weight so that the boundary between what can and cannot be claimed remains explicit.</p>
+  <p>This page is a long-form research note aimed at turning mind uploading (WBE) into something that can be evaluated as real research. It is organized around four technical questions: <strong>what can be observed directly</strong>, <strong>what remains latent</strong>, <strong>what can be perturbed or calibrated</strong>, and <strong>what has to stay stable during implementation</strong>. It treats recent results, failures, and limits with the same weight so that the boundary between scaffold progress and state-complete claims remains explicit.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>The connectome-dynamics gap is now written as 19 maintenance-state families plus a separate shared electrical-state class, rather than a loose warning that wiring alone is not enough.</li><li>Same-brain functional connectomics and digital-twin language are now split into sequential bridge, label-transfer, current-synaptic-state, and dynamical-identifiability ceilings rather than being read as one local twin.</li><li>Proxy-rich human evidence and deployment-ready measurement are different claims; sample size, model burden, hardware specialization, and fusion status remain separate ceilings.</li>
+    <li>The connectome-dynamics gap is now written as 19 maintenance-state families plus a separate shared electrical-state class, rather than a loose warning that wiring alone is not enough.</li><li>Memory-relevant variables extend beyond wiring into transcriptional, glial, vascular, extracellular, and metabolic maintenance-state families.</li><li>Same-brain functional connectomics and digital-twin language are now split into sequential bridge, label-transfer, current-synaptic-state, and dynamical-identifiability ceilings rather than being read as one local twin.</li>
   </ul>
   <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
