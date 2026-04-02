@@ -5,7 +5,7 @@ description: "An operation page with fixed application ID, main EEG data, select
 article_type: Wiki
 subtitle: "Fix submission decisions based on RQ, not general abstracts"
 author: Mind Uploading Research Project
-last_updated: "2026-04-01"
+last_updated: "2026-04-02"
 note: "Per-RQ Grant and Dataset Playbook"
 audience: "People who want to apply for funding and decide on the first experiment for each RQ at the same time"
 reading_time: "20-30 minutes"
@@ -54,6 +54,15 @@ recommended_pages:
 - For submission-ready references, prefer `Dxx + DOI + dataset name + access class` over numeric search IDs.
 - The six current public rows below are now synchronized to `Dxx + DOI + dataset name + access class`, so the playbook no longer needs numeric search IDs for `U13-2/U13-5/U0-2/U0-3/U14-4/U14-2`.
 - `tech_roadmap.md` also contains `U2/U5/U6/U9`, but those roadmap families are not yet translated into this playbook's current `RQ60` practical layer.
+
+## Latest live-source addendum (2026-04-02 09:05 JST)
+
+- An actual-pull reread after `mind-upload@d7f30648fc40`, `EEG-DATA@ac8cc6fc8e74`, and `auto-research-funds@31ec17305f6a` still leaves this playbook's practical reading unchanged.
+- The current route still stays fixed on `D10 / D03 / D02 / D01` for the public six and `U7-1 -> U1-2 -> U4-2 -> U8-1` for the outside-current-six queue; the newest `mind-upload` head tightens a literature myelin-route split outside the current six, `EEG-DATA` adds the `aw8sz` deep dive and now reports `merged_unique=30886`, `high_confidence=28849`, and `access_counts_high.immediate=24500`, and `auto-research-funds` adds the `Aoi graduate scholarship` / `JSSF research grant` merges plus a README-stat refresh to `8,585` aid IDs, `4,293` rows, and `3,943` official-source rows without displacing the current practical shortlist.
+- Route-safe access wording still stays narrow: `D10` remains the only clear public-open primary anchor, while `D03 / D02 / D01` remain gated-support planning anchors because a direct live-access reread still shows `IEEE DataPort` login and subscription gates on those three routes.
+- Browser-level live checks at `2026-04-02 09:05 JST` still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `mind-upload-rq-solvability-bridge.html`; the current `Last-Modified` header was `Wed, 01 Apr 2026 23:29:12 GMT` on those public surfaces, and the live pages still surfaced the earlier `04:09 JST` / `03:08 JST` reread notes before this source update while keeping the same six in the same order.
+- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, the `Kashinome Scholarship` official page still reads as the annual `mid-January to early-April` window, and `Secom General Research Grant = 2026-03-13 - 2026-03-31 12:00 (closed)`.
+- A fresh read-only Todoist `api/v1/sync(items, projects)` audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Okawa=2`), so no new task was added in this run.
 
 ## Latest live-source addendum (2026-04-01 20:09 JST)
 

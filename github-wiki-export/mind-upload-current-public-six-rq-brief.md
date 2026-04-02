@@ -32,6 +32,16 @@ This page keeps the current public six-question batch readable at the level of `
 
 It does **not** announce solved claims. It only states what the current public route is narrow enough to support after a post-pull review of `mind-upload`, `EEG-DATA`, `auto-research-funds`, the live public page, the current official funding windows, and a read-only Todoist recheck.
 
+## What still stays fixed after the 09:05 JST actual-pull reread on April 2, 2026
+
+- An actual-pull recheck at `2026-04-02 09:05 JST` after `mind-upload@d7f30648fc40`, `EEG-DATA@ac8cc6fc8e74`, and `auto-research-funds@31ec17305f6a` still leaves the public batch and the solve-first order unchanged.
+- The newest pulled deltas still deepen route support rather than the current claim surface: `mind-upload` tightens a literature myelin-route split outside the current six, `EEG-DATA` adds the `aw8sz` deep dive and now reports `merged_unique=30886`, `high_confidence=28849`, and `access_counts_high.immediate=24500`, and `auto-research-funds` carries forward the `Aoi graduate scholarship` / `JSSF research grant` merges plus a README-stat refresh to `8,585` aid IDs, `4,293` rows, and `3,943` official-source rows without changing the practical shortlist.
+- The route-safe access reading still stays narrow: `D10` remains the only clear public-open primary anchor while `D03 / D02 / D01` still stay gated-support anchors in public wording. A direct live-access reread still shows `D03 / D02 / D01` behind `IEEE DataPort` login and subscription gates.
+- Browser-level live checks before this source sync still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; the checked pages also returned `Last-Modified: Wed, 01 Apr 2026 23:29:12 GMT`, and the live pages still surfaced the earlier `04:09 JST` / `03:08 JST` reread notes before this source update.
+- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, the `Kashinome Scholarship` official page still reads as the annual `mid-January to early-April` window, and `Secom General Research Grant` still shows the current cycle closed (`March 31, 2026 at 12:00 JST`).
+- A fresh read-only Todoist `api/v1/sync(items, projects)` full-item audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
+- This source sync only refreshes the route-hold wording on the public entry pages. It does not widen the current claim surface.
+
 ## What still stays fixed after the 03:08 JST actual-pull reread on April 2, 2026
 
 - An actual-pull recheck at `2026-04-02 03:08 JST` after `mind-upload@d391dbede29e`, `EEG-DATA@f9df9ba85a6`, and `auto-research-funds@95f804055809` still leaves the public batch and the solve-first order unchanged.
