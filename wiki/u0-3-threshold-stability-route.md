@@ -5,7 +5,7 @@ description: "Why U0-3 stays fourth in the current public six, why D02 CSTE stay
 article_type: Wiki
 subtitle: "A row-specific packet for the threshold-governance identity row"
 author: Mind Uploading Research Project
-last_updated: "2026-03-31"
+last_updated: "2026-04-02"
 note: "U0-3 route packet"
 audience: "Readers who want the dataset-choice rationale and the honest claim ceiling for the current threshold-stability row"
 reading_time: "8-12 minutes"
@@ -34,6 +34,13 @@ recommended_pages:
 # U0-3 threshold-stability route packet
 
 This page does not change the current public six-question batch. It makes only the fourth active row more explicit, so readers can see why `U0-3` stays next after `U0-2`, why `D02 CSTE` now stays only as a gated support anchor, and what the next public-safe artifact can honestly close.
+
+## What still stays fixed after the 12:04 JST actual-pull reread on April 2, 2026
+
+- An actual-pull recheck at `2026-04-02 12:04 JST` after `mind-upload@dceb8bc`, `EEG-DATA@04b7fda167e`, and `auto-research-funds@4442e348a` still keeps `U0-3` fourth and still keeps `D02` only as the planned gated-support anchor for the present threshold-governance question.
+- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` syncs a spectroscopy front door outside the current six, `EEG-DATA` now reports `30,888` merged-unique rows, `28,851` high-confidence rows, and `24,506` immediate rows after `THINGS-EEG`, an OSF orientation route, and a rat ECoG deep dive, and `auto-research-funds` only refreshes repository stats.
+- None of those additions replaces the intended threshold floor. PhysioNet `auditory-eeg` is public-open but still too short-horizon and too low-channel to replace the `cross-session / cross-task` identity-drift floor, while `THINGS-EEG` and rat ECoG remain the wrong task family for the present threshold-stability packet. `ds004148` and `ds007216` still stay the main public-open stress-test ladders.
+- Browser-level live checks still returned `200` for the current public entry pages with `Last-Modified: Thu, 02 Apr 2026 02:37:04 GMT`, and a fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient, so this page only refreshes the row-specific route-hold wording.
 
 ## What was rechecked for this row
 
