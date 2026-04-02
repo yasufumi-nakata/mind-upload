@@ -26,7 +26,7 @@ page_highlights:
   - "Cross-session and adaptation labels are not yet temporal-validity claims; state annotation, fixed decoder interval, recalibration burden, and transfer ceiling still have to be disclosed separately."
   - "Clock domain, stream alignment, digital trigger capture, physical output onset, and uncontrolled-response timing are different timing-validation classes rather than one sync field."
   - "Even when the score is numerically the same, you still have to separate the target neural variable from eye movement, EMG, behavior, feedback routes, subject / session fingerprint, and acquisition-distribution shortcuts such as site / device / reference / electrode layout."
-  - "Even when foundation / self-supervised EEG models are used, pretraining-corpus and harmonization audits are still required."
+  - "Even when foundation / self-supervised EEG models are used, pretraining-corpus, coordinate-route / reference-family, omitted-channel, and label-budget audits are still required."
   - "Official challenge rules, submission constraints, and later postmortems can change what a benchmark score means, so benchmark provenance is part of the dataset / benchmark card rather than administrative detail."
   - "Reference system, channel map, electrode layout, and device protocol are not cosmetic metadata; they can move scores and belong in the dataset card."
   - "The ultimate goal is to make it possible for a third party to rerun the result under the same conditions."
@@ -588,6 +588,13 @@ The next practical weakness was narrower. Even after benchmark governance became
 </p>
 </div>
 
+<div class="note-box">
+<strong>2026-04-02 addendum: setup diversity is not yet physiology-equivalent transfer</strong>
+<p>
+The next weak point on this page was different from benchmark governance. A dataset or benchmark card could already expose <strong>site / device / reference / layout diversity</strong> and still leave a reader with the impression that a setup-agnostic foundation model had already solved <strong>physiology-preserving transfer</strong>. The current primary literature does not support that shortcut. <a href="https://arxiv.org/abs/2507.14141" target="_blank">Han et al. (2025)</a> target <strong>channel-permutation equivariance</strong>, <a href="https://arxiv.org/abs/2510.12515" target="_blank">Chen et al. (2025)</a> target <strong>coordinate-based adaptation across heterogeneous devices and more than 150 layouts</strong>, and <a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025)</a> push setup-agnostic pretraining to more than <strong>60,000 hours</strong> from <strong>92 datasets</strong> and <strong>25,000 subjects</strong>. Those papers advance <strong>recording-frame compatibility</strong>. They still do not prove that different montages, coordinate routes, and reference families already preserve one shared <strong>physiology-side representation</strong>. <a href="https://arxiv.org/abs/2602.17251" target="_blank">Ma et al. (2026)</a> then show that strong EEG foundation models can still generalize poorly when <strong>subject-level supervision is limited</strong> unless extra adaptation structure is added. Therefore, this page now treats <strong>setup diversity</strong>, <strong>coordinate route</strong>, <strong>reference family</strong>, <strong>omitted-channel policy</strong>, and <strong>label-limited adaptation burden</strong> as separate dataset / benchmark-card fields rather than one merged claim of portable generalization.
+</p>
+</div>
+
 <table class="data-table">
 <thead>
 <tr>
@@ -628,7 +635,7 @@ The next practical weakness was narrower. Even after benchmark governance became
 <div class="note-box">
 <strong>Site rule from this section</strong>
 <p>
-From this section onward, dataset cards and baseline results must report at least <strong>(1) evaluation family</strong>, <strong>(2) benchmark object plus independent prediction unit</strong>, <strong>(3) the independent hold-out unit</strong>, <strong>(4) raw-recording / window ancestry</strong>, <strong>(5) subject / session / site / device / reference-system / electrode-layout disjointness together with metadata-only baselines</strong>, <strong>(6) the channel-map / reference / sample-rate / filter harmonization log</strong>, <strong>(7) whether target-session, target-subject, or target-site data were used</strong>, <strong>(8) recalibration amount and timing</strong>, <strong>(9) for leaderboard or challenge claims, benchmark provenance including version, split / randomization rule, hidden grouping, extra-data / checkpoint policy, inference-stage restrictions or operations budget, and postmortem disclosures</strong>, and <strong>(10) a stopping claim</strong>. If the claim spans more than one session or day, it must additionally disclose the site's <strong>Temporal Validity</strong> fields: <strong>state annotation</strong>, <strong>fixed decoder interval</strong>, <strong>recalibration burden</strong>, and <strong>transfer ceiling</strong>. Scores without this context will be treated as limited L1 decode results, fingerprint-unresolved / acquisition-distribution-unresolved classifiers, or benchmark-object-unresolved / benchmark-governance-unresolved leaderboards rather than evidence of long-term stability or deployability.
+From this section onward, dataset cards and baseline results must report at least <strong>(1) evaluation family</strong>, <strong>(2) benchmark object plus independent prediction unit</strong>, <strong>(3) the independent hold-out unit</strong>, <strong>(4) raw-recording / window ancestry</strong>, <strong>(5) subject / session / site / device / reference-system / electrode-layout disjointness together with metadata-only baselines</strong>, <strong>(6) the channel-map / coordinate-route / reference-family / omitted-channel / sample-rate / filter harmonization log</strong>, <strong>(7) whether target-session, target-subject, or target-site data were used</strong>, <strong>(8) recalibration amount and timing or extra label budget</strong>, <strong>(9) for leaderboard or challenge claims, benchmark provenance including version, split / randomization rule, hidden grouping, extra-data / checkpoint policy, inference-stage restrictions or operations budget, and postmortem disclosures</strong>, and <strong>(10) a stopping claim</strong>. If the claim spans more than one session or day, it must additionally disclose the site's <strong>Temporal Validity</strong> fields: <strong>state annotation</strong>, <strong>fixed decoder interval</strong>, <strong>recalibration burden</strong>, and <strong>transfer ceiling</strong>. Scores without this context will be treated as limited L1 decode results, fingerprint-unresolved / acquisition-distribution-unresolved classifiers, or benchmark-object-unresolved / benchmark-governance-unresolved leaderboards rather than evidence of long-term stability or deployability.
 </p>
 </div>
 
@@ -1178,6 +1185,18 @@ The shortest route to that end is to approach BIDS/EEG-BIDS.
 <li><a href="https://moabb.neurotechx.com/docs/generated/moabb.evaluations.CrossSessionEvaluation.html" target="_blank">MOABB Docs: CrossSessionEvaluation</a></li>
 <li><a href="https://moabb.neurotechx.com/docs/generated/moabb.evaluations.CrossSubjectEvaluation.html" target="_blank">MOABB Docs: CrossSubjectEvaluation</a></li>
 <li><a href="https://doi.org/10.1038/s41597-022-01647-1" target="_blank">Ma et al. (2022), A large EEG dataset for studying cross-session variability in motor imagery BCI</a></li>
+<li><a href="https://proceedings.iclr.cc/paper_files/paper/2024/file/47393e8594c82ce8fd83adc672cf9872-Paper-Conference.pdf" target="_blank">Jiang et al. (2024), Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI</a></li>
+<li><a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">Lee et al. (2025), Are Large Brainwave Foundation Models Capable Yet? Insights from Fine-Tuning</a></li>
+<li><a href="https://arxiv.org/abs/2507.14141" target="_blank">Han et al. (2025), DIVER-0: A Fully Channel Equivariant EEG Foundation Model</a></li>
+<li><a href="https://arxiv.org/abs/2510.12515" target="_blank">Chen et al. (2025), HEAR: An EEG Foundation Model with Heterogeneous Electrode Adaptive Representation</a></li>
+<li><a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025), REVE: A Foundation Model for EEG -- Adapting to Any Setup with Large-Scale Pretraining on 25,000 Subjects</a></li>
+<li><a href="https://arxiv.org/abs/2602.17251" target="_blank">Ma et al. (2026), Structured Prototype-Guided Adaptation for EEG Foundation Models</a></li>
+<li><a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026), EEG Foundation Models: Progresses, Benchmarking, and Open Problems</a></li>
+<li><a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026), PRISM: Exploring Heterogeneous Pretrained EEG Foundation Model Transfer to Clinical Differential Diagnosis</a></li>
+<li><a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025), official homepage</a></li>
+<li><a href="https://eeg2025.github.io/rules/" target="_blank">EEG Challenge (2025), rules</a></li>
+<li><a href="https://eeg2025.github.io/submission/" target="_blank">EEG Challenge (2025), submission page</a></li>
+<li><a href="https://eeg2025.github.io/leaderboard/" target="_blank">EEG Challenge (2025), leaderboard</a></li>
 <li><a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019), Single-trial neural dynamics are dominated by richly varied movements</a></li>
 <li><a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024), Chrono-EEG dynamics influencing hand gesture decoding: a 10-hour study</a></li>
 <li><a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025), Stabilizing brain-computer interfaces through alignment of latent dynamics</a></li>
