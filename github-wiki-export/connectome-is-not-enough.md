@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-04-01 / Role: Technical / natural science only
+- Updated: 2026-04-03 / Role: Technical / natural science only
 
 ## Role Of This Page
 This page is a page to analyze the intuition that ``If we can obtain the connectome, it would be sufficient to reproduce the brain'' based on primary literature. Rather than focusing on philosophy or legal systems, I will focus on what state variables can't be said if they are missing, and what putative barriers remain even in connectome-constrained.
@@ -599,12 +599,12 @@ The remaining weakness was that the site had become much better at separating <s
 Human evidence for this layer is still indirect. <a href="https://doi.org/10.1111/ejn.70401" target="_blank">Feld et al. (2026)</a> reported that mefloquine before sleep impaired declarative-memory retention and disrupted spindle-to-slow-oscillation coupling in healthy participants, which is useful perturbation evidence that electrical coupling can matter for systems-memory coordination. But the same paper also leaves off-target effects as a caveat, and it is not a direct readout of <strong>which cells were electrically coupled</strong> or <strong>what the local inhibitory driving force was</strong>. On this site, human evidence for shared electrical state is therefore read first as a <strong>perturbation-conditioned clue</strong>, not as ground truth of local electrical coupling in vivo.
 </p>
 <p>
-Human evidence for extracellular geometry is also ceiling-limited. <a href="https://doi.org/10.1126/science.1241224" target="_blank">Xie et al. (2013)</a> showed sleep-linked interstitial-space expansion in mice, while <a href="https://doi.org/10.1016/j.neuroimage.2020.116682" target="_blank">Voldsbekk et al. (2020)</a> provided a bounded human diffusion-MRI clue consistent with wakefulness-related extra-axonal / extracellular-volume reduction. Those are useful clues, but they are still not direct local readouts of synapse-adjacent extracellular geometry in living humans.
+Human evidence for extracellular geometry is also ceiling-limited and internally split. <a href="https://doi.org/10.1126/science.1241224" target="_blank">Xie et al. (2013)</a> showed sleep-linked interstitial-space expansion in mice, <a href="https://doi.org/10.1016/j.neuroimage.2020.116682" target="_blank">Voldsbekk et al. (2020)</a> provided a bounded human diffusion-MRI clue consistent with wakefulness-related extra-axonal / extracellular-volume reduction, and <a href="https://doi.org/10.1016/j.neuroimage.2023.120124" target="_blank">Örzsik et al. (2023)</a> used a within-subject wake-versus-sleep design plus higher-order diffusion modeling to derive a sleep-conditioned clue compatible with increased interstitial-fluid volume and glymphatic-like clearance. Those are useful clues, but they are still not direct local readouts of synapse-adjacent extracellular geometry in living humans, and they do not become one route merely because both use human diffusion MRI.
 </p>
 
 <h4>Electrical-state evidence now needs a route card</h4>
 <p>
-The critique here is not merely that <strong>electrical state exists</strong>, but that recent primary literature spans <strong>different inferential objects</strong>. Gap-junction topology, endogenous-field coupling, inhibitory-driving-force state, and activity-dependent electrical-synapse remodeling do not all answer the same question. A human sleep perturbation clue is different again. If a paper moves among those objects without naming the route, the reader can silently overread a local mechanistic result as if it had already fixed the broader electrical regime.
+The critique here is not merely that <strong>electrical state exists</strong>, but that recent primary literature spans <strong>different inferential objects</strong>. Gap-junction topology, endogenous-field coupling, inhibitory-driving-force state, and activity-dependent electrical-synapse remodeling do not all answer the same question. A human wakefulness-related diffusion clue, a human sleep-conditioned higher-order diffusion clue, and a human sleep perturbation clue are different again. If a paper moves among those objects without naming the route, the reader can silently overread a local mechanistic result as if it had already fixed the broader electrical regime.
 </p>
 <p>
 On this site, that warning now also applies to <strong>extracellular-space geometry / diffusion-barrier / osmotic-regime routes</strong>. A paper about synapse-adjacent dilution, osmotic ECS contraction, sleep-linked interstitial-space change, or a human diffusion-MRI extra-axonal proxy is not automatically a paper about the same inferential object as gap-junction topology or inhibitory driving force.
@@ -620,7 +620,7 @@ On this site, that warning now also applies to <strong>extracellular-space geome
 <tbody>
 <tr>
 <td><strong>Claim family</strong></td>
-<td>State whether the paper is about a <strong>gap-junction coupling network</strong>, an <strong>endogenous-field / ephaptic route</strong>, an <strong>extracellular-space geometry / diffusion-barrier route</strong>, an <strong>inhibitory-driving-force regime</strong>, an <strong>activity-dependent electrical-synapse remodeling route</strong>, a <strong>human wakefulness-related ECS proxy clue</strong>, or only a <strong>human perturbation-conditioned clue</strong>.</td>
+<td>State whether the paper is about a <strong>gap-junction coupling network</strong>, an <strong>endogenous-field / ephaptic route</strong>, an <strong>extracellular-space geometry / diffusion-barrier route</strong>, an <strong>inhibitory-driving-force regime</strong>, an <strong>activity-dependent electrical-synapse remodeling route</strong>, a <strong>human wakefulness-related ECS proxy clue</strong>, a <strong>human sleep-conditioned diffusion / glymphatic clue</strong>, or only a <strong>human perturbation-conditioned clue</strong>.</td>
 <td>Otherwise the paper's object changes silently while the headline claim stays broad.</td>
 </tr>
 <tr>
@@ -640,12 +640,12 @@ On this site, that warning now also applies to <strong>extracellular-space geome
 </tr>
 <tr>
 <td><strong>Human evidence class</strong></td>
-<td>Write whether the strongest human-facing evidence is a <strong>direct local assay</strong>, a <strong>specialized optical / invasive route</strong>, a <strong>diffusion-MRI ECS proxy clue</strong>, a <strong>perturbation-conditioned clue</strong>, or <strong>no human route</strong>.</td>
+<td>Write whether the strongest human-facing evidence is a <strong>direct local assay</strong>, a <strong>specialized optical / invasive route</strong>, a <strong>wakefulness-related diffusion-MRI ECS proxy clue</strong>, a <strong>sleep-conditioned higher-order diffusion / glymphatic clue</strong>, a <strong>perturbation-conditioned clue</strong>, or <strong>no human route</strong>.</td>
 <td>Otherwise a human perturbation result is silently promoted toward local state identification.</td>
 </tr>
 <tr>
 <td><strong>Ceiling and abstention</strong></td>
-<td>Declare whether the claim stops at <strong>local electrical mechanism</strong>, <strong>local extracellular-geometry mechanism</strong>, <strong>narrow network-regime evidence</strong>, <strong>human diffusion-MRI proxy clue</strong>, or <strong>human perturbation clue</strong>, and write what would trigger abstention.</td>
+<td>Declare whether the claim stops at <strong>local electrical mechanism</strong>, <strong>local extracellular-geometry mechanism</strong>, <strong>narrow network-regime evidence</strong>, <strong>human wakefulness-related diffusion-MRI proxy clue</strong>, <strong>human sleep-conditioned diffusion / glymphatic clue</strong>, or <strong>human perturbation clue</strong>, and write what would trigger abstention.</td>
 <td>Otherwise the phrase <strong>electrical-state complete</strong> is allowed to outrun the actual evidence class.</td>
 </tr>
 </tbody>
@@ -653,7 +653,7 @@ On this site, that warning now also applies to <strong>extracellular-space geome
 
 <strong>Operational rule added in this pass</strong>
 <p>
-If a shared extracellular / electrical-state claim lacks this route card, this site keeps the result at <strong>local mechanism</strong>, <strong>specialized assay</strong>, <strong>human diffusion-MRI proxy clue</strong>, or <strong>human perturbation clue</strong>. It is not promoted to chemical-connectome-complete state capture, whole-brain extracellular / electrical-regime recovery, or maintenance-complete synchrony control.
+If a shared extracellular / electrical-state claim lacks this route card, this site keeps the result at <strong>local mechanism</strong>, <strong>specialized assay</strong>, <strong>human wakefulness-related diffusion-MRI proxy clue</strong>, <strong>human sleep-conditioned diffusion / glymphatic clue</strong>, or <strong>human perturbation clue</strong>. It is not promoted to chemical-connectome-complete state capture, whole-brain extracellular / electrical-regime recovery, or maintenance-complete synchrony control.
 </p>
 
 <h3>10. Timing-state is not one scalar delay term</h3>
