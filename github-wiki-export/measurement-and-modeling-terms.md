@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-04-01 / Role: Learning guide
+- Updated: 2026-04-04 / Role: Learning guide (updated with the 2026-04-04 companion-card split)
 
 ## Role Of This Page
 This page is a wiki for understanding measurement terms such as EEG, model terms such as ESI and DCM, and operational terms such as BIDS and QC by connecting them in the flow of ``observation → organization → estimation → verification.'' Rather than memorizing individual words, the aim is to first distinguish which words to use and where to stop making an argument.
@@ -29,8 +29,9 @@ The flow shown here is organized for understanding. Although there are back-and-
 - Solver names do not determine claim strength; validation ladders and route cards do.
 - For inverse problems, field visibility, conductivity sensitivity, solver uncertainty, and validation class are different questions; progress in one does not erase the others.
 - Whole-brain or faster DCM improves tractability, but does not erase candidate-model dependence, processing sensitivity, or reliability limits set by priors, scan duration, and sample size.
+- Route cards and companion cards answer different questions: route cards type one measurement or estimation route, whereas companion cards type the relation among several routes or across sequential stages.
 - More data is not automatically a stronger design; identifiability objective, omitted-mechanism stress, and minimum-sufficiency stop rules answer different questions.
-- Same-session multimodal and same-brain language do not by themselves solve fusion validity or state continuity.
+- Same-session multimodal, same-subject human-proxy, and same-brain language do not by themselves solve fusion validity, human-proxy composition, or state continuity.
 
 ## What Is Still Unknown
 - The extent to which non-invasive measurements alone can restore sufficient internal state for WBE remains an open question.
@@ -38,6 +39,7 @@ The flow shown here is organized for understanding. Although there are back-and-
 - The extent to which causality can be identified using observational data alone varies greatly depending on the intervention design.
 - Which DCM route-card bundle should become the site's default benchmark across task fMRI, resting-state fMRI, and MEG remains unsettled.
 - Which inverse-problem route or validation ladder generalizes beyond focal or clinical benchmark regimes remains unresolved.
+- Which companion-card bundle should become the site's default front-door language for claims that mix multimodal fusion, living-human proxy bundles, and sequential same-brain bridges remains unsettled.
 
 ---
 
@@ -69,6 +71,11 @@ One more technical overread still remained: after naming an ambiguity, readers c
 <strong>2026-04-01 correction to the beginner route</strong>
 <p>
 The remaining beginner weakness was subtler: this page already stopped readers from treating <strong>DCM</strong> as generic causal wording, but it still left room to read recent DCM papers as if they formed one monotonic ladder of causal strength. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">Penny et al. (2004)</a> and <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">Rosa et al. (2012)</a> strengthen <strong>candidate-model comparison and family search</strong>. <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">Frässle et al. (2021)</a> and <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">Wu et al. (2024)</a> strengthen <strong>tractability and scaling</strong>. But <a href="https://doi.org/10.1002/hbm.23061" target="_blank">Fr&auml;ssle et al. (2016)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2019.116435" target="_blank">Almgren et al. (2020)</a>, <a href="https://doi.org/10.1002/hbm.26751" target="_blank">Zhang et al. (2024)</a>, and <a href="https://doi.org/10.1016/j.neuroimage.2024.120604" target="_blank">Ma et al. (2024)</a> show that <strong>reliability, priors, processing policy, scan duration, and sample size</strong> still materially move the result. Therefore, on this site, DCM advances are read by <strong>axis</strong>, not as one progress bar.
+</p>
+
+<strong>2026-04-04 correction to the measurement-model boundary</strong>
+<p>
+The next weakness was not inside one route, but <strong>between routes</strong>. This page already taught that observation, estimation, and verification are different stages, yet it still left one high-cost ambiguity: readers could move from <strong>same-session multimodal</strong>, <strong>same-subject proxy-rich</strong>, or <strong>same-brain sequential</strong> wording to the vague idea that <strong>measurement itself became stronger</strong>. The current primary literature does not support that compression. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025)</a>, <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> show why synchronized or coupled modalities still do not define one temporal object or one biological quantity by default. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1186/s41747-024-00426-4" target="_blank">B&oslash;gh et al. (2024)</a>, <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a>, <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a>, and <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> show why several living-human rows still differ in quantity type, operating point, complete-case availability, and disagreement topology. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a>, <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">Gallego et al. (2020)</a>, <a href="https://doi.org/10.1126/sciadv.abj0751" target="_blank">Van De Ville et al. (2021)</a>, <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a>, <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> show why specimen identity or stable use across time still does not tell you which carried object remained the same. Therefore, this page now separates <strong>route cards</strong> from <strong>companion cards</strong> instead of letting them blur together under one generic verification label.
 </p>
 
 <h2>View in 4 levels</h2>
@@ -103,6 +110,46 @@ The remaining beginner weakness was subtler: this page already stopped readers f
 </tr>
 </tbody>
 </table>
+
+<h2>Three companion cards that still had to be split</h2>
+<p>
+This page now uses a stricter distinction. A <strong>route card</strong> describes one measurement or estimation route and its ceiling. A <strong>companion card</strong> describes the relation among several routes or stages when one route no longer explains the claim by itself. The scientific reason is simple: current primary literature does not support treating <strong>multimodal</strong>, <strong>proxy-rich</strong>, and <strong>same-brain</strong> as if they were one generic upgrade in evidence strength.
+</p>
+<table>
+<thead>
+<tr>
+<th>Claim pattern that still gets overread</th>
+<th>Why the shortcut is scientifically unsafe</th>
+<th>Primary-literature stop rule</th>
+<th>Companion card required on this site</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Same-session multimodal / atlas-informed claim</strong></td>
+<td>Shared timestamps, a shared factor, and one externally grounded biological quantity are different achievements. Same-session or atlas-informed wording does not by itself prove one temporal object or one quantity bridge.</td>
+<td><a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025)</a>, <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> show why temporal-kernel mismatch, shared-vs-specific structure, autonomic coupling, and quantity-bridge failure remain separate burdens.</td>
+<td><strong>Fusion Card</strong></td>
+</tr>
+<tr>
+<td><strong>Several living-human proxy rows in one argument</strong></td>
+<td>Several real human routes can still differ in quantity type, evidence role, operating point, complete-case geometry, and disagreement topology. Listing them together does not yet make one same-subject state sample.</td>
+<td><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1186/s41747-024-00426-4" target="_blank">B&oslash;gh et al. (2024)</a>, <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a>, <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a>, and <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> show why route-local repeatability, method-family non-equivalence, restricted complete-case slices, and disagreement in hard groups remain separate audits.</td>
+<td><strong>Human Proxy Composition Card</strong></td>
+</tr>
+<tr>
+<td><strong>Same-subject / same-brain sequential bridge</strong></td>
+<td>Specimen identity, local structure-function linkage, or stable interface use do not by themselves tell you which object stayed the same across time, regime, or tissue transformation.</td>
+<td><a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a>, <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">Gallego et al. (2020)</a>, <a href="https://doi.org/10.1126/sciadv.abj0751" target="_blank">Van De Ville et al. (2021)</a>, <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a>, <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> show why stable use can still depend on alignment, recalibration, local witness objects, or short-horizon support.</td>
+<td><strong>State-Continuity Bridge Card</strong></td>
+</tr>
+</tbody>
+</table>
+
+<strong>One operational distinction to keep visible</strong>
+<p>
+If the claim fails because one route hid its own assumptions, the missing object is a <strong>route card</strong>. If the claim fails because several routes or stages were silently fused into one argument, the missing object is a <strong>companion card</strong>. This page now keeps those failure modes separate on purpose.
+</p>
 
 <h2>1. Observation: First get the signal</h2>
 <p>
@@ -317,6 +364,10 @@ The final question is, "Can other people confirm this estimation or model under 
 <td><strong>Route card</strong></td>
 <td>When ESI, connectivity, or DCM is used, we disclose the assumptions, validation class, abstention boundary, and what the result still does not identify. </td>
 </tr>
+<tr>
+<td><strong>Companion card</strong></td>
+<td>When a claim spans several routes or stages, we disclose whether the unresolved burden is <strong>fusion</strong>, <strong>human-proxy composition</strong>, or <strong>state continuity</strong>, instead of hiding that relation behind words such as <strong>multimodal</strong>, <strong>same-subject</strong>, or <strong>same-brain</strong>. </td>
+</tr>
 </tbody>
 </table>
 
@@ -356,6 +407,23 @@ On this site, verification is no longer only a place to list <strong>what was me
 <li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <em>Nature Neuroscience</em>, 28, 2561-2574. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
 <li>Langdon, C., &amp; Engel, T. A. (2025). Latent circuit inference from heterogeneous neural responses during cognitive tasks. <em>Nature Neuroscience</em>, 28, 665-675. <a href="https://doi.org/10.1038/s41593-025-01869-7" target="_blank">doi:10.1038/s41593-025-01869-7</a></li>
 <li>Liu, X., Wanika, L., Chappell, M. J., &amp; Branke, J. (2025). Efficient data collection for establishing practical identifiability via active learning. <em>Computational and Structural Biotechnology Journal</em>, 27, 4992-5006. <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">doi:10.1016/j.csbj.2025.10.058</a></li>
+<li>Kothe, C., Shirazi, S. Y., Stenner, T., Medine, D., Boulay, C., Grivich, M. I., Artoni, F., Mullen, T., Delorme, A., &amp; Makeig, S. (2025). The lab streaming layer for synchronized multimodal recording. <em>Imaging Neuroscience</em>. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
+<li>Vafaii, H., Mandino, F., Desrosiers-Gr&eacute;goire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <em>Nature Communications</em>, 15, 383. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
+<li>Chen, J. E., Lewis, L. D., Coursey, S. E., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <em>Nature Communications</em>, 16, 8887. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
+<li>Bolt, T. S., van den Brink, R. L., Song, C., et al. (2025). Autonomic physiological coupling of the global fMRI signal. <em>Nature Neuroscience</em>, 28, 1001-1014. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">doi:10.1038/s41593-025-01945-y</a></li>
+<li>Epp, S. M., Castrillon, G., Yuan, B., Andrews-Hanna, J., Preibisch, C., &amp; Riedl, V. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
+<li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <em>PNAS Nexus</em>, 4(3), pgaf072. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
+<li>B&oslash;gh, N., Vaeggemose, M., Schulte, R. F., et al. (2024). Repeatability of deuterium metabolic imaging of healthy volunteers at 3 T. <em>European Radiology Experimental</em>, 8, 9. <a href="https://doi.org/10.1186/s41747-024-00426-4" target="_blank">doi:10.1186/s41747-024-00426-4</a></li>
+<li>Morgan, C. A., Thomas, D. L., Shao, X., et al. (2024). Measurement of blood-brain barrier water exchange rate using diffusion-prepared and multi-echo arterial spin labelling: Comparison of quantitative values and age dependence. <em>NMR in Biomedicine</em>, 37(12), e5256. <a href="https://doi.org/10.1002/nbm.5256" target="_blank">doi:10.1002/nbm.5256</a></li>
+<li>Amiri, M., Hermann, B., M&auml;rtens, B., et al. (2023). Multimodal prediction of residual consciousness in the intensive care unit: the CONNECT-ME study. <em>Brain</em>, 146(2), 645-661. <a href="https://doi.org/10.1093/brain/awac335" target="_blank">doi:10.1093/brain/awac335</a></li>
+<li>Manasova, D., Hermann, B., Calligaris, C., et al. (2026). Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness. <em>Brain</em>. <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">doi:10.1093/brain/awaf412</a></li>
+<li>Bosch, C., Ackels, T., Pacureanu, A., et al. (2022). Functional and multiscale 3D structural investigation of brain tissue through correlative in vivo physiology, synchrotron microtomography and volume electron microscopy. <em>Nature Communications</em>, 13, 2923. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">doi:10.1038/s41467-022-30199-6</a></li>
+<li>MICrONS Consortium, Bae, J. A., Lee, W.-C. A., et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>, 640, 435-447. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
+<li>Gallego, J. A., Perich, M. G., Chowdhury, R. H., et al. (2020). Long-term stability of cortical population dynamics underlying consistent behavior. <em>Nature Neuroscience</em>, 23, 260-270. <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">doi:10.1038/s41593-019-0555-4</a></li>
+<li>Van De Ville, D., Farouj, Y., Preti, M. G., Li&eacute;geois, R., &amp; Amico, E. (2021). When makes you unique: Temporality of the human brain fingerprint. <em>Science Advances</em>, 7(42), eabj0751. <a href="https://doi.org/10.1126/sciadv.abj0751" target="_blank">doi:10.1126/sciadv.abj0751</a></li>
+<li>Karpowicz, B. M., Ali, Y. H., Wimalasena, L. N., et al. (2025). Stabilizing brain-computer interfaces through alignment of latent dynamics. <em>Nature Communications</em>, 16, 4662. <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">doi:10.1038/s41467-025-59652-y</a></li>
+<li>Wilson, G. H., Stein, E. A., Kamdar, F., et al. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <em>Nature Biomedical Engineering</em>. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Wairagkar, M., Card, N. S., Singer-Clark, T., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <em>Nature</em>, 644, 145-152. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
 </ol>
 
 <h2>What has been learned from this process and what is still unknown</h2>
@@ -382,6 +450,10 @@ On this site, verification is no longer only a place to list <strong>what was me
 <tr>
 <td>Why inverse-problem papers must be separated into visibility, forward-model burden, solver uncertainty, and validation class. </td>
 <td>Which inverse route or validation ladder generalizes beyond focal or clinical benchmark regimes. </td>
+</tr>
+<tr>
+<td>Why route cards and companion cards must be separated before multimodal, proxy-rich, or same-brain language is read strongly. </td>
+<td>Which combination of Fusion, Human Proxy Composition, State-Continuity Bridge, and Identifiability cards should become the site's default front-door bundle for cross-stack claims. </td>
 </tr>
 </tbody>
 </table>
