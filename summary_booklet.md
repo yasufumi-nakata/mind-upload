@@ -5,7 +5,7 @@ description: "An auto-generated A4-style briefing page built from the site's pub
 article_type: "Briefing Booklet"
 subtitle: "An A4 briefing regenerated from public-page front matter and lead summaries"
 author: Mind Uploading Research Project
-last_updated: "2026-04-03"
+last_updated: "2026-04-04"
 note: "Auto-generated from public pages"
 body_class: "summary-booklet-page"
 ---
@@ -25,7 +25,7 @@ body_class: "summary-booklet-page"
   <div class="booklet-cover-band">
     <div>
   <span>Reference Date</span>
-  <strong>2026-04-03</strong>
+  <strong>2026-04-04</strong>
 </div>
 <div>
   <span>Current Focus</span>
@@ -338,7 +338,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Resource - Connect ``what to use&#39;&#39; and ``how to reproduce&#39;&#39; in the shortest route without separating them. / 12-20 minutes</p>
   <p>This page is a practical list to help you decide which data to practice with first. First, we use public data to create a state in which we can reproduce the same results (L0), and then check to see if we can predict and withstand changes in conditions (L1-L2).</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>A same-subject support-state bundle is no longer treated as self-interpreting; route class, effective window, quantity bridge, common-driver audit, missingness policy, disagreement topology, repeatability, transfer window, and abstention are now fixed as practical fields.</li><li>The page now also fixes a component-addition / ablation ladder for maintenance-state routes, so glial substrate-routing, astrocyte-state, neurovascular / BBB, and clearance augmentations are compared against a named neuron-first baseline instead of being piled into one multimodal boost.</li><li>Starter EEG datasets are still neuron-first baselines; maintenance-state claims need paired support-state data or aligned proxy logs, one-family-at-a-time augmentation, and strongest-single-row versus bundle comparison.</li>
+    <li>Foundation-model improvements are not comparable unless the pretraining corpus, channel-mismatch handling, acquisition-distribution summary, and adaptation regime are disclosed.</li><li>A same-subject support-state bundle is no longer treated as self-interpreting; route class, effective window, quantity bridge, common-driver audit, missingness policy, disagreement topology, repeatability, transfer window, and abstention are now fixed as practical fields.</li><li>Even when foundation / self-supervised EEG models are used, pretraining-corpus, coordinate-route / reference-family, omitted-channel, and label-budget audits are still required.</li>
   </ul>
   <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -426,7 +426,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Primer - A realistic guide that refuses to turn EEG into magical mind reading / 12-18 minutes</p>
   <p>EEG does not directly show the inside of the brain. It measures a mixed electrical pattern at the scalp. That gives EEG strong temporal resolution, but weak and blurry spatial localization. For that reason, Mind-Upload prioritizes data quality control (QC) and shared data-organization rules such as BIDS before anything else.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>EEG is strong at tracking temporal change, but weak at identifying spatial origin with high precision.</li><li>A high within-session score is not read here as cross-day robustness or deployability.</li><li>For cross-day or long-term claims, the Temporal Validity Card audits fixed decoder interval, state annotation, and recalibration burden separately.</li>
+    <li>Foundation / self-supervised EEG models improve representation learning, but without a Pretraining Card they still remain qualified transfer evidence rather than portable robustness or source-identifiable recovery.</li><li>For foundation-model claims, benchmark object, independent prediction unit, grouped hold-out unit, and inference-stage budget remain separate disclosure fields.</li><li>For large pretrained EEG models, official benchmark operations and postmortems are treated as evidence-bearing conditions, so leaderboard rank is not read apart from split construction, inference-stage budget, or later organizer corrections.</li>
   </ul>
   <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
@@ -439,7 +439,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">FAQ - Prefer verifiable progress to flashy conclusions / 8-15 minutes</p>
   <p>This page is designed to block common misunderstandings early. The stronger the claim, the more carefully you should check, in order, (1) the definition of terms, (2) the measurement scale, (3) the condition that would count as failure, and (4) the reproduction procedure.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>It now front-loads eleven technical guardrails: connectome-complete is not state-complete, human proxy-rich evidence is not automatically near-direct whole-brain state readout, same-brain functional connectomics / digital-twin language is not automatically a solved local twin because sequential bridge, label source, current synaptic-state ceiling, presynaptic release-machinery ceiling, and dynamical identifiability remain separate conditions, same-subject / same-brain wording does not by itself make a sequential workflow one state sample because carried object / witness, tolerance rule, and rescue route remain separate conditions, a high score is not automatically a target-specific neural readout, a foundation-model or leaderboard result is not automatically a general neural decoder because benchmark object, coordinate route / reference family, adaptation regime or label budget, and benchmark governance remain separate conditions, EEG / MEG connectivity labels are not automatically leak-proof communication maps or causal circuits, BOLD / fNIRS differences need vascular-state / CVR audit, DCM / effective-connectivity labels do not by themselves identify true causal wiring because observed-subsystem closure, node-definition policy, latent-confound audit, and sampling / transformation sensitivity remain separate conditions, thermodynamic / irreversibility labels do not by themselves measure physical dissipation or WBE-ready cost, and low latency does not by itself solve the body / environment boundary.</li><li>For same-subject / same-brain bridges, landmarks, latent manifolds, representational geometry, and fingerprint features are different carried objects, and stable scores can still depend on alignment, recalibration, or a short fixed-decoder horizon.</li><li>Proxy class, operational maturity, and calibrator role are different questions; a real human route may still calibrate only one bounded hidden-state family.</li>
+    <li>At the FAQ front door, EEG foundation-model evidence is now split into representation learning / efficiency, recording-frame compatibility, label-limited adaptation rescue, and benchmark governance / postmortem rather than one `general decoder progress` ladder.</li><li>Recent EEG foundation-model benchmarks still show regime-dependent trade-offs: narrow-source checkpoints can win linear probes while more diverse pretraining can win after fine-tuning, so model rank is not one monotonic capability scale.</li><li>For same-subject / same-brain bridges, landmarks, latent manifolds, representational geometry, and fingerprint features are different carried objects, and stable scores can still depend on alignment, recalibration, or a short fixed-decoder horizon.</li>
   </ul>
   <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">

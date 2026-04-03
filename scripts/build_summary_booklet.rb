@@ -28,6 +28,8 @@ SCIENCE_STOPLINE_PATTERNS = [
   [/proxy-rich|proxy class|proxy bundle|same-subject|same-brain|state closure|state-identification|calibrator|composition/i, 7],
   [/same named quantity|method-family non-equivalence|interchangeable/i, 7],
   [/bridge|drift|cross-day|temporal|same-state/i, 7],
+  [/foundation-model|leaderboard|general neural decoder|self-supervised/i, 8],
+  [/pretraining|recording-frame|coordinate route|reference family|benchmark governance|label-limited adaptation|linear probes?|fine-tuning|label budget/i, 6],
   [/measurement model|model burden|quantification|tracer|partial-volume|spectral QC|scan window|kinetic/i, 6],
   [/shortcut|fingerprint|acquisition-distribution|specificity/i, 6],
   [/SV2A|synaptic-density PET|MRSI|metabolic connectome|dynamic DMI|myelin|ionic|bioenergetic|astrocyte|clearance|sleep replay/i, 5]
@@ -44,6 +46,8 @@ AUDIT_PATTERNS = [
   [/same-subject|same-brain|composition|calibrator|proxy bundle|state closure/i, 8],
   [/same named quantity|method-family non-equivalence|interchangeable/i, 8],
   [/bridge|drift|cross-day|temporal|same-state/i, 8],
+  [/foundation-model|leaderboard|general neural decoder|self-supervised/i, 8],
+  [/pretraining|recording-frame|coordinate route|reference family|benchmark governance|label-limited adaptation|linear probes?|fine-tuning|label budget/i, 7],
   [/measurement model|model burden|quantification|tracer|partial-volume|spectral QC|scan window|kinetic/i, 7],
   [/shortcut|fingerprint|acquisition-distribution|specificity|pretraining|fusion card|temporal validity/i, 7]
 ].freeze
@@ -60,6 +64,7 @@ NONTECHNICAL_PATTERNS = [
 
 SUMMARY_REJECT_PATTERNS = (
   NONTECHNICAL_PATTERNS + [
+    /eleven technical guardrails/i,
     /route card/i,
     /Observability Budget now requires/i,
     /maintenance-state budget now requires/i
@@ -91,11 +96,18 @@ AUDIT_PRIORITY_QUERIES = [
   /Specificity & Shortcut Card|same decode score is not a target-specific biomarker/i
 ].freeze
 
+FAQ_PRIORITY_QUERIES = [
+  /foundation-model evidence is now split/i,
+  /Recent EEG foundation-model benchmarks still show regime-dependent trade-offs/i,
+  /same-subject \/ same-brain bridges/i
+].freeze
+
 COMPACT_STOPLINE_RULES = [
   [/Connectome-complete does not mean emulation-complete/i, "Connectome-complete is not emulation-complete."],
   [/human evidence is layered/i, "Human evidence remains layered and proxy-based."],
   [/Several living-human proxy rows are not promoted together/i, "Proxy bundles need compatibility, repeatability, and disagreement audits."],
   [/same-subject or same-brain.*one state sample/i, "Same-subject wording does not make one state sample."],
+  [/foundation-model|leaderboard result.*general neural decoder/i, "Foundation-model scores are benchmark-conditioned, not general decoders."],
   [/same decode score is not a target-specific biomarker/i, "High decode scores can still be shortcut-driven."],
   [/Temporal Validity Card/i, "Same-day success is not a cross-day or long-term claim."]
 ].freeze
@@ -765,6 +777,16 @@ class SummaryBookletTemplate
   end
 
   def prioritized_page_bullets(page_data)
+    if page_data.slug == "faq"
+      return preferred_points(
+        page_data.page_highlights + page_data.known_points,
+        queries: FAQ_PRIORITY_QUERIES,
+        fallback_patterns: SCIENCE_STOPLINE_PATTERNS,
+        reject_patterns: SUMMARY_REJECT_PATTERNS,
+        limit: 3
+      )
+    end
+
     points = select_points(
       page_data.page_highlights + page_data.known_points,
       patterns: SCIENCE_STOPLINE_PATTERNS,
