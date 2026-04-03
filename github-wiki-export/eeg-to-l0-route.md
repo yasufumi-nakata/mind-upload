@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-26 / Role: Practical route / technical refresh
+- Updated: 2026-04-03 / Role: Practical route / temporal-validity sync
 
 ## Role Of This Page
 This page is a practical route from EEG basics to a reproducible L0 artifact pack. The 2026-03 rebuild fixes one weakness in the old route: choosing a dataset and running a model still sounded too simple because benchmark object, temporal regime, event semantics, and verification gates were not kept separate enough.
@@ -124,8 +124,8 @@ This page stays on the technical and natural science side. It does not argue abo
 </tr>
 <tr>
 <td><strong>"Same-session score" as temporal generalization</strong></td>
-<td><a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> show that EEG decoding conditions can change materially across a day-night window, and this site's <a href="https://mind-upload.com/verification.html#temporal-validity-card">Temporal Validity Card</a> therefore separates fixed-decoder interval, state annotation, and recalibration burden.</td>
-<td>The route now asks the reader to decide same-session, same-day, cross-day, or longer-horizon scope before training, not after seeing a score.</td>
+<td><a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> show that EEG decoding conditions can change materially across a day-night window, and this site's <a href="https://mind-upload.com/verification.html#temporal-validity-card">Temporal Validity Card</a> plus <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift">state-trait-drift rule</a> now separate fixed-decoder interval, <strong>fast labels</strong>, <strong>slow internal-milieu disclosure</strong>, and recalibration burden.</td>
+<td>The route now asks the reader to decide same-session, same-day, cross-day, or longer-horizon scope before training, and to log whether the regime changed through movement / arousal alone or through slower circadian / endocrine-metabolic state as well.</td>
 </tr>
 <tr>
 <td><strong>"Events are in BIDS" as if semantics and timing were solved together</strong></td>
@@ -162,7 +162,7 @@ This page stays on the technical and natural science side. It does not argue abo
 </tr>
 <tr>
 <td><strong>Temporal-validity note</strong></td>
-<td>Same-session versus cross-day scope, fixed versus recalibrated decoder, and state-annotation burden.</td>
+<td>Same-session versus cross-day scope, fixed versus recalibrated decoder, fast state labels, and any relevant slow internal-milieu disclosure.</td>
 <td>Same-day success can be silently promoted to longitudinal stability or deployability.</td>
 </tr>
 <tr>

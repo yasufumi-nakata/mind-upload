@@ -5,8 +5,8 @@ description: "A practical route from EEG basics to L0 that now fixes benchmark o
 article_type: Wiki
 subtitle: "Freeze benchmark object, temporal regime, and observation logs before touching the model"
 author: Mind Uploading Research Project
-last_updated: "2026-03-26"
-note: "Practical route / technical refresh"
+last_updated: "2026-04-03"
+note: "Practical route / temporal-validity sync"
 audience: "People who want to move from EEG basics to reproducible L0 work without collapsing dataset choice, split hygiene, temporal validity, and verification into one step"
 reading_time: "12-18 minutes"
 page_intro: "This page is a practical route from EEG basics to a reproducible L0 artifact pack. The 2026-03 rebuild fixes one weakness in the old route: choosing a dataset and running a model still sounded too simple because benchmark object, temporal regime, event semantics, and verification gates were not kept separate enough."
@@ -14,7 +14,7 @@ accuracy_note: "This page does not claim that passing L0 solves identity, WBE, o
 page_highlights:
   - "The route is still short, but it is no longer a generic six-step checklist."
   - "Dataset choice is now treated as benchmark design, not only file selection."
-  - "Subject/session split and same-day/cross-day regime are fixed before modeling."
+  - "Subject/session split and same-day/cross-day regime are fixed before modeling, and temporal validity now separates fast labels from slow internal-milieu disclosure."
   - "BIDS events, HED semantics, and LSL synchronization are treated as different layers."
   - "A score does not become progress until benchmark object, temporal validity, lineage, and stopped claim are all visible."
 known_points:
@@ -150,8 +150,8 @@ This page stays on the technical and natural science side. It does not argue abo
 </tr>
 <tr>
 <td><strong>"Same-session score" as temporal generalization</strong></td>
-<td><a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> show that EEG decoding conditions can change materially across a day-night window, and this site's <a href="../verification.html#temporal-validity-card">Temporal Validity Card</a> therefore separates fixed-decoder interval, state annotation, and recalibration burden.</td>
-<td>The route now asks the reader to decide same-session, same-day, cross-day, or longer-horizon scope before training, not after seeing a score.</td>
+<td><a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> show that EEG decoding conditions can change materially across a day-night window, and this site's <a href="../verification.html#temporal-validity-card">Temporal Validity Card</a> plus <a href="/wiki/state-trait-and-drift.html">state-trait-drift rule</a> now separate fixed-decoder interval, <strong>fast labels</strong>, <strong>slow internal-milieu disclosure</strong>, and recalibration burden.</td>
+<td>The route now asks the reader to decide same-session, same-day, cross-day, or longer-horizon scope before training, and to log whether the regime changed through movement / arousal alone or through slower circadian / endocrine-metabolic state as well.</td>
 </tr>
 <tr>
 <td><strong>"Events are in BIDS" as if semantics and timing were solved together</strong></td>
@@ -190,7 +190,7 @@ This page stays on the technical and natural science side. It does not argue abo
 </tr>
 <tr>
 <td><strong>Temporal-validity note</strong></td>
-<td>Same-session versus cross-day scope, fixed versus recalibrated decoder, and state-annotation burden.</td>
+<td>Same-session versus cross-day scope, fixed versus recalibrated decoder, fast state labels, and any relevant slow internal-milieu disclosure.</td>
 <td>Same-day success can be silently promoted to longitudinal stability or deployability.</td>
 </tr>
 <tr>

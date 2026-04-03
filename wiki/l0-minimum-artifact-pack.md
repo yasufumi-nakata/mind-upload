@@ -5,8 +5,8 @@ description: "Organize the minimum L0 deliverables such as dataset identity, EEG
 article_type: Wiki
 subtitle: "Do not call it reproducible until version, observability, benchmark meaning, lineage, and replay are fixed together"
 author: Mind Uploading Research Project
-last_updated: "2026-04-02"
-note: "Operational guide"
+last_updated: "2026-04-03"
+note: "Operational guide / temporal-validity sync"
 audience: "People who have started creating L0, and people who want to check to what extent it can be called reproducible analysis."
 reading_time: "12-18 minutes"
 page_intro: "This page is an auxiliary page that fixes what must be bundled together before an L0 result can be called reproducible analysis on this site. It is not a procedure manual; it is a submission-shape check that asks whether a third party can reconstruct not only the score, but also what was actually observed, which prediction object and metric bundle were used, which benchmark rules were in force, what was held out, and what remained outside scope."
@@ -17,7 +17,7 @@ page_highlights:
   - "Benchmark name is still too coarse unless predicted object, independent prediction unit, grouped hold-out unit, and operations budget are frozen alongside governance."
   - "Challenge or leaderboard results are not reproducible artifacts on this site unless the current rules snapshot and later organizer corrections are frozen alongside the score."
   - "Derivative lineage is still not the same as workflow provenance: `GeneratedBy` / `SourceDatasets`, config files, and runtime pin have to be frozen together."
-  - "Cross-session or adaptation naming is not yet temporal validity; fixed decoder interval, recalibration burden, and transfer ceiling still have to be disclosed."
+  - "Cross-session or adaptation naming is not yet temporal validity; state annotation now splits fast labels from slow internal-milieu disclosure, and fixed decoder interval, recalibration burden, and transfer ceiling still have to be disclosed."
   - "This page is now synchronized with the stricter practical rule already used on Datasets and Verification."
 known_points:
   - "For L0, it is more important than high accuracy that a third party can rerun under the same conditions and still understand what the score is allowed to mean."
@@ -26,6 +26,7 @@ known_points:
   - "The same benchmark name can still hide different predicted objects, grouped hold-out units, and inference budgets unless those fields are frozen explicitly."
   - "Challenge, leaderboard, or benchmark names alone are still too coarse because rules snapshots, randomization policies, extra-data rules, and later postmortems can materially change what the score means."
   - "Cross-session and unsupervised recalibration results still do not by themselves tell you the fixed decoder interval, recalibration burden, or operational transfer ceiling."
+  - "The same task can still run under different circadian / endocrine-metabolic regimes, so temporal validity does not reduce to movement labels or session IDs alone."
   - "Preloaded or modified recordings should be written as derivatives with explicit lineage rather than silently overwriting raw."
   - "Derivative lineage and workflow provenance are separate: the run still needs config, software / container version, and replayable commands."
   - "Examples of failures, setup shortcuts, and stopping claims belong in the artifact pack, not only in side notes."
@@ -97,6 +98,13 @@ One more L0 shortcut remained. BIDS Derivatives make it possible to say <strong>
 </p>
 </div>
 
+<div class="note-box">
+<strong>2026-04-03 addendum: temporal-validity addendum must split fast labels from slow internal milieu</strong>
+<p>
+One more L0 ambiguity still remained. The pack already required a <strong>Temporal-Validity addendum</strong>, but it still left too much room to write <strong>state annotation</strong> as one vague sentence about movement, arousal, or session ID. The current primary literature does not support that shortcut. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> showed that movement-related EEG decoding conditions change across a long day-night window, while <a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998)</a>, <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007)</a>, <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone et al. (2023)</a>, <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">Birnie et al. (2023)</a>, and <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">Sherman et al. (2015)</a> show that slower circadian / glucocorticoid / endocrine-metabolic regime changes can also move memory-relevant operating state. Therefore the L0 pack now treats <strong>fast labels</strong> and <strong>slow internal-milieu disclosure</strong> as separate parts of item 9 rather than one free-text temporal note.
+</p>
+</div>
+
 <section class="section" id="artifact-pack">
 <h2 class="section-title">Minimum 14 items now required in the L0 pack</h2>
 <table class="data-table">
@@ -150,7 +158,7 @@ One more L0 shortcut remained. BIDS Derivatives make it possible to say <strong>
 </tr>
 <tr>
 <td><strong>9. Temporal-Validity addendum</strong><br><em>Required when the claim spans &gt;1 session/day or uses adaptation</em></td>
-<td>State annotation, fixed decoder interval, recalibration amount and timing, and transfer ceiling.</td>
+<td>State annotation split into fast labels and slow internal-milieu disclosure, fixed decoder interval, recalibration amount and timing, and transfer ceiling.</td>
 <td>Cross-session or adaptation labels get overread as fixed-decoder durability or low-burden operation.</td>
 </tr>
 <tr>
@@ -216,7 +224,7 @@ One more L0 shortcut remained. BIDS Derivatives make it possible to say <strong>
 <tr>
 <td><strong>Cross-session or adaptation label without temporal-validity fields</strong></td>
 <td>Daily drift, recalibration burden, and fixed-decoder durability remain different questions, so cross-session and adaptation labels still underdescribe what survived across time.</td>
-<td>Add a conditional <strong>Temporal-Validity addendum</strong> with state annotation, fixed decoder interval, recalibration amount, and transfer ceiling.</td>
+<td>Add a conditional <strong>Temporal-Validity addendum</strong> with state annotation split into fast labels and slow internal-milieu disclosure, fixed decoder interval, recalibration amount, and transfer ceiling.</td>
 </tr>
 <tr>
 <td><strong>Replay steps without lineage, workflow recipe, or setup summary</strong></td>

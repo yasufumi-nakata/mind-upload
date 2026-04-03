@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-04-02 / Role: Operational guide
+- Updated: 2026-04-03 / Role: Operational guide / temporal-validity sync
 
 ## Role Of This Page
 This page is an auxiliary page that fixes what must be bundled together before an L0 result can be called reproducible analysis on this site. It is not a procedure manual; it is a submission-shape check that asks whether a third party can reconstruct not only the score, but also what was actually observed, which prediction object and metric bundle were used, which benchmark rules were in force, what was held out, and what remained outside scope.
@@ -31,6 +31,7 @@ This page defines the current minimum for L0. It does not by itself justify caus
 - The same benchmark name can still hide different predicted objects, grouped hold-out units, and inference budgets unless those fields are frozen explicitly.
 - Challenge, leaderboard, or benchmark names alone are still too coarse because rules snapshots, randomization policies, extra-data rules, and later postmortems can materially change what the score means.
 - Cross-session and unsupervised recalibration results still do not by themselves tell you the fixed decoder interval, recalibration burden, or operational transfer ceiling.
+- The same task can still run under different circadian / endocrine-metabolic regimes, so temporal validity does not reduce to movement labels or session IDs alone.
 - Preloaded or modified recordings should be written as derivatives with explicit lineage rather than silently overwriting raw.
 - Derivative lineage and workflow provenance are separate: the run still needs config, software / container version, and replayable commands.
 - Examples of failures, setup shortcuts, and stopping claims belong in the artifact pack, not only in side notes.
@@ -66,6 +67,11 @@ One more ambiguity remained inside items 7 and 8. Even when benchmark governance
 <strong>2026-04-02 addendum: derivative lineage is not yet workflow provenance</strong>
 <p>
 One more L0 shortcut remained. BIDS Derivatives make it possible to say <strong>which outputs came from which sources</strong>, but that still does not freeze <strong>which recipe produced them</strong>. The current BIDS specification requires derived datasets to record <strong>GeneratedBy</strong> and supports <strong>SourceDatasets</strong>; <a href="https://doi.org/10.1371/journal.pcbi.1005209" target="_blank">Gorgolewski et al. (2017)</a> showed that BIDS Apps improve software portability; and <a href="https://mne.tools/mne-bids-pipeline/stable/" target="_blank">MNE-BIDS-Pipeline</a> explicitly exposes a text configuration file, cached steps, and summary reports. Therefore, on this site, the L0 pack now treats <strong>lineage</strong>, <strong>workflow recipe</strong>, and <strong>runtime pin</strong> as separate fields that must travel together.
+</p>
+
+<strong>2026-04-03 addendum: temporal-validity addendum must split fast labels from slow internal milieu</strong>
+<p>
+One more L0 ambiguity still remained. The pack already required a <strong>Temporal-Validity addendum</strong>, but it still left too much room to write <strong>state annotation</strong> as one vague sentence about movement, arousal, or session ID. The current primary literature does not support that shortcut. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> showed that movement-related EEG decoding conditions change across a long day-night window, while <a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998)</a>, <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007)</a>, <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone et al. (2023)</a>, <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">Birnie et al. (2023)</a>, and <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">Sherman et al. (2015)</a> show that slower circadian / glucocorticoid / endocrine-metabolic regime changes can also move memory-relevant operating state. Therefore the L0 pack now treats <strong>fast labels</strong> and <strong>slow internal-milieu disclosure</strong> as separate parts of item 9 rather than one free-text temporal note.
 </p>
 
 <h2>Minimum 14 items now required in the L0 pack</h2>
@@ -120,7 +126,7 @@ One more L0 shortcut remained. BIDS Derivatives make it possible to say <strong>
 </tr>
 <tr>
 <td><strong>9. Temporal-Validity addendum</strong><br><em>Required when the claim spans &gt;1 session/day or uses adaptation</em></td>
-<td>State annotation, fixed decoder interval, recalibration amount and timing, and transfer ceiling.</td>
+<td>State annotation split into fast labels and slow internal-milieu disclosure, fixed decoder interval, recalibration amount and timing, and transfer ceiling.</td>
 <td>Cross-session or adaptation labels get overread as fixed-decoder durability or low-burden operation.</td>
 </tr>
 <tr>
@@ -184,7 +190,7 @@ One more L0 shortcut remained. BIDS Derivatives make it possible to say <strong>
 <tr>
 <td><strong>Cross-session or adaptation label without temporal-validity fields</strong></td>
 <td>Daily drift, recalibration burden, and fixed-decoder durability remain different questions, so cross-session and adaptation labels still underdescribe what survived across time.</td>
-<td>Add a conditional <strong>Temporal-Validity addendum</strong> with state annotation, fixed decoder interval, recalibration amount, and transfer ceiling.</td>
+<td>Add a conditional <strong>Temporal-Validity addendum</strong> with state annotation split into fast labels and slow internal-milieu disclosure, fixed decoder interval, recalibration amount, and transfer ceiling.</td>
 </tr>
 <tr>
 <td><strong>Replay steps without lineage, workflow recipe, or setup summary</strong></td>
