@@ -1,21 +1,22 @@
 ---
 layout: default
-title: "Wiki: EEG pretreatment and QC"
-description: "We organize EEG preprocessing as acceptance conditions, including split-locked transforms, reference methods, filters, artifact processing, derivative lineage, and retention."
+title: "Wiki: EEG Preprocessing and QC"
+description: "Organizes EEG preprocessing as a claim contract, including split-locked transforms, recording-frame harmonization, reference families, derivative lineage, and retention."
 article_type: Wiki
-subtitle: "Pre-processing is not a pretense, it is a condition for acceptance of a claim"
+subtitle: "Preprocessing is not cleanup; it is part of the claim contract"
 author: Mind Uploading Research Project
-last_updated: "2026-03-26"
-note: "Technical / practical guide"
-audience: "People who want to understand how EEG preprocessing and QC affect the results with evidence."
+last_updated: "2026-04-04"
+note: "Technical / practical guide (updated for recording-frame contract clarity)"
+audience: "Readers who want to judge how EEG preprocessing, QC, and setup harmonization change the claim ceiling."
 reading_time: "14-20 minutes"
-page_intro: "This page is a wiki that organizes EEG preprocessing and QC not as ``the process of adjusting the waveform at the end,'' but as ``an auditing process that determines which signals should be kept, which derived files can be reused, and which claims should be accepted.''"
-accuracy_note: "We do not provide a one-size-fits-all procedure. From the primary literature and official specifications, we sort out what should be fixed at the bare minimum and what should not be stated yet."
+page_intro: "This page treats EEG preprocessing and QC not as the final cosmetic cleanup step, but as an audit of which signals remain usable, which derivative branches stay reusable, and which claims must still stop."
+accuracy_note: "This page does not prescribe one universal pipeline. It extracts the minimum disclosure and stop rules that primary literature and official specifications currently support."
 page_highlights:
   - "Reference methods, filters, artifact processing, and split-locked transforms can drive the very conclusions of ERP, connectivity, and decoding."
   - "EEG-BIDS, COBIDAS-MEEG, and BIDS Derivatives put metadata, source lineage, and processing labels ahead of pipeline names."
   - "Any preprocessing step that learns from data must be fitted inside the training split; only the learned transform may cross into the hold-out data."
-  - "Site, device, electrode layout, and reference system are part of the measurement condition rather than background implementation detail."
+  - "Site, device, electrode layout, coordinate route, and reference family are part of the measurement condition rather than background implementation detail."
+  - "Common-channel reduction, interpolation, and REST-based transformation are different harmonization branches, not one interchangeable `preprocessed EEG` object."
   - "Artifact removal does not always increase decoding accuracy, and reducing confound may result in decreased accuracy."
   - "Cleanup tools do not by themselves solve source leakage, ghost interactions, causal direction, or subject/session shortcut risk."
   - "High beta/gamma bands overlap with myoelectric contamination, so don't make a strong case without myoelectric audit."
@@ -23,13 +24,15 @@ known_points:
   - "Preprocessing is not a small implementation difference, but a choice that determines which signals are considered neural."
   - "Preprocessing and split design are coupled; fitting ICA, autoreject, normalization, feature selection, or learned denoisers before hold-out can leak test information."
   - "EEG-BIDS, COBIDAS-MEEG, and BIDS Derivatives provide a concrete floor for reproducible EEG reporting and derivative reuse."
-  - "Cross-dataset scores can move with amplifier, cap, channel layout, reference system, and protocol differences."
+  - "Cross-dataset scores can move with amplifier, cap, channel layout, coordinate route, reference system, and protocol differences."
+  - "A harmonized branch is not one thing: common-channel intersection, interpolated target montages, and REST-based transformations preserve different objects and ceilings."
   - "Subject- and session-specific EEG structure is strong enough that sample-based holdouts can overestimate generalization."
   - "Artifact suppression and signal preservation are different; accuracy alone does not determine the quality of preprocessing."
   - "A cleaner waveform does not automatically justify a stronger connectivity or causality claim."
 unknown_points:
   - "It has not yet been decided which split-locked preprocessing bundle is optimal for each EEG problem."
   - "To determine how much of the high-frequency components can be treated as neural, it is necessary to audit myoelectricity, body movement, and task dependence."
+  - "Which harmonization branches preserve which benchmark objects best across heterogeneous EEG setups remains unresolved."
   - "Which sensitivity-analysis and transform-lineage bundle should become the site-wide standard is still a bench-governance issue."
 wiki_links:
   - label: "Wiki: Basics of EEG"
@@ -69,7 +72,7 @@ EEG preprocessing is not a process to clean up the diagram. <strong>It is an aud
 <div class="note-box">
 <strong>Scope of this page</strong>
 <p>
-Only the technical and natural science aspects will be dealt with here. Philosophy, legal systems, and individuality are not covered. The question to ask is not ``which preprocessing is just?'' but rather ``Which conditions must be fixed to avoid exaggerating EEG-derived claims?''
+This page stays on the technical and natural-science side only. It does not discuss philosophy, law, or personhood. The question here is narrower: <strong>which preprocessing and setup conditions must be fixed before an EEG-derived claim can be read strongly?</strong>
 </p>
 </div>
 
@@ -87,10 +90,17 @@ One more stop line had to be promoted. The older page still let readers imagine 
 </p>
 </div>
 
+<div class="note-box">
+<strong>2026-04-04 correction: harmonization is a recording-frame contract, not one checkbox</strong>
+<p>
+The next weakness was that this page still treated <strong>setup harmonization</strong> too much like a generic background adjustment. The current literature does not support that shortcut. EEG-BIDS already separates <strong>electrodes</strong>, <strong>channels</strong>, <strong>coordinate system</strong>, and <strong>reference scheme</strong>. <a href="https://doi.org/10.1088/1741-2552/aaa13f" target="_blank">Hu et al. (2018)</a> showed that measured scalp potentials depend on both <strong>reference montage</strong> and <strong>electrode setup</strong>. <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)</a> showed that <strong>system</strong>, <strong>subject</strong>, and <strong>session</strong> each contribute variance to EEG recordings. <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a> showed that environmental variability such as amplifier, cap, sampling rate, and filtering can break cross-dataset decoding, and <a href="https://doi.org/10.1016/j.brainresbull.2024.111064" target="_blank">Dong et al. (2024)</a> showed that channel-location harmonization itself needs an explicit offline route such as REST-based transformation rather than a vague statement that datasets were simply `made comparable`. Therefore, on this site, harmonization is now read as a <strong>recording-frame contract</strong> that must name the <strong>coordinate route</strong>, <strong>reference family</strong>, <strong>omitted/interpolated-channel policy</strong>, and <strong>harmonized branch</strong>.
+</p>
+</div>
+
 <section class="section" id="why-this-matters">
 <h2 class="section-title">Weaknesses to be explored in depth</h2>
 <p>
-The older page correctly treated reference methods, filters, artifact handling, and exclusion criteria as major issues. The remaining weakness was subtler: it still let readers imagine preprocessing as if it were only <strong>waveform cleanup</strong>, rather than part of <strong>split design</strong>, <strong>derivative provenance</strong>, and <strong>shortcut control</strong>. COBIDAS-MEEG and EEG-BIDS already provide a concrete reporting floor, the PREP pipeline shows the interdependence of bad-channel detection and rereference, and Widmann et al. established that the filter design itself can drive waveform and latency. Recent work forces three more corrections. <a href="https://doi.org/10.1038/s42003-025-08464-3" target="_blank">Kessler et al. (2025)</a> explicitly discuss latent leakage in preprocessing operations such as ICA and autoreject, <a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">Brookshire et al. (2024)</a> show that segment-based holdout leaks subject-specific information in translational EEG, and <a href="https://doi.org/10.1016/j.compbiomed.2025.110608" target="_blank">Del Pup et al. (2025)</a> show that sample-based cross-validation overestimates performance and that nested subject-based strategies are more realistic. At the same time, BIDS Derivatives now make source lineage and processing labels part of reusability rather than optional bookkeeping. Therefore, this issue is not a practical trick, but part of the core ceiling of EEG-derived claims.
+The older page already treated reference methods, filters, artifact handling, and exclusion criteria as major issues. The remaining weakness was narrower but still important: it still let readers imagine preprocessing as if it were mostly <strong>waveform cleanup</strong>, with setup differences folded into one generic <strong>harmonization</strong> line. The current literature and official specifications do not support that compression. COBIDAS-MEEG and EEG-BIDS already provide the reporting floor, the PREP pipeline shows the interdependence of bad-channel detection and rereference, and Widmann et al. established that filter design itself can move waveform and latency. Recent work forces four more corrections. <a href="https://doi.org/10.1038/s42003-025-08464-3" target="_blank">Kessler et al. (2025)</a> explicitly discuss latent leakage in preprocessing operations such as ICA and autoreject, <a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">Brookshire et al. (2024)</a> show that segment-based holdout leaks subject-specific information in translational EEG, <a href="https://doi.org/10.1016/j.compbiomed.2025.110608" target="_blank">Del Pup et al. (2025)</a> show that sample-based cross-validation overestimates performance and that nested subject-based strategies are more realistic, and <a href="https://doi.org/10.1088/1741-2552/aaa13f" target="_blank">Hu et al. (2018)</a> plus <a href="https://doi.org/10.1016/j.brainresbull.2024.111064" target="_blank">Dong et al. (2024)</a> show that <strong>reference family</strong> and <strong>channel-location transformation route</strong> are themselves part of what the measurement means. Therefore, preprocessing here is read not only as cleanup, but also as <strong>split design</strong>, <strong>derivative provenance</strong>, <strong>shortcut control</strong>, and <strong>recording-frame contract disclosure</strong>.
 </p>
 </section>
 
@@ -126,9 +136,9 @@ The older page correctly treated reference methods, filters, artifact handling, 
 <td>Reading topology, connectivity, or topography in sensor space without reference dependence disclosure.</td>
 </tr>
 <tr>
-<td><strong>setup-distribution / harmonization gate</strong></td>
-<td>Cross-dataset studies and channel-location benchmarks show that amplifier, cap, channel map, reference, sampling rate, and protocol differences can change the result even before the model changes.</td>
-<td>Reading a cross-dataset or cross-site score as if it reflected only the target neural variable.</td>
+<td><strong>recording-frame contract / harmonization gate</strong></td>
+<td>Cross-dataset studies and channel-location transformation papers show that amplifier, cap, channel map, coordinate route, reference family, omitted/interpolated-channel policy, sampling rate, and protocol differences can change the result before the model changes.</td>
+<td>Reading a cross-dataset or cross-site score as if it reflected only the target neural variable, or as if the harmonized branch were automatically equivalent to the raw measurement object.</td>
 </tr>
 <tr>
 <td><strong>filter gate</strong></td>
@@ -284,14 +294,40 @@ EEG is a potential-difference measurement, so changing the reference changes the
 </section>
 
 <section class="section" id="setup-distribution">
-<h2 class="section-title">5. Setup distribution and harmonization are not background noise</h2>
+<h2 class="section-title">5. Harmonization is a recording-frame contract, not background cleanup</h2>
 <p>
-Two EEG datasets can use the same task name and still represent different measurement conditions. <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a> showed that deep-learning EEG decoding changes across datasets when amplifier, cap, sampling rate, and filtering change, and <a href="https://doi.org/10.1016/j.brainresbull.2024.110906" target="_blank">Dong et al. (2024)</a> showed that even motor-imagery BCI comparisons require explicit harmonization across channel-location schemes. Therefore, this site does not treat <strong>site / device / reference system / electrode layout / protocol</strong> as background nuisance. They are part of the observation model.
+Two EEG datasets can use the same task name and still represent different measurement conditions. EEG-BIDS already distinguishes <strong>electrodes</strong>, <strong>channels</strong>, <strong>coordinate system</strong>, and <strong>reference scheme</strong>, which means the format itself does not treat those as cosmetic details. <a href="https://doi.org/10.1088/1741-2552/aaa13f" target="_blank">Hu et al. (2018)</a> then showed that the measured scalp potentials change with both <strong>reference montage</strong> and <strong>electrode setup</strong>. <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)</a> showed that <strong>system</strong>, <strong>subject</strong>, and <strong>session</strong> each influence EEG recordings. <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a> showed that cross-dataset deep-learning decoding breaks under environmental variability such as amplifier, cap, sampling rate, and filtering. <a href="https://doi.org/10.1016/j.brainresbull.2024.111064" target="_blank">Dong et al. (2024)</a> then showed that different channel-location schemes can be brought closer only through an explicit offline transform route, with reported correlations above <strong>0.9</strong> rather than identity by default. Therefore, this site does not treat <strong>site / device / reference system / electrode layout / coordinate route / protocol</strong> as background nuisance. They are part of the observation model.
 </p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Harmonization branch</th>
+<th>What it preserves best</th>
+<th>What it still does not make equivalent by default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Common-channel intersection</strong></td>
+<td>The subset of channels that was directly measured in every dataset.</td>
+<td>Coverage outside the shared subset, or the original spatial support of denser setups.</td>
+</tr>
+<tr>
+<td><strong>Interpolation to a target montage</strong></td>
+<td>A declared target layout under explicit spatial assumptions.</td>
+<td>Direct measurement at the interpolated channels, or route-free equivalence to the original montage.</td>
+</tr>
+<tr>
+<td><strong>REST / coordinate transformation to a common distribution</strong></td>
+<td>A transformed branch with a declared reference and channel-location route that may improve comparability.</td>
+<td>Identity of the raw reference family, raw channel geometry, or proof that physiology was preserved exactly.</td>
+</tr>
+</tbody>
+</table>
 <div class="note-box">
 <strong>Rules on this site</strong>
 <p>
-If the claim spans more than one site, dataset, or recording setup, disclose the setup distribution and how harmonization was performed. Without that, a score is not read here as clean evidence of neural generalization.
+If the claim spans more than one site, dataset, or recording setup, disclose the <strong>recording-frame contract</strong>: original channel map and coordinate system, raw reference plus rereference family, omitted/interpolated-channel policy, and whether harmonization used <strong>common-channel reduction</strong>, <strong>interpolation</strong>, or <strong>REST / another explicit transform route</strong>. Without that, a score is not read here as clean evidence of neural generalization, and the harmonized branch is not treated as equivalent to the original benchmark object.
 </p>
 </div>
 </section>
@@ -455,8 +491,8 @@ As outlined by Muthukumaraswamy, muscle artifacts overlap widely around 20-300 H
 <td>Leave the presence of PREP / ICA / ICLabel / Autoreject / ASR / ZapLine, their thresholds, removal counts, and interpolation rate.</td>
 </tr>
 <tr>
-<td><strong>setup / harmonization log</strong></td>
-<td>Disclose site, device, channel map, reference system, protocol differences, and the harmonization rule across them.</td>
+<td><strong>recording-frame contract / harmonization log</strong></td>
+<td>Disclose site, device, original channel map, coordinate route, raw reference plus rereference family, omitted/interpolated-channel policy, protocol differences, and the exact harmonized branch used for comparison.</td>
 </tr>
 <tr>
 <td><strong>raw-clean delta</strong></td>
@@ -524,6 +560,10 @@ As outlined by Muthukumaraswamy, muscle artifacts overlap widely around 20-300 H
 <td>An automatic pipeline is automatically reproducible</td>
 <td>Automation and reproducibility are different; you still need source lineage, fitted-transform logs, removal amounts, and retention rates.</td>
 </tr>
+<tr>
+<td>We harmonized the datasets, so the signals are now equivalent</td>
+<td>No. Common-channel reduction, interpolation, and REST-based transformation create different benchmark objects and must be declared separately.</td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -536,10 +576,12 @@ As outlined by Muthukumaraswamy, muscle artifacts overlap widely around 20-300 H
 <li>Scikit-learn: Common pitfalls and recommended practices. <a href="https://scikit-learn.org/stable/common_pitfalls.html" target="_blank">official docs</a></li>
 <li>Pernet CR, Appelhoff S, Gorgolewski KJ, et al. EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. <em>Scientific Data</em>. 2019. <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">doi:10.1038/s41597-019-0104-8</a></li>
 <li>Pernet C, Garrido MI, Gramfort A, et al. Issues and recommendations from the OHBM COBIDAS MEEG committee for reproducible EEG and MEG research. <em>Nature Neuroscience</em>. 2020. <a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">doi:10.1038/s41593-020-00709-0</a></li>
+<li>Melnik A, Legkov P, Izdebski K, et al. Systems, subjects, sessions: to what extent do these factors influence EEG data? <em>Frontiers in Human Neuroscience</em>. 2017;11:150. <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">doi:10.3389/fnhum.2017.00150</a></li>
+<li>Hu S, Lai Y, Valdes-Sosa PA, Bringas-Vega ML, Yao D. How do reference montage and electrodes setup affect the measured scalp EEG potentials? <em>Journal of Neural Engineering</em>. 2018;15(2):026013. <a href="https://doi.org/10.1088/1741-2552/aaa13f" target="_blank">doi:10.1088/1741-2552/aaa13f</a></li>
 <li>Bigdely-Shamlo N, Mullen T, Kothe C, Su K-M, Robbins KA. The PREP pipeline: standardized preprocessing for large-scale EEG analysis. <em>Journal of Neuroscience Methods</em>. 2015. <a href="https://doi.org/10.1016/j.jneumeth.2015.06.014" target="_blank">doi:10.1016/j.jneumeth.2015.06.014</a></li>
 <li>Widmann A, Schröger E, Maess B. Digital filter design for electrophysiological data: a practical approach. <em>Journal of Neuroscience Methods</em>. 2015. <a href="https://doi.org/10.1016/j.jneumeth.2014.08.002" target="_blank">doi:10.1016/j.jneumeth.2014.08.002</a></li>
 <li>Muthukumaraswamy SD. High-frequency brain activity and muscle artifacts in MEG/EEG: a review and recommendations. <em>Frontiers in Human Neuroscience</em>. 2013. <a href="https://doi.org/10.3389/fnhum.2013.00138" target="_blank">doi:10.3389/fnhum.2013.00138</a></li>
-<li>Cao Y, et al. How Different EEG References Influence Sensor Level Functional Connectivity Graphs. <em>Frontiers in Neuroscience</em>. 2017. <a href="https://doi.org/10.3389/fnins.2017.00368" target="_blank">doi:10.3389/fnins.2017.00368</a></li>
+<li>Huang Y, Zhang J, Cui Y, et al. How Different EEG References Influence Sensor Level Functional Connectivity Graphs. <em>Frontiers in Neuroscience</em>. 2017;11:368. <a href="https://doi.org/10.3389/fnins.2017.00368" target="_blank">doi:10.3389/fnins.2017.00368</a></li>
 <li>Jas M, Engemann DA, Bekhti Y, Raimondo F, Gramfort A. Autoreject: automated artifact rejection for MEG and EEG data. <em>NeuroImage</em>. 2017. <a href="https://doi.org/10.1016/j.neuroimage.2017.08.030" target="_blank">doi:10.1016/j.neuroimage.2017.08.030</a></li>
 <li>Pion-Tonachini L, Kreutz-Delgado K, Makeig S. ICLabel: An automated electroencephalographic independent component classifier, dataset, and website. <em>NeuroImage</em>. 2019. <a href="https://doi.org/10.1016/j.neuroimage.2019.05.026" target="_blank">doi:10.1016/j.neuroimage.2019.05.026</a></li>
 <li>Chang C-Y, Hsu S-H, Pion-Tonachini L, Jung T-P. Evaluation of Artifact Subspace Reconstruction for automatic EEG artifact removal. <em>Proc IEEE EMBC</em>. 2018. <a href="https://doi.org/10.1109/EMBC.2018.8512547" target="_blank">doi:10.1109/EMBC.2018.8512547</a></li>
@@ -550,7 +592,7 @@ As outlined by Muthukumaraswamy, muscle artifacts overlap widely around 20-300 H
 <li>Chaibub Neto E, Pratap A, Perumal TM, et al. Detecting the impact of subject characteristics on machine learning-based diagnostic applications. <em>npj Digital Medicine</em>. 2019;2:99. <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">doi:10.1038/s41746-019-0178-x</a></li>
 <li>Gibson E, Lobaugh NJ, Joordens S, McIntosh AR. EEG variability: Task-driven or subject-driven signal of interest? <em>NeuroImage</em>. 2022;252:119034. <a href="https://doi.org/10.1016/j.neuroimage.2022.119034" target="_blank">doi:10.1016/j.neuroimage.2022.119034</a></li>
 <li>Xu M, Yao S, Wei Z, et al. Cross-dataset variability problem in EEG decoding with deep learning. <em>Frontiers in Human Neuroscience</em>. 2020;14:103. <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">doi:10.3389/fnhum.2020.00103</a></li>
-<li>Dong C, Jia T, Wang S, et al. Benchmarking of different channel locations for motor imagery based BCI. <em>Brain Research Bulletin</em>. 2024;210:110906. <a href="https://doi.org/10.1016/j.brainresbull.2024.110906" target="_blank">doi:10.1016/j.brainresbull.2024.110906</a></li>
+<li>Dong L, Yang R, Xie A, et al. Transforming of scalp EEGs with different channel locations by REST for comparative study. <em>Brain Research Bulletin</em>. 2024;217:111064. <a href="https://doi.org/10.1016/j.brainresbull.2024.111064" target="_blank">doi:10.1016/j.brainresbull.2024.111064</a></li>
 <li>Vinck M, Oostenveld R, van Wingerden M, Battaglia F, Pennartz CMA. An improved index of phase-synchronization for electrophysiological data in the presence of volume-conduction, noise and sample-size bias. <em>NeuroImage</em>. 2011;55(4):1548-1565. <a href="https://doi.org/10.1016/j.neuroimage.2011.01.055" target="_blank">doi:10.1016/j.neuroimage.2011.01.055</a></li>
 <li>Haufe S, Nikulin VV, Müller K-R, Nolte G. A critical assessment of connectivity measures for EEG data: A simulation study. <em>NeuroImage</em>. 2013;64:120-133. <a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">doi:10.1016/j.neuroimage.2012.09.036</a></li>
 <li>Palva JM, Wang SH, Palva S, et al. Ghost interactions in MEG/EEG source space: A note of caution on inter-areal coupling measures. <em>NeuroImage</em>. 2018;173:632-643. <a href="https://doi.org/10.1016/j.neuroimage.2018.02.032" target="_blank">doi:10.1016/j.neuroimage.2018.02.032</a></li>
