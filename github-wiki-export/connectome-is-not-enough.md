@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-04-03 / Role: Technical / natural science only
+- Updated: 2026-04-04 / Role: Technical / natural science only
 
 ## Role Of This Page
 This page is a page to analyze the intuition that ``If we can obtain the connectome, it would be sufficient to reproduce the brain'' based on primary literature. Rather than focusing on philosophy or legal systems, I will focus on what state variables can't be said if they are missing, and what putative barriers remain even in connectome-constrained.
@@ -28,6 +28,7 @@ What I'm showing here is an arrangement of ``at least removing this will weaken 
 - Synapse count and regional SV2A density still do not directly fix release-site number, active-zone nanostructure / priming-site assembly, docked-vesicle architecture, or current release competence.
 - Synaptic efficiency, activity-dependent transcription / chromatin state, timing-state, thermal-state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, ionic milieu / chloride homeostasis, shared extracellular / electrical state, neuromodulation, bioenergetic / mitochondrial state, neurovascular-unit / BBB / pericyte state, glial substrate-routing, astrocyte-state, clearance / immune support, cell type labels, intrinsic excitability/homeostasis set points, and local proteostasis / synaptic-tagging state are pieces of information that are likely to fall off a static edge list, cargo-transport / cytoskeletal trafficking state is another, and perisynaptic ECM / PNN state is another.
 - Confusing coarse physiological proxies with ground truths makes it easy to overstate claims about internal states.
+- Human support-state observability is already internally split: BBB water exchange, tracer-specific BBB transport, choroid-plexus / blood-CSF-barrier routes, CSF oscillation, parenchyma-CSF exchange, intrathecal-tracer clearance, CSF mobility, and model-based biomarker efflux are not one reusable meter.
 - Even in a connectome-constrained model, dynamics can degenerate if unmeasured cell/synapse/modification parameters remain.
 - Dorkenwald et al. (2024), MICrONS Consortium et al. (2025), Thomas et al. (2014), Donahue et al. (2016), Schilling et al. (2020), Grisot et al. (2021), Lappalainen et al. (2024), and Beiran & Litwin-Kumar (2025) support different kinds of progress and should not be collapsed into one story that connectome is "almost enough."
 - Same-brain functional connectomics strengthens specimen identity and local structure-function correspondence more than atlas priors do, but it still remains a sequential bridge and local conditional-prediction route rather than direct transcriptomic truth, current synaptic-state readout, or unique local dynamics.
@@ -159,8 +160,8 @@ I am not going to deal with philosophy or legal systems here. From only the aspe
 <tr>
 <td><strong>Neurovascular-unit / BBB / pericyte state</strong></td>
 <td>Even with the same graph and nominal neural state, capillary-diameter control, BBB permeability, neurovascular coupling, and pericyte / endothelial support logic can still differ.</td>
-<td>If vascular confounds are audited or a human BBB proxy exists, the relevant controller state is almost solved.</td>
-<td>Demote neurovascular-maintenance and BBB-controller claims unless controller-side biology, macro proxy class, and calibration ceiling are named separately.</td>
+<td>If vascular confounds are audited or one human BBB / BCSFB proxy exists, the relevant controller state is almost solved.</td>
+<td>Demote neurovascular-maintenance and barrier-controller claims unless controller-side biology, barrier route family, macro proxy class, and calibration ceiling are named separately.</td>
 </tr>
 <tr>
 <td><strong>Glial substrate-routing</strong></td>
@@ -177,8 +178,8 @@ I am not going to deal with philosophy or legal systems here. From only the aspe
 <tr>
 <td><strong>Clearance / immune support</strong></td>
 <td>Even with the same graph and astrocyte support, meningeal drainage, CSF-interstitial exchange, and microglia-linked synaptic maintenance can still differ over multiday windows.</td>
-<td>Clearance is passive cleanup, or current human glymphatic / CSF routes already fix the local immune controller.</td>
-<td>Demote multiday maintenance, recovery, and local immune-controller claims unless clearance / immune route, proxy class, and calibration ceiling are disclosed separately.</td>
+<td>Clearance is passive cleanup, or one human CSF / glymphatic route already fixes the local immune controller.</td>
+<td>Demote multiday maintenance, recovery, and local immune-controller claims unless clearance / immune route family, transport object or target class, proxy class, and calibration ceiling are disclosed separately.</td>
 </tr>
 <tr>
 <td><strong>Parameter degeneracy (estimated wall)</strong></td>
@@ -757,9 +758,9 @@ Human energetic observability is still a set of macro proxy classes rather than 
 Another weakness of the earlier page was that it let readers compress <strong>neurovascular support</strong> into either hemodynamic transfer audit or generic glial support. That is too weak. <a href="https://doi.org/10.1016/j.neuron.2010.09.043" target="_blank">Bell et al. (2010)</a> showed that pericytes control key neurovascular functions and neuronal phenotype, <a href="https://doi.org/10.3389/fncel.2020.00027" target="_blank">Kisler et al. (2020)</a> showed that acute cortical pericyte ablation rapidly uncouples neurovascular signaling, <a href="https://doi.org/10.1016/j.neuron.2023.08.030" target="_blank">Pandey et al. (2023)</a> showed that neuronal activity drives memory-relevant IGF2 expression from pericytes, and <a href="https://doi.org/10.1038/s41467-025-61312-0" target="_blank">Mai-Morente et al. (2025)</a> showed that pericyte pannexin1 controls capillary diameter and supports memory function. Therefore, even if graph, neural activity, and vascular confounds are audited, <strong>the neurovascular-unit / BBB / pericyte controller state can still remain latent</strong>.
 </p>
 
-<strong>Human observability ceiling for neurovascular-unit / BBB state</strong>
+<strong>Human observability ceiling for neurovascular-unit / barrier-side state</strong>
 <p>
-Human BBB routes are meaningful, but they are still macro proxy classes rather than local controller readouts. <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> used multi-echo ASL to estimate BBB water permeability across the adult lifespan, and <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> used PET and kinetic modeling to quantify molecular BBB permeability. Those routes do not directly identify which pericyte, endothelial controller, or local maintenance loop is active. On this site, human BBB routes therefore remain <strong>macro permeability / exchange proxies</strong>.
+Human barrier-side observability is already a route-family split rather than one generic `BBB` meter. <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a> and <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> constrain <strong>BBB water-exchange</strong> under ASL method and model choices, <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> constrains <strong>tracer-specific BBB transport</strong> with dynamic PET and kinetic modeling, <a href="https://doi.org/10.1186/s12987-020-00218-z" target="_blank">Zhao et al. (2020)</a> constrains <strong>choroid-plexus perfusion</strong>, <a href="https://doi.org/10.1016/j.neuroimage.2021.118755" target="_blank">Petitclerc et al. (2021)</a> constrains <strong>blood-to-CSF water transport</strong>, and <a href="https://doi.org/10.1177/0271678X261429042" target="_blank">Petitclerc et al. (2026)</a> constrains a <strong>simultaneous BBB-versus-BCSFB exchange route</strong>. These papers do not share one crossed boundary, one carrier object, one model family, or one validation ceiling. On this site, human barrier routes therefore remain <strong>bounded BBB or BCSFB proxy families</strong>, not one route-free permeability scalar and not a readout of which pericyte, endothelial, or choroid-plexus epithelial controller is active.
 </p>
 
 <h3>15. Glial substrate-routing is not generic astrocyte or energetic support</h3>
@@ -789,7 +790,7 @@ The current site had already become stronger on maintenance-state language, but 
 
 <strong>Human observability ceiling for clearance / immune support</strong>
 <p>
-Human clearance evidence also remains a proxy class. <a href="https://doi.org/10.1093/brain/awaa443" target="_blank">Eide &amp; Ringstad (2021)</a> showed that sleep deprivation impairs molecular clearance from the human brain, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> reported a model-based route from brain to plasma for amyloid-beta and tau clearance in humans. Those results are important because they make human support-state observability more concrete, but they still do not become direct readouts of local microglial controller state, synapse-specific maintenance logic, or cell-resolved clearance routing. On this site, human clearance evidence therefore remains <strong>macro support-state proxy</strong>.
+Human clearance evidence also remains a route-split proxy family rather than one glymphatic meter. <a href="https://doi.org/10.1126/science.aax5440" target="_blank">Fultz et al. (2019)</a> constrains <strong>macroscopic CSF oscillation</strong> during sleep, <a href="https://doi.org/10.1016/j.neuroimage.2025.121142" target="_blank">Kim, Huang, &amp; Liu (2025)</a> constrains <strong>parenchyma-CSF water exchange</strong>, <a href="https://doi.org/10.1038/s41467-023-37685-5" target="_blank">Eide et al. (2023)</a> constrains an <strong>intrathecal-tracer / CSF-to-blood-clearance-capacity route</strong>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> constrains <strong>CSF mobility</strong>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> constrains a <strong>model-based overnight biomarker-efflux route</strong>. Those routes do not share one crossed boundary, one time window, one transport object, or one model burden, and they still do not become direct readouts of local microglial controller state, synapse-specific maintenance logic, or cell-resolved clearance routing. On this site, human clearance evidence therefore remains <strong>macro support-state proxy families</strong>, not one route-free human clearance truth.
 </p>
 
 <h2>Don't end with enumeration, compare with augmentation / ablation</h2>
@@ -886,9 +887,9 @@ The weakness of the current site was that even if it was possible to enumerate t
 </tr>
 <tr>
 <td><strong>+ neurovascular / BBB audit</strong></td>
-<td>Compare a neural-activity or vascular-transfer-aware baseline against the same model with pericyte / endothelial perturbation, BBB permeability route, or externally calibrated support-state proxy under the same held-out coupling or memory condition.</td>
-<td>Bell, Kisler, Pandey, Mai-Morente, Padrela, and Chung together support that neurovascular-unit / BBB state can narrow capillary-control and permeability claims once controller biology and macro proxy class are kept separate.</td>
-<td>Human BBB MRI / PET remains a macro permeability / exchange proxy and does not become local pericyte or endothelial-controller ground truth.</td>
+<td>Compare a neural-activity or vascular-transfer-aware baseline against the same model with pericyte / endothelial perturbation, BBB water-exchange, tracer-specific BBB transport, blood-CSF-barrier / choroid-plexus route, or externally calibrated support-state proxy under the same held-out coupling or memory condition.</td>
+<td>Bell, Kisler, Pandey, Mai-Morente, Morgan, Chung, Zhao, and Petitclerc together support that neurovascular-unit / barrier state can narrow capillary-control and permeability claims once controller biology and barrier route family are kept separate.</td>
+<td>Human BBB / BCSFB MRI or PET remains a macro barrier-support proxy family and does not become local pericyte, endothelial, or choroid-plexus-controller ground truth.</td>
 </tr>
 <tr>
 <td><strong>+ glial substrate-routing audit</strong></td>
@@ -905,8 +906,8 @@ The weakness of the current site was that even if it was possible to enumerate t
 <tr>
 <td><strong>+ clearance / immune audit</strong></td>
 <td>Compare an astrocyte- or neurovascular-aware baseline against the same model with lymphatic / CSF routing, microglia-linked synaptic readout, or externally calibrated human clearance proxy under the same multiday recovery or support condition.</td>
-<td>Louveau, Ahn, Kim, Eide, and Dagum together support that clearance / immune support can narrow multiday maintenance claims once drainage anatomy, synaptic physiology, and human support-state proxy are not compressed into one row.</td>
-<td>Human CSF-mobility or glymphatic-model routes remain macro support-state proxies and do not become local immune-controller ground truth.</td>
+<td>Louveau, Ahn, Kim, Fultz, Kim, Huang, &amp; Liu, Eide, Hirschler, and Dagum together support that clearance / immune support can narrow multiday maintenance claims once drainage anatomy, synaptic physiology, and human transport-side proxy families are not compressed into one row.</td>
+<td>Human CSF oscillation, parenchyma-CSF exchange, intrathecal-tracer clearance, CSF-mobility, or biomarker-efflux routes remain macro support-state proxies and do not become local immune-controller ground truth.</td>
 </tr>
 <tr>
 <td><strong>+ astrocyte / clearance recovery log</strong></td>
@@ -1121,8 +1122,12 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li>Kisler, K., Nikolakopoulou, A. M., Sweeney, M. D., et al. (2020). Acute ablation of cortical pericytes leads to rapid neurovascular uncoupling. <em>Frontiers in Cellular Neuroscience</em>, 14, 27. <a href="https://doi.org/10.3389/fncel.2020.00027" target="_blank">doi:10.3389/fncel.2020.00027</a></li>
 <li>Pandey, K., Bessières, B., Sheng, S. L., et al. (2023). Neuronal activity drives IGF2 expression from pericytes to form long-term memory. <em>Neuron</em>, 111(23), 3819–3836.e8. <a href="https://doi.org/10.1016/j.neuron.2023.08.030" target="_blank">doi:10.1016/j.neuron.2023.08.030</a></li>
 <li>Mai-Morente, S., Razvan, M., Lechuga-Sancho, A. M., et al. (2025). Pericyte pannexin1 controls cerebral capillary diameter and supports memory function. <em>Nature Communications</em>, 16, 5912. <a href="https://doi.org/10.1038/s41467-025-61312-0" target="_blank">doi:10.1038/s41467-025-61312-0</a></li>
+<li>Morgan, C. A., Thomas, D. L., Shao, X., et al. (2024). Measurement of blood-brain barrier water exchange rate using diffusion-prepared and multi-echo arterial spin labelling: Comparison of quantitative values and age dependence. <em>NMR in Biomedicine</em>, 37(12), e5256. <a href="https://doi.org/10.1002/nbm.5256" target="_blank">doi:10.1002/nbm.5256</a></li>
 <li>Padrela, B. E., Slivka, M., Sneve, M. H., et al. (2025). Blood-brain barrier water permeability across the adult lifespan: A multi-echo ASL study. <em>Neurobiology of Aging</em>, 147, 176–186. <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">doi:10.1016/j.neurobiolaging.2024.12.012</a></li>
 <li>Chung, K. J., Abdelhafez, Y. G., Spencer, B. A., et al. (2025). Quantitative PET imaging and modeling of molecular blood-brain barrier permeability. <em>Nature Communications</em>, 16, 3076. <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">doi:10.1038/s41467-025-58356-7</a></li>
+<li>Zhao, L., Taso, M., Dai, W., Press, D. Z., &amp; Alsop, D. C. (2020). Non-invasive measurement of choroid plexus apparent blood flow with arterial spin labeling. <em>Fluids and Barriers of the CNS</em>, 17, 58. <a href="https://doi.org/10.1186/s12987-020-00218-z" target="_blank">doi:10.1186/s12987-020-00218-z</a></li>
+<li>Petitclerc, L., Hirschler, L., Wells, J. A., et al. (2021). Ultra-long-TE arterial spin labeling reveals rapid and brain-wide blood-to-CSF water transport in humans. <em>NeuroImage</em>, 245, 118755. <a href="https://doi.org/10.1016/j.neuroimage.2021.118755" target="_blank">doi:10.1016/j.neuroimage.2021.118755</a></li>
+<li>Petitclerc, L., Durrant, H., Hirschler, L., Václavů, L., &amp; van Osch, M. J. P. (2026). Simultaneous measurement of water transport across the blood-brain and blood-CSF barrier in the human brain with arterial spin labeling MRI. <em>Journal of Cerebral Blood Flow &amp; Metabolism</em>. <a href="https://doi.org/10.1177/0271678X261429042" target="_blank">doi:10.1177/0271678X261429042</a></li>
 <li>Suzuki, A., Stern, S. A., Bozdagi, O., et al. (2011). Astrocyte-neuron lactate transport is required for long-term memory formation. <em>Cell</em>, 144(5), 810–823. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">doi:10.1016/j.cell.2011.02.018</a></li>
 <li>Silva, B., et al. (2022). Glial ketogenesis regulates memory maintenance during starvation. <em>Nature Metabolism</em>, 4, 1534–1547. <a href="https://doi.org/10.1038/s42255-022-00528-6" target="_blank">doi:10.1038/s42255-022-00528-6</a></li>
 <li>Qi, G., Mi, Y., Shi, X., Gu, H., Brinton, R. D., &amp; Yin, F. (2021). ApoE4 impairs neuron-astrocyte coupling of fatty acid metabolism. <em>Cell Reports</em>, 34(1), 108572. <a href="https://doi.org/10.1016/j.celrep.2020.108572" target="_blank">doi:10.1016/j.celrep.2020.108572</a></li>
@@ -1140,5 +1145,9 @@ An added state variable can be described as ``effective'' if it shows a predicti
 <li>Ahn, J. H., Cho, H., Kim, J.-H., et al. (2019). Meningeal lymphatic vessels at the skull base drain cerebrospinal fluid. <em>Nature</em>, 572, 62–66. <a href="https://doi.org/10.1038/s41586-019-1419-5" target="_blank">doi:10.1038/s41586-019-1419-5</a></li>
 <li>Kim, J., et al. (2025). Meningeal lymphatics-microglia axis regulates synaptic physiology. <em>Cell</em>, 188(8), 2129–2148.e21. <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">doi:10.1016/j.cell.2025.02.022</a></li>
 <li>Eide, P. K., &amp; Ringstad, G. (2021). Sleep deprivation impairs molecular clearance from the human brain. <em>Brain</em>, 144(3), 863–874. <a href="https://doi.org/10.1093/brain/awaa443" target="_blank">doi:10.1093/brain/awaa443</a></li>
+<li>Fultz, N. E., Bonmassar, G., Setsompop, K., et al. (2019). Coupled electrophysiological, hemodynamic, and cerebrospinal fluid oscillations in human sleep. <em>Science</em>. <a href="https://doi.org/10.1126/science.aax5440" target="_blank">doi:10.1126/science.aax5440</a></li>
+<li>Kim, D., Huang, Y., &amp; Liu, J. (2025). Non-invasive MRI measurements of age-dependent in vivo human glymphatic exchange using magnetization transfer spin labeling. <em>NeuroImage</em>. <a href="https://doi.org/10.1016/j.neuroimage.2025.121142" target="_blank">doi:10.1016/j.neuroimage.2025.121142</a></li>
+<li>Eide, P. K., Lashkarivand, A., Pripp, A., et al. (2023). Plasma neurodegeneration biomarker concentrations associate with glymphatic and meningeal lymphatic measures in neurological disorders. <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-023-37685-5" target="_blank">doi:10.1038/s41467-023-37685-5</a></li>
+<li>Hirschler, L., Runderkamp, B. A., Decker, A., et al. (2025). Region-specific drivers of CSF mobility measured with MRI in humans. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
 <li>Dagum, P., Elbert, D. L., Giovangrandi, L., et al. (2026). The glymphatic system clears amyloid beta and tau from brain to plasma in humans. <em>Nature Communications</em>, 17, 715. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
 </ol>
