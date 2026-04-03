@@ -5,8 +5,8 @@ description: "An operations hub that centralizes the roles, integration targets,
 article_type: "Navigation"
 subtitle: "A single routing layer to prevent content sprawl and literature-route compression"
 author: Mind Uploading Research Project
-last_updated: "2026-04-02"
-note: "Single source of truth for public pages and technical literature routing (updated with the Perspective technical-front-door sync)"
+last_updated: "2026-04-03"
+note: "Single source of truth for public pages and technical literature routing (updated with human route-order sync)"
 audience: "Anyone checking where public content belongs and anyone who wants to avoid guessing where new material should be merged"
 reading_time: "5-10 min"
 page_intro: "This page is the operations hub for fixing where public content should go so material does not scatter across the site. It now also gives a technical fast path so literature updates are not misrouted by year order alone."
@@ -17,11 +17,13 @@ page_highlights:
   - "Public navigation and operations references are visible in one place."
   - "The site now separates `mind_uploading_papers` from `research_harvest_50`: one is the paper-level frontier archive, the other is the unresolved-question evidence map."
   - "Technical readers are now told to split local causal maintenance-state papers, bounded living-human observability papers, and bridge-limited same-subject / same-brain papers before year order is allowed to shape judgment."
+  - "For living-human technical evidence, the entrance order is now route family first, then route role / human-proxy role, then proxy class / operational maturity / calibrator role, and only then composition or bridge stop lines."
 known_points:
   - "Public pages are meant to function as portals: key points, current status, known/unknown boundaries, and next routes."
   - "Detailed background explanations are usually better concentrated in the wiki so entry pages stay usable."
   - "New information should first be classified as belonging either on an existing public page or in the wiki."
   - "For technical and natural-science reading, chronology is not enough: route family, bridge burden, and observability ceiling have to be named before a literature update is merged."
+  - "A same-subject label is one proxy role, not a route-family substitute, and spectroscopy, barrier, astrocyte-related PET, neuroimmune PET, and clearance transport cannot be bundled before their route families are typed."
 unknown_points:
   - "Which topics will eventually deserve their own standalone pages is still judged case by case."
   - "Some boundaries between main content and wiki content are still rough and will continue to be cleaned up."
@@ -76,7 +78,13 @@ The goal here is not "what to write" but "where it should live." To prevent dupl
 <div class="note-box">
 <strong>If You Want Only Technology / Natural Science First</strong>
 <p>
-Do not start from mixed year cards. For paper-level frontier anchors, start with <a href="mind_uploading_papers.html#technical-fast-lane">Paper Collection: the technical fast lane</a>. For the unresolved-question map and literature placement by U-number, move next to <a href="research_harvest_50.html">Research Harvest</a>. For the human in vivo side, keep <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> open in parallel so route family, route burden, and calibrator role stay separate.
+Do not start from mixed year cards. For paper-level frontier anchors, start with <a href="mind_uploading_papers.html#technical-fast-lane">Paper Collection: the technical fast lane</a>. For the unresolved-question map and literature placement by U-number, move next to <a href="research_harvest_50.html">Research Harvest</a>. For the human in vivo side, keep <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> open in parallel so <strong>route family</strong> is fixed before <strong>route role / human-proxy role</strong>, and so those are fixed before <strong>proxy class</strong>, <strong>operational maturity</strong>, and <strong>calibrator role</strong>.
+</p>
+</div>
+<div class="note-box">
+<strong>Why Route Family Now Comes Before Proxy Strength</strong>
+<p>
+Recent living-human papers no longer support starting from one vague category such as <code>human proxy evidence</code>. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> define a <strong>five-metabolite 1H-MRSI similarity scaffold</strong>, whereas <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> use <strong>7 T dynamic deuterium MRSI with blood-input kinetic modeling</strong> to estimate glucose-metabolic rates. <a href="https://doi.org/10.1186/s12987-020-00218-z" target="_blank">Zhao et al. (2020)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2021.118755" target="_blank">Petitclerc et al. (2021)</a>, and <a href="https://doi.org/10.1177/0271678X261429042" target="_blank">Petitclerc et al. (2026)</a> split <strong>choroid-plexus perfusion</strong>, <strong>blood-to-CSF transport</strong>, and <strong>joint BBB-versus-BCSFB exchange</strong>. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a>, <a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al. (2025)</a>, and <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. (2018)</a> show that <strong>SMBT-1 target validation / quantification</strong> and <strong>I2BS PET</strong> are not one astrocyte row. <a href="https://doi.org/10.1038/s41467-023-40937-z" target="_blank">Biechele et al. (2023)</a>, <a href="https://doi.org/10.2967/jnumed.124.268699" target="_blank">Ogata et al. (2025)</a>, and <a href="https://doi.org/10.2967/jnumed.124.268525" target="_blank">Yan et al. (2025)</a> show that <strong>TSPO</strong>, <strong>CSF1R</strong>, and <strong>COX-2</strong> are not one immune row either. Therefore, this hub now treats <strong>route family</strong> as the first split. After that, use <a href="verification.html#human-proxy-composition-card">Verification: Human Proxy Composition Card</a> to state whether the paper is acting as a <strong>cohort prior</strong>, <strong>cross-sectional contrast</strong>, <strong>same-subject baseline</strong>, <strong>within-subject change witness</strong>, or <strong>perturbation-response witness</strong>.
 </p>
 </div>
 <div class="note-box">
@@ -88,7 +96,7 @@ Recent primary papers do not support one compressed <code>2025-2026 frontier</co
 <div class="note-box">
 <strong>If A Paper Says "Same-Subject" Or "Same-Brain"</strong>
 <p>
-Do not route it automatically to the human-observability lane. First check whether the result is mainly a <strong>bridge-limited carry-over claim</strong>. If preservation route, elapsed time, regime continuity, registration scope, or cross-day drift are central to the claim, route the public rule to <a href="verification.html#state-continuity-bridge-card">Verification: State-Continuity Bridge Card</a> and the learning support to <a href="wiki/state-continuity-bridge.html">Wiki: State-Continuity Bridge</a> before using the result as a human-state argument elsewhere.
+Do not route it automatically to the human-observability lane. <strong>Same-subject</strong> is one possible proxy role, not a route-family substitute and not an automatic promotion. First type the <strong>route family</strong>, then decide whether the paper is functioning mainly as a <strong>cohort prior</strong>, <strong>cross-sectional contrast</strong>, <strong>same-subject baseline</strong>, <strong>within-subject change witness</strong>, <strong>perturbation-response witness</strong>, or a <strong>bridge-limited carry-over claim</strong>. If preservation route, elapsed time, regime continuity, registration scope, or cross-day drift are central to the claim, route the public rule to <a href="verification.html#state-continuity-bridge-card">Verification: State-Continuity Bridge Card</a> and the learning support to <a href="wiki/state-continuity-bridge.html">Wiki: State-Continuity Bridge</a> before using the result as a human-state argument elsewhere.
 </p>
 </div>
 <div class="note-box">
@@ -240,8 +248,13 @@ If you want a single route showing whether something you read should flow back i
 </tr>
 <tr>
 <td>I need to know whether a paper moved human observability or only a bounded proxy class.</td>
-<td><a href="wbe_101.html#human-observability-ladder">wbe_101.html#human-observability-ladder</a></td>
-<td>That page is the front door for separating destructive structure, living-human proxy class, route maturity, and safe calibrator role.</td>
+<td><a href="wbe_101.html#human-observability-ladder">wbe_101.html#human-observability-ladder</a> / <a href="wiki/measurement-stack-and-claim-ceiling.html">wiki/measurement-stack-and-claim-ceiling.html</a></td>
+<td>Those pages split spectroscopy, barrier, astrocyte-related PET, neuroimmune PET, and clearance transport route families before proxy-class or maturity comparisons begin.</td>
+</tr>
+<tr>
+<td>I need to know what role a human paper is actually allowed to play after the route family is fixed.</td>
+<td><a href="verification.html#human-proxy-composition-card">verification.html#human-proxy-composition-card</a> / <a href="wiki/human-proxy-composition.html">wiki/human-proxy-composition.html</a></td>
+<td>Those pages separate cohort prior, cross-sectional contrast, same-subject baseline, within-subject change witness, and perturbation-response witness before bundle promotion begins.</td>
 </tr>
 <tr>
 <td>I need to know whether a same-subject or same-brain paper is still only a bridge.</td>
