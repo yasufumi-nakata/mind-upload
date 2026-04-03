@@ -5,7 +5,7 @@ description: "Why U13-2 stays first in the current public six, why D10 3M-CPSEED
 article_type: Wiki
 subtitle: "A row-specific packet for the first active public RQ"
 author: Mind Uploading Research Project
-last_updated: "2026-04-02"
+last_updated: "2026-04-03"
 note: "U13-2 route packet"
 audience: "Readers who want the dataset-choice rationale and the honest claim ceiling for the first active speech row"
 reading_time: "8-12 minutes"
@@ -34,6 +34,13 @@ recommended_pages:
 # U13-2 brain-minus-prior route packet
 
 This page does not change the current public six-question batch. It makes only the first active row more explicit, so readers can see why `U13-2` still comes first, why `D10 3M-CPSEED` stays primary, and what the next public-safe artifact can honestly close.
+
+## What still stays fixed after the 11:07 JST actual-pull reread on April 3, 2026
+
+- An actual-pull recheck at `2026-04-03 11:07 JST` after `mind-upload@f70432e4a6c8a52afafbc57b98c8f0e360c85d4e`, `EEG-DATA@1981d34c5f71deceb2549684db9173b6f54d2b89`, and `auto-research-funds@bfebe94da875d709756746285f133ef30905fd38` still keeps `U13-2` first and keeps `D10` as the primary anchor for this row.
+- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` carries forward the recent `sleep replay integrity / physiology-gate` wording sync outside the current six, `EEG-DATA` now reports `30,904` merged-unique rows, `28,867` high-confidence rows, and `24,890` directly usable rows, and `auto-research-funds` now reports `8,596` aid IDs, `4,308` rows, and `3,958` official-source rows without changing the practical shortlist.
+- None of those additions replaces the present speech ladder. The newest public-open or nearby support candidates still widen adjacent support space, but they still do not recreate the overt / silent-intended / imagined speech triangle that keeps `D10` primary for `U13-2`.
+- Browser-level live checks before this source sync still returned `HTTP/2 200` for the current public entry pages with `Last-Modified: Fri, 03 Apr 2026 01:31:28 GMT`, and the checked bodies still surfaced the earlier `05:12 JST` hold note. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient, so this page only carries the same row-specific route forward onto the latest pulled heads.
 
 ## What still stays fixed after the 23:08 JST actual-pull reread on April 2, 2026
 
