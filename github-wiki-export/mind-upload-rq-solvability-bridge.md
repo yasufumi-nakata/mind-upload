@@ -36,6 +36,16 @@ This page answers one narrow question: for the rows that are actually worth deep
 
 It does **not** try to re-scan all `60RQ` items at once. The working style on this site is now `deepen one row at a time`, not `summarize everything at the same depth`.
 
+## What still stays fixed after the 22:04 JST actual-pull reread on April 3, 2026
+
+- An actual-pull recheck at `2026-04-03 22:04 JST` after `mind-upload@1ab35b64796f3936e525befb5d9428d789a16263`, `EEG-DATA@be3d03d1c286dcd37fb056317a693e47c39f7f3a`, and `auto-research-funds@845e6849a6c36e6e83394e32cf8dc4b5fe6fdc07` still leaves both the current public six and the headline next-watch queue unchanged.
+- The newest pulled delta is now concentrated in `EEG-DATA`: `summary.json` reports `30,918` merged-unique rows, `28,881` high-confidence rows, `24,898` immediate rows, and `24,528` high-confidence immediate rows after the latest exhaustive refresh, while `mind-upload` and `auto-research-funds` now just carry their earlier `21:05 JST` addenda without replacing the current `D10 / D03 / D02 / D01` family or the headline next-watch `D11 / D08 / D05 / D20` family.
+- Route-safe access wording therefore still stays unchanged: no newest pulled head turns `D03 / D02 / D01` into immediate public anchors, so public-safe wording still keeps `D10` as the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors.
+- Browser-level live checks in this run returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u13-2-brain-minus-prior-route.html`; the checked headers now return `Last-Modified: Fri, 03 Apr 2026 12:24:26 GMT`, while the checked bodies already surfaced `21:05 JST` on `issue / brief / bridge` and `21:05 JST` plus `11:07 JST` on `U13-2` before this source sync.
+- Official window spot checks in this run still keep the practical bridge narrow: `Kura Fund` remains open (`2026-02-02 - 2026-04-17 17:00`), `Nakatani Foundation graduate scholarship` remains open (`2026-04-01 - 2026-05-25 15:00`), and the rest of the watch/closed reading stays unchanged from the `21:05 JST` reread.
+- A fresh read-only Todoist `api/v1/sync(items, projects)` audit still showed enough route coverage (`items=205`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `Keio graduate scholarship=2`, `G-7=1`, `ENEOS=0`), so no new task was added in this session.
+- This source sync still does **not** widen the current queue or claim surface. It only carries forward the same queue onto the actual latest pulled heads, live public headers, official windows, and Todoist sufficiency check.
+
 ## What still stays fixed after the 21:05 JST actual-pull reread on April 3, 2026
 
 - An actual-pull recheck at `2026-04-03 21:05 JST` after `mind-upload@3db1aa653b74d164c3a57b75677e345ea10356e0`, `EEG-DATA@c10c95274ecf1397768eb28de48aac8ce925c22d`, and `auto-research-funds@4a67e06b530bc742521f80fa5b13ccbe1115ebb9` still leaves both the current public six and the headline next-watch queue unchanged.

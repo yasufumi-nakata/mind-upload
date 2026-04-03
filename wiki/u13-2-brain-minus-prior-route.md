@@ -35,6 +35,13 @@ recommended_pages:
 
 This page does not change the current public six-question batch. It makes only the first active row more explicit, so readers can see why `U13-2` still comes first, why `D10 3M-CPSEED` stays primary, and what the next public-safe artifact can honestly close.
 
+## What still stays fixed after the 22:04 JST actual-pull reread on April 3, 2026
+
+- An actual-pull recheck at `2026-04-03 22:04 JST` after `mind-upload@1ab35b64796f3936e525befb5d9428d789a16263`, `EEG-DATA@be3d03d1c286dcd37fb056317a693e47c39f7f3a`, and `auto-research-funds@845e6849a6c36e6e83394e32cf8dc4b5fe6fdc07` still keeps `U13-2` first and keeps `D10` as the primary anchor for this row.
+- The newest pulled delta is now concentrated in `EEG-DATA`: `summary.json` reports `30,918` merged-unique rows, `28,881` high-confidence rows, `24,898` immediate rows, and `24,528` high-confidence immediate rows after the latest exhaustive refresh, while `mind-upload` and `auto-research-funds` now just carry their earlier `21:05 JST` addenda without changing the practical shortlist.
+- None of those additions replaces the present speech ladder. The newest public-open or nearby support candidates still widen adjacent support space, but they still do not recreate the overt / silent-intended / imagined speech triangle that keeps `D10` primary for `U13-2`.
+- Browser-level live checks before this source sync still returned `HTTP/2 200` for the current public entry pages with `Last-Modified: Fri, 03 Apr 2026 12:24:26 GMT`; the checked bodies already surfaced `21:05 JST` on `issue / brief / bridge` while `U13-2` itself still surfaced `21:05 JST` and `11:07 JST`. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient, so this page only carries the same row-specific route forward onto the actual latest pulled heads.
+
 ## What still stays fixed after the 21:05 JST actual-pull reread on April 3, 2026
 
 - An actual-pull recheck at `2026-04-03 21:05 JST` after `mind-upload@3db1aa653b74d164c3a57b75677e345ea10356e0`, `EEG-DATA@c10c95274ecf1397768eb28de48aac8ce925c22d`, and `auto-research-funds@4a67e06b530bc742521f80fa5b13ccbe1115ebb9` still keeps `U13-2` first and keeps `D10` as the primary anchor for this row.
