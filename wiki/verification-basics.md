@@ -5,8 +5,8 @@ description: A beginner explanation of why standards, benchmarks, preregistratio
 article_type: Wiki
 subtitle: Before celebrating a score, fix the ruler, the route card, and the failure log.
 author: Mind Uploading Research Project
-last_updated: '2026-03-31'
-note: Beginner guide
+last_updated: '2026-04-03'
+note: Beginner guide (updated with the human proxy family-internal split)
 audience: People who want to understand the logic of the Verification Commons from the beginning
 reading_time: 14-18 minutes
 page_intro: This page explains from the beginning why Mind-Upload focuses on standards, benchmarks, preregistration, route cards, and audits. The goal is to show why technical progress becomes comparable only when the benchmark object, evidence pathway, and any human proxy bundle or sequential bridge are disclosed rather than left implicit.
@@ -21,6 +21,7 @@ page_highlights:
   - 'For effective connectivity, the route card now also has to disclose observed-subsystem closure / latent-confound audit, node-definition policy, and sampling / transformation sensitivity rather than stopping at candidate-model family.'
   - 'Proxy-rich human evidence still needs a Human Proxy Composition Card before it is read as same-subject state closure.'
   - 'Human proxy bundles now need three axes first: proxy class, operational maturity, and calibrator role.'
+  - 'On the human side, those three axes now start only after the family-internal comparison family is fixed: deuterium absolute-quantification versus kinetic-rate imaging, BBB versus blood-CSF-barrier / choroid-plexus routes, astrocyte PET route-role families, and neuroimmune PET target families are different beginner rows.'
   - 'Even after those axes are logged, a bundle rises only if it passes robustness, common-driver / quantity-bridge, and increment gates.'
   - 'Same-subject or same-brain workflows still need a State-Continuity Bridge Card before they are read as same-state evidence.'
 known_points:
@@ -31,6 +32,7 @@ known_points:
 - A tractography-derived connectome can still move with endpoint bias, graph construction, voxel size, q-space scheme, uncertainty routing, and calibration route, so comparison requires object typing before interpretation.
 - Effective-connectivity claims still need observed-subsystem closure / latent-confound audit, node-definition policy, and sampling / transformation sensitivity logged separately from model comparison and validation.
 - Proxy class, operational maturity, and calibrator role are different questions; a real human route may still calibrate only one bounded hidden-state family.
+- Human proxy bundles are not typed safely from family labels alone; deuterium, blood-CSF-barrier / choroid-plexus MRI, astrocyte PET, and neuroimmune PET each already split into different comparison families before proxy class, operational maturity, and calibrator role are assigned.
 - A proxy bundle still needs repeatability / transfer, shared-driver / quantity-bridge, and increment disclosure before it rises above the strongest single row.
 - Same-subject or same-brain wording can secure specimen identity while still leaving state continuity unresolved.
 unknown_points:
@@ -132,6 +134,13 @@ One more beginner shortcut still remained after the target-object update. The cu
 </p>
 </div>
 
+<div class="note-box">
+<strong>2026-04-03 correction: family-internal comparison family now comes before the three axes</strong>
+<p>
+One more beginner shortcut remained. This page already said that human proxy bundles need <strong>proxy class</strong>, <strong>operational maturity</strong>, and <strong>calibrator role</strong>, but it still let readers start from family labels that were already too broad. The current primary literature does not support that shortcut. <a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a> and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> are different deuterium routes (<strong>absolute quantification</strong> versus <strong>kinetic-rate imaging</strong>), while <a href="https://doi.org/10.1186/s41747-024-00426-4" target="_blank">Bøgh et al. (2024)</a> shows that repeatability is still protocol- and time-point-specific. <a href="https://doi.org/10.1186/s12987-020-00218-z" target="_blank">Zhao et al. (2020)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2021.118755" target="_blank">Petitclerc et al. (2021)</a>, and <a href="https://doi.org/10.1177/0271678X261429042" target="_blank">Petitclerc et al. (2026)</a> do not report one generic barrier meter; they report <strong>choroid-plexus perfusion</strong>, <strong>blood-to-CSF transport</strong>, and <strong>simultaneous BBB-versus-BCSFB exchange</strong>. <a href="https://doi.org/10.1007/s00259-025-07542-2" target="_blank">Matsuoka et al. (2026)</a> adds a simplified <strong>SL25.1188</strong> MAO-B route distinct from older <strong>SMBT-1</strong> or <strong>I<sub>2</sub>BS</strong> astrocyte-related PET, while <a href="https://doi.org/10.1038/s41467-023-40937-z" target="_blank">Biechele et al. (2023)</a>, <a href="https://doi.org/10.2967/jnumed.124.268699" target="_blank">Ogata et al. (2025)</a>, and <a href="https://doi.org/10.2967/jnumed.124.268525" target="_blank">Yan et al. (2025)</a> show that <strong>TSPO</strong>, <strong>CSF1R</strong>, and <strong>COX-2</strong> are not one interchangeable neuroimmune PET row. Therefore, on this site, the beginner rule is now stricter: <strong>family-internal comparison family first, three axes second, bundle gates third</strong>.
+</p>
+</div>
+
 <section class="section" id="five-parts">
 <h2 class="section-title">The five parts of comparable progress</h2>
 <table class="data-table">
@@ -218,6 +227,9 @@ The current site can no longer leave two failure modes to the deep pages only. O
 <p>
 The remaining beginner weakness was that saying <strong>proxy bundles matter</strong> still left too much room for readers to imagine that listing several living-human rows side by side was already most of the work. The current site rule is stricter. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a>, <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a>, <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a>, <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a>, <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a>, <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a>, <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. (2018)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> do not all measure the same quantity, do not run at the same burden, and do not safely calibrate the same hidden-state family. Therefore, a beginner page now has to separate <strong>what class of proxy the row is</strong>, <strong>how operationally mature the route is</strong>, and <strong>what bounded calibrator role it can safely play</strong>.
 </p>
+<p>
+One more beginner rule now comes before those three axes themselves. A family label can already hide several different comparison families. On this site, <strong>deuterium absolute-quantification</strong> is not <strong>deuterium kinetic-rate imaging</strong>, <strong>BBB water-exchange</strong> is not <strong>blood-CSF-barrier / choroid-plexus transport</strong>, <strong>SMBT-1 / SL25.1188 / I<sub>2</sub>BS</strong> are not one astrocyte PET row, and <strong>TSPO / CSF1R / COX-2</strong> are not one neuroimmune PET row. Therefore, the beginner bundle workflow is now ordered as follows: <strong>family-internal comparison family</strong> first, <strong>proxy class / operational maturity / calibrator role</strong> second, and <strong>bundle gates</strong> third.
+</p>
 <table class="data-table">
 <thead>
 <tr>
@@ -229,7 +241,7 @@ The remaining beginner weakness was that saying <strong>proxy bundles matter</st
 <tbody>
 <tr>
 <td><strong>Proxy class</strong></td>
-<td>What is directly observed: density proxy, biochemical similarity scaffold, 31P metabolite / pH balance route, 31P MT exchange-flux route, 31P NAD-content map, localized functional 31P NAD-dynamics route, deuterium metabolite-mapping / absolute-quantification route, deuterium kinetic-rate route, quantity-defined myelin route, BBB water-exchange route, tracer-specific BBB transport route, target-defined astrocyte PET, support-state / mobility proxy, model-based efflux route, or destructive local scaffold?</td>
+<td>What is directly observed: density proxy, biochemical similarity scaffold, high-resolution metabolite-distribution map, 31P metabolite / pH balance route, 31P MT exchange-flux route, 31P NAD-content map, localized functional 31P NAD-dynamics route, deuterium <strong>absolute-quantification</strong> or <strong>kinetic-rate</strong> route, quantity-defined myelin route, BBB water-exchange route, tracer-specific BBB transport route, blood-CSF-barrier / choroid-plexus perfusion or transport route, astrocyte PET <strong>target / route-role family</strong>, neuroimmune PET <strong>target family</strong>, support-state / mobility proxy, model-based efflux route, or destructive local scaffold?</td>
 <td>Different quantity types are silently compressed into one progress bar.</td>
 </tr>
 <tr>
@@ -321,7 +333,7 @@ If the bundle is sequential rather than same-session, the <a href="../verificati
 </tr>
 <tr>
 <td><strong>Living-human proxy bundle</strong></td>
-<td>SV2A PET, 1H-MRSI similarity, high-resolution 1H-MRSI metabolite-distribution mapping, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, localized functional 31P NAD-dynamics, deuterium metabolite-mapping / absolute-quantification, deuterium kinetic-rate imaging, quantity-defined myelin MRI, BBB water-exchange MRI, tracer-specific BBB PET, target-defined astrocyte PET, and clearance routes measure different quantity / target / transport types, spatial units, timescales, model burdens, and safe calibrator roles; even a well-typed bundle still needs robustness, shared-driver / quantity-bridge, and increment disclosure.</td>
+<td>SV2A PET comparison families, 1H-MRSI similarity versus high-resolution metabolite-distribution mapping, 31P balance / exchange-flux / NAD-content / functional NAD-dynamics, deuterium absolute-quantification versus kinetic-rate imaging plus operating-point burden, quantity-defined myelin MRI, BBB water-exchange versus tracer-specific BBB transport versus blood-CSF-barrier / choroid-plexus routes, astrocyte PET target / route-role families, neuroimmune PET target families, and clearance-support routes measure different quantity / target / transport types, spatial units, timescales, model burdens, and safe calibrator roles; even a well-typed bundle still needs robustness, shared-driver / quantity-bridge, and increment disclosure.</td>
 <td>Human Proxy Composition Card.</td>
 </tr>
 <tr>
@@ -462,6 +474,14 @@ On Mind-Upload, the public <a href="../verification.html">Verification</a> page 
 <li>Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <em>Nature Communications</em>, 15, 229. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
 <li>Epp, S. M., Halani, S., Paquette, M., et al. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
 <li>Manasova, V., et al. (2026). Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness. <em>Brain</em>. <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">doi:10.1093/brain/awaf412</a></li>
+<li>Bøgh, N., Vaeggemose, M., Schulte, R. F., et al. (2024). Repeatability of deuterium metabolic imaging of healthy volunteers at 3 T. <em>European Radiology Experimental</em>, 8, 21. <a href="https://doi.org/10.1186/s41747-024-00426-4" target="_blank">doi:10.1186/s41747-024-00426-4</a></li>
+<li>Zhao, L., Taso, M., Dai, W., Press, D. Z., &amp; Alsop, D. C. (2020). Non-invasive measurement of choroid plexus apparent blood flow with arterial spin labeling. <em>Fluids and Barriers of the CNS</em>, 17, 58. <a href="https://doi.org/10.1186/s12987-020-00218-z" target="_blank">doi:10.1186/s12987-020-00218-z</a></li>
+<li>Petitclerc, L., Hirschler, L., Wells, J. A., et al. (2021). Ultra-long-TE arterial spin labeling reveals rapid and brain-wide blood-to-CSF water transport in humans. <em>NeuroImage</em>, 245, 118755. <a href="https://doi.org/10.1016/j.neuroimage.2021.118755" target="_blank">doi:10.1016/j.neuroimage.2021.118755</a></li>
+<li>Petitclerc, L., Durrant, H., Hirschler, L., Václavů, L., &amp; van Osch, M. J. P. (2026). Simultaneous measurement of water transport across the blood-brain and blood-CSF barrier in the human brain with arterial spin labeling MRI. <em>Journal of Cerebral Blood Flow &amp; Metabolism</em>. <a href="https://doi.org/10.1177/0271678X261429042" target="_blank">doi:10.1177/0271678X261429042</a></li>
+<li>Matsuoka, K., Matsuura, K., Kikuchi, T., et al. (2026). Quantification of monoamine oxidase B expression with <sup>11</sup>C-SL25.1188 for imaging reactive astrocytes in patients with Alzheimer's disease. <em>European Journal of Nuclear Medicine and Molecular Imaging</em>. <a href="https://doi.org/10.1007/s00259-025-07542-2" target="_blank">doi:10.1007/s00259-025-07542-2</a></li>
+<li>Biechele, G., Wind, K., Blume, T., et al. (2023). Translocator protein is a marker of activated microglia in rodent models but not human neurodegenerative diseases. <em>Nature Communications</em>, 14, 6040. <a href="https://doi.org/10.1038/s41467-023-40937-z" target="_blank">doi:10.1038/s41467-023-40937-z</a></li>
+<li>Ogata, A., Ikenuma, H., Yasuno, F., et al. (2025). First-in-Human Study of [<sup>11</sup>C]NCGG401 for Imaging Colony-Stimulating Factor 1 Receptors in the Brain. <em>Journal of Nuclear Medicine</em>. <a href="https://doi.org/10.2967/jnumed.124.268699" target="_blank">doi:10.2967/jnumed.124.268699</a></li>
+<li>Yan, X., Noergaard, M., Morse, C. L., et al. (2025). PET Quantification in Healthy Humans of Cyclooxygenase-2, a Potential Biomarker of Neuroinflammation. <em>Journal of Nuclear Medicine</em>. <a href="https://doi.org/10.2967/jnumed.124.268525" target="_blank">doi:10.2967/jnumed.124.268525</a></li>
 </ol>
 </section>
 
