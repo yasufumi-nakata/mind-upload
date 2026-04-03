@@ -226,6 +226,56 @@ body_class: "summary-booklet-page"
     </article>
   </div>
 
+  <p>
+    The entry-point weakness after the recent literature pass was not only <strong>which rows existed</strong>, but that they could still look like one composite progress bar. Representative human rows already measure different objects under different burdens, so they still stop at different ceilings.
+  </p>
+
+  <table class="data-table booklet-table">
+    <thead>
+      <tr>
+        <th>Representative row</th>
+        <th>What it directly constrains</th>
+        <th>Why it still stops early</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank"><strong>Johansen et al. (2024)</strong></a><br>SV2A atlas</td>
+        <td>A regional synaptic-density atlas in 33 healthy humans.</td>
+        <td>Density is still not current efficacy, release-site architecture, or same-subject cross-stack state.</td>
+      </tr>
+      <tr>
+        <td><a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank"><strong>Lucchetti et al. (2025)</strong></a><br>1H-MRSI similarity</td>
+        <td>A five-metabolite parcel-similarity scaffold in 51 adolescents with 13-person replication.</td>
+        <td>Similarity is not a kinetic rate, not a density atlas, and not a direct energetic-controller readout.</td>
+      </tr>
+      <tr>
+        <td><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank"><strong>Li et al. (2025)</strong></a><br>dynamic DMRSI</td>
+        <td>A specialized 7 T deuterium kinetic-rate route in five healthy participants with blood-input modeling.</td>
+        <td>A proof-of-principle kinetic route is still not protocol-free portability or branch-local mitochondrial ground truth.</td>
+      </tr>
+      <tr>
+        <td><a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank"><strong>Hiraoka et al. (2025)</strong></a><br>SMBT-1 quantification</td>
+        <td>A six-person arterial-sampling PET route for MAO-B-related astrocyte signal under named quantification choices.</td>
+        <td>A tracer-family quantification route is still not astrocyte-ensemble identity or memory-content readout.</td>
+      </tr>
+      <tr>
+        <td><a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank"><strong>Hirschler et al. (2025)</strong></a><br>CSF mobility</td>
+        <td>A CSF-specific MRI route with 24 healthy individuals and direct driver analysis in 11.</td>
+        <td>Mobility is still not net local solute clearance, immune-controller identity, or a universal support-state row.</td>
+      </tr>
+      <tr>
+        <td><a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank"><strong>Dagum et al. (2026)</strong></a><br>overnight efflux</td>
+        <td>A randomized crossover, multicompartment-model route in 39 analyzed participants for brain-to-plasma Aβ / tau transport.</td>
+        <td>Model-based efflux is still not which astrocyte, lymphatic segment, or microglial controller generated the effect.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    Even <strong>same-session</strong> agreement is not enough. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> found coupled global progression plus two distinct network patterns in simultaneous EEG-PET-MRI, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that BOLD and oxygen-metabolism changes can move in opposite directions across cortex. Therefore, the front door now treats <strong>quantity type</strong>, <strong>time axis</strong>, and <strong>model burden</strong> as first-pass stop lines, not as details that can be filled in later.
+  </p>
+
   <div class="booklet-quote">
     <p>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</p>
   </div>

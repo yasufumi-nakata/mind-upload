@@ -5,7 +5,7 @@ description: "A verification commons for turning mind uploading and WBE into a s
 article_type: Start Here
 subtitle: "Define success criteria, standards, benchmarks, and preregistration first"
 author: Mind Uploading Research Project
-last_updated: "2026-04-03"
+last_updated: "2026-04-04"
 note: "Human-friendly landing page"
 audience: "First-time visitors, readers who want only the big picture, and anyone who wants a clear reading order"
 reading_time: "5-10 min"
@@ -208,6 +208,59 @@ This site blocks that shortcut too. <a href="https://doi.org/10.1038/s41591-024-
 The front door was still too coarse if it jumped from a vague label such as <strong>human proxy evidence</strong> straight to <strong>how close to readout</strong> the paper sounded. The current entrance rule is now explicit. <strong>Route family comes first.</strong> <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> define a <strong>five-metabolite 1H-MRSI similarity scaffold</strong>, whereas <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> define a <strong>7 T dynamic deuterium kinetic route</strong> with blood-input modeling. <a href="https://doi.org/10.1186/s12987-020-00218-z" target="_blank">Zhao et al. (2020)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2021.118755" target="_blank">Petitclerc et al. (2021)</a>, and <a href="https://doi.org/10.1177/0271678X261429042" target="_blank">Petitclerc et al. (2026)</a> split <strong>choroid-plexus perfusion</strong>, <strong>blood-to-CSF transport</strong>, and <strong>joint BBB-versus-BCSFB exchange</strong>. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a>, <a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al. (2025)</a>, and <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. (2018)</a> split <strong>SMBT-1 target-validation / quantification</strong> from <strong>I2BS PET</strong>. <a href="https://doi.org/10.1038/s41467-023-40937-z" target="_blank">Biechele et al. (2023)</a>, <a href="https://doi.org/10.2967/jnumed.124.268699" target="_blank">Ogata et al. (2025)</a>, and <a href="https://doi.org/10.2967/jnumed.124.268525" target="_blank">Yan et al. (2025)</a> split <strong>TSPO</strong>, <strong>CSF1R</strong>, and <strong>COX-2</strong>. Only after that split does the second question become meaningful: <strong>what human-proxy role is the paper actually playing?</strong> On this site, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> is a <strong>healthy atlas / cohort-prior route</strong>, <a href="https://doi.org/10.1177/0271678X17724947" target="_blank">Finnema et al. (2018)</a> is a <strong>same-subject baseline / repeatability route</strong>, <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> is a <strong>within-subject activation-change boundary</strong>, and <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a> is a <strong>24 h intervention-response boundary</strong>. Only after route family and route role are typed do <strong>proxy class</strong>, <strong>operational maturity</strong>, <strong>calibrator role</strong>, <strong>composition</strong>, and <strong>state continuity</strong> become meaningful. The shortest route is <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>, then <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: measurement-stack observability and claim ceilings</a>, then <a href="wiki/human-proxy-composition.html">Wiki: Human Proxy Composition and Route Maturity</a>. It also keeps visible the still-missing whole-brain in vivo routes for current <strong>presynaptic release-machinery / active-zone nanostructure state</strong>, current transcription / chromatin state, current phospho-signaling / second-messenger state, ECM / PNN gate state, branch-local proteostasis, branch- or bouton-specific cargo delivery, current chloride set point, and local mitochondrial positioning. In other words, <strong>"a human nanoscale paper exists"</strong> is not silently rephrased here as <strong>"living-human state-complete measurement is close and already field-ready."</strong>
 </p>
 </div>
+
+<div class="note-box">
+<strong>Representative human rows still measure different objects</strong>
+<p>
+The remaining weakness at the front door was that the warning above was still mostly verbal. A reader moving quickly could still see a long list of human advances and silently compress it into one composite progress bar. The current primary literature is sharper than that. Even representative front-rank rows already differ in <strong>direct observable</strong>, <strong>time axis</strong>, and <strong>operating burden</strong>, so they still stop at different ceilings.
+</p>
+</div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>Representative human row</th>
+<th>What the cited paper directly constrains</th>
+<th>Why the row still stops early on this site</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Regional synaptic-density atlas</strong><br><a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a></td>
+<td>An <strong>SV2A</strong> atlas of synaptic density in <strong>33 healthy humans</strong>, calibrated to postmortem autoradiography.</td>
+<td>A cohort atlas of regional density is still not a readout of <strong>current synaptic efficacy</strong>, <strong>release-site architecture</strong>, or <strong>same-subject cross-stack state</strong>.</td>
+</tr>
+<tr>
+<td><strong>Whole-brain metabolic-similarity scaffold</strong><br><a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a></td>
+<td>A five-metabolite parcel-similarity graph from <strong>51 adolescents</strong> with <strong>independent-site replication in 13 healthy controls</strong>.</td>
+<td>A static similarity scaffold is not a <strong>kinetic rate map</strong>, not a <strong>density atlas</strong>, and not a direct readout of the current energetic controller.</td>
+</tr>
+<tr>
+<td><strong>Dynamic deuterium kinetic-rate imaging</strong><br><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a></td>
+<td>A <strong>7 T</strong> whole-brain dynamic DMRSI route in <strong>five healthy participants</strong> with <strong>0.7 cc</strong> nominal voxels, <strong>2.5 min</strong> volumes, blood-input functions, and explicit kinetic modeling.</td>
+<td>A specialized kinetic route with its own coil, tracer, and model burden is still not <strong>protocol-free portability</strong> and not <strong>branch-local mitochondrial-state ground truth</strong>.</td>
+</tr>
+<tr>
+<td><strong>Astrocyte-related MAO-B quantification route</strong><br><a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al. (2025)</a></td>
+<td><strong>[<sup>18</sup>F]SMBT-1</strong> dynamic PET with <strong>serial arterial blood sampling</strong> in <strong>six healthy participants</strong>, showing that quantification depends on scan window and named modeling choices.</td>
+<td>A tracer-family- and quantification-defined astrocyte-related PET route is still not <strong>astrocyte-ensemble identity</strong>, <strong>memory content</strong>, or a direct readout of the controller highlighted by rodent causal papers.</td>
+</tr>
+<tr>
+<td><strong>CSF-mobility MRI</strong><br><a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a></td>
+<td>A noninvasive <strong>CSF-STREAM</strong> route in <strong>24 healthy individuals</strong>, with direct driver analysis in <strong>11 individuals</strong>, showing region-specific cardiac and respiratory contributions to CSF mobility.</td>
+<td>Mobility is still not <strong>net local solute clearance</strong>, not a <strong>cell-specific immune-controller readout</strong>, and not a proof that the same support-state quantity has been matched to PET or spectroscopy rows.</td>
+</tr>
+<tr>
+<td><strong>Sleep-linked biomarker-efflux route</strong><br><a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a></td>
+<td>A randomized crossover study with <strong>39 analyzed participants</strong> using an investigational device plus a <strong>multicompartment model</strong> to infer overnight brain-to-plasma Aβ / tau transport.</td>
+<td>A model-based overnight efflux route still does not identify <strong>which astrocyte</strong>, <strong>which meningeal-lymphatic segment</strong>, or <strong>which microglial controller</strong> generated the effect.</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Even <strong>same-session</strong> evidence is not automatically one shared state axis. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> found a tightly coupled global progression plus <strong>two distinct network patterns</strong> in simultaneous EEG-PET-MRI across wakefulness and NREM sleep, while <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that task-related <strong>BOLD</strong> changes can oppose <strong>oxygen-metabolism</strong> changes across a substantial fraction of cortex. On this site, that is why <strong>same session</strong>, <strong>same subject</strong>, and <strong>more rows</strong> still do not by themselves collapse the evidence into one validated latent coordinate. The longer matrix is on <a href="wbe_101.html#human-observability-ladder">WBE 101</a> and the stricter promotion rule is on <a href="wiki/human-proxy-composition.html">Wiki: Human Proxy Composition and Route Maturity</a>.
+</p>
 
 <div class="note-box">
 <strong>If A Rodent Causal Maintenance Paper And A Human Proxy Paper Sound Like The Same Frontier</strong>
