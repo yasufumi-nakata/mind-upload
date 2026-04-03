@@ -5,8 +5,8 @@ description: "A blueprint of standards, benchmarks, registries, and audits for t
 article_type: Platform
 subtitle: "Use the logic of PDB x BIDS x PhysioNet x OSF to define WBE success conditions and reproducible progress"
 author: Mind Uploading Research Project
-last_updated: "2026-04-03"
-note: "Operational Specification"
+last_updated: "2026-04-04"
+note: "Operational Specification (updated with multi-axis overlap audit)"
 audience: "Readers who want the site's core policy and anyone checking what must exist before progress can honestly be claimed"
 reading_time: "15-25 min"
 page_intro: "This page is the core blueprint of Mind-Upload. It explains how to define progress in advance rather than retroactively by aligning data, evaluation, failure conditions, and reproduction procedures first."
@@ -18,7 +18,7 @@ page_highlights:
   - "For decode / biomarker scores, the Specificity & Shortcut Card separates the target neural variable from nuisance routes and audits subject / session fingerprint plus acquisition-distribution shortcuts independently."
   - "This page explains why collecting data alone is not the same as making progress."
   - "The next bottleneck after observability is identifiability-driven experiment design: extra modalities do not count as progress unless they rule out competing internal-state solutions."
-  - "For foundation / self-supervised EEG results, the Pretraining Card fixes corpus identity, overlap audit, setup diversity, harmonization including geometry route / reference family / omitted-channel policy, adaptation regime, benchmark object / supervision unit, benchmark provenance including split randomness / hidden grouping and inference-stage budget, and scale / efficiency before any transfer claim is read strongly."
+  - "For foundation / self-supervised EEG results, the Pretraining Card now splits overlap audit into raw-recording / window ancestry, subject / session ancestry, site / device / reference / layout ancestry, task / benchmark-object ancestry, and benchmark-operations ancestry, alongside harmonization, adaptation, and scale / efficiency, before any transfer claim is read strongly."
   - "For brain-to-text and speech decode, the Neural Contribution Card fixes task constraint, language prior, candidate set, no-brain / no-LM / shuffle baselines, and subject cooperation."
   - "For invasive language BCIs, communication claims are now also route-typed as throughput / expressivity, transfer initialization, bounded fixed-decoder slices, or adaptive rescue before any durability claim is read strongly."
   - "For multimodal or atlas-prior results, the Fusion Card is added on top of the Observability Budget so acquisition relation, synchronization, effective-window / temporal-kernel relation, fusion model, availability / complete-case slice, hemodynamic route family including vascular-state / CVR audit versus quantity bridge, transfer window, and external validation are fixed explicitly."
@@ -2011,7 +2011,7 @@ If this card is missing, this site treats the result by default as <strong>task-
 <section class="section" id="pretraining-card">
 <h2 class="section-title">2026-03-20 addendum: attach a Pretraining Card to foundation / self-supervised EEG results</h2>
 <p>
-The remaining weakness after adding the <strong>Observability Budget</strong> and the <strong>Specificity &amp; Shortcut Card</strong> was that large EEG pretraining results could still be reported as if an ordinary model card were enough. The recent primary literature and current benchmark operations do not support that shortcut. <a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">Kostas et al. (2021)</a> framed transfer across unseen datasets, hardware, subjects, and tasks as the core challenge rather than as a solved default. <a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/47393e8594c82ce8fd83adc672cf9872-Abstract-Conference.html" target="_blank">Jiang et al. (2024)</a> explicitly listed electrode mismatch, unequal length, varied task design, and low SNR as central EEG-side barriers even while reporting strong LaBraM performance. <a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">Lee et al. (2025)</a> then reported only marginal gains, about 0.5%, over conventional deep baselines despite much larger parameter counts, while showing that PEFT can sharply reduce trainable parameters without degrading performance. <a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025)</a> pushed toward setup-agnostic pretraining at unprecedented corpus scale, but <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> and <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a> then showed that narrow-source versus diverse-source pretraining, linear probing versus fine-tuning, and specialist-from-scratch baselines can still reverse the reading of which representation transferred "better." <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a> argued that inconsistent protocols still make cross-model EEG-FM comparisons unreliable. The official <a href="https://eeg2025.github.io/data/" target="_blank">EEG Challenge 2025 data page</a> additionally shows that one public benchmark family can already mix <strong>six distinct cognitive tasks</strong> with <strong>subject-level psychopathology dimensions</strong>, so benchmark name alone does not fix the supervised object. The official <a href="https://eeg2025.github.io/submission/" target="_blank">submission page</a> further fixed this as an <strong>inference-only code competition</strong>, and the final <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> later disclosed that Challenge 2 samples had not been randomized, allowing some teams to exploit contiguous-trial same-subject structure and forcing the organizers to award Challenge 1 and Challenge 2 separately. Therefore, this site now requires a <strong>Pretraining Card</strong> for foundation / self-supervised EEG submissions in addition to the standard model card.
+The remaining weakness after adding the <strong>Observability Budget</strong> and the <strong>Specificity &amp; Shortcut Card</strong> was that large EEG pretraining results could still be reported as if an ordinary model card were enough. The recent primary literature and current benchmark operations do not support that shortcut. <a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">Kostas et al. (2021)</a> framed transfer across unseen datasets, hardware, subjects, and tasks as the core challenge rather than as a solved default. <a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/47393e8594c82ce8fd83adc672cf9872-Abstract-Conference.html" target="_blank">Jiang et al. (2024)</a> explicitly listed electrode mismatch, unequal length, varied task design, and low SNR as central EEG-side barriers even while reporting strong LaBraM performance. <a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">Lee et al. (2025)</a> then reported only marginal gains, about 0.5%, over conventional deep baselines despite much larger parameter counts, while showing that PEFT can sharply reduce trainable parameters without degrading performance. <a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025)</a> pushed toward setup-agnostic pretraining at unprecedented corpus scale, but <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> and <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a> then showed that narrow-source versus diverse-source pretraining, linear probing versus fine-tuning, and specialist-from-scratch baselines can still reverse the reading of which representation transferred "better." <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a> argued that inconsistent protocols still make cross-model EEG-FM comparisons unreliable. The official <a href="https://eeg2025.github.io/data/" target="_blank">EEG Challenge 2025 data page</a> additionally shows that one public benchmark family can already mix <strong>six distinct cognitive tasks</strong> with <strong>subject-level psychopathology dimensions</strong>, so benchmark name alone does not fix the supervised object. The official <a href="https://eeg2025.github.io/submission/" target="_blank">submission page</a> further fixed this as an <strong>inference-only code competition</strong>, and the final <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> later disclosed that Challenge 2 samples had not been randomized, allowing some teams to exploit contiguous-trial same-subject structure and forcing the organizers to award Challenge 1 and Challenge 2 separately. In parallel, <a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">Brookshire et al. (2024)</a>, <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a>, <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)</a>, and <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a> show that raw-window ancestry, participant identity, and recording-distribution structure can each move EEG results through different routes. Therefore, this site now requires a <strong>Pretraining Card</strong> for foundation / self-supervised EEG submissions in addition to the standard model card, and it no longer treats <strong>overlap audit</strong> as a single yes/no field.
 </p>
 <table class="data-table">
 <thead>
@@ -2024,8 +2024,8 @@ The remaining weakness after adding the <strong>Observability Budget</strong> an
 <tbody>
 <tr>
 <td><strong>corpus identity / overlap audit</strong></td>
-<td>Name the pretraining corpus, version or snapshot, total hours, exclusions, and any overlap audit against downstream datasets, subjects, sessions, or near-duplicate recordings.</td>
-<td>What looked like transfer can still be silent reuse of closely related data.</td>
+<td>Name the pretraining corpus, version or snapshot, total hours, exclusions, and a multi-axis overlap audit covering raw-recording / window ancestry, subject / session ancestry, site / device / reference-system / electrode-layout ancestry, task / label / benchmark-object ancestry, and any extra-data or pretrained-checkpoint ancestry.</td>
+<td>What looked like transfer can still be silent reuse of the same recording family, person, setup, task object, or benchmark lineage.</td>
 </tr>
 <tr>
 <td><strong>population / setup diversity</strong></td>
@@ -2075,6 +2075,48 @@ The remaining weakness after adding the <strong>Observability Budget</strong> an
 </tbody>
 </table>
 <div class="note-box">
+<strong>2026-04-04 correction: overlap audit is multi-axis, not a single yes/no field</strong>
+<p>
+The older wording on this card was directionally right but still too compressible. Current primary and official sources do not support treating overlap as one box. <a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">Brookshire et al. (2024)</a> show that segment-based evaluation can leak subject information through raw-window ancestry, <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a> show that repeated-measure diagnostic learning can absorb subject characteristics, <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)</a> and <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a> show that device / setup distribution is a separate variance source, <a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/47393e8594c82ce8fd83adc672cf9872-Abstract-Conference.html" target="_blank">Jiang et al. (2024)</a> and <a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025)</a> show that layout heterogeneity remains a live model-design problem, and the official EEG Challenge <a href="https://eeg2025.github.io/data/" target="_blank">data</a>, <a href="https://eeg2025.github.io/submission/" target="_blank">submission</a>, and <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> pages together with <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a> and <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a> show that benchmark object, operations budget, and protocol choices can all move rankings. Therefore, this site now treats overlap as a set of distinct ancestry axes rather than as one binary disclosure.
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>Ancestry axis</th>
+<th>What must be disclosed separately</th>
+<th>Misread blocked on this site</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>raw-recording / window ancestry</strong></td>
+<td>Whether windows, segments, or near-duplicate crops from the same raw recording, release, or derivative chain appear across pretraining, validation, and downstream evaluation.</td>
+<td>Segment reuse is read as transfer to unseen data.</td>
+</tr>
+<tr>
+<td><strong>subject / session ancestry</strong></td>
+<td>Whether the same participant, day, session, or repeated measurement appears on both the pretraining and downstream sides, and what the true grouped hold-out unit is.</td>
+<td>Subject fingerprint is read as subject-independent representation.</td>
+</tr>
+<tr>
+<td><strong>site / device / reference / layout ancestry</strong></td>
+<td>Whether overlap persists at the level of site, amplifier, cap, reference family, electrode geometry, coordinate template, or preprocessing lineage, and whether gains survive setup-disjoint slices.</td>
+<td>Layout tolerance or reference absorption is read as physiology-preserving invariance.</td>
+</tr>
+<tr>
+<td><strong>task / label / benchmark-object ancestry</strong></td>
+<td>Whether the downstream side reuses the same task family, event ontology, response structure, or subject-level target type, so the supervised object is genuinely new rather than relabeled.</td>
+<td>Re-encountering the same supervised object is read as universal EEG generalization.</td>
+</tr>
+<tr>
+<td><strong>benchmark-operations ancestry</strong></td>
+<td>Whether extra-data policy, pretrained-checkpoint policy, split / randomization, hidden grouping, checkpoint selection, inference-only or no-training rules, memory budget, and organizer postmortems are frozen together.</td>
+<td>Benchmark-specific rule changes are read as stable model superiority.</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
 <strong>Official rules are not capability proof, but they are evidence of what comparability already requires</strong>
 <p>
 The EEG Challenge rules do not prove that any one model is best. They do something different and still important: they show that current operations already need <strong>pretraining-data disclosure</strong>, <strong>pretrained-model disclosure</strong>, and <strong>fine-tuning disclosure</strong> before a leaderboard is even interpretable. The later leaderboard postmortem sharpened the same point by showing that <strong>sample randomization</strong> and <strong>hidden grouping structure</strong> can change what the leaderboard was measuring at all. On this site, that operational lesson is promoted from benchmark-specific documentation to a general audit rule.
@@ -2083,7 +2125,7 @@ The EEG Challenge rules do not prove that any one model is best. They do somethi
 <div class="note-box">
 <strong>Minimum operating rules</strong>
 <p>
-If this card is missing, this site treats the result by default as <strong>qualified representation-learning / decoding evidence</strong>, not as portable transfer evidence, deployable robustness, source-identifiable recovery, or WBE-relevant state capture. In particular, if <strong>corpus identity / overlap audit</strong>, <strong>harmonization policy</strong>, <strong>adaptation regime</strong>, <strong>benchmark object / supervision unit</strong>, <strong>benchmark provenance</strong> including <strong>split randomness / hidden grouping</strong>, or the <strong>shortcut-resistance bridge</strong> to the <a href="#specificity-shortcut-card">Specificity &amp; Shortcut Card</a> is missing, this site stops the reader from rephrasing the result as "generalization is solved."
+If this card is missing, this site treats the result by default as <strong>qualified representation-learning / decoding evidence</strong>, not as portable transfer evidence, deployable robustness, source-identifiable recovery, or WBE-relevant state capture. In particular, if <strong>corpus identity / overlap audit</strong> is not split into <strong>raw-recording / window</strong>, <strong>subject / session</strong>, <strong>site / device / reference / layout</strong>, <strong>task / benchmark-object</strong>, and <strong>benchmark-operations</strong> ancestry, or if <strong>harmonization policy</strong>, <strong>adaptation regime</strong>, <strong>benchmark object / supervision unit</strong>, <strong>benchmark provenance</strong> including <strong>split randomness / hidden grouping</strong>, or the <strong>shortcut-resistance bridge</strong> to the <a href="#specificity-shortcut-card">Specificity &amp; Shortcut Card</a> is missing, this site stops the reader from rephrasing the result as "generalization is solved."
 </p>
 </div>
 <div class="note-box">

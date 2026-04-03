@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-04-02 / Role: Technical / natural science only
+- Updated: 2026-04-04 / Role: Technical / natural science only
 
 ## Role Of This Page
 This page is a learning wiki that organizes how to read EEG foundation / self-supervised models. Recent large-scale pretraining is clearly an advance, but to avoid jumping from that advance to claims such as 'generalization is solved' or 'we are one step closer to WBE,' we separate pretraining corpus, channel mismatch, adaptation regime, benchmark object / supervision unit, and evaluation family.
@@ -39,7 +39,7 @@ This page covers only how to read the technical and natural-science evidence. It
 - There is still no default path that simultaneously satisfies cross-day, cross-device, cross-task, and longitudinal deployability.
 - There is also no fixed common standard for auditing benchmark version, split rules, and checkpoint selection together.
 - There is still no fixed common standard for reporting benchmark object / supervision unit alongside benchmark provenance.
-- There is still no fixed common standard for reporting raw-recording ancestry or grouped hold-out unit together with the benchmark object.
+- Cross-project reporting still varies on how raw-recording ancestry, grouped hold-out unit, and benchmark-object ancestry are disclosed together.
 - It is not yet a settled law when targeted diversity beats indiscriminate scale.
 - It also remains unresolved how to show that a pretrained EEG representation is resisting identity / setup shortcuts rather than merely tolerating them on one benchmark.
 - It also remains unresolved how far reference-family shifts, coordinate-route mismatch, and label-limited clinical adaptation can be handled without heavy downstream rescue.
@@ -281,8 +281,8 @@ The biggest weakness that needed correction here was that <strong>accepted model
 </tr>
 <tr>
 <td><strong>G1: corpus identity / overlap</strong></td>
-<td>A pretraining corpus is also a dataset. If closely related data leak into the downstream side, the split no longer means what it appears to mean.</td>
-<td>Corpus name, version / snapshot, total hours, and an overlap audit against downstream datasets / subjects / sessions.</td>
+<td>A pretraining corpus is also a dataset. If closely related data leak into the downstream side, the split no longer means what it appears to mean, and that leakage can happen through multiple ancestry axes rather than one route.</td>
+<td>Corpus name, version / snapshot, total hours, and a multi-axis overlap audit covering raw-recording / window ancestry, subject / session ancestry, site / device / reference / layout ancestry, task / benchmark-object ancestry, and extra-data / checkpoint ancestry.</td>
 </tr>
 <tr>
 <td><strong>G2: population / setup diversity</strong></td>
@@ -332,6 +332,11 @@ The biggest weakness that needed correction here was that <strong>accepted model
 The EEG Challenge submission page defines an <strong>inference-only code submission</strong> setting, while the final leaderboard discloses that Challenge 2 accidentally preserved same-subject trial contiguity. Those facts are not side notes. They directly change what a reported ranking means, because one result was obtained under a fixed inference budget and another could exploit an unintended grouping cue. On this site, benchmark provenance therefore includes <strong>operational constraints</strong> and <strong>postmortem disclosures</strong>, not only the benchmark title.
 </p>
 
+<strong>2026-04-04 correction: overlap audit must be split by ancestry axis</strong>
+<p>
+The older wording on this page still made <strong>overlap audit</strong> sound too much like one checkbox. Current primary and official sources do not support that compression. <a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">Brookshire et al. (2024)</a> show a <strong>raw-window ancestry</strong> failure mode, <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a> show a <strong>subject-characteristic</strong> failure mode, <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)</a> and <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a> show a <strong>setup-distribution</strong> failure mode, and the official EEG Challenge <a href="https://eeg2025.github.io/data/" target="_blank">data</a>, <a href="https://eeg2025.github.io/submission/" target="_blank">submission</a>, and <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> pages show a <strong>benchmark-object / benchmark-operations</strong> failure mode. On this site, those are now read as separate ancestry axes rather than one generic overlap warning.
+</p>
+
 <h2>The Pretraining Card required on this site</h2>
 <p>
 For foundation / self-supervised results, this site requires a <strong>Pretraining Card</strong> in addition to the standard model card. This is not an external publication standard; it is <strong>an operating rule of this site</strong> for keeping heterogeneous-corpus pretraining comparable.
@@ -348,8 +353,8 @@ For foundation / self-supervised results, this site requires a <strong>Pretraini
 <tbody>
 <tr>
 <td><strong>Corpus</strong></td>
-<td>Pretraining corpus name, version, total hours, exclusion criteria, and overlap audit.</td>
-<td>You may miss the possibility that what looked like generalization was actually reuse of closely related data.</td>
+<td>Pretraining corpus name, version, total hours, exclusion criteria, and a multi-axis overlap audit covering raw-recording / window, subject / session, site / device / reference / layout, task / benchmark-object, and extra-data / checkpoint ancestry.</td>
+<td>You may miss the possibility that what looked like generalization was actually reuse of the same recording family, person, setup, task object, or benchmark lineage.</td>
 </tr>
 <tr>
 <td><strong>Population / Setup</strong></td>
@@ -453,6 +458,7 @@ For foundation / self-supervised results, this site requires a <strong>Pretraini
 <li>Ma, J., Wu, F., Xing, Y., Lin, Q., Liu, T., Liu, C., Jia, Z., &amp; Feng, M. (2026). Structured Prototype-Guided Adaptation for EEG Foundation Models. <em>arXiv preprint</em>. <a href="https://arxiv.org/abs/2602.17251" target="_blank">arXiv:2602.17251</a></li>
 <li>Lahiri, J. B., Runwal, P., Kulkarni, A., Jain, M., Mishra, A. R., Panwar, S., &amp; Singh, S. (2026). PRISM: Exploring Heterogeneous Pretrained EEG Foundation Model Transfer to Clinical Differential Diagnosis. <em>arXiv preprint</em>. <a href="https://arxiv.org/abs/2603.02268" target="_blank">arXiv:2603.02268</a></li>
 <li>Liu, D., Chen, Y., Chen, Z., Cui, Z., Wen, Y., An, J., Luo, J., &amp; Wu, D. (2026). EEG Foundation Models: Progresses, Benchmarking, and Open Problems. <em>arXiv preprint</em>. <a href="https://arxiv.org/abs/2601.17883" target="_blank">arXiv:2601.17883</a></li>
+<li>Brookshire, G., Kasper, J., Blauch, N. M., Wu, Y. C., Glatt, R., Merrill, D. A., Gerrol, S., Yoder, K. J., Quirk, C., &amp; Lucero, C. (2024). Data leakage in deep learning studies of translational EEG. <em>Frontiers in Neuroscience</em>, 18, 1373515. <a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">doi:10.3389/fnins.2024.1373515</a></li>
 <li>Chaibub Neto, E., Pratap, A., Perumal, T. M., et al. (2019). Detecting the impact of subject characteristics on machine learning-based diagnostic applications. <em>npj Digital Medicine</em>, 2, 99. <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">doi:10.1038/s41746-019-0178-x</a></li>
 <li>Xu, M., Yao, S., Wei, Z., et al. (2020). Cross-dataset variability problem in EEG decoding with deep learning. <em>Frontiers in Human Neuroscience</em>, 14, 103. <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">doi:10.3389/fnhum.2020.00103</a></li>
 <li>Di, Y., An, X., Zhong, W., Liu, S., &amp; Ming, D. (2021). The time-robustness analysis of individual identification based on resting-state EEG. <em>Frontiers in Human Neuroscience</em>, 15, 672946. <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">doi:10.3389/fnhum.2021.672946</a></li>
