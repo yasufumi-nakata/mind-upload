@@ -5,7 +5,7 @@ description: "How to participate in the Mind-Upload project, read issue status, 
 article_type: Guide
 subtitle: "Join the research workflow and read the issue tracker"
 author: Mind Uploading Research Project
-last_updated: "2026-04-03"
+last_updated: "2026-04-04"
 note: "Contribution + Issue tracker"
 audience: "People who are joining for the first time, want to check the issue status, and want to start making viable contributions."
 reading_time: "10-20 minutes"
@@ -94,6 +94,12 @@ If you want to see how to turn "I do not know" into a useful issue, and how to s
 <strong>If you are here specifically for RQ-by-RQ grant planning</strong>
 <p>
 This page separates contribution routes and issue work. If what you really want is the current one-question-at-a-time route from a mind-upload research question to a fundable theme and a fixed EEG dataset anchor, start with the <a href="wiki/mind-upload-rq-solvability-bridge.html">RQ solvability bridge</a>, then use the <a href="wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html">grant and dataset playbook</a>, the <a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ-by-RQ deep dossiers</a>, the <a href="wiki/mind-upload-current-public-six-rq-brief.html">current public six-RQ brief</a>, and the <a href="https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md">current funding shortlist</a>.
+</p>
+</div>
+<div class="note-box">
+<strong>Latest route hold on April 4, 2026 (00:06 JST)</strong>
+<p>
+An actual-pull reread at <code>2026-04-04 00:06 JST</code> after <code>mind-upload@84d84fb5a82d22d70d12c92a957327b3937bc422</code>, <code>EEG-DATA@b468ecc5f8c0ed34fb85c0bbc2a2e3c9282ce965</code>, and <code>auto-research-funds@eccee095a939a604cd4c684a2af6379f9dc3fa88</code> still keeps the same public six in the same execution order. The newest pulled deltas are still carry-forward only: <code>mind-upload</code> now just carries the earlier <code>23:06 JST</code> route reread addenda, <code>EEG-DATA</code> adds <code>fast mapping semantic integration EEG dataset</code> while <code>summary.json</code> now reports <code>30,921</code> merged-unique rows, <code>28,884</code> high-confidence rows, <code>24,900</code> immediate rows, and <code>24,530</code> high-confidence immediate rows, and <code>auto-research-funds</code> adds <code>Iizuka current card and Korean legacy sync</code> without displacing the practical shortlist. Public-safe wording therefore still keeps <code>D10</code> as the only clear public-open primary anchor in the current six while <code>D03/D02/D01</code> remain gated-support planning anchors. The checked live public pages again returned <code>HTTP/2 200</code> with <code>Last-Modified: Fri, 03 Apr 2026 14:13:44 GMT</code>; their route-facing bodies still surfaced <code>22:04 JST</code> on <code>brief / bridge / U13-2</code> and <code>22:04/22:05 JST</code> on <code>issue</code> before this source sync. Official spot checks still keep <code>Kura Fund</code> open through <code>2026-04-17 17:00 JST</code>, the <code>Nakatani Foundation graduate scholarship</code> open through <code>2026-05-25 15:00 JST</code>, the <code>Kashinome Scholarship</code> at <code>2026-04-09</code> must-arrive, and the <code>Nakatani Foundation research grant</code> plus <code>Secom General Research Grant</code> in watch/closed status. A fresh read-only Todoist audit also still stays sufficient (<code>items=206</code>; <code>projects=2</code>; <code>Kura=2</code>; <code>Nakatani family=11</code>; <code>Kashinome=2</code>; <code>Secom=3</code>; <code>Brain Science Foundation=8</code>; <code>Okawa=2</code>; <code>Japan Industrial Science Research Institute=1</code>; <code>Keio graduate scholarship=2</code>; <code>G-7=1</code>; <code>ENEOS=1</code>), so no new Todoist item was justified in this run.
 </p>
 </div>
 <div class="note-box">

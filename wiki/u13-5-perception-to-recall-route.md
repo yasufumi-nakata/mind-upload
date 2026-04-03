@@ -5,7 +5,7 @@ description: "Why U13-5 stays second in the current public six, why D03 stays th
 article_type: Wiki
 subtitle: "A row-specific packet for the second active public RQ"
 author: Mind Uploading Research Project
-last_updated: "2026-04-03"
+last_updated: "2026-04-04"
 note: "U13-5 route packet"
 audience: "Readers who want the dataset-choice rationale and the honest claim ceiling for the current perception-to-recall row"
 reading_time: "8-12 minutes"
@@ -34,6 +34,13 @@ recommended_pages:
 # U13-5 perception-to-recall route packet
 
 This page does not change the current public six-question batch. It makes only the second active row more explicit, so readers can see why `U13-5` still stays next after `U13-2`, why `D03` now stays only as a gated support anchor for the present branch-point question, and what the next public-safe artifact can honestly close.
+
+## What still stays fixed after the 00:06 JST actual-pull reread on April 4, 2026
+
+- An actual-pull recheck at `2026-04-04 00:06 JST` after `mind-upload@84d84fb5a82d`, `EEG-DATA@b468ecc5f8c0`, and `auto-research-funds@eccee095a939` still keeps `U13-5` second and still keeps `D03` only as the planned gated-support anchor for the present branch-point question.
+- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now just carries the earlier `23:06 JST` route reread addenda, `EEG-DATA` now reports `30,921` merged-unique rows, `28,884` high-confidence rows, `24,900` immediate rows, and `24,530` high-confidence immediate rows after adding a fast-mapping semantic-integration EEG resource, and `auto-research-funds` adds `Iizuka current card and Korean legacy sync` without changing the practical shortlist.
+- The practical effect for this row stays narrow. The newest public-open carry-forwards still do not expose the recall-labeled branch point that this row needs, so `D03` stays only as the intended gated-support anchor in planning while `ChineseEEG-2`, `ZuCo 2.0`, and the spoken-plus-imagined robot-speech EEG family remain nearby backups.
+- Browser-level live checks before this source sync still returned `HTTP/2 200` for the current public entry pages and row packets; the checked bodies still surfaced `22:04 JST` on `brief / bridge / U13-2` and `22:04/22:05 JST` on `issue` rather than a new row-specific claim. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `ENEOS=1`), so this page only carries the same row-specific route forward onto the actual latest pulled heads.
 
 ## What still stays fixed after the 23:06 JST actual-pull reread on April 3, 2026
 

@@ -5,7 +5,7 @@ description: "A public-safe bridge from the current mind-upload research questio
 article_type: Wiki
 subtitle: "One question, one anchor family, one funding lane, one stop line"
 author: Mind Uploading Research Project
-last_updated: "2026-04-03"
+last_updated: "2026-04-04"
 note: "Current RQ-to-EEG-and-funding bridge"
 audience: "Readers who want to see what EEG can close now, what still stays outside the claim, and which funding lane still fits."
 reading_time: "10-15 minutes"
@@ -56,6 +56,16 @@ recommended_pages:
 This page answers one narrow question: for the rows that are actually worth deepening now, what can `EEG-DATA` honestly close, what still needs outside support, and what funding theme still fits without overstating the claim.
 
 It does **not** try to re-scan all `60RQ` items at once. The working style on this site is now `deepen one row at a time`, not `summarize everything at the same depth`.
+
+## What still stays fixed after the 00:06 JST actual-pull reread on April 4, 2026
+
+- An actual-pull recheck at `2026-04-04 00:06 JST` after `mind-upload@84d84fb5a82d`, `EEG-DATA@b468ecc5f8c0`, and `auto-research-funds@eccee095a939` still leaves both the current public six and the headline next-watch queue unchanged.
+- The newest pulled deltas are still carry-forward rather than route replacement: `mind-upload` now just carries the earlier `23:06 JST` route reread addenda, `EEG-DATA` adds `fast mapping semantic integration EEG dataset` while `summary.json` now reports `30,921` merged-unique rows, `28,884` high-confidence rows, `24,900` immediate rows, and `24,530` high-confidence immediate rows, and `auto-research-funds` adds `Iizuka current card and Korean legacy sync` without replacing the current `D10 / D03 / D02 / D01` family or the headline next-watch `D11 / D08 / D05 / D20` family.
+- Route-safe access wording therefore still stays unchanged: no newest pulled head turns `D03 / D02 / D01` into immediate public anchors, so public-safe wording still keeps `D10` as the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors.
+- Browser-level live checks before this source sync still returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, `mind-upload-eeg-rq60-grant-dataset-playbook.html`, `u13-2-brain-minus-prior-route.html`, and `u13-5-perception-to-recall-route.html`; the checked bodies still surfaced `22:04 JST` on `brief / bridge / U13-2` and `22:04/22:05 JST` on `issue` rather than a new queue or claim.
+- Official window spot checks in this run still keep the practical bridge narrow: `Kura Fund` remains open (`2026-02-02 - 2026-04-17 17:00`), `Nakatani Foundation graduate scholarship` remains open (`2026-04-01 - 2026-05-25 15:00`), `Kashinome Scholarship` stays a student-runway side route (`2026-01-14 - 2026-04-09 must arrive`), `Nakatani Foundation research grant` remains closed / next-cycle watch, and `Secom General Research Grant` remains closed for the current cycle (`2026-03-31 12:00 JST`).
+- A fresh read-only Todoist audit still showed enough route coverage (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `Keio graduate scholarship=2`, `G-7=1`, `ENEOS=1`), so no new task was added in this session.
+- This source sync still does **not** widen the current queue or claim surface. It only carries forward the same queue onto the actual latest pulled heads, the latest live public bodies, official windows, and Todoist sufficiency check.
 
 ## What still stays fixed after the 23:06 JST actual-pull reread on April 3, 2026
 
