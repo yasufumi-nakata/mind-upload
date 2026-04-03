@@ -35,6 +35,13 @@ recommended_pages:
 
 This page does not change the current public six-question batch. It makes only the first active row more explicit, so readers can see why `U13-2` still comes first, why `D10 3M-CPSEED` stays primary, and what the next public-safe artifact can honestly close.
 
+## What still stays fixed after the 21:05 JST actual-pull reread on April 3, 2026
+
+- An actual-pull recheck at `2026-04-03 21:05 JST` after `mind-upload@3db1aa653b74d164c3a57b75677e345ea10356e0`, `EEG-DATA@c10c95274ecf1397768eb28de48aac8ce925c22d`, and `auto-research-funds@4a67e06b530bc742521f80fa5b13ccbe1115ebb9` still keeps `U13-2` first and keeps `D10` as the primary anchor for this row.
+- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now just carries the earlier `20:05 JST` route-hold addendum outside the current six, `EEG-DATA` now reports `30,914` merged-unique rows, `28,877` high-confidence rows, `24,896` immediate rows, and `24,526` high-confidence immediate rows after BDSP manual deep dives for missing EEG datasets, and `auto-research-funds` now just carries the earlier `20:05 JST` funding addendum without changing the practical shortlist.
+- None of those additions replaces the present speech ladder. The newest public-open or nearby support candidates still widen adjacent support space, but they still do not recreate the overt / silent-intended / imagined speech triangle that keeps `D10` primary for `U13-2`.
+- Browser-level live checks before this source sync still returned `HTTP/2 200` for the current public entry pages with `Last-Modified: Fri, 03 Apr 2026 11:17:44 GMT`; the checked bodies already surfaced the earlier `20:05 JST` hold note on `issue / brief / bridge` while `U13-2` itself still surfaced `11:07 JST`. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient, so this page only carries the same row-specific route forward onto the latest pulled heads.
+
 ## What still stays fixed after the 11:07 JST actual-pull reread on April 3, 2026
 
 - An actual-pull recheck at `2026-04-03 11:07 JST` after `mind-upload@f70432e4a6c8a52afafbc57b98c8f0e360c85d4e`, `EEG-DATA@1981d34c5f71deceb2549684db9173b6f54d2b89`, and `auto-research-funds@bfebe94da875d709756746285f133ef30905fd38` still keeps `U13-2` first and keeps `D10` as the primary anchor for this row.
