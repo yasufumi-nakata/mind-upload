@@ -36,6 +36,16 @@ This page answers one narrow question: for the rows that are actually worth deep
 
 It does **not** try to re-scan all `60RQ` items at once. The working style on this site is now `deepen one row at a time`, not `summarize everything at the same depth`.
 
+## What still stays fixed after the 08:07 JST actual-pull reread on April 4, 2026
+
+- An actual-pull recheck at `2026-04-04 08:07 JST` after `mind-upload@418c8f5d0ef9`, `EEG-DATA@dc6d833b83e9`, and `auto-research-funds@58d8738be5d5` still leaves both the current public six and the headline next-watch queue unchanged.
+- The newest pulled deltas remain carry-forward rather than route replacement: `mind-upload` tightens the front-door human-proxy comparison, `EEG-DATA` still keeps `30,929` merged-unique rows, `28,892` high-confidence rows, `24,909` immediate rows, and `24,539` high-confidence immediate rows while promoting `HeartBEAM` and figshare `EEG at rest and with TMS` only as backup families, and `auto-research-funds` adds the `JGC-S` foreign-student scholarship only as an adjacent runway without displacing the practical shortlist.
+- The route-safe reading also stays deliberately narrow: `D10` remains the only clear public-open primary anchor, while `D03 / D02 / D01` still stay gated-support anchors in public wording because no newest pulled head turns those three routes into immediate public anchors.
+- The newest repo-wide carry-forward still does not create a stronger row-level replacement: `HeartBEAM` is useful as a stronger backup/watch candidate, but it still does not repair the recall-validity gap under `U13-5`, replace the cross-session identity-drift floor under `U0-2 / U0-3`, or displace the current `D11 / D08 / D05 / D20` next-watch family.
+- Browser-level live checks in this run returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, `u13-2-brain-minus-prior-route.html`, and `u13-5-perception-to-recall-route.html`; the checked headers now return `Last-Modified: Fri, 03 Apr 2026 22:10:18 GMT`, while the checked bodies still surfaced the earlier `2026-04-04 01:04 JST` wording before this source sync.
+- Official-window spot checks keep the same practical bridge: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, the `Kashinome Scholarship` still reads as the annual `mid-January to early-April` window and continues to be handled as the `2026-04-09` must-arrive side route, `Nakatani Foundation research grant = closed / next-cycle watch`, and `Secom General Research Grant = closed (2026-03-31 12:00 JST)`.
+- A fresh read-only Todoist audit still showed enough route coverage (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `Keio graduate scholarship=2`, `G-7=1`, `ENEOS=1`, `Doumei=0`, `Kenkyu no Susume=0`), so no new task was added in this session.
+
 ## What still stays fixed after the 01:04 JST actual-pull reread on April 4, 2026
 
 - An actual-pull recheck at `2026-04-04 01:04 JST` after `mind-upload@9b6a8b971ba0`, `EEG-DATA@56d765da60b`, and `auto-research-funds@3c8569e28` still leaves both the current public six and the headline next-watch queue unchanged.

@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-04-04 / Role: Technical / practical guide / recording-frame contract clarity
+- Updated: 2026-04-04 / Role: Technical / practical guide (updated for recording-frame contract clarity)
 
 ## Role Of This Page
 This page treats EEG preprocessing and QC not as the final cosmetic cleanup step, but as an audit of which signals remain usable, which derivative branches stay reusable, and which claims must still stop.

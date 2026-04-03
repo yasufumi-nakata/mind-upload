@@ -54,7 +54,7 @@
 - [Wiki: Difference between 'I understand' and 'Move on'](https://github.com/yasufumi-nakata/mind-upload/wiki/understanding-vs-action-readiness)
 - [Wiki: Distinguishing between what to do first in-house and external dependencies](https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies)
 - [Wiki: EEG foundation models and pretraining](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-foundation-models)
-- [Wiki: EEG pretreatment and QC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc)
+- [Wiki: EEG Preprocessing and QC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc)
 - [Wiki: Homeostatic Plasticity And Maintenance-State](https://github.com/yasufumi-nakata/mind-upload/wiki/homeostatic-plasticity-and-maintenance-state)
 - [Wiki: How to read partial solution/exploration stage/undeveloped](https://github.com/yasufumi-nakata/mind-upload/wiki/progress-labels-and-open-problem-status)
 - [Wiki: How to use summary, original text, and issue history](https://github.com/yasufumi-nakata/mind-upload/wiki/summary-vs-source-reading)

@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-04-03 / Role: RQ-by-RQ Deep Dossier
+- Updated: 2026-04-04 / Role: RQ-by-RQ Deep Dossier
 
 ---
 
@@ -13,8 +13,20 @@
 > 本ページは、`60RQ` を1件ずつ深掘りするための固定ドシエ集です。  
 > 汎用横断サマリは最小化し、各RQで `検証命題` `境界` `応募テーマ` `主データ` `KPI` `停止条件` を先に固定します。
 
-- 更新日: 2026-04-03
+- 更新日: 2026-04-04
 - 出典: `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`（60行を再構成）
+
+## 2026-04-04 08:07 JST latest actual-pull route-hold note
+
+This run still does not change the current public six-question batch. An actual-pull reread after `mind-upload@418c8f5d0ef9e871531d9cfb8548887e57f54d68`, `EEG-DATA@dc6d833b83e9a5e6a181edfee5349f561f65b043`, and `auto-research-funds@58d8738be5d55cff13d7bd626479783d6818de1f` still leaves the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
+
+- The newest pulled deltas still deepen route discipline and backup space rather than replacing the current route family: `mind-upload` tightens the front-door human-proxy comparison, `EEG-DATA` still keeps `30,929` merged-unique rows, `28,892` high-confidence rows, and `24,909` directly usable rows while promoting `HeartBEAM` and figshare `EEG at rest and with TMS` only as backup families, and `auto-research-funds` adds the `JGC-S` foreign-student scholarship only as an adjacent runway without changing the practical shortlist.
+- Recounting the `### Ux-y` headings on this page still returns `60`, so this run keeps the one-row-at-a-time dossier structure intact.
+- The public six still stay `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
+- The solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
+- The route-safe access reading stays narrow in one important way: `D10` still stays the only clear public-open primary anchor while `D03 / D02 / D01` still stay gated-support planning anchors, and none of the newest repo-wide carry-forward closes the recall-validity gap under `U13-5` or the rerun-support gap under `U14-4 / U14-2`.
+- Browser-level live checks with a browser user agent still returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `mind-upload-rq-solvability-bridge.html`; the current `Last-Modified` header was `Fri, 03 Apr 2026 22:10:18 GMT` on those public surfaces, while the checked bodies still surfaced the earlier `01:04 JST` hold note before this source sync.
+- The funding bridge still stays narrow: `Kura Fund` and `Nakatani Foundation graduate scholarship` remain the active near-term lanes, `Kashinome Scholarship` remains the student-runway side lane, `Nakatani Foundation research grant` remains next-cycle watch, `Secom General Research Grant` remains closed for the current cycle, and a fresh Todoist `api/v1/sync(items, projects)` audit (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Doumei=0`, `Kenkyu no Susume=0`) still did not justify a new task.
 
 ## 2026-04-03 05:12 JST latest actual-pull route-hold note
 

@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-04-02 / Role: U14-4 route packet
+- Updated: 2026-04-04 / Role: U14-4 route packet
 
 ## Role Of This Page
 This page fixes the current public route for U14-4 at the level of one question, one intended EEG route anchor, one bounded first artifact, and one funding bridge.
@@ -26,6 +26,13 @@ This page does not claim field-wide reproducibility, deployment readiness, or st
 # U14-4 card-contract route packet
 
 This page does not change the current public six-question batch. It makes only the fifth active row more explicit, so readers can see why `U14-4` still stays before `U14-2`, why `D01 Acquisition delay of wireless EEG` now stays only as a gated support entry point, and what the next public-safe artifact can honestly close.
+
+## What still stays fixed after the 01:04 JST actual-pull reread on April 4, 2026
+
+- An actual-pull recheck at `2026-04-04 01:04 JST` after `mind-upload@9b6a8b971ba0`, `EEG-DATA@56d765da60b`, and `auto-research-funds@3c8569e28` still keeps `U14-4` fifth and still keeps `D01` only as the planned gated-support disclosure floor for this row.
+- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now carries the earlier `00:06 JST` route reread plus field-level artifact-stack disclosure tightening, `EEG-DATA` still reports `30,921` merged-unique rows, `28,884` high-confidence rows, `24,900` immediate rows, and `24,530` high-confidence immediate rows after deepening `Numbers` and `PRIOS`, and `auto-research-funds` adds current coverage for `同盟育成会` and `研究のすゝめ奨学金` without changing the practical shortlist.
+- None of those additions replaces the present rerun-entry structure. The newest carry-forwards do not change the fact that `D01` still sets only the latency / measurement floor, `D13` still stays the first public-open rerun support family, and `D08` still stays the validation-heavy support family kept one step later.
+- Browser-level live checks in this run still returned `HTTP/2 200` for the current public entry pages and this row packet with `Last-Modified: Fri, 03 Apr 2026 21:11:06 GMT`; the checked row packet still surfaced `Updated: 2026-04-02` before this source sync even though the front-door pages already surfaced the `2026-04-04 01:04 JST` basis. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `Keio graduate scholarship=2`, `G-7=1`, `ENEOS=1`, `同盟会=0`, `研究のすゝめ=0`), so no new Todoist item was justified for this row in this sync.
 
 ## What still stays fixed after the 23:08 JST actual-pull reread on April 2, 2026
 
@@ -95,5 +102,6 @@ The public-open rerun family and the validation-heavy family should not be read 
 ## What changed in this run
 
 - The public batch did not change.
-- The main change is that `U14-4` now records the anchor-choice rationale, one compact first-pass KPI bundle, and one explicit stop rule instead of leaving them implicit.
+- The main change in this sync is that `U14-4` now carries the same `2026-04-04 01:04 JST` route basis as the front-door pages and records that the live row packet had been stale before this source update.
+- The row still records the anchor-choice rationale, one compact first-pass KPI bundle, and one explicit stop rule instead of leaving them implicit.
 - This is still a route-setting update, not a solved-claim update.
