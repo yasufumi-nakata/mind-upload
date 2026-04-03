@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-03-31 / Role: Learning-first
+- Updated: 2026-04-03 / Role: Learning-first (updated with human route-family sync)
 
 ## Role Of This Page
 This page is a learning portal that makes the public pages of Mind-Upload easier to read. The public pages show what we know now, what we do not know yet, and what to read next, while the wiki teaches the basic explanations behind those pages in a deliberate order.
@@ -28,7 +28,7 @@ The wiki explains things in an accessible way, but it does not present unresolve
 - Current research already makes it possible to measure and reproducibly analyze part of the brain's signals.
 - Mind-Upload becomes much easier to follow if progress is separated from what remains unresolved.
 - Separating the roles of public pages and the wiki allows both an easy entry point and a deeper learning path.
-- Current human proxy rows differ by proxy class, operational maturity, and calibrator role, and same-subject wording can still remain bridge-limited.
+- Current human proxy rows differ by route family before they differ by proxy class, operational maturity, or calibrator role, and same-subject wording can still remain bridge-limited.
 
 ## What Is Still Unknown
 - Research is still underway on the conditions under which WBE could count as established.
@@ -49,6 +49,11 @@ If you just want to know the big picture first, you can go to the public page. H
 <strong>2026-03-26 route tightening: human observability is not one ladder</strong>
 <p>
 The learning portal now treats living-human evidence more strictly at the entrance. A reader now has to separate <strong>proxy class</strong>, <strong>operational maturity</strong>, and <strong>calibrator role</strong>, and then ask whether a bundle is still limited by <strong>composition</strong> or <strong>state continuity</strong>. This keeps beginner pages aligned with the stronger route-card rules already used on the core public pages.
+</p>
+
+<strong>2026-04-03 correction: route family is fixed before the three-axis reading</strong>
+<p>
+The learning portal now makes one earlier stop line explicit. A reader should not start from one vague category such as <strong>human proxy evidence</strong> and only later ask how mature it is. First fix the <strong>route family</strong> itself. On this site, <strong>five-metabolite 1H-MRSI similarity</strong> is not <strong>deuterium kinetic-rate imaging</strong>; <strong>choroid-plexus perfusion</strong> is not <strong>blood-to-CSF transport</strong> or <strong>apparent BCSFB exchange</strong>; <strong>SMBT-1</strong> is not <strong>SL25.1188</strong> or <strong>I2BS</strong>; and <strong>TSPO</strong> is not <strong>CSF1R</strong> or <strong>COX-2</strong>. Only after that route-family split is fixed does it make sense to compare <strong>proxy class</strong>, <strong>operational maturity</strong>, and <strong>calibrator role</strong>, and only after those are typed should a reader ask whether a same-subject bundle survives <strong>composition</strong> or <strong>state continuity</strong>. If you want the stack-by-stack rule first, go to <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling">Wiki: Observability and claim ceiling by measurement stack</a>. If you want the maintenance-state route cards first, go to <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/homeostatic-plasticity-and-maintenance-state">Wiki: Homeostatic plasticity and maintenance state</a>. If you want the bundle rule first, go to <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/human-proxy-composition">Wiki: Human Proxy Composition and Route Maturity</a>.
 </p>
 
 <table>
@@ -76,12 +81,17 @@ The learning portal now treats living-human evidence more strictly at the entran
 <td><a href="https://mind-upload.com/verification.html#state-completeness-gate">State variable completeness gate</a> / <a href="https://mind-upload.com/tech_roadmap.html#qa-m3">M3 spatial granularity</a></td>
 </tr>
 <tr>
-<td><strong>I want to know what is directly visible in which measurement stack and which state variable is still latent with which time constant</strong></td>
+<td><strong>I want to know what each measurement stack directly sees, and why human spectroscopy / barrier / PET routes are not one ladder</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling">Observability and claim ceiling per measurement stack</a></td>
 <td><a href="https://mind-upload.com/verification.html#state-completeness-gate">State variable completeness gate</a> / <a href="https://mind-upload.com/tech_roadmap.html#qa-m1">M1 observed variable</a></td>
 </tr>
 <tr>
-<td><strong>I want to know why current human proxy bundles and same-subject links still do not add up to same-state readout</strong></td>
+<td><strong>I want to know why 1H-MRSI, deuterium, BCSFB, astrocyte PET, and neuroimmune PET must be split before bundle reading</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling">Observability and claim ceiling per measurement stack</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/homeostatic-plasticity-and-maintenance-state">Homeostatic plasticity and maintenance state</a></td>
+<td><a href="https://mind-upload.com/wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> / <a href="https://mind-upload.com/verification.html#human-proxy-composition-card">Human Proxy Composition Card</a></td>
+</tr>
+<tr>
+<td><strong>I want to know why current human proxy bundles and same-subject links still do not add up to same-state readout even after the route family is fixed</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/human-proxy-composition">Human proxy composition and route maturity</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/state-continuity-bridge">State-Continuity Bridge</a></td>
 <td><a href="https://mind-upload.com/wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> / <a href="https://mind-upload.com/verification.html#human-proxy-composition-card">Human Proxy Composition Card</a> / <a href="https://mind-upload.com/verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a></td>
 </tr>

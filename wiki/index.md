@@ -5,8 +5,8 @@ description: "A wiki for learning Mind-Upload from the very beginning. It prepar
 article_type: Wiki
 subtitle: "Public pages are the gateway, and the wiki is the foundation for learning."
 author: Mind Uploading Research Project
-last_updated: "2026-03-31"
-note: "Learning-first"
+last_updated: "2026-04-03"
+note: "Learning-first (updated with human route-family sync)"
 audience: "People who want to learn from the basics, and people who want a foothold before entering the public pages."
 reading_time: "10-20 minutes"
 page_intro: >
@@ -20,12 +20,12 @@ page_highlights:
   - "The things most readers want to know first are arranged in separate reading routes so it is harder to get lost."
   - "The division of labor is to read the public pages for the main points and use the wiki to fill in the background."
   - "The explanations aim to be accessible even to junior-high-school readers, without weakening the strength or limits of the evidence."
-  - "The beginner route now treats human observability as three axes plus bridge / composition stop lines, so proxy-rich evidence is not silently read as one state sample."
+  - "The beginner route now treats living-human observability in the stricter order used by the core pages: route family first, then proxy class / operational maturity / calibrator role, then bridge and composition stop lines."
 known_points:
   - "Current research already makes it possible to measure and reproducibly analyze part of the brain's signals."
   - "Mind-Upload becomes much easier to follow if progress is separated from what remains unresolved."
   - "Separating the roles of public pages and the wiki allows both an easy entry point and a deeper learning path."
-  - "Current human proxy rows differ by proxy class, operational maturity, and calibrator role, and same-subject wording can still remain bridge-limited."
+  - "Current human proxy rows differ by route family before they differ by proxy class, operational maturity, or calibrator role, and same-subject wording can still remain bridge-limited."
 unknown_points:
   - "Research is still underway on the conditions under which WBE could count as established."
   - "Final judgments about identity and phenomenal consciousness cannot be made from introductory pages alone."
@@ -72,6 +72,13 @@ The learning portal now treats living-human evidence more strictly at the entran
 </p>
 </div>
 
+<div class="note-box">
+<strong>2026-04-03 correction: route family is fixed before the three-axis reading</strong>
+<p>
+The learning portal now makes one earlier stop line explicit. A reader should not start from one vague category such as <strong>human proxy evidence</strong> and only later ask how mature it is. First fix the <strong>route family</strong> itself. On this site, <strong>five-metabolite 1H-MRSI similarity</strong> is not <strong>deuterium kinetic-rate imaging</strong>; <strong>choroid-plexus perfusion</strong> is not <strong>blood-to-CSF transport</strong> or <strong>apparent BCSFB exchange</strong>; <strong>SMBT-1</strong> is not <strong>SL25.1188</strong> or <strong>I2BS</strong>; and <strong>TSPO</strong> is not <strong>CSF1R</strong> or <strong>COX-2</strong>. Only after that route-family split is fixed does it make sense to compare <strong>proxy class</strong>, <strong>operational maturity</strong>, and <strong>calibrator role</strong>, and only after those are typed should a reader ask whether a same-subject bundle survives <strong>composition</strong> or <strong>state continuity</strong>. If you want the stack-by-stack rule first, go to <a href="measurement-stack-and-claim-ceiling.html">Wiki: Observability and claim ceiling by measurement stack</a>. If you want the maintenance-state route cards first, go to <a href="homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>. If you want the bundle rule first, go to <a href="human-proxy-composition.html">Wiki: Human Proxy Composition and Route Maturity</a>.
+</p>
+</div>
+
 <table class="data-table">
 <thead>
 <tr>
@@ -97,12 +104,17 @@ The learning portal now treats living-human evidence more strictly at the entran
 <td><a href="../verification.html#state-completeness-gate">State variable completeness gate</a> / <a href="../tech_roadmap.html#qa-m3">M3 spatial granularity</a></td>
 </tr>
 <tr>
-<td><strong>I want to know what is directly visible in which measurement stack and which state variable is still latent with which time constant</strong></td>
+<td><strong>I want to know what each measurement stack directly sees, and why human spectroscopy / barrier / PET routes are not one ladder</strong></td>
 <td><a href="measurement-stack-and-claim-ceiling.html">Observability and claim ceiling per measurement stack</a></td>
 <td><a href="../verification.html#state-completeness-gate">State variable completeness gate</a> / <a href="../tech_roadmap.html#qa-m1">M1 observed variable</a></td>
 </tr>
 <tr>
-<td><strong>I want to know why current human proxy bundles and same-subject links still do not add up to same-state readout</strong></td>
+<td><strong>I want to know why 1H-MRSI, deuterium, BCSFB, astrocyte PET, and neuroimmune PET must be split before bundle reading</strong></td>
+<td><a href="measurement-stack-and-claim-ceiling.html">Observability and claim ceiling per measurement stack</a> / <a href="homeostatic-plasticity-and-maintenance-state.html">Homeostatic plasticity and maintenance state</a></td>
+<td><a href="../wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> / <a href="../verification.html#human-proxy-composition-card">Human Proxy Composition Card</a></td>
+</tr>
+<tr>
+<td><strong>I want to know why current human proxy bundles and same-subject links still do not add up to same-state readout even after the route family is fixed</strong></td>
 <td><a href="human-proxy-composition.html">Human proxy composition and route maturity</a> / <a href="state-continuity-bridge.html">State-Continuity Bridge</a></td>
 <td><a href="../wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> / <a href="../verification.html#human-proxy-composition-card">Human Proxy Composition Card</a> / <a href="../verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a></td>
 </tr>
