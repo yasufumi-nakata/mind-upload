@@ -4,7 +4,7 @@
 >
 > This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
 
-- Updated: 2026-04-03 / Role: U13-5 route packet
+- Updated: 2026-04-04 / Role: U13-5 route packet
 
 ## Role Of This Page
 This page fixes the current public route for U13-5 at the level of one question, one intended EEG route anchor, one bounded first artifact, and one funding bridge.
@@ -26,6 +26,20 @@ This page does not claim shared internal mechanism across perception and recall.
 # U13-5 perception-to-recall route packet
 
 This page does not change the current public six-question batch. It makes only the second active row more explicit, so readers can see why `U13-5` still stays next after `U13-2`, why `D03` now stays only as a gated support anchor for the present branch-point question, and what the next public-safe artifact can honestly close.
+
+## What still stays fixed after the 01:04 JST actual-pull reread on April 4, 2026
+
+- An actual-pull recheck at `2026-04-04 01:04 JST` after `mind-upload@9b6a8b971ba0`, `EEG-DATA@56d765da60b`, and `auto-research-funds@3c8569e28` still keeps `U13-5` second and still keeps `D03` only as the planned gated-support anchor for the present branch-point question.
+- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now carries the earlier `00:06 JST` route reread plus field-level artifact-stack disclosure tightening, `EEG-DATA` still reports `30,921` merged-unique rows, `28,884` high-confidence rows, `24,900` immediate rows, and `24,530` high-confidence immediate rows after deepening `Numbers` and `PRIOS`, and `auto-research-funds` adds current coverage for `同盟育成会` and `研究のすゝめ奨学金` without changing the practical shortlist.
+- The practical effect for this row stays narrow. The newest public-open carry-forwards still do not expose the recall-labeled branch point that this row needs, so `D03` stays only as the intended gated-support anchor in planning while `ChineseEEG-2`, `ZuCo 2.0`, and the spoken-plus-imagined robot-speech EEG family remain nearby backups.
+- Browser-level live checks before this source sync still returned `HTTP/2 200` for the current public entry pages and row packets with `Last-Modified: Fri, 03 Apr 2026 15:13:06 GMT`; the checked bodies still surfaced `2026-04-04 00:06 JST` wording before this source sync. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `ENEOS=1`, `同盟会=0`, `研究のすゝめ=0`), so this page only carries the same row-specific route forward onto the actual latest pulled heads.
+
+## What still stays fixed after the 00:06 JST actual-pull reread on April 4, 2026
+
+- An actual-pull recheck at `2026-04-04 00:06 JST` after `mind-upload@84d84fb5a82d`, `EEG-DATA@b468ecc5f8c0`, and `auto-research-funds@eccee095a939` still keeps `U13-5` second and still keeps `D03` only as the planned gated-support anchor for the present branch-point question.
+- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now just carries the earlier `23:06 JST` route reread addenda, `EEG-DATA` now reports `30,921` merged-unique rows, `28,884` high-confidence rows, `24,900` immediate rows, and `24,530` high-confidence immediate rows after adding a fast-mapping semantic-integration EEG resource, and `auto-research-funds` adds `Iizuka current card and Korean legacy sync` without changing the practical shortlist.
+- The practical effect for this row stays narrow. The newest public-open carry-forwards still do not expose the recall-labeled branch point that this row needs, so `D03` stays only as the intended gated-support anchor in planning while `ChineseEEG-2`, `ZuCo 2.0`, and the spoken-plus-imagined robot-speech EEG family remain nearby backups.
+- Browser-level live checks before this source sync still returned `HTTP/2 200` for the current public entry pages and row packets; the checked bodies still surfaced `22:04 JST` on `brief / bridge / U13-2` and `22:04/22:05 JST` on `issue` rather than a new row-specific claim. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `ENEOS=1`), so this page only carries the same row-specific route forward onto the actual latest pulled heads.
 
 ## What still stays fixed after the 23:06 JST actual-pull reread on April 3, 2026
 
