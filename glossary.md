@@ -506,7 +506,7 @@ If <strong>state annotation</strong>, <strong>state continuity</strong>, <strong
 </tr>
 <tr>
 <td><strong>Timing-state</strong></td>
-<td>Biological conduction-timing variables such as myelin, node / internode geometry, periaxonal coupling, and related support state. It is different from hardware latency. When human MRI is used as a proxy here, the site still treats myelin-water, MT-family, bilayer, and qT1-remyelination-sensitive routes as different quantity types rather than one direct timing readout.</td>
+<td>Biological conduction-timing variables such as myelin, node / internode geometry, periaxonal coupling, and related support state. It is different from hardware latency. When living-human proxy routes are used here, tract-scale transmission-speed estimation is treated as a separate timing-support route, and myelin-water, MT-family, bilayer, qT1-remyelination-sensitive, and T1w/FLAIR tissue-health-sensitive routes are treated as different quantity types rather than one direct timing readout.</td>
 </tr>
 <tr>
 <td><strong>Cargo-transport / cytoskeletal trafficking state</strong></td>
