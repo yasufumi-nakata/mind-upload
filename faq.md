@@ -5,7 +5,7 @@ description: "Short, precise answers to the questions that come up most often wh
 article_type: FAQ
 subtitle: "Prefer verifiable progress to flashy conclusions"
 author: Mind Uploading Research Project
-last_updated: "2026-04-03"
+last_updated: "2026-04-04"
 note: "Human-first"
 audience: "Readers who want to sort out questions and misconceptions first, and readers who want a quick overview through short Q&A"
 reading_time: "8-15 minutes"
@@ -328,8 +328,39 @@ At Mind-Upload, a result is not read as <strong>target-specific neural evidence<
 <section class="section" id="q1c2">
 <h2 class="section-title">Q. If a foundation-model or leaderboard result is strong, did we solve general EEG decoding?</h2>
 <p>
-A. Not by default. On this site, a large EEG model or leaderboard result is first read as <strong>benchmark-conditioned transfer evidence</strong>, not as automatic proof that a general neural decoder already exists. <a href="https://proceedings.iclr.cc/paper_files/paper/2024/file/47393e8594c82ce8fd83adc672cf9872-Paper-Conference.pdf" target="_blank">Jiang et al. (2024)</a> already treated mismatched electrodes, unequal sample lengths, varied task designs, and low signal-to-noise ratio as core EEG-side barriers even while reporting LaBraM, and <a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">Lee et al. (2025)</a> then found only <strong>marginal gains, about 0.5%</strong>, over conventional deep baselines despite much larger parameter counts. The newer setup-agnostic papers matter, but they matter in a narrower way: <a href="https://arxiv.org/abs/2507.14141" target="_blank">Han et al. (2025)</a> target <strong>channel-permutation equivariance</strong>, <a href="https://arxiv.org/abs/2510.12515" target="_blank">Chen et al. (2025)</a> target <strong>coordinate-based adaptation across heterogeneous devices and more than 150 layouts</strong>, and <a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025)</a> push setup-agnostic pretraining to more than <strong>60,000 hours</strong> from <strong>92 datasets</strong> and <strong>25,000 subjects</strong>. Those are advances in <strong>recording-frame compatibility</strong>. They are still not proof that different montages, coordinate routes, and reference families already preserve one shared <strong>physiology-side representation</strong>. <a href="https://arxiv.org/abs/2602.17251" target="_blank">Ma et al. (2026)</a> then show that strong EEG foundation models can still generalize poorly when <strong>subject-level supervision is limited</strong> unless extra adaptation structure is added, while <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a>, <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a>, and <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> show that protocol inconsistency, linear-probe versus fine-tuning regime, and pretraining-population diversity can materially change which checkpoint looks strongest.
+A. Not by default. On this site, a large EEG model or leaderboard result is first read as <strong>benchmark-conditioned transfer evidence</strong>, not as automatic proof that a general neural decoder already exists. The current literature already splits that evidence into at least four different objects. <a href="https://proceedings.iclr.cc/paper_files/paper/2024/file/47393e8594c82ce8fd83adc672cf9872-Paper-Conference.pdf" target="_blank">Jiang et al. (2024)</a> already treated mismatched electrodes, unequal sample lengths, varied task designs, and low signal-to-noise ratio as core EEG-side barriers even while reporting LaBraM, and <a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">Lee et al. (2025)</a> then found only <strong>marginal gains, about 0.5%</strong>, over conventional deep baselines despite much larger parameter counts. The newer setup-agnostic papers matter, but they matter in a narrower way: <a href="https://arxiv.org/abs/2507.14141" target="_blank">Han et al. (2025)</a> target <strong>channel-permutation equivariance</strong>, <a href="https://arxiv.org/abs/2510.12515" target="_blank">Chen et al. (2025)</a> target <strong>coordinate-based adaptation across heterogeneous devices and more than 150 layouts</strong>, and <a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025)</a> push setup-agnostic pretraining to more than <strong>60,000 hours</strong> from <strong>92 datasets</strong> and <strong>25,000 subjects</strong>. Those are advances in <strong>recording-frame compatibility</strong>. They are still not proof that different montages, coordinate routes, and reference families already preserve one shared <strong>physiology-side representation</strong>. <a href="https://arxiv.org/abs/2602.17251" target="_blank">Ma et al. (2026)</a> then show that strong EEG foundation models can still generalize poorly when <strong>subject-level supervision is limited</strong> unless extra adaptation structure is added, while <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a>, <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a>, and <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> show that protocol inconsistency, linear-probe versus fine-tuning regime, and pretraining-population diversity can materially change which checkpoint looks strongest.
 </p>
+<table class="data-table">
+<thead>
+<tr>
+<th>If the paper directly advances...</th>
+<th>Representative sources</th>
+<th>What still must stop here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>representation learning / efficiency</strong></td>
+<td><a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">Kostas et al. (2021)</a>, <a href="https://proceedings.iclr.cc/paper_files/paper/2024/file/47393e8594c82ce8fd83adc672cf9872-Paper-Conference.pdf" target="_blank">Jiang et al. (2024)</a>, <a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">Lee et al. (2025)</a></td>
+<td>Do not promote that result to a solved general decoder or a source-identifiable subject-invariant representation.</td>
+</tr>
+<tr>
+<td><strong>recording-frame compatibility</strong></td>
+<td><a href="https://arxiv.org/abs/2507.14141" target="_blank">Han et al. (2025)</a>, <a href="https://arxiv.org/abs/2510.12515" target="_blank">Chen et al. (2025)</a>, <a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025)</a></td>
+<td>Do not treat layout tolerance or heterogeneous-device support as one shared physiology-preserving coordinate system.</td>
+</tr>
+<tr>
+<td><strong>label-limited adaptation rescue</strong></td>
+<td><a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">Lee et al. (2025)</a>, <a href="https://arxiv.org/abs/2602.17251" target="_blank">Ma et al. (2026)</a></td>
+<td>Do not say the pretrained model transferred without rescue, or that adaptation burden has disappeared from deployment.</td>
+</tr>
+<tr>
+<td><strong>benchmark governance / postmortem</strong></td>
+<td><a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025)</a>, <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a>, <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a>, <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a></td>
+<td>Do not read one leaderboard or benchmark paper as a stable field-wide capability ladder.</td>
+</tr>
+</tbody>
+</table>
 <p>
 The benchmark object itself can also move. The official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) homepage</a> states that the proposal preprint is already <strong>out of date</strong> relative to execution-phase changes and that the current website plus Starter Kit should be treated as authoritative. The official <a href="https://eeg2025.github.io/data/" target="_blank">data page</a> shows that the benchmark family mixes <strong>six EEG tasks</strong> with <strong>psychopathology-factor prediction</strong>, while the official <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a> and <a href="https://eeg2025.github.io/submission/" target="_blank">submission page</a> fix <strong>downsampled 100 Hz data</strong>, disclosure of <strong>extra pretraining corpora / pretrained checkpoints / fine-tuning method</strong>, a <strong>single-GPU 20 GB inference-stage constraint</strong>, and an <strong>inference-only code-submission regime</strong>. The final <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> then disclosed that Challenge 2 samples had not been randomized, allowing contiguous-trial same-subject structure to influence ranking and forcing separate awards. That means benchmark governance is not administrative detail; it changes what the score is allowed to mean.
 </p>

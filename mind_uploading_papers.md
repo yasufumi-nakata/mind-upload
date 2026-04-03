@@ -5,7 +5,7 @@ description: "An archive of major Mind Uploading-related papers from the past de
 article_type: "Paper Archive"
 subtitle: "A place to track trends by year and return to the original text only for the papers you need"
 author: Mind Uploading Research Project
-last_updated: "2026-04-03"
+last_updated: "2026-04-04"
 known_points:
   - "This page is a broad archive of related papers, not a page that fixes the final evaluation of each paper."
   - "Reading by year makes it easier to see which issues are attracting attention over time."
@@ -13,7 +13,7 @@ known_points:
   - "This is a broad archive that also includes law, philosophy, and cultural theory, so the technological frontier should not be judged only from the top of a given year."
   - "A compact 2025-2026 technical-only shortlist now sits ahead of the mixed year cards so readers can skip archive noise when they only want current primary routes."
   - "For the technical frontier, the core pages cite issue year, but raw 2025-2026 adjacency is not treated as one frontier step because online-publication dates can still differ materially from the cited issue year."
-  - "Foundation-model / pretraining papers do not only say something about model scale; official challenge rules and leaderboard postmortems also say something about what the benchmark itself was measuring."
+  - "EEG foundation-model evidence is no longer read here as one frontier row: representation-learning / efficiency, recording-frame compatibility, label-limited adaptation rescue, and benchmark-governance / postmortem papers constrain different objects and should not be collapsed into one leaderboard story."
   - "Source-imaging papers do not begin at the inverse solver; field-formation visibility remains an upstream route that determines which source classes can reach the sensors at all."
   - "Inverse-family source-imaging papers do not constrain one shared object either: focal posterior support, sparse debiased inference, extended-source uncertainty, forward-model / conductivity sensitivity, and named validation boards remain separate reading routes."
   - "Wearable OPM-MEG is not one portability route either; shielding class, field nulling, calibration / coregistration, anatomy route, crosstalk, and task regime remain separate reading burdens."
@@ -267,6 +267,12 @@ The literature front door still had one missing U3 split inside the molecular-ma
 The literature front door also needed one slower boundary. <a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998)</a> and <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007)</a> showed that glucocorticoid state can impair retrieval and reduce human hippocampal / prefrontal retrieval activity. <a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">McCauley et al. (2020)</a>, <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone et al. (2023)</a>, and <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">Birnie et al. (2023)</a> showed that circadian timing and corticosteroid rhythm change hippocampal plasticity machinery, while <a href="https://doi.org/10.3233/JAD-2008-13309" target="_blank">Reger et al. (2008)</a> and <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">Sherman et al. (2015)</a> show that insulin delivery and circadian-rhythm consistency can shift human memory or hippocampal activity. Therefore, papers in the fixed-decoder, recalibration, or deployability lane are no longer read here from <strong>latency</strong>, <strong>jitter</strong>, or <strong>drift curves</strong> alone. The safe reading now also asks whether <strong>slow internal-milieu routes</strong> such as circadian phase, glucocorticoid state, and insulin / metabolic regime were controlled, measured, perturbed, or left latent.
 </p>
 </div>
+<div class="note-box">
+<strong>Read EEG foundation-model papers through a four-way route split</strong>
+<p>
+The technical front door still had one remaining compression inside the EEG foundation-model lane. The current literature and official benchmark operations do <strong>not</strong> support reading <strong>foundation models</strong> as one common frontier step. <a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">Kostas et al. (2021)</a>, <a href="https://proceedings.iclr.cc/paper_files/paper/2024/file/47393e8594c82ce8fd83adc672cf9872-Paper-Conference.pdf" target="_blank">Jiang et al. (2024)</a>, and <a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">Lee et al. (2025)</a> constrain a <strong>representation-learning / efficiency</strong> lane. <a href="https://arxiv.org/abs/2507.14141" target="_blank">Han et al. (2025)</a>, <a href="https://arxiv.org/abs/2510.12515" target="_blank">Chen et al. (2025)</a>, and <a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025)</a> constrain a <strong>recording-frame compatibility</strong> lane. <a href="https://arxiv.org/abs/2602.17251" target="_blank">Ma et al. (2026)</a> support a <strong>label-limited adaptation rescue</strong> lane. The official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) homepage</a>, <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a>, <a href="https://eeg2025.github.io/submission/" target="_blank">submission page</a>, and <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a>, together with <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a>, <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a>, and <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a>, constrain a <strong>benchmark-governance / postmortem</strong> lane. Therefore, this archive now splits that literature into four rows before any reader treats one model family, one setup paper, one adaptation result, or one leaderboard as if they already formed one general decoder story.
+</p>
+</div>
 <table class="data-table">
 <thead>
 <tr>
@@ -328,11 +334,32 @@ The literature front door also needed one slower boundary. <a href="https://doi.
 <td><a href="wiki/multimodal-integration-basics.html">Wiki: multimodal integration basics</a> / <a href="wiki/measurement-stack-and-claim-ceiling.html#eeg-meg-validation-wall">Wiki: EEG / MEG validation wall</a></td>
 </tr>
 <tr>
-<td><strong>EEG foundation models / pretraining governance</strong></td>
-<td><a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">Kostas et al. (2021)</a>, <a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/47393e8594c82ce8fd83adc672cf9872-Abstract-Conference.html" target="_blank">Jiang et al. (2024)</a>, <a href="https://openreview.net/forum?id=J5SbLoq7Uv" target="_blank">Lee et al. (2025)</a>, <a href="https://eeg2025.github.io/leaderboard/" target="_blank">EEG Challenge 2025</a>, <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a>, <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a></td>
-<td>Large-scale pretraining clearly strengthens representation learning and low-label transfer, but the primary sources and official challenge operations also show that <strong>corpus disclosure</strong>, <strong>adaptation regime</strong>, <strong>split construction</strong>, and <strong>inference-stage budget</strong> materially change how a score should be read.</td>
-<td>It does not show that generalization is solved, that larger models win by default, or that a leaderboard is already evidence of portable subject-invariant decoding, source identifiability, or WBE-relevant state capture.</td>
+<td><strong>EEG foundation models / representation-learning base</strong></td>
+<td><a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">Kostas et al. (2021)</a>, <a href="https://proceedings.iclr.cc/paper_files/paper/2024/file/47393e8594c82ce8fd83adc672cf9872-Paper-Conference.pdf" target="_blank">Jiang et al. (2024)</a>, <a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">Lee et al. (2025)</a></td>
+<td>Self-supervised or large-scale pretraining can improve <strong>representation learning</strong> and some <strong>low-label downstream transfer</strong>, but current accepted papers still show modest gains and efficiency limits. What gets stronger directly is a reusable representation under named task families, not a settled general decoder.</td>
+<td>It still does not show that generalization is solved, that larger models win by default, or that subject-invariant source-identifiable decoding has been achieved.</td>
 <td><a href="wiki/eeg-foundation-models.html">Wiki: EEG foundation models and pretraining</a> / <a href="verification.html#pretraining-card">Verification: Pretraining Card</a></td>
+</tr>
+<tr>
+<td><strong>EEG foundation models / recording-frame compatibility</strong></td>
+<td><a href="https://arxiv.org/abs/2507.14141" target="_blank">Han et al. (2025)</a>, <a href="https://arxiv.org/abs/2510.12515" target="_blank">Chen et al. (2025)</a>, <a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025)</a></td>
+<td>Channel-permutation equivariance, coordinate-based embeddings, and any-setup pretraining make heterogeneous devices and layouts more tractable. What gets stronger directly is <strong>recording-frame compatibility under declared geometry and reference policies</strong>.</td>
+<td>It still does not show one shared physiology-preserving coordinate system, shortcut-resistant transfer, or route-free montage equivalence across devices, references, and omitted channels.</td>
+<td><a href="wiki/eeg-foundation-models.html#setup-equivalence">Wiki: setup compatibility is not physiological equivalence</a> / <a href="verification.html#pretraining-card">Verification: Pretraining Card</a></td>
+</tr>
+<tr>
+<td><strong>EEG foundation models / label-limited adaptation rescue</strong></td>
+<td><a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">Lee et al. (2025)</a>, <a href="https://arxiv.org/abs/2602.17251" target="_blank">Ma et al. (2026)</a></td>
+<td>PEFT / LoRA and structured adaptation can recover downstream performance while lowering trainable burden when target labels are scarce. What gets stronger directly is an <strong>adaptation policy under a named label budget</strong>, not the claim that the pretrained representation transferred without rescue.</td>
+<td>It still does not show zero-shot clinical portability, low-maintenance deployment, or that adaptation burden has disappeared from cross-subject / cross-day use.</td>
+<td><a href="wiki/eeg-foundation-models.html">Wiki: EEG foundation models and pretraining</a> / <a href="verification.html#pretraining-card">Verification: Pretraining Card</a></td>
+</tr>
+<tr>
+<td><strong>EEG benchmarks / governance and postmortem</strong></td>
+<td><a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) homepage</a>, <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a>, <a href="https://eeg2025.github.io/submission/" target="_blank">submission</a>, <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a>, <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a>, <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a>, <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a></td>
+<td>Official operations and benchmark papers now show that <strong>task mix</strong>, <strong>split construction</strong>, <strong>hidden grouping</strong>, <strong>checkpoint selection</strong>, <strong>normalization</strong>, and <strong>inference-stage budget</strong> materially change what a leaderboard or benchmark score means.</td>
+<td>It still does not show that one leaderboard or one benchmark paper has fixed a universal ranking, portable subject-invariant decoding, or a stable capability ladder for EEG foundation models.</td>
+<td><a href="wiki/eeg-foundation-models.html#nine-gates">Wiki: the 10 gates before reading a foundation model</a> / <a href="verification.html#pretraining-card">Verification: Pretraining Card</a></td>
 </tr>
 <tr>
 <td><strong>effective connectivity / DCM route card</strong></td>
