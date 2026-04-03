@@ -6,7 +6,7 @@ article_type: Reference
 subtitle: "Start by keeping the words straight"
 author: Mind Uploading Research Project
 last_updated: "2026-04-03"
-note: "Living document"
+note: "Living document (updated with thermodynamic route-card sync)"
 audience: "Readers who do not want to get stuck on terminology and anyone trying to avoid category mistakes"
 reading_time: "3 to 10 minutes for only the necessary items"
 page_intro: "This page is a glossary for the terms that appear most often in Mind-Upload. It starts with short everyday-language explanations, then points you back to the more rigorous pages when needed."
@@ -17,6 +17,7 @@ page_highlights:
   - "It now also includes the human-observability and support-state terms needed after the late-March and early-April 2026 deepening passes, such as proxy class, route maturity / model burden, route role, calibrator role, support-state proxy, glial substrate-routing, target-defined astrocyte-related proxy, and macro clearance-transport proxy family."
   - "It now also defines the newer route-card semantics added in the late-March 2026 passes, such as field-formation wall, Fusion Card, Human Proxy Composition Card, shared-driver audit, strongest single row, and State-Continuity Bridge Card."
   - "It now also makes the effective-connectivity stop line explicit at the front door: effective-connectivity route card, observed-subsystem closure / latent-confound audit, node-definition policy, processing / first-level design policy, sampling / transformation sensitivity, reliability window, and model recovery / family comparison are no longer left implicit."
+  - "It now also makes the thermodynamic stop line explicit at the front door: coarse-graining / timescale, observed-state closure / hidden-degree risk, reverse-transition support / finite-data handling, stability / nuisance sensitivity, cross-estimator concordance, and physiology-side grounding / bridge quality are no longer left implicit."
   - "It now also includes the temporal-bridge stop line added in the 2026-03-30 sync, namely the split between fast state labels and slow internal milieu."
   - "It now also fixes tractography-specific stop-line terms such as macro pathway prior and tractography route card, so living-human connectome language is not overread."
   - "It now also includes the electrical-state stop-line terms needed after the 2026-04-03 human-clue split, such as shared extracellular / electrical state, human ECS proxy clue, and human perturbation-conditioned clue."
@@ -27,6 +28,7 @@ known_points:
   - "It is especially important to distinguish between decode/emulate, correlation/causation, functional connectivity/effective connectivity/causal wiring, observability/identifiability, model fit/direct validation, and brain signal/language prior."
   - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, glial substrate-routing, astrocyte-state, target-defined astrocyte-related proxy, clearance / immune support, macro clearance-transport proxy family, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, route-role, route-maturity, and calibrator-role language."
   - "For effective connectivity, candidate model space alone is still too coarse; observed-subsystem closure, node-definition policy, processing / first-level design policy, sampling / transformation sensitivity, model recovery, reliability window, and abstention each carry a different failure mode."
+  - "For thermodynamic language, estimator family alone is still too coarse; coarse-graining, hidden-degree risk, reverse-transition support, stability, cross-estimator concordance, physiology-side grounding, bridge quality, and abstention each carry a different failure mode."
   - "Support-state proxy is still too coarse unless quantity type or route role is also named explicitly."
   - "Readers also need a term-level split between fast state labels such as movement / arousal and slow internal milieu such as circadian phase, glucocorticoid exposure, and insulin / metabolic regime."
   - "Readers also need a term-level stop line between connectome as structural scaffold and living-human tractography as an acquisition- and graph-conditioned macro pathway prior."
@@ -238,6 +240,13 @@ If names such as <strong>field-formation wall</strong>, <strong>Fusion Card</str
 <strong>When effective-connectivity words start sounding too close to discovered wiring</strong>
 <p>
 If terms such as <strong>effective-connectivity route card</strong>, <strong>observed-subsystem closure / latent-confound audit</strong>, <strong>node-definition policy</strong>, <strong>processing / first-level design policy</strong>, <strong>sampling / transformation sensitivity</strong>, <strong>reliability window</strong>, or <strong>model recovery / family comparison</strong> start appearing faster than they can be digested, that is a sign the site is trying to stop a real overread. On this site, a directed graph is not promoted beyond a <strong>model-conditioned causal hypothesis</strong> until those terms are disclosed. If that distinction is what you need next, go to <a href="wiki/observation-to-estimation.html#effective-connectivity-route-card">Wiki: effective-connectivity route card</a>, <a href="faq.html">FAQ</a>, and <a href="verification.html#observability-budget">Verification: Observability Budget</a>.
+</p>
+</div>
+
+<div class="note-box">
+<strong>When thermodynamic words start sounding too close to measured cost</strong>
+<p>
+If terms such as <strong>Irreversibility / Thermodynamic Route Card</strong>, <strong>coarse-graining / timescale</strong>, <strong>observed-state closure / hidden-degree risk</strong>, <strong>reverse-transition support / finite-data handling</strong>, <strong>stability / nuisance sensitivity</strong>, <strong>cross-estimator concordance</strong>, or <strong>physiology-side grounding / bridge quality</strong> start appearing faster than they can be digested, that is a sign the site is trying to stop a real overread. On this site, an irreversibility result is not promoted beyond <strong>exploratory auxiliary evidence</strong> until those terms are disclosed. If that distinction is what you need next, go to <a href="wiki/thermodynamic-grounding-basics.html#irreversibility-route-card">Wiki: irreversibility route card</a>, <a href="faq.html#q1f">FAQ</a>, and <a href="verification.html#thermodynamic-verification">Verification: thermodynamic indicators</a>.
 </p>
 </div>
 
@@ -764,11 +773,35 @@ If <strong>state annotation</strong>, <strong>state continuity</strong>, <strong
 </tr>
 <tr>
 <td><strong>Irreversibility / EPR proxy</strong></td>
-<td>A family of estimates derived from time asymmetry or entropy-production logic. In Mind-Upload, this is not one common measurement object: lower-bound estimates, asymmetry scores, visibility-graph indices, and model-based entropy-flow estimates are kept separate.</td>
+<td>A family of estimates derived from time asymmetry or entropy-production logic. In Mind-Upload, this is not one common measurement object: lower-bound estimates, asymmetry scores, visibility-graph indices, and model-based entropy-flow estimates are kept separate, and even a named estimator family still does not fix coarse-graining, hidden-degree risk, or operational stability.</td>
 </tr>
 <tr>
 <td><strong>Irreversibility / Thermodynamic Route Card</strong></td>
-<td>The disclosure rule for reporting thermodynamic-style claims: state the signal route, state definition, estimator family, null / surrogate control, quantity type, cost isolation, and abstention boundary before the claim ceiling is raised.</td>
+<td>The disclosure rule for reporting thermodynamic-style claims: state the signal route and state definition, coarse-graining / timescale, observed-state closure / hidden-degree risk, estimator family and quantity type, null / surrogate control, reverse-transition support / finite-data handling, stability / nuisance sensitivity, physiology-side grounding / bridge quality if energetic language is used, cost isolation, and abstention boundary before the claim ceiling is raised.</td>
+</tr>
+<tr>
+<td><strong>Coarse-graining / timescale</strong></td>
+<td>The state-space construction behind the estimate: parcelization or clustering rule, retained features, temporal bins, sampling rate, and analysis window. Changing these choices can change what quantity was actually computed.</td>
+</tr>
+<tr>
+<td><strong>Observed-state closure / hidden-degree risk</strong></td>
+<td>The risk that hidden variables, hidden cycles, or memory introduced by coarse graining still carry dissipation that the reported trajectory does not see. A small irreversibility number is not automatically near-equilibrium.</td>
+</tr>
+<tr>
+<td><strong>Reverse-transition support / finite-data handling</strong></td>
+<td>Whether the relevant forward and reverse transitions were actually observed often enough, and how zero or rare counts were handled. A clean shuffle or surrogate is not the same thing as adequate support coverage.</td>
+</tr>
+<tr>
+<td><strong>Stability / nuisance sensitivity</strong></td>
+<td>Whether the result survives motion, denoising, protocol changes, and test-retest checks. A mathematically interesting metric is not automatically a reusable operational signal.</td>
+</tr>
+<tr>
+<td><strong>Cross-estimator concordance</strong></td>
+<td>Whether the sign or ordering survives more than one reasonable estimator family or state-space construction, rather than remaining an estimator-specific artifact.</td>
+</tr>
+<tr>
+<td><strong>Physiology-side grounding / bridge quality</strong></td>
+<td>Whether metabolism or energetic cost was directly measured and aligned in the same session / state window, and whether agreement or disagreement across modalities was quantified. Paired modalities alone do not make a signal-side irreversibility measure a direct metabolic readout.</td>
 </tr>
 </tbody>
 </table>
@@ -784,7 +817,7 @@ Although non-invasive decoding and ESI are making steady progress, a successful 
 <div class="note-box">
 <strong>Thermodynamic words also need a claim ceiling</strong>
 <p>
-<a href="https://doi.org/10.1038/nature10872" target="_blank">Bérut et al. (2012)</a>, <a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">Attwell &amp; Laughlin (2001)</a>, <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn et al. (2021)</a>, <a href="https://doi.org/10.1038/s42003-022-03505-7" target="_blank">Deco et al. (2022)</a>, <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">de la Fuente et al. (2023)</a>, <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">Nartallo-Kaluarachchi et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> do not all compute the same quantity. In Mind-Upload, <strong>thermodynamic result</strong> therefore does not automatically mean measured physical dissipation, wall-power, or a WBE gate.
+<a href="https://doi.org/10.1038/nature10872" target="_blank">Bérut et al. (2012)</a>, <a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">Attwell &amp; Laughlin (2001)</a>, <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn et al. (2021)</a>, <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">de la Fuente et al. (2023)</a>, <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">Nartallo-Kaluarachchi et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> do not all compute the same quantity. <a href="https://doi.org/10.1038/s41467-019-11051-w" target="_blank">Martínez et al. (2019)</a> and <a href="https://doi.org/10.1073/pnas.2318333121" target="_blank">Blom et al. (2024)</a> show that partial observation or coarse lumping can hide dissipation and induce memory, <a href="https://doi.org/10.1038/s42005-024-01742-2" target="_blank">Baiesi et al. (2024)</a> show that sparse reverse transitions can force lower-bound strategies, <a href="https://doi.org/10.1007/s12021-024-09652-y" target="_blank">Poudel et al. (2024)</a> and <a href="https://doi.org/10.1002/hbm.26778" target="_blank">Metzen et al. (2024)</a> show that operational stability depends on metric family and nuisance handling, and <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> plus <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> show that temporal coupling or BOLD change is not automatic energetic grounding. In Mind-Upload, a <strong>thermodynamic result</strong> therefore does not automatically mean measured physical dissipation, reusable operational metric, matched metabolism-side evidence, wall-power, or a WBE gate.
 </p>
 </div>
 
@@ -929,6 +962,13 @@ Although non-invasive decoding and ESI are making steady progress, a successful 
 <li>de la Fuente, L. A., et al. (2023). Temporal irreversibility of neural dynamics as a signature of consciousness. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
 <li>Nartallo-Kaluarachchi, R., et al. (2025). Multilevel irreversibility reveals higher-order organization of nonequilibrium interactions in human brain dynamics. <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">doi:10.1073/pnas.2408791122</a></li>
 <li>Ishihara, K., &amp; Shimazaki, H. (2025). State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics. <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
+<li>Mart&iacute;nez, I. A., Bisker, G., Horowitz, J. M., &amp; Parrondo, J. M. R. (2019). Inferring broken detailed balance in the absence of observable currents. <a href="https://doi.org/10.1038/s41467-019-11051-w" target="_blank">doi:10.1038/s41467-019-11051-w</a></li>
+<li>Blom, K., Song, K., Vouga, E., Godec, A., &amp; Makarov, D. E. (2024). Milestoning estimators of dissipation in systems observed at a coarse resolution. <a href="https://doi.org/10.1073/pnas.2318333121" target="_blank">doi:10.1073/pnas.2318333121</a></li>
+<li>Baiesi, M., Falasco, G., &amp; Moghimi-Araghi, S. (2024). Effective estimation of entropy production with lacking data. <a href="https://doi.org/10.1038/s42005-024-01742-2" target="_blank">doi:10.1038/s42005-024-01742-2</a></li>
+<li>Poudel, R., et al. (2024). Network representation of fMRI data using visibility graphs: the impact of motion and test-retest reliability. <a href="https://doi.org/10.1007/s12021-024-09652-y" target="_blank">doi:10.1007/s12021-024-09652-y</a></li>
+<li>Metzen, D., et al. (2024). Reliability of variability and complexity measures for task and task-free BOLD fMRI. <a href="https://doi.org/10.1002/hbm.26778" target="_blank">doi:10.1002/hbm.26778</a></li>
+<li>Chen, Y., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
+<li>Epp, S. M., Castrillon, G., Yuan, B., et al. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
 <li>Albantakis, L., et al. (2023). Integrated Information Theory (IIT) 4.0. <a href="https://doi.org/10.1371/journal.pcbi.1011465" target="_blank">doi:10.1371/journal.pcbi.1011465</a></li>
 <li>Friston, K. (2010). The free-energy principle. <a href="https://doi.org/10.1038/nrn2787" target="_blank">doi:10.1038/nrn2787</a></li>
 <li>Casali, A. G., et al. (2013). PCI. <a href="https://doi.org/10.1126/scitranslmed.3006294" target="_blank">doi:10.1126/scitranslmed.3006294</a></li>
