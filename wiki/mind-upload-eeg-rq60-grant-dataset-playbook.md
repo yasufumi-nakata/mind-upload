@@ -55,6 +55,15 @@ recommended_pages:
 - The six current public rows below are now synchronized to `Dxx + DOI + dataset name + access class`, so the playbook no longer needs numeric search IDs for `U13-2/U13-5/U0-2/U0-3/U14-4/U14-2`.
 - `tech_roadmap.md` also contains `U2/U5/U6/U9`, but those roadmap families are not yet translated into this playbook's current `RQ60` practical layer.
 
+## Latest live-source addendum (2026-04-03 20:05 JST)
+
+- An actual-pull reread after `mind-upload@b4fd73d9e98301c918b57541704a95246d69ae09`, `EEG-DATA@649ff098ab577f11065562379150acea1aa07002`, and `auto-research-funds@7c1b835d1d138214f282dc85d2f06d9faa522310` still leaves this playbook's practical reading unchanged.
+- The current route still stays fixed on `D10 / D03 / D02 / D01` for the public six and `U7-1 -> U1-2 -> U4-2 -> U8-1` for the outside-current-six queue; the newest `mind-upload` head now splits human thermal evidence outside the active batch into `passive / task-linked macro thermometry` and `perturbation-conditioned thermal routes`, `EEG-DATA` adds a restricted BDSP Alzheimer `TMS-EEG + rsEEG` resource while now keeping `30,912` merged-unique rows, `28,875` high-confidence rows, and `24,894` directly usable rows, and `auto-research-funds` completes current-card coverage for `ENEOS` and `G-7` without displacing the current practical shortlist.
+- Route-safe access wording still stays narrow: `D10` remains the only clear public-open primary anchor, while `D03 / D02 / D01` remain gated-support planning anchors because no newest pulled head turns those three routes into immediate public anchors.
+- Browser-level live checks at `2026-04-03 20:05 JST` returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u13-2-brain-minus-prior-route.html`; the current `Last-Modified` header was `Fri, 03 Apr 2026 10:19:46 GMT` on those public surfaces, while the checked bodies still surfaced the earlier `11:05/11:07 JST` hold note before this source sync.
+- Official window spot checks in this run still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09 (must arrive)`, `Nakatani Foundation research grant = closed / next-cycle watch`, and `Secom General Research Grant = closed (2026-03-31 12:00 JST)`.
+- A fresh read-only Todoist `api/v1/sync(items, projects)` audit still showed enough route coverage (`items=205`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`), so no new task was added in this run.
+
 ## Latest live-source addendum (2026-04-03 11:05 JST)
 
 - An actual-pull reread after `mind-upload@f70432e4a6c8a52afafbc57b98c8f0e360c85d4e`, `EEG-DATA@1981d34c5f71deceb2549684db9173b6f54d2b89`, and `auto-research-funds@bfebe94da875d709756746285f133ef30905fd38` still leaves this playbook's practical reading unchanged.
