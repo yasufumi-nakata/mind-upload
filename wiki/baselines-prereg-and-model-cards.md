@@ -1,29 +1,30 @@
 ---
 layout: default
 title: "Wiki: Baseline / Benchmark / Pre-registration / Model Card"
-description: "Organizes baseline, benchmark, pre-registration, model cards, and claim-triggered companion and route-specific cards so a score is not confused with comparable evidence."
+description: "Organizes baseline, benchmark, pre-registration, model cards, and the current claim-triggered companion, route-specific, and field-level card requirements so a score is not confused with comparable evidence."
 article_type: Wiki
-subtitle: "From score reporting to the artifact stack required by the claim"
+subtitle: "From score reporting to the current artifact stack required by the claim"
 author: Mind Uploading Research Project
-last_updated: "2026-03-30"
-note: "Learning guide"
+last_updated: "2026-04-04"
+note: "Learning guide / current card-field sync"
 audience: "People who find baseline, benchmark, pre-registration, and model-card language similar, and people who want to know which extra cards are required before a stronger claim is allowed"
 reading_time: "12-18 minutes"
-page_intro: "This page explains the operational difference among baseline, benchmark, pre-registration, model card, and the additional cards that become necessary when a result depends on multimodal fusion, large-scale pretraining, shortcut resistance, language-facing decoding, route-specific measurement / inference claims, living-human proxy bundles, or sequential same-subject bridges."
+page_intro: "This page explains the operational difference among baseline, benchmark, pre-registration, model card, and the additional cards that become necessary when a result depends on multimodal fusion, large-scale pretraining, shortcut resistance, language-facing decoding, route-specific measurement / inference claims, living-human proxy bundles, or sequential same-subject bridges. The current revision also shows where card names alone became too coarse and where field-level disclosure is now required."
 accuracy_note: "This page is a learning guide to the artifact stack. The authoritative card fields and stop rules still live on the public Verification page."
 page_highlights:
   - "A benchmark is not just a score sheet; on this site it also includes split rules, metric semantics, and benchmark governance."
   - "A normal model card is not enough for every claim shape; some results need claim-triggered companion cards, and some now also need route-specific cards or logs."
   - "For decode or representation claims, shortcut resistance is a separate audit from score reporting."
   - "For language-facing text / speech outputs, the Neural Contribution Card is now treated separately from the generic shortcut audit."
-  - "For multimodal or atlas-prior claims, a Fusion Card is separate from synchronization middleware or co-registration."
+  - "For multimodal or atlas-prior claims, a Fusion Card is separate from synchronization middleware or co-registration, and now also has to separate effective-window mismatch, shared-vs-specific factors, quantity bridges, and bundle robustness."
   - "For ESI, tractography, effective-connectivity, and thermodynamic claims, the current site rule now asks for route-specific disclosure rather than only a generic model card."
-  - "For several living-human proxy rows used together, a Human Proxy Composition Card is required before same-subject state-identification language is allowed."
-  - "For same-subject or same-brain sequential bridges, a State-Continuity Bridge Card is required before same-state language is allowed."
+  - "For several living-human proxy rows used together, a Human Proxy Composition Card is required before same-subject state-identification language is allowed, and it now also has to disclose role by row, regime compatibility, operational maturity, calibrator role, and disagreement topology."
+  - "For same-subject or same-brain sequential bridges, a State-Continuity Bridge Card is required before same-state language is allowed, and it now also has to name the carried object, tolerance / failure rule, and rescue route."
 known_points:
   - "Comparable progress requires a baseline, a benchmark object, preregistered stopping rules, a result report, and explicit failure disclosure."
   - "Benchmark meaning depends not only on the dataset and score, but also on split randomness, metric bundle, extra-data policy, operational constraints, and postmortems."
   - "Observability Budget, Specificity & Shortcut Card, Neural Contribution Card, Fusion Card, Pretraining Card, route-specific cards / logs, Human Proxy Composition Card, Temporal Validity Card, Calibration & Abstention Card, and State-Continuity Bridge Card answer different failure modes."
+  - "Card names alone are no longer sufficient on this site: Fusion, Human Proxy Composition, and State-Continuity Bridge Cards each now require field-level disclosure to block newer forms of overreading."
   - "A higher score can still be scientifically weak if the artifact stack does not match the claim being made."
 unknown_points:
   - "Which subsets of this artifact stack will become field-wide defaults beyond this site is still unsettled."
@@ -103,6 +104,13 @@ The next weakness on this page was narrower but important: it still listed only 
 </p>
 </div>
 
+<div class="note-box">
+<strong>2026-04-04 addendum: three cards now need field-level disclosure, not name-level disclosure</strong>
+<p>
+The next weakness on this page became visible only after the route-stack expansion: three cards still sounded satisfied by a short label even though the current primary literature says otherwise. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025)</a>, <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a>, <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">Rohaut et al. (2024)</a>, and <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> show why <strong>Fusion</strong> still has to separate synchronization, temporal-kernel relation, shared-vs-specific structure, quantity bridge, and bundle robustness. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1186/s41747-024-00426-4" target="_blank">B&oslash;gh et al. (2024)</a>, <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a>, and <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> show why <strong>Human Proxy Composition</strong> still has to separate quantity type, operating-point dependence, method-family non-equivalence, and disagreement topology. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a>, <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">Gallego et al. (2020)</a>, <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a>, <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> show why <strong>State-Continuity Bridge</strong> still has to name the carried object, tolerance rule, and rescue route rather than relying on specimen identity or score survival alone. Therefore, this guide no longer treats those three cards as satisfied by a short name plus one sentence.
+</p>
+</div>
+
 <section class="section" id="roles">
 <h2 class="section-title">First separate the roles</h2>
 <table class="data-table">
@@ -152,7 +160,7 @@ The next weakness on this page was narrower but important: it still listed only 
 <tr>
 <td><strong>Fusion Card</strong></td>
 <td>The multimodal / atlas-prior integration audit.</td>
-<td>Fixes acquisition relation, lag audit, co-registration, fusion model, unimodal baselines, external calibration, and abstention.</td>
+<td>Fixes acquisition relation, lag audit, <strong>effective-window / temporal-kernel relation</strong>, geometry / co-registration scope, fusion model, <strong>shared-vs-specific component disclosure</strong>, <strong>quantity bridge / physiology grounding</strong>, unimodal baselines, <strong>complete-case / missing-modality disclosure</strong>, transfer or disagreement window, external calibration, and abstention.</td>
 </tr>
 <tr>
 <td><strong>Pretraining Card</strong></td>
@@ -167,12 +175,12 @@ The next weakness on this page was narrower but important: it still listed only 
 <tr>
 <td><strong>Human Proxy Composition Card</strong></td>
 <td>The bundle audit for several living-human proxy rows.</td>
-<td>Fixes proxy class, direct observable, same-subject relation, model burden, incremental evidence, and residual latent-state ceiling.</td>
+<td>Fixes proxy class, <strong>direct observable and evidence role by row</strong>, same-subject relation, <strong>effective time window / state axis</strong>, regime compatibility, <strong>operational maturity</strong>, <strong>calibrator role</strong>, model burden, <strong>method-family non-equivalence</strong>, <strong>agreement / disagreement topology plus resolution policy</strong>, incremental evidence, and residual latent-state ceiling.</td>
 </tr>
 <tr>
 <td><strong>State-Continuity Bridge Card</strong></td>
 <td>The sequential bridge audit.</td>
-<td>Fixes acquisition order, elapsed time, regime continuity, coordinate transfer / deformation, and bridge-validation rung before same-state language is allowed.</td>
+<td>Fixes acquisition order, elapsed time, regime continuity, coordinate transfer / deformation, <strong>carried object / bridge witness</strong>, <strong>tolerance / failure rule</strong>, <strong>rescue route versus raw continuity</strong>, bridge-validation rung, and residual drift ceiling before same-state language is allowed.</td>
 </tr>
 <tr>
 <td><strong>Temporal Validity Card</strong></td>
@@ -314,19 +322,52 @@ The next weakness on this page was narrower but important: it still listed only 
 <td><strong>Several living-human proxy rows used together</strong></td>
 <td>Base stack + Observability Budget</td>
 <td><strong>Human Proxy Composition Card</strong></td>
-<td>Stops proxy-rich bundles from being overread as same-subject state identification.</td>
+<td>Stops proxy-rich bundles from being overread as same-subject state identification when role by row, regime compatibility, maturity, and disagreement remain implicit.</td>
 </tr>
 <tr>
 <td><strong>Same-subject / same-brain sequential bridge</strong></td>
 <td>Base stack + Observability Budget</td>
 <td><strong>State-Continuity Bridge Card</strong>; add <strong>Temporal Validity Card</strong> when the bridge crosses hours to days or a fixed-decoder interval is claimed.</td>
-<td>Stops specimen identity or repeated access from being overread as same-state evidence or stable time-generalization.</td>
+<td>Stops specimen identity, score survival, or rescue-dependent stability from being overread as same-state evidence or stable time-generalization.</td>
 </tr>
 <tr>
 <td><strong>Outputs with probabilities, intervals, prediction sets, or abstention</strong></td>
 <td>Base stack + the cards already triggered by the claim</td>
 <td><strong>Calibration &amp; Abstention Card</strong></td>
 <td>Stops raw confidence, threshold tuning, or selective reporting from being overread as calibrated risk control.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="field-level-sync">
+<h2 class="section-title">Three cards whose short labels had become too weak</h2>
+<p>
+The next problem was not card count but <strong>card sufficiency</strong>. After the stack expansion, these three cards still sounded satisfied by a short label even though the current site rule had already become stricter. This section brings the learning guide up to that current field-level requirement.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Card</th>
+<th>Why the older short description is now too weak</th>
+<th>Minimum fields this guide now expects</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fusion Card</strong></td>
+<td><a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025)</a>, <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a>, <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">Rohaut et al. (2024)</a>, and <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> show why synchronized acquisition, shared low-frequency structure, a quantity bridge, and bundle robustness are different achievements.</td>
+<td><strong>Acquisition relation</strong>, <strong>effective-window / temporal-kernel relation</strong>, <strong>shared-vs-specific component disclosure</strong>, <strong>quantity bridge / physiology grounding</strong>, unimodal and prior-only baselines, <strong>complete-case / missing-modality policy</strong>, transfer or disagreement window, external calibration, and abstention.</td>
+</tr>
+<tr>
+<td><strong>Human Proxy Composition Card</strong></td>
+<td><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1186/s41747-024-00426-4" target="_blank">B&oslash;gh et al. (2024)</a>, <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a>, <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a>, and <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> show why quantity type, operating point, common-driver burden, and disagreement topology still matter even when all rows are real human data.</td>
+<td><strong>Proxy class</strong>, <strong>direct observable and evidence role by row</strong>, <strong>effective time window / state axis</strong>, regime compatibility, <strong>operational maturity</strong>, <strong>calibrator role</strong>, <strong>method-family non-equivalence</strong>, cross-row agreement / disagreement plus resolution policy, increment over the strongest single row, and residual latent-state ceiling.</td>
+</tr>
+<tr>
+<td><strong>State-Continuity Bridge Card</strong></td>
+<td><a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a>, <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">Gallego et al. (2020)</a>, <a href="https://doi.org/10.1126/sciadv.abj0751" target="_blank">Van De Ville et al. (2021)</a>, <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a>, <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> show why specimen identity, carried object, rescue strategy, and score survival are different objects.</td>
+<td><strong>Bridge class</strong>, acquisition order, elapsed time, regime continuity, coordinate transfer / deformation, <strong>carried object / witness</strong>, <strong>tolerance / failure rule</strong>, <strong>rescue route versus raw continuity</strong>, bridge-validation rung, and residual drift ceiling.</td>
 </tr>
 </tbody>
 </table>
@@ -369,19 +410,24 @@ The next weakness on this page was narrower but important: it still listed only 
 <td><strong>Irreversibility / thermodynamic route card</strong>.</td>
 </tr>
 <tr>
+<td><strong>Multimodal / atlas-prior integration</strong></td>
+<td>A synchronized or atlas-informed result can still mix incompatible temporal objects, physiology-linked shared factors, missing-modality slices, and modality-specific disagreements instead of one validated biological quantity.</td>
+<td><strong>Fusion Card</strong> with effective-window, shared-vs-specific, quantity-bridge, complete-case, and disagreement disclosure.</td>
+</tr>
+<tr>
 <td><strong>Closed loop / embodied controller</strong></td>
 <td>Latency alone does not tell you what was perturbed, which sensory / motor / interoceptive channels were preserved or omitted, or how far the result generalizes across time.</td>
 <td><strong>Intervention Card</strong> plus <strong>Body / Environment Boundary Card</strong>; add <strong>Temporal Validity Card</strong> when the claim rises above a same-session demo.</td>
 </tr>
 <tr>
 <td><strong>Living-human proxy bundle</strong></td>
-<td>Proxy-rich human evidence can still mix different quantity types, spatial units, timescales, model burdens, and robustness levels rather than one same-subject state sample.</td>
-<td><strong>Human Proxy Composition Card</strong>.</td>
+<td>Proxy-rich human evidence can still mix different quantity types, spatial units, timescales, model burdens, role assignments, and disagreement topologies rather than one same-subject state sample.</td>
+<td><strong>Human Proxy Composition Card</strong> with role by row, regime compatibility, maturity, calibrator role, and disagreement disclosure.</td>
 </tr>
 <tr>
 <td><strong>Sequential same-subject / same-brain bridge</strong></td>
-<td>Specimen identity does not by itself fix state continuity across fixation, deformation, sleep / wake regime, elapsed time, or cross-day reacquisition.</td>
-<td><strong>State-Continuity Bridge Card</strong>, plus <strong>Temporal Validity Card</strong> when the bridge spans hours to days.</td>
+<td>Specimen identity does not by itself fix state continuity across fixation, deformation, sleep / wake regime, elapsed time, cross-day reacquisition, or adaptation-assisted score rescue.</td>
+<td><strong>State-Continuity Bridge Card</strong>, plus <strong>Temporal Validity Card</strong> when the bridge spans hours to days, with carried object, tolerance rule, and rescue-mode disclosure.</td>
 </tr>
 </tbody>
 </table>
@@ -492,10 +538,10 @@ State the data regime, split rule, metric bundle, triggered cards, and the first
 <li><strong>If it emits text or speech, is a Neural Contribution Card visible?</strong> Are candidate set, language-model or prompt scaffold, no-brain / no-LM controls, and subject cooperation disclosed?</li>
 <li><strong>If it is a foundation / self-supervised EEG result, is a Pretraining Card visible?</strong> Are corpus overlap, harmonization, adaptation regime, benchmark version, and inference-stage restrictions written?</li>
 <li><strong>If it is an ESI, tractography, effective-connectivity, or thermodynamic claim, is the route-specific card or log visible?</strong> Are validation class / graph object / closure / estimator-family details written rather than hidden in one headline?</li>
-<li><strong>If it is multimodal or atlas-prior, is a Fusion Card visible?</strong> Are acquisition relation, lag audit, fusion baseline, and external calibration written?</li>
+<li><strong>If it is multimodal or atlas-prior, is a Fusion Card visible?</strong> Are acquisition relation, effective-window / temporal-kernel relation, shared-vs-specific disclosure, quantity bridge, complete-case or missing-modality policy, and external calibration written?</li>
 <li><strong>If it is a closed-loop or intervention result, is an Intervention Card visible, and if embodiment matters is a Body / Environment Boundary Card visible?</strong> Are trigger rule, timing audit, preserved loop channels, and slow-boundary omissions disclosed?</li>
-<li><strong>If several living-human proxy rows are used together, is a Human Proxy Composition Card visible?</strong> Are proxy class, model burden, and increment over the strongest single row disclosed?</li>
-<li><strong>If the claim bridges same-subject or same-brain measurements across regimes, is a State-Continuity Bridge Card visible?</strong> Are elapsed time, regime continuity, deformation / registration burden, and bridge-validation rung written?</li>
+<li><strong>If several living-human proxy rows are used together, is a Human Proxy Composition Card visible?</strong> Are proxy class, direct observable and role by row, regime compatibility, maturity / calibrator role, disagreement topology, and increment over the strongest single row disclosed?</li>
+<li><strong>If the claim bridges same-subject or same-brain measurements across regimes, is a State-Continuity Bridge Card visible?</strong> Are carried object, tolerance / failure rule, rescue route, elapsed time, regime continuity, deformation / registration burden, and bridge-validation rung written?</li>
 <li><strong>If the claim rises across hours to days or reports confidence / abstention, are Temporal Validity and Calibration &amp; Abstention Cards visible?</strong> Are recalibration burden, transfer ceiling, fit/calibration/test separation, and fallback behavior written?</li>
 </ul>
 </div>
