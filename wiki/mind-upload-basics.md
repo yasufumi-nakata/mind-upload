@@ -5,8 +5,8 @@ description: A beginner technical overview of mind uploading and WBE that separa
 article_type: Wiki
 subtitle: Divide the large dream into smaller questions that can be checked.
 author: Mind Uploading Research Project
-last_updated: '2026-04-02'
-note: Beginner guide
+last_updated: '2026-04-03'
+note: Beginner guide (updated with the 2026-04-03 neuromodulatory family split)
 audience: People who have heard the term mind upload and want the technical big picture first
 reading_time: 12-15 minutes
 page_intro: This page explains, from the beginning, what Mind Upload and WBE are trying to do and why strong claims must be broken into smaller technical questions before they can be judged. The emphasis is not on quick belief or disbelief, but on evidence class, verification, and claim ceiling.
@@ -20,7 +20,8 @@ page_highlights:
 - Same-brain functional connectomics and MICrONS-side digital-twin language now stay behind a beginner ceiling of sequential local scaffold plus stimulus-conditioned predictor, not a solved local twin or a presynaptic release-machinery readout.
 - Low latency is not the full body / environment boundary; fast-loop disclosure and slow internal-milieu disclosure now stay separate even on this beginner page.
 - A chemical connectome plus nominal inhibitory edges still does not fix shared extracellular / electrical state, because electrical coupling, extracellular-space geometry / diffusion barriers, and osmotic regime remain separate variables.
-- "Human evidence now has to be read on three axes: proxy class, operational maturity, and safe calibrator role are different questions."
+- "Human evidence now has to be read in order: family-internal comparison family first, then proxy class, operational maturity, and safe calibrator role."
+- "Human neuromodulatory evidence is not one beginner row: mixed-arousal proxy, receptor / transporter atlas prior, occupancy PET, and challenge-linked release PET do not justify the same claim."
 - "Regional synaptic-density PET and same-brain scaffold evidence still do not fix release-site number, docked-vesicle architecture, active-zone nanostructure / priming-site assembly, or current release competence."
 - "On the human side, quantity type and route role are part of the claim: five-metabolite 1H-MRSI similarity, high-resolution 1H-MRSI metabolite-distribution mapping, 31P-MRS metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, 31P functional NAD-dynamics, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, myelin-water, MT-family, bilayer-sensitive MRI, BBB water-exchange MRI, tracer-specific BBB PET, SMBT-1 MAO-B target-validation / AD-spectrum / brain-quantification / whole-body-biodistribution routes, I2BS PET, macroscopic CSF oscillation, parenchyma-CSF water exchange, intrathecal tracer retention / CSF-to-blood clearance capacity, CSF-mobility MRI, and model-based biomarker efflux are not interchangeable routes."
 - "Human energetic imaging and astrocyte-related PET still do not directly identify glial substrate-routing: lactate-shuttle support, starvation ketone-body export, intensive-learning glia-to-neuron fatty-acid flux, and apoE / sortilin-dependent lipid delivery remain separate claim families with different supplier-sink logic and human observability ceilings."
@@ -36,10 +37,11 @@ known_points:
 - Same-brain functional connectomics can strengthen local structure-function correspondence while still leaving predicted-versus-direct labels, release-site number, active-zone nanostructure / priming-site assembly, current release competence, and dynamical identifiability unresolved.
 - Closed-loop papers can preserve a fast local loop while still leaving circadian phase, glucocorticoid state, insulin / metabolic regime, and other slow internal-milieu variables unmatched or latent.
 - Even with the same chemical synapse graph, gap-junction coupling, endogenous field effects, extracellular-space geometry / dilution, and human wakefulness-linked extracellular-space clues remain separate evidence classes.
+- "Human neuromodulatory evidence also splits internally: mixed-arousal proxy, receptor / transporter atlas prior, occupancy PET, and challenge-linked release PET do not measure the same object or justify the same beginner interpretation."
 - Current human energetic routes and astrocyte-related PET can calibrate bounded macro or target-defined proxies, but they still do not tell us which glial supplier, fuel object, and neuronal sink carried the operative substrate route in vivo.
 - Even when transcript or protein abundance looks informative, molecular maintenance still splits into transcription / chromatin, post-transcriptional RNA, phospho-signaling, local proteostasis / synaptic-tagging, and cargo-routing families rather than one generic molecular-state row.
 - Regional SV2A PET can calibrate a bounded density-comparison family, but it still does not tell us the operative release-site number, docked-vesicle architecture, active-zone nanostructure / priming-site assembly, or current release competence.
-- Recent human-side advances reduce different uncertainty terms, but local ultrastructure, synaptic-density PET, five-metabolite 1H-MRSI similarity scaffolds, high-resolution 1H-MRSI metabolite-distribution mapping, 31P-MRS metabolite / pH balance routes, 31P MT exchange-flux routes, 31P NAD-content mapping, 31P functional NAD-dynamics, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, quantity-defined myelin MRI, BBB water-exchange MRI, tracer-specific BBB PET transport, SMBT-1 MAO-B target-validation / AD-spectrum / brain-quantification / whole-body-biodistribution routes, I2BS PET, macroscopic CSF oscillation, parenchyma-CSF water exchange, intrathecal tracer retention / CSF-to-blood clearance capacity, CSF-mobility MRI, and model-based biomarker efflux are not one near-direct readout.
+- Recent human-side advances reduce different uncertainty terms, but mixed-arousal proxy, receptor / transporter atlas prior, occupancy PET, challenge-linked release PET, local ultrastructure, synaptic-density PET, five-metabolite 1H-MRSI similarity scaffolds, high-resolution 1H-MRSI metabolite-distribution mapping, 31P-MRS metabolite / pH balance routes, 31P MT exchange-flux routes, 31P NAD-content mapping, 31P functional NAD-dynamics, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, quantity-defined myelin MRI, BBB water-exchange MRI, tracer-specific BBB PET transport, SMBT-1 MAO-B target-validation / AD-spectrum / brain-quantification / whole-body-biodistribution routes, I2BS PET, macroscopic CSF oscillation, parenchyma-CSF water exchange, intrathecal tracer retention / CSF-to-blood clearance capacity, CSF-mobility MRI, and model-based biomarker efflux are not one near-direct readout.
 unknown_points:
 - It remains unresolved whether functional reproduction would guarantee identity or phenomenal consciousness.
 - It is not yet determined which measurement set would be sufficient for WBE-level internal-state capture.
@@ -193,8 +195,15 @@ The beginner route also had to become stricter about what a shorthand like <stro
 <section class="section" id="human-observability-ladder">
 <h2 class="section-title">Why even a beginner page now needs a human observability ladder</h2>
 <p>
-The older beginner summary was still too coarse because it let very different human-side advances sound like one generic increase in <strong>observability</strong>. The recent primary literature does not support that compression. The safer beginner reading is to ask three questions at once: <strong>which proxy class, quantity type, and route role does the route constrain?</strong>, <strong>how specialized or model-heavy is the route still?</strong>, and <strong>what bounded hidden-state family can it safely calibrate?</strong>
+The older beginner summary was still too coarse because it let very different human-side advances sound like one generic increase in <strong>observability</strong>. The recent primary literature does not support that compression. The safer beginner reading is to fix the <strong>family-internal comparison family first</strong>, and only then ask three questions: <strong>which proxy class, quantity type, and route role does the route constrain?</strong>, <strong>how specialized or model-heavy is the route still?</strong>, and <strong>what bounded hidden-state family can it safely calibrate?</strong>
 </p>
+
+<div class="note-box">
+<strong>2026-04-03 correction: family-internal comparison family comes before the three axes</strong>
+<p>
+The beginner route still had one meaningful compression left inside human proxy language. The current primary literature does not support treating <strong>human neuromodulatory evidence</strong> as one reusable row. <a href="https://doi.org/10.1038/s41467-025-57289-5" target="_blank">Carro-Dom&iacute;nguez et al. (2025)</a> used <strong>pupil size during human sleep</strong> as a <strong>mixed arousal proxy</strong>, not as a transmitter-specific readout. <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> built a cortical <strong>receptor / transporter atlas prior</strong> from more than <strong>1,200 healthy individuals</strong>, and <a href="https://doi.org/10.1038/s42003-025-08492-z" target="_blank">Nakuci &amp; Bansal (2025)</a> used those atlas maps as a <strong>modeling scaffold</strong> for spontaneous BOLD activity rather than a same-subject current-state readout. <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a> constrained <strong>D<sub>2</sub>-receptor occupancy under administered lurasidone</strong>, while <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">Erritzoe et al. (2020)</a> and <a href="https://doi.org/10.2967/jnumed.124.268317" target="_blank">Miederer et al. (2025)</a> constrained <strong>challenge-linked release-sensitive PET routes</strong> under named ligands, regions, and task or pharmacological windows. Therefore, even on a beginner page, <strong>mixed arousal proxy</strong>, <strong>atlas prior</strong>, <strong>occupancy PET</strong>, and <strong>challenge-linked release PET</strong> have to be typed separately before proxy class, operational maturity, or calibrator role can be read safely.
+</p>
+</div>
 <table class="data-table">
 <thead>
 <tr>
@@ -212,6 +221,34 @@ The older beginner summary was still too coarse because it let very different hu
 <td>Destructive, local, preservation- and registration-limited.</td>
 <td>Can calibrate a <strong>local structural scaffold</strong> route.</td>
 <td>Whole-brain in vivo coverage, current state, and longitudinal maintenance-state.</td>
+</tr>
+<tr>
+<td><strong>Human mixed-arousal proxy in sleep</strong><br><a href="https://doi.org/10.1038/s41467-025-57289-5" target="_blank">Carro-Dom&iacute;nguez et al. (2025)</a></td>
+<td>Pupil-linked arousal proxy during human sleep with coupling to spindle-cluster and stimulation-response structure.</td>
+<td>Noninvasive same-session route, but autonomic and sleep-state mixed rather than transmitter-specific.</td>
+<td>Can calibrate a <strong>bounded mixed-arousal proxy route</strong>.</td>
+<td>Regional receptor / transporter density prior, drug-occupancy route, challenge-linked endogenous release proxy, and route-free whole-brain neuromodulatory state.</td>
+</tr>
+<tr>
+<td><strong>Human receptor / transporter atlas prior</strong><br><a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a>; <a href="https://doi.org/10.1038/s42003-025-08492-z" target="_blank">Nakuci &amp; Bansal (2025)</a></td>
+<td>Normative cortical receptor / transporter density atlas and PET-informed modeling scaffold.</td>
+<td>Pooled healthy-participant atlas and model-conditioned route, not a same-subject current-state readout.</td>
+<td>Can calibrate a <strong>bounded chemoarchitectural prior / modeling-scaffold route</strong>.</td>
+<td>Same-subject current occupancy, challenge-linked endogenous release, moment-to-moment transmitter dynamics, and route-free whole-brain neuromodulatory state.</td>
+</tr>
+<tr>
+<td><strong>Human occupancy PET</strong><br><a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a></td>
+<td>Target-engagement occupancy under a named administered compound and tracer route.</td>
+<td>Tracer- and kinetic-model-conditioned PET route under explicit drug-administration burden; not an endogenous-release assay.</td>
+<td>Can calibrate a <strong>bounded target-engagement occupancy route</strong>.</td>
+<td>Baseline endogenous transmitter field, spontaneous or task-linked release dynamics, receptor-density prior, and route-free whole-brain neuromodulatory state.</td>
+</tr>
+<tr>
+<td><strong>Human challenge-linked displacement / release-sensitive PET</strong><br><a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">Erritzoe et al. (2020)</a>; <a href="https://doi.org/10.2967/jnumed.124.268317" target="_blank">Miederer et al. (2025)</a></td>
+<td>Challenge- and tracer-conditioned displacement proxy for endogenous transmitter release in a named region and time window.</td>
+<td>PET route with pharmacological or task challenge, kinetic-interpretation burden, and route-specific spatial / temporal scope.</td>
+<td>Can calibrate a <strong>bounded challenge-linked release proxy</strong>.</td>
+<td>Route-free baseline current field, normative receptor-density prior, target-engagement occupancy under administered drug, and whole-brain moment-to-moment neuromodulatory state.</td>
 </tr>
 <tr>
 <td><strong>Regional synaptic-density PET atlas</strong><br><a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a></td>
@@ -525,6 +562,12 @@ Mind-Upload is not itself the proof of WBE. It is a place for assembling the pub
 <li>Baboli, M., Wang, F., Dong, Z., et al. (2024). Absolute Metabolite Quantification in Individuals with Glioma and Healthy Individuals Using Whole-Brain Three-dimensional MR Spectroscopic and Echo-planar Time-resolved Imaging. <em>Radiology</em>, 311(3), e232401. <a href="https://doi.org/10.1148/radiol.232401" target="_blank">doi:10.1148/radiol.232401</a></li>
 <li>Guo, R., Li, Y., Zhao, Y., et al. (2025). High-Resolution Brain Metabolic Imaging at Ultrahigh Field Using Extended Spatiospectral Encoding and Subspace Modeling. <em>IEEE Transactions on Biomedical Engineering</em>, 72(12), 3558-3566. <a href="https://doi.org/10.1109/TBME.2025.3572448" target="_blank">doi:10.1109/TBME.2025.3572448</a></li>
 <li>Karkouri, J., Deelchand, D. K., Van de Moortele, P.-F., et al. (2026). Quantification of deuterated metabolite concentrations and rates in the human brain from dynamic deuterium metabolic imaging at 7 T. <em>Magnetic Resonance in Medicine</em>. <a href="https://doi.org/10.1002/mrm.70308" target="_blank">doi:10.1002/mrm.70308</a></li>
+<li>Carro-Dom&iacute;nguez, M., Huwiler, S., Oberlin, S., et al. (2025). Pupil size reveals arousal level fluctuations in human sleep. <em>Nature Communications</em>, 16, 5146. <a href="https://doi.org/10.1038/s41467-025-57289-5" target="_blank">doi:10.1038/s41467-025-57289-5</a></li>
+<li>Hansen, J. Y., Shafiei, G., Markello, R. D., et al. (2022). Mapping neurotransmitter systems to the structural and functional organization of the human neocortex. <em>Nature Neuroscience</em>, 25, 1569-1581. <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">doi:10.1038/s41593-022-01186-3</a></li>
+<li>Nakuci, J., &amp; Bansal, K. (2025). The neuroreceptors and transporters underlying spontaneous brain activity. <em>Communications Biology</em>, 8, 485. <a href="https://doi.org/10.1038/s42003-025-08492-z" target="_blank">doi:10.1038/s42003-025-08492-z</a></li>
+<li>Wong, D. F., Kuwabara, H., Bra&scaron;ić, J. R., et al. (2013). Determination of dopamine D<sub>2</sub> receptor occupancy by lurasidone using positron emission tomography in healthy male subjects. <em>Psychopharmacology</em>, 229, 245-252. <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">doi:10.1007/s00213-013-3103-z</a></li>
+<li>Erritzoe, D., Ashok, A. H., Searle, G. E., et al. (2020). Serotonin release measured in the human brain: a PET study with [<sup>11</sup>C]CIMBI-36 and d-amphetamine challenge. <em>Neuropsychopharmacology</em>, 45, 804-810. <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">doi:10.1038/s41386-019-0567-5</a></li>
+<li>Miederer, I., Buchholz, H.-G., Rademacher, L., et al. (2025). Dopaminergic Mechanisms of Cognitive Flexibility: An [<sup>18</sup>F]Fallypride PET Study. <em>Journal of Nuclear Medicine</em>, 66(3), 398-404. <a href="https://doi.org/10.2967/jnumed.124.268317" target="_blank">doi:10.2967/jnumed.124.268317</a></li>
 <li>Suzuki, A., Stern, S. A., Bozdagi, O., Huntley, G. W., Walker, R. H., Magistretti, P. J., &amp; Alberini, C. M. (2011). Astrocyte-neuron lactate transport is required for long-term memory formation. <em>Cell</em>, 144(5), 810-823. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">doi:10.1016/j.cell.2011.02.018</a></li>
 <li>Silva, B., et al. (2022). Glial ketogenesis regulates memory maintenance during starvation. <em>Nature Metabolism</em>, 4, 1534-1547. <a href="https://doi.org/10.1038/s42255-022-00528-6" target="_blank">doi:10.1038/s42255-022-00528-6</a></li>
 <li>Qi, G., Mi, Y., Shi, X., Gu, H., Brinton, R. D., &amp; Yin, F. (2021). ApoE4 impairs neuron-astrocyte coupling of fatty acid metabolism. <em>Cell Reports</em>, 34(1), 108572. <a href="https://doi.org/10.1016/j.celrep.2020.108572" target="_blank">doi:10.1016/j.celrep.2020.108572</a></li>
