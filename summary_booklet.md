@@ -125,7 +125,7 @@ body_class: "summary-booklet-page"
     <div>
       <h3>What We Do Not Claim Up Front</h3>
       <ul class="booklet-list">
-        <li>It remains unresolved whether noninvasive measurement alone can capture enough internal state for WBE.</li><li>Recent rodent causal studies show that astrocyte-state can matter for recall, multiday stabilization, and fear-state representations, but this still does not provide a human whole-brain readout.</li><li>Current human astrocyte-related PET, target-defined neuroimmune PET, and clearance routes remain tracer-family- and route-role-bounded proxy classes: SMBT-1 MAO-B target-validation / disease-context / quantification / biodistribution, SL25.1188 MAO-B quantification / severity-conditioned routes, I2BS routes, TSPO disease-context / validation-bounded PET, CSF1R route-setting PET, COX-2 enzyme-defined PET, and human macroscopic CSF-oscillation / parenchyma-CSF water-exchange / respiration-conditioned net-flow / exercise-conditioned contrast-influx / meningeal-lymphatic-flow / intrathecal-tracer / CSF-to-blood-clearance / CSF-mobility / model-based biomarker-efflux routes still do not identify which astrocyte, microglial controller, or synapse is responsible.</li><li>A connectome, cell type, and glial proxy do not by themselves fix local ATP reserve or mitochondrial positioning, so repeated-burst and dendritic-plasticity claims need a separate bioenergetic ceiling.</li>
+        <li>It remains unresolved whether noninvasive measurement alone can capture enough internal state for WBE.</li><li>Recent rodent causal studies show that astrocyte-state can matter for recall, multiday stabilization, and fear-state representations, but this still does not provide a human whole-brain readout.</li><li>Current human astrocyte-related PET route-role families, target-defined neuroimmune PET target families, and transport-side clearance routes remain non-equivalent proxy classes: SMBT-1 MAO-B target-validation / disease-context / quantification / biodistribution, SL25.1188 MAO-B quantification / severity-conditioned routes, I2BS routes, TSPO disease-context / pathology-validated PET, CSF1R first-in-human route-setting PET, COX-2 celecoxib-blockade / test-retest-bounded enzyme PET, and human macroscopic CSF-oscillation / parenchyma-CSF water-exchange / respiration-conditioned net-flow / exercise-conditioned contrast-influx / meningeal-lymphatic-flow / intrathecal-tracer / CSF-to-blood-clearance / CSF-mobility / model-based biomarker-efflux routes still do not identify which astrocyte, microglial controller, or synapse is responsible.</li><li>A connectome, cell type, and glial proxy do not by themselves fix local ATP reserve or mitochondrial positioning, so repeated-burst and dendritic-plasticity claims need a separate bioenergetic ceiling.</li>
       </ul>
     </div>
   </div>
@@ -175,7 +175,7 @@ body_class: "summary-booklet-page"
     <article class="booklet-card booklet-card-caution">
       <h3>Still Open or Conditional</h3>
       <ul class="booklet-list">
-        <li>It remains unresolved whether noninvasive measurement alone can capture enough internal state for WBE.</li><li>Recent rodent causal studies show that astrocyte-state can matter for recall, multiday stabilization, and fear-state representations, but this still does not provide a human whole-brain readout.</li><li>Current human astrocyte-related PET, target-defined neuroimmune PET, and clearance routes remain tracer-family- and route-role-bounded proxy classes: SMBT-1 MAO-B target-validation / disease-context / quantification / biodistribution, SL25.1188 MAO-B quantification / severity-conditioned routes, I2BS routes, TSPO disease-context / validation-bounded PET, CSF1R route-setting PET, COX-2 enzyme-defined PET, and human macroscopic CSF-oscillation / parenchyma-CSF water-exchange / respiration-conditioned net-flow / exercise-conditioned contrast-influx / meningeal-lymphatic-flow / intrathecal-tracer / CSF-to-blood-clearance / CSF-mobility / model-based biomarker-efflux routes still do not identify which astrocyte, microglial controller, or synapse is responsible.</li><li>A connectome, cell type, and glial proxy do not by themselves fix local ATP reserve or mitochondrial positioning, so repeated-burst and dendritic-plasticity claims need a separate bioenergetic ceiling.</li><li>A glial proxy or generic metabolic note does not by itself fix astrocyte network / ensemble state, so recall, reconsolidation, and multiday-stabilization claims need a separate astrocyte-state ceiling.</li>
+        <li>It remains unresolved whether noninvasive measurement alone can capture enough internal state for WBE.</li><li>Recent rodent causal studies show that astrocyte-state can matter for recall, multiday stabilization, and fear-state representations, but this still does not provide a human whole-brain readout.</li><li>Current human astrocyte-related PET route-role families, target-defined neuroimmune PET target families, and transport-side clearance routes remain non-equivalent proxy classes: SMBT-1 MAO-B target-validation / disease-context / quantification / biodistribution, SL25.1188 MAO-B quantification / severity-conditioned routes, I2BS routes, TSPO disease-context / pathology-validated PET, CSF1R first-in-human route-setting PET, COX-2 celecoxib-blockade / test-retest-bounded enzyme PET, and human macroscopic CSF-oscillation / parenchyma-CSF water-exchange / respiration-conditioned net-flow / exercise-conditioned contrast-influx / meningeal-lymphatic-flow / intrathecal-tracer / CSF-to-blood-clearance / CSF-mobility / model-based biomarker-efflux routes still do not identify which astrocyte, microglial controller, or synapse is responsible.</li><li>A connectome, cell type, and glial proxy do not by themselves fix local ATP reserve or mitochondrial positioning, so repeated-burst and dendritic-plasticity claims need a separate bioenergetic ceiling.</li><li>A glial proxy or generic metabolic note does not by itself fix astrocyte network / ensemble state, so recall, reconsolidation, and multiday-stabilization claims need a separate astrocyte-state ceiling.</li>
       </ul>
     </article>
   </div>
@@ -225,56 +225,6 @@ body_class: "summary-booklet-page"
       </ul>
     </article>
   </div>
-
-  <p>
-    The entry-point weakness after the recent literature pass was not only <strong>which rows existed</strong>, but that they could still look like one composite progress bar. Representative human rows already measure different objects under different burdens, so they still stop at different ceilings.
-  </p>
-
-  <table class="data-table booklet-table">
-    <thead>
-      <tr>
-        <th>Representative row</th>
-        <th>What it directly constrains</th>
-        <th>Why it still stops early</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank"><strong>Johansen et al. (2024)</strong></a><br>SV2A atlas</td>
-        <td>A regional synaptic-density atlas in 33 healthy humans.</td>
-        <td>Density is still not current efficacy, release-site architecture, or same-subject cross-stack state.</td>
-      </tr>
-      <tr>
-        <td><a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank"><strong>Lucchetti et al. (2025)</strong></a><br>1H-MRSI similarity</td>
-        <td>A five-metabolite parcel-similarity scaffold in 51 adolescents with 13-person replication.</td>
-        <td>Similarity is not a kinetic rate, not a density atlas, and not a direct energetic-controller readout.</td>
-      </tr>
-      <tr>
-        <td><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank"><strong>Li et al. (2025)</strong></a><br>dynamic DMRSI</td>
-        <td>A specialized 7 T deuterium kinetic-rate route in five healthy participants with blood-input modeling.</td>
-        <td>A proof-of-principle kinetic route is still not protocol-free portability or branch-local mitochondrial ground truth.</td>
-      </tr>
-      <tr>
-        <td><a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank"><strong>Hiraoka et al. (2025)</strong></a><br>SMBT-1 quantification</td>
-        <td>A six-person arterial-sampling PET route for MAO-B-related astrocyte signal under named quantification choices.</td>
-        <td>A tracer-family quantification route is still not astrocyte-ensemble identity or memory-content readout.</td>
-      </tr>
-      <tr>
-        <td><a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank"><strong>Hirschler et al. (2025)</strong></a><br>CSF mobility</td>
-        <td>A CSF-specific MRI route with 24 healthy individuals and direct driver analysis in 11.</td>
-        <td>Mobility is still not net local solute clearance, immune-controller identity, or a universal support-state row.</td>
-      </tr>
-      <tr>
-        <td><a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank"><strong>Dagum et al. (2026)</strong></a><br>overnight efflux</td>
-        <td>A randomized crossover, multicompartment-model route in 39 analyzed participants for brain-to-plasma Aβ / tau transport.</td>
-        <td>Model-based efflux is still not which astrocyte, lymphatic segment, or microglial controller generated the effect.</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <p>
-    Even <strong>same-session</strong> agreement is not enough. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> found coupled global progression plus two distinct network patterns in simultaneous EEG-PET-MRI, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that BOLD and oxygen-metabolism changes can move in opposite directions across cortex. Therefore, the front door now treats <strong>quantity type</strong>, <strong>time axis</strong>, and <strong>model burden</strong> as first-pass stop lines, not as details that can be filled in later.
-  </p>
 
   <div class="booklet-quote">
     <p>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</p>
@@ -336,7 +286,7 @@ body_class: "summary-booklet-page"
   <p class="booklet-page-meta">Start Here - Define success criteria, standards, benchmarks, and preregistration first / 5-10 min</p>
   <p>Mind-Upload is a site for breaking the large question, "Can a mind be reproduced on a computer?", into <strong>small, testable tasks</strong>. Instead of rushing to a final conclusion, it starts by defining <strong>what counts as progress</strong> and <strong>whether other people can verify the same result</strong>.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>Several living-human proxy rows are not promoted together unless same-subject relation, effective time window / physiological-regime compatibility, route-local repeatability versus transfer, disagreement handling, model burden, and residual hidden-state ceilings are disclosed explicitly.</li><li>Current human astrocyte-related PET, target-defined neuroimmune PET, and clearance routes remain tracer-family- and route-role-bounded proxy classes: SMBT-1 MAO-B target-validation / disease-context / quantification / biodistribution, SL25.1188 MAO-B quantification / severity-conditioned routes, I2BS routes, TSPO disease-context / validation-bounded PET, CSF1R route-setting PET, COX-2 enzyme-defined PET, and human macroscopic CSF-oscillation / parenchyma-CSF water-exchange / respiration-conditioned net-flow / exercise-conditioned contrast-influx / meningeal-lymphatic-flow / intrathecal-tracer / CSF-to-blood-clearance / CSF-mobility / model-based biomarker-efflux routes still do not identify which astrocyte, microglial controller, or synapse is responsible.</li><li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li>
+    <li>Several living-human proxy rows are not promoted together unless same-subject relation, effective time window / physiological-regime compatibility, route-local repeatability versus transfer, disagreement handling, model burden, and residual hidden-state ceilings are disclosed explicitly.</li><li>Current human astrocyte-related PET route-role families, target-defined neuroimmune PET target families, and transport-side clearance routes remain non-equivalent proxy classes: SMBT-1 MAO-B target-validation / disease-context / quantification / biodistribution, SL25.1188 MAO-B quantification / severity-conditioned routes, I2BS routes, TSPO disease-context / pathology-validated PET, CSF1R first-in-human route-setting PET, COX-2 celecoxib-blockade / test-retest-bounded enzyme PET, and human macroscopic CSF-oscillation / parenchyma-CSF water-exchange / respiration-conditioned net-flow / exercise-conditioned contrast-influx / meningeal-lymphatic-flow / intrathecal-tracer / CSF-to-blood-clearance / CSF-mobility / model-based biomarker-efflux routes still do not identify which astrocyte, microglial controller, or synapse is responsible.</li><li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li>
   </ul>
   <p class="booklet-page-meta">Read next</p>
 <ul class="booklet-link-list booklet-page-link-list">
