@@ -6,7 +6,7 @@ article_type: Perspective
 subtitle: "Audit the hypothesis of reproducing brain information processing on another substrate through the barriers of measurability, identifiability, and maintenance state"
 author: Mind Uploading Research Project
 last_updated: '2026-04-04'
-note: "Research note (updated with the March 2026 re-audit, the 2026-03-29 causal-model addendum, the 2026-03-29 thermodynamic-route sync, the 2026-03-29 deuterium-route split, the 2026-03-30 same-brain-connectomics ceiling sync, the 2026-03-31 electrical-state family split, the 2026-03-31 invasive-language-BCI route split, the 2026-04-01 glial-substrate-routing split, the 2026-04-01 clearance-route-role split, the 2026-04-02 technical-front-door framing reset, the 2026-04-03 BCSFB front-door sync, and the 2026-04-04 SV2A route-role sync)"
+note: "Research note (updated with the March 2026 re-audit, the 2026-03-29 causal-model addendum, the 2026-03-29 thermodynamic-route sync, the 2026-03-29 deuterium-route split, the 2026-03-30 same-brain-connectomics ceiling sync, the 2026-03-31 electrical-state family split, the 2026-03-31 invasive-language-BCI route split, the 2026-04-01 glial-substrate-routing split, the 2026-04-01 clearance-route-role split, the 2026-04-02 technical-front-door framing reset, the 2026-04-03 BCSFB front-door sync, the 2026-04-04 SV2A route-role sync, and the 2026-04-04 neuroimmune evidence-role sync)"
 audience: "Readers who want a technical and natural-science synthesis from measurement limits to implementation"
 reading_time: "30-45 min"
 page_intro: "This page is a long research note that starts from observability, identifiability, and maintenance-state burdens, and only then asks what kinds of theoretical interpretation survive those limits. It keeps primary literature, hidden-state gaps, and implementation constraints on one page so overclaiming becomes harder."
@@ -18,6 +18,7 @@ page_highlights:
   - "The top-level framing now treats structural atlas progress, dynamic maintenance-state dependence, and bounded living-human observability as three different scientific objects."
   - "Shared extracellular / electrical-state evidence is now also split inside that class: gap-junction networks, endogenous-field / ephaptic routes, extracellular-space geometry / osmotic routes, inhibitory-driving-force routes, and bounded human clues are not read as one inferential object."
   - "Clearance-support routes are now also split on this page: macroscopic CSF oscillation, parenchyma-CSF water exchange, respiration-conditioned net flow, exercise-conditioned contrast influx / meningeal-lymphatic flow, intrathecal tracer / CSF-to-blood clearance, CSF mobility, and model-based biomarker efflux are not one row."
+  - "Human target-defined neuroimmune PET is now also split as a proxy-class and quantification problem: TSPO disease-context / pathology-validated, CSF1R first-in-human route-setting / arterial-input quantification, and COX-2 celecoxib-blockade / test-retest-bounded enzyme imaging are not one reusable immune-support row."
   - "The stronger the claim, the more explicitly it is checked against falsification criteria, alternative explanations, and abstention conditions."
   - "Human proxy class, operational maturity, and calibrator role are kept separate, so proxy-rich evidence is not silently read as field-ready or family-complete state identification."
   - "Inside SV2A / synaptic-density PET, quantification route, same-subject repeatability, healthy atlas, cross-sectional risk contrast, task / cognition association, activation-null stability, and 24 h intervention-response are now kept separate rather than treated as one reusable human row."
@@ -34,6 +35,7 @@ known_points:
   - "Human whole-brain evidence remains layered and proxy-based; no current route directly fixes current transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local electrical-coupling / extracellular-geometry / inhibitory-driving-force regime, ECM / PNN gate state, local proteostasis / synaptic-tag capture, cargo-routing state, neuromodulatory occupancy / release state, chloride set point, neurovascular-unit / BBB / pericyte controller state, or branch-local mitochondrial positioning."
   - "Current human evidence for shared extracellular / electrical state remains bounded to proxy or perturbation clues; it does not directly reveal coupling topology, extracellular-volume geometry, or local inhibitory-driving-force regime across the living whole brain."
   - "Current human barrier-side evidence also remains family-split: BBB water exchange, tracer-specific BBB transport, choroid-plexus perfusion, blood-to-CSF transport, choroid-plexus water cycling, and apparent BCSFB exchange are different proxy rows with different ceilings."
+  - "Current human target-defined neuroimmune PET also remains family-split: TSPO disease-context / pathology-validated, CSF1R first-in-human route-setting, and COX-2 celecoxib-blockade / test-retest-bounded enzyme imaging play different evidential roles and cannot be silently exchanged."
   - "Current human SV2A evidence is also internally split: tracer / quantification route, route-local repeatability, healthy atlas, cross-sectional risk contrast, task association, activation-null stability, and intervention-response play different evidential roles and cannot be silently exchanged."
   - "Proxy-rich human evidence and deployment-ready measurement are different claims; sample size, model burden, hardware specialization, and fusion status remain separate ceilings."
   - "Several living-human proxy rows can move together while still constraining different quantities or shared autonomic / vascular drivers, so same-session agreement is not yet same-subject state closure."
@@ -603,6 +605,24 @@ href="#ref-16">[16]</a></sup>.</p>
 <td><strong>Target-defined astrocyte-related proxy</strong>, not one generic astrocyte-state meter or controller identity readout.</td>
 </tr>
 <tr>
+<td><strong>Human TSPO disease-context / pathology-validated PET</strong><br><a href="https://doi.org/10.1038/s41467-023-40937-z" target="_blank">Biechele et al. (2023)</a>; <a href="https://doi.org/10.1093/brain/awaf078" target="_blank">Wijesinghe et al. (2025)</a></td>
+<td>Disease-context TSPO interpretation bounded by species-specificity limits and, in PSP, post-mortem alignment of in vivo PET with microglial pathology.</td>
+<td>A route-free human activation-state scalar, cell-exclusive microglia identity, and transfer of the PSP validation regime to other diseases or targets.</td>
+<td><strong>Validation-bounded TSPO proxy</strong>, not one reusable human microglia-state meter.</td>
+</tr>
+<tr>
+<td><strong>Human CSF1R first-in-human / route-setting PET</strong><br><a href="https://doi.org/10.1186/s13550-022-00929-4" target="_blank">Horti et al. (2022)</a>; <a href="https://doi.org/10.2967/jnumed.124.268699" target="_blank">Ogata et al. (2025)</a></td>
+<td>First-in-human CSF1R PET routes in healthy volunteers with explicit arterial-input modeling, tracer-kinetic selection, and declared quantification burden.</td>
+<td>Disease-grounded immune-controller identity, route-free microglia-state interpretation, and deployment-ready same-subject whole-brain monitoring.</td>
+<td><strong>Route-setting CSF1R proxy</strong>, not a disease-validated immune-state readout.</td>
+</tr>
+<tr>
+<td><strong>Human COX-2 enzyme-defined PET</strong><br><a href="https://doi.org/10.2967/jnumed.124.268525" target="_blank">Yan et al. (2025)</a></td>
+<td>Healthy-human COX-2 PET with celecoxib blockade, declared kinetic choices, and route-local test-retest characterization.</td>
+<td>Route-free neuroimmune-state identity, disease-general inflammatory burden, and local controller attribution beyond the named enzyme-defined regime.</td>
+<td><strong>Enzyme-defined COX-2 proxy</strong>, not one generic neuroimmune-state meter.</td>
+</tr>
+<tr>
 <td><strong>Human macroscopic CSF-oscillation route</strong><br><a href="https://doi.org/10.1126/science.aax5440" target="_blank">Fultz et al. (2019)</a></td>
 <td>Sleep-linked coupling among slow electrophysiology, hemodynamics, and large-scale CSF oscillations.</td>
 <td>Protein-specific efflux, crossed-boundary clearance capacity, and local immune-controller identity.</td>
@@ -652,6 +672,11 @@ href="#ref-16">[16]</a></sup>.</p>
 </tr>
 </tbody>
 </table>
+
+<div class="note-box">
+<strong>Human neuroimmune PET is not one reusable support-state row</strong>
+<p>This page had already separated <strong>transport-side clearance</strong> from <strong>target-defined immune support</strong>, but one shortcut still remained inside the human PET lane. The primary literature does not support a generic <code>immune PET</code> row. <a href="https://doi.org/10.1038/s41467-023-40937-z" target="_blank">Biechele et al. (2023)</a> showed that <strong>TSPO</strong> is not a species-invariant human activation-state meter across fibrillar tauopathies, <a href="https://doi.org/10.1093/brain/awaf078" target="_blank">Wijesinghe et al. (2025)</a> then constrained a <strong>disease-context / pathology-validated TSPO route</strong> in PSP, <a href="https://doi.org/10.1186/s13550-022-00929-4" target="_blank">Horti et al. (2022)</a> plus <a href="https://doi.org/10.2967/jnumed.124.268699" target="_blank">Ogata et al. (2025)</a> constrained <strong>first-in-human CSF1R route-setting PET</strong> under explicit arterial-input modeling, and <a href="https://doi.org/10.2967/jnumed.124.268525" target="_blank">Yan et al. (2025)</a> constrained an <strong>enzyme-defined COX-2 route</strong> with celecoxib blockade and declared repeatability. Therefore, this page no longer lets <code>target-defined neuroimmune PET</code> stand in for one interchangeable human immune-support advance. A paper may strengthen <strong>disease-context validation</strong>, <strong>route-setting / quantification burden</strong>, or <strong>pharmacologic specificity plus repeatability</strong> without becoming a route-free measure of local immune-controller identity or synapse-support mechanism.</p>
+</div>
 
 <div class="note-box">
 <strong>SV2A / synaptic-density PET is not one reusable human row</strong>
@@ -1163,8 +1188,8 @@ On this page, the maintenance-side taxonomy follows the site's current rule of <
 </tr>
 <tr>
 <td><strong>Clearance / immune support</strong></td>
-<td>Meningeal lymphatics, CSF-interstitial exchange, and microglia-mediated support still shape multiday recovery and maintenance without being fixed by the graph.</td>
-<td>Do not read macro clearance evidence as if the local immune controller were already identified.</td>
+<td>Transport-side clearance routes and target-defined neuroimmune PET now split into different human proxy families: meningeal lymphatics / CSF-interstitial exchange on one side, and TSPO / CSF1R / COX-2 bounded PET routes on the other.</td>
+<td>Do not read macro clearance evidence or one PET target as if the local immune controller were already identified or route-free across families.</td>
 </tr>
 </tbody>
 </table>
