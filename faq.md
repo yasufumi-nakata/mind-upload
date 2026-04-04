@@ -334,6 +334,35 @@ At Mind-Upload, a result is not read as <strong>target-specific neural evidence<
 A. Not by default. On this site, a large EEG model or leaderboard result is first read as <strong>benchmark-conditioned transfer evidence</strong>, not as automatic proof that a general neural decoder already exists. The current literature already splits that evidence into at least four different objects. <a href="https://proceedings.iclr.cc/paper_files/paper/2024/file/47393e8594c82ce8fd83adc672cf9872-Paper-Conference.pdf" target="_blank">Jiang et al. (2024)</a> already treated mismatched electrodes, unequal sample lengths, varied task designs, and low signal-to-noise ratio as core EEG-side barriers even while reporting LaBraM, and <a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">Lee et al. (2025)</a> then found only <strong>marginal gains, about 0.5%</strong>, over conventional deep baselines despite much larger parameter counts. The newer setup-agnostic papers matter, but they matter in a narrower way: <a href="https://arxiv.org/abs/2507.14141" target="_blank">Han et al. (2025)</a> target <strong>channel-permutation equivariance</strong>, <a href="https://arxiv.org/abs/2510.12515" target="_blank">Chen et al. (2025)</a> target <strong>coordinate-based adaptation across heterogeneous devices and more than 150 layouts</strong>, and <a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025)</a> push setup-agnostic pretraining to more than <strong>60,000 hours</strong> from <strong>92 datasets</strong> and <strong>25,000 subjects</strong>. Those are advances in <strong>recording-frame compatibility</strong>. They are still not proof that different montages, coordinate routes, and reference families already preserve one shared <strong>physiology-side representation</strong>. <a href="https://arxiv.org/abs/2602.17251" target="_blank">Ma et al. (2026)</a> then show that strong EEG foundation models can still generalize poorly when <strong>subject-level supervision is limited</strong> unless extra adaptation structure is added, while <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a>, <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a>, and <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> show that protocol inconsistency, linear-probe versus fine-tuning regime, and pretraining-population diversity can materially change which checkpoint looks strongest.
 </p>
 <p>
+One more front-door compression still remained: <strong>accepted conference papers</strong>, <strong>official benchmark-operation pages</strong>, and <strong>arXiv preprints</strong> could still be read as one evidence pile even though they answer different questions. The current source mix does not support that shortcut. On this site, <a href="https://proceedings.iclr.cc/paper_files/paper/2024/file/47393e8594c82ce8fd83adc672cf9872-Paper-Conference.pdf" target="_blank">Jiang et al. (2024)</a> and <a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">Lee et al. (2025)</a> are read as <strong>peer-reviewed route papers</strong>, the official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge homepage</a>, <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a>, <a href="https://eeg2025.github.io/submission/" target="_blank">submission page</a>, and <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> are read as the <strong>current benchmark object and postmortem layer</strong>, and <a href="https://arxiv.org/abs/2507.14141" target="_blank">Han et al. (2025)</a>, <a href="https://arxiv.org/abs/2510.12515" target="_blank">Chen et al. (2025)</a>, <a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025)</a>, <a href="https://arxiv.org/abs/2602.17251" target="_blank">Ma et al. (2026)</a>, <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a>, <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a>, and <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> are read as <strong>exploratory preprint routes or benchmark-warning analyses</strong>. That source-status split is now part of the front-door rule rather than background knowledge the reader has to infer.
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>If the source itself is...</th>
+<th>Safe reading on this site</th>
+<th>What it still cannot settle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>peer-reviewed route paper</strong></td>
+<td>Use it to say which route improved under a named task, transfer object, or adaptation regime.</td>
+<td>It still does not fix the current benchmark rules snapshot, organizer corrections, or field-wide ranking by itself.</td>
+</tr>
+<tr>
+<td><strong>official benchmark operations / postmortem</strong></td>
+<td>Use it to define the executable benchmark object: current task mix, rules, disclosure burden, inference budget, and later organizer corrections.</td>
+<td>It still does not by itself explain the model-side mechanism or prove physiology-preserving transfer.</td>
+</tr>
+<tr>
+<td><strong>arXiv preprint / benchmark-warning paper</strong></td>
+<td>Use it as exploratory evidence about setup tolerance, protocol fragility, scaling limits, or evaluation gaps that still need independent confirmation.</td>
+<td>It still does not by itself settle frontier rank, overturn the accepted route hierarchy, or replace an accepted benchmark rerun.</td>
+</tr>
+</tbody>
+</table>
+<p>
 The phrase <strong>harmonized EEG</strong> is still too coarse for a front-door reading. The official <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">EEG-BIDS specification</a> already separates <strong>electrodes</strong>, <strong>channels</strong>, <strong>coordinate system</strong>, and <strong>reference scheme</strong>, while <a href="https://doi.org/10.1088/1741-2552/aaa13f" target="_blank">Hu et al. (2018)</a> showed that reference montage and electrode setup alter the measured scalp potential itself and <a href="https://doi.org/10.1016/j.brainresbull.2024.111064" target="_blank">Dong et al. (2024)</a> validated one explicit <strong>REST-based transformation</strong> route for cross-location harmonization. <strong>Inference from these sources:</strong> <strong>common-channel intersection</strong>, <strong>interpolation to a target montage</strong>, and <strong>REST-based transformation</strong> preserve different measurement objects. So when a paper says a model `works across setups`, this FAQ still asks which recording-frame branch was used before it lets the result sound like physiology-side equivalence.
 </p>
 <table class="data-table">
@@ -372,6 +401,9 @@ The benchmark object itself can also move. The official <a href="https://eeg2025
 </p>
 <p>
 At Mind-Upload, a foundation-model or leaderboard result is not promoted beyond <strong>qualified representation-learning / transfer evidence</strong> unless the paper also fixes <strong>pretraining corpus identity and overlap audit</strong>, <strong>benchmark object / supervision unit</strong>, <strong>coordinate route</strong>, <strong>reference family</strong>, <strong>omitted-channel policy</strong>, <strong>harmonization branch</strong>, <strong>adaptation regime or label budget</strong>, <strong>benchmark provenance / governance</strong>, and <strong>shortcut resistance</strong> against subject or setup fingerprints. The shortest follow-up is <a href="eeg_101.html">EEG 101</a>, <a href="verification.html#pretraining-card">Verification: Pretraining Card</a>, and <a href="verification.html#specificity-shortcut-card">Verification: Specificity &amp; Shortcut Card</a>.
+</p>
+<p>
+If you want the site-wide reading rule for source type and status labels, continue to <a href="wiki/paper-source-types-and-evidence-status.html">Wiki: How to read source types, status labels, and evidence classes</a>.
 </p>
 </section>
 
