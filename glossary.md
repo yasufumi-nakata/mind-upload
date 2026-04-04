@@ -6,7 +6,7 @@ article_type: Reference
 subtitle: "Start by keeping the words straight"
 author: Mind Uploading Research Project
 last_updated: "2026-04-04"
-note: "Living document (updated with bridge-witness / same-subject / same-brain stop-line sync)"
+note: "Living document (updated with bridge-witness plus intrinsic-excitability / ionic route-card sync)"
 audience: "Readers who do not want to get stuck on terminology and anyone trying to avoid category mistakes"
 reading_time: "3 to 10 minutes for only the necessary items"
 page_intro: "This page is a glossary for the terms that appear most often in Mind-Upload. It starts with short everyday-language explanations, then points you back to the more rigorous pages when needed."
@@ -20,6 +20,7 @@ page_highlights:
   - "It now also makes the thermodynamic stop line explicit at the front door: coarse-graining / timescale, observed-state closure / hidden-degree risk, reverse-transition support / finite-data handling, stability / nuisance sensitivity, cross-estimator concordance, and physiology-side grounding / bridge quality are no longer left implicit."
   - "It now also includes the temporal-bridge stop line added in the 2026-03-30 sync, namely the split between fast state labels and slow internal milieu."
   - "It now also includes the bridge-witness split used across the newer state-continuity pages, so same-subject / same-brain labels are no longer left sounding like one generic continuity proof."
+  - "It now also includes the maintenance-side route-card split needed after the late-March and early-April 2026 front-door passes, so intrinsic excitability and ionic / chloride language no longer stay collapsed into one generic hidden-state meter."
   - "It now also fixes tractography-specific stop-line terms such as macro pathway prior and tractography route card, so living-human connectome language is not overread."
   - "It now also includes the electrical-state stop-line terms needed after the 2026-04-03 human-clue split, such as shared extracellular / electrical state, human ECS proxy clue, and human perturbation-conditioned clue."
   - "It is especially careful about pairs that sound similar but should not be collapsed, such as observability / identifiability / direct validation and functional connectivity / effective connectivity / causal wiring."
@@ -33,6 +34,8 @@ known_points:
   - "Support-state proxy is still too coarse unless quantity type or route role is also named explicitly."
   - "Readers also need a term-level split between fast state labels such as movement / arousal and slow internal milieu such as circadian phase, glucocorticoid exposure, and insulin / metabolic regime."
   - "Readers also need a term-level split between same-subject / same-brain labels and the specific bridge witness being claimed, such as landmarks, latent manifolds, representational geometry, fingerprints, alignment rescue, or recalibration rescue."
+  - "Readers also need a term-level split between intrinsic-excitability route families such as allocation bias, AIS / ion-channel-state plasticity, homeostatic set point / recovery control, and bounded human proxy routes, because those do not constrain the same physiological object."
+  - "Readers also need a term-level split between ionic / chloride route families such as local chloride set point, E_GABA_A / inhibitory-driving-force regime, interstitial-ion state switching, and quantity-defined human sodium or CSF-ion proxies, because those do not raise the claim ceiling in the same way."
   - "Readers also need a term-level stop line between connectome as structural scaffold and living-human tractography as an acquisition- and graph-conditioned macro pathway prior."
   - "Readers now also need a term-level split between shared extracellular / electrical state itself, human diffusion-MRI ECS clues, and human perturbation-conditioned clues, because those do not raise the claim ceiling in the same way."
   - "The newer route-card names are not decorative labels; they each name a distinct failure mode such as upstream visibility loss, cross-stack shared-driver risk, or broken state continuity across a sequential bridge."
@@ -228,6 +231,20 @@ Words such as <strong>proxy class</strong>, <strong>route maturity / model burde
 <strong>When astrocyte-state and glial fuel support start sounding identical</strong>
 <p>
 On this site, those are different terms. <strong>Glial substrate-routing</strong> is about who supplied which fuel or carrier to which neuronal sink under which regime. <strong>Astrocyte-state</strong> is about astrocyte network or ensemble state that can shape recall, stabilization, or fear-state representation. Current human energetic imaging or astrocyte-related PET does not directly identify living-human glia-to-neuron fuel-routing state. If that distinction is what you need next, go to <a href="wbe_101.html#state-completeness">WBE 101: hidden state at the entry point</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#glial-substrate-route-card">Wiki: glial substrate-routing route card</a>.
+</p>
+</div>
+
+<div class="note-box">
+<strong>When excitability words start sounding like one thing</strong>
+<p>
+On this site, <strong>intrinsic excitability</strong> is not one generic hidden variable. <a href="https://doi.org/10.1016/j.neuron.2014.07.017" target="_blank">Yiu et al. (2014)</a> and <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">Hadzibegovic et al. (2025)</a> support <strong>allocation / engram-selection bias routes</strong>, <a href="https://doi.org/10.1038/s41593-025-02152-5" target="_blank">Benoit et al. (2025)</a> plus <a href="https://doi.org/10.1038/nature09160" target="_blank">Grubb &amp; Burrone (2010)</a> support <strong>AIS / ion-channel-state routes</strong>, <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a> supports <strong>firing-rate set-point / recovery-control routes</strong>, and <a href="https://doi.org/10.1038/s41598-025-21967-7" target="_blank">Tallman et al. (2025)</a> remains a <strong>human clinical-unit allocation-linked route</strong> with firing as an indirect excitability index. Those are different physiological loci and different observability ceilings. If that distinction is what you need next, go to <a href="wbe_101.html#state-completeness">WBE 101: hidden state at the entry point</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#intrinsic-excitability-route-card">Wiki: intrinsic excitability / homeostatic-set-point route card</a>.
+</p>
+</div>
+
+<div class="note-box">
+<strong>When ionic words start sounding like one thing</strong>
+<p>
+On this site, <strong>ionic / chloride evidence</strong> is not one interchangeable meter. <a href="https://doi.org/10.1126/science.1245423" target="_blank">Glykys et al. (2014)</a> supports a <strong>local chloride-set-point route</strong>, <a href="https://doi.org/10.1038/s41467-017-01749-0" target="_blank">Heubl et al. (2017)</a> supports <strong>activity-dependent KCC2 regulation</strong>, <a href="https://doi.org/10.1126/science.aad4821" target="_blank">Ding et al. (2016)</a> supports <strong>interstitial-ion state switching</strong>, <a href="https://doi.org/10.1016/j.celrep.2023.112934" target="_blank">Byvaltsev et al. (2023)</a> supports <strong>perisynaptic K<sup>+</sup> clearance by reverse-mode KCC2</strong>, <a href="https://doi.org/10.1093/braincomms/fcaf201" target="_blank">Lyckenvik et al. (2025)</a> shows that human <strong>CSF ion ranges</strong> remain tightly regulated and distinct from serum, and <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">Qian et al. (2025)</a> shows that human sodium MRI still splits into <strong>mono-/bi-T<sub>2</sub> signal routes</strong> rather than one routine ionic-state readout. If that distinction is what you need next, go to <a href="wbe_101.html#state-completeness">WBE 101: hidden state at the entry point</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#ionic-route-card">Wiki: ionic / chloride route card</a>.
 </p>
 </div>
 
@@ -503,6 +520,22 @@ If <strong>state annotation</strong>, <strong>state continuity</strong>, <strong
 <td>Slow controller and support variables, such as sleep / wake history, post-transcriptional RNA-state, phospho-signaling / second-messenger state, cargo-transport / cytoskeletal trafficking state, thermal-state, ionic state, bioenergetic / mitochondrial support, neurovascular-unit / BBB / pericyte state, glial substrate-routing, astrocyte-state, and clearance-related support, that matter for long-horizon stability. It is broader than fast loop state labels, but it is also different from the narrower slow internal milieu of circadian / glucocorticoid / insulin-metabolic regime disclosure.</td>
 </tr>
 <tr>
+<td><strong>Intrinsic excitability / homeostatic-set-point route card</strong></td>
+<td>The disclosure rule that stops the word <strong>excitability</strong> from collapsing allocation bias, AIS / ion-channel-state plasticity, homeostatic recovery control, and bounded human proxy routes into one line. It asks which claim family, physiological locus, direct observable, time window, human evidence class, and abstention boundary are actually supported.</td>
+</tr>
+<tr>
+<td><strong>Allocation / engram-selection bias</strong></td>
+<td>The route family about which neurons are preferentially recruited into a memory trace because their excitability or readiness is higher at encoding. It is different from AIS / ion-channel plasticity, firing-rate homeostasis, and human perturbation-conditioned proxy routes.</td>
+</tr>
+<tr>
+<td><strong>AIS / ion-channel-state route</strong></td>
+<td>The route family about axon-initial-segment geometry, Na<sup>+</sup>-channel distribution, spike-initiation rules, and related excitability plasticity. It is different from allocation bias, which neurons were selected, and from long-horizon recovery control.</td>
+</tr>
+<tr>
+<td><strong>Homeostatic set point / recovery control</strong></td>
+<td>The route family about where a neuron or circuit returns after perturbation, deprivation, or state change. It is different from a momentary firing-rate snapshot, from AIS microstructure, and from which neurons were allocated during learning.</td>
+</tr>
+<tr>
 <td><strong>Post-transcriptional RNA-state</strong></td>
 <td>The layer between gene-level transcript abundance and protein outcome that includes alternative splicing, m6A-dependent translation / degradation, and ADAR-mediated RNA editing. It should not be collapsed into either static transcript counts or local proteostasis.</td>
 </tr>
@@ -561,6 +594,26 @@ If <strong>state annotation</strong>, <strong>state continuity</strong>, <strong
 <tr>
 <td><strong>Cargo-transport / cytoskeletal trafficking state</strong></td>
 <td>The branch-, spine-, or bouton-specific delivery and retention of receptors, endosomes, RNA cargoes, organelles, and presynaptic components. It is different from both local proteostasis and bioenergetic-state.</td>
+</tr>
+<tr>
+<td><strong>Ionic / chloride route card</strong></td>
+<td>The disclosure rule that stops <strong>ionic state</strong> from collapsing local chloride set point, KCC2 / NKCC1 regulation, interstitial-ion state shifts, perisynaptic K<sup>+</sup> clearance, pathology routes, and quantity-defined human sodium proxies into one meter. It asks for claim family, direct ionic observable, spatial regime, controller or perturbation route, human quantity type or compartment model, and abstention boundary.</td>
+</tr>
+<tr>
+<td><strong>Local chloride set point</strong></td>
+<td>The locally established chloride concentration that helps determine whether GABA<sub>A</sub> input is more hyperpolarizing or less hyperpolarizing / depolarizing. It is different from bulk sodium MRI, generic excitability, or one whole-brain ionic scalar.</td>
+</tr>
+<tr>
+<td><strong>E<sub>GABA_A</sub> / inhibitory-driving-force regime</strong></td>
+<td>The effective reversal-potential / driving-force context that helps decide how inhibitory input acts in the local circuit. It depends on chloride handling and local ionic conditions, so it should not be collapsed into synaptic weight, cell type, or one generic E/I-balance label.</td>
+</tr>
+<tr>
+<td><strong>Interstitial-ion state switching</strong></td>
+<td>The route family in which extracellular K<sup>+</sup>, Ca<sup>2+</sup>, Mg<sup>2+</sup>, H<sup>+</sup>, or CSF-adjacent ion composition shifts the network's operating regime, such as sleep-wake state, gain, or synchrony. It is different from local chloride set point and from quantity-defined human sodium proxies.</td>
+</tr>
+<tr>
+<td><strong>Quantity-defined human sodium / ionic proxy family</strong></td>
+<td>The living-human route family that measures explicitly defined ionic quantities such as tissue-sodium concentration, SQ+TQF-derived compartment fractions, mono-/bi-T<sub>2</sub> sodium components, or CSF ion profiles. These routes are real but non-equivalent. They do not automatically yield cell-specific chloride concentration, local E<sub>GABA_A</sub>, or routine whole-brain intra- versus extracellular partition ground truth.</td>
 </tr>
 </tbody>
 </table>
@@ -921,8 +974,12 @@ Although non-invasive decoding and ESI are making steady progress, a successful 
 <li>Guo, C., Pleiss, G., Sun, Y., &amp; Weinberger, K. Q. (2017). On Calibration of Modern Neural Networks. <a href="https://proceedings.mlr.press/v70/guo17a.html" target="_blank">PMLR 70:1321-1330</a></li>
 <li>Geifman, Y., &amp; El-Yaniv, R. (2017). Selective Classification for Deep Neural Networks. <a href="https://papers.neurips.cc/paper/7073-selective-classification-for-deep-neural-networks" target="_blank">NeurIPS 2017</a></li>
 <li>Gouwens, N. W., et al. (2021). Integrated morphoelectric and transcriptomic classification of cortical GABAergic cells. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
+<li>Yiu, A. P., Mercaldo, V., Yan, C., et al. (2014). Neurons Are Recruited to a Memory Trace Based on Relative Neuronal Excitability Immediately before Training. <a href="https://doi.org/10.1016/j.neuron.2014.07.017" target="_blank">doi:10.1016/j.neuron.2014.07.017</a></li>
+<li>Hadzibegovic, S., Zhu, L., Ginger, M., et al. (2025). Early intrinsic excitability plasticity of neocortical engram neurons defines memory formation and precision. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">doi:10.1038/s41467-025-66975-3</a></li>
+<li>Benoit, R., Galego, D. A., Sch&auml;ren, M. S., et al. (2025). Axon initial segment dynamics during associative fear learning. <a href="https://doi.org/10.1038/s41593-025-02152-5" target="_blank">doi:10.1038/s41593-025-02152-5</a></li>
 <li>Hengen, K. B., Torrado Pacheco, A., McGregor, J. N., Van Hooser, S. D., &amp; Turrigiano, G. G. (2016). Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
 <li>Grubb, M. S., &amp; Burrone, J. (2010). Activity-dependent relocation of the axon initial segment fine-tunes neuronal excitability. <a href="https://doi.org/10.1038/nature09160" target="_blank">doi:10.1038/nature09160</a></li>
+<li>Tallman, C. W., Steinmetz, P. N., &amp; Wixted, J. T. (2025). Neuronal allocation and sparse coding of episodic memories in the human hippocampus. <a href="https://doi.org/10.1038/s41598-025-21967-7" target="_blank">doi:10.1038/s41598-025-21967-7</a></li>
 <li>Santoni, G., et al. (2024). Chromatin plasticity predetermines neuronal eligibility for memory trace formation. <a href="https://doi.org/10.1126/science.adg9982" target="_blank">doi:10.1126/science.adg9982</a></li>
 <li>Wang, J., Telese, F., Tan, Y., et al. (2015). LSD1n is an H4K20 demethylase regulating memory formation via transcriptional elongation control. <a href="https://doi.org/10.1038/nn.4069" target="_blank">doi:10.1038/nn.4069</a></li>
 <li>Dai, J., Aoto, J., &amp; Südhof, T. C. (2019). Alternative splicing of presynaptic neurexins differentially controls postsynaptic NMDA and AMPA receptor responses. <a href="https://doi.org/10.1016/j.neuron.2019.03.032" target="_blank">doi:10.1016/j.neuron.2019.03.032</a></li>
@@ -937,6 +994,11 @@ Although non-invasive decoding and ESI are making steady progress, a successful 
 <li>Biswas, D., et al. (2023). The landscape of the human brain phosphoproteome reveals region-specific phosphorylation events. <a href="https://doi.org/10.1021/acs.jproteome.2c00244" target="_blank">doi:10.1021/acs.jproteome.2c00244</a></li>
 <li>Govindarajan, A., Israely, I., Huang, S.-Y., &amp; Tonegawa, S. (2011). The dendritic branch is the preferred integrative unit for protein synthesis-dependent LTP. <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">doi:10.1016/j.neuron.2010.12.008</a></li>
 <li>Glykys, J., Dzhala, V., Egawa, K., et al. (2014). Local impermeant anions establish the neuronal chloride concentration. <a href="https://doi.org/10.1126/science.1245423" target="_blank">doi:10.1126/science.1245423</a></li>
+<li>Heubl, M., Zhang, J., Pressey, J. C., et al. (2017). GABAA receptor dependent synaptic inhibition rapidly tunes KCC2 activity via the Cl-sensitive WNK1 kinase. <a href="https://doi.org/10.1038/s41467-017-01749-0" target="_blank">doi:10.1038/s41467-017-01749-0</a></li>
+<li>Ding, F., O'Donnell, J., Xu, Q., et al. (2016). Changes in the composition of brain interstitial ions control the sleep-wake cycle. <a href="https://doi.org/10.1126/science.aad4821" target="_blank">doi:10.1126/science.aad4821</a></li>
+<li>Byvaltsev, E., Behbood, M., Schleimer, J.-H., Gensch, T., Semyanov, A., Schreiber, S., &amp; Strauss, U. (2023). KCC2 reverse mode helps to clear postsynaptically released potassium at glutamatergic synapses. <a href="https://doi.org/10.1016/j.celrep.2023.112934" target="_blank">doi:10.1016/j.celrep.2023.112934</a></li>
+<li>Lyckenvik, T., Forsberg, M., Johansson, K., et al. (2025). Ion concentrations in CSF and serum are differentially and precisely regulated. <a href="https://doi.org/10.1093/braincomms/fcaf201" target="_blank">doi:10.1093/braincomms/fcaf201</a></li>
+<li>Qian, Y., Lin, Y.-C., Chen, X., et al. (2025). Single-quantum sodium MRI at 3 T for separation of mono- and bi-T2 sodium signals. <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">doi:10.1038/s41598-025-07800-1</a></li>
 <li>Seidl, A. H., Rubel, E. W., &amp; Barria, A. (2015). Tuning of Ranvier node and internode properties in myelinated axons to adjust action potential timing. <a href="https://doi.org/10.1038/ncomms9073" target="_blank">doi:10.1038/ncomms9073</a></li>
 <li>Suzuki, A., et al. (2011). Astrocyte-neuron lactate transport is required for long-term memory formation. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">doi:10.1016/j.cell.2011.02.018</a></li>
 <li>Silva, B., et al. (2022). Glial ketogenesis regulates memory maintenance during starvation. <a href="https://doi.org/10.1038/s42255-022-00528-6" target="_blank">doi:10.1038/s42255-022-00528-6</a></li>
