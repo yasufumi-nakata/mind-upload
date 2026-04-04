@@ -6,7 +6,7 @@ article_type: Reference
 subtitle: "Start by keeping the words straight"
 author: Mind Uploading Research Project
 last_updated: "2026-04-04"
-note: "Living document (updated with bridge-witness plus intrinsic-excitability / ionic route-card sync)"
+note: "Living document (updated with bridge-witness, intrinsic-excitability / ionic route-card, and thermal-route sync)"
 audience: "Readers who do not want to get stuck on terminology and anyone trying to avoid category mistakes"
 reading_time: "3 to 10 minutes for only the necessary items"
 page_intro: "This page is a glossary for the terms that appear most often in Mind-Upload. It starts with short everyday-language explanations, then points you back to the more rigorous pages when needed."
@@ -21,6 +21,7 @@ page_highlights:
   - "It now also includes the temporal-bridge stop line added in the 2026-03-30 sync, namely the split between fast state labels and slow internal milieu."
   - "It now also includes the bridge-witness split used across the newer state-continuity pages, so same-subject / same-brain labels are no longer left sounding like one generic continuity proof."
   - "It now also includes the maintenance-side route-card split needed after the late-March and early-April 2026 front-door passes, so intrinsic excitability and ionic / chloride language no longer stay collapsed into one generic hidden-state meter."
+  - "It now also makes the thermal stop line explicit at the front door: thermal route card, field-potential thermal confound, device-heating artifact, brain-state proxy route, and passive / task-linked versus perturbation-conditioned human thermal routes are no longer left implicit."
   - "It now also fixes tractography-specific stop-line terms such as macro pathway prior and tractography route card, so living-human connectome language is not overread."
   - "It now also includes the electrical-state stop-line terms needed after the 2026-04-03 human-clue split, such as shared extracellular / electrical state, human ECS proxy clue, and human perturbation-conditioned clue."
   - "It is especially careful about pairs that sound similar but should not be collapsed, such as observability / identifiability / direct validation and functional connectivity / effective connectivity / causal wiring."
@@ -36,6 +37,7 @@ known_points:
   - "Readers also need a term-level split between same-subject / same-brain labels and the specific bridge witness being claimed, such as landmarks, latent manifolds, representational geometry, fingerprints, alignment rescue, or recalibration rescue."
   - "Readers also need a term-level split between intrinsic-excitability route families such as allocation bias, AIS / ion-channel-state plasticity, homeostatic set point / recovery control, and bounded human proxy routes, because those do not constrain the same physiological object."
   - "Readers also need a term-level split between ionic / chloride route families such as local chloride set point, E_GABA_A / inhibitory-driving-force regime, interstitial-ion state switching, and quantity-defined human sodium or CSF-ion proxies, because those do not raise the claim ceiling in the same way."
+  - "Readers also need a term-level split between thermal-state itself, field-potential thermal confounds, device-heating artifacts, brain-state proxy routes, and passive / task-linked versus perturbation-conditioned human thermal routes, because those do not raise the claim ceiling in the same way."
   - "Readers also need a term-level stop line between connectome as structural scaffold and living-human tractography as an acquisition- and graph-conditioned macro pathway prior."
   - "Readers now also need a term-level split between shared extracellular / electrical state itself, human diffusion-MRI ECS clues, and human perturbation-conditioned clues, because those do not raise the claim ceiling in the same way."
   - "The newer route-card names are not decorative labels; they each name a distinct failure mode such as upstream visibility loss, cross-stack shared-driver risk, or broken state continuity across a sequential bridge."
@@ -245,6 +247,13 @@ On this site, <strong>intrinsic excitability</strong> is not one generic hidden 
 <strong>When ionic words start sounding like one thing</strong>
 <p>
 On this site, <strong>ionic / chloride evidence</strong> is not one interchangeable meter. <a href="https://doi.org/10.1126/science.1245423" target="_blank">Glykys et al. (2014)</a> supports a <strong>local chloride-set-point route</strong>, <a href="https://doi.org/10.1038/s41467-017-01749-0" target="_blank">Heubl et al. (2017)</a> supports <strong>activity-dependent KCC2 regulation</strong>, <a href="https://doi.org/10.1126/science.aad4821" target="_blank">Ding et al. (2016)</a> supports <strong>interstitial-ion state switching</strong>, <a href="https://doi.org/10.1016/j.celrep.2023.112934" target="_blank">Byvaltsev et al. (2023)</a> supports <strong>perisynaptic K<sup>+</sup> clearance by reverse-mode KCC2</strong>, <a href="https://doi.org/10.1093/braincomms/fcaf201" target="_blank">Lyckenvik et al. (2025)</a> shows that human <strong>CSF ion ranges</strong> remain tightly regulated and distinct from serum, and <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">Qian et al. (2025)</a> shows that human sodium MRI still splits into <strong>mono-/bi-T<sub>2</sub> signal routes</strong> rather than one routine ionic-state readout. If that distinction is what you need next, go to <a href="wbe_101.html#state-completeness">WBE 101: hidden state at the entry point</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#ionic-route-card">Wiki: ionic / chloride route card</a>.
+</p>
+</div>
+
+<div class="note-box">
+<strong>When thermal words start sounding like one thing</strong>
+<p>
+On this site, <strong>thermal-state</strong> is not one interchangeable meter. <a href="https://doi.org/10.1111/j.1469-7793.1998.249bu.x" target="_blank">Hardingham &amp; Larkman (1998)</a> and <a href="https://doi.org/10.1111/j.1469-7793.2000.00059.x" target="_blank">Volgushev et al. (2000)</a> support <strong>local operating-point physiology</strong>, <a href="https://doi.org/10.1126/science.8446900" target="_blank">Moser et al. (1993)</a> supports a <strong>field-potential thermal confound</strong>, <a href="https://doi.org/10.1038/nature07448" target="_blank">Long &amp; Fee (2008)</a> supports <strong>sequence-timing perturbation</strong>, <a href="https://doi.org/10.1038/s41593-019-0422-3" target="_blank">Owen et al. (2019)</a> and <a href="https://doi.org/10.1038/s42003-023-04542-6" target="_blank">Boorman et al. (2023)</a> support <strong>device- or preparation-linked heating / cooling burden</strong>, <a href="https://doi.org/10.1038/s41598-025-21175-3" target="_blank">Lazopulo et al. (2025)</a> supports a <strong>brain-state proxy route</strong>, and <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>, <a href="https://doi.org/10.3389/fnhum.2024.1398034" target="_blank">Rogala et al. (2024)</a>, <a href="https://doi.org/10.1007/s00062-024-01467-3" target="_blank">Tan et al. (2025)</a>, <a href="https://doi.org/10.1016/j.jshs.2023.09.001" target="_blank">Tan et al. (2024)</a>, plus <a href="https://doi.org/10.1016/j.clinph.2025.02.262" target="_blank">Inoue et al. (2025)</a> support different human thermal routes. Those are different inferential objects with different ceilings. If that distinction is what you need next, go to <a href="wbe_101.html#state-completeness">WBE 101: hidden state at the entry point</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#thermal-route-card">Wiki: thermal route card</a>.
 </p>
 </div>
 
@@ -585,7 +594,31 @@ If <strong>state annotation</strong>, <strong>state continuity</strong>, <strong
 </tr>
 <tr>
 <td><strong>Thermal-state</strong></td>
-<td>The tissue operating-temperature condition that can change membrane kinetics, field-potential amplitude, and sequence timing. It is different from both timing-state and bioenergetic-state.</td>
+<td>The tissue operating-temperature condition that can change membrane kinetics, synaptic reliability, field-potential amplitude, and sequence timing. It is different from timing-state, bioenergetic-state, and thermodynamic / irreversibility metrics. Even on the human side, the safer routes still split into passive / task-linked macro thermometry and perturbation-conditioned thermal routes rather than one direct local thermal readout.</td>
+</tr>
+<tr>
+<td><strong>Thermal route card</strong></td>
+<td>The disclosure rule that stops <strong>thermal evidence</strong> from collapsing local operating-point physiology, field-potential confounds, sequence / rhythm perturbation, device-heating artifact, brain-state proxy routes, and human passive / task-linked versus perturbation-conditioned thermal routes into one bucket. It asks for claim family, direct thermal observable, spatial / preparation regime, driver or perturbation route, time window, function target, human evidence class, and abstention boundary.</td>
+</tr>
+<tr>
+<td><strong>Field-potential thermal confound</strong></td>
+<td>A route in which temperature shifts rescale or drift field-potential amplitude strongly enough to mimic or mask the effect being claimed. It is not evidence by itself that the intended cognitive, plasticity, or circuit variable changed.</td>
+</tr>
+<tr>
+<td><strong>Device- or preparation-linked heating artifact</strong></td>
+<td>A local temperature change produced by the intervention or setup itself, such as optogenetic light delivery, probes, stimulation hardware, or cooling / warming apparatus. It can distort neural or neurovascular readouts and therefore must not be silently read as the target mechanism.</td>
+</tr>
+<tr>
+<td><strong>Brain-state proxy route</strong></td>
+<td>A route in which brain temperature covaries with sleep / wake state or oscillatory regime and therefore acts as a coarse state marker. It is stronger than having no state-linked thermal evidence, but weaker than a direct readout of cell-specific microtemperature, synapse-specific heating burden, or local thermal-controller identity.</td>
+</tr>
+<tr>
+<td><strong>Human passive / task-linked macro thermometry</strong></td>
+<td>A living-human route such as MRS thermometry or task-linked thermal mapping that constrains coarse regional brain temperature or task-evoked temperature change. It remains a bounded macro thermal proxy rather than cell-specific microtemperature or local heating-burden ground truth.</td>
+</tr>
+<tr>
+<td><strong>Human perturbation-conditioned thermal route</strong></td>
+<td>A living-human route in which systemic heat exposure or focal cooling changes function or neurovascular readout under a declared thermal perturbation. It can show temperature sensitivity under intervention, but it is still not a direct readout of cell-specific thermal-state or local thermal-controller identity.</td>
 </tr>
 <tr>
 <td><strong>Timing-state</strong></td>
@@ -999,6 +1032,18 @@ Although non-invasive decoding and ESI are making steady progress, a successful 
 <li>Byvaltsev, E., Behbood, M., Schleimer, J.-H., Gensch, T., Semyanov, A., Schreiber, S., &amp; Strauss, U. (2023). KCC2 reverse mode helps to clear postsynaptically released potassium at glutamatergic synapses. <a href="https://doi.org/10.1016/j.celrep.2023.112934" target="_blank">doi:10.1016/j.celrep.2023.112934</a></li>
 <li>Lyckenvik, T., Forsberg, M., Johansson, K., et al. (2025). Ion concentrations in CSF and serum are differentially and precisely regulated. <a href="https://doi.org/10.1093/braincomms/fcaf201" target="_blank">doi:10.1093/braincomms/fcaf201</a></li>
 <li>Qian, Y., Lin, Y.-C., Chen, X., et al. (2025). Single-quantum sodium MRI at 3 T for separation of mono- and bi-T2 sodium signals. <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">doi:10.1038/s41598-025-07800-1</a></li>
+<li>Hardingham, N. R., &amp; Larkman, A. U. (1998). The reliability of excitatory synaptic transmission in slices of rat visual cortex in vitro is temperature dependent. <a href="https://doi.org/10.1111/j.1469-7793.1998.249bu.x" target="_blank">doi:10.1111/j.1469-7793.1998.249bu.x</a></li>
+<li>Volgushev, M., Vidyasagar, T. R., Chistiakova, M., Yousef, T., &amp; Eysel, U. T. (2000). Membrane properties and spike generation in rat visual cortical cells during reversible cooling. <a href="https://doi.org/10.1111/j.1469-7793.2000.00059.x" target="_blank">doi:10.1111/j.1469-7793.2000.00059.x</a></li>
+<li>Moser, E., Mathiesen, I., &amp; Andersen, P. (1993). Association between brain temperature and dentate field potentials in exploring and swimming rats. <a href="https://doi.org/10.1126/science.8446900" target="_blank">doi:10.1126/science.8446900</a></li>
+<li>Long, M. A., &amp; Fee, M. S. (2008). Using temperature to analyse temporal dynamics in the songbird motor pathway. <a href="https://doi.org/10.1038/nature07448" target="_blank">doi:10.1038/nature07448</a></li>
+<li>Owen, S. F., Liu, M. H., &amp; Kreitzer, A. C. (2019). Thermal constraints on in vivo optogenetic manipulations. <a href="https://doi.org/10.1038/s41593-019-0422-3" target="_blank">doi:10.1038/s41593-019-0422-3</a></li>
+<li>Boorman, L. W., Harris, S. S., Shabir, O., et al. (2023). Bidirectional alterations in brain temperature profoundly modulate spatiotemporal neurovascular responses in-vivo. <a href="https://doi.org/10.1038/s42003-023-04542-6" target="_blank">doi:10.1038/s42003-023-04542-6</a></li>
+<li>Rzechorzek, N. M., Thrippleton, M. J., Chappell, F. M., et al. (2022). A daily temperature rhythm in the human brain predicts survival after brain injury. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">doi:10.1093/brain/awab466</a></li>
+<li>Rogala, J., Dreszer, J., Sińczuk, M., et al. (2024). Local variation in brain temperature explains gender-specificity of working memory performance. <a href="https://doi.org/10.3389/fnhum.2024.1398034" target="_blank">doi:10.3389/fnhum.2024.1398034</a></li>
+<li>Tan, X. R., Stephenson, M. C., Alhadad, S., et al. (2024). Elevated brain temperature under severe heat exposure impairs cortical motor activity and executive function. <a href="https://doi.org/10.1016/j.jshs.2023.09.001" target="_blank">doi:10.1016/j.jshs.2023.09.001</a></li>
+<li>Tan, Y., Liu, W., Li, Y., et al. (2025). Measurement of Healthy Adult Brain Temperature Using <sup>1</sup>H Magnetic Resonance Spectroscopy Thermometry. <a href="https://doi.org/10.1007/s00062-024-01467-3" target="_blank">doi:10.1007/s00062-024-01467-3</a></li>
+<li>Inoue, T., Nomura, S., Yamakawa, T., et al. (2025). Intraoperative evaluation using a multimodality probe of temperature-dependent neurovascular modulation during focal brain cooling. <a href="https://doi.org/10.1016/j.clinph.2025.02.262" target="_blank">doi:10.1016/j.clinph.2025.02.262</a></li>
+<li>Lazopulo, A., Emmenegger, Y., Đukanović, N., et al. (2025). Brain temperature as proxy for brain state and oscillatory activity in the mouse. <a href="https://doi.org/10.1038/s41598-025-21175-3" target="_blank">doi:10.1038/s41598-025-21175-3</a></li>
 <li>Seidl, A. H., Rubel, E. W., &amp; Barria, A. (2015). Tuning of Ranvier node and internode properties in myelinated axons to adjust action potential timing. <a href="https://doi.org/10.1038/ncomms9073" target="_blank">doi:10.1038/ncomms9073</a></li>
 <li>Suzuki, A., et al. (2011). Astrocyte-neuron lactate transport is required for long-term memory formation. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">doi:10.1016/j.cell.2011.02.018</a></li>
 <li>Silva, B., et al. (2022). Glial ketogenesis regulates memory maintenance during starvation. <a href="https://doi.org/10.1038/s42255-022-00528-6" target="_blank">doi:10.1038/s42255-022-00528-6</a></li>
