@@ -35,6 +35,13 @@ recommended_pages:
 
 This page does not change the current public six-question batch. It makes only the first active row more explicit, so readers can see why `U13-2` still comes first, why `D10 3M-CPSEED` stays primary, and what the next public-safe artifact can honestly close.
 
+## What still stays fixed after the 14:10 JST actual-pull reread on April 4, 2026
+
+- An actual-pull recheck at `2026-04-04 14:10 JST` after `mind-upload@cafeab4bc2a5`, `EEG-DATA@e0695bcac83d`, and `auto-research-funds@a4852d89376c` still keeps `U13-2` first and keeps `D10` as the primary anchor for this row.
+- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` tightens glossary excitability and ionic terms on top of the earlier EEG foundation-model source-status split without widening the route, `EEG-DATA` still reports `30,930` merged-unique rows, `28,893` high-confidence rows, `24,909` immediate rows, and `24,539` high-confidence immediate rows after the newest metadata deep dives, and `auto-research-funds` adds `JELA Diakonia` scholarship cards without changing the practical shortlist.
+- None of those additions replaces the present speech ladder. The newest metadata and adjacent-lane carry-forwards still do not recreate the overt / silent-intended / imagined speech triangle that keeps `D10` primary for `U13-2`.
+- Browser-level live checks in this run still returned `HTTP/2 200` for the current public entry pages and this row packet with `Last-Modified: Sat, 04 Apr 2026 04:18:04 GMT`; the checked front-door pages and this row packet still surfaced `2026-04-04 12:02 JST` wording before this source sync. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `Doumei=0`, `Kenkyu no Susume=0`), so this page only carries the same row-specific route forward onto the actual latest pulled heads.
+
 ## What still stays fixed after the 12:02 JST actual-pull reread on April 4, 2026
 
 - An actual-pull recheck at `2026-04-04 12:02 JST` after `mind-upload@f84f6e53753b`, `EEG-DATA@017ae806c4dd`, and `auto-research-funds@d4024a5b8a1a` still keeps `U13-2` first and keeps `D10` as the primary anchor for this row.
