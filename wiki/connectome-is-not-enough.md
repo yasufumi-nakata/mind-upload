@@ -347,6 +347,12 @@ This page still left one practical shortcut too open. <a href="https://doi.org/1
 </p>
 </div>
 <div class="note-box">
+<strong>2026-04-04 addendum: the site now concentrates the petascale critique in one quantitative audit</strong>
+<p>
+This page still needed one narrower improvement. It already separated evidence classes, but the technical critique of <strong>petascale</strong>, <strong>nanoscale</strong>, and <strong>same-brain</strong> wording was still distributed across several pages. The site now collects that argument in <a href="../wiki/petascale-connectomics-ceilings.html">Wiki: Why petascale connectomics still stops early</a>, where preservation kinetics, sequential bridge scope, proofreading burden, and dynamical underdetermination are audited together rather than being left as scattered warnings.
+</p>
+</div>
+<div class="note-box">
 <strong>2026-04-01 addendum: presynaptic release machinery is not reducible to synapse count or one release-probability scalar</strong>
 <p>
 Another practical shortcut still remained: readers could mentally collapse <strong>synapse count</strong>, <strong>regional SV2A density</strong>, <strong>release probability</strong>, and <strong>presynaptic release machinery</strong> into one interchangeable object. That is too weak. <a href="https://doi.org/10.7554/eLife.18167" target="_blank">Moln&aacute;r et al. (2016)</a> showed in human pyramidal-to-interneuron synapses that multi-vesicular release and multiple docked vesicles can coexist at one synaptic contact. <a href="https://doi.org/10.1038/s41593-017-0041-9" target="_blank">Sakamoto et al. (2018)</a> showed that presynaptic weight can be set by multiple Munc13-1 supramolecular assemblies that act as independent release sites. <a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">D&uuml;rst et al. (2022)</a> showed that vesicular release probability sets the strength of individual synapses, and <a href="https://doi.org/10.1038/s41593-024-01720-5" target="_blank">Emperador-Melero et al. (2024)</a> showed that CaV2 channel clustering and vesicle priming are mediated by distinct active-zone machineries. Therefore, a connectome row, a synapse count, or a regional synaptic-density PET value does <strong>not</strong> directly reveal <strong>release-site number</strong>, <strong>docked-vesicle architecture</strong>, <strong>active-zone nanostructure / priming-site assembly</strong>, or <strong>current release competence</strong>. On this site, those variables remain explicit latent state unless a route directly assays them.
