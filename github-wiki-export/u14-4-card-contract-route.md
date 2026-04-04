@@ -27,6 +27,13 @@ This page does not claim field-wide reproducibility, deployment readiness, or st
 
 This page does not change the current public six-question batch. It makes only the fifth active row more explicit, so readers can see why `U14-4` still stays before `U14-2`, why `D01 Acquisition delay of wireless EEG` now stays only as a gated support entry point, and what the next public-safe artifact can honestly close.
 
+## What still stays fixed after the 14:10 JST actual-pull reread on April 4, 2026
+
+- An actual-pull recheck at `2026-04-04 14:10 JST` after `mind-upload@cafeab4bc2a5`, `EEG-DATA@e0695bcac83d`, and `auto-research-funds@a4852d89376c` still keeps `U14-4` fifth and still keeps `D01` only as the planned gated-support disclosure floor for this row.
+- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` tightens glossary excitability and ionic terms on top of the earlier EEG foundation-model source-status split without widening the route, `EEG-DATA` still reports `30,930` merged-unique rows, `28,893` high-confidence rows, `24,909` immediate rows, and `24,539` high-confidence immediate rows after the newest metadata deep dives, and `auto-research-funds` adds `JELA Diakonia` scholarship cards without changing the practical shortlist.
+- None of those additions replaces the present rerun-entry structure. The newest carry-forwards do not change the fact that `D01` still sets only the latency / measurement floor, `D13` still stays the first public-open rerun support family, and `D08` still stays the validation-heavy support family kept one step later.
+- Browser-level live checks in this run still returned `HTTP/2 200` for the current public entry pages and this row packet with `Last-Modified: Sat, 04 Apr 2026 04:18:04 GMT`; the checked front-door pages already surfaced `2026-04-04 12:02 JST` wording while this row packet still surfaced `2026-04-04 09:05 JST` wording before this source sync. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `Doumei=0`, `Kenkyu no Susume=0`), so no new Todoist item was justified for this row in this sync.
+
 ## What still stays fixed after the 09:05 JST actual-pull reread on April 4, 2026
 
 - An actual-pull recheck at `2026-04-04 09:05 JST` after `mind-upload@e571567f017d`, `EEG-DATA@fbbb0d8c01e0`, and `auto-research-funds@d7f6fb9bc158` still keeps `U14-4` fifth and still keeps `D01` only as the planned gated-support disclosure floor for this row.
