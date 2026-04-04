@@ -6,7 +6,7 @@ article_type: Platform
 subtitle: "Use the logic of PDB x BIDS x PhysioNet x OSF to define WBE success conditions and reproducible progress"
 author: Mind Uploading Research Project
 last_updated: "2026-04-04"
-note: "Operational Specification (updated with multi-axis overlap audit)"
+note: "Operational Specification (updated with multi-axis overlap audit and recording-frame contract sync)"
 audience: "Readers who want the site's core policy and anyone checking what must exist before progress can honestly be claimed"
 reading_time: "15-25 min"
 page_intro: "This page is the core blueprint of Mind-Upload. It explains how to define progress in advance rather than retroactively by aligning data, evaluation, failure conditions, and reproduction procedures first."
@@ -18,7 +18,7 @@ page_highlights:
   - "For decode / biomarker scores, the Specificity & Shortcut Card separates the target neural variable from nuisance routes and audits subject / session fingerprint plus acquisition-distribution shortcuts independently."
   - "This page explains why collecting data alone is not the same as making progress."
   - "The next bottleneck after observability is identifiability-driven experiment design: extra modalities do not count as progress unless they rule out competing internal-state solutions."
-  - "For foundation / self-supervised EEG results, the Pretraining Card now splits overlap audit into raw-recording / window ancestry, subject / session ancestry, site / device / reference / layout ancestry, task / benchmark-object ancestry, and benchmark-operations ancestry, alongside harmonization, adaptation, and scale / efficiency, before any transfer claim is read strongly."
+  - "For foundation / self-supervised EEG results, the Pretraining Card now splits overlap audit into raw-recording / window ancestry, subject / session ancestry, site / device / reference / layout ancestry, task / benchmark-object ancestry, and benchmark-operations ancestry, and it also fixes the recording-frame contract / harmonization branch, adaptation, and scale / efficiency before any transfer claim is read strongly."
   - "For brain-to-text and speech decode, the Neural Contribution Card fixes task constraint, language prior, candidate set, no-brain / no-LM / shuffle baselines, and subject cooperation."
   - "For invasive language BCIs, communication claims are now also route-typed as throughput / expressivity, transfer initialization, bounded fixed-decoder slices, or adaptive rescue before any durability claim is read strongly."
   - "For multimodal or atlas-prior results, the Fusion Card is added on top of the Observability Budget so acquisition relation, synchronization, effective-window / temporal-kernel relation, fusion model, availability / complete-case slice, hemodynamic route family including vascular-state / CVR audit versus quantity bridge, transfer window, and external validation are fixed explicitly."
@@ -1902,9 +1902,9 @@ The weakness that became clearer in the re-audit was that the <strong>Observabil
 </p>
 </div>
 <div class="note-box">
-<strong>2026-03-18 addendum: acquisition-distribution shortcut is also independent</strong>
+<strong>2026-04-04 correction: acquisition-distribution shortcut needs a recording-frame contract</strong>
 <p>
-<a href="https://doi.org/10.1088/1741-2552/aacfe4" target="_blank">Hu et al. (2018)</a> showed that reference montage and electrode setup alter the measured scalp potential itself, <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)</a> showed that EEG differences arise from system as well as subject and session, <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a> showed that cross-dataset EEG decoding is degraded by environmental variability such as amplifier, cap, sampling rate, and filtering, and <a href="https://doi.org/10.1016/j.brainresbull.2024.110906" target="_blank">Dong et al. (2024)</a> showed that comparative work across different channel locations needs explicit harmonization. For that reason, this site treats <strong>site / device / reference system / electrode layout / protocol distribution</strong> as a shortcut family on the same level as subject fingerprint, and requires <strong>setup disjointness</strong> plus <strong>harmonization logs</strong> as independent deliverables.
+The older rule correctly treated acquisition distribution as independent from subject fingerprint, but it still left one scientific shortcut open: it let readers imagine <strong>harmonization</strong> as one generic cleanup step. The official <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">EEG-BIDS specification</a> already separates <strong>electrodes</strong>, <strong>channels</strong>, <strong>coordinate system</strong>, and <strong>reference scheme</strong>. <a href="https://doi.org/10.1088/1741-2552/aaa13f" target="_blank">Hu et al. (2018)</a> showed that reference montage and electrode setup alter the measured scalp potential itself, <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)</a> showed that EEG differences arise from system as well as subject and session, <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a> showed that cross-dataset EEG decoding is degraded by environmental variability such as amplifier, cap, sampling rate, and filtering, and <a href="https://doi.org/10.1016/j.brainresbull.2024.111064" target="_blank">Dong et al. (2024)</a> validated an explicit <strong>REST-based transformation</strong> route for channel-location harmonization with high correlation rather than identity by default. For that reason, this site treats <strong>site / device / reference system / electrode layout / coordinate route / protocol distribution</strong> as a shortcut family on the same level as subject fingerprint, and it also requires the <strong>recording-frame contract</strong>: original channel map, coordinate route or template, raw reference plus rereference family, omitted/interpolated-channel policy, and the named harmonization branch. <strong>Inference from these sources:</strong> <strong>common-channel intersection</strong>, <strong>interpolation to a target montage</strong>, and <strong>REST / another explicit transform</strong> are different translation branches and do not justify one generic `harmonized EEG` claim.
 </p>
 </div>
 <div class="note-box">
@@ -2034,7 +2034,7 @@ The remaining weakness after adding the <strong>Observability Budget</strong> an
 </tr>
 <tr>
 <td><strong>harmonization policy</strong></td>
-<td>Report channel mapping, electrode-coordinate route or template, reference family, sample-rate conversion, token length, normalization, and missing / omitted / interpolated-channel or segment policy.</td>
+<td>Report channel mapping, electrode-coordinate route or template, reference family, whether comparison used common-channel intersection, interpolation to a target montage, REST / another explicit transform, or no cross-setup harmonization, plus sample-rate conversion, token length, normalization, and missing / omitted / interpolated-channel or segment policy.</td>
 <td>Recording-frame translation can be misread as physiology-preserving model capability.</td>
 </tr>
 <tr>
