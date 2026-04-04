@@ -6,7 +6,7 @@ article_type: Start Here
 subtitle: "Define success criteria, standards, benchmarks, and preregistration first"
 author: Mind Uploading Research Project
 last_updated: "2026-04-04"
-note: "Human-friendly landing page"
+note: "Human-friendly landing page (updated with four-lane human support-state split)"
 audience: "First-time visitors, readers who want only the big picture, and anyone who wants a clear reading order"
 reading_time: "5-10 min"
 page_intro: "This page is the main entry point to Mind-Upload. It is designed to show, as quickly as possible, what this site is trying to do, where to start reading, and which pages matter first."
@@ -254,6 +254,50 @@ The remaining weakness at the front door was that the warning above was still mo
 <td><strong>Sleep-linked biomarker-efflux route</strong><br><a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a></td>
 <td>A randomized crossover study with <strong>39 analyzed participants</strong> using an investigational device plus a <strong>multicompartment model</strong> to infer overnight brain-to-plasma Aβ / tau transport.</td>
 <td>A model-based overnight efflux route still does not identify <strong>which astrocyte</strong>, <strong>which meningeal-lymphatic segment</strong>, or <strong>which microglial controller</strong> generated the effect.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>Support-state human rows still split into four different lanes</strong>
+<p>
+The remaining front-door weakness was that recent <strong>barrier-side MRI / PET</strong>, <strong>clearance transport MRI</strong>, <strong>astrocyte-related PET</strong>, and <strong>target-defined neuroimmune PET</strong> papers could still sit close enough to look like one convergent <strong>human maintenance-controller meter</strong>. The primary literature does not support that shortcut. <a href="https://doi.org/10.1177/0271678X261429042" target="_blank">Petitclerc et al. (2026)</a> separate <strong>BBB-versus-BCSFB water transport</strong> in a small healthy-volunteer MRI study, while <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> quantify <strong>tracer-specific BBB permeability</strong> but explicitly leave <strong>human ground truth</strong> and <strong>test-retest</strong> as future work. <a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al. (2025)</a> show that <strong>[<sup>18</sup>F]SMBT-1</strong> quantification still depends on <strong>scan window</strong>, <strong>reference region</strong>, and <strong>model choice</strong>, while <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. (2018)</a> established an <strong>I<sub>2</sub>BS</strong> route with a different pharmacological profile. <a href="https://doi.org/10.1038/s41467-023-40937-z" target="_blank">Biechele et al. (2023)</a>, <a href="https://doi.org/10.2967/jnumed.124.268699" target="_blank">Ogata et al. (2025)</a>, and <a href="https://doi.org/10.2967/jnumed.124.268525" target="_blank">Yan et al. (2025)</a> then keep <strong>TSPO</strong>, <strong>CSF1R</strong>, and <strong>COX-2</strong> apart as different neuroimmune targets rather than one reusable inflammation scalar. Finally, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> remain <strong>transport-side mobility / efflux routes</strong> with their own imaging or model burden. Therefore, this site now keeps the four lanes below separate before any bundle claim is read strongly.
+</p>
+</div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>Human support-state lane</th>
+<th>Representative human row</th>
+<th>Direct observable</th>
+<th>Why the lane still stops early on this site</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>BBB / BCSFB transport</strong></td>
+<td><a href="https://doi.org/10.1177/0271678X261429042" target="_blank">Petitclerc et al. (2026)</a>; <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a></td>
+<td>Water or tracer transport across a <strong>named boundary</strong> under explicit model assumptions.</td>
+<td>A boundary-transport estimate is still not a <strong>cell-specific BBB / pericyte / choroid-plexus controller readout</strong> and does not automatically equal any clearance or astrocyte row.</td>
+</tr>
+<tr>
+<td><strong>Clearance transport</strong></td>
+<td><a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>; <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a></td>
+<td>CSF mobility, sleep- or physiology-conditioned transport, or model-based brain-to-plasma biomarker efflux.</td>
+<td>These rows still do not identify the <strong>local immune effector</strong>, the <strong>meningeal-lymphatic controller</strong>, or the <strong>synapse-specific maintenance mechanism</strong>.</td>
+</tr>
+<tr>
+<td><strong>Astrocyte-related PET</strong></td>
+<td><a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al. (2025)</a>; <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. (2018)</a></td>
+<td>Tracer-family-specific <strong>MAO-B</strong> or <strong>I<sub>2</sub>BS</strong> binding under a named quantification regime.</td>
+<td>Target-defined tracer burden is still not <strong>astrocyte-ensemble identity</strong>, <strong>memory content</strong>, or the specific controller highlighted by rodent causal work.</td>
+</tr>
+<tr>
+<td><strong>Target-defined neuroimmune PET</strong></td>
+<td><a href="https://doi.org/10.1038/s41467-023-40937-z" target="_blank">Biechele et al. (2023)</a>; <a href="https://doi.org/10.2967/jnumed.124.268699" target="_blank">Ogata et al. (2025)</a>; <a href="https://doi.org/10.2967/jnumed.124.268525" target="_blank">Yan et al. (2025)</a></td>
+<td>Target-defined <strong>TSPO</strong>, <strong>CSF1R</strong>, or <strong>COX-2</strong> PET binding with different cell / enzyme meanings.</td>
+<td>These routes are not interchangeable with one another, not equivalent to transport-side rows, and not a direct readout of the <strong>current local neuroimmune controller</strong>.</td>
 </tr>
 </tbody>
 </table>
