@@ -19,6 +19,19 @@ reading_time: "55-80分"
 - 更新日: 2026-04-04
 - 出典: `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`（60行を再構成）
 
+## 2026-04-04 22:06 JST latest actual-pull route-hold note
+
+This run still does not change the current public six-question batch. An actual-pull reread after `mind-upload@39248d59caaa`, `EEG-DATA@7ba2201e2b5`, and `auto-research-funds@f90279417a9f` still leaves the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.
+
+- The newest pulled deltas still deepen route discipline and access-status reading rather than replacing the current route family: `mind-upload` adds paired-fluid barrier guidance outside the current six, `EEG-DATA` deepens the `IEEE DataPort EEG records` audit while now keeping `30,935` merged-unique rows, `28,898` high-confidence rows, `24,910` directly usable rows, and `24,540` high-confidence immediate rows, and `auto-research-funds` only relaxes moving-head references without changing the practical shortlist.
+- Recounting the `### Ux-y` headings on this page still returns `60`, so this run keeps the one-row-at-a-time dossier structure intact.
+- The public six still stay `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
+- The solve-first order still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
+- The row-level execution map also stays fixed one dossier at a time: `U13-2` still uses `D10 3M-CPSEED` for the `brain-minus-prior` control family with `Kura Fund` first and `Nakatani Foundation graduate scholarship` second; `U13-5` still uses `D03` only as a gated-support planning anchor with `ChineseEEG-2`, `ZuCo 2.0`, the spoken-plus-imagined robot-speech EEG family, and `D10` as public-open backups and the same `Kura / Nakatani graduate` funding pair; `U0-2 / U0-3` still use `D02` only as a gated-support anchor with `ds004148` plus `ds007216` as the public-open stress ladders and `Nakatani graduate / Kashinome` as the funding pair; and `U14-4 / U14-2` still use `D01` only as a gated-support anchor with `D13` as the first public-open rerun support family and `Kura / Nakatani research watch / Secom watch` as the funding reading.
+- The route-safe access reading stays narrow in one important way: `D03 / D02 / D01` still look more open on DOI/DataCite/catalog-side reads than they do on the actual IEEE DataPort landing pages, so `D10` still stays the only clear public-open primary anchor while `D03 / D02 / D01` still stay gated-support planning anchors.
+- Browser-level live checks with a browser user agent still returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, `u13-2-brain-minus-prior-route.html`, and `u13-5-perception-to-recall-route.html`; the current `Last-Modified` header was `Sat, 04 Apr 2026 12:16:08 GMT` on those public surfaces, while the checked bodies still surfaced `17:07 JST` on the front door plus `U13-2`, and `19:09 JST` on `U13-5`, before this source sync.
+- The funding bridge still stays narrow: `Kura Fund` and `Nakatani Foundation graduate scholarship` remain the active near-term lanes, `Kashinome Scholarship` remains the student-runway side lane, `Nakatani Foundation research grant` remains next-cycle watch, `Secom General Research Grant` remains closed for the current cycle, and a fresh Todoist `api/v1/sync(items, projects)` audit (`items=207`, `projects=2`) still did not justify a new task.
+
 ## 2026-04-04 08:07 JST latest actual-pull route-hold note
 
 This run still does not change the current public six-question batch. An actual-pull reread after `mind-upload@418c8f5d0ef9e871531d9cfb8548887e57f54d68`, `EEG-DATA@dc6d833b83e9a5e6a181edfee5349f561f65b043`, and `auto-research-funds@58d8738be5d55cff13d7bd626479783d6818de1f` still leaves the current `D10 / D03 / D02 / D01` family and the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1` unchanged.

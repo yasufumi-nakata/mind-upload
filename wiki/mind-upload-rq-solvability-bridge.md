@@ -57,6 +57,17 @@ This page answers one narrow question: for the rows that are actually worth deep
 
 It does **not** try to re-scan all `60RQ` items at once. The working style on this site is now `deepen one row at a time`, not `summarize everything at the same depth`.
 
+## What still stays fixed after the 22:06 JST actual-pull reread on April 4, 2026
+
+- An actual-pull recheck at `2026-04-04 22:06 JST` after `mind-upload@39248d59caaa`, `EEG-DATA@7ba2201e2b5`, and `auto-research-funds@f90279417a9f` still leaves both the current public six and the headline next-watch queue unchanged.
+- The newest pulled deltas remain carry-forward rather than route replacement: `mind-upload` adds paired-fluid barrier route guidance outside the current six without widening the route, `EEG-DATA` deepens the `IEEE DataPort EEG records` audit while now keeping `30,935` merged-unique rows, `28,898` high-confidence rows, `24,910` immediately usable rows, and `24,540` high-confidence immediate rows, and `auto-research-funds` only relaxes moving-head references without displacing the practical shortlist.
+- The route-safe reading also stays deliberately narrow in one important way: `D03 / D02 / D01` still look more open on DOI/DataCite/catalog-side reads than they do on the actual IEEE DataPort landing pages, so `D10` remains the only clear public-open primary anchor while `D03 / D02 / D01` still stay gated-support anchors in public wording.
+- The newest repo-wide carry-forward still does not create a stronger row-level replacement: the paired-fluid barrier note tightens outside-current-six bridge language, the newest IEEE DataPort catalog audit improves access-status discipline, and the funding wording cleanup keeps the shortlist easier to reuse, but none of them repairs the recall-validity gap under `U13-5`, replaces the cross-session identity-drift floor under `U0-2 / U0-3`, or displaces the current `D11 / D08 / D05 / D20` next-watch family.
+- Browser-level live checks in this run returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, `mind-upload-eeg-rq60-grant-dataset-playbook.html`, `u13-2-brain-minus-prior-route.html`, and `u13-5-perception-to-recall-route.html`; the checked headers now returned `Last-Modified: Sat, 04 Apr 2026 12:16:08 GMT`, and the checked bodies still surfaced `2026-04-04 17:07 JST` wording on the front door plus `U13-2`, and `2026-04-04 19:09 JST` wording on `U13-5`, before this source sync.
+- Official-window spot checks keep the same practical bridge: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, the `Kashinome Scholarship` still stays the `2026-04-09` must-arrive side route, `Nakatani Foundation research grant = closed / next-cycle watch`, and `Secom General Research Grant = closed (2026-03-31 12:00 JST)`.
+- A fresh read-only Todoist audit still showed enough route coverage (`items=207`, `projects=2`), so no new task was added in this session.
+- This source sync still does **not** widen the current queue or claim surface. It only carries forward the same queue while tightening why the DOI/catalog view does not by itself promote `D03 / D02 / D01`.
+
 ## What still stays fixed after the 17:07 JST actual-pull reread on April 4, 2026
 
 - An actual-pull recheck at `2026-04-04 17:07 JST` after `mind-upload@dc8ec5dc5e62`, `EEG-DATA@f115f11c2da4`, and `auto-research-funds@8d0f5128fcdc` still leaves both the current public six and the headline next-watch queue unchanged.

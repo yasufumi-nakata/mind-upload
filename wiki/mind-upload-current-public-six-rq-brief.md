@@ -57,6 +57,17 @@ This page keeps the current public six-question batch readable at the level of `
 
 It does **not** announce solved claims. It only states what the current public route is narrow enough to support after a post-pull review of `mind-upload`, `EEG-DATA`, `auto-research-funds`, the live public page, the current official funding windows, and a read-only Todoist recheck.
 
+## What still stays fixed after the 22:06 JST actual-pull reread on April 4, 2026
+
+- An actual-pull recheck at `2026-04-04 22:06 JST` after `mind-upload@39248d59caaa`, `EEG-DATA@7ba2201e2b5`, and `auto-research-funds@f90279417a9f` still leaves the public batch and the solve-first order unchanged.
+- The newest pulled deltas are still carry-forward rather than route replacement: `mind-upload` adds paired-fluid barrier route guidance outside the current six without widening the route, `EEG-DATA` deepens the `IEEE DataPort EEG records` audit while now keeping `30,935` merged-unique rows, `28,898` high-confidence rows, `24,910` immediately usable rows, and `24,540` high-confidence immediate rows, and `auto-research-funds` only relaxes moving-head references without displacing the practical shortlist.
+- Route-safe access wording therefore now stays narrow in a sharper way: `D03 / D02 / D01` still look more open on DOI/DataCite/catalog-side reads than they do on the actual IEEE DataPort landing pages, so `D10` remains the only clear public-open primary anchor and the next-watch family still stays `D11 / D08 / D05 / D20`.
+- The three-stack reading also stays explicit rather than generic: `U13-2 / U13-5` remain the speech-side control and transfer-gap pair, `U0-2 / U0-3` remain the identity-drift floor and threshold-governance pair, and `U14-4 / U14-2` remain the card-contract and fixed-split rerun-governance pair.
+- Browser-level live checks in this run returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, `mind-upload-eeg-rq60-grant-dataset-playbook.html`, `u13-2-brain-minus-prior-route.html`, and `u13-5-perception-to-recall-route.html`; the checked headers now returned `Last-Modified: Sat, 04 Apr 2026 12:16:08 GMT`, and the checked bodies still surfaced `2026-04-04 17:07 JST` wording on the front door plus `U13-2`, and `2026-04-04 19:09 JST` wording on `U13-5`, before this source sync.
+- Official-window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, the `Kashinome Scholarship` still reads as the `2026-04-09` must-arrive side route, `Nakatani Foundation research grant = closed / next-cycle watch`, and `Secom General Research Grant = closed (2026-03-31 12:00 JST)`.
+- A fresh read-only Todoist audit still showed enough route coverage (`items=207`, `projects=2`), so no new task was added in this session.
+- This source sync still does **not** widen the current public six. It only carries the same one-RQ-at-a-time batch onto the latest pulled heads while tightening why the DOI/catalog view does not by itself promote `D03 / D02 / D01`.
+
 ## What still stays fixed after the 17:07 JST actual-pull reread on April 4, 2026
 
 - An actual-pull recheck at `2026-04-04 17:07 JST` after `mind-upload@dc8ec5dc5e62`, `EEG-DATA@f115f11c2da4`, and `auto-research-funds@8d0f5128fcdc` still leaves the public batch and the solve-first order unchanged.
