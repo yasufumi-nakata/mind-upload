@@ -35,6 +35,13 @@ recommended_pages:
 
 This page does not change the current public six-question batch. It makes only the second active row more explicit, so readers can see why `U13-5` still stays next after `U13-2`, why `D03` now stays only as a gated support anchor for the present branch-point question, and what the next public-safe artifact can honestly close.
 
+## What still stays fixed after the 09:05 JST actual-pull reread on April 4, 2026
+
+- An actual-pull recheck at `2026-04-04 09:05 JST` after `mind-upload@e571567f017d`, `EEG-DATA@fbbb0d8c01e0`, and `auto-research-funds@d7f6fb9bc158` still keeps `U13-5` second and still keeps `D03` only as the planned gated-support anchor for the present branch-point question.
+- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now just carries the earlier `08:07 JST` route-hold sync on top of a recent pretraining-overlap audit, `EEG-DATA` still reports `30,929` merged-unique rows, `28,892` high-confidence rows, `24,909` immediate rows, and `24,539` high-confidence immediate rows after the `OpenNeuro ds007020` deep dive, and `auto-research-funds` adds deeply reviewed April 4 scholarship updates without changing the practical shortlist.
+- The practical effect for this row stays narrow. The newest carry-forwards still do not expose the recall-labeled branch point that this row needs, so `D03` stays only as the intended gated-support anchor in planning while `ChineseEEG-2`, `ZuCo 2.0`, and the spoken-plus-imagined robot-speech EEG family remain nearby backups.
+- Browser-level live checks in this run still returned `HTTP/2 200` for the current public entry pages and this row packet with `Last-Modified: Sat, 04 Apr 2026 00:11:41 GMT`; the checked front-door pages already surfaced `2026-04-04 08:07 JST` wording while this row packet still surfaced `2026-04-04 01:04 JST` wording before this source sync. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`), so this page only carries the same row-specific route forward onto the actual latest pulled heads.
+
 ## What still stays fixed after the 01:04 JST actual-pull reread on April 4, 2026
 
 - An actual-pull recheck at `2026-04-04 01:04 JST` after `mind-upload@9b6a8b971ba0`, `EEG-DATA@56d765da60b`, and `auto-research-funds@3c8569e28` still keeps `U13-5` second and still keeps `D03` only as the planned gated-support anchor for the present branch-point question.

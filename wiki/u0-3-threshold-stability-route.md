@@ -35,6 +35,13 @@ recommended_pages:
 
 This page does not change the current public six-question batch. It makes only the fourth active row more explicit, so readers can see why `U0-3` stays next after `U0-2`, why `D02 CSTE` now stays only as a gated support anchor, and what the next public-safe artifact can honestly close.
 
+## What still stays fixed after the 09:05 JST actual-pull reread on April 4, 2026
+
+- An actual-pull recheck at `2026-04-04 09:05 JST` after `mind-upload@e571567f017d`, `EEG-DATA@fbbb0d8c01e0`, and `auto-research-funds@d7f6fb9bc158` still keeps `U0-3` fourth and still keeps `D02` only as the planned gated-support anchor for the present threshold-governance question.
+- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now just carries the earlier `08:07 JST` route-hold sync on top of a recent pretraining-overlap audit, `EEG-DATA` still reports `30,929` merged-unique rows, `28,892` high-confidence rows, `24,909` immediate rows, and `24,539` high-confidence immediate rows after the `OpenNeuro ds007020` deep dive, and `auto-research-funds` adds deeply reviewed April 4 scholarship updates without changing the practical shortlist.
+- None of those additions replaces the intended threshold floor. The newest carry-forwards still do not supply the `cross-session / cross-task` human-biometrics framing that keeps `D02` primary in planning, while `ds004148` and `ds007216` still stay the main public-open threshold stress-test ladders.
+- Browser-level live checks in this run still returned `HTTP/2 200` for the current public entry pages and this row packet with `Last-Modified: Sat, 04 Apr 2026 00:11:41 GMT`; the checked front-door pages already surfaced `2026-04-04 08:07 JST` wording while this row packet still surfaced `2026-04-04 01:04 JST` wording before this source sync. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`), so no new Todoist item was justified for this row in this sync.
+
 ## What still stays fixed after the 01:04 JST actual-pull reread on April 4, 2026
 
 - An actual-pull recheck at `2026-04-04 01:04 JST` after `mind-upload@9b6a8b971ba0`, `EEG-DATA@56d765da60b`, and `auto-research-funds@3c8569e28` still keeps `U0-3` fourth and still keeps `D02` only as the planned gated-support anchor for the present threshold-governance question.
@@ -109,7 +116,7 @@ Among public-open backups, `ds004148` still stays the cleanest retest ladder and
 ## What changed in this run
 
 - The public batch did not change.
-- The main change in this sync is that `U0-3` now carries the same `2026-04-04 01:04 JST` route basis as the front-door pages and records that the live row packet had been stale before this source update.
+- The main change in this sync is that `U0-3` now carries the same `2026-04-04 09:05 JST` route basis as the latest front-door reading and records that the live row packet had still been stuck at the earlier `2026-04-04 01:04 JST` wording before this source update.
 - The row still records the anchor-choice rationale, one compact first-pass KPI bundle, and one explicit stop rule instead of leaving them implicit.
 - This is still a route-setting update, not a solved-claim update.
 

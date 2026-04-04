@@ -57,6 +57,16 @@ This page keeps the current public six-question batch readable at the level of `
 
 It does **not** announce solved claims. It only states what the current public route is narrow enough to support after a post-pull review of `mind-upload`, `EEG-DATA`, `auto-research-funds`, the live public page, the current official funding windows, and a read-only Todoist recheck.
 
+## What still stays fixed after the 09:05 JST actual-pull reread on April 4, 2026
+
+- An actual-pull recheck at `2026-04-04 09:05 JST` after `mind-upload@e571567f017d`, `EEG-DATA@fbbb0d8c01e0`, and `auto-research-funds@d7f6fb9bc158` still leaves the public batch and the solve-first order unchanged.
+- The newest pulled deltas are still carry-forward rather than route replacement: `mind-upload` now just carries the earlier `08:07 JST` route-hold sync on top of a recent pretraining-overlap audit, `EEG-DATA` still keeps `30,929` merged-unique rows, `28,892` high-confidence rows, `24,909` immediate rows, and `24,539` high-confidence immediate rows while treating `OpenNeuro ds007020` as a limited rest-side support note and keeping `HeartBEAM` plus figshare `EEG at rest and with TMS` only as backup families, and `auto-research-funds` adds deeply reviewed April 4 scholarship updates while still keeping `JGC-S` only as an adjacent runway without displacing the practical shortlist.
+- Route-safe access wording therefore still stays unchanged: `D10` remains the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors, and the next-watch family still stays `D11 / D08 / D05 / D20`.
+- Browser-level live checks in this run returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, `mind-upload-eeg-rq60-grant-dataset-playbook.html`, and the current-six row packets; the checked front-door headers now returned `Last-Modified: Fri, 03 Apr 2026 23:18:55 GMT`, and the checked bodies already surfaced `2026-04-04 08:07 JST` wording. The current-six row packets returned `Last-Modified: Sat, 04 Apr 2026 00:11:41 GMT` and still surfaced `2026-04-04 01:04 JST` wording before this source sync.
+- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, the `Kashinome Scholarship` still reads as the annual `mid-January to early-April` window and continues to be handled as the `2026-04-09` must-arrive side route, `Nakatani Foundation research grant = closed / next-cycle watch`, and `Secom General Research Grant = closed (2026-03-31 12:00 JST)`.
+- A fresh read-only Todoist audit still showed enough route coverage (`items=206`, `projects=2`), so no new task was added in this session.
+- This source sync still does **not** widen the current public six. It only carries the same one-RQ-at-a-time batch onto the latest pulled heads while aligning the current-six row packets to the already-published front door.
+
 ## What still stays fixed after the 08:07 JST actual-pull reread on April 4, 2026
 
 - An actual-pull recheck at `2026-04-04 08:07 JST` after `mind-upload@418c8f5d0ef9`, `EEG-DATA@dc6d833b83e9`, and `auto-research-funds@58d8738be5d5` still leaves the public batch and the solve-first order unchanged.

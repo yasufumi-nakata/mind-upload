@@ -35,6 +35,13 @@ recommended_pages:
 
 This page does not change the current public six-question batch. It makes only the fifth active row more explicit, so readers can see why `U14-4` still stays before `U14-2`, why `D01 Acquisition delay of wireless EEG` now stays only as a gated support entry point, and what the next public-safe artifact can honestly close.
 
+## What still stays fixed after the 09:05 JST actual-pull reread on April 4, 2026
+
+- An actual-pull recheck at `2026-04-04 09:05 JST` after `mind-upload@e571567f017d`, `EEG-DATA@fbbb0d8c01e0`, and `auto-research-funds@d7f6fb9bc158` still keeps `U14-4` fifth and still keeps `D01` only as the planned gated-support disclosure floor for this row.
+- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now just carries the earlier `08:07 JST` route-hold sync on top of a recent pretraining-overlap audit, `EEG-DATA` still reports `30,929` merged-unique rows, `28,892` high-confidence rows, `24,909` immediate rows, and `24,539` high-confidence immediate rows after the `OpenNeuro ds007020` deep dive, and `auto-research-funds` adds deeply reviewed April 4 scholarship updates without changing the practical shortlist.
+- None of those additions replaces the present rerun-entry structure. The newest carry-forwards do not change the fact that `D01` still sets only the latency / measurement floor, `D13` still stays the first public-open rerun support family, and `D08` still stays the validation-heavy support family kept one step later.
+- Browser-level live checks in this run still returned `HTTP/2 200` for the current public entry pages and this row packet with `Last-Modified: Sat, 04 Apr 2026 00:11:41 GMT`; the checked front-door pages already surfaced `2026-04-04 08:07 JST` wording while this row packet still surfaced `2026-04-04 01:04 JST` wording before this source sync. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`), so no new Todoist item was justified for this row in this sync.
+
 ## What still stays fixed after the 01:04 JST actual-pull reread on April 4, 2026
 
 - An actual-pull recheck at `2026-04-04 01:04 JST` after `mind-upload@9b6a8b971ba0`, `EEG-DATA@56d765da60b`, and `auto-research-funds@3c8569e28` still keeps `U14-4` fifth and still keeps `D01` only as the planned gated-support disclosure floor for this row.
@@ -110,7 +117,7 @@ The public-open rerun family and the validation-heavy family should not be read 
 ## What changed in this run
 
 - The public batch did not change.
-- The main change in this sync is that `U14-4` now carries the same `2026-04-04 01:04 JST` route basis as the front-door pages and records that the live row packet had been stale before this source update.
+- The main change in this sync is that `U14-4` now carries the same `2026-04-04 09:05 JST` route basis as the latest front-door reading and records that the live row packet had still been stuck at the earlier `2026-04-04 01:04 JST` wording before this source update.
 - The row still records the anchor-choice rationale, one compact first-pass KPI bundle, and one explicit stop rule instead of leaving them implicit.
 - This is still a route-setting update, not a solved-claim update.
 
