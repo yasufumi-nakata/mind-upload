@@ -5,8 +5,8 @@ description: "Explains why recent human PET, MRSI, BBB, blood-CSF-barrier, astro
 article_type: Wiki
 subtitle: "Proxy-rich is not the same as same-subject state closure"
 author: Mind Uploading Research Project
-last_updated: "2026-04-03"
-note: "Technical / natural science only (updated with the 2026-04-03 neuromodulatory family split, astrocyte PET tracer-family split, neuroimmune PET route-family split, and BCSFB route-family split)"
+last_updated: "2026-04-04"
+note: "Technical / natural science only (updated with the 2026-04-04 barrier-side route-role split on top of the 2026-04-03 neuromodulatory, astrocyte-PET, neuroimmune-PET, and BCSFB family splits)"
 audience: "Readers who want a stricter technical reading of current human in vivo advances and why they still stop below state-complete language"
 reading_time: "12-18 minutes"
 page_intro: "This page explains how to read current human proxy routes without collapsing them into one generic progress bar. The question is not only whether a route is impressive, but what exact quantity, target, carrier, transport regime, or perturbation-conditioned human assay it constrains, what evidence role it is actually allowed to play, on what unit and timescale, in which cohort / physiological regime, with what model burden, with what repeatability / transfer window, and what hidden-state families still remain unresolved."
@@ -18,6 +18,7 @@ page_highlights:
   - "Model burden is part of the object: tracer kinetics, 31P spectral quantification, 31P MT exchange modeling, 31P NAD fitting, deuterium absolute-quantification pipelines, deuterium kinetic models, ASL fitting routes, multicompartment models, partial-volume correction, and synchronization choices all change what the measurement means."
   - "A bundle can be well-typed and still fail operationally if one row is unstable, method-family-specific, centre-bound, available only in a narrow complete-case subset, or present mainly in a severity- or site-skewed subset."
   - "A named modality family can still contain several different bundle rows: within human neuromodulatory evidence, mixed arousal proxy, regional receptor / transporter atlas prior, occupancy PET, and challenge-linked displacement / release PET do not justify the same bundle role; within SV2A PET, quantification route, healthy atlas, disease / risk contrast, task / cognition association, activation-null, and intervention-response papers do not justify the same bundle role; within astrocyte PET, SMBT-1 first-in-human target validation, SMBT-1 AD-spectrum contrast, SMBT-1 brain quantification, SMBT-1 whole-body biodistribution, SL25.1188 simplified-quantification / severity-conditioned MAO-B routes, and I2BS routes do not justify the same bundle role; within human neuroimmune PET, TSPO disease-context / validation-bounded, CSF1R route-setting, and COX-2 enzyme-defined routes do not justify the same bundle role; within human myelin MRI, MWF-versus-calibrated-T1w/T2w, relaxometry / MTsat comparison, bilayer-sensitive mapping, and qT1 remyelination-sensitive pathology routes do not justify the same bundle role; within human blood-CSF barrier / choroid-plexus evidence, perfusion, blood-to-CSF transport, water cycling, apparent BCSFB exchange, and simultaneous BBB-vs-BCSFB ASL exchange do not justify the same bundle role; and within human clearance-transport evidence, macroscopic CSF oscillation, parenchyma-CSF water exchange, respiration-conditioned net-flow, exercise-conditioned contrast influx, intrathecal tracer / CSF-to-blood clearance, CSF mobility, and model-based biomarker efflux do not justify the same bundle role either."
+  - "Barrier-side human evidence now also needs internal route-role typing: Morgan et al. (2024) are a method-family non-equivalence warning, Padrela et al. (2025) a healthy-lifespan reference route, Padrela et al. (2026) a disease-burden contrast, Zhao et al. (2020) an early choroid-plexus perfusion route-setting study, Sun et al. (2024) a healthy-aging extension, Wu et al. (2026) a repeatability anchor, and Petitclerc et al. (2026) a simultaneous boundary-separation route."
   - "Human intrinsic-excitability evidence also splits internally: Tallman et al. (2025) constrain a human clinical single-unit allocation route, Huber et al. (2013) / Kuhn et al. (2016) / Fehér et al. (2026) constrain sleep-history / plasticity-recalibration routes, and Zrenner et al. (2018) / Khatri et al. (2025) constrain state-gated perturbation routes. Those are not one interchangeable human excitability row."
   - "Promotion now runs through three gates: robustness, effective-window / regime-aware common-driver and quantity-bridge separation, and incremental value beyond the strongest single row."
   - "A bundle now also has to disclose where modalities disagree and whether discordant cases were abstained, adjudicated, or silently absorbed into one summary score."
@@ -38,6 +39,7 @@ known_points:
   - "Even when same-subject relation is logged, composition still requires explicit effective time-window / state-axis disclosure and physiological / perturbation regime compatibility."
   - "Even when a route is called `human excitability evidence`, composition still requires the human evidence class to be named explicitly: clinical single-unit allocation, sleep-homeostasis / plasticity recalibration, and state-gated perturbation routes have different direct observables and different claim ceilings."
   - "Even when a family label such as `human neuromodulatory evidence`, `SV2A PET`, `astrocyte PET`, `myelin MRI`, `blood-CSF barrier / choroid-plexus MRI`, or `clearance / immune support` is logged, composition still requires the family-internal comparison type to be named before the bundle role is interpreted."
+  - "Barrier-side human rows need one more layer of typing as well: method-comparison, healthy-reference, disease-burden, repeatability, and boundary-separation roles do not become interchangeable just because the route family is already fixed."
   - "Even after family-internal typing, composition still requires the evidence role of each row to be named explicitly, because an atlas, a cross-sectional contrast, a baseline anchor, a change witness, and a perturbation-response witness are not the same bundle job."
   - "Even when proxy class, maturity, and calibrator role are logged, composition still needs route-local repeatability, method-family non-equivalence, cross-centre transfer, complete-case disclosure, and overlap / missingness disclosure."
   - "Overall bundle gain can coexist with higher pairwise disagreement in clinically difficult subgroups, so discordance topology and its resolution policy have to be disclosed rather than left implicit."
@@ -108,6 +110,13 @@ The site had already fixed astrocyte PET on front-door pages, but this central c
 <strong>2026-04-03 correction: blood-CSF barrier / choroid-plexus family split also belongs inside composition</strong>
 <p>
 This central composition page was still too coarse inside the barrier-side human lane. The primary literature does not support reading <strong>blood-CSF barrier / choroid-plexus evidence</strong> as one reusable human row. <a href="https://doi.org/10.1186/s12987-020-00218-z" target="_blank">Zhao et al. (2020)</a> and <a href="https://doi.org/10.1186/s12987-024-00603-y" target="_blank">Sun et al. (2024)</a> constrain a <strong>choroid-plexus perfusion route</strong>, <a href="https://doi.org/10.1016/j.neuroimage.2021.118755" target="_blank">Petitclerc et al. (2021)</a> constrain a <strong>blood-to-CSF water-transport route</strong>, <a href="https://doi.org/10.1080/21688370.2021.1963143" target="_blank">Anderson et al. (2022)</a> constrain a <strong>DCE water-cycling route</strong>, <a href="https://doi.org/10.1177/0271678X251369218" target="_blank">Wu et al. (2026)</a> constrain an <strong>apparent BCSFB-exchange route</strong> with scan-rescan repeatability, and <a href="https://doi.org/10.1177/0271678X261429042" target="_blank">Petitclerc et al. (2026)</a> constrain a <strong>simultaneous BBB-versus-BCSFB ASL exchange route</strong> that explicitly estimates both <strong>K</strong><sub>bl→GM</sub> and <strong>K</strong><sub>bl→CSF</sub>. These papers do not share one direct observable, one crossed boundary, one transport model, or one safe bundle role. On this site, blood-CSF-barrier evidence therefore has to be typed by <strong>route family</strong>, <strong>carrier / transport object</strong>, and <strong>validation ceiling</strong> before proxy composition is judged at all.
+</p>
+</div>
+
+<div class="note-box">
+<strong>2026-04-04 correction: barrier-side human proxy roles also belong inside composition</strong>
+<p>
+The route-family split above was necessary, but it still left one composition shortcut available. The current primary literature does not support reading barrier-side human papers as if they already played one interchangeable bundle role once the route family had been named. <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a> are primarily a <strong>method-family non-equivalence warning</strong> inside BBB water-exchange MRI, not a healthy-reference or disease-burden row. <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> are primarily a <strong>healthy-adult lifespan reference route</strong>, while <a href="https://doi.org/10.1016/j.nicl.2025.103926" target="_blank">Padrela et al. (2026)</a> are primarily a <strong>disease-burden contrast route</strong> for early cognitive / cerebrovascular load. On the BCSFB side, <a href="https://doi.org/10.1186/s12987-020-00218-z" target="_blank">Zhao et al. (2020)</a> are an <strong>early route-setting perfusion study</strong>, <a href="https://doi.org/10.1186/s12987-024-00603-y" target="_blank">Sun et al. (2024)</a> are a <strong>healthy-aging extension</strong>, <a href="https://doi.org/10.1177/0271678X251369218" target="_blank">Wu et al. (2026)</a> are a <strong>repeatability anchor</strong>, and <a href="https://doi.org/10.1177/0271678X261429042" target="_blank">Petitclerc et al. (2026)</a> are a <strong>simultaneous boundary-separation / model-comparison route</strong>. These are not the same bundle job. On this site, barrier-side human evidence therefore has to be typed not only by <strong>route family</strong> and <strong>transport object</strong>, but also by <strong>route role / evidence role</strong> before proxy composition is judged at all.
 </p>
 </div>
 <div class="note-box">
@@ -817,11 +826,25 @@ Those four axes are defined <strong>per route</strong>. When several routes are 
 <td>Myelin-specific readout, MWF / T1w:T2w equivalence, bilayer-sensitive mapping, remyelination-sensitive pathology inference, and per-axon timing support.</td>
 </tr>
 <tr>
-<td><strong>Human BBB water-exchange MRI</strong><br><a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a>; <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a></td>
-<td><strong>Macro BBB water-exchange proxy</strong></td>
-<td>Human cohort route with growing lifespan coverage, but still method-dependent even inside ASL families.</td>
-<td>Constrains Tex / Kw-style water transport under a named ASL acquisition and fitting route.</td>
-<td>Tracer-specific transport, generic BBB leakiness language, and pericyte / endothelial controller identity.</td>
+<td><strong>Human BBB water-exchange method-comparison route</strong><br><a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a></td>
+<td><strong>Method-family non-equivalence anchor within BBB water-exchange MRI</strong></td>
+<td>Same-cohort method-comparison route rather than a healthy-reference or disease-burden row.</td>
+<td>Constrains that <strong>DP-ASL</strong> and <strong>ME-ASL</strong> can return materially different BBB water-exchange values and inconsistent age dependence under named acquisition / fitting routes.</td>
+<td>Method interchangeability, healthy-reference norms, disease-burden interpretation, generic BBB leakiness language, and pericyte / endothelial controller identity.</td>
+</tr>
+<tr>
+<td><strong>Human BBB water-exchange healthy-lifespan reference route</strong><br><a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a></td>
+<td><strong>Healthy-adult macro BBB water-exchange reference proxy</strong></td>
+<td>Lifespan healthy-adult route with explicit age / sex interpretation and a ceiling conditioned by <strong>CBF</strong> / <strong>ATT</strong> correction.</td>
+<td>Constrains Tex-style age-related variation under one multi-echo ASL route while showing that the apparent gray-matter age effect does not survive the named perfusion / transit-time correction.</td>
+<td>Method equivalence across ASL families, disease-burden contrast, tracer-specific transport, generic BBB leakiness language, and controller identity.</td>
+</tr>
+<tr>
+<td><strong>Human BBB water-exchange disease-burden contrast route</strong><br><a href="https://doi.org/10.1016/j.nicl.2025.103926" target="_blank">Padrela et al. (2026)</a></td>
+<td><strong>Disease-burden BBB water-exchange contrast proxy</strong></td>
+<td>Cross-sectional SCD / MCI and WMH-burden route rather than a healthy-reference or method-comparison row.</td>
+<td>Constrains lower <em>Tex</em> in early cognitive / cerebrovascular-burden groups under one ASL route, while amyloid-group differences do not survive age / sex adjustment.</td>
+<td>Amyloid-specific barrier truth, healthy-reference baseline, method equivalence, tracer-specific transport, and pericyte / endothelial controller identity.</td>
 </tr>
 <tr>
 <td><strong>Tracer-specific BBB PET transport</strong><br><a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a></td>
@@ -831,11 +854,18 @@ Those four axes are defined <strong>per route</strong>. When several routes are 
 <td>Generic BBB-permeability language, direct controller readout, and transport equivalence across tracers.</td>
 </tr>
 <tr>
-<td><strong>Human choroid-plexus perfusion route</strong><br><a href="https://doi.org/10.1186/s12987-020-00218-z" target="_blank">Zhao et al. (2020)</a>; <a href="https://doi.org/10.1186/s12987-024-00603-y" target="_blank">Sun et al. (2024)</a></td>
-<td><strong>Choroid-plexus perfusion proxy</strong></td>
-<td>Human ASL route with early feasibility and later lifespan extension, but still perfusion-side rather than transport-side evidence.</td>
-<td>Constrains apparent choroid-plexus perfusion under a named ASL and ROI route.</td>
-<td>Blood-to-CSF transport truth, epithelial-transporter identity, BBB equivalence, and route-free clearance language.</td>
+<td><strong>Human choroid-plexus perfusion route-setting study</strong><br><a href="https://doi.org/10.1186/s12987-020-00218-z" target="_blank">Zhao et al. (2020)</a></td>
+<td><strong>Route-setting choroid-plexus perfusion proxy</strong></td>
+<td>Early healthy-volunteer dynamic-ASL feasibility route rather than a healthy-aging reference or transport-side study.</td>
+<td>Constrains apparent choroid-plexus blood flow and ATT under a named dynamic ASL perfusion model.</td>
+<td>Healthy-aging baseline, blood-to-CSF transport truth, epithelial-transporter identity, BBB equivalence, and route-free clearance language.</td>
+</tr>
+<tr>
+<td><strong>Human choroid-plexus perfusion healthy-aging extension</strong><br><a href="https://doi.org/10.1186/s12987-024-00603-y" target="_blank">Sun et al. (2024)</a></td>
+<td><strong>Healthy-aging choroid-plexus perfusion proxy</strong></td>
+<td>Large HCP-Aging cohort route linking choroid-plexus volume, perfusion, and diffusion across adulthood rather than an early route-setting or transport-model-separation study.</td>
+<td>Constrains age-related declines in choroid-plexus CBF and their relation to volumetric / diffusion changes under one healthy-aging MRI framework.</td>
+<td>Blood-to-CSF transport truth, epithelial-transporter identity, route-free BCSFB function, same-subject disease-burden tracking, and BBB equivalence.</td>
 </tr>
 <tr>
 <td><strong>Human blood-to-CSF water-transport route</strong><br><a href="https://doi.org/10.1016/j.neuroimage.2021.118755" target="_blank">Petitclerc et al. (2021)</a></td>
@@ -852,16 +882,16 @@ Those four axes are defined <strong>per route</strong>. When several routes are 
 <td>Perfusion equivalence, blood-to-CSF transport equivalence, generic clearance truth, and epithelial-controller identity.</td>
 </tr>
 <tr>
-<td><strong>Human apparent BCSFB-exchange route</strong><br><a href="https://doi.org/10.1177/0271678X251369218" target="_blank">Wu et al. (2026)</a></td>
-<td><strong>Apparent BCSFB-exchange proxy</strong></td>
-<td>Proof-of-principle healthy-volunteer REXI route with scan-rescan repeatability, but still small-sample and model-conditioned.</td>
-<td>Constrains apparent <em>k</em><sub>BCSFB</sub> under the named REXI route.</td>
-<td>Route-free BCSFB function, BBB water-exchange equivalence, generic barrier truth, and epithelial-controller identity.</td>
+<td><strong>Human apparent BCSFB-exchange repeatability route</strong><br><a href="https://doi.org/10.1177/0271678X251369218" target="_blank">Wu et al. (2026)</a></td>
+<td><strong>Repeatability-bounded apparent BCSFB-exchange proxy</strong></td>
+<td>Proof-of-principle healthy-volunteer REXI route whose key added role is scan-rescan repeatability rather than disease contrast or boundary separation.</td>
+<td>Constrains apparent <em>k</em><sub>BCSFB</sub> and its route-local repeatability under the named REXI protocol.</td>
+<td>Route-free BCSFB function, BBB water-exchange equivalence, generic barrier truth, broad deployment, and epithelial-controller identity.</td>
 </tr>
 <tr>
 <td><strong>Human simultaneous BBB-versus-BCSFB exchange route</strong><br><a href="https://doi.org/10.1177/0271678X261429042" target="_blank">Petitclerc et al. (2026)</a></td>
 <td><strong>Boundary-separated BBB-versus-BCSFB exchange proxy</strong></td>
-<td>Model-comparison route that sharpens human boundary separation rather than one broad permeability scalar.</td>
+<td>Boundary-separation / model-comparison route rather than a repeatability anchor, healthy-reference baseline, or route-free transport scalar.</td>
 <td>Constrains simultaneous <strong>K</strong><sub>bl→GM</sub> and <strong>K</strong><sub>bl→CSF</sub> under a multi-TE ASL route.</td>
 <td>One generic barrier row, route-free transport equivalence, and direct neurovascular / choroid-plexus controller measurement.</td>
 </tr>
