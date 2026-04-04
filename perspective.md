@@ -5,8 +5,8 @@ description: "A research note that audits measurement routes, latent-state burde
 article_type: Perspective
 subtitle: "Audit the hypothesis of reproducing brain information processing on another substrate through the barriers of measurability, identifiability, and maintenance state"
 author: Mind Uploading Research Project
-last_updated: '2026-04-03'
-note: "Research note (updated with the March 2026 re-audit, the 2026-03-29 causal-model addendum, the 2026-03-29 thermodynamic-route sync, the 2026-03-29 deuterium-route split, the 2026-03-30 same-brain-connectomics ceiling sync, the 2026-03-31 electrical-state family split, the 2026-03-31 invasive-language-BCI route split, the 2026-04-01 glial-substrate-routing split, the 2026-04-01 clearance-route-role split, the 2026-04-02 technical-front-door framing reset, and the 2026-04-03 BCSFB front-door sync)"
+last_updated: '2026-04-04'
+note: "Research note (updated with the March 2026 re-audit, the 2026-03-29 causal-model addendum, the 2026-03-29 thermodynamic-route sync, the 2026-03-29 deuterium-route split, the 2026-03-30 same-brain-connectomics ceiling sync, the 2026-03-31 electrical-state family split, the 2026-03-31 invasive-language-BCI route split, the 2026-04-01 glial-substrate-routing split, the 2026-04-01 clearance-route-role split, the 2026-04-02 technical-front-door framing reset, the 2026-04-03 BCSFB front-door sync, and the 2026-04-04 SV2A route-role sync)"
 audience: "Readers who want a technical and natural-science synthesis from measurement limits to implementation"
 reading_time: "30-45 min"
 page_intro: "This page is a long research note that starts from observability, identifiability, and maintenance-state burdens, and only then asks what kinds of theoretical interpretation survive those limits. It keeps primary literature, hidden-state gaps, and implementation constraints on one page so overclaiming becomes harder."
@@ -20,6 +20,7 @@ page_highlights:
   - "Clearance-support routes are now also split on this page: macroscopic CSF oscillation, parenchyma-CSF water exchange, respiration-conditioned net flow, exercise-conditioned contrast influx / meningeal-lymphatic flow, intrathecal tracer / CSF-to-blood clearance, CSF mobility, and model-based biomarker efflux are not one row."
   - "The stronger the claim, the more explicitly it is checked against falsification criteria, alternative explanations, and abstention conditions."
   - "Human proxy class, operational maturity, and calibrator role are kept separate, so proxy-rich evidence is not silently read as field-ready or family-complete state identification."
+  - "Inside SV2A / synaptic-density PET, quantification route, same-subject repeatability, healthy atlas, cross-sectional risk contrast, task / cognition association, activation-null stability, and 24 h intervention-response are now kept separate rather than treated as one reusable human row."
   - "Living-human proxy bundles now stay behind an explicit composition rule: quantity type, calibrator role, model / hardware burden, common-driver audit, and gain beyond the strongest single row must be disclosed before state-identification language."
   - "Directed-graph / DCM claims are now kept behind an explicit route card: observed-subsystem closure, node-definition policy, sampling / transformation sensitivity, perturbation validation, and abstention must be disclosed before causal-wiring language is allowed."
   - "Thermodynamic / irreversibility claims are now also kept behind an explicit route card: signal route, state definition, coarse-graining, observed-state closure / memory order / reverse-transition support, physiology-side grounding, cost isolation, and abstention must be disclosed before energetic language is allowed."
@@ -33,6 +34,7 @@ known_points:
   - "Human whole-brain evidence remains layered and proxy-based; no current route directly fixes current transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local electrical-coupling / extracellular-geometry / inhibitory-driving-force regime, ECM / PNN gate state, local proteostasis / synaptic-tag capture, cargo-routing state, neuromodulatory occupancy / release state, chloride set point, neurovascular-unit / BBB / pericyte controller state, or branch-local mitochondrial positioning."
   - "Current human evidence for shared extracellular / electrical state remains bounded to proxy or perturbation clues; it does not directly reveal coupling topology, extracellular-volume geometry, or local inhibitory-driving-force regime across the living whole brain."
   - "Current human barrier-side evidence also remains family-split: BBB water exchange, tracer-specific BBB transport, choroid-plexus perfusion, blood-to-CSF transport, choroid-plexus water cycling, and apparent BCSFB exchange are different proxy rows with different ceilings."
+  - "Current human SV2A evidence is also internally split: tracer / quantification route, route-local repeatability, healthy atlas, cross-sectional risk contrast, task association, activation-null stability, and intervention-response play different evidential roles and cannot be silently exchanged."
   - "Proxy-rich human evidence and deployment-ready measurement are different claims; sample size, model burden, hardware specialization, and fusion status remain separate ceilings."
   - "Several living-human proxy rows can move together while still constraining different quantities or shared autonomic / vascular drivers, so same-session agreement is not yet same-subject state closure."
   - "Hemodynamic modalities carry vascular transfer / CVR uncertainty in addition to neural-side uncertainty."
@@ -647,6 +649,58 @@ href="#ref-16">[16]</a></sup>.</p>
 <td>Calibration of baseline vascular state, cerebrovascular reactivity, and interpretation limits for BOLD / HbO / HbR differences.</td>
 <td>A clean neural difference unless the vascular transfer side has also been audited.</td>
 <td><strong>Hemodynamic-limited evidence</strong> unless vascular transfer / CVR is explicitly calibrated.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>SV2A / synaptic-density PET is not one reusable human row</strong>
+<p>This page had already separated <strong>synaptic-density PET</strong> from <strong>presynaptic release-machinery ceilings</strong>, but one internal shortcut still remained: it could still let all SV2A papers sound like one general rise in human synaptic observability. The primary literature does not support that compression. <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> established a <strong>tracer-specific quantification route</strong> for <strong><sup>18</sup>F-SynVesT-1</strong> in <strong>eight healthy volunteers</strong> with a <strong>levetiracetam blocking study in four</strong>, <a href="https://doi.org/10.1177/0271678X17724947" target="_blank">Finnema et al. (2018)</a> established a <strong>same-subject test-retest route</strong> for <strong>[<sup>11</sup>C]UCB-J</strong>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built a <strong>33-person healthy atlas</strong> calibrated to autoradiography, <a href="https://doi.org/10.1002/alz.14327" target="_blank">Snellman et al. (2024)</a> provided a <strong>cross-sectional risk contrast</strong> in cognitively unimpaired <strong>APOE</strong> groups, <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> provided a <strong>task / cognition association route</strong> in <strong>25 healthy adults</strong>, <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> showed that visual stimulation can raise <strong>K<sub>1</sub></strong> without measurably changing <strong>V<sub>T</sub></strong> or <strong>BP<sub>ND</sub></strong> in <strong>seven healthy participants</strong>, and <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a> found no measurable overall SV2A increase <strong>24 h</strong> after ketamine in <strong>healthy controls</strong> or <strong>MDD/PTSD</strong> participants despite symptom improvement. Therefore, this page no longer allows <code>SV2A PET advanced</code> to stand in for one interchangeable bundle anchor. A paper may strengthen <strong>quantification</strong>, <strong>repeatability</strong>, <strong>atlas coverage</strong>, <strong>risk contrast</strong>, <strong>task association</strong>, <strong>activation-null stability</strong>, or <strong>intervention-response boundaries</strong> without becoming a direct readout of <strong>current synaptic efficacy</strong>, <strong>release probability</strong>, <strong>release-site number</strong>, <strong>docked-vesicle architecture</strong>, <strong>active-zone nanostructure / priming-site assembly</strong>, or <strong>rapid synaptic plasticity</strong>.</p>
+</div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>SV2A / synaptic-density PET route role</th>
+<th>What the cited paper directly constrains</th>
+<th>What it still cannot be promoted to on this page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tracer / quantification route</strong><br><a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a></td>
+<td>A tracer-specific kinetic and blocking route for <strong><sup>18</sup>F-SynVesT-1</strong>, including the useful modeling window for quantitative analysis.</td>
+<td>A route-free synaptic-state scalar interchangeable across tracers, models, scan windows, or reference choices.</td>
+</tr>
+<tr>
+<td><strong>Same-subject baseline / repeatability route</strong><br><a href="https://doi.org/10.1177/0271678X17724947" target="_blank">Finnema et al. (2018)</a></td>
+<td>Route-local test-retest stability for <strong>[<sup>11</sup>C]UCB-J</strong> under a declared acquisition and analysis pipeline.</td>
+<td>Longitudinal biological sensitivity, cross-tracer equivalence, or momentary synaptic-state tracking during task or intervention.</td>
+</tr>
+<tr>
+<td><strong>Healthy atlas / cohort-prior route</strong><br><a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a></td>
+<td>A calibrated <strong>3D healthy-human SV2A atlas</strong> with cortical and subcortical spatial gradients.</td>
+<td>Same-subject change evidence, current efficacy, or a bridge to current release competence in an individual scan.</td>
+</tr>
+<tr>
+<td><strong>Cross-sectional risk-contrast route</strong><br><a href="https://doi.org/10.1002/alz.14327" target="_blank">Snellman et al. (2024)</a></td>
+<td>Lower hippocampal <strong>[<sup>11</sup>C]UCB-J</strong> signal in cognitively unimpaired <strong>APOE ε4/ε4</strong> carriers relative to lower-risk genotype groups.</td>
+<td>A task-general cognitive readout, same-subject progression witness, or direct measure of the mechanism generating risk.</td>
+</tr>
+<tr>
+<td><strong>Task / cognition association route</strong><br><a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a></td>
+<td>An association between regional <strong>[<sup>11</sup>C]UCB-J</strong> signal, task-switching neural activity, and switch-cost behavior in healthy adults.</td>
+<td>A proof that SV2A PET measures rapid task-evoked synaptic change, release probability, or one general cognitive-capacity axis.</td>
+</tr>
+<tr>
+<td><strong>Within-subject activation-null boundary</strong><br><a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a></td>
+<td>A boundary showing that brief visual activation can increase tracer delivery without measurably changing <strong>SV2A binding measures</strong>.</td>
+<td>A license to treat perfusion-linked uptake change as synaptic-density change, or to read SV2A PET as a moment-to-moment activation meter.</td>
+</tr>
+<tr>
+<td><strong>24 h intervention-response boundary</strong><br><a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a></td>
+<td>A ketamine perturbation test showing no measurable overall <strong>SV2A-density increase</strong> at the 24 h human imaging window despite symptom response.</td>
+<td>A claim that acute clinical improvement automatically implies a detectable whole-brain presynaptic-density increase at that time point.</td>
 </tr>
 </tbody>
 </table>
