@@ -5,8 +5,8 @@ description: "A practical glossary of the terms used most often in Mind-Upload, 
 article_type: Reference
 subtitle: "Start by keeping the words straight"
 author: Mind Uploading Research Project
-last_updated: "2026-04-03"
-note: "Living document (updated with thermodynamic route-card sync)"
+last_updated: "2026-04-04"
+note: "Living document (updated with bridge-witness / same-subject / same-brain stop-line sync)"
 audience: "Readers who do not want to get stuck on terminology and anyone trying to avoid category mistakes"
 reading_time: "3 to 10 minutes for only the necessary items"
 page_intro: "This page is a glossary for the terms that appear most often in Mind-Upload. It starts with short everyday-language explanations, then points you back to the more rigorous pages when needed."
@@ -19,6 +19,7 @@ page_highlights:
   - "It now also makes the effective-connectivity stop line explicit at the front door: effective-connectivity route card, observed-subsystem closure / latent-confound audit, node-definition policy, processing / first-level design policy, sampling / transformation sensitivity, reliability window, and model recovery / family comparison are no longer left implicit."
   - "It now also makes the thermodynamic stop line explicit at the front door: coarse-graining / timescale, observed-state closure / hidden-degree risk, reverse-transition support / finite-data handling, stability / nuisance sensitivity, cross-estimator concordance, and physiology-side grounding / bridge quality are no longer left implicit."
   - "It now also includes the temporal-bridge stop line added in the 2026-03-30 sync, namely the split between fast state labels and slow internal milieu."
+  - "It now also includes the bridge-witness split used across the newer state-continuity pages, so same-subject / same-brain labels are no longer left sounding like one generic continuity proof."
   - "It now also fixes tractography-specific stop-line terms such as macro pathway prior and tractography route card, so living-human connectome language is not overread."
   - "It now also includes the electrical-state stop-line terms needed after the 2026-04-03 human-clue split, such as shared extracellular / electrical state, human ECS proxy clue, and human perturbation-conditioned clue."
   - "It is especially careful about pairs that sound similar but should not be collapsed, such as observability / identifiability / direct validation and functional connectivity / effective connectivity / causal wiring."
@@ -31,6 +32,7 @@ known_points:
   - "For thermodynamic language, estimator family alone is still too coarse; coarse-graining, hidden-degree risk, reverse-transition support, stability, cross-estimator concordance, physiology-side grounding, bridge quality, and abstention each carry a different failure mode."
   - "Support-state proxy is still too coarse unless quantity type or route role is also named explicitly."
   - "Readers also need a term-level split between fast state labels such as movement / arousal and slow internal milieu such as circadian phase, glucocorticoid exposure, and insulin / metabolic regime."
+  - "Readers also need a term-level split between same-subject / same-brain labels and the specific bridge witness being claimed, such as landmarks, latent manifolds, representational geometry, fingerprints, alignment rescue, or recalibration rescue."
   - "Readers also need a term-level stop line between connectome as structural scaffold and living-human tractography as an acquisition- and graph-conditioned macro pathway prior."
   - "Readers now also need a term-level split between shared extracellular / electrical state itself, human diffusion-MRI ECS clues, and human perturbation-conditioned clues, because those do not raise the claim ceiling in the same way."
   - "The newer route-card names are not decorative labels; they each name a distinct failure mode such as upstream visibility loss, cross-stack shared-driver risk, or broken state continuity across a sequential bridge."
@@ -237,6 +239,13 @@ If names such as <strong>field-formation wall</strong>, <strong>Fusion Card</str
 </div>
 
 <div class="note-box">
+<strong>When same-subject and same-brain start sounding like proof by themselves</strong>
+<p>
+On this site, those labels are not enough. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a> and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> support co-registered landmark-style bridges, <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">Gallego et al. (2020)</a> and <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a> support latent-dynamics / alignment witnesses, <a href="https://doi.org/10.1093/cercor/bhw068" target="_blank">Guntupalli et al. (2016)</a> supports a representational-space witness, <a href="https://doi.org/10.1126/sciadv.abj0751" target="_blank">Van De Ville et al. (2021)</a> shows that fingerprint evidence is time-scale dependent, and <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> shows that stable use can still depend on unsupervised recalibration. These are different carried objects, so this glossary now defines them separately instead of letting <code>same-subject</code> or <code>same-brain</code> stand in for one generic continuity guarantee.
+</p>
+</div>
+
+<div class="note-box">
 <strong>When effective-connectivity words start sounding too close to discovered wiring</strong>
 <p>
 If terms such as <strong>effective-connectivity route card</strong>, <strong>observed-subsystem closure / latent-confound audit</strong>, <strong>node-definition policy</strong>, <strong>processing / first-level design policy</strong>, <strong>sampling / transformation sensitivity</strong>, <strong>reliability window</strong>, or <strong>model recovery / family comparison</strong> start appearing faster than they can be digested, that is a sign the site is trying to stop a real overread. On this site, a directed graph is not promoted beyond a <strong>model-conditioned causal hypothesis</strong> until those terms are disclosed. If that distinction is what you need next, go to <a href="wiki/observation-to-estimation.html#effective-connectivity-route-card">Wiki: effective-connectivity route card</a>, <a href="faq.html">FAQ</a>, and <a href="verification.html#observability-budget">Verification: Observability Budget</a>.
@@ -430,8 +439,40 @@ If <strong>state annotation</strong>, <strong>state continuity</strong>, <strong
 <td>The disclosure rule for claims that bridge across live measurement, later fixation, ex vivo follow-up, or cross-day reacquisition. It asks for acquisition order, elapsed time, regime continuity including slow internal milieu, coordinate transfer, bridge validation, and residual drift ceiling before specimen linkage is promoted to one state sample.</td>
 </tr>
 <tr>
+<td><strong>Same-subject / same-brain label</strong></td>
+<td>A label that says which specimen, participant, or brain is being linked across measurements. On this site it is a <strong>linkage statement</strong>, not yet a proof that the carried object stayed the same. The missing question is always <strong>what kind of bridge witness was preserved</strong>.</td>
+</tr>
+<tr>
 <td><strong>Same-state evidence</strong></td>
 <td>Evidence that supports not only <strong>same subject</strong> or <strong>same brain</strong>, but also continuity of the relevant latent state across the bridge being claimed. It is stronger than specimen identity alone and usually requires an explicit bridge audit.</td>
+</tr>
+<tr>
+<td><strong>Bridge witness</strong></td>
+<td>The specific type of evidence used to argue that something was carried across a bridge. On this site, anatomical landmarks, latent manifolds, representational geometry, fingerprint features, alignment rescue, and recalibration rescue are different bridge witnesses with different safe claim ceilings, so they should not be collapsed into one generic continuity proof.</td>
+</tr>
+<tr>
+<td><strong>Landmark / correspondence-point witness</strong></td>
+<td>A bridge witness built from co-registration features such as matched landmarks, correspondence points, or specimen-linked coordinates. It can support specimen linkage and coordinate transfer, but by itself it does not prove that synaptic state, biochemical state, or other latent state stayed the same across the bridge.</td>
+</tr>
+<tr>
+<td><strong>Latent-manifold witness</strong></td>
+<td>A bridge witness built from low-dimensional latent dynamics or manifold structure that remains usable across days or recording changes. It can support stable readout under an alignment step, but it is still different from direct proof that the underlying local biological state stayed fixed.</td>
+</tr>
+<tr>
+<td><strong>Representational-space / geometry witness</strong></td>
+<td>A bridge witness built from preserved relations among population-response patterns, such as a shared representational space or reproducible representational geometry. It is stronger than loose pattern similarity, but it is still not automatically anatomical identity, same-state proof, or route-free continuity of all hidden variables.</td>
+</tr>
+<tr>
+<td><strong>Fingerprint witness</strong></td>
+<td>A bridge witness built from subject-identifying neural patterns that support re-identification across recordings. On this site, fingerprint evidence is useful but narrower than same-state evidence, because it can depend strongly on time scale, modality, and task regime while leaving the carried latent variable ambiguous.</td>
+</tr>
+<tr>
+<td><strong>Alignment rescue</strong></td>
+<td>A post hoc mapping that restores performance by aligning a new recording to a reference latent space, manifold, or decoder geometry. It supports a <strong>usable bridge under alignment</strong>, but it does not by itself prove that the raw signal, the sensor relation, or the biological state remained unchanged.</td>
+</tr>
+<tr>
+<td><strong>Recalibration rescue</strong></td>
+<td>A bridge-maintenance strategy that restores performance by updating model parameters or adaptation state on later data. It supports <strong>operational recoverability under drift</strong>, not proof that the same carried object stayed valid without recalibration.</td>
 </tr>
 <tr>
 <td><strong>Slow internal milieu</strong></td>
