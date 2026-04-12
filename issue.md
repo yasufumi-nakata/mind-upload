@@ -5,7 +5,7 @@ description: "How to participate in the Mind-Upload project, read issue status, 
 article_type: Guide
 subtitle: "Join the research workflow and read the issue tracker"
 author: Mind Uploading Research Project
-last_updated: "2026-04-04"
+last_updated: "2026-04-12"
 note: "Contribution + Issue tracker"
 audience: "People who are joining for the first time, want to check the issue status, and want to start making viable contributions."
 reading_time: "10-20 minutes"
@@ -94,6 +94,12 @@ If you want to see how to turn "I do not know" into a useful issue, and how to s
 <strong>If you are here specifically for RQ-by-RQ grant planning</strong>
 <p>
 This page separates contribution routes and issue work. If what you really want is the current one-question-at-a-time route from a mind-upload research question to a fundable theme and a fixed EEG dataset anchor, start with the <a href="wiki/mind-upload-rq-solvability-bridge.html">RQ solvability bridge</a>, then use the <a href="wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html">grant and dataset playbook</a>, the <a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ-by-RQ deep dossiers</a>, the <a href="wiki/mind-upload-current-public-six-rq-brief.html">current public six-RQ brief</a>, and the <a href="https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md">current funding shortlist</a>.
+</p>
+</div>
+<div class="note-box">
+<strong>When paper writing stops at the current stage</strong>
+<p>
+If a draft reaches the point of "this cannot honestly be solved yet," return that stop here as a bounded <code>current-stage limit</code> rather than softening the sentence until the gap disappears. The latest writing pass made three repeat reasons explicit for the current <code>U0-2 / U0-3</code> lane: the draft still needs a dataset-level ablation table, a threshold-stability ledger, and a recording-frame disclosure before any stronger continuity wording can be raised. In other words, the blocker is often a missing artifact or disclosure, not a missing adjective. The route summary for that boundary now lives on the <a href="wiki/mind-upload-rq-solvability-bridge.html">RQ solvability bridge</a>, and future paper feedback should point there when the claim surface must stay narrow.
 </p>
 </div>
 <div class="note-box">

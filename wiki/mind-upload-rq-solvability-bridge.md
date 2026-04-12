@@ -5,7 +5,7 @@ description: "A public-safe bridge from the current mind-upload research questio
 article_type: Wiki
 subtitle: "One question, one anchor family, one funding lane, one stop line"
 author: Mind Uploading Research Project
-last_updated: "2026-04-04"
+last_updated: "2026-04-12"
 note: "Current RQ-to-EEG-and-funding bridge"
 audience: "Readers who want to see what EEG can close now, what still stays outside the claim, and which funding lane still fits."
 reading_time: "10-15 minutes"
@@ -56,6 +56,13 @@ recommended_pages:
 This page answers one narrow question: for the rows that are actually worth deepening now, what can `EEG-DATA` honestly close, what still needs outside support, and what funding theme still fits without overstating the claim.
 
 It does **not** try to re-scan all `60RQ` items at once. The working style on this site is now `deepen one row at a time`, not `summarize everything at the same depth`.
+
+## What paper writing should now send back as a current-stage limit on April 12, 2026
+
+- The latest paper-writing pass made one recurring stop line explicit: when a draft can only support a `measurement boundary` but not a stronger `personhood continuity`, `migration`, or `same-entity` claim, the text should say so directly instead of hiding the gap inside softer prose.
+- For the current `U0-2 / U0-3` lane, three missing artifacts now stay fixed as the main reason a stronger claim still cannot be raised: a dataset-level ablation table that shows what actually carries the score, a threshold-stability ledger that shows the decision rule does not collapse across reruns, and a recording-frame disclosure that states exactly which acquisition / preprocessing frame the result still depends on.
+- Therefore, if a paper-writing step stops with wording like `this cannot honestly be solved at the current stage`, that stop should be returned here as a `current-stage limit`, not treated as a writing weakness. The failure mode is usually not lack of prose but lack of one more bounded artifact or disclosure.
+- Public-safe reading therefore remains narrow: `current EEG artifacts can tighten bounded measurement claims`, but they still do **not** by themselves close identity continuity, transfer-to-migration, or stronger equivalence wording.
 
 ## What still stays fixed after the 22:06 JST actual-pull reread on April 4, 2026
 
