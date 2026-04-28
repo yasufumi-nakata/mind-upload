@@ -5,7 +5,7 @@ description: "60RQを1件ずつ深掘りし、検証命題・可否境界・応�
 article_type: Wiki
 subtitle: "汎用要約ではなく、RQ単位で実装可能な深掘り"
 author: Mind Uploading Research Project
-last_updated: "2026-04-04"
+last_updated: "2026-04-28"
 note: "RQ-by-RQ Deep Dossier"
 audience: "60RQを個別理解して応募計画へ落とし込みたい研究者"
 reading_time: "55-80分"
@@ -18,6 +18,14 @@ reading_time: "55-80分"
 
 - 更新日: 2026-04-04
 - 出典: `mind-upload/wiki/mind-upload-rq60-deep-evaluation-cards.md`（60行を再構成）
+
+## 2026-04-28 JST 資金レーンと旧数値IDの整理
+
+この注記は、`Kura Fund / Nakatani Foundation graduate scholarship / Kashinome Scholarship` をひとまとまりの active near-term funding bridge として扱っていた古い route-hold 段落を上書きします。2026-04-28 JST 時点では、`Kura Fund` は 2026-04-17 17:00 締切を過ぎ、`Kashinome Scholarship` も 2026年4月上旬の締切窓を過ぎています。したがって、新しい grant text では row-level open lane を `Nakatani Foundation graduate scholarship` に絞り、`JST ACT-X` と `JSPS DC1` は cross-row / doctoral adjacent lane として扱います。
+
+- 古い row text は履歴 mapping としては有用ですが、新しい submission language では `active open`、`deadline passed`、`watch only`、`next-cycle check` を必ず分けます。
+- 古い U8/U13/U14 row に残る数値 dataset ID は historical alias として扱います。D-key と DOI/access label が同じ節に存在する場合、新しい本文ではそれを優先し、U13 speech-side では `D10 3M-CPSEED (10.18112/openneuro.ds006465.v2.0.0 / immediate)`、U8 closed-loop / recalibration では `D20 Closed-loop auditory stimulation targeting REM oscillations` と補助 `D21` / `D12`、U14 latency/disclosure では `D01 Acquisition delay of wireless EEG (10.21227/dv1p-vq18 / subscription-gated support)` と補助 `D13` を citation anchor にします。
+- `ID 509`、`ID 6`、`ID 696`、`ID 1972`、`ID 2412` のような bare ID は、古い alias としてのみ読みます。同じ節に D-key note がある場合は、D-key wording を現在の正本として使います。
 
 ## 2026-04-04 22:06 JST latest actual-pull route-hold note
 
